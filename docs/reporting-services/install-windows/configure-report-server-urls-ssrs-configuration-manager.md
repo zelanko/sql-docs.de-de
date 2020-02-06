@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594074"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
@@ -28,7 +28,7 @@ ms.locfileid: "73594074"
 ## <a name="defining-a-report-server-url"></a>Definieren einer Berichtsserver-URL  
  Die URL gibt den Ort für die Instanz einer Berichtsserveranwendung genau im Netzwerk an. Wenn Sie eine Berichtsserver-URL erstellen, müssen Sie die folgenden Teile angeben.  
   
-|Teil|und Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |Hostname|Ein TCP/IP-Netzwerk verwendet eine IP-Adresse, um ein Gerät im Netzwerk eindeutig zu bestimmen. Es gibt eine physische IP-Adresse für jede in einem Computer installierte Netzwerkkarte. Wenn die IP-Adresse in einen Hostheader aufgelöst wird, können Sie den Hostheader angeben. Wenn Sie den Berichtsserver in einem Unternehmensnetzwerk bereitstellen, können Sie den Netzwerknamen des Computers verwenden.|  
 |Port|Ein TCP-Port ist ein Endpunkt im Gerät. Der Berichtsserver lauscht Anforderungen auf einem festgelegten Port.|  

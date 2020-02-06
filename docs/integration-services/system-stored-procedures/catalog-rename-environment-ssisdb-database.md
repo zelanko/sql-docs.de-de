@@ -11,10 +11,10 @@ ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 532513a6d8c62cb1f1f36e6dc2c8b83a7c96089b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295399"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (SSISDB-Datenbank)
@@ -48,7 +48,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -66,7 +66,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   Der neue Name wurde bereits für eine vorhandene Umgebung verwendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Umgebungsverweise aus Projekten werden nicht automatisch aktualisiert, wenn Sie die Umgebung umbenennen. Umgebungsverweise müssen entsprechend aktualisiert werden. Diese gespeicherte Prozedur wird auch dann erfolgreich ausgeführt, wenn Umgebungsverweise durch das Ändern des Umgebungsnamens beschädigt werden. Nach Abschluss dieser gespeicherten Prozedur müssen Umgebungsverweise aktualisiert werden.  
   
 > [!NOTE]  

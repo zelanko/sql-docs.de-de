@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982513"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982513"
 
   Gibt Informationen zu schemabezogenen Objekten in der aktuellen Datenbank zurück. Eine Liste der schemabezogenen Objekte finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Diese Funktion kann nicht für Objekte ohne Schemabereich verwendet werden, wie z. B. DDL-Trigger (DDL, Data Definition Language) und Ereignisbenachrichtigungen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -107,14 +107,14 @@ OBJECTPROPERTY ( id , property )
 |IsScalarFunction|Funktion|Skalarwertfunktion.<br /><br /> 1 = Skalarwertfunktion<br /><br /> 0 = Keine Skalarwertfunktion|  
 |IsSchemaBound|Funktion, Sicht|Schemagebundene Funktion oder mithilfe von SCHEMABINDING erstellte Sicht.<br /><br /> 1 = Schemagebunden<br /><br /> 0 = Nicht schemagebunden|  
 |IsSystemTable|Tabelle|Systemtabelle.<br /><br /> 1 = True<br /><br /> 0 = False| 
-|IsSystemVerified|Objekt|Die Eigenschaften für Determinismus und Genauigkeit des Objekts können von SQL Server überprüft werden.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|Die Eigenschaften für Determinismus und Genauigkeit des Objekts können von SQL Server überprüft werden.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Tabelle|Tabelle.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Funktion|Tabellenwertfunktion.<br /><br /> 1 = Tabellenwertfunktion<br /><br /> 0 = Keine Tabellenwertfunktion|  
 |IsTrigger|Ein beliebiges schemabezogenes Objekt|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Ein beliebiges schemabezogenes Objekt|UNIQUE-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabelle|Benutzerdefinierte Tabelle.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Sicht|Sicht.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Ein beliebiges schemabezogenes Objekt|Besitzer des Objekts.<br /><br /> **Hinweis:**  Der Schemabesitzer ist nicht notwendigerweise der Objektbesitzer. Beispielsweise geben untergeordnete Objekte (Objekte, bei denen der Wert von *parent_object_id* ungleich NULL ist) immer die gleiche Besitzer-ID zurück wie das übergeordnete Objekt.<br /><br /> Nicht NULL = Die Datenbankbenutzer-ID des Objektbesitzers.|  
+|OwnerId|Ein beliebiges schemabezogenes Objekt|Besitzer des Objekts.<br /><br /> **Hinweis:** Der Schemabesitzer ist nicht notwendigerweise der Objektbesitzer. Beispielsweise geben untergeordnete Objekte (Objekte, bei denen der Wert von *parent_object_id* ungleich NULL ist) immer die gleiche Besitzer-ID zurück wie das übergeordnete Objekt.<br /><br /> Nicht NULL = Die Datenbankbenutzer-ID des Objektbesitzers.|  
 |SchemaId|Ein beliebiges schemabezogenes Objekt| Die Schema-ID des Schemas, zu dem das Objekt gehört.| 
 |TableDeleteTrigger|Tabelle|Die Tabelle besitzt einen DELETE-Trigger.<br /><br /> >1 = ID des ersten Triggers vom angegebenen Typ.|  
 |TableDeleteTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl DELETE-Trigger.<br /><br /> >0 = Die Anzahl von DELETE-Triggern.|  
@@ -122,8 +122,8 @@ OBJECTPROPERTY ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Updates im Hintergrund für den Volltextindex der Tabelle sind aktiviert (automatisches Nachverfolgen von Änderungen).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID des Volltextkatalogs, in dem die Daten des Volltextindexes für die Tabelle gespeichert sind.<br /><br /> Ungleich 0 = ID des Volltextkatalogs, die dem eindeutigen Index zugeordnet ist, der die Zeilen in einer volltextindizierten Tabelle identifiziert.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
 |TableFulltextChangeTrackingOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Volltext-Änderungsnachverfolgung ist für die Tabelle aktiviert.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> > 0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der Dokumente, die seit dem Start der Auffüllung mithilfe der vollständigen, inkrementellen oder manuellen Änderungsnachverfolgung durch Einfüge- und Aktualisierungsvorgänge verarbeitet wurden. B) Die Anzahl der Zeilen, die mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden, seit die Änderungsnachverfolgung mit Auffüllung mithilfe von Indexupdates im Hintergrund aktiviert wurde, das Schema für den Volltextindex geändert wurde, der Volltextkatalog erneut erstellt wurde oder die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde usw.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Diese Eigenschaft überwacht die Anzahl gelöschter Zeilen nicht und zählt sie auch nicht.|  
-|TableFulltextFailCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen, für die die Volltextsuche keinen Index erstellt hat.<br /><br /> 0 = Die Auffüllung ist abgeschlossen.<br /><br /> > 0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der Dokumente, die seit dem Start der Auffüllung mithilfe der vollständigen, inkrementellen und manuellen Änderungsnachverfolgung nicht indiziert wurden. B) Bei der Änderungsnachverfolgung mit Indexupdate im Hintergrund die Anzahl der Zeilen, die seit dem Start der Auffüllung oder dem Neustart der Auffüllung nicht indiziert wurden. Ursache dafür kann eine Schemaänderung, eine Neuerstellung des Katalogs, ein Neustart des Servers usw. sein.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
+|TableFulltextDocsProcessed|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der seit dem Start der vollständigen, inkrementellen oder manuellen Änderungsnachverfolgung mithilfe von Einfüge- und Updatevorgängen verarbeiteten Dokumente. B) Die Anzahl der Zeilen, die mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden, seit die Änderungsnachverfolgung mit Auffüllung mithilfe von Indexupdates im Hintergrund aktiviert wurde, das Schema für den Volltextindex geändert wurde, der Volltextkatalog erneut erstellt wurde oder die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde usw.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Diese Eigenschaft überwacht die Anzahl gelöschter Zeilen nicht und zählt sie auch nicht.|  
+|TableFulltextFailCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen, für die die Volltextsuche keinen Index erstellt hat.<br /><br /> 0 = Die Auffüllung ist abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der Dokumente, die seit dem Start der Auffüllung mithilfe der vollständigen, inkrementellen und manuellen Änderungsnachverfolgung für Updates nicht indiziert wurden. B) Bei der Änderungsnachverfolgung mit Indexupdate im Hintergrund die Anzahl der Zeilen, die seit dem Start der Auffüllung oder dem Neustart der Auffüllung nicht indiziert wurden. Ursache dafür kann eine Schemaänderung, eine Neuerstellung des Katalogs, ein Neustart des Servers usw. sein.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
 |TableFulltextItemCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen, für die ein Volltextindex erfolgreich erstellt wurde.|  
 |TableFulltextKeyColumn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID der Spalte, die dem eindeutigen einspaltigen Index zugeordnet ist, der Teil der Definition des Volltextindexes ist.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
 |TableFulltextPendingChanges|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Anzahl der zu verarbeitenden ausstehenden Änderungsnachverfolgungseinträge.<br /><br /> 0 = Änderungsnachverfolgung ist nicht aktiviert.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
@@ -166,7 +166,7 @@ OBJECTPROPERTY ( id , property )
   
  Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. OBJECTPROPERTY, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] setzt voraus, dass sich *object_id* im aktuellen Datenbankkontext befindet. Eine Abfrage, die auf *object_id* in einer anderen Datenbank verweist, gibt NULL oder falsche Ergebnisse zurück. Beispielsweise ist der aktuelle Datenbankkontext in der folgenden Abfrage die Masterdatenbank. [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, den Eigenschaftenwert für die angegebene *object_id* in dieser Datenbank zurückzugeben und nicht in der Datenbank, die in der Abfrage angegeben ist. Die Abfrage gibt falsche Ergebnisse zurück, da sich die `vEmployee`-Sicht nicht in der Masterdatenbank befindet.  
   
 ```  
@@ -230,9 +230,9 @@ ORDER BY type_desc, name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D: Überprüfen, ob ein Objekt in einer Tabelle vorhanden ist  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D: Überprüfen, ob ein Objekt eine Tabelle ist  
  Im folgenden Beispiel wird getestet, ob `dbo.DimReseller` in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank eine Tabelle ist.  
   
 ```  

@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251236"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung
@@ -91,6 +91,6 @@ Mit der neuen Funktion von SQL Server 2016 können Sie verteilte Transaktionen s
 >  Es besteht keine Unterstützung für die Verwendung der Datenbankspiegelung mit DTC oder die Verwendung von Verfügbarkeitsgruppen mit DTC auf nicht in diesem Artikel genehmigte Weise.  Dies bedeutet nicht, dass Aspekte des Produkts, die nicht mit DTC in Zusammenhang stehen, nicht unterstützt werden; Probleme die aus der unsachgemäßen Verwendung von verteilten Transaktionen herrühren, werden jedoch nicht unterstützt.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Always On-Verfügbarkeitsgruppen: Interoperabilität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

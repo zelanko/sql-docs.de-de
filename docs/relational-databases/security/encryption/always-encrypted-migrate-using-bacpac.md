@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1f2f44a6cf1172b779160d4ee17e584c7a7b2452
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595805"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Exportieren und Importieren von Datenbanken mit Always Encrypted 
@@ -43,7 +43,7 @@ Sie benötigen für die Quelldatenbank die Berechtigungen *ALTER ANY COLUMN MAST
 
 Sie benötigen keinen Zugriff auf die Spaltenhauptschlüssel, die für die verschlüsselten Spalten konfiguriert sind, da die Daten während der Export- und Importvorgänge verschlüsselt bleiben.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 - [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Weitere Informationen

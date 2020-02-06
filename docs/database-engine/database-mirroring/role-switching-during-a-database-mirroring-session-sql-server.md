@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252785"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
@@ -96,7 +96,7 @@ ms.locfileid: "75252785"
   
  Die folgende Abbildung veranschaulicht ein manuelles Failover, bei dem während des Upgrades einer Datenbankserverinstanz die Datenbank verfügbar bleibt. Nach dem Abschluss des Upgrades kann vom Administrator optional ein Failover zurück zur Originalserverinstanz durchgeführt werden. Dies ist nützlich, wenn der Administrator die Spiegelungssitzung beenden und den Spiegelserver anderweitig verwenden möchte. Auf diese Weise kann eine einzelne Serverinstanz wiederholt beim Aktualisieren einer Reihe von Datenbankserverinstanzen verwendet werden.  
   
- ![Geplantes manuelles Failover:](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
+ ![Geplantes manuelles Failover:](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Geplantes manuelles Failover")  
   
 ###  <a name="ConditionsForManualFo"></a> Für ein manuelles Failover erforderliche Bedingungen  
  Für das manuelle Failover ist die Transaktionssicherheitseinstellung FULL erforderlich (d. h., der Modus für hohe Sicherheit). Wenn die Partner verbunden sind und die Datenbank bereits synchronisiert ist, wird das manuelle Failover unterstützt.  

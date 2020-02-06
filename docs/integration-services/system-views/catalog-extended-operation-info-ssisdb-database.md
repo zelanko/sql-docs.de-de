@@ -11,10 +11,10 @@ ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca82bdc8a04ffee4426ffb934a9e9a4ddaf4654f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296607"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (SSISDB-Datenbank)
@@ -26,7 +26,7 @@ ms.locfileid: "71296607"
 
   Zeigt erweiterte Informationen für alle Vorgänge im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|Der eindeutige Bezeichner (ID) der erweiterten Informationen.|  
 |operation_id|**bigint**|Die eindeutige ID des Vorgangs, der den erweiterten Informationen entspricht.|  
@@ -37,7 +37,7 @@ ms.locfileid: "71296607"
 |start_time|**datetimeoffset(7)**|Datum und Uhrzeit für das Starten des Vorgangs.|  
 |end_time|**datetimeoffset(7)**|Datum und Uhrzeit für das Beenden des Vorgangs.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein einzelner Vorgang kann über mehrere Zeilen mit erweiterten Informationen verfügen.  
   
 ## <a name="permissions"></a>Berechtigungen  

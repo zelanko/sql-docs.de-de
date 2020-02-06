@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125142"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Die TM: Die Commit Tran Starting-Ereignisklasse zeigt an, dass eine COMMIT TRANSACTION-Anforderung beginnt. Die Anforderung wird vom Client über die Schnittstelle für die Transaktionsverwaltung gesendet. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Commit der aktuellen Transaktion gestartet wird.  
+  Die TM: Commit Tran Starting-Ereignisklasse zeigt an, dass eine COMMIT TRANSACTION-Anforderung beginnt. Die Anforderung wird vom Client über die Schnittstelle für die Transaktionsverwaltung gesendet. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Commit der aktuellen Transaktion gestartet wird.  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting-Ereignisklasse – Datenspalten  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Datenspalten in der TM: Commit Tran Starting-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Ja|  

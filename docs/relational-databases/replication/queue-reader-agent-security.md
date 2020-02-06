@@ -15,10 +15,10 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92b80f727ce87606b0c1c58954b0743734880422
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021258"
 ---
 # <a name="queue-reader-agent-security"></a>Sicherheit für den Warteschlangenlese-Agent
@@ -27,7 +27,7 @@ ms.locfileid: "68021258"
   
  Das Konto muss für das angegebene Kennwort gültig sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Prozesskonto**  
  Geben Sie das Windows-Konto ein, unter dem der Warteschlangenlese-Agent auf dem Verteiler ausgeführt wird. Das angegebene Windows-Konto muss mindestens ein Mitglied der festen Datenbankrolle **db_owner** in der Verteilungsdatenbank sein.  
   

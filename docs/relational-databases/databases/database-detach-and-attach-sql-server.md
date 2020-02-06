@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037582"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68037582"
 Die Daten- und Transaktionsprotokolldateien einer Datenbank können getrennt und anschließend an dieselbe oder eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt werden. Das Trennen und Anfügen einer Datenbank ist hilfreich, wenn Sie die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ändern oder wenn Sie die Datenbank verschieben möchten.  
   
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> Sicherheit  
 Dateizugriffsberechtigungen werden während einer Reihe von Datenbankvorgängen festgelegt, einschließlich des Trennens oder Anfügens einer Datenbank.  
   
 > [!IMPORTANT]  
@@ -146,7 +146,7 @@ Wenn Sie eine Datenbank an eine andere Serverinstanz anfügen, müssen Sie die M
   
 **So löschen Sie eine Datenbank-Momentaufnahme**  
   
--   [Löschen einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)  

@@ -1,25 +1,24 @@
 ---
-title: Analysieren der Skriptleistung | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Analysieren der Skriptleistung
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984681"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245563"
 ---
 # <a name="analyze-script-performance"></a>Analysieren der Skriptleistung
+
 Sie können mit den von SQL Server Data Tools bereitgestellten Tools bestimmen, ob die Leistung von Abfragen, gespeicherten Prozeduren oder Skripts verbessert werden kann. Indem Sie beispielsweise Clientstatistiken wie die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind. Solche Statistiken können die Clientausführungszeit, das Abfrageprofil sowie gesendete und empfangene Pakete/Bytes enthalten.  
   
 Außerdem ist für gewisse Leistungsprobleme ein besserer Lösungsansatz eine Analyse der Anwendungsabfragen sowie der durch die Anwendung an die Datenbank gesendeten Updates und deren Interaktion mit den in der Datenbank und im Datenbankschema enthaltenen Daten. In Ausführungsplänen werden die vom SQL Server-Abfrageoptimierer ausgewählten Datenabrufmethoden grafisch dargestellt und die Ausführungskosten für bestimmte Anweisungen und Abfragen angezeigt. Auf diese Weise ist erkennbar, wie die SQL-Abfrage von SQL Server verarbeitet wird und wodurch Leistungseinbußen verursacht werden.  
@@ -27,7 +26,7 @@ Außerdem ist für gewisse Leistungsprobleme ein besserer Lösungsansatz eine An
 ## <a name="using-client-statistics"></a>Verwenden von Clientstatistiken  
 Wenn Sie im Transact\-SQL-Editor ein Skript oder eine Abfrage ausführen, können Sie festlegen, dass Clientstatistiken wie Anwendungsprofil-, Netzwerk- und Zeitstatistiken zur Ausführung gesammelt werden sollen. Mit solchen Metriken können Sie die Effizienz von Skripts messen und Vergleichstests mit anderen Skripts durchführen.  
   
-Um die Erfassung von Clientstatistiken zu aktivieren oder zu deaktivieren, zeigen Sie im geöffneten Transact\-SQL-Editor im Menü **Daten** auf **Transact\-SQL-Editor** und klicken auf **Ausführungseinstellungen** und dann auf **Clientstatistiken einschließen**. Sie können auch auf der Symbolleiste des Transact\-SQL-Editors auf die Schaltfläche **Clientstatistiken einschließen** (die fünfte Schaltfläche von rechts) klicken oder mit der rechten Maustaste in den Transact\-SQL-Editor klicken und anschließend auf **Ausführungseinstellungen** und **Clientstatistiken einschließen** klicken. Beachten Sie, dass Sie zum Erfassen von Statistiken für eine Abfrage diese Funktion vor der Ausführung der Abfrage aktivieren müssen.  
+Um die Erfassung von Clientstatistiken zu aktivieren oder zu deaktivieren, zeigen Sie im geöffneten Transact\-SQL-Editor im Menü **Daten** auf **Transact\-SQL-Editor** und klicken auf **Ausführungseinstellungen** und dann auf **Clientstatistiken einschließen**. Sie können auch auf der Symbolleiste des Transact**SQL-Editors auf die Schaltfläche** Clientstatistiken einschließen\- (die fünfte Schaltfläche von rechts) klicken oder mit der rechten Maustaste in den Transact\-SQL-Editor klicken und anschließend auf **Ausführungseinstellungen** und **Clientstatistiken einschließen** klicken. Beachten Sie, dass Sie zum Erfassen von Statistiken für eine Abfrage diese Funktion vor der Ausführung der Abfrage aktivieren müssen.  
   
 Wenn Sie Clientstatistiken aktiviert haben, wird nach Ausführen der Abfrage die Registerkarte **Statistik** neben der Registerkarte **Meldung** angezeigt. Wenn Sie Clientstatistiken deaktiviert haben, wird die Registerkarte **Statistik** nicht angezeigt. Statistiken von aufeinander ausgeführten Abfragen werden mit Durchschnittswerten aufgelistet.  
   

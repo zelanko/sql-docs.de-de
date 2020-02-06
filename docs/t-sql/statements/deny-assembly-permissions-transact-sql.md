@@ -17,10 +17,10 @@ ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a1131a6f7b00f9b8ba4646106de0699a2a9fada8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115010"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY-Assemblyberechtigungen (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68115010"
   
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  Gibt die Assembly an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung verweigert wird. Einer der folgenden Typen:  
+ Gibt den Prinzipal an, für den die Berechtigung verweigert wird. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   
@@ -72,7 +72,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  Gibt an, dass die verweigerte Berechtigung auch anderen Prinzipalen verweigert wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde.  
   
  *denying_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet. Einer der folgenden Typen:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   

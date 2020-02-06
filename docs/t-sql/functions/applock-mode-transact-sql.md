@@ -21,18 +21,18 @@ ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4544cc4f0a4d7c1d6d33e1f71bde4b55c09a59c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040359"
 ---
-# <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
+# <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt den Sperrmodus zurück, der vom Besitzer der Sperre für eine bestimmte Anwendungsressource aufrechterhalten wird. APPLOCK_MODE ist eine Anwendungssperrfunktion, die für die aktuelle Datenbank gilt. Die Datenbank umfasst den Bereich der Anwendungssperren.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +58,7 @@ Gibt den Sperrmodus zurück, der vom Besitzer der Sperre für eine bestimmte Anw
   
 ||||  
 |-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
+|**NoLock**|**Aktualisieren**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**Exclusive**||  
   
@@ -129,7 +129,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
 [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
 [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)

@@ -11,10 +11,10 @@ ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8c455243f6ca903f61bfa7ad6ef6d88e544a258
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295423"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (SSISDB-Datenbank)
@@ -52,7 +52,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -72,7 +72,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Der Umgebungsname ist ungültig.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Version kann nur die `Description` -Eigenschaft festgelegt werden. Der Wert für die `Description` -Eigenschaft darf 4000 Zeichen nicht überschreiten.  
   
   

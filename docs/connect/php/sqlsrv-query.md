@@ -18,10 +18,10 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce7a12b3964e3e0c2407521978df03af9d88f63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014971"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
@@ -55,7 +55,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     Die Beschreibung für jedes Element des Arrays finden Sie in der folgenden Tabelle:  
   
-    |Element|und Beschreibung|  
+    |Element|BESCHREIBUNG|  
     |-----------|---------------|  
     |*$value*|Ein Literalwert, eine PHP-Variable oder eine PHP-Variable als Verweis.|  
     |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\*** -Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  

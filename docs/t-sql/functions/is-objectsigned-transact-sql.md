@@ -18,10 +18,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314615"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "71314615"
 
   Gibt an, ob ein Objekt von einem angegebenen Zertifikat oder asymmetrischen Schlüssel signiert wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,10 +62,10 @@ IS_OBJECTSIGNED (
 ## <a name="returned-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  IS_OBJECTSIGNED gibt folgende Werte zurück.  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|BESCHREIBUNG|  
 |------------------|-----------------|  
 |NULL|Das Objekt wurde nicht signiert oder ist nicht gültig.|  
 |0|Das Objekt wurde signiert, die Signatur ist jedoch nicht gültig.|  

@@ -13,10 +13,10 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298078"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
@@ -61,7 +61,7 @@ ms.locfileid: "71298078"
  **Ausführungsmodus**  
  Gibt die Methode zum Extrahieren von Daten aus der Quelle an.  
   
-|Option|und Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**P - Prozesskette auslösen**|Lösen Sie eine Prozesskette aus. In diesem Fall wird der Extrahierungsprozess vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket gestartet.|  
 |**W - Benachrichtigung abwarten**|Warten Sie auf die Benachrichtigung vom SAP NetWeaver BW-System, um mit dem Extrahieren von Daten zu beginnen. In diesem Fall wird der Extrahierungsprozess vom SAP NetWeaver BW-System gestartet.|  
@@ -124,13 +124,13 @@ ms.locfileid: "71298078"
  Suchen Sie das RFC-Ziel mithilfe des Dialogfelds **RFC-Ziel suchen** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 ### <a name="execution-mode--e---extract-only"></a>Ausführungsmodus = E - Nur extrahieren  
- **Anforderungs-ID**  
+ **Anfrage-ID**  
  Geben Sie die Anforderungs-ID ein, die der Extrahierung zugeordnet ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Quellen-Editor für SAP BW &#40;Seite Erweitert&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

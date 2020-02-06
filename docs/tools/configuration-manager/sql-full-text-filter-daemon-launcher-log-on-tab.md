@@ -1,6 +1,6 @@
 ---
-title: Startprogramm für SQL-Volltextfilterdaemon (Registerkarte „Anmelden“) | Microsoft-Dokumentation
-ms.custom: ''
+title: Startprogramm für SQL-Volltextfilterdaemon (Registerkarte Anmelden)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 791079d881cf48c8eb5cdaa74f932cb29738003a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 81cca06132cd63bf344d54004895f1bd9a0ab2e7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058278"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306742"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Startprogramm für SQL-Volltextfilterdaemon (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68058278"
 >   
 >  Weitere Informationen über das Auswählen eines Kontos zum Ausführen des Dienstes finden Sie unter "Einrichten von Windows-Dienstkonten" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Integriertes Konto**  
  **Lokales System**  
  Geben Sie das lokale Systemkonto an. Dieses Konto erfordert kein Kennwort. Das lokale Systemkonto kann die Zusammenarbeit mit anderen Servern verhindern. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
@@ -52,7 +52,7 @@ ms.locfileid: "68058278"
  **Kennwort bestätigen**  
  Geben Sie das Kennwort des Kontos erneut ein.  
   
- **Start**  
+ **Starten**  
  Starten Sie den Dienst.  
   
  **Beenden**  

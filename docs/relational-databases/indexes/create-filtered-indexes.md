@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908108"
 ---
 # <a name="create-filtered-indexes"></a>Erstellen gefilterter Indizes
@@ -51,7 +51,7 @@ ms.locfileid: "72908108"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen gefilterten Index mithilfe von:**  
   
@@ -130,7 +130,7 @@ ms.locfileid: "72908108"
   
 #### <a name="to-create-a-filtered-index"></a>So erstellen Sie einen gefilterten Index  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "72908108"
   
 #### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>So stellen Sie sicher, dass ein gefilterter Index in einer SQL-Abfrage verwendet wird  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

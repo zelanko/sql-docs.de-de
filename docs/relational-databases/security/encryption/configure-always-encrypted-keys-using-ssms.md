@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595755"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio
@@ -103,7 +103,7 @@ Weitere Informationen finden Sie unter [Erstellen und Speichern von Spaltenhaupt
 
 Der [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md) ist ein Tool für das Verschlüsseln, Entschlüsseln und erneute Verschlüsseln ausgewählter Datenbankspalten. Obwohl bereits konfigurierte Schlüssel verwendet werden können, können Sie auch einen neuen Spaltenhauptschlüssel und eine neue Spaltenverschlüsselung generieren. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 - [Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten](always-encrypted-wizard.md)
 - [Konfigurieren der Spaltenverschlüsselung unter Verwendung von Always Encrypted mit einem DAC-Paket](configure-always-encrypted-using-dacpac.md)
 - [Rotieren von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)

@@ -19,10 +19,10 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321484"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ausführen der Geschäftslogik während der Mergesynchronisierung
@@ -31,7 +31,7 @@ ms.locfileid: "75321484"
   
 -   In der API-Referenz (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   In den Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Verwendungsmöglichkeiten für Geschäftslogikhandler  
  Bei der Mergesynchronisierung können Geschäftslogikhandler für folgende Zwecke aufgerufen werden:  

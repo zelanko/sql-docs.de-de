@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908667"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
@@ -33,7 +33,7 @@ Besuchen Sie [SQL Server Evaluation](https://www.microsoft.com/evalcenter/evalua
    
 - Mindestgröße des Festplattenspeichers: 2 GB
   
-- Empfehlenswert: Mindestens 16 GB RAM
+- Empfohlen: Mindestens 16 GB RAM
    
 - Für PolyBase muss TCP/IP aktiviert sein, um ordnungsgemäß funktionieren zu können. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit PolyBase auch in den Developer- und Express-Versionen ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -102,7 +102,7 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017"
 
-|SQL Server-Komponente|Parameter und Werte|und Beschreibung|  
+|SQL Server-Komponente|Parameter und Werte|BESCHREIBUNG|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBase|Wählt die PolyBase-Funktion aus.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
@@ -118,7 +118,7 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-|SQL Server-Komponente|Parameter und Werte|und Beschreibung|  
+|SQL Server-Komponente|Parameter und Werte|BESCHREIBUNG|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installiert Unterstützung für alle PolyBase-Features mit Ausnahme der Hadoop-Konnektivität. PolyBaseJava aktiviert die Hadoop-Konnektivität. PolyBase installiert beides. |  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  

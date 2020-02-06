@@ -16,10 +16,10 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321887"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Konfliktlösung für die Mergereplikation
@@ -50,7 +50,7 @@ ms.locfileid: "75321887"
 3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, für die Sie die Konflikte anzeigen möchten, und klicken Sie dann auf **Konflikte anzeigen**.  
   
     > [!NOTE]  
-    >  Wenn für die **conflict_logging** -Eigenschaft der Wert **'subscriber'** angegeben wurde, ist die Menüoption **Konflikte anzeigen** nicht verfügbar. Starten Sie zum Anzeigen von Konflikten ConflictViewer.exe von der Eingabeaufforderung aus. ConflictViewer.exe wird standardmäßig im folgenden Verzeichnis gespeichert: Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Eine Liste der gültigen Startparameter erhalten Sie, wenn Sie ConflictViewer.exe -? ausführen.  
+    >  Wenn für die **conflict_logging** -Eigenschaft der Wert **'subscriber'** angegeben wurde, ist die Menüoption **Konflikte anzeigen** nicht verfügbar. Starten Sie zum Anzeigen von Konflikten ConflictViewer.exe von der Eingabeaufforderung aus. ConflictViewer.exe befindet sich standardmäßig im folgenden Verzeichnis: Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Eine Liste der gültigen Startparameter erhalten Sie, wenn Sie ConflictViewer.exe -? ausführen.  
   
 4.  Wählen Sie im Dialogfeld **Konflikttabelle auswählen** eine Datenbank, eine Veröffentlichung und eine Tabelle aus, für die Sie die Konflikte anzeigen möchten.  
   

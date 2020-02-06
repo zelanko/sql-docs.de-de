@@ -20,10 +20,10 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908827"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "72908827"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Wiederherstellen von Seiten mit:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72908827"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="WhenUseful"></a> Wann ist eine Seitenwiederherstellung sinnvoll?  
  Eine Seitenwiederherstellung ist zum Reparieren einzelner beschädigter Seiten vorgesehen. Die Wiederherstellung weniger Einzelseiten erfolgt möglicherweise schneller als eine Dateiwiederherstellung, sodass sich die Menge der Daten reduziert, die während der Wiederherstellung offline sind. Wenn Sie jedoch mehrere Seiten in einer Datei wiederherstellen müssen, erweist sich die Wiederherstellung der vollständigen Datei in der Regel als effizienter. Wenn auf einem Gerät sehr viele Seiten beschädigt sind, kann das ein Hinweis auf einen Gerätefehler sein. In diesem Fall sollten Sie die Datei nach Möglichkeit an einem anderen Speicherort wiederherstellen und das Gerät reparieren.  
@@ -117,7 +117,7 @@ ms.locfileid: "72908827"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Aufgaben**, zeigen Sie auf **Wiederherstellen**, und klicken Sie anschließend auf **Seite**. Daraufhin wird das Dialogfeld **Seite wiederherstellen** geöffnet.  
   
-     **Restore**  
+     **Wiederherstellen**  
      Über diesen Abschnitt führen Sie die gleiche Funktion wie mit **Wiederherstellen in** unter [Datenbank wiederherstellen (Seite „Allgemein“)](../../relational-databases/backup-restore/restore-database-general-page.md)aus.  
   
      **Datenbank**  
@@ -136,7 +136,7 @@ ms.locfileid: "72908827"
     |------------|------------|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Komponente**|Die gesicherte Komponente: **Datenbank**, **Datei** oder **\<leer>** (bei Transaktionsprotokollen).|  
-    |**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
+    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
     |**Server**|Der Name der Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s, von der der Sicherungsvorgang ausgeführt wurde.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  

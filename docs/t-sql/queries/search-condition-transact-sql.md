@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027647"
 ---
 # <a name="search-condition-transact-sql"></a>Suchbedingung (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68027647"
 
   Bezeichnet eine Kombination aus einem oder mehreren Prädikaten, die die logischen Operatoren AND, OR und NOT verwenden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -229,7 +229,7 @@ WHERE CountryRegionCode NOT IN ('US')
 AND City LIKE N'Pa%' ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-where-with-like"></a>C. Verwenden von WHERE mit LIKE  
  Im folgenden Beispiel wird nach den Zeilen gesucht, in denen die `LastName`-Spalte die Zeichen `and` aufweist.  
@@ -242,7 +242,7 @@ FROM DimEmployee
 WHERE LastName LIKE '%and%';  
 ```  
   
-### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D. Verwenden der WHERE- und LIKE-Syntax mit Unicodedaten  
+### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D: Verwenden der WHERE- und LIKE-Syntax mit Unicodedaten  
  Im folgenden Beispiel wird die `WHERE`-Klausel verwendet, um einen Unicode-Suchvorgang in der `LastName`-Spalte durchzuführen.  
   
 ```  

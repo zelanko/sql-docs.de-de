@@ -1,5 +1,5 @@
 ---
-title: Überlegungen zur Sicherheit bei SQL Server-Installationen | Microsoft-Dokumentation
+title: Überlegungen zur Sicherheit
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 302b29901b9f20c70799704bdf75938270900173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019808"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258961"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Überlegungen zur Sicherheit bei SQL Server-Installationen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "68019808"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden nicht unterstützt, wenn es sich bei den Clusterknoten um Domänencontroller handelt.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann beim Setup keine Sicherheitsgruppen erstellen oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten für einen schreibgeschützten Domänencontroller bereitstellen. In diesem Szenario tritt ein Setupfehler auf.  
+-   Beim Setup von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können keine Sicherheitsgruppen erstellt oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten für einen schreibgeschützten Domänencontroller bereitgestellt werden. In diesem Szenario tritt ein Setupfehler auf.  
   
 ## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Während oder nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nach der Installation können Sie die Sicherheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation mit diesen bewährten Methoden bezüglich Konten und Authentifizierungsmodi verbessern:  

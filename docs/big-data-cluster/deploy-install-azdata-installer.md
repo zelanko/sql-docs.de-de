@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594338"
 ---
 # <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Installieren von `azdata` zur Verwaltung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] mit dem Windows Installer
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Windows installieren. Bevor die Windows-Installation zur Verfügung stand, war `pip` für die Installation von `azdata` erforderlich.
+In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Windows installieren. Bevor die Windows-Installation zur Verfügung stand, war `azdata` für die Installation von `pip` erforderlich.
 
 >Weitere Informationen zu Linux (Ubuntu) finden Sie unter [Installieren von `azdata` mit dem Installationsprogramm](./deploy-install-azdata-linux-package.md).
 
-Zurzeit gibt es keine Paket-Manager zur Installation von `azdata` unter anderen Betriebssystemen oder Distributionen. Für diese Plattformen lesen Sie den Artikel zum [Installieren von `azdata` ohne Paket-Manager](./deploy-install-azdata.md).
+Zurzeit gibt es keine Paket-Manager zur Installation von `azdata` unter anderen Betriebssystemen oder Verteilungen. Für diese Plattformen lesen Sie den Artikel zum [Installieren von `azdata` ohne Paket-Manager](./deploy-install-azdata.md).
 
 ## <a name="install-azdata-with-the-microsoft-windows-installer"></a>Installieren von `azdata` mit dem Microsoft Windows Installer
 
@@ -60,7 +60,7 @@ Wenn das Installationsprogramm fragt, ob es Änderungen an Ihrem Computer vorneh
 
 Wenn Sie `azdata` mit dem Windows Installer deinstallieren möchten, befolgen Sie die Anweisungen für das jeweilige Betriebssystem.
 
-| Platform      | Instructions                                           |
+| Plattform      | Instructions                                           |
 | ------------- |--------------------------------------------------------|
 | Windows 10| Start > Einstellungen > Apps                                |
 | Windows 8     | Start > Systemsteuerung > Programme > Programm deinstallieren |

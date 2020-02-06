@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982055"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982055"
 
   Ändert die Eigenschaften einer Warteschlange.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -157,7 +157,7 @@ Im Gegensatz zu REORGANIZE bei Benutzertabellen wird REORGANIZE bei einer Wartes
   
  Eine Warteschlange, für die die Behandlung nicht verarbeitbarer Nachrichten auf OFF festgelegt ist, wird erst nach fünf aufeinander folgenden Transaktionsrollbacks deaktiviert. Daher ist es möglich, dass von der Anwendung ein System für die Behandlung nicht verarbeitbarer Nachrichten definiert wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Warteschlange mit einer angegebenen gespeicherten Aktivierungsprozedur Nachrichten enthält, wird die gespeicherte Aktivierungsprozedur unmittelbar aktiviert, wenn der Aktivierungsstatus von OFF in ON geändert wird. Durch das Ändern des Aktivierungsstatus von ON zu OFF beendet der Broker das Aktivieren von Instanzen der gespeicherten Prozedur. Instanzen der gespeicherten Prozedur, die aktuell ausgeführt werden, werden jedoch nicht beendet.  
   
  Wird eine Warteschlange geändert, um eine gespeicherte Aktivierungsprozedur hinzuzufügen, wird dadurch der Aktivierungsstatus der Warteschlange nicht geändert. Wird die gespeicherte Aktivierungsprozedur für die Warteschlange geändert, hat dies keine Auswirkungen auf Instanzen der gespeicherten Aktivierungsprozedur, die aktuell ausgeführt werden.  
@@ -191,13 +191,13 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Ändern der Anzahl von Warteschlangenlesevorgängen  
- Im folgenden Beispiel wird die maximale Anzahl von Instanzen der gespeicherten Prozedur, die von [!INCLUDE[ssSB](../../includes/sssb-md.md)] für diese Warteschlange gestartet werden, auf `7` festgelegt.  
+ Im folgenden Beispiel wird die maximale Anzahl von Instanzen der gespeicherten Prozedur, die von `7` für diese Warteschlange gestartet werden, auf [!INCLUDE[ssSB](../../includes/sssb-md.md)] festgelegt.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
-### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. Ändern der gespeicherten Aktivierungsprozedur und des EXECUTE AS-Kontos  
+### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D: Ändern der gespeicherten Aktivierungsprozedur und des EXECUTE AS-Kontos  
  Im folgenden Beispiel wird die von [!INCLUDE[ssSB](../../includes/sssb-md.md)] gestartete gespeicherte Prozedur geändert. Die gespeicherte Prozedur wird als der Benutzer `SecurityAccount` ausgeführt.  
   
 ```  

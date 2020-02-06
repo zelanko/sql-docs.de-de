@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295210"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB-Datenbank)
@@ -29,7 +29,7 @@ ms.locfileid: "71295210"
 
   Zeigt die Instanzen der Paketausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an. Die Ausführung von Paketen mit dem Task "Paket ausführen" erfolgt in der gleichen Ausführungsinstanz wie die Ausführung des übergeordneten Pakets.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Der eindeutige Bezeichner (ID) der Ausführungsinstanz.|  
 |folder_name|**sysname(nvarchar(128))**|Der Name des Ordners, der das Projekt enthält.|  
@@ -62,7 +62,7 @@ ms.locfileid: "71295210"
 |machine_name|**nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
 |dump_id|**uniqueidentifier**|Die ID eines Ausführungsdumps.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Instanz der Ausführung im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

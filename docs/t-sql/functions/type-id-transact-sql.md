@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71e719d816e1afb9457d99049fa69c4749c18c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098744"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68098744"
 
   Gibt die ID für einen angegebenen Datentypnamen zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -84,9 +84,9 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: Suchen der TYPE ID eines Systemdatentyps  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: Abrufen des TYPE ID-Werts eines Systemdatentyps  
  Im folgenden Beispiel wird die `TYPE ID` für den `datetime`-Systemdatentyp zurückgegeben.  
   
 ```  

@@ -13,10 +13,10 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907567"
 ---
 # <a name="add-or-edit-join"></a>Join hinzufügen und Join bearbeiten
@@ -33,7 +33,7 @@ ms.locfileid: "72907567"
 > [!IMPORTANT]  
 >  Joinfilter können zwar eine unbegrenzte Anzahl von Tabellen umfassen, Filter mit sehr vielen Tabellen können sich jedoch nachteilig auf die Leistung während der Mergeverarbeitung auswirken. Wenn Sie Joinsfilter für fünf oder mehr Tabellen erstellen, sollten Sie andere Lösungen in Betracht ziehen: Kleinere Tabellen, Tabellen, die nicht geändert werden, oder Tabellen, bei denen es sich primär um Nachschlagetabellen handelt, sollten in diesem Fall nicht gefiltert werden. Verwenden Sie Joinfilter nur zwischen Tabellen, die für die Abonnenten partitioniert werden müssen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Dieses Dialogfeld enthält einen dreistufigen Vorgang zur Erstellung eines Joinfilters zwischen zwei Tabellen. Wenn mehrere Joinfilter erstellt werden sollen, muss der Vorgang mithilfe des Dialogfelds mehrfach ausgeführt werden.  
   
 1.  **Überprüfen Sie die gefilterte Tabelle, und wählen Sie die verknüpfte Tabelle aus**  
@@ -59,7 +59,7 @@ ms.locfileid: "72907567"
         > [!CAUTION]  
         >  Durch Auswahl dieser Option kennzeichnen Sie, ob es sich bei der Beziehung zwischen der untergeordneten und der übergeordneten Tabelle in einem Joinfilter um eine 1:1- oder eine 1:n-Beziehung handelt. Wählen Sie diese Option nur aus, wenn es eine Einschränkung für die verknüpfte Spalte in der übergeordneten Tabelle gibt, durch die die Eindeutigkeit sichergestellt wird. Wenn die Option nicht richtig festgelegt wird, kann eine mangelnde Konvergenz der Daten die Folge sein.  
   
-    -   Nur in[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Standardmäßig werden Änderungen durch die Mergereplikation während der Synchronisierung zeilenweise verarbeitet. Damit miteinander verbundene Änderungen als Einheit verarbeitet werden, wählen Sie **Logischer Datensatz**aus. Diese Option ist nur verfügbar, wenn die Anforderungen für die Verwendung logischer Datensätze durch den Artikel und die Veröffentlichung erfüllt werden. Weitere Informationen finden Sie im Abschnitt „Überlegungen zum Verwenden logischer Datensätze“ in [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Nur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Standardmäßig werden Änderungen durch die Mergereplikation während der Synchronisierung zeilenweise verarbeitet. Damit miteinander verbundene Änderungen als Einheit verarbeitet werden, wählen Sie **Logischer Datensatz**aus. Diese Option ist nur verfügbar, wenn die Anforderungen für die Verwendung logischer Datensätze durch den Artikel und die Veröffentlichung erfüllt werden. Weitere Informationen finden Sie im Abschnitt „Überlegungen zum Verwenden logischer Datensätze“ in [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Nachdem Sie einen Filter hinzugefügt oder bearbeitet haben, klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen. Der von Ihnen angegebene Filter wird analysiert und für die Tabelle in der SELECT-Klausel ausgeführt. Wenn die Filteranweisung Syntaxfehler oder andere Probleme enthält, werden Sie benachrichtigt und können die Filteranweisung bearbeiten.  
   

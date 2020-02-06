@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75548281"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -241,7 +241,7 @@ GO
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie die Anzahl von Zeilen beschränkt wird, die gelöscht werden.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Löschen einer Reihe von Zeilen mithilfe der WHERE-Klausel  
- Im folgenden Beispiel werden alle Zeilen der Tabelle `ProductCostHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, bei denen der Wert `1000.00` in der Spalte `StandardCost` überschritten wird.  
+ Im folgenden Beispiel werden alle Zeilen der Tabelle `ProductCostHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, bei denen der Wert `StandardCost` in der Spalte `1000.00` überschritten wird.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
