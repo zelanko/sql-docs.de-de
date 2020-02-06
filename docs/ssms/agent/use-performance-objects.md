@@ -1,10 +1,9 @@
 ---
-title: Verwenden von Leistungsobjekten | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von Leistungsobjekten
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73e36b4d0ee10d42ec7774e20693d217ee274344
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee697990c729a28872f8562241cd5dbfdc3225b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260902"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257824"
 ---
 # <a name="use-performance-objects"></a>Verwenden von Leistungsobjekten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,12 +43,12 @@ Die folgende Tabelle veranschaulicht, wie die Leistungsobjekte des [!INCLUDE[ssN
   
 |Instanztyp|Objektname|  
 |-----------------|---------------|  
-|Default|**SQLAgent:** _Objekt_:_Indikator_|  
-|Benannt|**SQLAgent$**<br /> **&#42;Instanzname&#42; :** _Objekt_:_Indikator_|  
+|Standard|**SQLAgent:** _Objekt_:_Indikator_|  
+|benannt|**SQLAgent$**<br /> **&#42;Instanzname&#42; :** _Objekt_:_Indikator_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beinhaltet die folgenden Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent.  
   
-|Objektname|und Beschreibung|  
+|Objektname|BESCHREIBUNG|  
 |---------------|---------------|  
 |[SQLAgent:Aufträge](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Leistungsinformationen zu gestarteten Aufträgen, Erfolgsrate und aktuellem Status|  
 |[SQLAgent:Auftragsschritte](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Statusinformationen zu Auftragsschritten|  
