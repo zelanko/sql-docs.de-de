@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155828"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "70155828"
 
   Entfernt eine oder mehrere Tabellendefinitionen sowie alle Daten, Indizes, Trigger, Einschränkungen und Berechtigungen für diese Tabellen. Jede Sicht oder gespeicherte Prozedur, die auf die gelöschte Tabelle verweist, muss explizit mithilfe einer [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md)- oder [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md)-Anweisung gelöscht werden. Verwenden Sie [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md), um über die Abhängigkeiten von einer Tabelle zu berichten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -138,7 +138,7 @@ SELECT * FROM #temptable;
   
 ```  
   
-### <a name="d-dropping-a-table-using-if-exists"></a>D. Löschen einer Tabelle mit IF EXISTS  
+### <a name="d-dropping-a-table-using-if-exists"></a>D: Löschen einer Tabelle mit IF EXISTS  
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

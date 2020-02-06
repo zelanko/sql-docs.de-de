@@ -18,10 +18,10 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065604"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (Berechtigungen für asymmetrische Schlüssel) (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065604"
 
   Erteilt Berechtigungen für einen asymmetrischen Schlüssel.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ GRANT { permission  [ ,...n ] }
  Gibt den asymmetrischen Schlüssel an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden Typen:  
+ Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden:  
   
 -   Datenbankbenutzer  
 -   Datenbankrolle (database role)  
@@ -64,7 +64,7 @@ GRANT OPTION
  Gibt an, dass der Prinzipal die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
 AS *granting_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet. Einer der folgenden Typen:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet. Einer der folgenden:  
   
 -   Datenbankbenutzer  
 -   Datenbankrolle (database role)  

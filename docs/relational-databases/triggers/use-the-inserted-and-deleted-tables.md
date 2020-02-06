@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075497"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen inserted und deleted
@@ -50,13 +50,13 @@ ms.locfileid: "68075497"
 > [!NOTE]  
 >  Wenn Triggeraktionen von der Anzahl der Zeilen abhängen, die von einer Datenänderung betroffen sind, sollten Sie Tests verwenden (z.B. die Untersuchung von @@ROWCOUNT), die mehrzeilige Datenänderungen (eine INSERT-, DELETE- oder UPDATE-Anweisung, die auf einer SELECT-Anweisung basiert) überprüfen und die entsprechenden Vorgänge ausführen.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lässt keine Spaltenverweise vom Typ **text**, **ntext**oder **image** in der inserted- und deleted-Tabelle für AFTER-Trigger zu. Diese Datentypen sind jedoch nur aus Gründen der Abwärtskompatibilität eingeschlossen. Speichern Sie umfangreiche Daten bevorzugt mit den Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** . Sowohl AFTER- als auch INSTEAD OF-Trigger unterstützen **varchar(max)**-, **nvarchar(max)**- und **varbinary(max)**-Daten in der inserted- und deleted-Tabelle. Weitere Informationen finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lässt keine Spaltenverweise vom Typ **text**, **ntext**oder **image** in der inserted- und deleted-Tabelle für AFTER-Trigger zu. Diese Datentypen sind jedoch nur aus Gründen der Abwärtskompatibilität eingeschlossen. Speichern Sie umfangreiche Daten bevorzugt mit den Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** . Sowohl AFTER- als auch INSTEAD OF-Trigger unterstützen **varchar(max)** -, **nvarchar(max)** - und **varbinary(max)** -Daten in der inserted- und deleted-Tabelle. Weitere Informationen finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Beispiel für die Verwendung der inserted-Tabelle in einem Trigger zum Erzwingen einer Geschäftsregel**  
   
  Da sich CHECK-Einschränkungen nur auf Spalten beziehen können, für die die Einschränkung auf Spalten- oder Tabellenebene definiert wurde, müssen tabellenübergreifende Einschränkungen (in diesem Fall Geschäftsregeln) als Trigger definiert werden.  
   
- Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt. Bitte beachten Sie, dass in diesem Beispiel multirow-Datenänderungen nicht berücksichtigt werden. Weitere Informationen finden Sie unter [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt. Bitte beachten Sie, dass in diesem Beispiel multirow-Datenänderungen nicht berücksichtigt werden. Weitere Informationen finden Sie unter [Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

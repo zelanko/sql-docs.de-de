@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114801"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (Objektberechtigungen) (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68114801"
   Verweigert Berechtigungen für ein Element der OBJECT-Klasse sicherungsfähiger Elemente. Folgende Elemente gehören zur OBJECT-Klasse: Tabellen, Sichten, Tabellenwertfunktionen, gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Skalarfunktionen, Aggregatfunktionen, Dienstwarteschlangen und Synonyme.  
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,11 +60,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  Mit ALL werden nicht alle möglichen Berechtigungen verweigert. Das Verweigern mit ALL entspricht dem Verweigern aller ANSI-92-Berechtigungen, die für das angegebene Objekt gelten. Die Bedeutung von ALL variiert wie folgt:  
   
- - Berechtigungen für Skalarwertfunktion: EXECUTE, REFERENCES.  
- - Berechtigungen für Tabellenwertfunktion: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - Berechtigungen für gespeicherte Prozedur: EXECUTE.  
- - Tabellenberechtigungen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - Berechtigungen anzeigen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Berechtigungen für Skalarfunktionen: EXECUTE, REFERENCES.  
+ - Berechtigungen für Tabellenwertfunktionen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Berechtigungen für gespeicherte Prozeduren: EXECUTE.  
+ - Berechtigungen für Tabellen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Berechtigungen für Sichten: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  Aus Gründen der Kompatibilität mit ANSI-92 eingeschlossen. Ändert das Verhalten von ALL nicht.  

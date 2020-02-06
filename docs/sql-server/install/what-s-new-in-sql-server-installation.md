@@ -10,10 +10,10 @@ ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045652"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Neuigkeiten in der SQL Server-Installation
@@ -25,7 +25,7 @@ ms.locfileid: "68045652"
   
  SysPrep wird für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen unterstützt. SysPrep unterstützt jetzt Failoverclusterinstallationen. Weitere Informationen finden Sie unter [Überlegungen zur Installation von SQL Server mit SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md) und [Installieren von SQL Server mit SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md).  
   
- Upgrades von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] werden unterstützt, die \-parallele\- Ausführung jedoch nicht. Weitere Informationen zur Unterstützung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ Upgrades von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] werden unterstützt, die \-parallele\- Ausführung jedoch nicht. Weitere Informationen zur Unterstützung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
  
   
 ## <a name="see-also"></a>Weitere Informationen  

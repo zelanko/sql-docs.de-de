@@ -1,22 +1,23 @@
 ---
-title: Auflisten von Informationen zu Auftragskategorien | Microsoft-Dokumentation
-ms.custom: ''
+title: Auflisten von Informationen zu Auftragskategorien
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 178e2e6305cb7be46d1ae8f398d100427b91b34d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: db86e18a399b4107e57bab926f0f91338565c43d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267563"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242200"
 ---
 # <a name="list-job-category-information"></a>Auflisten von Informationen zu Auftragskategorien
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ In diesem Thema wird beschrieben, wie Sie Auftragskategorieinformationen in [!IN
   
 -   **Vorbereitungen:**  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So listen Sie Informationen zu Auftragskategorien auf, und zwar mit**  
   
@@ -39,7 +40,7 @@ In diesem Thema wird beschrieben, wie Sie Auftragskategorieinformationen in [!IN
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
 ### <a name="Security"></a>Sicherheit  
-Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="TSQL"></a>Verwenden von Transact-SQL  
   

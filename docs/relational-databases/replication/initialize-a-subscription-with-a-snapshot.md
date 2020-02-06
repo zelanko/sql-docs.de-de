@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 68be2c5a44777bb62a594cf2ab612e46a078d0eb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3624d1eef64f10ae93802c4a7514fd54edcc0e74
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767853"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287927"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Initialisieren eines Abonnements mit einer Momentaufnahme
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68767853"
  Falls das Übertragen der Momentaufnahme an einer Stelle unterbrochen wird, wird es anschließend automatisch fortgesetzt. Bereits vollständig übertragene Dateien werden nicht noch einmal gesendet. Teilweise übermittelte Dateien müssen vollständig neu übermittelt werden, da beim Momentaufnahme-Agent die BCP-Datei für jeden Veröffentlichungsartikel zur Übermittlung verwendet wird. Das Fortsetzen der Momentaufnahmeübertragung kann jedoch die Menge der übermittelten Daten erheblich reduzieren und eine rechtzeitige Übermittlung der Momentaufnahme auch bei einer unzuverlässigen Verbindung sicherstellen.  
   
 ## <a name="snapshot-options"></a>Momentaufnahmeoptionen  
- Zum Initialisieren eines Abonnements mit einer Momentaufnahme stehen verschiedene Optionen zur Verfügung. Folgende Aktionen sind möglich:  
+ Zum Initialisieren eines Abonnements mit einer Momentaufnahme stehen verschiedene Optionen zur Verfügung. Ihre Möglichkeiten:  
   
 -   Geben Sie anstelle des oder zusätzlich zum Speicherort des Standardmomentaufnahmeordners einen alternativen Speicherort für den Momentaufnahmeordner an. Weitere Informationen finden Sie unter [Ändern von Momentaufnahmeoptionen](../../relational-databases/replication/snapshot-options.md).  
   

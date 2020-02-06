@@ -11,10 +11,10 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281184"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB-Datenbank)
@@ -64,7 +64,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -84,19 +84,19 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit einer Umgebungsvariablen kann zur Ausführung eines Pakets einem Projektparameter oder Paketparameter effizient ein Wert zugewiesen werden. Umgebungsvariablen ermöglichen die Organisation von Parameterwerten. Variablennamen müssen innerhalb einer Umgebung eindeutig sein.  
   
  Die gespeicherte Prozedur überprüft den Datentyp der Variablen, um sicherzustellen, dass sie vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog unterstützt wird.  
   
 > [!TIP]  
->  Eventuell sollten Sie anstelle des nicht unterstützten Datentyps **Sbyte** den Datentyp **Int16** in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden.  
+>  Eventuell sollten Sie anstelle des nicht unterstützten Datentyps **Sbyte** den Datentyp [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Int16**in** verwenden.  
   
  Der Wert, der dieser gespeicherten Prozedur mit dem Parameter *value* übergeben wurde, wird gemäß der folgenden Tabelle von einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentyp in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp konvertiert:  
   
 |Integration Services-Datentyp|SQL Server-Datentyp|  
 |------------------------------------|--------------------------|  
-|**Boolean**|**bit**|  
+|**Boolescher Wert**|**bit**|  
 |**Byte**|**binary**, **varbinary**|  
 |**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
 |**Double**|Genauer numerischer Ausdruck: **decimal**, **numeric**; ungefährer numerischer Ausdruck: **float**, **real**|  

@@ -11,17 +11,17 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025770"
 ---
 # <a name="using-the-jdbc-driver"></a>Verwenden des JDBC-Treibers
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine einfache Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herzustellen. Vor dem Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer oder einem Server sowie der JDBC-Treiber auf dem lokalen Computer installiert werden.  
+Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine einfache Verbindung mit einer [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datenbank herzustellen. Vor dem Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer oder einem Server sowie der JDBC-Treiber auf dem lokalen Computer installiert werden.  
   
 ## <a name="choosing-the-right-jar-file"></a>Auswählen der richtigen JAR-Datei
 
@@ -227,10 +227,10 @@ Ab der JDBC-API 4.0 wurde die `DriverManager.getConnection()`-Methode so erweite
 Wenn die getConnection-Methode der DriverManager-Klasse aufgerufen wird, wird aus der Gruppe der registrierten JDBC-Treiber ein geeigneter Treiber ausgewählt. „sqljdbc4.jar“, „sqljdbc41.jar“ und „sqljdbc42.jar“ enthalten die Datei „META-INF/services/java.sql.Driver“, die den **com.microsoft.sqlserver.jdbc.SQLServerDriver** als registrierten Treiber enthält. Vorhandene Anwendungen, die die Treiber derzeit mit der Methode Class.forName laden, funktionieren auch weiterhin ohne Änderungen.  
   
 > [!NOTE]  
-> Die Klassenbibliothek „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ kann nicht mit älteren Versionen von Java Runtime Environment (JRE) verwendet werden. Die Liste der vom [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützten JRE-Versionen finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> Die Klassenbibliothek „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ kann nicht mit älteren Versionen von Java Runtime Environment (JRE) verwendet werden. Die Liste der vom [ unterstützten JRE-Versionen finden Sie unter ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)Systemanforderungen für den JDBC-Treiber[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
 
 Weitere Informationen zum Herstellen einer Verbindung mit Datenquellen und zum Verwenden einer Verbindungs-URL finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md) und [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
 [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

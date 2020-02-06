@@ -11,10 +11,10 @@ ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 848e337ecfacd16df1b34a60e392b572b612735d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295199"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (SSISDB-Datenbank)
@@ -26,7 +26,7 @@ ms.locfileid: "71295199"
 
   Zeigt die Umgebungsverweise für alle Projekte im **SSISDB** -Katalog an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|Der eindeutige Bezeichner (ID) des Verweises.|  
 |project_id|**bigint**|Die eindeutige ID des Projekts.|  
@@ -36,7 +36,7 @@ ms.locfileid: "71295199"
 |validation_status|**char(1)**|Der Status der Überprüfung.|  
 |last_validation_time|**datatimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jeden Umgebungsverweis im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -51,7 +51,7 @@ ms.locfileid: "71295199"
 > [!NOTE]  
 >  Wenn Sie über die READ-Berechtigung für ein Projekt verfügen, verfügen Sie auch über die READ-Berechtigung für alle Pakete und Umgebungsverweise, die diesem Projekt zugeordnet sind. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Projekt kann über relative oder absolute Umgebungsverweise verfügen. Relative Verweise verweisen mit dem Namen auf die Umgebung und erfordern, dass sich diese im gleichen Ordner wie das Projekt befindet. Absolute Verweise verweisen mit Name und Ordner auf die Umgebung und verweisen möglicherweise auf Umgebungen, die sich in einem anderen Ordner als das Projekt befinden. Ein Projekt kann auf mehrere Umgebungen verweisen.  
   
   

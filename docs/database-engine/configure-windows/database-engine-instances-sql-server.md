@@ -11,10 +11,10 @@ ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012054"
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbank-Engine-Instanzen (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "68012054"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie die Eigenschaften einer Instanz konfiguriert werden. Konfigurieren Sie Standardeinstellungen wie Speicherorte und Datumsformate und die Verwendung der Betriebssystemressourcen durch die Instanz, z. B. des Arbeitsspeichers oder von Threads.|[Konfigurieren von Datenbank-Engine-Instanzen &#40;SQL Server&#41;](../../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)|  
-|Beschreibt, wie die Sortierung für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwaltet wird. Sortierungen definieren die Bitmuster, die zum Darstellen von Zeichen und zugeordneten Verhaltensweisen wie der Sortierung und Groß-/Kleinschreibung und Akzenten in Vergleichsvorgängen verwendet werden.|[Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)|  
+|Beschreibt, wie die Sortierung für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwaltet wird. Sortierungen definieren die Bitmuster, die zum Darstellen von Zeichen und zugeordneten Verhaltensweisen wie der Sortierung und Groß-/Kleinschreibung und Akzenten in Vergleichsvorgängen verwendet werden.|[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)|  
 |Beschreibt, wie Verbindungsserverdefinitionen konfiguriert werden, die in einer Instanz ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zulassen, um in getrennten OLE DB-Datenquellen gespeicherte Daten zu verwenden.|[Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)|  
 |Beschreibt, wie ein LOGON-Trigger erstellt wird, der auszuführende Aktionen angibt, die nach der Überprüfung des Anmeldeversuchs, aber vor dem Beginn der Verwendung von Ressourcen in der Instanz ausgeführt werden sollen. LOGON-Trigger unterstützen Aktionen wie die Protokollierung der Verbindungsaktivität die logikbasierte Einschränkung von Anmeldungen, die zusätzlich zur Authentifizierung der Anmeldeinformationen durch Windows und SQL Server verwendet wird.|[Logon-Trigger](../../relational-databases/triggers/logon-triggers.md)|  
 |Beschreibt, wie der einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugeordnete Dienst verwaltet wird. Dazu zählen Aktionen wie das Starten und Beenden des Diensts und das Konfigurieren von Startoptionen.|[Verwalten der Datenbank-Engine-Dienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940713"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics-Ereignisklasse
@@ -24,11 +24,11 @@ ms.locfileid: "67940713"
   Die Performance Statistics-Ereignisklasse kann zur Leistungsüberwachung der ausgeführten Abfragen, gespeicherten Prozeduren und Trigger verwendet werden. Jede der sechs Ereignisunterklassen zeigt ein Ereignis für die Lebensdauer von Abfragen, gespeicherten Prozeduren und Triggern innerhalb des Systems an. Mithilfe einer Kombination aus diesen Ereignisunterklassen und den zugehörigen dynamischen Verwaltungssichten sys.dm_exec_query_stats, sys.dm_exec_procedure_stats und sys.dm_exec_trigger_stats können Sie den Leistungsverlauf einer bestimmten Abfrage, gespeicherten Prozedur oder eines Triggers nachvollziehen.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Datenspalten der Performance Statistics-Ereignisklasse  
- In den folgenden Tabellen werden die Ereignisklassen-Datenspalten beschrieben, die einer der folgenden Ereignisunterklassen zugeordnet sind: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 und EventSubClass 5.  
+ In den folgenden Tabellen werden die Ereignisklassen-Datenspalten beschrieben, die jeweils den folgenden Ereignisunterklassen zugeordnet sind: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 und EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Ja|  
 |BinaryData|**image**|NULL|2|Ja|  
@@ -47,7 +47,7 @@ ms.locfileid: "67940713"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Ja|  
 |BinaryData|**image**|Binary XML des kompilierten Plans.|2|Ja|  
@@ -63,7 +63,7 @@ ms.locfileid: "67940713"
 |StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |TextData|**ntext**|NULL|1|Ja|  
 |PlanHandle|**image**|Das Planhandle des kompilierten Plans für die gespeicherte Prozedur. Hiermit kann der XML-Plan abgerufen werden, indem die dynamische Verwaltungssicht sys.dm_exec_query_plan verwendet wird.|65|Ja|  
-|ObjectType|**int**|Ein Wert, der den Typ des am Ereignis beteiligten Objekts darstellt.<br /><br /> 8272 = gespeicherte Prozedur|28|Ja|  
+|ObjektType|**int**|Ein Wert, der den Typ des am Ereignis beteiligten Objekts darstellt.<br /><br /> 8272 = gespeicherte Prozedur|28|Ja|  
 |BigintData2|**bigint**|Für die Kompilierung verwendeter Arbeitsspeicher insgesamt (in KB).|53|Ja|  
 |CPU|**int**|Die CPU-Gesamtzeit in Millisekunden, die für die Kompilierung erforderlich war.|18|Ja|  
 |Duration|**int**|Gesamtzeit für die Kompilierung in Mikrosekunden.|13|Ja|  
@@ -71,7 +71,7 @@ ms.locfileid: "67940713"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Ja|  
 |BinaryData|**image**|Binary XML des kompilierten Plans.|2|Ja|  
@@ -94,7 +94,7 @@ ms.locfileid: "67940713"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Ja|  
 |BinaryData|**image**|NULL|2|Ja|  
@@ -114,7 +114,7 @@ ms.locfileid: "67940713"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Ja|  
 |BinaryData|**image**|NULL|2|Ja|  
@@ -134,7 +134,7 @@ ms.locfileid: "67940713"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Ja|  
 |BinaryData|**image**|NULL|2|Ja|  

@@ -19,10 +19,10 @@ ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cf57aa52ce1ca216a8cd88ba310dcee5310b6a7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68019690"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>Verknüpfen einer sekundären Datenbank mit einer Always On-Verfügbarkeitsgruppe
@@ -32,7 +32,7 @@ ms.locfileid: "68019690"
 > [!NOTE]  
 >  Informationen dazu, was passiert, nachdem eine sekundäre Datenbank mit der Gruppe verknüpft wurde, finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
    
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der das sekundäre Replikat gehostet wird.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68019690"
     ```  
   
     > [!NOTE]  
-    >  Unter [Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) können Sie die Verwendung dieser [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung im Kontext sehen.  
+    >  Unter [!INCLUDE[tsql](../../../includes/tsql-md.md)]Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;[ können Sie die Verwendung dieser ](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)-Anweisung im Kontext sehen.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So verknüpfen Sie eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe**  
@@ -106,7 +106,7 @@ ms.locfileid: "68019690"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

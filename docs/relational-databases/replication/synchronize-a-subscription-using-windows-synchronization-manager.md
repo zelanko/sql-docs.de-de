@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43e3c343bc3947e6cfd0be4886e9d369b55758b8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321454"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287027"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mit der Synchronisierungsverwaltung von Windows
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "75321454"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>So aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung von Windows  
   
-1.  Wählen Sie auf der Seite **Allgemein** im Dialogfeld **Abonnenteigenschaften – \<Abonnent>: \<Abonnementdatenbank>** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
+1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften –** Subscriber>: **SubscriptionDatabase>\< auf der Seite \<Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

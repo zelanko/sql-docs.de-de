@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050817"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT (Objektberechtigungen) (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050817"
   
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,11 +62,11 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  Mit ALL werden nicht alle möglichen Berechtigungen erteilt. Das Erteilen von Berechtigungen mit ALL entspricht dem Erteilen aller [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92-Berechtigungen, die für das angegebene Objekt gelten. Die Bedeutung von ALL variiert wie folgt:  
   
-- Berechtigungen für Skalarwertfunktion: EXECUTE, REFERENCES.  
-- Berechtigungen für Tabellenwertfunktion: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Berechtigungen für Skalarfunktionen: EXECUTE, REFERENCES.  
+- Berechtigungen für Tabellenwertfunktionen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Berechtigungen für gespeicherte Prozeduren: EXECUTE.  
-- Tabellenberechtigungen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- Berechtigungen anzeigen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Berechtigungen für Tabellen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Berechtigungen für Sichten: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  Dient zur Kompatibilität mit [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Ändert das Verhalten von ALL nicht.  
@@ -115,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
->  Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte für eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.  
+>  Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte über eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.  
   
  Informationen zu Objekten werden in unterschiedlichen Katalogsichten angezeigt. Weitere Informationen finden Sie unter [Object Catalog Views &#40;Transact-SQL&#41; (Katalogsichten für Objekte &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
@@ -181,7 +181,7 @@ GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>D. Erteilen der SELECT-Berechtigung für eine Tabelle ohne Verwendung des OBJECT-Ausdrucks  
+### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>D: Erteilen der SELECT-Berechtigung für eine Tabelle ohne Verwendung des OBJECT-Ausdrucks  
  Im folgenden Beispiel wird die `SELECT`-Berechtigung dem Benutzer `RosaQdM` für die `Person.Address`-Tabelle in der `AdventureWorks2012`-Datenbank erteilt.  
   
 ```  

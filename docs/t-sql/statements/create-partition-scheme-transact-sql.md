@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048149"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68048149"
 >[!NOTE]
 >In Azure SQL-Datenbank werden nur primäre Dateigruppen unterstützt.  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -124,7 +124,7 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 |-|-|-|-|-|  
 |**Dateigruppe**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
 |**Partition**|1|2|3|4|  
-|**Werte**|**col1** <= `1`|**col1** > 1 UND **col1** <= `100`|**col1** > `100` UND **col1** <= `1000`|**col1** > `1000`|  
+|**Werte**|**col1** <= `1`|**col1** > 1 UND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. Erstellen eines Partitionsschemas, mit dem alle Partitionen derselben Dateigruppe zugeordnet werden  
  Im folgenden Beispiel wird dieselbe Partitionsfunktion wie in den vorherigen Beispielen erstellt, und ein Partitionsschema wird erstellt, mit dem alle Partitionen derselben Dateigruppe zugeordnet werden.  
@@ -138,7 +138,7 @@ AS PARTITION myRangePF3
 ALL TO ( test1fg );  
 ```  
   
-### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>D. Erstellen eines Partitionsschemas, das die Dateigruppe 'NEXT USED' angibt  
+### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>D: Erstellen eines Partitionsschemas, das die Dateigruppe 'NEXT USED' angibt  
  Im folgenden Beispiel wird dieselbe Partitionsfunktion wie in den vorherigen Beispielen erstellt, und ein Partitionsschema wird erstellt, das mehr Dateigruppen auflistet, als Partitionen von der zugehörigen Partitionsfunktionen erstellt werden.  
   
 ```  

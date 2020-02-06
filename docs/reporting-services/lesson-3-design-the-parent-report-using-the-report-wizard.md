@@ -9,10 +9,10 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651276"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lektion 3: Entwerfen des übergeordneten Berichts mithilfe des Berichts-Assistenten
@@ -32,7 +32,7 @@ Nachdem Sie eine Datenverbindung und eine Datentabelle für den übergeordneten 
   
     Das Feld **Verfügbare Datasets** wird automatisch anhand der oben erstellten **DataTable** aktualisiert.  
   
-5.  Wählen Sie **Weiter**aus.  
+5.  Wählen Sie **Weiter** aus.  
   
 6.  Gehen Sie auf der Seite **Felder anordnen** wie folgt vor:  
   

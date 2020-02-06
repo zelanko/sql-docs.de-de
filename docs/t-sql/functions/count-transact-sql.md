@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026491"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68026491"
 
 Diese Funktion gibt die Anzahl der in einer Gruppe gefundenen Elemente zurück. `COUNT` arbeitet wie die [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)-Funktion. Diese Funktionen unterscheiden sich nur in den Datentypen ihrer Rückgabewerte. `COUNT` gibt immer einen Wert vom Datentyp **int** zurück. `COUNT_BIG` gibt immer einen Wert vom Datentyp **bigint** zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -135,8 +135,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="d-using-the-over-clause"></a>D. Verwenden der OVER-Klausel  
-In diesem Beispiel werden die Funktionen `MIN`, `MAX`, `AVG` und `COUNT` zusammen mit der `OVER`-Klausel verwendet, um aggregierte Werte für jede Abteilung in der `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückzugeben.
+### <a name="d-using-the-over-clause"></a>D: Verwenden der OVER-Klausel  
+In diesem Beispiel werden die Funktionen `MIN`, `MAX`, `AVG` und `COUNT` zusammen mit der `OVER`-Klausel verwendet, um aggregierte Werte für jede Abteilung in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Tabelle der `HumanResources.Department`-Datenbank zurückzugeben.
   
 ```sql
 SELECT DISTINCT Name  
@@ -178,7 +178,7 @@ Tool Design                   8.62                  29.8462               23.505
 (16 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>E. Verwenden von COUNT und DISTINCT  
 Dieses Beispiel gibt die Anzahl der verschiedenen Positionen zurück, die ein Mitarbeiter eines bestimmten Unternehmens innehaben kann.
@@ -277,7 +277,7 @@ ProductCount   SalesOrderID`
 1              SO55981
 ```
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
 [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)

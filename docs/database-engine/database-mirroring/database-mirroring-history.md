@@ -13,10 +13,10 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006424"
 ---
 # <a name="database-mirroring-history"></a>Datenbankspiegelungsverlauf
@@ -27,7 +27,7 @@ ms.locfileid: "68006424"
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Serverinstanz**  
  Der Name der Serverinstanz, von der der Verlauf gemeldet wird.  
   
@@ -63,14 +63,14 @@ ms.locfileid: "68006424"
 > [!NOTE]  
 >  Die Verlaufsliste in diesem Dialogfeld wird nicht automatisch aktualisiert. Klicken Sie entweder auf **Aktualisieren** , oder wählen Sie eine andere Filteroption aus, um die Liste zu aktualisieren. Nur Mitglieder der festen Serverrolle **sysadmin** können den Spiegelungsverlauf aktualisieren.  
   
- **Verlauf**  
+ **History**  
  Zeigt die Verlaufsliste an. Wenn Sie auf einen Spaltenheader klicken, wird das Raster nach der entsprechenden Spalte sortiert. Die Liste enthält folgende Spalten:  
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**Aufgezeichnete Zeit**|Timestamp der Verlaufszeile.|  
 |**Rolle**|Die aktuelle Spiegelungsrolle der Serverinstanz für diese Datenbank: Prinzipal oder Spiegel.|  
-|**Spiegelungsstatus**|Status der Datenbank:<br /><br /> Getrennt<br /><br /> Ausstehendes Failover<br /><br /> Angehalten<br /><br /> Synchronisiert<br /><br /> Wird synchronisiert<br /><br /> Unknown|  
+|**Spiegelungsstatus**|Status der Datenbank:<br /><br /> Getrennt<br /><br /> Ausstehendes Failover<br /><br /> Ausgesetzt<br /><br /> Synchronisiert<br /><br /> Wird synchronisiert<br /><br /> Unknown|  
 |**Zeugenverbindung**|Status der Zeugenverbindung in der Spiegelungssitzung der Datenbank: Verbunden oder Getrennt. Wenn kein Zeuge vorhanden ist, ist der Wert NULL.|  
 |**Nicht gesendetes Protokoll**|Größe, in Kilobyte (KB), des nicht gesendeten Protokolls in der Sendewarteschlange auf der Prinzipalserverinstanz.|  
 |**Sendezeit**|Die ungefähre Dauer der Zeit, die die Prinzipalserverinstanz benötigt, um das derzeit in der Sendewarteschlange befindliche Protokoll an die Spiegelserverinstanz zu senden (die *Senderate*). Da die Rate der eingehenden Transaktionen erheblich schwanken kann, handelt es sich bei der Protokollsendezeit um einen Schätzwert. Die Senderate kann jedoch nützlich sein, um die für ein manuelles Failover erforderliche Zeit grob zu schätzen.|  
