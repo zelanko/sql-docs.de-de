@@ -16,10 +16,10 @@ ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075984"
 ---
 # <a name="deferred-transactions-sql-server"></a>Markierte Transaktionen [SQL Server]
@@ -37,11 +37,11 @@ ms.locfileid: "68075984"
   
  In der folgenden Tabelle sind die Aktionen aufgeführt, die einen Wiederherstellungsvorgang der Datenbank verursachen. Die Tabelle veranschaulicht außerdem das Ergebnis von E/A-Fehlern.  
   
-|Aktion|Lösung (bei E/A-Fehlern oder wenn erforderliche Daten offline sind)|  
+|Action|Lösung (bei E/A-Fehlern oder wenn erforderliche Daten offline sind)|  
 |------------|-----------------------------------------------------------------------|  
 |Serverstart|verzögerten Transaktion|  
-|Wiederherstellung|verzögerten Transaktion|  
-|Anfügen|Anfügen erzeugt einen Fehler|  
+|Restore|verzögerten Transaktion|  
+|Attach|Anfügen erzeugt einen Fehler|  
 |AutoNeustart|verzögerten Transaktion|  
 |Erstellen einer Datenbank oder einer Datenbankmomentaufnahme|Erstellen erzeugt einen Fehler|  
 |Wiederholen bei Datenbankspiegelung|verzögerten Transaktion|  
@@ -85,7 +85,7 @@ ms.locfileid: "68075984"
   
          Informationen zum Notfallmodus finden Sie unter [Database States](../../relational-databases/databases/database-states.md).  
   
-    -   Reparieren Sie anschließend die Datenbank, indem Sie die Option DBCC REPAIR_ALLOW_DATA_LOSS in einer der folgenden DBCC-Anweisungen verwenden: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) oder [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Reparieren Sie anschließend die Datenbank, indem Sie die Option DBCC REPAIR_ALLOW_DATA_LOSS in einer der folgenden DBCC-Anweisungen verwenden: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)oder [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          Sobald DBCC auf die beschädigte Seite stößt, wird ihre Zuordnung aufgehoben, und es werden alle damit verbundenen Fehler repariert. Durch diesen Ansatz kann die Datenbank in einem physisch konsistenten Status wieder online geschaltet werden. Allerdings können dabei weitere Daten verloren gehen. Aus diesem Grund sollte dieser Ansatz nur als letzte Möglichkeit verwendet werden.  
   

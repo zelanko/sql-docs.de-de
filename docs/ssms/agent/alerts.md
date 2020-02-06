@@ -1,10 +1,7 @@
 ---
-title: Warnungen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
+title: Alerts
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383797"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252685"
 ---
-# <a name="alerts"></a>Warnungen
+# <a name="alerts"></a>Alerts
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -52,9 +54,9 @@ Jede Warnung muss einen Namen aufweisen. Warnungsnamen müssen innerhalb der jew
 ## <a name="selecting-an-event-type"></a>Auswählen eines Ereignistyps  
 Eine Warnung beantwortet ein Ereignis eines bestimmten Typs. Die folgenden Ereignistypen werden mithilfe von Warnungen beantwortet:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignisse  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsbedingungen  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsbedingungen  
   
 -   WMI-Ereignisse  
   
@@ -82,7 +84,7 @@ Sie können angeben, dass eine Warnung als Antwort auf ein Ereignis oder mehrere
 ## <a name="selecting-a-performance-condition"></a>Auswählen einer Leistungsbedingung  
 Sie können Warnungen als Reaktion auf einen bestimmten Leistungsstatus angeben. In diesem Fall geben Sie den zu überwachenden Leistungsindikator, einen Schwellwert für die Warnung sowie das Verhalten des Leistungsindikators, an, bei dem die Warnung ausgelöst werden soll. Zum Festlegen eines Leistungsstatus definieren Sie die folgenden Punkte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent auf der Seite **Allgemein** im Dialogfeld **Neue Warnung** oder **Eigenschaften von Warnung** :  
   
--   **Objekt**  
+-   **Object**  
   
     Das Objekt stellt den zu überwachenden Leistungsbereich dar.  
   

@@ -1,10 +1,7 @@
 ---
-title: Database-Element für Konfiguration (DTA) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: Database-Element für Konfiguration (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 713fe8d41b4ec47e624b8fcc501c7e2b87653346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: cb444b56c70d70fda8578459b83939ebcbcf3645
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116938"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306693"
 ---
 # <a name="database-element-for-configuration-dta"></a>Database-Element für Konfiguration (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Gibt die Datenbank an, für die der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das **Configuration**-Element angegeben).  
+
+Gibt die Datenbank an, für die der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das **Configuration**-Element angegeben).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68116938"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  

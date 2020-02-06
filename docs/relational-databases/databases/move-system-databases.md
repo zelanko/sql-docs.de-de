@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100462"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
@@ -47,7 +47,7 @@ ms.locfileid: "68100462"
   
  Die folgenden Verfahren gelten für das Verschieben von Datenbankdateien innerhalb derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Zum Verschieben einer Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder auf einen anderen Server können Sie den Vorgang [Sichern und Wiederherstellen](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) verwenden.  
 
- Für die Prozeduren in diesem Thema ist der logische Name der Datenbankdateien erforderlich. Zum Abrufen des Namens führen Sie eine Abfrage für die Namensspalte in der [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)-Katalogsicht aus.  
+ Für die Prozeduren in diesem Thema ist der logische Name der Datenbankdateien erforderlich. Zum Abrufen des Namens führen Sie eine Abfrage für die Namensspalte in der [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) -Katalogsicht aus.  
   
 > [!IMPORTANT]  
 >  Wenn Sie eine Systemdatenbank verschieben und anschließend die master-Datenbank neu erstellen, müssen Sie die Systemdatenbank erneut verschieben, da bei der Neuerstellung alle Systemdatenbanken an ihrem standardmäßigen Speicherort installiert werden.  
@@ -174,7 +174,7 @@ ms.locfileid: "68100462"
   
 7.  Verschieben Sie die Dateien master.mdf und mastlog.ldf an den neuen Speicherort.  
   
-8.  Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+8.  Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 9. Überprüfen Sie die Dateiänderung für die master-Datenbank, indem Sie die folgende Abfrage ausführen.  
   
@@ -185,13 +185,13 @@ ms.locfileid: "68100462"
     GO  
     ```  
 
-10. An diesem Punkt sollte SQL Server normal ausgeführt werden. Microsoft empfiehlt jedoch, auch den Registrierungseintrag unter `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`anzupassen, wobei *instance_ID* `MSSQL13.MSSQLSERVER`entspricht. Ändern Sie in dieser Struktur den Wert von `SQLDataRoot` in den neuen Pfad. Wenn Sie es versäumen, die Registrierung zu aktualisieren, können Fehler bei Patches und Upgrades auftreten.
+10. An diesem Punkt sollte SQL Server normal ausgeführt werden. Microsoft empfiehlt jedoch, auch den Registrierungseintrag unter `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`anzupassen, wobei *instance_ID*`MSSQL13.MSSQLSERVER`entspricht. Ändern Sie in dieser Struktur den Wert von `SQLDataRoot` in den neuen Pfad. Wenn Sie es versäumen, die Registrierung zu aktualisieren, können Fehler bei Patches und Upgrades auftreten.
 
   
 ##  <a name="Resource"></a> Verschieben der Ressourcendatenbank  
  Der Speicherort der Ressourcendatenbank lautet \<*Laufwerk*>:\Programme\Microsoft SQL Server\MSSQL\<Version>.\<*instance_name*>\MSSQL\Binn\\. Die Datenbank kann nicht verschoben werden.  
   
-##  <a name="Follow"></a> Anschlussaufgaben: Nach dem Verschieben aller Systemdatenbanken  
+##  <a name="Follow"></a> Nachverfolgung: Nach dem Verschieben aller Systemdatenbanken  
  Wenn Sie alle Systemdatenbanken auf ein neues Laufwerk oder Volume bzw. auf einen anderen Server mit einem anderen Laufwerkbuchstaben verschoben haben, führen Sie die folgenden Updates aus.  
   
 -   Ändern Sie den Pfad des SQL Server-Agent-Protokolls. Wenn Sie diesen Pfad nicht aktualisieren, kann SQL Server-Agent nicht gestartet werden.  

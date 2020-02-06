@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296294"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent)
@@ -54,7 +54,7 @@ Geben Sie den Pfad und den Dateinamen für die Access-Datei an. Beispielsweise *
  **Durchsuchen**  
  Suchen Sie die Datenbankdatei mithilfe des Dialogfelds **Öffnen**.  
   
- **User name**  
+ **Benutzername**  
 Wenn eine Informationsdatei für die Arbeitsgruppe der Datenbank zugeordnet ist, geben Sie einen gültigen Benutzernamen ein.  
   
  **Kennwort**  
@@ -62,7 +62,7 @@ Wenn eine Informationsdatei für die Arbeitsgruppe der Datenbank zugeordnet ist,
  
 Wenn die Datenbank mit einem einzigen Kennwort für alle Benutzer geschützt ist, finden Sie weitere Informationen unter [Ist die Datenbankdatei kennwortgeschützt?](#database_password).
   
- **Erweitert:**  
+ **Erweitert**  
 Geben Sie im Dialogfeld **Datenlinkeigenschaften** erweiterte Optionen an, z.B. das Datenbankkennwort oder eine nicht dem Standard entsprechende Informationsdatei für die Arbeitsgruppe.  
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>Access wird in der Liste der Datenquellen nicht angezeigt
@@ -72,7 +72,7 @@ Wenn Access nicht in der Liste der Datenquellen angezeigt wird, sollten Sie übe
 > Sie müssen SQL Server installieren, um die 64-Bit-Version des SQL Server-Import/Export-Assistenten verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
 
 ## <a name="officeDownloads"></a>Herunterladen von Dateien zum Herstellen einer Verbindung mit Access  
-Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Datenquellen (einschließlich Access und Excel) herunterladen, wenn diese nicht bereits installiert sind. Laden Sie die neueste Version der Konnektivitätskomponenten für Access- und Excel-Dateien hier herunter: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Datenquellen (einschließlich Access und Excel) herunterladen, wenn diese nicht bereits installiert sind. Laden Sie die neueste Version der Konnektivitätskomponenten für Access- und Excel-Dateien hier herunter: [Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Access erstellt wurden.
 
@@ -101,7 +101,7 @@ Wählen Sie die Option **IDENTITY_INSERT aktivieren** im Dialogfeld **Spaltenzuo
 
 Wenn Ihre vorhandenen Primärschlüssel in einer Identity-Spalte, einer automatisch nummerierten Spalte oder einem Äquivalent enthalten sind, müssen Sie diese Option auswählen, um die vorhandenen Primärschlüsselwerte beizubehalten. Andernfalls weist die Identity-Zielspalte in der Regel neue Werte zu.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 
