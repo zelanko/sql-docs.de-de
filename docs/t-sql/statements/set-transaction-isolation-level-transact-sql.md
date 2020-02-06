@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099982"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099982"
 
 Steuert das Verhalten von Sperren und der Zeilenversionsverwaltung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die von einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgestellt wurden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -100,7 +100,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  Freigegebene Sperren werden auf alle Daten angewendet, die von den Anweisungen in der Transaktion gelesen werden, und werden bis zum Abschluss der Transaktion aufrecht erhalten. Dadurch wird verhindert, dass andere Transaktionen Zeilen ändern, die von der aktuellen Transaktion gelesen wurden. Andere Transaktionen können neue Zeilen in Übereinstimmung mit den Suchbedingungen von Anweisungen einfügen, die von der aktuellen Transaktion ausgegeben wurden. Wenn die aktuelle Transaktion dann die Anweisung wiederholt, werden die neuen Zeilen abgerufen, was Phantomlesezugriffe zur Folge hat. Da freigegebene Sperren nicht am Ende jeder Anweisung aufgehoben werden, sondern bis zum Ende einer Transaktion aufrechterhalten werden, ist die Parallelität geringer als die der READ COMMITTED-Standardisolationsstufe. Verwenden Sie diese Option nur, wenn sie wirklich erforderlich ist.  
   
  SNAPSHOT  
- Gibt an, dass von Anweisungen in einer Transaktion gelesene Daten der im Hinblick auf Transaktionen konsistenten Version der Daten entsprechen, die zu Beginn der Transaktion vorhanden waren. Die Transaktion kann nur Datenänderungen erkennen, für die vor dem Beginn der Transaktion ein Commit ausgeführt wurde. Datenänderungen, die nach Beginn der aktuellen Transaktion von anderen Transaktionen vorgenommen wurden, sind für in der aktuellen Transaktion ausgeführte Anweisungen nicht sichtbar. So entsteht der Eindruck, als ob die Anweisungen in einer Transaktion eine Momentaufnahme der Daten erhalten, für die ein Commit ausgeführt wurde, wie sie zu Beginn der Transaktion vorhanden waren.  
+ Gibt an, dass von Anweisungen in einer Transaktion gelesene Daten der im Hinblick auf Transaktionen konsistenten Version der Daten entsprechen, die zu Beginn der Transaktion vorhanden waren. Die Transaktion kann nur Datenänderungen erkennen, für die vor dem Beginn der Transaktion ein Commit ausgeführt wurde. Datenänderungen, die nach Beginn der aktuellen Transaktion von anderen Transaktionen vorgenommen wurden, sind für in der aktuellen Transaktion ausgeführte Anweisungen nicht sichtbar. Es erscheint daher, als ob die Anweisungen in einer Transaktion eine Momentaufnahme der festgeschriebenen Daten erhalten, die zu Beginn der Transaktion vorhanden waren.  
   
  Außer bei der Wiederherstellung einer Datenbank fordern SNAPSHOT-Transaktionen beim Lesen von Daten keine Sperren an. SNAPSHOT-Transaktionen, die Daten lesen, halten andere Transaktionen nicht vom Schreiben von Daten ab. Transaktionen, die Daten schreiben, halten SNAPSHOT-Transaktionen nicht vom Lesen von Daten ab.  
   
@@ -161,7 +161,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 |Read Uncommitted|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Nicht unterstützt|  
 |Read Committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |Repeatable Read|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Nicht unterstützt|  
-|Serializable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Nicht unterstützt|  
+|Serialisierbar|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Nicht unterstützt|  
 |Read committed snapshot|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |Momentaufnahme|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
