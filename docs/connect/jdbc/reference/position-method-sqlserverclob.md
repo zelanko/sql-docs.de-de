@@ -1,5 +1,5 @@
 ---
-title: Position-Methode (SQLServerClob) | Microsoft-Dokumentation
+title: position-Methode (SQLServerClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cd2ddc9c0728df5f5fe27227f64d7af035439c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976378"
 ---
 # <a name="position-method-sqlserverclob"></a>position-Methode (SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67976378"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[position (java.sql.Clob, long)](../../../connect/jdbc/reference/position-method-java-sql-clob-long.md)|Gibt die Zeichenposition des angegebenen CLOB-Objekts im CLOB auf Grundlage der angegebenen Startposition zurück.|  
 |[position (java.lang.String, long)](../../../connect/jdbc/reference/position-method-java-lang-string-long.md)|Gibt die Zeichenposition der angegebenen Teilzeichenfolge im CLOB auf Grundlage der angegebenen Startposition zurück.|  
