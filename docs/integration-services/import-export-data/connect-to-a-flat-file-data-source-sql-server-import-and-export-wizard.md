@@ -10,10 +10,10 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bef4e8032ad605382b3312cac11840ed959a7571
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296356"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Flatfile-Datenquelle (SQL Server-Import/Export-Assistent)
@@ -32,11 +32,11 @@ Wenn Sie eine Textdatei in SQL Server importieren müssen und nicht alle Konfigu
  
  Es gibt vier Seiten mit Optionen für Flatfile-Datenquellen. Das sind viele Optionen. Sie müssen jedoch nicht viel Zeit in diese investieren. Im Folgenden finden Sie die Aufgaben, die Sie berücksichtigen sollten.
  
-Seite|Empfehlung  |Typ  
+Seite|Empfehlung  |type  
 ----|---------|---------
 **Allgemein**|Stellen Sie sicher, dass Sie die Optionen im Abschnitt **Format** aktualisieren.|Empfohlen    
 **Spalten**|Stellen Sie sicher, dass Sie die Spalten- und Zeilentrennzeichen (für eine durch Trennzeichen getrennte Datei) überprüfen oder die Spalten markieren (für eine Datei mit fester Breite).|Empfohlen
-**Erweitert:**|Überprüfen Sie optional die Datentypen und andere Eigenschaften, die den Spalten standardmäßig zugewiesen sind.|Optional
+**Erweitert**|Überprüfen Sie optional die Datentypen und andere Eigenschaften, die den Spalten standardmäßig zugewiesen sind.|Optional
 **Vorschau**|Zeigen Sie optional mithilfe der von Ihnen angegebenen Einstellungen die Vorschau eines Datenbeispiels an.|Optional
 
 ## <a name="general-page-source"></a>Seite „Allgemein“ (Quelle)
@@ -64,9 +64,9 @@ Seite|Empfehlung  |Typ
  **Format**  
  Wählen Sie aus, ob die Datei eine Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Mit Trennzeichen|Spalten werden mit Trennzeichen getrennt. Geben Sie das Trennzeichen auf der Seite **Spalten** an.|  
+|Durch Trennzeichen getrennt|Spalten werden mit Trennzeichen getrennt. Geben Sie das Trennzeichen auf der Seite **Spalten** an.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
 |Rechter Flatterrand|Bei Dateien mit rechtem Flatterrand weisen alle Spalten mit Ausnahme der letzten eine feste Breite auf. Die letzte Spalte wird durch das Zeilentrennzeichen begrenzt.|  
   
@@ -79,7 +79,7 @@ Seite|Empfehlung  |Typ
  **Kopfzeilentrennzeichen**  
  Wählen Sie aus einer Liste mit Trennzeichen für Kopfzeilen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf.|  
@@ -106,7 +106,7 @@ Seite|Empfehlung  |Typ
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -120,7 +120,7 @@ Seite|Empfehlung  |Typ
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -178,7 +178,7 @@ Seite|Empfehlung  |Typ
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -204,7 +204,7 @@ Beachten Sie im Screenshot, dass die Spalte **id**, die Zahlen enthält, anfäng
  **Konfigurieren Sie die Eigenschaften für jede Spalte.**  
  Wählen Sie eine Spalte im linken Bereich, um im rechten Bereich ihre Eigenschaften anzuzeigen. In der folgenden Tabelle werden die Spalteneigenschaften beschrieben. Einige der aufgelisteten Eigenschaften sind nur für bestimmte Flatfileformate und für Spalten mit bestimmten Datentypen konfigurierbar.  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**Name**|Geben Sie einen beschreibenden Spaltennamen an. Wenn Sie keinen Namen eingeben, wird in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatisch ein Name im Format „Spalte 0“, „Spalte 1“ usw. erstellt.|
 |**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}** . Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}** . Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}** . Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}** . Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}** . Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}** . Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}** . Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}** . Als Trennzeichen für Spalten dient ein senkrechter Strich.|
@@ -214,12 +214,12 @@ Beachten Sie im Screenshot, dass die Spalte **id**, die Zahlen enthält, anfäng
 |**DataScale**|Gibt die Skala numerischer Daten an. Skala heißt in diesem Fall die Anzahl der Dezimalstellen.|
 |**DataType**|Wählen Sie eine Option aus der Liste der verfügbaren Datentypen aus.<br/>Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Geben Sie einen Wert an, der als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien entspricht dieser Wert einer Zeichenanzahl. Im Datenflusstask dient dieser Wert dem Festlegen der Breite der Ausgabespalte für die Flatfilequelle. Im Objektmodell heißt diese Eigenschaft MaximumWidth.|  
-|**TextQualified**|Geben Sie an, ob Textdaten in Textqualifiziererzeichen eingeschlossen sind, z. B. in Anführungszeichen.<br /><br /> True: Die Textdaten in der Flatfile sind gekennzeichnet. False: Die Textdaten in der Flatfile sind NICHT gekennzeichnet.|  
+|**TextQualified**|Geben Sie an, ob Textdaten in Textqualifiziererzeichen eingeschlossen sind, z. B. in Anführungszeichen.<br /><br /> True: Die Textdaten in der Flatfile sind gekennzeichnet. False: Die Textdaten in der Flatfile sind nicht gekennzeichnet.|  
   
 **Neu**  
  Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Spalte hinzufügen**|Fügt am Ende der Liste eine neue Spalte hinzu.|  
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  
@@ -287,9 +287,9 @@ Für ein Flatfileziel gibt es wie im folgenden Screenshot dargestellt nur eine S
  **Format**  
  Wählen Sie aus, ob die Datei eine Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Mit Trennzeichen|Spalten werden mit Trennzeichen getrennt. Geben Sie das Trennzeichen auf der Seite **Spalten** an.|  
+|Durch Trennzeichen getrennt|Spalten werden mit Trennzeichen getrennt. Geben Sie das Trennzeichen auf der Seite **Spalten** an.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
 |Rechter Flatterrand|Bei Dateien mit rechtem Flatterrand weisen alle Spalten mit Ausnahme der letzten eine feste Breite auf. Die letzte Spalte wird durch das Zeilentrennzeichen begrenzt.|  
   
@@ -299,7 +299,7 @@ Für ein Flatfileziel gibt es wie im folgenden Screenshot dargestellt nur eine S
 > [!NOTE] 
 > Nachdem Sie einen Textqualifizierer ausgewählt haben, können Sie die Option **Keine** nicht erneut auswählen. Geben Sie **Keine** ein, um die Auswahl des Textqualifizierers aufzuheben.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

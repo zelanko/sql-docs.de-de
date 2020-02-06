@@ -1,20 +1,21 @@
 ---
 title: Konfigurieren von Azure Kubernetes Service
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Erfahren Sie, wie Sie Azure Kubernetes Service (AKS) für die Bereitstellung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] konfigurieren können.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251199"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für die Bereitstellung von Big-Data-Clustern für SQL Server
 
@@ -27,15 +28,15 @@ AKS vereinfacht das Erstellen, Konfigurieren und Verwalten von VM-Clustern, die 
 In diesem Artikel wird ausführlich beschrieben, wie Sie mithilfe der Azure CLI Kubernetes für AKS bereitstellen können. Wenn Sie nicht über ein Azure-Abonnement verfügen, können Sie ein kostenloses Konto erstellen, bevor Sie beginnen.
 
 > [!TIP]
-> Sie können auch ein Skript erstellen, mit dem die Bereitstellung von AKS und eines Big-Data-Clusters in einem Schritt ausgeführt wird. Weitere Informationen finden Sie im Artikel zur Verwendung eines [Python-Skripts](quickstart-big-data-cluster-deploy.md) oder im Artikel zur Nutzung eines [Notebooks](deploy-notebooks.md) in Azure Data Studio.
+> Sie können auch ein Skript erstellen, mit dem die Bereitstellung von AKS und eines Big-Data-Clusters in einem Schritt ausgeführt wird. Weitere Informationen finden Sie im Artikel zur Verwendung eines [Python-Skripts](quickstart-big-data-cluster-deploy.md) oder im Artikel zur Nutzung eines [Notebooks in Azure Data Studio](deploy-notebooks.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - [Stellen Sie die Big-Data-Tools für SQL Server 2019 bereit:](deploy-big-data-tools.md)
    - **Kubectl**
    - **Azure Data Studio**
-   - **Erweiterung für SQL Server 2019**
-   - **Azure CLI**
+   - **Erweiterung von SQL Server 2019**
+   - **Azure-Befehlszeilenschnittstelle**
 
 - Mindestens Version 1.13 für Kubernetes-Server. Für AKS müssen Sie den Parameter `--kubernetes-version` verwenden, um eine andere als die Standardversion anzugeben.
 

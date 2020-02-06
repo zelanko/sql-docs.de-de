@@ -11,10 +11,10 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115322"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Verwenden des Hilfsprogramm-Explorers zum Verwalten des SQL Server-Hilfsprogramms
@@ -38,7 +38,7 @@ ms.locfileid: "68115322"
 ### <a name="sql-server-utility-navigation-pane"></a>Navigationsbereich des SQL Server-Hilfsprogramms  
  Der Navigationsbereich des Hilfsprogramm-Explorers stellt eine Strukturansicht der Objekte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm bereit und gruppiert sie nach Steuerungspunkten für das Hilfsprogramm. Um Ordner zu erweitern, klicken Sie auf das Pluszeichen (+), oder doppelklicken Sie auf den UCP-Namen im Navigationsbereich des Hilfsprogramm-Explorers. Klicken Sie mit der rechten Maustaste auf Ordner oder Objekte, um allgemeine Aufgaben auszuführen. Die Strukturansicht enthält die folgenden Knoten:  
   
--   Der Knoten der obersten Ebene in der Strukturansicht ist der Steuerungspunkt für das Hilfsprogramm (UCP). Der Name des Knotens ist wie folgt aufgebaut: „Utility_Name“ (ComputerName\UCP_instance_name). Wenn noch kein UCP eingerichtet wurde, müssen Sie einen erstellen. Wenn Sie nicht mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verbunden sind, müssen Sie eine Verbindung mit einem Hilfsprogramm herstellen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Klicken Sie in der Strukturansicht auf den UCP-Namen, um den Inhaltsbereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm-Explorers mit Daten in der Dashboardsicht aufzufüllen. Weitere Informationen finden Sie unter [ Dashboard des Hilfsprogramms &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   Der Knoten der obersten Ebene in der Strukturansicht ist der Steuerungspunkt für das Hilfsprogramm (UCP). Der Knotenname setzt sich wie folgt zusammen: "Hilfsprogrammname" (Computername\UCP-Instanzname). Wenn noch kein UCP eingerichtet wurde, müssen Sie einen erstellen. Wenn Sie nicht mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verbunden sind, müssen Sie eine Verbindung mit einem Hilfsprogramm herstellen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Klicken Sie in der Strukturansicht auf den UCP-Namen, um den Inhaltsbereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm-Explorers mit Daten in der Dashboardsicht aufzufüllen. Weitere Informationen finden Sie unter [ Dashboard des Hilfsprogramms &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Klicken Sie mit der rechten Maustaste auf den UCP-Knoten, um Daten im Dashboard zu aktualisieren.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "68115322"
  Wenn ein Knoten eine große Anzahl an Objekten enthält, ist es möglicherweise schwierig, das gesuchte Objekt zu finden. In diesen Fällen können Sie die Liste mithilfe der Filterfunktion des Hilfsprogramm-Explorers verkleinern. Angenommen, Sie möchten eine bestimmte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder nur Computer finden, deren Dateispeicherplatz unterausgelastet ist. Klicken Sie mit der rechten Maustaste auf den Ordner, den Sie filtern möchten, klicken Sie auf die Schaltfläche zum Filtern und dann auf **Filtereinstellungen** , um das Dialogfeld „Filtereinstellungen“ des Hilfsprogramm-Explorers zu öffnen. Sie können die Liste nach Namen, Computer-CPU, Instanz-CPU, Dateispeicherplatz, Volumespeicherplatz, Einstellungen zum Überschreiben von Richtlinien oder nach der zuletzt berichteten Zeit filtern. Die Spalten **Operator** und **Wert** stellen zusätzliche Filteroperatoren in einer Dropdownliste bereit.  
   
 ### <a name="starting-powershell"></a>Starten von PowerShell  
- Zum Starten einer PowerShell-Sitzung können Sie mit der rechten Maustaste auf den Großteil der Ordner und Objekte in der Struktur des Objekt-Explorers klicken und **PowerShell starten**auswählen. Hierdurch wird eine PowerShell-Sitzung mit aktivierter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Unterstützung gestartet. Gleichzeitig ist der Pfad auf den Speicherort des Objekts festgelegt, auf das Sie mit der rechten Maustaste im Objekt-Explorer geklickt haben. Sie können PowerShell-Befehle anschließend in einer interaktiven PowerShell-Umgebung eingeben. Weitere Informationen finden Sie unter [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
+ Zum Starten einer PowerShell-Sitzung können Sie mit der rechten Maustaste auf den Großteil der Ordner und Objekte in der Struktur des Objekt-Explorers klicken und **PowerShell starten**auswählen. Hierdurch wird eine PowerShell-Sitzung mit aktivierter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Unterstützung gestartet. Gleichzeitig ist der Pfad auf den Speicherort des Objekts festgelegt, auf das Sie mit der rechten Maustaste im Objekt-Explorer geklickt haben. Sie können PowerShell-Befehle anschließend in einer interaktiven PowerShell-Umgebung eingeben. Weitere Informationen finden Sie unter [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
   
  Powershell bietet zwar keine F1-Hilfe, verfügt jedoch über ein **Get-Help** -Cmdlet mit Informationen zur Verwendung von Powershell. Weitere Informationen zur Verwendung von Get-Help finden Sie unter [Aufrufen der SQL Server PowerShell-Hilfe](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Konfigurieren von Integritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Objekt-Explorer](../../ssms/object/object-explorer.md)  
+ [Objekt-Explorers](../../ssms/object/object-explorer.md)  
   
   

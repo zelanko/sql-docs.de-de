@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109374"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68109374"
   
  Informationen zum Extrahieren eines Skalarwerts aus einer JSON-Zeichenfolge anstelle eines Objekts oder eines Array finden Sie unter [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). Informationen zu den Unterschieden zwischen **JSON_VALUE** und **JSON_QUERY** finden Sie unter [Vergleichen von JSON_VALUE und JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ Der JSON-Pfad kann den Lax- oder Strict-Modus für die Analyse angeben. Wenn Sie
 
 Der Standardwert für *path* lautet „$“. Wenn Sie also keinen Wert für *path* bereitstellen, gibt **JSON_QUERY** den Eingabe-*Ausdruck* zurück.
 
-**JSON_QUERY** gibt einen Fehler zurück, wenn das Format von *path* ungültig ist.  
+*JSON_QUERY* gibt einen Fehler zurück, wenn das Format von **path** ungültig ist.  
   
 ## <a name="return-value"></a>Rückgabewert
 
@@ -73,7 +73,7 @@ Der Standardwert für *path* lautet „$“. Wenn Sie also keinen Wert für *pat
 
 ### <a name="lax-mode-and-strict-mode"></a>Lax- und Strict-Modus
 
- Betrachten Sie das folgende Beispiel eines JSON-Texts:  
+ Betrachten Sie folgenden JSON-Text:  
   
 ```json  
 {
@@ -92,13 +92,13 @@ Der Standardwert für *path* lautet „$“. Wenn Sie also keinen Wert für *pat
   
  Die folgende Tabelle vergleicht das Verhalten von **JSON_QUERY** im Lax-Modus und im Strict-Modus. Weitere Informationen zu den optionalen Path-Modusangaben (Lax oder Strict) finden Sie unter [JSON Path Expressions &#40;SQL Server&#41; (JSON-Pfadausdrücke (SQL Server))](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Pfad|Rückgabewert im Lax-Modus|Rückgabewert im Strict-Modus|Weitere Informationen|  
+|`Path`|Rückgabewert im Lax-Modus|Rückgabewert im Strict-Modus|Weitere Informationen|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|Gibt den gesamten JSON-Text zurück.|Gibt den gesamten JSON-Text zurück.|N/V|  
+|$|Gibt den gesamten JSON-Text zurück.|Gibt den gesamten JSON-Text zurück.|Nicht zutreffend|  
 |$.info.type|NULL|Fehler|Kein Objekt oder Array.<br /><br /> Verwenden Sie stattdessen **JSON_VALUE**.|  
 |$.info.address.town|NULL|Fehler|Kein Objekt oder Array.<br /><br /> Verwenden Sie stattdessen **JSON_VALUE**.|  
-|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N/V|  
-|$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|N/V|  
+|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|Nicht zutreffend|  
+|$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|Nicht zutreffend|  
 |$.info.type[0]|NULL|Fehler|Kein Array.|  
 |$.info.none|NULL|Fehler|Die Eigenschaft ist nicht vorhanden.|  
 
@@ -132,7 +132,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

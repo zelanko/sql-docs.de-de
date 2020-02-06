@@ -13,21 +13,21 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125182"
 ---
 # <a name="filetable-schema"></a>FileTable-Schema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Beschreibt das vordefinierte und feste Schema einer FileTable.  
   
-|Name des Dateiattributs|Typ|Größe|Default|und Beschreibung|Barrierefreiheit für das Dateisystem|  
+|Name des Dateiattributs|type|Size|Standard|BESCHREIBUNG|Barrierefreiheit für das Dateisystem|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variable|Ein **hierarchyid** , der die Position dieses Elements identifiziert.|Die Position dieses Knotens im hierarchischen FileNamespace.<br /><br /> Primärschlüssel für die Tabelle.|Kann durch Festlegen der Windows-Pfadwerte erstellt und geändert werden.|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||Ein von der **NEWID()** -Funktion zurückgegebener Wert.|Eine eindeutige ID für die FILESTREAM-Daten.|Nicht verfügbar.|  
-|**file_stream**|**varbinary(max)**<br /><br /> **Filestream**|variable|NULL|Enthält die FILESTREAM-Daten.|Nicht verfügbar.|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||Ein von der **NEWID()** -Funktion zurückgegebener Wert.|Eine eindeutige ID für die FILESTREAM-Daten.|Nicht zutreffend|  
+|**file_stream**|**varbinary(max)**<br /><br /> **Filestream**|variable|NULL|Enthält die FILESTREAM-Daten.|Nicht zutreffend|  
 |**file_type**|**nvarchar(255)**|variable|NULL.<br /><br /> Durch einen Erstellungs- bzw. Umbenennungsvorgang im Dateisystem wird der Dateierweiterungswert aus dem Namen übernommen.|Stellt den Typ der Datei dar.<br /><br /> Diese Spalte kann als **TYPE COLUMN** verwendet werden, wenn Sie einen Volltextindex erstellen.<br /><br /> **file_type** ist eine persistente berechnete Spalte.|Automatisch berechnet. Kann nicht festgelegt werden.|  
 |**Name**|**nvarchar(255)**|variable|GUID-Wert.|Der Datei- oder Verzeichnisname.|Kann mit Windows-APIs erstellt oder geändert werden.|  
 |**parent_path_locator**|**hierarchyid**|variable|Ein **hierarchyid** , der das Verzeichnis identifiziert, das dieses Element enthält.|Der **hierarchyid** des enthaltenden Verzeichnisses.<br /><br /> **parent_path_locator** ist eine persistente berechnete Spalte.|Automatisch berechnet. Kann nicht festgelegt werden.|  

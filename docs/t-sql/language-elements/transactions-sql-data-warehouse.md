@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121589"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Data Warehouse)
@@ -30,7 +30,7 @@ ms.locfileid: "68121589"
   
 -   *Autocommit-Transaktionen* werden automatisch innerhalb einer Sitzung initiiert und beginnen nicht mit der BEGIN TRANSACTION-Anweisung. Wenn die AUTOCOMMIT-Einstellung auf ON festgelegt ist, wird jede Anweisung in einer Transaktion ausgeführt, und es ist kein explizites COMMIT oder ROLLBACK notwendig. Wenn die AUTOCOMMIT-Einstellung auf OFF festgelegt ist, ist eine COMMIT- oder ROLLBACK-Anweisung erforderlich, um das Ergebnis der Transaktion zu bestimmen. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] beginnen AUTOCOMMIT-Transaktionen sofort nach einer COMMIT- oder ROLLBACK-Anweisung oder nach einer SET AUTOCOMMIT OFF-Anweisung.  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET AUTOCOMMIT { **ON** | OFF }  
  Bestimmt, wie Transaktionen gestartet und beendet werden können.  
   
- ON  
+ EIN  
  Jede Anweisung wird unter ihrer eigenen Transaktion ausgeführt, und keine explizite COMMIT- oder ROLLBACK-Anweisung ist erforderlich. Explizite Transaktionen sind zulässig, wenn AUTOCOMMIT auf ON festgelegt ist.  
   
  OFF  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Wenn eine explizite Transaktion aufgrund eines anderen Fehlers als eines Anweisungsfehlers zur Laufzeit nicht erfolgreich beendet werden kann, führt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatisch ein Rollback für die Transaktion aus und gibt alle Ressourcen frei, die von der Transaktion beansprucht wurden. Wenn z.B. die Netzwerkverbindung des Clients mit einer Instanz von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterbrochen ist oder sich der Client von der Anwendung abmeldet, wird für alle Transaktionen dieser Verbindung, für die noch kein Commit ausgeführt wurde, ein Rollback ausgeführt, sobald das Netzwerk die Instanz über die Unterbrechung benachrichtigt.  
   
- Wenn ein Anwendungsfehler zur Laufzeit in einem Batch auftritt, verhält sich [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] konsistent mit der auf **ON** festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**-Einstellung, und für die gesamte Transaktion wird ein Rollback ausgeführt. Weitere Informationen zur **XACT_ABORT**-Einstellung finden Sie unter [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Wenn ein Anwendungsfehler zur Laufzeit in einem Batch auftritt, verhält sich [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] konsistent mit der auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ON**festgelegten** **XACT_ABORT**-Einstellung, und für die gesamte Transaktion wird ein Rollback ausgeführt. Weitere Informationen zur **XACT_ABORT**-Einstellung finden Sie unter [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Eine Sitzung kann jeweils nur eine Transaktion zu einem bestimmten Zeitpunkt ausführen. Sicherungspunkte und geschachtelte Transaktionen werden nicht unterstützt.  
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>Sperrverhalten  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verwendet Sperren, um die Integrität von Transaktionen sicherzustellen und die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen. Sperren werden sowohl von impliziten als auch von expliziten Transaktionen verwendet. Jede Transaktion fordert Sperren verschiedener Typen für die Ressourcen, z.B. Tabellen oder Datenbanken an, von denen die Transaktion abhängt. Alle [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Sperren befinden sich auf Tabellenebene oder höher. Diese Sperren verhindern, dass die Ressourcen durch andere Transaktionen in einer Weise geändert werden, die zu Problemen für die Transaktion führen würde, die die Sperre angefordert hat. Jede Transaktion hebt ihre Sperren wieder auf, wenn sie nicht mehr über eine Abhängigkeit von den gesperrten Ressourcen verfügt. Explizite Transaktionen behalten Sperren bis zum Abschluss der Transaktion bei, wenn für diese entweder ein Commit oder ein Rollback ausgeführt wird.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Verwenden expliziter Transaktionen  
   
@@ -134,7 +134,7 @@ SET AUTOCOMMIT ON;
 SET AUTOCOMMIT OFF;  
 ```  
   
-### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. Verwenden einer impliziten Transaktion mit mehreren Anweisungen  
+### <a name="d-using-an-implicit-multi-statement-transaction"></a>D: Verwenden einer impliziten Transaktion mit mehreren Anweisungen  
   
 ```  
 SET AUTOCOMMIT OFF;  

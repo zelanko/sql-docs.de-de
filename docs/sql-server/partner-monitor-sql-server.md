@@ -8,26 +8,20 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8012c6a4fecf4155615460da8bd568eb4007aa48
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974466"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656934"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer SQL Server-Dienste. Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Überwachungslösungen für Microsoft SQL Server anbieten.
 
-<!--
-
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
-
--->
-
 ## <a name="microsoft-monitoring-partners"></a>Microsoft-Überwachungspartner
 
-| Partner | und Beschreibung | Links |
+| Partner | BESCHREIBUNG | Links |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL-Diagnose-Manager ist eine leistungsstarke Lösung zur Leistungsüberwachung und Diagnose, die Administratoren proaktiv warnt, wenn Probleme bei der Integrität, Leistung oder Verfügbarkeit in SQL Server-Umgebungen auftreten – und das alles in einer zentralen Konsole.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight auf SQL Server Enterprise: Garantierte Höchstleistung rund um die Uhr mit nicht übereinstimmender Überwachung, Diagnose und der Optimierung der SQL Server-Umgebungen. Spotlight bietet Ihnen Zugriff auf die benötigten Details für die optimale Eignung Ihrer SQL Server-Datenbanken. Erhalten Sie intuitive Übersichten über Integrität und Leistung, automatische Warnungen und Aktionen sowie Unterstützung für mobile Geräte.|[Marketplace][quest_marketplace]<br>[Website][quest_website]<br>[Video][quest_video] | |
@@ -41,7 +35,7 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer S
 Nähere Informationen über einige unserer anderen Partner finden Sie unter [Partner für Hochverfügbarkeit und Notfallwiederherstellung][hadr_partners], [Verwaltungspartner][management_partners] und [Entwicklungspartner][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 [2]: ./media/partner-hadr-sql-server/sentryone.png
 [3]: ./media/partner-hadr-sql-server/quest.png
 [4]: ./media/partner-hadr-sql-server/redgate.png

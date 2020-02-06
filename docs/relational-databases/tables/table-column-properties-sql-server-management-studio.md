@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016246"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Tabellenspalteneigenschaften (SQL Server Management Studio)
@@ -48,7 +48,7 @@ ms.locfileid: "68016246"
  **Länge**  
  Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an. Diese Eigenschaft ist nur für zeichenbasierte Datentypen verfügbar.  
   
- **Dezimalstellen**  
+ **Skalieren**  
  Zeigt die Höchstzahl von Ziffern an, die rechts neben dem Komma für Werte in dieser Spalte angezeigt werden können. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
  **Genauigkeit**  

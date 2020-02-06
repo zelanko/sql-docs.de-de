@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710379"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288177"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "71710379"
   
 -   Führen Sie Agents fortlaufend statt häufig aus.  
   
-     Wenn Sie die Agents für die fortlaufende Ausführung konfigurieren, statt Zeitpläne für die häufige Ausführung (z. B. jede Minute) zu erstellen, führt dies zu einer verbesserten Leistung der Replikation, da der jeweilige Agent nicht gestartet und beendet werden muss. Wenn Sie für den Verteilungs-Agent die fortlaufende Ausführung festlegen, erfolgt die Propagierung von Änderungen auf andere Server, mit denen in der Topologie eine Verbindung besteht, mit geringer Latenzzeit. Weitere Informationen finden Sie in den folgenden Themen:  
+     Wenn Sie die Agents für die fortlaufende Ausführung konfigurieren, statt Zeitpläne für die häufige Ausführung (z. B. jede Minute) zu erstellen, führt dies zu einer verbesserten Leistung der Replikation, da der jeweilige Agent nicht gestartet und beendet werden muss. Wenn Sie für den Verteilungs-Agent die fortlaufende Ausführung festlegen, erfolgt die Propagierung von Änderungen auf andere Server, mit denen in der Topologie eine Verbindung besteht, mit geringer Latenzzeit. Weitere Informationen finden Sie unter  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Angeben von Synchronisierungszeitplänen](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
@@ -142,11 +142,11 @@ Dieses Beispielszenario führt zu einem Zustand, in dem keine Sitzung ihre Befeh
 
 Während des Timeoutzeitraums der Abfrage werden Sie Folgendes bei den Leistungsindikatoren des Verteilungs-Agents bemerken: 
 
-- Der Wert des Leistungsindikators **Verteiler: Übermittelte Befehle/Sekunde** beträgt immer 0.
-- Der Wert des Leistungsindikators **Verteiler: Übermittelte Transaktionen/Sekunde** beträgt immer 0.
-- Der Leistungsindikator **Verteiler: Übermittlungslatenz** meldet einen Anstieg des Werts, bis der Deadlock des Threads behoben ist.
+- Der Wert des Leistungsindikators **Verteiler:Übermittelte Befehle/Sekunde** ist immer 0.
+- Der Wert des Leistungsindikators **Verteiler: Übermittelte Transaktionen/Sekunde** ist immer 0.
+- Der Leistungsindikator **Verteiler:Übermittlungslatenz** meldet einen Anstieg des Werts, bis der Deadlock des Threads behoben ist.
 
-Das Thema „Replication Distribution Agent (Replikationsverteilungs-Agent)“ in der SQL Server-Onlinedokumentation enthält die folgende Beschreibung für den Parameter *SubscriptionStreams*: „Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzelnen Datenstroms, die fehlgeschlagenen Batches zu wiederholen.“
+Der Artikel „Replikationsverteilungs-Agent“ in der Microsoft SQL Server-Onlinedokumentation enthält folgende Beschreibung für den Parameter *SubscriptionStreams*: „Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen.“
 
 Der Verteilungs-Agent verwendet eine Sitzung, um den Batch zu wiederholen, der nicht angewendet werden konnte. Nachdem der Verteilungs-Agent den Batch erfolgreich angewendet hat, verwendet er wieder mehrere Sitzungen, ohne einen Neustart durchzuführen.
 

@@ -26,10 +26,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927631"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE: Triggerfunktionen (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67927631"
 
   Gibt einen booleschen Wert zurück, der zeigt, ob der Versuch einer INSERT- oder UPDATE-Aktion an einer angegebenen Tabellenspalte oder Sicht unternommen wurde. UPDATE() wird im Text eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-INSERT- oder UPDATE-Triggers verwendet, um zu testen, ob der Trigger bestimmte Aktionen ausführen sollte.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ UPDATE ( column )
   
  UPDATE(*column*) kann überall innerhalb des Texts eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Triggers verwendet werden.  
  
-Wenn ein Trigger für eine Spalte gilt, wird der Wert `UPDATED` als `true` oder `1` zurückgegeben. Dies ist auch der Fall, wenn der Spaltenwert unverändert bleibt. Dies wurde mit Absicht so eingerichtet und der Trigger sollte eine Geschäftslogik implementieren, die bestimmt, ob der Einfügungs-/Update-/Löschvorgang zulässig ist oder nicht. 
+Wenn ein Trigger für eine Spalte gilt, wird der Wert `UPDATED` als `true` oder `1` zurückgegeben. Dies ist auch der Fall, wenn der Spaltenwert unverändert bleibt. Dies wurde mit Absicht so eingerichtet, und der Trigger sollte eine Geschäftslogik implementieren, die bestimmt, ob der Einfüge-/Update-/Löschvorgang zulässig ist oder nicht. 
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel erstellt einen Trigger, der eine Meldung an den Client ausgibt, wenn jemand versucht, die `StateProvinceID`- oder `PostalCode`-Spalten der `Address`-Tabelle zu aktualisieren.  

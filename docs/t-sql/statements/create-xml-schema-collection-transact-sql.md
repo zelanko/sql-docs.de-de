@@ -26,10 +26,10 @@ ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927724"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67927724"
 
   Importiert die Schemakomponenten in eine Datenbank.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -248,7 +248,7 @@ ON     sys.xml_schema_collections.xml_collection_id =
 WHERE  sys.xml_schema_namespaces.name='';  
 ```  
   
-### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. Verwenden von XML-Schemaauflistungen und Batches  
+### <a name="d-using-an-xml-schema-collection-and-batches"></a>D: Verwenden von XML-Schemaauflistungen und Batches  
  Es kann nicht auf denselben Batch einer Schemaauflistung verwiesen werden, in dem die Auflistung erstellt wurde. Wenn Sie auf eine Auflistung in demselben Batch verweisen, in dem diese erstellt wurde, erhalten Sie eine Fehlermeldung mit dem Hinweis, dass die Auflistung nicht vorhanden ist. Das folgende Beispiel ist funktionsfähig; wenn Sie jedoch `GO` entfernen und somit auf die XML-Schemaauflistung verweisen, um eine `xml`-Variable einzugeben, wird ein Fehler zurückgegeben.  
   
 ```  
