@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056814"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -68,7 +68,7 @@ ms.locfileid: "74056814"
 -   Benutzer auf Basis eines Zertifikats. Können sich nicht anmelden, jedoch Berechtigungen erhalten und Module signieren. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   Benutzer auf Basis eines asymmetrischen Schlüssels. Können sich nicht anmelden, jedoch Berechtigungen erhalten und Module signieren. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -140,7 +140,7 @@ CREATE USER user_name
 ```
 
 > [!NOTE]
-> Die Azure AD-Administratorfunktion für verwaltete Instanzen nach der Erstellung wurde geändert. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktion für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> Der Azure AD-Administrator für verwaltete Instanzfunktionen nach der Erstellung hat sich geändert. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktionen für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -205,7 +205,7 @@ CREATE USER user_name
  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
 WITH PASSWORD = '*password*'  
- **Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+ **Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Kann nur in einer eigenständigen Datenbank verwendet werden. Gibt das Kennwort für den Benutzer an, der erstellt wird. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.  
   
@@ -213,12 +213,12 @@ WITHOUT LOGIN
  Gibt an, dass der Benutzer keinem vorhandenen Anmeldenamen zugeordnet werden sollte.  
   
 CERTIFICATE *cert_name*  
- **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt das Zertifikat an, für das der Datenbankbenutzer erstellt wird.  
   
 ASYMMETRIC KEY *asym_key_name*  
- **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt den asymmetrischen Schlüssel an, für den der Datenbankbenutzer erstellt wird.  
   
@@ -236,14 +236,14 @@ SID = *sid*
  Gilt nur für Benutzer mit Kennwörtern ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung) in einer eigenständigen Datenbank. Gibt die SID des neuen Datenbankbenutzers an. Wenn diese Option nicht ausgewählt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch ein SID zugewiesen. Erstellen Sie mit dem SID-Parameter Benutzer in mehreren Datenbanken, die die gleiche Identität (SID) aufweisen. Dies ist beim Erstellen von Benutzern in mehreren Datenbanken für die Vorbereitung eines Always On-Failovers hilfreich. Fragen Sie zum Bestimmen der SID eines Benutzers sys.database_principals ab.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]  
- **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.  
   
 > [!WARNING]  
 >  Die falsche Verwendung dieser Option kann zur Datenbeschädigung führen. Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted geschützten sensiblen Daten](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wird FOR LOGIN ausgelassen, wird der neue Datenbankbenutzer dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen mit demselben Namen zugeordnet.  
   
  Das Standardschema ist das erste Schema, das vom Server beim Auflösen der Namen von Objekten für diesen Datenbankbenutzer durchsucht wird. Wenn nicht anders angegeben, ist das Standardschema der Besitzer von Objekten, die von diesem Datenbankbenutzer erstellt werden.  
@@ -328,7 +328,7 @@ Beim Erstellen des Benutzers in der verwalteten Azure SQL-Datenbank-Instanz muss
 -   `CREATE USER KEYUSER FOR ASYMMETRIC KEY SecureKey`  
 -   `CREATE USER KEYUSER FROM ASYMMETRIC KEY SecureKey`  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Wenn Sie einen Benutzer erstellen, erhält dieser zwar Zugriff auf eine Datenbank, nicht jedoch notwendigerweise auch auf die darin enthaltenen Objekte. Nach dem Erstellen eines Benutzers wird dieser daher häufig einer oder mehreren Datenbankrollen hinzugefügt, die über Zugriffsberechtigungen für entsprechende Objekte verfügen, oder dem Benutzer werden Berechtigungen für einzelne Objekte erteilt. Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ### <a name="special-considerations-for-contained-databases"></a>Spezielle Überlegungen zu eigenständigen Datenbanken  
@@ -340,7 +340,7 @@ Beim Erstellen des Benutzers in der verwalteten Azure SQL-Datenbank-Instanz muss
   
  Bei Verwendung der in Datenbanken enthaltenen Benutzern auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] konfigurieren Sie den Zugriff mithilfe einer Firewallregel auf Datenbankebene, anstatt einer Firewallregel auf Serverebene. Weitere Informationen finden Sie unter [sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-Für eigenständige Datenbankbenutzer in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] kann SSMS Multi-Factor Authentication unterstützen. Weitere Informationen hierzu finden Sie unter [SSMS-Unterstützung für Azure AD MFA mit SQL-Datenbank und SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+Für eigenständige Datenbankbenutzer in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] kann SSMS Multi-Factor Authentication unterstützen. Weitere Informationen finden Sie unter [SSMS-Unterstützung für Azure AD MFA mit SQL-Datenbank und SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY USER-Berechtigung in der Datenbank.  
@@ -455,7 +455,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. Erstellen eines Benutzers zum Kopieren von verschlüsselten Daten  
  Im folgenden Beispiel wird ein Benutzer erstellt, der durch das Feature „Always Encrypted“ geschützte Daten aus einem Tabellensatz mit verschlüsselten Spalten in einen anderen Tabellensatz mit verschlüsselten Spalten kopieren kann (innerhalb derselben oder zu einer anderen Datenbank).  Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted geschützten sensiblen Daten](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 CREATE USER [Chin]   

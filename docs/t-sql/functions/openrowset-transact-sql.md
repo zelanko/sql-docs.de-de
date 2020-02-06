@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74542287"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910143"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -124,7 +124,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich „d
 > [!NOTE]
 > Es wird empfohlen, dass Sie für jede Spalte in einer Formatdatei einen Sortierungsnamen angeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.
 
-|CODEPAGE-Wert|BESCHREIBUNG|
+|CODEPAGE-Wert|Beschreibung|
 |--------------------|-----------------|
 |ACP|Konvertiert Spalten vom Datentyp **char**, **varchar** oder **text** von der ANSI-/[!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Codepage (ISO 1252) in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage.|
 |OEM (Standard)|Konvertiert Spalten vom Datentyp **char**, **varchar** oder **text** von der OEM-Codepage des Systems in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage.|
@@ -422,7 +422,7 @@ Vollständige `OPENROWSET`-Beispiele einschließlich der Konfiguration der Anmel
 Das folgende Beispiel zeigt, wie Daten mithilfe des OPENROWSET-Befehls aus einer CSV-Datei in einen Speicherort von Azure Blob Storage geladen werden, für den Sie einen SAS-Schlüssel erstellt haben. Der Speicherort von Azure Blob Storage wird als externe Datenquelle konfiguriert. Hierfür sind datenbankweit gültige Anmeldeinformationen mit einer Shared Access Signature (SAS) erforderlich, die mit einem Hauptschlüssel in der Benutzerdatenbank verschlüsselt ist.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

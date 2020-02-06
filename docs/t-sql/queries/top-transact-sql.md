@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948246"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67948246"
 
 Begrenzt die zurückgegebenen Zeilen in einem Abfrageresultset auf die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angegebene Anzahl bzw. den darin angegebenen diesbezüglichen Prozentwert. Wenn TOP in Verbindung mit der ORDER BY-Klausel verwendet wird, ist das Resultset auf die ersten *N* sortierten Zeilen beschränkt. Andernfalls gibt TOP die ersten *N* Zeilen in zufälliger Reihenfolge zurück. Verwenden Sie diese Klausel, um die Anzahl der von einer SELECT-Anweisung zurückgegebenen Zeilen anzugeben. Oder verwenden Sie TOP, um die Zeilen anzugeben, die von einer INSERT-, UPDATE-, MERGE- oder DELETE-Anweisung betroffen sind.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
  
@@ -137,7 +137,7 @@ GO
   
 Durch die Verwendung von TOP und ORDER BY in einem untergeordneten SELECT-Vorgang stellen Sie sicher, dass die Ergebnisse der ORDER BY-Klausel auf die TOP-Klausel angewendet werden und damit nicht das Ergebnis des UNION-Vorgangs sortiert wird.  
   
- Im Folgenden finden Sie das Resultset.  
+ Hier ist das Resultset.  
   
  ```
  Model         Color      Price  
@@ -155,7 +155,7 @@ TOP kann nicht mit OFFSET und FETCH im gleichen Abfrageausdruck (im gleichen Abf
   
 ## <a name="examples"></a>Beispiele  
   
-|Kategorie|Funktionssyntaxelemente|  
+|Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
 |[Grundlegende Syntax](#BasicSyntax)|TOP • PERCENT|  
 |[Einschließen von gleichwertigen Werten](#tie)|WITH TIES|  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Im folgenden Beispiel werden die obersten 31 Zeilen zurückgegeben, die den Abfragekriterien entsprechen. Mit der **ORDER BY**-Klausel wird sichergestellt, dass es sich bei den 31 zurückgegebenen Zeilen um die ersten 31 Zeilen (basierend auf einer alphabetischen Sortierung der Spalte `LastName`) handelt.  
   
 Verwenden Sie **TOP**, ohne WITH TIES anzugeben.  

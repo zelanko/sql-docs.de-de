@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981817"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981817"
 
   Ändert die Eigenschaften eines Volltextindex in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -114,7 +114,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Mithilfe der gespeicherten Prozedur **sp_configure** können Sie auf Informationen zur Standardvolltextsprache der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zugreifen.  
   
- In Form einer Zeichenfolge entspricht *language_term* dem Wert der **alias**-Spalte in der **syslanguages**-Systemtabelle. Die Zeichenfolge muss in einfache Anführungszeichen eingeschlossen werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
+ In Form einer Zeichenfolge entspricht *language_term* dem Wert der **alias**-Spalte in der **syslanguages**-Systemtabelle. Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
  Wird der Wert im Format Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) angegeben, wird er von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Unicode konvertiert.  
   
@@ -208,11 +208,11 @@ ALTER FULLTEXT INDEX ON table_name
 ## <a name="change-tracking-no-population"></a> Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION  
  Ob der Volltextindex aufgefüllt wird, hängt davon ab, ob die Änderungsnachverfolgung aktiviert wurde und WITH NO POPULATION in der ALTER FULLTEXT INDEX-Anweisung angegeben ist. In der folgenden Tabelle wird das Ergebnis ihrer Interaktion zusammengefasst.  
   
-|Änderungsnachverfolgung|WITH NO POPULATION|Ergebnis|  
+|Change Tracking|WITH NO POPULATION|Ergebnis|  
 |---------------------|------------------------|------------|  
 |Nicht aktiviert|Nicht angegeben|Der Index wird vollständig aufgefüllt.|  
-|Nicht aktiviert|Specified|Der Index wird nicht aufgefüllt, bevor eine Anweisung ALTER FULLTEXT INDEX...START POPULATION ausgegeben wird.|  
-|Aktiviert|Specified|Ein Fehler wird ausgelöst, und der Index wird nicht geändert.|  
+|Nicht aktiviert|Angegeben|Der Index wird nicht aufgefüllt, bevor eine Anweisung ALTER FULLTEXT INDEX...START POPULATION ausgegeben wird.|  
+|Aktiviert|Angegeben|Ein Fehler wird ausgelöst, und der Index wird nicht geändert.|  
 |Aktiviert|Nicht angegeben|Der Index wird vollständig aufgefüllt.|  
   
  Weitere Informationen zum Auffüllen von Volltextindizes finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).  
@@ -336,7 +336,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-### <a name="d-starting-a-full-population"></a>D. Starten einer vollständigen Auffüllung  
+### <a name="d-starting-a-full-population"></a>D: Starten einer vollständigen Auffüllung  
  Im folgenden Beispiel wird die vollständige Ausfüllung für den Volltextindex in der `JobCandidate`-Tabelle gestartet.  
   
 ```  
