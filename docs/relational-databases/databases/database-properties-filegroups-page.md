@@ -13,10 +13,10 @@ ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099620"
 ---
 # <a name="database-properties-filegroups-page"></a>Datenbankeigenschaften (Seite Dateigruppen)
@@ -41,13 +41,13 @@ ms.locfileid: "68099620"
  **Schreibgeschützt**  
  Wählen Sie diese Option aus, um für die Dateigruppe den schreibgeschützten Modus festzulegen.  
   
- **Default**  
+ **Standard**  
  Wählen Sie diese Option aus, um diese Dateigruppe zur Standarddateigruppe zu machen. Sie können eine Standarddateigruppe für Zeilen und eine Standarddateigruppe für FILESTREAM-Daten verwenden.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt dem Raster mit den Dateigruppen für die Datenbank eine neue leere Zeile hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt die ausgewählte Dateigruppenzeile aus dem Raster.  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>Optionen für speicheroptimierte Datendateigruppen  
@@ -57,10 +57,10 @@ ms.locfileid: "68099620"
  **FILESTREAM-Dateien**  
  Zeigt die Anzahl der Dateien (Container) in der speicheroptimierten Datendateigruppe an. Sie können Container auf der Seite **Dateien** hinzufügen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt dem Raster mit den Dateigruppen für die Datenbank eine neue leere Zeile hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt die ausgewählte Dateigruppenzeile aus dem Raster.  
   
 ## <a name="see-also"></a>Weitere Informationen  

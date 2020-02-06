@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846723"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL-Graph)
@@ -47,7 +47,7 @@ Erstellt entweder als `NODE`- oder `EDGE`-Tabelle eine neue SQL-Graph-Tabelle.
 > [!NOTE]   
 >  Standardanweisungen für Transact-SQL finden Sie unter [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -105,7 +105,7 @@ In diesem Dokument werden nur Argumente für SQL-Graph aufgelistet. Eine vollst�
  Der Name des Schemas, zu dem die neue Tabelle gehört.  
   
  *table_name*      
- Der Name der Knoten- oder Edgetabelle. Tabellennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen. *table_name* kann höchstens 128 Zeichen aufweisen, ausgenommen lokale temporäre Tabellennamen (Namen mit einem einzelnen Nummernzeichen (#) als Präfix), bei denen maximal 116 Zeichen zulässig sind.  
+ Der Name der Knoten- oder Edgetabelle. Tabellennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen. *table_name* kann höchstens 128 Zeichen aufweisen, ausgenommen lokale temporäre Tabellennamen (Namen mit einem Nummernzeichen (#) als Präfix), bei denen maximal 116 Zeichen zulässig sind.  
   
  NODE   
  Erstellt eine Knotentabelle
@@ -122,7 +122,7 @@ In diesem Dokument werden nur Argumente für SQL-Graph aufgelistet. Eine vollst�
  ON {partition_scheme | filegroup | "default"}    
  Kann auch in einer PRIMARY KEY- oder UNIQUE-Einschränkung angegeben werden. Diese Einschränkungen erstellen Indizes. Wenn „filegroup“ angegeben ist, wird der Index in der genannten Dateigruppe gespeichert. Wenn "default" angegeben oder ON überhaupt nicht angegeben ist, wird der Index in derselben Dateigruppe wie die Tabelle gespeichert. Wenn die PRIMARY KEY- oder die UNIQUE-Einschränkung einen gruppierten Index erstellt, werden die Datenseiten für die Tabelle in derselben Dateigruppe wie der Index gespeichert. Wenn CLUSTERED angegeben wird oder ein gruppierter Index anderweitig durch die Einschränkung erstellt wird, und ein Wert für „partition_scheme“ angegeben wird, der von der Angabe für „partition_scheme“ oder „filegroup“ der Tabellendefinition abweicht (oder umgekehrt), wird nur die Einschränkungsdefinition berücksichtigt. Der andere Wert wird ignoriert.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Das Erstellen einer temporären Tabelle als Knoten- oder Edgetabelle wird nicht unterstützt.  
 
 Das Erstellen einer Knoten- oder Edgetabelle als temporale Tabelle wird nicht unterstützt.

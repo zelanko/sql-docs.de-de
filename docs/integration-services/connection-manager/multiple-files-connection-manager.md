@@ -18,10 +18,10 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294372"
 ---
 # <a name="multiple-files-connection-manager"></a>Verbindungs-Manager für mehrere Dateien
@@ -39,7 +39,7 @@ ms.locfileid: "71294372"
   
  In der folgenden Tabelle sind die Werte von **FileUsageType**aufgeführt.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Der Verbindungs-Manager für mehrere Dateien verwendet eine vorhandene Datei.|  
 |**1**|Der Verbindungs-Manager für mehrere Dateien erstellt eine Datei.|  
@@ -63,12 +63,12 @@ ms.locfileid: "71294372"
   
  \<*Pfad*>|\<*Pfad*>  
   
- Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Wenn z.B. auf alle Textdateien auf Laufwerk C verwiesen werden soll, kann der Wert der **ConnectionString** -Eigenschaft auf C:\\*.txt festgelegt werden.  
+ Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Wenn z.B. auf alle Textdateien auf Laufwerk C verwiesen werden soll, kann der Wert der **ConnectionString** -Eigenschaft auf C:\\\*.txt festgelegt werden.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md).  
   
- Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und unter [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
   

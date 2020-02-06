@@ -11,10 +11,10 @@ ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b2aa0ce2b9fe4d61d9a2fc2f81b2a41e23ab488
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295220"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (SSISDB-Datenbank)
@@ -26,17 +26,17 @@ ms.locfileid: "71295220"
 
   Zeigt die Umgebungsdetails für alle Umgebungen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an. Umgebungen enthalten Variablen, auf die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten verwiesen werden kann.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |environment_id|**bigint**|Der eindeutige Bezeichner (ID) der Umgebung.|  
-|NAME|**sysname**|Der Name der Umgebung.|  
+|name|**sysname**|Der Name der Umgebung.|  
 |folder_id|**bigint**|Die eindeutige ID des Ordners, in der sich die Umgebung befindet.|  
 |description|**nvarchar(1024)**|Die Beschreibung der Umgebung. Dieser Wert ist optional.|  
 |created_by_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, der die Umgebung erstellt hat|  
 |created_by_name|**nvarchar(128)**|Der Name des Benutzers, der die Umgebung erstellt hat.|  
 |created_time|**datetimeoffset**|Datum und Uhrzeit der Umgebungserstellung.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Umgebung im Katalog angezeigt. Umgebungsnamen sind nur in Bezug auf den Ordner eindeutig, in dem sie sich befinden. Beispielsweise kann eine Umgebung mit dem Namen `E1` in mehreren Ordnern im Katalog vorhanden sein, jedoch kann jeder Ordner nur eine Umgebung mit dem Namen `E1`enthalten.  
   
 ## <a name="permissions"></a>Berechtigungen  

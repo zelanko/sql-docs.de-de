@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245238"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Verwenden des RAW-Modus mit FOR XML
@@ -40,7 +40,7 @@ Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um,
   
 -   [Beispiel: Abrufen von Produktmodellinformationen als XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Anweisung](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Direktive](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Beispiel: Anfordern von Schemas als Ergebnisse mithilfe der Optionen XMLDATA und XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
@@ -48,7 +48,7 @@ Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um,
   
 -   [Beispiel: Umbenennen des &#60;row&#62;-Elements](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [Beispiel: Angeben eines Stammelements für den mit FOR XML generierten XML-Code](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Beispiel: Angeben eines Stammelements für das durch FOR XML generierte XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
 -   [Beispiel: Abfragen von Spalten des Typs XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   

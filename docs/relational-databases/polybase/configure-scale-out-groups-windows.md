@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906889"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Konfigurieren von PolyBase-Erweiterungsgruppen unter Windows
@@ -35,7 +35,7 @@ Die folgenden Schritte fassen den Prozess der Erstellung einer PolyBase-Erweiter
   
 2. Wählen Sie eine SQL Server-Instanz als Hauptknoten aus. Ein Hauptknoten kann nur auf einer Instanz festgelegt werden, die SQL Server Enterprise ausführt.
   
-3. Fügen Sie mithilfe von [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md) die verbleibenden SQL Server-Instanzen als Serverknoten hinzu.
+3. Fügen Sie mithilfe von [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)die verbleibenden SQL Server-Instanzen als Serverknoten hinzu.
 
 4. Überwachen Sie Knoten in der Gruppe mit [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
 
@@ -51,7 +51,7 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
   
    - PQTH4A-CMP02  
   
-2. Domänenkonto: *PQTH4A\PolyBaseUse*r  
+2. Domänenkonto: *PQTH4A\PolyBaseUser*  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installieren von SQL Server mit PolyBase auf allen Computern
 
@@ -87,7 +87,7 @@ Nachdem das Setup abgeschlossen ist, können beide Computer als PolyBase-Gruppen
   
 4. Fahren Sie die PolyBase-Engine herunter, und starten Sie den PolyBase-Datenverschiebedienst neu.
   
-## <a name="optional-remove-a-compute-node"></a>Optional: Entfernen eines Serverknotens  
+## <a name="optional-remove-a-compute-node"></a>Optional: Entfernen eines Computeknotens  
   
 1. Stellen Sie eine Verbindung mit dem Computeknoten SQL Server (PQTH4A-CMP02) her.
   

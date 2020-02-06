@@ -35,10 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982831"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
@@ -61,7 +61,7 @@ ms.locfileid: "73982831"
   
  Informationen zu den Formen der Volltextsuche, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -285,7 +285,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Beachten Sie, dass der innere Suchbegriff `CC` nicht mitgezählt wird.  
   
  **MAX**  
- Gibt alle Zeilen zurück, die die angegebenen Begriffe enthalten, unabhängig von der Entfernung dazwischen. Dies ist die Standardeinstellung.  
+ Gibt alle Zeilen zurück, die die angegebenen Begriffe enthalten, unabhängig von der Entfernung dazwischen. Dies ist die Standardoption.  
   
  \<match_order>  
  Gibt an, ob die Begriffe in der angegebenen Reihenfolge auftreten müssen, um von einer Suchabfrage zurückgegeben zu werden. Wenn Sie \<match_order> verwenden möchten, müssen Sie auch \<maximum_distance> angeben.  
@@ -298,7 +298,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **FALSE**  
  Ignoriert die angegebene Reihenfolge. Beispielsweise würde `NEAR(A,B)` sowohl `A ... B` als auch `B ... A` entsprechen.  
   
- Dies ist die Standardeinstellung.  
+ Dies ist die Standardoption.  
   
  Beispielsweise wird in den folgenden NEAR-Suchvorgängen nach den Wörtern "`Monday`", "`Tuesday`" und "`Wednesday`" in der angegebene Reihenfolge gesucht, unabhängig vom Abstand zwischen den Begriffen:  
   
@@ -354,7 +354,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Sie können einen vierteiligen Namen im CONTAINS- oder [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)-Prädikat zum Abfragen von volltextindizierten Spalten der Zieltabellen auf einem Verbindungsserver verwenden. Erstellen Sie zum Vorbereiten eines Remoteservers für den Empfang von Volltextabfragen einen Volltextindex für die Zieltabellen und -spalten auf dem Remoteserver, und fügen Sie anschließend den Remoteserver als Verbindungsserver hinzu.  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>Vergleich zwischen LIKE und der Volltextsuche  
- Im Gegensatz zur Volltextsuche verarbeitet das [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Prädikat ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl und Größe der zurückgegebenen Zeilen. Ein weiterer Aspekt ist, dass mit LIKE nur eine einfache Mustersuche in einer ganzen Tabelle durchgeführt wird. Bei einer Volltextabfrage wird hingegen die Sprache beachtet und zur Indizierungs- und Abfragezeit werden bestimmte Transformationen vorgenommen, beispielsweise das Filtern von Stoppwörtern oder Anwenden von Thesaurus- und Flexionserweiterungen. Diese Transformationen helfen Volltextabfragen, die Genauigkeit von Rückrufen sowie die abschließende Rangfolge der Ergebnisse zu verbessern.  
+ Im Gegensatz zur Volltextsuche verarbeitet das [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Prädikat ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl und Größe der zurückgegebenen Zeilen. Ein weiterer Aspekt ist, dass mit LIKE nur eine einfache Mustersuche in einer ganzen Tabelle durchgeführt wird. Bei einer Volltextabfrage wird hingegen die Sprache beachtet und zur Indizierungs- und Abfragezeit werden bestimmte Transformationen vorgenommen, beispielsweise das Filtern von Stoppwörtern oder Anwenden von Thesaurus- und Flexionserweiterungen. Diese Transformationen helfen Volltextabfragen, die Genauigkeit von Rückrufen sowie die abschließende Rangfolge der Ergebnisse zu verbessern.  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>Abfragen mehrerer Spalten (Volltextsuche)  
  Sie können mehrere Spalten abfragen, indem Sie eine Liste von Spalten angeben, die durchsucht werden sollen. Die Spalten müssen sich in derselben Tabelle befinden.  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefix_term"></a>D. Verwenden von CONTAINS und OR mit \<prefix_term>  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D: Verwenden von CONTAINS und OR mit \<prefix_term>  
  Im folgenden Beispiel werden alle Kategoriebeschreibungen zurückgegeben, die Zeichenfolgen mit dem Präfix `chain` oder `full` enthalten.  
   
 ```sql  

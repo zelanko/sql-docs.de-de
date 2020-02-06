@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326093"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "71326093"
 
 Erstellt eine neue Warteschlange in einer Datenbank. Fügt einer Warteschlange gespeicherte Nachrichten hinzu. Wenn eine Nachricht für einen Dienst eintrifft, platziert [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Nachricht in der dem Dienst zugeordneten Warteschlange.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -110,7 +110,7 @@ Eine Warteschlange, für die die Behandlung nicht verarbeitbarer Nachrichten auf
 
 ON *Dateigruppe |* [**DEFAULT**] gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateigruppe an, in der diese Warteschlange erstellt werden soll. Sie können mit dem *filegroup*-Parameter eine Dateigruppe identifizieren oder mit dem DEFAULT-Bezeichner die Standarddateigruppe für die Service Broker-Datenbank verwenden. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Wird keine Dateigruppe angegeben, verwendet die Warteschlange die Standarddateigruppe für die Datenbank.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Eine Warteschlange kann das Ziel einer SELECT-Anweisung sein. Der Inhalt einer Warteschlange kann jedoch nur mithilfe von Anweisungen geändert werden, die für [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen verwendet werden, wie beispielsweise SEND, RECEIVE und END CONVERSATION. Eine Warteschlange kann nicht das Ziel einer INSERT-, UPDATE-, DELETE- oder TRUNCATE-Anweisung sein.
 
@@ -128,7 +128,7 @@ Eine Warteschlange ist ein Objekt, dessen Besitzer ein Schema ist. Warteschlange
 
 In der folgenden Tabelle werden die Spalten in einer Warteschlange aufgelistet.
 
-|Spaltenname|Datentyp|und Beschreibung|
+|Spaltenname|Datentyp|BESCHREIBUNG|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|Status der Nachricht. Die RECEIVE-Anweisung gibt alle Nachrichten zurück, die den Status **1** haben. Wenn die Nachrichtenbeibehaltung aktiviert ist, wird der Status auf 0 festgelegt. Wenn die Nachrichtenbeibehaltung deaktiviert ist, wird die Meldung aus der Warteschlange gelöscht. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0** = Empfangene Nachricht wurde beibehalten<br /><br /> **1** = Bereit zu empfangen<br /><br /> **2** = Noch nicht abgeschlossen<br /><br /> **3** = Gesendete Nachricht wurde beibehalten|
 |priority|**tinyint**|Die Prioritätsebene, die der Nachricht zugewiesen wird.|
@@ -185,7 +185,7 @@ CREATE QUEUE ExpenseQueue
         , EXECUTE AS 'ExpenseUser' ) ;
 ```
 
-### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. Erstellen einer Warteschlange in einer bestimmten Dateigruppe
+### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D: Erstellen einer Warteschlange in einer bestimmten Dateigruppe
 
 Im folgenden Beispiel wird eine Warteschlange in der `ExpenseWorkFileGroup`-Dateigruppe erstellt.
 

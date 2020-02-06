@@ -9,10 +9,10 @@ ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b6891ec497b3100206b812fbc8da7b0463fa4d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579508"
 ---
 # <a name="report-builder-functions---inscope-function"></a>Funktionen des Berichts-Generators: InScope-Funktion
@@ -28,7 +28,7 @@ InScope(scope)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Bereich*  
+ *scope*  
  (**String**) Der Name eines Datasets, eines Datenbereichs oder einer Gruppe, die einen Bereich angibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  

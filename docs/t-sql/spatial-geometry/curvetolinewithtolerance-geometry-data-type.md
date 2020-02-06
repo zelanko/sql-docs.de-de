@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929303"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry-Datentyp)
@@ -98,7 +98,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
  ```  
   
-### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Festlegen des relativen Werts für eine aufrufende CurvePolygon-Instanz auf true  
+### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D: Festlegen des relativen Werts für eine aufrufende CurvePolygon-Instanz auf true  
  Im folgenden Beispiel wird eine Instanz von `CurvePolygon` verwendet, um `CurveToLineWithTolerance()` mit *relative* und dem Wert true aufzurufen:  
   
 ```

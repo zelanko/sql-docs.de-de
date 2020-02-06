@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927373"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927373"
 
   Kombiniert zwei boolesche Ausdrücke und gibt **TRUE** zurück, wenn beide Ausdrücke **TRUE** sind. Werden in einer Anweisung mehrere logische Operatoren verwendet, werden zuerst die **AND**-Operatoren ausgewertet. Sie können die Auswertungsreihenfolge ändern, indem Sie Klammern verwenden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,10 +44,10 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Argumente  
  *boolean_expression*  
- Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der einen booleschen Wert zurückgibt: **TRUE**, **FALSE** oder **UNKNOWN**.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der **TRUE**, **FALSE** oder **UNKNOWN** zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Boolean**  
+ **Boolescher Wert**  
   
 ## <a name="result-value"></a>Ergebniswert  
  Gibt TRUE zurück, wenn beide Ausdrücke TRUE sind.  

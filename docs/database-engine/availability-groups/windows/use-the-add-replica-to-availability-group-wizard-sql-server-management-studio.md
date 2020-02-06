@@ -16,10 +16,10 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244980"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Hier erfahren Sie, wie Sie mit dem Assistenten für Verfügbarkeitsgruppen in SQL Server Management Studio ein Replikat zu Ihrer Always On-Verfügbarkeitsgruppe hinzufügen.
@@ -70,7 +70,7 @@ ms.locfileid: "75244980"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, der Sie ein sekundäres Replikat hinzufügen, und wählen Sie den Befehl **Replikat hinzufügen** aus. Dies startet den Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen.  
   
-4.  Verbinden Sie sich auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** mit sämtlichen sekundären Replikaten in der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Seite „Mit vorhandenen sekundären Replikaten verbinden“ &#40;Assistent zum Hinzufügen von Replikaten: Assistent zum Hinzufügen von Datenbanken&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+4.  Verbinden Sie sich auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** mit sämtlichen sekundären Replikaten in der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Mit vorhandenen sekundären Replikaten verbinden &#40;Seite, Assistent zum Hinzufügen von Replikaten/Assistent zum Hinzufügen von Datenbanken&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
 5.  Auf der Seite **Replikate angeben** können Sie ein oder mehrere neue sekundäre Replikate für die Verfügbarkeitsgruppe angeben und konfigurieren. Diese Seite enthält drei Registerkarten. In der folgenden Tabelle werden diese Registerkarten eingeführt. Weitere Informationen finden Sie unter [Seite „Replikate angeben“ &#40;Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "75244980"
      Klicken Sie nach Abschluss des Assistenten auf **Schließen** , um den Assistenten zu beenden.  
   
 > [!IMPORTANT]  
->  Lesen Sie nach dem Hinzufügen eines Replikats den Abschnitt „Nächster Schritt: Nach dem Hinzufügen eines sekundären Replikats“ unter [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  Lesen Sie nach dem Hinzufügen eines Replikats den Abschnitt „Nachverfolgung: Nach dem Hinzufügen eines Replikats“ unter [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   

@@ -14,10 +14,10 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822610"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "74822610"
      Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Verwenden Sie in jedem Fall „registerallprovidersip“ mit der Einstellung 0 (null), und vergewissern Sie sich, dass Sie keine statischen IP-Adressen im DNS verwenden und dadurch die erforderlich Berechtigung zum Erstellen von Clustern im DNS gewähren (siehe Definition unter https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server). Der Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP zu verwenden.
+    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Verwenden Sie in jedem Fall „registerallprovidersip“ mit der Einstellung 0 (null), und vergewissern Sie sich, dass Sie keine statischen IP-Adressen im DNS verwenden und dadurch die erforderlich Berechtigung zum Erstellen von Clustern im DNS gewähren (siehe Definition unter https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server ). Der Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP zu verwenden.
 
 3.  **Erteilen Sie die CONNECT-Berechtigung für den Endpunkt.**  
   

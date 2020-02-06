@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294873"
 ---
 # <a name="validate-dialog-box"></a>Dialogfeld 'Überprüfen'
@@ -64,7 +64,7 @@ ms.locfileid: "71294873"
  **Parameter**  
  Listet den Namen des Parameters auf.  
   
- **ReplTest1**  
+ **Wert**  
  Listet den Parameterwert auf.  
   
  Auf der Registerkarte **Verbindungs-Manager** werden die Verbindungs-Manager-Eigenschaften aufgelistet, die Sie zum Überprüfen des Projekts oder Pakets verwenden.  
@@ -77,10 +77,10 @@ ms.locfileid: "71294873"
  **Name**  
  Listet den Namen des Verbindungs-Managers auf.  
   
- **Eigenschaftsname**  
+ **Eigenschaftenname**  
  Listet den Namen der Verbindungs-Manager-Eigenschaft auf.  
   
- **ReplTest1**  
+ **Wert**  
  Listet den Wert auf, der der Verbindungs-Manager-Eigenschaft zugewiesen ist.  
   
   

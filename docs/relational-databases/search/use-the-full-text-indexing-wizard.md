@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903819"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Verwenden des Volltextindizierungs-Assistenten
@@ -47,7 +47,7 @@ ms.locfileid: "72903819"
   
 5.  **Typspalte** Wählen Sie den Namen der Spalte aus, in der der Dokumenttyp der volltextindizierten Spalte enthalten ist.  
 
-> **HINWEIS:** Das Feld **Typspalte** ist nur verfügbar, wenn die unter **Verfügbare Spalten** genannte Spalte vom Typ **varbinary(max)** oder **image** ist.  
+> **HINWEIS:** Das Feld  **Typspalte** ist nur verfügbar, wenn die unter **Verfügbare Spalten** genannte Spalte vom Typ **varbinary(max)** oder **image**ist.  
   
 6. **Statistische Semantik** Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -82,13 +82,13 @@ ms.locfileid: "72903819"
   
   oder
   
- 10. **Neuen Katalog erstellen**
+ 10. **Erstellen eines neuen Katalogs**
  - Volltextkatalog auswählen  
   
-    A. **Name**  
+    a. **Name**  
      Geben Sie einen Namen für Ihren neuen Volltextkatalog ein.  
   
-     B. **Als Standardkatalog festlegen**  
+     b. **Als Standardkatalog festlegen**  
      Wählen Sie diese Option aus, um diesen Katalog als Standardkatalog für die Datenbank festzulegen.  
   
      c. **Unterscheidung nach Akzent**  
@@ -98,7 +98,7 @@ ms.locfileid: "72903819"
      Geben Sie die Dateigruppe an, für die der Volltextindex erstellt werden soll.  
   
      e. Wählen Sie einen Wert:  
-      |value|und Beschreibung|  
+      |value|BESCHREIBUNG|  
       |-----------|-----------------|
       |**<default>**| Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|
       |**PRIMARY**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|
@@ -112,7 +112,7 @@ ms.locfileid: "72903819"
   
      Folgende Werte sind möglich:  
   
-   |value|und Beschreibung|  
+   |value|BESCHREIBUNG|  
     |-----------|-----------------|  
     |**<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
     |**<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
@@ -139,7 +139,7 @@ ms.locfileid: "72903819"
      **Beenden**  
      Unterbricht den aktuellen Vorgang und verhindert die Ausführung nachfolgender Volltextvorgänge durch den Assistenten während dieser Sitzung.  
   
-     **Bericht**  
+     **Report**  
      Wenn alle Vorgänge ausgeführt wurden, können Sie auf diese Schaltfläche klicken, um auf einen Bericht zu den ausgeführten Vorgängen zuzugreifen. Sie können den Bericht anzeigen, in eine Datei drucken, in die Zwischenablage kopieren oder ihn per E-Mail versenden.  
   
   

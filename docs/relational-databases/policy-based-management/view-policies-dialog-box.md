@@ -13,17 +13,17 @@ ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6c63b9efc61e18c5b5bc52dcdcbd93af0d9fbbfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009370"
 ---
 # <a name="view-policies-dialog-box"></a>Dialogfeld 'Richtlinien anzeigen'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie die Richtlinien anzeigen, die für dieses Ziel gelten. In diesem Dialogfeld werden relevante Richtlinien, deren Richtlinienkategorien und Informationen über die Richtlinien angezeigt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Richtlinienzustand**  
  Gibt den Status der Richtlinie im Hinblick auf dieses Ziel an. Bleibt leer, wenn der Status unbekannt ist.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "68009370"
  **Auswertungsmodus**  
  Der Auswertungsmodus der genannten Richtlinie.  
   
- **Verlauf**  
+ **History**  
  Klicken Sie auf den Link, um den Bericht zum Ausführungsverlauf anzuzeigen.  
   
- **Auswerten**  
+ **Evaluieren**  
  Klicken Sie auf den Link, um das Dialogfeld **Richtlinien auswerten** zu öffnen, um die Richtlinie auszuführen.  
   
  **Letzte Ausführung**  

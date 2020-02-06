@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574250"
 ---
 # <a name="url-access-ssrs"></a>URL-Zugriff (SSRS)
@@ -108,17 +108,17 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Taskbeschreibungen|Links|  
 |-----------------------|-----------|  
-|Zugreifen auf Berichtserverelemente, z. B. Berichte, freigegebene Datenquellen und Ressourcen|[Zugreifen auf Berichtsserverelemente über den URL-Zugriff](../reporting-services/access-report-server-items-using-url-access.md)|  
-|Übergeben von Berichtsparametern an einen Bericht|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|Festlegen des Gebietsschemas der Berichtsparameter in der URL-Zugriffszeichenfolge, durch die die gebietsschemaspezifische Interpretation von Datumsangaben, Währungen usw. festgelegt wird|[Festlegen der Sprache für Berichtsparameter in einer URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Senden spezifischer Einstellungen für Renderingerweiterungen, durch die das Rendern des Berichts angepasst wird|[Angeben von Geräteinformationseinstellungen in einer URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|Direktes Exportieren eines Berichts in ein Dateiformat, ohne ihn im Browser anzuzeigen|[Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md)|  
-|Öffnen eines Berichts und direktes Navigieren zur Position einer Zeichenfolge|[Suchen eines Berichts mithilfe von URL-Zugriff](../reporting-services/search-a-report-using-url-access.md)|  
-|Rendern einer bestimmten Berichtsverlaufs-Momentaufnahme|[Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|Zugreifen auf Berichtserverelemente, z. B. Berichte, freigegebene Datenquellen und Ressourcen|[Access Report Server Items Using URL Access (Zugreifen auf Berichtsserverelemente über den URL-Zugriff)](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Übergeben von Berichtsparametern an einen Bericht|[Pass a Report Parameter Within a URL (Übergeben von Berichtsparametern innerhalb einer URL)](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|Festlegen des Gebietsschemas der Berichtsparameter in der URL-Zugriffszeichenfolge, durch die die gebietsschemaspezifische Interpretation von Datumsangaben, Währungen usw. festgelegt wird|[Set the Language for Report Parameters in a URL (Festlegen der Sprache für Berichtsparameter in einer URL)](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|Senden spezifischer Einstellungen für Renderingerweiterungen, durch die das Rendern des Berichts angepasst wird|[Specify Device Information Settings in a URL (Angeben von Geräteinformationseinstellungen in einer URL)](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Direktes Exportieren eines Berichts in ein Dateiformat, ohne ihn im Browser anzuzeigen|[Export a Report Using URL Access (Exportieren von Berichten über URL-Zugriff)](../reporting-services/export-a-report-using-url-access.md)|  
+|Öffnen eines Berichts und direktes Navigieren zur Position einer Zeichenfolge|[Search a Report Using URL Access (Suchen eines Berichts mithilfe von URL-Zugriff)](../reporting-services/search-a-report-using-url-access.md)|  
+|Rendern einer bestimmten Berichtsverlaufs-Momentaufnahme|[Render a Report History Snapshot Using URL Access (Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff)](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [URL-Zugriffsparameterreferenz](../reporting-services/url-access-parameter-reference.md)   
+ [URL-Zugriffsparameterverweis](../reporting-services/url-access-parameter-reference.md)   
  [Integrieren von Reporting Services mit URL-Zugriff](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

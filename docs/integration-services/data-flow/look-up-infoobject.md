@@ -11,10 +11,10 @@ ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e77890725659f05d8616156f6e84712dc20323eb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292314"
 ---
 # <a name="look-up-infoobject"></a>InfoObject suchen
@@ -48,7 +48,7 @@ ms.locfileid: "71292314"
  Sie können das Dialogfeld **InfoObject suchen** auch öffnen, indem Sie im Abschnitt **Attribute** des Dialogfelds **Neues InfoObject erstellen** auf **Hinzufügen** klicken.  
   
 ## <a name="lookup-options"></a>Suchoptionen  
- In den Suchtextfeldern können Sie Ergebnisse filtern, indem Sie das Platzhalterzeichen (*) oder eine Teilzeichenfolge in Kombination mit dem Platzhalterzeichen (*) verwenden. Wenn Sie ein Suchfeld jedoch leer lassen, werden beim Suchvorgang nur leere Zeichenfolgen in diesem Feld abgeglichen.  
+ In den Suchtextfeldern können Sie Ergebnisse filtern, indem Sie das Platzhalterzeichen (*) oder eine Teilzeichenfolge in Kombination mit dem Platzhalterzeichen verwenden. Wenn Sie ein Suchfeld jedoch leer lassen, werden beim Suchvorgang nur leere Zeichenfolgen in diesem Feld abgeglichen.  
   
  **Merkmale**  
  Suchen Sie die InfoObjects, die die Eigenschaften darstellen.  
@@ -87,7 +87,7 @@ ms.locfileid: "71292314"
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [InfoSource für Masterdaten erstellen](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [Hinzufügen](../../integration-services/data-flow/create-new-infoobject.md)   
+ [Neues InfoObject erstellen](../../integration-services/data-flow/create-new-infoobject.md)   
  [Ziel-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

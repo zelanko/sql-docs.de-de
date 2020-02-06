@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 899bd7aada6364449fa71e9f87839447de73dedd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909667"
 ---
 # <a name="indexes"></a>Indizes
@@ -26,7 +26,7 @@ ms.locfileid: "67909667"
 ## <a name="available-index-types"></a>Verfügbare Indextypen
 In der nachfolgenden Tabelle sind die Typen von Indizes aufgelistet, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar sind. Außerdem werden hier Links auf zusätzliche Informationen bereitgestellt.  
   
-|Indextyp|und Beschreibung|Zusätzliche Informationen|  
+|Indextyp|BESCHREIBUNG|Zusätzliche Informationen|  
 |----------------|-----------------|----------------------------|  
 |Hash|Mit einem Hashindex erfolgt der Datenzugriff über eine Hashtabelle im Arbeitsspeicher. Hashindizes belegen einen festen Speicherplatz, dessen Größe eine Funktion der Bucketanzahl ist.|[Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Hash Index Design Guidelines (Richtlinien zum Entwerfen von Hashindizes)](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |Speicheroptimiert, nicht gruppiert|Bei speicheroptimierten, nicht gruppierten Indizes basiert die Arbeitsspeichernutzung auf der Zeilenanzahl und Größe der Indexschlüsselspalten.|[Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Memory-Optimized Nonclustered Index Design Guideline (Richtlinien zum Entwerfen von speicheroptimierten, nicht gruppierten Indizes)](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
@@ -36,8 +36,8 @@ In der nachfolgenden Tabelle sind die Typen von Indizes aufgelistet, die in [!IN
 |columnstore|Ein Columnstore-Index im Arbeitsspeicher speichert und verwaltet Daten durch die Verarbeitung von spaltenbasiertem Datenspeicher und spaltenbasierten Abfragen.<br /><br /> Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.|[Beschreibung von Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md)<br /><br /> [Columnstore Index Design Guidelines (Richtlinien zum Entwerfen von Columnstore-Indizes)](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)|  
 |Index mit eingeschlossenen Spalten|Ein nicht gruppierter Index, der dahingehend erweitert wird, dass er neben Schlüsselspalten auch Nichtschlüsselspalten enthält.|[Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  
 |Index in berechneten Spalten|Ein Index für eine Spalte, die vom Wert anderer Spalten abgeleitet wird, oder bestimmte deterministische Eingaben.|[Indizes in berechneten Spalten](../../relational-databases/indexes/indexes-on-computed-columns.md)|  
-|Gefiltert|Ein optimierter nicht gruppierter Index, der sich besonders für Abfragen eignet, bei denen aus einer fest definierten Teilmenge von Daten ausgewählt wird. Dieser verwendet ein Filterprädikat, um einen Teil der Zeilen in der Tabelle zu indizieren. Mit einem sorgfältig entworfenen gefilterten Index können im Gegensatz zu Tabellenindizes die Abfrageleistung verbessert und der Aufwand für die Indexverwaltung und -speicherung reduziert werden.|[Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [Filtered Index Design Guidelines (Richtlinien zum Entwerfen von gefilterten Indizes)](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
-|Räumlich|Mit einem räumlichen Index können bestimmte Vorgänge an räumlichen Objekten (*räumliche Daten*) in einer Spalte vom Datentyp **geometry** effizienter ausgeführt werden. Der räumliche Index verringert die Anzahl von Objekten, auf die relativ aufwendige räumliche Vorgänge angewendet werden müssen.|[Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)|  
+|Filtered|Ein optimierter nicht gruppierter Index, der sich besonders für Abfragen eignet, bei denen aus einer fest definierten Teilmenge von Daten ausgewählt wird. Dieser verwendet ein Filterprädikat, um einen Teil der Zeilen in der Tabelle zu indizieren. Mit einem sorgfältig entworfenen gefilterten Index können im Gegensatz zu Tabellenindizes die Abfrageleistung verbessert und der Aufwand für die Indexverwaltung und -speicherung reduziert werden.|[Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [Filtered Index Design Guidelines (Richtlinien zum Entwerfen von gefilterten Indizes)](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
+|Spatial|Mit einem räumlichen Index können bestimmte Vorgänge an räumlichen Objekten (*räumliche Daten*) in einer Spalte vom Datentyp **geometry** effizienter ausgeführt werden. Der räumliche Index verringert die Anzahl von Objekten, auf die relativ aufwendige räumliche Vorgänge angewendet werden müssen.|[Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|Eine aufgeteilte und dauerhafte Darstellung der XML-BLOBS (Binary Large Objects) in der **XML**-Datentypspalte.|[XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |Volltext|Ein besonderer Typ eines tokenbasierten funktionellen Indexes, der durch die Microsoft-Volltext-Engine für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwaltet wird. Er stellt effiziente Unterstützung für komplexe Wortsuchvorgänge in Zeichenfolgendaten bereit.|[Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md)|  
   

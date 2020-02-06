@@ -1,6 +1,6 @@
 ---
-title: Assistenten zum Generieren und Veröffentlichen von Skripts | Microsoft-Dokumentation
-ms.custom: ''
+title: Assistenten zum Generieren und Veröffentlichen von Skripts
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -43,18 +43,18 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253900"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]erstellen. Sie können Skripts für eine Datenbank auf einer Datenbank-Engine-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus generieren. Die generierten Skripts können auf einer anderen Datenbank-Engine-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
 
-Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und Veröffentlichen von Skripts finden Sie unter [Tutorial: Assistent zum Generieren von Skripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und Veröffentlichen von Skripts finden Sie unter [Tutorial: Generate Scripts Wizard (Tutorial: Assistent zum Generieren von Skripts)](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -176,7 +176,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Skripterstellung für Standard** – Schließt Standardobjekte ein, die zum Festlegen von Standardwerten in Tabellenspalten verwendet wurden. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
--   **DROP und CREATE als Skript** – Bei **Script CREATE** werden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen bei der Erstellung von Objekten eingeschlossen. Wenn **DROP als Skript**ausgewählt ist, sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen eingeschlossen, um Objekte zu löschen. Wenn **DROP und CREATE als Skript**ausgewählt ist, ist die [!INCLUDE[tsql](../../includes/tsql-md.md)] -DROP-Anweisung im Skript für jedes geschriebene Objekt enthalten, gefolgt von der CREATE-Anweisung. Der Standardwert ist **CREATE als Skript**.  
+-   **DROP und CREATE als Skript** – Bei **Script CREATE**werden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen bei der Erstellung von Objekten eingeschlossen. Wenn **DROP als Skript**ausgewählt ist, sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen eingeschlossen, um Objekte zu löschen. Wenn **DROP und CREATE als Skript**ausgewählt ist, ist die [!INCLUDE[tsql](../../includes/tsql-md.md)] -DROP-Anweisung im Skript für jedes geschriebene Objekt enthalten, gefolgt von der CREATE-Anweisung. Der Standardwert ist **CREATE als Skript**.  
   
 -   **Skripterstellung für erweiterte Eigenschaften** – Enthält erweiterte Eigenschaften im Skript, wenn das Objekt über erweiterte Eigenschaften verfügt. Der Standardwert ist **True**.  
   
@@ -190,9 +190,9 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Skripterstellung für Statistiken** – Wenn **Skripterstellung für Statistiken**festgelegt ist, schließt diese Option die **CREATE STATISTICS** -Anweisung zum erneuten Erstellen der Statistiken für das Objekt ein. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
--   **Skripterstellung für USE DATABASE** – Fügt dem Skript die **USE DATABASE**-Anweisung hinzu. Die **USE DATABASE** -Anweisung muss enthalten sein, um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **False** aus, um die **USE DATABASE** -Anweisung auszulassen. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
+-   **Skripterstellung für USE DATABASE** – Fügt dem Skript die **USE DATABASE** -Anweisung hinzu. Die **USE DATABASE** -Anweisung muss enthalten sein, um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **False** aus, um die **USE DATABASE** -Anweisung auszulassen. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
--   **Datentypen für Skripts**: Wählt aus, was geskriptet werden soll: **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Nur Schema**.  
+-   **Datentypen, für die ein Skript erstellt wird** – Wählt aus, wofür ein Skript erstellt werden soll: **Nur Daten**, **Nur Schema**oder beides. Der Standard ist **Nur Schema**.  
   
  **Tabellen-/Sichtoptionen** – Die folgenden Optionen gelten nur für Skripts für Tabellen oder Sichten.  
   
@@ -256,13 +256,13 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 8.  **Statistiken veröffentlichen** – Wenn **Statistiken veröffentlichen**festgelegt ist, ist die **CREATE STATISTICS** -Anweisung zum erneuten Erstellen der Statistiken für das Objekt enthalten. Mithilfe der Option **Statistiken und Histogramme veröffentlichen** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Statistiken nicht veröffentlichen**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
-9. **VarDecimal-Optionen veröffentlichen** – Aktiviert das **vardecimal**-Tabellenformat in der Zieldatenbanktabelle, wenn es in der Ursprungsdatenbanktabelle aktiviert ist. Der Standardwert ist **True**.  
+9. **VarDecimal-Optionen veröffentlichen** – Aktiviert das **vardecimal** -Tabellenformat in der Zieldatenbanktabelle, wenn es in der Ursprungsdatenbanktabelle aktiviert ist. Der Standardwert ist **True**.  
   
 10. **Objektnamen mit Schema qualifizieren** – Schließt den Schemanamen im Namen der erstellten Objekte ein. Der Standardwert ist **True**.  
   
 11. **Skriptbindung** – Schließt die Bindung für Standard- und Regelobjekte im Skript ein, das zum Veröffentlichen an den Anbieter gesendet wird. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) und [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
-12. **Datentypen für Skripts**: Wählt aus, was geskriptet werden soll: **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Schema und Daten**.  
+12. **Zu veröffentliche Datentypen** – Wählt aus, wofür ein Skript erstellt werden soll: **Nur Daten**, **Nur Schema**oder beides. Der Standard ist **Schema und Daten**.  
   
  **Veröffentlichungsoptionen**: Gibt an, ob beim Veröffentlichen auf dem Webhostinganbieter Transaktionen verwendet werden sollen.  
   
@@ -331,7 +331,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
  **Details** – Zeigen Sie die Spalte **Aktion** an, um den Status des Assistenten anzuzeigen. Nach der Generierung speichert der Assistent die Skripts in einer Datei oder verwendet sie zum Veröffentlichen in einem Webdienst, abhängig von Ihrer Auswahl. Wenn diese Schritte abgeschlossen sind, klicken Sie auf den Wert in der Spalte **Ergebnis** , um das Ergebnis des entsprechenden Schritts anzuzeigen.  
   
- **Bericht speichern** – Klicken Sie hier, um den Status des Assistenten in eine Datei zu speichern.  
+ **Bericht speichern:** Klicken Sie hier, um den Fortschritt des Assistenten in eine Datei zu speichern.  
   
  **Abbrechen** – Klicken Sie hier, um den Assistenten vor Abschließen der Verarbeitung oder bei Auftreten eines Fehlers zu schließen.  
   

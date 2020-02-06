@@ -1,10 +1,9 @@
 ---
-title: Erstellen eines Analysis Services-Auftragsschritts | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen eines Analysis Services-Auftragsschritts
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e27f429820039b7d804f52776e9cf5dd33bf27dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 45f053ee1c69e5e36885fd72c6099823647381f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267285"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258494"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Erstellen eines Analysis Services-Auftragsschritts
 
@@ -33,7 +34,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssno
   
     [Einschränkungen](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen SQL Server-Auftrag mithilfe von Analysis Services-Befehlen bzw. -Abfragen mit**  
   
@@ -107,7 +108,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssno
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>So erstellen Sie einen Auftragsschritt für den Analysis Services-Befehl  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

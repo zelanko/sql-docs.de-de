@@ -15,10 +15,10 @@ ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d8162a8eef652a14993f67e4e3931be7362e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929666"
 ---
 # <a name="drop-xml-indexes"></a>Löschen von XML-Indizes
@@ -69,7 +69,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Beispiel: Erstellen eines XML-Index mithilfe der DROP_EXISTING-Indexoption  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Beispiel: Erstellen eines XML-Index mithilfe der DROP_EXISTING-Indexoption  
  Im folgenden Beispiel wird ein XML-Index für eine Spalte (`XmlColx`) erstellt. Anschließend wird ein weiterer XML-Index mit dem gleichen Namen für eine andere Spalte (`XmlColy`) erstellt. Da die Option `DROP_EXISTING` angegeben wird, wird der vorhandene XML-Index für (`XmlColx)` gelöscht und ein neuer XML-Index für (`XmlColy`) erstellt.  
   
 ```  

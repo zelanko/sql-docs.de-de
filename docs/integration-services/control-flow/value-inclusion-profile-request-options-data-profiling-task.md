@@ -13,10 +13,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa6215e3fafbbf962c687daf329f6781f466342d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293811"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Wertinklusionsprofil (Datenprofilerstellungs-Task)
@@ -61,11 +61,11 @@ ms.locfileid: "71293811"
   
 -   **Allgemein**  
   
--   **Options**  
+-   **Optionen**  
   
 ### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **SubsetTableOrView**  
  Wählen Sie die vorhandene Tabelle oder Sicht aus, für die ein Profil erstellt werden soll.  
@@ -106,15 +106,15 @@ ms.locfileid: "71293811"
 > [!NOTE]  
 >  Wenn Sie den Platzhalter **(\*)** für **ColumnName** verwenden, ist **CompareOptions** schreibgeschützt und auf die **Default**-Einstellung festgelegt.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Default**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
+|**Standard**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
 |**DictionarySort**|Sortiert und vergleicht Daten anhand der Sortier- und Vergleichsregeln, die in Wörterbüchern für die zugeordnete Sprache definiert sind, oder nach dem jeweiligen Alphabet.|  
   
  Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreCase**|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |**IgnoreNonSpace**|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann „å“ mit „a“ identisch.|  
@@ -125,11 +125,11 @@ ms.locfileid: "71293811"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Keine**  
  Wählen Sie die Schwellenwerteinstellung aus, um die Ausgabe des Profils zu verfeinern. Der Standardwert dieser Eigenschaft ist **Specified**. Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**None**|Gibt keinen Schwellenwert an. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **InclusionStrengthThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
@@ -143,7 +143,7 @@ ms.locfileid: "71293811"
  **Keine**  
  Geben Sie den übergeordneten Schwellenwert an. Der Standardwert dieser Eigenschaft ist **Specified**. Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**None**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird unabhängig von der Schlüsselstärke der übergeordneten Spalte gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **SupersetColumnsKeyThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn die Schlüsselstärke der übergeordneten Spalte größer als der Schwellenwert ist.|  

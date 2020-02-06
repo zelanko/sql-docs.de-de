@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68354591"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar und nvarchar (Transact-SQL)
@@ -36,7 +36,7 @@ Zeichenfolgendaten mit fester Größe. *n* definiert die Zeichenfolgengröße in
 Zeichenfolgendaten mit variabler Größe. *n* definiert die Zeichenfolgengröße in Bytepaaren und kann ein Wert zwischen 1 und 4.000 sein. **max** gibt an, dass die maximale Speichergröße 2^30-1 Zeichen (2 GB) beträgt. Die Speichergröße beträgt zweimal *n* Byte + 2 Byte. Für die [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF)-Codierung beträgt die Speichergröße zweimal *n* Byte + 2 Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für die UTF-16-Codierung ist die Speichergröße noch zweimal *n* Byte + 2 Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*, da zusätzliche Zeichen zwei Bytepaare verwenden (auch [Ersatzzeichenpaar](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) genannt). Die ISO-Synonyme für **nvarchar** lauten **national char varying** und **national character varying**.
   
 ## <a name="remarks"></a>Bemerkungen  
-Ein gängiges Missverständnis besteht darin, dass das *n* in [NCHAR(*n*) und NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) die Anzahl von Zeichen definiert. Das *n* in [NCHAR(*n*) und NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) definiert jedoch die Zeichenfolgenlänge in **Bytepaaren** (0-4.000). *n* definiert niemals die Anzahl von Zeichen, die gespeichert werden können. Dies ähnelt der Definition von [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
+Ein gängiges Missverständnis besteht darin, dass das [n*in*NCHAR(*n*) und NVARCHAR(](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)n *)* die Anzahl von Zeichen definiert. Das [n*in*NCHAR(*n*) und NVARCHAR(](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)n *)* definiert jedoch die Zeichenfolgenlänge in **Bytepaaren** (0-4.000). *n* definiert niemals die Anzahl von Zeichen, die gespeichert werden können. Dies ähnelt der Definition von [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
 Das Missverständnis entsteht, da bei der Verwendung von Zeichen, die im Unicode-Bereich 0-65.535 definiert sind, ein Zeichen pro Bytepaar gespeichert werden kann. In höheren Unicode-Bereichen (65.536-1.114.111) verwendet ein Zeichen möglicherweise aber zwei Bytepaare. In einer als NCHAR(10) definierten Spalte kann [!INCLUDE[ssde_md](../../includes/ssde_md.md)] beispielsweise 10 Zeichen speichern, die ein Bytepaar verwenden (Unicode-Bereich 0-65.535), jedoch weniger als 10 Zeichen bei Verwendung von zwei Bytepaaren (Unicode-Bereich 65.536-1.114.111). Weitere Informationen zum Unicode-Speicher und -Zeichenbereichen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).     
 
 Wenn *n* in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist, beträgt die Standardlänge 1. Wenn *n* in der CAST-Funktion nicht angegeben ist, beträgt die Standardlänge 30.
@@ -63,7 +63,7 @@ Stellen Sie einer Unicode-Zeichenfolgenkonstanten den Buchstaben „N“ voran, 
 ## <a name="converting-character-data"></a>Konvertieren von Zeichendaten  
 Informationen zum Konvertieren von Zeichendaten finden Sie unter [char und varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  

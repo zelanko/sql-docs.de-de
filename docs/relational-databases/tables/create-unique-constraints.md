@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a35a937411a83b9dd27f4ab1673c9a892cf615b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907922"
 ---
 # <a name="create-unique-constraints"></a>Erstellen von Unique-Einschränkungen
@@ -33,7 +33,7 @@ ms.locfileid: "72907922"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine UNIQUE-Einschränkung mit:**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72907922"
   
 4.  Klicken Sie im Datenblattbereich unter **Allgemein**auf **Typ** , und wählen Sie im Dropdown-Listenfeld rechts neben der Eigenschaft den Eintrag **Eindeutiger Schlüssel** aus.  
   
-5.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
+5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
 
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72907922"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel wird eine Tabelle erstellt und dann wird eine UNIQUE-Einschränkung für die Spalte `TransactionID` definiert.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel wird eine Tabelle erstellt und dann wird eine UNIQUE-Einschränkung für die Spalte `TransactionID`definiert.  
   
     ```  
     USE AdventureWorks2012;  

@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245301"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -43,7 +43,7 @@ Jede Datenbank weist einen Zähler auf, der für jeden Einfüge- oder Updatevorg
   
 **timestamp** ist das Synonym für den **rowversion**-Datentyp und unterliegt der Verhaltensweise von Datentypsynonymen. Verwenden Sie in DDL-Anweisungen nach Möglichkeit stets **rowversion** anstelle von **timestamp**. Weitere Informationen finden Sie unter [Data Type Synonyms &#40;Transact-SQL&#41; (Synonyme für Datentypen &#40;Transact-SQL&#41;)](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Der **timestamp**-Datentyp von [!INCLUDE[tsql](../../includes/tsql-md.md)] unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
+Der [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp **-Datentyp von**  unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
   
 > [!NOTE]  
 >  Die **timestamp**-Syntax ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  

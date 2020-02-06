@@ -41,13 +41,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769905"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287607"
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "68769905"
 -   Name und Beschreibung der Veröffentlichung.  
   
  Informationen zum Arbeiten mit Veröffentlichungen finden Sie in den folgenden Themen:    
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md)    
 -   [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
 -   [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
@@ -97,7 +97,7 @@ ms.locfileid: "68769905"
   
 -   [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
+-   [Artikeloptionen für die Mergereplikation](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Beim Veröffentlichen einer Tabelle für die Replikation können Sie angeben, welche Schemaobjekte auf den Abonnenten kopiert werden sollen, z. B. deklarierte referenzielle Integrität (PRIMARY KEY-Einschränkungen, Referenzeinschränkungen, eindeutige Einschränkungen), Indizes, Benutzer-DML-Trigger (DDL-Trigger können nicht repliziert werden), erweiterte Eigenschaften und Sortierungen. Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert.  
@@ -240,6 +240,6 @@ ms.locfileid: "68769905"
  [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)   
  [Skripterstellung für die Replikation](../../../relational-databases/replication/scripting-replication.md)   
  [Sichern des Verlegers](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

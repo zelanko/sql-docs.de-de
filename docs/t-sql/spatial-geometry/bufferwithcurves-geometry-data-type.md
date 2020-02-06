@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929316"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry-Datentyp)
@@ -62,7 +62,7 @@ SQL Server-Rückgabetyp: **geometry**
 |distance-Wert|Type-Dimensionen|Räumlicher Rückgabetyp|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Null oder eins|Leere Instanz von **GeometryCollection**|  
-|distance < 0|Zwei oder mehr|Eine Instanz von **CurvePolygon** oder **GeometryCollection** mit einem negativen Puffer. **Hinweis:** Ein negativer Puffer erstellt möglicherweise eine leere Instanz von **GeometryCollection**.|  
+|distance < 0|Zwei oder mehr|Eine Instanz von **CurvePolygon** oder **GeometryCollection** mit einem negativen Puffer. **Hinweis:** Ein negativer Puffer erstellt auch möglicherweise eine leere Instanz von **GeometryCollection**.|  
 |distance = 0|Alle Dimensionen|Kopie der aufrufenden Instanz von **geometry**|  
 |distance > 0|Alle Dimensionen|Instanz von **CurvePolygon** oder **GeometryCollection**|  
   
@@ -101,7 +101,7 @@ SQL Server-Rückgabetyp: **geometry**
   
  Diese **SELECT**-Anweisung gibt `GEOMETRYCOLLECTION EMPTY` zurück.  
   
-### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Aufrufen von BufferWithCurves() mit einem Parameterwert = 0  
+### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D: Aufrufen von BufferWithCurves() mit einem Parameterwert = 0  
  Im folgenden Beispiel wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben:  
   
 ```
@@ -154,7 +154,7 @@ SQL Server-Rückgabetyp: **geometry**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- Von den ersten beiden **SELECT** -Anweisungen wird eine Instanz von `GeometryCollection` zurückgegeben, da der *distance* -Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT**-Anweisung gibt `CurvePolygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
+ Von den ersten beiden **SELECT**-Anweisungen wird eine Instanz von `GeometryCollection` zurückgegeben, da der *distance*-Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT**-Anweisung gibt `CurvePolygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

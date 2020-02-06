@@ -17,10 +17,10 @@ ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3ed13483746d2a3592f8c37380862719103d438a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68029373"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Basissyntax der FOR XML-Klausel
@@ -99,7 +99,7 @@ Eine Dokumentation zur SELECT...**FOR XML**-Klausel, die auch für Azure SQL-Dat
  Gibt an, dass die Abfrage die Ergebnisse als **xml** -Typ zurückgibt. Weitere Informationen finden Sie unter [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
 **ROOT** [('_RootName_')]  
- Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Der Standardwert lautet `<root>`.  
+ Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Standardwert: `<root>`.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

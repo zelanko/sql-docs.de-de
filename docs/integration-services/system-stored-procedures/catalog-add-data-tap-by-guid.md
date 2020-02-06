@@ -11,10 +11,10 @@ ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281373"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
@@ -70,7 +70,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Um Datenabzweigungen hinzuzufügen, muss die Ausführungsinstanz den Status „Erstellt“ (der Wert 1 in der Spalte **Zustand** der Sicht [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)) aufweisen. Der Statuswert ändert sicher, wenn Sie die Ausführung starten. Sie können eine Ausführung erstellen, indem Sie [catalog.create_execution &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) aufrufen.  
   
  Folgende Überlegungen sind bei der gespeicherten Prozedur "add_data_tap_by_guid" zu beachten.  
@@ -89,7 +89,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
  Wenn die gespeicherte Prozedur fehlschlägt, wird ein Fehler ausgelöst.  
   
 ## <a name="result-set"></a>Resultset  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -109,7 +109,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 -   Der für die Anzahl der aufzuzeichnenden Zeilen angegebene Wert ist ungültig.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  

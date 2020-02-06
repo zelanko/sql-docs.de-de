@@ -26,10 +26,10 @@ helpviewer_keywords:
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73882409"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -94,7 +94,7 @@ Ein Bezeichner, dem der Informationstyp zugeordnet ist. Dieser wird häufig von 
 Ist ein Bezeichner, der auf vordefinierte Werte basiert, die die Vertraulichkeitsbewertung definieren. Wird von anderen Diensten wie Advanced Threat Protection verwendet, um Anomalien basierend auf ihrer Bewertung zu erkennen.
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 - Einem einzelnen Objekt kann nur eine Klassifizierung hinzugefügt werden. Wird einem bereits klassifizierten Objekt eine Klassifizierung hinzugefügt, überschreibt diese die vorhandene Klassifizierung.
 - Mehrere Objekte können mit einer einzigen `ADD SENSITIVITY CLASSIFICATION`-Anweisung klassifiziert werden.

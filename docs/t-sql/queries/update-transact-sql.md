@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687374"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -346,7 +346,7 @@ Es wird empfohlen, Daten in Blockgrößen einzufügen bzw. zu aktualisieren, die
   
 Wenn in einer OUTPUT-Klausel auf die von der **\.WRITE**-Klausel geänderte Spalte verwiesen wird, wird der vollständige Wert der Spalte – entweder das vorherige Image in **deleted.** _column\_name_ oder das endgültige Image in **inserted.** _column\_name_ – an die angegebene Spalte in der Tabellenvariable zurückgegeben. Weitere Informationen finden Sie unten im Beispiel R.  
   
-Verwenden Sie [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md), um die gleiche Funktionalität der **\.WRITE**-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
+Verwenden Sie **STUFF &#40;Transact-SQL&#41;\., um die gleiche Funktionalität der** [WRITE](../../t-sql/functions/stuff-transact-sql.md)-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
   
 ### <a name="updating-user-defined-type-columns"></a>Aktualisieren von Spalten mit benutzerdefiniertem Datentyp  
  Sie können Werte in benutzerdefinierten Spalten auf eine der folgenden Arten aktualisieren:  

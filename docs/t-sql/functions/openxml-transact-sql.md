@@ -20,10 +20,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914595"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67914595"
 
   OPENXML stellt eine Rowsetsicht eines XML-Dokuments bereit. Da OPENXML ein Rowsetanbieter ist, kann OPENXML in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen überall dort verwendet werden, wo Rowsetanbieter, wie z. B. eine Tabelle, eine Sicht oder die OPENROWSET-Funktion, verwendet werden können.  
   
- ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Artikellinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  Gibt die zwischen den XML-Daten und dem relationalen Rowset verwendete Zuordnung an und legt fest, wie die Überlaufspalte gefüllt wird. *flags* ist ein optionaler Eingabeparameter, wobei folgende Werte möglich sind.  
   
-|Bytewert|und Beschreibung|  
+|Bytewert|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**0**|**Attributzentrierte** Zuordnung als Standard verwenden.|  
 |**1**|Verwenden der **attributzentrierten** Zuordnung. Kann mit XML_ELEMENTS kombiniert werden. In diesem Fall wird zuerst die **attributzentrierte** Zuordnung angewendet. Danach wird die **elementzentrierte** Zuordnung für alle verbleibenden Spalten angewendet.|  
@@ -59,7 +59,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). Im Abrufkontext zeigt dieses Flag an, dass die verwendeten Daten nicht in die Überlaufeigenschaft **\@mp:xmltext** kopiert werden sollen.|  
   
  _SchemaDeclaration_  
- Die Schemadefinition im Format: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ Die Schemadefinition im folgenden Format: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...].  
   
  _ColName_  
  Der Name einer Spalte des Rowsets.  
@@ -85,7 +85,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle (**edge**) beschrieben.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement hat den ID-Wert 0. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Das durch diese ID identifizierte übergeordnete Element ist nicht notwendigerweise das übergeordnete Element; dies hängt vielmehr vom Knotentyp (NodeType) des Knotens ab, dessen übergeordnetes Element nicht von dieser ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
@@ -143,7 +143,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Wenn dieselbe `SELECT`-Anweisung mit dem Wert `2` für *flags* ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
+ Wenn dieselbe `SELECT`-Anweisung mit dem Wert *für*flags`2` ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -163,7 +163,7 @@ NULL       NULL
   
 -   Die `ProdID`-Spalte des Rowsets wird dem `ProductID`-Attribut und die `Qty`-Spalte des Rowsets wird dem `Quantity`-Attribut der Knoten zugeordnet, die in *rowpattern* identifiziert sind.  
   
- Zwar ist durch den *flags*-Parameter die **elementzentrierte** Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
+ Zwar ist durch den **flags**-Parameter die *elementzentrierte* Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   

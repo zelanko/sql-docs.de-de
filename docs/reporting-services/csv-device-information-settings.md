@@ -12,10 +12,10 @@ ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571609"
 ---
 # <a name="csv-device-information-settings"></a>CSV-Geräteinformationseinstellungen
@@ -25,8 +25,8 @@ ms.locfileid: "65571609"
   
 |Einstellung|value|  
 |-------------|-----------|  
-|**Codierung**|Der Internet Assigned Numbers Authority (IANA)-Name einer Zeichencodierung, die von .NET Framework unterstützt wird. Der Standardwert ist **UTF-8**. Beispiele für andere Werte: ASCII, UTF-7 und UTF-16.|  
-|**ExcelMode**|Gibt an, dass die Zielausgabe für Excel bestimmt ist. Der Standardwert ist **true**.|  
+|**Codieren**|Der Internet Assigned Numbers Authority (IANA)-Name einer Zeichencodierung, die von .NET Framework unterstützt wird. Der Standardwert ist **UTF-8**. Beispiele für andere Werte: ASCII, UTF-7 und UTF-16.|  
+|**ExcelMode**|Gibt an, dass die Zielausgabe für Excel bestimmt ist. Der Standardwert lautet **true**.|  
 |**FieldDelimiter**|Das Trennzeichen, das in das Ergebnis eingefügt werden soll. Der Standardwert ist ein Komma (,). Sie sollten den Wert dieser Geräteinformationen URL-codieren, wenn Sie ihn in einer URL übergeben. Beispielsweise sollte ein als Trennzeichen verwendetes Tabstoppzeichen als "%09" angegeben werden.<br /><br /> Sie können das Standardfeldtrennzeichen in ein beliebiges Zeichen ändern, einschließlich TAB, indem Sie die Geräteinformationseinstellungen in der Konfigurationsdatei ändern. Um z.B. TAB zu verwenden, aktualisieren Sie die FieldDelimiter-Einstellung auf \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> In diesem Beispiel ist [TAB] ein wirkliches Tabstoppzeichen. Dies bedeutet, dass in der Konfigurationsdatei Leerzeichen angezeigt werden. Das "xml:space"-Attribut weist Parser an, Leerzeichen beizubehalten.|  
 |**FileExtension**|Die Dateierweiterung, die für das Ergebnis verwendet wird. Der Standardwert lautet **.CSV**. Wenn sowohl **FileExtension** als auch **Extension** angegeben wird, hat **FileExtension** Vorrang.|  
 |**NoHeader**|Gibt an, ob die Kopfzeile aus der Ausgabe ausgeschlossen ist. Der Standardwert ist **false**.|  
@@ -38,7 +38,7 @@ ms.locfileid: "65571609"
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   

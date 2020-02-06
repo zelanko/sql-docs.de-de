@@ -17,10 +17,10 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75253491"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "75253491"
   
      [Voraussetzungen](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So stellen Sie eine differenzielle Datenbanksicherung wieder her, und zwar mit**  
   
@@ -92,7 +92,7 @@ ms.locfileid: "75253491"
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
-         Wählen Sie im Listenfeld **Quelle: Gerät: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
+         Wählen Sie im Listenfeld **Quelle: Sicherungsmedium: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
   
          **Hinweis** Diese Liste ist nur verfügbar, wenn **Sicherungsmedium** ausgewählt wird. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75253491"
   
 #### <a name="to-restore-a-differential-database-backup"></a>So stellen Sie eine differenzielle Datenbanksicherung wieder her  
   
-1.  Führen Sie die RESTORE DATABASE-Anweisung mit der NORECOVERY-Klausel aus, um die vollständige Datenbanksicherung wiederherzustellen, die der differenziellen Datenbanksicherung vorausging. Weitere Informationen finden Sie unter [Vorgehensweise: Wiederherstellen einer vollständigen Sicherung](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Führen Sie die RESTORE DATABASE-Anweisung mit der NORECOVERY-Klausel aus, um die vollständige Datenbanksicherung wiederherzustellen, die der differenziellen Datenbanksicherung vorausging. Weitere Informationen finden Sie unter [Vorgehensweise: Wiederherstellen einer vollständigen Sicherung](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
 2.  Führen Sie die RESTORE DATABASE-Anweisung aus, um die differenzielle Datenbanksicherung wiederherzustellen, und geben Sie dabei Folgendes an:  
   

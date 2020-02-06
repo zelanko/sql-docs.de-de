@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296648"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -26,7 +26,7 @@ ms.locfileid: "71296648"
 
   Zeigt Informationen zu Meldungen an, die während der Vorgänge protokolliert wurden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|Die eindeutige ID der Ereignismeldung.|  
 |Operation_id|BIGINT|Der Typ des Vorgangs.<br /><br /> Eine Liste von Vorgangstypen finden Sie unter [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
@@ -45,10 +45,10 @@ ms.locfileid: "71296648"
 |threadID|INT|ID für den Thread, der ausgeführt wird, wenn die Meldung protokolliert wird.|  
 |Message_code|INT|Der der Meldung zugeordnete Code.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  
   
-|**message_source_type**|und Beschreibung|  
+|**message_source_type**|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |10|Eintrag-APIs, z. B. T-SQL und gespeicherte CLR-Prozeduren|  
 |20|Externer Prozess, der verwendet wurde, um das Paket (ISServerExec.exe) auszuführen|  
