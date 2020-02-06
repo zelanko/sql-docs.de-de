@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906830"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
@@ -37,7 +37,7 @@ Für STRING_SPLIT ist mindestens der Kompatibilitätsgrad 130 erforderlich. Bei 
 
 Unter [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) finden Sie Informationen zum Ändern des Datenbank-Kompatibilitätsgrads.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
 
@@ -47,7 +47,7 @@ STRING_SPLIT ( string , separator )
 
 ## <a name="arguments"></a>Argumente
 
- *Zeichenfolge*  
+ *string*  
  Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichentyps (z.B. **nvarchar**, **varchar**, **nchar** oder **char**).  
   
  *Trennzeichen*  
@@ -73,7 +73,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 Bei einer praktischen Ausführung hat die vorstehende SELECT-Anweisung die folgende Ergebnistabelle zurückgegeben:  
   
-|Wert|  
+|value|  
 | :-- |  
 |Lorem|  
 |ipsum|  
@@ -102,7 +102,7 @@ STRING_SPLIT gibt eine leere Zeichenfolge zurück, wenn zwischen dem Trennzeiche
 
 Die Produkttabelle verfügt über eine Spalte mit einer durch Komma getrennte Liste von Tags, wie in diesem Beispiel dargestellt wird:  
   
-|ProductId|Name|Tags|  
+|ProductId|Name|`Tags`|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,7 +118,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|Wert|  
+|ProductId|Name|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|Straße|  
@@ -144,7 +144,7 @@ HAVING COUNT(*) > 2
 ORDER BY COUNT(*) DESC;  
 ```
 
-### <a name="d-search-by-tag-value"></a>D. Nach Tagwert suchen
+### <a name="d-search-by-tag-value"></a>D: Nach Tagwert suchen
 
 Entwickler müssen Abfragen erstellen, die Artikel nach Schlüsselwörtern finden. Sie können folgende Abfragen verwenden:  
   
@@ -193,4 +193,4 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
 [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
 [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
-[Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+[String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)

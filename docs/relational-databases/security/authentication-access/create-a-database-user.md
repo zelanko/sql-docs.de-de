@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981931"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
@@ -48,7 +48,7 @@ ms.locfileid: "73981931"
   
  Falls [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]für Sie neu ist, kann es schwer sein, festzustellen, was für einen Benutzertyp Sie erstellen wollen. Fragen Sie sich zunächst, ob die Person oder Gruppe, die Zugriff auf die Datenbank benötigt, über einen Anmeldenamen verfügt. Anmeldenamen in der Masterdatenbank sind weit verbreitet für die Personen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwalten und für Personen, die Zugriff auf viele oder alle Datenbanken auf der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]benötigen. Für diese Situation erstellen Sie einen **SQL-Benutzer mit Anmeldename**. Der Datenbankbenutzer ist die Identität der Anmeldung, wenn er mit einer Datenbank verbunden ist. Der Datenbankbenutzer kann den gleichen Namen verwenden wie die Anmeldung, dies ist jedoch nicht erforderlich. In diesem Thema wird davon ausgegangen, dass in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bereits eine Anmeldung vorhanden ist. Informationen zum Erstellen eines Anmeldenamens finden Sie unter [Erstellen eines Anmeldenamens](../../../relational-databases/security/authentication-access/create-a-login.md).  
   
- Erstellen Sie einen **Windows-Benutzer** oder einen **SQL-Benutzer mit Kennwort**, falls die Person oder Gruppe, die Zugriff auf die Datenbank benötigt, über keinen Anmeldenamen verfügt, und wenn sie nur Zugriff auf eine oder einige wenige Datenbanken benötigen. Auch als eigenständiger Datenbankbenutzer bezeichnet, ist er keinem Anmeldenamen in der Masterdatenbank zugeordnet. Das ist eine hervorragende Wahl, wenn Sie die Möglichkeit haben möchten, Ihre Datenbank einfach zwischen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verschieben. Um diese Option in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]verwenden zu können, muss ein Administrator zunächst eigenständige Datenbanken für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aktivieren, und die Datenbanken müssen für die Verwendung dieser Funktion aktiviert sein. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ Erstellen Sie einen **Windows-Benutzer** oder einen **SQL-Benutzer mit Kennwort**, falls die Person oder Gruppe, die Zugriff auf die Datenbank benötigt, über keinen Anmeldenamen verfügt, und wenn sie nur Zugriff auf eine oder einige wenige Datenbanken benötigen. Auch als eigenständiger Datenbankbenutzer bezeichnet, ist er keinem Anmeldenamen in der Masterdatenbank zugeordnet. Das ist eine hervorragende Wahl, wenn Sie die Möglichkeit haben möchten, Ihre Datenbank einfach zwischen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verschieben. Um diese Option in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]verwenden zu können, muss ein Administrator zunächst eigenständige Datenbanken für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aktivieren, und die Datenbanken müssen für die Verwendung dieser Funktion aktiviert sein. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 > **WICHTIG!** Beim Herstellen einer Verbindung als ein eigenständigen Datenbankbenutzer, müssen Sie den Namen der Datenbank als Teil der Verbindungszeichenfolge bereitstellen. Klicken Sie im Dialogfeld [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]Verbinden mit **auf** Optionen **, und klicken Sie dann auf die Registerkarte**Verbindungseigenschaften **, um die Datenbank in** anzugeben.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "73981931"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Datenbankbenutzer – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente** und **Erweiterte Eigenschaften**.  
+ Im Dialogfeld **Datenbankbenutzer – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente**und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Schemas im Besitz** werden alle möglichen Schemas aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Schemas im Besitz dieses Benutzers**die Kontrollkästchen, die sich neben den Schemas befinden, um einem Datenbankbenutzer Schemas hinzuzufügen oder diese von diesem zu entfernen.  
   

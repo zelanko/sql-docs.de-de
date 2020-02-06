@@ -1,10 +1,7 @@
 ---
-title: Table-Element für Schema (DTA) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: Table-Element für Schema (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0064376a229e2fe9f87fe09048c9e923810d4172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 419420c9d1ecec501ca8a7d92ef6a23a658db713
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105960"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307863"
 ---
 # <a name="table-element-for-schema-dta"></a>Table-Element für Schema (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Gibt die Tabelle zum Optimieren an.  
+
+Gibt die Tabelle zum Optimieren an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +39,13 @@ ms.locfileid: "68105960"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|und Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**NumberOfRows**|Optional. Eine ganze Zahl, mit der Sie Tabellen unterschiedlicher Größe simulieren können.|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, 1 bis 255 Zeichen.|  
 |**Standardwert**|Keine.|  

@@ -12,10 +12,10 @@ author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412679"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
@@ -190,7 +190,7 @@ Drittens: Im allgemeinen T-SQL-Code:
   
   
   
-## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D: Szenario: Eine Tabellenvariable kann MEMORY_OPTIMIZED=ON sein  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D: Szenario: Eine Tabellenvariable kann die WITH-Klausel MEMORY_OPTIMIZED=ON enthalten.  
   
   
 Eine herkömmliche Tabellenvariable stellt eine Tabelle in der tempdb-Datenbank dar. Für eine schnellere Leistung können Sie den Speicher Ihrer Tabellenvariable optimieren.  
@@ -420,7 +420,7 @@ Batch execution completed 5001 times.
 Sie können lernen, wie sie die Bedürfnisse des aktiven Arbeitsspeichers für Ihre speicheroptimierten Tabellen mit den folgenden Ressourcen vorhersagen können:  
   
 - [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielberechnung](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielrechnung](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 Nicht gruppierte Indizes nutzen für größere Tabellenvariablen mehr Arbeitsspeicher als für speicheroptimierte *Tabellen*. Je größer die Anzahl der Zeilen und der Indexschlüssel, desto größer wird der Unterschied.  
   

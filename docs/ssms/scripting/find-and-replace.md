@@ -1,6 +1,6 @@
 ---
-title: Suchen und Ersetzen | Microsoft-Dokumentation
-ms.custom: ''
+title: Suchen und Ersetzen
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ddfadb13d2c1882b0c489f8e0567ea26dd2165
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e9af0cfad0823af262595d54242fe65575253c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265508"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253886"
 ---
 # <a name="find-and-replace"></a>Suchen und Ersetzen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68265508"
  **Ausdrucks-Generator**  
  Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
   
- **Ersetzen**  
+ **Replace**  
  Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der im Feld **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in**angegeben ist.  
   
  **Alle ersetzen**  
@@ -68,7 +68,7 @@ ms.locfileid: "68265508"
  Wird verfügbar, wenn der unter **Suchen in** angegebene Wert mehrere Dateien einschließt. Klicken Sie auf diese Schaltfläche, wenn Sie die aktuelle Datei nicht durchsuchen oder ändern möchten. Die Suche wird dann in der nächsten Datei auf der Liste unter **Suchen in**fortgesetzt.  
   
 ## <a name="look-in"></a>Suchen in  
- **Suchen in**  
+ **Look in**  
  Wählen Sie den Speicherort aus, in dem der unter **Suchen nach**angegebene Text gesucht werden soll. Mit der Option **Aktuelles Dokument**wird das Dokumentfenster durchsucht, das beim Öffnen des Dialogfelds fokussiert war, und mit der Option **Alle geöffneten Dokumentfenster**werden alle Dokumentfenster durchsucht, die aktuell in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet sind.  
   
 ## <a name="find-options"></a>Mit  
@@ -86,7 +86,7 @@ ms.locfileid: "68265508"
  **Ausgeblendeten Text durchsuchen**  
  Sucht Instanzen des Texts in Textbereichen, die ausgeblendet oder reduziert sind.  
   
- **Suchoptionen**  
+ **Verwenden Sie**  
  Gibt an, wie in den Textfeldern **Suchen nach** oder **Ersetzen durch** eingegebene Sonderzeichen interpretiert werden sollen. Zur Auswahl stehen **Platzhalter** und **Reguläre Ausdrücke**.  
   
  **Regular Expressions**  
@@ -98,7 +98,7 @@ ms.locfileid: "68265508"
  **Weitersuchen**  
  Beginnt die Suche nach dem im Feld **Suchen nach** angegebenen Text.  
   
- **Ersetzen**  
+ **Replace**  
  Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch**angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in**angegeben ist.  
   
  **Replace All**  

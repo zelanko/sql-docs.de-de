@@ -1,25 +1,26 @@
 ---
-title: 'Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Aktualisieren einer verbundenen Datenbank mithilfe von Power Buffer
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bad8fd64e0242d4dbe965b91d8d8be5ab9796591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034997"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244260"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Gewusst wie: Aktualisieren einer verbundenen Datenbank mithilfe von Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer
+
 Mit der Power Buffer-Technologie von SQL Server Data Tools können Sie einfach Änderungen auf die verbundene Datenbank anwenden, indem Sie sämtliche Bearbeitungen in der aktuellen Sitzung speichern. Alle durch die Bearbeitung im Power Buffer-Fenster (im Transact\-SQL-Editor oder Tabellen-Designer) verursachten Fehler werden sofort im Bereich **Fehlerliste** angezeigt, sodass Sie die identifizierten Fehler zur weiteren Problembehandlung verfolgen können. Sie können die ausstehenden Änderungen überprüfen, bevor Sie diese auf die Datenbank anwenden. Während des Updates erstellt SSDT automatisch ein ALTER-Skript auf Grundlage der Bearbeitungen und weist Sie auf alle potenziellen Probleme hin. Sie können dann sämtliche Änderungen, die bisher in allen geöffneten Power Buffer-Fenstern vorgenommen wurden, auf dieselbe Datenbank anwenden oder das ALTER-Skript speichern, um die Änderungen bereitzustellen.  
   
 SSDT berücksichtigt außerdem alle Änderungen, die außerhalb von Visual Studio am Datenbankschema vorgenommen wurden. Wenn Sie z.B. in SQL Server Management Studio einer vorhandenen Datenbank eine neue Tabelle hinzufügen, wird diese Änderung sofort im SQL Server-Objekt-Explorer in Visual Studio angezeigt, ohne dass eine manuelle Aktualisierung erforderlich ist. Die Abweichungserkennung stellt sicher, dass im SQL Server-Objekt-Explorer immer die aktuelle Schemadefinition einer Datenbank angezeigt wird. Beachten Sie, dass Datenbankobjekte, die im Tabellen-Designer oder Transact\-SQL-Editor zur Bearbeitung geöffnet sind, nicht anhand von Änderungen aktualisiert werden, die außerhalb von Visual Studio vorgenommen wurden.  
@@ -36,7 +37,7 @@ Bei den folgenden Vorgehensweisen werden die Entitäten verwendet, die in vorher
   
 4.  Wenn Sie die Änderungen übernehmen möchten, klicken Sie im Dialogfeld **Vorschau der Datenbankupdates** auf die Schaltfläche **Datenbank aktualisieren**. Das Bereitstellungsskript wird für Sie ausgeführt, und die angefallenen Änderungen werden jetzt auf die Datenbank angewendet.  
   
-5.  Wenn Sie das Bereitstellungsskript anzeigen möchten, um es zu überprüfen, oder vor dem Aktualisieren Änderungen vornehmen möchten, klicken Sie im Dialogfeld **Vorschau der Datenbankupdates** auf die Schaltfläche **Skript generieren**. Das generierte Skript wird in einem neuen Transact\-SQL-Editor-Fenster geöffnet. Sie können auf der Transact\-SQL-Editor-Symbolleiste auf die Schaltfläche **Abfrage ausführen** klicken, um diese Abfrage auszuführen. Dies entspricht der Aktion, die in Schritt 4 mit der Schaltfläche **Datenbank aktualisieren** ausgeführt wurde.  
+5.  Wenn Sie das Bereitstellungsskript anzeigen möchten, um es zu überprüfen, oder vor dem Aktualisieren Änderungen vornehmen möchten, klicken Sie im Dialogfeld **Vorschau der Datenbankupdates** auf die Schaltfläche **Skript generieren**. Das generierte Skript wird in einem neuen Transact\-SQL-Editor-Fenster geöffnet. Sie können auf der Transact**SQL-Editor-Symbolleiste auf die Schaltfläche** Abfrage ausführen\- klicken, um diese Abfrage auszuführen. Dies entspricht der Aktion, die in Schritt 4 mit der Schaltfläche **Datenbank aktualisieren** ausgeführt wurde.  
   
     > [!WARNING]  
     > Wenn Sie Änderungen am Bereitstellungsskript vornehmen und das Skript ausführen, werden diese Änderungen in keinen geöffneten Datenbankentitäten angezeigt. Wenn Sie z.B. im Bereitstellungsskript eine Spalte der Tabelle `Customers` umbenennen und zum Aktualisieren der Datenbank das Skript ausführen, und im Tabellen-Designer ist die Tabelle `Customers` geöffnet, wird nach dem Klicken auf die Schaltfläche **Datenbank aktualisieren** immer noch der alte Spaltenname angezeigt. Sie müssen den Tabellen-Designer manuell schließen, ohne die Tabelle lokal als Skript zu speichern. Wenn Sie die Tabelle im **SQL Server-Objekt-Explorer** erneut öffnen, werden Sie feststellen, dass die Datenbank mit den Änderungen aktualisiert wurde, die Sie im Bereitstellungsskript vorgenommen haben.  
@@ -62,5 +63,5 @@ Bei den folgenden Vorgehensweisen werden die Entitäten verwendet, die in vorher
 5.  Klicken Sie mit der rechten Maustaste auf **Table_1**, und klicken Sie auf **Löschen**. Klicken Sie im Dialogfeld **Vorschau der Datenbankupdates** auf **Datenbank aktualisieren**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Vorgehensweise: Beheben von Fehlern](../ssdt/how-to-fix-errors.md)  
+[Gewusst wie: Beheben von Fehlern](../ssdt/how-to-fix-errors.md)  
   
