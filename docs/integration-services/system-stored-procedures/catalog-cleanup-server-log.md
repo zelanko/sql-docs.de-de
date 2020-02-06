@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295581"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -57,7 +57,7 @@ catalog.cleanup_server_log
   
 -   Die SSIS-Datenbank befindet sich nicht im Einzelbenutzermodus.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In SQL Server 2012 Service Pack 2 wird die Eigenschaft SERVER_OPERATION_ENCRYPTION_LEVEL der Tabelle **internal.catalog_properties** hinzugefügt. Diese Eigenschaft verfügt über zwei mögliche Werte:  
   
 -   **PER_EXECUTION (1):** Das Zertifikat und der symmetrische Schlüssel, die zum Schutz von sensiblen Ausführungsparametern und -protokollen verwendet werden, werden für jede Ausführung erstellt. Möglicherweise entstehen Probleme mit der Leistung (Deadlocks, fehlerhafte Wartungsaufträge, etc.) in einer Produktumgebung, da für jede Ausführung Zertifikate bzw. Schlüssel generiert werden. Trotzdem bietet diese Einstellung ein höheres Maß an Sicherheit als der andere Wert (2).  
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      Sie können auch den Bereich oder die Ebene (Ausführung bzw. Projekt) angeben und festlegen, wie viele Schlüssel gelöscht werden sollen. Die Standardbatchgröße zum Löschen beträgt 1000. Wenn Sie die Ebene auf 2 festlegen, werden die Schlüssel und Zertifikate nur gelöscht, wenn zugehörige Projekte gelöscht wurden.  
   
- Weitere Informationen finden Sie in den folgenden Wissensdatenbankartikeln: [FIX: Leistungsprobleme bei der Verwendung von SSISDB als Bereitstellungsspeicher in SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Weitere Informationen finden Sie im folgenden Knowledge Base-Artikel: [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012 (Fehlerbehebung: Probleme mit der Leistung bei der Verwendung von SSISDB als Bereitstellungsspeicher in SQL Server 2012)](https://support.microsoft.com/kb/2972285).  
   
 ## <a name="example"></a>Beispiel  
  Mithilfe des folgenden Beispiels wird die gespeicherte „cleanup_server_log“-Prozedur aufgerufen.  

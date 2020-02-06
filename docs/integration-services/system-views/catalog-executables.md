@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296616"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296616"
   
  Eine ausführbare Datei ist ein Task oder ein Container, den Sie der Ablaufsteuerung eines Pakets hinzufügen.  
   
-|Spaltenname|**Data type**|und Beschreibung|  
+|Spaltenname|**Datentyp**|BESCHREIBUNG|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|Der eindeutige Bezeichner für die ausführbare Datei.|  
 |execution_id|**bigint**|Der eindeutige Bezeichner für die Instanz der Ausführung.|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296616"
 > [!NOTE]  
 >  Wenn Sie über die Berechtigung verfügen, einen Vorgang auf dem Server auszuführen, verfügen Sie auch über die Berechtigung, Informationen zu dem Vorgang anzuzeigen. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 53f07adfd7479edba22370f3d4fd8c9ad7ad4450
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7d7607d8749f99452d58374eb2a83c6a31f640d3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768211"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288250"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt;-Eigenschaften
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Mithilfe des Dialogfelds für die **Eigenschaften von Agentprofilen** können Sie die für jeden Agentparameter eines Profils angegebenen Werte anzeigen und die Werte für benutzerdefinierte Profile ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Name**  
  Der Name des Profils.  
   
@@ -42,14 +42,14 @@ ms.locfileid: "68768211"
   
 -   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
--   [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
  **Standardwert**  
  Der Standardwert für jeden Agentparameter.  
   
- **ReplTest1**  
+ **Wert**  
  Der für den Parameter angegebene Wert im Profil. Dieses Feld kann bei benutzerdefinierten Profilen bearbeitet werden.  
   
  **Nur die in diesem Profil verwendeten Parameter anzeigen**  

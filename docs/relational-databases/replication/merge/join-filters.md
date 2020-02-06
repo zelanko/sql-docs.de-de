@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033242"
 ---
 # <a name="join-filters"></a>Verknüpfungsfilter
@@ -44,7 +44,7 @@ ms.locfileid: "68033242"
 LoginID = SUSER_SNAME()  
 ```  
   
- Dieser Filter stellt sicher, dass das Abonnement des jeweiligen Mitarbeiters nur die Daten aus der **HumanResources.Employee** -Tabelle enthält, die für ihn relevant sind (in diesem Fall also nur eine einzelne Zeile). Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Dieser Filter stellt sicher, dass das Abonnement des jeweiligen Mitarbeiters nur die Daten aus der **HumanResources.Employee** -Tabelle enthält, die für ihn relevant sind (in diesem Fall also nur eine einzelne Zeile). Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Als Nächstes wird dieser Filter auf jede einzelne der zugehörigen Tabellen erweitert. Die dazu verwendete Syntax ähnelt derjenigen, mit der Sie einen Join zwischen zwei Tabellen angeben können. Die erste Joinfilterklausel lautet:  
   
@@ -88,7 +88,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
      Es wird dringend empfohlen, eine solche Logik statt in einer Unterabfrage in einem Joinfilter auszudrücken. Wenn Ihre Anwendung für die Verwendung einer Unterabfrage einen Zeilenfilter benötigt, stellen Sie sicher, dass die Unterabfrage ausschließlich Daten in der Nachschlagetabelle referenziert, die sich nicht ändern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Filtern veröffentlichter Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
+ [Filtern von veröffentlichten Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

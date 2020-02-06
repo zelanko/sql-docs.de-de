@@ -13,10 +13,10 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874739"
 ---
 # <a name="create-a-maintenance-plan"></a>Erstellen eines Wartungsplans
@@ -31,7 +31,7 @@ ms.locfileid: "70874739"
      
      [Voraussetzung](#Prerequisite)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Erstellen eines Wartungsplans mit**  
   
@@ -70,7 +70,7 @@ Die [Agent XPs-Serverkonfigurationsoption](../../database-engine/configure-windo
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne**, und wählen Sie **Neuer Wartungsplan** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und wählen Sie **Neuer Wartungsplan**aus.  
   
 4.  Erstellen Sie einen Wartungsplan anhand der Schritte unter [Erstellen eines Wartungsplans &#40;Entwurfsoberfläche für Wartungspläne&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   
@@ -141,7 +141,7 @@ Die [Agent XPs-Serverkonfigurationsoption](../../database-engine/configure-windo
   
     ```  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   

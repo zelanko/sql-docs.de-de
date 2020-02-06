@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297757"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
@@ -180,7 +180,7 @@ ms.locfileid: "71297757"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -189,14 +189,14 @@ ms.locfileid: "71297757"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausdrucksextrahierung)
   Auf der Registerkarte **Ausdrucksextrahierung** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Textspalte mit dem zu extrahierenden Text angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen eine einzelne Textspalte aus, die für die Ausdrucksextrahierung verwendet wird.  
   
  **Begriff**  
  Stellen Sie einen Namen für die Ausgabespalte bereit, der die extrahierten Ausdrücke enthält.  
   
- **Ergebnis**  
+ **Wert**  
  Stellen Sie einen Namen für die Ausgabespalte bereit, der das Ergebnis der einzelnen extrahierten Ausdrücke enthält.  
   
  **Konfigurieren der Fehlerausgabe**  
@@ -205,7 +205,7 @@ ms.locfileid: "71297757"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Ausschlussausdrücke verwenden**  
  Geben Sie an, ob bei der Ausdrucksextrahierung bestimmte Ausdrücke ausgeschlossen werden sollen, indem eine Spalte mit Ausschlussausdrücken angegeben wird. Wenn Sie bestimmte Ausdrücke ausschließen möchten, müssen Sie folgende Quelleigenschaften angeben.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "71297757"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie Eigenschaften für die Extrahierung angeben, wie z. B. Häufigkeit, Länge und ob Wörter oder Ausdrücke extrahiert werden sollen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Nomen**  
  Gibt an, dass durch die Transformation nur einzelne Nomen extrahiert werden.  
   
@@ -237,11 +237,11 @@ ms.locfileid: "71297757"
  **Nomen und nominaler Ausdruck**  
  Gibt an, dass durch die Transformation sowohl Nomen als auch nominale Ausdrücke extrahiert werden.  
   
- **Häufigkeit**  
+ **Frequency**  
  Gibt an, dass es sich bei dem Ergebnis um die Häufigkeit des Begriffs handelt.  
   
  **TFIDF**  
- Gibt an, dass es sich bei dem Ergebnis um den TFIDF-Wert des Begriffs handelt. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) * log( (Anz. Zeilen in der Eingabe) / (Anz. Zeilen mit T) )  
+ Gibt an, dass es sich bei dem Ergebnis um den TFIDF-Wert des Begriffs handelt. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) * log((Anz. Zeilen in der Eingabe)/(Anz. Zeilen mit T))  
   
  **Schwellenwert für Häufigkeit**  
  Gibt in Form eines Zahlenwertes an, wie oft ein Wort oder ein Ausdruck vorkommen muss, bevor die Extrahierung erfolgt. Der Standardwert ist 2.  
@@ -252,7 +252,7 @@ ms.locfileid: "71297757"
  **Ausdrucksextrahierung mit Unterscheidung nach Groß-/Kleinschreibung verwenden**  
  Gibt an, ob bei der Extrahierung nach Groß-/Kleinschreibung unterschieden wird. Der Standardwert ist **False**.  
   
- **Fehlerausgabe konfigurieren**  
+ **Konfigurieren der Fehlerausgabe**  
  Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) die Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

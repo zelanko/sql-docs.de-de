@@ -14,10 +14,10 @@ ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c27ed8ea6fbd2e4b89d27cb7772f533150cf0e5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099371"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Speichern von Deadlock Graphs (SQL Server Profiler)
@@ -63,7 +63,7 @@ ms.locfileid: "68099371"
   
  Nach dem Speichern der Deadlockdatei können Sie sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen. Weitere Informationen finden Sie unter [Öffnen, Anzeigen und Drucken einer Deadlockdatei &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Analysieren von Deadlocks mit SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680816"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
@@ -39,15 +39,15 @@ ms.locfileid: "71680816"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den Massenexport von Daten (*Massendaten*) aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und den Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht.
 
 - Der*Massenexport* bezieht sich auf das Kopieren von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei.
-- Beim*Massenimport* werden Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle geladen. Sie können beispielsweise Daten von einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Anwendung in eine Datendatei exportieren und dann einen Massenimport der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausführen.
+- Beim *Massenimport* werden Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle geladen. Sie können beispielsweise Daten von einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Anwendung in eine Datendatei exportieren und dann einen Massenimport der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausführen.
 
 ## <a name="MethodsForBuliIE"></a> Methoden für den Massenimport und -export von Daten
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Massenexport von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und der Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht unterstützt. Dazu stehen die folgenden grundlegenden Methoden zur Verfügung.
 
-|Methode|und Beschreibung|Importiert Daten|Exportiert Daten|
+|Methode|BESCHREIBUNG|Importiert Daten|Exportiert Daten|
 |------------|-----------------|------------------|------------------|
-|[bcp (Hilfsprogramm)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|Ja|Ja|
+|[bcp-Hilfsprogramm](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|Ja|Ja|
 |[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|Ja|Nein|
 |[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|Ja|Nein|
 |[SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Der Assistent erstellt einfache Pakete, die Daten zwischen vielen häufigen Datenformaten, einschließlich Datenbanken, Kalkulationstabellen und Textdateien, importieren und exportieren.|Ja|Ja|
@@ -60,7 +60,7 @@ ms.locfileid: "71680816"
 
 ## <a name="FFs"></a> Formatdateien
 
-Das Hilfsprogramm [bcp](../../tools/bcp-utility.md) sowie die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) unterstützen alle die Verwendung einer als *Formatdatei* bezeichneten speziellen Datei zum Speichern von Formatinformationen für jedes Feld in einer Datendatei. In einer Formatdatei können auch Informationen zu der korrespondierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle enthalten sein. Über die Formatdatei können alle Formatinformationen bereitgestellt werden, die für den Massenexport von Daten aus einer Instanz und für den Massenimport von Daten in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind.
+Das Hilfsprogramm [bcp](../../tools/bcp-utility.md)sowie die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)und [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) unterstützen alle die Verwendung einer als *Formatdatei* bezeichneten speziellen Datei zum Speichern von Formatinformationen für jedes Feld in einer Datendatei. In einer Formatdatei können auch Informationen zu der korrespondierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle enthalten sein. Über die Formatdatei können alle Formatinformationen bereitgestellt werden, die für den Massenexport von Daten aus einer Instanz und für den Massenimport von Daten in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind.
 
 > [!IMPORTANT]
 > Das Hilfsprogramm „bcp“ kann nicht zum Importieren oder Exportieren von Daten zwischen Azure Blob Storage und Azure SQL-Datenbank verwendet werden. Verwenden Sie hierzu die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).

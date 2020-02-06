@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 92abee758d5eda99aebddc874550eb9cd2e87ca5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c33897a3597bfecf58a36ee371821a6f944e44ce
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769514"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287161"
 ---
 # <a name="snapshot-folder"></a>Momentaufnahmeordner
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,8 +29,8 @@ Der Momentaufnahmeordner ist lediglich ein von Ihnen freigegebenes Verzeichnis. 
 
 Für eine verwaltete Azure SQL-Datenbank-Instanz muss der Schnappschussordner eine Azure-Dateifreigabe sein. 
   
-## <a name="options"></a>enthalten  
- **Snapshot folder**  
+## <a name="options"></a>Tastatur  
+ **Momentaufnahmeordner**  
  Geben Sie den Pfad für den Ordner an, in dem Momentaufnahmedateien gespeichert werden sollen.  
   
 > [!NOTE]  

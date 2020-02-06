@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295860"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
@@ -55,7 +55,7 @@ Mit SSIS können Sie Daten von Excel importieren oder in Excel exportieren, inde
 
 Bevor Sie mit SSIS Daten aus Excel importieren oder in Excel exportieren können, müssen Sie möglicherweise die Konnektivitätskomponenten für Excel herunterladen, sofern diese nicht bereits installiert sind. Die Konnektivitätskomponenten für Excel sind nicht standardmäßig installiert.
 
-Laden Sie die neueste Version der Konnektivitätskomponenten für Excel hier herunter: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920). Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Excel erstellt wurden.
+Die neueste Version der Konnektivitätskomponenten für Excel stehen unter [Microsoft Access Database Engine 2016 Redistributable (Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=54920) zum Download bereit. Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Excel erstellt wurden.
 
 ### <a name="notes-about-the-download-and-installation"></a>Hinweise zu Downloads und Installationen
 
@@ -67,7 +67,7 @@ Laden Sie die neueste Version der Konnektivitätskomponenten für Excel hier her
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente von Version 2016 haben, installieren Sie die weitervertreibbare Komponente für Version 2010: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
+    Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente 2016 haben, installieren Sie die weitervertreibbare Komponente 2010: [Microsoft Access Database Engine 2010 Redistributable (Microsoft Access Database Engine 2010 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
 
 ## <a name="specify-excel"></a> Festlegen von Excel als Datenquelle
 
@@ -161,7 +161,7 @@ Führen Sie im Import/Export-Assistenten einen der folgenden Schritte aus:
 
     -   Wählen Sie auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Ziel** die Zielarbeitsblätter und benannten Bereiche aus, um ein **Arbeitsblatt** oder einen **Benannten Bereich** zu verwenden.
 
-    -   Geben Sie auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Ziel** den Bereich ohne Trennzeichen im folgenden Format an:`Sheet1$A1:B5`, um einen **Unbenannten Bereich** zu verwenden, den Sie mit der Adresse angeben. Der Assistent fügt die Trennzeichen hinzu.
+    -   Geben Sie auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Ziel** den Bereich ohne Trennzeichen im folgenden Format an: **, um einen** Unbenannten Bereich`Sheet1$A1:B5` zu verwenden, den Sie mit der Adresse angeben. Der Assistent fügt die Trennzeichen hinzu.
 
 Sobald Sie die zu importierenden oder exportierenden Excel-Objekte ausgewählt oder eingegeben haben, können Sie auch die folgenden Schritte auf der Seite **Quelltabellen und -ansichten auswählen** des Assistenten ausführen:
 

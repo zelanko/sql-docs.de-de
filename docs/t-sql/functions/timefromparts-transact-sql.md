@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aab429b0d3705d6ba7867f146fa43aca486cbb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099003"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68099003"
 
   Gibt einen **time**-Wert für die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
  Ganzzahliges Literal, das die Genauigkeit des zurückzugebenden **time**-Werts angibt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **time(** *precision* **)**  
+ **time(** *Genauigkeit* **)**  
   
 ## <a name="remarks"></a>Bemerkungen  
  TIMEROMPARTS gibt einen vollständig initialisierten Uhrzeitwert zurück. Wenn die Argumente ungültig sind, wird ein Fehler ausgegeben. Wenn einer der Parameter einen NULL-Wert aufweist, wird NULL zurückgegeben. Wenn jedoch das *precision*-Argument NULL ist, wird ein Fehler ausgelöst.  

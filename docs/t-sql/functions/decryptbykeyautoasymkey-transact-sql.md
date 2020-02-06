@@ -18,10 +18,10 @@ ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 14668b9fac1ba05d458bdedc038faaf2883dc9c1
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314566"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "71314566"
 
 Diese Funktion entschlüsselt verschlüsselte Daten. Hierzu entschlüsselt sie zunächst einen symmetrischen Schlüssel mit einem separaten asymmetrischen Schlüssel und entschlüsselt die verschlüsselten Daten anschließend mit dem Schlüssel, der im ersten Schritt extrahiert wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -77,7 +77,7 @@ Eine Variable, die Daten für die Generierung durch den Authentifikator enthält
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DECRYPTBYKEYAUTOASYMKEY` kombiniert die Funktionen von `OPEN SYMMETRIC KEY` und `DECRYPTBYKEY`. In einem einzelnen Vorgang wird zunächst ein symmetrischer Schlüssel entschlüsselt, und mit diesem Schlüssel wird dann der verschlüsselte Chiffretext entschlüsselt.  
   
 ## <a name="permissions"></a>Berechtigungen  

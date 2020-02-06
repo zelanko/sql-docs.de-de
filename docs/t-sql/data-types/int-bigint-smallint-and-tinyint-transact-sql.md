@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077901"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint und tinyint (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68077901"
 
 Exakte Zahlendatentypen für ganzzahlige Daten. Wenn Sie Speicherplatz in der Datenbank sparen möchten, verwenden Sie den kleinsten Datentyp, der auf jeden Fall alle möglichen Werte enthalten kann. tinyint wäre z.B. ausreichend für das Alter einer Person, da niemand älter als 255 Jahre wird. tinyint wäre allerdings für das Alter eines Gebäudes nicht ausreichend, da ein Gebäude länger als 255 Jahren stehen bleiben kann.
   
-|Datentyp|Bereich|Speicherung|  
+|Datentyp|Range|Storage|  
 |---|---|---|
 |**bigint**|-2^63 (-9.223.372.036.854.775.808) bis 2^63-1 (9.223.372.036.854.775.807)|8 Byte|  
 |**int**|-2^31 (-2.147.483.648) bis 2^31-1 (2.147.483.647)|4 Byte|  
@@ -107,7 +107,7 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

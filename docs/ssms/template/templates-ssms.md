@@ -17,18 +17,18 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: b3df46f3536c488ff863287a0efb26ed7063ffc2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03f42fbffd124fbdaa18578009ce72598a743361
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266651"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247158"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Verwenden von Vorlagen in SQL Server Management Studio
 
-In diesem Tutorial werden die vorgefertigten T-SQL-Vorlagen (Transact-SQL) vorgestellt, die in SQL Server Management Studio (SSMS) verfügbar sind. In diesem Artikel lernen Sie Folgendes:
+In diesem Tutorial werden die vorgefertigten T-SQL-Vorlagen (Transact-SQL) vorgestellt, die in SQL Server Management Studio (SSMS) verfügbar sind. In diesem Artikel werden folgende Vorgehensweisen behandelt:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

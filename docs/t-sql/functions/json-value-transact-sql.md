@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109353"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68109353"
   
  Informationen zum Extrahieren eines Objekts oder eines Arrays aus einer JSON-Zeichenfolge anstelle eines Skalarwerts finden Sie unter [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). Informationen zu den Unterschieden zwischen **JSON_VALUE** und **JSON_QUERY** finden Sie unter [Vergleichen von JSON_VALUE und JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,7 +53,7 @@ JSON_VALUE ( expression , path )
 
 In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] können Sie eine Variable als Wert von *path* bereitstellen.
   
- **JSON_VALUE** gibt einen Fehler zurück, wenn das Format von *path* ungültig ist.  
+ *JSON_VALUE* gibt einen Fehler zurück, wenn das Format von **path** ungültig ist.  
   
 ## <a name="return-value"></a>Rückgabewert
 
@@ -92,11 +92,11 @@ SET @jsonInfo=N'{
   
  Die folgende Tabelle vergleicht das Verhalten von **JSON_VALUE** im Lax-Modus und im Strict-Modus. Weitere Informationen zu den optionalen Path-Modusangaben (Lax oder Strict) finden Sie unter [JSON Path Expressions &#40;SQL Server&#41; (JSON-Pfadausdrücke (SQL Server))](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Pfad|Rückgabewert im Lax-Modus|Rückgabewert im Strict-Modus|Weitere Informationen|  
+|`Path`|Rückgabewert im Lax-Modus|Rückgabewert im Strict-Modus|Weitere Informationen|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|Fehler|Kein Skalarwert.<br /><br /> Verwenden Sie stattdessen **JSON_QUERY**.|  
-|$.info.type|N'1'|N'1'|N/V|  
-|$.info.address.town|N'Bristol'|N'Bristol'|N/V|  
+|$.info.type|N'1'|N'1'|Nicht zutreffend|  
+|$.info.address.town|N'Bristol'|N'Bristol'|Nicht zutreffend|  
 |$.info."address"|NULL|Fehler|Kein Skalarwert.<br /><br /> Verwenden Sie stattdessen **JSON_QUERY**.|  
 |$.info.tags|NULL|Fehler|Kein Skalarwert.<br /><br /> Verwenden Sie stattdessen **JSON_QUERY**.|  
 |$.info.type[0]|NULL|Fehler|Kein Array.|  
@@ -146,7 +146,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
  [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

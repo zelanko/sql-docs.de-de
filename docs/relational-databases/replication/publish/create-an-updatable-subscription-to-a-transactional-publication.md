@@ -15,10 +15,10 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321245"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung
@@ -201,7 +201,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 1. Überprüfen Sie auf dem Verleger, ob die Veröffentlichung Abonnements mit verzögertem Update über eine Warteschlange unterstützt, indem Sie [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)ausführen. 
 
     * Wenn „allow_queued_tran“ im Resultset den Wert 1 hat, unterstützt die Veröffentlichung Abonnements mit sofortigem Update.
-    * Wenn „allow_queued_tran“ im Resultset den Wert 0 hat, muss die Veröffentlichung erneut erstellt und die Unterstützung von Abonnements mit verzögertem Update über eine Warteschlange aktiviert werden. Weitere Informationen finden Sie unter „Vorgehensweise: Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen (Replikationsprogrammierung mit Transact-SQL)“.
+    * Wenn „allow_queued_tran“ im Resultset den Wert 0 hat, muss die Veröffentlichung erneut erstellt und die Unterstützung von Abonnements mit verzögertem Update über eine Warteschlange aktiviert werden. Weitere Informationen finden Sie unter „Gewusst wie: Aktivieren von aktualisierbaren Abonnements für Transaktionsveröffentlichungen (Replikationsprogrammierung mit Transact-SQL)“.
 
 2. Überprüfen Sie auf dem Verleger, ob die Veröffentlichung Pushabonnements unterstützt, indem Sie [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)ausführen. 
 

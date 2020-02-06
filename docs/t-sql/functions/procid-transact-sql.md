@@ -25,10 +25,10 @@ ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2e9f862ab78cbfd9db885ca2f0c7c9c0f483920d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914311"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67914311"
 
   Gibt den Objektbezeichner (ID) des aktuellen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Moduls zurück. Bei einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Modul kann es sich um eine gespeicherte Prozedur, eine benutzerdefinierte Funktion oder einen Trigger handeln. @@PROCID kann nicht in CLR-Modulen oder im In-Process-Datenzugriffsanbieter angegeben werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

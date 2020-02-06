@@ -1,10 +1,7 @@
 ---
-title: DTAInput-Element (DTA) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: DTAInput-Element (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb75df038dd0108b930af25fad9177ec9a437145
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 6801f3d8ce45ba41d24d1062ad9979e80e76b38a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132751"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307718"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput-Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Enthält die Definition der XML-Eingabe für den Datenbankoptimierungsratgeber.  
+
+Enthält die Definition der XML-Eingabe für den Datenbankoptimierungsratgeber.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68132751"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmale|und Beschreibung|  
+|Merkmale|BESCHREIBUNG|  
 |---------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  

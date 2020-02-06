@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bedae7661398ed4281f2da460ad7ce16b5dd82de
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68841622"
 ---
 # <a name="view-collation-information"></a>Anzeigen von Sortierungsinformationen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-<a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen.  
+<a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
   
 ##  <a name="Procedures"></a> So zeigen Sie eine Sortierungseinstellung an  
  Sie können eine der folgenden Anwendungen verwenden:  
@@ -34,11 +34,11 @@ ms.locfileid: "68841622"
 ###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie eine Sortierungseinstellung für einen Server (Instanz von SQL Server) im Objekt-Explorer an**  
   
-1.  Stellen Sie mithilfe im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
+1.  Stellen Sie mithilfe des Objekt-Explorers eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Spalte, und wählen Sie **Eigenschaften**aus.  
   
- **So zeigen Sie eine Sortierungseinstellung für eine Datenbank im Objekt-Explorer an**  
+ **Wenn die Sortierungseigenschaft leer ist, ist die Spalte kein Zeichendatentyp.**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68841622"
     EXECUTE sp_helpsort;  
     ```  
   
- **So zeigen Sie alle von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
+ **So zeigen Sie alle von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützten Sortierreihenfolgen an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
   

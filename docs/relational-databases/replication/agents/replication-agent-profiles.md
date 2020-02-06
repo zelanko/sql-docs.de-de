@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a329c8d8564e92319be773250761085f34643df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a752b21460c2dd337d12ee43acdd981dadd4335b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770789"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288271"
 ---
 # <a name="replication-agent-profiles"></a>Replikations-Agent-Profile
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68770789"
   
 ||default|  
 |-|-------------|  
-|**-BcpBatchSize**|100000|  
+|**-BcpBatchSize**|100.000|  
 |**-HistoryVerboseLevel**|2|  
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
@@ -70,7 +70,7 @@ ms.locfileid: "68770789"
   
 ||default|Ausführlicher Verlauf|Synchronisierungsverwaltung von Windows|Fortsetzen bei Datenkonsistenzfehlern|Verteilungsprofil für das OLE DB-Streaming|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
+|**-BcpBatchSize**|100.000|100.000|1000|100.000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
@@ -91,7 +91,7 @@ ms.locfileid: "68770789"
   
 ||default|Ausführlicher Verlauf|Synchronisierungsverwaltung von Windows|Zeilenanzahlüberprüfung|Überprüfung der Zeilenanzahl und Prüfsumme|Langsame Links|Server-zu-Server für hohes Volumen|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
+|**-BcpBatchSize**|100.000|100.000|1000|100.000|100.000|100.000|100.000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
@@ -130,6 +130,6 @@ ms.locfileid: "68770789"
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwaltung des Replikations-Agents](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903019"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
@@ -225,16 +225,16 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
  Weitere Themen, die Ihnen den Einstieg erleichtern, finden Sie unter:  
   
--   [Tutorial: Erste Schritte mit der Datenbank-Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+-   [Lernprogramm: Erste Schritte mit der Datenbank-Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [Erstellen einer Datenbank &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [Tutorial: Schreiben von Transact-SQL-Anweisungen](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

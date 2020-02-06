@@ -14,10 +14,10 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c3583baedb1766944a89b9f4491c53a94a17f3fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297303"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS-Ausdruck)
@@ -35,19 +35,19 @@ YEAR(date)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Datum*  
+ *date*  
  Ein Datum in einem beliebigen Datumsformat.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  YEAR gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  Der Ausdruck wird nicht überprüft, wenn ein Datumsliteral explizit in einen der folgenden Datumsdatentypen umgewandelt wird: DT_DBTIMESTAMPOFFSET und DT_DBTIMESTAMP2.  
+>  Der Ausdruck wird nicht überprüft, wenn ein Datumsliteral explizit in einen der folgenden Datumsdatentypen umgewandelt wird: DT_DBTIMESTAMPOFFSET oder DT_DBTIMESTAMP2.  
   
  Die YEAR-Funktion entspricht bezüglich der Verwendung der DATEPART("Year", date)-Funktion, ist jedoch schneller.  
   

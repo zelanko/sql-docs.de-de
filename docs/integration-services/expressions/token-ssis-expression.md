@@ -11,10 +11,10 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297355"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS-Ausdruck)
@@ -43,7 +43,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion teilt die <character_expression>-Zeichenfolge in einen Satz von Token auf, die von den im <delimiter_string> festgelegten Trennzeichen getrennt wurden, und gibt dann das N-te Token zurück, wobei N für die vom \<occurrence>-Parameter festgelegte Anzahl der Vorkommen des Tokens steht. Beispiele für die Verwendung dieser Funktion finden Sie im Abschnitt "Beispiele".  
   
  Die folgenden Hinweise gelten für die TOKEN-Funktion:  

@@ -10,10 +10,10 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 17330bafe2655f0569f0828706d5e29ed2af3812
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285353"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Verbinden mit Azure Blob Storage (SQL Server-Import/Export-Assistent)
@@ -53,7 +53,7 @@ Geben Sie den Schlüssel für das Azure-Speicherkonto ein.
  **Lokales Entwicklerkonto verwenden**  
  Geben Sie an, ob der Speicheremulator auf dem lokalen Computer verwendet werden soll.  
   
- **Blob-Containername**  
+ **Blobcontainername**  
  Treffen Sie eine Auswahl aus der Liste der im angegebenen Speicherkonto verfügbaren Speichercontainer.  
   
  **Blob-Dateiformat**  
@@ -65,7 +65,7 @@ Geben Sie den Schlüssel für das Azure-Speicherkonto ein.
  **Erste Zeile als Spaltennamen verwenden**  
  Geben Sie an, ob die erste Zeile der Daten Spaltennamen enthält.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

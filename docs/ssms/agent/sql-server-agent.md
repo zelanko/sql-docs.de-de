@@ -1,8 +1,7 @@
 ---
-title: SQL Server-Agent | Microsoft-Dokumentation
+title: SQL Server-Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552667"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257934"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
 
@@ -28,7 +29,7 @@ ms.locfileid: "69552667"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
+Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in *als*Jobs[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bezeichnet werden.  
 
 ## <a name="Benefits"></a>Vorteile des SQL Server-Agents 
 
@@ -43,7 +44,7 @@ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent kann einen A
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet die folgenden Komponenten, um die auszuführenden Aufgaben, den Zeitpunkt der Ausführung und die Meldung erfolgreicher bzw. fehlgeschlagener Aufgaben zu definieren.  
   
 ### <a name="jobs"></a>Jobs  
-Ein *Auftrag* umfasst eine angegebene Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausführt. Durch die Verwendung von Aufträgen können Sie eine Verwaltungsaufgabe so definieren, dass diese ein- oder mehrmals ausgeführt und der erfolgreiche oder fehlerhafte Ausführung überwacht werden kann. Aufträge können auf einem lokalen oder mehreren Remoteservern ausgeführt werden.  
+Ein *Auftrag* umfasst eine angegebene Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausführt. Verwenden Sie Aufträge, um eine Verwaltungsaufgabe zu definieren, die einmalig oder mehrmals ausgeführt und deren Erfolgsstatus überwacht werden kann. Ein Auftrag kann auf einem einzelnen lokalen Server oder auf mehreren Remoteservern ausgeführt werden.  
   
 > [!IMPORTANT]  
 > Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, die zum Zeitpunkt eines Failoverereignisses auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ausgeführt werden, werden nach dem Failover nicht auf einem anderen Failoverclusterknoten fortgesetzt. Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, die ausgeführt werden, wenn ein Hyper-V-Knoten angehalten wird, werden nicht fortgesetzt, wenn die Pause ein Failover zu einem anderen Knoten verursacht. Aufträge, die begonnen, aber wegen eines Failoverereignisses nicht abgeschlossen werden, werden als gestartet protokolliert, jedoch werden keine weiteren Protokolleinträge für Abschluss oder Fehler erstellt. Unter diesen Umständen werden die betreffenden Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents scheinbar nie beendet.  
@@ -61,7 +62,7 @@ Die einzelnen Aktionen im Rahmen eines Auftrags werden als *Auftragsschritte* be
 Jeder Auftragsschritt wird in einem bestimmten Sicherheitskontext ausgeführt. Bei Auftragsschritten, die [!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, nutzen Sie zum Festlegen des Sicherheitskontexts für den Auftragsschritt die EXECUTE AS-Anweisung. Bei anderen Arten von Auftragsschritten verwenden Sie ein Proxykonto, um den Sicherheitskontext für den Auftragsschritt festzulegen.  
   
 ### <a name="schedules"></a>Zeitpläne  
-Durch einen *Zeitplan* wird angegeben, wann ein Auftrag ausgeführt wird. Im Rahmen eines Zeitplans können auch mehrere Aufträge ausgeführt werden, und für einen Auftrag können mehrere Zeitpläne gelten. Ein Zeitplan kann für den Ausführungszeitpunkt eines Auftrags folgende Bedingungen definieren:  
+Durch einen *Zeitplan* wird angegeben, wann ein Auftrag ausgeführt wird. Mehrere Aufträge können auf dem gleichen Zeitplan basieren, und für einen Auftrag können mehrere Zeitpläne gelten. Ein Zeitplan kann folgende Bedingungen für die Ausführungszeit eines Auftrags definieren:  
   
 -   Ausführung beim Start des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
   
@@ -69,11 +70,11 @@ Durch einen *Zeitplan* wird angegeben, wann ein Auftrag ausgeführt wird. Im Rah
   
 -   Einmalige Ausführung zu einem bestimmten Zeitpunkt.  
   
--   Regelmäßige Ausführung.  
+-   Auf der Grundlage einer Zeitplanserie.  
   
 Weitere Informationen finden Sie unter [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>Warnungen  
+### <a name="alerts"></a>Alerts  
 Eine *Warnung* ist eine automatische Reaktion auf ein bestimmtes Ereignis. Bei einem Ereignis kann es sich z.B. um das Starten eines Auftrags oder das Erreichen eines bestimmten Schwellenwerts bei den Systemressourcen handeln. Sie definieren die Bedingungen, unter denen eine Warnung auftritt.  
   
 Eine Warnung kann als Reaktion auf eine der folgenden Bedingungen ausgegeben werden:  
@@ -93,7 +94,7 @@ Eine Warnung kann die folgenden Aktionen ausführen:
 Weitere Informationen finden Sie unter [Warnungen](../../ssms/agent/alerts.md).  
   
 ### <a name="operators"></a>Operatoren  
-Ein *Operator* definiert die Kontaktinformationen einer Person, die für die Verwaltung einer oder mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zuständig ist. In einigen Unternehmen werden die Aufgaben eines Operators einer einzelnen Person zugewiesen. In größeren Unternehmen mit mehreren Servern teilen sich mehrere Personen die Aufgaben des Operators. Der Operator enthält keine Sicherheitsinformationen und definiert auch keinen Sicherheitsprinzipal.  
+Ein *Operator* definiert die Kontaktinformationen einer Person, die für die Verwaltung einer oder mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zuständig ist. In einigen Unternehmen werden die Aufgaben eines Operators einer einzelnen Person zugewiesen. In größeren Unternehmen mit mehreren Servern teilen sich mehrere Personen die Aufgaben des Operators. Ein Bediener verfügt über keine Sicherheitsinformationen und definiert keinen Sicherheitsprinzipal.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Operatoren bei Warnungen folgendermaßen benachrichtigen:  
   
@@ -124,9 +125,9 @@ Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert die in der folgenden Tabelle aufgeführten Subsysteme:  
   
-|Name des Subsystems|und Beschreibung|  
+|Name des Subsystems|BESCHREIBUNG|  
 |--------------|-----------|  
-|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br />**Warnung:** Das ActiveX-Skriptsubsystem wird in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br />**Warnung:** Das ActiveX-Skriptsubsystem wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |Betriebssystem (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
 |PowerShell|Ausführen eines PowerShell-Skripterstellungs-Auftragsschritts.|  
 |Replikationsverteiler|Ausführen eines Auftragsschritts, der den Replikationsverteilungs-Agent aktiviert.|  
@@ -164,7 +165,7 @@ Falls Sie mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 Verwenden Sie für die ersten Schritte mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent die folgenden Aufgaben:  
   
-|und Beschreibung|Thema|  
+|BESCHREIBUNG|Thema|  
 |-----------|-----|  
 |Beschreibt, wie der SQL Server-Agent konfiguriert wird.|[Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md)|  
 |Beschreibt, wie der SQL Server-Agent-Dienst gestartet, beendet und angehalten wird.|[Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

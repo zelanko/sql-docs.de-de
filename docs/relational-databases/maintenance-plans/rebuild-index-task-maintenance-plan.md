@@ -16,10 +16,10 @@ ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115581"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Task 'Index neu erstellen' (Wartungsplan)
@@ -28,8 +28,8 @@ ms.locfileid: "68115581"
   
  **Task „Index neu erstellen“** verwendet die ALTER INDEX-Anweisung. Weitere Informationen zu den auf dieser Seite beschriebenen Optionen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## <a name="options"></a>enthalten  
- **Verbindung**  
+## <a name="options"></a>Tastatur  
+ **Connection**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
  **Neu**  
@@ -57,7 +57,7 @@ ms.locfileid: "68115581"
     > [!NOTE]  
     >  Wartungspläne werden nur für Datenbanken mit Kompatibilitätsgrad 80 oder höher ausgeführt. Datenbanken mit Kompatibilitätsgrad 70 oder niedriger werden nicht angezeigt.  
   
- **Objekt**  
+ **Object**  
  Begrenzt das Raster **Auswahl** auf die Anzeige von Tabellen, Sichten oder beides.  
   
  **Auswahl**  
@@ -79,7 +79,7 @@ ms.locfileid: "68115581"
  Die Option `ONLINE` ermöglicht es Benutzern, während Indexvorgängen auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und alle zugehörigen nicht gruppierten Indizes zuzugreifen.  
   
 > [!NOTE]
->  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Indizes nicht neu erstellen | Indizes offline neu erstellen**  
  Legt fest, wie Indextypen behandelt werden, die nicht neu erstellt werden können, solange sie online sind.  
@@ -125,7 +125,7 @@ ms.locfileid: "68115581"
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
  Stellt mithilfe der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her. Diese Option ist nicht verfügbar.  
   
- **User name**  
+ **Benutzername**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
  **Kennwort**  
