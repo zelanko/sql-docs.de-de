@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212287"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "70212287"
   
      In der folgenden Tabelle werden die gespeicherten Prozeduren vorgestellt, mit denen die Datenbankspiegelungsüberwachung unabhängig vom Datenbankspiegelungs-Monitor verwaltet und verwendet werden kann.  
   
-    |Verfahren|und Beschreibung|  
+    |Verfahren|BESCHREIBUNG|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Erstellt einen Auftrag, mit dem in regelmäßigen Abständen die Statusinformationen für jede gespiegelte Datenbank auf der Serverinstanz aktualisiert werden.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Ändert den Wert eines Parameters für die Datenbank-Spiegelungsüberwachung.|  
@@ -131,7 +131,7 @@ ms.locfileid: "70212287"
      Systemadministratoren können mit der gespeicherten Systemprozedur **sp_dbmmonitorresults** die Statustabelle anzeigen und bei Bedarf aktualisieren, sofern sie nicht in den vorhergehenden 15 Sekunden aktualisiert wurde. Diese Prozedur ruft die **sp_dbmmonitorupdate** -Prozedur auf und gibt, abhängig von der im Prozeduraufruf angeforderten Menge, eine oder mehrere Verlaufszeilen zurück. Informationen zu dem in den Resultsets angezeigten Status finden Sie unter [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Überwachen des Datenbankspiegelungs-Status (durch dbm_monitor Members)  
- Wie bereits erwähnt, wird beim ersten Ausführen von **sp_dbmmonitorupdate** die feste Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank erstellt. Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Welches Alter der angezeigte Status hat, geht aus den in den Beschriftungen **Prinzipalprotokoll (**_\<time>_**)** und **Spiegelungsprotokoll (**_\<time>_**)** angezeigten Uhrzeiten auf der Seite **Status** hervor.  
+ Wie bereits erwähnt, wird beim ersten Ausführen von **sp_dbmmonitorupdate** die feste Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank erstellt. Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Welches Alter der angezeigte Status hat, geht aus den in den Beschriftungen **Prinzipalprotokoll (** _\<time>_ **)** und **Spiegelungsprotokoll (** _\<time>_ **)** angezeigten Uhrzeiten auf der Seite **Status** hervor.  
   
  Für Mitglieder der festen Datenbankrolle **dbm_monitor** wird die Statustabelle über den **Auftrag für den Datenbankspiegelungs-Monitor** in regelmäßigen Intervallen aktualisiert. Wenn der Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wird, veraltet der Status zunehmend und gibt möglicherweise nicht mehr die Konfiguration der Spiegelungssitzung wieder. So kann z. B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "70212287"
   
 -   Aktuelle Rolle  
   
-     Aktuelle Rolle der Serverinstanz. Folgende Statusangaben sind möglich:  
+     Aktuelle Rolle der Serverinstanz. Mögliche Zustandswerte:  
   
     -   Prinzipal  
   
@@ -163,7 +163,7 @@ ms.locfileid: "70212287"
   
 -   Spiegelungsstatus  
   
-     Folgende Statusangaben sind möglich:  
+     Mögliche Zustandswerte:  
   
     -   Unknown  
   
@@ -171,13 +171,13 @@ ms.locfileid: "70212287"
   
     -   Synchronisiert  
   
-    -   Angehalten  
+    -   Ausgesetzt  
   
     -   Getrennt  
   
 -   Zeugenverbindung  
   
-     Verbindungsstatus des Zeugen. Folgende Statusangaben sind möglich:  
+     Verbindungsstatus des Zeugen. Mögliche Zustandswerte:  
   
     -   Unknown  
   
@@ -310,7 +310,7 @@ ms.locfileid: "70212287"
   
 -   [Anzeigen des Status einer gespiegelten Datenbank &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
- **Gespeicherte Prozeduren**  
+ **Gespeicherten Prozeduren**  
   
 -   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)  
   

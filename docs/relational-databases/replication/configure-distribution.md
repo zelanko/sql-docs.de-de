@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 36e89b7092ea497f3ad2ca0267e7f5dab99056e7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 66e6135ee2144de5936c041c34450d7fd0ce3d62
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768666"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284732"
 ---
 # <a name="configure-distribution"></a>Konfigurieren der Verteilung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68768666"
   
  Der Server, den Sie als Verteiler auswählen, sollte ausreichend Speicherplatz und Prozessorleistung für die Replikation und sonstige Aktivitäten, die auf diesem Server basieren, aufweisen. Beim Konfigurieren des Verteilers geben Sie Folgendes an:  
   
--   Einen Momentaufnahmeordner, der standardmäßig für alle Verleger verwendet wird, die diesen Verteiler verwenden. Stellen Sie sicher, dass dieser Ordner bereits freigegeben ist und die richtigen Berechtigungen festgelegt sind. Weitere Informationen finden Sie unter [Sichern des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+-   Einen Momentaufnahmeordner, der standardmäßig für alle Verleger verwendet wird, die diesen Verteiler verwenden. Stellen Sie sicher, dass dieser Ordner bereits freigegeben ist und die richtigen Berechtigungen festgelegt sind. Weitere Informationen finden Sie unter [Schützen des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 -   Einen Namen und Dateispeicherorte für die Verteilungsdatenbank. Die Verteilungsdatenbank kann nach dem Erstellen nicht mehr umbenannt werden. Wenn Sie einen anderen Namen für die Datenbank verwenden möchten, müssen Sie die Verteilung deaktivieren und neu konfigurieren.  
   

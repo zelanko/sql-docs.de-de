@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982251"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982251"
 
   Gibt den natürlichen Logarithmus des angegebenen **float**-Ausdrucks in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,12 +60,12 @@ LOG ( float_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Standardmäßig gibt **LOG()** den natürlichen Logarithmus zurück. Beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] können Sie die Basis des Logarithmus mithilfe des optionalen *base*-Parameters in einen anderen Wert ändern.  
   
  Der natürliche Logarithmus ist der Logarithmus zur Basis **e**, wobei **e** eine irrationale Konstante mit einem Wert von ungefähr 2,718281828 ist.  
   
- Der natürliche Logarithmus des exponentiellen Werts einer Zahl ist die Zahl selbst: LOG( EXP( *n* ) ) = *n*. Und der exponentielle Wert des natürlichen Logarithmus einer Zahl ist die Zahl selbst: EXP( LOG( *n* ) ) = *n*.  
+ Der natürliche Logarithmus des exponentiellen Werts einer Zahl ist die Zahl selbst: LOG( EXP( *n* ) ) = *n*. Das Exponential des natürlichen Logarithmus einer Zahl ist die Zahl selbst: EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -88,7 +88,7 @@ The LOG of the variable is: 2.30259
 ```  
   
 ### <a name="b-calculating-the-logarithm-of-the-exponent-of-a-number"></a>B. Berechnen des Logarithmus des Exponenten einer Zahl.  
- Das folgende Beispiel berechnet den `LOG`-Wert für den Exponenten einer Zahl.  
+ Im folgenden Beispiel wird `LOG` für den Exponenten einer Zahl berechnet.  
   
 ```  
 SELECT LOG (EXP (10));  
@@ -103,7 +103,7 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. Berechnen des Logarithmus für eine Zahl  
  Das folgende Beispiel berechnet den `LOG`-Wert für den angegebenen **float**-Ausdruck.  

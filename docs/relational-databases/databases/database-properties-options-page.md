@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049036"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
@@ -29,7 +29,7 @@ ms.locfileid: "68049036"
  Geben Sie die Sortierung der Datenbank durch eine Auswahl aus der Liste an. Weitere Informationen finden Sie unter [Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Wiederherstellungsmodell**  
- Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Full** (Vollständig), **Bulk-Logged** (Massenprotokolliert) oder **Simple** (Einfach). Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Vollständig**, **Massenprotokolliert**oder **Einfach**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Kompatibilitätsgrad**  
  Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Wenn eine SQL Server-Datenbank aktualisiert wird, wird der Kompatibilitätsgrad für diese Datenbank nach Möglichkeit beibehalten oder wird auf den mindestens erforderlichen Grad geändert, der von der neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird. 
@@ -90,7 +90,7 @@ Wenn Sie eine Verbindung mit Azure SQL-Datenbank hergestellt haben, finden Sie i
  **Umstellungsjahr für Angaben mit zwei Ziffern**  
  Gibt die höchste Zahl an, die als eine zweistellige Jahresangabe eingegeben werden kann. Das aufgeführte Jahr und die vorherigen 99 Jahre können als eine zweistellige Jahresangabe eingegeben werden. Alle anderen Jahre müssen als eine vierstellige Jahresangabe eingegeben werden.  
   
- Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen [Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursor  
  **Schließen des Cursors nach Commit aktiviert**  
@@ -131,7 +131,7 @@ Wenn Sie eine Verbindung mit Azure SQL-Datenbank hergestellt haben, finden Sie i
  Geben Sie den Verzeichnisnamen für die FILESTREAM-Daten an, die der ausgewählten Datenbank zugeordnet sind.  
   
  **Nicht transaktionsgebundener FILESTREAM-Zugriff**  
- Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in Dateitabellen gespeichert sind: **OFF**, **READ_ONLY** oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in FileTables gespeichert sind: **OFF**, **READ_ONLY**oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Sonstiges  
 **Zulassen der Momentaufnahmeisolation**  
@@ -170,7 +170,7 @@ Aktiviert dieses Feature.
  Aktiviert dieses Feature.  
  
  **Abbruch bei numerischem Runden**  
- Gibt an, wie Rundungsfehler in der Datenbank behandelt werden. Mögliche Werte sind **True** und **False**. Beim Wert **True**wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt. Beim Wert **False** werden bei Genauigkeitsverlusten keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert. Weitere Informationen finden Sie unter [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
+ Gibt an, wie Rundungsfehler in der Datenbank behandelt werden. Mögliche Werte sind **True** und **False**. Beim Wert **True**wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt. Beim Wert **False**werden bei Genauigkeitsverlusten keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert. Weitere Informationen finden Sie unter [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
   
  **Parametrisierung**  
  Bei **SIMPLE**werden Abfragen basierend auf dem Standardverhalten der Datenbank parametrisiert. Bei **FORCED**parametrisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Abfragen in der Datenbank.  
@@ -216,18 +216,18 @@ Schreibgeschützte Service Broker-Eigenschaft.
 **Service Broker-Bezeichner**  
 Schreibgeschützter Bezeichner.  
 
-## <a name="state"></a>Status  
+## <a name="state"></a>State  
  **Datenbank schreibgeschützt**  
  Gibt an, ob die Datenbank schreibgeschützt ist. Mögliche Werte sind **True** und **False**. Bei **True**können die Benutzer die Daten in der Datenbank nur lesen. Die Benutzer können keine Daten oder Datenbankobjekte ändern. Die Datenbank selbst kann jedoch mithilfe der `DROP DATABASE`-Anweisung gelöscht werden. Die Datenbank darf nicht verwendet werden, wenn ein neuer Wert für die Option **Datenbank schreibgeschützt** angegeben wird. Die master-Datenbank stellt eine Ausnahme dar, und nur der Systemadministrator darf die master-Datenbank verwenden, während die Option festgelegt wird.  
   
  **Datenbankstatus**  
- Zeigt den aktuellen Status der Datenbank an. Diese Option kann nicht bearbeitet werden. Weitere Informationen zum **Datenbankstatus**finden Sie unter [Datenbankstatus](../../relational-databases/databases/database-states.md).  
+ Zeigt den aktuellen Status der Datenbank an. Sie kann nicht bearbeitet werden. Weitere Informationen zum **Datenbankstatus**finden Sie unter [Datenbankstatus](../../relational-databases/databases/database-states.md).  
 
  **Verschlüsselung aktiviert**  
  Bei **True**ist diese Datenbank für die Datenbankverschlüsselung aktiviert. Für die Verschlüsselung ist ein Verschlüsselungsschlüssel für eine Datenbank erforderlich. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
  
  **Zugriff beschränken**  
- Gibt an, welche Benutzer auf die Datenbank zugreifen können. Folgende Werte sind möglich:  
+ Gibt an, welche Benutzer auf die Datenbank zugreifen können. Mögliche Werte:  
   
 -   **Mehrere**  
   

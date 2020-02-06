@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067372"
 ---
 # <a name="model-database"></a>model-Datenbank
@@ -38,7 +38,7 @@ ms.locfileid: "68067372"
 ## <a name="physical-properties-of-model"></a>Physische Eigenschaften der model-Datenbank  
  Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **model** -Daten und -Protokolldateien.  
   
-|File|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
+|Datei|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
 |----------|------------------|-------------------|-----------------|  
 |Primäre Daten|modeldev|model.mdf|Automatische Vergrößerung um 64 MB, bis der Speicherplatz auf dem Datenträger erschöpft ist.|  
 |Log|modellog|modellog.ldf|Automatische Vergrößerung um 64 MB bis maximal 2 TB.|  
@@ -59,9 +59,9 @@ Die Standardwerte für die Dateivergrößerung für SQL Server 2014 finden Sie u
 |ANSI_WARNINGS|OFF|Ja|  
 |ARITHABORT|OFF|Ja|  
 |AUTO_CLOSE|OFF|Ja|  
-|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_CREATE_STATISTICS|EIN|Ja|  
 |AUTO_SHRINK|OFF|Ja|  
-|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS|EIN|Ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
 |CHANGE_TRACKING|OFF|Nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
@@ -71,7 +71,7 @@ Die Standardwerte für die Dateivergrößerung für SQL Server 2014 finden Sie u
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
 |DB_CHAINING|OFF|Nein|  
 |ENCRYPTION|OFF|Nein|  
-|MIXED_PAGE_ALLOCATION|ON|Nein|  
+|MIXED_PAGE_ALLOCATION|EIN|Nein|  
 |NUMERIC_ROUNDABORT|OFF|Ja|  
 |PAGE_VERIFY|CHECKSUM|Ja|  
 |PARAMETERIZATION|SIMPLE|Ja|  
@@ -86,7 +86,7 @@ Die Standardwerte für die Dateivergrößerung für SQL Server 2014 finden Sie u
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Die folgenden Operationen können an der **model** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateien oder Dateigruppen.  

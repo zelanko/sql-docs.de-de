@@ -18,10 +18,10 @@ ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b9314935f347fb4c8768cfaa192c5df0c18d1ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114933"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY (Zertifikatberechtigungen) (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114933"
   Verweigert die Berechtigungen für ein Zertifikat.  
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ DENY permission  [ ,...n ]
  Gibt das Zertifikat an, für das die Berechtigung verweigert wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung verweigert wird. Einer der folgenden Typen:  
+ Gibt den Prinzipal an, für den die Berechtigung verweigert wird. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   
@@ -73,7 +73,7 @@ DENY permission  [ ,...n ]
  Gibt an, dass die verweigerte Berechtigung auch anderen Prinzipalen verweigert wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde.  
   
  *denying_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet. Einer der folgenden Typen:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   

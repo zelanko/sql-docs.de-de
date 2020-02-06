@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295693"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
@@ -30,7 +30,7 @@ ms.locfileid: "71295693"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann mit einem digitalen Zertifikat signiert werden, um seine Quelle zu identifizieren. Nachdem das Paket mit einem digitalen Zertifikat signiert wurde, können Sie die digitale Signatur vor dem Laden des Pakets mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüfen. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signatur prüft, legen Sie eine Option entweder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder im **dtexec** -Hilfsprogramm (dtexec.exe) fest, oder geben Sie einen optionalen Registrierungswert an.  
+  Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket kann mit einem digitalen Zertifikat signiert werden, um seine Quelle zu identifizieren. Nachdem das Paket mit einem digitalen Zertifikat signiert wurde, können Sie die digitale Signatur vor dem Laden des Pakets mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüfen. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signatur prüft, legen Sie eine Option entweder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder im **dtexec** -Hilfsprogramm (dtexec.exe) fest, oder geben Sie einen optionalen Registrierungswert an.  
   
 ## <a name="sign-a-package-with-a-digital-certificate"></a>Signieren eines Pakets mit einem digitalen Zertifikat  
  Bevor Sie ein Paket mit einem digitalen Zertifikat signieren können, müssen Sie zunächst ein Zertifikat abrufen oder erstellen. Sobald Sie das Zertifikat vorliegen haben, können Sie es zum Signieren des Pakets verwenden. Weitere Informationen zum Abrufen eines Zertifikats und zum Signieren eines Pakets mit diesem Zertifikat finden Sie unter [Signieren eines Pakets mit einem digitalen Zertifikat](#cert).  
@@ -40,12 +40,12 @@ ms.locfileid: "71295693"
   
 -   Wählen Sie die Option **Digitale Signatur beim Laden eines Pakets überprüfen** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aus, um die digitale Signatur aller Pakete vor dem Laden der Pakete zum Entwurfszeitpunkt zu überprüfen. Diese Option ist eine globale Einstellung für alle Pakete in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
--   Zum Überprüfen der digitalen Signatur eines einzelnen Pakets legen Sie die Option **/VerifyS[igned]** fest, wenn Sie das Paket mit dem **dtexec** -Hilfsprogramm ausführen. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+-   Zum Überprüfen der digitalen Signatur eines einzelnen Pakets legen Sie die Option **/VerifyS[igned]** fest, wenn Sie das Paket mit dem **dtexec** -Hilfsprogramm ausführen. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="set-a-registry-value-to-check-package-signature"></a>Festlegen eines Registrierungswerts zum Überprüfen der Paketsignatur  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt außerdem den optionalen Registrierungswert **BlockedSignatureStates**, mit dem Sie die Richtlinie einer Organisation zum Laden von signierten und nicht signierten Paketen verwalten können. Der Registrierungswert kann das Laden von Paketen verhindern, wenn die Pakete nicht signiert sind, oder ungültige oder nicht vertrauenswürdige Signaturen enthalten. Weitere Informationen zum Festlegen des Registrierungswerts finden Sie unter [Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts](#registry).  
   
-> **HINWEIS:** Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec**-Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
+> **HINWEIS** : Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec** -Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
 
 ## <a name="registry"></a> Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
   Sie können einen optionalen Registrierungswert zum Verwalten einer Organisationsrichtlinie verwenden, um signierte und nicht signierte Pakete zu laden. Wenn Sie diesen Registrierungswert verwenden, müssen Sie ihn auf jedem Computer erstellen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ausgeführt werden und auf dem Sie die Richtlinie durchsetzen möchten. Nachdem der Registrierungswert festgelegt wurde, überprüft oder verifiziert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signaturen vor dem Laden der Pakete.  
@@ -62,7 +62,7 @@ ms.locfileid: "71295693"
   
  In der folgenden Tabelle werden die gültigen Werte der DWORD-Daten und ihre verbundenen Richtlinien aufgelistet.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Keine administrative Einschränkung.|  
 |1|Blockieren von ungültigen Signaturen.<br /><br /> Bei dieser Einstellung werden nicht signierte Pakete nicht blockiert.|  
@@ -142,14 +142,14 @@ ms.locfileid: "71295693"
   
  Weitere Informationen finden Sie unter [Signieren eines Pakets mit einem digitalen Zertifikat](#cert).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Signieren**  
  Klicken Sie auf diese Option, um das Dialogfeld **Zertifikat auswählen** zu öffnen und das zu verwendende Zertifikat auszuwählen.  
   
- **Entfernen**  
+ **Remove**  
  Klicken Sie hierauf, um die digitale Signatur zu entfernen.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   

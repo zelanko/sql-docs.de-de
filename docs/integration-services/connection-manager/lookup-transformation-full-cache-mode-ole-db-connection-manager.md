@@ -13,10 +13,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294393"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager
@@ -55,11 +55,11 @@ ms.locfileid: "71294393"
   
     -   Klicken Sie auf **Tabelle oder Sicht verwenden**, und wählen Sie dann eine Tabelle oder eine Sicht aus, oder klicken Sie auf **Neu** , um eine Tabelle oder Sicht zu erstellen.  
   
-         -oder-  
+         Oder  
   
     -   Klicken Sie auf **Ergebnisse einer SQL-Abfrage verwenden**, und erstellen Sie im Fenster **SQL-Befehl** eine Abfrage, oder klicken Sie auf **Abfrage erstellen** , um eine Abfrage mithilfe der grafischen Tools des **Abfrage-Generators** zu erstellen.  
   
-         -oder-  
+         Oder  
   
     -   Klicken Sie alternativ auf **Durchsuchen** , um eine SQL-Anweisung aus einer Datei zu importieren.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71294393"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

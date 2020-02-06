@@ -1,10 +1,9 @@
 ---
-title: Dialogfeld 'Räumliche Indizes' (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Dialogfeld „Räumliche Indizes“
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263573"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254973"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,11 +26,11 @@ Verwenden Sie das Dialogfeld **Räumliche Indizes** , um Indizes für Spalten de
   
 Weitere Informationen über die Einschränkungen bei der Erstellung von räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Ausgewählter räumlicher Index**  
 Listet vorhandene räumliche Indizes auf. Wählen Sie einen Index aus, um dessen Eigenschaften anzuzeigen. Wenn die Liste leer ist, wurden bisher keine räumlichen Indizes für die Tabelle definiert.  
   
-**Hinzufügen**  
+**Add (Hinzufügen)**  
 Erstellt einen neuen räumlichen Index.  
   
 **Löschen**  

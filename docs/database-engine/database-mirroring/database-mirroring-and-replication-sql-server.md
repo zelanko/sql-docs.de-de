@@ -14,10 +14,10 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661434"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "68661434"
   
      Der Verteilungs-Agent und das Verteilungs-ActiveX-Steuerelement weisen diesen Parameter nicht auf, weil sie keine Verbindung mit dem Verleger herstellen.  
   
-     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
     -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68661434"
 |--------------------|------------------------------------------------------------|  
 |Modus für hohe Sicherheit mit automatischem Failover|Wenn die Spiegeldatenbank nicht verfügbar ist, gibt der Protokolllese-Agent die Befehle an die Verteilungsdatenbank weiter. Ein Failover der Prinzipaldatenbank zur Spiegeldatenbank ist solange nicht möglich, bis die Spiegeldatenbank wieder online ist und alle Transaktionen von der Prinzipaldatenbank erhalten hat.|  
 |Modus mit hoher Leistung|Wenn die Spiegeldatenbank nicht verfügbar ist, läuft sie ungeschützt (das heißt, sie wird nicht gespiegelt). Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn der Dienst erzwungen wird und der Spiegelserver die Rolle der Prinzipaldatenbank übernimmt, arbeitet der Protokolllese-Agent für die Spiegeldatenbank und beginnt mit dem Übernehmen der neuen Transaktionen.<br /><br /> Beachten Sie, dass die Replikationslatenzzeit steigt, wenn die Spiegeldatenbank hinter die Prinzipaldatenbank zurückfällt.|  
-|Der Modus mit hoher Sicherheit ohne automatisches Failover|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf dem Datenträger in der Spiegeldatenbank festgeschrieben werden. Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn die Spiegeldatenbank nicht verfügbar ist, deaktiviert die Prinzipaldatenbank jede weitere Aktivität in der Datenbank, weshalb der Protokolllese-Agent keine Transaktionen replizieren muss.|  
+|Modus für hohe Sicherheit ohne automatisches Failover|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf dem Datenträger in der Spiegeldatenbank festgeschrieben werden. Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn die Spiegeldatenbank nicht verfügbar ist, deaktiviert die Prinzipaldatenbank jede weitere Aktivität in der Datenbank, weshalb der Protokolllese-Agent keine Transaktionen replizieren muss.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   

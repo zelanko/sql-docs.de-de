@@ -21,10 +21,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843716"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73843716"
 
   Gibt die Standard-NULL-Zulässigkeit für die Datenbank für diese Sitzung zurück.  
   
- ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 GETANSINULL gibt 1 zurück, wenn die NULL-Zulässigkeit der Datenbank Nullwerte zulässt. Dieser Rückgabewert erfordert auch, dass die NULL-Zulässigkeit der Spalte oder des Datentyps nicht explizit definiert ist. Der ANSI NULL-Standardwert ist 1. 
   
  Zur Aktivierung des ANSI NULL-Standardverhaltens muss eine der folgenden Bedingungen festgelegt werden:  

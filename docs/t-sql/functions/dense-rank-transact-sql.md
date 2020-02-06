@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135923"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68135923"
 
 Diese Funktion gibt den Rang jeder Zeile innerhalb einer Resultsetpartition ohne Lücken in den Rangwerten zurück. Der Rang einer bestimmten Zeile ist 1 plus die Anzahl der unterschiedlichen Rangwerte vor dieser Zeile.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Argumente  
  \<partition_by_clause>  
-Hierdurch wir das von der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) erzeugte Resultset zunächst partitioniert. Anschließend wird die `DENSE_RANK`-Funktion auf alle Partitionen angewendet. Weitere Informationen zur `PARTITION BY`-Syntax finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+Hierdurch wir das von der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) erzeugte Resultset zunächst partitioniert. Anschließend wird die `DENSE_RANK`-Funktion auf alle Partitionen angewendet. Weitere Informationen zur [-Syntax finden Sie unter ](../../t-sql/queries/select-over-clause-transact-sql.md)OVER-Klausel &#40;Transact-SQL&#41;`PARTITION BY`.  
   
  \<order_by_clause>  
 Bestimmt die Reihenfolge, in der die `DENSE_RANK`-Funktion auf die Zeilen in einer Partition angewendet wird.  
@@ -172,7 +172,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950,238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D: Ordnen von Zeilen innerhalb einer Partition  
 Im diesem Beispiel wird die Rangfolge der Vertriebsmitarbeiter in jedem Vertriebsgebiet auf Grundlage von deren Gesamtumsatz bestimmt. `DENSE_RANK` partitioniert das Rowset nach `SalesTerritoryGroup` und sortiert das Resultset nach `SalesAmountQuota`.  
