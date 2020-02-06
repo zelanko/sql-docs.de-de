@@ -16,10 +16,10 @@ ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082385"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE-Assemblyberechtigungen (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68082385"
 
   Hebt Berechtigungen für eine Assembly auf.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Gibt die Assembly an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. Einer der folgenden Typen:  
+ Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   
@@ -79,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit WITH GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
  AS *revoking_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. Einer der folgenden Typen:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   

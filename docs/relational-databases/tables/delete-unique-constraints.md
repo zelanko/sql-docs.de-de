@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016438"
 ---
 # <a name="delete-unique-constraints"></a>Löschen von Unique-Einschränkungen
@@ -33,7 +33,7 @@ ms.locfileid: "68016438"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie eine Unique-Einschränkung mit:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68016438"
   
 4.  Klicken Sie auf **Löschen**.  
   
-5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+5.  Klicken Sie im Menü **Datei** auf **Tabellenname** _speichern_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

@@ -9,10 +9,10 @@ ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2712a66e020324ab529fe0dc1759957fbc53f4e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576734"
 ---
 # <a name="report-builder-functions---varp-function"></a>Funktionen des Berichts-Generators: VarP-Funktion
@@ -32,10 +32,10 @@ VarP(expression, scope, recursive)
  *expression*  
  (**Integer** oder **Float**) Der Ausdruck, für den die Aggregation ausgeführt werden soll.  
   
- *Bereich*  
+ *scope*  
  (**Zeichenfolge**) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
- *Rekursiv*  
+ *recursive*  
  (**Enumerationstyp**) Optional. **Simple** (Standard) oder **RdlRecursive**. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  

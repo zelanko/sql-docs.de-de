@@ -11,10 +11,10 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008768"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung
@@ -93,7 +93,7 @@ Weitere Informationen zu den ODBC-Verbindungsattributen finden Sie unter [SQLSet
   
 Eine ODBC-Anwendung, die [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] verwendet, kann eine von zwei Funktionen verwenden, um die Verbindung herzustellen:  
   
-|Funktion|und Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |------------|---------------|  
 |[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** unterstützt sowohl **ApplicationIntent** als auch **MultiSubnetFailover** über einen Datenquellennamen (DSN) oder Verbindungsattribute.|  
 |[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** unterstützt **ApplicationIntent** und **MultiSubnetFailover** über DSN, Schlüsselwörter für Verbindungszeichenfolgen oder Verbindungsattribute.|

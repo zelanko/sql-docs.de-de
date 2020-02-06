@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077415"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Erste Schritte bei der Entwicklung von Apps für SQL Server für Linux
@@ -62,7 +62,7 @@ Weitere Informationen finden Sie in den nachfolgenden Themen:
 
 Sie können die neue [mssql-Erweiterung](https://aka.ms/mssql-marketplace) für [Visual Studio Code](https://code.visualstudio.com) unter Linux, macOS und Windows verwenden. Eine detaillierte Anleitung finden Sie im folgenden Tutorial:
 
-- [Use Visual Studio Code (Verwenden von Visual Studio Code)](sql-server-linux-develop-use-vscode.md)
+- [Verwenden von Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
 Sie können auch neue Befehlszeilentools verwenden, die für Linux nativ sind. Hierzu gehören die folgenden Tools:
 
