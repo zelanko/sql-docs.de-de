@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952375"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831977"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -416,7 +416,7 @@ WITH
       LOCATION='tpch_10.dbo.customer',
       DATA_SOURCE=SqlServerInstance
      );
- ```
+```
 
 ### <a name="i-create-an-external-table-for-oracle"></a>I. Erstellen einer externen Tabelle für Oracle
 
@@ -444,7 +444,7 @@ WITH
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -459,10 +459,10 @@ WITH
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='customer',
+    LOCATION='.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
-   ```
+```
 
 ### <a name="j-create-an-external-table-for-teradata"></a>J. Erstellen einer externen Tabelle für Teradata
 
@@ -604,7 +604,7 @@ column_name <data_type>
         [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
     )  
 [;]  
-```  
+```
 
 ## <a name="arguments"></a>Argumente
 
@@ -750,7 +750,7 @@ column_name <data_type>
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>Argumente
 
@@ -817,7 +817,7 @@ In diesem Beispiel wird verdeutlicht, wie die drei REJECT-Optionen interagieren.
 REJECTED_ROW_LOCATION = *Verzeichnis*
 
 Gibt das Verzeichnis in der externen Datenquelle an, in das die abgelehnten Zeilen und die entsprechende Fehlerdatei geschrieben werden sollen.
-Ist das angegebene Verzeichnis nicht vorhanden, wird es von PolyBase für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „_rejectedrows“ erstellt. Mit dem „_ “-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. In diesem Verzeichnis befindet sich ein Ordner, der ausgehend von der Zeit der Lastübermittlung im Format „JahrMonatTag-StundeMinuteSekunde“ erstellt wurde (z.B. 20180330-173205). In diesen Ordner werden zwei Arten von Dateien geschrieben: die Ursachendatei (_reason-Datei) und die Datendatei.
+Ist das angegebene Verzeichnis nicht vorhanden, wird es von PolyBase für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „\_rejectedrows“ erstellt. Mit dem „\_“-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. In diesem Verzeichnis befindet sich ein Ordner, der ausgehend von der Zeit der Lastübermittlung im Format „JahrMonatTag-StundeMinuteSekunde“ erstellt wurde (z.B. 20180330-173205). In diesen Ordner werden zwei Arten von Dateien geschrieben: die Ursachendatei (_reason-Datei) und die Datendatei.
 
 Sowohl die Ursachendateien als auch die Datendateien haben die „queryID“, die der CTAS-Anweisung zugeordnet ist. Da die Daten und die Ursachen in getrennten Dateien gespeichert sind, haben die zugehörigen Dateien ein entsprechendes Suffix.
 
@@ -945,7 +945,7 @@ AS SELECT * FROM
 ## <a name="overview-analytics-platform-system"></a>Übersicht: Analyseplattformsystem
 
 Verwenden Sie eine externe Tabelle, um:
-  
+
 - Daten in Hadoop oder in Azure Blob Storage mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen abzufragen.
 - Daten aus Hadoop oder Azure Blob Storage in Analytics Platform System zu importieren und speichern.
 
@@ -976,7 +976,7 @@ column_name <data_type>
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>Argumente
 
