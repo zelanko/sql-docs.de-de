@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041246"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren der SQL Server-Befehlszeilentools sqlcmd und bcp unter Linux
@@ -71,7 +71,7 @@ Führen Sie zum Installieren von **mssql-tools** unter Red Hat Enterprise Linux 
    ```
 
    > [!Note] 
-   > Führen Sie die folgenden Befehle aus, um auf die neueste Version von **mssql-tools** zu aktualisieren:
+   > Führen Sie die folgenden Befehle aus, um **mssql-tools** auf die neueste Version zu aktualisieren:
    >    ```bash
    >   sudo yum check-update
    >   sudo yum update mssql-tools
@@ -96,7 +96,7 @@ Führen Sie zum Installieren von **mssql-tools** unter Red Hat Enterprise Linux 
 
 Führen Sie zum Installieren von **mssql-tools** unter Ubuntu die folgenden Schritte aus. 
 
-1. Importieren Sie die öffentlichen GPG-Schlüssel des Repositorys.
+1. Importieren Sie die GPG-Schlüssel des öffentlichen Repositorys.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -155,7 +155,7 @@ Führen Sie zum Installieren von **mssql-tools** unter SUSE Linux Enterprise Ser
    ```
 
    > [!Note] 
-   > Führen Sie die folgenden Befehle aus, um auf die neueste Version von **mssql-tools** zu aktualisieren:
+   > Führen Sie die folgenden Befehle aus, um **mssql-tools** auf die neueste Version zu aktualisieren:
    >    ```bash
    >   sudo zypper refresh
    >   sudo zypper update mssql-tools
@@ -223,13 +223,13 @@ Wenn Sie [SQL Server in einem Docker-Container ausführen](quickstart-install-co
 
 1. **Installieren der Pakete**: Installieren Sie die Pakete **mssql-tools** und **msodbc**. Wenn Abhängigkeitsfehler auftreten, ignorieren Sie diese bis zum nächsten Schritt.
 
-    | Platform | Befehle zur Paketinstallation |
+    | Plattform | Befehle zur Paketinstallation |
     |-----|-----|
     | Red Hat | `sudo yum localinstall msodbcsql-<version>.rpm`<br/>`sudo yum localinstall mssql-tools-<version>.rpm` |
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **Auflösen fehlender Abhängigkeiten**: Zu diesem Zeitpunkt fehlen möglicherweise Abhängigkeiten. Falls nicht, können Sie diesen Schritt überspringen. In einigen Fällen müssen Sie diese Abhängigkeiten manuell suchen und installieren.
+1. **Lösen Sie fehlende Abhängigkeiten auf**: Zu diesem Zeitpunkt fehlen möglicherweise Abhängigkeiten. Falls nicht, können Sie diesen Schritt überspringen. In einigen Fällen müssen Sie diese Abhängigkeiten manuell suchen und installieren.
 
     Bei RPM-Paketen können Sie die erforderlichen Abhängigkeiten mithilfe der folgenden Befehle überprüfen:
 

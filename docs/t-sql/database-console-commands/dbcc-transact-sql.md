@@ -37,10 +37,10 @@ ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982444"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
@@ -52,10 +52,10 @@ DBCC-Anweisungen sind in die folgenden Kategorien eingeteilt.
   
 |Befehlskategorie|Funktion|  
 |---|---|
-|Verwaltung|Aufgaben zur Verwaltung von Datenbanken, Indizes und Dateigruppen.|  
+|Wartung|Aufgaben zur Verwaltung von Datenbanken, Indizes und Dateigruppen.|  
 |Sonstiges|Verschiedene Aufgaben wie das Aktivieren von Ablaufverfolgungsflags oder das Entfernen einer DLL aus dem Arbeitsspeicher.|  
-|Information|Aufgaben zum Sammeln und Anzeigen verschiedener Arten von Informationen.|  
-|Überprüfung|Überprüfungsvorgänge für Datenbanken, Tabellen, Indizes, Kataloge, Dateigruppen oder das Zuordnen von Datenbankseiten.|  
+|Informational|Aufgaben zum Sammeln und Anzeigen verschiedener Arten von Informationen.|  
+|Überprüfen|Überprüfungsvorgänge für Datenbanken, Tabellen, Indizes, Kataloge, Dateigruppen oder das Zuordnen von Datenbankseiten.|  
   
 DBCC-Befehle akzeptieren Eingabeparameter und geben Werte zurück. Alle Parameter für DBCC-Befehle nehmen sowohl Unicode- als auch DBCS-Literale (Double-Byte Character Set, Doppelbyte-Zeichensatz) an.
   
@@ -96,7 +96,7 @@ Die **sys.dm_exec_requests**-Katalogsicht enthält Informationen zum Fortschritt
   
 Die Definition einer Statuseinheit hängt von der aktuellen Ausführungsphase des DBCC-Befehls ab. Manchmal wird der Status mit der Granularität einer Datenbankseite angezeigt, in anderen Phasen wird er mit der Granularität einer einzelnen Datenbank oder Zuordnungsreparatur gemeldet. In der folgenden Tabelle werden die einzelnen Ausführungsphasen beschrieben sowie die Granularität, mit der der Status der Befehlsausführung gemeldet wird.
   
-|Ausführungsphase|und Beschreibung|Granularität der Statusmeldungen|  
+|Ausführungsphase|Beschreibung|Granularität der Statusmeldungen|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Während dieser Phase wird die logische und physische Konsistenz der Objekte in der Datenbank geprüft.|Der Status wird auf Datenbankseitenebene angezeigt.<br /><br /> Der Wert der Statusmeldung wird nach jeweils 1000 geprüften Datenbankseiten aktualisiert.|  
 |DBCC TABLE REPAIR|Während dieser Phase werden Datenbankreparaturen ausgeführt, sofern REPAIR_FAST, REPAIR_REBUILD oder REPAIR_ALLOW_DATA_LOSS angegeben ist und Objektfehler vorliegen, die behoben werden müssen.|Der Status wird auf der Ebene einzelner Reparaturvorgänge angezeigt.<br /><br /> Der Zähler wird für jeden abgeschlossenen Reparaturvorgang aktualisiert.|  

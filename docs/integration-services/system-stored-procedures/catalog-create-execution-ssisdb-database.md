@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295550"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
@@ -73,7 +73,7 @@ Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird 
  Gibt den eindeutigen Bezeichner für eine Ausführungsinstanz zurück. Der *execution_id* ist **bigint**.  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine Ausführung wird verwendet, um die Parameterwerte anzugeben, die von einem Paket während einer einzelnen Instanz der Paketausführung verwendet werden.  
   
  Wenn ein Umgebungsverweis mit dem *reference_id*-Parameter angegeben wird, füllt die gespeicherte Prozedur den Projekt- und Paketparameter mit Literalwerten oder Werten, auf die verwiesen wird, der entsprechenden Umgebungsvariablen auf. Wird ein Umgebungsverweis angegeben, werden bei der Paketausführung Standardparameterwerte verwendet. Um genau zu bestimmen, welche Werte für eine bestimmte Ausführungsinstanz verwendet werden, verwenden Sie den *execution_id*-Ausgabeparameterwert dieser gespeicherten Prozedur, und fragen Sie die Sicht [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) ab.  
@@ -101,7 +101,7 @@ GO
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  

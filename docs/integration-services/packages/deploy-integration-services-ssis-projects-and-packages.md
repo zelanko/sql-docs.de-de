@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680962"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
@@ -63,7 +63,7 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 ## <a name="features-of-project-deployment-model"></a>Funktionen des Projektbereitstellungsmodells  
  In der folgenden Tabelle sind die Funktionen aufgeführt, die für Projekte, die nur für das Projektbereitstellungsmodell entwickelt wurden, verfügbar sind.  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Parameter|Ein Parameter gibt die Daten an, die von einem Paket verwendet werden. Sie können die Gültigkeit von Parametern Paketparametern und Projektparametern auf die Paketebene bzw. Projektebene beschränken. Parameter können in Ausdrücken oder Tasks verwendet werden. Wenn das Projekt im Katalog bereitgestellt wird, können Sie einen Literalwert für jeden Parameter zuweisen oder den Standardwert verwenden, der zur Entwurfszeit zugewiesen wurde. Statt eines Literalwerts kann auch auf eine Umgebungsvariable verwiesen werden. Umgebungsvariablenwerte werden zur Laufzeit der Paketausführung aufgelöst.|  
 |Umgebungen|Eine Umgebung ist ein Container für Variablen, auf die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten verwiesen werden kann. Jedes Projekt kann über mehrere Umgebungsverweise verfügen, aber eine einzelne Instanz der Paketausführung kann nur auf Variablen von einer einzelnen Umgebung verweisen. Umgebungen ermöglichen es Ihnen, die Werte zu organisieren, die Sie einem Paket zuweisen. Sie könnten z. B. Umgebungen mit den Namen "Entwicklung", "Test" und "Produktion" definieren.|  
@@ -135,7 +135,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
-     -oder-  
+     Oder  
   
      Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
@@ -306,7 +306,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Quellen auswählen
+#### <a name="select-source"></a>Auswählen der Quelle
 
  Um eine von Ihnen erstellte Projektbereitstellungsdatei bereitzustellen, wählen Sie **Projektbereitstellungsdatei** aus, und geben Sie den Pfad für die ISPAC-Datei ein. Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog**aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein. Klicken Sie auf **Weiter** , um die Seite **Ziel auswählen** zu sehen.  
   
@@ -320,15 +320,15 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 #### <a name="results"></a>Ergebnisse
 
- Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...**, um die Ergebnisse in einer XML-Datei zu speichern, oder klicken Sie auf **Schließen**, um den Assistenten zu beenden.
+ Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...** , um die Ergebnisse in einer XML-Datei zu speichern, oder klicken Sie auf **Schließen**, um den Assistenten zu beenden.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Quellen auswählen
+#### <a name="select-source"></a>Auswählen der Quelle
 
  Die Seite **Quelle auswählen** im **Bereitstellungs-Assistenten für Integration Services** zeigt die Einstellungen speziell für das Paketbereitstellungsmodell an, wenn Sie die Option **Paketbereitstellung** als **Bereitstellungsmodell**gewählt haben.  
   
- Klicken Sie zum Auswählen der Quellpakete auf die Schaltfläche **Durchsuchen...**, um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** am unteren Seitenrand. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
+ Klicken Sie zum Auswählen der Quellpakete auf die Schaltfläche **Durchsuchen...** , um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** am unteren Seitenrand. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
   
  Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung**steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Wenn der Status auf **Fehler** festgelegt ist, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie zum Anzeigen der detaillierten Warn- oder Fehlermeldungen auf den Link in der Spalte **Meldung**.  
   
@@ -338,7 +338,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 #### <a name="select-destination"></a>Ziel auswählen
 
- Nachdem Sie die Paketquellen ausgewählt haben, klicken Sie auf die Schaltfläche **Weiter**, um zur Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie vor dem Bereitstellen von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog vorhanden ist. Erstellen Sie ein leeres Projekt, falls ein Projekt nicht vorhanden ist. Geben Sie auf der Seite **Ziel auswählen** den Servernamen in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...**, um eine Serverinstanz auszuwählen. Klicken Sie dann auf die Schaltfläche **Durchsuchen...** neben dem Textfeld **Pfad**, um das Zielprojekt anzugeben. Wenn das Projekt nicht vorhanden ist, klicken Sie auf die Schaltfläche **Neues Projekt...**, um ein leeres Projekt als Zielprojekt zu erstellen. Das Projekt muss unter einem Ordner erstellt werden.  
+ Nachdem Sie die Paketquellen ausgewählt haben, klicken Sie auf die Schaltfläche **Weiter**, um zur Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie vor dem Bereitstellen von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog vorhanden ist. Erstellen Sie ein leeres Projekt, falls ein Projekt nicht vorhanden ist. Geben Sie auf der Seite **Ziel auswählen** den Servernamen in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...** , um eine Serverinstanz auszuwählen. Klicken Sie dann auf die Schaltfläche **Durchsuchen...** neben dem Textfeld **Pfad**, um das Zielprojekt anzugeben. Wenn das Projekt nicht vorhanden ist, klicken Sie auf die Schaltfläche **Neues Projekt...** , um ein leeres Projekt als Zielprojekt zu erstellen. Das Projekt muss unter einem Ordner erstellt werden.  
   
 #### <a name="review-and-deploy"></a>Überprüfen und bereitstellen
 
@@ -416,7 +416,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
     2.  Klicken Sie auf **Umgebungsvariable verwenden**, und wählen Sie dann die Umgebungsvariable aus, die Sie erstellt haben.  
   
-14. Klicken Sie zweimal auf **OK** , um die Änderungen zu speichern.  
+14. Klicken Sie zum Speichern der Änderungen zweimal auf **OK**.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren
 
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **SQL Server-Authentifizierung verwenden**  
  Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem Kennwort von einer nicht vertrauenswürdigen Verbindung herstellt, authentifiziert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verbindung, indem überprüft wird, ob ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldekonto eingerichtet wurde und ob das angegebene Kennwort mit dem zuvor aufgezeichneten übereinstimmt. Wenn kein Anmeldekonto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingerichtet wurde, schlägt die Authentifizierung fehl, und der Benutzer erhält eine Fehlermeldung.  
   
- **User name**  
+ **Benutzername**  
  Geben Sie einen Benutzernamen an, wenn Sie die SQL Server-Authentifizierung verwenden.  
   
  **Kennwort**  
@@ -609,7 +609,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Status**  
  Gibt an, ob ein Paket bereit ist, in das Projektbereitstellungsmodell konvertiert zu werden.  
   
- **MessageBox**  
+ **Meldung**  
  Zeigt eine Meldung an, die dem Paket zugeordnet sind.  
   
  **Kennwort**  
@@ -703,17 +703,17 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Parametername**  
  Listet den Namen des Parameters auf.  
   
- **Scope**  
+ **Umfang**  
  Wählen Sie den Bereich des Parameters aus, und zwar entweder Paket oder Projekt.  
   
 ###  <a name="configureParameters"></a> Festlegen von Optionen auf der Seite "Parameter konfigurieren"  
  **Name**  
  Listet den Namen des Parameters auf.  
   
- **Scope**  
+ **Umfang**  
  Listet den Bereich des Parameters auf.  
   
- **ReplTest1**  
+ **Wert**  
  Listet den Parameterwert auf.  
   
  Klicken Sie auf die Auslassungspunkte, die sich neben dem Wertefeld befinden, um die Parametereigenschaften zu konfigurieren.  

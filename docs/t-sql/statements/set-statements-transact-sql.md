@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20cf6e1c3c98a99898a7b302980d76cef327be5d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228494"
 ---
 # <a name="set-statements-transact-sql"></a>SET-Anweisungen (Transact-SQL)
@@ -39,7 +39,7 @@ Die Programmiersprache [!INCLUDE[tsql](../../includes/tsql-md.md)] bietet eine R
   
 Informationen zum Festlegen von lokalen Variablen mit der SET-Anweisung finden Sie unter [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
-|Kategorie|Anweisungen|  
+|Category|Anweisungen|  
 |--------------|----------------|  
 |Datums- und Zeitanweisungen|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)<br /><br /> [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|  
 |Sperranweisungen|[SET DEADLOCK_PRIORITY](../../t-sql/statements/set-deadlock-priority-transact-sql.md)<br /><br /> [SET LOCK_TIMEOUT](../../t-sql/statements/set-lock-timeout-transact-sql.md)|  
@@ -92,4 +92,4 @@ Informationen zum Festlegen von lokalen Variablen mit der SET-Anweisung finden S
   Wenn Sie keine dieser Optionen auf die erforderlichen Werte festlegen, schlagen die Aktionen INSERT, UPDATE, DELETE, DBCC CHECKDB und DBCC CHECKTABLE für die indizierten Sichten oder Tabellen mit Indizes für berechnete Spalten fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löst einen Fehler aus, wobei alle Optionen aufgelistet werden, die nicht ordnungsgemäß festgelegt sind. Außerdem verarbeitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die SELECT-Anweisungen in diesen Tabellen oder indizierten Sichten so, als seien die Indizes auf den berechneten Spalten oder Sichten nicht vorhanden. 
 
 - Wenn RESULT_SET_CACHING auf ON festgelegt ist, aktiviert dies die Funktion für Ergebniszwischenspeicherung für die aktuelle Clientsitzung.   Result_set_caching kann für eine Sitzung nicht aktiviert werden (ON), wenn es auf Datenbankebene deaktiviert (OFF) ist.    Wenn RESULT_SET_CACHING auf OFF festgelegt ist, ist die Funktion für Ergebniszwischenspeicherung für die aktuelle Clientsitzung deaktiviert. Um diese Einstellung zu ändern, ist die Mitgliedschaft in der Rolle „public“ (Öffentlich) erforderlich.
-Betrifft: Azure SQL Data Warehouse Gen2
+Gilt für: Azure SQL Data Warehouse Gen2

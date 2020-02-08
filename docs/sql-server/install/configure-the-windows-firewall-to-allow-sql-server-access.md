@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren der Windows-Firewall für den SQL Server-Zugriff | Microsoft-Dokumentation
-ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+title: Konfigurieren der Windows-Firewall
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637970"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253467"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -217,7 +217,7 @@ Die folgende Tabelle enthält Ports und Dienste, von denen [!INCLUDE[ssNoVersion
   
  In Windows-Firewall mit erweiterter Sicherheit gibt es drei Netzwerkstandorttypen:  
   
--   **Domäne:** Windows kann den Zugriff auf den Domänencontroller für die Domäne des Netzwerks, mit dem der Computer verbunden ist, authentifizieren.
+-   **Domäne**: Windows kann den Zugriff auf den Domänencontroller für die Domäne des Netzwerks, mit dem der Computer verbunden ist, authentifizieren.
 -   **Öffentlich**: Alle neu erkannten Netzwerke, außer Domänennetzwerke, werden zunächst als öffentlich kategorisiert. Netzwerke, die direkte Verbindungen zum Internet darstellen oder sich an öffentlichen Orten wie z. B. auf Flughäfen und in Cafés befinden, sollten auch öffentlich bleiben.
 -   **Privat**: Ein Netzwerk, das von einem Benutzer oder einer Anwendung als privat gekennzeichnet wird. Es sollten nur vertrauenswürdige Netzwerke als private Netzwerke gekennzeichnet werden. Benutzer können Heim- oder kleine Firmennetzwerke als privat kennzeichnen.  
   

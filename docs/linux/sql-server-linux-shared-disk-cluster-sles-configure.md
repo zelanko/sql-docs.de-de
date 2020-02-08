@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032222"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Konfigurieren eines freigegebenen SLES-Datenträgerclusters für SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "68032222"
 
 Diese Anleitung enthält Anweisungen zum Erstellen eines freigegebenen Datenträgerclusters mit zwei Knoten für SQL Server unter SUSE Linux Enterprise Server (SLES). Die Clusteringebene basiert auf der SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), die auf [Pacemaker](https://clusterlabs.org/) aufbaut. 
 
-Weitere Informationen zu Clusterkonfiguration, Ressourcenagentoptionen, Verwaltung, Best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Weitere Informationen zu Clusterkonfiguration, Ressourcen-Agent-Optionen, Verwaltung, Best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -195,10 +195,10 @@ An diesem Punkt sind beide Instanzen von SQL Server so konfiguriert, dass sie mi
 
 In den folgenden Schritten wird erläutert, wie Sie die Clusterressource für SQL Server konfigurieren. Es gibt zwei Einstellungen, die Sie anpassen müssen.
 
-- **SQL Server-Ressourcenname**: Ein Name für die gruppierte SQL Server-Ressource. 
+- **SQL Server-Ressourcenname**: Ein Name für die gruppierte SQL Server-Ressource 
 - **Timeoutwert**: Der Timeoutwert ist die Zeitspanne, die der Cluster wartet, während eine Ressource online geschaltet wird. In SQL Server ist dies die Zeit, die SQL Server Ihrer Erwartung zufolge benötigt, um die `master`-Datenbank online zu schalten. 
 
-Aktualisieren Sie die Werte des folgenden Skripts für Ihre Umgebung. Führen Sie auf einem Knoten aus, um den gruppierten Dienst zu konfigurieren und zu starten.
+Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie es auf einem Knoten aus, um den gruppierten Dienst zu konfigurieren und zu starten.
 
 ```bash
 sudo crm configure
@@ -224,7 +224,7 @@ Nachdem ein Commit für die Konfiguration ausgeführt wurde, wird SQL Server auf
 
 Weitere Informationen finden Sie unter [Configuring and Managing Cluster Resources (Command Line)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config) (Konfigurieren und Verwalten von Clusterressourcen (Befehlszeile)). 
 
-### <a name="verify-that-sql-server-is-started"></a>Überprüfen Sie, ob SQL Server gestartet wird. 
+### <a name="verify-that-sql-server-is-started"></a>Stellen Sie sicher, dass SQL Server gestartet wird. 
 
 Führen Sie den Befehl **crm status** aus, um zu überprüfen, ob SQL Server gestartet wurde:
 
@@ -260,6 +260,6 @@ crm resource
 migrate mssqlha SLES2
 ```
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 [SUSE Linux Enterprise High Availability Extension – Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) (SUSE Linux Enterprise High Availability Extension – Administratorhandbuch). 

@@ -33,10 +33,10 @@ author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831817"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
@@ -512,7 +512,7 @@ Aber das Unicode Consortium hat 16 zusätzliche „Ebenen“ von Zeichen eingeri
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Datentypen wie **nchar** und **nvarchar** bereit, um Unicode-Daten im BMP-Bereich (000000 bis 00FFFF) zu speichern, die die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mit UCS-2 codiert. 
 
-Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde eine neue Gruppe von Sortierungen von ergänzenden Zeichen (\_SC) eingeführt, die nur mit den Datentypen **nchar**, **nvarchar** und **sql_variant** verwendet werden können, um den gesamten Unicode-Zeichenbereich (000000 bis 10FFFF) darzustellen. Beispiel:  **Latin1_General_100_CI_AS_SC** oder **Japanese_Bushu_Kakusu_100_CI_AS_SC**, wenn Sie eine japanische Sortierung verwenden. 
+Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde eine neue Gruppe von Sortierungen von ergänzenden Zeichen (\_SC) eingeführt, die nur mit den Datentypen **nchar**, **nvarchar** und **sql_variant** verwendet werden können, um den gesamten Unicode-Zeichenbereich (000000 bis 10FFFF) darzustellen. Beispiel: **Latin1_General_100_CI_AS_SC** oder **Japanese_Bushu_Kakusu_100_CI_AS_SC**, wenn Sie eine japanische Sortierung verwenden. 
  
 Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wurde die Unterstützung für ergänzende Zeichen mit den neuen UTF-8-fähigen Sortierungen ([\_UTF8](#utf8)) auf die Datentypen **char** und **varchar** erweitert. Diese Datentypen können auch den gesamten Unicode-Zeichenbereich darstellen.   
 

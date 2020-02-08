@@ -18,10 +18,10 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948256"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Tabellenwertkonstruktor (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67948256"
 
   Gibt eine Gruppe mit Zeilenwertausdrücken an, die in einer Tabelle erstellt werden sollen. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktor ermöglicht das Angeben mehrerer Datenzeilen in nur einer DML-Anweisung. Der Tabellenwertkonstruktor kann entweder als die VALUES-Klausel einer INSERT ... VALUES-Anweisung oder als eine abgeleitete Tabelle in der USING-Klausel der MERGE-Anweisung oder der FROM-Klausel angegeben werden.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -153,7 +153,7 @@ INNER JOIN (VALUES ('Blade'), ('Crown Race'), ('AWC Logo Cap')) AS b(Name)
 ON a.Name = b.Name;  
 ```  
   
-### <a name="d-specifying-multiple-values-as-a-derived-source-table-in-a-merge-statement"></a>D. Angeben mehrerer Werte als abgeleitete Quelltabelle in einer MERGE-Anweisung  
+### <a name="d-specifying-multiple-values-as-a-derived-source-table-in-a-merge-statement"></a>D: Angeben mehrerer Werte als abgeleitete Quelltabelle in einer MERGE-Anweisung  
  Im folgenden Beispiel wird die `SalesReason`-Tabelle durch das Aktualisieren oder Einfügen von Zeilen mithilfe von MERGE geändert. Wenn der Wert von `NewName` in der Quelltabelle einem Wert in der `Name`-Spalte der Zieltabelle entspricht (`SalesReason`), wird die `ReasonType`-Spalte in der Zieltabelle aktualisiert. Wenn der Wert von `NewName` jedoch nicht übereinstimmt, wird die Quellzeile in die Zieltabelle eingefügt. Die Quelltabelle ist eine abgeleitete Tabelle, die mithilfe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktors mehrere Zeilen für die Quelltabelle angibt.  
   
 ```sql

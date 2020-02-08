@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255931"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
@@ -53,7 +53,7 @@ Weitere Informationen zu räumlichen Indizes finden Sie unter [Übersicht über 
 Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Volltextindizes](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Grundlagen des Indexentwurfs  
- Am Ende eines guten Sachbuchs befindet sich meist ein Index, über den bestimmte Informationen schnell und zielsicher innerhalb des Buchs ausfindig gemacht werden können. Ein Index ist eine sortierte Liste von Schlüsselwörtern, neben denen jeweils eine oder mehrere Seitenzahlen auf die Seiten verweisen, auf denen das jeweilige Schlüsselwort gefunden werden kann. Der SQL Server-Index macht da keinen Unterschied: Er stellt eine sortierte Liste mit Werten dar, bei der jeweils Zeiger auf die [Datenseiten](../relational-databases/pages-and-extents-architecture-guide.md) hinweisen, auf denen sich diese Werte befinden. Der Index selbst wird auf Seiten gespeichert, die die Indexseiten in SQL Server bilden. In einem Buch umfasst der Index meist mehrere Seiten. Wenn Sie nun beispielsweise nach Verweisen auf alle Seiten mit dem Wort „SQL“ suchen, müssen Sie den Index bis zu der Seite durchblättern, die das Schlüsselwort „SQL“ enthält. Von dort gelangen Sie dann über die Verweise zu den angegebenen Buchseiten.  Dies ließe sich durch Hinzufügen einer Seite vor dem Index optimieren, auf der die Seitenzahlen für die einzelnen Buchstaben des Alphabets angegeben werden. Beispiel:  „A bis D: Seite 121“, „E bis G: Seite 122“ usw. Mit dieser zusätzlichen Seite entfiele der Schritt, den Index nach dem Ausgangspunkt durchsuchen zu müssen. Eine solche Seite existiert in einem Buch meist nicht, in einem SQL Server-Index jedoch schon. Sie wird als Stammseite des Index bezeichnet. Die Stammseite stellt die Startseite der Baumstruktur dar, die von einem SQL Server-Index verwendet wird. Folgt man der Baumanalogie, so werden die Seiten mit den Zeigern auf die jeweiligen Daten als „Blattseiten“ der Baumstruktur bezeichnet. 
+ Am Ende eines guten Sachbuchs befindet sich meist ein Index, über den bestimmte Informationen schnell und zielsicher innerhalb des Buchs ausfindig gemacht werden können. Ein Index ist eine sortierte Liste von Schlüsselwörtern, neben denen jeweils eine oder mehrere Seitenzahlen auf die Seiten verweisen, auf denen das jeweilige Schlüsselwort gefunden werden kann. Der SQL Server-Index macht da keinen Unterschied: Er stellt eine sortierte Liste mit Werten dar, bei der jeweils Zeiger auf die [Datenseiten](../relational-databases/pages-and-extents-architecture-guide.md) hinweisen, auf denen sich diese Werte befinden. Der Index selbst wird auf Seiten gespeichert, die die Indexseiten in SQL Server bilden. In einem Buch umfasst der Index meist mehrere Seiten. Wenn Sie nun beispielsweise nach Verweisen auf alle Seiten mit dem Wort „SQL“ suchen, müssen Sie den Index bis zu der Seite durchblättern, die das Schlüsselwort „SQL“ enthält. Von dort gelangen Sie dann über die Verweise zu den angegebenen Buchseiten.  Dies ließe sich durch Hinzufügen einer Seite vor dem Index optimieren, auf der die Seitenzahlen für die einzelnen Buchstaben des Alphabets angegeben werden. Beispiel: „A bis D: Seite 121“, „E bis G: Seite 122“ usw. Mit dieser zusätzlichen Seite entfiele der Schritt, den Index nach dem Ausgangspunkt durchsuchen zu müssen. Eine solche Seite existiert in einem Buch meist nicht, in einem SQL Server-Index jedoch schon. Sie wird als Stammseite des Index bezeichnet. Die Stammseite stellt die Startseite der Baumstruktur dar, die von einem SQL Server-Index verwendet wird. Folgt man der Baumanalogie, so werden die Seiten mit den Zeigern auf die jeweiligen Daten als „Blattseiten“ der Baumstruktur bezeichnet. 
 
  Ein SQL Server-Index ist eine Struktur auf dem Datenträger oder im Arbeitsspeicher, die einer Tabelle oder einer Sicht zugeordnet ist und durch die das Abrufen von Zeilen aus der Tabelle oder Sicht beschleunigt wird. Ein Index enthält Schlüssel, die aus einer oder mehreren Spalten in der Tabelle oder Sicht erstellt werden. Bei Indizes auf Datenträgern werden diese Schlüssel in einer Baumstruktur (B-Struktur) gespeichert, die es SQL Server ermöglicht, die den Schlüsselwerten zugeordnete(n) Zeile(n) schnell und effizient zu finden.  
 
@@ -675,7 +675,7 @@ Der Deltastore besteht aus mindestens einer Zeilengruppe, die **Delta-Zeilengrup
 
 Jede Spalte weist einige ihrer Werte in jeder Zeilengruppe auf. Diese Werte werden als **Spaltensegmente** bezeichnet. Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle. Jede Spalte besitzt ein Spaltensegment in jeder Zeilengruppe.
 
-![Spaltensegment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
+![Spaltensegment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Spaltensegment") 
  
 Wenn der Columnstore-Index eine Zeilengruppe komprimiert, wird jedes Spaltensegment separat komprimiert. Um eine ganze Spalte zu dekomprimieren, muss der Columnstore-Index nur ein Spaltensegment von jeder Zeilengruppe dekomprimieren.   
 

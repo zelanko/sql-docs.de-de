@@ -23,10 +23,10 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320527"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
@@ -154,7 +154,7 @@ ms.locfileid: "75320527"
  Sie verfügen erst dann über eine Wiederherstellungsstrategie, wenn Sie die Sicherungen getestet haben. Es ist entscheidend, dass Sie Ihre Sicherungsstrategie für jede Ihrer Datenbanken gründlich testen, indem Sie eine Kopie der Datenbank auf einem Testsystem wiederherstellen. Sie müssen die Wiederherstellung jedes Sicherungstyps testen, den Sie zu verwenden beabsichtigen. Zudem wird empfohlen, dass Sie nach dem Wiederherstellen der Sicherung zur Überprüfung der Datenbankkonsistenz DBCC CHECKDB für die Datenbank ausführen, um zu überprüfen, ob die Sicherungsmedien beschädigt wurden. 
 
 ### <a name="verify-media-stability-and-consistency"></a>Überprüfen der Medienstabilität und -konsistenz
-Verwenden Sie hierfür die Überprüfungsoptionen, die von den Sicherungsdienstprogrammen (dem Befehl BACKUP T-SQL, SQL Server-Wartungsplänen, Ihrer Sicherungssoftware oder -lösung usw.) bereitgestellt werden. Ein Beispiel finden Sie unter [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md). Verwenden Sie erweiterte Features wie BACKUP CHECKSUM, um Probleme mit dem Sicherungsmedium selbst zu ermitteln. Weitere Informationen finden Sie unter [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
+Verwenden Sie hierfür die Überprüfungsoptionen, die von den Sicherungsdienstprogrammen (dem Befehl BACKUP T-SQL, SQL Server-Wartungsplänen, Ihrer Sicherungssoftware oder -lösung usw.) bereitgestellt werden. Ein Beispiel finden Sie unter [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md). Verwenden Sie erweiterte Features wie BACKUP CHECKSUM, um Probleme mit dem Sicherungsmedium selbst zu ermitteln. Weitere Informationen finden[ Sie unter ](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
 
 ### <a name="document-backuprestore-strategy"></a>Dokumentieren der Sicherungs- und Wiederherstellungsstrategie 
 Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.

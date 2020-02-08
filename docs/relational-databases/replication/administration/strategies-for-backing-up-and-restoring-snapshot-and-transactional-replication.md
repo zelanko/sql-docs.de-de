@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710343"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
@@ -80,7 +80,7 @@ ms.locfileid: "71710343"
   
  Die Replikation ermöglicht das Wiederherstellen replizierter Datenbanken auf dem Server und in die Datenbank, die zum Erstellen der Sicherung herangezogen wurden. Wenn Sie eine Sicherungskopie einer replizierten Datenbank auf einem anderen Server bzw. in einer anderen Datenbank wiederherstellen, können Replikationseinstellungen nicht beibehalten werden. In diesem Fall müssen nach der Wiederherstellung der Sicherungskopien sämtliche Veröffentlichungen und Abonnements neu erstellt werden.  
   
-### <a name="publisher"></a>Verleger  
+### <a name="publisher"></a>Herausgeber  
  Wiederherstellungsschritte werden für die folgenden Replikationstypen bereitgestellt:  
   
 -   Momentaufnahmereplikation  
@@ -201,7 +201,7 @@ ms.locfileid: "71710343"
   
 5.  Führen Sie eine Protokollsicherung oder eine vollständige Sicherung für Datenbank **A** aus. Fahren Sie mit Schritt 6 fort.  
   
-6.  Stellen Sie die Sicherung von Datenbank **A** in der Datenbank **B** wieder her. Datenbank **B** verfügt nun über die Daten aus Datenbank **A**, nicht jedoch über die Replikationskonfiguration. Wenn Sie eine Sicherung auf einem anderen Server wiederherstellen, wird die Replikation entfernt. Folglich ist die Replikation nicht mehr in Datenbank **B** enthalten. Fahren Sie mit Schritt 7 fort.  
+6.  Stellen Sie die Sicherung von Datenbank **A** in der Datenbank **B** wieder her. Datenbank **B** verfügt nun über die Daten aus Datenbank **A**, nicht jedoch über die Replikationskonfiguration. Wenn Sie eine Sicherung auf einem anderen Server wiederherstellen, wird die Replikation entfernt. Folglich ist die Replikation nicht mehr in Datenbank **B** enthalten. Fahren Sie mit Schritt 7 fort,  
   
 7.  Erstellen Sie die Veröffentlichung in Datenbank **B** neu, und erstellen Sie dann die Abonnements zwischen der Datenbank **A** und der Datenbank **B** neu. (Abonnements, die Datenbank **C** mit einbeziehen, werden in einem umfassenderen Schritt behandelt.).  
   

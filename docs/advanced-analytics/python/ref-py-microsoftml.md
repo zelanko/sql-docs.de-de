@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706954"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (Python-Modul in SQL Server)
@@ -30,7 +30,7 @@ Die **microsoftml**-Bibliothek wird in mehreren Microsoft-Produkten bereitgestel
 
 Das **microsoftml**-Modul basiert auf Python 3.5 und ist nur verfügbar, wenn Sie eines der folgenden Microsoft-Produkte oder Downloads installieren:
 
-+ [SQL Server-Machine Learning-Dienste](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 oder höher](https://docs.microsoft.com/machine-learning-server/)
 + [Python-Client-Bibliotheken für einen Data Science-Client](setup-python-client-tools-sql.md)
 
@@ -52,7 +52,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="1-training-functions"></a>1: Trainingsfunktionen
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | Trainiert ein Modellensemble |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Zufällige Gesamtstruktur |
@@ -68,14 +68,14 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ### <a name="categorical-variable-handling"></a>Behandeln von kategorischen Variablen
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | Konvertiert Textspalten in Kategorien |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | Erstellt einen Hash für eine Textspalte und konvertiert diese in Kategorien |
 
 ### <a name="schema-manipulation"></a>Schemabearbeitung
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Verkettet mehrere Spalten zu einem einzelnen Vektor |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Löscht Spalten aus einem Dataset |
@@ -84,7 +84,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ### <a name="variable-selection"></a>Variablenauswahl
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |Wählt Funktionen basierend auf Anzahlen aus |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Wählt Funktionen auf der Grundlage von gegenseitigen Informationen aus |
@@ -92,7 +92,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ### <a name="text-analytics"></a>Textanalyse
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | Konvertiert Textspalten in numerische Funktionen |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | Stimmungsanalyse |
@@ -100,7 +100,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ### <a name="image-analytics"></a>Bildanalyse 
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | Lädt ein Bild |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | Ändert die Größe eines Bilds |
@@ -109,7 +109,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ### <a name="featurization-functions"></a>Featurefunktionen
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | Datentransformation für Datenquellen |
 
@@ -117,7 +117,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="3-scoring-functions"></a>3: Bewertungsfunktionen
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Nimmt Bewertungen unter Verwendung eines Microsoft Machine Learning-Modells vor |
 
@@ -135,7 +135,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 + [Python-Tutorials](../tutorials/sql-server-python-tutorials.md)
 + [Tutorial: Einbetten von Python-Code in T-SQL](../tutorials/run-python-using-t-sql.md)

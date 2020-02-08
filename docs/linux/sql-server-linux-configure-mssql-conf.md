@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783401"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool
@@ -38,7 +38,7 @@ ms.locfileid: "72783401"
 | [Standardverzeichnis für Fehlerprotokolle](#errorlogdir) | Festlegen eines anderen Standardverzeichnisses für neue SQL Server-Dateien für Fehlerprotokolle, Standardprofiler-Ablaufverfolgungen, XE-Systemintegritätssitzungen und Hekaton-XE-Sitzungen. |
 | [Standardverzeichnis für Sicherungen](#backupdir) | Festlegen eines anderen Standardverzeichnisses für neue Sicherungsdateien. |
 | [Typ des Speicherabbilds](#coredump) | Festlegen des Typs der Speicherabbilddateien, die erfasst werden sollen. |
-| [High Availability (Hohe Verfügbarkeit)](#hadr) | Aktivieren von Verfügbarkeitsgruppen. |
+| [Hochverfügbarkeit](#hadr) | Aktivieren von Verfügbarkeitsgruppen. |
 | [Verzeichnis für lokale Überwachungen](#localaudit) | Festlegen eines Verzeichnisses, dem Dateien für lokale Überwachungen hinzugefügt werden sollen. |
 | [Gebietsschema](#lcid) | Festlegen eines Gebietsschemas, das SQL Server verwenden soll. |
 | [Arbeitsspeicherlimit](#memorylimit) | Festlegen des Arbeitsspeicherlimits für SQL Server. |
@@ -66,7 +66,7 @@ ms.locfileid: "72783401"
 | [Standardverzeichnis für Fehlerprotokolle](#errorlogdir) | Festlegen eines anderen Standardverzeichnisses für neue SQL Server-Dateien für Fehlerprotokolle, Standardprofiler-Ablaufverfolgungen, XE-Systemintegritätssitzungen und Hekaton-XE-Sitzungen. |
 | [Standardverzeichnis für Sicherungen](#backupdir) | Festlegen eines anderen Standardverzeichnisses für neue Sicherungsdateien. |
 | [Typ des Speicherabbilds](#coredump) | Festlegen des Typs der Speicherabbilddateien, die erfasst werden sollen. |
-| [High Availability (Hohe Verfügbarkeit)](#hadr) | Aktivieren von Verfügbarkeitsgruppen. |
+| [Hochverfügbarkeit](#hadr) | Aktivieren von Verfügbarkeitsgruppen. |
 | [Verzeichnis für lokale Überwachungen](#localaudit) | Festlegen eines Verzeichnisses, dem Dateien für lokale Überwachungen hinzugefügt werden sollen. |
 | [Gebietsschema](#lcid) | Festlegen eines Gebietsschemas, das SQL Server verwenden soll. |
 | [Arbeitsspeicherlimit](#memorylimit) | Festlegen des Arbeitsspeicherlimits für SQL Server. |
@@ -159,7 +159,7 @@ Mit den Einstellungen **filelocation.defaultdatadir** und **filelocation.default
    sudo mkdir /tmp/data
    ```
 
-1. Legen Sie für das Verzeichnis den **mssql**-Benutzer als Besitzer und Gruppe fest:
+1. Ändern Sie Besitzer und Gruppe des Verzeichnisses in den **mssql**-Benutzer:
 
    ```bash
    sudo chown mssql /tmp/data
@@ -199,7 +199,7 @@ Führen Sie die folgenden Schritte aus, um diese Einstellungen zu ändern:
    sudo mkdir /tmp/masterdatabasedir
    ```
 
-1. Legen Sie für das Verzeichnis den **mssql**-Benutzer als Besitzer und Gruppe fest:
+1. Ändern Sie Besitzer und Gruppe des Verzeichnisses in den **mssql**-Benutzer:
 
    ```bash
    sudo chown mssql /tmp/masterdatabasedir
@@ -285,7 +285,7 @@ Verwenden Sie die folgenden Befehle, um einen neuen Speicherort festzulegen:
    sudo mkdir /tmp/dump
    ```
 
-1. Legen Sie für das Verzeichnis den **mssql**-Benutzer als Besitzer und Gruppe fest:
+1. Ändern Sie Besitzer und Gruppe des Verzeichnisses in den **mssql**-Benutzer:
 
    ```bash
    sudo chown mssql /tmp/dump
@@ -316,7 +316,7 @@ Gehen Sie wie folgt vor, um diese Einstellungen zu ändern:
    sudo mkdir /tmp/logs
    ```
 
-1. Legen Sie für das Verzeichnis den **mssql**-Benutzer als Besitzer und Gruppe fest:
+1. Ändern Sie Besitzer und Gruppe des Verzeichnisses in den **mssql**-Benutzer:
 
    ```bash
    sudo chown mssql /tmp/logs
@@ -348,7 +348,7 @@ Verwenden Sie die folgenden Befehle, um einen neuen Speicherort festzulegen:
    sudo mkdir /tmp/backup
    ```
 
-1. Legen Sie für das Verzeichnis den **mssql**-Benutzer als Besitzer und Gruppe fest:
+1. Ändern Sie Besitzer und Gruppe des Verzeichnisses in den **mssql**-Benutzer:
 
    ```bash
    sudo chown mssql /tmp/backup
@@ -393,7 +393,7 @@ Die Erfassung in der ersten Phase wird durch die Einstellung **coredump.coredump
 
     In der folgenden Tabelle sind die möglichen Werte für **coredump.coredumptype** aufgeführt.
 
-    | Typ | und Beschreibung |
+    | type | Beschreibung |
     |-----|-----|
     | **mini** | „mini“ ist der kleinste Speicherabbild-Dateityp. Mithilfe von Linux-Systeminformationen werden die Threads und Module eines Prozesses ermittelt. Das Speicherabbild enthält nur die Threadstapel und Module der Hostumgebung. Es umfasst keine indirekten Speicherverweise oder globale Variablen. |
     | **miniplus** | „miniplus“ ist mit „mini“ vergleichbar, jedoch werden zusätzliche Speicherbereiche erfasst. Interne Vorgänge in SQL PAL und in der Hostumgebung werden berücksichtigt, wodurch dem Speicherabbild mehrere Speicherbereiche hinzugefügt werden. Diese betreffen:</br></br> – verschiedene globale Variablen</br> – sämtlichen Speicher über 64 TB</br> – benannte Bereiche in **/proc/$pid/maps**</br> – indirekten Arbeitsspeicher aus Threads und Stapeln</br> – Threadinformationen</br> – zugeordnete TEBs und PEBs</br> – Modulinformationen</br> – VMM und die VAD-Struktur |
@@ -507,7 +507,7 @@ Zusätzlich zum Festlegen dieser Werte müssen Sie auch das Routing konfiguriere
 
 Für mssql-conf sind einige weitere Einstellungen verfügbar, mit denen Sie MS DTC überwachen und eine Problembehandlung durchführen können. Diese Einstellungen werden in der folgenden Tabelle kurz beschrieben. Weitere Informationen zu deren Verwendung finden Sie im Windows-Supportartikel [Aktivieren der Diagnoseablaufverfolgungen für MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| mssql-conf-Einstellung | und Beschreibung |
+| mssql-conf-Einstellung | Beschreibung |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen |
@@ -613,7 +613,7 @@ Mit der Einstellung **network.tcpport** können Sie einen anderen TCP-Port festl
 
 Mit den folgenden Optionen können Sie TLS für eine SQL Server-Instanz konfigurieren, die unter Linux ausgeführt wird.
 
-|Option |und Beschreibung |
+|Option |Beschreibung |
 |--- |--- |
 |**network.forceencryption** |Wenn für die Option der Wert 1 festgelegt ist, erzwingt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dass alle Verbindungen verschlüsselt werden. Der Standardwert für diese Option ist 0. |
 |**network.tlscert** |Der absolute Pfad zur Zertifikatdatei, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS verwendet. Beispiel:   `/etc/ssl/certs/mssql.pem`  Das mssql-Konto muss auf die Zertifikatdatei zugreifen können. Microsoft empfiehlt, den Zugriff auf die Datei mithilfe von `chown mssql:mssql <file>; chmod 400 <file>` einzuschränken. |

@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246937"
 ---
 # <a name="oracle-destination"></a>Oracle-Ziel
@@ -79,7 +79,7 @@ Sie können die ODBC-Aufrufe protokollieren, die die Oracle-Quelle an Oracle-Dat
 
 In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des Oracle-Ziels beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.
 
-|Eigenschaftenname|Datentyp|BESCHREIBUNG|Lademodus|
+|Eigenschaftenname|Datentyp|Beschreibung|Lademodus|
 |:-|:-|:-|:-|
 |BatchSize|Integer|Die Größe des Batches für den Massenladevorgang. Dies ist die Anzahl der Zeilen, die als Batch geladen werden.|Wird nur im Batchmodus verwendet.|
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn die Datenquelle keine Codepageinformationen enthält. <br>**Hinweis**: Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|Verwendung für beide Modi.|
@@ -139,7 +139,7 @@ Klicken Sie auf **Neu**. Das Dialogfeld **Oracle-Verbindungs-Manager-Editor**, i
 
 Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optionen sind in der folgenden Tabelle aufgeführt:
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |:-|:-|
 |Tabellenname|Konfigurieren Sie das Oracle-Ziel, um im Batchmodus zu arbeiten. Optionen:<br><br> **Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine in der Datenbank verfügbare Tabelle oder Sicht aus.<br><br> **Transaktionsgröße**: Anzahl von Einfügungen, die in einer einzelnen Transaktion möglich sind. Der Standardwert ist **BatchSize**.<br><br> **Batchgröße**: Geben Sie die Größe des Batches (Anzahl der geladenen Zeilen) für das Massenladen ein.
 |Tabellenname – schnelles Laden|Konfigurieren Sie das Oracle-Ziel für den Schnelllademodus (direkter Pfad). <br><br>Diese Optionen stehen zur Verfügung:<br><br> **Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine in der Datenbank verfügbare Tabelle oder Sicht aus.<br><br> **Paralleles Laden**: Gibt an, ob paralleles Laden aktiviert ist. Weitere Informationen finden Sie unter [Parallelität](#parallelism).<br><br> **Keine Protokollierung**: Dieses Kontrollkästchen dient zum Deaktivieren der Datenbankprotokollierung. Diese Protokollierung ist eine Oracle-Datenbank, die für Wiederherstellungszwecke verwendet wird und nicht mit der Ablaufverfolgung in Zusammenhang steht.<br><br> **Maximale Anzahl von Fehlern**: Die maximale Anzahl der Fehler, die auftreten können, bevor der Datenfluss abgebrochen wird. Der Standardwert ist 0 (null). Dies bedeutet, dass die Fehlerzahl nicht begrenzt ist.<br><br> Alle Fehler, die auftreten können, werden in der Fehlerausgabe zurückgegeben.<br><br> **Übertragungspuffergröße (KB)** : Geben Sie die Größe des Übertragungspuffers ein. Die Standardgröße ist 64 KB.|

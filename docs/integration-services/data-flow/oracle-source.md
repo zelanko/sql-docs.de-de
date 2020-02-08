@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74542203"
 ---
 # <a name="oracle-source"></a>Oracle-Quelle
@@ -49,7 +49,7 @@ Sie können die ODBC-Aufrufe protokollieren, die die Oracle-Quelle an Oracle-Dat
 
 Die benutzerdefinierten Eigenschaften der Oracle-Quelle wie unten beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.
 
-|Eigenschaftenname|Datentyp|BESCHREIBUNG|
+|Eigenschaftenname|Datentyp|Beschreibung|
 |:-|:-|:-|
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind **Tabellenname** und **SQL-Befehl**. Die Standardeinstellung ist der **Tabellenname**.|
 |BatchSize|Integer|Die Größe des Batches für den Massenladevorgang. Dies ist die Anzahl der als Array extrahierten Datensätze. <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
@@ -103,7 +103,7 @@ Klicken Sie auf **Neu**. Das Dialogfeld **Oracle-Verbindungs-Manager-Editor**, i
 
 Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optionen sind in der folgenden Tabelle aufgeführt:
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |:-|:-|
 |Tabelle oder Sicht|Ruft Daten aus einer Tabelle oder Sicht in der Oracle-Datenquelle ab. Wenn diese Option ausgewählt ist, wählen Sie in der Liste eine verfügbare Tabelle oder Sicht für **Name der Tabelle oder Sicht** aus.|
 |SQL-Befehl|Ruft mit einer SQL-Abfrage Daten aus der Oracle-Datenquelle ab. Bei Auswahl dieser Option geben Sie anhand einer der folgenden Methoden eine Abfrage ein: <br>Geben Sie den Text der SQL-Abfrage im Feld **SQL-Befehlstext** ein. <br>Klicken Sie auf **Durchsuchen** , um die SQL-Abfrage aus einer Textdatei zu laden. <br>Klicken Sie auf **Abfrage analysieren** , um die Syntax des Abfragetextes zu überprüfen.|

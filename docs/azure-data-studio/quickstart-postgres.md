@@ -11,10 +11,10 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127252"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -43,14 +43,14 @@ Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../inc
 
    ![Bildschirm „Neue Verbindung“](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | Einstellung       | Beispielwert | und Beschreibung |
+   | Einstellung       | Beispielwert | Beschreibung |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | localhost | Der vollqualifizierte Servername |
-   | **User name** | postgres | Der Benutzername, mit dem Sie sich anmelden möchten. |
+   | **Benutzername** | postgres | Der Benutzername, mit dem Sie sich anmelden möchten. |
    | **Kennwort (SQL-Anmeldung)** | *password* | Das Kennwort für das Konto, mit dem Sie sich anmelden. |
-   | **Kennwort** | *Check* | Aktivieren Sie dieses Kontrollkästchen, wenn Sie nicht immer dann, wenn Sie eine Verbindung herstellen, Ihr Kennwort eingeben möchten. |
-   | **Datenbankname** | \<Default\> | Füllen Sie dies aus, wenn die Verbindung eine Datenbank angeben soll. |
-   | **Servergruppe** | \<Default\> | Mit dieser Option können Sie diese Verbindung einer bestimmten Servergruppe zuweisen, die Sie erstellen. | 
+   | **Kennwort** | *Überprüfung* | Aktivieren Sie dieses Kontrollkästchen, wenn Sie nicht immer dann, wenn Sie eine Verbindung herstellen, Ihr Kennwort eingeben möchten. |
+   | **Datenbankname** | \<Standard\> | Füllen Sie dies aus, wenn die Verbindung eine Datenbank angeben soll. |
+   | **Servergruppe** | \<Standard\> | Mit dieser Option können Sie diese Verbindung einer bestimmten Servergruppe zuweisen, die Sie erstellen. | 
    | **Name (optional)** | *Leer lassen* | Mit dieser Option können Sie einen Anzeigenamen für den Server angeben. | 
 
 5. Wählen Sie **Verbinden**. 
@@ -84,7 +84,7 @@ Klicken Sie nach Abschluss der Abfrage mit der rechten Maustaste auf **Datenbank
 
 1. Ändern Sie den Verbindungskontext mithilfe der Dropdownliste im Abfrage-Editor in **tutorialdb**. 
 
-   ![Ändern des Kontexts](media/quickstart-postgresql/change-context.png)
+   ![Kontext ändern](media/quickstart-postgresql/change-context.png)
 
 2. Fügen Sie die folgende SQL-Anweisung in den Abfrage-Editor ein, und klicken Sie auf **Ausführen**. 
 
@@ -131,6 +131,6 @@ Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken S
 
    ![Anzeigen der Ergebnisse](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
 Erfahren Sie mehr über die [in Azure Data Studio für Postgres verfügbaren Szenarios](postgres-extension.md). 

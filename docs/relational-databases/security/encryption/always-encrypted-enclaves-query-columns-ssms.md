@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6bee04f4a794a503b89b73d4ef4a6a1cef897b4b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595595"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>Abfragen von Spalten unter Verwendung von Always Encrypted mit Secure Enclaves mit SSMS
@@ -23,18 +23,18 @@ ms.locfileid: "73595595"
 In diesem Artikel wird beschrieben, wie SQL Server Management Studio zum Ausgeben von Abfragen verwendet wird, die eine serverseitige Secure Enclave für [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md) verwenden. Dazu gehören:
 - Abfragen, die direkt kryptografische Vorgänge auslösen
 - Abfragen, die umfangreiche Berechnungen auslösen einschließlich Bereichsvergleiche oder Musterabgleichsvorgänge für Spalten, die mit Enclave-fähigen Schlüsseln verschlüsselt wurden
-- Abfragen, die mithilfe der zufälligen Verschlüsselung und Enclave-fähigen Schlüsseln Indizes für Spalten erstellen oder aktualisieren  
+- Abfragen, die mithilfe der zufälligen Verschlüsselung und Enclave-fähigen Schlüsseln Indizes für Spalten erstellen oder aktualisieren.  
 
 Befolgen Sie die Anweisungen im Artikel [Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio](always-encrypted-query-columns-ssms.md), um SSMS zum Ausführen von Abfragen für verschlüsselte Spalten mithilfe von Secure Enclave zu verwenden. Hier sind einige Punkte aufgeführt, die für Enclaves spezifisch sind und die Sie kennen sollten:
 
 - Sie benötigen SSMS-Version 18.3 oder höher.
 - Stellen Sie sicher, dass Sie Abfragen in einem Abfragefenster ausführen, indem Sie Secure Enclave von einer Verbindung verwenden, für die Always Encrypted und Enclave-Berechnungen aktiviert sind. Ausführliche Anweisungen dazu finden Sie unter [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) und [Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung](always-encrypted-query-columns-ssms.md#en-dis).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 - [Entwickeln von Anwendungen mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-client-development.md)
 
 ## <a name="see-also"></a>Weitere Informationen  
-- [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Direkte Konfiguration der Spaltenverschlüsselung mit Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-create-use-indexes.md)
 

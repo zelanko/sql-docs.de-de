@@ -12,20 +12,20 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843777"
 ---
-# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Überwachung und Problembehandlung bei der Datenmigration (Stretch Database)
+# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Überwachen und Behandeln von Problemen der Datenmigration (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Wählen Sie zum Überwachen der Datenmigration in der Stretch Database-Überwachung **Aufgaben | Stretch | Überwachen** für eine Datenbank in SQL Server Management Studio aus.  
+  Wählen Sie **Aufgaben | Stretch | Überwachung** für eine Datenbank in SQL Server Management Studio aus, um die Datenmigration im Stretch Database-Monitor zu überwachen.  
   
-## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Überprüfen des Status der Datenmigration in der Stretch Database-Überwachung  
- Wählen Sie **Aufgaben | Stretch | Überwachen** für eine Datenbank in SQL Server Management Studio aus, um die Stretch Database-Überwachung zu öffnen und die Datenmigration zu überwachen.  
+## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Prüfen des Status der Datenmigration in Stretch Database-Monitor  
+ Wählen Sie **Aufgaben | Stretch | Überwachung** für eine Datenbank in SQL Server Management Studio aus, um Stretch Database-Monitor zu öffnen und die Datenmigration zu überwachen.  
   
 -   Im oberen Bereich der Überwachung werden allgemeine Informationen über die SQL Server-Datenbank mit aktivierter Funktion Stretch-Datenbank und die Azure-Remotedatenbank angezeigt.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73843777"
  Öffnen Sie die dynamische Verwaltungssicht **sys.dm_db_rda_migration_status** , um anzuzeigen, wie viele Batches und Datenzeilen migriert wurden. Weitere Informationen finden Sie unter [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 ##  <a name="Firewall"></a> Problembehandlung der Datenmigration  
- **Zeilen aus meiner Tabelle mit aktivierter Funktion Stretch werden nicht zu Azure migriert. Wo liegt das Problem?**  
+ **Zeilen aus meiner Stretch-aktivierten Tabelle werden nicht zu Azure migriert. Wo liegt das Problem?**  
  Es gibt mehrere Probleme, die die Migration beeinflussen können. Überprüfen Sie folgende Aspekte.  
   
 -   Überprüfen Sie die Netzwerkkonnektivität für den SQL Server-Computer.  
@@ -54,6 +54,6 @@ ms.locfileid: "73843777"
  Möglicherweise müssen Sie eine Regel zu den Azure Firewall Einstellungen des Azure-Servers hinzufügen, damit SQL Server mit dem Azure-Remoteserver kommunizieren kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten und Problembehandlung von Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+ [Verwalten von Stretch Database und Behandeln von Problemen](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   

@@ -1,11 +1,7 @@
 ---
-title: 'Gewusst wie: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097516"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226854"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs
+
 SQL Server Data Tools (SSDT) enthält ein Hilfsprogramm für den Schemavergleich, mit dem Sie zwei Datenbankdefinitionen vergleichen können.  Bei der Quelle und dem Ziel des Vergleichs kann es sich um eine beliebige Kombination von verbundener Datenbank, SQL Server-Datenbankprojekt bzw. -Momentaufnahme oder DACPAC-Datei handeln.  Die Ergebnisse des Vergleichs werden als Satz von Aktionen angezeigt, die für das Ziel ausgeführt werden müssen, damit es mit der Quelle identisch ist.  Nach Abschluss des Vergleichs können Sie das Ziel direkt aktualisieren (wenn das Ziel ein Projekt oder eine Datenbank ist) oder ein Updateskript generieren, das den gleichen Zweck erfüllt.  
   
 Die Unterschiede zwischen Quelle und Ziel werden zur einfachen Überprüfung in einem Raster angezeigt.  Sie können einen Drilldown auf die einzelnen Unterschiede im Ergebnisraster oder im Skriptformular ausführen und sie überprüfen.  Anschließend können Sie bestimmte Unterschiede selektiv ausschließen.  

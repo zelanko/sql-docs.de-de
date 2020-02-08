@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165685"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
@@ -89,7 +89,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
         -  Legen Sie den vorgesehenen Zieldatenbank-Kompatibilitätsgrad fest, den die Benutzerdatenbank verwenden soll, nachdem der QTA-Workflow abgeschlossen wurde.
         Klicken Sie anschließend auf **Weiter**.
     
-       ![Fenster zum Einrichten einer neuen Datenbankupgradesitzung](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![Fenster zum Einrichten einer neuen Datenbankupgradesitzung](../../relational-databases/performance/media/qta-new-session-setup.png "Fenster zum Einrichten eines neuen Datenbankupgrades")  
   
     2.  Im Fenster **Einstellungen** zeigen zwei Spalten den Status **Aktuell** des Abfragespeichers in der Zieldatenbank sowie die **empfohlenen** Einstellungen an. 
         -  Die empfohlenen Einstellungen sind standardmäßig ausgewählt. Wenn Sie jedoch auf das Optionsfeld über der Spalte „Aktuell“ klicken, werden die aktuellen Einstellungen akzeptiert, und Sie können auch die aktuelle Konfiguration des Abfragespeichers optimieren. 
@@ -153,7 +153,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
 
         Die folgende Seite bestätigt, dass der Datenbank-Kompatibilitätsgrad erfolgreich aktualisiert wurde.
 
-        ![Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 2](../../relational-databases/performance/media/qta-step2-substep2.png "Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 2")
 
     3.  **Beobachtete Datenerfassung** fordert den Benutzer auf, den repräsentativen Workloadzyklus erneut auszuführen, sodass der Abfragespeicher eine vergleichende Baseline erfassen kann, die für die Suche nach Optimierungsmöglichkeiten verwendet wird. Verwenden Sie während der Ausführung der Workload die Schaltfläche **Aktualisieren**, um die Liste der zurückgestellten Abfragen zu aktualisieren, falls solche gefunden wurden. Ändern Sie den Wert für **Anzuzeigende Abfragen**, um die Anzahl der angezeigten Abfragen zu beschränken. Die Reihenfolge der Liste wird durch die **Metrik** (Dauer oder CpuTime) und die **Aggregation** („Mittelwert“ ist Standard) beeinflusst. Wählen Sie auch aus, wie viele **Abfragen angezeigt werden sollen**. Nachdem die Workload abgeschlossen wurde, überprüfen Sie **Workloadausführung abgeschlossen**, und klicken Sie dann auf **Weiter**.
 

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
-ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74064128"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installieren von Machine Learning in R und Python auf SQL Server-Computern ohne Internetzugang
@@ -182,7 +182,7 @@ Wenn Sie nur das R-Feature integrieren möchten, sollten Sie die Umgebungsvariab
 
 1. Klicken Sie in der Systemsteuerung auf **System und Sicherheit** > **System** > **Erweiterte Systemeinstellungen** > **Umgebungsvariablen**.
 
-2. Erstellen Sie einen neuen Benutzer oder eine Systemvariable. 
+2. Erstellen Sie eine neue Benutzer- oder Systemvariable. 
 
    + Legen Sie den Variablenname auf `MKL_CBWR` fest.
    + Legen Sie den Variablenwert auf `AUTO` fest.

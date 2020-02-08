@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982420"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -60,7 +60,7 @@ Das bedeutet, dass die Befehle DBCC CHECKALLOC, DBCC CHECKTABLE oder DBCC CHECKC
 >     
 > Da DBCC-Reparaturoptionen für speicheroptimierte Tabellen nicht verfügbar sind, müssen Sie Ihre Datenbanken regelmäßig sichern und die Sicherungen testen. Wenn bei einer speicheroptimierten Tabelle Datenintegritätsprobleme auftreten, müssen Sie die Tabelle aus der letzten bekannten fehlerfreien Sicherung wiederherstellen.    
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntax    
     
@@ -168,14 +168,14 @@ DATA_PURITY
 > [!WARNING] 
 > Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt SQL Server den maximalen Grad an Parallelität aus, der verwendet werden soll.    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Bemerkungen    
 Deaktivierte Indizes werden von DBCC CHECKDB nicht untersucht. Weitere Informationen zu deaktivierten Indizes finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Wenn ein benutzerdefinierter Typ als Typ markiert ist, dessen Sortierreihenfolge eine Bytereihenfolge ist, darf es nur eine Serialisierung des benutzerdefinierten Typs geben. Wenn keine konsistente Serialisierung benutzerdefinierter Typen vorhanden ist, deren Sortierreihenfolge eine Bytereihenfolge ist, wird bei der Ausführung von DBCC CHECKDB der Fehler 2537 ausgegeben. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Typen – Anforderungen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
 
 Da der Zugriff auf die [Ressourcendatenbank](../../relational-databases/databases/resource-database.md) nur im Einzelbenutzermodus möglich ist, kann der DBCC CHECKDB-Befehl für diese Datenbank nicht direkt ausgeführt werden. Wenn DBCC CHECKDB jedoch für die [Masterdatenbank](../../relational-databases/databases/master-database.md) ausgeführt wird, wird intern ein zweiter CHECKDB-Befehl für die Ressourcendatenbank ausgeführt. Das bedeutet, dass DBCC CHECKDB möglicherweise zusätzliche Ergebnisse zurückgibt. Der Befehl gibt zusätzliche Ergebnisse zurück, wenn keine Optionen festgelegt wurden oder wenn entweder die Option `PHYSICAL_ONLY` oder `ESTIMATEONLY` festgelegt wurde.    
 
-Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 wird durch das Ausführen von DBCC CHECKDB der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nicht mehr** gelöscht. In Versionen vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 wird beim Ausführen von DBCC CHECKDB der Plancache gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller späteren Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. 
+Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 wird durch das Ausführen von DBCC CHECKDB der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**nicht mehr** gelöscht. In Versionen vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 wird beim Ausführen von DBCC CHECKDB der Plancache gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller späteren Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>Ausführen logischer Konsistenzprüfungen an Indizes    
 Die logische Konsistenzprüfung an Indizes variiert wie folgt je nach dem Kompatibilitätsgrad der Datenbank:
@@ -213,7 +213,7 @@ Standardmäßig führt DBCC CHECKDB eine parallele Überprüfung von Objekten au
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen    
 Nach der Fertigstellung des Befehls DBCC CHECKDB wird eine Meldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben. Falls der DBCC-Befehl erfolgreich ausgeführt wird, gibt die Meldung den Erfolg und die Dauer der Ausführung an. Falls der DBCC-Befehl vor Abschluss der Überprüfung aufgrund eines Fehlers beendet wird, gibt die Meldung die Beendigung des Befehls, einen Statuswert sowie die Dauer der Ausführung an. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
     
-|Status|und Beschreibung|    
+|State|Beschreibung|    
 |-----------|-----------------|    
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf eine Beschädigung der Metadaten hin, die zur Beendigung des DBCC-Befehls geführt hat.|    
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|    

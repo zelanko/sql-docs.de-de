@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950350"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -43,7 +43,7 @@ Wertet eine Liste von Bedingungen aus und gibt einen von mehreren möglichen Erg
   
  CASE kann in einer beliebigen Anweisung oder Klausel verwendet werden, die einen gültigen Ausdruck zulässt. Beispielsweise können CASE-Anweisungen wie SELECT, UPDATE, DELETE und SET und Klauseln wie select_list, IN, WHERE, ORDER BY und HAVING verwendet werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -199,7 +199,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-### <a name="d-using-case-in-an-update-statement"></a>D. Verwenden von CASE in einer UPDATE-Anweisung  
+### <a name="d-using-case-in-an-update-statement"></a>D: Verwenden von CASE in einer UPDATE-Anweisung  
  Im folgenden Beispiel wird der CASE-Ausdruck in einer UPDATE-Anweisung verwendet, um den Wert zu bestimmen, der für die `VacationHours`-Spalte für Mitarbeiter mit `SalariedFlag` gleich 0 festgelegt wurde. Wenn von `VacationHours` 10 Stunden subtrahiert werden, und dies einen negativen Wert ergibt, wird `VacationHours` um 40 Stunden erhöht; andernfalls wird `VacationHours` um 20 Stunden erhöht. Die OUTPUT-Klausel wird verwendet, um die Werte vor und nach dem Urlaub anzuzeigen.  
   
 ```  
@@ -312,7 +312,7 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. Verwenden einer SELECT-Anweisung mit einem CASE-Ausdruck  
  Innerhalb einer SELECT-Anweisung können mit dem komplexen CASE-Ausdruck Werte im Resultset basierend auf den Vergleichsergebnissen ersetzt werden. Im folgenden Beispiel wird ein CASE-Ausdruck verwendet, um die Anzeige von Produktkategorien so zu ändern, dass sie leichter verständlich werden. Wenn ein Wert nicht vorhanden ist, wird der Text „Not for sale“ (Nicht zu verkaufen) angezeigt.  

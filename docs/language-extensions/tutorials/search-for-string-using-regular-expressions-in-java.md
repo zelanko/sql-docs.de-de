@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Suchen nach RegEx-Zeichenfolgen in Java'
+title: 'Tutorial: Suchen nach RegEx-Zeichenfolgen in Java'
 description: In diesem Tutorial erfahren Sie, wie Sie SQL Server-Spracherweiterungen verwenden und Java-Code ausführen, der eine Zeichenfolge mit regulären Ausdrücken (RegEx) durchsucht.
 author: dphansen
 ms.author: davidph
@@ -9,13 +9,13 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658791"
 ---
-# <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Lernprogramm: Suchen nach einer Zeichenfolge mithilfe regulärer Ausdrücke (RegEx) in Java
+# <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Tutorial: Suchen nach einer Zeichenfolge mithilfe regulärer Ausdrücke (RegEx) in Java
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Tutorial wird gezeigt, wie Sie [SQL Server-Spracherweiterungen](../language-extensions-overview.md) verwenden, um eine Java-Klasse zu erstellen, die zwei Spalten (ID und Text) aus SQL Server und einen RegEx als Eingabeparameter empfängt. Die Klasse gibt an SQL Server zwei Spalten (ID und Text) zurück.
@@ -226,7 +226,7 @@ In diesem Beispiel erstellen Sie zwei externe Bibliotheken. Eine für das SDK un
 
 1. Die SDK-JAR-Datei **mssql-java-lang-extension.jar** wird als Teil von SQL Server 2019 sowohl unter Windows als auch unter Linux installiert.
 
-    + Standardinstallationspfad unter Windows: **[Stamminstallationsverzeichnis der Instanz]\MSSQL\Binn\mssql-java-lang-extension.jar**
+    + Standardinstallationspfad unter Windows: **[Basisverzeichnis der Instanzinstallation]\MSSQL\Binn\mssql-java-lang-extension.jar**
 
     + Standardinstallationspfad unter Linux: **/opt/mssql/lib/mssql-java-lang-extension.jar**
 

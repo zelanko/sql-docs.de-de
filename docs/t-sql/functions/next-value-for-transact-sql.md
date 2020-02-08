@@ -23,10 +23,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670533"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68670533"
   
  Eine umfassende Erläuterung der Erstellung und Verwendung von Sequenzen finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md). Mit [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) können Sie einen Bereich von Sequenznummern reservieren.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -149,7 +149,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="metadata"></a>Metadaten  
  Fragen Sie die [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)-Katalogsicht ab, um Informationen zu Sequenzen zu erhalten.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die **UPDATE**-Berechtigung für das Sequenzobjekt oder das Schema der Sequenz. Ein Beispiel für das Gewähren der Berechtigung finden Sie weiter unten in diesem Thema in Beispiel F.  
@@ -163,7 +163,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Wenn die Standardeinschränkung und das Sequenzobjekt nicht dem gleichen Benutzer gehören, sind Berechtigungen für das Sequenzobjekt auch beim Aufrufen der Standardeinschränkung erforderlich.  
   
-### <a name="audit"></a>Überwachen von  
+### <a name="audit"></a>Audit  
  Sie können die **NEXT VALUE FOR**-Funktion überwachen, indem Sie die SCHEMA_OBJECT_ACCESS_GROUP überwachen.  
   
 ## <a name="examples"></a>Beispiele  
@@ -227,7 +227,7 @@ FROM Person.Contact ;
 GO  
 ```  
   
-### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. Verwenden der NEXT VALUE FOR-Funktion in der Definition einer Standardeinschränkung  
+### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D: Verwenden der NEXT VALUE FOR-Funktion in der Definition einer Standardeinschränkung  
  Die Verwendung der **NEXT VALUE FOR**-Funktion in der Definition einer Standardeinschränkung wird unterstützt. Ein Beispiel für die Verwendung der **NEXT VALUE FOR**-Funktion in einer **CREATE TABLE**-Anweisung finden Sie unter Beispiel C [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md). Im folgenden Beispiel wird `ALTER TABLE` verwendet, um eine Sequenz als Standard einer aktuellen Tabelle hinzuzufügen.  
   
 ```  

@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72586766"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Erstellen einer gruppierten DTC-Ressource für eine Always On-Verfügbarkeitsgruppe
@@ -41,7 +41,7 @@ In der exemplarischen Vorgehensweise werden PowerShell- und T-SQL-Skripts (Trans
 - Clusterdetails (vorhanden):
   - Name: `Cluster`
   - Netzwerkname: `Cluster Network 1`
-  - Knoten: `SQLNODE1, SQLNODE2`
+  - Nodes: `SQLNODE1, SQLNODE2`
   - Freigegebener Speicher: `Cluster Disk 3` (im Besitz von `SQLNODE1`)
 - Clusterdetails (zu erstellen):
   - Netzwerknamenressource: `DTCnet1`
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7.   Erstellen der Verfügbarkeitsgruppe
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] müssen mit dem Befehl **REATE AVAILABILITY GROUP** und der Klausel **WITH DTC_SUPPORT = PER_DB** erstellt werden.  Zurzeit können Sie eine vorhandene Verfügbarkeitsgruppe nicht ändern.  Der Assistent für neue Verfügbarkeitsgruppen lässt es nicht zu, dass Sie die DTC-Unterstützung für eine neue Verfügbarkeitsgruppe aktivieren.  Im folgenden Skript wird die neue Verfügbarkeitsgruppe erstellt und mit der sekundären zusammengeführt.  Führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1` im **SQLCMD-Modus**aus.
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] müssen mit dem Befehl **REATE AVAILABILITY GROUP** und der Klausel **WITH DTC_SUPPORT = PER_DB** erstellt werden.  Zurzeit können Sie eine vorhandene Verfügbarkeitsgruppe nicht ändern.  Der Assistent für neue Verfügbarkeitsgruppen lässt es nicht zu, dass Sie die DTC-Unterstützung für eine neue Verfügbarkeitsgruppe aktivieren.  Im folgenden Skript wird die neue Verfügbarkeitsgruppe erstellt und mit der sekundären zusammengeführt.  Führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1` im **SQLCMD-Modus** aus.
 
 ```sql  
 /*******************************************************************

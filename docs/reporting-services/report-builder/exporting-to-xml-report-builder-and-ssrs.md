@@ -9,10 +9,10 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580758"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "65580758"
 |Diagramm|Wird als Element innerhalb des Elements für den Container gerendert. Reihen sind untergeordnete Elemente des Diagramms, und Kategorien sind untergeordnete Elemente einer Reihe. Alle Diagrammbezeichnungen für jeden Diagrammwert werden gerendert. Bezeichnungen und Werte sind als Attribute eingeschlossen.|  
 |Datenbalken|Wird ähnlich einem Diagramm als Element innerhalb des Elements für den Container gerendert. Ein Datenbalken enthält normalerweise keine Hierarchien oder Bezeichnungen, sondern nur Werte.|  
 |Sparkline|Wird ähnlich einem Diagramm als Element innerhalb des Elements für den Container gerendert. Eine Sparkline enthält normalerweise keine Hierarchien oder Bezeichnungen, sondern nur Werte.|  
-|Messgerät|Wird als Element innerhalb des Elements für den Container gerendert. Es wird ein einzelnes Element mit dem Minimal- und Maximalwert der Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers als Attribute gerendert.|  
+|Maßstab|Wird als Element innerhalb des Elements für den Container gerendert. Es wird ein einzelnes Element mit dem Minimal- und Maximalwert der Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers als Attribute gerendert.|  
 |Indikator|Wird ähnlich einem Messgerät als Element innerhalb des Elements für den Container gerendert. Wird als einzelnes Element mit dem Namen des aktiven Zustands, den verfügbaren Zuständen und dem Datenwert als Attribute gerendert.|  
   
  Für Berichte, die mit der XML-Renderingerweiterung gerendert werden, sind außerdem folgende Regeln zu beachten:  
@@ -62,8 +62,8 @@ ms.locfileid: "65580758"
 |**Float** (oder **Decimal** und jeder integer- oder BYTE-Datentyp)|**xsd:float**|  
 |**Double** (oder **Decimal** und jeder integer- oder BYTE-Datentyp)|**xsd:double**|  
 |**DateTime oder DateTimeOffset**|**xsd:dateTime**|  
-|**Zeit**|**xsd:string**|  
-|**Boolean**|**xsd:boolean**|  
+|**Time**|**xsd:string**|  
+|**Boolescher Wert**|**xsd:boolean**|  
 |**String**, **Char**|**xsd:string**|  
 |Andere|**xsd:string**|  
   
@@ -188,7 +188,7 @@ ms.locfileid: "65580758"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

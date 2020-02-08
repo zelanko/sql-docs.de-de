@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896154"
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
@@ -82,7 +82,7 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 ### <a name="symptoms"></a>Symptome
 *""System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority '[Machine Name]:[Port]'."* (System.ServiceModel.Security.SecurityNegotiationException: Es konnte keine Vertrauensstellung für den sicheren SSL/TLS-Kanal mit der Autorität „[Computername]:[Port]“ eingerichtet werden.)
 
-*"System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel."* (System.Net.WebException: Die zugrunde liegende Verbindung wurde vom Server geschlossen: Es konnte keine Vertrauensstellung für den sicheren SSL/TLS-Kanal eingerichtet werden.)
+*"System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Could not establish trust relationship for the SSL/TLS secure channel."* (System.Net.WebException: Die zugrunde liegende Verbindung wurde vom Server geschlossen: Es konnte keine Vertrauensstellung für den sicheren SSL/TLS-Kanal eingerichtet werden.)
 
 *"System.Security.Authentication.AuthenticationException: System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure."* (System.Security.Authentication.AuthenticationException: Das Remotezertifikat ist laut Validierungsverfahren ungültig.)
 
@@ -102,7 +102,7 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 
 *"System.ServiceModel.Security.SecurityNegotiationException: Could not establish secure channel for SSL/TLS with authority '[Machine Name]:[Port]'."* (System.ServiceModel.Security.SecurityNegotiationException: Es konnte kein sicherer SSL/TLS-Kanal mit der Autorität „[Computername]:[Port]“ hergestellt werden.)
 
-*"System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel."* (System.Net.WebException: Die Anforderung wurde abgebrochen: Es konnte kein sicherer SSL/TLS-Kanal erstellt werden).
+*"System.Net.WebException: Anforderung abgebrochen: Could not create SSL/TLS secure channel."* (System.Net.WebException: Die Anforderung wurde abgebrochen: Es konnte kein sicherer SSL/TLS-Kanal erstellt werden).
 
 ### <a name="solution"></a>Lösung
 Überprüfen Sie mithilfe des folgenden Befehls, ob das Konto, das den Scale Out-Workerdienst ausführt, Zugriff auf das Zertifikat des Scale Out-Workers hat:

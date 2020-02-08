@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698308"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>PowerShell-Cmdlet für die Migrationsauswertung
@@ -55,19 +55,19 @@ Es gibt Syntaxaspekte, auf die hingewiesen werden sollte. Wenn Sie den Parameter
 - `-Schema`
 - `-Object`
 
-Wenn Sie `-InputObject` _nicht_ angeben, dann müssen Sie umgekehrt `-Server` und `-Database` angeben. Wenn Sie `-Server` angeben, haben Sie die Möglichkeit, den Bereich einzuschränken, indem Sie entweder `-Schema` oder `-Object` oder beides angeben.
+Wenn Sie `-InputObject`_nicht_ angeben, dann müssen Sie umgekehrt `-Server` und `-Database` angeben. Wenn Sie `-Server` angeben, haben Sie die Möglichkeit, den Bereich einzuschränken, indem Sie entweder `-Schema` oder `-Object` oder beides angeben.
 
-| Parametername | und Beschreibung |
+| Parametername | Beschreibung |
 | :------------- | :---------- |
 | Datenbank | Der Name der SQL Server-Zieldatenbank. Obligatorisch, wenn `-Server` obligatorisch ist.<br/><br/> Optional in SQLPS. |
 | FolderPath | Der Ordner, in dem das Cmdlet die generierten Berichte speichern soll.<br/><br/> Erforderlich. |
 | InputObject | Das SMO-Zielobjekt des Cmdlets.<br/><br/> In der Windows PowerShell-Umgebung obligatorisch, wenn `-Server` nicht angegeben wird.<br/><br/> Optional in SQLPS. |
 | MigrationType | Der Typ des Migrationsszenarios, den das Cmdlet überprüft. Derzeit ist der einzige Wert der Standardwert **„OLTP“** .<br/><br/> Optional. |
-| Objekt | Der Name des Objekts, zu dem ein Bericht erstellt werden soll. Kann eine Tabelle oder eine gespeicherte Prozedur sein. |
+| Object | Der Name des Objekts, zu dem ein Bericht erstellt werden soll. Kann eine Tabelle oder eine gespeicherte Prozedur sein. |
 | Kennwort | Ist erforderlich, wenn `-Username` erforderlich ist. |
 | Schema | Der Name des Schemas, das das Objekt besitzt, zu dem ein Bericht erstellt werden soll.<br/><br/> Optional. |
 | Server | Der Name der SQL Server-Zielinstanz. In der Windows PowerShell-Umgebung obligatorisch, wenn der Parameter `-InputObject` nicht angegeben wird.<br/><br/> Optional in SQLPS. |
-| Benutzername | Erforderlich, wenn eine Verbindung über SQL Server-Authentifizierung hergestellt wird (im Gegensatz zu Windows-Authentifizierung). Kann andernfalls ausgelassen werden. |
+| Username | Erforderlich, wenn eine Verbindung über SQL Server-Authentifizierung hergestellt wird (im Gegensatz zu Windows-Authentifizierung). Kann andernfalls ausgelassen werden. |
 | &nbsp; | &nbsp; |
 
 ## <a name="prerequisites"></a>Voraussetzungen

@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294125"
 ---
 # <a name="file-system-task"></a>Task Dateisystem
@@ -36,18 +36,18 @@ ms.locfileid: "71294125"
 ## <a name="predefined-file-system-operations"></a>Vordefinierte Dateisystemvorgänge  
  Der Task Dateisystem enthält vordefinierte Vorgänge. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Verzeichnis kopieren|Kopiert einen Ordner zwischen Speicherorten.|  
 |Datei kopieren|Kopiert eine Datei zwischen Speicherorten.|  
-|Verzeichnis erstellen|Erstellt einen Ordner im angegebenen Speicherort.|  
+|Erstellen eines Verzeichnisses|Erstellt einen Ordner im angegebenen Speicherort.|  
 |Verzeichnis löschen|Löscht einen Ordner im angegebenen Speicherort.|  
 |Verzeichnisinhalt löschen|Löscht alle Dateien und Ordner in einem Ordner.|  
 |Datei löschen|Löscht eine Datei im angegebenen Speicherort.|  
 |Verzeichnis verschieben|Verschiebt einen Ordner zwischen Speicherorten.|  
 |Datei verschieben|Verschiebt eine Datei zwischen Speicherorten.|  
 |Datei umbenennen|Benennt eine Datei im angegebenen Speicherort um.|  
-|Attribute festlegen|Legt Attribute für Dateien und Ordner fest. Zu den Attributen zählen Archive, Hidden, Normal, ReadOnly und System. Normalerweise sind keine Attribute angegeben, und die Kombination mit anderen Attributen ist nicht möglich. Alle anderen Attribute können in Kombination mit anderen Attributen verwendet werden.|  
+|Festlegen von Attributen|Legt Attribute für Dateien und Ordner fest. Zu den Attributen zählen Archive, Hidden, Normal, ReadOnly und System. Normalerweise sind keine Attribute angegeben, und die Kombination mit anderen Attributen ist nicht möglich. Alle anderen Attribute können in Kombination mit anderen Attributen verwendet werden.|  
   
  Der Task Dateisystem wird in einer einzelnen Datei oder in einem einzelnen Verzeichnis ausgeführt. Daher unterstützt dieser Task nicht die Verwendung von Platzhalterzeichen, um denselben Vorgang in mehreren Dateien auszuführen. Damit der Task Dateisystem einen Vorgang in mehreren Dateien oder Verzeichnissen wiederholt, platzieren Sie den Task Dateisystem in einem Foreach-Schleifencontainer, wie in den folgenden Schritten beschrieben.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71294125"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den Task 'Dateisystem'  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task "Dateisystem" beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Berichtet den vom Task durchgeführten Vorgang. Der Protokolleintrag wird geschrieben, wenn der Dateisystemvorgang begonnen wird, und schließt Informationen über die Quelle und das Ziel ein.|  
   
@@ -95,11 +95,11 @@ ms.locfileid: "71294125"
   
  Sie können Ausdrücke verwenden, um verschiedene Variablen einzusetzen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **IsDestinationPathVariable**  
  Geben Sie an, ob der Zielpfad in einer Variablen gespeichert ist. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Wahr**|Der Zielpfad ist in einer Variablen gespeichert. Wenn Sie diesen Wert auswählen, wird die dynamische Option **DestinationVariable**angezeigt.|  
 |**False**|Der Zielpfad wird in einem Dateiverbindungs-Manager angegeben. Bei Auswahl dieses Wertes wird die dynamische Option **DestinationConnection**angezeigt.|  
@@ -119,7 +119,7 @@ ms.locfileid: "71294125"
  **Vorgang**  
  Wählen Sie den auszuführenden Dateisystemvorgang aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Verzeichnis kopieren**|Kopieren Sie ein Verzeichnis. Bei Auswahl dieses Wertes werden die dynamischen Optionen für eine Quelle und ein Ziel angezeigt.|  
 |**Datei kopieren**|Kopieren Sie eine Datei. Bei Auswahl dieses Wertes werden die dynamischen Optionen für eine Quelle und ein Ziel angezeigt.|  
@@ -137,7 +137,7 @@ ms.locfileid: "71294125"
   
 |value||  
 |-----------|-|  
-|**True**|Der Zielpfad ist in einer Variablen gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **SourceVariable**angezeigt.|  
+|**Wahr**|Der Zielpfad ist in einer Variablen gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **SourceVariable**angezeigt.|  
 |**False**|Der Zielpfad wird in einem Dateiverbindungs-Manager angegeben. Wenn Sie diesen Wert auswählen, wird die dynamische Option **DestinationVariable**angezeigt.|  
   
 ### <a name="isdestinationpathvariable-dynamic-options"></a>IsDestinationPathVariable (dynamische Optionen)  
@@ -177,7 +177,7 @@ ms.locfileid: "71294125"
  **ReadOnly**  
  Geben Sie an, ob die Datei schreibgeschützt ist.  
   
- **Archive**  
+ **Archivieren**  
  Geben Sie an, ob die Datei oder das Verzeichnis archiviert werden kann.  
   
  **System**  

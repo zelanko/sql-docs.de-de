@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73632951"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
@@ -247,6 +247,6 @@ Mit dieser Version werden mehrere Szenarien für die Aufwärtskompatibilität vo
 - [Installieren von SQL Server 2012-Wartungsupdates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [So identifizieren Sie die SQL Server-Version und -Edition](https://support.microsoft.com/help/321185) 
 - [Ermitteln der Version und Edition von SQL Server](https://support.microsoft.com/kb/321185)  
-- [Von den SQL Server 2014-Editionen unterstützte Funktionen](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Von den Editionen von SQL Server 2014 unterstützte Features](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

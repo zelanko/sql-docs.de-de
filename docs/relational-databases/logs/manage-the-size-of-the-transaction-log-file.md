@@ -15,10 +15,10 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084022"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
@@ -90,11 +90,11 @@ Es folgen einige allgemeine Empfehlungen für die Arbeit mit Transaktionsprotoko
     -  Die Zeit, die für die umfangreichsten Vorgänge zur Indexwartung erforderlich ist
     -  Die Zeit, die für die Ausführung des größten Batches in einer Datenbank erforderlich ist
 
--   Wenn Sie die Option `FILEGROWTH` **autogrow** für Daten- und Protokolldateien festlegen, kann es empfehlenswert sein, diese anstelle von **percentage** in **size** festzulegen, um eine bessere Steuerung der Wachstumsrate zu ermöglichen, da der Prozentsatz eine stetig steigende Zahl darstellt.
+-   Wenn Sie die Option `FILEGROWTH`**autogrow** für Daten- und Protokolldateien festlegen, kann es empfehlenswert sein, diese anstelle von **percentage** in **size** festzulegen, um eine bessere Steuerung der Wachstumsrate zu ermöglichen, da der Prozentsatz eine stetig steigende Zahl darstellt.
     -  Beachten Sie, dass erweiterte Protokollwachstumszeiten von entscheidender Bedeutung sind, da für Transaktionsprotokolle nicht die [schnelle Dateiinitialisierung](../../relational-databases/databases/database-instant-file-initialization.md) verwendet werden kann. 
     -  Als bewährte Methode sollten Sie für Transaktionsprotokolle den Wert der Option `FILEGROWTH` nicht auf über 1.024 MB festlegen. Die Standardwerte für die Option `FILEGROWTH` lauten wie folgt:  
   
-      |Versionsoptionen|Standardwerte|  
+      |Version|Standardwerte|  
       |-------------|--------------------|  
       |Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Daten: 64 MB, Protokolldateien: 64 MB|  
       |Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 1 MB, Protokolldateien: 10 %|  
@@ -112,7 +112,7 @@ Es folgen einige allgemeine Empfehlungen für die Arbeit mit Transaktionsprotoko
     -   Die Datei wird entweder auf eine Größe verkleinert, bei der 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen, oder auf die ursprüngliche Dateigröße, je nachdem, welcher Wert größer ist. 
     -   Informationen zum Ändern der Einstellung der **auto_shrink**-Eigenschaft finden Sie unter [Anzeigen oder Ändern der Eigenschaften einer Datenbank](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) und [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
 [Problembehandlung bei vollen Transaktionsprotokollen &#40;SQL Server-Fehler 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)    
 [Transaktionsprotokollsicherungen – Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Backups)    

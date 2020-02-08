@@ -22,10 +22,10 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904352"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT – FOR Clause (Transact-SQL)
@@ -40,7 +40,7 @@ Mit der FOR-Klausel können Sie eine der folgenden Optionen für Abfrageergebnis
   
 -   Formatieren von Abfrageergebnissen als JSON durch Angabe von **FOR JSON**.  
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -216,7 +216,7 @@ _Verhindern von unerwünschten Zeilenumbrüchen:_ Möglicherweise verwenden Sie 
  Gibt an, dass die Spalten als Unterelemente zurückgegeben werden. Andernfalls werden sie XML-Attributen zugeordnet. Diese Option wird nur in den Modi RAW, AUTO und PATH unterstützt. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Gibt an, dass ein Element, dessen Attribut **xsi:nil** auf **TRUE** festgelegt ist, für NULL-Spaltenwerte erstellt wird. Diese Option kann nur mit der ELEMENTS-Anweisung angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:
+ Gibt an, dass ein Element, dessen Attribut **xsi:nil** auf **TRUE** festgelegt ist, für NULL-Spaltenwerte erstellt wird. Diese Option kann nur mit der ELEMENTS-Anweisung angegeben werden. Weitere Informationen finden Sie unter
 
 - [Generieren von NULL-Werten mithilfe des XSINIL-Parameters](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)
 - [FOR XML in der SELECT-Anweisung](../../relational-databases/xml/for-xml-sql-server.md)

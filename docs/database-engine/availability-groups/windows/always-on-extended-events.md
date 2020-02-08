@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991562"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Konfigurieren erweiterter Ereignisse für Always On-Verfügbarkeitsgruppen
@@ -81,15 +81,15 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Name|availability_replica_state_change|  
-|Kategorie|Always On|  
-|Channel|Operational|  
+|Category|Always On|  
+|Channel|Bei Betrieb|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|und Beschreibung|  
+|Name|Type_name|Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -97,7 +97,7 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
 |previous_state|availability_replica_state|Die Rolle des Replikats vor der Änderung.<br /><br /> **Folgende Werte sind möglich:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|Die Rolle des Replikats nach der Änderung.<br /><br /> **Folgende Werte sind möglich:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -112,20 +112,20 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Name|availability_group_lease_expired|  
-|Kategorie|Always On|  
-|Channel|Operational|  
+|Category|Always On|  
+|Channel|Bei Betrieb|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|und Beschreibung|  
+|Name|Type_name|Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -140,15 +140,15 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Kategorie|Always On|  
+|Category|Always On|  
 |Channel|Analytic|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|und Beschreibung|  
+|Name|Type_name|Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|Lautet der Wert FALSE, wird das automatische Failover für dieses Verfügbarkeitsreplikat dann unwirksam gemacht.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|Lautet der Wert FALSE, wird das automatische Failover für dieses Verfügbarkeitsreplikat dann unwirksam gemacht.<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -177,15 +177,15 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (mehrere Fehlernummern): bei Transport- oder Verbindungsproblemen  
  Jedes gefilterte Ereignis zeigt an, dass ein Konnektivitätsproblem beim Transport- oder Datenbankspiegelungsendpunkt, von dem diese Verfügbarkeitsgruppe abhängig ist, aufgetreten ist.  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Name|error_reported<br /><br /> Zu filternde Zahlen: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
-|Kategorie|errors|  
+|Category|errors|  
 |Channel|Admin|  
   
 #### <a name="error-numbers-to-filter"></a>Zu filternde Fehlernummern  
   
-|Fehlernummer|und Beschreibung|  
+|Fehlernummer|Beschreibung|  
 |------------------|-----------------|  
 |35201|Bei dem Versuch, eine Verbindung mit dem Verfügbarkeitsreplikat '%ls' herzustellen, ist ein Timeout aufgetreten.|  
 |35202|Für die Verfügbarkeitsgruppe '%ls' wurde erfolgreich eine Verbindung zwischen dem Verfügbarkeitsreplikat '%ls' mit der ID [%ls] und dem mit der ID [%ls] hergestellt.  Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.|  
@@ -204,7 +204,7 @@ GO
 |28091|Das Starten des Endpunkts für %S_MSG ohne Authentifizierung wird nicht unterstützt.|  
 |33309|Der Clusterendpunkt kann nicht gestartet werden, weil die Standardkonfiguration des Endpunkts %S_MSG noch nicht geladen wurde.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -240,17 +240,17 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Name|data_movement_suspend_resume|  
-|Kategorie|Always On|  
-|Channel|Operational|  
+|Category|Immer aktiviert|  
+|Channel|Bei Betrieb|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
 ||||  
 |-|-|-|  
-|Name|Type_name|und Beschreibung|  
+|Name|Type_name|Beschreibung|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe, falls vorhanden.|  
 |availability_replica_id|guid|Die ID des Verfügbarkeitsreplikats.|  
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|Die Quelle der Aktion zum Anhalten oder Fortsetzen.|  
 |suspend_reason|unicode_string|Der Grund für die Aktion zum Anhalten, die im Datenbankreplikats-Manager erfasst wird.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -283,15 +283,15 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Name|alwayson_ddl_execution|  
-|Kategorie|Always On|  
+|Category|Always On|  
 |Channel|Analytic|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|und Beschreibung|  
+|Name|Type_name|Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -299,7 +299,7 @@ GO
 |ddl_phase|ddl_opcode|Gibt die Phase des DDL-Vorgangs an: BEGIN, COMMIT oder ROLLBACK.|  
 |-Anweisung.|unicode_string|Der Text der ausgeführten Anweisung.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -316,19 +316,19 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Name|availability_replica_manager_state_change|  
-|Kategorie|Always On|  
-|Channel|Operational|  
+|Category|Always On|  
+|Channel|Bei Betrieb|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|und Beschreibung|  
+|Name|Type_name|Beschreibung|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|Der aktuelle Status des Verfügbarkeitsreplikat-Managers.<br /><br /> Online<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -347,13 +347,13 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Name|error_reported<br /><br /> Fehlernummer 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from "OLD_ROLE" to "NEW_ROLE" due to REASON_MSG (Bei der REPLICATION_TYPE_MSG-Datenbank „DATABASE_NAME“ werden aufgrund von REASON_MSG Rollen von „OLD_ROLE“ in „NEW_ROLE“ geändert)|  
-|Kategorie|errors|  
+|Category|errors|  
 |Channel|Admin|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health-Sitzungsdefinition  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health-Sitzungsdefinition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   

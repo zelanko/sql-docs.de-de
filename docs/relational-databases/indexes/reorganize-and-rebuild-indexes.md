@@ -32,10 +32,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cd844947b93e17684643fe95b5c51335af81b473
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249753"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
@@ -67,7 +67,7 @@ Mithilfe der Systemfunktion [sys.dm_db_index_physical_stats](../../relational-da
 
 Das durch die Funktion **sys.dm_db_index_physical_stats** zurückgegebene Resultset umfasst die folgenden Spalten:
 
-|Column|BESCHREIBUNG|
+|Column|Beschreibung|
 |------------|-----------------|
 |**avg_fragmentation_in_percent**|Der Prozentsatz der logischen Fragmentierung (falsche Reihenfolge der Seiten in einem Index).|
 |**fragment_count**|Die Anzahl der Fragmente (physisch aufeinanderfolgende Blattseiten) im Index.|
@@ -96,7 +96,7 @@ Durch Verwendung der DMV [sys.dm_db_column_store_row_group_physical_stats](../..
 
 Das durch die DMV **sys.dm_db_column_store_row_group_physical_stats** zurückgegebene Resultset umfasst die folgenden Spalten:
 
-|Column|BESCHREIBUNG|
+|Column|Beschreibung|
 |------------|-----------------|
 |**total_rows**|Die Anzahl von Zeilen, die in der Zeilengruppe physisch gespeichert sind. Für komprimierte Zeilengruppen schließt dies die Zeilen ein, die als gelöscht markiert sind.|
 |**deleted_rows**|Die Anzahl von Zeilen, die in einer komprimierten Zeilengruppe physisch gespeichert und zum Löschen markiert sind. Für Zeilengruppen im Deltastore lautet der Wert 0.|
@@ -209,7 +209,7 @@ Erfordert die `ALTER`-Berechtigung für die Tabelle oder Sicht. Der Benutzer mus
 
 Die folgenden Informationen sind auf der Seite **Fragmentierung** verfügbar:
 
-|value|BESCHREIBUNG|
+|value|Beschreibung|
 |---|---|
 |**Seitenfüllgrad**|Gibt den durchschnittlichen Füllgrad der Indexseiten als Prozentwert an. 100 % bedeutet, dass die Indexseiten vollständig gefüllt sind. 50 % heißt, dass jede Indexseite im Durchschnitt zur Hälfte gefüllt ist.|
 |**Fragmentierung gesamt**|Prozentwert der logischen Fragmentierung. Dieser Wert gibt die Anzahl der Seiten in einem Index an, die nicht in Reihenfolge gespeichert sind.|

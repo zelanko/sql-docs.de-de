@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593898"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73593898"
 
 Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Metadateneintrag für einen Spaltenhauptschlüssel stellt einen Schlüssel dar, der in einem externen Schlüsselspeicher gespeichert ist. Der Schlüssel schützt, also verschlüsselt Spaltenverschlüsselungsschlüssel, wenn Sie [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) verwenden. Durch mehrere Spaltenhauptschlüssel wird die regelmäßige Rotation von Schlüsseln ermöglicht und dadurch die Sicherheit erhöht. Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell verwenden. Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -96,7 +96,7 @@ Der Pfad des Schlüssels im Speicher des Spaltenhauptschlüssels. Der Schlüssel
   
     **Format des Schlüsselpfads:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
-     Erläuterungen:  
+     Hierbei gilt:  
   
     *CertificateStoreLocation*  
     Der Zertifikatspeicherort, der dem aktuellen Benutzer oder dem lokalen Computer entsprechen muss. Weitere Informationen finden Sie unter [Local Machine and Current User Certificate Stores (Zertifikatspeicher des lokalen Computers bzw. des aktuellen Benutzers)](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
@@ -119,7 +119,7 @@ Der Pfad des Schlüssels im Speicher des Spaltenhauptschlüssels. Der Schlüssel
   
     **Format des Schlüsselpfads:** *ProviderName*/*KeyIdentifier*  
   
-    Erläuterungen:  
+    Hierbei gilt:  
   
     *ProviderName*  
     Der Name eines Kryptografiedienstanbieters (Cryptography Service Provider, CSP), der CAPI implementiert, für den Speicher des Spaltenhauptschlüssels. Wenn Sie ein HSM als Schlüsselspeicher verwenden, muss der Anbietername dem Namen des CSP entsprechen, den Ihr HSM-Anbieter bereitstellt. Der Anbieter muss auf einem Clientcomputer installiert sein.  
@@ -137,7 +137,7 @@ Der Pfad des Schlüssels im Speicher des Spaltenhauptschlüssels. Der Schlüssel
   
     **Format des Schlüsselpfads:** *ProviderName*/*KeyIdentifier*  
   
-    Erläuterungen:  
+    Hierbei gilt:  
   
     *ProviderName*  
     Der Name des Schlüsselspeicheranbieters (Key Storage Provider, KSP), der die CNG-API (Cryptography: Next Generation) implementiert, für den Speicher des Spaltenhauptschlüssels. Wenn Sie ein HSM als Schlüsselspeicher verwenden, muss der Anbietername dem Namen des KSP entsprechen, den Ihr HSM-Anbieter bereitstellt. Der Anbieter muss auf einem Clientcomputer installiert sein.  
@@ -155,7 +155,7 @@ Der Pfad des Schlüssels im Speicher des Spaltenhauptschlüssels. Der Schlüssel
   
     **Format des Schlüsselpfads:** *KeyUrl*  
   
-    Erläuterungen:  
+    Hierbei gilt:  
   
     *KeyUrl*  
     Die URL des Schlüssels in Azure Key Vault
@@ -167,7 +167,7 @@ Gibt an, dass der Spaltenhauptschlüssel Enclave-fähig ist. Sie können alle mi
 Ein binäres Literal, das das Ergebnis des digitalen Signierens von *Schlüsselpfad* und der Einstellung „ENCLAVE_COMPUTATIONS“ mit dem Spaltenhauptschlüssel ist. Die Signatur zeigt an, ob „ENCLAVE_COMPUTATIONS“ angegeben wurde. Die Signatur schützt die signierten Werte vor Änderungen durch nicht autorisierte Benutzer. Ein Always Encrypted-fähiger Clienttreiber überprüft die Signatur und gibt einen Fehler an die Anwendung zurück, wenn die Signatur ungültig ist. Die Signatur muss mit clientseitigen Tools generiert werden. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel, bevor Sie einen Metadateneintrag für einen Spaltenverschlüsselungsschlüssel in der Datenbank erstellen und bevor Spalten in der Datenbank mithilfe von Always Encrypted verschlüsselt werden können. Ein Metadateneintrag für einen Spaltenhauptschlüssel enthält nicht den tatsächlichen Spaltenhauptschlüssel. Der Spaltenhauptschlüssel muss in einem externen Spaltenschlüsselspeicher (außerhalb von SQL Server) gespeichert werden. Der Name des Schlüsselspeicheranbieters und der Pfad des Spaltenhauptschlüssels in den Metadaten müssen für eine Clientanwendung gültig sein. Die Clientanwendung muss den Spaltenhauptschlüssel verwenden, um einen Spaltenverschlüsselungsschlüssel zu entschlüsseln. Der Spaltenverschlüsselungsschlüssel ist mit dem Spaltenhauptschlüssel verschlüsselt. Die Clientanwendung muss auch verschlüsselte Spalten abfragen.
 

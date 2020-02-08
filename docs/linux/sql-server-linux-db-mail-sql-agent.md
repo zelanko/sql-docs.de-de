@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077451"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Datenbank-E-Mail und E-Mail-Warnungen mit dem SQL-Agent unter Linux
@@ -36,7 +36,7 @@ RECONFIGURE
 GO  
 ```
 
-## <a name="2-create-a-new-account"></a>2. Neues Konto erstellen
+## <a name="2-create-a-new-account"></a>2. Erstellen eines neuen Kontos
 ```sql
 EXECUTE msdb.dbo.sysmail_add_account_sp 
 @account_name = 'SQLAlerts', 

@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982884"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982884"
 
   Ändert den Besitz eines sicherungsfähigen Elements.    
     
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntax    
     
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  Name des Sicherheitsprinzipals, der die Entität besitzt. Datenbankobjekte müssen im Besitz eines Datenbankprinzipals sein, also ein Datenbankbenutzer oder eine Datenbankrolle. Serverobjekte (beispielsweise Datenbanken) müssen im Besitz eines Serverprinzipals (eines Anmeldenamens) sein. Geben Sie **SCHEMA OWNER** als *principal_name* an, um anzugeben, dass das Objekt im Besitz des Prinzipals sein sollte, der das Schema des Objekts besitzt.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Bemerkungen    
  Mit ALTER AUTHORIZATION kann der Besitz einer Entität, die einen Besitzer aufweist, geändert werden. Der Besitz von in der Datenbank enthaltenen Entitäten kann an jeden Prinzipal auf Datenbankebene übertragen werden. Der Besitz von Entitäten auf Serverebene kann nur an Prinzipale auf Serverebene übertragen werden.    
     
 > [!IMPORTANT]    
@@ -181,7 +181,7 @@ ALTER AUTHORIZATION ON
 ## <a name="special-cases-and-conditions"></a>Spezialfälle und Bedingungen    
  In der folgenden Tabelle sind Spezialfälle, Ausnahmen und Bedingungen aufgeführt, die beim Ändern der Autorisierung gelten.    
     
-|Class|Bedingung|    
+|Klasse|Bedingung|    
 |-----------|---------------|    
 |OBJECT|Der Besitz von Triggern, Einschränkungen, Regeln, Standardwerten, Statistiken, Systemobjekten, Warteschlangen, indizierten Sichten oder Tabellen mit indizierten Sichten kann nicht geändert werden.|    
 |SCHEMA|Wenn der Besitz übertragen wird, werden Berechtigungen für in einem Schema enthaltene Objekte, die keine expliziten Besitzer aufweisen, gelöscht. Der Besitzer von sys, dbo oder information_schema kann nicht geändert werden.|    
@@ -229,10 +229,10 @@ In der folgenden Tabelle werden die Anforderungen zusammengefasst:
   
 Ausführendes Konto  |Ziel  |Ergebnis    
 ---------|---------|---------  
-Ein Anmeldename für die SQL Server-Authentifizierung     |Ein Anmeldename für die SQL Server-Authentifizierung         |Success  
-Ein Anmeldename für die SQL Server-Authentifizierung     |Azure AD-Benutzer         |Fehler           
-Azure AD-Benutzer     |Ein Anmeldename für die SQL Server-Authentifizierung         |Success           
-Azure AD-Benutzer     |Azure AD-Benutzer         |Success           
+Ein Anmeldename für die SQL Server-Authentifizierung     |Ein Anmeldename für die SQL Server-Authentifizierung         |Erfolg  
+Ein Anmeldename für die SQL Server-Authentifizierung     |Ein Azure AD-Benutzer         |Fehler           
+Ein Azure AD-Benutzer     |Ein Anmeldename für die SQL Server-Authentifizierung         |Erfolg           
+Ein Azure AD-Benutzer     |Ein Azure AD-Benutzer         |Erfolg           
   
 Um den Azure AD-Besitzer der Datenbank zu bestätigen, führen Sie den folgenden Transact-SQL-Befehl in einer Benutzerdatenbank aus (in diesem Beispiel `testdb`).  
     
@@ -253,7 +253,7 @@ ON d.owner_sid = sl.sid;
     
 ```    
   
-### <a name="best-practice"></a>Bewährte Methoden  
+### <a name="best-practice"></a>Bewährte Methode  
   
 Statt Azure AD-Benutzer als einzelne Datenbankbesitzer zu verwenden, verwenden Sie eine Azure AD-Gruppe als Mitglied der festen Datenbankrolle **db_owner**. In den folgenden Schritten wird gezeigt, wie ein deaktivierter Anmeldename als Datenbankbesitzer und eine Azure Active Directory-Gruppe (`mydbogroup`) als Mitglied der **db_owner**-Rolle konfiguriert wird. 
 1.  Melden Sie sich als Azure AD-Administrator bei SQL Server an, und ändern Sie den Datenbankbesitzer in einen deaktivierten Anmeldenamen für die SQL Server-Authentifizierung. Führen Sie über die Benutzerdatenbank z.B. Folgendes aus:  
@@ -325,7 +325,7 @@ ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;
 GO    
 ```    
     
-### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. Übertragen des Besitzes für einen Endpunkt an einen SQL Server-Anmeldenamen    
+### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D: Übertragen des Besitzes für einen Endpunkt an einen SQL Server-Anmeldenamen    
  Im folgenden Beispiel wird der Besitz des `CantabSalesServer1`-Endpunkts auf `JaePak` übertragen. Da es sich bei dem Endpunkt um ein sicherungsfähiges Element auf Serverebene handelt, kann der Endpunkt nur an einen Prinzipal auf Serverebene übertragen werden.    
     
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.    

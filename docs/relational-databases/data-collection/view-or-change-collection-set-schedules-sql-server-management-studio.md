@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055331"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "74055331"
   
 2.  Klicken Sie mit der rechten Maustaste auf einen Sammlungssatz, der den Modus mit Zwischenspeicherung verwendet, beispielsweise **Abfragestatistik**, und klicken Sie dann auf **Eigenschaften** , um das Dialogfeld [Eigenschaften für Datensammlungssätze](#CollectionSet) zu öffnen.  
   
-3.  Sie können die Sammelhäufigkeit auf der Seite **Allgemein** ändern. Führen Sie hierzu folgende Schritte aus:  
+3.  Sie können die Sammelhäufigkeit auf der Seite **Allgemein** ändern. Gehen Sie dazu folgendermaßen vor:  
   
     1.  Doppelklicken Sie im Detailbereich auf die Zahl, die in der Tabelle **Sammelelemente** für die Spalte **Sammelhäufigkeit (Sek)** angezeigt wird.  
   

@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096065"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen (SQL Server)
@@ -103,15 +103,15 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 Die Ergebnisse dieser Abfrage sind in der folgenden Tabelle aufgeführt:
 
-| Name | Ort | County |
+| Name | City | County |
 | --- | --- | --- |
-| AndersenFamily | BER | Manhattan |
+| AndersenFamily | NY | Manhattan |
 
 Weitere Informationen finden Sie unter [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
   
 ##  <a name="QUERY"></a> Extrahieren eines Objekts oder eines Arrays aus JSON-Text mithilfe der JSON_QUERY-Funktion  
 
-Die **JSON_QUERY** -Funktion extrahiert ein Objekt oder ein Array aus einer JSON-Zeichenfolge. Im folgenden Beispiel wird gezeigt, wie ein JSON-Fragment in den Abfrageergebnissen zurückgegeben wird.  
+Die **JSON_QUERY**-Funktion extrahiert ein Objekt oder ein Array aus einer JSON-Zeichenfolge. Im folgenden Beispiel wird gezeigt, wie ein JSON-Fragment in den Abfrageergebnissen zurückgegeben wird.  
   
 ```sql
 SELECT JSON_QUERY(f.doc, '$.address') AS Address,
@@ -143,10 +143,10 @@ FROM Families f
 
 Die Ergebnisse dieser Abfrage sind in der folgenden Tabelle aufgeführt:
 
-| Name | Ort | givenName | grade |
+| Name | City | givenName | grade |
 | --- | --- | --- | --- |
-| AndersenFamily | BER | Jesse | 1 |
-| AndersenFamily | BER | Lisa | 8 |
+| AndersenFamily | NY | Jesse | 1 |
+| AndersenFamily | NY | Lisa | 8 |
 
 Das Ergebnis sind zwei Zeilen, da eine übergeordnete Zeile mit zwei untergeordneten Zeilen verbunden ist, die durch das Analysieren von zwei Elementen des untergeordneten Subarrays erzeugt werden. Die `OPENJSON`-Funktion analysiert `children`-Fragmente aus der Spalte `doc` und gibt `grade` und `givenName` von jedem Element als Zeilen zurück. Dieses Rowset kann mit dem übergeordneten Dokument verknüpft werden.
  
@@ -194,7 +194,7 @@ Betrachten Sie das folgende Beispiel eines JSON-Texts.
   
 In diesem Beispiel-JSON-Text sind die Datenelemente „a“ und „c“ Zeichenfolgenwerte, während Datenelement „b“ ein Array ist. **JSON_VALUE** und **JSON_QUERY** geben die folgenden Ergebnisse zurück:  
   
-|Pfad|**JSON_VALUE** gibt zurück|**JSON_QUERY** gibt zurück|  
+|`Path`|**JSON_VALUE** gibt zurück|**JSON_QUERY** gibt zurück|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL oder Fehler|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL oder Fehler|  

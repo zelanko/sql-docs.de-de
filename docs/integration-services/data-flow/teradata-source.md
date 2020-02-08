@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245088"
 ---
 # <a name="connect-to-the-teradata-source"></a>Stellen Sie eine Verbindung mit der Teradata-Quelle her.
@@ -40,7 +40,7 @@ Die Teradata-Quelle unterstützt Parallelität, wobei Exportaufträge auf die gl
 
 Die benutzerdefinierten Eigenschaften der Teradata-Quelle sind in der folgenden Tabelle aufgeführt. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.
 
-|Eigenschaftenname|Datentyp|BESCHREIBUNG|
+|Eigenschaftenname|Datentyp|Beschreibung|
 |:-|:-|:-|
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind *Tabellenname* und *SQL-Befehl*. Der Standardwert ist *Tabellenname*.|
 |BlockSize|Integer|Die Blockgröße in Bytes, die beim Zurückgeben von Daten an den Client verwendet wird. Der Standardwert ist 1.048.576 MB (1 MB). Der Mindestwert ist 256 Bytes. Der Höchstwert ist 16.7751.68 Bytes.<br> Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
@@ -104,7 +104,7 @@ Wählen Sie im Bereich **Verbindungs-Manager** die Instanz des Teradata-Verbindu
 
 * Wählen Sie die Methode zum Auswählen von Daten aus der Quelle. Die Optionen sind in der folgenden Tabelle aufgeführt:
 
-    |Option|BESCHREIBUNG|
+    |Option|Beschreibung|
     |:-|:-|
     |Tabellenname – TPT-Export|Ruft Daten aus einer Tabelle oder Sicht in der Teradata-Datenquelle ab. Wenn diese Option ausgewählt ist, wählen Sie in der Liste eine verfügbare Tabelle oder Sicht für **Name der Tabelle oder Sicht** aus.|
     |SQL-Befehl – TPT-Export|Ruft mit einer SQL-Abfrage Daten aus der Teradata-Datenquelle ab. Bei Auswahl dieser Option geben Sie anhand einer der folgenden Methoden eine Abfrage ein: <ul><li>Geben Sie den Text der SQL-Abfrage im Feld **SQL-Befehlstext** ein.</li><li>Wählen Sie **Durchsuchen** aus, um die SQL-Abfrage aus einer Textdatei zu laden.</li><li>Wählen Sie **Abfrage analysieren** aus, um die Syntax des Abfragetexts zu überprüfen.</li></ul>|

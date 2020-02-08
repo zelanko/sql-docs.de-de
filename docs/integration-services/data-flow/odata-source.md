@@ -16,10 +16,10 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
-ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75546536"
 ---
 # <a name="odata-source"></a>OData-Quelle
@@ -85,7 +85,7 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
  **Auflistung oder Ressourcenpfad verwenden**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Collection|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
 |Ressourcenpfad|Rufen Sie mithilfe eines Ressourcenpfads Daten aus der OData-Quelle ab.|  
@@ -107,7 +107,7 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Auflistung oder Ressourcenpfad verwenden = Ressourcenpfad  
  **Resource path**  
- Geben Sie einen Ressourcenpfad ein. Beispiel:  Employees  
+ Geben Sie einen Ressourcenpfad ein. Beispiel: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Quellen-Editor für OData (Seite 'Spalten')
   Verwenden Sie die Seite **Spalten** im Dialogfeld **Quellen-Editor für OData** , um externe (Quell-)Spalten auszuwählen, die in der Ausgabe enthalten sein sollen, und um die Spalten und Ausgabespalten einander zuzuordnen.  

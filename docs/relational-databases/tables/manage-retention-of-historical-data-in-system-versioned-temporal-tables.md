@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401571"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
@@ -314,7 +314,7 @@ Es ist äußerst wichtig, MERGE und SPLIT RANGE-Vorgänge durchzuführen, um das
 
 Lassen Sie uns zuerst visuell die Bedeutung der Optionen RANGE LEFT und RANGE RIGHT erläutern:
 
-![Partitionierung3](../../relational-databases/tables/media/partitioning3.png "|::ref7::|")
+![Partitionierung3](../../relational-databases/tables/media/partitioning3.png "Partitionierung3")
 
 Beim Definieren einer Partitionsfunktion als RANGE LEFT sind die angegebenen Werte die oberen Grenzen der Partitionen. Wenn Sie RANGE RIGHT verwenden, sind die angegebenen Werte die unteren Grenzen der Partitionen. Wenn Sie den MERGE RANGE-Vorgang verwenden, um eine Grenze aus der Definition der Partitionsfunktion zu entfernen, entfernt die zugrunde liegende Implementierung auch die Partition, die die Grenze enthält. Wenn diese Partition nicht leer ist, werden Daten in die Partition verschoben, die das Ergebnis des MERGE RANGE-Vorgangs ist.
 

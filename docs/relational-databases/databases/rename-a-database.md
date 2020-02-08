@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2cfe01b4df32e0966084866a67cea4bfd57bc11
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907429"
 ---
 # <a name="rename-a-database"></a>Umbenennen einer Datenbank
@@ -28,7 +28,7 @@ ms.locfileid: "72907429"
   
 ## <a name="in-this-topic"></a>In diesem Thema
   
-- Vorbereitungen:  
+- Vorbereitungen  
   
      [Einschränkungen](#limitations-and-restrictions)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "72907429"
   - In SQL Server können Sie den Einzelbenutzermodus für eine Datenbank festlegen, um offene Verbindungen zu schließen. Weitere Informationen finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md).
   - Sie müssen in Azure SQL-Datenbank sicherstellen, dass keine andere Benutzer über eine offene Verbindung zur Datenbank verfügen, die Sie umbenennen möchten.
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicherheit  
   
 #### <a name="permissions"></a>Berechtigungen
 

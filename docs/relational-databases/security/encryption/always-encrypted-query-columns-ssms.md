@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595795"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910233"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 Und hier sehen Sie einige Beispiele von Variablen, bei denen SQL Server Management Studio keine Parametrisierung versucht:
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,7 +214,7 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > Ohne Parametrisierung wird die gesamte Abfrage, einschließlich Typumwandlungen, innerhalb von SQL Server/Azure SQL-Datenbank verarbeitet. Bei aktivierter Parametrisierung erfolgen einige Typumwandlungen durch .NET Framework innerhalb von SQL Server Management Studio. Aufgrund der Unterschiede zwischen dem Typsystem von .NET Framework und dem von SQL Server (z.B. verschiedene Genauigkeit einiger Typen wie „float“) kann eine Abfrage mit aktivierter Parametrisierung andere Ergebnisse als die Abfrage liefern, die ohne aktivierte Parametrisierung ausgeführt wird. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 - [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
 
 

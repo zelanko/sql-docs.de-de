@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727712"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Häufige Probleme mit dem Launchpad-Dienst und der Ausführung externer Skripts in SQL Server
@@ -131,9 +131,9 @@ Wenn Sie die Machine Learning-Komponente installiert und dann aktiviert haben, a
 
 4. Durch den Neustart des Diensts wird das Problem in der Regel behoben, sodass Machine Learning-Skripts ausgeführt werden können. Wenn das Problem durch den Neustart nicht behoben werden kann, notieren Sie den Pfad und die Argumente in der Eigenschaft **Binärer Pfad**, und führen Sie die folgenden Schritte aus:
 
-    A. Überprüfen Sie die Konfigurationsdatei des Launchers, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
+    a. Überprüfen Sie die Konfigurationsdatei des Launchers, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
 
-    B. Stellen Sie sicher, dass die von Launchpad verwendete Windows-Gruppe eine Verbindung mit der SQL Server-Instanz herstellen kann.
+    b. Stellen Sie sicher, dass die von Launchpad verwendete Windows-Gruppe eine Verbindung mit der SQL Server-Instanz herstellen kann.
 
     c. Starten Sie den Launchpad-Dienst neu, wenn Sie Änderungen an den Diensteinstellungen vorgenommen haben.
 
@@ -178,7 +178,7 @@ EXEC sp_execute_external_script @language = N'R',
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```
 
-#### <a name="sample-results"></a>Beispielergebnisse
+#### <a name="sample-results"></a>Bespielergebnisse
 
 *STDOUT message(s) from external script:*
 

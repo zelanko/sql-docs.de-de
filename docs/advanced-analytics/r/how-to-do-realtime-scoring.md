@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727434"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Vorgehensweise: Generieren von Prognosen und Vorhersagen mit Modellen für maschinelles Lernen in SQL Server
@@ -97,7 +97,7 @@ Die Serialisierung eines Modells in ein Binärformat ist hilfreich, aber nicht e
 
 ## <a name="scoring-in-related-products"></a>Bewertung in verwandten Produkten
 
-Wenn Sie den [eigenständigen Server](r-server-standalone.md) oder einen [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) verwenden, stehen Ihnen neben gespeicherten Prozeduren und T-SQL-Funktionen andere Optionen zum schnellen Generieren von Vorhersagen zur Verfügung. Sowohl der eigenständige Server als auch der Machine Learning Server unterstützt das Konzept eines *Webdiensts* für die Codebereitstellung. Sie können ein mit R oder Python vorab trainiertes Modell als Webdienst bündeln, der zur Runtime aufgerufen wird, um neue Dateneingaben auszuwerten. Weitere Informationen dazu finden Sie in diesen Artikeln:
+Wenn Sie den [eigenständigen Server](r-server-standalone.md) oder einen [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) verwenden, stehen Ihnen neben gespeicherten Prozeduren und T-SQL-Funktionen andere Optionen zum schnellen Generieren von Vorhersagen zur Verfügung. Sowohl der eigenständige Server als auch der Machine Learning Server unterstützt das Konzept eines *Webdiensts* für die Codebereitstellung. Sie können ein mit R oder Python vorab trainiertes Modell als Webdienst bündeln, der zur Runtime aufgerufen wird, um neue Dateneingaben auszuwerten. Weitere Informationen und Beispiele finden Sie in diesen Artikeln:
 
 + [Was sind Webdienste in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Operationalisieren der Analyse mit Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
@@ -106,7 +106,7 @@ Wenn Sie den [eigenständigen Server](r-server-standalone.md) oder einen [Micros
 + [mrsdeploy-Paket für R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)

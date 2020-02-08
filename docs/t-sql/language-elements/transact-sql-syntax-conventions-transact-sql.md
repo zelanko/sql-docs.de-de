@@ -29,10 +29,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981904"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
@@ -46,10 +46,10 @@ In der folgenden Tabelle werden die Konventionen aufgeführt und beschrieben, di
 |_Kursiv_|Vom Benutzer anzugebende Parameter der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax.|  
 |**Fett**|Geben Sie Datenbanknamen, Tabellennamen, Spaltennamen, Indexnamen, gespeicherte Prozeduren, Hilfsprogramme, Datentypnamen und Text genau wie angegeben ein.|  
 |Unterstrichen|Gibt den Standardwert an, der verwendet wird, wenn die Klausel mit dem unterstrichenen Wert in der Anweisung ausgelassen wird.|  
-|&#124; (Senkrechter Strich)|Trennt in eckigen oder geschweiften Klammern eingeschlossene Syntaxelemente. Sie können nur eines der Elemente verwenden.|  
+|&#124; (senkrechter Strich)|Trennt in eckigen oder geschweiften Klammern eingeschlossene Syntaxelemente. Sie können nur eines der Elemente verwenden.|  
 |`[ ]` (eckige Klammern)|Optionale Syntaxelemente. Geben Sie die Klammern nicht mit ein.|  
 |{ } (geschweifte Klammern)|Erforderliche Syntaxelemente. Geben Sie die geschweiften Klammern nicht mit ein.|  
-|[ **,** ..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
+|[ **,** ..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas getrennt.|  
 |[..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
 |;|Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht erforderlich, jedoch in einer zukünftigen Version.|  
 |\<label> ::=|Der Name eines Syntaxblockes. Verwenden Sie diese Konvention zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die Sie an mehreren Stellen innerhalb einer Anweisung verwenden können. Jede Stelle, an der der Syntaxblock verwendet werden könnte, wird durch die in spitze Klammern eingeschlossene Bezeichnung angezeigt: \<label>.<br /><br /> Ein Set ist eine Collection von Ausdrücken, z.B. \<Gruppierungssatz>. Eine Liste ist eine Collection von Sets, z.B. \<Liste zusammengesetzter Elemente>.|  
@@ -84,7 +84,7 @@ Wenn Sie auf ein bestimmtes Objekt verweisen, müssen Sie nicht immer den Server
   
 Um Zwischenknoten wegzulassen, verwenden Sie Punkte, um diese Positionen anzuzeigen. In der folgenden Tabelle sind die gültigen Formate für Objektnamen aufgeführt.  
   
-|Objektverweisformat|und Beschreibung|  
+|Objektverweisformat|Beschreibung|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|Vierteiliger Name.|  
 |_server_._database_.._object_|Der Schemaname wird weggelassen.|  

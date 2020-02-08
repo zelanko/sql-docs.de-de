@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776383"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Konfigurieren von Repositorys zum Installieren und Upgraden von SQL Server für Linux
@@ -20,11 +20,11 @@ ms.locfileid: "75776383"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-In diesem Artikel wird beschrieben, wie das richtige Repository für die Installation und das Upgrade von SQL Server 2017 und SQL Server 2019 unter Linux konfiguriert wird. Ganz oben in Ihrer aktuellen Auswahl steht **Red Hat (RHEL)**.
+In diesem Artikel wird beschrieben, wie das richtige Repository für die Installation und das Upgrade von SQL Server 2017 und SQL Server 2019 unter Linux konfiguriert wird. Ganz oben in Ihrer aktuellen Auswahl steht **Red Hat (RHEL)** .
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-In diesem Artikel wird beschrieben, wie das richtige Repository für die Installation und das Upgrade von SQL Server 2017 und SQL Server 2019 unter Linux konfiguriert wird. Ganz oben in Ihrer aktuellen Auswahl steht **SUSE (SLES)**.
+In diesem Artikel wird beschrieben, wie das richtige Repository für die Installation und das Upgrade von SQL Server 2017 und SQL Server 2019 unter Linux konfiguriert wird. Ganz oben in Ihrer aktuellen Auswahl steht **SUSE (SLES)** .
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -38,7 +38,7 @@ In diesem Artikel wird beschrieben, wie das richtige Repository für die Install
 
 Wenn Sie SQL Server für Linux installieren, müssen Sie ein Microsoft-Repository konfigurieren. Dieses Repository dient zum Abrufen des Datenbank-Engine-Pakets **mssql-server** und der zugehörigen SQL Server-Pakete. Derzeit gibt es im Wesentlichen fünf Repositorys:
 
-| Repository | Name | BESCHREIBUNG |
+| Repository | Name | Beschreibung |
 |---|---|---|
 | **2019** | **mssql-server-2019** | Repository zum kumulativen Update von SQL Server 2019 |
 | **2019 GDR** | **mssql-server-2019-gdr** | Repository zur allgemeinen Vertriebsversion von SQL Server 2019, nur für kritische Updates |
@@ -50,7 +50,7 @@ Wenn Sie SQL Server für Linux installieren, müssen Sie ein Microsoft-Repositor
 
 Beachten Sie, dass es für jede Vertriebsversion im Wesentlichen zwei Arten von Repositorys gibt:
 
-- **Kumulative Updates (Cumulative Updates, CU)**: Das CU-Repository enthält Pakete für das SQL Server-Basisrelease sowie sämtliche Fehlerbehebungen und Verbesserungen seit diesem Release. Kumulative Updates gelten für eine bestimmte Releaseversion wie SQL Server 2019. Sie werden in regelmäßigen Abständen veröffentlicht.
+- **Kumulative Updates (Cumulative Updates, CU)** : Das CU-Repository enthält Pakete für das SQL Server-Basisrelease sowie sämtliche Fehlerbehebungen und Verbesserungen seit diesem Release. Kumulative Updates gelten für eine bestimmte Releaseversion wie SQL Server 2019. Sie werden in regelmäßigen Abständen veröffentlicht.
 
 - **Allgemeine Vertriebsversion (General Distribution Release, GDR)** Das GDR-Repository enthält Pakete für das SQL Server-Basisrelease sowie ausschließlich kritische Fixes und Sicherheitsupdates seit diesem Release. Mit diesen Updates wird auch das nächste CU-Release ergänzt.
 

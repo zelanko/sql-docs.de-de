@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727384"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Was ist eine eigenständige Machine Learning Server- oder R Server-Instanz in SQL Server?
@@ -26,11 +26,11 @@ In SQL Server 2016 heißt dieses Feature **R Server (Standalone)** und schließ
 > [!Note]
 > Der beim SQL Server-Setup installierte, eigenständige Server entspricht funktional den Nicht-SQL-Versionen von [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), die dieselben Benutzerszenarios, wie Remoteausführung, Operationalisierung und Webdienste, sowie die komplette Sammlung von R- und Python-Bibliotheken unterstützen.
 
-## <a name="components"></a>Components
+## <a name="components"></a>Komponenten
 
 SQL Server 2016 unterstützt nur R. SQL Server-2017 unterstützt R und Python. In der folgenden Tabelle sind die in den einzelnen Versionen enthaltenen Features beschrieben.
 
-| Komponente | und Beschreibung |
+| Komponente | Beschreibung |
 |-----------|-------------|
 | R-Pakete | [**RevoScaleR**](ref-r-revoscaler.md) ist die Hauptbibliothek für skalierbare R-Skripts mit Funktionen zur Datenmanipulation, -transformation, -visualisierung und -analyse.  <br/>[**MicrosoftML**](ref-r-microsoftml.md) stellt Machine Learning-Algorithmen zur Erstellung von benutzerdefinierten Modellen für die Text-, Bild- und Stimmungsanalyse bereit. <br/>[**sqlRUtils**](ref-r-sqlrutils.md) bietet Hilfsfunktionen zum Einfügen von R-Skripts in eine gespeicherte T-SQL-Prozedur, Registrieren dieser gespeicherten Prozedur bei einer Datenbank und Ausführen der gespeicherten Prozedur aus einer R-Entwicklungsumgebung.<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md) bietet die Bereitstellung von Webdiensten (nur in SQL Server 2017). <br/>[**olapR**](ref-r-olapr.md) dient der Angabe von MDX-Abfragen in R.|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) ist die Open-Source-Distribution für R von Microsoft. Das Paket und der Interpreter sind enthalten. Verwenden Sie immer die im Setup enthaltene Version von MRO. |
@@ -68,7 +68,7 @@ Auf einem eigenständigen Server ist es üblich, lokal mit einer auf dem gleiche
 + [Einrichten von R-Tools](set-up-a-data-science-client.md)
 + [Einrichten von Python-Tools](../python/setup-python-client-tools-sql.md)
 
-### <a name="step-3-write-your-first-script"></a>Schritt 3: Schreiben Ihres ersten Skripts
+### <a name="step-3-write-your-first-script"></a>Schritt 3: Schreiben Ihres ersten Skripts
 
 Schreiben Sie mithilfe von Funktionen aus revoscaler bzw. revoscalepy und den Machine Learning-Algorithmen ein R- oder Python-Skript.
   
@@ -90,7 +90,7 @@ Beschreibungen neuer oder geänderter Funktionen finden Sie im Artikel [CAB-Down
 
 Weitere Informationen zum Anwenden von Updates auf eine vorhandene Instanz finden Sie in der Installationsanleitung unter [Anwenden von Updates](../install/sql-machine-learning-standalone-windows-install.md#apply-cu).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [Installieren von Machine Learning Server (eigenständig) oder R Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
 

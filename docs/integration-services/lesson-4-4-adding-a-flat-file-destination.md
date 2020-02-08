@@ -11,10 +11,10 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae02b9188ecc9917d26532633e4d5a253d4f326b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295947"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lektion 4.4: Hinzufügen eines Flatfileziels
@@ -29,7 +29,7 @@ In dieser Aufgabe speichern Sie alle Informationen zu den fehlerhaften Zeilen zu
   
 ## <a name="add-and-configure-a-flat-file-destination"></a>Hinzufügen und Konfigurieren eines Flatfileziels  
   
-1.  Wählen Sie die Registerkarte **Datenfluss** aus.  
+1.  Klicken Sie auf die Registerkarte **Datenfluss**.  
   
 2.  Erweitern Sie in der **SSIS-Toolbox** die Option **Weitere Ziele**, und ziehen Sie **Flatfileziel** auf die Datenfluss-Entwurfsoberfläche. Setzen Sie das **Flatfileziel** direkt unter die **Get Error Description** -Transformation.  
   
@@ -53,7 +53,7 @@ In dieser Aufgabe speichern Sie alle Informationen zu den fehlerhaften Zeilen zu
   
     Zusätzlich zu den Spalten aus der Quelldatendatei sind drei neue Spalten vorhanden: ErrorCode, ErrorColumn und ErrorDescription. Diese Spalten sind die Fehlerausgabe der Lookup Currency Key-Transformation und des Skripts in der Get Error Description-Transformation (Fehlerbeschreibung abrufen). Sie können diese Spalten verwenden, um die Ursache für das Fehlschlagen der Zeile zu beheben.  
   
-12. Wählen Sie **OK**.  
+12. Klicken Sie auf **OK**.  
   
 13. Deaktivieren Sie im **Ziel-Editor für Flatfiles**das Kontrollkästchen **Daten in der Datei überschreiben** .  
   
@@ -61,7 +61,7 @@ In dieser Aufgabe speichern Sie alle Informationen zu den fehlerhaften Zeilen zu
   
 14. Wählen Sie im **Ziel-Editor für Flatfiles** die Option **Zuordnungen** aus, um zu überprüfen, ob alle Spalten ordnungsgemäß sind. Optional können Sie die Spalten im Ziel umbenennen.  
   
-15. Wählen Sie **OK**.  
+15. Klicken Sie auf **OK**.  
   
 ## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 5: Testen des Tutorialpakets aus Lektion 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658821"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Was sind SQL Server-Spracherweiterungen?
@@ -54,7 +54,7 @@ Entwickler schreiben Code in der Regel auf ihrem eigenen Laptop oder auf einer A
 
 + **Verwenden Sie die gespeicherte Systemprozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** , um Ihren Java-Code in SQL Server auszuführen.
 
-### <a name="step-3-write-your-first-code"></a>Schritt 3: Schreiben von Code
+### <a name="step-3-write-your-first-code"></a>Schritt 3: Schreiben von Code
 
 Führen Sie Java-Code über ein T-SQL-Skript aus:
 

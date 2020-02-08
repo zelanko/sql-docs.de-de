@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294769"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Bestimmen, ob die Änderungsdaten bereit sind
@@ -77,11 +77,11 @@ ms.locfileid: "71294769"
   
 3.  Aktivieren Sie im **For-Schleifen-Editor**die folgenden Optionen:  
   
-    1.  Geben Sie für **InitExpression** `@DataReady = 0`ein.  
+    1.  Geben Sie für **InitExpression**`@DataReady = 0`ein.  
   
          Dieser Ausdruck legt den Anfangswert der Schleifenvariablen fest.  
   
-    2.  Geben Sie für **EvalExpression** `@DataReady == 0`ein.  
+    2.  Geben Sie für **EvalExpression**`@DataReady == 0`ein.  
   
          Wenn dieser Ausdruck **False**ergibt, wird die Ausführung aus der Schleife weitergegeben, und das inkrementelle Laden beginnt.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "71294769"
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks. In diesem Fall auf den Erfolg des Tasks "SQL ausführen".  
   
-    3.  Geben Sie für **Ausdruck** `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`ein.  
+    3.  Geben Sie für **Ausdruck**`@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`ein.  
   
     4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "71294769"
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks "SQL ausführen".  
   
-    3.  Geben Sie für **Ausdruck** `@DataReady == 0`ein.  
+    3.  Geben Sie für **Ausdruck**`@DataReady == 0`ein.  
   
     4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "71294769"
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks. In diesem Fall auf den Erfolg des Tasks "SQL ausführen".  
   
-    3.  Geben Sie für **Ausdruck** `@DataReady == 1 || @DataReady == 5`ein.  
+    3.  Geben Sie für **Ausdruck**`@DataReady == 1 || @DataReady == 5`ein.  
   
     4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   

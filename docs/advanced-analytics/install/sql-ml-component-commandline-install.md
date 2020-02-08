@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727588"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installieren von R- und Python-Komponenten für SQL Server für maschinelles Lernen über die Befehlszeile
@@ -48,7 +48,7 @@ Das Argument FEATURES ist ebenso erforderlich wie Lizenzbedingungen.
 Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Mithilfe des /QS-Schalters wird nur der Fortschritt angezeigt, es sind jedoch keine Eingaben möglich. Außerdem werden beim Auftreten von Fehlern keine Fehlermeldungen angezeigt. Der /QS-Parameter wird nur unterstützt, wenn /Action=install angegeben wurde.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-| Argumente | und Beschreibung |
+| Argumente | Beschreibung |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installiert die datenbankinterne Version: SQL Server R Services (datenbankintern).  |
 | /FEATURES = SQL_SHARED_MR | Installiert das R-Feature für die eigenständige Version: SQL Server R Server (eigenständig). Ein eigenständiger Server ist ein „freigegebenes Feature“, das nicht an eine Datenbank-Engine-Instanz gekoppelt ist.|
@@ -59,7 +59,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-| Argumente | und Beschreibung |
+| Argumente | Beschreibung |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installiert die datenbankinterne Version: SQL Server Machine Learning Services (datenbankintern).  |
 | /FEATURES = SQL_INST_MR | Koppeln Sie dieses Argument mit AdvancedAnalytics. Installiert das (datenbankinterne) R-Feature, einschließlich Microsoft R Open und der proprietären R-Pakete. |
@@ -70,11 +70,11 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 | /IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie den Lizenzbedingungen für die Verwendung der Python-Komponenten zugestimmt haben. |
 | /IACCEPTSQLSERVERLICENSETERMS | Gibt an, dass Sie den Lizenzbedingungen für die Verwendung von SQL Server zugestimmt haben.|
 | MRCACHEDIRECTORY | Legt bei Offlinesetups den Ordner fest, der die CAB-Dateien für die R-Komponente enthält. |
-| MPYCACHEDIRECTORY | Zur künftigen Verwendung reserviert. Verwenden Sie %TEMP%, um die CAB-Dateien für die Python-Komponente zur Installation auf Computern zu speichern, die nicht über eine Internetverbindung verfügen. |
+| MPYCACHEDIRECTORY | Für die zukünftige Verwendung reserviert. Verwenden Sie %TEMP%, um die CAB-Dateien für die Python-Komponente zur Installation auf Computern zu speichern, die nicht über eine Internetverbindung verfügen. |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-| Argumente | und Beschreibung |
+| Argumente | Beschreibung |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installiert die datenbankinterne Version: SQL Server Machine Learning Services (datenbankintern).  |
 | /FEATURES = SQL_INST_MR | Koppeln Sie dieses Argument mit AdvancedAnalytics. Installiert das (datenbankinterne) R-Feature, einschließlich Microsoft R Open und der proprietären R-Pakete. |
@@ -86,7 +86,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 | /IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie den Lizenzbedingungen für die Verwendung der Python-Komponenten zugestimmt haben. |
 | /IACCEPTSQLSERVERLICENSETERMS | Gibt an, dass Sie den Lizenzbedingungen für die Verwendung von SQL Server zugestimmt haben.|
 | MRCACHEDIRECTORY | Legt bei Offlinesetups den Ordner fest, der die CAB-Dateien für die R-Komponente enthält. |
-| MPYCACHEDIRECTORY | Zur künftigen Verwendung reserviert. Verwenden Sie %TEMP%, um die CAB-Dateien für die Python-Komponente zur Installation auf Computern zu speichern, die nicht über eine Internetverbindung verfügen. |
+| MPYCACHEDIRECTORY | Für die zukünftige Verwendung reserviert. Verwenden Sie %TEMP%, um die CAB-Dateien für die Python-Komponente zur Installation auf Computern zu speichern, die nicht über eine Internetverbindung verfügen. |
 ::: moniker-end
 
 ## <a name="indb"></a> Installation von datenbankinternen Instanzen
@@ -206,7 +206,7 @@ Um ein R-Konsolenfenster zu öffnen, wechseln Sie zu `\Program files\Microsoft S
 
 Um einen Python-Befehl zu öffnen, wechseln Sie zu `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`, und doppelklicken Sie auf **python.exe**.
 
-## <a name="get-help"></a>Hilfe
+## <a name="get-help"></a>Hier erhalten Sie Hilfe
 
 Benötigen Sie Hilfe bei Installation oder Upgrade? Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
 

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 6cff48da9e251fedd56d676349480e350c88bcae
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531536"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2019"></a>Unterstützte Versions- und Editionsupgrades in SQL Server 2019
@@ -33,7 +33,7 @@ ms.locfileid: "73531536"
 - Bevor eine Edition von [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] auf eine andere Edition aktualisiert wird, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird.  
 - Überprüfen Sie die unterstützte [Hard- und Software](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
 - Aktivieren Sie vor dem Upgrade auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Windows-Authentifizierung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, und überprüfen Sie die erforderliche Standardkonfiguration. Dabei muss das Konto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts Mitglied der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Gruppe der Systemadministratoren sein.
-- Um auf [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] aktualisieren zu können, müssen Sie ein unterstütztes Betriebssystem ausführen. Weitere Informationen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
+- Um auf [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]aktualisieren zu können, müssen Sie ein unterstütztes Betriebssystem ausführen. Weitere Informationen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
 - Das Upgrade wird blockiert, wenn noch ein Neustart aussteht.  
 - Das Upgrade wird blockiert, wenn der Windows Installer-Dienst nicht ausgeführt wird.
 

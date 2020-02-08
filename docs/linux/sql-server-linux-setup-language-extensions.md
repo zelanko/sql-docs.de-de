@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660779"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971223"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installieren von SQL Server-Spracherweiterungen unter Linux
 
@@ -52,7 +52,7 @@ Führen Sie die Deinstallation auf der niedrigsten Paketebene durch. Alle Upstre
 
 Die Befehle zum Entfernen von Paketen können Sie der folgenden Tabelle entnehmen.
 
-| Platform  | Befehl(e) zum Entfernen eines Pakets | 
+| Plattform  | Befehl(e) zum Entfernen eines Pakets | 
 |-----------|----------------------------|
 | RHEL  | `sudo yum remove msssql-server-extensibility-java` |
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
@@ -80,13 +80,13 @@ Für sämtliche betriebssystemspezifischen Installationsanweisungen ist die *hö
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ Sie sollten über ein Tool zum Ausführen von T-SQL-Befehlen verfügen. Sie benötigen einen Abfrage-Editor für die Konfiguration und Validierung nach der Installation. Es wird empfohlen, [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux) zu verwenden. Dabei handelt es sich um ein kostenloses Tools, dass unter Linux verwendet werden kann.
++ Sie sollten über ein Tool zum Ausführen von T-SQL-Befehlen verfügen. Sie benötigen einen Abfrage-Editor für die Konfiguration und Validierung nach der Installation. Die Verwendung von [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux) wird empfohlen. Dabei handelt es sich um einen kostenlosen Download, der unter Linux ausgeführt wird.
 
 ## <a name="package-list"></a>Paketliste
 
 Auf einem mit dem Internet verbundenen Gerät werden Pakete unabhängig von der Datenbank-Engine mithilfe des Paketinstallationsprogramms für das betreffende Betriebssystem heruntergeladen und installiert. Die folgende Tabelle enthält alle verfügbaren Pakete.
 
-| Paketname | Gilt für | und Beschreibung |
+| Paketname | Gilt für | Beschreibung |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | Alle Sprachen | Verwendetes Erweiterbarkeitsframework für die Java-Spracherweiterung |
 |mssql-server-extensibility-java | Java | Verwendetes Erweiterbarkeitsframework für die Java-Spracherweiterung, enthält außerdem eine unterstützte Java-Runtime |
@@ -256,25 +256,25 @@ Befolgen Sie die Anweisungen zur [Offlineinstallation](sql-server-linux-setup.md
 
 #### <a name="download-site"></a>Downloadsite
 
-Sie können die Pakete unter [https://packages.microsoft.com/](https://packages.microsoft.com/) herunterladen. Alle Pakete für Java werden zusammen mit dem Datenbank-Engine-Paket bereitgestellt. 
+Sie können die Pakete von [https://packages.microsoft.com/](https://packages.microsoft.com/) herunterladen. Alle Pakete für Java werden zusammen mit dem Datenbank-Engine-Paket bereitgestellt. 
 
 #### <a name="redhat7-paths"></a>Red Hat/7-Pfade
 
 |||
 |--|----|
-| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04-Pfade
 
 |||
 |--|----|
-| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12-Pfade
 
 |||
 |--|----|
-| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Paketliste
 
@@ -297,7 +297,7 @@ mssql-server-extensibility-java-15.0.1000
 
 In Bezug auf die [Ressourcengovernance](../t-sql/statements/create-external-resource-pool-transact-sql.md) besteht zwar zwischen Linux und Windows Parität für externe Ressourcenpools, aber die Statistiken für [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) haben derzeit unterschiedliche Einheiten unter Linux. 
  
-| Spaltenname   | und Beschreibung | Wert unter Linux | 
+| Spaltenname   | Beschreibung | Wert unter Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | Der maximale Speicher, der für den Ressourcenpool verwendet wird. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem entnommen. Dabei lautet der Wert „memory.max_usage_in_bytes“. |
 |write_io_count | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Resource Governor-Statistiken ausgegeben wurden. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem „blkio“ entnommen. Dabei lautet der Wert der Zeile für die Schreibvorgänge „blkio.throttle.io_serviced“. | 

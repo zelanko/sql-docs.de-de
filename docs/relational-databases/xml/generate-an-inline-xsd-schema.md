@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943159"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
@@ -274,7 +274,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  Beachten Sie Folgendes bezüglich des XSD-Inlineschemas:  
   
--   ListPrice und DealerPrice sind vom gleichen Datentyp (`money`), und beide Angaben können in der Tabelle den Wert NULL aufweisen. Da sie im sich ergebenden XML nicht zurückgegeben werden können, ist nur ein untergeordnetes <`Price`>-Element in der komplexen Typdeklaration des <`row`>-Elements vorhanden, das die Werte "minOccurs=0" und "maxOccurs=2" aufweist.  
+-   ListPrice und DealerPrice sind vom gleichen Datentyp ( `money`), und beide Angaben können in der Tabelle den Wert NULL aufweisen. Da sie im sich ergebenden XML nicht zurückgegeben werden können, ist nur ein untergeordnetes <`Price`>-Element in der komplexen Typdeklaration des <`row`>-Elements vorhanden, das die Werte "minOccurs=0" und "maxOccurs=2" aufweist.  
   
 -   Da der Wert `DealerPrice` in der Tabelle NULL ist, wird nur `ListPrice` als <`Price`>-Element zurückgegeben. Wenn Sie der ELEMENTS-Direktive den `XSINIL`-Parameter hinzufügen, erhalten Sie beide Elemente, deren Wert `xsi:nil`für das <`Price`>-Element auf TRUE festgelegt wurde, das DealerPrice entspricht. Außerdem erhalten Sie zwei untergeordnete <`Price`>-Elemente in der komplexen Typdefinition <`row`> im XSD-Inlineschema, wobei das `nillable`-Attribut für beide auf TRUE festgelegt wurde. Dieses Fragment ist ein Teilergebnis:  
   
@@ -465,7 +465,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Da sowohl Col2 als auch Col3 NULL sein dürfen, gibt die Deklaration des <`Col`>-Elements minOccurs als 0 und maxOccurs als 2 an.  
   
--   Da beide <`Col`>-Elemente gleichgeordnete Elemente sind, ist im Schema eine Elementdeklaration vorhanden. Da die Elemente unterschiedlichen Typen angehören, obwohl beide Elemente simple-Typen sind, ist der Typ des Elements im Schema `xsd:anySimpleType`. Im Ergebnis wird jeder Instanztyp durch das `xsi:type`-Attribut identifiziert.  
+-   Da beide <`Col`>-Elemente gleichgeordnete Elemente sind, ist im Schema eine Elementdeklaration vorhanden. Da die Elemente unterschiedlichen Typen angehören, obwohl beide Elemente simple-Typen sind, ist der Typ des Elements im Schema `xsd:anySimpleType`. Im Ergebnis wird jeder Instanztyp durch das `xsi:type` -Attribut identifiziert.  
   
 -   Im Ergebnis verweist jede Instanz des <`Col`>-Elements mithilfe des `xsi:type`-Attributs auf ihren Instanztyp.  
   

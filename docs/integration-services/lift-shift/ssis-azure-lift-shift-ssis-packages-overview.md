@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896183"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
@@ -35,7 +35,7 @@ In der folgenden Tabelle werden die Unterschiede zwischen der lokalen Ausführun
 
 Der wichtigste Unterschied ist die Trennung des Speichers von Runtime. Azure Data Factory hostet die Runtime-Engine für SSIS-Pakete in Azure. Die Runtime-Engine wird als Azure SSIS Integration Runtime (Azure SSIS IR) bezeichnet. Weitere Informationen finden Sie unter [Azure SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
-| Speicherort | Speicherung | Typ | Skalierbarkeit |
+| Location | Storage | Typ | Skalierbarkeit |
 |---|---|---|---|
 | Lokal | SQL Server | Von SQL Server gehostete SSIS-Runtime | SSIS Scale Out (in SQL Server 2017 und höher)<br/><br/>Benutzerdefinierte Projektmappen (in früheren Versionen von SQL Server) |
 | In Azure | SQL-Datenbank oder verwaltete SQL-Datenbank-Instanz | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory | Skalierungsoptionen für die Azure SSIS Integration Runtime |
@@ -75,7 +75,7 @@ Weitere Informationen zur Verbindung mit Dateien und Dateifreigaben finden Sie u
 
 ### <a name="available-ssis-components"></a>Verfügbare SSIS-Komponenten
 
-Wenn Sie eine Instanz von SQL-Datenbank bereitstellen, um SSISDB zu hosten, werden auch das Azure Feature Pack für SSIS und die weitervertreibbare Komponente von Access installiert. Diese Komponenten stellen zusätzlich zu den Datenquellen, die von den integrierten Komponenten unterstützt werden, die Konnektivität zu **Excel- und Access-Dateien** und zu verschiedenen **Azure**-Datenquellen bereit.
+Wenn Sie eine Instanz der SQL-Datenbank zum Hosten der SSISDB bereitstellen, werden auch das Azure Feature Pack für SSIS und die Access Redistributable-Komponente installiert. Diese Komponenten stellen zusätzlich zu den Datenquellen, die von den integrierten Komponenten unterstützt werden, die Konnektivität zu **Excel- und Access-Dateien** und zu verschiedenen **Azure**-Datenquellen bereit.
 
 Sie können auch weitere Komponenten installieren, wie z.B. einen Treiber, der standardmäßig nicht installiert ist. Weitere Informationen finden Sie unter [Customize setup for the Azure-SSIS integration runtime (Anpassen des Setups von Azure SSIS Integration Runtime)](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
@@ -85,13 +85,13 @@ Wenn Sie ein unabhängiger Softwareanbieter sind, können Sie die Installation I
 
 ### <a name="transaction-support"></a>Transaktionsunterstützung
 
-Sie können mit SQL Server auf virtuellen Computern in Azure und lokal Microsoft Distributed Transaction Coordinator-Transaktionen (MS DTC) verwenden. Verwenden Sie die Funktion für die benutzerdefinierte Installation, um MS DTC auf jedem Knoten von Azure SSIS IR zu konfigurieren. Weitere Informationen finden Sie unter [Custom setup for the Azure-SSIS integration runtime (Benutzerdefiniertes Setup von Azure SSIS Integration Runtime)](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Sie können mit SQL Server auf virtuellen Computern in Azure und lokal Microsoft Distributed Transaction Coordinator-Transaktionen (MS DTC) verwenden. Verwenden Sie die Funktion für die benutzerdefinierte Installation, um MS DTC auf jedem Knoten von Azure SSIS IR zu konfigurieren. Weitere Informationen finden Sie unter [Benutzerdefiniertes Setup von Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
-Mit Azure SQL-Datenbank können Sie nur elastische Transaktionen verwenden. Weitere Informationen finden Sie unter [Verteilte Transaktionen in mehreren Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview).
+Mit Azure SQL-Datenbank können Sie nur elastische Transaktionen verwenden. Weitere Informationen finden Sie unter [Verteilte Transaktionen über Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview).
 
 ## <a name="deploy-and-run-packages"></a>Bereitstellen und Ausführen von Paketen
 
-Eine Einführung finden Sie unter [Tutorial: Bereitstellen und Ausführen eines SSIS-Pakets in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Informationen zu den ersten Schritten finden Sie unter [Tutorial: Bereitstellen und Ausführen eines SSIS-Pakets in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 

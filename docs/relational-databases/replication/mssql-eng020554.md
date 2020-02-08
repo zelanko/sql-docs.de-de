@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a9ad1938f94c090bd0f7e3746d565d2f0fce25d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6172f4e209c1c8d7ecb5768494f2c5fea0497d83
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770460"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288460"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Meldungsdetails  
@@ -62,7 +62,7 @@ ms.locfileid: "68770460"
   
 -   Wenn ein Agent sich nicht bei einem der Computer in der Topologie anmelden kann, haben Sie folgende Möglichkeiten:  
   
-     Es wird empfohlen, den Wert für den **-LoginTimeOut** -Parameter auf einen niedrigeren Wert festzulegen als das Intervall, in dem der Auftrag zur Überprüfung des Replikations-Agents ausgeführt wird. Mitunter wird der Wert für **-LoginTimeOut** aufgrund von Netzwerkproblemen, die zu einem Timeout bei Anmeldungen führen können, relativ hoch angesetzt. Wenn der Wert für **-LoginTimeOut** niedriger festgelegt wird, kann die Replikation spezifischere Informationen zu Fehlern melden, sodass Sie Anmeldeprobleme diagnostizieren können, die durch Probleme bei den Berechtigungen, durch Netzwerkprobleme oder durch andere Probleme hervorgerufen werden. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     Es wird empfohlen, den Wert für den **-LoginTimeOut** -Parameter auf einen niedrigeren Wert festzulegen als das Intervall, in dem der Auftrag zur Überprüfung des Replikations-Agents ausgeführt wird. Mitunter wird der Wert für **-LoginTimeOut** aufgrund von Netzwerkproblemen, die zu einem Timeout bei Anmeldungen führen können, relativ hoch angesetzt. Wenn der Wert für **-LoginTimeOut** niedriger festgelegt wird, kann die Replikation spezifischere Informationen zu Fehlern melden, sodass Sie Anmeldeprobleme diagnostizieren können, die durch Probleme bei den Berechtigungen, durch Netzwerkprobleme oder durch andere Probleme hervorgerufen werden. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
     -   [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -71,12 +71,12 @@ ms.locfileid: "68770460"
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)zugeordnet ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Replikations-Agentverwaltung](../../relational-databases/replication/agents/replication-agent-administration.md)   
+ [Verwaltung des Replikations-Agents](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Replikationsverteilungs Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Replikationsprotokolllese-Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Warteschlangenlese-Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replikationsmomentaufnahme-Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

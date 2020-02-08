@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909509"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
@@ -28,7 +28,7 @@ ms.locfileid: "72909509"
   
      [Einschränkungen](#Restrictions)  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
      [Security](#Security)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72909509"
   
  Beachten Sie folgende Einschränkungen, bevor Sie eine Wiederherstellung aus einer Datenbank-Momentaufnahme ausführen:  
   
--   Die Wiederherstellung bezieht sich nicht auf die Wiederherstellung von Medien. Eine Datenbank-Momentaufnahme ist eine unvollständige Kopie der Datenbankdateien. Wenn also die Datenbank oder die Datenbank-Momentaufnahme beschädigt wurde, ist die Wiederherstellung aus einer Momentaufnahme wahrscheinlich unmöglich. Zudem ist es eher unwahrscheinlich, dass das Problem durch eine Wiederherstellung im Falle einer Beschädigung behoben wird, selbst wenn eine Wiederherstellung möglich ist. Regelmäßige Sicherungen und Tests des Wiederherstellungsplans sind deshalb für den Schutz einer Datenbank unverzichtbar. Weitere Informationen finden Sie unter [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Die Wiederherstellung bezieht sich nicht auf die Wiederherstellung von Medien. Eine Datenbank-Momentaufnahme ist eine unvollständige Kopie der Datenbankdateien. Wenn also die Datenbank oder die Datenbank-Momentaufnahme beschädigt wurde, ist die Wiederherstellung aus einer Momentaufnahme wahrscheinlich unmöglich. Zudem ist es eher unwahrscheinlich, dass das Problem durch eine Wiederherstellung im Falle einer Beschädigung behoben wird, selbst wenn eine Wiederherstellung möglich ist. Regelmäßige Sicherungen und Tests des Wiederherstellungsplans sind deshalb für den Schutz einer Datenbank unverzichtbar. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Wenn Sie die Quelldatenbank zu dem Zeitpunkt wiederherstellen müssen, an dem Sie eine Datenbank-Momentaufnahme erstellt haben, nutzen Sie das Modell der vollständigen Wiederherstellung, und implementieren Sie eine Sicherungsrichtlinie, die Ihnen dies ermöglicht.  
@@ -67,7 +67,7 @@ ms.locfileid: "72909509"
   
 -   Durch das Wiederherstellen werden alle Volltextkataloge gelöscht.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Stellen Sie sicher, dass die Quelldatenbank und die Datenbank-Momentaufnahme die folgenden Voraussetzungen erfüllen:  
   
 -   Vergewissern Sie sich, dass die Datenbank nicht beschädigt wurde.  
@@ -75,9 +75,9 @@ ms.locfileid: "72909509"
     > [!NOTE]  
     >  Wenn die Datenbank beschädigt wurde, müssen Sie sie aus einer Sicherungskopie wiederherstellen. Weitere Informationen finden Sie unter [Vollständige Datenbankwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) oder [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).  
   
--   Ermitteln Sie eine aktuelle Momentaufnahme, die vor Auftreten des Fehlers erstellt wurde. Weitere Informationen finden Sie unter [Anzeigen einer Datenbankmomentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
+-   Ermitteln Sie eine aktuelle Momentaufnahme, die vor Auftreten des Fehlers erstellt wurde. Weitere Informationen finden Sie unter [Anzeigen einer Datenbankmomentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)anzeigen.  
   
--   Löschen Sie alle anderen Momentaufnahmen, die derzeit für die Datenbank vorhanden sind. Weitere Informationen finden Sie unter [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+-   Löschen Sie alle anderen Momentaufnahmen, die derzeit für die Datenbank vorhanden sind. Weitere Informationen finden Sie unter [Löschen einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)angefügt werden.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72909509"
   
      Dabei ist *database_name* die Quelldatenbank und *database_snapshot_name* der Name der Momentaufnahmen, aus dem die Datenbank wiederhergestellt werden soll. Beachten Sie, dass Sie in dieser Anweisung einen Momentaufnahmenamen statt eines Sicherungsmediums angeben müssen.  
   
-     Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+     Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)nicht wiederhergestellt werden.  
   
     > [!NOTE]  
     >  Während des Wiederherstellungsvorgangs stehen weder die Momentaufnahme noch die Quelldatenbank zur Verfügung. Die Quelldatenbank und die Momentaufnahme sind als von einem Wiederherstellungsvorgang betroffen gekennzeichnet. Falls während der Wiederherstellung ein Fehler auftritt, wird beim nächsten Start der Datenbank versucht, die Wiederherstellung abzuschließen.  
@@ -162,12 +162,12 @@ GO
   
 -   [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [Anzeigen einer Datenbankmomentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [Anzeigen einer Datenbank-Momentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  

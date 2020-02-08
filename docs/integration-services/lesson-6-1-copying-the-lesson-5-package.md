@@ -11,10 +11,10 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c4c895e71da13d7de38bf5dfc64f27829206d25
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283112"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>Lektion 6.1: Kopieren des Pakets aus Lektion 5
@@ -54,7 +54,7 @@ Gehen Sie wie folgt vor, wenn Sie das fertige Paket aus Lektion 5 kopieren möch
 
 1.  Öffnen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools und das SSIS-Lernprogrammprojekt.
 
-2.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie auf **Vorhandenes Paket hinzufügen**.
+2.  Klicken Sie im **Projektmappen-Explorer** erst mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie anschließend auf **Vorhandenes Paket hinzufügen**.
 
 3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.
 

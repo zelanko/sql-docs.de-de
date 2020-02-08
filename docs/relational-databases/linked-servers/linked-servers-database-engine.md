@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165341"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
@@ -64,7 +64,7 @@ Der OLE DB-Anbieter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ## <a name="linked-server-details"></a>Einzelheiten zu Verbindungsservern  
  Die folgende Abbildung zeigt die Grundlagen einer Verbindungsserverkonfiguration.  
   
- ![Client-, Server- und Datenbankserverebene](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![Client-, Server- und Datenbankserverebene](../../relational-databases/linked-servers/media/lsvr.gif "Client-, Server- und Datenbankserverebene")  
   
 Verbindungsserver werden in der Regel für die Verarbeitung verteilter Abfragen verwendet. Führt eine Clientanwendung eine verteilte Abfrage über einen Verbindungsserver aus, analysiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Befehl und sendet Anforderungen an OLE DB. Für eine Rowsetanforderung kann eine Abfrage für den Anbieter ausgeführt oder eine Basistabelle vom Anbieter geöffnet werden.  
 

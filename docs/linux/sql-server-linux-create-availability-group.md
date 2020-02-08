@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077442"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen und Konfigurieren einer Verfügbarkeitsgruppe für SQL Server für Linux
@@ -316,7 +316,7 @@ In diesem Beispiel werden Zertifikate für eine Konfiguration mit drei Knoten er
 
 In diesem Abschnitt wird beschrieben, wie [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL zum Erstellen der Verfügbarkeitsgruppe für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] verwendet wird.
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Verwendung von [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Verwenden Sie [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 In diesem Abschnitt wird gezeigt, wie mithilfe von SSMS mit dem neuen Verfügbarkeitsgruppenassistenten eine Verfügbarkeitsgruppe mit dem Clustertyp „Extern“ erstellt wird.
 
@@ -354,9 +354,9 @@ In diesem Abschnitt wird gezeigt, wie mithilfe von SSMS mit dem neuen Verfügbar
 
 11. Wenn für lesbare Szenarios ein Listener erstellt wird, ermöglicht SSMS 17.3 oder höher die Erstellung des schreibgeschützten Routings im Assistenten. Er kann auch später über SSMS oder Transact-SQL hinzugefügt werden. So fügen Sie das schreibgeschützte Routing jetzt hinzu:
 
-    A.  Klicken Sie auf die Registerkarte „Read-Only Routing“ (Schreibgeschütztes Routing).
+    a.  Klicken Sie auf die Registerkarte „Read-Only Routing“ (Schreibgeschütztes Routing).
 
-    B.  Geben Sie die URLs für die schreibgeschützten Replikate ein. Diese URLs ähneln den Endpunkten, mit dem Unterschied, dass sie anstelle des Endpunkts den Port der Instanz verwenden.
+    b.  Geben Sie die URLs für die schreibgeschützten Replikate ein. Diese URLs ähneln den Endpunkten, mit dem Unterschied, dass sie anstelle des Endpunkts den Port der Instanz verwenden.
 
     c.  Wählen Sie die einzelnen URLs und weiter unten die lesbaren Replikate aus. Sie können die UMSCHALTTASTE gedrückt halten oder klicken und ziehen, um alle auszuwählen.
 
@@ -512,7 +512,7 @@ In diesem Beispiel wird gezeigt, wie eine Konfiguration mit zwei Replikaten mit 
     GO
     ```
     
-    Erläuterungen
+    Hierbei gilt:
     - *AGName* ist der Name der Verfügbarkeitsgruppe.
     - *DBName* ist der Name der Datenbank, die mit der Verfügbarkeitsgruppe verwendet wird. Dies kann auch eine Liste mit durch Kommas getrennte Namen sein.
     - *PortOfEndpoint* ist die Portnummer, die vom erstellten Endpunkt verwendet wird.

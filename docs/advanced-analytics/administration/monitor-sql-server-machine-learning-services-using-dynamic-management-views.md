@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727756"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mithilfe von dynamischen Verwaltungssichten
@@ -41,7 +41,7 @@ Weitere allgemeine Informationen über DMVs finden Sie unter [Dynamische Systemv
 
 Die folgenden DMVs können beim Überwachen von Machine Learning-Workloads in SQL Server verwendet werden. Zum Abfragen der DMVs benötigen Sie die `VIEW SERVER STATE`-Berechtigung für die Instanz.
 
-| Dynamische Verwaltungssicht | Typ | und Beschreibung |
+| Dynamische Verwaltungssicht | type | Beschreibung |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Ausführung | Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript ausführt. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Ausführung | Gibt eine Zeile für jeden Typ von externer Skriptanforderung zurück. |
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
 | IsMLServicesInstalled | Gibt „1“ zurück, wenn SQL Server Machine Learning Services für die Instanz installiert ist. Andernfalls wird „0“ (null) zurückgegeben. |
 | ExternalScriptsEnabled | Gibt „1“ zurück, wenn externe Skripts für die Instanz aktiviert sind. Andernfalls wird „0“ (null) zurückgegeben. |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
 | session_id | Identifiziert die einer aktiven primären Verbindung zugeordnete Sitzung. |
 | blocking_session_id | ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden). |
@@ -119,10 +119,10 @@ Die Abfrage gibt die folgenden Spalten zurück:
 | last_wait_type | Wenn diese Anforderung zuvor bereits blockiert war, gibt diese Spalte den Typ des letzten Wartevorgangs zurück. |
 | total_elapsed_time | Gesamtzeit seit dem Eintreffen der Anforderung (in Millisekunden). |
 | cpu_time | Von der Anforderung beanspruchte CPU-Zeit (in Millisekunden). |
-| reads | Anzahl der von dieser Anforderung ausgeführten Lesevorgänge. |
+| Lesevorgänge | Anzahl der von dieser Anforderung ausgeführten Lesevorgänge. |
 | logical_reads | Anzahl der von dieser Anforderung ausgeführten logischen Lesevorgänge. |
-| writes | Anzahl der von dieser Anforderung ausgeführten Schreibvorgänge. |
-| Sprache | Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |
+| Schreibvorgänge | Anzahl der von dieser Anforderung ausgeführten Schreibvorgänge. |
+| language | Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |
 | degree_of_parallelism | Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden. |
 | external_user_name | Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde. |
 
@@ -143,9 +143,9 @@ ORDER BY language, counter_name;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
-| Sprache | Name der registrierten externen Skriptsprache. |
+| language | Name der registrierten externen Skriptsprache. |
 | counter_name | Name einer registrierten externen Skriptfunktion. |
 | counter_value | Gesamtanzahl der Instanzen, die von der registrierten externen Skriptfunktion auf dem Server aufgerufen wurden. Dieser Wert ist kumulativ und beginnt mit dem Zeitpunkt, zu dem das Feature auf der Instanz installiert wurde. Der Wert kann nicht zurückgesetzt werden. |
 
@@ -165,7 +165,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** gibt die folgenden Leistungsindikatoren für externe Skripts aus:
 
-| Leistungsindikator | und Beschreibung |
+| Leistungsindikator | Beschreibung |
 |---------|-------------|
 | Total Executions | Gibt die Anzahl der R-Prozesse an, die durch lokale oder Remoteaufrufe gestartet wurden. |
 | Parallel Executions | Gibt an, wie oft ein Skript die _\@parallel_-Spezifikation enthielt, und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
 | physical_memory_kb | Gibt die Gesamtmenge des physischen Speichers auf dem Computer an. |
 | committed_kb | Gibt den im Arbeitsspeicher-Manager zugesicherten Speicher in Kilobyte (KB) an. Reservierter Arbeitsspeicher im Speicher-Manager ist nicht eingeschlossen. |
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
-| NAME | Gibt den Namen des externen Ressourcenpools oder der SQL Server-Instanz an. |
+| name | Gibt den Namen des externen Ressourcenpools oder der SQL Server-Instanz an. |
 | max_memory_percent | Gibt den maximalen Arbeitsspeicher an, den die SQL Server-Instanz oder der externe Ressourcenpool beanspruchen kann. |
 
 ## <a name="resource-pools"></a>Ressourcenpools
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
 | pool_name | Name des Ressourcenpools. Den Namen von SQL Server-Ressourcenpools wird `SQL Server` und den Namen von externen Ressourcenpools wird `External Pool` vorangestellt.
 | total_cpu_usage_hours | Gibt die kumulative CPU-Auslastung in Millisekunden seit der letzten Zurücksetzung der Resource Governor-Statistiken an. |
@@ -276,12 +276,12 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Die folgenden Spalten werden zurückgegeben:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
 | Paket | Gibt den Namen des installierten Pakets an. |
-| Versionsoptionen | Gibt die Paketversion an. |
+| Version | Gibt die Paketversion an. |
 | Depends (Abhängig) | Führt die Pakete auf, von denen das installierte Paket abhängt. |
-| License (Lizenz) | Gibt die Lizenz für das installierte Paket an. |
+| Lizenz | Gibt die Lizenz für das installierte Paket an. |
 | LibPath | Gibt das Verzeichnis an, in dem Sie das Paket finden können. |
 
 ### <a name="installed-packages-for-python"></a>Installierte Python-Pakete
@@ -302,11 +302,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Die folgenden Spalten werden zurückgegeben:
 
-| Spalte | und Beschreibung |
+| Column | Beschreibung |
 |--------|-------------|
 | Paket | Gibt den Namen des installierten Pakets an. |
-| Versionsoptionen | Gibt die Paketversion an. |
-| Speicherort | Gibt das Verzeichnis an, in dem Sie das Paket finden können. |
+| Version | Gibt die Paketversion an. |
+| Location | Gibt das Verzeichnis an, in dem Sie das Paket finden können. |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

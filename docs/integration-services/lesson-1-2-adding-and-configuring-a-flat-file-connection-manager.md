@@ -11,10 +11,10 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a412235a3eaeb18f32e820460b82ab238c7c0e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296118"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lektion 1.2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
@@ -83,10 +83,10 @@ Standardmäßig sind alle vier Spalten auf einen Zeichenfolgendatentyp [DT_STR] 
   
     |Flatfilespalte|Vorgeschlagener Typ|Zielspalte|Zieltyp|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
     Der für die Spalte **CurrencyID** vorgeschlagene Datentyp ist inkompatibel mit dem Datentyp des Felds in der Zieltabelle. Da `DimCurrency.CurrencyAlternateKey` vom Datentyp nchar (3) ist, muss **CurrencyID** von string [DT_STR] in Unicode string [DT_WSTR] geändert werden. Zusätzlich ist das Feld `DimDate.FullDateAlternateKey` als date-Datentyp definiert. Deshalb muss der Typ für **CurrencyDate** von date [DT_Date] in database date [DT_DBDATE] geändert werden.  
   
@@ -94,12 +94,12 @@ Standardmäßig sind alle vier Spalten auf einen Zeichenfolgendatentyp [DT_STR] 
   
 3.  Ändern Sie im Eigenschaftenbereich den Datentyp der Spalte **CurrencyDate** von date [DT_DATE] in database date [DT_DBDATE].  
   
-4.  Wählen Sie **OK**.  
+4.  Klicken Sie auf **OK**.  
   
 ## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Verbindungs-Manager für Flatfiles](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [SQL Server Integration Services-Datentypen](../integration-services/data-flow/integration-services-data-types.md)  
   

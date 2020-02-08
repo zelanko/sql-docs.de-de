@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095702"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
@@ -142,7 +142,7 @@ ms.locfileid: "74095702"
  Geben Sie den Namen des neuen Kontos ein.  
   
  **Beschreibung**  
- Geben Sie eine Beschreibung des Kontos ein. Die Beschreibung ist optional.  
+ Geben Sie eine Beschreibung des Kontos ein. Die Angabe einer Beschreibung ist optional.  
   
  **E-Mail-Adresse**  
  Geben Sie den Namen der E-Mail-Adresse für das Konto ein. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnte E-Mails beispielsweise von der Adresse SqlAgent@Adventure-Works.com aus versenden.  
@@ -192,7 +192,7 @@ ms.locfileid: "74095702"
  Löscht das ausgewählte Konto. Sie müssen dieses Konto aus zugeordneten Profilen entfernen oder diese Profile löschen, bevor Sie das ausgewählte Konto löschen.  
   
  **Beschreibung**  
- In diesem Bereich können Sie die Beschreibung des Kontos anzeigen oder bearbeiten. Die Beschreibung ist optional.  
+ In diesem Bereich können Sie die Beschreibung des Kontos anzeigen oder bearbeiten. Die Angabe einer Beschreibung ist optional.  
   
  **E-Mail-Adresse**  
  Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für Microsoft SQL Server-Agent könnte E-Mails beispielsweise von der Adresse **SqlAgent\@Adventure-Works.com** aus versenden.  
@@ -218,7 +218,7 @@ ms.locfileid: "74095702"
  **Standardauthentifizierung**  
  Geben Sie den für den SMTP-Server erforderlichen Benutzernamen und das Kennwort ein.  
   
- **User name**  
+ **Benutzername**  
  Hier können Sie den Benutzernamen anzeigen und bearbeiten, mit dem die Datenbank-E-Mail sich beim SMTP-Server anmeldet. Der Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.  
   
  **Kennwort**  
@@ -241,15 +241,15 @@ ms.locfileid: "74095702"
  Geben Sie einen Namen für das neue Profil ein. Das Profil wird mit diesem Namen erstellt. Verwenden Sie nicht den Namen eines bereits vorhandenen Profils.  
   
  **Beschreibung**  
- Geben Sie eine Beschreibung für das Profil ein. Die Beschreibung ist optional.  
+ Geben Sie eine Beschreibung für das Profil ein. Die Angabe einer Beschreibung ist optional.  
   
  **SMTP-Konten**  
  Wählen Sie für das Profil eines oder mehrere Konten aus. Die Priorität legt die Reihenfolge fest, in der Konten von Datenbank-E-Mail verwendet werden. Wenn keine Konten aufgelistet werden, müssen Sie zum Fortfahren auf **Hinzufügen** klicken und dann ein neues SMTP-Konto hinzufügen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Hinzufügen eines Kontos zum Profil.  
   
- **Entfernen**  
+ **Remove**  
  Entfernen des ausgewählten Kontos aus dem Profil.  
   
  **Nach oben**  
@@ -272,15 +272,15 @@ ms.locfileid: "74095702"
  Löscht das ausgewählte Profil. Sie werden aufgefordert, **Ja** auszuwählen, um das ausgewählte Profil zu löschen und nicht gesendete Nachrichten abzubrechen, oder **Nein** auszuwählen, um das ausgewählte Profil nur zu löschen, wenn keine ungesendeten Nachrichten vorhanden sind.  
   
  **Beschreibung**  
- Zeigen Sie die Beschreibung des ausgewählten Profils an oder ändern Sie diese. Die Beschreibung ist optional.  
+ Zeigen Sie die Beschreibung des ausgewählten Profils an oder ändern Sie diese. Die Angabe einer Beschreibung ist optional.  
   
  **SMTP-Konten**  
  Wählen Sie für das Profil eines oder mehrere Konten aus. Die Failoverpriorität legt die Reihenfolge fest, in der Datenbank-E-Mail die Konten bei einem Failover verwendet.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Hinzufügen eines Kontos zum Profil.  
   
- **Entfernen**  
+ **Remove**  
  Entfernen des ausgewählten Kontos aus dem Profil.  
   
  **Nach oben**  
@@ -362,10 +362,10 @@ ms.locfileid: "74095702"
   
  Ein Profil kann ein Standardprofil sein. In diesem Fall können Benutzer oder Rollen E-Mails mithilfe des Profils senden, ohne das Profil explizit anzugeben. Falls der Benutzer oder die Rolle, die/der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Verfügt der Benutzer oder die Rolle nicht über ein privates Standardprofil, verwendet **sp_send_dbmail** das öffentliche Standardprofil für die **msdb** -Datenbank. Falls weder ein privates Standardprofil für den Benutzer oder die Rolle noch ein öffentliches Standardprofil für die Datenbank vorhanden ist, gibt **sp_send_dbmail** einen Fehler zurück.  
   
- **User name**  
+ **Benutzername**  
  Wählen Sie in der **msdb** -Datenbank einen Benutzer oder eine Rolle aus.  
   
- **Zugriff**  
+ **zugreifen**  
  Wählen Sie aus, ob der Benutzer oder die Rolle Zugriff auf das angegebene Profil hat.  
   
  **Profilname**  
@@ -398,7 +398,7 @@ ms.locfileid: "74095702"
  Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess mindestens aktiv bleibt. Der Prozess bleibt aktiv, solange sich E-Mails in der Datenbank-E-Mail-Warteschlange befinden. Dieser Parameter gibt die Zeitdauer an, für die der Prozess aktiv bleibt, wenn keine Nachrichten zum Verarbeiten vorhanden sind.  
   
  **Protokolliergrad**  
- Gibt an, welche Nachrichten im Datenbank-E-Mail-Protokoll aufgezeichnet werden. Folgende Werte sind möglich:  
+ Gibt an, welche Nachrichten im Datenbank-E-Mail-Protokoll aufgezeichnet werden. Mögliche Werte:  
   
 -   Normal - Nur Fehler werden protokolliert.  
   
@@ -424,13 +424,13 @@ ms.locfileid: "74095702"
  **Datenbank-E-Mail-Profil**  
  Wählen Sie aus der Liste ein Datenbank-E-Mail-Profil aus. Dies ist ein Pflichtfeld. Wenn keine Profile angezeigt werden, gibt es keine Profile, oder Sie haben für ein Profil keine Berechtigung. Verwenden Sie den **Assistent zum Konfigurieren von Datenbank-E-Mail** zum Erstellen und Konfigurieren von Profilen. Wenn keine Profile angezeigt werden, erstellen Sie mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mail ein Profil für die eigene Verwendung.  
   
- **Aktion**  
+ **An**  
  Die E-Mail-Adresse der Nachrichtenempfänger. Mindestens ein Empfänger muss angegeben werden.  
   
- **Betreff**  
+ **Subject**  
  Die Betreffzeile für die Test-E-Mail. Ändern Sie den Standardbetreff, damit Sie Ihre E-Mail bei der Problembehandlung besser identifizieren können.  
   
- **Textkörper**  
+ **Text**  
  Der Text der Test-E-Mail. Ändern Sie den Standardbetreff, damit Sie Ihre E-Mail bei der Problembehandlung besser identifizieren können.  
   
  Das Dialogfeld **Test-E-Mail von Datenbank-E-Mail** bestätigt, dass die Datenbank-E-Mail versuchte, die Testnachricht zu senden, und stellt die **mailitem_id** für die Test-E-Mail bereit. Fragen Sie beim Empfänger nach, ob die E-Mail angekommen ist. E-Mails werden normalerweise in wenigen Minuten empfangen. Aufgrund einer geringen Netzwerkleistung, eines Rückstands an Nachrichten beim Mailserver oder wenn der Server vorübergehend nicht erreichbar ist, kann es jedoch zu Verzögerungen beim E-Mail-Empfang kommen. Verwenden Sie die **mailitem_id** zur Problembehandlung.  

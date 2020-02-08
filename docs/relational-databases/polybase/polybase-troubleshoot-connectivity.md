@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909144"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
@@ -100,7 +100,7 @@ Das Tool wird unabhängig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 ## <a name="arguments"></a>Argumente
 
-| Argument | und Beschreibung|
+| Argument | Beschreibung|
 | --- | --- |
 | *Namenknotenadresse* | Die IP oder der FQDN des Namenknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“.|
 | *Namenknotenport* | Der Port des Namensknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Zum Beispiel „8020“. |
@@ -199,7 +199,7 @@ Wenn das Tool ausgeführt wurde und die Eigenschaften den Zielpfads *nicht* ausg
 
 | Ausnahme und Meldungen | Ursache | 
 | --- | --- |
-| org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] (Die SIMPLE-Authentifizierung ist nicht aktiviert. Verfügbar: [TOKEN, KERBEROS]) | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS" (Die Datei „core-site.xml“ verfügt nicht über die Eigenschaft „hadoop.security.authentication“ um „KERBEROS“ festzulegen).|
+| org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS]\(Die SIMPLE-Authentifizierung ist nicht aktiviert. Verfügbar: [TOKEN, KERBEROS]) | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS" (Die Datei „core-site.xml“ verfügt nicht über die Eigenschaft „hadoop.security.authentication“ um „KERBEROS“ festzulegen).|
 |javax.security.auth.login.LoginException<br>Client not found in Kerberos database (6) - CLIENT_NOT_FOUND (Der Client konnte in der Kerberos-Datenbank nicht gefunden werden – CLIENT_NOT_FOUND). |    Der angegebene Administratordienstprinzipal existiert im angegebenen Bereich in „core-site.xml“ nicht.|
 | javax.security.auth.login.LoginException<br> Prüfsumme fehlgeschlagen |Der Administratordienstprinzipal existiert, aber das Kennwort ist ungültig. |
 | Native config name: C:\Windows\krb5.ini<br>Loaded from native config (Nativer Konfigurationsname: C:\Windows\krb5.ini Aus nativer Konfiguration geladen) | Diese Meldung weist darauf hin, dass „krb5LoginModule“ von Java benutzerdefinierte Clientkonfigurationen auf Ihrem Computer erkannt hat. Überprüfen Sie Ihre benutzerdefinierten Clienteinstellungen, da diese möglicherweise dieses Problem verursachen. |
@@ -249,7 +249,7 @@ Sollten Sie dennoch Probleme mit dem Zugriff auf Kerberos haben, führen Sie zum
 
 4. Wenn KDC nur AES256 unterstützt, müssen [JCE-Richtliniendateien](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Integrating PolyBase with Cloudera using Active Directory Authentication (Integration von PolyBase in Cloudera mit der Active Directory-Authentifizierung)](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera’s Guide to setting up Kerberos for CDH (Cloudera-Leitfaden: Einrichten von Kerberos für CDH)](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP (Hortonworks-Leitfaden: Einrichten von Kerberos für HDP)](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  

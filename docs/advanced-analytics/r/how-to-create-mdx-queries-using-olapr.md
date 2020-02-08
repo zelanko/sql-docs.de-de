@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727458"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Erstellen von MDX-Abfragen in R mit olapR
@@ -141,7 +141,7 @@ Trotzdem können Sie diese Abfrage als vordefinierte MDX-Zeichenfolge ausführen
 
 ### <a name="2-explore-cubes-and-their-fields-on-an-ssas-instance"></a>2. Durchsuchen von Cubes und ihren Feldern in einer SSAS-Instanz
 
-Sie können die `explore`-Funktion verwenden, um eine Liste der Cubes, Dimensionen oder Elemente zurückzugeben, die zum Erstellen Ihrer Abfrage verwendet werden sollen. Dies ist praktisch, wenn Sie keinen Zugang zu anderen Tools zum Durchsuchen von OLAP haben oder die MDX-Abfrage programmgesteuert erstellen oder ändern möchten.
+Sie können die `explore` -Funktion verwenden, um eine Liste der Cubes, Dimensionen oder Elemente zurückzugeben, die zum Erstellen Ihrer Abfrage verwendet werden sollen. Dies ist praktisch, wenn Sie keinen Zugang zu anderen Tools zum Durchsuchen von OLAP haben oder die MDX-Abfrage programmgesteuert erstellen oder ändern möchten.
 
 #### <a name="to-list-the-cubes-available-on-the-specified-connection"></a>So listen Sie die für die angegebene Verbindung verfügbaren Cubes auf
 
@@ -177,7 +177,7 @@ explore(ocs, "Sales")
 | Ergebnisse  |
 | ----|
 | _Kunde_|
-|_Datum_|
+|_Date_|
 |_Region_|
 
 
@@ -193,14 +193,14 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 | Ergebnisse  |
 | ----|
-| _Zubehör_|
-|_Fahrräder_|
-|_Bekleidung_|
+| _Accessories_|
+|_Bikes_|
+|_Clothing_|
 |_Komponenten_|
 |Montagekomponenten >|
 |Montagekomponenten >|
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwenden von Daten aus OLAP-Cubes in R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

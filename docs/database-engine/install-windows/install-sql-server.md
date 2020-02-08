@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
-ms.sourcegitcommit: 7906af9d11c79b14fdd38babd73a0c8dc6f6de9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75688244"
 ---
 # <a name="sql-server-installation-guide"></a>Installationsleitfaden für SQL Server
@@ -70,7 +70,7 @@ Weitere SQL Server-Komponenten finden Sie hier:
 
 ## <a name="sql-server-installation"></a>Installation von SQL Server
  
-|Artikel|BESCHREIBUNG|  
+|Artikel|Beschreibung|  
 |-----------|-----------------|  
 |[Installations-Assistent](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Informationen zur Installation von SQL Server mithilfe der grafischen Benutzeroberfläche des Installations-Assistenten über die Setupdatei „setup.exe“ |  
 |[Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Beispielsyntax und Installationsparameter für die Ausführung einer SQL Server-Installation über die Befehlszeile | 
@@ -89,7 +89,7 @@ Weitere SQL Server-Komponenten finden Sie hier:
   
 ## <a name="individual-component-installation"></a>Installation einzelner Komponenten 
   
-|Artikel|BESCHREIBUNG|  
+|Artikel|Beschreibung|  
 |-----------|-----------------|  
 |[SQL Server-Datenbank-Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)|Installation und Konfiguration von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |[SQL Server-Replikation](../../database-engine/install-windows/install-sql-server-replication.md)|Installation und Konfiguration der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation|  
@@ -100,7 +100,7 @@ Weitere SQL Server-Komponenten finden Sie hier:
 
 ## <a name="sql-server-configuration"></a>SQL Server-Konfiguration 
   
-|Artikel|BESCHREIBUNG|  
+|Artikel|Beschreibung|  
 |-----------|-----------------|  
 |[Konfigurieren der Windows-Firewall (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Übersicht über die Konfiguration von Firewalls und sowie Anleitungen zum Konfigurieren der Windows-Firewall für den Zugriff auf SQL Server|  
 |[Konfigurieren der Windows-Firewall (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Konfiguration von Port- und Firewalleinstellungen, um den Zugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint zu ermöglichen|  

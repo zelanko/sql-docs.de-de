@@ -11,10 +11,10 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74e56788741b36e68884db823fa46eb24856081e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296129"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lektion 1-1: Erstellen eines neuen SQL Server Integration Services-Projekts
@@ -30,7 +30,7 @@ Die Pakete, die Sie in diesem [!INCLUDE[ssISnoversion](../includes/ssisnoversion
 Die Pakete, die Sie in den Lektionen 2 bis 6 verwenden, werden aus dem Paket kopiert, das Sie in dieser Lektion erstellen.  
   
 > [!NOTE]  
-> Machen Sie sich, falls noch nicht geschehen, mit den [Anforderungen in Lektion 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites) vertraut.
+> Machen Sie sich, falls noch nicht geschehen, mit den [Anforderungen für Lektion 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites) vertraut.
 
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts  
   
@@ -44,7 +44,7 @@ Die Pakete, die Sie in den Lektionen 2 bis 6 verwenden, werden aus dem Paket kop
   
 5.  Übernehmen Sie den Standardspeicherort, oder wählen Sie **Durchsuchen** aus, um zu dem Ordner zu navigieren, den Sie verwenden möchten. Wählen Sie im Dialogfeld **Projektspeicherort** den Ordner und anschließend **Ordner auswählen** aus.  
   
-6.  Wählen Sie **OK**.  
+6.  Klicken Sie auf **OK**.  
   
     Standardmäßig wird ein leeres Paket mit dem Namen **Package.dtsx** erstellt und Ihrem Projekt unter **SSIS-Pakete** hinzugefügt.  
   

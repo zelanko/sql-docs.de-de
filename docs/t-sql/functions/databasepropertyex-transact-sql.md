@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256097"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
@@ -52,7 +52,7 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 > [!NOTE]  
 >  Wenn die Datenbank noch nicht gestartet wurde, wird für Aufrufe von `DATABASEPROPERTYEX` NULL zurückgegeben, wenn `DATABASEPROPERTYEX` diese Werte durch direkten Datenbankzugriff abruft, statt sie aus den Metadaten abzurufen. Eine Datenbank, für die AUTO_CLOSE auf ON festgelegt ist, ist als „nicht gestartet“ definiert.  
   
-|Eigenschaft|BESCHREIBUNG|Zurückgegebener Wert|  
+|Eigenschaft|Beschreibung|Zurückgegebener Wert|  
 |---|---|---|
 |Sortierung|Standardsortierungsname der Datenbank|Sortierungsname<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |ComparisonStyle|Die Windows-Vergleichsart der Sortierung. Verwenden Sie die folgenden Stilwerte, um eine Bitmap für den schlussendlichen ComparisonStyle-Wert zu erstellen:<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> <br /><br /> Der Standardwert 196.609 ist beispielsweise das Ergebnis der Kombination der Optionen Groß-/Kleinschreibung ignorieren, Kana ignorieren und Breite ignorieren.|Gibt die Vergleichsart zurück.<br /><br /> Gibt für alle binären Sortierungen 0 zurück.<br /><br /> Basisdatentyp: **int**|  

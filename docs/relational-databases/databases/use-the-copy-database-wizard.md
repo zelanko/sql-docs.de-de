@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127119"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
@@ -117,7 +117,7 @@ Ermöglicht den Benutzern eine Verbindung über ein Microsoft Windows-Benutzerko
 -    **SQL Server-Authentifizierung verwenden**  
 Ermöglicht den Benutzern, mithilfe eines Benutzernamens und eines Kennworts für die SQL Server-Authentifizierung eine Verbindung aufzubauen.
 
-     -    **User name**  
+     -    **Benutzername**  
 Diese Option wurde dazu verwendet, um den Benutzernamen für die Verbindung einzugeben. Diese Option ist nur verfügbar, wenn Sie die **SQL Server-Authentifizierung**für die Verbindungsherstellung ausgewählt haben.
 
      -    **Kennwort**  
@@ -137,7 +137,7 @@ Ermöglicht den Benutzern eine Verbindung über ein Microsoft Windows-Benutzerko
 -    **SQL Server-Authentifizierung verwenden**  
 Ermöglicht den Benutzern, mithilfe eines Benutzernamens und eines Kennworts für die SQL Server-Authentifizierung eine Verbindung aufzubauen.
 
-     -    **User name**  
+     -    **Benutzername**  
 Diese Option wurde dazu verwendet, um den Benutzernamen für die Verbindung einzugeben. Diese Option ist nur verfügbar, wenn Sie die **SQL Server-Authentifizierung**für die Verbindungsherstellung ausgewählt haben.
 
      -    **Kennwort**  
@@ -162,10 +162,10 @@ Trennt die Datenbank vom Quellserver, kopiert die Datenbankdateien (MDF, NDF und
 ###  <a name="select-database"></a>Datenbank auswählen
 Wählen Sie die Datenbank(en) aus, die vom Quellserver auf den Zielserver kopiert oder verschoben werden soll(en).  Weitere Informationen finden Sie unter [Einschränkungen](#Restrictions) am Anfang dieses Themas.  
   
--    **Verschieben**  
+-    **Move**  
 Verschiebt die Datenbank auf den Zielserver.
 
--    **Kopieren**  
+-    **Copy**  
 Kopiert die Datenbank auf den Zielserver.
 
 -    **Quelle**  
@@ -242,12 +242,12 @@ Diese Seite ist nur verfügbar, wenn Quelle und Ziel verschiedene Server sind.  
   
 -    **Speicherort des Ordners**  
 Der Ordnerspeicherort der Datenbankdateien auf dem Quellserver.
-Beispiel: `C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA`
+Beispiel: `C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA`.
 
   
 -    **Dateifreigabe auf dem Quellserver**  
 Die Dateifreigabe, die die Datenbankdateien auf dem Quellserver enthält.  Geben Sie die Freigabe manuell ein, oder klicken Sie auf die Auslassungspunkte, um zur Freigabe zu navigieren.
-Beispiel: `\\server_name\C$\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\Data`
+Beispiel: `\\server_name\C$\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\Data`.
 
 ### <a name="configure-the-package"></a>Paket konfigurieren
 Der Assistent zum Kopieren von Datenbanken erstellt ein SSIS-Paket für die Übertragung der Datenbank.
@@ -269,14 +269,14 @@ Geben Sie den Zeitpunkt für den Beginn des Kopier- oder Verschiebungsvorgangs a
 
 > **WICHTIG!** Ein Integration Services-Proxykonto muss unter der Methode zum **Trennen und Anfügen** verwendet werden.  
 
--    **Sofort ausführen**  
+-    **Run immediately**  
      Das SSIS-Paket wird nach Abschluss des Assistenten ausgeführt.
   
 -    **Zeitplan**  
      Das SSIS-Paket wird nach einem Zeitplan ausgeführt. 
   
      -    **Zeitplan ändern**   
-Öffnet das Dialogfeld **Neuer Auftragszeitplan** .  Nehmen Sie die Konfiguration nach Bedarf vor.  Wenn Sie fertig sind, klicken Sie auf **OK** .
+Öffnet das Dialogfeld **Neuer Auftragszeitplan** .  Nehmen Sie die Konfiguration nach Bedarf vor.  Klicken Sie anschließend auf **OK**.
 
 
 -    **Integration Services-Proxykonto** Wählen Sie ein verfügbares Proxykonto aus der Dropdownliste aus.  Wenn Sie die Übertragung planen möchten, muss für den Benutzer mindestens ein Proxykonto verfügbar sein, das mit der Berechtigung für das Subsystem **SSIS-Paketausführung**konfiguriert ist.
@@ -292,7 +292,7 @@ Zeigt eine Zusammenfassung der ausgewählten Optionen an.  Klicken Sie auf **Zur
 -    **Status**  
  Gibt an, ob die Aktion insgesamt erfolgreich war oder fehlgeschlagen ist.
 
--    **MessageBox**  
+-    **Meldung**  
 Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.
 
 ##  <a name="Examples"></a> Beispiele
@@ -384,10 +384,10 @@ In diesem Beispiel wird die `Sales` -Datenbank als `SalesCopy` auf derselben Ins
 14. Starten Sie den neu erstellten SQL Server-Agentauftrag `SalesCopy weekly refresh`manuell.  Überprüfen Sie den Auftragsverlauf, und stellen Sie sicher, dass `SalesCopy` jetzt auf der Instanz vorhanden ist.
 
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Upgrade einer Datenbank  
+##  <a name="FollowUp"></a> Nächster Schritt: Nach dem Upgrade einer Datenbank  
  Nachdem Sie mithilfe des Assistenten zum Kopieren von Datenbanken eine Datenbank von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
- War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank auf 90 festgelegt, wird er auf 100 erhöht, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank auf 90 festgelegt, wird er auf 100 erhöht, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
  ## <a name="Post"></a> Überlegungen nach dem Kopieren oder Verschieben
  Erwägen Sie die Ausführung der folgenden Schritte nach dem **Kopieren** oder **Verschieben**:

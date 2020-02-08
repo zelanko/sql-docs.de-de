@@ -69,7 +69,7 @@ Die Algorithmen MD2, MD4, MD5, SHA und SHA1 sind ab [!INCLUDE[ssSQL15](../../inc
 
 ## <a name="examples"></a>Beispiele  
 ### <a name="return-the-hash-of-a-variable"></a>Zurückgeben des Hashcodes einer Variablen  
- Im folgenden Beispiel wird der `SHA2_256`-Hash der in der **-Variablen gespeicherten** nvarchar`@HashThis`-Daten zurückgegeben.  
+ Im folgenden Beispiel wird der `SHA2_256`-Hash der in der `@HashThis`-Variablen gespeicherten **nvarchar**-Daten zurückgegeben.  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

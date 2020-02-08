@@ -1,5 +1,5 @@
 ---
-title: 'Python + T-SQL: Datenfeatures'
+title: 'Python und T-SQL: Datenfeatures'
 description: In diesem Tutorial erfahren Sie, wie man Berechnungen zu gespeicherten Prozeduren für die Verwendung in Python-Machine Learning-Modellen hinzufügt.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: eb7f7b271c49922698058e396b69b91444c5b65a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725194"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901855"
 ---
 # <a name="create-data-features-using-t-sql"></a>Erstellen von Datenfeatures mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Verwenden Sie eine benutzerdefinierte T-SQL-Funktion, _fnCalculateDistance_, um 
 
 1.  Die Funktion _fnCalculateDistance_ sollte heruntergeladen und bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Teil der Vorbereitung für diese exemplarische Vorgehensweise registriert worden sein. Überprüfen Sie kurz den Code.
   
-    Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Programmierbarkeit**, erweitern Sie **Funktionen** und anschließend **Skalarwertfunktionen**.
+    Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**Programmierbarkeit**, erweitern Sie **Funktionen** und anschließend **Skalarwertfunktionen**.
     Klicken Sie mit der rechten Maustaste auf _fnCalculateDistance_, und wählen Sie **Ändern** aus, um das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript in einem neuen Abfragefenster zu öffnen.
   
     ```sql

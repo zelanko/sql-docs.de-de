@@ -1,23 +1,24 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Erstellen und Ausführen eines SQL Server-Komponententests
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141208"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242700"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
+
 In dieser exemplarischen Vorgehensweise erstellen Sie einen SQL Server-Komponententest, mit dem das Verhalten mehrerer gespeicherter Prozeduren überprüft wird. Mithilfe von SQL Server-Komponententests können Codefehler, die u.U. ein fehlerhaftes Anwendungsverhalten verursachen, leichter identifiziert werden. SQL Server-Komponententests und -Anwendungstests können im Rahmen einer automatisierten Testreihe ausgeführt werden.  
   
 In dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:  
@@ -215,7 +216,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage se
     GO  
     ```  
   
-5.  Speichern Sie die Datei. Notieren Sie sich den Speicherort, da dieses Skript im nächsten Verfahren benötigt wird.  
+5.  Speichern Sie die Datei . Notieren Sie sich den Speicherort, da dieses Skript im nächsten Verfahren benötigt wird.  
   
 6.  Klicken Sie im Menü **Datei** auf **Projektmappe schließen**.  
   
@@ -718,10 +719,10 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
 5.  Wiederholen Sie Schritt 3 für die Tests Sales_uspPlaceNewOrderTest, Sales_uspFillOrderTest und Sales_uspShowOrderDetailsTest. Die Ergebnisse sollten wie folgt lauten:  
   
-    |Test|Erwartete Ergebnisse|  
+    |Test|Erwartetes Ergebnis|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|Erfolgreich|  
-    |Sales_uspShowOrderDetailsTest|Erfolgreich|  
+    |Sales_uspPlaceNewOrderTest|Pass|  
+    |Sales_uspShowOrderDetailsTest|Pass|  
     |Sales_uspFillOrderTest|Es tritt der folgende Fehler auf: „ScalarValueCondition Condition (scalarValueCondition2) Failed: ResultSet 1 Row 1 Column 1: values do not match, actual '-100' expected '100'.“ (Fehler bei ScalarValueCondition-Bedingung (scalarValueCondition2): ResultSet 1 Zeile 1 Spalte 1: die Werte stimmen nicht überein, tatsächlich '-100', erwartet '100') Dieser Fehler tritt auf, weil die Definition der gespeicherten Prozedur einen geringfügigen Fehler enthält.|  
   
     Im nächsten Schritt berichtigen Sie den Fehler und führen den Text erneut aus.  
@@ -981,7 +982,7 @@ Zum Erstellen und Überprüfen eines negativen Tests führen Sie folgende Aufgab
   
     Der Test verläuft erfolgreich. Dies bedeutet, dass die Prozedur, von der angenommen wurde, dass sie fehlschlägt, tatsächlich einen Fehler verursacht hat.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 In einem typischen Projekt würden Sie zusätzliche Komponententests definieren, um alle wichtigen Datenbankobjekte auf ihre ordnungsgemäße Funktionsweise zu überprüfen. Nach Abschluss der Tests checken Sie diese in die Versionskontrolle ein, um sie dem Team zur Verfügung zu stellen.  
   
 Nachdem Sie eine Basis geschaffen haben, können Sie Datenbankobjekte erstellen, anpassen und anschließend geeignete Tests erstellen, um festzustellen, ob sich eine Änderung auf das erwartete Verhalten auswirken würde.  

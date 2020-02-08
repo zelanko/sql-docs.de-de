@@ -19,10 +19,10 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 826a2b2305354807b6db7bbb167f86d165b98b45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025611"
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
@@ -60,7 +60,7 @@ ms.locfileid: "68025611"
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst wird auf dem Server ausgeführt und unterstützt Clientcomputer bei der Suche nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst muss nicht konfiguriert werden, er muss jedoch in einigen Verbindungsszenarien ausgeführt werden. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser finden Sie unter [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
 ## <a name="hiding-sql-server"></a>Ausblenden von SQL Server  
- Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser ausgeführt wird, antwortet er auf Abfragen mit dem Namen, der Version und den Verbindungsinformationen für jede installierte Instanz. Das Flag **HideInstance** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für gibt an, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser nicht mit Informationen zu dieser Serverinstanz reagieren soll. Clientanwendungen können zwar eine Verbindung herstellen, aber sie müssen über die erforderlichen Verbindungsinformationen verfügen. Weitere Informationen finden Sie unter [Ausblenden einer Instanz der SQL Server-Datenbank-Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md).  
+ Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser ausgeführt wird, antwortet er auf Abfragen mit dem Namen, der Version und den Verbindungsinformationen für jede installierte Instanz. Das Flag **HideInstance**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für gibt an, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser nicht mit Informationen zu dieser Serverinstanz reagieren soll. Clientanwendungen können zwar eine Verbindung herstellen, aber sie müssen über die erforderlichen Verbindungsinformationen verfügen. Weitere Informationen finden Sie unter [Ausblenden einer Instanz der SQL Server-Datenbank-Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)  

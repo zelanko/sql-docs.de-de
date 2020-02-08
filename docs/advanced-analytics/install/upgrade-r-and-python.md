@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634553"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Upgrade von Machine Learning-Komponenten (R und Python) in SQL Server-Instanzen
@@ -20,7 +20,7 @@ ms.locfileid: "69634553"
 
 Die Integration von R und Python in SQL Server umfasst Open-Source- und proprietäre Microsoft-Pakete. Im Rahmen der Standardwartung von SQL Server werden die Pakete entsprechend dem SQL Server-Releasezyklus aktualisiert, mit Bugfixes für vorhandene Pakete in der aktuellen Version, aber ohne Hauptversionsupgrades. 
 
-Viele Data Scientists sind es jedoch gewohnt, mit neueren Paketen zu arbeiten, sobald diese verfügbar sind. Sowohl für SQL Server Machine Learning Services (datenbankintern) als auch für SQL Server R Services (datenbankintern) können Sie [neuere Versionen von R und Python](#version-map) erhalten, indem Sie sie an **Microsoft Machine Learning Server** *binden*. 
+Viele Data Scientists sind es jedoch gewohnt, mit neueren Paketen zu arbeiten, sobald diese verfügbar sind. Sowohl für SQL Server Machine Learning Services (datenbankintern) als auch für SQL Server R Services (datenbankintern) können Sie [neuere Versionen von R und Python](#version-map) erhalten, indem Sie sie an **Microsoft Machine Learning Server***binden*. 
 
 ## <a name="what-is-binding"></a>Was ist eine Bindung?
 
@@ -62,8 +62,8 @@ Microsoft R Open (MRO) über R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| k. A. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [vortrainierte Modelle](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| k. A. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| k. A. | 1,0 |  1,0 |  1,0 |  1,0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | k. A. | 1,0 |  1,0 |  1,0 |  1,0 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| k. A. | 1.0 |  1.0 |  1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | k. A. | 1.0 |  1.0 |  1.0 |  1.0 |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -194,7 +194,7 @@ In den folgenden Anweisungen wird beschrieben, wie Sie die Dateien für eine Off
 
 1. Laden Sie die CAB-Dateien herunter. Unter den folgenden Links finden Sie das Release 9.3. Wenn Sie frühere Versionen benötigen, finden Sie weitere Links unter [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Denken Sie daran, dass Python/Anaconda nur einer SQL Server Machine Learning Services-Instanz hinzugefügt werden kann. Sowohl für R als auch für Python gibt es vorab trainierte Modelle. Die CAB-Dateien stellen Modelle in den Sprachen bereit, die Sie verwenden.
 
-    | Funktion | Herunterladen |
+    | Funktion | Download |
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
@@ -272,7 +272,7 @@ Dies ist zwar aufwendiger, aber Sie können die Datenbank-Engine-Instanz auch vo
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>Schritt 3: Hinzufügen von Drittanbieterpaketen
+### <a name="step-3-add-any-third-party-packages"></a>Schritt 3: Hinzufügen von Drittanbieterpaketen
 
 Möglicherweise haben Sie der Paketbibliothek andere Open-Source- oder Drittanbieterpakete hinzugefügt. Da durch das Umkehren der Bindung der Speicherort der Standardpaketbibliothek geändert wird, müssen Sie die Pakete in der Bibliothek neu installieren, die jetzt von R und Python verwendet wird. Weitere Informationen finden Sie unter [R-Paketinformationen](../package-management/r-package-information.md) und [Installation](../package-management/install-additional-r-packages-on-sql-server.md) sowie unter [Python-Paketinformationen](../package-management/python-package-information.md) und [Installation](../package-management/install-additional-python-packages-on-sql-server.md).
 
@@ -284,7 +284,7 @@ Möglicherweise haben Sie der Paketbibliothek andere Open-Source- oder Drittanbi
 
 ### <a name="parameters"></a>Parameter
 
-|Name|und Beschreibung|
+|Name|Beschreibung|
 |------|------|
 |*list*| Zeigt eine Liste aller SQL-Datenbankinstanz-IDs auf dem aktuellen Computer an|
 |*bind*| Aktualisiert die angegebene SQL-Datenbankinstanz auf die neueste Version von R Server und stellt sicher, dass die Instanz automatisch zukünftige Upgrades von R Server erhält|
@@ -296,7 +296,7 @@ Möglicherweise haben Sie der Paketbibliothek andere Open-Source- oder Drittanbi
 
 Das MLS-Installationsprogramm und SqlBindR geben beide die folgenden Fehlercodes und -meldungen zurück.
 
-|Fehlercode  | MessageBox           | Details               |
+|Fehlercode  | `Message`           | Details               |
 |------------|-------------------|-----------------------|
 |Bindungsfehler 0 | OK (bei Erfolg) | Bindung ohne Fehler übergeben. |
 |Bindungsfehler 1 | Ungültige Argumente | Syntaxfehler. |
@@ -340,7 +340,7 @@ Wenn Sie Ordner mit einem derartigen Namen vorfinden, können Sie sie nach Absch
 > [!NOTE]
 > Warten Sie unbedingt, bis die Installation abgeschlossen ist. Es kann lange dauern, bis R-Bibliotheken, die einer Version zugeordnet sind, entfernt und dann die neuen R-Bibliotheken hinzugefügt werden. Sobald der Vorgang abgeschlossen ist, werden temporäre Ordner entfernt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 + [Install Machine Learning Server for Windows (Internet connected) (Installieren von Machine Learning Server für Windows (mit Internetzugang))](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Install Machine Learning Server for Windows (offline) (Installieren von Machine Learning Server für Windows (ohne Internetzugang))](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

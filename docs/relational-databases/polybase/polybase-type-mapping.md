@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710466"
 ---
 # <a name="type-mapping-with-polybase"></a>Typzuordnung mit PolyBase
@@ -38,20 +38,20 @@ Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müss
 | INT           | Int32                     | INT            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
-| FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | Single                    | FLOAT          | FloatWritable         |
+| float         | Double                    | double         | DoubleWritable        |
+| real          | Single                    | float          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | Zeichenfolge<br /><br /> Char[] | Zeichenfolge         | Varchar               |
-| NVARCHAR      | Zeichenfolge<br /><br /> Char[] | Zeichenfolge         | Varchar               |
-| char          | Zeichenfolge<br /><br /> Char[] | Zeichenfolge         | Varchar               |
-| varchar       | Zeichenfolge<br /><br /> Char[] | Zeichenfolge         | Varchar               |
+| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
+| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
+| char          | String<br /><br /> Char[] | string         | Varchar               |
+| varchar       | String<br /><br /> Char[] | string         | Varchar               |
 | BINARY        | Byte[]                    | BINARY         | BytesWritable         | Gilt für Hive 0.8 und höher. |
 | varbinary     | Byte[]                    | BINARY         | BytesWritable         | Gilt für Hive 0.8 und höher. |
-| date          | datetime                  | timestamp      | TimestampWritable     |
-| smalldatetime | datetime                  | timestamp      | TimestampWritable     |
-| datetime2     | datetime                  | timestamp      | TimestampWritable     |
-| DATETIME      | datetime                  | timestamp      | TimestampWritable     |
+| date          | Datetime                  | timestamp      | TimestampWritable     |
+| smalldatetime | Datetime                  | timestamp      | TimestampWritable     |
+| datetime2     | Datetime                  | timestamp      | TimestampWritable     |
+| datetime      | Datetime                  | timestamp      | TimestampWritable     |
 | time          | TimeSpan                  | timestamp      | TimestampWritable     |
 | Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Gilt für Hive 0.11 und höher. |
 
@@ -62,11 +62,11 @@ Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müss
 
 | Oracle-Datentyp | SQL Server-Typ | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -93,13 +93,13 @@ Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müss
 
 | BSON-Datentyp     | SQL Server-Typ |
 | ------------------ | --------------- |
-| Double             | float           |
-| Zeichenfolge             | nvarchar        |
+| Double             | Float           |
+| String             | nvarchar        |
 | Binärdaten        | nvarchar        |
 | ObjectID          | nvarchar        |
 | Boolean            | bit             |
-| date               | Datetime2       |
-| 32-bit integer     | int             |
+| Date               | Datetime2       |
+| 32-bit integer     | Int             |
 | Timestamp          | nvarchar        |
 | 64-bit integer     | BigInt          |
 |Decimal 128         | Decimal         | 
@@ -119,13 +119,13 @@ MongoDB verwendet BSON-Dokumente zur Speicherung von Datensätzen. Im Gegensatz 
 
 | Teradata-Datentyp | SQL Server-Typ | 
 | -------------      | -------------   |
-|INTEGER             |int              |
+|INTEGER             |Int              |
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
-|DEZIMAL             |Decimal          |
+|DECIMAL             |Decimal          |
 |GLEITKOMMAZAHL               |Decimal          |
-|BYTE                |Binär (Binary)           |
+|BYTE                |Binary           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
@@ -134,11 +134,11 @@ MongoDB verwendet BSON-Dokumente zur Speicherung von Datensätzen. Im Gegensatz 
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |date             |
+|DATE                |Date             |
 |timestamp           |Datetime2        |
-|TIME                |Uhrzeit             |
-|TIME WITH TIME ZONE |Uhrzeit             |
-|TIMESTAMP WITH TIME ZONE|Uhrzeit         |
+|TIME                |Time             |
+|TIME WITH TIME ZONE |Time             |
+|TIMESTAMP WITH TIME ZONE|Time         |
 
 ::: moniker-end
 

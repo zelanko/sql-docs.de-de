@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de250fd158bdd02764e992e0ccbb69e072b4c6ab
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907336"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Anzeigen der Definition einer gespeicherten Prozedur
@@ -61,7 +61,7 @@ ms.locfileid: "72907336"
   
 3.  Erweitern Sie **Gespeicherte Prozeduren**, klicken Sie mit der rechten Maustaste auf die Prozedur und anschließend auf **Skript für gespeicherte Prozedur als**, und klicken Sie dann auf eine der folgenden Optionen: **Erstellen in**, **Ändern in** oder **Löschen und erstellen in**.  
   
-4.  Wählen Sie **Neues Abfrage-Editor-Fenster**aus. Daraufhin wird die Prozedurdefinition angezeigt.  
+4.  Wählen Sie **Neues Abfrage-Editor-Fenster** aus. Daraufhin wird die Prozedurdefinition angezeigt.  
 
 ###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Definition einer Prozedur im Abfrage-Editor an**  

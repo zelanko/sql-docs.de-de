@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959539"
 ---
 # <a name="integrated-terminal"></a>Integriertes Terminal
@@ -93,7 +93,7 @@ Der Befehl **Ansicht: Integriertes Terminal umschalten** ist der Tastenkombinati
 
 Im Folgenden finden Sie die Tastenkombinationen zum schnellen Navigieren im integrierten Terminal:
 
-|Key|Befehl|  
+|Key|Get-Help|  
 |---|---|  
 |**STRG+\`**|Integriertes Terminal anzeigen|  
 |**STRG+UMSCHALT+\`**|Neues Terminal erstellen|  
@@ -107,7 +107,7 @@ Im Folgenden finden Sie die Tastenkombinationen zum schnellen Navigieren im inte
 
 Es sind weitere Terminalbefehle verfügbar, denen Sie die gewünschten Tastenkombinationen zuordnen können.
 
-Die Überladungen sind:
+Sie lauten wie folgt:
 
 * `workbench.action.terminal.focus`: Blendet das Terminal ein. Dieser Befehl entspricht dem Umschaltbefehl, blendet jedoch das Terminal ein, statt es auszublenden, sofern es angezeigt wird.
 * `workbench.action.terminal.focusNext`: Blendet die nächste Terminalinstanz ein.

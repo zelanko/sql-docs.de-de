@@ -13,10 +13,10 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033356"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bewährte Methoden für zeitbasierte Zeilenfilter
@@ -58,10 +58,10 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
  Dieser Ansatz gleicht die Mängel bei der Verwendung von **GETDATE()** oder einer anderen zeitbasierten Methode aus. Außerdem muss nicht bestimmt werden, wann Filter für Partitionen ausgewertet werden. Betrachten Sie das folgende Beispiel einer **Events** -Tabelle:  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replizieren**|  
+|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replikat**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Dinner|112|2006-10-10|0|  
+|2|Abendessen|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
   
@@ -82,10 +82,10 @@ GO
   
  Die erste Zeile setzt die **Replicate** -Spalte auf **0**zurück, und die zweite Zeile setzt die Spalte für Ereignisse, die in den nächsten sieben Tagen stattfinden, auf **1** . Wenn diese [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung am 07.10.2006 ausgeführt wird, wird die Tabelle folgendermaßen aktualisiert:  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replizieren**|  
+|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replikat**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
+|2|Abendessen|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Wedding|112|2006-10-12|1|  
   

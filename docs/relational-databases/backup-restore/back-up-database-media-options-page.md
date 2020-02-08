@@ -14,10 +14,10 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155563"
 ---
 # <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
@@ -36,7 +36,7 @@ ms.locfileid: "70155563"
 > [!NOTE]  
 >  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 ### <a name="overwrite-media"></a>Medium überschreiben  
  Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld „Datenbank sichern“ auf der Seite „Allgemein“ die Option „URL“ (Azure Storage) als Sicherungsziel auswählen, sind die Optionen im Abschnitt „Medium überschreiben“ deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung **BACKUP TO URL. WITH FORMAT** überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "70155563"
 >  Informationen zu Transaktionsprotokollsicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  **Transaktionsprotokoll abschneiden**  
- Das Transaktionsprotokoll wird gesichert und abgeschnitten, um Protokollspeicherplatz freizugeben. Die Datenbank bleibt dabei online. Diese Option ist die Standardeinstellung.  
+ Das Transaktionsprotokoll wird gesichert und abgeschnitten, um Protokollspeicherplatz freizugeben. Die Datenbank bleibt dabei online. Dies ist die Standardoption.  
   
  **Protokollfragment sichern und Datenbank im Wiederherstellungsstatus belassen**  
  Das Protokollfragment wird gesichert und die Datenbank im Wiederherstellungsstatus belassen. Diese Option erstellt eine *Sicherung des Protokollfragments*. Dabei werden Protokolle gesichert, die bisher (vom aktiven Protokoll) noch nicht gesichert wurden, i.d.R. als Vorbereitung für die Wiederherstellung einer Datenbank. Die Datenbank steht Benutzern erst wieder zur Verfügung, wenn sie vollständig wiederhergestellt ist.  

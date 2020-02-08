@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595705"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Rotieren von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio
@@ -54,7 +54,7 @@ SQL Server Management Studio erhält die Metadaten der Spaltenverschlüsselungss
 > [!NOTE]
 > Stellen Sie sicher, dass jeder der Spaltenverschlüsselungsschlüssel, der mit dem alten Spaltenhauptschlüssel verschlüsselt wurde, mit keinem anderen Spaltenhauptschlüssel verschlüsselt wird. Das bedeutet, dass jeder durch die Drehung betroffene Spaltenverschlüsselungsschlüssel genau einen verschlüsselten Wert in der Datenbank enthalten muss. Wenn ein betroffener Spaltenverschlüsselungsschlüssel über mehr als einen verschlüsselten Wert verfügt, müssen Sie den Wert entfernen, bevor Sie die Rotation fortsetzen können (Informationen zum Entfernen eines verschlüsselten Werts eines Spaltenverschlüsselungsschlüssels finden Sie in *Schritt 4* ).
 
-### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>Schritt 3: Konfigurieren Ihrer Anwendungen mit dem neuen Spaltenhauptschlüssel
+### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>Schritt 3: Konfigurieren Ihrer Anwendungen mit dem neuen Spaltenhauptschlüssel
 
 In diesem Schritt geht es um alle Ihre Clientanwendungen, die Datenbankspalten abfragen, die mit dem zu rotierenden Spaltenhauptschlüssel geschützt werden (d.h. mit einem Spaltenverschlüsselungsschlüssel verschlüsselt sind, der wiederum mit dem zu rotierenden Spaltenhauptschlüssel verschlüsselt ist). Sie müssen sicherstellen, dass diese Clientanwendungen auf den neuen Spaltenhauptschlüssel zugreifen können. Ihr Vorgehen in diesem Schritt hängt vom Typ des Zertifikatspeichers ab, in dem sich Ihr neuer Spaltenhauptschlüssel befindet. Beispiel:
 
@@ -78,7 +78,7 @@ Ein weiterer Grund dafür, den alten Wert vor dem Archivieren oder Entfernen des
 > Wenn Sie den Wert eines Spaltenverschlüsselungsschlüssels entfernen, bevor der zugehörige Spaltenhauptschlüssel für eine Anwendung verfügbar gemacht wurde, kann die Anwendung die Datenbankspalte nicht mehr entschlüsseln.
 
 1.  Navigieren Sie über den **Objekt-Explorer** zu dem Ordner **Sicherheit > Always Encrypted-Schlüssel**, und suchen Sie den vorhandenen Spaltenhauptschlüssel, den Sie ersetzen möchten.
-2.  Klicken Sie mit der rechten Maustaste auf den vorhandenen Spaltenhauptschlüssel, und wählen Sie **Cleanup** aus.
+2.  Klicken Sie mit der rechten Maustaste auf den vorhandenen Spaltenhauptschlüssel, und wählen Sie **Cleanup**aus.
 3.  Überprüfen Sie die Liste der zu entfernenden Werte für den Spaltenhauptschlüssel.
 4.  Klicken Sie auf **OK**.
 
@@ -89,7 +89,7 @@ SQL Server Management Studio gibt [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](.
 Wenn Sie die Definition des alten Spaltenhauptschlüssels aus der Datenbank entfernen möchten, befolgen Sie diese Schritte.
 
 1. Navigieren Sie über den **Objekt-Explorer** zu dem Ordner **Sicherheit > Always Encrypted-Schlüssel > Spaltenhauptschlüssel**, und suchen Sie den alten Spaltenhauptschlüssel, der aus der Datenbank entfernt werden soll.
-2. Klicken Sie mit der rechten Maustaste auf den alten Spaltenhauptschlüssel, und wählen Sie **Löschen** aus. (Dadurch wird eine [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) -Anweisung generiert und ausgegeben, die die Metadaten des Spaltenhauptschlüssels entfernt.)
+2. Klicken Sie mit der rechten Maustaste auf den alten Spaltenhauptschlüssel, und wählen Sie **Löschen**aus. (Dadurch wird eine [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) -Anweisung generiert und ausgegeben, die die Metadaten des Spaltenhauptschlüssels entfernt.)
 3. Klicken Sie auf **OK**.
 
 > [!NOTE]
@@ -141,8 +141,8 @@ Sie müssen sowohl für den alten als auch für den neuen Spaltenverschlüsselun
 
 Weitere Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="next-steps"></a>Next Steps
-- [Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Nächste Schritte
+- [Abfragen von Spalten mit Always Encrypted und SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Weitere Informationen

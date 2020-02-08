@@ -11,10 +11,10 @@ ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
 ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957074"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen
@@ -44,7 +44,7 @@ Stellen Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbind
 
 2. In diesem Artikel wird die SQL-Anmeldung verwendet, aber auch die Windows-Authentifizierung unterstützt. Füllen Sie die folgenden Felder mit dem Servernamen, Benutzernamen und Kennwort für Ihre Azure SQL-Serverinstanz aus:
 
-   | Einstellung       | Vorgeschlagener Wert | BESCHREIBUNG |
+   | Einstellung       | Vorgeschlagener Wert | Beschreibung |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | Der vollqualifizierte Servername | Etwa: **servername.database.windows.net**. |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird die SQL-Authentifizierung verwendet. |

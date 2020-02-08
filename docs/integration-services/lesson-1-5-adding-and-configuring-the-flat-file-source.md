@@ -11,10 +11,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283688"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lektion 1.5: Hinzufügen und Konfigurieren der Flatfilequelle
@@ -40,16 +40,16 @@ Für diese Aufgabe konfigurieren Sie die Flatfilequelle zum Verwenden von der Ve
   
 6.  Klicken Sie auf **Spalten**, und überprüfen Sie, ob die Namen der Spalten richtig sind.  
   
-7.  Wählen Sie **OK**.  
+7.  Klicken Sie auf **OK**.  
   
 8.  Klicken Sie erst mit der rechten Maustaste auf die Flatfilequelle, und klicken Sie anschließend auf **Eigenschaften**.  
   
 9. Überprüfen Sie im Fenster **Eigenschaften**, ob die Eigenschaft **LocaleID** auf **Englisch (USA)** festgelegt ist.  
   
 ## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
-[Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+[Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Flatfilequelle](../integration-services/data-flow/flat-file-source.md)  
 [Verbindungs-Manager für Flatfiles](../integration-services/connection-manager/flat-file-connection-manager.md)  
   

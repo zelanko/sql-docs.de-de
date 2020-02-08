@@ -11,10 +11,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c4a51bfb9da9abe3e50c85896f32269e3fee5ff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296098"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lektion 1.7: Hinzufügen und Konfigurieren des OLE DB-Ziels
@@ -43,7 +43,7 @@ In dieser Aufgabe fügen Sie ein OLE DB-Ziel hinzu und konfigurieren es, sodass 
   
 7.  Geben Sie in das Feld **Name of the table or the view** (Name der Tabelle oder Sicht) **[dbo].[FactCurrencyRate]** ein, oder wählen Sie diese Zeichenfolge aus.  
   
-8.  Klicken Sie auf die Schaltfläche **Neu**, um eine neue Tabelle zu erstellen.  Ändern Sie den Namen der Tabelle im Skript von **Sample OLE DB Destination** (OLE DB-Beispielziel) in **NewFactCurrencyRate**.  Wählen Sie **OK**.  
+8.  Klicken Sie auf die Schaltfläche **Neu**, um eine neue Tabelle zu erstellen.  Ändern Sie den Namen der Tabelle im Skript von **Sample OLE DB Destination** (OLE DB-Beispielziel) in **NewFactCurrencyRate**.  Klicken Sie auf **OK**.  
   
 9. Wenn Sie auf **OK** klicken, wird das Dialogfeld geschlossen, und das Feld **Name of the table or the view** (Name der Tabelle oder Ansicht) wird automatisch in **NewFactCurrencyRate** geändert.  
   
@@ -51,16 +51,16 @@ In dieser Aufgabe fügen Sie ein OLE DB-Ziel hinzu und konfigurieren es, sodass 
   
 11. Überprüfen Sie, ob die Eingabespalten **AverageRate**, **CurrencyKey**, **EndOfDayRate**und **DateKey** den Zielspalten ordnungsgemäß zugeordnet sind. Wenn gleichnamige Spalten einander zugeordnet sind, ist die Zuordnung richtig.  
   
-12. Wählen Sie **OK**.  
+12. Klicken Sie auf **OK**.  
   
 13. Klicken Sie erst mit der rechten Maustaste auf das Ziel **Sample OLE DB Destination** (OLE DB-Beispielziel) und anschließend mit der linken auf **Eigenschaften**.  
   
 14. Überprüfen Sie im Fenster **Eigenschaften**, ob die Eigenschaft **LocaleID** auf **Englisch (USA)** und die Eigenschaft **DefaultCodePage** auf **1252** festgelegt ist.  
   
 ## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
-[Step 8: Vereinfachen des Layouts des Pakets aus Lektion 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+[Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [OLE DB-Ziel](../integration-services/data-flow/ole-db-destination.md)  
   
   

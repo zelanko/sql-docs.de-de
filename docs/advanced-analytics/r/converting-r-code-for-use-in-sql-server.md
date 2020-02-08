@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 882ce47467a38ab4a891f632c9598070e13494e3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727537"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Konvertieren von R-Code für die Ausführung in (datenbankinternen) SQL Server-Instanzen
@@ -65,7 +65,7 @@ Allerdings erfordert Ihr Code möglicherweise wesentliche Änderungen, wenn eine
 
     Weitere Informationen finden Sie unter [R-Bibliotheken und -Datentypen](../r/r-libraries-and-data-types.md).
 
-## <a name="step-2-convert-or-repackage-code"></a>Schritt 2: Konvertieren oder erneutes Packen von Code
+## <a name="step-2-convert-or-repackage-code"></a>Schritt 2: Konvertieren oder erneutes Packen von Code
 
 Wie viele Änderungen Sie an Ihrem Code vornehmen hängt davon ab, ob Sie den R-Code von einem Remoteclient für die Ausführung im SQL Server-Computekontext übermitteln möchten oder planen, den Code als Teil einer gespeicherten Prozedur bereitzustellen, wodurch eine bessere Leistung und Datensicherheit erzielt werden kann. Die Umschließung Ihres Codes in einer gespeicherten Prozedur umfasst zusätzliche Anforderungen. 
 
@@ -123,7 +123,7 @@ Wie viele Änderungen Sie an Ihrem Code vornehmen hängt davon ab, ob Sie den R-
 
     Weitere Informationen finden Sie unter [Tipps und Tricks zur Optimierung von SQL Server für Analysedienste](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services).
 
-### <a name="step-3-prepare-for-deployment"></a>Schritt 3: Vorbereiten der Bereitstellung
+### <a name="step-3-prepare-for-deployment"></a>Schritt 3: Vorbereiten der Bereitstellung
 
 + Benachrichtigen Sie den Administrator, damit Pakete installiert und im Voraus getestet werden, bevor Sie Ihren Code bereitstellen. 
 

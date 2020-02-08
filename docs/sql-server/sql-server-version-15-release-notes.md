@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74096118"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>Versionshinweise zu [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel werden Einschränkungen und bekannte Probleme für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] beschrieben. Verwandte Informationen finden Sie unter:
+In diesem Artikel werden Einschränkungen und bekannte Probleme für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] beschrieben. Verwandte Informationen
 
 > [Neues in [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
@@ -76,7 +76,7 @@ Die RTM-Buildnummer für SQL Server 2019 lautet `15.0.2000.5`.
 
 - **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hardware- und Softwareanforderungen für die Installation von SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 

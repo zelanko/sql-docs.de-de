@@ -9,10 +9,10 @@ ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580789"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportieren als PDF-Datei (Berichts-Generator und SSRS)
@@ -59,10 +59,10 @@ ms.locfileid: "65580789"
   
 |PDF-Eigenschaft|Erstellt von|  
 |------------------|------------------|  
-|**Title**|Das **Name** -Attribut des **Report** -RDL-Elements|  
-|**Author**|Das **Author** -RDL-Element|  
+|**Titel**|Das **Name** -Attribut des **Report** -RDL-Elements|  
+|**Autor**|Das **Author** -RDL-Element|  
 |**Subject**|Das **Description** -RDL-Element|  
-|**Creator**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Produktname und -Version|  
+|**Ersteller**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Produktname und -Version|  
 |**Producer**|Name und Version der Renderingerweiterung|  
 |**CreationDate**|Berichtsausführungszeit im **datetime** -PDF-Format|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65580789"
 ### <a name="drillthrough-links"></a>Drillthroughlinks  
  Drillthroughlinks werden beim PDF-Rendering nicht unterstützt. Die Drillthroughlinks werden nicht als klickbare Links gerendert, und Drillthroughberichte können keine Verbindung mit dem Ziel des Drillthroughs herstellen.  
   
-### <a name="hyperlinks"></a>Hyperlinks  
+### <a name="hyperlinks"></a>Links  
  Links in Berichten werden als durch Klicken aktivierbare Links in der PDF-Datei gerendert. Beim Klicken auf den Link öffnet Acrobat den Standardbrowser des Clients und navigiert zur Link-URL.  
   
   
@@ -103,7 +103,7 @@ ms.locfileid: "65580789"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

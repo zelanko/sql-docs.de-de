@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299009"
 ---
 # <a name="configure-dialog-box"></a>Konfigurieren (Dialogfeld)
@@ -74,10 +74,10 @@ ms.locfileid: "71299009"
  **Name**  
  Listet den Namen des Verbindungs-Managers auf.  
   
- **Eigenschaftsname**  
+ **Eigenschaftenname**  
  Listet den Namen der Verbindungs-Manager-Eigenschaft auf.  
   
- **ReplTest1**  
+ **Wert**  
  Listet den Wert auf, der der Verbindungs-Manager-Eigenschaft zugewiesen ist. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Wert im Dialogfeld **Parameterwert festlegen** zu ändern. Sie können einen Literalwert eingeben, eine Umgebungsvariable mit dem zu verwendenden Wert zuordnen oder den Standardwert aus dem Paket verwenden.  
   
 ##  <a name="references"></a> Festlegen der Optionen auf der Seite 'Verweise'  
@@ -91,15 +91,15 @@ ms.locfileid: "71299009"
  **Umgebungsordner**  
  Listet den Ordner auf, der die Umgebung enthält.  
   
- **Datei**  
+ **Öffnen**  
  Klicken Sie hierauf, um das Dialogfeld **Umgebungseigenschaften** zu öffnen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie auf diese Schaltfläche, um einen Verweis auf eine Umgebung hinzuzufügen. Klicken Sie im Dialogfeld **Umgebungen durchsuchen** auf eine Umgebung, und klicken Sie dann auf **OK**.  
   
  Sie können jede in einem Projektordner unter dem **SSISDB** -Knoten enthaltene Umgebung auswählen.  
   
- **Entfernen**  
+ **Remove**  
  Klicken Sie auf eine im Bereich **Verweise** aufgeführte Umgebung und anschließend auf **Entfernen**.  
   
   

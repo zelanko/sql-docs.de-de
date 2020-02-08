@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294190"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
@@ -169,15 +169,15 @@ ms.locfileid: "71294190"
 #### <a name="referencetype-dynamic-options"></a>Dynamische Optionen für ReferenceType  
   
 ##### <a name="referencetype--external-reference"></a>ReferenceType = Externer Verweis  
- **Speicherort**  
+ **Location**  
  Wählen Sie den Speicherort des untergeordneten Pakets aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**SQL Server**|Legt den Speicherort als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest.|  
-|**File system**|Legen Sie als Speicherort das Dateisystem fest.|  
+|**Dateisystem**|Legen Sie als Speicherort das Dateisystem fest.|  
   
- **Verbindung**  
+ **Connection**  
  Wählen Sie den Typ des Speicherorts für das untergeordnete Paket aus.  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "71294190"
 #### <a name="location-dynamic-options"></a>Dynamische Optionen für Location  
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
- **Verbindung**  
+ **Connection**  
  Wählen Sie in der Liste einen OLE DB-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "71294190"
  Geben Sie den Namen des untergeordneten Pakets an, oder klicken Sie auf die Schaltfläche mit den drei Auslassungspunkten (...), um nach dem Paket zu suchen.  
   
 ##### <a name="location--file-system"></a>Location = File system  
- **Verbindung**  
+ **Connection**  
  Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -218,10 +218,10 @@ ms.locfileid: "71294190"
  **Bindungsparameter oder Variable**  
  Wählen Sie den Parameter oder die Variable mit dem Wert aus, den Sie an das untergeordnete Paket übergeben möchten.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie, um einen Parameter oder eine Variable einem untergeordneten Paketparameter zuzuordnen.  
   
- **Entfernen**  
+ **Remove**  
  Klicken Sie, um eine Zuordnung zwischen einem Parameter oder einer Variable und einem untergeordneten Paketparameter zu entfernen.  
   
   

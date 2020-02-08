@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen eines benutzerdefinierten Erkenntnis-Widgets'
+title: 'Tutorial: Erstellen eines benutzerdefinierten Erkenntnis-Widgets'
 titleSuffix: Azure Data Studio
 description: In diesem Tutorial wird veranschaulicht, wie Sie benutzerdefinierte Erkenntnis-Widgets erstellen und diese in Azure Data Studio zu Datenbank- und Serverdashboards hinzufügen.
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959099"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Lernprogramm: Erstellen eines benutzerdefinierten Erkenntnis-Widgets
+# <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Erstellen eines benutzerdefinierten Erkenntnis-Widgets
 
 In diesem Tutorial wird veranschaulicht, wie Sie Ihre eigenen Erkenntnisabfragen erstellen, um benutzerdefinierte Erkenntnis-Widgets zu erstellen.
 
@@ -30,9 +30,9 @@ In diesem Tutorial lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie einen der folgenden Schnellstarts vollständig aus:
+Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
 
-- [Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 

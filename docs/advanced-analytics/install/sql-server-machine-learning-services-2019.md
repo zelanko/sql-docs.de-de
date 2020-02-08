@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69531039"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services
@@ -41,7 +41,7 @@ In früheren Releases enthielt **SQLRUserGroup** einen Pool mit lokalen Windows-
 
 In SQL Server 2019 werden von Setup keine lokalen Workerkonten mehr erstellt. Stattdessen wird die Isolation durch [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) erreicht. Wenn zur Laufzeit in einer gespeicherten Prozedur oder Abfrage eingebettete Skripts oder Codes erkannt werden, ruft SQL Server Launchpad mit der Anforderung eines erweiterungsspezifischen Startprogramms auf. Launchpad ruft die entsprechende Laufzeitumgebung in einem Prozess unter seiner Identität auf und instanziiert einen AppContainer, um ihn aufzunehmen. Diese Änderung hat den Vorteil, dass keine lokalen Konten und Kennwörter mehr verwaltet werden müssen. Zudem kann dank dem Wegfall der Abhängigkeit von lokalen Benutzerkonten dieses Feature nun in Installationen verwendet werden, bei denen lokale Benutzerkonten nicht zulässig sind.
 
-Gemäß der Implementierung durch SQL Server handelt es sich bei AppContainern um einen internen Mechanismus. Obwohl sich AppContainer im Prozessmonitor physisch nicht nachweisen lassen, sind sie dennoch in Firewallregeln für ausgehenden Datenverkehr zu finden, die von Setup erstellt werden, um zu verhindern, dass Prozesse Netzwerkaufrufe ausführen.
+Gemäß der Implementierung durch SQL Server handelt es sich bei AppContainern um einen internen Mechanismus. Obwohl sich AppContainer im Prozessmonitor physisch nicht nachweisen lassen, sind sie dennoch in Firewallregeln für ausgehenden Datenverkehr zu finden, die beim Setup erstellt werden, um zu verhindern, dass Prozesse Netzwerkaufrufe ausführen.
 
 ## <a name="firewall-rules-created-by-setup"></a>Von Setup erstellte Firewallregeln
 
@@ -66,7 +66,7 @@ Für die *implizite Authentifizierung* ist wie bisher eine zusätzliche Konfigur
 Im Rahmen des SQL Server-Setups wird für die aktuellen Standardverzeichnisse **R_SERVICES** und **PYTHON_SERVICES** eine symbolische Verknüpfung erstellt. Wenn Sie nicht möchten, dass diese Verknüpfung erstellt wird, können Sie „allen Anwendungspaketen“ eine Leseberechtigung für den Ordner in der Hierarchie weiter oben gewähren.
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 + [Installieren von SQL Server-Machine Learning Services unter Windows](sql-machine-learning-services-windows-install.md)
 + [Installieren von SQL Server-Machine Learning Services unter Linux](../../linux/sql-server-linux-setup-machine-learning.md)

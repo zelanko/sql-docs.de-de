@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d016a1fed3a60df78a02242a2f42e46cf7184553
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245102"
 ---
 # <a name="teradata-destination"></a>Teradata-Ziel
@@ -79,7 +79,7 @@ Sie können die ODBC-Aufrufe der Teradata-Quelle an den Teradata-ODBC-Treiber pr
 
 In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des Teradata-Ziels beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.
 
-|Eigenschaftenname|Datentyp|BESCHREIBUNG|
+|Eigenschaftenname|Datentyp|Beschreibung|
 |:-|:-|:-|
 |AlwaysDropErrorTable|Boolean|Der Standardwert ist **False**. Wenn der Wert **True** ist, werden alle Fehlertabellen gelöscht, auch dann, wenn das Teradata-Ziel keine Lesevorgänge ausführen kann.|
 |ArraySupport|Boolean|Der Standardwert ist **true**. Wenn der Wert **True** ist, verwenden DML-Gruppen ArraySupport. Gilt nur für TPT-Stream. Diese Eigenschaft befindet sich im **Erweiterten Editor**.|
@@ -154,7 +154,7 @@ Klicken Sie auf **Neu**. Das Dialogfeld **Teradata-Verbindungs-Manager-Editor**,
 
 Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optionen sind in der folgenden Tabelle aufgeführt:
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |:-|:-|
 |Tabellenname – TPT-Stream|Inkrementeller Modus mit dem TPT-Stream-Operator. <br>**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus. In dieser Liste werden nur die ersten 1.000 Tabellen angezeigt. Sie können das Tabellennamenpräfix eingeben oder für einen beliebigen Teil des Namens den Platzhalter (*) verwenden, um die Tabelle oder die Tabellen aufzulisten, die Sie verwenden möchten.|
 |Tabellenname – TPT-Ladevorgang|Schneller Lademodus (direkter Pfad) unter Verwendung des TPT-API-Ladeoperators (Teradata-FastLoad-Protokoll), bei dem die Zieltabelle leer sein muss. <br>**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus. In dieser Liste werden nur die ersten 1.000 Tabellen angezeigt. Sie können das Tabellennamenpräfix eingeben oder für einen beliebigen Teil des Namens den Platzhalter (*) verwenden, um die Tabelle oder die Tabellen aufzulisten, die Sie verwenden möchten.|

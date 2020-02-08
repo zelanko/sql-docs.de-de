@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531248"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971375"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installieren von SQL Server Machine Learning Services (Python und R) unter Linux
 
@@ -51,14 +51,14 @@ ls /opt/microsoft/mssql/bin
 
 ### <a name="2-uninstall-ctprc-packages"></a>2. Deinstallieren von CTP-/RC-Paketen
 
-Führen Sie die Deinstallation auf der niedrigsten Paketebene durch. Alle Upstreampakete, die von einem Paket auf niedrigerer Ebene abhängig sind, werden automatisch deinstalliert.
+Führen Sie die Deinstallation auf der niedrigsten Paketebene durch. Alle Upstreampakete, die von einem Paket auf einer niedrigeren Ebene abhängig sind, werden automatisch deinstalliert.
 
   + Entfernen Sie **microsoft-r-open*** für die R-Integration.
   + Entfernen Sie **mssql-mlservices-python** für die Python-Integration.
 
-Befehle zum Entfernen von Paketen können Sie der folgenden Tabelle entnehmen.
+Die Befehle zum Entfernen von Paketen können Sie der folgenden Tabelle entnehmen.
 
-| Platform  | Befehl(e) zum Entfernen eines Pakets | 
+| Plattform  | Befehl(e) zum Entfernen eines Pakets | 
 |-----------|----------------------------|
 | Red Hat   | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
 | SUSE  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
@@ -170,7 +170,7 @@ zypper update
 
 Auf einem mit dem Internet verbundenen Gerät werden Pakete unabhängig von der Datenbank-Engine mithilfe des Paketinstallationsprogramms für das betreffende Betriebssystem heruntergeladen und installiert. In der folgenden Tabelle werden alle verfügbaren Pakete beschrieben. Für R und Python geben Sie jedoch Pakete an, die entweder die vollständigen Installation oder die minimale Installation durchführen.
 
-| Paketname | Gilt für | und Beschreibung |
+| Paketname | Gilt für | Beschreibung |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Erweiterungsframework, das zum Ausführen von R- und Python-Code verwendet wird. |
 | microsoft-openmpi  | Python, R | Die Schnittstelle zur Nachrichtenübergabe, die von den Revo*-Bibliotheken zur Parallelisierung unter Linux verwendet wird. |
@@ -277,9 +277,9 @@ sudo zypper install mssql-mlservices-packages-py-9.4.7*
 sudo zypper install mssql-mlservices-packages-r-9.4.7*
 ```
 
-## <a name="post-install-config-required"></a>Konfiguration nach der Installation (erforderlich)
+## <a name="post-install-config-required"></a>Konfigurieren nach der Installation (erforderlich)
 
-Die zusätzliche Konfiguration erfolgt in erster Linie über das [Tool mssql-conf](sql-server-linux-configure-mssql-conf.md).
+Die zusätzliche Konfiguration erfolgt in erster Linie über das Tool [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 
 1. Fügen Sie das MSSQL-Benutzerkonto hinzu, um den SQL Server-Dienst auszuführen. Dies ist erforderlich, wenn Sie das Setup vorher noch nicht ausgeführt haben.
@@ -426,7 +426,7 @@ Sie können die Pakete von [https://packages.microsoft.com/](https://packages.mi
 
 |||
 |--|----|
-| mssql/mlservices-Pakete | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/mlservices-Pakete | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open-Pakete | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,14 +434,14 @@ Sie können die Pakete von [https://packages.microsoft.com/](https://packages.mi
 
 |||
 |--|----|
-| mssql/mlservices-Pakete | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/mlservices-Pakete | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open-Pakete | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>SLES/12-Pfade
 
 |||
 |--|----|
-| mssql/mlservices-Pakete | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/mlservices-Pakete | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open-Pakete | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>Paketliste

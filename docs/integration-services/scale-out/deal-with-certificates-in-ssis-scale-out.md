@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896962"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Verwalten von Zertifikaten für SQL Server Integration Services Scale Out
@@ -88,9 +88,9 @@ Aktualisieren Sie die Konfigurationsdatei des Scale Out Masterdiensts (`\<drive\
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Stellen Sie erneut eine Verbindung zwischen den Scale Out-Workern und dem Scale Out-Master her.
 Löschen Sie für jeden Scale Out-Worker entweder den Worker, und fügen Sie Ihn erneut mit dem [Scale Out-Manager](integration-services-ssis-scale-out-manager.md) hinzu, oder führen Sie die folgenden Schritte aus:
 
-A.  Installieren Sie das SSL-Clientzertifikat im Stammspeicher des lokalen Computers auf dem Workerknoten.
+a.  Installieren Sie das SSL-Clientzertifikat im Stammspeicher des lokalen Computers auf dem Workerknoten.
 
-B.  Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts.
+b.  Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts.
 
 Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`) auf dem Workerknoten. Aktualisieren Sie **MasterHttpsCertThumbprint** auf den Fingerabdruck des neuen SSL-Zertifikats.
 

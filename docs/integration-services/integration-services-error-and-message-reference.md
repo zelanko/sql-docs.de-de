@@ -15,10 +15,10 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d55050b132a3367ecc495d0afedcad6f0d2351b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284424"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
@@ -50,7 +50,7 @@ ms.locfileid: "71284424"
 ##  <a name="msgError"></a> Fehlermeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTS_E_** .  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Die gespeicherte Prozedur "%1" wird am Ziel überschrieben.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|Der Datentyp "%1"in Spalte %2 wird für %3 nicht unterstützt. Diese Spalte wird in DT_NTEXT umgewandelt.|  
@@ -1417,7 +1417,7 @@ ms.locfileid: "71284424"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|Die Anzahl von %2!ld! Zeilen ist für die Eigenschaft "%1" ungültig. Dieser Wert muss größer als 0 (null) sein.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|Der Adapter wurde aufgefordert, eine Zeichenfolge zu schreiben, die %1!I64d! Bytes lang war, alle Daten zusammen dürfen jedoch maximal 4.294.967.294 Bytes aufweisen.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|Der Ausgabe wurden keine Eingaben zugeordnet. Für "%1" muss mindestens eine Eingabespalte einer Ausgabespalte zugeordnet sein.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|Konvertierung von "% 1" mit Codepage %2!d! in "%3" mit Codepage %4!d! wird nicht unterstützt.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|Konvertierung von "% 1" mit Codepage %2!d! in "%3" mit Codepage %4!d! nicht unterstützt.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|Die Zuordnung der externen Metadatenspalte für %1 ist ungültig.  Die externe Metadatenspalten-ID darf nicht gleich 0 (null) sein.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|%1 ist einer externen Metadatenspalte zugeordnet, die nicht vorhanden ist.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|Fehler beim Schreiben der Long-Objektdaten vom Typ DT_TEXT, DT_NTEXT oder DT_IMAGE in den Datenflusstask-Puffer der Spalte "%1".|  
@@ -1926,7 +1926,7 @@ ms.locfileid: "71284424"
 |0xC02090BE|-1071607618|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_PATHNOTFOUND|Fehler beim Öffnen einer Datei zum Lesen. Der Pfad wurde nicht gefunden.|  
 |0xC02090BF|-1071607617|DTS_E_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Fehler beim Öffnen der Datei "%1" zum Lesen. Es sind zu viele Dateien geöffnet.|  
 |0xC02090C0|-1071607616|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Fehler beim Öffnen der Datei zum Lesen. Es sind zu viele Dateien geöffnet.|  
-|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Fehler beim Öffnen der Datei "%1" zum Lesen. Der Zugriff wird verweigert.|  
+|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Fehler beim Öffnen der Datei "%1" zum Lesen. Zugriff verweigert.“|  
 |0xC02090C2|-1071607614|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_ACCESSDENIED|Fehler beim Öffnen der Datei zum Lesen. Sie verfügen nicht über die erforderlichen Berechtigungen.|  
 |0xC02090C3|-1071607613|DTS_E_INSERTERINVALIDBOM|Der Wert für die Bytereihenfolgemarke (Byte Order Mark, BOM) für die Datei "%1" lautet 0x%2!4.4X!, es wurde jedoch der Wert 0x%3!4.4X! erwartet. Die ExpectBOM-Eigenschaft wurde für die Datei festgelegt, aber der BOM-Wert in der Datei fehlt oder ist ungültig.|  
 |0xC02090C4|-1071607612|DTS_E_TXFILEINSERTERSTATIC_INSERTERINVALIDBOM|Der Wert für die Bytereihenfolgemarke (Byte Order Mark, BOM) für die Datei ist ungültig. Die ExpectBOM-Eigenschaft wurde für die Datei festgelegt, aber der BOM-Wert in der Datei fehlt oder ist ungültig.|  
@@ -2024,7 +2024,7 @@ ms.locfileid: "71284424"
 ##  <a name="msgWarning"></a> Warnmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Warnmeldungen beginnen mit **DTS_W_** .  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|Es bleiben %1!lu! Tage für die Evaluierung. Nach Ablauf der Evaluierung können die Pakete nicht mehr ausgeführt werden.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|Warnung(en) wurde(n) ausgelöst. Vorher sollten genauere Warnungen ausgegeben worden sein, die die Bedeutung der Warnung(en) erläutern.|  
@@ -2170,7 +2170,7 @@ ms.locfileid: "71284424"
 ##  <a name="msgInfo"></a> Informationsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Informationsmeldungen beginnen mit **DTS_I_** .  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|Verteilte Transaktion für diesen Container wird gestartet.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|Commit für verteilte Transaktion, die von diesem Container gestartet wurde, wird ausgeführt.|  
@@ -2269,7 +2269,7 @@ ms.locfileid: "71284424"
 ##  <a name="msgGeneral"></a> Allgemeine Meldungen und Ereignismeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTS_MSG_** .  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Falsche Funktion.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Die angegebene Datei wurde nicht gefunden.|  
@@ -2308,7 +2308,7 @@ ms.locfileid: "71284424"
 ##  <a name="msgSuccess"></a> Erfolgsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Erfolgsmeldungen beginnen mit **DTS_S_** .  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|Der Wert ist NULL.|  
 |0x40005|262149|DTS_S_TRUNCATED|Der Zeichenfolgenwert war abgeschnitten. Der Puffer hat eine Zeichenfolge empfangen, die für die Spalte zu lang war. Die Zeichenfolge wurde deshalb vom Puffer abgeschnitten.|  
@@ -2317,7 +2317,7 @@ ms.locfileid: "71284424"
 ##  <a name="msgPipeline"></a> Fehlermeldungen der Datenflusskomponenten  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTSBC_E_** , wobei „BC“ auf die systemeigene Basisklasse verweist, von der die meisten Microsoft-Datenflusskomponenten abgeleitet werden.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|Die Gesamtanzahl der Ausgaben und Fehlerausgaben (%1!lu!) ist falsch. Dieser Wert muss genau %2!lu! betragen.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Die Ausgabe mit dem Index %1!lu! kann nicht abgerufen werden.|  

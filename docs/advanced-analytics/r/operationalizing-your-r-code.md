@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15c3406d6745802ece620942bf51b23c4d3643ee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727446"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Operationalisieren von R-Code mithilfe von gespeicherten Prozeduren in SQL Server-Machine Learning Services
@@ -32,7 +32,7 @@ Ein umfangreicheres Beispiel für die Bereitstellung von R-Code in der Produktio
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Richtlinien zur Optimierung von R-Code für SQL
 
-Die Konvertierung von R-Code in SQL gestaltet sich einfacher, wenn der R- oder Python-Code zuvor optimiert wird. Dazu gehört das Vermeiden von Datentypen, die Probleme verursachen, das Vermeiden von unnötigen Datenkonvertierungen sowie das Umschreiben des R-Codes in einen einzelnen Funktionsaufruf, der leicht parametrisiert werden kann. Weitere Informationen finden Sie in den folgenden Themen:
+Die Konvertierung von R-Code in SQL gestaltet sich einfacher, wenn der R- oder Python-Code zuvor optimiert wird. Dazu gehört das Vermeiden von Datentypen, die Probleme verursachen, das Vermeiden von unnötigen Datenkonvertierungen sowie das Umschreiben des R-Codes in einen einzelnen Funktionsaufruf, der leicht parametrisiert werden kann. Weitere Informationen finden Sie unter
 
 + [R-Bibliotheken und -Datentypen](r-libraries-and-data-types.md)
 + [Konvertieren von R-Code für die Verwendung in R Services](converting-r-code-for-use-in-sql-server.md)
