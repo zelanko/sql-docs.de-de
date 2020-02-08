@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73882395"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server mit Azure Data Studio
@@ -24,7 +24,7 @@ In diesem Artikel wird beschrieben, wie Sie über Azure Data Studio eine Verbind
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Ein bereitgestellter [Big-Data-Cluster für SQL Server 2019](deployment-guidance.md).
-- [Big-Data-Tools für SQL Server 2019:](deploy-big-data-tools.md)
+- [Big Data-Tools für SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Erweiterung von SQL Server 2019**
    - **kubectl**

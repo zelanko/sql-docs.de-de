@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293800"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
@@ -55,12 +55,12 @@ ms.locfileid: "71293800"
   
  Viele Webdienstmethoden verwenden keine Eingabeparameter. Beispielsweise ist für eine Webdienstmethode, die die Namen der im aktuellen Monat geborenen Präsidenten abruft, kein Eingabeparameter notwendig, weil der Webdienst den aktuellen Monat lokal bestimmen kann.  
   
- Die Ergebnisse der Webdienstmethode können in eine Variable oder eine Datei geschrieben werden. Mit dem Dateiverbindungs-Manager geben Sie entweder die Datei an oder stellen den Namen der Variablen bereit, in die die Ergebnisse geschrieben werden sollen. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+ Die Ergebnisse der Webdienstmethode können in eine Variable oder eine Datei geschrieben werden. Mit dem Dateiverbindungs-Manager geben Sie entweder die Datei an oder stellen den Namen der Variablen bereit, in die die Ergebnisse geschrieben werden sollen. Weitere Informationen finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Webdienst'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge aufgelistet, die für den Task 'Webdienst' aktiviert werden können. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**WSTaskBegin**|Der Zugriff auf einen Webdienst wurde begonnen.|  
 |**WSTaskEnd**|Eine Webdienstmethode wurde beendet.|  
@@ -85,7 +85,7 @@ ms.locfileid: "71293800"
 ## <a name="web-service-task-editor-general-page"></a>Editor für den Task 'Webdienst' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie einen HTTP-Verbindungs-Manager und den Speicherort der WSDL-Datei (Web Services Description Language) angeben, die der Task „Webdienst“ verwendet, den Task „Webdienst“ beschreiben und die WSDL-Datei herunterladen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **HTTPConnection**  
  Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -132,8 +132,8 @@ ms.locfileid: "71293800"
 ## <a name="web-service-task-editor-input-page"></a>Editor für den Task 'Webdienst' (Seite Eingabe)
   Mithilfe der Seite **Eingabe** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie den Webdienst, die Webmethode sowie die Werte angeben, die der Webmethode als Eingabe zur Verfügung gestellt werden sollen. Die Werte können entweder durch Eingeben von Zeichenfolgen direkt in die Wert-Spalte oder durch Auswählen von Variablen in der Wert-Spalte bereitgestellt werden.  
   
-### <a name="options"></a>enthalten  
- **Dienst**  
+### <a name="options"></a>Tastatur  
+ **Service**  
  Wählen Sie aus der Liste einen Webdienst aus, der zum Ausführen der Webmethode verwendet werden soll.  
   
  **Methode**  
@@ -154,7 +154,7 @@ ms.locfileid: "71293800"
  **Variable**  
  Aktivieren Sie die Kontrollkästchen, um Variablen für das Bereitstellen von Eingaben zu verwenden.  
   
- **ReplTest1**  
+ **Wert**  
  Wenn die Kontrollkästchen für die Variablen aktiviert sind, wählen Sie die Variablen in der Liste aus, um die Eingaben bereitzustellen. Andernfalls geben Sie die Werte ein, die in den Eingaben verwendet werden sollen.  
   
 ## <a name="web-service-task-editor-output-page"></a>Editor für den Task 'Webdienst' (Seite Ausgabe)
@@ -164,7 +164,7 @@ ms.locfileid: "71293800"
  **OutputType**  
  Wählt den Speichertyp, der beim Speichern der Ergebnisse verwendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**File Connection**|Speichert die Ergebnisse in einer Datei. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Datei**angezeigt.|  
 |**Variable**|Speichert die Ergebnisse in einer Variablen. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Variable**angezeigt.|  

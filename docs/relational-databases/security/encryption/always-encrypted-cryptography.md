@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594405"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted-Kryptografie
@@ -31,7 +31,7 @@ ms.locfileid: "73594405"
   
  Ein Spaltenverschlüsselungsschlüssel (column encryption key; CEK) ist ein Inhaltsverschlüsselungsschlüssel (d.h. ein Schlüssel zum Schützen von Daten), der durch einen CMK geschützt ist.  
   
- Alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-CMK-Speicheranbieter verschlüsseln CEKs, indem sie RSA-OAEP (RSA mit optimalem asymmetrischen Verschlüsselungspadding) verwenden. Der Schlüsselspeicheranbieter, der die Microsoft Cryptography API unterstützt: Next Generation (CNG) in .NET Framework ([SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) verwendet dich von RFC 8017 in Abschnitt A.2.1 angegeben Standardparameter Diese Standardparameter verwenden eine Hash-Funktion von SHA-1 und eine Maskengenerierungsfunktion von MGF1 mit SHA-1. Alle anderen Schlüsselspeicheranbieter verwenden SHA-256. 
+ Alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-CMK-Speicheranbieter verschlüsseln CEKs, indem sie RSA-OAEP (RSA mit optimalem asymmetrischen Verschlüsselungspadding) verwenden. Der Schlüsselspeicheranbieter, der die Microsoft Cryptography API unterstützt: Next Generation (CNG) in .NET Framework ([SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) verwendet dich von RFC 8017 in Abschnitt A.2.1 angegeben Standardparameter Diese Standardparameter verwenden eine Hashfunktion von SHA-1 und eine Maskengenerierungsfunktion von MGF1 mit SHA-1. Alle anderen Schlüsselspeicheranbieter verwenden SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Datenverschlüsselungsalgorithmus  
  Always Encrypted verwendet den Algorithmus **AEAD_AES_256_CBC_HMAC_SHA_256** zum Verschlüsseln von Daten in der Datenbank.  
@@ -85,21 +85,21 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>Schritt 3: Berechnen des MAC  
+### <a name="step-3-computing-mac"></a>Schritt 3: Berechnen des MAC  
  Anschließend wird der MAC mithilfe des folgenden Algorithmus berechnet:  
   
 ```  
 MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)  
 ```  
   
- Erläuterungen:  
+ Hierbei gilt:  
   
 ```  
 versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Schritt 4: Concatenation  
+### <a name="step-4-concatenation"></a>Schritt 4: Verkettung  
  Schließlich wird der verschlüsselte Wert erzeugt, indem das Algorithmusversionsbyte, der MAC, der IV und der Chiffretext „AES_256_CBC“ verkettet werden:  
   
 ```  
@@ -140,25 +140,25 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |Datentyp|Chiffretextlänge [Bytes]|  
 |---------------|---------------------------------|  
 |**bigint**|65|  
-|**binary**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
+|**binary**|Verschiedene Ursachen. Verwenden Sie die oben stehende Formel.|  
 |**bit**|65|  
-|**char**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
-|**Datum**|65|  
+|**char**|Verschiedene Ursachen. Verwenden Sie die oben stehende Formel.|  
+|**date**|65|  
 |**datetime**|65|  
 |**datetime2**|65|  
 |**datetimeoffset**|65|  
 |**decimal**|81|  
 |**float**|65|  
 |**geography**|N/V (nicht unterstützt)|  
-|**Geometrie**|N/V (nicht unterstützt)|  
+|**geometry**|N/V (nicht unterstützt)|  
 |**hierarchyid**|N/V (nicht unterstützt)|  
 |**image**|N/V (nicht unterstützt)|  
 |**int**|65|  
 |**money**|65|  
-|**nchar**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
+|**nchar**|Verschiedene Ursachen. Verwenden Sie die oben stehende Formel.|  
 |**ntext**|N/V (nicht unterstützt)|  
 |**numeric**|81|  
-|**nvarchar**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
+|**nvarchar**|Verschiedene Ursachen. Verwenden Sie die oben stehende Formel.|  
 |**real**|65|  
 |**smalldatetime**|65|  
 |**smallint**|65|  
@@ -170,8 +170,8 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**timestamp**<br /><br /> (**rowversion**)|N/V (nicht unterstützt)|  
 |**tinyint**|65|  
 |**uniqueidentifier**|81|  
-|**varbinary**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
-|**varchar**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
+|**varbinary**|Verschiedene Ursachen. Verwenden Sie die oben stehende Formel.|  
+|**varchar**|Verschiedene Ursachen. Verwenden Sie die oben stehende Formel.|  
 |**xml**|N/V (nicht unterstützt)|  
   
 ## <a name="net-reference"></a>.NET-Referenz  

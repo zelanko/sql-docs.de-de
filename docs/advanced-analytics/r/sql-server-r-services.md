@@ -10,10 +10,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71149929"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Was ist SQL Server 2016 R Services?
@@ -62,7 +62,7 @@ Es gibt zwei Möglichkeiten zum Ausführen von R-Skripts in R Services:
 
 Neben den Enterprise-Paketen von Microsoft können Sie auch Open-Source-Pakete und -Frameworks verwenden. Die gängigsten Open-Source-R-Pakete sind in R Services bereits vorinstalliert. Zudem sind die folgenden R-Pakete von Microsoft bereits enthalten:
 
-| Paket | und Beschreibung |
+| Paket | Beschreibung |
 |-|-|
 | [RevoScaleR](../r/ref-r-revoscaler.md) | Das primäre Paket mit skalierbaren R-Funktionen zum Transformieren und Bearbeiten von Daten sowie zum Erstellen von statistischen Übersichten, Visualisierungen und vielen anderen Modellierungsformen. Zudem enthält das Paket zur Parallelverarbeitung Funktionen zum automatischen Verteilen von Workloads auf verfügbare Kerne. |
 | [MicrosoftML (R)](../r/ref-r-microsoftml.md) | Stellt Machine Learning-Algorithmen zur Erstellung von benutzerdefinierten Modellen für die Text-, Bild- und Stimmungsanalyse bereit. |
@@ -83,8 +83,8 @@ Neben den Enterprise-Paketen von Microsoft können Sie auch Open-Source-Pakete u
 
     + Schnellstart: [Erstellen und Ausführen einfacher R-Skripts in SQL Server](../tutorials/quickstart-r-create-script.md)
     + Schnellstart: [Erstellen und Trainieren eines Vorhersagemodells in R](../tutorials/quickstart-r-train-score-model.md)
-    + Lernprogramm: [Verwenden von R in T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
-    + Lernprogramm: [Verwenden von R Services in R-Tools](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Daten durchsuchen, Graphen und Plots erstellen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (sechsteilige Reihe)
+    + Tutorial: [Verwenden von R in T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
+    + Tutorial: [Verwenden von R Services in R-Tools](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Daten durchsuchen, Graphen und Plots erstellen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (sechsteilige Reihe)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

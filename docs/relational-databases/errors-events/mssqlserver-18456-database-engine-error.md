@@ -12,13 +12,13 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137093"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -60,7 +60,7 @@ Möglicherweise wird auch die folgende Meldung zurückgegeben:
 ## <a name="additional-error-information"></a>Zusätzliche Fehlerinformationen  
 Zur Verbesserung der Sicherheit bleibt die Art des Authentifizierungsfehlers in der an den Client zurückgegebenen Fehlermeldung absichtlich verborgen. Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll hingegen enthält ein entsprechender Fehler einen Fehlerzustand, der einem Authentifizierungsfehler zugeordnet werden kann. Vergleichen Sie den Fehlerzustand mit der folgenden Liste, um den Grund für den Anmeldefehler zu bestimmen.  
   
-|Status|und Beschreibung|  
+|State|Beschreibung|  
 |---------|---------------|  
 |1|Es sind keine Fehlerinformationen verfügbar. Dieser Status bedeutet normalerweise, dass Sie keine Berechtigung haben, die Fehlerdetails zu empfangen. Weitere Informationen erhalten Sie beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Administrator.|  
 |2|Die Benutzer-ID ist nicht gültig.|  
@@ -74,7 +74,7 @@ Zur Verbesserung der Sicherheit bleibt die Art des Authentifizierungsfehlers in 
 |18|Das Kennwort muss geändert werden.|  
 |38, 46|Die vom Benutzer angeforderte Datenbank konnte nicht gefunden werden.|
 |102 – 111|AAD-Fehler|
-|122 – 124|Fehler wegen eines leeren Benutzernamens oder Kennworts.|
+|122 – 124|Fehler: Der Benutzername oder das Kennwort ist leer.|
 |126|Die vom Benutzer angeforderte Datenbank ist nicht vorhanden.|
 |132 – 133|AAD-Fehler|
   
@@ -93,7 +93,7 @@ Um dieses Problem zu beheben, schließen Sie **TRUSTED_CONNECTION = TRUE** in di
 ## <a name="examples"></a>Beispiele  
 In diesem Beispiel ist der Fehlerzustand des Authentifizierungsfehlers 8. Dies zeigt an, dass das Kennwort falsch ist.  
   
-|date|Quelle|MessageBox|  
+|Date|`Source`|`Message`|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|Anmeldung|Error: 18456, Schweregrad: 14, Status: 8.|  
 |2007-12-05 20:12:56.34|Anmeldung|Fehler bei der Anmeldung für den Benutzer <Benutzername>. [CLIENT: <ip address>]|  

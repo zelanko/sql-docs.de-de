@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039059"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -40,7 +40,7 @@ Zeigt Fragmentierungsinformationen für die Daten und Indizes der angegebenen Ta
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  Der Index, für den die Fragmentierungsinformationen überprüft werden sollen. Falls nicht angegeben, wird der Basisindex der angegebenen Tabelle oder Sicht von der Anweisung verarbeitet. Verwenden Sie die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)-Katalogsicht, um die Index-ID abzurufen.  
   
- mit  
+ WITH  
  Gibt die Optionen für den von der DBCC-Anweisung zurückgegebenen Informationstyp an.  
   
  FAST  
@@ -89,7 +89,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resultsets:
   
-|Statistik|und Beschreibung|  
+|Statistik|Beschreibung|  
 |---|---|
 |**Gescannte Seiten**|Anzahl der Seiten in der Tabelle oder im Index.|  
 |**Gescannte Blöcke**|Anzahl der Blöcke in der Tabelle oder im Index.|  
@@ -110,7 +110,7 @@ Wenn *table_id* und FAST angegeben sind, gibt DBCC SHOWCONTIG ein Resultset mit 
   
 Wenn TABLERESULTS angegeben ist, gibt DBCC SHOWCONTIG die neun in der ersten Tabelle beschriebenen Spalten sowie die folgenden Spalten zurück.
   
-|Statistik|und Beschreibung|  
+|Statistik|Beschreibung|  
 |---|---|
 |**Objektnamen**|Der Name der verarbeiteten Tabelle oder Sicht.|  
 |**ObjectID**|ID des Objektnamens.|  
@@ -145,7 +145,7 @@ Wenn WITH TABLERESULTS und FAST angegeben sind, ist das Resultset dasselbe wie b
 ## <a name="remarks"></a>Bemerkungen  
 Die DBCC SHOWCONTIG-Anweisung durchläuft die Seitenkette des angegebenen Indexes auf Blattebene, wenn *index_id* angegeben wurde. Wenn nur *table_id* angegeben wurde oder wenn *index_id* den Wert 0 aufweist, werden die Datenseiten der angegebenen Tabelle gescannt. Dieser Vorgang erfordert nur eine beabsichtigte gemeinsame Tabellensperre (IS). Auf diese Weise können alle Updates und Einfügungen ausgeführt werden, außer jenen, die eine exklusive Tabellensperre (X) erfordern. Dies schafft einen Kompromiss zwischen der Ausführungsgeschwindigkeit ohne Verringerung der Parallelität und der Anzahl der zurückgegebenen Statistiken. Wenn der Befehl jedoch nur zum Messen der Fragmentierung verwendet wird, wird die Verwendung der WITH FAST-Option empfohlen, um eine optimale Leistung zu erreichen. Bei einem schnellen Scan werden die Seiten auf Blatt- oder Datenebene des Indexes nicht gelesen. Die Option WITH FAST gilt nicht für einen Heap.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
 DBCC SHOWCONTIG zeigt Daten mit den Datentypen **ntext**, **text** und **image** nicht an. Dies liegt daran, dass Textindizes, die Text- und Imagedaten speichern, nicht mehr verwendet werden.
   
 Zudem bietet DBCC SHOWCONTIG keine Unterstützung für einige neue Funktionen. Beispiel:
@@ -224,7 +224,7 @@ DBCC SHOWCONTIG ('Production.Product', 1) WITH FAST;
 GO  
 ```  
   
-### <a name="d-displaying-the-full-result-set-for-every-index-on-every-table-in-a-database"></a>D. Anzeigen des vollständigen Resultsets für alle Indizes in jeder Tabelle der Datenbank  
+### <a name="d-displaying-the-full-result-set-for-every-index-on-every-table-in-a-database"></a>D: Anzeigen des vollständigen Resultsets für alle Indizes in jeder Tabelle der Datenbank  
 Im folgenden Beispiel wird ein vollständiges Resultset für jeden Index aller Tabellen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zurückgegeben.
   
 ```sql  

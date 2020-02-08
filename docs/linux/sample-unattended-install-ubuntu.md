@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910481"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Skript für die unbeaufsichtigte SQL Server-Installation unter Ubuntu
@@ -22,12 +22,12 @@ ms.locfileid: "67910481"
 Dieses Bash-Beispielskript installiert SQL Server 2017 unter Ubuntu 16.04 ohne interaktive Eingabe. Es stellt Beispiele für die Installation von Datenbank-Engine, SQL Server-Befehlszeilentools und SQL Server-Agent bereit und führt Schritte nach der Installation aus. Optional können Sie die Volltextsuche installieren und einen Administratorbenutzer erstellen.
 
 > [!TIP]
-> Wenn Sie kein Skript für die unbeaufsichtigte Installation benötigen, lässt sich SQL Server am schnellsten installieren, indem Sie die [Schnellstartanleitung für Ubuntu](quickstart-install-connect-ubuntu.md) befolgen. Weitere Informationen zum Setup finden Sie in der [Installationsanleitung für SQL Server für Linux.](sql-server-linux-setup.md)
+> Wenn Sie kein Skript für die unbeaufsichtigte Installation benötigen, lässt sich SQL Server am schnellsten installieren, indem Sie die [Schnellstartanleitung für Ubuntu](quickstart-install-connect-ubuntu.md) befolgen. Weitere Setupinformationen finden Sie im [Leitfaden für die Installation von SQL Server unter Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Sie benötigen mindestens 2 GB Arbeitsspeicher, um SQL Server für Linux auszuführen.
-- Das Dateisystem muss **XFS** oder **EXT4** sein. Andere Dateisysteme wie z.B. **BTRFS** werden nicht unterstützt.
+- Das Dateisystem muss **XFS** oder **EXT4** sein. Andere Dateisysteme wie **BTRFS** werden nicht unterstützt.
 - Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server für Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Beispielskript
@@ -190,7 +190,7 @@ Als Erstes legt das Bash-Skript einige Variablen fest. Dabei kann es sich wie im
 
 1. Es fügt die SQL Server-Befehlszeilentools zum Pfad hinzu, um die Verwendung zu vereinfachen.
 
-1. Es installiert den SQL Server-Agent, wenn die ```SQL_INSTALL_AGENT``` festgelegt ist. Standardmäßig ist diese aktiviert.
+1. Es installiert den SQL Server-Agent, wenn die Skriptvariable ```SQL_INSTALL_AGENT``` festgelegt ist. Standardmäßig ist diese aktiviert.
 
 1. Es installiert optional die SQL Server-Volltextsuche, wenn die Variable ```SQL_INSTALL_FULLTEXT``` festgelegt ist.
 
@@ -202,7 +202,7 @@ Als Erstes legt das Bash-Skript einige Variablen fest. Dabei kann es sich wie im
 
 1. Das Skript überprüft, ob SQL Server ordnungsgemäß installiert ist und blendet dabei Fehlermeldungen aus.
 
-1. Es erstellt einen neuen Serveradministrator, wenn ```SQL_INSTALL_USER``` und ```SQL_INSTALL_USER_PASSWORD``` festgelegt sind.
+1. Es erstellt einen neuen Serveradministratorbenutzer, wenn ```SQL_INSTALL_USER``` und ```SQL_INSTALL_USER_PASSWORD``` festgelegt sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

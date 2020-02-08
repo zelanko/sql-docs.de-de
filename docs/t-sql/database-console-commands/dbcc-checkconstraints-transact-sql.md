@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982396"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982396"
 
 Überprüft die Integrität einer angegebenen Einschränkung oder aller Einschränkungen einer angegebenen Tabelle in der aktuellen Datenbank.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ DBCC CHECKCONSTRAINTS
  Die zu überprüfende Tabelle oder Einschränkung. Wenn *table_name* oder *table_id* angegeben ist, werden alle aktivierten Einschränkungen der Tabelle überprüft. Wenn *constraint_name* oder *constraint_id* angegeben wird, wird nur diese Einschränkung überprüft. Wenn weder ein Tabellenbezeichner noch ein Einschränkungsbezeichner angegeben ist, werden alle aktivierten Einschränkungen für alle Tabellen in der aktuellen Datenbank überprüft.  
  Durch den Einschränkungsnamen wird die zugehörige Tabelle eindeutig identifiziert. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
- mit  
+ WITH  
  Aktiviert anzugebende Optionen.  
   
  ALL_CONSTRAINTS  
@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC CHECKCONSTRAINTS erstellt für alle FOREIGN KEY- und CHECK-Einschränkungen einer Tabelle eine Abfrage und führt sie aus.
   
 Eine FOREIGN KEY-Abfrage sieht beispielsweise folgendermaßen aus:
@@ -92,7 +92,7 @@ DBCC CHECKCONSTRAINTS prüft die Integrität von FOREIGN KEY- und CHECK-Einschr�
   
 Wenn *table_name* oder *table_id* angegeben wird und DBCC CHECKCONSTRAINTS für die Versionsverwaltung durch das System aktiviert ist, führt der Befehl außerdem Konsistenzprüfungen temporärer Daten für die angegebene Tabelle aus. Wenn *NO_INFOMSGS* nicht angegeben ist, gibt dieser Befehl jeden Konsistenzverstoß in der Ausgabe in einer separaten Zeile zurück. Das Format der Ausgabe ist ([pkcol1], [pkcol2]..) = (\<pkcol1-Wert>, \<pkcol2-Wert>...) AND \<Fehler des temporären Tabelleneintrags>.
   
-|Check|Zusätzliche Informationen in der Ausgabe, wenn die Prüfung einen Fehler zurückgibt|  
+|Prüfen|Zusätzliche Informationen in der Ausgabe, wenn die Prüfung einen Fehler zurückgibt|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (aktuell)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (aktuell, Vergangenheit)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
@@ -105,11 +105,11 @@ Es ist nicht möglich, constraint_name oder constraint_id angeben, um nur tempor
 ## <a name="result-sets"></a>Resultsets  
 DBCC CHECKCONSTRAINTS gibt ein Rowset mit folgenden Spalten zurück.
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |Tabellenname|**varchar**|Der Name der Tabelle.|  
 |Constraint Name|**varchar**|Name der verletzten Einschränkung.|  
-|Erläuterungen|**varchar**|Spaltenwertzuweisungen, die die Zeile bzw. die Zeilen, die die Einschränkung verletzen, identifizieren.<br /><br /> Der Wert in dieser Spalte kann in einer WHERE-Klausel einer SELECT-Anweisung verwendet werden, die hinsichtlich Zeilen abfragt, die die Einschränkung verletzen.|  
+|Hierbei gilt:|**varchar**|Spaltenwertzuweisungen, die die Zeile bzw. die Zeilen, die die Einschränkung verletzen, identifizieren.<br /><br /> Der Wert in dieser Spalte kann in einer WHERE-Klausel einer SELECT-Anweisung verwendet werden, die hinsichtlich Zeilen abfragt, die die Einschränkung verletzen.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .

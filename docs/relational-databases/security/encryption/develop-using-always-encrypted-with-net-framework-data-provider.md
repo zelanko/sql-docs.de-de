@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558069"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Verwenden von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server
@@ -295,7 +295,7 @@ Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 Der .NET Framework-Datenanbieter für SQL Server enthält die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter, die mit den bestimmten Anbieternamen vorab registriert wurden (um den Anbieter zu suchen).
 
 
-| Klasse | BESCHREIBUNG | Anbietername (Suche) |
+| Klasse | Beschreibung | Anbietername (Suche) |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider-Klasse| Ein Anbieter für den Windows-Zertifikatspeicher. | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Hinweis:** Dieser Anbieter ist in .NET Framework 4.6.1 und höheren Versionen verfügbar. |Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API unterstützt: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt.  | MSSQL_CNG_STORE|
@@ -565,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Name|BESCHREIBUNG|In .NET Version eingeführt
+|Name|Beschreibung|In .NET Version eingeführt
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Ein Schlüsselspeicheranbieter für den Windows-Zertifikatspeicher.|  4.6
 |[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Eine Schlüsselspeicheranbieter für Microsoft Cryptography API: Next Generation (CNG).|  4.6.1

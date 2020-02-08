@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710526"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase-Transact-SQL-Referenz
@@ -36,7 +36,7 @@ Um PolyBase verwenden zu können, müssen Sie externe Tabellen erstellen, um auf
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
 
 >[!NOTE]
->Damit Sie PolyBase verwenden können, müssen Sie Berechtigungen auf Systemadministrator- oder CONTROL SERVER-Ebene für die Datenbank haben.
+>Damit Sie PolyBase verwenden können, müssen Sie über Berechtigungen auf Systemadministrator- oder CONTROL SERVER-Ebene für die Datenbank verfügen.
 
 ## <a name="prerequisites"></a>Voraussetzungen  
 
@@ -44,7 +44,7 @@ Konfigurieren Sie PolyBase. Siehe [PolyBase configuration](../../relational-data
   
 ## <a name="create-external-tables-for-hadoop"></a>Erstellen externen Tabellen für Hadoop
 
-Betrifft: SQL Server (ab 2016), Parallel Data Warehouse
+Gilt für: SQL Server (ab 2016), Parallel Data Warehouse
 
 **1. Erstellen datenbankweiter Anmeldeinformationen**
 
@@ -120,7 +120,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Erstellen externer Tabellen für Azure Blob-Speicher  
-Betrifft: SQL Server (ab 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
+Gilt für: SQL Server (ab 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
 
 **1. Erstellen datenbankweiter Anmeldeinformationen**  
 
@@ -195,7 +195,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Erstellen externer Tabellen für Azure Data Lake Store
-Betrifft: Azure SQL Data Warehouse
+Gilt für: Azure SQL Data Warehouse
 
 Weitere Informationen finden Sie unter [Laden von Daten aus Azure Data Lake Store in SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 
@@ -554,4 +554,4 @@ Beispiele für Abfragen finden Sie unter [PolyBase Queries](../../relational-dat
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erste Schritte mit PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
-[PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md)
+[PolyBase-Handbuch](../../relational-databases/polybase/polybase-guide.md)

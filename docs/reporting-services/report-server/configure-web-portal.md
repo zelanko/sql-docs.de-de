@@ -11,10 +11,10 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308399"
 ---
 # <a name="configure-the-web-portal"></a>Konfigurieren des Webportals
@@ -66,7 +66,7 @@ Wenn Sie URLs im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-K
 
 3. Ersetzen Sie die URL durch die URL der Berichtsserverinstanz.
 
-4. Speichern Sie die Änderungen, und schließen Sie die Datei.
+4. Speichern Sie Ihre Änderungen, und schließen Sie die Datei.
 
 Weitere Informationen zum Bearbeiten von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) und [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).
 
@@ -86,7 +86,7 @@ Sie können ein benutzerdefiniertes Markenpaket erstellen, um die für das Webpo
 
 5. Ersetzen Sie auf der Registerkarte **Allgemein** unter **Name** **SQL Server Reporting Services** durch einen anderen Namen.
 
-6. Wählen Sie **Anwenden**aus.
+6. Wählen Sie **Übernehmen**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

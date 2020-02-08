@@ -14,10 +14,10 @@ ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292912"
 ---
 # <a name="destination-assistant"></a>Ziel-Assistent
@@ -48,7 +48,7 @@ In diesem Thema werden die Schritte beschrieben, um ein neues Ziel mithilfe des 
 ## <a name="add-new-destination-dialog-box"></a>Neues Ziel hinzufügen (Dialogfeld)
 In der folgenden Tabelle sind die Optionen im Dialogfeld **Neues Ziel hinzufügen** aufgeführt.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Zieltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
 |Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **\<Neu>** , um einen neuen Verbindungs-Manager zu erstellen.|  

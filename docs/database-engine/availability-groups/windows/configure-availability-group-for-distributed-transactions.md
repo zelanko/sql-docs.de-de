@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713270"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Konfigurieren von verteilten Transaktionen für Always On-Verfügbarkeitsgruppen
@@ -118,7 +118,7 @@ Auf der Anwendungsebene wird eine verteilte Transaktion beinahe so wie eine loka
    
    Wenn der Transaktions-Manager von der erfolgreichen Vorbereitung aller Ressourcen-Manager in Kenntnis gesetzt wird, sendet er Commitbefehle an alle Ressourcen-Manager. Die Ressourcen-Manager können dann den Commit beenden. Wenn alle Ressourcen-Manager eine erfolgreiche Ausführung des Commits melden, sendet der Transaktions-Manager eine Benachrichtigung über die erfolgreiche Ausführung an die Anwendung. Wenn einer der Ressourcen-Manager einen Fehler bei der Vorbereitung ausgibt, sendet der Transaktions-Manager einen Rollbackbefehl an alle Ressourcen-Manager und benachrichtigt die Anwendung über die fehlgeschlagene Ausführung des Commits.
 
-### <a name="detailed-steps"></a>Die Schritte im Detail
+### <a name="detailed-steps"></a>Ausführliche Schritte
 
 In den nachfolgenden Schritten wird erläutert, wie die Anwendung mit dem DTC zusammenarbeitet, um verteilte Transaktionen abzuschließen.
 
@@ -195,7 +195,7 @@ Nach dem Rollback oder Commit der Transaktion können Sie die Datenbank mit `ALT
 
 Weitere Informationen zum Auflösen unsicherer Transaktionen finden Sie unter [Resolve Transactions manually](https://technet.microsoft.com/library/cc754134.aspx) (Transaktionen manuell auflösen).
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 
 [Distributed Transactions](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions) (Verteilte Transaktionen)
 

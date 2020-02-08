@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72929908"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Häufig gestellte Fragen zu SQL Server für Linux
@@ -105,7 +105,7 @@ In den folgenden Abschnitten werden häufig gestellte Fragen zu SQL Server für 
 
 1. **Gibt es ein Tool wie SSMS für Linux?**
 
-   Azure Data Studio ist ein neues plattformübergreifendes Tool für die Verwaltung von SQL Server. Weitere Informationen finden Sie unter [What is Azure Data Studio (Was ist Azure Data Studio)](../azure-data-studio/what-is.md).
+   Das neue Azure Data Studio ist ein plattformübergreifendes Tool zum Verwalten von SQL Server. Weitere Informationen finden Sie unter [What is Azure Data Studio (Was ist Azure Data Studio)](../azure-data-studio/what-is.md).
 
 1. **Sind Befehle wie „sqlcmd“ und „bcp“ unter Linux verfügbar?**
 
@@ -120,7 +120,7 @@ In den folgenden Abschnitten werden häufig gestellte Fragen zu SQL Server für 
    Sie können [dynamische Systemverwaltungssichten](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) verwenden, um verschiedene Typen von Informationen über SQL Server, einschließlich Informationen über Linux-Prozesse, zu erfassen. Sie können [Abfragedatenspeicher](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) zur Verbesserung der Abfrageleistung verwenden. Andere Tools, z. B. das integrierte [Leistungsdashboard](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), funktionieren remote in SSMS unter Windows.
 
    > [!TIP]
-   > Eine Möglichkeit zur Verbesserung der Leistung besteht darin, Ihr Linux-Betriebssystem und die SQL Server-Instanz ordnungsgemäß zu konfigurieren. Weitere Informationen finden Sie unter [Performance best practices and configuration guidelines for SQL Server on Linux (Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server unter Linux)](sql-server-linux-performance-best-practices.md).
+   > Eine Möglichkeit zur Verbesserung der Leistung besteht darin, Ihr Linux-Betriebssystem und die SQL Server-Instanz ordnungsgemäß zu konfigurieren. Weitere Informationen finden Sie unter [Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Verwaltung
 

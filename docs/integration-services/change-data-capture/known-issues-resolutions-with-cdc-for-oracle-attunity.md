@@ -9,10 +9,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713425"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Bekannte Fehler und Lösungen bei Change Data Capture für Oracle von Attunity
@@ -49,7 +49,7 @@ Bevor Sie allzu viel Zeit für Problembehandlung aufwenden, achten Sie darauf, d
 -  In den erweiterten Optionen der Attunity CDC-Instanz hinzugefügte Eigenschaften werden entfernt, wenn eine Tabelle zu CDC hinzugefügt oder daraus entfernt wird. 
 - Attunity CDC funktioniert nach dem Anwenden einer SQL-Korrektur, die „__$command_id column“ hinzufügt, nicht mehr
 
-### <a name="sql-server-2014"></a>SQLServer 2014 
+### <a name="sql-server-2014"></a>SQL Server 2014 
 
 **Version 2.0.0.114** enthält diese Korrekturen:
 - Fehlerbehebungen: Beim Hinzufügen einer Oracle-Tabelle tritt im Oracle CDC-Designer der Fehler „Incorrect syntax near the keyword ‚KEY‘“ (Syntaxfehler in der Nähe des Schlüsselworts ‚KEY‘) auf.
@@ -156,7 +156,7 @@ Sie können das Benutzerkonto festlegen, indem Sie die CDCInstance im linken Ber
 
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

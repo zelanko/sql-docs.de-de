@@ -14,10 +14,10 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078031"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>TYPE-Direktive in FOR XML-Abfragen
@@ -51,7 +51,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Zuweisen von FOR XML-Abfrageergebnissen zu einer Variablen vom Typ XML  
- Im folgenden Beispiel wird das Ergebnis einer FOR XML-Abfrage `@x` zugewiesen, einer Variablen vom Typ **xml**. Die Abfrage ruft Kontaktinformationen wie z.B. `BusinessEntityID`, `FirstName`, `LastName` sowie zusätzliche Telefonnummern aus der `AdditionalContactInfo`-Spalte mit `TYPE` **xml** ab. Da die `FOR XML`-Klausel die `TYPE`-Direktive angibt, werden die XML-Daten als **xml**-Typ zurückgegeben und einer Variablen zugewiesen.  
+ Im folgenden Beispiel wird das Ergebnis einer FOR XML-Abfrage **zugewiesen, einer Variablen vom Typ** xml `@x`. Die Abfrage ruft Kontaktinformationen wie z.B. `BusinessEntityID`, `FirstName`, `LastName` sowie zusätzliche Telefonnummern aus der `AdditionalContactInfo`-Spalte mit `TYPE`**xml** ab. Da die `FOR XML` -Klausel die `TYPE` -Direktive angibt, werden die XML-Daten als **xml** -Typ zurückgegeben und einer Variablen zugewiesen.  
   
 ```  
 USE AdventureWorks2012;  
@@ -74,7 +74,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>Abfragen von Ergebnissen einer FOR XML-Abfrage  
  FOR XML-Abfragen geben XML-Daten zurück. Folglich können Sie Methoden vom Typ **xml** wie **query()** und **value()** auf das von FOR XML-Abfragen zurückgegebene XML-Ergebnis anwenden.  
   
- In der folgenden Abfrage wird die `query()`-Methode des **xml**-Datentyps verwendet, um das Ergebnis der `FOR XML`-Abfrage abzufragen. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+ In der folgenden Abfrage wird die `query()` -Methode des **xml** -Datentyps verwendet, um das Ergebnis der `FOR XML` -Abfrage abzufragen. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +88,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- Die innere `SELECT ... FOR XML`-Abfrage gibt ein Ergebnis vom Typ **xml** zurück, auf das die äußere `SELECT`-Abfrage die `query()`-Methode vom Typ **xml** anwendet. Beachten Sie, dass die `TYPE` -Direktive angegeben ist.  
+ Die innere `SELECT ... FOR XML` -Abfrage gibt ein Ergebnis vom Typ **xml** zurück, auf das die äußere `SELECT` -Abfrage die `query()` -Methode vom Typ **xml** anwendet. Beachten Sie, dass die `TYPE` -Direktive angegeben ist.  
   
  Dies ist das Ergebnis:  
   
@@ -104,7 +104,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- In der folgenden Abfrage wird die `value()`-Methode des Datentyps **xml** verwendet, um einen Wert aus dem XML-Ergebnis einer `SELECT...FOR XML`-Abfrage abzurufen. Weitere Informationen finden Sie unter [value&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ In der folgenden Abfrage wird die `value()` -Methode des Datentyps **xml** verwendet, um einen Wert aus dem XML-Ergebnis einer `SELECT...FOR XML` -Abfrage abzurufen. Weitere Informationen finden Sie unter [value&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,7 +124,7 @@ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure
 SELECT @FirstPhoneFromAdditionalContactInfo;  
 ```  
   
- Der XQuery-Pfadausdruck in der `value()`-Methode ruft die erste Telefonnummer des Kundenkontakts mit der `BusinessEntityID` `1` ab.  
+ Der XQuery-Pfadausdruck in der `value()` -Methode ruft die erste Telefonnummer des Kundenkontakts mit der `BusinessEntityID``1`ab.  
   
 > [!NOTE]  
 >  Wenn die TYPE-Direktive nicht angegeben ist, wird das Ergebnis der FOR XML-Abfrage als **nvarchar(max)** zurückgegeben.  
