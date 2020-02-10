@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059170"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Quellen-Editor für Excel (Seite Verbindungs-Manager)
   Mithilfe des Knotens **Verbindungs-Manager** im Dialogfeld **Quellen-Editor für Excel** können Sie eine [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] -Arbeitsmappe für die Quelle auswählen. Die Excel-Quelle liest Daten aus einem Arbeitsblatt oder dem benannten Bereich einer vorhandenen Arbeitsmappe.  
   
 > [!NOTE]  
->  Die `CommandTimeout` Eigenschaft der Excel-Quelle ist nicht verfügbar, in der **Quellen-Editor für Excel**, jedoch können festgelegt werden, mithilfe der **Erweiterter Editor**. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt Excel-Quelle von [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  Die `CommandTimeout` -Eigenschaft der Excel-Quelle ist nicht im **Quellen-Editor für Excel**verfügbar, kann jedoch mit dem- **Erweiterter Editor**festgelegt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt Excel-Quelle von [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Weitere Informationen zur Excel-Quelle finden Sie unter [Excel Source](data-flow/excel-source.md).  
   
 ## <a name="static-options"></a>Statische Optionen  
- **Teilcache**  
+ **OLE DB Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Excel-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -39,15 +39,15 @@ ms.locfileid: "66059170"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Tabelle oder Sicht|Ruft Daten aus einem Arbeitsblatt oder dem benannten Bereich einer Excel-Datei ab.|  
-|Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL-Befehl|Ruft mithilfe einer SQL-Abfrage Daten aus einer Excel-Datei ab. Informationen zur Abfragesyntax finden Sie unter [Excel Source](data-flow/excel-source.md).|  
 |SQL-Befehl aus Variable|Gibt den SQL-Abfragetext in einer Variablen an.|  
   
  **Vorschau**  
- Zeigen Sie mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
+ Zeigt mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
   
@@ -60,13 +60,13 @@ ms.locfileid: "66059170"
  Wählen Sie die Variable aus, die den Namen des Arbeitsblatts oder des benannten Bereichs enthält.  
   
 ### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
- **SQL-Befehlstext**  
+ **SQL-Befehls Text**  
  Geben Sie den Text der SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken. Wahlweise können Sie auch nach der Datei mit dem Abfragetext suchen, indem Sie auf **Durchsuchen**klicken.  
   
  **Parameter**  
  Wenn Sie eine parametrisierte Abfrage eingeben und im Abfragetext ? als Parameterplatzhalter verwenden, können Sie den Paketvariablen mithilfe des Dialogfelds **Abfrageparameter festlegen** Abfrageeingabeparameter zuordnen.  
   
- **Build query**  
+ **Abfrage erstellen**  
  Mithilfe des Dialogfelds **Abfrage-Generator** können Sie die SQL-Abfrage visuell erstellen.  
   
  **Durchsuchen**  
@@ -79,9 +79,9 @@ ms.locfileid: "66059170"
  **Variablenname**  
  Wählen Sie die Variable aus, die den Text für die SQL-Abfrage enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für Excel &#40;Seite Spalten&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Der Quellen-Editor für Excel &#40;Spalten&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Quellen-Editor für Excel &#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Excel-Verbindungs-Manager](connection-manager/excel-connection-manager.md)   
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](control-flow/foreach-loop-container.md)  

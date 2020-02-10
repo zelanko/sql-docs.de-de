@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870902"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
 
-Dieser Abschnitt enthält ausgewählte Datenbank-Engine-Fehlermeldungen, die weiterer Erläuterung bedürfen.
+Dieser Abschnitt enthält ausgewählte Datenbank-Engine Fehlermeldungen, die weitere Erläuterungen benötigen.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datenbank-Engine-Ereignisse und Fehler](database-engine-events-and-errors.md) beschreibt das Format der [!INCLUDE[ssDE](../../includes/ssde-md.md)] Fehler Nachrichten und erläutert das Anzeigen von Fehlermeldungen und Fehlermeldungen an Anwendungen zurückgegeben.  
+ [Ereignisse und Fehler Datenbank-Engine](database-engine-events-and-errors.md) Beschreibt das Format der [!INCLUDE[ssDE](../../includes/ssde-md.md)] Fehlermeldungen und erläutert, wie Fehlermeldungen angezeigt und Fehlermeldungen an Anwendungen zurückgegeben werden.  
   
  Erläutert die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Fehlermeldungen sowie die möglichen Ursachen und die Maßnahmen, die Sie zur Problembehebung ergreifen können.  
   
@@ -35,10 +35,10 @@ Dieser Abschnitt enthält ausgewählte Datenbank-Engine-Fehlermeldungen, die wei
   
  In der folgenden Tabelle finden Sie Links und Beschreibungen zu diesen Ressourcen.  
   
-|Ressource|Description|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
+|[SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
 |[SQL Server Developer Center-Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
-|[Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
+|[Hilfe und Support von Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
   
   

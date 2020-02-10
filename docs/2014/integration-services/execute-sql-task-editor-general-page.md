@@ -1,5 +1,5 @@
 ---
-title: Führen Sie SQL-Task-Editor (Seite Allgemein) | Microsoft-Dokumentation
+title: Editor für den Task ' SQL ausführen ' (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058987"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor für den Task 'SQL ausführen' (Seite Allgemein)
   Mithilfe der Seite **Allgemein** im Dialogfeld **Editor für den Task „SQL ausführen“** können Sie den Task „SQL ausführen“ konfigurieren und die SQL-Anweisung bereitstellen, die vom Task ausgeführt wird.  
   
- Weitere Informationen zu diesem Task finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md), [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) und [Resultsets im Task „SQL ausführen“](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &amp;&#40;Datenbank-Engine&amp;&#41;](/sql/t-sql/language-reference).  
+ Weitere Informationen zu diesem Task finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md), [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) und [Resultsets im Task „SQL ausführen“](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference).  
   
 ## <a name="static-options"></a>Statische Optionen  
  **Name**  
@@ -33,54 +33,55 @@ ms.locfileid: "66058987"
  **Beschreibung**  
  Beschreiben Sie den Task 'SQL ausführen'. Es wird hierbei empfohlen, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
- **TimeOut**  
- Gibt die maximale Ausführungsdauer in Sekunden an, bevor ein Timeout für den Task eintritt. Der Wert 0 steht für eine unbegrenzte Dauer. Die Standardeinstellung ist 0.  
+ **Zeit**  
+ Geben Sie die maximale Anzahl von Sekunden an, die der Task ausgeführt wird, bevor ein Timeout eintritt. Der Wert 0 gibt eine unbegrenzte Zeit an. Die Standardeinstellung ist 0.  
   
 > [!NOTE]  
 >  Bei gespeicherten Prozeduren tritt kein Timeout ein, wenn sie diese die Funktionalität des Ruhezustands dadurch emulieren, dass sie mehr Zeit für das Herstellen von Verbindungen und das Abschließen von Transaktionen bereitstellen, als durch den Wert für **TimeOut**angegeben wird. Gespeicherte Prozeduren, die Abfragen ausführen, unterliegen jedoch immer den durch den Wert für **TimeOut**angegebenen Zeitbeschränkungen.  
   
- **CodePage**  
+ **Codepage**  
  Geben Sie die Codepage an, die beim Übersetzen von Unicode-Werten in Variablen verwendet werden soll. Der Standardwert ist die Codepage des lokalen Computers.  
   
 > [!NOTE]  
 >  Wenn der Task „SQL ausführen“ einen ADO- oder ODBC-Verbindungs-Manager verwendet, ist die **CodePage** -Eigenschaft nicht verfügbar. Wenn Ihre Projektmappe eine Codepage erfordert, verwenden Sie einen OLE DB- oder einen ADO.NET-Verbindungs-Manager mit dem Task "SQL ausführen".  
   
- **TypeConversionMode**  
+ **Eigenschaft typeconversionmode**  
  Wenn Sie diese Eigenschaft auf `Allowed` festlegen, wird anhand des Tasks "SQL ausführen" versucht, Ausgabeparameter sowie Abfrageergebnisse in den Datentyp der Variablen zu konvertieren, der die Ergebnisse zugewiesen sind. Dies gilt für den Resultsettyp **Einzelne Zeile** .  
   
- **ResultSet**  
+ **Resultset**  
  Geben Sie den von der auszuführenden SQL-Anweisung erwarteten Ergebnistyp an. Wählen Sie zwischen **Einzelne Zeile**, **Vollständiges Resultset**, **XML**und **Keine**aus.  
   
  **ConnectionType**  
  Wählen Sie den Typ des Verbindungs-Managers aus, der zum Herstellen der Verbindung mit der Datenquelle verwendet werden soll. Zu den verfügbaren Verbindungstypen zählen: **OLE DB**, **ODBC**, **ADO**, **ADO.NET** und **SQLMOBILE**.  
   
- **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [ODBC-Verbindungs-Manager](connection-manager/odbc-connection-manager.md), [ADO-Verbindungs-Manager-](connection-manager/ado-connection-manager.md), [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Verwandte Themen:** [OLE DB Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [ODBC-Verbindungs-Manager](connection-manager/odbc-connection-manager.md), ADO- [Verbindungs](connection-manager/ado-connection-manager.md)-Manager, [ADO.NET-Verbindungs](connection-manager/ado-net-connection-manager.md)-Manager, [SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Verbindung**  
- Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie zum Erstellen einer neuen Verbindung auf \<**Neue Verbindung...** >.  
+ Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie \<zum Erstellen einer neuen Verbindung auf **neue Verbindung...**>.  
   
  **SQLSourceType**  
  Wählen Sie den Quelltyp der SQL-Anweisung aus, die von dem Task ausgeführt wird.  
   
  Je nachdem, welchen Verbindungs-Manager-Typ der Task SQL ausführen verwendet, müssen Sie bestimmte Parametermarkierungen in parametrisierten SQL-Anweisungen verwenden.  
   
- **Verwandte Themen:** Ausführen parametrisierter SQL-Befehle im Abschnitt in [Task SQL ausführen](control-flow/execute-sql-task.md)  
+ **Verwandte Themen:** Abschnitt Ausführen parametrisierter SQL-Befehle im [Task "SQL ausführen](control-flow/execute-sql-task.md) "  
   
  Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Direkteingabe**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
+|**Direkte Eingabe**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
 |**Dateiverbindung**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die die Transact-SQL-Anweisung definiert. Bei Auswahl dieses Wertes wird die dynamische Option **SourceVariable**angezeigt.|  
   
- **QueryIsStoredProcedure**  
+ **Queryisstoredprocedure**  
  Zeigt an, ob die angegebene auszuführende SQL-Anweisung eine gespeicherte Prozedur ist. Diese Eigenschaft weist nur dann den Lese-/Schreibmodus auf, wenn der Task den ADO-Verbindungs-Manager verwendet. Andernfalls ist die Eigenschaft schreibgeschützt und ihr Wert ist auf `false` festgelegt.  
   
  **BypassPrepare**  
- Geben Sie an, ob die SQL-Anweisung vorbereitet ist.  `true` überspringt die Vorbereitung. Mit `false` wird die SQL-Anweisung vor dem Ausführen vorbereitet. Diese Option ist nur für OLE DB-Verbindungen verfügbar, die die Vorbereitung unterstützen.  
+ Geben Sie an, ob die SQL-Anweisung vorbereitet ist.  
+  `true` überspringt die Vorbereitung. Mit `false` wird die SQL-Anweisung vor dem Ausführen vorbereitet. Diese Option ist nur für OLE DB-Verbindungen verfügbar, die die Vorbereitung unterstützen.  
   
- **Verwandte Themen:**  [Vorbereitete Ausführung](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **Verwandte Themen:**  [vorbereitete Ausführung](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **Durchsuchen**  
  Suchen Sie mithilfe des Dialogfelds **Öffnen** eine Datei, die eine SQL-Anweisung enthält. Wählen Sie eine Datei aus, um den Dateiinhalt als SQL-Anweisung in die **SQLStatement** -Eigenschaft zu kopieren.  
@@ -101,19 +102,19 @@ ms.locfileid: "66058987"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = File connection  
  **FileConnection**  
- Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
+ Wählen Sie eine vorhandene Variable aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task SQL ausführen &#40;Seite Parameterzuordnung&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
- [Editor für den Task SQL ausführen &#40;Seite Resultset&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+ [Editor für den Task ' SQL ausführen ' &#40;Seite Parameter Zuordnung&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [Editor für den Task "SQL ausführen" &#40;resultsetseite&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
   

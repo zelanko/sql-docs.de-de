@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Pakete (SSIS-PaketUpgrade-Assistent) | Microsoft-Dokumentation
+title: Pakete auswählen (SSIS-Paket Upgrade-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056022"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Pakete auswählen (SSIS Paketupgrade-Assistent)
   Verwenden Sie die Seite **Pakete auswählen** , um die Pakete für das Upgrade auszuwählen. Auf dieser Seite werden die Pakete aufgelistet, die am auf der Seite **Quellspeicherort auswählen** des Assistenten ausgewählten Speicherort gespeichert sind.  
   
- **So führen Sie den SSIS Paketupgrade-Assistenten aus**  
+ **So führen Sie den SSIS-Paket Upgrade-Assistenten aus**  
   
 -   [Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Vorhandener Paketname**  
  Wählen Sie ein oder mehrere Pakete für das Upgrade aus.  
   
@@ -42,8 +42,8 @@ ms.locfileid: "66056022"
  **Auf Auswahl anwenden**  
  Wenden Sie das festgelegte Kennwort an, um die ausgewählten Upgradepakete zu entschlüsseln.  
   
-## <a name="see-also"></a>Siehe auch  
- [Quellspeicherort auswählen &#40;SSIS-Paket Upgrade-Assistenten&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Quell Speicherort auswählen &#40;SSIS-Paket Upgrade-Assistenten&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Aktualisieren von Integration Services-Paketen](install-windows/upgrade-integration-services-packages.md)  
   
   

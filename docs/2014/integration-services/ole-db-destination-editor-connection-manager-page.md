@@ -1,5 +1,5 @@
 ---
-title: Ziel-Editor für OLE DB (Seite Verbindungs-Manager) | Microsoft-Dokumentation
+title: Ziel-Editor für OLE DB (Seite "Verbindungs-Manager") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057137"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Ziel-Editor für OLE DB (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für OLE DB** können Sie die OLE DB-Verbindung für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
   
 > [!NOTE]  
->  Die `CommandTimeout` Eigenschaft des OLE DB-Ziels ist nicht verfügbar, in der **Ziel-Editor für OLE DB**, jedoch können festgelegt werden, mithilfe der **Erweiterter Editor**. Darüber hinaus sind bestimmte Optionen für schnelles Laden nur im Dialogfeld **Erweiterter Editor**verfügbar. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt OLE DB-Ziel von [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  Die `CommandTimeout` -Eigenschaft des OLE DB Ziels ist nicht im Ziel- **Editor für OLE DB**verfügbar, kann jedoch mit dem **Erweiterter Editor**festgelegt werden. Darüber hinaus sind bestimmte Optionen für schnelles Laden nur im Dialogfeld **Erweiterter Editor**verfügbar. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt OLE DB-Ziel von [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
 ## <a name="static-options"></a>Statische Optionen  
- **Teilcache**  
+ **OLE DB Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -39,7 +39,7 @@ ms.locfileid: "66057137"
  **Datenzugriffsmodus**  
  Gibt das Verfahren für das Laden von Daten in das Ziel an. Für das Laden von Doppelbyte-Zeichensatzdaten (Double-Byte Character Set oder DBCS) ist die Verwendung einer der Optionen für schnelles Laden erforderlich. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel.|  
 |Tabelle oder Sicht - schnelles Laden|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel und verwendet die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).|  
@@ -61,7 +61,7 @@ ms.locfileid: "66057137"
  Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
   
 > [!NOTE]  
->  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Wenn Sie auf **neu**klicken [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , generiert eine standardmäßige CREATE TABLE-Anweisung, die auf der verbundenen Datenquelle basiert. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>Datenzugriffsmodus = Tabelle oder Ansicht – schnelles Laden  
  **Name der Tabelle oder Sicht**  
@@ -71,12 +71,12 @@ ms.locfileid: "66057137"
  Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
   
 > [!NOTE]  
->  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Wenn Sie auf **neu**klicken [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , generiert eine standardmäßige CREATE TABLE-Anweisung, die auf der verbundenen Datenquelle basiert. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Identität beibehalten**  
  Gibt an, ob beim Laden von Daten Identitätswerte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
- **NULL-Werte beibehalten**  
+ **NULL-Werten beibehalten**  
  Gibt an, ob beim Laden von Daten NULL-Werte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
  **Tabellensperre**  
@@ -86,7 +86,7 @@ ms.locfileid: "66057137"
  Gibt an, ob das Ziel beim Laden von Daten Einschränkungen überprüft. Der Standardwert dieser Eigenschaft ist `true`.  
   
  **Zeilen pro Batch**  
- Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und bedeutet, dass kein Wert zugewiesen wurde.  
+ Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft ist **-1**und gibt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
@@ -114,12 +114,12 @@ ms.locfileid: "66057137"
  Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
   
 > [!NOTE]  
->  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Wenn Sie auf **neu**klicken [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , generiert eine standardmäßige CREATE TABLE-Anweisung, die auf der verbundenen Datenquelle basiert. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Identität beibehalten**  
  Gibt an, ob beim Laden von Daten Identitätswerte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
- **NULL-Werte beibehalten**  
+ **NULL-Werten beibehalten**  
  Gibt an, ob beim Laden von Daten NULL-Werte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
  **Tabellensperre**  
@@ -129,7 +129,7 @@ ms.locfileid: "66057137"
  Gibt an, ob Einschränkungen vom Task überprüft werden sollen. Der Standardwert dieser Eigenschaft ist `false`.  
   
  **Zeilen pro Batch**  
- Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und bedeutet, dass kein Wert zugewiesen wurde.  
+ Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft ist **-1**und gibt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
@@ -141,7 +141,7 @@ ms.locfileid: "66057137"
 >  Der Wert **0** bewirkt möglicherweise, dass das Paket bei der Ausführung nicht mehr reagiert, wenn das OLE DB-Ziel und andere Datenflusskomponenten dieselbe Quelltabelle aktualisieren. Um zu verhindern, dass die Paketausführung beendet wird, legen Sie die Option **Maximale Einfügungscommitgröße** auf **2147483647**fest.  
   
 ### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
- **SQL-Befehlstext**  
+ **SQL-Befehls Text**  
  Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken, oder suchen Sie nach der Datei, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
   
 > [!NOTE]  
@@ -156,10 +156,10 @@ ms.locfileid: "66057137"
  **Abfrage analysieren**  
  Überprüft die Syntax des Abfragetexts.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für OLE DB &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Ziel-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [OLE DB Ziel-Editor &#40;Seite Zuordnungen&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB Ziel-Editor &#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Laden von Daten mithilfe des OLE DB-Ziels](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

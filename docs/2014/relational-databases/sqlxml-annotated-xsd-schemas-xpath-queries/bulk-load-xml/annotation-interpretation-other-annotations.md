@@ -1,5 +1,5 @@
 ---
-title: Andere Anmerkungen (SQLXML 4.0) | Microsoft-Dokumentation
+title: Andere Anmerkungen (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013609"
 ---
 # <a name="other-annotations-sqlxml-40"></a>Andere Anmerkungen (SQLXML 4.0)
@@ -49,7 +49,7 @@ ms.locfileid: "66013609"
  `sql:key-fields`  
  XML-Massenladen ignoriert stets diese Anmerkung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Interpretation von Anmerkungen &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Interpretation der Anmerkung &#40;SQLXML 4,0&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

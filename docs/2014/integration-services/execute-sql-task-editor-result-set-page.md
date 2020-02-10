@@ -1,5 +1,5 @@
 ---
-title: Führen Sie SQL-Task-Editor (Seite Resultset) | Microsoft-Dokumentation
+title: Editor für den Task ' SQL ausführen ' (Seite Resultset) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058968"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor für den Task 'SQL ausführen' (Seite Resultset)
@@ -26,29 +26,29 @@ ms.locfileid: "66058968"
   
  Weitere Informationen zu diesem Task finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md) und [Resultsets im Task „SQL ausführen“](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
   
-## <a name="options"></a>Optionen  
- **Ergebnisname**  
+## <a name="options"></a>Tastatur  
+ **Ergebnis Name**  
  Nachdem Sie durch Klicken auf **Hinzufügen**eine Resultsetzuordnung hinzugefügt haben, geben Sie einen Namen für das Ergebnis an. Je nach Resultsettyp müssen Sie bestimmte Ergebnisnamen verwenden.  
   
  Für den Resultsettyp **Einzelne Zeile**können Sie entweder den Namen einer von der Abfrage zurückgegebenen Spalte verwenden oder die Zahl, die die Position einer Spalte in der von der Abfrage zurückgegebenen Spaltenliste angibt.  
   
  Für den Resultsettyp **Vollständiges Resultset** oder **XML**müssen Sie 0 als Resultsetnamen verwenden.  
   
- **Verwandte Themen:** [Resultsets im Task „SQL ausführen“](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
+ **Verwandte Themen**: [Resultsets im Task "SQL ausführen](../../2014/integration-services/result-sets-in-the-execute-sql-task.md) "  
   
- **Variablenname**  
- Ordnen Sie das Resultset einer Variablen zu, indem Sie eine Variable auswählen, oder klicken Sie auf \<**Neue Variable...** >, um mithilfe des Dialogfelds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
+ **Variablen Name**  
+ Ordnen Sie das Resultset einer Variablen zu, indem Sie eine Variable auswählen, oder klicken Sie auf \<**Neue Variable...**>, um mithilfe des Dialogfelds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie auf diese Option, um eine Resultsetzuordnung hinzuzufügen.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Resultsetzuordnung aus der Liste aus, und klicken Sie anschließend auf **Entfernen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task SQL ausführen &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor für den Task SQL ausführen &#40;Seite Parameterzuordnung&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [Editor für den Task ' SQL ausführen ' &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor für den Task ' SQL ausführen ' &#40;Seite Parameter Zuordnung&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference)  
   
   

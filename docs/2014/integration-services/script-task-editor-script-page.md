@@ -1,5 +1,5 @@
 ---
-title: Skripttask-Editor (Skriptseite) | Microsoft-Dokumentation
+title: Skript Task-Editor (Seite Skript) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056190"
 ---
 # <a name="script-task-editor-script-page"></a>Skripttask-Editor (Seite Skript)
@@ -29,7 +29,7 @@ ms.locfileid: "66056190"
   
  Weitere Informationen zum Skripttask finden Sie unter [Script Task](control-flow/script-task.md) und [Konfigurieren des Skripttasks im Skripttask-Editor](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **ScriptLanguage**  
  Wählen Sie die Skriptsprache für den Task aus, entweder [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66056190"
  Um die Standardskriptsprache für den Skripttask festzulegen, verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache** . Weitere Informationen finden Sie unter [General Page](general-page-of-integration-services-designers-options.md).  
   
  **EntryPoint**  
- Geben Sie die Methode an, die die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die angegebene Methode muss in der ScriptMain-Klasse des Projekts der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Tools für Anwendungen (VSTA) angegeben werden. ScriptMain ist die Standardklasse, die von den Skriptvorlagen generiert wird.  
+ Geben Sie die Methode an, die die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die angegebene Methode muss in der ScriptMain-Klasse des Projekts der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) angegeben werden. ScriptMain ist die Standardklasse, die von den Skriptvorlagen generiert wird.  
   
  Wenn Sie den Namen der Methode im VSTA-Projekt geändert haben, müssen Sie den Wert der **EntryPoint** -Eigenschaft ändern.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "66056190"
  **Skript bearbeiten**  
  Öffnet die VSTA IDE, in der Sie das Skript erstellen oder ändern können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [Skripttask-Editor &#40;Seite „Allgemein“&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Seite "Allgemein"](general-page-of-integration-services-designers-options.md)   
+ [Skript Task-Editor &#40;Seite "Allgemein"&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
- [Skripttask-Beispiele](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Skript Task-Beispiele](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

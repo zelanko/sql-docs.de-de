@@ -30,17 +30,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874304"
 ---
 # <a name="manipulating-udt-data"></a>Bearbeiten von UDT-Daten
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] stellt keine spezialisierte Syntax für INSERT-, UPDATE- oder DELETE-Anweisungen zum Ändern von Daten in Spalten vom benutzerdefinierten Typ (User-defined Type, UDT) bereit. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST oder CONVERT werden verwendet, um systemeigene Datentypen in den benutzerdefinierten Typ (UDT) umzuwandeln.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Einfügen von Daten in eine UDT-Spalte  
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen fügen drei Zeilen Beispieldaten in die **Punkte** Tabelle. Die **Punkt** -Datentyp besteht aus X- und Y-Ganzzahlwerten, die als Eigenschaften des UDT verfügbar gemacht werden. Sie müssen der CAST- oder CONVERT-Funktion verwenden, um die durch Kommas getrennten X- und Y-Werte die **Punkt** Typ. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion konvertiert einen Zeichenfolgenwert, der **Punkt** Typ und die dritte Anweisung verwendet die CAST-Funktion:  
+ Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen fügen drei Zeilen mit Beispiel Daten in die **Points** -Tabelle ein. Der **Point** -Datentyp besteht aus X-und Y-ganzzahligen Werten, die als Eigenschaften des UDT verfügbar gemacht werden. Sie müssen entweder die CAST-oder die Convert-Funktion verwenden, um die durch Kommas getrennten X-und Y-Werte in den **Punkttyp** umzuwandeln. Die ersten beiden Anweisungen verwenden die Convert-Funktion, um einen Zeichen folgen Wert in den **Punkttyp** zu konvertieren, und die dritte Anweisung verwendet die CAST-Funktion:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +56,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Um die Ausgabe in einem lesbaren Format anzuzeigen, rufen die `ToString` Methode der **Punkt** UDT, der den Wert in seine Zeichenfolgendarstellung konvertiert.  
+ Um die Ausgabe in einem lesbaren Format anzuzeigen, müssen Sie `ToString` die-Methode des **Point** -UDT aufzurufen, die den Wert in seine Zeichen folgen Darstellung konvertiert.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -82,7 +83,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- Die **Punkt** UDT macht seine X- und Y-Koordinaten als Eigenschaften, die Sie dann einzeln auswählen können. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wählt die X- und die Y-Koordinate getrennt aus:  
+ Der **Point** -UDT macht seine X-und Y-Koordinaten als Eigenschaften verfügbar, die Sie dann einzeln auswählen können. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wählt die X- und die Y-Koordinate getrennt aus:  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -129,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  Der Unterschied zwischen der Verwendung von SELECT statt SET für die Variablenzuweisung besteht darin, dass SELECT ermöglicht, mehrere Variable in einer SELECT-Anweisung zuzuweisen, während die SET-Syntax erfordert, dass jede Variable durch eine eigene SET-Anweisung zugewiesen wird.  
   
 ## <a name="comparing-data"></a>Vergleichen von Daten  
- Mithilfe von Vergleichoperatoren können Sie Werte in Ihrem UDT vergleichen, wenn Sie beim Definieren der Klasse für die `IsByteOrdered`-Eigenschaft `true` festlegen. Weitere Informationen finden Sie unter [erstellen einen benutzerdefinierten Typ](creating-user-defined-types.md).  
+ Mithilfe von Vergleichoperatoren können Sie Werte in Ihrem UDT vergleichen, wenn Sie beim Definieren der Klasse für die `IsByteOrdered`-Eigenschaft `true` festlegen. Weitere Informationen finden Sie unter [Erstellen eines benutzerdefinierten Typs](creating-user-defined-types.md).  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -156,7 +157,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Aufrufen von UDT-Methoden  
- Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Punkt** -Klasse enthält drei Methoden, `Distance`, `DistanceFrom`, und `DistanceFromXY`. In den codeauflistungen, die diese drei Methoden definieren, finden Sie unter [Codieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
+ Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Point** -Klasse enthält drei Methoden `Distance`: `DistanceFrom`, und `DistanceFromXY`. Die Code Auflistungen, die diese drei Methoden definieren, finden Sie unter [Programmieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
   
  Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ruft die `PointValue.Distance`-Methode auf:  
   
@@ -167,7 +168,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- Die Ergebnisse werden angezeigt, der `Distance` Spalte:  
+ Die Ergebnisse werden in der `Distance` Spalte angezeigt:  
   
 ```  
 IDXYDistance  
@@ -177,7 +178,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- Die `DistanceFrom` Methode akzeptiert ein Argument des **zeigen** -Datentyp, und zeigt die Entfernung vom angegebenen Punkt zum PointValue:  
+ Die `DistanceFrom` -Methode nimmt ein Argument des **Point** -Datentyps an und zeigt den Abstand zwischen dem angegebenen Punkt und dem PointValue-Wert an:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -263,7 +264,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit benutzerdefinierten Typen in SQL Server](working-with-user-defined-types-in-sql-server.md)  
   
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011079"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
@@ -39,7 +39,7 @@ ms.locfileid: "66011079"
   
  Die folgende Abbildung zeigt eine logische Sicht einer Sucheigenschaftenliste, in der zwei Eigenschaften (Title und Keywords) angegeben werden. Der Eigenschaftenlistenname für Keywords ist "Tags". Diese Eigenschaften gehören zum selben Eigenschaftensatz, dessen GUID F29F85E0-4FF9-1068-AB91-08002B27B3D9 lautet. Die ganzzahligen Eigenschaftsbezeichner sind 2 für Title und 5 für Tags (Keywords). Die Volltext-Engine ordnet jede Eigenschaft nach dem Zufallsprinzip einer internen Eigenschaften-ID zu, die für die Sucheigenschaftenliste eindeutig ist. Die interne Eigenschaften-ID für die Title-Eigenschaft ist 1, und die interne Eigenschaften-ID für die Tags-Eigenschaft ist 2.  
   
- ![Zuordnung der Sucheigenschaftenliste zur internen Tabelle](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
+ ![Zuordnung der Sucheigenschaftenliste zur internen Tabelle](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Zuordnung der Sucheigenschaftenliste zur internen Tabelle")  
   
  Die interne Eigenschaften-ID unterscheidet sich wahrscheinlich vom ganzzahligen Eigenschaftsbezeichner der Eigenschaft. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden. Die interne Eigenschaften-ID kann z. B. in einer Sucheigenschaftenliste 4 sein, in einer anderen 1, in der nächsten 3 usw. Im Gegensatz dazu ist der ganzzahlige Eigenschaftsbezeichner für die Eigenschaft intern, und er bleibt unverändert, egal, an welcher Stelle die Eigenschaft verwendet wird.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011079"
   
  Die folgende Abbildung veranschaulicht eine logische Sicht der Suchbegriffe in einem Volltextindex, der der in der vorherigen Abbildung enthaltenen Sucheigenschaftenliste zugeordnet ist. Das Beispieldokument „Document 1“ enthält drei Eigenschaften („Title“, „Author“ und „Keywords“) sowie den Dokumenttext. Für die Title-Eigenschaft und die Keywords-Eigenschaft, die in der Sucheigenschaftenliste angegeben werden, sind Suchbegriffe ihren entsprechenden internen Eigenschaften-IDs im Volltextindex zugeordnet. Im Gegensatz dazu wird der Inhalt der Author-Eigenschaft wie ein Teil des Dokumenttexts indiziert. Dies bedeutet, dass die Größe des Volltextindex beim Registrieren einer Eigenschaft etwas zunimmt, entsprechend der Menge des in der Eigenschaft gespeicherten Inhalts.  
   
- ![Volltextindex, der eine Sucheigenschaftenliste verwendet](../../database-engine/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
+ ![Volltextindex, der eine Sucheigenschaftenliste verwendet](../../database-engine/media/ifts-spl-and-fti.gif "Volltextindex, der eine Sucheigenschaftenliste verwendet")  
   
  Suchbegriffe in der Title-Eigenschaft („Favorite“, „Biking“ und „Trails“) werden der internen Eigenschaften-ID 1 zugeordnet, die Title für diesen Index zugewiesen ist. Suchbegriffe in der Keywords-Eigenschaft („biking“ und „mountain“) werden der internen Eigenschaften-ID 2 zugeordnet, die Tags für diesen Index zugewiesen ist. Für Suchbegriffe in der Author-Eigenschaft („Jane“ und „Doe“) und Suchbegriffe im Dokumenttext ist die interne Eigenschaften-ID gleich 0 (null). Beachten Sie, dass der Begriff "biking" in der Title-Eigenschaft, in der Keywords-Eigenschaft (Tags) und im Dokumenttext vorkommt. Bei einer Eigenschaftensuche nach "biking" in der Title-Eigenschaft oder der Keywords-Eigenschaft (Tags) würde dieses Dokument in den Ergebnissen zurückgegeben werden. Von einer generischen Volltextabfrage nach "biking" würde dieses Dokument ebenfalls zurückgegeben werden, als ob der Index nicht für Eigenschaftensuchen konfiguriert wäre. Eine Eigenschaftensuche nach "biking" in der Author-Eigenschaft würde dieses Dokument nicht zurückgeben.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66011079"
 ##  <a name="impact"></a> Auswirkungen der Aktivierung der Eigenschaftensuche  
  Das Konfigurieren einen Volltextindex für die Unterstützung der Suche nach einer oder mehreren Eigenschaften führt zu einem leichten Größenzuwachs des Index, entsprechend der in der Sucheigenschaftenliste angegebenen Anzahl von Eigenschaften und dem Inhalt der einzelnen Eigenschaften.  
   
- Beim Testen typischer Korpus von Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>, und PowerPoint<sup>??</sup> Dokumente, konfiguriert es eine Volltext-Index auf typische Sucheigenschaften. Durch das Indizieren dieser Eigenschaften wuchs die Größe des Volltextindex um ca. 5 Prozent. Wir erwarten, dass dieser annähernde Größenzuwachs für die meisten Dokumentkorpus typisch sein wird. Der Größenzuwachs hängt letztlich jedoch von der Menge der Eigenschaftendaten im jeweiligen Dokumentkorpus in Bezug auf die Gesamtmenge der Daten ab.  
+ Beim Testen typischer Korpus von Microsoft Word<sup>?</sup>?, Excel<sup>??</sup><sup>und PowerPoint?</sup> Dokumente, wir haben einen Volltextindex für die Indizierung typischer Such Eigenschaften konfiguriert. Durch das Indizieren dieser Eigenschaften wuchs die Größe des Volltextindex um ca. 5 Prozent. Wir erwarten, dass dieser annähernde Größenzuwachs für die meisten Dokumentkorpus typisch sein wird. Der Größenzuwachs hängt letztlich jedoch von der Menge der Eigenschaftendaten im jeweiligen Dokumentkorpus in Bezug auf die Gesamtmenge der Daten ab.  
   
   
   
@@ -239,7 +239,7 @@ GO
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md)  
   

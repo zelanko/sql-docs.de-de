@@ -1,5 +1,5 @@
 ---
-title: Editor für SQL Server Objects Task (Seite Objekte) übertragen | Microsoft-Dokumentation
+title: Editor für den Task ' SQL Server Objekte übertragen ' (Seite Objekte) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054868"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor für den Task 'SQL Server-Objekte übertragen' (Seite Objekte)
@@ -29,21 +29,21 @@ ms.locfileid: "66054868"
   
 ## <a name="static-options"></a>Statische Optionen  
  **SourceConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Quellserver herzustellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie ** \<auf neue Verbindung... #b0** , um eine neue Verbindung mit dem Quell Server herzustellen.  
   
  **SourceDatabase**  
  Wählen Sie eine Datenbank auf dem Quellserver aus, aus der die Objekte kopiert werden sollen.  
   
  **DestinationConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Zielserver herzustellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie ** \<auf neue Verbindung... #b0** , um eine neue Verbindung mit dem Zielserver zu erstellen.  
   
  **DestinationDatabase**  
  Wählen Sie eine Datenbank auf dem Zielserver aus, auf den die Objekte kopiert werden sollen.  
   
- **DropObjectsFirst**  
+ **Dropobjectfirst**  
  Bestimmen Sie, ob die ausgewählten Objekte vor dem Kopieren zuerst auf dem Zielserver gelöscht werden sollen.  
   
- **IncludeExtendedProperties**  
+ **Includeextendedproperties**  
  Bestimmen Sie, ob erweiterte Eigenschaften beim Kopieren von Objekten vom Quellserver auf den Zielserver beibehalten werden sollen.  
   
  **CopyData**  
@@ -52,9 +52,9 @@ ms.locfileid: "66054868"
  **ExistingData**  
  Bestimmen Sie, wie die Daten auf den Zielserver kopiert werden sollen. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Ersetzen**|Daten auf dem Zielserver werden überschrieben.|  
+|**Stelle**|Daten auf dem Zielserver werden überschrieben.|  
 |**Anfügen**|Die vom Quellserver kopierten Daten werden an die vorhandenen Daten auf dem Zielserver angehängt.|  
   
 > [!NOTE]  
@@ -66,10 +66,10 @@ ms.locfileid: "66054868"
 > [!NOTE]  
 >  **CopySchema** ist nur für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar.  
   
- **UseCollation**  
+ **Usecollations**  
  Bestimmen Sie, ob die Übertragung von Objekten die auf dem Quellserver angegebene Sortierung beinhalten soll.  
   
- **IncludeDependentObjects**  
+ **Include dependentobjects**  
  Bestimmen Sie, ob beim Kopieren auch die kaskadierenden Objekte, die von den für das Kopieren ausgewählten Objekten abhängig sind, kopiert werden sollen.  
   
  **CopyAllObjects**  
@@ -79,7 +79,7 @@ ms.locfileid: "66054868"
  Erweitern Sie **ObjectsToCopy** , um anzugeben, welche Objekte von der Quelldatenbank in die Zieldatenbank kopiert werden sollen.  
   
 > [!NOTE]  
->  **ObjectsToCopy** ist nur verfügbar, wenn **CopyAllObjects** auf **False**festgelegt ist.  
+>  **ObjectsToCopy** ist nur verfügbar, wenn **copyzuzujects** auf **false**festgelegt ist.  
   
  Die Optionen zum Kopieren der folgenden Objekttypen werden nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt:  
   
@@ -97,34 +97,34 @@ ms.locfileid: "66054868"
   
  XML-Schemaauflistungen  
   
- **CopyDatabaseUsers**  
+ **Copydatabaseusers**  
  Geben Sie an, ob die Übertragung Datenbankbenutzer beinhalten soll.  
   
- **CopyDatabaseRoles**  
+ **Copydatabaseroles**  
  Geben Sie an, ob die Übertragung Datenbankrollen beinhalten soll.  
   
- **CopySqlServerLogins**  
+ **Copysqlserverlogins**  
  Geben Sie an, ob die Übertragung [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldungen beinhalten soll.  
   
- **CopyObjectLevelPermissions**  
+ **Copyobjectlevel-Berechtigungen**  
  Geben Sie an, ob die Übertragung Berechtigungen auf Objektebene beinhalten soll.  
   
- **CopyIndexes**  
+ **Copyindexes**  
  Geben Sie an, ob die Übertragung Indizes beinhalten soll.  
   
- **CopyTriggers**  
+ **Copytriggers**  
  Geben Sie an, ob die Übertragung Trigger beinhalten soll.  
   
- **CopyFullTextIndexes**  
+ **Copyfulltextindexes**  
  Geben Sie an, ob die Übertragung Volltextindizes beinhalten soll.  
   
- **CopyPrimaryKeys**  
+ **Copyprimarykeys**  
  Geben Sie an, ob die Übertragung Primärschlüssel beinhalten soll.  
   
- **CopyForeignKeys**  
+ **Copyfremdnkeys**  
  Geben Sie an, ob die Übertragung Fremdschlüssel beinhalten soll.  
   
- **GenerateScriptsInUnicode**  
+ **Generatescriptsinunicode**  
  Geben Sie an, ob die generierten Übertragungsskripts das Unicode-Format aufweisen sollen.  
   
 ## <a name="dynamic-options"></a>Dynamische Optionen  
@@ -139,7 +139,7 @@ ms.locfileid: "66054868"
  **CopyAllViews**  
  Bestimmen Sie, ob der Task alle Sichten der angegebenen Quelldatenbank oder nur die ausgewählten Sichten kopieren soll.  
   
- **ViewsList**  
+ **Viewslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Sichten auswählen** zu öffnen.  
   
  **CopyAllStoredProcedures**  
@@ -148,72 +148,72 @@ ms.locfileid: "66054868"
  **StoredProceduresList**  
  Klicken Sie auf diese Option, um das Dialogfeld **Gespeicherte Prozeduren auswählen** zu öffnen.  
   
- **CopyAllUserDefinedFunctions**  
+ **Copyalluserdefinedfunctions**  
  Bestimmen Sie, ob der Task alle benutzerdefinierten Funktionen der angegebenen Quelldatenbank oder nur die ausgewählten benutzerdefinierten Prozeduren kopieren soll.  
   
- **UserDefinedFunctionsList**  
+ **Userdefinedfunctionslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Benutzerdefinierte Funktionen auswählen** zu öffnen.  
   
  **CopyAllDefaults**  
  Bestimmen Sie, ob der Task alle Standardwerte der angegebenen Quelldatenbank oder nur die ausgewählten Standardwerte kopieren soll.  
   
- **DefaultsList**  
+ **Defaullilist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Standardwerte auswählen** zu öffnen.  
   
- **CopyAllUserDefinedDataTypes**  
+ **CopyAllUserDefinedDatatypes**  
  Bestimmen Sie, ob der Task alle benutzerdefinierten Datentypen der angegebenen Quelldatenbank oder nur die ausgewählten benutzerdefinierten Datentypen kopieren soll.  
   
- **UserDefinedDataTypesList**  
+ **Userdefineddatatypeslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Benutzerdefinierte Datentypen auswählen** zu öffnen.  
   
- **CopyAllPartitionFunctions**  
+ **Copyallpartitionfunctions**  
  Bestimmen Sie, ob der Task alle benutzerdefinierten Partitionsfunktionen der angegebenen Quelldatenbank oder nur die ausgewählten Partitionsfunktionen kopieren soll. Dies wird nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt.  
   
- **PartitionFunctionsList**  
+ **Partitionfunctionslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Partitionsfunktionen auswählen** zu öffnen.  
   
- **CopyAllPartitionSchemes**  
+ **Copyallpartitionschemas**  
  Bestimmen Sie, ob der Task alle Partitionsschemas der angegebenen Quelldatenbank oder nur die ausgewählten Partitionsschemas kopieren soll. Dies wird nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt.  
   
- **PartitionSchemesList**  
+ **Partitionschemeslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Partitionsschemas auswählen** zu öffnen.  
   
- **CopyAllSchemas**  
+ **Copyallschemas**  
  Bestimmen Sie, ob der Task alle Schemas der angegebenen Quelldatenbank oder nur die ausgewählten Schemas kopieren soll. Dies wird nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt.  
   
- **SchemasList**  
+ **Schemaslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Schemas auswählen** zu öffnen.  
   
- **CopyAllSqlAssemblies**  
+ **Copyallsqlassemblys**  
  Bestimmen Sie, ob der Task alle SQL-Assemblys der angegebenen Quelldatenbank oder nur die ausgewählten SQL-Assemblys kopieren soll. Dies wird nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt.  
   
- **SqlAssembliesList**  
+ **Sqlassemblieslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Assemblys auswählen** zu öffnen.  
   
- **CopyAllUserDefinedAggregates**  
+ **Copyalluserdefinedaggregate**  
  Bestimmen Sie, ob der Task alle benutzerdefinierten Aggregate der angegebenen Quelldatenbank oder nur die ausgewählten benutzerdefinierten Aggregate kopieren soll. Dies wird nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt.  
   
- **UserDefinedAggregatesList**  
+ **Userdefinedaggregateslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **Benutzerdefinierte Aggregate** auswählen zu öffnen.  
   
- **CopyAllUserDefinedTypes**  
+ **Copyalluserdefinedtypes**  
  Bestimmen Sie, ob der Task alle benutzerdefinierten Typen der angegebenen Quelldatenbank oder nur die ausgewählten benutzerdefinierten Datentypen kopieren soll. Dies wird nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt.  
   
  **UserDefinedTypes**  
  Klicken Sie auf diese Option, um das Dialogfeld **Benutzerdefinierte Typen** auswählen zu öffnen.  
   
- **CopyAllXmlSchemaCollections**  
+ **Copyallxmlschemacollections**  
  Bestimmen Sie, ob der Task alle XML-Schemaauflistungen der angegebenen Quelldatenbank oder nur die ausgewählten XML-Schemaauflistungen kopieren soll. Dies wird nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt.  
   
- **XmlSchemaCollectionsList**  
+ **Xmlschemacollectionslist**  
  Klicken Sie auf diese Option, um das Dialogfeld **XML-Schemaauflistungen** auswählen zu öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Tasks](control-flow/integration-services-tasks.md)   
- [Editor für den Task SQL Server-Objekte übertragen &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor für den Task ' SQL Server Objekte übertragen ' &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
- [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Datenformate für Massen Import oder Massen Export &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

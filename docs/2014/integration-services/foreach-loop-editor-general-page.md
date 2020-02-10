@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058522"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach-Schleifen-Editor (Seite Allgemein)
@@ -24,7 +24,7 @@ ms.locfileid: "66058522"
   
  Weitere Informationen zu Foreach-Schleifencontainern und ihrer Konfiguration finden Sie unter [Foreach-Schleifencontainer](control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Foreach-Schleifencontainer an. Dieser Name wird als Bezeichnung des Tasksymbols und in Protokollen verwendet.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "66058522"
  **Beschreibung**  
  Geben Sie eine Beschreibung für den Foreach-Schleifencontainer an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Foreach-Schleifen-Editor &#40;Datensammlung (Seite)&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Foreach-Schleifen-Editor &#40;Seite Variablenzuordnungen&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Foreach-Schleifen-Editor &#40;Sammlungs Seite&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Foreach-Schleifen-Editor &#40;Seite Variablen Zuordnungen&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [Foreach Loop Container](control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  
  [For-Schleifencontainer](control-flow/for-loop-container.md)  

@@ -1,5 +1,5 @@
 ---
-title: Die Standardanalyse | Microsoft-Dokumentation
+title: Standard Analyse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055288"
 ---
 # <a name="standard-parse"></a>Standard Parse
@@ -25,7 +25,7 @@ ms.locfileid: "66055288"
   
  Die Standardanalyse stellt die Datentypkonvertierung interner Daten bereit und sollte verwendet werden, wenn das Datenformat nicht von der schnellen Analyse unterstützt wird. Weitere Informationen zur API für die automatische Datentypkonvertierung finden Sie unter "Data Type Conversion APIs" in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427).  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnelle Analyse](../../2014/integration-services/fast-parse.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Fast Parse](../../2014/integration-services/fast-parse.md)  
   
   

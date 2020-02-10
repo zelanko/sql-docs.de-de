@@ -1,5 +1,5 @@
 ---
-title: 'Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Feldern (SQLXML 4.0) | Microsoft-Dokumentation'
+title: 'Identifizieren von Schlüssel Spalten mithilfe von SQL: key-fields (SQLXML 4,0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,33 +22,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013820"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identifizieren von Schlüsselspalten mithilfe von sql:key-Feldern (SQLXML 4.0)
-  Wenn eine XPath-Abfrage für ein XSD-Schema angegeben wird, ist die Schlüsselinformationen in den meisten Fällen erforderlich, um richtige Schachtelung im Ergebnis zu erhalten. Durch die Angabe der `sql:key-fields`-Anmerkung lässt sich sicherstellen, dass die entsprechende Hierarchie generiert wird.  
+  Wenn eine XPath-Abfrage für ein XSD-Schema angegeben wird, sind in den meisten Fällen wichtige Informationen erforderlich, um eine ordnungsgemäße Schachtelung im Ergebnis zu erhalten. Durch die Angabe der `sql:key-fields`-Anmerkung lässt sich sicherstellen, dass die entsprechende Hierarchie generiert wird.  
   
 > [!NOTE]  
 >  Um die richtige Schachtelung sicherzustellen, wird empfohlen, `sql:key-fields` für diejenigen Elemente anzugeben, die Tabellen zugeordnet werden. Das erzeugte XML wird durch die Anordnung des zugrunde liegenden Resultsets beeinflusst. Wenn `sql:key-fields` nicht angegeben wird, hat das generierte XML unter Umständen nicht das richtige Format.  
   
  Der Wert von `sql:key-fields` identifiziert die Spalte(n), welche die Zeilen in der Beziehung eindeutig identifiziert bzw. identifizieren. Wenn mehrere Spalten zur eindeutigen Identifizierung einer Zeile erforderlich sind, werden die Spaltenwerte jeweils durch ein Leerzeichen voneinander getrennt.  
   
- Verwenden Sie die `sql:key-fields` -Anmerkung verwenden, wenn ein Element enthält eine  **\<SQL: Relationship >** , die zwischen dem Element und einem untergeordneten Element definiert ist jedoch nicht den Primärschlüssel der Tabelle, die in angegeben ist das übergeordnete Element.  
+ Sie müssen die `sql:key-fields` -Anmerkung verwenden, wenn ein-Element eine ** \<SQL: Relationship->** enthält, die zwischen dem-Element und einem untergeordneten-Element definiert ist, aber nicht den Primärschlüssel der im übergeordneten Element angegebenen Tabelle bereitstellt.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Erzeugen der entsprechenden Schachtelung, wenn \<SQL: Relationship > nicht genügend Informationen bereitstellt  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Erzeugen der passenden Schachtelung, wenn \<SQL: Relationship> keine ausreichenden Informationen bereitstellt  
  Dieses Beispiel zeigt, wo `sql:key-fields` angegeben werden muss.  
   
- Betrachten Sie folgendes Schema. Das Schema gibt eine hierarchische Beziehung zwischen der  **\<Reihenfolge >** und  **\<Kunden >** Elemente, in denen die  **\<Reihenfolge >** ist das übergeordnete Element und die  **\<Kunden >** -Element untergeordnet ist.  
+ Betrachten Sie folgendes Schema. Das Schema gibt eine Hierarchie zwischen der ** \<Order>** und den ** \<Customer->** Elementen an, in denen das ** \<Order>** -Element das übergeordnete Element und das ** \<Customer->** Element ein untergeordnetes Element ist.  
   
- Die  **\<SQL: Relationship >** Tag wird verwendet, um die über-/ unterordnungsbeziehung geben. In diesem Tag wird CustomerID als übergeordneter Schlüssel identifiziert, der auf die untergeordnete CustomerID-Schlüsselspalte in der Sales.Customer-Tabelle verweist. Die Informationen in  **\<SQL: Relationship >** reicht nicht aus, um Zeilen in der übergeordneten Tabelle (Sales.SalesOrderHeader) eindeutig zu identifizieren. Ohne die `sql:key-fields`-Anmerkung wird daher eine ungenaue Hierarchie generiert.  
+ Das ** \<SQL: Relationship>** -Tag wird verwendet, um die Beziehung zwischen übergeordneten und untergeordneten Elementen anzugeben. In diesem Tag wird CustomerID als übergeordneter Schlüssel identifiziert, der auf die untergeordnete CustomerID-Schlüsselspalte in der Sales.Customer-Tabelle verweist. Die in ** \<der SQL: Relationship->** bereitgestellten Informationen reichen nicht aus, um Zeilen in der übergeordneten Tabelle (Sales. SalesOrderHeader) eindeutig zu identifizieren. Ohne die `sql:key-fields`-Anmerkung wird daher eine ungenaue Hierarchie generiert.  
   
- Mit `sql:key-fields` angegeben  **\<Reihenfolge >** eindeutig identifiziert die Anmerkung die Zeilen im übergeordneten Element (Sales.SalesOrderHeader-Tabelle) und die untergeordneten Elemente werden unter dem übergeordneten Element.  
+ Wenn `sql:key-fields` die Anmerkung für ** \<Order>** angegeben ist, identifiziert die-Anmerkung die Zeilen in der übergeordneten Tabelle (Sales. SalesOrderHeader-Tabelle) eindeutig, und die untergeordneten Elemente werden unterhalb des übergeordneten Elements angezeigt.  
   
  Das ist das Schema:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66013820"
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen KeyFields1.xml.  
   
-2.  Kopieren Sie die folgende Vorlage, und fügen Sie sie in eine Textdatei ein. Speichern Sie die Datei unter dem Namen KeyFields1T.xml im gleichen Verzeichnis, in dem Sie KeyFields1.xml gespeichert haben. Die XPath-Abfrage in der Vorlage gibt alle dem  **\<Reihenfolge >** Elemente, deren CustomerID-Wert kleiner als 3.  
+2.  Kopieren Sie die folgende Vorlage, und fügen Sie sie in eine Textdatei ein. Speichern Sie die Datei unter dem Namen KeyFields1T.xml im gleichen Verzeichnis, in dem Sie KeyFields1.xml gespeichert haben. Die XPath-Abfrage in der Vorlage gibt alle ** \<Order>** Elemente mit einem CustomerID-Wert kleiner als 3 zurück.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -125,7 +125,7 @@ ms.locfileid: "66013820"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Angeben der sql:key-Felder, um die richtige Schachtelung im Ergebnis zu erzeugen  
- Im folgenden Schema, es gibt keine durch festgelegte Hierarchie  **\<SQL: Relationship >** . Das Schema erfordert trotzdem die Angabe der `sql:key-fields`-Anmerkung, um Mitarbeiter in der HumanResources.Employee-Tabelle eindeutig zu identifizieren.  
+ Im folgenden Schema gibt es keine Hierarchie, die mithilfe ** \<von SQL: Relationship>** angegeben wird. Das Schema erfordert trotzdem die Angabe der `sql:key-fields`-Anmerkung, um Mitarbeiter in der HumanResources.Employee-Tabelle eindeutig zu identifizieren.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -152,7 +152,7 @@ ms.locfileid: "66013820"
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen KeyFields2.xml.  
   
-2.  Kopieren Sie die folgende Vorlage, und fügen Sie sie in eine Textdatei ein. Speichern Sie die Datei unter dem Namen KeyFields2T.xml im gleichen Verzeichnis, in dem Sie KeyFields2.xml gespeichert haben. Die XPath-Abfrage in der Vorlage gibt alle dem  **\<HumanResources.Employee >** Elemente:  
+2.  Kopieren Sie die folgende Vorlage, und fügen Sie sie in eine Textdatei ein. Speichern Sie die Datei unter dem Namen KeyFields2T.xml im gleichen Verzeichnis, in dem Sie KeyFields2.xml gespeichert haben. Die XPath-Abfrage in der Vorlage gibt alle ** \<HumanResources. Employee->** Elemente zurück:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

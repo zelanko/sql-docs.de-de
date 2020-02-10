@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht | Microsoft-Dokumentation'
+title: 'Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108494"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht
@@ -24,7 +24,7 @@ ms.locfileid: "66108494"
   
 1.  Wählen Sie im Menü **Website** die Option **Neues Element hinzufügen**aus.  
   
-2.  In der **neues Element hinzufügen** wählen Sie im Dialogfeld **DataSet** , und klicken Sie auf **hinzufügen**. Wenn Sie aufgefordert werden, sollten Sie das Element, das Hinzufügen der **"App_Code"** Ordner durch Klicken auf **Ja**.  
+2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **DataSet** aus, und klicken Sie auf **Hinzufügen**. Wenn Sie dazu aufgefordert werden, sollten Sie das Element dem Ordner **App_Code** hinzufügen, indem Sie auf **Ja**klicken.  
   
      Dadurch wird dem Projekt die neue XSD-Datei **DataSet1.xsd** hinzugefügt und der DataSet-Designer geöffnet.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66108494"
   
     2.  Wählen Sie im Abschnitt **Am Server anmelden** die Option aus, die Ihnen den Zugriff auf die Daten ermöglicht. Die Standardeinstellung ist**Windows-Authentifizierung verwenden** .  
   
-    3.  Von der **auswählen oder Eingeben eines Datenbanknamens** Dropdown-Liste, klicken Sie auf **AdventureWorks2008**.  
+    3.  Klicken Sie in der Dropdown Liste **Datenbanknamen eingeben oder auswählen** auf **AdventureWorks2008**.  
   
     4.  Klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
@@ -52,22 +52,22 @@ ms.locfileid: "66108494"
   
 9. Wählen Sie auf der Seite **Wählen Sie einen Befehlstyp aus** die Option **SQL-Anweisungen verwenden**aus, und klicken Sie auf **Weiter**.  
   
-10. Auf der **Geben Sie eine SQL-Anweisung** geben die folgende Transact-SQL-Abfrage zum Abrufen von Daten aus der **AdventureWorks2008** Datenbank, und klicken Sie dann auf **Weiter**.  
+10. Geben Sie auf der Seite **SQL-Anweisung eingeben** die folgende Transact-SQL-Abfrage zum Abrufen von Daten aus der **AdventureWorks2008** -Datenbank ein, und klicken Sie dann auf **weiter**.  
   
     ```  
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     Sie können die Abfrage auch erstellen, indem Sie auf **Abfragegenerator**, und klicken Sie dann überprüfen Sie die Abfrage, indem Sie auf **Abfrage ausführen**. Wenn die Abfrage nicht die erwarteten Daten zurückgibt, verwenden Sie möglicherweise eine frühere Version von AdventureWorks. Weitere Informationen zum Installieren der **AdventureWorks2008** -Version von AdventureWorks finden Sie unter [Exemplarische Vorgehensweise: Installieren der AdventureWorks-Datenbank](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     Sie können die Abfrage auch erstellen, indem Sie auf **Abfrage-Generator**klicken. Überprüfen Sie anschließend die Abfrage, indem Sie auf **Abfrage ausführen**klicken. Wenn die Abfrage nicht die erwarteten Daten zurückgibt, verwenden Sie möglicherweise eine frühere Version von AdventureWorks. Weitere Informationen zum Installieren der **AdventureWorks2008** -Version von AdventureWorks finden Sie unter [Anleitung: Installieren der AdventureWorks-Datenbank](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
-11. Auf der **zu generierende Methode auswählen** Seite, deaktivieren **Methoden erstellen, um Updates direkt an die Datenbank (GenerateDBDirectMethods) senden**, und klicken Sie dann auf **Fertig stellen**.  
+11. Deaktivieren Sie auf der Seite **zu generierende Methode auswählen** die Option **Methoden erstellen, um Updates direkt an die Datenbank zu senden (GenerateDBDirectMethods)**, und klicken Sie dann auf **Fertig**stellen.  
   
     > [!WARNING]  
     >  Die Option Erstellen muss deaktiviert sein.  
   
      Die Konfiguration des ADO.NET DataTable-Objekts als Datenquelle für Ihren Bericht ist jetzt abgeschlossen. Auf der DataSet-Designer-Seite in Visual Studio sollte das hinzugefügte DataTable-Objekt jetzt mit den in der Abfrage angegebenen Spalten aufgeführt werden. DataSet1 enthält die Daten aus der Product-Tabelle basierend auf der Abfrage.  
   
-12. Speichern Sie die Datei.  
+12. Speichern Sie die Datei .  
   
 13. Um die Daten in der Vorschau anzuzeigen, klicken Sie im Menü **Daten** auf **Datenvorschau** , und klicken Sie dann auf **Vorschau**.  
   

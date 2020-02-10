@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Paketverwaltungsoptionen (SSIS-PaketUpgrade-Assistent) | Microsoft-Dokumentation
+title: Wählen Sie Paketverwaltung Optionen aus (SSIS-Paket Upgrade-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056029"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Paketverwaltungsoptionen auswählen (SSIS Paketupgrade-Assistent)
   Verwenden Sie die Seite **Paketverwaltungsoptionen auswählen** , um Optionen für Paketupgrades anzugeben.  
   
- **So führen Sie den SSIS Paketupgrade-Assistenten aus**  
+ **So führen Sie den SSIS-Paket Upgrade-Assistenten aus**  
   
 -   [Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verbindungszeichenfolgen zum Verwenden neuer Anbieternamen aktualisieren**  
  Aktualisieren Sie die Verbindungszeichenfolgen, um für die aktuelle Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]die Namen für die folgenden Anbieter zu verwenden:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66056029"
   
  Der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketupgrade-Assistent aktualisiert nur Verbindungszeichenfolgen, die in Verbindungs-Managern gespeichert sind. Der Assistent aktualisiert keine Verbindungszeichenfolgen, die dynamisch mithilfe der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Ausdruckssprache oder mithilfe von Code in einem Skripttask erstellt wurden.  
   
- **Upgradepakete überprüfen**  
+ **Aktualisieren von Upgradepaketen**  
  Überprüfen Sie die Upgradepakete, und speichern Sie nur die Upgradepakete, die die Überprüfung bestehen.  
   
  Wenn Sie diese Option nicht aktivieren, überprüft der Assistent keine Upgradepakete. Deshalb speichert der Assistent alle Upgradepakete, unabhängig davon, ob die Pakete gültig sind oder nicht. Der Assistent speichert Upgradepakete unter dem Ziel, das auf der Seite **Zielspeicherort auswählen** des Assistenten angegeben ist.  
@@ -46,10 +46,10 @@ ms.locfileid: "66056029"
  **Neue Paket-IDs erstellen**  
  Erstellen Sie neue Paket-IDs für die Upgradepakete.  
   
- **Upgradeprozess bei fehlerhaftem Paketupgrade fortsetzen**  
+ **Upgradevorgang fortsetzen, wenn ein Paket Upgrade fehlschlägt**  
  Legen Sie fest, dass der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketupgrade-Assistent mit dem Upgrade der restlichen Pakete fortfährt, wenn ein Paket nicht aktualisiert werden kann.  
   
- **Paketnamenskonflikte**  
+ **Paket Namenskonflikte**  
  Geben Sie an, wie der Assistent Pakete behandeln soll, die denselben Namen haben. Für diese Option sind die in der folgenden Tabelle aufgeführten Werte verfügbar.  
   
  **Vorhandene Paketdateien überschreiben**  
@@ -58,7 +58,7 @@ ms.locfileid: "66056029"
  **Zum Aktualisieren von Paketnamen numerische Suffixe hinzufügen**  
  Fügt dem Namen des Upgradepakets ein numerisches Suffix hinzu.  
   
- **Kein Upgrade für Pakete durchführen**  
+ **Pakete nicht aktualisieren**  
  Unterbricht das Upgrade der Pakete und zeigt einen Fehler an, wenn Sie den Assistenten abschließen.  
   
  Diese Optionen sind nicht verfügbar, wenn Sie die Option **An Quellspeicherort speichern** auf der Seite **Zielspeicherort auswählen** des Assistenten auswählen.  
@@ -66,15 +66,15 @@ ms.locfileid: "66056029"
  **Konfigurationen ignorieren**  
  Lädt keine Paketkonfigurationen während des Paketupgrades. Durch Auswahl dieser Option wird weniger Zeit für das Paketupgrade benötigt.  
   
- **Originalpakete sichern**  
+ **Original Pakete sichern**  
  Lassen Sie den Assistenten die Originalpakete in einem **SSISBackupFolder** -Ordner sichern. Der Assistent erstellt den **SSISBackupFolder** -Ordner als Unterordner des Ordners, der die Originalpakete und die Upgradepakete enthält.  
   
 > [!NOTE]  
 >  Diese Option ist nur verfügbar, wenn Sie festlegen, dass die Originalpakete und die Upgradepakete im Dateisystem und im selben Ordner gespeichert werden.  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Aktualisieren von Integration Services-Paketen mit dem SSIS Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
+ Weitere Informationen finden Sie unter [Aktualisieren von Integration Services-Paketen mit dem SSIS Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren von Integration Services-Paketen](install-windows/upgrade-integration-services-packages.md)  
   
   

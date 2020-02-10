@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor für zusammenführungsjoin | Microsoft-Dokumentation
+title: Transformations-Editor für Zusammenführen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057679"
 ---
 # <a name="merge-transformation-editor"></a>Transformations-Editor für Zusammenführen
@@ -29,7 +29,7 @@ ms.locfileid: "66057679"
   
  Weitere Informationen zur Transformation für Zusammenführen finden Sie unter [Merge Transformation](data-flow/transformations/merge-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66057679"
  **Eingabe 2 für Zusammenführen**  
  Wählen Sie die Spalte aus, die als Eingabe 2 für Zusammenführen zusammengeführt werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Transformation für Zusammenführungsjoin](data-flow/transformations/merge-join-transformation.md)   

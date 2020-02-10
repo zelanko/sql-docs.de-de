@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 7: Erstellen einer Verbunddomäne | Microsoft-Dokumentation'
+title: 'Aufgabe 7: Erstellen einer Verbund Domäne | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488968"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Aufgabe 7: Erstellen einer Verbunddomäne
-  In dieser Aufgabe erstellen Sie eine verbunddomäne **Address Validation**, welches **Address Line**, **City**, **Zustand**, und  **ZIP-** Domänen. Mit einer Verbunddomäne können Sie eine domänenübergreifende Regel definieren, die mehrere Domänen an einer Regel beteiligt. Eine Verbunddomäne hat weitere Vorteile, beispielsweise die Möglichkeit, einen Feldwert für mehrere Domänen zu analysieren.  Beispielsweise kann ein Wert für ein Feld "Full Name" für separate Domänen "First Name", "Middle Name" und "Last Name" analysiert werden. Im Rahmen dieses Lernprogramms definieren Sie nur eine domänenübergreifende Regel. Finden Sie unter [Verwalten einer Verbunddomäne](https://msdn.microsoft.com/library/hh510399.aspx) Weitere Details.  
+# <a name="task-7-creating-a-composite-domain"></a>Aufgabe 7: Erstellen einer Verbunddomänenregel
+  In dieser Aufgabe erstellen Sie eine Verbund Domäne, **Address Validation**(Adress **Zeile**, **Ort**, **Bundesland**und **ZIP** -Domänen). Mit einer Verbunddomäne können Sie eine domänenübergreifende Regel definieren, die mehrere Domänen an einer Regel beteiligt. Eine Verbunddomäne hat weitere Vorteile, beispielsweise die Möglichkeit, einen Feldwert für mehrere Domänen zu analysieren.  Beispielsweise kann ein Wert für ein Feld "Full Name" für separate Domänen "First Name", "Middle Name" und "Last Name" analysiert werden. Im Rahmen dieses Lernprogramms definieren Sie nur eine domänenübergreifende Regel. Weitere Informationen finden Sie unter [Verwalten einer Verbund Domäne](https://msdn.microsoft.com/library/hh510399.aspx) .  
   
-1.  Klicken Sie im linken Bereich auf **Erstellen einer verbunddomäne** auf der Symbolleiste.  
+1.  Klicken Sie im linken Bereich auf der Symbolleiste auf die Schaltfläche **Verbund Domäne erstellen** .  
   
-     ![Erstellen Sie eine Composite Domain Symbolleisten-Schaltfläche](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "erstellen Sie eine Composite Domain Symbolleisten-Schaltfläche")  
+     ![Verbunddomäne erstellen (Symbolleistenschaltfläche)](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "Verbunddomäne erstellen (Symbolleistenschaltfläche)")  
   
-2.  Geben Sie **Adresse Überprüfung** für die **Name der Verbunddomäne**.  
+2.  Geben Sie die **Adressvalidierung** für den **Verbund Domänen Namen**ein.  
   
-     ![Beheben Sie die Verbunddomäne Validation](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "Verbunddomäne Validation zu beheben")  
+     ![Beheben von Überprüfungsfehlern bei Verbunddomänen](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "Beheben von Überprüfungsfehlern bei Verbunddomänen")  
   
-3.  Wählen Sie in der Domänenliste **Address Line**, **City**, **Zustand**, und **Zip** , und klicken Sie auf **Pfeil nach rechts** zum Hinzufügen der **Domänen in Verbunddomäne** Liste.  
+3.  Wählen Sie in der Liste Domäne die Option **address line**, **City**, **State**und **ZIP** aus, und klicken Sie auf den **Pfeil nach rechts** , um Sie der Liste **Domänen in Verbund Domäne** hinzuzufügen.  
   
 4.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   

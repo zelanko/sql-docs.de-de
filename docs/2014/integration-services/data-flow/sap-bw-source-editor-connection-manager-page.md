@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901108"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
@@ -55,7 +55,7 @@ ms.locfileid: "62901108"
  **Ausführungsmodus**  
  Gibt die Methode zum Extrahieren von Daten aus der Quelle an.  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**P - Prozesskette auslösen**|Lösen Sie eine Prozesskette aus. In diesem Fall wird der Extrahierungsprozess vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket gestartet.|  
 |**W - Benachrichtigung abwarten**|Warten Sie auf die Benachrichtigung vom SAP NetWeaver BW-System, um mit dem Extrahieren von Daten zu beginnen. In diesem Fall wird der Extrahierungsprozess vom SAP NetWeaver BW-System gestartet.|  
@@ -118,13 +118,13 @@ ms.locfileid: "62901108"
  Suchen Sie das RFC-Ziel mithilfe des Dialogfelds **RFC-Ziel suchen** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up RFC Destination](look-up-rfc-destination.md).  
   
 ### <a name="execution-mode--e---extract-only"></a>Ausführungsmodus = E - Nur extrahieren  
- **Anforderungs-ID**  
+ **Anfrage-ID**  
  Geben Sie die Anforderungs-ID ein, die der Extrahierung zugeordnet ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](sap-bw-source-editor-columns-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](sap-bw-source-editor-error-output-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Erweitert“&#41;](sap-bw-source-editor-advanced-page.md)   
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

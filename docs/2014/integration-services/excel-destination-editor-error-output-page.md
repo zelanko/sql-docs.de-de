@@ -1,5 +1,5 @@
 ---
-title: Excel-Ziel-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
+title: Ziel-Editor für Excel (Seite Fehlerausgabe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059197"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Ziel-Editor für Excel (Seite Fehlerausgabe)
@@ -26,7 +26,7 @@ ms.locfileid: "66059197"
   
  Weitere Informationen zum Excel-Ziel finden Sie unter [Excel Destination](data-flow/excel-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66059197"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für Excel &#40;Seite Zuordnungen&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Der Ziel-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für Excel &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](control-flow/foreach-loop-container.md)  
   
   

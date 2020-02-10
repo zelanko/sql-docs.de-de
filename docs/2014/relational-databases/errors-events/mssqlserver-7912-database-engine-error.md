@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b46cd9ea4d461b4b6f5755e8fb9bb9199d1bdbbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913152"
 ---
-# <a name="mssqlserver7912"></a>MSSQLSERVER_7912
+# <a name="mssqlserver_7912"></a>MSSQLSERVER_7912
     
 ## <a name="details"></a>Details  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62913152"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|Meldungstext|Reparaturvorgang: Block P_ID wurde der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Typ TYPE) zugeordnet.|  
+|Meldungstext|Reparaturvorgang: Der Block P_ID wurde der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) zugeordnet.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dies ist eine Informationsmeldung von REPAIR, die angibt, dass ein Block dem angegebenen Objekt zugeordnet wurde.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- None  
+ Keine  
   
   

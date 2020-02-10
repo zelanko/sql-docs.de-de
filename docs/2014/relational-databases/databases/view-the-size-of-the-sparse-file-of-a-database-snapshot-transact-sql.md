@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870879"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62870879"
 > [!NOTE]  
 >  Sparsedateien wachsen in 64-KB-Schritten, weshalb die Größe einer Sparsedatei auf dem Datenträger immer einem Vielfachen von 64 KB entspricht.  
   
- Sie können die Spalte **size_on_disk_bytes** der dynamischen Verwaltungssicht [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, um den belegten Speicherplatz (in Bytes) der Sparsedateien einer Momentaufnahme anzuzeigen.  
+ Sie können die Spalte **size_on_disk_bytes** der dynamischen Verwaltungssicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ von ](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) verwenden, um den belegten Speicherplatz (in Bytes) der Sparsedateien einer Momentaufnahme anzuzeigen.  
   
  Zum Anzeigen des Speicherplatzes, der durch eine Sparsedatei in Anspruch genommen wird, klicken Sie in Microsoft Windows mit der rechten Maustaste auf **Eigenschaften**, und lesen Sie den Wert unter **Größe auf Datenträger** ab.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62870879"
   
      ( *Seitenanzahl* * 8192)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
- [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
+ [sys. fn_virtualfilestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
  [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   

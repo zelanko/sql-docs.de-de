@@ -1,5 +1,5 @@
 ---
-title: Ausführen von SQL-Abfragen (SQLXML verwaltete Klassen) | Microsoft-Dokumentation
+title: Ausführen von SQL-Abfragen (verwaltete SQLXML-Klassen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8e16ff3651b9ce23fafe99137b4905eb3961ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014941"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Ausführen von SQL-Abfragen (verwaltete SQLXML-Klassen)
-  Dieses Beispiel zeigt:  
+  In diesem Beispiel wird Folgendes veranschaulicht:  
   
 -   Erstellen von Parametern (SqlXmlParameter-Objekte).  
   
--   Zuweisen von Werten an den Eigenschaften der SqlXmlParameter-Objekte (Name und Wert).  
+-   Zuweisen von Werten zu den Eigenschaften (Name und Wert) von SqlXmlParameter-Objekten.  
   
- In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Angeben des Parameters ( *"LastName"* ), nur die Value-Eigenschaft festgelegt ist. Die Name-Eigenschaft ist nicht festgelegt, da in dieser Abfrage um einen Positionsparameter handelt und kein Name erforderlich ist.  
+ In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Bei Angabe des-Parameters (*LastName*) wird nur die Value-Eigenschaft festgelegt. Die Name-Eigenschaft ist nicht festgelegt, da der-Parameter in dieser Abfrage positiontional ist und kein Name erforderlich ist.  
   
- Die CommandType-Eigenschaft des SqlXmlCommand-Objekt, in der Standardeinstellung ist **Sql**. Deshalb wird die Eigenschaft nicht explizit festgelegt.  
+ Die CommandType-Eigenschaft des SqlXmlCommand-Objekts ist standardmäßig **SQL**. Deshalb wird die Eigenschaft nicht explizit festgelegt.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  
@@ -99,7 +99,7 @@ public static int Main(String[] args)
   
  Um das Beispiel zu testen, muss auf dem Computer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installiert sein.  
   
- Statt die SQL-Abfragen als Befehlstext anzugeben, können Sie eine Vorlage festlegen (wie im folgenden Codefragment dargestellt), die ein Updategram ausführt (ebenfalls eine Vorlage), um einen Kundendatensatz einzufügen. Sie können Vorlagen und Updategrams in Dateien angeben und Dateien ausführen. Weitere Informationen finden Sie unter [Ausführen von Vorlagendateien mit der CommandText-Eigenschaft](executing-template-files-by-using-the-commandtext-property.md).  
+ Statt die SQL-Abfragen als Befehlstext anzugeben, können Sie eine Vorlage festlegen (wie im folgenden Codefragment dargestellt), die ein Updategram ausführt (ebenfalls eine Vorlage), um einen Kundendatensatz einzufügen. Sie können Vorlagen und Updategrams in Dateien angeben und Dateien ausführen. Weitere Informationen finden Sie unter [Ausführen von Vorlagen Dateien mit der CommandText-Eigenschaft](executing-template-files-by-using-the-commandtext-property.md).  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -120,7 +120,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Verwenden von ExecuteToStream  
- Wenn Sie einen vorhandenen Datenstrom haben, können Sie die ExecuteToStream-Methode, statt ein Stream-Objekt erstellt und die Execute-Methode. Der Code aus dem vorherigen Beispiel wird hier überarbeitet, um ExecuteToStream-Methode verwenden:  
+ Wenn Sie über einen vorhandenen Stream verfügen, können Sie die executedestream-Methode verwenden, anstatt ein Stream-Objekt zu erstellen und die Execute-Methode zu verwenden. Der Code aus dem vorherigen Beispiel wird hier überarbeitet, um die executedestream-Methode zu verwenden:  
   
 ```  
 using System;  
@@ -153,6 +153,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  Sie können auch die ExecuteXMLReadermethod verwenden, die ein XmlReader-Objekt zurückgibt. Weitere Informationen finden Sie unter [Ausführen von SQL-Abfragen mithilfe der "ExecuteXMLReader"-Methode](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  Sie können auch die executexmlreadermethod verwenden, die ein XmlReader-Objekt zurückgibt. Weitere Informationen finden Sie unter [Ausführen von SQL-Abfragen mithilfe der ExecuteXmlReader-Methode](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel | Microsoft-Dokumentation'
+title: 'Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489104"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
-  In dieser Aufgabe konvertieren Sie die **Zustand** Attribut der **Lieferanten** Entität als ein **domänenbasiertes Attribut**. Nach dem Konfigurieren der State-Attribut, um einen domänenbasierten werden, und veröffentlichen es in MDS, eine neue Entität mit dem Namen **Zustand** auf MDS-Server mit allen Werten in der Spalte erstellt werden und die **Zustand** Attribut der **Lieferanten** Entität gefüllt mit Werten aus der **Zustand** Entität. Jetzt die **Lieferanten** Modell sollten zwei Entitäten haben: **Lieferanten** und **Zustand** , in denen die **Zustand** Attribut der **Lieferanten** Entität ist ein domänenbasiertes Attribut, von denen abhängt **Zustand** Entität.  
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
+  In dieser Aufgabe konvertieren Sie das Attribut **State** der Entität **Supplier** in ein **domänenbasiertes Attribut**. Nachdem Sie das State-Attribut als domänenbasiertes Verzeichnis konfiguriert und in MDS veröffentlicht haben, wird eine neue Entität mit dem Namen **State** auf dem MDS-Server mit allen Werten in der Spalte erstellt, und das **State** -Attribut der Entität " **Supplier** " wird mit Werten aus der Entität " **State** " aufgefüllt. Das Modell **Suppliers** sollte nun über zwei Entitäten verfügen: **Supplier** und **State** , wobei das **State** -Attribut der Entität **Supplier** ein domänenbasiertes Attribut ist, das von der **State** -Entität abhängt.  
   
-1.  Wechseln Sie zur **Excel** Fenster mit **Cleansed and Matched Suppliers.xlsx** zu öffnen.  
+1.  Wechseln Sie in das **Excel** -Fenster, in dem die Option **Suppliers. xlsx** geöffnet ist, und entspricht.  
   
-2.  Klicken Sie auf **aktualisieren** Schaltfläche auf dem Menüband auf die neuesten Updates aus MDS abzurufen. Die zwei weiteren Datensätze sollte angezeigt werden, wenn Sie das optionale ausgeführt haben **Aufgabe 4**.  
+2.  Klicken Sie im Menüband auf die Schaltfläche **Aktualisieren** , um die neuesten Updates von MDS zu erhalten. Wenn Sie die optionale **Aufgabe 4**ausgeführt haben, sollten Sie die zwei weiteren Datensätze sehen.  
   
-3.  Klicken Sie auf Spaltennamen **Zustand** (Zelle **I1**) in der **Kopfzeile**.  
+3.  Klicken Sie in der **Kopfzeile**auf Column Name **State** (Zelle **I1**).  
   
      ![Excel – Attributeigenschaften (Schaltfläche)](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-01.jpg "Excel – Attributeigenschaften (Schaltfläche)")  
   
-4.  Klicken Sie auf **Attributeigenschaften** auf dem Menüband.  
+4.  Klicken Sie im Menüband auf **Attribut Eigenschaften** .  
   
-5.  In der **Attributeigenschaften** wählen Sie im Dialogfeld **eingeschränkte Liste (domänenbasiert)** für die **Attributtyp**.  
+5.  Wählen Sie im Dialogfeld **Attribut Eigenschaften** für den **Attributtyp**die Option **eingeschränkte Liste (Domänen basiert)** aus.  
   
-6.  Typ **Zustand** für die **neuer Entitätsname** , und klicken Sie auf **OK**.  
+6.  Geben Sie **State** als **neuen Entitäts Namen** ein, und klicken Sie auf **OK**.  
   
-     ![Excel – wählen Sie im Dialogfeld Eigenschaften für Attribut](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel - Attribut Eigenschaften (Dialogfeld)")  
+     ![Excel – Attributeigenschaften (Dialogfeld)](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel – Attributeigenschaften (Dialogfeld)")  
   
-7.  Jetzt in Excel sollte **Pfeil nach unten** beim Klicken auf einen beliebigen Wert in der **Zustand** Spalte. Sie können den Wert bei Bedarf über die Dropdownliste ändern.  
+7.  In Excel sollte nun ein **Pfeil nach unten** angezeigt werden, wenn Sie auf einen beliebigen Wert in der Spalte **Status** klicken. Sie können den Wert bei Bedarf über die Dropdownliste ändern.  
   
-     ![Excel – Dropdownliste mit Zuständen](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel – Dropdownliste mit Zuständen")  
+     ![Excel – Dropdownliste mit Bundesstaaten](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel – Dropdownliste mit Bundesstaaten")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

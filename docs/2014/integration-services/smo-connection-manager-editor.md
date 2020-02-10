@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055596"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO-Verbindungs-Manager-Editor
@@ -26,7 +26,7 @@ ms.locfileid: "66055596"
   
  Weitere Informationen zum SMO-Verbindungs-Manager finden Sie unter [SMO Connection Manager](connection-manager/smo-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz ein, oder wählen Sie den Servernamen aus der Liste aus.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66055596"
  **Windows-Authentifizierung verwenden**  
  Verwendet die Windows-Authentifizierung, um eine Verbindung mit der ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz herzustellen.  
   
- **SQL Server-Authentifizierung verwenden**  
+ **SQL Server Authentifizierung verwenden**  
  Verwendet die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung, um eine Verbindung mit der ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz herzustellen.  
   
  **Benutzername**  
@@ -48,7 +48,7 @@ ms.locfileid: "66055596"
  **Verbindung testen**  
  Testet die Verbindung entsprechend der Konfiguration.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

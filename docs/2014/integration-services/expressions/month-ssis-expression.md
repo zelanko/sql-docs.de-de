@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897527"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS-Ausdruck)
@@ -37,7 +37,7 @@ MONTH(date)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  MONTH gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../data-flow/integration-services-data-types.md).  
@@ -66,7 +66,7 @@ MONTH(ModifiedDate)
 MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DATEADD &#40;SSIS-Ausdruck&#41;](dateadd-ssis-expression.md)   
  [DATEDIFF &#40;SSIS-Ausdruck&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS-Ausdruck&#41;](datepart-ssis-expression.md)   

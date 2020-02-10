@@ -1,5 +1,5 @@
 ---
-title: XML-Datentypunterstützung für SQLXML 4.0 | Microsoft-Dokumentation
+title: Unterstützung des XML-Datentyps in SQLXML 4,0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012168"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
@@ -28,13 +28,13 @@ ms.locfileid: "66012168"
   
 |Aufgabe|Beispiel|Thema|  
 |----------|-------------|-----------|  
-|So ordnen Sie eine `xml`-Spalte einer XML-Sicht zu und schließen diese in die Sicht ein|"Zuordnen eines XML-Elements zu einer XML-Datentypspalte"|[Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|So fügen Sie Daten in eine `xml`-Spalte mit Updategrams ein|"Einfügen von Daten in eine XML-Datentypspalte"|[Einfügen von Daten mit XML-Updategrams &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|Massenladen von XML-Daten in eine `xml`-Spalte|"Massenladen in XML-Datentypspalten"|[Beispiele für XML-Massenladen &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|So ordnen Sie eine `xml`-Spalte einer XML-Sicht zu und schließen diese in die Sicht ein|"Zuordnen eines XML-Elements zu einer XML-Datentypspalte"|[Standard Zuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|So fügen Sie Daten in eine `xml`-Spalte mit Updategrams ein|"Einfügen von Daten in eine XML-Datentypspalte"|[Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|Massenladen von XML-Daten in eine `xml`-Spalte|"Massenladen in XML-Datentypspalten"|[Beispiele für XML-Massen laden &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>Richtlinien und Einschränkungen  
   
--   **\<XSD: alle >** können nicht zugeordnet werden, um einer Spalte, eine `xml` -Datentyp. Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
+-   XSD `xml` **: beliebige>können keiner Spalte zugeordnet werden, einschließlich eines-Datentyps \<** . Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
   
 -   XPath-Abfrage in den Inhalten von `xml`-Datentypspalten wird nicht unterstützt.  
   
@@ -44,11 +44,12 @@ ms.locfileid: "66012168"
   
 -   SQLXML 4.0 verlässt sich auf die Unterstützung für die XML-Analyse, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. Eine `xml`-Spalte kann entweder als typisiertes XML oder nicht typisiertes XML zugeordnet werden. In beiden Fällen überprüft SQLXML 4.0 die XML-Eingabe nicht.  Wenn die XML-Eingabe nicht gültig oder nicht wohlgeformt ist, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Meldung an SQLXML und gibt alle relevanten, vom Server an den Benutzer gesendeten Fehlerinformationen weiter.  
   
--   SQLXML 4.0 basiert auf der eingeschränkten Unterstützung für DTDs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestattet die Verwendung einer internen DTD in `xml`-Datentypdaten, die verwendet werden kann, um Standardwerte anzugeben und Entitätsverweise durch ihren erweiterten Inhalt zu ersetzen. SQLXML übergibt die XML-Daten unverändert an den Server (einschließlich der internen DTD). Mithilfe von Drittanbieter-Tools können Sie DTDs in XML-Schemadokumente (XSD) konvertieren und die Daten mit XML-Inlineschemas in die Datenbank laden.  
+-   SQLXML 4.0 basiert auf der eingeschränkten Unterstützung für DTDs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestattet die Verwendung einer internen DTD in `xml`-Datentypdaten, die verwendet werden kann, um Standardwerte anzugeben und Entitätsverweise durch ihren erweiterten Inhalt zu ersetzen. SQLXML übergibt die XML-Daten unverändert an den Server (einschließlich der internen DTD). Mithilfe von Drittanbieter-Tools können Sie DTDs in XML-Schemadokumente (XSD) konvertieren und die Daten mit XML-Inlineschemas in die Datenbank laden.  
   
--   SQLXML 4.0 behält nicht verarbeitungsanweisungen für XML-Deklaration (z. B.) auf das Verhalten des Basis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stattdessen wird die XML-Deklaration als Direktive an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-XML-Parser behandelt, und seine Attribute (version, encoding und standalone) gehen nach der Konvertierung zum `xml`-Datentyp verloren. Die XML-Daten werden intern als UCS-2 gespeichert. Alle anderen Verarbeitungsanweisungen in der XML-Instanz bleiben erhalten. Sie sind in der `xml`-Spalte zulässig und können durch SQLXML unterstützt werden.  
+-   SQLXML 4,0 behält keine Verarbeitungsanweisungen für die XML-Deklaration bei (z. b.) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], basierend auf dem Verhalten von. Stattdessen wird die XML-Deklaration als Direktive an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-XML-Parser behandelt, und seine Attribute (version, encoding und standalone) gehen nach der Konvertierung zum `xml`-Datentyp verloren. Die XML-Daten werden intern als UCS-2 gespeichert. Alle anderen Verarbeitungsanweisungen in der XML-Instanz bleiben erhalten. Sie sind in der `xml`-Spalte zulässig und können durch SQLXML unterstützt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
   

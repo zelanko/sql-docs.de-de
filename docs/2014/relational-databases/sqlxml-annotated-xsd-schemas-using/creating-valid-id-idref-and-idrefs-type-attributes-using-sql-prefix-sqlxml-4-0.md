@@ -1,5 +1,5 @@
 ---
-title: Erstellen die gültige ID, IDREF und IDREFS-Typ Attribute verwenden Sql:prefix (SQLXML 4.0) | Microsoft-Dokumentation
+title: "Erstellen gültiger Attribute vom Typ ID, IDREF und IDREFS mit ' SQL: Prefix ' (SQLXML 4,0) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013918"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Erstellen gültiger Attribute vom Typ ID, IDREF und IDREFS mit 'sql:prefix' (SQLXML 4.0)
   Für ein Attribut kann der ID-Attributtyp angegeben werden. Attribute vom Typ IDREF oder IDRES können dann verwendet werden, um auf das ID-Attribut zu verweisen. Auf diese Weise werden Links zwischen Dokumenten gebildet.  
   
- ID, IDREF und IDREFS entsprechen, abgesehen von wenigen Unterschieden, Primärschlüssel/Fremdschlüssel-Beziehungen in der Datenbank. In einem XML-Dokument müssen die Werte der Attribute vom Typ ID eindeutig sein. Wenn **"CustomerID"** und **"OrderID"** als ID-Typ in einem XML-Dokument, Attribute angegeben werden, diese Werte müssen unterschiedlich sein. In einer Datenbank können die Spalten CustomerID und SalesOrderID allerdings die gleichen Werte haben. (Zum Beispiel sind die Einträge CustomerID = 1 und OrderID = 1 in der Datenbank gültig).  
+ ID, IDREF und IDREFS entsprechen, abgesehen von wenigen Unterschieden, Primärschlüssel/Fremdschlüssel-Beziehungen in der Datenbank. In einem XML-Dokument müssen die Werte von ID-Typattributen eindeutig sein. Wenn **CustomerID** -und **OrderID** -Attribute als ID-Typ in einem XML-Dokument angegeben werden, müssen diese Werte unterschiedlich sein. In einer Datenbank können die Spalten CustomerID und SalesOrderID allerdings die gleichen Werte haben. (Zum Beispiel sind die Einträge CustomerID = 1 und OrderID = 1 in der Datenbank gültig).  
   
  Für die Gültigkeit der Attribute ID, IDREF und IDREFS gelten folgende Voraussetzungen:  
   
@@ -49,12 +49,12 @@ ms.locfileid: "66013918"
  Beachten Sie, dass die `sql:prefix`-Anmerkung nicht mit dem XSD-Attribut fixed verwendet werden kann.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Angeben von ID- und IDREFS-Typen  
- Im folgenden Schema wird die  **\<Kunden >** Element besteht aus den  **\<Reihenfolge >** untergeordnetes Element. Die  **\<Reihenfolge >** -Element verfügt ebenso über ein untergeordnetes Element der  **\<OrderDetail >** Element.  
+ Im folgenden Schema besteht das ** \<Customer>** -Element aus der ** \<Order>** untergeordneten-Elements. Das ** \<Order>** -Element verfügt auch über ein untergeordnetes-Element, das ** \<OrderDetail>** -Element.  
   
- Die **OrderIDList** Attribut  **\<Kunden >** ist ein Attribut des IDREFS-Typ, der auf verweist die **"OrderID"** Attribut der  **\< Reihenfolge >** Element.  
+ Das **OrderIDList** -Attribut von ** \<Customer>** ist ein Attribut vom Typ IDREFS, das auf das **OrderID** -Attribut des ** \<Order>** -Elements verweist.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -108,7 +108,7 @@ ms.locfileid: "66013918"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen sqlPrefix.xml.  
   

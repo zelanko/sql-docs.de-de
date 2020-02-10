@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010427"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Zugreifen auf FileTables mit Transact-SQL
@@ -27,7 +27,7 @@ ms.locfileid: "66010427"
   
 -   Alle Dateiattributspalten besitzen NOT NULL-Einschränkungen. Wenn Werte nicht explizit festgelegt werden, werden entsprechende Standardwerte angegeben.  
   
--   Systemdefinierte Einschränkungen werden erzwungen, wenn die INSERT-Anweisung **name**, **path_locator**, **parent_path_locator** oder Dateiattribute festlegt.  
+-   Systemdefinierte Einschränkungen werden erzwungen, wenn die INSERT-Anweisung **name**, **path_locator**, **parent_path_locator**oder Dateiattribute festlegt.  
   
 -   Die Anwendung kann **path_locator** für eine Datei oder ein Verzeichnis abrufen, indem in der Funktion [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) der Dateisystempfad angegeben wird.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66010427"
   
 -   Der Wert **last_access_time** kann nicht vor **last_write_time** und **creation_time**liegen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Laden von Dateien in FileTables](load-files-into-filetables.md)   
- [Arbeiten mit Verzeichnissen und Pfaden in FileTables](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Zugreifen auf FileTables mit Datei-E/A-APIs](access-filetables-with-file-input-output-apis.md)   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../views/views.md)  
   

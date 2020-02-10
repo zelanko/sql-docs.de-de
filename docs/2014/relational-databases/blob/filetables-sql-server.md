@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010082"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -126,10 +126,10 @@ ms.locfileid: "66010082"
   
   
 ##  <a name="relcontent"></a> Verwandte Inhalte  
- [FileTable Schema](filetable-schema.md)  
+ [FileTable-Schema](filetable-schema.md)  
  Beschreibt das vordefinierte und feste Schema einer FileTable.  
   
- [FileTable-Kompatibilität mit anderen SQL Server-Funktionen](filetable-compatibility-with-other-sql-server-features.md)  
+ [FileTable-Kompatibilität mit anderen SQL Server-Features](filetable-compatibility-with-other-sql-server-features.md)  
  Beschreibt, wie FileTables mit anderen Funktionen von SQL Server funktionieren.  
   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../views/views.md)  

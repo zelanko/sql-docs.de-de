@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 8: Hinzufügen von bedingter Split Transformation zum Aufteilen der Bereinigung der Ausgabe | Microsoft-Dokumentation'
+title: 'Aufgabe 8: Hinzufügen der Transformation für bedingtes Teilen zum Aufteilen der Bereinigungs Ausgabe Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489669"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Aufgabe 8: Hinzufügen der Transformation „Bedingtes Teilen“ zur Teilung der Bereinigungsausgabe
-  In dieser Aufgabe fügen Sie eine Transformation "Bedingtes Teilen" zum Datenfluss hinzu. Die Transformation "Bedingtes Teilen" kann Zeilen je nach Dateninhalt an andere Ausgaben routen. In diesem Tutorial verwenden Sie die **Datensatzstatus** Ausgabespalte von der DQS-bereinigungstransformation. Sie laden in diesem Lernprogramm nur richtige oder korrigierte Datensätze zu MDS-Server hoch. Aus diesem Grund Sie überprüfen, ob die **Datensatzstatus** ist **richtig** oder **korrigiert**, und kombinieren die Datensätze vor dem die Datensätze in MDS hochladen.  
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Aufgabe 8: Hinzufügen einer Transformation 'Bedingtes Teilen', um die Bereinigungsausgabe zu teilen
+  In dieser Aufgabe fügen Sie eine Transformation "Bedingtes Teilen" zum Datenfluss hinzu. Die Transformation "Bedingtes Teilen" kann Zeilen je nach Dateninhalt an andere Ausgaben routen. In diesem Tutorial verwenden Sie die Ausgabe Spalte für den **Daten Satz Status** aus der Transformation für die DQS-Bereinigung. Sie laden in diesem Lernprogramm nur richtige oder korrigierte Datensätze zu MDS-Server hoch. Daher überprüfen Sie, ob der **Status des Datensatzes** **korrekt** oder **korrigiert**ist, und kombinieren die Datensätze, bevor Sie die Datensätze in MDS hochladen.  
   
-1.  Drag & Drop **Transformation für bedingtes Teilen** aus **allgemeine** im Abschnitt der **SSIS-Toolbox** auf die **Datenfluss** Registerkarte unter **Lieferantendaten Bereinigen**.  
+1.  Ziehen Sie die **Transformation für bedingtes Teilen** aus **Common** section in der **SSIS-Toolbox** in die Registerkarte **Datenfluss** unter Bereinigen von **Lieferantendaten**.  
   
-2.  Mit der rechten Maustaste **für bedingtes Teilen**, und klicken Sie auf **umbenennen**. Typ **Pick Correct and Corrected Records** , und drücken Sie **EINGABETASTE**.  
+2.  Klicken Sie mit der rechten Maustaste auf **bedingtes Teilen**, und klicken **Sie auf** Geben Sie **richtige und korrigierte Datensätze auswählen** ein, und drücken **Sie Eingabe**  
   
-3.  Herstellen einer mit **Cleanse Supplier Data** und **Pick Correct and Corrected Records** mithilfe des blauen Konnektors.  
+3.  Verbinden Sie **Lieferantendaten** , und **Wählen Sie richtige und korrigierte Datensätze** mit dem blauen Connector aus.  
   
-     ![Cleanse Supplier Data -> richtige auswählen & korrigiert](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Cleanse Supplier Data -> richtige auswählen & korrigiert")  
+     ![Lieferantendaten bereinigen-> Auswahl korrigieren & korrigiert](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Lieferantendaten bereinigen -> Richtige auswählen & Korrigiert")  
   
-4.  Doppelklicken Sie auf **Pick Correct and Corrected Records** in die **Datenfluss** Registerkarte.  
+4.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf **richtige und korrigierte Datensätze auswählen** .  
   
-5.  Ändern der **Standardausgabename** am unteren Rand des Bildschirms **richtig**.  
+5.  Ändern Sie den **standardmäßigen Ausgabe Namen** unten auf dem Bildschirm, um ihn zu **korrigieren**.  
   
-6.  Erweitern Sie **Spalten** in die **linken oberen Bereich**.  
+6.  Erweitern Sie im **linken oberen**Bereich die Option **Spalten** .  
   
-     ![Conditional Split Transformation Editor](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-02.jpg "Conditional Split Transformation Editor")  
+     ![Transformations-Editor für bedingtes Teilen](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-02.jpg "Transformations-Editor für bedingtes Teilen")  
   
-7.  Drag & Drop **Datensatzstatus** auf die **Bedingung** Spalte.  
+7.  Ziehen Sie **Daten Satz Status** in die Spalte **Bedingung** .  
   
-8.  Typ **== "Corrected"** neben **[Datensatzstatus]** für die **Bedingung** Spalte.  
+8.  Geben Sie **= = "korrigiert"** neben **[Daten Satz Status]** für die Spalte **Bedingung** ein.  
   
-9. Klicken Sie auf **Fall 1** in die **Name der Ausgabespalte**, und ändern Sie den Namen in **korrigiert**.  
+9. Klicken Sie in der **Spalte Ausgabe Name**auf Groß-/Kleinschreibung **1** , und ändern Sie den Namen in **korrigiert**.  
   
-10. Klicken Sie auf **OK** schließen die **Conditional Split Transformation Editor** Dialogfeld.  
+10. Klicken Sie zum Schließen des Dialog Felds **Transformations-Editor für bedingtes Teilen** auf **OK** .  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 9: Hinzufügen der Union aller Transformation um richtige und korrigierte Datensätze zu kombinieren.](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [Aufgabe 9: Hinzufügen der Transformation UNION ALL, um richtige und korrigierte Datensätze zu kombinieren](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

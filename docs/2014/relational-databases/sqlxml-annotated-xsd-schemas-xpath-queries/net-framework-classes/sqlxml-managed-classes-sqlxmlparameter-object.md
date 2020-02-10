@@ -1,5 +1,5 @@
 ---
-title: SqlXmlParameter-Objekt (verwaltete SQLXML Klassen) | Microsoft-Dokumentation
+title: SqlXmlParameter-Objekt (verwaltete SQLXML-Klassen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010761"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter-Objekt (verwaltete SQLXML-Klassen)
-  SqlXmlParameter-Objekt unterstützt die folgenden Eigenschaften:  
+  Das SqlXmlParameter-Objekt unterstützt die folgenden Eigenschaften:  
   
  Name  
- Der Name des Parameters. Befehlen können Parameter übergeben werden. Die CreateParameter-Methode, der die SqlXmlCommand-Objekt aufrufen, wird das Parameterobjekt erstellt.  
+ Der Name des Parameters. Befehlen können Parameter übergeben werden. Durch Aufrufen der CreateParameter-Methode des SqlXmlCommand-Objekts wird das Parameter Objekt erstellt.  
   
- Wert  
- Der Wert des Parameters. Ein Arbeitsbeispiel finden Sie unter [SQL-Abfragen ausführen &#40;verwaltete SQLXML-Klassen&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
+ value  
+ Der Wert des Parameters. Ein funktionierendes Beispiel finden Sie unter [Ausführen von SQL-Abfragen &#40;verwalteten SQLXML-Klassen&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [SqlXmlCommand-Objekt &#40;verwaltete SQLXML-Klassen&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [SqlXmlAdapter-Objekt &#40;verwaltete SQLXML-Klassen&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SqlXmlCommand-Objekt &#40;verwalteten SQLXML-Klassen&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [SqlXmlAdapter-Objekt &#40;verwalteten SQLXML-Klassen&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)   
  [Zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](accessing-sqlxml-functionality-in-the-net-environment.md)  
   
   

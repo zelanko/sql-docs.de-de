@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz (Integrationsservices) | Microsoft-Dokumentation
+title: Technische Referenz (Integration Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055283"
 ---
 # <a name="technical-reference-integration-services"></a>Technische Referenz (Integration Services)
-  Suchen Sie nach den Tools, den Sprachen und der Referenzdokumentation für die Programmierung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+  Hier finden Sie die Tools, Sprachen und die Programmier Referenz [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Dokumentation [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]für in.  
   
- ![Kleines Dateiordnersymbol](media/filefolder-small.gif "Small File Folder Icon") **Change Data Capture Service und Designer**  
+ ![Kleines Datei Ordnersymbol](media/filefolder-small.gif "Kleines Dateiordnersymbol") **Change Data Capture Service und Designer**  
  [Change Data Capture Service für Oracle von Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
  [Change Data Capture Designer für Oracle von Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
- ![Kleines Dateiordnersymbol](media/filefolder-small.gif "Kleines Dateiordnersymbol") **Fehler und Ereignisse**  
+ ![Kleines Datei Ordnersymbol](media/filefolder-small.gif "Kleines Dateiordnersymbol") **Fehler und Ereignisse**  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
- ![Kleines Dateiordnersymbol](media/filefolder-small.gif "Small File Folder Icon") **Transact-SQL-Referenz**  
+ ![Kleines Datei Ordnersymbol](media/filefolder-small.gif "Kleines Dateiordnersymbol") **Transact-SQL-Referenz**  
  [Sichten &#40;Integration Services-Katalog&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
  [Gespeicherte Prozeduren &#40;Integration Services-Katalog&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  

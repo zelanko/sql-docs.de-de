@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483907"
 ---
 # <a name="entities-master-data-services"></a>Entitäten (Master Data Services)
@@ -31,11 +31,11 @@ ms.locfileid: "65483907"
 ## <a name="how-entities-relate-to-other-model-objects"></a>Zusammenhang zwischen Entitäten und anderen Modellobjekten  
  Sie können sich eine Entität als Tabelle vorstellen, die Masterdaten enthält und in der die Zeilen Elemente und die Spalten Attribute darstellen.  
   
- ![Als Tabelle dargestellte Master Data Services-Entität](../../2014/master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![Als Tabelle dargestellte Master Data Services-Entität](../../2014/master-data-services/media/mds-conc-entity-table.gif "Als Tabelle dargestellte Master Data Services-Entität")  
   
  Sie füllen die Entität mit einer Liste von Masterdaten auf, die Sie verwalten möchten.  
   
- Entitäten können zum Erstellen abgeleiteter Hierarchien, d. h. ebenenbasierter Hierarchien basierend auf mehreren Entitäten, verwendet werden. Weitere Informationen finden Sie unter [Abgeleitete Hierarchien &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md).  
+ Entitäten können zum Erstellen abgeleiteter Hierarchien, d. h. ebenenbasierter Hierarchien basierend auf mehreren Entitäten, verwendet werden. Weitere Informationen finden Sie unter [Abgeleitete Hierarchien &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md).  
   
  Entitäten kann es auch ermöglicht werden, explizite Hierarchien (unregelmäßige Strukturen basierend auf einer einzelnen Entität) und Auflistungen (einmalige Kombinationen der Teilmengen von Elementen) zu enthalten. Weitere Informationen finden Sie unter [Explizite Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) und [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
   
@@ -49,13 +49,13 @@ ms.locfileid: "65483907"
  Sie können Benutzern Berechtigungen für eine Entität geben, die verwandte Modellobjekte einschließt. Weitere Informationen finden Sie unter [Entitätsberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Beispiele für Entitäten  
- Im folgenden Beispiel wird eine Entität mit den folgenden Attributen gezeigt: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
+ Das folgende Beispiel zeigt eine Entität, die über folgende Attribute verfügt: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
- ![Entitätstabelle für Fahrradprodukte](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![Entitätstabelle für Fahrradprodukte](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Entitätstabelle für Fahrradprodukte")  
   
  Im folgenden Beispiel stellt die Entität "Product" die zentrale Entität dar. Die Entität Subcategory ist ein domänenbasiertes Attribut der Entität Product. Die Entität Category ist ein domänenbasiertes Attribut der Entität Subcategory. StandardCost und ListPrice sind Freiformattribute der Produkt-Entität, und FilePhoto ist ein Dateiattribut der Produkt-Entität.  
   
- ![Produktentitätsbaumstruktur](../../2014/master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
+ ![Produktentitätsbaumstruktur](../../2014/master-data-services/media/mds-conc-entity-ui.gif "Produktentitätsbaumstruktur")  
   
 > [!NOTE]  
 >  Dieses Beispiel basiert auf der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Benutzeroberfläche. Die hierarchische Baumstruktur zeigt Beziehungen zwischen Entitäten und domänenbasierten Attributen an. Ihr Zweck besteht darin, die Beziehungen und nicht den Wichtigkeitsgrad darzustellen.  
@@ -64,17 +64,17 @@ ms.locfileid: "65483907"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie eine neue Entität.|[Erstellen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|Erstellen Sie eine neue Entität.|[Erstellen Sie eine Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |Geben Sie an, dass eine Entität explizite Hierarchien und Auflistungen enthalten kann.|[Aktivieren einer Entität für explizite Hierarchien und Auflistungen &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Ändern Sie den Namen einer vorhandenen Entität.|[Ändern eines Entitätsnamens &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|Löschen Sie eine vorhandene Entität.|[Löschen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|Weisen Sie Entitäten Berechtigungen zu.|[Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Ändern Sie den Namen einer vorhandenen Entität.|[Ändern eines Entitäts namens &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
+|Löschen Sie eine vorhandene Entität.|[Einen Entitäts &#40;Master Data Services löschen&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|Weisen Sie Entitäten Berechtigungen zu.|[Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
 -   [Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
--   [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
 -   [Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   

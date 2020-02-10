@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483004"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Explizite Hierarchien (Master Data Services)
@@ -69,11 +69,11 @@ ms.locfileid: "65483004"
 |Kann unregelmäßig sein|Enthält immer eine konsistente Anzahl an Ebenen|  
   
 ## <a name="explicit-hierarchy-example"></a>Beispiel einer expliziten Hierarchie  
- Im folgenden Beispiel enthält die Product-Entität die folgenden Blattelemente: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450}, and BK-R650 {Road-650}.  
+ Im folgenden Beispiel enthält die Product-Entität die folgenden Blattelemente: BK-M101 {Berg-100}, BK-M201 {Mountain-200}, BK-M301 {Berg-300}, BK-R150 {Straße-150}, BK-R450 {Straße-450} und BK-R650 {Straße-650}.  
   
  Um diese Blattelemente an bestimmten Konsolidierungspunkten zusammenzufassen, können Sie konsolidierte Elemente in der Product-Entität erstellen. Fügen Sie die konsolidierten Elemente auf den Ebenen der Hierarchiestruktur ein, auf denen Sie die Blattelemente zusammenfassen möchten. Es gibt keine Einschränkung hinsichtlich der Einfügung konsolidierter Elemente. Jedes Element (Blattelement oder konsolidiertes Element) darf jedoch nur einmal verwendet werden.  
   
- ![Beispiel für explizite Mountainbikehierarchie](../../2014/master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike Explicit Hierarchy Example")  
+ ![Beispiel für explizite Mountainbikehierarchie](../../2014/master-data-services/media/mds-conc-explicit-hierarchy.gif "Beispiel für explizite Mountainbikehierarchie")  
   
  Konsolidierte Elemente können zum Gruppieren von Elementen auf beliebigen Ebenen verwendet werden. Konsolidierte Elemente und Blattelemente werden in der von Ihnen festgelegten Reihenfolge sortiert.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "65483004"
 |----------------------|-----------|  
 |Aktivieren Sie eine Entität für explizite Hierarchien und Auflistungen.|[Aktivieren einer Entität für explizite Hierarchien und Auflistungen &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Erstellen Sie eine neue explizite Hierarchie.|[Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Ändern Sie den Namen einer vorhandenen expliziten Hierarchie.|[Ändern des Namens einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Ändern Sie den Namen einer vorhandenen expliziten Hierarchie.|[Ändern Sie den Namen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
 |Löschen Sie eine vorhandene explizite Hierarchie.|[Löschen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   

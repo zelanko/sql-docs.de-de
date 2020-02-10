@@ -29,10 +29,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871573"
 ---
 # <a name="file-states"></a>Dateistatus
@@ -43,12 +43,12 @@ ms.locfileid: "62871573"
 ## <a name="file-state-definitions"></a>Dateistatusdefinitionen  
  Die folgende Tabelle definiert den Dateistatus.  
   
-|Status|Definition|  
+|State|Definition|  
 |-----------|----------------|  
 |ONLINE|Die Datei ist für alle Vorgänge verfügbar. Dateien in der primären Dateigruppe sind immer online, wenn die Datenbank selbst online ist. Wenn eine Datei in der primären Dateigruppe nicht online ist, ist die Datenbank nicht online, und der Status der sekundären Dateien ist nicht definiert.|  
-|OFFLINE|Die Datei ist nicht für den Zugriff verfügbar und ist möglicherweise nicht auf dem Datenträger vorhanden. Dateien werden durch explizite Benutzeraktionen offline geschaltet und bleiben offline, bis weitere Benutzeraktionen durchgeführt werden.<br /><br /> **\*\* Vorsicht \*\*** Eine Datei sollte nur offline geschaltet werden, wenn sie zwar beschädigt ist, jedoch wiederhergestellt werden kann. Eine offline geschaltete Datei kann nur durch Wiederherstellen der Datei aus der Sicherung erneut online geschaltet werden. Weitere Informationen zum Wiederherstellen einer einzelnen Datei finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
+|OFFLINE|Die Datei ist nicht für den Zugriff verfügbar und ist möglicherweise nicht auf dem Datenträger vorhanden. Dateien werden durch explizite Benutzeraktionen offline geschaltet und bleiben offline, bis weitere Benutzeraktionen durchgeführt werden.<br /><br /> ** \* Vorsicht \* \* ** Eine Datei sollte nur offline festgelegt werden, wenn die Datei beschädigt ist, Sie kann jedoch wieder hergestellt werden. Eine offline geschaltete Datei kann nur durch Wiederherstellen der Datei aus der Sicherung erneut online geschaltet werden. Weitere Informationen zum Wiederherstellen einer einzelnen Datei finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
 |RESTORING|Die Datei wird wiederhergestellt. Dateien gehen aufgrund eines Wiederherstellungsbefehls in den Wiederherstellungsstatus über, der sich auf die gesamte Datei und nicht nur auf eine Seitenwiederherstellung bezieht; sie verbleiben in diesem Status, bis die Wiederherstellung abgeschlossen ist und die Datei wiederhergestellt wurde.|  
-|RECOVERY PENDING|Die Wiederherstellung der Datei wurde verschoben. Eine Datei geht automatisch in diesen Status über, weil ein schrittweiser Wiederherstellungsvorgang durchgeführt wird, bei dem die Datei nicht wiederhergestellt wird. Es sind weitere Aktionen durch den Benutzer erforderlich, um den Fehler zu beheben und den Wiederherstellungsvorgang erfolgreich abzuschließen. Weitere Informationen finden Sie unter [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
+|RECOVERY PENDING|Die Wiederherstellung der Datei wurde verschoben. Eine Datei geht automatisch in diesen Status über, weil ein schrittweiser Wiederherstellungsvorgang durchgeführt wird, bei dem die Datei nicht wiederhergestellt wird. Es sind weitere Aktionen durch den Benutzer erforderlich, um den Fehler zu beheben und den Wiederherstellungsvorgang erfolgreich abzuschließen. Weitere Informationen finden Sie unterschritt Weise Wiederherstellungen [&#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
 |SUSPECT|Die Wiederherstellung der Datei ist während eines Onlinewiederherstellungsvorgangs fehlgeschlagen. Wenn sich die Datei in der primären Dateigruppe befindet, wird die Datenbank ebenfalls als fehlerverdächtig markiert. Anderenfalls gilt nur für die Datei der Status Fehlerverdächtig, und die Datenbank besitzt auch weiterhin den Status online.<br /><br /> Die Datei behält den Status Fehlerverdächtig, bis sie durch eine der folgenden Methoden bereitgestellt wird:<br /><br /> Wiederherstellung<br /><br /> DBCC CHECKDB mit REPAIR_ALLOW_DATA_LOSS|  
 |DEFUNCT|Die Datei wurde gelöscht, während sie nicht online war. Alle Dateien in einer Dateigruppe erhalten den Status "defunct", wenn eine Offlinedateigruppe entfernt wird.|  
   

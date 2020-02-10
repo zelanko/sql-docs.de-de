@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483323"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Erstellen einer Attributgruppe (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65483323"
 > [!NOTE]  
 >  Beim Erstellen einer Attributgruppe wird diese automatisch für alle Benutzer bis auf den Ersteller ausgeblendet. Weitere Informationen zum Sichtbarmachen der Gruppe finden Sie unter [Sichtbarmachen einer Attributgruppe für Benutzer &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)angezeigt.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   Es muss mindestens ein Attribut vorhanden sein. Weitere Informationen finden Sie unter [Erstellen eines Textattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65483323"
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
-2.  Auf der **Modellansicht** Seite zeigen Sie auf der Menüleiste **verwalten** , und klicken Sie auf **Attributgruppen**.  
+2.  Zeigen Sie auf der Seite **Modell Ansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **Attribut Gruppen**.  
   
 3.  Wählen Sie aus der Liste **Modell** ein Modell aus.  
   
@@ -47,12 +47,12 @@ ms.locfileid: "65483323"
   
 5.  Klicken Sie auf **Blattgruppen**, **Konsolidierte Gruppen**oder **Auflistungsgruppen** , um eine Attributgruppe von Blattelementen, konsolidierten Elementen oder Auflistungen zu erstellen.  
   
-6.  Klicken Sie auf **Attributgruppe hinzufügen**.  
+6.  Klicken Sie auf **Attribut Gruppe hinzufügen**.  
   
-7.  In der **Name der Blattgruppe** geben einen Namen für die Gruppe. Dies ist der Name, der auf der Registerkarte angezeigten **Explorer**.  
+7.  Geben Sie im Feld **Name der Blatt Gruppe** einen Namen für die Gruppe ein. Dies ist der Name, der auf der Registerkarte im **Explorer**angezeigt wird.  
   
     > [!NOTE]  
-    >  Wenn Sie ausgewählt haben **konsolidierte Gruppen** oder **Auflistungsgruppen** in Schritt 5 dieses Feld ist **Name der konsolidierten Gruppe** oder **Name der Auflistungsgruppe**bzw.  
+    >  Wenn Sie in Schritt 5 **konsolidierte Gruppen** oder **Sammlungs Gruppen** ausgewählt haben, ist dieses Feld der **konsolidierte Gruppenname** bzw. der **Name der Sammlungs Gruppe**.  
   
 8.  Klicken Sie auf **Gruppe speichern**.  
   
@@ -62,22 +62,22 @@ ms.locfileid: "65483323"
   
 11. Klicken Sie auf **ausgewähltes Element bearbeiten**.  
   
-12. Klicken Sie auf die Attribute in der **verfügbar** ein, und klicken Sie auf die **hinzufügen** Pfeil. Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
+12. Klicken Sie im Feld **verfügbar** auf Attribute, und klicken Sie auf den Pfeil **Hinzufügen** . Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
   
-13. Klicken Sie optional die **einrichten** und **unten** Pfeile, um die links-nach-rechts-Reihenfolge der Attribute zu ändern.  
+13. Klicken Sie optional auf die Pfeile nach **oben** und **nach unten** , um die Reihenfolge der Attribute von links nach rechts zu ändern.  
   
 14. Klicken Sie auf **Speichern**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Sichtbarmachen einer Attributgruppe für Benutzer &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [Sichtbar machen einer Attribut Gruppe für Benutzer &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Attributgruppen &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Attribut Gruppen &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [Ändern des Namens einer Attributgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [Löschen einer Attributgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
- [Blattberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [Ändern Sie den Namen einer Attribut Gruppe &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [Löschen Sie eine Attribut Gruppe &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [Blatt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [Konsolidierte Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010359"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Zugreifen auf FileTables mit Datei-E/A-APIs
@@ -77,7 +77,7 @@ ms.locfileid: "66010359"
   
 ##  <a name="considerations"></a> Weitere Überlegungen für Datei-E/A-Zugriff auf FileTables  
   
-###  <a name="vnn"></a> Verwenden von virtuellen Netzwerknamen mit (VNNs) AlwaysOn-Verfügbarkeitsgruppen  
+###  <a name="vnn"></a>Verwenden von Virtual Network Namen (vnns) mit AlwaysOn-Verfügbarkeitsgruppen  
  Wenn die Datenbank, die FILESTREAM oder FileTable-Daten enthält, zu einer AlwaysOn-Verfügbarkeitsgruppe gehört, dann sollten bei allen Zugriffen auf FILESTREAM oder FileTable-Daten über die Dateisystem-APIs VNNs statt der Computernamen verwendet werden. Weitere Informationen finden Sie unter [FILESTREAM und FileTable bei Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial"></a> Teilupdates  
@@ -102,7 +102,7 @@ ms.locfileid: "66010359"
   
 ##  <a name="funclist"></a> In FileTables unterstützte Dateisystemfunktionalität  
   
-|Funktion|Supported|Kommentare|  
+|Funktion|Unterstützt|Kommentare|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Ja|Ebene 2, Ebene 1, Batch- und Filter-Oplocks werden unterstützt.|  
 |**Erweiterte Attribute**|Nein||  
@@ -125,7 +125,7 @@ ms.locfileid: "66010359"
 |**Sicherheit**|Nein|Sicherheit auf Windows-Freigabeebene und Sicherheit auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen-/Spaltenebene wird erzwungen.|  
 |**USN-Journal**|Nein|Metadatenänderungen an Dateien und Verzeichnissen in einer FileTable sind DML-Vorgänge in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Daher werden sie in der entsprechenden Datenbankprotokolldatei protokolliert. Sie werden jedoch (abgesehen von Änderungen an der Größe) nicht im NTFS-USN-Journal protokolliert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungsnachverfolgung kann verwendet werden, um ähnliche Informationen zu erfassen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Laden von Dateien in FileTables](load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Zugreifen auf FileTables mit Transact-SQL](access-filetables-with-transact-sql.md)   

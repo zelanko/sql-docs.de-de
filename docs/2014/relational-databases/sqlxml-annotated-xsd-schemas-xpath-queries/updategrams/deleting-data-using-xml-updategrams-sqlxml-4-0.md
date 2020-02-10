@@ -1,5 +1,5 @@
 ---
-title: Löschen von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft-Dokumentation
+title: Löschen von Daten mit XML-Update grams (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014869"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Löschen von Daten mit XML-Updategrams (SQLXML 4.0)
-  Ein Updategram zeigt einen Löschvorgang aus, wenn eine im Datensatzinstanz der  **\<vor >** Block, jedoch ohne entsprechende Datensätze in der  **\<nach >** Block. In diesem Fall löscht das Updategram den Datensatz in die  **\<vor >** Block aus der Datenbank.  
+  Ein Update Gram gibt einen Löschvorgang an, wenn eine Daten Satz Instanz im ** \<before>** -Block ohne entsprechende Datensätze im ** \<after>** -Block angezeigt wird. In diesem Fall löscht das Update Gram den Datensatz im ** \<vor>** Block aus der Datenbank.  
   
  Dies ist das Updategramformat für einen Löschvorgang:  
   
@@ -41,21 +41,21 @@ ms.locfileid: "66014869"
 </ROOT>  
 ```  
   
- Können Sie weglassen der  **\<nach >** markieren, wenn das Updategram nur einen Löschvorgang ausführt. Wenn Sie nicht das optionale angeben `mapping-schema` -Attribut, das  **\<ElementName >** im Updategram Zuordnungen in einer Datenbanktabelle und die untergeordneten Elemente oder Attribute zugeordnet Spalten in der Tabelle angegeben.  
+ Wenn das Update Gram nur einen Löschvorgang ausführt, können Sie das ** \<nach>** -Tags weglassen. Wenn Sie das optionale `mapping-schema` -Attribut nicht angeben, wird der ** \<** im Update Gram angegebene Elementname->einer Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Spalten in der Tabelle zugeordnet.  
   
- Wenn ein Element im Updategram angegebene mehr als eine Zeile in der Tabelle entspricht, oder eine beliebige Zeile stimmt nicht überein, wird das Updategram einen Fehler zurück und bricht die gesamte  **\<Sync >** Block. Nur ein Datensatz kann gleichzeitig von einem Element im Updategram gelöscht werden.  
+ Wenn ein im Update Gram angegebenes Element entweder mehr als eine Zeile in der Tabelle oder nicht mit einer Zeile übereinstimmt, gibt das Update Gram einen Fehler zurück und bricht den gesamten ** \<Synchronisierungs>** Block ab. Nur ein Datensatz kann gleichzeitig von einem Element im Updategram gelöscht werden.  
   
 ## <a name="examples"></a>Beispiele  
- Die Beispiele in diesem Abschnitt verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Die Beispiele in diesem Abschnitt verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Update grams, die Mapping-Schemas verwenden, finden Sie unter [Angeben eines Mappingschemas mit Anmerkungen in einem Update Gram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
- Um funktionierende Beispiele, die mit den folgenden Beispielen erstellen, müssen Sie die Anforderungen, die im angegebenen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Wenn Sie in den folgenden Beispielen funktionierende Beispiele erstellen möchten, müssen Sie die unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md)angegebenen Anforderungen erfüllen.  
   
 ### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Löschen eines Datensatzes mithilfe eines Updategrams  
  Die folgenden Updategrams löschen zwei Datensätze aus der Tabelle HumanResources.Shift.  
   
  In diesen Beispielen gibt das Updategram kein Zuordnungsschema an. Daher verwendet das Updategram die Standardzuordnung, in der der Elementname einem Tabellennamen, und die Attribute oder untergeordneten Elemente den Spalten in dieser Tabelle zugeordnet werden.  
   
- Dieses erste Updategram ist attributzentriert und identifiziert zwei Schichten (Tag / Abend und Abend / Nacht) in der  **\<vor >** Block. Da es keinen entsprechenden Datensatz in gibt die  **\<nach >** Block, dies ist ein Löschvorgang.  
+ Dieses erste Update Gram ist Attribut zentriert und identifiziert zwei Verschiebungen (Tag-Abend und Abend-Nacht) im ** \<before->** -Block. Da in der ** \<nach>** -Block kein entsprechender Datensatz vorhanden ist, handelt es sich hierbei um einen Löschvorgang.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -80,15 +80,15 @@ ms.locfileid: "66014869"
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
-1.  Vollständiges Beispiel B ("Einfügen mehrerer Datensätze mithilfe eines Updategrams") in [Einfügen von Daten mithilfe von XML-Updategrams &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+1.  Vervollständigen Sie Beispiel B ("Einfügen mehrerer Datensätze mithilfe eines Update grams") in das [Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie sie Updategram-removeshifts.XML in demselben Ordner aus, als abgeschlossen ("Einfügen mehrerer Datensätze mithilfe eines Updategrams") verwendet wurde, im [Einfügen von Daten mithilfe von XML-Updategrams &#40;SQLXML 4.0&#41; ](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  Kopieren Sie das oben angegebene Update Gram in Editor, und speichern Sie es als Updategram-RemoveShifts. XML im selben Ordner, in dem Sie [mit dem Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)arbeiten.  
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Sicherheitsüberlegungen zu Update grams &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Datums- und Zeitformate | Microsoft-Dokumentation
+title: Datums-und Uhrzeit Formate | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059648"
 ---
 # <a name="date-and-time-formats"></a>Datums- und Zeitformate
@@ -32,9 +32,9 @@ ms.locfileid: "66059648"
   
 -   ISO 8601-Formate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Description|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
-    |YYYYMMDD<br /><br /> YYYY-MM-DD|Basisformate und erweiterte Formate für eine vierstellige Jahresangabe, eine zweistellige Monatsangabe und eine zweistellige Tagesangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
+    |YYYYMMDD<br /><br /> JJJJ-MM-TT|Basisformate und erweiterte Formate für eine vierstellige Jahresangabe, eine zweistellige Monatsangabe und eine zweistellige Tagesangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
     |YYYY-MM|Basisformate und erweiterte Formate mit reduzierter Genauigkeit für eine vierstellige Jahresangabe und eine zweistellige Monatsangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
     |YYYY|Das Format mit reduzierter Genauigkeit ist eine vierstellige Jahresangabe.|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66059648"
   
 -   ISO 8601-Zeitformate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Description|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Basisformate und erweiterte Formate für eine zweistellige Stundenangabe, eine zweistellige Minutenangabe und eine zweistellige Sekundenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
     |HHMI<br /><br /> HH:MI|Basisformate und erweiterte abgeschnittene Formate für eine zweistellige Stundenangabe und eine zweistellige Minutenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
@@ -72,7 +72,7 @@ ms.locfileid: "66059648"
   
 -   Zeitformate, die eine Zeitzone angeben, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Beschreibung|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die zur koordinierten Weltzeit (UTC) addiert werden, um die lokale Zeit zu ermitteln.|  
     |-HH:MI<br /><br /> -HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die von der koordinierten Weltzeit (UTC) subtrahiert werden, um die lokale Zeit zu ermitteln.|  
@@ -90,7 +90,7 @@ ms.locfileid: "66059648"
   
 -   Zeitformate, die einen Dezimalbruch enthalten, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Description|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Stundenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 12.750 für 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Minutenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 1220.500 für 12:20:30.|  
@@ -120,13 +120,13 @@ ms.locfileid: "66059648"
   
  Die schnelle Analyse gibt die Zeichenfolgen als DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 und DT_DBTIMESTAMPOFFSET aus. Datums-/Zeitwerte in abgeschnittenen Formaten werden aufgefüllt. In der folgenden Tabelle werden die Werte aufgeführt, die für fehlende Datums- und Zeitteile hinzugefügt werden.  
   
-|Datums-/Zeitteil|Auffüllung|  
+|Datums-/Zeitteil|Auffüllen|  
 |---------------------|-------------|  
 |Sekunden|00 hinzufügen.|  
 |Minuten|00:00 hinzufügen.|  
 |Hour|00:00:00 hinzufügen.|  
-|Day|01 für den Tag des Monats hinzufügen.|  
-|Month|01 für den Monat des Jahres hinzufügen.|  
+|Day (Tag)|01 für den Tag des Monats hinzufügen.|  
+|Month (Monat)|01 für den Monat des Jahres hinzufügen.|  
   
  Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).  
   

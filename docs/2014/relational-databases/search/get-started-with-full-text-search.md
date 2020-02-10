@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011284"
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die Datenbanken standardmäßig volltextfähig. Wenn Sie jedoch einen Volltextindex für eine Tabelle verwenden möchten, müssen Sie die Volltextindizierungsfunktion für die Spalten der Tabellen einrichten, auf die Sie mit der Volltext-Engine zugreifen möchten.  
   
-##  <a name="configure"></a> Konfigurieren einer Datenbank für die Volltextsuche  
+##  <a name="configure"></a>Konfigurieren einer Datenbank für die voll Text Suche  
  Datenbankadministratoren führen in beliebigen Szenarien die folgenden grundlegenden Schritte aus, um Tabellenspalten in einer Datenbank für die Volltextsuche zu konfigurieren:  
   
 1.  Erstellen eines Volltextkatalogs.  
@@ -34,7 +34,7 @@ ms.locfileid: "66011284"
   
     1.  Angeben der einzelnen Textspalten, die in den Volltextindex eingeschlossen werden sollen.  
   
-    2.  Wenn eine bestimmte Spalte als Binärdaten gespeicherte Dokumente enthält (`varbinary(max)`, oder `image` Daten), geben Sie eine Tabellenspalte (die *Typspalte*), die den Typ der einzelnen Dokumente in der indizierten Spalte identifiziert.  
+    2.  Wenn eine bestimmte Spalte als Binärdaten (`varbinary(max)`-oder `image` -Daten) gespeicherte Dokumente enthält, müssen Sie eine Tabellenspalte (die *Typspalte*) angeben, die den Typ der einzelnen Dokumente in der indizierten Spalte identifiziert.  
   
     3.  Angeben der Sprache, die die Volltextsuche für die Dokumente in der Spalte verwenden soll.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011284"
   
  Die Volltextsuche unterstützt mehrere Sprachen durch die Verwendung der folgenden *linguistischen Komponenten*: Wörtertrennungen und Wortstammerkennungen, Stopplisten mit Stoppwörtern (auch als Füllwörter bezeichnet) und Thesaurusdateien. Für Thesaurusdateien (und in einigen Fällen auch für Stopplisten) ist die Konfiguration durch den Datenbankadministrator erforderlich. Eine bestimmte Thesaurusdatei unterstützt alle Volltextindizes, die die entsprechende Sprache verwenden, und eine bestimmte Stopliste kann einer beliebigen Anzahl von Volltextindizes zugeordnet werden.  
   
-##  <a name="setup"></a> Einrichten einer Volltextkatalog und Index  
+##  <a name="setup"></a>Einrichten eines voll Text Katalogs und eines Index  
  Führen Sie dazu die folgenden grundlegenden Schritte aus:  
   
 1.  Erstellen eines Volltextkatalogs zum Speichern der Volltextindizes.  
@@ -53,7 +53,7 @@ ms.locfileid: "66011284"
   
      Ein Volltextindex ist ein besonderer Typ eines tokenbasierten funktionellen Index, der durch die Volltext-Engine erstellt und verwaltet wird. Um eine Volltextsuche für eine Tabelle oder Sicht erstellen zu können, muss ein eindeutiger, einspaltiger Index vorhanden sein, der keine NULL-Werte zulässt. Die Volltext-Engine benötigt diesen eindeutigen Index, um jeder Zeile in der Tabelle einen eindeutigen, komprimierbaren Schlüssel zuzuordnen. Ein Volltextindex kann Spalten der Typen `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` und `varbinary(max)` beinhalten. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md).  
   
- Bevor Sie mehr über das Erstellen von Volltextindizes erfahren, sollten Sie die Unterschiede zu regulären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indizes kennen. In der folgenden Tabelle sind die Unterschiede aufgelistet.  
+ Bevor Sie mehr über das Erstellen von Volltextindizes erfahren, sollten Sie die Unterschiede zu regulären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indizes kennen. In der folgenden Tabelle sind die Unterschiede aufgeführt:  
   
 |Volltextindizes|Reguläre SQL Server-Indizes|  
 |------------------------|--------------------------------|  
@@ -62,7 +62,7 @@ ms.locfileid: "66011284"
 |Gruppiert innerhalb derselben Datenbank zu einem oder mehreren Volltextkatalogen.|Nicht gruppiert.|  
   
   
-##  <a name="options"></a> Die Auswahl der Option für einen Volltextindex  
+##  <a name="options"></a>Auswählen von Optionen für einen voll Text Index  
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   Wählen der Spaltensprache  
@@ -87,11 +87,11 @@ ms.locfileid: "66011284"
 ### <a name="assigning-the-full-text-index-to-a-full-text-catalog"></a>Zuweisen des Volltextindexes zu einem Volltextkatalog  
  Es ist wichtig, die Zuordnung von Volltextindizes für Tabellen zu Volltextkatalogen zu planen.  
   
- Es ist zu empfehlen, Tabellen mit denselben Updatemerkmalen (z. B. geringe Anzahl an Änderungen gegenüber einer großen Anzahl an Änderungen oder Tabellen, die regelmäßig zu bestimmten Tageszeiten geändert werden) zu gruppieren und demselben Volltextkatalog zuzuweisen. Indem Sie Zeitpläne für Volltextkataloge einrichten, bleiben Volltextindizes mit den Tabellen synchronisiert, ohne dass sich dies in Phasen umfangreicher Datenbankaktivitäten negativ auf die Ressourcenverwendung des Datenbankservers auswirkt.  
+ Es ist zu empfehlen, Tabellen mit denselben Updatemerkmalen (z. B. geringe Anzahl an Änderungen gegenüber einer großen Anzahl an Änderungen oder Tabellen, die regelmäßig zu bestimmten Tageszeiten geändert werden) zu gruppieren und demselben Volltextkatalog zuzuweisen. Indem Sie Zeitpläne für Volltextkataloge einrichten, bleiben Volltextindizes mit den Tabellen synchronisiert, ohne dass sich dies in Phasen umfangreicher Datenbankaktivitäten negativ auf die Ressourcenverwendung des Datenbankservers auswirkt.  
   
  Wenn Sie einem Volltextkatalog eine Tabelle zuweisen, sollten Sie die folgenden Richtlinien berücksichtigen:  
   
--   Wählen Sie stets den kleinsten eindeutigen Index, der verfügbar ist, als eindeutigen Volltextschlüssel aus (ein 4 Byte umfassender, auf dem integer-Datentyp basierender Index ist am besten geeignet). Hierdurch können Sie den Umfang der Ressourcen, die vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search-Dienst im Dateisystem benötigt werden, erheblich reduzieren. Wenn Sie einen breiten Primärschlüssel verwenden (mehr als 100 Byte), sollten Sie erwägen, als eindeutigen Volltextschlüssel einen anderen eindeutigen Index in der Tabelle auszuwählen (oder einen anderen eindeutigen Index zu erstellen). Andernfalls kann die Volltextauffüllung nicht mehr fortgesetzt werden, wenn der eindeutige Volltextschlüssel die maximal zulässige Größe erreicht (900 Byte).  
+-   Wählen Sie stets den kleinsten eindeutigen Index, der verfügbar ist, als eindeutigen Volltextschlüssel aus (Ein Integer-basierter 4-Byte-Index ist optimal.) Dadurch werden die für [!INCLUDE[msCoName](../../includes/msconame-md.md)] den Suchdienst benötigten Ressourcen erheblich im Dateisystem reduziert. Wenn Sie einen breiten Primärschlüssel verwenden (mehr als 100 Byte), sollten Sie erwägen, als eindeutigen Volltextschlüssel einen anderen eindeutigen Index in der Tabelle auszuwählen (oder einen anderen eindeutigen Index zu erstellen). Andernfalls kann die Volltextauffüllung nicht mehr fortgesetzt werden, wenn der eindeutige Volltextschlüssel die maximal zulässige Größe erreicht (900 Byte).  
   
 -   Wenn Sie eine Tabelle indizieren, die über mehrere Millionen Zeilen verfügt, sollten Sie die Tabelle einem eigenen Volltextkatalog zuweisen.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "66011284"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Zuordnen einer Stopliste zum Volltextindex  
  Mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] werden Stoplisten eingeführt. Eine *Stoppliste* ist eine Liste von Stoppwörtern. Stoppwörter werden auch als Füllwörter bezeichnet. Jedem Volltextindex ist eine Stoppliste zugeordnet, und die Wörter der Stoppliste werden auf Volltextabfragen des Indexes angewendet. Standardmäßig ist der Systemstoppliste ein neuer Volltextindex zugeordnet. Sie können stattdessen jedoch auch eine eigene Stoppliste erstellen und verwenden. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Die folgende [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung erstellt z. B. durch Kopieren der Systemstoppliste eine neue Volltext-Stoppliste mit dem Namen „myStoplist3“:  
+ Beispielsweise erstellt die folgende [CREATE FULLTEXT Stopp Liste](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung eine neue Volltext-Stopp Liste mit dem Namen myStoplist3 "durch Kopieren aus der System Stopp Liste:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- Die folgende [-Anweisung](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] ändert eine Stoppliste mit dem Namen „myStoplist“, indem zuerst für Spanisch und dann für Französisch das Wort „en“ hinzugefügt wird:  
+ Mit der folgenden [ALTER FULLTEXT Stopp Liste](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung wird eine Stopp Liste mit dem Namen "myStoplist" geändert, wobei das Wort "en" zuerst für Spanisch und dann für Französisch hinzugefügt wird:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +118,7 @@ GO
   
   
 ### <a name="updating-a-full-text-index"></a>Aktualisieren eines Volltextindexes  
- Volltextindizes können wie reguläre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indizes automatisch aktualisiert werden, sobald Daten in den zugeordneten Tabellen geändert werden. Dies ist das Standardverhalten. Alternativ dazu können Sie die Volltextindizes auch manuell auf dem aktuellen Stand halten oder in bestimmten Abständen aktualisieren lassen. Das Auffüllen eines Volltextindex kann zeitaufwändig und ressourcenintensiv sein. Aus diesem Grund wird das Indexupdate meist als asynchroner Vorgang durchgeführt, der im Hintergrund ausgeführt wird und den Volltextindex jeweils nach Änderungen in der Basistabelle aktualisiert. Das sofortige Aktualisieren eines Volltextindex nach jeder Änderung in der Basistabelle kann ressourcenintensiv sein. Bei sehr hohen Update-, Einfügungs- und Löschungsraten kann es deshalb zu einer Verringerung der Abfrageleistung kommen. In diesem Fall sollten Sie erwägen, eine manuelle Änderungsnachverfolgung und entsprechende Updates zu planen, um die zahlreichen Änderungen von Zeit zu Zeit zu bearbeiten, anstatt mit den Abfragen um Ressourcen zu wetteifern.  
+ Volltextindizes können wie reguläre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Indizes automatisch aktualisiert werden, sobald Daten in den zugeordneten Tabellen geändert werden. Dies ist das Standardverhalten. Alternativ dazu können Sie die Volltextindizes auch manuell auf dem aktuellen Stand halten oder in bestimmten Abständen aktualisieren lassen. Das Auffüllen eines Volltextindex kann zeitaufwändig und ressourcenintensiv sein. Aus diesem Grund wird das Indexupdate meist als asynchroner Vorgang durchgeführt, der im Hintergrund ausgeführt wird und den Volltextindex jeweils nach Änderungen in der Basistabelle aktualisiert. Das sofortige Aktualisieren eines Volltextindex nach jeder Änderung in der Basistabelle kann ressourcenintensiv sein. Bei sehr hohen Update-, Einfügungs- und Löschungsraten kann es deshalb zu einer Verringerung der Abfrageleistung kommen. In diesem Fall sollten Sie erwägen, eine manuelle Änderungsnachverfolgung und entsprechende Updates zu planen, um die zahlreichen Änderungen von Zeit zu Zeit zu bearbeiten, anstatt mit den Abfragen um Ressourcen zu wetteifern.  
   
  Zum Überwachen des Auffüllungsstatus verwenden Sie entweder die Funktion FULLTEXTCATALOGPROPERTY oder OBJECTPROPERTYEX. Führen Sie die folgende Anweisung aus, um den Auffüllungsstatus des Katalogs zu ermitteln:  
   
@@ -129,10 +129,10 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  In der Regel ist das zurückgegebene Ergebnis 1, während ein vollständiges Auffüllen ausgeführt wird.  
   
   
-##  <a name="example"></a> Beispiel: Einrichten der Volltextsuche  
+##  <a name="example"></a>Beispiel: Einrichten der voll Text Suche  
  Im folgenden zweiteiligen Beispiel wird ein Volltextkatalog mit dem Namen `AdvWksDocFTCat` in der AdventureWorks-Datenbank erstellt, und anschließend wird ein Volltextindex für die Tabelle `Document` in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] erstellt. Diese Anweisung erstellt den Volltextkatalog im bei der Installation angegebenen Standardverzeichnis. Der Ordner mit dem Namen `AdvWksDocFTCat` befindet sich im Standardverzeichnis.  
   
-1.  Im Beispiel wird eine [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)-Anweisung verwendet, um einen Volltextkatalog mit dem Namen `AdvWksDocFTCat` zu erstellen:  
+1.  Im Beispiel wird eine `AdvWksDocFTCat`CREATE FULLTEXT CATALOG [-Anweisung verwendet, um einen Volltextkatalog mit dem Namen](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) zu erstellen:  
   
     ```  
     USE AdventureWorks;  
@@ -161,10 +161,10 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     Die in diesem Beispiel definierte TYPE COLUMN gibt die Typspalte in der Tabelle an, die den Typ des Dokuments in der Spalte Document (binäre Spalte) enthält. Die Spalte vom Typ speichert die benutzerdefinierte Datei Erweiterung – ".doc", ".xls", und usw. des Dokuments in einer angegebenen Zeile. Die Volltext-Engine verwendet die Erweiterung einer Zeile, um den richtigen Filter für die Analyse der Daten in dieser Zeile aufzurufen. Nachdem der Filter die binären Daten der Zeile analysiert hat, analysiert die angegebene Wörtertrennung den Inhalt (in diesem Beispiel wird die Wörtertrennung für britisches Englisch verwendet). Beachten Sie, dass der Filtervorgang nur zur Indizierungszeit ausgeführt wird bzw. wenn ein Benutzer eine Spalte in der Basistabelle einfügt oder aktualisiert, während für den Volltextindex die automatische Änderungsnachverfolgung aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md).  
+     Die in diesem Beispiel definierte TYPE COLUMN gibt die Typspalte in der Tabelle an, die den Typ des Dokuments in der Spalte Document (binäre Spalte) enthält. In der Spalte Typ wird die vom Benutzer angegebene Dateierweiterung ". doc", ". xls" usw. in einer bestimmten Zeile gespeichert. Die Volltext-Engine verwendet die Erweiterung einer Zeile, um den richtigen Filter für die Analyse der Daten in dieser Zeile aufzurufen. Nachdem der Filter die binären Daten der Zeile analysiert hat, analysiert die angegebene Wörtertrennung den Inhalt (in diesem Beispiel wird die Wörtertrennung für britisches Englisch verwendet). Beachten Sie, dass der Filtervorgang nur zur Indizierungszeit ausgeführt wird bzw. wenn ein Benutzer eine Spalte in der Basistabelle einfügt oder aktualisiert, während für den Volltextindex die automatische Änderungsnachverfolgung aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md).  
   
   
-##  <a name="tasks"></a> Allgemeine Aufgaben  
+##  <a name="tasks"></a>Allgemeine Aufgaben  
   
 ### <a name="to-create-a-full-text-catalog"></a>So erstellen Sie einen Volltextkatalog  
   
@@ -180,7 +180,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [Öffnen des Tabellen-Designers &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
+-   [Öffnen Sie Tabellen-Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
   
 ### <a name="to-create-a-full-text-index"></a>So erstellen Sie einen Volltextindex  
   
@@ -190,7 +190,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 ### <a name="to-view-information-about-a-full-text-index"></a>So zeigen Sie Informationen zu einem Volltextindex an  
   
-|Katalogsicht oder dynamische Verwaltungssicht|Description|  
+|Katalogsicht oder dynamische Verwaltungssicht|BESCHREIBUNG|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql)|Gibt eine Zeile für jeden Verweis zwischen Volltextkatalog und Volltextindex zurück.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)|Enthält eine Zeile für jede Spalte, die Teil eines Volltextindexes ist.|  
@@ -201,13 +201,13 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|Gibt Informationen zu den aktuell ausgeführten Volltextindexauffüllungen zurück.|  
   
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines voll Text Katalogs &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [Auffüllen von Volltextindizes](populate-full-text-indexes.md)   
- [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   
+ [Auffüllen von voll Text Indizes](populate-full-text-indexes.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL-&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)  
   
   

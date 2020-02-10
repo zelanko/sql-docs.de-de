@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060387"
 ---
 # <a name="connect-components-with-paths"></a>Verbinden von Komponenten mit Pfaden
@@ -26,7 +26,7 @@ ms.locfileid: "66060387"
   
  Im folgenden Diagramm wird ein einfacher Datenfluss mit einer Quellkomponente, zwei Transformationen, einer Zielkomponente und den Pfaden, die diese verbinden, angezeigt.  
   
- ![Data flow](media/mw-dts-08.gif "Data flow")  
+ ![Datenfluss](media/mw-dts-08.gif "Datenfluss")  
   
  Wenn zwei Komponenten verbunden sind, können Sie die Metadaten der Daten, die über den Pfad verschoben werden, und die Eigenschaften des Pfades in **Datenflusspfad-Editor**anzeigen. Weitere Informationen finden Sie unter [Integration Services Paths](data-flow/integration-services-paths.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66060387"
   
 -   [Hinzufügen eines Daten-Viewers zu einem Datenfluss](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenflusstask](control-flow/data-flow-task.md)   
  [Datenfluss](data-flow/data-flow.md)   
  [Transformieren von Daten mit Transformationen](data-flow/transformations/transform-data-with-transformations.md)   

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010900"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Verwenden des Volltextindizierungs-Assistenten
@@ -43,36 +43,37 @@ ms.locfileid: "66010900"
      **Verfügbare Spalten**  
      Um eine Spalte in den Index einzuschließen, aktivieren Sie das Kontrollkästchen neben dem Spaltennamen. Spalten, die für eine Volltextindizierung nicht infrage kommen, werden grau angezeigt, und die entsprechenden Kontrollkästchen sind deaktiviert.  
   
-     **Sprache für die Wörtertrennung**  
-     Wählen Sie eine Sprache aus der Dropdownliste aus. Diese Auswahl wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um die richtigen Wörtertrennungen für den Index zu identifizieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In werden mithilfe von Wörtertrennzeichen Wortgrenzen in den volltextindizierten Daten gekennzeichnet.  
+     **Sprache für die Wörter Trennung**  
+     Wählen Sie eine Sprache aus der Dropdownliste aus. Diese Auswahl wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um die richtigen Wörtertrennungen für den Index zu identifizieren. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In werden mithilfe von Wörtertrennzeichen Wortgrenzen in den volltextindizierten Daten gekennzeichnet.  
   
      **Typspalte**  
      Wählen Sie den Namen der Spalte aus, in der der Dokumenttyp der volltextindizierten Spalte enthalten ist.  
   
-     Die **Typspalte** ist nur aktiviert, wenn die Spalte in den Namen der **verfügbaren Spalten** Spalte ist vom Typ `varbinary(max)` oder `image`.  
+     Die **Typspalte** ist nur aktiviert, wenn die Spalte mit dem Namen in der Spalte **Verfügbare Spalten** den Typ `varbinary(max)` oder `image`hat.  
   
      **Statistische Semantik**  
      Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](semantic-search-sql-server.md).  
   
-     Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist das Kontrollkästchen **Statistische Semantik** deaktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache** auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.  
+     Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist das Kontrollkästchen **Statistische Semantik** deaktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache**auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.  
   
 2.  Aktivieren Sie die Optionen zur Änderungsnachverfolgung.  
   
-     **Automatisch**  
+     **Automatischer**  
      Wählen Sie diese Optionsschaltfläche, wenn der Volltextindex im Falle von Änderungen an den zugrunde liegenden Daten automatisch aktualisiert werden soll.  
   
-     **Manuell**  
+     **Eller**  
      Wählen Sie diese Optionsschaltfläche, wenn der Volltextindex im Falle von Änderungen an den zugrunde liegenden Daten nicht automatisch aktualisiert werden soll. Die Änderungen an den zugrunde liegenden Daten bleiben erhalten. Um jedoch die Änderungen im Volltextindex zu berücksichtigen, müssen Sie diesen Prozess manuell oder über einen Zeitplan starten.  
   
      **Änderungen nicht nachverfolgen**  
      Wählen Sie diese Optionsschaltfläche, wenn der Volltextindex bei Änderungen an den zugrunde liegenden Daten nicht aktualisiert werden soll.  
   
-     **Starten Sie vollständige Auffüllung bei der indexerstellung**  
+     **Vollständige Auffüllung bei der Indexerstellung starten**  
      Wählen Sie diese Optionsschaltfläche, um nach erfolgreichem Abschluss dieses Assistenten eine vollständige Auffüllung zu starten. Dabei wird die Volltext-Indexstruktur im Katalog erstellt und der Katalog mit volltextindizierten Daten aufgefüllt.  
   
 3.  Wählen Sie den Katalog, die Indexdateigruppe und die Stoppliste aus.  
   
-     **Volltextkatalog auswählen**  
+     **Voll Text Katalog auswählen**  
      Wählen Sie einen Volltextkatalog aus der Liste aus. Der Standardkatalog für die Datenbank entspricht standardmäßig dem in der Liste ausgewählten Element. Wenn keine Kataloge verfügbar sind, wird die Liste deaktiviert, und das Kontrollkästchen **Neuen Katalog erstellen** wird überprüft und deaktiviert.  
   
     |||  
@@ -85,39 +86,39 @@ ms.locfileid: "66010900"
      **Als Standardkatalog festlegen**  
      Wählen Sie diese Option aus, um diesen Katalog als Standardkatalog für die Datenbank festzulegen.  
   
-     **Unterscheidung nach Akzent**  
+     **Akzent**  
      Geben Sie an, ob für den neuen Katalog nach Akzenten unterschieden wird. Wenn in der Datenbank nach Akzent unterschieden wird, ist die Option **Mit Unterscheidung** standardmäßig ausgewählt.  
   
-     **Indexdateigruppe auswählen**  
+     **Index Dateigruppe auswählen**  
      Geben Sie die Dateigruppe an, für die der Volltextindex erstellt werden soll.  
   
      Folgende Werte sind möglich:  
   
-    |Wert|Description|  
+    |value|BESCHREIBUNG|  
     |-----------|-----------------|  
-    |**\<default>**|Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|  
-    |**PRIMARY**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|  
+    |**\<Standard>**|Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|  
+    |**Vorrangiges**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|  
     |*Eine vom Benutzer angegebene Standarddateigruppe*|Wenn eine benutzerdefinierte Standardstoppliste vorhanden ist, wählen Sie den Namen in der Liste aus, um die zugehörige Dateigruppe für den neuen Volltextindex zu verwenden.|  
   
-     **Volltext-Stoppliste auswählen**  
+     **Volltext-Stopp Liste auswählen**  
      Geben Sie eine Stoppliste an, die für den Volltextindex verwendet werden soll, oder deaktivieren Sie die Stopplistenverwendung.  
   
      In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und neueren Versionen werden Stoppwörter in Datenbanken über Objekte verwaltet, die als Stopplisten bezeichnet werden. Eine *Stoppliste* ist eine Liste mit Stoppwörtern, die, wenn sie einem Volltextindex zugeordnet ist, auf Volltextabfragen für diesen Index angewendet wird. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
      Folgende Werte sind möglich:  
   
-    |Wert|Description|  
+    |value|BESCHREIBUNG|  
     |-----------|-----------------|  
-    |**\<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
-    |**\<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
-    |*user-defined-stoplist-name*|Die Liste enthält die Namen aller benutzerdefinierten Stopplisten (falls vorhanden), die für die Datenbank erstellt wurden. Wählen Sie eine beliebige benutzerdefinierte Stoppliste zur Verwendung für den neuen Volltextindex aus.|  
+    |**\<System>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
+    |**\<aus>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
+    |*benutzerdefinierter-Stopp Listen Name*|Die Liste enthält die Namen aller benutzerdefinierten Stopplisten (falls vorhanden), die für die Datenbank erstellt wurden. Wählen Sie eine beliebige benutzerdefinierte Stoppliste zur Verwendung für den neuen Volltextindex aus.|  
   
 4.  Optional können Sie auch den Auffüllungszeitplan definieren. Sofern Sie die Ausführung nicht für die Zukunft geplant haben, beginnen die Indizierungsvorgänge sofort. Die Zeitpläne werden sofort erstellt, sie werden jedoch erst zum festgelegten Zeitpunkt ausgeführt.  
   
-     **Neuer Tabellenzeitplan**  
+     **Neuer Tabellen Zeitplan**  
      Definieren eines Auffüllungszeitplans für eine Tabelle.  
   
-     **Neuer Katalogzeitplan**  
+     **Neuer Katalog Zeitplan**  
      Definieren eines Auffüllungszeitplans für einen Volltextkatalog.  
   
      **Bearbeiten**  
@@ -131,7 +132,7 @@ ms.locfileid: "66010900"
      **Beenden**  
      Unterbricht den aktuellen Vorgang und verhindert die Ausführung nachfolgender Volltextvorgänge durch den Assistenten während dieser Sitzung.  
   
-     **Bericht**  
+     **Report**  
      Wenn alle Vorgänge ausgeführt wurden, können Sie auf diese Schaltfläche klicken, um auf einen Bericht zu den ausgeführten Vorgängen zuzugreifen. Sie können den Bericht anzeigen, in eine Datei drucken, in die Zwischenablage kopieren oder ihn per E-Mail versenden.  
   
   

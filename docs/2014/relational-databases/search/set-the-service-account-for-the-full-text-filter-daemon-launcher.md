@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010934"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
@@ -26,20 +26,20 @@ ms.locfileid: "66010934"
  Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dienst, dem eine bestimmte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet ist. Das Startprogramm für SQL-Volltextfilterdaemon verteilt die Dienstkontoinformationen an jeden Filterdaemon-Hostprozess.  
   
   
-##  <a name="setting"></a> Festlegen des Dienstkontos  
+##  <a name="setting"></a>Festlegen des Dienst Kontos  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>So legen Sie das Konto des SQL-Volltextfilterdaemon-Startprogrammdiensts für die Volltextsuche fest  
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  In **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server Services**, mit der rechten Maustaste **SQL Volltext-Volltextfilterdaemon-Startprogramm ( *`instance name`* )** , und klicken Sie dann auf **Eigenschaften**.  
+2.  Klicken Sie in **SQL Server-Konfigurations-Manager**auf **SQL Server Services**, klicken Sie mit der rechten Maustaste auf **Startprogramm für SQL-Volltextfilterdaemon*`instance name`*()**, und klicken Sie dann auf **Eigenschaften**.  
   
 3.  Klicken Sie im Dialogfeld auf die Registerkarte **Anmelden** , und wählen Sie anschließend das Konto aus, unter dem die vom SQL-Volltextfilterdaemon-Startprogrammdienst erstellten Prozesse ausgeführt werden sollen, oder geben Sie das Konto ein.  
   
 4.  Klicken Sie nach dem Schließen des Dialogfelds auf **Neu starten** , um den SQL-Volltextfilterdaemon-Startprogrammdienst neu zu starten.  
   
   
-##  <a name="error"></a> Wenn der SQL-Volltextsuche filtern ist Daemon-Startprogrammdienst nicht startet.  
+##  <a name="error"></a>Wenn der Startprogramm für SQL-Volltextfilterdaemon-Dienst nicht gestartet wird  
  Wenn der SQL-Volltextfilterdaemon-Startprogrammdienst nicht startet, kann dies durch einen der folgenden Punkte bedingt sein:  
   
 -   Das Kennwort des Kontos für das Konto des SQL-Volltextfilterdaemon-Startprogrammdiensts ist abgelaufen.  
@@ -73,7 +73,7 @@ ms.locfileid: "66010934"
      Bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe die Standardberechtigung zum Verwalten, Abfragen und Starten des SQL-Volltextfilterdaemon-Startprogrammdiensts erteilt. Wenn die Berechtigungen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe für das Dienstkonto des SQL-Volltextfilterdaemon-Startprogramms nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt wurden, wird der SQL-Volltextfilterdaemon-Startprogrammdienst nicht gestartet und die Volltextsuche ist deaktiviert. Stellen Sie sicher, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe über Berechtigungen für das Dienstkonto des SQL-Volltextfilterdaemon-Startprogramms verfügt.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
  [Upgrade der Volltextsuche](upgrade-full-text-search.md)  
   

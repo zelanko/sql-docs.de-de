@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877875"
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
@@ -31,8 +31,8 @@ ms.locfileid: "62877875"
 > [!NOTE]
 >  Die Werte der Eigenschaften `Name` und `Namespace` müssen mit einem Buchstaben beginnen, wie in Unicode-Standard 2.0 definiert ist, oder mit einem Unterstrich (_). Bei den nachfolgenden Zeichen kann es sich um Buchstaben oder Zahlen gemäß Unicode-Standard 2.0 oder um einem Unterstrich (\_) handeln.  
   
-## <a name="options"></a>Optionen  
- **Variable hinzufügen**  
+## <a name="options"></a>Tastatur  
+ **Hinzufügen von Variablen**  
  Fügt eine benutzerdefinierte Variable hinzu.  
   
  **Variable verschieben**  
@@ -49,7 +49,7 @@ ms.locfileid: "62877875"
  `Name`  
  Zeigt den Variablennamen an. Bei benutzerdefinierten Variablen können Sie den Namen der Variablen aktualisieren.  
   
- **Bereich**  
+ **`Scope`**  
  Zeigt den Bereich der Variablen an. Eine Variable verfügt entweder über den Bereich des gesamten Pakets oder den Bereich eines Containers bzw. Tasks. Der Bereich der Variable muss ausreichend sein, sodass die Variable für alle anderen Tasks oder Komponenten sichtbar ist, die ihren Wert lesen oder festlegen müssen.  
   
  Sie können den Bereich ändern, indem Sie auf die Variable klicken und dann im Fenster **Variablen** auf **Variable verschieben** klicken.  
@@ -64,20 +64,20 @@ ms.locfileid: "62877875"
  Zeigt den Wert der Variablen an. Bei benutzerdefinierten Variablen können Sie den Wert aktualisieren. Dieser Wert kann ein Literal oder ein Ausdruck sein, und der Wert kann eine mehrzeilige Zeichenfolge sein. Um der Variable einen Ausdruck zuzuweisen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Spalte **Ausdruck** im Fenster **Variablen** .  
   
  `Namespace`  
- Zeigt den Namen des Namespaces an. Benutzerdefinierte Variablen werden Anfangs im erstellt die **Benutzer** Namespace, aber Sie können den Namespacenamen im Ändern der `Namespace` Feld. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
+ Zeigt den Namen des Namespaces an. Benutzerdefinierte Variablen werden anfänglich im **User** -Namespace erstellt, aber Sie können den Namespace Namen im `Namespace` Feld ändern. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
- **Ereignis bei Änderung des Variablenwertes auslösen**  
+ **Change-Ereignis erhöhen**  
  Gibt an, ob das `OnVariableValueChanged`-Ereignis ausgelöst werden soll, wenn ein Wert geändert wird. Bei benutzerdefinierten und Systemvariablen können Sie den Wert aktualisieren. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
  **Beschreibung**  
  Anzeigen der Variablenbeschreibung. Sie können die Beschreibung für benutzerdefinierte Variablen ändern. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
- **expression**  
+ **Ausdruck**  
  Anzeigen des der Variable zugewiesenen Ausdrucks. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um einen Ausdruck zuzuweisen.  
   
  Wenn Sie einer Variablen einen Ausdruck zuweisen, wird ein spezieller Symbolmarker neben der Variablen angezeigt. Dieser spezielle Symbolmarker wird auch neben Verbindungs-Managern und Tasks angezeigt, für die Ausdrücke festgelegt wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   

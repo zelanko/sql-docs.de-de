@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Paketobjekten im Paket-Explorer | Microsoft-Dokumentation
+title: Anzeigen von Paket Objekten im Paket-Explorer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054511"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>Anzeigen von Paketobjekten im Paket-Explorer
@@ -42,7 +42,7 @@ ms.locfileid: "66054511"
   
 -   Klicken Sie mit der rechten Maustaste auf ein Objekt, und klicken Sie anschließend auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen von Paketobjekten](view-package-objects.md)  
   
   

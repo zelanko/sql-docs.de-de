@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 3: Erstellen und Ausführen von Data Quality-Projekten für den Abgleich | Microsoft-Dokumentation'
+title: 'Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für den Abgleich | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,42 +11,42 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca7c735f00f4fa5c7baf102b26edb6634f57b90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489233"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für Abgleiche
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für den Abgleich
   In dieser Aufgabe erstellen Sie ein Data Quality-Projekt für die Abgleichsaktivität, und führen den Abgleichsprozess für bereinigte Lieferantendaten durch, um Duplikate in den Daten zu entfernen.  
   
-1.  Klicken Sie auf der Hauptseite des **DQS-Client**, klicken Sie auf **neuen Data Quality-Projekt**.  
+1.  Klicken Sie auf der Hauptseite des **DQS-Clients**auf **Neues Data Quality-Projekt**.  
   
-2.  Typ **Lieferantenduplikate entfernen+++** aus der **Name des Projekts**.  
+2.  Geben Sie **Lieferanten Duplikate entfernen** aus dem **Namen des Projekts**ein.  
   
-3.  Wählen Sie **Lieferanten** aus der Liste der KBs für das **Wissensdatenbank verwenden** Feld. Sie haben eine Abgleichsrichtlinie in dieser Wissensdatenbank in der vorherigen Lektion erstellt.  
+3.  Wählen Sie **Suppliers** aus der Liste der KSB für das Feld **Wissensdatenbank verwenden** aus. Sie haben eine Abgleichsrichtlinie in dieser Wissensdatenbank in der vorherigen Lektion erstellt.  
   
-4.  Wählen Sie **übereinstimmende** aus der **Liste der Aktivitäten** aus dem Bereich unten rechts.  
+4.  Wählen Sie in der **Liste der Aktivitäten** aus dem unteren rechten Bereich **übereinstimmende überein** Stimmungen aus.  
   
-     ![Neues Data Quality-Projekt - Abgleich ausgewählten](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "neuen Data Quality-Projekt - Abgleich ausgewählten")  
+     ![Neues Data Quality-Projekt – "Abgleich" ausgewählt](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "Neues Data Quality-Projekt – "Abgleich" ausgewählt")  
   
 5.  Klicken Sie auf **Weiter**.  
   
 6.  Wählen Sie auf der Seite **Zuordnen** für **Datenquelle** die Option **Excel-Datei**aus.  
   
-7.  Klicken Sie auf **Durchsuchen** , und wählen Sie **Cleansed Supplier List.xls**, d.h., dass die Ausgabedatei aus der bereinigungsaktivität.  
+7.  Klicken Sie auf **Durchsuchen** , und wählen Sie **bereinigt Supplier List. xls**aus. Dies ist die Ausgabedatei der Bereinigungs Aktivität.  
   
-8.  Zuordnung **SupplierID** Quellspalte, die **Supplier ID** Domäne **Supplier Name** Spalte **Supplier Name** Domänen- und **ContactEmailAddress** Spalte **Contact Email** Domäne.  
+8.  Ordnen Sie die Spalte **SupplierID** Source **der Lieferanten-ID** -Domäne, der Spalte **Lieferanten Name** in der Domäne **Lieferanten Name** und der Spalte **contactemailaddress** an die Domäne **Contact Email** zu.  
   
-9. Klicken Sie auf **Weiter** zum Wechseln der **übereinstimmende** Seite.  
+9. Klicken Sie auf **weiter** , um **zur Seite** Abgleich zu wechseln.  
   
-10. Klicken Sie auf **starten** um den Abgleichsprozess zu starten. Es sollten Ergebnisse angezeigt werden, die denen aus der vorherigen Aufgabe ähneln, da Sie dieselbe Eingabedatei zur Definition der Abgleichsrichtlinie verwendet haben.  
+10. Klicken Sie zum Starten des abgleichsprozesses auf **Start** . Es sollten Ergebnisse angezeigt werden, die denen aus der vorherigen Aufgabe ähneln, da Sie dieselbe Eingabedatei zur Definition der Abgleichsrichtlinie verwendet haben.  
   
 11. Prüfen Sie alle übereinstimmenden Datensätze und ihre Treffergenauigkeit im Listenfeld. Die Ergebnisse sollten denen aus der vorherigen Aufgabe entsprechen. Analysieren Sie die Ergebnisse aus dieser Abgleichsaktivität anhand der Schritte in der vorherigen Aufgabe.  
   
-12. Klicken Sie auf **Weiter** zum Wechseln der **exportieren** Seite.  
+12. Klicken Sie auf **weiter** , um zur Seite **exportieren** zu wechseln.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 4: Exportieren Sie die Ergebnisse der Abgleichsaktivität in eine Excel-Datei](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [Aufgabe 4: Exportieren der Ergebnisse der Abgleichsaktivität in eine Excel-Datei](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

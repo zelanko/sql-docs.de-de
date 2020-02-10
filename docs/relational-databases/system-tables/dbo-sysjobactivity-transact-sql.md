@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobactivity (Transact-SQL) | Microsoft-Dokumentation
+title: dbo. sysjobactivity (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902220"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
@@ -31,12 +31,12 @@ ms.locfileid: "67902220"
 
   Zeichnet die aktuelle Auftragsaktivität und den aktuellen Status des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents auf.  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID der Sitzung, die in der **syssessions** -Tabelle in der **msdb** -Datenbank gespeichert ist.|  
 |**job_id**|**uniqueidentifier**|ID des Auftrags.|  
 |**run_requested_date**|**datetime**|Datum und Uhrzeit, zu der der Auftrag laut Anforderung ausgeführt werden sollte.|  
-|**run_requested_source**|**sysname(nvarchar(128))**|Quelle der Anforderung der Auftragsausführung.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname (nvarchar (128))**|Quelle der Anforderung der Auftragsausführung.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Datum und Uhrzeit, zu der dieser Auftrag in der Warteschlange angeordnet wurde. Wird der Auftrag direkt ausgeführt, enthält diese Spalte den Wert NULL.|  
 |**start_execution_date**|**datetime**|Datum und Uhrzeit, für die die Ausführung des Auftrags geplant wurde.|  
 |**last_executed_step_id**|**int**|ID des letzten ausgeführten Auftragsschrittes.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67902220"
 |**next_scheduled_run_date**|**datetime**|Nächstes Datum und nächste Uhrzeit, für die die Ausführung des Auftrags geplant ist.|  
 
 ## <a name="example"></a>Beispiel
-In diesem Beispiel gibt die Laufzeit-Status für alle SQL Server-Agent-Aufträge zurück.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
+In diesem Beispiel wird der Lauf Zeit Status für alle SQL Server-Agent Aufträge zurückgegeben.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
 ```sql
 SELECT sj.Name, 
     CASE
@@ -61,7 +61,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>Siehe auch  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [dbo. sysjobhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

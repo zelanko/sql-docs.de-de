@@ -1,5 +1,5 @@
 ---
-title: Ausführen eines Updategramms mit OLE DB (SQLXML 4.0) | Microsoft-Dokumentation
+title: Ausführen eines Update grams mithilfe OLE DB (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014790"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ausführen eines Updategrams mit OLE DB (SQLXML 4.0)
-  Dieses Thema enthält ein funktionstüchtiges Beispiel UsingOLE DB ein Updategram auszuführen.  
+  Dieses Thema enthält ein funktionierendes Beispiel für usingole DB zum Ausführen eines Update grams.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Verwenden von 'IcommandStream' zum Festlegen eines XML-Befehls  
- Die OLE DB (Version 2.6 oder höher) ICommandStream-Schnittstelle übergibt einen Befehl als Datenstromobjekt statt als Zeichenfolge.  
+ Die ICommandStream-Schnittstelle OLE DB (Version 2,6 oder höher) übergibt einen Befehl als Datenstrom Objekt und nicht als Zeichenfolge.  
   
- Dank dieser Schnittstelle kann ein Befehl in jeder beliebigen Codierung geschrieben sein, die der XML-Parser versteht. Wenn ICommand:: Execute aufgerufen wird, wird der Befehlstext direkt aus dem Datenstrom gelesen, und keine Konvertierung erforderlich ist. Aus diesem Grund ist bei Ausführung von XML-Befehlen, die mithilfe von ' ICommandStream ' die Schnittstelle effizienter.  
+ Dank dieser Schnittstelle kann ein Befehl in jeder beliebigen Codierung geschrieben sein, die der XML-Parser versteht. Wenn ICommand:: Execute aufgerufen wird, wird der Befehls Text direkt aus dem Stream gelesen, und es ist keine Konvertierung erforderlich. Daher ist das Ausführen von XML-Befehlen mithilfe der ICommandStream-Schnittstelle effizienter.  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>Festlegen von XML als Befehl mit 'IcommandStream' und Abrufen der Ergebnisse als XML-Dokument  
- Die ' ICommandStream '-Schnittstelle kann verwendet werden, um die XML-Dokumente als Befehl festgelegt, und die Ergebnisse als XML-Dokument abgerufen werden können.  
+ Die ICommandStream-Schnittstelle kann verwendet werden, um XML-Dokumente als Befehl festzulegen, und die Ergebnisse können als XML-Dokument abgerufen werden.  
   
 #### <a name="executing-templates-with-xpath-queries"></a>Ausführen von Vorlagen mit XPath-Abfragen  
- Die folgende XML-Vorlage, bestehend aus einer XPath-Abfrage wird als Befehl mit ' ICommandStream ' angegeben werden:  
+ Die folgende XML-Vorlage, die aus einer XPath-Abfrage besteht, wird mithilfe von ICommandStream als Befehl angegeben:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -58,19 +58,19 @@ ms.locfileid: "66014790"
 </Schema>  
 ```  
   
- Die Abfrage gibt alle Mitarbeiterelemente zurück. Mit der standardzuordnung den  **\<Person.Contact >** Element wird der Person.Contact-Tabelle in der Datenbank AdventureWorks zugeordnet.  
+ Die Abfrage gibt alle Mitarbeiterelemente zurück. Mit der Standard Zuordnung wird das ** \<Person. Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>So legen Sie XML als Befehl fest und rufen das Ergebnis als XML-Dokument ab  
   
 1.  Initialisieren Sie die Datenbank, und stellen Sie eine Verbindung zur Datenbank her.  
   
-2.  Die Schnittstelle ' ICommandStream ' ICommand zu erhalten.  
+2.  Rufen Sie die ICommandStream-Schnittstelle für ICommand ab.  
   
 3.  Legen Sie die erforderlichen Eigenschaften für den Befehl fest. In diesem Beispiel wird die anbieterspezifische Eigenschaft SSPROP_STREAM_BASEPATH auf das Verzeichnis festgelegt, in dem das Zuordnungsschema und die Vorlagendateien gespeichert sind.  
   
-4.  Verwenden Sie ICommandStream:: SetCommandStream den befehlsdatenstrom an. In diesem Beispiel wird die XML-Vorlage, die ausgeführt wird, aus einer Datei gelesen. Dies ist nützlich, wenn Sie große XML-Vorlagen ausführen möchten.  
+4.  Verwenden Sie ICommandStream:: SetCommandStream, um den Befehlsdaten Strom anzugeben. In diesem Beispiel wird die XML-Vorlage, die ausgeführt wird, aus einer Datei gelesen. Dies ist nützlich, wenn Sie große XML-Vorlagen ausführen möchten.  
   
-5.  Führen Sie den XML-Befehl mithilfe von ICommand:: Execute anfordern der IID_ISequentialStream-Schnittstellen-ID.  
+5.  Führen Sie den XML-Befehl mit ICommand:: Execute aus, und fordern Sie die IID_ISequentialStream Schnittstellen-ID an.  
   
 6.  Verarbeiten Sie das Ergebnis. In diesem Beispiel wird das aus dem Datenstrom gelesene XML auf dem Bildschirm angezeigt.  
   

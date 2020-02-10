@@ -13,21 +13,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e08f11f924cb74743c1317f4fa1548af62ddb5d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484031"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Ändern des Namens einer expliziten Hierarchie (Master Data Services)
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]den Namen einer expliziten Hierarchie ändern.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>So ändern Sie den Namen einer expliziten Hierarchie  
   
@@ -41,15 +41,15 @@ ms.locfileid: "65484031"
   
 5.  Klicken Sie auf **Ausgewählte Entität bearbeiten**.  
   
-6.  Auf der **Entität bearbeiten** klicken Sie auf die explizite Hierarchie, die Sie umbenennen möchten.  
+6.  Klicken Sie auf der Seite **Entität bearbeiten** auf die explizite Hierarchie, die Sie umbenennen möchten.  
   
 7.  Klicken Sie auf **ausgewählte Hierarchie bearbeiten**.  
   
-8.  In der **Name der expliziten Hierarchie** geben den neuen Namen für die Hierarchie.  
+8.  Geben Sie im Feld **Name der expliziten Hierarchie** den aktualisierten Namen der Hierarchie ein.  
   
 9. Klicken Sie auf **Hierarchie speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Explizite Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Löschen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

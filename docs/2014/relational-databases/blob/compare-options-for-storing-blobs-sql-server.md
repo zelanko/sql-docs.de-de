@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010350"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Vergleichen von Optionen zum Speichern von Blobs (SQL Server)
@@ -38,7 +38,8 @@ ms.locfileid: "66010350"
 -   Windows-Anwendungen erfordern für Datei- und Verzeichnisdaten Kompatibilität mit Dateisystem-APIs.  
   
 ##  <a name="Filestream"></a> FILESTREAM  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt bereits über die FILESTREAM-Funktion, die ein effizientes Speichern, Verwalten und Streamen unstrukturierter Daten ermöglicht, die als Dateien im Dateisystem gespeichert sind. Bei einer FILESTREAM-Lösung ist jedoch die benutzerdefinierte Programmierung erforderlich. Sie wird der oben beschriebenen Anforderung im Hinblick auf vollständige Windows-Anwendungskompatibilität nicht gerecht.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt bereits über die FILESTREAM-Funktion, die ein effizientes Speichern, Verwalten und Streamen unstrukturierter Daten ermöglicht, die als Dateien im Dateisystem gespeichert sind. Bei einer FILESTREAM-Lösung ist jedoch die benutzerdefinierte Programmierung erforderlich. Sie wird der oben beschriebenen Anforderung im Hinblick auf vollständige Windows-Anwendungskompatibilität nicht gerecht.  
   
 ##  <a name="FileTables"></a> FileTables  
  Die FileTable-Funktion beruht auf vorhandenen FILESTREAM-Funktionen, über die Unternehmenskunden, unstrukturierte Dateidaten und Verzeichnishierarchien in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank speichern können, indem die Anforderungen für nicht transaktionalen Zugriff und Windows-Anwendungskompatibilität für dateibasierte Daten erfüllt werden.  
@@ -47,19 +48,19 @@ ms.locfileid: "66010350"
   
 |Funktion|Dateiserver und Datenbanklösung|FILESTREAM-Lösung|FileTable-Lösung|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Einzelne Story für Verwaltungstasks**|Nein|Ja|**ja**|  
-|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|Nein|Ja|**ja**|  
+|**Einzelne Story für Verwaltungstasks**|Nein |Ja|**Ja**|  
+|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|Nein |Ja|**Ja**|  
 |**Integriertes Sicherheitsmodell**|Nein|Ja|**Ja**|  
-|**Direkte Updates der FILESTREAM-Daten**|Ja|Nein|**ja**|  
-|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|Nein|Nein|**ja**|  
+|**Direkte Updates der FILESTREAM-Daten**|Ja|Nein|**Ja**|  
+|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|Nein|Nein|**Ja**|  
 |**Windows-Anwendungskompatibilität**|Ja|Nein|**Ja**|  
-|**Relationaler Zugriff auf Dateiattribute**|Nein|Nein|**ja**|  
+|**Relationaler Zugriff auf Dateiattribute**|Nein|Nein|**Ja**|  
   
 ##  <a name="CompareRBS"></a> Vergleichen von FILESTREAM und Remote BLOB-Speicher (RBS)  
- Einen Vergleich dieser beiden Features finden Sie in diesem Blogbeitrag vom RBS-Team: [SQL Server Remote BLOB Store "und" FILESTREAM-Funktion – Vergleich](https://go.microsoft.com/fwlink/?LinkId=210317).  
+ Einen Vergleich dieser beiden Funktionen finden Sie in diesem Blogbeitrag vom RBS-Team: [SQL Server Remote BLOB-Speicher und FILESTREAM-Funktion – Vergleich](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Weitere Informationen  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](filetables-sql-server.md)  
- [Remoteblobspeicher &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
+ [Remote Blob Store &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
   

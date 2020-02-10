@@ -14,21 +14,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054149"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Aktivieren einer Entität für explizite Hierarchien und Auflistungen (Master Data Services)
   Aktivieren Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] eine Entität für explizite Hierarchien und Auflistungen, damit Sie explizite Hierarchien und Auflistungen für die Entität erstellen können.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Eine Entität muss vorhanden sein. Weitere Informationen finden Sie unter [Erstellen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66054149"
   
 5.  Klicken Sie auf **Ausgewählte Entität bearbeiten**.  
   
-6.  Von der **explizite Hierarchien und Auflistungen aktivieren** Liste **Ja**.  
+6.  Wählen Sie in der Liste **explizite Hierarchien und Sammlungen aktivieren** die Option **Ja**aus.  
   
-7.  In der **Name der expliziten Hierarchie** Feld Geben Sie einen Namen für eine explizite Hierarchie.  
+7.  Geben Sie im Feld **Name der expliziten Hierarchie** einen Namen für eine explizite Hierarchie ein.  
   
 8.  Optional können Sie das Kontrollkästchen für **Obligatorische Hierarchie** deaktivieren, um die Hierarchie als nicht obligatorische Hierarchie zu erstellen.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66054149"
   
 -   [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
--   [Erstellen einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
+-   [Erstellen Sie eine Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entitäten &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Explizite Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  

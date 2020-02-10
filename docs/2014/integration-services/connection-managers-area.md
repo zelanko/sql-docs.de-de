@@ -1,5 +1,5 @@
 ---
-title: Verbindungs-Manager-Bereich | Microsoft-Dokumentation
+title: Bereich "Verbindungs-Manager" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060403"
 ---
 # <a name="connection-managers-area"></a>Verbindungs-Manager (Bereich)
@@ -26,8 +26,8 @@ ms.locfileid: "66060403"
   
  Klicken Sie mit der rechten Maustaste in diesen Bereich, und klicken Sie dann im Menü auf die Option für den Task, den Sie ausführen möchten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Integration Services &#40;SSIS-&#41; Verbindungen](connection-manager/integration-services-ssis-connections.md)   
  [SSIS-Designer](ssis-designer.md)  
   
   

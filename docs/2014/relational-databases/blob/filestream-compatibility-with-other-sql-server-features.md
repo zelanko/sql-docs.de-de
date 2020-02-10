@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010191"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen
@@ -25,7 +25,7 @@ ms.locfileid: "66010191"
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
   
--   [Verteilte Abfragen und Verbindungsserver](#distqueries)  
+-   [Verteilte Abfragen und Verbindungs Server](#distqueries)  
   
 -   [Verschlüsselung](#encryption)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66010191"
   
 -   [Datenbankspiegelung](#DatabaseMirroring)  
   
--   [Volltextindizierung](#FullText)  
+-   [Voll Text Indizierung](#FullText)  
   
 -   [Failoverclustering](#FailoverClustering)  
   
@@ -50,14 +50,14 @@ ms.locfileid: "66010191"
   
  Sie können die Transformation für das Importieren von Spalten verwenden, um Dateien aus dem Dateisystem in eine FILESTREAM-Spalte zu laden. Sie können auch die Transformation für das Exportieren von Spalten verwenden, um Dateien aus einer FILESTREAM-Spalte in einen anderen Speicherplatz im Dateisystem zu extrahieren.  
   
-##  <a name="distqueries"></a> Verteilte Abfragen und Verbindungsserver  
- Sie können mit FILESTREAM-Daten über verteilte Abfragen und Verbindungsservern arbeiten, indem es als behandelt `varbinary(max)` Daten. Sie können die FILESTREAM-Funktion **PathName()** nicht in verteilten Abfragen nutzen, bei denen ein vierteiliger Name verwendet wird. Dies gilt auch, wenn der Name auf einen lokalen Server verweist. Sie können **PathName()** jedoch in der inneren Abfrage einer Pass-Through-Abfrage nutzen, bei der **OPENQUERY()** verwendet wird.  
+##  <a name="distqueries"></a>Verteilte Abfragen und Verbindungs Server  
+ Sie können mit FILESTREAM-Daten über verteilte Abfragen und Verbindungs Server arbeiten, indem Sie `varbinary(max)` Sie als Daten behandeln. Sie können die FILESTREAM-Funktion **PathName()** nicht in verteilten Abfragen nutzen, bei denen ein vierteiliger Name verwendet wird. Dies gilt auch, wenn der Name auf einen lokalen Server verweist. Sie können **PathName()** jedoch in der inneren Abfrage einer Pass-Through-Abfrage nutzen, bei der **OPENQUERY()** verwendet wird.  
   
-##  <a name="encryption"></a> Verschlüsselung  
+##  <a name="encryption"></a>Verschlüsselungs  
  FILESTREAM-Daten werden nicht verschlüsselt, auch dann nicht, wenn die transparente Datenverschlüsselung aktiviert ist.  
   
-##  <a name="DatabaseSnapshot"></a> Datenbank-Momentaufnahmen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine [Datenbankmomentaufnahmen](../databases/database-snapshots-sql-server.md) für FILESTREAM-Dateigruppen. Wenn eine FILESTREAM-Dateigruppe in eine CREATE DATABASE ON-Klausel eingeschlossen wird, schlägt die Anweisung fehl, und ein Fehler wird ausgelöst.  
+##  <a name="DatabaseSnapshot"></a>Daten Bank Momentaufnahmen  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt keine [Daten Bank Momentaufnahmen](../databases/database-snapshots-sql-server.md) für FILESTREAM-Dateigruppen. Wenn eine FILESTREAM-Dateigruppe in eine CREATE DATABASE ON-Klausel eingeschlossen wird, schlägt die Anweisung fehl, und ein Fehler wird ausgelöst.  
   
  Wenn Sie FILESTREAM verwenden, können Sie Datenbankmomentaufnahmen von Standarddateigruppen (nicht-FILESTREAM) erstellen. Die FILESTREAM-Dateigruppen werden für diese Datenbankmomentaufnahmen als offline markiert.  
   
@@ -65,8 +65,8 @@ ms.locfileid: "66010191"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Replication  
- Eine `varbinary(max)`-Spalte, für die das FILESTREAM-Attribut auf dem Verleger aktiviert ist, kann für einen Abonnenten mit oder ohne FILESTREAM-Attribut repliziert werden. Verwenden Sie das Dialogfeld **Artikeleigenschaften - \<Artikel>** oder den @schema_option-Parameter von [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) oder [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), um die Methode für die Replikation der Spalte anzugeben. Daten, die in einer `varbinary(max)`-Spalte ohne FILESTREAM-Attribute repliziert werden, dürfen den 2 GB-Grenzwert für diesen Datentyp nicht überschreiten, da anderenfalls ein Laufzeitfehler ausgelöst wird. Es wird empfohlen, dass Sie das FILESTREAM-Attribut replizieren, wenn Sie Daten replizieren [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] Abonnenten nicht unterstützt wird, unabhängig von der Schemaoption, die angegeben wird.  
+##  <a name="Replication"></a> Replikation  
+ Eine `varbinary(max)`-Spalte, für die das FILESTREAM-Attribut auf dem Verleger aktiviert ist, kann für einen Abonnenten mit oder ohne FILESTREAM-Attribut repliziert werden. Verwenden Sie das Dialogfeld **Artikeleigenschaften - \<Artikel>** oder den @schema_option-Parameter von [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) oder [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), um die Methode für die Replikation der Spalte anzugeben. Daten, die in einer `varbinary(max)`-Spalte ohne FILESTREAM-Attribute repliziert werden, dürfen den 2 GB-Grenzwert für diesen Datentyp nicht überschreiten, da anderenfalls ein Laufzeitfehler ausgelöst wird. Es wird empfohlen, dass Sie das FILESTREAM-Attribut replizieren, es sei denn [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] , die Replikation von Daten auf Abonnenten wird unabhängig von der angegebenen Schema Option nicht unterstützt.  
   
 > [!NOTE]  
 >  Das Replizieren von großen Datenwerten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nach [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] -Abonnenten ist auf maximal 256 MB beschränkt. Weitere Informationen finden Sie unter [Maximum Capacity Specifications](https://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -97,29 +97,30 @@ ms.locfileid: "66010191"
   
 -   Die Mergereplikation kann FILESTREAM-Daten über eine HTTPS-Verbindung durch [Websynchronisierung](../replication/merge/merge-replication.md)synchronisieren. Diese Daten dürfen die 50 MB-Grenze für die Websynchronisierung nicht übersteigen, andernfalls wird ein Laufzeitfehler generiert.  
   
-##  <a name="LogShipping"></a> Protokollversand  
- Der[Protokollversand](../../database-engine/log-shipping/about-log-shipping-sql-server.md) unterstützt FILESTREAM. Sowohl auf dem primären als auch auf dem sekundären Server muss [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]oder eine spätere Version ausgeführt werden und FILESTREAM aktiviert sein.  
+##  <a name="LogShipping"></a>Protokoll Versand  
+ Der [Protokoll Versand](../../database-engine/log-shipping/about-log-shipping-sql-server.md) unterstützt FILESTREAM. Sowohl auf dem primären als auch auf dem sekundären Server muss [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]oder eine spätere Version ausgeführt werden und FILESTREAM aktiviert sein.  
   
-##  <a name="DatabaseMirroring"></a> Datenbankspiegelung  
+##  <a name="DatabaseMirroring"></a>Daten Bank Spiegelung  
  FILESTREAM wird von der Datenbankspiegelung nicht unterstützt. Eine FILESTREAM-Dateigruppe kann nicht auf dem Prinzipalserver erstellt werden. Die Datenbankspiegelung kann nicht für eine Datenbank konfiguriert werden, die FILESTREAM-Dateigruppen enthält.  
   
-##  <a name="FullText"></a> Volltextindizierung  
- [Volltextindizierung](../indexes/indexes.md) arbeitet mit einer FILESTREAM-Spalte, auf die gleiche Weise, die mit einem `varbinary(max)` Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+##  <a name="FullText"></a>Voll Text Indizierung  
+ Die [Volltextindizierung](../indexes/indexes.md) funktioniert mit einer FILESTREAM-Spalte genauso wie mit einer `varbinary(max)` -Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   
-##  <a name="FailoverClustering"></a> Failoverclustering  
+##  <a name="FailoverClustering"></a>Failoverclustering  
  Für das Failoverclustering müssen FILESTREAM-Dateigruppen auf einem freigegebenen Datenträger abgelegt werden. FILESTREAM muss auf jedem Knoten im Cluster aktiviert werden, das die FILESTREAM-Instanz hostet. Weitere Informationen finden Sie unter [Einrichten von FILESTREAM auf einem Failovercluster](set-up-filestream-on-a-failover-cluster.md).  
   
-##  <a name="SQLServerExpress"></a> SQL Server Express  
- [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] unterstützt FILESTREAM. Im Grenzwert für die Datenbankgröße von 10 GB ist der FILESTREAM-Datencontainer nicht inbegriffen.  
+##  <a name="SQLServerExpress"></a>SQL Server Express  
+ 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] unterstützt FILESTREAM. Im Grenzwert für die Datenbankgröße von 10 GB ist der FILESTREAM-Datencontainer nicht inbegriffen.  
   
-##  <a name="contained"></a> Eigenständige Datenbanken  
+##  <a name="contained"></a>Eigenständige Datenbanken  
  Die FILESTREAM-Funktion erfordert etwas Konfiguration außerhalb der Datenbank. Daher sind Datenbanken, die FILESTREAM oder FileTable verwenden, nicht vollständig eigenständig.  
   
  Sie können den Einschlusstyp der Datenbank auf PARTIAL festlegen, wenn Sie bestimmte Funktionen eigenständiger Datenbanken verwenden möchten, z. B. eigenständige Benutzer. In diesem Fall müssen Sie jedoch beachten, dass einige Datenbankeinstellungen nicht in der Datenbank enthalten sind und nicht automatisch mit der Datenbank verschoben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)  
   
   

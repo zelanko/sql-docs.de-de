@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054093"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>Verschieben von Elementen innerhalb einer Hierarchie (Master Data Services)
   Sie können in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Elemente innerhalb einer Hierarchie verschieben, um deren Position oder die Zuweisung des übergeordneten Elements zu ändern.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
   
--   Für explizite Hierarchien, benötigen Sie mindestens **Update** Berechtigung für die Entität.  
+-   Bei expliziten Hierarchien müssen Sie mindestens über die Berechtigung **Aktualisieren** für die Entität verfügen.  
   
--   Abgeleitete Hierarchien, benötigen Sie mindestens **Update** für das Modell und alle domänenbasierten Attributen, die in der Hierarchie verwendet.  
+-   Bei abgeleiteten Hierarchien benötigen Sie mindestens ein **Update** für das Modell und alle domänenbasierten Attribute, die in der Hierarchie verwendet werden.  
   
 ### <a name="to-move-members-within-a-hierarchy"></a>So verschieben Sie Elemente innerhalb einer Hierarchie  
   
@@ -42,21 +42,21 @@ ms.locfileid: "66054093"
   
 3.  Klicken Sie auf **Explorer**.  
   
-4.  Zeigen Sie auf der Menüleiste **Hierarchien** , und klicken Sie auf *Hierarchiename*.  
+4.  Zeigen Sie auf der Menüleiste auf **Hierarchien** , und klicken Sie auf *Hierarchy_Name*.  
   
-5.  In der **Hierarchie** Bereich, in denen die Hierarchie in einer Baumstruktur angezeigt wird, klicken Sie auf das Kontrollkästchen für jedes Element, das Sie verschieben möchten.  
+5.  Klicken Sie im Bereich **Hierarchie** , in dem die Hierarchie in einer Baumstruktur angezeigt wird, auf das Kontrollkästchen für jedes Element, das Sie verschieben möchten.  
   
-6.  Am oberen Rand der **Hierarchie** Bereich, klicken Sie auf **Ausschneiden**.  
+6.  Klicken Sie oben im Bereich **Hierarchie** auf **Ausschneiden**.  
   
-7.  In der **Hierarchie** Bereich, klicken Sie auf das Kontrollkästchen für das Element, das die Elemente verschoben werden sollen.  
+7.  Aktivieren Sie im Bereich **Hierarchie** das Kontrollkästchen für den Member, in den die Elemente verschoben werden sollen.  
   
-8.  Klicken Sie auf **einfügen**.  
+8.  Klicken Sie auf **Einfügen**.  
   
     > [!NOTE]  
     >  In abgeleiteten Hierarchien können Sie Elemente nur in Elemente auf gleicher Ebene verschieben. Auch die Sortierreihenfolge der Elemente kann nicht geändert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verschieben von expliziten Hierarchieelementen mithilfe des Stagingprozesses &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verschieben Sie explizite Hierarchie Elemente mithilfe des Stagingprozesses &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Explizite Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

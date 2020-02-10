@@ -25,22 +25,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011179"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
   Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
   
-##  <a name="types"></a> Typen der Auffüllung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden auffüllungstypen: vollständige Auffüllung, Änderung änderungsnachverfolgung basierende automatische oder manuelle Auffüllung sowie inkrementelle zeitstempelbasierte Auffüllung.  
+##  <a name="types"></a>Auffüllungs Typen  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die folgenden auffüllungs Typen: vollständige Auffüllung, auf Änderungs Nachverfolgung basierende automatische oder manuelle Auffüllung sowie inkrementelle Zeitstempel basierte Auffüllung.  
   
 ### <a name="full-population"></a>Vollständige Auffüllung  
  Während einer vollständigen Auffüllung werden Indexeinträge für alle Zeilen einer Tabelle oder einer indizierten Sicht erstellt. Eine vollständige Auffüllung eines Volltextindexes erstellt Indexeinträge für alle Zeilen der Basistabelle oder der indizierten Sicht.  
   
- Standardmäßig füllt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen neuen Volltextindex vollständig auf, sobald er erstellt wird. Die vollständige Auffüllung kann jedoch eine deutliche Beanspruchung der Ressourcen bedeuten. Beim Erstellen eines Volltextindexes zu Zeiten mit hohen Lastwerten wird daher empfohlen, die vollständige Auffüllung bis zu einem späteren Zeitpunkt mit geringerer Auslastung zu verzögern, insbesondere, wenn die Basistabelle eines Volltextindexes sehr groß ist. Der Volltextkatalog ist dann allerdings bis zum Abschluss der vollständigen Auffüllung der zugehörigen Volltextindizes nicht verfügbar. Um einen Volltextindex zu erstellen, ohne ihn sofort aufzufüllen, geben Sie die Klausel CHANGE_TRACKING OFF, NO POPULATION in der CREATE FULLTEXT INDEX-Anweisung an. Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die Anweisung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den neuen Volltext-Index wird nicht aufgefüllt werden, bis Sie eine ALTER FULLTEXT INDEX-Anweisung, die mit der START FULL POPULATION oder START INCREMENTAL POPULATION-Klausel ausführen. Weitere Informationen finden Sie unter den Beispielen "A. Erstellen eines Volltextindexes ohne Ausführung der vollständigen Auffüllung" und "B. Ausführen einer vollständigen Auffüllung einer Tabelle " weiter unten in diesem Thema.  
+ Standardmäßig füllt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen neuen Volltextindex vollständig auf, sobald er erstellt wird. Die vollständige Auffüllung kann jedoch eine deutliche Beanspruchung der Ressourcen bedeuten. Beim Erstellen eines Volltextindexes zu Zeiten mit hohen Lastwerten wird daher empfohlen, die vollständige Auffüllung bis zu einem späteren Zeitpunkt mit geringerer Auslastung zu verzögern, insbesondere, wenn die Basistabelle eines Volltextindexes sehr groß ist. Der Volltextkatalog ist dann allerdings bis zum Abschluss der vollständigen Auffüllung der zugehörigen Volltextindizes nicht verfügbar. Um einen Volltextindex zu erstellen, ohne ihn sofort aufzufüllen, geben Sie die Klausel CHANGE_TRACKING OFF, NO POPULATION in der CREATE FULLTEXT INDEX-Anweisung an. Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die Anweisung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]füllt den neuen Volltextindex erst auf, wenn Sie eine ALTER FULLTEXT INDEX-Anweisung mithilfe der Klausel Start Full Population oder Start inkrementelle Auffüllung ausführen. Weitere Informationen finden Sie unter den Beispielen "A. Erstellen eines Volltextindexes ohne Ausführung der vollständigen Auffüllung" und "B. Ausführen einer vollständigen Auffüllung einer Tabelle " weiter unten in diesem Thema.  
   
 
   
@@ -58,31 +58,31 @@ ms.locfileid: "66011179"
   
      Wenn Sie CHANGE_TRACKING AUTO angeben, verwendet die Volltext-Engine die automatische Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt und automatisch weitergegeben, wenn Daten in der Basistabelle geändert werden. Der Volltextindex wird im Hintergrund aktualisiert. Die so weitergegebenen Änderungen werden u. U. jedoch nicht sofort im Index wiedergegeben.  
   
-     **Nachverfolgen von Änderungen mit automatischer Auffüllung einrichten**  
+     **So richten Sie die Nachverfolgung von Änderungen mit automatischer Auffüllung ein**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING AUTO  
+    -   [voll Text Index erstellen](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... mit CHANGE_TRACKING Auto  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT Index](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... CHANGE_TRACKING Auto festlegen  
   
      Weitere Informationen finden Sie unter Beispiel "E. Änderung eines Volltextindexes zur Verwendung der automatischen Änderungsnachverfolgung" weiter unten in diesem Thema.  
   
 -   Manuelle Auffüllung  
   
-     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch nicht an den Volltextindex weitergegeben, bis Sie eine ALTER FULLTEXT INDEX ... START UPDATE POPULATION -Anweisung anwenden. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
+     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch erst dann an den Volltextindex weitergegeben, wenn Sie einen ALTER FULLTEXT Index... Start Update Population-Anweisung. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
   
-     **So beginnen Sie die Änderungsnachverfolgung mit manueller Auffüllung**  
+     **So beginnen Sie, Änderungen mit manueller Auffüllung zu verfolgen**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING MANUAL  
+    -   [voll Text Index erstellen](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... mit CHANGE_TRACKING manuell  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT Index](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... CHANGE_TRACKING manuell festlegen  
   
      Weitere Informationen finden Sie unter den Beispielen "C. Erstellen eines Volltextindexes mit manueller Änderungsnachverfolgung" und "D. Ausführung einer manuellen Auffüllung" weiter unten in diesem Thema.  
   
- **Deaktivieren der änderungsnachverfolgung**  
+ **So schalten Sie die Änderungsnachverfolgung aus**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING OFF  
+-   [voll Text Index erstellen](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... mit CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT Index](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... CHANGE_TRACKING OFF festlegen  
   
 
   
@@ -91,7 +91,8 @@ ms.locfileid: "66011179"
   
  Voraussetzung für die inkrementelle Auffüllung ist, dass die indizierte Tabelle eine Spalte vom `timestamp`-Datentyp aufweist. Ist keine `timestamp`-Spalte vorhanden, kann die inkrementelle Auffüllung nicht ausgeführt werden. Eine Anforderung für eine inkrementelle Auffüllung für eine Tabelle ohne `timestamp`-Spalte führt zu einer vollständigen Auffüllung. Anforderungen für eine inkrementelle Auffüllung werden als vollständige Auffüllung implementiert, wenn sich Metadaten, die sich auf den Volltextindex für die Tabelle auswirken, seit der letzten Auffüllung geändert haben. Dies umfasst Metadatenänderungen durch Spalten-, Index- oder Volltextindexdefinitionen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die `timestamp`-Spalte, um Zeilen zu identifizieren, die sich seit der letzten Auffüllung geändert haben. Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Wenn in einer Tabelle sehr viele Einfügungen stattfinden, ist die inkrementelle Auffüllung ggf. effizienter als die manuelle Auffüllung.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die `timestamp`-Spalte, um Zeilen zu identifizieren, die sich seit der letzten Auffüllung geändert haben. Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Wenn in einer Tabelle sehr viele Einfügungen stattfinden, ist die inkrementelle Auffüllung ggf. effizienter als die manuelle Auffüllung.  
   
  Am Ende einer Auffüllung wird von der Volltext-Engine ein neuer `timestamp`-Wert aufgezeichnet. Dieser Wert entspricht dem größten in SQL Gatherer aufgetretenen `timestamp`-Wert. Der Wert wird verwendet, wenn eine nachfolgende inkrementelle Auffüllung gestartet wird.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "66011179"
   
 
   
-##  <a name="examples"></a> Beispiele zum Auffüllen von Volltextindizes  
+##  <a name="examples"></a>Beispiele für das Auffüllen von voll Text Indizes  
   
 > [!NOTE]  
 >  In den Beispielen in diesem Abschnitt wird die `Production.Document` -Tabelle oder die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank verwendet.  
@@ -145,7 +146,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume)
 GO  
 ```  
   
-### <a name="d-running-a-manual-population"></a>D. Ausführen einer manuellen Auffüllung  
+### <a name="d-running-a-manual-population"></a>D: Ausführen einer manuellen Auffüllung  
  Im folgenden Beispiel wird eine manuelle Auffüllung des Volltextindexes mit Änderungsnachverfolgung für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank ausgeführt.  
   
 ```  
@@ -167,7 +168,7 @@ GO
   
 
   
-##  <a name="create"></a> Erstellen oder Ändern eines Zeitplans für inkrementelle Auffüllung  
+##  <a name="create"></a>Erstellen oder Ändern eines Zeitplans für inkrementelle Auffüllung  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>So erstellen oder ändern Sie einen Zeitplan für inkrementelle Auffüllung in Management Studio  
   
@@ -186,7 +187,7 @@ GO
     > [!IMPORTANT]  
     >  Wenn die Basistabelle oder Sicht keine Spalte für den Datentyp `timestamp` enthält, wird eine vollständige Auffüllung ausgeführt.  
   
-     Folgende Optionen stehen zur Verfügung:  
+     Die folgenden Optionen sind verfügbar:  
   
     -   Um einen neuen Zeitplan zu erstellen, klicken Sie auf **Neu**.  
   
@@ -208,10 +209,10 @@ GO
   
 
   
-##  <a name="crawl"></a> Beheben von Fehlern in einer Volltextauffüllung (Durchforstung)  
- Tritt während eines Durchforstungsvorgangs ein Fehler auf, wird von der Durchforstungsprotokollfunktion der Volltextsuche ein Durchforstungsprotokoll erstellt und gewartet. Dabei handelt es sich um eine Nur-Text-Datei. Jedes Durchforstungsprotokoll gehört zu einem bestimmten Volltextkatalog. Standard-Durchforstungsprotokolle für eine bestimmte Instanz in diesem Fall die erste Instanz, in %ProgramFiles%\Microsoft SQL Server\MSSQL12 befinden. MSSQLSERVER\MSSQL\LOG-Ordner. Das Benennungsschema für Durchforstungsprotokolldateien lautet folgendermaßen:  
+##  <a name="crawl"></a>Problembehandlung bei Fehlern in einer voll Text Auffüllung (durch Forstung)  
+ Tritt während eines Durchforstungsvorgangs ein Fehler auf, wird von der Durchforstungsprotokollfunktion der Volltextsuche ein Durchforstungsprotokoll erstellt und gewartet. Dabei handelt es sich um eine Nur-Text-Datei. Jedes Durchforstungsprotokoll gehört zu einem bestimmten Volltextkatalog. Standardmäßig befinden sich Durchforstungsprotokolle für eine bestimmte Instanz, in diesem Fall die erste Instanz, im Ordner %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. Das Benennungsschema für Durchforstungsprotokolldateien lautet folgendermaßen:  
   
- SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
+ Sqlft\<DatabaseID>\<FullTextCatalogID>. Protokoll [\<n>]  
   
  <`DatabaseID`>  
  Die ID einer Datenbank. <`dbid`> ist eine fünfstellige Zahl mit führenden Nullen.  
@@ -226,10 +227,10 @@ GO
   
 
   
-## <a name="see-also"></a>Siehe auch  
- [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
- [Erste Schritte mit der Volltextsuche](get-started-with-full-text-search.md)   
- [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. dm_fts_index_population &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
+ [Beginnen Sie mit der voll Text Suche](get-started-with-full-text-search.md)   
+ [Erstellen und Verwalten von voll Text Indizes](create-and-manage-full-text-indexes.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   

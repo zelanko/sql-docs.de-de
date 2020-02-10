@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 541531de470991c84d04a60d6829e3333c78ae3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897497"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS-Ausdruck)
@@ -40,7 +40,7 @@ LTRIM(character expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  LTRIM kann nur mit dem DT_WSTR-Datentyp verwendet werden. Ein *character_expression* -Argument, das ein Zeichenfolgenliteral oder eine Datenspalte mit dem DT_STR-Datentyp ist, wird implizit in den DT_WSTR-Datentyp umgewandelt, bevor LTRIM ausgeführt wird. Andere Datentypen müssen explizit in den DT_WSTR-Datentyp umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../data-flow/integration-services-data-types.md) und [CAST &#40;SSIS-Ausdruck&#41;](cast-ssis-expression.md).  
   
  LTRIM gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
@@ -64,7 +64,7 @@ LTRIM(FirstName)
 LTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RTRIM &#40;SSIS-Ausdruck&#41;](trim-ssis-expression.md)   
  [TRIM &#40;SSIS-Ausdruck&#41;](trim-ssis-expression.md)   
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)  

@@ -1,5 +1,5 @@
 ---
-title: Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
+title: Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012385"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0)
-  In den folgenden Beispielen wird gezeigt, wie boolesche Funktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie boolesche Funktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Angeben der booleschen Funktion "not()"  
- Diese Abfrage gibt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens aus, denen keine  **\<Reihenfolge >** untergeordnete Elemente:  
+ Diese Abfrage gibt alle ** \<Kunden>** untergeordneten Elementen des Kontext Knotens zurück, die keine ** \<Order>** untergeordneten Elemente aufweisen:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -43,7 +43,7 @@ ms.locfileid: "66012385"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   
-1.  Kopieren der [Schema Beispielcode](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) und fügen Sie ihn in eine Textdatei. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
+1.  Kopieren Sie den [Beispiel Schema Code](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) , und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
   
 2.  Erstellen Sie die folgende Vorlage (BooleanFunctionsA.xml), und speichern Sie sie in dem Verzeichnis, in dem SampleSchema1.xml gespeichert ist.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66012385"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66012385"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Angeben der booleschen Funktionen "true()" und "false()"  
- Diese Abfrage gibt alle  **\<Kunden >** -Elemente des Kontextknotens aus, denen keine  **\<Reihenfolge >** untergeordnete Elemente. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
+ Diese Abfrage gibt alle ** \<** untergeordneten Elemente des Kunden>-Elements des Kontext Knotens zurück, die keine ** \<Order>** untergeordneten Elemente aufweisen. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -89,7 +89,7 @@ ms.locfileid: "66012385"
 /Customer[Order=false()]  
 ```  
   
- Diese Abfrage ist äquivalent zu folgendem:  
+ Diese Abfrage entspricht Folgendem:  
   
 ```  
 /Customer[not(Order)]  
@@ -109,7 +109,7 @@ ms.locfileid: "66012385"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   
-1.  Kopieren der [Schema Beispielcode](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) und fügen Sie ihn in eine Textdatei. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
+1.  Kopieren Sie den [Beispiel Schema Code](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) , und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
   
 2.  Erstellen Sie die folgende Vorlage (BooleanFunctionsB.xml), und speichern Sie sie in dem Verzeichnis, in dem SampleSchema1.xml gespeichert ist.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66012385"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   

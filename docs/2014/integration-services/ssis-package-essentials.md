@@ -1,5 +1,5 @@
 ---
-title: SSIS-Paket Essentials | Microsoft-Dokumentation
+title: Grundlagen zu SSIS-Paketen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055414"
 ---
 # <a name="ssis-package-essentials"></a>SSIS-Paketgrundlagen
-  Ein Paket ist das Objekt, das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionalität zum Extrahieren, Transformieren und Laden von Daten implementiert. Ein Paket lässt sich mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]erstellen. Sie können ein Paket aber auch mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import/Export-Assistenten oder dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Verbindungsprojekt-Assistenten erstellen. Weitere Informationen [Erstellen von Paketen in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) im SSIS-Designer und [Berichtsimport-Assistent](../../2014/integration-services/import-project-wizard.md).  
+  Ein Paket ist das Objekt, das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionalität zum Extrahieren, Transformieren und Laden von Daten implementiert. Ein Paket lässt sich mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]erstellen. Sie können ein Paket aber auch mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import/Export-Assistenten oder dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Verbindungsprojekt-Assistenten erstellen. Weitere Informationen finden Sie unter [SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) in SSIS-Designer und [Assistent zum Importieren von Projekten](../../2014/integration-services/import-project-wizard.md).  
   
  Ein Basispaket enthält die folgenden Elemente:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66055414"
   
  Weitere Informationen finden Sie unter [Data Flow](data-flow/data-flow.md).  
   
- Ein Beispiel zum Erstellen eines einfachen Pakets finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
+ Ein Beispiel für das Erstellen eines einfachen Pakets finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66055414"
   
 1.  Video [Erstellen eines Basispakets (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131023) auf msdn.microsoft.com.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md)  
   

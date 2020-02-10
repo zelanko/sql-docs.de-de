@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Testen des Lektion 3-Tutorialpakets | Microsoft-Dokumentation'
+title: 'Schritt 3: Testen des Lektion 3-Tutorialpakets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891588"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Schritt 3: Testen des Tutorialpakets aus Lektion 3
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Schritt 3: Testen des Lektion 3-Tutorialpakets
   In dieser Aufgabe führen Sie das Paket Lesson 3.dtsx aus. Beim Ausführen des Pakets werden im Fenster Protokollereignisse die Protokolleinträge aufgelistet, die in die Protokolldatei geschrieben werden. Nachdem vom Paket die Ausführung abgeschlossen wurde, überprüfen Sie den Inhalt der Protokolldatei, die vom Protokollanbieter generiert worden ist.  
   
 ## <a name="checking-the-package-layout"></a>Überprüfen des Paketlayouts  
@@ -43,9 +43,9 @@ ms.locfileid: "62891588"
   
 -   Öffnen Sie mithilfe von Editor oder einem anderen Text-Editor die Datei TutorialLog.log.  
   
--   Obwohl für die Semantik der Informationen generiert die `PipelineExecutionPlan` und `PipelineExecutionTrees` Ereignisse, die in diesem Tutorial nicht eingegangen sind, sehen Sie, dass die erste Zeile die Informationsfelder, die im angegebenen Listet die **Details** auf der Registerkarte die **SSIS-Protokolle konfigurieren** Dialogfeld. Darüber hinaus können Sie überprüfen, dass die zwei von Ihnen ausgewählten Ereignisse (PipelineExecutionPlan und PipelineExecutionTrees) für jede Iteration der Foreach-Schleife protokolliert worden sind.  
+-   Obwohl die Semantik der Informationen, die für das `PipelineExecutionPlan` - `PipelineExecutionTrees` Ereignis und das-Ereignis generiert werden, den Rahmen dieses Tutorials sprengen würde, sehen Sie, dass die erste Zeile die Informationsfelder auflistet, die auf der Registerkarte **Details** des Dialog Felds **SSIS-Protokolle konfigurieren** angegeben sind. Darüber hinaus können Sie überprüfen, dass die zwei von Ihnen ausgewählten Ereignisse (PipelineExecutionPlan und PipelineExecutionTrees) für jede Iteration der Foreach-Schleife protokolliert worden sind.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 4: Hinzufügen von Fehlerflussumleitungen](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lektion 4: Hinzufügen der Fehlerflussumleitung](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

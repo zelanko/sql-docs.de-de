@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein neuen Integration Services-Projekts | Microsoft-Dokumentation
+title: Erstellen eines neuen Integration Services Projekts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060217"
 ---
 # <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts
@@ -39,7 +39,7 @@ ms.locfileid: "66060217"
   
      Der Projektmappenname wird automatisch aktualisiert und an den Projektnamen angepasst.  
   
-5.  Um einen separaten Ordner für die Projektmappendatei zu erstellen, aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**. Diese Option ist die Standardeinstellung.  
+5.  Um einen separaten Ordner für die Projektmappendatei zu erstellen, aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**. Dies ist die Standardoption.  
   
 6.  Wenn die Software für die Quellcodeverwaltung auf dem Computer installiert ist, wählen Sie **Zur Quellcodeverwaltung hinzufügen**  aus, um das Projekt der Quellcodeverwaltung zuzuordnen.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66060217"
     > [!NOTE]  
     >  Klicken Sie im Menü **Extras** auf **Optionen**, und erweitern Sie den Knoten **Quellcodeverwaltung**, um das ausgewählte Quellcodeverwaltungs-Plug-In anzuzeigen und zu ändern und um die Umgebung für die Quellcodeverwaltung zu konfigurieren.  
   
-8.  Klicken Sie auf **OK** zum Hinzufügen der Lösung um **Projektmappen-Explorer**r und das Projekt zur Projektmappe hinzuzufügen.  
+8.  Klicken **Sie auf** **OK** , um die Projekt Mappe dem Projektmappen-Explorer hinzuzufügen und das Projekt der Projekt Mappe hinzuzufügen  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsdienste &#40;SSIS&#41; Projekte](integration-services-ssis-projects-and-solutions.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Integration Services &#40;SSIS-&#41;-Projekte](integration-services-ssis-projects-and-solutions.md)   
  [Hinzufügen oder Entfernen eines Integration Services-Projekts in einer Projektmappe](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

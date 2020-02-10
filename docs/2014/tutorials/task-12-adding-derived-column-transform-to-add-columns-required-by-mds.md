@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 12: Hinzufügen der abgeleitete Spalte-Transformation, die von MDS erforderliche Spalten hinzuzufügen | Microsoft-Dokumentation'
+title: 'Aufgabe 12: Hinzufügen der Transformation für abgeleitete Spalten zum Hinzufügen von für MDS benötigten Spalten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,52 +11,52 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485240"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Aufgabe 12: Hinzufügen der Transformation „Abgeleitete Spalten“ zum Hinzufügen der für MDS erforderlichen Spalten
-  In dieser Aufgabe fügen Sie die Transformation "Abgeleitete Spalte" zum Datenfluss hinzu. Sie fügen zwei abgeleitete Spalten, **ImportType** und **BatchTag**, auf die Datensätze, die mit dieser Transformation an. Sie sollten diese Spalten hinzufügen, bevor Sie die Daten in Stagingtabellen in MDS hochladen. Diese beiden Spalten sind für die Stagingtabellen in MDS erforderliche Spalten. Finden Sie unter [Stagingtabellen für Blattelemente](../master-data-services/leaf-member-staging-table-master-data-services.md) Weitere Details.  
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Aufgabe 12: Hinzufügen der Transformation 'Abgeleitete Spalten', um für MDS erforderliche Spalten hinzuzufügen
+  In dieser Aufgabe fügen Sie die Transformation "Abgeleitete Spalte" zum Datenfluss hinzu. Sie fügen den Datensätzen, die an diese Transformation übermittelt werden, zwei abgeleitete Spalten, **importtype** und **batchtag**, hinzu. Sie sollten diese Spalten hinzufügen, bevor Sie die Daten in Stagingtabellen in MDS hochladen. Diese beiden Spalten sind für die Stagingtabellen in MDS erforderliche Spalten. Weitere Informationen finden Sie unter [Stagingtabellen für Blatt](../master-data-services/leaf-member-staging-table-master-data-services.md) Elemente.  
   
-1.  Drag & Drop **Transformation für abgeleitete Spalten** aus **allgemeine** im Abschnitt der **SSIS-Toolbox** auf die **Datenfluss** Registerkarte.  
+1.  Ziehen Sie die **Transformation für abgeleitete Spalten** von **Common** section in der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** .  
   
-2.  Mit der rechten Maustaste **abgeleitete Spalten** transformiert die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Add Columns Required by MDS** , und drücken Sie **EINGABETASTE**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Transformation für **abgeleitete Spalten** auf der Registerkarte **Datenfluss** , und **Klicken Sie** Geben **Sie Add Columns required by MDS** ein, und drücken **Sie die Eingabe**Taste  
   
-3.  Herstellen einer mit **Filterduplikate+++** zu **Add Columns Required by MDS** mithilfe des blauen Konnektors. Daraufhin sollte die **Eingabe/Ausgabe-Auswahl** Dialogfeld.  
+3.  Verbindungs **Filter Duplikate** zum **Hinzufügen von Spalten, die von MDS** mit dem blauen Connector benötigt werden. Das Dialogfeld **Eingabe Ausgabe Auswahl** sollte angezeigt werden.  
   
-4.  In der **Eingabe/Ausgabe-Auswahl** wählen Sie im Dialogfeld **eindeutige Datensätze**, und klicken Sie auf **OK**.  
+4.  Wählen Sie im Dialogfeld **Eingabe Ausgabe Auswahl** die Option **eindeutige Datensätze**aus, und klicken Sie auf **OK**.  
   
-     ![Geben Sie im Dialogfeld Ausgabe](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "Eingabe Ausgabe Spaltenauswahl (Dialogfeld)")  
+     ![Eingabe-/Ausgabe-Auswahl (Dialogfeld)](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "Eingabe-/Ausgabe-Auswahl (Dialogfeld)")  
   
-5.  Klicken Sie auf **SSIS** auf der Menüleiste und auf **Variablen**.  
+5.  Klicken Sie in der Menüleiste auf **SSIS** , und klicken Sie auf **Variablen**.  
   
-6.  In der **Variablen** Fenster, klicken Sie auf **Variable hinzufügen** auf der Symbolleiste.  
+6.  Klicken Sie im Fenster **Variablen** auf der Symbolleiste auf die Schaltfläche **Variable hinzufügen** .  
   
      ![SSIS-Variablen (Fenster)](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS-Variablen (Fenster)")  
   
-7.  Typ **ImportType** für die **Namen** und **2** für die **Wert**. Sie geben den Wert 2 an, da Sie einer Entität in MDS neue Elemente hinzufügen möchten. Weitere Informationen zu diesem Parameter finden Sie unter [Stagingtabelle für Blattelemente](../master-data-services/leaf-member-staging-table-master-data-services.md).  
+7.  Geben Sie **importtype** als **Name** und **2** für den **Wert**ein. Sie geben den Wert 2 an, da Sie einer Entität in MDS neue Elemente hinzufügen möchten. Ausführliche Informationen zu diesem Parameter finden Sie unter [Stagingtabelle für Blatt](../master-data-services/leaf-member-staging-table-master-data-services.md)Elemente.  
   
-8.  Klicken Sie auf **Variable hinzufügen** erneut die Symbolleisten-Schaltfläche.  
+8.  Klicken Sie erneut auf die Schaltfläche **Variable hinzufügen** .  
   
-9. Typ **BatchTag** für die **Name**Option **Zeichenfolge** für die **Datentyp**, und **EIMBatch** für die **Wert**. **BatchTag** ist nur ein eindeutiger Name für den Batch, die Sie an MDS senden werden.  
+9. Geben Sie **batchtag** als **Name**ein, wählen Sie **Zeichenfolge** für den **Datentyp**aus, und geben Sie für den **Wert** **eimbatch** ein. **Batchtag** ist nur ein eindeutiger Name für den Batch, den Sie an MDS senden.  
   
-10. In der **Datenfluss** Registerkarte, doppelklicken Sie auf **Add Columns Required by MDS**.  
+10. Doppelklicken Sie auf der Registerkarte **Datenfluss** auf **Spalten hinzufügen, die von MDS benötigt**werden.  
   
-11. In der **Derived Column Transformation Editor** Dialogfeld die **Listenfeld im unteren Bereich**, Typ **ImportType** für die **Name der abgeleiteten Spalte**.  
+11. Geben Sie im Dialogfeld **Transformations-Editor für abgeleitete Spalte** im **Listenfeld im unteren**Bereich **importtype** als Namen der **abgeleiteten Spalte**ein.  
   
-12. Erweitern Sie **Variablen und Parameter** in der linken oberen Bereich, Drag & Drop **User:: importtype** auf die **Ausdruck** Spalte.  
+12. Erweitern Sie **Variablen und Parameter** im oberen linken Bereich, und ziehen Sie **User:: importtype** in die Spalte **Ausdruck** .  
   
-     ![Transformations-Editor Spalten abgeleitet](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "abgeleitete Spalte Transformations-Editor")  
+     ![Transformations-Editor für abgeleitete Spalte](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "Transformations-Editor für abgeleitete Spalte")  
   
-13. Typ **BatchTag** in der nächsten Zeile für die **Name der abgeleiteten Spalte**.  
+13. Geben Sie **batchtag** in der nächsten Zeile für den **Namen der abgeleiteten Spalte**ein.  
   
-14. Drag & Drop **User:: batchtag** aus **Variablen und Parameter** auf die **Ausdruck** Spalte.  
+14. Ziehen Sie **User:: batchtag** aus **Variablen und Parametern** in die Spalte **Ausdruck** .  
   
-15. Klicken Sie auf **OK** schließen die **Transformation für abgeleitete Spalten** Dialogfeld.  
+15. Klicken Sie auf **OK** , um die **Transformation für abgeleitete Spalten** zu schließen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 13: Hinzufügen von OLE DB-Ziels zum Schreiben von Daten in MDS-Stagingtabelle](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [Aufgabe 13: Hinzufügen von OLE DB-Ziels, um Daten in die MDS-Stagingtabelle zu schreiben](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

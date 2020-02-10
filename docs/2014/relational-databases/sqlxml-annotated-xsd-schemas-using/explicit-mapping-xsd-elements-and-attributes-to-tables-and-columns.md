@@ -1,5 +1,5 @@
 ---
-title: Explizite Zuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten (SQLXML 4.0) | Microsoft-Dokumentation
+title: Explizite Zuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013847"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Explizite Zuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66013847"
   
  Wenn `sql:relation` für ein Element angegeben wird, gilt der Bereich dieser Anmerkung für alle Attribute und untergeordneten Elemente, die in der komplexen Typdefinition des Elements beschrieben sind. Dadurch wird das Schreiben von Anmerkungen vereinfacht.  
   
- Die `sql:relation` Anmerkung ist auch nützlich, wenn der Bezeichner, die in gültig sind [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind in XML nicht gültig. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen kann die `sql:relation`-Anmerkung verwendet werden, um die Zuordnung anzugeben. Beispiel:  
+ Die `sql:relation` -Anmerkung ist auch nützlich, wenn Bezeichner, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gültig sind, in XML ungültig sind. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen kann die `sql:relation`-Anmerkung verwendet werden, um die Zuordnung anzugeben. Beispiel:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -55,14 +55,14 @@ ms.locfileid: "66013847"
  Die `sql-field`-Anmerkung ordnet ein Element oder Attribut einer Datenbankspalte zu. Die `sql:field`-Anmerkung wird hinzugefügt, um einen XML-Knoten im Schema einer Datenbankspalte zuzuordnen. Sie können `sql:field` für ein Element ohne Inhalt angeben.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Angeben der Anmerkungen sql:relation und sql:field  
- In diesem Beispiel ist das XSD-Schema besteht aus einem  **\<wenden Sie sich an >** -Element komplexen Typs mit  **\<FName >** und  **\<LName >** untergeordnete Elemente und die **ContactID** Attribut.  
+ In diesem Beispiel besteht das XSD-Schema aus einem ** \<Contact>** -Element des komplexen Typs ** \<** mit den untergeordneten Elementen ">" und ** \<"lname>** " und dem **ContactID** -Attribut.  
   
- Die `sql:relation` -Anmerkung ordnet das  **\<wenden Sie sich an >** -Element der Person.Contact-Tabelle in der AdventureWorks-Datenbank. Die `sql:field` -Anmerkung ordnet das  **\<FName >** -Element der FirstName-Spalte und die  **\<LName >** -Element der LastName-Spalte.  
+ Die `sql:relation` -Anmerkung ordnet das ** \<Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die `sql:field` -Anmerkung ordnet das ** \<fname>** -Element der FirstName-Spalte und das ** \<lname>** -Element der LastName-Spalte zu.  
   
- Wird keine Anmerkung angegeben, für die **ContactID** Attribut. Dies führt zu einer Standardzuordnung des Attributs zur Spalte mit dem gleichen Namen.  
+ Für das **ContactID** -Attribut wird keine Anmerkung angegeben. Dies führt zu einer Standardzuordnung des Attributs zur Spalte mit dem gleichen Namen.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -84,7 +84,7 @@ ms.locfileid: "66013847"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen MySchema-annotated.xml.  
   

@@ -1,5 +1,5 @@
 ---
-title: Paket und Protection Level Projektdialogfeld | Microsoft-Dokumentation
+title: Dialog Feld "Paket-und Projekt Schutz Ebene" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056944"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Dialogfeld "Paket- und Projektschutzebene"
@@ -27,8 +27,8 @@ ms.locfileid: "66056944"
   
  Informationen zum besseren Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie unter [Zugriffssteuerung für vertrauliche Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md) und [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
-## <a name="options"></a>Optionen  
- **Package protection level**  
+## <a name="options"></a>Tastatur  
+ **Paket Schutz Ebene**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   
  **Kennwort**  
@@ -37,7 +37,7 @@ ms.locfileid: "66056944"
  **Kennwort erneut eingeben**  
  Geben Sie das Kennwort erneut ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md) (Integration Services-Pakete [SSIS])  
   
   

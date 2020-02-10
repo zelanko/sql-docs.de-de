@@ -15,18 +15,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483434"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]ein konsolidiertes Element, wenn Sie einen übergeordneten Knoten für eine explizite Hierarchie wollen. Konsolidierte Elemente können eigene Attribute aufweisen. Sie werden zum Gruppieren verwendet. Wie im folgenden Beispiel gezeigt, können konsolidierte Elemente zum Gruppieren von Konten verwendet werden, die Konten unter sich haben.  
   
- ![MDS konsolidierte Elemente](../../2014/master-data-services/media/mds-consolidated-members.png "MDS konsolidierten Elementen")  
+ ![Konsolidierte MDS-Elemente](../../2014/master-data-services/media/mds-consolidated-members.png "Konsolidierte MDS-Elemente")  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -57,11 +57,11 @@ ms.locfileid: "65483434"
   
 -   [Verschieben von Elementen innerhalb einer Hierarchie &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Erstellen eines Blattelements &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
+ [Blatt Element &#40;Master Data Services erstellen&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
  [Laden oder Aktualisieren von Elementen in Master Data Services mithilfe des Stagingprozesses](add-update-and-delete-data-master-data-services.md)   
- [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
+ [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Explizite Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877150"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Vollständige Datenbankwiederherstellungen (einfaches Wiederherstellungsmodell)
@@ -36,14 +36,14 @@ ms.locfileid: "62877150"
 > [!NOTE]  
 >  Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen finden Sie im Kapitel [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)im Abschnitt „Kompatibilitätsunterstützung“.  
   
-##  <a name="Overview"></a> Übersicht über die Datenbankwiederherstellung mit dem einfachen Wiederherstellungsmodell  
+##  <a name="Overview"></a>Übersicht über die Daten Bank Wiederherstellung mit dem einfachen Wiederherstellungs Modell  
  Für eine vollständige Datenbankwiederherstellung mit dem einfachen Wiederherstellungsmodell sind nur ein oder zwei [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) -Anweisungen erforderlich, je nachdem, ob Sie eine differenzielle Datenbanksicherung wiederherstellen möchten. Stellen Sie lediglich die letzte Sicherung wieder her, wie in der folgenden Abbildung dargestellt, wenn Sie nur eine vollständige Datenbanksicherung verwenden:  
   
- ![Wiederherstellung nur einer vollständigen Datenbanksicherung](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restoring only a full database backup")  
+ ![Wiederherstellung nur einer vollständigen Datenbanksicherung](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Wiederherstellung nur einer vollständigen Datenbanksicherung")  
   
  Wenn Sie auch eine differenzielle Datenbanksicherung verwenden, stellen Sie die letzte vollständige Datenbanksicherung wieder her, ohne die Datenbank wiederherzustellen. Anschließend stellen Sie die letzte differenzielle Datenbanksicherung wieder her und stellen die Datenbank wieder her. Die folgende Abbildung veranschaulicht diesen Prozess:  
   
- ![Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen](../../database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Restoring full and differential database backups")  
+ ![Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen](../../database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen")  
   
 > [!NOTE]  
 >  Informationen zum Wiederherstellen einer Datenbanksicherung auf einer anderen Serverinstanz finden Sie unter [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../databases/copy-databases-with-backup-and-restore.md).  
@@ -97,7 +97,7 @@ GO
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So stellen Sie eine vollständige Datenbanksicherung wieder her**  
   
--   [Wiederherstellen einer Datenbanksicherung unter dem einfachen Wiederherstellungsmodell &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+-   [Wiederherstellen einer Datenbanksicherung unter dem einfachen Wiederherstellungs Modell &#40;Transact-SQL-&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
 -   [Wiederherstellen einer Datenbanksicherung &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -113,7 +113,7 @@ GO
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   

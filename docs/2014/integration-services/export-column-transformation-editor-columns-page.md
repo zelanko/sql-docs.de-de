@@ -1,5 +1,5 @@
 ---
-title: Exportieren Sie die Spalte mit der Transformations-Editor (Spaltenseite) | Microsoft-Dokumentation
+title: Transformations-Editor für das Exportieren von Spalten (Seite Spalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059012"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Spalten)
@@ -26,24 +26,24 @@ ms.locfileid: "66059012"
   
  Weitere Informationen zur Transformation für das Exportieren von Spalten finden Sie unter [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Spalte extrahieren**  
  Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Text- oder Bilddaten enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
   
- **Dateipfadspalte**  
+ **Dateipfad-Spalte**  
  Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Dateipfade und Dateinamen enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
   
  **Anfügen zulassen**  
- Geben Sie an, ob Daten durch die Transformation an vorhandene Dateien angefügt werden sollen. Der Standardwert ist `false`.  
+ Geben Sie an, ob Daten durch die Transformation an vorhandene Dateien angefügt werden sollen. Der Standardwert lautet `false`.  
   
  **Abschneiden erzwingen**  
- Geben Sie an, ob die Inhalte vorhandener Dateien vor dem Schreiben der Daten durch die Transformation gelöscht werden sollen. Der Standardwert ist `false`.  
+ Geben Sie an, ob die Inhalte vorhandener Dateien vor dem Schreiben der Daten durch die Transformation gelöscht werden sollen. Der Standardwert lautet `false`.  
   
- **Bytereihenfolge-Marke schreiben**  
+ **Schreiben von BOM**  
  Geben Sie an, ob eine Bytereihenfolge-Marke in die Datei geschrieben werden soll. Eine Bytereihenfolge-Marke wird nur geschrieben, wenn die Daten den Datentyp `DT_NTEXT` oder DT_WSTR aufweisen und nicht an eine vorhandene Datendatei angefügt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für das Exportieren von Spalten &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Transformations-Editor für das Exportieren von Spalten &#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

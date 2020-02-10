@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058490"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP-Verbindungs-Manager-Editor
@@ -29,7 +29,7 @@ ms.locfileid: "66058490"
   
  Weitere Informationen zum FTP-Verbindungs-Manager finden Sie unter [FTP Connection Manager](connection-manager/ftp-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen des FTP-Servers an.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "66058490"
  Geben Sie das Kennwort für den Zugriff auf den FTP-Server an.  
   
  **Timeout (in Sekunden)**  
- Geben Sie die Dauer in Sekunden an, bevor ein Timeout für den Task eintritt. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **60**.  
+ Geben Sie die Anzahl von Sekunden an, die der Task vor einem Timeout dauert. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **60**.  
   
- **Passivmodus verwenden**  
+ **Passiven Modus verwenden**  
  Geben Sie an, ob die Verbindung durch den Server oder durch den Client initiiert wird. Die Initiierung der Verbindung durch den Server erfolgt im Aktivmodus; der Client aktiviert die Verbindung im Passivmodus. Der Standardwert dieser Eigenschaft ist der **Aktivmodus**.  
   
  **Wiederholungen**  
@@ -57,7 +57,7 @@ ms.locfileid: "66058490"
  **Verbindung testen**  
  Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

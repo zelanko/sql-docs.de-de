@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856131"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)
@@ -32,7 +32,7 @@ ms.locfileid: "62856131"
   
      [Sicherheit](#Security)  
   
--   **So fügen Sie Spalten, die mithilfe von:**  
+-   **So fügen Sie Spalten ein mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62856131"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>So fügen Sie mit dem Tabellen-Designer Spalten in eine Tabelle ein  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62856131"
 4.  Drücken Sie die TAB-TASTE, um zu der Zelle **Datentyp** zu gelangen, und wählen Sie in der Dropdownliste einen Datentyp aus. Dieser Wert ist ebenfalls obligatorisch. Wenn Sie keinen Wert auswählen, wird der Standardwert verwendet.  
   
     > [!NOTE]  
-    >  Sie können den Standardwert im Dialogfeld **Optionen** unter **Datenbanktools**ändern.  
+    >  Sie können den Standardwert im Dialogfeld **Optionen** unter **Daten Bank Tools**ändern.  
   
 5.  Definieren Sie auf der Registerkarte **Spalteneigenschaften** weitere Spalteneigenschaften.  
   
@@ -78,12 +78,12 @@ ms.locfileid: "62856131"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Im folgenden Beispiel werden der Tabelle `dbo.doc_exa`zwei Spalten hinzugefügt. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+3.  Im folgenden Beispiel werden der Tabelle `dbo.doc_exa`zwei Spalten hinzugefügt. Fügen Sie das folgende Beispiel in das Abfragefenster ein, und klicken Sie auf **Ausführen** .  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+##  <a name="FollowUp"></a>Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
   

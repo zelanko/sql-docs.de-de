@@ -1,5 +1,5 @@
 ---
-title: Massenimport von Sicherheitsüberlegungen (SQLXML 4.0) | Microsoft-Dokumentation
+title: Sicherheitsüberlegungen zum Massen laden (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 559c54c263f685350badc5d7e0232d0d0354443a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010555"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Sicherheitsüberlegungen zum Massenladen (SQLXML 4.0)
@@ -53,7 +53,7 @@ ms.locfileid: "66010555"
   
 -   Wenn der Benutzer eine Fehlerprotokolldatei festlegt, in die SQLXML Fehler ausgeben soll, dann wird diese Datei bei jeder Ausführung des Massenladevorgangs mit den Daten aus dem letzten Massenladeprozess überschrieben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

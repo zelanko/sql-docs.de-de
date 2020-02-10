@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869177"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
 ## <a name="details"></a>Details  
   
@@ -33,7 +33,8 @@ ms.locfileid: "62869177"
 |Meldungstext|Der umgeleitete Server '%s' kann nicht nach dem ursprünglichen Verleger '%s' und der Verlegerdatenbank '%s' abgefragt werden, um den Namen des Remoteservers zu bestimmen; Fehler %d, Fehlermeldung '%s.'|  
   
 ## <a name="explanation"></a>Erklärung  
- `sp_validate_redirected_publisher` verwendet einen temporären Verbindungsserver, der erstellt wird, um eine Verbindung mit dem umgeleiteten Verleger herzustellen und den Namen des Remoteservers zu ermitteln. Fehler 21879 wird zurückgegeben, wenn die Verbindungsserverabfrage fehlschlägt. In dem Aufruf, mit dem der Remoteservername angefordert wird, wird der temporäre Verbindungsserver in der Regel zum ersten Mal verwendet. Wenn Verbindungsprobleme vorliegen, ist es daher wahrscheinlich, dass diese zuerst in diesem Aufruf augenscheinlich werden. Dieser Remoteaufruf führt auf dem Remoteserver einfach select `@@servername` aus.  
+ 
+  `sp_validate_redirected_publisher` verwendet einen temporären Verbindungsserver, der erstellt wird, um eine Verbindung mit dem umgeleiteten Verleger herzustellen und den Namen des Remoteservers zu ermitteln. Fehler 21879 wird zurückgegeben, wenn die Verbindungsserverabfrage fehlschlägt. In dem Aufruf, mit dem der Remoteservername angefordert wird, wird der temporäre Verbindungsserver in der Regel zum ersten Mal verwendet. Wenn Verbindungsprobleme vorliegen, ist es daher wahrscheinlich, dass diese zuerst in diesem Aufruf augenscheinlich werden. Dieser Remoteaufruf führt auf dem Remoteserver einfach select `@@servername` aus.  
   
  Für den Verbindungsserver, der zum Abfragen des umgeleiteten Verlegers verwendet wird, werden der Sicherheitsmodus, die Anmeldung und das Kennwort verwendet, die beim Aufruf von `sp_adddistpublisher` für den ursprünglichen Verleger angegeben wurden.  
   
@@ -54,8 +55,8 @@ ms.locfileid: "62869177"
   
 -   Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Kerberos-Authentifizierung Weitere Informationen finden Sie unter **Kerberos-Authentifizierung und SQL Server** in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
--   Verwenden Sie `sp_changedistpublisher` , die dem ursprünglichen Verleger in MSdistpublishers zugeordneten Sicherheitsmodus zu ändern, sowie einen Benutzernamen und das Kennwort für die Verbindung angeben.  
+-   Verwenden `sp_changedistpublisher` Sie, um den Sicherheitsmodus zu ändern, der dem ursprünglichen Verleger in MSdistpublishers zugeordnet ist, und um einen Anmelde Namen und ein Kennwort anzugeben, die für die Verbindung verwendet werden sollen.  
   
--   Geben Sie den Befehlszeilenparameter *BypassPublisherValidation* auf der Merge-Agent-Befehlszeile umgeht beim `sp_get_redirected_publisher` auf dem Verteiler aufgerufen wird.  
+-   Geben Sie den Befehlszeilenparameter *bypasspublishervalidation* in der Merge-Agent-Befehlszeile an `sp_get_redirected_publisher` , um die Überprüfung zu umgehen, wenn auf dem Verteiler aufgerufen wird.  
   
   

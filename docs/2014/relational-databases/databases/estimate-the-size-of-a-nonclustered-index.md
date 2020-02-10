@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054117"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
@@ -108,7 +108,7 @@ ms.locfileid: "66054117"
   
      Da sich eine Indexzeile nicht auf zwei Seiten erstreckt, muss die Anzahl der Indexzeilen pro Seite auf die nächste ganze Zeile abgerundet werden. Die Angabe 2 in der Formel bezieht sich auf den Eingang der Zeile in das Slotarray der Seite.  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in der Blattebene verwendet wird  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in der Blattebene verwendet wird  
  Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern der Blattebene des Indexes erforderlich ist. Sie benötigen die in Schritt 1 aufgezeichneten Werte, um diesen Schritt durchführen zu können.  
   
 1.  Geben Sie die Anzahl der Spalten mit fester und mit variabler Länge auf Blattebene an, und berechnen Sie den Speicherplatz, der für deren Speicherung erforderlich ist:  
@@ -181,7 +181,7 @@ ms.locfileid: "66054117"
   
 5.  Berechnen Sie die Länge der Indexzeile:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (für Zeilenüberschriftenaufwand einer Indexzeile) + 6 (für ID-Zeiger der untergeordneten Seite)  
+     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (für Zeilen Überschriften Aufwand einer Index Zeile) + 6 (für den ID-Zeiger der untergeordneten Seite)  
   
 6.  Berechnen Sie die Anzahl der Indexzeilen pro Seite (8096 freie Byte pro Seite):  
   
@@ -205,24 +205,24 @@ ms.locfileid: "66054117"
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Schritt 3: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in den inneren Knotenebenen verwendet wird  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Schritt 3: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in den inneren Knotenebenen verwendet wird  
  Befolgen Sie diese Schritte, um abzuschätzen, wie viel Speicherplatz zum Speichern der Zwischen- und Stammebenen des Indexes erforderlich ist. Sie benötigen die in Schritt 2 und 3 errechneten Werte, um diesen Schritt durchführen zu können.  
   
 1.  Berechnen Sie die Anzahl der inneren Knotenebenen im Index:  
   
-     ***Non-Leaf_levels*** = 1 + Index_Rows_Per_Page protokollieren (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Nicht Blatt Ebenen*** = 1 + Protokoll Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Runden Sie diese Zahl auf die nächste ganze Zahl auf. Dieser Wert schließt die Blattebene des nicht gruppierten Index nicht mit ein.  
   
 2.  Berechnen Sie die Anzahl der inneren Knotenseiten im Index:  
   
-     ***Num_Index_Pages*** = ∑Ebene (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>Ebene</sup>), wobei 1 < = Level < = ***Ebenen***  
+     ***Num_Index_Pages*** = ∑ Level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>Ebene</sup>), wobei 1 <= Level <= ***Levels***  
   
      Runden Sie jeden Summanden auf die nächste ganze Zahl auf. Stellen Sie sich als einfaches Beispiel einen Index vor, bei dem ***Num_Leaf_Pages*** = 1000 und ***Index_Rows_Per_Page*** = 25. gilt. Die erste Indexebene über der Blattebene speichert 1.000 Indexzeilen, dies bedeutet eine Indexzeile pro Blattseite. Dabei passen 25 Indexzeilen auf eine Seite. Dies bedeutet, dass 40 Seiten zum Speichern dieser 1.000 Indexzeilen erforderlich sind. Die nächste Ebene des Indexes muss 40 Zeilen speichern. Dies bedeutet, dass zwei Seiten erforderlich sind. Die letzte Ebene des Indexes muss zwei Zeilen speichern. Dies bedeutet, dass eine Seite erforderlich ist. Daraus ergeben sich 43 innere Knotenseiten im Index. Wenn Sie diese Werte in den oben genannten Formeln verwenden, erhalten Sie folgendes Ergebnis:  
   
-     ***Non-Leaf_Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***Nicht-leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, der die Anzahl der im Beispiel beschriebenen Seiten.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43, dies ist die Anzahl der im Beispiel beschriebenen Seiten.  
   
 3.  Berechnen Sie die Größe des Indexes (insgesamt 8.192 Byte pro Seite):  
   
@@ -255,7 +255,7 @@ ms.locfileid: "66054117"
   
      Informationen zu den Speicherplatzanforderungen von Sparsespalten finden Sie unter [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Erstellen nicht gruppierter Indizes](../indexes/create-nonclustered-indexes.md)   
  [Erstellen gruppierter Indizes](../indexes/create-clustered-indexes.md)   

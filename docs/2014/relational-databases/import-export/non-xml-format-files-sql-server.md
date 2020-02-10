@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011876"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
@@ -56,14 +56,14 @@ ms.locfileid: "66011876"
   
  Die Felder **Version** und **Anzahl der Spalten** kommen nur einmal vor. Die Bedeutung dieser Felder wird in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|Beschreibung|  
+|Feld in der Formatdatei|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|Version|Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Hinweis: Die Version des zum Lesen einer Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] **bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] **bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] **bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] **bcp** generiert wurden.|  
-|Anzahl der Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  
+|Version|Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Hinweis: Die Version des zum Lesen der Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp** generiert wurden.|  
+|Anzahl von Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  
   
  Die anderen Felder der Formatdatei beschreiben die Datenfelder, die massenimportiert bzw. exportiert werden sollen. Jedes Datenfeld nimmt eine eigene Zeile in der Formatdatei ein. Jede Zeile der Formatdatei enthält Werte für die Felder der Formatdatei. Diese Felder werden in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|Description|  
+|Feld in der Formatdatei|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |**Reihenfolge der Felder der Hostdatei**|Eine Zahl, die die Position jedes Felds in der Datendatei angibt. Das erste Feld in der Zeile ist 1 usw.|  
 |**Datentyp in der Hostdatei**|Gibt den Datentyp an, der in einem bestimmten Feld der Datendatei gespeichert wird. Bei ASCII-Datendateien verwenden Sie SQLCHAR, bei Datendateien im systemeigenen Format verwenden Sie Standarddatentypen. Weitere Informationen finden Sie unter [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -106,7 +106,7 @@ ms.locfileid: "66011876"
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md)   
  [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md)   

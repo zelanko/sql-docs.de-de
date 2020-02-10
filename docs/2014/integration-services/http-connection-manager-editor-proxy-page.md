@@ -1,5 +1,5 @@
 ---
-title: HTTP-Verbindungs-Manager-Editor (Seite "Proxy") | Microsoft-Dokumentation
+title: HTTP-Verbindungs-Manager-Editor (Seite Proxy) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058262"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP-Verbindungs-Manager-Editor (Seite Proxy)
@@ -26,17 +26,17 @@ ms.locfileid: "66058262"
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Proxy verwenden**  
  Gibt an, ob der HTTP-Verbindungs-Manager Verbindungen über einen Proxyserver herstellen soll.  
   
  **Proxy-URL**  
  Geben Sie die URL für den Proxy ein.  
   
- **Proxyserver für lokale Adressen umgehen**  
+ **Proxy auf lokalem Server umgehen**  
  Gibt an, ob der HTTP-Verbindungs-Manager den Proxyserver für lokale Adressen umgehen soll.  
   
- **Anmeldeinformationen verwenden**  
+ **Anmelde Informationen verwenden**  
  Gibt an, ob der HTTP-Verbindungs-Manager Anmeldeinformationen für den Proxyserver verwenden soll.  
   
  **Benutzername**  
@@ -48,17 +48,17 @@ ms.locfileid: "66058262"
  **Domäne**  
  Wenn der HTTP-Verbindungs-Manager Anmeldeinformationen verwendet, müssen Sie einen Benutzernamen, ein Kennwort und eine Domäne angeben.  
   
- **Proxyumgehungsliste**  
+ **Proxy Umgehungs Liste**  
  Die Liste der Adressen, für die Sie den Proxyserver umgehen möchten.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Geben Sie eine Adresse ein, für die Sie den Proxyserver umgehen möchten.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Adresse aus, und entfernen Sie sie dann, indem Sie auf **Entfernen**klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [HTTP-Verbindungs-Manager-Editor &#40;Server Seite&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor für Fuzzygruppierung Transformation (Registerkarte Spalten) | Microsoft-Dokumentation
+title: Transformations-Editor für Fuzzygruppierung (Registerkarte Spalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058358"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Transformations-Editor für Fuzzygruppierung (Registerkarte Spalten)
@@ -26,7 +26,7 @@ ms.locfileid: "66058358"
   
  Weitere Informationen zur Transformation für Fuzzygruppierung finden Sie unter [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie aus dieser Liste die Eingabespalten, mit denen Zeilen mit doppelten Werten gruppiert werden sollen.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66058358"
  **Gruppenausgabealias**  
  Geben Sie einen beschreibenden Namen für die Spalte ein, die den kanonischen Wert für die gruppierten Duplikate enthalten soll. Der Standardname dieser Ausgabespalte entspricht dem Namen der Eingabespalte mit dem Anhang _clean.  
   
- **Übereinstimmungstyp**  
+ **Übereinstimmungs Typen**  
  Wählen Sie genaue oder Fuzzyübereinstimmungen aus. Zeilen werden als Duplikate angesehen, wenn Sie über alle Spalten hinweg eine genügend große Ähnlichkeit mit dem Typ einer Fuzzyübereinstimmung haben. Wenn Sie für bestimmte Spalten auch die genaue Übereinstimmung angeben, werden in den Spalten mit den genauen Übereinstimmungen nur Zeilen mit identischen Werten als mögliche Duplikate angesehen. Wenn Sie also wissen, dass eine bestimmte Spalte keine Fehler oder Inkonsistenzen enthält, können Sie für diese Spalte die genaue Übereinstimmung angeben, um die Genauigkeit der Fuzzyübereinstimmungen für andere Spalten zu erhöhen.  
   
  **Minimale Ähnlichkeit**  
@@ -57,17 +57,17 @@ ms.locfileid: "66058358"
  **Zahlen**  
  Gibt die Bedeutung führender und nachfolgender Zahlen beim Vergleichen der Spaltendaten an. Wenn beispielsweise führende Zahlen von Bedeutung sind, wird "123 Main Street" nicht mit "456 Main Street" gruppiert.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Neither**|Weder führende noch nachfolgende Zahlen sind von Bedeutung.|  
-|**Leading**|Nur führende Zahlen sind von Bedeutung.|  
-|**Trailing**|Nur nachfolgende Zahlen sind von Bedeutung.|  
+|**Noch**|Weder führende noch nachfolgende Zahlen sind von Bedeutung.|  
+|**Führende**|Nur führende Zahlen sind von Bedeutung.|  
+|**Nachträ**|Nur nachfolgende Zahlen sind von Bedeutung.|  
 |**LeadingAndTrailing**|Sowohl führende als auch nachfolgende Zahlen sind von Bedeutung.|  
   
  **Vergleichsflags**  
  Weitere Informationen zu den Optionen für das Vergleichen von Zeichenfolgen finden Sie unter [Vergleichen von Zeichenfolgendaten](data-flow/comparing-string-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

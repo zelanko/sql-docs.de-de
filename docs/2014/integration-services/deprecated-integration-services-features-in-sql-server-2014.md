@@ -1,5 +1,5 @@
 ---
-title: Als veraltet markierte Integration Services-Funktionen in SQLServer 2014 | Microsoft-Dokumentation
+title: Veraltete Integration Services Features in SQL Server 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72efe8e7e5b7052d8c8b0fcde4940f04ee53cb3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059591"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>Als veraltet markierte Funktionen in SQL Server 2014 Integration Services
-  In diesem Thema wird beschrieben, die als veraltet markierten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] immer noch in der aktuellen Version von verfügbaren Funktionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
+  In diesem Thema werden die veralteten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Features beschrieben, die in der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
   
  Es gibt keine veralteten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   

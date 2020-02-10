@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871537"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
@@ -45,26 +45,26 @@ ms.locfileid: "62871537"
   
  Die folgenden Verfahren gelten für das Verschieben von Datenbankdateien innerhalb derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Zum Verschieben einer Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder auf einen anderen Server können Sie die Vorgänge [Sichern und Wiederherstellen](../backup-restore/back-up-and-restore-of-sql-server-databases.md) oder [Trennen und Anfügen](move-a-database-using-detach-and-attach-transact-sql.md) verwenden.  
   
- Für die Prozeduren in diesem Thema ist der logische Name der Datenbankdateien erforderlich. Zum Abrufen des Namens führen Sie eine Abfrage für die Namensspalte in der [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)-Katalogsicht aus.  
+ Für die Prozeduren in diesem Thema ist der logische Name der Datenbankdateien erforderlich. Zum Abrufen des Namens führen Sie eine Abfrage für die Namensspalte in der [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) -Katalogsicht aus.  
   
 > [!IMPORTANT]  
 >  Wenn Sie eine Systemdatenbank verschieben und anschließend die master-Datenbank neu erstellen, müssen Sie die Systemdatenbank erneut verschieben, da bei der Neuerstellung alle Systemdatenbanken an ihrem standardmäßigen Speicherort installiert werden.  
   
 ##  <a name="Intro"></a> **In diesem Thema**  
   
--   [Zur geplanten Verschiebung und planmäßigen Wartung-Prozedur](#Planned)  
+-   [Prozeduren für geplante Verschiebungen und geplante Datenträger Wartung](#Planned)  
   
--   [Prozedur zur Wiederherstellung nach Fehlern](#Failure)  
+-   [Prozedur zur Fehlerwiederherstellung](#Failure)  
   
--   [Verschieben der master-Datenbank](#master)  
+-   [Verschieben der Master-Datenbank](#master)  
   
 -   [Verschieben der Ressourcendatenbank](#Resource)  
   
--   [Nächster Schritt: Nach dem Verschieben aller Systemdatenbanken](#Follow)  
+-   [Nachverfolgung: nach dem Verschieben aller System Datenbanken](#Follow)  
   
 -   [Beispiele](#Examples)  
   
-##  <a name="Planned"></a> Prozedur zur geplanten Verschiebung und planmäßigen Datenträgerwartung  
+##  <a name="Planned"></a>Prozeduren für geplante Verschiebungen und geplante Datenträger Wartung  
  Zum Verschieben von Systemdatenbankdaten- oder Protokolldateien im Rahmen einer geplanten Verschiebung oder planmäßiger Wartungsarbeiten führen Sie die folgenden Schritte aus: Diese Prozedur gilt für alle Systemdatenbanken mit Ausnahme der master- und Resource-Datenbanken.  
   
 1.  Führen Sie für jede zu verschiebende Datei die folgende Anweisung aus.  
@@ -101,7 +101,7 @@ ms.locfileid: "62871537"
   
 2.  Überprüfen Sie, ob Datenbank-E-Mail funktionsfähig ist, indem Sie eine Test-E-Mail senden.  
   
-##  <a name="Failure"></a> Prozedur zur Wiederherstellung nach Fehlern  
+##  <a name="Failure"></a>Prozedur zur Fehlerwiederherstellung  
  Wenn eine Datei aufgrund eines Hardwarefehlers verschoben werden muss, müssen Sie die folgenden Schritte ausführen, um die Datei an einen neuen Speicherort zu verschieben: Diese Prozedur gilt für alle Systemdatenbanken mit Ausnahme der master- und Resource-Datenbanken.  
   
 > [!IMPORTANT]  
@@ -149,12 +149,12 @@ ms.locfileid: "62871537"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> Verschieben der master-Datenbank  
+##  <a name="master"></a>Verschieben der Master-Datenbank  
  Führen Sie die folgenden Schritte aus, um die master-Datenbank zu verschieben.  
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, auf **Microsoft SQL Server 2005**, auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)** ), und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)**), und wählen Sie **Eigenschaften**aus.  
   
 3.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server (***Instanzname***)** auf die Registerkarte **Startparameter**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "62871537"
   
 7.  Verschieben Sie die Dateien master.mdf und mastlog.ldf an den neuen Speicherort.  
   
-8.  Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+8.  Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 9. Überprüfen Sie die Dateiänderung für die master-Datenbank, indem Sie die folgende Abfrage ausführen.  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871537"
     GO  
     ```  
   
-##  <a name="Resource"></a> Verschieben der Ressourcendatenbank  
+##  <a name="Resource"></a>Verschieben der Ressourcendatenbank  
  Der Speicherort der Ressourcendatenbank lautet \<*Laufwerk*>:\Programme\Microsoft SQL Server\MSSQL\<Version>.\<*instance_name*>\MSSQL\Binn\\. Die Datenbank kann nicht verschoben werden.  
   
-##  <a name="Follow"></a> Anschlussaufgaben: Nach dem Verschieben aller Systemdatenbanken  
+##  <a name="Follow"></a>Nachverfolgung: nach dem Verschieben aller System Datenbanken  
  Wenn Sie alle Systemdatenbanken auf ein neues Laufwerk oder Volume bzw. auf einen anderen Server mit einem anderen Laufwerkbuchstaben verschoben haben, führen Sie die folgenden Updates aus.  
   
 -   Ändern Sie den Pfad des SQL Server-Agent-Protokolls. Wenn Sie diesen Pfad nicht aktualisieren, kann SQL Server-Agent nicht gestartet werden.  
@@ -209,7 +209,7 @@ ms.locfileid: "62871537"
   
 2.  Klicken Sie mit der rechten Maustaste auf **Fehlerprotokolle** , und klicken Sie auf **Konfigurieren**.  
   
-3.  Geben Sie im Dialogfeld **Fehlerprotokolle des SQL Server-Agents konfigurieren** den neuen Speicherort der Datei SQLAGENT.OUT an. Der Standardspeicherort ist c:\Programme\Microsoft SQL Server\MSSQL12. < Instanzname > \MSSQL\Log\\.  
+3.  Geben Sie im Dialogfeld **Fehlerprotokolle des SQL Server-Agents konfigurieren** den neuen Speicherort der Datei SQLAGENT.OUT an. Der Standard Speicherort ist "c:\Programme\Microsoft SQL server\mssql12. <instance_name> \MSSQL\LOG\\".  
   
 #### <a name="change-the-database-default-location"></a>Ändern des Standardspeicherorts der Datenbank  
   
@@ -221,7 +221,7 @@ ms.locfileid: "62871537"
   
 4.  Starten und beenden Sie den SQL Server-Dienst, um die Änderung abzuschließen.  
   
-##  <a name="Examples"></a> Beispiele  
+##  <a name="Examples"></a>Beispiele  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. Verschieben der tempdb-Datenbank  
  Im folgenden Beispiel werden die `tempdb` -Daten- und Protokolldatei im Rahmen einer geplanten Verschiebung an einen neuen Speicherort verschoben.  
@@ -263,16 +263,16 @@ ms.locfileid: "62871537"
   
 5.  Löschen Sie die Dateien `tempdb.mdf` und `templog.ldf` am ursprünglichen Speicherort.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ressourcendatenbank](resource-database.md)   
  [tempdb-Datenbank](tempdb-database.md)   
  [master-Datenbank](master-database.md)   
  [msdb-Datenbank](msdb-database.md)   
  [model-Datenbank](model-database.md)   
- [Verschieben von Benutzerdatenbanken](move-user-databases.md)   
+ [Verschieben von Benutzer Datenbanken](move-user-databases.md)   
  [Verschieben von Datenbankdateien](move-database-files.md)   
- [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Starten, anhalten, anhalten, fortsetzen, Neustarten des Datenbank-Engine, SQL Server-Agent oder SQL Server-Browser Dienstanbieter](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Neuerstellen von Systemdatenbanken](system-databases.md)  
   
   

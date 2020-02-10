@@ -1,5 +1,5 @@
 ---
-title: Verpacken der Paketkonfigurationsplaner | Microsoft-Dokumentation
+title: Paket Konfigurations Planer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056967"
 ---
 # <a name="package-configurations-organizer"></a>Paketkonfigurationsplaner
@@ -32,10 +32,11 @@ ms.locfileid: "66056967"
 > [!NOTE]  
 >  Wenn Paketkonfigurationen in der bevorzugten Reihenfolge geladen werden, werden die Konfigurationen in der Reihenfolge geladen, in der sie im Dialogfeld **Paketkonfigurationsplaner** angezeigt werden, wobei mit der Konfiguration am Anfang der Liste begonnen wird. Zur Laufzeit werden Paketkonfigurationen möglicherweise aber nicht in der bevorzugten Reihenfolge geladen. Beispielsweise werden übergeordnete Paketkonfigurationen nach Konfigurationen anderer Typen geladen.  
   
- Paketkonfigurationen aktualisieren die Werte der Eigenschaften von Paketobjekten zur Laufzeit. Beim Laden eines Pakets werden die beim Entwickeln des Pakets festgelegten Werte durch die Werte der Konfigurationen ersetzt. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt unterschiedliche Konfigurationstypen. Beispielsweise können Sie eine XML-Datei mit mehreren möglichen Konfigurationen oder eine Umgebungsvariable mit einer einzigen enthaltenen Konfiguration verwenden. Weitere Informationen finden Sie unter [Package Configurations](../../2014/integration-services/package-configurations.md).  
+ Paketkonfigurationen aktualisieren die Werte der Eigenschaften von Paketobjekten zur Laufzeit. Beim Laden eines Pakets werden die beim Entwickeln des Pakets festgelegten Werte durch die Werte der Konfigurationen ersetzt. 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt unterschiedliche Konfigurationstypen. Beispielsweise können Sie eine XML-Datei mit mehreren möglichen Konfigurationen oder eine Umgebungsvariable mit einer einzigen enthaltenen Konfiguration verwenden. Weitere Informationen finden Sie unter [Package Configurations](../../2014/integration-services/package-configurations.md).  
   
-## <a name="options"></a>Optionen  
- **Paketkonfigurationen aktivieren**  
+## <a name="options"></a>Tastatur  
+ **Paket Konfigurationen aktivieren**  
  Wählen Sie diese Option aus, um mit dem Paket Konfigurationen zu verwenden.  
   
  **Konfigurationsname**  
@@ -44,28 +45,28 @@ ms.locfileid: "66056967"
  **Konfigurationstyp**  
  Zeigt den Typ des Speicherorts von Konfigurationen an.  
   
- **Konfigurationszeichenfolge**  
+ **Konfigurations Zeichenfolge**  
  Zeigt den Speicherort der Konfigurationswerte an. Der Speicherort kann der Pfad einer Datei, der Name einer Umgebungsvariablen, der Name einer Variablen für das übergeordnete Paket, ein Registrierungsschlüssel oder der Name einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabelle sein.  
   
  **Zielobjekt**  
  Zeigt den Namen des Objekts an, das von der Konfiguration aktualisiert wird. Wenn es sich bei der Konfiguration um eine XML-Konfigurationsdatei oder eine SQL Server-Tabelle handelt, ist die Spalte leer, da die Konfiguration mehrere Objekte enthalten kann.  
   
- **Zieleigenschaft**  
+ **Ziel Eigenschaft**  
  Zeigt den Namen der durch die Konfiguration geänderten Eigenschaft an. Diese Spalte ist leer, wenn der Konfigurationstyp mehrere Konfigurationen unterstützt.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt mithilfe des Paketkonfigurationsassistenten eine Konfiguration hinzu.  
   
  **Bearbeiten**  
  Bearbeitet eine vorhandene Konfiguration, indem der Paketkonfigurationsassistent erneut ausgeführt wird.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Konfiguration aus, und klicken Sie auf **Entfernen**.  
   
- **Pfeile**  
+ **Arrows**  
  Wählen Sie eine Konfiguration aus, und verschieben Sie sie mithilfe der Pfeile in der Liste nach oben oder nach unten. Konfigurationen werden in der Reihenfolge geladen, in der sie in der Liste angezeigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)  
   
   

@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054036"
 ---
 # <a name="metadata-master-data-services"></a>Metadaten (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] handelt es sich bei benutzerdefinierten Metadaten um Informationen, mit denen Sie die Modellobjekte beschreiben. Sie möchten z. B. die Besitzer eines bestimmten Modells oder einer Entität oder die Quellsysteme verfolgen, die Daten für eine Entität bereitstellen.  
   
- Benutzerdefinierte Metadaten wird von einem Modell mit dem Namen verwaltet **Metadaten**. Dieses Modell ist automatisch enthalten, wenn [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] installiert ist, und es ist allen anderen MDS-Modellen ähnlich, mit dem Unterschied, dass Sie keine Versionen erstellen können.  
+ Benutzerdefinierte Metadaten werden von einem Modell verwaltet, das als **Metadaten**bezeichnet wird. Dieses Modell wird bei der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Installation von automatisch eingeschlossen und ähnelt allen anderen MDS-Modellen, mit dem Unterschied, dass Sie keine Versionen erstellen können.  
   
  Nach dem Ausfüllen des Metadatenmodells mit benutzerdefinierten Metadaten können Sie sie in Abonnementsichten einfügen, damit sie von abonnierenden Systemen verwendet werden können.  
   
 ## <a name="metadata-entities"></a>Metadatenentitäten  
- Das Modell Metadaten umfasst fünf Entitäten, von denen jede einen Typ eines Masterdaten-Modellobjekts darstellt, das benutzerdefinierte Metadaten unterstützt. Z. B. die **Modell-Metadatendefinition** Entität enthält Elemente, die Modelle, darstellen und die **Attribut-Metadatendefinition** -Entität verfügt über Elemente, die alle Attribute in allen Modellen stehen.  
+ Das Modell Metadaten umfasst fünf Entitäten, von denen jede einen Typ eines Masterdaten-Modellobjekts darstellt, das benutzerdefinierte Metadaten unterstützt. Beispielsweise enthält die **Definition der modellmetadatendefinition** Elemente, die Modelle darstellen, und die **Attribut Metadaten-Definitions** Entität verfügt über Member, die alle Attribute in allen Modellen darstellen.  
   
- Um Metadaten für ein Modellobjekt zu definieren, füllen Sie die Attribute eines dieser Elemente auf. Z. B. in der **Entitäts-Metadatendefinition** Entität können Sie die Description-Attribut des Price-Elements mit dem Text auffüllen: **Der Produktpreis beim Verkauf an einen Kunden**.  
+ Um Metadaten für ein Modellobjekt zu definieren, füllen Sie die Attribute eines dieser Elemente auf. Beispielsweise können Sie in der Entität **Entitäts-Metadatendefinition** das Beschreibungs Attribut des Price-Members mit dem Text Auffüllen: **dem Produkt Preis, wenn er an einen Kunden verkauft**wird.  
   
  Die Elemente im Metadatenmodell werden automatisch immer dann aktualisiert, wenn Modellobjekte, die benutzerdefinierte Metadaten unterstützen, hinzugefügt oder gelöscht werden.  
   
@@ -47,17 +47,17 @@ ms.locfileid: "66054036"
   
 -   Ein Freiformattribut mit dem Namen "Datum der letzten Überprüfung", mit dem Sie das Datum verfolgen, an dem ein Objekt zuletzt vom Besitzer überprüft wurde.  
   
--   Ein domänenbasiertes Attribut mit dem Namen Quellen, die Sie zum Nachverfolgen und verwalten die Quellsysteme, die Interaktion verwenden mit der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Instanz.  
+-   Ein domänenbasiertes Attribut mit dem Namen sources, das Sie zum Nachverfolgen und Verwalten der Quell Systeme verwenden, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] die mit der Instanz interagieren.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Fügen Sie einem Modellobjekt Metadaten hinzu.|[Hinzufügen von Metadaten &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
+|Fügen Sie einem Modellobjekt Metadaten hinzu.|[Metadaten &#40;Master Data Services hinzufügen&#41;](add-metadata-master-data-services.md)
 |&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Exportieren von Daten &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Daten &#40;Master Data Services werden exportiert&#41;](overview-exporting-data-master-data-services.md)  
   
   

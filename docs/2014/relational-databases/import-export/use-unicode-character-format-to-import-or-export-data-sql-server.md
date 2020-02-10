@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011651"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
@@ -37,25 +37,25 @@ ms.locfileid: "66011651"
  Wenn Sie andere Feld- und Zeilenabschlusszeichen als die standardmäßig durch das Unicode-Zeichenformat vorgegebenen verwenden möchten, informieren Sie sich unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Befehlsoptionen für das Unicode-Zeichenformat  
- Sie können Daten im Unicode-Zeichenformat in eine Tabelle importieren, indem Sie **bcp**, BULK INSERT oder INSERT ... SELECT \* FROM OPENROWSET(BULK...). Für einen **bcp**-Befehl oder eine BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
+ Sie können Daten im Unicode-Zeichenformat in eine Tabelle importieren, indem Sie **bcp**, BULK INSERT oder INSERT... Select \* FROM OPENROWSET (BULK...). Bei einem **bcp** -Befehl oder einer BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ...  SELECT * FROM OPENROWSET(BULK...) -Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
   
  Das Unicode-Zeichenformat wird von den folgenden Befehlszeilenoptionen unterstützt:  
   
-|Befehl|Option|Beschreibung|  
+|Get-Help|Option|BESCHREIBUNG|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|Verwendet das Unicode-Zeichenformat|  
-|BULK INSERT|DATAFILETYPE **='** widechar **'**|Verwendet das Unicode-Zeichenformat beim Massenimport von Daten|  
+|BULK INSERT|DataFileType **= '** widechar **'**|Verwendet das Unicode-Zeichenformat beim Massenimport von Daten|  
   
- Weitere Informationen finden Sie unter [bcp (Hilfsprogramm](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+ Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen den Massenexport von Unicode-Zeichendaten mithilfe von **bcp** und den Massenimport derselben Daten mithilfe von BULK INSERT.  
   
 ### <a name="sample-table"></a>Beispieltabelle  
- Für die Beispiele muss in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Beispieldatenbank unter dem `myTestUniCharData`-Schema eine Tabelle namens `dbo` erstellt werden. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie Folgendes aus, um diese Tabelle im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor zu erstellen:  
+ Für die Beispiele muss in der `myTestUniCharData`-Beispieldatenbank unter dem [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Schema eine Tabelle namens `dbo` erstellt werden. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie Folgendes aus, um diese Tabelle im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor zu erstellen:  
   
 ```  
 USE AdventureWorks2012;  
@@ -81,10 +81,10 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 ### <a name="using-bcp-to-bulk-export-unicode-character-data"></a>Verwenden von "bcp" für den Massenexport von Unicode-Zeichendaten  
  Verwenden Sie zum Exportieren von Daten aus der Tabelle in die Datendatei **bcp** mit der Option **out** und den folgenden Qualifizierern:  
   
-|Qualifizierer|Description|  
+|Qualifizierer|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**-w**|Gibt das Unicode-Zeichenformat an|  
-|**-t** `,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: Das standardmäßige Feldabschlusszeichen ist das Unicode-Zeichen (\t). Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t**`,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: das standardmäßige Feld Abschluss Zeichen ist das Tabstopp-Unicode-Zeichen (\t). Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
  Im folgenden Beispiel wird ein Massenexport von Daten im Unicode-Zeichenformat aus der `myTestUniCharData`-Tabelle in eine neue Datendatei ausgeführt. Diese Datendatei heißt `myTestUniCharData-w.Dat` und verwendet das Komma (`,`) als Feldabschlusszeichen. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  
@@ -95,7 +95,7 @@ bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, 
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-unicode-character-data"></a>Verwenden von BULK INSERT für den Massenimport von Unicode-Zeichendaten  
- Im folgenden Beispiel wird `BULK INSERT` zum Importieren der Daten aus der Datendatei `myTestUniCharData-w.Dat` in die `myTestUniCharData`-Tabelle verwendet. Das nicht standardmäßige Feldabschlusszeichen (`,`) muss in der Anweisung deklariert werden. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
+ Im folgenden Beispiel wird `BULK INSERT` zum Importieren der Daten aus der Datendatei `myTestUniCharData-w.Dat` in die `myTestUniCharData`-Tabelle verwendet. Das nicht standardmäßige Feldabschlusszeichen (`,`) muss in der Anweisung deklariert werden. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks2012;  
@@ -113,9 +113,9 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
+ **So verwenden Sie Datenformate für Massen Import oder Massen Export**  
   
--   [Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
@@ -123,11 +123,11 @@ GO
   
 -   [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../collations/collation-and-unicode-support.md)  
   
   

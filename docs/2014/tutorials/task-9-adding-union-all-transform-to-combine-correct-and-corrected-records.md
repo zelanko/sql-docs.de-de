@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 9: Hinzufügen von Union All Transformation um richtige und korrigierte Datensätze zu kombinieren. | Microsoft-Dokumentation'
+title: 'Aufgabe 9: Hinzufügen der Transformation für Union all zum kombinieren richtiger und korrigierter Datensätze | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,38 +11,38 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b160b6e513ad866126df8b401b82ee1270be84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489655"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Aufgabe 9: Hinzufügen der Transformation UNION ALL zur Kombination richtiger und korrigierter Datensätze
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Aufgabe 9: Hinzufügen der Transformation UNION ALL, um richtige und korrigierte Datensätze zu kombinieren
   In dieser Aufgabe fügen Sie dem Datenfluss die Transformation UNION ALL hinzu. Die Transformation für UNION ALL kombiniert mehrere Eingaben zu einer einzigen Ausgabe. In Ihrem Szenario kombiniert sie richtige und korrigierte Datensätze zu einem Datenstrom.  
   
-1.  Drag & Drop **Union All** Transformationen von **Common** Teil der **SSIS-Toolbox** auf die **Datenfluss** Registerkarte, und platzieren Sie es unter **Wählen Sie die richtige und korrigierte Datensätze**.  
+1.  Ziehen Sie die Transformation **Union all** Transform aus **Common** section der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** , und platzieren Sie Sie unter **richtige und korrigierte Datensätze auswählen**.  
   
-2.  Mit der rechten Maustaste **Union All** transformiert die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Combine Correct and Corrected Records**, und drücken Sie die **EINGABETASTE**.  
+2.  Klicken Sie mit der rechten Maustaste auf **Union all** Transform auf der Registerkarte **Datenfluss** , und klicken Sie auf **Umbenennen** Geben **Sie** **richtige und korrigierte Datensätze zusammenfassen**ein  
   
-     ![Kombinieren richtiger und korrigierter Datensätze korrigierter Datensätze](../../2014/tutorials/media/et-addinguattocombinecacrecords-01.jpg "kombinieren richtiger und korrigierter Datensätze korrigierter Datensätze")  
+     ![Kombinieren richtiger und korrigierter Datensätze](../../2014/tutorials/media/et-addinguattocombinecacrecords-01.jpg "Kombinieren richtiger und korrigierter Datensätze")  
   
-3.  Herstellen einer mit **Pick Correct and Corrected Records** zu **Combine Correct and Corrected Records** in die **Datenfluss** Registerkarte mithilfe des blauen Konnektors. Daraufhin sollte die **Eingabe/Ausgabe-Auswahl** Dialogfeld.  
+3.  Verbinden Sie **richtige und korrigierte Datensätze** , um **korrekte und korrigierte Datensätze** auf der Registerkarte " **Datenfluss** " mit dem blauen Connector zu kombinieren. Das Dialogfeld **Eingabe Ausgabe Auswahl** sollte angezeigt werden.  
   
-4.  In der **e/a** wählen Sie im Dialogfeld **richtig** für **Ausgabe** , und klicken Sie auf **OK**.  
+4.  Wählen Sie im Dialogfeld **Eingabe Ausgabe** die Option für **Ausgabe** **korrigieren** aus, und klicken Sie auf **OK**.  
   
-     ![Geben Sie im Dialogfeld Ausgabe](../../2014/tutorials/media/et-addinguattocombinecacrecords-02.jpg "Eingabe Ausgabe Spaltenauswahl (Dialogfeld)")  
+     ![Eingabe-/Ausgabe-Auswahl (Dialogfeld)](../../2014/tutorials/media/et-addinguattocombinecacrecords-02.jpg "Eingabe-/Ausgabe-Auswahl (Dialogfeld)")  
   
-5.  Verschieben Sie den Konnektor mit der Bezeichnung **richtig** links per Drag & Drop den Punkt am Ende des Konnektors nach links.  
+5.  Verschieben Sie den Connector mit dem Titel **richtig** nach links, indem Sie den Punkt am Ende des Verbindungs Punkts nach links ziehen und ablegen.  
   
-     ![Herstellen einer mit richtigen Datensätzen zum Kombinieren richtiger und korrigierter Datensätze](../../2014/tutorials/media/et-addinguattocombinecacrecords-03.jpg "Herstellen einer mit richtigen Datensätzen zum Kombinieren richtiger und korrigierter Datensätze")  
+     ![Verbinden mit richtigen Datensätzen zum Kombinieren richtiger und korrigierter Datensätze](../../2014/tutorials/media/et-addinguattocombinecacrecords-03.jpg "Verbinden mit richtigen Datensätzen zum Kombinieren richtiger und korrigierter Datensätze")  
   
-6.  Bei Auswahl von **Pick Correct and Corrected Records** transformieren, sollte ein weiterer blauen Konnektor angezeigt werden. Ziehen Sie diesen blauen Konnektor zu **Combine Correct and Corrected Records**.  
+6.  Wenn Sie Transformation für **richtige und korrigierte Datensätze** auswählen auswählen, sollte ein weiterer blauer Connector angezeigt werden. Ziehen Sie diesen blauen Connector, um **korrekte und korrigierte Datensätze zu kombinieren**  
   
      ![Verbinden mit korrigierten Datensätzen zum Kombinieren richtiger und korrigierter Datensätze](../../2014/tutorials/media/et-addinguattocombinecacrecords-04.jpg "Verbinden mit korrigierten Datensätzen zum Kombinieren richtiger und korrigierter Datensätze")  
   
-7.  Dies **Connector** sollte die Bezeichnung **korrigiert**. Da Sie nur zwei Bedingungen vorliegen **richtig** und **korrigiert**, und eine Bedingung bereits verwendet wurde, wird die **Eingabe/Ausgabe-Auswahl** diesmal im Dialogfeld nicht angezeigt. Wenn sich die Konnektoren überlappen, verschieben Sie einen nach links und den anderen nach rechts, indem Sie den Konnektor nach links bzw. rechts ziehen.  
+7.  Dieser **Connector** sollte mit dem Titel **korrigiert**versehen werden. Da nur zwei Bedingungen **korrekt** und **korrigiert**sind und bereits eine Bedingung verwendet wurde, wird das Dialogfeld Eingabe- **/ausgabeauswahl** nicht angezeigt. Wenn sich die Konnektoren überlappen, verschieben Sie einen nach links und den anderen nach rechts, indem Sie den Konnektor nach links bzw. rechts ziehen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung um Duplikate zu identifizieren](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung, um Duplikate zu identifizieren](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

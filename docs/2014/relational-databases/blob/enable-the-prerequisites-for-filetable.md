@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4e4679a6022a37a72ce7083d3467bbbccd69f45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010168"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
@@ -89,7 +89,7 @@ GO
   
  In der FileTable-Ordnerhierarchie wird dieses Verzeichnis auf Datenbankebene das untergeordnete Element des Freigabenamens, das für FILESTREAM auf Instanzebene angegeben wurde, und das übergeordnete Element von den in der Datenbank erstellten FileTables. Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md).  
   
-###  <a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für Dateitabellen auf Datenbankebene  
+###  <a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
  Der angegebene Name muss in der Instanz für Verzeichnisse auf Datenbankebene eindeutig sein.  
   
  **Angeben eines Verzeichnisses für FileTables mit Transact-SQL**  
@@ -139,7 +139,7 @@ GO
   
 ###  <a name="ReqDirectory"></a> Anforderungen und Einschränkungen für das Verzeichnis auf Datenbankebene  
   
--   Das Festlegen von **DIRECTORY_NAME** ist beim Aufrufen von **CREATE DATABASE** oder **ALTER DATABASE**optional. Wenn Sie keinen Wert für **DIRECTORY_NAME**angeben, bleibt der Verzeichnisname NULL. Sie können jedoch erst FileTables in der Datenbank erstellen, wenn Sie einen Wert für **DIRECTORY_NAME** auf Datenbankebene angeben.  
+-   Das Festlegen von **DIRECTORY_NAME** ist beim Aufrufen von **CREATE DATABASE** oder **ALTER DATABASE** optional. Wenn Sie keinen Wert für **DIRECTORY_NAME** angeben, bleibt der Verzeichnisname NULL. Sie können jedoch erst FileTables in der Datenbank erstellen, wenn Sie einen Wert für **DIRECTORY_NAME** auf Datenbankebene angeben.  
   
 -   Der Verzeichnisname, den Sie angeben, muss den Anforderungen des Dateisystems im Hinblick auf einen gültigen Verzeichnisnamen entsprechen.  
   

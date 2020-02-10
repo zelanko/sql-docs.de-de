@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011579"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Konfigurieren und Verwalten von Filtern für die Suche
@@ -25,7 +25,7 @@ ms.locfileid: "66011579"
   
  Ein bestimmter Filter ist immer spezifisch für einen bestimmten Dokumenttyp (DOC, PDF, XLS, XML usw.). Diese Filter implementieren die IFilter-Schnittstelle. Weitere Informationen zu diesen Dokumenttypen erhalten Sie, indem Sie die [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) -Katalogsicht abfragen.  
   
- Binäre Dokumente können in einer einzelnen `varbinary(max)`- oder `image`-Spalte gespeichert werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wählt für jedes Dokument anhand der Dateierweiterung den entsprechenden Filter aus. Da die Dateierweiterung nicht sichtbar ist, wenn die Datei in einer `varbinary(max)`- oder `image`-Spalte gespeichert wird, muss die Dateierweiterung (DOC, XLS, PDF usw.) in einer separaten Spalte der Tabelle gespeichert werden. Diese wird als Typspalte bezeichnet. Die Typspalte kann einen beliebigen zeichenbasierten Datentyp aufweisen. Sie enthält die Dokumentdateierweiterung, beispielsweise DOC für ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word-Dokument. In der **Dokument** -Tabelle [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], **Dokument** Spalte ist vom Typ `varbinary(max)`, und die Typspalte **FileExtension**, ist vom Typ `nvarchar(8)`.  
+ Binäre Dokumente können in einer einzelnen `varbinary(max)`- oder `image`-Spalte gespeichert werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wählt für jedes Dokument anhand der Dateierweiterung den entsprechenden Filter aus. Da die Dateierweiterung nicht sichtbar ist, wenn die Datei in einer `varbinary(max)`- oder `image`-Spalte gespeichert wird, muss die Dateierweiterung (DOC, XLS, PDF usw.) in einer separaten Spalte der Tabelle gespeichert werden. Diese wird als Typspalte bezeichnet. Die Typspalte kann einen beliebigen zeichenbasierten Datentyp aufweisen. Sie enthält die Dokumentdateierweiterung, beispielsweise DOC für ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word-Dokument. In der **Document** -Tabelle [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]in hat die **Document** -Spalte den `varbinary(max)`Typ, und die Typspalte **File Extension**hat den Typ `nvarchar(8)`.  
   
 > [!NOTE]  
 >  Ein Filter kann ggf. eingebettete Objekte im übergeordneten Objekt behandeln. Dies ist abhängig von der Implementierung des Filters. Filter werden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jedoch nicht für das Verfolgen von Links zu anderen Objekten konfiguriert.  
@@ -42,7 +42,7 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
  [FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   

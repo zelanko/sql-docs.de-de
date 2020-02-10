@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011546"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
@@ -31,12 +31,12 @@ ms.locfileid: "66011546"
   
  Der Vorgang, bei dem ein Volltextindex erstellt und verwaltet wird, wird als *Auffüllung* (oder *Durchforstung*) bezeichnet. Es gibt drei Auffüllungstypen für Volltextindizes: vollständige Auffüllungen, Auffüllungen mithilfe der Änderungsnachverfolgung sowie inkrementelle, auf Timestamps basierende Auffüllungen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](populate-full-text-indexes.md).  
   
-##  <a name="tasks"></a> Allgemeine Aufgaben  
- **Um einen Volltextindex zu erstellen.**  
+##  <a name="tasks"></a>Allgemeine Aufgaben  
+ **So erstellen Sie einen Volltextindex**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **Um einen Volltextindex zu ändern.**  
+ **So ändern Sie einen Volltextindex**  
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66011546"
   
  [In diesem Thema](#top)  
   
-##  <a name="structure"></a> Volltext-Indexstruktur  
+##  <a name="structure"></a>Voll Text Index-Struktur  
  Die Kenntnis der Struktur eines Volltextindex hilft Ihnen dabei, die Funktionsweise der Volltext-Engine zu verstehen. In diesem Thema wird der folgende Auszug der Tabelle **Dokument** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] als Beispieltabelle verwendet. Der Auszug enthält nur zwei Spalten, **DocumentID** und **Title** , und drei Zeilen der Tabelle.  
   
  Für dieses Beispiel wird davon ausgegangen, dass ein Volltextindex für die **Title** -Spalte erstellt wurde.  
@@ -70,7 +70,7 @@ ms.locfileid: "66011546"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Verwaltung|1|1|5|  
+|Wartung|1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -86,13 +86,13 @@ ms.locfileid: "66011546"
   
  Die **ColId** -Spalte enthält einen Wert, der einer bestimmten volltextindizierten Spalte entspricht.  
   
- Die `DocId` Spalte enthält Werte für die 8-Byte-Ganzzahl, die einen bestimmten Volltext-Schlüssel-Wert in einer volltextindizierten Tabelle zugeordnet. Diese Zuordnung ist notwendig, wenn der Volltextschlüssel kein ganzzahliger Datentyp ist. In solchen Fällen Zuordnungen zwischen volltextschlüsselwerten und `DocId` Werte werden in einer separaten Tabelle mit der Bezeichnung DocId-Zuordnungstabelle verwaltet. Um diese Zuordnungen abzufragen, verwenden Sie die gespeicherte Systemprozedur [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Um eine Suchbedingung zu erfüllen, müssen DocId-Werte aus der obigen Tabelle mit der DocId-Zuordnungstabelle verknüpft werden, um Zeilen aus der abgefragten Basistabelle abzurufen. Wenn der Volltextschlüsselwert der Basistabelle ein ganzzahliger Typ ist, wird der Wert direkt als DocID verwendet, und es ist keine Zuordnung erforderlich. Die Verwendung von ganzzahligen Volltextschlüsselwerten kann also zur Optimierung von Volltextabfragen beitragen.  
+ Die `DocId` -Spalte enthält Werte für eine 8-Byte-Ganzzahl, die einem bestimmten voll Text Schlüsselwert in einer voll Text indizierten Tabelle zugeordnet ist. Diese Zuordnung ist notwendig, wenn der Volltextschlüssel kein ganzzahliger Datentyp ist. In solchen Fällen werden Zuordnungen zwischen voll Text Schlüsselwerten und Werten `DocId` in einer separaten Tabelle verwaltet, die als docid-Zuordnungs Tabelle bezeichnet wird. Um diese Zuordnungen abzufragen, verwenden Sie die gespeicherte Systemprozedur [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Um eine Suchbedingung zu erfüllen, müssen DocId-Werte aus der obigen Tabelle mit der DocId-Zuordnungstabelle verknüpft werden, um Zeilen aus der abgefragten Basistabelle abzurufen. Wenn der Volltextschlüsselwert der Basistabelle ein ganzzahliger Typ ist, wird der Wert direkt als DocID verwendet, und es ist keine Zuordnung erforderlich. Die Verwendung von ganzzahligen Volltextschlüsselwerten kann also zur Optimierung von Volltextabfragen beitragen.  
   
  Die Spalte **Vorkommen** enthält einen ganzzahligen Wert. Für jeden DocId-Wert ist eine Liste von Vorkommenwerten vorhanden, die den relativen Wortoffsets des betreffenden Schlüsselworts innerhalb dieser DocId entsprechen. Die Vorkommenwerte sind zum Ermitteln von Ausdrucks- oder NEAR-Übereinstimmungen hilfreich, da z. B. Ausdrücke numerisch aufeinander folgende Vorkommenwerte besitzen. Zum Berechnen von Relevanzbewertungen erfüllen sie ebenfalls eine hilfreiche Funktion. So kann z. B. die Anzahl der Vorkommen eines Schlüsselworts in einer DocId zur Rangfolgenberechnung verwendet werden.  
   
  [In diesem Thema](#top)  
   
-##  <a name="fragments"></a> Volltext-Indexfragmente  
+##  <a name="fragments"></a>Voll Text Index Fragmente  
  Der logische Volltextindex wird normalerweise auf mehrere interne Tabellen aufgeteilt. Jede interne Tabelle wird als Volltextindexfragment bezeichnet. Einige dieser Fragmente enthalten ggf. aktuellere Daten als andere. Wenn Benutzer z. B. die folgende Zeile aktualisieren, deren DocId den Wert 3 hat, und für die Tabelle die automatische Änderungsnachverfolgung verwendet wird, wird ein neues Fragment erstellt.  
   
 |DocumentID|Titel|  
@@ -108,7 +108,7 @@ ms.locfileid: "66011546"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- Wie Sie in Fragment 2 sehen, müssen Volltextabfragen jedes Fragment intern abfragen und ältere Einträge verwerfen. Daher können zu viele Volltextindexfragmente im Volltextindex zu einer beträchtlichen Verringerung der Abfrageleistung führen. Um die Anzahl der Fragmente zu reduzieren, organisieren Sie den Volltextkatalog neu, indem Sie die REORGANIZE-Option der [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden. Diese Anweisung führt eine *Hauptzusammenführung*aus, sodass die Fragmente zu einem einzigen größeren Fragment zusammengeführt werden, und entfernt alle veralteten Einträge aus dem Volltextindex.  
+ Wie Sie in Fragment 2 sehen, müssen Volltextabfragen jedes Fragment intern abfragen und ältere Einträge verwerfen. Daher können zu viele Volltextindexfragmente im Volltextindex zu einer beträchtlichen Verringerung der Abfrageleistung führen. Um die Anzahl der Fragmente zu reduzieren, organisieren Sie den voll Text Katalog neu, indem Sie die reorganisierungs Option der [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden. Diese Anweisung führt eine *Hauptzusammenführung*aus, sodass die Fragmente zu einem einzigen größeren Fragment zusammengeführt werden, und entfernt alle veralteten Einträge aus dem Volltextindex.  
   
  Nach dem erneuten Organisieren würde der Beispielindex die folgenden Zeilen enthalten:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66011546"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Verwaltung|1|1|5|  
+|Wartung|1|1|5|  
 |Front|1|2|1|  
 |Rear|1|3|1|  
 |Reflector|1|2|2|  

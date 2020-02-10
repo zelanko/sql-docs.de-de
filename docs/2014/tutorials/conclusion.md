@@ -1,5 +1,5 @@
 ---
-title: Schlussbemerkung | Microsoft-Dokumentation
+title: Schlussfolgerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 77df2c78222619aee1874a9a6705cd9efe8c7a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485555"
 ---
-# <a name="conclusion"></a>Schlussbemerkung
+# <a name="conclusion"></a>Zusammenfassung
   In diesem Lernprogramm haben Sie gelernt, SQL Server Integration Services (SSIS), Master Data Services (MDS) und Data Quality Services (DQS) zusammen zu verwenden, um eine Enterprise Information Management (EIM)-Beispiellösung zu implementieren. Zunächst haben Sie mit dem Data Quality Client-Tool eine DQS-Wissensdatenbank mit Informationen zu Lieferanten zu erstellen. Dann haben Sie die Eingabelieferantendaten in einer Excel-Datei anhand der Wissensdatenbank bereinigt und die Lieferantendaten dann abgeglichen, indem Sie eine Abgleichsrichtlinie in der Wissensdatenbank verwendet haben, um Duplikate in den Daten zu identifizieren und zu entfernen. Anschließend haben Sie das MDS-Add-In für Excel verwendet, um die bereinigte und abgeglichene Lieferantenliste in MDS zu speichern. Zum Schluss haben Sie den gesamten Prozess vom Empfangen von Eingabedaten, Bereinigen und Abgleichen der Daten bis zum Speichern der Masterdaten in MDS automatisiert, indem Sie eine SSIS-Lösung erstellt haben.  
   
-## <a name="for-more-information"></a>Weitere Informationen:  
+## <a name="for-more-information"></a>Weitere Informationen finden Sie unter:  
   
- [Enterprise-Informationsmanagement (EIM): Zusammenführen von SSIS, DQS und MDS (Video)](https://go.microsoft.com/fwlink/?LinkId=258672)  
+ [Enterprise-Informationsmanagement (EIM): Kombinieren von SSIS, DQS und MDS (Video)](https://go.microsoft.com/fwlink/?LinkId=258672)  
   
   

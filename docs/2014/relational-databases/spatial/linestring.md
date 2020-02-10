@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 6bc07f8770e6cd7d1fb1e4b4e6e40ca8b1c5256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014203"
 ---
 # <a name="linestring"></a>LineString
@@ -25,7 +25,7 @@ ms.locfileid: "66014203"
 ## <a name="linestring-instances"></a>LineString-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für `LineString`-Instanzen.  
   
- ![Beispiele für Instanzen der LineString-Geometry](../../database-engine/media/linestring.gif "Examples of geometry LineString instances")  
+ ![Beispiele von LineString-geometry-Instanzen](../../database-engine/media/linestring.gif "Beispiele von LineString-geometry-Instanzen")  
   
  Folgendes wird dargestellt:  
   
@@ -46,7 +46,8 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` zeigt, dass eine `LineString`-Instanz zwar akzeptiert werden kann, dass sie möglicherweise jedoch nicht gültig ist.  
+ 
+  `@g3` zeigt, dass eine `LineString`-Instanz zwar akzeptiert werden kann, dass sie möglicherweise jedoch nicht gültig ist.  
   
  Die folgende `LineString`-Instanz wird nicht akzeptiert. Sie löst eine `System.FormatException`aus.  
   
@@ -125,7 +126,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [STLength &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
  [STEndpoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   

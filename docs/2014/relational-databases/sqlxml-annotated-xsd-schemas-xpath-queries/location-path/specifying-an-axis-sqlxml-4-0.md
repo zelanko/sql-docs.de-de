@@ -1,5 +1,5 @@
 ---
-title: Angeben einer Achse (SQLXML 4.0) | Microsoft-Dokumentation
+title: Angeben einer Achse (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012647"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Angeben einer Achse (SQLXML 4.0)
@@ -33,31 +33,33 @@ ms.locfileid: "66012647"
   
      Enthält das untergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck (Speicherortpfad) Wählt aus dem aktuellen Kontextknoten darstellen, die alle die  **\<Kunden >** untergeordnete Elemente:  
+     Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle ** \<Kunden>** untergeordneten Knoten aus dem aktuellen Kontext Knoten aus:  
   
     ```  
     child::Customer  
     ```  
   
-     In der folgenden XPath-Abfrage ist `child` die Achse. `Customer` ist der Knotentest.  
+     In der folgenden XPath-Abfrage ist `child` die Achse. 
+  `Customer` ist der Knotentest.  
   
 -   `parent`  
   
      Enthält das übergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck wählt alle dem  **\<Kunden >** übergeordneten Elementen von der  **\<Reihenfolge >** untergeordnete Elemente:  
+     Der folgende XPath-Ausdruck wählt alle ** \<Kunden>** übergeordnete Elemente der ** \<Bestellung>** untergeordneten Elementen aus:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Dies entspricht exakt der Angabe `child::Customer`. In dieser XPath-Abfrage sind `child` und `parent` die Achsen. `Customer` und `Order` sind die Knotentests.  
+     Dies entspricht exakt der Angabe `child::Customer`. In dieser XPath-Abfrage sind `child` und `parent` die Achsen. 
+  `Customer` und `Order` sind die Knotentests.  
   
 -   `attribute`  
   
      Enthält das Attribut des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck wählt den **"CustomerID"** Attribut des Kontextknotens aus:  
+     Der folgende XPath-Ausdruck wählt das **CustomerID-** Attribut des Kontext Knotens aus:  
   
     ```  
     attribute::CustomerID  
@@ -67,7 +69,7 @@ ms.locfileid: "66012647"
   
      Enthält den Kontextknoten selbst.  
   
-     Der folgende XPath-Ausdruck wählt den aktuellen Knoten aus, ist dies die  **\<Reihenfolge >** Knoten:  
+     Der folgende XPath-Ausdruck wählt den aktuellen Knoten aus, wenn es sich ** \<um den Order>** -Knoten handelt:  
   
     ```  
     self::Order  

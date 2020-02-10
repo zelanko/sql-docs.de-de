@@ -1,5 +1,5 @@
 ---
-title: Paket- und Projektkennwort | Microsoft-Dokumentation
+title: Paket-und Projekt Kennwort | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056987"
 ---
 # <a name="package-and-project-password"></a>Paket- und Projektkennwort
   Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Kennwort**  
  Geben Sie das Kennwort ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Dialogfeld "Paket- und Projektschutzebene"](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   

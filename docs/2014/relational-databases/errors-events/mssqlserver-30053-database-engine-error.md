@@ -11,13 +11,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914357"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
     
 ## <a name="details"></a>Details  
   
@@ -56,11 +56,11 @@ ms.locfileid: "62914357"
 |Der Filterdaemonprozess wurde falsch konfiguriert.|Stellen Sie sicher, dass Sie das aktuelle Kennwort verwenden und dass die Anmeldung unter dem Filterdaemonkonto nicht von einer Domänenrichtlinie verhindert wird.|  
 |Auf der Serverinstanz wird eine große Abfragelast ausgeführt.|Führen Sie die Abfrage bei geringerer Auslastung erneut aus.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
- [Volltextsuche](../search/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
- [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Voll Text Suche](../search/full-text-search.md)   
+ [sp_help_fulltext_system_components &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [Konfigurieren und Verwalten von Wörter Trennungen und Wort Stamm Erkennungen für die Suche](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../search/configure-and-manage-filters-for-search.md)  
   
   

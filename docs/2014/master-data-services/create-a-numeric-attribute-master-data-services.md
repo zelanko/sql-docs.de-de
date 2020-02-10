@@ -14,24 +14,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483366"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Erstellen eines numerischen Attributs (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein numerisches Attribut, wenn Sie möchten, dass Benutzer eine Zahl als Attributwert eingeben.  
   
 > [!NOTE]  
->  Numerische Attribute weisen bestimmte Einschränkungen auf. Weitere Informationen finden Sie unter [Attributes &#40;Master Data Services&#41;](attributes-master-data-services.md).  
+>  Numerische Attribute weisen bestimmte Einschränkungen auf. Weitere Informationen finden Sie unter [Attribute &#40;Master Data Services&#41;](attributes-master-data-services.md).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   Eine Entität muss vorhanden sein, um das Attribut dafür erstellen zu können. Weitere Informationen finden Sie unter [Erstellen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
@@ -61,11 +61,11 @@ ms.locfileid: "65483366"
   
 9. Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
-10. Wählen Sie aus der Liste **Datentyp** **Zahl**aus.  
+10. Wählen Sie aus der Liste **Datentyp****Zahl**aus.  
   
 11. Geben Sie im Feld **Dezimalstellen** die Anzahl der Ziffern ein, die nach einem Dezimalzeichen eingegeben werden können.  
   
-12. Von der **Eingabeformat** wählen ein Format für negative Zahlen.  
+12. Wählen Sie in der Liste **Eingabemaske** ein Format für negative Zahlen aus.  
   
 13. Optional können Sie **Änderungsnachverfolgung aktivieren** auswählen, um Änderungen an Gruppen von Attributen nachzuverfolgen. Weitere Informationen finden Sie unter [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
@@ -73,10 +73,10 @@ ms.locfileid: "65483366"
   
 15. Klicken Sie auf der Seite **Entitätsverwaltung** auf **Entität speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Attribute &#40;Master Data Services&#41;](attributes-master-data-services.md)   
- [Ändern eines Attributnamens &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Ändern eines Attribut namens &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [Erstellen Sie ein Datei Attribut &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

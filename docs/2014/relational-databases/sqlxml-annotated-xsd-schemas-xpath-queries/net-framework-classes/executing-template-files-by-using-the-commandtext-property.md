@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Vorlagendateien mit der CommandText-Eigenschaft | Microsoft-Dokumentation
+title: Ausführen von Vorlagen Dateien mit der CommandText-Eigenschaft | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012512"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ausführen von Vorlagendateien mit der 'CommandText'-Eigenschaft
-  In diesem Beispiel wird veranschaulicht, wie die Vorlagendateien, die aus SQL- oder XPath-Abfragen bestehende Vorlagendateien mithilfe der CommandTextproperty angegeben werden können. Statt die SQL- oder XPath-Abfrage als der Wert der CommandText-Eigenschaft anzugeben, können Sie einen Dateinamen als Wert angeben. Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType.TemplateFile angegeben.  
+  In diesem Beispiel wird veranschaulicht, wie Vorlagen Dateien, die aus SQL-oder XPath-Abfragen bestehen, mithilfe von commandtextproperty angegeben werden können. Anstatt die SQL-oder XPath-Abfrage als Wert von CommandText anzugeben, können Sie einen Dateinamen als Wert angeben. Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType. TemplateFile angegeben.  
   
  Diese Vorlage wird von der Beispielanwendung ausgeführt:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66012512"
 </ROOT>  
 ```  
   
- Dies ist der C#-beispielanwendung. Um die Anwendung zu testen, speichern Sie die Vorlage (TemplateFile.xml), und führen Sie dann die Anwendung aus.  
+ Dies ist die c#-Beispielanwendung. Um die Anwendung zu testen, speichern Sie die Vorlage (TemplateFile.xml), und führen Sie dann die Anwendung aus.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  
@@ -79,7 +79,7 @@ class Test
   
 2.  Speichern Sie die in diesem Beispiel bereitgestellte XML-Vorlage in einem Ordner.  
   
-3.  Speichern Sie die c#-Code (DocSample.cs), der bereitgestellt wird, in diesem Beispiel im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
+3.  Speichern Sie den c#-Code (DocSample.cs), der in diesem Beispiel bereitgestellt wird, im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
   
 4.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   
@@ -91,7 +91,7 @@ class Test
   
 5.  Führen Sie DocSample.exe an der Eingabeaufforderung aus.  
   
- Wenn Sie einen Parameter in eine Vorlage übergeben, muss der Name des Parameters mit at-Zeichen beginnen (@); z. B. p.Name= "@ContactID", wobei p ein SqlXmlParameter-Objekt.  
+ Wenn Sie einen Parameter an eine Vorlage übergeben, muss der Parameter Name mit einem @-Zeichen (@) beginnen. beispielsweise p.Name = "@ContactID", wobei p ein SqlXmlParameter-Objekt ist.  
   
  Dies ist die aktualisierte Vorlage, die einen Parameter annimmt.  
   

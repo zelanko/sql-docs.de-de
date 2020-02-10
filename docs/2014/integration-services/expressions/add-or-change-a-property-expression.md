@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899018"
 ---
 # <a name="add-or-change-a-property-expression"></a>Hinzufügen oder Ändern eines Eigenschaftsausdrucks
@@ -43,7 +43,7 @@ ms.locfileid: "62899018"
   
     -   Geben Sie in die Spalte **Ausdruck** direkt einen Ausdruck ein oder ändern Sie ihn, und klicken Sie dann auf **OK**.  
   
-         -oder-  
+         Oder  
   
     -   Klicken Sie in der Ausdruckszeile der Eigenschaft auf die Auslassungspunkte (...), um den **Ausdrucks-Generator** zu öffnen.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "62899018"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Verwenden von Eigenschaftsausdrücken in Paketen](use-property-expressions-in-packages.md)   
  [Integration Services-Pakete &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
- [SQL Server Integration Services-Container](../control-flow/integration-services-containers.md)   
+ [Integration Services-Container](../control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../control-flow/integration-services-tasks.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   
- [Integration Services-Verbindungen &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](../connection-manager/integration-services-ssis-connections.md)   
  [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)  
   
   

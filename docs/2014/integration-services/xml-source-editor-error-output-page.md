@@ -1,5 +1,5 @@
 ---
-title: XML-Quellen-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
+title: Quellen-Editor für XML (Seite Fehlerausgabe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054312"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Quellen-Editor für XML (Seite Fehlerausgabe)
@@ -26,7 +26,7 @@ ms.locfileid: "66054312"
   
  Weitere Informationen zur XML-Quelle finden Sie unter [XML Source](data-flow/xml-source.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66054312"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für XML &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Quellen-Editor für XML &#40;Seite „Spalten“&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Quellen-Editor für XML-&#40;&#41;Seite Verbindungs-Manager](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Der Quellen-Editor für XML-&#40;Spalten&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Extrahieren von Daten mithilfe der XML-Quelle](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Importieren der Richtlinien auf eine einzelne Instanz | Microsoft-Dokumentation
+title: Importieren der Richtlinien in eine einzelne Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62865099"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importieren der Richtlinien auf eine einzelne Instanz
   In diesem Task importieren Sie die Best Practices-Richtlinien, die Sie in der richtlinienbasierten Verwaltung zeitgesteuert ausführen möchten, auf eine einzelne Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Sie müssen diese Prozedur auf einem Server ausführen, auf dem [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] oder eine höhere Version ausgeführt wird.  
   
 ### <a name="import-the-best-practices-policies-for-the-database-engine"></a>Importieren der Best Practices-Richtlinien für die Datenbank-Engine  
@@ -29,13 +29,13 @@ ms.locfileid: "62865099"
   
 2.  Erweitern Sie im Objekt-Explorer **Verwaltung**, und erweitern Sie dann **Richtlinienverwaltung**.  
   
-3.  Mit der rechten Maustaste **Richtlinien**, und klicken Sie dann auf **Importrichtlinie**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Richtlinien**und dann auf **Richtlinie importieren**.  
   
-4.  In der **importieren** Dialogfeld neben dem **zu importierende Dateien** klicken Sie auf die Auslassungspunkte ( **...** ) Schaltfläche.  
+4.  Klicken Sie im Dialogfeld **importieren** neben dem Feld **zu importierende Dateien** auf die Schaltfläche mit den Auslassungs Punkten (**...**).  
   
 5.  Wechseln Sie in der Liste **Suchen in** zum folgenden Ordner, in dem die Best Practices-Richtlinien enthalten sind:  
   
-     **C:\Programme\Microsoft Dateien (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+     **C:\Programme (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
     > [!NOTE]  
     >  Abhängig davon, wo die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Programmdateien installiert sind, ob ein 32-Bit- oder 64-Bit-Betriebssystem ausgeführt bzw. ein Sprachbezeichner verwendet wird, kann sich der Dateipfad ändern.  
@@ -46,7 +46,7 @@ ms.locfileid: "62865099"
   
 7.  Nachdem Sie alle Dateien ausgewählt haben, klicken Sie auf **Öffnen**.  
   
-8.  In der **importieren** Dialogfeld Feld, stellen Sie sicher, dass die **Richtlinienstatus** Liste nastaven NA hodnotu **Richtlinienstatus beim Import** (Standardeinstellung), und klicken Sie dann auf **OK**.  
+8.  Stellen Sie im Dialogfeld **importieren** sicher, dass die Liste **Richtlinien Status** für den **Richtlinien Status beim Import beibehalten** (Standardeinstellung) festgelegt ist, und klicken Sie dann auf **OK**.  
   
      Die Richtlinien werden dann unter der **Richtlinienverwaltung** in den Knoten **Richtlinien**importiert. Standardmäßig wird für die importierten Richtlinien der Auswertungsmodus "Bedarfsgesteuert" festgelegt.  
   

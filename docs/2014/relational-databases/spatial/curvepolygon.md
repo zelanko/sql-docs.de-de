@@ -10,19 +10,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014251"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Ein `CurvePolygon` ist eine von einem äußeren Begrenzungsring und null oder mehr inneren Ringe definierte topologisch geschlossene Fläche.  
   
 > [!IMPORTANT]  
->  Eine ausführliche Beschreibung und Beispiele für räumliche Funktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], einschließlich der `CurvePolygon` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen, `CurvePolygon` einschließlich des unter Typs, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
   
- Die folgenden Kriterien definieren Sie Attribute von einem `CurvePolygon` Instanz:  
+ Die folgenden Kriterien definieren die Attribute einer `CurvePolygon` -Instanz:  
   
 -   Die Begrenzung der `CurvePolygon`-Instanz wird durch den äußeren Ring und alle inneren Ringe definiert.  
   
@@ -55,7 +55,8 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` wird akzeptiert, obwohl sich die Z-Werte des Ausgangspunkts und des Endpunkts voneinander unterscheiden, da Z-Werte ignoriert werden. `@g5` wird akzeptiert, obwohl die `geography`-Typinstanz ungültig ist.  
+ `@g3` wird akzeptiert, obwohl sich die Z-Werte des Ausgangspunkts und des Endpunkts voneinander unterscheiden, da Z-Werte ignoriert werden. 
+  `@g5` wird akzeptiert, obwohl die `geography`-Typinstanz ungültig ist.  
   
  In den folgenden Beispielen wird `System.FormatException`ausgelöst.  
   
@@ -144,7 +145,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Speichern eines CurvePolygon mit nur einem äußeren Begrenzungsring  
+### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D: Speichern eines CurvePolygon mit nur einem äußeren Begrenzungsring  
  In diesem Beispiel wird veranschaulicht, wie ein einfacher Kreis in einer `CurvePolygon`-Instanz gespeichert wird (wobei der Kreis lediglich durch einen äußeren Begrenzungsring definiert wird):  
   
 ```sql  
@@ -181,7 +182,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  Sowohl @g1 als auch @g2 verwenden denselben äußeren Begrenzungsring (einen Kreis mit dem Radius 5), und für beide wird ein Quadrat als innerer Ring verwendet.  Die Instanz @g1 ist jedoch gültig, während die Instanz @g2 ungültig ist.  Der Grund für die Ungültigkeit von @g2 ist, dass der innere Ring die vom äußeren Ring begrenzte Fläche in vier separate Bereiche teilt.  Dies wird in der folgenden Zeichnung verdeutlicht:  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

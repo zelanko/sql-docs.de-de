@@ -1,5 +1,5 @@
 ---
-title: Anzeigen und Beenden von Paketen, die unter der Integration Services-Server | Microsoft-Dokumentation
+title: Anzeigen und Beenden von Paketen, die auf dem Integration Services-Server ausgeführt werden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054599"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Anzeigen und Beenden von auf dem Integration Services-Server ausgeführten Paketen
@@ -60,7 +60,7 @@ ms.locfileid: "66054599"
  Programmgesteuerter Zugriff auf die verwaltete API  
  Weitere Details finden Sie in den Informationen zum <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespace und den zugehörigen Klassen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführung von Projekten und Paketen](packages/run-integration-services-ssis-packages.md)   
  [Behandlung von Problemen in Berichten für die Paketausführung](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   

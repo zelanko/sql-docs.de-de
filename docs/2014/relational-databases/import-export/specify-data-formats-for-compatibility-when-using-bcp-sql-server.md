@@ -17,38 +17,38 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011824"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp (SQL Server)
-  In diesem Thema wird beschrieben, die datenformatattribute, feldspezifischen eingabeaufforderungen und das Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Formatdatei, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` Befehl. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  
+  In diesem Thema werden die Datenformat Attribute, feldspezifischen Eingabe Aufforderungen und das Speichern von Feld-nach-Feld-Daten in einer nicht-XML- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` Format Datei des-Befehls beschrieben. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  
   
 > [!NOTE]  
 >  Wenn Sie keine Erfahrung mit Datenformaten zum Importieren oder Exportieren von Daten haben, finden Sie Informationen unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
   
  **In diesem Thema:**  
   
--   [Bcp-Datenformatattribute](#bcpDataFormatAttr)  
+-   [bcp-Daten Format Attribute](#bcpDataFormatAttr)  
   
--   [Übersicht über die feldspezifischen Eingabeaufforderungen](#FieldSpecificPrompts)  
+-   [Übersicht über die feldspezifischen Eingabe Aufforderungen](#FieldSpecificPrompts)  
   
--   [Das Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Formatdatei](#FieldByFieldNonXmlFF)  
+-   [Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Format Datei](#FieldByFieldNonXmlFF)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="bcpDataFormatAttr"></a> bcp-Datenformatattribute  
+##  <a name="bcpDataFormatAttr"></a>bcp-Daten Format Attribute  
  Mit dem Befehl `bcp` können Sie die Struktur jedes Felds in einer Datendatei im Hinblick auf die folgenden Datenformatattribute angeben:  
   
 -   Dateispeichertyp  
   
-     Der *Dateispeichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format), als Zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, bei dem die implizite Konvertierung unterstützt wird, exportiert werden. Beispielsweise kann ein `smallint` als ein `int` kopiert werden. Benutzerdefinierte Datentypen werden als Basistypen exportiert. Weitere Informationen finden Sie unter [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
+     Der *Datei Speichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format), als Zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, bei dem die implizite Konvertierung unterstützt wird, exportiert werden. Beispielsweise kann ein `smallint` als ein `int` kopiert werden. Benutzerdefinierte Datentypen werden als Basistypen exportiert. Weitere Informationen finden Sie unter [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
   
 -   Präfixlänge  
   
-     Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im systemeigenen Format in eine Datendatei setzt der Befehl `bcp` mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen* bezeichnet. Weitere Informationen finden Sie unter [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md).  
+     Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im systemeigenen Format in eine Datendatei setzt der Befehl `bcp` mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen*bezeichnet. Weitere Informationen finden Sie unter [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md).  
   
 -   Feldlänge  
   
@@ -58,8 +58,8 @@ ms.locfileid: "66011824"
   
      Für Zeichendatenfelder kann mit optionalen abschließenden Zeichen das Ende jedes Felds in einer Datendatei (mithilfe eines *Feldabschlusszeichens*) und das Ende jeder Zeile (mithilfe eines *Zeilenabschlusszeichens*) markiert werden. Abschließende Zeichen sind eine Möglichkeit, um Programme, die die Datendatei lesen, darauf hinzuweisen, an welcher Stelle ein Feld oder eine Zeile endet und ein anderes Feld bzw. eine andere Zeile beginnt. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
-##  <a name="FieldSpecificPrompts"></a> Übersicht über die feldspezifischen Eingabeaufforderungen  
- Wenn ein interaktiver `bcp` -Befehl enthält die **in** oder **out** option enthält jedoch auch keine entweder den formatdateischalter (**-f**) oder ein Datenformat wechseln () **- n**, **- C**, **-w**, oder **-N**), jede Spalte in der Quelle oder Ziel-Tabelle, die eingabeaufforderungen für jedes der vorangehenden Attribute, wiederum. Für jede Eingabeaufforderung stellt der Befehl `bcp` einen Standardwert basierend auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp der Tabellenspalte bereit. Wenn Sie den Standardwert für alle Eingabeaufforderungen übernehmen, erhalten Sie dieselben Ergebnisse wie beim Angeben des systemeigenen Formats (**-n**) in der Befehlszeile. Für jede Eingabeaufforderung wird ein Standardwert in eckigen Klammern angezeigt: [*Standard*]. Durch Drücken der EINGABETASTE wird der angezeigte Standardwert übernommen. Wenn Sie einen Wert angeben möchten, der vom Standardwert abweicht, geben Sie den neuen Wert an der Eingabeaufforderung ein.  
+##  <a name="FieldSpecificPrompts"></a>Übersicht über die feldspezifischen Eingabe Aufforderungen  
+ Wenn ein interaktiver `bcp` Befehl die Option **in** oder **out** enthält, aber nicht auch den Format Datei Schalter (**-f**) oder einen Datenformat Schalter (**-n**, **-c**, **-w**oder **-n**), jede Spalte in der Quell-oder Ziel Tabelle enthält, fordert der Befehl nacheinander die vorangehenden Attribute an. Für jede Eingabeaufforderung stellt der Befehl `bcp` einen Standardwert basierend auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp der Tabellenspalte bereit. Wenn Sie den Standardwert für alle Eingabeaufforderungen übernehmen, erhalten Sie dieselben Ergebnisse wie beim Angeben des systemeigenen Formats (**-n**) in der Befehlszeile. Für jede Eingabeaufforderung wird ein Standardwert in eckigen Klammern angezeigt: [*Standard*]. Durch Drücken der EINGABETASTE wird der angezeigte Standardwert übernommen. Wenn Sie einen Wert angeben möchten, der vom Standardwert abweicht, geben Sie den neuen Wert an der Eingabeaufforderung ein.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden mit dem Befehl `bcp` Daten aus der `HumanResources.myTeam`-Tabelle interaktiv in die Datei `myTeam.txt` massenexportiert. Bevor Sie das Beispiel ausführen können, müssen Sie diese Tabelle erstellen. Informationen zu dieser Tabelle und zum Erstellen der Tabelle finden Sie unter [HumanResources.myTeam-Beispieltabelle &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
@@ -92,7 +92,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
  Gleichwertige Eingabeaufforderungen (soweit erforderlich) werden für jede Tabellenspalte angezeigt.  
   
-##  <a name="FieldByFieldNonXmlFF"></a> Speichern von feldspezifischen Daten in einer Nicht-XML-Formatdatei  
+##  <a name="FieldByFieldNonXmlFF"></a>Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Format Datei  
  Nachdem alle Tabellenspalten angegeben wurden, werden Sie vom Befehl `bcp` gefragt, ob optional eine Nicht-XML-Formatdatei generiert werden soll, in der die gerade eingegebenen feldspezifischen Informationen gespeichert werden (siehe vorheriges Beispiel). Wenn Sie eine Formatdatei generieren, können Sie diese beim Exportieren von Daten aus dieser Tabelle oder Importieren identisch strukturierter Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden.  
   
 > [!NOTE]  
@@ -111,20 +111,20 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Geben Sie File Storage Typ mithilfe von bcp &#40;SQL Server an&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
--   [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Geben Sie die Präfix Länge in Datendateien an, indem Sie bcp &#40;SQL Server verwenden&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)  
+-   [Geben Sie die Feldlänge mithilfe von bcp &#40;SQL Server an&#41;](specify-field-length-by-using-bcp-sql-server.md)  
   
--   [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Angeben von Feld-und Zeilen Abschluss Zeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Keine.  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenimport und -export von Daten &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Massen Import und-Export von Daten &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Datenformate für Massen Import oder Massen Export &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  
   

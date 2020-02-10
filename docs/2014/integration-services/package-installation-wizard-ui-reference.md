@@ -1,5 +1,5 @@
 ---
-title: Referenz zur Benutzeroberfläche des Installations-Assistent-Paket | Microsoft-Dokumentation
+title: Benutzeroberflächen Referenz für Paketinstallations-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,16 +22,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056827"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketinstallations-Assistenten
   Mit dem **Paketinstallations-Assistenten** können Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt einschließlich der enthaltenen Pakete, verschiedenen Dateien und Paketabhängigkeiten bereitstellen.  
   
- Bevor Sie Pakete bereitstellen, können Sie Konfigurationen erstellen und diese dann mit den Paketen bereitstellen. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwendet Konfigurationen, um Eigenschaften von Paketen und Paketobjekten zur Laufzeit dynamisch zu aktualisieren. Beispielsweise kann die Verbindungszeichenfolge einer OLE DB-Verbindung zur Laufzeit dynamisch festgelegt werden, indem Sie eine Konfiguration erstellen, die der Eigenschaft, die die Verbindungszeichenfolge enthält, einen Wert zuordnet.  
+ Bevor Sie Pakete bereitstellen, können Sie Konfigurationen erstellen und diese dann mit den Paketen bereitstellen. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]verwendet Konfigurationen, um die Eigenschaften von Paketen und Paket Objekten zur Laufzeit dynamisch zu aktualisieren. Beispielsweise kann die Verbindungszeichenfolge einer OLE DB-Verbindung zur Laufzeit dynamisch festgelegt werden, indem Sie eine Konfiguration erstellen, die der Eigenschaft, die die Verbindungszeichenfolge enthält, einen Wert zuordnet.  
   
  Der Paketinstallations-Assistent kann erst ausgeführt werden, nachdem Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt und ein Bereitstellungshilfsprogramm erstellt haben. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66056827"
 ## <a name="welcome-to-the-package-installation-wizard-page"></a>Willkommen auf der Seite des Paketinstallations-Assistenten.  
  Mit dem **Paketinstallations-Assistenten** können Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt bereitstellen, für das Sie ein Paketbereitstellungshilfsprogramm erstellt haben.  
   
- **Diese Anfangsseite nicht mehr anzeigen**  
+ **Diese anfangs Seite nicht mehr anzeigen**  
  Wählen Sie diese Option aus, um die Startseite bei der nächsten Ausführung des Assistenten auszulassen.  
   
  **Weiter**  
@@ -52,13 +52,13 @@ ms.locfileid: "66056827"
 ## <a name="configure-packages-page"></a>Seite "Pakete konfigurieren"  
  Mithilfe der Seite **Pakete konfigurieren** können Sie Paketkonfigurationen bearbeiten.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Konfigurationsdatei**  
  Bearbeiten Sie die Inhalte einer Konfigurationsdatei, indem Sie die Datei aus der Liste auswählen.  
   
- **Verwandte Themen:** [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)  
+ **Verwandte Themen:** [Erstellen von Paket Konfigurationen](../../2014/integration-services/create-package-configurations.md)  
   
- **Pfad**  
+ **Path**  
  Zeigen Sie den Pfad der zu konfigurierenden Eigenschaft an.  
   
  **Typ**  
@@ -88,7 +88,7 @@ ms.locfileid: "66056827"
 ## <a name="deploy-ssis-packages-page"></a>Seit "SSIS-Paket bereitstellen"  
  Mithilfe der Seite **SSIS-Pakete bereitstellen** können Sie angeben, an welcher Stelle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete und ihre Abhängigkeiten installiert werden sollen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Bereitstellung im Dateisystem**  
  Stellen Sie Pakete und Abhängigkeiten in einem bestimmten Ordner im Dateisystem bereit.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66056827"
 ## <a name="select-installation-folder-page"></a>Seite "Installationsordner auswählen"  
  Mithilfe der Seite **Installationsordner auswählen** können Sie den Dateisystemordner angeben, in dem die Pakete und deren Abhängigkeiten installiert werden sollen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Ordner**  
  Geben Sie den Pfad und den Ordner an, in den das Paket und seine Abhängigkeiten kopiert werden sollen.  
   
@@ -129,14 +129,14 @@ ms.locfileid: "66056827"
 ## <a name="specify-target-sql-server-page"></a>Seite "Zielserver mit SQL Server angeben"  
  Auf der Seite **Zielserver mit SQL Server angeben** können Sie Optionen zur Bereitstellung des Pakets für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz angeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen des Servers an, auf dem die Pakete bereitgestellt werden sollen.  
   
  **Windows-Authentifizierung verwenden**  
  Geben Sie an, ob für die Anmeldung beim Server die Windows-Authentifizierung verwendet werden soll. Im Sinne einer größeren Sicherheit wird die Windows-Authentifizierung empfohlen.  
   
- **SQL Server-Authentifizierung verwenden**  
+ **SQL Server Authentifizierung verwenden**  
  Geben Sie an, ob vom Paket für die Anmeldung beim Server die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet werden soll. Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie einen Benutzernamen und ein Kennwort angeben.  
   
  **Benutzername**  
@@ -148,10 +148,10 @@ ms.locfileid: "66056827"
  **Paketpfad**  
  Geben Sie den Namen des logischen Ordners an, oder geben Sie / für den Standardordner ein.  
   
- Klicken Sie zum Auswählen des Ordners im Dialogfeld **SSIS-Paket** auf die Schaltfläche zum Durchsuchen (...). Allerdings bietet das Dialogfeld keine Möglichkeit, den Standardordner auszuwählen. Wenn Sie den Standardordner verwenden möchten, müssen Sie im Textfeld / eingeben.  
+ Klicken Sie zum Auswählen des Ordners im Dialogfeld **SSIS-Paket** auf Durchsuchen (...). Allerdings bietet das Dialogfeld keine Möglichkeit, den Standardordner auszuwählen. Wenn Sie den Standardordner verwenden möchten, müssen Sie im Textfeld / eingeben.  
   
 > [!NOTE]  
->  Wenn Sie keinen gültigen Paketpfad eingeben, wird die folgende Fehlermeldung angezeigt: „Mindestens ein Argument ist ungültig.“  
+>  Wenn Sie keinen gültigen Paketpfad eingeben, wird die folgende Fehlermeldung angezeigt: "Mindestens ein Argument ist ungültig."  
   
  **Serverspeicher für die Verschlüsselung verwenden**  
  Wählen Sie diese Option aus, um die Pakete mithilfe von Sicherheitsfunktionen von [!INCLUDE[ssDE](../includes/ssde-md.md)] zu sichern.  
@@ -168,7 +168,7 @@ ms.locfileid: "66056827"
  **Fertig stellen**  
  Durch Klicken auf **Fertig stellen**beenden Sie den Assistenten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Paket Bereitstellung &#40;SSIS-&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

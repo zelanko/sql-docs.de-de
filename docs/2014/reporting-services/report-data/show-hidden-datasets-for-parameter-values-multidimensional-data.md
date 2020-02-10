@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Anzeigen von ausgeblendeten Datasets für Parameter Werte für mehrdimensionale Daten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107055"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten (Berichts-Generator und SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66107055"
   
 -   Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf den Ordner „Datasets“, und klicken Sie dann auf **Ausgeblendete Datasets anzeigen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../query-designers-report-builder.md)   
  [Abfrage-Designer in Reporting Services](../reporting-services-query-designers.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   

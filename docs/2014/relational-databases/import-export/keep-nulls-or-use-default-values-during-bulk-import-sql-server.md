@@ -21,16 +21,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011903"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)
-  Wenn Daten in eine Tabelle importiert werden, werden standardmäßig alle für die Spalten in der Tabelle definierten Standardwerte durch den Befehl **bcp** und die BULK INSERT-Anweisung überwacht. Wenn beispielsweise ein NULL-Feld in einem Datenfeld vorkommt, wird stattdessen der Standardwert für die Spalte geladen. Sowohl mit dem Befehl **bcp** als auch mit der BULK INSERT-Anweisung können Sie angeben, dass NULL-Werte beibehalten werden sollen.  
+  Wenn Daten in eine Tabelle importiert werden, werden standardmäßig alle für die Spalten in der Tabelle definierten Standardwerte durch den Befehl **bcp** und die Anweisung BULK INSERT überwacht. Wenn beispielsweise ein NULL-Feld in einem Datenfeld vorkommt, wird stattdessen der Standardwert für die Spalte geladen. Sowohl mit dem Befehl **bcp** als auch mit der Anweisung BULK INSERT können Sie angeben, dass NULL-Werte beibehalten werden sollen.  
   
- Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen Standardwert einzufügen. Die INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung zeigt dasselbe grundlegende Verhalten wie eine reguläre INSERT-Anweisung, unterstützt jedoch zusätzlich einen Tabellenhinweis zum Einfügen der Standardwerte.  
+ Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen Standardwert einzufügen. Die INSERT ... SELECT * FROM OPENROWSET(BULK...) -Anweisung zeigt dasselbe grundlegende Verhalten wie eine reguläre INSERT-Anweisung, unterstützt jedoch zusätzlich einen Tabellenhinweis zum Einfügen der Standardwerte.  
   
 > [!NOTE]  
 >  Beispielformatdateien, mit denen eine Tabellenspalte übersprungen wird, finden Sie unter [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
@@ -63,7 +63,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 ```  
   
- Weitere Informationen zum Erstellen von Formatdateien finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
+ Weitere Informationen zum Erstellen von Formatdateien finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md), um Standardwerte zu verwenden.  
   
 ### <a name="sample-data-file"></a>Beispieldatendatei  
  Das Beispiel verwendet die Beispieldatendatei `MyTestEmptyField2-c.Dat`, die im zweiten Feld keine Werte enthält. Die Datendatei `MyTestEmptyField2-c.Dat` enthält die folgenden Datensätze.  
@@ -77,12 +77,12 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 ## <a name="keeping-null-values-with-bcp-or-bulk-insert"></a>Beibehalten von NULL-Werten mit "bcp" oder BULK INSERT  
  Die folgenden Qualifizierer geben an, dass ein leeres Feld in der Datendatei seinen NULL-Wert während des Massenimportvorgangs beibehält, statt (ggf.) einen Standardwert für die Tabellenspalten zu übernehmen.  
   
-|Befehl|Qualifizierer|Qualifizierertyp|  
+|Get-Help|Qualifizierer|Qualifizierertyp|  
 |-------------|---------------|--------------------|  
 |**bcp**|`-k`|Schalter|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argument|  
   
- <sup>1</sup> für BULK INSERT, wenn Standardwerte nicht verfügbar ist, sind die Tabellenspalte definiert werden, um null-Werte zulassen.  
+ <sup>1</sup> für BULK INSERT, wenn keine Standardwerte verfügbar sind, muss die Tabellenspalte so definiert sein, dass NULL-Werte zulässig sind.  
   
 > [!NOTE]  
 >  Diese Qualifizierer deaktivieren das Prüfen von DEFAULT-Definitionen in einer Tabelle durch diese Massenimportbefehle. Für gleichzeitige INSERT-Anweisungen werden jedoch DEFAULT-Definitionen erwartet.  
@@ -99,12 +99,12 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Zum Einfügen "`NULL`"anstelle von"`Default value of Col2`", müssen Sie die `-k` Switch oder die Option keepnull verwenden, wie im folgenden **Bcp** und BULK INSERT-Beispielen gezeigt.  
+ Um "`NULL`" anstelle von "`Default value of Col2`" einzufügen, müssen Sie die `-k` Option Switch oder KEEPNULL verwenden, wie in den folgenden **bcp** -und BULK INSERT Beispielen gezeigt.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Verwenden von "bcp" und Beibehalten von NULL-Werten  
- Das folgende Beispiel zeigt, wie NULL-Werte in einem **bcp**-Befehl beibehalten werden. Der Befehl **bcp** verfügt über folgende Schalter:  
+ Das folgende Beispiel zeigt, wie NULL-Werte in einem **bcp**-Befehl beibehalten werden. Der Befehl **bcp** enthält die folgenden Schalter:  
   
-|Schalter|Description|  
+|Schalter|BESCHREIBUNG|  
 |------------|-----------------|  
 |`-f`|Gibt an, dass der Befehl eine Formatdatei verwendet.|  
 |`-k`|Gibt an, dass während des Vorgangs keine Standardwerte in leere Spalten eingefügt werden, sondern ein NULL-Wert für diese Spalten beibehalten werden soll.|  
@@ -134,22 +134,22 @@ GO
   
 ```  
   
-## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>Beibehalten von Standardwerten mit INSERT ... SELECT * FROM OPENROWSET(BULK...)  
- Standardmäßig werden Spalten, die nicht in dem Massenladevorgang angegeben sind, durch INSERT ... SELECT * FROM OPENROWSET(BULK...). Sie können jedoch angeben, dass die entsprechende Tabellenspalte für ein leeres Feld in der Datendatei (ggf.) den Standardwert verwendet. Zum Verwenden von Standardwerten geben Sie den folgenden Tabellenhinweis an:  
+## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>Beibehalten von Standardwerten mit INSERT... SELECT * FROM OPENROWSET (BULK...)  
+ Standardmäßig werden alle Spalten, die nicht im Massen Ladevorgang angegeben sind, durch INSERT... SELECT * FROM OPENROWSET (BULK...). Sie können jedoch angeben, dass die entsprechende Tabellenspalte für ein leeres Feld in der Datendatei den Standardwert (sofern vorhanden) verwendet. Zum Verwenden von Standardwerten geben Sie den folgenden Tabellenhinweis an:  
   
-|Befehl|Qualifizierer|Qualifizierertyp|  
+|Get-Help|Qualifizierer|Qualifizierertyp|  
 |-------------|---------------|--------------------|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|Tabellenhinweis|  
   
 > [!NOTE]  
->  Weitere Informationen finden Sie unter [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) und [Tabellenhinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
+>  Weitere Informationen finden Sie unter [Einfügen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/insert-transact-sql), [Auswählen von &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL-&#41;](/sql/t-sql/functions/openrowset-transact-sql)und [Tabellen Hinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
 ### <a name="examples"></a>Beispiele  
- Im folgenden INSERT ... SELECT * FROM OPENROWSET(BULK...)-Beispiel wird ein Massenimport von Daten ausgeführt, und die Standardwerte werden beibehalten.  
+ Der folgende INSERT... SELECT * FROM OPENROWSET (BULK...) example Massenimporte von Daten und beibehalten der Standardwerte.  
   
  Um die Beispiele auszuführen, müssen Sie die **MyTestDefaultCol2**-Beispieltabelle und die Datendatei `MyTestEmptyField2-c.Dat` erstellen und die Formatdatei `MyTestDefaultCol2-f-c.Fmt` verwenden. Weitere Informationen zum Erstellen dieser Beispiele finden Sie unter "Beispieltabelle und Datendatei" weiter oben in diesem Thema.  
   
- Die zweite Tabellenspalte, **Col2**, hat einen Standardwert. Das entsprechende Feld der Datendatei enthält eine leere Zeichenfolge. Wenn INSERT ... SELECT \* FROM OPENROWSET(BULK...) die Felder dieser Datendatei in die **MyTestDefaultCol2**-Tabelle importiert, wird statt des Standardwerts standardmäßig NULL in **Col2** eingefügt. Dieses Standardverhalten führt zu folgendem Ergebnis:  
+ Die zweite Tabellenspalte, **Col2**, hat einen Standardwert. Das entsprechende Feld der Datendatei enthält eine leere Zeichenfolge. Wenn INSERT... Select \* FROM OPENROWSET (BULK...) importieren Sie die Felder dieser Datendatei in die **MyTestDefaultCol2** -Tabelle. Standardmäßig wird NULL anstelle des Standardwerts in **Col2** eingefügt. Dieses Standardverhalten führt zu folgendem Ergebnis:  
   
 ||||  
 |-|-|-|  
@@ -173,11 +173,11 @@ GO
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Beibehalten von Identitätswerten beim Massenimport von Daten &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Behalten Sie Identitäts Werte beim Massen Import von Daten &#40;SQL Server bei&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Vorbereiten von Daten für den Massenexport oder -import &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Vorbereiten von Daten für den Massen Export oder-Import &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
- **So verwenden Sie eine Formatdatei**  
+ **So verwenden Sie eine Format Datei**  
   
 -   [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -189,9 +189,9 @@ GO
   
 -   [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
+ **So verwenden Sie Datenformate für Massen Import oder Massen Export**  
   
--   [Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
@@ -203,13 +203,13 @@ GO
   
  **So geben Sie Datenformate für die Kompatibilität bei Verwendung von bcp an**  
   
--   [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Angeben von Feld-und Zeilen Abschluss Zeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Geben Sie die Präfix Länge in Datendateien an, indem Sie bcp &#40;SQL Server verwenden&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Geben Sie File Storage Typ mithilfe von bcp &#40;SQL Server an&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   

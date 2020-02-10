@@ -1,5 +1,5 @@
 ---
-title: Anwenden einer XSL-Transformation (verwaltete SQLXML Klassen) | Microsoft-Dokumentation
+title: Anwenden einer XSL-Transformation (verwaltete SQLXML-Klassen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79f30fdbdd2db468e2dcb3690254463001f0fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012603"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Anwenden einer XSL-Transformation (Verwaltete SQLXML-Klassen)
   In diesem Beispiel wird eine SQL-Abfrage der AdventureWorks-Datenbank ausgeführt. Die XSL-Transformation wird auf das Abfrageergebnis angewendet, um eine zweispaltige Tabelle mit den Vor- und Nachnamen der Mitarbeiter zu generieren.  
   
- Die XslPath-Eigenschaft des SqlXmlCommand-Objekt wird zum Angeben der XSL-Datei und die zugehörigen Verzeichnispfads verwendet.  
+ Die XslPath-Eigenschaft des SqlXmlCommand-Objekts wird verwendet, um die XSL-Datei und ihren Verzeichnispfad anzugeben.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  

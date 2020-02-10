@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872321"
 ---
 # <a name="create-a-database"></a>Erstellen einer Datenbank
@@ -30,7 +30,7 @@ ms.locfileid: "62872321"
   
      [Einschränkungen](#Restrictions)  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
      [Empfehlungen](#Recommendations)  
   
@@ -48,13 +48,13 @@ ms.locfileid: "62872321"
   
 -   Maximal 32.767 Datenbanken können auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angegeben werden.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Die CREATE DATABASE-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zulässig.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Die [master](master-database.md) -Datenbank sollte immer dann gesichert werden, wenn eine Benutzerdatenbank erstellt, geändert oder gelöscht wird.  
+-   Die [Master](master-database.md) -Datenbank sollte immer dann gesichert werden, wenn eine Benutzerdatenbank erstellt, geändert oder gelöscht wird.  
   
 -   Wenn Sie eine Datenbank erstellen, sollten die Datendateien möglichst groß sein. Orientieren Sie sich dabei an den maximal zu erwartenden Datenmengen, die in der Datenbank gespeichert werden sollen.  
   
@@ -65,19 +65,19 @@ ms.locfileid: "62872321"
   
  Zur Steuerung der Datenträgernutzung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Berechtigung zum Erstellen von Datenbanken in der Regel auf einige wenige Anmeldekonten beschränkt.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>So erstellen Sie eine Datenbank  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie anschließend auf **Neue Datenbank**.  
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **Neue Datenbank**.  
   
 3.  Geben Sie unter **Neue Datenbank**einen Datenbanknamen ein.  
   
 4.  Zum Erstellen der Datenbank unter Übernahme aller Standardwerte klicken Sie auf **OK**; ansonsten fahren Sie mit den folgenden optionalen Schritten fort.  
   
-5.  Zum Ändern des Besitzernamens klicken Sie auf ( **…** ), um einen anderen Besitzer auszuwählen.  
+5.  Zum Ändern des Besitzernamens klicken Sie auf (**…**), um einen anderen Besitzer auszuwählen.  
   
     > [!NOTE]  
     >  Die Option **Volltextindizierung verwenden** ist immer aktiviert und wird ausgegraut angezeigt, da ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]alle Benutzerdatenbanken volltextfähig sind.  
@@ -131,10 +131,10 @@ GO
   
  Weitere Beispiele finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Database Files and Filegroups](database-files-and-filegroups.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)  
+ [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](add-data-or-log-files-to-a-database.md)  
   
   

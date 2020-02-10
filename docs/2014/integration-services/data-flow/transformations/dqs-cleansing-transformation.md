@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900397"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS-Bereinigungstransformation
@@ -48,7 +48,7 @@ ms.locfileid: "62900397"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Verwalten von &#40;öffnen, entsperren, umbenennen und Löschen von&#41; Data Quality-Projekten](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [Verwalten von &#40;öffnen, entsperren, umbenennen und löschen&#41; eines Data Quality-Projekts](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   Artikel [Bereinigung komplexer Daten unter Verwendung von Verbunddomänen](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)auf social.technet.microsoft.com.  
   

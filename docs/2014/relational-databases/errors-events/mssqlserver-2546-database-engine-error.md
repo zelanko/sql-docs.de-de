@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca1a8af843d0183acd46a8b11e00427738d59d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868851"
 ---
-# <a name="mssqlserver2546"></a>MSSQLSERVER_2546
+# <a name="mssqlserver_2546"></a>MSSQLSERVER_2546
     
 ## <a name="details"></a>Details  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62868851"
 ## <a name="user-action"></a>Benutzeraktion  
  Erstellen Sie den Index mithilfe von ALTER INDEX neu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Neuorganisieren und Neuerstellen von Indizes](../indexes/indexes.md)  
   

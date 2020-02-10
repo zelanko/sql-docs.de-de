@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011308"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche
@@ -22,7 +22,7 @@ ms.locfileid: "66011308"
   
  Diese Liste schließt keine veralteten Objekte ein.  
   
- Die Liste der Datenbankobjekte, die die semantische Suche unterstützen, finden Sie unter [Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../views/views.md)  
+ Die Liste der Datenbankobjekte, die die semantische Suche unterstützen, finden Sie unter [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md).  
   
 ##  <a name="ddl"></a> Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
   

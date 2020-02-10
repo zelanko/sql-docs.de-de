@@ -1,5 +1,5 @@
 ---
-title: Variable Rasteroptionen | Microsoft-Dokumentation
+title: Variablen Raster Optionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054677"
 ---
 # <a name="variable-grid-options"></a>Variable Rasteroptionen
-  Im Dialogfeld **Variable Rasteroptionen** können Sie die Spalten auswählen, die im Fenster **Variablen** angezeigt werden, und die Filter auswählen, die auf die Liste der Variablen angewendet werden sollen. Weitere Informationen über die Eigenschaften der zugehörigen Variablen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+  Im Dialogfeld **Variable Rasteroptionen** können Sie die Spalten auswählen, die im Fenster **Variablen** angezeigt werden, und die Filter auswählen, die auf die Liste der Variablen angewendet werden sollen. Weitere Informationen über die Eigenschaften der zugehörigen Variablen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="options-for-filter"></a>Optionen für Filter  
  **Systemvariablen anzeigen**  
@@ -38,22 +38,22 @@ ms.locfileid: "66054677"
 ## <a name="options-for-columns"></a>Optionen für Spalten  
  Wählen Sie die Spalten aus, die im Fenster **Variablen** angezeigt werden sollen.  
   
--   **Scope**  
+-   **`Scope`**  
   
--   **Data type**  
+-   **Datentyp**  
   
 -   **Wert**  
   
 -   **Namespace**  
   
--   **Ereignis bei Änderung des Variablenwertes auslösen**  
+-   **Ereignis bei Änderung des Variablen Werts aufschlagen**  
   
 -   **Beschreibung**  
   
--   **expression**  
+-   **Ausdruck**  
   
-## <a name="see-also"></a>Siehe auch  
- [Variablen (Fenster)](../../2014/integration-services/variables-window.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Fenster "Variablen"](../../2014/integration-services/variables-window.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  

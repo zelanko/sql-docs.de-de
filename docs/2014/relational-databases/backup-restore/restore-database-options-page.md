@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875632"
 ---
 # <a name="restore-database-options-page"></a>Datenbank wiederherstellen (Seite Optionen)
@@ -31,7 +31,7 @@ ms.locfileid: "62875632"
 > [!NOTE]  
 >  Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]einen Wiederherstellungstask angeben, können Sie ein entsprechendes [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript generieren, das die RESTORE-Anweisungen für diesen Wiederherstellungsvorgang enthält. Zum Generieren des Skripts klicken Sie auf **Skript** , und wählen Sie dann ein Ziel für das Skript aus. Informationen zur RESTORE-Syntax finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="restore-options"></a>Wiederherstellungsoptionen  
  Verwenden Sie die Optionen des Bereichs **Wiederherstellungsoptionen** , um die Aspekte des Verhaltens des Wiederherstellungsvorgangs zu ändern.  
@@ -98,7 +98,7 @@ ms.locfileid: "62875632"
  **Bestehende Verbindungen schließen**  
  Bei Wiederherstellungsvorgängen treten möglicherweise Fehler auf, wenn aktive Verbindungen zur Datenbank bestehen. Aktivieren Sie die Option **Bestehende Verbindungen schließen** , um sicherzustellen, dass alle aktiven Verbindungen zwischen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und der Datenbank geschlossen werden. Durch die Aktivierung dieses Kontrollkästchens wechselt die Datenbank in einen Einzelbenutzermodus, bevor Wiederherstellungsvorgänge ausgeführt werden. Außerdem wird dadurch die Datenbank auf einen Multibenutzermodus festgelegt, wenn der Vorgang abgeschlossen ist.  
   
-### <a name="prompt"></a>Eingabeaufforderung  
+### <a name="prompt"></a>Prompt  
  **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung**  
  Gibt an, dass nach der Wiederherstellung der einzelnen Sicherungen das Dialogfeld **Wiederherstellung fortsetzen** angezeigt wird, um anzufragen, ob Sie die Wiederherstellungssequenz fortsetzen möchten. In diesem Dialogfeld werden der Name des nächsten Mediensatzes (wenn bekannt) und der Name sowie die Beschreibung des nächsten Sicherungssatzes angezeigt.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62875632"
   
 -   Wenn die nächste Sicherung eine Protokollsicherung ist, verwenden Sie den Task **Transaktionsprotokoll wiederherstellen** . Informationen zum Fortsetzen einer Wiederherstellungssequenz durch Wiederherstellen eines Transaktionsprotokolls finden Sie unter [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
  [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   

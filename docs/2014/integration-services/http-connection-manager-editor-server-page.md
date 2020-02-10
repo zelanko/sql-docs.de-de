@@ -1,5 +1,5 @@
 ---
-title: HTTP-Verbindungs-Manager-Editor (Seite) | Microsoft-Dokumentation
+title: HTTP-Verbindungs-Manager-Editor (Seite Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058247"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP-Verbindungs-Manager-Editor (Seite Server)
@@ -29,13 +29,13 @@ ms.locfileid: "66058247"
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Server-URL**  
  Geben Sie die URL für den Server ein.  
   
  Wenn Sie die Schaltfläche **WSDL herunterladen** auf der Seite **Allgemein** im **Editor für den Task 'Webdienst'** verwenden möchten, um eine WSDL-Datei herunterzuladen, geben Sie die URL für die WSDL-Datei ein. Diese URL endet mit "? wsdl".  
   
- **Anmeldeinformationen verwenden**  
+ **Anmelde Informationen verwenden**  
  Geben Sie an, ob der HTTP-Verbindungs-Manager zur Authentifizierung die Sicherheitsanmeldeinformationen des Benutzers verwenden soll.  
   
  **Benutzername**  
@@ -47,10 +47,10 @@ ms.locfileid: "66058247"
  **Domäne**  
  Wenn der HTTP-Verbindungs-Manager Anmeldeinformationen verwendet, müssen Sie einen Benutzernamen, ein Kennwort und eine Domäne angeben.  
   
- **Clientzertifikat verwenden**  
+ **Client Zertifikat verwenden**  
  Geben Sie an, ob der HTTP-Verbindungs-Manager zur Authentifizierung ein Clientzertifikat verwenden soll.  
   
- **Zertifikat**  
+ **Stellt**  
  Wählen Sie mithilfe des Dialogfelds **Zertifikat auswählen** ein Zertifikat aus der Liste aus. Im Textfeld wird der dem Zertifikat zugeordnete Name angezeigt.  
   
  **Timeout (in Sekunden)**  
@@ -62,8 +62,8 @@ ms.locfileid: "66058247"
  **Verbindung testen**  
  Nachdem die Konfiguration des HTTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP-Verbindungs-Manager-Editor &#40;Seite „Proxy“&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+ [Der HTTP-Verbindungs-Manager-Editor &#40;Seite Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

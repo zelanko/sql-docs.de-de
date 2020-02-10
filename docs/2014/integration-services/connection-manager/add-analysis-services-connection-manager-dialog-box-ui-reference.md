@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833753"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
@@ -26,23 +26,23 @@ ms.locfileid: "62833753"
   
  Weitere Informationen zum Analysis Services-Verbindungs-Manager finden Sie unter [Analysis Services Connection Manager](analysis-services-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
- **Verbindung mit einem Computer mit Analysis Services herstellen**  
+## <a name="options"></a>Tastatur  
+ **Herstellen einer Verbindung mit einem Computer, auf dem Analysis Services ausgeführt wird**  
  Verwenden Sie die Standardverbindung mit einem Server, auf dem eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder erstellen Sie eine neue Verbindung, indem Sie auf **Bearbeiten**klicken.  
   
  **Bearbeiten**  
  Verwenden Sie **Verbindungs-Manager** , um eine Verbindung mit einem Server zu erstellen, auf dem eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, und um die Verbindungseigenschaften zu bearbeiten.  
   
- **Verbindung mit einem Analysis Services-Projekt in dieser Projektmappe herstellen**  
+ **Verbindung mit einem Analysis Services Projekt in dieser Projekt Mappe herstellen**  
  Geben Sie an, dass die Verbindung ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in der geöffneten Projektmappe verwenden wird.  
   
 > [!NOTE]  
 >  Analysis Services-Tabellenmodellprojekte werden für dieses Szenario nicht unterstützt.  
   
- **Analysis Services-Projekt**  
+ **Analysis Services Projekt**  
  Wählen Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt aus der Liste aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md)   
  [Integration Services-Verbindungen &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   

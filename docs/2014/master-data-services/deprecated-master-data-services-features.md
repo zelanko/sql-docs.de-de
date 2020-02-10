@@ -1,5 +1,5 @@
 ---
-title: Veraltete Master Data Services-Funktionen in SQLServer 2014 | Microsoft-Dokumentation
+title: Veraltete Master Data Services Features in SQL Server 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd6342542da7528fef633ba02a430a8ba2ef5857
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483065"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>Veraltete Master Data Services-Funktionen in SQL Server 2014
@@ -23,7 +23,7 @@ ms.locfileid: "65483065"
 ## <a name="staging-process"></a>Stagingprozess  
  Der Stagingprozess, der in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] verwendet wurde, ist nicht mehr in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung verfügbar; er ist jedoch immer noch in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]verfügbar.  
   
- Stagingfehler aus dem [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Stagingprozess werden nicht mehr in der Benutzeroberfläche angezeigt. Fehlercodes, die während des Stagingprozesses aufgefüllt werden weiterhin in den Stagingtabellen verfügbar sind, und finden Sie hier: [ https://msdn.microsoft.com/library/ff487022.aspx ](https://msdn.microsoft.com/library/ff487022.aspx).  
+ Stagingfehler aus dem [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Stagingprozess werden nicht mehr in der Benutzeroberfläche angezeigt. Fehlercodes, die während des Stagingprozesses aufgefüllt werden, sind in den Stagingtabellen weiterhin verfügbar. Sie finden [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx)Sie hier:.  
   
  Die Stagingtabellen (tblStgMember, tblStgMemberAttribute und tblStgRelationship) sind nach wie vor in der Datenbank verfügbar. Die gespeicherte Prozedur, die verwendet wurde, um den Stagingprozess (mdm.udpStagingSweep) zu initiieren, ist nach wie vor in der Datenbank verfügbar.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "65483065"
  Ein neuer, leistungsstärkerer Stagingprozess wurde in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]implementiert. Weitere Informationen finden Sie unter [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 ## <a name="metadata"></a>Metadaten  
- Obwohl das Metadatenmodell immer noch in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung angezeigt wird, sollte es nicht verwendet werden. Dieses Verhalten wird in einer zukünftigen Version entfernt. Benutzer können zudem keine Metadaten mehr im Funktionsbereich **Explorer** anzeigen, und Sie können keine Versionen des Metadatenmodells mehr erstellen.  
+ Obwohl das Metadatenmodell immer noch in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung angezeigt wird, sollte es nicht verwendet werden. Dieses Element wird in einer späteren Version entfernt. Benutzer können zudem keine Metadaten mehr im Funktionsbereich **Explorer** anzeigen, und Sie können keine Versionen des Metadatenmodells mehr erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Eingestellte Master Data Services-Features in SQL Server 2014](discontinued-master-data-services-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Eingestellte Master Data Services-Funktionen in SQL Server 2014](discontinued-master-data-services-features.md)  
   
   

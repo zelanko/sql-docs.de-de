@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz von Daten | Microsoft-Dokumentation'
+title: 'Aufgabe 4 (optional): kombinieren, abgleichen und Veröffentlichen eines neuen Datensatzes | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,106 +11,106 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489273"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Datensatzes
-  Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Bevor Sie Daten hinzufügen, kann es hilfreich sein, die neuen Daten an die Daten verglichen werden soll, die bereits in MDS, um sicherzustellen, dass Sie keine doppelte oder ungenaue Daten hinzufügen, werden verwaltet wird. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Finden Sie unter [Data Quality-Abgleich im MDS-Add-in für Excel](https://msdn.microsoft.com/library/hh548681.aspx) und [Kombinieren von Daten](https://msdn.microsoft.com/library/hh548680.aspx) Themen Weitere Informationen.  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten
+  Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Vor dem Hinzufügen von Daten kann es hilfreich sein, die neuen Daten mit den bereits in MDS verwalteten Daten zu vergleichen, um sicherzustellen, dass Sie keine doppelten oder ungenauen Daten hinzufügen. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Weitere Informationen finden Sie [unter Data Quality](https://msdn.microsoft.com/library/hh548681.aspx) -Abgleich in den Themen MDS-Add-in für Excel und [Kombinieren von Daten](https://msdn.microsoft.com/library/hh548680.aspx) .  
   
-1.  Starten Sie die neue Instanz der **Excel**. Klicken Sie auf **starten**, zeigen Sie auf **ausführen**, Typ **Excel**, und klicken Sie auf **OK**.  
+1.  Startet eine neue Instanz von **Excel**. Zeigen Sie im **Startmenü**auf **Ausführen**, geben Sie **Excel**ein, und klicken Sie auf **OK**.  
   
-2.  Wechseln Sie zu der **Masterdaten** Registerkarte, indem Sie auf **Masterdaten** in der Menüleiste.  
+2.  Wechseln Sie zur Registerkarte **Master Daten** , indem Sie in der Menüleiste auf **Master Daten** klicken.  
   
-3.  Klicken Sie auf **Connect** auf dem Menüband in die **verbinden und laden** Gruppe für die Verbindung der **MDS-Server**. Sie haben diese Verbindung zuvor in dieser Lektion konfiguriert.  
+3.  Klicken Sie im Menüband in der Gruppe **verbinden und laden** auf **verbinden** , um eine Verbindung mit dem **MDS-Server**herzustellen. Sie haben diese Verbindung zuvor in dieser Lektion konfiguriert.  
   
-     ![Excel – Schaltfläche "Explorer" auf Masterdaten anzeigen](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel – Schaltfläche \"Explorer\" auf Masterdaten anzeigen")  
+     ![Excel – Schaltfläche "Explorer anzeigen" auf der Registerkarte "Masterdaten"](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel – Schaltfläche "Explorer anzeigen" auf der Registerkarte "Masterdaten"")  
   
-4.  Daraufhin sollte die **Master Data Explorer** rechts. Wenn Sie die Master Data Explorer nicht angezeigt werden, klicken Sie auf **Explorer anzeigen** Schaltfläche auf dem Menüband.  
+4.  Der Bereich **Master Daten-Explorer** auf der rechten Seite sollte angezeigt werden. Wenn die Master Daten-Explorer nicht angezeigt wird, klicken Sie im Menüband auf die Schaltfläche **Explorer anzeigen** .  
   
-5.  In der **Master Data Explorer** , wählen Sie im Fenster **Lieferanten** in der Dropdown-Liste für die **Modell**. Sollte angezeigt werden, dass das Modell eine Entität verfügt: **Lieferanten**.  
+5.  Wählen Sie im Fenster **Master Daten-Explorer** in der Dropdown Liste für das **Modell**die Option **Suppliers** aus. Sie sollten sehen, dass das Modell über eine Entität verfügt: **Supplier**.  
   
-     ![Excel – Master Data Explorer-Fenster](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel – Master Data Explorer-Fenster")  
+     ![Excel – Master Data Explorer (Fenster)](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel – Master Data Explorer (Fenster)")  
   
-6.  Doppelklicken Sie auf **Lieferanten** in der Liste der Entität, die Entitätselemente in das Excel-Arbeitsblatt zu laden.  
+6.  Doppelklicken Sie in der Liste Entität auf **Lieferant** , um die Entitäts Elemente in das Excel-Arbeitsblatt zu laden.  
   
-7.  Klicken Sie auf **Tabelle2** unten, um zum Wechseln der **Tabelle2** Registerkarte. Wenn Sie nicht sehen **Tabelle2**, fügen Sie ein neues Arbeitsblatt hinzu.  
+7.  Klicken Sie unten auf **Tabelle2** , um zur Registerkarte **Tabelle2** zu wechseln. Wenn **Tabelle2**nicht angezeigt wird, fügen Sie ein neues Arbeitsblatt hinzu.  
   
-8.  Open **Suppliers.xls** Datei (die ursprüngliche Eingabedatei, die in den Lernprogrammdateien enthalten ist), und kopieren Sie alle (drei) Zeilen aus der **CombineAndCleanse** Arbeitsblatt **Tabelle2**.  
+8.  Öffnen Sie die Datei **Suppliers. xls** (die ursprüngliche Eingabedatei, die in den Tutorial-Dateien enthalten ist), und kopieren Sie alle (drei) Zeilen aus dem **combineandreinigen** -Arbeitsblatt in **Tabelle2**.  
   
-9. Wechseln Sie zurück zu der **Lieferanten** Stylesheets in die **Mappe1 - Microsoft Excel** (nicht die **Cleansed and Lieferantenliste abgeglichen** Excel), verbunden ist **MDS**.  
+9. Wechseln Sie zurück zum **Lieferanten** Blatt im **Buch 1-Microsoft Excel** (nicht zur **bereinigten und übereinstimmenden Lieferantenliste** Excel), das mit **MDS**verbunden ist.  
   
-10. Klicken Sie auf **Masterdaten** in der Menüleiste.  
+10. Klicken Sie in der Menüleiste auf **Master Daten** .  
   
-11. Klicken Sie auf **Kombinieren von Daten** auf dem Menüband. Sie sehen die **Kombinieren von Daten** Dialogfeld.  
+11. Klicken Sie im Menüband auf **Daten kombinieren** . Das Dialogfeld **Daten kombinieren** wird angezeigt.  
   
-12. In der **Kombinieren von Daten** Dialogfeld klicken Sie auf die Schaltfläche neben **mit MDS-Daten zu kombinierender Bereich** Textfeld wie in der folgenden Abbildung dargestellt.  
+12. Klicken Sie im Dialogfeld **Daten kombinieren** auf die Schaltfläche neben dem Textfeld **mit MDS-Daten zu kombinierender Bereich** , wie in der folgenden Abbildung dargestellt.  
   
-     ![Excel – Daten (Dialogfeld) kombinieren](../../2014/tutorials/media/et-combinematchandpublishnewsod-03.jpg "Excel – Kombinieren von Daten (Dialogfeld)")  
+     ![Excel – Daten kombinieren (Dialogfeld)](../../2014/tutorials/media/et-combinematchandpublishnewsod-03.jpg "Excel – Daten kombinieren (Dialogfeld)")  
   
-13. Das Dialogfeld sollte jetzt verkleinert angezeigt werden. Klicken Sie nun **Tabelle2** So wechseln Sie zu der **Tabelle2** Registerkarte, die über die neuen Lieferantendaten mit 4 Zeilen (einschließlich Kopfzeile) verfügt.  
+13. Das Dialogfeld sollte jetzt verkleinert angezeigt werden. Klicken Sie nun auf **Tabelle2** , um zur Registerkarte **Tabelle2** zu wechseln, die die neuen Lieferantendaten mit vier Zeilen (einschließlich einer Kopfzeile) enthält.  
   
-14. In der **Tabelle2**Option **alle Zeilen, einschließlich der Kopfzeile** (selbst wenn diese scheinbar bereits ausgewählt sein). Daraufhin sollte die **mit MDS-Daten zu kombinierender Bereich** wird automatisch aktualisiert.  
+14. Wählen Sie im **Tabelle2** **alle Zeilen einschließlich der Kopfzeile** aus (auch wenn Sie bereits ausgewählt sind). Sie sollten sehen, dass der **Bereich, der mit MDS-Daten kombiniert** werden soll, automatisch aktualisiert wird.  
   
-     ![Excel – Kombinieren von Daten (Dialogfeld) – minimiert](../../2014/tutorials/media/et-combinematchandpublishnewsod-04.jpg "Excel – Kombinieren von Daten (Dialogfeld) – minimiert")  
+     ![Excel – Daten kombinieren (Dialogfeld) – minimiert](../../2014/tutorials/media/et-combinematchandpublishnewsod-04.jpg "Excel – Daten kombinieren (Dialogfeld) – minimiert")  
   
-15. Wechseln Sie zurück zu den **Lieferanten** Registerkarte ohne zu schließen die **Kombinieren von Daten** Dialogfeld.  
+15. Wechseln Sie zurück zur Registerkarte **Suppliers** , ohne das Dialogfeld **Daten kombinieren** zu schließen.  
   
-16. Klicken Sie auf die **Schaltfläche** neben der **Textfeld**. Das Dialogfeld sollte jetzt erweitert angezeigt werden. Sollte angezeigt werden alle Zuordnungen zwischen den Spalten der **Lieferanten** MDS **Entität** zu **Excel** Spalten werden automatisch aufgefüllt.  
+16. Klicken Sie neben dem **Textfeld**auf die **Schaltfläche** . Das Dialogfeld sollte jetzt erweitert angezeigt werden. Alle Zuordnungen zwischen den Spalten der MDS- **Entität** " **Supplier** " und " **Excel** " werden automatisch aufgefüllt.  
   
-     ![Excel – Kombinieren von Daten (Dialogfeld), die mit Daten gefüllt](../../2014/tutorials/media/et-combinematchandpublishnewsod-05.jpg "Excel – Kombinieren von Daten (Dialogfeld), die mit Daten gefüllt")  
+     ![Excel – Daten kombinieren (Dialogfeld) – mit Daten gefüllt](../../2014/tutorials/media/et-combinematchandpublishnewsod-05.jpg "Excel – Daten kombinieren (Dialogfeld) – mit Daten gefüllt")  
   
-17. Sicherstellen, dass **Code** entitätsspalte auf die **SupplierID** Spalte im Arbeitsblatt und **Postleitzahl** entitätsspalte auf die **Postleitzahl** Spalte im Arbeitsblatt.  
+17. Stellen Sie sicher, dass die Spalte " **Code** Entität" der Spalte " **SupplierID** " im Arbeitsblatt und die Entitäts Spalte " **ZIP-Code** " der Spalte " **ZIP** -Code" im Arbeitsblatt zugeordnet ist.  
   
-18. Auf der **Kombinieren von Daten** Dialogfeld klicken Sie auf **kombinieren**.  
+18. Klicken Sie im Dialogfeld **Daten kombinieren** auf **kombinieren**.  
   
 19. Überprüfen Sie, ob drei Datenzeilen am Ende des Arbeitsblatts hinzugefügt wurden und ob diese farblich codiert sind.  
   
-     ![Excel – neue Elemente nach dem vereinen](../../2014/tutorials/media/et-combinematchandpublishnewsod-06.jpg "Excel – neue Elemente nach dem vereinen")  
+     ![Excel – Neue Elemente nach dem Kombinieren](../../2014/tutorials/media/et-combinematchandpublishnewsod-06.jpg "Excel – Neue Elemente nach dem Kombinieren")  
   
-20. Klicken Sie auf **Daten abgleichen** auf dem Menüband, um Duplikate zu identifizieren. Diese Funktion verwendet die Abgleichsfunktionalität von DQS.  
+20. Klicken Sie im Menüband auf **mathematische Daten** , um Duplikate zu identifizieren. Diese Funktion verwendet die Abgleichsfunktionalität von DQS.  
   
-21. In der **Daten abgleichen** wählen Sie im Dialogfeld **Lieferanten** für **DQS-Wissensdatenbank**.  
+21. Wählen Sie im Dialogfeld **Daten abgleichen** die Option **Suppliers** für die **DQS-Wissensdatenbank**aus.  
   
-     ![Excel – Dialogfeld Übereinstimmung](../../2014/tutorials/media/et-combinematchandpublishnewsod-07.jpg "Excel - Übereinstimmung Daten (Dialogfeld)")  
+     ![Excel – Daten abgleichen (Dialogfeld)](../../2014/tutorials/media/et-combinematchandpublishnewsod-07.jpg "Excel – Daten abgleichen (Dialogfeld)")  
   
 22. Ordnen Sie Arbeitsblattspalten Domänen zu, wie in der folgenden Tabelle gezeigt.  
   
-    |Arbeitsblattspalte|Domäne|  
+    |Arbeitsblattspalte|Domain|  
     |----------------------|------------|  
     |Code (Sie haben "Supplier ID" als Code für die Entität "Supplier" in MDS hochgeladen)|Supplier ID|  
     |Name (Sie haben "Supplier Name" als Name für die Entität "Supplier" in MDS hochgeladen)|Supplier Name|  
     |ContactEmailAddress|ContactEmail|  
   
-23. Wählen Sie **erforderliche** für die **Code** spaltenzuordnung.  
+23. Wählen Sie **Voraussetzung** für die **Code** Spalten Zuordnung aus.  
   
-24. Geben Sie **70 %** als die **Gewichtung** für **Lieferantenname** und **30 %** als die **Gewichtung** für **Contact Email** wie in der Abbildung dargestellt.  
+24. Geben Sie **70%** als **Gewichtung** für **Lieferanten Name** und **30%** als **Gewichtung** für die **Kontakt-e-Mail** ein, wie in der Abbildung dargestellt.  
   
 25. Klicken Sie auf **OK**.  
   
-26. Der Abgleichsprozess sollte ein Duplikat identifizieren, für den Lieferanten mit **Code: S1**.  
+26. Der Abgleichsprozess sollte ein Duplikat für den Lieferanten mit dem folgenden **Code identifizieren: S1**.  
   
      ![Excel – Abgleichsergebnisse](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel – Abgleichsergebnisse")  
   
-27. Wählen Sie die **doppelte Zeile (orangefarben)**, mit der rechten Maustaste, und klicken Sie auf **löschen** zum Löschen der Zeile.  
+27. Wählen Sie die **doppelte Zeile (Orange)**, klicken Sie mit der rechten Maustaste, und klicken Sie auf **Löschen** , um die Zeile zu löschen.  
   
-28. Löschen der **CLUSTER_ID** Spalte, da Sie es nicht mehr benötigen.  
+28. Löschen Sie die Spalte **CLUSTER_ID** , da Sie Sie nicht mehr benötigen.  
   
-29. Klicken Sie auf **veröffentlichen** veröffentlichen die anderen zwei neuen Datensätze mit **Codes S66** und **S57** in MDS.  
+29. Klicken Sie auf **veröffentlichen** , um die anderen beiden neuen Datensätze mit den **Codes S66** und **S57** in MDS zu veröffentlichen.  
   
-30. In der **veröffentlichen und mit Anmerkung versehen** Dialogfeld hinzu, und ein **Anmerkung**, und klicken Sie auf **veröffentlichen**.  
+30. Fügen Sie im Dialogfeld **veröffentlichen und** **kommentieren eine Anmerkung**hinzu, und klicken Sie auf **veröffentlichen**.  
   
-31. Wechseln Sie zu der **Master Data Manager-Webanwendung**.  
+31. Wechseln Sie zur **Master Data Manager-Webanwendung**.  
   
-32. Stellen Sie sicher, die auf der Startseite **Lieferanten** ausgewählt ist, für die **Modell**, und klicken Sie auf **Explorer**. Wenn Sie bereits verfügen die **Explorer** geöffnet ist, aktualisieren Sie den Internetbrowser.  
+32. Vergewissern Sie sich, dass auf der Startseite die Option **Suppliers** für das **Modell**ausgewählt ist, und klicken Sie auf **Explorer**. Wenn der **Explorer** bereits geöffnet ist, aktualisieren Sie den Internetbrowser.  
   
-33. **Sortierung** die Liste nach **Code** , und suchen Sie nach Datensätzen mit **S57** und **S66** als Codes. Sie können auch die **Filter** auf der Symbolleiste, um für einen bestimmten Datensatz in der Liste zu suchen.  
+33. **Sortieren** Sie die Liste nach **Code** , und suchen Sie nach Datensätzen mit **S57** und **S66** als Codes. Sie können auch die **Filter** Schaltfläche auf der Symbolleiste verwenden, um nach einem bestimmten Datensatz in der Liste zu suchen.  
   
-34. Schließen Sie jetzt **Mappe1 - Microsoft Excel** Fenster ohne Speichern der Datei.  
+34. Schließen Sie jetzt **Mappe1-Microsoft Excel-** Fenster, ohne die Datei zu speichern.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

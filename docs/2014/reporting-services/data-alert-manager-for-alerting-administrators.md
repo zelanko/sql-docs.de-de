@@ -14,16 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92aa4343d2c9ec6b0b69275be71923595e2dc76e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109526"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Datenwarnungs-Manager für Warnungsadministratoren
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt den Datenwarnungs-Manager zum Verwalten von Datenwarnungen für SharePoint-Warnungsadministratoren bereit. Warnungsadministratoren können Informationen zu allen auf der Website gespeicherten Warnungen anzeigen und Warnungen löschen. Das folgende Bild zeigt SharePoint-Warnungsadministratoren die verfügbaren Funktionen im Datenwarnungs-Manager.  
   
- ![Warnungs-Manager für SharePoint-Websiteadministratoren](media/rs-alertmanagersite.gif "Alert Manager for SharePoin tsite administrators")  
+ ![Warnungs-Manager für SharePoint-Websiteadministratoren](media/rs-alertmanagersite.gif "Warnungs-Manager für SharePoint-Websiteadministratoren")  
   
  Wenn die Website für Datenwarnungen aktiviert ist, werden zwei SharePoint-Seiten (MyDataAlerts.aspx und SiteDataAlerts.aspx) erstellt und der SharePoint-Website hinzugefügt. SiteDataAlerts.aspx entspricht dem Datenwarnungs-Manager für Warnungsadministratoren. Warnungsadministratoren können den Datenwarnungs-Manager über die SharePoint-Seite "Siteeinstellungen" öffnen. Warnungsadministratoren müssen die SharePoint-Berechtigung "Benachrichtigungen verwalten" besitzen, um den Datenwarnungs-Manager zu öffnen.  
   
@@ -34,10 +35,10 @@ ms.locfileid: "66109526"
 > [!NOTE]  
 >  Als Warnungsadministrator können Sie Information Workern die Berechtigung erteilen, auf die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungsfunktionen zuzugreifen. Weitere Informationen zu den erforderlichen Berechtigungen finden Sie unter [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md).  
   
-##  <a name="ViewingAlerts"></a> Anzeigen von Datenwarnungsinformationen  
+##  <a name="ViewingAlerts"></a>Anzeigen von Daten Warnungs Informationen  
  Wenn Reporting Services installiert ist und in SharePoint konfiguriert wird, enthält die SharePoint-Seite "Siteeinstellungen" die **Reporting Services** -Optionen. Warnungsadministratoren klicken in Reporting Services auf die Option **Datenwarnungen verwalten** , um den Datenwarnungs-Manager zu öffnen. Das folgende Bild zeigt, wie sich der Datenwarnungs-Manager auf der Seite "Siteeinstellungen" öffnen lässt.  
   
- ![Reporting Services-Abschnitt der Seite „Websiteeinstellungen“](media/rs-sitesettings.gif "Reporting Services section of Site Settings page")  
+ ![Reporting Services-Abschnitt der Seite "Siteeinstellungen"](media/rs-sitesettings.gif "Reporting Services-Abschnitt der Seite "Siteeinstellungen"")  
   
  Der Datenwarnungs-Manager umfasst eine Tabelle mit dem Warnungsnamen, Berichtsnamen, Namen des Warnungseigentümers, der Nummer der Warnmeldung, der letzten Ausführung der Warnung, der letzten Änderung der Warnungsdefinition und dem Status der Warnmeldung. Wenn die Datenwarnung nicht generiert oder gesendet werden kann, enthält die Statusspalte Informationen zum Fehler und hilft Ihnen bei der Behebung des Problems mit der Warnung. Weitere Informationen finden Sie unter [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
@@ -47,18 +48,19 @@ ms.locfileid: "66109526"
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|Die letzte Warnung war erfolgreich, und die Warnung wurde gesendet.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|Die letzte Warnung wurde erfolgreich ausgeführt, aber die Daten blieben unverändert, und es wurde keine Warnung gesendet.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<Fehlermeldung>Die Protokolldatei enthält Details zum Fehler. Finden Sie in den Protokolleintrag mit dem Bezeichner: \<GUID &GT;.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|
+  \<Fehlermeldung>Die Protokolldatei enthält Details zum Fehler. Weitere Informationen erhalten Sie unter dem Protokolleintrag mit dem Bezeichner: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Die Warnung wurde erstellt.|  
   
- Weitere Informationen finden Sie unter [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Weitere Informationen finden Sie unter [Verwalten aller Daten Warnungen auf einer SharePoint-Website im datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  Sie können alle von Websitebenutzern erstellten Warnungen anzeigen. Sie wählen erst einen Benutzer und wählen dann, ob alle Warnungen oder nur Warnungen für einen bestimmten Bericht angezeigt werden sollen.  
   
   
-##  <a name="DeleteAlerts"></a> Löschen von Datenwarnungen  
+##  <a name="DeleteAlerts"></a>Löschen von Daten Warnungen  
  Warnungsdefinitionen lassen sich über den Datenwarnungs-Manager löschen. Jede Datenwarnungsdefinition hat einen Eigentümer (den SharePoint-Benutzer, der sie erstellt hat). Eigentümer können nur die von ihnen erstellten Warnungsdefinitionen löschen. Weitere Informationen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
- Ein SharePoint-Warnungsadministrator kann Warnungsdefinitionen auflisten und dann löschen, die von einem beliebigen Benutzer der Website erstellt wurden. Weitere Informationen finden Sie unter [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+ Ein SharePoint-Warnungsadministrator kann Warnungsdefinitionen auflisten und dann löschen, die von einem beliebigen Benutzer der Website erstellt wurden. Weitere Informationen finden Sie unter [Verwalten aller Daten Warnungen auf einer SharePoint-Website im datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md) .  
   
  Nach dem Löschen der Warnungsdefinition werden keine weiteren Warnungen gesendet. Wenn Sie jedoch die Warnungsdatenbank abfragen, stellen Sie möglicherweise fest, dass die Warnungsdefinition immer noch vorhanden ist. Der Warndienst führt den Cleanup nach einem Zeitplan durch. Die Warnungsdefinition wird beim nächsten Cleanup dauerhaft gelöscht. Das Standardintervall für den Cleanup beträgt 20 Minuten. Dieses und andere Cleanupintervalle sind konfigurierbar. Weitere Informationen finden Sie unter [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md).  
   
@@ -69,7 +71,7 @@ ms.locfileid: "66109526"
 -   [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md)  
   
   

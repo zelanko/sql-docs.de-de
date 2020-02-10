@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876080"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
@@ -56,7 +56,7 @@ ms.locfileid: "62876080"
   
      Weitere Informationen zur schrittweisen Wiederherstellung von In-Memory OLTP-Datenbanken finden Sie unter [Schrittweise Sicherung und Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen](../in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Wenn in einer Teilwiederherstellungssequenz eine [FILESTREAM](../blob/filestream-sql-server.md) -Dateigruppe ausgeschlossen wird, wird die Wiederherstellung bis zu einem bestimmten Zeitpunkt nicht unterstützt. Sie können das Fortsetzen der Wiederherstellungssequenz erzwingen. Die FILESTREAM-Dateigruppen, die nicht in die RESTORE-Anweisung eingeschlossen werden, können jedoch zu keinem Zeitpunkt wiederhergestellt werden. Wenn Sie eine Wiederherstellung bis zu einem bestimmten Zeitpunkt erzwingen möchten, geben Sie die CONTINUE_AFTER_ERROR-Option zusammen mit der Option STOPAT, STOPATMARK oder STOPBEFOREMARK an. Diese müssen Sie auch in den folgenden RESTORE LOG-Anweisungen angeben. Wenn Sie CONTINUE_AFTER_ERROR angeben, ist die Teilwiederherstellungssequenz erfolgreich, und die FILESTREAM-Dateigruppe wird nicht mehr wiederherstellbar.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Schrittweise Wiederherstellung mit dem einfachen Wiederherstellungsmodell  
@@ -119,7 +119,7 @@ ms.locfileid: "62876080"
   
 ### <a name="examples"></a>Beispiele  
   
--   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -172,11 +172,11 @@ ms.locfileid: "62876080"
   
 4.  Die differenzielle Sicherung, die nach allen anderen Sicherungen ausgeführt wird, die in der ursprünglichen schrittweisen Wiederherstellung gespeichert wurden, um die Daten bis zum ursprünglichen Wiederherstellungszeitpunkt wiederherzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [Planen und Ausführen von Wiederherstellungssequenzen &#40;vollständiges Wiederherstellungsmodell&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [Wiederherstellen einer SQL Server Datenbank zu einem bestimmten Zeitpunkt &#40;vollständigen Wiederherstellungs Modell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Wiederherstellungs-und Wiederherstellungs Übersicht &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
+ [Planen und Ausführen von Wiederherstellungs Sequenzen &#40;vollständigen Wiederherstellungs Modell&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

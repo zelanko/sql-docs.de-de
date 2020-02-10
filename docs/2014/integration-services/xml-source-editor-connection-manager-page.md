@@ -1,5 +1,5 @@
 ---
-title: XML-Quellen-Editor (Seite Verbindungs-Manager) | Microsoft-Dokumentation
+title: Quellen-Editor für XML (Seite Verbindungs-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054298"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Quellen-Editor für XML (Seite Verbindungs-Manager)
@@ -30,13 +30,13 @@ ms.locfileid: "66054298"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |XML-Dateispeicherort|Ruft Daten aus einer XML-Datei ab.|  
 |XML-Datei aus Variable|Gibt den XML-Dateinamen in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
 |XML-Daten aus Variable|Ruft XML-Daten aus einer Variablen ab.|  
   
- **Inlineschema verwenden**  
+ **Inline Schema verwenden**  
  Gibt an, ob die XML-Quelldaten das XSD-Schema enthalten, mit dem die Struktur und die Daten definiert und überprüft werden.  
   
  **XSD-Speicherort**  
@@ -45,7 +45,7 @@ ms.locfileid: "66054298"
  **Durchsuchen**  
  Mithilfe des Dialogfelds **Öffnen** können Sie die XSD-Schemadatei suchen.  
   
- **XSD-Code generieren**  
+ **Generieren von XSD**  
  Mithilfe des Dialogfelds **Speichern unter** können Sie einen Speicherort für die automatisch generierte XSD-Schemadatei auswählen. Der Editor leitet das Schema aus der Struktur der XML-Daten ab.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
@@ -65,10 +65,10 @@ ms.locfileid: "66054298"
  **Variablenname**  
  Wählt die Variable aus, die die XML-Daten enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für XML &#40;Seite „Spalten“&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Quellen-Editor für XML &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Der Quellen-Editor für XML-&#40;Spalten&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Quellen-Editor für XML-&#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extrahieren von Daten mithilfe der XML-Quelle](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

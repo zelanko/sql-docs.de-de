@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483074"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy
@@ -29,14 +29,14 @@ ms.locfileid: "65483074"
 > [!IMPORTANT]  
 >  Pakete können nur in der Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellt werden, in der sie erstellt wurden. Dies bedeutet, dass in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] erstellte Pakete nicht in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] oder höher bereitgestellt werden können.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Zielumgebung zuzugreifen.  
   
 -   Ein Modellbereitstellungspaket muss vorhanden sein. Weitere Informationen finden Sie unter  [Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Wenn Sie ein Modell mit Daten aktualisieren, kann die von Ihnen bereitgestellte Version nicht den Status **Gesperrt** oder **Commit wurde ausgeführt** aufweisen.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65483074"
   
 2.  Öffnen Sie eine Eingabeaufforderung, und navigieren Sie zu "MDSModelDeploy.exe".  
   
-    -   Wenn MDS am Standardspeicherort installiert wurde, ist das Tool unter *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
+    -   Wenn MDS am Standard Speicherort installiert ist, ist das Tool unter *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\configuration\mdsmodeldeploy.exe verfügbar.  
   
     -   Wenn MDS nicht am Standardspeicherort installiert wurde, suchen Sie auf dem lokalen Computer nach der Datei "MDSModelDeploy.exe".  
   
@@ -91,9 +91,9 @@ ms.locfileid: "65483074"
   
 6.  Nach der erfolgreichen Bereitstellung des Pakets wird eine Meldung angezeigt, die angibt, dass der MDSModelDeploy-Vorgang erfolgreich abgeschlossen wurde.  
   
- **Hinweise:**  
+ **Anmerkungen**  
   
--   Wenn eine Abonnementsicht im Paket denselben Namen wie eine Abonnementsicht in einem vorhandenen Modell verfügt, wird die Sicht erstellt, als *Modellname.Name der Abonnementsicht*. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
+-   Wenn eine Abonnement Sicht im Paket denselben Namen wie eine Abonnement Sicht in einem vorhandenen Modell aufweist, wird die Sicht als *modelname. abonnementviewname*erstellt. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
   
 -   Der Bereitstellungsprozess umfasst vier Schritte:  
   
@@ -110,13 +110,13 @@ ms.locfileid: "65483074"
      Falls bei der Aktualisierung eines Modells der Prozess während der ersten drei Schritte fehlschlägt, wird sie nicht fortgesetzt. Für bereits vorgenommene Änderungen wird jedoch kein Rollback durchgeführt. Wenn der Prozess in Schritt 4 fehlschlägt, werden Elemente, die aktualisiert werden können, aktualisiert.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Benutzerdefinierte Metadaten, Dateiattribute sowie Benutzer- und Gruppenberechtigungen sind nicht in den Modellbereitstellungspaketen enthalten. Nachdem Sie ein Modell bereitgestellt haben, müssen diese manuell aktualisiert werden. Weitere Informationen finden Sie in den folgenden Themen:  
+ Benutzerdefinierte Metadaten, Dateiattribute sowie Benutzer- und Gruppenberechtigungen sind nicht in den Modellbereitstellungspaketen enthalten. Nachdem Sie ein Modell bereitgestellt haben, müssen diese manuell aktualisiert werden. Weitere Informationen finden Sie unter  
   
--   [Hinzufügen von Metadaten &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
+-   [Metadaten &#40;Master Data Services hinzufügen&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
--   [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellen von Modellen &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

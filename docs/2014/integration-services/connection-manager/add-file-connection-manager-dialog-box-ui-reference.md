@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833872"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen
@@ -29,11 +29,11 @@ ms.locfileid: "62833872"
 > [!NOTE]  
 >  Die integrierten Tasks und Datenflusskomponenten in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden keinen Verbindungs-Manager für mehrere Dateien. Sie können den Verbindungs-Manager jedoch im Skripttask oder in der Skriptkomponente verwenden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verwendungstyp**  
  Geben Sie den Dateityp an, der vom Verbindungs-Manager für mehrere Dateien verwendet werden soll.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateien erstellen**|Der Verbindungs-Manager erstellt die Dateien.|  
 |**Vorhandene Dateien**|Der Verbindungs-Manager verwendet vorhandene Dateien.|  
@@ -43,19 +43,19 @@ ms.locfileid: "62833872"
  **Dateien / Ordner**  
  Zeigen Sie die hinzugefügten Dateien oder Ordner an, indem Sie die im Folgenden beschriebenen Schaltflächen verwenden.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie eine Datei hinzu, indem Sie das Dialogfeld **Dateien auswählen** verwenden, oder fügen Sie mithilfe des Dialogfelds **Ordner suchen** einen Ordner hinzu.  
   
  **Bearbeiten**  
  Wählen Sie eine Datei oder einen Ordner aus, und ersetzen Sie diese(n) dann mithilfe des Dialogfelds **Dateien auswählen** bzw. **Ordner suchen** durch eine andere Datei oder einen anderen Ordner.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Datei oder einen Ordner aus, und klicken Sie auf die Schaltfläche **Entfernen** , um das betreffende Objekt aus der Liste zu entfernen.  
   
  **Pfeilschaltflächen**  
  Wählen Sie eine Datei oder einen Ordner aus, und verschieben Sie das Objekt dann mit den Pfeilschaltflächen nach oben oder unten, um die Reihenfolge des Zugriffs festzulegen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md)  
   
   

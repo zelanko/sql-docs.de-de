@@ -1,5 +1,5 @@
 ---
-title: Contains-Funktion (XQuery) | Microsoft-Dokumentation
+title: enthält Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899030"
 ---
 # <a name="functions-on-string-values---contains"></a>Funktionen für Zeichenfolgenwerte – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt einen Wert des Typs xs: Boolean, der angibt, ob der Wert des *$arg1* enthält einen Zeichenfolgenwert, der anhand des *$arg2*.  
+  Gibt einen Wert vom Typ xs: Boolean zurück, der angibt, ob der Wert von *$arg 1* einen Zeichen folgen Wert enthält, der durch *$Arg 2*angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,31 +35,32 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *$arg1*  
+ *$arg 1*  
  Zu testender Zeichenfolgenwert.  
   
- *$arg2*  
+ *$Arg 2*  
  Abzurufende Unterzeichenfolge.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Wert des *$arg2* ist eine Zeichenfolge der Länge 0 (null), die Funktion gibt **"true"** . Wenn der Wert des *$arg1* ist eine Zeichenfolge der Länge 0 (null) und den Wert der *$arg2* ist keine Zeichenfolge der Länge 0 (null), die Funktion gibt **"false"** .  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der Wert von *$Arg 2* eine Zeichenfolge der Länge 0 (null) ist, gibt die Funktion **true**zurück. Wenn der Wert von *$arg 1* eine Zeichenfolge der Länge 0 (null) ist und der Wert von *$Arg 2* keine Zeichenfolge der Länge 0 (null) ist, gibt die Funktion **false**zurück.  
   
- Wenn der Wert des *$arg1* oder *$arg2* leere Sequenz ist, wird das Argument wird als die Zeichenfolge der Länge 0 (null) behandelt.  
+ Wenn der Wert *$arg 1* oder *$Arg 2* die leere Sequenz ist, wird das Argument als Zeichenfolge der Länge 0 (null) behandelt.  
   
  Die contains()-Funktion verwendet die Unicode-Codepunkt-Standardsortierung von XQuery für den Zeichenfolgenvergleich.  
   
- Für die angegebene Unterzeichenfolgenwert *$arg2* muss kleiner oder gleich 4000 Zeichen sein. Wenn der angegebene Wert größer als 4000 Zeichen ist, tritt eine dynamische fehlerbedingung auf, und die Contains()-Funktion gibt eine leere Sequenz statt eines booleschen Werts von **"true"** oder **"false"** . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] löst keine dynamischen Fehler bei XQuery-Ausdrücken aus.  
+ Der für *$Arg 2* angegebene Teil Zeichenfolgen-Wert muss kleiner oder gleich 4000 Zeichen sein. Wenn der angegebene Wert größer als 4000 Zeichen ist, tritt eine dynamische Fehlerbedingung auf, und die enthält ()-Funktion gibt eine leere Sequenz anstelle eines booleschen Werts von **true** oder **false**zurück. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] löst keine dynamischen Fehler bei XQuery-Ausdrücken aus.  
   
- Um die Groß-/Kleinschreibung Vergleiche, bei der [Großbuchstaben](../xquery/functions-on-string-values-upper-case.md) oder lower-case-Funktionen können verwendet werden.  
+ Um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu erhalten, können die groß [-](../xquery/functions-on-string-values-upper-case.md) oder Kleinbuchstaben verwendet werden.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
- Das Verhalten von Ersatzzeichenpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab und in einigen Fällen vom Standardnamespace-URI für Funktionen. Weitere Informationen finden Sie im Abschnitt "XQuery-Funktionen sind Ersatzzeichenabhängig" im Thema [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Siehe auch [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Das Verhalten von Ersatzzeichenpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab und in einigen Fällen vom Standardnamespace-URI für Funktionen. Weitere Informationen finden Sie im Abschnitt "XQuery-Funktionen sind Ersatz Zeichen Unterstützung" im Thema " [Breaking Changes to Datenbank-Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Siehe auch [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen vom Typ Xml-Spalten in der AdventureWorks-Datenbank gespeichert.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ XML in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Verwenden der contains()-Funktion von XQuery zum Suchen nach einer bestimmten Zeichenfolge  
- Die folgende Abfrage sucht nach Produkten, die das Wort Aerodynamic in den Zusammenfassungsbeschreibungen enthalten. Die Abfrage gibt ProductID und die <`Summary`>-Element für derartige Produkte.  
+ Die folgende Abfrage sucht nach Produkten, die das Wort Aerodynamic in den Zusammenfassungsbeschreibungen enthalten. Die Abfrage gibt die ProductID und das <`Summary`>-Element für solche Produkte zurück.  
   
 ```  
 --The product model description document uses  
@@ -108,7 +109,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

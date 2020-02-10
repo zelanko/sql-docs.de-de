@@ -1,5 +1,5 @@
 ---
-title: Quellen-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
+title: Quellen-Editor für odata (Seite ' Fehlerausgabe ') | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057286"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Quellen-Editor für OData (Seite 'Fehlerausgabe')
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OData** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66057286"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für OData &#40;Seite „Verbindung“&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Quellen-Editor für OData &#40;Seite „Spalten“&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData-Quelle](data-flow/odata-source.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Quellen-Editor für odata &#40;Verbindungs Seite&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Der Quellen-Editor für odata &#40;Spalten Seite&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Odata-Quelle](data-flow/odata-source.md)   
  [OData-Verbindungs-Manager](connection-manager/odata-connection-manager.md)  
   
   

@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874996"
 ---
 # <a name="restore-database-files-page"></a>Datenbank wiederherstellen (Seite Dateien)
   Auf der Seite **Dateien** des Dialogfelds **Datenbank wiederherstellen** können Sie die Dateien verwalten, die Sie für die Wiederherstellung in der Datenbank ausgewählt haben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="restore-database-files-as"></a>Datenbankdateien wiederherstellen als  
  Mit dieser Option weisen Sie den wiederhergestellten Dateien den neuen Dateipfad zu und verwalten den Pfad.  
@@ -31,7 +31,7 @@ ms.locfileid: "62874996"
  **Alle Dateien verschieben in Ordner**  
  Wiederhergestellte Dateien werden verschoben.  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Datendateiordner**|Geben Sie den Namen des Datendateiordners ein, in den die wiederhergestellten Datendateien verschoben werden sollen, oder navigieren Sie zu diesem.|  
 |**Protokolldateiordner**|Geben Sie den Ordner mit den Protokolldateien ein, in den die wiederhergestellte Protokolldatei verschoben werden soll, oder navigieren Sie zu diesem.|  
@@ -48,7 +48,7 @@ ms.locfileid: "62874996"
  **Wiederherstellen als**  
  Die Dateinamen werden aufgeführt, unter denen die wiederhergestellten Dateien gespeichert werden sollen. Geben Sie den richtigen Dateinamen ein, oder suchen Sie nach diesem.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](restore-database-options-page.md)   
  [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   

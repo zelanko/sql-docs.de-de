@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Eigenschaften für eingebettete Punkte", "Marker zuordnen | Microsoft-Dokumentation
+title: Eigenschaften für eingebettete Punkte der Karte (Dialog Feld), Marker | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108324"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Eigenschaften für eingebettete Punkte der Karte (Dialogfeld), Marker
@@ -29,14 +29,14 @@ ms.locfileid: "66108324"
   
  Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Markertyp**  
- Geben Sie den Markertyp an. Der Standardwert ist `Circle`.  
+ Geben Sie den Markertyp an. Der Standardwert lautet `Circle`.  
   
  **Markergröße**  
  Geben Sie die Markergröße an. Der Standardwert ist 10pt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Karten &#40;Berichts-Generator und SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

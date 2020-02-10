@@ -1,5 +1,5 @@
 ---
-title: Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0) | Microsoft-Dokumentation
+title: Richtlinien und Einschränkungen für XML-Massen laden (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013450"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0)
@@ -25,19 +25,19 @@ ms.locfileid: "66013450"
   
 -   Inlineschemas werden nicht unterstützt.  
   
-     Wenn im XML-Quelldokument ein Inlineschema vorhanden ist, wird dieses Schema von XML-Massenladen ignoriert. Sie geben das Zuordnungsschema für XML-Massenladen außerhalb der XML-Daten an. Sie können nicht das Zuordnungsschema an einem Knoten angeben, indem die **Xmlns = "X: Schema"** Attribut.  
+     Wenn im XML-Quelldokument ein Inlineschema vorhanden ist, wird dieses Schema von XML-Massenladen ignoriert. Sie geben das Zuordnungsschema für XML-Massenladen außerhalb der XML-Daten an. Sie können das Zuordnungsschema nicht mit dem **xmlns = "x:Schema"** -Attribut auf einem Knoten angeben.  
   
 -   Es wird überprüft, ob ein XML-Dokument wohlgeformt ist, es wird jedoch nicht überprüft, ob es gültig ist.  
   
-     XML-Massenladen überprüft, dass das XML-Dokument zu ermitteln, ob es well-formed, mit deren Hilfe wird um sicherzustellen, dass der XML-Code, den syntaxanforderungen der XML 1.0-Empfehlung des World Wide Web Consortium entspricht. Wenn das Dokument nicht wohlgeformt ist, wird die Verarbeitung durch XML-Massenladen abgebrochen und ein Fehler zurückgegeben. Die einzige Ausnahme hierbei stellen Dokumente dar, bei denen es sich um Fragmente handelt (wenn das Dokument beispielsweise kein einzelnes Stammelement aufweist). In diesem Fall wird das Dokument durch XML-Massenladen geladen.  
+     XML-Massen laden überprüft das XML-Dokument, um zu bestimmen, ob es wohl geformt ist, d. h., um sicherzustellen, dass der XML-Code den Syntax Anforderungen der XML 1,0-Empfehlung des World Wide Web Consortium entspricht. Wenn das Dokument nicht wohlgeformt ist, wird die Verarbeitung durch XML-Massenladen abgebrochen und ein Fehler zurückgegeben. Die einzige Ausnahme hierbei stellen Dokumente dar, bei denen es sich um Fragmente handelt (wenn das Dokument beispielsweise kein einzelnes Stammelement aufweist). In diesem Fall wird das Dokument durch XML-Massenladen geladen.  
   
      XML-Massenladen überprüft das Dokument nicht im Hinblick auf XML-Daten oder DTD-Schemas, die in der XML-Datendatei definiert sind oder auf die in der XML-Datendatei verwiesen wird. XML-Massenladen überprüft die XML-Datendatei auch nicht im Hinblick auf das bereitgestellte Zuordnungsschema.  
   
 -   Alle XML-Prologinformationen werden ignoriert.  
   
-     XML-Massenladen ignoriert alle Informationen vor und nach der \<Stamm > Element im XML-Dokument. XML-Massenladen ignoriert beispielsweise sämtliche XML-Deklarationen, internen DTD-Definitionen, externen DTD-Verweise, Kommentare usw.  
+     Beim XML-Massen laden werden alle Informationen vor und nach \<dem Root>-Element im XML-Dokument ignoriert. XML-Massenladen ignoriert beispielsweise sämtliche XML-Deklarationen, internen DTD-Definitionen, externen DTD-Verweise, Kommentare usw.  
   
--   Bei einem Zuordnungsschema, das eine Primärschlüssel-Fremdschlüssel-Beziehung zwischen zwei Tabellen (wie etwa zwischen den Tabellen Customer und CustOrder) definiert, muss die Tabelle mit dem Primärschlüssel im Schema zuerst beschrieben werden. Die Tabelle mit der Fremdschlüsselspalte muss später im Schema angezeigt werden. Der Grund dafür ist, dass die Reihenfolge, in der die Tabellen im Schema angegeben werden, die Reihenfolge, die verwendet wird ist, um sie in der Datenbank zu laden. Beispielsweise wird das folgende XSD-Schema einen Fehler generiert, wenn sie in der XML-Massenladen verwendet wird, da die  **\<Reihenfolge >** Element wird beschrieben, bevor Sie die  **\<Kunden >** Element. Die Spalte CustomerID in der Tabelle CustOrder ist eine Fremdschlüsselspalte, die auf die Primärschlüsselspalte CustomerID in der Tabelle Cust verweist.  
+-   Bei einem Zuordnungsschema, das eine Primärschlüssel-Fremdschlüssel-Beziehung zwischen zwei Tabellen (wie etwa zwischen den Tabellen Customer und CustOrder) definiert, muss die Tabelle mit dem Primärschlüssel im Schema zuerst beschrieben werden. Die Tabelle mit der Fremdschlüsselspalte muss später im Schema angezeigt werden. Der Grund hierfür ist, dass die Reihenfolge, in der die Tabellen im Schema identifiziert werden, die Reihenfolge ist, in der Sie in die Datenbank geladen werden. Das folgende XDR-Schema erzeugt z. b. einen Fehler, wenn es beim XML-Massen Laden verwendet wird, da das ** \<Order>** -Element vor dem ** \<Customer>** -Element beschrieben wird. Die Spalte CustomerID in der Tabelle CustOrder ist eine Fremdschlüsselspalte, die auf die Primärschlüsselspalte CustomerID in der Tabelle Cust verweist.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +77,7 @@ ms.locfileid: "66013450"
   
 -   Wenn im Schema keine Überlaufspalten mithilfe der `sql:overflow-field`-Anmerkung angegeben wurden, ignoriert XML-Massenladen Daten, die zwar im XML-Dokument vorhanden, im Zuordnungsschema jedoch nicht beschrieben sind.  
   
-     XML-Massenladen wendet das angegebene Zuordnungsschema an, sobald es im XML-Datenstrom auf bekannte Tags trifft. XML-Massenladen ignoriert Daten, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind. Nehmen wir beispielsweise an, Sie haben ein Zuordnungsschema, das beschreibt eine  **\<Kunden >** Element. Die XML-Datendatei verfügt über eine  **\<AllCustomers >** -Stammtag (das im Schema nicht beschrieben ist), die alle umschließt die  **\<Kunden >** Elemente:  
+     XML-Massenladen wendet das angegebene Zuordnungsschema an, sobald es im XML-Datenstrom auf bekannte Tags trifft. XML-Massenladen ignoriert Daten, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind. Nehmen Sie beispielsweise an, Sie verfügen über ein Mapping-Schema, das ein ** \<Customer->** Element beschreibt. Die XML-Datendatei verfügt über ein ** \<AllCustomers>** root-Tag (das im Schema nicht beschrieben ist), das alle ** \<Kunden>** Elemente einschließt:  
   
     ```  
     <AllCustomers>  
@@ -87,9 +87,9 @@ ms.locfileid: "66013450"
     </AllCustomers>  
     ```  
   
-     In diesem Fall die XML-Massenladen ignoriert die  **\<AllCustomers >** -Element und beginnt mit der Zuordnung an die  **\<Kunden >** Element. XML-Massenladen ignoriert die Elemente, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind.  
+     In diesem Fall ignoriert XML-Massen laden das ** \<AllCustomers->** Element und beginnt mit der Zuordnung des ** \<Customer->** Elements. XML-Massenladen ignoriert die Elemente, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind.  
   
-     Erwägen Sie eine andere XML-Quelldatendatei enthält, die  **\<Reihenfolge >** Elemente. Diese Elemente sind im Zuordnungsschema nicht beschrieben:  
+     Angenommen, eine andere XML-Quell Datendatei enthält ** \<Order>** -Elemente. Diese Elemente sind im Zuordnungsschema nicht beschrieben:  
   
     ```  
     <AllCustomers>  
@@ -105,11 +105,11 @@ ms.locfileid: "66013450"
     </AllCustomers>  
     ```  
   
-     XML-Massenladen ignoriert diese  **\<Reihenfolge >** Elemente. Wenn Sie jedoch die `sql:overflow-field`-Anmerkung im Schema identifiziert eine Spalte als Überlaufspalte, XML-Massenladen speichert alle nicht verbrauchte Daten in dieser Spalte.  
+     XML-Massen laden ignoriert diese ** \<Reihenfolge>** Elemente. Wenn Sie jedoch die `sql:overflow-field`-Anmerkung im Schema verwenden, um eine Spalte als Überlauf Spalte zu identifizieren, speichert XML-Massen laden alle nicht verbrauchten Daten in dieser Spalte.  
   
 -   CDATA-Abschnitte und Entitätsverweise werden vor dem Speichern in der Datenbank in das entsprechende Zeichenfolgenäquivalent übersetzt.  
   
-     In diesem Beispiel umschließt ein CDATA-Abschnitt den Wert für die  **\<City >** Element. XML-Massenladen extrahiert den Zeichenfolgenwert ("NY"), bevor es fügt die  **\<City >** Element in der Datenbank.  
+     In diesem Beispiel umschließt ein CDATA-Abschnitt den Wert für das ** \<City->** Element. XML-Massen laden extrahiert den Zeichen folgen Wert ("NY"), bevor das ** \<City>** -Element in die Datenbank eingefügt wird.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -119,7 +119,7 @@ ms.locfileid: "66013450"
   
 -   Wenn in einem Zuordnungsschema der Standardwert eines Attributs angegeben ist, verwendet XML-Massenladen dieses Attribut, auch wenn das Attribut in den XML-Quelldaten nicht enthalten ist.  
   
-     Das folgende Beispiel XDR-Schema weist einen Standardwert, der **HireDate** Attribut:  
+     Das folgende XDR-Beispiel Schema weist dem **HireDate** -Attribut einen Standardwert zu:  
   
     ```  
     <?xml version="1.0" ?>  
@@ -142,7 +142,7 @@ ms.locfileid: "66013450"
     </Schema>  
     ```  
   
-     In dieser XML-Daten die **HireDate** Attribut ist nicht vorhanden, aus der zweiten  **\<Kunden >** Element. Wenn der XML-Massenladen das zweite fügt  **\<Kunden >** Element in der Datenbank, er verwendet den Standardwert, der im Schema angegeben ist.  
+     In diesen XML-Daten fehlt das **HireDate** -Attribut in den zweiten ** \<Kunden>** -Elements. Wenn beim XML-Massen laden die zweiten ** \<Kunden>** -Element in die Datenbank eingefügt werden, wird der im Schema angegebene Standardwert verwendet.  
   
     ```  
     <ROOT>  
@@ -155,22 +155,23 @@ ms.locfileid: "66013450"
   
      Eine in der XML-Dateneingabe angegebene URL wird von Massenladen an diesem Speicherort nicht gelesen.  
   
-     Die im Zuordnungsschema angegebenen Tabellen werden erstellt (die Datenbank muss vorhanden sein). Wenn eine oder mehrere Tabellen in der Datenbank bereits vorhanden ist, bestimmt die SGDropTables-Eigenschaft an, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden.  
+     Die im Zuordnungsschema angegebenen Tabellen werden erstellt (die Datenbank muss vorhanden sein). Wenn eine oder mehrere Tabellen bereits in der Datenbank vorhanden sind, bestimmt die SGDropTables-Eigenschaft, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden sollen.  
   
--   Wenn Sie die Eigenschaft "schemagen" angeben (z. B. "schemagen" = "true"), werden die Tabellen, die im Zuordnungsschema identifiziert werden erstellt. Aber "schemagen" erstellt keine Einschränkungen (z. B. die PRIMARY KEY/FOREIGN KEY-Einschränkungen) in diesen Tabellen mit einer Ausnahme: Wenn die XML-Knoten, die den Primärschlüssel in einer Beziehung bilden definiert werden, dass einen XML-Datentyp-ID (d. h. `type="xsd:ID"` für XSD) SGUseID-Eigenschaft auf "true" für "schemagen" festgelegt ist, und Primärschlüssel werden nicht nur erstellt, von der ID typisierten Knoten , jedoch Primär-/Fremdschlüssel-Beziehungen aus Zuordnen von Schemas Beziehungen erstellt werden.  
+-   Wenn Sie die SchemaGen-Eigenschaft angeben (z. b. SchemaGen = true), werden die Tabellen erstellt, die im Mapping-Schema identifiziert werden. SchemaGen erstellt jedoch keine Einschränkungen (z. b. die PRIMARY KEY/FOREIGN KEY-Einschränkungen) für diese Tabellen mit einer Ausnahme: Wenn die XML-Knoten, die den Primärschlüssel in einer Beziehung bilden, als XML-Typ der ID definiert sind ( `type="xsd:ID"` d. h. für XSD) und die SGUseID-Eigenschaft für SchemaGen auf true festgelegt ist, werden nicht nur Primärschlüssel aus den typisierten ID-Knoten erstellt, sondern es werden Primärschlüssel-/Fremdschlüssel Beziehungen aus Zuordnungsschema Beziehungen erstellt  
   
--   SchemaGen verwendet keinen XSD-Schema-Facets und Erweiterungen zum Generieren des relationalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Schema.  
+-   SchemaGen verwendet keine XSD-Schema Facetten und-Erweiterungen zum Generieren des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] relationalen Schemas.  
   
--   Wenn Sie die Eigenschaft "schemagen" angeben (z. B. "schemagen" = "true") beim Massenladen, nur Tabellen (und nicht für Sichten von freigegebenen Namen), die angegeben werden, werden aktualisiert.  
+-   Wenn Sie die SchemaGen-Eigenschaft (z. b. SchemaGen = true) beim Massen Laden angeben, werden nur die angegebenen Tabellen (und keine Sichten des freigegebenen namens) aktualisiert.  
   
--   "Schemagen" stellt nur grundlegende Funktionalität für das Generieren des relationalen Schemas von XSD mit Anmerkungen bereit. Der Benutzer muss die generierten Tabellen ggf. manuell ändern.  
+-   SchemaGen stellt nur grundlegende Funktionen zum Erstellen des relationalen Schemas aus XSD mit Anmerkungen bereit. Der Benutzer muss die generierten Tabellen ggf. manuell ändern.  
   
--   Bei mehr als Beziehung zwischen Tabellen vorhanden ist, versucht "schemagen", um eine einzelne Beziehung zu erstellen, die alle Schlüssel an, die zwischen den beiden Tabellen enthält. Diese Einschränkung kann die Ursache eines [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Fehlers sein.  
+-   Wenn zwischen Tabellen mehr als eine Beziehung besteht, versucht SchemaGen, eine einzelne Beziehung zu erstellen, die alle Schlüssel enthält, die zwischen den beiden Tabellen beteiligt sind. Diese Einschränkung kann die Ursache eines [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Fehlers sein.  
   
 -   Beim Massenladen von XML-Daten in eine Datenbank muss mindestens ein Attribut oder ein untergeordnetes Element im Zuordnungsschema vorhanden sein, das einer Datenbankspalte zugeordnet ist.  
   
 -   Wenn Sie Datenwerte mithilfe von XML-Massenladen einfügen, müssen die Werte im Format (-)CCYY-MM-DD((+-)TZ) angegeben werden. Dies ist das XSD-Standardformat für das Datum.  
   
--   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Beispielsweise wird beim Massenladen `Ignoreduplicatekeys=true` nicht gleichzeitig mit `Keepidentity=false` unterstützt. Bei `Keepidentity=false` wird für das Massenladen erwartet, dass der Server die Schlüsselwerte generiert. Tabellen sollten für den Schlüssel eine `IDENTITY`-Einschränkung besitzen. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass `Ignoreduplicatekeys` nicht auf `true` festgelegt werden muss. `Ignoreduplicatekeys` muss nur dann auf `true` festgelegt werden, wenn Primärschlüsselwerte aus den eingehenden Daten in eine Tabelle mit Zeilen hochgeladen werden und es möglicherweise Konflikte im Zusammenhang mit Primärschlüsselwerten gibt.  
+-   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Beispielsweise wird beim Massenladen `Ignoreduplicatekeys=true` nicht gleichzeitig mit `Keepidentity=false` unterstützt. Bei `Keepidentity=false` wird für das Massenladen erwartet, dass der Server die Schlüsselwerte generiert. Tabellen sollten für den Schlüssel eine `IDENTITY`-Einschränkung besitzen. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass `Ignoreduplicatekeys` nicht auf `true` festgelegt werden muss. 
+  `Ignoreduplicatekeys` muss nur dann auf `true` festgelegt werden, wenn Primärschlüsselwerte aus den eingehenden Daten in eine Tabelle mit Zeilen hochgeladen werden und es möglicherweise Konflikte im Zusammenhang mit Primärschlüsselwerten gibt.  
   
   

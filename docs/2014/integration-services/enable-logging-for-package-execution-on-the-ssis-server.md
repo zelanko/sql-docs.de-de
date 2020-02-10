@@ -1,5 +1,5 @@
 ---
-title: Aktivieren der Protokollierung for Package Execution on the SSIS Server | Microsoft-Dokumentation
+title: Aktivieren der Protokollierung für die Paket Ausführung auf dem SSIS-Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059372"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server
@@ -42,15 +42,15 @@ ms.locfileid: "66059372"
   
  Die folgenden Protokolliergrade sind verfügbar.  
   
-|Protokolliergrad|Beschreibung|  
+|Protokolliergrad|BESCHREIBUNG|  
 |-------------------|-----------------|  
-|None|Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
-|Standard|Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
+|Keine|Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
+|Basic|Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
 |Leistung|Nur Leistungsstatistiken sowie OnError- und OnWarning-Ereignisse werden protokolliert.<br /><br /> In dem Bericht **Ausführungsleistung** wird die aktive Zeit und die Gesamtzeit für Datenflusskomponenten des Pakets angezeigt. Diese Informationen sind verfügbar, wenn der Protokolliergrad der letzten Paketausführung auf **Leistung** oder **Ausführlich**festgelegt wurde. Weitere Informationen finden Sie unter [Berichte für den Integration Services-Server](../../2014/integration-services/reports-for-the-integration-services-server.md).<br /><br /> In der [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) -Sicht werden die Start- und Beendigungszeiten der Datenflusskomponenten für jede Ausführungsphase angezeigt. In dieser Sicht werden die Informationen für diese Komponenten nur angezeigt, wenn der Protokolliergrad der Paketausführung auf **Leistung** oder **Ausführlich**festgelegt ist.|  
-|Ausführlich|Alle Ereignisse werden protokolliert, einschließlich benutzerdefinierter Ereignisse und Diagnose-Ereignissen.<br /><br /> Ein Beispiel für ein Diagnoseereignis ist das DiagnosticEx-Ereignis. Jedes Mal, wenn der Task "Paket ausführen" ein untergeordnetes Paket ausführt, wird dieses Ereignis protokolliert. Die Ereignismeldung besteht aus den Parameterwerten, die an untergeordnete Pakete übergeben wurden<br /><br /> Der Wert der Meldungsspalte für DiagnosticEx ist XML-Text. . Fragen Sie zum Anzeigen des Meldungstexts für eine Paketausführung die Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) ab.<br /><br /> Hinweis: Zu benutzerdefinierten Ereignissen zählen auch die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks protokollierten Ereignisse. Weitere Informationen finden Sie unter [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> In der [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) -Sicht wird eine Zeile angezeigt, sobald eine Datenflusskomponente Daten zur Paketausführung an eine Downstreamkomponente sendet. Der Protokolliergrad muss auf **Ausführlich** festgelegt werden, um diese Informationen in der Sicht zu erfassen.|  
+|Ausführlich|Alle Ereignisse werden protokolliert, einschließlich benutzerdefinierter Ereignisse und Diagnose-Ereignissen.<br /><br /> Ein Beispiel für ein Diagnoseereignis ist das DiagnosticEx-Ereignis. Jedes Mal, wenn der Task "Paket ausführen" ein untergeordnetes Paket ausführt, wird dieses Ereignis protokolliert. Die Ereignismeldung besteht aus den Parameterwerten, die an untergeordnete Pakete übergeben wurden<br /><br /> Der Wert der Meldungsspalte für DiagnosticEx ist XML-Text. . Fragen Sie zum Anzeigen des Meldungstexts für eine Paketausführung die Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) ab.<br /><br /> Hinweis: benutzerdefinierte Ereignisse schließen die Ereignisse ein, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] von Tasks protokolliert werden. Weitere Informationen finden Sie unter [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> In der [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) -Sicht wird eine Zeile angezeigt, sobald eine Datenflusskomponente Daten zur Paketausführung an eine Downstreamkomponente sendet. Der Protokolliergrad muss auf **Ausführlich** festgelegt werden, um diese Informationen in der Sicht zu erfassen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Integration Services &#40;SSIS-&#41; Protokollierung](performance/integration-services-ssis-logging.md)   
  [Aktivieren der Paketprotokollierung in SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)  
   
   

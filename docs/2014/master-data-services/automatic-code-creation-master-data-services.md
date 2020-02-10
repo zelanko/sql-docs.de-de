@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483696"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Automatische Codeerstellung (Master Data Services)
@@ -31,9 +31,9 @@ ms.locfileid: "65483696"
  Wenn Sie Attributwerte in MDS entweder in einem der Tools oder mit dem Stagingprozess eingeben, können Sie den Attributwert leer lassen. Wenn Geschäftsregeln angewendet werden, werden die Werte auf Grundlage des höchsten vorhandenen Werts inkrementiert. Wenn die Regel z.B. „Standardattribut für einen generierten Wert, der bei 1 startet und um 4 inkrementiert wird“ lautet und der höchste aktuelle Wert für das Attribut „700“ ist, beträgt der Wert für das nächste hinzugefügte Element „704“.  
   
 ## <a name="deleting-automatically-generated-values"></a>Löschen von automatisch generierten Werten  
- Nachdem ein Administrator automatisch generierte Werte für das Code-Attribut aktiviert hat, löschen Benutzer möglicherweise unbeabsichtigt ein Element, das über einen Code-Wert verfügte, den sie wiederverwenden möchten. Die Fehlermeldung "der Elementcode bereits von einem Element, das gelöscht wurde verwendet wird" wird angezeigt. Es gibt zwei mögliche Lösungen:  
+ Nachdem ein Administrator automatisch generierte Werte für das Code-Attribut aktiviert hat, löschen Benutzer möglicherweise unbeabsichtigt ein Element, das über einen Code-Wert verfügte, den sie wiederverwenden möchten. Die Fehlermeldung "der Element Code wird bereits von einem gelöschten Member verwendet" wird angezeigt. Es gibt zwei mögliche Lösungen:  
   
--   In der **Versionsverwaltung** Funktionsbereich umkehren ein Administrator die Transaktion, die aufgetreten sind, wenn das Element gelöscht wurde. Dies bedeutet jedoch, dass alle Attribute und Mitgliedschaft in Hierarchien und Auflistungen des früheren Elements wiederhergestellt wird. Weitere Informationen finden Sie unter [Umkehren einer Transaktion &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
+-   Im Funktionsbereich **Versionsverwaltung** kann ein Administrator die Transaktion umkehren, die aufgetreten ist, als der Member gelöscht wurde. Dies bedeutet jedoch, dass alle Attribute des früheren Members und die Mitgliedschaft in Hierarchien und Auflistungen wieder hergestellt werden. Weitere Informationen finden Sie unter [Reverse a Transaction &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
 -   Ein Administrator kann das Element mithilfe des Stagingprozesses permanent löschen. Weitere Informationen finden Sie unter [deaktivieren oder Löschen von Elementen mithilfe des Stagingprozesses &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
@@ -41,14 +41,14 @@ ms.locfileid: "65483696"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Automatisches Generieren von Werten für das Codeattribut.|[Automatisches Generieren von Codeattributwerten &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|Automatisches Generieren von Werten für das Codeattribut.|[Automatisches Generieren von Code Attributwerten &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
 |Generieren Sie automatisch Werte für andere Attribute.|[Automatisches Generieren von anderen Attributwerten als Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
 -   [Übersicht über Master Data Services](master-data-services-overview-mds.md)  
   
--   [Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Master Data Services von Geschäftsregeln &#40;&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
 -   [Entitäten &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

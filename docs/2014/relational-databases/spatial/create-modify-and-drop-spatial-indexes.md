@@ -17,27 +17,27 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014270"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
-  Ein räumlicher Index kann effizienter ausführen bestimmter Vorgänge für eine Spalte mit dem `geometry` oder `geography` -Datentyp (eine *räumliche Spalte*). Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
+  Mit einem räumlichen Index können bestimmte Vorgänge für eine Spalte des-Datentyps `geometry` oder `geography` -Datentyps (eine *räumliche Spalte*) effizienter durchgeführt werden. Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
   
  Die Erstellung von räumlichen Indizes unterliegt einigen Einschränkungen. Weitere Informationen zu den Beschränkungen von räumlichen Indizes finden Sie unter [Erstellen, Ändern und Löschen von räumlichen Indizes](#restrictions) in diesem Thema.  
   
 > [!NOTE]  
 >  Weitere Informationen zur Beziehung zwischen räumlichen Indizes und Partitionen und Dateigruppen finden Sie im Abschnitt mit Hinweisen unter [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
-##  <a name="creating"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
+##  <a name="creating"></a>Erstellen, ändern und löschen räumlicher Indizes  
   
-###  <a name="create"></a> So erstellen Sie einen räumlichen Index  
+###  <a name="create"></a>So erstellen Sie einen räumlichen Index  
  **So erstellen Sie einen räumlichen Index mit Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **So erstellen Sie mit dem Dialogfeld "Neuer Index" in Management Studio einen räumlichen Index**  
+ **So erstellen Sie einen räumlichen Index mit dem Dialogfeld "neuer Index" in Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>So erstellen Sie einen räumlichen Index in Management Studio  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
@@ -54,7 +54,7 @@ ms.locfileid: "66014270"
   
 7.  Klicken Sie auf **Hinzufügen**, um die räumliche Spalte anzugeben, die indiziert werden soll.  
   
-8.  In der **Spalten auswählen aus**  *\<Tabellenname >* (Dialogfeld), wählen Sie eine Spalte vom Typ `geometry` oder `geography` dazu das entsprechende Kontrollkästchen. Alle anderen räumlichen Spalten werden daraufhin nicht editierbar. Wenn Sie eine andere räumliche Spalte auswählen möchten, müssen Sie zuerst die Auswahl der aktuell ausgewählten Spalte aufheben. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+8.  Wählen Sie im Dialogfeld **Spalten aus** * \<Tabellenname>* auswählen eine Spalte vom Typ `geometry` oder `geography` aus, indem Sie das entsprechende Kontrollkästchen aktivieren. Alle anderen räumlichen Spalten werden daraufhin nicht editierbar. Wenn Sie eine andere räumliche Spalte auswählen möchten, müssen Sie zuerst die Auswahl der aktuell ausgewählten Spalte aufheben. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
 9. Überprüfen Sie die Spaltenauswahl im Raster **Indexschlüsselspalten** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66014270"
   
 11. Geben Sie auf der Seite **räumlich** die Werte ein, die Sie für die räumlichen Eigenschaften des Index verwenden möchten.  
   
-     Beim Erstellen eines Index für eine `geometry` Typspalte, Sie müssen angeben, die **( *`X-min`* , *`Y-min`* )** und **( *`X-max`* , *`Y-max`* )** Koordinaten des umgebenden Felds. Bei einem Index für eine `geography` Typspalte, die umgebenden Felder schreibgeschützt nach dem Angeben der **Geografieraster** Mosaikschema, da geografierastermosaik kein umgebendes Feld verwendet wird.  
+     Wenn Sie einen Index für eine `geometry` Typspalte erstellen, müssen Sie die **Koordinaten*`X-min`*(*`Y-min`*,)** und ***`X-max`*(*`Y-max`*,)** des umgebenden Felds angeben. Bei einem Index für eine `geography` Typspalte werden die Felder für das umgebende Feld schreibgeschützt, nachdem Sie das Mosaik Schema für das **Geografieraster** angegeben haben, da das Geografieraster-Mosaik kein Begrenzungsfeld verwendet.  
   
      Optional können Sie benutzerdefinierte Werte für das Feld **Zellen pro Objekt** und für die Rasterdichte auf jeder Ebene des Mosaikschemas angeben. Die Standardanzahl von Zellen pro Objekt ist 16 für [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder 8 für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] oder höher, und die Standardrasterdichte ist **Mittel** für [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66014270"
 >  Um einen weiteren räumlichen Index für die gleiche oder eine andere räumliche Spalte zu erstellen, wiederholen Sie die gerade beschriebenen Schritte.  
   
   
- **So erstellen Sie mit dem Tabellen-Designer in Management Studio einen räumlichen Index**  
+ **So erstellen Sie einen räumlichen Index mithilfe Tabellen-Designer in Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>So erstellen Sie einen räumlichen Index im Tabellen-Designer  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, für die Sie einen räumlichen Index erstellen möchten, und klicken Sie anschließend auf **Entwerfen**.  
@@ -92,7 +92,7 @@ ms.locfileid: "66014270"
 5.  Wählen Sie den neuen Index aus der Liste **Ausgewählter räumlicher Index** aus, und legen Sie im Raster rechts die Eigenschaften für den räumlichen Index fest. Informationen zu den Eigenschaften finden Sie unter [Dialogfeld 'Räumliche Indizes' &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
   
-###  <a name="alter"></a> So ändern Sie einen räumlichen Index  
+###  <a name="alter"></a>So ändern Sie einen räumlichen Index  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66014270"
 -   [Verschieben eines vorhandenen Indexes in eine andere Dateigruppe](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> So löschen Sie einen räumlichen Index  
+###  <a name="drop"></a>So löschen Sie einen räumlichen Index  
  **So löschen Sie einen räumlichen Index mit Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- **So löschen Sie einen Index mit Management Studio**  
+ **So löschen Sie einen Index mithilfe von Management Studio**  
  [Löschen eines Indexes](../indexes/delete-an-index.md)  
   
- **So löschen Sie mit dem Tabellen-Designer in Management Studio einen räumlichen Index**  
+ **So löschen Sie einen räumlichen Index mithilfe Tabellen-Designer in Management Studio**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>So löschen Sie einen räumlichen Index im Tabellen-Designer  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit dem räumlichen Index, den Sie löschen möchten, und klicken Sie anschließend auf **Entwerfen**.  
@@ -127,7 +127,7 @@ ms.locfileid: "66014270"
 4.  Klicken Sie auf **Löschen**.  
   
   
-##  <a name="restrictions"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
+##  <a name="restrictions"></a>Einschränkungen für räumliche Indizes  
  Ein räumlicher Index kann nur für eine Spalte des Typs `geometry` oder `geography` erstellt werden.  
   
 ### <a name="table-and-view-restrictions"></a>Einschränkungen für Tabellen und Sichten  
@@ -152,7 +152,7 @@ ms.locfileid: "66014270"
  Räumliche Mosaike, die mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführt wurden, können nicht in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]repliziert werden. Sie müssen räumliche Mosaike von [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] für räumliche Indizes für die Abwärtskompatibilität mit [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] - oder [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] -Datenbanken verwenden.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über räumliche Indizes](spatial-indexes-overview.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Partition Ziel-Editor (Seite Zuordnungen) | Microsoft-Dokumentation
+title: Ziel-Editor für Partitions Verarbeitung (Seite Zuordnungen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056699"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Zuordnungen)
@@ -29,7 +29,7 @@ ms.locfileid: "66056699"
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "66056699"
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Partitionsverarbeitung &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für Partitionsverarbeitung &#40;Seite „Erweitert“&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Ziel-Editor für Partitions Verarbeitung &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für Partitions Verarbeitung &#40;Seite "Erweitert"&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

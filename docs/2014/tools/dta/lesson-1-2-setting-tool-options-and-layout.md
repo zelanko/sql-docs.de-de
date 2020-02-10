@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Optionen und Layout | Microsoft-Dokumentation
+title: Festlegen von Tool Optionen und Layout | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110202"
 ---
 # <a name="setting-tool-options-and-layout"></a>Festlegen von Optionen und Layout
@@ -32,7 +32,7 @@ ms.locfileid: "66110202"
   
     -   Erweitern Sie die Liste **Beim Start** , um festzustellen, welche Anzeigemöglichkeiten der Datenbankoptimierungsratgeber beim Start bietet. Standardmäßig ist **Neue Sitzung anzeigen** ausgewählt.  
   
-    -   Klicken Sie auf **Schriftart ändern** , um die Schriftarten anzuzeigen, die Sie für die Listen von Datenbanken und Tabellen auf der Registerkarte **Allgemein** auswählen können. Die Schriftarten, die Sie in dieser Option auswählen, werden auch für die Empfehlungsraster und Berichte des Datenbankoptimierungsratgebers verwendet, die nach dem Optimieren angezeigt werden. Standardmäßig verwendet der Datenbankoptimierungsratgeber die Systemschriftarten.  
+    -   Klicken Sie auf **Schriftart ändern** , um die Schriftarten anzuzeigen, die Sie für die Listen der Datenbanken und Tabellen auf der Registerkarte **Allgemein** auswählen können. Die Schriftarten, die Sie für diese Option auswählen, werden auch in Datenbankoptimierungsratgeber Empfehlungs Raster und-Berichten verwendet, nachdem Sie die Optimierung durchgeführt haben. Standardmäßig verwendet der Datenbankoptimierungsratgeber die Systemschriftarten.  
   
     -   Für **Anzahl der Elemente in der Liste zuletzt verwendeter Objekte** kann ein Wert von **1** bis **10**festgelegt werden. Damit wird die maximale Anzahl von Elementen in der Liste festgelegt, die angezeigt wird, wenn Sie im Menü **Datei** auf **Zuletzt geöffnete Sitzungen** oder **Zuletzt geöffnete Dateien** klicken. Standardmäßig ist der Wert **4**festgelegt.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66110202"
     -   Standardmäßig ist **Vor dem Beenden der Sitzungsanalyse fragen** aktiviert, damit nicht eine Optimierungssitzung aus Versehen beendet wird, bevor die Analyse einer Arbeitsauslastung durch den Datenbankoptimierungsratgeber abgeschlossen ist.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

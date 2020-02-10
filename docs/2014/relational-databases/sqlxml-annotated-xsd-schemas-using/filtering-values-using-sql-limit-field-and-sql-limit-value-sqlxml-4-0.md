@@ -1,5 +1,5 @@
 ---
-title: "Filtern von Werten mithilfe von ' SQL: Limit-Field und ' SQL: Limit-Wert (SQLXML 4.0) | Microsoft-Dokumentation"
+title: "Filtern von Werten mit ' SQL: limit-field ' und ' SQL: limit-value ' (SQLXML 4,0) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013809"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "66013809"
   
  Mithilfe der `sql:limit-field`-Anmerkung können Sie eine Spalte identifizieren, die einen Grenzwert enthält. Dies ist für alle zugeordneten Elemente oder Attribute zulässig.  
   
- Die `sql:limit-value` -Anmerkung verwendet, um die nur von begrenztem Wert in der Spalte anzugeben, die im angegebenen die `sql:limit-field` Anmerkung. Die `sql:limit-value`-Anmerkung ist optional. Wenn `sql:limit-value` ist nicht angegeben wird, wird ein NULL-Wert verwendet.  
+ Die `sql:limit-value` -Anmerkung wird verwendet, um den begrenzten Wert in der Spalte anzugeben, die in der `sql:limit-field` -Anmerkung angegeben wird. Die `sql:limit-value`-Anmerkung ist optional. Wenn `sql:limit-value` nicht angegeben wird, wird ein NULL-Wert angenommen.  
   
 > [!NOTE]  
 >  Bei Verwendung einer `sql:limit-field`-Anmerkung, bei der die zugeordnete SQL-Spalte eine Spalte vom Typ `real` ist, konvertiert SQLXML 4.0 die `sql:limit-value`-Anmerkung wie in XML-Schemas angegeben in einen angegebenen `nvarchar`-Wert. Hierzu müssen Dezimalgrenzwerte mithilfe der vollständigen wissenschaftlichen Schreibweise angegeben werden. Weitere Informationen finden Sie im Folgenden unter Beispiel B.  
@@ -53,7 +53,7 @@ ms.locfileid: "66013809"
   
  Ein Kunde kann eine Liefer- und/oder eine Rechnungsadresse haben. Die AddressType-Spaltenwerte sind Shipping (Lieferadresse) und Billing (Rechnungsadresse).  
   
- Dies ist das Zuordnungsschema, in dem die **"ShipTo"** -Schemaattribut der StreetAddress-Spalte in der Addresses-Beziehung zugeordnet. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf Lieferadressen durch Angabe der `sql:limit-field` und `sql:limit-value` Anmerkungen. Auf ähnliche Weise die **"BillTo"** Schemaattribut gibt nur die Rechnungsadresse eines Kunden zurück.  
+ Dies ist das Zuordnungs Schema, in dem das **ShipTo** -Schema Attribut der Spalte "StreetAddress" in der Beziehung "Adressen" zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind nur durch Angabe der- `sql:limit-field` und `sql:limit-value` -Anmerkungen auf das Versenden von Adressen beschränkt. Ebenso gibt das Attribut " **BillTo** Schema" nur die Abrechnungsadresse eines Kunden zurück.  
   
  Das ist das Schema:  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66013809"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
-1.  Erstellen Sie zwei Tabellen in der **Tempdb** Datenbank:  
+1.  Erstellen Sie zwei Tabellen in der **tempdb** -Datenbank:  
   
     ```  
     USE tempdb  
@@ -170,7 +170,7 @@ ms.locfileid: "66013809"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Dies ist das Zuordnungsschema, in dem die **"OrderID"** Attribut in den Bestellungsdetails der OrderID-Spalte in der Orders-Beziehung zugeordnet. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf jene, deren Wert der 2.0000000e-001 (0,2) gemäß der Einstellung für die **Discount** -Attribut mit der `sql:limit-field` und `sql:limit-value` Anmerkungen.  
+ Dies ist das Zuordnungs Schema, in dem das **OrderID** -Attribut in den Bestelldetails der OrderID-Spalte in der Orders-Beziehung zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind auf die Werte beschränkt, die den Wert 0000000e e-001 (0,2) aufweisen, **** wie für das Discount `sql:limit-field` - `sql:limit-value` Attribut mithilfe der-und-Anmerkungen angegeben.  
   
  Das ist das Schema:  
   
@@ -214,9 +214,9 @@ ms.locfileid: "66013809"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
-1.  Erstellen Sie zwei Tabellen in der **Tempdb** Datenbank:  
+1.  Erstellen Sie zwei Tabellen in der **tempdb** -Datenbank:  
   
     ```  
     USE tempdb  
@@ -304,10 +304,10 @@ ms.locfileid: "66013809"
     </root>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [float und real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [Nchar und Nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [float und Real &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
+ [nchar und nvarchar &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Mithilfe von Schemas mit Anmerkungen in XSD in Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Verwenden von XSD-Schemas mit Anmerkungen in Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

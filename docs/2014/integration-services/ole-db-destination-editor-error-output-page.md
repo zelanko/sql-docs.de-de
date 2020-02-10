@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057120"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Ziel-Editor für OLE DB (Seite Fehlerausgabe)
@@ -26,7 +26,7 @@ ms.locfileid: "66057120"
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66057120"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für OLE DB &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für OLE DB &#40;Seite Zuordnungen&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB Ziel-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [OLE DB Ziel-Editor &#40;Seite Zuordnungen&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Laden von Daten mithilfe des OLE DB-Ziels](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

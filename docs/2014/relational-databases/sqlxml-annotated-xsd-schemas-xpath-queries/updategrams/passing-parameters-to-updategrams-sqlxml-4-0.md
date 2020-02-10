@@ -1,5 +1,5 @@
 ---
-title: Übergeben von Parametern an Updategramms (SQLXML 4.0) | Microsoft-Dokumentation
+title: Übergeben von Parametern an Updategrams (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014725"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Übergeben von Parametern an Updategrams (SQLXML 4.0)
-  Updategrams sind Vorlagen. Daher können Sie ihnen Parameter übergeben. Weitere Informationen zum Übergeben von Parametern an Vorlagen finden Sie unter [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
+  Updategrams sind Vorlagen. Daher können Sie ihnen Parameter übergeben. Weitere Informationen zum Übergeben von Parametern an Vorlagen finden Sie unter [Updategram Security Überlegungen &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Mit Updategrams können Sie NULL als Parameterwert übergeben. Um den NULL-Parameterwert zu übergeben, geben Sie das `nullvalue`-Attribut an. Der Wert, der dem `nullvalue`-Attribut zugewiesen wird, wird dann als Parameterwert zur Verfügung gestellt. Updategrams behandeln diesen Wert als NULL.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66014725"
 >  In `<sql:header>` und `<updg:header>` geben Sie den `nullvalue`-Wert als nicht qualifiziert an, während Sie den `<updg:sync>`-Wert in `nullvalue` als qualifiziert angeben (z. B. `updg:nullvalue`).  
   
 ## <a name="examples"></a>Beispiele  
- Um funktionierende Beispiele, die mit den folgenden Beispielen erstellen, müssen Sie die Anforderungen, die im angegebenen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Wenn Sie in den folgenden Beispielen funktionierende Beispiele erstellen möchten, müssen Sie die unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md)angegebenen Anforderungen erfüllen.  
   
- Beachten Sie bevor Sie die updategrambeispiele verwenden Folgendes ein:  
+ Beachten Sie vor der Verwendung der Update Gram-Beispiele Folgendes:  
   
--   Die Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   Die Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Update grams, die Mapping-Schemas verwenden, finden Sie unter [Angeben eines Mappingschemas mit Anmerkungen in einem Update Gram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Übergeben von Parametern an ein Updategram  
- In diesem Beispiel ändert das Updategram den Nachnamen eines Angestellten in der HumanResources.Shift-Tabelle. Das Updategram werden zwei Parameter übergeben: ShiftID, die zur eindeutigen Identifizierung der Schicht, und nennen Sie verwendet wird.  
+ In diesem Beispiel ändert das Updategram den Nachnamen eines Angestellten in der HumanResources.Shift-Tabelle. An das Updategram werden zwei Parameter übergeben: ShiftID zur eindeutigen Identifizierung der Schicht und Name.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -62,7 +62,7 @@ ms.locfileid: "66014725"
   
 1.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie es als Datei unter UpdategramWithParameters.xml.  
   
-2.  Bereiten Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, indem Sie die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Bereiten Sie das SQLXML 4,0-Testskript (Sqlxml4test. vb) [mithilfe von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) zum Ausführen des Update grams vor, indem Sie `cmd.Properties("Output Stream").Value = outStream`die folgenden Zeilen nach hinzufügen:  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014725"
   
 1.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie es als Datei unter UpdategramPassingNullvalues.xml.  
   
-2.  Bereiten Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, indem Sie die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Bereiten Sie das SQLXML 4,0-Testskript (Sqlxml4test. vb) [mithilfe von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) zum Ausführen des Update grams vor, indem Sie `cmd.Properties("Output Stream").Value = outStream`die folgenden Zeilen nach hinzufügen:  
   
     ```  
     cmd.NamedParameters = True  
@@ -106,7 +106,7 @@ ms.locfileid: "66014725"
     cmd.Parameters.Append cmd.CreateParameter("@ManagerID",  3, 1, 0, Null)  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Sicherheitsüberlegungen zu Update grams &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

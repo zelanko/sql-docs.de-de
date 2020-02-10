@@ -1,5 +1,5 @@
 ---
-title: 'SQL: Overflow-Feld (SQLXML 4.0) | Microsoft-Dokumentation'
+title: 'SQL: overflow-field (SQLXML 4,0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013472"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "66013472"
   
  Bei der Speicherung der Daten in der Überlaufspalte speichert der XML-Massenladevorgang ebenfalls die Start- und Endtags des übergeordneten Elements, für das `sql:overflow-field` definiert ist.  
   
- Das folgende Schema beschreibt zum Beispiel die  **\<Kunden >** und  **\<CustOrder >** Elemente. Beide Elemente geben eine Überlaufspalte an:  
+ Im folgenden Schema werden z. b. ** \<** die>Elemente Customers>und ** \<CustOrder** beschrieben. Beide Elemente geben eine Überlaufspalte an:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +73,9 @@ ms.locfileid: "66013472"
 </xsd:schema>  
 ```  
   
- Im Schema die  **\<Kunden >** -Element ordnet die Cust-Tabelle und die  **\<Reihenfolge >** -Element der CustOrder-Tabelle zugeordnet.  
+ Im Schema wird das ** \<Customer>** -Element der Cust-Tabelle und das ** \<Order>** -Element der CustOrder-Tabelle zugeordnet.  
   
- Sowohl die  **\<Kunden >** und  **\<Reihenfolge >** Elemente geben eine Überlaufspalte. Daher speichert XML-Massenladen alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Kunden >** -Element in der Überlaufspalte der Cust-Tabelle, und alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Reihenfolge >** Element in der Überlaufspalte der CustOrder-Tabelle.  
+ Sowohl das ** \<Customer>** -als auch das ** \<Order>** -Element identifizieren eine Überlauf Spalte. Folglich speichert XML-Massen laden alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \<Customer>** -Elements in der Überlauf Spalte der Cust-Tabelle und alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \<Order>** -Elements in der Überlauf Spalte der CustOrder-Tabelle.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

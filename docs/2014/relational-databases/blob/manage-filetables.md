@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009989"
 ---
 # <a name="manage-filetables"></a>Verwalten von FileTables
   Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
   
-##  <a name="HowToEnumerate"></a>Vorgehensweise: Abrufen einer Liste von FileTable-Objekten und damit in Verbindung stehenden Objekten  
+##  <a name="HowToEnumerate"></a> Vorgehensweise: Abrufen einer Liste von FileTables und verbundenen Objekten  
  Um eine Liste von FileTables abzurufen, fragen Sie eine der folgenden Katalogsichten ab:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> Vorgehensweise: Sicherstellen der Sichtbarkeit der FileTable-Objekte in einer Datenbank  
+###  <a name="visible"></a> Vorgehensweise: Sicherstellen der Sichtbarkeit der FileTables in einer Datenbank  
  Ein Verzeichnis auf Datenbankebene und die FileTable-Verzeichnisse darunter sind sichtbar, wenn alle folgenden Bedingungen zutreffen:  
   
 1.  FILESTREAM ist auf Instanzebene aktiviert.  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  Durch das Abbrechen geöffneter Dateihandles verlieren Benutzer möglicherweise nicht gespeicherte Daten. Dieses Verhalten ist mit dem Verhalten des Dateisystems selbst konsistent.  
   
-###  <a name="HowToListOpen"></a> Vorgehensweise: Abrufen einer Liste von einem FileTable-Objekt zugeordneten offenen Dateihandles  
+###  <a name="HowToListOpen"></a> Vorgehensweise: Abrufen einer Liste von einer FileTable zugeordneten offenen Dateihandles  
  Rufen Sie die Katalogsicht [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) ab.  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Vorgehensweise: Abbrechen von einem FileTable-Objekt zugeordneten offenen Dateihandles  
+###  <a name="HowToKill"></a> Vorgehensweise: Abbrechen von einer FileTable zugeordneten offenen Dateihandles  
  Rufen Sie die gespeicherte Prozedur [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) mit den entsprechenden Argumenten auf, um alle offenen Dateihandles in der Datenbank oder FileTable oder ein bestimmtes Handle abzubrechen.  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Vorgehensweise: Identifizieren der von FileTable-Objekten abgehaltenen Sperren  
+###  <a name="HowToIdentifyLocks"></a> Vorgehensweise: Identifizieren der von FileTables abgehaltenen Sperren  
  Die meisten von FileTables abgehaltenen Sperren entsprechen Dateien, die von Anwendungen geöffnet wurden.  
   
  **So identifizieren Sie geöffnete Dateien und die zugeordneten Sperren**  
@@ -231,7 +231,7 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC und FileTables  
  Sie können die Einschränkungen für eine FileTable, einschließlich systemdefinierter Einschränkungen, mithilfe von DBCC CHECKCONSTRAINTS überprüfen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [FileTable-Kompatibilität mit anderen SQL Server-Funktionen](filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../views/views.md)  
   

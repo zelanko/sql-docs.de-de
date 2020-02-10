@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor (Verbindungsseite) | Microsoft-Dokumentation
+title: Transformations-Editor für Suche (Seite ' Verbindung ') | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057951"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Transformations-Editor für Suche (Seite 'Verbindung')
@@ -26,10 +26,10 @@ ms.locfileid: "66057951"
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche** auf der Seite **Allgemein** die Optionen **Vollcache** und Cacheverbindungs-Manager auswählen.  
   
- **Allgemein**  
+ **Cacheverbindungs-Manager**  
  Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -37,7 +37,7 @@ ms.locfileid: "66057951"
   
  Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche**auf der Seite **Allgemein**die Optionen **Vollcache**, **Teilcache**oder **Kein Cache** und OLE DB-Verbindungs-Manager auswählen.  
   
- **Teilcache**  
+ **OLE DB Verbindungs-Manager**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -52,7 +52,7 @@ ms.locfileid: "66057951"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
   
- **Ergebnisse einer SQL-Abfrage verwenden**  
+ **Verwenden der Ergebnisse einer SQL-Abfrage**  
  Wählen Sie diese Option aus, um nach einer vorhandenen Abfrage zu suchen, eine neue Abfrage zu erstellen, die Abfragesyntax zu überprüfen und eine Vorschau der Abfrageergebnisse anzuzeigen.  
   
  **Abfrage erstellen**  
@@ -70,11 +70,11 @@ ms.locfileid: "66057951"
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
-## <a name="see-also"></a>Siehe auch  
- [Transformations-Editor für Suche &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Transformations-Editor für Suche &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
  [Transformations-Editor für Suche &#40;Seite „Spalten“&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Transformations-Editor für Suche &#40;Seite "Erweitert"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Transformations-Editor für Suche &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Transformation für Fuzzysuche](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Erstellen von Konstanten Elementen unter Verwendung von Sql: ist-Constant (SQLXML 4.0) | Microsoft-Dokumentation'
+title: 'Erstellen konstanter Elemente mithilfe von SQL: is-constant (SQLXML 4,0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,30 +19,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013936"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Erstellen von 'constant'-Elementen unter Verwendung von sql:is-constant (SQLXML 4.0)
-  Constant-Element angeben –, also ein Element in das XSD-Schema, das keiner Datenbanktabelle oder-Spalte zugeordnet ist – können Sie die `sql:is-constant` Anmerkung. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die `sql:is-constant`-Anmerkung kann für ein Element angegeben werden, das über keine Attribute verfügt. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
+  Zum Angeben eines konstanten Elements, d. h. eines Elements im XSD-Schema, das keiner Datenbanktabelle oder-Spalte zugeordnet ist, können Sie `sql:is-constant` die-Anmerkung verwenden. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die `sql:is-constant`-Anmerkung kann für ein Element angegeben werden, das über keine Attribute verfügt. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
   
  Die `sql:is-constant`-Anmerkung kann zu folgenden Zwecken verwendet werden:  
   
 -   Hinzufügen eines Elements der obersten Ebene zum XML-Dokument. XML erfordert ein einzelnes Element (Stammelement) der obersten Ebene für das Dokument.  
   
--   Erstellen von Containerelementen, z. B. eine  **\<Bestellungen >** -Element, das alle Reihenfolgen umschließt.  
+-   Erstellen von Container Elementen, z. b. einem ** \<Orders>** -Element, das alle Bestellungen umschließt.  
   
- Die `sql:is-constant` -Anmerkung kann hinzugefügt werden, um eine  **\<ComplexType >** Element.  
+ Die `sql:is-constant` -Anmerkung kann einem ** \<complexType->** Element hinzugefügt werden.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Angeben von "sql:is-constant" zum Hinzufügen eines Containerelements  
- In diesem mit Anmerkungen in XSD-Schema  **\<CustomerOrders >** wird als constant-Element definiert, durch Angabe der `sql:is-constant` Attribut mit einem Wert von 1. Aus diesem Grund  **\<CustomerOrders >** ist nicht auf Sie keiner Datenbanktabelle oder – Spalte zugeordnet. Dieses constant-Element besteht aus den  **\<Reihenfolge >** untergeordnete Elemente.  
+ In diesem mit Anmerkungen versehene XSD-Schema wird ** \<CustomerOrders>** als konstantes Element definiert, indem `sql:is-constant` das-Attribut mit einem Wert von 1 angegeben wird. Daher ist ** \<CustomerOrders>** keiner Datenbanktabelle oder-Spalte zugeordnet. Dieses Konstante Element besteht aus der ** \<Reihenfolge>** untergeordneten Elementen.  
   
- Obwohl  **\<CustomerOrders >** ordnet nicht auf Sie keiner Datenbanktabelle oder-Spalte erscheint weiterhin in der XML-Ergebnis als Containerelement mit den  **\<Reihenfolge >** untergeordnete Elemente.  
+ Obwohl ** \<CustomerOrders>** keiner Datenbanktabelle oder-Spalte zugeordnet ist, wird es im resultierenden XML-Code weiterhin als Containerelement angezeigt, das die ** \<Reihenfolge>** untergeordneten Elemente enthält.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -82,7 +82,7 @@ ms.locfileid: "66013936"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen isConstant.xml.  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900900"
 ---
 # <a name="raw-file-custom-properties"></a>Benutzerdefinierte Eigenschaften der Rohdatendatei
@@ -24,10 +24,10 @@ ms.locfileid: "62900900"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Rohdatendatei-Quelle beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Rohdaten verwendete Modus. Die möglichen Werte sind `File name` (0) und `File name from variable` (1). Der Standardwert ist `File name` (0).|  
-|FileName|Zeichenfolge|Der Pfad und der Dateiname der Quelldatei.|  
+|FileName|String|Der Pfad und der Dateiname der Quelldatei.|  
   
  Die Ausgabe und die Ausgabespalten der Rohdatendatei-Quelle verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "62900900"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Rohdatendatei-Ziels. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob die FileName-Eigenschaft einen Dateinamen oder den Namen einer Variablen enthält, die einen Dateinamen enthält. Die Optionen sind `File name` (0) und `File name from variable` (1).|  
-|FileName|Zeichenfolge|Der Name der Datei, in die das Rohdatendatei-Ziel schreibt.|  
+|FileName|String|Der Name der Datei, in die das Rohdatendatei-Ziel schreibt.|  
 |WriteOption|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob das Rohdatendatei-Ziel eine vorhandene Datei mit demselben Namen löscht. Die Optionen sind `Create Always` (0), `Create Once` (1), `Truncate and Append` (3) und `Append` (2). Der Standardwert dieser Eigenschaft ist `Create Always` (0).|  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ ms.locfileid: "62900900"
   
  Weitere Informationen finden Sie unter [Raw File Destination](raw-file-destination.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Common Properties](../common-properties.md)  
   
   

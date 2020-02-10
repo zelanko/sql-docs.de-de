@@ -1,5 +1,5 @@
 ---
-title: Konvertierungs-Assistenten für Integrationsservices-Projekt | Microsoft-Dokumentation
+title: Integration Services projektkonvertierungs-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057975"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistent für die Konvertierung von Integration Services-Projekten
   Der Assistent für die Konvertierung von **Integration Services-Projekten** konvertiert ein Projekt ins Projektbereitstellungsmodell.  
   
 > [!NOTE]  
->  Wenn das Projekt mindestens eine Datenquelle enthält, werden die Datenquellen entfernt, wenn die Projektkonvertierung abgeschlossen wird. Fügen Sie einen Verbindungs-Manager auf Projektebene hinzu, um eine Verbindung mit einer Datenquelle herzustellen, die von den Paketen im Projekt gemeinsam genutzt werden kann. Weitere Informationen finden Sie unter [hinzufügen, löschen oder Freigeben eines Verbindungs-Managers in einem Paket](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+>  Wenn das Projekt mindestens eine Datenquelle enthält, werden die Datenquellen entfernt, wenn die Projektkonvertierung abgeschlossen wird. Fügen Sie einen Verbindungs-Manager auf Projektebene hinzu, um eine Verbindung mit einer Datenquelle herzustellen, die von den Paketen im Projekt gemeinsam genutzt werden kann. Weitere Informationen finden Sie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
  **Was möchten Sie tun?**  
   
--   [Öffnen des Assistenten für die Konvertierung von Integration Services-Projekten](#open_dialog)  
+-   [Assistent zum Konvertieren von Integration Services Projekten öffnen](#open_dialog)  
   
 -   [Festlegen von Optionen auf der Seite "Pakete suchen"](#locate)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66057975"
   
 -   [Festlegen von Optionen auf der Seite "Projekteigenschaften angeben"](#projectProperties)  
   
--   [Festlegen von Optionen auf der Seite "Task 'Paket ausführen' aktualisieren"](#executePackage)  
+-   [Festlegen von Optionen auf der Seite "Task ' Paket ausführen ' aktualisieren"](#executePackage)  
   
 -   [Festlegen von Optionen auf der Seite "Konfigurationen auswählen"](#configurations)  
   
@@ -45,20 +45,20 @@ ms.locfileid: "66057975"
   
 -   [Festlegen von Optionen auf der Seite "Parameter konfigurieren"](#configureParameters)  
   
--   [Festlegen der Optionen auf der Seite zum Überprüfen](#review)  
+-   [Festlegen der Optionen auf der Seite "überprüfen"](#review)  
   
--   [Festlegen der Optionen unter "Konvertierung ausführen"](#conversion)  
+-   [Festlegen der Optionen für die Konvertierung ausführen](#conversion)  
   
-##  <a name="open_dialog"></a> Öffnen des Assistenten für die Konvertierung von Integration Services-Projekten  
- Führen Sie einen der folgenden Schritte aus, um den **Assistenten zum Konvertieren von Integration Services-Projekten** zu öffnen.  
+##  <a name="open_dialog"></a>Assistent zum Konvertieren von Integration Services Projekten öffnen  
+ Führen Sie einen der folgenden Schritte aus, um den Assistenten zum Konvertieren von **Integration Services-Projekten** zu öffnen.  
   
 -   Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
 -   Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
- Abhängig davon, ob **Sie den Assistenten zum Konvertieren von Integration Services-Projekten** von [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus. Weitere Informationen finden Sie unter [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
+ Abhängig davon, ob Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** von [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus. Weitere Informationen finden Sie unter [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
-##  <a name="locate"></a> Festlegen von Optionen auf der Seite "Pakete suchen"  
+##  <a name="locate"></a>Festlegen von Optionen auf der Seite "Pakete suchen"  
   
 > [!NOTE]  
 >  Die Seite **Pakete suchen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ausführen.  
@@ -84,7 +84,7 @@ ms.locfileid: "66057975"
  **Windows-Authentifizierung verwenden**  
  Der Microsoft Windows-Authentifizierungsmodus ermöglicht Benutzern das Herstellen einer Verbindung über ein Windows-Benutzerkonto. Wenn Sie die Windows-Authentifizierung verwenden, müssen Sie keinen Benutzernamen und kein Kennwort angeben.  
   
- **SQL Server-Authentifizierung verwenden**  
+ **SQL Server Authentifizierung verwenden**  
  Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem Kennwort von einer nicht vertrauenswürdigen Verbindung herstellt, authentifiziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Verbindung, indem überprüft wird, ob ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldekonto eingerichtet wurde und ob das angegebene Kennwort mit dem zuvor aufgezeichneten übereinstimmt. Wenn kein Anmeldekonto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eingerichtet wurde, schlägt die Authentifizierung fehl, und der Benutzer erhält eine Fehlermeldung.  
   
  **Benutzername**  
@@ -96,14 +96,14 @@ ms.locfileid: "66057975"
  **Ordner**  
  Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen**klicken.  
   
-##  <a name="selectPackages"></a> Festlegen von Optionen auf der Seite "Pakete auswählen"  
+##  <a name="selectPackages"></a>Festlegen von Optionen auf der Seite "Pakete auswählen"  
  **Paketname**  
  Listet die Paketdatei auf.  
   
  **Status**  
  Gibt an, ob ein Paket bereit ist, in das Projektbereitstellungsmodell konvertiert zu werden.  
   
- **MessageBox**  
+ **Meldung**  
  Zeigt eine Meldung an, die dem Paket zugeordnet sind.  
   
  **Kennwort**  
@@ -115,7 +115,7 @@ ms.locfileid: "66057975"
  **Aktualisieren**  
  Aktualisiert die Liste der Pakete.  
   
-##  <a name="destination"></a> Festlegen von Optionen auf der Seite "Ziel auswählen"  
+##  <a name="destination"></a>Festlegen von Optionen auf der Seite "Ziel auswählen"  
  Geben Sie auf dieser Seite den Namen und den Pfad für eine neue Projektbereitstellungsdatei (.ispac) an, oder wählen Sie eine vorhandene Datei aus.  
   
 > [!NOTE]  
@@ -127,13 +127,13 @@ ms.locfileid: "66057975"
  **Projektname**  
  Geben Sie den Projektnamen ein.  
   
- **Schutzebene**  
+ **Schutz Ebene**  
  Wählen Sie die Schutzebene aus. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
  **Projektbeschreibung**  
  Geben Sie eine optionale Beschreibung für das Projekt ein.  
   
-##  <a name="projectProperties"></a> Festlegen von Optionen auf der Seite "Projekteigenschaften angeben"  
+##  <a name="projectProperties"></a>Festlegen von Optionen auf der Seite "Projekteigenschaften angeben"  
   
 > [!NOTE]  
 >  Die Seite **Projekteigenschaften angeben** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ausführen.  
@@ -141,13 +141,13 @@ ms.locfileid: "66057975"
  **Projektname**  
  Listet den Projektnamen auf.  
   
- **Schutzebene**  
+ **Schutz Ebene**  
  Wählen Sie eine Schutzebene für die im Projekt enthaltenen Pakete aus. Weitere Informationen zu Schutzebenen finden Sie unter [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
  **Projektbeschreibung**  
  Geben Sie eine optionale Beschreibung für das Projekt ein.  
   
-##  <a name="executePackage"></a> Festlegen von Optionen auf der Seite "Task 'Paket ausführen' aktualisieren"  
+##  <a name="executePackage"></a>Festlegen von Optionen auf der Seite "Task ' Paket ausführen ' aktualisieren"  
  Aktualisieren Sie die in den Paketen enthaltenen Tasks "Paket ausführen", um einen projektbasierten Verweis zu verwenden. Weitere Informationen finden Sie unter [Execute Package Task Editor](../../2014/integration-services/execute-package-task-editor.md).  
   
  **Übergeordnetes Paket**  
@@ -162,7 +162,7 @@ ms.locfileid: "66057975"
  **Verweis zuweisen**  
  Wählen Sie ein untergeordnetes im Projekt gespeichertes Paket aus.  
   
-##  <a name="configurations"></a> Festlegen von Optionen auf der Seite "Konfigurationen auswählen"  
+##  <a name="configurations"></a>Festlegen von Optionen auf der Seite "Konfigurationen auswählen"  
  Wählen Sie die Paketkonfigurationen aus, die Sie durch Parameter ersetzen möchten.  
   
  **Paket**  
@@ -171,7 +171,7 @@ ms.locfileid: "66057975"
  **Typ**  
  Listet den Typ der Konfiguration auf, z. B. eine XML-Konfigurationsdatei.  
   
- **Konfigurationszeichenfolge**  
+ **Konfigurations Zeichenfolge**  
  Listet den Pfad der Konfigurationsdatei auf.  
   
  **Status**  
@@ -183,28 +183,28 @@ ms.locfileid: "66057975"
  **Aktualisieren**  
  Klicken Sie auf die Option, um die Liste der Konfigurationen zu aktualisieren.  
   
- **Option zum Entfernen der Konfigurationen von allen Paketen nach der Konvertierung**  
+ **Konfigurationen aus allen Paketen nach der Konvertierung entfernen**  
  Es wird empfohlen, durch Aktivierung dieser Option alle Konfigurationen vom Projekt zu entfernen.  
   
  Wenn Sie diese Option nicht auswählen, werden nur die Konfigurationen entfernt, die durch Parameter ersetzt werden sollen.  
   
-##  <a name="createParameters"></a> Festlegen von Optionen auf der Seite "Parameter erstellen"  
+##  <a name="createParameters"></a>Festlegen von Optionen auf der Seite "Parameter erstellen"  
  Wählen Sie den Parameternamen und den Bereich für jede Konfigurationseigenschaft aus.  
   
  **Paket**  
  Listet die Paketdatei auf.  
   
- **Parametername**  
+ **Parameter Name**  
  Listet den Namen des Parameters auf.  
   
- **Bereich**  
+ **`Scope`**  
  Wählen Sie den Bereich des Parameters aus, und zwar entweder Paket oder Projekt.  
   
-##  <a name="configureParameters"></a> Festlegen von Optionen auf der Seite "Parameter konfigurieren"  
+##  <a name="configureParameters"></a>Festlegen von Optionen auf der Seite "Parameter konfigurieren"  
  **Name**  
  Listet den Namen des Parameters auf.  
   
- **Bereich**  
+ **`Scope`**  
  Listet den Bereich des Parameters auf.  
   
  **Wert**  
@@ -218,16 +218,16 @@ ms.locfileid: "66057975"
   
  Das Dialogfeld **Parameterdetails festlegen** listet auch den Datentyp des Parameterwerts und den Ursprung des Parameters auf.  
   
-##  <a name="review"></a> Festlegen der Optionen auf der Seite zum Überprüfen  
+##  <a name="review"></a>Festlegen der Optionen auf der Seite "überprüfen"  
  Verwenden Sie die Seite für die **Überprüfung**, um die Optionen zu bestätigen, die Sie für die Konvertierung des Projekts ausgewählt haben.  
   
- **Vorherige**  
+ **Previous**  
  Klicken Sie, um eine Option zu ändern.  
   
- **Konvertieren**  
+ **Umgebaut**  
  Klicken Sie, um das Projekt in das Projektbereitstellungsmodell zu konvertieren.  
   
-##  <a name="conversion"></a> Festlegen der Optionen unter "Konvertierung ausführen"  
+##  <a name="conversion"></a>Festlegen der Optionen für die Konvertierung ausführen  
  Die Seite "Konvertierung ausführen" zeigt den Status der Projektkonvertierung an.  
   
  **Aktion**  
@@ -241,7 +241,7 @@ ms.locfileid: "66057975"
  **Bericht speichern**  
  Klicken Sie, um in einer XML-Datei eine Zusammenfassung der Projektkonvertierung zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

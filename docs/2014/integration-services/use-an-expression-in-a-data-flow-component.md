@@ -1,5 +1,5 @@
 ---
-title: Verwenden eines Ausdrucks in einer Datenflusskomponente | Microsoft-Dokumentation
+title: Verwenden eines Ausdrucks in einer Datenfluss Komponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054817"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Verwenden eines Ausdrucks in einer Datenflusskomponente
@@ -59,12 +59,12 @@ ms.locfileid: "66054817"
         > [!NOTE]  
         >  Wenn Sie den Fokus von der Spalte **Bedingung** oder **Ausdruck** entfernen, kann der Ausdruckstext hervorgehoben dargestellt werden, was auf eine falsche Ausdruckssyntax hinweist.  
   
-10. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
+10. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
     > [!NOTE]  
     >  Wenn der Ausdruck ungültig ist, wird eine Warnung angezeigt, die die Syntaxfehler im Ausdruck beschreibt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
  [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
  [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   

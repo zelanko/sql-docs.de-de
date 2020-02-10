@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 11: Veröffentlichen der Wissensdatenbank | Microsoft-Dokumentation'
+title: 'Aufgabe 11: Veröffentlichen der Wissensdatenbank | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484067"
 ---
-# <a name="task-11-publishing-the-knowledge-base"></a>Aufgabe 11: Veröffentlichen der Wissensdatenbank
+# <a name="task-11-publishing-the-knowledge-base"></a>Aufgabe 11: Veröffentlichen der Wissensdatenbank
   In dieser Aufgabe veröffentlichen Sie die Wissensdatenbank. Eine veröffentlichte Wissensdatenbank kann für die Bereinigungs- oder Abgleichsaktivität in einem Data Quality-Projekt verwendet werden.  
   
-1.  Klicken Sie auf **Fertig stellen** am unteren Rand des Fensters.  
+1.  Klicken Sie unten im Fenster auf die Schaltfläche **Fertig** stellen.  
   
-2.  Klicken Sie auf **veröffentlichen** in die **SQL Server Data Quality Services** Dialogfeld.  
+2.  Klicken Sie im Dialogfeld **SQL Server Data Quality Services** auf **veröffentlichen** .  
   
 3.  Klicken Sie auf **OK** , um das Meldungsfeld zu schließen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 12: Ermitteln von wissen &#40;Wissensermittlung&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
+ [Aufgabe 12: Ermitteln der Wissens &#40;Knowledge Discovery&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
   
   

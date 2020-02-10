@@ -15,20 +15,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011909"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)
-  Datendateien, die Identitätswerte enthalten, können per Massenimport in eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übertragen werden. Standardmäßig werden die Werte für die Identitätsspalte in der importierten Datendatei ignoriert, und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden automatisch eindeutige Werte zugewiesen. Die eindeutigen Werte basieren auf dem Ausgangswert und den inkrementellen Werten, die bei der Tabellenerstellung angegeben werden.  
+  Datendateien, die Identitäts Werte enthalten, können per Massen Import in eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von importiert werden. Standardmäßig werden die Werte für die Identitätsspalte in der importierten Datendatei ignoriert, und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden automatisch eindeutige Werte zugewiesen. Die eindeutigen Werte basieren auf dem Ausgangswert und den inkrementellen Werten, die bei der Tabellenerstellung angegeben werden.  
   
- Wenn die Datendatei keine Werte für die Bezeichnerspalte in der Tabelle enthält, sollten Sie eine Formatdatei verwenden, um anzugeben, dass die Bezeichnerspalte beim Importieren von Daten ausgelassen werden soll. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist der Spalte automatisch eindeutige Werte zu.  
+ Wenn die Datendatei keine Werte für die Bezeichnerspalte in der Tabelle enthält, sollten Sie eine Formatdatei verwenden, um anzugeben, dass die Bezeichnerspalte beim Importieren von Daten ausgelassen werden soll. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist der Spalte automatisch eindeutige Werte zu.  
   
  Um zu verhindern, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Massenimport von Datenzeilen in eine Tabelle Identitätswerte zuweist, verwenden Sie den entsprechenden Qualifizierer für den Befehl zur Identitätsbeibehaltung (keepidentity). Wenn Sie einen Qualifizierer zur Identitätsbeibehaltung angeben, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Identitätswerte in der Datendatei. Nachfolgend sind diese Qualifizierer aufgeführt:  
   
-|Befehl|Qualifizierer zur Identitätsbeibehaltung|Qualifizierertyp|  
+|Get-Help|Qualifizierer zur Identitätsbeibehaltung|Qualifizierertyp|  
 |-------------|------------------------------|--------------------|  
 |`bcp`|**-E**|Schalter|  
 |BULK INSERT|KEEPIDENTITY|Argument|  
@@ -40,7 +41,7 @@ ms.locfileid: "66011909"
 >  Weitere Informationen zu einer automatisch inkrementierten Zahl, die in mehreren Tabellen verwendet oder aus Anwendungen aufgerufen werden kann, ohne dass auf eine Tabelle verwiesen wird, finden Sie unter [Sequenznummern](../sequence-numbers/sequence-numbers.md).  
   
 ## <a name="examples"></a>Beispiele  
- In den in diesem Thema enthaltenen Beispielen wird der Massenimport mithilfe von INSERT ... SELECT * FROM OPENROWSET(BULK...) ausgeführt, und die Standardwerte werden beibehalten.  
+ In den Beispielen in diesem Thema wird der Massen Import von Daten mithilfe von INSERT... Wählen Sie * FROM OPENROWSET (BULK...) aus, und behalten Sie die Standardwerte bei.  
   
 ### <a name="sample-table"></a>Beispieltabelle  
  Für den Massenimport muss eine Tabelle namens **myTestKeepNulls** erstellt werden, und zwar in der **AdventureWorks**-Beispieldatenbank unter dem **dbo**-Schema. Führen Sie zum Erstellen dieser Tabelle im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
@@ -76,10 +77,10 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Mit "bcp" und unter Beibehaltung der Identitätswerte  
  Anhand des nachfolgenden Beispiels wird veranschaulicht, wie Identitätswerte beibehalten werden können, wenn `bcp` für den Massenimport von Daten verwendet wird. Der Befehl `bcp` verwendet die Formatdatei `myDepartment-f-n-x.Xml` und enthält folgende Schalter:  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**-E**|Gibt an, dass Identitätswerte in der Datendatei für die Identitätsspalte verwendet werden sollen.|  
-|**-T**|Gibt an, dass die `bcp` Hilfsprogramm eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine vertrauenswürdige Verbindung.|  
+|**-T**|Gibt an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , `bcp` dass das Hilfsprogramm eine vertrauenswürdige Verbindung mit herstellt.|  
   
  Geben Sie an der Windows-Eingabeaufforderung Folgendes ein.  
   
@@ -91,7 +92,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
 ### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>B. Mit BULK INSERT und unter Beibehaltung der Identitätswerte  
  Im nachfolgenden Beispiel wird BULK INSERT für den Massenimport von Daten aus der `myDepartment-c.Dat`-Datei in die `AdventureWorks.HumanResources.myDepartment`-Tabelle verwendet. Die Anweisung verwendet die `myDepartment-f-n-x.Xml`-Formatdatei und nimmt die Option KEEPIDENTITY auf, um sicherzustellen, dass sämtliche Identitätswerte in der Datendatei beibehalten werden.  
   
- Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
+ Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks;  
@@ -112,7 +113,7 @@ SELECT * FROM HumanResources.myDepartment;
 ### <a name="c-using-openrowset-and-keeping-identity-values"></a>C. Mit OPENROWSET und unter Beibehaltung der Identitätswerte  
  Im nachfolgenden Beispiel wird der OPENROWSET-Massen-Rowset-Anbieter zum Massenimport von Daten aus der `myDepartment-c.Dat`-Datei in die `AdventureWorks.HumanResources.myDepartment`-Tabelle verwendet. Die Anweisung verwendet die `myDepartment-f-n-x.Xml`-Formatdatei und nimmt den KEEPIDENTITY-Hinweis auf, um sicherzustellen, dass sämtliche Identitätswerte in der Datendatei beibehalten werden.  
   
- Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
+ Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks;  
@@ -134,9 +135,9 @@ GO
   
 -   [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Vorbereiten von Daten für den Massenexport oder -import &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Vorbereiten von Daten für den Massen Export oder-Import &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
- **So verwenden Sie eine Formatdatei**  
+ **So verwenden Sie eine Format Datei**  
   
 -   [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -148,9 +149,9 @@ GO
   
 -   [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
+ **So verwenden Sie Datenformate für Massen Import oder Massen Export**  
   
--   [Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
@@ -162,13 +163,13 @@ GO
   
  **So geben Sie Datenformate für die Kompatibilität bei Verwendung von bcp an**  
   
-1.  [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+1.  [Angeben von Feld-und Zeilen Abschluss Zeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Geben Sie die Präfix Länge in Datendateien an, indem Sie bcp &#40;SQL Server verwenden&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Geben Sie File Storage Typ mithilfe von bcp &#40;SQL Server an&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   

@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013082"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Ausführen von XPath-Abfragen mit Namespaces (SQLXMLOLEDB-Anbieter)
   XPath-Abfragen können Namespaces enthalten. Wenn die Schemaelemente mit Namespace angegeben wurden (d. h. wenn Sie einen Zielnamespace enthalten), dann müssen mit diesem Schema ausgeführte XPath-Abfragen diesen Namespace angeben.  
   
- Weil die Verwendung des Platzhalterzeichens (*) in SQLXML 4.0 nicht unterstützt wird, müssen Sie die XPath-Abfrage mithilfe eines Namespacepräfix angeben. Um dieses Präfix aufzulösen, verwenden Sie die Namespaces-Eigenschaft, die Namespacebindung an.  
+ Weil die Verwendung des Platzhalterzeichens (*) in SQLXML 4.0 nicht unterstützt wird, müssen Sie die XPath-Abfrage mithilfe eines Namespacepräfix angeben. Um dieses Präfix aufzulösen, geben Sie mit der Namespace-Eigenschaft die Namespace Bindung an.  
   
- Im folgenden Beispiel gibt die XPath-Abfrage Namespaces mit dem Platzhalterzeichen (\*) und die local-name() and Namespace-URI()=' XPath-Funktionen. Diese XPath-Abfrage gibt alle Elemente zurück, bei denen der lokale Name `Contact` und der Namespace-URI `urn:myschema:Contacts` lautet.  
+ Im folgenden Beispiel gibt die XPath-Abfrage Namespaces mit den Platzhalter Zeichen (\*) und den XPath-Funktionen local-Name () und Namespace-URI () an. Diese XPath-Abfrage gibt alle Elemente zurück, bei denen der lokale Name `Contact` und der Namespace-URI `urn:myschema:Contacts` lautet.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -53,10 +53,10 @@ ms.locfileid: "66013082"
   
  Weil dieses Schema einen Zielnamespace definiert, müssen XPath-Abfragen (beispielsweise "Employee"), die mit diesem Schema ausgeführt werden, einen Namespace enthalten.  
   
- Dies ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Beispielanwendung, die eine XPath-Abfrage (x:Employee) mit dem vorstehenden XSD-Schema ausführt. Um das Präfix aufzulösen, wird die Namespacebindung mithilfe der Namespaces-Eigenschaft angegeben.  
+ Dies ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Beispielanwendung, die eine XPath-Abfrage (x:Employee) mit dem vorstehenden XSD-Schema ausführt. Um das Präfix aufzulösen, wird die Namespace Bindung mithilfe der Namespace-Eigenschaft angegeben.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Anforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  
@@ -92,7 +92,7 @@ End Sub
     "Microsoft ActiveX Data Objects 2.8 Library"  
     ```  
   
-4.  Führen Sie die Anwendung.  
+4.  Führen Sie die Anwendung aus.  
   
  Dies ist das Teilergebnis:  
   

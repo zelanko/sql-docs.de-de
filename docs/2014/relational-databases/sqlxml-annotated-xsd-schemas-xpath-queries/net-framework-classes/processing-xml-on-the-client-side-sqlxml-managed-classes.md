@@ -1,5 +1,5 @@
 ---
-title: Verarbeitung von XML auf dem Client (verwaltete SQLXML Klassen) | Microsoft-Dokumentation
+title: Verarbeiten von XML auf der Client Seite (verwaltete SQLXML-Klassen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a75d9fb1d4f77cb41cfdc3578af675533fbb6bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010808"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Clientseitige Verarbeitung von XML (Verwaltete Klassen in SQLXML)
-  Dieses Beispiel veranschaulicht die Verwendung der ClientSideXml-Eigenschaft. Die Anwendung führt eine gespeicherte Prozedur auf dem Server aus. Das Ergebnis der gespeicherten Prozedur (ein Rowset mit zwei Spalten) wird auf der Clientseite verarbeitet und ein XML-Dokument produziert.  
+  In diesem Beispiel wird die Verwendung der ClientSideXML-Eigenschaft veranschaulicht. Die Anwendung führt eine gespeicherte Prozedur auf dem Server aus. Das Ergebnis der gespeicherten Prozedur (ein Rowset mit zwei Spalten) wird auf der Clientseite verarbeitet und ein XML-Dokument produziert.  
   
- Die folgenden GetContacts gespeicherte Prozedur gibt **FirstName** und **"LastName"** von Mitarbeitern in der Person.Contact-Tabelle in der AdventureWorks-Datenbank.  
+ Mit der folgenden gespeicherten Prozedur GetContacts werden **FirstName** und **LastName** von Mitarbeitern in der Person. Contact-Tabelle der AdventureWorks-Datenbank zurückgegeben.  
   
 ```  
 USE AdventureWorks  
@@ -38,7 +38,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Diese C#-Anwendung führt die gespeicherte Prozedur und gibt die FOR XML AUTO-Option bei der Angabe des CommandText-Werts. In der Anwendung die ClientSideXml-Eigenschaft des SqlXmlCommand-Objekt festgelegt ist auf "true". Auf diese Weise können Sie bereits bestehende gespeicherte Prozeduren ausführen, die ein Rowset zurückgeben und auf dem Client eine XML-Transformation auf das Rowset anwenden.  
+ Diese c#-Anwendung führt die gespeicherte Prozedur aus und gibt die for XML Auto-Option in der Angabe des CommandText-Werts an. In der Anwendung ist die ClientSideXML-Eigenschaft des SqlXmlCommand-Objekts auf "true" festgelegt. Auf diese Weise können Sie bereits bestehende gespeicherte Prozeduren ausführen, die ein Rowset zurückgeben und auf dem Client eine XML-Transformation auf das Rowset anwenden.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  

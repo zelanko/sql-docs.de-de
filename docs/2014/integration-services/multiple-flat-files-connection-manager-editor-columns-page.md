@@ -1,5 +1,5 @@
 ---
-title: Verbindungs-Manager-Editor (Spaltenseite) für mehrere Flatfiles | Microsoft-Dokumentation
+title: Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Spalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057498"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Spalten)
@@ -31,44 +31,44 @@ ms.locfileid: "66057498"
  Geben Sie einen eindeutigen Namen für die Verbindung für mehrere Flatfiles im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
  **Beschreibung**  
- Beschreiben Sie die Verbindung. Es ist eine bewährte Methode, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
+ Beschreiben Sie die Verbindung. Die bewährte Methode ist hierbei, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
   
 ## <a name="flat-file-format-dynamic-options"></a>Flatfileformat (dynamische Optionen)  
   
 ### <a name="format--delimited"></a>Format = Mit Trennzeichen  
- **Zeilentrennzeichen**  
+ **Zeilen Trennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
-|**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
-|**{LF}**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
+|**Programmiert Verlangt**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
+|**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
+|**Verlangt**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Zeilen dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Zeilen dient ein Doppelpunkt.|  
-|**Komma {,}**|Als Trennzeichen für Zeilen dient ein Komma.|  
-|**Tabulator {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
+|**Komma{,}**|Als Trennzeichen für Zeilen dient ein Komma.|  
+|**Tab {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Zeilen dient ein senkrechter Strich.|  
   
- **Spaltentrennzeichen**  
+ **Spalten Trennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
-|**{CR}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
-|**{LF}**|Als Trennzeichen für Spalten dient ein Zeilenvorschub.|  
+|**Programmiert Verlangt**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
+|**Programmiert**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
+|**Verlangt**|Als Trennzeichen für Spalten dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Spalten dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Spalten dient ein Doppelpunkt.|  
-|**Komma {,}**|Als Trennzeichen für Spalten dient ein Komma.|  
-|**Tabulator {t}**|Als Trennzeichen für Spalten dient ein Tabulator.|  
+|**Komma{,}**|Als Trennzeichen für Spalten dient ein Komma.|  
+|**Tab {t}**|Als Trennzeichen für Spalten dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
   
  **Spalten zurücksetzen**  
  Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
   
 ### <a name="format--fixed-width"></a>Format = Feste Breite  
- **Schriftart**  
+ **Raster**  
  Wählen Sie die Schriftart aus, in der die Vorschaudaten angezeigt werden sollen.  
   
  **Quelldatenspalten**  
@@ -85,33 +85,33 @@ ms.locfileid: "66057498"
 > [!NOTE]  
 >  Bei Dateien mit rechtem Flatterrand haben die Spalten mit Ausnahme der letzten Spalte eine feste Breite. Die Trennung der letzten Spalte erfolgt mit einem Zeilentrennzeichen.  
   
- **Schriftart**  
+ **Raster**  
  Wählen Sie die Schriftart aus, in der die Vorschaudaten angezeigt werden sollen.  
   
  **Quelldatenspalten**  
  Passen Sie die Zeilenbreite an, indem Sie die vertikale Zeilenmarkierungslinie verschieben, und passen Sie die Spaltenbreite an, indem Sie auf das Lineal am oberen Rand des Vorschaufensters klicken.  
   
- **Zeilentrennzeichen**  
+ **Zeilen Trennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
-|**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
-|**{LF}**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
+|**Programmiert Verlangt**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
+|**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
+|**Verlangt**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Zeilen dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Zeilen dient ein Doppelpunkt.|  
-|**Komma {,}**|Als Trennzeichen für Zeilen dient ein Komma.|  
-|**Tabulator {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
+|**Komma{,}**|Als Trennzeichen für Zeilen dient ein Komma.|  
+|**Tab {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Zeilen dient ein senkrechter Strich.|  
   
  **Spalten zurücksetzen**  
  Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
- [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Erweitert“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Vorschau“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Erweitert"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Vorschau Seite&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor (Seite "Eingabespalten") | Microsoft-Dokumentation
+title: Transformations-Editor für Skripterstellung (Seite Eingabe Spalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056091"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Transformations-Editor für Skripterstellung (Seite Eingabespalten)
@@ -27,7 +27,7 @@ ms.locfileid: "66056091"
 > [!NOTE]  
 >  Für Quellkomponenten, die Ausgaben, aber keine Eingaben haben, wird die Seite **Eingabespalten** nicht angezeigt.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Tastatur  
  **Eingabename**  
@@ -45,12 +45,12 @@ ms.locfileid: "66056091"
  **Verwendungstyp**  
  Geben Sie an, ob die Skripttransformation jede Spalte als `ReadOnly` oder `ReadWrite` behandeln soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Skriptkomponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
- [Transformations-Editor für Skripterstellung &#40;Seite „Eingaben“ und „Ausgaben“&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Transformations-Editor für Skripterstellung &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Skript Komponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite "Eingaben und Ausgaben"&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Skript Seite&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Skript Transformations-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Zusätzliche Skriptkomponentenbeispiele](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

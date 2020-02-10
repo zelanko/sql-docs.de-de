@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010158"
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
@@ -62,9 +62,9 @@ ms.locfileid: "66010158"
   
 
   
-##  <a name="best"></a> Bewährte Methoden  
+##  <a name="best"></a>Bewährte Methoden  
   
-###  <a name="config"></a> Physische Konfiguration und Verwaltung  
+###  <a name="config"></a>Physische Konfiguration und Wartung  
  Beachten Sie beim Einrichten von FILESTREAM-Speichervolumes die folgenden Richtlinien:  
   
 -   Deaktivieren Sie kurze Dateinamen auf FILESTREAM-Computersystemen. Bei kurzen Dateinamen dauert das Erstellen erheblich länger. Um kurze Dateinamen zu deaktivieren, verwenden Sie das Windows-Hilfsprogramm **fsutil** .  
@@ -81,17 +81,17 @@ ms.locfileid: "66010158"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Hinweise|  
+|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Bemerkungen|  
 |RAID 5|Normal|Normal|Hervorragend|Die Leistung ist besser als bei einem einzelnen Datenträger oder JBOD und geringer als bei RAID 0 oder RAID 5 mit Striping.|  
-|RAID 0|Hervorragend|Hervorragend|None||  
+|RAID 0|Hervorragend|Hervorragend|Keine||  
 |RAID 5 + Striping|Hervorragend|Hervorragend|Hervorragend|Die aufwendigste Option.|  
   
 
   
-###  <a name="database"></a> Physischer Datenbankentwurf  
+###  <a name="database"></a>Physischer Daten bankentwurf  
  Beachten Sie beim Entwerfen einer FILESTREAM-Datenbank die folgenden Richtlinien:  
   
--   FILESTREAM-Spalten müssen von einer entsprechenden begleitet werden `uniqueidentifier`ROWGUID-Spalte. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
+-   FILESTREAM-Spalten müssen von einer entsprechenden `uniqueidentifier`ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
   
 -   Aus Leistungsgründen sollten die FILESTREAM-Dateigruppen und -Container nicht auf Volumes gespeichert werden, auf denen sich das Betriebssystem, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokoll, tempdb oder die Auslagerungsdatei befindet.  
   

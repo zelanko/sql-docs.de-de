@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren die Pakete (SSIS-PaketUpgrade-Assistent) | Microsoft-Dokumentation
+title: Aktualisieren der Pakete (SSIS-Paket Upgrade-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054734"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Pakete werden aktualisiert (SSIS Paketupgrade-Assistent)
   Verwenden Sie die Seite **Pakete werden aktualisiert** , um den Status der Paketaktualisierung anzuzeigen und um den Aktualisierungsprozess unterbrechen. Der [!INCLUDE[ssIS](../includes/ssis-md.md)] Paketaktualisierungs-Assistent aktualisiert die ausgewählten Pakete nacheinander.  
   
- **So zeigen Sie aktualisierte Pakete an, die in SQL Server-Datenbank oder dem Paketspeicher gespeichert wurden**  
+ **So zeigen Sie aktualisierte Pakete an, die in einer SQL Server-Datenbank oder dem Paketspeicher gespeichert wurden**  
   
 -   Stellen Sie in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]im Objekt-Explorer eine Verbindung mit der lokalen Instanz von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]her, und erweitern Sie dann den Knoten **Gespeicherte Pakete** , um die aktualisierten Pakete anzuzeigen.  
   
- **So zeigen Sie aktualisierte Pakete an, die von SQL Server Data Tools durchgeführtem Upgrade**  
+ **So zeigen Sie aktualisierte Pakete an, die in SQL Server-Datentools aktualisiert wurden**  
   
 -   Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, und erweitern Sie dann den Knoten **SSIS-Pakete** , um die aktualisierten Pakete anzuzeigen.  
   
-## <a name="options"></a>Optionen  
- **Bereich „Meldung“**  
+## <a name="options"></a>Tastatur  
+ **Meldungs Bereich**  
  Zeigt während der Aktualisierung Statusmeldungen und Zusammenfassungsinformationen an.  
   
  **Aktion**  
@@ -40,13 +40,13 @@ ms.locfileid: "66054734"
  **Status**  
  Zeigen Sie das Ergebnis der einzelnen Aktionen an.  
   
- **MessageBox**  
+ **Meldung**  
  Zeigen Sie die Fehlermeldungen an, die die einzelnen Aktionen generieren.  
   
  **Beenden**  
  Beenden Sie die Paketaktualisierung.  
   
- **Bericht**  
+ **Report**  
  Wählen Sie aus, wie Sie mit dem Bericht, der die Ergebnisse der Paketaktualisierung enthält, verfahren möchten:  
   
 -   Den Bericht online anzeigen  
@@ -57,7 +57,7 @@ ms.locfileid: "66054734"
   
 -   Den Bericht als E-Mail-Nachricht versenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren von Integration Services-Paketen](install-windows/upgrade-integration-services-packages.md)  
   
   

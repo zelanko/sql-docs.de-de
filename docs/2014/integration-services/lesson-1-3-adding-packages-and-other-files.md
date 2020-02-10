@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Hinzufügen von Paketen und weiteren Dateien | Microsoft-Dokumentation'
+title: 'Schritt 3: Hinzufügen von Paketen und weiteren Dateien | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892120"
 ---
-# <a name="step-3-adding-packages-and-other-files"></a>Schritt 3: Hinzufügen von Paketen und weiteren Dateien
+# <a name="step-3-adding-packages-and-other-files"></a>Schritt 3: Hinzufügen von Paketen und weiteren Dateien
   In diesem Schritt fügen Sie dem im vorherigen Schritt erstellten Deployment Tutorial-Projekt vorhandene Pakete, Hilfsdateien zur Unterstützung einzelner Pakete und eine Infodatei hinzu. Sie fügen z. B. eine XML-Datendatei hinzu, die die Daten für ein Paket und eine Textdatei enthält, von der Infodateiinformationen zu allen Paketen im Projekt bereitgestellt werden.  
   
  Wenn Sie Pakete in einer Test- oder Produktionsumgebung bereitstellen, fügen Sie normalerweise die Datendateien nicht in die Bereitstellung ein. Stattdessen verwenden Sie Konfigurationen zum Aktualisieren der Pfade der Datenquellen, um auf Test- oder Produktionsversionen der Datendateien oder Datenbanken zuzugreifen. Zu Unterrichtszwecken sind in diesem Lernprogramm Datendateien in der Paketbereitstellung enthalten.  
@@ -30,7 +30,7 @@ ms.locfileid: "62892120"
   
  Zur Unterstützung der Bereitstellung dieser Pakete fügen Sie dem Deployment Tutorial-Projekt die folgenden Hilfsdateien hinzu.  
   
-|Package|Datei|  
+|Paket|Datei|  
 |-------------|----------|  
 |DataTransfer|NewCustomers.txt|  
 |LoadXMLData|orders.xml und orders.xsd|  
@@ -67,9 +67,9 @@ ms.locfileid: "62892120"
   
 4.  Klicken Sie im Menü Datei auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 4: Hinzufügen von Paketkonfigurationen](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
-![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
   

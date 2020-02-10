@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011269"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
@@ -26,7 +26,8 @@ ms.locfileid: "66011269"
   
 -   Organisieren Sie den Volltextkatalog mithilfe von [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)neu. Stellen Sie sicher, dass dies vor dem Leistungstest erfolgt, da das Ausführen dieser Anweisung zu einer Masterzusammenführung der Volltextindizes im Katalog führt.  
   
--   Beschränken Sie die Auswahl von Volltextschlüsselspalten auf eine kleine Spalte. Es wird zwar eine 900-Byte-Spalte unterstützt, aber es ist ratsam, in einem Volltextindex eine kleinere Schlüsselspalte zu verwenden. `int` und `bigint` bieten die beste Leistung.  
+-   Beschränken Sie die Auswahl von Volltextschlüsselspalten auf eine kleine Spalte. Es wird zwar eine 900-Byte-Spalte unterstützt, aber es ist ratsam, in einem Volltextindex eine kleinere Schlüsselspalte zu verwenden. 
+  `int` und `bigint` bieten die beste Leistung.  
   
 -   Durch die Verwendung eines Volltextschlüssels mit ganzen Zahlen können Sie einen Join mit der Zuordnungstabelle **docid** vermeiden. Deshalb verbessert ein ganzzahliger Volltextschlüssel die Abfrageleistung erheblich und optimiert außerdem die Durchforstungsleistung. Es können sich weitere Leistungsvorteile ergeben, wenn der Volltextschlüssel auch der Schlüssel des gruppierten Index ist.  
   
@@ -47,10 +48,10 @@ ms.locfileid: "66011269"
   
 -   Bei Anwendungen, die Prädikate mit selektiver Beziehung enthalten, funktionieren Abfragen, die selektive relationale Prädikate und nicht selektive Volltextprädikate verwenden, ggf. am besten, wenn sie für die Verwendung des Abfrageoptimierers geschrieben werden. Dann kann der Abfrageoptimierer entscheiden, ob ein Prädikats- oder Bereichs-Pushdown verwendet werden kann, um einen effektiven Abfrageplan aufzustellen. Dieser Ansatz ist einfacher und häufig auch effizienter als das Indizieren von relationalen Daten als Volltextdaten.  
   
-## <a name="related-resources"></a>Verwandte Ressourcen  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements (SQL Server 2008: Volltextsuche: Interne Komponenten und Erweiterungen)](https://go.microsoft.com/fwlink/?LinkId=129544)  
+## <a name="related-resources"></a>Zugehörige Ressourcen  
+ [SQL Server 2008-Volltextsuche: Internes und Erweiterungen](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

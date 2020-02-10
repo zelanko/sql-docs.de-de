@@ -1,5 +1,5 @@
 ---
-title: Führen Sie die Prozess-Task-Editor (Seite Allgemein) | Microsoft-Dokumentation
+title: Editor für den Task ' Prozess ausführen ' (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059065"
 ---
 # <a name="execute-process-task-editor-general-page"></a>Editor für den Task 'Prozess ausführen' (Seite Allgemein)
@@ -26,7 +26,7 @@ ms.locfileid: "66059065"
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Execute Process Task](control-flow/execute-process-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task 'Prozess ausführen' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66059065"
  **Beschreibung**  
  Geben Sie eine Beschreibung des Tasks 'Prozess ausführen' ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task „Prozess ausführen“ &#40;Seite Verarbeiten&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
+ [Editor für den Task ' Prozess ausführen ' &#40;Prozess Seite&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   
   

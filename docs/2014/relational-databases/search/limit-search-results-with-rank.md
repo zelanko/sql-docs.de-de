@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011146"
 ---
 # <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
@@ -37,7 +37,7 @@ ms.locfileid: "66011146"
   
 ##  <a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Ausschließliches Suchen nach den drei häufigsten Übereinstimmungen  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
  Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Ausschließliches Suchen nach den zehn häufigsten Übereinstimmungen  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
  Im folgenden Beispiel wird CONTAINSTABLE verwendet, um die Beschreibung der ersten 5 Produkte zurückzugeben, bei denen die `Description` -Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  
@@ -141,9 +141,10 @@ GO
 ### <a name="rank-computation-issues"></a>Gesichtspunkte bei der Rangberechnung  
  Der Vorgang der Rangberechnung hängt von mehreren Faktoren ab.  Die Wörtererkennung für unterschiedliche Sprachen zerlegt Text unterschiedlich in Wörter. So könnte z. B. die Zeichenfolge "dog-house" von einer Wörtererkennung in "dog" "house" und von einer anderen in "dog-house" zerlegt werden. Dies bedeutet, dass Vergleiche und Rangfolgenberechnung je nach der angegebenen Sprache unterschiedliche Ergebnisse liefern, da nicht nur die Wörter unterschiedlich sind, sondern auch die Dokumentlänge. Die unterschiedliche Dokumentlänge kann sich auf die Rangfolgenberechnung für alle Abfragen auswirken.  
   
- Statistiken wie `IndexRowCount` können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch von der Volltextsuch-Engine zusammengeführt.  
+ Statistiken wie `IndexRowCount` können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch von der Volltextsuch-Engine zusammengeführt.  
   
- `MaxOccurrence`-Werte werden in den Bereich 1 bis 32 normalisiert. Das heißt, dass z. B. ein 50 Wörter langes Dokument genau so behandelt wird wie ein 100 Wörter langes. Die zur Normalisierung verwendete Tabelle ist unten aufgeführt. Da die dokumentlängen im Bereich zwischen den benachbarten Tabellenwerten 32 und 128 liegen, werden sie behandelt, als hätten Sie dieselbe Länge, 128 (32 < `docLength` < = 128).  
+ 
+  `MaxOccurrence`-Werte werden in den Bereich 1 bis 32 normalisiert. Das heißt, dass z. B. ein 50 Wörter langes Dokument genau so behandelt wird wie ein 100 Wörter langes. Die zur Normalisierung verwendete Tabelle ist unten aufgeführt. Da die Dokument Längen im Bereich zwischen den benachbarten Tabellenwerten 32 und 128 liegen, werden Sie effektiv mit der gleichen Länge behandelt, 128 (32 < `docLength` <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -203,7 +204,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfragen mit Volltextsuche](query-with-full-text-search.md)  
   
   

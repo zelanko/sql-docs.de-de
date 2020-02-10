@@ -1,5 +1,5 @@
 ---
-title: SSIS-Paketformat | Microsoft-Dokumentation
+title: SSIS-Paket Format | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055351"
 ---
 # <a name="ssis-package-format"></a>SSIS-Paketformat
-  In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]wurden wichtige Änderungen am Paketformat (DTSX-Datei) vorgenommen, um das Format besser lesbar zu machen und Pakete besser vergleichen zu können. Sie können auch Zusammenführen von Paketen, die keine in Konflikt stehenden Änderungen oder im Binärformat gespeicherte Änderungen enthalten.  
+  In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]wurden wichtige Änderungen am Paketformat (DTSX-Datei) vorgenommen, um das Format besser lesbar zu machen und Pakete besser vergleichen zu können. Außerdem können Sie Pakete zuverlässiger zusammenführen, die keine in Konflikt stehenden Änderungen oder im Binärformat gespeicherte Änderungen enthalten.  
   
- Um das aktuelle DTSX-Paketdateiformat anzuzeigen, finden Sie unter [ \[MS-DTSX\]: Data Transformation Services-Paket XML-Dateiformatspezifikation](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Um das aktuelle dzx-Paketdatei Format anzuzeigen, finden Sie weitere [ \[Informationen unter\]MS-dzx: Data Transformation Services-Paket-XML-Dateiformat Spezifikation](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
  In der folgenden Liste werden die Dateiformatänderungen beschrieben. Um Codebeispiele für diese Änderungen anzuzeigen, finden Sie weitere Informationen unter [Paketformatänderungen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   

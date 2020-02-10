@@ -1,5 +1,5 @@
 ---
-title: Ausführen eines Updategramms mit ADO (SQLXML 4.0) | Microsoft-Dokumentation
+title: Ausführen eines Update grams mithilfe von ADO (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,30 +15,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014836"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ausführen eines Updategrams mit ADO (SQLXML 4.0)
   Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen und ein Updategram auszuführen. Das Updategram aktualisiert den Nachnamen eines bestimmten Mitarbeiters. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.  
   
- Diese Beispielanwendung zeigt Folgendes:  
+ Diese Beispielanwendung zeigt Folgendes:   
   
--   Die **Conn** Objekt (**ADODB. Verbindung**) wird eine Verbindung mit einer ausgeführten Instanz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem bestimmten Server-Computer.  
+-   Das **conn** -Objekt (**ADODB. Verbindung**) stellt eine Verbindung mit einer laufenden Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem bestimmten Server Computer her.  
   
--   Die **Cmd** Objekt (**ADODB.Command**) für die hergestellte Verbindung ausgeführt wird.  
+-   Das **cmd** -Objekt (**ADODB. Command**) wird auf der eingerichteten Verbindung ausgeführt.  
   
 -   Der Befehlsdialekt wird auf DBGUID_MSSQLXML festgelegt.  
   
--   Das Updategram wird kopiert, in den befehlsdatenstrom (**StrmIn**).  
+-   Das Update Gram wird in den Befehlsdaten Strom ("**straumin**") kopiert.  
   
--   Die Befehls Ausgabestream nastaven NA hodnotu der **StrmOut** Objekt (**ADODB. Stream**) auf den Empfang hat Daten zurückgegeben.  
+-   Der Ausgabestream des Befehls wird auf das Objekt " **straumout** " (**ADODB) festgelegt. Stream**), um alle zurückgegebenen Daten zu empfangen.  
   
 -   Schließlich wird der Befehl (Updategram) ausgeführt.  
   
- Der Beispielcode sieht wie folgt aus:  
+ Hier sehen Sie den Beispielcode:  
   
 ```vb  
 Private Sub Form_Load()  
@@ -182,7 +182,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Übergeben von Parametern  
- In den früher bereitgestellten Visual Basic-Anwendungen wurden Parameter nicht übergeben. In dieser Anwendung die **ContactID** und **MiddleName** -Wert als parametrisierte Eingabe an das Updategram übergeben.  
+ In den früher bereitgestellten Visual Basic-Anwendungen wurden Parameter nicht übergeben. In dieser Anwendung werden die Werte **ContactID** und **MiddleName** als parametrisierte Eingabe an das Update Gram übermittelt.  
   
 ```vb  
 Private Sub Form_Load()  

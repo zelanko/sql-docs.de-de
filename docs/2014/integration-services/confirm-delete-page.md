@@ -1,5 +1,5 @@
 ---
-title: Löschseite bestätigen | Microsoft-Dokumentation
+title: Lösch Seite bestätigen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd8d4122dca96d49fa3351375f545d32273646c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060482"
 ---
 # <a name="confirm-delete-page"></a>Seite 'Löschen bestätigen'
   Verwenden Sie die Seite **Löschen bestätigen** , um anzugeben, ob [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Bestätigungsmeldung anzeigen soll, wenn Sie bestimmte Komponenten löschen.  
   
-## <a name="options"></a>Optionen  
- **Stellen Sie zur Bestätigung beim Löschen von Aufgaben verwendet werden.**  
+## <a name="options"></a>Tastatur  
+ **Fragt beim Löschen von Tasks nach einer Bestätigung.**  
  Zeigt eine Bestätigungsmeldung an, wenn Sie Tasks löschen.  
   
- **Fragt nach einer Bestätigung beim Löschen von Transformationen.**  
+ **Fragt beim Löschen von Transformationen nach einer Bestätigung.**  
  Zeigt eine Bestätigungsmeldung an, wenn Sie Transformationen löschen.  
   
- **Fragt nach einer Bestätigung beim Löschen von Verbindungen.**  
+ **Fragt beim Löschen von Verbindungen nach einer Bestätigung.**  
  Zeigt eine Bestätigungsmeldung an, wenn Sie Verbindungen löschen.  
   
- **Fragt nach einer Bestätigung beim Löschen von Variablen.**  
+ **Fragt beim Löschen von Variablen nach einer Bestätigung.**  
  Zeigt eine Bestätigungsmeldung an, wenn Sie Variablen löschen.  
   
   

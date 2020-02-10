@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 2 (optional): Erstellen einer MDS-Abonnementsicht mithilfe von Master Data Manager | Microsoft-Dokumentation'
+title: 'Aufgabe 2 (optional): Erstellen einer MDS-Abonnement Sicht mithilfe Master Data Manager | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e6cbed42d059714dde1c82dbb50edf8ccc1dd65b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484724"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Aufgabe 2 (optional): Erstellen einer MDS-Abonnementsicht mithilfe des Master Data Manager
-  In dieser Aufgabe erstellen Sie eine Abonnementsicht, um verfügbar zu machen die **Lieferanten** Entität in der **Lieferanten** Modelle für andere Anwendungen. Sie verwenden diese Sicht nicht in der aktuellen Version des Lernprogramms.  
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Aufgabe 2 (optional): Erstellen einer MDS-Abonnementsicht mithilfe von Master Data Manager
+  In dieser Aufgabe erstellen Sie eine Abonnement Sicht, um die Entität **Supplier** im **Lieferanten** Modell für andere Anwendungen verfügbar zu machen. Sie verwenden diese Sicht nicht in der aktuellen Version des Lernprogramms.  
   
-1.  Wechseln Sie zur Hauptseite des **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)) durch Klicken auf **SQL Server 2012 Master Data Services** oben.  
+1.  Wechseln Sie zur Hauptseite **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)), indem Sie oben auf **SQL Server 2012 Master Data Services** klicken.  
   
-2.  Klicken Sie auf **Integrationsmanagement**.  
+2.  Klicken Sie auf **Integrations Management**.  
   
-3.  Klicken Sie auf **Sichten erstellen** in der Menüleiste.  
+3.  Klicken Sie in der Menüleiste auf **Ansichten erstellen** .  
   
-     ![Hinzufügen einer neuen Abonnement anzeigen Schaltfläche](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "eine neues Abonnement anzeigen-Schaltfläche \"hinzufügen\"")  
+     ![Neue Abonnementsicht hinzufügen (Schaltfläche)](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "Neue Abonnementsicht hinzufügen (Schaltfläche)")  
   
-4.  Klicken Sie auf **+ (Plus)** Symbol auf der Symbolleiste können Sie eine Abonnementsicht zu erstellen.  
+4.  Klicken Sie in der Symbolleiste auf das Symbol **+ (Plus Zeichen)** , um eine Abonnement Sicht zu erstellen.  
   
-5.  In der **Abonnementsicht erstellen** im Bereich **Lieferanten** für **Name der Abonnementsicht**.  
+5.  Geben Sie im Bereich **Abonnement Sicht erstellen** den Namen **Suppliers** als **Name der Abonnement Sicht**ein.  
   
-6.  Wählen Sie **Lieferanten** für **Modell**.  
+6.  Wählen Sie **Suppliers** für **Model**aus.  
   
-7.  Wählen Sie **VERSION_1** für **Version**.  
+7.  Wählen Sie **VERSION_1** für die **Version**aus.  
   
-8.  Wählen Sie **Lieferanten** für **Entität**.  
+8.  Wählen Sie **Lieferant** für **Entität**aus.  
   
-9. Wählen Sie **Blattelemente** für **Format**.  
+9. Wählen Sie **Blatt** Elemente für das **Format**aus.  
   
-     ![Speichern Sie die Schaltfläche "Abonnement-Ansicht"](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "Abonnement anzeigen-Schaltfläche \"Speichern\"")  
+     ![Abonnementsicht speichern (Schaltfläche)](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "Abonnementsicht speichern (Schaltfläche)")  
   
-10. Klicken Sie auf **speichern** auf der Symbolleiste auf die Abonnementsicht zu speichern. Diese Aktion erstellt eine Sicht in SQL Server mit dem Namen **Lieferanten**. Sie können dies mit SQL Server Management Studio (SSMS) überprüfen.  
+10. Klicken Sie in der Symbolleiste auf **Speichern** , um die Abonnement Ansicht zu speichern. Diese Aktion erstellt eine Ansicht in SQL Server namens **Suppliers**. Sie können dies mit SQL Server Management Studio (SSMS) überprüfen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 3 &#40;Optional&#41;: Überprüfung der Abonnementsichten](task-3-optional-reviewing-the-subscription-views.md)  
+ [Aufgabe 3 &#40;optionale&#41;: Überprüfen der Abonnement Sichten](task-3-optional-reviewing-the-subscription-views.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.external_languages (Transact-SQL) – SQL Server | Microsoft-Dokumentation
+title: sys. external_languages (Transact-SQL)-SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -20,29 +20,29 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1cef52f066a07032240d17f88297b02ba3f7e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65995118"
 ---
-# <a name="sysexternallanguages-transact-sql"></a>sys.external_languages (Transact-SQL)
+# <a name="sysexternal_languages-transact-sql"></a>sys. external_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Diese Katalogsicht enthält eine Liste der externen Sprachen in der Datenbank. **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden.
+Diese Katalog Sicht enthält eine Liste der externen Sprachen in der Datenbank. **R** und **python** sind reservierte Namen, und es kann keine externe Sprache mit diesen spezifischen Namen erstellt werden.
 
-## <a name="sysexternallanguages"></a>sys.external_languages
+## <a name="sysexternal_languages"></a>sys.external_languages
 
-Der Katalog Ansicht sys.external_languages enthält eine Zeile für jede externe Sprache, in der Datenbank.
+In der Katalog Sicht sys. external_languages wird eine Zeile für jede externe Sprache in der Datenbank aufgelistet.
 
-|Spaltenname |Datentyp | Description|
+|Spaltenname |Datentyp | BESCHREIBUNG|
 |------|------|------|
-|external_language_id |ssNoversion | ID der externen Sprache|
-|language |sysname |Der Name der externen Sprache. Ist in der Datenbank eindeutig. R und Python sind reservierte Namen pro Instanz|
+|external_language_id |INT | ID der externen Sprache|
+|language |sysname |Der Name der externen Sprache. Ist in der Datenbank eindeutig. R und python sind reservierte Namen pro Instanz.|
 |create_date |datetime2 |Datum und Uhrzeit der Erstellung|
-|principal_id |ssNoversion |ID des Prinzipals, der diese externe Bibliothek besitzt|
+|principal_id |INT |ID des Prinzipals, der diese externe Bibliothek besitzt.|
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
 + [sys.external_language_files](sys-external-language-files-transact-sql.md)  
-+ [ERSTELLEN EXTERNEN SPRACHEN](../../t-sql/statements/create-external-language-transact-sql.md) 
++ [externe Sprache erstellen](../../t-sql/statements/create-external-language-transact-sql.md) 

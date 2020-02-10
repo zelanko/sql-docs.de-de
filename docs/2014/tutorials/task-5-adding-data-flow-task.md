@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 5: Hinzufügen eines Datenflusstasks | Microsoft-Dokumentation'
+title: 'Aufgabe 5: Hinzufügen eines Datenfluss Tasks | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489143"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Aufgabe 5: Hinzufügen eines Datenflusstasks
+# <a name="task-5-adding-data-flow-task"></a>Aufgabe 5: Hinzufügen eines Datenflusstasks
   In dieser Aufgabe fügen Sie der Ablaufsteuerung des SSIS-Pakets einen Datenflusstask hinzu.  
   
-1.  Drag & drop **Data Flow Task** aus **SSIS-Toolbox** auf die **Ablaufsteuerung** Registerkarte im SSIS-Designer. Wenn Sie nicht sehen die **SSIS-Toolbox**, klicken Sie auf eine beliebige Stelle der **Control Flow** auf **SSIS** auf der Menüleiste, und klicken Sie auf **SSIS-Toolbox**.  
+1.  Ziehen Sie den **Datenfluss Task** aus der **SSIS-Toolbox** auf die Registerkarte **Ablauf Steuerung** im SSIS-Designer. Wenn die **SSIS-Toolbox**nicht angezeigt wird, klicken Sie auf eine beliebige Stelle auf der Registerkarte **Ablauf Steuerung** , klicken Sie auf der Menüleiste auf **SSIS** , und klicken Sie auf **SSIS-Toolbox**.  
   
-     ![Drag & Drop-Datenflusstask aus SSIS-Toolbox](../../2014/tutorials/media/et-addingdataflowtask.jpg "Drag & Drop-Datenflusstask aus SSIS-Toolbox")  
+     ![Drag&amp;Drop von Datenflusstask aus SSIS-Toolbox](../../2014/tutorials/media/et-addingdataflowtask.jpg "Drag&Drop von Datenflusstask aus SSIS-Toolbox")  
   
-2.  Mit der rechten Maustaste die **Data Flow Task** in die **Ablaufsteuerung** Registerkarte, und klicken Sie auf **umbenennen**.  
+2.  Klicken **Sie mit der** rechten Maustaste auf die Registerkarte **Ablauf Steuerung** , und klicken Sie auf **Umbenennen**.  
   
-3.  Typ **Receive, Cleanse, Match und Curate Supplier Data** , und drücken Sie **EINGABETASTE**.  
+3.  Geben Sie **Empfangs-, Bereinigung-, Abgleichs-und Datenlieferanten Daten** ein, und drücken **Sie Eingabe**  
   
-4.  Doppelklicken Sie auf die **Data Flow Task** zum Wechseln der **Datenfluss** Registerkarte.  
+4.  Doppelklicken Sie auf den **Datenfluss Task** , um zur Registerkarte **Datenfluss** zu wechseln.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 6: Hinzufügen von Excel-Quelle zum Datenfluss](task-6-adding-excel-source-to-the-data-flow.md)  
+ [Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

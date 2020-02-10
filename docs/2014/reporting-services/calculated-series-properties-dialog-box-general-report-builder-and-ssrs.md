@@ -1,5 +1,5 @@
 ---
-title: Berechnete Reihe Eigenschaften-Dialogfeld, Allgemein (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Dialog Feld "Eigenschaften von berechneten Reihen", "Allgemein" (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109860"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Eigenschaften von berechneten Reihen (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Wählen Sie die Option **Formel** im Dialogfeld **Eigenschaften von berechneten Reihen** aus, um eine Reihe hinzuzufügen oder zu ändern, die auf Basis integrierter Formeln, die vorhandene Reihendaten als Eingaben verwenden, berechnet wird.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Formel**  
- Wählen Sie die Formel aus, die für das Diagramm übernommen werden soll. Zu den Optionen gehören:  
+ Wählen Sie die Formel aus, die für das Diagramm übernommen werden soll. Beispiele für Optionen:  
   
 -   Mittelwert  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66109860"
  **Formelparameter festlegen**  
  Gibt Parameter für die ausgewählte Formel an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor für zusammenführungsjoin | Microsoft-Dokumentation
+title: Transformations-Editor für Zusammenführungsjoin Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057711"
 ---
 # <a name="merge-join-transformation-editor"></a>Transformations-Editor für Zusammenführungsjoin
@@ -29,14 +29,14 @@ ms.locfileid: "66057711"
   
  Weitere Informationen zur Transformation für Zusammenführungsjoins finden Sie unter [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Jointyp**  
  Geben Sie an, ob Sie einen inneren Join, einen linken äußeren Join oder einen vollständigen Join verwenden möchten.  
   
  **Eingaben vertauschen**  
  Schalten Sie die Reihenfolge der Eingaben mithilfe der Schaltfläche **Eingaben vertauschen** um. Diese Option kann sich bei linkem äußeren Join als nützlich erweisen.  
   
- **Eingabe**  
+ **Input** (Eingabe)  
  Wählen Sie alle Spalten, die zur zusammengeführten Ausgabe gehören sollen, in der Liste der verfügbaren Eingaben aus.  
   
  Eingaben werden in zwei separaten Tabellen angezeigt. Wählen Sie die Spalten aus, die in die Eingabe eingeschlossen werden sollen. Verschieben Sie die Spalten, um einen Join zwischen den Tabellen zu erstellen. Um einen Join zu löschen, wählen Sie diesen aus und drücken dann ENTF.  
@@ -47,10 +47,10 @@ ms.locfileid: "66057711"
  **Ausgabealias**  
  Geben Sie einen Alias für jede Spalte ein. Standardmäßig wird der Name der Eingabespalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoins](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoin](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Transformation für Zusammenführen](data-flow/transformations/merge-transformation.md)   
  [Transformation für UNION ALL](data-flow/transformations/union-all-transformation.md)  
   

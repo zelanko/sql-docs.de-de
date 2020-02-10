@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 6: Festlegen von Synonymen | Microsoft-Dokumentation'
+title: 'Aufgabe 6: Festlegen von Synonymen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,32 +11,32 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489086"
 ---
-# <a name="task-6-setting-synonyms"></a>Aufgabe 6: Festlegen von Synonymen
-  In dieser Aufgabe legen Sie zwei Domänenwerte, **USA** und **USA**, der die **Land** Domäne als Synonyme mit **USA** wie die führender Wert. Da die **führende Werte** ausgewählt war beim Erstellen der **Land** Domäne alle **USA** Werte für die **Land** Domäne Gibt als **USA** (wie der Vereinigten Staaten der führende Wert ist). Finden Sie unter [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) Weitere Details.  
+# <a name="task-6-setting-synonyms"></a>Aufgabe 6: Festlegen von Synonymen
+  In dieser Aufgabe legen Sie zwei Domänen Werte ( **USA** und **USA**) der Domäne **Country** als Synonyme fest, wobei **USA** als führender Wert festgelegt ist. Da die Option **führende Werte verwenden** beim Erstellen der Domäne **Country** ausgewählt wurde, werden alle **US** -Werte für die Domäne **Country** als **USA** ausgegeben (da USA der führende Wert ist). Weitere Informationen finden Sie unter [Ändern von Domänen Werten](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
-1.  Wählen Sie **Land** aus der Liste der Domänen.  
+1.  Wählen Sie **Land** aus der Liste der Domänen aus.  
   
-2.  Wechseln Sie zu der **Domänenwerte** Registerkarte.  
+2.  Wechseln Sie zur Registerkarte **Domänen Werte** .  
   
-3.  Klicken Sie auf **neuen Domänenwert hinzufügen** auf der Symbolleiste.  
+3.  Klicken Sie auf der Symbolleiste auf **neue Domänen Wert hinzufügen** .  
   
-4.  Typ **USA** für den Wert und drücken Sie **EINGABETASTE**.  
+4.  Geben Sie **USA** als Wert ein, und drücken **Sie die Eingabe**Taste.  
   
-5.  MultiSelect **USA** und **USA** STRG- oder UMSCHALTTASTE rechten Maustaste auf die ausgewählten Elemente, und klicken Sie dann auf **als Synonyme festlegen**. DQS gruppiert diese Werte und legt einen der Werte als führenden Wert fest, durch den die anderen Werte ersetzt werden.  
+5.  Wählen Sie **USA** und **USA** mit STRG oder Umschalttaste aus, klicken Sie mit der rechten Maustaste auf die ausgewählten Elemente, und klicken Sie dann auf **als Synonyme festlegen**. DQS gruppiert diese Werte und legt einen der Werte als führenden Wert fest, durch den die anderen Werte ersetzt werden.  
   
-     ![Legen Sie als Synonyme Menü](../../2014/tutorials/media/et-settingsynonyms-01.jpg "als Synonyme Menü festlegen")  
+     ![Als Synonyme festlegen (Menü)](../../2014/tutorials/media/et-settingsynonyms-01.jpg "Als Synonyme festlegen (Menü)")  
   
-6.  Beachten Sie, dass **USA** als führender Wert festgelegt ist. Wenn USA der führende Wert sein soll, können Sie mit der rechten Maustaste auf die USA und auswählen **als führend festlegen** Option. In diesem Tutorial verwenden wir **USA** als führenden Wert fest.  
+6.  Beachten Sie, dass **USA** als führender Wert festgelegt ist. Wenn Sie möchten, dass "USA" der führende Wert ist, können Sie mit der rechten Maustaste auf "USA" klicken und **als führende Option festlegen** auswählen. In diesem Tutorial verwenden wir **USA** als führenden Wert.  
   
      ![Vereinigte Staaten und USA als Synonyme](../../2014/tutorials/media/et-settingsynonyms-02.jpg "Vereinigte Staaten und USA als Synonyme")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 7: Erstellen einer Verbunddomäne](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+ [Aufgabe 7: Erstellen einer Verbunddomänenregel](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

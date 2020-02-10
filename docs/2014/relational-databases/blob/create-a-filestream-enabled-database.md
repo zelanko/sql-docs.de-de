@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010316"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Erstellen einer FILESTREAM-aktivierten Datenbank
@@ -28,7 +28,7 @@ ms.locfileid: "66010316"
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]auf **Neue Abfrage** , um den Abfrage-Editor zu öffnen.  
   
-2.  Kopieren der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code erstellt eine FILESTREAM-aktivierten Datenbank dem Namen Archive.  
+2.  Kopieren des [!INCLUDE[tsql](../../includes/tsql-md.md)] Codes erstellt eine FILESTREAM-aktivierte Datenbank mit dem Namen Archive.  
   
     > [!NOTE]  
     >  Für dieses Skript muss das Verzeichnis "C:\Data" vorhanden sein.  
@@ -36,7 +36,9 @@ ms.locfileid: "66010316"
 3.  Klicken Sie auf **Ausführen**, um die Datenbank zu erstellen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird eine Datenbank mit dem Namen `Archive`erstellt. Die Datenbank enthält drei Dateigruppen: `PRIMARY`, `Arch1`und `FileStreamGroup1`. `PRIMARY` und `Arch1` sind normale Dateigruppen, die keine FILESTREAM-Daten enthalten können. `FileStreamGroup1` ist die `FILESTREAM` -Dateigruppe.  
+ Im folgenden Codebeispiel wird eine Datenbank mit dem Namen `Archive`erstellt. Die Datenbank enthält drei Dateigruppen: `PRIMARY`, `Arch1`und `FileStreamGroup1`. 
+  `PRIMARY` und `Arch1` sind normale Dateigruppen, die keine FILESTREAM-Daten enthalten können. 
+  `FileStreamGroup1` ist die `FILESTREAM` -Dateigruppe.  
   
 ```sql  
 CREATE DATABASE Archive   
@@ -59,8 +61,8 @@ GO
   
  Bei vorhandenen Datenbanken können Sie eine FILESTREAM-Dateigruppe mit der [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung hinzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Create Database &#40;SQL Server Transact-SQL-&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Paketkonfigurationen | Microsoft-Dokumentation
+title: Paket Konfigurationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056885"
 ---
 # <a name="package-configurations"></a>Paketkonfigurationen
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Paketkonfigurationen bereit, die Sie zum Aktualisieren der Werte von Eigenschaften zur Laufzeit verwenden können.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Paket Konfigurationen bereit, die Sie zum Aktualisieren der Werte von Eigenschaften zur Laufzeit verwenden können.  
   
 > [!NOTE]  
 >  Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Mithilfe des Projektbereitstellungsmodells können Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen. Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -44,9 +44,10 @@ ms.locfileid: "66056885"
   
 -   Konfigurationen machen Pakete flexibler. So kann z. B. eine Konfiguration den Wert einer Variablen aktualisieren, die in einem Eigenschaftsausdruck verwendet wird.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt verschiedene unterschiedliche Methoden zum Speichern von Paketkonfigurationen, z.B. als XML-Dateien, als Tabellen in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank und als Umgebungs- und Paketvariablen.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt verschiedene unterschiedliche Methoden zum Speichern von Paketkonfigurationen, z.B. als XML-Dateien, als Tabellen in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank und als Umgebungs- und Paketvariablen.  
   
- Jede Konfiguration besteht aus einem Paar aus Eigenschaft und Wert. Die XML-Konfigurationsdatei und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurationstypen können mehrere Konfigurationen enthalten.  
+ Jede Konfiguration besteht aus einem Paar aus Eigenschaft und Wert. Die XML-Konfigurationsdatei und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurationstypen können mehrere Konfigurationen enthalten.  
   
  Die Konfigurationen werden einbezogen, wenn Sie ein Paketbereitstellungshilfsprogramm zum Installieren von Paketen erstellen. Wenn Sie die Pakete installieren, können die Konfigurationen im Rahmen eines Schritts bei der Paketinstallation aktualisiert werden.  
   
@@ -79,18 +80,18 @@ ms.locfileid: "66056885"
   
 -   Sie können die Option **/ConfigFile** nicht verwenden, um Konfigurationen zu laden, die die zur Entwurfszeit angegebenen Konfigurationen ersetzen.  
   
- Weitere Informationen zu diesen Optionen und wie Unterschied des Verhaltens dieser Optionen [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] und frühere Versionen finden Sie unter [Verhaltensänderungen von Integration Services-Funktionen in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Weitere Informationen zu diesen Optionen und dazu, wie sich das Verhalten dieser Optionen zwischen [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] und früheren Versionen unterscheidet, finden Sie unter [Verhaltensänderungen in Integration Services Features in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Paketkonfigurationstypen  
  Die folgende Tabelle beschreibt die verschiedenen Paketkonfigurationstypen.  
   
-|Typ|Description|  
+|type|BESCHREIBUNG|  
 |----------|-----------------|  
 |XML-Konfigurationsdatei|Eine XML-Datei enthält die Konfigurationen. Die XML-Datei kann mehrere Konfigurationen enthalten.|  
 |Umgebungsvariable|Eine Umgebungsvariable enthält die Konfiguration.|  
 |Registrierungseintrag|Ein Registrierungseintrag enthält die Konfiguration.|  
 |Variable für das übergeordnete Paket|Eine Variable im Paket enthält die Konfiguration. Dieser Konfigurationstyp wird normalerweise zum Aktualisieren von Eigenschaften in untergeordneten Paketen verwendet.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|Eine Tabelle in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank enthält die Konfiguration. Die Tabelle kann mehrere Konfigurationen enthalten.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]glaub|Eine Tabelle in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank enthält die Konfiguration. Die Tabelle kann mehrere Konfigurationen enthalten.|  
   
 ### <a name="xml-configuration-files"></a>XML-Konfigurationsdateien  
  Wenn Sie den Konfigurationstyp **XML-Konfigurationsdatei** auswählen, können Sie eine neue Konfigurationsdatei erstellen, eine vorhandene Datei erneut verwenden und neue Konfigurationen hinzufügen oder eine vorhandene Datei erneut verwenden und dabei den bisherigen Dateiinhalt überschreiben.  
@@ -126,7 +127,7 @@ ms.locfileid: "66056885"
  Wenn Sie den Konfigurationstyp **Registrierungseintrag** auswählen, geben Sie den Namen des Registrierungsschlüssels im Eingabefeld Registrierung ein. Das Format lautet: \<Registrierungsschlüssel>. Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER enthalten ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren. Wenn Sie beispielsweise den Schlüssel MyPackage verwenden, der sich in SSISPackages befindet, geben Sie `SSISPackages\MyPackage` ein.  
   
 ### <a name="sql-server"></a>SQL Server  
- Wenn Sie den Konfigurationstyp **SQL Server** auswählen, geben Sie die Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank an, in der die Konfigurationen gespeichert werden sollen. Sie können die Konfigurationen in einer vorhandenen Tabelle speichern oder eine neue Tabelle in der angegebenen Datenbank erstellen.  
+ Wenn Sie den Konfigurationstyp **SQL Server** auswählen, geben Sie die Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank an, in der die Konfigurationen gespeichert werden sollen. Sie können die Konfigurationen in einer vorhandenen Tabelle speichern oder eine neue Tabelle in der angegebenen Datenbank erstellen.  
   
  Die folgende SQL-Anweisung zeigt die standardmäßige CREATE TABLE-Anweisung, die der Paketkonfigurations-Assistent bereitstellt.  
   
@@ -144,7 +145,8 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Der Name, den Sie für die Konfiguration bereitstellen, ist der Wert, der in der **ConfigurationFilter** -Spalte gespeichert wird.  
   
 ## <a name="direct-and-indirect-configurations"></a>Direkte und indirekte Konfigurationen  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ermöglicht direkte und indirekte Konfigurationen. Wenn Sie Konfigurationen direkt angeben, erstellt [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine direkte Verknüpfung zwischen dem Konfigurationselement und der Paketobjekteigenschaft. Direkte Konfigurationen sind die bessere Wahl, wenn sich der Speicherort der Quelle nicht ändert. Wenn Sie z. B. sicher sind, dass alle Bereitstellungen im Paket denselben Dateipfad verwenden, können Sie eine XML-Konfigurationsdatei angeben.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ermöglicht direkte und indirekte Konfigurationen. Wenn Sie Konfigurationen direkt angeben, erstellt [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine direkte Verknüpfung zwischen dem Konfigurationselement und der Paketobjekteigenschaft. Direkte Konfigurationen sind die bessere Wahl, wenn sich der Speicherort der Quelle nicht ändert. Wenn Sie z. B. sicher sind, dass alle Bereitstellungen im Paket denselben Dateipfad verwenden, können Sie eine XML-Konfigurationsdatei angeben.  
   
  Indirekte Konfigurationen verwenden Umgebungsvariablen. Statt die Konfigurationseinstellung direkt anzugeben, zeigt die Konfiguration auf eine Umgebungsvariable, die ihrerseits den Konfigurationswert enthält. Das Verwenden indirekter Konfigurationen ist die bessere Wahl, wenn sich der Speicherort der Konfiguration für jede Bereitstellung eines Pakets ändern kann.  
   
@@ -155,8 +157,8 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 -   Technischer Artikel [Grundlegendes zu Integration Services-Paketkonfigurationen](https://go.microsoft.com/fwlink/?LinkId=165643)auf msdn.microsoft.com.  
   
--   Blogeintrag, [Erstellen von Paketen im Code - Paketkonfigurationen](https://go.microsoft.com/fwlink/?LinkId=217663), auf www.sqlis.com.  
+-   Blog Eintrag [Erstellen von Paketen in Code Paket Konfigurationen](https://go.microsoft.com/fwlink/?LinkId=217663)auf www.sqlis.com.  
   
--   Blogeintrag, [-API-Beispiel – Programmgesteuertes Hinzufügen eine Konfigurationsdatei zu einem Paket](https://go.microsoft.com/fwlink/?LinkId=217664), auf blogs.msdn.com.  
+-   Blog Eintrag [API-Beispiel: Programm gesteuertes Hinzufügen einer Konfigurationsdatei zu einem Paket](https://go.microsoft.com/fwlink/?LinkId=217664)auf Blogs.msdn.com.  
   
   

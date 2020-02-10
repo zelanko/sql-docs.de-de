@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011168"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz
@@ -34,7 +34,7 @@ ms.locfileid: "66011168"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>So zeigen Sie Servereigenschaften für die Volltextsuche an und ändern diese  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und klicken Sie dann auf **Eigenschaften**.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und klicken Sie anschließend auf **Eigenschaften**.  
   
 2.  Klicken Sie im Dialogfeld **Servereigenschaften** auf die Seite **Erweitert** , um Serverinformationen zur Volltextsuche anzuzeigen. Hierbei handelt es sich um die folgenden Eigenschaften:  
   
@@ -56,13 +56,13 @@ ms.locfileid: "66011168"
   
          Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] -Datenbanken verfügbar.  
   
-         **Neu erstellen**  
+         **Neuerstellen**  
          Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann einige Zeit dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.  
   
          **Zurücksetzen**  
          Volltextkataloge werden zurückgesetzt. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Volltextkatalogdateien werden entfernt. Die Metadaten für die Volltextkataloge und die Volltextindizes bleiben jedoch erhalten. Nach der Upgrade wird die Änderungsnachverfolgung für alle Volltextindizes deaktiviert, und Durchforstungen werden nicht automatisch gestartet. Der Katalog bleibt leer, bis Sie ihn nach Beendigung des Upgrades manuell vollständig auffüllen.  
   
-         Informationen zum Auswählen einer volltextupgrade Option finden Sie unter [Volltextsuche ein Upgrade](upgrade-full-text-search.md).  
+         Weitere Informationen zum Auswählen einer voll Text Upgrade-Option finden Sie unter [Aktualisieren der Volltextsuche](upgrade-full-text-search.md).  
   
         > [!NOTE]  
         >  Die Option für das Volltextupgrade kann auch mit der [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** -Aktion festgelegt werden.  
@@ -72,32 +72,32 @@ ms.locfileid: "66011168"
   
  In der folgenden Tabelle werden die Volltexteigenschaften einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverinstanz und die zugehörigen [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Funktionen aufgeführt.  
   
-|Eigenschaft|Description|Funktion|  
+|Eigenschaft|BESCHREIBUNG|Funktion|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|Gibt an, ob die Volltextkomponente mit der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert wurde.|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Gibt an, ob Wörtertrennungen und Filter des Betriebssystems mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert und verwendet werden.|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Gibt an, ob ausschließlich signierte Binärdateien von der Volltext-Engine geladen werden.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Überwachen der Volltextsuchaktivität  
+##  <a name="monitor"></a>Überwachen der Volltext-Such Aktivität  
  Verschiedene dynamische Verwaltungssichten und -funktionen eignen sich für die Überwachung von Volltextsuchaktivitäten auf einer Serverinstanz.  
   
- **So zeigen Sie Informationen über Volltextkataloge mit Auffüllungsaktivitäten an**  
+ **So zeigen Sie Informationen zu den Volltextkatalogen mit in Bearbeitung befindlichen auffüllungs Aktivitäten an**  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
- **So zeigen Sie die aktuelle Aktivität eines Filterdaemon-Hostprozesses an**  
+ **So zeigen Sie die aktuelle Aktivität eines Filterdaemon-Host Prozesses an**  
   
 -   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **So zeigen Sie Informationen über aktive Indexauffüllungen an**  
+ **So zeigen Sie Informationen zu in Bearbeitung befindlichen Index Auffüllungen an**  
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **So zeigen Sie die Speicherpuffer in einem Speicherpool an, die für eine Durchforstung oder Durchforstungsbereich verwendet werden**  
+ **Zum Anzeigen von Speicher Puffern in einem Speicherpool, die als Teil eines Durchforstungs-oder Durchforstungs Bereichs verwendet werden.**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **So zeigen Sie Informationen zu den Shared Memory-Pools an, die für die Volltext-Gatherer-Komponente für einen Volltext-Crawl-Vorgang oder einen Volltext-Crawl-Bereich zur Verfügung stehen**  
+ **So zeigen Sie die freigegebenen Speicherpools an, die für die Volltext-Gatherer-Komponente für eine voll Text Durchforstung oder einen Volltext-Durchforstungs Bereich verfügbar sind**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66011168"
   
 -   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **So zeigen Sie Informationen über die spezifischen Bereiche einer aktiven Auffüllung an**  
+ **So zeigen Sie Informationen zu den spezifischen Bereichen im Zusammenhang mit einer aktiven Auffüllung an**  
   
 -   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

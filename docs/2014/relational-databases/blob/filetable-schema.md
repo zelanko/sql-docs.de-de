@@ -13,20 +13,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010121"
 ---
 # <a name="filetable-schema"></a>FileTable-Schema
   Beschreibt das vordefinierte und feste Schema einer FileTable.  
   
-|Name des Dateiattributs|Typ|Größe|Default|Description|Barrierefreiheit für das Dateisystem|  
+|Name des Dateiattributs|type|Size|Standard|BESCHREIBUNG|Barrierefreiheit für das Dateisystem|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|variable|Ein `hierarchyid`, der die Position dieses Elements identifiziert.|Die Position dieses Knotens im hierarchischen FileNamespace.<br /><br /> Primärschlüssel für die Tabelle.|Kann durch Festlegen der Windows-Pfadwerte erstellt und geändert werden.|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||Ein von der `NEWID()`-Funktion zurückgegebener Wert.|Eine eindeutige ID für die FILESTREAM-Daten.|Nicht verfügbar.|  
-|**file_stream**|`varbinary(max)`<br /><br /> `filestream`|variable|NULL|Enthält die FILESTREAM-Daten.|Nicht verfügbar.|  
+|**stream_id**|**[uniqueidentifier] ROWGUIDCOL**||Ein von der `NEWID()`-Funktion zurückgegebener Wert.|Eine eindeutige ID für die FILESTREAM-Daten.|Nicht zutreffend|  
+|**file_stream**|`varbinary(max)`<br /><br /> `filestream`|variable|NULL|Enthält die FILESTREAM-Daten.|Nicht zutreffend|  
 |**file_type**|`nvarchar(255)`|variable|NULL.<br /><br /> Durch einen Erstellungs- bzw. Umbenennungsvorgang im Dateisystem wird der Dateierweiterungswert aus dem Namen übernommen.|Stellt den Typ der Datei dar.<br /><br /> Diese Spalte kann als `TYPE COLUMN` verwendet werden, wenn Sie einen Volltextindex erstellen.<br /><br /> **file_type** ist eine persistente berechnete Spalte.|Automatisch berechnet. Kann nicht festgelegt werden.|  
 |**Name**|`nvarchar(255)`|variable|GUID-Wert.|Der Datei- oder Verzeichnisname.|Kann mit Windows-APIs erstellt oder geändert werden.|  
 |**parent_path_locator**|`hierarchyid`|variable|Ein `hierarchyid`, der das Verzeichnis identifiziert, das dieses Element enthält.|Der `hierarchyid` des enthaltenden Verzeichnisses.<br /><br /> **parent_path_locator** ist eine persistente berechnete Spalte.|Automatisch berechnet. Kann nicht festgelegt werden.|  
@@ -42,7 +42,7 @@ ms.locfileid: "66010121"
 |**is_system**|`bit`<br /><br /> `not null`|1 Byte|FALSE|Attribut für Systemdatei.|Automatisch berechnet. Kann auch mit Windows-APIs festgelegt werden.|  
 |**is_temporary**|`bit`<br /><br /> `not null`|1 Byte|FALSE|Attribut für temporäre Datei.|Automatisch berechnet. Kann auch mit Windows-APIs festgelegt werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen, Ändern und Löschen von FileTables](create-alter-and-drop-filetables.md)  
   
   

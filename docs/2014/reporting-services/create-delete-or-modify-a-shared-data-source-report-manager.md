@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109606"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle (Berichts-Manager)
@@ -28,7 +28,7 @@ ms.locfileid: "66109606"
   
  Das folgende Symbol bezeichnet eine freigegebene Datenquelle in der Ordnerhierarchie des Berichts-Managers:  
   
- ![Symbol freigegebene Datenquelle](media/hlp-16datasource.png "Shared data source icon")  
+ ![Symbol für freigegebene Datenquelle](media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")  
 Symbol für freigegebene Datenquelle  
   
 ### <a name="to-create-a-shared-data-source"></a>So erstellen Sie eine freigegebene Datenquelle  
@@ -39,7 +39,7 @@ Symbol für freigegebene Datenquelle
   
 3.  Klicken Sie auf **Neue Datenquelle**. Die Seite **Neue Datenquelle** wird geöffnet.  
   
-4.  Geben Sie einen Namen für das Element ein. Ein Name muss mindestens ein Zeichen enthalten und muss mit einem Buchstaben beginnen. Er kann auch Sonderzeichen enthalten, er darf jedoch keine Leerzeichen und folgende Zeichen nicht enthalten: ; ? : \@ & = + , $ / * \< > | " /.  
+4.  Geben Sie einen Namen für das Element ein. Ein Name muss mindestens ein Zeichen enthalten und muss mit einem Buchstaben beginnen. Er kann auch Sonderzeichen enthalten, er darf jedoch keine Leerzeichen und folgende Zeichen nicht enthalten: ; ? : \@ & = +, $/* \< > | " /.  
   
 5.  Optional können Sie auch eine Beschreibung eingeben, um Benutzern Informationen zur Verbindung bereitzustellen. Diese Beschreibung wird auf der Seite **Inhalt** im Berichts-Manager angezeigt.  
   
@@ -47,7 +47,7 @@ Symbol für freigegebene Datenquelle
   
 7.  Geben Sie in das Feld **Verbindungszeichenfolge**die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. Es wird empfohlen, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
   
-     Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung zur lokalen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank hergestellt wird:  
+     Das folgende Beispiel veranschaulicht eine Verbindungs Zeichenfolge zum Herstellen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Verbindung mit der lokalen-Datenbank:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -70,7 +70,7 @@ Symbol für freigegebene Datenquelle
     > [!NOTE]  
     >  Die Schaltfläche zum Testen der Verbindung wird für den XML-Datenquellentyp nicht unterstützt.  
   
-10. Klicken Sie auf **OK**.  
+10. Klicken Sie auf **OK**  
   
 ### <a name="to-modify-a-shared-data-source"></a>So ändern Sie eine freigegebene Datenquelle  
   
@@ -88,7 +88,7 @@ Symbol für freigegebene Datenquelle
   
          Klicken Sie auf das Element, um es zu öffnen. Die Seite Allgemeine Eigenschaften wird geöffnet.  
   
-         Klicken Sie auf **Löschen**, und klicken Sie anschließend auf **OK**.  
+         Klicken Sie auf **Löschen** und dann auf **OK**.  
   
     -   Navigieren Sie auf der Seite **Inhalt** zu dem Ordner, der die zu löschende Datenquelle enthält.  
   
@@ -96,11 +96,11 @@ Symbol für freigegebene Datenquelle
   
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS-&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](report-data/manage-report-data-sources.md)   
- [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
