@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Zeitreihenvorhersagen (Datamining-Lernprogramm für fortgeschrittene) | Microsoft-Dokumentation
+title: Erstellen von Zeitreihen Vorhersagen (Data Mining-Tutorial für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313889"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
-  In den vorherigen Aufgaben dieser Lektion haben Sie ein Zeitreihenmodell erstellt und die Ergebnisse untersucht. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt standardmäßig immer einen Satz von fünf (5) Vorhersagen für ein Zeitreihenmodell und zeigt die vorhergesagten Werte in einem Prognosediagramm an. Sie können Prognosen jedoch auch mithilfe von Data Mining Extensions (DMX)-Vorhersageabfragen erzeugen.  
+  In den vorherigen Aufgaben dieser Lektion haben Sie ein Zeitreihenmodell erstellt und die Ergebnisse untersucht. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt standardmäßig immer einen Satz von fünf (5) Vorhersagen für ein Zeitreihenmodell und zeigt die vorhergesagten Werte in einem Prognosediagramm an. Sie können Prognosen jedoch auch mithilfe von Data Mining Extensions (DMX)-Vorhersageabfragen erzeugen.  
   
  In dieser Aufgabe erstellen Sie eine Vorhersageabfrage, mit der die gleichen Vorhersagen wie im Viewer generiert werden. Diese Aufgabe geht davon aus, dass Sie die Lektionen im Lernprogramm zu den Data Mining-Grundlagen bereits abgeschlossen haben und dass Sie mit der Verwendung des Generators für Vorhersageabfragen vertraut sind. Im Folgenden lernen Sie, wie Sie Abfragen für Zeitreihenmodelle erstellen.  
   
@@ -29,53 +30,53 @@ ms.locfileid: "63313889"
   
 #### <a name="to-select-a-model-and-input-table"></a>So wählen Sie ein Modell und eine Eingabetabelle aus  
   
-1.  Auf der **Miningmodellvorhersage** Data Mining-Designer auf der Registerkarte in der **Miningmodell** auf **Modell auswählen**.  
+1.  Klicken Sie im Data Mining-Designer auf der Registerkarte **Mining Modellvorhersage** im Feld **Mining Modell** auf **Modell auswählen**.  
   
-2.  In der **Miningmodell auswählen** Dialogfeld ein, erweitern Sie die planungserstellungsstruktur, wählen Sie die **Forecasting** Modell aus der Liste aus, und klicken Sie dann auf **OK**.  
+2.  Erweitern Sie im Dialogfeld **Mining Modell auswählen** die Planungsstruktur, wählen Sie das **Vorhersage** Modell aus der Liste aus, und klicken Sie dann auf **OK**.  
   
-3.  Ignorieren der **Eingabetabelle(n)** Feld.  
+3.  Ignorieren Sie das Kontrollkästchen **Eingabe Tabelle (n) auswählen** .  
   
     > [!NOTE]  
     >  Bei einem Zeitreihenmodell müssen Sie keine separaten Eingabewerte angeben, wenn Sie keine Kreuzvorhersagen treffen.  
   
-4.  In der **Quelle** Spalte im Raster auf die **Miningmodellvorhersage** Registerkarte, klicken Sie auf die Zelle in der ersten leeren Zeile und wählen Sie dann **Forecasting-Miningmodell**.  
+4.  Klicken Sie in der Spalte **Quelle** im Raster auf der Registerkarte **Mining Modellvorhersage** auf die Zelle in der ersten leeren Zeile, und wählen Sie dann **Mining Modell prognostizieren**aus.  
   
-5.  In der **Feld** Spalte **Model Region**.  
+5.  Wählen Sie in der Spalte **Feld** die Option **Modellbereich**aus.  
   
      Auf diese Weise wird der Bezeichner für die Reihe zur Vorhersageabfrage hinzugefügt, um anzugeben, auf welche Kombination aus Modell und Region sich die Vorhersage bezieht.  
   
-6.  Klicken Sie auf die nächste leere Zeile in der **Quelle** Spalte, und wählen Sie dann **Vorhersagefunktion**.  
+6.  Klicken Sie in der Spalte **Quelle** auf die nächste leere Zeile, und wählen Sie dann **Vorhersagefunktion**aus.  
   
-7.  In der **Feld** Spalte **PredictTimeSeries**.  
+7.  Wählen Sie in der Spalte **Feld** die Option **prättimeseries**aus.  
   
     > [!NOTE]  
-    >  Sie können auch die `Predict`-Funktion mit Zeitreihenmodellen verwenden. Standardmäßig wird durch die Vorhersagefunktion jedoch nur eine Vorhersage für jede Reihe erstellt. Aus diesem Grund, um mehrere vorhersageschritte anzugeben, müssen Sie verwenden die **PredictTimeSeries** Funktion.  
+    >  Sie können auch die `Predict`-Funktion mit Zeitreihenmodellen verwenden. Standardmäßig wird durch die Vorhersagefunktion jedoch nur eine Vorhersage für jede Reihe erstellt. Wenn Sie also mehrere Vorhersage Schritte angeben möchten, müssen Sie die Funktion " **prättimeseries** " verwenden.  
   
-8.  In der **Miningmodell** Bereich, wählen Sie die Miningmodellspalte **Betrag.** Ziehen Sie die Betrag, um die **Kriterium/Argument** Feld für die **PredictTimeSeries** -Funktion, die Sie zuvor hinzugefügt haben.  
+8.  Wählen Sie im Bereich **Mining Modell** die Mining Modell Spalte Amount aus **.** Ziehen Sie Amount in das Feld **Kriterium/Argument** für die Funktion " **prättimeseries** ", die Sie zuvor hinzugefügt haben.  
   
-9. Klicken Sie auf die **Kriterium/Argument** ein, und geben Sie ein Komma, gefolgt von **5**, hinter dem Feldnamen.  
+9. Klicken Sie auf das Feld **Kriterium/Argument** , und geben Sie nach dem Feldnamen ein Komma und anschließend **5**ein.  
   
-     Der Text in die **Kriterium/Argument** Feld sollte nun wie folgt aussehen:  
+     Der Text im Feld **Kriterium/Argument** sollte nun Folgendes anzeigen:  
   
      `[Forecasting].[Amount],5`  
   
-10. In der **Alias** Spalte, Datentyp `PredictAmount`.  
+10. Geben `PredictAmount`Sie in der Spalte **Alias** den Namen ein.  
   
-11. Klicken Sie auf die nächste leere Zeile in der **Quelle** Spalte, und wählen Sie dann **Vorhersagefunktion** erneut aus.  
+11. Klicken Sie in der Spalte **Quelle** auf die nächste leere Zeile, und wählen Sie dann erneut **Vorhersagefunktion** aus.  
   
-12. In der **Feld** Spalte **PredictTimeSeries**.  
+12. Wählen Sie in der Spalte **Feld** die Option **prättimeseries**aus.  
   
-13. In der **Miningmodell** Bereich, wählen Sie die Menge-Spalte, und ziehen Sie es in der **Kriterium/Argument** Feld für die zweite **PredictTimeSeries** Funktion.  
+13. Wählen Sie im Bereich **Mining Modell** die Spalten Menge aus, und ziehen Sie Sie dann in das Feld **Kriterium/Argument** für die zweite Funktion von " **vorherentimeseries** ".  
   
-14. Klicken Sie auf die **Kriterium/Argument** ein, und geben Sie ein Komma, gefolgt von **5**, hinter dem Feldnamen.  
+14. Klicken Sie auf das Feld **Kriterium/Argument** , und geben Sie nach dem Feldnamen ein Komma und anschließend **5**ein.  
   
-     Der Text in die **Kriterium/Argument** Feld sollte nun wie folgt aussehen:  
+     Der Text im Feld **Kriterium/Argument** sollte nun Folgendes anzeigen:  
   
      `[Forecasting].[ Quantity],5`  
   
-15. In der **Alias** Spalte, Datentyp `PredictQuantity`.  
+15. Geben `PredictQuantity`Sie in der Spalte **Alias** den Namen ein.  
   
-16. Klicken Sie auf **zur abfrageergebnissicht wechseln**.  
+16. Klicken Sie **auf zur Abfrageergebnis Sicht wechseln**.  
   
      Die Abfrageergebnisse werden im Tabellenformat angezeigt.  
   
@@ -83,19 +84,19 @@ ms.locfileid: "63313889"
   
  Beispielergebnisse (Mengen werden auf zwei Dezimalstellen gerundet):  
   
- **M200 Europe PredictAmount**  
+ **M200 Europe-prätbetrag**  
   
 |$TIME|Amount|  
 |-----------|------------|  
-|7/25/2008|99978.00|  
-|8/25/2008|145575.07|  
-|9/25/2008|116835.19|  
-|10/25/2008|116537.38|  
-|11/25/2008|107760.55|  
+|7/25/2008|99978,00|  
+|8/25/2008|145575,07|  
+|9/25/2008|116835,19|  
+|10/25/2008|116537,38|  
+|11/25/2008|107760,55|  
   
- **M200 Europe PredictQuantity**  
+ **M200 Europe-prätmenge**  
   
-|$TIME|Quantity|  
+|$TIME|Menge|  
 |-----------|--------------|  
 |7/25/2008|52|  
 |8/25/2008|67|  
@@ -103,19 +104,19 @@ ms.locfileid: "63313889"
 |10/25/2008|57|  
 |11/25/2008|54|  
   
- **M200 North America - PredictAmount**  
+ **M200 Nordamerika-prätamount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
-|7/25/2008|348533.93|  
-|8/25/2008|340097.98|  
-|9/25/2008|257986.19|  
-|10/25/2008|374658.24|  
-|11/25/2008|379241.44|  
+|7/25/2008|348533,93|  
+|8/25/2008|340097,98|  
+|9/25/2008|257986,19|  
+|10/25/2008|374658,24|  
+|11/25/2008|379241,44|  
   
- **M200 North America - PredictQuantity**  
+ **M200 Nordamerika-prätmenge**  
   
-|$TIME|Quantity|  
+|$TIME|Menge|  
 |-----------|--------------|  
 |7/25/2008|272|  
 |8/25/2008|152|  
@@ -133,7 +134,7 @@ ms.locfileid: "63313889"
   
 #### <a name="to-flatten-the-results-in-the-results-pane"></a>So vereinfachen Sie die Ergebnisse im Ergebnisbereich  
   
-1.  Klicken Sie in der Generator für Vorhersageabfragen auf **zur abfrageentwurfssicht wechseln**.  
+1.  Klicken Sie im Abfrage-Generator Vorhersage auf **zur Abfrage Entwurfs Sicht wechseln**.  
   
      Die Sicht wird geändert, und Sie können den Text der DMX-Abfrage manuell bearbeiten.  
   
@@ -162,30 +163,30 @@ ms.locfileid: "63313889"
   
     ```  
   
-4.  Klicken Sie auf **zur abfrageergebnissicht wechseln**.  
+4.  Klicken Sie **auf zur Abfrageergebnis Sicht wechseln**.  
   
 #### <a name="to-export-prediction-query-results"></a>So exportieren Sie Ergebnisse von Vorhersageabfragen  
   
 1.  Klicken Sie auf **Abfrageergebnisse speichern**.  
   
-2.  In der **speichern Abfrageergebnis der Data Mining** im Dialogfeld für **Datenquelle**Option [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Wenn Sie die Daten in einer anderen relationalen Datenbank speichern möchten, können Sie auch eine Datenquelle erstellen.  
+2.  Wählen Sie [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]im Dialogfeld **Ergebnis der Data Mining-Abfrage speichern** für **Datenquelle**die Option aus. Wenn Sie die Daten in einer anderen relationalen Datenbank speichern möchten, können Sie auch eine Datenquelle erstellen.  
   
-3.  In der **Tabellenname** Spalte, ein neuer temporären Tabellennamen ein, z. B. Typ **Testvorhersagen**.  
+3.  Geben Sie in der Spalte **Tabellenname** einen neuen temporären Tabellennamen ein, z. b. **Test Vorhersagen**.  
   
 4.  Klicken Sie auf **Speichern**.  
   
     > [!NOTE]  
     >  Stellen Sie eine Verbindung zur Instanz der Datenbank-Engine her, in der Sie die Daten gespeichert haben, und erstellen Sie eine Abfrage, um die Tabelle anzuzeigen, die Sie erstellt haben.  
   
-## <a name="conclusion"></a>Schlussbemerkung  
+## <a name="conclusion"></a>Zusammenfassung  
  Sie können nun ein grundlegendes Zeitreihenmodell erstellen, Prognosen interpretieren und Vorhersagen erstellen.  
   
  Die verbleibenden Aufgaben in diesem Lernprogramm sind optional und beschreiben erweiterte Zeitreihenvorhersagen. Wenn Sie dieses Thema weiter verfolgen, lernen Sie, wie Sie dem Modell neue Daten hinzufügen und Vorhersagen zur erweiterten Reihe erstellen können. Sie lernen zudem, Kreuzvorhersagen durchzuführen, indem Sie den Trend im Modell verwenden und die Daten durch eine neue Datenreihe ersetzen.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Erweiterte Zeitreihenvorhersagen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [Erweiterte Zeitreihen Vorhersagen &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiele für Abfragen von Zeitreihenmodellen](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Abfragebeispiel Zeitreihenmodell](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

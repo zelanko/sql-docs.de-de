@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890525"
 ---
 # <a name="data-mining-query-transformation"></a>Transformation für Data Mining-Abfragen
@@ -36,16 +36,16 @@ ms.locfileid: "68890525"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Data Mining-Abfragen** festlegen können:  
   
--   [Transformations-Editor für Data Mining-Abfragen &#40;Registerkarte „Miningmodell“&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Transformations-Editor für Data Mining-Abfragen &#40;Registerkarte Mining Modell&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Transformations-Editor für Data Mining-Abfragen &#40;Registerkarte „Miningmodell“&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Transformations-Editor für Data Mining-Abfragen &#40;Registerkarte Mining Modell&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
- Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
   
