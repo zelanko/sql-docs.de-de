@@ -1,5 +1,5 @@
 ---
-title: Parametrisierte Befehle mit dazwischen liegenden COMPUTE-Befehlen | Microsoft-Dokumentation
+title: Parametrisierte Befehle mit dazwischenliegenden computebefehlen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924726"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Parametrisierte Befehle mit dazwischen liegenden COMPUTE-Befehlen
-Eine typische parametrisierte Form APPEND-Befehl hat eine Klausel, die ein übergeordnetes Element erstellt **Recordset** mit einem Abfragebefehl und eine weitere Klausel, die ein untergeordnetes Element erstellt **Recordset** mit einem parametrisierten Abfrage-Befehl: d. h. einen Befehl mit einem Platzhalter für Parameter (ein Fragezeichen, "?"). Das resultierende strukturierte **Recordset** hat zwei Ebenen, in dem das übergeordnete Element die obere Ebene belegt, und das untergeordnete Element belegt die untere Ebene.  
+Ein typischer parametrisierter Shape-Anfüge Befehl verfügt über eine-Klausel, die ein übergeordnetes **Recordset** mit einem Abfragebefehl und eine andere Klausel erstellt, die ein untergeordnetes **Recordset** mit einem parametrisierten Abfragebefehl erstellt, d. h. einen Befehl, der einen Parameter Platzhalter (Fragezeichen, "?") enthält. Das resultierende geformte **Recordset** verfügt über zwei Ebenen, wobei das übergeordnete Element die obere Ebene einnimmt und das untergeordnete Element die untere Ebene einnimmt.  
   
- Die Klausel, die das untergeordnete Element erstellt **Recordset** nun möglicherweise eine beliebige Anzahl von geschachtelten Shape COMPUTE-Befehle, die am tiefsten geschachtelte Befehl, in denen die parametrisierte Abfrage enthält. Das resultierende strukturierte **Recordset** verfügt über mehrere Ebenen aufweist, in dem das übergeordnete Element die oberste Ebene belegt, das untergeordnete Element nimmt die unterste Ebene und eine beliebige Anzahl von **Recordset**s generiert, indem Sie die Shape COMPUTE-Befehlen, die dazwischen liegenden Ebenen beanspruchen.  
+ Die-Klausel, die das untergeordnete **Recordset** erstellt, kann jetzt eine beliebige Anzahl geschachtelter Form-Compute-Befehle sein, bei denen der untersten geschachtelte Befehl die parametrisierte Abfrage enthält. Das resultierende geformte **Recordset** verfügt über mehrere Ebenen, bei denen das übergeordnete Element die oberste Ebene einnimmt, das untergeordnete Element die unterste Ebene einnimmt und eine beliebige Anzahl von **Recordsets**, die durch die Form-Compute-Befehle generiert werden, die dazwischen liegenden Ebenen einnimmt.  
   
- Die typische Verwendung für diese Funktion ist, die aggregate-Funktion und Gruppierungsfunktionen von ShapeCOMPUTE aufzurufen. Befehle zum Erstellen der dazwischen liegenden **Recordset** Objekten mit analytischen Informationen über das untergeordnete Element **Recordset** . Darüber hinaus da es sich um einen Befehl für die parametrisierte Form handelt, jedes Mal eine Kapitelspalte des übergeordneten Elements erfolgt, eine neue untergeordnete **Recordset** abgerufen werden kann. Da die dazwischen liegenden Ebenen von untergeordneten abgeleitet werden, werden sie auch neu berechnet werden.  
+ Die typische Verwendung dieses Features besteht darin, die Aggregatfunktion und die Gruppierungs Möglichkeiten der shapecompute-Befehle aufzurufen, um zwischengeschaltete **Recordsetobjekte** mit analytischen Informationen über das untergeordnete **Recordset**zu erstellen. Da dies ein parametrisierter Shape-Befehl ist, kann jedes Mal, wenn auf eine Kapitel Spalte des übergeordneten Elements zugegriffen wird, ein neues untergeordnetes **Recordset** abgerufen werden. Da die dazwischen liegenden Ebenen vom untergeordneten Element abgeleitet sind, werden Sie ebenfalls neu berechnet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Shaping Example (Beispiele der Datenstrukturierung)](../../../ado/guide/data/data-shaping-example.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenstrukturierung – Beispiel](../../../ado/guide/data/data-shaping-example.md)

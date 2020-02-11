@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952589"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Auf dem Berichtsserver wurden benutzerdefinierte Erweiterungen erkannt (Upgrade Advisor)
@@ -28,13 +28,13 @@ ms.locfileid: "71952589"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** : [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Einheitlicher Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus.|  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Beschreibung  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt eine erweiterbare Architektur bereit, mit der Entwickler benutzerdefinierte Erweiterungen für die Datenverarbeitung,-Übermittlung,-Rendering,-Sicherheit und-Authentifizierung erstellen können.  
+## <a name="description"></a>BESCHREIBUNG  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt eine erweiterbare Architektur bereit, mit der Entwickler benutzerdefinierte Erweiterungen für die Datenverarbeitung,-Übermittlung,-Rendering,-Sicherheit und-Authentifizierung erstellen können.  
   
  Wenn benutzerdefinierte Erweiterungen oder Assemblys in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation verwendet werden, können Sie mit Setup ein Upgrade durchführen. Allerdings müssen Sie möglicherweise nach Abschluss des Upgrades Erweiterungen an den neuen Installationsort verschieben, oder Sie müssen vor dem Upgrade bestimmte Schritte ausführen.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71952589"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Bestimmen Sie anhand der folgenden Abschnitte, welche Schritte Sie zusätzlich oder vor dem Upgrade von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausführen müssen:  
   
- [Benutzerdefinierte Datenverarbeitungs-oder Übermittlungs Erweiterungen](#dataprocdeliver)  
+ [Benutzerdefinierte Datenverarbeitungs- oder Übermittlungserweiterungen](#dataprocdeliver)  
   
- [Benutzerdefinierte Rendering-Erweiterungen](#render)  
+ [Benutzerdefinierte Renderingerweiterungen](#render)  
   
  [Benutzerdefinierte Sicherheits-oder Authentifizierungs Erweiterungen auf einem SQL Server 2000-Berichts Server](#secauth2000)  
   
- [Benutzerdefinierte Sicherheits-oder Authentifizierungs Erweiterungen auf einem SQL Server 2005-Berichts Server](#secauth2005)  
+ [Benutzerdefinierte Sicherheits- oder Authentifizierungserweiterungen auf einem Berichtsserver von SQL Server 2005](#secauth2005)  
   
  Verschieben Sie nach Abschluss des Upgrades die Erweiterungsassemblys in den neuen Installationsordner, und überprüfen Sie dann, ob die benutzerdefinierten Erweiterungen erwartungsgemäß arbeiten. Wenn die Erweiterung nicht funktioniert, müssen Sie sie unter Umständen neu kompilieren.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952589"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Nach dem Upgrade auszuführende Schritte für benutzerdefinierte Datenverarbeitungs- oder Übermittlungserweiterungen  
   
-1.  Verschieben Sie die Erweiterungsdatei(en) in den neuen Programmordner für den Berichtsserver. Der Berichts Server-Programmordner befindet sich standardmäßig unter \Programme\Microsoft SQL Server\MSRS10_50. \<*Instanzname*> \Report Server.  
+1.  Verschieben Sie die Erweiterungsdatei(en) in den neuen Programmordner für den Berichtsserver. Der Berichts Server-Programmordner befindet sich standardmäßig unter \Programme\Microsoft SQL Server \ MSRS10_50. \< *instance_name*> \Report Server.  
   
  Weitere Informationen finden Sie unter "Bereitstellen einer Datenverarbeitungserweiterung" und "Implementieren von Übermittlungserweiterungen" in der SQL Server-Onlinedokumentation.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71952589"
   
 3.  Konfigurieren Sie die Erweiterungen für die neue Instanz.  
   
-## <a name="see-also"></a>Siehe auch  
- [Upgrade Advisor für &#40;Reporting Services Upgradeprobleme&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Reporting Services Upgradeprobleme &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

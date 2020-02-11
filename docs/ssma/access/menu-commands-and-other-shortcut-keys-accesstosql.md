@@ -1,5 +1,5 @@
 ---
-title: Menübefehle und andere Tastenkombinationen (AccessToSQL) | Microsoft-Dokumentation
+title: Menübefehle und andere Tastenkombinationen (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,184 +10,184 @@ ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907132"
 ---
-# <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Menübefehle und andere Tastenkombinationen (AccessToSQL)
-Den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen, die in verschiedenen Dialogfeldern von SSMA für Access-Anwendung verwendet.  
+# <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Menübefehle und andere Tastenkombinationen (accesstosql)
+In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in den verschiedenen Dialogfeldern von SSMA für Access Application verwendet werden.  
   
-## <a name="file-menu-commands"></a>Befehle im Menü Datei  
-Menü "Datei" für den Zugriff auf wird die entsprechende Tastenkombination ALT + F. Die folgende Tabelle beschreibt die Tastenkombinationen verwendet werden, Menüelemente im Menü "Datei" den Zugriff auf Tastatur.  
+## <a name="file-menu-commands"></a>Dateimenübefehle  
+Um auf das Menü Datei zuzugreifen, wird die Tastenkombination ALT + F verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Datei verwendet werden.  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Zeigen Sie im Dialogfeld Neues Projekt.|ALT + F + N|  
-|Zeigt das Dialogfeld Projekt öffnen.|ALT + F + O|  
-|Schließen Sie das aktuelle Projekt.|ALT + F + C|  
-|Anzeigen von Speichern im Dialogfeld Projekt.|ALT + F + S|  
-|Zeigen Sie die Verbindung herstellen oder erneutes Verbinden mit SQL Server oder SQL Azure-Dialogfeld.|ALT + F + Q|  
-|Zuletzt geöffnete Projekte zugreifen.|ALT + F + P|  
-|Das Dialogfeld des Migrations-Assistent wird angezeigt.|ALT + F + W|  
-|Datenbanken hinzufügen.|ALT + F + A|  
-|Entfernen Sie die Datenbank.|ALT + F + R|  
-|Das Dialogfeld Suchen Datenbanken-Assistent wird angezeigt.|ALT + F + F|  
-|SSMA-Anwendung zu beenden.|ALT + F + X|  
+|Zeigen Sie das Dialogfeld Neues Projekt an.|Alt + F + N|  
+|Zeigt das Dialogfeld Projekt öffnen an.|Alt + F + O|  
+|Schließen Sie das aktuelle Projekt.|Alt + F + C|  
+|Zeigen Sie das Dialogfeld Projekt speichern an.|Alt + F + S|  
+|Zeigen Sie das Dialogfeld Verbindung mit SQL Server oder SQL Azure verbinden an.|ALT + f + Q|  
+|Auf zuletzt verwendete Projekte zugreifen.|Alt + F + P|  
+|Hiermit wird das Dialogfeld Migrations-Assistent angezeigt.|Alt + F + W|  
+|Datenbanken hinzufügen.|Alt + F + A|  
+|Entfernen Sie die Datenbank.|Alt + F + R|  
+|Hiermit wird das Dialogfeld Datenbanken suchen angezeigt.|ALT + f + f|  
+|Beenden Sie die SSMA-Anwendung.|Alt + F + X|  
   
-## <a name="edit-menu-commands"></a>Befehle im Menü Bearbeiten  
-Menü "Bearbeiten" für den Zugriff auf wird die entsprechende Tastenkombination ALT + E. Die folgende Tabelle beschreibt die Tastenkombinationen für den Zugriff auf die Menüelemente im Menü "Bearbeiten".  
+## <a name="edit-menu-commands"></a>Menübefehle bearbeiten  
+Für den Zugriff auf das Menü "Bearbeiten" wird die Tastenkombination ALT + E verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Bearbeiten verwendet werden.  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Ausschneiden des markierten Texts in die Zwischenablage.|ALT + E + T oder STRG + X|  
-|Kopieren Sie ausgewählten Text in die Zwischenablage.|ALT + E + C oder STRG + C|  
+|Ausschneiden von ausgewähltem Text in die Zwischenablage.|ALT + E + T oder STRG + X|  
+|Kopieren Sie den markierten Text in die Zwischenablage.|ALT + E + c oder Strg + c|  
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|ALT + E + P oder STRG + V|  
 |Macht die letzte Aktion rückgängig.|ALT + E + U oder STRG + Z|  
-|Wiederherstellen oder eine Aktion zu wiederholen.|ALT + E + R oder STRG + Y|  
-|Zeigt das Dialogfeld Lesezeichen verwalten.|ALT + E + B oder STRG + X|  
-|Gehe zu Zeile|ALT + E + G oder STRG + G|  
-|Speichern Sie die Änderung der Anweisung an.|ALT + E + S oder STRG + S|  
-|Untermenü der Access-suchen.|ALT + E + F|  
-|Suchen oder die Schnellsuche.|ALT + E + F + F oder STRG + F|  
-|Zeigt das Dialogfeld "Erweiterte Suche" an.|ALT + E + F + A oder ALT + F12|  
-|Starten Sie die QuickInfo.|ALT + E + F + I oder STRG + UMSCHALT + Leerzeichen|  
+|Wiederholen oder Wiederholen einer Aktion.|ALT + E + R oder STRG + Y|  
+|Hiermit wird das Dialogfeld Lesezeichen verwalten angezeigt.|ALT + E + B oder STRG + X|  
+|Gehe zu Zeile|ALT + E + g oder STRG + g|  
+|Speichern Sie die Änderungen an der Anweisung.|ALT + E + s oder STRG + s|  
+|Zugriff suchen Untermenü.|ALT + E + F|  
+|Suchen oder Schnellsuche.|ALT + E + f + f oder Strg + f|  
+|Hiermit wird das Dialogfeld Erweiterte Suche angezeigt.|ALT + E + F + A oder ALT + F12|  
+|Starten Sie Quick Infos.|ALT + E + F + I oder STRG + UMSCHALT + LEERTASTE|  
 |Gehe zu Deklaration.|ALT + E + F + G oder F12|  
-|Suchen Sie Vorheriges.|ALT + E + F + P oder STRG + UMSCHALT + F3|  
-|Weitersuchen|ALT + E + F + N oder STRG + F3|  
+|Vorheriges suchen.|ALT + E + F + P oder STRG + UMSCHALT + F3|  
+|Weitersuchen|ALT + E + F + N oder Strg + F3|  
   
-## <a name="view-menu-commands"></a>Befehle im Menü Ansicht  
-Menü "Ansicht" für den Zugriff auf wird die entsprechende Tastenkombination ALT + V. Die folgende Tabelle beschreibt die Tastenkombinationen verwendet werden, Menüelemente im Menü "Ansicht" den Zugriff auf Tastatur.  
+## <a name="view-menu-commands"></a>Menübefehle anzeigen  
+Um auf das Menü Ansicht zuzugreifen, wird die Tastenkombination ALT + V verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Ansicht verwendet werden.  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Synchronisieren der Metadaten-Explorer|ALT + V + Z|  
-|Struktur anzeigen|ALT + V + H oder STRG + T|  
-|Teil mit der Datenquelle anzeigen|ALT + V, S|  
-|Anzeigen der Zielkomponente|ALT + V, T|  
-|Zeigen Sie Fehler im Listenbereich an.|ALT + V + E oder STRG + E|  
-|Ausgabebereich einblenden.|ALT + V + O oder STRG + O|  
-|Untermenü der Access-Layouts.|ALT + V, L|  
-|Aktuelles Layout hinzufügen|ALT + V, L + A|  
-|Wählen Sie die Standard-layout|ALT + V + L + D oder STRG + ALT + 1|  
-|Auswählen, ohne die Explorer-layout|ALT + V + L + W oder STRG + ALT + 2|  
-|Zeigt das Dialogfeld Layouts verwalten.|ALT + V, L + M|  
+|Metadatenexplorer synchronisieren|Alt + V + Z|  
+|Struktur anzeigen|Alt + V + H oder STRG + T|  
+|Quellteil anzeigen|Alt + V + S|  
+|Zielpart anzeigen|Alt + V + T|  
+|Bereich Fehlerliste anzeigen.|Alt + V + e oder STRG + e|  
+|Ausgabebereich anzeigen.|Alt + V + o oder Strg + o|  
+|Das Untermenü für die Zugriffs Layouts.|Alt + V + L|  
+|Aktuelles Layout hinzufügen|Alt + V + L + A|  
+|Standardlayout auswählen|Alt + V + L + D oder STRG + ALT + 1|  
+|Ohne Explorer-Layout auswählen|Alt + V + L + W oder STRG + ALT + 2|  
+|Hiermit wird das Dialogfeld Layouts verwalten angezeigt.|Alt + V + L + M|  
   
-## <a name="tools-menu-commands"></a>Befehle im Menü Extras  
-Menü "Extras" für den Zugriff auf wird die entsprechende Tastenkombination ALT + T. Die folgende Tabelle beschreibt die Verknüpfungen verwendet werden, Menüelemente im Menü "Tools" den Zugriff auf Tastatur.  
+## <a name="tools-menu-commands"></a>Menübefehle des Tools  
+Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Extras verwendet werden.  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Bericht zu erstellen.|ALT + T + C|  
-|Konvertieren Sie Schema.|ALT + T + N oder STRG + R|  
-|Aus Access-Datenbank zu aktualisieren.|ALT+T + R|  
-|Synchronisieren Sie mit SQL Server- oder SQL Azure-Datenbank.|ALT + T + S|  
-|Speichern Sie als Skript.|ALT + T + A|  
-|Migrieren von Daten.|ALT+T + M|  
-|Beenden Sie den aktuellen Vorgang.|ALT + T + O|  
-|Zeigen Sie im Dialogfeld "Globale Einstellungen".|ALT + T + G|  
-|Zeigt das Dialogfeld für die Einstellungen des Projekts.|ALT + T + P|  
-|Zeigt das Dialogfeld Einstellungen des Standard-Projekt angezeigt.|ALT + T + J|  
-|Das Dialogfeld Suchen Datenbanken-Assistent wird angezeigt.|ALT + T + F|  
-|Anzuzeigen Sie das konvertierte, laden Sie und migrieren Sie das Dialogfeld des Assistenten.|ALT + T + V|  
-|Verknüpfen Sie Tabellen oder Verknüpfen von Tabellen.|ALT + T + L|  
-|Die Verknüpfung von Tabellen oder Aufheben der Verknüpfung einer Tabelle.|ALT + T + U|  
-|Exportieren eines Schemas.|ALT + T + E|  
-|Löschen Sie lokal.|ALT + T + D|  
+|Erstellen Sie einen Bericht.|Alt + T + C|  
+|Schema konvertieren.|Alt + T + N oder STRG + R|  
+|Aktualisieren Sie aus Access Database.|ALT+T + R|  
+|Synchronisieren Sie mit SQL Server oder SQL Azure Datenbank.|Alt + T + S|  
+|Als Skript speichern.|Alt + T + A|  
+|Migrieren von Daten|ALT+T + M|  
+|Beendet den aktuellen Vorgang.|Alt + T + O|  
+|Zeigt das Dialogfeld Globale Einstellungen an.|Alt + T + G|  
+|Zeigen Sie das Dialogfeld Projekteinstellungen an.|Alt + T + P|  
+|Zeigt das Dialogfeld Standard Projekteinstellungen an.|Alt + T + J|  
+|Hiermit wird das Dialogfeld Datenbanken suchen angezeigt.|Alt + T + F|  
+|Hiermit wird das Dialogfeld Assistent zum konvertieren, laden und Migrieren angezeigt.|Alt + T + V|  
+|Tabellen verknüpfen oder eine Tabelle verknüpfen.|Alt + T + L|  
+|Aufheben der Verknüpfung von Tabellen oder Aufheben der Verknüpfung einer Tabelle.|Alt + T + U|  
+|Exportieren Sie das Schema.|Alt + T + E|  
+|Lokal löschen.|Alt + T + D|  
   
-## <a name="help-menu-commands"></a>Befehle im Menü Hilfe  
-Menü "Hilfe" für den Zugriff auf wird die entsprechende Tastenkombination ALT + H. Die folgende Tabelle beschreibt die Tastenkombinationen aufgeführt, die verwendet werden, Menüelemente im Menü "Hilfe" auf.  
+## <a name="help-menu-commands"></a>Hilfe Menübefehle  
+Um auf das Menü "Hilfe" zuzugreifen, wird die Tastenkombination ALT + H verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Hilfe verwendet werden.  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Zeigen Sie über SSMA für Access (Dialogfeld an).|ALT + H + A|  
-|Anzeigen von Kunden Feedback-Optionen (Dialogfeld).|ALT + H + C|  
-|Anzeigefenster für Hilfe.|ALT + H + H oder F1|  
+|Anzeigeinformationen zum Dialogfeld "SSMA für Zugriff".|ALT + H + A|  
+|Dialogfeld "Kundenfeedback Optionen anzeigen".|ALT + H + C|  
+|Hilfefenster anzeigen.|ALT + h + h oder F1|  
   
-## <a name="context-menu-commands"></a>Befehle im Kontextmenü  
-Kontextmenü für das ausgewählte Objekt im Objekt-Explorer für den Zugriff auf ist die entsprechende Tastenkombination UMSCHALT + F10 oder Apps-Schlüssel.  
+## <a name="context-menu-commands"></a>Kontextmenü Befehle  
+Um im Objekt-Explorer auf das Kontextmenü für das ausgewählte Objekt zuzugreifen, wird die Tastenkombination UMSCHALT + F10 oder Apps verwendet.  
   
-## <a name="global-settings-dialog-box"></a>Globale Einstellungen (Dialogfeld)  
+## <a name="global-settings-dialog-box"></a>Dialogfeld "globale Einstellungen"  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Registerkarte "Datenzugriff GUI".|ALT + U|  
-|Registerkarte "Protokollierung" zugreifen.|ALT + L|  
+|Registerkarte Zugriffs-GUI.|ALT + U|  
+|Registerkarte Zugriffs Protokollierung.|Alt + L|  
   
-## <a name="project-settings-dialog-box"></a>Im Dialogfeld "Einstellungen" Projekt  
+## <a name="project-settings-dialog-box"></a>Dialogfeld "Projekteinstellungen"  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Registerkarte "Datenzugriff Projekt Informationen".|ALT + P|  
-|Zugriff Registerkarte "Allgemein".|ALT + G|  
-|Registerkarte "Synchronisierung" zugreifen.|ALT + S|  
-|Registerkarte "Datenzugriff GUI".|ALT + U|  
-|Registerkarte "Datenzugriff Typ Zuordnungen".|ALT + T|  
+|Registerkarte "Projektinformationen zugreifen".|Alt + P|  
+|Zugriffs Registerkarte "Allgemein".|Alt + G|  
+|Registerkarte "Zugriffs Synchronisierung"|Alt + S|  
+|Registerkarte Zugriffs-GUI.|ALT + U|  
+|Registerkarte Zuordnungen für Zugriffstyp.|Alt + T|  
   
-## <a name="default-project-settings-dialog-box"></a>Standarddialogfeld-Projekt  
+## <a name="default-project-settings-dialog-box"></a>Standard Projekteinstellungen (Dialogfeld)  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Zugriff Registerkarte "Allgemein".|ALT + G|  
-|Registerkarte "Synchronisierung" zugreifen.|ALT + S|  
-|Registerkarte "Datenzugriff GUI".|ALT + U|  
-|Registerkarte "Datenzugriff Typ Zuordnungen".|ALT + T|  
+|Zugriffs Registerkarte "Allgemein".|Alt + G|  
+|Registerkarte "Zugriffs Synchronisierung"|Alt + S|  
+|Registerkarte Zugriffs-GUI.|ALT + U|  
+|Registerkarte Zuordnungen für Zugriffstyp.|Alt + T|  
   
-## <a name="end-user-license-agreement-dialog-box"></a>Endbenutzer License Agreement (Dialogfeld)  
+## <a name="end-user-license-agreement-dialog-box"></a>Dialogfeld "Endbenutzer-Lizenzvertrag"  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Wählen Sie den gesamten Text für den Endbenutzer-Lizenzvertrag.|STRG + A|  
-|Kopieren Sie den gesamten Text für den Endbenutzer-Lizenzvertrag in die Zwischenablage.|STRG + C|  
-|Endbenutzer-Lizenzvertrag zu drucken.|ALT + P|  
+|Wählen Sie den gesamten EULA-Text aus.|STRG + A|  
+|Kopieren Sie den gesamten EULA-Text in die Zwischenablage.|STRG + C|  
+|Drucken von EULA.|Alt + P|  
   
-## <a name="advanced-search-dialog-box"></a>Erweiterte Meldungssuche (Dialogfeld)  
+## <a name="advanced-search-dialog-box"></a>Dialogfeld "Erweiterte Suche"  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Ein Suchergebnis aus, um nach oben oder unten zu verschieben.|Nach oben oder unten-Tasten|  
-|Wechsel zu beginnen oder das Ende des sichtbaren Suche führt im Raster.|Seite nach oben oder unten-Taste|  
-|Anzeigen des ausgewählten Suchergebnisses.|Geben SIE Schlüssel|  
+|Verschieben Sie ein Suchergebnis nach oben oder unten.|Pfeiltasten nach oben und nach unten|  
+|Wechselt zum Anfang oder Ende der sichtbaren Suchergebnisse im Raster.|Bild-auf-oder Bild-ab-Taste|  
+|Anzeigen des ausgewählten Suchergebnisses.|EINGABETASTE|  
   
-## <a name="quick-info-dialog-box"></a>QuickInfo-Dialogfeld  
+## <a name="quick-info-dialog-box"></a>Dialogfeld "QuickInfo"  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Ein Element, das nach oben oder unten zu verschieben.|Nach oben oder unten-Tasten|  
-|Wechsel zu beginnen oder das Ende der QuickInfo-Fenster.|Seite nach oben oder unten-Taste|  
+|Verschieben Sie ein Element nach oben oder nach unten.|Pfeiltasten nach oben und nach unten|  
+|Wechselt zum Anfang oder Ende des Fensters Quick Info.|Bild-auf-oder Bild-ab-Taste|  
 |Schließen Sie das Dialogfeld.|ESC-Taste|  
   
 ## <a name="output-pane"></a>Ausgabebereich  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Öffnen Sie im Popupmenü.|UMSCHALT + F10|  
-|Ausschneiden des markierten Texts in die Zwischenablage.|STRG + X|  
-|Kopieren Sie ausgewählten Text in die Zwischenablage.|STRG + C|  
+|Öffnen Sie das Popup-Menü.|UMSCHALT + F10|  
+|Ausschneiden von ausgewähltem Text in die Zwischenablage.|STRG + X|  
+|Kopieren Sie den markierten Text in die Zwischenablage.|STRG + C|  
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|STRG + V|  
-|Markiert den gesamten Text.|STRG + A|  
+|Wählen Sie den gesamten Text aus.|STRG + A|  
   
-## <a name="error-list-pane"></a>Fehler im Listenbereich  
+## <a name="error-list-pane"></a>Bereich "Fehlerliste"  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
 |Kopieren Sie die ausgewählten Elemente.|STRG + C|  
-|Wählen Sie alle Elemente an.|STRG + A|  
-|Ein Element, das nach oben oder unten zu verschieben.|Nach oben oder unten-Tasten|  
+|Wählen Sie alle Elemente aus.|STRG + A|  
+|Verschieben Sie ein Element nach oben oder nach unten.|Pfeiltasten nach oben und nach unten|  
   
-## <a name="sql-tab-page"></a>SQL-Registerkarte  
+## <a name="sql-tab-page"></a>Registerkarte "SQL"  
   
-|ZU DIESEM ZWECK|DRÜCKEN SIE|  
+|zu diesem Zweck|Drückt|  
 |--------------|---------|  
-|Konvertieren Sie Schema.|STRG + R|  
-|Ausschneiden des markierten Texts in die Zwischenablage.|STRG + X|  
-|Kopieren Sie ausgewählten Text in die Zwischenablage.|STRG + C|  
+|Schema konvertieren.|STRG + R|  
+|Ausschneiden von ausgewähltem Text in die Zwischenablage.|STRG + X|  
+|Kopieren Sie den markierten Text in die Zwischenablage.|STRG + C|  
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|STRG + V|  
-|Starten Sie die Schnellsuche|STRG + F|  
-|Starten Sie die QuickInfo.|STRG + UMSCHALT + LEERTASTE|  
+|Schnellsuche starten|STRG + F|  
+|Starten Sie Quick Infos.|STRG + UMSCHALT + LEERTASTE|  
 |Gehe zu Deklaration.|F12|  
   
-## <a name="see-also"></a>Siehe auch  
-[Tastenkombinationen für den &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Tastenkombinationen &#40;Access Token&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

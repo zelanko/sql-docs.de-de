@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211844"
 ---
 # <a name="modify-check-constraints"></a>Ändern von CHECK-Einschränkungen
@@ -44,7 +44,7 @@ ms.locfileid: "68211844"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-check-constraint"></a>So ändern Sie eine CHECK-Einschränkung  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68211844"
   
 4.  Führen Sie eine Aktion aus der folgenden Tabelle aus:  
   
-    |Beschreibung|Schritte|  
+    |To|Schritte|  
     |--------|------------------------|  
     |Ändern des Einschränkungsausdrucks|Geben Sie im Feld **Ausdruck** den neuen Ausdruck ein.|  
     |Umbenennen der Einschränkung|Geben Sie im Feld **Name** einen neuen Namen ein.|  
@@ -69,7 +69,7 @@ ms.locfileid: "68211844"
   
 5.  Klicken Sie auf **Schließen**.  
   
-6.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
+6.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie eine CHECK-Einschränkung**  

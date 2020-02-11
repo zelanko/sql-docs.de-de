@@ -1,5 +1,5 @@
 ---
-title: Cursorbibliothek-Cache | Microsoft-Dokumentation
+title: Cursor-Bibliotheks Cache | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 597abe268979852d754e2e3e86ae81daa8f3fed8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019063"
 ---
 # <a name="cursor-library-cache"></a>Cache der Cursorbibliothek
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Für jede Zeile der Daten im Resultset werden die Daten werden für jede gebundene Spalte, die Länge der Daten in jede gebundene Spalte und den Status der Zeile die Cursorbibliothek zwischengespeichert. Die Cursorbibliothek verwendet die Werte in den Cache für die zurückzugebenden über **SQLFetch** und **SQLFetchScroll** und zum Erstellen von komplexen Anweisungen für positionierte Operationen. Weitere Informationen finden Sie unter [durchsucht-Anweisungen konstruieren](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+ Für jede Daten Zeile im Resultset werden die Daten für jede gebundene Spalte, die Länge der Daten in den einzelnen gebundenen Spalten und der Status der Zeile von der Cursor Bibliothek zwischengespeichert. Die Cursor Bibliothek verwendet die Werte im Cache, um durch **SQLFetch** und **SQLFetchScroll** zurückzukehren und durchsuchte Anweisungen für positionierte Vorgänge zu erstellen. Weitere Informationen finden Sie unter [Erstellen von durchsuchten Anweisungen](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Spaltendaten](../../../odbc/reference/appendixes/column-data.md)  
   
--   [Länge der Spaltendaten](../../../odbc/reference/appendixes/length-of-column-data.md)  
+-   [Länge von Spaltendaten](../../../odbc/reference/appendixes/length-of-column-data.md)  
   
 -   [Zeilenstatus](../../../odbc/reference/appendixes/row-status.md)  
   
--   [Ort des Caches](../../../odbc/reference/appendixes/location-of-cache.md)
+-   [Speicherort des Caches](../../../odbc/reference/appendixes/location-of-cache.md)

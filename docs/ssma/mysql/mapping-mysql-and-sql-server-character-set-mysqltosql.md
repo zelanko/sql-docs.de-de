@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von MySQL und SQL Server-Zeichen festgelegt (MySQLToSQL)) | Microsoft-Dokumentation
+title: Zuordnung von MySQL und SQL Server Zeichensatz (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,127 +10,127 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909025"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Zuordnen von MySQL- und SQL Server-Zeichensätzen (MySqlToSql)
-Zeichensatz (Charset) kann für die MySQL-Datentypen, Ausdrücke und Literale angegeben werden.  
+Der Zeichensatz (CharSet) kann für MySQL-Zeichen Datentypen, Ausdrücke und Literale angegeben werden.  
   
-## <a name="charset-mapping"></a>CharSet-Zuordnung  
-CharSet-Zuordnung ist für die einzelnen MySQL-Zeichensatz definiert, während der datentypkonvertierung für Zeichen. Es gibt an, wie Zeichenfolgen-Datentypen von einem bestimmten Zeichensatz zu konvertieren:  
+## <a name="charset-mapping"></a>Charset-Zuordnung  
+Die charset-Zuordnung wird für jedes MySQL-Zeichensatz definiert und bei der Konvertierung von Zeichen Datentypen verwendet. Gibt an, wie Zeichen folgen Datentypen eines bestimmten Zeichensatzes konvertiert werden:  
   
--   National SQL Server-Zeichen-Datentypen (NCHAR/NVARCHAR) oder  
+-   In nationale SQL Server Zeichen Typen (nchar/nvarchar) oder  
   
--   Reguläre SQL Server-Zeichen-Datentypen (CHAR/VARCHAR)  
+-   In reguläre SQL Server Zeichen Typen (char/varchar)  
   
-1.  **National** Ziel-Datenbank-Datentypen sind:  
+1.  Datentypen der Daten Bank Zeichenfolge für das **nationale** Ziel  
   
     1.  **nchar**  
   
     2.  **nvarchar**  
   
-2.  **reguläre** Ziel-Datenbank-Datentypen sind:  
+2.  die Datentypen der **regulären** Ziel Daten Bank Zeichen lauten:  
   
-    1.  **char**  
+    1.  **Char**  
   
     2.  **varchar**  
   
-3.  Typzuordnung lässt nur eine Zuordnung zu **national** Zeichendatentypen. Nachdem MySQL Zeichendatentyp gemäß der Zuordnung eines Typs konvertiert wurde, wird der Charset-Zuordnung angewendet.  
+3.  Die Typzuordnung ermöglicht nur die Zuordnung zu Datentypen von **nationalen** Zeichen. Nachdem der MySQL-Zeichen Datentyp entsprechend der Typzuordnung konvertiert wurde, wird die charset-Zuordnung angewendet.  
   
 > [!NOTE]  
-> CharSet-Zuordnung kann auf jeder Knotenebene des Objekt-Explorers Metadaten definiert werden und Darstellen von allen Zeichensätzen, die von MySQL zu lesen.  
+> Die Zeichensatz Zuordnung kann auf jeder Knotenebene des Metadatenobjekt-Explorers definiert werden und stellt alle aus MySQL gelesenen Zeichensätzen dar.  
   
-## <a name="charset-mapping-on-different-node-levels"></a>CharSet-Zuordnung auf unterschiedlichen Knotenebenen  
-Zuordnen von CharSet variiert auf unterschiedlichen Knotenebenen, nämlich:  
+## <a name="charset-mapping-on-different-node-levels"></a>Charset-Zuordnung auf verschiedenen Knoten Ebenen  
+Die Zeichensatz Zuordnung variiert auf verschiedenen Knoten Ebenen, nämlich:  
   
-1.  Auf Ebene des Schemastammknotens Metadaten  
+1.  Auf Stamm-Metadatenknoten Ebene  
   
-2.  Für Datenbank, Kategorie und Objektebene für Knoten  
+2.  Auf Datenbank-, Kategorie-und Objekt Knotenebene  
   
 > [!NOTE]  
-> Die Registerkarte für die Bearbeitung der Charset-Zuordnung, ausgewählte enthält drei Schaltflächen, unabhängig von der Zuordnung für die unterschiedlichen Knotenebenen.  
+> Die Registerkarte, die zum Bearbeiten der Zeichensatz Zuordnung ausgewählt wurde, enthält drei Schaltflächen, unabhängig von der Zuordnung auf den verschiedenen Knoten Ebenen.  
 >   
-> Die Überladungen sind:  
+> Sie lauten wie folgt:  
 >   
-> 1.  **Gelten:** Wendet die Änderungen durch den Benutzer, die nur aktiviert, wenn Charset-Zuordnung bearbeitet und noch nicht gespeichert ist.  
-> 2.  **Abbrechen:** Bricht die Änderungen, die vom Benutzer ab. Die Schaltfläche wird aktiviert, wenn Charset-Zuordnung bearbeitet, aber nicht gespeichert.  
-> 3.  **Auf Standardwert zurücksetzen:** Setzt alle Zuordnungen auf Standardwerte zurück.  
+> 1.  **Anwenden:** Wendet vom Benutzer vorgenommene Änderungen an, die nur aktiviert werden, wenn die charset-Zuordnung bearbeitet und noch nicht gespeichert wurde.  
+> 2.  **Abbrechen:** Bricht die vom Benutzer vorgenommenen Änderungen ab. Die Schaltfläche wird aktiviert, wenn die Zeichensatz Zuordnung bearbeitet, aber nicht gespeichert wird.  
+> 3.  **Auf Standardwert zurücksetzen:** Setzt alle Zuordnungen auf die Standardwerte zurück.  
   
-1.  **Auf Metadaten Ebene des Schemastammknotens:**  CharSet-Zuordnungsraster enthält Charset-Raster mit einer separaten Spalte für jeden Zeichensatz. Die Spalten des Rasters sind:  
+1.  **Auf Stamm-Metadatenknoten Ebene:**  Das Diagramm für die charset-Zuordnung enthält das CharSet-Raster mit einer separaten Spalte für jedes CharSet. Die Spalten des Rasters lauten:  
   
-    1.  Die erste Spalte des Rasters mit dem Namen **Charset-Name** Charset-Namen enthält.  
+    1.  Die erste Spalte des Rasters namens **CharSet Name** enthält einen charset-Namen.  
   
-    2.  Das zweite Argument, das mit dem Namen **Charset-Beschreibung** Charset-Beschreibung enthält.  
+    2.  Die zweite Beschreibung namens **CharSet Description** enthält eine Beschreibung des Zeichensatzes.  
   
-    3.  Die dritte Spalte mit dem Titel **Charset-Zieltyp** enthält Einstellungen für die Zuordnung für den bestimmten Zeichensatz. Werte für diese Spalte sind:  
+    3.  Die dritte Spalte mit dem Titel **Ziel charset** enthält Zuordnungseinstellungen für bestimmte Zeichensätze. Die Werte für diese Spalte lauten:  
   
-        -   CHAR/VARCHAR  
+        -   char/varchar  
   
-        -   NCHAR/NVARCHAR  
+        -   nchar/nvarchar  
   
     > [!IMPORTANT]  
-    > Die Standardwerte für einen bestimmten Zeichensatz haben das Präfix "(Default)" nach CHAR/VARCHAR oder NCHAR/NVARCHAR.  
+    > Die Standardwerte für einen bestimmten charset haben das Präfix "(Standard)" nach char/varchar oder nchar/nvarchar.  
   
-    Die Charset-Zuordnung zwischen MySQL-Datenbank und die Zieldatenbank auf Ebene des Schemastammknotens Metadaten wird unten angezeigt:  
+    Die Zeichensatz Zuordnung zwischen der MySQL-Datenbank und der Zieldatenbank auf der Stamm-Metadatenknoten Ebene wird unten angegeben:  
   
     ||||  
     |-|-|-|  
-    |**CharSet-Name**|**CharSet-Beschreibung**|**Ziel-Charset-Typ (Standard)**|  
-    |Big5|Chinesisch (traditionell) Big5|NCHAR/NVARCHAR (Standard)|  
-    |dec8|DEC-West-Europäischen|CHAR/VARCHAR (Standard)|  
-    |cp850|DOS-West-Europäischen|CHAR/VARCHAR (Standard)|  
-    |hp8|HP West Europäischen|CHAR/VARCHAR (Standard)|  
-    |koi8r|KOI8-R Relcom Russisch|CHAR/VARCHAR (Standard)|  
-    |Latin 1|cp1252 West Europäischen|CHAR/VARCHAR (Standard)|  
-    |Lateinisch-2|ISO 8859-2 Mitteleuropa|CHAR/VARCHAR (Standard)|  
-    |swe7|7-Bit-Schwedisch|CHAR/VARCHAR (Standard)|  
-    |ASCII|US-ASCII|CHAR/VARCHAR (Standard)|  
-    |ujis|EUC-JP-Japanisch|NCHAR/NVARCHAR (Standard)|  
-    |SJIS|Shift-JIS-Japanisch|NCHAR/NVARCHAR (Standard)|  
-    |Hebräisch|ISO 8859-8 Hebrew|CHAR/VARCHAR (Standard)|  
-    |tis620|TIS620 Thai|CHAR/VARCHAR (Standard)|  
-    |eucKR|EUC-KR Koreanisch|NCHAR/NVARCHAR (Standard)|  
-    |koi8u|KOI8-U Ukrainisch|CHAR/VARCHAR (Standard)|  
-    |gb2312|GB2312 Chinesisch (vereinfacht)|NCHAR/NVARCHAR (Standard)|  
-    |Griechisch|ISO 8859-7 Greek|CHAR/VARCHAR (Standard)|  
-    |CP-1250|Windows-Mitteleuropäisch|CHAR/VARCHAR (Standard)|  
-    |GBK|Chinesisch vereinfacht, GBK|NCHAR/NVARCHAR (Standard)|  
-    |Latin5|ISO 8859-9 Turkish|CHAR/VARCHAR (Standard)|  
-    |armscii8|ARMSCII-8-Armenisch|CHAR/VARCHAR (Standard)|  
-    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (Standard)|  
-    |ucs2|UCS-2-Unicode|NCHAR/NVARCHAR (Standard)|  
-    |cp866|DOS-Russisch|CHAR/VARCHAR (Standard)|  
-    |keybcs2|DOS Kamenicky Tschechisch-Slowakisch|CHAR/VARCHAR (Standard)|  
-    |macce|Mitteleuropäisch für Mac|CHAR/VARCHAR (Standard)|  
-    |MacRoman|Mac-West-Europäischen|CHAR/VARCHAR (Standard)|  
-    |cp852|DOS-Central Europäischen|CHAR/VARCHAR (Standard)|  
-    |Latin7|ISO 8859-13-Baltisch|CHAR/VARCHAR (Standard)|  
-    |CP-1251|Windows-Kyrillisch|CHAR/VARCHAR (Standard)|  
-    |cp 1256|Windows-Arabisch|CHAR/VARCHAR (Standard)|  
-    |cp 1257|Windows-Baltisch|CHAR/VARCHAR (Standard)|  
-    |BINARY|Binäre Pseudo-Zeichensatz|CHAR/VARCHAR (Standard)|  
-    |geostd8|GEOSTD8 Georgian|CHAR/VARCHAR (Standard)|  
-    |cp932|SJIS für Windows-Japanisch|NCHAR/NVARCHAR (Standard)|  
-    |eucjpms|UJIS für Windows-Japanisch|NCHAR/NVARCHAR (Standard)|  
+    |**Charset-Name**|**Zeichensatz Beschreibung**|**Ziel Zeichensatz-Typ (Standard)**|  
+    |Big5|Big5 traditionelles Chinesisch|Nchar/nvarchar (Standard)|  
+    |dec8|Europa, Westen|Char/varchar (Standard)|  
+    |CP850|DOS West europäisch|Char/varchar (Standard)|  
+    |hp8|HP West europäisch|Char/varchar (Standard)|  
+    |koi8r|KOI8-R Relcom Russisch|Char/varchar (Standard)|  
+    |Lateinisch 1|cp1252 West europäisch|Char/varchar (Standard)|  
+    |latin2|ISO 8859-2, mitteleuropäisch|Char/varchar (Standard)|  
+    |swe7|7, Schwedisch|Char/varchar (Standard)|  
+    |ascii|US-ASCII|Char/varchar (Standard)|  
+    |ujis|EUC-JP Japanisch|Nchar/nvarchar (Standard)|  
+    |sjis|Shift-JIS Japanisch|Nchar/nvarchar (Standard)|  
+    |Hebräisch|ISO 8859-8 Hebrew|Char/varchar (Standard)|  
+    |tis620|Tis620 Thai|Char/varchar (Standard)|  
+    |eucKR|EUC-KR Koreanisch|Nchar/nvarchar (Standard)|  
+    |koi8u|KOI8-U Ukrainisch|Char/varchar (Standard)|  
+    |GB2312|GB2312 vereinfachtes Chinesisch|Nchar/nvarchar (Standard)|  
+    |Griechisch|ISO 8859-7 Greek|Char/varchar (Standard)|  
+    |CP 1250|Windows-zentral europäisch|Char/varchar (Standard)|  
+    |GBK|Vereinfachtes Chinesisch (GBK)|Nchar/nvarchar (Standard)|  
+    |latin5|ISO 8859-9 Turkish|Char/varchar (Standard)|  
+    |armscii8|ARMSCII-8 Armenisch|Char/varchar (Standard)|  
+    |utf8|UTF-8-Unicode|Nchar/nvarchar (Standard)|  
+    |ucs2|UCS-2 Unicode|Nchar/nvarchar (Standard)|  
+    |cp866|DOS Russisch|Char/varchar (Standard)|  
+    |keybcs2|DOS Kamenicky, Tschechisch (slowakisch)|Char/varchar (Standard)|  
+    |macce|Mac Central europäisch|Char/varchar (Standard)|  
+    |MacRoman|Mac West europäisch|Char/varchar (Standard)|  
+    |cp852|DOS Central europäisch|Char/varchar (Standard)|  
+    |latin7|ISO 8859-13-Ostsee|Char/varchar (Standard)|  
+    |CP 1251|Windows-Kyrillisch|Char/varchar (Standard)|  
+    |CP 1256|Windows Arabisch|Char/varchar (Standard)|  
+    |CP 1257|Windows-Ostsee|Char/varchar (Standard)|  
+    |BINARY|Binäres Pseudo Zeichensatz|Char/varchar (Standard)|  
+    |geostd8|GEOSTD8 Georgisch|Char/varchar (Standard)|  
+    |cp932|SJIS für Windows Japanisch|Nchar/nvarchar (Standard)|  
+    |eucjpms|Ujis für Windows Japanisch|Nchar/nvarchar (Standard)|  
   
-2.  **Für die Datenbank, Kategorie oder Objektebenen-Knoten:** Auf der Ebene des-Datenbank, Kategorie oder Objektknoten enthält Charset-Zuordnungsraster dieselben Zeilen wie die 1 auf Ebene des schemastammknotens Metadaten, viz.:  
+2.  **Auf den Ebenen Datenbank, Kategorie oder Objekt Knoten:** Auf der Ebene der Datenbank, der Kategorie oder der Objekt Knoten enthält das Diagramm für die charset-Zuordnung die gleichen Zeilen wie die auf der Stamm-metadatenknotenebene (Viz):  
   
-    1.  Die erste Spalte des Rasters mit dem Titel **Zeichenname festgelegt** Charset-Namen enthält.  
+    1.  Die erste Spalte des Rasters mit dem Namen, der **Zeichensatz Name** enthält einen charset-Namen.  
   
-    2.  Die zweite Spalte, die mit dem Titel **Beschreibung von Zeichen festlegen** Charset-Beschreibung enthält.  
+    2.  Die zweite Spalte mit der **Bezeichnung Zeichensatz Beschreibung** enthält eine Beschreibung des Zeichensatzes.  
   
-    3.  Der einzige Unterschied ist die Werte in der dritten Spalte des Rasters. Die dritte Spalte mit dem Titel **Zieldatentyp** enthält Einstellungen für die Zuordnung für den bestimmten Zeichensatz. Die Werte für die Spalte sind:  
+    3.  Der einzige Unterschied sind die Werte in der dritten Spalte des Rasters. Die dritte Spalte mit dem Namen **Target Data Type** enthält Zuordnungseinstellungen für bestimmte Zeichensätze. Die Werte für die Spalte lauten:  
   
-        -   Geerbt (CHAR/VARCHAR oder NCHAR/NVARCHAR)  
+        -   Geerbt (char/varchar oder nchar/nvarchar)  
   
-        -   CHAR/VARCHAR  
+        -   char/varchar  
   
-        -   NCHAR/NVARCHAR  
+        -   nchar/nvarchar  
   
 > [!IMPORTANT]  
-> -   In der Charset-Zuordnung zwischen MySQL-Datenbank und die Zieldatenbank auf Datenbank-, Kategorie und Objekt-Knoten, die Standardwerte für einen bestimmten Zeichensatz für jede Ebene als Stammverzeichnis für die Spalte **Zieldatentyp** muss ' Geerbte ".  
-> -   Im Raster des Werts **geerbte** ist, die entweder mit dem Suffix '(CHAR/VARCHAR)' oder '(NCHAR/NVARCHAR) "je nachdem, welcher Wert von diesem bestimmten Zeichensatz vom übergeordneten Element geerbt wurde.  
+> -   In der Zeichensatz Zuordnung zwischen der MySQL-Datenbank und der Zieldatenbank auf Datenbank-, Kategorie-und Objekt Knotenebene sollten die Standardwerte für ein bestimmtes Zeichensatz auf jeder anderen Ebene als der root-Wert des Spalten **Ziel-Datentyps** "geerbt" lauten.  
+> -   Im Raster wird für den **geerbten** Wert entweder ' (char/varchar) ' oder ' (nchar/nvarchar) ' angehängt, je nachdem, welcher Wert von diesem bestimmten charset vom übergeordneten Element geerbt wurde.  
   

@@ -16,32 +16,32 @@ ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931659"
 ---
 # <a name="position-property-ado"></a>Position-Eigenschaft (ADO)
-Gibt die aktuelle Position innerhalb einer [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
+Gibt die aktuelle Position innerhalb eines [Streamobjekts](../../../ado/reference/ado-api/stream-object-ado.md) an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **lange** Wert, der den Offset in Anzahl von Bytes, die von der aktuellen Position vom Anfang des Streams angibt. Der Standardwert ist 0, was das erste Byte im Stream darstellt.  
+ Legt einen **Long** -Wert fest, der den Offset der aktuellen Position vom Anfang des Streams in Byte Anzahl angibt, oder gibt ihn zurück. Der Standardwert ist 0 (null), der das erste Byte im Stream darstellt.  
   
-## <a name="remarks"></a>Hinweise  
- Die aktuelle Position kann bis zu einem Zeitpunkt nach dem Ende des Streams verschoben werden. Wenn Sie angeben, dass die aktuelle Position hinter dem Ende des Datenstroms, der die [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) von der **Stream** Objekt entsprechend erhöht. Auf diese Weise hinzugefügten neue Bytes werden als null sein.  
-  
-> [!NOTE]
->  **Position** immer misst Bytes. Multiplizieren Sie für Textstreams Mehrbyte-Zeichensätze verwenden die Position von der Zeichengröße, um die Nummer des Zeichens zu bestimmen. Beispielsweise ist das erste Zeichen für einen 2-Byte-Zeichensatz an Position 0 (null) das zweite Zeichen an Position 2, das dritte Zeichen an Position 4 und So weiter.  
+## <a name="remarks"></a>Bemerkungen  
+ Die aktuelle Position kann an einen Punkt nach dem Ende des Streams verschoben werden. Wenn Sie die aktuelle Position über das Ende des Streams hinaus angeben, wird die [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) des Daten **Strom** Objekts entsprechend angehoben. Alle neuen bytes, die auf diese Weise hinzugefügt werden, sind NULL.  
   
 > [!NOTE]
->  Negative Werte können nicht verwendet werden, so ändern Sie die aktuelle Position in einem **Stream**. Nur positive Zahlen können verwendet werden, für die **Position**.  
+>  **Position** misst immer bytes. Multiplizieren Sie für Textstreams, die Multibytezeichen-Zeichensätze verwenden, die Position nach der Zeichengröße, um die Zeichen Nummer zu ermitteln. Beispielsweise befindet sich das erste Zeichen für einen 2-Byte-Zeichensatz an Position 0, das zweite Zeichen an Position 2, das dritte Zeichen an Position 4 usw.  
   
 > [!NOTE]
->  Für schreibgeschützte **Stream** Objekten, die ADO wird kein Fehler zurückgegeben, wenn **Position** wird festgelegt auf einen Wert größer als die **Größe** von der **Stream**. Dies ändert sich die Größe des nicht die **Stream**, oder Ändern der **Stream** Inhalt in keiner Weise. Allerdings auf diese Weise sollte vermieden werden, da dies zu einem bedeutungslos führt **Position**Wert.  
+>  Negative Werte können nicht verwendet werden, um die aktuelle Position in einem **Stream**zu ändern. Nur positive Zahlen können für die **Position**verwendet werden.  
+  
+> [!NOTE]
+>  Bei schreibgeschützten **Streamobjekten** gibt ADO keinen Fehler zurück, wenn die **Position** auf einen Wert festgelegt ist, der größer als die **Größe** des **Streams**ist. Dadurch wird die Größe des **Streams**nicht geändert, oder die Daten **Strom** Inhalte können auf irgendeine Weise geändert werden. Dies sollte jedoch vermieden werden, da dies zu einem bedeutungslosen **Positions**Wert führt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Charset-Eigenschaft (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874472"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
@@ -59,7 +59,8 @@ ms.locfileid: "70874472"
   
 -   Die Kabel sind nicht angeschlossen.  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows verfügt über eine Firewall, die einen bestimmten Port blockiert.  
+-   
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows verfügt über eine Firewall, die einen bestimmten Port blockiert.  
   
 -   Die Anwendung, die einen Port überwacht, erzeugt einen Fehler.  
   
@@ -68,14 +69,15 @@ ms.locfileid: "70874472"
 -   Ein Windows-Server wurde neu gestartet.  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] bietet keinen Schutz vor Problemen im Hinblick auf den Zugriff des Clients auf die Server. Nehmen wir beispielsweise an, eine öffentliche Netzwerkkarte verwaltet Clientverbindungen zum primären Replikat, während eine private Netzwerkschnittstellenkarte den Datenverkehr zwischen den Serverinstanzen verwaltet, die die Replikate einer Verfügbarkeitsgruppe hosten. Wenn in einem solchen Fall die öffentliche Netzwerkkarte ausfällt, können die Clients nicht mehr auf die Datenbanken zugreifen.  
+>  
+  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] bietet keinen Schutz vor Problemen im Hinblick auf den Zugriff des Clients auf die Server. Nehmen wir beispielsweise an, eine öffentliche Netzwerkkarte verwaltet Clientverbindungen zum primären Replikat, während eine private Netzwerkschnittstellenkarte den Datenverkehr zwischen den Serverinstanzen verwaltet, die die Replikate einer Verfügbarkeitsgruppe hosten. Wenn in einem solchen Fall die öffentliche Netzwerkkarte ausfällt, können die Clients nicht mehr auf die Datenbanken zugreifen.  
   
 ## <a name="failures-due-to-soft-errors"></a>Fehler aufgrund von Softwarefehlern  
  Die folgenden Bedingungen stellen u. a. mögliche Ursachen für Sitzungstimeouts dar:  
   
 -   Netzwerkfehler, wie z. B. Timeouts für TCP-Verbindungen, gelöschte oder beschädigte Pakete oder Pakete in falscher Reihenfolge.  
   
--   Ein Betriebssystem, ein Server oder eine Datenbank, die nicht reagiert.  
+-   Ein Betriebssystem, ein Server oder eine Datenbank, die nicht reagieren.  
   
 -   Ein Windows-Servertimeout.  
   
@@ -86,21 +88,21 @@ ms.locfileid: "70874472"
   
  Die primären und sekundären Replikate signalisieren einander mithilfe von Pingbefehlen, dass sie noch aktiv sind, und eine Sitzungstimeoutgrenze verhindert, dass eines der Replikate unbegrenzt auf ein Ping vom anderen Replikat wartet. Die Sitzungstimeoutgrenze ist eine vom Benutzer konfigurierbare Replikateigenschaft mit einem Standardwert von 10 Sekunden. Durch den Empfang eines Pings innerhalb des Timeoutzeitraums wird angezeigt, dass die Verbindung weiterhin offen ist und dass die Serverinstanzen über diese Verbindung kommunizieren. Beim Empfang eines Pings setzt ein Verfügbarkeitsreplikat seinen Timeoutzähler für diese Verbindung zurück.  
   
- Wenn innerhalb des Zeitraums für das Sitzungstimeout kein Ping vom anderen Replikat empfangen wird, tritt für die Verbindung ein Timeout ein. Die Verbindung wird geschlossen, und der Status des Replikats mit dem Timeout ändert sich in DISCONNECTED. Auch wenn ein nicht verbundenes Replikat für den Modus für synchrone Commits konfiguriert ist, warten Transaktionen nicht darauf, dass dieses Replikat erneut verbunden und synchronisiert wird.  
+ Wenn innerhalb des Sitzungs Timeouts kein Ping vom anderen Replikat empfangen wird, kommt es zu einem Timeout der Verbindung. Die Verbindung wird geschlossen, und das Timeout Replikat wechselt in den getrennten Zustand. Auch wenn ein nicht verbundenes Replikat für den Modus für synchrone Commits konfiguriert ist, warten Transaktionen nicht darauf, dass dieses Replikat erneut verbunden und synchronisiert wird.  
   
 ## <a name="responding-to-an-error"></a>Reagieren auf Fehler  
  Ungeachtet des Fehlertyps reagiert eine Serverinstanz, die einen Fehler erkennt, abhängig von ihrer Rolle, dem Verfügbarkeitsmodus der Sitzung und dem Status der anderen Verbindungen in der Sitzung. Informationen dazu, was beim Verlust eines Partners geschieht, finden Sie unter [Verfügbarkeits Modi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- **So ändern Sie den Timeoutwert (nur Verfügbarkeitsmodus mit synchronem Commit)**  
+ **So ändern Sie den Timeout Wert (nur Verfügbarkeits Modus mit synchronem Commit)**  
   
 -   [Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **So zeigen Sie den aktuellen Timeoutwert an**  
+ **So zeigen Sie den aktuellen Timeout Wert an**  
   
 -   Abfrage **session_timeout** in [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

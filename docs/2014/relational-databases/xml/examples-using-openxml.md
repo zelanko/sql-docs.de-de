@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874688"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
@@ -42,7 +42,7 @@ ms.locfileid: "70874688"
  Durch den Wert des *flags* -Parameters wird die Standardzuordnung bereitgestellt. Wenn kein *ColPattern* in der *SchemaDeclaration*angegeben ist, wird die in *flags* angegebene Zuordnung verwendet. Der Wert des *flags* -Parameters wird ignoriert, wenn *ColPattern* in *SchemaDeclaration*angegeben ist. Die Angabe von *ColPattern* bestimmt den Typ der Zuordnung (attributzentriert oder elementzentriert) sowie das Verhalten im Zusammenhang mit Überlaufdaten bzw. nicht verbrauchten Daten.  
   
 ### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Ausführen einer einfachen SELECT-Anweisung mit OPENXML  
- Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`>, <`Order`> und <`OrderDetail`>zusammen. Die OPENXML-Anweisung ruft Kundeninformationen in einem zweispaltigen Rowset (**CustomerID** und **ContactName**) aus dem XML-Dokument ab.  
+ Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`>, <`Order`> und <`OrderDetail`>zusammen. Die OPENXML-Anweisung ruft Kundeninformationen in einem zweispaltigen Rowset ( **CustomerID** und **ContactName**) aus dem XML-Dokument ab.  
   
  Zunächst wird die gespeicherte Prozedur **sp_xml_preparedocument** aufgerufen, um ein Dokumenthandle zu erhalten. Dieses Dokumenthandle wird an OPENXML weitergegeben.  
   
@@ -95,7 +95,8 @@ LILAS      Carlos Gonzlez
   
  Da die <`Customer`>-Elemente keinerlei Unterelemente besitzen, werden die Werte von *CustomerID* und **ContactName** für beide Kunden als NULL zurückgegeben, wenn dieselbe SELECT-Anweisung mit auf den Wert **2** gesetztem **flags**-Parameter ausgeführt wird, um die elementzentrierte Zuordnung anzuzeigen.  
   
- @xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
+ 
+  @xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
   
  Wenn <`CustomerID`> und <`ContactName`> im XML-Dokument Unterelemente sind, ruft die elementzentrierte Zuordnung die Werte ab.  
   
@@ -143,7 +144,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Angeben von ColPattern für die Zuordnung zwischen Rowsetspalten und XML-Attributen und -Elementen  
  In diesem Beispiel wird veranschaulicht, wie das XPath-Muster im optionalen *ColPattern* -Parameter angegeben wird, um für die Zuordnung zwischen Rowsetspalten und XML-Attributen und -Elementen zu sorgen.  
   
- Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`>, <`Order`> und <`OrderDetail`>zusammen. Die OPENXML-Anweisung ruft Kunden- und Bestellinformationen als Rowset (**CustomerID**, **OrderDate**, **ProdID** und **Qty**) aus dem XML-Dokument ab.  
+ Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`>, <`Order`> und <`OrderDetail`>zusammen. Die OPENXML-Anweisung ruft Kunden- und Bestellinformationen als Rowset (**CustomerID**, **OrderDate**, **ProdID**und **Qty**) aus dem XML-Dokument ab.  
   
  Zunächst wird die gespeicherte Prozedur **sp_xml_preparedocument** aufgerufen, um ein Dokumenthandle zu erhalten. Dieses Dokumenthandle wird an OPENXML weitergegeben.  
   
@@ -151,7 +152,7 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/ROOT/Customer/Order/OrderDetail) identifiziert die zu verarbeitenden <`OrderDetail`>-Knoten.  
   
- Zur Veranschaulichung wird der Wert des *flags*-Parameters auf **2** festgelegt, was die attributzentrierte Zuordnung anzeigt. Allerdings wird diese Zuordnung durch die in *ColPattern* angegebene Zuordnung überschrieben. Das bedeutet, dass das in *ColPattern* angegebene XPath-Muster die Spalten im Rowset Attributen zuordnet. Dies führt zur attributzentrierten Zuordnung.  
+ Zur Veranschaulichung wird der Wert des *flags* -Parameters auf **2** festgelegt, was die attributzentrierte Zuordnung anzeigt. Allerdings wird diese Zuordnung durch die in *ColPattern* angegebene Zuordnung überschrieben. Das bedeutet, dass das in *ColPattern* angegebene XPath-Muster die Spalten im Rowset Attributen zuordnet. Dies führt zur attributzentrierten Zuordnung.  
   
  In *SchemaDeclaration*(in der WITH-Klausel) wird *ColPattern* auch mit den Parametern *ColName* und *ColType* angegeben. Der optionale *ColPattern* -Parameter entspricht dem angegebenen XPath-Muster und zeigt Folgendes an:  
   
@@ -281,9 +282,9 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Für **CustomerID** wird die attributzentrierte Zuordnung angewendet. Es gibt kein **ContactName**-Attribut im <`Customer`>-Element. Deshalb wird die elementzentrierte Zuordnung verwendet.  
+ Für **CustomerID**wird die attributzentrierte Zuordnung angewendet. Es gibt kein **ContactName**-Attribut im <`Customer`>-Element. Deshalb wird die elementzentrierte Zuordnung verwendet.  
   
-### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. Angeben der text() XPath-Funktion als ColPattern  
+### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D: Angeben der text() XPath-Funktion als ColPattern  
  Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`> und <`Order`> zusammen. Die OPENXML-Anweisung ruft ein Rowset ab, das sich aus dem **oid**-Attribut aus dem <`Order`>-Element, aus der ID des übergeordneten Elements des durch *rowpattern* identifizierten Knotens und aus der Blattwertzeichenfolge des Elementinhalts zusammensetzt.  
   
  Zunächst wird die gespeicherte Prozedur **sp_xml_preparedocument** aufgerufen, um ein Dokumenthandle zu erhalten. Dieses Dokumenthandle wird an OPENXML weitergegeben.  
@@ -343,7 +344,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Angeben von TableName in der WITH-Klausel  
  In diesem Beispiel ist *TableName* in der WITH-Klausel anstelle von *SchemaDeclaration*angegeben. Dies erweist sich bei einer Tabelle, die die von Ihnen gewünschte Struktur aufweist und bei der keine Spaltenmuster ( *ColPattern* -Parameter) notwendig sind, als hilfreich.  
   
- Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`> und <`Order`> zusammen. Die OPENXML-Anweisung ruft Bestellinformationen in einem dreispaltigen Rowset (**oid**, **date** und **amount**) aus dem XML-Dokument ab.  
+ Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`> und <`Order`> zusammen. Die OPENXML-Anweisung ruft Bestellinformationen in einem dreispaltigen Rowset (**oid**, **date**und **amount**) aus dem XML-Dokument ab.  
   
  Zunächst wird die gespeicherte Prozedur **sp_xml_preparedocument** aufgerufen, um ein Dokumenthandle zu erhalten. Dieses Dokumenthandle wird an OPENXML weitergegeben.  
   
@@ -442,7 +443,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Das Ergebnis wird in Form einer Rahmentabelle zurückgegeben. Informationen erhalten Sie durch Abfragen, die Sie für die Rahmentabelle schreiben. Zum Beispiel:  
+ Das Ergebnis wird in Form einer Rahmentabelle zurückgegeben. Informationen erhalten Sie durch Abfragen, die Sie für die Rahmentabelle schreiben. Beispiel:  
   
 -   Die folgende Abfrage gibt die Anzahl der **Customer** -Knoten im Dokument zurück. Da die WITH-Klausel nicht angegeben ist, gibt OPENXML eine Rahmentabelle zurück. Die SELECT-Anweisung fragt die Rahmentabelle ab.  
   
@@ -462,7 +463,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Angeben von "rowpattern", das mit einem Attribut endet  
- Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`>, <`Order`> und <`OrderDetail`>zusammen. Die OPENXML-Anweisung ruft Bestelldetailinformationen in einem dreispaltigen Rowset (**ProductID**, **Quantity** und **OrderID**) aus dem XML-Dokument ab.  
+ Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen <`Customer`>, <`Order`> und <`OrderDetail`>zusammen. Die OPENXML-Anweisung ruft Bestelldetailinformationen in einem dreispaltigen Rowset (**ProductID**, **Quantity**und **OrderID**) aus dem XML-Dokument ab.  
   
  Zunächst wird **sp_xml_preparedocument** aufgerufen, um ein Dokumenthandle zu erhalten. Dieses Dokumenthandle wird an OPENXML weitergegeben.  
   
@@ -474,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  In *SchemaDeclaration* (in der WITH-Klausel) wird *ColPattern* auch mit den Parametern *ColName* und *ColType* angegeben. Der optionale *ColPattern* -Parameter entspricht dem angegebenen XPath-Muster und zeigt Folgendes an:  
   
--   Das als **ColPattern** für die *ProdID*-Spalte im Rowset angegebene XPath-Muster ( **.** ) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
+-   Das als**ColPattern**für die *ProdID* -Spalte im Rowset angegebene XPath-Muster ( **.** ) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
   
 -   Das für die *Qty*-Spalte im Rowset angegebene **ColPattern\@** (../**Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
   
@@ -523,7 +524,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Angeben eines XML-Dokuments mit mehreren Textknoten  
- Sind mehrere Textknoten in einem XML-Dokument vorhanden, gibt eine SELECT-Anweisung mit *ColPattern*( **text()** ) nur den ersten anstelle aller Textknoten zurück. Zum Beispiel:  
+ Sind mehrere Textknoten in einem XML-Dokument vorhanden, gibt eine SELECT-Anweisung mit *ColPattern*( **text()** ) nur den ersten anstelle aller Textknoten zurück. Beispiel:  
   
 ```  
 DECLARE @h int  
@@ -610,11 +611,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Die Attribute **id** (Studenten-ID), **name** und **attends**. Das **attends** -Attribut ist ein mehrwertiges Attribut.  
+     Die Attribute **id** (Studenten-ID), **name**und **attends** . Das **attends** -Attribut ist ein mehrwertiges Attribut.  
   
 -   \<Class>  
   
-     Die Attribute **id** (Klassen-ID), **name** und **attendedBy**. Das **attendedBy** -Attribut ist ein mehrwertiges Attribut.  
+     Die Attribute **id** (Klassen-ID), **name**und **attendedBy** . Das **attendedBy** -Attribut ist ein mehrwertiges Attribut.  
   
  Das **attends**-Attribut in \<Student> und das **attendedBy**-Attribut in \<Class> stellen eine **m:n**-Beziehung zwischen den Tabellen „Student“ und „Class“ dar. Ein Student kann viele Kurse besuchen, und ein Kurs kann über viele Studenten verfügen.  
   
@@ -800,7 +801,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   

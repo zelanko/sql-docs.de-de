@@ -13,10 +13,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493816"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Entwicklerverweis für SQL Server 2014
@@ -25,41 +25,41 @@ ms.locfileid: "69493816"
   
 ## <a name="programming-reference-sections"></a>Abschnitte des Programmierverzeichnisses  
 
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Programmier Konzepte für &#40;die CLR&#41; -Integration in Common Language Runtime](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Common Language Runtime &#40;CLR&#41; Integration Programmier Konzepte](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Native XML](https://technet.microsoft.com/library/ms191274.aspx)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [nativer XML](https://technet.microsoft.com/library/ms191274.aspx)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [SQL Server Native Client Programmierung](../relational-databases/native-client/sql-server-native-client-programming.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [SQL Server Native Client Programmierung](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Programmier Konzepte von SQLXML 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [SQLXML 4,0 Programmier Konzepte](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Konzepte des WMI-Anbieters für die Konfigurations Verwaltung](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [WMI-Anbieter für Konfigurations Verwaltungs Konzepte](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Konzepte des WMI-Anbieters für Server Ereignisse](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [WMI-Anbieter für Server Ereignis Konzepte](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Ereignisse und Fehler des WMI-Anbieters](../relational-databases/native-client-ole-db-errors/errors.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [WMI-Anbieter Ereignisse und-Fehler](../relational-databases/native-client-ole-db-errors/errors.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [SQL Server Management Objects &#40;SMO&#41; -Programmier Handbuch](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [SQL Server Management Objects &#40;SMO-&#41;-Programmier Handbuch](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Datenbank-Engine Programmierung der erweiterten gespeicherten Prozedur](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Datenbank-Engine Programmieren erweiterter gespeicherter Prozeduren](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Programmierung von Datensammlern](../database-engine/dev-guide/data-collector-programming.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") " [Datensammler Programmierung](../database-engine/dev-guide/data-collector-programming.md) "  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Programmierung von Ausnahme](../database-engine/dev-guide/exception-message-box-programming.md) Meldungs Feldern  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") "Ausnahme Meldungs [Feld Programmierung](../database-engine/dev-guide/exception-message-box-programming.md) "  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Entwickeln mit ADOMD.net](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [entwickeln mit ADOMD.net](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Entwickeln mit Analysis Management Objects &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [zum Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Entwickeln mit Analysis Services Skriptsprache &#40;ASSL&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [entwickeln mit Analysis Services Skriptsprache &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [OLE DB für Data Mining](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [OLE DB für Data Mining](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Entwicklerhandbuch zu Integration Services](../integration-services/integration-services-developer-documentation.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Integration Services Entwicklerhandbuch](../integration-services/integration-services-developer-documentation.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Entwicklerhandbuch für die Replikation](../relational-databases/replication/concepts/replication-developer-documentation.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Replikations Entwicklerhandbuch](../relational-databases/replication/concepts/replication-developer-documentation.md)  
   
- ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Entwicklerhandbuch zu Reporting Services](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
+ ![Kleines Datei Ordnersymbol](../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Reporting Services Entwicklerhandbuch](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>Weitere Programmierressourcen  
 

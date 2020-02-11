@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798005"
 ---
 # <a name="copy-only-backups-sql-server"></a>Kopiesicherungen [SQL Server]
@@ -41,25 +41,25 @@ ms.locfileid: "72798005"
  Kopiesicherungen werden in der **is_copy_only** -Spalte der [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) -Tabelle aufgezeichnet.  
   
 ## <a name="to-create-a-copy-only-backup"></a>So erstellen Sie eine Kopiesicherung  
- Kopiesicherungen können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell erstellt werden.  
+ Kopiesicherungen können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell erstellt werden.  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 1.  Wählen Sie im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** die Option **Kopiesicherung** aus.  
   
 ###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Die grundlegende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Syntax lautet wie folgt:  
+ Die grundlegende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Syntax lautet wie folgt:  
   
 -   Für eine vollständige Kopiesicherung:  
   
-     Sicherungs Datenbank- *database_name* \<backup_device *>* ... mit COPY_ONLY...  
+     Sicherungs Datenbank ** -database_name \<backup_device*>* ... mit COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY ist wirkungslos, wenn gleichzeitig die Option DIFFERENTIAL angegeben wird.  
   
 -   Für eine Protokollkopiesicherung:  
   
-     Sicherungs Protokoll *database_name* *\<* backup_device *>* ... mit COPY_ONLY...  
+     Sicherungs Protokoll *database_name* in *\<* backup_device*>* ... mit COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell  
   
@@ -81,8 +81,8 @@ Verwenden Sie das `Backup-SqlDatabase`-Cmdlet mit dem `-CopyOnly`-Parameter.
   
 -   [SQL Server PowerShell-Anbieter](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Wiederherstellungsmodelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [Wiederherstellungs Modelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../databases/copy-databases-with-backup-and-restore.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

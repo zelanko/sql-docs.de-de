@@ -16,10 +16,10 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3df1b991f160aafdfcfd71818c8bd3e7cbd10ffa
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798389"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
@@ -28,9 +28,9 @@ ms.locfileid: "72798389"
   Aktualisiert den Datensatz, mit dem die letzte verteilte Transaktion des Servers identifiziert wird. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!CAUTION]  
->  Wenn Sie **sp_repldone** manuell ausführen, können Sie die Reihenfolge und Konsistenz der übermittelten Transaktionen für ungültig erklären. **sp_repldone** sollten nur für die Problembehandlung der Replikation verwendet werden, wie von einem erfahrenen Supportmitarbeiter unterstützt.  
+>  Wenn Sie **sp_repldone** manuell ausführen, können Sie die Reihenfolge und Konsistenz abgeschlossener Transaktionen für ungültig erklären. **sp_repldone** sollten nur für die Problembehandlung der Replikation verwendet werden, wie von einem erfahrenen Supportmitarbeiter unterstützt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,20 +43,20 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @xactid = ] xactid` ist die Protokoll Folge Nummer (Log Sequence Number, LSN) des ersten Datensatzes für die letzte verteilte Transaktion des Servers. *xactid* ist **Binär (10)** und hat keinen Standardwert.  
+`[ @xactid = ] xactid`Die Protokoll Folge Nummer (Log Sequence Number, LSN) des ersten Datensatzes für die letzte verteilte Transaktion des Servers. *xactid* ist **Binär (10)** und hat keinen Standardwert.  
   
-`[ @xact_seqno = ] xact_seqno` ist die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers. *xact_seqno* ist **Binary (10)** und hat keinen Standardwert.  
+`[ @xact_seqno = ] xact_seqno`Die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers. *xact_seqno* ist **Binary (10)** und hat keinen Standardwert.  
   
-`[ @numtrans = ] numtrans` ist die Anzahl verteilter Transaktionen. *numtrans* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @numtrans = ] numtrans`Die Anzahl der verteilten Transaktionen. *numtrans* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @time = ] time` ist die Anzahl der Millisekunden, sofern vorhanden, die zum Verteilen des letzten Batches von Transaktionen benötigt wird. *time* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @time = ] time`Die Anzahl der Millisekunden, sofern vorhanden, die zum Verteilen des letzten Batches von Transaktionen benötigt wird. *time* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @reset = ] reset` ist der Zurücksetzungs Status. *Reset* ist vom Datentyp **int**und hat keinen Standardwert. Bei **1**werden alle replizierten Transaktionen im Protokoll als verteilt gekennzeichnet. Wenn der Wert **0**ist, wird das Transaktionsprotokoll auf die erste replizierte Transaktion zurückgesetzt, und es werden keine replizierten Transaktionen als verteilt gekennzeichnet. *Reset* ist nur gültig, wenn sowohl *xactid* als auch *xact_seqno* NULL sind.  
+`[ @reset = ] reset`Der Zurücksetzungs Status. *Reset* ist vom Datentyp **int**und hat keinen Standardwert. Bei **1**werden alle replizierten Transaktionen im Protokoll als verteilt gekennzeichnet. Wenn der Wert **0**ist, wird das Transaktionsprotokoll auf die erste replizierte Transaktion zurückgesetzt, und es werden keine replizierten Transaktionen als verteilt gekennzeichnet. *Reset* ist nur gültig, wenn sowohl *xactid* als auch *xact_seqno* NULL sind.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **sp_repldone** wird bei der Transaktions Replikation verwendet.  
   
  **sp_repldone** wird vom Protokoll Leseprozess verwendet, um zu verfolgen, welche Transaktionen verteilt wurden.  
@@ -78,8 +78,8 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 > [!CAUTION]  
 >  Diese Prozedur kann in Notsituationen verwendet werden, damit das Transaktionsprotokoll abgeschnitten werden kann, wenn Transaktionen mit ausstehender Replikation vorhanden sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md) -   
+ [sp_replflush &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

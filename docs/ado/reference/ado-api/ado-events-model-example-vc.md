@@ -1,5 +1,5 @@
 ---
-title: ADO-Ereignisse modellieren – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für das ADO-Ereignis Modell (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,38 +15,38 @@ ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921017"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO-Ereignismodell – Beispiel (VC++)
-Der Visual C++-Teil [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) bietet eine allgemeine Beschreibung von der ADO-Ereignismodell instanziieren. Im folgenden ist ein spezifisches Beispiel instanziieren Sie das Ereignismodell in der Umgebung erstellt, indem die **#import** Richtlinie.  
+Der Visual C++ Abschnitt der [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) enthält eine allgemeine Beschreibung, wie das ADO-Ereignis Modell instanziiert wird. Im folgenden finden Sie ein spezielles Beispiel für die Instanziierung des Ereignis Modells in der Umgebung, die von der **#Import** -Direktive erstellt wurde.  
   
- Die allgemeine Beschreibung verwendet **adoint.h** als Referenz für Methodensignaturen. Jedoch einige Details in der allgemeinen Beschreibung ändern, leicht durch die Verwendung der **#import** Richtlinie:  
+ Die allgemeine Beschreibung verwendet **adoint. h** als Referenz für Methoden Signaturen. Einige Details in der allgemeinen Beschreibung ändern sich jedoch geringfügig aufgrund der Verwendung der **#Import** -Direktive:  
   
--   Die **#import** Richtlinie löst **Typedef**des, Methode Signatur-Datentypen und Modifizierer auf ihre grundlegenden Formen.  
+-   Die **#Import** -Direktive löst **typedef**-, Methoden Signatur Datentypen und-Modifizierers in ihre grundlegenden Formen auf.  
   
--   Die reinen virtuellen Methoden, die überschrieben werden, müssen alle über das Präfix von "**Raw_** ".  
+-   Die reinen virtuellen Methoden, die überschrieben werden müssen, haben alle den Präfix "**Raw_**".  
   
- Teil des Codes Codierungsstil einfach widerspiegelt.  
+ Ein Teil des Codes spiegelt einfach den Codierungsstil wider.  
   
--   Der Zeiger auf **IUnknown** ein, die die **Advise** Methode explizit abgerufen wird, mit einem Aufruf von **QueryInterface**.  
+-   Der Zeiger auf **IUnknown** , der von der Methode " **Empfehlung** " verwendet wird, wird explizit mit einem **callyinterface**-Befehl abgerufen.  
   
--   Sie müssen nicht explizit einen Destruktor in den Klassendefinitionen code.  
+-   Sie müssen einen Dekonstruktor nicht explizit in den Klassendefinitionen codieren.  
   
--   Sie möchten code stabilere Implementierungen von QueryInterface, AddRef und Release.  
+-   Möglicherweise möchten Sie robustere Implementierungen von QueryInterface, adressf und Release codieren.  
   
--   Die **__uuidof()** Richtlinie wird häufig verwendet, um die Schnittstellen-IDs zu erhalten.  
+-   Die **__uuidof ()** -Direktive wird ausgiebig zum Abrufen von Schnittstellen-IDs verwendet.  
   
- Schließlich enthält das Beispiel Arbeitscode.  
+ Schließlich enthält das Beispiel einen funktionierenden Code.  
   
--   Im Beispiel wird als eine Konsolenanwendung, geschrieben.  
+-   Das Beispiel wird als Konsolenanwendung geschrieben.  
   
--   Sie sollten Ihren eigenen Code unter dem Kommentar einfügen "`// Do some work`".  
+-   Fügen Sie Ihren eigenen Code unter dem Kommentar "`// Do some work`" ein.  
   
--   Alle der Ereignis-Handler standardmäßig keine Aktion ausführt, und Abbrechen von weiteren Benachrichtigungen. Sie fügen Sie den entsprechenden Code für Ihre Anwendung, und Benachrichtigungen bei Bedarf zulassen.  
+-   Alle Ereignishandler haben standardmäßig keine Aktion ausgeführt, und es werden weitere Benachrichtigungen abgebrochen. Fügen Sie den entsprechenden Code für Ihre Anwendung ein, und lassen Sie die Benachrichtigungen bei Bedarf zu.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

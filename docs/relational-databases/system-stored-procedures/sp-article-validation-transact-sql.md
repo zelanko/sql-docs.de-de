@@ -16,18 +16,18 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769025"
 ---
-# <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
+# <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Initiiert eine Datenüberprüfungsanforderung für den angegebenen Artikel. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank und auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,19 +50,19 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] type_of_check_requested`Gibt an, ob nur die Zeilen Anzahl für die Tabelle zurückgegeben wird. *type_of_check_requested* ist vom Datentyp **smallint**. der Standardwert ist **1**.  
   
- Wenn der Wert **0**ist, führen Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Zeilen Anzahl und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 kompatible Prüfsumme aus.  
+ Wenn der Wert **0**ist, führen Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeilen Anzahl und eine 7,0 kompatible Prüfsumme aus.  
   
  Wenn **1**, wird nur eine Überprüfung der Zeilen Anzahl durchgeführt.  
   
  Wenn **2**, führen Sie eine Zeilen Anzahl und eine binäre Prüfsumme aus.  
   
-`[ @full_or_fast = ] full_or_fast`Die Methode, die zum Berechnen der Zeilen Anzahl verwendet wird. *full_or_fast* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich.  
+`[ @full_or_fast = ] full_or_fast`Die Methode, die zum Berechnen der Zeilen Anzahl verwendet wird. *full_or_fast* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
 |**Wert**|**Beschreibung**|  
 |---------------|---------------------|  
 |**0**|Führt die vollständige Anzahl mithilfe von count (*) aus.|  
 |**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in **sysindexes** ist schneller als das zählen der Zeilen in der eigentlichen Tabelle. **Sysindexes** wird jedoch verzögert aktualisiert, und die Zeilen Anzahl ist möglicherweise nicht korrekt.|  
-|**2** (Standardwert)|Führt die bedingte schnelle Zählung durch, indem zuerst die schnelle Methode versucht wird. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* den Wert NULL hat und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
+|**2** (Standard)|Führt die bedingte schnelle Zählung durch, indem zuerst die schnelle Methode versucht wird. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* NULL ist und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
   
 `[ @shutdown_agent = ] shutdown_agent`Gibt an, ob der Verteilungs-Agent unmittelbar nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn der Wert **0**ist, wird der Verteilungs-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird der Verteilungs-Agent nach der Validierung des Artikels heruntergefahren.  
   
@@ -70,7 +70,7 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht verwendet werden, wenn die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prüfung auf einem Verleger angefordert wird.  
@@ -78,7 +78,7 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_article_validation** wird bei der Transaktions Replikation verwendet.  
   
  **sp_article_validation** bewirkt, dass Validierungs Informationen für den angegebenen Artikel erfasst und eine Überprüfungs Anforderung an das Transaktionsprotokoll gesendet werden. Wenn der Verteilungs-Agent diese Anforderung empfängt, vergleicht er die Überprüfungsinformationen in der Anforderung mit der Abonnententabelle. Die Ergebnisse der Überprüfung werden im Replikationsmonitor und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen angezeigt.  
@@ -86,11 +86,11 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Benutzer mit der Option Alle Berechtigungen für die Quell Tabelle für den zu validierenden Artikel können **sp_article_validation**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replizierte Daten überprüfen](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

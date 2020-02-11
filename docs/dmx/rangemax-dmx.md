@@ -1,5 +1,5 @@
 ---
-title: RangeMax (DMX) | Microsoft-Dokumentation
+title: Rangemax (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61552cd8e38f77d12d7f4da10e2bbe9281e6073d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041680"
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
@@ -33,10 +33,10 @@ RangeMax(<scalar column reference>)
 ## <a name="return-type"></a>Rückgabetyp  
  Ein Skalarwert.  
   
-## <a name="remarks"></a>Hinweise  
- Die **RangeMax** Funktion kann verwendet werden, [SELECT DISTINCT FROM &#60;Modell &#62; &#40;DMX&#41; ](../dmx/select-distinct-from-model-dmx.md) Abfragen. Wird der Verweis auf skalare Spalten mit diesem Abfragetyp verwendet, kann er kontinuierliche oder diskrete Spalten enthalten, die entweder vorhersagbar oder Eingabe sind.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **RangeMax** -Funktion kann in SELECT-unter [schieden von &#60;Modell &#62; &#40;DMX-&#41;](../dmx/select-distinct-from-model-dmx.md) Abfragen verwendet werden. Wird der Verweis auf skalare Spalten mit diesem Abfragetyp verwendet, kann er kontinuierliche oder diskrete Spalten enthalten, die entweder vorhersagbar oder Eingabe sind.  
   
- Bei Verwendung mit [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, und **RangeMax**  Funktionen geben die tatsächlichen Begrenzungswerte des angegebenen Buckets zurück. Wenn Sie z. B. eine Vorhersage für eine diskretisierte Spalte ausführen, gibt die Abfrage die vorhergesagte Bucketnummer in der diskretisierten Spalte zurück. Die **RangeMin**, **RangeMid**, und **RangeMax** Funktionen beschreiben den Bucket, der die Vorhersage angibt. Wenn die **RangeMax** Funktion, die mit einer PREDICTION JOIN-Anweisung verwendet wird, den Verweis auf skalare Spalte kann nur diskrete vorhersagbare Spalten enthalten.  
+ Bei Verwendung mit [Select from &#60;Model&#62; Vorhersage Join &#40;DMX-&#41;](../dmx/select-from-model-prediction-join-dmx.md)werden die tatsächlichen Begrenzungs Werte des angegebenen Bucket von der **RangeMin**-, **RangeMid**-und **RangeMax** -Funktion zurückgegeben. Wenn Sie z. B. eine Vorhersage für eine diskretisierte Spalte ausführen, gibt die Abfrage die vorhergesagte Bucketnummer in der diskretisierten Spalte zurück. Die **RangeMin**-, **RangeMid**-und **RangeMax** -Funktionen beschreiben den Bucket, der in der Vorhersage angegeben wird. Wenn die **RangeMax** -Funktion mit einer Vorhersage JOIN-Anweisung verwendet wird, kann der Verweis auf eine skalare Spalte nur diskrete, vorhersagbare Spalten enthalten.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die Mindest-, Höchst- und Durchschnittswerte für die kontinuierliche Spalte Yearly Income im Decision Tree-Miningmodell zurückgegeben.  
@@ -49,11 +49,11 @@ SELECT DISTINCT
 FROM [TM Decision Tree]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)   
- [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [RangeMid &#40;DMX-&#41;](../dmx/rangemid-dmx.md)   
+ [RangeMin &#40;DMX-&#41;](../dmx/rangemin-dmx.md)  
   
   

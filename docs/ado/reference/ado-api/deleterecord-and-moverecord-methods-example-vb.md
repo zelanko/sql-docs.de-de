@@ -1,5 +1,5 @@
 ---
-title: DeleteRecord und MoveRecord – Beispiel (VB) | Microsoft-Dokumentation
+title: DeleteRecord-und muverecord-Methoden (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919100"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord und MoveRecord – Beispiel (VB)
-In diesem Beispiel wird veranschaulicht, wie zu kopieren, verschieben, bearbeiten und löschen Sie den Inhalt einer Textdatei, die in einen Webordner veröffentlicht wird. Andere Eigenschaften und Methoden enthalten [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md), und [leeren](../../../ado/reference/ado-api/flush-method-ado.md).  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Beispiel für DeleteRecord und muverecord-Methoden (VB)
+In diesem Beispiel wird veranschaulicht, wie der Inhalt einer Textdatei, die in einem Webordner veröffentlicht wurde, kopiert, verschoben, bearbeitet und gelöscht wird. Zu den anderen verwendeten Eigenschaften und Methoden zählen " [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)", " [Parser](../../../ado/reference/ado-api/parenturl-property-ado.md)", " [Source](../../../ado/reference/ado-api/source-property-ado-record.md)" und " [Flush](../../../ado/reference/ado-api/flush-method-ado.md)".  
   
 ```  
 'BeginDeleteRecordVB  
@@ -148,10 +148,10 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DeleteRecord-Methode (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush-Methode (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren-Methode (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
- [MoveRecord-Methode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
- [ParentURL-Eigenschaft (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
- [Source-Eigenschaft (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)
+ ["Muecord"-Methode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
+ [Para-URL-Eigenschaft (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
+ [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)

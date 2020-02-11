@@ -1,5 +1,5 @@
 ---
-title: Optionen für die verbindungsherstellung | Microsoft-Dokumentation
+title: Verbindungsoptionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4358756deaa595ee5e10df0490522631201b9c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023373"
 ---
 # <a name="connect-options"></a>Verbindungsoption
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Diese Optionen ermöglichen die Anpassung der Verbindung mit der Datenbank in einer Anwendung.  
+ Diese Optionen ermöglichen eine Anpassung der Datenbankverbindung in einer Anwendung.  
   
-|Verbindungsoption|Hinweise|  
+|Connect-Option|Notizen|  
 |--------------------|-----------|  
-|SQL_AUTOCOMMIT|Wenn Sie auf SQL_AUTOCOMMIT_OFF auswählen, Ihre Anwendung muss explizit einen commit oder Rollback Transaktionen mit [SQLTransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md).|  
-|SQL_ODBC_CURSORS|Dieses Verbindungsattribut wird im Treiber-Manager implementiert werden.|  
-|SQL_OPT_TRACE|Dieses Verbindungsattribut wird im Treiber-Manager implementiert werden.|  
-|SQL_OPT_TRACEFILE|Dieses Verbindungsattribut wird im Treiber-Manager implementiert werden.|  
-|SQL_TRANSLATE_DLL|Gibt Fehler zurück: "Treiber nicht unterstützt."|  
-|SQL_TRANSLATE_OPTION|Ein 32-Bit-Wert, die an die Übersetzung-DLL-Datei übergeben werden.|  
-|SQL_TXN_ISOLATION|Der Treiber kann nur SQL_TXN_READ_COMMITTED.<br /><br /> Die folgenden vParams werden nicht unterstützt:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
-|SQL_ATTR_ENLIST_IN_DTC|Dieses Verbindungsattribut ODBC 3.0 ermöglicht Ihnen die Verwendung der ODBC-Treiber für Oracle in verteilten Transaktionen, die von Microsoft Component Services (oder MTS, bei Verwendung von Windows NT) koordiniert. Es bietet den Schnittstellenzeiger auf *pITransaction* für die Transaktion als die *vParam* Argument.|  
-|SQL_ATTR_CONNECTION_DEAD|Dieses Verbindungsattribut schreibgeschützte ODBC 3.5 können Sie bestimmen, ob die Verbindung mit dem Oracle-Server fehlgeschlagen ist. Erhalten Sie nur; kann nicht festgelegt.|
+|SQL_AUTOCOMMIT|Wenn Sie SQL_AUTOCOMMIT_OFF auswählen, muss Ihre Anwendung mit [SQLTransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)explizit ein Commit oder ein Rollback für Transaktionen ausführen.|  
+|SQL_ODBC_CURSORS|Dieses Verbindungs Attribut wird im Treiber-Manager implementiert.|  
+|SQL_OPT_TRACE|Dieses Verbindungs Attribut wird im Treiber-Manager implementiert.|  
+|SQL_OPT_TRACEFILE|Dieses Verbindungs Attribut wird im Treiber-Manager implementiert.|  
+|SQL_TRANSLATE_DLL|Gibt den folgenden Fehler zurück: "Treiber ist nicht fähig."|  
+|SQL_TRANSLATE_OPTION|Ein 32-Bit-Wert, der an die Translation. dll übermittelt wird.|  
+|SQL_TXN_ISOLATION|Der Treiber lässt nur SQL_TXN_READ_COMMITTED zu.<br /><br /> Die folgenden vparameams werden nicht unterstützt:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_ATTR_ENLIST_IN_DTC|Mit diesem ODBC 3,0-Verbindungs Attribut können Sie den ODBC-Treiber für Oracle in verteilten Transaktionen verwenden, die von Microsoft-Komponenten Diensten (oder MTS, wenn Sie Windows NT verwenden) koordiniert werden. Der Schnittstellen Zeiger *pitransaction* wird der Transaktion als *vParam* -Argument bereitstellt.|  
+|SQL_ATTR_CONNECTION_DEAD|Mit diesem schreibgeschützten ODBC 3,5-Verbindungs Attribut können Sie feststellen, ob die Verbindung mit dem Oracle-Server fehlgeschlagen ist. Nur Get; Festlegen von nicht möglich.|

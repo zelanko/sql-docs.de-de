@@ -1,5 +1,5 @@
 ---
-title: Speichern und öffnen Sie die Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für das Speichern und Öffnen von Methoden (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931196"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save- und Open-Methode – Beispiel (VB)
-Diese drei Beispielen wird gezeigt, wie die [speichern](../../../ado/reference/ado-api/save-method.md) und [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methoden gemeinsam verwendet werden können.  
+Diese drei Beispiele veranschaulichen, wie die [Save](../../../ado/reference/ado-api/save-method.md) -Methode und die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode gleichzeitig verwendet werden können.  
   
- Angenommen Sie, Sie sind im Begriff auf einer Geschäftsreise und auf eine Tabelle aus einer Datenbank ausführen möchten. Bevor Sie fortfahren, Sie greifen auf die Daten als eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und speichern Sie ihn in einem Formular austauschen. Wenn Sie sich an Ihr Ziel eingehen, Zugriff auf die **Recordset** als lokales, getrennt **Recordset**. Nehmen Sie Änderungen an der **Recordset**, und speichern Sie es erneut. Schließlich, wenn Sie auf Startseite zurückkehren, Sie erneut eine Verbindung mit der Datenbank her und aktualisieren Sie es mit den Änderungen, die Sie unterwegs vorgenommen.  
+ Nehmen wir an, dass Sie einen geschäftlichen Trip ausführen und eine Tabelle aus einer Datenbank aufnehmen möchten. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset**auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset**vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
   
- Zuerst Zugriff auf und speichern Sie die ***Autoren*** Tabelle.  
+ Greifen Sie zuerst auf die ***Autoren*** Tabelle zu, und speichern Sie Sie.  
   
 ```  
 'BeginSaveVB  
@@ -84,20 +84,20 @@ End Sub
 'EndSaveVB  
 ```  
   
- An diesem Punkt haben Sie am Ziel angekommen. Greifen Sie auf die ***Autoren*** Tabelle als eine lokale, getrennt **Recordset**. Sie benötigen die **MSPersist** Anbieter auf dem Computer, die Sie verwenden die gespeicherte Datei, den Zugriff auf a:\Pubs.xml.  
+ An diesem Punkt haben Sie Ihr Ziel erreicht. Sie greifen auf die ***Autoren*** Tabelle als lokales, nicht verbundenes **Recordset**zu. Sie müssen über den **MSPersist** -Anbieter auf dem Computer verfügen, den Sie für den Zugriff auf die gespeicherte Datei verwenden, a:\pubs.Xml.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
- Anschließend wird der Rückgabewert Startseite. Aktualisieren Sie die Datenbank jetzt mit Ihren Änderungen.  
+ Und schließlich kehren Sie zu Home zurück. Aktualisieren Sie nun die Datenbank mit Ihren Änderungen.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Weitere Informationen zur Recordset-Beibehaltung](../../../ado/guide/data/more-about-recordset-persistence.md)   
+ [Weitere Informationen zur Speicherung von Recordsets](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)

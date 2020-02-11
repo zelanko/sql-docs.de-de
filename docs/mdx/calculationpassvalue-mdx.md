@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016871"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
@@ -31,7 +31,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
  *String_Expression*  
@@ -41,27 +41,27 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Ein gültiger numerischer Ausdruck, der die Berechnungsdurchlaufnummer angibt.  
   
  ABSOLUTE  
- Ein zugriffsflagwert, der angibt, die *Pass_Value* Parameter enthält den nullbasierten Index des Berechnungsdurchlaufs. ABSOLUTE ist der Standard-Zugriffsflagwert, der verwendet wird, wenn kein Zugriffsflagwert angegeben ist.  
+ Ein-Zugriffsflagwert, der angibt, dass der *Pass_Value* -Parameter den NULL basierten Index des Berechnungs Durchlaufs enthält. ABSOLUTE ist der Standard-Zugriffsflagwert, der verwendet wird, wenn kein Zugriffsflagwert angegeben ist.  
   
  RELATIVE  
- Ein zugriffsflagwert, der angibt, die *Pass_Value* Parameter enthält einen relativen Offset vom Berechnungsdurchlauf der auslösenden Berechnung. Wenn der Offset in einen Berechnungsdurchlaufindex kleiner als null (0) aufgelöst wird, wird Berechnungsdurchlauf 0 verwendet, und es tritt kein Fehler auf.  
+ Ein-Zugriffsflagwert, der angibt, dass der *Pass_Value* -Parameter einen relativen Offset vom Berechnungs Durchlauf der auslösenden Berechnung enthält. Wenn der Offset in einen Berechnungsdurchlaufindex kleiner als null (0) aufgelöst wird, wird Berechnungsdurchlauf 0 verwendet, und es tritt kein Fehler auf.  
   
  ALL  
  Wenn dieses Flag festgelegt wird, sind alle Werte NULL, die nicht von der Speicher-Engine geladen werden. Wenn das Flag nicht festgelegt wird, werden die Werte ohne jegliche Berechnungen aggregiert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Bei einem numerischer Ausdruck gibt die Funktion einen numerischen Wert zurück, indem sie den angegebenen numerischen MDX-Ausdruck im angegebenen Berechnungsdurchlauf auswertet, optional geändert durch ein Zugriffsflag und einen Zugriffsflagmodifizierer.  
   
- Wenn ein Zeichenfolgenausdruck angegeben wird, die Funktion gibt einen Zeichenfolgenwert zurück, durch die Auswertung des angegebene MDX-Zeichenfolgenausdruck im angegebenen Berechnungsdurchlauf auswertet, und optional geändert durch ein Zugriffsflag und einen zugriffsflagmodifizierer *.*  
+ Wenn ein Zeichen folgen Ausdruck bereitgestellt wird, gibt die Funktion einen Zeichen folgen Wert zurück, indem der angegebene MDX-Zeichen folgen Ausdruck im angegebenen Berechnungs Durchlauf ausgewertet und optional durch ein Zugriffsflag und einen Zugriffsflagmodifizierer geändert wird *.*  
   
- Durch die automatische rekursionsauflösung in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], diese Funktion hat kaum noch praktischen nutzen.  
+ Bei der automatischen Rekursions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Auflösung in hat diese Funktion wenig praktische Verwendung.  
   
 > [!NOTE]  
->  Nur Administratoren können die **CalculationPassValue** Funktion innerhalb eines MDX-Skripts. Wenn ein MDX-Skript mit dieser Funktion im Kontext einer Rolle ausgeführt wird, die nicht über Administratorprivilegien verfügt, tritt ein Fehler auf.  
+>  Nur Administratoren können die **CalculationPassValue** -Funktion innerhalb eines MDX-Skripts verwenden. Wenn ein MDX-Skript mit dieser Funktion im Kontext einer Rolle ausgeführt wird, die nicht über Administratorprivilegien verfügt, tritt ein Fehler auf.  
   
-## <a name="see-also"></a>Siehe auch  
- [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [CalculationCurrentPass-&#40;MDX-&#41;](../mdx/calculationcurrentpass-mdx.md)   
+ [IIf-&#40;MDX-&#41;](../mdx/iif-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

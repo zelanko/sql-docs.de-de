@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Geschäftsobjekten in Komponentendiensten | Microsoft-Dokumentation
+title: Ausführen von Geschäftsobjekten in Komponenten Diensten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,26 +13,26 @@ ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87eab0ac5611b437f6e0cbe1957a4d6e8652c4b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922277"
 ---
 # <a name="running-business-objects-in-component-services"></a>Ausführen von Geschäftsobjekten in Komponentendiensten
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Geschäftsobjekten können es sich um ausführbare Dateien (.exe) oder Dynamic Link Libraries (DLL) sein. Die Konfiguration, die Sie verwenden, um das Geschäftsobjekt, das ausgeführt wird, hängt davon ab, gibt an, ob das Objekt eine .dll oder .exe-Datei ist:  
+ Geschäftsobjekte können ausführbare Dateien (. exe) oder Dynamic Link Libraries (dll) sein. Die Konfiguration, die Sie zum Ausführen des Geschäftsobjekts verwenden, hängt davon ab, ob es sich bei dem Objekt um eine DLL-oder exe-Datei handelt:  
   
--   Business-Objekten, die als .exe-Dateien erstellt, können über DCOM aufgerufen werden. Wenn diese Geschäftsobjekte durch Internet Information Services (IIS) verwendet werden, unterliegen sie zusätzliche Marshalling von Daten, die Leistung des Clients verlangsamt werden.  
+-   Geschäftsobjekte, die als exe-Dateien erstellt werden, können über DCOM aufgerufen werden. Wenn diese Geschäftsobjekte über Internetinformationsdienste (IIS) verwendet werden, unterliegen Sie einem zusätzlichen Marshalling von Daten, wodurch die Client Leistung verlangsamt wird.  
   
--   Business-Objekten, die erstellt werden, da DLL-Dateien, die über IIS verwendet werden können und somit auch von HTTP. Sie können auch über DCOM nur über Komponentendienste oder über Microsoft Transaction Server, verwendet werden, wenn Sie Windows NT verwenden. Das Geschäftsobjekt DLLs müssen auf dem IIS-Servercomputer für den Zugriff darauf über IIS registriert werden. Informationen zum Konfigurieren einer DLL zur Ausführung unter DCOM finden Sie im Abschnitt [Aktivieren einer DLL zur Ausführung unter DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
+-   Geschäftsobjekte, die als DLL-Dateien erstellt werden, können über IIS und somit auch über HTTP verwendet werden. Sie können auch über DCOM nur über Komponenten Dienste oder über den Microsoft-Transaktions Server verwendet werden, wenn Sie Windows NT verwenden. Geschäftsobjektdlls müssen auf dem IIS-Server Computer registriert werden, damit Sie über IIS darauf zugreifen können. Informationen dazu, wie Sie eine DLL für die DCOM-Konfiguration konfigurieren, finden Sie im Abschnitt Aktivieren der DLL-Datei für [DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
   
 > [!NOTE]
->  Bei Geschäftsobjekten auf der mittleren Ebene mithilfe von Component Services-Komponenten implementiert sind **GetObjectContext**, **SetComplete**, und **SetAbort**, das Unternehmen Objekte können Component Services (oder MTS, bei Verwendung von Windows NT) Kontextobjekte verwalten Sie ihren Status bei mehreren clientaufrufen. Dieses Szenario ist möglich, mit DCOM, die in der Regel zwischen vertrauenswürdigen Clients und Servern in einem Intranet implementiert wird. In diesem Fall die [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt und [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) Methode auf der Clientseite werden durch das Kontextobjekt für die Transaktion ersetzt und **CreateInstance** -Methode, die von der bereitgestellten**ITransactionContext** Schnittstelle, und von Component Services implementiert.  
+>  Wenn Geschäftsobjekte auf der mittleren Ebene mithilfe von **GetObjectContext**, **SetComplete**und **SetAbort**als Komponenten Dienst Komponenten implementiert werden, können die Geschäftsobjekte Komponenten Dienste (oder MTS, wenn Sie Windows NT verwenden) verwenden, um ihren Zustand über mehrere Client Aufrufe hinweg beizubehalten. Dieses Szenario ist mit DCOM möglich, das normalerweise zwischen vertrauenswürdigen Clients und Servern in einem Intranet implementiert wird. In diesem Fall ist das [RDS. Das DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) -Objekt und die Methode " [kreateobject](../../../ado/reference/rds-api/createobject-method-rds.md) " auf der Clientseite werden durch das Transaktionskontext Objekt und die Methode " **kreateinstance** " ersetzt, die von der **itransaktioncontext** -Schnittstelle bereitgestellt und von Komponenten Diensten implementiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

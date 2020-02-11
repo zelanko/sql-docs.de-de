@@ -1,5 +1,5 @@
 ---
-title: Ersten Einstieg in Visual C# .net | Microsoft-Dokumentation
+title: Einstieg in Visual c# .net | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 088b0991d3549cfa7d12a0d0365d40d3ededbfba
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911167"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO-Programmierung – Erste Schritte in Visual C# .NET
@@ -28,7 +28,7 @@ ms.locfileid: "70911167"
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]befinden sich die SMO-Assemblys im Ordner "c:\Programme\Microsoft SQL server\130\sdk\assemblies\".  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Visual C&#35; -SMO-Projekts in Visual Studio .net](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
   
   

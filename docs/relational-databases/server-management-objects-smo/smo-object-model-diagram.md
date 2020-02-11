@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 004746516545278470515753361b31a1ac38ef47
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911275"
 ---
 # <a name="smo-object-model-diagram"></a>Diagramm des SMO-Objektmodells
@@ -25,7 +25,7 @@ ms.locfileid: "70911275"
 
   Dieses Diagramm zeigt die SMO-Objekthierarchie und die Beziehungen zwischen den Objekttypen an. Das <xref:Microsoft.SqlServer.Management.Smo.Server>-Objekt ist das Objekt der höchsten Ebene.  
   
- ![Diagramm, das die hierarchischen Beziehungen anzeigt](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "Diagramm, das die hierarchischen Beziehungen anzeigt")  
+ ![Diagramm der hierarchischen Beziehungen](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "Diagramm der hierarchischen Beziehungen")  
   
  ![Objektmodell, Strukturansicht mit der Hierarchie](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "Objektmodell, Strukturansicht mit der Hierarchie")  
   

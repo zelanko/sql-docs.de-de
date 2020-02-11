@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632737"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades
@@ -56,17 +56,18 @@ ms.locfileid: "73632737"
 >  Berichte können ein "other upgrade issues"-Element enthalten. Dieses Element ist mit einer Liste von Problemen verknüpft, die vom Upgrade Advisor nicht erkannt werden, jedoch möglicherweise auf dem Server oder in den Anwendungen vorhanden sind. Sie müssen die Liste nicht erkennbarer Probleme überprüfen und bestimmen, ob Sie aufgrund der nicht erkennbaren Probleme Änderungen am Server oder an den Anwendungen vornehmen müssen.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Installieren und Ausführen des Upgrade Advisors  
- Der Speicherort für das Installieren des Upgrade Advisors für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist abhängig davon, was analysiert werden soll. Upgrade Advisor unterstützt die Remoteanalyse aller unterstützten Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, können Sie den Upgrade Advisor auf einem beliebigen Computer installieren, der eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen kann und die Voraussetzungen des Upgrade Advisors erfüllt. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
+ Der Speicherort für das Installieren des Upgrade Advisors für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist abhängig davon, was analysiert werden soll. Upgrade Advisor unterstützt die Remoteanalyse aller unterstützten Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, können Sie den Upgrade Advisor auf einem beliebigen Computer installieren, der eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen kann und die Voraussetzungen des Upgrade Advisors erfüllt. Weitere Informationen finden Sie [unter Unterstützte Versions-und Editions Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
   
  Der Upgrade Advisor ist in einem Feature Pack verfügbar.  
   
  Die Voraussetzungen für die Installation und Ausführung von Upgrade Advisor lauten wie folgt:  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 und [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
+-   
+  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 und [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
 -   Windows Installer ab Version 4.5. Sie können Windows Installer von der [Windows Installer Website](https://www.microsoft.com/download/details.aspx?id=8483)installieren.  
   
--   Microsoft .NET Framework 4. .NET Framework 4 ist auf den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Produktmedien und auf der [Downloadseite für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895)verfügbar.  
+-   Microsoft .NET Framework 4. .NET Framework 4 ist auf dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Produkt Medium und auf der [Downloadseite für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895)verfügbar.  
   
     -   Um .NET Framework 4 von den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Medien zu installieren, suchen Sie das Stammverzeichnis des Datenträgerlaufwerks. Doppelklicken Sie dann auf den Ordner \redist und auf den Ordner DotNetFrameworks, und führen Sie dotNetFx40_Full_x86_x64.exe aus (für 32-Bit- oder für 64-Bit-Betriebssysteme).  
   
@@ -74,12 +75,12 @@ ms.locfileid: "73632737"
   
  Nachdem Sie den Upgrade Advisor installiert haben, können Sie ihn über das **Startmenü** öffnen:  
   
--   Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie dann auf **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dann auf Upgrade Advisor**.  
   
  Weitere Informationen finden Sie in der Dokumentation im Upgrade Advisor-Download sowie in den Versionshinweisen zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten Sie mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Abwärtskompatibilität](../../../2014/getting-started/backward-compatibility.md)  
   

@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199325"
 ---
 # <a name="query-options-execution-advanced-page"></a>Abfrageausführung (Seite Erweitert)
@@ -29,7 +29,7 @@ ms.locfileid: "71199325"
 
 **Festlegen von "parameseonly** " Überprüft die Syntax der einzelnen Abfragen, führt die Abfragen jedoch nicht aus. Diese Option ist standardmäßig deaktiviert.  
 
-**CONCAT_NULL_YIELDS_NULL festlegen** Wenn dieses Kontrollkästchen aktiviert ist, `NULL` `NULL` geben Abfragen, von denen ein vorhandener Wert mit einer verkettet wird, immer als Ergebnis zurück. Wenn dieses Kontrollkästchen deaktiviert ist, gibt ein vorhandener, mit einer `NULL` verketteter Wert, den vorhandenen Wert zurück. Diese Option ist standardmäßig aktiviert.
+**CONCAT_NULL_YIELDS_NULL festlegen** Wenn dieses Kontrollkästchen aktiviert ist, geben Abfragen, von denen ein vorhandener Wert mit `NULL`einer verkettet wird `NULL` , immer als Ergebnis zurück. Wenn dieses Kontrollkästchen deaktiviert ist, gibt ein vorhandener, mit einer `NULL` verketteter Wert, den vorhandenen Wert zurück. Diese Option ist standardmäßig aktiviert.
 
 **ARITHABORT festlegen** Wenn dieses Kontrollkästchen aktiviert ist, wird die `INSERT`Abfrage `DELETE` oder `UPDATE` der Batch beendet, wenn eine-,-oder-Anweisung einen arithmetischen Fehler (Überlauf, Division durch Null oder Domänen Fehler) während der Auswertung des Ausdrucks trifft. Wenn dieses Kontrollkästchen deaktiviert ist, wird für diesen Wert nach Möglichkeit eine `NULL` bereitgestellt, die Abfrage fortgesetzt und in das Ergebnis eine Meldung eingeschlossen. Eine ausführlichere Beschreibung dieses Verhaltens finden Sie in der Onlinedokumentation. Diese Option ist standardmäßig aktiviert.
   
@@ -66,4 +66,4 @@ Die derzeit unterstützten Nachweis Protokolle lauten:
 
 Weitere Informationen finden Sie unter [Always Encrypted mit sicheren Enklaven](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) und [sicherem Enclave](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)-Nachweis.
 
-**Standard wiederherstellen** Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.
+**Auf Standard zurücksetzen** Setzt alle Werte auf dieser Seite auf die ursprünglichen Standardwerte zurück.

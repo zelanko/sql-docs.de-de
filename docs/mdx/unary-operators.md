@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893555"
 ---
 # <a name="unary-operators"></a>Unäre Operatoren
@@ -22,9 +22,9 @@ ms.locfileid: "68893555"
   
  MDX unterstützt die unären Operatoren, die in der folgenden Tabelle aufgelistet sind.  
   
-|Operator|Beschreibung|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[- (Negative) (- (Negativ))](../mdx/negative-mdx.md)|Gibt den negativen Wert eines numerischen Ausdrucks zurück.|  
+|[- (Negativ)](../mdx/negative-mdx.md)|Gibt den negativen Wert eines numerischen Ausdrucks zurück.|  
 |[+ (Positive) (+ (Positiv))](../mdx/positive-mdx.md)|Gibt den positiven Wert eines numerischen Ausdrucks zurück.|  
   
  Im folgenden Beispiel wird gezeigt, wie ein unärer Operator verwendet wird, um den negativen Wert eines Measures zurückzugeben.  
@@ -42,7 +42,7 @@ WHERE [Product].[Category].[Bikes]
   
  Außerdem verwendet MDX spezielle unäre Operatoren, um den Aggregations Vorgang zu bestimmen, der von der [RollupChildren](../mdx/rollupchildren-mdx.md) -Funktion ausgeführt wird. Weitere Informationen zu diesen besonderen unären Operatoren finden [Sie unter Hinzufügen einer benutzerdefinierten Aggregation zu einer Dimension](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatoren &#40;MDX-Syntax&#41;](../mdx/operators-mdx-syntax.md)  
   
   

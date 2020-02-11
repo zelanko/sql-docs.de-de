@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493865"
 ---
 # <a name="defining-a-fact-relationship"></a>Definieren einer Faktenbeziehung
@@ -37,7 +37,7 @@ ms.locfileid: "69493865"
   
 ## <a name="defining-the-internet-sales-orders-fact-dimension"></a>Definieren der Internet Sales Orders-Faktendimension  
   
-1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Dimensionen**und anschließend auf **Neue Dimension**.  
+1.  Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf **Dimensionen**, und klicken Sie dann auf **neue Dimension**.  
   
 2.  Klicken Sie auf der Seite **Willkommen beim Dimensions-Assistenten** auf **Weiter**.  
   
@@ -63,17 +63,17 @@ ms.locfileid: "69493865"
   
 13. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-14. Wählen Sie im Bereich **Attribute** des Dimensions-Designers für die Dimension **Internet Sales Order Details** die Option **Sales Order Number**aus, und ändern Sie dann die Eigenschaft **Name** im Eigenschaftenfenster in `Item Description.`  
+14. Wählen Sie im Bereich **Attribute** des Dimensions-Designers für die Dimension **Internet Sales Order Details** die Option **Sales Order Number**aus, und ändern Sie dann die Eigenschaft **Name** in der Eigenschaftenfenster auf.`Item Description.`  
   
-15. Klicken Sie in der Eigenschafts Zelle **namecolenn** auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quell Tabelle** den Eintrag **Product** aus, wählen Sie für die **Spalte Quelle**die Option **englische ProductName** aus, und klicken Sie dann auf **OK**.  
+15. Klicken Sie in der Eigenschafts Zelle **namecolenn** auf die Schaltfläche zum Durchsuchen **(...)**. Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quell Tabelle** den Eintrag **Product** aus, wählen Sie für die **Spalte Quelle**die Option **englische ProductName** aus, und klicken Sie dann auf **OK**.  
   
 16. Fügen Sie das **Sales Order Number** -Attribut zur Dimension hinzu, indem Sie die **SalesOrderNumber** -Spalte aus der **InternetSales** -Tabelle in den Bereich **Datenquellensicht** zum Bereich **Attribute** ziehen.  
   
-17. Ändern Sie die **Name** -Eigenschaft des neuen **Sales Order Number** -Attributs in `Order Number`, und ändern Sie die **OrderBy** -Eigenschaft in **Key**.  
+17. Ändern Sie **die Name** -Eigenschaft des neuen **Sales Order Number** - `Order Number`Attributs in, und ändern Sie die **OrderBy** -Eigenschaft in **Key**.  
   
-18. Erstellen Sie im Bereich **Hierarchien** eine **Internet Sales Orders** -Benutzer Hierarchie, die die `Order Number`-und **Element Beschreibungs** Ebenen in dieser Reihenfolge enthält.  
+18. Erstellen Sie im Bereich **Hierarchien** eine **Internet Sales Orders** -Benutzer Hierarchie, die `Order Number` die-und- **Element Beschreibungs** Ebenen in dieser Reihenfolge enthält.  
   
-19. Wählen Sie im Bereich **Attribute** **Internet Sales Order Details**aus, und überprüfen Sie anschließend den Wert für die **StorageMode** -Eigenschaft im Eigenschaftenfenster.  
+19. Wählen Sie im Bereich **Attribute****Internet Sales Order Details**aus, und überprüfen Sie anschließend den Wert für die **StorageMode** -Eigenschaft im Eigenschaftenfenster.  
   
      Beachten Sie, dass die Dimension standardmäßig als MOLAP-Dimension gespeichert wird. Obwohl durch das Ändern des Speichermodus zu ROLAP Verarbeitungszeit und Speicherplatz gespart werden würde, geschähe dies auf Kosten der Abfrageleistung. Für die Zwecke dieses Lernprogramms verwenden Sie als Speichermodus MOLAP.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "69493865"
   
      Beachten Sie, dass die **Internet Sales Order Details** -Cubedimension automatisch mit einer Faktenbeziehung konfiguriert wird, wie durch das eindeutige Symbol angezeigt wird.  
   
-2.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) in der **Element Beschreibungs** Zelle, an der Schnittmenge der **Internet Sales** -Measure-Gruppe und der **Internet Sales Order Details** -Dimension, um die Eigenschaften der Fakten Beziehung zu überprüfen.  
+2.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**) in der **Element Beschreibungs** Zelle, an der Schnittmenge der **Internet Sales** -Measure-Gruppe und der **Internet Sales Order Details** -Dimension, um die Eigenschaften der Fakten Beziehung zu überprüfen.  
   
      Das Dialogfeld **Beziehung definieren** wird geöffnet. Beachten Sie, dass Sie keine der Eigenschaften konfigurieren können.  
   
@@ -115,13 +115,13 @@ ms.locfileid: "69493865"
   
      Die folgende Abbildung zeigt das Ergebnis der vorherigen Schritte.  
   
-     ![Dimensionierung von Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensionierung von Internet Sales-Sales Amount")  
+     ![Dimensionieren von Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensionieren von Internet Sales-Sales Amount")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Definieren einer m:n-Beziehung](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dimensions Beziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definieren von Faktenbeziehungen und Faktenbeziehungseigenschaften](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

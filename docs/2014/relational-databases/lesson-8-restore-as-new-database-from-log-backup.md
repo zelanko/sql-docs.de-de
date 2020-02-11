@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175359"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>Lektion 9: Wiederherstellen einer Datenbank aus Azure Storage
@@ -36,13 +36,13 @@ ms.locfileid: "70175359"
   
  Zum Wiederherstellen einer Datenbank aus Azure Storage können Sie die folgenden Schritte ausführen:  
   
-1.  Starten von SQL Server Management Studio Stellen Sie eine Verbindung mit der Standardinstanz her.  
+1.  Starten Sie SQL Server Management Studio. Stellen Sie eine Verbindung mit der Standardinstanz her.  
   
 2.  Klicken Sie auf der Standard Symbolleiste auf **neue Abfrage** .  
   
 3.  Kopieren Sie das folgenden komplette Skript, und fügen Sie es in das Abfrage-Fenster ein. Ändern Sie das Skript nach Bedarf.  
   
-     **Hinweis**: Sie führen die `RESTORE` -Anweisung aus, um die Datenbanksicherung (BAK) in Azure Storage in einer Daten Bank Instanz auf einem anderen Computer wiederherzustellen.  
+     **Hinweis:** Sie führen die `RESTORE` -Anweisung aus, um die Datenbanksicherung (BAK) in Azure Storage in einer Daten Bank Instanz auf einem anderen Computer wiederherzustellen.  
   
     ```sql  
   

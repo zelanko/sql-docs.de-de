@@ -1,5 +1,5 @@
 ---
-title: Befehl SET ANSI | Microsoft-Dokumentation
+title: ANSI-Befehl festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997763"
 ---
 # <a name="set-ansi-command"></a>SET ANSI-Befehl
-Bestimmt, wie Vergleiche zwischen Zeichenfolgen unterschiedlicher Länge verfährt vorgenommen werden, mit dem Operator =-Operator in Visual FoxPro-SQL-Befehlen.  
+Bestimmt, wie Vergleiche zwischen Zeichen folgen mit unterschiedlichen Längen mit dem =-Operator in Visual FoxPro-SQL-Befehlen durchgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,32 +30,32 @@ SET ANSI ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ON  
- (Standard für den Treiber; der Standardwert für Visual FoxPro ist OFF). Bereiche, die, denen die kürzere Zeichenfolge mit dem Leerzeichen erforderlich sind. erleichtern je länger gleich Zeichenfolgenlänge. Die beiden Zeichenfolgen werden dann im Vergleich Zeichen für Zeichen, die für ihre gesamte Längen. Betrachten Sie diesen Vergleich:  
+ EIN  
+ (Standardwert für den Treiber; der Standardwert für Visual FoxPro ist off.) Füllt die kürzere Zeichenfolge mit den Leerzeichen, die erforderlich sind, damit Sie der Länge der längeren Zeichenfolge entspricht. Die beiden Zeichen folgen werden dann mit einem Zeichen für Ihre gesamte Länge verglichen. Beachten Sie diesen Vergleich:  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- Das Ergebnis ist "false" (. F.), wenn SET ANSI aktiviert ist, da beim Auffüllen werden 'Tom' wird "Tom", und die Zeichenfolgen "Peter" und 'Torsten' keine Zeichen für Zeichen übereinstimmen.  
+ Das Ergebnis ist false (. F.) Wenn SET ANSI auf ON festgelegt ist, da "Tom" beim Auffüllen von "Tom" und die Zeichen folgen "Tom" und "Torsten" nicht mit dem Zeichen für das Zeichen identisch sind.  
   
- Dem == Operator verwendet diese Methode für Vergleiche in Visual FoxPro-SQL-Befehlen.  
+ Der = =-Operator verwendet diese Methode für Vergleiche in Visual FoxPro-SQL-Befehlen.  
   
  OFF  
- Gibt an, dass die kürzere Zeichenfolge nicht mit Leerzeichen aufgefüllt werden. Die beiden Zeichenfolgen verglichen werden Zeichen für Zeichen, bis das Ende die kürzere Zeichenfolge erreicht ist. Betrachten Sie diesen Vergleich:  
+ Gibt an, dass die kürzere Zeichenfolge nicht mit Leerzeichen aufgefüllt werden soll. Die beiden Zeichen folgen werden mit einem Zeichen verglichen, bis das Ende der kürzeren Zeichenfolge erreicht ist. Beachten Sie diesen Vergleich:  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- Das Ergebnis ist "true" (. Wenn SET ANSI deaktiviert ist, da "t".) nach "Peter" wird der Vergleich beendet.  
+ Das Ergebnis ist "true" (. T.), wenn SET ANSI auf OFF festgelegt ist, da der Vergleich nach ' Tom ' beendet wird.  
   
-## <a name="remarks"></a>Hinweise  
- SET ANSI bestimmt, ob es sich bei den kürzeren der beiden Zeichenfolgen mit Leerzeichen aufgefüllt wird, wenn ein SQL-Zeichenfolgenvergleich vorgenommen wird. SET ANSI hat keine Auswirkungen auf den Operator ==-Operator; Bei Verwendung von dem == Operator, die kürzere Zeichenfolge wird immer mit Leerzeichen für den Vergleich aufgefüllt.  
+## <a name="remarks"></a>Bemerkungen  
+ SET ANSI bestimmt, ob der kürzere von zwei Zeichen folgen mit Leerzeichen aufgefüllt wird, wenn ein SQL-Zeichen folgen Vergleich durchgeführt wird. SET ANSI hat keine Auswirkung auf den = =-Operator; Wenn Sie den = =-Operator verwenden, wird die kürzere Zeichenfolge für den Vergleich immer mit Leerzeichen aufgefüllt.  
   
-## <a name="string-order"></a>Zeichenfolge-Reihenfolge  
- SQL-Befehlen, die links-nach-rechts-Reihenfolge der beiden Zeichenfolgen in einem Vergleich wird Irrelevantswitching eine Zeichenfolge mit einer Seite die = oder == Operator, um die andere wirkt sich nicht auf das Ergebnis des Vergleichs.  
+## <a name="string-order"></a>Zeichenfolge  
+ In SQL-Befehlen ist die Reihenfolge der beiden Zeichen folgen in einem Vergleich von links nach rechts eine Zeichenfolge, die eine Zeichenfolge von einer Seite des =-oder = =-Operators auf die andere nicht beeinträchtigt. Dies wirkt sich nicht auf das Ergebnis des Vergleichs aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [SELECT – SQL-Befehl](../../odbc/microsoft/select-sql-command.md)   
- [Befehl SET EXACT](../../odbc/microsoft/set-exact-command.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [SELECT-SQL-Befehl](../../odbc/microsoft/select-sql-command.md)   
+ [SET EXACT-Befehl](../../odbc/microsoft/set-exact-command.md)

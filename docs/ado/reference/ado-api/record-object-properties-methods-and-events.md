@@ -13,10 +13,10 @@ ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70737654"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record-Objekt – Eigenschaften, Methoden und Ereignisse
@@ -29,11 +29,11 @@ ms.locfileid: "70737654"
   
  [Eigenschaft "para URL"](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Properties-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType (Eigenschaft)](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
- [Source-Eigenschaft (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)  
+ [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
  [State-Eigenschaft](../../../ado/reference/ado-api/state-property-ado.md)  
   
@@ -52,8 +52,8 @@ ms.locfileid: "70737654"
   
  [Open-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

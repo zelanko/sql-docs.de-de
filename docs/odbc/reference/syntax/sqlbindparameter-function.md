@@ -21,22 +21,22 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036216"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter-Funktion
 
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.0-Standards-Compliance: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 2,0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLBindParameter** bindet einen Puffer an eine parametermarkierung in einer SQL­Anweisung. **SQLBindParameter** unterstützt die Bindung an eine Unicode-C-Datentyp, selbst wenn die zugrunde liegenden Treiber Unicode-Daten nicht unterstützt.  
+ **SQLBindParameter** bindet einen Puffer an eine Parameter Markierung in einer SQL-Anweisung. **SQLBindParameter** unterstützt die Bindung an einen Unicode-C-Datentyp, auch wenn der zugrunde liegende Treiber keine Unicode-Daten unterstützt.  
   
 > [!NOTE]  
->  Diese Funktion ersetzt die ODBC-1.0-Funktion **SQLSetParam**. Weitere Informationen finden Sie unter "Kommentare".  
+>  Diese Funktion ersetzt die ODBC 1,0-Funktion **SQLSetParam**. Weitere Informationen finden Sie unter "comments".  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,451 +58,451 @@ SQLRETURN SQLBindParameter(
 ## <a name="arguments"></a>Argumente
 
  *StatementHandle*  
- [Eingabe] Anweisungshandle.  
+ Der Anweisungs Handle.  
   
  *ParameterNumber*  
- [Eingabe] Parameter, mit der Nummer sortiert sequenziell in aufsteigender Parameterreihenfolge, beginnend mit 1.  
+ Der Parameter Zahl, geordnet nach Reihenfolge in steigender Parameterreihenfolge, beginnend bei 1.  
   
- *InputOutputType*  
- [Eingabe] Der Typ des Parameters. Weitere Informationen finden Sie unter "*InputOutputType* Argument" in "Kommentare".  
+ *Inputoutputtype*  
+ Der Der Typ des Parameters. Weitere Informationen finden Sie unter "*inputoutputtype* -Argument" in "comments".  
   
  *ValueType*  
- [Eingabe] Der C-Datentyp des Parameters. Weitere Informationen finden Sie unter "*ValueType* Argument" in "Kommentare".  
+ Der Der C-Datentyp des Parameters. Weitere Informationen finden Sie unter "*ValueType* -Argument" in "comments".  
   
- *ParameterType*  
- [Eingabe] Der SQL-Datentyp des Parameters. Weitere Informationen finden Sie unter "*ParameterType* Argument" in "Kommentare".  
+ *Parameter Type*  
+ Der Der SQL-Datentyp des Parameters. Weitere Informationen finden Sie unter "*ParameterType* -Argument" in "comments".  
   
  *ColumnSize*  
- [Eingabe] Die Größe der Spalte oder des Ausdrucks der entsprechenden parametermarkierung. Weitere Informationen finden Sie unter "*ColumnSize* Argument" in "Kommentare".  
+ Der Die Größe der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung. Weitere Informationen finden Sie unter "*ColumnSize* -Argument" in "comments".  
   
- Wenn Ihre Anwendung auf einem 64-Bit-Windows-Betriebssystem ausgeführt wird, finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md).  
+ Wenn Ihre Anwendung unter einem 64-Bit-Windows-Betriebssystem ausgeführt wird, finden Sie weitere [Informationen unter ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md).  
   
- *DecimalDigits*  
- [Eingabe] Die Dezimalstellen der Spalte oder des Ausdrucks der entsprechenden parametermarkierung. Weitere Informationen zur Spaltengröße finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
+ *Dezimalstellen*  
+ Der Die Dezimalziffern der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung. Weitere Informationen zur Spaltengröße finden Sie unter [Spaltengröße, Dezimalstellen, Länge von Oktett übertragen und Anzeige Größe](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
   
  *ParameterValuePtr*  
- [Verzögerte Eingabe] Ein Zeiger auf einen Puffer für die Parameterdaten. Weitere Informationen finden Sie unter "*ParameterValuePtr* Argument" in "Kommentare".  
+ [Verzögerte Eingabe] Ein Zeiger auf einen Puffer für die Daten des Parameters. Weitere Informationen finden Sie unter "*ParameterValuePtr* -Argument" in "comments".  
   
- *BufferLength*  
- [Eingabe/Ausgabe] Länge der *ParameterValuePtr* Puffers in Byte. Weitere Informationen finden Sie unter "*Pufferlänge* Argument" in "Kommentare".  
+ *Pufferlänge*  
+ [Eingabe/Ausgabe] Länge des *ParameterValuePtr* -Puffers in Bytes. Weitere Informationen finden Sie unter "*BufferLength* -Argument" in "comments".  
   
- Finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
+ Weitere Informationen finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung unter einem 64-Bit-Betriebssystem ausgeführt wird.  
   
  *StrLen_or_IndPtr*  
- [Verzögerte Eingabe] Ein Zeiger auf einen Puffer für die Länge des-Parameters werden soll. Weitere Informationen finden Sie unter "*StrLen_or_IndPtr* Argument" in "Kommentare".  
+ [Verzögerte Eingabe] Ein Zeiger auf einen Puffer für die Länge des Parameters. Weitere Informationen finden Sie unter "*StrLen_or_IndPtr* -Argument" in "comments".  
   
-## <a name="returns"></a>Rückgabewert
+## <a name="returns"></a>Rückgabe
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose
 
- Wenn **SQLBindParameter** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLBindParameter** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLBindParameter** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLBindParameter** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
 
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|07006|Attributverletzung eingeschränkter Daten|Der identifizierte Datentyp die *ValueType* Argument kann nicht konvertiert werden, in den Datentyp von identifiziert die *ParameterType* Argument. Beachten Sie, die von dieser Fehler zurückgegeben werden kann **SQLExecDirect**, **SQLExecute**, oder **SQLPutData** zum Zeitpunkt der Ausführung, anstatt nach **SQLBindParameter**.|  
-|07009|Ungültiger Deskriptorindex|(DM) der Wert für das Argument angegebene *ParameterNumber* war kleiner als 1.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der **MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Es wurde der Treiber kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
-|HY003|Ungültiger Anwendungspuffertyp|Der Wert, der durch das Argument angegebenen *ValueType* war keine gültige C-Datentyp oder SQL_C_DEFAULT.|  
-|HY004|Ungültiger SQL-Datentyp|Der angegebene Wert für das Argument *ParameterType* war weder eine gültige ODBC-SQL-Datentypbezeichner noch eine treiberspezifische SQL Datentypbezeichner vom Treiber unterstützt werden.|  
-|HY009|Ungültiger Argumentwert|(DM) das Argument *ParameterValuePtr* wurde ein null-Zeiger ist das Argument *StrLen_or_IndPtr* wurde ein null-Zeiger ist, und das Argument *InputOutputType* war nicht SQL_PARAM_ DIE AUSGABE.<br /><br /> SQL_PARAM_OUTPUT (DM), wobei das Argument *ParameterValuePtr* wurde ein null-Zeiger der C-Typ wurde Char "oder" Binary, und die Pufferlänge (*CbValueMax*) war größer als 0.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn **SQLBindParameter** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY021|Inkonsistente deskriptorinformation|Die Informationen der Sicherheitsbeschreibung während einer konsistenzprüfung eingecheckt war nicht konsistent. (Finden Sie im Abschnitt "Konsistenzprüfungen" in **SQLSetDescField**.)<br /><br /> Der angegebene Wert für das Argument *DecimalDigits* lag außerhalb des Bereichs von Werten, die von der Datenquelle für eine Spalte mit der angegebenen SQL-Datentyp unterstützt die *ParameterType* Argument.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) den Wert in *Pufferlänge* war kleiner als 0. (Siehe dazu die Beschreibung das SQL_DESC_DATA_PTR-Feld in **SQLSetDescField**.)|  
-|HY104|Ungültiger Wert für Genauigkeit oder Dezimalstellenanzahl|Der angegebene Wert für das Argument *ColumnSize* oder *DecimalDigits* lag außerhalb des Bereichs von Werten, die von der Datenquelle für eine Spalte mit der angegebenen SQL-Datentyp unterstützt die  *ParameterType* Argument.|  
-|HY105|Ungültiger Parametertyp|(DM) der Wert für das Argument angegebene *InputOutputType* war ungültig. (Siehe "Kommentare".)|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert.|Die Treiber oder die Datenquelle unterstützt nicht die Konvertierung durch die Kombination der angegebene Wert für das Argument angegebenen *ValueType* und der Treiber-spezifische-Wert, der für das Argument angegebene *ParameterType*.<br /><br /> Der angegebene Wert für das Argument *ParameterType* wurde ein gültiger ODBC-SQL-Datentypbezeichner, für die ODBC-Version vom Treiber unterstützt, jedoch wurde durch das Treiber oder die Datenquelle nicht unterstützt.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und das Argument *ValueType* war eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und die C-Intervall-Datentypen in [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D: Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor, und das Argument zum Preis von 3,50 *ValueType* SQL_C_GUID wurde.|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|07006|Verletzung des Attributs für eingeschränkte Datentypen|Der vom *ValueType* -Argument identifizierte Datentyp kann nicht in den Datentyp konvertiert werden, der durch das *Parameter Type* -Argument identifiziert wird. Beachten Sie, dass dieser Fehler von **SQLExecDirect**, **SQLExecute**oder **SQLPutData** zur Ausführungszeit anstelle von **SQLBindParameter**zurückgegeben werden kann.|  
+|07009|Ungültiger deskriptorindex.|(DM) der für das Argument *ParameterNumber* angegebene Wert ist kleiner als 1.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im **MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY003|Ungültiger Anwendungs Puffertyp.|Der durch das Argument *ValueType* angegebene Wert war kein gültiger C-Datentyp oder SQL_C_DEFAULT.|  
+|HY004|Ungültiger SQL-Datentyp.|Der für den Argument *ParameterType* angegebene Wert war weder ein gültiger ODBC-SQL-Datentyp Bezeichner noch ein Treiber spezifischer SQL-Datentyp Bezeichner, der vom Treiber unterstützt wird.|  
+|HY009|Ungültiger Argument Wert.|(DM) das Argument *ParameterValuePtr* war ein NULL-Zeiger, das Argument *StrLen_or_IndPtr* war ein NULL-Zeiger, und das *inputoutputtype* -Argument war nicht SQL_PARAM_OUTPUT.<br /><br /> (DM) SQL_PARAM_OUTPUT, wobei das Argument *ParameterValuePtr* ein NULL-Zeiger war, der C-Typ char oder Binary war und die BufferLength (*cbvaluemax*) größer als 0 ist.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als **SQLBindParameter** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das *StatementHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY021|Inkonsistente Deskriptorinformationen|Die während einer Konsistenzprüfung überprüften Deskriptorinformationen waren nicht konsistent. (Weitere Informationen finden Sie im Abschnitt "Konsistenzprüfungen" in **SQLSetDescField**.)<br /><br /> Der für das Argument *DecimalDigits* angegebene Wert lag außerhalb des Bereichs der Werte, die von der Datenquelle für eine Spalte des SQL-Datentyps, der durch das *Parameter Type* -Argument angegeben wird, unterstützt wird.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der Wert in *BufferLength* war kleiner als 0 (null). (Weitere Informationen finden Sie in der Beschreibung des SQL_DESC_DATA_PTR Felds in **SQLSetDescField**.)|  
+|HY104|Ungültiger Wert für Genauigkeit oder Dezimalwert|Der für das Argument *ColumnSize* oder *DecimalDigits* angegebene Wert lag außerhalb des Bereichs der Werte, die von der Datenquelle für eine Spalte des SQL-Datentyps, der durch das *Parameter Type* -Argument angegeben wird, unterstützt wird.|  
+|HY105|Ungültiger Parametertyp|(DM) der für das *inputoutputtype* -Argument angegebene Wert ist ungültig. (Siehe "Kommentare")|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Optionales Feature nicht implementiert|Der Treiber oder die Datenquelle unterstützt nicht die durch die Kombination des Werts, der für das Argument *ValueType* angegebene ist, und den treiberspezifischen Wert, der für das Argument *ParameterType*angegeben wurde.<br /><br /> Der für das Argument *ParameterType* angegebene Wert war ein gültiger ODBC-SQL-Datentyp Bezeichner für die Version von ODBC, die vom Treiber unterstützt, jedoch nicht vom Treiber oder von der Datenquelle unterstützt wurde.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und das Argument *ValueType* waren eine der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und alle in [c-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) aufgelisteten Interval c-Datentypen in Anhang D: Datentypen.<br /><br /> Der Treiber unterstützt nur ODBC-Versionen vor 3,50, und das Argument *ValueType* war SQL_C_GUID.|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *StatementHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
   
 ## <a name="comments"></a>Kommentare
 
- Ruft die Anwendung **SQLBindParameter** jede parametermarkierung in einer SQL-Anweisung zu binden. Bindungen bleiben wirksam, bis die Anwendung ruft **SQLBindParameter** in diesem Fall ruft **SQLFreeStmt** mit SQL_RESET_PARAMS-Option oder Aufrufe **SQLSetDescField** auf das Headerfeld SQL_DESC_COUNT APD auf 0 festgelegt.  
+ Eine Anwendung ruft **SQLBindParameter** auf, um jede Parameter Markierung in einer SQL-Anweisung zu binden. Bindungen bleiben wirksam, bis die Anwendung **SQLBindParameter** erneut aufruft, **SQLFreeStmt** mit der SQL_RESET_PARAMS-Option aufruft oder **SQLSetDescField** aufruft, um das SQL_DESC_COUNT Header-Feld der APD auf 0 festzulegen.  
   
- Weitere Informationen zu Parametern finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md). Weitere Informationen zu Datentypen und parametermarkierungen, finden Sie unter [Parameterdatentypen](../../../odbc/reference/appendixes/parameter-data-types.md) und [Parametermarkierungen](../../../odbc/reference/appendixes/parameter-markers.md) in Anhang C: SQL-Grammatik.  
+ Weitere Informationen zu Parametern finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md). Weitere Informationen zu Parameter Datentypen und Parameter Markierungen finden Sie unter [Parameter Datentypen](../../../odbc/reference/appendixes/parameter-data-types.md) und [Parameter Markierungen](../../../odbc/reference/appendixes/parameter-markers.md) in Anhang C: SQL-Grammatik.  
   
 ## <a name="parameternumber-argument"></a>ParameterNumber-Argument  
- Wenn *ParameterNumber* im Aufruf von **SQLBindParameter** ist größer als der Wert des SQL_DESC_COUNT, **SQLSetDescField** wird aufgerufen, um den Wert des SQL_DESC_ erhöhen Anzahl der zu *ParameterNumber*.  
+ Wenn *ParameterNumber* im Aufruf von **SQLBindParameter** größer als der Wert von SQL_DESC_COUNT ist, wird **SQLSetDescField** aufgerufen, um den Wert von SQL_DESC_COUNT auf *ParameterNumber*zu erhöhen.  
   
-## <a name="inputoutputtype-argument"></a>InputOutputType-Argument  
- Die *InputOutputType* Argument gibt den Typ des Parameters. Dieses Argument legt Feld SQL_DESC_PARAMETER_TYPE in IPD fest. Alle Parameter im SQL-Anweisungen, die nicht Verfahren, wie z. B. Aufrufen **einfügen** -Anweisungen sind *Eingabe ** Parameter*. In Prozeduraufrufen können eingegeben werden, Eingabe/Ausgabe- oder Ausgabeparameter enthalten. (Eine Anwendung ruft **SQLProcedureColumns** bestimmen den Typ eines Parameters in einem Prozeduraufruf, Parameter, dessen Typ kann nicht bestimmt werden, gelten als Eingabeparameter.)  
+## <a name="inputoutputtype-argument"></a>Inputoutputtype-Argument  
+ Das *inputoutputtype* -Argument gibt den Typ des Parameters an. Dieses Argument legt das SQL_DESC_PARAMETER_TYPE-Feld der IPD fest. Alle Parameter in SQL-Anweisungen, die keine Prozeduren (z. b. **Insert** -Anweisungen) aufzurufen, sind *Eingabeparameter*. Parameter in Prozedur aufrufen können Eingabe-, Eingabe-/Ausgabe-oder Ausgabeparameter sein. (Eine Anwendung ruft **sqlprocedurecolrens** auf, um den Typ eines Parameters in einem Prozedur Aufruf zu bestimmen; Parameter, deren Typ nicht bestimmt werden kann, werden als Eingabeparameter angenommen.)  
   
- Die *InputOutputType* Argument ist eine der folgenden Werte:  
+ Das *inputoutputtype* -Argument ist einer der folgenden Werte:  
   
--   SQL_PARAM_INPUT. Der Parameter kennzeichnet einen Parameter in einer SQL-Anweisung, die eine Prozedur, nicht, wie z. B. aufgerufen wird eine **einfügen** -Anweisung, oder markiert einen Eingabeparameter in einer Prozedur. Zum Beispiel die Parameter in **INSERT INTO Mitarbeiter VALUES (?,?,?)**  Eingabeparameter sind, während die Parameter in **{AddEmp aufrufen (?,?,?)}**  kann sein, aber nicht notwendigerweise, Eingabeparameter.  
+-   SQL_PARAM_INPUT. Der-Parameter markiert einen Parameter in einer SQL-Anweisung, die keine Prozedur aufruft, wie z. b. eine **Insert** -Anweisung, oder markiert einen Eingabeparameter in einer Prozedur. Beispielsweise sind die Parameter in **INSERT INTO Employee Values (?,?,?)** Eingabeparameter, wohingegen die Parameter in **{calladdemp (?,?,?)}** , aber nicht notwendigerweise, Eingabeparameter sein können.  
   
-     Wenn die Anweisung ausgeführt wird, sendet der Treiber Daten für den Parameter an die Datenquelle an. die \* *ParameterValuePtr* Puffer muss einen gültigen Eingabewert enthalten oder **StrLen_or_IndPtr* Puffer darf, SQL_NULL_DATA, SQL_DATA_AT_EXEC oder das Ergebnis der SQL_LEN_DATA_AT _EXEC-Makro.  
+     Wenn die-Anweisung ausgeführt wird, sendet der Treiber Daten für den Parameter an die Datenquelle. der \* *ParameterValuePtr* -Puffer muss einen gültigen Eingabe Wert enthalten, oder der **StrLen_or_IndPtr* Puffer muss SQL_NULL_DATA, SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros enthalten.  
   
-     Wenn eine Anwendung nicht den Typ eines Parameters in einem Prozeduraufruf bestimmen kann, wird *InputOutputType* zu SQL_PARAM_INPUT; Wenn die Datenquelle gibt einen Wert für den Parameter zurück, verwirft der Treiber es.  
+     Wenn eine Anwendung den Typ eines Parameters in einem Prozedur Aufrufsatz nicht ermitteln kann, wird *inputoutputtype* auf SQL_PARAM_INPUT festgelegt. Wenn die Datenquelle einen Wert für den Parameter zurückgibt, verwirft der Treiber den Wert.  
   
--   SQL_PARAM_INPUT_OUTPUT. Der-Parameter kennzeichnet eine Eingabe-/Ausgabeparameter in einer Prozedur. Z. B. der Parameter in **{aufrufen GetEmpDept(?)}**  ist ein e/a-Parameter, die den Namen eines Mitarbeiters akzeptiert und gibt den Namen des Mitarbeiters Abteilung zurück.  
+-   SQL_PARAM_INPUT_OUTPUT. Der-Parameter markiert einen Eingabe-/Ausgabeparameter in einer Prozedur. Beispielsweise ist der Parameter in **{callgetempdept (?)}** ein Eingabe-/Ausgabeparameter, der den Namen eines Mitarbeiters annimmt und den Namen der Abteilung des Mitarbeiters zurückgibt.  
   
-     Wenn die Anweisung ausgeführt wird, sendet der Treiber Daten für den Parameter an die Datenquelle an. die \* *ParameterValuePtr* Puffer muss einen gültigen Eingabewert enthält oder der \* *StrLen_or_IndPtr* Puffer darf, SQL_NULL_DATA, SQL_DATA_AT_EXEC oder das Ergebnis des das Makro SQL_LEN_DATA_AT_EXEC. Nachdem die Anweisung ausgeführt wird, gibt der Treiber die Daten für den Parameter zurück, an die Anwendung; Wenn die Datenquelle nicht für eine Eingabe/Ausgabe-Parameter einen Wert zurückgibt, wird der Treiber setzt die **StrLen_or_IndPtr* Puffer auf SQL_NULL_DATA.  
+     Wenn die-Anweisung ausgeführt wird, sendet der Treiber Daten für den Parameter an die Datenquelle. der \* *ParameterValuePtr* -Puffer muss einen gültigen Eingabe Wert enthalten, oder \*der *StrLen_or_IndPtr* Puffer muss SQL_NULL_DATA, SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros enthalten. Nachdem die-Anweisung ausgeführt wurde, gibt der Treiber Daten für den Parameter an die Anwendung zurück. Wenn die Datenquelle keinen Wert für einen Eingabe-/Ausgabeparameter zurückgibt, legt der Treiber den **StrLen_or_IndPtr* Puffer auf SQL_NULL_DATA fest.  
   
     > [!NOTE]  
-    >  Wenn eine ODBC-1.0-Anwendung aufruft **SQLSetParam** in ODBC 2.0-Treiber, der Treiber-Manager konvertiert diese in einen Aufruf von **SQLBindParameter** in dem die *InputOutputType* Argument wird auf SQL_PARAM_INPUT_OUTPUT festgelegt.  
+    >  Wenn eine ODBC 1,0-Anwendung **SQLSetParam** in einem ODBC 2,0-Treiber aufruft, konvertiert der Treiber-Manager diesen in einen Aufruf von **SQLBindParameter** , bei dem das *inputoutputtype* -Argument auf SQL_PARAM_INPUT_OUTPUT festgelegt ist.  
   
--   SQL_PARAM_OUTPUT. Der Parameter markiert den Rückgabewert einer Prozedur oder ein Output-Parameter in einer Prozedur; in beiden Fällen werden diese als bezeichnet *Ausgabeparameter*. Z. B. der Parameter in **{? = aufrufen GetNextEmpID}** ist ein Ausgabeparameter, der die nächste Mitarbeiter-ID zurückgibt.  
+-   SQL_PARAM_OUTPUT. Der-Parameter markiert den Rückgabewert einer Prozedur oder eines Output-Parameters in einer Prozedur. in beiden Fällen werden diese als *Ausgabeparameter*bezeichnet. Beispielsweise ist der-Parameter in **{? = getnextempid}** ein Ausgabeparameter, der die nächste Mitarbeiter-ID zurückgibt.  
   
-     Nachdem die Anweisung ausgeführt wird, gibt der Treiber Daten für den Parameter an die Anwendung, es sei denn, die *ParameterValuePtr* und *StrLen_or_IndPtr* Argumente sind null-Zeiger, in diesem Fall die Treiber verwirft den Ausgabewert. Wenn die Datenquelle keinen Wert für ein Output-Parameter zurückgibt, wird der Treiber setzt die **StrLen_or_IndPtr* Puffer auf SQL_NULL_DATA.  
+     Nachdem die-Anweisung ausgeführt wurde, gibt der Treiber Daten für den Parameter an die Anwendung zurück, es sei denn, die Parameter " *ParameterValuePtr* " und " *StrLen_or_IndPtr* " sind beide NULL-Zeiger. in diesem Fall verwirft der Treiber den Ausgabewert. Wenn die Datenquelle keinen Wert für einen Output-Parameter zurückgibt, legt der Treiber den **StrLen_or_IndPtr* Puffer auf SQL_NULL_DATA fest.  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM. Gibt an, dass ein Eingabe-/Ausgabeparameter gestreamt werden sollen. **SQLGetData** können Parameterwerte in Teilen zu lesen. *BufferLength* wird ignoriert, da die Länge des Puffers beim Aufruf der eingestuft wird **SQLGetData**. Der Wert des der *StrLen_or_IndPtr* Puffer muss SQL_NULL_DATA SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros enthalten. Wenn es an der Ausgabe gestreamt wird, muss ein Parameter als Data-at-Execution (. DAE) Parameter an der Eingabe gebunden werden. *ParameterValuePtr* kann jeder nicht-Null-Zeiger-Wert, der von zurückgegeben werden, werden **SQLParamData** wie der benutzerdefinierte-, dessen Wert Token mit übergebene *ParameterValuePtr* für sowohl Eingabe- und die Ausgabe. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM. Gibt an, dass ein Eingabe-/Ausgabeparameter gestreamt werden soll **SQLGetData** kann Parameterwerte in Teilen lesen. *BufferLength* wird ignoriert, da die Pufferlänge beim Aufrufen von **SQLGetData**bestimmt wird. Der Wert des *StrLen_or_IndPtr* Puffers muss SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros enthalten. Ein Parameter muss bei der Eingabe als ein Data-at-Execution-Parameter (DAE) gebunden werden, wenn er bei der Ausgabe gestreamt wird. *ParameterValuePtr* kann ein beliebiger nicht-NULL-Zeiger Wert sein, der von **SQLParamData** als benutzerdefiniertes Token zurückgegeben wird, dessen Wert sowohl für die Eingabe als auch für die Ausgabe mit *ParameterValuePtr* übermittelt wurde. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
--   SQL_PARAM_OUTPUT_STREAM. Identisch mit SQL_PARAM_INPUT_OUTPUT_STREAM, für die ein Output-Parameter. **StrLen_or_IndPtr* bei Eingabe ignoriert.  
+-   SQL_PARAM_OUTPUT_STREAM. Identisch mit SQL_PARAM_INPUT_OUTPUT_STREAM für einen Output-Parameter. **StrLen_or_IndPtr* wird bei der Eingabe ignoriert.  
   
- Die folgende Tabelle enthält verschiedene Kombinationen von *InputOutputType* und **StrLen_or_IndPtr*:  
+ In der folgenden Tabelle sind die verschiedenen Kombinationen von *inputoutputtype* und **StrLen_or_IndPtr*aufgeführt:  
   
-|*InputOutputType*|**StrLen_or_IndPtr*|Ergebnis|Weisen darauf hin, auf ParameterValuePtr|  
+|*Inputoutputtype*|**StrLen_or_IndPtr*|Ergebnis|Anmerkung zu ParameterValuePtr|  
 |-----------------------|----------------------------|-------------|---------------------------------|  
-|SQL_PARAM_INPUT|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe in Teilen|*ParameterValuePtr* können Zeigerwert, der von zurückgegeben werden, werden **SQLParamData** wie der benutzerdefinierte-, dessen Wert Token mit übergebene *ParameterValuePtr*.|  
-|SQL_PARAM_INPUT|Nicht SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe gebunden Puffer|*ParameterValuePtr* ist die Adresse des Eingabepuffers.|  
-|SQL_PARAM_OUTPUT|Bei Eingabe ignoriert.|Gebundene Ausgabepuffer|*ParameterValuePtr* ist die Adresse des Ausgabepuffers.|  
-|SQL_PARAM_OUTPUT_STREAM|Bei Eingabe ignoriert.|Gestreamte Ausgabe|*ParameterValuePtr* möglich, dass alle Zeigerwert, der zurückgegebenen **SQLParamData** wie der benutzerdefinierte-, dessen Wert Token mit übergebene *ParameterValuePtr*.|  
-|SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe in Teile und gebundene Ausgabepuffer|*ParameterValuePtr* ist die Adresse des Ausgabepuffers, die auch von zurückgegeben werden **SQLParamData** wie der benutzerdefinierte-, dessen Wert Token mit übergebene *ParameterValuePtr*.|  
-|SQL_PARAM_INPUT_OUTPUT|Nicht SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe gebunden, Puffer und gebundene Ausgabepuffer|*ParameterValuePtr* ist die Adresse der freigegebenen e/a-Puffer.|
-|SQL_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe in Teile und gestreamte Ausgabe|*ParameterValuePtr* möglich, dass alle nicht-Null-Zeiger-Wert, der zurückgegebenen **SQLParamData** wie der benutzerdefinierte-, dessen Wert Token mit übergeben wurde *ParameterValuePtr* für beide Eingabe und die Ausgabe.|  
+|SQL_PARAM_INPUT|SQL_LEN_DATA_AT_EXEC (*len*) oder SQL_DATA_AT_EXEC|Eingabe in Teilen|*ParameterValuePtr* kann ein beliebiger Zeiger Wert sein, der von **SQLParamData** als benutzerdefiniertes Token zurückgegeben wird, dessen Wert mit *ParameterValuePtr*übermittelt wurde.|  
+|SQL_PARAM_INPUT|Nicht SQL_LEN_DATA_AT_EXEC (*len*) oder SQL_DATA_AT_EXEC|Eingabe gebundener Puffer|*ParameterValuePtr* ist die Adresse des Eingabe Puffers.|  
+|SQL_PARAM_OUTPUT|Bei Eingabe ignoriert.|Ausgabe gebundener Puffer|*ParameterValuePtr* ist die Adresse des Ausgabepuffers.|  
+|SQL_PARAM_OUTPUT_STREAM|Bei Eingabe ignoriert.|Streaming-Ausgabe|*ParameterValuePtr* kann ein beliebiger Zeiger Wert sein, der von **SQLParamData** als benutzerdefiniertes Token zurückgegeben wird, dessen Wert mit *ParameterValuePtr*übermittelt wurde.|  
+|SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) oder SQL_DATA_AT_EXEC|Eingabe in Teile und Ausgabe gebundenen Puffer|*ParameterValuePtr* ist die Adresse des Ausgabepuffers, die von **SQLParamData** auch als benutzerdefiniertes Token zurückgegeben wird, dessen Wert mit *ParameterValuePtr*übermittelt wurde.|  
+|SQL_PARAM_INPUT_OUTPUT|Nicht SQL_LEN_DATA_AT_EXEC (*len*) oder SQL_DATA_AT_EXEC|Eingabe-und Ausgabe gebundener Puffer|*ParameterValuePtr* ist die Adresse des freigegebenen Eingabe-/Ausgabepuffers.|
+|SQL_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) oder SQL_DATA_AT_EXEC|Eingabe in Teilen und Streamen der Ausgabe|*ParameterValuePtr* kann ein beliebiger nicht-NULL-Zeiger Wert sein, der von **SQLParamData** als benutzerdefiniertes Token zurückgegeben wird, dessen Wert sowohl für die Eingabe als auch für die Ausgabe mit *ParameterValuePtr* übermittelt wurde.|  
   
 > [!NOTE]  
->  Der Treiber muss entscheiden, welche SQL-Typen zulässig sind, wenn eine Anwendung eines Ausgabe- oder Eingabe / Ausgabe-Parameter gebunden, übertragen. Der Treiber-Manager generiert keine Fehler ein ungültiger SQL-Typ.  
+>  Der Treiber muss entscheiden, welche SQL-Typen zulässig sind, wenn eine Anwendung einen Output-oder Input-Output-Parameter als gestreamt bindet. Der Treiber-Manager generiert keinen Fehler für einen ungültigen SQL-Typ.  
   
 ## <a name="valuetype-argument"></a>ValueType-Argument
 
- Die *ValueType* Argument gibt an, die C-Datentyp des Parameters. Dieses Argument legt fest, die Felder SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE APD. Dies muss einer der Werte in der [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt Anhang D: Datentypen.  
+ Das *ValueType* -Argument gibt den C-Datentyp des Parameters an. Mit diesem Argument werden die Felder SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE der APD festgelegt. Dies muss einer der Werte im Abschnitt C- [Datentypen](../../../odbc/reference/appendixes/c-data-types.md) von Anhang D: Datentypen sein.  
   
- Wenn die *ValueType* Argument ist eine von der Interval-Datentypen, das SQL_DESC_TYPE-Feld, der die *ParameterNumber* Datensatz APD nastaven NA hodnotu SQL_INTERVAL ist festgelegt, Feld SQL_DESC_CONCISE_TYPE in APD die präzise Interval-Datentypen und das Feld SQL_DESC_DATETIME_INTERVAL_CODE, der die *ParameterNumber* Datensatz auf einem Subcode für den bestimmten Intervall-Datentyp festgelegt ist. (Finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).) Das Standardintervall für führende Genauigkeit (2) und Intervall Sekunden standardgenauigkeit (6), wie in den Feldern SQL_DESC_DATETIME_INTERVAL_PRECISION und SQL_DESC_PRECISION der APD, festgelegt, werden für die Daten verwendet. Wenn entweder die standardgenauigkeit nicht geeignet ist, der Anwendung sollten explizit festlegen das Deskriptorfeld durch einen Aufruf von **SQLSetDescField** oder **SQLSetDescRec**.  
+ Wenn das *ValueType* -Argument einer der Intervall Datentypen ist, wird das SQL_DESC_TYPE-Feld des *ParameterNumber* -Datensatzes der APD auf SQL_INTERVAL festgelegt. das SQL_DESC_CONCISE_TYPE-Feld des APD wird auf den Datentyp "präziser Interval" festgelegt, und das SQL_DESC_DATETIME_INTERVAL_CODE Feld des *ParameterNumber* -Datensatzes wird auf einen Subcode für den spezifischen Interval-Datentyp festgelegt (Siehe [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).) Die standardmäßige Intervall Genauigkeit (2) und Default interval seconds (6), wie in den Feldern "SQL_DESC_DATETIME_INTERVAL_PRECISION" und "SQL_DESC_PRECISION" des APD festgelegt, werden für die Daten verwendet. Wenn eine der beiden Standardgenauigkeit nicht geeignet ist, sollte die Anwendung das Deskriptorfeld explizit durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festlegen.  
   
- Wenn die *ValueType* Argument ist einer der Datentypen "DateTime", das SQL_DESC_TYPE-Feld, der die *ParameterNumber* Datensatz APD nastaven NA hodnotu SQL_DATETIME, Feld SQL_DESC_CONCISE_TYPE der *ParameterNumber* Datensatz APD festgelegt ist, die präzise "DateTime"-C-Datentyp und das Feld SQL_DESC_DATETIME_INTERVAL_CODE der *ParameterNumber* Datensatz auf einen Subcode für jeweils Datum und Uhrzeit festgelegt ist -Datentyp. (Finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Wenn das *ValueType* -Argument einer der DateTime-Datentypen ist, das SQL_DESC_TYPE-Feld des *ParameterNumber* -Datensatzes der APD ist auf SQL_DATETIME festgelegt, das SQL_DESC_CONCISE_TYPE Feld des *ParameterNumber* -Datensatzes der APD wird auf den präzisen DateTime-C-Datentyp festgelegt, und das SQL_DESC_DATETIME_INTERVAL_CODE-Feld des *ParameterNumber* -Datensatzes wird auf einen Subcode für den spezifischen DateTime-Datentyp festgelegt. (Siehe [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
- Wenn die *ValueType* Argument ist ein Datentyp SQL_C_NUMERIC für die standardmäßige Genauigkeit (die treiberdefinierten) und der Standardwert (0) festgelegt, in die Felder SQL_DESC_PRECISION und SQL_DESC_SCALE der APD, dienen für die Daten. Wenn die standardmäßige Genauigkeit oder Skala nicht geeignet ist, der Anwendung sollten explizit festlegen das Deskriptorfeld durch einen Aufruf von **SQLSetDescField** oder **SQLSetDescRec**.  
+ Wenn das *ValueType* -Argument ein SQL_C_NUMERIC-Datentyp ist, werden die Standardgenauigkeit (die vom Treiber definiert ist) und die Standardskala (0), die in den SQL_DESC_PRECISION-und SQL_DESC_SCALE-Feldern der APD festgelegt sind, für die Daten verwendet. Wenn die Standardgenauigkeit oder-Skala nicht geeignet ist, sollte die Anwendung das Deskriptorfeld explizit durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festlegen.  
   
- SQL_C_DEFAULT gibt an, dass der Wert des Parameters aus dem Standard-C-Datentyp übertragen werden, für die SQL-Datentyp angegeben *ParameterType*.  
+ SQL_C_DEFAULT gibt an, dass der Parameterwert aus dem C-Standard Datentyp für den mit *ParameterType*angegebenen SQL-Datentyp übertragen werden soll.  
   
- Sie können auch einen erweiterte C-Datentyp angeben. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+ Sie können auch einen erweiterten C-Datentyp angeben. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
- Weitere Informationen finden Sie unter [C-Standarddatentypen](../../../odbc/reference/appendixes/default-c-data-types.md), [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md), und [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D: Datentypen.  
+ Weitere Informationen finden Sie unter [Standard-c-Datentypen](../../../odbc/reference/appendixes/default-c-data-types.md), [wandeln von Daten aus C in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)und umrechnen [von Daten aus SQL in C-Daten](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) Typen in Anhang D: Datentypen.  
   
 ## <a name="parametertype-argument"></a>ParameterType-Argument
 
- Dies muss einer der Werte aufgeführt, die der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt Anhang D: Datentypen, oder es muss eine treiberspezifische-Wert sein. Dieses Argument legt die SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE Felder des IPD fest.  
+ Dies muss einer der Werte sein, die im Abschnitt [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) von Anhang D: Datentypen aufgeführt sind, oder es muss sich um einen treiberspezifischen Wert handeln. Dieses Argument legt die Felder SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE der IPD fest.  
   
- Wenn die *ParameterType* Argument ist einer der Bezeichner "DateTime", das SQL_DESC_TYPE-Feld des IPD nastaven NA hodnotu SQL_DATETIME, Feld SQL_DESC_CONCISE_TYPE in IPD präzise "DateTime" SQL-Datentyps und der SQL_DESC_ festgelegt ist DATETIME_INTERVAL_CODE-Feld ist auf den entsprechenden Datetime subcodewert festgelegt.  
+ Wenn das *ParameterType* -Argument einer der DateTime-Bezeichner ist, wird das SQL_DESC_TYPE-Feld der IPD auf SQL_DATETIME festgelegt, das SQL_DESC_CONCISE_TYPE-Feld der IPD auf den präzisen DateTime-SQL-Datentyp festgelegt, und das SQL_DESC_DATETIME_INTERVAL_CODE Feld wird auf den entsprechenden DateTime-Subcodewert festgelegt.  
   
- Wenn *ParameterType* ist die Intervall-Bezeichner, wird das SQL_DESC_TYPE-Feld des IPD auf SQL_INTERVAL festgelegt, den präzise Datentyp für die SQL-Zeitintervall und die SQL_DESC_DATETIME_ Feld SQL_DESC_CONCISE_TYPE in IPD festgelegt ist INTERVAL_CODE-Feld des IPD ist auf dem Subcode angemessenen Zeitraum festgelegt. Die SQL_DESC_DATETIME_INTERVAL_PRECISION-Feld des IPD ist die führende Genauigkeit Intervall festgelegt, und das Feld "SQL_DESC_PRECISION" auf eine Genauigkeit von Sekunden das Intervall festgelegt ist, falls zutreffend. Wenn der Standardwert der SQL_DESC_DATETIME_INTERVAL_PRECISION oder SQL_DESC_PRECISION nicht geeignet ist, die Anwendung sollte legen Sie es explizit durch Aufrufen von **SQLSetDescField**. Weitere Informationen zu diesen Feldern finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
+ Wenn *ParameterType* einer der Intervall Bezeichner ist, wird das SQL_DESC_TYPE-Feld der IPD auf SQL_INTERVAL festgelegt. das SQL_DESC_CONCISE_TYPE-Feld der IPD wird auf den Datentyp "präziser SQL Interval" festgelegt, und das SQL_DESC_DATETIME_INTERVAL_CODE-Feld der IPD wird auf den entsprechenden intervallsubcode festgelegt. Das SQL_DESC_DATETIME_INTERVAL_PRECISION-Feld der IPD wird auf die angegebene Intervall Genauigkeit festgelegt, und das SQL_DESC_PRECISION Feld wird ggf. auf die Genauigkeit des Intervalls Sekunden festgelegt. Wenn der Standardwert SQL_DESC_DATETIME_INTERVAL_PRECISION oder SQL_DESC_PRECISION nicht angemessen ist, sollte die Anwendung diese explizit festlegen, indem Sie **SQLSetDescField**aufruft. Weitere Informationen zu diesen Feldern finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
   
- Wenn die *ValueType* Argument ist ein SQL_NUMERIC-Datentyp, der die Genauigkeit (die treiberdefinierten) und der Standardwert (0) festgelegt, in den Feldern SQL_DESC_PRECISION und SQL_DESC_SCALE des IPD, dienen für die Daten. Wenn die standardmäßige Genauigkeit oder Skala nicht geeignet ist, der Anwendung sollten explizit festlegen das Deskriptorfeld durch einen Aufruf von **SQLSetDescField** oder **SQLSetDescRec**.  
+ Wenn das *ValueType* -Argument ein SQL_NUMERIC-Datentyp ist, werden die Standardgenauigkeit (die vom Treiber definiert ist) und die Standardskala (0), die in den SQL_DESC_PRECISION-und SQL_DESC_SCALE-Feldern der IPD festgelegt sind, für die Daten verwendet. Wenn die Standardgenauigkeit oder-Skala nicht geeignet ist, sollte die Anwendung das Deskriptorfeld explizit durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festlegen.  
   
- Weitere Informationen dazu, wie die Daten konvertiert werden, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) und [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D: Datentypen.  
+ Informationen zum Konvertieren von Daten finden [Sie unter Konvertieren von Daten aus C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) und [Konvertieren von Daten aus SQL](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) -in c-Datentypen in Anhang D: Datentypen.  
   
 ## <a name="columnsize-argument"></a>ColumnSize-Argument
 
- Die *ColumnSize* Argument gibt die Größe der Spalte oder des Ausdrucks, der an die parametermarkierung, die Länge der Daten oder beides entspricht. Dieses Argument setzt verschiedene Felder des IPD, abhängig von der SQL-Datentyp (der *ParameterType* Argument). Die folgenden Regeln gelten für diese Zuordnung auf:  
+ Das *ColumnSize* -Argument gibt die Größe der Spalte oder des Ausdrucks an, die der Parameter Markierung, der Länge der Daten oder beiden entspricht. Dieses Argument legt abhängig vom SQL-Datentyp (dem *ParameterType* -Argument) verschiedene Felder der IPD fest. Die folgenden Regeln gelten für diese Zuordnung:  
   
--   Wenn *ParameterType* ist SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY und SQL_LONGVARBINARY oder eines die präzisen SQL "DateTime" oder das Intervall-Datentypen, die SQL_DESC_LENGTH-Feld des IPD festgelegt ist, auf den Wert der  *ColumnSize*. (Weitere Informationen finden Sie unter den [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) Abschnitt in Anhang D: Die Datentypen.)  
+-   Wenn *ParameterType* SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY oder einer der präzisen SQL DateTime-oder interval-Datentypen ist, wird das SQL_DESC_LENGTH-Feld der IPD auf den Wert von *ColumnSize*festgelegt. (Weitere Informationen finden Sie im Abschnitt [Spaltengröße, Dezimalziffern, Länge von Übertragungs Oktett und Anzeige Größe](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen.)  
   
--   Wenn *ParameterType* ist SQL_DECIMAL SQL_NUMERIC, SQL_FLOAT, SQL_REAL oder SQL_DOUBLE, Feld SQL_DESC_PRECISION in IPD festgelegt ist, auf den Wert der *ColumnSize*.  
+-   Wenn *ParameterType* SQL_DECIMAL, SQL_NUMERIC, SQL_FLOAT, SQL_REAL oder SQL_DOUBLE ist, wird das SQL_DESC_PRECISION-Feld der IPD auf den Wert von *ColumnSize*festgelegt.  
   
--   Für andere Datentypen die *ColumnSize* Argument wird ignoriert.  
+-   Bei anderen Datentypen wird das *ColumnSize* -Argument ignoriert.  
   
- Weitere Informationen finden Sie unter "Übergeben von Parameterwerten" und SQL_DATA_AT_EXEC in "*StrLen_or_IndPtr* Argument."  
+ Weitere Informationen finden Sie unter "übergeben von Parameter Werten" und SQL_DATA_AT_EXEC im Argument "*StrLen_or_IndPtr* ".  
   
 ## <a name="decimaldigits-argument"></a>DecimalDigits-Argument
 
- Wenn *ParameterType* ist SQL_TYPE_TIME SQL_TYPE_TIMESTAMP, SQL_INTERVAL_SECOND, SQL_INTERVAL_DAY_TO_SECOND, SQL_INTERVAL_HOUR_TO_SECOND oder SQL_INTERVAL_MINUTE_TO_SECOND, Feld SQL_DESC_PRECISION in IPD festgelegt ist um *DecimalDigits*. Wenn *ParameterType* ist SQL_NUMERIC oder SQL_DECIMAL, Feld SQL_DESC_SCALE in IPD nastaven NA hodnotu *DecimalDigits*. Für alle anderen Datentypen die *DecimalDigits* Argument wird ignoriert.  
+ Wenn *ParameterType* SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP, SQL_INTERVAL_SECOND, SQL_INTERVAL_DAY_TO_SECOND, SQL_INTERVAL_HOUR_TO_SECOND oder SQL_INTERVAL_MINUTE_TO_SECOND ist, wird das SQL_DESC_PRECISION-Feld der IPD auf *DecimalDigits*festgelegt. Wenn *ParameterType* SQL_NUMERIC oder SQL_DECIMAL ist, wird das Feld SQL_DESC_SCALE der IPD auf *DecimalDigits*festgelegt. Für alle anderen Datentypen wird das *DecimalDigits* -Argument ignoriert.  
   
 ## <a name="parametervalueptr-argument"></a>ParameterValuePtr-Argument
 
- Die *ParameterValuePtr* -Argument zeigt auf einen Puffer, wenn **SQLExecute** oder **SQLExecDirect** aufgerufen wird, enthält die tatsächlichen Daten für den Parameter. Die Daten müssen in Form von angegeben sein, dass die *ValueType* Argument. Dieses Argument legt fest, das SQL_DESC_DATA_PTR-Feld der APD. Eine Anwendung festlegen, kann die *ParameterValuePtr* Argument für ein null-Zeiger, solange  *\*StrLen_or_IndPtr* ist SQL_NULL_DATA oder SQL_DATA_AT_EXEC. (Dies trifft nur zu Eingabe-oder Eingabe/Ausgabe).  
+ Das *ParameterValuePtr* -Argument verweist auf einen Puffer, der, wenn **SQLExecute** oder **SQLExecDirect** aufgerufen wird, die eigentlichen Daten für den Parameter enthält. Die Daten müssen in der Form vorliegen, die vom *ValueType* -Argument angegeben wird. Mit diesem Argument wird das SQL_DESC_DATA_PTR-Feld der APD festgelegt. Eine Anwendung kann das *ParameterValuePtr* -Argument auf einen NULL-Zeiger festlegen, sofern * \*StrLen_or_IndPtr* SQL_NULL_DATA oder SQL_DATA_AT_EXEC ist. (Dies gilt nur für Eingabe-oder Eingabe-/Ausgabeparameter.)  
   
- Wenn \* *StrLen_or_IndPtr* ist das Ergebnis der SQL_LEN_DATA_AT_EXEC (*Länge*)-Makro oder SQL_DATA_AT_EXEC, klicken Sie dann *ParameterValuePtr* ist ein anwendungsdefinierte Zeigerwert, der dem Parameter zugeordnet ist. Er wird zurückgegeben, die der Anwendung über **SQLParamData**. Z. B. *ParameterValuePtr* kann ein Token ungleich NULL, z. B. ein Parameter mit der Nummer, ein Zeiger auf Daten oder ein Zeiger auf eine Struktur, die die Anwendung mit dem Eingabeparameter gebunden werden. Beachten Sie jedoch, dass bei der Parameter ist ein Eingabe-/Ausgabeparameter *ParameterValuePtr* muss ein Zeiger auf einen Puffer, in der Ausgabewert gespeichert werden kann wird. Wenn der Wert in das Anweisungsattribut verweist SQL_ATTR_PARAMSET_SIZE größer als 1 ist, können die Anwendung den Wert verweist das SQL_ATTR_PARAMS_PROCESSED_PTR-Anweisungsattribut zusammen mit den *ParameterValuePtr* Argument. Z. B. *ParameterValuePtr* möglicherweise zeigen Sie auf ein Array von Werten und die Anwendung möglicherweise verwenden Sie den Wert SQL_ATTR_PARAMS_PROCESSED_PTR verweist auf den richtigen Wert aus dem Array abzurufen. Weitere Informationen finden Sie unter "Übergeben von Parameterwerten" weiter unten in diesem Abschnitt.  
+ Wenn \* *StrLen_or_IndPtr* das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros oder SQL_DATA_AT_EXEC ist, dann ist *ParameterValuePtr* ein Anwendungs definierter Zeiger Wert, der dem-Parameter zugeordnet ist. Sie wird über **SQLParamData**an die Anwendung zurückgegeben. *ParameterValuePtr* kann z. b. ein Token ungleich 0 (null) sein, z. b. eine Parameter Nummer, ein Zeiger auf Daten oder ein Zeiger auf eine-Struktur, die von der Anwendung verwendet wurde, um Eingabeparameter zu binden. Beachten Sie jedoch Folgendes: Wenn der Parameter ein Eingabe-/Ausgabeparameter ist, muss *ParameterValuePtr* ein Zeiger auf einen Puffer sein, in dem der Ausgabewert gespeichert wird. Wenn der Wert im SQL_ATTR_PARAMSET_SIZE Statement-Attribut größer als 1 ist, kann die Anwendung den Wert, auf den das SQL_ATTR_PARAMS_PROCESSED_PTR Statement-Attribut zeigt, mit dem *ParameterValuePtr* -Argument verwenden. *ParameterValuePtr* könnte z. b. auf ein Array von-Werten verweisen, und die Anwendung verwendet möglicherweise den Wert, auf den SQL_ATTR_PARAMS_PROCESSED_PTR zeigt, um den korrekten Wert aus dem Array abzurufen. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter "übergeben von Parameter Werten".  
   
- Wenn die *InputOutputType* Argument ist SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_OUTPUT, *ParameterValuePtr* verweist auf einen Puffer, in dem der Treiber den Ausgabewert zurückgibt. Wenn die Prozedur eine oder mehrere Resultsets zurückgibt, die \* *ParameterValuePtr* Puffer ist garantiert nicht festgelegt werden, bis alle Ergebnis legt/Zeilenanzahl verarbeitet wurden. Wenn der Puffer nicht festgelegt ist, bis die Verarbeitung abgeschlossen ist, sind die Output-Parameter und Rückgabewerte nicht verfügbar, bis **SQLMoreResults** SQL_NO_DATA zurückgibt. Aufrufen von **SQLCloseCursor** oder **SQLFreeStmt** mit einer Option von SQL_CLOSE führt dazu, dass diese Werte verworfen werden.  
+ Wenn das *inputoutputtype* -Argument SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_OUTPUT ist, verweist *ParameterValuePtr* auf einen Puffer, in dem der Treiber den Ausgabewert zurückgibt. Wenn die Prozedur ein oder mehrere Resultsets zurückgibt \*, wird der *ParameterValuePtr* -Puffer nicht garantiert festgelegt, bis alle Resultsets/Zeilen Anzahlen verarbeitet wurden. Wenn der Puffer erst festgelegt wird, wenn die Verarbeitung beendet ist, sind die Ausgabeparameter und Rückgabewerte nicht verfügbar, bis **SQLMoreResults** SQL_NO_DATA zurückgibt. Das Aufrufen von **SQLCloseCursor** oder **SQLFreeStmt** mit der Option SQL_CLOSE bewirkt, dass diese Werte verworfen werden.  
   
- Wenn der Wert im Attribut-Anweisung verweist SQL_ATTR_PARAMSET_SIZE größer als 1 ist *ParameterValuePtr* zeigt auf ein Array. Eine SQL-Anweisung das gesamte Array mit der Eingabewerten für einen Eingabe- oder Eingabe/Ausgabe-Parameter verarbeitet, und gibt ein Array von Ausgabewerte für eine e/a oder einem Ausgabeparameter zurück.  
+ Wenn der Wert im SQL_ATTR_PARAMSET_SIZE Statement-Attribut größer als 1 ist, verweist *ParameterValuePtr* auf ein Array. Eine einzelne SQL-Anweisung verarbeitet das gesamte Array von Eingabe Werten für einen Eingabe-oder Eingabe-/Ausgabeparameter und gibt ein Array von Ausgabe Werten für einen Eingabe-/Ausgabe-oder Ausgabeparameter zurück.  
   
 ## <a name="bufferlength-argument"></a>BufferLength-Argument
 
- Für Zeichen- und Binärdaten C die *Pufferlänge* Argument gibt die Länge des der \* *ParameterValuePtr* Puffer (sofern es sich um ein einzelnes Element ist) oder die Länge eines Elements in der \* *ParameterValuePtr* array (wenn der Wert im Attribut-Anweisung verweist SQL_ATTR_PARAMSET_SIZE größer als 1 ist). Dieses Argument legt die SQL_DESC_OCTET_LENGTH-Datensatzfeld vom APD fest. Wenn die Anwendung mit mehreren Werten angibt *Pufferlänge* wird verwendet, um zu bestimmen, den Speicherort der Werte in der **ParameterValuePtr* array, bei der Eingabe und Ausgabe. Für e/a und Ausgabe-Parameter wird es zu bestimmen, ob zum Abschneiden von Zeichen- und Binärdaten für C bei der Ausgabe verwendet:  
+ Für Zeichen-und binäre C-Daten gibt das *BufferLength* -Argument die Länge \*des *ParameterValuePtr* -Puffers (wenn es sich um ein einzelnes Element handelt) oder die Länge \*eines Elements im *ParameterValuePtr* -Array an (wenn der Wert im SQL_ATTR_PARAMSET_SIZE Statement-Attribut größer als 1 ist). Mit diesem Argument wird das SQL_DESC_OCTET_LENGTH Datensatz-Feld der APD festgelegt. Wenn die Anwendung mehrere Werte angibt, wird *BufferLength* verwendet, um den Speicherort der Werte im **ParameterValuePtr* -Array sowohl bei der Eingabe als auch bei der Ausgabe zu bestimmen. Für Eingabe-/Ausgabe-und Ausgabeparameter wird verwendet, um zu bestimmen, ob Zeichen-und binäre C-Daten bei der Ausgabe abgeschnitten werden sollen:  
   
--   Für Daten im Zeichenformat C, wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *Pufferlänge*, die Daten in \* *ParameterValuePtr* auf abgeschnitten  *BufferLength* weniger die Länge der einen Null-Terminierungszeichen und Null-terminiert ist vom Treiber.  
+-   Wenn die Anzahl von Bytes, die für die Rückgabe verfügbar sind, größer oder gleich *BufferLength*ist, werden die Daten in \* *ParameterValuePtr* auf *die Länge eines* NULL-Beendigungs Zeichens gekürzt und vom Treiber auf NULL-terminierte Zeichen gekürzt.  
   
--   Für C Binärdaten, wenn die Anzahl der zurückzugebenden verfügbaren Bytes übersteigt *Pufferlänge*, die Daten in \* *ParameterValuePtr* auf abgeschnitten *Pufferlänge*Bytes.  
+-   Wenn die Anzahl von Bytes, die für die Rückgabe verfügbar sind, größer als *BufferLength*ist, werden die Daten \*in *ParameterValuePtr* für binäre C-Daten auf *BufferLength* -Bytes gekürzt.  
   
- Für alle anderen Typen von C-Daten die *Pufferlänge* Argument wird ignoriert. Die Länge der \* *ParameterValuePtr* Puffer (sofern es sich um ein einzelnes Element ist) oder die Länge eines Elements in der \* *ParameterValuePtr* array (wenn die Anwendung aufruft **SQLSetStmtAttr** mit einer *Attribut* Argument verweist SQL_ATTR_PARAMSET_SIZE zur Angabe mehrerer Werte für jeden Parameter) wird davon ausgegangen, dass die Länge der C-Datentyp sein.  
+ Für alle anderen Typen von C-Daten wird das *BufferLength* -Argument ignoriert. Die Länge des \* *ParameterValuePtr* -Puffers (wenn es sich um ein einzelnes Element handelt) oder die Länge eines Elements \*im *ParameterValuePtr* -Array (wenn die Anwendung **SQLSetStmtAttr** mit einem *Attribut* Argument SQL_ATTR_PARAMSET_SIZE von aufruft, um mehrere Werte für jeden Parameter anzugeben), wird angenommen, dass es sich um die Länge des C-Datentyps handelt.  
   
- Für die gestreamte Ausgabe oder gestreamte ein-/Ausgabeparameter der *Pufferlänge* Argument wird ignoriert, da die Länge des Puffers in angegeben ist **SQLGetData**.  
-  
-> [!NOTE]  
->  Wenn eine ODBC-1.0-Anwendung aufruft **SQLSetParam** in einer ODBC 3. *X* -Treiber verwenden, der Treiber-Manager konvertiert diese in einen Aufruf **SQLBindParameter** in dem die *Pufferlänge* Argument ist immer SQL_SETPARAM_VALUE_MAX. Da der Treiber-Manager einen Fehler Wenn eine ODBC 3. zurückgibt. *x* legt Anwendung *Pufferlänge* zu SQL_SETPARAM_VALUE_MAX, eine ODBC 3. *X* Treiber können dies auf Sie bestimmen, wenn sie von einer ODBC-1.0-Anwendung aufgerufen wird.  
+ Für streamingausgaben oder per Streaming übertragene Eingabe-/Ausgabeparameter wird das *BufferLength* -Argument ignoriert, da die Pufferlänge in **SQLGetData**angegeben wird.  
   
 > [!NOTE]  
->  In **SQLSetParam**, die Möglichkeit, die angibt, in dem eine Anwendung die Länge des der **ParameterValuePtr* gepuffert, damit der Treiber zurückkehren kann, Zeichen- oder Binärdaten und die Möglichkeit, in denen eine Anwendung sendet, eine Array von Zeichen oder binäre Parameterwerte an den Treiber, sind treiberdefinierten.  
+>  Wenn eine ODBC 1,0-Anwendung **SQLSetParam** in einem ODBC 3 aufruft. *x* -Treiber: der Treiber-Manager konvertiert diesen in einen **SQLBindParameter** -Befehl, in dem das *BufferLength* -Argument immer SQL_SETPARAM_VALUE_MAX ist. Der Treiber-Manager gibt bei ODBC 3 einen Fehler zurück. in der *x* -Anwendung wird *BufferLength* auf SQL_SETPARAM_VALUE_MAX festgelegt, ein ODBC 3. der *x* -Treiber kann dies verwenden, um zu bestimmen, wann er von einer ODBC 1,0-Anwendung aufgerufen wird.  
   
-## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr-Argument
+> [!NOTE]  
+>  In **SQLSetParam**gibt die Art und Weise, in der eine Anwendung die Länge des **ParameterValuePtr* -Puffers angibt, damit der Treiber Zeichen-oder Binärdaten zurückgeben kann, und die Art und Weise, wie eine Anwendung ein Array von Zeichen-oder binären Parameterwerten an den Treiber sendet, Treiber definiert.  
+  
+## <a name="strlen_or_indptr-argument"></a>StrLen_or_IndPtr-Argument
 
- Die *StrLen_or_IndPtr* -Argument zeigt auf einen Puffer, wenn **SQLExecute** oder **SQLExecDirect** aufgerufen wird, enthält mindestens eine der folgenden. (Dieses Argument stellt die SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_INDICATOR_PTR Datensatzfelder der Anwendung Parameter Zeiger.)  
+ Das *StrLen_or_IndPtr* -Argument verweist auf einen Puffer, der, wenn **SQLExecute** oder **SQLExecDirect** aufgerufen wird, eine der folgenden enthält. (Dieses Argument legt die Felder SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_INDICATOR_PTR Datensatz der Anwendungsparameter Zeiger fest.)  
   
--   Die Länge der Wert des Parameters, die in gespeicherten **ParameterValuePtr*. Dies wird mit Ausnahme von Zeichen- oder Binärdaten C ignoriert.  
+-   Die Länge des in **ParameterValuePtr*gespeicherten Parameter Werts. Dies wird ignoriert, außer für Zeichen-oder binäre C-Daten.  
   
--   SQL_NTS. Der Parameterwert ist eine Null-terminierte Zeichenfolge.  
+-   SQL_NTS. Der Parameterwert ist eine NULL-terminierte Zeichenfolge.  
   
--   SQL_NULL_DATA. Der Wert des Parameters ist NULL.  
+-   SQL_NULL_DATA. Der Parameterwert ist NULL.  
   
--   SQL_DEFAULT_PARAM. Eine Prozedur ist die Verwendung den Standardwert eines Parameters, statt eines Werts aus der Anwendung abgerufen. Dieser Wert gilt nur in einer Prozedur namens in kanonischer ODBC-Syntax, und klicken Sie dann nur, wenn die *InputOutputType* Argument ist SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_INPUT_OUTPUT an. Wenn \* *StrLen_or_IndPtr* SQL_DEFAULT_PARAM, ist die *ValueType*, *ParameterType*, *ColumnSize*,  *DecimalDigits*, *Pufferlänge*, und *ParameterValuePtr* Argumente für Eingabeparameter ignoriert werden und werden nur verwendet, um den Wert des Ausgabeparameters für die Eingabe definieren / Output-Parameter.  
+-   SQL_DEFAULT_PARAM. Eine Prozedur besteht darin, den Standardwert eines Parameters anstelle eines Werts zu verwenden, der aus der Anwendung abgerufen wird. Dieser Wert ist nur in einer in der kanonischen ODBC-Syntax aufgerufenen Prozedur und dann nur dann gültig, wenn das *inputoutputtype* -Argument SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_INPUT_OUTPUT_STREAM ist. Wenn \* *StrLen_or_IndPtr* SQL_DEFAULT_PARAM ist, werden die Argumente *ValueType*, *ParameterType*, *ColumnSize*, *DecimalDigits*, *BufferLength*und *ParameterValuePtr* bei Eingabe Parametern ignoriert und nur zum Definieren des Ausgabeparameter Werts für Eingabe-/Ausgabeparameter verwendet.  
   
--   Das Ergebnis der SQL_LEN_DATA_AT_EXEC (*Länge*) Makro. Die Daten für den Parameter mit gesendet werden, **SQLPutData**. Wenn die *ParameterType* Argument SQL_LONGVARBINARY, SQL_LONGVARCHAR oder einen Long-Wert, Data Source-spezifische Daten eingeben, und gibt "Y" für den Typ der SQL_NEED_LONG_DATA_LEN Informationen in der Treiber **SQLGetInfo**, *Länge* ist die Anzahl von Datenbytes an den-Parameter gesendet werden soll, andernfalls *Länge* muss ein nicht negativen Wert und wird ignoriert. Weitere Informationen finden Sie unter "Übergeben Parameterwerte" weiter unten in diesem Abschnitt.  
+-   Das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros. Die Daten für den Parameter werden mit **SQLPutData**gesendet. Wenn das *Parameter Type* -Argument SQL_LONGVARBINARY, SQL_LONGVARCHAR oder ein langer Datenquellen spezifischer Datentyp ist und der Treiber "Y" für den SQL_NEED_LONG_DATA_LEN-Informationstyp in **SQLGetInfo**zurückgibt, ist *length* die Anzahl der Daten bytes, die für den Parameter gesendet werden sollen. Andernfalls muss *length* ein nicht negativer Wert sein und wird ignoriert. Weitere Informationen finden Sie unter "übergeben von Parameter Werten" weiter unten in diesem Abschnitt.  
   
-     Um beispielsweise anzugeben, dass mit 10.000 Bytes an Daten gesendet werden **SQLPutData** in einen oder mehrere Aufrufe für eine SQL_LONGVARCHAR-Parameter, eine Anwendung festlegt **StrLen_or_IndPtr* in SQL_LEN_DATA_AT_EXEC ( 10000).  
+     Um z. b. anzugeben, dass 10.000 Bytes an Daten mit **SQLPutData** in einem oder mehreren Aufrufen gesendet werden, legt eine Anwendung für einen SQL_LONGVARCHAR-Parameter **StrLen_or_IndPtr* auf SQL_LEN_DATA_AT_EXEC (10000) fest.  
   
--   SQL_DATA_AT_EXEC. Die Daten für den Parameter mit gesendet werden, **SQLPutData**. Dieser Wert wird von ODBC-1.0-Anwendungen verwendet, wenn sie ODBC 3. aufrufen. *x* Treiber. Weitere Informationen finden Sie unter "Übergeben Parameterwerte" weiter unten in diesem Abschnitt.  
+-   SQL_DATA_AT_EXEC. Die Daten für den Parameter werden mit **SQLPutData**gesendet. Dieser Wert wird von ODBC 1,0-Anwendungen verwendet, wenn er ODBC 3 aufruft. *x* -Treiber. Weitere Informationen finden Sie unter "übergeben von Parameter Werten" weiter unten in diesem Abschnitt.  
   
- Wenn *StrLen_or_IndPtr* ist ein null-Zeiger der Treiber wird davon ausgegangen, dass alle Werte der Eingabeparameter ungleich NULL sind und Zeichen und binäre Daten Null-terminiert ist. Wenn *InputOutputType* ist SQL_PARAM_OUTPUT oder SQL_PARAM_OUTPUT_STREAM und *ParameterValuePtr* und *StrLen_or_IndPtr* sind null-Zeiger, der Treiber verwirft der Ausgabewert.  
+ Wenn *StrLen_or_IndPtr* ein NULL-Zeiger ist, geht der Treiber davon aus, dass alle Eingabeparameter Werte ungleich NULL sind und dass Zeichen-und Binärdaten mit Null enden. Wenn *inputoutputtype* SQL_PARAM_OUTPUT oder SQL_PARAM_OUTPUT_STREAM und *ParameterValuePtr* und *StrLen_or_IndPtr* beide NULL-Zeiger sind, verwirft der Treiber den Ausgabewert.  
   
 > [!NOTE]  
->  Anwendungsentwickler sind dringend davon abgeraten, einen null-Zeiger für die Angabe *StrLen_or_IndPtr* Wenn der Datentyp des Parameters SQL_C_BINARY ist. Um sicherzustellen, dass ein Treiber nicht unerwartet SQL_C_BINARY Daten abgeschnitten *StrLen_or_IndPtr* muss einen Zeiger auf eine gültige Länge-Wert enthalten.  
+>  Anwendungsentwickler werden dringend davon abgeraten, einen NULL-Zeiger für *StrLen_or_IndPtr* anzugeben, wenn der Datentyp des Parameters SQL_C_BINARY ist. Um sicherzustellen, dass ein Treiber SQL_C_BINARY Daten nicht unerwartet abschneidet, sollte *StrLen_or_IndPtr* einen Zeiger auf einen gültigen Längen Wert enthalten.  
   
- Wenn die *InputOutputType* Argument ist SQL_PARAM_INPUT_OUTPUT SQL_PARAM_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_OUTPUT_STREAM, *StrLen_or_IndPtr* verweist auf einen Puffer, in dem die Treiber zurückgibt, SQL_NULL_DATA, die verfügbare Anzahl von Bytes im zurückzugebenden \* *ParameterValuePtr* (außer das Null-Terminierung Byte Zeichendaten enthalten sind), oder SQL_NO_TOTAL (wenn die Anzahl der Bytes, die zur Verfügung Return kann nicht ermittelt werden). Wenn die Prozedur eine oder mehrere Resultsets zurückgibt, die **StrLen_or_IndPtr* Puffer ist garantiert nicht festgelegt werden, bis alle Ergebnisse abgerufen wurden.  
+ Wenn das *inputoutputtype* -Argument SQL_PARAM_INPUT_OUTPUT, SQL_PARAM_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_OUTPUT_STREAM ist, zeigt *StrLen_or_IndPtr* auf einen Puffer, in dem der Treiber SQL_NULL_DATA zurückgibt, die Anzahl der Bytes, die \*in *ParameterValuePtr* (mit Ausnahme des NULL-Terminierungs Byte der Zeichendaten) zurückgegeben werden können, oder SQL_NO_TOTAL (wenn die Anzahl der verfügbaren Bytes nicht bestimmt werden kann). Wenn die Prozedur ein oder mehrere Resultsets zurückgibt, wird der **StrLen_or_IndPtr* Puffer nicht garantiert festgelegt, bis alle Ergebnisse abgerufen wurden.  
   
- Wenn der Wert im Attribut-Anweisung verweist SQL_ATTR_PARAMSET_SIZE größer als 1 ist *StrLen_or_IndPtr* verweist auf ein Array von Werten von SQLLEN. Diese können eines der weiter oben in diesem Abschnitt aufgeführten Werte und werden mit einer einzigen SQL­Anweisung verarbeitet.  
+ Wenn der Wert im SQL_ATTR_PARAMSET_SIZE Statement-Attribut größer als 1 ist, zeigt *StrLen_or_IndPtr* auf ein Array von sqllen-Werten. Dabei kann es sich um einen der weiter oben in diesem Abschnitt aufgeführten Werte handeln, der mit einer einzelnen SQL-Anweisung verarbeitet wird.  
   
-## <a name="passing-parameter-values"></a>Übergeben von Parameterwerten
+## <a name="passing-parameter-values"></a>Übergeben von Parameter Werten
 
- Eine Anwendung kann den Wert für einen Parameter übergeben, entweder in der \* *ParameterValuePtr* Puffer oder durch eine oder mehrere Aufrufe **SQLPutData**. Parameter, dessen Daten mit übergeben werden **SQLPutData** genannt werden *Data-at-Execution-* Parameter. Diese werden in der Regel zum Senden von Daten für SQL_LONGVARBINARY und SQL_LONGVARCHAR-Parameter verwendet und können mit anderen Parametern kombiniert werden.  
+ Eine Anwendung kann den Wert für einen Parameter entweder im \* *ParameterValuePtr* -Puffer oder mit einem oder mehreren Aufrufen von **SQLPutData**übergeben. Parameter, deren Daten mit **SQLPutData** übermittelt werden, werden als *Data-at-Execution-* Parameter bezeichnet. Diese werden in der Regel zum Senden von Daten für SQL_LONGVARBINARY-und SQL_LONGVARCHAR-Parameter verwendet und können mit anderen Parametern gemischt werden.  
   
- Um Parameterwerte zu übergeben, führt eine Anwendung die folgende Sequenz von Schritten:  
+ Zum Übergeben von Parameterwerten führt eine Anwendung die folgenden Schritte aus:  
   
-1.  Aufrufe **SQLBindParameter** für jeden Parameter, um Puffer für den Wert des Parameters zu binden (*ParameterValuePtr* Argument) und den Längenindikator / (*StrLen_or_IndPtr* Argument). Bei Data-at-Execution-Parametern *ParameterValuePtr* ist ein anwendungsdefinierte Zeigerwert, z. B. ein Parameter mit der Nummer oder ein Zeiger auf Daten. Der Wert wird später zurückgegeben werden und kann verwendet werden, um den Parameter zu identifizieren.  
+1.  Ruft **SQLBindParameter** für jeden Parameter auf, um Puffer für den Wert des Parameters (*ParameterValuePtr* -Argument) und length/Indicator (*StrLen_or_IndPtr* -Argument) zu binden. Bei Data-at-Execution-Parametern ist *ParameterValuePtr* ein von der Anwendung definierter Zeiger Wert, z. b. eine Parameter Nummer oder ein Zeiger auf Daten. Der Wert wird später zurückgegeben und kann verwendet werden, um den Parameter zu identifizieren.  
   
-2.  Legt Werte für Eingabe- und Eingabe-/Ausgabeparameter Parameter in der \* *ParameterValuePtr* und **StrLen_or_IndPtr* Puffer:  
+2.  Legt Werte für Eingabe-und Eingabe-/Ausgabeparameter im \* *ParameterValuePtr* -und **StrLen_or_IndPtr* -Puffer ab:  
   
-    -   Für normale-Parameter, die Anwendung platziert den Wert des Parameters in der \* *ParameterValuePtr* Puffer und die Länge des Werts in der **StrLen_or_IndPtr* Puffer. Weitere Informationen finden Sie unter [Einstellung Parameterwerte](../../../odbc/reference/develop-app/setting-parameter-values.md).  
+    -   Bei normalen Parametern platziert die Anwendung den Parameterwert im \* *ParameterValuePtr* -Puffer und die Länge dieses Werts im **StrLen_or_IndPtr* Puffer. Weitere Informationen finden Sie unter [Festlegen von Parameter Werten](../../../odbc/reference/develop-app/setting-parameter-values.md).  
   
-    -   Für Data-at-Execution-Parameter, wird die Anwendung das Ergebnis der SQL_LEN_DATA_AT_EXEC (*Länge*) Makro (beim Aufrufen von ODBC 2.0-Treiber) in der **StrLen_or_IndPtr* Puffer.  
+    -   Bei Data-at-Execution-Parametern legt die Anwendung das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros (beim Aufrufen eines ODBC 2,0-Treibers) im **StrLen_or_IndPtr* Puffer ab.  
   
-3.  Aufrufe **SQLExecute** oder **SQLExecDirect** zum Ausführen der SQL-Anweisung.  
+3.  Ruft **SQLExecute** oder **SQLExecDirect** auf, um die SQL-Anweisung auszuführen.  
   
-    -   Wenn keine Data-at-Execution-Parameter vorhanden sind, ist der Prozess abgeschlossen.  
+    -   Wenn keine Data-at-Execution-Parameter vorhanden sind, ist der Prozess vollständig.  
   
     -   Wenn Data-at-Execution-Parameter vorhanden sind, gibt die Funktion SQL_NEED_DATA zurück.  
   
-4.  Aufrufe **SQLParamData** zum Abrufen des Anwendung definierte Wert im angegebenen die *ParameterValuePtr* Argument **SQLBindParameter** für die erste Data-at-Execution-Parameter verarbeitet werden. **SQLParamData** wird SQL_NEED_DATA zurückgegeben.  
+4.  Ruft **SQLParamData** auf, um den von der Anwendung definierten Wert abzurufen, der im *ParameterValuePtr* -Argument von **SQLBindParameter** angegeben ist, für den ersten Data-at-Execution-Parameter, der verarbeitet werden soll. **SQLParamData** gibt SQL_NEED_DATA zurück.  
   
     > [!NOTE]  
-    >  Obwohl Data-at-Execution-Parameter Data-at-Execution-Spalten entsprechen, wird der Wert von zurückgegeben **SQLParamData** ist unterschiedlich. Data-at-Execution-Parameter sind die Parameter in einer SQL-Anweisung, die für die Daten gesendet werden mit **SQLPutData** Wenn die Anweisung ausgeführt wird, mit **SQLExecDirect** oder **SQLExecute**. Sie sind mit gebunden **SQLBindParameter**. Der Rückgabewert von **SQLParamData** ist ein Zeigerwert übergeben **SQLBindParameter** in die *ParameterValuePtr* Argument. Data-at-Execution-Spalten in einem Rowset, für die Daten mit gesendet werden, sind **SQLPutData** Wenn eine Zeile aktualisiert oder hinzugefügt, die mit **SQLBulkOperations** oder mit aktualisierten **SQLSetPos**. Sie sind mit gebunden **SQLBindCol**. Den Rückgabewert von **SQLParamData** ist die Adresse der Zeile in der **TargetValuePtr* Puffer (festgelegt durch einen Aufruf von **SQLBindCol**), die verarbeitet wird.  
+    >  Obwohl Data-at-Execution-Parameter mit Data-at-Execution-Spalten vergleichbar sind, ist der von **SQLParamData** zurückgegebene Wert für jeden Wert anders. Data-at-Execution-Parameter sind Parameter in einer SQL-Anweisung, für die Daten mit **SQLPutData** gesendet werden, wenn die Anweisung mit **SQLExecDirect** oder **SQLExecute**ausgeführt wird. Sie sind mit **SQLBindParameter**gebunden. Der von **SQLParamData** zurückgegebene Wert ist ein Zeiger Wert, der im *ParameterValuePtr* -Argument an **SQLBindParameter** übergeben wird. Data-at-Execution-Spalten sind Spalten in einem Rowset, für die Daten mit **SQLPutData** gesendet werden, wenn eine Zeile mit **SQLBulkOperations** aktualisiert oder hinzugefügt oder mit **SQLSetPos**aktualisiert wird. Sie sind mit **SQLBindCol**gebunden. Der von **SQLParamData** zurückgegebene Wert ist die Adresse der Zeile im **targetvalueptr* -Puffer (durch einen **SQLBindCol**-Befehl festgelegt), der verarbeitet wird.  
   
-5.  Aufrufe **SQLPutData** einmal oder mehrmals, um Daten für den Parameter zu senden. Mehrere ist erforderlich, wenn der Wert größer ist die \* *ParameterValuePtr* im angegebenen Puffer **SQLPutData**; mehrere Aufrufe **SQLPutData**für denselben Parameter dürfen nur beim Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären datenquellenspezifische Datentyp oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binär, oder geben Sie die spezifischen Daten.  
+5.  Ruft **SQLPutData** ein oder mehrere Male auf, um Daten für den Parameter zu senden. Wenn der Datenwert größer ist als der \*in **SQLPutData**angegebene *ParameterValuePtr* -Puffer, ist mehr als ein-Rückruf erforderlich. mehrere Aufrufe von **SQLPutData** für denselben Parameter sind nur zulässig, wenn Zeichen-c-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden oder wenn binäre C-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden.  
   
-6.  Aufrufe **SQLParamData** erneut aus, um zu signalisieren, dass alle Daten für den Parameter gesendet wurde.  
+6.  Ruft **SQLParamData** erneut auf, um zu signalisieren, dass alle Daten für den Parameter gesendet wurden.  
   
-    -   Wenn weitere Data-at-Execution-Parameter, **SQLParamData** gibt SQL_NEED_DATA zurück, und der Anwendung definierte Wert für den nächsten Data-at-Execution-Parameter verarbeitet werden. Die Anwendung wiederholt die Schritte 4 und 5.  
+    -   Wenn weitere Data-at-Execution-Parameter vorhanden sind, gibt **SQLParamData** SQL_NEED_DATA und den von der Anwendung definierten Wert für den nächsten Data-at-Execution-Parameter zurück, der verarbeitet werden soll. Die Anwendung wiederholt die Schritte 4 und 5.  
   
-    -   Wenn keine weiteren Data-at-Execution-Parameter vorhanden sind, ist der Prozess abgeschlossen. Wenn die Anweisung erfolgreich ausgeführt wurde, **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO; Fehler bei der Ausführung gibt, wird SQL_ERROR zurückgegeben. An diesem Punkt **SQLParamData** können alle SQLSTATE, die von der Funktion zurückgegeben werden kann, die verwendet wird, zum Ausführen der Anweisung zurückgeben (**SQLExecDirect** oder **SQLExecute**).  
+    -   Wenn keine weiteren Data-at-Execution-Parameter vorhanden sind, ist der Prozess vollständig. Wenn die Anweisung erfolgreich ausgeführt wurde, gibt **SQLParamData** SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurück. Wenn bei der Ausführung ein Fehler aufgetreten ist, wird SQL_ERROR zurückgegeben. An diesem Punkt können **SQLParamData** beliebige SQLSTATE-Zeichen zurückgeben, die von der Funktion zurückgegeben werden können, die zum Ausführen der Anweisung (**SQLExecDirect** oder **SQLExecute**) verwendet wird.  
   
-         Ausgabewerte für alle Eingabe-/Ausgabe- oder Ausgabe-Parameter sind verfügbar, in der \* *ParameterValuePtr* und **StrLen_or_IndPtr* puffert, nachdem die Anwendung alle Resultsets abgerufen hat von der Anweisung generiert.  
+         Ausgabewerte für Eingabe-/Ausgabe-oder Ausgabeparameter sind \*in den *Parametern ParameterValuePtr* und **StrLen_or_IndPtr* verfügbar, nachdem die Anwendung alle von der-Anweisung generierten Resultsets abgerufen hat.  
   
- Aufrufen von **SQLExecute** oder **SQLExecDirect** fügt die Anweisung in einem Zustand SQL_NEED_DATA zurück. Die Anwendung kann jetzt nur aufrufen **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**, oder **SQLPutData** mit der Anweisung oder der *Verbindungshandle* der Anweisung zugeordneten. Wenn sie jede andere Funktion mit der Anweisung oder die Verbindung mit der Anweisung verknüpfte aufgerufen wird, wird die Funktion gibt SQLSTATE HY010 (Sequenzfehler funktionieren). Die Anweisung / / Blätter der SQL_NEED_DATA Zustand über, wenn **SQLParamData** oder **SQLPutData** ein Fehler zurückgegeben, **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO, oder die Anweisung abgebrochen.  
+ Durch Aufrufen von **SQLExecute** oder **SQLExecDirect** wird die Anweisung in einen SQL_NEED_DATA Zustand versetzt. An diesem Punkt kann die Anwendung nur **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**oder **SQLPutData** mit der-Anweisung oder dem *Verbindungs Handle* aufrufen, das mit der-Anweisung verknüpft ist. Wenn eine andere Funktion mit der-Anweisung oder der Verbindung aufgerufen wird, die der Anweisung zugeordnet ist, gibt die Funktion SQLSTATE HY010 (Funktions Sequenz Fehler) zurück. Die-Anweisung verlässt den SQL_NEED_DATA Zustand, wenn **SQLParamData** oder **SQLPutData** einen Fehler zurückgibt, **SQLParamData** SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgibt oder die Anweisung abgebrochen wird.  
   
- Wenn die Anwendung ruft **SQLCancel** während der Treiber noch Daten für die Data-at-Execution-Parameter benötigt, bricht der Treiber anweisungsausführung ab; die Anwendung kann dann aufrufen **SQLExecute** oder  **SQLExecDirect** erneut aus.  
+ Wenn die Anwendung **SQLCancel** aufruft, während der Treiber weiterhin Daten für Data-at-Execution-Parameter benötigt, bricht der Treiber die Anweisungs Ausführung ab. die Anwendung kann dann **SQLExecute** oder **SQLExecDirect** erneut aufzurufen.  
   
-## <a name="retrieving-streamed-output-parameters"></a>Abrufen von Ausgabeparametern gestreamte
+## <a name="retrieving-streamed-output-parameters"></a>Abrufen von gestreuten Ausgabeparametern
 
- Wenn eine Anwendung festlegt *InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_OUTPUT_STREAM, den Wert des Ausgabeparameters abgerufen werden muss, durch eine oder mehrere Aufrufe von **SQLGetData**. Wenn der Treiber einen Parameterwert gestreamte Ausgabe an die Anwendung zurückgegeben wurde, wird als Reaktion auf einen Aufruf an die folgenden Funktionen SQL_PARAM_DATA_AVAILABLE zurückgegeben: **SQLMoreResults**, **SQLExecute**, und **SQLExecDirect**. Ruft die Anwendung **SQLParamData** um zu bestimmen, welcher Parameterwert verfügbar ist.  
+ Wenn eine Anwendung *inputoutputtype* auf SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_OUTPUT_STREAM festlegt, muss der Ausgabeparameter Wert von einem oder mehreren Aufrufen von **SQLGetData**abgerufen werden. Wenn der Treiber über einen Stream-Ausgabeparameter Wert verfügt, der an die Anwendung zurückgegeben wird, gibt er SQL_PARAM_DATA_AVAILABLE als Reaktion auf einen Aufrufen der folgenden Funktionen zurück: **SQLMoreResults**, **SQLExecute**und **SQLExecDirect**. Eine Anwendung ruft **SQLParamData** auf, um zu bestimmen, welcher Parameterwert verfügbar ist.  
   
- Weitere Informationen über SQL_PARAM_DATA_AVAILABLE und gestreamte Output-Parameter, finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+ Weitere Informationen zu SQL_PARAM_DATA_AVAILABLE und gestreamt-Ausgabeparametern finden [Sie unter Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 ## <a name="using-arrays-of-parameters"></a>Verwenden von Parameterarrays
 
- Wenn eine Anwendung eine Anweisung mit parametermarkierungen auf und übergibt ein Array von Parametern vorbereitet, gibt es zwei Möglichkeiten, die diese ausgeführt werden kann. Eine Möglichkeit ist der Treiber die Array-Verarbeitungsfunktionen des Back-End abhängen, in dem Fall die gesamte Anweisung mit dem Array der Parameter als eine unteilbare Einheit behandelt wird. Oracle ist ein Beispiel für eine Datenquelle, die Array-Verarbeitungsfunktionen unterstützt. Eine weitere Möglichkeit zum Implementieren dieses Feature ist für den Treiber zum Generieren eines Batches von SQL-Anweisungen, eine SQL-Anweisung für einen Satz von Parametern im Parameterarray, und führen Sie den Batch. Arrays von Parametern können nicht verwendet werden, mit einem **UPDATE WHERE CURRENT OF** Anweisung.  
+ Wenn eine Anwendung eine-Anweisung mit Parameter Markierungen vorbereitet und ein Array von Parametern übergibt, gibt es zwei Möglichkeiten, wie dies ausgeführt werden kann. Eine Möglichkeit besteht darin, dass sich der Treiber auf die Array Verarbeitungsfunktionen des Back-Ends verlässt. in diesem Fall wird die gesamte Anweisung mit dem Array von Parametern als eine unteilbare Einheit behandelt. Oracle ist ein Beispiel für eine Datenquelle, die Array Verarbeitungsfunktionen unterstützt. Eine andere Möglichkeit zum Implementieren dieses Features besteht darin, dass der Treiber einen Batch von SQL-Anweisungen generiert, eine SQL-Anweisung für jeden Satz von Parametern im Parameter Array und den Batch auszuführen. Arrays von Parametern können nicht mit einer **Update WHERE CURRENT of** -Anweisung verwendet werden.  
   
- Wenn ein Array von Parametern verarbeitet wird, wird individuellen Ergebnis legt/Zeilenanzahl (eine für jeden Parametersatz) können verfügbar sein, oder legt/Zeilen Ergebnisanzahl können in einem Rollup. Die SQL_PARAM_ARRAY_ROW_COUNTS option **SQLGetInfo** gibt an, ob die Zeilenanzahl für einen Satz von Parametern (SQL_PARC_BATCH) verfügbar sind oder nur eine Zeile die Anzahl ist verfügbar (SQL_PARC_NO_BATCH).  
+ Wenn ein Array von Parametern verarbeitet wird, können einzelne Resultsets/Zeilen Anzahlen (eines für jeden Parametersatz) verfügbar sein, oder die Anzahl der Resultsets/Zeilen kann in eins umgewandelt werden. Die Option SQL_PARAM_ARRAY_ROW_COUNTS in **SQLGetInfo** gibt an, ob die Zeilen Anzahl für jeden Parametersatz (SQL_PARC_BATCH) verfügbar ist oder nur eine Zeilen Anzahl verfügbar ist (SQL_PARC_NO_BATCH).  
   
- Die SQL_PARAM_ARRAY_SELECTS option **SQLGetInfo** angibt, ob ein Resultset für einen Satz von Parametern (SQL_PAS_BATCH) verfügbar ist oder nur ein Resultset ist verfügbar (SQL_PAS_NO_BATCH). Wenn eine Ergebnis generiert Set-Anweisung als ein Array von Parametern ausgeführt wird durch der Treiber nicht möglich ist, gibt SQL_PARAM_ARRAY_SELECTS SQL_PAS_NO_SELECT zurück.  
+ Die Option SQL_PARAM_ARRAY_SELECTS in **SQLGetInfo** gibt an, ob ein Resultset für jeden Parametersatz (SQL_PAS_BATCH) verfügbar ist oder nur ein Resultset verfügbar ist (SQL_PAS_NO_BATCH). Wenn der Treiber nicht zulässt, dass eine Resultset-generierende Anweisung mit einem Array von Parametern ausgeführt wird, gibt SQL_PARAM_ARRAY_SELECTS SQL_PAS_NO_SELECT zurück.  
   
  Weitere Informationen finden Sie unter [SQLGetInfo-Funktion](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
- Zur Unterstützung von Parameterarrays das verweist SQL_ATTR_PARAMSET_SIZE-Anweisungsattribut festgelegt, um die Anzahl der Werte für jeden Parameter anzugeben. Wenn das Feld größer als 1 ist, müssen die Felder SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR APD auf Arrays verweisen. Die Kardinalität jedes Arrays ist gleich dem Wert des verweist SQL_ATTR_PARAMSET_SIZE.  
+ Zur Unterstützung von Arrays von Parametern wird das SQL_ATTR_PARAMSET_SIZE-Anweisungs Attribut festgelegt, um die Anzahl der Werte für jeden Parameter anzugeben. Wenn das Feld größer als 1 ist, müssen die Felder SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR der APD auf Arrays zeigen. Die Kardinalität der einzelnen Arrays entspricht dem Wert SQL_ATTR_PARAMSET_SIZE.  
   
- Das Feld SQL_DESC_ROWS_PROCESSED_PTR APD verweist auf einen Puffer, der die Anzahl von Parametersätzen, die verarbeitet wurden Fehler einschließlich. Als ein Satz von Parametern verarbeitet wird, speichert der Treiber einen neuen Wert in den Puffer. Keine Anzahl wird zurückgegeben, wenn dies ein null-Zeiger ist. Wenn Arrays von Parametern verwendet werden, wird der Wert, der auf das Feld SQL_DESC_ROWS_PROCESSED_PTR APD zeigt aufgefüllt, selbst wenn von der Einstellung Funktion SQL_ERROR zurückgegeben wird. Wird SQL_NEED_DATA zurückgegeben, ist der Wert, der auf das Feld SQL_DESC_ROWS_PROCESSED_PTR APD zeigt auf den Satz der Parameter festgelegt, die verarbeitet wird.  
+ Das SQL_DESC_ROWS_PROCESSED_PTR-Feld des APD verweist auf einen Puffer, der die Anzahl der verarbeiteten Parametersätze enthält, einschließlich der Fehler Sätze. Wenn jeder Satz von Parametern verarbeitet wird, speichert der Treiber einen neuen Wert im Puffer. Wenn dies ein NULL-Zeiger ist, wird keine Zahl zurückgegeben. Wenn Arrays von Parametern verwendet werden, wird der Wert, auf den das SQL_DESC_ROWS_PROCESSED_PTR-Feld der APD zeigt, auch dann aufgefüllt, wenn SQL_ERROR von der Setting-Funktion zurückgegeben wird. Wenn SQL_NEED_DATA zurückgegeben wird, wird der Wert, auf den das SQL_DESC_ROWS_PROCESSED_PTR-Feld der APD zeigt, auf den Satz von Parametern festgelegt, der verarbeitet wird.  
   
- Was geschieht, wenn ein Array der Parameter gebunden ist und ein **UPDATE WHERE CURRENT OF** -Anweisung ausgeführt wird, wird durch Treiber definiert.  
+ Was geschieht, wenn ein Array von Parametern gebunden wird und ein **Update, bei dem die Current of** -Anweisung ausgeführt wird, Treiber definiert ist.  
   
-## <a name="column-wise-parameter-binding"></a>Spaltenweiser Parameterbindung
+## <a name="column-wise-parameter-binding"></a>Spaltenweise Parameter Bindung
 
- In spaltenbezogene Bindungen bindet die Anwendung separaten Parameter und den Längenindikator/Arrays an jeden Parameter an.  
+ In Spalten weiser Bindung bindet die Anwendung separate Parameter-und Längen-/indikatorenarrays an jeden Parameter.  
   
- Um spaltenbezogene Bindungen verwenden zu können, wird die Anwendung zuerst das SQL_ATTR_PARAM_BIND_TYPE-Anweisungsattribut auf SQL_PARAM_BIND_BY_COLUMN. (Dies ist die Standardeinstellung.) Für jede Spalte gebunden werden soll führt die Anwendung die folgenden Schritte aus:  
+ Um die spaltenweise Bindung zu verwenden, legt die Anwendung zuerst das SQL_ATTR_PARAM_BIND_TYPE Statement-Attribut auf SQL_PARAM_BIND_BY_COLUMN fest. (Dies ist die Standardeinstellung.) Für jede Spalte, die gebunden werden soll, führt die Anwendung die folgenden Schritte aus:  
   
-1.  Ordnet ein Array der Parameter-Puffer.  
+1.  Ordnet ein Parameter Puffer Array zu.  
   
-2.  Ordnet ein Array von Längenindikator/Puffern.  
+2.  Ordnet ein Array von Längen-/indikatorenpuffern zu.  
   
     > [!NOTE]  
-    >  Wenn die Anwendung direkt auf Deskriptoren schreibt, wenn spaltenbezogene Bindungen verwendet wird, können die separate Arrays für Länge und Indikator verwendet werden.  
+    >  Wenn die Anwendung bei Verwendung der Spalten bezogenen Bindung direkt in Deskriptoren schreibt, können separate Arrays für Längen-und Indikator Daten verwendet werden.  
   
-3.  Aufrufe **SQLBindParameter** mit den folgenden Argumenten:  
+3.  Ruft **SQLBindParameter** mit den folgenden Argumenten auf:  
   
-    -   *ValueType* ist der C-Typ, der ein einzelnes Element in der Parameterpufferarray.  
+    -   *ValueType* ist der C-Typ eines einzelnen Elements im Parameter Puffer Array.  
   
     -   *ParameterType* ist der SQL-Typ des Parameters.  
   
-    -   *ParameterValuePtr* ist die Adresse des Puffers Parameterarrays.  
+    -   *ParameterValuePtr* ist die Adresse des Parameter Puffer Arrays.  
   
-    -   *BufferLength* ist die Größe eines einzelnen Elements im Parameterarray Puffer. Die *Pufferlänge* Argument wird ignoriert, wenn die Daten fester Länge sind.  
+    -   *BufferLength* ist die Größe eines einzelnen Elements im Parameter Puffer Array. Das *BufferLength* -Argument wird ignoriert, wenn die Daten Daten fester Länge haben.  
   
-    -   *StrLen_or_IndPtr* ist die Adresse des Längenindikator/Arrays.  
+    -   *StrLen_or_IndPtr* ist die Adresse des Längen-/indikatorenarrays.  
   
- Weitere Informationen, wie diese Informationen verwendet werden finden Sie unter "ParameterValuePtr Argument" in "Kommentare" unten in diesem Abschnitt. Weitere Informationen zu spaltenbezogene Bindung von Parametern, finden Sie unter [Arrays Bindungsparameter](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md).  
+ Weitere Informationen zur Verwendung dieser Informationen finden Sie unter "ParameterValuePtr-Argument" in "comments" weiter unten in diesem Abschnitt. Weitere Informationen zur Spalten bezogenen Bindung von Parametern finden Sie unter [Binden von Arrays von Parametern](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md).  
   
-## <a name="row-wise-parameter-binding"></a>Parameterbindung
+## <a name="row-wise-parameter-binding"></a>Zeilenweise Parameter Bindung
 
- Die zeilenweise Bindung definiert die Anwendung eine Struktur, die enthält der Parameter und den Längenindikator/Puffer für jeden Parameter gebunden werden soll.  
+ In Zeilen weiser Bindung definiert die Anwendung eine Struktur, die Parameter-und Längen-/Indikatorpuffer für jeden zu gebundenen Parameter enthält.  
   
- Um die zeilenweise Bindung zu verwenden, führt die Anwendung die folgenden Schritte aus:  
+ Die Anwendung führt die folgenden Schritte aus, um die zeilenweise Bindung zu verwenden:  
   
-1.  Definiert eine Struktur zum Speichern von eines einzigen Satz von Parametern (z. B. sowohl Parameter als auch Längenindikator/Puffer) und ordnet ein Array dieser Strukturen.  
+1.  Definiert eine-Struktur, die einen einzelnen Satz von Parametern (einschließlich der Parameter-und Längen-/Indikatorpuffer) enthält und ein Array dieser Strukturen zuordnet.  
   
     > [!NOTE]  
-    >  Wenn die Anwendung direkt auf Deskriptoren schreibt, wenn die zeilenweise Bindung verwendet wird, können separate Felder für Länge und Indikator verwendet werden.  
+    >  Wenn die Anwendung bei Verwendung der Zeilen bezogenen Bindung direkt in Deskriptoren schreibt, können separate Felder für Längen-und Indikator Daten verwendet werden.  
   
-2.  Legt das Anweisungsattribut SQL_ATTR_PARAM_BIND_TYPE fest, auf die Größe der Struktur, die einen einzelnen Satz von Parametern enthält, oder auf die Größe einer Instanz eines Puffers, in dem der Parameter gebunden werden. Die Länge muss Speicherplatz für alle gebundenen Parameter, und möglicherweise vorhandene Auffüllzeichen der Struktur bzw. des Puffers, um sicherzustellen, dass bei der die Adresse des gebundenen Parameter mit der angegebenen Länge erhöht wird, wird das Ergebnis an den Anfang denselben Parameter im zeigen Sie enthalten die nächste Zeile. Bei Verwendung der *"sizeof"* -Operator in ANSI C, wird dieses Verhalten garantiert.  
+2.  Legt das SQL_ATTR_PARAM_BIND_TYPE Anweisungs Attribut auf die Größe der Struktur fest, die einen einzelnen Satz von Parametern enthält, oder auf die Größe einer Instanz eines Puffers, in den die Parameter gebunden werden. Die Länge muss Leerzeichen für alle gebundenen Parameter und alle Auffüll Zeichen der Struktur oder des Puffers enthalten, um sicherzustellen, dass das Ergebnis, wenn die Adresse eines gebundenen Parameters mit der angegebenen Länge inkrementiert wird, auf den Anfang desselben Parameters im nächste Zeile. Wenn Sie den *sizeof* -Operator in ANSI C verwenden, wird dieses Verhalten garantiert.  
   
-3.  Aufrufe **SQLBindParameter** mit den folgenden Argumenten für jeden Parameter gebunden werden soll:  
+3.  Ruft **SQLBindParameter** mit den folgenden Argumenten für jeden Parameter auf, der gebunden werden soll:  
   
-    -   *ValueType* ist der Typ des Members Puffer Parameter an die Spalte gebunden werden.  
+    -   *ValueType* ist der Typ des Parameter Puffer Elements, das an die Spalte gebunden werden soll.  
   
     -   *ParameterType* ist der SQL-Typ des Parameters.  
   
-    -   *ParameterValuePtr* ist die Adresse des Elements Puffer Parameter in das erste Arrayelement.  
+    -   *ParameterValuePtr* ist die Adresse des Parameter Puffer Elements im ersten Array Element.  
   
-    -   *BufferLength* ist die Größe des Puffers Parameter-Elements.  
+    -   *BufferLength* ist die Größe des Parameter Puffer Elements.  
   
-    -   *StrLen_or_IndPtr* ist die Adresse des Elements Längenindikator/gebunden werden soll.  
+    -   *StrLen_or_IndPtr* ist die Adresse des Längen-/indikatorenmembers, der gebunden werden soll.  
   
- Weitere Informationen, wie diese Informationen verwendet werden, finden Sie unter "*ParameterValuePtr* Argument" weiter unten in diesem Abschnitt. Weitere Informationen über die zeilenweise Bindung von Parametern finden Sie unter den [Arrays Bindungsparameter](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md).  
+ Weitere Informationen zur Verwendung dieser Informationen finden Sie unter "*ParameterValuePtr* -Argument" weiter unten in diesem Abschnitt. Weitere Informationen über die zeilenweise Bindung von Parametern finden Sie in den [Bindungs Arrays von Parametern](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md).  
   
 ## <a name="error-information"></a>Fehlerinformationen
 
- Wenn ein Treiber nicht Parameterarrays als Batches implementiert werden (die Option SQL_PARAM_ARRAY_ROW_COUNTS entspricht SQL_PARC_NO_BATCH), werden Fehler behandelt, als ob eine Anweisung ausgeführt wurden. Wenn der Treiber Parameterarrays als Batches implementiert, kann eine Anwendung das Headerfeld SQL_DESC_ARRAY_STATUS_PTR IPD verwenden, um zu bestimmen, welche Parameter, der eine SQL-Anweisung oder die Parameter in ein Array von Parametern verursacht  **SQLExecDirect** oder **SQLExecute** einen Fehler zurückgibt. Dieses Feld enthält Statusinformationen für jede Zeile von Parameterwerten. Wenn das Feld gibt an, dass ein Fehler aufgetreten ist, werden Felder in der Diagnosedaten-Struktur der Zeilen- und Parameter-Nummer des Parameters an, die nicht. Die Anzahl der Elemente im Array wird durch das Headerfeld für SQL_DESC_ARRAY_SIZE im APD, definiert werden, die durch das verweist SQL_ATTR_PARAMSET_SIZE-Anweisungsattribut festgelegt werden kann.  
+ Wenn ein Treiber Parameter Arrays nicht als Batches implementiert (die SQL_PARAM_ARRAY_ROW_COUNTS Option ist gleich SQL_PARC_NO_BATCH), werden Fehlersituationen wie bei Ausführung einer Anweisung behandelt. Wenn der Treiber Parameter Arrays als Batches implementiert, kann eine Anwendung das SQL_DESC_ARRAY_STATUS_PTR Header-Feld der IPD verwenden, um zu bestimmen, welcher Parameter einer SQL-Anweisung oder welcher Parameter in einem Array von Parametern bewirkt hat, dass **SQLExecDirect** oder **SQLExecute** einen Fehler zurückgibt. Dieses Feld enthält Statusinformationen für jede Zeile von Parameterwerten. Wenn das Feld anzeigt, dass ein Fehler aufgetreten ist, geben Felder in der Diagnosedaten Struktur die Zeilen-und Parameter Nummer des fehlgeschlagenen Parameters an. Die Anzahl der Elemente im Array wird durch das SQL_DESC_ARRAY_SIZE Header-Feld in der APD definiert, das vom Attribut der SQL_ATTR_PARAMSET_SIZE Anweisung festgelegt werden kann.  
   
 > [!NOTE]  
->  Das SQL_DESC_ARRAY_STATUS_PTR-Headerfeld in APD wird verwendet, um Parameter zu ignorieren. Weitere Informationen zu Parameter werden ignoriert finden Sie im nächsten Abschnitt, "Einen Satz von Parametern wird ignoriert."  
+>  Das SQL_DESC_ARRAY_STATUS_PTR Header-Feld in der APD wird verwendet, um Parameter zu ignorieren. Weitere Informationen zum Ignorieren von Parametern finden Sie im nächsten Abschnitt "Ignorieren eines Satzes von Parametern".  
   
- Wenn **SQLExecute** oder **SQLExecDirect** gibt SQL_ERROR zurück, die Elemente im Array verweist das SQL_DESC_ARRAY_STATUS_PTR-Feld in IPD SQL_PARAM_ERROR, SQL_PARAM_SUCCESS, SQL_ enthält PARAM_SUCCESS_WITH_INFO, SQL_PARAM_UNUSED oder SQL_PARAM_DIAG_UNAVAILABLE.  
+ Wenn **SQLExecute** oder **SQLExecDirect** SQL_ERROR zurückgibt, enthalten die Elemente im Array, auf das das SQL_DESC_ARRAY_STATUS_PTR Feld in der IPD zeigt, SQL_PARAM_ERROR, SQL_PARAM_SUCCESS, SQL_PARAM_SUCCESS_WITH_INFO, SQL_PARAM_UNUSED oder SQL_PARAM_DIAG_UNAVAILABLE.  
   
- Für jedes Element im Array enthält die Diagnosedaten-Struktur eine oder mehrere Statusdatensätze. Die SQL_DIAG_ROW_NUMBER-Feld der Struktur gibt an, die Zeilennummer der Parameterwerte, die den Fehler verursacht hat. Wenn es möglich ist, des entsprechenden Parameters in einer Zeile von Parametern zu ermitteln, die den Fehler verursacht hat, wird die Anzahl der Parameter in das Feld "SQL_DIAG_COLUMN_NUMBER" eingegeben werden.  
+ Für jedes Element in diesem Array enthält die Diagnosedaten Struktur mindestens einen Statusdaten Satz. Das SQL_DIAG_ROW_NUMBER-Feld der-Struktur gibt die Zeilennummer der Parameterwerte an, die den Fehler verursacht haben. Wenn es möglich ist, den jeweiligen Parameter in einer Zeile von Parametern zu ermitteln, die den Fehler verursacht hat, wird die Parameter Nummer in das SQL_DIAG_COLUMN_NUMBER Feld eingegeben.  
   
- SQL_PARAM_UNUSED eingegeben, wenn ein Parameter nicht verwendet wurde, da in einem früheren-Parameter ist ein Fehler aufgetreten, die erzwungene **SQLExecute** oder **SQLExecDirect** zum abzubrechen. Z. B. wenn 50 Parameter vorhanden sind und ein Fehler beim Ausführen des Fortieth Satz von Parametern, die verursacht **SQLExecute** oder **SQLExecDirect** abbricht, und klicken Sie dann im SQL_PARAM_UNUSED eingegeben wird, die Statusarray für Parameter 41 bis 50.  
+ SQL_PARAM_UNUSED wird eingegeben, wenn ein Parameter nicht verwendet wurde, weil ein Fehler in einem früheren Parameter aufgetreten ist, durch den **SQLExecute** oder **SQLExecDirect** abgebrochen wurde. Wenn z. b. 50 Parameter vorhanden sind und ein Fehler aufgetreten ist, während der Basis-Satz von Parametern ausgeführt wurde, der das Abbrechen von **SQLExecute** oder **SQLExecDirect** bewirkt hat, wird SQL_PARAM_UNUSED im Status Array für die Parameter 41 bis 50 eingegeben.  
   
- SQL_PARAM_DIAG_UNAVAILABLE eingegeben, wenn der Treiber von Parameterarrays als monolithische Einheit behandelt, damit sie diese Ebene der einzelnen Parameter mit Fehlerinformationen nicht generiert.  
+ SQL_PARAM_DIAG_UNAVAILABLE wird eingegeben, wenn der Treiber Arrays von Parametern als monolithische Einheit behandelt, sodass diese einzelne Parameter Ebene der Fehlerinformationen nicht generiert wird.  
   
- Einige Fehler bei der Verarbeitung von einem einzigen Satz von Parametern dazu führen, dass die Verarbeitung der nachfolgenden Sätze von Parametern im Array zu beenden. Andere Fehler wirken sich nicht auf die Verarbeitung der nachfolgenden Parameter aus. Welche Fehler Verarbeitung angehalten werden, werden die Treiber definiert. Wenn die Verarbeitung wird nicht beendet, alle Parameter im Array werden verarbeitet, aufgrund des Fehlers SQL_SUCCESS_WITH_INFO zurückgegeben und der Puffer von SQL_ATTR_PARAMS_PROCESSED_PTR definiert und der maximalen Anzahl von Parametersätzen verarbeitet festgelegt ist (gemäß der SQL_ATTR_PARAMSET_SIZE Anweisungsattribut), die enthält Fehler.  
+ Einige Fehler bei der Verarbeitung eines einzelnen Parameter Satzes bewirken, dass die nachfolgenden Sätze von Parametern im Array beendet werden. Andere Fehler wirken sich nicht auf die Verarbeitung von nachfolgenden Parametern aus. Welche Fehler die Verarbeitung beendet, wird vom Treiber definiert. Wenn die Verarbeitung nicht beendet wird, werden alle Parameter im Array verarbeitet, SQL_SUCCESS_WITH_INFO als Ergebnis des Fehlers zurückgegeben, und der durch SQL_ATTR_PARAMS_PROCESSED_PTR definierte Puffer wird auf die Gesamtanzahl der verarbeiteten Parametersätze festgelegt (wie vom SQL_ATTR_PARAMSET_SIZE Statement-Attribut), das Fehler Sätze einschließt.  
   
 > [!CAUTION]  
->  ODBC-Verhalten tritt ein Fehler bei der Verarbeitung der ein Array von Parametern ist in ODBC 3. unterschiedlich. *x* als ODBC 2. vorlag. *X*. In ODBC 2. *x*, der Funktion zurückgegebene endete, SQL_ERROR zurück, und verarbeiten. Der Puffer auf die von der *Pirow* Argument **SQLParamOptions** enthalten die Anzahl der Fehlerzeile. In ODBC 3. *x*, SQL_SUCCESS_WITH_INFO zurückgegeben. die Funktion und Verarbeiten von Mai entweder beendet oder fortgesetzt werden. Wenn es weiterhin besteht, wird von SQL_ATTR_PARAMS_PROCESSED_PTR angegebene Puffer festgelegt werden, auf den Wert aller Parameter verarbeitet, einschließlich derjenigen, die zu einem Fehler geführt haben. Diese Änderung im Verhalten kann für vorhandene Anwendungen beeinträchtigen.  
+>  ODBC-Verhalten, wenn ein Fehler bei der Verarbeitung eines Arrays von Parametern auftritt, ist in ODBC 3 anders. *x* als in ODBC 2. *x*. In ODBC 2. *x*, die zurückgegebene Funktion SQL_ERROR und die Verarbeitung wurde beendet. Der Puffer, auf den das *Pirow* -Argument von **SQLParamOptions** zeigt, enthält die Nummer der Fehler Zeile. In ODBC 3. *x*, die Funktion gibt SQL_SUCCESS_WITH_INFO zurück, und die Verarbeitung kann entweder beendet oder fortgesetzt werden. Wenn er fortgesetzt wird, wird der durch SQL_ATTR_PARAMS_PROCESSED_PTR angegebene Puffer auf den Wert aller verarbeiteten Parameter festgelegt, einschließlich derjenigen, die zu einem Fehler geführt haben. Diese Änderung des Verhaltens kann Probleme für vorhandene Anwendungen verursachen.  
   
- Wenn **SQLExecute** oder **SQLExecDirect** gibt vor dem Abschluss der Verarbeitung alle Parametersätze in einem Parameterarray, z. B. wenn SQL_ERROR oder SQL_NEED_DATA zurückgegeben wird, enthält die Statusarray der Status für diesen Parameter, die bereits verarbeitet wurden. Der Speicherort, verweist das SQL_DESC_ROWS_PROCESSED_PTR-Feld in IPD enthält die Nummer der Zeile im Parameterarray, das SQL_ERROR oder SQL_NEED_DATA zurückgegeben. Fehlercode: verursacht hat. Wenn ein Array von Parametern an eine SELECT-Anweisung gesendet wird, ist die Verfügbarkeit von Array-Statuswerte mit dem treiberdefinierten; Sie möglicherweise zur Verfügung, nachdem die Anweisung ausgeführt wurde oder als Ergebnis legt abgerufen werden.  
+ Wenn **SQLExecute** oder **SQLExecDirect** zurückgegeben wird, bevor die Verarbeitung aller Parametersätze in einem Parameter Array abgeschlossen wird, z. b. wenn SQL_ERROR oder SQL_NEED_DATA zurückgegeben wird, enthält das Statusarray Status für die Parameter, die bereits verarbeitet wurden. Der Speicherort, auf den das SQL_DESC_ROWS_PROCESSED_PTR-Feld in der IPD verweist, enthält die Zeilennummer im Parameter Array, die den SQL_ERROR-oder SQL_NEED_DATA Fehlercode verursacht hat. Wenn ein Array von Parametern an eine SELECT-Anweisung gesendet wird, ist die Verfügbarkeit von Status Array Werten vom Treiber definiert. Sie sind möglicherweise verfügbar, nachdem die-Anweisung ausgeführt wurde oder wenn Resultsets abgerufen werden.  
   
-## <a name="ignoring-a-set-of-parameters"></a>Eine Reihe von Parametern wird ignoriert.
+## <a name="ignoring-a-set-of-parameters"></a>Ignorieren eines Satzes von Parametern
 
- Das Feld SQL_DESC_ARRAY_STATUS_PTR APD (wie durch das SQL_ATTR_PARAM_STATUS_PTR-Anweisungsattribut festgelegt) kann verwendet werden, um anzugeben, dass eine Reihe von gebundenen Parametern in einer SQL­Anweisung ignoriert werden sollen. Damit den Treiber, um eine oder mehrere Sätze von Parametern während der Ausführung ignorieren durchführt, sollte eine Anwendung die folgenden Schritte ausführen:  
+ Das SQL_DESC_ARRAY_STATUS_PTR-Feld des APD (wie vom SQL_ATTR_PARAM_STATUS_PTR Statement-Attribut festgelegt) kann verwendet werden, um anzugeben, dass ein Satz gebundener Parameter in einer SQL-Anweisung ignoriert werden soll. Um den Treiber anzuweisen, mindestens eine Reihe von Parametern während der Ausführung zu ignorieren, sollte eine Anwendung die folgenden Schritte ausführen:  
   
-1.  Rufen Sie **SQLSetDescField** festzulegende das Headerfeld SQL_DESC_ARRAY_STATUS_PTR APD um auf ein Array von Werten der SQLUSMALLINT enthält Statusinformationen zu verweisen. Dieses Feld kann auch festgelegt werden, durch den Aufruf **SQLSetStmtAttr** mit einer *Attribut* von SQL_ATTR_PARAM_OPERATION_PTR, der eine Anwendung das Feld festgelegt werden, ohne ein Deskriptorhandle abrufen kann.  
+1.  Aufrufen von **SQLSetDescField** , um das SQL_DESC_ARRAY_STATUS_PTR Header-Feld der APD so festzulegen, dass es auf ein Array von sqlusmallint-Werten verweist, die Status Informationen enthalten sollen. Dieses Feld kann auch durch Aufrufen von **SQLSetStmtAttr** mit dem *Attribut* SQL_ATTR_PARAM_OPERATION_PTR festgelegt werden, das es einer Anwendung ermöglicht, das Feld festzulegen, ohne ein Deskriptorhandle zu erhalten.  
   
-2.  Legen Sie jedes Element des Arrays durch das Feld SQL_DESC_ARRAY_STATUS_PTR APD auf einen von zwei Werten definiert:  
+2.  Legen Sie jedes Element des Arrays, das durch das SQL_DESC_ARRAY_STATUS_PTR-Feld der APD definiert ist, auf einen von zwei Werten fest:  
   
-    -   SQL_PARAM_IGNORE, um anzugeben, dass die Zeile aus der Ausführung der Anweisung ausgeschlossen ist.  
+    -   SQL_PARAM_IGNORE, um anzugeben, dass die Zeile von der Anweisungs Ausführung ausgeschlossen wird.  
   
-    -   SQL_PARAM_PROCEED, um anzugeben, dass die Zeile in der Ausführung der Anweisung enthalten ist.  
+    -   SQL_PARAM_PROCEED, um anzugeben, dass die Zeile in der Anweisungs Ausführung enthalten ist.  
   
-3.  Rufen Sie **SQLExecDirect** oder **SQLExecute** zur Ausführung der vorbereiteten Anweisung.  
+3.  Führen Sie **SQLExecDirect** oder **SQLExecute** zum Ausführen der vorbereiteten Anweisung aus.  
   
- Die folgenden Regeln gelten für das Array, das durch das Feld SQL_DESC_ARRAY_STATUS_PTR APD definiert:  
+ Die folgenden Regeln gelten für das Array, das durch das SQL_DESC_ARRAY_STATUS_PTR-Feld der APD definiert wird:  
   
--   Der Zeiger wird festgelegt. standardmäßig auf null.  
+-   Der Zeiger ist standardmäßig auf NULL festgelegt.  
   
--   Wenn der Zeiger null ist, werden alle Sätze von Parametern verwendet, als ob alle Elemente auf SQL_ROW_PROCEED festgelegt wurden.  
+-   Wenn der Zeiger NULL ist, werden alle Sätze von Parametern verwendet, als wären alle Elemente auf SQL_ROW_PROCEED festgelegt.  
   
--   Festlegen eines Elements auf SQL_PARAM_PROCEED garantiert nicht, dass der Vorgang dieses bestimmten Satz von Parametern verwendet.  
+-   Wenn ein Element auf SQL_PARAM_PROCEED festgelegt wird, wird nicht garantiert, dass der Vorgang diesen speziellen Satz von Parametern verwendet.  
   
--   SQL_PARAM_PROCEED ist als 0 in der Headerdatei definiert.  
+-   SQL_PARAM_PROCEED ist in der Header Datei als 0 definiert.  
   
- Eine Anwendung kann die SQL_DESC_ARRAY_STATUS_PTR Feld im APD auf dasselbe Array als verweisen, auf das durch das SQL_DESC_ARRAY_STATUS_PTR in IRD festgelegt. Dies ist nützlich beim Binden von Parametern an die Daten der Zeile. Parameter können dann nach dem Status der Daten aus der Zeile ignoriert werden. Zusätzlich zu SQL_PARAM_IGNORE dazu führen, dass die folgenden Codes für einen Parameter in einer SQL­Anweisung ignoriert werden soll: SQL_ROW_DELETED, SQL_ROW_UPDATED und SQL_ROW_ERROR. Zusätzlich zu SQL_PARAM_PROCEED dazu führen, dass die folgenden Codes für eine SQL-Anweisung, um den Vorgang fortzusetzen: SQL_ROW_SUCCESS SQL_ROW_SUCCESS_WITH_INFO und SQL_ROW_ADDED.  
+ Eine Anwendung kann das SQL_DESC_ARRAY_STATUS_PTR-Feld in der APD so festlegen, dass Sie auf dasselbe Array verweist, das auf das SQL_DESC_ARRAY_STATUS_PTR Feld in der IRD zeigt. Dies ist nützlich, wenn Parameter an Zeilendaten gebunden werden. Parameter können dann gemäß dem Status der Zeilendaten ignoriert werden. Zusätzlich zu SQL_PARAM_IGNORE bewirken die folgenden Codes, dass ein Parameter in einer SQL-Anweisung ignoriert wird: SQL_ROW_DELETED, SQL_ROW_UPDATED und SQL_ROW_ERROR. Zusätzlich zu SQL_PARAM_PROCEED bewirken die folgenden Codes, dass eine SQL-Anweisung fortgesetzt wird: SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO und SQL_ROW_ADDED.  
   
-## <a name="rebinding-parameters"></a>Erneutes Binden von Datenquellenverweisen Parameter
+## <a name="rebinding-parameters"></a>Parameter zum erneuten Binden
 
- Eine Anwendung kann eine der beiden Vorgänge so ändern Sie eine Bindung durchführen:  
+ Eine Anwendung kann eine der beiden Vorgänge ausführen, um eine Bindung zu ändern:  
   
--   Rufen Sie **SQLBindParameter** an eine neue Bindung für eine Spalte, die bereits gebunden ist. Der Treiber überschreibt die alte Bindung mit den neuen Wert.  
+-   Aufrufen von **SQLBindParameter** , um eine neue Bindung für eine Spalte anzugeben, die bereits gebunden ist. Der Treiber überschreibt die alte Bindung mit der neuen.  
   
--   Geben Sie einen Offset, um die Pufferadresse hinzugefügt werden, die durch den Aufruf Bindung angegeben wurde **SQLBindParameter**. Weitere Informationen finden Sie im nächsten Abschnitt, "Neubindung mit Offsets".  
+-   Geben Sie einen Offset an, der der Puffer Adresse hinzugefügt werden soll, die durch den Bindungs Befehl **SQLBindParameter**angegeben wurde. Weitere Informationen finden Sie im nächsten Abschnitt "Rebinding with Offsets".  
   
-## <a name="rebinding-with-offsets"></a>Das erneute Binden mit Offsets
+## <a name="rebinding-with-offsets"></a>Erneute Bindung mit Offsets
 
- Das erneute Binden der Parameter ist besonders nützlich, wenn eine Anwendung ein Puffer Bereich Setup verfügt, die viele Parameter, aber ein Aufruf enthalten, können **SQLExecDirect** oder **SQLExecute** nur einige der Parameter verwendet. Der verbleibende Raum im Pufferbereich kann für die nächste Gruppe von Parametern verwendet werden, durch Ändern der vorhandenen Bindung durch einen Offset.  
+ Die erneute Bindung von Parametern ist besonders nützlich, wenn eine Anwendung über ein Pufferbereich-Setup verfügt, das viele Parameter enthalten kann, aber ein-Befehl von **SQLExecDirect** oder **SQLExecute** nur einige wenige Parameter verwendet. Der verbleibende Speicherplatz im Pufferbereich kann für die nächste Gruppe von Parametern verwendet werden, indem die vorhandene Bindung durch einen Offset geändert wird.  
   
- Das SQL_DESC_BIND_OFFSET_PTR-Headerfeld in APD verweist auf den Offset für die Bindung. Wenn das Feld nicht Null ist, der Treiber dereferenziert den Zeiger und, wenn keiner der Werte in den Feldern SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR ein null-Zeiger ist, fügt den verweislosen Wert auf diese Felder im Deskriptor Datensätze zum Zeitpunkt der Ausführung. Die neuen Zeigerwerte werden verwendet, wenn die SQL-Anweisungen ausgeführt werden. Der Offset bleibt gültig, nachdem das erneute Binden. Da SQL_DESC_BIND_OFFSET_PTR ein Zeiger auf den Offset anstatt der Offset selbst ist, eine Anwendung kann den Offset direkt ändern, ohne Aufruf [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) oder [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md) auf Ändern Sie das Deskriptorfeld. Der Zeiger wird festgelegt. standardmäßig auf null. Das Feld SQL_DESC_BIND_OFFSET_PTR der ARD kann festgelegt werden, durch einen Aufruf von [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) oder durch einen Aufruf von [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)mit eine *fAttribute* von SQL_ATTR_PARAM_BIND_ OFFSET_PTR.  
+ Das SQL_DESC_BIND_OFFSET_PTR Header-Feld im APD verweist auf den Bindungs Offset. Wenn das Feld ungleich NULL ist, dereferenziert der Treiber den Zeiger. Wenn keiner der Werte in den Feldern SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR ein NULL-Zeiger ist, wird der Dereferenzierte Wert den Feldern im Deskriptor hinzugefügt. Datensätze zur Ausführungszeit. Die neuen Zeiger Werte werden verwendet, wenn die SQL-Anweisungen ausgeführt werden. Der Offset bleibt nach der erneuten Bindung gültig. Da SQL_DESC_BIND_OFFSET_PTR ein Zeiger auf den Offset anstelle des Offsets selbst ist, kann eine Anwendung den Offset direkt ändern, ohne [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) oder [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md) aufrufen zu müssen, um das Deskriptorfeld zu ändern. Der Zeiger ist standardmäßig auf NULL festgelegt. Das SQL_DESC_BIND_OFFSET_PTR-Feld der ARD kann durch einen [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) -Befehl oder durch einen [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)-Befehl mit einem *fattribute* von SQL_ATTR_PARAM_BIND_OFFSET_PTR festgelegt werden.  
   
- Der Offset für die Bindung wird immer direkt auf die Werte in den Feldern SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR hinzugefügt. Wenn der Offset in einen anderen Wert geändert wird, ist der neue Wert direkt auf den Wert in jedem Deskriptorfeld weiterhin hinzugefügt. Der neue Offset ist die Summe aus der Wert des Felds und alle früheren Offsets nicht hinzugefügt.  
+ Der Bindungs Offset wird immer direkt den Werten in den Feldern SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR hinzugefügt. Wenn der Offset in einen anderen Wert geändert wird, wird der neue Wert dem Wert in jedem Deskriptorfeld weiterhin direkt hinzugefügt. Der neue Offset wird der Summe des Feldwerts und aller früheren Offsets nicht hinzugefügt.  
   
 ## <a name="descriptors"></a>Deskriptoren
 
- Wie ein Parameter gebunden ist, wird durch die Felder mit den APDs und Identitätsanbieter bestimmt. Die Argumente in **SQLBindParameter** werden verwendet, um diese deskriptorfelder festgelegt. Die Felder können auch festgelegt werden, indem die **SQLSetDescField** funktioniert, obwohl **SQLBindParameter** ist effizienter, die verwendet werden, da die Anwendung nicht unbedingt ein Deskriptorhandle zum Aufrufen von erhalten**SQLBindParameter**.  
+ Die Art und Weise, wie ein Parameter gebunden wird, wird durch Felder der APDS und IPDS bestimmt. Die Argumente in **SQLBindParameter** werden verwendet, um diese Deskriptorfelder festzulegen. Die Felder können auch durch die **SQLSetDescField** -Funktionen festgelegt werden, obwohl **SQLBindParameter** effizienter zu verwenden ist, da die Anwendung kein Deskriptorhandle zum Aufrufen von **SQLBindParameter**abrufen muss.  
   
 > [!CAUTION]  
->  Aufrufen von **SQLBindParameter** für eine Anweisung auf andere Anweisungen auswirken kann. Dies tritt auf, wenn es sich bei der der Anweisung zugeordneten ARD explizit zugeordnet ist, und auch andere Anweisungen zugeordnet ist. Da **SQLBindParameter** ändert die Felder APD, gelten die Änderungen für alle Anweisungen, die der dieser Deskriptor zugeordnet ist. Ist dies nicht das erforderliche Verhalten, die Anwendung sollte Trennen dieser Deskriptor aus den anderen Anweisungen vor **SQLBindParameter**.  
+>  Das Aufrufen von **SQLBindParameter** für eine Anweisung kann sich auf andere-Anweisungen auswirken. Dies tritt auf, wenn der mit der-Anweisung verknüpfte ARD explizit zugeordnet und auch anderen-Anweisungen zugeordnet wird. Da **SQLBindParameter** die Felder der APD ändert, gelten die Änderungen für alle-Anweisungen, die diesem Deskriptor zugeordnet sind. Wenn dies nicht das erforderliche Verhalten ist, muss die Anwendung diesen Deskriptor von den anderen Anweisungen trennen, bevor **SQLBindParameter**aufgerufen wird.  
   
- Im Prinzip **SQLBindParameter** führt Sie nacheinander die folgenden Schritte aus:  
+ Konzeptionell führt **SQLBindParameter** die folgenden Schritte nacheinander aus:  
   
-1.  Aufrufe [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md) um die APD-Handle zu erhalten.  
+1.  Ruft [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md) auf, um das APD-Handle abzurufen.  
   
-2.  Aufrufe [SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) zum Abrufen APDs SQL_DESC_COUNT-Feld, und wenn der Wert des der *ColumnNumber* Arguments überschreitet den Wert von SQL_DESC_COUNT, Aufrufe **SQLSetDescField**zur Erhöhung des Werts der SQL_DESC_COUNT zu *ColumnNumber*.  
+2.  Ruft [SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) auf, um das SQL_DESC_COUNT Feld der APD zu erhalten, und wenn der Wert des *ColumnNumber* -Arguments den Wert von SQL_DESC_COUNT überschreitet, ruft **SQLSetDescField** auf, um den Wert von SQL_DESC_COUNT auf *ColumnNumber*zu erhöhen.  
   
-3.  Aufrufe [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) mehrere Male auf, um die folgenden Felder der APD Werte zuzuweisen:  
+3.  Ruft [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) mehrmals auf, um den folgenden Feldern der APD Werte zuzuweisen:  
   
-    -   Legt die SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE auf den Wert der *ValueType*, mit dem Unterschied, dass wenn *ValueType* ist eine präzise Bezeichner eines Untertyps "DateTime" oder das Intervall, SQL_DESC_TYPE auf SQL_ festgelegt DATETIME oder SQL_INTERVAL, bzw. legt SQL_DESC_CONCISE_TYPE auf die präzise-ID und SQL_DESC_DATETIME_INTERVAL_CODE das entsprechende DateTime ' oder ' Intervall Fehlersubcode.  
+    -   Legt SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE auf den Wert von *ValueType*fest, mit dem Unterschied, dass, wenn *ValueType* einer der präzisen Bezeichner eines DateTime-oder Interval-unter Typs ist, SQL_DESC_TYPE auf SQL_DATETIME oder SQL_INTERVAL festgelegt wird, SQL_DESC_CONCISE_TYPE auf den präzisen Bezeichner festgelegt und SQL_DESC_DATETIME_INTERVAL_CODE auf den entsprechenden DateTime-oder Interval-Subcode festgelegt wird.  
   
-    -   Legt das SQL_DESC_OCTET_LENGTH-Feld auf den Wert der *Pufferlänge*.  
+    -   Legt das SQL_DESC_OCTET_LENGTH-Feld auf den Wert von *BufferLength*fest.  
   
-    -   Legt das SQL_DESC_DATA_PTR-Feld auf den Wert der *ParameterValue*.  
+    -   Legt das SQL_DESC_DATA_PTR-Feld auf den Wert von *ParameterValue*fest.  
   
-    -   Legt das SQL_DESC_OCTET_LENGTH_PTR-Feld auf den Wert der *StrLen_or_Ind*.  
+    -   Legt das SQL_DESC_OCTET_LENGTH_PTR-Feld auf den Wert *StrLen_Or_Ind*fest.  
   
-    -   Wird das Feld "SQL_DESC_INDICATOR_PTR" auch auf den Wert der *StrLen_or_Ind*.  
+    -   Legt für das SQL_DESC_INDICATOR_PTR-Feld ebenfalls den Wert *StrLen_Or_Ind*fest.  
   
-     Die *StrLen_or_Ind* Parameter gibt an, sowohl den Indikator als auch die Länge für den Parameterwert.  
+     Der *StrLen_Or_Ind* -Parameter gibt sowohl die Indikator Informationen als auch die Länge des Parameter Werts an.  
   
-4.  Aufrufe [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md) um die IPD-Handle zu erhalten.  
+4.  Ruft [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md) auf, um das IPD-Handle abzurufen.  
   
-5.  Aufrufe [SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) IPD Feld "SQL_DESC_COUNT" abgerufen und, wenn der Wert des der *ColumnNumber* Arguments überschreitet den Wert von SQL_DESC_COUNT, Aufrufe **SQLSetDescField**zur Erhöhung des Werts der SQL_DESC_COUNT zu *ColumnNumber*.  
+5.  Ruft [SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) auf, um das SQL_DESC_COUNT Feld der IPD zu erhalten, und wenn der Wert des *ColumnNumber* -Arguments den Wert von SQL_DESC_COUNT überschreitet, ruft **SQLSetDescField** auf, um den Wert von SQL_DESC_COUNT auf *ColumnNumber*zu erhöhen.  
   
-6.  Aufrufe [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) mehrere Male auf, um die folgenden Felder des IPD Werte zuzuweisen:  
+6.  Ruft [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) mehrmals auf, um den folgenden Feldern der IPD Werte zuzuweisen:  
   
-    -   Legt die SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE auf den Wert der *ParameterType*, mit dem Unterschied, dass wenn *ParameterType* ist eine präzise Bezeichner eines Untertyps "DateTime" oder das Intervall, SQL_DESC_TYPE wird auf SQL_DATETIME oder SQL_INTERVAL setzt sich der SQL_DESC_CONCISE_TYPE, auf dem präzise Bezeichner und legt SQL_DESC_DATETIME_INTERVAL_CODE das entsprechende DateTime ' oder ' Intervall Fehlersubcode.  
+    -   Legt SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE auf den Wert von *ParameterType*fest, mit dem Unterschied, dass, wenn *ParameterType* einer der präziseren Bezeichner eines DateTime-oder Interval-unter Typs ist, SQL_DESC_TYPE auf SQL_DATETIME oder SQL_INTERVAL festgelegt wird, SQL_DESC_CONCISE_TYPE auf den präzisen Bezeichner festgelegt und SQL_DESC_DATETIME_INTERVAL_CODE auf den entsprechenden DateTime-oder Interval-Subcode festgelegt wird.  
   
-    -   Legt eine oder mehrere der SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_PRECISION und SQL_DESC_LENGTH entsprechend *ParameterType*.  
+    -   Legt eine oder mehrere SQL_DESC_LENGTH, SQL_DESC_PRECISION und SQL_DESC_DATETIME_INTERVAL_PRECISION entsprechend für *ParameterType*fest.  
   
-    -   Legt SQL_DESC_SCALE auf den Wert der *DecimalDigits*.  
+    -   Legt SQL_DESC_SCALE auf den Wert von *DecimalDigits*fest.  
   
- Wenn der Aufruf von **SQLBindParameter** ein Fehler auftritt, der Inhalt der deskriptorfelder, die sie im APD festgelegt haben, würden sind nicht definiert, und das Feld SQL_DESC_COUNT APD bleibt unverändert. Darüber hinaus wird die SQL_DESC_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE und SQL_DESC_TYPE-Felder des entsprechenden Datensatzes in IPD sind nicht definiert, und das SQL_DESC_COUNT-Feld des IPD bleibt unverändert.  
+ Wenn beim Aufrufen von **SQLBindParameter** ein Fehler auftritt, sind die Inhalte der Deskriptorfelder, die in der APD festgelegt wurden, nicht definiert, und das SQL_DESC_COUNT-Feld der APD bleibt unverändert. Außerdem sind die Felder "SQL_DESC_LENGTH", "SQL_DESC_PRECISION", "SQL_DESC_SCALE" und "SQL_DESC_TYPE" des entsprechenden Datensatzes in der IPD nicht definiert, und das Feld "SQL_DESC_COUNT" der IPD bleibt unverändert.  
   
-## <a name="conversion-of-calls-to-and-from-sqlsetparam"></a>Konvertierung von Aufrufe in und aus SQLSetParam
+## <a name="conversion-of-calls-to-and-from-sqlsetparam"></a>Konvertierung von Aufrufen von und von SQLSetParam
 
- Wenn eine ODBC-1.0-Anwendung aufruft **SQLSetParam** in einer ODBC 3. *X* -Treiber verwenden, die ODBC 3. *X* -Treiber-Manager wird den Aufruf zugeordnet, wie in der folgenden Tabelle gezeigt.  
+ Wenn eine ODBC 1,0-Anwendung **SQLSetParam** in einem ODBC 3 aufruft. *x* -Treiber, ODBC 3. der *x* -Treiber-Manager ordnet den-Befehl zu, wie in der folgenden Tabelle gezeigt.  
   
-|Aufrufen von ODBC-1.0-Anwendung|Rufen Sie mit ODBC 3. *x* Treiber|  
+|Von der Anwendung ODBC 1,0 anrufen|ODBC 3-Rückruf. *x* -Treiber|  
 |----------------------------------|-------------------------------|  
-|SQLSetParam(      StatementHandle,      ParameterNumber,      ValueType,      ParameterType,      LengthPrecision,      ParameterScale,      ParameterValuePtr,      StrLen_or_IndPtr);|SQLBindParameter (StatementHandle "," ParameterNumber "," SQL_PARAM_INPUT_OUTPUT an "," ValueType "," ParameterType, *ColumnSize*, *DecimalDigits*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX,      StrLen_or_IndPtr);|  
+|SQLSetParam (StatementHandle, ParameterNumber, ValueType, ParameterType, Längen Genauigkeit, parameterscale, ParameterValuePtr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, *ColumnSize*, *DecimalDigits*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr);|  
   
 ## <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel wird eine Anwendung eine SQL-Anweisung zum Einfügen von Daten in die Tabelle ORDERS vorbereitet. Für jeden Parameter in der Anweisung, die Anwendung ruft **SQLBindParameter** zum Angeben der ODBC-C-Datentyp und der SQL-Datentyp des Parameters und einen Puffer auf jeden Parameter zu binden. Für jede Zeile der Daten, die Anwendung Datenwerte auf jeden Parameter an und ruft weist **SQLExecute** zum Ausführen der Anweisung.  
+ Im folgenden Beispiel bereitet eine Anwendung eine SQL-Anweisung vor, um Daten in die Tabelle Orders einzufügen. Für jeden Parameter in der-Anweisung ruft die Anwendung **SQLBindParameter** auf, um den ODBC-C-Datentyp und den SQL-Datentyp des Parameters anzugeben, und um einen Puffer an jeden Parameter zu binden. Für jede Daten Zeile weist die Anwendung jedem Parameterdaten Werte zu und ruft **SQLExecute** auf, um die Anweisung auszuführen.  
   
- Im folgende Beispiel wird davon ausgegangen, dass Sie eine ODBC-Datenquelle verfügen, auf dem Computer namens Northwind herzustellen, der die Northwind-Datenbank zugeordnet ist.  
+ Im folgenden Beispiel wird davon ausgegangen, dass Sie über eine ODBC-Datenquelle mit dem Namen "Northwind" verfügen, die der Northwind-Datenbank zugeordnet ist.  
   
- Weitere Codebeispiele, finden Sie unter [SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLProcedures-Funktion](../../../odbc/reference/syntax/sqlprocedures-function.md), [SQLPutData-Funktion](../../../odbc/reference/syntax/sqlputdata-function.md), und [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ Weitere Codebeispiele finden Sie unter [SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)-Funktion, [SQLPutData-Funktion](../../../odbc/reference/syntax/sqlputdata-function.md)und [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
 ```cpp
 // SQLBindParameter_Function.cpp  
@@ -551,7 +551,7 @@ int main() {
   
 ## <a name="code-example"></a>Codebeispiel
 
- Im folgenden Beispiel führt eine Anwendung eine gespeicherte SQL Server-Prozedur, die mit einem benannten Parameter.  
+ Im folgenden Beispiel führt eine Anwendung eine gespeicherte Prozedur SQL Server mithilfe eines benannten Parameters aus.  
   
 ```cpp
 // SQLBindParameter_Function_2.cpp  
@@ -598,19 +598,19 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Zurückgeben von Informationen über einen Parameter in einer Anweisung|[SQLDescribeParam-Funktion](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
-|Ausführen einer SQL­Anweisung|[SQLExecDirect-Funktion](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Ausführen einer vorbereiteten SQL­Anweisung|[SQLExecute-Funktion](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|Freigeben von Parameterpuffern für die Anweisung|[SQLFreeStmt-Funktion](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|Zurückgeben der Anzahl der Parameter|[SQLNumParams-Funktion](../../../odbc/reference/syntax/sqlnumparams-function.md)|  
-|Den nächsten Parameter zum Senden von Daten für die Rückgabe|[SQLParamData-Funktion](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
+|Zurückgeben von Informationen zu einem Parameter in einer-Anweisung|[SQLDescribeParam-Funktion](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
+|Ausführen einer SQL-Anweisung|[SQLExecDirect-Funktion](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Ausführen einer vorbereiteten SQL-Anweisung|[SQLExecute-Funktion](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Freigeben von Parameter Puffern in der Anweisung|[SQLFreeStmt-Funktion](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|Zurückgeben der Anzahl von Anweisungs Parametern|[SQLNumParams-Funktion](../../../odbc/reference/syntax/sqlnumparams-function.md)|  
+|Zurückgeben des nächsten Parameters zum Senden von Daten|[SQLParamData-Funktion](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
 |Angeben mehrerer Parameterwerte|[SQLParamOptions-Funktion](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
-|Senden von Daten von Parametern zum Zeitpunkt der Ausführung|[SQLPutData-Funktion](../../../odbc/reference/syntax/sqlputdata-function.md)|  
+|Senden von Parameterdaten zur Ausführungszeit|[SQLPutData-Funktion](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [Abrufen von Ausgabeparametern mithilfe von SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

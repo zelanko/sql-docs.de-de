@@ -17,30 +17,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874417"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Tipps und Best Practices für die Globalisierung (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  Nur Multidimensional  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** Nur mehrdimensional  
   
  Diese Tipps und Richtlinien können helfen, die Portabilität von Business Intelligence-Lösungen zu erhöhen und Fehler zu vermeiden, die direkt mit der Sprache und Sortierung verbunden sind.  
   
 -   [Verwenden ähnlicher Sortierungen im ganzen Stapel](#bkmk_sameColl)  
   
--   [Allgemeine Empfehlungen für die Sortierung](#bkmk_recos)  
+-   [Allgemeine Sortierungs Empfehlungen](#bkmk_recos)  
   
--   [Unterscheidung nach Groß-/Kleinschreibung von Objektbezeichnern](#bkmk_objid)  
+-   [Groß-/Kleinschreibung von Objekt bezeichlern](#bkmk_objid)  
   
 -   [Gebietsschematests mit Excel und SQL Server Profiler](#bkmk_test)  
   
--   [Schreiben von MDX-Abfragen in einer Projektmappe mit Übersetzungen](#bkmk_mdx)  
+-   [Schreiben von MDX-Abfragen in einer Projekt Mappe mit Übersetzungen](#bkmk_mdx)  
   
--   [Schreiben von MDX-Abfragen mit Datums- und Uhrzeitwerten](#bkmk_datetime)  
+-   [Schreiben von MDX-Abfragen mit Datums-und Uhrzeitwerten](#bkmk_datetime)  
   
-##  <a name="bkmk_sameColl"></a> Verwenden ähnlicher Sortierungen im ganzen Stapel  
+##  <a name="bkmk_sameColl"></a>Verwenden ähnlicher Sortierungen im gesamten Stapel  
  Versuchen Sie, möglichst dieselben Sortierungseinstellungen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wie für die Datenbank-Engine zu verwenden. Legen Sie entsprechende Einstellungen für Unterscheidung nach Breite, Groß-/Kleinschreibung und Akzent fest.  
   
  Jeder Dienst besitzt eigene Einstellungen für die Sortierreihenfolge. Der Standardwert ist für die Datenbank-Engine auf "SQL_Latin1_General_CP1_CI_AS" und für Analysis Services auf "Latin1_General_AS" festgelegt. Die Standardwerte sind bezüglich Unterscheidung nach Groß-/Kleinschreibung, Breite und Akzent kompatibel. Beachten Sie, dass durch Ändern der Einstellungen einer der Sortierungen Probleme auftreten können, wenn sich die Sortierungseigenschaften grundlegend unterscheiden.  
@@ -51,14 +51,14 @@ ms.locfileid: "70874417"
   
  Weitere Details und mögliche Problemumgehungen finden Sie unter [Leerzeichen in einer Unicode-Zeichenfolge liefern je nach Sortierung unterschiedliche Verarbeitungsergebnisse](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
-##  <a name="bkmk_recos"></a> Allgemeine Empfehlungen für die Sortierung  
+##  <a name="bkmk_recos"></a>Allgemeine Sortierungs Empfehlungen  
  Analysis Services stellt immer die vollständige Liste aller verfügbaren Sprachen und Sortierungen bereit; die Sortierungen werden nicht anhand der ausgewählten Sprache gefiltert. Achten Sie darauf, eine praktikable Kombination auswählen.  
   
  Einige der häufig verwendeten Sortierungen sind in der folgenden Liste aufgeführt.  
   
  Betrachten Sie diese Liste als Ausgangspunkt für weitere Untersuchungen, statt als definitive Empfehlung, die andere Optionen ausschließt. Unter Umständen stellen Sie fest, dass eine nicht ausdrücklich empfohlene Sortierung am besten für Ihre Daten geeignet ist. Gründliche Tests sind die einzige Möglichkeit zu überprüfen, ob Datenwerte richtig sortiert und verglichen werden. Achten Sie wie immer darauf, beim Testen der Sortierung sowohl Verarbeitungs- als auch Abfragearbeitsauslastungen auszuführen.  
   
--   Für Anwendungen, die die 26 Zeichen des lateinischen Alphabets verwenden, wird häufig [Latin1_General_100_AS](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet) verwendet.  
+-   Für Anwendungen, die die 26 Zeichen des lateinischen Alphabets verwenden, wird häufig [Latin1_General_100_AS](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet)verwendet.  
   
 -   Nordeuropäische Sprachen, die skandinavische Buchstaben (z. B. ø) enthalten, können Finnish_Swedish_100 verwenden.  
   
@@ -72,28 +72,28 @@ ms.locfileid: "70874417"
   
      Auch andere Regionen (z. b. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (auf SQL Server 2008 und höher) Recht häufig verwendet.  
   
--   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213) unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als der relationalen Datenbank-Engine von SQL Server stammen.  
+-   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als der relationalen Datenbank-Engine von SQL Server stammen.  
   
      Japanese_Bushu_Kakusu_100 wird selten auf Servern verwendet, die Analysis Services-Arbeitsauslastungen ausführen.  
   
 -   Korean_100 wird für Koreanisch empfohlen. Obwohl Korean_Wansung_Unicode weiterhin in der Liste verfügbar ist, ist es veraltet.  
   
-##  <a name="bkmk_objid"></a> Unterscheidung nach Groß-/Kleinschreibung von Objektbezeichnern  
+##  <a name="bkmk_objid"></a>Groß-/Kleinschreibung von Objekt bezeichlern  
  Ab SQL Server 2012 SP2 wird die Unterscheidung nach Groß-/Kleinschreibung von Objektbezeichnern unabhängig von der Sortierung erzwungen, aber das Verhalten ist je nach Sprache unterschiedlich:  
   
 |Sprachschrift|Unterscheidung nach Groß-/Kleinschreibung|  
 |---------------------|----------------------|  
-|**Standardlateinisches Alphabet**|Bei Objektbezeichnern in lateinischer Schrift (beliebige der 26 englischen Groß- oder Kleinbuchstaben) wird unabhängig von der Sortierung die Groß-und Kleinschreibung nicht unterschieden. Beispielsweise werden die folgenden Objekt-IDs als identisch angesehen: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Intern werden in Analysis Services die Zeichen in der Zeichenfolge behandelt, als wären alle Großbuchstaben, und dann wird ein einfacher Bytevergleich ausgeführt, der unabhängig von der Sprache ist.<br /><br /> Beachten Sie, dass nur die 26 Zeichen betroffen sind. Wenn die Sprache Westeuropäisch ist, jedoch skandinavische Zeichen verwendet, wird das zusätzliche Zeichen nicht groß geschrieben.|  
+|**Basis-Latin-Alphabet**|Bei Objektbezeichnern in lateinischer Schrift (beliebige der 26 englischen Groß- oder Kleinbuchstaben) wird unabhängig von der Sortierung die Groß-und Kleinschreibung nicht unterschieden. Beispielsweise werden die folgenden Objekt-IDs als identisch angesehen: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Intern werden in Analysis Services die Zeichen in der Zeichenfolge behandelt, als wären alle Großbuchstaben, und dann wird ein einfacher Bytevergleich ausgeführt, der unabhängig von der Sprache ist.<br /><br /> Beachten Sie, dass nur die 26 Zeichen betroffen sind. Wenn die Sprache Westeuropäisch ist, jedoch skandinavische Zeichen verwendet, wird das zusätzliche Zeichen nicht groß geschrieben.|  
 |**Kyrillisch, Griechisch, Koptisch, Armenisch**|Bei Objektbezeichnern in nicht-lateinischer Schrift mit Groß-/Kleinschreibung, z. B. Kyrillisch, wird immer nach Groß-/Kleinschreibung unterschieden. Beispielsweise werden Измерение und измерение als zwei unterschiedliche Werte betrachtet, obwohl der einzige Unterschied die Großschreibung des ersten Buchstabens ist.|  
   
- **Auswirkungen der Unterscheidung nach Groß-/Kleinschreibung für Objektkennungen**  
+ **Auswirkungen der Berücksichtigung der Groß-/Kleinschreibung für Objekt Bezeichner**  
   
  Die in der Tabelle beschriebenen Verhaltensweisen bezüglich Groß-/Kleinschreibung gelten nur für Objektbezeichner und nicht für Objektnamen. Wenn Sie eine geänderte Funktionsweise Ihrer Lösung beobachten (bei einem Vorher/nachher-Vergleich nach der Installation von SQL Server 2012 SP2 oder höher), handelt es sich wahrscheinlich um ein Problem der Verarbeitung. Abfragen werden nicht von Objektbezeichnern betroffen. Für beide Abfragesprachen (DAX und MDX) verwendet die Formel-Engine den Objektnamen (nicht den Bezeichner).  
   
 > [!NOTE]  
 >  Codeänderungen, die im Zusammenhang mit der Groß-/Kleinschreibung stehen, bedeuteten eine erhebliche Änderung für einige Anwendungen. Weitere Informationen finden Sie unter [Wichtige Änderungen an Analysis Services-Funktionen in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
-##  <a name="bkmk_test"></a> Testen des Gebietsschemas mithilfe von Excel, SQL Server Profiler und SQL Server Management Studio  
+##  <a name="bkmk_test"></a>Gebiets Schema Tests mit Excel, SQL Server Profiler und SQL Server Management Studio  
  Beim Testen von Übersetzungen muss die Verbindung den LCID-Wert der Übersetzung angeben. Wie in [Übernehmen anderer Sprachen aus SSAS in Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)dokumentiert ist, können Sie Excel zum Testen Ihrer Übersetzungen verwenden.  
   
  Dazu können Sie die ODC-Datei von Hand bearbeiten und die Verbindungszeichenfolgeneigenschaft für die Gebietsschema-ID einfügen. Probieren Sie dies mit der mehrdimensionalen Adventure Works-Beispieldatenbank aus.  
@@ -102,50 +102,50 @@ ms.locfileid: "70874417"
   
 -   Fügen Sie der Verbindungszeichenfolge `Locale Identifier=1036` hinzu. Speichern und schließen Sie die Datei.  
   
--   Öffnen Sie Excel | **Daten** | **Vorhandene Verbindungen**. Filtern Sie die Liste, um nur Verbindungsdateien auf diesem Computer anzuzeigen. Suchen Sie die Verbindung für Adventure Works (sehen Sie sich den Namen genau an, es könnte mehrere geben). Öffnen Sie die Verbindung.  
+-   Excel öffnen | Vorhandene **Daten** | **Verbindungen**. Filtern Sie die Liste, um nur Verbindungsdateien auf diesem Computer anzuzeigen. Suchen Sie die Verbindung für Adventure Works (sehen Sie sich den Namen genau an, es könnte mehrere geben). Öffnen der Verbindung.  
   
      Die französischen Übersetzungen aus der Adventure Works-Beispieldatenbank sollten angezeigt werden.  
   
-     ![Excel-PivotTables mit französischen Übersetzungen](media/ssas-localetest-excel.png "Excel-PivotTables mit französischen Übersetzungen")  
+     ![Excel-PivotTable mit französischen Übersetzungen](media/ssas-localetest-excel.png "Excel-PivotTable mit französischen Übersetzungen")  
   
  Anschließend können Sie mit SQL Server Profiler das Gebietsschema bestätigen. Klicken Sie auf ein `Session Initialize` -Ereignis, und suchen Sie dann in der Eigenschaftenliste im Textbereich unten nach `<localeidentifier>1036</localeidentifier>`.  
   
  In Management Studio können Sie die Gebietsschema-ID für eine Serververbindung angeben.  
   
--   Klicken Sie im Objekt-Explorer | **Verbinden** | **Analysis Services** | **Optionen** auf die Registerkarte **Zusätzliche Verbindungsparameter**.  
+-   In Objekt-Explorer | **Verbinden** | **Sie Analysis Services** | **Optionen**, und klicken Sie auf die Registerkarte **Zusätzliche Verbindungsparameter** .  
   
 -   Geben Sie `Local Identifier=1036` ein, und klicken Sie dann auf **Verbinden**.  
   
 -   Führen Sie eine MDX-Abfrage für die Adventure Works-Datenbank aus. Die Abfrageergebnisse sollten die französischen Übersetzungen sein.  
   
-     ![MDX-Abfrage mit französischen Übersetzungen in SSMS](media/ssas-localetest-ssms.png "MDX-Abfragen mit französischen Übersetzungen in SSMS")  
+     ![MDX-Abfrage mit französischen Übersetzungen in SSMS](media/ssas-localetest-ssms.png "MDX-Abfrage mit französischen Übersetzungen in SSMS")  
   
-##  <a name="bkmk_mdx"></a> Schreiben von MDX-Abfragen in einer Projektmappe mit Übersetzungen  
+##  <a name="bkmk_mdx"></a>Schreiben von MDX-Abfragen in einer Projekt Mappe mit Übersetzungen  
  Übersetzungen stellen Anzeigeinformationen für die Namen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekten zur Verfügung, wobei die Bezeichner für diese Objekte jedoch nicht übersetzt werden. Verwenden Sie nach Möglichkeit die Bezeichner und Schlüssel für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte, nicht die übersetzten Beschriftungen und Namen. Verwenden Sie z. B. Elementschlüssel anstelle von Elementnamen für MDX-Anweisungen und -Skripts (Multidimensional Expressions, MDX), um sprachübergreifende Portabilität sicherzustellen.  
   
 > [!NOTE]  
->  Beachten Sie, dass für tabellarische Objektnamen unabhängig von der Sortierung nie die Groß-/Kleinschreibung unterschieden wird. Mehrdimensionale Objektnamen dagegen folgen der bezüglich der Unterscheidung nach Groß-/Kleinschreibung der Sortierung. Da für mehrdimensionale Objektnamen die Groß-/Kleinschreibung unterschieden wird, stellen Sie sicher, dass alle MDX-Abfragen, die auf mehrdimensionale Objekte verweisen, die korrekte Groß-/Kleinschreibung verwenden.  
+>  Beachten Sie, dass für tabellarische Objektnamen unabhängig von der Sortierung nie die Groß-/Kleinschreibung unterschieden wird. Mehrdimensionale Objektnamen hingegen folgen der Groß-/Kleinschreibung der Sortierung. Da für mehrdimensionale Objektnamen die Groß-/Kleinschreibung unterschieden wird, stellen Sie sicher, dass alle MDX-Abfragen, die auf mehrdimensionale Objekte verweisen, die korrekte Groß-/Kleinschreibung verwenden.  
   
-##  <a name="bkmk_datetime"></a> Schreiben von MDX-Abfragen mit Datums- und Uhrzeitwerten  
+##  <a name="bkmk_datetime"></a>Schreiben von MDX-Abfragen mit Datums-und Uhrzeitwerten  
  Die folgenden Vorschläge sollen die Verwendung Ihrer datums- und zeitbasierten MDX-Abfragen in verschiedenen Sprachen erleichtern:  
   
 1.  **Verwenden numerischer Teile für Vergleiche und Vorgänge**  
   
-     Verwenden Sie beim Ausführen von Monats- und Wochentagvergleichen und -operationen anstelle der Zeichenfolgenäquivalente die numerischen Datums- und Uhrzeitangaben (z. B. "MonthNumberofYear" anstelle von "MonthName"). Numerische Werte sind am wenigsten von Unterschieden in Sprachübersetzungen betroffen.  
+     Verwenden Sie beim Ausführen von Monats- und Wochentagvergleichen und -operationen anstelle der Zeichenfolgenäquivalente die numerischen Datums- und Uhrzeitangaben (z. B. "MonthNumberofYear" anstelle von "MonthName"). Numerische Werte sind am wenigsten von den Unterschieden in den Sprachübersetzungen betroffen.  
   
-2.  **Verwenden von Zeichenfolgenäquivalenten in einem Resultset**  
+2.  **Verwenden von Zeichen folgen äquivalenten in einem Resultset**  
   
      Ziehen Sie beim Erstellen von Resultsets für Endbenutzer in Erwägung, die Zeichenfolge (z. B. "MonthName") zu verwenden, sodass Ihr mehrsprachiges Publikum von den Übersetzungen profitieren kann, die Sie bereitgestellt haben.  
   
-3.  **Verwenden der ISO-Datumsformate für universelle Datums- und Uhrzeitangaben**  
+3.  **ISO-Datumsformate für universelle Datums-und Uhrzeit Informationen verwenden**  
   
      Ein [Analysis Services-Experte](http://geekswithblogs.net/darrengosbell/Default.aspx) hat diese Empfehlung: "Ich verwende für Datumszeichenfolgen, die ich an SQL- oder MDX-Abfragen übergebe, immer das ISO-Datumsformat yyyy-mm-dd, da es eindeutig ist und unabhängig von den regionalen Einstellungen des Clients oder Servers funktioniert. Ich stimme zu, dass der Server bei der Analyse eines mehrdeutigen Datumsformats auf seine regionalen Einstellungen zurückgreifen sollte. Aber ich denke auch, wenn Sie eine Möglichkeit haben, die nicht der Interpretationen unterworfen ist, sollten Sie besser diese wählen".  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
-     Die folgende MDX-Abfrage aus einem Forumsbeitrag veranschaulicht, wie mit der Funktion „Format“ Datumsangaben in einem bestimmten Format zurückgegeben werden, unabhängig von den zugrunde liegenden regionalen Einstellungen.  
+     Die folgende MDX-Abfrage aus einem Forumsbeitrag veranschaulicht, wie mit der Funktion Format Datumsangaben in einem bestimmten Format zurückgegeben werden, unabhängig von den zugrunde liegenden regionalen Einstellungen.  
   
-     Den ursprünglichen Beitrag finden Sie unter [SSAS 2012 generiert ungültige Datumsangaben (Forumsbeitrag auf Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) .  
+     Den ursprünglichen Beitrag finden Sie unter [SSAS 2012 generiert ungültige Datumsangaben (Forumsbeitrag auf Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2).  
   
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
@@ -159,8 +159,8 @@ ms.locfileid: "70874417"
   
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Globalisierungs Szenarien für Analysis Services multidimensionalen](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Globalisierungs Szenarien für Analysis Services-multidimensionalen](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Schreiben internationaler Transact-SQL-Anweisungen](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

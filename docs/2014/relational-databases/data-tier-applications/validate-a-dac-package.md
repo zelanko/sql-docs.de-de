@@ -18,21 +18,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782667"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
   Es wird empfohlen, den Inhalt eines DAC-Pakets vor der Bereitstellung in der Produktionsumgebung sowie die Upgradeaktionen vor dem Aktualisieren einer vorhandenen DAC zu überprüfen. Dies gilt insbesondere für die Bereitstellung von Paketen, die nicht im Unternehmen entwickelt wurden.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
   
-2.  **So aktualisieren Sie eine DAC mit:**  [Anzeigen des Inhalts einer DAC](#ViewDACContents), [Anzeigen von Datenbankänderungen](#ViewDBChanges), [Anzeigen von Upgradeaktionen](#ViewUpgradeActions), [Vergleichen von DACs](#CompareDACs)  
+2.  **So aktualisieren Sie eine DAC:**  [Anzeigen des Inhalts einer DAC](#ViewDACContents), [Anzeigen der Datenbankänderungen](#ViewDBChanges), [Anzeigen der Upgradeaktionen](#ViewUpgradeActions), [Vergleichen von DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a>Voraussetzungen  
- Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, stellen Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereit, führen [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus und überprüfen außerdem den Code, z. B. gespeicherte Prozeduren oder sonstigen benutzerdefinierten Code.  
+##  <a name="Prerequisites"></a> Voraussetzungen  
+ Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, stellen Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereit, führen [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus und überprüfen außerdem den Code, z. B. gespeicherte Prozeduren oder sonstigen benutzerdefinierten Code.  
   
 ##  <a name="ViewDACContents"></a> Anzeigen des Inhalts einer DAC  
  Es gibt zwei Vorgehensweisen, um den Inhalt eines Datenebenenanwendungs-Pakets (DAC) anzuzeigen. Sie können das DAC-Paket in ein DAC-Projekt in SQL Server Developer Tools importieren. Der Inhalt des Pakets kann in einen Ordner entpackt werden.  
@@ -105,10 +105,10 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> Anzeigen von Upgradeaktionen  
+##  <a name="ViewUpgradeActions"></a>Upgradeaktionen anzeigen  
  Vor der Verwendung einer neuen Version eines DAC-Pakets zum Aktualisieren einer DAC, die aus einem früheren DAC-Paket bereitgestellt wurde, können Sie einen Bericht generieren, der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen enthält, die während des Upgrades ausgeführt werden, und die Anweisungen dann überprüfen.  
   
- **Melden von Upgradeaktionen mithilfe eines Assistenten**  
+ **Berichtsupgradeaktionen mithilfe eines Assistenten**  
   
 1.  Führen Sie den **Assistenten zum Aktualisieren von Datenebenenanwendungen** aus, und geben Sie die derzeit bereitgestellte DAC und das DAC-Paket mit der neuen Version der DAC an.  
   
@@ -118,7 +118,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 4.  Weitere Informationen zur Verwendung des Assistenten finden Sie unter [Upgrade einer Datenebenenanwendung](upgrade-a-data-tier-application.md).  
   
- **Melden von Upgradeaktionen mithilfe von PowerShell**  
+ **Berichtsupgradeaktionen mithilfe von PowerShell**  
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die bereitgestellte DAC enthält.  
   
@@ -161,14 +161,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Compare DACs  
+##  <a name="CompareDACs"></a>Vergleichen von DACs  
  Vor dem Aktualisieren einer DAC empfiehlt es sich, die Unterschiede in der Datenbank und in den Objekten auf Instanzebene zwischen der aktuellen und der neuen DAC zu vergleichen. Wenn Sie über keine Kopie des Pakets für die aktuelle DAC verfügen, können Sie ein Paket aus der aktuellen Datenbank extrahieren.  
   
  Wenn Sie beide DAC-Pakete in DAC-Projekte in SQL Server Developer Tools importieren, können Sie das Tool "Schemavergleich" verwenden, um die Unterschiede zwischen den beiden DACs zu analysieren.  
   
  Entpacken Sie alternativ die DACs in separate Ordner. Anschließend können Sie die Unterschiede mit einem Vergleichstool wie dem Hilfsprogramm "WinDiff" analysieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](deploy-a-data-tier-application.md)   
  [Upgrade einer Datenebenenanwendung](upgrade-a-data-tier-application.md)  

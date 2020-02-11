@@ -1,5 +1,5 @@
 ---
-title: Strukturieren von Daten | Microsoft-Dokumentation
+title: Daten Strukturierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,20 +13,20 @@ ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1811d46bb99b7cdb38bf6508d709826167f787f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925607"
 ---
 # <a name="data-shaping"></a>Datenstrukturierung
-Dieser Abschnitt enthält die folgenden Themen.  
+Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Daten strukturieren (Übersicht)](../../../ado/guide/data/data-shaping-overview.md)  
+-   [Datenstrukturierung – Übersicht](../../../ado/guide/data/data-shaping-overview.md)  
   
--   [Daten ShapingExample](../../../ado/guide/data/data-shaping-example.md)  
+-   [Data ShapingExample](../../../ado/guide/data/data-shaping-example.md)  
   
--   [Umformen](../../../ado/guide/data/reshaping.md)  
+-   [Neustrukturierung](../../../ado/guide/data/reshaping.md)  
   
 -   [Untergeordnete Aggregate](../../../ado/guide/data/grandchild-aggregates.md)  
   
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält die folgenden Themen.
   
 -   [Beibehalten von hierarchischen Recordsets](../../../ado/guide/data/persisting-hierarchical-recordsets.md)  
   
--   [Required Providers for Data Shaping (Erforderliche Anbieter für die Datenstrukturierung)](../../../ado/guide/data/required-providers-for-data-shaping.md)  
+-   [Erforderliche Anbieter für die Datenstrukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md)  
   
 -   [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)  
   
@@ -42,10 +42,10 @@ Dieser Abschnitt enthält die folgenden Themen.
   
 -   [SHAPE COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)  
   
--   [Fabricating Hierarchical Recordsets (Herstellen hierarchischer Recordsets)](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)  
+-   [Herstellen hierarchischer Recordsets](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)  
   
 -   [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)  
   
--   [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)  
+-   [Formale Grammatik für Strukturen](../../../ado/guide/data/formal-shape-grammar.md)  
   
--   [Visual Basic for Applications-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+-   [Visual Basic for Applications Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)

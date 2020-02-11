@@ -1,5 +1,5 @@
 ---
-title: Neugestalten | Microsoft-Dokumentation
+title: Umgestaltung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 213ed5f05133733b8336f184599ca8ef3e4028a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924351"
 ---
 # <a name="reshaping"></a>Neustrukturierung
-Ein **Recordset** erstellt von einer Klausel in einer Form Befehl zugewiesen werden kann ein *Alias* Name (in der Regel mit dem AS-Schlüsselwort). Der Alias des eine geformten **Recordset** in einem völlig anderen Befehl verwiesen werden kann. D. h. Sie können wieder verwenden, oder *umformen*, eine zuvor geformten **Recordset** in einem neuen Shape-Befehl. Um dieses Feature zu unterstützen, stellt ADO eine Eigenschaft bereit, mit denen [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
+Einem **Recordset** , das durch eine-Klausel eines Shape-Befehls erstellt wurde, kann ein *Alias* Name zugewiesen werden (in der Regel mit dem As-Schlüsselwort). Auf den Alias eines geformten **Recordsets** kann in einem völlig anderen Befehl verwiesen werden. Das heißt, Sie können ein zuvor geformtes **Recordset** in einem neuen Shape-Befehl wieder verwenden oder *neu*strukturieren. Zur Unterstützung dieser Funktion stellt ADO eine Eigenschaft [namens "reshape](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)" bereit.  
   
- Neu gestaltet werden, verfügt über zwei Hauptfunktionen aus. Die erste besteht darin, ordnen Sie einer vorhandenen **Recordset** mit einem neuen übergeordneten **Recordset**.  
+ Die Umgestaltung verfügt über zwei Hauptfunktionen. Der erste besteht darin, ein vorhandenes **Recordset** einem neuen übergeordneten **Recordset**zuzuordnen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -36,10 +36,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- Die zweite Funktion ist nicht in Kapitel unterteilten Zugriff auf vorhandene untergeordnete ermöglichen **Recordset** Objekte, mit der Syntax "Form \<Recordset reshape Name >".  
+ Die zweite Funktion besteht darin, den nicht-untergeordneten Zugriff auf vorhandene untergeordnete Recordsetobjekte mithilfe der \<Syntax "Shape Recordset umstrukturieren Name>" zu aktivieren. ****  
   
 > [!NOTE]
->  Spalten kann nicht angefügt werden, zu einem vorhandenen **Recordset**, strukturieren einer parametrisierten **Recordset** oder **Recordset** Objekte in der alle dazwischen liegenden COMPUTE-Klausel, oder führen aggregieren Sie Vorgänge für alle **Recordset** Nachfolger der **Recordset** Clientszenarios wird. Die **Recordset** Clientszenarios wird und die neue Form-Befehl müssen beide verwenden Sie den gleichen [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md).  
+>  Es ist nicht möglich, Spalten an ein vorhandenes **Recordset**anzufügen, ein parametrisiertes **Recordset** oder die **Recordset** -Objekte in einer beliebigen dazwischenliegenden COMPUTE-Klausel neu zu strukturieren oder Aggregat Vorgänge für beliebige **Recordsets** durchzuführen, die von dem neu formatierten **Recordset** abgeleitet werden. Das **Recordset** , das umgestaltet wird, und der neue Shape-Befehl müssen beide dieselbe [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Shaping Example (Beispiele der Datenstrukturierung)](../../../ado/guide/data/data-shaping-example.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenstrukturierung – Beispiel](../../../ado/guide/data/data-shaping-example.md)
