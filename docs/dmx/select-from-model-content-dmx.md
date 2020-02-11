@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892830"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Wählen Sie &lt;aus&gt;dem Modell aus. Inhalt (DMX)
@@ -42,18 +42,18 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *Bedingungs Ausdruck*  
  Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
- *expression*  
+ *Begriff*  
  Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Das **Select from**  _\<-Modell >_ **. Die Inhalts** Anweisung gibt Inhalt zurück, der für jeden Algorithmus spezifisch ist. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **Select from \<Model-> verwenden. Inhalts** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
+## <a name="remarks"></a>Bemerkungen  
+ Das **Select from** _ \<-Modell>_ **. Die Inhalts** Anweisung gibt Inhalt zurück, der für jeden Algorithmus spezifisch ist. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **Select from \<Model-> verwenden. Inhalts** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
   
  In der folgenden Tabelle sind die im Miningmodellinhalt enthaltenen Spalten aufgeführt.  
   
 > [!NOTE]  
 >  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung des Mining Modell Inhalts für jeden Algorithmus und Tipps zur Interpretation und Abfrage des Mining Modell Inhalts für die einzelnen Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
-|CONTENT-Rowsetspalte|Beschreibung|  
+|CONTENT-Rowsetspalte|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Ein Katalogname. NULL, wenn der Anbieter Kataloge nicht unterstützt.|  
 |MODEL_SCHEMA|Ein nicht qualifizierter Schemaname. NULL, wenn der Anbieter Schemas nicht unterstützt.|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- In der folgenden Abfrage wird die isnachfolger-Funktion verwendet, um die unmittelbaren untergeordneten Elemente des Knotens zurückzugeben, der in der vorherigen Abfrage zurückgegeben wurde.  
+ In der folgenden Abfrage wird die **isnachfolger** -Funktion verwendet, um die unmittelbaren untergeordneten Elemente des Knotens zurückzugeben, der in der vorherigen Abfrage zurückgegeben wurde.  
   
 > [!NOTE]  
->  Da der Wert von NODE_NAME eine Zeichenfolge ist, können Sie keine untergeordnete SELECT-Anweisung verwenden, um die NODE_ID als Argument an die **isnachfolger** -Funktion zurückzugeben.  
+>  Da der Wert des NODE_NAME eine Zeichenfolge ist, können Sie keine untergeordnete SELECT-Anweisung verwenden, um die NODE_ID als Argument an die **isnachfolger** -Funktion zurückzugeben.  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -142,9 +142,9 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>Siehe auch  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Wählen Sie &#40;DMX-&#41;](../dmx/select-dmx.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd2b5d690303521d11fcd0f4888b4dc611406e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243120"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL-Codeausschnitte
@@ -25,11 +25,11 @@ ms.locfileid: "75243120"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie ein vorhandener Ausschnitt eingefügt wird, z. B. ein CREATE TABLE- oder SELECT-Ausschnitt.|[Einfügen von Transact-SQL-Ausschnitten](insert-transact-sql-snippets.md)|  
-|Beschreibt, wie ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem BEGIN-, IF- oder WHILE-Block eingeschlossen wird.|[Einfügen von Transact-SQL-Umschließungs Ausschnitten](insert-surround-with-transact-sql-snippets.md)|  
-|Beschreibt, wie die Erstellung einer vollständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung bzw. eines Blocks nach dem Einfügen eines Codeausschnitts abgeschlossen wird.|[Vervollständigen von Transact-SQL-Ausschnitten](complete-transact-sql-snippets.md)|  
+|Beschreibt, wie ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem BEGIN-, IF- oder WHILE-Block eingeschlossen wird.|[Einfügen von Transact-SQL-Umschließungsausschnitten](insert-surround-with-transact-sql-snippets.md)|  
+|Beschreibt, wie die Erstellung einer vollständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung bzw. eines Blocks nach dem Einfügen eines Codeausschnitts abgeschlossen wird.|[Abschließen von Transact-SQL-Ausschnitten](complete-transact-sql-snippets.md)|  
 |Beschreibt, wie eigene benutzerdefinierte Ausschnitte erstellt und zum Satz der SQL Server-Ausschnitte hinzugefügt werden.|[Hinzufügen von Transact-SQL-Ausschnitten](add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

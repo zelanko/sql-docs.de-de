@@ -1,5 +1,5 @@
 ---
-title: Abschluss der Vorbereitung für Testfälle (OracleToSQL) | Microsoft-Dokumentation
+title: Fertigstellung der Test Fall Vorbereitung (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,53 +11,53 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: bc5693c71ac6061f12ee90386b3c135a45a14e09
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266068"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Beenden der Vorbereitung für Testfälle (OracleToSQL)
-Letzte Seite des Assistenten zeigt die testsituationsbeschreibung und Informationen zu Objekten, die am Test Beteiligter. Darüber hinaus können auf dieser Seite Sie den Test Ausführungsoptionen festlegen.  
+Auf der letzten Seite des Assistenten werden die Test Fallbeschreibung und Informationen zu den am Test beteiligten Objekten angezeigt. Außerdem können Sie auf dieser Seite die Test Ausführungs Optionen festlegen.  
   
-Die **Testfall Informationen** Abschnitt wird gezeigt, Testfall-Name und Beschreibung.  
+Der Abschnitt " **Test Fall Informationen** " zeigt den Namen und die Beschreibung des Testfalls an.  
   
-Die **Objekte aktiviert zu werden getestet** Abschnitt enthält eine benannte Liste getesteter Objekte, gruppiert nach Objekttyp.  
+Der Abschnitt **zu testende Objekte** enthält die benannte Liste getesteter Objekte, gruppiert nach Objekttyp.  
   
-Die **Objekte betroffen von Tests, dass analysiert** Abschnitt zeigt die benannte Liste der Objekte, welche datenänderungen nach der Ausführung des getesteten Objekte verglichen werden soll.  
+Der Abschnitt **von Tests Betroffene Objekte, die analysiert werden,** zeigt die benannte Liste der Objekte an, die nach der Ausführung getesteter Objekte mit Datenänderungen verglichen werden sollen.  
   
-## <a name="test-case-settings"></a>Testfall-Einstellungen  
-In der **Testfall Einstellungen** Abschnitt können Sie die Ausführung der folgenden Testoptionen festlegen:  
+## <a name="test-case-settings"></a>Test Fall Einstellungen  
+Im Abschnitt **Test Fall Einstellungen** können Sie die folgenden Ausführungs Test Optionen festlegen:  
   
-### <a name="stop-test-execution-after-first-failure"></a>Ausführung von Tests nach dem ersten Fehler beenden  
-Gibt an, um den Test zu unterbrechen, wenn ein Fehler, während der testausführung auftritt.  
+### <a name="stop-test-execution-after-first-failure"></a>Testausführung nach dem ersten Fehler beendet  
+Gibt an, dass der Test unterbricht, wenn während der Testausführung ein Fehler auftritt.  
   
--   Auf Wunsch **Ja**, testen Sie die Ausführung wird ein, wenn ein Fehler auftritt.  
+-   Wenn Sie **Ja**auswählen, wird die Testausführung unterbrochen, wenn ein Fehler auftritt.  
   
--   Auf Wunsch **keine**, testausführung wird nach einem Fehler fortgesetzt.  
+-   Wenn Sie **Nein**auswählen, wird die Testausführung nach einem Fehler fortgesetzt.  
   
-### <a name="perform-data-rollback"></a>Ausführen von Rollbacks für Daten  
-Ermöglicht die automatische Rollback nach Ausführung des Tests.  
+### <a name="perform-data-rollback"></a>Ausführen eines Daten Rollbacks  
+Aktiviert das automatische Zurücksetzen von Daten nach der Testausführung.  
   
--   Auf Wunsch **Ja**, datenänderungen nach der Ausführung des Tests, verloren.  
+-   Wenn Sie **Ja**auswählen, gehen Datenänderungen nach der Ausführung des Tests verloren.  
   
--   Auf Wunsch **keine**, alle testausführung datenänderungen werden gespeichert.  
+-   Wenn Sie **Nein**auswählen, werden alle Änderungen an der Test Ausführungsdaten gespeichert.  
   
-### <a name="auxiliary-tables-saving-mode"></a>Erweiterungstabellen Modus speichern  
-Definiert den speichern für Hilfstabellen erstellt während der testausführung. Siehe die Beschreibung der Erweiterungstabellen in der [Ausführen von Testfällen &#40;OracleToSQL&#41; ](../../ssma/oracle/running-test-cases-oracletosql.md) Thema.  
+### <a name="auxiliary-tables-saving-mode"></a>Speicher Modus für Hilfstabellen  
+Definiert den Speicher Modus für die während der Testausführung erstellten Hilfstabellen. Weitere Informationen finden Sie in der Beschreibung der Erweiterungs Tabellen im Thema [Ausführen von Test Fällen &#40;oracleto SQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md) .  
   
--   Bei Auswahl von **immer speichern**, Erweiterungstabellen Daten immer zur späteren Verwendung gespeichert werden.  
+-   Wenn Sie **immer speichern**auswählen, werden die Daten der zusätzlichen Tabelle immer zur späteren Verwendung gespeichert.  
   
--   Bei Auswahl von **speichern, wenn die Tabelle Vergleich fehlgeschlagen**, nur dann, wenn ein Fehler tritt auf, Erweiterungstabellen Daten gespeichert werden.  
+-   Wenn Sie speichern auswählen, **Wenn beim Tabellenvergleich**ein Fehler aufgetreten ist, werden die Daten der zusätzlichen Tabelle nur dann gespeichert, wenn ein Fehler auftritt.  
   
--   Bei Auswahl von **immer löschen**, Erweiterungstabellen immer gelöscht werden, nach der Ausführung des Tests.  
+-   Wenn Sie **immer löschen**auswählen, werden zusätzliche Tabellen nach der Ausführung des Tests immer gelöscht.  
   
--   Bei Auswahl von **Benutzer bitten, wenn Tabelle Vergleich fehlgeschlagen ist**, der Benutzer kann die erforderlichen Aktionen auswählen, wenn ein Fehler auftritt.  
+-   Wenn Sie bei **fehlgeschlagenen Tabellen vergleichen die Option Benutzer anfordern**auswählen, kann der Benutzer die erforderliche Aktion auswählen, wenn ein Fehler auftritt.  
   
-Klicken Sie auf die **Fertig stellen** Schaltfläche zum Speichern des vorbereiteten Testfalls in [mithilfe von Test Repositories (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Klicken Sie auf die Schaltfläche **Fertig** stellen, um den vorbereiteten Testfall in [mithilfe von Test Depots (oracleto SQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
-[Using Test Repositories &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[Ausführen von Testfällen &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Verwenden von Test Depots &#40;oracleto SQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[Ausführen von Test Fällen &#40;oracleto SQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

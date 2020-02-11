@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52137a6405090ca52f3a99f21b400a573e606dc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065573"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
@@ -26,7 +26,7 @@ ms.locfileid: "63065573"
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (SSMS) auf **Ansicht**und dann auf **Hilfsprogramm-Explorer** , um den Navigationsbereich des Hilfsprogramm-Explorers anzuzeigen. Um den Inhaltsbereich anzuzeigen, klicken Sie auf **Ansicht**und dann auf **Inhalt des Hilfsprogramm-Explorers**.  
   
-2.  Klicken Sie im Navigationsbereich auf ![](../../database-engine/media/connect-to-utility.gif "Mit_Hilfsprogramm_verbinden")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](sql-server-utility-features-and-tasks.md).  
+2.  Klicken Sie im Navigationsbereich auf ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](sql-server-utility-features-and-tasks.md).  
   
 3.  Klicken Sie auf den UCP-Knoten, um Zusammenfassungsdaten für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen (zum Aktualisieren mit der rechten Maustaste klicken). Dashboarddaten werden im Inhaltsbereich angezeigt.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63065573"
   
 5.  Klicken Sie auf den Knoten **Bereitgestellte Datenebenenanwendungen** , um Listenansichtsdaten für Datenebenenanwendungen anzuzeigen (klicken Sie zum Aktualisieren mit der rechten Maustaste). Listenansichtsdaten werden im Inhaltsbereich angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md)   
  [Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)   
  [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)   

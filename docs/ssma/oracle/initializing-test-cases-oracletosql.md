@@ -1,5 +1,5 @@
 ---
-title: Initialisieren von Testfällen (OracleToSQL) | Microsoft-Dokumentation
+title: Initialisieren von Test Fällen (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,31 +11,31 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264375"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Initialisieren von Testfällen (OracleToSQL)
-In diesem Schritt geben Sie die ersten Informationen für den neuen Testfall aus.  
+In diesem Schritt geben Sie die anfänglichen Informationen für den neuen Testfall an.  
   
 ## <a name="parameters"></a>Parameter  
-**Testfall-Name**  
-Geben Sie den Namen des Testfalls zu identifizieren.  
+**Test Fall Name**  
+Geben Sie den Namen ein, um den Testfall zu identifizieren.  
   
 **Erstellungsdatum**  
-Heute die aktuelle Datum, automatisch definiert.  
+Das heutige aktuelle Datum, das automatisch definiert wird.  
   
 **Datum der letzten Änderung**  
 Automatisch ausgefüllt; sollte nicht geändert werden.  
   
-**Testsituationsbeschreibung**  
-Geben Sie zusätzliche Informationen um den Zweck des Testfalls zu identifizieren.  
+**Test Fallbeschreibung**  
+Geben Sie zusätzliche Informationen ein, um den Zweck des Testfalls zu identifizieren.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Auswählen und Konfigurieren von Objekten mit Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[Auswählen und Konfigurieren von zu testenden Objekten &#40;oracleto SQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

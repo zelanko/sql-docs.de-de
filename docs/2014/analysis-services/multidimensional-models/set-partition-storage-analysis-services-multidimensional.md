@@ -1,5 +1,5 @@
 ---
-title: Festlegen des Partitionsspeichers (Analysis Services – mehrdimensional) | Microsoft-Dokumentation
+title: Festlegen des Partitions Speichers (Analysis Services-Multidimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072991"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Festlegen des Partitionsspeichers (Analysis Services – Mehrdimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Standardspeicherkonfigurationen für Speichermodi und Zwischenspeicherungsoptionen bereit. Diese stellen häufig genutzte Konfigurationen zur Updatebenachrichtigung, Latenzzeit und Neuerstellung von Daten bereit.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet mehrere Standard Speicherkonfigurationen für Speicher Modi und zwischen Speicherungs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Optionen. Diese stellen häufig genutzte Konfigurationen zur Updatebenachrichtigung, Latenzzeit und Neuerstellung von Daten bereit.  
   
  Sie können den Partitionsspeicher auf der Registerkarte Partitionen des Cubes [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oder auf der Seite mit der Partitionseigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66072991"
   
 ## <a name="storage-settings-descriptions"></a>Beschreibungen der Speichereinstellungen  
   
-|Standardspeichereinstellung|Beschreibung|  
+|Standardspeichereinstellung|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |Echtzeit-ROLAP|OLAP wird in Echtzeit ausgeführt. Detaildaten und Aggregationen werden im relationalen Format gespeichert. Der Server überwacht Benachrichtigungen, wenn Daten geändert werden und alle Abfragen den aktuellen Status der Daten wiedergeben (keine Latenzzeit).<br /><br /> Diese Einstellung wird normalerweise für eine Datenquelle mit sehr häufigen und fortlaufenden Updates verwendet, wenn Benutzer immer die letzten Daten benötigen. Abhängig von den Abfragetypen, die von den Clientanwendungen generiert wurden, sind bei dieser Methode die Antwortzeiten wahrscheinlich am langsamsten.|  
 |Echtzeit-HOLAP|OLAP wird in Echtzeit ausgeführt. Detaildaten werden im relationalen Format und Aggregationen werden in einem mehrdimensionalen Format gespeichert. Der Server überwacht Benachrichtigungen, wenn Daten geändert werden und aktualisiert die mehrdimensionalen OLAP-Aggregationen (MOLAP) bei Bedarf. Ein MOLAP-Cache wird nicht erstellt. Bei jedem Update der Datenquelle wechselt der Server zur relationalen Echtzeit-OLAP (ROLAP), bis die Aggregationen aktualisiert werden. Alle Abfragen geben den aktuellen Status der Daten (keine Latenzzeit) wieder.<br /><br /> Diese Einstellung wird in der Regel für eine Datenquelle mit häufigen und fortlaufenden Updates (aber nicht so häufig, dass Echtzeit-ROLAP erforderlich wäre) verwendet, und von den Benutzern werden immer die letzten Daten benötigt. Bei dieser Methode ist normalerweise die Gesamtleistung besser als bei der ROLAP-Speicherung. Wenn die Datenquelle lange genug still ist, können Benutzer mit dieser Einstellung MOLAP-Leistung bekommen.|  
@@ -77,7 +77,7 @@ ms.locfileid: "66072991"
   
  Wenn Sie das Kontrollkästchen **Einstellungen auf Dimensionen anwenden** aktivieren, werden dieselben Speichereinstellungen auf die mit der Measuregruppe verknüpften Dimensionen angewendet. Die Dimensionswerte sind zu Beginn identisch mit den Partitionswerten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Partitionen in mehrdimensionalen Modellen](partitions-in-multidimensional-models.md)  
   
   

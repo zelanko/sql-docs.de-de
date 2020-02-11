@@ -14,21 +14,21 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081908"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX-Anweisung
-Die Syntax der CREATE INDEX-Anweisung ist:  
+Die Syntax der CREATE INDEX-Anweisung lautet wie folgt:  
   
- Erstellen [UNIQUE] INDEX *Indexname* ON *Tabellenname* (*Spaltenbezeichner* [ASC] [DESC] [, *Spaltenbezeichner* [ASC][DESC]...]) MIT \< *Optionsliste für Index*>  
+ Create [Unique] Index *Index-Name* für *Tabellenname* (*Spalten Bezeichner* [ASC] [ABSC] [, *Spalten Bezeichner* [ASC] [de]...]) WITH \< *Index-Optionsliste*>  
   
- in denen \< *Index Optionsliste*> kann sein: PRIMÄRE &#124; DISALLOW NULL &#124; IGNORIEREN NULL  
+ die \< *Liste der Index Optionen* kann> lauten: primär &#124; NULL nicht zulassen &#124; NULL ignorieren.  
   
- Nur der Microsoft Access-Treiber verwendet die Optionen für die NULL nicht zulassen und ignorieren NULL-Index. Die Access und Paradox-Treiber die Syntax akzeptiert, aber ignorieren das Vorhandensein der beiden Optionen.  
+ Nur der Microsoft Access-Treiber verwendet die Optionen unallow NULL und NULL Index ignorieren. Der dBASE-und der Paradox-Treiber akzeptieren die Syntax, ignorieren jedoch das vorhanden sein einer der beiden Optionen.  
   
- Wenn die Paradox-Treiber verwendet wird, erstellt die CREATE INDEX-Anweisung Paradox-Dateien mit Schlüsseln von primären und sekundären Dateien.  
+ Wenn der Paradox-Treiber verwendet wird, werden von der CREATE INDEX-Anweisung paradoxe Primärschlüssel Dateien und sekundäre Dateien erstellt.  
   
- Diese Anweisung wird durch die Microsoft Excel- oder Textdateien Treiber nicht unterstützt.
+ Diese Anweisung wird von Microsoft Excel oder Text Treibern nicht unterstützt.

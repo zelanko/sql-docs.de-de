@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743166"
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
@@ -42,7 +42,7 @@ ms.locfileid: "62743166"
   
  **Zusicherungen bei vollständiger Transaktionsdauerhaftigkeit**  
   
--   Sobald ein Transaktionscommit erfolgreich war, sind die durch die Transaktion ausgeführten Änderungen für die anderen Transaktionen im System sichtbar. Finden Sie im Thema [Isolationsstufen von Transaktionen](../../database-engine/transaction-isolation-levels.md) für Weitere Informationen.  
+-   Sobald ein Transaktionscommit erfolgreich war, sind die durch die Transaktion ausgeführten Änderungen für die anderen Transaktionen im System sichtbar. Weitere Informationen finden Sie im Thema [Transaktions Isolations Stufen](../../database-engine/transaction-isolation-levels.md) .  
   
 -   Die Dauerhaftigkeit ist beim Commit gewährleistet. Die entsprechenden Protokolldatensätze werden dauerhaft auf dem Datenträger gespeichert, bevor das Transaktionscommit erfolgreich ausgeführt und die Steuerung an den Client zurückgegeben wird.  
   
@@ -56,17 +56,17 @@ ms.locfileid: "62743166"
     > [!NOTE]  
     >  Bei einem hohen Grad an Parallelität können weiterhin Konflikte bei E/A-Protokollvorgängen auftreten, insbesondere, wenn der Protokollpuffer schneller gefüllt als geleert wird.  
   
- **Verwenden Sie die verzögerte transaktionsdauerhaftigkeit**  
+ **Anwendungsbereiche für die verzögerte Transaktionsdauerhaftigkeit**  
   
  In folgenden Situationen ist die verzögerte Transaktionsdauerhaftigkeit u. U. von Vorteil:  
   
- **Sie können es sich um gewisser Datenverlust tolerieren.**  
+ **Datenverluste sind in gewissem Umfang vertretbar.**   
  Sofern Datenverluste vertretbar sind, also einzelne Datensätze z. B. nicht ins Gewicht fallen, solange der Großteil der Daten erhalten bleibt, könnten verzögert dauerhafte Transaktionen für Sie in Betracht kommen. Falls kein Datenverlust hinnehmbar ist, sollten Sie auf die verzögerte Transaktionsdauerhaftigkeit verzichten.  
   
- **Sie treten Engpässe auf Schreibzugriffen auf Transaktionsprotokolle.**  
+ **Bei Schreibvorgängen in das Transaktionsprotokoll treten Engpässe auf.**   
  Wenn die Leistungsprobleme auf Latenzen beim Schreiben in das Transaktionsprotokoll zurückzuführen sind, wird Ihre Anwendung u. U. von der Verwendung verzögerter Transaktionsdauerhaftigkeit profitieren.  
   
- **Arbeitsauslastungen weisen eine hohe Konfliktrate auf.**  
+ **Arbeitsauslastungen weisen eine hohe Konfliktrate auf.**   
  Wenn Ihr System Arbeitsauslastungen mit einer hohen Konfliktrate aufweist, wird viel Zeit mit dem Warten auf die Freigabe von Sperren vergeudet. Da die Commitzeit durch die verzögerte Transaktionsdauerhaftigkeit verkürzt wird, können Sperren schneller freigegeben und der Durchsatz erhöht werden.  
   
  **Zusicherungen bei verzögerter Transaktionsdauerhaftigkeit**  
@@ -83,7 +83,8 @@ ms.locfileid: "62743166"
   
      Nachdem für eine vollständig dauerhafte Transaktion oder sp_flush_log erfolgreich ein Commit ausgeführt wurde, werden alle verzögert dauerhaften Transaktionen, für die zuvor ein Commit ausgeführt wurde, zu dauerhaften Transaktionen.  
   
- Das Protokoll kann regelmäßig auf den Datenträger geleert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt jedoch keine Garantie der Dauerhaftigkeit außer bei dauerhaften Transaktionen und sp_flush_log.  
+ Das Protokoll kann regelmäßig auf den Datenträger geleert werden. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt jedoch keine Garantie der Dauerhaftigkeit außer bei dauerhaften Transaktionen und sp_flush_log.  
   
 ## <a name="how-to-control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit  
   
@@ -98,12 +99,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [Standard] Mit dieser Einstellung sind alle Transaktionen, für die in der Datenbank ein Commit ausgeführt wurde, unabhängig von der Einstellung der Commitebene (DELAYED_DURABILITY=[ON | OFF]) vollständig dauerhaft. Gespeicherte Prozeduren müssen weder geändert noch neu kompiliert werden. Auf diese Weise können Sie verhindern, dass Daten aufgrund verzögerter Dauerhaftigkeit gefährdet werden.  
   
  `ALLOWED`  
- Mit dieser Einstellung wird die Dauerhaftigkeit jeder Transaktion auf der Transaktionsebene bestimmt: DELAYED_DURABILITY = { *OFF* | ON }. Finden Sie unter [Ebene Steuerung von Atomic-Blockebene – systemintern kompilierte gespeicherte Prozeduren](#atomic-block-level-control---natively-compiled-stored-procedures) und [COMMIT-Steuerung auf Datenbankebene - Transact-SQL](#commit-level-control---t-sql) für Weitere Informationen.  
+ Mit dieser Einstellung wird die Dauerhaftigkeit jeder Transaktion auf der Transaktionsebene bestimmt: DELAYED_DURABILITY = { *OFF* | ON }. Weitere Informationen finden Sie unter [Steuerung auf Atomic-Blockebene: nativ kompilierte gespeicherte Prozeduren](#atomic-block-level-control---natively-compiled-stored-procedures) und [Commit-Ebene Control-Transact-SQL](#commit-level-control---t-sql) .  
   
  `FORCED`  
  Mit dieser Einstellung wird jede Transaktion, für die in der Datenbank ein Commit ausgeführt wird, zu einer verzögert dauerhaften Transaktion. Unabhängig davon, ob für die Transaktion vollständige Dauerhaftigkeit (DELAYED_DURABILITY = OFF) oder keine Einstellung angegeben wird, wird sie zu einer verzögert dauerhaften Transaktion. Diese Einstellung ist hilfreich, wenn die verzögerte Transaktionsdauerhaftigkeit für eine Datenbank von Nutzen ist und Sie keinen Anwendungscode ändern möchten.  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Ebene Steuerung von Atomic-Blockebene – systemintern kompilierte gespeicherte Prozeduren  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> Steuerung auf Atomic-Blockebene: nativ kompilierte gespeicherte Prozeduren  
  Folgender Code wird in den Atomic-Block eingefügt.  
   
 ```sql  
@@ -138,7 +139,7 @@ END
 |`DELAYED_DURABILITY = OFF`|Atomic-Block startet eine neue vollständig dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|  
 |`DELAYED_DURABILITY = ON`|Atomic-Block startet eine neue verzögert dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|  
   
-### <a name="commit-level-control---t-sql"></a>Übernehmen der Steuerung auf Datenbankebene - (T-SQL)
+### <a name="commit-level-control---t-sql"></a>Steuerung auf Commit-Ebene (T-SQL)
  Da die COMMIT-Syntax erweitert ist, kann die verzögerte Transaktionsdauerhaftigkeit erzwungen werden. Wenn für DELAYED_DURABILITY auf Datenbankebene DISABLED oder FORCED festgelegt wird (siehe oben), wird diese COMMIT-Option ignoriert.  
   
 ```sql  
@@ -157,10 +158,14 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |COMMIT-Einstellung/Datenbankeinstellung|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|`DELAYED_DURABILITY = OFF` Transaktionen auf Datenbankebene.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|Transaktion ist verzögert dauerhaft.|  
-|`DELAYED_DURABILITY = ON` Transaktionen auf Datenbankebene.|Transaktion ist vollständig dauerhaft.|Transaktion ist verzögert dauerhaft.|Transaktion ist verzögert dauerhaft.|  
-|`DELAYED_DURABILITY = OFF` Datenbankübergreifende oder verteilte Transaktion.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|  
-|`DELAYED_DURABILITY = ON` Datenbankübergreifende oder verteilte Transaktion.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|  
+|
+  `DELAYED_DURABILITY = OFF` Transaktionen auf Datenbankebene.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|Transaktion ist verzögert dauerhaft.|  
+|
+  `DELAYED_DURABILITY = ON` Transaktionen auf Datenbankebene.|Transaktion ist vollständig dauerhaft.|Transaktion ist verzögert dauerhaft.|Transaktion ist verzögert dauerhaft.|  
+|
+  `DELAYED_DURABILITY = OFF` Datenbankübergreifende oder verteilte Transaktion.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|  
+|
+  `DELAYED_DURABILITY = ON` Datenbankübergreifende oder verteilte Transaktion.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|Transaktion ist vollständig dauerhaft.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Erzwungenes Leeren des Transaktionsprotokolls  
  Sie können auf zwei Weisen erzwingen, dass das Transaktionsprotokoll auf den Datenträger geleert wird.  
@@ -182,7 +187,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Always On-Verfügbarkeitsgruppen und Spiegelung**  
  Verzögert dauerhafte Transaktionen gewährleisten weder auf dem primären noch auf den sekundären Replikaten Dauerhaftigkeit. Darüber hinaus sind keine zuverlässigen Informationen zur Transaktion auf dem sekundären Replikat verfügbar. Nach dem COMMIT wird die Steuerung an den Client zurückgegeben, bevor eine Bestätigung von einem synchronen sekundären Replikat empfangen wird.  
   
- **Failover-Clusterunterstützung**  
+ **Failoverclustering**  
  Einige Schreibvorgänge verzögert dauerhafter Transaktionen können verloren gehen.  
   
  **Transaktionsreplikation**  
@@ -200,11 +205,11 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="catastrophic-events"></a>Notfälle  
  Bei Notfällen wie beispielsweise einem Serverabsturz gehen die Daten für alle Transaktionen, für die ein Commit ausgeführt wurde, aber die noch nicht auf dem Datenträger gespeichert wurden, verloren. Verzögert dauerhafte Transaktionen werden auf dem Datenträger gespeichert, sobald eine vollständig dauerhafte Transaktion für eine Tabelle in der Datenbank ausgeführt wird (dauerhaft speicheroptimiert oder datenträgerbasiert), oder wenn `sp_flush_log` aufgerufen wird. Bei Verwendung von verzögert dauerhaften Transaktionen sollten Sie eine kleine Tabelle in der Datenbank erstellen, die Sie regelmäßig aktualisieren, oder Sie rufen regelmäßig `sp_flush_log` auf, um alle ausstehenden Transaktionen, für die ein Commit ausgeführt wurde, zu speichern. Das Transaktionsprotokoll wird ebenfalls geleert, sobald es voll ist, aber dies ist schwer vorherzusagen und kaum zu steuern.  
   
-### <a name="sql-server-shutdown-and-restart"></a>SQL Server herunterfahren und Neustart  
+### <a name="sql-server-shutdown-and-restart"></a>SQL Server herunterfahren und neu starten  
  Für die verzögerte Dauerhaftigkeit macht es keinen Unterschied, ob das Herunterfahren unerwartet erfolgt oder das Herunterfahren/Neustarten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geplant ist. Wie bei Notfällen sollten Sie mit Datenverlusten rechnen. Beim geplanten Herunterfahren/Neustarten werden möglicherweise einige Transaktionen, die noch nicht auf dem Datenträger festgeschrieben wurden, zuerst auf dem Datenträger gespeichert, aber dies lässt sich nicht planen. Planen Sie so, als ob beim Herunterfahren/Neustarten (ob geplant oder ungeplant) die Daten genauso wie bei unvorhersehbaren Notfällen verloren gehen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Isolationsstufen von Transaktionen](../../database-engine/transaction-isolation-levels.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Transaktions Isolations Stufen](../../database-engine/transaction-isolation-levels.md)   
  [Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen](../in-memory-oltp/memory-optimized-tables.md)  
   
   

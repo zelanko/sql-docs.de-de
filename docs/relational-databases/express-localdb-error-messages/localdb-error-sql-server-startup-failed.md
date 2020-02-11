@@ -10,13 +10,13 @@ ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 704b6d24e48ffd4997a8107da8c3039b7386c1ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68011109"
 ---
-# <a name="localdberrorsqlserverstartupfailed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
+# <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Details  
@@ -27,7 +27,7 @@ ms.locfileid: "68011109"
 |Ereignis-ID|266|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  
-|Meldungstext|Fehler beim Start der lokalen Datenbank-Instanz: SQL Server-Prozess konnte nicht gestartet.|  
+|Meldungstext|Fehler beim Start der lokalen Datenbankinstanz: Der SQL Server-Prozess konnte nicht gestartet werden.|  
   
 ## <a name="explanation"></a>Erklärung  
  Ein SQL Server-Prozess wird gestartet, der SQL Server-Start ist jedoch fehlgeschlagen.  

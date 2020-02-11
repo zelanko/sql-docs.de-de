@@ -1,5 +1,5 @@
 ---
-title: CreateRecordset-Methode (RDS) | Microsoft-Dokumentation
+title: Methode "samaterecordset" (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,17 +20,17 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964513"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
-Erstellt ein leeres getrennt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Erstellt ein leeres, nicht verbundenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,61 +40,61 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Objekt*  
- Eine Objektvariable, steht ein [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oder [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
+ *Object*  
+ Eine Objekt Variable, die ein [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oder [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
- *ColumnsInfos*  
- Ein **Variant** Array von Attributen, die jede Spalte definiert den **Recordset** erstellt. Jede Definition einer Spalte enthält ein Array von vier erforderlichen Attribute und ein optionales Attribut.  
+ *Columnsinfos*  
+ Ein **Variant** -Array von Attributen, das jede Spalte im erstellten **Recordset** definiert. Jede Spaltendefinition enthält ein Array von vier erforderlichen Attributen und ein optionales Attribut.  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Name|Der Name des Spaltenheaders.|  
-|Typ|Ganze Zahl des Datentyps.|  
-|Größe|Ganze Zahl, der die Breite in Zeichen, unabhängig von Datentyp.|  
+|Name|Der Name des Spalten Headers.|  
+|type|Ganzzahliger Wert des Datentyps.|  
+|Size|Ganzzahlige Breite in Zeichen, unabhängig vom Datentyp.|  
 |NULL-Zulässigkeit|Boolescher Wert.|  
-|Skalierung (Optional)|Dieses optionale Attribut definiert die Skala für numerische Felder. Wenn dieser Wert nicht angegeben ist, werden die numerische Werte zu drei Dezimalstellen abgeschnitten. Genauigkeit ist nicht betroffen, aber die Anzahl von Ziffern hinter dem Dezimaltrennzeichen abgeschnitten auf drei.|  
+|Skalieren (optional)|Dieses optionale Attribut definiert die Skala für numerische Felder. Wenn dieser Wert nicht angegeben wird, werden numerische Werte auf drei Dezimalstellen abgeschnitten. Die Genauigkeit ist nicht betroffen, aber die Anzahl der Ziffern nach dem Dezimaltrennzeichen wird auf drei gekürzt.|  
   
- Der Satz von Spaltenarrays wird dann in ein Array, das definiert gruppiert die **Recordset**.  
+ Der Satz von Spalten Arrays wird dann in ein Array gruppiert, das das **Recordset**definiert.  
   
-## <a name="remarks"></a>Hinweise  
- Das serverseitige Geschäftsobjekt, das Auffüllen der resultierenden **Recordset** mit Daten aus einer nicht - OLE DB-Datenanbieter, wie z. B. ein Betriebssystem-Datei mit Aktienkurse.  
+## <a name="remarks"></a>Bemerkungen  
+ Das serverseitige Geschäftsobjekt kann das resultierende **Recordset** mit Daten aus einem nicht OLE DB Datenanbieter auffüllen, z. b. eine Betriebssystem Datei mit Kurs Anführungszeichen.  
   
- Die folgende Tabelle enthält die [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Werte, die von unterstützt die **CreateRecordset** Methode. Die Anzahl aufgeführt ist die Verweisnummer verwendet, um Felder zu definieren.  
+ In der folgenden Tabelle **sind die von der Methode "** |-Methode" unterstützten [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Werte aufgeführt. Die aufgeführte Zahl ist die Verweis Nummer, die zum Definieren von Feldern verwendet wird.  
   
- Jede der Datentypen ist fester oder variabler Länge. Typen mit fester Länge werden mit einer Größe von 1, definiert, weil die Größe wird und eine Definition der Größe nach wie vor erforderlich ist. Datentypen variabler Länge können eine Größe zwischen 1 und 32767.  
+ Jeder Datentyp ist entweder eine mit fester oder variabler Länge. Typen mit fester Länge sollten mit einer Größe von-1 definiert werden, da die Größe vorgegeben ist und eine Größen Definition noch erforderlich ist. Datentypen mit variabler Länge lassen eine Größe zwischen 1 und 32767 zu.  
   
- Für einige der Variablen Datentypen kann der Typ in den in der Spalte "Substitution" angegebenen Typ umgewandelt werden. Sie werden feststellen, dass die Ersetzungen erst nach der **Recordset** erstellt und gefüllt ist. Anschließend können Sie für den tatsächlichen Datentyp, bei Bedarf überprüfen.  
+ Für einige der Variablen Datentypen kann der Typ in den Typ umgewandelt werden, der in der Ersetzungs Spalte angegeben ist. Die Ersetzungen werden erst angezeigt, nachdem das **Recordset** erstellt und gefüllt wurde. Anschließend können Sie ggf. den tatsächlichen Datentyp überprüfen.  
   
-|Länge|Konstante|Number|Ersetzung|  
+|Länge|Dauerhaft|Number|Ersetzung|  
 |------------|--------------|------------|------------------|  
-|Fest|**adTinyInt**|16||  
-|Fest|**adSmallInt**|2||  
-|Fest|**adInteger**|3||  
-|Fest|**adBigInt**|20||  
-|Fest|**adUnsignedTinyInt**|17||  
-|Fest|**adUnsignedSmallInt**|18||  
-|Fest|**adUnsignedInt**|19||  
-|Fest|**adUnsignedBigInt**|21||  
-|Fest|**adSingle**|4||  
-|Fest|**adDouble**|5||  
-|Fest|**adCurrency**|6||  
-|Fest|**adDecimal**|14||  
-|Fest|**adNumeric**|131||  
-|Fest|**adBoolean**|11||  
-|Fest|**adError**|10||  
-|Fest|**adGuid**|72||  
-|Fest|**adDate**|7||  
-|Fest|**adDBDate**|133||  
-|Fest|**adDBTime**|134||  
-|Fest|**adDBTimestamp**|135|7|  
+|Korrigiert|**adtinyint**|16||  
+|Korrigiert|**adsmallint**|2||  
+|Korrigiert|**adinteger**|3||  
+|Korrigiert|**adbigint**|20||  
+|Korrigiert|**adunsignedtinyint**|17||  
+|Korrigiert|**adunsignedsmallint**|18||  
+|Korrigiert|**adunsignedint**|19||  
+|Korrigiert|**adunsignedbigint**|21||  
+|Korrigiert|**adsingle**|4||  
+|Korrigiert|**adDouble**|5||  
+|Korrigiert|**adcurrency**|6||  
+|Korrigiert|**addecimal**|14||  
+|Korrigiert|**adNumeric**|131||  
+|Korrigiert|**adboolean**|11||  
+|Korrigiert|**aderror**|10||  
+|Korrigiert|**adguid**|72||  
+|Korrigiert|**adDate**|7||  
+|Korrigiert|**addbdate**|133||  
+|Korrigiert|**addbtime**|134||  
+|Korrigiert|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
-|Variable|**adChar**|129|200|  
+|Variable|**adchar**|129|200|  
 |Variable|**adVarChar**|200||  
 |Variable|**adLongVarChar**|201|200|  
-|Variable|**adWChar**|130||  
-|Variable|**adVarWChar**|202|130|  
+|Variable|**adwchar**|130||  
+|Variable|**adVarWchar**|202|130|  
 |Variable|**adLongVarWChar**|203|130|  
-|Variable|**adBinary**|128||  
+|Variable|**adbinary**|128||  
 |Variable|**adVarBinary**|204||  
 |Variable|**adLongVarBinary**|205|204|  
   
@@ -104,9 +104,9 @@ object.CreateRecordset(ColumnInfos)
 |-|-|  
 |[DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [CreateRecordset-Methode – Beispiel (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
- [CreateRecordset-Methode – Beispiel (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für die Methode "kreaterecordset" (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
+ [Beispiel für die Methode "kreaterecordset" (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [CreateObject-Methode (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)
 
 

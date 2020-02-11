@@ -11,18 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468336"
 ---
 # <a name="application-level-partitioning"></a>Partitionierung auf Anwendungsebene
-  Dieses Beispiel veranschaulicht die Partitionierung auf Anwendungsebene zum Speichern von Daten in einer speicheroptimierten Tabelle oder einer datenträgerbasierten Tabelle abhängig davon, ob die Reihenfolge vor oder nach einem bestimmten Datum liegt. Alle Aufträge, die älter oder gleich der *HotDate* befinden sich in der speicheroptimierten Tabelle und alle Aufträge vor dem *HotDate* sind in der datenträgerbasierten Tabelle. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  
+  Dieses Beispiel veranschaulicht die Partitionierung auf Anwendungsebene zum Speichern von Daten in einer speicheroptimierten Tabelle oder einer datenträgerbasierten Tabelle abhängig davon, ob die Reihenfolge vor oder nach einem bestimmten Datum liegt. Alle Bestellungen, die neuer oder gleich dem *hotdate* sind, befinden sich in der Speicher optimierten Tabelle und alle Bestellungen vor dem *hotdate* in der Datenträger basierten Tabelle. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  
   
- In diesem Beispiel verwendet keine [partitionierte Tabellen](../partitions/partitioned-tables-and-indexes.md) für die datenträgerbasierte Tabelle, jedoch wird verfolgen ein expliziter Teilungspunkt zwischen den beiden Tabellen mithilfe einer dritten Tabelle. Mit dem Teilungspunkt kann sichergestellt werden, dass neu eingefügte Daten basierend auf dem Datum immer der richtigen Tabelle hinzugefügt werden. Er kann auch verwendet werden, um zu bestimmen, wo Daten gesucht werden sollen. Selbst verspätet eingegangene Daten werden in die richtige Tabelle eingefügt.  
+ In diesem Beispiel werden keine [partitionierten Tabellen](../partitions/partitioned-tables-and-indexes.md) für die Datenträger basierte Tabelle verwendet. es wird jedoch ein expliziter Teilungs Punkt zwischen den beiden Tabellen mithilfe einer dritten Tabelle nachverfolgt. Mit dem Teilungspunkt kann sichergestellt werden, dass neu eingefügte Daten basierend auf dem Datum immer der richtigen Tabelle hinzugefügt werden. Er kann auch verwendet werden, um zu bestimmen, wo Daten gesucht werden sollen. Selbst verspätet eingegangene Daten werden in die richtige Tabelle eingefügt.  
   
- Ein Beispiel, die partitionierten Tabellen finden Sie unter [Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen](memory-optimized-tables.md).  
+ Ein verwandtes Beispiel, in dem partitionierte Tabellen verwendet werden, finden Sie unter [Anwendungs Muster für die Partitionierung von Speicher optimierten Tabellen](memory-optimized-tables.md).  
   
 ## <a name="code-listing"></a>Codelisting  
   
@@ -219,8 +219,8 @@ SELECT * FROM [dbo].[SalesOrders_cold] ORDER BY so_date DESC
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp-in-memory-optimization.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [In-Memory-OLTP &#40;in-Memory-Optimierung&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Codebeispiele für In-Memory OLTP](in-memory-oltp-code-samples.md)  
   
   

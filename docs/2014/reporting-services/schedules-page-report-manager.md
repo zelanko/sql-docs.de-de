@@ -1,5 +1,5 @@
 ---
-title: Plant die Seite (Berichts-Manager) | Microsoft-Dokumentation
+title: Zeitpläne (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102317"
 ---
 # <a name="schedules-page-report-manager"></a>Zeitpläne (Seite) (Berichts-Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "66102317"
   
 3.  Wählen Sie die Registerkarte **Zeitpläne** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Neuer Zeitplan**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplanung zu öffnen. Auf dieser Seite können Sie Angaben zur Häufigkeit machen.  
   
@@ -52,16 +52,16 @@ ms.locfileid: "66102317"
  **Zeitplan**  
  Zeigt die freigegebenen Zeitpläne an, die aktuell definiert sind. Klicken Sie auf einen freigegebenen Zeitplan, um die Informationen zur Häufigkeit anzuzeigen oder zu bearbeiten.  
   
- **Creator**  
+ **Hersteller**  
  Zeigt den Namen des Benutzers an, der den freigegebenen Zeitplan erstellt hat.  
   
- **Zuletzt ausgeführt, nächste Ausführung**  
+ **Zuletzt ausgeführt, Nächste Ausführung**  
  Zeigt an, wann der freigegebene Zeitplan zuletzt ausgeführt wurde und wann er das nächste Mal ausgeführt wird.  
   
  **Status**  
  Zeigt an, ob ein freigegebener Zeitplan angehalten oder aktiv ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen, Ändern oder Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   

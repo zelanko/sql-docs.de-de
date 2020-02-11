@@ -1,5 +1,5 @@
 ---
-title: NumericScale- und Precision-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für NumericScale und Precision Properties (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917966"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale- und Precision-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel verwendet die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [mit einfacher Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) anzuzeigenden die numerischen Dezimalstellen und die Genauigkeit der Felder in Eigenschaften der ***Rabatte*** Tabelle mit der  ***Pubs*** Datenbank.  
+In diesem Beispiel werden die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) -Eigenschaft und die [Precision](../../../ado/reference/ado-api/precision-property-ado.md) -Eigenschaft verwendet, um die numerische Skala und Genauigkeit der Felder in der Tabelle " ***Rabatte*** " der ***Pubs*** -Datenbank anzuzeigen.  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -133,6 +133,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [NumericScale-Eigenschaft (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Precision-Eigenschaft (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

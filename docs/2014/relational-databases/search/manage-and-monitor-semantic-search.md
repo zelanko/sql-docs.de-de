@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011132"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Verwalten und Überwachen der semantischen Suche
   In diesem Thema werden der Prozess der semantischen Indizierung sowie die Tasks im Zusammenhang mit der Verwaltung und Überwachung der Indizes beschrieben.  
   
-##  <a name="HowToMonitorStatus"></a> Vorgehensweise: Überprüfen Sie den Status der semantischen Indizierung  
+##  <a name="HowToMonitorStatus"></a>Vorgehensweise: Überprüfen des Status der semantischen Indizierung  
  **Ist die erste Phase der semantischen Indizierung abgeschlossen?**  
  Fragen Sie die dynamische Verwaltungssicht ab, [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql), und überprüfen Sie die **status**- und **status_description**-Spalten.  
   
@@ -50,8 +50,8 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Vorgehensweise: Überprüfen Sie die Größe der semantischen Indizes  
- **Was ist die logische Größe des semantischen schlüsselausdruckindexes oder eines semantischen dokumentähnlichkeitsindexes?**  
+##  <a name="HowToCheckSize"></a>Gewusst wie: Überprüfen der Größe der semantischen Indizes  
+ **Was ist die logische Größe eines semantischen Schlüsselausdruckindexes oder eines semantischen Dokumentähnlichkeitsindexes?**  
  Fragen Sie die dynamische Verwaltungssicht ab, [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
  Die logische Größe wird in Anzahl von Indexseiten angezeigt.  
@@ -64,7 +64,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **Was ist die Gesamtgröße der Volltext- und semantischen Indizes für einen Volltextkatalog aus?**  
+ **Wie groß sind die Volltext- und die semantischen Indizes für einen Volltextkatalog insgesamt?**  
  Fragen Sie die Eigenschaft **IndexSize** der Metadatenfunktion [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) ab.  
   
 ```sql  
@@ -72,7 +72,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **Wie viele Elemente werden in den Volltext- und semantischen Indizes für einen Volltextkatalog indiziert?**  
+ **Wie viele Elemente werden in den Volltext- und den semantischen Indizes für einen Volltextkatalog indiziert?**  
  Fragen Sie die Eigenschaft **ItemCount** der Metadatenfunktion [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) ab.  
   
 ```sql  
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Vorgehensweise: Die Auffüllung der semantischen Indizes erzwingen  
+##  <a name="HowToForcePopulation"></a>Gewusst wie: Erzwingen der Auffüllung der semantischen Indizes  
  Sie können die Auffüllung der Volltextindizes und semantischen Indizes mit der START/STOP/PAUSE-Klausel oder der RESUME POPULATION-Klausel mit der gleichen Syntax und dem für Volltextindizes beschriebenen Verhalten erzwingen. Weitere Informationen finden Sie unter [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) und [Auffüllen von Volltextindizes](../indexes/indexes.md).  
   
  Da die semantische Indizierung von der Volltextindizierung abhängig ist, werden semantische Indizes nur dann aufgefüllt, wenn die zugeordneten Volltextindizes aufgefüllt werden.  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Vorgehensweise: Deaktivieren oder erneutes Aktivieren der semantischen Indizierung  
+##  <a name="HowToDisableIndexing"></a>Vorgehensweise: deaktivieren oder erneutes Aktivieren der semantischen Indizierung  
  Sie können die Volltextindizierung oder semantische Indizierung mit der ENABLE/DISABLE-Klausel mit der gleichen Syntax und dem für Volltextindizes beschriebenen Verhalten deaktivieren. Weitere Informationen finden Sie unter [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Wenn die semantische Indizierung deaktiviert und angehalten wurde, funktionieren Abfragen über semantische Daten weiterhin und geben zuvor indizierte Daten zurück. Dieses Verhalten ist nicht konsistent mit dem Verhalten der Volltextsuche.  
@@ -119,10 +119,10 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> Phasen der semantischen Indizierung  
+##  <a name="SemanticIndexing"></a>Phasen der semantischen Indizierung  
  Bei der semantischen Suche werden zwei Arten von Daten für jede Spalte indiziert, für die sie aktiviert wurde:  
   
-1.  **Schlüsselausdrücke**  
+1.  **Schlüsselbegriffe**  
   
 2.  **Dokumentähnlichkeit**  
   
@@ -133,14 +133,14 @@ GO
 2.  **Phase 2**. Anschließend wird der semantische Dokumentähnlichkeitsindex aufgefüllt. Dieser Index ist von beiden Indizes abhängig, die in der vorherigen Phase aufgefüllt wurden.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problem: Semantische Indizes werden nicht aufgefüllt  
+##  <a name="ProblemNotPopulated"></a>Problem: semantische Indizes werden nicht aufgefüllt.  
  **Werden die zugeordneten Volltextindizes aufgefüllt?**  
  Da die semantische Indizierung von der Volltextindizierung abhängig ist, werden semantische Indizes nur dann aufgefüllt, wenn die zugeordneten Volltextindizes aufgefüllt werden.  
   
- **Sind Volltextsuche und semantische Suche ordnungsgemäß installiert und konfiguriert**  
+ **Sind die Volltextsuche und die semantische Suche ordnungsgemäß installiert und konfiguriert?**  
  Weitere Informationen finden Sie unter [Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md).  
   
- **Der FDHOST-Dienst nicht verfügbar, oder gibt es eine weitere Bedingung, die Volltextindizierung fehlschlagen würde?**  
+ **Ist der FDHOST-Dienst nicht verfügbar, oder gibt es eine andere Bedingung, aufgrund der die Volltextindizierung fehlschlagen würde?**  
  Weitere Informationen finden Sie unter [Behandeln von Problemen mit der Volltextindizierung](troubleshoot-full-text-indexing.md).  
   
   

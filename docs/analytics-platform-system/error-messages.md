@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401166"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Fehlermeldungen parallel Data Warehouse
@@ -27,7 +27,7 @@ Fehlermeldungen, die zurückgegeben werden, folgen derselben Syntax.
   
 Dies sind die möglichen Werte für jedes Feld:  
   
-|Field|Beschreibung|Beispiel|  
+|Feld|BESCHREIBUNG|Beispiel|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|Das Wort "Error" oder ein anderer Text, der den Benutzer auf ein Problem hinweist.|ERROR|  
 |*SQL_State_Code*|Der SQL-Statuscode gemäß der ODBC-Spezifikation. Der Treiber generiert den entsprechenden SQL-Statuscode jedes Mal, wenn er eine Nachricht an eine Anwendung zurückgibt. Der Text "Microsoft" gibt die Quelle des Fehlers an.|42000|  

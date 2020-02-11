@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor (Spaltenseite) | Microsoft-Dokumentation
+title: Transformations-Editor für Suche (Seite ' Spalten ') | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057896"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
@@ -26,7 +26,7 @@ ms.locfileid: "66057896"
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Die Eingabespalten sind die Spalten im Datenfluss aus einer verbundenen Quelle. Die Datentypen der Eingabe- und Suchspalte müssen übereinstimmen.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66057896"
   
  Sie können auch mithilfe der Tastatur Eingabespalten bestimmten Suchspalten zuordnen. Dazu heben Sie eine Spalte in der Tabelle **Verfügbare Eingabespalten** hervor, drücken die Anwendungstaste und klicken dann auf **Zuordnungen bearbeiten**.  
   
- **Verfügbare Suchspalten**  
+ **Verfügbare Such Spalten**  
  Zeigt die Liste der Suchspalten an. Die Suchspalten sind Spalten in der Verweistabelle, in denen nach Werten gesucht werden soll, die mit den Eingabespalten übereinstimmen.  
   
  Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Suchspalten bestimmten Eingabespalten zuordnen.  
@@ -52,11 +52,11 @@ ms.locfileid: "66057896"
  **Ausgabealias**  
  Geben Sie einen Alias für die Ausgabe der einzelnen Suchspalten ein. Standardmäßig wird der Name der Suchspalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transformations-Editor für Suche &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
- [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Transformations-Editor für Suche &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Transformations-Editor für Suche &#40;Verbindungs Seite&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Transformations-Editor für Suche &#40;Seite "Erweitert"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Transformations-Editor für Suche &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Transformation für Fuzzysuche](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

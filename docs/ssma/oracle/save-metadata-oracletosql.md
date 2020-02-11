@@ -1,5 +1,5 @@
 ---
-title: Speichern von Metadaten (OracleToSQL) | Microsoft-Dokumentation
+title: Metadaten speichern (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,35 +11,35 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266510"
 ---
 # <a name="save-metadata--oracletosql"></a>Speichern von Metadaten (OracleToSQL)
-Die **speichern Metadaten** Dialogfeld fordert Sie zum Laden von Metadaten in der SSMA-Projekt, vor dem Speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden und an andere Personen ein, z. B. Mitarbeiter des technischen Supports senden können.  
+Im Dialogfeld **Metadaten speichern** werden Sie aufgefordert, Metadaten vor dem Speichern in das SSMA-Projekt zu laden. Auf diese Weise können Sie eine komplette Projektdatei verwenden, die Sie offline verwenden und an andere Personen wie z. b. technische Supportmitarbeiter senden können.  
   
-Für den Zugriff auf die **speichern Metadaten** (Dialogfeld), speichern Sie das Projekt. SSMA wird angezeigt, wenn keine Metadaten fehlt wird, die **speichern Metadaten** Dialogfeld.  
+Um auf das Dialogfeld **Metadaten speichern** zuzugreifen, speichern Sie das Projekt. Wenn Metadaten fehlen, wird das Dialogfeld **Metadaten speichern** von SSMA angezeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Name**  
-Der Name jeder Datenbank im Projekt.  
+Der Name der einzelnen Datenbanken im Projekt.  
   
 **Status**  
-Gibt an, wenn Metadaten in der SSMA-Projekt geladen wird, oder wenn Metadaten fehlen.  
+Gibt an, ob Metadaten in das SSMA-Projekt geladen werden oder ob Metadaten fehlen.  
   
-SSMA lädt die Metadaten in das Projekt nach Bedarf. Metadaten wird automatisch geladen, wenn Sie die Metadaten durchsuchen und Schemas konvertieren.  
+SSMA lädt bei Bedarf Metadaten in das Projekt. Metadaten werden automatisch geladen, wenn Sie Metadaten durchsuchen und Schemas konvertieren.  
   
-**Alles auswählen**  
+**Alles markieren**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
-**Löschen**  
-Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten an. Sie können nicht das Kontrollkästchen deaktivieren, wenn Metadaten geladen wurde.  
+**Clear**  
+Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten. Sie können das Kontrollkästchen nicht deaktivieren, wenn eine Metadaten geladen wurde.  
   
-**Speichern**  
-Speichert das Projekt, das Metadaten für die ausgewählten Datenbanken, die fehlende Metadaten geladen werden.  
+**Sicher**  
+Speichert das Projekt und lädt Metadaten für ausgewählte Datenbanken, die über fehlende Metadaten verfügen.  
   
 **Abbrechen**  
-Wird der Speichervorgang abgebrochen Vorgang. Fehlender Metadaten wird in das Projekt nicht geladen werden.  
+Bricht den Speichervorgang ab. Fehlende Metadaten werden nicht in das Projekt geladen.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659574"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
@@ -36,11 +36,11 @@ ms.locfileid: "62659574"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Optional. Nur einmalige Verwendung pro `TuningOptions`-Element möglich. Keine Verwendung möglich, wenn im `TuningOptions`-Element die folgenden Elemente angegeben sind:<br /><br /> [FeatureSet-Element &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning-Element &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting-Element &#40;DTA&#41;](keepexisting-element-dta.md) ist auf **ALL** festgelegt|  
+|**Vorkommen**|Optional. Nur einmalige Verwendung pro `TuningOptions`-Element möglich. Keine Verwendung möglich, wenn im `TuningOptions`-Element die folgenden Elemente angegeben sind:<br /><br /> [Das Featureset-Element &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitionierungs Element &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Keepvorhandenes Element &#40;DTA&#41;](keepexisting-element-dta.md) wird auf **alle** festgelegt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62659574"
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

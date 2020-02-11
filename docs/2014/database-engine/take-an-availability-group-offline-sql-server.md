@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228172"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Offlineschalten einer Verfügbarkeitsgruppe (SQL Server)
@@ -27,27 +27,27 @@ ms.locfileid: "75228172"
   
 
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 > [!CAUTION]  
 >  Verwenden Sie die OFFLINE-Option nur für eine Kreuzclustermigration von Verfügbarkeitsgruppenressourcen.  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Auf der Serverinstanz, auf der Sie den OFFLINE-Befehl eingeben, muss [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] oder höher (Enterprise Edition oder höher) ausgeführt werden.  
   
 -   Die Verfügbarkeitsgruppe muss aktuell online sein.  
   
-###  <a name="Recommendations"></a>Empfehlungen  
+###  <a name="Recommendations"></a> Empfehlungen  
  Bevor Sie die Verfügbarkeitsgruppe offline schalten, löschen Sie den Verfügbarkeitsgruppenlistener oder die Listener. Weitere Informationen finden Sie unter [Entfernen eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)zu aktualisieren.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
- **So schalten Sie eine Verfügbarkeits Gruppe offline**  
+##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+ **So schalten Sie eine Verfügbarkeitsgruppe offline**  
   
 1.  Stellen Sie eine Verbindung zu einer Serverinstanz her, auf der ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe gehostet wird. Dieses Replikat kann das primäre Replikat oder ein sekundäres Replikat sein.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75228172"
   
      ALTER AVAILABILITY GROUP *Gruppenname* OFFLINE  
   
-     Dabei ist *group_name* der Name der Verfügbarkeitsgruppe.  
+     Dabei ist *Gruppenname* der Name der Verfügbarkeitsgruppe.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `AccountsAG` -Verfügbarkeitsgruppe offline geschaltet.  
@@ -64,19 +64,19 @@ ms.locfileid: "75228172"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a>Nachverfolgung: Nachdem die Verfügbarkeits Gruppe offline geschaltet wurde  
+##  <a name="FollowUp"></a> Nachverfolgung: Nachdem die Verfügbarkeitsgruppe offline geschaltet wurde  
   
--   **Protokollierung eines Offline-Vorgangs:**  Die Identität des wsfc-Knotens, in dem der Offline-Vorgang initiiert wurde, wird sowohl im wsfc-Cluster Protokoll als auch in SQL ErrorLog gespeichert.  
+-   **Protokollieren eines OFFLINE-Vorgangs:**  Die Identität des WSFC-Knotens, in dem der OFFLINE-Vorgang initiiert wurde, wird sowohl im WSFC-Clusterprotokoll als auch in SQL ERRORLOG gespeichert.  
   
--   **Wenn Sie den verfügbarkeitsgruppenlistener vor dem Offline schalten der Gruppe nicht gelöscht haben:**  Wenn Sie die Verfügbarkeits Gruppe zu einem anderen wsfc-Cluster migrieren, löschen Sie den vnn und die VIP des Listener. Sie können sie entweder mit der Konsole der Failoverclusterverwaltung, dem PowerShell-Cmdlet [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) oder [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)löschen. Beachten Sie, dass cluster.exe auf Windows 8 veraltet ist.  
+-   **Wenn Sie den Verfügbarkeitsgruppenlistener vor dem Offlineschalten der Gruppe nicht gelöscht haben:**  Wenn Sie die Verfügbarkeitsgruppe zu einem anderen WSFC-Cluster migrieren, löschen Sie den VNN und die VIP des Listener. Sie können sie entweder mit der Konsole der Failoverclusterverwaltung, dem PowerShell-Cmdlet [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) oder [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)löschen. Beachten Sie, dass cluster.exe auf Windows 8 veraltet ist.  
   
-##  <a name="RelatedTasks"></a>Verwandte Aufgaben  
+##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Entfernen Sie einen verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
+-   [Entfernen eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
--   [Ändern des HADR-Cluster Kontexts der Server Instanz &#40;SQL Server&#41;](availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
+-   [Ändern des HADR-Clusterkontexts der Serverinstanz &#40;SQL Server&#41;](availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Verwandte Inhalte  
+##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Technische Artikel zu SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

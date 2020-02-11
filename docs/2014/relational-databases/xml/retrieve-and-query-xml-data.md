@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241207"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Abrufen und Abfragen von XML-Daten
@@ -27,7 +27,7 @@ ms.locfileid: "63241207"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behält den Inhalt der XML-Instanz bei. Allerdings werden die Aspekte der XML-Instanz nicht beibehalten, die im Hinblick auf das XML-Datenmodell als nicht signifikant betrachtet werden. Das bedeutet, dass eine abgerufene XML-Instanz möglicherweise nicht mit der Instanz identisch ist, die auf dem Server gespeichert wurde, aber die gleichen Informationen enthält.  
   
 ### <a name="xml-declaration"></a>XML-Deklaration  
- Die XML-Deklaration in einer Instanz wird nicht beibehalten, wenn die Instanz in der Datenbank gespeichert wird. Zum Beispiel:  
+ Die XML-Deklaration in einer Instanz wird nicht beibehalten, wenn die Instanz in der Datenbank gespeichert wird. Beispiel:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -40,7 +40,7 @@ FROM T1
   
  Das Ergebnis ist `<doc/>`.  
   
- Die XML-Deklaration, z. B. `<?xml version='1.0'?>`, wird nicht beibehalten, wenn die XML-Daten in einer `xml`-Datentypinstanz gespeichert werden. Dies ist beabsichtigt. Die XML-Deklaration () und die zugehörigen Attribute (Version/Codierung/Eigenständigkeit) gehen verloren, nachdem Daten in den Typ konvertiert werden `xml`. Die XML-Deklaration wird als Direktive für den XML-Parser behandelt. Die XML-Daten werden intern als ucs-2 gespeichert. Alle anderen PIs in der XML-Instanz werden beibehalten.  
+ Die XML-Deklaration, z. B. `<?xml version='1.0'?>`, wird nicht beibehalten, wenn die XML-Daten in einer `xml`-Datentypinstanz gespeichert werden. Dies ist beabsichtigt. Die XML-Deklaration () und die zugehörigen Attribute (Version/Codierung/eigenständige) gehen verloren, nachdem Daten in `xml`den Typ konvertiert wurden. Die XML-Deklaration wird als Direktive für den XML-Parser behandelt. Die XML-Daten werden intern als ucs-2 gespeichert. Alle anderen PIs in der XML-Instanz werden beibehalten.  
   
   
 ### <a name="order-of-attributes"></a>Reihenfolge von Attributen  
@@ -79,7 +79,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- Das Namespacepräfix des Ergebnisses kann unterschiedlich sein. Zum Beispiel:  
+ Das Namespacepräfix des Ergebnisses kann unterschiedlich sein. Beispiel:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -87,22 +87,22 @@ GO
   
   
 ##  <a name="query"></a> Festlegen der erforderlichen Abfrageoptionen  
- Beim Abfragen von `xml` Spalten oder Variablen mithilfe vom Typ `xml` -Datentypmethoden müssen die folgenden Optionen wie dargestellt festgelegt werden.  
+ Beim Abfragen von `xml` Typspalten oder Variablen mithilfe `xml` von-Datentyp Methoden müssen die folgenden Optionen wie dargestellt festgelegt werden.  
   
 |SET-Optionen|Erforderliche Werte|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|EIN|  
+|ANSI_PADDING|EIN|  
+|ANSI_WARNINGS|EIN|  
+|ARITHABORT|EIN|  
+|CONCAT_NULL_YIELDS_NULL|EIN|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|EIN|  
   
- Wenn die Optionen nicht festgelegt werden, wie gezeigt, Abfragen und Änderungen auf `xml` -Datentypmethoden fehl.  
+ Wenn die Optionen nicht wie dargestellt festgelegt sind, schlagen Abfragen und `xml` Änderungen an Datentyp Methoden fehl.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Instanzen der XML-Daten](create-instances-of-xml-data.md)  
   
   

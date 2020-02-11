@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125846"
 ---
 # <a name="working-with-empty-values"></a>Arbeiten mit leeren Werten
@@ -45,16 +45,16 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Die folgenden Informationen gelten für leere Werte:  
   
--   Die ["isEmpty"](../mdx/isempty-mdx.md) -Funktion zurückgegeben **"true"** Wenn und nur wenn die Zelle, die durch das in der Funktion angegebenen Tupel identifiziert leer ist. Die Funktion hingegen gibt **"false"** .  
+-   Die [IsEmpty](../mdx/isempty-mdx.md) -Funktion gibt nur dann **true** zurück, wenn die Zelle, die durch das in der-Funktion angegebene Tupel identifiziert wird, leer ist. Andernfalls gibt die Funktion **false**zurück.  
   
     > [!NOTE]  
-    >  Die **"isEmpty"** Funktion kann nicht bestimmt werden, ob ein Elementausdruck einen null-Wert zurückgibt. Um zu bestimmen, ob ein null-Element aus einem Ausdruck zurückgegeben wird, verwenden die [IS](../mdx/is-mdx.md)Operator.  
+    >  Die **IsEmpty** -Funktion kann nicht bestimmen, ob ein Element Ausdruck einen NULL-Wert zurückgibt. Verwenden Sie den [is](../mdx/is-mdx.md)-Operator, um zu bestimmen, ob ein NULL-Element von einem Ausdruck zurückgegeben wird.  
   
 -   Ist der leere Zellwert ein Operand für einen der numerischen Operatoren (+, -, *, /), wird der leere Zellwert als 0 behandelt, wenn der andere Operand ein nicht leerer Wert ist. Sind beide Operanden leer, gibt der numerische Operator den leeren Zellwert zurück.  
   
 -   Ist der leere Zellwert ein Operand für den Operator für Zeichenfolgenverkettungen (+), wird der leere Zellwert als leere Zeichenfolge behandelt, wenn der andere Operand ein nicht leerer Wert ist. Sind beide Operanden leer, gibt der Operator für Zeichenfolgenverkettungen den leeren Zellwert zurück.  
   
--   Wenn der leere Zellwert ein Operand für einen der Vergleichsoperatoren (=. <>, > =, \<=, >, <), wird der leere Zellwert als 0 (null) behandelt, oder ist eine leere Zeichenfolge ist, je nachdem, ob der Datentyp des anderen Operanden numerisch oder String. Sind beide Operanden leer, werden beide als 0 behandelt.  
+-   Wenn der leere Zellwert ein Operand für einen der Vergleichsoperatoren (=. <>, >=, \<=, >, <), wird der leere Zellwert als 0 (null) oder eine leere Zeichenfolge behandelt, je nachdem, ob der Datentyp des anderen Operanden numerisch bzw. Zeichenfolge ist. Sind beide Operanden leer, werden beide als 0 behandelt.  
   
 -   Beim Sortieren numerischer Werte nimmt der leere Zellwert dieselbe Stelle ein wie die Zahl Null. Bei der Sortierung zwischen dem leeren Zellwert und null wird der leere Zellwert vor null eingeordnet.  
   
@@ -63,7 +63,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>Umgehen mit leeren Werten in MDX-Anweisungen und Cubes  
  In MDX-Anweisungen (Multidimensional Expressions) können Sie nach leeren Werten suchen und dann bestimmte Berechnungen für Zellen ausführen, die gültige (also nicht leere) Daten enthalten. Das Entfernen von leeren Werten aus Berechnungen kann wichtig sein, da bestimmte Berechnungen (z. B. eine Durchschnittsberechnung) verfälscht werden können, wenn leere Zellwerte eingeschlossen werden.  
   
- Leere Werte, die in den Daten der zugrundeliegenden Faktentabelle gespeichert sind, werden bei der Verarbeitung des Cube standardmäßig in 0 konvertiert. Sie können die **Null-Verarbeitung** Option für ein Measure aus, um zu steuern, ob null Fakten in 0 (null) konvertiert werden, einen leeren Wert oder sogar löst einen Fehler bei der Verarbeitung konvertierten. Wenn Sie nicht möchten, dass die Abfrageergebnisse leere Zellenwerte enthalten, erstellen Sie Abfragen, berechnete Elemente oder MDX-Skriptanweisungen, die leere Werte entweder ausschließen oder durch einen anderen Wert ersetzen.  
+ Leere Werte, die in den Daten der zugrundeliegenden Faktentabelle gespeichert sind, werden bei der Verarbeitung des Cube standardmäßig in 0 konvertiert. Sie können die Option **NULL-Verarbeitung** für ein Measure verwenden, um zu steuern, ob NULL-Fakten in 0 konvertiert werden, in einen leeren Wert konvertiert werden oder sogar während der Verarbeitung einen Fehler auslöst. Wenn Sie nicht möchten, dass die Abfrageergebnisse leere Zellenwerte enthalten, erstellen Sie Abfragen, berechnete Elemente oder MDX-Skriptanweisungen, die leere Werte entweder ausschließen oder durch einen anderen Wert ersetzen.  
   
  Um leere Zeilen oder Spalten aus einer Abfrage zu entfernen, können Sie vor der Achsmengendefinition die NON EMPTY-Anweisung verwenden. Die folgende Beispielabfrage gibt nur die Produktkategorie „Bikes“ zurück, da dies die einzige Kategorie ist, die im Kalenderjahr 2001 verkauft wurde.  
   
@@ -113,7 +113,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- Weitere Informationen finden Sie unter [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md).  
+ Weitere Informationen finden Sie unter [nicht leere &#40;MDX-&#41;](../mdx/nonempty-mdx.md).  
   
 ## <a name="empty-values-and-comparison-operators"></a>Leere Werte und Vergleichsoperatoren  
  Sind leere Werte in den Daten vorhanden, ist es möglich, dass logische Operatoren und Vergleichsoperatoren nicht nur TRUE oder FALSE zurückgeben, sondern ein drittes Ergebnis: EMPTY. Diese Notwendigkeit einer dreiwertigen Logik ist die Ursache für zahlreiche Anwendungsfehler. In den folgenden Tabellen wird dargestellt, welche Auswirkungen die Einführung von Vergleichen zwischen leeren Werten haben kann.  
@@ -123,18 +123,18 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**LEERE**|FALSE|EMPTY|FALSE|  
+|**EMPTY**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
- Diese Tabelle zeigt die Ergebnisse des Anwendens eines OR-Operators auf zwei boolesche Operanden.  
+ Diese Tabelle zeigt die Ergebnisse der Anwendung eines OR-Operators auf zwei boolesche Operanden.  
   
 |oder|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**LEERE**|TRUE|TRUE|  
+|**EMPTY**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
- Diese Tabelle zeigt, wie der NOT-Operator negiert oder umkehrt, das Ergebnis eines booleschen Operators.  
+ Diese Tabelle zeigt, wie der Not-Operator das Ergebnis eines booleschen Operators negiert oder umgekehrt.  
   
 |Boolescher Ausdruck, auf den der NOT-Operator angewendet wird|Auswertungsergebnis|  
 |-------------------------------------------------------------|------------------|  
@@ -142,9 +142,9 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Ausdrücke &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Ausdrücke &#40;MDX-&#41;](../mdx/expressions-mdx.md)  
   
   

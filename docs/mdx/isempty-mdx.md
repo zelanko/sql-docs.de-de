@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905988"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
@@ -31,16 +31,16 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der in der Regel die Zellenkoordinaten eines Elements oder Tupels zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **"isEmpty"** -Funktion zurückgegeben **"true"** , wenn der ausgewertete Ausdruck einen leeren Zellenwert entspricht. Andernfalls, gibt diese Funktion **"false"** .  
+## <a name="remarks"></a>Bemerkungen  
+ Die **IsEmpty** -Funktion gibt **true** zurück, wenn der ausgewertete Ausdruck ein leerer Zellwert ist. Andernfalls gibt diese Funktion **false**zurück.  
   
 > [!NOTE]  
 >  Die Standardeigenschaft eines Elements ist sein Wert.  
   
- Die **"isEmpty"** Funktion ist die einzige Möglichkeit, dass Sie auch für eine leere Zelle zuverlässig testen, da der leere Zellenwert eine besonderen Bedeutung, in hat [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Die **IsEmpty** -Funktion ist die einzige Möglichkeit, zuverlässig auf eine leere Zelle zu testen, da der leere Zellwert in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eine besondere Bedeutung hat.  
   
 > [!IMPORTANT]  
->  Wenn die Auswertung des wertausdrucks einen Fehler zurückgibt, gibt die Funktion **"false"** . Ein Wertausdruck kann z. B. einen Fehler zurückgeben, wenn ein Eigenschaftsverweis auf eine ungültige oder nicht vorhandene Eigenschaft verweist.  
+>  Wenn bei der Auswertung des Value-Ausdrucks ein Fehler zurückgegeben wird, gibt die Funktion **false**zurück. Ein Wertausdruck kann z. B. einen Fehler zurückgeben, wenn ein Eigenschaftsverweis auf eine ungültige oder nicht vorhandene Eigenschaft verweist.  
   
  Weitere Informationen zu leeren Zellen finden Sie in der OLE DB-Dokumentation.  
   
@@ -57,8 +57,8 @@ IsEmpty(Value_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit leeren Werten](../mdx/working-with-empty-values.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie einen Cube ohne Verwendung einer Datenquellensicht aus einer Vorlage | Microsoft-Dokumentation
+title: Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellen Sicht zu verwenden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076511"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
@@ -23,12 +23,13 @@ ms.locfileid: "66076511"
 ## <a name="selecting-the-build-method"></a>Auswählen der Erstellungsmethode  
  Klicken Sie im Cube-Assistenten auf der Seite **Erstellungsmethode auswählen** auf **Cube ohne eine Datenquelle erstellen**. Um den Cube mithilfe einer vorhandenen Cubevorlage zu erstellen, aktivieren Sie das Kontrollkästchen **Cubevorlage verwenden** . . Wenn Sie sich gegen die Verwendung einer Vorlage entscheiden, müssen Sie die Optionen manuell festlegen.  
   
- In Cubevorlagen sind vordefinierte Measures, Measuregruppen, Dimensionen, Hierarchien und Attribute enthalten. Wenn Sie eine Vorlage auswählen, verwendet der Assistent die Objektdefinitionen in den Vorlagen als Grundlage zum Festlegen der Optionen auf den folgenden Seiten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird mit mehreren Vorlagen für Standardcubes installiert. Der Serveradministrator kann auch Cube- oder Dimensionsvorlagen hinzufügen, die speziell auf die Daten in Ihrem Unternehmen abgestimmt sind.  
+ In Cubevorlagen sind vordefinierte Measures, Measuregruppen, Dimensionen, Hierarchien und Attribute enthalten. Wenn Sie eine Vorlage auswählen, verwendet der Assistent die Objektdefinitionen in den Vorlagen als Grundlage zum Festlegen der Optionen auf den folgenden Seiten. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird mit mehreren Vorlagen für Standardcubes installiert. Der Serveradministrator kann auch Cube- oder Dimensionsvorlagen hinzufügen, die speziell auf die Daten in Ihrem Unternehmen abgestimmt sind.  
   
 ## <a name="selecting-dimensions"></a>Auswählen von Dimensionen  
  Mithilfe der Seite **Dimensionen auswählen** des Assistenten können Sie dem Cube vorhandene Dimensionen hinzufügen. Diese Seite wird nur angezeigt, wenn im Projekt oder der Datenbank bereits freigegebene Dimensionen ohne eine Datenquelle vorhanden sind. Dimensionen, die über eine Datenquelle verfügen, sind nicht aufgeführt.  
   
- Um vorhandene Dimensionen hinzuzufügen, wählen Sie in der Liste **Gemeinsame Dimensionen** mindestens eine Dimension aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts ( **>** ), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche mit dem Doppelpfeil ( **>>** ), um alle Dimensionen in der Liste zu verschieben.  
+ Um vorhandene Dimensionen hinzuzufügen, wählen Sie mindestens eine Dimension aus der Liste **Gemeinsame Dimensionen** aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts (**>**), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche**>>** mit dem Doppelpfeil (), um alle Dimensionen in der Liste zu verschieben.  
   
 ## <a name="defining-new-measures"></a>Definieren neuer Measures  
  Verwenden Sie die Seite **Neue Measures definieren** des Assistenten, um die Measures und Measuregruppen im neuen Cube anzugeben. Die hier angegebenen Measuregruppen entsprechen den Faktentabellen im generierten Schema. Die hier angegebenen Measures entsprechen den numerischen Nichtschlüsselspalten in den Tabellen.  
@@ -39,27 +40,27 @@ ms.locfileid: "66076511"
   
  Sowohl das Raster **Measures aus der Vorlage auswählen** als auch das Raster **Neue Measures hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Spalte|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. In dieser Spalte wird die `Name`-Eigenschaft für das Measureobjekt festgelegt.|  
-|**Measuregruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. In dieser Spalte wird die `Name`-Eigenschaft für das Measuregruppenobjekt festgelegt.|  
+|**Measure-Gruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. In dieser Spalte wird die `Name`-Eigenschaft für das Measuregruppenobjekt festgelegt.|  
 |**Datentyp**|Der Datentyp des Measures. Klicken Sie auf diesen Wert, um den Datentyp zu ändern. Der Standardwert bei der Erstellung eines Measures ist `Single`. In dieser Spalte wird die `DataType`-Eigenschaft für das Measureobjekt festgelegt.|  
-|**Aggregation**|Die Standardaggregation des Measures. Klicken Sie auf diese Zelle, um eine der Standardaggregationen für das Measure (oder **keine**) anzugeben. Der Standardwert bei der Erstellung eines Measures ist `Sum`. In dieser Spalte wird die `AggregationFunction`-Eigenschaft für das Measureobjekt festgelegt.|  
+|**Stellung**|Die Standardaggregation des Measures. Klicken Sie auf diese Zelle, um eine der Standardaggregationen für das Measure (oder **keine**) anzugeben. Der Standardwert bei der Erstellung eines Measures ist `Sum`. In dieser Spalte wird die `AggregationFunction`-Eigenschaft für das Measureobjekt festgelegt.|  
   
 ## <a name="defining-new-dimensions"></a>Definieren neuer Dimensionen  
  Verwenden Sie die Seite **Neue Dimensionen definieren** des Assistenten, um die Dimensionen im neuen Cube anzugeben.  
   
  Wenn Sie den Cube auf der Grundlage einer Vorlage erstellen, werden im Raster unter **Dimensionen aus der Vorlage auswählen** die in der Vorlage enthaltenen Dimensionen aufgelistet. Sie können das Kontrollkästchen neben einer beliebigen Dimension deaktivieren, um sie aus dem Cube zu entfernen. Deaktivieren Sie das Kontrollkästchen auf der Titelleiste des Rasters, um alle aufgeführten Dimensionen zu entfernen. Wenn Sie keine Vorlage verwenden, ist in diesem Raster nur die Time-Dimension aufgeführt.  
   
- Sie können dem Cube im Raster unter **Neue Dimensionen hinzufügen**Dimensionen hinzufügen. Um eine Dimension hinzuzufügen, klicken Sie auf die Zelle in der `Name` Spalte mit dem Text **neue Dimension hinzufügen**, und geben Sie einen Namen für die Dimension. Um eine Zeile aus der Liste zu entfernen, klicken Sie auf das Löschsymbol (**X**).  
+ Sie können dem Cube im Raster unter **Neue Dimensionen hinzufügen**Dimensionen hinzufügen. Um eine Dimension hinzuzufügen, klicken Sie auf die `Name` Zelle in der Spalte, die den Text **Add New Dimension**enthält, und geben Sie dann einen Namen für die Dimension ein. Um eine Zeile aus der Liste zu entfernen, klicken Sie auf das Löschsymbol (**X**).  
   
  Sowohl das Raster **Dimensionen aus der Vorlage auswählen** als auch das Raster **Neue Dimensionen hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Spalte|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Typ**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
-|`Name`|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Dieser Wert legt die `Name` -Eigenschaft für die Dimension-Objekt.|  
-|**SCD**|Gibt an, dass dies eine langsam veränderliche Dimension (Slowly Changing Dimension, SCD) ist. Wenn Sie dieses Kontrollkästchen aktivieren, werden der Dimension die Attribute SCD-Startdatum, Ursprüngliche ID des Enddatums und Status hinzugefügt. **SCD** wird standardmäßig ausgewählt, wenn Sie den Cube anhand einer Vorlage erstellen und der Assistent diese vier Attributtypen in einer Vorlagendimension erkennt.|  
+|`Name`|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Mit diesem Wert wird `Name` die-Eigenschaft für das Dimensions Objekt festgelegt.|  
+|**SCD**|Gibt an, dass dies eine langsam veränderliche Dimension (Slowly Changing Dimension, SCD) ist. Wenn Sie dieses Kontrollkästchen aktivieren, werden der Dimension die Attribute SCD-Startdatum, Ursprüngliche ID des Enddatums und Status hinzugefügt. **SCD** ist standardmäßig ausgewählt, wenn Sie eine Vorlage zum Erstellen des Cubes verwenden und der Assistent diese vier Attributtypen in einer Vorlagen Dimension erkennt.|  
 |**Attribute**|Zeigt die Attribute an, die für die Dimension erstellt werden sollen. Jedem Attributnamen in der Liste wird der Dimensionsname vorangestellt. Diese Liste ist schreibgeschützt. Nachdem Sie den Assistenten abgeschlossen haben, können Sie die Attribute mithilfe des Dimensions-Designers ändern.|  
   
 ## <a name="defining-time-periods"></a>Definieren von Zeiträumen  
@@ -74,15 +75,15 @@ ms.locfileid: "66076511"
   
  Nachdem die Cubeerstellung abgeschlossen wurde, können Sie Zeitattribute mit dem Dimensions-Designer hinzufügen oder entfernen. Das Date-Attribut kann nicht entfernt werden, da es das Schlüsselattribut der Dimension darstellt. Sie können die `AttributeHierarchyVisible`-Eigenschaft in `False` ändern, um das Date-Attribute für Benutzer auszublenden.  
   
- Alle verfügbare Zeiträume werden im Bereich Zeiträume des Dimensions-Designers angezeigt. (Bei Dimensionen, die auf Dimensionstabellen basieren, ersetzt dieser Bereich den Bereich **Datenquellensicht**.) Sie können den Datumsbereich für eine Dimension ändern, indem Sie die Einstellung der **Source**-Eigenschaft (Zeitbindung) für die Dimension ändern. Da es sich hierbei um eine strukturelle Änderung handelt, müssen Sie die Dimension und alle Cubes, die diese verwenden, vor dem Durchsuchen der Daten erneut verarbeiten.  
+ Alle verfügbare Zeiträume werden im Bereich Zeiträume des Dimensions-Designers angezeigt. (Bei Dimensionen, die auf Dimensionstabellen basieren, ersetzt dieser Bereich den Bereich **Datenquellensicht** .) Sie können den Datumsbereich für eine Dimension ändern, indem Sie die Einstellung der **Source** -Eigenschaft (Zeitbindung) für die Dimension ändern. Da es sich hierbei um eine strukturelle Änderung handelt, müssen Sie die Dimension und alle Cubes, die diese verwenden, vor dem Durchsuchen der Daten erneut verarbeiten.  
   
 ## <a name="specifying-additional-calendars"></a>Angeben zusätzlicher Kalender  
  Auf der Seite **Zusätzliche Kalender angeben** des Assistenten können Sie Kalender auswählen, auf denen die Hierarchien der Dimension basieren sollen. Sie können einen der folgenden Kalender auswählen:  
   
-|Kalender|Description|  
+|Kalender|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.|  
-|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, geben Sie den Anfangstag und den drei Monate 4-4-5, 4-5-4 oder 5-4-4 Wochen, wobei jede Ziffer für die Anzahl der Wochen in einem Monat darstellt.|  
+|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, geben Sie den Starttag und-Monat sowie das dreimonatige Muster 4-4-5, 4-5-4 oder 5-4-4 Wochen an, wobei jede Ziffer die Anzahl der Wochen in einem Monat darstellt.|  
 |Produktionskalender|Ein Kalender, der 13 aus vier Wochen bestehende Zeiträume verwendet, die in drei Quartale mit vier Zeiträumen und ein Quartal mit fünf Zeiträumen unterteilt sind. Wenn Sie diesen Kalender auswählen, geben Sie die Startwoche (zwischen 1 und 4) und den Monat für das Herstellungsjahr und das Quartal mit zusätzlichen Zeiträumen an.|  
 |ISO 8601-Kalender|Der Standardkalender für die Daten- und Zeitdarstellung (8601) der Internationalen Organisation für Normung (International Organization for Standardization, ISO). Dieser Kalender besitzt eine integrale Anzahl von 7-Tage-Wochen. Um zu vermeiden, dass eine Woche unterteilt wird, kann ein neues Jahr im Kalender bis zu einige Tage vor oder nach dem 1. Januar starten.|  
   
