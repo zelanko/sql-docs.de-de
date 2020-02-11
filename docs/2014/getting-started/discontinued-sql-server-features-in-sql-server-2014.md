@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637772"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2014
@@ -28,19 +28,20 @@ ms.locfileid: "73637772"
 ### <a name="discontinued-active-directory-helper-service"></a>Eingestellter Hilfsdienst für Active Directory  
  Der Active Directory-Hilfsdienst und die zugehörigen Komponenten wurden entfernt. In der folgenden Tabelle werden die zugehörigen und somit entfernten Komponenten aufgeführt:  
   
-|Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
+|Category|Nicht mehr unterstützte Funktion|Ersatz|  
 |--------------|--------------------------|-----------------|  
 |Gespeicherte Systemprozeduren|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Kein Ersatz verfügbar|  
   
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Nicht mehr unterstützte Funktionen in SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Unterstützung der 64-Bit-Plattform in Reporting Services  
- Ab [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]bietet die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponente keine Unterstützung mehr für Itanium-basierte Server unter Windows Server 2003 oder Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt weiterhin andere 64-Bit-Betriebssysteme, einschließlich Windows Server°2008 für Itanium-basierte Systeme und Windows Server°2008°R2 für Itanium-basierte Systeme. Um von einer [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Installation mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] unter einer Itanium-basierten Systemedition von Windows Server 2003 oder Windows Server 2003 R2 auf [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] zu aktualisieren, müssen Sie zunächst das Betriebssystem aktualisieren.  
+ Ab [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]bietet die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponente keine Unterstützung mehr für Itanium-basierte Server unter Windows Server 2003 oder Windows Server 2003 R2. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt weiterhin andere 64-Bit-Betriebssysteme, einschließlich Windows Server°2008 für Itanium-basierte Systeme und Windows Server°2008°R2 für Itanium-basierte Systeme. Um von einer [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Installation mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] unter einer Itanium-basierten Systemedition von Windows Server 2003 oder Windows Server 2003 R2 auf [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] zu aktualisieren, müssen Sie zunächst das Betriebssystem aktualisieren.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Nicht mehr unterstützte Funktionen in SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Nicht mehr unterstütztes SQL-DMO aus der SQL Server Express-Installation  
- SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde aus [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] entfernt. Es wird empfohlen, Anwendungen, die diese Funktion derzeit nutzen, so schnell wie möglich zu ändern. Wenn Sie SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express unterstützen müssen, installieren Sie die abwärts Kompatibilitäts Komponenten aus dem [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=24793). Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) für neue Entwicklungen.  
+ SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde aus [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] entfernt. Es wird empfohlen, Anwendungen, die diese Funktion derzeit nutzen, so schnell wie möglich zu ändern. Wenn Sie SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express unterstützen müssen, installieren Sie die abwärts Kompatibilitäts [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Komponenten aus dem Feature Pack aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=24793). Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) für neue Entwicklungen.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Nicht mehr unterstützte Option für Web-Assistent  
  Die Option `sp_configure` zur Aktivierung des Web-Assistenten wurde aus [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] entfernt. Stattdessen wird die Verwendung von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] empfohlen.  
@@ -48,13 +49,13 @@ ms.locfileid: "73637772"
 ### <a name="surface-area-configuration-tool"></a>Oberflächenkonfigurations-Tool  
  Das Oberflächen-Konfigurationstool wird für [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]nicht mehr unterstützt. Die folgende Tabelle zeigt, welche Elemente Sie zum Konfigurieren von Einstellungen, Optionen und Komponentenfunktionen in dieser Version verwenden können.  
   
-|Ersetzungs Einstellungen und Komponenten Features|Vorgehensweise beim Konfigurieren|  
+|Ersetzungs Einstellungen und Komponenten Features|Vorgehensweise zur Konfiguration|  
 |-------------------------------------------------|----------------------|  
 |Protokolle, Verbindungs-und Startoptionen|Verwenden Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager.|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]-Funktionen|Verwenden Sie die richtlinienbasierte Verwaltung, die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder sp_Configure.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Funktionen|Verwenden Sie die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-enableintegrsicherheitseigenschaft|Verwenden Sie die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-"geplante Ereignisse und Berichts Übermittlung" und "Webdienst und HTTP-Zugriff"|Bearbeiten Sie die Konfigurationsdatei RSReportServer.config.|  
+|[!INCLUDE[ssDE](../includes/ssde-md.md)]Aspekte|Verwenden Sie die richtlinienbasierte Verwaltung, die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder sp_Configure.|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Aspekte|Verwenden Sie die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - EnableIntegratedSecurity-Eigenschaft|Verwenden Sie die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - Geplante Ereignisse und Berichtsübermittlung und Webdienst und HTTP-Zugriff|Bearbeiten Sie die Konfigurationsdatei RSReportServer.config.|  
 |Befehlszeilenoptionen|In dieser Version nicht unterstützt|  
 |SOAP und [!INCLUDE[ssSB](../includes/sssb-md.md)]-Endpunkte|Verwenden Sie [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)und [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
@@ -78,7 +79,7 @@ ms.locfileid: "73637772"
   
  <sup>1</sup> Diese Parameter sind nur für die Installation gültig.  
   
- <sup>2</sup> Wenn Sie [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]starten, geben Sie/Action = EditionUpgrade an, um eine vorhandene Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jederzeit auf eine andere Edition zu aktualisieren, ohne die ursprünglichen Installationsmedien zu verwenden. Weitere Informationen zu unterstützten Versions- und Editionsupgrades finden Sie unter [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> Wenn [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]Sie beginnen, geben Sie/Action = EditionUpgrade an, um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorhandene Edition von jederzeit ohne Verwendung der ursprünglichen Installationsmedien auf eine andere Edition zu aktualisieren. Weitere Informationen zu unterstützten Versions- und Editionsupgrades finden Sie unter [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Weitere Informationen finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

@@ -14,18 +14,18 @@ ms.assetid: 4bae3fcd-0287-4f79-ad7c-8f7ab2f6f940
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8481a4ea9cf69b615aa0142cc01556018801e823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132539"
 ---
 # <a name="sqlcolumns-excel-driver"></a>SQLColumns (Excel-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält die Excel-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Informationen zu Excel-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Spalte|Kommentare|  
+|Column|Kommentare|  
 |------------|--------------|  
 |TABLE_QUALIFIER|Der Pfad zu einem Verzeichnis wird zurückgegeben.|  
-|TABLE_OWNER|In dieser Spalte wird NULL zurückgegeben, da der Name des Besitzers nicht unterstützt wird.|  
-|NULLABLE|SQL_NO_NULLS wird zurückgegeben, für Spalten, die einbezogen werden, in einer primary key- oder unique-Index.|
+|TABLE_OWNER|In dieser Spalte wird NULL zurückgegeben, da der Besitzer Name nicht unterstützt wird.|  
+|NULLABLE|SQL_NO_NULLS wird für Spalten zurückgegeben, die an einem Primärschlüssel oder einem eindeutigen Index beteiligt sind.|

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228070"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Einführung in SQL Server 2014 Hybrid Cloud
@@ -107,7 +107,7 @@ ms.locfileid: "75228070"
  
  Wenn Sie beabsichtigen, die Anwendungsebenen (z. b. die Präsentationsebene, die Geschäfts Schicht und die Datenbankebene) in Azure Virtual Machines zu verschieben, sollten Sie die Empfehlungen im Artikel [Anwendungs Muster und Entwicklungsstrategien für SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/dn574746.aspx) überprüfen. Das Ziel dieses Artikels ist, Lösungsarchitekten und Entwicklern eine Grundlage für gute Anwendungsarchitektur und deren Entwurf zu bieten, die sie bei der Migration der vorhandenen Anwendungen nach Azure sowie bei der Entwicklung neuer Anwendungen in Azure verfolgen können. In diesem Artikel wird jedes Anwendungsmuster unter den folgenden Gesichtspunkten beleuchtet: lokales Szenario, entsprechende cloudfähige Lösung und zweckdienliche technische Empfehlungen. Darüber hinaus behandelt der Artikel Azure-spezifische Entwicklungsstrategien für einen ordnungsgemäßen Entwurf Ihrer Anwendungen. 
  
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
  [SQL Server 2014 CTP2-Produkthandbuch](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Blogreihe über die Microsoft SQL Server Hybrid Cloud](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  

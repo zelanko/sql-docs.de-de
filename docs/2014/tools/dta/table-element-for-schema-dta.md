@@ -1,5 +1,5 @@
 ---
-title: TABLE Element für Schema (DTA) | Microsoft-Dokumentation
+title: Table-Element für Schema (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138782"
 ---
 # <a name="table-element-for-schema-dta"></a>Table-Element für Schema (DTA)
@@ -35,15 +35,15 @@ ms.locfileid: "63138782"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`NumberOfRows`|Optional. Eine ganze Zahl, mit der Sie Tabellen unterschiedlicher Größe simulieren können.|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|**string**, 1 bis 255 Zeichen.|  
+|**Datentyp und -länge**|**Zeichenfolge**, die zwischen 1 und 255 Zeichen lang ist.|  
 |**Standardwert**|Keine.|  
 |**Vorkommen**|Optional. Sie können beliebig viele Tabellen für die Arbeitsauslastung auflisten.|  
   
@@ -54,13 +54,13 @@ ms.locfileid: "63138782"
 |**Übergeordnetes Element**|[Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)|  
 |**Untergeordnete Elemente**|[Name-Element für Tabelle &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie kein `Table`-Element angeben, geht der Datenbankoptimierungsratgeber davon aus, dass sich alle Tabellen in der angegebenen Datenbank optimieren lassen.  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung finden Sie unter [Server-Element &#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

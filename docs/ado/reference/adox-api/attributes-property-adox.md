@@ -1,5 +1,5 @@
 ---
-title: Attributes-Eigenschaft (ADOX) | Microsoft-Dokumentation
+title: Attribute-Eigenschaft (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,21 +20,21 @@ ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcd0e70dd9c505b9e2b0752c33b9e768b9127472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967147"
 ---
 # <a name="attributes-property-adox"></a>Attributes-Eigenschaft (ADOX)
-Beschreibt die Spalteneigenschaften.  
+Beschreibt Spalten Eigenschaften.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **lange** Wert. Der Wert gibt die Eigenschaften der Tabelle, die durch dargestellt wird die [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekt. Der Wert kann eine Kombination von sein [wird](../../../ado/reference/adox-api/columnattributesenum.md) Konstanten. Der Standardwert ist 0 (null) (**0**), ist keines von beiden **AdColFixed** noch **eine**.  
+ Legt einen **Long** -Wert fest oder gibt ihn zurück. Der-Wert gibt die Merkmale der Tabelle an, die durch das [Column](../../../ado/reference/adox-api/column-object-adox.md) -Objekt dargestellt wird. Bei dem Wert kann es sich um eine Kombination aus [columnattributesenumeration](../../../ado/reference/adox-api/columnattributesenum.md) -Konstanten handeln. Der Standardwert ist NULL (**0**), d. h. weder **adcolfixed** noch **adcolnullable**.  
   
 ## <a name="applies-to"></a>Gilt für  
   
 - [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für Dateneigenschaften Attribute (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Attributes-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)

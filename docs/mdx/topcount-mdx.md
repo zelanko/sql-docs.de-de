@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036599"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
@@ -31,19 +31,19 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Count*  
+ *Countdown*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Tupel angibt, die zurückgegeben werden sollen.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn ein numerischer Ausdruck angegeben wird, die **TopCount** sortiert in absteigender Reihenfolge der Tupel in der Menge, die von der angegebenen Menge nach dem angegebenen numerischen Ausdrucks, Wert angegeben wird, ausgewertet über der angegebenen Funktion Legen Sie. Nach dem Sortieren der Menge der **TopCount** Funktion gibt dann die angegebene Anzahl von Tupeln mit dem höchsten Wert zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn ein numerischer Ausdruck angegeben wird, sortiert die **TopCount** -Funktion die Tupel in der Menge, die durch die angegebene Menge angegeben wird, in absteigender Reihenfolge nach dem vom numerischen Ausdruck angegebenen Wert, der über der angegebenen Menge ausgewertet wird. Nach dem Sortieren der Menge gibt die **TopCount** -Funktion die angegebene Anzahl von Tupeln mit dem höchsten Wert zurück.  
   
 > [!IMPORTANT]  
->  Wie die [BottomCount](../mdx/bottomcount-mdx.md) -Funktion, die **TopCount** Funktion immer die Hierarchie unterbrochen.  
+>  Wie die [BottomCount](../mdx/bottomcount-mdx.md) -Funktion unterbricht die **TopCount** -Funktion immer die Hierarchie.  
   
- Wenn ein numerischer Ausdruck nicht angegeben wird, die Funktion gibt die Menge der Elemente in natürlicher Reihenfolge ohne Sortierung, verhält, wie die [Head (MDX)](../mdx/head-mdx.md) Funktion.  
+ Wenn kein numerischer Ausdruck angegeben wird, gibt die Funktion die Menge der Elemente in natürlicher Reihenfolge ohne Sortierung zurück, die sich wie die [Head (MDX)](../mdx/head-mdx.md) -Funktion verhält.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt die ersten 10 Daten nach Internetverkaufsbetrag zurück:  
@@ -70,7 +70,7 @@ FROM [Adventure Works]
 WHERE([Product].[Product Categories].Bikes)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

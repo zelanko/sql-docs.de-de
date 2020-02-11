@@ -11,10 +11,10 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728699"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
@@ -27,9 +27,9 @@ Anweisungen dazu, wie Sie die Beispielmodelle bereitstellen, finden Sie unter [M
   
   
 ## <a name="business-rule-examples"></a>Beispiele für Geschäftsregeln  
-Beispielmodell |Entität  |Geschäftsregelname| Beschreibung  
+Beispielmodell |Entität  |Geschäftsregelname| BESCHREIBUNG  
 ---------|---------|---------|-----------|  
-Customer    | Customer   | Person pmt-Begriffe| Gibt Standardzahlungsbedingungen für Kunden an.          
+Kunde    | Kunde   | Person pmt-Begriffe| Gibt Standardzahlungsbedingungen für Kunden an.          
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
@@ -42,9 +42,9 @@ Else
   
 **--------------------------------------------------**  
   
-Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
 ---------|---------|---------|---------------  
-Customer     | Customer    | Org pmt-Begriffe | Gibt die Standardzahlungsbedingungen für Organisationen an.         
+Kunde     | Kunde    | Org pmt-Begriffe | Gibt die Standardzahlungsbedingungen für Organisationen an.         
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
@@ -58,9 +58,9 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname| Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname| BESCHREIBUNG    
 ---------|---------|---------|-----------  
-Product     |  Product       | DaysToManufacture |Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an.          
+Produkt     |  Produkt       | DaysToManufacture |Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an.          
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
@@ -74,9 +74,9 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
 ---------|---------|---------|-------------  
-Product     |Product         |Erforderliche Felder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
+Produkt     |Produkt         |Erforderliche Felder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
 In der folgenden Geschäftsregel wird unter allen Umständen die `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Die Attributwerte dürfen nicht Null oder leer sein.  
 ```  
 If  
@@ -99,10 +99,10 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
 ---------|---------|---------|-----------  
-Product     | Product        |  Standardkosten| Erfordert, dass die Standardkosten größer als 0 sind.        
-In der folgenden Geschäftsregel wird unter allen Umständen die `must be greater than`-[Regelaktion](../master-data-services/business-rule-actions-master-data-services.md) auf das StandardCost-Attribut von „Products“ angewendet.  
+Produkt     | Produkt        |  Standardkosten| Erfordert, dass die Standardkosten größer als 0 sind.        
+In der folgenden Geschäftsregel wird unter allen Umständen die `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
     None  
@@ -115,11 +115,11 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
 ---------|---------|---------|------------  
-Product     | Product        | FG MSRP-Kosten|Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist.           
+Produkt     | Produkt        | FG MSRP-Kosten|Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist.           
   
-In der folgenden Geschäftsregel wird die `is equal` [Regelaktion](../master-data-services/business-rule-conditions-master-data-services.md)auf die Attribute „MSRP“ und „DealerCost“ angewendet, wenn der Wert des FinishedGoodIndicator-Attributs die `must be greater than` [Regelbedingung](../master-data-services/business-rule-actions-master-data-services.md) erfüllt.  
+In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
 If  
     FinishedGoodIndicator is equal to Y  
@@ -133,10 +133,10 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
 ---------|---------|---------|------------  
-Product     | Product        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
-In der folgenden Geschäftsregel wird die `is equal` `defaults to`Regelaktion[ auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die](../master-data-services/business-rule-actions-master-data-services.md)-Regelbedingung nicht erfüllen.  
+Produkt     | Produkt        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
+In der folgenden Geschäftsregel wird die `is equal`Regelaktion`defaults to` [ auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die](../master-data-services/business-rule-actions-master-data-services.md)-Regelbedingung nicht erfüllen.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  
@@ -149,8 +149,8 @@ Else
 **--------------------------------------------------**  
   
   
-**So zeigen Sie die Geschäftsregelbeispiele in den Beispielmodellen an**  
-1. Navigieren Sie zur [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]-Website, die Sie nach der Installation von MDS eingerichtet haben, und klicken Sie auf das Feld **Systemverwaltung**.   
+**So zeigen Sie die Geschäftsregel Beispiele in den Beispiel Modellen an**  
+1. Navigieren Sie zur [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] -Website, die Sie nach der Installation von MDS eingerichtet haben, und klicken Sie auf das Feld **Systemverwaltung** .   
 Anweisungen zum Einrichten der Website finden Sie unter [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Klicken Sie auf das Beispielmodell, das die Geschäftsregel enthält, so wie in den obigen Tabellen aufgeführt, und klicken Sie anschließend auf **Entitäten**.  
 3. Klicken Sie auf die Entität, für welche die Regel gilt, so wie in den obigen Tabellen aufgeführt, und klicken Sie anschließend auf **Geschäftsregeln**.  

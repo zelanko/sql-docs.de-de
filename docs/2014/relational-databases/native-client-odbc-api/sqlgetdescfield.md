@@ -15,36 +15,37 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657779"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber macht die treiberspezifische deskriptorfelder für den Implementierungszeilendeskriptor (IRD) nur. Innerhalb des IRD wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deskriptorfelder durch treiberspezifische Spaltenattribute verwiesen. Weitere Informationen über eine vollständige Liste der verfügbaren treiberspezifische deskriptorfelder finden Sie unter [SQLColAttribute](sqlcolattribute.md).  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht nur Treiber spezifische Deskriptorfelder für den Implementierungs Zeilen Deskriptor (IRD) verfügbar. Im IRD wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Deskriptorfelder durch Treiber spezifische Spalten Attribute verwiesen. Weitere Informationen über eine komplette Liste der verfügbaren treiberspezifischen Deskriptorfelder finden Sie unter [SQLColAttribute](sqlcolattribute.md).  
   
  Deskriptorfelder, die Spaltenbezeichner-Zeichenfolgen enthalten, sind häufig Zeichenfolgen der Länge 0 (null). Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Deskriptorfeldwerte sind schreibgeschützt.  
   
- Abgerufen, wie Attribute mit SQLColAttribute, deskriptorfelder, dass auf Zeilenebene Berichtsattribute (wie SQL_CA_SS_COMPUTE_ID) für alle Spalten im Resultset gemeldet werden.  
+ Wie bei Attributen, die mit SQLColAttribute abgerufen werden, werden Deskriptorfelder, die Attribute auf Zeilenebene melden (z. b. SQL_CA_SS_COMPUTE_ID), für alle Spalten im Resultset gemeldet.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField und Tabellenwertparameter  
- SQLGetDescField kann verwendet werden, um Werte für die erweiterten Attribute von Tabellenwertparametern und Tabellenwertparameter-Spalten zu erhalten. Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ SQLGetDescField kann verwendet werden, um Werte für erweiterte Attribute von Tabellenwert Parametern und Tabellenwert Parameter-Spalten zu erhalten. Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Weitere Informationen zu den verfügbaren deskriptorfelder mit den neuen Datums-/Uhrzeit-Typen finden Sie unter [Parameter- und Ergebnismetadaten](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Informationen zu den Deskriptorfeldern, die für die neuen Datums-/Uhrzeittypen verfügbar sind, finden Sie unter [Parameter und Ergebnis Metadaten](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField kann zurückgeben `SQL_C_SS_TIME2` (für `time` Typen) oder `SQL_C_SS_TIMESTAMPOFFSET` (für `datetimeoffset`) anstelle von `SQL_C_BINARY`, wenn die Anwendung ODBC 3.8 verwendet.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `SQL_C_SS_TIME2` Ab kann SQLGetDescField (für `time` -Typen) oder `SQL_C_SS_TIMESTAMPOFFSET` (für `datetimeoffset`) anstelle von `SQL_C_BINARY`zurückgeben, wenn die Anwendung ODBC 3,8 verwendet.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField-Unterstützung für große CLR-UDTs  
- `SQLGetDescField` unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLGetDescField` unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField-Unterstützung für Spalten mit geringer Dichte  
- SQLGetDescField kann verwendet werden, um die Abfragen die neuen IRD-Felds SQL_CA_SS_IS_COLUMN_SET, um festzustellen, ob eine Spalte ist eine `column_set` Spalte.  
+ SQLGetDescField kann verwendet werden, um das neue IRD-Feld abzufragen SQL_CA_SS_IS_COLUMN_SET um zu ermitteln, `column_set` ob eine Spalte eine Spalte ist.  
   
- Weitere Informationen finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
+ Weitere Informationen finden Sie [unter Unterstützung für sparsespalten &#40;ODBC-&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -151,8 +152,8 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLGetDescField-Funktion](https://go.microsoft.com/fwlink/?LinkId=59351)   
- [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -2,23 +2,34 @@
 title: Neues in SSMA für Access (Access Token SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 0c13fd9b2e8c389685fff14679bb18fd8b4d4525
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 168fb9acca00ef6d58f540a635c2212d408cf3bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834320"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516475"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neues in SSMA für Access (Access Token SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Zugriffs Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+Zusätzlich zu einem Zielsatz von Korrekturen, die zur Verbesserung der Benutzerfreundlichkeit und Leistung entwickelt wurden, wurde die Version Version 8.6 von SSMA für Access verbessert, indem eine Einstellung hinzugefügt wurde, mit der Benutzer erweiterte SSMA-Eigenschaften im konvertierten Code weglassen können.
+
+Wenn Sie diese Einstellung nutzen möchten, **Navigieren Sie in SSMA zu** > **Projekteinstellungen** > **Allgemeine** > **Konvertierung**, und aktualisieren Sie dann unter **misc**den Wert der Einstellung **Erweiterte Eigenschaften auslassen** auf **Ja**.
+
+![Einstellung für erweiterte Eigenschaften weglassen](../access/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> Mit SSMA Version 8.5 und höher ist .NET 4.7.2 eine erforderliche Installation. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -147,7 +158,7 @@ Die Version 7.1 von SSMA für Access enthält die folgenden Änderungen:
 
 * SQL Server 2017 unter Windows und Linux CTP1 wird jetzt als Zielplattform für die Migration unterstützt. Diese Funktion befindet sich in der Technical Preview und unterstützt das Schema und die Daten Verschiebung für SQL Server-Zielserver.
 * SSMA unterstützt jetzt automatische Updates, um die neueste Version von SSMA herunterzuladen, sobald Sie verfügbar ist.
-* Installierbare SSMA-Binärdateien werden jetzt über Windows Installer-Paketdateien (MSI) übermittelt.
+* Installierbare SSMA-Binärdateien werden jetzt über Windows Installer Paketdateien (MSI) übermittelt.
 
 ## <a name="may-2016"></a>Mai 2016
 

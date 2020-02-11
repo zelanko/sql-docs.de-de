@@ -1,5 +1,5 @@
 ---
-title: Syscollector_collector_types (Transact-SQL) | Microsoft-Dokumentation
+title: syscollector_collector_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,23 +19,23 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124923"
 ---
-# <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
+# <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Stellt Informationen zu einem Sammlertyp für ein Sammelelement bereit.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|Die GUID für einen Sammlungstyp. Lässt keine NULL-Werte zu.|  
 |**name**|**sysname**|Der Name des Sammlungstyps. Lässt keine NULL-Werte zu.|  
-|**parameter_schema**|**xml**|Das XML-Schema, das die Konfiguration für den angegebenen Sammlertyp beschreibt. Dieses XML-Schema wird verwendet, um die tatsächliche XML-Konfiguration, die einer bestimmten Instanz eines Sammelelements zugeordnet ist, zu überprüfen. Lässt NULL-Werte zu.|  
-|**parameter_formatter**|**xml**|Legt die Vorlage fest, die zum Transformieren des XML-Codes für die Seite "Eigenschaften für Datensammlungssätze" verwendet werden soll. Lässt NULL-Werte zu.|  
+|**parameter_schema**|**basi**|Das XML-Schema, das die Konfiguration für den angegebenen Sammlertyp beschreibt. Dieses XML-Schema wird verwendet, um die tatsächliche XML-Konfiguration, die einer bestimmten Instanz eines Sammelelements zugeordnet ist, zu überprüfen. Lässt NULL-Werte zu.|  
+|**parameter_formatter**|**basi**|Legt die Vorlage fest, die zum Transformieren des XML-Codes für die Seite "Eigenschaften für Datensammlungssätze" verwendet werden soll. Lässt NULL-Werte zu.|  
 |**collection_package_id**|**uniqueidentifer**|GUID für ein Sammlungspaket. Lässt keine NULL-Werte zu.|  
 |**collection_package_path**|**nvarchar(4000)**|Stellt den Pfad zum Sammlungspaket bereit. Lässt NULL-Werte zu.|  
 |**collection_package_name**|**sysname**|Der Name des Sammlungspakets. Lässt keine NULL-Werte zu.|  
@@ -57,9 +57,9 @@ ms.locfileid: "68124923"
 |Der Datentyp für die Spalte **collection_package_path** wurde korrigiert, außerdem wurde die Beschreibung aktualisiert, um anzugeben, dass der Wert NULL sein kann.|  
 |Der Datentyp für die Spalte **upload_package_path** wurde korrigiert, außerdem wurde die Beschreibung aktualisiert, um anzugeben, dass der Wert NULL sein kann.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Sichten des Datensammlers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [Datensammler Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   
   

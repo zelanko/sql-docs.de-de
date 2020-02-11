@@ -18,27 +18,27 @@ ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076282"
 ---
 # <a name="processing-a-sql-statement"></a>Verarbeiten von SQL-Anweisungen
-Ehe wir näher auf die Techniken für die Verwendung von SQL programmgesteuert, ist es erforderlich, die erläutern, wie eine SQL-Anweisung verarbeitet wird. Die Schritte gelten für alle drei Verfahren, zur Verfügung, obwohl jedes Verfahren sie zu unterschiedlichen Zeitpunkten führt. Die folgende Abbildung zeigt die Schritte beteiligt, bei der Verarbeitung einer SQL-Anweisung, die den Rest dieses Abschnitts erläutert werden.  
+Bevor Sie die Techniken zur programmgesteuerten Verwendung von SQL erörtern, muss erläutert werden, wie eine SQL-Anweisung verarbeitet wird. Die erforderlichen Schritte gelten für alle drei Techniken, obwohl die einzelnen Techniken Sie zu unterschiedlichen Zeitpunkten ausführen. In der folgenden Abbildung werden die Schritte zum Verarbeiten einer SQL-Anweisung gezeigt, die im restlichen Teil dieses Abschnitts erläutert werden.  
   
  ![Schritte zum Verarbeiten einer SQL-Anweisung](../../odbc/reference/media/pr01.gif "pr01")  
   
- Um eine SQL-Anweisung zu verarbeiten, führt ein DBMS die folgenden fünf Schritte aus:  
+ Ein DBMS führt die folgenden fünf Schritte aus, um eine SQL-Anweisung zu verarbeiten:  
   
-1.  Das DBMS analysiert zunächst die SQL-Anweisung. Es umbricht die Anweisung, in einzelne Wörter, die Token bezeichnet, stellt sicher, dass die Anweisung ein gültiges Verb und gültige Klauseln und So weiter. Syntaxfehler und Rechtschreibfehler können in diesem Schritt erkannt werden.  
+1.  Das DBMS analysiert zunächst die SQL-Anweisung. Die Anweisung wird in einzelne Wörter unterteilt, die als Token bezeichnet werden, und es wird sichergestellt, dass die Anweisung über ein gültiges Verb und gültige Klauseln verfügt usw. In diesem Schritt können Syntax Fehler und falsche Rechtschreib folgen erkannt werden.  
   
-2.  Das DBMS überprüft, ob die Anweisung. Er überprüft die Anweisung für den Systemkatalog. Sind alle Tabellen, die mit dem Namen in der Anweisung in der Datenbank vorhanden? Führen Sie alle Spalten vorhanden sind, und sind die Spaltennamen eindeutig? Verfügt der Benutzer die erforderlichen Berechtigungen zum Ausführen der Anweisung? In diesem Schritt können bestimmte semantische Fehler erkannt.  
+2.  Das DBMS überprüft die-Anweisung. Die-Anweisung wird anhand des System Katalogs überprüft. Sind alle Tabellen, die in der-Anweisung benannt sind, in der Datenbank vorhanden? Sind alle Spalten vorhanden, und sind die Spaltennamen eindeutig? Verfügt der Benutzer über die erforderlichen Berechtigungen zum Ausführen der Anweisung? Bestimmte Semantik Fehler können in diesem Schritt erkannt werden.  
   
-3.  Das DBMS generiert einen Access-Plan für die Anweisung. Der Access-Plan ist eine binäre Darstellung der Schritte, die erforderlich sind, um die Anweisung auszuführen. Es ist das DBMS-Äquivalent von ausführbarem Code.  
+3.  Das DBMS generiert einen Zugriffs Plan für die-Anweisung. Der Zugriffs Plan ist eine binäre Darstellung der Schritte, die erforderlich sind, um die Anweisung auszuführen. Dies ist die DBMS-Entsprechung von ausführbarem Code.  
   
-4.  Das DBMS wird den Zugriffsplan optimiert. Es wird untersucht, verschiedene Möglichkeiten, um die Access-Plan durchzuführen. Kann ein Index zum Beschleunigen der Suche werden verwendet? Sollte das DBMS wenden Sie zuerst eine Suchbedingung in der Tabelle ein und verknüpfen Sie es anschließend mit Tabelle B, oder sollte es mit der Verknüpfung beginnen und verwenden Sie anschließend die Suchbedingung? Kann eine sequenzielle Suche über eine Tabelle vermieden oder reduziert werden, um eine Teilmenge der in der Tabelle? Nach der Untersuchung der alternativen, wählt das DBMS eine davon.  
+4.  Das DBMS optimiert den Zugriffs Plan. Es werden verschiedene Möglichkeiten zum Durchführen des Zugriffs Plans untersucht. Kann ein Index verwendet werden, um eine Suche zu beschleunigen? Sollte das DBMS zuerst eine Such Bedingung auf Tabelle a anwenden und es dann mit Tabelle B verknüpfen, oder sollte es mit dem Join beginnen und danach die Such Bedingung verwenden? Kann eine sequenzielle Suche durch eine Tabelle vermieden oder auf eine Teilmenge der Tabelle reduziert werden? Nach dem untersuchen der alternativen wählt das DBMS eine davon aus.  
   
-5.  Das DBMS führt die Anweisung mit der Access-Plan.  
+5.  Das DBMS führt die Anweisung durch Ausführen des Zugriffs Plans aus.  
   
- Beim Zugriff auf die Datenbank, die sie benötigen und die Zeitspanne, während die dafür variieren die Schritte, die zum Verarbeiten einer SQL-Anweisung auf. Analysieren eine SQL-Anweisung erfordert keinen Zugriff auf die Datenbank und kann sehr schnell erfolgen. Die Optimierung auf der anderen Seite ist eine sehr CPU-intensiv verarbeiten und benötigt Zugriff auf den Systemkatalog. Für eine komplexe, mehreren Tabellen basierende Abfrage kann der Optimierer Tausende von verschiedenen Methoden zum Ausführen derselben Abfrage durchsuchen. Die Kosten der Ausführung der Abfrage ineffizient ist jedoch in der Regel so hoch, dass mehr als die Zeit, die bei der Optimierung in höhere Geschwindigkeit der abfrageausführung wiederhergestellt wird. Dies ist sogar noch wichtig, wenn derselbe optimierten Zugriffsplan zum Ausführen von Abfragen immer wieder verwendet werden kann.
+ Die Schritte, die zum Verarbeiten einer SQL-Anweisung verwendet werden, variieren je nach Umfang des benötigten Datenbankzugriffs und der benötigten Zeit. Die Ausführung einer SQL-Anweisung erfordert keinen Zugriff auf die Datenbank und kann sehr schnell erfolgen. Die Optimierung ist dagegen ein sehr CPU-intensiver Prozess und erfordert Zugriff auf den System Katalog. Bei einer komplexen, Multitable-Abfrage kann der Optimierer tausende unterschiedlicher Methoden zum Ausführen derselben Abfrage untersuchen. Die Kosten für eine ineffiziente Ausführung der Abfrage sind jedoch in der Regel so hoch, dass die für die Optimierung aufgewendeten Zeit mehr als eine höhere Ausführungsgeschwindigkeit bei der Abfrage ist. Dies ist noch wichtiger, wenn ein optimierter Zugriffs Plan immer wieder verwendet werden kann, um wiederkehrende Abfragen auszuführen.

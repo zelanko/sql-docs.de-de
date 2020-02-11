@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes-Funktion | Microsoft-Dokumentation
+title: SQLColAttribute-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,24 +20,24 @@ ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64df7ac6e212d103fab244dfa14ce4f8e932bcb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039768"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: Als veraltet markiert  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: deprecated  
   
  **Zusammenfassung**  
- In ODBC 3. *x*, die ODBC 2.0-Funktion **SQLColAttributes** wurde ersetzt durch **SQLColAttribute**. Weitere Informationen finden Sie unter [SQLColAttribute-Funktion](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
+ In ODBC 3. *x*, die ODBC 2,0-Funktion " **SQLColAttribute** " wurde durch " **SQLColAttribute**" ersetzt. Weitere Informationen finden Sie unter [SQLColAttribute-Funktion](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+>  Weitere Informationen dazu, wie der Treiber-Manager diese Funktion bei ODBC 2 zuordnet. die *x* -Anwendung arbeitet mit ODBC 3. zum *x* -Treiber finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
   
- Finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
+ Weitere Informationen finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung unter einem 64-Bit-Betriebssystem ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

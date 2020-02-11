@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252551"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)
@@ -80,7 +80,7 @@ ms.locfileid: "75252551"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B: Angeben eines relationalen Operators in der XPath-Abfrage und Ergebnisvergleich mit boolescher Funktion  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Angeben eines relationalen Operators in der XPath-Abfrage und Ergebnisvergleich mit boolescher Funktion  
  Diese Abfrage gibt alle unter ** \<geordneten Elemente der Reihenfolge>** untergeordneten Elementen des Kontext Knotens zurück, deren **SalesPersonID** -Attribut Wert kleiner als 270 ist:  
   
 ```  
@@ -94,7 +94,7 @@ ms.locfileid: "75252551"
 ```  
   
 > [!NOTE]  
->  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das #a0 Zeichen Entität codiert sein, da das #a1 Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden `<` Sie in einer Vorlage, um das #a0 Zeichen anzugeben.  
+>  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das < Zeichen Entität codiert sein, da das < Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden `<` Sie in einer Vorlage, um das < Zeichen anzugeben.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   

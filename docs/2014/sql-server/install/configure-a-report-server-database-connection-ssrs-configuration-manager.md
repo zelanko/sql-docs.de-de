@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952634"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
@@ -33,7 +33,7 @@ ms.locfileid: "71952634"
   
 -   Konfigurieren eines Berichtsservers für die Verwendung einer anderen Berichtsserver-Datenbank.  
   
--   Ändern des Benutzerkontos oder -kennwortes, das für die Datenbankverbindung verwendet wird. Sie müssen die Datenbankverbindung nur dann aktualisieren, wenn die Kontoinformationen in der Datei RSReportServer.config gespeichert sind. Wenn Sie das Dienstkonto für die Verbindung verwenden (das die integrierte Sicherheit von Windows für die Anmeldeinformationen verwendet), wird das Kennwort nicht gespeichert, sodass es nicht notwendig ist, die Verbindungsinformationen zu aktualisieren. Weitere Informationen zum Ändern von Konten finden Sie unter [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+-   Ändern des Benutzerkontos oder -kennwortes, das für die Datenbankverbindung verwendet wird. Sie müssen die Datenbankverbindung nur dann aktualisieren, wenn die Kontoinformationen in der Datei RSReportServer.config gespeichert sind. Wenn Sie das Dienstkonto für die Verbindung verwenden (das die integrierte Sicherheit von Windows für die Anmeldeinformationen verwendet), wird das Kennwort nicht gespeichert, sodass es nicht notwendig ist, die Verbindungsinformationen zu aktualisieren. Weitere Informationen zum Ändern von Konten finden Sie unter [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 -   Konfigurieren einer Berichtsserverbereitstellung für horizontales Skalieren. Beim Konfigurieren einer Bereitstellung für horizontales Skalieren müssen Sie mehrere Verbindungen zu einer Berichtsserver-Datenbank erstellen. Weitere Informationen zum Ausführen dieses Vorgangs mit mehreren Schritten finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71952634"
   
  Die Berichtsserver-Datenbank ist eine interne Komponente, auf die nur der Berichtsserver zugreift. Die Verbindungs- und Anmeldeinformationen, die Sie für die Berichtsserver-Datenbank angeben, werden ausschließlich vom Berichtsserver verwendet. Benutzer, die Berichte anfordern, benötigen für die Berichtsserver-Datenbank keine Datenbankberechtigungen und keinen Datenbank-Anmeldenamen.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet `System.Data.SqlClient`, um eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] herzustellen, die die Berichts Server-Datenbank hostet. Wenn Sie eine lokale Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwenden, stellt der Berichtsserver die Verbindung mithilfe des gemeinsamen Arbeitsspeichers her. Wenn Sie einen Remote-Datenbankserver für die Berichtsserver-Datenbank verwenden, müssen Sie möglicherweise &ndash; je nach verwendeter Edition &ndash; Remoteverbindungen aktivieren. Wenn Sie die Enterprise Edition verwenden, sind Remoteverbindungen standardmäßig für TCP/IP aktiviert.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendet `System.Data.SqlClient` , um eine Verbindung [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit dem herzustellen, der die Berichts Server-Datenbank hostet. Wenn Sie eine lokale Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwenden, stellt der Berichtsserver die Verbindung mithilfe des gemeinsamen Arbeitsspeichers her. Wenn Sie einen Remote-Datenbankserver für die Berichtsserver-Datenbank verwenden, müssen Sie möglicherweise &ndash; je nach verwendeter Edition &ndash; Remoteverbindungen aktivieren. Wenn Sie die Enterprise Edition verwenden, sind Remoteverbindungen standardmäßig für TCP/IP aktiviert.  
   
  Um zu prüfen, ob die Instanz Remoteverbindungen akzeptiert, klicken Sie im Menü **Start**nacheinander **Alle Programme**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und **SQL Server-Konfigurations-Manager**, und prüfen Sie dann, ob das TCP/IP-Protokoll für jeden Dienst aktiviert ist.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71952634"
   
 -   Der Name der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz, auf dem die Berichtsserverdatenbank gehostet wird.  
   
--   Der Name der Berichtsserverdatenbank. Wenn Sie zum ersten Mal eine Verbindung herstellen, können Sie eine neue Berichtsserverdatenbank erstellen oder eine vorhandene Datenbank auswählen. Weitere Informationen finden Sie unter [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
+-   Der Name der Berichtsserverdatenbank. Wenn Sie zum ersten Mal eine Verbindung herstellen, können Sie eine neue Berichtsserverdatenbank erstellen oder eine vorhandene Datenbank auswählen. Weitere Informationen finden Sie unter [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
   
 -   Den Anmeldeinformationstyp. Sie können die Dienstkonten, ein Windows-Domänenkonto oder einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Anmeldenamen verwenden.  
   
@@ -62,9 +62,10 @@ ms.locfileid: "71952634"
  Den angegebenen Anmeldeinformationen muss Zugriff auf die Berichtsserver-Datenbank gewährt werden. Wenn Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool verwenden, wird dieser Schritt automatisch ausgeführt. Weitere Informationen über die Berechtigungen, die für den Zugriff auf die Datenbank erforderlich sind, finden Sie im Abschnitt "Datenbankberechtigungen" weiter unten in diesem Thema.  
   
 ### <a name="storing-database-connection-information"></a>Speichern von Verbindungsinformationen für eine Datenbank  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert und verschlüsselt die Verbindungsinformationen in den folgenden RSreportserver.config-Einstellungen. Verschlüsselte Werte für diese Einstellungen müssen Sie mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools oder des RSCONFIG-Hilfsprogramms erstellen.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert und verschlüsselt die Verbindungsinformationen in den folgenden RSreportserver.config-Einstellungen. Verschlüsselte Werte für diese Einstellungen müssen Sie mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools oder des RSCONFIG-Hilfsprogramms erstellen.  
   
- Nicht alle Werte sind für jeden Verbindungstyp festgelegt. Wenn Sie die Verbindung mithilfe der Standardwerte konfigurieren (d. h., indem Sie die Dienst Konten zum Herstellen der Verbindung verwenden), <`LogonUser`>, <`LogonDomain`> und <`LogonCred`> wie folgt leer:  
+ Nicht alle Werte sind für jeden Verbindungstyp festgelegt. Wenn Sie die Verbindung mithilfe der Standardwerte konfigurieren (d. h., indem Sie die Dienst Konten zum Herstellen der Verbindung `LogonUser` verwenden), `LogonDomain` werden <>, `LogonCred` <> und <> wie folgt leer:  
   
 ```  
 <Dsn></Dsn>  
@@ -93,7 +94,7 @@ ms.locfileid: "71952634"
 ##### <a name="using-service-accounts-and-integrated-security"></a>Verwenden von Dienstkonten und der integrierten Sicherheit  
  Sie können die integrierte Sicherheit von Windows verwenden, um eine Verbindung über das Berichtsserver-Dienstkonto herzustellen. Das Dienstkonto erhält eine Anmeldeberechtigung für die Berichtsserver-Datenbank. Diese Art der Anmeldeinformationen wird standardmäßig vom Setupprogramm ausgewählt, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installieren.  
   
- Das Dienstkonto ist ein vertrauenswürdiges Konto, das eine geringe Wartung bei der Verwaltung einer Berichtsserver-Datenbankverbindung ermöglicht. Da das Dienstkonto die integrierte Sicherheit von Windows zum Herstellen der Verbindung verwendet, müssen die Anmeldeinformationen nicht gespeichert werden. Wenn Sie nachfolgend das Kennwort oder die Identität des Dienstkontos ändern (indem Sie z.B. von einem integrierten Konto zu einem Domänenkonto wechseln), stellen Sie sicher, dass Sie die Änderung mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools vornehmen. Das Tool aktualisiert die Datenbankberechtigungen automatisch, damit die überarbeiteten Kontoinformationen verwendet werden. Weitere Informationen finden Sie unter [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+ Das Dienstkonto ist ein vertrauenswürdiges Konto, das eine geringe Wartung bei der Verwaltung einer Berichtsserver-Datenbankverbindung ermöglicht. Da das Dienstkonto die integrierte Sicherheit von Windows zum Herstellen der Verbindung verwendet, müssen die Anmeldeinformationen nicht gespeichert werden. Wenn Sie nachfolgend das Kennwort oder die Identität des Dienstkontos ändern (indem Sie z.B. von einem integrierten Konto zu einem Domänenkonto wechseln), stellen Sie sicher, dass Sie die Änderung mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools vornehmen. Das Tool aktualisiert die Datenbankberechtigungen automatisch, damit die überarbeiteten Kontoinformationen verwendet werden. Weitere Informationen finden Sie unter [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
  Wenn Sie die Datenbankverbindung so konfigurieren, dass das Dienstkonto verwendet wird, muss das Konto über Netzwerkberechtigungen verfügen, falls sich die Berichtsserver-Datenbank auf einem Remotecomputer befindet. Verwenden Sie das Dienstkonto nicht, wenn die Berichtsserver-Datenbank sich in einer anderen Domäne befindet, hinter einer Firewall, oder wenn Sie Arbeitsgruppensicherheit anstelle von Domänensicherheit verwenden. Verwenden Sie stattdessen ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Benutzerkonto.  
   
@@ -106,9 +107,9 @@ ms.locfileid: "71952634"
 ### <a name="database-permissions"></a>Datenbankberechtigungen  
  Konten, über die eine Verbindung mit der Berichtsserver-Datenbank hergestellt wird, werden die folgenden Rollen zugewiesen:  
   
--   Die Rollen**public** und **RSExecRole** für die **ReportServer** -Datenbank.  
+-   die Rollen **Public** und **RSExecRole** für die **Report Server** -Datenbank.  
   
--   Die**RSExecRole** -Rolle für die Datenbanken **master**, **msdb**und **ReportServerTempDB** .  
+-   **RSExecRole** -Rolle für die Datenbanken **Master**, **msdb**und **ReportServerTempDB** .  
   
  Wenn Sie die Verbindung anhand des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools erstellen oder ändern, werden diese Berechtigungen automatisch erteilt. Wenn Sie das RSCONFIG-Hilfsprogramm verwenden und ein anderes Konto für die Verbindung angeben, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen für dieses neue Konto aktualisieren. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool können Sie Skriptdateien erstellen, mit deren Hilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename für den Berichtsserver aktualisiert wird.  
   
@@ -121,9 +122,9 @@ ms.locfileid: "71952634"
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>Konfigurieren mehrerer Berichtsserver für die Verwendung der gleichen Berichtsserver-Datenbank  
  Es ist möglich, mehrere Berichtsserver so zu konfigurieren, dass sie dieselbe Berichtsserver-Datenbank verwenden. Diese Konfiguration wird als Bereitstellung für horizontales Skalieren bezeichnet. Diese Konfiguration ist eine Voraussetzung, wenn Sie mehrere Berichtsserver in einem Servercluster ausführen möchten. Sie können diese Konfiguration jedoch auch verwenden, wenn Sie Dienstanwendungen segmentieren oder wenn Sie die Installation und die Einstellungen einer neuen Berichtsserverinstanz testen möchten, um diese mit der Installation eines vorhandenen Berichtsservers zu vergleichen. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Berichtsserver-Datenbank](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Verwalten eines Reporting Services Berichts Servers im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

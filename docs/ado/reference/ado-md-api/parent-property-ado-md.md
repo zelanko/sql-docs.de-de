@@ -17,23 +17,23 @@ ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f6d6e03dd3288a5b0ca71bb9e129e1a57abf7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949322"
 ---
 # <a name="parent-property-ado-md"></a>Parent-Eigenschaft (ADO MD)
-Gibt das Element, das das übergeordnete Element des aktuellen ist [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) in einer Hierarchie.  
+Gibt das [Element an, das dem aktuellen Element](../../../ado/reference/ado-md-api/member-object-ado-md.md) in einer Hierarchie übergeordnet ist.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) -Objekt und ist schreibgeschützt.  
+ Gibt ein [Element](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekt zurück und ist schreibgeschützt.  
   
-## <a name="remarks"></a>Hinweise  
- Ein Member, auf der obersten Ebene einer Hierarchie (Stamm) besitzt kein übergeordnetes Element. Diese Eigenschaft wird nur unter unterstützt **Member** Objekte für eine [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekt. Ein Fehler auftritt, wenn diese Eigenschaft, von verwiesen wird **Member** Objekte für eine [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Member, der sich auf der obersten Ebene einer Hierarchie (dem Stamm) befindet, hat kein übergeordnetes Element. Diese Eigenschaft wird nur für **Member** -Objekte unterstützt, die zu einem [Ebenenobjekt](../../../ado/reference/ado-md-api/level-object-ado-md.md) gehören. Ein Fehler tritt auf, **Wenn von Element** Objekten, die zu einem [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt gehören, auf diese Eigenschaft verwiesen wird.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Children-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)

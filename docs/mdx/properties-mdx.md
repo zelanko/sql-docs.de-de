@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893676"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
@@ -34,14 +34,14 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen einer Elementeigenschaft enthält.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Properties** -Funktion gibt den Wert des angegebenen Members für die angegebene Element Eigenschaft zurück. Die Element Eigenschaft kann eine beliebige der systeminternen Element Eigenschaften sein, z. b. " **Name**", " **ID**", " **Key**" oder " **Caption**", oder es kann sich um eine benutzerdefinierte Element Eigenschaft handeln. Weitere Informationen finden Sie unter systeminterne Element [ &#40;Eigenschaften MDX&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) und [benutzerdefinierte Element Eigenschaften &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Properties** -Funktion gibt den Wert des angegebenen Members für die angegebene Element Eigenschaft zurück. Die Element Eigenschaft kann eine beliebige der systeminternen Element Eigenschaften sein, z. b. " **Name**", " **ID**", " **Key**" oder " **Caption**", oder es kann sich um eine benutzerdefinierte Element Eigenschaft handeln. Weitere Informationen finden Sie unter systeminterne Element [Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) und [benutzerdefinierte Element Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
  Standardmäßig muss der Wert zwingend eine Zeichenfolge sein. Wenn **eingegeben** angegeben wird, ist der Rückgabewert stark typisiert.  
   
 -   Bei einer systeminternen Eigenschaft gibt die Funktion den ursprünglichen Typ des Elements zurück.  
   
--   Wenn der Eigenschaftentyp Benutzer definiert ist, ist der Typ des Rückgabewerts mit dem Typ des Rückgabewerts der Mitgliedschafts Funktion identisch.  
+-   Wenn der Eigenschaftentyp Benutzer definiert ist, ist der Typ des Rückgabewerts mit dem Typ des Rückgabewerts der **Mitgliedschafts** Funktion identisch.  
   
 > [!NOTE]  
 >  Properties ('Key') gibt das gleiche Ergebnis wie Key0 zurück, außer für zusammengesetzte Schlüssel. Properties ('Key') gibt für zusammengesetzte Schlüssel den Wert NULL zurück. Verwenden Sie die Key*x* -Syntax für zusammengesetzte Schlüssel, wie im Beispiel veranschaulicht. Properties ('Key0'), Properties('Key1'), Properties('Key2') usw. bilden zusammen den zusammengesetzten Schlüssel.  
@@ -104,8 +104,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Elementeigenschaften &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden von Element Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

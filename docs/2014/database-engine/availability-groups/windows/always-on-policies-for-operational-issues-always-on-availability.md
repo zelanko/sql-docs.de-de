@@ -1,5 +1,5 @@
 ---
-title: Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQLServer) | Microsoft-Dokumentation
+title: Always on von Richtlinien für Betriebsprobleme mit Always on Verfügbarkeits Gruppen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815752"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server)
-  Das [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustandsmodell wertet eine Reihe vordefinierter Richtlinien der richtlinienbasierten Verwaltung aus. Sie können Thesen verwenden, um den Zustand einer Verfügbarkeitsgruppe sowie deren Verfügbarkeitsreplikate und Datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]anzuzeigen.  
+  Das [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustandsmodell wertet eine Reihe vordefinierter Richtlinien der richtlinienbasierten Verwaltung aus. Sie können Thesen verwenden, um den Zustand einer Verfügbarkeitsgruppe sowie deren Verfügbarkeitsreplikate und Datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]anzuzeigen.  
   
  
   
-##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
+##  <a name="TermsAndDefinitions"></a>Begriffe und Definitionen  
  Vordefinierte AlwaysOn-Richtlinien  
  Ein Satz integrierter Richtlinien, die es Datenbankadministratoren ermöglichen, eine Verfügbarkeitsgruppe und die zugehörigen Verfügbarkeitsreplikate und -datenbanken auf Konformität mit den Zuständen zu prüfen, die durch die AlwaysOn-Richtlinien definiert werden.  
   
- [AlwaysOn-Verfügbarkeitsgruppen](always-on-availability-groups-sql-server.md) eine hohe Verfügbarkeit und notfallwiederherstellung – Lösung, die Alternative zur datenbankspiegelung auf Unternehmensebene bietet.  
+ [AlwaysOn-Verfügbarkeitsgruppen](always-on-availability-groups-sql-server.md) Eine Lösung für hohe Verfügbarkeit und Notfall Wiederherstellung, die eine Alternative zur Daten Bank Spiegelung auf Unternehmensebene bereitstellt.  
   
  Verfügbarkeitsgruppe  
  Ein Container für jeden diskreten Satz von Benutzerdatenbanken (auch *Verfügbarkeitsdatenbanken*genannt), für die zusammen ein Failover ausgeführt wird.  
@@ -43,30 +43,30 @@ ms.locfileid: "62815752"
  AlwaysOn-Dashboard  
  Ein [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Dashboard, das eine Übersicht über die Integrität einer Verfügbarkeitsgruppe bereitstellt. Weitere Informationen hierzu finden Sie unter [AlwaysOn-Dashboard](#Dashboard)weiter unten in diesem Thema.  
   
-##  <a name="AlwaysOnPBM"></a> Vordefinierte Richtlinien und Probleme  
+##  <a name="AlwaysOnPBM"></a>Vordefinierte Richtlinien und Probleme  
  In der folgenden Tabelle sind die vordefinierten Richtlinien zusammengefasst.  
   
-|Richtlinienname|Problem|Kategorie **<sup>*</sup>**|Facet|  
+|Richtlinienname|Problem|Kategorie**<sup>*</sup>**|Facet|  
 |-----------------|-----------|------------------------------|-----------|  
-|WSFC-Clusterstatus|[WSFC-Clusterdienst ist offline](wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
-|Onlinezustand der Verfügbarkeitsgruppe|[Verfügbarkeitsgruppe ist offline](availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  
-|Bereitschaft der Verfügbarkeitsgruppe für automatisches Failover|[Verfügbarkeitsgruppe nicht bereit für automatischen Failover](availability-group-is-not-ready-for-automatic-failover.md).|Kritisch|Verfügbarkeitsgruppe|  
-|Datensynchronisierungsstatus der Verfügbarkeitsreplikate|[Einige Verfügbarkeitsreplikate synchronisieren keine Daten](some-availability-replicas-are-not-synchronizing-data.md).|Warnung|Verfügbarkeitsgruppe|  
-|Datensynchronisierungsstatus synchroner Replikate|[Einige synchrone Replikate wurden nicht synchronisiert](some-synchronous-replicas-are-not-synchronized.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verfügbarkeitsreplikat-Rollenstatus|[Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle](some-availability-replicas-do-not-have-a-healthy-role.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verbindungsstatus von Verfügbarkeitsreplikaten|[Einige Verfügbarkeitsreplikate sind getrennt](some-availability-replicas-are-disconnected.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verfügbarkeitsreplikat-Rollenstatus|[Verfügbarkeitsreplikat hat keine fehlerfreie Rolle](availability-replica-does-not-have-a-healthy-role.md).|Kritisch|Verfügbarkeitsreplikat|  
-|Verfügbarkeitsreplikat-Verbindungsstatus|[Verfügbarkeitsreplikat wird getrennt](availability-replica-is-disconnected.md).|Kritisch|Verfügbarkeitsreplikat|  
-|Joinzustand des Verfügbarkeitsreplikats|[Verfügbarkeitsreplikat ist nicht verknüpft](availability-replica-is-not-joined.md).|Warnung|Verfügbarkeitsreplikat|  
-|Datensynchronisierungsstatus des Verfügbarkeitsreplikats|[Datensynchronisierungsstatus einer Verfügbarkeitsdatenbank ist nicht fehlerfrei](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsreplikat|  
-|Verfügbarkeitsdatenbank im angehaltenen Zustand|[Verfügbarkeitsdatenbank angehalten](availability-database-is-suspended.md).|Warnung|Verfügbarkeitsdatenbank|  
-|Joinzustand der Verfügbarkeitsdatenbank|[Sekundäre Datenbank ist nicht verknüpft](secondary-database-is-not-joined.md).|Warnung|Verfügbarkeitsdatenbank|  
-|Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei](data-synchronization-state-of-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsdatenbank|  
+|WSFC-Clusterstatus|[Wsfc-Cluster Dienst ist offline](wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
+|Onlinezustand der Verfügbarkeitsgruppe|[Verfügbarkeits Gruppe ist offline](availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  
+|Bereitschaft der Verfügbarkeitsgruppe für automatisches Failover|Die [Verfügbarkeits Gruppe ist nicht für das automatische Failover bereit](availability-group-is-not-ready-for-automatic-failover.md).|Kritisch|Verfügbarkeitsgruppe|  
+|Datensynchronisierungsstatus der Verfügbarkeitsreplikate|[Einige Verfügbarkeits Replikate synchronisieren keine Daten](some-availability-replicas-are-not-synchronizing-data.md).|Warnung|Verfügbarkeitsgruppe|  
+|Datensynchronisierungsstatus synchroner Replikate|[Einige synchrone Replikate werden nicht synchronisiert](some-synchronous-replicas-are-not-synchronized.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verfügbarkeitsreplikat-Rollenstatus|[Einige Verfügbarkeits Replikate weisen keine](some-availability-replicas-do-not-have-a-healthy-role.md)fehlerfreie Rolle auf.|Warnung|Verfügbarkeitsgruppe|  
+|Verbindungsstatus von Verfügbarkeitsreplikaten|[Einige Verfügbarkeits Replikate werden getrennt](some-availability-replicas-are-disconnected.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verfügbarkeitsreplikat-Rollenstatus|[Das Verfügbarkeits Replikat weist keine](availability-replica-does-not-have-a-healthy-role.md)fehlerfreie Rolle auf.|Kritisch|Verfügbarkeitsreplikat|  
+|Verfügbarkeitsreplikat-Verbindungsstatus|[Verfügbarkeits Replikat ist getrennt](availability-replica-is-disconnected.md).|Kritisch|Verfügbarkeitsreplikat|  
+|Joinzustand des Verfügbarkeitsreplikats|Das [Verfügbarkeits Replikat ist nicht](availability-replica-is-not-joined.md)verknüpft.|Warnung|Verfügbarkeitsreplikat|  
+|Datensynchronisierungsstatus des Verfügbarkeitsreplikats|[Der Daten Synchronisierungs Status einer Verfügbarkeits Datenbank ist nicht](data-synchronization-state-of-some-availability-database-is-not-healthy.md)fehlerfrei.|Warnung|Verfügbarkeitsreplikat|  
+|Verfügbarkeitsdatenbank im angehaltenen Zustand|Die [Verfügbarkeits Datenbank](availability-database-is-suspended.md)wurde angehalten.|Warnung|Verfügbarkeitsdatenbank|  
+|Joinzustand der Verfügbarkeitsdatenbank|Die [sekundäre Datenbank ist nicht](secondary-database-is-not-joined.md)verknüpft.|Warnung|Verfügbarkeitsdatenbank|  
+|Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Der Daten Synchronisierungs Status der Verfügbarkeits Datenbank ist nicht](data-synchronization-state-of-availability-database-is-not-healthy.md)fehlerfrei.|Warnung|Verfügbarkeitsdatenbank|  
   
 > [!IMPORTANT]  
->  **<sup>*</sup>**  Für AlwaysOn-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer AlwaysOn-Kategorie wird die Funktion zur Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von AlwaysOn-Kategorien daher nicht.  
+>  **<sup>*</sup>** Für AlwaysOn-Richtlinien werden die Kategorien Amen als IDs verwendet. Durch die Änderung des Namens einer AlwaysOn-Kategorie wird die Funktion zur Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von AlwaysOn-Kategorien daher nicht.  
   
-##  <a name="Dashboard"></a> AlwaysOn-Dashboard  
+##  <a name="Dashboard"></a>AlwaysOn-Dashboard  
  Das AlwaysOn-Dashboard bietet eine Übersicht über die Integrität einer Verfügbarkeitsgruppe. Das AlwaysOn-Dashboard umfasst die folgenden Funktionen:  
   
 -   Ermöglicht Ihnen, Details zu einer angegebenen Verfügbarkeitsgruppe, zu deren Verfügbarkeitsreplikaten und Datenbanken leicht anzuzeigen.  
@@ -81,18 +81,18 @@ ms.locfileid: "62815752"
   
 -   Wenn die Ausführung eines Failovers für die Verfügbarkeitsgruppe eine mögliche Problembehebung ist, wird ein Startpunkt für die Links[Assistent für das Failover von Verfügbarkeitsgruppen](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)bereitgestellt. Dieser Assistent führt den Datenbankadministrator durch den manuellen Failoverprozess.  
   
-##  <a name="ExtendHealthModel"></a> Erweitern des Always On-Zustandsmodells  
+##  <a name="ExtendHealthModel"></a>Erweitern des AlwaysOn-Integritäts Modells  
  Die Erweiterung des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustandsmodells bezieht sich darauf, dass Sie eigene benutzerdefinierte Richtlinien erstellen und diese je nach überwachtem Objekttyp bestimmten Kategorien zuweisen können.  Nachdem Sie einige Einstellungen geändert haben, wertet das AlwaysOn-Dashboard automatisch eigene benutzerdefinierte Richtlinien sowie vordefinierte AlwaysOn-Richtlinien aus.  
   
- Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM)weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustands bereit: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
+ Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM) weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustands bereit: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
   
  Weitere Informationen finden Sie unter [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (ein SQL Server AlwaysOn-Teamblog).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer verfügbarkeitsgruppe &#40;SQLServer&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Verwenden Sie AlwaysOn-Richtlinien, um die Integrität einer Verfügbarkeits Gruppe &#40;SQL Server anzuzeigen&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62815752"
   
 -   [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Problembehandlung bei einem fehlerhaften Dateihinzufügungsvorgängen Vorgang &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
@@ -108,12 +108,12 @@ ms.locfileid: "62815752"
   
 -   [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Siehe auch  
- [AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](always-on-availability-groups-sql-server.md)   
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+ [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
   

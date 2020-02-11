@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060771"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Konfigurieren von Prüfpunkten zum erneuten Starten eines fehlerhaften Pakets
@@ -28,13 +28,13 @@ ms.locfileid: "66060771"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, das Sie konfigurieren möchten.  
   
-2.  Doppelklicken Sie im **Projektmappen-Explorer**auf das Paket, um es zu öffnen.  
+2.  Doppelklicken Sie in **Projektmappen-Explorer**auf das Paket, um es zu öffnen.  
   
 3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
   
 4.  Klicken Sie mit der rechten Maustaste an einer beliebigen Stelle im Hintergrund der Entwurfsoberfläche der Ablaufsteuerung, und klicken Sie anschließend auf **Eigenschaften**.  
   
-5.  Legen Sie die SaveCheckpoints-Eigenschaft auf `True`.  
+5.  Legen Sie die SaveCheckpoints- `True`Eigenschaft auf fest.  
   
 6.  Geben Sie den Namen der Prüfpunktdatei in die CheckpointFileName-Eigenschaft ein.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66060771"
   
     -   Klicken Sie mit der rechten Maustaste auf einen Task oder Container, und klicken Sie anschließend auf **Eigenschaften**.  
   
-    -   Legen Sie die FailPackageOnFailure-Eigenschaft auf `True` für alle ausgewählten Tasks und Container.  
+    -   Legen Sie die FailPackageOnFailure- `True` Eigenschaft für jeden ausgewählten Task und Container auf fest.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Neustarten von Paketen mit Prüfpunkten](packages/restart-packages-by-using-checkpoints.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Setup-DLL für Treiber | Microsoft-Dokumentation
+title: Treiber-Setup-DLL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df91638f91091940e00e7a6a19d0fd6cb700f85f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094163"
 ---
 # <a name="driver-setup-dll"></a>Setup-DLL für Treiber
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003, ist ODBC in das Windows-Betriebssystem enthalten. Sie sollten nur explizit ODBC in früheren Versionen von Windows installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
   
- Der Setup-DLL enthält Treiber die **ConfigDriver** und **ConfigDSN** Funktionen. **ConfigDriver** -Treiber-spezifischen Installationsaufgaben wie das Eingeben von treiberspezifische Informationen in die Registrierung ausgeführt. **ConfigDSN** treiberspezifische Informationen zu den Datenquellen in der Registrierung verwaltet. Eine vollständige Beschreibung dieser Funktionen, finden Sie unter [-Setup-DLL-API-Referenz](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
+ Die Treiber-Setup-DLL enthält die Funktionen **ConfigDriver** und **ConfigDSN** . **ConfigDriver** führt Treiber spezifische Installationsaufgaben aus, z. b. die Eingabe von treiberspezifischen Informationen in die Registrierung. **ConfigDSN** verwaltet Treiber spezifische Informationen zu Datenquellen in der Registrierung. Eine umfassende Beschreibung dieser Funktionen finden Sie unter [dll-API-Referenz für Setup](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
   
- **ConfigDSN** ruft Sie die folgenden Funktionen in das Installationsprogramm-DLL von Datenquelleninformationen in der Registrierung zu verwalten:  
+ **ConfigDSN** Ruft die folgenden Funktionen in der Installationsprogramm-dll auf, um die Datenquellen Informationen in der Registrierung beizubehalten:  
   
--   **SQLWriteDSNToIni**. Fügen Sie eine Datenquelle hinzu.  
+-   **Sqlwrite tedsnfür ini**. Fügen Sie eine Datenquelle hinzu.  
   
--   **SQLRemoveDSNFromIni**. Löschen einer Datenquelle.  
+-   **Sqlremovedsnfromini**. Löschen Sie eine Datenquelle.  
   
--   **SQLWritePrivateProfileString**. Schreiben Sie einen Treiber-spezifischen Wert unter einem Unterschlüssel von Data Source-Spezifikation.  
+-   **Sqlschreiteprivateprofilestring**. Schreiben Sie einen treiberspezifischen Wert unter einem Datenquellen Spezifikations Unterschlüssel.  
   
--   **SQLGetPrivateProfileString**. Gelesen Sie einen treiberspezifische-Wert aus dem Unterschlüssel Data Source-Spezifikation.  
+-   **Sqlgetprivateprofilestring**. Lesen eines treiberspezifischen Werts aus einem Datenquellen Spezifikations Unterschlüssel.  
   
--   **SQLGetTranslator**. Der Benutzer für einen Übersetzer-Namen und eine Option aufgefordert. Diese Funktion ruft **ConfigTranslator** in die Translator-setup-DLL.  
+-   **Sqlgettranslator**. Fordert den Benutzer auf, einen Übersetzungs Namen und eine Option einzugeben. Diese Funktion ruft **ConfigTranslator** in der Übersetzer-Setup-DLL auf.  
   
- Der Setup-Treiber DLL wird vom Treiber Entwickler geschrieben werden. Teil des Treibers möglich DLL oder einer separaten DLL.
+ Die Treiber-Setup-DLL wird vom Treiber Entwickler geschrieben. Es kann Teil der Treiber-DLL oder einer separaten DLL sein.

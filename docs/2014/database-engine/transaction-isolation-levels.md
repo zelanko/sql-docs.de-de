@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637785"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Transaktions Isolations Stufen in Speicher optimierten Tabellen
@@ -39,7 +39,7 @@ ms.locfileid: "73637785"
   
 -   Verwenden Sie zum Zugreifen auf die speicheroptimierte Tabelle explizit einen Hinweis für eine höhere Isolationsstufe (z. B. WITH (SNAPSHOT)).  
   
--   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`finden Sie unter [ALTER DATABASE Set options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Falls die Isolationsstufe der Sitzung READ COMMITTED ist, können Sie alternativ Autocommittransaktionen verwenden.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73637785"
  Für datenträgerbasierte Tabellen werden die meisten Isolationsstufengarantien durch Sperren implementiert, wodurch Blockierungskonflikte verhindert werden. Bei speicheroptimierten Tabellen werden die Garantien mithilfe eines Konflikterkennungsmechanismus erzwungen, der die Anwendung von Sperren verhindert. Die Ausnahme besteht in der SNAPSHOT-Isolation bei datenträgerbasierten Tabellen. Die entsprechende Implementierung ähnelt der SNAPSHOT-Isolation bei speicheroptimierten Tabellen mit einem Konflikterkennungsmechanismus.  
   
  SNAPSHOT  
- Diese Isolationsstufe gibt an, dass die von einer beliebigen Anweisung in einer Transaktion gelesenen Daten der im Hinblick auf Transaktionen konsistenten Version der Daten entsprechen, die zu Beginn der Transaktion vorhanden waren. Die Transaktion kann nur Datenänderungen erkennen, für die vor dem Beginn der Transaktion ein Commit ausgeführt wurde. Datenänderungen, die nach Beginn der aktuellen Transaktion von anderen Transaktionen vorgenommen wurden, sind für in der aktuellen Transaktion ausgeführte Anweisungen nicht sichtbar. Die Anweisungen in einer Transaktion erhalten eine Momentaufnahme der Daten, für die ein Commit ausgeführt wurde, wie sie zu Beginn der Transaktion vorhanden waren.  
+ Diese Isolationsstufe gibt an, dass die von einer beliebigen Anweisung in einer Transaktion gelesenen Daten der im Hinblick auf Transaktionen konsistenten Version der Daten entsprechen, die zu Beginn der Transaktion vorhanden waren. Die Transaktion kann nur Datenänderungen erkennen, für die vor dem Beginn der Transaktion ein Commit ausgeführt wurde. Nach dem Start der aktuellen Transaktion von anderen Transaktionen vorgenommene Datenänderungen sind für Anweisungen, die in der aktuellen Transaktion ausgeführt werden, nicht sichtbar. Die Anweisungen in einer Transaktion erhalten eine Momentaufnahme der Daten, für die ein Commit ausgeführt wurde, wie sie zu Beginn der Transaktion vorhanden waren.  
   
  Schreibvorgänge (Updates, Einfügungen und Löschungen) sind immer vollständig von anderen Transaktionen isoliert. Daher können die Schreibvorgänge einer SNAPSHOT-Transaktion mit den Schreibvorgängen anderer Transaktionen in Konflikt geraten. Wenn die aktuelle Transaktion versucht, eine Zeile zu aktualisieren oder zu löschen, die durch eine andere Transaktion aktualisiert oder gelöscht wurde, für die ein Commit ausgeführt wurde, nachdem die aktuelle Transaktion gestartet wurde, wird die Transaktion mit der folgenden Fehlermeldung beendet.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "73637785"
   
  Fehler 41325. Für die aktuelle Transaktion wurde aufgrund eines serialisierbaren Überprüfungsfehlers kein Commit ausgeführt.  
   
-## <a name="see-also"></a>Siehe auch  
- Grundlegendes [zu Transaktionen in Speicher optimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlegendes zu Transaktionen in Speicher optimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Richtlinien für Transaktions Isolations Stufen mit Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Richtlinien zur Wiederholungslogik für Transaktionen auf speicheroptimierten Tabellen](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   

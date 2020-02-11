@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510012"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Dialogfeld Fenster (Hilfe von Microsoft Document Explorer)
   Mithilfe dieses Dialogfelds können Sie Dokumente, die in Editoren und Designern geöffnet sind, anzeigen, schließen und anordnen. Sie können dieses Dialogfeld anzeigen, indem Sie im Menü **Fenster** auf **Fenster** klicken.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Zeigt die Namen von Dokument- und Toolfenstern an. Das zu diesem Zeitpunkt aktive Element ist dabei ausgewählt.  
   
- **Pfad**  
+ **Path**  
  Zeigt den vollständigen Pfad für Dokumente an. Fenster haben in der Regel keinen Pfad.  
   
- **Activate**  
+ **Aktivieren**  
  Macht das ausgewählte Dokument- oder Toolfenster im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Document Explorer zum aktiven Element.  
   
  **Speichern**  

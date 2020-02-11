@@ -1,5 +1,5 @@
 ---
-title: Richtlinien zur Wiederholungslogik für Transaktionen in speicheroptimierten Tabellen | Microsoft-Dokumentation
+title: Richtlinien für Wiederholungs Logik für Transaktionen in Speicher optimierten Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779214"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Richtlinien zur Wiederholungslogik für Transaktionen auf speicheroptimierten Tabellen
@@ -30,7 +30,7 @@ ms.locfileid: "62779214"
   
  Eine häufige Ursache für diesen Fehler ist die gegenseitige Beeinflussung von gleichzeitig ausgeführten Transaktion. Die gängige Korrekturmaßnahme besteht darin, die Transaktion zu wiederholen.  
   
- Weitere Informationen zu diesen fehlerbedingungen finden Sie im Abschnitt für die Konflikterkennung, Überprüfung und Commitabhängigkeitsüberprüfungen unter [Transaktionen in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Weitere Informationen zu diesen Fehlerbedingungen finden Sie im Abschnitt zu Konflikterkennung, Validierung und Commit-Abhängigkeits Prüfungen in [Transaktionen in Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Deadlocks (Fehlercode 1205) können bei speicheroptimierten Tabellen nicht auftreten. Sperren werden bei speicheroptimierten Tabellen nicht verwendet. Wenn die Anwendung allerdings bereits Wiederholungslogik für Deadlocks enthält, könnte die vorhandene Logik erweitert werden, um die neuen Fehlercodes einzuschließen.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62779214"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>Überlegungen zu schreibgeschützten Transaktionen und containerübergreifenden Transaktionen  
  Schreibgeschützte containerübergreifende Transaktionen, die Transaktionen sind, die außerhalb des Kontexts einer systemintern kompilierten gespeicherten Prozedur gestartet werden, führen keine Überprüfung aus, wenn auf alle speicheroptimierten Tabellen unter der SNAPSHOT-Isolation zugegriffen wird. Wenn auf speicheroptimierte Tabellen unter REPEATABLE READ- oder SERIALIZABLE-Isolation zugegriffen wird, wird allerdings zum Commitzeitpunkt eine Überprüfung ausgeführt. In diesem Fall kann Wiederholungslogik erforderlich sein.  
   
- Weitere Informationen finden Sie im Abschnitt zu Containerübergreifenden Transaktionen in [Isolationsstufen von Transaktionen](../../2014/database-engine/transaction-isolation-levels.md).  
+ Weitere Informationen finden Sie im Abschnitt über Container übergreifende Transaktionen in [Transaktions Isolations Stufen](../../2014/database-engine/transaction-isolation-levels.md).  
   
 ## <a name="implementing-retry-logic"></a>Implementieren von Wiederholungslogik  
  Wie bei allen Transaktionen, die auf speicheroptimierte Tabellen zugreifen, müssen Sie Wiederholungslogik vorsehen, um mögliche Fehler wie Schreibkonflikte (Fehlercode 41302) oder Abhängigkeitsfehler (Fehlercode 41301) zu behandeln. Obwohl die Fehlerrate in den meisten Anwendungen gering ausfällt, müssen Fehler durch eine Wiederholung der Transaktion behandelt werden. Es gibt zwei Möglichkeiten, Wiederholungslogik zu implementieren:  
@@ -71,7 +71,7 @@ ms.locfileid: "62779214"
   
 -   Die Clientanwendung verfügt über Wiederholungslogik für andere Fehlercodes, wie 1205, die Sie erweitern können.  
   
--   Konflikte sind selten, und ist es wichtig, die End-to-End-Latenzzeit mithilfe einer vorbereiteten Ausführung zu reduzieren. Weitere Informationen zum Ausführen von systemintern kompilierten gespeicherten Prozeduren direkt, finden Sie unter [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   Konflikte sind selten, und ist es wichtig, die End-to-End-Latenzzeit mithilfe einer vorbereiteten Ausführung zu reduzieren. Weitere Informationen zum direkten Ausführen von System intern kompilierten gespeicherten Prozeduren finden Sie unter [nativ kompilierte gespeicherte Prozeduren](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  Das folgende Beispiel zeigt Wiederholungslogik in einer interpretierten gespeicherten [!INCLUDE[tsql](../includes/tsql-md.md)]-Prozedur, die einen Aufruf einer systemintern kompilierten gespeicherten Prozedur oder einer containerübergreifenden Transaktion enthält.  
   
@@ -125,9 +125,9 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu Transaktionen in speicheroptimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Transaktionen in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlegendes zu Transaktionen in Speicher optimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Transaktionen in Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

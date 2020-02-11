@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787038"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Min. Arbeitsspeicher pro Abfrage
-  In diesem Thema wird beschrieben, wie so konfigurieren Sie die `min memory per query` Serverkonfigurationsoption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Die `min memory per query` Option gibt an, die Mindestmenge an Arbeitsspeicher (in KB), die für die Ausführung einer Abfrage zugeordnet wird. Z. B. wenn `min memory per query` wird festgelegt auf 2.048 KB, die Abfrage wird sichergestellt, dass mindestens so viel Gesamtarbeitsspeicher. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  
+  In diesem Thema wird beschrieben, wie `min memory per query` die Server Konfigurationsoption [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] von [!INCLUDE[tsql](../../includes/tsql-md.md)]oder konfiguriert wird. Die `min memory per query` Option gibt die minimale Arbeitsspeicher Menge (in Kilobytes) an, die für die Ausführung einer Abfrage zugeordnet wird. Wenn `min memory per query` z. b. auf 2.048 KB festgelegt ist, wird sichergestellt, dass die Abfrage mindestens den gesamten Arbeitsspeicher erhält. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  
   
  **In diesem Thema**  
   
@@ -35,19 +35,19 @@ ms.locfileid: "62787038"
   
      [Sicherheit](#Security)  
   
--   **So konfigurieren Sie die Option Min. Arbeitsspeicher pro Abfrage mit:**  
+-   **So konfigurieren Sie die Option min. Arbeitsspeicher pro Abfrage mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Konfigurieren der Abfrageoption Min. Arbeitsspeicher pro](#FollowUp)  
+-   Nach **Verfolgung:**[nach dem Konfigurieren der Option min. Arbeitsspeicher pro Abfrage](#FollowUp)    
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Der unter „Menge des min. Arbeitsspeicher pro Abfrage“ angegebene Wert wird gegenüber der Option [index create memory](configure-the-index-create-memory-server-configuration-option.md)vorrangig behandelt. Wenn Sie beide Optionen ändern und der Wert von „index create memory“ (Speicher für Indexerstellung) den Wert von „min memory per query“ (Min. Arbeitsspeicher pro Abfrage) unterschreitet, werden die Werte zwar festgelegt, es wird jedoch eine Warnmeldung ausgegeben. Beim Ausführen der Abfrage wird eine ähnliche Warnung ausgegeben.  
+-   Der minimale Arbeitsspeicher pro Abfrage hat Vorrang vor der [Option Speicher für Indexerstellung](configure-the-index-create-memory-server-configuration-option.md). Wenn Sie beide Optionen ändern und der Wert von „index create memory“ (Speicher für Indexerstellung) den Wert von „min memory per query“ (Min. Arbeitsspeicher pro Abfrage) unterschreitet, werden die Werte zwar festgelegt, es wird jedoch eine Warnmeldung ausgegeben. Beim Ausführen der Abfrage wird eine ähnliche Warnung ausgegeben.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -60,11 +60,11 @@ ms.locfileid: "62787038"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>So konfigurieren Sie die Option Min. Arbeitsspeicher pro Abfrage  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften**aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften** aus.  
   
 2.  Klicken Sie auf den **Speicher** -Knoten.  
   
@@ -94,13 +94,13 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Abfrageoption Min. Arbeitsspeicher pro  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Konfigurieren der Option min. Arbeitsspeicher pro Abfrage  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
- [Configure the index create memory Server Configuration Option](configure-the-index-create-memory-server-configuration-option.md)  
+ [Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung](configure-the-index-create-memory-server-configuration-option.md)  
   
   

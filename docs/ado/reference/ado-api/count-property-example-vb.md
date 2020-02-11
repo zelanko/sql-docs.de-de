@@ -1,5 +1,5 @@
 ---
-title: Count-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für eine Count-Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933360"
 ---
 # <a name="count-property-example-vb"></a>Count-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft mit dem zwei Auflistungen in der ***Mitarbeiter*** Datenbank. Die Eigenschaft ruft die Anzahl von Objekten in jeder Auflistung und wird der obere Grenzwert für Schleifen an, die diese dateiauflistungen aufzulisten. Eine weitere Möglichkeit, diese Auflistungen aufgezählt werden, ohne die **Anzahl** Eigenschaft wäre `For Each...Next` Anweisungen.  
+In diesem Beispiel wird die [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft mit zwei Auflistungen in der ***Employee*** -Datenbank veranschaulicht. Die-Eigenschaft ruft die Anzahl der-Objekte in jeder Auflistung ab und legt die Obergrenze für Schleifen fest, die diese Auflistungen auflisten. Eine andere Möglichkeit, diese Auflistungen ohne Verwendung der **count** -Eigenschaft aufzulisten, `For Each...Next` wäre die Verwendung von-Anweisungen.  
   
 ```  
 'BeginCountVB  
@@ -96,5 +96,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

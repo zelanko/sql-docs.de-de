@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020666"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
@@ -31,11 +31,11 @@ Member_Expression.PrevMember
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **PrevMember** Funktion gibt das vorherige Element in der gleichen Ebene wie das angegebene Element zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **PrevMember** -Funktion gibt das vorherige Element auf derselben Ebene wie der angegebene Member zurück.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine einfache Abfrage, verwendet der **PrevMember** Funktion, um den Namen des Elements unmittelbar vor dem aktuellen Element auf der Zeilenachse anzuzeigen:  
+ Das folgende Beispiel zeigt eine einfache Abfrage, die die **PrevMember** -Funktion verwendet, um den Namen des Elements direkt vor dem aktuellen Element auf der ROWS-Achse anzuzeigen:  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -47,7 +47,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der Aggregate-Funktion ausgewertet wurden. Die **Hierarchize** und **DrillDownLevel** Funktionen zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet werden. Die **PrevMember** Funktion wird verwendet, um den aktuellen Zeitraum und dem vorherigen Zeitraum zu vergleichen.  
+ Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der Aggregate-Funktion ausgewertet wurden. Die **Hierarchize** -Funktion und die **DrilldownLevel** -Funktion werden verwendet, um Werte für abnehmende Umsätze für Produktkategorien in der Product-Dimension zurückzugeben. Die **PrevMember** -Funktion wird zum Vergleichen des aktuellen Zeitraums mit dem vorherigen Zeitraum verwendet.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -75,7 +75,7 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

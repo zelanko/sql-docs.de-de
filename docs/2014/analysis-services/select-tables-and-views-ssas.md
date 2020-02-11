@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Tabellen und Sichten (SSAS) | Microsoft-Dokumentation
+title: Tabellen und Sichten auswählen (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069241"
 ---
 # <a name="select-tables-and-views-ssas"></a>Tabellen und Sichten auswählen (SSAS)
@@ -36,10 +36,10 @@ ms.locfileid: "66069241"
  **Tabellen und Sichten**  
  Führt die Tabellen und Sichten in der Datenbank auf. Aktivieren Sie das Kontrollkästchen neben jeder Tabelle und Sicht, die Sie importieren möchten.  
   
- **Quelltabelle**  
+ **Quell Tabelle**  
  Gibt den Namen der Quelltabelle auf Grundlage des Datenquellentyps an.  
   
- **Schema**  
+ **Chaos**  
  Gibt das Schema an, in dem die Quelltabelle enthalten ist. Je nach Typ der Datenbank funktioniert ein Schema als Container für andere Objekte, z. B. Tabellen, und kann auch den Besitzer dieser Objekte angeben.  
   
  **Anzeigename**  
@@ -48,7 +48,7 @@ ms.locfileid: "66069241"
  **Filterdetails**  
  Wenn ein Filter auf die importierten Daten angewendet wurde, wird der Datenimportfilter im Dialogfeld **Filterdetails** angezeigt. Weitere Informationen finden Sie unter [Filterdetails &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Vorschau und Filter**  
+ **Vorschau anzeigen und filtern**  
  Zeigt das Dialogfeld **Vorschau der ausgewählten Tabelle** an, das verwendet wird, um einen Filter auf die importierten Daten anzuwenden. Weitere Informationen finden Sie unter [Vorschau der ausgewählten Tabelle &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
  **Verknüpfte Tabellen auswählen**  

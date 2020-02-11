@@ -1,5 +1,5 @@
 ---
-title: Datei "Schema.ini" (Textdateitreiber) | Microsoft-Dokumentation
+title: Datei "Schema. ini" (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,117 +14,117 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987944"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei „Schema.ini“ (Textdateitreiber)
-Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schemadatei für die Informationen bestimmt. Die Schema-Informationsdatei ist immer mit dem Namen Schema.ini und immer im gleichen Verzeichnis wie die Text-Datenquelle gespeichert. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Namen der Spalte und Datentypinformationen und mehrere andere Datenmerkmale. Eine Schema.ini-Datei ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten eine Schema.ini-Datei verwenden, wenn die Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle möchten.  
+Wenn der Text Treiber verwendet wird, wird das Format der Textdatei mithilfe einer Schema Informationsdatei festgelegt. Die Schema Informationsdatei hat immer den Namen "Schema. ini" und wird immer im gleichen Verzeichnis wie die Text Datenquelle gespeichert. Die Schema Informationsdatei stellt dem IISAM Informationen über das allgemeine Format der Datei, den Spaltennamen und Datentyp Informationen sowie verschiedene weitere Daten Merkmale bereit. Für den Zugriff auf Daten mit fester Länge ist immer eine Schema. ini-Datei erforderlich. Sie sollten eine Schema. ini-Datei verwenden, wenn die Text Tabelle DateTime-, Currency-oder decimal-Daten enthält, oder wenn Sie eine bessere Kontrolle über die Verarbeitung der Daten in der Tabelle wünschen.  
   
 > [!NOTE]  
->  Text-ISAM wird die ursprünglichen Werte erhalten, aus der Registrierung und nicht aus "Schema.ini". Das gleiche Standarddateiformat gilt für alle neuen Datentabellen von Text. Alle Dateien, die von der CREATE TABLE-Anweisung erstellt wurden, erben die gleichen Format Standardwerte, die festgelegt werden, durch Auswählen von Format dateiwerten in die **-Text-Format definieren** Dialogfeld mit \<standardmäßig > in der ausgewählt **Tabellen** Liste. Wenn sich die Werte in der Registrierung von den Werten in Schema.ini unterscheiden zu können, werden die Werte in der Registrierung durch die Werte aus "Schema.ini" überschrieben werden.  
+>  Der Text-ISAM erhält Anfangswerte aus der Registrierung und nicht aus der Datei "Schema. ini". Das gleiche Standarddatei Format gilt für alle neuen Text Datentabellen. Alle Dateien, die von der CREATE TABLE-Anweisung erstellt wurden, erben dieselben Standardformat Werte. Diese werden festgelegt, indem die Dateiformat Werte im Dialogfeld **Text Format definieren** mit \<Standard> in der Liste **Tabellen** ausgewählt werden. Wenn sich die Werte in der Registrierung von den Werten in "Schema. ini" unterscheiden, werden die Werte in der Registrierung von den Werten aus "Schema. ini" überschrieben.  
   
-## <a name="understanding-schemaini-files"></a>Grundlegendes zu Schema.ini-Dateien  
- Schema.ini-Dateien bieten die Schemainformationen zu den Datensätzen in einer Textdatei. Jeder Eintrag "Schema.ini" gibt einen der fünf Merkmale der Tabelle:  
+## <a name="understanding-schemaini-files"></a>Grundlegendes zu Schema. ini-Dateien  
+ Schema. ini-Dateien stellen Schema Informationen zu den Datensätzen in einer Textdatei bereit. Jeder Schema. ini-Eintrag gibt eine der fünf Merkmale der Tabelle an:  
   
--   Namen der Textdatei  
+-   Der Name der Textdatei.  
   
 -   Das Dateiformat  
   
--   Die Feldnamen, Breite und Typen  
+-   Feldnamen, breiten und Typen  
   
 -   Der Zeichensatz  
   
--   Spezielle Konvertierung von Datentypen  
+-   Besondere Datentyp Konvertierungen  
   
- Den folgenden Abschnitten werden diese Eigenschaften.  
+ In den folgenden Abschnitten werden diese Eigenschaften erläutert.  
   
-## <a name="specifying-the-file-name"></a>Der Dateiname angeben  
- Der erste Eintrag in "Schema.ini" ist immer der Name der Quelltextdatei in eckige Klammern eingeschlossen. Das folgende Beispiel veranschaulicht den Eintrag für die Datei "Sample.txt":  
+## <a name="specifying-the-file-name"></a>Angeben des Datei namens  
+ Der erste Eintrag in der Datei "Schema. ini" ist immer der Name der Text Quelldatei, die in eckigen Klammern eingeschlossen ist. Das folgende Beispiel veranschaulicht den Eintrag für die Datei Sample. txt:  
   
 ```  
 [Sample.txt]  
 ```  
   
-## <a name="specifying-the-file-format"></a>Das Dateiformat angeben  
- Die **Format** -Option in "Schema.ini" gibt das Format der Textdatei an. Der Text-IISAM können das Format automatisch die meisten Zeichen getrennten Dateien gelesen werden. Sie können jedem beliebigen einzelnes Zeichen als Trennzeichen in der Datei außer das doppelte Anführungszeichen (") verwenden. Die **Format** in Schema.ini überschreibt die Einstellung in der Windows-Registrierung, Dateien. Die folgende Tabelle enthält die gültigen Werte für die **Format** Option.  
+## <a name="specifying-the-file-format"></a>Angeben des Datei Formats  
+ Die **Format** -Option in der Datei "Schema. ini" gibt das Format der Textdatei an. Der Text IISAM kann das Format automatisch aus den meisten Zeichen getrennten Dateien lesen. Sie können ein beliebiges einzelnes Zeichen als Trennzeichen in der Datei verwenden, ausgenommen das doppelte Anführungszeichen ("). Die **Format** Einstellung in "Schema. ini" überschreibt die Einstellung in der Windows-Registrierung, Datei nach Datei. In der folgenden Tabelle sind die gültigen Werte für die Option **Format** aufgeführt.  
   
-|Formatbezeichner|Tabellenformat|"Schema.ini" Format-Anweisung|  
+|Formatbezeichner|Tabellenformat|Schema. ini-Format Anweisung|  
 |----------------------|------------------|---------------------------------|  
-|**Tabstopp-getrennt**|Felder in der Datei werden durch Tabulatoren getrennt.|Format = TabDelimited|  
-|**CSV-Trennzeichen**|Felder in der Datei werden durch Kommas (durch Trennzeichen getrennte Werte) getrennt.|Format = CSVDelimited|  
-|**Mit benutzerdefiniertem Trennzeichen**|Felder in der Datei von einem anderen Zeichen als Trennzeichen, die Sie in das Dialogfeld Eingabe auf. Alles außer das doppelte Anführungszeichen (") sind zulässig, einschließlich leer.|Format = mit Trennzeichen (*benutzerdefiniertes Zeichen*)<br /><br /> -oder-<br /><br /> Kein Trennzeichen angegeben:<br /><br /> Format = mit Trennzeichen)|  
-|**Fester Länge**|Felder in der Datei sind eine feste Länge auf.|Format = FixedLength|  
+|**Tabstopp-getrennt**|Felder in der Datei werden durch Registerkarten getrennt.|Format = tabdelikt|  
+|**CSV-getrennt**|Felder in der Datei werden durch Kommas (durch Trennzeichen getrennte Werte) getrennt.|Format = csvdelic|  
+|**Benutzerdefiniertes Trennzeichen**|Felder in der Datei werden durch ein beliebiges Zeichen getrennt, das Sie in das Dialogfeld eingeben. Alle außer den doppelten Anführungszeichen (") sind zulässig, einschließlich Leerzeichen.|Format = mit Trenn*Zeichen (benutzerdefiniertes Zeichen*)<br /><br /> Oder<br /><br /> Ohne festgelegtes Trennzeichen:<br /><br /> Format = mit Trennzeichen ()|  
+|**Länge mit fester Länge**|Felder in der Datei haben eine Länge mit fester Länge.|Format = FixedLength|  
   
-## <a name="specifying-the-fields"></a>Die Felder angeben  
- Sie können die Feldnamen in einer Zeichen getrennten Textdatei auf zwei Arten angeben:  
+## <a name="specifying-the-fields"></a>Angeben der Felder  
+ Sie können Feldnamen in einer durch Trennzeichen getrennten Textdatei auf zwei Arten angeben:  
   
--   Die Feldnamen in der ersten Zeile der Tabelle enthalten, und legen Sie **ColNameHeader** zu **"true".**  
+-   Fügen Sie die Feldnamen in die erste Zeile der Tabelle ein, und legen Sie **ColNameHeader** auf "true" fest **.**  
   
--   Geben Sie jede Spalte nach Anzahl und die Spalte und der Typ.  
+-   Geben Sie jede Spalte nach Nummer an, und geben Sie den Spaltennamen und den Datentyp an.  
   
- Sie müssen festlegen, die Spaltennamen, Datentyp und Breite für Dateien mit fester Länge und jede Spalte nach Anzahl angeben.  
+ Sie müssen jede Spalte nach Zahl angeben und den Spaltennamen, den Datentyp und die Breite für Dateien mit fester Länge festlegen.  
   
 > [!NOTE]  
->  Die **ColNameHeader** Schema.ini Außerkraftsetzungen Festlegen der **FirstRowHasNames** Einstellung in der Windows-Registrierung, Dateien.  
+>  Die **ColNameHeader** -Einstellung in "Schema. ini" überschreibt die Einstellung " **firstrowhasnames** " in der Windows-Registrierung, Datei nach Datei.  
   
- Die Datentypen der Felder können auch ermittelt werden. Verwenden der **MaxScanRows** Option, um anzugeben, wie viele Zeilen überprüft werden soll, wenn die Spaltentypen bestimmt. Setzen Sie **MaxScanRows** 0 ist, wird die gesamte Datei überprüft. Die **MaxScanRows** in Schema.ini überschreibt die Einstellung in der Windows-Registrierung, Dateien.  
+ Die Datentypen der Felder können auch bestimmt werden. Verwenden Sie die Option **MaxScanRows** , um anzugeben, wie viele Zeilen beim Bestimmen der Spaltentypen gescannt werden sollen. Wenn Sie **MaxScanRows** auf 0 festlegen, wird die gesamte Datei gescannt. Die **MaxScanRows** -Einstellung in Schema. ini überschreibt die Einstellung in der Windows-Registrierung, Datei nach Datei.  
   
- Der folgende Eintrag gibt an, dass Microsoft Jet die Daten in der ersten Zeile der Tabelle verwenden sollten, um zu bestimmen, Feldnamen und prüfen sollten, um zu bestimmen, die Daten die gesamte Datei verwendeten Typen:  
+ Der folgende Eintrag gibt an, dass Microsoft Jet die Daten in der ersten Zeile der Tabelle verwenden soll, um Feldnamen zu bestimmen, und die gesamte Datei überprüfen sollte, um die verwendeten Datentypen zu bestimmen:  
   
 ```  
 ColNameHeader=True  
 MaxScanRows=0  
 ```  
   
- Der nächste Eintrag kennzeichnet Felder in einer Tabelle mit der Nummer der Spalte (**Col**_n_) Option, die für Zeichen getrennten Dateien optional und für Dateien mit fester Länge erforderlich ist. Das Beispiel zeigt die Schema.ini-Einträge für zwei Felder, ein Textfeld von 10 Zeichen bestehende CustomerNumber und ein 30 Zeichen CustomerName-Textfeld:  
+ Im nächsten Eintrag werden Felder in einer Tabelle mithilfe der Option Spaltennummer (**Col**_n_) angegeben, die für Zeichen getrennte Dateien optional ist und für Dateien mit fester Länge erforderlich ist. Das Beispiel zeigt die Schema. ini-Einträge für zwei Felder, ein 10-Zeichen-Textfeld "customernumber" und ein 30-Zeichen-Textfeld "CustomerName":  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- Die Syntax der **Col**_n_ ist:  
+ Die Syntax von **Col**_n_ lautet wie folgt:  
   
 ```  
   
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die folgende Tabelle beschreibt die einzelnen Teile der **Col**_n_ Eintrag.  
+## <a name="remarks"></a>Bemerkungen  
+ In der folgenden Tabelle werden die einzelnen Teile des " **Col**_n_ "-Eintrags beschrieben.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
-|*ColumnName*|Der Textname der Spalte. Wenn der Spaltenname Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen setzen.|  
-|*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
-|**Width**|Der Wert der literalen Zeichenfolge `Width`. Gibt an, dass die folgende Anzahl die Breite der Spalte bestimmt (optional für Zeichen getrennten Dateien; für Dateien mit fester Länge erforderlich).|  
-|*#*|Der ganzzahlige Wert, der die Breite der Spalte bestimmt (erforderlich, wenn **Breite** angegeben ist).|  
+|*ColumnName*|Der Textname der Spalte. Wenn der Spaltenname eingebettete Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen einschließen.|  
+|*type*|Die Datentypen lauten wie folgt:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Schnellstart<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Text<br /><br /> Anruf<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> Float (identisch mit Double)<br /><br /> Ganzzahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datums *Format* für Datum|  
+|**Width**|Der literale Zeichen `Width`folgen Wert. Gibt an, dass die folgende Zahl die Breite der Spalte festlegt (optional für Zeichen getrennte Dateien; erforderlich für Dateien mit fester Länge).|  
+|*#*|Der ganzzahlige Wert, der die Breite der Spalte festlegt (erforderlich, wenn die **Breite** angegeben ist).|  
   
 ## <a name="selecting-a-character-set"></a>Auswählen eines Zeichensatzes  
- Sie können aus zwei Zeichensätze auswählen: ANSI- und OEM. Die **CharacterSet** in Schema.ini überschreibt die Einstellung in der Windows-Registrierung, Dateien. Das folgende Beispiel zeigt den Schema.ini-Eintrag, der den Zeichensatz an ANSI festlegt:  
+ Sie können aus zwei Zeichensätzen auswählen: ANSI und OEM. Die Einstellung " **Merkmal Satz** " in der Datei "Schema. ini" überschreibt die Einstellung in der Windows-Registrierung, Datei nach Datei. Das folgende Beispiel zeigt den Eintrag Schema. ini, mit dem der Zeichensatz auf ANSI festgelegt wird:  
   
 ```  
 CharacterSet=ANSI  
 ```  
   
-## <a name="specifying-data-type-formats-and-conversions"></a>Angeben von Datenformaten-Typ und Konvertierungen  
- Die Datei "Schema.ini" enthält mehrere Optionen, die Sie verwenden können, um anzugeben, wie die Daten konvertiert oder angezeigt werden. Die folgende Tabelle enthält jede dieser Optionen.  
+## <a name="specifying-data-type-formats-and-conversions"></a>Angeben von Datentyp Formaten und-Konvertierungen  
+ Die Datei "Schema. ini" enthält mehrere Optionen, mit denen Sie angeben können, wie Daten konvertiert oder angezeigt werden. In der folgenden Tabelle sind die einzelnen Optionen aufgeführt.  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**DateTimeFormat**|Kann auf einer Formatzeichenfolge festgelegt werden, die Datums- und Uhrzeitangaben angibt. Sie sollten diesen Eintrag angeben, wenn alle Datum/Uhrzeit-Felder in den Import/Export mit dem gleichen Format verarbeitet werden. Alle Microsoft Jet-Formate, mit Ausnahme der Uhr und Uhr. werden unterstützt. Ist keine Formatzeichenfolge, werden die Optionen für das kurze Datum Windows-Systemsteuerung der Bild und die Uhrzeit verwendet.|  
-|**DecimalSymbol**|Kann auf jedem beliebigen einzelnen Zeichen festgelegt werden, die verwendet wird, um die ganze Zahl von der Bruchteil einer Zahl zu trennen.|  
-|**NumberDigits**|Gibt die Anzahl von Dezimalstellen in der Bruchteil einer Zahl.|  
-|**NumberLeadingZeros**|Gibt an, ob ein decimal-Wert kleiner als 1 und mehr als 1, führende Nullen enthalten soll. Dieser Wert kann entweder "false" (ohne führenden Nullen) sein oder "true".|  
-|**CurrencySymbol**|Gibt an, das Währungssymbol ein, das für die Currency-Werte in der Textdatei verwendet werden kann. Beispiele sind das Dollarzeichen ($) und Dm.|  
-|**CurrencyPosFormat**|Kann auf eines der folgenden Werte festgelegt werden:<br /><br /> -Currency Symbol Präfix ohne Trennung ($1)<br />-Currency Symbol-Suffix ohne Trennung (1$)<br />-Currency Symbol-Präfix mit einem Zeichen getrenntem ($ 1)<br />-Currency Symbol-Suffix mit einem Trennung (1 $)|  
-|**CurrencyDigits**|Gibt die Anzahl von Ziffern für den Bruchteil einen Währungsbetrag.|  
-|**CurrencyNegFormat**|Kann einer der folgenden Werte sein:<br /><br /> -   ($1)<br />--$1<br />-$-1<br />-$1:<br />-   (1$)<br />-1 $<br />-1-$<br />-1-<br />-1 $<br />--$ 1<br />-1-<br />-$ 1:<br />-$-1<br />-1-$<br />-   ($ 1)<br />-   (1 $)<br /><br /> Dieses Beispiel zeigt das Dollarzeichen, aber ersetzen Sie es mit dem entsprechenden **CurrencySymbol** Wert im wirklichen Programm.|  
-|**CurrencyThousandSymbol**|Gibt an, das einzelne Zeichen-Symbol, das für die Trennung von Währungswerten in der Textdatei von Tausenden verwendet werden kann.|  
-|**CurrencyDecimalSymbol**|Kann auf jedem beliebigen einzelnen Zeichen festgelegt werden, die verwendet wird, um die gesamte von den Bruchteil einen Währungsbetrag zu trennen.|  
+|**DateTimeFormat**|Kann auf eine Format Zeichenfolge festgelegt werden, die Datumsangaben und Uhrzeiten angibt. Sie sollten diesen Eintrag angeben, wenn alle Datums-/Uhrzeitfelder im Import/Export im gleichen Format behandelt werden. Alle Microsoft Jet-Formate außer Uhr und Nachmittag werden unterstützt. Wenn keine Format Zeichenfolge vorhanden ist, werden die Windows-Systemsteuerung kurz Datums Bild und Uhrzeit Optionen verwendet.|  
+|**Decimalsymbol**|Kann auf ein beliebiges einzelnes Zeichen festgelegt werden, das zum Trennen der Ganzzahl vom Bruchteil einer Zahl verwendet wird.|  
+|**Nummerier Ziffern**|Gibt die Anzahl der Dezimalstellen im Bruchteil einer Zahl an.|  
+|**"Numleadingzeros"**|Gibt an, ob ein Dezimalwert, der kleiner als 1 und größer als-1 ist, führende Nullen enthalten soll. Dieser Wert kann entweder "false" (keine führenden Nullen) oder "true" sein.|  
+|**CurrencySymbol**|Gibt das Währungssymbol an, das für Währungswerte in der Textdatei verwendet werden kann. Beispiele hierfür sind das Dollarzeichen ($) und DM.|  
+|**"Currency cyposformat"**|Kann auf einen der folgenden Werte festgelegt werden:<br /><br /> -Währungssymbol Präfix ohne Trennung ($1)<br />-Währungssymbol Suffix ohne Trennung ($1)<br />-Währungssymbol Präfix mit einer Zeichen Trennung ($1)<br />-Währungssymbol Suffix mit einer Zeichen Trennung ($1)|  
+|**Vorkommnisse**|Gibt die Anzahl der Ziffern an, die für die Bruchteile einer Währungs Menge verwendet werden.|  
+|**Currency-Format**|Es kann sich um einen der folgenden Werte handeln:<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> In diesem Beispiel wird das Dollarzeichen gezeigt, aber Sie sollten es durch den entsprechenden Wert für "Currency **Symbol** " im eigentlichen Programm ersetzen.|  
+|**"Uscytausendandsymbol"**|Gibt das Einzelzeichen Symbol an, das zum Trennen von Währungswerten in der Textdatei durch Tausende verwendet werden kann.|  
+|**"", "".**|Kann auf ein beliebiges einzelnes Zeichen festgelegt werden, das verwendet wird, um das ganze von dem Bruchteil einer Währungs Menge zu trennen.|  
   
 > [!NOTE]  
->  Wenn Sie einen Eintrag weglassen, ist der Standardwert in der Windows-Systemsteuerung verwendet.
+>  Wenn Sie einen Eintrag weglassen, wird der Standardwert in der Windows-Systemsteuerung verwendet.

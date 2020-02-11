@@ -9,10 +9,10 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580736"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65580736"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Das aus diesem Bericht generierte Atom-Dienstdokument enthält zwei Datenfeeds: einen für jede der dynamischen gleichrangigen Spalten "Territory" und "Year". Das folgende Diagramm veranschaulicht den Inhalt der einzelnen Datenfeeds.  
+ Das aus diesem Bericht generierte Atom-Dienstdokument enthält zwei Datenfeeds: einen für jede der dynamischen Peerspalten: „Territory“ und „Year“. Das folgende Diagramm veranschaulicht den Inhalt der einzelnen Datenfeeds.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -105,7 +105,7 @@ ms.locfileid: "65580736"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>Arbeiten mit Datenfeeds  
- Alle vom Bericht generierten Datenfeeds enthalten die Berichtselemente, die zum Bereich des übergeordneten Elements des Datenbereichs gehören, aus dem die Datenfeeds generiert werden. integrierten SharePoint-Website generiert werden. Angenommen, ein Bericht enthält mehrere Tabellen und ein Diagramm. Textfelder im Hauptteil des Berichts enthalten beschreibenden Text zu jedem Datenbereich. Jeder Eintrag in jedem vom Bericht generierten Datenfeed enthält den Wert des Textfelds. Lautete der Text z. B. "Diagramm zur Anzeige der durchschnittlichen Umsätze nach Vertriebsgebiet und Monat", wäre dieser Text in jeder Zeile aller drei Datenfeeds enthalten.  
+ Alle vom Bericht generierten Datenfeeds enthalten die Berichtselemente, die zum Bereich des übergeordneten Elements des Datenbereichs gehören, aus dem die Datenfeeds generiert werden. erforderlich. Angenommen, ein Bericht enthält mehrere Tabellen und ein Diagramm. Textfelder im Hauptteil des Berichts enthalten beschreibenden Text zu jedem Datenbereich. Jeder Eintrag in jedem vom Bericht generierten Datenfeed enthält den Wert des Textfelds. Lautete der Text z. B. "Diagramm zur Anzeige der durchschnittlichen Umsätze nach Vertriebsgebiet und Monat", wäre dieser Text in jeder Zeile aller drei Datenfeeds enthalten.  
   
  Wenn das Berichtslayout hierarchische Datenbeziehungen, z. B. geschachtelte Datenbereiche, umfasst, sind diese Beziehungen Teil des vereinfachten Rowsets der Berichtsdaten.  
   
@@ -171,12 +171,12 @@ ms.locfileid: "65580736"
 |----------|------------------------|  
 |Tabelle|Das Rendering erfolgt durch Erweitern der Tabelle und Erstellen einer Zeile und Spalte für jede Zeile und Spalte auf der untersten Detailebene. Teilergebniszeilen und -spalten weisen keine Zeilen- und Spaltenüberschriften auf. Drillthroughberichte werden nicht unterstützt.|  
 |Matrix|Das Rendering erfolgt durch Erweitern der Matrix und Erstellen einer Zeile und Spalte für jede Zeile und Spalte auf der untersten Detailebene. Teilergebniszeilen und -spalten weisen keine Zeilen- und Spaltenüberschriften auf.|  
-|Liste|Für jede Detailzeile oder Instanz in der Liste wird ein Datensatz gerendert.|  
+|List|Für jede Detailzeile oder Instanz in der Liste wird ein Datensatz gerendert.|  
 |Unterbericht|Das übergeordnete Element wird für jede Instanz des Inhalts wiederholt.|  
 |Diagramm|Es wird ein Datensatz mit allen Diagrammbezeichnungen für jeden Diagrammwert gerendert. Bezeichnungen aus Reihen und Kategorien in Hierarchien werden vereinfacht und in die Zeile für einen Diagrammwert eingeschlossen.|  
 |Datenbalken|Wird wie ein Diagramm gerendert. Ein Datenbalken enthält normalerweise keine Hierarchien oder Bezeichnungen.|  
 |Sparkline|Wird wie ein Diagramm gerendert. Eine Sparkline enthält normalerweise keine Hierarchien oder Bezeichnungen.|  
-|Messgerät|Wird als einzelner Datensatz mit dem Minimal- und Maximalwert der linearen Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers gerendert.|  
+|Maßstab|Wird als einzelner Datensatz mit dem Minimal- und Maximalwert der linearen Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers gerendert.|  
 |Indikator|Es wird als einzelnes Element mit dem Namen des aktiven Zustands, den verfügbaren Zuständen und dem Datenwert als Attribute gerendert.|  
 |Karte|Generiert einen Datenfeed für jeden Kartendatenbereich. Wenn mehrere Kartenebenen den gleichen Datenbereich verwenden, sind diese alle im Datenfeed enthalten. Der Datenfeed umfasst einen Datensatz mit den Bezeichnungen und Werten der einzelnen Kartenelemente der Kartenebene.|  
   

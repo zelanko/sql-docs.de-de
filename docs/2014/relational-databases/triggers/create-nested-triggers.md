@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196535"
 ---
 # <a name="create-nested-triggers"></a>Erstellen von geschachtelten Triggern
@@ -35,7 +35,7 @@ ms.locfileid: "68196535"
   
  Wenn geschachtelte Trigger zulässig sind und ein Trigger in der Kette eine Endlosschleife einleitet, wird die Anzahl der maximal zulässigen Schachtelungsebenen überschritten und der Trigger demzufolge beendet.  
   
- Sie können geschachtelte Trigger verwenden, um nützliche Verwaltungsfunktionen durchzuführen, wie z. B. das Speichern einer Sicherungskopie von Zeilen, die von einem vorherigen Trigger betroffen sind. Es ist beispielsweise möglich, einen Trigger für `PurchaseOrderDetail` zu erstellen, der eine Sicherungskopie der `PurchaseOrderDetail` -Zeilen speichert, die vom `delcascadetrig` -Trigger gelöscht wurden. Wenn der `delcascadetrig` -Trigger wirksam ist, führt das Löschen von `PurchaseOrderID` 1965 aus `PurchaseOrderHeader` dazu, dass die entsprechende(n) Zeile(n) aus `PurchaseOrderDetail`gelöscht werden. Zum Speichern der Daten erstellen Sie einen DELETE-Trigger für `PurchaseOrderDetail` , der die gelöschten Daten in einer getrennt erstellten Tabelle, `del_save`, speichert. Zum Beispiel:  
+ Sie können geschachtelte Trigger verwenden, um nützliche Verwaltungsfunktionen durchzuführen, wie z. B. das Speichern einer Sicherungskopie von Zeilen, die von einem vorherigen Trigger betroffen sind. Es ist beispielsweise möglich, einen Trigger für `PurchaseOrderDetail` zu erstellen, der eine Sicherungskopie der `PurchaseOrderDetail` -Zeilen speichert, die vom `delcascadetrig` -Trigger gelöscht wurden. Wenn der `delcascadetrig` -Trigger wirksam ist, führt das Löschen von `PurchaseOrderID` 1965 aus `PurchaseOrderHeader` dazu, dass die entsprechende(n) Zeile(n) aus `PurchaseOrderDetail`gelöscht werden. Zum Speichern der Daten erstellen Sie einen DELETE-Trigger für `PurchaseOrderDetail` , der die gelöschten Daten in einer getrennt erstellten Tabelle, `del_save`, speichert. Beispiel:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -184,7 +184,7 @@ Paul                           Alice                          0
   
 -   [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Konfigurieren der Serverkonfigurationsoption Geschachtelte Trigger](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Paketen mithilfe des Bereitstellungs-Hilfsprogramms | Microsoft-Dokumentation
+title: Bereitstellen von Paketen mithilfe des Bereitstellungs Hilfsprogramms | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059620"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Bereitstellen von Paketen mithilfe des Bereitstellungshilfsprogramms
@@ -64,7 +64,7 @@ ms.locfileid: "66059620"
   
 8.  Wenn Sie ausgewählt haben, dass Pakete nach der Installation überprüft werden sollen, zeigen Sie nun die Überprüfungsergebnisse der bereitgestellten Pakete an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Paket Bereitstellung &#40;SSIS-&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

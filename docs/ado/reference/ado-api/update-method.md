@@ -1,5 +1,5 @@
 ---
-title: Updatemethode für | Microsoft-Dokumentation
+title: Update-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938845"
 ---
 # <a name="update-method"></a>Update-Methode
-Speichert alle Änderungen an der aktuellen Zeile eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt oder die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  
+Speichert alle Änderungen, die Sie an der aktuellen Zeile eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts vornehmen, oder die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,37 +34,37 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Felder*  
- Dies ist optional. Ein **Variant** , die einen eindeutigen Namen, darstellt oder **Variant** Array, das darstellt, Namen oder die Positionen der Felder, die Sie ändern möchten.  
+ *Fields*  
+ Optional. Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
   
  *Werte*  
- Optional. Ein **Variant** , die einen einzelnen Wert darstellt oder **Variant** Array, das Werte für das Feld oder Felder in den neuen Eintrag darstellt.  
+ Optional. Eine **Variante** , die einen einzelnen Wert darstellt, oder ein **Variant** -Array, das Werte für das Feld bzw. die Felder im neuen Datensatz darstellt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="recordset"></a>Recordset  
- Verwenden der **Update** Methode zum Speichern von Änderungen Sie, um den aktuellen Datensatz vornehmen eine **Recordset** Objekt seit dem Aufrufen der [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode oder seit Feldwerte im ändern ein vorhandenen Datensatz. Die **Recordset** Objekt muss Updates unterstützen.  
+ Verwenden Sie die **Update** -Methode, um alle Änderungen zu speichern, die Sie an dem aktuellen Datensatz eines **Recordset** -Objekts vornehmen, seit Sie die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) -Methode aufrufen oder die Feldwerte in einem vorhandenen Datensatz ändern. Das **Recordset** -Objekt muss Updates unterstützen.  
   
- Führen Sie eine der folgenden Schritte aus, um Feldwerte festzulegen:  
+ Führen Sie einen der folgenden Schritte aus, um Feldwerte festzulegen:  
   
--   Werte zuweisen einer [Feld](../../../ado/reference/ado-api/field-object.md) des Objekts [Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft, und rufen die **Update** Methode.  
+-   Weisen Sie der [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts Werte zu, und nennen Sie die **Update** -Methode.  
   
--   Übergeben Sie einen Feldnamen und den Wert als Argumente mit den **Update** aufrufen.  
+-   Übergeben Sie einen Feldnamen und einen Wert als Argumente mit dem **Update** -Befehl.  
   
--   Übergeben Sie ein Array von Namen und ein Array von Werten mit der **Update** aufrufen.  
+-   Übergeben Sie ein Array von Feldnamen und ein Array von Werten mit dem **Update** -Befehl.  
   
- Wenn Sie Arrays von Feldern und Werten verwenden, muss eine gleiche Anzahl von Elementen in beiden Arrays vorhanden sein. Darüber hinaus muss die Reihenfolge der Feldnamen, die Reihenfolge der Feldwerte übereinstimmen. Wenn die Anzahl und Reihenfolge der Felder und Werte nicht übereinstimmen, tritt ein Fehler auf.  
+ Wenn Sie Arrays von Feldern und Werten verwenden, muss die gleiche Anzahl von Elementen in beiden Arrays vorhanden sein. Außerdem muss die Reihenfolge der Feldnamen mit der Reihenfolge der Feldwerte identisch sein. Wenn die Anzahl und Reihenfolge der Felder und Werte nicht identisch sind, tritt ein Fehler auf.  
   
- Wenn die **Recordset** Objekt unterstützt die Batch zu aktualisieren, können Sie mehrere Änderungen an einen oder mehrere Datensätze zwischenspeichern, lokal, bis Sie aufrufen, die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode. Wenn Sie den aktuellen Datensatz bearbeiten oder Hinzufügen eines neuen Datensatzes, beim Aufrufen der **UpdateBatch** -Methode, ADO ruft automatisch die **Update** Methode, um alle ausstehenden Änderungen am aktuellen Datensatz vor dem Speichern übertragen die im Batchmodus Änderungen an den Anbieter.  
+ Wenn das **Recordset** -Objekt die Batch Aktualisierung unterstützt, können Sie mehrere Änderungen an einem oder mehreren Datensätzen lokal zwischenspeichern, bis Sie die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode aufrufen. Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, wenn Sie die **UpdateBatch** -Methode aufrufen, ruft ADO automatisch die **Update** -Methode auf, um ausstehende Änderungen am aktuellen Datensatz zu speichern, bevor die Batch Änderungen an den Anbieter übertragen werden.  
   
- Wenn Sie aus dem Datensatz verschieben Sie zum Hinzufügen oder bearbeiten Sie vor dem Aufruf der **Update** , ADO wird automatisch Methodenaufruf **Update** zum Speichern der Änderungen. Rufen Sie die [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode, wenn Sie Abbrechen von Änderungen an den aktuellen Datensatz oder einen neu hinzugefügten Datensatz verwerfen möchten.  
+ Wenn Sie von dem Datensatz wechseln, den Sie vor dem Aufrufen der **Update** -Methode hinzufügen oder bearbeiten, wird von ADO automatisch **Update** aufgerufen, um die Änderungen zu speichern. Sie müssen die [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode aufzurufen, wenn Sie Änderungen an dem aktuellen Datensatz abbrechen oder einen neu hinzugefügten Datensatz verwerfen möchten.  
   
- Der aktuelle Datensatz bleibt die aktuelle aufzurufen, nachdem Sie die **Update** Methode.  
+ Der aktuelle Datensatz bleibt aktuell, nachdem Sie die **Update** -Methode aufgerufen haben.  
   
 ## <a name="record"></a>Datensatz  
- Die **Update** Methode schließt Hinzufügungen, löschungen und Aktualisierungen von Feldern in der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem **Datensatz** Objekt.  
+ Die **Update** -Methode schließt Ergänzungen, Löschungen und Aktualisierungen von Feldern in der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines **Datensatz** -Objekts ab.  
   
- Z. B. Felder, die gelöscht werden, mit der **löschen** Methode sofort zum Löschen markiert sind, aber bleiben in der Auflistung. Die **Update** -Methode muss aufgerufen werden, um diese Felder aus der Auflistung des Anbieters tatsächlich zu löschen.  
+ Beispielsweise werden mit der **Delete** -Methode gelöschte Felder sofort zum Löschen markiert, bleiben jedoch in der Auflistung. Die **Update** -Methode muss aufgerufen werden, um diese Felder tatsächlich aus der Auflistung des Anbieters zu löschen.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -72,9 +72,9 @@ record.Fields.Update
 |-|-|  
 |[Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Update- und CancelUpdate-Methode – Beispiel (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Update- und CancelUpdate-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Update-und CancelUpdate-Methoden (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
+ [Beispiel für Update-und CancelUpdate-Methoden (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [AddNew-Methode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode-Eigenschaft](../../../ado/reference/ado-api/editmode-property.md)   

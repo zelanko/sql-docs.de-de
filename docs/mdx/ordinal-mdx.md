@@ -1,5 +1,5 @@
 ---
-title: Ordinalzahl (MDX) | Microsoft-Dokumentation
+title: Ordinal (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b22cc6d5a609f8e1f585ccc1229e0e1cd67e1796
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055639"
 ---
 # <a name="ordinal-mdx"></a>Ordinal (MDX)
@@ -31,8 +31,8 @@ Level_Expression.Ordinal
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Ordnungszahl** Funktion wird häufig verwendet, in Verbindung mit der **IIF** und **CurrentMember** Funktionen, um unterschiedliche Werte bedingt auf verschiedenen anzeigen Hierarchieebenen, basierend auf der Position der einzelnen speziellen Zellen im Abfrageergebnis. Beispielsweise können Sie die **Ordnungszahl** -Funktion zum Ausführen von Berechnungen auf bestimmten Ebenen und den Standardwert "N/v" auf anderen Ebenen anzeigen.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **ordinalfunktion** wird häufig in Verbindung mit den **IIf** -und **CurrentMember** -Funktionen verwendet, um unterschiedliche Werte auf verschiedenen Hierarchieebenen bedingt auf der Grundlage der Ordnungsposition der einzelnen einzelnen Zellen im Abfrageergebnis anzuzeigen. Beispielsweise können Sie die **ordinalfunktion** verwenden, um Berechnungen auf bestimmten Ebenen auszuführen und den Standardwert "N/v" auf anderen Ebenen anzuzeigen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Ordinalzahl für die Calendar Quarter-Ebene in der Calendar-Hierarchie zurückgegeben.  
@@ -43,7 +43,7 @@ SELECT Measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

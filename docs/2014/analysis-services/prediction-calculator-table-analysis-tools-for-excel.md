@@ -1,5 +1,5 @@
 ---
-title: Vorhersagerechner (Tabellenanalysetools für Excel) | Microsoft-Dokumentation
+title: Vorhersagerechner (Tabellenanalyse Tools für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070857"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Vorhersagerechner (Tabellenanalysetools für Excel)
-  ![Vorhersagerechnertool](media/tat-predcal.gif "Tool Vorhersagerechner")  
+  ![Vorhersagerechnertool](media/tat-predcal.gif "Vorhersagerechnertool")  
   
- Die **Vorhersagerechner** Tool können Sie eine Scorecard erstellen, die verwendet werden können, um neue Daten analysieren und zu Optionen und Risiken bewerten. Für, wenn Sie z. B. Vergangenheitsdaten und demografische Daten zu Kunden, die **Vorhersagerechner** Tool kann Ihnen bei zwei wichtigen Aufgaben helfen:  
+ Mit dem **Vorhersagerechner** Tool können Sie eine Scorecard erstellen, die zum Analysieren neuer Daten und zum Auswerten von Optionen oder Risiken verwendet werden kann. Wenn Sie z. b. Verlaufs Daten und demografische Daten zu Kunden haben, kann das **Vorhersagerechner** Tool Ihnen bei zwei wichtigen Aufgaben helfen:  
   
 -   Generieren einer zugrunde liegenden Analyse der demografischen Daten, des Kaufverhaltens und verschiedener anderer Faktoren.  
   
@@ -40,40 +40,40 @@ ms.locfileid: "66070857"
   
 1.  Öffnen Sie eine Excel-Tabelle mit den zu analysierenden Daten.  
   
-2.  Klicken Sie auf **Vorhersagerechner** auf die **analysieren** Registerkarte.  
+2.  Klicken Sie auf der Registerkarte **analysieren** auf **Vorhersagerechner** .  
   
-3.  In der **Vorhersagerechner** im Dialogfeld für das Ziel die Spalte auswählen, die Sie vorhersagen möchten beispielsweise das Kaufverhalten,.  
+3.  Wählen Sie im Dialogfeld **Vorhersagerechner** für Ziel die Spalte aus, die Sie vorhersagen möchten, z. b. das Kaufverhalten.  
   
-4.  Geben Sie den Zielwert an. Wenn der Wert numerisch ist, verwenden Sie die Option **im Bereich**, und geben Sie dann die minimalen und maximalen Werte für den gewünschten Bereich. Wenn der Wert diskret ist, wählen Sie die **genau** aus, und wählen Sie den Wert aus der Dropdownliste aus.  
+4.  Geben Sie den Zielwert an. Wenn der Wert numerisch ist, verwenden Sie die Option **im Bereich**, und geben Sie dann die minimalen und maximalen Werte für den gewünschten Bereich ein. Wenn der Wert diskret ist, wählen Sie die Option **genau** aus, und wählen Sie dann den Wert aus der Dropdown Liste aus.  
   
-5.  Klicken Sie auf **wählen Sie Spalten, die zu analysierende**.  
+5.  Klicken Sie auf **für die Analyse zu verwendende Spalten auswählen**.  
   
-6.  In der **erweiterte Spaltenauswahl** klicken Sie im Dialogfeld Spalten auswählen, die nützliche Informationen enthalten. Entfernen Sie alle Spalten, die für die Analyse nicht relevant sind. Klicken Sie auf **OK**.  
+6.  Wählen Sie im Dialogfeld **Erweiterte Spaltenauswahl** Spalten aus, die nützliche Informationen enthalten. Entfernen Sie alle Spalten, die für die Analyse nicht relevant sind. Klicken Sie auf **OK**.  
   
      Um eine Verzerrung der Ergebnisse zu vermeiden, sollten Sie auch die Spalten entfernen, die doppelte Informationen enthalten. Wenn Sie beispielsweise eine Spalte Einkommen haben, die numerische Daten enthält, und eine Spalte Einkommensgruppe, die die Bezeichnungen Hoch, Mittel und Niedrig enthält, sollten Sie nicht beide Spalten in dasselbe Modell aufnehmen. Stattdessen könnten Sie ein separates Modell für jede Spalte erstellen.  
   
-7.  In der **Ausgabeoptionen** wählen Sie im Abschnitt **operativer Rechner** um die Analyse und die Scorecard in einer Excel-Arbeitsmappe zu erstellen. Wählen Sie **druckoptimierter Rechner** erstellen die Analyse und generieren auch einen Bericht, der gedruckt und für manuelle Bewertungen verwendet werden kann.  
+7.  Wählen Sie im Abschnitt **Ausgabeoptionen die Option** **Betriebs Rechner** aus, um die Analyse und die Scorecard innerhalb einer Excel-Arbeitsmappe zu erstellen. Wählen Sie **Drucker bereiter Rechner** aus, um die Analyse zu erstellen. Außerdem können Sie einen Bericht generieren, der gedruckt und zur manuellen Bewertung verwendet werden kann.  
   
 8.  Klicken Sie auf **Ausführen**.  
   
      Das Tool erstellt neue Arbeitsblätter, die die Berichte und die Scorecards enthalten.  
   
-### <a name="requirements"></a>Anforderungen  
- Die **Vorhersagerechner** Tool verwendet den Microsoft Logistic Regression-Algorithmus, der diskrete Werte als auch diskretisierten und kontinuierlichen numerischen Daten arbeiten kann.  
+### <a name="requirements"></a>Requirements (Anforderungen)  
+ Das **Vorhersagerechner** Tool verwendet den Microsoft Logistic Regression-Algorithmus, der mit diskreten Werten sowie diskretisierten und kontinuierlichen numerischen Daten arbeiten kann.  
   
 ## <a name="understanding-the-scoring-reports"></a>Grundlegendes zu den Bewertungsberichten  
  Wenn Sie beide Ausgabeoptionen aktivieren, erstellt der Vorhersagerechner die folgenden drei neuen Arbeitsblätter in der aktuellen Arbeitsmappe:  
   
--   Ein **Vorhersagebericht**, enthält die Ergebnisse der Analyse mit interaktiven Tabellen und Diagramme, mit denen Sie experimentieren mit Interaktionen und gewinnen.  
+-   Ein **Vorhersage Bericht**, der die Ergebnisse der Analyse enthält, mit interaktiven Tabellen und Diagrammen, die Sie beim Experimentieren mit Interaktionen und gewinnen unterstützen.  
   
--   Eine interaktive **Vorhersagerechner** , mit dem Sie die Bewertungen zu erstellen.  
+-   Eine interaktive **Vorhersagerechner** , die Sie beim Erstellen von Bewertungen unterstützt.  
   
--   Ein **druckbaren Rechner** mit Anweisungen und Koeffizienten für die Bewertung.  
+-   Ein **druckbarer Rechner** mit Anweisungen und Koeffizienten, die bei der Bewertung verwendet werden sollen.  
   
 -   In diesem Abschnitt werden die Informationen in den einzelnen Berichten und die Verwendung der verschiedenen Berichtsoptionen beschrieben.  
   
 ### <a name="prediction-report-with-graphs"></a>Vorhersagebericht mit Diagrammen  
- Der erste vorhersagebericht heißt **Rechner Vorhersagebericht für die \<Zielstatus > der \<Zielattribut >** . Er enthält aus der Analyse abgeleitete Tabellen und Faktoren sowie Tools, mit denen Sie die finanziellen Auswirkungen einer bestimmten Analyse bewerten können.  
+ Der erste Vorhersage Bericht wird **Vorhersagerechner Bericht für den \<Ziel Status> des \<Ziel Attributs>**. Er enthält aus der Analyse abgeleitete Tabellen und Faktoren sowie Tools, mit denen Sie die finanziellen Auswirkungen einer bestimmten Analyse bewerten können.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabelle zum Angeben von Kosten und Gewinnen  
  Das erste Tool dieses Berichts befindet sich oben links im Bericht. Es ist eine Tabelle, in der Sie die Kosten und Gewinne angeben können, die mit der richtigen und falschen Vorhersage eines Werts verbunden sind.  Diese Kosten und Gewinne sind erforderlich, um für den Rechner den optimalen Ergebnisschwellenwert zu berechnen.  
@@ -88,16 +88,16 @@ ms.locfileid: "66070857"
 #### <a name="chart-for-viewing-maximum-profit"></a>Diagramm zum Anzeigen des maximalen Gewinns  
  Bei der Eingabe von Werten in die Tabelle werden die entsprechenden Diagramme automatisch aktualisiert, damit Sie sehen können, wo für das aktuelle Modell der optimale Punkt zur Maximierung des Gewinns ist. Das Liniendiagramm rechts neben dieser Tabelle zeigt den Gewinn für verschiedene Ergebnisschwellenwerte an. Der Gewinn wird anhand der Zahlen für Gewinn und Kosten geschätzt, die Sie in die Tabelle eingeben, und basierend auf den Vorhersagen und Wahrscheinlichkeiten des Modells.  
   
- Z. B. If, in der oberen linken Tabelle, die Zelle für **vorgeschlagener Schwellenwert zum Maximieren des Gewinns** zeigt dem Wert 500, das Diagramm auf der rechten Seite 500 als der höchste Punkt im Liniendiagramm angezeigt. Dieser Wert 500 bedeutet, dass Sie zur Maximierung der Gewinne die ersten 500 Empfehlungen des Miningmodells, sortiert nach Wahrscheinlichkeit, verwenden sollten.  
+ Wenn z. b. in der oberen linken Tabelle die Zelle für den **empfohlenen Schwellenwert zum Maximieren des Gewinns** den Wert 500 anzeigt, wird im Diagramm auf der rechten Seite 500 als höchster Punkt im Liniendiagramm angezeigt. Dieser Wert 500 bedeutet, dass Sie zur Maximierung der Gewinne die ersten 500 Empfehlungen des Miningmodells, sortiert nach Wahrscheinlichkeit, verwenden sollten.  
   
 #### <a name="table-listing-scores-for-each-attribute-and-value"></a>Tabelle mit den Ergebnissen für jedes Attribut und jeden Wert  
  Die Tabelle unten links im Bericht zeigt eine detaillierte Analyse der gefundenen Werte sowie die Auswirkungen der Werte auf das Ergebnis. Sie können die Werte nicht in dieser Tabelle ändern. Sie werden angezeigt, um Ihnen beim Verständnis der Vorhersage zu helfen.  
   
  Die folgende Tabelle zeigt ein Beispiel der Ergebnisse, wenn es das Ziel ist, dass ein Kunde ein Fahrrad kauft. In der Tabelle wird jede Eingabespalte aufgeführt, die im Modell verwendet wurde, unabhängig davon, ob die Eingabe das Modell beeinflusst hat. In der Tabelle werden auch die diskreten Werte und die diskretisierten Werte aufgelistet, wenn die Eingabespalte kontinuierliche numerische Daten enthält.  
   
- Die Werte in der **Relative Auswirkung** Spalte werden als Prozentsätze dargestellte Wahrscheinlichkeiten. Die Zelle wird schattiert, um die Auswirkung dieses Werts auf die Ergebnisse grafisch darzustellen.  
+ Die Werte in der Spalte **relative Auswirkung** sind Wahrscheinlichkeiten, die als Prozentsätze dargestellt werden. Die Zelle wird schattiert, um die Auswirkung dieses Werts auf die Ergebnisse grafisch darzustellen.  
   
-|Attribut|Wert|Relative Auswirkung|  
+|attribute|value|Relative Auswirkung|  
 |---------------|-----------|---------------------|  
 |Marital Status|Verheiratet|0|  
 |Marital Status|Single|71|  
@@ -120,45 +120,45 @@ ms.locfileid: "66070857"
  Obwohl das erste Diagramm vorschlägt, dass Sie Ihre Gewinne maximieren können, indem Sie die ersten 500 vom Modell vorhergesagten Kunden erreichen, könnten Sie sich beispielsweise nach einem Blick auf dieses zweite Diagramm entscheiden, dass die Kosten zu hoch sind, wenn diese Kunden fälschlicherweise angesprochen werden. Sie entschließen sich deshalb dazu, die Marketingkampagne auf die ersten 400 Kunden zu beschränken.  
   
 ### <a name="interactive-prediction-calculator"></a>Interaktiver Vorhersagerechner  
- Das zweite, vom Tool Vorhersagerechner erstellte Arbeitsblatt heißt **Vorhersagerechner für den \<Zielstatus > der \<Zielattribut >** . Es ist ein interaktives Arbeitsblatt, mit dem Sie einzelne Ergebnisse berechnen können. Da dieses Arbeitsblatt im Modell gespeicherte Muster und Statistiken nutzt, können Sie mit unterschiedlichen Werten experimentieren und deren Auswirkungen auf das vorhergesagte Ergebnis ermitteln. Dieser Bericht weist auch zwei Abschnitte auf: Einer ist interaktiv, und einer dient als Referenz.  
+ Das zweite Arbeitsblatt, das mit dem Vorhersagerechner Tool erstellt wurde, hat **den Titel Vorhersagerechner für den \<Ziel Status> des \<Ziel Attributs>**. Es ist ein interaktives Arbeitsblatt, mit dem Sie einzelne Ergebnisse berechnen können. Da dieses Arbeitsblatt im Modell gespeicherte Muster und Statistiken nutzt, können Sie mit unterschiedlichen Werten experimentieren und deren Auswirkungen auf das vorhergesagte Ergebnis ermitteln. Dieser Bericht weist auch zwei Abschnitte auf: Einer ist interaktiv, und einer dient als Referenz.  
   
 #### <a name="first-table"></a>Erste Tabelle  
- Sie können auswählen, oder geben Sie einen neuen Wert in der **Wert** -Spalte der Tabelle zu sehen, wie sich die Änderung des Werts auf das Ergebnis auswirkt.  
+ Sie können einen neuen Wert in der Spalte **Wert** der Tabelle auswählen oder eingeben, um zu sehen, wie sich die Änderung des Werts auf das Ergebnis auswirkt.  
   
- Wenn der Bericht beispielsweise die folgenden Werte enthält, können Sie den Wert für Autos auf 1 reduzieren und dann auf 0, um festzustellen, wie sich dies auf das Kaufverhalten der Kunden auswirkt. Wenn Sie den Wert der ändern **Autos** 0 ist, ändert sich die Vorhersage unten auf "true".  
+ Wenn der Bericht beispielsweise die folgenden Werte enthält, können Sie den Wert für Autos auf 1 reduzieren und dann auf 0, um festzustellen, wie sich dies auf das Kaufverhalten der Kunden auswirkt. Wenn Sie den Wert von **Cars** in 0 ändern, ändert sich die Vorhersage unten in "true".  
   
-|Attribut|Wert|Relative Auswirkung|  
+|attribute|value|Relative Auswirkung|  
 |---------------|-----------|---------------------|  
 |Marital Status|Verheiratet|0|  
 |Geschlecht|Male|0|  
-|Income|39050 - 71062|117|  
+|Income|39050-71062|117|  
 |Children|0|157|  
-|Education|Bachelor|22|  
+|Fortbildung|Bachelor|22|  
 |Occupation|Skilled Manual|33|  
 |Wohneigentum|Ja|8|  
 |Autos|2|50|  
 |Commute Distance|0-1 Meilen|99|  
-|Region|North America|0|  
-|Age|37 - 46|5|  
-|Total||491|  
+|Region|Nordamerika|0|  
+|Alter|37-46|5|  
+|Gesamt||491|  
 |Vorhersage für 'Ja'||FALSE|  
   
- Wenn Sie in den neuen Wert eingeben, ändert sich das Ergebnis in der Zelle Vorhersage für ' Ja ', auf "true", und die **Relative Auswirkung** Bewertungen für die verschiedenen Attribute werden ebenfalls aktualisiert.  
+ Wenn Sie den neuen Wert eingeben, wird die in der Zelle angezeigte Bewertung (Vorhersage für ja) in true geändert, und die **relativen Wirkungs** Ergebnisse für die verschiedenen Attribute werden ebenfalls aktualisiert.  
   
 > [!NOTE]  
->  Auch wenn Sie nur einen Wert ändern, beispielsweise die Anzahl der Autos, können sich die Werte und Auswirkungen anderer Attribute ebenfalls ändern. Der Grund dafür ist, dass Data Mining-Modelle häufig komplexe Beziehungen zwischen Daten finden. Die Änderung einer Variablen kann dann unvorhergesehene Auswirkungen haben. Deshalb empfehlen wir, mithilfe des interaktiven Vorhersagerechners mit unterschiedlichen Werten zu experimentieren. Sie können auch das Miningmodell durchsuchen, damit Sie die Interaktionen besser verstehen. Weitere Informationen finden Sie unter [Modelle Durchsuchen](prediction-calculator-table-analysis-tools-for-excel.md).  
+>  Auch wenn Sie nur einen Wert ändern, beispielsweise die Anzahl der Autos, können sich die Werte und Auswirkungen anderer Attribute ebenfalls ändern. Der Grund dafür ist, dass Data Mining-Modelle häufig komplexe Beziehungen zwischen Daten finden. Die Änderung einer Variablen kann dann unvorhergesehene Auswirkungen haben. Deshalb empfehlen wir, mithilfe des interaktiven Vorhersagerechners mit unterschiedlichen Werten zu experimentieren. Sie können auch das Miningmodell durchsuchen, damit Sie die Interaktionen besser verstehen. Weitere Informationen finden Sie unter [Durchsuchen von Modellen](prediction-calculator-table-analysis-tools-for-excel.md).  
   
 #### <a name="score-breakdown"></a>Ergebnisaufschlüsselung  
  In dieser Tabelle sind die einzelnen Ergebnisse für jeden Zustand der Eingabespalten und die relative Auswirkung auf die Ergebnisse dargestellt. Diese Tabelle ist statisch und dient nur als Referenz.  
   
 ### <a name="printable-prediction-calculator"></a>Druckbarer Vorhersagerechner  
- Das dritte, vom Tool Vorhersagerechner erstellte Arbeitsblatt heißt **PrintablePrediction Rechner für die \<Zielstatus > der \<Zielattribut >** . Die Scorecard ist zum Drucken vorgesehen, sodass Sie manuell Ergebnisse berechnen können, wenn Sie nicht am Computer sind.  
+ Das dritte Arbeitsblatt, das vom Vorhersagerechner Tool erstellt wurde, hat **den Titel printablevorhersage \<Calculator für den \<Ziel Status> der Ziel Attribut>**. Die Scorecard ist zum Drucken vorgesehen, sodass Sie manuell Ergebnisse berechnen können, wenn Sie nicht am Computer sind.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>So drucken und verwenden Sie den vom Vorhersagerechner generierten Bewertungsbericht  
   
-1.  Klicken Sie auf der Registerkarte "mit dem Titel" **Druckbarer Vorhersagerechner für \<Attribut >** .  
+1.  Klicken Sie auf die Registerkarte mit dem Titel **druckbare Vorhersagerechner für \<Attribut>**.  
   
-2.  Wählen Sie im Excel-Datei, **Seitenansicht**.  
+2.  Wählen Sie im Menü Excel-Datei die Option **Druckvorschau**aus.  
   
 3.  Ändern Sie die Seitenausrichtung, die Ränder und andere Druckoptionen, bis die Scorecard wie gewünscht auf die Seite passt.  
   
@@ -166,18 +166,19 @@ ms.locfileid: "66070857"
   
 4.  Drucken Sie die Scorecard.  
   
-5.  Wählen Sie für jedes Attribut nur einen Wert aus. Für den Wert Sie auswählen, setzen ein Häkchen im Feld, und Schreiben Sie die entsprechende Anzahl in der **Bewertung** Spalte.  
+5.  Wählen Sie für jedes Attribut nur einen Wert aus. Legen Sie für den Wert, den Sie auswählen, ein Häkchensymbol in das Feld ein, und schreiben Sie die entsprechende Zahl in die Spalte **Score** .  
   
 6.  Geben Sie möglichst viele Attribute an, um Genauigkeit sicherzustellen.  
   
-7.  Berechnet die Summe der Ergebnisse für jedes Attribut, und geben Sie diese Zahl in die **insgesamt** Zeile.  
+7.  Berechnen Sie die Summe der Ergebnisse für jedes Attribut, und geben Sie diese Zahl in die **Gesamt** Zeile ein.  
   
-8.  Konvertieren Sie das Ergebnis in ein vorhergesagtes Ergebnis anhand der Kriterien, die auf dem Blatt gedruckt unmittelbar nach der **insgesamt** Zeile.  
+8.  Konvertieren Sie das Ergebnis in ein vorhergesagtes Ergebnis, indem Sie die auf dem Blatt gedruckten Kriterien unmittelbar nach der **Gesamt** Zeile verwenden.  
   
 ## <a name="related-tools"></a>Verwandte Tools  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt den Microsoft Logistic Regression-Algorithmus zur Verwendung für diese Art von Analyse bereit. Wenn Sie bereits mit der logistischen Regression vertraut sind, können Sie problemlos logistische regressionsmodelle erstellen, mit der **erweitert** Möglichkeit, Data Mining-Client für Excel. Weitere Informationen finden Sie unter [erweiterte Modellierung &#40;Data Mining-Add-ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Weitere Informationen zu den Optionen und Parametern für logistische regressionsmodelle finden Sie im Thema "Microsoft Logistic Regression-Algorithmus" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt den Microsoft Logistic Regression-Algorithmus zur Verwendung für diese Art von Analyse bereit. Wenn Sie bereits mit der logistischen Regression vertraut sind, können Sie problemlos logistische Regressionsmodelle erstellen, indem Sie die **Erweiterte** Option des Data Mining-Clients für Excel verwenden. Weitere Informationen finden Sie unter [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Weitere Informationen zu den Optionen und Parametern für logistische Regressionsmodelle finden Sie im Thema "Microsoft Logistic Regression- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Algorithmus" in der-Online Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  
   
   

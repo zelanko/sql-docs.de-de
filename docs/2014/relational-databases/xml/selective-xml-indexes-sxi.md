@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679821"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Selektive XML-Indizes (SXI)
@@ -123,7 +123,7 @@ FOR
   
 -   Indizieren von Knoten mit binären XS-Typen: z. B. base64Binary und hexBinary.  
   
--   Angeben von Knoten, die mit XPath-Ausdrücken indiziert werden sollen und am Ende das Platzhalterzeichen `*` aufweisen: z. B. `/a/b/c/*`, `/a//b/*` oder `/a/b/*:c`.  
+-   Angeben von Knoten, die mit XPath-Ausdrücken indiziert werden sollen und am Ende das Platzhalterzeichen `*` aufweisen: z. B.  `/a/b/c/*`, `/a//b/*`oder `/a/b/*:c`.  
   
 -   Indizieren einer anderen Achse als untergeordnetes Element, Attribut oder Nachfolger. Der `//<step>` -Fall ist als spezieller Fall zulässig.  
   
@@ -133,7 +133,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> Erforderliche Komponenten  
+###  <a name="prereq"></a> Voraussetzungen  
  Die folgenden Voraussetzungen müssen erfüllt sein, bevor Sie einen selektiven XML-Index für eine XML-Spalte in einer Benutzertabelle erstellen können:  
   
 -   Für den Primärschlüssel der Benutzertabelle muss ein gruppierter Index vorhanden sein.  
@@ -201,7 +201,7 @@ FOR
   
 |||  
 |-|-|  
-|**Task**|**Thema**|  
+|**Aufgabe**|**Thema**|  
 |Angeben der zu indizierenden Knotenpfade und optionalen Optimierungshinweise, wenn Sie einen selektiven XML-Index erstellen oder ändern.|[Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes](specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Erstellen, Ändern oder Löschen eines selektiven XML-Indexes.|[Erstellen, Ändern und Löschen selektiver XML-Indizes](create-alter-and-drop-selective-xml-indexes.md)|  
 |Erstellen, Ändern oder Löschen eines sekundären selektiven XML-Indexes.|[Erstellen, Ändern und Löschen sekundärer, selektiver XML-Indizes](create-alter-and-drop-secondary-selective-xml-indexes.md)|  

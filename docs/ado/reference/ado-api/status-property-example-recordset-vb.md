@@ -1,5 +1,5 @@
 ---
-title: Status-Eigenschaft – Beispiel (Recordset) (VB) | Microsoft-Dokumentation
+title: Status Eigenschafts Beispiel (Recordset) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916795"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status-Eigenschaft – Beispiel (Recordset) (VB)
-Dieses Beispiel verwendet die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft, um anzuzeigen, welche Datensätze in einem Batchvorgang geändert wurden, bevor eine Batchaktualisierung aufgetreten ist.  
+In diesem Beispiel wird die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft verwendet, um anzuzeigen, welche Datensätze in einem Batch Vorgang vor einem Batch Update geändert wurden.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -97,5 +97,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Status-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Status-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

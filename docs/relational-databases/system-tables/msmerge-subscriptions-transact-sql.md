@@ -18,31 +18,31 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106315"
 ---
-# <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
+# <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_subscriptions** -Tabelle enthält eine Zeile für jedes Abonnement, das vom Merge-Agent auf dem Abonnenten bedient. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSmerge_subscriptions** Tabelle enthält eine Zeile für jedes Abonnement, das von der Merge-Agent auf dem Abonnenten gewartet wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
 |**publication_id**|**int**|Die ID der Veröffentlichung.|  
 |**subscriber_id**|**smallint**|Die ID des Abonnenten.|  
-|**subscriber_db**|**sysname**|Der Name der Abonnementdatenbank.|  
+|**subscriber_db**|**sysname**|Der Name der Abonnement Datenbank.|  
 |**subscription_type**|**int**|Der Typ des Abonnements:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anonym.|  
 |**sync_type**|**tinyint**|Typ der Synchronisierung:<br /><br /> 1 = Automatisch.<br /><br /> 2 = Keine Synchronisierung|  
-|**status**|**tinyint**|Status des Abonnements.|  
+|**Stands**|**tinyint**|Status des Abonnements.|  
 |**subscription_time**|**datetime**|Zeitpunkt, zu dem das Abonnement hinzugefügt wurde.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

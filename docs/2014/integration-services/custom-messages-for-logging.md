@@ -16,13 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67316664"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und für mehrere Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  
   
  Die benutzerdefinierten Protokolleinträge unterscheiden sich von den für Pakete und alle Container und Tasks verfügbaren Standardprotokollierungsereignissen. Die benutzerdefinierten Protokolleinträge dienen zum Erfassen nützlicher Informationen zu einem bestimmten Task eines Pakets. Beispielsweise zeichnet einer der benutzerdefinierten Protokolleinträge für den Task SQL ausführen die von dem Task ausgeführte SQL-Anweisung im Protokoll auf.  
@@ -47,7 +48,7 @@ ms.locfileid: "67316664"
   
  [FTP-Task](#FTP)  
   
- [Nachrichtenwarteschlange (Task)](#MessageQueue)  
+ [Message Queue Task](#MessageQueue)  
   
  [Skripttask](#Script)  
   
@@ -78,25 +79,25 @@ ms.locfileid: "67316664"
 ###  <a name="Package"></a> Paket  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`PackageStart`|Zeigt den Beginn der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |`PackageEnd`|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |`Diagnostic`|Enthält Informationen zur Systemkonfiguration, die sich auf die Paketausführung auswirken, wie z. B. die Anzahl ausführbarer Dateien, die gleichzeitig ausgeführt werden können.<br /><br /> Der Protokolleintrag `Diagnostic` enthält auch vorherige und nachfolgende Einträge für Aufrufe von externen Datenanbietern. Weitere Informationen finden Sie unter [Troubleshooting Tools Package Connectivity](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
-###  <a name="BulkInsert"></a> Masseneinfügungstask  
+###  <a name="BulkInsert"></a>Massen Einfügungs Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`DTSBulkInsertTaskBegin`|Zeigt den Beginn der Masseneinfügung an.|  
 |`DTSBulkInsertTaskEnd`|Zeigt die Fertigstellung der Masseneinfügung an.|  
 |`DTSBulkInsertTaskInfos`|Enthält beschreibende Informationen zum Task.|  
   
-###  <a name="DataFlow"></a> Datenflusstask  
+###  <a name="DataFlow"></a>Datenfluss Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Datenflusstask aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
 |`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der `ProcessInput`-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
@@ -109,50 +110,50 @@ ms.locfileid: "67316664"
 |`PipelineExecutionTrees`|Berichtet die Ausführungsstrukturen des Layouts im Datenfluss. Der Planer der Datenfluss-Engine verwendet die Strukturen zum Erstellen des Datenflussplans.|  
 |`PipelineInitialization`|Bietet Initialisierungsinformationen zu dem Task. Zu diesen Informationen gehören die Verzeichnisse für die temporäre Speicherung von BLOB-Daten, die Standardpuffergröße und die Zeilenanzahl in einem Puffer. Je nach der Konfiguration des Datenflusstasks werden möglicherweise mehrere Protokolleinträge geschrieben.|  
   
-###  <a name="ExecuteDTS200"></a> DTS 2000 ausführen (Task)  
+###  <a name="ExecuteDTS200"></a>DTS 2000-Aufgabe ausführen  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task DTS 2000 ausführen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Zeigt an, dass die Ausführung eines DTS 2000-Pakets über den Task gestartet wurde.|  
 |`ExecuteDTS80PackageTaskEnd`|Zeigt an, dass die Ausführung über den Task beendet wurde.<br /><br /> Hinweis: Das DTS 2000-Paket kann nach Beendigung des Tasks mit der Ausführung fortfahren.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Enthält beschreibende Informationen zum Task.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Berichtet das Ausführungsergebnis des durch den Task ausgeführten DTS 2000-Pakets.|  
   
-###  <a name="ExecuteProcess"></a> Prozess ausführen (Task)  
+###  <a name="ExecuteProcess"></a>Prozess ausführen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Prozess ausführen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|Enthält Informationen zum Ausführprozess der zur Ausführung konfigurierten ausführbaren Datei.<br /><br /> Es werden zwei Protokolleinträge geschrieben. Der eine Protokolleintrag enthält Informationen über den Namen und Speicherort der vom Task ausgeführten ausführbaren Datei, im anderen Eintrag wird das Beenden der ausführbaren Datei erfasst.|  
 |`ExecuteProcessVariableRouting`|Enthält Informationen darüber, welche Variablen an die Eingabe und an die Ausgaben der ausführbaren Datei geleitet werden. Es werden Protokolleinträge für stdin (für die Eingabe), für stdout (für die Ausgabe) und für stderr (für die Fehlerausgabe) geschrieben.|  
   
-###  <a name="ExecuteSQL"></a> SQL ausführen (Task)  
+###  <a name="ExecuteSQL"></a>SQL ausführen (Task)  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task <legacyBold>SQL ausführen</legacyBold> beschrieben.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|  
   
-###  <a name="FileSystem"></a> Task Dateisystem  
+###  <a name="FileSystem"></a>Task "Datei System"  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task "Dateisystem" beschrieben.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`FileSystemOperation`|Berichtet den vom Task durchgeführten Vorgang. Der Protokolleintrag wird geschrieben, wenn der Dateisystemvorgang begonnen wird, und schließt Informationen über die Quelle und das Ziel ein.|  
   
-###  <a name="FTP"></a> FTP-Task  
+###  <a name="FTP"></a>FTP-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den FTP-Task aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|Zeigt an, dass mit dem Task eine Verbindung zum FTP-Server initiiert wurde.|  
 |`FTPOperation`|Berichtet den Beginn und Typ des vom Task ausgeführten FTP-Vorgangs.|  
   
-###  <a name="MessageQueue"></a> Nachrichtenwarteschlange (Task)  
+###  <a name="MessageQueue"></a>Message Queue-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|Zeigt an, dass das Öffnen der Warteschlange beendet wurde.|  
 |`MSMQBeforeOpen`|Zeigt an, dass das Öffnen der Warteschlange begonnen wurde.|  
@@ -163,103 +164,103 @@ ms.locfileid: "67316664"
 |`MSMQTaskInfo`|Enthält beschreibende Informationen zum Task.|  
 |`MSMQTaskTimeOut`|Zeigt an, dass beim Task ein Timeout eingetreten ist.|  
   
-###  <a name="Script"></a> Skripttask  
+###  <a name="Script"></a>Skript Task  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Skripttask beschrieben.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Für jeden Aufruf der `Log`-Methode des `Dts`-Objekts wird jeweils ein Protokolleintrag geschrieben. Der Eintrag wird beim Ausführen des Codes geschrieben. Weitere Informationen finden Sie unter [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
-###  <a name="SendMail"></a> Mail senden (Task)  
+###  <a name="SendMail"></a>Task ' Mail senden '  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task 'Mail senden' aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|Zeigt an, dass das Senden einer E-Mail-Nachricht begonnen wurde.|  
 |`SendMailTaskEnd`|Zeigt an, dass das Senden einer E-Mail-Nachricht beendet wurde.|  
 |`SendMailTaskInfo`|Enthält beschreibende Informationen zum Task.|  
   
-###  <a name="TransferDatabase"></a> Datenbanken übertragen (Task)  
+###  <a name="TransferDatabase"></a>Daten Bank Task übertragen  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Datenbanken übertragen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`SourceDB`|Gibt die vom Task kopierte Datenbank an.|  
 |`SourceSQLServer`|Gibt den Computer an, von dem die Datenbank kopiert wurde.|  
   
-###  <a name="TransferErrorMessages"></a> Fehlermeldungen übertragen (Task)  
+###  <a name="TransferErrorMessages"></a>Task "Fehlermeldungen übertragen"  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Fehlermeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von Fehlermeldungen beendet wurde.|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von Fehlermeldungen gestartet wurde.|  
   
-###  <a name="TransferJobs"></a> Aufträge übertragen (Task)  
+###  <a name="TransferJobs"></a>Task Aufträge übertragen  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Aufträge übertragen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`TransferJobsTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Aufträgen beendet wurde.|  
 |`TransferJobsTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Aufträgen gestartet wurde.|  
   
-###  <a name="TransferLogins"></a> Task "Anmeldungen übertragen"  
+###  <a name="TransferLogins"></a>Task "Anmeldungen übertragen"  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Anmeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`TransferLoginsTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von Anmeldungen beendet wurde.|  
 |`TransferLoginsTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von Anmeldungen gestartet wurde.|  
   
-###  <a name="TransferMasterStoredProcedures"></a> In master gespeicherte Prozeduren übertragen (Task)  
+###  <a name="TransferMasterStoredProcedures"></a>Task ' Master ' gespeicherte Prozeduren  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task In master gespeicherte Prozeduren übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`TransferStoredProceduresTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, beendet wurde.|  
-|`TransferStoredProceduresTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, gestartet wurde.|  
+|`TransferStoredProceduresTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master**-Datenbank gespeichert sind, beendet wurde.|  
+|`TransferStoredProceduresTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master**-Datenbank gespeichert sind, gestartet wurde.|  
   
-###  <a name="TransferSQLServerObjects"></a> SQL Server-Objekte kopieren (Task)  
+###  <a name="TransferSQLServerObjects"></a>SQL Server Objekte übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte kopieren aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbankobjekten beendet wurde.|  
 |`TransferSqlServerObjectsTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbankobjekten gestartet wurde.|  
   
-###  <a name="WebServices"></a> Webdienste (Task)  
+###  <a name="WebServices"></a>Webdienst (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge aufgelistet, die für den Task Webdienste aktiviert werden können.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`WSTaskBegin`|Der Zugriff auf einen Webdienst wurde begonnen.|  
 |`WSTaskEnd`|Eine Webdienstmethode wurde beendet.|  
 |`WSTaskInfo`|Beschreibende Informationen zum Task.|  
   
-###  <a name="WMIDataReader"></a> WMI-Datenleser (Task)  
+###  <a name="WMIDataReader"></a>WMI-Daten Leser (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Datenleser aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|Zeigt an, dass das Lesen der WMI-Daten begonnen wurde.|  
 |`WMIDataReaderOperation`|Berichtet die vom Task ausgeführte WQL-Abfrage.|  
   
-###  <a name="WMIEventWatcher"></a> WMI-Ereignisüberwachung (Task)  
+###  <a name="WMIEventWatcher"></a>Task "WMI-Ereignisüberwachung"  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Ereignisüberwachung aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|Zeigt an, dass das vom Task überwachte Ereignis aufgetreten ist.|  
 |`WMIEventWatcherTimedout`|Zeigt an, dass beim Task ein Timeout eingetreten ist.|  
 |`WMIEventWatcherWatchingForWMIEvents`|Zeigt an, dass die Ausführung der WQL-Abfrage begonnen wurde. Der Eintrag schließt die Abfrage ein.|  
   
-###  <a name="XML"></a> XML-Task  
+###  <a name="XML"></a>XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`XMLOperation`|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
