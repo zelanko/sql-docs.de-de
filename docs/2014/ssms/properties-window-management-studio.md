@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823787"
 ---
 # <a name="properties-window-management-studio"></a>Eigenschaftenfenster (Management Studio)
@@ -27,9 +27,9 @@ ms.locfileid: "62823787"
   
  Im Eigenschaftenfenster werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
-|Element|Description|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Objektname**|Führt das aktuell ausgewählte Objekt bzw. die aktuell ausgewählten Objekte auf. Es werden nur die Objekte aus dem aktiven Editor oder Designer angezeigt.|  
 |**Nach Kategorien**|Führt alle Eigenschaften und Eigenschaftswerte für das ausgewählte Objekt nach Kategorie auf. Sie können eine Kategorie reduzieren, um die Anzahl der angezeigten Eigenschaften zu verringern. Wenn Sie eine Kategorie reduzieren oder erweitern, wird ein Pluszeichen (+) bzw. ein Minuszeichen (-) auf der linken Seite des Kategorienamens angezeigt. Kategorien sind in alphabetischer Reihenfolge aufgelistet.|  
@@ -37,7 +37,7 @@ ms.locfileid: "62823787"
 |**Eigenschaften**|Zeigt die Eigenschaften für ein Objekt an.|  
 |**Beschreibungsbereich**|Der Beschreibungsbereich befindet sich unten im Eigenschaftenfenster und zeigt den Eigenschaftentyp und eine kurze Beschreibung der Eigenschaft an. Sie können die Beschreibung der Eigenschaft ein- und ausschalten, indem Sie den Befehl **Beschreibung** im Kontextmenü verwenden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Allgemeine Benutzeroberflächenelemente](general-user-interface-elements.md)  
   
   

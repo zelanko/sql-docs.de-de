@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cb602bf26b20ea916a46655cf813f4c1a6ab4f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950739"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
@@ -31,34 +31,34 @@ ms.locfileid: "67950739"
 
   Gibt eine Zeile für jeden Aliasdatentyp zurück, auf den der aktuelle Benutzer in der aktuellen Datenbank zugreifen kann.  
   
- Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA.** _View_name_.  
+ Zum Abrufen von Informationen aus diesen Sichten geben Sie den voll qualifizierten Namen **INFORMATION_SCHEMA an.** _view_name_.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**Nvarchar (** 128 **)**|Datenbank, in der der Aliasdatentyp vorhanden ist.|  
-|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das den Aliasdatentyp enthält.<br /><br /> **&#42;&#42;Wichtige &#42; &#42;**  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
+|**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Datenbank, in der der Aliasdatentyp vorhanden ist.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Der Name des Schemas, das den Alias Datentyp enthält.<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
 |**DOMAIN_NAME**|**sysname**|Aliasdatentyp.|  
 |**DATA_TYPE**|**sysname**|Vom System bereitgestellter Datentyp|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|Maximale Länge (in Zeichen) für binäre Daten, Zeichendaten, Text- und Tmage-Daten<br /><br /> -1 für **Xml** und große Werttypen. Andernfalls wird NULL zurückgegeben. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
-|**CHARACTER_OCTET_LENGTH**|**int**|Maximale Länge (in Bytes) für binäre Daten, Zeichendaten, Text- und Image-Daten.<br /><br /> -1 für **Xml** und große Werttypen. Andernfalls wird NULL zurückgegeben.|  
-|**COLLATION_CATALOG**|**Varchar (** 6 **)**|Gibt immer NULL zurück.|  
-|**COLLATION_SCHEMA**|**Varchar (** 3 **)**|Gibt immer NULL zurück.|  
-|**COLLATION_NAME**|**Nvarchar (** 128 **)**|Gibt den eindeutigen Namen für die Sortierreihenfolge zurück, wenn die Spalte Zeichendaten oder **Text** -Datentyp. Andernfalls wird NULL zurückgegeben.|  
-|**CHARACTER_SET_CATALOG**|**Varchar (** 6 **)**|Gibt **master**. Dies gibt an die Datenbank, in dem sich der Zeichensatz befindet, wenn die Spalte Zeichendaten oder **Text** -Datentyp. Andernfalls wird NULL zurückgegeben.|  
-|**CHARACTER_SET_SCHEMA**|**Varchar (** 3 **)**|Gibt immer NULL zurück.|  
-|**CHARACTER_SET_NAME**|**Nvarchar (** 128 **)**|Gibt den eindeutigen Namen für den Zeichensatz, falls diese Spalte Zeichendaten oder **Text** -Datentyp. Andernfalls wird NULL zurückgegeben.|  
-|**"NUMERIC_PRECISION"**|**tinyint**|Genauigkeit für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|Maximale Länge (in Zeichen) für binäre Daten, Zeichendaten, Text- und Tmage-Daten<br /><br /> -1 für **XML** -Daten und Daten mit umfangreichen Werten. Andernfalls wird NULL zurückgegeben. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Maximale Länge (in Bytes) für binäre Daten, Zeichendaten, Text- und Image-Daten.<br /><br /> -1 für **XML** -Daten und Daten mit umfangreichen Werten. Andernfalls wird NULL zurückgegeben.|  
+|**COLLATION_CATALOG**|**varchar (** 6 **)**|Gibt immer NULL zurück.|  
+|**COLLATION_SCHEMA**|**varchar (** 3 **)**|Gibt immer NULL zurück.|  
+|**COLLATION_NAME**|**nvarchar (** 128 **)**|Gibt den eindeutigen Namen für die Sortierreihenfolge zurück, wenn die Spalte Zeichendaten oder **Text** Datentyp ist. Andernfalls wird NULL zurückgegeben.|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Gibt **Master**zurück. Gibt die Datenbank an, in der sich der Zeichensatz befindet, wenn die Spalte Zeichendaten oder **Text** Datentyp ist. Andernfalls wird NULL zurückgegeben.|  
+|**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Gibt immer NULL zurück.|  
+|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Gibt den eindeutigen Namen für den Zeichensatz zurück, wenn diese Spalte Zeichendaten oder **Text** Datentyp ist. Andernfalls wird NULL zurückgegeben.|  
+|**NUMERIC_PRECISION**|**tinyint**|Genauigkeit für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Basis der Genauigkeit für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  
 |**NUMERIC_SCALE**|**tinyint**|Anzahl der Dezimalstellen für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  
-|**DATETIME_PRECISION**|**smallint**|Untertypcode für **"DateTime"** und ISO **Intervall** -Datentyp. Für andere Datentypen gibt diese Spalte einen NULL-Wert zurück.|  
-|**DOMAIN_DEFAULT**|**Nvarchar (** 4000 **)**|Tatsächlicher Text der Definition der [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
+|**DATETIME_PRECISION**|**smallint**|Der Untertyp Code für den **DateTime** -und den ISO- **Intervall** Datentyp. Für andere Datentypen gibt diese Spalte einen NULL-Wert zurück.|  
+|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Tatsächlicher Text der Definitions [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Systemsichten &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Informationsschemasichten &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [Sys.syscharsets &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Informations Schema Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys. syscharsets &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys. Konfigurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   

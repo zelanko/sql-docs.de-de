@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999564"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ausführen der Geschäftslogik während der Mergesynchronisierung
@@ -29,7 +29,7 @@ ms.locfileid: "62999564"
   
 -   In der API-Referenz (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   In den Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Verwendungsmöglichkeiten für Geschäftslogikhandler  
  Bei der Mergesynchronisierung können Geschäftslogikhandler für folgende Zwecke aufgerufen werden:  
@@ -59,7 +59,7 @@ ms.locfileid: "62999564"
      Das ist bei Anwendungen nützlich, die bestimmte Datenwerte oder Vorgänge überschreiben müssen. Eine Anwendung kann z. B. eine Zeilenlöschung in ein spezielles Update transformieren, das eine **status** -Spalte in der Zeile auf einen Wert "gelöscht" festlegt und dann die Identität des Clients ermittelt, der das Löschen ausgeführt hat. Das kann zum Überwachen und für Workflowzwecke nützlich sein.  
   
 ### <a name="custom-conflict-resolution"></a>Benutzerdefinierte Konfliktlösung  
- Die Mergereplikation stellt eine Konflikterkennung und -lösung bereit, mit deren Hilfe Sie eine Standardstrategie zur Konfliktlösung übernehmen oder eine benutzerdefinierte Lösung von Konflikten auswählen können. Weitere Informationen finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)angegeben wird. Der Geschäftslogikhandler kann bei der Verarbeitung von Datenänderungen aufgerufen werden, die Konflikte verursachen, und eine von zwei Aktionen ausführen:  
+ Die Mergereplikation stellt eine Konflikterkennung und -lösung bereit, mit deren Hilfe Sie eine Standardstrategie zur Konfliktlösung übernehmen oder eine benutzerdefinierte Lösung von Konflikten auswählen können. Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und-Lösung bei der Mergereplikation](advanced-merge-replication-conflict-detection-and-resolution.md). Der Geschäftslogikhandler kann bei der Verarbeitung von Datenänderungen aufgerufen werden, die Konflikte verursachen, und eine von zwei Aktionen ausführen:  
   
 -   Standardlösung übernehmen  
   
@@ -89,10 +89,10 @@ ms.locfileid: "62999564"
   
 -   Ein IIS-Server (Internetinformationsdienste), wenn die Websynchronisierung verwendet wird. Verwenden Sie ein mit der Websynchronisierung synchronisiertes Pullabonnement. Der Geschäftslogikhandler wird dann auf dem IIS-Server ausgeführt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Mergereplikation](merge-replication.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)   
  [Synchronisieren von Daten](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [Websynchronisierung für die Mergereplikation](../web-synchronization-for-merge-replication.md)  
   
   

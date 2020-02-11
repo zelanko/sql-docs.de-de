@@ -1,5 +1,5 @@
 ---
-title: Source-Control-Grundlagen | Microsoft-Dokumentation
+title: Grundlagen der Quell Code Verwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842985"
 ---
 # <a name="source-control-basics"></a>Grundlagen zur Quellcodeverwaltung
   Die Quellcodeverwaltung steht für ein System, in dem eine Serversoftware Dateiversionen speichert und nachverfolgt sowie den Zugriff auf Dateien steuert. Ein typisches Quellcodeverwaltungssystem enthält einen Quellcodeverwaltungsanbieter und zwei oder mehr Quellcodeverwaltungsclients.  
   
 ## <a name="source-control-benefits"></a>Vorteile der Quellcodeverwaltung  
- Platzieren die Dateien unter quellcodeverwaltung ermöglicht  
+ Durch das Platzieren der Dateien unter Quell Code Verwaltung ist es möglich,  
   
 -   Verwalten des Prozesses, durch den die Überwachung von Elementen von einer Person auf eine andere übertragen wird. Quellcodeverwaltungsanbieter unterstützen den gemeinsamen und den exklusiven Zugriff auf Dateien. Beim exklusiven Zugriff auf Projektdateien ermöglicht es der Quellcodeverwaltungsanbieter nur jeweils einem Benutzer, Dateien auszuchecken und zu ändern. Beim gemeinsamen Zugriff kann mehr als ein Benutzer die Skriptdatei auschecken, und der Quellcodeverwaltungsanbieter verfügt über einen Mechanismus zur Versionszusammenführung beim Einchecken.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62842985"
   
 |||  
 |-|-|  
-|**Task**|**Thema**|  
-|Festlegen von Optionen des Datenquellen-Steuerelement|[Festlegen von Quellcodeverwaltungsoptionen](../../2014/database-engine/set-source-control-options.md)|  
-|Ändern Sie die quellcodeverwaltung Verbindungen|[Ändern von Quellcodeverwaltungsverbindungen](../../2014/database-engine/change-source-control-connections.md)|  
-|Ausschließen von Dateien aus der quellcodeverwaltung|[Ausschließen von Dateien aus der Quellcodeverwaltung](../../2014/database-engine/exclude-files-from-source-control.md)|  
+|**Aufgabe**|**Thema**|  
+|Optionen für die Quell Code Verwaltung festlegen|[Festlegen von Quellcodeverwaltungsoptionen](../../2014/database-engine/set-source-control-options.md)|  
+|Ändern von Quell Code Verwaltungs Verbindungen|[Ändern von Quellcodeverwaltungsverbindungen](../../2014/database-engine/change-source-control-connections.md)|  
+|Ausschließen von Dateien aus der Quell Code Verwaltung|[Ausschließen von Dateien aus der Quellcodeverwaltung](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

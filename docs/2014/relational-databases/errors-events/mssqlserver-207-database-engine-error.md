@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915050"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>Details  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62915050"
   
     1.  FROM  
   
-    2.  ON  
+    2.  EIN  
   
     3.  JOIN  
   
@@ -115,9 +115,9 @@ ms.locfileid: "62915050"
     GROUP BY Year;  
     ```  
   
--   Die WHEN NOT MATCHED BY SOURCE-Klausel in der MERGE-Anweisung verweist auf einen Wert, auf den zugegriffen werden kann. Ändern Sie die MERGE-Anweisung so, dass die Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel mindestens eine Zeile zurückgibt. Möglicherweise müssen Sie z. B. die für die Klausel angegebene Suchbedingung hinzufügen oder überarbeiten. Wahlweise können Sie die Klausel so ändern, dass diese einen Wert angibt, der nicht auf die Quelltabelle verweist. Beispiel: `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+-   Die WHEN NOT MATCHED BY SOURCE-Klausel in der MERGE-Anweisung verweist auf einen Wert, auf den zugegriffen werden kann. Ändern Sie die MERGE-Anweisung so, dass die Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel mindestens eine Zeile zurückgibt. Möglicherweise müssen Sie z. B. die für die Klausel angegebene Suchbedingung hinzufügen oder überarbeiten. Wahlweise können Sie die Klausel so ändern, dass diese einen Wert angibt, der nicht auf die Quelltabelle verweist. Beispiel: `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   
  [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

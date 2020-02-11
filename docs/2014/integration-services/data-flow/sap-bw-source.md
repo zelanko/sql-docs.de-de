@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901068"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
-  Die SAP BW-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher extrahiert die SAP BW-Quelle Daten aus einem SAP NetWeaver BW-System, Version 7, und macht diese Daten im Datenfluss in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket verfügbar.  
+  Die SAP BW-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher extrahiert die SAP BW Quelle Daten aus einem SAP NetWeaver BW-System, Version 7, und macht diese Daten im Datenfluss in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paket verfügbar.  
   
  Diese Quelle weist eine Ausgabe und eine Fehlerausgabe auf.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62901068"
   
 -   Verwenden Sie die ausgewählten Optionen, um die zu extrahierenden Daten in der Vorschau anzuzeigen.  
   
- Sie können auch die Protokollierung von RFC-Funktionsaufrufen durch die Quelle aktivieren. (Diese Protokollierung wird separat von der optionalen Protokollierung ausgeführt, die Sie für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete aktivieren können.) Sie aktivieren die Protokollierung von RFC-Funktionsaufrufen bei der Konfiguration des SAP BW-Verbindungs-Managers, der von der Quelle verwendet wird. Weitere Informationen zur Konfiguration des SAP BW-Verbindungs-Managers finden Sie unter [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
+ Sie können auch die Protokollierung von RFC-Funktionsaufrufen durch die Quelle aktivieren. (Diese Protokollierung wird separat von der optionalen Protokollierung ausgeführt, die Sie für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete aktivieren können.) Sie aktivieren die Protokollierung von RFC-Funktionsaufrufen bei der Konfiguration des SAP BW-Verbindungs-Managers, der von der Quelle verwendet wird. Weitere Informationen zur Konfiguration des SAP BW-Verbindungs-Managers finden Sie unter [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62901068"
   
 -   [Vorschau](preview.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Komponenten von Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Komponenten von Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

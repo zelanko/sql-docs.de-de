@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827956"
 ---
 # <a name="create-infosource-for-master-data"></a>InfoSource für Masterdaten erstellen
@@ -37,7 +37,7 @@ ms.locfileid: "62827956"
   
 5.  Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Masterdaten**aus, und klicken Sie dann auf **OK**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **InfoObject-Name**  
  Geben Sie den Namen des InfoObject ein, auf dem die neue InfoSource basieren soll.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62827956"
   
  Nachdem Sie ein InfoObject erstellt haben, wird das Textfeld **InfoObject-Name** mit dem Namen des neuen InfoObject aufgefüllt.  
   
- **Kurze Beschreibung**  
+ **Kurzbeschreibung**  
  Geben Sie eine kurze Beschreibung für die neue InfoSource ein.  
   
  **Lange Beschreibung**  
@@ -60,7 +60,7 @@ ms.locfileid: "62827956"
  **Quellsystem**  
  Wählen Sie das Quellsystem aus, das der neuen InfoSource zugeordnet werden soll.  
   
- **Application**  
+ **Anwendung**  
  Geben Sie den Namen der Anwendung ein, die der neuen InfoSource zugeordnet werden soll.  
   
  **Attribute**  
@@ -72,8 +72,8 @@ ms.locfileid: "62827956"
  **Speichern und aktivieren**  
  Speichern und aktivieren Sie die neue InfoSource.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [InfoSource erstellen](create-infosource.md)   
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917664"
 ---
 # <a name="database-features"></a>Datenbankfunktionen
@@ -26,14 +26,14 @@ ms.locfileid: "62917664"
 |--|--|
 |[Datenbanken](databases/databases.md)|[Sichern und Wiederherstellen von SQL Server-Datenbanken](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
 |[Tabellen](tables/tables.md)|[Sequenznummern](sequence-numbers/sequence-numbers.md)|[Massenimport und -export von Daten &#40;SQL Server&#41;](import-export/bulk-import-and-export-of-data-sql-server.md)|  
-|[In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[DDL-Trigger](triggers/ddl-triggers.md)|[Data Compression](data-compression/data-compression.md) (Datenkomprimierung)|  
+|[In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[DDL-Trigger](triggers/ddl-triggers.md)|[Datenkomprimierung](data-compression/data-compression.md)|  
 |[Indizes](indexes/indexes.md)|[DML-Trigger](triggers/dml-triggers.md)|[OLE-Automatisierungsobjekte in Transact-SQL](stored-procedures/ole-automation-objects-in-transact-sql.md)|  
 |[Partitionierte Tabellen und Indizes](partitions/partitioned-tables-and-indexes.md)|[Synonyme &#40;Datenbank-Engine&#41;](synonyms/synonyms-database-engine.md)|[Ereignisbenachrichtigungen](service-broker/event-notifications.md)|  
-|[Sichten](views/views.md)|[XML-Daten &#40;SQL Server&#41;](xml/xml-data-sql-server.md)|[Überwachen und Optimieren der Leistung](performance/monitor-and-tune-for-performance.md)|  
+|[Ansichten](views/views.md)|[XML-Daten &#40;SQL Server&#41;](xml/xml-data-sql-server.md)|[Überwachen und Optimieren der Leistung](performance/monitor-and-tune-for-performance.md)|  
 |[Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](stored-procedures/stored-procedures-database-engine.md)|[Räumliche Daten &#40;SQL Server&#41;](spatial/spatial-data-sql-server.md)||  
-|[Suche &#40;SQLServer&#41;](../database-engine/search-sql-server.md)|[Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
+|[&#40;SQL Server suchen&#41;](../database-engine/search-sql-server.md)|[Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
 |[Benutzerdefinierte Funktionen](user-defined-functions/user-defined-functions.md)|[Datenebenenanwendungen](data-tier-applications/data-tier-applications.md)||  
 |[Statistik](statistics/statistics.md)|[Das Transaktionsprotokoll &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
-|[Planhinweislisten](performance/plan-guides.md)|[Datenbankprüfpunkte &#40;SQLServer&#41;](logs/database-checkpoints-sql-server.md)||  
+|[Planhinweislisten](performance/plan-guides.md)|[Datenbankprüfpunkte &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

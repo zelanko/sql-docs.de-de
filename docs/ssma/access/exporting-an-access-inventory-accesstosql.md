@@ -1,5 +1,5 @@
 ---
-title: Exportieren eines Access-Inventars (AccessToSQL) | Microsoft-Dokumentation
+title: Exportieren einer Zugriffs Inventur (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,143 +19,143 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006555"
 ---
-# <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren eines Access-Inventars (AccessToSQL)
-Wenn Sie mehrere Access-Datenbanken und nicht sicher, welche zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann überprüfen und Abfragen der Inventur-Metadaten, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Dieser Hardwareinventur können Sie schnell finden Sie Antworten auf Fragen, wie z. B. die folgenden:  
+# <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren einer Zugriffs Inventur (accesstosql)
+Wenn Sie über mehrere Access-Datenbanken verfügen und nicht sicher sind, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]welche migriert werden sollen, können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann die Inventar Metadaten überprüfen und Abfragen, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migriert werden sollen. Diese Inventur ermöglicht Ihnen das schnelle Auffinden von Antworten auf Fragen wie die folgenden:  
   
 -   Was sind die größten Datenbanken?  
   
 -   Wer besitzt die meisten Datenbanken?  
   
--   Welche Datenbanken die gleichen Tabellen enthalten?  
+-   Welche Datenbanken enthalten dieselben Tabellen?  
   
--   Welche Datenbanken in den letzten sechs Monaten nicht geändert wurden?  
+-   Welche Datenbanken wurden in den letzten sechs Monaten nicht geändert?  
   
--   Welche Datenbanken private Informationen enthalten?  
+-   Welche Datenbanken enthalten private Informationen?  
   
-Beispiele für die Abfrage, die verwendet werden, zum Beantworten dieser Fragen werden am Ende dieses Themas bereitgestellt.  
+Abfrage Beispiele, die zum Beantworten dieser Fragen verwendet werden, werden am Ende dieses Themas bereitgestellt.  
   
-## <a name="exported-metadata"></a>Exportierten Metadaten  
-SSMA exportiert Metadaten über die Access-Datenbanken, Tabellen, Spalten, Indizes, Fremdschlüssel, Abfragen, Berichte, Forms, Makros und Module. Metadaten zu jeder dieser Kategorien der Elemente wird in einer separaten Tabelle exportiert. Schemas für diese Tabellen finden Sie unter [Access Inventory Schemas](access-inventory-schemas-accesstosql.md).  
+## <a name="exported-metadata"></a>Exportierte Metadaten  
+SSMA exportiert Metadaten zu Zugriffs Datenbanken, Tabellen, Spalten, Indizes, Fremdschlüsseln, Abfragen, Berichten, Formularen, Makros und Modulen. Metadaten zu den einzelnen Kategorien von Elementen werden in eine separate Tabelle exportiert. Informationen zu Schemas für diese Tabellen finden Sie unter [zugreifen auf Inventar Schemas](access-inventory-schemas-accesstosql.md).  
   
-## <a name="exporting-inventory-data"></a>Exportieren von Daten der Softwareinventur  
-Zum Exportieren eines Access-Inventars müssen Sie zum ersten Mal öffnen oder erstellen Sie ein SSMA-Projekt, und klicken Sie dann hinzufügen die Access-Datenbank, die Sie analysieren möchten. Nachdem Sie Datenbanken zu einem SSMA-Projekt hinzugefügt haben, exportieren Sie Metadaten zu diesen Datenbanken mit einem angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank und Schema. Bei Bedarf erstellt SSMA Tabellen zum Speichern der Metadaten. SSMA fügt dann die Metadaten über die Access-Datenbanken die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  
+## <a name="exporting-inventory-data"></a>Exportieren von Inventur Daten  
+Zum Exportieren einer Zugriffs Inventur müssen Sie zunächst ein SSMA-Projekt öffnen oder erstellen und dann die Zugriffs Datenbank hinzufügen, die Sie analysieren möchten. Nachdem Sie einem SSMA-Projektdaten Banken hinzugefügt haben, exportieren Sie Metadaten zu diesen Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Banken in eine angegebene Datenbank und ein bestimmtes Schema. Ggf. erstellt SSMA Tabellen zum Speichern der Metadaten. SSMA fügt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank dann die Metadaten zu den Access-Datenbanken hinzu.  
   
 > [!NOTE]  
-> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: ein Back-End-Datenbank mit Tabellen und Front-End-Datenbanken, die Abfragen, Formulare, Berichte, Makros, Modulen und Verknüpfungen enthalten. Sollten Sie Teilen zum Migrieren einer Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA die Front-End-Datenbank hinzufügen.  
+> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: eine Back-End-Datenbank, die Tabellen und Front-End-Datenbanken enthält, die Abfragen, Formulare, Berichte, Makros, Module und Verknüpfungen enthalten. Wenn Sie eine Split-Datenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrieren möchten, fügen Sie SSMA die Front-End-Datenbank hinzu.  
   
-Die folgenden Anweisungen beschreiben, wie Sie ein Projekt erstellen, Hinzufügen von Datenbanken zum Projekt, Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und klicken Sie dann Inventardaten.  
+In den folgenden Anweisungen wird beschrieben, wie Sie ein Projekt erstellen, dem Projektdaten Banken hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fügen, eine Verbindung mit dem Projekt herstellen und anschließend Inventur Daten exportieren.  
   
-**Zum Erstellen eines Projekts**  
+**So erstellen Sie ein Projekt**  
   
-1.  Öffnen Sie SSMA für Access.  
+1.  Öffnen Sie SSMA für den Zugriff.  
   
 2.  Wählen Sie im Menü **Datei** die Option **Neues Projekt** aus.  
   
     Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  In der **Namen** Geben Sie einen Namen für Ihr Projekt.  
+3.  Geben Sie im Feld **Name** einen Namen für das Projekt ein.  
   
-4.  In der **Speicherort** Feld, geben Sie ein oder wählen Sie einen Ordner für das Projekt.  
+4.  Geben Sie im Feld **Speicherort** einen Ordner für das Projekt ein, oder wählen Sie einen Ordner aus.  
   
-5.  In der **Migrieren zu** Kombinationsfeld wählen die Zielversion, die auf die Sie migrieren möchten, und klicken Sie dann auf **OK**.  
+5.  Wählen Sie im Kombinations Feld **Migrieren zu** die Zielversion aus, zu der Sie migrieren möchten, und klicken Sie dann auf **OK**.  
   
-Weitere Informationen zum Erstellen von Projekten finden Sie unter [erstellen und Verwalten von Projekten](creating-and-managing-projects-accesstosql.md).  
+Weitere Informationen zum Erstellen von Projekten finden Sie unter [Erstellen und Verwalten von Projekten](creating-and-managing-projects-accesstosql.md).  
   
-**Suchen und Hinzufügen von Datenbanken**  
+**So suchen und fügen Sie Datenbanken hinzu**  
   
-1.  Auf der **Datei** Menü klicken Sie auf **Datenbanken suchen**.  
+1.  Klicken Sie im Menü **Datei** auf **Datenbanken suchen**.  
   
-2.  Geben Sie im Assistenten Datenbanken finden Sie das Laufwerk, Pfad der Datei oder den UNC-Pfad, den Sie suchen möchten. Klicken Sie alternativ auf **Durchsuchen** um den Ordner oder auf ein Netzwerk auszuwählen.  
+2.  Geben Sie im Assistenten zum Suchen von Datenbanken das Laufwerk, den Dateipfad oder den UNC-Pfad ein, der durchsucht werden soll. Sie können auch auf **Durchsuchen** klicken, um das Laufwerk oder den Netzwerkordner auszuwählen.  
   
-3.  Klicken Sie auf **hinzufügen** auf den Speicherort in das Listenfeld hinzufügen.  
+3.  Klicken Sie auf **Hinzufügen** , um den Speicherort zum Listenfeld hinzuzufügen.  
   
-    Wiederholen Sie die vorherigen beiden Schritte aus, um zusätzliche Suchbedingung Speicherorte hinzuzufügen.  
+    Wiederholen Sie die vorherigen beiden Schritte, um zusätzliche Such Speicherorte hinzuzufügen.  
   
-4.  Fügen Sie optional Suchkriterien, um die Liste der Datenbanken zu optimieren, die zurückgegeben werden.  
+4.  Fügen Sie optional Suchkriterien hinzu, um die Liste der zurückgegebenen Datenbanken zu verfeinern.  
   
     > [!IMPORTANT]  
-    > Die **alle oder einen Teil des Dateinamens** Textfeld unterstützt keine Platzhalterzeichen enthalten.  
+    > Der **ganz oder Teil des Textfelds "Dateiname** " unterstützt keine Platzhalter Zeichen.  
   
 5.  Klicken Sie auf **Scannen**.  
   
-    Die Seite "Überprüfung" wird angezeigt. Es werden die Datenbanken, die gefunden wurden und den Suchstatus meldet. Um die Suche zu beenden, klicken Sie auf **beenden**.  
+    Die Seite Scannen wird angezeigt. Dadurch werden die Datenbanken, die gefunden wurden, und der Such Fortschritt angezeigt. Zum Abbrechen der Suche klicken Sie auf " **Abbrechen**".  
   
-6.  Wählen Sie auf der Seite für Dateien auswählen die jede Datenbank, die Sie dem Projekt hinzufügen möchten.  
+6.  Wählen Sie auf der Seite Dateien auswählen die einzelnen Datenbanken aus, die Sie dem Projekt hinzufügen möchten.  
   
-    Können Sie die **Alles markieren** und **deaktivieren Sie alle** Schaltflächen am oberen Rand der Liste aktivieren oder deaktivieren Sie alle Datenbanken. Sie können auch die STRG-Taste gedrückt, um mehrere Zeilen auswählen, oder halten Sie die UMSCHALTTASTE gedrückt, wählen Sie einen Bereich von Zeilen.  
+    Sie können die Schaltflächen **Alle auswählen** und **Alle löschen** am Anfang der Liste verwenden, um alle Datenbanken auszuwählen oder zu löschen. Sie können auch die STRG-Taste gedrückt halten, um mehrere Zeilen auszuwählen, oder die UMSCHALTTASTE gedrückt halten, um einen Zeilen Bereich auszuwählen.  
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite "Überprüfen" auf **Fertig stellen**.  
+8.  Klicken Sie auf der Seite überprüfen auf **Fertig**stellen.  
   
-Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md).  
+Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie unter [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md).  
   
-**Verbindung mit SQL Server**  
+**So stellen Sie eine Verbindung mit SQL Server her**  
   
-1.  Auf der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit SQL Server**.  
+1.  Wählen Sie im Menü **Datei** die Option **mit SQL Server verbinden**aus.  
   
-2.  Klicken Sie im Dialogfeld "Verbindung" eingeben, oder wählen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Geben Sie im Dialogfeld Verbindung den Namen der Instanz von ein, oder wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sie ihn aus.  
   
-    -   Wenn Sie mit der Standardinstanz auf dem lokalen Computer herstellen, geben Sie **"localhost"** oder einen Punkt ( **.** ).  
+    -   Wenn Sie eine Verbindung mit der Standard Instanz auf dem lokalen Computer herstellen, können Sie **localhost** oder einen Punkt (**.**) eingeben.  
   
-    -   Wenn Sie mit der Standardinstanz auf einem anderen Computer herstellen, geben Sie den Namen des Computers ein.  
+    -   Wenn Sie eine Verbindung mit der Standard Instanz auf einem anderen Computer herstellen, geben Sie den Namen des Computers ein.  
   
-    -   Wenn Sie die zu einer benannten Instanz herstellen, geben Sie den Namen des Computers, einen umgekehrten Schrägstrich und den Namen der Instanz. Zum Beispiel: MyServer\MyInstance.  
+    -   Wenn Sie eine Verbindung mit einer benannten Instanz herstellen, geben Sie den Computernamen, einen umgekehrten Schrägstrich und den Instanznamen ein. Beispiel: MyServer\MyInstance.  
   
-3.  In der **Datenbank** Geben Sie den Namen der Zieldatenbank für die exportierten Metadaten.  
+3.  Geben Sie im Feld **Datenbank** den Namen der Zieldatenbank für exportierte Metadaten ein.  
   
-4.  Wenn Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert ist annehmen von Verbindungen über einen nicht-Standardport, geben die Portnummer für die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungen in der **Serverport** Feld. Für die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Standardportnummer ist 1433. Für benannte Instanzen SSMA versucht, erhalten die Portnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst.  
+4.  Wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Annahme von Verbindungen an einem nicht standardmäßigen Port konfiguriert ist, geben Sie die Portnummer ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die im Feld **Serverport** für Verbindungen verwendet wird. Die Standard Portnummer für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Standard Instanz von ist 1433. Bei benannten Instanzen wird von SSMA versucht, die Portnummer vom- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Dienst abzurufen.  
   
-5.  In der **Authentifizierung** Dropdown-Menü Wählen Sie im Menü, Authentifizierungstyp, der für die Verbindung verwendet. Um das aktuelle Windows-Konto verwenden möchten, wählen **Windows-Authentifizierung**. Verwenden einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung wählen **SQL Server-Authentifizierung**, und geben Sie einen Benutzernamen und Kennwort.  
+5.  Wählen Sie im Dropdown Menü **Authentifizierung** den Authentifizierungstyp aus, der für die Verbindung verwendet werden soll. Um das aktuelle Windows-Konto zu verwenden, wählen Sie **Windows-Authentifizierung**aus. Wählen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Server Authentifizierung**aus, und geben Sie einen Benutzernamen und ein Kennwort ein, um einen Anmelde Namen zu verwenden.  
   
-Weitere Informationen zum Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+Weitere Informationen zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;accesstosql&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
-**So exportieren Sie die Inventarinformationen**  
+**So exportieren Sie Inventur Informationen**  
   
-1.  Erweitern Sie im Metadaten-Explorer für den Zugriff, **Access-Metabase**.  
+1.  Erweitern Sie in Access Metadata Explorer den Eintrag **Access-Metabase**.  
   
 2.  Aktivieren Sie das Kontrollkästchen neben **Datenbanken**.  
   
-    Um einzelne Datenbanken oder Datenbankobjekte zu unterdrücken, erweitern Sie die **Datenbanken** Ordner, und klicken Sie dann löschen Sie das Kontrollkästchen neben der Datenbank oder ein Datenbankobjekt.  
+    Wenn Sie einzelne Datenbanken oder Datenbankobjekte weglassen möchten, erweitern Sie den Ordner **Datenbanken** , und deaktivieren Sie dann das Kontrollkästchen neben der Datenbank oder dem Datenbankobjekt.  
   
-3.  Mit der rechten Maustaste **Datenbanken** , und wählen Sie **Schema exportieren**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Schema**  
   
-4.  In der **Schema auswählen, für den Export** Dialogfeld Wählen Sie das Zielschema für die exportierten Metadaten, und klicken Sie dann auf **OK**.  
+4.  Wählen Sie im Dialogfeld **Schema für Export auswählen** das Ziel Schema für die exportierten Metadaten aus, und klicken Sie dann auf **OK**.  
   
-Jedes Mal, die Sie exportieren Sie Metadaten, die Daten mit dem Bestand SSMA angefügt. Vorhandene Daten bei der Inventur nicht aktualisiert oder gelöscht.  
+Jedes Mal, wenn Sie Metadaten exportieren, fügt SSMA die Daten an den Bestand an. Vorhandene Daten im Inventar werden nicht aktualisiert oder gelöscht.  
   
 ## <a name="querying-the-exported-metadata"></a>Abfragen der exportierten Metadaten  
-Nachdem Sie Metadaten für den Zugriff auf Datenbanken exportiert haben, können Sie die Metadaten Abfragen. Die folgenden Anweisungen beschreiben das Abfrage-Editor-Fenster in Verwendung [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Ausführen von Abfragen.  
+Nachdem Sie Metadaten zu Access-Datenbanken exportiert haben, können Sie die Metadaten Abfragen. In den folgenden Anweisungen wird beschrieben, wie das Abfrage- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor-Fenster in verwendet wird, um Abfragen auszuführen.  
   
-**Zum Abfragen von Metadaten**  
+**So Fragen Sie Metadaten ab**  
   
-1.  Von der **starten** Startmenü **Programme**, zeigen Sie auf **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** oder **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008**oder **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**, und klicken Sie dann auf **SQL Server Management Studio**.  
+1.  Zeigen Sie im **Startmenü** auf **Alle Programme**, zeigen Sie auf **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** oder **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** oder auf **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**, und klicken Sie dann auf **SQL Server Management Studio**.  
   
-2.  In der **Herstellen einer Verbindung mit Server** (Dialogfeld), überprüfen Sie die Einstellungen, und klicken Sie dann auf **Connect**.  
+2.  Überprüfen Sie im Dialogfeld **Verbindung mit Server herstellen** die Einstellungen, und klicken Sie dann auf **verbinden**.  
   
-3.  Klicken Sie auf der Symbolleiste von Management Studio auf **neue Abfrage** Abfrage-Editor geöffnet.  
+3.  Klicken Sie auf der Management Studio Symbolleiste auf **neue Abfrage** , um den Abfrage-Editor zu öffnen.  
   
-4.  Geben Sie im Fenster Abfrage-Editor eine Abfrage aus. Einige Beispiele sind im folgenden Abschnitt gezeigt.  
+4.  Geben Sie im Abfrage-Editor-Fenster eine Abfrage ein. Einige Beispiele werden im folgenden Abschnitt gezeigt.  
   
-5.  Drücken Sie F5, um die Abfrage auszuführen.  
+5.  Drücken Sie die Taste F5, um die Abfrage auszuführen.  
   
-## <a name="query-examples"></a>Abfragebeispiele  
-Bevor Sie einen der folgenden Abfragen ausführen, führen Sie eine Verwendung *Database_name* Abfrage, um sicherzustellen, dass die Abfragen ausgeführt werden, für die Datenbank, die die exportierte Metadaten enthält. Sie z. B., wenn Sie Metadaten in einer Datenbank mit dem Namen MyAccessMetadata exportiert haben, würden hinzufügen Folgendes am Anfang der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code:  
+## <a name="query-examples"></a>Abfrage Beispiele  
+Bevor Sie eine der folgenden Abfragen ausführen, sollten Sie eine use *database_name* -Abfrage ausführen, um sicherzustellen, dass die Abfragen für die Datenbank ausgeführt werden, die die exportierten Metadaten enthält. Wenn Sie z. b. Metadaten in eine Datenbank mit dem Namen myaccessmetadata exportiert haben, würden Sie am Anfang des [!INCLUDE[tsql](../../includes/tsql-md.md)] Codes Folgendes hinzufügen:  
   
 ```  
 USE MyAccessMetadata;  
 GO  
 ```  
-Verwenden Sie die folgenden Beispielen die **Dbo** Schema. Wenn Sie die Metadaten in ein anderes Schema exportiert haben, stellen Sie sicher, dass das Schema ändern, wenn Sie diese Abfragen ausführen.  
+In den folgenden Beispielen wird das **dbo** -Schema verwendet. Wenn Sie die Metadaten in ein anderes Schema exportiert haben, stellen Sie sicher, dass Sie das Schema beim Ausführen dieser Abfragen ändern.  
   
-### <a name="what-tables-and-columns-are-in-these-databases"></a>Welche Tabellen und Spalten sind in diesen Datenbanken?  
-Die folgende Abfrage verknüpft die Tabellen, die Spalte, Tabellen- und Datenbank-Metadaten enthalten, und klicken Sie dann die Namen aller Datenbanken, Tabellen und Spalten, sortiert nach Spaltennamen zurückgegeben:  
+### <a name="what-tables-and-columns-are-in-these-databases"></a>Welche Tabellen und Spalten befinden sich in diesen Datenbanken?  
+Die folgende Abfrage verbindet die Tabellen, die Spalten-, Tabellen-und Daten Bank Metadaten enthalten, und gibt dann die Namen aller Datenbanken, Tabellen und Spalten zurück, sortiert nach Spaltenname:  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -168,7 +168,7 @@ ORDER BY ColumnName;
 ```  
   
 ### <a name="what-are-the-largest-databases"></a>Was sind die größten Datenbanken?  
-Die folgende Abfrage gibt den Datenbanknamen, Größe und Anzahl von Tabellen in jeder Access-Datenbank, sortiert nach Dateigröße:  
+Die folgende Abfrage gibt den Datenbanknamen, die Dateigröße und die Anzahl der Tabellen in jeder Access-Datenbank nach Dateigröße sortiert zurück:  
   
 ```  
 SELECT DatabaseName, FileSize, TablesCount  
@@ -177,7 +177,7 @@ ORDER BY FileSize DESC;
 ```  
   
 ### <a name="who-is-the-owner-of-most-of-the-databases"></a>Wer ist der Besitzer der meisten Datenbanken?  
-Die folgende Abfrage gibt den Datenbanknamen und den Besitzer der einzelnen Access-Datenbanken, die nach Besitzer sortiert.  
+Die folgende Abfrage gibt den Datenbanknamen und den Besitzer der einzelnen Zugriffs Datenbanken nach Besitzer sortiert zurück.  
   
 ```  
 SELECT DatabaseName, FileOwner  
@@ -185,8 +185,8 @@ FROM dbo.SSMA_Access_InventoryDatabases
 ORDER BY FileOwner;  
 ```  
   
-### <a name="which-databases-contain-the-same-tables"></a>Welche Datenbanken die gleichen Tabellen enthalten?  
-Die folgende Abfrage wird eine Unterabfrage verwendet, um alle Tabellennamen zu finden, die mehr als einmal in der Liste der Tabellen angezeigt werden, und verwendet dann diese Liste von Tabellen, um den Datenbanknamen abzurufen. Die Ergebnisse werden als Name der Datenbank, und klicken Sie dann den Namen der Tabelle zurückgegeben, und anhand des Tabellennamens sortiert werden.  
+### <a name="which-databases-contain-the-same-tables"></a>Welche Datenbanken enthalten dieselben Tabellen?  
+In der folgenden Abfrage wird eine Unterabfrage verwendet, um alle Tabellennamen zu suchen, die mehr als einmal in der Liste der Tabellen angezeigt werden. Anschließend wird diese Liste von Tabellen zum Abrufen des Daten Banknamens verwendet. Die Ergebnisse werden als Datenbankname und dann als Tabellenname zurückgegeben und nach Tabellenname sortiert.  
   
 ```  
 SELECT DatabaseName, TableName   
@@ -202,8 +202,8 @@ HAVING count(*)>1
 ORDER BY TableName;  
 ```  
   
-### <a name="which-databases-were-not-modified-in-the-last-six-months"></a>Welche Datenbanken in den letzten sechs Monaten nicht geändert wurden?  
-Die folgende Abfrage ruft das aktuelle Datum ab, ruft den Monatswert für sechs Monate später wurde und dann eine Liste von Datenbanken mit einem Datum der Änderung von mehr als sechs Monate später wurde zurückgegeben.  
+### <a name="which-databases-were-not-modified-in-the-last-six-months"></a>Welche Datenbanken wurden in den letzten sechs Monaten nicht geändert?  
+Die folgende Abfrage ruft das aktuelle Datum ab, Ruft den Monatswert für sechs Monate ab und gibt dann eine Liste mit Datenbanken zurück, deren Änderungsdatum vor mehr als sechs Monaten liegt.  
   
 ```  
 SELECT DatabaseName, DateModified  
@@ -212,8 +212,8 @@ WHERE DATEDIFF(month, DateModified, GETDATE()) > 6
 ORDER BY DateModified;  
 ```  
   
-### <a name="which-databases-contain-private-information"></a>Welche Datenbanken private Informationen enthalten?  
-Die Access-Datenbanken möglicherweise vertrauliche oder persönliche Informationen enthalten. Möglicherweise möchten Sie dieser Datenbanken zu verschieben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nutzen der Sicherheitsfunktionen zu nutzen. Wenn Sie wissen, dass Spalten mit sensiblen Daten einen bestimmten Namen haben, oder bestimmte Zeichen enthalten, können Sie eine Abfrage, um alle Spalten zu suchen, die diese Informationen enthalten. Beispielsweise finden Sie alle Spalten, die die Zeichenfolge "Salary".  Die Abfrage gibt dann zurück, der Datenbankname, Tabellenname und Spaltenname.  
+### <a name="which-databases-contain-private-information"></a>Welche Datenbanken enthalten private Informationen?  
+Ihre Access-Datenbanken können vertrauliche oder persönliche Informationen enthalten. Möglicherweise möchten Sie diese Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschieben, um von den Sicherheitsfeatures zu profitieren. Wenn Sie wissen, dass Spalten, die sensible Daten enthalten, einen bestimmten Namen aufweisen oder bestimmte Zeichen enthalten, können Sie eine Abfrage verwenden, um alle Spalten zu suchen, die diese Informationen enthalten. Beispielsweise können Sie alle Spalten suchen, die die Zeichenfolge "Gehalt" enthalten.  Die Abfrage gibt dann den Datenbanknamen, den Tabellennamen und den Spaltennamen zurück.  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -224,8 +224,8 @@ JOIN dbo.SSMA_Access_InventoryDatabases D
 ON T.DatabaseId = D. DatabaseId  
 WHERE ColumnName LIKE '%salary%';  
 ```  
-Wenn Sie den Namen der Spalte nicht kennen, können Sie eine Abfrage zum Zurückgeben aller Spalten schreiben. Entfernen Sie zu diesem Zweck die WHERE-Klausel aus der vorherigen Abfrage.  
+Wenn Sie den Spaltennamen nicht kennen, können Sie eine Abfrage schreiben, um alle Spalten zurückzugeben. Entfernen Sie zu diesem Zweck die WHERE-Klausel aus der vorherigen Abfrage.  
   
-## <a name="see-also"></a>Siehe auch  
-[Access-Datenbanken vorbereitet für die Migration.](preparing-access-databases-for-migration-accesstosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorbereiten einer Access-Datenbank für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
   

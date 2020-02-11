@@ -16,10 +16,10 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985994"
 ---
 # <a name="aggregate-functions---avg"></a>Aggregatfunktionen – avg
@@ -38,37 +38,37 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Die Sequenz der atomaren Werte, deren Mittelwert berechnet wird.  
   
-## <a name="remarks"></a>Hinweise  
- Alle Typen der atomaren Werte, die übergeben werden **avg()** ein Untertyp genau eines der drei integrierten numerischen Basistypen oder xdt: UntypedAtomic sein. Es darf keine Mischung vorliegen. Werte des Typs xdt:untypedAtomic werden wie xs:double behandelt. Das Ergebnis des **avg()** erhält den Basistyp der übergebenen Typen, z. B. xs: Double im Fall von xdt: UntypedAtomic.  
+## <a name="remarks"></a>Bemerkungen  
+ Alle Typen der atomisierten Werte, die an **AVG ()** übergeben werden, müssen ein Untertyp von genau einem der drei integrierten numerischen Basis Typen oder xdt: untypedAtomic sein. Es darf keine Mischung vorliegen. Werte des Typs xdt:untypedAtomic werden wie xs:double behandelt. Das Ergebnis von **AVG ()** empfängt den Basistyp der bestandenen Typen, z. b. xs: Double im Fall von xdt: untypedAtomic.  
   
- Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler ausgelöst wird.  
+ Wenn die Eingabe statisch leer ist, wird Empty impliziert und ein statischer Fehler ausgelöst.  
   
- Die **avg()** Funktion gibt den Mittelwert der berechneten Zahlen zurück. Zum Beispiel:  
+ Die **AVG ()** -Funktion gibt den Durchschnitt der berechneten Zahlen zurück. Beispiel:  
   
- **SUM (** *$arg* **) Div-Anzahl (** *$arg* **)**  
+ **Summe (** *$arg* **) div count (** *$arg* **)**  
   
- Wenn *$arg* ist eine leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
+ Wenn *$arg* eine leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
   
- Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz, ignoriert *$arg*.  
+ Wenn ein xdt: untypedAtomic-Wert nicht in xs: Double umgewandelt werden kann, wird der Wert in der Eingabe Sequenz ignoriert, *$arg*.  
   
  In allen anderen Fällen gibt die Funktion einen statischen Fehler zurück.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Verwenden der XQuery-Funktion avg() zum Suchen nach Arbeitsplatzstandorten im Fertigungsprozess, an denen die Anzahl der Arbeitsstunden größer als der Mittelwert für alle Arbeitsplatzstandorte ist.  
- Sie können die Abfrage, die im bereitgestellten umschreiben [min-Funktion (XQuery)](../xquery/aggregate-functions-min.md) verwenden die **avg()** Funktion.  
+ Sie können die in der Min- [Funktion (XQuery)](../xquery/aggregate-functions-min.md) bereitgestellte Abfrage so umschreiben, dass die **AVG ()** -Funktion verwendet wird.  
   
 ## <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   Die **avg()** -Funktion ordnet alle ganzzahligen Werte xs: Decimal.  
+-   Die **AVG ()** -Funktion ordnet alle ganzzahligen Werte xs: Decimal zu.  
   
--   Die **avg()** -Funktion für Werte des Typs xs: Duration nicht unterstützt.  
+-   Die **AVG ()** -Funktion wird für Werte des Typs xs: Duration nicht unterstützt.  
   
 -   Sequenzen, die Typen über Basistypbegrenzungen hinweg mischen, werden nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -16,41 +16,41 @@ ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6072a6e317ab87118376b08790fc0fb49c495e3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952518"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Fehlermeldungen (Visual FoxPro-ODBC-Treiber)
-Wenn ein Fehler auftritt, wird von der Visual FoxPro-Treiber die folgenden Informationen zurückgegeben:  
+Wenn ein Fehler auftritt, gibt der Visual FoxPro-Treiber die folgenden Informationen zurück:  
   
--   Die systemeigene Fehlernummer und der Text der Fehlermeldung  
+-   Die systemeigene Fehlernummer und der Fehlermeldungs Text.  
   
--   SQLSTATE (ODBC-Fehlercode) und Text der Fehlermeldung  
+-   SQLSTATE (ein ODBC-Fehlercode) und Fehlermeldungs Text  
   
- Sie können diese Fehlerinformationen an, durch den Aufruf [SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md).  
+ Wenn Sie [SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)aufrufen, greifen Sie auf diese Fehlerinformationen zu.  
   
-## <a name="native-errors"></a>Systemeigene Fehler  
- Für Fehler, die in der Datenquelle auftreten, gibt der Visual FoxPro-Treiber zurück, die systemeigene Fehlernummer und Fehlermeldung angezeigt. Eine Liste mit systemeigenen Fehlernummern finden Sie [Visual FoxPro-ODBC-Treiber Native Fehlermeldungen](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md).  
+## <a name="native-errors"></a>Native Fehler  
+ Bei Fehlern, die in der Datenquelle auftreten, gibt der Visual FoxPro-Treiber die systemeigene Fehlernummer und den Fehlermeldungs Text zurück. Eine Liste der systemeigenen Fehlernummern finden Sie unter [native Fehlermeldungen des Visual FoxPro-ODBC-Treibers](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md).  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC-Fehlercodes)  
- Für Fehler, die erkannt und zurückgegeben, die von der Visual FoxPro-Treiber ordnet der Treiber die zurückgegebene systemeigene Fehlernummer dem entsprechenden SQLSTATE zu. Wenn eine systemeigene Fehlernummer keine ODBC-Fehlercode zuordnen, gibt der Visual FoxPro-Treiber SQLSTATE S1000 (Allgemeine Fehler).  
+ Bei Fehlern, die vom Visual FoxPro-Treiber erkannt und zurückgegeben werden, ordnet der Treiber die zurückgegebene systemeigene Fehlernummer dem entsprechenden SQLSTATE zu. Wenn eine systemeigene Fehlernummer keinen ODBC-Fehlercode aufweist, der zugeordnet werden kann, gibt der Visual FoxPro-Treiber SQLSTATE S1000 (allgemeiner Fehler) zurück.  
   
- Eine Liste der SQLSTATE-Werten, die von der Visual FoxPro-ODBC-Treiber für die entsprechende Visual FoxPro-Fehler generiert, finden Sie unter [ODBC-Fehlercodes](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).  
+ Eine Liste der SQLSTATE-Werte, die vom Visual FoxPro-ODBC-Treiber für entsprechende Visual FoxPro-Fehler generiert werden, finden Sie unter [ODBC-Fehler Codes](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).  
   
 ## <a name="syntax"></a>Syntax  
- Fehlermeldungen weisen folgendes Format:  
+ Fehlermeldungen weisen das folgende Format auf:  
   
- **[** *vendor* **][** *ODBC_component* **]** *error_message*  
+ **[** *Hersteller* **] [** *ODBC_component* **]** *ERROR_MESSAGE*  
   
- Die Präfixe in eckige Klammern ([]) ermitteln die Ursache des Fehlers, wie in der folgenden Tabelle definiert.  
+ Die Präfixe in eckigen Klammern ([]) identifizieren die Fehlerquelle, wie in der folgenden Tabelle definiert.  
   
-|Datenquelle|Präfix|Wert|  
+|Datenquelle|Präfix|value|  
 |-----------------|------------|-----------|  
-|Treiber-Manager|[Hersteller]<br />[ODBC_component]<br />[Data_source]|[Microsoft]<br />[ODBC-Treiber-Manager]<br />Nicht zutreffend|  
-|Visual FoxPro-Treiber|Hersteller]<br />[ODBC_component]<br />[Data_source]|[Microsoft]<br />[Visual FoxPro-ODBC-Treiber]<br />Nicht zutreffend|  
+|Treiber-Manager|Verkäufern<br />[ODBC_component]<br />[data_source]|Microsoft<br />[ODBC-Treiber-Manager]<br />–|  
+|Visual FoxPro-Treiber|Verkäufern<br />[ODBC_component]<br />[data_source]|Microsoft<br />[Visual FoxPro-Treiber für ODBC]<br />–|  
   
- Wenn die Datei nützlich in der Visual FoxPro-ODBC-Treiber nicht finden konnte, kann es z. B. die folgende Fehlermeldung zurück:  
+ Wenn der Visual FoxPro-ODBC-Treiber z. b. die Datei Employee. dbf nicht finden konnte, wird möglicherweise die folgende Fehlermeldung zurückgegeben:  
   
- "[*Microsoft*] [*ODBC-Visual FoxPro-Treiber*] Datei"nützlich"ist nicht vorhanden."
+ "[*Microsoft*] [*ODBC Visual FoxPro Driver*] die Datei ' Employee. DBF ' ist nicht vorhanden"

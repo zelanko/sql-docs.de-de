@@ -19,20 +19,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902440"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
   Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
   
- Einige Datenflusskomponenten konvertieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen in verwaltete Datentypen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
+ Einige Datenfluss Komponenten konvertieren Datentypen zwischen den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen und den verwalteten Datentypen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  In der folgenden Tabelle sind die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen aufgeführt. Bei einigen der Datentypen in der Tabelle werden auch die für sie geltende Genauigkeit und die Anzahl der Dezimalstellen genannt. Weitere Informationen zu Genauigkeit und Dezimalstellen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
-|Datentyp|Beschreibung|  
+|Datentyp|BESCHREIBUNG|  
 |---------------|-----------------|  
 |DT_BOOL|Ein boolescher Wert.|  
 |DT_BYTES|Ein binärer Datenwert. Die Länge ist variabel, und die maximale Länge beträgt 8000 Bytes.|  
@@ -61,13 +61,14 @@ ms.locfileid: "62902440"
 |DT_UI8|Eine ganze Zahl ohne Vorzeichen und einer Länge von 8 Bytes.|  
 |DT_WSTR|Eine NULL-terminierte Unicode-Zeichenfolge mit einer maximalen Länge von 4000 Zeichen. (Wenn ein Spaltenwert zusätzliche Nullabschlusszeichen enthält, wird die Zeichenfolge bei der ersten Null abgeschnitten.)|  
 |DT_IMAGE|Ein Binärwert mit einer maximalen Größe von 2<sup>31</sup>-1 (2.147.483.647) Bytes. .|  
-|DT_NTEXT|Unicode-Zeichenfolge mit einer maximalen Länge von 2<sup>30</sup> - 1 (1.073.741.823) Zeichen.|  
-|DT_TEXT|Ein [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS Zeichenfolge mit einer maximalen Länge von 2<sup>31</sup>-1 (2.147.483.647) Zeichen.|  
+|DT_NTEXT|Eine Unicode-Zeichenfolge mit einer maximalen Länge von 2<sup>30</sup> -1 (1.073.741.823) Zeichen.|  
+|DT_TEXT|Eine [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS-Zeichenfolge-Zeichenfolge mit einer maximalen Länge von 2<sup>31</sup>-1 (2.147.483.647) Zeichen.|  
   
 ## <a name="conversion-of-data-types"></a>Datentypkonvertierung  
  Falls die Daten in einer Spalte nicht die vom Quelldatentyp zugeordnete normale Breite benötigen, können Sie den Datentyp der Spalte ändern. Wenn jede Datenzeile so schmal wie möglich ist, wird die Leistung beim Übertragen von Daten optimiert, denn umso schmaler eine Zeile ist, desto schneller werden die Daten von der Quelle an das Ziel verschoben.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält einen vollständigen Satz numerischer Datentypen, sodass der Datentyp in hohem Maß auf die Größe der Daten abgestimmt werden kann. Wenn z. B. die Werte in einer Spalte mit einem DT_UI8-Datentyp immer ganze Zahlen zwischen 0 und 3000 sind, können Sie den Datentyp in DT_UI2 ändern. Wenn entsprechend eine Spalte mit dem DT_CY-Datentyp die Datenanforderungen des Pakets erfüllen kann, indem stattdessen ein ganzzahliger Datentyp verwendet wird, können Sie den Datentyp in DT_I4 ändern.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält einen vollständigen Satz numerischer Datentypen, sodass der Datentyp in hohem Maß auf die Größe der Daten abgestimmt werden kann. Wenn z. B. die Werte in einer Spalte mit einem DT_UI8-Datentyp immer ganze Zahlen zwischen 0 und 3000 sind, können Sie den Datentyp in DT_UI2 ändern. Wenn entsprechend eine Spalte mit dem DT_CY-Datentyp die Datenanforderungen des Pakets erfüllen kann, indem stattdessen ein ganzzahliger Datentyp verwendet wird, können Sie den Datentyp in DT_I4 ändern.  
   
  Es gibt folgende Möglichkeiten, um den Datentyp einer Spalte zu ändern:  
   
@@ -105,7 +106,7 @@ ms.locfileid: "62902440"
 ### <a name="converting-datetime-data-types"></a>Konvertieren von Datums- und Zeitdatentypen  
  Sie können den Datentyp einer Spalte mit Datums-/Zeitdaten ändern, um den Datums- oder Zeitteil der Daten zu extrahieren. Die folgende Tabelle führt die Ergebnisse der Umwandlung von einem Datums- und Zeitdatentyp in einen anderen Datums- und Zeitdatentyp auf.  
   
-#### <a name="converting-from-dtfiletime"></a>Konvertieren von DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Konvertieren von DT_FILETIME  
   
 |Konvertieren von DT_FILETIME in|Ergebnis|  
 |-----------------------------|------------|  
@@ -118,7 +119,7 @@ ms.locfileid: "62902440"
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Konvertieren von DT_DATE  
+#### <a name="converting-from-dt_date"></a>Konvertieren von DT_DATE  
   
 |Konvertieren von DT_DATE in|Ergebnis|  
 |-------------------------|------------|  
@@ -131,7 +132,7 @@ ms.locfileid: "62902440"
 |DT_DBTIMESTAMP2|Konvertiert den Datentyp.|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.|  
   
-#### <a name="converting-from-dtdbdate"></a>Konvertieren von DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Konvertieren von DT_DBDATE  
   
 |Konvertieren von DT_DBDATE in|Ergebnis|  
 |---------------------------|------------|  
@@ -144,7 +145,7 @@ ms.locfileid: "62902440"
 |DT_DBTIMESTAMP2|Legt die Zeitfelder im DT_DBTIMESTAMP-Datentyp auf Null fest.|  
 |DT_DBTIMESTAMPOFFSET|Legt die Zeitfelder und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.|  
   
-#### <a name="converting-from-dtdbtime"></a>Konvertieren von DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Konvertieren von DT_DBTIME  
   
 |Konvertieren von DT_DBTIME in|Ergebnis|  
 |---------------------------|------------|  
@@ -157,7 +158,7 @@ ms.locfileid: "62902440"
 |DT_DBTIMESTAMP2|Legt das Datumsfeld im DT_DBTIMESTAMP2-Datentyp auf das aktuelle Datum fest.|  
 |DT_DBTIMESTAMPOFFSET|Legt das Datumsfeld und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf das aktuelle Datum beziehungsweise auf Null fest.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Konvertieren von DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Konvertieren von DT_DBTIME2  
   
 |Konvertieren von DT_DBTIME2 in|Ergebnis|  
 |----------------------------|------------|  
@@ -170,7 +171,7 @@ ms.locfileid: "62902440"
 |DT_DBTIMESTAMP2|Legt das Datumsfeld im DT_DBTIMESTAMP2-Datentyp auf das aktuelle Datum fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Datumsfeld und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf das aktuelle Datum beziehungsweise auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Konvertieren von DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Konvertieren von DT_DBTIMESTAMP  
   
 |Konvertieren von DT_DBTIMESTAMP in|Ergebnis|  
 |--------------------------------|------------|  
@@ -183,7 +184,7 @@ ms.locfileid: "62902440"
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Konvertieren von DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Konvertieren von DT_DBTIMESTAMP2  
   
 |Konvertieren von DT_DBTIMESTAMP2 in|Ergebnis|  
 |---------------------------------|------------|  
@@ -196,7 +197,7 @@ ms.locfileid: "62902440"
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Zieldatentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Konvertieren von DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Konvertieren von DT_DBTIMESTAMPOFFSET  
   
 |Konvertieren von DT_DBTIMESTAMPOFFSET in|Ergebnis|  
 |--------------------------------------|------------|  
@@ -222,25 +223,25 @@ ms.locfileid: "62902440"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Währung||||  
+|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[Zeit &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[Zeit &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[DateTime-&#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[DateTime-&#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[DateTimeOffset &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[DateTimeOffset &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
+|DT_I2|SMALLINT|SMALLINT|Schnellstart||SMALLINT|SMALLINT|  
+|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
+|DT_I8|BIGINT|BIGINT|||BIGINT|BIGINT|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Single||real|real|  
-|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
+|DT_R4|real|real|Single||real|real|  
+|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
@@ -255,7 +256,7 @@ ms.locfileid: "62902440"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag, [Leistungsvergleich zwischen Datentypkonvertierungstechniken in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Daten in Datenflüssen](data-in-data-flows.md)  
   
   

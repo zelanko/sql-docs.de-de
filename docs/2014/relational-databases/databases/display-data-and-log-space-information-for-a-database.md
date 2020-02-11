@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917342"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank
@@ -35,7 +35,7 @@ ms.locfileid: "62917342"
   
      [Sicherheit](#Security)  
   
--   **Zum Anzeigen von Daten und protokollspeicherplatzinformationen für eine Datenbank mit:**  
+-   **So zeigen Sie Informationen zum Daten- und Protokollspeicherplatz einer Datenbank an mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62917342"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Berechtigung zum Ausführen von **sp_spaceused** wird der **public** -Rolle erteilt. Nur Mitglieder der festen Datenbankrolle **db_owner** können den Parameter **@updateusage** angeben.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database"></a>So zeigen Sie Informationen zum Daten- und Protokollspeicherplatz einer Datenbank an  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62917342"
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>So zeigen Sie Informationen zum Daten- und Protokollspeicherplatz einer Datenbank mit sp_spaceused an  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>So zeigen Sie Informationen zum Daten- und Protokollspeicherplatz einer Datenbank mit sp_spaceused an  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -75,7 +75,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>So zeigen Sie Daten und Protokollspeicherplatzinformationen für eine Datenbank durch das Abfragen von sys.database_files an  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabase_files"></a>So zeigen Sie Daten und Protokollspeicherplatzinformationen für eine Datenbank durch das Abfragen von sys.database_files an  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -92,7 +92,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   

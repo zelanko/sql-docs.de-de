@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899997"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
@@ -98,7 +98,7 @@ ms.locfileid: "62899997"
   
 1.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers der Entwurfsoberfläche einen Datenflusstask hinzu.  
   
-2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** tab, add an OLE DB source to the Datenfluss task, and then open the **Quellen-Editor für OLE DB**.  
+2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** eine OLE DB-Datenquelle hinzu, und öffnen Sie dann den **Quellen-Editor für OLE DB.**  
   
 3.  Konfigurieren Sie auf der Seite **Verbindungs-Manager** des Editors die Quelle mit den folgenden Einstellungen:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62899997"
   
 5.  Öffnen Sie den **Recordsetziel-Editor**, und konfigurieren Sie das Ziel mit den folgenden Einstellungen:  
   
-    1.  Auf der **Komponenteneigenschaften** Registerkarte für `VariableName` -Eigenschaft die Option `User::BonusRecordset`.  
+    1.  Wählen Sie `User::BonusRecordset`auf der Registerkarte **Komponenteneigenschaften** für Eigenschaft die Option aus `VariableName` .  
   
     2.  Wählen Sie auf der Registerkarte **Eingabespalten** alle drei verfügbaren Spalten aus.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "62899997"
   
 2.  Öffnen Sie den **Foreach-Schleifen-Editor**, und konfigurieren Sie den Container mit den folgenden Einstellungen:  
   
-    1.  Auf der **Auflistung** Seite für **Enumerator**Option **Foreach-ADO-Enumerator**, und für **ADO-objektquellvariable**, auswählen`User::BonusRecordset`.  
+    1.  Wählen Sie **auf der Seite** **Auflistung für Enumerator**die Option **Foreach-ADO-Enumerator**und unter **ADO-Objekt Quellvariable**die Option aus. `User::BonusRecordset`  
   
-    2.  Auf der **Variablenzuordnungen** Seite, ordnen Sie `User::EmailAddress` Index 0, `User::FirstName` Index 1 und `User::Bonus` Index 2.  
+    2.  Ordnen `User::EmailAddress` Sie auf der Seite **Variablen** Zuordnungen dem Index 0, `User::FirstName` dem Index 1 und `User::Bonus` dem Index 2 zu.  
   
 3.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** im Foreach-Schleifencontainer einen Task „Mail senden“ hinzu.  
   

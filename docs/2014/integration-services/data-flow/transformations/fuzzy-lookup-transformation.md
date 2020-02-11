@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900315"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
@@ -51,11 +51,11 @@ ms.locfileid: "62900315"
   
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf.  
   
- Zur Fuzzyübereinstimmung können nur Eingabespalten mit den Datentypen `DT_WSTR` und `DT_STR` verwendet werden. Für genaue Übereinstimmungen kann jeder beliebige DTS-Datentyp mit Ausnahme von `DT_TEXT`, `DT_NTEXT` und `DT_IMAGE` verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. Es ist z. B. zulässig, Verknüpfen einer Spalte mit dem DTS `DT_WSTR` -Datentyp, um eine Spalte mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` -Datentyp ist jedoch ungültig, verknüpfen eine Spalte mit der `DT_WSTR` -Datentyp, um eine Spalte mit der `int` -Datentyp.  
+ Zur Fuzzyübereinstimmung können nur Eingabespalten mit den Datentypen `DT_WSTR` und `DT_STR` verwendet werden. Für genaue Übereinstimmungen kann jeder beliebige DTS-Datentyp mit Ausnahme von `DT_TEXT`, `DT_NTEXT` und `DT_IMAGE` verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. Beispielsweise ist es zulässig, eine Spalte `DT_WSTR` mit dem DTS-Datentyp mit einer Spalte mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` -Datentyp zu verknüpfen, aber es ist ungültig, eine `DT_WSTR` Spalte mit dem-Datentyp einer `int` Spalte mit dem-Datentyp beizutreten.  
   
  Sie können diese Transformation anpassen, indem Sie den maximalen Umfang des Arbeitsspeichers, den Zeilenvergleichsalgorithmus sowie den Zwischenspeicher für Indizes und Verweistabellen, die von der Transformation verwendet werden, angeben.  
   
- Der von der Transformation für Fuzzysuche verwendete Arbeitsspeicher kann durch Festlegen der benutzerdefinierten Eigenschaft MaxMemoryUsage konfiguriert werden. Sie können die Größe in Megabyte (MB) angeben oder den Wert 0 verwenden, um bei der Transformation eine dynamische Arbeitsspeichermenge auf Basis der Anforderungen und des verfügbaren physischen Speichers zu verwenden. Die benutzerdefinierte Eigenschaft MaxMemoryUsage kann beim Laden des Pakets mithilfe eines Eigenschaftsausdrucks aktualisiert werden. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md), [Verwenden von Eigenschaftsausdrücken in Paketen](../../expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md).  
+ Der von der Transformation für Fuzzysuche verwendete Arbeitsspeicher kann durch Festlegen der benutzerdefinierten Eigenschaft MaxMemoryUsage konfiguriert werden. Sie können die Größe in Megabyte (MB) angeben oder den Wert 0 verwenden, um bei der Transformation eine dynamische Arbeitsspeichermenge auf Basis der Anforderungen und des verfügbaren physischen Speichers zu verwenden. Die benutzerdefinierte MaxMemoryUsage-Eigenschaft kann beim Laden des Pakets mithilfe eines Eigenschaftsausdrucks aktualisiert werden. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md), [Verwenden von Eigenschaftsausdrücken in Paketen](../../expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md).  
   
 ## <a name="controlling-fuzzy-matching-behavior"></a>Steuern des Verhaltens der Fuzzyübereinstimmung  
  Die Transformation für Fuzzysuche umfasst drei Funktionen zum Anpassen der durchgeführten Suche: maximale Suche nach Übereinstimmungen, die pro Eingabezeile zurückgegeben werden, Token-Trennzeichen und Schwellenwerte für Ähnlichkeit.  
@@ -74,9 +74,9 @@ ms.locfileid: "62900315"
   
  Die Transformationsausgabespalten enthalten die Eingabespalten, die als Pass-Through-Spalten markiert sind, die ausgewählten Spalten in der Suchtabelle und die folgenden zusätzlichen Spalten:  
   
--   **_Similarity**, eine Spalte, die die Ähnlichkeit zwischen den Werten in den Eingabe- und Verweisspalten beschreibt.  
+-   **_Similarity**eine Spalte, die die Ähnlichkeit zwischen den Werten in den Eingabe-und Verweis Spalten beschreibt.  
   
--   **_Confidence**, eine Spalte, die die Qualität der Übereinstimmung beschreibt.  
+-   **_Confidence**eine Spalte, die die Qualität der Übereinstimmung beschreibt.  
   
  Die Transformation verwendet die Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, um die temporären Tabellen zu erstellen, die vom Fuzzyübereinstimmungsalgorithmus verwendet werden.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62900315"
   
  In der folgenden Tabelle werden die Optionen für den Übereinstimmungsindex beschrieben.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Zum Erstellen, Speichern und Verwalten eines neuen Indexes. Bei der Transformation werden Trigger für die Verweistabelle installiert, damit Verweis- und Indextabelle synchronisiert bleiben.|  
-|**GenerateAndPersistNewIndex**|Zum Erstellen und Speichern eines Indexes, aber nicht zum Verwalten.|  
-|**GenerateNewIndex**|Zum Erstellen eines neuen Indexes, aber nicht zum Speichern.|  
+|**Generateandpersistnetwindex**|Zum Erstellen und Speichern eines Indexes, aber nicht zum Verwalten.|  
+|**Generatenewindex**|Zum Erstellen eines neuen Indexes, aber nicht zum Speichern.|  
 |**ReuseExistingIndex**|Zur erneuten Verwendung eines bereits vorhandenen Indexes.|  
   
 ### <a name="maintenance-of-the-match-index-table"></a>Verwaltung der Übereinstimmungsindextabelle  
@@ -109,12 +109,12 @@ ms.locfileid: "62900315"
 >  Da die Option **Gespeicherten Index beibehalten** die CLR-Integration erfordert, kann diese Funktion nur verwendet werden, wenn Sie in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Verweistabelle auswählen, für die die CLR-Integration aktiviert ist.  
   
 ## <a name="row-comparison"></a>Zeilenvergleich  
- Wenn Sie die Transformation für Fuzzysuche konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation für die Suche von übereinstimmenden Datensätzen in der Verweistabelle verwendet. Wenn Sie die Exhaustive-Eigenschaft auf `True`, vergleicht die Transformation jede Zeile in der Eingabe mit jeder Zeile in der Verweistabelle enthalten sind. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Verweistabelle nicht gering ist. Wenn die Exhaustive-Eigenschaft, um festgelegt ist `True`, die gesamte Verweistabelle in den Arbeitsspeicher geladen wird. Um Leistungsprobleme zu vermeiden, ist es ratsam, die Exhaustive-Eigenschaft auf festgelegt `True` nur während der Paketentwicklung.  
+ Wenn Sie die Transformation für Fuzzysuche konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation für die Suche von übereinstimmenden Datensätzen in der Verweistabelle verwendet. Wenn Sie die-Eigenschaft auf `True`festlegen, vergleicht die Transformation jede Zeile in der Eingabe mit jeder Zeile in der Verweis Tabelle. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Verweistabelle nicht gering ist. Wenn die vollständige Eigenschaft auf `True`festgelegt ist, wird die gesamte Verweis Tabelle in den Arbeitsspeicher geladen. Um Leistungsprobleme zu vermeiden, empfiehlt es sich, die Eigenschaft "voll `True` ständig" während der Paket Entwicklung auf festzulegen.  
   
- Wenn die Exhaustive-Eigenschaft, um festgelegt ist `False`, die Transformation für Fuzzysuche gibt nur Übereinstimmungen, die mindestens ein indiziertes Token bzw. eine Teilzeichenfolge zurück. (die Teilzeichenfolge wird aufgerufen, eine *Q-Gram*) enthält, die auch den Eingabedatensatz. Zum Maximieren der Sucheffizienz wird in jeder Zeile der Tabelle nur eine Teilmenge der Token in der invertierten Indexstruktur indiziert, die die Transformation für Fuzzysuche zum Suchen von übereinstimmenden Werten verwendet. Wenn das Eingabedataset klein ist, können Sie Exhaustive festlegen, um `True` um zu vermeiden, fehlende Übereinstimmungen, die für die keine allgemeinen Token in der Indextabelle vorhanden sind.  
+ Wenn die vollständige Eigenschaft auf fest `False`gelegt ist, gibt die Transformation für Fuzzysuche nur Übereinstimmungen zurück, die mindestens ein indiziertes Token oder eine Teil Zeichenfolge (die Teil Zeichenfolge wird *q-Gram*genannt) mit dem Eingabedaten Satz enthalten. Zum Maximieren der Sucheffizienz wird in jeder Zeile der Tabelle nur eine Teilmenge der Token in der invertierten Indexstruktur indiziert, die die Transformation für Fuzzysuche zum Suchen von übereinstimmenden Werten verwendet. Wenn das Eingabe DataSet klein ist, können Sie auf "Complete `True` " festlegen, um fehlende Übereinstimmungen zu vermeiden, für die keine gemeinsamen Token in der Indextabelle vorhanden sind.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Zwischenspeichern von Indizes und Verweistabellen  
- Bei der Konfiguration der Transformation für Fuzzysuche können Sie angeben, ob die Transformation den Index und die Verweistabelle teilweise im Arbeitsspeicher zwischenspeichern soll, bevor die Transformation mit der Verarbeitung beginnt. Wenn Sie die WarmCaches-Eigenschaft auf `True`, in der Tabelle Index und die Verweistabelle in den Arbeitsspeicher geladen. Die Eingabe hat bei vielen Zeilen besteht, Festlegen der WarmCaches-Eigenschaft auf `True` kann die Leistung der Transformation für das verbessern. Wenn die Anzahl der Eingabezeilen gering ist, Festlegen der WarmCaches-Eigenschaft, auf `False` können die Wiederverwendung eines großen Indexes schneller machen.  
+ Bei der Konfiguration der Transformation für Fuzzysuche können Sie angeben, ob die Transformation den Index und die Verweistabelle teilweise im Arbeitsspeicher zwischenspeichern soll, bevor die Transformation mit der Verarbeitung beginnt. Wenn Sie die Eigenschaft "WarmCaches" `True`auf festlegen, werden der Index und die Verweis Tabelle in den Arbeitsspeicher geladen. Wenn die Eingabe viele Zeilen enthält, kann die Leistung der Transformation durch Festlegen `True` der WarmCaches-Eigenschaft auf verbessert werden. Wenn die Anzahl der Eingabezeilen gering ist, kann die Wiederverwendung eines großen Indexes `False` durch Festlegen der WarmCaches-Eigenschaft auf beschleunigt werden.  
   
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzysuche temporäre Objekte, z. B. Tabellen und Indizes, in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, mit der die Transformation eine Verbindung herstellt. Die Größe dieser temporären Tabellen und Indizes ist proportional zur Anzahl der Zeilen und Token in der Verweistabelle und zur Anzahl der Token, die von der Transformation für Fuzzysuche erstellt werden; deshalb können sie möglicherweise einen großen Teil des Speicherplatzes belegen. Die Transformation fragt auch diese temporären Tabellen ab. Deshalb sollten Sie in Erwägung ziehen, die Transformation für Fuzzysuche eine Verbindung mit einer Nichtproduktionsinstanz einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank herstellen zu lassen, insbesondere wenn auf dem Produktionsserver nur eingeschränkt Speicherplatz verfügbar ist.  
@@ -126,24 +126,24 @@ ms.locfileid: "62900315"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Fuzzysuche** festlegen können:  
   
--   [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Verweistabelle“&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Verweis Tabelle&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Spalten&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Spalten“&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
 -   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Erweitert&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Festlegen der Eigenschaften einer Datenflusskomponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Suche](lookup-transformation.md)   
- [Transformation für Fuzzygruppierung](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   
   

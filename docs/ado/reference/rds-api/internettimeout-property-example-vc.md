@@ -1,5 +1,5 @@
 ---
-title: InternetTimeout-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für InternetTimeout-Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7596f9728f7a51a5d28a3c1a19943efff783ac62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963992"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout-Eigenschaft – Beispiel (VC++)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Dieses Beispiel zeigt die [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) -Eigenschaft, die auf vorhanden ist die [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekte. In diesem Fall die **InternetTimeout** Eigenschaft wird veranschaulicht, auf die **DataControl** -Objekt und das Timeout ist auf 20 Sekunden festgelegt.  
+ In diesem Beispiel wird die [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) -Eigenschaft veranschaulicht, die für die Objekte [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) vorhanden ist. In diesem Fall wird die **InternetTimeout** -Eigenschaft im **DataControl** -Objekt und das Timeout auf 20 Sekunden festgelegt.  
   
 ```cpp
 // BeginInternetTimeoutCpp  
@@ -155,7 +155,7 @@ void PrintComError(_com_error &e)
 // EndInternetTimeoutCpp  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [InternetTimeout-Eigenschaft (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

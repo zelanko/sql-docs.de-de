@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899038"
 ---
 # <a name="cast-ssis-expression"></a>CAST (SSIS-Ausdruck)
@@ -38,13 +38,13 @@ ms.locfileid: "62899038"
  *type_spec*  
  Ein gültiger [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Datentyp.  
   
- *expression*  
+ *Begriff*  
  Ein beliebiger gültiger Ausdruck.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *type_spec*. Weitere Informationen finden Sie unter [Integration Services Datentypen](../data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Im folgenden Diagramm werden zulässige Umwandlungsvorgänge dargestellt.  
   
  ![Zulässige und unzulässige Umwandlungen zwischen Datentypen](../media/data-conversion.gif "Zulässige und unzulässige Umwandlungen zwischen Datentypen")  
@@ -54,10 +54,10 @@ ms.locfileid: "62899038"
 |Datentyp|Parameter|Beispiel|  
 |---------------|---------------|-------------|  
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) wandelt 30 Bytes, oder 30 einzelne Zeichen, mithilfe der 1252-Codepage in den DT_STR-Datentyp um.|  
-|DT_WSTR|*Charcount*|(DT_WSTR,20) wandelt 20 Bytepaare, oder 20 Unicode-Zeichen, in den DT_WSTR-Datentyp um.|  
-|DT_BYTES|*Bytecount*|(DT_BYTES,50) wandelt 50 Bytes in den DT_BYTES-Datentyp um.|  
-|DT_DECIMAL|*Dezimalstellen*|(DT_DECIMAL,2) wandelt einen numerischen Wert mithilfe von 2 Dezimalstellen in den DT_DECIMAL-Datentyp um.|  
-|DT_NUMERIC|*Genauigkeit*<br /><br /> *Dezimalstellen*|(DT_NUMERIC,10,3) wandelt einen numerischen Wert mithilfe einer Genauigkeit von 10 und 3 Dezimalstellen in den DT_NUMERIC-Datentyp um.|  
+|DT_WSTR|*CharCount*|(DT_WSTR,20) wandelt 20 Bytepaare, oder 20 Unicode-Zeichen, in den DT_WSTR-Datentyp um.|  
+|DT_BYTES|*ByteCount*|(DT_BYTES,50) wandelt 50 Bytes in den DT_BYTES-Datentyp um.|  
+|DT_DECIMAL|*Migen*|(DT_DECIMAL,2) wandelt einen numerischen Wert mithilfe von 2 Dezimalstellen in den DT_DECIMAL-Datentyp um.|  
+|DT_NUMERIC|*Präziser*<br /><br /> *Migen*|(DT_NUMERIC,10,3) wandelt einen numerischen Wert mithilfe einer Genauigkeit von 10 und 3 Dezimalstellen in den DT_NUMERIC-Datentyp um.|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) wandelt einen Wert mithilfe der 1252-Codepage in den DT_TEXT-Datentyp um.|  
   
  Wenn eine Zeichenfolge in einen DT_DATE-Datentyp umgewandelt wird, oder umgekehrt, wird das Gebietsschema der Transformation verwendet. Allerdings weist das Datum das ISO-Format YYYY-MM-DD auf, und zwar unabhängig davon, ob für das Gebietsschema das ISO-Format verwendet wird.  
@@ -142,7 +142,7 @@ ms.locfileid: "62899038"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatorenrangfolge und -assoziativität](operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)   

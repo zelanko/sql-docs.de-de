@@ -16,20 +16,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920689"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Transaktionsprotokollsicherungen (SQL Server)
-  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden. In diesem Thema wird das Sichern des Transaktionsprotokolls einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erläutert.  
+  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden. In diesem Thema wird das Sichern des Transaktionsprotokolls einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erläutert.  
   
  Vor dem Erstellen von Protokollsicherungen muss bereits mindestens eine vollständige Sicherung durchgeführt worden sein. Danach kann das Transaktionsprotokoll jederzeit gesichert werden, es sei denn, das Protokoll wurde gerade gesichert. Es empfiehlt sich, Protokollsicherungen häufig auszuführen, damit auf diese Weise die Gefahr von Datenverlusten verringert und das Abschneiden des Transaktionsprotokolls angewendet werden kann. In der Regel erstellt ein Datenbankadministrator von Zeit zu Zeit eine vollständige Datenbanksicherung, z. B. einmal pro Woche, sowie optional in kürzeren Abständen eine Reihe von differenziellen Datenbanksicherungen, z. B. täglich. Unabhängig von den Datenbanksicherungen sichert der Datenbankadministrator das Transaktionsprotokoll sehr häufig, z. B. alle 10 Minuten. Der optimale Abstand zwischen Sicherungen ist abhängig von Faktoren wie der Wichtigkeit der Daten, der Größe der Datenbank und der Arbeitsauslastung des Servers.  
   
  **In diesem Thema:**  
   
--   [Wie funktioniert eine Abfolge von Protokollsicherungen](#LogBackupSequence)  
+-   [Funktionsweise einer Sequenz von Protokoll Sicherungen](#LogBackupSequence)  
   
 -   [Empfehlungen](#Recommendations)  
   
@@ -37,10 +37,10 @@ ms.locfileid: "62920689"
   
 -   [Verwandte Inhalte](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> Wie funktioniert eine Abfolge von Protokollsicherungen  
+##  <a name="LogBackupSequence"></a>Funktionsweise einer Sequenz von Protokoll Sicherungen  
  Die Sequenz der Transaktionsprotokollsicherungen ( *Protokollkette* ) ist unabhängig von den Datensicherungen. Stellen Sie sich z. B. folgende Ereignissequenz vor.  
   
-|Uhrzeit|Ereignis|  
+|Time|Ereignis|  
 |----------|-----------|  
 |8:00 Uhr|Sichern der Datenbank.|  
 |12:00 Uhr|Sichern des Transaktionsprotokolls.|  
@@ -70,7 +70,7 @@ ms.locfileid: "62920689"
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](back-up-and-restore-of-sql-server-databases.md)   
  [Protokollfragmentsicherungen &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   
