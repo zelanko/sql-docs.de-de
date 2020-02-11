@@ -1,5 +1,5 @@
 ---
-title: Diagnose behandeln Regeln | Microsoft-Dokumentation
+title: Regeln für die Diagnose Behandlung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,45 +16,45 @@ ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 269e021d3fd4610c2fccda46bcd8ca160982543c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039925"
 ---
 # <a name="diagnostic-handling-rules"></a>Regeln der Diagnosebehandlung
-Die folgenden Regeln bestimmen die diagnosebehandlung in **SQLGetDiagRec** und **SQLGetDiagField**.  
+Die folgenden Regeln steuern die Diagnose Behandlung in **SQLGetDiagRec** und **SQLGetDiagField**.  
   
  Für alle ODBC-Komponenten:  
   
--   Muss nicht ersetzen, ändern oder maskieren, Fehler oder Warnungen, die von einer anderen ODBC-Komponente empfangen.  
+-   Fehler oder Warnungen, die von einer anderen ODBC-Komponente empfangen wurden, dürfen nicht ersetzt, geändert oder maskiert werden.  
   
--   Können einen zusätzlichen Status-Eintrag hinzufügen, beim Erhalt einer einer diagnosemeldung aus einer anderen ODBC-Komponente. Der ursprünglichen Nachricht muss der hinzugefügten Datensatz echten Wert hinzufügen.  
+-   Kann einen zusätzlichen Statusdaten Satz hinzufügen, wenn Sie eine Diagnose Meldung von einer anderen ODBC-Komponente empfangen. Der hinzugefügte Datensatz muss der ursprünglichen Nachricht einen echten Informationswert hinzufügen.  
   
- Für den ODBC-Datenquelle Komponente, die direkt Schnittstellen:  
+ Für die ODBC-Komponente, die eine Datenquelle direkt Durchschnitt stellen:  
   
--   Müssen das Präfix der Hersteller-ID, die Komponenten­ID und der Datenquelle-Bezeichner, der die diagnosemeldung aus der Datenquelle empfangenen.  
+-   Dem Hersteller Bezeichner, dessen Komponenten Bezeichner und dem Bezeichner der Datenquelle muss die von der Datenquelle empfangene Diagnose Nachricht vorangestellt werden.  
   
--   Systemeigene Fehlercode für die Datenquelle muss beibehalten werden.  
+-   Der systemeigene Fehlercode der Datenquelle muss beibehalten werden.  
   
--   Diagnosemeldung für die Datenquelle muss beibehalten werden.  
+-   Die Diagnose Meldung der Datenquelle muss beibehalten werden.  
   
- Für jede ODBC-Komponente, die einen Fehler oder die Warnung unabhängig von der Datenquelle generiert:  
+ Für jede ODBC-Komponente, die unabhängig von der Datenquelle einen Fehler oder eine Warnung generiert:  
   
--   Müssen die richtigen SQLSTATE für den Fehler oder Warnung angeben.  
+-   Muss den korrekten SQLSTATE für den Fehler oder die Warnung angeben.  
   
--   Muss den Text der diagnosemeldung zu generieren.  
+-   Der Text der Diagnose Meldung muss generiert werden.  
   
--   Müssen die Anbieter-ID und die Komponentenbezeichner, der die diagnosemeldung Präfix voranstellen.  
+-   Die Hersteller-ID und deren Komponenten Bezeichner müssen der Diagnose Meldung vorangestellt werden.  
   
--   Muss einen systemeigener Fehlercode, zurückgeben, wenn eine sinnvolle und verfügbar ist.  
+-   Es muss ein nativer Fehlercode zurückgegeben werden, wenn ein solcher verfügbar und aussagekräftig ist.  
   
- Für die ODBC-Komponente, die mit dem Treiber-Manager-Schnittstellen:  
+ Für die ODBC-Komponente, die eine Schnittstelle mit dem Treiber-Manager hat:  
   
--   Die Ausgabeargumente des muss initialisiert werden **SQLGetDiagRec** und **SQLGetDiagField**.  
+-   Die Ausgabe Argumente von **SQLGetDiagRec** und **SQLGetDiagField**müssen initialisiert werden.  
   
--   Formatieren und die Diagnoseinformationen als Ausgabeargumente zurückgeben muss **SQLGetDiagRec** und **SQLGetDiagField** Wenn diese Funktion aufgerufen wird.  
+-   Muss die Diagnoseinformationen formatieren und als Ausgabe Argumente von **SQLGetDiagRec** und **SQLGetDiagField** zurückgeben, wenn diese Funktion aufgerufen wird.  
   
- Für eine ODBC-Komponente als der Treiber-Manager:  
+ Für eine andere ODBC-Komponente als den Treiber-Manager:  
   
--   Basierend auf der systemeigene Fehler SQLSTATE muss festgelegt werden. Dateibasierte Treiber und DBMS-basierten Treibern, die einen Gateway nicht verwenden, muss der Treiber SQLSTATE festgelegt. Für DBMS-basierten Treibern, die einen Gateway verwenden, kann entweder der Treiber oder ein Gateway, die ODBC unterstützt den SQLSTATE festgelegt.
+-   Der SQLSTATE muss basierend auf dem systemeigenen Fehler festgelegt werden. Bei dateibasierten Treibern und DBMS-basierten Treibern, von denen kein Gateway verwendet wird, muss der Treiber SQLSTATE festlegen. Bei DBMS-basierten Treibern, die ein Gateway verwenden, kann der Treiber oder ein Gateway, das ODBC unterstützt, den SQLSTATE-Wert festlegen.

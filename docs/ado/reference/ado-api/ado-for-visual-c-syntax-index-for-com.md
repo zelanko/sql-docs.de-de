@@ -1,5 +1,5 @@
 ---
-title: ADO für Visual C++ – Syntaxindex für COM | Microsoft-Dokumentation
+title: ADO für Visual C++ Syntax Index für com | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,26 +17,26 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920982"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++ – Syntaxindex für COM
-Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++.  
+Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft Visual C++ basiert.  
   
- Bei Verwendung der **#import** Direktive in Ihrer Anwendung, eine Headerdatei generiert werden können, die Sie ähnlich wie auf Microsoft Visual Basic-Syntax verwenden. Die Eigenschaftsnamen des Formulars **Get_** _PropertyName_ und **Put_** _PropertyName_ behandelt werden kann, als ob sie einfach als deklariertwurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
+ Wenn Sie die **#Import** -Direktive in der Anwendung verwenden, wird eine Header Datei generiert, mit der Sie Syntax ähnlich der von Microsoft Visual Basic verwenden können. Eigenschaftsnamen in der Form **get_**_propertyName_ und **Put_**_propertyName_ können so behandelt werden, als wären Sie einfach als *propertyName*deklariert worden. Eine Eigenschaft kann dann wie ein Datenmember anstatt einer Funktion behandelt werden.  
   
- Die Methoden, Eigenschaften und Ereignisse sind Funktionen, die Zurückgeben einer **HRESULT**, die Sie testen können, um festzustellen, ob die Funktion erfolgreich ausgeführt.  
+ Alle Methoden, Eigenschaften und Ereignisse sind Funktionen, die ein **HRESULT**zurückgeben, das Sie testen können, um zu ermitteln, ob die Funktion erfolgreich ausgeführt wurde.  
   
- In Visual C++-Methode und Eigenschaft-Syntax wird für die folgenden Elemente aufgeführt:  
+ Die Methoden-und Eigenschafts Syntax in Visual C++ ist für die folgenden Elemente aufgeführt:  
   
--   [Sammlungen](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [Auflistungen](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
 -   [Command-Objekt](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
   
--   [Verbindungsobjekt](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
+-   [Verbindungs Objekt](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
   
 -   [Error-Objekt](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
   
@@ -44,12 +44,12 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsof
   
 -   [Parameter-Objekt](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
   
--   [-Objekt](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [Datensatz-Objekt](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
   
 -   [Recordset-Objekt](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
   
 -   [Stream-Objekt](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO für Visual C++-Syntaxindex mit #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Microsoft ActiveX Data Objects (ADO) (Microsoft ActiveX-Datenobjekte (ADO))](../../../ado/microsoft-activex-data-objects-ado.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO für Visual C++ Syntax Index mit #Import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Microsoft ActiveX-Datenobjekte (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

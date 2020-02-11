@@ -1,5 +1,5 @@
 ---
-title: Visual Basic for Applications-Funktionen | Microsoft-Dokumentation
+title: Visual Basic for Applications Funktionen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,42 +16,42 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923463"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
-Im folgende Visual Basic for Applications-Funktionen können in Data shaping CALC-Ausdrücken verwendet werden:  
+Die folgenden Visual Basic for Applications Funktionen können in Daten Strukturierungs Ausdrücken verwendet werden:  
   
 |||||||  
 |-|-|-|-|-|-|  
-|Abs|Asc|ArcTan|ZBool|ZByte|ZCurrrency|  
-|ZDate|CDbl|Zchn|ChrB|ChrW|Zchn$|  
-|ChrB$|ZInteger|ZLong|Cos|ZSingle|CStr|  
-|Cvar|ZVarDat|CVErr|date|Datum$|DateAdd|  
-|DateDiff|DatTeil|DatSeriell|DatWert|Day|GDA|  
-|Fehler|Error$|Exponential|Fix|Format|Format$|  
+|Abs|Asc|ArcTan|CBool|ZByte|ZCurrrency|  
+|CDate|CDbl|Zchn|ChrB|ChrW|Zchn$|  
+|ChrB $|ZInteger|ZLong|Cos|ZSingle|CStr|  
+|Cvar|ZVarDat|CVErr|Date|Datum$|DateAdd|  
+|DateDiff|DatTeil|DatSeriell|DatWert|Day (Tag)|GDA|  
+|Fehler|Error$|Exp|Behebung|Format|Format$|  
 |ZW|Hex|Hex$|Hour|IIF|InStr|  
-|Int|ZINSZ|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Links|  
-|LINKSB|Links$|LeftB$|Len|Log|LGlätten|  
-|LGlätten$|Mid|Teil$|Minute|QIKV|Month|  
-|jetzt|ZZR|NBW|Oktober|Oktal$|RMZ|  
-|KAPZ|BW|QBColor|ZINS|RGB|Rechts|  
-|RECHTSB|Rechts$|RightB$|ZZG|RGlätten|RTrim$|  
-|Zweimal|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
-|QWurzel|Str|Str$|StrVgl|StrKonv|Zeichenfolge|  
-|String$|DIA|Tan|Uhrzeit|Time$|Zeitgeber|  
-|ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypeName|Großbst|  
-|Großbst$|val|VarType|Arbeitstag|Year||  
+|Int|ZINSZ|IKV|IsDate|IsEmpty|IsError|  
+|IsNull|IsNumeric|IsObject|LCase|Kleinbst$|Left|  
+|LINKSB|Links$|LeftB $|Len|Log|LTrim|  
+|LGlätten$|Mid|Teil$|Minute|QIKV|Month (Monat)|  
+|Now|ZZR|NBW|Oct|Oktal$|RMZ|  
+|KAPZ|BW|QBColor|Rate|RGB|Right|  
+|RECHTSB|Rechts$|RightB $|ZZG|RTrim|RTRIM $|  
+|Sekunde|Vorzchn|Sin|LIA|Leerzeichen|LeerZchn$|  
+|QWurzel|Str|Str$|StrVgl|StrKonv|String|  
+|String$|SYD|Tan|Time|Time$|Timer|  
+|ZeitSeriell|ZeitSeriellStr|Trim|Glätten$|TypeName|UCase|  
+|Großbst$|Ster|VarType|Wochentag|Jahr||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Daten strukturieren (Übersicht)](../../../ado/guide/data/data-shaping-overview.md)   
- [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
- [Erforderliche Anbieter für die Strukturierung der Daten](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
- [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Übersicht über die Daten Strukturierung](../../../ado/guide/data/data-shaping-overview.md)   
+ [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Erforderliche Anbieter für die Daten Strukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape-APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
+ [Shape-Befehle im allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
  [SHAPE COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)

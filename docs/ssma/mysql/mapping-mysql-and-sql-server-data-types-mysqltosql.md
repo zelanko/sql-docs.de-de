@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von MySQL und SQL Server-Datentypen (MySQLToSQL)) | Microsoft-Dokumentation
+title: Zuordnung von MySQL-und SQL Server-Datentypen (mysqltosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,74 +13,74 @@ ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908991"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Zuordnen von MySQL- und SQL Server-Datentypen (MySqlToSql)
-MySQL-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank-Datentypen. Bei der Konvertierung von MySQL-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte, müssen Sie angeben, das Zuordnen von Datentypen aus MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Verfahren dargestellt.  
+MySQL-Datenbanktypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden sich von Datenbanktypen oder SQL Azure. Beim Konvertieren von MySQL-Daten Bank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekten in-oder-SQL Azure-Objekte müssen Sie angeben, wie Datentypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von MySQL zu oder SQL Azure zugeordnet werden sollen. Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
-SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen, finden Sie unter [Projekteinstellungen &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+SSMA verfügt über einen Standardsatz von Datentyp Zuordnungen. Die Liste der Standard Zuordnungen finden Sie unter [Project Settings &#40;Type Mapping&#41; &#40;mysqlto SQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
-## <a name="type-mapping-inheritance"></a>Typ zuordnen von Vererbung  
-Sie können die replikationsdatentyp-Zuordnungen auf Projektebene, Objekt Category-Ebene (z. B. alle gespeicherten Prozeduren) oder Objektebene anpassen. Einstellungen werden von der höheren Ebene vererbt werden, es sei denn, sie auf einer niedrigeren Ebene überschrieben werden. Wenn Sie zuordnen, z. B. **Smallint** zu **Int** auf Projektebene, werden alle Objekte im Projekt verwenden, diese Zuordnung verwendet werden, es sei denn, die Sie anpassen, dass die Zuordnung auf der Ebene Objekt oder Kategorie.  
+## <a name="type-mapping-inheritance"></a>Vererbung der Typzuordnung  
+Sie können Typzuordnungen auf Projektebene, Objekt Kategorieebene (z. b. alle gespeicherten Prozeduren) oder auf Objektebene anpassen. Die Einstellungen werden von der höheren Ebene geerbt, sofern Sie nicht auf einer niedrigeren Ebene überschrieben werden. Wenn Sie z. b. **smallint** auf Projektebene zu **int** zuordnen, verwenden alle Objekte im Projekt diese Zuordnung, es sei denn, Sie passen die Zuordnung auf Objekt-oder Kategorieebene an.  
   
-Beim Anzeigen der **Type Mapping** Registerkarte im Hintergrund SSMA sind farbcodiert, um anzuzeigen, welche typzuordnungen geerbt werden. Der Hintergrund einer Zuordnung ist Gelb für alle geerbten Typ zuordnen und weiß für jede Zuordnung, die auf der aktuellen Ebene angegeben wird.  
+Wenn Sie die Registerkarte **Typzuordnung** in SSMA anzeigen, ist der Hintergrund Farb codiert, um anzuzeigen, welche Typzuordnungen geerbt werden. Der Hintergrund einer Typzuordnung ist für jede geerbte Typzuordnung gelb und weiß für jede Zuordnung, die auf der aktuellen Ebene angegeben wird.  
   
-## <a name="customizing-data-type-mappings"></a>Anpassen von Datentypzuordnungen  
+## <a name="customizing-data-type-mappings"></a>Anpassen von Datentyp Zuordnungen  
   
--   **Zuordnen von Datentypen:**  
+-   **So ordnen Sie Datentypen zu:**  
   
-    Die folgenden Verfahren zeigen, wie Sie Datentypen, die auf das Projekt, Datenbank oder Datenbankebene-Objekt zugeordnet wird:  
+    Die folgenden Prozeduren zeigen, wie Datentypen auf der Projekt-, Datenbank-oder Datenbankobjekt Ebene zugeordnet werden:  
   
-    1.  Öffnen Sie zum Zuordnen von Datentypen für das gesamte Projekt anpassen, die **Projekteinstellungen** Dialogfeld. Wählen Sie auf das Menü "Extras" **Projekteinstellungen**.  
+    1.  Um die Datentyp Zuordnung für das gesamte Projekt anzupassen, öffnen Sie das Dialogfeld **Projekteinstellungen** . Wählen Sie im Menü Extras die Option **Projekteinstellungen**aus.  
   
-        Wählen Sie im linken Bereich **Type Mapping**. Das Diagramm für Typ-Zuordnung und die Schaltflächen werden im rechten Bereich angezeigt.  
+        Wählen Sie im linken Bereich **Typzuordnung**aus. Das Typmapping-Diagramm und die Schaltflächen werden im rechten Bereich angezeigt.  
   
-    2.  Um datentypzuordnungen auf der Datenbank- oder Tabellenebene anzupassen, wählen Sie die Datenbank oder Tabelle in der MySQL-Metadaten-Explorer aus. Wählen Sie in der MySQL-Metadaten-Explorer den Ordner oder ein Objekt, um anzupassen.  
+    2.  Um Datentyp Zuordnungen auf Datenbank-oder Tabellenebene anzupassen, wählen Sie die Datenbank oder Tabelle im MySQL-metadatenexplorer aus. Wählen Sie im MySQL-metadatenexplorer den Ordner oder das Objekt aus, der angepasst werden soll.  
   
-        Klicken Sie im rechten Bereich auf **Type Mapping**.  
+        Klicken Sie im rechten Bereich auf **Typzuordnung**.  
   
--   **Wenn eine neue Zuordnung hinzufügen möchten, führen Sie folgende Schritte aus:**  
+-   **Gehen Sie folgendermaßen vor, um eine neue Zuordnung hinzuzufügen:**  
   
-    1.  Klicken Sie im Bereich Type Mapping auf **hinzufügen** .  
+    1.  Klicken Sie im Bereich Typzuordnung auf **Hinzufügen** .  
   
-    2.  Geben Sie der neuen Zuordnung im Dialogfeld unter **Quelltyp**, wählen Sie die MySQL-Datentyp zugeordnet.  
+    2.  Wählen Sie im Dialogfeld neue Typzuordnung unter **Quelltyp**den MySQL-Datentyp aus, der zugeordnet werden soll.  
   
-    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Länge für die Zuordnung durch Auswahl der **aus** und **zu** Kontrollkästchen und klicken Sie dann die Werte eingeben.  
+    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Daten Längen für die Zuordnung an, indem Sie die Kontrollkästchen **aus** und **auf** aktivieren und dann die Werte eingeben.  
   
-    4.  Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp. Klicken Sie unter **Zieltyp**, wählen Sie die SQL-Zielserver oder SQL Azure-Datentyp.  
+    4.  Auf diese Weise können Sie die Datenzuordnung für kleinere und größere Werte desselben Datentyps anpassen. Wählen Sie unter **Zieltyp**das Ziel SQL Server oder SQL Azure Datentyp aus.  
   
-        1.  Einige Datentypen erfordern eine Ziel-Datentyplänge. Falls erforderlich, geben Sie die neue Datenlänge in die **ersetzen durch** ein, und klicken Sie dann auf **OK**.  
+        1.  Einige Typen erfordern eine Länge des Ziel Datentyps. Geben Sie bei Bedarf die neue Daten Länge im Feld **Ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
-        2.  Einige Datentypen erfordern den Zieldatentyp **Genauigkeit** und **Skalierung**. Falls erforderlich, geben Sie der neuen Präzision und skalieren in die **ersetzen durch** ein, und klicken Sie dann auf **OK**.  
+        2.  Für einige Typen ist die **Genauigkeit** und **Skalierung**von Ziel Datentypen erforderlich. Geben Sie bei Bedarf die neue Genauigkeit und Skalierung im Feld **Ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
--   **Führen Sie folgende Schritte aus, um eine Zuordnung zu bearbeiten:**  
+-   **Gehen Sie folgendermaßen vor, um eine Typzuordnung zu bearbeiten:**  
   
-    1.  Klicken Sie im Bereich Type Mapping auf **bearbeiten**.  
+    1.  Klicken Sie im Bereich Typzuordnung auf **Bearbeiten**.  
   
-    2.  Listen Sie in die Zuordnung eines Typs im Dialogfeld unter **Quelltyp**, wählen Sie die MySQL-Datentyp zugeordnet.  
+    2.  Wählen Sie im Dialogfeld typzuordnungs Liste unter **Quelltyp**den MySQL-Datentyp aus, der zugeordnet werden soll.  
   
-    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Länge für die Zuordnung durch Auswahl der **aus** und **zu** Kontrollkästchen und klicken Sie dann die Werte eingeben.  
+    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Daten Längen für die Zuordnung an, indem Sie die Kontrollkästchen **aus** und **auf** aktivieren und dann die Werte eingeben.  
   
-    Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp. Klicken Sie unter **Zieltyp**, wählen Sie die SQL-Zielserver oder SQL Azure-Datentyp.  
+    Auf diese Weise können Sie die Datenzuordnung für kleinere und größere Werte desselben Datentyps anpassen. Wählen Sie unter **Zieltyp**das Ziel SQL Server oder SQL Azure Datentyp aus.  
   
-    1.  Einige Datentypen erfordern eine Ziel-Datentyplänge. Falls erforderlich, geben Sie die neue Datenlänge in die **ersetzen durch** ein, und klicken Sie dann auf **OK**.  
+    1.  Einige Typen erfordern eine Länge des Ziel Datentyps. Geben Sie bei Bedarf die neue Daten Länge im Feld **Ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
-    2.  Einige Datentypen erfordern den Zieldatentyp **Genauigkeit** und **Skalierung** . Falls erforderlich, geben Sie der neuen Präzision und skalieren in die **ersetzen durch** ein, und klicken Sie dann auf **OK** .  
+    2.  Für einige Typen ist die **Genauigkeit** und **Skalierung** von Ziel Datentypen erforderlich. Geben Sie bei Bedarf die neue Genauigkeit und Skalierung im Feld **Ersetzen durch** ein, und klicken Sie dann auf **OK** .  
   
--   **Um eine datentypzuordnung zu entfernen, führen Sie folgende Schritte aus:**  
+-   **Gehen Sie folgendermaßen vor, um eine Datentyp Zuordnung zu entfernen:**  
   
-    1.  Wählen Sie die Zeile in der Liste ' datentypzuordnung ', die die Zuordnung von Datentypen enthält, die Sie entfernen möchten, klicken Sie im Bereich "Zuordnung".  
+    1.  Wählen Sie im Bereich Typzuordnung die Zeile in der Liste Typzuordnung aus, die die Datentyp Zuordnung enthält, die Sie entfernen möchten.  
   
     2.  Klicken Sie auf **Entfernen**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrationsvorgangs besteht entweder [erstellen Sie ein Bewertungsbericht](assessing-mysql-databases-for-conversion-mysqltosql.md) oder [MySQL konvertieren Datenbankobjekten in SQL Server oder SQL Azure-Syntax](converting-mysql-databases-mysqltosql.md). Wenn Sie einen Bericht erstellen, werden die MySQL-Objekten während der Bewertung automatisch konvertiert.  
+Der nächste Schritt des Migrations Vorgangs besteht darin, entweder [einen Bewertungsbericht zu erstellen](assessing-mysql-databases-for-conversion-mysqltosql.md) oder [MySQL-Datenbankobjekte in SQL Server oder SQL Azure-Syntax zu konvertieren](converting-mysql-databases-mysqltosql.md). Wenn Sie einen Bericht erstellen, werden MySQL-Objekte während der Bewertung automatisch konvertiert.  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

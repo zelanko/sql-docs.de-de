@@ -1,5 +1,5 @@
 ---
-title: SUM (MDX) | Microsoft-Dokumentation
+title: Sum (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036673"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
 
 
-  Gibt die Summe eines numerischen Ausdrucks, ausgewertet über einer angegebenen Menge zurück.  
+  Gibt die Summe eines numerischen Ausdrucks zurück, der für eine angegebene Menge ausgewertet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,10 +31,10 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Mengenausdruck (Multidimensional Expressions).  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn ein numerischer Ausdruck angegeben ist, wird der angegebene numerische Ausdruck über die Menge ausgewertet und anschließend die Summe gebildet. Wenn kein numerischer Ausdruck angegeben ist, wird die angegebene Menge im aktuellen Kontext der Elemente der Menge ausgewertet und anschließend die Summe gebildet. Wenn die SUM-Funktion auf einen nicht numerischen Ausdruck angewendet wird, sind die Ergebnisse nicht definiert.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- Im folgenden Beispiel wird das WITH MEMBER-Schlüsselwort und die **Summe** Funktion, um ein berechnetes Element in der Measures-Dimension zu definieren, die die Summe des Reseller Sales Amount-Measures für die Elemente Canada und United States der enthält die Country-Attributhierarchie in der Geography-Dimension.  
+ Im folgenden Beispiel wird das with Member-Schlüsselwort und die **Sum** -Funktion verwendet, um ein berechnetes Element in der Measures-Dimension zu definieren, das die Summe des Reseller Sales Amount-Measures für die Kanadas-und USA-Member der Country-Attribut Hierarchie in der Geography-Dimension enthält.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +80,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- Häufig die **Summe** Funktion wird verwendet, mit der **CURRENTMEMBER** Funktion oder Funktionen wie **seit Jahresbeginn** , die eine Gruppe, die der von CurrentMember einer Hierarchie variiert zurückgeben. Die folgende Abfrage gibt z. B. die Summe der Internet Sales Amount-Measure für alle Datumsangaben ab Beginn des Kalenderjahrs bis zu dem Datum an, das auf der Zeilenachse angezeigt wird:  
+ Häufig wird die **Sum** -Funktion mit der **CurrentMember** -Funktion oder Funktionen wie **YTD** verwendet, die eine Menge zurückgeben, die abhängig vom CurrentMember einer Hierarchie variiert. Die folgende Abfrage gibt z. B. die Summe der Internet Sales Amount-Measure für alle Datumsangaben ab Beginn des Kalenderjahrs bis zu dem Datum an, das auf der Zeilenachse angezeigt wird:  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -92,7 +92,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

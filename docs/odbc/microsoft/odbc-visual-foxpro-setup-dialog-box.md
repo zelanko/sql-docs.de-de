@@ -1,5 +1,5 @@
 ---
-title: ODBC-Visual FoxPro-einrichten (Dialogfeld) | Microsoft-Dokumentation
+title: ODBC Visual FoxPro-Setup (Dialog Feld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,59 +15,59 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9aa8954cd42ac715b3e6e67e0b0add69d07a570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915664"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Einrichten von ODBC-Visual FoxPro (Dialogfeld)
-Die **ODBC-Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Ändern einer Visual FoxPro-Datenquelle.  
+Im Dialogfeld **Visual FoxPro-Setup für ODBC** können Sie eine Visual FoxPro-Datenquelle hinzufügen oder ändern.  
   
- Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Informationen zum Herunterladen des Treibers finden Sie auf [der Visual FoxPro-ODBC-Treiber-Download Website](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="dialog-box-options"></a>Dialogfeld "Optionen"  
- **Datenquellenname**  
- Geben Sie den Namen, die, den Sie für die Datenquelle verwenden möchten.  
+## <a name="dialog-box-options"></a>Dialog Feld Optionen  
+ **Datenquellen Name**  
+ Geben Sie den Namen ein, den Sie für die Datenquelle verwenden möchten.  
   
  **Beschreibung**  
- Geben Sie eine Beschreibung für die Datenquelle an.  
+ Geben Sie eine Beschreibung für die Datenquelle ein.  
   
  **Datenbanktyp**  
- Können Sie den Typ der Datenbank auswählen die Datenquelle für die Verbindung verwendet werden soll.  
+ Hiermit können Sie den Typ der Datenbank auswählen, mit der die Datenquelle eine Verbindung herstellen soll.  
   
- **Visual FoxPro-Datenbank (. EINER DATENBANK)**  
- Gibt an, dass die Datenquelle mit einer Visual FoxPro verbindet [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) (DBC-Datei) und für alle Tabellen und lokalen Ansichten in der Datenbank.  
+ **Visual FoxPro-Datenbank (. DBC (Double**  
+ Gibt an, dass die Datenquelle eine Verbindung mit einer Visual FoxPro- [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) (DBC-Datei) und mit allen Tabellen und lokalen Sichten in der Datenbank herstellt.  
   
- **Freien Sie Verzeichnis der Tabelle**  
- Gibt an, dass die Datenquelle in einem Verzeichnis verbunden [kostenlose Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md). Alle [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) werden Tabellen im gleichen Verzeichnis wie z. B. durch ODBC-Katalogfunktionen ignoriert [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) oder [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md). Datenbanktabellen können zugegriffen werden, indem Sie SQL SELECT-Anweisungen, die über gesendet [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) und [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+ **Kostenloses Tabellen Verzeichnis**  
+ Gibt an, dass die Datenquelle eine Verbindung mit einem Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)herstellt. Alle [Daten Bank](../../odbc/microsoft/visual-foxpro-terminology.md) Tabellen im gleichen Verzeichnis werden von ODBC-Katalog Funktionen wie [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) oder [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)ignoriert. Auf Datenbanktabellen kann mithilfe von SQL SELECT-Anweisungen zugegriffen werden, die über [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) und [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)gesendet werden.  
   
- **Pfad**  
- Zeigt den Pfad und Namen für die Datenbank oder das Verzeichnis der kostenlosen Tabellen, mit denen die Datenquelle verbunden wird.  
+ **Path**  
+ Zeigt den Pfad und den Namen für die Datenbank oder das Verzeichnis der freien Tabellen an, mit denen die Datenquelle eine Verbindung herstellt.  
   
  **Durchsuchen**  
- Ermöglicht Ihnen die Suche Ihr System und das Netzwerk für die Datenbank oder das Verzeichnis, mit der Datenquelle hergestellt werden soll.  
+ Ermöglicht es Ihnen, das System und das Netzwerk nach der Datenbank oder dem Verzeichnis zu durchsuchen, mit der Sie eine Verbindung mit der Datenquelle herstellen möchten.  
   
- **Options**  
- Erweitert das Dialogfeld, sodass Sie Visual FoxPro-ODBC-Treiber festgelegt werden können.  
+ **Optionen**  
+ Erweitert das Dialogfeld, sodass Sie die Visual FoxPro-ODBC-Treiberoptionen festlegen können.  
   
 ## <a name="driver"></a>Treiber  
  **Sortierreihenfolge**  
- Die Reihenfolge, in der Felder sortiert werden. Die Standard-Sequenzen wider, die Sequenzen, die von Ihrer Sprachversion des Betriebssystems unterstützt wird. Eine Liste der unterstützten sortierenden Sequenzen, finden Sie unter [festgelegt COLLATE](../../odbc/microsoft/set-collate-command.md).  
+ Die Reihenfolge, in der Felder sortiert werden. Die Standardsequenzen entsprechen den Sequenzen, die von Ihrer Sprachversion des Betriebssystems unterstützt werden. Eine Liste der unterstützten Sortierungs Sequenzen finden Sie unter [SET COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
- **Exclusive**  
- Wenn dieses Kontrollkästchen aktiviert ist, wird der Treiber die Visual FoxPro-Datenbank geöffnet, ausschließlich auf, wenn Sie Daten unter Verwendung der Datenquelle zugreifen. Andere Benutzer zugreifen nicht die Datenbank oder den Tabellen in der Datenbank, während die Datenbank exklusiv genutzt wird. Tabellen in der exklusiv geöffnete Datenbank werden als SHARED geöffnet. Um eine Tabelle ausschließlich zu öffnen, verwenden die [exklusiv festgelegt](../../odbc/microsoft/set-exclusive-command.md) Befehl. Ist dieses Kontrollkästchen deaktiviert, wenn **Datenbanktyp** nastaven NA hodnotu **freies**.  
+ **Exklusiv**  
+ Wenn dieses Kontrollkästchen aktiviert ist, öffnet der Treiber die Visual FoxPro-Datenbank ausschließlich, wenn Sie mithilfe der Datenquelle auf Daten zugreifen. Andere Benutzer können nicht auf die Datenbank oder die Tabellen in der Datenbank zugreifen, während die Datenbank exklusiv geöffnet wird. Tabellen in der exklusiv geöffneten Datenbank werden als freigegeben geöffnet. Verwenden Sie den Befehl [exklusiven festlegen](../../odbc/microsoft/set-exclusive-command.md) , um exklusiv eine Tabelle zu öffnen. Dieses Kontrollkästchen ist deaktiviert, wenn der **Datenbanktyp** auf das **freie Tabellen Verzeichnis**festgelegt ist.  
   
  **NULL**  
- Bestimmt, ob Spalten mit ALTER TABLE und CREATE TABLE erstellt wurden null-Werte zulassen. Wenn Sie Null ON festlegen, fügt der INSERT - SQL einen null-Wert in jede Spalte, die nicht in einer INSERT - SQL enthalten... VALUE-Klausel. Wenn Null auf OFF festgelegt ist, wird ein Leerzeichen eingefügt. Außerdem können Sie steuern, diese Option aus, über eine übergebene Verbindungszeichenfolge wie im folgenden Code:  
+ Bestimmt, ob mit ALTER TABLE und CREATE TABLE erstellte Spalten NULL-Werte zulassen. Wenn Sie für NULL festlegen, fügt INSERT-SQL einen NULL-Wert in eine Spalte ein, die nicht in einem INSERT-SQL... VALUE-Klausel. Wenn NULL deaktiviert ist, wird ein leeres-Zeichen eingefügt. Sie können diese Option auch über eine bestandene Verbindungs Zeichenfolge steuern, wie im folgenden Code:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Gelöscht**  
- Bestimmt, ob als gelöscht markierte Zeilen zurückgegeben werden. Außerdem können Sie steuern, diese Option aus, über eine übergebene Verbindungszeichenfolge wie im folgenden Code:  
+ **Lö**  
+ Bestimmt, ob Zeilen zurückgegeben werden, die als gelöscht markiert sind. Sie können diese Option auch über eine bestandene Verbindungs Zeichenfolge steuern, wie im folgenden Code:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
@@ -75,5 +75,5 @@ SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;
 DELETED=YES"  
 ```  
   
- **Abrufen der Daten im Hintergrund**  
- Bestimmt, ob Datensätze, im Hintergrund (progressive abrufen abgerufen werden) oder Ihre Anwendung wartet, bis alle Datensätze in das Resultset abgerufen werden.
+ **Abrufen von Daten im Hintergrund**  
+ Bestimmt, ob Datensätze im Hintergrund abgerufen werden (progressives abrufen), oder die Anwendung wartet, bis alle Datensätze im Resultset abgerufen werden.

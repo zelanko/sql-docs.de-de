@@ -20,18 +20,18 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911319"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
- **SQLGetDiagRec** gibt die aktuellen Werte aus mehreren Feldern, der ein Diagnosedatensatz, die Fehler, Warnung und Statusinformationen enthält. Im Gegensatz zu **SQLGetDiagField**, womit eine diagnosefeld pro Aufruf **SQLGetDiagRec** gibt verschiedene, häufig verwendete Felder des ein Diagnosedatensatz, einschließlich SQLSTATE, der systemeigene Fehlercode, und der diagnosemeldung Text.  
+ **SQLGetDiagRec** gibt die aktuellen Werte mehrerer Felder eines Diagnosedaten Satzes zurück, der Fehler-, Warnungs-und Statusinformationen enthält. Im Gegensatz zu **SQLGetDiagField**, das ein Diagnose Feld pro-Befehl zurückgibt, gibt **SQLGetDiagRec** einige häufig verwendete Felder eines Diagnosedaten Satzes zurück, einschließlich SQLSTATE, den systemeigenen Fehlercode und den Text der Diagnose Meldung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ SQLRETURN SQLGetDiagRec(
   
 ## <a name="arguments"></a>Argumente  
  *HandleType*  
- [Eingabe] Ein Handle-Typbezeichner, der den Typ des Handles wird beschrieben, für die Diagnose erforderlich sind. Dies muss eine der folgenden Ressourcen sein:  
+ Der Ein Handle-Typbezeichner, der den Typ des Handles beschreibt, für den eine Diagnose erforderlich ist. Dies muss eine der folgenden Ressourcen sein:  
   
 -   SQL_HANDLE_DBC  
   
@@ -62,80 +62,80 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur von der Treiber-Manager und Treiber verwendet. Anwendungen sollten nicht mit dieser Handletyp verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN, finden Sie unter [Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur vom Treiber-Manager und vom Treiber verwendet. Anwendungen sollten diesen Handlertyp nicht verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
- *Handle*  
- [Eingabe] Ein Handle für die Diagnose Datenstruktur, die vom angegebenen Typ *HandleType*. Wenn *HandleType* SQL_HANDLE_ENV auf, wird *behandeln* kann entweder eine freigegebene oder ein nicht freigegebenes Umgebungshandle sein.  
+ *Bewältigen*  
+ Der Ein Handle für die Diagnosedaten Struktur des Typs, der durch den *Handlertyp*angegeben wird. Wenn " *Lenker Type* " SQL_HANDLE_ENV ist, kann *handle* entweder ein frei Gegebenes oder ein nicht gemeinsam genutztes Umgebungs Handle sein.  
   
  *RecNumber*  
- [Eingabe] Gibt an, den Status-Datensatz, der von dem die Anwendung Informationen sucht. Statusdatensätze werden von 1 nummeriert.  
+ Der Gibt den Statusdaten Satz an, von dem die Anwendung Informationen sucht. Status Datensätze sind von 1 nummeriert.  
   
- *SQLState*  
- [Ausgabe] Zeiger auf einen Puffer, in dem eine fünfstelligen SQLSTATE-Code (und das abschließende NULL-Zeichen) für die Diagnosedatensatz zurückgegeben *RecNumber*. Die ersten beiden Zeichen anzugeben, die Klasse; die folgenden drei Geben Sie an die-Unterklasse. Diese Informationen sind im Feld SQL_DIAG_SQLSTATE Diagnose enthalten. Weitere Informationen finden Sie unter [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md).  
+ *SQLSTATE*  
+ Ausgeben Ein Zeiger auf einen Puffer, in den ein fünfstelliger SQLSTATE-Code (und das Beenden von null) für die *wiedergabenummer*des Diagnosedaten Satzes zurückgegeben werden soll. Die ersten beiden Zeichen geben die Klasse an. die nächsten drei weisen auf die Unterklasse hin. Diese Informationen sind im Feld SQL_DIAG_SQLSTATE Diagnose enthalten. Weitere Informationen finden Sie unter [Sqlstates](../../../odbc/reference/develop-app/sqlstates.md).  
   
- *NativeErrorPtr*  
- [Ausgabe] Zeiger auf einen Puffer, in die den systemeigene Fehlercode für die Datenquelle zurückgegeben werden sollen. Diese Informationen sind im Feld SQL_DIAG_NATIVE Diagnose enthalten.  
+ *Nativeerrorptr*  
+ Ausgeben Zeiger auf einen Puffer, in den der systemeigene Fehlercode zurückgegeben werden soll, der spezifisch für die Datenquelle ist. Diese Informationen sind im Feld SQL_DIAG_NATIVE Diagnose enthalten.  
   
  *MessageText*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die diagnosemeldung Zeichenfolge zurückgegeben. Diese Informationen sind im Feld SQL_DIAG_MESSAGE_TEXT Diagnose enthalten. Das Format der Zeichenfolge ist, finden Sie unter [Diagnosemeldungen](../../../odbc/reference/develop-app/diagnostic-messages.md).  
+ Ausgeben Zeiger auf einen Puffer, in den die Text Zeichenfolge der Diagnose Meldung zurückgegeben werden soll. Diese Informationen sind im Feld SQL_DIAG_MESSAGE_TEXT Diagnose enthalten. Das Format der Zeichenfolge finden Sie unter [Diagnosemeldungen](../../../odbc/reference/develop-app/diagnostic-messages.md).  
   
- Wenn *MessageText* NULL ist, *TextLengthPtr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer, der auf zurückgegeben *MessageText*.  
+ Wenn *MessageText* NULL ist, gibt *Textlängen PTR* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *MessageText*verwiesen wird.  
   
- *BufferLength*  
- [Eingabe] Länge der **MessageText* -Puffers in Zeichen. Es gibt keine maximale Länge des Texts der Diagnose.  
+ *Pufferlänge*  
+ Der Länge des **MessageText* -Puffers in Zeichen. Es gibt keine maximale Länge für den Text der Diagnose Nachricht.  
   
- *TextLengthPtr*  
- [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme von der Anzahl von Zeichen, die für die Null-Terminierungszeichen erforderlich) zur Verfügung, die in zurückgegeben  *\*MessageText*. Ist die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als *Pufferlänge*, den Text der diagnosemeldung in  *\*MessageText* auf abgeschnitten *Pufferlänge* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
+ *Textverlänptr*  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen zurückgegeben werden soll (ausgenommen der Anzahl der Zeichen, die für das NULL-Beendigungs Zeichen erforderlich sind), die in * \*MessageText*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als *BufferLength*ist, wird der Text der Diagnose Nachricht in * \*MessageText* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- **SQLGetDiagRec** veröffentlichen DiagnoseDatensätze nicht für sich selbst. Sie können die folgenden Rückgabewerte verwendet, um das Ergebnis seiner eigenen Ausführung zu melden:  
+ **SQLGetDiagRec** sendet keine Diagnosedaten Sätze für sich selbst. Die folgenden Rückgabewerte werden verwendet, um das Ergebnis der eigenen Ausführung zu melden:  
   
--   SQL_SUCCESS: Diagnoseinformationen wird von die Funktion wurde erfolgreich zurückgegeben.  
+-   SQL_SUCCESS: die Funktion hat erfolgreich Diagnoseinformationen zurückgegeben.  
   
--   SQL_SUCCESS_WITH_INFO: Die \* *MessageText* Puffer war zu klein für die angeforderte diagnosemeldung. Es wurden keine DiagnoseDatensätze generiert. Um zu bestimmen, dass durch das Abschneiden aufgetreten ist, vergleichen Sie die Anwendung muss *Pufferlänge* auf die tatsächliche Anzahl von Bytes verfügbar ist, das wird **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: der \* *MessageText* -Puffer war zu klein, um die angeforderte Diagnose Meldung zu speichern. Es wurden keine Diagnosedaten Sätze generiert. Um zu ermitteln, ob ein Abschneiden aufgetreten ist, muss die Anwendung *BufferLength* mit der tatsächlichen Anzahl der verfügbaren Bytes vergleichen, die in **stringlengthptr*geschrieben wird.  
   
--   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
+-   SQL_INVALID_HANDLE: das Handle, das von " *Lenker Type* " und " *handle* " angegeben wird, war kein gültiges Handle.  
   
--   SQL_ERROR ZURÜCK: Eine der folgenden aufgetreten ist:  
+-   SQL_ERROR: eine der folgenden Fehler ist aufgetreten:  
   
-    -   *RecNumber* war negativ oder 0.  
+    -   Die *neuzahl* war negativ oder 0.  
   
-    -   *BufferLength* ist kleiner als 0 (null).  
+    -   *BufferLength* war kleiner als 0 (null).  
   
-    -   Wenn Sie asynchrone Benachrichtigung verwenden zu können, war der asynchrone Vorgang auf den Ziehpunkt nicht abgeschlossen werden.  
+    -   Bei Verwendung der asynchronen Benachrichtigung war der asynchrone Vorgang für das Handle nicht beendet.  
   
--   SQL_NO_DATA: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
+-   SQL_NO_DATA: *die Anzahl der* Diagnosedaten Sätze, die für das in handle angegebene Handle vorhanden waren, war größer als die Anzahl der Diagnosedaten Sätze *.* Die Funktion gibt auch SQL_NO_DATA für jede positive *remenge* zurück, wenn keine Diagnosedaten Sätze für das *handle*vorhanden sind.  
   
 ## <a name="comments"></a>Kommentare  
- Ruft eine Anwendung in der Regel **SQLGetDiagRec** Wenn ein vorherigen Aufruf von einer ODBC-Funktion SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgegeben hat. Aber da eine ODBC-Funktion keine oder mehrere DiagnoseDatensätze jedes Mal buchen können sie aufgerufen wird, kann eine Anwendung aufrufen **SQLGetDiagRec** nach jedem Aufruf der ODBC-Funktion. Kann eine Anwendung aufrufen **SQLGetDiagRec** mehrere Male auf, um einige oder alle Datensätze in der Struktur diagnostische Daten zurückzugeben. ODBC erzwingt keine Begrenzung der Anzahl der DiagnoseDatensätze, die zu jedem Zeitpunkt gespeichert werden können.  
+ Eine Anwendung ruft normalerweise **SQLGetDiagRec** auf, wenn ein vorheriger Aufruf einer ODBC-Funktion SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgegeben hat. Da jede ODBC-Funktion bei jedem Aufruf NULL oder mehr Diagnosedaten Sätze veröffentlichen kann, kann eine Anwendung nach jedem ODBC-Funktionsaufruf **SQLGetDiagRec** aufrufen. Eine Anwendung kann **SQLGetDiagRec** mehrmals aufrufen, um einige oder alle Datensätze in der Diagnosedaten Struktur zurückzugeben. ODBC schränkt die Anzahl der Diagnosedaten Sätze ein, die zu einem beliebigen Zeitpunkt gespeichert werden können.  
   
- **SQLGetDiagRec** kann nicht verwendet werden, um Felder aus dem Header der Struktur diagnostische Daten zurückzugeben. (Die *RecNumber* Argument muss größer als 0 sein.) Die Anwendung sollte Aufrufen **SQLGetDiagField** für diesen Zweck.  
+ **SQLGetDiagRec** kann nicht zum Zurückgeben von Feldern aus dem Header der Diagnosedaten Struktur verwendet werden. (Das *RecNumber* -Argument muss größer als 0 sein.) Die Anwendung sollte zu diesem Zweck **SQLGetDiagField** aufrufen.  
   
- **SQLGetDiagRec** ruft nur die zuletzt angegebene Handle zugeordnete Diagnoseinformationen der *behandeln* Argument. Wenn die Anwendung eine andere ODBC-Funktion aufruft, mit Ausnahme der **SQLGetDiagRec**, **SQLGetDiagField**, oder **SQLError**, diagnostische Informationen aus den vorherigen Aufrufen auf der dasselbe Handle geht verloren.  
+ **SQLGetDiagRec** ruft nur die Diagnoseinformationen ab, die zuletzt mit dem im *handle* -Argument angegebenen Handle verknüpft sind. Wenn die Anwendung eine andere ODBC-Funktion aufruft, mit Ausnahme von **SQLGetDiagRec**, **SQLGetDiagField**oder **SQLError**, gehen alle Diagnoseinformationen aus den vorherigen Aufrufen desselben Handles verloren.  
   
- Eine Anwendung kann gescannt werden. alle DiagnoseDatensätze von Schleifen, besitzt eine Schrittweite *RecNumber*, solange **SQLGetDiagRec** gibt SQL_SUCCESS zurück. Aufrufe von **SQLGetDiagRec** an den Header und der Datensatz nicht destruktiv sind. Die Anwendung kann Aufrufen **SQLGetDiagRec** erneut zu einem späteren Zeitpunkt zum Abrufen eines Felds aus einem Datensatz, wie lange wie keine andere Funktion, mit Ausnahme von **SQLGetDiagRec**, **SQLGetDiagField**, oder **SQLError**, in der Zwischenzeit aufgerufen wurde. Außerdem kann die Anwendung die gesamte Anzahl von Diagnosedatensätzen verfügbar abrufen, durch den Aufruf **SQLGetDiagField** zum Abrufen des Werts der SQL_DIAG_NUMBER-Feld, und klicken Sie dann aufrufen **SQLGetDiagRec**mit dieser Häufigkeit.  
+ Eine Anwendung kann alle Diagnosedaten Sätze durch Schleifen Scannen und die *RecNumber*erhöhen, sofern **SQLGetDiagRec** SQL_SUCCESS zurückgibt. Aufrufe von **SQLGetDiagRec** sind für die Header-und Daten Satz Felder nicht schädlich. Die Anwendung kann **SQLGetDiagRec** zu einem späteren Zeitpunkt erneut aufrufen, um ein Feld aus einem Datensatz abzurufen, solange keine andere Funktion mit Ausnahme von **SQLGetDiagRec**, **SQLGetDiagField**oder **SQLError**in der Zwischenzeit aufgerufen wurde. Die Anwendung kann auch die Anzahl der verfügbaren Diagnosedaten Sätze abrufen, indem **SQLGetDiagField** aufgerufen wird, um den Wert des SQL_DIAG_NUMBER Felds abzurufen und dann **SQLGetDiagRec** mehrmals aufzurufenden.  
   
- Eine Beschreibung der Felder der Struktur diagnostische Daten finden Sie unter [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Weitere Informationen finden Sie unter [mithilfe von SQLGetDiagRec und SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) und [Implementieren von SQLGetDiagRec und SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
+ Eine Beschreibung der Felder der Diagnosedaten Struktur finden Sie unter [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Weitere Informationen finden Sie unter [Verwenden von SQLGetDiagRec und SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) und [Implementieren von SQLGetDiagRec und SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
- Aufrufen einer API als dem, der asynchron ausgeführt wird, wird HY010 generiert "Sequenzfehler Function". Allerdings kann nicht Error-Datensatzes nicht abgerufen werden, bevor der asynchrone Vorgang abgeschlossen ist.  
+ Wenn eine andere API aufgerufen wird, als die, die asynchron ausgeführt wird, wird HY010 "Function Sequence Error" generiert. Der Fehler Daten Satz kann jedoch erst abgerufen werden, wenn der asynchrone Vorgang abgeschlossen ist.  
   
-## <a name="handletype-argument"></a>HandleType-Argument  
- Jede Handletyp kann Diagnoseinformationen zugeordnet haben. Die *HandleType* Argument gibt den Handle der *behandeln* Argument.  
+## <a name="handletype-argument"></a>Lenker-Typargument  
+ Jedem Handlertyp können Diagnoseinformationen zugeordnet werden. Das " *Lenker Type* "-Argument gibt den Handlertyp des *handle* -Arguments an.  
   
- Einige Felder Header und eines Eintrags können nicht für die Umgebung, Verbindung, anweisungs- und Deskriptorstatuswerte Handles zurückgegeben werden. Diese Handles, die für die ein Feld nicht anwendbar ist sind angegeben, in den Abschnitten "Headerfelder" und "Felder" Datensatz " [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
+ Einige Header-und Daten Satz Felder können für die Umgebungs-, Verbindungs-, Anweisungs-und Deskriptorhandles nicht zurückgegeben werden. Die Handles, für die ein Feld nicht anwendbar ist, werden in den Abschnitten "Header Felder" und "Daten Satz Felder" in [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)angegeben.  
   
- Ein Aufruf von **SQLGetDiagRec** gibt SQL_INVALID_HANDLE zurück, wenn *HandleType* SQL_HANDLE_SENV, die einer freigegebenen Umgebungshandle bezeichnet wird. Aber wenn *HandleType* SQL_HANDLE_ENV auf, wird *behandeln* kann entweder eine freigegebene oder ein nicht freigegebenes Umgebungshandle sein.  
+ Ein-Befehl von **SQLGetDiagRec** gibt SQL_INVALID_HANDLE zurück, wenn der *Handlertyp* SQL_HANDLE_SENV ist, der ein frei gegebenes Umgebungs Handle bezeichnet. Wenn allerdings der *Handlertyp* SQL_HANDLE_ENV ist, kann *handle* entweder ein frei Gegebenes oder ein nicht gemeinsam genutztes Umgebungs Handle sein.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Erhalten ein Feld ein Diagnosedatensatz oder ein Feld des Diagnose-Headers|[SQLGetDiagField-Funktion](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
+|Abrufen eines Felds eines Diagnosedaten Satzes oder eines Felds des Diagnose Headers|[SQLGetDiagField-Funktion](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md)

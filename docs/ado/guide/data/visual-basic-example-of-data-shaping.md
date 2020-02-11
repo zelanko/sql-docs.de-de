@@ -1,5 +1,5 @@
 ---
-title: Visual Basic-Beispiel der Datenstrukturierung | Microsoft-Dokumentation
+title: Visual Basic Beispiel für die Daten Strukturierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923507"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic-Beispiel der Datenstrukturierung
@@ -92,14 +92,14 @@ End Function
   
 #### <a name="try-it"></a>Versuch es!  
   
-1.  Erstellen eines Visual Basic-Standard-EXE-Anwendungsprojekts  
+1.  Erstellen eines Visual Basic Standard-exe-Anwendungs Projekts  
   
-2.  Wählen Sie **Komponenten** aus der **Projekt** Menü in Visual Studio  
+2.  Auswählen von **Komponenten** aus dem Menü " **Projekt** " in Visual Studio  
   
-3.  Wählen Sie "Microsoft hierarchische Flex-Tabelle Steuerelement 6.0 (OLEDB)" aus der **Komponenten** Popup-Fenster, und klicken Sie dann auf **speichern**.  
+3.  Wählen Sie im Popup Fenster **Komponenten** "Microsoft hierarchisches FlexGrid-Steuerelement 6,0 (OleDb)" aus, und klicken Sie dann auf **Speichern**.  
   
-4.  Doppelklicken Sie auf das Steuerelement Flex-Tabelle, aus dem Bereich "ToolBox" in Visual Basic-Arbeitsbereichs. Ändern Sie den Namen dieser Instanz, um MSHFLEXGRID.  
+4.  Doppelklicken Sie im Bereich Toolbox im Arbeitsbereich Visual Basic auf das Steuerelement FlexGrid. Ändern Sie den Namen dieser Instanz in MSHFlexGrid.  
   
-5.  Kopieren Sie den vorherigen Code, und fügen Sie ihn in das **Code** Seite, um alle vorhandenen Code zu ersetzen.  
+5.  Kopieren Sie den vorangehenden Code, und fügen Sie ihn in die **Codepage** ein, um vorhandenen Code zu ersetzen.  
   
-6.  Wählen Sie **starten** aus der **ausführen** Menü, um die Anwendung auszuführen.
+6.  Wählen Sie im Menü **Ausführen** die Option **starten** aus, um die Anwendung auszuführen.

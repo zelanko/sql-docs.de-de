@@ -1,5 +1,5 @@
 ---
-title: INSERT - SQL-Befehl | Microsoft-Dokumentation
+title: INSERT-SQL-Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019450"
 ---
 # <a name="insert---sql-command"></a>INSERT (SQL-Befehl)
-Fügt einen Datensatz am Ende eine Tabelle mit der angegebenen Feldwerte.  
+Fügt einen Datensatz an das Ende einer Tabelle an, die die angegebenen Feldwerte enthält.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt die systemeigene Visual FoxPro-Sprachsyntax für diesen Befehl. Treiberspezifische Informationen finden Sie in den Hinweisen.  
+ Der Visual FoxPro-ODBC-Treiber unterstützt die native Visual FoxPro-Sprachsyntax für diesen Befehl. Treiber spezifische Informationen finden Sie in den hinweisen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,25 +33,25 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- INSERT INTO *Dbf_name*  
- Gibt den Namen der Tabelle, die der neue Datensatz angefügt wird. *Dbf_name* kann einen Pfad enthalten und kann ein Namensausdruck sein.  
+ In *dbf_name* einfügen  
+ Gibt den Namen der Tabelle an, an die der neue Datensatz angefügt wird. *dbf_name* kann einen Pfad enthalten und kann ein namens Ausdruck sein.  
   
- Wenn die Tabelle, die Sie angeben, nicht geöffnet ist, wird sie ausschließlich in einen neuen Arbeitsbereich geöffnet, und des neuen Datensatzes in der Tabelle hinzugefügt wird. Der neue Arbeitsbereich ist nicht ausgewählt. aktuellen Arbeitsbereich bleibt ausgewählt.  
+ Wenn die von Ihnen angegebene Tabelle nicht geöffnet ist, wird Sie ausschließlich in einem neuen Arbeitsbereich geöffnet, und der neue Datensatz wird an die Tabelle angehängt. Der neue Arbeitsbereich ist nicht ausgewählt. der aktuelle Arbeitsbereich bleibt ausgewählt.  
   
- Wenn die Tabelle, die Sie angeben, geöffnet ist, fügt Einfügen des neuen Datensatzes in die Tabelle an. Ist die Tabelle außer dem aktuellen Arbeitsbereich in einen Arbeitsbereich öffnen, wird nicht es ausgewählt, nachdem der Datensatz angefügt wurde. aktuellen Arbeitsbereich bleibt ausgewählt.  
+ Wenn die von Ihnen angegebene Tabelle geöffnet ist, fügt INSERT den neuen Datensatz an die Tabelle an. Wenn die Tabelle in einem anderen Arbeitsbereich als dem aktuellen Arbeitsbereich geöffnet ist, wird Sie nach dem Anfügen des Datensatzes nicht ausgewählt. der aktuelle Arbeitsbereich bleibt ausgewählt.  
   
  [( *fname1*[, *fname2*[,...]])]  
- Gibt an, den Namen der Felder im neuen Datensatz in die die Werte eingefügt werden.  
+ Gibt die Namen der Felder im neuen Datensatz an, in die die Werte eingefügt werden.  
   
  Werte ( *eExpression1*[, *eExpression2*[,...]])  
- Gibt an, die Werte der Felder des neuen Datensatzes eingefügt. Wenn Sie die Feldnamen weglassen, müssen Sie die Feldwerte in der Reihenfolge definiert, durch die Tabellenstruktur angeben.  
+ Gibt die Feldwerte an, die in den neuen Datensatz eingefügt werden. Wenn Sie die Feldnamen weglassen, müssen Sie die Feldwerte in der von der Tabellenstruktur definierten Reihenfolge angeben.  
   
-## <a name="remarks"></a>Hinweise  
- Der neue Datensatz enthält, die Daten, die in der VALUES-Klausel aufgeführt wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Der neue Datensatz enthält die Daten, die in der VALUES-Klausel aufgeführt sind.  
   
-## <a name="driver-remarks"></a>Treiber "Hinweise".  
- Wenn Ihre Anwendung die ODBC-SQL-Anweisung INSERT an die Datenquelle sendet, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl in der Visual FoxProINSERT-Befehl ohne Übersetzung an.  
+## <a name="driver-remarks"></a>Hinweise zu Treibern  
+ Wenn Ihre Anwendung die INSERT-Anweisung der ODBC-SQL-Anweisung an die Datenquelle sendet, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl ohne Übersetzung in den Visual foxproinsert-Befehl.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie Tabelle - SQL-Befehl.](../../odbc/microsoft/create-table-sql-command.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [CREATE TABLE-SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
  [SELECT (SQL-Befehl)](../../odbc/microsoft/select-sql-command.md)

@@ -10,10 +10,10 @@ ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258454"
 ---
 # <a name="managing-a-composite-domain"></a>Verwalten einer Verbunddomäne
@@ -31,17 +31,17 @@ ms.locfileid: "75258454"
   
 |||  
 |-|-|  
-|Sie können eine semantische Darstellung für ein Datenfeld erstellen, das aus mehreren verwandten Begriffen besteht, die nicht analysiert werden.|[Erstellen einer Verbund Domäne](../data-quality-services/create-a-composite-domain.md)|  
-|Wenn Sie einer Verbunddomäne komplexe Daten zuordnen, können Sie die Daten basierend auf Trennzeichen und zusätzlich auf Grundlage des Wissens analysieren. DQS versucht zunächst, mithilfe des Wissens zu den einzelnen Domänen zu bestimmen, wie Teile der komplexen Zeichenfolge in die einzelnen Domänen gehören.|[Erstellen einer Verbund Domäne](../data-quality-services/create-a-composite-domain.md)|  
-|Fügen Sie einen Verweisdatendienst, z. B. einen Dienst zum Behandeln von Adressdaten, an eine Verbunddomäne an.|[Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|Erstellen Sie eine domänenübergreifende Regel, wenn der Wert einer Domäne in einer Verbunddomäne Auswirkungen auf den Wert einer anderen Domäne hat.|[Erstellen einer Domänen übergreifenden Regel](../data-quality-services/create-a-cross-domain-rule.md)|  
-|Identifizieren Sie Wertkombinationen, damit DQS ihre Häufigkeit melden kann.|[Verwenden von Wert Beziehungen in einer Verbund Domäne](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|Sie können eine semantische Darstellung für ein Datenfeld erstellen, das aus mehreren verwandten Begriffen besteht, die nicht analysiert werden.|[Erstellen einer Verbunddomäne](../data-quality-services/create-a-composite-domain.md)|  
+|Wenn Sie einer Verbunddomäne komplexe Daten zuordnen, können Sie die Daten basierend auf Trennzeichen und zusätzlich auf Grundlage des Wissens analysieren. DQS versucht zunächst, mithilfe des Wissens zu den einzelnen Domänen zu bestimmen, wie Teile der komplexen Zeichenfolge in die einzelnen Domänen gehören.|[Erstellen einer Verbunddomäne](../data-quality-services/create-a-composite-domain.md)|  
+|Fügen Sie einen Verweisdatendienst, z. B. einen Dienst zum Behandeln von Adressdaten, an eine Verbunddomäne an.|[Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|Erstellen Sie eine domänenübergreifende Regel, wenn der Wert einer Domäne in einer Verbunddomäne Auswirkungen auf den Wert einer anderen Domäne hat.|[Erstellen einer domänenübergreifenden Regel](../data-quality-services/create-a-cross-domain-rule.md)|  
+|Identifizieren Sie Wertkombinationen, damit DQS ihre Häufigkeit melden kann.|[Verwenden von Wertbeziehungen in einer Verbunddomäne](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen einer Wissensdatenbank durch das Ausführen der Wissensermittlung und interaktives Verwalten von Wissen|[Aufbauen einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
+|Erstellen einer Wissensdatenbank durch das Ausführen der Wissensermittlung und interaktives Verwalten von Wissen|[Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
 |Importieren von Wissen in oder Exportieren von Wissen aus einer Wissensdatenbank.|[Importieren und Exportieren von Wissen](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Erstellen einer einzelnen Domäne und Hinzufügen von Wissen zur Domäne.|[Verwalten einer Domäne](../data-quality-services/managing-a-domain.md)|  
   

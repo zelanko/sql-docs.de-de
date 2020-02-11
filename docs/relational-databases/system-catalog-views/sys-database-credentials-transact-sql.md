@@ -1,5 +1,5 @@
 ---
-title: database_credentials (Transact-SQL) | Microsoft-Dokumentation
+title: sys. database_credentials (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -19,37 +19,37 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999527"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>database_credentials (Transact-SQL)
+# <a name="sysdatabase_credentials-transact-sql"></a>sys. database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Gibt eine Zeile für jede Datenbank von datenbankweit gültigen Anmeldeinformationen in der Datenbank.  
+  Gibt eine Zeile für jede Daten Bank weite Anmelde Information in der Datenbank zurück.  
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) stattdessen.    
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [sys. database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) .    
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|ID der datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
-|NAME|**sysname**|Name der Datenbank von datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
+|credential_id|**int**|ID der Daten Bank weit gültigen Anmelde Informationen. Ist in der Datenbank eindeutig.|  
+|name|**sysname**|Name der Daten Bank weit gültigen Anmelde Informationen. Ist in der Datenbank eindeutig.|  
 |credential_identity|**nvarchar(4000)**|Name der zu verwendenden Identität. In der Regel ist dies ein Windows-Benutzer. Er muss nicht eindeutig sein.|  
-|create_date|**datetime**|Zeitpunkt, zu dem die datenbankweit gültige Anmeldeinformationen erstellt wurde.|  
-|modify_date|**datetime**|Zeitpunkt, an der datenbankweit gültigen Anmeldeinformationen zuletzt geändert wurde.|  
-|target_type|**nvarchar(100)**|Typ der Datenbank von datenbankweit gültigen Anmeldeinformationen. Gibt NULL für die Datenbank beschränkt Anmeldeinformationen.|  
-|target_id|**int**|Die ID des Objekts, das die datenbankweit gültigen Anmeldeinformationen zugeordnet ist. Gibt 0 zurück, für die Datenbank beschränkt, Anmeldeinformationen|  
+|create_date|**datetime**|Zeitpunkt, zu dem die Daten Bank weit gültigen Anmelde Informationen erstellt wurden.|  
+|modify_date|**datetime**|Zeitpunkt, zu dem die Daten Bank weit gültigen Anmelde Informationen zuletzt geändert wurden.|  
+|target_type|**nvarchar (100)**|Typ der Daten Bank weit gültigen Anmelde Informationen. Gibt NULL für Daten Bank weit gültige Anmelde Informationen zurück.|  
+|target_id|**int**|ID des Objekts, dem die Daten Bank weit gültigen Anmelde Informationen zugeordnet sind. Gibt 0 für Daten Bank weit gültige Anmelde Informationen zurück.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `CONTROL`-Berechtigung für die Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
- [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Anmelde Informationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Create Database scoped Credential &#40;Transact-SQL-&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [Alter Database scoped Credential &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [Drop Database scoped Credential &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: ToggleDrillState (MDX) | Microsoft-Dokumentation
+title: "\"Tggledrillstate\" (MDX) | Microsoft-Dokumentation"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036613"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
@@ -35,19 +35,19 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
  *Rekursive*  
- (Optional) Ein Schlüsselwort, das einen rekursiven Vergleich von Mengen angibt. Die **ToggleDrillState** Funktion ist eine Kombination der **DrillupMember** und **DrilldownMember** Funktionen. Rekursion gilt nur, wenn das Element enthalten ist das **DrilldownMember** Zustand.  
+ (Optional). Ein Schlüsselwort, das einen rekursiven Vergleich von Mengen angibt. Die Funktion " **deggledrillstate** " ist eine Kombination der **DrillupMember** -Funktion und der **DrilldownMember** -Funktion. Die Rekursion wird nur angewendet, wenn sich der Member im **DrilldownMember** -Zustand befindet.  
   
  *Include_calc_members*  
- (Optional) Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
+ (Optional). Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
   
-## <a name="remarks"></a>Hinweise  
- Die **ToggleDrillState** -Funktion schaltet den Drillstatus für jedes Element der zweiten Menge, die in der ersten Menge vorhanden ist. Die erste Menge kann Tupel beliebiger Dimensionalität aufweisen, die zweite Menge muss jedoch ausschließlich Elemente einer einzigen Dimension enthalten. Die **ToggleDrillState** Funktion ist eine Kombination der **DrillupMember** und **DrilldownMember** Funktionen. Wenn das Element *m*der zweiten Menge in der ersten Menge vorhanden ist und dieses Element ein Drilldown (d. h. weist ein abhängiges Element unmittelbar folgt), klicken Sie dann `DrillupMember(Set_Expression1, {m})` auf das Element oder Tupel in der ersten Menge angewendet wird. Wenn das *m* Member oben angezeigt wird (d. h., es ist keine Nachfolger des *m* , die unmittelbar folgt *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` auf der ersten Menge angewendet wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Funktion " **teggledrillstate** " schaltet den Drill Status der einzelnen Elemente der zweiten Menge ein, die in der ersten Menge vorhanden ist. Die erste Menge kann Tupel beliebiger Dimensionalität aufweisen, die zweite Menge muss jedoch ausschließlich Elemente einer einzigen Dimension enthalten. Die Funktion " **deggledrillstate** " ist eine Kombination der **DrillupMember** -Funktion und der **DrilldownMember** -Funktion. Wenn der Member, *m*, der zweiten Menge in der ersten Menge vorhanden ist und dieser Member Drilldown ausgeführt wird (d. h. einen Nachfolger direkt darauf folgt), `DrillupMember(Set_Expression1, {m})` wird auf das Element oder Tupel in der ersten Menge angewendet. Wenn für dieses *m* -Element ein Drilldown ausgeführt wird (d. h. es gibt keinen Nachfolger von *m* , der unmittelbar auf *m*folgt), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` wird auf die erste Menge angewendet.  
   
- Wenn der optionale **REKURSIVE** Flag verwendet wird, werden Sie Drillup und Drilldown rekursiv angewendet. Weitere Informationen über das rekursive Flag finden Sie unter den [DrillupMember](../mdx/drillupmember-mdx.md) und [DrilldownMember](../mdx/drilldownmember-mdx.md) Funktionen.  
+ Wenn das optionale **rekursive** Flag verwendet wird, werden Drillup und Drilldown rekursiv angewendet. Weitere Informationen zum rekursiven Flag finden Sie unter den [DrillupMember](../mdx/drillupmember-mdx.md) -und [DrilldownMember](../mdx/drilldownmember-mdx.md) -Funktionen.  
   
- Abfrage der XMLA-Eigenschaft MdpropMdxDrillFunctions können Sie das Maß an Unterstützung, die der Server die drillingfunktionen bereitgestellt; finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) Details.  
+ Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
- Finden Sie unter [Database Journal: MDX-Set-Funktionen: Die Funktion ToggleDrillState()](https://go.microsoft.com/fwlink/?LinkId=517759) für Szenarien und Beispiele, die im Zusammenhang mit dieser Funktion.  
+ Weitere Informationen finden Sie [unter Daten Bank Journal: MDX-Set-Funktionen: die Funktion "deggledrillstate ()](https://go.microsoft.com/fwlink/?LinkId=517759) " für Szenarien und Beispiele für diese Funktion.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Drilldown für das Australia-Element der ersten Menge und ein Drillup für das United States-Element der ersten Menge ausgeführt.  
@@ -63,7 +63,7 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

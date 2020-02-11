@@ -20,24 +20,24 @@ ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4bb4e77047fb1a5483c0b87d98f55eda43f1658b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913942"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName-Eigenschaft (ADO MD)
-Gibt einen eindeutigen Namen für das aktuelle Objekt an.  
+Gibt einen eindeutigen Namen für das aktuelle-Objekt an.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **Zeichenfolge** und ist schreibgeschützt.  
+ Gibt eine **Zeichenfolge** zurück und ist schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
   
 |||  
 |-|-|  
-|[Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
+|[Dimension-Objekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
 |[Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Name-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

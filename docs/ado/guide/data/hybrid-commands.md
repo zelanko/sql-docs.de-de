@@ -1,5 +1,5 @@
 ---
-title: Hybridbefehle | Microsoft-Dokumentation
+title: Hybrid Befehle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486b76708354d4caf7e9efb2f73539b3eea9abf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925030"
 ---
 # <a name="hybrid-commands"></a>Hybridbefehle
-Hybridbefehle sind teilweise parametrisierte Befehle. Zum Beispiel:  
+Hybrid Befehle sind teilweise parametrisierte Befehle. Beispiel:  
   
 ```  
 SHAPE {select * from plants}   
@@ -31,9 +31,9 @@ SHAPE {select * from plants}
              PlantRegion TO CustomerRegion )   
 ```  
   
- Das Verhalten beim Zwischenspeichern für eine Hybridbefehl ist identisch mit der regulären parametrisierte Befehle.  
+ Das zwischen Speicherungs Verhalten für einen Hybriden Befehl ist identisch mit dem von regulären parametrisierten Befehlen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für die datenstrukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
+ [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)

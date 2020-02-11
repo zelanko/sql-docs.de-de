@@ -16,21 +16,21 @@ ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921443"
 ---
-# <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
-Gibt an, wann die [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) -Anbieter erneut berechnet aggregate und berechnete Spalten in einem hierarchischen Recordset.  
+# <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
+Gibt an, wann der [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) -Anbieter aggregierte und berechnete Spalten in einem hierarchischen Recordset neu berechnet.  
   
- Diese Konstanten werden nur verwendet, mit der **MSDataShape** Anbieter und die **Recordset** "**automatische Neuberechnung**" dynamische Eigenschaft, die in verwiesen wird die [ADO Dynamische Property-Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) und die in der [Microsoft Cursor Service für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) oder [Microsoft Data Shaping Service für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) Dokumentation.  
+ Diese Konstanten werden nur mit dem **MSDataShape** [-Anbieter](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **und der** [OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) dynamischen****%%% amp; quot;%% amp; quot;%% amp; quot;%% amp; quot;%% amp; quot;%% amp; quot;.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**|1|Standard. Jedes Mal, wenn berechnet die **MSDataShape** Anbieter bestimmt die Werte, die die berechneten Spalten abhängig geändert haben.|  
-|**adRecalcUpFront**|0|Berechnet nur beim Erstellen zunächst die hierarchische **Recordset**.|  
+|**adrecalcalways**|1|Default. Berechnet immer dann, wenn der **MSDataShape** -Anbieter Werte bestimmt, von denen die berechneten Spalten abhängig sind.|  
+|**adneuneuberechnung**|0|Wird nur bei der ersten Erstellung des hierarchischen **Recordsets**berechnet.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Diese Konstanten keine ADO/WFC-Entsprechungen.
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Diese Konstanten haben keine ADO/WFC-Entsprechungen.

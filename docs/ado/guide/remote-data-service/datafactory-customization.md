@@ -13,29 +13,29 @@ ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922770"
 ---
 # <a name="datafactory-customization"></a>DataFactory-Anpassung
-Remote Data Service (RDS) bietet eine Möglichkeit zum Zugriff auf Daten ganz einfach in eine dreistufige Client/Server-System durchführen. Ein Client-Steuerelement gibt Verbindungs- und Parameter zum Ausführen einer Abfrage auf einem remote-Datenquelle oder eine Verbindungszeichenfolge und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt-Parameter, um ein Update durchzuführen.  
+Remote Data Service (RDS) bietet eine Möglichkeit, auf einfache Weise Datenzugriff in einem Client/Server-System mit drei Ebenen auszuführen. Ein Client Daten Steuerelement gibt Verbindungs-und Befehls Zeichenfolgen-Parameter an, um eine Abfrage für eine Remote Datenquelle oder Verbindungs [Zeichenfolgen-und Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt Parameter zum Ausführen eines Updates auszuführen.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Die Parameter werden an ein Serverprogramm übergeben, die den Datenzugriff-Vorgang für die remote-Datenquelle ausführt. RDS bietet ein Standardserverprogramm wird aufgerufen, die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt. Die **RDSServer.DataFactory** Objekt zurückgibt, eine **Recordset** Objekt erzeugt, die von einer Abfrage an den Client.  
+ Die Parameter werden an ein Serverprogramm weitergeleitet, das den Datenzugriffs Vorgang für die Remote Datenquelle ausführt. RDS bietet ein Standardmäßiges Serverprogramm, das als [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt bezeichnet wird. Das **RDSServer. DataFactory** -Objekt gibt ein beliebiges **Recordset** -Objekt zurück, das von einer Abfrage an den Client erzeugt wurde.  
   
- Allerdings die **RDSServer.DataFactory** ist mit dem Durchführen von Abfragen und Aktualisierungen beschränkt. Es kann keine Validierung oder Verarbeitung der Verbindung oder eines Befehl Zeichenfolgen ausführen.  
+ **RDSServer. DataFactory** ist jedoch auf die Durchführung von Abfragen und Updates beschränkt. Es kann keine Validierung oder Verarbeitung der Verbindungs-oder Befehls Zeichenfolgen ausführen.  
   
- Bei ADO können Sie angeben, die **DataFactory** funktionieren in Verbindung mit einem anderen Typ von Serverprogramm Namens eine *Handler*. Der Handler kann Clientverbindung und Befehlszeichenfolgen ändern, bevor sie den Zugriff auf die Datenquelle verwendet werden. Darüber hinaus kann der Handler Zugriffsrechte, erzwingen, die steuern die Fähigkeit eines Clients zu lesen und Schreiben von Daten in der Datenquelle.  
+ Mit ADO können Sie angeben, dass das **DataFactory** in Verbindung mit einem anderen Typ von Serverprogramm funktioniert, das als " *Handler*" bezeichnet wird. Der Handler kann die Client Verbindung und Befehls Zeichenfolgen ändern, bevor Sie für den Zugriff auf die Datenquelle verwendet werden. Außerdem kann der Handler Zugriffsrechte erzwingen, die die Fähigkeit des Clients steuern, Daten in der Datenquelle zu lesen und zu schreiben.  
   
- Der Parameter, mit denen der Handler ändern Sie die Clientparameter und Zugriffsrechten sind in Abschnitte der Anpassung an angegeben.  
+ Die Parameter, die der Handler zum Ändern von Client Parametern und Zugriffsrechten verwendet, werden in Abschnitten einer Anpassungs Datei angegeben.  
   
- Die folgenden Themen enthalten weitere Informationen zum Anpassen der **DataFactory** Objekt.  
+ Die folgenden Themen enthalten weitere Informationen zum Anpassen des **DataFactory** -Objekts.  
   
--   [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
+-   [Grundlegendes zur Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
   
 -   [Connect-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-connect-section.md)  
   

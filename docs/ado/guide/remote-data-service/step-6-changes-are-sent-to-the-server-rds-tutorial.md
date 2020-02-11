@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 6: Änderungen werden gesendet, mit dem Server (RDS-Tutorial) | Microsoft-Dokumentation'
+title: 'Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial) | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a48b9c54496100bfe502bd496b12f35ced9ea8ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922043"
 ---
-# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Schritt 6: Senden von Änderungen an den Server (RDS-Tutorial)
-Wenn die **Recordset** Objekt bearbeitet wird, können alle Änderungen (d. h. Zeilen, die hinzugefügt, geändert oder gelöscht werden) an den Server gesendet werden.  
+# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)
+Wenn das **Recordset** -Objekt bearbeitet wird, können alle Änderungen (d. h. hinzugefügte, geänderte oder gelöschte Zeilen) an den Server zurückgesendet werden.  
   
 > [!NOTE]
->  Das Standardverhalten von RDS kann implizit mit ADO-Objekte und der Microsoft OLE DB-Anbieter für Remoting aufgerufen werden. Abfragen können zurückgeben **Recordset**s, und bearbeitete **Recordset**s kann die Datenquelle aktualisieren. In diesem Tutorial RDS mit ADO-Objekten nicht aufgerufen, aber dies ist, wie es aussehen würde, wenn dies der Fall:  
+>  Das Standardverhalten von RDS kann implizit mit ADO-Objekten und dem Microsoft OLE DB Remoting-Anbieter aufgerufen werden. Abfragen können **Recordsets**zurückgeben, und bearbeitete **Recordsets**können die Datenquelle aktualisieren. In diesem Lernprogramm wird RDS nicht mit ADO-Objekten aufgerufen, aber dies sieht wie folgt aus:  
   
 ```vb
 Dim rs as New ADODB.Recordset  
@@ -34,7 +34,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Teil A** annehmen, dass für diesen Fall an, die Sie, nur verwendet haben die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und eine **Recordset** Objekt jetzt zugeordnet ist die **RDS. DataControl**. Die [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) Methode aktualisiert die Datenquelle mit Änderungen an der **Recordset** Objekt, wenn die [Server](../../../ado/reference/rds-api/server-property-rds.md) und [Connect](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaften werden immer noch festgelegt werden.  
+ **Teil A** Angenommen, Sie haben nur [RDS verwendet. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und ein **Recordset** -Objekt sind nun dem RDS zugeordnet **. DataControl**. Die [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) -Methode aktualisiert die Datenquelle mit allen Änderungen am **Recordset** -Objekt, wenn die [Server](../../../ado/reference/rds-api/server-property-rds.md) -und [Verbindungs](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaften noch festgelegt sind.  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -52,7 +52,7 @@ DC.
 ...  
 ```  
   
- **Teil B** Alternativ könnten Sie den Server mit aktualisieren die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt, das Angeben einer Verbindung und eine **Recordset** Objekt.  
+ **Teil B** Alternativ können Sie den Server mit dem [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt aktualisieren, indem Sie eine Verbindung und ein **Recordset** -Objekt angeben.  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -72,9 +72,9 @@ End Sub
  **Dies ist das Ende des Tutorials.**  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft OLE DB Remoting-Anbieter (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Microsoft OLE DB Remoting Provider (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
  [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

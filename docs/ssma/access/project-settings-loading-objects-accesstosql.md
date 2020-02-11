@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Loading Objects) (AccessToSQL) | Microsoft-Dokumentation
+title: Projekteinstellungen (Objekte werden geladen) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,67 +10,67 @@ ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929425"
 ---
-# <a name="project-settings-loading-objects-accesstosql"></a>Project Settings (Loading Objects) (AccessToSQL)
-Die projekteinstellungen Laden von Objekten können Sie konfigurieren, wie den Zugriff auf Datenbankobjekte mit SQL Server-Datenbankobjekte synchronisiert werden.  
+# <a name="project-settings-loading-objects-accesstosql"></a>Projekteinstellungen (Objekte werden geladen) (accesstosql)
+Mit den Projekteinstellungen zum Laden von Objekten können Sie konfigurieren, wie Access-Datenbankobjekte mit SQL Server-Datenbankobjekten synchronisiert werden.  
   
-Die Standardaktionen geben Standardeinstellungen für die Aktualisierung von Objekten aus der Access-Datenbank und für die Synchronisierung von Objekten mit SQL Server-Datenbank. Weitere Informationen finden Sie unter [Refresh from Database aktualisieren &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+Mit den Standard Aktionen werden die Standardeinstellungen zum Aktualisieren von Objekten aus der Access-Datenbank und zum Synchronisieren von Objekten mit der SQL Server Datenbank angegeben. Weitere Informationen finden Sie unter [Aktualisieren aus der Datenbank &#40;Access Token&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
-Sie können zwei verschiedene Synchronisierung Seiten zugreifen, die die gleichen Einstellungen enthalten:  
+Sie können auf zwei verschiedene Synchronisierungs Seiten zugreifen, die die gleichen Einstellungen enthalten:  
   
--   Die Einstellungen für alle zukünftigen SSMA-Projekten, auf die **Tools** im Menü klicken Sie auf **DefaultProject Einstellungen**, und klicken Sie dann auf **Objekte laden** am unteren Rand im linken Bereich.  
+-   Wenn Sie Einstellungen für alle zukünftigen SSMA-Projekte angeben möchten, klicken Sie **im Menü Extras** auf **defaultproject Settings**, und klicken Sie dann unten im linken Bereich auf **Objekte laden** .  
   
--   Die Einstellungen für das aktuelle Projekt, auf die **Tools** im Menü klicken Sie auf **Projekteinstellungen**, und klicken Sie dann auf **Objekte laden** am unteren Rand im linken Bereich.  
+-   Um Einstellungen für das aktuelle Projekt anzugeben, klicken Sie **im Menü Extras** auf **Projekteinstellungen**, und klicken Sie dann unten im linken Bereich auf **Objekte laden** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ##### <a name="misc"></a>Sonstiges  
   
 ##### <a name="attempts"></a>Versuche  
-Enthält die Informationen über die Anzahl von Durchläufen Objekte zum Laden in SQL Server in Anspruch nehmen. Laden von Objekten in SQL Server erfolgt in der Regel in mehreren Durchläufen. Objekte, die Fehler beim Laden der im ersten Schritt, wie foreign key, möglicherweise im nächsten Schritt erfolgreich geladen.  
+Gibt Aufschluss über die Anzahl der Pass-Objekte, die in SQL Server geladen werden. Das Laden von Objekten in SQL Server erfolgt in der Regel in mehreren Durchläufen. Objekte, die im ersten Durchlauf nicht geladen werden können, z. b. Fremdschlüssel, können im nächsten Durchlauf erfolgreich geladen werden.  
   
-Standardmäßig ist der Wert 2.  
+Der Standardwert ist 2.  
   
-## <a name="synchronization-for-sql-server"></a>Synchronisierung für SQLServer  
+## <a name="synchronization-for-sql-server"></a>Synchronisierung für SQL Server  
   
-##### <a name="default-action-on-local-and-remote-object-change"></a>Standardaktion für lokale und Remote ändern  
-Gibt die Standardeinstellung im Dialogfeld für die Synchronisierung an, wenn sich die Objektdefinition in SSMA und auf dem Datenbankserver ändert.  
+##### <a name="default-action-on-local-and-remote-object-change"></a>Standardaktion für lokale und Remote Objekt Änderung  
+Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn die Objektdefinition in SSMA und auf dem Datenbankserver geändert wird.  
   
--   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA werden Datenbankdefinitionen in die Metadaten geladen, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **in Datenbank schreiben**, SSMA werden Objekte in der Datenbank gemäß den Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie in **Datenbank schreiben**auswählen, werden die Objekte in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **überspringen**, SSMA wird keine Aktualisierung Aktionen ausführen.  
+-   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
-##### <a name="default-action-on-local-object-change"></a>Default-Aktion bei Änderung des lokalen Objekts  
-Gibt die Standardeinstellung im Dialogfeld für die Synchronisierung an, wenn sich das Objekt in SSMA ändern.  
+##### <a name="default-action-on-local-object-change"></a>Standardaktion für lokale Objekt Änderung  
+Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn das Objekt in SSMA geändert wird.  
   
--   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA werden Datenbankdefinitionen in die Metadaten geladen, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **in Datenbank schreiben**, SSMA wird das Objekt in der Datenbank gemäß den Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie in **Datenbank schreiben**auswählen, wird das Objekt in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **überspringen**, SSMA wird keine Aktualisierung Aktionen ausführen.  
+-   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
-##### <a name="default-action-on-remote-object-change"></a>Default-Aktion bei Änderung des remote-Objekt  
-Gibt die Standardeinstellung im Dialogfeld "Synchronisierung", wenn die Objekte auf dem Datenbankserver ändern.  
+##### <a name="default-action-on-remote-object-change"></a>Standardaktion für Remote Objekt Änderung  
+Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn sich die Objekte auf dem Datenbankserver ändern.  
   
--   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA werden Datenbankdefinitionen in die Metadaten geladen, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **in Datenbank schreiben**, SSMA wird das Objekt in der Datenbank gemäß den Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie in **Datenbank schreiben**auswählen, wird das Objekt in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **überspringen**, SSMA wird keine Aktualisierung Aktionen ausführen.  
+-   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
-##### <a name="default-action-when-local-object-metadata-is-missing"></a>Standardaktion beim lokalen Metadaten nicht vorhanden ist.  
-Gibt die Standardeinstellung im Dialogfeld für die Synchronisierung, bei der lokalen Metadaten nicht vorhanden ist.  
+##### <a name="default-action-when-local-object-metadata-is-missing"></a>Standardaktion, wenn Metadaten des lokalen Objekts fehlen  
+Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn lokale Metadaten fehlen.  
   
--   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA wählt die Aktualisierung über die Option "Datenbank" aus, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren**auswählen, wählt SSMA die Option aus Datenbank aktualisieren aus, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **in Datenbank schreiben**, SSMA wird das Objekt aus der Datenbank löschen, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **in Datenbank schreiben**auswählen, wird das Objekt von SSMA aus der Datenbank gelöscht, wenn die Bedingung erfüllt ist.  
   
--   Bei Auswahl von **überspringen**, SSMA wird keine Aktualisierung Aktionen ausführen.  
+-   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   

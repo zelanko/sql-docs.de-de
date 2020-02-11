@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Quell- und Zieldatenbanken (AccessToSQL) | Microsoft-Dokumentation
+title: Zuordnung von Quell-und Ziel Datenbanken (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,57 +18,57 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907150"
 ---
-# <a name="mapping-source-and-target-databases-accesstosql"></a>Zuordnen von Quell- und Zieldatenbanken (AccessToSQL)
-Wenn Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, müssen Sie eine Zieldatenbank für die Migration angeben. Wenn Sie mehrere Access-Datenbanken haben können Sie sie mit mehreren zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken (oder Schemata) oder auf mehrere Schemas in die verbundene SQL Azure-Datenbank.  
+# <a name="mapping-source-and-target-databases-accesstosql"></a>Zuordnung von Quell-und Ziel Datenbanken (accesstosql)
+Beim Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit oder SQL Azure müssen Sie eine Zieldatenbank für die Migration angeben. Wenn Sie über mehrere Access-Datenbanken verfügen, können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese mehreren Datenbanken (oder Schemas) oder mehreren Schemas unter der verbundenen SQL Azure Datenbank zuordnen.  
   
-## <a name="sql-server-or-sql-azure-database-schemas"></a>SQLServer oder SQL Azure-Datenbankschemas  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken verwenden das Konzept von Schemas, um Objekte in einer Datenbank in logische Gruppen zu unterteilen. Beispielsweise können Bibliotheksdatenbank drei Schemas, die mit dem Namen **Bücher**, **audio**, und **video** , Audio- und Videodateien Buchobjekte voneinander zu trennen. In der Standardeinstellung die Access-Datenbank zugeordnet ist **master** Datenbank und **Dbo** Schema im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und verbundene Datenbank und **Dbo** -Schema in SQL Azure.  
+## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server oder SQL Azure Datenbankschemas  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verwenden das Konzept von Schemas, um Objekte innerhalb einer Datenbank in logische Gruppen zu trennen. Eine Bibliotheks Datenbank könnte z. b. drei Schemas namens **Bücher**, **Audiodaten**und **Videos** verwenden, um Buch-, Audio-und Video Objekte voneinander zu trennen. Standardmäßig wird die Access-Datenbank der **Master** -Datenbank und dem **dbo** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schema in und der verbundenen Datenbank und dem **dbo** -Schema in SQL Azure zugeordnet.  
   
-Wenn Sie die Zuordnung zwischen einzelnen Access-Datenbank anpassen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank und Schema SSMA werden migriert, die Schemas und Daten im Zusammenhang mit der Zugriffsdatenbank auf die Standarddatenbank zugeordnet.  
+Wenn Sie die Zuordnung zwischen den einzelnen Zugriffs Datenbanken und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank und dem Schema nicht anpassen, werden alle Schemas und Daten, die der Access-Datenbank zugeordnet sind, von SSMA der Standarddatenbank zugeordnet.  
   
-## <a name="modifying-the-target-database-and-schema"></a>Ändern der Zieldatenbank und Schema  
-SSMA können Sie jede zu Access-Datenbank zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank und Schema. Das folgende Verfahren beschreibt die zum Anpassen der Zuordnung pro Datenbank.  
+## <a name="modifying-the-target-database-and-schema"></a>Ändern der Zieldatenbank und des Schemas  
+Mit SSMA können Sie jede Zugriffs Datenbank der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank und dem Schema zuordnen oder diese SQL Azure. Im folgenden Verfahren wird beschrieben, wie die Zuordnung pro Datenbank angepasst wird.  
   
-**So ändern Sie die Zieldatenbank und das schema**  
+**So ändern Sie die Zieldatenbank und das Ziel Schema**  
   
-1.  Wählen Sie im Bereich Metadaten-Explorer für den Zugriff **Metadaten zugreifen**.  
+1.  Wählen Sie im Bereich Access Metadata Explorer den Eintrag **Access-Metadata**aus.  
   
-    Schemazuordnung ist auch verfügbar, bei der Auswahl der **Datenbanken** Knoten oder Knoten in der Datenbank. Die Liste der Schema-Zuordnung wird für das ausgewählte Objekt angepasst.  
+    Die Schema Zuordnung ist auch verfügbar, wenn Sie den Knoten **Datenbanken** oder einen beliebigen Datenbankknoten auswählen. Die Schema Zuordnungsliste ist für das ausgewählte Objekt angepasst.  
   
-2.  Klicken Sie im rechten Bereich auf die **Zuordnen von Schemas** Registerkarte.  
+2.  Klicken Sie im rechten Bereich auf die Registerkarte **Schema Zuordnung** .  
   
-    Sehen Sie eine Tabelle mit Access Datenbanknamen und der entsprechenden SsNoVersion oder des Sql Azure-Schemas. Das Zielschema ist in einer zweiteiligen-Schreibweise (database.schema) gekennzeichnet.  
+    Sie sehen eine Tabelle, die Access-Datenbanknamen und die zugehörigen ssNoVersion-oder SQL Azure-Schemas enthält. Das Ziel Schema wird in einer zwei teiligen Schreibweise (Database. Schema) bezeichnet.  
   
-3.  Wählen Sie die Zeile, die die Zuordnung Sie anpassen möchten enthält, und klicken Sie dann auf **ändern**.  
+3.  Wählen Sie die Zeile aus, die die Zuordnung enthält, die Sie anpassen möchten, und klicken Sie dann auf **ändern**.  
   
-4.  In der **Zielschema auswählen** im Dialogfeld können Sie für die Zieldatenbank verfügbar und Schema oder mit der Datenbank und des Schemas in das Textfeld in einer zweiteiligen-Schreibweise (database.schema) Namen, und klicken Sie dann auf Durchsuchen **OK**.  
+4.  Im Dialogfeld **Ziel Schema auswählen** können Sie nach verfügbaren Ziel Datenbanken und-Schemas suchen oder die Datenbank und den Schema Namen in das Textfeld in einer zwei teiligen Schreibweise (Database. Schema) eingeben und dann auf **OK**klicken.  
   
-**Modi der Zuordnung**  
+**Karten Modi**  
   
--   Zuordnung zu SQLServer  
+-   Zuordnung zu SQL Server  
   
-Sie können die Quelldatenbank zu keiner Zieldatenbank zuordnen. Standardmäßig wird die Quelldatenbank zugeordnet Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank mit dem Sie verbunden haben, mit der SSMA. Wenn die Zieldatenbank, die zugeordnet wird, auf nicht vorhanden ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und klicken Sie dann mit einer Meldung werden Sie aufgefordert **"die Datenbank bzw. das Schema ist nicht im Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten. Es wird während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen?"** Klicken Sie auf "Ja". Auf ähnliche Weise können Sie Schemas unter Ziel nicht vorhandenen Schema zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank, der während der Synchronisierung erstellt wird.  
+Sie können Quell Datenbanken einer beliebigen Zieldatenbank zuordnen. Standardmäßig ist die Quelldatenbank der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zugeordnet, mit der Sie eine Verbindung mit SSMA hergestellt haben. Wenn die zugeordnete Zieldatenbank nicht in vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, wird die Meldung angezeigt, dass **die Datenbank und/oder das Schema in den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten nicht vorhanden sind. Es würde während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf Ja. Entsprechend können Sie das Schema einem nicht vorhandenen Schema unter der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zuordnen, das während der Synchronisierung erstellt wird.  
   
 -   Zuordnung zu SQL Azure  
   
-Sie können die Quelldatenbank zuordnen, an das Ziel verbundenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank oder das Schema in der verbundenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Wenn Sie alle nicht vorhandenen Schema unter dem verbundenen Zieldatenbank Quelle Schema zuordnen, Sie werden aufgefordert, mit der Meldung **"das Schema ist in den Metadaten nicht vorhanden. Es wird während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf "Ja".  
+Sie können die Quelldatenbank der verbundenen Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank oder dem beliebigen Schema in der verbundenen Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zuordnen. Wenn Sie das Quell Schema einem nicht vorhandenen Schema unter der verbundenen Zieldatenbank zuordnen, wird die Meldung angezeigt, dass **das Schema in den Ziel Metadaten nicht vorhanden ist. Es würde während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf Ja.  
   
-## <a name="reverting-to-your-initial-database-and-schema"></a>Zurücksetzen auf Ihre ursprüngliche Datenbank und Schema  
-Wenn Sie die Zuordnung zwischen einer Access-Datenbank anpassen und ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank und Schema können Sie die Zuordnung in der Datenbank, die Sie angegeben, wenn Sie mit verbunden wiederherstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.  
+## <a name="reverting-to-your-initial-database-and-schema"></a>Wiederherstellen der ursprünglichen Datenbank und des ursprünglichen Schemas  
+Wenn Sie die Zuordnung zwischen einer Access-Datenbank und einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Datenbank und einem-Schema anpassen, können Sie die Zuordnung auf die Datenbank zurücksetzen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie beim Herstellen einer Verbindung mit oder SQL Azure angegeben haben.  
   
-**Standard-Datenbank und Schema zurücksetzen**  
+**So setzen Sie die Standarddatenbank und das Standardschema zurück**  
   
-1.  Klicken Sie unter der Registerkarte des Schema-Zuordnung, wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** wieder in den Standarddatenbank und des Schemas.  
+1.  Wählen Sie auf der Registerkarte Schema Zuordnung eine beliebige Zeile aus, und klicken Sie auf **Standard zurücksetzen** , um die Standarddatenbank und das Standardschema wiederherzustellen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt des Migrationsvorgangs [konvertieren Datenbankobjekten](converting-access-database-objects-accesstosql.md)  
+Der nächste Schritt des Migrations Vorgangs ist das [umstellen von Datenbankobjekten](converting-access-database-objects-accesstosql.md) .  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

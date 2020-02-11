@@ -1,5 +1,5 @@
 ---
-title: Löschen von Datensätzen, die mit der Delete-Methode | Microsoft-Dokumentation
+title: Löschen von Datensätzen mit der Delete-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925559"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Löschen von Datensätzen mit der Delete-Methode
-Mithilfe der **löschen** Methode kennzeichnet den aktuellen Datensatz oder eine Gruppe von Datensätzen in einer **Recordset** Objekt zum Löschen. Wenn die **Recordset** Objekt lässt keine Datensätze löschen, ein Fehler auftritt. Wenn Sie sich im sofortupdatemodus sind, werden die Löschvorgänge in der Datenbank sofort. Wenn ein Datensatz (aufgrund von Datenbank-integritätsverletzungen, z. B.) wurde erfolgreich gelöscht werden kann, der Datensatz bleibt im Bearbeitungsmodus nach dem Aufruf von **aktualisieren.** Dies bedeutet, dass Sie das Update mit abbrechen müssen [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) vor dem Verlassen des aktuellen Datensatzes (z. B. [schließen](../../../ado/reference/ado-api/close-method-ado.md), [verschieben](../../../ado/reference/ado-api/move-method-ado.md), oder [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+Mithilfe der **Delete** -Methode wird der aktuelle Datensatz oder eine Gruppe von Datensätzen in einem **Recordset** -Objekt zum Löschen markiert. Wenn das **Recordset** -Objekt das Löschen von Datensätzen nicht zulässt, tritt ein Fehler auf. Wenn Sie sich im sofortigen Update Modus befinden, werden Löschungen sofort in der Datenbank ausgeführt. Wenn ein Datensatz nicht erfolgreich gelöscht werden kann (z. b. aufgrund von Daten Bank Integritäts Verstößen), verbleibt der Datensatz nach dem **Update Update** im Bearbeitungsmodus. Dies bedeutet, dass Sie das Update mit [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) abbrechen müssen, bevor Sie den aktuellen Datensatz verschieben (z. b. " [Close](../../../ado/reference/ado-api/close-method-ado.md)", " [Move](../../../ado/reference/ado-api/move-method-ado.md)" oder " [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)").  
   
- Wenn Sie im Modus "Batch-Update" sind, werden die Datensätze zum Löschen aus dem Cache markiert und das eigentliche löschen erfolgt beim Aufrufen der **UpdateBatch** Methode. (Legen Sie zum Anzeigen der gelöschten Datensätze der **Filter** Eigenschaft **AdFilterAffectedRecords** nach **löschen** aufgerufen wird.)  
+ Wenn Sie sich im Batch Aktualisierungs Modus befinden, werden die Datensätze zum Löschen aus dem Cache markiert, und der tatsächliche Löschvorgang erfolgt, wenn Sie die **UpdateBatch** -Methode aufrufen. (Um die gelöschten Datensätze anzuzeigen, legen Sie die **Filter** -Eigenschaft auf **adFilterAffectedRecords** fest, nachdem **Delete** aufgerufen wurde.)  
   
- Es wird versucht, die Feldwerte aus den gelöschten Datensatz abzurufen, wird ein Fehler generiert. Nach dem Löschen des aktuellen Datensatzes, bleibt der gelöschte Datensatz aktuell, bis Sie zu einem anderen Datensatz verschieben. Sobald Sie Abkehr von den gelöschten Datensatz, es nicht mehr zugänglich ist.  
+ Der Versuch, Feldwerte aus dem gelöschten Datensatz abzurufen, generiert einen Fehler. Nach dem Löschen des aktuellen Datensatzes bleibt der gelöschte Datensatz aktuell, bis Sie zu einem anderen Datensatz wechseln. Nachdem Sie den gelöschten Datensatz entfernt haben, ist er nicht mehr zugänglich.  
   
- Wenn Sie Löschvorgänge in einer Transaktion schachteln, können Sie gelöschte Datensätze wiederherstellen, mit der **RollbackTrans** Methode. Wenn Sie im Modus "Batch-Update" sind, können Sie Abbrechen einen ausstehenden Löschvorgang oder eine Gruppe von ausstehenden Löschvorgängen mithilfe der **CancelBatch** Methode.  
+ Wenn Sie Löschungen in einer Transaktion Schachteln, können Sie gelöschte Datensätze mithilfe der **RollbackTrans** -Methode wiederherstellen. Wenn Sie sich im Batch Aktualisierungs Modus befinden, können Sie ein ausstehendes löschen oder eine Gruppe von ausstehenden Löschungen mithilfe der **CancelBatch** -Methode abbrechen.  
   
- Wenn der Versuch zum Löschen von Datensätzen aufgrund eines Konflikts mit dem zugrunde liegenden fehlschlägt (z. B. ein Datensatz wurde bereits gelöscht von einem anderen Benutzer), der Anbieter gibt Warnungen an, die die **Fehler** Auflistung jedoch kein Programm angehalten wird die Ausführung. Ein Laufzeitfehler tritt auf, nur dann, wenn Konflikte für alle angeforderten Datensätze bestehen.  
+ Wenn der Versuch, Datensätze zu löschen, aufgrund eines Konflikts mit den zugrunde liegenden Daten (z. b. ein Datensatz bereits von einem anderen Benutzer gelöscht) fehlschlägt, gibt der Anbieter Warnungen an die **Fehler** Auflistung zurück, hält die Ausführung des Programms jedoch nicht an. Ein Laufzeitfehler tritt nur auf, wenn für alle angeforderten Datensätze Konflikte vorliegen.  
   
- Wenn die **eindeutige Tabelle** dynamische Eigenschaft festgelegt ist und die **Recordset** ist das Ergebnis der Ausführung einer JOIN-Operation für mehrere Tabellen, die **löschen** Methode werden nur Zeilen löschen aus der Tabelle, die mit dem Namen in der **eindeutige Tabelle** Eigenschaft.  
+ Wenn die dynamische Eigenschaft der **eindeutigen Tabelle** festgelegt ist und das **Recordset** das Ergebnis der Ausführung eines Verknüpfungs Vorgangs für mehrere Tabellen ist, löscht die **Delete** -Methode Zeilen nur aus der Tabelle, die in der **eindeutigen Table** -Eigenschaft benannt ist.  
   
- Die **löschen** Methode akzeptiert ein optionales Argument, das können Sie angeben, welche Datensätze betroffen sind der **löschen** Vorgang. Die einzigen gültigen Werte für dieses Argument sind entweder die folgenden ADO **AffectEnum** aufgezählte Konstanten:  
+ Die **Delete** -Methode nimmt ein optionales Argument an, mit dem Sie angeben können, welche Datensätze vom **Lösch** Vorgang betroffen sind. Die einzigen gültigen Werte für dieses Argument sind eine der folgenden Enumerationskonstanten von ADO **affectenum** :  
   
--   **AdAffectCurrent** wirkt sich auf die nur den aktuellen Datensatz.  
+-   **adaffectcurrent** Wirkt sich nur auf den aktuellen Datensatz aus.  
   
--   **AdAffectGroup** betrifft nur die Datensätze, die die aktuelle erfüllen **Filter** Einstellung der Eigenschaft. Die **Filter** Eigenschaft muss festgelegt werden, um eine **FilterGroupEnum** Wert oder ein Array von **Lesezeichen** auf diese Option verwenden.  
+-   **adAffectGroup** Wirkt sich nur auf Datensätze aus, die die aktuelle **Filter** Eigenschaften Einstellung erfüllen. Die **Filter** -Eigenschaft muss auf einen **filtergroupum** -Wert oder ein Array von **Lesezeichen** festgelegt werden, um diese Option zu verwenden.  
   
- Der folgende Code zeigt ein Beispiel für **AdAffectGroup** beim Aufrufen der **löschen** Methode. In diesem Beispiel fügt einige Datensätze, zum Beispiel **Recordset** und die Datenbank aktualisiert. Anschließend Filtern der **Recordset** mithilfe der **AdFilterAffectedRecords** aufgelisteten Filter-Konstante, die nur die neu hinzugefügte Datensätze im sichtbar bleibt die **Recordset.** Schließlich ruft es die **löschen** Methode und gibt an, dass alle Datensätze, die die aktuelle erfüllen **Filter** (die neue Einträge) für die Einstellung der Eigenschaft gelöscht werden soll.  
+ Der folgende Code zeigt ein Beispiel für die Angabe von **adAffectGroup** beim Aufrufen der **Delete** -Methode. In diesem Beispiel werden dem Beispiel **Recordset** einige Datensätze hinzugefügt und die-Datenbank aktualisiert. Anschließend wird das **Recordset** mithilfe der Enumerationskonstante **adFilterAffectedRecords** gefiltert, sodass nur die neu hinzugefügten Datensätze im **Recordset** sichtbar sind. Zum Schluss ruft Sie die **Delete** -Methode auf und gibt an, dass alle Datensätze, die die aktuelle **Filter** Eigenschafts Einstellung (die neuen Datensätze) erfüllen, gelöscht werden sollen.  
   
 ```  
 'BeginDeleteGroup  

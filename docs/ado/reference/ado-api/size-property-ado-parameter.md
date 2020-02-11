@@ -1,5 +1,5 @@
 ---
-title: Size-Eigenschaft (ADO Parameter) | Microsoft-Dokumentation
+title: Size-Eigenschaft (ADO-Parameter) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931052"
 ---
 # <a name="size-property-ado-parameter"></a>Size-Eigenschaft (ADO-Parameter)
-Gibt die maximale Größe in Bytes oder Zeichen, der eine [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt.  
+Gibt die maximale Größe eines [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekts in Bytes oder Zeichen an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **lange** hodnota ukazuje, die maximale Größe in Bytes oder Zeichen eines Werts in einer **Parameter** Objekt.  
+ Legt einen **Long** -Wert fest, der die maximale Größe in Bytes oder Zeichen eines Werts in einem **Parameter** Objekt angibt, oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **Größe** Eigenschaft zum Ermitteln der maximalen Größe für die geschriebenen Werte oder beim Lesen von der [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft eine **Parameter** Objekt.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **size** -Eigenschaft, um die maximale Größe für Werte zu ermitteln, die in die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft eines **Parameter** Objekts geschrieben oder daraus gelesen werden.  
   
- Wenn Sie angeben, dass einen Datentyp mit variabler Länge, die für eine **Parameter** Objekt (z. B. eine **Zeichenfolge** eingeben, z. B. **AdVarChar**), müssen Sie festlegen, des Objekts  **Größe** -Eigenschaft vor dem Anfügen, damit die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung; andernfalls ein Fehler auftritt.  
+ Wenn Sie einen Datentyp variabler Länge für ein **Parameter** Objekt angeben (z. b. einen beliebigen **Zeichen** Folgentyp wie **adVarChar**), müssen Sie die **size** -Eigenschaft des Objekts festlegen, bevor es an die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung angehängt wird. Andernfalls tritt ein Fehler auf.  
   
- Wenn Sie bereits angefügt wurden die **Parameter** -Objekt an der **Parameter** Auflistung von eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und seinen Typ in einen Datentyp mit variabler Länge ändern, müssen Sie Legen Sie die **Parameter** des Objekts **Größe** Eigenschaft vor dem Ausführen der **Befehl** Objekt; andernfalls ein Fehler auftritt.  
+ Wenn Sie das **Parameter** Objekt bereits an die **Parameter** Auflistung eines [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts angefügt haben und den Typ in einen Datentyp mit variabler Länge ändern, müssen Sie die **size** -Eigenschaft des **Parameter** Objekts festlegen, bevor Sie das **Befehls** Objekt ausführen. Andernfalls tritt ein Fehler auf.  
   
- Bei Verwendung der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode zum Abrufen von Informationen zu den Parametern aus dem Anbieter, und es gibt eine oder mehrere Daten variabler Länge-Typ zurück, **Parameter** Objekten, die ADO möglicherweise arbeitsspeicherzuweisung für die Parameter basierend Klicken Sie auf die maximal mögliche Größe, die während der Ausführung einen Fehler verursachen könnte. Sie sollten explizit festlegen, um Fehler zu vermeiden, die **Größe** -Eigenschaft für diese Parameter vor dem Ausführen des Befehls.  
+ Wenn Sie die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode verwenden, um Parameterinformationen vom Anbieter abzurufen, und ein oder mehrere Datentyp **Parameter** Objekte variabler Länge zurückgibt, kann ADO Arbeitsspeicher für die Parameter zuweisen, basierend auf Ihrer maximalen potenziellen Größe, die während der Ausführung einen Fehler verursachen könnte. Um einen Fehler zu vermeiden, sollten Sie die **size** -Eigenschaft für diese Parameter explizit festlegen, bevor Sie den Befehl ausführen.  
   
- Die **Größe** Eigenschaft schreibgeschützt ist.  
+ Die **size** -Eigenschaft ist Lese-/Schreibzugriff.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [Size-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [Size-Eigenschaft (ADO-Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)

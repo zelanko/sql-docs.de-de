@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238216"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WebForms
@@ -24,9 +24,9 @@ ms.locfileid: "63238216"
   
 ###### <a name="to-use-the-reportviewer-control-in-a-web-application"></a>So verwenden Sie das ReportViewer-Steuerelement in einer Webanwendung  
   
-1.  Erstellen Sie mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue [!INCLUDE[msCoName](../../includes/msconame-md.md)]-ASP.NET-Website.  
+1.  Erstellen Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] neue ASP.NET-Website mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \- Oder –  
+     \-Noch  
   
      Öffnen Sie eine bestehende ASP.NET-Website, und fügen Sie eine neue WebForm hinzu.  
   
@@ -34,15 +34,15 @@ ms.locfileid: "63238216"
   
      Wenn die **Toolbox** nicht sichtbar ist, können Sie über das Menü **Ansicht** darauf zugreifen, indem Sie auf **Toolbox** klicken.  
   
-3.  Suchen Sie in der  **Toolbox** das **ReportViewer**-Steuerelement, und ziehen Sie es auf der Entwurfsoberfläche unter das **ScriptManager**-Steuerelement.  
+3.  Suchen Sie in der ** Toolbox** das **ReportViewer**-Steuerelement, und ziehen Sie es auf der Entwurfsoberfläche unter das **ScriptManager**-Steuerelement.  
   
      Das als „reportViewer1“ bezeichnete **ReportViewer**-Steuerelement wird dem Formular hinzugefügt.  
   
- Nachdem das Steuerelement zum Formular hinzugefügt wurde, wird das SmartTag **ReportViewer-Aufgaben** angezeigt, und Sie werden aufgefordert, einen Bericht auszuwählen. Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Serverbericht>** aus der Dropdownliste **Bericht wählen** aus. Wenn die Option **\<Serverbericht>** aktiviert wurde, werden zwei weitere Eigenschaften angezeigt: **Berichtsserver-URL** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, den Sie rendern möchten.  
+ Nachdem das Steuerelement zum Formular hinzugefügt wurde, wird das SmartTag **ReportViewer-Aufgaben** angezeigt, und Sie werden aufgefordert, einen Bericht auszuwählen. Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichts Server bereitgestellt wurde, wählen Sie in der Dropdown Liste **Bericht auswählen** die ** \<Option Server Bericht>** aus. Sobald die ** \<Option Server Bericht>** ausgewählt ist, werden zwei weitere Eigenschaften angezeigt: **Berichts Server-URL** und **Berichts Pfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, den Sie rendern möchten.  
   
  Wenn Sie einen Bericht im lokalen Modus anzeigen möchten, aktivieren Sie entweder die Option **Neuen Bericht entwerfen**, um den Berichts-Designer zu starten, oder wählen Sie einen Bericht aus, der bereits Teil des vorhandenen Projekts ist. Nachdem Sie einen Bericht ausgewählt haben, müssen Sie den Namen der RDLC-Berichtsdatei in die **ReportPath**-Eigenschaft des ReportViewer-Steuerelements eingeben. Diese Eigenschaft wird im Bereich **Eigenschaften** unter dem Knoten **LocalReport** angezeigt.  
   
- Beim Rendern des Berichts können Sie eines oder mehrere Elemente auf der ReportViewer-Symbolleiste ausblenden. Beispielsweise können Sie die Druckschaltfläche ausblenden. Um Symbolleistenelemente auszublenden, legen Sie die folgenden ReportViewer-Eigenschaften auf `False` in die **Eigenschaften** Bereich.  
+ Beim Rendern des Berichts können Sie eines oder mehrere Elemente auf der ReportViewer-Symbolleiste ausblenden. Beispielsweise können Sie die Druckschaltfläche ausblenden. Um Symbolleisten Elemente auszublenden, legen Sie die folgenden Report Viewer `False` -Eigenschaften im Bereich **Eigenschaften** auf fest.  
   
 -   `ShowBackButton`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63238216"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Anzeigen von Berichten im Remoteverarbeitungsmodus  
  Im folgenden Beispiel wird veranschaulicht, wie ein Bericht, der auf einem Berichtsserver bereitgestellt wurde, gerendert wird. In diesem Beispiel wird der Bericht für Auftragsdetails, der im [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Projekt für Beispielberichte enthalten ist, verwendet.  
   
- Da im Beispiel eine integrierte Windows-Authentifizierung verwendet wird, müssen Sie zuerst den Identitätswechsel aktivieren. Hierzu fügen Sie die folgende Zeile in der `web.config` Datei:  
+ Da im Beispiel eine integrierte Windows-Authentifizierung verwendet wird, müssen Sie zuerst den Identitätswechsel aktivieren. Fügen Sie hierzu die folgende Zeile in die `web.config` Datei ein:  
   
 ```  
 <!-- Web.config file. -->  
@@ -157,7 +157,7 @@ End Class
   
 5.  Klicken Sie mit der rechten Maustaste auf die Datei „Sales Order Detail.rdl“ im Projektmappen-Explorer, und wählen Sie **Umbenennen** aus. Benennen Sie den Bericht in **Sales Order Detail.rdlc** um, und drücken Sie die EINGABETASTE.  
   
-     Wenn der Projektmappen-Explorer nicht sichtbar ist, können Sie ihn über das Menü **Ansicht** öffnen, indem Sie Projektmappen-Explorer auswählen.  
+     Wenn Projektmappen-Explorer nicht sichtbar ist, können Sie Sie über das Menü **Ansicht** öffnen, indem Sie Projektmappen-Explorer auswählen.  
   
  Mit dem folgenden Codebeispiel wird ein Dataset für die Auftragsdaten erstellt. Dann wird der Bericht für Auftragsdetails im lokalen Modus erstellt.  
   
@@ -478,7 +478,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente](integrating-reporting-services-using-reportviewer-controls.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Integrieren von Reporting Services mit den ReportViewer-Steuerelementen](integrating-reporting-services-using-reportviewer-controls.md)  
   
   

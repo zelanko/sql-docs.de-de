@@ -20,14 +20,14 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931220"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition-Eigenschaft (ADO)
-Ruft ab oder legt einen OLE DB **RowPosition** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt. Bei Verwendung von **Put_RowPosition** Festlegen der **RowPosition** -Objekt, das resultierende **Recordset** -Objekt verwendet die **RowPosition** -Objekt Bestimmen der aktuellen Zeile.  
+Ruft ein OLE DB **RowPosition** -Objekt von/in einem **adorecordsetconstruction** -Objekt ab oder legt es fest. Wenn Sie **put_RowPosition** verwenden, um das **RowPosition** -Objekt festzulegen, verwendet das resultierende **Recordset** -Objekt das **RowPosition** -Objekt, um die aktuelle Zeile zu bestimmen.  
   
  Lese-/Schreibzugriff.  
   
@@ -39,17 +39,17 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *ppRowPos*  
- Zeiger auf eine OLE DB **RowPosition** Objekt.  
+ *pprowpos*  
+ Zeiger auf ein OLE DB **RowPosition** -Objekt.  
   
- *PRowPos*  
- OLE DB **RowPosition** Objekt.  
+ *Prowpos*  
+ Ein OLE DB **RowPosition** -Objekt.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Diese Eigenschaftsmethode gibt die standardmäßige HRESULT-Werte, einschließlich S_OK zurück, und E_FAIL zurück.  
+ Diese Eigenschaften Methode gibt die HRESULT-Standardwerte zurück, einschließlich S_OK und E_FAIL.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn diese Eigenschaft festgelegt ist, wenn die **Rowset** -Objekt die **RowPosition** Objekt unterscheidet sich von der **Rowset** -Objekt die **Recordset**Objekt ist, wird die erste der letzteren überschreibt. Das gleiche Verhalten trifft auf den aktuellen **Kapitel** von der **RowPosition** ebenfalls.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn diese Eigenschaft festgelegt ist und sich **** das Rowsetobjekt für das **RowPosition** -Objekt vom Rowsetobjekt des **Recordset** -Objekts unterscheidet, überschreibt das erste das zweite. **** Das gleiche Verhalten gilt auch für das aktuelle **Kapitel** der **RowPosition** .  
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordsetConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

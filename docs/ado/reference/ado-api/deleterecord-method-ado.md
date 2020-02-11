@@ -17,14 +17,14 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919083"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord-Methode (ADO)
-Löscht eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md).  
+Löscht eine durch einen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md)dargestellte Entität.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,24 +34,24 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Quelle*  
- Dies ist optional. Ein **Zeichenfolge** -Wert mit einer URL identifiziert die Entität (z. B. die Datei oder Verzeichnis) gelöscht werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge, die Entität, die vom aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird gelöscht. Wenn der Datensatz einen Datensatz für die Sammlung ist (["RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md) von **AdCollectionRecord**, z. B. einem Verzeichnis) alle untergeordneten Elemente (z. B. Unterverzeichnissen) werden ebenfalls gelöscht.  
+ *`Source`*  
+ Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die die Entität identifiziert (z. b. die Datei oder das Verzeichnis), die gelöscht werden soll. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird die durch den aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellte Entität gelöscht. Wenn der Datensatz ein Sammlungs Daten Satz ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) von **adcollectionrecord**, z. b. ein Verzeichnis) ist, werden alle untergeordneten Elemente (z. b. Unterverzeichnisse) ebenfalls gelöscht.  
   
  *Async*  
- Optional. Ein **booleschen** -Wert, wenn **"true"** , gibt an, dass der Löschvorgang asynchrone ist.  
+ Optional. Ein **boolescher** Wert, der, wenn **true**, angibt, dass der Löschvorgang asynchron ist.  
   
-## <a name="remarks"></a>Hinweise  
- Vorgänge für das Objekt, das dargestellt durch diese **Datensatz** kann fehlschlagen, nachdem diese Methode ausgeführt wird. Nach dem Aufruf **DeleteRecord**, wird die **Datensatz** sollte geschlossen werden, da das Verhalten der **Datensatz** können unvorhersehbare je nach der Anbieter wann aktualisiert werden kann die **Datensatz** mit der Datenquelle.  
+## <a name="remarks"></a>Bemerkungen  
+ Vorgänge für das Objekt, das durch diesen **Datensatz** dargestellt wird, können nach Abschluss dieser Methode fehlschlagen. Nach dem Aufruf von **DeleteRecord**sollte der **Datensatz** geschlossen werden, da das Verhalten des **Datensatzes** möglicherweise unvorhersehbar wird, je nachdem, wann der Anbieter den **Datensatz** mit der Datenquelle aktualisiert.  
   
- Wenn diese **Datensatz** aus abgerufen wurde eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und klicken Sie dann die Ergebnisse dieses Vorgangs nicht sofort in werden reflektiert der **Recordset**. Aktualisieren der **Recordset** durch Schließen und erneut öffnen, oder durch Ausführen der **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) -Methode, die [Update](../../../ado/reference/ado-api/update-method.md) -Methode, oder [Resync](../../../ado/reference/ado-api/resync-method.md) Methode.  
+ Wenn dieser **Datensatz** von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurde, werden die Ergebnisse dieses Vorgangs nicht sofort in das **Recordset**reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen oder indem Sie die Methode **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) , die [Update](../../../ado/reference/ado-api/update-method.md) -Methode oder die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ausführen.  
   
 > [!NOTE]
->  URLs, die mit der HTTP-Schema werden automatisch aufgerufen, die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Delete-Methode (Fields-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete-Methode (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Delete-Methode (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Delete-Methode (ADO Fields-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete-Methode (ADO Parameters-Sammlung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

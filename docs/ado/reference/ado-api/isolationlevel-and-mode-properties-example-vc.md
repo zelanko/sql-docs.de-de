@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel und Mode Eigenschaften – Beispiel (VC++) | Microsoft-Dokumentation
+title: IsolationLevel-und Mode-Eigenschaften (Beispiel) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932316"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel und Mode Eigenschaften – Beispiel (VC++)
-Dieses Beispiel verwendet die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft, um eine exklusive-Verbindung öffnen und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) Eigenschaft öffnen Sie eine Transaktion, die durchgeführt wird, isoliert von anderen Transaktionen.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel-und Mode-Eigenschaften (Beispiel) (VC + +)
+In diesem Beispiel wird die [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft verwendet, um eine exklusive Verbindung zu öffnen, und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) -Eigenschaft, um eine Transaktion zu öffnen, die isoliert von anderen Transaktionen durchgeführt wird.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Verbindungsmodus ist exklusiv.**  
+ **Der Verbindungs Modus ist exklusiv.**  
 **Transaktion ist isoliert**  
-**Die ausgelastet Executive des Datenbank-für - Unternehmen**  
-**Kochen mit Computern: Surreptitious Bilanzen - Unternehmen**  
-**Sie können Computer Stress Bekämpfung! -Unternehmen**  
-**Gerade reden-Computer – business**  
-**Silicon Valley Durchreisen behandelt - mod_cook**  
-**Die ergänzen Mikrowelle - mod_cook**  
-**Die Psychologie von Computer Kochen - UNENTSCHLOSSEN**  
-**Jedoch ist es Benutzer geeignet? -Popular_comp**  
-**Geheime Schlüssel des Silicon Valley - popular_comp**  
-**NET-Konventionen - popular_comp**  
-**Computer Phobic und nicht-Phobic Personen: Verhalten Variationen - self_help**  
-**Ist Wut Ihr Feind? -Self_help**  
-**Lebensdauer, ohne zu befürchten - self_help**  
-**Längere Besserung: Vier Fallstudien – self_help**  
-**Emotionaler Sicherheit: Ein neuer Algorithmus - self_help**  
-**Zwiebeln Leeks und ein Knoblauchbrot: Kochen Geheimnisse Mittelmeer - trad_cook**  
-**50 Jahre in Buckingham Palace Keller-- trad_cook**  
-**Sushi, jede Person? -Trad_cook**   
-## <a name="see-also"></a>Siehe auch  
+**Das Daten Bank Handbuch für ausgelastete Führungskräfte: Business**  
+**Kochen mit Computern: übermäßige Guthaben Blätter-Business**  
+**Sie können die Computer Belastung bekämpfen! -Business**  
+**Direkt Gespräch über Computer-Business**  
+**Gastronomische behandelt Silicon Valley-mod_cook**  
+**Die mod_cook der Gourmet-Mikrowelle**  
+**Die Psychologie des Computers mit dem**  
+**Aber ist es benutzerfreundlich? -popular_comp**  
+**Geheimnisse von Silicon Valley-popular_comp**  
+**NET Etiquette-popular_comp**  
+**Computer-phobic und nicht-phobische Einzelpersonen: Verhaltens Abweichungen-self_help**  
+**Ist der Feind wütend? -self_help**  
+**Leben ohne Angst-self_help**  
+**Längere Daten Entbehrungen: vier Fallstudien-self_help**  
+**Emotionale Sicherheit: ein neuer Algorithmus-self_help**  
+**Zwiebeln, leeks und Knoblauch: Kochen von Geheimnissen des Mittelmeers trad_cook**  
+**50 Jahre in den trad_cook des Buckingham-Palastes**  
+**Sushi, jemand? -trad_cook**   
+## <a name="see-also"></a>Weitere Informationen  
  [IsolationLevel-Eigenschaft](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode-Eigenschaft (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

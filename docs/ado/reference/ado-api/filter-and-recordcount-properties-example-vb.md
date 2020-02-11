@@ -1,5 +1,5 @@
 ---
-title: Filter und RecordCount – Beispiel (VB) | Microsoft-Dokumentation
+title: Filter-und RecordCount-Eigenschaften (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918641"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter- und RecordCount-Eigenschaft – Beispiel (VB)
-In diesem Beispiel öffnen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Herausgeber-Tabelle in der ***Pubs*** Datenbank. Anschließend wird mithilfe der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die Anzahl der sichtbaren Datensätze auf diesen Verlegern in der ein bestimmtes Land/Region einzuschränken. Die **RecordCount** Eigenschaft wird verwendet, um den Unterschied zwischen der gefilterten und ungefilterten Recordsets anzeigen.  
+In diesem Beispiel wird ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Verleger Tabelle in der ***Pubs*** -Datenbank geöffnet. Anschließend wird die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft verwendet, um die Anzahl der sichtbaren Datensätze auf die Verleger in einem bestimmten Land/einer bestimmten Region zu begrenzen. Die **RecordCount** -Eigenschaft wird verwendet, um den Unterschied zwischen den gefilterten und ungefilterten Recordsets anzuzeigen.  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +108,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  Wenn Sie die Daten Sie auswählen möchten wissen, ist es in der Regel effizienter, öffnen Sie eine **Recordset** mit einer SQL­Anweisung. Dieses Beispiel zeigt, wie Sie nur einen erstellen können **Recordset** und die Daten aus einem bestimmten Land zu erhalten.  
+>  Wenn Sie die Daten kennen, die Sie auswählen möchten, ist es in der Regel effizienter, ein **Recordset** mit einer SQL-Anweisung zu öffnen. Dieses Beispiel zeigt, wie Sie nur ein **Recordset** erstellen und Datensätze aus einem bestimmten Land abrufen können.  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204595"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Typen von Abfragen (Visual Database Tools)
@@ -51,7 +51,7 @@ ms.locfileid: "63204595"
  [Erstellen von Updateabfragen &#40;Visual Database Tools&#41;](create-update-queries-visual-database-tools.md)  
  Beschreibt, wie eine Abfrage erstellt wird, die eine Tabelle aktualisiert.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  [Abfrageeigenschaften &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  Beschreibt die Eigenschaften, die Ihnen beim Entwerfen von Abfragen zur Verfügung stehen.  
   

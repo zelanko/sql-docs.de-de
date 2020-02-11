@@ -1,5 +1,5 @@
 ---
-title: ADOStreamConstruction-Schnittstelle | Microsoft-Dokumentation
+title: Adostreamconstruction-Schnittstelle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,38 +16,38 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920784"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction-Schnittstelle
-Die **ADOStreamConstruction** Schnittstelle wird verwendet, um eine ADO erstellen **Stream** Objekt von einem OLE DB **IStream** Objekts in einer C/C++-Anwendung.  
+Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung zu erstellen.  
   
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|[Stream-Eigenschaft](../../../ado/reference/ado-api/stream-property.md)|Lese-/Schreibzugriff. Ruft ab oder legt ihn fest, eine OLE DB **Stream** Objekt.|  
+|[Stream-Eigenschaft](../../../ado/reference/ado-api/stream-property.md)|Lesen/Schreiben Ruft ein OLE DB **Stream** -Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="remarks"></a>Hinweise  
- Erhalten eine OLE DB **IStream** Objekt (`pStream`), die zur Erstellung eines ADO **Stream** Objekt (`adoStr`) die folgenden drei grundlegenden Schritten:  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn ein OLE DB **IStream** -Objekt`pStream`() angegeben wird, ist die Erstellung eines ADO`adoStr`- **Streamobjekts** () auf die folgenden drei grundlegenden Vorgänge zu finden:  
   
-1.  Erstellen Sie ein ADO **Stream** Objekt:  
+1.  Erstellen Sie ein ADO- **Stream** -Objekt:  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  Abfrage der **IADOStreamConstruction** Schnittstelle, für die **Stream** Objekt:  
+2.  Abfragen der **iadostreamconstruction** -Schnittstelle für das **Stream** -Objekt:  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -55,7 +55,7 @@ Die **ADOStreamConstruction** Schnittstelle wird verwendet, um eine ADO erstelle
                          (void**)&adoStrConstruct);  
     ```  
   
- Rufen Sie die `IADOStreamConstruction::get_Stream` -Methode zum Festlegen von OLE DB-Eigenschaft **IStream** der ADO-Objekt **Stream** Objekt:  
+ Wenden Sie `IADOStreamConstruction::get_Stream` die-Eigenschaften Methode an, um das OLE DB **IStream** -Objekt für das ADO- **Streamobjekt** festzulegen:  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -63,14 +63,14 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- Die resultierenden `adoStr` Objekt stellt nun das ADO **Stream** Objekt erstellt, die von der OLE DB **IStream** Objekt.  
+ Das resultierende `adoStr` Objekt stellt nun das ADO- **Stream** -Objekt dar, das aus dem OLE DB **IStream** -Objekt erstellt wurde.  
   
-## <a name="requirements"></a>Anforderungen  
- **Version:** ADO 2.0 oder höher  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Version:** ADO 2,0 oder eine höhere Version  
   
- **Bibliothek:** "MSADO15.dll"  
+ **Bibliothek:** "MSADO15. dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADO – API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)

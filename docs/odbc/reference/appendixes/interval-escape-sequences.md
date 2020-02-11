@@ -1,5 +1,5 @@
 ---
-title: Intervallescapesequenzen | Microsoft-Dokumentation
+title: Intervall-Escapesequenzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69c674ee8838273af9bf4ed91ddcead7e1768fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041641"
 ---
 # <a name="interval-escape-sequences"></a>Intervall-Escapesequenzen
-ODBC verwendet Escape-Sequenzen, für die Intervall-Literale. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
+ODBC verwendet Escapesequenzen für intervallliterale. Die Syntax dieser Escapesequenz lautet wie folgt:  
   
- {*Intervall-Literal*}  
+ {*Interval-Literale*}  
   
- Informationen zur BNF-Syntax von *Intervall-Literal*, finden Sie unter den [Intervall Literal-Syntax](../../../odbc/reference/appendixes/interval-literal-syntax.md) weiter unten in diesem Anhang.  
+ Die BNF-Syntax von *Interval-literalen*finden Sie im Abschnitt [Intervall Literalsyntax](../../../odbc/reference/appendixes/interval-literal-syntax.md) weiter unten in diesem Anhang.  
   
- Die Intervall-Literale-Escape-Sequenz wird unterstützt, wenn die Interval-Datentypen, die von der Datenquelle unterstützt werden. Es sollte eine Anwendung aufrufen **SQLGetTypeInfo** zu bestimmen, ob diese Datentypen unterstützt werden.
+ Die Literale Escapesequenz für Intervalle wird unterstützt, wenn die Intervall Datentypen von der Datenquelle unterstützt werden. Eine Anwendung sollte **SQLGetTypeInfo** aufrufen, um zu bestimmen, ob diese Datentypen unterstützt werden.

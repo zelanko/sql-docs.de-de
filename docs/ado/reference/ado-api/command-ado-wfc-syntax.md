@@ -1,5 +1,5 @@
 ---
-title: Befehl (ADO / WFC-Syntax) | Microsoft-Dokumentation
+title: Command (ADO-WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919825"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO/WFC-Syntax)
-## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  
   
 ### <a name="constructor"></a>Konstruktor  
   
@@ -44,7 +44,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- Die **ExecuteUpdate** Methode ist eine spezielle Case-Methode, die die zugrunde liegenden ADO aufruft **ausführen** Methode mit bestimmten Parametern. Die **ExecuteUpdate** Methode unterstützt nicht die Rückgabe von einer **Recordset** -Objekt, also die **ausführen** Methode *Optionen* -Parameter ist mit geändert **AdoEnums.ExecuteOptions.NORECORDS**. Nach der **ausführen** Methode ausgeführt wird, die aktualisierte *RecordsAffected* Parameter an die die **ExecuteUpdate** -Methode, die schließlich als ein zurückgegebenwird**Int**.  
+ Die **ExecuteUpdate** -Methode ist eine spezielle Case-Methode, die die zugrunde liegende ADO **Execute** -Methode mit bestimmten Parametern aufruft. Die **ExecuteUpdate** -Methode unterstützt die Rückgabe eines **Recordset** -Objekts nicht, sodass der *options* -Parameter der **Execute** -Methode mit **AdoEnums. ExecuteOptions. norecords**geändert wird. Nachdem die **Execute** -Methode abgeschlossen wurde, wird der aktualisierte *recordsafffiziert* -Parameter an die **ExecuteUpdate** -Methode zurückgegeben, die schließlich als **int**zurückgegeben wird.  
   
 ### <a name="properties"></a>Eigenschaften  
   
@@ -69,5 +69,5 @@ public com.ms.wfc.data.Parameters getParameters()
 public AdoProperties getProperties()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

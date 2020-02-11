@@ -15,14 +15,14 @@ ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911581"
 ---
 # <a name="cellset-example-vb"></a>Cellset-Beispiel (VB)
-Diese Visual Basic-Projekt veranschaulicht die Grundlagen der Verwendung von ADO MD auf Cube-Daten zugreifen. Elementüberschriften für Spalten- und Zeilenüberschriften angezeigt, und zeigt formatierte Werte von bestimmten Zellen in das Cellset.  
+Dieses Visual Basic Projekt veranschaulicht die Grundlagen der Verwendung von ADO MD für den Zugriff auf die Cube-Daten. Sie zeigt die Element Beschriftungen für Spalten-und Zeilen Header an und zeigt dann formatierte Werte für bestimmte Zellen innerhalb des Cellsets an.  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

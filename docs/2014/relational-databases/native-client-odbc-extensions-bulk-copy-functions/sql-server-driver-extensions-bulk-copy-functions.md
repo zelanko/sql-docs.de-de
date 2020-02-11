@@ -1,5 +1,5 @@
 ---
-title: Massenkopierfunktionen | Microsoft-Dokumentation
+title: Massen Kopierfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2888f34c1e4c4103845d07e569a0dbabeb2e4caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225540"
 ---
 # <a name="bulk-copy-functions"></a>Bulk Copy Functions
@@ -45,7 +45,7 @@ ms.locfileid: "63225540"
   
 -   [bcp_control](bcp-control.md)  
   
--   [bcp_done](bcp-done.md)  
+-   ['bcp_done'](bcp-done.md)  
   
 -   [bcp_exec](bcp-exec.md)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63225540"
   
 -   [bcp_readfmt](bcp-readfmt.md)  
   
--   [bcp_sendrow](bcp-sendrow.md)  
+-   ['bcp_sendrow'](bcp-sendrow.md)  
   
 -   [bcp_setbulkmode](bcp-setbulkmode.md)  
   
@@ -67,8 +67,8 @@ ms.locfileid: "63225540"
   
 -   [bcp_writefmt](bcp-writefmt.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Treibererweiterungen](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
- [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erweiterungen des SQL Server Treibers](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
+ [Ausführen von Massen Kopier Vorgängen &#40;ODBC-&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

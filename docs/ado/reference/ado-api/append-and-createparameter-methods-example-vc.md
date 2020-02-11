@@ -1,5 +1,5 @@
 ---
-title: Append und CreateParameter – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für Append und die Methode "Anfüge Parameter" (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920694"
 ---
-# <a name="append-and-createparameter-methods-example-vc"></a>Append und CreateParameter – Beispiel (VC++)
-Dieses Beispiel verwendet die [Append](../../../ado/reference/ado-api/append-method-ado.md) und [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) Methoden zum Ausführen einer gespeicherten Prozedur mit einem Eingabeparameter.  
+# <a name="append-and-createparameter-methods-example-vc"></a>Beispiel für Append und die Methode "append Parameter" (VC + +)
+In diesem Beispiel werden die [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode und die-Methode für die-Methode zum Ausführen einer gespeicherten Prozedur mit einem [Eingabeparameter verwendet](../../../ado/reference/ado-api/createparameter-method-ado.md) .  
   
 ## <a name="example"></a>Beispiel  
   
@@ -202,6 +202,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

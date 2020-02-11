@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: ActiveCommand-Eigenschafts Beispiel (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921630"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel zeigt die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) Eigenschaft.  
+In diesem Beispiel wird die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) -Eigenschaft veranschaulicht.  
   
- Eine Unterroutine erhält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, dessen **ActiveCommand** Eigenschaft wird verwendet, um anzuzeigen, die Befehlstext und die Parameter, der erstellt das **Recordset**.  
+ Einer Unterroutine wird ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt zugewiesen, dessen **ActiveCommand** -Eigenschaft verwendet wird, um den Befehls Text und den Parameter anzuzeigen, mit dem das **Recordset**erstellt wurde.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -220,6 +220,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ActiveCommand-Eigenschaft (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
