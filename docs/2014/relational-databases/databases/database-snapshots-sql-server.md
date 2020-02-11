@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917144"
 ---
 # <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
-  Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  
+  Eine Daten Bank Momentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  
   
  In einer bestimmten Quelldatenbank können mehrere Momentaufnahmen vorhanden sein. Jede Datenbankmomentaufnahme ist so lange vorhanden, bis sie explizit vom Datenbankbesitzer gelöscht wird.  
   
@@ -35,24 +35,24 @@ ms.locfileid: "62917144"
   
  **In diesem Thema:**  
   
--   [Übersicht über die Funktionen](#FeatureOverview)  
+-   [Übersicht über Features](#FeatureOverview)  
   
--   [Vorteile der Datenbankmomentaufnahmen](#Benefits)  
+-   [Vorteile von Daten Bank Momentaufnahmen](#Benefits)  
   
 -   [Begriffe und Definitionen](#TermsAndDefinitions)  
   
--   [Voraussetzungen und Einschränkungen bei Datenbankmomentaufnahmen](#LimitationsRequirements)  
+-   [Voraussetzungen für und Einschränkungen für Daten Bank Momentaufnahmen](#LimitationsRequirements)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> Übersicht über die Funktionen  
+##  <a name="FeatureOverview"></a>Übersicht über Features  
  Datenbankmomentaufnahmen arbeiten auf der Ebene der Datenseiten. Bevor eine Seite der Quellendatenbank zum ersten Mal geändert wird, wird die Originalseite der Quellendatenbank auf die Momentaufnahme kopiert. In der Momentaufnahme wird die Originalseite gespeichert, wodurch die Datensätze in dem Zustand erhalten werden, wie sie zum Zeitpunkt der Momentaufnahmeerstellung vorhanden waren. Der gleiche Vorgang wird für jede Seite wiederholt, die zum ersten Mal geändert wird. Für den Benutzer scheint sich eine Datenbankmomentaufnahme niemals zu ändern, weil von Lesevorgängen auf einer Datenbankmomentaufnahme immer auf die Originaldatenseiten zugegriffen wird, unabhängig von deren Speicherort.  
   
  Um die kopierten Originalseiten zu speichern, wird von der Momentaufnahme mindestens eine *Sparsedatei*verwendet. Ursprünglich ist eine Sparsedatei im Wesentlichen eine leere Datei, die keine Benutzerdaten enthält und für die noch kein Speicherplatz für Benutzerdaten auf einem Speichermedium zugeordnet worden ist. Je mehr Seiten in der Quellendatenbank aktualisiert werden, desto größer wird die Datei. Die folgende Abbildung veranschaulicht die Auswirkungen zweier unterschiedlicher Updatemuster auf die Größe einer Momentaufnahme. Das Updatemuster A spiegelt eine Umgebung wider, in der nur 30 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden. Das Updatemuster B spiegelt eine Umgebung wider, in der 80 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden.  
   
  ![Alternative Updatemuster und Momentaufnahmegrößen](../../database-engine/media/dbview-04.gif "Alternative Updatemuster und Momentaufnahmegrößen")  
   
-##  <a name="Benefits"></a> Vorteile der Datenbankmomentaufnahmen  
+##  <a name="Benefits"></a>Vorteile von Daten Bank Momentaufnahmen  
   
 -   Momentaufnahmen können zur Berichterstellung verwendet werden.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62917144"
   
      In einer Testumgebung kann es hilfreich sein, wenn beim wiederholten Ausführen eines Testprotokolls die Datenbank zu Beginn jeder Testrunde immer dieselben Daten enthält. Vor der ersten Testrunde kann ein Anwendungsentwickler oder -tester eine Datenbankmomentaufnahme für die Testdatenbank erstellen. Nach jeder Testrunde kann die Datenbank durch Wiederherstellen des Datenbankmomentaufnahmen schnell wieder in den früheren Zustand zurückversetzt werden.  
   
-##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
+##  <a name="TermsAndDefinitions"></a>Begriffe und Definitionen  
  Datenbank-Momentaufnahme  
  Eine im Hinblick auf Transaktionen konsistente, schreibgeschützte statische Sicht einer Datenbank (die Quelldatenbank).  
   
@@ -103,20 +103,20 @@ ms.locfileid: "62917144"
  Sparsedatei  
  Eine vom NTFS-Dateisystem bereitgestellte Datei, die so verarbeitet wird, dass sie viel weniger Speicherplatz benötigt als bei gewöhnlicher Verarbeitung. Eine Sparsedatei wird zum Speichern von in eine Datenbankmomentaufnahme kopierten Seiten verwendet. Unmittelbar nach dem Erstellen beanspruchen Sparsedateien nur wenig Speicherplatz. Während Daten in eine Datenbankmomentaufnahme geschrieben werden, ordnet NTFS der entsprechenden Sparsedatei schrittweise den Speicherplatz zu.  
   
-##  <a name="LimitationsRequirements"></a> Voraussetzungen und Einschränkungen bei Datenbankmomentaufnahmen  
+##  <a name="LimitationsRequirements"></a>Voraussetzungen für und Einschränkungen für Daten Bank Momentaufnahmen  
  **In diesem Abschnitt:**  
   
--   [Erforderliche Komponenten](#Prerequisites)  
+-   [Voraussetzungen](#Prerequisites)  
   
--   [Einschränkungen für die Quelldatenbank](#LimitsOnSourceDb)  
+-   [Einschränkungen der Quelldatenbank](#LimitsOnSourceDb)  
   
--   [Einschränkungen für Datenbankmomentaufnahmen](#LimitsOnDbSS)  
+-   [Einschränkungen für Daten Bank Momentaufnahmen](#LimitsOnDbSS)  
   
 -   [Anforderungen an den Datenträgerspeicher](#DiskSpace)  
   
--   [Datenbankmomentaufnahmen mit Offlinedateigruppen](#OfflineFGs)  
+-   [Daten Bank Momentaufnahmen mit offline Dateigruppen](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Die Quelldatenbank, die ein Wiederherstellungsmodell verwenden kann, muss die folgenden Voraussetzungen erfüllen:  
   
 -   Die Serverinstanz muss auf einer Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden, die Datenbankmomentaufnahmen unterstützt. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -136,7 +136,7 @@ ms.locfileid: "62917144"
 > [!NOTE]  
 >  Alle Wiederherstellungsmodelle unterstützen Datenbankmomentaufnahmen.  
   
-###  <a name="LimitsOnSourceDb"></a> Einschränkungen für die Quelldatenbank  
+###  <a name="LimitsOnSourceDb"></a>Einschränkungen der Quelldatenbank  
  Solange eine Datenbankmomentaufnahme vorhanden ist, sind die folgenden Einschränkungen für die Quelldatenbank der Momentaufnahme vorhanden:  
   
 -   Die Datenbank kann nicht gelöscht, getrennt oder wiederhergestellt werden.  
@@ -148,7 +148,7 @@ ms.locfileid: "62917144"
   
 -   In der Quelldatenbank oder in den Momentaufnahmen können keine Dateien gelöscht werden.  
   
-###  <a name="LimitsOnDbSS"></a> Einschränkungen für Datenbankmomentaufnahmen  
+###  <a name="LimitsOnDbSS"></a>Einschränkungen für Daten Bank Momentaufnahmen  
  Für Datenbankmomentaufnahmen gelten die folgenden Einschränkungen:  
   
 -   Eine Datenbankmomentaufnahme muss auf der gleichen Serverinstanz erstellt und gespeichert werden, auf der sich auch die Quelldatenbank befindet.  
@@ -192,9 +192,9 @@ ms.locfileid: "62917144"
     > [!NOTE]  
     >  In einer SELECT-Anweisung, die für eine Datenbankmomentaufnahme ausgeführt wird, darf keine FILESTREAM-Spalte angegeben werden, da andernfalls die folgende Fehlermeldung zurückgegeben wird: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Wenn Statistiken zu einer schreibgeschützten Momentaufnahme fehlen oder veraltet sind, erstellt und verwaltet [!INCLUDE[ssDE](../../includes/ssde-md.md)] temporäre Statistiken in tempdb. Weitere Informationen finden Sie unter [Statistics](../statistics/statistics.md).  
+-   Wenn Statistiken zu einer schreibgeschützten Momentaufnahme fehlen oder veraltet sind, erstellt und verwaltet [!INCLUDE[ssDE](../../includes/ssde-md.md)] temporäre Statistiken in tempdb. Weitere Informationen finden Sie unter [Verwalten von Statistiken für Tabellen in SQL Data Warehouse](../statistics/statistics.md).  
   
-###  <a name="DiskSpace"></a> Anforderungen an den Datenträgerspeicher  
+###  <a name="DiskSpace"></a>Speicherplatzanforderungen  
  Datenbankmomentaufnahmen belegen Datenträgerspeicher. Wenn für eine Datenbankmomentaufnahme nicht genügend Speicherplatz vorhanden ist, wird er als fehlerverdächtig gekennzeichnet und muss gelöscht werden. (Auf die Quelldatenbank hat dies jedoch keine Auswirkungen. Aktionen in ihr werden normal fortgesetzt.) Im Vergleich zu einer vollständigen Kopie einer Datenbank sind Momentaufnahmen jedoch äußerst speicherplatzeffizient. Bei einer Momentaufnahme ist nur genügend Speicher für die Seiten erforderlich, die während seiner Lebensdauer geändert werden. Im Allgemeinen werden Momentaufnahmen nur für eine begrenzte Zeit gespeichert. Daher spielt ihre Größe keine wesentliche Rolle.  
   
  Je länger eine Momentaufnahme jedoch gespeichert wird, desto wahrscheinlicher belegt er verfügbaren Speicherplatz. Die maximale Größe, auf die eine Sparsedatei anwachsen kann, ist die Größe der entsprechenden Quelldatenbankdatei zum Zeitpunkt der Erstellung der Momentaufnahme.  
@@ -204,7 +204,7 @@ ms.locfileid: "62917144"
 > [!NOTE]  
 >  Abgesehen vom Dateispeicherplatz nimmt eine Datenbankmomentaufnahme ungefähr so viele Ressourcen in Anspruch wie eine Datenbank.  
   
-###  <a name="OfflineFGs"></a> Datenbankmomentaufnahmen mit Offlinedateigruppen  
+###  <a name="OfflineFGs"></a>Daten Bank Momentaufnahmen mit offline Dateigruppen  
  Offlinedateigruppen in der Quelldatenbank haben Auswirkungen auf Datenbankmomentaufnahmen, wenn Sie versuchen, einen der folgenden Vorgänge auszuführen:  
   
 -   Erstellen einer Momentaufnahme  
@@ -229,13 +229,13 @@ ms.locfileid: "62917144"
   
 -   [Anzeigen einer Datenbank-Momentaufnahme &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
--   [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;SQL Server&#41;](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
+-   [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL-&#41;](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
 -   [Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme](revert-a-database-to-a-database-snapshot.md)  
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Daten Bank Spiegelung und Daten Bank Momentaufnahmen &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

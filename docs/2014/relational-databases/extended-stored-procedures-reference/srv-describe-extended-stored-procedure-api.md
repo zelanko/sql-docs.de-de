@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127333"
 ---
-# <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API für erweiterte gespeicherte Prozeduren)
+# <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Definiert den Spaltennamen und die Quellen- und Zieldatentypen für eine bestimmte Spalte in einer Zeile.  
   
@@ -82,13 +83,13 @@ srcdata
  *namelen*  
  Gibt die Länge von *column_name* in Byte an. Wenn *namelen* den Wert SRV_NULLTERM hat, muss *column_name* NULL-terminiert sein.  
   
- *desttype*  
+ *destType*  
  Gibt den Datentyp der Spalte mit der Zielzeile an. Dies ist der Datentyp, der an den Client gesendet wird. Der Datentyp muss angegeben werden, auch wenn die Daten NULL sind. Weitere Informationen finden Sie unter [Data Types (Extended Stored Procedure API) (Datentypen (API für erweiterte gespeicherte Prozeduren))](data-types-extended-stored-procedure-api.md).  
   
  *destlen*  
  Gibt die Länge der Daten in Byte an, die an den Client gesendet werden sollen. Für Datentypen mit fester Länge, die keine NULL-Werte zulassen, wird *destlen* ignoriert. Für Datentypen variabler Länge und Datentypen fester Länge, die NULL-Werte zulassen, gibt *destlen* die maximal zulässige Länge der Zieldaten an.  
   
- *srctype*  
+ *srcType*  
  Gibt den Datentyp der Quelldaten an.  
   
  *srclen*  
@@ -99,10 +100,10 @@ srcdata
   
  Wenn *desttype* den Wert SRVDECIMAL oder SRVNUMERIC aufweist, muss der *srcdata*-Parameter ein Zeiger auf eine DBNUMERIC- oder DBDECIMAL-Struktur sein, und die Felder für Genauigkeit und Dezimalstellen müssen bereits auf die gewünschten Werte festgelegt worden sein. Mit DEFAULTPRECISION können Sie eine Standardgenauigkeit angeben und mit DEFAULTSCALE einen Standardwert für die Dezimalstellen.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  Die Nummer der beschriebenen Spalte. Die erste Spalte ist die Spalte 1. Tritt ein Fehler auf, wird 0 zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **srv_describe**-Funktion muss einmal für jede Spalte in der Zeile aufgerufen werden, bevor der erste Aufruf von **srv_sendrow** erfolgt. Die Spalten einer Zeile können in jeder Reihenfolge beschrieben werden.  
   
  Verwenden Sie **srv_setcoldata** bzw. **srv_setcollen**, um den Speicherort und die Länge der Quelldaten in Spaltenzeilen zu ändern, bevor das gesamte Resultset gesendet wurde.  
@@ -112,11 +113,11 @@ srcdata
  Wenn der Spaltenname in der Anwendung in Unicode angegeben ist, muss er in die Multibytecodepage des Servers konvertiert werden, bevor **srv_describe** aufgerufen wird. Weitere Informationen finden Sie unter [Unicode Data and Server Code Pages (Unicode-Daten und Server-Codepages)](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Siehe auch  
- [srv_sendrow (API für erweiterte gespeicherte Prozeduren)](srv-sendrow-extended-stored-procedure-api.md)   
- [srv_setutype (API für erweiterte gespeicherte Prozeduren)](srv-setutype-extended-stored-procedure-api.md)   
- [srv_setcoldata (API für erweiterte gespeicherte Prozeduren)](srv-setcoldata-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [srv_sendrow &#40;API für erweiterte gespeicherte Prozeduren&#41;](srv-sendrow-extended-stored-procedure-api.md)   
+ [srv_setutype &#40;API für erweiterte gespeicherte Prozeduren&#41;](srv-setutype-extended-stored-procedure-api.md)   
+ [srv_setcoldata &#40;API für erweiterte gespeicherte Prozeduren&#41;](srv-setcoldata-extended-stored-procedure-api.md)  
   
   

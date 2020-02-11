@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022665"
 ---
 # <a name="new-agent-profile"></a>Neues Agentprofil
   Im Dialogfeld **Neues Agentprofil** können Sie ein neues Profil erstellen. Neue Profile werden immer auf der Basis von vorhandenen Profilen erstellt. Sie können jedoch so geändert werden, dass bestimmte Anforderungen von Anwendungen erfüllt werden. Nach dem Erstellen kann das Profil auf vorhandene und zukünftige Agentaufträge im Dialogfeld **Agentprofile** angewendet werden. Agentparameterwerte können im Dialogfeld \<**Agentprofilname> Eigenschaften** geändert werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen Namen für das Profil ein.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63022665"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Replikationsmerge-Agent](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63022665"
  **Nur die in diesem Profil verwendeten Parameter anzeigen**  
  Deaktivieren Sie das Kontrollkästchen, um nur die für einen bestimmten Agent gültigen Parameter anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Replikations-Agent-Profilen](agents/work-with-replication-agent-profiles.md)   
  [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)   
  [Replikations-Agent-Profile](agents/replication-agent-profiles.md)  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Datenbankobjekten mit Common Language Runtime (CLR)-Integration | Microsoft-Dokumentation
+title: Aufbauen von Datenbankobjekten mit CLR (Common Language Runtime)-Integration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919254"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)
-  Sie können den Datenbankobjekten mit dem Erstellen der [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird als ein "CLR-Routine" bezeichnet Es gibt folgende Routinen:  
+  Sie können Datenbankobjekte mithilfe von [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellen, die als "CLR-Routine" bezeichnet wird. Es gibt folgende Routinen:  
   
 -   Benutzerdefinierte Skalarwertfunktionen (Skalar-UDFs)  
   
@@ -37,12 +37,12 @@ ms.locfileid: "62919254"
   
  CLR-Routinen haben in verwaltetem Code dieselbe Struktur. Sie werden öffentlichen, statischen (freigegeben in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET) Methoden einer Klasse zugeordnet. Außer Routinen können auch benutzerdefinierte Typen (UDTs) und benutzerdefinierte Aggregatfunktionen mithilfe von .NET Framework definiert werden. UDTs und benutzerdefinierte Aggregatfunktionen werden ganzen .NET Framework-Klassen zugeordnet.  
   
- Jeder .NET Framework-Routine verfügt über eine [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] , die die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Entsprechung verwendet werden kann. Skalar-UDFs können beispielsweise in jedem Skalarausdruck verwendet werden. Eine TVF kann in jeder FROM-Klausel verwendet werden. Eine Prozedur kann in einer EXEC-Anweisung oder von einer Clientanwendung aufgerufen werden.  
+ Jeder Typ .NET Framework Routine verfügt über einen [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] , der [!INCLUDE[tsql](../../../includes/tsql-md.md)] verwendet werden kann. Skalar-UDFs können beispielsweise in jedem Skalarausdruck verwendet werden. Eine TVF kann in jeder FROM-Klausel verwendet werden. Eine Prozedur kann in einer EXEC-Anweisung oder von einer Clientanwendung aufgerufen werden.  
   
 > [!NOTE]  
 >  CLR-Objekte (benutzerdefinierte Funktion, benutzerdefinierter Typ oder Trigger)können auf der Common Language Runtime auf mehreren Threads (paralleler Plan) ausgeführt werden, wenn der Abfrageoptimierer feststellt, dass dies vorteilhaft ist. Benutzerdefinierte Funktionen, die auf Daten zugreifen, werden jedoch auf einem seriellen Plan ausgeführt. Bei Ausführung auf einer Serverversion vor [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] müssen benutzerdefinierte Funktionen, die LOB-Parameter oder Rückgabewerte enthalten, ebenfalls nach einem seriellen Plan ausgeführt werden.  
   
- Die folgende Tabelle enthält die Themen in diesem Abschnitt.  
+ In der folgenden Tabelle sind die in diesem Abschnitt behandelten Themen aufgeführt.  
   
  [Erste Schritte mit der CLR-Integration](getting-started-with-clr-integration.md)  
  Enthält eine kurze Übersicht über die Bibliotheken und Namespaces, die benötigt werden, um Objekte mithilfe der CLR-Integration in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu kompilieren. Enthält das Beispiel "Hello World" für eine CLR-gespeicherte Prozedur.  
@@ -50,7 +50,7 @@ ms.locfileid: "62919254"
  [Unterstützte .NET Framework-Bibliotheken](supported-net-framework-libraries.md)  
  Enthält Informationen zu den durch die CLR-Integration unterstützten .NET Framework-Bibliotheken.  
   
- [CLR-Integration: Beschränkungen des Programmiermodells](clr-integration-programming-model-restrictions.md)  
+ [Beschränkungen des Programmiermodells für die CLR-Integration](clr-integration-programming-model-restrictions.md)  
  Enthält Informationen zu Beschränkungen des Programmiermodells für die CLR-Integration.  
   
  [SQL Server-Datentypen in .NET Framework](../../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
@@ -71,7 +71,7 @@ ms.locfileid: "62919254"
  [CLR-Trigger](../../../database-engine/dev-guide/clr-triggers.md)  
  Beschreibt die Implementierung und Verwendung von CLR-Triggern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Common Language Runtime &#40;CLR&#41; Integration (Übersicht)](../common-language-runtime-integration-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über die CLR-&#41; Integration in Common Language Runtime &#40;](../common-language-runtime-integration-overview.md)  
   
   

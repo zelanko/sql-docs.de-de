@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956134"
 ---
 # <a name="change-the-default-location-for-projects"></a>Ändern des Standardspeicherorts für Projekte
-  Der Standardspeicherort für Dateien und Projekte ist der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Projektordner im Ordner Meine Dateien.  
+  Der Standardspeicherort für Dateien und Projekte ist der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projektordner im Ordner Meine Dateien.  
   
 ### <a name="to-change-the-default-location-for-projects"></a>So ändern Sie den Standardspeicherort für Projekte  
   
-1.  Ändern Sie den Standardspeicherort durch Öffnen oder Speichern einer Datei oder eines Projekts an einem anderen Speicherort. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] speichert den Speicherort des zuvor geöffneten Projekts und verwendet ihn beim nächsten Öffnen oder Speichern eines Projekts.  
+1.  Ändern Sie den Standardspeicherort durch Öffnen oder Speichern einer Datei oder eines Projekts an einem anderen Speicherort. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] speichert den Speicherort des zuvor geöffneten Projekts und verwendet ihn beim nächsten Öffnen oder Speichern eines Projekts.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Projektmappen-Explorer](solution-explorer.md)  
   
   

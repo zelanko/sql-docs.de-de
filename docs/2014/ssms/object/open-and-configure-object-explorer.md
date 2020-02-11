@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999554"
 ---
 # <a name="open-and-configure-object-explorer"></a>Öffnen und Konfigurieren des Objekt-Explorers
@@ -26,11 +26,11 @@ ms.locfileid: "62999554"
 ## <a name="configuring-object-explorer-options"></a>Konfigurieren der Optionen für Objekt-Explorer  
  Um die Einstellungen für den Objekt-Explorer zu konfigurieren, klicken Sie im Menü **Extras** auf **Optionen**, und klicken Sie dann auf **Objekt-Explorer von SQL Server**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Objekt-Explorer](object-explorer.md)   
- [Verbinden Sie mit einer Instanz im Objekt-Explorer](connect-to-an-instance-from-object-explorer.md)   
- [Verwalten von Objekten mithilfe des Objekt-Explorer](manage-objects-by-using-object-explorer.md)   
- [Bereich für die Details des Objekt-Explorer](object-explorer-details-pane.md)   
+ [Herstellen einer Verbindung mit einer Instanz von Objekt-Explorer](connect-to-an-instance-from-object-explorer.md)   
+ [Verwalten von Objekten mithilfe von Objekt-Explorer](manage-objects-by-using-object-explorer.md)   
+ [Bereich für Objekt-Explorer Details](object-explorer-details-pane.md)   
  [Benutzerdefinierte Berichte in Management Studio](custom-reports-in-management-studio.md)  
   
   

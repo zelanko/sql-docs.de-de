@@ -1,5 +1,5 @@
 ---
-title: IHpublisherconstraints (Transact-SQL) | Microsoft-Dokumentation
+title: Ihpublishereinschränkungs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,28 +18,28 @@ ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44987e1b610483e6ce3cbca26c1efb8a1ef4c241
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990259"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **IHpublisherconstraints** -Systemtabelle enthält eine Zeile für jede von nicht - SQL Server-Verlegern mithilfe des aktuellen Verteilers replizierte Einschränkung. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **ihpublishereinschränkungs** -Systemtabelle enthält eine Zeile für jede Einschränkung, die von nicht-SQL Server-Verlegern mithilfe des aktuellen Verteilers repliziert wurde. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**publisherconstraint_id**|**int**|Identifiziert eine veröffentlichte Einschränkung.|  
-|**table_id**|**int**|Identifiziert die Tabelle aus [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) zu dem die Einschränkung gehört.|  
-|**publisher_id**|**smallint**|Identifiziert den nicht - SQL Server-Verleger aus der die Spalte veröffentlicht wird.|  
-|**Name**|**sysname**|Der Name der veröffentlichten Einschränkung.|  
-|**Typ**|**nvarchar(255)**|Ein unterstützter Einschränkungstyp aus der [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) -Systemtabelle.|  
+|**table_id**|**int**|Identifiziert die Tabelle aus [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) , zu der die Einschränkung gehört.|  
+|**publisher_id**|**smallint**|Identifiziert den Nicht-SQL Server-Verleger, von dem die Spalte veröffentlicht wird.|  
+|**Name**|**Vom Datentyp sysname**|Der Name der veröffentlichten Einschränkung.|  
+|**Typ**|**nvarchar(255)**|Ein unterstützter Einschränkungstyp aus der [iheinschräninttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) -Systemtabelle.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

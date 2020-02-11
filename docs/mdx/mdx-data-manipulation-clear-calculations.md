@@ -1,5 +1,5 @@
 ---
-title: CLEAR CALCULATIONS-Anweisung (MDX) | Microsoft-Dokumentation
+title: Clear Berechnungen-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938024"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX-Datenbearbeitung – CLEAR CALCULATIONS
@@ -31,13 +31,13 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  Ein gültiger MDX-Cubeausdruck (Multidimensional Expressions).  
   
-## <a name="remarks"></a>Hinweise  
- Die **FROM** -Klausel kann ausgelassen werden, wenn der Kontext des Cubes bekannten, z. B. in einem MDX-Skript.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **from** -Klausel kann ausgelassen werden, wenn der Kontext des Cubes bekannt ist, z. b. in einem MDX-Skript.  
   
 > [!NOTE]  
 >  Diese Anweisung kann nur von einem Server- oder Datenbankadministrator oder einem Mitglied einer Rolle mit Zugriff auf die Quelldaten des Cubes (das heißt ReadSourceData=true) ausgeführt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Datenbearbeitungsanweisungen &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

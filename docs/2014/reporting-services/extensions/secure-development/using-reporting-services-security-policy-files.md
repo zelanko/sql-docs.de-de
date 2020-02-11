@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989675"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Der Berichtsserver und Windows-Dienst, der Berichts-Manager-Webanwendung und den Berichts-Designer eine Vorschau Fensters aus.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Berichtsserver und Windows-Dienst, Berichts-Manager-Webanwendung und Vorschaufenster des Berichts-Designers.  
   
 > [!NOTE]  
 >  Es stehen zwei Vorschaumodi für den Berichts-Designer zur Verfügung: die Registerkarte „Vorschau“ und das Popup-Vorschaufenster, das beim Start Ihres Berichtsprojekts im **DebugLocal**-Modus aufgerufen wird. Die Registerkarte **Vorschau** ist keine sicherungsfähige Komponente und übernimmt keine Sicherheitsrichtlinieneinstellungen. Im Vorschaufenster sollen die Berichtsserverfunktionen simuliert werden. Es enthält daher eine Richtlinienkonfigurationsdatei, die von Ihnen oder einem Administrator verändert werden muss, um benutzerdefinierte Assemblys und benutzerdefinierte Erweiterungen im Berichts-Designer zu verwenden.  
@@ -36,7 +36,7 @@ ms.locfileid: "62989675"
 ## <a name="policy-files-in-reporting-services"></a>Richtliniendateien in Reporting Services  
  In der nachstehenden Tabelle werden die Richtlinienkonfigurationsdateien in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ihre Speicherorte (bei einer Standardinstallation) und die entsprechenden Funktionen aufgelistet.  
   
-|Dateiname|Speicherort (Standardinstallation)|Beschreibung|  
+|Dateiname|Speicherort (Standardinstallation)|BESCHREIBUNG|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Die Berichtsserverrichtlinien-Konfigurationsdatei. Diese Sicherheitsrichtlinien wirken sich vorwiegend auf Berichtsausdrücke und benutzerdefinierte Assemblys aus, nachdem ein Bericht für einen Berichtsserver bereitgestellt wurde. Diese Richtliniendatei beeinflusst auch benutzerdefinierte Daten, Übermittlung, Rendering und Sicherheitserweiterungen, die für den Berichtsserver bereitgestellt wurden.|  
 |rsmgrpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Richtlinienkonfigurationsdatei des Berichts-Managers. Diese Sicherheitsrichtlinien wirken sich auf alle Assemblys aus, die eine Erweiterung für den Berichts-Manager darstellen, wie zum Beispiel Abonnementbenutzeroberflächen-Erweiterungen für benutzerdefinierte Übermittlung.|  
@@ -81,7 +81,7 @@ ms.locfileid: "62989675"
   
  Zusätzliche Codegruppen können nacheinander hinzugefügt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Understanding Security Policies (Grundlegendes zu Sicherheitsrichtlinien)](understanding-security-policies.md)  
   
   

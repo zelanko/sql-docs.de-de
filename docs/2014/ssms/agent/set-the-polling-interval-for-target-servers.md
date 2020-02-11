@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033631"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
-  In diesem Thema wird das Festlegen der Frequenz für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beschrieben, mit der Informationen vom Master- zu den Zielservern aktualisiert werden. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführt. Ein Multiserverauftrag ist ein Auftrag, der von einem Masterserver auf mindestens einem Zielserver ausgeführt wird.  
+  In diesem Thema wird beschrieben, wie die Häufigkeit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festgelegt wird, mit der-Agent Informationen von der Master-auf den Ziel Servern aktualisiert. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführt. Ein Multiserverauftrag ist ein Auftrag, der von einem Masterserver auf mindestens einem Zielserver ausgeführt wird.  
   
--   **Vorbereitungen:**  [Sicherheit](#Security)  
+-   Vorbereitungen **:**[Sicherheit](#Security)    
   
--   **So legen Sie das Abrufintervall für Zielserver fest mit:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **So legen Sie das Abruf Intervall für Zielserver fest mit:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Auf jedem Server kann gleichzeitig eine Instanz des gleichen Auftrags ausgeführt werden. Jeder Zielserver ruft in regelmäßigen Abständen den Masterserver ab, lädt eine Kopie aller neuen Aufträge herunter, die dem Zielserver zugewiesen wurden, und trennt dann die Verbindung. Der Zielserver führt den Auftrag lokal aus und stellt dann erneut eine Verbindung mit dem Masterserver her, um den Auftragsergebnisstatus hochzuladen.  
@@ -37,8 +37,8 @@ ms.locfileid: "63033631"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) und [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
- **So legen Sie das Abrufintervall für Zielserver fest**  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+ **So legen Sie das Abruf Intervall für Zielserver fest**  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
   
@@ -57,15 +57,15 @@ ms.locfileid: "63033631"
     2.  Klicken Sie auf **Diese Zielserver** , wenn nicht für alle Zielserver dasselbe Abrufintervall gilt, und wählen Sie dann die Zielserver aus, für die dieses Abrufintervall verwendet werden soll.  
   
 ##  <a name="TSQL"></a> Verwenden von Transact-SQL  
- **So legen Sie das Abrufintervall für Zielserver fest**  
+ **So legen Sie das Abruf Intervall für Zielserver fest**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von Database Engine (Datenbankmodul) her, und erweitern Sie dann diese Instanz.  
   
-2.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
+2.  Klicken Sie in der Symbolleiste auf **Neue Abfrage**.  
   
-3.  Verwenden Sie im Abfragefenster die [Sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) gespeicherten Systemprozedur des Abrufintervalls für Zielserver festzulegen.  
+3.  Verwenden Sie im Abfragefenster die gespeicherte System Prozedur [sp_post_msx_operation &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) , um das Abruf Intervall für Zielserver festzulegen.  
   
-## <a name="see-also"></a>Siehe auch  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+## <a name="see-also"></a>Weitere Informationen  
+ [dbo. sysdownloadlist &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

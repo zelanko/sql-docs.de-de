@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011962"
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
@@ -34,7 +34,7 @@ ms.locfileid: "63011962"
   
      [Sicherheit](#Security)  
   
--   **So erstellen Sie eine neue Serverrolle mit**  
+-   **So erstellen Sie eine neue Server Rolle mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63011962"
   
 -   Erfordert die CREATE SERVER ROLE-Berechtigung oder die Mitgliedschaft in der festen sysadmin-Serverrolle.  
   
--   Erfordert für Anmeldenamen außerdem IMPERSONATE für den *server_principal* , die ALTER-Berechtigung für Serverrollen, die als *server_principal*verwendet werden, oder die Mitgliedschaft in einer Windows-Gruppe, die als server_principal verwendet wird.  
+-   Erfordert für Anmeldenamen außerdem IMPERSONATE für den *server_principal* , die ALTER-Berechtigung für Serverrollen, die als *server_principal* verwendet werden, oder die Mitgliedschaft in einer Windows-Gruppe, die als server_principal verwendet wird.  
   
 -   Wenn Sie die AUTHORIZATION-Option verwenden, um den Besitz für Serverrollen zuzuweisen, sind außerdem folgende Berechtigungen erforderlich:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63011962"
   
     -   Um einer Serverrolle eine andere Serverrolle als Besitzer zuzuweisen, ist die Mitgliedschaft in der Empfängerserverrolle oder die ALTER-Berechtigung für diese Serverrolle erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   
@@ -67,15 +67,15 @@ ms.locfileid: "63011962"
   
 2.  Erweitern Sie den Ordner **Sicherheit** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen**, und klicken Sie dann auf **Neue Serverrolle...** .  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen**, und klicken Sie dann auf **Neue Serverrolle...**.  
   
-4.  In der **neue Serverrolle -** _Server_role_name_ Dialogfeld auf die **allgemeine** geben einen Namen für die neue Serverrolle in der **serverrollenname**Feld.  
+4.  Geben Sie im Dialogfeld **neue Server Rolle-**_server_role_name_ auf der Seite **Allgemein** einen Namen für die neue Server Rolle in das Feld **Server Rollenname** ein.  
   
-5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(...)** , um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
+5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
   
 6.  Wählen Sie unter **Sicherungsfähige Elemente**ein oder mehrere sicherungsfähige Elemente auf Serverebene aus. Wenn ein sicherungsfähiges Element ausgewählt ist, können dieser Serverrolle Berechtigungen für dieses sicherungsfähige Element gewährt oder verweigert werden.  
   
-7.  In der **Berechtigungen: Explizite** wählen Sie das Kontrollkästchen zum gewähren, Berechtigung mit Grant oder deny-Berechtigung für diese Serverrolle für die ausgewählten sicherungsfähigen Elemente. Wenn eine Berechtigung nicht für alle ausgewählten sicherungsfähigen Elemente gewährt oder verweigert werden kann, wird die Berechtigung als teilweise ausgewählt dargestellt.  
+7.  Aktivieren Sie im Feld **Berechtigungen: Explizit** das Kontrollkästchen, um für die ausgewählten sicherungsfähigen Elemente Berechtigungen zu gewähren, als Berechtigung mit Recht zum Erteilen zu gewähren oder zu verweigern. Wenn eine Berechtigung nicht für alle ausgewählten sicherungsfähigen Elemente gewährt oder verweigert werden kann, wird die Berechtigung als teilweise ausgewählt dargestellt.  
   
 8.  Fügen Sie auf der Seite **Mitglieder** über die Schaltfläche **Hinzufügen** Anmeldungen hinzu, die Einzelpersonen oder Gruppen für die neue Serverrolle darstellen.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63011962"
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

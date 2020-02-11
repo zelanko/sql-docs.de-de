@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196653"
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
@@ -67,48 +67,48 @@ ms.locfileid: "68196653"
 ## <a name="estimated-space-savings-by-data-type"></a>Geschätzte Speicherplatzeinsparungen nach Datentyp  
  Spalten mit geringer Dichte benötigen mehr Speicherplatz für Werte, die ungleich NULL sind, als für identische Daten benötigt wird, die nicht als SPARSE gekennzeichnet wurden. Die folgenden Tabellen geben die Speicherplatznutzung für jeden Datentyp an. Die Spalte **NULL-Prozentwert** gibt an, wie viel Prozent der Daten NULL sein müssen, um Speicherplatzeinsparungen von 40 Prozent zu erzielen.  
   
- **Datentypen fester Länge**  
+ **Datentypen mit fester Länge**  
   
 |Datentyp|Bytes ohne geringe Dichte|Bytes mit geringer Dichte|NULL-Prozentwert|  
 |---------------|---------------------|------------------|---------------------|  
-|`bit`|0.125|5|98%|  
+|`bit`|0,125|5|98%|  
 |`tinyint`|1|5|86%|  
-|`smallint`|2|6|76%|  
+|`smallint`|2|6|76 %|  
 |`int`|4|8|64%|  
-|`bigint`|8|12|52%|  
+|`bigint`|8|12|52 %|  
 |`real`|4|8|64%|  
-|`float`|8|12|52%|  
+|`float`|8|12|52 %|  
 |`smallmoney`|4|8|64%|  
-|`money`|8|12|52%|  
+|`money`|8|12|52 %|  
 |`smalldatetime`|4|8|64%|  
-|`datetime`|8|12|52%|  
+|`datetime`|8|12|52 %|  
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Datentypen mit von der Genauigkeit abhängiger Länge**  
+ **Datentypen mit Genauigkeits abhängiger Länge**  
   
 |Datentyp|Bytes ohne geringe Dichte|Bytes mit geringer Dichte|NULL-Prozentwert|  
 |---------------|---------------------|------------------|---------------------|  
 |`datetime2(0)`|6|10|57%|  
-|`datetime2(7)`|8|12|52%|  
+|`datetime2(7)`|8|12|52 %|  
 |`time(0)`|3|7|69%|  
-|`time(7)`|5|9|60%|  
-|`datetimetoffset(0)`|8|12|52%|  
+|`time(7)`|5|9|60 %|  
+|`datetimetoffset(0)`|8|12|52 %|  
 |`datetimetoffset (7)`|10|14|49%|  
-|`decimal/numeric(1,s)`|5|9|60%|  
+|`decimal/numeric(1,s)`|5|9|60 %|  
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Verwenden Sie den `decimal`-Typ als konservative Schätzung.|||  
   
- **Datentypen mit von den Daten abhängiger Länge**  
+ **Datentypen mit Daten abhängiger Länge**  
   
 |Datentyp|Bytes ohne geringe Dichte|Bytes mit geringer Dichte|NULL-Prozentwert|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Ändert sich mit dem zugrunde liegenden Datentyp|||  
-|`varchar` oder `char`|2*|4*|60%|  
-|`nvarchar` oder `nchar`|2*|4*+|60%|  
-|`varbinary` oder `binary`|2*|4*|60%|  
-|`xml`|2*|4*|60%|  
-|`hierarchyid`|2*|4*|60%|  
+|`varchar`noch`char`|2*|4*|60 %|  
+|`nvarchar`noch`nchar`|2*|4*+|60 %|  
+|`varbinary`noch`binary`|2*|4*|60 %|  
+|`xml`|2*|4*|60 %|  
+|`hierarchyid`|2*|4*|60 %|  
   
  *Die Länge ist gleich dem Mittelwert der im Typ enthaltenen Daten, plus 2 oder 4 Bytes.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68196653"
   
      Änderungsnachverfolgung unterstützt Sparsespalten und Spaltensätze. Wenn ein Spaltensatz in einer Tabelle aktualisiert wird, behandelt die Änderungsnachverfolgung diese als Update für die gesamte Zeile. Es steht keine detaillierte Änderungsnachverfolgung zur Verfügung, um den exakten Satz an Sparsespalten abzurufen, die über den Spaltensatz-Updatevorgang aktualisiert werden. Wenn die Sparsespalten explizit über eine DML-Anweisung aktualisiert werden, arbeitet die Änderungsnachverfolgung wie gewohnt und identifiziert den exakten Satz an geänderten Spalten.  
   
--   Change Data Capture  
+-   Erfassung geänderter Daten  
   
      Change Data Capture unterstützt Sparsespalten, aber keine Spaltensätze.  
   
@@ -231,10 +231,10 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Spaltensätzen](../tables/use-column-sets.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden von Spalten Sätzen](../tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  
   
   

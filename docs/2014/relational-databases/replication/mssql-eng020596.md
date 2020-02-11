@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddabe3e1a3a12e3aa14c5a6c641345d3236c2fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938480"
 ---
-# <a name="mssqleng020596"></a>MSSQL_ENG020596
+# <a name="mssql_eng020596"></a>MSSQL_ENG020596
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62938480"
 ## <a name="user-action"></a>Benutzeraktion  
  Melden Sie sich mit den entsprechenden Anmeldeinformationen an, und führen Sie **sp_dropanonymousagent**aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)  
   
   

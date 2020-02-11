@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999872"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
@@ -33,13 +33,13 @@ ms.locfileid: "62999872"
   
  Nehmen Sie die folgenden drei verknüpften Tabellen als Beispiel:  
   
- ![Logischer Datensatz für drei Tabellen für nur Spaltennamen](../media/logical-records-01.gif "Three table logical record, with column names only")  
+ ![Logischer Datensatz für drei Tabellen, nur Spaltennamen](../media/logical-records-01.gif "Logischer Datensatz für drei Tabellen, nur Spaltennamen")  
   
  Die **Customers** -Tabelle ist die übergeordnete Tabelle in dieser Beziehung und enthält eine **CustID**-Primärschlüsselspalte. Die **Orders** -Tabelle enthält eine **OrderID**-Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **CustID** -Spalte, die auf die **CustID** -Spalte in der **Customers** -Tabelle verweist. Dementsprechend enthält die **OrderItems** -Tabelle eine **OrderItemID**-Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **OrderID** -Spalte, die auf die **OrderID** -Spalte in der **Orders** -Tabelle verweist.  
   
  In diesem Beispiel besteht ein logischer Datensatz aus allen Zeilen in der **Orders** -Tabelle, die sich auf einen einzelnen **CustID** -Wert beziehen, und allen Zeilen der **OrderItems** -Tabelle, die sich auf jene Zeilen in der **Orders** -Tabelle beziehen. Das Diagramm zeigt alle Zeilen in den drei Tabellen, die im logischen Datensatz für Customer 2 enthalten sind:  
   
- ![Logischer Datensatz mit Werten für drei Tabellen](../media/logical-records-02.gif "Three table logical record with values")  
+ ![Logischer Datensatz für drei Tabellen mit Werten](../media/logical-records-02.gif "Logischer Datensatz für drei Tabellen mit Werten")  
   
  Informationen zum Definieren einer logischen Datensatzbeziehung zwischen Artikeln finden Sie unter [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62999872"
 ### <a name="the-application-of-changes-as-a-unit"></a>Anwendung von Änderungen als Einheit  
  Falls die Mergeverarbeitung unterbrochen wird, wie z. B. bei einer gelöschten Verbindung, wird bei Verwendung logischer Datensätze für die teilweise abgeschlossene Gruppe verknüpfter replizierter Änderungen ein Rollback ausgeführt. Beispiel: Ein Abonnent fügt einen neuen Auftrag mit **OrderID** = 6 und zwei neue Zeilen in der **OrderItems** -Tabelle mit **OrderItemID** = 10 und **OrderItemID** = 11 für **OrderID** = 6 hinzu.  
   
- ![Logischer Datensatz mit Werten für drei Tabellen](../media/logical-records-04.gif "Three table logical record with values")  
+ ![Logischer Datensatz für drei Tabellen mit Werten](../media/logical-records-04.gif "Logischer Datensatz für drei Tabellen mit Werten")  
   
  Wenn der Replikationsprozess unterbrochen wird, nachdem die **Orders** -Zeile für **OrderID** = 6 abgeschlossen wurde, jedoch bevor die **OrderItems** 10 und 11 abgeschlossen wurden, ist der **OrderTotal** -Wert für **OrderID** = 6 ohne Verwendung logischer Datensätze nicht mit der Summe der **OrderAmount** -Werte für die **OrderItems** -Zeilen konsistent. Bei Verwendung logischer Datensätze wird für die **Orders** -Zeile für **OrderID** = 6 erst dann ein Commit ausgeführt, wenn die verknüpften **OrderItems** -Änderungen repliziert wurden.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62999872"
   
      Eine Datenbank, in der z. B. Kurse und Studenten nachverfolgt werden, könnte folgendermaßen aufgebaut sein:  
   
-     ![Untergeordnete Tabelle mit mehr als einer übergeordneten Tabelle](../media/logical-records-03.gif "Child table with more than one parent table")  
+     ![Untergeordnete Tabelle mit mehr als einer übergeordneten Tabelle](../media/logical-records-03.gif "Untergeordnete Tabelle mit mehr als einer übergeordneten Tabelle")  
   
      Sie können keinen logischen Datensatz verwenden, der die drei Tabellen in dieser Beziehung darstellt, da die Zeilen in **ClassMembers** keiner einzelnen Primärschlüsselzeile zugewiesen sind. Die Tabellen **Classes** und **ClassMembers** könnten jedoch einen logischen Datensatz bilden, ebenso die Tabellen **ClassMembers** und **Students**, aber nicht alle drei zusammen.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62999872"
   
  Werden logische Datensätzen verwendet, muss der Merge-Agent die Änderungen für jeden vollständigen logischen Datensatz auf einmal verarbeiten. Das wirkt sich auf die Dauer aus, die der Merge-Agent zum Replizieren der Zeilen benötigt. Darüber hinaus können sich die Sperranforderungen erhöhen, da der Agent eine separate Transaktion für jeden logischen Datensatz öffnet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Artikeloptionen für die Mergereplikation](article-options-for-merge-replication.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Article Options for Merge Replication](article-options-for-merge-replication.md)  
   
   

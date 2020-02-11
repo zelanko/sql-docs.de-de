@@ -10,13 +10,13 @@ ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9abf6ef954a493d4386d46b9d113348a9cb91e1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68011133"
 ---
-# <a name="localdberrornotinstalled"></a>LOCALDB_ERROR_NOT_INSTALLED
+# <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Details  
@@ -27,7 +27,7 @@ ms.locfileid: "68011133"
 |Ereignis-ID|278|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  
-|Meldungstext|Hinweis: Der Meldungstext ist leer, da diese Meldung bedeutet, die die gesamte LocalDB-API (einschließlich der FormatMessage-Funktion, die HRESULTS in Meldungstext zuordnet) nicht verfügbar.|  
+|Meldungstext|Hinweis: der Meldungs Text ist leer, da diese Meldung bedeutet, dass die gesamte localdb-API (einschließlich der FormatMessage-Funktion, die HRESULTs in den Nachrichtentext zuordnet) nicht verfügbar ist.|  
   
 ## <a name="explanation"></a>Erklärung  
  Die Lokale Datenbank-Laufzeit ist nicht auf dem Computer installiert.  

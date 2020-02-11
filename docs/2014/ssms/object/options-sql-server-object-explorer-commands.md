@@ -1,5 +1,5 @@
 ---
-title: Optionen (SQL Server Objekt-Explorer – Befehle) | Microsoft-Dokumentation
+title: Optionen (SQL Server-Objekt-Explorer-Befehle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999305"
 ---
-# <a name="options-sql-server-object-explorer-commands"></a>Optionen (SQL Server Objekt-Explorer – Befehle)
+# <a name="options-sql-server-object-explorer-commands"></a>Optionen (SQL Server-Objekt-Explorer-Befehle)
   Wenn Sie mit der rechten Maustaste auf eine Tabelle oder eine Sicht im Objekt-Explorer klicken, werden die beiden folgenden Optionen zum Anzeigen von Zeilen in der Tabelle angezeigt:  
   
 -   **Die ersten 1000 Zeilen auswählen**  
@@ -33,16 +33,16 @@ ms.locfileid: "62999305"
  Verwenden Sie das Dialogfeld **Allgemeine Skriptoptionen** , um die Anzahl von Zeilen zu ändern, die geöffnet werden.  
   
 ## <a name="general-scripting-options"></a>Allgemeine Skriptoptionen  
- **Wert für Select Top \<n > Befehl überwachen**  
+ **Wert für den Befehl \<Select Top n> Audit Record**  
  Gibt die Anzahl der zurückzugebenden Überwachungszeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
- **Wert für den oberen bearbeiten \<n > Zeilen-Befehl**  
+ **Wert für Befehl " \<oberste n> Zeilen bearbeiten"**  
  Gibt die Anzahl von beim Bearbeiten von Zeilen in einer Tabelle zurückzugebenden Zeilen an. Die Standardeinstellung ist 200 Zeilen.  
   
- **Wert für Select Top \<n > Zeilen-Befehl**  
+ **Wert für Befehl " \<oberste n> Zeilen auswählen"**  
  Gibt die im erstellten Abfrage-Editor Skript angegebene Anzahl von zurückzugebenden Zeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

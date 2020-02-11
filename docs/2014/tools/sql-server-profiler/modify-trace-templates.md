@@ -1,5 +1,5 @@
 ---
-title: Ändern von Ablaufverfolgungsvorlagen | Microsoft-Dokumentation
+title: Ändern von Ablauf Verfolgungs Vorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035041"
 ---
 # <a name="modify-trace-templates"></a>Ändern von Ablaufverfolgungsvorlagen
@@ -28,11 +28,11 @@ ms.locfileid: "63035041"
   
  Möglicherweise müssen Sie eine Vorlage von einer vorhandenen Ablaufverfolgungsdatei ableiten, z. B. falls Sie vergessen haben, welche Vorlage ursprünglich zum Erstellen der Ablaufverfolgung verwendet wurde (oder wenn diese Datei nicht gespeichert wurde) oder falls Sie eine Ablaufverfolgung später erneut ausführen möchten. Bei vorhandenen Ablaufverfolgungen können Sie die Eigenschaften zwar anzeigen, aber nicht ändern. Um die Eigenschaften zu ändern, müssen Sie die Ablaufverfolgung beenden oder anhalten. Weitere Informationen finden Sie unter [Ableiten einer Vorlage von einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](sql-server-profiler.md) und [Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md).  
   
- **So erstellen Sie eine Ablaufverfolgungsvorlage**  
+ **So erstellen Sie eine Ablauf Verfolgungs Vorlage**  
   
  [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)  
   
- **So führen Sie eine Ablaufverfolgung mithilfe einer Ablaufverfolgungsvorlage aus**  
+ **So führen Sie eine Ablauf Verfolgung aus einer Ablauf Verfolgungs Vorlage aus**  
   
  [Erstellen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)  
   
@@ -42,13 +42,13 @@ ms.locfileid: "63035041"
   
  [Verwenden von Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
- **So fügen Sie zu einer Ablaufverfolgungsvorlage oder -datei Ereignisse hinzu bzw. entfernen sie**  
+ **So fügen Sie einer Ablauf Verfolgungs Vorlage oder einer Ablauf Verfolgungs Datei Ereignisse hinzu oder entfernen diese**  
   
  [Verwenden von SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Verwenden von Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten einer Ablaufverfolgung](start-a-trace.md)  
   
   

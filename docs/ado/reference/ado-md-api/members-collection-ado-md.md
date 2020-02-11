@@ -18,36 +18,36 @@ ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949433"
 ---
 # <a name="members-collection-ado-md"></a>Members-Collection (ADO MD)
-Enthält die [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekte aus einer Ebene oder eine Position auf einer Achse.  
+Enthält die [Element](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekte aus einer Ebene oder einer Position entlang einer Achse.  
   
-## <a name="remarks"></a>Hinweise  
- Ein **Mitglieder** Sammlung wird verwendet, um die folgenden Arten von Elementen enthalten:  
+## <a name="remarks"></a>Bemerkungen  
+ Eine **Members** -Auflistung wird verwendet, um die folgenden Typen von Membern zu enthalten:  
   
--   Die Elemente, aus denen eine Ebene in einem Cube besteht. Diese befinden sich die **Mitglieder** Auflistung von einem [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekt. Verwenden Sie beispielsweise aus das Beispiel [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), sind die vier Elemente der Ebene Ländern, Kanada, USA, Vereinigtes Königreich und Deutschland.  
+-   Die Elemente, die eine Ebene in einem Cube bilden. Diese sind in der **Members** -Auflistung eines [ebenenobjekts](../../../ado/reference/ado-md-api/level-object-ado-md.md) enthalten. Beispielsweise sind die vier Mitglieder der Länderebene "Kanada", "USA", "Vereinigtes Königreich [" und "](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)Deutschland".  
   
--   Die Elemente, die die untergeordneten Elemente eines bestimmten Elements innerhalb einer Hierarchie sind. Diese Elemente werden zurückgegeben, durch die [untergeordneten](../../../ado/reference/ado-md-api/children-property-ado-md.md) Eigenschaft des übergeordneten Elements **Member** Objekt. Beispielsweise sind die erneut mit dem gleichen Beispiel an, die beiden untergeordneten Elemente dem Kanada-Element, Kanada-Ostküste und Kanada-West.  
+-   Die Elemente, die den untergeordneten Elementen eines bestimmten Elements in einer Hierarchie angehören. Diese Member werden von der [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) -Eigenschaft des übergeordneten **Member** -Objekts zurückgegeben. Wenn Sie z. b. dasselbe Beispiel verwenden, sind die beiden untergeordneten Elemente des Canada-Members "Kanada-Ost" und "Canada-West".  
   
--   Die Elemente, die eine bestimmte Position auf einer Achse der definieren eine [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Mit dem Cellset aus [arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) als Beispiel sind die beiden Elemente der ersten Position auf der x-Achse Valentine und Seattle. Diese Elemente enthalten sind die **Mitglieder** Auflistung von einem [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt.  
+-   Die Member, die eine bestimmte Position entlang einer Achse eines [Cellsets](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)definieren. Durch die Verwendung des Cellsets von der [Arbeit mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) als Beispiel sind die beiden Member der ersten Position auf der x-Achse Valentinstag und Seattle. Diese Member sind in der **Members** -Auflistung eines [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekts enthalten.  
   
- **Mitglieder** ist eine standard-ADO-Auflistung. Mit den Eigenschaften und Methoden einer Sammlung können Sie Folgendes tun:  
+ **Members** ist eine standardmäßige ADO-Auflistung. Mit den Eigenschaften und Methoden einer Sammlung können Sie folgende Aufgaben ausführen:  
   
--   Erhalten Sie die Anzahl der Objekte in der Auflistung mit den [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft.  
+-   Abrufen der Anzahl von Objekten in der Auflistung mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft.  
   
--   Geben Sie ein Objekt zurück, aus der Auflistung mit der standardmäßigen [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
+-   Gibt ein Objekt aus der Auflistung mit der Standard [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft zurück.  
   
--   Aktualisieren Sie die Objekte in der Auflistung über den Anbieter mit der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung vom Anbieter mit der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Member-Beispiel (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Members-Beispiel (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

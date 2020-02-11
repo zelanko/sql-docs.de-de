@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921847"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planen und Ausführen von Wiederherstellungssequenzen (vollständiges Wiederherstellungsmodell)
@@ -61,11 +61,11 @@ ms.locfileid: "62921847"
 ## <a name="restarting-a-restore-sequence"></a>Neustarten einer Wiederherstellungssequenz  
  Wenn im Rahmen einer Wiederherstellungssequenz ein Problem auftritt, können Sie die Wiederherstellungssequenz beenden und von Anfang an neu starten. Wenn Sie beispielsweise versehentlich zu viele Protokollsicherungen wiederhergestellt und den gewünschten Wiederherstellungspunkt überschritten haben, müssen Sie die Wiederherstellungssequenz neu starten und bis zu der Protokollsicherung wiederherstellen, die den Zielwiederherstellungspunkt enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](complete-database-restores-full-recovery-model.md)   
- [Onlinewiederherstellung &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [Onlinewiederherstellungen &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](file-restores-full-recovery-model.md)   
  [Wiederherstellung von Seiten &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  

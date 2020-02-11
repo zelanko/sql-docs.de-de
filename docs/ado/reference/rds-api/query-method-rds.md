@@ -14,17 +14,17 @@ ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963827"
 ---
 # <a name="query-method-rds"></a>Query-Methode (RDS)
-Eine gültige SQL-Abfragezeichenfolge verwendet, um zurückzugeben eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Verwendet eine gültige SQL-Abfrage [Zeichenfolge](../../../ado/reference/ado-api/recordset-object-ado.md)zum Zurückgeben eines Recordsets.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,24 +35,24 @@ Set Recordset = DataFactory.Query(Connection, Query)
   
 #### <a name="parameters"></a>Parameter  
  *Recordset*  
- Eine Objektvariable, steht ein **Recordset** Objekt.  
+ Eine Objekt Variable, die ein **Recordset** -Objekt darstellt.  
   
  *DataFactory*  
- Eine Objektvariable, steht ein [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt.  
+ Eine Objekt Variable, die ein [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt darstellt.  
   
  *Verbindung*  
- Ein **Zeichenfolge** Wert, der die Verbindungsinformationen für Server enthält. Dies ist vergleichbar mit der [Connect](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaft.  
+ Ein **Zeichen** folgen Wert, der die Server Verbindungsinformationen enthält. Dies ähnelt der [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft.  
   
- *Query*  
- Ein **Zeichenfolge** , die die SQL-Abfrage enthält.  
+ *Abfrage*  
+ Eine **Zeichenfolge** , die die SQL-Abfrage enthält.  
   
-## <a name="remarks"></a>Hinweise  
- Die Abfrage sollte den SQL-Dialekt des Datenbankservers verwenden. Ein Status des wird zurückgegeben, wenn Fehler mit der Abfrage, die ausgeführt wurde. Die **Abfrage** Methode führt syntaxüberprüfung für keine der **Abfrage** Zeichenfolge.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Abfrage sollte den SQL-Dialekt des Datenbankservers verwenden. Wenn ein Fehler mit der ausgeführten Abfrage vorliegt, wird ein Ergebnis Status zurückgegeben. Die **Abfrage** Methode führt keine Syntax Überprüfung der **Abfrage** Zeichenfolge aus.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DataFactory-Objekt, Abfragemethode und CreateObject-Methode – Beispiel (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

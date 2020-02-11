@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63000344"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
@@ -57,7 +57,7 @@ ms.locfileid: "63000344"
   
  Weitere Informationen finden Sie unter [Ermitteln und Lösen von Konflikten in logischen Datensätzen](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Geben Sie den Konflikt nachverfolgen und-lösungsebene für Mergeveröffentlichungen](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+ Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Specify the Conflict Tracking and Resolution Level for Merge Articles](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-resolution"></a>Konfliktlösung  
  Wenn ein Konflikt erkannt wird, startet der Merge-Agent den ausgewählten Konfliktlöser und verwendet diesen zur Bestimmung des Konfliktgewinners. Die Gewinnerzeile wird auf dem Verleger und auf dem Abonnenten angewendet, und die Daten der verlierenden Zeile werden in eine Konflikttabelle geschrieben. Konflikte werden direkt nach dem Ausführen des Konfliktlösers gelöst, es sei denn, Sie haben angegeben, dass Konflikte interaktiv gelöst werden sollen.  
@@ -96,7 +96,7 @@ ms.locfileid: "63000344"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität &#40;Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Weitere Informationen zum Programmieren von Replikationen mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] und zum Programmieren von Replication Management Objects (RMO) finden Sie unter: [Create a Pull Subscription (Erstellen eines Pullabonnements)](../create-a-pull-subscription.md) und [Create a Push Subscription (Erstellen eines Pushabonnements)](../create-a-push-subscription.md).  
+-   Replikations- [!INCLUDE[tsql](../../../includes/tsql-md.md)] - und Replication Management Objects-Programmierung (RMO): [Create a Pull Subscription](../create-a-pull-subscription.md) und [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Interaktiver Konfliktlöser  
  Die Replikation stellt eine Benutzeroberfläche für den interaktiven Konfliktlöser bereit, die in Verbindung mit dem prioritätsbasierten Standardkonfliktlöser oder mit einem Artikelkonfliktlöser verwendet werden kann. Bei der Ausführung einer bedarfsgesteuerten Synchronisierung mit der Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows zeigt der interaktive Konfliktlöser Konfliktdaten in Laufzeit an und bietet Ihnen die Möglichkeit, die Art der Konfliktlösung auszuwählen. Weitere Informationen zum Aktivieren der interaktiven Konfliktlösung und zum Starten des interaktiven Konfliktlösers finden Sie unter [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -129,9 +129,9 @@ ms.locfileid: "63000344"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
+-   Replikation [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programmierung: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Synchronisieren von Daten](../synchronize-data.md)  
   
   

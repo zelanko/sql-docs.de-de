@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021948"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Andere Nicht-SQL Server-Abonnenten
-  Eine Liste der von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützten Nicht- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Abonnenten finden Sie unter [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
+  Eine Liste der von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)]unterstützten nicht--Abonnenten finden Sie unter [nicht-SQL Server-Abonnenten](non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
   
 ## <a name="odbc-driver-requirements"></a>Anforderungen für ODBC-Treiber  
  Der ODBC-Treiber muss folgende Voraussetzungen erfüllen:  
@@ -46,7 +46,7 @@ ms.locfileid: "63021948"
   
 -   **Command** -Objekt  
   
--   **Rowset** -Objekt  
+-   **** Rowsetobjekt  
   
 -   **Error** -Objekt  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63021948"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** ist zum Erstellen von Parameterzugriffen erforderlich. Wenn der Anbieter **IColumnRowset**unterstützt, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Schnittstelle, um zu bestimmen, ob eine Spalte eine Identitätsspalte ist.  
+ **IAccessor** ist zum Erstellen von Parameteraccessoren erforderlich. Wenn der Anbieter **IColumnRowset**unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , verwendet diese Schnittstelle, um zu bestimmen, ob eine Spalte eine Identitäts Spalte ist.  
   
 ### <a name="rowset-object-interfaces"></a>Schnittstellen für Rowset-Objekte  
  Die folgenden Schnittstellen sind erforderlich:  
@@ -100,7 +100,7 @@ ms.locfileid: "63021948"
   
 -   **IColumnsInfo**  
   
- Eine Anwendung sollte ein Rowset für eine replizierte Tabelle öffnen, das in der Abonnementdatenbank erstellt wird. **IColumnsInfo** und **IAccessor** werden zum Zugreifen auf Daten im Rowset benötigt.  
+ Eine Anwendung sollte ein Rowset für eine replizierte Tabelle öffnen, das in der Abonnementdatenbank erstellt wird. **IColumnsInfo** und **IAccessor** sind erforderlich, um auf Daten im Rowset zuzugreifen.  
   
 ### <a name="error-object-interfaces"></a>Schnittstellen für Error-Objekte  
  Verwenden Sie die folgenden Schnittstellen zur Verwaltung von Fehlern:  
@@ -113,7 +113,7 @@ ms.locfileid: "63021948"
   
  Weitere Informationen zum OLE DB-Anbieter finden Sie in der Dokumentation zum jeweiligen OLE DB-Anbieter.  
   
-## <a name="see-also"></a>Siehe auch  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Nicht-SQL Server-Abonnenten](non-sql-server-subscribers.md)  
   
   

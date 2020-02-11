@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629641"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
@@ -58,12 +58,12 @@ ms.locfileid: "62629641"
   
 -   Abonnementdatenbanken  
   
--   Die Datenbanken**msdb** und **master** auf dem Verleger, Verteiler und allen Abonnenten  
+-   **msdb** -Datenbank und **Master** -Datenbank auf dem Verleger, Verteiler und allen Abonnenten  
   
  Bei replizierten Datenbanken gibt es besondere Aspekte im Hinblick auf das Sichern und Wiederherstellen von Daten. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Erstellen von Skripts für die Replikationstopologie  
- Für die Replikationskomponenten in einer Topologie sollten im Rahmen des Plans zur Wiederherstellung im Notfall Skripts erstellt werden; diese können dann auch zur Automatisierung sich wiederholender Tasks verwendet werden. Ein Skript enthält die gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Systemprozeduren zum Implementieren der Replikationskomponenten, für die Skripts erstellt wurden, z. B. einer Veröffentlichung oder eines Abonnements. Skripts können nach dem Erstellen einer Komponente nicht mithilfe eines Assistenten (z. B. dem Assistenten für neue Veröffentlichung) oder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] erstellt werden. Sie können das Skript mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder **sqlcmd**anzeigen, ändern oder ausführen. Skripts können mit Sicherungsdateien gespeichert und dann verwendet werden, wenn eine Replikationstopologie erneut konfiguriert werden muss. Weitere Informationen finden Sie unter [Scripting Replication](../scripting-replication.md).  
+ Für die Replikationskomponenten in einer Topologie sollten im Rahmen des Plans zur Wiederherstellung im Notfall Skripts erstellt werden; diese können dann auch zur Automatisierung sich wiederholender Tasks verwendet werden. Ein Skript enthält die gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Systemprozeduren zum Implementieren der Replikationskomponenten, für die Skripts erstellt wurden, z. B. einer Veröffentlichung oder eines Abonnements. Skripts können in einem Assistenten (z. b. dem Assistenten für neue Veröffentlichung) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder in erstellt werden, nachdem Sie eine-Komponente erstellt haben. Sie können das Skript mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder **sqlcmd**anzeigen, ändern oder ausführen. Skripts können mit Sicherungsdateien gespeichert und dann verwendet werden, wenn eine Replikationstopologie erneut konfiguriert werden muss. Weitere Informationen finden Sie unter [Scripting Replication](../scripting-replication.md).  
   
  Falls Eigenschaftenänderungen vorgenommen wurden, sollten für eine Komponente neue Skripts erstellt werden. Wenn Sie bei einer Transaktionsreplikation benutzerdefinierte gespeicherte Prozeduren verwenden, sollte zusammen mit den Skripts eine Kopie aller dieser Prozeduren gespeichert werden. Nach Änderungen an der Prozedur sollte die Kopie dann aktualisiert werden (zu Prozedurupdates kommt es in der Regel nach Schemaänderungen oder wenn sich die Anwendungsanforderungen ändern). Weitere Informationen zu benutzerdefinierten Prozeduren finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62629641"
   
 -   Agentparameter  
   
--   Verwaltung  
+-   Wartung  
   
  Nach dem Konfigurieren der Replikation sollten Sie Leistungsgrundlagen entwickeln, die es Ihnen ermöglichen, das Replikationsverhalten bei einer typischen Auslastung der Anwendungen und Topologie zu ermitteln. Verwenden Sie den Replikationsmonitor und den Systemmonitor, um die typischen Zahlen für die folgenden fünf Dimensionen der Replikationsleistung zu ermitteln:  
   
@@ -114,7 +114,8 @@ ms.locfileid: "62629641"
   
 -   Der Replikationsmonitor ist das wichtigste Tool bei der Überwachung der Replikation. Er ermöglicht es Ihnen, die allgemeine Integrität der Replikationstopologie zu überwachen. Weitere Informationen finden Sie unter [Monitoring Replication](../monitoring-replication.md).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] und Replikationsverwaltungsobjekte (RMO) stellen eine Schnittstelle zur Überwachung der Replikation bereit. Weitere Informationen finden Sie unter [Monitoring Replication](../monitoring-replication.md).  
+-   
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)] und Replikationsverwaltungsobjekte (RMO) stellen eine Schnittstelle zur Überwachung der Replikation bereit. Weitere Informationen finden Sie unter [Monitoring Replication](../monitoring-replication.md).  
   
 -   Auch der Systemmonitor kann bei der Überwachung der Replikationsleistung hilfreich sein. Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md).  
   
@@ -133,7 +134,7 @@ ms.locfileid: "62629641"
  Nachdem Sie eine Veröffentlichung erstellt haben, ist es möglicherweise notwendig, Artikel hinzuzufügen oder zu löschen bzw. die Veröffentlichungs- oder Artikeleigenschaften zu ändern. Die meisten Änderungen sind auch nach der Erstellung der Veröffentlichung möglich. In einigen Fällen muss jedoch eine neue Momentaufnahme für die Veröffentlichung generiert werden, und/oder die Abonnements für die Veröffentlichung müssen erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../publish/change-publication-and-article-properties.md) und [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>Grunglegendes zu Schemaänderungen bei geänderten Anwendungsanforderungen  
- In vielen Fällen sind jedoch Schemaänderungen erforderlich, sobald eine Anwendung in die Produktionsumgebung gebracht wird. In einer Replikationstopologie müssen diese Änderungen häufig an alle Abonnenten weitergegeben werden. Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten weitergegeben:  
+ In vielen Fällen sind jedoch Schemaänderungen erforderlich, sobald eine Anwendung in die Produktionsumgebung gebracht wird. In einer Replikationstopologie müssen diese Änderungen häufig an alle Abonnenten weitergegeben werden. Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schema Änderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abonnenten weitergegeben:  
   
 -   ALTER TABLE  
   
@@ -147,7 +148,7 @@ ms.locfileid: "62629641"
   
  Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966705"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)
-Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollte die Verbindung mit dem Katalog zu schließen. Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften für diese Objekte, die zwischengespeichert wurden werden weiterhin zur Verfügung, aber ein Versuch, Eigenschaften zu lesen, der einen Aufruf an den Anbieter erforderlich sind, schlägt fehl.  
+Wenn die [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) -Eigenschaft auf **Nothing** festgelegt wird, sollte die Verbindung mit dem Katalog geschlossen werden. Zugeordnete Sammlungen sind leer. Alle Objekte, die aus Schema Objekten im Katalog erstellt wurden, sind verwaist. Alle Eigenschaften von Objekten, die zwischengespeichert wurden, sind weiterhin verfügbar, aber ein Versuch, Eigenschaften zu lesen, die einen-Anrufe an den Anbieter erfordern, schlägt fehl.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -66,15 +66,15 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- Schließen einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt, das zum Öffnen des Katalogs verwendet wurde, müssen die gleiche Wirkung wie das Festlegen der **ActiveConnection** Eigenschaft **nichts**.  
+ Das Schließen eines [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekts, das zum Öffnen des Katalogs verwendet wurde, sollte dieselbe Auswirkung haben wie das Festlegen der **ActiveConnection** -Eigenschaft auf " **Nothing**".  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

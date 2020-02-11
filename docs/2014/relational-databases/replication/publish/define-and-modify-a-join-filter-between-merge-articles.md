@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199556"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
@@ -51,8 +51,8 @@ ms.locfileid: "68199556"
   
 -   Joinfilter für Tabellen können sowohl manuell als auch automatisch per Replikation erstellt werden. Die automatische Erstellung erfolgt auf der Basis der für die Tabellen definierten Beziehungen zwischen Fremdschlüsseln und Primärschlüsseln. Weitere Informationen zum automatischen Generieren einer Reihe von Verknüpfungsfiltern finden Sie unter [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41; (Automatischses Generieren einer Reihe von Verküpfungsfiltern zwischen Mergeartikeln &#40;SQL Server Management Studio&#41;)](automatically-generate-join-filters-between-merge-articles.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- Definieren, ändern und löschen Sie Verknüpfungsfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ Definieren, ändern und löschen Sie Verknüpfungsfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>So definieren Sie einen Joinfilter  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68199556"
         > [!CAUTION]  
         >  Durch Auswahl dieser Option kennzeichnen Sie, ob es sich bei der Beziehung zwischen der untergeordneten und der übergeordneten Tabelle in einem Joinfilter um eine 1:1- oder eine 1:n-Beziehung handelt. Verwenden Sie diese Option nur, wenn für die verknüpfte Spalte in der untergeordneten Tabelle eine Einschränkung vorhanden ist, die die Eindeutigkeit sicherstellt. Wenn die Option nicht richtig festgelegt wird, kann eine mangelnde Konvergenz der Daten die Folge sein.  
   
-    -   Standardmäßig werden Änderungen durch die Mergereplikation während der Synchronisierung zeilenweise verarbeitet. Wenn Änderungen in Zeilen sowohl in der gefilterten Tabelle als auch in der verknüpften Tabelle als eine Einheit verarbeitet werden sollen, aktivieren Sie die Option **Logischer Datensatz** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen verfügbar). Diese Option ist nur verfügbar, wenn die Anforderungen für die Verwendung logischer Datensätze durch den Artikel und die Veröffentlichung erfüllt werden. Weitere Informationen finden Sie im Abschnitt „Überlegungen zum Verwenden logischer Datensätze“ unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Standardmäßig werden Änderungen durch die Mergereplikation während der Synchronisierung zeilenweise verarbeitet. Wenn Änderungen in Zeilen sowohl in der gefilterten Tabelle als auch in der verknüpften Tabelle als eine Einheit verarbeitet werden sollen, aktivieren Sie die Option **Logischer Datensatz** (nur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher). Diese Option ist nur verfügbar, wenn die Anforderungen für die Verwendung logischer Datensätze durch den Artikel und die Veröffentlichung erfüllt werden. Weitere Informationen finden Sie im Abschnitt „Überlegungen zum Verwenden logischer Datensätze“ unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68199556"
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus um einen oder mehrere ähnliche Artikel, auch bekannt als untergeordnete Artikel, für die Veröffentlichung zu definieren. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)aus. Geben Sie **@publication** , einen eindeutigen Namen für diesen Filter für **@filtername** , den Namen des in Schritt 2 erstellten untergeordneten Artikels für **@article** , den Namen des übergeordneten Artikels, mit dem ein Join hergestellt wird, für **@join_articlename** und einen der folgenden Werte für **@join_unique_key** an:  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)aus. Geben **@publication**Sie, einen eindeutigen Namen für diesen Filter **@filtername**für, den Namen des in Schritt 2 erstellten untergeordneten Artikels **@article**für, den Namen des übergeordneten Artikels, mit dem **@join_articlename**verknüpft wird, für und einen der folgenden **@join_unique_key**Werte für an:  
   
     -   **0** &ndash; gibt einen n:1- oder einen n:n-Join zwischen den übergeordneten und den untergeordneten Artikeln an.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68199556"
      Damit wird ein Joinfilter zwischen den beiden Artikeln definiert.  
   
     > [!CAUTION]  
-    >  Legen Sie **@join_unique_key** nur dann auf **1** fest, wenn eine Einschränkung für die verknüpfte Spalte in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorliegt, die die Eindeutigkeit sicherstellt. Wird **@join_unique_key** fälschlicherweise auf **1** festgelegt, kann dies zu mangelnder Konvergenz der Daten führen.  
+    >  Wird nur **@join_unique_key** auf **1** festgelegt, wenn eine Einschränkung für die Spalte beitreten in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorhanden ist, der die Eindeutigkeit gewährleistet. Wenn **@join_unique_key** falsch auf 1 festgelegt ist, kann **eine** nicht Konvergenz von Daten auftreten.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  In diesem Beispiel wird ein Artikel für eine Mergeveröffentlichung definiert, bei der der `SalesOrderDetail` -Tabellenartikel anhand der `SalesOrderHeader` -Tabelle gefiltert wird, dies selbst mithilfe eines statischen Zeilenfilters gefiltert wird. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md).  
@@ -134,13 +134,13 @@ ms.locfileid: "68199556"
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Verknüpfungsfilter](../merge/join-filters.md)   
- [Parametrisierte Zeilenfilter](../merge/parameterized-filters-parameterized-row-filters.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Join Filters](../merge/join-filters.md)   
+ [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md)   
  [Filtern von veröffentlichten Daten für die Mergereplikation](../merge/filter-published-data-for-merge-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

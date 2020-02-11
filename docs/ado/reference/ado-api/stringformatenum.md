@@ -1,5 +1,5 @@
 ---
-title: StringFormatEnum | Microsoft-Dokumentation
+title: Stringformatumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937880"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
-Gibt das Format an, beim Abrufen von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) als Zeichenfolge.  
+Gibt das Format beim Abrufen eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) als Zeichenfolge an.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|Grenzt die Zeilen nach *RowDelimiter*, Spalten, indem *ColumnDelimiter*, und null-Werte von *NullExpr*. Diese drei Parameter, der die [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) Methode sind nur gültig mit einer *StringFormat* von **AdClipString**.|  
+|**adclipstring**|2|Begrenzt Zeilen nach *RowDelimiter*, Spalten nach *ColumnDelimiter*und NULL-Werte durch *nullexpr*. Diese drei Parameter der [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) -Methode sind nur mit einem *StringFormat* von **adclipstring**gültig.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Dauerhaft|  
 |--------------|  
-|AdoEnums.StringFormat.CLIPSTRING|  
+|AdoEnums. StringFormat. clipstring|  
   
 ## <a name="applies-to"></a>Gilt für  
  [GetString-Methode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)

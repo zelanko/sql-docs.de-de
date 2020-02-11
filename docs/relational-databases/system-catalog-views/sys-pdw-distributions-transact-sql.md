@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_distributions (Transact-SQL) | Microsoft-Dokumentation
+title: sys. pdw_distributions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,25 +13,25 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7deddb57cdc02410fe161728f45190492ac18a16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127551"
 ---
-# <a name="syspdwdistributions-transact-sql"></a>sys.pdw_distributions (Transact-SQL)
+# <a name="syspdw_distributions-transact-sql"></a>sys. pdw_distributions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen über die Verteilungen auf dem Gerät. Sie enthält eine Zeile pro Appliance-Verteilung.  
+  Enthält Informationen zu den Verteilungen auf dem Gerät. Es wird eine Zeile pro Geräte Verteilung aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|distribution_id|**int**|Eindeutige numerische Id, die die Verteilung.<br /><br /> Der Schlüssel für diese Sicht.|1, um die Anzahl von Computeknoten in Appliance multipliziert die Anzahl von Verteilungen pro Computeknoten.|  
-|pdw_node_id|**int**|Die ID des Knotens, die auf diesem Verteilungspunkt befindet.|Finden Sie unter Pdw_node_id in [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|NAME|**nvarchar(32)**|Die Zeichenfolgen Sie-ID, die die Verteilung, als Suffix für verteilte Tabellen verwendet.|Zeichenfolge, die aus der "A – Z", "a – Z", "0-9', '_','-'.|  
-|position|**int**|Die Position der Verteilung innerhalb eines Knotens, der je nach anderen Verteilungen auf diesem Knoten.|1, um die Anzahl von Verteilungen pro Knoten.|  
+|distribution_id|**int**|Eindeutige, der Verteilung zugeordnete numerische ID.<br /><br /> Der Schlüssel für diese Ansicht.|1 bis zur Anzahl der Computeknoten in der Appliance multipliziert mit der Anzahl der Verteilungen pro Computeknoten.|  
+|pdw_node_id|**int**|ID des Knotens, auf dem sich diese Distribution befindet.|Weitere Informationen finden Sie unter pdw_node_id in [sys. dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|name|**nvarchar (32)**|Der Verteilung zugeordneter Zeichen folgen Bezeichner, der als Suffix für verteilte Tabellen verwendet wird.|Zeichenfolge, die aus "a-z", "a-z", "0-9", "_", "-" besteht.|  
+|position|**int**|Die Position der Verteilung innerhalb eines Knotens für andere Verteilungen auf diesem Knoten.|1 bis zur Anzahl der Verteilungen pro Knoten.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

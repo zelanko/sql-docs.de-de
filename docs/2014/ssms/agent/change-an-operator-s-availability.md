@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017096"
 ---
 # <a name="change-an-operator39s-availability"></a>Ändern der Verfügbarkeit eines Operators
@@ -38,7 +38,7 @@ ms.locfileid: "63017096"
   
      [Sicherheit](#Security)  
   
--   **So ändern Sie die Verfügbarkeit eines Operators mit**  
+-   **So ändern Sie die Verfügbarkeit eines Operators mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63017096"
 ####  <a name="Permissions"></a> Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-change-an-operators-availability"></a>So ändern Sie die Verfügbarkeit eines Operators  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63017096"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Operator, den Sie aktivieren oder deaktivieren möchten, wählen Sie **Eigenschaften**aus, und klicken Sie anschließend auf die Registerkarte **Allgemein** .  
   
-5.  Aktivieren oder deaktivieren Sie im Dialogfeld _Operatorname_**Eigenschaften** das Kontrollkästchen **Aktiviert** .  
+5.  Aktivieren bzw. deaktivieren Sie im Dialogfeld _operator_name_**Eigenschaften** das Kontrollkästchen **aktiviert** .  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -88,6 +88,6 @@ ms.locfileid: "63017096"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_update_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_update_operator &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
   
   

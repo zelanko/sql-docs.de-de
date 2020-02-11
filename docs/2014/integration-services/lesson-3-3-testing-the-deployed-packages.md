@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Testen der bereitgestellten Pakete | Microsoft-Dokumentation'
+title: 'Schritt 3: Testen der bereitgestellten Pakete | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891822"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Schritt 3: Testen der bereitgestellten Pakete
+# <a name="step-3-testing-the-deployed-packages"></a>Schritt 3: Testen der bereitgestellten Pakete
   In dieser Aufgabe testen Sie die Pakete, die Sie auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitgestellt haben.  
   
  In anderen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials haben Sie Pakete in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], der Entwicklungsumgebung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], mithilfe des Befehls **Debuggen starten** im Menü **Debuggen** ausgeführt. Dieses Mal führen Sie die Pakete auf andere Weise aus.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt mehrere Tools bereit, die Sie zum Ausführen von Paketen in der Test- und Produktionsumgebung verwenden können: das Eingabeaufforderungs-Hilfsprogramm `dtexec` und das Paketausführungshilfsprogramm. Das Paketausführungshilfsprogramm ist ein grafisches Tool, das auf `dtexec` aufbaut. Mit diesen beiden Tools wird das Paket sofort ausgeführt. Zusätzlich stellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Subsystem des SQL Server-Agents bereit, das speziell dazu dient, die Paketausführung als Schritt in einem SQL Server-Agent-Auftrag zu planen.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt mehrere Tools bereit, die Sie zum Ausführen von Paketen in der Test- und Produktionsumgebung verwenden können: das Eingabeaufforderungs-Hilfsprogramm `dtexec` und das Paketausführungshilfsprogramm. Das Paketausführungshilfsprogramm ist ein grafisches Tool, das auf `dtexec` aufbaut. Mit diesen beiden Tools wird das Paket sofort ausgeführt. Zusätzlich stellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Subsystem des SQL Server-Agents bereit, das speziell dazu dient, die Paketausführung als Schritt in einem SQL Server-Agent-Auftrag zu planen.  
   
  Sie verwenden das Paketausführungshilfsprogramm, um die bereitgestellten Pakete auszuführen. Die Pakete werden in ihrem aktuellen Zustand verwendet. Sie brauchen die Informationen auf den Seiten des Dialogfelds also nicht zu aktualisieren. Sie führen die Pakete von der Seite Allgemein aus. Hierbei handelt es sich um die erste Seite des Paketausführungshilfsprogramms. Sie können auf die anderen Seiten klicken, um zu sehen, welche Informationen für jedes Paket angezeigt werden.  
   
@@ -103,9 +104,9 @@ ms.locfileid: "62891822"
   
      Die Abfrage gibt 21 Datenzeilen zurück. Das Ergebnis besteht aus den Zeilen der XML-Datendatei orders.xml. Die einzelnen Zeilen sind Zusammenfassungen nach Land bzw. Region. In der Zeile werden der Name eines Landes bzw. einer Region, die Anzahl der Aufträge für jedes Land bzw. für jede Region und die Datumswerte der neuesten und ältesten Aufträge aufgelistet.  
   
-![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [dtexec (Hilfsprogramm)](packages/dtexec-utility.md)  
   
   

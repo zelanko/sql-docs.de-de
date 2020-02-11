@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955893"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Verknüpfen einer Abfrage mit einer Verbindung in einem Projekt
@@ -31,7 +31,7 @@ ms.locfileid: "62955893"
   
 2.  Geben Sie im Dialogfeld **Verbindung mit Datenbank-Engine herstellen** die Verbindungsinformationen an. Wenn die Verbindungsinformationen mit einer vorhandenen Verbindung übereinstimmen, wird die Abfrage mit dieser Verbindung verknüpft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Projektmappen-Explorer](solution-explorer.md)   
  [Ändern der mit einer Abfrage verknüpften Verbindung](change-the-connection-associated-with-a-query.md)   
  [Anzeigen oder Ändern der Eigenschaften einer Verbindung in einem Projekt](view-or-change-the-properties-of-a-connection-in-a-project.md)  

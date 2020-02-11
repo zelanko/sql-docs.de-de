@@ -17,35 +17,35 @@ ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965841"
 ---
 # <a name="keys-collection-adox"></a>Keys-Collection (ADOX)
-Enthält alle [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekte von einem [Tabelle](../../../ado/reference/adox-api/table-object-adox.md).  
+Enthält alle [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekte einer [Tabelle](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) -Methode für eine [Keys-Auflistung](../../../ado/reference/adox-api/keys-collection-adox.md) für ADOX eindeutig ist. Sie haben folgende Möglichkeiten:  
+## <a name="remarks"></a>Bemerkungen  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) -Methode für eine [Keys](../../../ado/reference/adox-api/keys-collection-adox.md) -Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
--   Fügen Sie einen neuen Schlüssel in der Auflistung der [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) Methode.  
+-   Fügen Sie der Auflistung mithilfe der [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) -Methode einen neuen Schlüssel hinzu.  
   
- Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Sie haben folgende Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
--   Zugreifen auf einen Schlüssel in der Auflistung mit den [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
+-   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf einen Schlüssel in der Auflistung zu.  
   
--   Zurückgeben der Anzahl von Schlüsseln, die in der Auflistung mit den [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft.  
+-   Gibt die Anzahl der in der Auflistung enthaltenen Schlüssel mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft zurück.  
   
--   Entfernen Sie einen Schlüssel aus der Auflistung mit den [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) Methode.  
+-   Entfernt einen Schlüssel aus der Auflistung mit der [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode.  
   
--   Aktualisieren Sie die Objekte in der Auflistung entsprechend dem aktuellen Schema der Datenbank mit der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung, um das Schema der aktuellen Datenbank mit [der Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-ado.md) widerzuspiegeln.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Indizes Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Indexes-Collections – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Keys-Auflistung – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Eigenschaften, Methoden und Ereignisse der Schlüssel Sammlung](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

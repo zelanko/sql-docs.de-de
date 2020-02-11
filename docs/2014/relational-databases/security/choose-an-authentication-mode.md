@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011332"
 ---
 # <a name="choose-an-authentication-mode"></a>Auswählen eines Authentifizierungsmodus
-  Während des Setups müssen Sie einen Authentifizierungsmodus für [!INCLUDE[ssDE](../../includes/ssde-md.md)]auswählen. Es gibt zwei mögliche Modi: Windows-Authentifizierungsmodus und den gemischten Modus. Der Windows-Authentifizierungsmodus aktiviert die Windows-Authentifizierung und deaktiviert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Der gemischte Modus aktiviert sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Die Windows-Authentifizierung ist immer verfügbar und kann nicht deaktiviert werden.  
+  Während des Setups müssen Sie einen Authentifizierungsmodus für [!INCLUDE[ssDE](../../includes/ssde-md.md)]auswählen. Es gibt zwei mögliche Modi: den Windows-Authentifizierungsmodus und den gemischten Modus. Der Windows-Authentifizierungsmodus aktiviert die Windows-Authentifizierung und deaktiviert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Der gemischte Modus aktiviert sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Die Windows-Authentifizierung ist immer verfügbar und kann nicht deaktiviert werden.  
   
 ## <a name="configuring-the-authentication-mode"></a>Konfigurieren des Authentifizierungsmodus  
  Bei Auswahl der Authentifizierung im gemischten Modus während des Setups müssen Sie ein sicheres Kennwort für das vordefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto mit der Bezeichnung sa angeben und dann bestätigen. Das sa-Konto stellt eine Verbindung mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung her.  
@@ -67,7 +67,7 @@ ms.locfileid: "63011332"
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-2.  In der **ausführen** (Dialogfeld), Typ `secpol.msc`, und klicken Sie dann auf **OK**.  
+2.  Geben `secpol.msc`Sie im Dialogfeld **Ausführen** ein, und klicken Sie dann auf **OK**.  
   
 3.  Erweitern Sie in der Anwendung **Lokale Sicherheitseinstellung** die **Sicherheitseinstellungen**, erweitern Sie **Kontorichtlinien**, und klicken Sie dann auf **Kennwortrichtlinie**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63011332"
   
 -   Ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Umgebungen mit gemischten Betriebssystemen zu unterstützen, in denen nicht alle Benutzer von einer Windows-Domäne authentifiziert werden.  
   
--   Ermöglicht es Benutzern, eine Verbindung von unbekannten oder nicht vertrauenswürdigen Domänen herzustellen. Zum Beispiel von einer Anwendung, bei der bestehende Kunden Verbindungen mit zugewiesenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen herstellen, um den Status Ihrer Bestellungen abzufragen.  
+-   Ermöglicht es Benutzern, von unbekannten oder nicht vertrauenswürdigen Domänen aus eine Verbindung herzustellen. Zum Beispiel von einer Anwendung, bei der bestehende Kunden Verbindungen mit zugewiesenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen herstellen, um den Status Ihrer Bestellungen abzufragen.  
   
 -   Ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , webbasierte Anwendungen zu unterstützen, bei denen Benutzer ihre eigenen Identitäten erstellen.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63011332"
     > [!NOTE]  
     >  Das Verwenden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung schränkt die Berechtigungen lokaler Administratoren für den Computer nicht ein, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

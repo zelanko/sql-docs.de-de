@@ -1,5 +1,5 @@
 ---
-title: Fehler (ADO / WFC-Syntax) | Microsoft-Dokumentation
+title: Fehler (ADO-WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 201218ba5c82b88fabbb26e279f52ce95bb79527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933029"
 ---
 # <a name="error-ado---wfc-syntax"></a>Error (ADO/WFC-Syntax)
-## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  
   
 ### <a name="properties"></a>Eigenschaften  
   
@@ -33,5 +33,5 @@ public String getSource()
 public String getSQLState()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)

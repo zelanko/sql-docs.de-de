@@ -1,5 +1,5 @@
 ---
-title: Durch Löschen einer Assembly | Microsoft-Dokumentation
+title: Löschen einer Assembly | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919621"
 ---
 # <a name="dropping-an-assembly"></a>Löschen von Assemblys
@@ -43,7 +43,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funktionen, gespeicherte Prozeduren oder Trigger, die Variablen und Parameter des UDT verwenden und in der Datenbank mit der WITH SCHEMABINDING-Klausel erzeugt wurden.  
   
 ### <a name="finding-udt-dependencies"></a>Ermitteln von UDT-Abhängigkeiten  
- Sie müssen zuerst alle abhängigen Objekte löschen und dann die DROP TYPE-Anweisung ausführen. Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage sucht nach allen Spalten und Parameter, mit denen einen UDT in der **AdventureWorks** Datenbank.  
+ Sie müssen zuerst alle abhängigen Objekte löschen und dann die DROP TYPE-Anweisung ausführen. Die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage verwendet alle Spalten und Parameter, die einen UDT in der **AdventureWorks** -Datenbank verwenden.  
   
 ```  
 USE Adventureworks;  
@@ -63,14 +63,14 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von CLR-Integrationsassemblys](managing-clr-integration-assemblies.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwalten von CLR Integration](managing-clr-integration-assemblies.md)   
  [Ändern einer Assembly](altering-an-assembly.md)   
  [Erstellen einer Assembly](creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
- [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [Drop Aggregate &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [Drop Function &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [DROP TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [Drop Type &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

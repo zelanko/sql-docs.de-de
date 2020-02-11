@@ -1,5 +1,5 @@
 ---
-title: Sp_resetsnapshotdeliveryprogress (Transact-SQL) | Microsoft-Dokumentation
+title: sp_resetsnapshotdeliveryprogress (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc6205eb5487b89db55488bcdf36fbb036595d57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129648"
 ---
-# <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
+# <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Setzt den Momentaufnahme-Übermittlungsprozess für ein Pullabonnement zurück, damit die Übermittlung der Momentaufnahme neu gestartet werden kann. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +38,20 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @verbose_level = ] verbose_level` Gibt die Menge der zurückgegebenen Informationen. *Verbose_level*ist **Int**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass ein Fehler zurückgegeben, wenn auf die erforderlichen Sperren abgerufen werden können die **MSsnapshotdeliveryprogress** Tabelle und **0** bedeutet, die kein Fehler zurückgegeben wird.  
+`[ @verbose_level = ] verbose_level`Gibt die Menge der zurückgegebenen Informationen an. *verbose_level*ist vom Datentyp **int**und hat den Standardwert **1**. Der Wert **1** bedeutet, dass ein Fehler zurückgegeben wird, wenn die erforderlichen Sperren für die **MSsnapshotdeliveryprogress** -Tabelle nicht abgerufen werden können, und **0** bedeutet, dass kein Fehler zurückgegeben wird.  
   
-`[ @drop_table = ] 'drop_table'` Ist Sie, ob zu löschen oder Abschneiden der Tabelle, das Informationen über den Status der Momentaufnahme. *Drop_table* ist **nvarchar(5)** , hat den Standardwert **"false"** . Bei false wird die Tabelle abgeschnitten, und bei true wird die Tabelle gelöscht.  
+`[ @drop_table = ] 'drop_table'`Gibt an, ob die Tabelle mit Informationen zum Status der Momentaufnahme gelöscht oder abgeschnitten werden soll. *DROP_TABLE* ist vom Datentyp **nvarchar (5)** und hat den Standardwert **false**. Bei false wird die Tabelle abgeschnitten, und bei true wird die Tabelle gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_resetsnapshotdeliveryprogress** entfernt alle Zeilen in der **MSsnapshotdeliveryprogress** Tabelle. Auf diese Weise werden alle Metadaten entfernt, die in der Abonnementdatenbank durch vorherige Momentaufnahme-Übermittlungsprozesse zurückgeblieben sind.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_resetsnapshotdeliveryprogress** entfernt alle Zeilen in der **MSsnapshotdeliveryprogress** -Tabelle. Auf diese Weise werden alle Metadaten entfernt, die in der Abonnementdatenbank durch vorherige Momentaufnahme-Übermittlungsprozesse zurückgeblieben sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_resetsnapshotdeliveryprogress**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_resetsnapshotdeliveryprogress**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

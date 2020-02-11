@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920788"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
@@ -164,7 +164,7 @@ GO
   
      Informationen zu den Komponenten dieser CREATE FUNCTION-Anweisung finden Sie unter:  
   
-    -   [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  
+    -   [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  
   
     -   [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql)  
   
@@ -259,7 +259,7 @@ GO
  [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Komprimieren von Sicherungen in einer Sitzung mit CPU-Grenzwert  
- Melden Sie sich zum Erstellen einer komprimierten Sicherung in einer Sitzung mit maximalem CPU-Grenzwert als der Benutzer an, der in der Klassifizierungsfunktion angegeben ist. Geben Sie im Sicherungsbefehl entweder WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) an, oder wählen Sie **Sicherung komprimieren** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) aus. Informationen zum Erstellen einer komprimierten Datenbanksicherung finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
+ Melden Sie sich zum Erstellen einer komprimierten Sicherung in einer Sitzung mit maximalem CPU-Grenzwert als der Benutzer an, der in der Klassifizierungsfunktion angegeben ist. Geben Sie im Backup-Befehl entweder with Compression ([!INCLUDE[tsql](../../includes/tsql-md.md)]) an, oder wählen Sie[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Sicherung komprimieren** () aus. Informationen zum Erstellen einer komprimierten Datenbanksicherung finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Beispiel C: Erstellen einer komprimierten Sicherung (Transact-SQL)  
  Im folgenden [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Beispiel wird eine komprimierte, vollständige Sicherung der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank in der neu formatierten Sicherungsdatei `Z:\SQLServerBackups\AdvWorksData.bak`erstellt.  
@@ -277,8 +277,8 @@ GO
   
  [&#91;Nach oben&#93;](#Top)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion](../resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Resource Governor](../resource-governor/resource-governor.md)  
+ [Ressourcenkontrolle](../resource-governor/resource-governor.md)  
   
   

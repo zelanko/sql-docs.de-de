@@ -16,57 +16,57 @@ ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965166"
 ---
 # <a name="table-object-adox"></a>Table-Objekt (ADOX)
-Stellt eine Datenbanktabelle, einschließlich Spalten, Indizes und Schlüssel dar.  
+Stellt eine Datenbanktabelle mit Spalten, Indizes und Schlüsseln dar.  
   
-## <a name="remarks"></a>Hinweise  
- Der folgende Code erstellt ein neues **Tabelle**:  
+## <a name="remarks"></a>Bemerkungen  
+ Der folgende Code erstellt eine neue **Tabelle**:  
   
 ```  
 Dim obj As New Table  
 ```  
   
- Mit den Eigenschaften und Auflistungen von einem **Tabelle** Objekt ist, können Sie:  
+ Mit den Eigenschaften und Auflistungen eines **Table** -Objekts können Sie folgende Aktionen ausführen:  
   
--   Identifizieren Sie die Tabelle mit den [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft.  
+-   Identifizieren Sie die Tabelle mit der Eigenschaft [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Bestimmen Sie den Typ der Tabelle mit den [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md) Eigenschaft.  
+-   Bestimmen Sie den Typ der Tabelle mit der Eigenschaft [Type Property (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md) .  
   
--   Zugriff auf die Datenbankspalten der Tabelle mit den [Spalten Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung.  
+-   Greifen Sie auf die Daten Bank Spalten der Tabelle mit der Auflistung [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) zu.  
   
--   Zugreifen auf die Indizes der Tabelle mit den [Indizes-Auflistung (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md).  
+-   Greifen Sie mit der Indexes-Auflistung [(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)auf die Indizes der Tabelle zu.  
   
--   Zugreifen auf die Schlüssel der Tabelle mit den [Keys-Auflistung (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md).  
+-   Greifen Sie mit der Keys-Auflistung [(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)auf die Schlüssel der Tabelle zu.  
   
--   Geben Sie den Katalog, der die Tabelle besitzt die [ParentCatalog-Eigenschaft (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) Eigenschaft.  
+-   Geben Sie den Katalog, der die Tabelle besitzt, mit der Eigenschaft " [Eigenschaft (Eigenschaft)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) " an.  
   
--   Zurückgeben von Datumsinformationen der [DateCreated-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md) Eigenschaften.  
+-   Gibt Datumsinformationen mit den Eigenschaften der [DateCreated-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md) und der [DateModified-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md) zurück.  
   
--   Zugriff auf die anbieterspezifischen Eigenschaften mit den [Eigenschaften-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
+-   Zugreifen auf anbieterspezifische Tabellen Eigenschaften mit der [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung.  
   
 > [!NOTE]
->  Datenanbieter unterstützen möglicherweise nicht alle Eigenschaften des **Tabelle** Objekte. Wenn Sie einen Wert für eine Eigenschaft festgelegt haben, die der Anbieter nicht unterstützt wird, tritt ein Fehler auf. Für den neuen **Tabelle** Objekte aufweist, wird der Fehler auftreten, wenn das Objekt, das die Auflistung angefügt wird. Für vorhandene Objekte tritt der Fehler beim Festlegen der Eigenschaft.  
+>  Der Datenanbieter unterstützt möglicherweise nicht alle Eigenschaften von **Tabellen** Objekten. Wenn Sie einen Wert für eine Eigenschaft festgelegt haben, die vom Anbieter nicht unterstützt wird, tritt ein Fehler auf. Bei neuen **Tabellen** Objekten tritt der Fehler auf, wenn das Objekt an die Auflistung angefügt wird. Bei vorhandenen Objekten tritt der Fehler auf, wenn die-Eigenschaft festgelegt wird.  
 >   
->  Beim Erstellen von **Tabelle** Objekten, die das Vorhandensein einer entsprechenden Standardwert für eine optionale Eigenschaft garantiert nicht, dass es sich bei Ihren Anbieter für die Eigenschaft unterstützt. Weitere Informationen zu den Anbieter Eigenschaften unterstützten finden Sie unter der Dokumentation Ihres Anbieters.  
+>  Wenn Sie **Tabellen** Objekte erstellen, gewährleistet das vorhanden sein eines entsprechenden Standardwerts für eine optionale Eigenschaft nicht, dass der Anbieter die-Eigenschaft unterstützt. Weitere Informationen zu den Eigenschaften, die der Anbieter unterstützt, finden Sie in der Dokumentation des Anbieters.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Table-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalog ActiveConnection-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Spalten und Tabellen Append-Methode, Name-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Katalog ActiveConnection-Eigenschaft (Beispiel) (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Methoden und Tabellen Append-Methoden, Name Property example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Beispiel für eine Beispiel Katalog Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
+ [Indexes-Auflistung (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
  [Keys-Auflistung (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+ [Tables-Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105215"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup-Funktion (Berichts-Generator und SSRS)
@@ -32,13 +32,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameter  
  *source_expression*  
- (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ProdID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ProdID.Value`.  
   
  *destination_expression*  
- (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ProductID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!ProductName.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in der *source_expression* = *destination_expression*, und der den abzurufenden Wert angibt. Beispiel: `=Fields!ProductName.Value`.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "Products".  
@@ -46,7 +46,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Rückgabewert  
  Gibt einen Wert vom Typ `Variant` zurück; gibt `Nothing` zurück, wenn keine Übereinstimmung vorhanden ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Rufen Sie für ein Name-Wert-Paar, für das eine 1:1-Beziehung vorhanden ist, den Wert mithilfe von `Lookup` aus dem angegebenen Dataset ab. Beispiel: Für ein ID-Feld in einer Tabelle können Sie das entsprechende Namensfeld mithilfe von `Lookup` aus einem Dataset abrufen, das nicht an den Datenbereich gebunden wird.  
   
  Mit `Lookup` wird Folgendes ausgeführt:  
@@ -59,11 +59,11 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Der Ergebnisausdruckswert wird zurückgegeben.  
   
- Verwenden Sie [LookupSet-Funktion (Berichts-Generator und SSRS)](report-builder-functions-lookupset-function.md), um mehrere Werte für einen einzelnen Namen oder ein Schlüsselfeld abzurufen, für das eine 1:n-Beziehung vorhanden ist. Aufzurufende `Lookup` verwenden Sie für einen Satz von Werten, [Multilookup-Funktion &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-lookup-function.md).  
+ Verwenden Sie [LookupSet-Funktion (Berichts-Generator und SSRS)](report-builder-functions-lookupset-function.md), um mehrere Werte für einen einzelnen Namen oder ein Schlüsselfeld abzurufen, für das eine 1:n-Beziehung vorhanden ist. Um einen `Lookup` Satz von Werten aufzurufen, verwenden Sie die [Multilookup-Funktion &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-lookup-function.md).  
   
  Es gelten folgende Einschränkungen:  
   
--   `Lookup` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden.  
+-   `Lookup`wird ausgewertet, nachdem alle Filter Ausdrücke angewendet wurden.  
   
 -   Nur eine Suchebene wird unterstützt. Ein Quell-, Ziel- oder Ergebnisausdruck kann keinen Verweis auf eine Suchfunktion einschließen.  
   
@@ -71,7 +71,8 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Quell-, Ziel- und Ergebnisausdrücke können keine Verweise auf Berichts- oder Gruppenvariablen einschließen.  
   
--   `Lookup` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
+-   
+  `Lookup` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
   
     -   Dynamische Verbindungszeichenfolgen für eine Datenquelle.  
   
@@ -96,7 +97,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 =Lookup(Fields!ProductID.Value, Fields!ID.Value, Fields!Name.Value, "Product")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   

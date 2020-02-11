@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032113"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Überwachen der Ressourcenverwendung (Systemmonitor)
@@ -69,7 +69,7 @@ ms.locfileid: "63032113"
   
 -   Datenträgeraktivität  
   
--   Prozessornutzung  
+-   Prozessorauslastung  
   
 -   Speicherauslastung  
   
@@ -86,6 +86,6 @@ ms.locfileid: "63032113"
 |Beschreibt das Erstellen einer Warnung, die ausgelöst wird, sobald ein Schwellenwert für einen Leistungsindikator des Systemmonitors erreicht wird.|[Erstellen einer SQL Server-Datenbankwarnung](create-a-sql-server-database-alert.md)|  
 |Beschreibt das Erstellen von Diagrammen, Warnungen, Protokollen und Berichten für die Überwachung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Erstellen von Diagrammen, Warnungen, Protokollen und Berichten](create-charts-alerts-logs-and-reports.md)|  
 |Führt Objekte und Leistungsindikatoren auf, die der Systemmonitor zur Überwachung der Aktivität von Computern, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführen, nutzt.|[Verwenden von SQL Server-Objekten](use-sql-server-objects.md)|  
-|Enthält eine Liste der Objekte und Leistungsindikatoren, die vom Systemmonitor zur Überwachung von In-Memory OLTP-Aktivitäten verwendet werden.|[XTP &#40;In-Memory-OLTP&#41; -Leistungsindikatoren](../../integration-services/performance/performance-counters.md)|  
+|Enthält eine Liste der Objekte und Leistungsindikatoren, die vom Systemmonitor zur Überwachung von In-Memory OLTP-Aktivitäten verwendet werden.|[XTP-&#40;in-Memory-OLTP&#41; Leistungsindikatoren](../../integration-services/performance/performance-counters.md)|  
   
   

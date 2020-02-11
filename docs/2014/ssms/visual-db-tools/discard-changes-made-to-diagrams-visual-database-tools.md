@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63125963"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Verwerfen von Änderungen an Diagrammen (Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63125963"
     > [!CAUTION]  
     >  Wenn mit dieser Datenbank weitere geöffnete Datenbankdiagramme oder Tabellenentwurfsfenster verbunden sind, schließen Sie sie ebenfalls, ohne zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Datenbankdiagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Arbeiten mit Daten Bank Diagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Verwenden von Tabellen in Datenbankdiagrammen &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

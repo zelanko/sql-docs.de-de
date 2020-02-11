@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637807"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
@@ -61,7 +61,7 @@ ms.locfileid: "73637807"
     2.  **Fügen Sie der Ausgabe den Spaltennamen hinzu**. Fügen Sie der Fehlerausgabe eine Transformation für Suche hinzu, die den Spaltennamen in der im vorherigen Schritt erstellten Nachschlagetabelle nachschlägt. Zum Nachschlagen können die Spalten-ID in der Fehlerausgabe, die Paket-ID (verfügbar über die Systemvariable System::PackageID) und die ID des Datenflusstasks (verfügbar über die Systemvariable System::TaskID) verwendet werden.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Vorgangsberichten  
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sind Standardvorgangsberichte verfügbar, um Sie zu unterstützen, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete, die im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog bereitgestellt werden, zu überwachen. Sie können die Berichte zu Paketen verwenden, um den Status und Verlauf von Paketen anzuzeigen und ggf. die Ursache von Fehlern zu identifizieren.  
+ In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sind Standardvorgangsberichte verfügbar, um Sie zu unterstützen, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete, die im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog bereitgestellt werden, zu überwachen. Sie können die Berichte zu Paketen verwenden, um den Status und Verlauf von Paketen anzuzeigen und ggf. die Ursache von Fehlern zu identifizieren.  
   
  Weitere Informationen finden Sie unter [Behandlung von Problemen in Berichten für die Paketausführung](troubleshooting-reports-for-package-execution.md).  
   
@@ -79,16 +79,16 @@ ms.locfileid: "73637807"
   
      Die folgende Vorgehensweise stellt eine Möglichkeit zum Verbessern der Standardprotokollierungsausgabe und Vereinfachen der Berichtgenerierung dar.  
   
-    1.  **Erstellen einer übergeordneten Tabelle zum Protokollieren aller Paketausführungen**. Diese übergeordnete Tabelle enthält nur eine einzige Zeile pro Paketausführung und verwendet die ExecutionID zur Verlinkung mit den untergeordneten Datensätzen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Protokollierungstabelle. Zum Erstellen dieser neuen Zeile und Aufzeichnen der Startzeit können Sie am Anfang eines jeden Pakets den Task 'SQL ausführen' verwenden. Anschließend können Sie am Ende des Pakets den Task 'SQL ausführen' erneut verwenden, um die Beendigungszeit, Dauer und den Status in der Zeile zu aktualisieren.  
+    1.  **Erstellen einer übergeordneten Tabelle zum Protokollieren aller Paketausführungen**. Diese übergeordnete Tabelle enthält nur eine einzige Zeile pro Paketausführung und verwendet die ExecutionID zur Verlinkung mit den untergeordneten Datensätzen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Protokollierungstabelle. Zum Erstellen dieser neuen Zeile und Aufzeichnen der Startzeit können Sie am Anfang eines jeden Pakets den Task 'SQL ausführen' verwenden. Anschließend können Sie am Ende des Pakets den Task 'SQL ausführen' erneut verwenden, um die Beendigungszeit, Dauer und den Status in der Zeile zu aktualisieren.  
   
-    2.  **Hinzufügen von Überwachungsinformationen zum Datenfluss**. Sie können mit der Überwachungstransformation Informationen zu Zeilen im Datenfluss hinzufügen, die Daten zur Paketausführung enthalten, durch die die betreffende Zeile erstellt oder geändert wurde. Die Überwachungstransformation stellt neun Arten von Informationen bereit, wie z.B. PackageName und ExecutionInstanceGUID. Weitere Informationen finden Sie unter [Audit Transformation](../data-flow/transformations/audit-transformation.md). Wenn Sie zu Überwachungszwecken jede Zeile mit benutzerdefinierten Informationen versehen möchten, können Sie diese Informationen mithilfe einer Transformation für abgeleitete Spalten den Zeilen im Datenfluss hinzufügen. Weitere Informationen finden Sie unter [Derived Column Transformation](../data-flow/transformations/derived-column-transformation.md).  
+    2.  **Hinzufügen von Überwachungsinformationen zum Datenfluss**. Sie können mit der Überwachungstransformation Informationen zu Zeilen im Datenfluss hinzufügen, die Daten zur Paketausführung enthalten, durch die die betreffende Zeile erstellt oder geändert wurde. Die Überwachungstransformation stellt neun Arten von Informationen bereit, wie z.B. PackageName und ExecutionInstanceGUID. Weitere Informationen finden Sie unter [Überwachungstransformation](../data-flow/transformations/audit-transformation.md). Wenn Sie zu Überwachungszwecken jede Zeile mit benutzerdefinierten Informationen versehen möchten, können Sie diese Informationen mithilfe einer Transformation für abgeleitete Spalten den Zeilen im Datenfluss hinzufügen. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Verwenden Sie den Task 'SQL ausführen', um nach Beendigung des Datenflusses die Variablenreihe zur späteren Analyse und Berichterstattung in eine Zeile der Tabelle einzufügen.  
   
      Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Debugdumpdateien  
- In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Weitere Informationen finden Sie unter [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
+ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](generating-dump-files-for-package-execution.md).  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>Behandlung von Problemen bei der Überprüfung zur Laufzeit  
  Es kann vorkommen, dass Sie keine Verbindung mit den Datenquellen herstellen können oder Teile des Pakets erst nach der Ausführung von vorausgehenden Tasks im Paket zur Laufzeit überprüft werden können. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt die folgenden Funktionen bereit, mit denen Sie die Überprüfungsfehler, die in solchen Fällen ausgelöst werden, vermeiden können:  
@@ -98,7 +98,7 @@ ms.locfileid: "73637807"
      Die `DelayValidation`-Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn jedoch der Wert dieser Eigenschaft auf `false` festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen. Wenn der Wert auf `true` festgelegt ist, können Sie Blockierungsprobleme vermeiden, die durch Verwendung der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft durch Sperren in der Datenbank verursacht werden, besonders wenn das Paket Transaktionen verwendet.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Behandlung von Problemen mit Berechtigungen zur Laufzeit  
- Wenn beim Versuch, bereitgestellte Pakete mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents auszuführen, Fehler auftreten, verfügen die vom Agent verwendeten Konten möglicherweise nicht über die erforderlichen Berechtigungen. Informationen zur Fehlerbehebung bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen ausgeführt werden, finden Sie unter [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](https://support.microsoft.com/kb/918760). Weitere Informationen zum Ausführen von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentaufträgen finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../packages/sql-server-agent-jobs-for-packages.md).  
+ Wenn beim Versuch, bereitgestellte Pakete mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents auszuführen, Fehler auftreten, verfügen die vom Agent verwendeten Konten möglicherweise nicht über die erforderlichen Berechtigungen. Informationen zur Fehlerbehebung bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen ausgeführt werden, finden Sie unter [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](https://support.microsoft.com/kb/918760). Weitere Informationen zum Ausführen von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträgen finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../packages/sql-server-agent-jobs-for-packages.md).  
   
  Für die Verbindung mit Excel- oder Access-Datenquellen erfordert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ein Konto mit entsprechenden Berechtigungen zum Lesen, Schreiben, Erstellen und Löschen temporärer Dateien in dem Ordner, der durch die TEMP- und TMP-Umgebungsvariablen angegeben wird.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "73637807"
 ## <a name="troubleshoot-errors-without-a-description"></a>Behandlung von Fehlern ohne Beschreibung  
  Wenn ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Fehler ohne zugehörige Beschreibung auftritt, können Sie die Beschreibung zu dem Fehler anhand seiner Fehlernummer in der Liste unter [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md) nachschlagen. Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  

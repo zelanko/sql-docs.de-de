@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985754"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services-Erweiterungsbibliothek
-  Die Reporting Services-Erweiterungsbibliothek enthält eine Reihe von Klassen, Schnittstellen und Werttypen, die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] geliefert werden. Diese Bibliothek bietet Zugriff auf Systemfunktionen und wird von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Anwendungen als Grundlage für die Erweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten verwendet.  
+  Die Reporting Services-Erweiterungsbibliothek enthält eine Reihe von Klassen, Schnittstellen und Werttypen, die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] geliefert werden. Diese Bibliothek bietet Zugriff auf Systemfunktionen und ist als Grundlage dafür konzipiert, welche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Anwendungen zum Erweitern [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] von Komponenten verwendet werden können.  
   
 ## <a name="namespaces"></a>Namespaces  
  Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Erweiterungsbibliothek stellt die folgenden Namespaces bereit.  
@@ -37,7 +37,7 @@ ms.locfileid: "62985754"
  `Microsoft.ReportingServices.ReportRendering`  
  Enthält Klassen und Schnittstellen, die es Ihnen ermöglichen, die Renderingfunktionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zu erweitern. Mit den Membern dieses Namespace und den Membern des <xref:Microsoft.ReportingServices.Interfaces>-Namespace können Sie Ihre eigenen benutzerdefinierten Renderingerweiterungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Reporting Services Extensions (Erweiterungen für Reporting Services)](reporting-services-extensions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erweiterungen für Reporting Services](reporting-services-extensions.md)  
   
   

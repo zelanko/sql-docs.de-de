@@ -1,5 +1,5 @@
 ---
-title: Untergeordnete Elemente (MDX) | Microsoft-Dokumentation
+title: Children (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016798"
 ---
 # <a name="children-mdx"></a>Children (MDX)
@@ -31,8 +31,8 @@ Member_Expression.Children
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **untergeordneten** Funktionsergebnis ist eine natürlich geordnete Menge, die die untergeordneten Elemente eines angegebenen Elements enthält. Wenn das angegebene Element nicht über untergeordnete Elemente verfügt, gibt die Funktion eine leere Menge zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Children** -Funktion gibt eine natürlich geordnete Menge zurück, die die untergeordneten Elemente eines angegebenen Elements enthält. Wenn das angegebene Element nicht über untergeordnete Elemente verfügt, gibt die Funktion eine leere Menge zurück.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden die untergeordneten Elemente des United States-Element der Geography-Hierarchie in der Geography-Dimension zurückgegeben.  
@@ -42,7 +42,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- Das folgende Beispiel gibt alle Elemente in der **Measures** Dimension auf der Spaltenachse, dazu gehören alle berechneten Elemente, sowie die Menge aller untergeordneten Elemente des der `[Product].[Model Name]` -Attributhierarchie auf der Zeilenachse aus der **Adventure Works** Cube.  
+ Im folgenden Beispiel werden alle Elemente der **Measures** -Dimension auf der Spalten Achse zurückgegeben, einschließlich aller berechneten Elemente und der Menge aller untergeordneten Elemente der `[Product].[Model Name]` Attribut Hierarchie auf der Zeilen Achse aus dem **Adventure Works** -Cube.  
   
 ```  
 SELECT  
@@ -53,11 +53,11 @@ FROM
   
 ```  
   
-|Release|Versionsgeschichte|  
+|Release|Verlauf|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Geänderter Inhalt:**<br /> -Die Syntax und den Argumenten zur Verdeutlichung aktualisiert werden.<br /><br /> – Aktualisierte Beispiele wurden hinzugefügt.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Geänderter Inhalt:**<br /> -Aktualisierte Syntax und Argumente zur Verbesserung der Übersichtlichkeit.<br /><br /> -Aktualisierte Beispiele wurden hinzugefügt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

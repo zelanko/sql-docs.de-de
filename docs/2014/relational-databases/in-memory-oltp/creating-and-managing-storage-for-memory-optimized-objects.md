@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073845"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Erstellen und Verwalten von Speicher für speicheroptimierte Objekte
@@ -32,7 +32,7 @@ ms.locfileid: "63073845"
   
  Speicher für speicheroptimierte Tabellen weisen die folgenden Schlüsselattribute auf:  
   
--   Alle speicheroptimierten Tabellen werden in eine Speicheroptimierte Dateigruppe zugeordnet werden. Diese Dateigruppe basiert auf Filestream-Dateigruppe.  
+-   Alle Speicher optimierten Tabellen sind einer Speicher optimierten Datei Gruppe zugeordnet. Diese Datei Gruppe wird mithilfe der FILESTREAM-Datei Gruppe erstellt.  
   
 -   Es gibt keine Seiten und die Daten werden als Zeile dauerhaft gespeichert.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63073845"
   
 -   Im Gegensatz zum Speicher für datenträgerbasierten Tabellen wird der Speicher für speicheroptimierte Tabellen nicht komprimiert. Beim Migrieren einer komprimierten (ZEILE oder SEITE), datenträgerbasierten Tabelle zu einer speicheroptimierten Tabelle müssen Sie die Größenänderungen berücksichtigen.  
   
--   Eine speicheroptimierte Tabelle kann sowohl dauerhaft als auch nicht dauerhaft sein. Sie müssen nur zum Konfigurieren von Speicher für permanente Speicher – optimieren von Tabellen.  
+-   Eine speicheroptimierte Tabelle kann sowohl dauerhaft als auch nicht dauerhaft sein. Sie müssen Speicher nur für dauerhafte Speicher optimierte Tabellen konfigurieren.  
   
  In diesem Abschnitt werden Prüfpunktdateipaare und weitere Aspekte der Speicherung von Daten in speicheroptimierten Tabellen beschrieben.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63073845"
   
 -   [Überwachung und Problembehandlung beim Zusammenführen von Daten-/Änderungsdateipaaren](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

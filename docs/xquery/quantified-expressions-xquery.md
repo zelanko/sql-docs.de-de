@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946374"
 ---
 # <a name="quantified-expressions-xquery"></a>Quantifizierte Ausdrücke (XQuery)
@@ -46,9 +46,9 @@ ms.locfileid: "67946374"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- Sie können diese Ausdrücke in einer Abfrage verwenden, um entweder die existenzielle oder die universelle Quantifizierung über eine oder mehrere Sequenzen auf einen Ausdruck anzuwenden. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss der Ausdruck in der `satisfies`-Klausel entweder eine Knotensequenz oder eine leere Sequenz oder einen booleschen Wert ergeben. Der effektive boolesche Wert des Ergebnisses dieses Ausdrucks wird dann in der Quantifizierung verwendet. Verwendete existenzielle Quantifizierung, die verwendet **einige** gibt "true" zurück, wenn für mindestens einen der durch den Quantifizierer gebundenen Werte True ergibt in des Satisfy-Ausdrucks ist. Die universelle Quantifizierung, die verwendet **jeder** muss "true" für alle durch den Quantifizierer gebundenen Werte verfügen.  
+ Sie können diese Ausdrücke in einer Abfrage verwenden, um entweder die existenzielle oder die universelle Quantifizierung über eine oder mehrere Sequenzen auf einen Ausdruck anzuwenden. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss der Ausdruck in der `satisfies`-Klausel entweder eine Knotensequenz oder eine leere Sequenz oder einen booleschen Wert ergeben. Der effektive boolesche Wert des Ergebnisses dieses Ausdrucks wird dann in der Quantifizierung verwendet. Die existentielle Quantifizierung, die **einige** verwendet, gibt true zurück, wenn mindestens einer der vom Quantifizierer gebundenen Werte im Ausdruck "Erfüllung" ein "true"-Ergebnis aufweist. Die universelle Quantifizierung, die **alle** verwendet, muss für alle vom Quantifizierer gebundenen Werte den Wert true aufweisen.  
   
- Z. B. die folgende Abfrage überprüft jede \<Speicherort > Element, um festzustellen, ob er ein LocationID-Attribut enthält.  
+ Die folgende Abfrage prüft z. b. \<jeden Speicherort>-Elements, um festzustellen, ob es über ein LocationID-Attribut verfügt.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Da LocationID ein erforderliches Attribut des ist der \<Location >-Element erhalten Sie das erwartete Ergebnis:  
+ Da LocationID ein erforderliches Attribut des \<Location>-Elements ist, erhalten Sie das erwartete Ergebnis:  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- Anstatt die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md), können Sie die [Value()-Methode](../t-sql/xml/value-method-xml-data-type.md) um das Ergebnis auf die relationale Umgebung zurückzugeben, wie in der folgenden Abfrage gezeigt. Die Abfrage gibt True zurück, wenn alle Arbeitsplatzstandorte LocationID-Attribute besitzen. Anderenfalls gibt die Abfrage False zurück.  
+ Anstatt die [Query ()-Methode](../t-sql/xml/query-method-xml-data-type.md)zu verwenden, können Sie die [value ()-Methode](../t-sql/xml/value-method-xml-data-type.md) verwenden, um das Ergebnis an die relationale Welt zurückzugeben, wie in der folgenden Abfrage gezeigt. Die Abfrage gibt True zurück, wenn alle Arbeitsplatzstandorte LocationID-Attribute besitzen. Anderenfalls gibt die Abfrage False zurück.  
   
 ```  
 SELECT Instructions.value('  
@@ -93,7 +93,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Dies ist ein Teilergebnis gezeigt:  
+ Dies ist ein Teilergebnis:  
   
 ```  
 ProductModelID SmallPicturesStored   
@@ -106,7 +106,7 @@ ProductModelID SmallPicturesStored
   
 -   Die Typassertion wird als Teil der Bindung der Variablen in quantifizierten Ausdrücken nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Ausdrücke](../xquery/xquery-expressions.md)  
   
   

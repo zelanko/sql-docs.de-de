@@ -1,5 +1,5 @@
 ---
-title: Erstellen den Server Connection Files (SybaseToSQL) | Microsoft-Dokumentation
+title: Erstellen der Server Verbindungs Dateien (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029358"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Erstellen der Serververbindungsdateien (SybaseToSQL)
-Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
+Server Informationen können entweder im Abschnitt Server der Skriptdatei oder in einer separaten Server Verbindungs Datei angegeben werden. Der Befehlszeilenparameter für die Server Verbindungs Datei ist, `-c <serverconnectionfile>`. Wenn dieselbe Server-ID sowohl in der Skriptdatei als auch in der Server Verbindungs Datei vorhanden ist, wird die Server Definition in der Skriptdatei berücksichtigt.  
   
 **Beispiel:**  
   
@@ -101,12 +101,12 @@ Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei 
 </sql-server>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Datei-Überprüfung von Server-Verbindung  
-Benutzer kann ganz einfach überprüfen, seine Verbindung-Serverdatei anhand der Schemadefinitionsdatei **S2SSConsoleScriptServersSchema.xsd** in den Ordner "Schemas" verfügbar.  
+## <a name="server-connection-file-validation"></a>Überprüfung der Server Verbindungs Datei  
+Der Benutzer kann seine Server Verbindungs Datei problemlos mit der Schema Definitionsdatei **S2SSConsoleScriptServersSchema. xsd** überprüfen, die im Ordner "Schemas" verfügbar ist.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt in der Konsole ausgeführt wird [Executing the SSMA Console ausführen &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+Der nächste Schritt beim Betrieb der Konsole ist [die Ausführung der SSMA-Konsole &#40;sybasedesql&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console (Ausführen der SSMA-Konsole)](executing-the-ssma-console-sybasetosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Ausführen der SSMA-Konsole](executing-the-ssma-console-sybasetosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Warnung-Eigenschaften – neue Warnung (Seite "Antwort") | Microsoft-Dokumentation
+title: Warnungs Eigenschaften-neue Warnung (Seite "Antwort") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062158"
 ---
-# <a name="alert-properties-new-alert-response-page"></a>Warnung Eigenschaften – neue Warnung (Seite "Antwort")
-  Verwenden Sie diese Seite, um einen Auftrag, den Sie ausführen möchten, festzulegen und um eine Liste der Operatoren abzurufen, die bei einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnung benachrichtigt werden sollen.  
+# <a name="alert-properties-new-alert-response-page"></a>Warnungs Eigenschaften-neue Warnung (Seite "Antwort")
+  Verwenden Sie diese Seite, um einen Auftrag anzugeben, den Sie ausführen möchten, und um eine Liste der Operatoren abzurufen, die als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reaktion auf eine Agent-Warnung benachrichtigt werden sollen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Auftrag ausführen**  
  Aktiviert die Optionen **Auftragsliste**, **Neuer Auftrag** und **Auftrag anzeigen** .  
   
@@ -35,10 +35,10 @@ ms.locfileid: "63062158"
  **Operatoren benachrichtigen**  
  Aktiviert die Steuerelemente, mit denen Sie Operatoren hinzufügen, entfernen oder ändern können.  
   
- **Operatorliste**  
+ **Operator Liste**  
  Enthält die Operatoren, die benachrichtigt werden, wenn eine Warnung auftritt. Aktivieren Sie das Kontrollkästchen **E-Mail**, **Pager**oder **NET SEND** hinter dem Operatornamen, um eine Benachrichtigungsmethode festzulegen. Diese Option ist nicht verfügbar, wenn **Operatoren benachrichtigen** nicht ausgewählt ist.  
   
- **E-Mail**  
+ **E**  
  Verwenden Sie E-Mail zum Benachrichtigen des Operators.  
   
  **Pager**  
@@ -47,15 +47,15 @@ ms.locfileid: "63062158"
  **NET SEND**  
  Verwenden Sie zum Benachrichtigen des Operators die Option **NET SEND** .  
   
- **Neuer Operator**  
+ **New-Operator**  
  Zeigt das Dialogfeld **Neuer Operator** an, in dem Sie einen neuen Operator erstellen können.  
   
- **Operator anzeigen**  
+ **View-Operator**  
  Zeigt das Dialogfeld **Eigenschaften** für den derzeit ausgewählten Operator an. Über das Dialogfeld **Operator-Eigenschaften** können Sie die Operator-Eigenschaften anzeigen und ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Warnungen](alerts.md)   
- [Erstellen Sie eine Warnung mithilfe von Schweregraden auf](create-an-alert-using-severity-level.md)   
+ [Erstellen einer Warnung mithilfe von Schweregraden](create-an-alert-using-severity-level.md)   
  [Warnungen](alerts.md)   
  [Bearbeiten einer Warnung](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  

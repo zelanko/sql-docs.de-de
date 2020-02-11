@@ -18,18 +18,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985740"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Codezugriffssicherheit in Reporting Services
-  Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführliche Informationen zu den Themen dieses Abschnitts finden Sie unter „Sicherheitsrichtlinienmodell“ in der Dokumentation zum [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
+  Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführlichere Informationen zu den in diesem Abschnitt behandelten Themen finden Sie unter "Sicherheitsrichtlinien Modell" in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK-Dokumentation.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Codezugriffssicherheit, da ein großer Unterschied zwischen einer typischen [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung und dem Berichtsserver besteht, obwohl der Berichtsserver auf [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Technologie beruht. Eine typische [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung führt keinen Benutzercode aus. Im Gegensatz dazu verwendet [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] eine offene und erweiterbare Architektur, die Benutzern die Programmierung anhand der Berichtsdefinitionsdateien und des **Code**-Elements der Berichtsdefinitionssprache sowie die Entwicklung spezifischer Funktionen in einer benutzerdefinierten Assembly für die Verwendung in Berichten ermöglicht. Weiterhin können Entwickler leistungsstarke Erweiterungen entwerfen und bereitstellen, die die Funktionen des Berichtsservers verbessern. Diese Leistungsstärke und Flexibilität bringt auch die Notwendigkeit mit sich, so viel Schutz und Sicherheit wie möglich zu bieten.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Codezugriffssicherheit, da ein großer Unterschied zwischen einer typischen [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung und dem Berichtsserver besteht, obwohl der Berichtsserver auf [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Technologie beruht. Eine typische [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung führt keinen Benutzercode aus. Im Gegensatz dazu verwendet [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] eine offene und erweiterbare Architektur, die Benutzern die Programmierung anhand der Berichtsdefinitionsdateien und des **Code**-Elements der Berichtsdefinitionssprache sowie die Entwicklung spezifischer Funktionen in einer benutzerdefinierten Assembly für die Verwendung in Berichten ermöglicht. Weiterhin können Entwickler leistungsstarke Erweiterungen entwerfen und bereitstellen, die die Funktionen des Berichtsservers verbessern. Diese Leistungsstärke und Flexibilität bringt auch die Notwendigkeit mit sich, so viel Schutz und Sicherheit wie möglich zu bieten.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Entwickler können eine beliebige [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assembly in ihren Berichten verwenden und alle Funktionen der Assemblys abrufen, die für den globalen Assemblycache bereitgestellt wurden. Der Berichtsserver kann lediglich steuern, welche Berechtigungen für Berichtsausdrücke und geladene benutzerdefinierte Assemblys gelten. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] erhalten benutzerdefinierte Assemblys standardmäßig nur Berechtigungen zum **Ausführen**.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Entwickler können eine beliebige [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assembly in ihren Berichten verwenden und alle Funktionen der Assemblys abrufen, die für den globalen Assemblycache bereitgestellt wurden. Der Berichtsserver kann lediglich steuern, welche Berechtigungen für Berichtsausdrücke und geladene benutzerdefinierte Assemblys gelten. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] erhalten benutzerdefinierte Assemblys standardmäßig nur Berechtigungen zum **Ausführen**.  
   
 ## <a name="evidence"></a>Beweise  
  Beweise sind Informationen, die die Common Language Runtime (CLR) zum Ermitteln einer Sicherheitsrichtlinie für Codeassemblys verwendet. Beweise geben der Laufzeit an, dass der Code ein bestimmtes Merkmal besitzt. Zu üblichen Formen von Beweisen zählen digitale Signaturen und der Speicherort einer Assembly. Beweise können auch benutzerdefiniert sein, um andere Informationen darzustellen, die für die Anwendung sinnvoll sind.  
@@ -92,7 +94,7 @@ ms.locfileid: "62985740"
 </CodeGroup>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichere Entwicklung (Reporting Services)](secure-development-reporting-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Sichere Entwicklungs &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

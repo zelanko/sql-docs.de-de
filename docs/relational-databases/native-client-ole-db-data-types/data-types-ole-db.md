@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770750"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen auszuführen und die Ergebnisse mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters zu verarbeiten, müssen Sie wissen, wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen OLE DB Datentypen zuordnet, wenn Parameter oder Spalten in einer das Rowset, und wenn es die **ITableDefinition** -Schnittstelle verwendet, um eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu erstellen.  
+  Um-Anweisungen auszuführen [!INCLUDE[tsql](../../includes/tsql-md.md)] und die Ergebnisse mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter zu verarbeiten, müssen Sie wissen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wie der Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB-Anbieter Datentypen OLE DB-Datentypen zuordnet, wenn Parameter oder Spalten in einem Rowset gebunden werden, und wenn die **ITableDefinition** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Schnittstelle verwendet wird, um eine Tabelle in zu erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73770750"
   
 -   [SSVARIANT-Struktur](../../relational-databases/native-client-ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510022"
 ---
 # <a name="save-changes"></a>Änderungen speichern
@@ -33,7 +33,7 @@ ms.locfileid: "62510022"
   
  Änderungen an bereits zuvor gespeicherten Elementen werden automatisch an ihrem Speicherort im Speicher gespeichert. Wenn ein Element bisher noch nicht gespeichert wurde, wird das Dialogfeld **Datei speichern unter** zur Angabe eines neuen Speicherorts angezeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Sollen die Änderungen an den folgenden Elementen gespeichert werden?**  
  Die ausgewählten Elemente werden gespeichert. Elemente können ausgewählt und aus der Auswahl entfernt werden.  
   

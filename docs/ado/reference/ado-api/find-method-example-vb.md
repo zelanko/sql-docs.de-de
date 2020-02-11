@@ -1,5 +1,5 @@
 ---
-title: Suchen Sie die Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Find Method-Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932627"
 ---
 # <a name="find-method-example-vb"></a>Find-Methode – Beispiel (VB)
-Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode zum Suchen und die Anzahl der Berufsbezeichnungen, in der ***Pubs*** Datenbank. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter eine ähnliche Funktionalität nicht unterstützt.  
+In diesem Beispiel wird die [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Anzahl von Geschäfts Titeln in der ***Pubs*** -Datenbank zu suchen und zu zählen. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter keine ähnliche Funktionalität unterstützt.  
   
 ```  
 'BeginFindVB  
@@ -99,6 +99,6 @@ End Sub
 'EndFindVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

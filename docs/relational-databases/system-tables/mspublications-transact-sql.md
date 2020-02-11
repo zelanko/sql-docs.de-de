@@ -18,10 +18,10 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939013"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
@@ -29,30 +29,30 @@ ms.locfileid: "67939013"
 
   Die **MSpublications** -Tabelle enthält eine Zeile für jede Veröffentlichung, die von einem Verleger repliziert wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**publication**|**sysname**|Der Name der Veröffentlichung.|  
+|**ung**|**sysname**|Der Name der Veröffentlichung.|  
 |**publication_id**|**int**|Die ID der Veröffentlichung.|  
-|**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung.<br /><br /> **1** = Momentaufnahme.<br /><br /> **2** = Merge.|  
-|**thirdparty_flag**|**bit**|Gibt an, ob eine Veröffentlichung ist eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = andere Datenquelle als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktional.<br /><br /> **1** = Momentaufnahme.<br /><br /> **2** = Merge.|  
+|**thirdparty_flag**|**bit**|Gibt an, ob eine Veröffentlichung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Datenbank ist:<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = andere Datenquelle als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**independent_agent**|**bit**|Zeigt an, ob ein Verteilungs-Agent im Einzelplatzmodus für diese Veröffentlichung vorhanden ist.|  
 |**immediate_sync**|**bit**|Zeigt an, ob bei jeder Ausführung des Momentaufnahme-Agents Synchronisierungsdateien erstellt oder neu erstellt werden.|  
 |**allow_push**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung Pushabonnements erstellt werden können.|  
 |**allow_pull**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung Pullabonnements erstellt werden können.|  
 |**allow_anonymous**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können.|  
-|**description**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
-|**$vendor_name**|**nvarchar(100)**|Der Name des Herstellers, wenn der Verleger keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ist.|  
-|**retention**|**int**|Die Beibehaltungsdauer der Veröffentlichung (in Stunden).|  
-|**sync_method**|**int**|Synchronisierungsmethode:<br /><br /> **0** = Native (erzeugt im einheitlichen Modus massenkopierausgabe aller Tabellen).<br /><br /> **1** = Character (erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen kopieren).<br /><br /> **3** = Concurrent (erzeugt im einheitlichen Modus massenkopierausgabe aller Tabellen sperrt jedoch nicht in der Tabelle während der Momentaufnahme).<br /><br /> **4** = Concurrent_c (erzeugt eine im Zeichenmodus massenkopierausgabe aller Tabellen sperrt jedoch nicht in der Tabelle während der Momentaufnahme)<br /><br /> Die Werte **3** und **4** stehen für Transaktions- und Mergereplikation, aber nicht für die momentaufnahmereplikation.|  
+|**Beschreibung**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
+|**vendor_name**|**nvarchar (100)**|Der Name des Herstellers, wenn der Verleger keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ist.|  
+|**zurück**|**int**|Die Beibehaltungsdauer der Veröffentlichung (in Stunden).|  
+|**sync_method**|**int**|Die Synchronisierungsmethode:<br /><br /> **0** = System eigen (erzeugt eine Massen Kopier Ausgabe aller Tabellen im einheitlichen Modus).<br /><br /> **1** = Zeichen (erzeugt eine Massen Kopier Ausgabe aller Tabellen im Zeichenmodus).<br /><br /> **3** = gleichzeitig (erzeugt eine Massen Kopier Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabelle während der Momentaufnahme nicht).<br /><br /> **4** = Concurrent_c (erzeugt eine Massen Kopier Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabelle während der Momentaufnahme nicht)<br /><br /> Die Werte **3** und **4** stehen für die Transaktions Replikation und Mergereplikation zur Verfügung, jedoch nicht für die Momentaufnahme Replikation.|  
 |**allow_subscription_copy**|**bit**|Aktiviert oder deaktiviert die Option zum Kopieren der Abonnementdatenbanken, die diese Veröffentlichung abonniert haben. **0** bedeutet, dass das Kopieren deaktiviert ist, und **1** bedeutet, dass es aktiviert ist.|  
-|**thirdparty_options**|**int**|Gibt an, ob die Anzeige einer Veröffentlichung im Ordner "Replikation" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterdrückt wird:<br /><br /> **0** = heterogene Veröffentlichung im Ordner Replikation angezeigt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> **1** = unterdrückt die Anzeige im Ordner "Replikation" in heterogene Veröffentlichung [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|**allow_queued_tran**|**bit**|Gibt an, ob die Veröffentlichung verzögerte Updates über eine Warteschlange zulässt:<br /><br /> **0 =** Veröffentlichung ist nicht in der Warteschlange.<br /><br /> **1** = Veröffentlichung mit Warteschlange.|  
-|**options**|**int**|Für diese Version sind keine Informationen verfügbar.|  
+|**thirdparty_options**|**int**|Gibt an, ob die Anzeige einer Veröffentlichung im Ordner Replikation [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterdrückt wird:<br /><br /> **0** = eine heterogene Veröffentlichung im Ordner Replikation in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.<br /><br /> **1** = unterdrücken Sie die Anzeige einer heterogenen Veröffentlichung im Ordner [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Replikation in.|  
+|**allow_queued_tran**|**bit**|Gibt an, ob die Veröffentlichung verzögerte Updates über eine Warteschlange zulässt:<br /><br /> **0 =** Die Veröffentlichung ist nicht in die Warteschlange eingereiht.<br /><br /> **1** = Veröffentlichung wird in die Warteschlange eingereiht.|  
+|**Optionen**|**int**|Für diese Version sind keine Informationen verfügbar.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

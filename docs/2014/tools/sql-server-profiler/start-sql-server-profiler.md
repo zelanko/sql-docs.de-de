@@ -1,5 +1,5 @@
 ---
-title: Starten Sie SQL Server Profiler | Microsoft-Dokumentation
+title: SQL Server Profiler starten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186114"
 ---
 # <a name="start-sql-server-profiler"></a>Starten von SQL Server Profiler
@@ -35,7 +35,8 @@ ms.locfileid: "68186114"
 1.  Klicken Sie im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber im Menü **Extras** auf **SQL Server Profiler**.  
   
 ## <a name="starting-sql-server-profiler-in-management-studio"></a>So starten Sie SQL Server Profiler in Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startet jede Profilersitzung in einer eigenen Instanz und wird weiterhin ausgeführt, wenn Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herunterfahren.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startet jede Profilersitzung in einer eigenen Instanz und wird weiterhin ausgeführt, wenn Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herunterfahren.  
   
  Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] von mehreren Positionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus starten, wie in den folgenden Prozeduren erläutert. Wenn [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gestartet wird, lädt es den Verbindungskontext, die Ablaufverfolgungsvorlage und den Filterkontext seines Startpunkts.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "68186114"
   
  Zum Ausführen der Ablaufverfolgung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]müssen die Benutzer außerdem die ALTER TRACE-Berechtigung haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Profiler](sql-server-profiler.md)   
  [Verwenden von SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)  
   

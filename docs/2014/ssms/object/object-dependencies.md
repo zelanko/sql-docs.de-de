@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032417"
 ---
 # <a name="object-dependencies"></a>Objektabhängigkeiten
@@ -27,14 +27,14 @@ ms.locfileid: "63032417"
  Mithilfe dieses Dialogfelds können Sie sich einen Überblick über die Abhängigkeiten verschaffen, bevor Sie das ausgewählte Objekt ändern oder löschen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Objekte, abhängig** _\<ausgewähltes Objekt >_  
+ **Objekte, die vom**  _\<ausgewählten Objekt abhängig sind>_  
  Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und die vom ausgewählten Objekt abhängig sind.  
   
- **Objekte, von denen** _\<ausgewähltes Objekt >_ **abhängt**  
+ **Objekte, von denen das**_\<ausgewählte Objekt>_ **abhängig** ist      
  Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und von denen das ausgewählte Objekt abhängig ist.  
   
- **Abhängigkeiten**  
- Wenn **Objekte, abhängig**  _\<ausgewähltes Objekt >_ ist geklickt haben, diese zeigt eine hierarchische Ansicht der Objekte, die vom ausgewählten Objekt abhängig sind. Wenn **Objekte, von denen**  _\<ausgewähltes Objekt >_ **abhängt** ist geklickt haben, diese zeigt eine hierarchische Ansicht der Objekte, von denen das ausgewählte Objekt abhängig ist. .  
+ **Zen**  
+ Wenn **auf** _ \<Objekte, die von ausgewähltem Objekt>_ abhängen, geklickt wird, wird eine hierarchische Ansicht der Objekte angezeigt, die vom ausgewählten Objekt abhängig sind. Wenn **auf Objekte, von denen** _ \<das ausgewählte Objekt>_ **abhängt** , geklickt wird, wird eine hierarchische Ansicht der Objekte angezeigt, von denen das ausgewählte Objekt abhängig ist.  
   
  **Name**  
  Zeigt den Namen, des oben in der Strukturansicht **Abhängigkeiten** ausgewählten Objekts an.  
@@ -42,17 +42,17 @@ ms.locfileid: "63032417"
  **Typ**  
  Zeigt den Typ des oben in der Strukturansicht **Abhängigkeiten** ausgewählten Objekts an.  
   
- **Zeit der letzten Synchronisierung**  
+ **Zeitpunkt der letzten Synchronisierung**  
  > [!NOTE]  
 >  Diese Option ist nur auf der Seite **Erweitert** verfügbar.  
   
  Gibt das Datum und die Uhrzeit des letzten Updates der Abhängigkeitsinformationen an.  
   
- **Abhängigkeitstyp**  
+ **Abhängigkeits Typen**  
  > [!NOTE]  
 >  Diese Option ist nur auf der Seite **Allgemein** verfügbar.  
   
- Zeigt den Typ der Abhängigkeit zwischen zwei Objekten an. Kann einen der folgenden Werte annehmen:  
+ Zeigt den Typ der Abhängigkeit zwischen zwei Objekten an. Dabei kann es sich um eine der folgenden Methoden handeln:  
   
 -   Schemagebundene Abhängigkeit  
   

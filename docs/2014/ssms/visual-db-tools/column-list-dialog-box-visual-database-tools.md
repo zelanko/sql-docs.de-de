@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936445"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Spaltenliste (Dialogfeld) (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62936445"
   
  Das Dialogfeld stellt eine Liste der Spalten im ausgewählten Tabellenwertobjekt sowie grundlegende Eigenschaften (z. B. Datentypen und Zulässigkeit von NULL-Werten) bereit.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Zeigt den Namen der Spalten im ausgewählten Tabellenwertobjekt an.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62936445"
  **Datentypeigenschaften**  
  Zeigt die Datentypeneigenschaften für jede Spalte im ausgewählten Tabellenwertobjekt an. Mögliche Werte sind NULLABLE, IDENTITY, ROWGUID und leer.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211503"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
@@ -42,7 +42,7 @@ ms.locfileid: "68211503"
   
 -   In diesem Beispiel wird der Zugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] unter Verwendung von TCP-Port 1433 konfiguriert. Die anderen Ports, die unterschiedliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten sind, können mithilfe der gleichen allgemeinen Schritte konfiguriert werden.  
   
- **In diesem Beispiel werden die folgenden allgemeinen Schritte beschrieben:**  
+ **Die allgemeinen Schritte in diesem Beispiel lauten wie folgt:**  
   
 -   Bestimmen der IP-Adressen des Computers.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68211503"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>So bestimmen Sie die verfügbaren IP-Adressen des Computers  
   
-1.  Auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `cmd` und dann [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  Klicken Sie auf dem Computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf dem installiert ist, auf **Start**, klicken `cmd` Sie auf [!INCLUDE[clickOK](../../includes/clickok-md.md)] **Ausführen**, geben Sie und dann ein.  
   
 2.  Geben Sie im Eingabeaufforderungsfenster `ipconfig,` ein, und drücken Sie anschließend die EINGABETASTE, um die auf diesem Computer verfügbaren IP-Adressen aufzulisten.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68211503"
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie dann auf **Konfigurationstools**, und klicken Sie dann auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager**.  
   
-2.  Erweitern Sie in der Konsolenstruktur des **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers** die Elemente **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration** und **Protokolle für \<Instanzname>** . Doppelklicken Sie dann auf **TCP/IP**.  
+2.  Erweitern ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** **Sie in**Configuration Manager im Konsolen Bereich den Knoten **Netzwerkkonfiguration, erweitern Sie Protokolle für Instanzname>, und doppelklicken Sie dann auf TCP/IP. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** ** \< **  
   
 3.  Im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **IP-Adressen** werden mehrere IP-Adressen im Format **IP1**, **IP2**und bis zu **IPAll**angezeigt. Eine dieser Angaben ist die IP-Adresse des Loopbackadapters (127.0.0.1). Für alle IP-Adressen, die auf dem Computer konfiguriert wurden, werden zusätzliche IP-Adressen angezeigt.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68211503"
   
 1.  Melden Sie sich als Administrator auf dem Computer an, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
-2.  Klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `wf.msc`, und klicken Sie auf **OK**.  
+2.  Klicken Sie im **Startmenü**auf **Ausführen**, geben `wf.msc`Sie ein, und klicken Sie auf **OK**.  
   
 3.  Klicken Sie im Dialogfeld **Benutzerkontensteuerung** auf **Weiter** , um unter Verwendung der Administratoranmeldeinformationen das Snap-In der Windows-Firewall mit erweiterter Sicherheit zu öffnen.  
   
@@ -138,8 +138,8 @@ ms.locfileid: "68211503"
   
 9. Um die anderen IP-Adressen auf einem mehrfach vernetzten Computer zu konfigurieren, wiederholen Sie diesen Vorgang mit einer anderen IP-Adresse und einer anderen Regel.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Verbindungsaufbau mit SQL Server über einen Proxyserver &#40;SQL Server-Konfigurations-Manager&#41;](../../relational-databases/sql-server-configuration-manager.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Browser Dienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Stellen Sie eine Verbindung mit SQL Server über einen Proxy Server &#40;SQL Server-Konfigurations-Manager her&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
   

@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781931"
 ---
 # <a name="scripting"></a>Skripterstellung
-  Die Skripterstellung in SMO wird durch das <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt und dessen untergeordnete Objekte oder durch die `Script`-Methode für einzelne Objekte gesteuert. Das <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt steuert die Zuordnung von Abhängigkeitsbeziehungen für-Objekte in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Die Skripterstellung in SMO wird durch das <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt und dessen untergeordnete Objekte oder durch die `Script`-Methode für einzelne Objekte gesteuert. Das <xref:Microsoft.SqlServer.Management.Smo.Scripter> -Objekt steuert die Zuordnung von Abhängigkeitsbeziehungen für-Objekte in einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Instanz von.  
   
  Die erweiterte Skripterstellung mithilfe des <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekts und dessen untergeordneten Objekten ist ein Prozess, der aus drei Phasen besteht:  
   
@@ -35,12 +35,13 @@ ms.locfileid: "72781931"
   
  In der Listengenerierungsphase wird die Struktur übergeben und die resultierende Liste wird zurückgegeben. Diese Objektliste ist in Skriptreihenfolge und kann bearbeitet werden.  
   
- Die Listengenerierungsphase verwendet die <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A>-Methode, um <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> zurückzugeben. <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> kann in dieser Phase geändert werden.  
+ Die Listengenerierungsphase verwendet die <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A>-Methode, um <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> zurückzugeben. 
+  <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> kann in dieser Phase geändert werden.  
   
  In der dritten und abschließenden Phase wird ein Skript mit der angegebenen Liste und den Skriptoptionen generiert. Das Ergebnis wird als <xref:System.Collections.Specialized.StringCollection>-Systemobjekt zurückgegeben. In dieser Phase werden dann die abhängigen Objektnamen aus der Elementauflistung des <xref:Microsoft.SqlServer.Management.Smo.DependencyTree>-Objekts und von Eigenschaften, wie <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> und <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>, extrahiert.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual&#35; C SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Dieses Codebeispiel erfordert eine `Imports`-Anweisung für den System.Collections.Specialized-Namespace. Fügen Sie dies mit den anderen Imports-Anweisungen ein, vor jeglichen Deklarationen in der Anwendung.  
   

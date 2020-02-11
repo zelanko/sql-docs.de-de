@@ -16,32 +16,32 @@ ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966211"
 ---
 # <a name="group-object-adox"></a>Group-Objekt (ADOX)
-Stellt ein Gruppenkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.  
+Stellt ein Gruppenkonto dar, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.  
   
-## <a name="remarks"></a>Hinweise  
- Die [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md) Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) Gruppenkonten alle des Katalogs darstellt. Die **Gruppen** Sammlung für einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) stellt nur die Gruppe, zu denen der Benutzer gehört.  
+## <a name="remarks"></a>Bemerkungen  
+ Die [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) -Sammlung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md) stellt alle Gruppenkonten des Katalogs dar. Die **Groups** -Sammlung für einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) stellt nur die Gruppe dar, zu der der Benutzer gehört.  
   
- Mit den Eigenschaften, die Auflistungen und die Methoden einer **Gruppe** Objekt ist, können Sie:  
+ Mit den Eigenschaften, Auflistungen und Methoden eines **Group** -Objekts können Sie folgende Aktionen ausführen:  
   
--   Identifizieren Sie die Gruppe mit der [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft.  
+-   Identifizieren Sie die Gruppe mit der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft.  
   
--   Bestimmen, ob eine Gruppe gelesen hat, schreiben oder Löschen von Berechtigungen mit den [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) Methoden.  
+-   Stellen Sie fest, ob eine Gruppe über Lese-, Schreib-oder Lösch Berechtigungen mit den Methoden [getberechtigungen](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [setberechtigungs](../../../ado/reference/adox-api/setpermissions-method-adox.md) Berechtigungen verfügt.  
   
--   Zugreifen auf die Benutzerkonten, die Mitgliedschaften in der Gruppe mit der [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Auflistung.  
+-   Greifen Sie auf die Benutzerkonten zu, die über Mitgliedschaften in der Gruppe mit der [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Sammlung verfügen.  
   
--   Zugriff auf die anbieterspezifischen Eigenschaften mit den [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
+-   Greifen Sie mit der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung auf anbieterspezifische Eigenschaften zu.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Group-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Users-Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

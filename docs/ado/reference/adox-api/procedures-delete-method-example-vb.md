@@ -1,5 +1,5 @@
 ---
-title: Prozeduren Delete-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Prozeduren Delete-Methoden Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965360"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Delete-Methode für Prozeduren – Beispiel (VB)
-Der folgende Code veranschaulicht, wie löschen Sie eine Prozedur mithilfe der [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode der der [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung.  
+Im folgenden Code wird veranschaulicht, wie eine Prozedur mithilfe der [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode der [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung gelöscht wird.  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -54,9 +54,9 @@ End Sub
 ' EndDeleteProcedureVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Delete-Methode (ADOX Sammlungen)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [Prozedurobjekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Delete-Methode (ADOX-Auflistungen)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Procedures-Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

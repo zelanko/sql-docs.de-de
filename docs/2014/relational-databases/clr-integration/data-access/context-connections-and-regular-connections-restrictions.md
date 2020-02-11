@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen hinsichtlich regulärer Verbindungen und Kontextverbindungen | Microsoft-Dokumentation
+title: Einschränkungen für reguläre Verbindungen und Kontext Verbindungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919170"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Einschränkungen hinsichtlich regulärer Verbindungen und Kontextverbindungen
-  In diesem Thema wird erläutert, die Einschränkungen im Zusammenhang mit der Ausführung von Code in die [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] -Prozess durch kontextverbindungen und reguläre Verbindungen.  
+  In diesem Thema werden die Einschränkungen besprochen, denen die Codeausführung im [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] -Prozess durch Kontextverbindungen und reguläre Verbindungen unterliegt.  
   
 ## <a name="restrictions-on-context-connections"></a>Einschränkungen für Kontextverbindungen  
  Berücksichtigen Sie bei der Anwendungsentwicklung die folgenden Einschränkungen, die für Kontextverbindungen gelten:  
@@ -34,7 +34,8 @@ ms.locfileid: "62919170"
   
 -   Die Batchverarbeitung von Updates wird in Kontextverbindungen nicht unterstützt  
   
--   `SqlNotificationRequest` kann nicht mit Befehlen verwendet werden, die für eine Kontextverbindung ausgeführt werden.  
+-   
+  `SqlNotificationRequest` kann nicht mit Befehlen verwendet werden, die für eine Kontextverbindung ausgeführt werden.  
   
 -   Befehle, die für die Kontextverbindung ausgeführt werden, können nicht abgebrochen werden. Die `SqlCommand.Cancel`-Methode ignoriert die Anforderung stillschweigend.  
   
@@ -47,11 +48,11 @@ ms.locfileid: "62919170"
 ## <a name="restrictions-on-regular-connections"></a>Einschränkungen für reguläre Verbindungen  
  Berücksichtigen Sie bei der Anwendungsentwicklung die folgenden Einschränkungen, die für reguläre Verbindungen gelten:  
   
--   Die asynchrone Befehlsausführung mit internen Servern wird nicht unterstützt. Wenn in der Verbindungszeichenfolge eines Befehls "async=true" angegeben wird, dann führt die Ausführung des Befehls dazu, dass die `System.NotSupportedException`-Ausnahme ausgelöst wird. Diese Meldung wird angezeigt: "Asynchroner Verarbeitung wird nicht unterstützt, wenn die Ausführung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Prozess."  
+-   Die asynchrone Befehlsausführung mit internen Servern wird nicht unterstützt. Wenn in der Verbindungszeichenfolge eines Befehls "async=true" angegeben wird, dann führt die Ausführung des Befehls dazu, dass die `System.NotSupportedException`-Ausnahme ausgelöst wird. Die folgende Meldung wird angezeigt: "Die asynchrone Verarbeitung wird bei einer Ausführung im Rahmen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozesses nicht unterstützt".  
   
 -   Das `SqlDependency`-Objekt wird nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Kontextverbindung](context-connection.md)  
   
   

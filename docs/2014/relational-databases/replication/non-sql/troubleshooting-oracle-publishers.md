@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021905"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
   In diesem Thema wird eine Reihe von Problemen aufgeführt, die bei der Konfiguration und Verwendung von Oracle-Verlegern auftreten können.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Fehler bezüglich Oracle-Client- und Netzwerksoftware  
- Dem Konto, unter dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem Verteiler ausgeführt wird, müssen Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt werden, in dem die Oracle-Clientnetzwerksoftware installiert ist. Wenn diese Berechtigungen nicht erteilt worden sind oder die Oracle-Clientkomponenten nicht ordnungsgemäß installiert sind, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
+ Dem Konto, unter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dem auf dem Verteiler ausgeführt wird, müssen Lese-und Ausführungs Berechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt werden, in dem die Oracle-Client Netzwerk Software installiert ist. Wenn diese Berechtigungen nicht erteilt worden sind oder die Oracle-Clientkomponenten nicht ordnungsgemäß installiert sind, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
  "Fehler bei der Serververbindung mit [Microsoft OLE DB-Anbieter für Oracle]. Oracle Client- und Netzwerkverbindung konnten nicht gefunden werden. Diese Komponenten werden von der Oracle Corporation geliefert und mit der Clientsoftware von Oracle, Version 7.3.3 oder höher, installiert. Sie müssen diese Komponenten installieren, um den Provider verwenden zu können."  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63021905"
   
 -   „Die Oracle-Serverinstanz '\<*OracleVerlegerName*>' wurde zum Verwenden von '\<*SQLServerDistributorName*>' als Verteiler konfiguriert. Um mit dem Verwenden von '\<*NewSQLServerDistributorName*>' als Verteiler zu beginnen, müssen Sie die aktuelle Replikationskonfiguration auf der Oracle-Serverinstanz entfernen. Hierbei werden alle Veröffentlichungen auf dieser Serverinstanz gelöscht.“  
   
--   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>. *\<VerteilungsdatenbankName>* ' definiert. Löschen Sie die Zuordnung des Verlegers, oder löschen Sie das öffentliche Synonym ' *\<SynonymName>* ' zur erneuten Erstellung.“  
+-   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>.*\<VerteilungsdatenbankName>*' definiert. Löschen Sie den Verleger, oder löschen Sie das öffentliche Synonym "*\<Synonymname>*", um es neu zu erstellen.  
   
  Wenn die Zuordnung eines Oracle-Verlegers gelöscht wird, werden die Replikationsobjekte in der Oracle-Datenbank automatisch bereinigt. In einigen Fällen ist jedoch auch eine manuelle Bereinigung der Oracle-Replikationsobjekte erforderlich. So bereinigen Sie die durch die Replikation erstellten Oracle-Replikationsobjekte manuell:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021905"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>SQL Server-Fehler 21642 (Verbindungsserver bereits vorhanden) wurde ausgelöst  
  Wenn ein Oracle-Verleger zum ersten Mal konfiguriert wird, wird für die Verbindung zwischen dem Verleger und dem Verteiler ein Verbindungsservereintrag erstellt. Der Verbindungsserver hat denselben Namen wie der Oracle-TNS-Dienst. Wenn Sie versuchen, einen Verbindungsserver mit demselben Namen zu erstellen, wird die folgende Fehlermeldung angezeigt:  
   
- "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen ' *\<LinkedServerName>* ' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
+ "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungs Server mit dem Namen '*\<linkedservername>*' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
   
  Dieser Fehler kann auftreten, wenn Sie versuchen, den Verbindungsserver direkt zu erstellen, oder die Beziehung zwischen dem Oracle-Verleger und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler zuvor gelöscht haben und jetzt versuchen, diese Beziehung neu zu konfigurieren. Wenn Sie beim Neukonfigurieren des Verlegers diese Fehlermeldung erhalten, löschen Sie den Verbindungsserver mit [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63021905"
   
  Wenn der OLE DB-Anbieter von Oracle installiert ist, stellen Sie sicher, dass er registriert ist. Führen Sie zum Registrieren der Anbieter-DLL den folgenden Befehl in dem Verzeichnis aus, in dem die DLL installiert ist. Beenden Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, und starten Sie sie dann erneut:  
   
-1.  `regsvr32 OraOLEDB10.dll` oder `regsvr32 OraOLEDB.dll`.  
+1.  `regsvr32 OraOLEDB10.dll`oder `regsvr32 OraOLEDB.dll`.  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>SQL Server-Fehler 21626 oder 21627 wurde ausgelöst  
  Um zu überprüfen, ob die Umgebung zum Veröffentlichen mit Oracle ordnungsgemäß konfiguriert ist, versucht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit den Anmeldeinformationen, die Sie während der Konfiguration angegeben haben, eine Verbindung mit dem Oracle-Verleger herzustellen. Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler keine Verbindung mit dem Oracle-Verleger herstellen kann, wird die folgende Fehlermeldung angezeigt:  
@@ -143,7 +143,8 @@ ms.locfileid: "63021905"
  Wenn diese Fehlermeldung angezeigt wird, überprüfen Sie die Verbindung mit der Oracle-Datenbank, indem Sie SQL*PLUS direkt mit der gleichen Anmeldung und dem gleichen Kennwort ausführen, wie während der Konfiguration des Oracle-Verlegers angegeben. Weitere Informationen finden Sie im Abschnitt "Verbindung zwischen SQL Server-Verteiler und Oracle-Datenbankinstanz nicht möglich" weiter oben in diesem Thema.  
   
 ## <a name="sql-server-error-21628-is-raised"></a>SQL Server-Fehler 21628 wurde ausgelöst  
- Bei 64-Bit-Verteilern wird für das Veröffentlichen mit Oracle der OLE DB-Anbieter von Oracle (OraOLEDB.Oracle) verwendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt einen Registrierungseintrag, damit der Oracle-Anbieter in einem Prozess mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt werden kann. Wenn beim Lesen oder Schreiben dieses Registrierungseintrags ein Problem auftritt, wird die folgende Fehlermeldung angezeigt:  
+ Bei 64-Bit-Verteilern wird für das Veröffentlichen mit Oracle der OLE DB-Anbieter von Oracle (OraOLEDB.Oracle) verwendet. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt einen Registrierungseintrag, damit der Oracle-Anbieter in einem Prozess mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt werden kann. Wenn beim Lesen oder Schreiben dieses Registrierungseintrags ein Problem auftritt, wird die folgende Fehlermeldung angezeigt:  
   
  "Die Registrierung des Verteilers '%s' kann nicht so aktualisiert werden, dass der OLE DB-Anbieter von Oracle, OraOLEDB.Oracle, in einem Prozess mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt werden kann. Stellen Sie sicher, dass der aktuelle Anmeldename autorisiert ist, Registrierungsschlüssel im Besitz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu ändern."  
   
@@ -151,11 +152,11 @@ ms.locfileid: "63021905"
   
  So zeigen Sie die Registrierungseinstellung an und ändern sie  
   
-1.  Klicken Sie im **Startmenü**auf **Ausführen**.  
+1.  Klicken Sie auf **Start** und dann auf **Ausführen**.  
   
 2.  Geben Sie **regedit** im Dialogfeld **Ausführen**ein, und klicken Sie dann auf **OK**.  
   
-3.  Navigieren Sie zu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers.  
+3.  Navigieren Sie zu HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\SQL Server*\<instanceName>* \Providers.  
   
      Unter Providers sollte sich ein Ordner mit dem Namen OraOLEDB.Oracle befinden. In diesem Ordner sollte sich der DWORD-Wert mit dem Namen **AllowInProcess**und dem Wert **1**befinden.  
   
@@ -170,7 +171,7 @@ ms.locfileid: "63021905"
   
  "Der Administratoranmeldung für den '%s'-Oracle-Verleger sind unzureichende Berechtigungen zugeordnet."  
   
- Führen Sie zum Überprüfen der dem Benutzer erteilten Berechtigungen die folgende Abfrage aus: `SELECT * from session_privs`. Die Ausgabe sollte ähnlich der Folgenden aussehen:  
+ Führen Sie zum Überprüfen der dem Benutzer erteilten Berechtigungen die folgende Abfrage aus: `SELECT * from session_privs`. Die Ausgabe sollte in etwa wie folgt aussehen:  
   
  `PRIVILEGE`  
   
@@ -231,7 +232,7 @@ ms.locfileid: "63021905"
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>Verleger muss aufgrund von Änderungen neu konfiguriert werden  
  Aufgrund von Änderungen der Metadatentabellen oder der Prozeduren für die Replikation muss die Zuordnung des Verlegers gelöscht oder neu konfiguriert werden. Wenn Sie den Verleger neu konfigurieren möchten, müssen Sie die Zuordnung löschen und dann mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL oder RMO neu konfigurieren. Informationen zum Konfigurieren des Verlegers finden Sie unter [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md).  
   
- **So löschen Sie einen Oracle-Verleger (** SQL Server Management Studio **)**  
+ So **Löschen Sie einen Oracle-Verleger (** SQL Server Management Studio **)**  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verteiler für den Oracle-Verleger her, und erweitern Sie dann den Serverknoten.  
   
@@ -241,11 +242,11 @@ ms.locfileid: "63021905"
   
 4.  Klicken Sie auf **OK**.  
   
- **So löschen Sie die Zuordnung eines Oracle-Verlegers (Transact-SQL)**  
+ **So löschen Sie einen Oracle-Verleger (Transact-SQL)**  
   
--   Führen Sie **sp_dropdistpublisher**aus. Weitere Informationen finden Sie unter [Sp_dropdistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql).  
+-   Führen Sie **sp_dropdistpublisher**aus. Weitere Informationen finden Sie unter [sp_dropdistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](oracle-publishing-overview.md)  
   

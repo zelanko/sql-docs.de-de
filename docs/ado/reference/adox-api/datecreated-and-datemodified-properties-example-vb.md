@@ -1,5 +1,5 @@
 ---
-title: DateCreated und DateModified Eigenschaften – Beispiel (VB) | Microsoft-Dokumentation
+title: DateCreated und DateModified-Eigenschaften (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96ca853100baddd94d29331416215278d493388f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966593"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated- und DateModified-Eigenschaften – Beispiel (VB)
-Dieses Beispiel zeigt die [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) Eigenschaften durch Hinzufügen eines neuen [Spalte](../../../ado/reference/adox-api/column-object-adox.md) zu einem vorhandenen [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und Erstellen eines neuen **Tabelle**. Das DateOutput-Verfahren ist erforderlich, damit dieses Beispiel ausführen.  
+In diesem Beispiel werden die [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) -Eigenschaft und die [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) -Eigenschaft durch Hinzufügen einer neuen [Spalte](../../../ado/reference/adox-api/column-object-adox.md) zu einer vorhandenen [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und durch Erstellen einer neuen **Tabelle**veranschaulicht. Die dateoutput-Prozedur ist erforderlich, damit das Beispiel ausgeführt werden kann.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -94,10 +94,10 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DateCreated-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Prozedurobjekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures-Auflistung (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Prozeduren (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Views-Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

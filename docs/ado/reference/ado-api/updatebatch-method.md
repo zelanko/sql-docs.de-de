@@ -17,14 +17,14 @@ ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937843"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch-Methode
-Schreibt alle ausstehenden BatchUpdates auf den Datenträger.  
+Schreibt alle ausstehenden Batch Aktualisierungen auf den Datenträger.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,34 +34,34 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *AffectRecords*  
- Optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der angibt, wie viele Datensätze der **UpdateBatch** Methode wirkt sich auf.  
+ *Affectrecords*  
+ Optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der angibt, wie viele Datensätze von der **UpdateBatch** -Methode betroffen sind.  
   
- *PreserveStatus*  
- Optional. Ein **booleschen** -Wert, der angibt, ob lokale geändert wird, wie durch die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft Commit ausgeführt werden soll. Wenn dieser Wert, um festgelegt ist **"true"** , **Status** Eigenschaft jedes Datensatzes bleibt unverändert, nachdem das Update abgeschlossen ist.  
+ *Preservestatus*  
+ Optional. Ein **boolescher** Wert, der angibt, ob für lokale Änderungen, wie von der [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft angegeben, ein Commit ausgeführt werden soll. Wenn dieser Wert auf **true**festgelegt ist, bleibt die **Status** -Eigenschaft jedes Datensatzes unverändert, nachdem das Update abgeschlossen wurde.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **UpdateBatch** Methode, die beim Ändern einer **Recordset** Objekt im Modus "Batch-Update", übertragen alle Änderungen, die einer **Recordset** Objekt, das der zugrunde liegenden Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **UpdateBatch** -Methode, wenn Sie ein **Recordset** -Objekt im Batch Update Modus ändern, um alle in einem **Recordset** -Objekt vorgenommenen Änderungen an die zugrunde liegende Datenbank zu übertragen  
   
- Wenn die **Recordset** Objekt unterstützt die Batch zu aktualisieren, können Sie mehrere Änderungen an einen oder mehrere Datensätze zwischenspeichern, lokal, bis Sie aufrufen, die **UpdateBatch** Methode. Wenn Sie den aktuellen Datensatz bearbeiten oder Hinzufügen eines neuen Datensatzes, beim Aufrufen der **UpdateBatch** -Methode, ADO ruft automatisch die [Update](../../../ado/reference/ado-api/update-method.md) Methode, um alle ausstehenden Änderungen am aktuellen Datensatz vor dem Speichern übertragen die im Batchmodus Änderungen an den Anbieter. Verwenden Sie Batch mit einem Keyset oder static-Cursor wird aktualisiert.  
+ Wenn das **Recordset** -Objekt die Batch Aktualisierung unterstützt, können Sie mehrere Änderungen an einem oder mehreren Datensätzen lokal zwischenspeichern, bis Sie die **UpdateBatch** -Methode aufrufen. Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, wenn Sie die **UpdateBatch** -Methode aufrufen, ruft ADO automatisch die [Update](../../../ado/reference/ado-api/update-method.md) -Methode auf, um ausstehende Änderungen am aktuellen Datensatz zu speichern, bevor die Batch Änderungen an den Anbieter übertragen werden. Sie sollten die Batch Aktualisierung entweder mit einem Keyset-oder STATIC-Cursor verwenden.  
   
 > [!NOTE]
->  Angeben von **AdAffectGroup** wie der Wert für diesen Parameter zu einem Fehler führt, wenn es keine Datensätze angezeigt, in der aktuellen werden **Recordset** (z. B. einen Filter für die keine Datensätze entsprechen).  
+>  Das Angeben von **adAffectGroup** als Wert für diesen Parameter führt zu einem Fehler, wenn im aktuellen **Recordset** keine sichtbaren Datensätze vorhanden sind (z. b. ein Filter, bei dem keine Datensätze vorhanden sind).  
   
- Wenn der Versuch zum Übertragen von Änderungen für einige oder alle Datensätze aufgrund eines Konflikts mit der zugrunde liegenden Daten ein Fehler auftritt (z. B. ein Datensatz wurde bereits gelöscht von einem anderen Benutzer), der Anbieter gibt Warnungen, um die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung und ein während der Ausführung ein Fehler auftritt. Verwenden der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft (**AdFilterAffectedRecords**) und die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft, um Datensätze mit Konflikten zu suchen.  
+ Wenn der Versuch, Änderungen zu übertragen, aufgrund eines Konflikts mit den zugrunde liegenden Daten (z. b. ein Datensatz bereits von einem anderen Benutzer gelöscht) fehlschlägt, gibt der Anbieter Warnungen an die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung zurück, und es tritt ein Laufzeitfehler auf. Verwenden Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft (**adFilterAffectedRecords**) und die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft, um Datensätze mit Konflikten zu suchen.  
   
- Um alle ausstehenden Batch-Updates zu stornieren, verwenden die [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methode.  
+ Verwenden Sie die [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) -Methode, um alle ausstehenden Batch Aktualisierungen abzubrechen.  
   
- Wenn die [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) und [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) dynamische Eigenschaften festgelegt sind, und die **Recordset** ist das Ergebnis der Ausführung einer JOIN-Operation für mehrere Tabellen, und klicken Sie dann die Ausführung der **UpdateBatch** Methode ist implizit, gefolgt von der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode, abhängig von den Einstellungen von der [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) Eigenschaft.  
+ Wenn die dynamischen Eigenschaften [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) und [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) festgelegt sind und das **Recordset** das Ergebnis der Ausführung einer Verknüpfungs Operation für mehrere Tabellen ist, dann wird die Ausführung der **UpdateBatch** -Methode implizit von der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode gefolgt von den Einstellungen der Eigenschaft [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) gefolgt.  
   
- Die Reihenfolge an, unter denen die einzelnen Updates eines Batches, für die Datenquelle ausgeführt werden, ist nicht unbedingt identisch mit der Reihenfolge, in denen sie auf dem lokalen ausgeführt wurden **Recordset**. Aktualisierungsreihenfolge ist abhängig von den Anbieter. Berücksichtigen Sie dies beim Programmieren von Updates, die miteinander, z. B. foreign Key-Einschränkungen auf eine INSERT- oder Update verknüpft sind.  
+ Die Reihenfolge, in der die einzelnen Updates eines Batches in der Datenquelle ausgeführt werden, ist nicht notwendigerweise identisch mit der Reihenfolge, in der Sie für das lokale **Recordset**ausgeführt wurden. Die Aktualisierungs Reihenfolge hängt vom Anbieter ab. Berücksichtigen Sie dies beim Codieren von Aktualisierungen, die miteinander verknüpft sind, z. b. Foreign Key-Einschränkungen bei einer INSERT-oder Update-Datei.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [UpdateBatch und CancelBatch-Methode – Beispiel (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
- [UpdateBatch und CancelBatch-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für UpdateBatch und CancelBatch-Methoden (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
+ [Beispiel für UpdateBatch und CancelBatch-Methoden (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

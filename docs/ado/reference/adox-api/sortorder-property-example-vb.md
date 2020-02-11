@@ -1,5 +1,5 @@
 ---
-title: SortOrder-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Sortorider-Eigenschafts Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965193"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird veranschaulicht, die [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) , wurde angefügt die [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung von eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code Fügt einen aufsteigenden Index der Spalte "Country" in der **Mitarbeiter** Tabelle, zeigt die Datensätze. Und klicken Sie dann der Code einen absteigenden Index der Spalte "Country" in fügt die **Mitarbeiter** Tabelle aus, und die Einträge erneut angezeigt. Der Unterschied zwischen aufsteigender und absteigender Indizes wird angezeigt.  
+Dieses Beispiel veranschaulicht die [sortor](../../../ado/reference/adox-api/sortorder-property-adox.md) der-Eigenschaft einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md) , die an die [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) -Auflistung eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md)angefügt wurde. Der Code fügt der Spalte Country in der Tabelle **Employees** einen aufsteigenden Index hinzu und zeigt dann die Datensätze an. Anschließend fügt der Code einen absteigenden Index an die Spalte Country in der Tabelle **Employees** an und zeigt die Datensätze erneut an. Der Unterschied zwischen aufsteigenden und absteigenden Indizes wird angezeigt.  
   
 ```  
 ' BeginSortOrderVB  
@@ -136,7 +136,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

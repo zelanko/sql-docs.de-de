@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960767"
 ---
 # <a name="replication-tutorials"></a>Lernprogramme zur Replikation
@@ -27,7 +27,7 @@ ms.locfileid: "62960767"
  In den Lernprogrammen zur Replikation bezieht sich "Verleger" auf den Server, der die zu replizierenden Quelldaten enthält, und "Abonnent" bezieht sich auf den Zielserver. Verleger und Abonnent können dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam verwenden; dies ist jedoch keine Anforderung. Weitere Informationen finden Sie unter [Das Replikationsveröffentlichungsmodell (Übersicht)](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  Die meisten der in diesen Lernprogrammen vorgestellten Aufgaben können programmgesteuert ausgeführt werden. Weitere Informationen finden Sie unter [Entwicklerhandbuch &#40;Replikation&#41;](concepts/replication-developer-documentation.md).  
+>  Die meisten der in diesen Lernprogrammen vorgestellten Aufgaben können programmgesteuert ausgeführt werden. Weitere Informationen finden Sie [im Entwicklerhandbuch &#40;Replikations&#41;](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Lernprogramme zur Replikation  
  [Vorbereiten des Servers für die Replikation](tutorial-preparing-the-server-for-replication.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "62960767"
  [Replizieren von Daten mit mobilen Clients](tutorial-replicating-data-with-mobile-clients.md)  
  Hier erfahren Sie, wie Daten mithilfe der Mergereplikation zwischen einem Server und einem oder mehreren Clients ausgetauscht werden, die nur gelegentlich verbunden sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheit von SQL Server-Replikation](security/view-and-modify-replication-security-settings.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Replikation Sicherheit](security/view-and-modify-replication-security-settings.md)  
   
   

@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524366"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Besitzketten und Kontextwechsel
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "62524366"
  Jeder Codeblock dieses Beispiels wird jeweils sofort erläutert. Informationen, wie Sie das vollständige Beispiel kopieren können, finden Sie unter [Vollständiges Beispiel](#CompleteExample) am Ende dieses Lernprogramms.  
   
 ## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
- Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die `AdventureWorks2012`-Datenbank zu öffnen. Vergewissern Sie sich mit der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung `CURRENT_USER`, dass der Benutzer dbo als Kontext angezeigt wird.  
+ Verwenden [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Sie und den folgenden Code, um `AdventureWorks2012` die Datenbank zu öffnen, `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] und verwenden Sie die-Anweisung, um zu überprüfen, ob der dbo-Benutzer als Kontext angezeigt wird.  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +80,8 @@ GO
   
  Weitere Informationen zur CREATE USER-Anweisung finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Weitere Informationen zur CREATE LOGIN-Anweisung finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
- Übertragen Sie mit dem folgenden Code den Besitz des `Purchasing` -Schemas auf das Konto `TestManagerUser` . Dadurch wird es ermöglicht, unter diesem Konto mit allen DML-Anweisungen (Data Manipulation Language, z. B. `SELECT` - und `INSERT` -Berechtigungen) auf die Objekte zuzugreifen, die das Schema enthält. `TestManagerUser` wird auch die Berechtigung zum Erstellen gespeicherter Prozeduren erteilt.  
+ Übertragen Sie mit dem folgenden Code den Besitz des `Purchasing` -Schemas auf das Konto `TestManagerUser` . Dadurch wird es ermöglicht, unter diesem Konto mit allen DML-Anweisungen (Data Manipulation Language, z. B. `SELECT` - und `INSERT` -Berechtigungen) auf die Objekte zuzugreifen, die das Schema enthält. 
+  `TestManagerUser` wird auch die Berechtigung zum Erstellen gespeicherter Prozeduren erteilt.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -95,7 +96,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Weitere Informationen zur GRANT-Anweisung finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](stored-procedures/stored-procedures-database-engine.md). Ein Poster mit allen [!INCLUDE[ssDE](../includes/ssde-md.md)]-Berechtigungen finden Sie unter [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Weitere Informationen zur GRANT-Anweisung finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](stored-procedures/stored-procedures-database-engine.md). Ein Poster aller [!INCLUDE[ssDE](../includes/ssde-md.md)] Berechtigungen finden [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)Sie unter.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Erstellen einer gespeicherten Prozedur für Zugriff auf Daten  
  Um den Kontext innerhalb einer Datenbank zu wechseln, verwenden Sie die EXECUTE AS-Anweisung. EXECUTE AS erfordert IMPERSONATE-Berechtigungen.  
@@ -156,7 +157,8 @@ GO
  Weitere Informationen zur REVERT-Anweisung finden Sie unter [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Zugreifen auf Daten über die gespeicherte Prozedur  
- `TestEmployeeUser` hat für die Objekte der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank keine Berechtigungen, die über eine Anmeldung und die Berechtigungen hinausgehen, die der public-Datenbankrolle zugeordnet sind. Der folgende Code gibt einen Fehler zurück, wenn `TestEmployeeUser` versucht, auf eine der Basistabellen zuzugreifen.  
+ 
+  `TestEmployeeUser` hat für die Objekte der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank keine Berechtigungen, die über eine Anmeldung und die Berechtigungen hinausgehen, die der public-Datenbankrolle zugeordnet sind. Der folgende Code gibt einen Fehler zurück, wenn `TestEmployeeUser` versucht, auf eine der Basistabellen zuzugreifen.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -200,7 +202,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a> Vollständiges Beispiel  
+##  <a name="CompleteExample"></a>Vervollständigen eines Beispiels  
  In diesem Abschnitt wird der vollständige Beispielcode angezeigt.  
   
 > [!NOTE]  
@@ -321,7 +323,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

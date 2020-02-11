@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049151"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Sortieren von Zeilen (Visual Database Tools)
@@ -89,7 +89,7 @@ ms.locfileid: "63049151"
   
      Beachten Sie, dass die Abfrage `state` als zweite Sortierspalte verwendet. Wenn daher mehrere Länder/Regionen mit der gleichen Anzahl Autoren vorhanden sind, werden die Länder/Regionen in alphabetischer Reihenfolge aufgeführt.  
   
--   **Sie können Daten nach internationalen Kriterien sortieren.** Das heißt, Sie können beim Sortieren einer Spalte Ordnungskonventionen zugrunde legen, die von den Standardkonventionen für diese Spalte abweichen. Sie können z. B. eine Abfrage schreiben, die alle Buchtitel Jaime Pati abruft? o. Um die Titel in alphabetischer Reihenfolge anzuzeigen, verwenden Sie eine spanische Sortierreihenfolge für die Titelspalte. Hierfür kann folgende SQL-Anweisung formuliert werden:  
+-   **Sie können Daten nach internationalen Kriterien sortieren.** Das heißt, Sie können beim Sortieren einer Spalte Ordnungskonventionen zugrunde legen, die von den Standardkonventionen für diese Spalte abweichen. Beispielsweise können Sie eine Abfrage schreiben, die alle Buch Titel von Jaime pati abruft? '. Um die Titel in alphabetischer Reihenfolge anzuzeigen, verwenden Sie eine spanische Sortierreihenfolge für die Titelspalte. Hierfür kann folgende SQL-Anweisung formuliert werden:  
   
     ```  
     SELECT title  
@@ -110,8 +110,8 @@ ms.locfileid: "63049151"
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sortieren und gruppieren Abfrageergebnisse &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Sortieren und Gruppieren von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

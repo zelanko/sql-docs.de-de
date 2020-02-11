@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138284"
 ---
 # <a name="mdx-scripting---scope"></a>MDX-Skripts – SCOPE
@@ -72,18 +72,18 @@ Limited_Set ::=
  *single_tuple*  
  Ein einzelnes Tupel.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die SCOPE-Anweisung bestimmt den Teilcube, auf den sich die Ausführung mindestens einer MDX-Anweisung auswirkt. Wenn eine MDX-Anweisung nicht in eine SCOPE-Anweisung eingeschlossen ist, besteht der implizite Bereich der MDX-Anweisung im gesamten Cube.  
   
 > [!NOTE]  
 >  Ausgeblendete Elemente werden in SCOPE-Anweisungen verfügbar gemacht.  
   
- SCOPE-Anweisungen erstellen Teilcubes, die "Löchern" unabhängig von verfügbar machen die **MDX Compatibility** festlegen. So kann z. B. die Anweisung `Scope( Customer.State.members )` die Staaten in Ländern oder Regionen einschließen, die keine Staaten enthalten, für die jedoch unsichtbare Platzhalterelemente eingefügt wurden.  
+ SCOPE-Anweisungen erstellen Teilcubes, die unabhängig von der **MDX-Kompatibilitäts** Einstellung "Löcher" verfügbar machen. So kann z. B. die Anweisung `Scope( Customer.State.members )` die Staaten in Ländern oder Regionen einschließen, die keine Staaten enthalten, für die jedoch unsichtbare Platzhalterelemente eingefügt wurden.  
   
  Berechnete Elemente und benannte Mengen, die in einer SCOPE-Anweisung erstellt wurden, sind von der SCOPE-Anweisung nicht betroffen.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel, aus der MDX-berechnungsskript in der Adventure Works-beispiellösung, den aktuellen Bereich als Geschäftsquartal im Geschäftsjahr 2005 sowie das sales Amount Quota-Measure definiert und weist dann einen Wert für die Zellen im aktuellen Bereich mithilfe der  **ParallelPeriod** Funktion. Im Beispiel ändert dann den Bereich mit einem anderen SCOPE-Anweisung und führt dann eine weitere Zuweisung mithilfe der [This (MDX)](../mdx/this-mdx.md) Funktion.  
+ Im folgenden Beispiel wird aus dem MDX-Berechnungs Skript in der Adventure Works-Beispiellösung der aktuelle Bereich als Geschäftsquartal im Geschäftsjahr 2005 und das Sales Amount Quota-Measure definiert. Anschließend wird den Zellen im aktuellen Bereich mithilfe der **ParallelPeriod** -Funktion ein Wert zugewiesen. Anschließend ändert das Beispiel den Bereich mithilfe einer anderen SCOPE-Anweisung und führt dann mithilfe der [this (MDX)](../mdx/this-mdx.md) -Funktion eine weitere Zuweisung durch.  
   
 ```  
 Scope   
@@ -113,7 +113,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Skriptanweisungen &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Skript Anweisungen &#40;MDX-&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

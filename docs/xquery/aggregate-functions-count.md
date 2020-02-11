@@ -16,16 +16,16 @@ ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986303"
 ---
 # <a name="aggregate-functions---count"></a>Aggregatfunktionen – count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt die Anzahl der enthaltenen Elemente in der angegebenen Sequenz *$arg*.  
+  Gibt die Anzahl der Elemente zurück, die in der durch *$arg*angegebenen Sequenz enthalten sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,11 +38,11 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  Zu zählende Elemente.  
   
-## <a name="remarks"></a>Hinweise  
- Gibt 0 zurück, wenn *$arg* eine leere Sequenz.  
+## <a name="remarks"></a>Bemerkungen  
+ Gibt 0 zurück, wenn *$arg* eine leere Sequenz ist.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Verwenden der count()-Funktion von XQuery zum Zählen der Arbeitsplatzstandorte im Fertigungsprozess eines Produktmodells  
  Die folgende Abfrage zählt die Anzahl der Arbeitsplatzstandorte im Fertigungsprozess eines Produktmodells (ProductModelID=7).  
@@ -62,11 +62,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **Namespace** -Schlüsselwort in [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespacepräfix. Dieses Präfix wird anschließend im Hauptteil der XQuery verwendet.  
+-   Das **Namespace** -Schlüsselwort im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespace Präfix. Dieses Präfix wird anschließend im Hauptteil der XQuery verwendet.  
   
--   Die Abfrage erstellt XML mit der <`NoOfWorkStations`> Element.  
+-   Die Abfrage erstellt XML, das das <`NoOfWorkStations`>-Element enthält.  
   
--   Die **count()** -Funktion im Hauptteil der XQuery zählt die Anzahl der <`Location`> Elemente.  
+-   Die **count ()** -Funktion im XQuery-Text zählt die Anzahl der `Location` <> Elemente.  
   
  Dies ist das Ergebnis:  
   
@@ -98,7 +98,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- Anstelle von XML können Sie die Werte auch so zurückgeben, dass sie nicht vom Typ XML sind, wie in der folgenden Abfrage gezeigt. Die Abfrage verwendet die [Value()-Methode (Xml-Datentyp)](../t-sql/xml/value-method-xml-data-type.md) um die Anzahl der Arbeitsaufgaben-Center-Speicherort abzurufen.  
+ Anstelle von XML können Sie die Werte auch so zurückgeben, dass sie nicht vom Typ XML sind, wie in der folgenden Abfrage gezeigt. Die Abfrage verwendet die [value ()-Methode (XML-Datentyp)](../t-sql/xml/value-method-xml-data-type.md) , um die Anzahl der Arbeitsplatz Orte abzurufen.  
   
 ```  
 SELECT  ProductModelID,   
@@ -117,7 +117,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

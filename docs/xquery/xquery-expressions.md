@@ -17,58 +17,58 @@ ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1f136f07b500a52a5382fff6f4388840d2007892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946028"
 ---
 # <a name="xquery-expressions"></a>XQuery-Ausdrücke
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Themen, die beschreiben, die XQuery-Ausdrücke.  
+  Themen, in denen die XQuery-Ausdrücke beschrieben werden.  
   
 
  [Primäre Ausdrücke &#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
  Beschreibt XQuery-Primärausdrücke. Dazu gehören Literale, Variablenverweise, Kontextelementausdrücke, Konstruktoren und Funktionsaufrufe.  
   
- [Path-Ausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
+ [Path-Ausdrücke &#40;XQuery-&#41;](../xquery/path-expressions-xquery.md)  
  Beschreibt XQuery-Pfadausdrücke. Darüber werden in einem Dokument enthaltene Knoten gesucht, wie Element-, Attribut- und Textknoten.  
   
- [Sequence Expressions &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
+ [Sequenz Ausdrücke &#40;XQuery-&#41;](../xquery/sequence-expressions-xquery.md)  
  Beschreibt XQuery-Operatoren für die Arbeit mit Zahlensequenzen.  
   
- [Arithmetische Ausdrücke &#40;XQuery&#41;](../xquery/arithmetic-expressions-xquery.md)  
+ [Arithmetische Ausdrücke &#40;XQuery-&#41;](../xquery/arithmetic-expressions-xquery.md)  
  Beschreibt die Verwendung arithmetischer Ausdrücke in XQuery.  
   
- [Vergleichsausdrücke &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
+ [Vergleichsausdrücke &#40;XQuery-&#41;](../xquery/comparison-expressions-xquery.md)  
  Beschreibt die von XQuery unterstützten Vergleichsausdrücke. Dabei handelt sich um allgemeine Vergleichsausdrücke oder um Vergleichsausdrücke für Werte, Knoten und Knotentypen.  
   
  [Logische Ausdrücke &#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
- Beschreibt die XQuery-Unterstützung für den logischen **und** und **oder** Operatoren.  
+ Beschreibt die XQuery-Unterstützung für die logischen **and** -und **or** -Operatoren.  
   
- [XML-Konstruktion &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [XML-Konstruktion &#40;XQuery-&#41;](../xquery/xml-construction-xquery.md)  
  Beschreibt XQuery-Konstruktoren, mit denen in einer Abfrage XML erstellt werden kann.  
   
- [FLWOR-Anweisung und-Iteration &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR-Anweisung und Iterations &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  Beschreibt die Iterationssyntax FLOWR. Diese steht für FOR, LET, WHERE, ORDER BY und RETURN. LET wird nicht unterstützt.  
   
- [Geordnete und ungeordnete Ausdrücke &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
- Beschreibt den Reihenfolgemodus für XQuery-Operationen. In der Standardeinstellung der reihenfolgemodus festgelegt ist, um **sortiert**.  
+ [Geordnete und ungeordnete Ausdrücke &#40;XQuery-&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
+ Beschreibt den Reihenfolgemodus für XQuery-Operationen. Standardmäßig ist der Reihenfolge Modus auf **geordnet**festgelegt.  
   
- [Bedingte Ausdrücke &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
- Beschreibt die XQuery-Unterstützung für die bedingte **If-Then-else** Anweisung.  
+ [Bedingte Ausdrücke &#40;XQuery-&#41;](../xquery/conditional-expressions-xquery.md)  
+ Beschreibt die XQuery-Unterstützung für die bedingte **if-then-else-** Anweisung.  
   
- [Quantifizierte Ausdrücke &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
+ [Quantifizierte Ausdrücke &#40;XQuery-&#41;](../xquery/quantified-expressions-xquery.md)  
  Beschreibt die existenziellen und universellen Quantifizierer in XQuery.  
   
- [SequenceType-Ausdrücke &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
+ [SequenceType-Ausdrücke &#40;XQuery-&#41;](../xquery/sequencetype-expressions-xquery.md)  
  Beschreibt die SequenceType-Syntax in XQuery.  
   
- [Überprüfen von Ausdrücken &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
- Die **überprüfen** Ausdruck wird nicht unterstützt.  
+ [Validieren von Ausdrücken &#40;XQuery-&#41;](../xquery/validate-expressions-xquery.md)  
+ Der **Validate** -Ausdruck wird nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135882"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
@@ -31,11 +31,11 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Beim Durchlaufen der einen Satz an, wie z. B. mit der [Filter (MDX)](../mdx/filter-mdx.md) oder [Generate (MDX)](../mdx/generate-mdx.md) Funktionen, die **CurrentOrdinal** Funktion gibt die Iterationsnummer zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Beim Durchlaufen einer Menge, wie z. b. mit den [Filter (MDX)](../mdx/filter-mdx.md) -oder [Generate (MDX)](../mdx/generate-mdx.md) -Funktionen, gibt die **CurrentOrdinal** -Funktion die Iterations Nummer zurück.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende einfache Beispiel zeigt wie **CurrentOrdinal** kann verwendet werden, mit **generieren** gibt eine Zeichenfolge, die mit dem Namen jedes Elements in einem Satz mit seiner Position in der Gruppe zurück:  
+ Das folgende einfache Beispiel zeigt, wie **CurrentOrdinal** mit **Generate** verwendet werden kann, um eine Zeichenfolge mit dem Namen der einzelnen Elemente in einer Menge zusammen mit der Position in der Menge zurückzugeben:  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -47,7 +47,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- Die praktische Nutzen von CurrentOrdinal beschränkt sich auf sehr komplexe Berechnungen. Das folgende Beispiel gibt die Anzahl der Produkte in der Gruppe, die eindeutig ist, mit der **Reihenfolge** Funktion, um die Reihenfolge der nicht leeren Tupel vor Verwendung der **Filter** Funktion. Die **CurrentOrdinal** Funktion zum Vergleichen und Ausschließen von Gleichrangigkeit verwendet wird.  
+ Die praktische Nutzen von CurrentOrdinal beschränkt sich auf sehr komplexe Berechnungen. Im folgenden Beispiel wird die Anzahl der Produkte in der Menge zurückgegeben, die eindeutig sind. dabei wird die **Order** -Funktion verwendet, um die nicht leeren Tupel vor der Verwendung der **Filter** Funktion zu sortieren. Die **CurrentOrdinal** -Funktion wird zum Vergleichen und Entfernen von Beziehungen verwendet.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -81,7 +81,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL-Eigenschaft – Beispiel (VBScript) | Microsoft-Dokumentation
+title: SQL-Eigenschafts Beispiel (VBScript) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4974d6509a0ba864f0159271d9c8cc90e2c4047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963408"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL-Eigenschaft – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Der folgende Code zeigt, wie Sie festlegen der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) SQL-Parameter zur Entwurfszeit und die Bindung, die mit einem datenbewusste Steuerelement unter Verwendung der Datenbank namens *Pubs*, die im Lieferumfang von Microsoft SQL Server. Das Beispiel zu testen, kopieren den folgenden Code in ein normales ASP-Dokument mit dem Namen **SQLDesignVBS.asp** auf Ihrem Webserver.  
+ Der folgende Code zeigt, wie das RDS-festgelegt wird [. Der DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -SQL-Parameter zur Entwurfszeit und binden dieses Steuer Elements an ein Daten abhängiger Steuerelement mithilfe der Datenbank mit dem Namen *Pubs*, die mit Microsoft SQL Server ausgeliefert wird. Um das Beispiel zu testen, kopieren Sie den folgenden Code in ein normales ASP-Dokument mit dem Namen **sqldesignvb. ASP** auf Ihrem Webserver.  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -88,7 +88,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- Das folgende Beispiel zeigt, wie Sie die erforderlichen Parameter der **RDS. DataControl** zur Laufzeit. Zum Testen dieses Beispiels ausgeschnitten, und fügen Sie den folgenden Code in ein normales ASP-Dokument, und nennen Sie sie **SQLRuntimeVBS.asp**. ASP-Skript wird auf den Server identifiziert.  
+ Im folgenden Beispiel wird gezeigt, wie die erforderlichen Parameter von RDS festgelegt werden **. DataControl** zur Laufzeit. Um dieses Beispiel zu testen, schneiden Sie den folgenden Code aus, und fügen Sie ihn in ein normales ASP-Dokument ein, und nennen Sie ihn **sqlruntimevb. ASP**. Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  
@@ -174,7 +174,7 @@ End Sub
 <!-- EndSQLRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SQL-Eigenschaft](../../../ado/reference/rds-api/sql-property.md)
 

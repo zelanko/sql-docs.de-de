@@ -17,23 +17,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783203"
 ---
 # <a name="delete-a-job-category"></a>Löschen einer Auftragskategorie
-  In diesem Thema wird beschrieben, wie Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects löschen können.  
+  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie eine-Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Auftrags [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Kategorie [!INCLUDE[tsql](../../includes/tsql-md.md)] in mithilfe von, oder SQL Server Management Objects löschen.  
   
  Auftragskategorien helfen Ihnen dabei, Ihre Aufträge zum einfachen Filtern und Gruppieren zu organisieren. Sie können z. B. alle Aufträge für die Datenbanksicherung in der Datenbankwartungskategorie organisieren.  
 
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Wenn Sie eine benutzerdefinierte Auftragskategorie löschen, werden sie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgefordert, die Aufträge neu zuzuweisen, die in einer anderen Auftragskategorie zugewiesen wurden. Sie können nur benutzerdefinierte Auftragskategorien löschen.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
 
 ##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
@@ -46,13 +46,13 @@ ms.locfileid: "72783203"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Klicken Sie im _server_name_-Dialogfeld **Auftragskategorien verwalten** auf die zu löschende Auftragskategorie.  
+4.  Wählen Sie im Dialogfeld **Auftrags Kategorien verwalten**_server_name_ die zu löschende Auftrags Kategorie aus.  
   
 5.  Klicken Sie auf **Löschen**.  
   
 6.  Klicken Sie im Dialogfeld **Auftragskategorien** auf **Ja**.  
   
-7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten -** _Servername_ .  
+7.  Schließen Sie das Dialogfeld **Auftrags Kategorien verwalten**_server_name_ .  
   
 ##  <a name="TSQL"></a> Verwenden von Transact-SQL  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72783203"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_delete_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_delete_category &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
 
   
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  

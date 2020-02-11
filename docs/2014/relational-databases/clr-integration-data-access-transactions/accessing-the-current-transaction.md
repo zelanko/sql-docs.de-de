@@ -1,5 +1,5 @@
 ---
-title: Zugriff auf die aktuelle Transaktion | Microsoft-Dokumentation
+title: Zugreifen auf die aktuelle Transaktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920016"
 ---
 # <a name="accessing-the-current-transaction"></a>Zugriff auf die aktuelle Transaktion
@@ -43,7 +43,7 @@ ms.locfileid: "62920016"
   
 -   Die verwaltete Prozedur oder die Funktion kann in einem Ausgabeparameter einen Wert zurückgeben. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur kann den zurückgegebenen Wert überprüfen und gegebenenfalls `ROLLBACK TRANSACTION` ausführen.  
   
--   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur kann die Ausnahme, die von der verwalteten Prozedur oder Funktion in einem Try/Catch-Block ausgelöst, und führen Sie `ROLLBACK TRANSACTION`.  
+-   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die Aufruf [!INCLUDE[tsql](../../includes/tsql-md.md)] enden Prozedur kann die Ausnahme abfangen, die von der verwalteten Prozedur oder Funktion in einem Try/Catch `ROLLBACK TRANSACTION`-Block ausgelöst und ausgeführt wird.  
   
 -   Die verwaltete Prozedur oder die Funktion kann die aktuelle Transaktion durch einen Aufruf der `Transaction.Rollback`-Methode abbrechen, wenn eine bestimmte Bedingung erfüllt wird.  
   
@@ -64,7 +64,7 @@ The context transaction which was active before entering user defined routine, t
  Diese Ausnahme ist ebenfalls zu erwarten, und die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, welche die den Trigger auslösenden Aktion ausführt, muss in einen try/catch-Block eingeschlossen werden, damit die Ausführung fortgesetzt wird. Trotz der zwei ausgelösten Ausnahmen wird ein Rollback für die Transaktion ausgeführt, und für die Änderungen in der Tabelle wird kein Commit ausgeführt.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den try/catch-Block um die `Transaction.Rollback`-Methode im verwalteten Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, die die `EXEC uspRollbackFromProc` Anweisung in einem Try/Catch-Block umschlossen ist, sodass die Ausnahme wird ausgelöst, wenn die Ausführung der verwaltete Prozedur beendet abgefangen wird.  
+ Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den try/catch-Block um die `Transaction.Rollback`-Methode im verwalteten Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, dass `EXEC uspRollbackFromProc` die-Anweisung in einen try/catch-Block umgerückt ist, sodass die Ausnahme abgefangen wird, wenn die Ausführung der verwalteten Prozedur beendet wird.  
   
 ```csharp  
 using System;  
@@ -200,7 +200,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-Integration und -Transaktionen](../native-client-ole-db-transactions/transactions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [CLR-Integration und Transaktionen](../native-client-ole-db-transactions/transactions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Gruppen und Benutzer Append, ChangePassword Methods Example (VB) | Microsoft-Dokumentation
+title: Anfügen von Gruppen und Benutzern, ChangePassword-Methoden (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2b384167358f578835256c0e3f7906db20cf5bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966203"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Append- und ChangePassword-Methoden für Gruppen und Benutzer – Beispiel (VB)
-Dieses Beispiel zeigt die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) -Methode der [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md), als auch die [Anfügen](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode der [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) durch Hinzufügen einer neuen [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) und ein neues [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) an das System. Die neue **Gruppe** wird angefügt, um die **Gruppen** -Sammlung der neuen **Benutzer**. Daher ist die neue **Benutzer** hinzugefügt wird die **Gruppe**. Darüber hinaus die [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) Methode dient zum Angeben der **Benutzer** Kennwort.  
+In diesem Beispiel werden die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) -Methode von [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md)sowie die [Append](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode von [Benutzern](../../../ado/reference/adox-api/users-collection-adox.md) veranschaulicht, indem dem System eine neue [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) und ein neuer [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) hinzugefügt werden. Die neue **Gruppe** wird an die **Groups** -Auflistung des neuen **Benutzers**angehängt. Folglich wird der neue **Benutzer** der **Gruppe**hinzugefügt. Außerdem wird die [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) -Methode verwendet, um das **Benutzer** Kennwort anzugeben.  
   
 > [!NOTE]
->  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge.  
+>  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.  
   
 ```  
 ' BeginGroupVB  
@@ -122,12 +122,12 @@ End Sub
 ' EndGroupVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Append-Methode (ADOX-Gruppen)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [ChangePassword-Methode (ADOX)](../../../ado/reference/adox-api/changepassword-method-adox.md)   
  [Group-Objekt (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
  [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Users-Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

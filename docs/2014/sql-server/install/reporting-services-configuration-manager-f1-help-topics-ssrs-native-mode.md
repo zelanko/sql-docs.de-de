@@ -13,24 +13,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952041"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>F1-Hilfethemen für Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)
   Dieser Abschnitt stellt F1-Hilfe für den Reporting Services-Konfigurations-Manager bereit.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [Herstellen einer Verbindung mit einem Berichts Server](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
--   [Berichts Server Status](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
+-   [Berichtsserverstatus](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
--   [Dienstkonto](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
+-   [Dienst Konto](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
 -   [Webdienst-URL](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
@@ -40,23 +40,23 @@ ms.locfileid: "71952041"
   
 -   [Assistent zum Ändern der Datenbank](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
--   [Anmelde Informationen ändern](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
+-   [Assistent zum Ändern der Anmeldeinformationen](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
 -   [Berichts-Manager-URL](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
 -   [E-Mail-Einstellungen](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
--   [Ausführungskonto](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
+-   [Ausführungs Konto](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
 -   [Verschlüsselungsschlüssel](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
 -   [Verschlüsselungsschlüssel sichern](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
   
--   [Verschlüsselungsschlüssel wiederherstellen](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
+-   [Wiederherstellen von Verschlüsselungsschlüsseln](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
 -   [Bereitstellung für horizontales Skalieren](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurations-Manager für Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurations-Manager für Reporting Services &#40;del-&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

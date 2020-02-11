@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106097"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
@@ -129,7 +129,7 @@ ms.locfileid: "66106097"
   
  Der Gruppenausdruck gibt an, wie analytische Daten, die zu räumlichen Daten in einer Beziehung stehen, für jedes Kartenelement in der Ebene aggregiert werden. Standardmäßig ist der Gruppenausdruck der Satz von Übereinstimmungsfeldern, der für die Beziehung zwischen den räumlichen Daten und den analytischen Daten angegeben wurden. Beispielsweise enthalten für eine Blasendiagrammkarte, die Orte und Einwohnerzahlen für ein Land oder einen Bereich anzeigt, die Übereinstimmungsfelder Ortsnamen [City] und Bereichsnamen [Region], da es mehrere Orte mit dem gleichen Namen geben kann. Der entsprechende Gruppenausdruck schließt zwei Felder ein: [City] und [Region].  
   
- Weitere Informationen finden Sie unter [ Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (Kartentipps: Importieren von Shape-Dateien in SQL Server und Aggregieren von räumlichen Daten).  
+ Weitere Informationen finden Sie unter [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991)(Kartentipps: Importieren von Shape-Dateien in SQL Server und Anpassen räumlicher Daten).  
   
  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66106097"
   
 -   Zeigt Linien- oder Polygonenoptionen auf jeder Ebene an. Dies gilt, wenn der Bericht verarbeitet wird, ob die Kartenelemente dynamisch abgerufen werden, oder ob sie die Kartenelemente in die Berichtsdefinition einbetten. Sie geben z. B. auf einer Ebene eine Füllfarbe für alle Elemente an.  
   
--   Regeln Sie können Regeln festlegen, um Farbe, Größe, Breite oder Markertyp für alle Kartenelemente auf einer Ebene zu steuern. Die Regeln, die Sie festlegen können, hängen vom Typ des Kartenelements ab.  
+-   Regeln – Sie können Regeln festlegen, um Farbe, Größe, Breite oder Markertyp für alle Kartenelemente auf einer Ebene zu steuern. Die Regeln, die Sie festlegen können, hängen vom Typ des Kartenelements ab.  
   
     -   Farbregeln Wird auf Marken für Punkte, Linien, Polygone und Marker für Polygonmittelpunkte angewendet.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "66106097"
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

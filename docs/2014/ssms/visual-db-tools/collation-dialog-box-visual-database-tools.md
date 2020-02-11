@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936964"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Sortierreihenfolge (Dialogfeld) (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "62936964"
   
 -   Wenn Sie in der Registerkarte **Spalteneigenschaften** in das Feld **Sortierreihenfolge** klicken, und dann auf die Schaltfläche mit den Auslassungspunkten ( **...** ) rechts neben dem Feld klicken.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **SQL-Sortierung**  
  Wählen Sie aus der Dropdownliste eine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definierte Sortierreihenfolge.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62936964"
  **Schaltfläche Standard wiederherstellen**  
  Wenden Sie die Standardsortierreihenfolge für die Datenbank auf die Spalte an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Spalten in Aggregatabfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

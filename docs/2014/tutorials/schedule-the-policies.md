@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033502"
 ---
 # <a name="schedule-the-policies"></a>Planen der Richtlinien
@@ -22,10 +22,10 @@ ms.locfileid: "63033502"
   
 ### <a name="to-schedule-the-best-practices-policies"></a>So planen Sie Best Practices-Richtlinien  
   
-1.  Erweitern Sie im Objekt-Explorer **Management**, erweitern Sie **richtlinienverwaltung**, erweitern Sie **Richtlinien**mit der rechten Maustaste auf eine best Practices-Richtlinie, und klicken Sie dann auf  **Eigenschaften**.  
+1.  Erweitern **Sie in**Objekt-Explorer den Knoten **Verwaltung**, erweitern Sie **Richtlinien Verwaltung**, erweitern Sie **Richtlinien**, klicken Sie mit der rechten Maustaste auf eine Richtlinie für bewährte Methoden, und klicken Sie  
   
     > [!NOTE]  
-    >  Um die Best Practices-Kategorien zu sortieren und um einfach zu erkennen, welche Richtlinien zu Best Practices zugeordnet sind, können Sie alternativ **Verwaltung**und dann **Richtlinienverwaltung**erweitern und anschließend auf **Richtlinien**klicken. Klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer**. Klicken Sie im Bereich **Details zum Objekt-Explorer** auf die Überschrift **Kategorie** , um die Richtlinien nach Kategorie zu sortieren. Die Best Practices-Richtlinien sind mit dem Präfix **Microsoft Best Practices**versehen. Mit der rechten Maustaste in der Richtlinie, die Sie konfigurieren möchten, und klicken Sie dann auf **Eigenschaften**.  
+    >  Um die Best Practices-Kategorien zu sortieren und um einfach zu erkennen, welche Richtlinien zu Best Practices zugeordnet sind, können Sie alternativ **Verwaltung**und dann **Richtlinienverwaltung**erweitern und anschließend auf **Richtlinien**klicken. Klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer**. Klicken Sie im Bereich **Details zum Objekt-Explorer** auf die Überschrift **Kategorie** , um die Richtlinien nach Kategorie zu sortieren. Die Best Practices-Richtlinien sind mit dem Präfix **Microsoft Best Practices**versehen. Klicken Sie mit der rechten Maustaste auf die Richtlinie, die Sie konfigurieren möchten, und klicken Sie dann auf **Eigenschaften**.  
   
 2.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Richtlinie öffnen** in der Liste **Auswertungsmodus** auf **Nach Zeitplan**.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63033502"
 5.  Wiederholen Sie die Schritte 1 bis 4 für jede Richtlinie, die Sie planen möchten.  
   
     > [!NOTE]  
-    >  Um nach der Ausführung einer geplanten Richtlinie die Auswertungsergebnisse anzuzeigen, öffnen Sie auf der Zielinstanz das Protokoll zum Richtlinienverlauf. Öffnen das Protokoll, mit der Maustaste **richtlinienverwaltung**, und klicken Sie dann auf **Versionsgeschichte**.  
+    >  Um nach der Ausführung einer geplanten Richtlinie die Auswertungsergebnisse anzuzeigen, öffnen Sie auf der Zielinstanz das Protokoll zum Richtlinienverlauf. Um das Protokoll zu öffnen, klicken Sie mit der rechten Maustaste auf **Richtlinien Verwaltung**, und klicken Sie dann auf **Verlauf anzeigen**.  
   
 ## <a name="summary"></a>Zusammenfassung  
  Sie haben geplante Richtlinien konfiguriert, die auf einer einzelnen Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt werden. Wenn Sie geplante Richtlinien auf mehreren Instanzen bereitstellen möchten, setzen Sie das Lernprogramm mit der nächsten Aufgabe fort.  

@@ -1,5 +1,5 @@
 ---
-title: Informationen zu den SQL Server-Lizenzbedingungen (SSCM) | Microsoft-Dokumentation
+title: Informationen zu den SQL Server Lizenzbedingungen (SSCM) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,26 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035319"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Informationen zu den SQL Server-Lizenzbedingungen (SSCM)
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien werden in geschrieben: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ oder % ProgramFiles (x86) %\Microsoft SQL Server\110\License Lizenzbedingungen\\.  
+  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien werden in den folgenden Ordner geschrieben:%ProgramFiles%\Microsoft SQL server\110\license Terms \ oder% Program Files (x86)% \ Microsoft SQL server\110\license Terms\\.  
   
  Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache.  
   
- Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an: Zum Beispiel:  
+ Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an: Beispiel:  
   
 -   License_DEV_ENU.txt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer in der Sprachversion Englisch.  
   
--   License_STD_ITA.txt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für  Standard in der Sprachversion Italienisch.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard in der Sprachversion Italienisch.  
   
--   License_UA_JPN.txt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für  Upgrade Advisor in der Sprachversion Japanisch.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor in der Sprachversion Japanisch.  
   
 -   License_SQLNCLI_ENU.txt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client in der Sprachversion Englisch.  
   
@@ -75,10 +77,10 @@ ms.locfileid: "63035319"
 -   RUS – Russisch  
   
 ## <a name="sql-server-licensing-options"></a>SQL Server-Lizenzierungsoptionen  
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Preis- und Lizenzierungsoptionen, finden Sie unter den [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) Website.  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Preis-und Lizenzierungsoptionen finden Sie auf der [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) -Website.  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft SQL Server-Datenschutzbestimmungen](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenschutzbestimmungen für Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [Rechtliche Hinweise für die Dokumentation](../../../2014/getting-started/legal-notice-for-documentation.md)  
   
   

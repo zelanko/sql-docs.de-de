@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036811"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
@@ -31,8 +31,8 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **StripCalculatedMembers** -Funktion entfernt berechnete Elemente aus einem Satz. Berechnete Elemente können auf eine Gruppe hinzugefügt werden, mithilfe der [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) -Funktion, die gibt berechnete Elemente, die auf dem Server definiert sind oder berechnete Elemente, die in der Abfrage selbst mithilfe der WITH hinzugefügt wurden MEMBER-Syntax.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **StripCalculatedMembers** -Funktion entfernt berechnete Elemente aus einer Menge. Berechnete Elemente können einer Menge mithilfe der [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) -Funktion hinzugefügt werden, die berechnete Elemente zurückgibt, die auf dem Server definiert sind, oder berechnete Elemente, die in der Abfrage selbst mithilfe der with Member-Syntax hinzugefügt wurden.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden alle berechneten Elemente aus der Abfrage entfernt.  
@@ -77,7 +77,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -14,35 +14,35 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022296"
 ---
 # <a name="manage-oracle-tablespaces"></a>Verwalten von Oracle-Tabellenbereichen
-  Ein Tabellenbereich ist eine Einheit des Datenbankspeicherplatzes, die in etwa einer Dateigruppe in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]entspricht. Tabellenbereiche ermöglichen das Speichern und Verwalten von Datenbankobjekten innerhalb einzelner Gruppen. Weitere Informationen finden Sie in der Oracle-Dokumentation.  
+  Ein Tabellenbereich ist eine Einheit des Daten Bank Speichers, die in etwa einer Datei Gruppe in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]entspricht. Tabellenbereiche ermöglichen das Speichern und Verwalten von Datenbankobjekten innerhalb einzelner Gruppen. Weitere Informationen finden Sie in der Oracle-Dokumentation.  
   
  Wenn Sie eine Tabelle als Teil einer Oracle-Veröffentlichung konfigurieren, können Sie optional einen vorhandenen Oracle-Tabellenbereich angeben, der beim Speichern der Replikations-Protokollinformationen verwendet wird. Wird kein spezifischer Tabellenbereich angegeben, wird für die Replikationsobjekte der Standardtabellenbereich verwendet, der mit dem Schema für den administrativen Replikationsbenutzer verknüpft ist, das beim Konfigurieren des Verlegers konfiguriert wurde.  
   
- **So geben Sie einen Tabellenbereich für eine Artikelprotokolltabelle an**:  
+ **So geben Sie einen Tabellenbereich für eine Artikel Protokollierungs Tabelle an**:  
   
 -   Geben Sie im Dialogfeld **Artikeleigenschaften** einen Tabellenbereich an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md).  
   
 -   Verwenden Sie [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Soll **sp_changearticle**verwendet werden, geben Sie Folgendes an:  
   
-    -   Den Namen des Oracle-Verlegers für den Parameter **@publisher** entspricht.  
+    -   Der Name des Oracle-Verlegers für den **@publisher**Parameter.  
   
-    -   Den Namen der Oracle-Veröffentlichung für den Parameter **@publication** entspricht.  
+    -   Der Name der Oracle-Veröffentlichung für den Parameter **@publication**.  
   
-    -   Den Namen des Artikels für den Parameter **@article** entspricht.  
+    -   Der Name des Artikels für den Parameter **@article**.  
   
-    -   Wert 'tablespace' für den Parameter **@property** entspricht.  
+    -   Der Wert ' Tablespace ' für den Parameter **@property**.  
   
-    -   Name des Tabellenbereichs für den Parameter **@value** entspricht.  
+    -   Der Name des Tabellen Bereichs für den Parameter **@value**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md)   
- [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)  
+ [Auf dem Oracle-Verleger erstellte Objekte](objects-created-on-the-oracle-publisher.md)  
   
   

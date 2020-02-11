@@ -1,5 +1,5 @@
 ---
-title: Assemblys (Database Engine) | Microsoft-Dokumentation
+title: Assemblys (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920783"
 ---
 # <a name="assemblies-database-engine"></a>Assemblys (Database Engine)
   Die Themen in diesem Abschnitt enthalten Informationen, damit Sie Assemblys verstehen, entwerfen und implementieren können.  
   
- Assemblys sind DLL-Dateien, die in einer Instanz von verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zum Bereitstellen von Funktionen, gespeicherte Prozeduren, Trigger, benutzerdefinierte Aggregate und benutzerdefinierte Typen, die in einer der von gehosteten verwalteten Codesprachen geschrieben wurden die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gemeinsame Sprachlaufzeit (CLR), statt in [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Assemblys sind dll-Dateien, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer Instanz von verwendet werden, um Funktionen, gespeicherte Prozeduren, Trigger, benutzerdefinierte Aggregate und benutzerdefinierte Typen bereitzustellen, die in einer der verwalteten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Code Sprachen geschrieben werden, die von der Common Language Runtime [!INCLUDE[tsql](../../../includes/tsql-md.md)](CLR) gehostet werden, statt in.  
   
  Eine Assembly in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist ein Objekt, das auf ein verwaltetes Anwendungsmodul (DLL-Datei) verweist, das in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-CLR erstellt wurde. Eine Assembly enthält Klassenmetadaten und verwalteten Code. Das Hochladen einer Assembly in eine Instanz von SQL Server ist der erste Schritt beim Erstellen eines der folgenden Datenbankobjekte:  
   
--   CLR-Funktionen. Weitere Informationen finden Sie unter [erstellen CLR-Funktionen](../user-defined-functions/create-clr-functions.md).  
+-   CLR-Funktionen. Weitere Informationen finden Sie unter [Erstellen von CLR-Funktionen](../user-defined-functions/create-clr-functions.md).  
   
--   CLR-gespeicherte Prozeduren. Weitere Informationen finden Sie unter [CLR-gespeicherte Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md).  
+-   CLR-gespeicherte Prozeduren. Weitere Informationen finden Sie unter [gespeicherte CLR-Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md).  
   
 -   CLR-Trigger. Weitere Informationen finden Sie unter [Erstellen von CLR-Triggern](../triggers/create-clr-triggers.md).  
   
--   Benutzerdefinierte Aggregatfunktionen. Weitere Informationen finden Sie unter [erstellen benutzerdefinierte Aggregate](../user-defined-functions/create-user-defined-aggregates.md).  
+-   Benutzerdefinierte Aggregatfunktionen. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Aggregaten](../user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Benutzerdefinierte Typen. Weitere Informationen finden Sie unter [Verwenden von benutzerdefinierten Typen](../native-client/features/using-user-defined-types.md).  
   
@@ -50,13 +50,13 @@ ms.locfileid: "62920783"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Entwerfen von Assemblys](assemblies-designing.md)|Erläutert, was vor dem Erstellen einer Assembly berücksichtigt werden muss. Dazu zählen das Verpacken von Assemblys, Codezugriffsberechtigungen und andere Einschränkungen.|  
 |[Implementieren von Assemblys](assemblies-implementing.md)|Beschreibt das Erstellen und Löschen von Assemblys, wie und wann Assemblys geändert werden und wie Metadaten zu Assemblys abgerufen werden.|  
 |[Abrufen von Informationen zu Assemblys](assemblies-getting-information.md)|Stellt eine Liste der Katalogsichten und Funktionen zur Verfügung, die für Metadaten zu Assemblys abgefragt werden können.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

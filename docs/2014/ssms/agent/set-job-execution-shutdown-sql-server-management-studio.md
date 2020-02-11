@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca9343fe8a6f9e89ba9f26dbbbb12dd7362aff91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033602"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Set Job Execution Shutdown (SQL Server Management Studio)
-  In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] festlegen, wie lange der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent auf die Beendigung von ausführenden Aufträgen wartet, bevor der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent selbst beendet wird.  
+  In diesem Thema wird beschrieben, wie Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeit festlegen, die der-Agent auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Beendigung von Ausführungs Aufträgen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wartet, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bevor der-Agent selbst in mithilfe von abgeschlossen wird  
   
  **In diesem Thema**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63033602"
   
      [Sicherheit](#Security)  
   
--   **So legen Sie eine Zeit für das Herunterfahren für einen SQL Server-Agent-Auftrag fest mit**  
+-   **So legen Sie eine Zeit für das Herunterfahren für einen SQL Server-Agent Auftrag fest mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,13 +48,13 @@ ms.locfileid: "63033602"
   
 -   **SQLAgentOperatorRole**  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-set-job-execution-shutdown"></a>So legen Sie das Herunterfahren der Auftragsausführung fest  
   
 1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie ein Intervall für das Herunterfahren der Auftragsausführung festlegen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie mit der rechten Maustaste **SQL Server-Agent** und wählen Sie **Eigenschaften**.  
   
 3.  Wählen Sie unter **Seite auswählen**die Option **Auftragssystem**aus.  
   

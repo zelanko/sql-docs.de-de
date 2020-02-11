@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917592"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
@@ -31,7 +31,7 @@ ms.locfileid: "62917592"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Die neuen Tabellen zum Speichern der Archivdaten können sich in einer speziellen Archivdatenbank befinden. Alternativ können die Zeilen in eine Textdatei exportiert werden.  
  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Datenbank-E-Mail-Elemente kopieren**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Datenbank-E-Mail-Anlagen kopieren**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Datenbank-E-Mail-Protokoll kopieren**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Zeilen aus Datenbank-E-Mail entfernen**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Zeilen aus dem Datenbank-E-Mail-Protokoll entfernen**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
   
 4.  Geben Sie im Feld **Befehl** die folgende Anweisung ein, um Zeilen aus dem Datenbank-E-Mail-Ereignisprotokoll zu entfernen, die älter als der aktuelle Monat sind:  
   

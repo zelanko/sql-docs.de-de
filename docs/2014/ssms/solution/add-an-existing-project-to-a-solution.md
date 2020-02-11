@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956075"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Hinzufügen eines vorhandenen Projekts zu einer Projektmappe
@@ -39,7 +39,7 @@ ms.locfileid: "62956075"
 > [!NOTE]  
 >  Bevor Sie in einer Umgebung mit mehreren Entwicklern ein vorhandenes Projekt aus freigegebenen Verzeichnissen hinzufügen, sollten Sie sicherstellen, dass durch Ihre Änderungen nicht die Änderungen anderer Entwickler beeinträchtigt oder überschrieben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Projekte &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Projektmappen &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)  
   
