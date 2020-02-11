@@ -1,5 +1,5 @@
 ---
-title: LinRegVariance (MDX) | Microsoft-Dokumentation
+title: Linregvarianz (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b45328614bbefe730c815f528e82f220ad0093e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905514"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (MDX)
 
 
-  Berechnet die lineare Regression einer Menge und gibt die Varianz zurück zugeordneten der regressionsgleichung y = Ax + b.  
+  Berechnet die lineare Regression einer Menge und gibt die Varianz zurück, die der Regressions Zeile zugeordnet ist, y = ax + b.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +37,17 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
  *Numeric_Expression_x*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt. Die vom Ausdruck zurückgegebene Zahl stellt den Wert für die X-Achse dar.  
   
-## <a name="remarks"></a>Hinweise  
- Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionszeile hat die folgende Gleichung, in denen eine die Neigung und b ist das Konstante Glied:  
+## <a name="remarks"></a>Bemerkungen  
+ Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionslinie weist die folgende Gleichung auf, wobei a für die Steigung und b das Abfangen ist:  
   
  y = ax+b  
   
- Die **LinRegVariance** -Funktion wertet den angegebenen Setagainst den ersten numerischen Ausdruck aus, um die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion die angegebene Setagainst den zweiten numerischen Ausdruck, wenn angegeben, um die Werte für die x-Achse zu erhalten. Wenn Sie den zweiten numerischen AusdruckIS nicht angegeben ist, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die x-Achse an. Das x-Achsen-Argument nicht angegeben, wird häufig mit der Time-Dimension verwendet.  
+ Die **linregvarianz** -Funktion wertet das angegebene Seton für den ersten numerischen Ausdruck aus, um die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion die angegebene Mengefür den zweiten numerischen Ausdruck, sofern angegeben, aus, um die Werte für die X-Achse zu erhalten. Wenn das zweite numerische expressionis nicht angegeben ist, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die x-Achse. Wenn Sie das Argument der x-Achse nicht angeben, wird es häufig mit der Time-Dimension verwendet.  
   
- Nach dem Abrufen des Satzes von Punkten, die **LinRegVariance** Funktion gibt die statistische Varianz zurück, die die Übereinstimmung der linearen Gleichung mit den Punkten beschreibt.  
+ Nach dem Abrufen des Satzes von Punkten gibt die **linregvarianz** -Funktion die statistische Varianz zurück, die die Anpassung der linearen Gleichung an die Punkte beschreibt.  
   
 > [!NOTE]  
->  Die **LinRegVariance** Funktion ignoriert leere Zellen oder Zellen, die Text oder logische Werte enthalten. Zellen mit dem Wert Null (0) werden jedoch von der Funktion berücksichtigt.  
+>  Die **linregvarianz** -Funktion ignoriert leere Zellen oder Zellen, die Text oder logische Werte enthalten. Zellen mit dem Wert Null (0) werden jedoch von der Funktion berücksichtigt.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die statistische Varianz zurückgegeben, die die Übereinstimmung der linearen Gleichung mit den Punkten für die Unit Sales- und die Store Sales-Measures beschreibt.  
@@ -56,7 +56,7 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
 LinRegVariance(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

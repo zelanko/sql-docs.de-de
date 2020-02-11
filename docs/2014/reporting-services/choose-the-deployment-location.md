@@ -1,5 +1,5 @@
 ---
-title: Bereitstellungsort auswählen | Microsoft-Dokumentation
+title: Wählen Sie den Bereitstellungsort aus. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109830"
 ---
 # <a name="choose-the-deployment-location"></a>Bereitstellungsspeicherort auswählen
   Verwenden Sie diese Seite des Berichts-Assistenten, um den Bereitstellungsserver und -ordner für das Berichtsserverprojekt festzulegen.  
   
-## <a name="options"></a>Optionen  
- **Berichtsserver**  
- Geben Sie die URL des virtuellen Verzeichnisses des Berichtsservers, z. B. http://localhost/reportserver. Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers. Standardmäßig wird der Berichtsserver mit dem virtuellen Verzeichnis mit der Bezeichnung reportserver installiert.  
+## <a name="options"></a>Tastatur  
+ **Berichts Server**  
+ Geben Sie die URL des virtuellen Verzeichnisses des Berichts Servers ein, z http://localhost/reportserver. b.. Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers. Standardmäßig wird der Berichtsserver mit dem virtuellen Verzeichnis mit der Bezeichnung reportserver installiert.  
   
  **Bereitstellungsordner**  
  Geben Sie den Namen des Zielordners für das Veröffentlichen der Berichte ein, die im Berichtsserverprojekt enthalten sind. Der Standardwert für den Ordner ist der Name des Projekts. Falls der Ordner nicht auf dem Berichtsserver vorhanden ist, erstellt der Berichts-Designer den Ordner, wenn die Berichte veröffentlicht werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hilfe des Berichts-Assistenten](../../2014/reporting-services/report-wizard-help.md)  
   
   

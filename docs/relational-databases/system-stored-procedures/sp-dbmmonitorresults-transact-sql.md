@@ -1,5 +1,5 @@
 ---
-title: Sp_dbmmonitorresults (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dbmmonitorresults (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899179"
 ---
-# <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
+# <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Statuszeilen für eine überwachte Datenbank aus der Statustabelle zurück, in der der Verlauf des Datenbankspiegelungs-Monitors gespeichert ist. Dabei können Sie angeben, ob die Prozedur zuvor den letzten Status abrufen soll.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,11 +60,11 @@ sp_dbmmonitorresults database_name
   
  5 = Zeilen der letzten 2 Tage  
   
- 6 = die letzten 100 Zeilen  
+ 6 = letzte 100 Zeilen  
   
  7 = letzte 500 Zeilen  
   
- 8 = Zeilen der letzten 1.000  
+ 8 = letzte 1.000 Zeilen  
   
  9 = Die letzten 1.000.000 Zeilen  
   
@@ -73,18 +73,18 @@ sp_dbmmonitorresults database_name
   
  0 = Der Status der Datenbank wird nicht aktualisiert. Die Ergebnisse werden nur aus den letzten beiden Zeilen berechnet, deren Alter vom Aktualisierungszeitpunkt der Statustabelle abhängt.  
   
- 1 = der Status für die Datenbank aktualisiert werden, durch den Aufruf **Sp_dbmmonitorupdate** vor dem Berechnen der Ergebnisse. Allerdings, wenn die Statustabelle in den vorhergehenden 15 Sekunden, oder der Benutzer aktualisiert wurde ist nicht Mitglied der **Sysadmin** festen Serverrolle **Sp_dbmmonitorresults** ausgeführt wird, ohne den Status aktualisieren.  
+ 1 = aktualisiert den Status der Datenbank, indem **sp_dbmmonitorupdate** vor dem Berechnen der Ergebnisse aufgerufen wird. Wenn die Statustabelle jedoch innerhalb der letzten 15 Sekunden aktualisiert wurde oder wenn der Benutzer kein Mitglied der festen Server Rolle **sysadmin** ist, **sp_dbmmonitorresults** ausgeführt, ohne den Status zu aktualisieren.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
  Gibt die angeforderte Anzahl von Zeilen aus dem Statusverlauf für die angegebene Datenbank zurück. Jede Zeile enthält die folgenden Informationen:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Name einer gespiegelten Datenbank.|  
-|**Rolle**|**int**|Aktuelle Spiegelungsrolle der Serverinstanz:<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel|  
+|**spielen**|**int**|Aktuelle Spiegelungsrolle der Serverinstanz:<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel|  
 |**mirroring_state**|**int**|Status der Datenbank:<br /><br /> 0 = angehalten<br /><br /> 1 = getrennt<br /><br /> 2 = Wird synchronisiert<br /><br /> 3 = Ausstehendes Failover<br /><br /> 4 = Synchronisiert|  
 |**witness_status**|**int**|Verbindungsstatus des Zeugen in der Datenbank-Spiegelungssitzung der Datenbank:<br /><br /> 0 = Unbekannt<br /><br /> 1 = Verbunden<br /><br /> 2 = Getrennt|  
 |**log_generation_rate**|**int**|Umfang des seit dem vorhergehenden Update des Spiegelungsstatus dieser Datenbank generierten Protokolls in KB/s.|  
@@ -99,14 +99,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Ungefähre Systemuhrzeit des Prinzipals, auf deren Stand die Spiegelungsdatenbank derzeit gebracht wird. Der Wert ist nur in der Prinzipalserverinstanz sinnvoll.|  
 |**local_time**|**datetime**|Systemuhrzeit in der lokalen Serverinstanz, zu der diese Zeile aktualisiert wurde.|  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_dbmmonitorresults** ausgeführt werden kann, nur im Rahmen der **Msdb** Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_dbmmonitorresults** können nur im Kontext der **msdb** -Datenbank ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Sysadmin** -Serverrolle sein oder in der **Dbm_monitor** -Datenbankrolle in der **Msdb** Datenbank. Die **Dbm_monitor** Rolle ermöglicht ihren Mitgliedern das Anzeigen von Datenbank-Spiegelungsstatus, aber nicht aktualisieren, aber nicht anzeigen oder Konfigurieren der datenbankspiegelung auftretende Ereignisse.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder in der festen Daten Bank Rolle **dbm_monitor** in der **msdb** -Datenbank. Mit der **dbm_monitor** -Rolle können die Mitglieder der Datenbank den Daten Bank Spiegelungs Status anzeigen, jedoch nicht aktualisieren, aber keine Daten Bank Spiegelungs Ereignisse anzeigen oder konfigurieren.  
   
 > [!NOTE]  
->  Bei der erstmaligen **Sp_dbmmonitorupdate** ausgeführt wird, erstellt die **Dbm_monitor** -Datenbankrolle in der **Msdb** Datenbank. Mitglieder der **Sysadmin** -Serverrolle kann allen Benutzern das Hinzufügen der **Dbm_monitor** festen Datenbankrolle.  
+>  Wenn **sp_dbmmonitorupdate** zum ersten Mal ausgeführt wird, wird die Daten Bank Rolle **dbm_monitor** in der **msdb** -Datenbank erstellt. Mitglieder der festen Server Rolle **sysadmin** können jeden Benutzer der festen Daten Bank Rolle **dbm_monitor** hinzufügen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die Zeilen, die in den letzten 2 Stunden aufgezeichnet wurden, zurückgegeben, ohne dass der Status der Datenbank aktualisiert wird.  
@@ -116,12 +116,12 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [Sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Überwachen der Daten Bank Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorupdate &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

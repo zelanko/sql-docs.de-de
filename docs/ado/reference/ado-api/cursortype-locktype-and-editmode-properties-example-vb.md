@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType und EditMode Eigenschaften – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für Cursor Type, LockType und EditMode Properties (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919270"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType und EditMode Eigenschaften – Beispiel (VB)
-Dieses Beispiel veranschaulicht das Festlegen der [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) und [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaften vor dem Öffnen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Es zeigt auch den Wert des der [EditMode](../../../ado/reference/ado-api/editmode-property.md) Eigenschaft unter verschiedenen Bedingungen. Die EditModeOutput-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Beispiel für Cursor Type, LockType und EditMode Properties (VB)
+Dieses Beispiel veranschaulicht das Festlegen der Eigenschaften " [Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md) " und " [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) " vor dem Öffnen eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md). Außerdem wird der Wert der [EditMode](../../../ado/reference/ado-api/editmode-property.md) -Eigenschaft unter verschiedenen Bedingungen angezeigt. Die EditModeOutput-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ```  
 'BeginEditModeVB  
@@ -122,11 +122,11 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CursorType-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Cursor Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [Cursor typeumum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode-Eigenschaft](../../../ado/reference/ado-api/editmode-property.md)   
- [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
+ [Editmodeerum](../../../ado/reference/ado-api/editmodeenum.md)   
  [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
+ [Locktypeaufumum](../../../ado/reference/ado-api/locktypeenum.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

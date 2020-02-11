@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107415"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Konfigurieren von Datenquelleneigenschaften für einen Bericht (Berichts-Manager)
@@ -30,17 +30,17 @@ ms.locfileid: "66107415"
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zu dem Bericht, für den Sie eine berichtsspezifische Datenquelle konfigurieren möchten, und öffnen Sie den Bericht.  
   
-3.  Klicken Sie auf die Registerkarte **Eigenschaften** . Die Eigenschaftenseite **Allgemein** wird geöffnet.  
+3.  Klicken Sie auf die Registerkarte **Eigenschaften** . Die Seite **Allgemeine** Eigenschaften wird geöffnet.  
   
-4.  Klicken Sie auf die Registerkarte **Datenquellen** . Hiermit wird die Eigenschaftenseite der Datenquelle des Berichts aufgerufen.  
+4.  Klicken Sie auf die Registerkarte **Datenquellen** . Dadurch wird die Seite Datenquellen Eigenschaften des Berichts geöffnet.  
   
 5.  Klicken Sie auf **Eine benutzerdefinierte Datenquelle** , um Verbindungsinformationen für die Datenquelle innerhalb des Berichts anzugeben.  
   
 6.  Geben Sie in der Liste **Verbindungstyp** die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
   
-7.  Geben Sie in das Feld **Verbindungszeichenfolge**die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. Es wird empfohlen, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
+7.  Geben Sie für **Verbindungs Zeichenfolge**die Verbindungs Zeichenfolge an, die der Berichts Server zum Herstellen einer Verbindung mit der Datenquelle verwendet. Es wird empfohlen, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
   
-     Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung zur lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank hergestellt wird:  
+     Das folgende Beispiel veranschaulicht eine Verbindungs Zeichenfolge zum Herstellen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Verbindung mit der lokalen-Datenbank:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -58,12 +58,12 @@ ms.locfileid: "66107415"
   
  Weitere Informationen zum Konfigurieren von Anmeldeinformationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md). Weitere Informationen zum Konto für die unbeaufsichtigte Ausführung finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../contents-page-report-manager.md)   
- [Neue Datenquelle &#40;Seite, Berichts-Manager&#41;](../new-data-source-page-report-manager.md)   
- [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
+ [Die Seite "neue Datenquelle" &#40;Berichts-Manager&#41;](../new-data-source-page-report-manager.md)   
+ [Erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS-&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](manage-report-data-sources.md)   
- [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Datenquellen (Eigenschaftenseite) &#40;Berichts-Manager&#41;](../data-sources-properties-page-report-manager.md)  
+ [Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Die Eigenschaften Seite "Datenquellen" &#40;Berichts-Manager&#41;](../data-sources-properties-page-report-manager.md)  
   
   

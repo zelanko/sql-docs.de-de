@@ -16,39 +16,39 @@ ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921693"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition-Eigenschaft (ADO)
-Gibt an, der die Position des ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aktuellen Datensatz des Objekts.  
+Gibt die Ordnungsposition des aktuellen Datensatzes eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Für 32-Bit-Code, legt fest oder gibt einen **lange** Wert zwischen 1 und die Anzahl der Datensätze in der **Recordset** Objekt ([RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)), oder gibt Sie eine der der [ PositionEnum](../../../ado/reference/ado-api/positionenum.md) Werte.  
+ Für 32-Bit-Code legt einen **Long** -Wert von 1 bis zur Anzahl der Datensätze im **Recordset** -Objekt ([RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)) fest oder gibt einen der [positionenum](../../../ado/reference/ado-api/positionenum.md) -Werte zurück.  
   
- Verwenden Sie für 64-Bit-Code einen Datentyp, der für die Speicherung eines 64-Bit-Werts bereitstellt. Sie können z. B. verwenden Long-Wert oder einen anderen Wert, der 64-Bit-Länge, z. B. DBORDINAL. Verwenden Sie keine **PositionEnum** Werte, da sie auf 32-Bit-Länge beschränkt sind.  
+ Verwenden Sie für 64-Bit-Code einen Datentyp, der für die Speicherung eines 64-Bit-Werts bereitstellt. Beispielsweise können Sie einen langen oder einen anderen Wert verwenden, der 64-Bit-Länge ist, z. b. dbordindin. Verwenden Sie keine **positionenum** -Werte, da Sie auf eine 32-Bit-Länge beschränkt sind.  
   
-## <a name="remarks"></a>Hinweise  
- Zum Festlegen der **AbsolutePosition** -Eigenschaft, die ADO erfordert, dass es sich bei implementiert die OLE DB-Anbieter, die Sie verwenden die [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) Schnittstelle.  
+## <a name="remarks"></a>Bemerkungen  
+ Um die **AbsolutePosition** -Eigenschaft festzulegen, erfordert ADO, dass der OLE DB-Anbieter, den Sie verwenden, die [IRowsetLocate: IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) -Schnittstelle implementiert.  
   
- Zugriff auf die **AbsolutePosition** Eigenschaft eine **Recordset** , die entweder mit geöffnet wurde, einen Vorwärtscursor oder dynamischer Cursor löst den Fehler **AdErrFeatureNotAvailable**. Mit anderen Cursortypen, die richtige Position wird zurückgegeben, solange der OLE DB-Anbieter unterstützt die **IRowsetScroll:IRowsetLocate** Schnittstelle. Wenn der Anbieter nicht unterstützt. die **IRowsetScroll** -Schnittstelle, die Eigenschaft wird festgelegt, um **AdPosUnknown**. Siehe die Dokumentation für Ihren Anbieter, um zu bestimmen, ob es unterstützt **IRowsetScroll**.  
+ Durch den Zugriff auf die **AbsolutePosition** -Eigenschaft eines **Recordsets** , das entweder mit einem Vorwärts Cursor oder einem dynamischen Cursor geöffnet wurde, wird der Fehler **adErrFeatureNotAvailable**ausgelöst. Bei anderen Cursor Typen wird die korrekte Position zurückgegeben, solange der OLE DB Anbieter die **IRowsetScroll: IRowsetLocate** -Schnittstelle unterstützt. Wenn der Anbieter die **IRowsetScroll** -Schnittstelle nicht unterstützt, wird die-Eigenschaft auf **adPosUnknown**festgelegt. In der Dokumentation für Ihren Anbieter können Sie feststellen, ob **IRowsetScroll**unterstützt wird.  
   
- Verwenden der **AbsolutePosition** -Eigenschaft zum Verschieben auf einen Datensatz basierend auf der Ordnungsposition in der **Recordset** -Objekt, oder um die Ordinalposition des aktuellen Datensatzes zu bestimmen. Der Anbieter muss die entsprechende Funktionalität für diese Eigenschaft zur Verfügung stehen unterstützen.  
+ Verwenden Sie die **AbsolutePosition** -Eigenschaft, um zu einem Datensatz zu wechseln, der auf seiner Ordinalposition im **Recordset** -Objekt basiert, oder um die Ordinalposition des aktuellen Datensatzes zu bestimmen. Der Anbieter muss die entsprechende Funktionalität unterstützen, damit diese Eigenschaft verfügbar ist.  
   
- Wie die [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) Eigenschaft **AbsolutePosition** ist 1-basiert und entspricht 1, wenn der aktuelle Datensatz den ersten Datensatz in ist die **Recordset**. Sie erhalten die Gesamtzahl der Datensätze in der **Recordset** -Objekt aus der [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) Eigenschaft.  
+ Wie die [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) -Eigenschaft ist **AbsolutePosition** 1-basiert und entspricht 1, wenn der aktuelle Datensatz der erste Datensatz im **Recordset**ist. Sie können die Gesamtzahl der Datensätze im **Recordset** -Objekt aus der [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft abrufen.  
   
- Beim Festlegen der **AbsolutePosition** -Eigenschaft, auch wenn es zu einem Datensatz im aktuellen Cache ist ADO lädt den Cache mit einer neuen Gruppe von Datensätzen, die mit dem angegebenen Datensatz ab. Die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft bestimmt die Größe dieser Gruppe.  
+ Wenn Sie die **AbsolutePosition** -Eigenschaft festlegen, auch wenn Sie sich in einem Datensatz im aktuellen Cache befindet, lädt ADO den Cache mit einer neuen Gruppe von Datensätzen neu, beginnend mit dem von Ihnen angegebenen Datensatz. Die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) -Eigenschaft bestimmt die Größe dieser Gruppe.  
   
 > [!NOTE]
->  Verwenden Sie nicht die **AbsolutePosition** -Eigenschaft, wie ein Ersatzzeichen Datensatznummer. Die Position eines bestimmten Datensatzes geändert wird, wenn Sie einen vorherigen Datensatz zu löschen. Es gibt auch keine Zusicherung, dass ein bestimmter Datensatz die gleiche hat **AbsolutePosition** Wenn die **Recordset** Objekts erneut abgefragt oder geöffnet wird. Lesezeichen werden weiterhin die empfohlene Methode beibehalten und an einer bestimmten Position zurückgegeben werden und sind die einzige Möglichkeit der Positionierung für alle Arten von **Recordset** Objekte.  
+>  Sie sollten die **AbsolutePosition** -Eigenschaft nicht als Ersatz Zeichendaten Satz Nummer verwenden. Die Position eines angegebenen Datensatzes ändert sich, wenn Sie einen vorangehenden Datensatz löschen. Außerdem ist nicht sichergestellt, dass ein bestimmter Datensatz dieselbe **AbsolutePosition** hat, wenn das **Recordset** -Objekt angefordert oder erneut geöffnet wird. Lesezeichen sind immer noch die empfohlene Methode zum beibehalten und zurückkehren zu einer gegebenen Position und sind die einzige Möglichkeit der Positionierung für alle Typen von **recordsetobjekten** .  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [AbsolutePosition und CursorLocation – Beispiel (VB)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
- [AbsolutePosition und CursorLocation – Beispiel (VC++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für AbsolutePosition und Cursor Location-Eigenschaften (VB)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
+ [Eigenschaften von "AbsolutePosition" und "Cursor Location" (VC + +)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [AbsolutePage-Eigenschaft (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von verwandten Technologien mit RDS | Microsoft-Dokumentation
+title: Verwenden verwandter Technologien mit RDS | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,37 +13,37 @@ ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921899"
 ---
 # <a name="using-related-technologies-with-rds"></a>Verwenden von verwandten Technologien mit RDS
-Dieser Abschnitt enthält die folgenden Themen.  
+Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Verwenden von RDS mit ODBC-Verbindungspooling](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
   
 -   [Ausführen von Geschäftsobjekten in Komponentendiensten](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Viele andere Technologien Remote Data Service interagieren oder in seiner Implementierung verwendet werden.  
+ Viele andere Technologien interagieren mit dem Remote Datendienst oder werden in der Implementierung von verwendet.  
   
- **Internet Information Services** Weitere Informationen zu Microsoft Internet Information Services (IIS) finden Sie unter der Microsoft Internet Informationen Services-Website.  
+ **Internetinformationsdienste** Weitere Informationen zu Microsoft Internetinformationsdienste (IIS) finden Sie auf der Microsoft Internetinformationsdienste-Website.  
   
- **Active Server Pages** finden Sie weitere Informationen zu Microsoft Active Server Pages (ASP) unter der Microsoft Active Server Pages-Website.  
+ **Active Server Seiten** Weitere Informationen zu Microsoft Active Server Pages (ASP) finden Sie auf der Microsoft Active Server Pages-Website.  
   
- **Microsoft Component Services** Weitere Informationen zu den Komponentendiensten, finden Sie unter der Website von Microsoft Transaction Server.  
+ **Microsoft-Komponenten Dienste** Weitere Informationen zu Komponenten Diensten finden Sie auf der Microsoft Transaction Server-Website.  
   
- **Microsoft SQL Server** finden Sie weitere Informationen zu Microsoft SQL Server unter der Website von Microsoft SQL Server.  
+ **Microsoft SQL Server** Weitere Informationen zu Microsoft SQL Server finden Sie unter Microsoft SQL Server Web Website.  
   
- **Microsoft Internet Explorer** Weitere Informationen zu Microsoft Internet Explorer, finden Sie unter der Website von Microsoft Internet ExplorerWeb und der MSDN Library "und" Web Workshop-Website.  
+ **Microsoft Internet Explorer** Weitere Informationen zu Microsoft Internet Explorer finden Sie auf der Website Microsoft Internet ExplorerWeb und auf der MSDN Library and Web Workshop-Website.  
   
- **Microsoft Windows NT Server/Windows 2000 Server** finden Sie weitere Informationen zur Sicherheit in Microsoft Windows NT Server oder Windows 2000 Server unter der Microsoft Windows-Website.  
+ **Microsoft Windows NT Server/Windows 2000-Server** Weitere Informationen zur Sicherheit in Microsoft Windows NT Server oder Windows 2000 Server finden Sie auf der Microsoft Windows-Website.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

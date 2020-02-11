@@ -13,19 +13,19 @@ ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20043c96771bf888defa2c8fbeb028aaa18f5abc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905347"
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption (Desktop-Datenbanktreiber)
 
 |*fOption*|Kommentare|  
 |---------------|--------------|  
-|SQL_ASYNC_ENABLE|Die asynchrone Verarbeitung wird nicht unterstützt. Die SQL_ASYNC_ENABLE fOption SQLSTATE S1C00 zurück (nicht-Treiber).|  
-|SQL_KEYSET_SIZE|Die einzigen gültigen Keysetgröße ist 0 (null), da kombiniert und dynamische Cursor werden nicht unterstützt. Wenn dieser Wert auf jede andere Zahl festgelegt ist, wird es in 0 geändert und der Aufruf gibt SQL_SUCCESS_WITH_INFO und SQLSTATE 01 s 02 (der Optionswert wurde geändert).|  
-|SQL_MAX_ROWS|Die einzigen gültigen Rowsetgröße ist 0 (null), da die Anzahl der zurückgegebenen Zeilen einschränken der Desktop-Datenbanktreiber nicht unterstützt wird. Wenn dieser Wert auf jede andere Zahl festgelegt ist, wird es in 0 geändert und der Aufruf gibt SQL_SUCCESS_WITH_INFO und SQLSTATE 01 s 02 (der Optionswert wurde geändert).|  
+|SQL_ASYNC_ENABLE|Die asynchrone Verarbeitung wird nicht unterstützt. Die SQL_ASYNC_ENABLE-Option "f" gibt SQLSTATE S1C00 (Treiber nicht fähig) zurück.|  
+|SQL_KEYSET_SIZE|Die einzige gültige Keysetgröße ist 0, da gemischte und dynamische Cursor nicht unterstützt werden. Wenn dieser Wert auf eine andere Zahl festgelegt ist, wird er in 0 geändert, und der-Rückruf gibt SQL_SUCCESS_WITH_INFO und SQLSTATE 01s02 (Optionswert geändert) zurück.|  
+|SQL_MAX_ROWS|Die einzige gültige Rowsetgröße ist 0, da die Desktop-Datenbanktreiber das Einschränken der Anzahl der zurückgegebenen Zeilen nicht unterstützen. Wenn dieser Wert auf eine andere Zahl festgelegt ist, wird er in 0 geändert, und der-Rückruf gibt SQL_SUCCESS_WITH_INFO und SQLSTATE 01s02 (Optionswert geändert) zurück.|  
 |SQL_QUERY_TIMEOUT|Wird nicht unterstützt.|  
 |SQL_ROW_NUMBER|Wird nicht unterstützt.|  
 |SQL_SIMULATE_CURSOR|Wird nicht unterstützt.|

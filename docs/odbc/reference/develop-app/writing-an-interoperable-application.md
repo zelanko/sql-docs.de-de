@@ -16,25 +16,25 @@ ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078982"
 ---
 # <a name="writing-an-interoperable-application"></a>Schreiben einer interoperablen Anwendung
-Wenn eine Anwendung den gleichen Code für mehrere Treiber verwendet, muss dieser Code zwischen Treiber interoperabel sein. In den meisten Fällen ist dies eine einfache Aufgabe. Beispielsweise ist der Code zum Abrufen von Zeilen mit einem Vorwärtscursor für alle Treiber identisch. In einigen Fällen kann dies schwieriger sein. Beispielsweise muss der Code zum Erstellen von Bezeichnern für die Verwendung in SQL-Anweisungen Groß-und Kleinschreibung, Anführungszeichen und ein- und zweiteilige dreiteiligen Benennungskonventionen berücksichtigen.  
+Wenn eine Anwendung denselben Code für mehr als einen Treiber verwendet, muss dieser Code unter diesen Treibern interoperabel sein. In den meisten Fällen ist dies eine einfache Aufgabe. Beispielsweise ist der Code zum Abrufen von Zeilen mit einem Vorwärts Cursor für alle Treiber identisch. In einigen Fällen kann dies schwieriger sein. Der Code zum Erstellen von Bezeichnern für die Verwendung in SQL-Anweisungen muss beispielsweise bezeichnerfälle, Anführungszeichen und einteilige, zweiteilige und dreiteilige Benennungs Konventionen in Erwägung gezogen werden.  
   
- Interoperable Code muss im allgemeinen Problemen mit der Unterstützung von Funktionen und Variabilität der Funktion zu bewältigen. *-Funktionsunterstützung* bezieht sich auf, und zwar unabhängig davon, ob ein bestimmtes Feature unterstützt wird. Z. B. nicht alle DBMS Transaktionen unterstützt, und interoperable Code muss ordnungsgemäß funktionieren, unabhängig von der Unterstützung von Transaktionen. *Feature Variabilität* bezieht sich auf die Abweichung in die Art und Weise, in denen eine bestimmte Funktion unterstützt wird. Katalognamen werden z. B. am Anfang von Bezeichnern in einigen DBMS und am Ende von Bezeichnern in anderen platziert.  
+ Im Allgemeinen muss der interoperable Code Probleme mit der Featureunterstützung und der Funktions Variabilität meistern. Die *Funktions Unterstützung* bezieht sich darauf, ob ein bestimmtes Feature unterstützt wird. Beispielsweise müssen nicht alle DBMSs-Unterstützungs Transaktionen und der interoperable Code unabhängig von der Transaktionsunterstützung ordnungsgemäß funktionieren. Die *Funktions Variabilität* bezieht sich auf Abweichungen in der Art und Weise, in der eine bestimmte Funktion unterstützt wird. Katalognamen werden z. b. am Anfang der Bezeichner in einigen DBMSs und am Ende von Bezeichnerzeichen in anderen platziert.  
   
- Zur Entwurfszeit oder zur Laufzeit können Anwendungen mit Unterstützung von Features und Feature-Variabilität verarbeiten. Um mit Unterstützung von Funktionen und Variabilität zur Entwurfszeit zu arbeiten, ein Entwickler beschäftigt sich mit der Ziel-DBMS und die Treiber und stellt sicher, dass der gleiche Code untereinander interoperabel ist. Dies ist normalerweise die Möglichkeit, in der Anwendungen mit niedriger oder nur eine begrenzte Interoperabilität diese Probleme behandelt.  
+ Anwendungen können die Featureunterstützung und die Funktions Variabilität zur Entwurfszeit oder zur Laufzeit behandeln. Um die Featureunterstützung und Varianz zur Entwurfszeit zu behandeln, untersucht ein Entwickler die Ziel-DBMSs und-Treiber und stellt sicher, dass der gleiche Code zwischen Ihnen interoperabel ist. Dabei handelt es sich im Allgemeinen um die Art und Weise, in der Anwendungen mit geringer oder eingeschränkter Interoperabilität diese Probleme beheben.  
   
- Z. B. benötigt Wenn der Entwickler wird sichergestellt, dass eine vertikale Anwendung nur mit vier bestimmten DBMS-Systeme funktionieren und jede dieser DBMS-Transaktionen unterstützt, die Anwendung nicht Code zu prüfen, Unterstützung von Transaktionen zur Laufzeit. Sie können immer davon ausgehen, dass Transaktionen aufgrund der Entscheidung zur Entwurfszeit mit nur vier DBMS-Systeme, verfügbar sind jeweils Transaktionen unterstützt.  
+ Wenn der Entwickler beispielsweise sicherstellt, dass eine vertikale Anwendung nur mit vier bestimmten DBMSs funktioniert und jeder dieser DBMSs Transaktionen unterstützt, benötigt die Anwendung keinen Code zum Überprüfen der Transaktionsunterstützung zur Laufzeit. Es kann immer angenommen werden, dass Transaktionen aufgrund der Entwurfszeit Entscheidung zur Verwendung von nur vier DBMSs verfügbar sind, von denen jede Transaktionen unterstützt.  
   
- Zur Unterstützung von Funktionen und Variabilität bei der Ausführung zu beheben, muss die Anwendung testen verschiedene Funktionen zur Laufzeit und entsprechend agiert. Dies ist normalerweise die Möglichkeit, in der hochgradig interoperabel Anwendungen diese Probleme behandelt. Feature-Unterstützung Probleme auftreten bedeutet dies, das Schreiben von Code, mit der Funktion optional oder Schreiben von Code, der die Funktion emuliert, wenn es nicht verfügbar ist. Feature-Variabilität Probleme auftreten bedeutet dies, das Schreiben von Code, der alle mögliche Variationen unterstützt.  
+ Um die Featureunterstützung und Varianz zur Laufzeit zu behandeln, muss die Anwendung zur Laufzeit auf verschiedene Funktionen testen und entsprechend reagieren. Dies ist im Allgemeinen die Art und Weise, in der hochgradig interoperable Anwendungen diese Probleme behandeln. Bei Problemen mit der Featureunterstützung bedeutet dies, dass Sie Code schreiben, der die Funktion als optional macht, oder Code schreiben, der die Funktion emuliert, wenn Sie nicht verfügbar ist. Bei Problemen mit der featurevarianz bedeutet dies das Schreiben von Code, der alle möglichen Variationen unterstützt.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Überprüfung der Unterstützung von Funktionen und Variabilität](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [Überprüfung der Funktionsunterstützung und Variabilität](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
--   [Funktionen, die überwacht werden müssen](../../../odbc/reference/develop-app/features-to-watch-for.md)
+-   [Zu überwachende Funktionen](../../../odbc/reference/develop-app/features-to-watch-for.md)

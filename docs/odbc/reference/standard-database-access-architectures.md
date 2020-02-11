@@ -1,5 +1,5 @@
 ---
-title: Standard-Datenbank Zugriff Architekturen | Microsoft-Dokumentation
+title: Standard-Datenbankzugriffs Architekturen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2113167bb3440c0d772a99b4b8098104d7ed11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129246"
 ---
 # <a name="standard-database-access-architectures"></a>Standardarchitekturen für den Datenbankzugriff
-Betrachten Sie die Datenbank-Access-Komponenten im vorherigen Abschnitt beschrieben, stellt sich heraus, dass zwei davon – Programmieren von Schnittstellen und Protokolle für Data Stream - eignen sich gut für die Standardisierung. Die anderen zwei Komponenten – IPC-Mechanismus und Netzwerkprotokollen – ist nicht nur auf zu niedrige Ebene befinden, jedoch sind beide stark abhängig von das Netzwerk und das Betriebssystem. Es gibt auch eine dritte Möglichkeit - Gateways –, die Möglichkeiten für die Standardisierung bereitstellt.  
+Wenn Sie sich die im vorherigen Abschnitt beschriebenen Datenbankzugriffs Komponenten ansehen, stellt sich heraus, dass zwei von Ihnen-Programmierschnittstellen und Datenstrom Protokolle-gute Kandidaten für die Standardisierung sind. Die anderen beiden Komponenten, IPC-Mechanismus und Netzwerkprotokolle, sind nicht nur zu niedrig, sondern auch stark von Netzwerk und Betriebssystem abhängig. Es gibt auch einen dritten Ansatz, der Möglichkeiten für die Standardisierung bietet.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Standard-Programmierschnittstelle](../../odbc/reference/standard-programming-interface.md)  
+-   [Standardprogrammierschnittstelle](../../odbc/reference/standard-programming-interface.md)  
   
--   [Standard-Datenstrom Protokoll](../../odbc/reference/standard-data-stream-protocol.md)  
+-   [Standardmäßiges Datenstromprotokoll](../../odbc/reference/standard-data-stream-protocol.md)  
   
 -   [Standardgateway](../../odbc/reference/standard-gateway.md)

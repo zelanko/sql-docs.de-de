@@ -1,5 +1,5 @@
 ---
-title: Move – Methodenbeispiel (VBScript) | Microsoft-Dokumentation
+title: Move Method example (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918166"
 ---
 # <a name="move-method-example-vbscript"></a>Move-Methode – Beispiel (VBScript)
-Dieses Beispiel verwendet die [verschieben](../../../ado/reference/ado-api/move-method-ado.md) Methode, um den Datensatzzeiger zu positionieren, basierend auf Benutzereingaben.  
+In diesem Beispiel wird die [Move](../../../ado/reference/ado-api/move-method-ado.md) -Methode verwendet, um den Daten Satz Zeiger basierend auf der Benutzereingabe zu positionieren.  
   
- Verwenden Sie das folgende Beispiel in einer Active Server Page (ASP). Um diese voll funktionsfähige Beispiel anzuzeigen, müssen Sie entweder haben die Daten AdvWorks.mdb (mit dem SDK installiert) befindet sich unter c:\Programme\Microsoft c:\Programme\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb Datenquelle oder den Pfad im Beispielcode entsprechend bearbeiten der tatsächliche Speicherort dieser Datei. Dies ist eine Microsoft Access-Datenbankdatei.  
+ Verwenden Sie das folgende Beispiel in einer Active Server Seite (ASP). Um dieses voll funktionsfähige Beispiel anzuzeigen, müssen Sie entweder die Datenquelle "AdvWorks. mdb" (installiert mit dem SDK) im Verzeichnis "c:\Programme\Microsoft Platform sdk\samples\dataaccess\rds\rdstest\advworks.mdb" aufweisen oder den Pfad im Beispielcode bearbeiten, um Folgendes widerzuspiegeln: der tatsächliche Speicherort dieser Datei. Dies ist eine Microsoft Access-Datenbankdatei.  
   
- Verwenden Sie **finden** suchen Sie die Datei Adovbs.inc, und fügen ihn in das Verzeichnis, das Sie verwenden möchten. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **MoveVBS.asp**. Sie können das Ergebnis in einem beliebigen Browser anzeigen.  
+ Verwenden Sie **Suchen** , um die Datei adovsb. Inc zu suchen, und platzieren Sie Sie in dem Verzeichnis, das Sie verwenden möchten. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **movevsb. ASP**. Sie können das Ergebnis in einem beliebigen Browser anzeigen.  
   
- Versuchen Sie, ein Buchstabe oder eine nicht ganzzahlige, um die Arbeit für die Fehlerbehandlung finden Sie unter.  
+ Versuchen Sie, einen Buchstaben oder eine nicht ganze Zahl einzugeben, um die Fehlerbehandlung anzuzeigen.  
   
 ```  
 <!-- BeginMoveVBS -->  
@@ -182,6 +182,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

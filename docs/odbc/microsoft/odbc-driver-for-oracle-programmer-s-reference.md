@@ -1,5 +1,5 @@
 ---
-title: ODBC-Treiber für Oracle-Programmierer&#39;s Verweis | Microsoft-Dokumentation
+title: ODBC-Treiber für Oracle-Programmierer&#39;s-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe50584664d625040753a666cf7ebdf0c25ab11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915781"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC-Treiber für Oracle-Programmierer&#39;s-Referenz
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ Dieser Abschnitt umfasst die folgenden Themen:  
   
 -   [Format und Attribute von Verbindungszeichenfolgen](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "67915781"
   
 -   [Einschränkungen der Verwendung keysetgesteuerter Cursor](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [ODBC-Treiber für Oracle-gespeicherten Prozeduren](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [ODBC-Treiber für gespeicherte Oracle-Prozeduren](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
 -   [ODBC-Treiber für Oracle-Fehlermeldungen](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [ODBC-Übereinstimmungsebenen](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [ODBC-Konformitätsstufen](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
 -   [API-Funktionen](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   

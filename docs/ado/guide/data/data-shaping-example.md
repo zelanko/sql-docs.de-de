@@ -1,5 +1,5 @@
 ---
-title: Beispiel für die datenstrukturierung | Microsoft-Dokumentation
+title: Beispiel für Daten Strukturierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925669"
 ---
 # <a name="data-shaping-example"></a>Datenstrukturierung – Beispiel
-Die folgenden Daten strukturieren Befehl veranschaulicht, wie eine hierarchische **Recordset** aus der **Kunden** und **Bestellungen** Tabellen in der Northwind-Datenbank.  
+Der folgende Daten Strukturierungs Befehl veranschaulicht, wie ein hierarchisches **Recordset** aus den Tabellen **Customers** und **Orders** in der Datenbank Northwind erstellt wird.  
   
 ```  
 SHAPE {SELECT CustomerID, ContactName FROM Customers}   
@@ -28,23 +28,23 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Wenn dieser Befehl verwendet wird, öffnen Sie eine **Recordset** Objekt (siehe [Visual Basic Beispiel der Datenstrukturierung](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), erstellt ein Kapitel (**ChapOrders**) für die einzelnen zurückgegebenen Datensätze von der **Kunden** Tabelle. Dieses Kapitel besteht aus einer Teilmenge von der **Recordset** zurückgegeben, die von der **Bestellungen** Tabelle. Die **ChapOrders** Kapitel enthält alle angeforderten Informationen über die Bestellungen, die von den jeweiligen Kunden. In diesem Beispiel besteht aus drei Spalten im Kapitel über das: **"OrderID"** , **OrderDate**, und **"CustomerID"** .  
+ Wenn dieser Befehl zum Öffnen eines **Recordset** -Objekts verwendet wird (wie in [Visual Basic Beispiel der Daten Strukturierung](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)gezeigt), wird ein Kapitel ("**chaporders**") für jeden Datensatz erstellt, der von der Tabelle " **Customers** " zurückgegeben wird. Dieses Kapitel besteht aus einer Teilmenge des **Recordsets** , das von der **Orders** -Tabelle zurückgegeben wird. Das Kapitel " **chaporders** " enthält alle angeforderten Informationen zu den Aufträgen, die vom jeweiligen Kunden platziert wurden. In diesem Beispiel besteht das Kapitel aus drei Spalten: " **OrderID**", " **OrderDate**" und " **CustomerID**".  
   
- Die ersten beiden Einträge von der resultierenden strukturiert **Recordset** lauten wie folgt:  
+ Die ersten beiden Einträge des resultierenden geformten **Recordsets** lauten wie folgt:  
   
 |CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
-|ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
-|ANATR|SQL-Batchdatei(en) ANA Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
+|ALFKI|Maria ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
+|ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- In einer SHAPE-Befehl ANFÜGEN verwendet, um ein untergeordnetes Element erstellen **Recordset** im Zusammenhang mit der das übergeordnete Element **Recordset** (wie vom Anbieter-spezifischen Befehl unmittelbar nach dem Form-Schlüsselwort, das besprochen wurde zurückgegeben weiter oben) von der RELATE-Klausel. Die über- und untergeordneten haben in der Regel mindestens eine Spalte: Der Wert der Spalte in einer Zeile des übergeordneten Elements ist identisch mit dem Wert der Spalte in allen Zeilen der untergeordneten.  
+ In einem Shape-Befehl wird Append zum Erstellen eines untergeordneten **Recordsets** verwendet, das mit dem übergeordneten **Recordset** verknüpft ist (wie vom anbieterspezifischen Befehl unmittelbar nach dem zuvor erläuterten Shape-Schlüsselwort) von der Related-Klausel zurückgegeben. Das übergeordnete und das untergeordnete Element verfügen in der Regel über mindestens eine gemeinsame Spalte: der Wert der Spalte in einer Zeile des übergeordneten Elements entspricht dem Wert der Spalte in allen Zeilen des untergeordneten Elements.  
   
- Es wird eine zweite Methode zur Verwendung von SHAPE-Befehle: nämlich, um ein übergeordnetes Element zu generieren **Recordset** von einem untergeordneten **Recordset**. Die Datensätze in der untergeordneten **Recordset** gruppiert sind, in der Regel mithilfe der BY-Klausel und eine Zeile zum übergeordneten Element hinzugefügt wird **Recordset** für jede Gruppe resultierende, in das untergeordnete Element. Wenn die BY-Klausel weggelassen wird, das untergeordnete Element **Recordset** Formular wird, eine einzelne Gruppe und das übergeordnete Element **Recordset** genau eine Zeile enthält. Dies ist hilfreich zum Berechnen von "Gesamtsumme" Aggregate über das gesamte untergeordnete **Recordset**.  
+ Zum Generieren eines übergeordneten **Recordsets** aus einem untergeordneten **Recordset**gibt es eine zweite Möglichkeit, Form Befehle zu verwenden: Die Datensätze im untergeordneten **Recordset** werden gruppiert, in der Regel mithilfe der by-Klausel, und eine Zeile wird dem übergeordneten **Recordset** für jede resultierende Gruppe in der untergeordneten Gruppe hinzugefügt. Wenn die by-Klausel weggelassen wird, bildet das untergeordnete **Recordset** eine einzelne Gruppe, und das übergeordnete **Recordset** enthält genau eine Zeile. Dies ist nützlich für das Berechnen von "Gesamtsumme"-Aggregaten über das gesamte untergeordnete **Recordset**.  
   
- Das Konstrukt der SHAPE-Befehl können Sie programmgesteuert eine geformten erstellen **Recordset**. Anschließend können Sie die Bestandteile zugreifen der **Recordset** programmgesteuert oder über eine geeignete visuelle Steuerelemente. Ein Shape-Befehl wird wie jeder andere ADO-Befehlstext ausgegeben. Weitere Informationen finden Sie unter [Shape-Befehle in der Regel](../../../ado/guide/data/shape-commands-in-general.md).  
+ Mit dem Konstrukt Shape Command können Sie auch Programm gesteuert ein geformtes **Recordset**erstellen. Sie können dann Programm gesteuert oder über ein entsprechendes visuelles Steuerelement auf die-Komponenten des **Recordsets** zugreifen. Ein Shape-Befehl wird wie ein beliebiger anderer ADO-Befehls Text ausgegeben. Weitere Informationen finden Sie unter [Shape-Befehle im allgemeinen](../../../ado/guide/data/shape-commands-in-general.md).  
   
- Unabhängig davon, wie das übergeordnete Element **Recordset** wird gebildet, enthält es eine Kapitelspalte, die verwendet wird, um es auf ein untergeordnetes Element verknüpfen **Recordset**. Wenn Sie möchten, das übergeordnete Element **Recordset** Spalten, die Aggregate (SUM, MIN, MAX, usw.) enthalten kann auch über die untergeordneten Zeilen haben. Sowohl das übergeordnete Element und dem untergeordneten Element **Recordset** haben Spalten, die einen Ausdruck in der Zeile enthält die **Recordset**sowie Spalten sind neu und anfangs leere.  
+ Unabhängig davon, auf welche Weise das übergeordnete **Recordset** gebildet wird, enthält es eine Kapitel Spalte, die verwendet wird, um es mit einem untergeordneten **Recordset**zu verknüpfen. Wenn Sie möchten, kann das übergeordnete **Recordset** auch Spalten aufweisen, die Aggregate (Sum, min, Max usw.) für die untergeordneten Zeilen enthalten. Sowohl das übergeordnete als auch das untergeordnete **Recordset** können Spalten aufweisen, die einen Ausdruck in der Zeile im **Recordset**enthalten, sowie Spalten, die neu sind und anfänglich leer sind.  
   
- In diesem Abschnitt wird mit dem folgenden Thema fortgesetzt.  
+ In diesem Abschnitt wird das folgende Thema fortgesetzt.  
   
--   [Visual Basic Example of Data Shaping (Visual Basic-Beispiel der Datenstrukturierung)](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [Visual Basic-Beispiel der Datenstrukturierung](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)

@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu der Anpassungsdatei | Microsoft-Dokumentation
+title: Grundlegendes zur Anpassungs Datei | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921962"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
-Jeder Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern ( **[]** ), die einen Typ und die Parameter enthält. Die vier Abschnitt sind gekennzeichnet durch die Literalzeichenfolgen **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist der literalen Zeichenfolge, die Standardeinstellung, eine vom Benutzer angegebenen Bezeichner oder "nothing".  
+Jeder Abschnitts Header in der Anpassungs Datei besteht aus eckigen Klammern (**[]**), die einen Typ und einen Parameter enthalten. Die vier Abschnitts Typen werden durch die Literalzeichenfolgen **Connect**, **SQL**, **userlist**oder **Logs**angegeben. Der-Parameter ist die Literalzeichenfolge, der Standardwert, ein vom Benutzer angegebener Bezeichner oder Nothing.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Aus diesem Grund wird jedem Abschnitt mit einem der folgenden Abschnittsheader gekennzeichnet:  
+ Daher wird jeder Abschnitt mit einem der folgenden Abschnitts Header gekennzeichnet:  
   
 ```console
   
@@ -39,39 +39,39 @@ identifier
   
 ```  
   
- Die Abschnittsheader haben die folgenden Teile.  
+ Die Abschnitts Header haben die folgenden Teile.  
   
-|Segment|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
-|**connect**|Eine Literalzeichenfolge, die eine Verbindungszeichenfolge zu ändern.|  
-|**sql**|Eine Literalzeichenfolge, die eine Befehlszeichenfolge ändert.|  
-|**userlist**|Eine Literalzeichenfolge, die die Zugriffsrechte für einen bestimmten Benutzer ändert.|  
-|**logs**|Ein Zeichenfolgenliteral, das eine Aufzeichnung ablauffehler Protokolldatei angibt.|  
-|**default**|Eine Literalzeichenfolge, die verwendet wird, wenn kein Bezeichner angegeben wird oder wurde gefunden.|  
-|*identifier*|Eine Zeichenfolge, die eine Zeichenfolge in entspricht der **verbinden** oder **Befehl** Zeichenfolge.<br /><br /> -Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **verbinden** und die ID-Zeichenfolge in der Verbindungszeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **Sql** und die ID-Zeichenfolge in der Befehlszeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **Userlist** und die ID-Zeichenfolge entspricht einer **verbinden** Abschnitt Bezeichner.|  
+|**herzustellen**|Eine Literalzeichenfolge, die eine Verbindungs Zeichenfolge ändert.|  
+|**sql**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  
+|**UserList**|Eine Literalzeichenfolge, die die Zugriffsrechte eines bestimmten Benutzers ändert.|  
+|**tholz**|Eine Literalzeichenfolge, die eine Protokolldatei zum Aufzeichnen von Betriebsfehlern angibt.|  
+|**vorgegebene**|Eine Literalzeichenfolge, die verwendet wird, wenn kein Bezeichner angegeben oder gefunden wird.|  
+|*Figur*|Eine Zeichenfolge, die einer Zeichenfolge in der **Connect** -oder **Befehls** Zeichenfolge entspricht.<br /><br /> -Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **Connect** enthält und die Bezeichnerzeichenfolge in der Verbindungs Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **SQL** enthält und die Bezeichnerzeichenfolge in der Befehls Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **userlist** enthält und die Bezeichnerzeichenfolge mit einem **Verbindungs** Abschnitts Bezeichner übereinstimmt.|  
   
- Die **DataFactory** ruft der Handler auf, und die Client-Parameter übergeben. Der Handler sucht nach ganzen Zeichenfolgen in die Clientparameter, die Bezeichner in den entsprechenden Abschnittsheadern entsprechen. Wenn eine Übereinstimmung gefunden wird, werden die Inhalte des Abschnitts an den Clientparameter angewendet.  
+ Das **DataFactory** Ruft den-Handler auf und übergibt Client Parameter. Der Handler sucht in den Client Parametern nach ganzen Zeichen folgen, die mit bezeichtern in den entsprechenden Abschnitts Headern zu vergleichen sind. Wenn eine Entsprechung gefunden wird, wird der Inhalt dieses Abschnitts auf den Client Parameter angewendet.  
   
- Ein bestimmter Abschnitt wird in den folgenden Situationen verwendet:  
+ Ein bestimmter Abschnitt wird unter den folgenden Umständen verwendet:  
   
--   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients verbunden sind, Schlüsselwort "**Datenquelle =** _Wert_", entspricht einer **verbinden** Abschnitt-Bezeichner. 
+-   Ein **Connect** -Abschnitt wird verwendet, wenn der Wert Teil des Client Verbindungs Zeichenfolgen-Schlüssel Worts "**Data Source =**_value_" mit dem Bezeichner des **Verbindungs** Abschnitts übereinstimmt. 
   
--   Ein **Sql** Abschnitt wird verwendet, wenn die Client-Befehlszeichenfolge eine Zeichenfolge enthält, die entspricht einer **Sql** Abschnitt Bezeichner.  
+-   Ein **SQL** -Abschnitt wird verwendet, wenn die Client Befehls Zeichenfolge eine Zeichenfolge enthält, die einem **SQL** -Abschnitts Bezeichner entspricht.  
   
--   Ein **verbinden** oder **Sql** Abschnitt mit einem Standardparameter wird verwendet, wenn kein übereinstimmender Bezeichner vorhanden ist.  
+-   Wenn kein entsprechender Bezeichner vorhanden ist, wird ein **Connect** -oder **SQL** -Abschnitt mit einem Standardparameter verwendet.  
   
--   Ein **Userlist** Abschnitt wird verwendet, wenn die **Userlist** Bezeichner entspricht Abschnitt eine **verbinden** Abschnitt Bezeichner. Wenn eine Übereinstimmung, den Inhalt des vorliegt der **Userlist** -Abschnitt angewendet werden, für die Verbindung, unterliegt die **verbinden** Abschnitt.  
+-   Ein **userlist** -Abschnitt wird verwendet, wenn der **userlist** -Abschnitts Bezeichner mit einem **Verbindungs** Abschnitts Bezeichner übereinstimmt. Wenn eine Entsprechung vorliegt, wird der Inhalt des Abschnitts " **userlist** " auf die Verbindung angewendet, die durch den Abschnitt " **Connect** " gesteuert wird.  
   
--   Wenn die Zeichenfolge in eine Verbindung oder eines Befehl Zeichenfolge nicht den Bezeichner in einem übereinstimmt **verbinden** oder **Sql** Abschnitt Header, und es gibt keine **verbinden** oder **Sql**  Abschnitt Header mit einem Standardparameter, die Clientzeichenfolge ohne Änderungen verwendet wird.  
+-   Wenn die Zeichenfolge in einer Verbindung oder Befehls Zeichenfolge nicht mit dem Bezeichner in einem **Connect** -oder **SQL** -Abschnitts Header identisch ist und kein **Connect** -oder **SQL** -Abschnitts Header mit einem Default-Parameter vorhanden ist, wird die Client Zeichenfolge unverändert verwendet.  
   
--   Die **Protokolle** Abschnitt wird verwendet, wenn die **DataFactory** durchgeführt wird.  
+-   Der Abschnitt **Logs** wird immer dann verwendet, wenn das **DataFactory** in Betrieb ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Connect-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Logs-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [SQL-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [UserList-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Bereich für die Anpassungs Dateiverbindung](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Abschnitt "Anpassungs Datei Protokolle"](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [SQL-Abschnitt der Anpassungs Datei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Benutzer Listen Abschnitt "Anpassungs Datei"](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

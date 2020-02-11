@@ -1,5 +1,5 @@
 ---
-title: Sp_describe_cursor_columns (Transact-SQL) | Microsoft-Dokumentation
+title: sp_describe_cursor_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053110"
 ---
-# <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
+# <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Meldet die Attribute der Spalten im Resultset eines Servercursors.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,49 +47,49 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @cursor_return=] *Output_cursor_variable* Ausgabe  
- Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und darf nicht werden die zum Zeitpunkt der Aufruf von Sp_describe_cursor_columns keinem Cursor zugeordnet. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
+ [ @cursor_return= ] *output_cursor_variable* Ausgeben  
+ Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *output_cursor_variable* ist vom Typ **Cursor**und hat keinen Standardwert und darf zum Zeitpunkt, an dem sp_describe_cursor_columns aufgerufen wird, keinen Cursorn zugeordnet werden. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
- [ @cursor_source=] {N'local "| N'global "| N'variable'}  
- Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)** .  
+ [ @cursor_source= ] {N ' local ' | N ' Global ' | N '}  
+ Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist vom Datentyp **nvarchar (30)**.  
   
- [ @cursor_identity=] N'*Local_cursor_name*"  
- Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)** .  
+ [ @cursor_identity= ] N '*local_cursor_name*'  
+ Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *local_cursor_name* ist vom Datentyp **nvarchar (128)**.  
   
- [ @cursor_identity=] N'*Global_cursor_name*"  
- Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* ist **vom Datentyp nvarchar(128)** .  
+ [ @cursor_identity= ] N '*global_cursor_name*'  
+ Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *global_cursor_name* ist vom Datentyp **nvarchar (128)**.  
   
- *Global_cursor_name* kann auch der Namen des ein API-Servercursor, die von einer ODBC-Anwendung geöffnet ist, und klicken Sie dann durch Aufrufen von SQLSetCursorName benannt sein.  
+ *global_cursor_name* kann auch der Name eines API-Server Cursors sein, der von einer ODBC-Anwendung geöffnet wird, und dann durch Aufrufen von SQLSetCursorName benannt werden.  
   
- [ @cursor_identity=] N'*Input_cursor_variable*"  
- Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)** .  
+ [ @cursor_identity= ] N '*input_cursor_variable*'  
+ Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *input_cursor_variable* ist vom Datentyp **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="cursors-returned"></a>Zurückgegebene Cursor  
- Sp_describe_cursor_columns kapselt den Bericht ein [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet auch, dass die Prozedur direkt über Datenbank-API-Funktionen aufgerufen werden kann. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
+ sp_describe_cursor_columns kapselt den Bericht als [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** Ausgabeparameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet auch, dass die Prozedur nicht direkt aus den Funktionen der Datenbank-API aufgerufen werden kann. Der **Cursor** Ausgabeparameter muss an eine Programm Variable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung von **Cursor** -Parametern oder-Variablen nicht.  
   
  In der folgenden Tabelle wird das Format des mit sp_describe_cursor_columns zurückgegebenen Cursors dargestellt.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|column_name|**Sysname** (NULL zulassen)|Der Name, der der Resultsetspalte zugewiesen ist. Die Spalte weist den Wert NULL auf, wenn die Spalte ohne zugehörige AS-Klausel angegeben wurde.|  
+|column_name|**vom Datentyp sysname** (Nullable)|Der Name, der der Resultsetspalte zugewiesen ist. Die Spalte weist den Wert NULL auf, wenn die Spalte ohne zugehörige AS-Klausel angegeben wurde.|  
 |ordinal_position|**int**|Die relative Position der Spalte in Bezug auf die äußerst linke Spalte im Resultset. Die erste Spalte befindet sich an Position 0.|  
 |column_characteristics_flags|**int**|Eine Bitmaske zum Anzeigen der Informationen, die in DBCOLUMNFLAGS in OLE DB gespeichert sind. Dies kann eine oder eine Kombination der folgenden Optionen sein:<br /><br /> 1 = Lesezeichen<br /><br /> 2 = Feste Länge<br /><br /> 4 = NULL zulassen<br /><br /> 8 = Zeilenversionsverwaltung<br /><br /> 16 = Aktualisierbare Spalte (wird für voraussichtliche Spalten eines Cursors festgelegt, der keine FOR UPDATE-Klausel aufweist. Wenn eine solche Spalte vorhanden ist, ist pro Cursor nur eine einzige zulässig).<br /><br /> Wenn Bitwerte kombiniert werden, gelten die Merkmale der kombinierten Bitwerte. Beispielsweise hat die Spalte mit dem Bitwert 6 eine feste Länge (2) und lässt NULL-Werte zu (4).|  
 |column_size|**int**|Die maximal mögliche Größe von Werten in dieser Spalte.|  
 |data_type_sql|**smallint**|Eine Zahl, die dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp der Spalte angibt.|  
-|column_precision|**tinyint**|Maximale Genauigkeit der Spalte gemäß der *bPrecision* -Wert in OLE DB.|  
-|column_scale|**tinyint**|Anzahl der Ziffern rechts vom Dezimaltrennzeichen für die **numerischen** oder **decimal** Datentypen gemäß den *bScale* -Wert in OLE DB.|  
+|column_precision|**tinyint**|Maximale Genauigkeit der Spalte gemäß dem Wert *bPrecision* in OLE DB.|  
+|column_scale|**tinyint**|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen für die **numerischen** oder **Dezimal** Datentypen gemäß dem Wert *bScale* in OLE DB.|  
 |order_position|**int**|Wenn die Spalte bei der Sortierung des Resultsets berücksichtigt wird, bezeichnet dies die Position der Spalte im Sortierschlüssel relativ zur Spalte ganz links.|  
-|order_direction|**varchar(1)** (NULL zulassen)|A = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist aufsteigend.<br /><br /> D = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist absteigend.<br /><br /> NULL = Die Spalte wird nicht bei der Sortierung berücksichtigt.|  
+|order_direction|**varchar (1)**(Nullable)|A = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist aufsteigend.<br /><br /> D = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist absteigend.<br /><br /> NULL = Die Spalte wird nicht bei der Sortierung berücksichtigt.|  
 |hidden_column|**smallint**|0 = Diese Spalte wird in der Auswahlliste angezeigt.<br /><br /> 1 = Zur künftigen Verwendung reserviert.|  
 |columnid|**int**|Die Spalten-ID der Basisspalte. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist columnid den Wert -1 auf.|  
 |objectid|**int**|Die Objekt-ID des Objekts oder der Basistabelle, das bzw. die die Spalte bereitstellt. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist objectid den Wert -1 auf.|  
 |dbid|**int**|Die ID der Datenbank mit der Basistabelle, die die Spalte bereitstellt. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist dbid den Wert -1 auf.|  
 |dbname|**sysname**<br /><br /> (NULL zulassen)|Der Name der Datenbank mit der Basistabelle, die die Spalte bereitstellt. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist dbname den Wert NULL auf.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_describe_cursor_columns beschreibt die Attribute der Spalten im Resultset eines Servercursors, wie z.B. den Namen und den Datentyp der einzelnen Cursor. Mit sp_describe_cursor zeigen Sie eine Beschreibung der globalen Attribute des Servercursors an. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. Mit sp_cursor_list erhalten Sie einen Bericht der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor, die für die Verbindung sichtbar sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -135,13 +135,13 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cursor](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact-SQL-&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [Sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [Sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [Sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
+ [sp_describe_cursor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
+ [sp_cursor_list &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

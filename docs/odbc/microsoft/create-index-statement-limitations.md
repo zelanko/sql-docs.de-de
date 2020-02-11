@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen der CREATE INDEX Anweisung | Microsoft-Dokumentation
+title: Einschränkungen der CREATE INDEX-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ddb695d996cdd40b7fde4087799e5c1ec84224c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081932"
 ---
 # <a name="create-index-statement-limitations"></a>Einschränkungen der CREATE INDEX-Anweisung
-CREATE INDEX-Anweisung wird für die Microsoft Excel- oder Textdateien Treiber nicht unterstützt.  
+Die CREATE INDEX-Anweisung wird für Microsoft Excel-oder Text-Treiber nicht unterstützt.  
   
- Ein Index kann für maximal 10 Spalten definiert werden. Wenn mehr als 10 Spalten in einer CREATE INDEX-Anweisung enthalten sind, wird der Index wird nicht erkannt und in der Tabelle behandelt werden, als wäre kein Index erstellt wurden.  
+ Ein Index kann für maximal 10 Spalten definiert werden. Wenn mehr als 10 Spalten in einer CREATE INDEX-Anweisung enthalten sind, wird der Index nicht erkannt, und die Tabelle wird so behandelt, als ob kein Index erstellt wurde.  
   
- DBASE-Treiber kann nicht über einen Index für eine logische Spalte erstellen.  
+ Der dBase-Treiber kann keinen Index für eine logische Spalte erstellen.  
   
- Wenn die dBASE-Treiber verwendet wird, kann die Antwortzeit für große Dateien verbessert werden, durch Erstellen eines Indexes MDX (oder NDX) in der Spalte (Feld) in der WHERE-Klausel einer SELECT-Anweisung angegeben. Vorhandene MDX-Indizes werden automatisch angewendet werden, für =, >, \<, > =, = <, Operatoren, die in einer WHERE-Klausel und LIKE-Prädikaten sowie in Join-Prädikate und BETWEEN.  
+ Wenn der dBase-Treiber verwendet wird, kann die Reaktionszeit für große Dateien verbessert werden, indem ein MDX-Index (oder NDX-Index) für die Spalte (Feld), die in den WHERE-Klauseln einer SELECT-Anweisung angegeben ist, festgelegt wird. Vorhandene MDX-Indizes werden automatisch für =, >, \<>= =, =< und zwischen Operatoren in einer WHERE-Klausel, wie z. b. Prädikaten und in joinprädikaten angewendet.  
   
- Wenn die dBASE-Treiber verwendet wird, der durch eine CREATE UNIQUE INDEX-Anweisung erstellte Index ist tatsächlich nicht eindeutig, und doppelte Werte in der indizierten Spalte eingefügt werden können. Nur ein Datensatz aus einem Satz mit zwei identische Schlüsselwerte kann, die dem Index hinzugefügt werden.  
+ Wenn der dBase-Treiber verwendet wird, ist der von einer CREATE UNIQUE Index-Anweisung erstellte Index tatsächlich nicht eindeutig, und doppelte Werte können in die indizierte Spalte eingefügt werden. Dem Index kann nur ein Datensatz aus einer Gruppe mit identischen Schlüsselwerten hinzugefügt werden.  
   
- Wenn die Paradox-Treiber verwendet wird, muss ein eindeutiger Index auf einer zusammenhängenden Teilmenge der Spalten in einer Tabelle, einschließlich der ersten Spalte definiert werden. Eine Tabelle kann nicht vom Paradox-Treiber aktualisiert werden, wenn Sie ein eindeutiger Index nicht definiert ist, für die Tabelle, oder wenn die Paradox-Treiber, ohne die Implementierung der Borland Datenbank-Engine verwendet wird.
+ Wenn der Paradox-Treiber verwendet wird, muss ein eindeutiger Index für eine zusammenhängende Teilmenge der Spalten in einer Tabelle definiert werden, einschließlich der ersten Spalte. Eine Tabelle kann nicht vom Paradox-Treiber aktualisiert werden, wenn kein eindeutiger Index für die Tabelle definiert ist oder wenn der Paradox-Treiber ohne die Implementierung des Borland-Datenbank-Engine verwendet wird.

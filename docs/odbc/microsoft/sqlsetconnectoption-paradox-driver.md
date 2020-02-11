@@ -14,24 +14,24 @@ ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cf6d01650b86fca4c782521fe3c368f729e6b42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897764"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (Paradox-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält die Paradox-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Informationen zu Paradox-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Kommentar|  
+|fOption|Comment|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann entweder SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE festgelegt werden. Der Treiber verhindert jedoch nicht Updates, wenn SQL_ACCESS_MODE SQL_MODE_READ_ONLY festgelegt ist.|  
-|SQL_AUTOCOMMIT|Die Paradox-Treiber unterstützt nur SQL_AUTOCOMMIT auf (Standardstatus) festgelegt wird, da sie keine Transaktionen unterstützen.|  
-|SQL_CURRENT_QUALIFIER|Unterstützt.|  
+|SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann entweder auf SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE festgelegt werden. Der Treiber hindert Updates jedoch nicht, wenn SQL_ACCESS_MODE auf SQL_MODE_READ_ONLY festgelegt ist.|  
+|SQL_AUTOCOMMIT|Der Paradox-Treiber unterstützt nur, SQL_AUTOCOMMIT auf ON festgelegt wird (der Standardzustand), da er keine Transaktionen unterstützt.|  
+|SQL_CURRENT_QUALIFIER| Unterstützt.|  
 |SQL_LOGIN_TIMEOUT|Wird nicht unterstützt.|  
-|SQL_OPT_TRACE|Unterstützt.|  
-|SQL_OPT_TRACEFILE|Unterstützt.|  
+|SQL_OPT_TRACE| Unterstützt.|  
+|SQL_OPT_TRACEFILE| Unterstützt.|  
 |SQL_PACKET_SIZE|Wird nicht unterstützt.|  
 |SQL_QUIET_MODE|Wird nicht unterstützt.|  
 |SQL_TRANSLATE_DLL|Wird nicht unterstützt.|  

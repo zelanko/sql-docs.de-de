@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: ActiveCommand-Eigenschaft (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d97f655c89c07f7866fbdee6aab236f942b5499c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921682"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) Eigenschaft.  
+In diesem Beispiel wird die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) -Eigenschaft veranschaulicht.  
   
- Eine Unterroutine erhält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, dessen **ActiveCommand** Eigenschaft wird verwendet, um anzuzeigen, die Befehlstext und die Parameter, der erstellt das **Recordset**.  
+ Einer Unterroutine wird ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt zugewiesen, dessen **ActiveCommand** -Eigenschaft verwendet wird, um den Befehls Text und den Parameter anzuzeigen, mit dem das **Recordset**erstellt wurde.  
   
 ```  
 'BeginActiveCommandVB  
@@ -90,11 +90,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- Die **ActiveCommandXprint** Routine erhält nur eine **Recordset** Objekt noch Drucken muss der Befehlstext und die Parameter, der erstellt das **Recordset**. Dies ist möglich, da die **Recordset** des Objekts **ActiveCommand** Eigenschaft gibt das zugeordnete [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  
+ Die **activecommandxprint** -Routine erhält nur ein **Recordset** -Objekt, aber Sie muss den Befehls Text und den Parameter ausgeben, mit dem das **Recordset**erstellt wurde. Dies ist möglich, da die **ActiveCommand** -Eigenschaft des **Recordset** -Objekts das zugeordnete [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt ergibt.  
   
- Die **Befehl** des Objekts [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft liefert den parametrisierten Befehl an, die erstellt die **Recordset**. Die **Befehl** des Objekts [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung ergibt sich der Wert, der die Befehls Parameterplatzhalter ersetzt wurde (" **?** ").  
+ Die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft des **Befehls** Objekts gibt den parametrisierten Befehl aus, mit dem das **Recordset**erstellt wurde. Die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung des **Befehls** Objekts gibt den Wert zurück, der für den Parameter Platzhalter ("**?**") des Befehls ersetzt wurde.  
   
- Schließlich werden die Namen und der ID einer Fehlermeldung oder des Autors gedruckt.  
+ Zum Schluss werden eine Fehlermeldung oder der Name und die ID des Autors ausgegeben.  
   
 ```  
 'BeginActiveCommandPrintVB  
@@ -120,7 +120,7 @@ End Sub
 'EndActiveCommandPrintVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ActiveCommand-Eigenschaft (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

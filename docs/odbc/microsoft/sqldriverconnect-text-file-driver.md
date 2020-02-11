@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Textdateitreiber) | Microsoft-Dokumentation
+title: SQLDriverConnect (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9343361e7ad6fbfdf68b82218a39a56fa8d928e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053910"
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (Textdateitreiber)
 > [!NOTE]  
->  Dieses Thema enthält die Textdatei-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In diesem Thema werden Treiber spezifische Informationen zu Textdateien bereitstellt. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLDriverConnect** können Sie auf einen Treiber zu verbinden, ohne das Erstellen einer Datenquelle (DSN).  
+ **SQLDriverConnect** ermöglicht Ihnen das Herstellen einer Verbindung mit einem Treiber, ohne eine Datenquelle (DSN) zu erstellen.  
   
- Die folgenden Schlüsselwörter werden in der Verbindungszeichenfolge für alle Treiber unterstützt: **DSN**, **DBQ**, und **FIL**.  
+ Die folgenden Schlüsselwörter werden in der Verbindungs Zeichenfolge für alle Treiber unterstützt: **DSN**, **DBQ**und **fil**.  
   
- Die folgende Tabelle zeigt die minimale Schlüsselwörter, die für die Verbindung mit jeder Treiber und enthält ein Beispiel der Schlüsselwort-Wert-Paare, die mit verwendet **SQLDriverConnect**. Eine vollständige Liste der Werte von DRIVERID, finden Sie unter [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).  
+ In der folgenden Tabelle sind die minimalen Schlüsselwörter aufgeführt, die zum Herstellen einer Verbindung mit den einzelnen Treibern erforderlich sind, sowie ein Beispiel für Schlüsselwort-Wert-Paare, die mit **SQLDriverConnect** Eine vollständige Liste der DriverID-Werte finden Sie unter [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).  
   
 > [!NOTE]  
->  Wenn es sich bei DBQ oder Wert für den Treiber Text nicht angegeben wird, werden die Treiber in das aktuelle Verzeichnis verbunden.  
+>  Wenn DBQ oder DefaultDir für den Text Treiber nicht angegeben wird, stellt der Treiber eine Verbindung mit dem aktuellen Verzeichnis her.  
   
-|Treiber|Schlüsselwörter, die erforderlich sind|Beispiele|  
+|Treiber|Schlüsselwörter erforderlich|Beispiele|  
 |------------|-----------------------|--------------|  
-|Text|Treiber|Driver={Microsoft Text Driver (*.txt;\*.csv)}; DefaultDir=c:\temp|
+|Text|Treiber|Driver = {Microsoft Text Driver (*. txt;\*. CSV)}; DefaultDir = c:\temp|

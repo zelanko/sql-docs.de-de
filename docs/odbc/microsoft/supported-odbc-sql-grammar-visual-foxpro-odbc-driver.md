@@ -1,5 +1,5 @@
 ---
-title: ODBC-SQL-Grammatik (Visual FoxPro-ODBC-Treiber) unterstützt | Microsoft-Dokumentation
+title: Unterstützte ODBC-SQL-Grammatik (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,29 +19,29 @@ ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080055"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Unterstützte ODBC-SQL-Grammatik (Visual FoxPro-ODBC-Treiber)
-Die Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:  
+Der Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:  
   
--   Alle SQL-Anweisungen und Klauseln in die minimale ODBC-SQL-Grammatik  
+-   Alle SQL-Anweisungen und-Klauseln in der minimalen ODBC-SQL-Grammatik  
   
--   Eine zusätzliche SQL-Anweisung von ODBC-zentralen SQL-Grammatik  
+-   Eine zusätzliche SQL-Anweisung aus der ODBC Core SQL-Grammatik  
   
- Die folgende Tabelle enthält die Elemente, die vom Treiber, nach der Ebene der ODBC-SQL-Grammatik unterstützt wird.  
+ In der folgenden Tabelle werden die vom Treiber unterstützten Elemente von der ODBC-SQL-Grammatik Ebene aufgelistet.  
   
-|Ebene|Elements|Element|  
+|Ebene|Elemente|Element|  
 |-----------|--------------|----------|  
-|Minimum|Datendefinitionssprache (DDL)|CREATE TABLE und DROP TABLE|  
-||Datenbearbeitungssprache (DML)|AUSWÄHLEN, einfügen, aktualisieren und löschen|  
-||Ausdrücke|Einfache (z. B. ein > B + C)|  
-||Datentypen|CHAR, VARCHAR oder LONG VARCHAR|  
+|Minimum|Data Definition Language (DDL)|CREATE TABLE und DROP TABLE|  
+||Data Manipulation Language (DML)|SELECT, INSERT, Update und DELETE|  
+||Ausdrücke|Einfach (z. b. a>B + C)|  
+||Datentypen|Char, varchar oder long varchar|  
   
- Zusätzlich zu den unterstützten ODBC-SQL-Grammatik unterstützt der Visual FoxPro-ODBC-Treiber die vollständige systemeigene Visual FoxPro-Language-Syntax für die folgenden Visual FoxPro-Befehle:  
+ Zusätzlich zur unterstützten ODBC-SQL-Grammatik unterstützt der Visual FoxPro-ODBC-Treiber die gesamte Native Visual FoxPro-Sprachsyntax für die folgenden Visual FoxPro-Befehle:  
   
  [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
@@ -49,9 +49,9 @@ Die Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:
   
  [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
- [TAG LÖSCHEN](../../odbc/microsoft/delete-tag-command.md)  
+ [Tag löschen](../../odbc/microsoft/delete-tag-command.md)  
   
- [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
+ [Tabelle löschen](../../odbc/microsoft/drop-table-command.md)  
   
  [INDEX](../../odbc/microsoft/index-command.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Datentypen (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
+title: Zuordnung von Datentypen (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47646fd6fdf1e8fd16165af1bcfc5e741c6e610f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080740"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>Zuordnen von Datentypen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Der Oracle-Server unterstützt einen Satz von Datentypen. Der ODBC-Treiber für Oracle werden diese Datentypen in ihre entsprechenden ODBC SQL-Datentypen zugeordnet. Die folgende Tabelle enthält die Oracle 7.3-Server-Datentypen und die entsprechenden ODBC SQL-Datentypen.  
+ Der Oracle-Server unterstützt einen Satz von Datentypen. Der ODBC-Treiber für Oracle ordnet diese Datentypen den entsprechenden ODBC-SQL-Datentypen zu. In der folgenden Tabelle werden die Oracle 7,3-Server Datentypen und ihre entsprechenden ODBC-SQL-Datentypen aufgelistet.  
   
- Der ODBC-Treiber für Oracle unterstützt Oracle 7.3 und einige 8-Datentypen. Weitere Informationen zu unterstützten 8-Datentypen finden Sie unter [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
+ Der ODBC-Treiber für Oracle unterstützt Oracle 7,3 und einige Oracle8-Datentypen. Weitere Informationen zu unterstützten Oracle8-Datentypen finden Sie [unter Unterstützte Datentypen](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
   
-|Oracle-Server-Datentyp|ODBC-SQL-Datentyp|  
+|Oracle-Server Datentyp|ODBC SQL-Datentyp|  
 |-----------------------------|------------------------|  
 |CHAR|SQL_CHAR|  
 |DATE|SQL_TIMESTAMP|  
@@ -42,4 +42,4 @@ ms.locfileid: "68080740"
 |VARCHAR2|SQL_VARCHAR|  
   
 > [!NOTE]  
->  Weitere Informationen zu die zulässige Größe der Spalte VARCHAR, finden Sie unter [VARCHAR-Spaltengröße](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) in diesem Handbuch.
+>  Weitere Informationen zur zulässigen Größe der varchar-Spalte finden Sie in diesem Handbuch unter [varchar Column size](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) .

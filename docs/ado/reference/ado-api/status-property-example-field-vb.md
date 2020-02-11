@@ -1,5 +1,5 @@
 ---
-title: Status-Eigenschaft – Beispiel (Field) (VB) | Microsoft-Dokumentation
+title: Status Eigenschafts Beispiel (Feld) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916825"
 ---
 # <a name="status-property-example-field-vb"></a>Status-Eigenschaft – Beispiel (Field) (VB)
-Im folgende Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff geöffnet. die [Internet Publishing-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) Eigenschaft eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird zunächst festgelegt **AdFieldPendingInsert**, und klicken Sie dann auf aktualisiertwerden**AdFieldOk**.  
+Im folgenden Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff mit dem [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)geöffnet. Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) -Eigenschaft eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts des [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md) wird zuerst auf **adfieldpdinginsert**festgelegt und dann auf **adFieldOK**aktualisiert.  
   
 ```  
 'BeginStatusFieldVB  
@@ -79,19 +79,19 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- Im folgenden Beispiel wird ein bekanntes **Feld** aus einem **Datensatz** aus einem Dokument geöffnet. Die **Status** Eigenschaft wird zunächst festgelegt werden, um **AdFieldOK**, klicken Sie dann **AdFieldPendingUnknown**.  
+ Im folgenden Beispiel wird ein bekanntes **Feld** aus einem **Datensatz** gelöscht, der aus einem Dokument geöffnet wurde. Die Eigenschaft **Status** wird zuerst auf **adFieldOK**und dann auf **adfieldpdingunknown**festgelegt.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- Der folgende code Löscht ein **Feld** aus einem **Datensatz** in einem Dokument schreibgeschützt geöffnet. **Status** festgelegt **AdFieldPendingDelete**. Am [Update](../../../ado/reference/ado-api/update-method.md), der Löschvorgang schlägt fehl und **Status** werden **AdFieldPendingDelete** plus **AdFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) löscht die ausstehenden **Status** festlegen.  
+ Mit dem folgenden Code wird ein **Feld** aus einem **Datensatz** gelöscht, der in einem schreibgeschützten Dokument geöffnet wurde. Der **Status** wird auf **adfieldpdingdelete**festgelegt. Bei der [Aktualisierung](../../../ado/reference/ado-api/update-method.md)schlägt der Löschvorgang fehl, und der **Status** **lautet adfieldpdingdelete** Plus **adfieldpermissiondenied**. Mit [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) wird die Einstellung für den ausstehenden **Status** gelöscht.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Status-Eigenschaft (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Status-Eigenschaft (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)

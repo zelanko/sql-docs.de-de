@@ -14,28 +14,28 @@ ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 833c953df3502eb7e5d5676da8df057734174619
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071923"
 ---
 # <a name="driver-architecture-overview"></a>Übersicht über die Treiberarchitektur
-Die Microsoft Visual FoxPro-ODBC-Treiber ist eine 32-Bit-Treiber, der Sie öffnen und eine Microsoft Visual FoxPro-Datenbank oder FoxPro-Tabellen über die öffnen Database Connectivity (ODBC)-Schnittstelle Abfragen ermöglicht. Sie können mithilfe der folgenden Arten von Anwendungen FoxPro-Daten zugreifen:  
+Der Microsoft Visual FoxPro-ODBC-Treiber ist ein 32-Bit-Treiber, der es Ihnen ermöglicht, eine Microsoft Visual FoxPro-Datenbank oder FoxPro-Tabellen über die Open Database Connectivity (ODBC)-Schnittstelle zu öffnen und abzufragen. Sie können mit den folgenden Anwendungs Typen auf FoxPro-Daten zugreifen:  
   
--   Microsoft Office-Anwendung, z. B. Microsoft Excel oder Microsoft Word, Microsoft Query für die Kommunikation mit ODBC verwendet.  
+-   Eine Microsoft Office Anwendung, z. b. Microsoft Excel oder Microsoft Word, die Microsoft Query für die Kommunikation mit ODBC verwendet.  
   
--   Eine Anwendung, geschrieben in Microsoft Visual C++ oder C#, die die ODBC-SDK-API verwendet.  
+-   Eine in Microsoft Visual C++ oder C geschriebene Anwendung, die die ODBC SDK-API verwendet.  
   
--   Eine Anwendung, die in Microsoft Visual Basic oder Microsoft Visual Basic for Applications geschrieben wird.  
+-   Eine Anwendung, die in Microsoft Visual Basic oder Microsoft Visual Basic for Applications geschrieben wurde.  
   
- In jedem Fall verwendet die Anforderung von Informationen über die ODBC-API. Der ODBC-Treiber-Manager arbeitet mit der Visual FoxPro-ODBC-Treiber öffnen und das Abrufen von Daten aus Datenbanken und FoxPro-Tabellen.  
+ In jedem Fall wird für die Informationsanforderung die ODBC-API verwendet. Der ODBC-Treiber-Manager verwendet den Visual FoxPro-ODBC-Treiber, um Daten aus FoxPro-Tabellen und-Datenbanken zu öffnen und abzurufen.  
   
- Die Architektur wird in der folgenden Abbildung dargestellt:  
+ Die Architektur wird im folgenden Diagramm dargestellt:  
   
- ![Zeigt die ODBC-Treiberarchitektur](../../odbc/microsoft/media/vfparch.gif "Vfparch")  
+ ![Zeigt die ODBC-Treiberarchitektur](../../odbc/microsoft/media/vfparch.gif "vfparser")  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Visual FoxPro-Terminologie](../../odbc/microsoft/visual-foxpro-terminology.md)  
   

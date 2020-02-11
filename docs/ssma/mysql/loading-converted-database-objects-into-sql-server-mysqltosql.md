@@ -1,5 +1,5 @@
 ---
-title: Loading Converted Database Objects into SQLServer (MySQLToSQL)) | Microsoft-Dokumentation
+title: Laden von konvertierten Datenbankobjekten in SQL Server (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,99 +10,99 @@ ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a6966209300e6959e7ba9cb1afa11eb42b855d82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909016"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Laden konvertierter Datenbankobjekte in SQL Server (MySqlToSql)
-Nachdem Sie die MySQL-Datenbanken zu konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, laden die daraus resultierende Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können entweder SSMA, die die Objekte zu erstellen, oder Sie können Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus SSMA können Sie die Metadaten mit den eigentlichen Inhalt der aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank.  
+Nachdem Sie MySQL-Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure konvertiert haben, können Sie die resultierenden Daten Bank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte in oder SQL Azure laden. Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank aktualisieren.  
   
-## <a name="choosing-between-synchronization-and-scripts"></a>Auswählen zwischen Synchronisierung und Skripts  
-Wenn Sie die konvertierten Datenbankobjekten in laden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure ohne Änderungen, können Sie SSMA direkt zu erstellen oder die Datenbankobjekte neu erstellt haben. Dass die Methode kann schnell und einfach, aber es lässt sich nicht für die Anpassung der Transact-SQL-Code, definiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte.  
+## <a name="choosing-between-synchronization-and-scripts"></a>Zwischen Synchronisierung und Skripts auswählen  
+Wenn Sie die konvertierten Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure ohne Änderungen laden möchten, können Sie die Datenbankobjekte von SSMA direkt erstellen oder neu erstellen. Diese Methode ist schnell und einfach, ermöglicht jedoch keine Anpassung des Transact-SQL-Codes, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Objekte definiert.  
   
-Verwenden Sie Wenn die Transact-SQL zu ändern, die zum Erstellen von Objekten verwendet werden sollen oder wenn Sie mehr Kontrolle über die Objekte erstellen möchten, SSMA zum Erstellen von Skripts. Sie können diese Skripts ändern, klicken Sie dann, jedes Objekt einzeln erstellen und verwenden SQL Server-Agent auch planen, diese Objekte erstellt.  
+Wenn Sie Transact-SQL zum Erstellen von Objekten ändern möchten, oder wenn Sie mehr Kontrolle über die Objekt Erstellung haben möchten, verwenden Sie SSMA zum Erstellen von Skripts. Anschließend können Sie diese Skripts ändern, jedes Objekt einzeln erstellen und sogar SQL Server-Agent verwenden, um die Erstellung dieser Objekte zu planen.  
   
-## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Verwenden SSMA zum Synchronisieren von Objekten mit SQLServer  
-Um SSMA zum Erstellen von SQL Server oder SQL Azure-Datenbank-Objekten zu verwenden, wählen Sie die Objekte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer, und klicken Sie dann zu synchronisieren der Objekte mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, wie im folgenden Verfahren dargestellt. Standardmäßig, wenn die Objekte noch in vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, wenn der SSMA-Metadaten enthält, einige lokale Änderungen oder Updates für die Definition dieser Objekte sehr, SSMA ändern, die Objektdefinitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können das Standardverhalten ändern, indem Sie die Bearbeitung **Projekteinstellungen**.  
+## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Verwenden von SSMA zum Synchronisieren von Objekten mit SQL Server  
+Wenn Sie SSMA zum Erstellen von SQL Server oder SQL Azure Datenbankobjekten verwenden möchten, wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie die Objekte in oder SQL Azure Metadaten-Explorer aus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und synchronisieren Sie dann die Objekte mit oder SQL Azure, wie im folgenden Verfahren gezeigt. Wenn die Objekte bereits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure vorhanden sind und die SSMA-Metadaten über lokale Änderungen oder Aktualisierungen der Definition dieser Objekte verfügen, ändert SSMA standardmäßig die Objekt Definitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können das Standardverhalten ändern, indem Sie die **Projekteinstellungen**bearbeiten.  
   
 > [!NOTE]  
-> Sie können auswählen, vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekte, die vom MySQL-Datenbanken nicht konvertiert wurden. Aber werden diese Objekte nicht neu erstellt oder geändert werden von SSMA.  
+> Sie können vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekte auswählen, die nicht aus MySQL-Datenbanken konvertiert wurden. Diese Objekte werden jedoch nicht von SSMA neu erstellt oder geändert.  
   
-##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>Zum Synchronisieren von Objekten mit SQL Server oder SQL Azure  
+##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>So synchronisieren Sie Objekte mit SQL Server oder SQL Azure  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer, erweitern im oberen Bereich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Knoten, und erweitern Sie dann **Datenbanken**.  
+1.  Erweitern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in oder SQL Azure metadatenexplorer den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Knoten oben oder SQL Azure, und erweitern Sie dann **Datenbanken**.  
   
 2.  Wählen Sie die zu verarbeitenden Objekte aus:  
   
-    -   Um eine vollständige Datenbank zu synchronisieren, wählen Sie das Kontrollkästchen neben dem Datenbanknamen.  
+    -   Aktivieren Sie das Kontrollkästchen neben dem Datenbanknamen, um eine komplette Datenbank zu synchronisieren.  
   
-    -   Klicken Sie zum Synchronisieren, oder lassen Sie einzelne Objekte oder Kategorien von Objekten, aktivieren Sie oder deaktivieren Sie das Kontrollkästchen neben dem Objekt oder einen Ordner.  
+    -   Aktivieren bzw. deaktivieren Sie das Kontrollkästchen neben dem Objekt oder Ordner, um einzelne Objekte oder Kategorien von Objekten zu synchronisieren oder auszulassen.  
   
-3.  Nachdem Sie die zu verarbeitenden in SQL Server oder SQL Azure-Metadaten-Explorer Objekte ausgewählt haben, mit der rechten Maustaste **Datenbanken**, und klicken Sie dann auf **synchronisieren mit der Datenbank**.  
+3.  Nachdem Sie die zu verarbeitenden Objekte in SQL Server oder SQL Azure Metadaten-Explorer ausgewählt haben, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **mit Datenbank synchronisieren**.  
   
-    Sie können auch die einzelne Objekte oder Kategorien von Objekten synchronisieren, indem Sie mit der rechten Maustaste das Objekt oder der übergeordnete Ordner, und klicken Sie dann auf **synchronisieren mit der Datenbank**.  
+    Sie können einzelne Objekte oder Objektkategorien auch synchronisieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf **mit Datenbank synchronisieren**klicken.  
   
-    Danach SSMA zeigt die **synchronisieren mit der Datenbank** Dialogfeld hier Sie zwei Gruppen von Elementen sehen. Klicken Sie auf der linken Seite zeigt SSMA ausgewählte Datenbankobjekte in einer Struktur dargestellt. Klicken Sie auf der rechten Seite sehen Sie eine Struktur, die dieselben Objekte in der SSMA-Metadaten darstellt. Sie können die Struktur durch Klicken auf Links oder rechts erweitern Schaltfläche "+". Die Richtung der Synchronisierung wird in der Aktionsspalte zwischen die beiden Strukturen angeordnet wurden, angezeigt.  
+    Danach zeigt SSMA das Dialogfeld **mit Datenbank synchronisieren an** , in dem Sie zwei Gruppen von Elementen sehen können. Auf der linken Seite zeigt SSMA ausgewählte Datenbankobjekte an, die in einer Struktur dargestellt werden. Auf der rechten Seite sehen Sie eine Baumstruktur, die die gleichen Objekte in SSMA-Metadaten darstellt. Sie können die Struktur erweitern, indem Sie auf die Schaltfläche mit der rechten oder linken Schaltfläche klicken. Die Richtung der Synchronisierung wird in der Aktionsspalte angezeigt, die zwischen den beiden Strukturen platziert ist.  
   
-    Eine Aktion anmelden können die folgenden drei Zustände aufweisen:  
+    Ein Aktions Vorzeichen kann sich in den folgenden drei Zuständen befinden:  
   
-    -   Ein Pfeil nach links bedeutet, dass der Inhalt der Metadaten in der Datenbank (Standard) gespeichert werden soll.  
+    -   Der nach-links-Pfeil bedeutet, dass der Inhalt der Metadaten in der Datenbank gespeichert wird (Standardeinstellung).  
   
-    -   Ein Pfeil nach rechts bedeutet, dass es sich bei Datenbankinhalte die SSMA-Metadaten überschrieben werden.  
+    -   Ein Pfeil nach rechts bedeutet, dass der Daten Bank Inhalt die SSMA-Metadaten überschreibt.  
   
-    -   Ein Kreuz bedeutet, dass keine weitere Aktion durchgeführt wird.  
+    -   Ein Kreuzzeichen bedeutet, dass keine Aktion ausgeführt wird.  
   
-    -   Klicken Sie auf der Aktion zum Ändern des Zustands. Tatsächliche Synchronisierung wird durchgeführt, wenn Sie auf **OK** -Schaltfläche der **synchronisieren mit der Datenbank** Dialogfeld.  
+    -   Klicken Sie auf das Aktions Zeichen, um den Status zu ändern. Die eigentliche Synchronisierung wird durchgeführt, wenn Sie im Dialogfeld **mit Datenbank synchronisieren** auf die Schaltfläche **OK** klicken.  
   
 ## <a name="scripting-objects"></a>Skripterstellung für Objekte  
-Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] Definitionen der konvertierten Datenbankobjekte, um die Objektdefinitionen ändern und Ausführen von Skripts selbst, können Sie speichern die konvertierte Datenbank Objektdefinitionen, [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts.  
+Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] der Definitionen der konvertierten Datenbankobjekte oder zum Ändern der Objekt Definitionen und zum Ausführen von Skripts können Sie die konvertierten Daten Bank [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekt Definitionen in Skripts speichern.  
   
-**Zum Speichern von Objekten wie Skripts**  
+**So speichern Sie Objekte als Skripts**  
   
-1.  Nachdem Sie die Objekte, die in einem Skript speichern ausgewählt haben, mit der rechten Maustaste **Datenbanken**, und klicken Sie dann auf **speichern als Skript**.  
+1.  Nachdem Sie die zu speichernden Objekte in einem Skript ausgewählt haben, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **als Skript speichern**.  
   
-    Sie können auch einzelne Objekte oder Kategorien von Objekten von der rechten Maustaste auf das Objekt oder der übergeordnete Ordner, und klicken Sie dann auf Skripts **speichern als Skript**.  
+    Sie können auch Skripts für einzelne Objekte oder Kategorien von Objekten erstellen, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf **als Skript speichern**klicken.  
   
-2.  In der **speichern unter** Dialogfeld Suchen den Ordner, in der Sie speichert das Skript, einen Dateinamen in eingeben möchten, die **Dateiname** Feld, und klicken Sie dann [!INCLUDE[clickOK](../../includes/clickok-md.md)] SSMA wird die SQL-Dateinamenerweiterung angefügt.  
+2.  Suchen Sie im Dialogfeld **Speichern** unter den Ordner, in dem Sie das Skript speichern möchten, und geben Sie im Feld **Dateiname** einen Dateinamen ein [!INCLUDE[clickOK](../../includes/clickok-md.md)] . die Dateinamenerweiterung wird dann von SSMA angefügt.  
   
 ### <a name="modifying-scripts"></a>Ändern von Skripts  
-Nachdem Sie die SQL Server- oder SQL Azure-Objektdefinitionen als Skript gespeichert haben, können Sie SQL Server Management Studio, um das Skript bearbeiten.  
+Nachdem Sie die SQL Server oder SQL Azure Objekt Definitionen als Skript gespeichert haben, können Sie mit SQL Server Management Studio das Skript ändern.  
   
-**Um ein Skript zu ändern.**  
+**So ändern Sie ein Skript**  
   
-1.  Management Studio **Datei** Startmenü **öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie im Menü Management Studio **Datei** auf **Öffnen**, und klicken Sie dann auf **Datei**.  
   
-2.  Klicken Sie im Dialogfeld "Öffnen" Suchen und wählen Sie die Skriptdatei, und klicken Sie dann auf **OK**.  
+2.  Suchen Sie im Dialogfeld Öffnen die Skriptdatei, und wählen Sie Sie aus, und klicken Sie dann auf **OK**.  
   
-3.  Bearbeiten Sie die Skriptdatei mit dem abfrageeditor. Weitere Informationen zu den Abfrage-Editor finden Sie unter "-Editor der Einfachheit halber Befehle und Funktionen" in SQL Server-Onlinedokumentation.  
+3.  Bearbeiten Sie die Skriptdatei mit dem Abfrage-Editor. Weitere Informationen zum Abfrage-Editor finden Sie unter "praktische Befehle und Features im Editor" in SQL Server-Onlinedokumentation.  
   
-4.  Wählen Sie zum Speichern des Skripts im Menü Datei **speichern**.  
+4.  Um das Skript zu speichern, wählen Sie im Menü Datei die Option **Speichern**aus.  
   
 ### <a name="running-scripts"></a>Ausführen von Skripts  
-Sie können ein Skript oder einzelne Anweisungen in SQL Server Management Studio ausführen.  
+In SQL Server Management Studio können Sie ein Skript oder einzelne Anweisungen ausführen.  
   
-**Zum Ausführen eines Skripts**  
+**So führen Sie ein Skript aus**  
   
-1.  Auf dem SQL Server Management Studio **Datei** Startmenü **öffnen** , und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie im Menü SQL Server Management Studio **Datei** auf **Öffnen** , und klicken Sie dann auf **Datei**.  
   
-2.  Klicken Sie im Dialogfeld "Öffnen" Suchen und wählen Sie die Skriptdatei, und klicken Sie dann auf **OK**.  
+2.  Suchen Sie im Dialogfeld Öffnen die Skriptdatei, und wählen Sie Sie aus, und klicken Sie dann auf **OK**.  
   
-3.  Um das vollständige Skript auszuführen, drücken Sie die **F5** Schlüssel.  
+3.  Drücken Sie die Taste **F5** , um das komplette Skript auszuführen.  
   
-4.  Um einen Satz von Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster, und drücken Sie dann die **F5** Schlüssel.  
+4.  Um einen Satz von-Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster aus, und drücken Sie dann die Taste **F5** .  
   
-5.  Weitere Informationen dazu, wie Sie den Abfrage-Editor verwenden, um Skripts auszuführen finden Sie unter "SQL Server Management Studio Transact-SQL-Abfrage" in SQL Server-Onlinedokumentation.  
+5.  Weitere Informationen zur Verwendung des Abfrage-Editors zum Ausführen von Skripts finden Sie unter "SQL Server Management Studio Transact-SQL-Abfrage" in SQL Server-Onlinedokumentation.  
   
-6.  Sie können Skripts auch über die Befehlszeile ausführen, mit der **Sqlcmd** -Hilfsprogramm, und von SQL Server-Agent. Weitere Informationen zu **Sqlcmd**, finden Sie unter "Hilfsprogramms" Sqlcmd"" in SQL Server-Onlinedokumentation. Weitere Informationen zu SQL Server-Agent finden Sie unter "Automatisieren von administrativen Tasks (SQL Server-Agent)" in SQL Server-Onlinedokumentation.  
+6.  Sie können Skripts auch über die Befehlszeile ausführen, indem Sie das Hilfsprogramm **sqlcmd** und aus SQL Server-Agent verwenden. Weitere Informationen zu **sqlcmd**finden Sie unter "sqlcmd Utility" in SQL Server-Onlinedokumentation. Weitere Informationen zu SQL Server-Agent finden Sie im Thema zum Automatisieren administrativer Aufgaben (SQL Server-Agent) unter SQL Server-Onlinedokumentation.  
   
-## <a name="securing-objects-in-sql-server"></a>Sichern die Objekte in SQLServer  
-Nachdem Sie die konvertierten Datenbankobjekten in SQL Server geladen haben, können Sie erteilen und Verweigern von Berechtigungen für diese Objekte. Es ist eine gute Idee, klicken Sie hierzu vor dem Migrieren von Daten in SQL Server. Informationen dazu, wie Sie sichere Objekte in SQL Server-Hilfe finden Sie unter "Security Überlegungen zu Datenbanken und Datenbankanwendungen" in SQL Server-Onlinedokumentation.  
+## <a name="securing-objects-in-sql-server"></a>Sichern von Objekten in SQL Server  
+Nachdem Sie die konvertierten Datenbankobjekte in SQL Server geladen haben, können Sie Berechtigungen für diese Objekte erteilen und verweigern. Es empfiehlt sich, dies zu tun, bevor Sie Daten zu SQL Server migrieren. Informationen zum Sichern von Objekten in SQL Server finden Sie unter "Sicherheitsüberlegungen für Datenbanken und Datenbankanwendungen" in SQL Server-Onlinedokumentation.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt des Migrationsvorgangs [Migrieren von MySQL-Daten in SQL Server – Azure SQL-Datenbank &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+Der nächste Schritt des Migrations Vorgangs ist das [Migrieren von MySQL-Daten in SQL Server Azure SQL-Datenbank &#40;mysqldesql&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_validate_plan_guide (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fn_validate_plan_guide (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059195"
 ---
-# <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
+# <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Überprüft die Gültigkeit der angegebenen Planhinweisliste. Die sys.fn_validate_plan_guide-Funktion gibt die erste Fehlermeldung zurück, die beim Anwenden der Planhinweisliste auf ihre Abfrage gefunden wird. Ein leeres Rowset wird zurückgegeben, wenn die Planhinweisliste gültig ist. Planhinweislisten können ungültig werden, nachdem Änderungen am physischen Entwurf der Datenbank vorgenommen wurden. Wenn beispielsweise eine Planhinweisliste einen bestimmten Index angibt, und dieser Index anschließend gelöscht wird, kann die Abfrage die Planhinweisliste nicht länger verwenden.  
   
  Durch Überprüfen der Gültigkeit einer Planhinweisliste können Sie feststellen, ob die Planhinweisliste ohne Änderungen durch den Optimierer verwendet werden kann. Auf der Basis der Ergebnisse der Funktion können Sie entscheiden, dass die Planhinweisliste gelöscht wird und die Abfrage neu optimiert wird, oder Sie können den Datenbankentwurf ändern, indem Sie beispielsweise den in der Planhinweisliste angegebenen Index neu erstellen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,16 +44,16 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Argumente  
  *plan_guide_id*  
- Die ID der Planhinweisliste, wie sie in der [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) -Katalogsicht angegeben ist. *plan_guide_id* ist vom Datentyp **int** und besitzt keinen Standardwert.  
+ Die ID der Planhinweisliste, wie sie in der [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) -Katalogsicht angegeben ist. *plan_guide_id* ist vom Datentyp **int** und hat keinen Standardwert.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|ID der Fehlermeldung.|  
 |severity|**tinyint**|Schweregrad des Fehlers, der zwischen 1 und 25 liegen kann.|  
 |state|**smallint**|Statusnummer des Fehlers, welche die Stelle im Code angibt, an der der Fehler aufgetreten ist.|  
-|message|**nvarchar(2048)**|Meldungstext des Fehlers.|  
+|message|**nvarchar (2048)**|Meldungstext des Fehlers.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für Planhinweislisten mit dem Bereich OBJECT ist die VIEW DEFINITION- oder die ALTER-Berechtigung für das Objekt erforderlich, auf das verwiesen wird, ebenso wie Berechtigungen zur Kompilierung der Abfrage oder des Batches, die in der Planhinweisliste bereitgestellt werden. Wenn ein Batch z. B. SELECT-Anweisungen enthält, sind SELECT-Berechtigungen für die Objekte erforderlich, auf die verwiesen wird.  
@@ -92,9 +92,9 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Planhinweislisten](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Plan Hinweis Listen](../../relational-databases/performance/plan-guides.md)   
+ [sp_create_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ADO – dynamische Eigenschaften | Microsoft-Dokumentation
+title: Dynamische ADO-Eigenschaften | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,35 +14,35 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921093"
 ---
 # <a name="ado-dynamic-properties"></a>ADO – dynamische Eigenschaften
-Dynamische Eigenschaften hinzugefügt werden können die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte. Die Quelle für diese Eigenschaften ist entweder ein Datenanbieter, wie z. B. die [OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), oder ein Dienstanbieter, wie z. B. die [Microsoft Cursor Service für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Finden Sie in der entsprechenden Datenanbieter oder die Dokumentation von Service Provider für Weitere Informationen zu einer bestimmten dynamische Eigenschaft.  
+Dynamische Eigenschaften können den [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistungen der [Connection](../../../ado/reference/ado-api/connection-object-ado.md)-, [Command](../../../ado/reference/ado-api/command-object-ado.md)-oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte hinzugefügt werden. Die Quelle für diese Eigenschaften ist entweder ein Datenanbieter, z. b. der [OLE DB Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), oder ein Dienstanbieter, z. b. der [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Weitere Informationen zu einer bestimmten dynamischen Eigenschaft finden Sie in der entsprechenden Datenanbieter-oder Dienstanbieter Dokumentation.  
   
- Die [ADO dynamische Property-Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) stellt einen Querverweis zwischen den ADO und OLE DB-Namen für jede dynamische Eigenschaft der standard OLE DB-Anbieter bereit.  
+ Der [dynamische ADO-Eigenschafts Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) stellt einen Querverweis zwischen den ADO-und OLE DB Namen für jede dynamische Eigenschaft des Standard OLE DB Anbieters bereit.  
   
- Die folgenden dynamischen Eigenschaften sind besonders interessant, und auch in den Quellen, die zuvor erwähnten dokumentiert sind. Spezielle Funktionen mit ADO ist in den ADO-Hilfethemen in der folgenden Liste dokumentiert.  
+ Die folgenden dynamischen Eigenschaften sind besonders interessant und auch in den zuvor erwähnten Quellen dokumentiert. Spezielle Funktionen mit ADO sind in den ADO-Hilfe Themen in der folgenden Liste dokumentiert.  
   
 |||  
 |-|-|  
-|[Optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index für dieses Feld erstellt werden soll.|  
-|[Eingabeaufforderung](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Gibt an, ob der OLE DB-Anbieter, den Benutzer zur Initialisierung auffordert.|  
-|[Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt einen Namen für die **Recordset** Objekt.|  
-|[Resync-Befehl](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt an, ein benutzerdefinierten Befehl-Zeichenfolge, die **Resync** Probleme der Methode zum Aktualisieren der Daten in der Tabelle, die mit dem Namen in der **eindeutige Tabelle** dynamische Eigenschaft.|  
-|[Unique Table, Unique Schema und Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Eindeutige Tabelle** gibt den Namen der Basistabelle, auf denen Updates, einfügungen und löschungen zulässig sind.<br /><br /> **Eindeutiges Schema** gibt an, das Schema oder die Namen des Besitzers der Tabelle.<br /><br /> **Eindeutige Katalogressource** gibt an, den Katalog oder die Namen der Datenbank, die die Tabelle enthält.|  
-|[Aktualisieren Sie die erneute Synchronisierung](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Gibt an, ob die **UpdateBatch** Methode einen impliziten folgt **Resync** Vorgangs-Methode, und wenn Ja, im Rahmen dieses Vorgangs.|  
+|[Optimiert](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob für dieses Feld ein Index erstellt werden soll.|  
+|[Nahen](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs Informationen auffordern soll.|  
+|[Name der erneuten Form](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt einen Namen für das **Recordset** -Objekt an.|  
+|[Befehl zum erneuten Synchronisieren](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Methode für die **erneute Synchronisierung** die Daten in der in der dynamischen Eigenschaft **Unique Table** genannten Tabelle aktualisiert.|  
+|[Unique Table, Unique Schema, Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Eindeutige Tabelle** Gibt den Namen der Basistabelle an, auf der Updates, Einfügungen und Löschungen zulässig sind.<br /><br /> Eindeutiges **Schema** Gibt das Schema oder den Namen des Besitzers der Tabelle an.<br /><br /> Eindeutiger **Katalog** Gibt den Katalog oder den Namen der Datenbank an, in der die Tabelle enthalten ist.|  
+|[Neusynchronisierung aktualisieren](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Gibt an, ob auf die **UpdateBatch** -Methode ein impliziter Vorgang zum **erneuten Synchronisieren** der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   
- [ADO-Collections](../../../ado/reference/ado-api/ado-collections.md)   
- [ADO – Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [ADO-Sammlungen](../../../ado/reference/ado-api/ado-collections.md)   
+ [ADO-Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
+ [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
+ [ADO-Objekte und-Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)
