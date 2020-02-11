@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit SSMA für DB2-Konsole (DB2ToSQL) | Microsoft-Dokumentation
+title: Getting Started with SSMA for DB2 Console (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,57 +10,57 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989651"
 ---
-# <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Erste Schritte mit SSMA für DB2-Konsole (DB2ToSQL)
-Dieser Abschnitt beschreibt die Vorgehensweise zum Starten, und beginnen Sie mit der DB2-Konsolenanwendung. Auch aufgeführt ist, werden die Konventionen in diesem Dokument, in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  
+# <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Getting Started with SSMA for DB2 Console (DB2ToSQL)
+In diesem Abschnitt wird das Verfahren zum Starten und Starten der DB2-Konsolenanwendung beschrieben. Hier sind auch die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
   
-## <a name="launching-ssma-console"></a>Starten SSMA-Konsole  
-Verwenden Sie die folgenden Schritte aus, um die SSMA-Console-Anwendung zu starten:  
+## <a name="launching-ssma-console"></a>Starten der SSMA-Konsole  
+Verwenden Sie die folgenden Schritte, um die SSMA-Konsolenanwendung zu starten:  
   
-1.  Wechseln Sie zu **starten** und zeigen Sie auf **Programme**.  
+1.  Wechseln Sie zu **Start** , und zeigen Sie auf **Alle Programme**.  
   
-2.  Klicken Sie auf die  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migrations-Assistent für die DB2-Eingabeaufforderung** Verknüpfung.  
+2.  Klicken Sie auf die ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verknüpfung Migration Assistant für DB2-Eingabeaufforderung** .  
   
-    Klicken Sie im Menü der SSMA-Konsole Nutzung angezeigt und `(/? Help)`, damit Sie mit der Konsolenanwendung zu beginnen.  
+    Er zeigt das Menü Verwendung der SSMA- `(/? Help)`Konsole und an, um Ihnen den Einstieg in die Konsolenanwendung zu erleichtern.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Verfahren für die Verwendung der SSMA-Konsole  
-Nach dem die Konsole wurde erfolgreich auf Ihrem Windows-System gestartet wird, können Sie die folgenden Schritte aus, an einem Projekt arbeiten:  
+Nachdem die Konsole erfolgreich auf Ihrem Windows-System gestartet wurde, können Sie die folgenden Schritte ausführen, um Sie zu bearbeiten:  
   
-1.  Konfigurieren Sie SSMA-Konsole, über die Skriptdateien. Weitere Informationen in diesem Abschnitt finden Sie unter [Skriptdateien erstellen &#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md) .  
+1.  Konfigurieren Sie die SSMA-Konsole über die Skriptdateien. Weitere Informationen zu diesem Abschnitt finden Sie unter [Erstellen von Skriptdateien &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md) .  
   
-2.  [Erstellen die Variable Value Files &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+2.  [Erstellen von Variablen Wert Dateien &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
-3.  [Erstellen die Server-Verbindungsdateien &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+3.  [Erstellen der Server Verbindungs Dateien &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-4.  [Executing the SSMA Console ausführen &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) basierend auf Ihrer Projekt-Anforderungen  
+4.  [Ausführen der SSMA-Konsole &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md) basierend auf Ihren Projektanforderungen  
   
 Zusätzliche Funktionen:  
   
-1.  [Verwalten von Kennwörtern](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) und exportieren / importieren Sie es auf anderen Computern im Fenster  
+1.  [Verwalten](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) von Kenn Wörtern und Exportieren/Importieren von Kenn Wörtern auf andere Windows-Computer  
   
-2.  [Generieren von Berichten](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) Ausgabe Berichte für die Bewertung /conversion und Datenmigration detaillierte Xml anzeigen. Ausführliche Berichte können auch für Aktualisierung und Synchronisierung Befehle generiert werden.  
+2.  [Erstellen von Berichten](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) zum Anzeigen der detaillierten XML-Ausgabe Berichte für Assessment/Conversion und Datenmigration. Ausführliche Fehlerberichte können auch für Aktualisierungs-und Synchronisierungs Befehle generiert werden.  
   
-## <a name="ssma-console-output-conventions"></a>SSMA-Konsole Ausgabe Konventionen  
-Beim Ausführen der SSMA-Skript-Befehle und Optionen an, das Konsolenprogramm zeigt die Ergebnisse und Meldungen (Informationen, Fehler usw.) für den Benutzer in der Konsole oder ggf. umgeleitet werden, um eine XML-Ausgabedatei. Jede Art von Nachricht in der Ausgabe wird durch eine eindeutige Farbe gekennzeichnet. Beispielsweise gibt die Textnachricht in Weiß Skriptbefehle für die Datei an; in Grün stellt dar, eine Eingabeaufforderung für Benutzereingaben und So weiter.  
+## <a name="ssma-console-output-conventions"></a>Ausgabe Konventionen der SSMA-Konsole  
+Beim Ausführen der SSMA-Skript Befehle und-Optionen zeigt das Konsolenprogramm die Ergebnisse und Meldungen (Informationen, Fehler usw.) an den Benutzer in der-Konsole an oder leitet ggf. eine Umleitung an eine XML-Ausgabedatei. Jeder Nachrichtentyp in der Ausgabe wird durch eine eindeutige Farbe gekennzeichnet. Beispielsweise gibt die Textnachricht in der weißen Farbe Skriptdatei Befehle an. der eine in grüner Farbe stellt eine Eingabeaufforderung für Benutzereingaben dar usw.  
   
-![SSMA-konsolenausgabe_oracle](../../ssma/db2/media/ssmaconsoleoutput_oracle.jpg "SSMA-konsolenausgabe_oracle")  
+![SSMA-Konsolenausgabe_Oracle](../../ssma/db2/media/ssmaconsoleoutput_oracle.jpg "SSMA-Konsolenausgabe_Oracle")  
   
-Color-Interpretation der Konsolenausgabe in der folgenden Tabelle:  
+Farb Interpretation der Konsolenausgabe in der folgenden Tabelle:  
   
-|Farbe|Beschreibung|  
+|Color|BESCHREIBUNG|  
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
-|Grau|Datums- und Zeitstempel, an den Benutzer|  
-|Weiß|Datei Skriptbefehle, Nachrichtentyp|  
+|Grau|Datums-und Zeitstempel, Meldung an den Benutzer|  
+|Weiß|Skriptdatei Befehle, Nachrichtentyp|  
 |Gelb|Warnung|  
-|Green|Eingabeaufforderung für Benutzereingaben|  
-|Cyan|Start, Ende und das Ergebnis eines Vorgangs|  
+|Grün|Eingabeaufforderung für Benutzereingabe|  
+|Cyan|Starten, beenden und Ergebnis eines Vorgangs|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

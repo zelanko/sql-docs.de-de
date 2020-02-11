@@ -15,10 +15,10 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728273"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Abgeleitete Hierarchien (Master Data Services)
@@ -62,33 +62,33 @@ ms.locfileid: "73728273"
   
  In einer abgeleiteten Hierarchie können Sie die Beziehung zwischen Product und Subcategory und anschließend zwischen Subcategory und Category hervorheben. Wenn Sie die Elemente in dieser Hierarchie anzeigen, enthält jede Ebene in der Struktur Elemente derselben Entität.  
   
- ![Beispiel für abgeleitete Hierarchie Mountain Bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Beispiel für abgeleitete Hierarchie Mountain Bike")  
+ ![Beispiel für von Mountainbike abgeleitete Hierarchie](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Beispiel für von Mountainbike abgeleitete Hierarchie")  
   
  Bei diesem Hierarchietyp werden Sie daran gehindert, ein Element auf eine ungültige Ebene zu verschieben. Sie können z. B. das Road-650-Fahrrad von der Unterkategorie "Road Bikes" in eine andere Unterkategorie mit dem Namen "Mountain Bikes" verschieben. Es ist nicht möglich, "Road-650" direkt in eine Kategorie zu verschieben, z. B. "1 {Bikes}". Sobald Sie ein Element in der Hierarchiestruktur verschieben, ändert sich der Wert des domänenbasierten Attributs des Elements, um die Änderung anzuzeigen.  
   
-## <a name="notes"></a>Hinweise  
+## <a name="notes"></a>Notizen  
  Alle Elemente in einer Struktur abgeleiteter Hierarchien werden nach ID sortiert. Die Sortierreihenfolge kann nicht geändert werden.  
   
  Wenn das domänenbasierte Attribut eines Elements leer ist und das Attribut für eine abgeleitete Hierarchie verwendet wird, dann wird das Element nicht in der Hierarchie angezeigt. Erstellen Sie Geschäftsregeln, um Attribute zu erhalten, die aufgefüllt werden müssen. Weitere Informationen finden Sie unter [Erfordern von Attributwerten &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie eine neue abgeleitete Hierarchie.|[Erstellen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Erstellen Sie eine neue abgeleitete Hierarchie.|[Erstellen Sie eine abgeleitete Hierarchie &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Blenden Sie Ebenen in einer vorhandenen abgeleiteten Hierarchie aus, oder löschen Sie Ebenen.|[Ausblenden oder Löschen von Ebenen in einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|Ändern Sie den Namen einer vorhandenen abgeleiteten Hierarchie.|[Ändern des Namens einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Ändern Sie den Namen einer vorhandenen abgeleiteten Hierarchie.|[Ändern Sie den Namen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Löschen Sie eine vorhandene abgeleitete Hierarchie.|[Löschen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Domänen basierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Explizite Hierarchien &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [Rekursive Hierarchien &#40;Master Data Services&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Abgeleitete Hierarchien mit expliziten Abschlüssen &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Abgeleitete Hierarchien mit expliziten Caps &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
 -   [Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   

@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: f9e333e15b6249b0cc9f59777276d93f3c49a3fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68201836"
----
 
 > _Wir hören Ihnen zu:_ Wenn Sie in diesem Artikel – beispielsweise in einem Schritt oder Codebeispiel – veraltete oder falsche Informationen finden, lassen Sie es uns bitte wissen. Sie können unten auf dieser Seite im Abschnitt **Feedback** auf die Schaltfläche **Diese Seite** klicken. Wir lesen jedes Feedback zu SQL in der Regel am nächsten Tag. Vielen Dank.
 

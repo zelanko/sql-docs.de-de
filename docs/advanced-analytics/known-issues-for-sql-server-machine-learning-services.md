@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200399"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server-Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ Eine Beschreibung der Prozesse und häufig gestellten Fragen im Zusammenhang mit
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1. Inkonsistente Ergebnisse in MKL-Berechnungen aufgrund fehlender Umgebungsvariablen
 
-**Gilt für:** R_SERVER-Binärdateien 9.0, 9.1, 9.2 oder 9.3.
+**Anwendungsbereich:** R_SERVER-Binärdateien 9.0, 9.1, 9.2 oder 9.3.
 
 R_SERVER verwendet die Intel Math Kernel Library (MKL). Bei Berechnungen unter Einbeziehung der MKL können inkonsistente Ergebnisse auftreten, wenn in Ihrem System eine Umgebungsvariable fehlt. 
 
@@ -101,7 +101,7 @@ Um die Kompatibilität mit Microsoft R Client 9.0.0 sicherzustellen, installier
 
 Um Probleme mit R-Paketen zu vermeiden, können Sie auch die Version der R-Bibliotheken aktualisieren, die auf dem Server installiert sind, indem Sie den Servicevertrag so ändern, dass die Modern Lifecycle Support-Richtlinie angewendet wird, wie im [nächsten Abschnitt](#bkmk_sqlbindr) beschrieben. In diesem Fall wird die mit SQL Server installierte Version von R nach dem gleichen Zeitplan aktualisiert, der für Updates von Machine Learning Server (früher Microsoft R Server) verwendet wird.
 
-**Gilt für:** SQL Server 2016 R Services mit R Server Version 9.0.0 oder früher
+**Anwendungsbereich:** SQL Server 2016 R Services mit R Server Version 9.0.0 oder früher
 
 ### <a name="5-r-components-missing-from-cu3-setup"></a>5. R-Komponenten fehlen im CU3-Setup
 
@@ -123,7 +123,7 @@ Wenn Sie eine Vorabversion von SQL Server 2017 auf einem Computer ohne Internet
 
 Dieses Problem wurde in der endgültigen Produktversion behoben. Außerdem gilt diese Einschränkung nicht für R-Komponenten.
 
-**Gilt für:** SQL Server 2017 mit Python
+**Anwendungsbereich:** SQL Server 2017 mit Python
 
 ### <a name="bkmk_sqlbindr"></a> Warnung vor einer inkompatiblen Version beim Herstellen einer Verbindung mit einer älteren Version von SQL Server R Services von einem Client mithilfe von [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
@@ -138,7 +138,7 @@ Diese Meldung wird angezeigt, wenn eine der beiden folgenden Aussagen zutrifft:
 
 Um sicherzustellen, dass Server und Client dieselbe Version verwenden, müssen Sie möglicherweise _binding_ verwenden, was für Microsoft R Server 9.0 und spätere Versionen unterstützt wird, um die R-Komponenten in SQL Server 2016-Instanzen zu aktualisieren. Ob für Ihre Version von R Services Support für Upgrades verfügbar ist, erfahren Sie unter [Aktualisieren von Machine Learning-Komponenten (R und Python) in SQL Server-Instanzen](install/upgrade-r-and-python.md).
 
-**Gilt für:** SQL Server 2016 R Services mit R Server Version 9.0.0 oder früher
+**Anwendungsbereich:** SQL Server 2016 R Services mit R Server Version 9.0.0 oder früher
 
 ### <a name="7-setup-for-sql-server-2016-service-releases-might-fail-to-install-newer-versions-of-r-components"></a>7. Setup für SQL Server 2016 Service Releases kann unter Umständen keine neueren R-Komponenten installieren
 
@@ -150,7 +150,7 @@ Um dieses Problem zu umgehen, können Sie das Service Release installieren, inde
 
 Wie Sie aktuelle Installationsprogramme erhalten, erfahren Sie unter [Installieren von Machine Learning-Komponenten ohne Internetzugang](install/sql-ml-component-install-without-internet-access.md).
 
-**Gilt für:** SQL Server 2016 R Services mit R Server Version 9.0.0 oder früher
+**Anwendungsbereich:** SQL Server 2016 R Services mit R Server Version 9.0.0 oder früher
 
 ### <a name="8-launchpad-services-fails-to-start-if-the-version-is-different-from-the-r-version"></a>8. Launchpad-Dienste werden nicht gestartet, wenn die Version von der R-Version abweicht
 
@@ -178,7 +178,7 @@ Um das Problem zu beheben, empfehlen wir die Aktualisierung auf ein neueres Serv
 
 Wenn ein Upgrade nicht möglich ist, können Sie als Problemumgehung eine SQL-Anmeldung verwenden, um R-Remoteaufträge auszuführen, die unter Umständen eingebettete ODBC-Aufrufe benötigen.
 
-**Gilt für:** SQL Server 2016 R Services Express Edition
+**Anwendungsbereich:** SQL Server 2016 R Services Express Edition
 
 ### <a name="11-performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>11. Leistungsgrenzen, wenn von SQL Server verwendete Bibliotheken von anderen Tools aufgerufen werden
 
@@ -204,12 +204,12 @@ In Enterprise Edition können Sie Ressourcenpools verwenden, um externe Skriptpr
 
 Wenn Ressourcenbeschränkungen auftreten, überprüfen Sie die aktuelle Standardeinstellung. Wenn der Standardwert von 20 Prozent nicht ausreicht, entnehmen Sie der Dokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], wie Sie diesen Wert ändern.
 
-**Gilt für:** SQL Server 2016 R Services, Enterprise Edition
+**Anwendungsbereich:** SQL Server 2016 R Services, Enterprise Edition
 
 
 ### <a name="14-error-when-using-sp_execute_external_script-without-libcso-on-linux"></a>14. Fehler beim Verwenden von `sp_execute_external_script` ohne `libc++.so` unter Linux
 
-Auf einem sauberen Linux-Computer, auf dem nicht `libc++.so` installiert ist, tritt beim Ausführen eines `sp_execute_external_script` (SPEES) mit Java oder einer externen Sprache ein Fehler auf, weil `commonlauncher.so` `libc++.so` nicht geladen werden kann.
+Auf einem sauberen Linux-Computer, auf dem nicht `libc++.so` installiert ist, tritt beim Ausführen eines `sp_execute_external_script` (SPEES) mit Java oder einer externen Sprache ein Fehler auf, weil `commonlauncher.so``libc++.so` nicht geladen werden kann.
 
 Beispiel:
 
@@ -249,7 +249,7 @@ Sie können eine der folgenden Problemumgehungen verwenden:
    readabledirectories = /opt/mssql
    ```
 
-**Gilt für:** SQL Server 2019 unter Linux
+**Anwendungsbereich:** SQL Server 2019 unter Linux
 
 ## <a name="r-script-execution-issues"></a>Probleme mit der Ausführung des R-Skripts
 
@@ -297,7 +297,7 @@ Im ersten Releasebuild von SQL Server 2016 konnte die Prozessoraffinität nur 
 
 Dieses Problem wurde in SQL Server 2016 Service Pack 1 behoben. Sie sollten auf das aktuelle Service Release aktualisieren.
 
-**Gilt für:** SQL Server 2016 R Services, RTM-Version
+**Anwendungsbereich:** SQL Server 2016 R Services, RTM-Version
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5. Änderungen an Spaltentypen nicht möglich, wenn Daten in SQL Server-Rechenkontext gelesen werden
 
@@ -314,7 +314,7 @@ data <- RxSqlServerData(
 
 Um dieses Problem zu umgehen, können Sie die SQL-Abfrage so umschreiben, dass sie CAST oder CONVERT verwendet, um R die Daten mit dem richtigen Datentyp vorzulegen. Generell ist die Leistung besser, wenn Sie SQL verwenden, um mit Daten zu arbeiten, anstatt Daten im R-Code zu ändern.
 
-**Gilt für:** SQL Server 2016 R Services
+**Anwendungsbereich:** SQL Server 2016 R Services
 
 ### <a name="6-limits-on-size-of-serialized-models"></a>6. Beschränkungen der Größe serialisierter Modelle
 
@@ -371,7 +371,7 @@ Wenn Sie die Funktion rxDataStep zum Schreiben von Ergebnissen in eine Tabelle v
 
 Nicht alle in SQL unterstützten Datentypen können in R verwendet werden. Um dieses Problem zu umgehen, erwägen Sie, den nicht unterstützten Datentyp in einen unterstützten Datentypen umzuwandeln, bevor die Daten an sp\_execute\_external\_script übergeben werden.
 
-Weitere Informationen finden Sie unter [Datentypzuordnungen zwischen R und SQL Server](r/r-libraries-and-data-types.md).
+Weitere Informationen finden Sie unter [R-Bibliotheken und Datentypen](r/r-libraries-and-data-types.md).
 
 ### <a name="12-possible-string-corruption-using-unicode-strings-in-varchar-columns"></a>12. Mögliche Zeichenfolgenbeschädigung bei Verwendung von Unicode-Zeichenfolgen in varchar-Spalten
 
@@ -513,7 +513,7 @@ Das vorherige für „MASTER“ ausgeführte zeitintensive externe Skript wird m
 
 Führen Sie die Bibliotheksinstallation nicht parallel zu der zeitintensiven Abfrage aus. Sie können die zeitintensive Abfrage auch ausführen, sobald die Installation beendet ist.
 
-**Gilt für:** Nur für SQL Server 2019 unter Linux und Big Data-Clusters.
+**Anwendungsbereich:** Nur für SQL Server 2019 unter Linux und Big Data-Clusters.
 
 ## <a name="python-script-execution-issues"></a>Probleme mit der Ausführung des Python-Skripts
 
@@ -598,7 +598,7 @@ Wenn Sie unter SQL Server 2019 versuchen, **PIP** zu verwenden. Beispiel:
 
 Sie erhalten dann diese Fehlermeldung:
 
-> *bash: /opt/mssql/mlservices/runtime/python/bin/pip: /opt/microsoft/mlserver/9.4.7/bin/python/python: ungültiger Interpreter: Datei oder Verzeichnis nicht vorhanden*
+> *bash: /opt/mssql/mlservices/runtime/python/bin/pip: /opt/microsoft/mlserver/9.4.7/bin/python/python: ungültiger Interpreter: No such file or directory* (chroot: Fehler beim Ausführen des Befehls „/bin/bash“: Datei oder Verzeichnis nicht vorhanden),
 
 **Problemumgehung**
 
@@ -613,7 +613,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 Siehe [Installieren von Python-Paketen mit sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
 
-**Gilt für:** SQL Server 2019 unter Linux
+**Anwendungsbereich:** SQL Server 2019 unter Linux
 
 ### <a name="7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows"></a>7. Python-Pakete können nicht mithilfe von PIP installiert werden, nachdem SQL Server 2019 unter Windows installiert wurde
 
@@ -644,7 +644,7 @@ in den Ordner <br>
 
 Öffnen Sie dann eine neue DOS-Befehlsshell-Eingabeaufforderung.
 
-**Gilt für:** SQL Server 2019 unter Windows
+**Anwendungsbereich:** SQL Server 2019 unter Windows
 
 ### <a name="8-error-when-using-sp_execute_external_script-without-libcaboso-on-linux"></a>8. Fehler beim Verwenden von `sp_execute_external_script` ohne `libc++abo.so` unter Linux
 
@@ -687,7 +687,7 @@ Führen Sie den folgenden Befehl aus:
 sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 ```
 
-**Gilt für:** SQL Server 2019 unter Linux
+**Anwendungsbereich:** SQL Server 2019 unter Linux
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise und Microsoft R Open
 
@@ -703,7 +703,7 @@ Wenn Sie eine Lizenz für Revolution R Enterprise besitzen, müssen Sie diese au
 
 Einige Vorabversionen von [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] enthalten eine von Revolution Analytics erstellte R-Entwicklungsumgebung für Windows. Dieses Tool wird nicht mehr zur Verfügung gestellt und nicht unterstützt.
 
-Zur Kompatibilität mit [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] sollten Sie stattdessen Microsoft R Client installieren. [R Tools für Visual Studio](https://www.visualstudio.com/vs/rtvs/) und [Visual Studio Code](https://code.visualstudio.com/) unterstützen auch Microsoft R-Lösungen.
+Zur Kompatibilität mit [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] sollten Sie stattdessen Microsoft R Client installieren. [R Tools für Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) und [Visual Studio Code](https://code.visualstudio.com/) unterstützen auch Microsoft R-Lösungen.
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2. Kompatibilitätsprobleme mit SQLite-ODBC-Treiber und RevoScaleR
 

@@ -18,10 +18,10 @@ ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962450"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "73962450"
 
   Gibt eine Zeile pro Änderungstabelle in der Datenbank zurück. Eine Änderungstabelle wird erstellt, wenn Change Data Capture für eine Quelltabelle aktiviert ist. Es wird empfohlen, die Systemtabellen nicht direkt abzufragen. Führen Sie stattdessen die gespeicherte Prozedur [sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) aus.  
 
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID der Änderungstabelle. Ist innerhalb einer Datenbank eindeutig.|  
-|**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gibt diese Spalte immer den Wert 0 zurück.|  
+|**Version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gibt diese Spalte immer den Wert 0 zurück.|  
 |**source_object_id**|**int**|ID der Quelltabelle, für die Change Data Capture aktiviert ist.|  
 |**capture_instance**|**sysname**|Name der Aufzeichnungsinstanz, der zur Benennung von instanzspezifischen Nachverfolgungsobjekten verwendet wird. Standardmäßig wird der Name aus dem Quell Schema Namen und dem Quell Tabellennamen im Format *schemaname_sourcename*abgeleitet.|  
-|**start_lsn**|**binary(10)**|Protokollfolgenummer (Log Sequence Number, LSN), die den unteren Endpunkt zum Abfragen der in der Änderungstabelle enthaltenen Änderungsdaten darstellt.<br /><br /> NULL = Der untere Endpunkt wurde nicht erstellt.|  
-|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gibt diese Spalte immer NULL zurück.|  
+|**start_lsn**|**Binär (10)**|Protokollfolgenummer (Log Sequence Number, LSN), die den unteren Endpunkt zum Abfragen der in der Änderungstabelle enthaltenen Änderungsdaten darstellt.<br /><br /> NULL = Der untere Endpunkt wurde nicht erstellt.|  
+|**end_lsn**|**Binär (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gibt diese Spalte immer NULL zurück.|  
 |**supports_net_changes**|**bit**|Unterstützung zum Abfragen von Nettoänderungen ist für die Änderungstabelle aktiviert.|  
 |**has_drop_pending**|**bit**|Der Aufzeichnungsprozess hat die Benachrichtigung erhalten, dass die Quelltabelle gelöscht wurde.|  
 |**role_name**|**sysname**|Name der Daten Bank Rolle, die verwendet wird, um den Zugriff auf Änderungs Daten zu ändern.<br /><br /> NULL = Eine Rolle wird nicht verwendet.|  
@@ -45,7 +45,7 @@ ms.locfileid: "73962450"
 |**create_date**|**datetime**|Datum, an dem die Quelltabelle aktiviert wurde.|  
 |**partition_switch**|**bit**|Gibt an, ob der **Switch Partition** -Befehl von **ALTER TABLE** für eine Tabelle ausgeführt werden kann, die für Change Data Capture aktiviert ist. 0 bedeutet, dass der Partitionswechsel blockiert wird. Für nicht partitionierte Tabellen wird stets 1 zurückgegeben.|  
   
-## <a name="see-also"></a>Siehe auch  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

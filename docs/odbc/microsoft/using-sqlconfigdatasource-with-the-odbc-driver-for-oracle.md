@@ -1,5 +1,5 @@
 ---
-title: Verwenden von SQLConfigDatasource mit dem ODBC-Treiber für Oracle | Microsoft-Dokumentation
+title: Verwenden von SQLConfigDataSource mit dem ODBC-Treiber für Oracle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,43 +13,43 @@ ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088035"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Verwenden von SQLConfigDatasource mit dem ODBC-Treiber für Oracle
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Die folgende Tabelle enthält, die gültige **SQLConfigDatasource** Einstellungen für Microsoft ODBC-Treiber für Oracle, Version 1.0 (Msorcl10.dll) und Microsoft ODBC-Treiber für Oracle, Version 2.0 (Msorcl32.dll).  
+ In der folgenden Tabelle sind die gültigen **SQLConfigDataSource** -Einstellungen für den Microsoft ODBC Driver for Oracle, Version 1,0 (Msorcl10. dll) und der Microsoft ODBC Driver for Oracle, Version 2,0 (Msorcl32. dll), aufgeführt.  
   
 > [!NOTE]  
->  Der Msorcl10.dll-Treiber (Version 1.0) unterstützt alle Einstellungen, mit Ausnahme von **Server**. Der Treiber Msorcl32.dll (Version 2.0 und höher) unterstützt alle Einstellungen.  
+>  Der Msorcl10. dll-Treiber (Version 1,0) unterstützt alle Einstellungen außer " **Server**". Der Msorcl32. dll-Treiber (Version 2,0 und höher) unterstützt alle Einstellungen.  
   
- Einige Einstellungen werden vom Treiber ignoriert jedoch akzeptiert werden, indem **SQLConfigDatasource**. Z. B. diese Einstellungen in der ODBC-Verbindungszeichenfolge ist die einzige Möglichkeit, die sie zur Laufzeit akzeptiert werden. Eine ignorierte-Einstellung wird nicht gespeichert werden, in der Registrierung beim **SQLConfigDatasource** erstellt die Datenquelle.  
+ Einige Einstellungen werden vom Treiber ignoriert, aber von **SQLConfigDataSource**akzeptiert. Das einschließen dieser Einstellungen in die ODBC-Verbindungs Zeichenfolge ist die einzige Möglichkeit, Sie zur Laufzeit zu akzeptieren. Eine ignorierte Einstellung wird nicht in der Registrierung gespeichert, wenn **SQLConfigDataSource** die Datenquelle erstellt.  
   
- In der folgenden Tabelle *eine/N* bedeutet, dass eine beliebige gültige alphanumerische Zeichenfolge bis zu die maximal zulässige Länge. *Max. Len* (maximale Länge) ist die maximale zulässige Zeichenfolgenlänge von der Einstellung, einschließlich des Zeichens der Zeichenfolge-Terminator akzeptiert.  
+ In der folgenden Tabelle bedeutet *A/N eine* beliebige gültige alphanumerische Zeichenfolge bis zur maximalen zulässigen Länge. *Max len* (maximale Länge) ist die maximal zulässige Zeichen folgen Länge, die von der Einstellung akzeptiert wird, einschließlich des Zeichen folgen Abschluss Zeichens.  
   
-|Einstellung|Max. Länge|Standardwert|Gültige Werte|Beschreibung|  
+|Einstellung|Max. Len|Standardwert|Gültige Werte|BESCHREIBUNG|  
 |-------------|-------------|-------------------|------------------|-----------------|  
-|Puffergröße|7|65535|1000|Minimale Fetchpuffer Größe bis 65535 Bytes.|  
-|CatalogCap|2|1|0 oder 1|Bei 1 werden nonquoted Bezeichner in Großbuchstaben umwandeln, in dem Katalog Funktionen.|  
-|ConnectString|128|""|A/N|Verbindungszeichenfolge. Erforderliche Methode den Namen des Servers mit dem Treiber Msorcl10.dll angeben.|  
-|Beschreibung|256|""|A/N|Beschreibung|  
-|DSN|33|""|A/N|Datenquellenname.|  
-|GuessTheColDef|4|0|A/N|Gibt einen Wert ungleich NULL für Spalten ohne Skalierbarkeit Oracle definiert.|  
-|NumberFloat|2|""|0 oder 1|Wenn der Wert 0 ist, werden FLOAT-Spalten als SQL_FLOAT behandelt. Bei 1 werden FLOAT-Spalten als SQL_DOUBLE behandelt.|  
-|PWD|30|""|A/N|Das Kennwort.|  
-|RDOSupport|2|""|0 oder 1|Ermöglicht das RDO Oracle Prozeduren aufrufen.|  
-|Hinweise|2|0|0 oder 1|Schließen Sie "Hinweise" in Katalogfunktionen an.|  
-|RowLimit|4|""|0 bis 99|Maximale Anzahl der von einer SELECT-Anweisung zurückgegebenen Zeilen. Eine Zeichenfolge der Länge 0 (null) gibt an, dass keine Beschränkung angewendet wird.|  
-|Server|128|""|A/N|Der Name der Oracle-Servers.|  
-|SynonymColumns|2|1|0 oder 1|Synonyme in SQLColumns einschließen.|  
-|SystemTable|2|""|0 oder 1|Bei 0 werden die Systemtabellen nicht angezeigt. Bei 1 werden den Systemtabellen angezeigt.|  
-|TranslationDLL|33|""|A/N|Translation-DLL-Namen.|  
-|TranslationName|33|""|A/N|Name der Übersetzung.|  
-|TranslationOption|33|""|A/N|Translation-Option.|  
-|TxnCap|2|""|A/N|Die Transaktion kann. Bei 0, gibt der Treiber, dass es keine Transaktionen unterstützt. Falls 1, gibt der Treiber, dass sie Transaktionen ausführen kann.|  
-|UID|30|""|A/N|Name des Benutzers.|
+|BufferSize|7|65.535|1000|Minimale Abruf Puffergröße bis zu 65535 Bytes|  
+|Catalogcap|2|1|0 oder 1|Wenn 1, werden Bezeichner ohne Anführungszeichen in den Katalog Funktionen in Großbuchstaben konvertiert.|  
+|ConnectString|128|""|A/N|Verbindungszeichenfolge. Erforderliche Methode zum Angeben des Server namens mit dem Msorcl10. dll-Treiber.|  
+|BESCHREIBUNG|256|""|A/N|Beschreibung|  
+|DSN|33|""|A/N|Der Name der Datenquelle.|  
+|Guess thecoldef|4|0|A/N|Gibt einen Wert ungleich 0 (null) für Spalten ohne Oracle-definierte Skala zurück.|  
+|Nummerifloat|2|""|0 oder 1|Wenn der Wert 0 ist, werden float-Spalten als SQL_FLOAT behandelt. Wenn der Wert 1 ist, werden float-Spalten als SQL_DOUBLE behandelt.|  
+|PWD|30|""|A/N|Password:|  
+|Rdosupport|2|""|0 oder 1|Ermöglicht RDO das Abrufen von Oracle-Prozeduren.|  
+|Bemerkungen|2|0|0 oder 1|Fügen Sie Hinweise in Katalog Funktionen ein.|  
+|ROWLIMIT|4|""|0 bis 99|Maximale Anzahl von Zeilen, die von einer SELECT-Anweisung zurückgegeben werden. Eine Zeichenfolge der Länge 0 (null) gibt an, dass keine Beschränkung angewendet wird.|  
+|Server|128|""|A/N|Der Name des Oracle-Servers.|  
+|Synonymcolumns|2|1|0 oder 1|Fügen Sie Synonyme in SQLColumns ein.|  
+|SystemTable|2|""|0 oder 1|Wenn der Wert 0 ist, werden die Systemtabellen nicht angezeigt. Bei 1 werden Systemtabellen angezeigt.|  
+|TranslationDLL|33|""|A/N|Der Name der Translation. dll.|  
+|TranslationName|33|""|A/N|Der Übersetzungs Name.|  
+|"TranslationOption"|33|""|A/N|Übersetzungs Option.|  
+|Txncap|2|""|A/N|Transaktionsfähig. Wenn der Wert 0 ist, meldet der Treiber, dass Transaktionen nicht unterstützt werden. Wenn der Wert 1 ist, meldet der Treiber, dass er Transaktionen ausführen kann.|  
+|UID|30|""|A/N|Benutzername.|

@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056293"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Wideworldimportersdw Verwendung von SQL Server Features und Funktionen
@@ -35,7 +35,7 @@ Dadurch wird eine externe Tabelle `dbo.CityPopulationStatistics` erstellt, die a
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-Um zu verstehen, welche Städte für eine weitere Erweiterung von Interesse sein könnten, untersucht die folgende Abfrage die Wachstumsrate der Städte und gibt die obersten 100 größten Städte mit erheblichem Wachstum zurück, wobei Wide World-Import Programme nicht über eine Vertriebspräsenz verfügen. Die Abfrage umfasst einen Join zwischen der Remote Tabelle `dbo.CityPopulationStatistics` und der lokalen Tabellen `Dimension.City`sowie einen Filter mit der lokalen Tabellen `Fact.Sales`.
+Um zu verstehen, welche Städte für eine weitere Erweiterung von Interesse sein könnten, untersucht die folgende Abfrage die Wachstumsrate der Städte und gibt die obersten 100 größten Städte mit erheblichem Wachstum zurück, wobei Wide World-Import Programme nicht über eine Vertriebspräsenz verfügen. Die Abfrage umfasst einen Join zwischen der Remote Tabelle `dbo.CityPopulationStatistics` und der lokalen Tabelle `Dimension.City`sowie einen Filter, der die lokale Tabelle `Fact.Sales`einschließt.
 
     WITH PotentialCities
     AS
@@ -103,12 +103,12 @@ Die Datengröße in einem Data Warehouse kann sehr groß werden. Daher empfiehlt
 
 Alle größeren Fakten Tabellen werden nach Jahr partitioniert. Die einzige Ausnahme ist `Fact.Stock Holdings`, die nicht Datums basiert ist und im Vergleich zu den anderen Fakten Tabellen eine begrenzte Datengröße aufweist.
 
-Die für alle partitionierten Tabellen verwendete Partitions Funktion ist `PF_Date`, und das verwendete Partitionsschema wird `PS_Date`.
+Die Partitions Funktion, die für alle partitionierten Tabellen `PF_Date`verwendet wird, ist, und das verwendete `PS_Date`Partitionsschema ist.
 
-## <a name="in-memory-oltp"></a>In-Memory-Onlinetransaktionsverarbeitung (In-Memory-OLTP)
+## <a name="in-memory-oltp"></a>In-Memory-OLTP
 
 (Vollständige Version des Beispiels)
 
-Wideworldimportersdw verwendet SCHEMA_ONLY Speicher optimierte Tabellen für die Stagingtabellen. Alle `Integration.`*`_Staging` Tabellen sind SCHEMA_ONLY Speicher optimierte Tabellen.
+Wideworldimportersdw verwendet SCHEMA_ONLY Speicher optimierte Tabellen für die Stagingtabellen. `Integration.` * Alle `_Staging` Tabellen sind SCHEMA_ONLY Speicher optimierte Tabellen.
 
 Der Vorteil von SCHEMA_ONLY Tabellen besteht darin, dass Sie nicht protokolliert werden und keinen Datenträger Zugriff benötigen. Dies verbessert die Leistung des ETL-Prozesses. Da diese Tabellen nicht protokolliert werden, gehen Ihre Inhalte verloren, wenn ein Fehler auftritt. Die Datenquelle ist jedoch weiterhin verfügbar, sodass der ETL-Prozess bei einem Fehler einfach neu gestartet werden kann.

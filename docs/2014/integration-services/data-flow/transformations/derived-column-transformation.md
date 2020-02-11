@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900513"
 ---
 # <a name="derived-column-transformation"></a>Transformation für abgeleitete Spalten
@@ -45,7 +45,7 @@ ms.locfileid: "62900513"
 ## <a name="configuration-of-the-derived-column-transformation"></a>Konfiguration der Transformation für abgeleitete Spalten  
  Es gibt folgende Möglichkeiten, um die Transformation für abgeleitete Spalten zu konfigurieren:  
   
--   Geben Sie für jede Eingabespalte oder jede neue Spalte, die geändert wird, einen Ausdruck ein. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md).  
+-   Geben Sie für jede Eingabespalte oder jede neue Spalte, die geändert wird, einen Ausdruck ein. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
     > [!NOTE]  
     >  Falls ein Ausdruck auf eine Eingabespalte verweist, die von der Transformation für abgeleitete Spalten überschrieben wird, wird im Ausdruck nicht der abgeleitete Wert, sondern der ursprüngliche Wert verwendet.  
@@ -62,7 +62,7 @@ ms.locfileid: "62900513"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
@@ -77,6 +77,6 @@ ms.locfileid: "62900513"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
- Blog, [wie Teilen von Spaltendaten mit SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
+ Blog, Gewusst [wie: Aufteilen von Spaltendaten mithilfe von SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Source-Eigenschaft (ADO Recordset) | Microsoft-Dokumentation
+title: Source-Eigenschaft (ADO-Recordset) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,31 +22,31 @@ ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f6ac84445272ae3657d4e25691dbbf150f32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930920"
 ---
 # <a name="source-property-ado-recordset"></a>Source-Eigenschaft (ADO-Recordset)
-Gibt an, die die Datenquelle für eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
+Gibt die Datenquelle für ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt eine **Zeichenfolge** Wert oder [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objektverweis ist; gibt nur eine **Zeichenfolge** -Wert, der die Quelle der gibt an die **Recordset**.  
+ Legt einen **Zeichen** folgen Wert oder einen [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt Verweis fest. gibt nur einen **Zeichen** folgen Wert zurück, der die Quelle des **Recordsets**angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **Quelle** -Eigenschaft an eine Datenquelle für eine **Recordset** -Objekt unter Verwendung eines der folgenden: eine **Befehl** Objekt-Variable, eine SQL-Anweisung, einer gespeicherten Prozedur oder einen Tabellennamen an.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **Source** -Eigenschaft zum Angeben einer Datenquelle für ein **Recordset** -Objekt, indem Sie eine der folgenden Aktionen verwenden: eine **Befehls** Objekt Variable, eine SQL-Anweisung, eine gespeicherte Prozedur oder ein Tabellenname.  
   
- Setzen Sie die **Quelle** Eigenschaft, um eine **Befehl** Objekt der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft der **Recordset** Objekt erbt die Wert, der die **ActiveConnection** -Eigenschaft für das angegebene **Befehl** Objekt. Jedoch beim Lesen der **Quelle** Eigenschaft wird nicht zurückgegeben. eine **Befehl** Objekt; stattdessen wird die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft der **Befehl** -Objekt an die Sie festlegen, die **Quelle** Eigenschaft.  
+ Wenn Sie die **Source** -Eigenschaft auf ein **Befehls** Objekt festlegen, erbt die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft des **Recordset** -Objekts den Wert der **ActiveConnection** -Eigenschaft für das angegebene **Befehls** Objekt. Beim Lesen der **Source** -Eigenschaft wird jedoch kein **Befehls** Objekt zurückgegeben. Stattdessen wird die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft des **Command** -Objekts zurückgegeben, für das Sie die **Source** -Eigenschaft festlegen.  
   
- Wenn die **Quelle** -Eigenschaft ist eine SQL-Anweisung, einer gespeicherten Prozedur oder einen Tabellennamen, können Sie die Leistung optimieren, übergeben Sie die entsprechende *Optionen* Argument mit den [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)Methodenaufruf.  
+ Wenn die **Source** -Eigenschaft eine SQL-Anweisung, eine gespeicherte Prozedur oder ein Tabellenname ist, können Sie die Leistung optimieren, indem Sie das entsprechende *options* Argument mit dem [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methoden-Befehl übergeben.  
   
- Die **Quelle** Eigenschaft ist für schließen die Lese-/Schreibzugriff **Recordset** Objekte und Read-only für offene **Recordset** Objekte.  
+ Die **Source** -Eigenschaft ist Lese-/Schreibzugriff für geschlossene **Recordset** -Objekte und für geöffnete **Recordset** -Objekte schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Source-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für eine Quell Eigenschaft (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Source-Eigenschaft (ADO-Fehler)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Source-Eigenschaft (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)
+ [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)

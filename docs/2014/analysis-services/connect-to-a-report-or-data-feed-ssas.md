@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70151830"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Mit einem Bericht oder Datenfeed verbinden (SSAS)
@@ -26,16 +26,16 @@ ms.locfileid: "70151830"
  **Anzeige Name der Verbindung**  
  Geben Sie einen Anzeigenamen für die Verbindung mit dem Datenfeed ein.  
   
- **Berichtspfad**  
+ **Berichts Pfad**  
  Führt die URL für einen SQL Server Reporting Services-Bericht auf, der Datenfeeds generiert. Klicken Sie auf **Durchsuchen** , um die URL für den Bericht anzugeben.  
   
- Klicken Sie auf **Bericht zeigen** , um den Bericht anzuzeigen.  
+ Klicken Sie auf **Bericht anzeigen**, um den Bericht anzuzeigen.  
   
  **Durchsuchen**  
  Navigieren Sie zu einem Speicherort, an dem ein Bericht verfügbar ist.  
   
  **Erweitert**  
- Stellen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** ein.  
+ Legen Sie zusätzliche Verbindungs Eigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest.  
   
  **Verbindung testen**  
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
@@ -62,7 +62,7 @@ ms.locfileid: "70151830"
  Speichert den Kontoschlüssel (verschlüsselt) mit der Datenverbindung.  
   
  **Erweitert**  
- Stellen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** ein.  
+ Legen Sie zusätzliche Verbindungs Eigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest.  
   
  **Verbindung testen**  
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  

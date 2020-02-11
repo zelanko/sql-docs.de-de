@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831745"
 ---
 # <a name="file-system-task"></a>Task Dateisystem
@@ -31,18 +31,18 @@ ms.locfileid: "62831745"
 ## <a name="predefined-file-system-operations"></a>Vordefinierte Dateisystemvorgänge  
  Der Task Dateisystem enthält vordefinierte Vorgänge. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|Description|  
+|Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Verzeichnis kopieren|Kopiert einen Ordner zwischen Speicherorten.|  
 |Datei kopieren|Kopiert eine Datei zwischen Speicherorten.|  
-|Verzeichnis erstellen|Erstellt einen Ordner im angegebenen Speicherort.|  
+|Erstellen eines Verzeichnisses|Erstellt einen Ordner im angegebenen Speicherort.|  
 |Verzeichnis löschen|Löscht einen Ordner im angegebenen Speicherort.|  
 |Verzeichnisinhalt löschen|Löscht alle Dateien und Ordner in einem Ordner.|  
 |Datei löschen|Löscht eine Datei im angegebenen Speicherort.|  
 |Verzeichnis verschieben|Verschiebt einen Ordner zwischen Speicherorten.|  
 |Datei verschieben|Verschiebt eine Datei zwischen Speicherorten.|  
 |Datei umbenennen|Benennt eine Datei im angegebenen Speicherort um.|  
-|Attribute festlegen|Legt Attribute für Dateien und Ordner fest. Zu den Attributen zählen Archive, Hidden, Normal, ReadOnly und System. Normalerweise sind keine Attribute angegeben, und die Kombination mit anderen Attributen ist nicht möglich. Alle anderen Attribute können in Kombination mit anderen Attributen verwendet werden.|  
+|Festlegen von Attributen|Legt Attribute für Dateien und Ordner fest. Zu den Attributen zählen Archive, Hidden, Normal, ReadOnly und System. Normalerweise sind keine Attribute angegeben, und die Kombination mit anderen Attributen ist nicht möglich. Alle anderen Attribute können in Kombination mit anderen Attributen verwendet werden.|  
   
  Der Task Dateisystem wird in einer einzelnen Datei oder in einem einzelnen Verzeichnis ausgeführt. Daher unterstützt dieser Task nicht die Verwendung von Platzhalterzeichen, um denselben Vorgang in mehreren Dateien auszuführen. Damit der Task Dateisystem einen Vorgang in mehreren Dateien oder Verzeichnissen wiederholt, platzieren Sie den Task Dateisystem in einem Foreach-Schleifencontainer, wie in den folgenden Schritten beschrieben.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62831745"
   
  Klicken Sie auf die folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „Dateisystem“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task ' Datei System ' &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -75,9 +75,10 @@ ms.locfileid: "62831745"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt einen Task zum Herunterladen und Hochladen von Datendateien und zum Verwalten von Verzeichnissen auf Servern ein. Weitere Informationen finden Sie unter [FTP Task](ftp-task.md).  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt einen Task zum Herunterladen und Hochladen von Datendateien und zum Verwalten von Verzeichnissen auf Servern ein. Weitere Informationen finden Sie unter [FTP Task](ftp-task.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   

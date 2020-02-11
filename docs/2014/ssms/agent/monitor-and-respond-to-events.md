@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720127"
 ---
 # <a name="monitor-and-respond-to-events"></a>Überwachen und Reagieren auf Ereignisse
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann Ereignisse überwachen und automatisch auf *Ereignisse*reagieren. Zu diesen Ereignissen gehören Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bestimmte Leistungsbedingungen, und WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent kann Ereignisse überwachen und automatisch auf *Ereignisse*reagieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wie z. b. Nachrichten von, bestimmte Leistungsbedingungen und Windows-Verwaltungsinstrumentation (WMI)-Ereignisse.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Warnungen](alerts.md)  
@@ -44,11 +44,13 @@ ms.locfileid: "62720127"
 ## <a name="about-monitoring-and-responding-to-events"></a>Informationen zum Überwachen von und Reagieren auf Ereignisse  
  Automatische Reaktionen auf Ereignisse werden als *Warnungen*bezeichnet. Sie können Warnungen für Ereignisse definieren um anzugeben, wie vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent auf das Auftreten dieser Ereignisse reagiert werden soll. Von einer Warnung kann auf ein Ereignis reagiert werden, indem ein Administrator benachrichtigt oder ein Auftrag ausgeführt wird, oder indem beide Aktionen ausgeführt werden. Von einer Warnung kann ein Ereignis auch an das Microsoft Windows-Anwendungsprotokoll auf einem anderen Computer weitergeleitet werden. Sie können beispielsweise angeben, dass bei einem Ereignis mit dem Schweregrad 19 sofort ein Operator benachrichtigt wird. Durch das Definieren von Warnungen können Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]effektiver überwachen und verwalten.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent reagiert nur auf Ereignisse, für die eine Warnung definiert ist. Die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Überwachen von Ereignissen verwendete Methode hängt vom Typ des Ereignisses ab.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent reagiert nur auf Ereignisse, für die eine Warnung definiert ist. Die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Überwachen von Ereignissen verwendete Methode hängt vom Typ des Ereignisses ab.  
   
  Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnung für einen Leistungsindikator definiert ist, wird der Leistungsindikator direkt vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent überwacht. Bei einem WMI-Ereignis wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent eine Ereignisabfrage für das WMI-Ereignis registriert.  
   
- Um auf Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu reagieren, wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent das Windows-Anwendungsprotokoll überwacht. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann nur auf Meldungen reagieren, die in diesem Protokoll aufgeführt sind. Standardmäßig protokolliert SQL Server die folgenden Meldungen im Windows-Anwendungsprotokoll:  
+ Um auf Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu reagieren, wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent das Windows-Anwendungsprotokoll überwacht. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann nur auf Meldungen reagieren, die in diesem Protokoll aufgeführt sind. Standardmäßig protokolliert SQL Server die folgenden Meldungen im Windows-Anwendungsprotokoll:  
   
 -   sysmessages-Fehler des Schweregrades 19 oder höher.  
   
@@ -67,7 +69,7 @@ ms.locfileid: "62720127"
   
  Unabhängig von der Ereignisquelle reagiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf das Ereignis, indem die Tasks ausgeführt werden, die in der Warnung für das Ereignis angegeben worden sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_altermessage &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

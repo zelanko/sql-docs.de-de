@@ -14,10 +14,10 @@ ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1fa2f891c4f5fc0d582b341ce1000d407fef743b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729480"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Löschen einer Entität (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73729480"
 > [!NOTE]  
 >  Die Elemente der Entität aus allen Versionen werden permanent gelöscht.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-entity"></a>So löschen Sie eine Entität.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "73729480"
   
 6.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entitäten &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Erstellen einer Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
+ [Erstellen Sie eine Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 256c11c46d24998808821002d3a63bbc17c40931
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73769463"
 ---
 # <a name="information-in-error-interfaces"></a>Informationen in Fehlerschnittstellen
@@ -32,17 +32,17 @@ ms.locfileid: "73769463"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt **IErrorInfo** -Member-Funktionen wie folgt.  
   
-|Memberfunktion|Beschreibung|  
+|Memberfunktion|BESCHREIBUNG|  
 |---------------------|-----------------|  
 |**GetDescription**|Beschreibende Fehlermeldungs-Zeichenfolge.|  
-|**GetGUID**|GUID der Schnittstelle, die den Fehler definiert hat.|  
-|**GetHelpContext**|Nicht unterstützt. Es wird immer NULL zurückgegeben.|  
-|**GetHelpFile**|Nicht unterstützt. Gibt immer NULL zurück.|  
+|**GetGuid**|GUID der Schnittstelle, die den Fehler definiert hat.|  
+|**GetHelpContext**|Wird nicht unterstützt. Es wird immer NULL zurückgegeben.|  
+|**GetHelpFile**|Wird nicht unterstützt. Gibt immer NULL zurück.|  
 |**GetSource**|Zeichenfolge "Microsoft SQL Server Native Client".|  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt für Consumer verfügbare **IErrorRecords** -Member-Funktionen wie folgt.  
   
-|Memberfunktion|Beschreibung|  
+|Memberfunktion|BESCHREIBUNG|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Füllt eine ERRORINFO-Struktur mit grundlegenden Informationen über einen Fehler aus. Eine ERRORINFO-Struktur enthält Elemente, die den HRESULT-Rückgabewert für den Fehler sowie den Anbieter und die Schnittstelle, für die der Fehler gilt, identifizieren.|  
 |**GetCustomErrorObject**|Gibt einen Verweis auf die Schnittstellen **ISQLErrorInfo,** und [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) zurück.|  
@@ -52,12 +52,12 @@ ms.locfileid: "73769463"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt **ISQLErrorInfo:: gezqlinfo** -Parameter wie folgt.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
-|*pbstrSQLState*|Gibt einen SQLSTATE-Wert für den Fehler zurück. SQLSTATE-Werte werden in SQL-92, ODBC und ISO SQL sowie der API-Spezifikation definiert. Weder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noch der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter definierte Implementierungs spezifische SQLSTATE-Werte.|  
-|*plNativeError*|Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlernummer von **master.dbo.sysmessages** zurück, sofern verfügbar. Systemeigene Fehler sind nach einem erfolgreichen Versuch verfügbar, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle des Native Client OLE DB Anbieters zu initialisieren. Vor dem Versuch gibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter immer 0 (null) zurück.|  
+|*pbstrausqlstate*|Gibt einen SQLSTATE-Wert für den Fehler zurück. SQLSTATE-Werte werden in SQL-92, ODBC und ISO SQL sowie der API-Spezifikation definiert. Weder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noch der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Anbieter definierte Implementierungs spezifische SQLSTATE-Werte.|  
+|*plNativeError*|Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlernummer von **master.dbo.sysmessages** zurück, sofern verfügbar. Systemeigene Fehler sind nach einem erfolgreichen Versuch verfügbar, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Datenquelle zu initialisieren. Vor dem Versuch gibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter immer 0 (null) zurück.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Fehler](../../relational-databases/native-client-ole-db-errors/errors.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

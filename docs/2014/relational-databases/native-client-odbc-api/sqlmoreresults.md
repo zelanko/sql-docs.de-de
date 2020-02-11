@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046725"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-  **SQLMoreResults** ermöglicht es der Anwendung, mehrere Ergebniszeilensätze abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, oder ein übermittelter Batch ODBC- oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, mehrere Resultsets zu generieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt das Erstellen eines Servercursors zum Verarbeiten der Ergebnisse keinesfalls zu. Deshalb muss der Entwickler sicherstellen, dass die ODBC-Anweisung blockierend wirkt. Der Entwickler muss die zurückgegebenen Daten vollständig nutzen oder die ODBC-Anweisung abbrechen, bevor Daten aus anderen aktiven Anweisungen für die Verbindung verarbeitet werden.  
+  **SQLMoreResults** ermöglicht es der Anwendung, mehrere Ergebniszeilen Sätze abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, oder ein übermittelter Batch ODBC- oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, mehrere Resultsets zu generieren. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt das Erstellen eines Servercursors zum Verarbeiten der Ergebnisse keinesfalls zu. Deshalb muss der Entwickler sicherstellen, dass die ODBC-Anweisung blockierend wirkt. Der Entwickler muss die zurückgegebenen Daten vollständig nutzen oder die ODBC-Anweisung abbrechen, bevor Daten aus anderen aktiven Anweisungen für die Verbindung verarbeitet werden.  
   
 > [!NOTE]  
 >  Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, wird nur beim Herstellen einer Verbindung zu einer Serverversion vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]unterstützt.  
@@ -160,8 +161,8 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLMoreResults-Funktion](https://go.microsoft.com/fwlink/?LinkId=59357)   
- [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

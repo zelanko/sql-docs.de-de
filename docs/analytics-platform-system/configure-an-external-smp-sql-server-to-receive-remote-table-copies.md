@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401326"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Konfigurieren eines externen SMP-SQL Server zum Empfangen von Remote Tabellen Kopien-parallel Data Warehouse
@@ -21,7 +21,7 @@ Beschreibt, wie eine externe SQL Server Instanz so konfiguriert wird, dass Remot
 
 In diesem Thema wird einer der Konfigurationsschritte zum Konfigurieren der Remote Tabellen Kopie beschrieben. Eine Liste aller Konfigurationsschritte finden Sie unter Kopieren von [Remote Tabellen](remote-table-copy.md).  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
 Bevor Sie die externe SQL Server konfigurieren können, müssen Sie folgende Schritte ausführen:  
   
 -   Sie müssen über ein Windows-System mit SQL Server 2008 Enterprise Edition oder einer neueren Version verfügen, die installiert oder bereits installiert ist. Das Windows-System muss bereits gemäß den Anweisungen in [Konfigurieren eines externen Windows-Systems zum Empfangen von Remote Tabellen Kopien mithilfe von InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)konfiguriert werden.  

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642712"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>Zusammenfassung: Konfigurieren von Berechtigungen für Datenbankobjekte
@@ -25,6 +25,6 @@ ms.locfileid: "62642712"
  Bei einer Sicht handelt es sich um eine einzelne SELECT-Anweisung, die sich für den Benutzer als Tabelle darstellt. Eine gespeicherte Prozedur ist mindestens eine als Batch ausgeführte [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung.  
   
 ## <a name="next-lesson-in-tutorial"></a>Nächste Lektion im Lernprogramm  
- [Lektion 3: Löschen von Datenbankobjekten](lesson-3-1-deleting-database-objects.md)  
+ [Lesson 3: Deleting Database Objects (Lektion 3: Löschen von Datenbankobjekten)](lesson-3-1-deleting-database-objects.md)  
   
   

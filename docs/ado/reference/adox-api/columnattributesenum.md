@@ -1,5 +1,5 @@
 ---
-title: Wird | Microsoft-Dokumentation
+title: Columnattributesaufumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,19 +16,19 @@ ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc20ff68e90d504a6eed69d4845cacc0e3e687be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966889"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-Gibt die Eigenschaften des eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md).  
+Gibt die Eigenschaften einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md)an.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adColFixed**|1|Die Spalte ist eine feste Länge.|  
-|**adColNullable**|2|Die Spalte kann null-Werte enthalten.|  
+|**adcolfixed**|1|Die Spalte weist eine Länge mit fester Länge auf.|  
+|**adcolnullable**|2|Die Spalte kann NULL-Werte enthalten.|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Attributes-Eigenschaft (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)

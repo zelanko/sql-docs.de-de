@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900166"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
@@ -55,14 +55,14 @@ ms.locfileid: "62900166"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum Festlegen von Eigenschaften für diese Transformation anzuzeigen:  
   
--   [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoins](merge-join-transformation.md)  
+-   [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoin](merge-join-transformation.md)  
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Transformations-Editor für Zusammenführungsjoin](../../merge-join-transformation-editor.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Transformations-Editor für Zusammenführungs Joins](../../merge-join-transformation-editor.md)   
  [Transformation für Zusammenführen](merge-transformation.md)   
  [Transformation für UNION ALL](union-all-transformation.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  

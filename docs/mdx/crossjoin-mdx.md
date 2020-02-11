@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892945"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
@@ -38,7 +38,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **Crossjoin** -Funktion gibt das Kreuz Produkt von zwei oder mehr angegebenen Mengen zurück. Die Reihenfolge der Tupel in der sich ergebenden Menge hängt von der Reihenfolge der zu verknüpfenden Mengen und von der Reihenfolge ihrer Elemente ab. Wenn z. b. der erste Satz aus {x1, x2,..., x*n*} und der zweite Satz aus {Y1, Y2,..., y*n*} besteht, lautet das Kreuz Produkt dieser Sätze wie folgt:  
   
  {(x1, Y1), (x1, Y2),..., (x1, y*n*), (x2, Y1), (x2, Y2),...,  
@@ -46,7 +46,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  (x2, y*n*),..., (x*n*, Y1), (x*n*, Y2),..., (Xn, y*n*)}  
   
 > [!IMPORTANT]  
->  Wenn die Mengen im Cross Join aus Tupeln unterschiedlicher Attributhierarchien der gleichen Dimension bestehen, gibt die Funktion nur die Tupel zurück, die tatsächlich vorhanden sind. Weitere Informationen finden Sie unter [Schlüsselkonzepte in MDX &#40;-&#41;Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+>  Wenn die Mengen im Cross Join aus Tupeln unterschiedlicher Attributhierarchien der gleichen Dimension bestehen, gibt die Funktion nur die Tupel zurück, die tatsächlich vorhanden sind. Weitere Informationen finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage enthält einfache Beispiele für die Verwendung der Crossjoin-Funktion auf der COLUMNS- und der ROWS-Achse einer Abfrage:  
@@ -127,7 +127,7 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

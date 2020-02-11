@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056281"
 ---
 # <a name="wideworldimporters-data-generation"></a>Datengenerierung von wideworldimporters
@@ -40,7 +40,7 @@ So generieren Sie Beispiel Daten bis zum aktuellen Datum:
 
     Diese Anweisung fügt der Datenbank bis zum aktuellen Datum Beispiel Verkäufe und Kauf Daten hinzu. Der Fortschritt der Datengenerierung nach Tag wird angezeigt. Die Datengenerierung kann etwa 10 Minuten für jedes Jahr dauern, für das Daten benötigt werden. Aufgrund eines zufälligen Faktors bei der Datengenerierung gibt es einige Unterschiede in den Daten, die zwischen den Ausführungen generiert werden.
 
-    Ändern Sie den Wert für den Parameter `@AverageNumberOfCustomerOrdersPerDay`, um die Menge der für Bestellungen pro Tag generierten Daten zu erhöhen oder zu verringern. Verwenden Sie die Parameter `@SaturdayPercentageOfNormalWorkDay` und `@SundayPercentageOfNormalWorkDay`, um das Bestell Volume für Wochentage festzulegen.
+    Ändern Sie den Wert für den-Parameter `@AverageNumberOfCustomerOrdersPerDay`, um die Datenmenge zu erhöhen oder zu verringern, die für Bestellungen pro Tag generiert wurde. Verwenden Sie die `@SaturdayPercentageOfNormalWorkDay` Parameter `@SundayPercentageOfNormalWorkDay` und, um das Bestell Volume für Wochentage festzulegen.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importieren generierter Daten in wideworldimportersdw
 
@@ -62,17 +62,17 @@ Wideworldimportersdw kann die Datengröße für Leistungstests beliebig erhöhen
 
 Eine der Herausforderungen besteht darin, die Größe des Downloads klein genug zu halten, um problemlos herunterzuladen, aber groß genug, um SQL Server Leistungs Features zu veranschaulichen. Beispielsweise werden bedeutende Vorteile für columnstore--Indizes nur erreicht, wenn Sie mit einer größeren Anzahl von Zeilen arbeiten. 
 
-Mit dem `Application.Configuration_PopulateLargeSaleTable`-Verfahren können Sie die Anzahl der Zeilen in der `Fact.Sale` Tabelle erhöhen. Die Zeilen werden in das 2012-Kalenderjahr eingefügt, um zu vermeiden, dass mit den vorhandenen weltweiten importierungsdaten, die am 1. Januar 2013 beginnen, kollidieren
+Mit dem `Application.Configuration_PopulateLargeSaleTable` Verfahren können Sie die Anzahl der Zeilen in der `Fact.Sale` Tabelle erhöhen. Die Zeilen werden in das 2012-Kalenderjahr eingefügt, um zu vermeiden, dass mit den vorhandenen weltweiten importierungsdaten, die am 1. Januar 2013 beginnen, kollidieren
 
 ### <a name="procedure-details"></a>Prozedur Details
 
-#### <a name="name"></a>NAME
+#### <a name="name"></a>Name
 
     Application.Configuration_PopulateLargeSaleTable
 
-#### <a name="parameters"></a>-Parameter
+#### <a name="parameters"></a>Parameter
 
-  `@EstimatedRowsFor2012` **bigint** (mit dem Standardwert 12 Millionen)
+  `@EstimatedRowsFor2012`**bigint** (mit dem Standardwert 12 Millionen)
 
 #### <a name="result"></a>Ergebnis
 

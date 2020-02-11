@@ -1,5 +1,5 @@
 ---
-title: sys. dm_continuous_copy_status
+title: sys.dm_continuous_copy_status
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844502"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL-Datenbank)
@@ -35,7 +35,7 @@ ms.locfileid: "73844502"
 Bei Verwendung von SQL-Datenbank V12 sollten Sie [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) verwenden (da *sys. dm_continuous_copy_status* nur für v11 gilt).
 
   
-|Column Name|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|Eindeutige ID der Replikatdatenbank.|  
 |**partner_server**|**sysname**|Der Name des SQL-Datenbankverbindungsservers.|  
@@ -51,15 +51,15 @@ Bei Verwendung von SQL-Datenbank V12 sollten Sie [sys. dm_geo_replication_link_s
 ## <a name="permissions"></a>Berechtigungen  
  Zum Abrufen von Daten ist die Mitgliedschaft in der Daten Bank Rolle **db_owner** erforderlich. Der dbo-Benutzer, Mitglieder der Daten Bank Rolle " **DBManager** " und der SA-Anmelde Name können diese Sicht ebenfalls Abfragen.  
   
-## <a name="remarks"></a>Remarks  
- Die **sys. dm_continuous_copy_status** -Sicht wird in der **Ressourcen** Datenbank erstellt und ist in allen Datenbanken, einschließlich der logischen Master Sicht, sichtbar. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **sys. dm_continuous_copy_status** -Sicht wird in der **Ressourcen** Datenbank erstellt und ist in allen Datenbanken, einschließlich der logischen Master Sicht, sichtbar. Doch bei Abfragen dieser Sicht in der logischen „master“-Datenbank wird ein leeres Ergebnis zurückgegeben.  
   
  Wenn die fortlaufende Kopier Beziehung für eine Datenbank beendet wird, wird die Zeile für diese Datenbank in der **sys. dm_continuous_copy_status** -Sicht nicht mehr angezeigt.  
   
  Wie die **sys. dm_database_copies** -Sicht gibt **sys. dm_continuous_copy_status** den Status der fortlaufenden Kopier Beziehung wieder, in der die Datenbank entweder eine primäre oder aktive sekundäre Datenbank ist. Im Gegensatz zu **sys. dm_database_copies**enthält **sys. dm_continuous_copy_status** mehrere Spalten, die Details zu Vorgängen und Leistung bereitstellen. Zu diesen Spalten gehören **last_replication**und **replication_lag_sec**.  
   
-## <a name="see-also"></a>Siehe auch  
-   der [sys &#40;. dm_database_copies Azure&#41; SQL-Datenbank](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
- [Gespeicherte Prozeduren &#40;für die aktive georeplikation Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. dm_database_copies &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Gespeicherte Prozeduren für die aktive georeplikation &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

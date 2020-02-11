@@ -14,10 +14,10 @@ ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 8ac756143790e8d6c9494489438157ee44c02d06
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728349"
 ---
 # <a name="delete-a-version-master-data-services"></a>Löschen einer Version (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "73728349"
 > [!WARNING]  
 >  Wenn ein Modell nur über eine Version verfügt, und Sie diese löschen, wird das Modell unbrauchbar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen berechtigt sein, die mdm.viw_SYSTEM_SCHEMA_VERSION-Sicht anzuzeigen und die gespeicherte Prozedur mds.udpVersionDelete in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank auszuführen. Weitere Informationen finden Sie unter [Sicherheit von Datenbankobjekten &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md).  
@@ -55,8 +55,8 @@ ms.locfileid: "73728349"
     > [!NOTE]  
     >  Es kann einige Minuten dauern, bis die Änderung in der Webanwendung angezeigt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Kopieren einer Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+ [Kopieren Sie eine Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
   

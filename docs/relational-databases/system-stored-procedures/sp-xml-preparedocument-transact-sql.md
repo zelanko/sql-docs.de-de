@@ -1,5 +1,5 @@
 ---
-title: Sp_xml_preparedocument (Transact-SQL) | Microsoft-Dokumentation
+title: sp_xml_preparedocument (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,34 +18,34 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950525"
 ---
-# <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
+# <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Liest den als Eingabe bereitgestellten XML-Text, analysiert diesen mit dem MSXML-Parser (Msxmlsql.dll) und stellt das analysierte Dokument für die Verwendung bereit. Das analysierte Dokument ist eine strukturierte Darstellung der verschiedenen Knoten im XML-Dokument: Elemente, Attribute, Text, Kommentare usw.  
   
- **Sp_xml_preparedocument** gibt ein Handle, das auf die neu erstellte interne Darstellung des XML-Dokuments verwendet werden kann. Dieses Handle ist gültig für die Dauer der Sitzung oder bis das Handle ungültig ist, durch Ausführen von **Sp_xml_removedocument**.  
+ **sp_xml_preparedocument** gibt ein Handle zurück, das für den Zugriff auf die neu erstellte interne Darstellung des XML-Dokuments verwendet werden kann. Dieses Handle ist für die Dauer der Sitzung oder bis zum invalidieren des Handles durch Ausführen von **sp_xml_removedocument**gültig.  
   
 > [!NOTE]  
->  Ein analysiertes Dokument wird im internen Cache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Der MSXML-Parser verwendet ein Achtel des gesamten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Arbeitsspeichers. Führen Sie zur Vermeidung von ausreichend Arbeitsspeicher, **Sp_xml_removedocument** , um den Arbeitsspeicher freizugeben.  
+>  Ein analysiertes Dokument wird im internen Cache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Der MSXML-Parser verwendet ein Achtel des gesamten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Arbeitsspeichers. Führen Sie **sp_xml_removedocument** aus, um den Arbeitsspeicher freizugeben.  
   
 > [!NOTE]  
->  Für die Abwärtskompatibilität Kompatibilität **Sp_xml_preparedocument** reduziert die CR ((char(13))- und LF (char(10)) Zeichen in Attributen auch dann, wenn diese Zeichen in Entitäten geändert wurden.  
+>  Aus Gründen der Abwärtskompatibilität reduziert **sp_xml_preparedocument** die Zeichen CR (Char (13) und LF (Char (10)) in Attributen, auch wenn diese Zeichen in Entitäten geändert werden.  
   
 > [!NOTE]  
->  Der XML-Parser aufgerufen, indem **Sp_xml_preparedocument** interner DTDs und Entitätsdeklarationen analysieren können. Da in böswilliger Absicht erstellt von DTDs und Deklarationen können verwendet werden, um ein Denial-of-Service-Angriff führen, es wird dringend empfohlen, dass Benutzer nicht direkt auf XML-Dokumente aus nicht vertrauenswürdigen Quellen zu übergeben **Sp_xml_preparedocument**.  
+>  Der von **sp_xml_preparedocument** aufgerufene XML-Parser kann interne DTDs und Entitäts Deklarationen analysieren. Da böswilliger erstellte DTDs und Entitäts Deklarationen verwendet werden können, um einen Denial-of-Service-Angriff auszuführen, wird dringend empfohlen, dass Benutzer nicht direkt XML-Dokumente aus nicht vertrauenswürdigen Quellen an **sp_xml_preparedocument**übergeben.  
 >   
->  Zur rekursiven Entity-Erweiterung, Angriffe **Sp_xml_preparedocument** auf 10.000 begrenzt die Anzahl der Entitäten, die unterhalb einer einzelnen Entität auf der obersten Ebene eines Dokuments erweitert werden kann. Diese Grenze gilt nicht für Zeichen- oder numerische Entitäten. Die Grenze ermöglicht die Speicherung von Dokumenten mit zahlreichen Entitätsverweisen, verhindert jedoch die rekursive Erweiterung einer Entität in eine Kette von mehr als 10.000 Erweiterungen.  
+>  Um rekursive Entitäts Erweiterungs Angriffe zu vermeiden, 10.000 begrenzt **sp_xml_preparedocument** die Anzahl der Entitäten, die unter einer einzelnen Entität auf der obersten Ebene eines Dokuments erweitert werden können. Diese Grenze gilt nicht für Zeichen- oder numerische Entitäten. Die Grenze ermöglicht die Speicherung von Dokumenten mit zahlreichen Entitätsverweisen, verhindert jedoch die rekursive Erweiterung einer Entität in eine Kette von mehr als 10.000 Erweiterungen.  
   
 > [!NOTE]  
->  **Sp_xml_preparedocument** begrenzt die Anzahl der Elemente, die auf 256 gleichzeitig geöffnet sein können.  
+>  **sp_xml_preparedocument** schränkt die Anzahl der Elemente ein, die gleichzeitig auf 256 geöffnet sein können.  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,21 +60,21 @@ OUTPUT
   
 ## <a name="arguments"></a>Argumente  
  *hdoc*  
- Das Handle für das gerade erstellte Dokument. *Hdoc* ist eine ganze Zahl.  
+ Das Handle für das gerade erstellte Dokument. *HDOC* ist eine ganze Zahl.  
   
- [ *Xmltext* ]  
- Das ursprüngliche XML-Dokument. Der MSXML-Parser analysiert dieses XML-Dokument. *XmlText* ist ein Textparameter: **Char**, **Nchar**, **Varchar**, **Nvarchar**, **Text**, **Ntext** oder **Xml**. Der Standardwert ist NULL; in diesem Fall wird eine interne Darstellung eines leeren XML-Dokuments erstellt.  
+ [ *XmlText* ]  
+ Das ursprüngliche XML-Dokument. Der MSXML-Parser analysiert dieses XML-Dokument. *XmlText* ist ein Text Parameter: **char**, **NCHAR**, **varchar**, **nvarchar**, **Text**, **ntext** oder **XML**. Der Standardwert ist NULL; in diesem Fall wird eine interne Darstellung eines leeren XML-Dokuments erstellt.  
   
 > [!NOTE]  
->  **Sp_xml_preparedocument** kann nur Text oder nicht typisiertes XML verarbeiten. Falls ein Instanzwert, der als Eingabewert verwendet werden soll, bereits ein typisierter XML-Wert ist, müssen Sie ihn zunächst in eine neue nicht typisierte XML-Instanz oder eine Zeichenfolge konvertieren und anschließend diesen Wert als Eingabewert übergeben. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+>  **sp_xml_preparedocument** können nur Text oder nicht typisiertes XML verarbeiten. Falls ein Instanzwert, der als Eingabewert verwendet werden soll, bereits ein typisierter XML-Wert ist, müssen Sie ihn zunächst in eine neue nicht typisierte XML-Instanz oder eine Zeichenfolge konvertieren und anschließend diesen Wert als Eingabewert übergeben. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
- [ *Xpath_namespaces* ]  
- Gibt die Namespacedeklarationen an, die in XPATH-Ausdrücken für Zeilen und Spalten in OPENXML verwendet werden. *Xpath_namespaces* ist ein Textparameter: **Char**, **Nchar**, **Varchar**, **Nvarchar**, **Text**, **Ntext** oder **Xml**.  
+ [ *xpath_namespaces* ]  
+ Gibt die Namespacedeklarationen an, die in XPATH-Ausdrücken für Zeilen und Spalten in OPENXML verwendet werden. *xpath_namespaces* ist ein Text Parameter: **char**, **NCHAR**, **varchar**, **nvarchar**, **Text**, **ntext** oder **XML**.  
   
- Der Standardwert ist  **\<root Xmlns:mp = "Urn: Schemas-Microsoft-com: xml-Metaprop" >** . *Xpath_namespaces* enthält die Namespace-URIs für die Präfixe der XPath-Ausdrücken in OPENXML ein wohlgeformtes XML-Dokument verwendet. *Xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace zu verweisen **Urn: Schemas-Microsoft-com: xml-Metaprop**; Dies stellt Metadaten für die analysierte XML-Elemente. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix **mp** ist noch gültig für **Urn: Schemas-Microsoft-com: xml-Metaprop** selbst wenn *Xpath_namespaces* keine derartige Deklaration enthält.  
+ Der Standardwert ist ** \<root xmlns: MP = "urn: Schemas-Microsoft-com: XML-metaprop" #b0 **. *xpath_namespaces* stellt die Namespace-URIs für die Präfixe bereit, die in den XPath-Ausdrücken in OPENXML mithilfe eines wohlgeformten XML-Dokuments verwendet werden. *xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace **urn: Schemas-Microsoft-com: XML-metaprop**zu verweisen. Dadurch werden Metadaten zu den analysierten XML-Elementen bereitgestellt. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix- **MP** ist weiterhin gültig für **urn: Schemas-Microsoft-com: XML-metaprop** , auch wenn *xpath_namespaces* keine solche Deklaration enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder > 0 (Fehler)  
+ 0 (Erfolg) oder >0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. Angeben eines Namespace-URI  
- Im folgenden Beispiel wird ein Handle für die neu erstellte interne Darstellung des als Eingabe bereitgestellten XML-Dokuments zurückgegeben. Der Aufruf von `sp_xml_preparedocument` behält die `mp` Präfix für die Namespacezuordnung der Metaeigenschaften und fügt die `xyz` Zuordnungspräfix für den Namespace `urn:MyNamespace`.  
+ Im folgenden Beispiel wird ein Handle für die neu erstellte interne Darstellung des als Eingabe bereitgestellten XML-Dokuments zurückgegeben. Der-Befehl `sp_xml_preparedocument` , der `mp` das Präfix für die Namespace Zuordnung der Metaeigenschaft `xyz` beibehält, und fügt das `urn:MyNamespace`Zuordnungspräfix dem Namespace hinzu.  
   
 ```  
 DECLARE @hdoc int;  
@@ -152,11 +152,11 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <br>[Gespeicherte XML-Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[Gespeicherte Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
- <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
- <br>[dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
- <br>["sp_xml_removedocument" (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+## <a name="see-also"></a>Weitere Informationen  
+ <br>[Gespeicherte XML-Prozeduren (Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[Gespeicherte System Prozeduren (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+ <br>[sys. dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

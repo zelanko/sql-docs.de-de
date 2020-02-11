@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 050ceeaa8eb5700f108b7135616817e09c0031cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889036"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
@@ -30,7 +30,7 @@ IsTestCase()
 ## <a name="result-type"></a>Ergebnistyp  
  Gibt " **true** " zurück, wenn der Fall ein Teil des Test Datasets ist. andernfalls **false**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie eine Miningstruktur und ein damit verknüpftes Miningmodell mit dem Data Mining-Assistenten erstellen, werden standardmäßig 30 Prozent der Fälle zur Verwendung als Testdataset zurückgehalten. Die übrigen Fälle werden zum Trainieren des Data Mining-Modells verwendet. Dasselbe Testdataset kann mit allen Modellen verwendet werden, die auf der Struktur basieren. Wenn Sie das Miningmodell jedoch mithilfe von DMX erstellen, werden standardmäßig alle Daten zum Trainieren des Modells verwendet, und es wird kein Testsatz erstellt. Um die Erstellung eines Test Datasets zu aktivieren, müssen Sie die Parameter der WITH HOLDOUT-Klausel festlegen.  
   
  Sie können ermitteln, ob ein Testsatz für eine bestimmte Miningstruktur erstellt wurde, indem Sie den Wert der Eigenschaften von <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> und <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> anzeigen.  
@@ -38,7 +38,7 @@ IsTestCase()
 > [!NOTE]  
 >  Drillthrough muss für das Modell aktiviert sein, wenn Sie die IsTrainingCase-Funktion oder die IsTestCase-Funktion verwenden möchten, um Details zu den Fällen in einem bestimmten Modell zurückzugeben. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
- Verwenden Sie die [ &#40;IsTrainingCase DMX&#41;](../dmx/istrainingcase-dmx.md)-Funktion, um die Fälle zurückzugeben, die Teil des Trainings Datasets sind.  
+ Verwenden Sie die [IsTrainingCase-Funktion &#40;DMX-&#41;](../dmx/istrainingcase-dmx.md), um die Fälle zurückzugeben, die Teil des Trainings Datasets sind.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die `Targeted Mailing` Mining Struktur verwendet, die im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt wird. Die Abfrage gibt alle Fälle der Struktur zurück, die für Tests verwendet werden.  
@@ -49,11 +49,11 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- Weitere Informationen zum Abfragen von Fällen, die in Data Mining verwendet werden, finden [Sie &#60;unter&#62;Select from Model. &#40;&#41; DMX-Fälle](../dmx/select-from-model-cases-dmx.md) und [Select &#60;from&#62;-Struktur. Fälle](../dmx/select-from-structure-cases.md).  
+ Weitere Informationen zum Abfragen von Fällen, die in Data Mining verwendet werden, finden [Sie unter Select from &#60;Model&#62;. Fälle &#40;DMX-&#41;](../dmx/select-from-model-cases-dmx.md) und [Wählen aus &#60;Struktur&#62;. Fälle](../dmx/select-from-structure-cases.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
- [Data Mining-Abfrage](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
  [Trainings- und Testdatasets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
   
   

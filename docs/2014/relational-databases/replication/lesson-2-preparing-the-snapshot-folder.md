@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721024"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lektion 2: Vorbereiten des Momentaufnahmeordners
@@ -36,9 +36,9 @@ ms.locfileid: "62721024"
   
 6.  Klicken Sie auf der Registerkarte **Sicherheit** auf **Bearbeiten**.  
   
-7.  Klicken Sie im Dialogfeld **Berechtigungen** auf **Hinzufügen**. Geben Sie im Textfeld **Benutzer, Computer, Dienstkonten oder Gruppen auswählen** den Namen des in Lektion 1 erstellten Momentaufnahme-Agentkontos ein: \<_Machine_Name>_ **\repl_snapshot**, wobei \<*C_Name>* den Namen des Verlegers angibt. Klicken Sie auf **Namen überprüfen**und anschließend auf **OK**.  
+7.  Klicken Sie im Dialogfeld **Berechtigungen** auf **Hinzufügen**. Geben Sie im Textfeld **Benutzer, Computer, Dienst Konto oder Gruppen auswählen** den Namen des in Lektion 1 erstellten Momentaufnahmen-Agent Kontos wie \< _Machine_Name>_ **\ repl_snapshot**ein, wobei \< *Machine_Name>* der Name des Verlegers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
   
-8.  Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent (als \<_Machine_Name>_ **\repl_distribution**) und für den Merge-Agent (als \<_Machine_Name>_ **\repl_merge**) hinzuzufügen.  
+8.  Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent \<, wie _Machine_Name>_ **\ repl_distribution**, und für den \<Merge-Agent Machine_Name _>_ **\**repl_merge hinzuzufügen.  
   
 9. Überprüfen Sie, ob die folgenden Berechtigungen gewährt wurden.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62721024"
 10. Klicken Sie auf **OK** , um das Dialogfeld **Eigenschaften von repldata** zu schließen und die repldata-Freigabe zu erstellen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben erfolgreich eine Freigabe für den Momentaufnahmeordner konfiguriert. Im nächsten Arbeitsschritt konfigurieren Sie die Verteilung. Siehe [Lektion 3: Konfigurieren der Verteilung](lesson-3-configuring-distribution.md).  
+ Sie haben erfolgreich eine Freigabe für den Momentaufnahmeordner konfiguriert. Im nächsten Arbeitsschritt konfigurieren Sie die Verteilung. Weitere Informationen finden Sie unter [Lektion 3: Konfigurieren der Verteilung](lesson-3-configuring-distribution.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md)  
   
   

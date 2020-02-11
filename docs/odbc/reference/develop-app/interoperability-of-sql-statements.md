@@ -15,16 +15,16 @@ ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed366acde11778342387d3bcb152a6619a6a3778
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138867"
 ---
 # <a name="interoperability-of-sql-statements"></a>Interoperabilität von SQL-Anweisungen
-Wie eine Anwendung können es sich bei der SQL-Anweisungen interoperable oder DBMS-spezifische sein. Und wie der Rest der Anwendung, die Auswahl der SQL-Anweisungen wie interoperabel sein müssen, hängt der Typ der Anwendung. Benutzerdefinierte Anwendungen sind weniger wahrscheinlich, dass Sie interoperable SQL-Anweisungen verwenden, da sie in der Regel so ausgelegt sind, das die Funktionen des DBMS-Systeme einen oder möglicherweise sogar zwei auszunutzen. Allgemeine Anwendungen verwenden interoperable SQL-Anweisungen, da sie für die Arbeit mit einer Vielzahl von DBMS-Systeme entworfen wurden. Und vertikale Anwendungen in der Regel irgendwo dazwischen, fordern ein gewisses Maß an Funktionalität aber andernfalls interoperable SQL-Anweisungen verwenden.  
+Wie beim Rest einer Anwendung können SQL-Anweisungen interoperabel oder DBMS-spezifisch sein. Ebenso wie der restliche Anwendungs Bedarf hängt die Wahl der interoperablen SQL-Anweisungen vom Anwendungstyp ab. Bei benutzerdefinierten Anwendungen ist die Wahrscheinlichkeit geringer, dass Sie interoperable SQL-Anweisungen verwenden, da Sie in der Regel für die Nutzung der Funktionen eines oder möglicherweise zweier DBMSs konzipiert sind. Generische Anwendungen verwenden interoperable SQL-Anweisungen, da Sie für die Arbeit mit einer Vielzahl von DBMSs entwickelt wurden. Und vertikale Anwendungen fallen in der Regel dazwischen, was eine bestimmte Funktionsebene erfordert, aber andernfalls die Verwendung von interoperablen SQL-Anweisungen.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Auswählen einer SQL-Grammatik](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
   

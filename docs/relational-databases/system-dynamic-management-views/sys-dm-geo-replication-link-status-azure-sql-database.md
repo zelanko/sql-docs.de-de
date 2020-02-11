@@ -1,5 +1,5 @@
 ---
-title: sys. dm_geo_replication_link_status
+title: sys.dm_geo_replication_link_status
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e642fada95ddf20e81f9fcb7da8b6267469ef0c9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73843888"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL-Datenbank)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jeden Replikations Link zwischen primären und sekundären Datenbanken in einer Partnerschaft für die georeplikation. Dies umfasst sowohl primäre als auch sekundäre Datenbanken. Wenn mehr als ein fortlaufender Replikations Link für eine bestimmte primäre Datenbank vorhanden ist, enthält diese Tabelle eine Zeile für jede der Beziehungen. Die Sicht wird in allen Datenbanken erstellt, einschließlich des logischen Masters. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
+  Enthält eine Zeile für jeden Replikations Link zwischen primären und sekundären Datenbanken in einer Partnerschaft für die georeplikation. Dies schließt primäre und sekundäre Datenbanken ein. Wenn für eine bestimmte primäre Datenbank mehrere Verknüpfungen für die fortlaufende Replikation vorhanden sind, enthält die Tabelle eine Zeile für jede der Beziehungen. Die Sicht wird in allen Datenbanken, einschließlich der logischen „master“-Datenbank, erstellt. Doch bei Abfragen dieser Sicht in der logischen „master“-Datenbank wird ein leeres Ergebnis zurückgegeben.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|Eindeutige ID des Replikations Links.|  
 |partner_server|**sysname**|Der Name des SQL-Datenbankservers, der die verknüpfte Datenbank enthält.|  
@@ -43,7 +43,7 @@ ms.locfileid: "73843888"
 |Rolle (role)|**tinyint**|Die georeplikationsrolle ist eine der folgenden:<br /><br /> 0 = primär. Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = sekundär.  Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Der sekundäre Typ, einer der folgenden:<br /><br /> 0 = Es sind keine direkten Verbindungen mit der sekundären Datenbank zulässig, und die Datenbank ist für den Lesezugriff nicht verfügbar.<br /><br /> 2 = alle Verbindungen sind für die Datenbank in der sekundären repl zulässig; ikation für schreibgeschützten Zugriff.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Nein<br /><br /> Alle|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Nein<br /><br /> All|  
 |last_commit|**datetimeoffset**|Zeitpunkt der letzten Transaktion, für die ein Commit an die Datenbank ausgeführt wurde. Wenn die Datenbank in der primären Datenbank abgerufen wird, gibt Sie den Zeitpunkt des letzten Commit in der primären Datenbank an. Wenn Sie in der sekundären Datenbank abgerufen wird, gibt Sie den Zeitpunkt des letzten Commit in der sekundären Datenbank an. Wenn Sie in der sekundären Datenbank abgerufen werden, wenn der primäre Replikations Link nicht aktiv ist, wird angezeigt, bis der von der sekundären Datenbank aufgefasste Punkt erreicht wurde|
   
 > [!NOTE]  
@@ -64,9 +64,9 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-   [ &#40;Azure SQL-Datenbank&#41; ändern](../../t-sql/statements/alter-database-azure-sql-database.md)  
-   der [sys &#40;. geo_replication_links Azure&#41; SQL-Datenbank](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Alter Database &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [sys. geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [sys. dm_operation_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892658"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
@@ -1113,7 +1113,7 @@ ms.locfileid: "62892658"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|Der Wert %1!d! , der für den scale-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, liegt außerhalb des zulässigen Bereichs. Der Wert für die Dezimalstellen muss zwischen %3!d! und „%4!d!“ liegen. Der Wert für die Dezimalstellen darf die Genauigkeit nicht überschreiten und darf nicht negativ sein.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|Der Wert %1!d! , der für den length-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, ist negativ und deshalb ungültig. Der Wert für die Länge muss positiv sein.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1 kann kein negativer Wert zugewiesen werden.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Folgende Spaltendatentypen sind möglich:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2, or DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Folgende Spaltendatentypen sind möglich:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 oder DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1" kann nicht erneut angefügt werden. Löschen Sie den Pfad, fügen Sie einen neuen Pfad hinzu, und fügen Sie das Objekt an.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|Die %1-Funktion erfordert %2!d!-Parameter, nicht %3!d!-Parameter . Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|Die %1-Funktion erfordert %2!d!-Parameter, Parameter, und nicht %3!d! Parameter auf. Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  
@@ -1413,7 +1413,7 @@ ms.locfileid: "62892658"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|Die Anzahl von %2!ld! Zeilen ist für die Eigenschaft "%1" ungültig. Dieser Wert muss größer als 0 (null) sein.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|Der Adapter wurde aufgefordert, eine Zeichenfolge zu schreiben, die %1!I64d! Bytes lang war, alle Daten zusammen dürfen jedoch maximal 4.294.967.294 Bytes aufweisen.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|Der Ausgabe wurden keine Eingaben zugeordnet. Für "%1" muss mindestens eine Eingabespalte einer Ausgabespalte zugeordnet sein.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|Konvertierung von "% 1" mit Codepage %2!d! in "%3" mit Codepage %4!d! wird nicht unterstützt.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|Konvertierung von "% 1" mit Codepage %2!d! in "%3" mit Codepage %4!d! nicht unterstützt.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|Die Zuordnung der externen Metadatenspalte für %1 ist ungültig.  Die externe Metadatenspalten-ID darf nicht gleich 0 (null) sein.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|%1 ist einer externen Metadatenspalte zugeordnet, die nicht vorhanden ist.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|Fehler beim Schreiben der Long-Objektdaten vom Typ DT_TEXT, DT_NTEXT oder DT_IMAGE in den Datenflusstask-Puffer der Spalte "%1".|  
@@ -1922,7 +1922,7 @@ ms.locfileid: "62892658"
 |0xC02090BE|-1071607618|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_PATHNOTFOUND|Fehler beim Öffnen einer Datei zum Lesen. Der Pfad wurde nicht gefunden.|  
 |0xC02090BF|-1071607617|DTS_E_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Fehler beim Öffnen der Datei "%1" zum Lesen. Es sind zu viele Dateien geöffnet.|  
 |0xC02090C0|-1071607616|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Fehler beim Öffnen der Datei zum Lesen. Es sind zu viele Dateien geöffnet.|  
-|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Fehler beim Öffnen der Datei "%1" zum Lesen. Der Zugriff wird verweigert.|  
+|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Fehler beim Öffnen der Datei "%1" zum Lesen. Zugriff verweigert.“|  
 |0xC02090C2|-1071607614|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_ACCESSDENIED|Fehler beim Öffnen der Datei zum Lesen. Sie verfügen nicht über die erforderlichen Berechtigungen.|  
 |0xC02090C3|-1071607613|DTS_E_INSERTERINVALIDBOM|Der Wert für die Bytereihenfolgemarke (Byte Order Mark, BOM) für die Datei "%1" lautet 0x%2!4.4X!, es wurde jedoch der Wert 0x%3!4.4X! erwartet. Die ExpectBOM-Eigenschaft wurde für die Datei festgelegt, aber der BOM-Wert in der Datei fehlt oder ist ungültig.|  
 |0xC02090C4|-1071607612|DTS_E_TXFILEINSERTERSTATIC_INSERTERINVALIDBOM|Der Wert für die Bytereihenfolgemarke (Byte Order Mark, BOM) für die Datei ist ungültig. Die ExpectBOM-Eigenschaft wurde für die Datei festgelegt, aber der BOM-Wert in der Datei fehlt oder ist ungültig.|  
@@ -2020,7 +2020,7 @@ ms.locfileid: "62892658"
 ##  <a name="msgWarning"></a> Warnmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Warnmeldungen beginnen mit `DTS_W_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|Es bleiben %1!lu! Tage für die Evaluierung. Nach Ablauf der Evaluierung können die Pakete nicht mehr ausgeführt werden.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|Warnung(en) wurde(n) ausgelöst. Vorher sollten genauere Warnungen ausgegeben worden sein, die die Bedeutung der Warnung(en) erläutern.|  
@@ -2166,7 +2166,7 @@ ms.locfileid: "62892658"
 ##  <a name="msgInfo"></a> Informationsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Informationsmeldungen beginnen mit `DTS_I_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|Verteilte Transaktion für diesen Container wird gestartet.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|Commit für verteilte Transaktion, die von diesem Container gestartet wurde, wird ausgeführt.|  
@@ -2265,7 +2265,7 @@ ms.locfileid: "62892658"
 ##  <a name="msgGeneral"></a> Allgemeine Meldungen und Ereignismeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit `DTS_MSG_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Falsche Funktion.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Die angegebene Datei wurde nicht gefunden.|  
@@ -2313,7 +2313,7 @@ ms.locfileid: "62892658"
 ##  <a name="msgPipeline"></a> Fehlermeldungen der Datenflusskomponenten  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit `DTSBC_E_`, wobei "BC" auf die systemeigene Basisklasse verweist, von der die meisten Microsoft-Datenflusskomponenten abgeleitet werden.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|Die Gesamtanzahl der Ausgaben und Fehlerausgaben (%1!lu!) ist falsch. Dieser Wert muss genau %2!lu! betragen.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Die Ausgabe mit dem Index %1!lu! kann nicht abgerufen werden.|  

@@ -1,5 +1,5 @@
 ---
-title: DefinedSize-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: DefinedSize-Eigenschaft (Beispiel) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4c6930cd849ca7d0dd8b8905d52fd8355a38b66a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966461"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939582"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel zeigt die [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Der Code neu definiert die Größe der Spalte "FirstName", der die **Mitarbeiter** Tabelle mit den *Northwind* Datenbank. Klicken Sie dann die Änderung der Werte von den FirstName [Feld](../../../ado/reference/ado-api/field-object.md) von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf der **Mitarbeiter** Tabelle wird angezeigt. Beachten Sie, dass standardmäßig das Feld FirstName mit Leerzeichen aufgefüllt wird, nachdem Sie neu definieren, die **DefinedSize** Eigenschaft.  
+Dieses Beispiel veranschaulicht die [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) -Eigenschaft einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Mit dem Code wird die Größe der FirstName-Spalte der **Employees** -Tabelle der *Northwind* -Datenbank neu definiert. Anschließend wird die Änderung der Werte des [Felds](../../../ado/reference/ado-api/field-object.md) FirstName eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) , das auf der Tabelle **Employees** basiert, angezeigt. Beachten Sie, dass das Feld FirstName standardmäßig mit Leerzeichen aufgefüllt wird, nachdem Sie die **DefinedSize** -Eigenschaft neu definiert haben.  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -149,7 +149,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in DefinedSizeX...." << endl;  
+      cout << "Error occurred in DefinedSizeX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -162,6 +162,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize-Eigenschaft (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

@@ -13,10 +13,10 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728672"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Ändern des Namens einer Geschäftsregel (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728672"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie den Namen einer Geschäftsregel ändern, wenn der zugewiesene Name nicht Ihren Geschäftsanforderungen entspricht.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -56,7 +56,7 @@ ms.locfileid: "73728672"
   
 10. Klicken Sie im Bestätigungsdialogfeld auf **OK**. Der Wert in der Spalte **Geschäftsregelstatus**lautet **Aktiv**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Master Data Services von Geschäftsregeln &#40;&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

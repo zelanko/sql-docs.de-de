@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20bc4c4e56e3843a9a36cdd1ebdc97b875726cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914564"
 ---
-# <a name="mssqlserver2575"></a>MSSQLSERVER_2575
+# <a name="mssqlserver_2575"></a>MSSQLSERVER_2575
     
 ## <a name="details"></a>Details  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62914564"
 #### <a name="results-of-running-repair-options"></a>Ergebnis der Ausführung von REPAIR-Optionen  
  DBCC wird den Index neu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

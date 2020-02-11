@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056619"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Datenmigrations-Assistent von der Befehlszeile aus
 
-Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd. exe in *% Program Files%\\Microsoft-Datenmigrations-Assistent\\* installiert. Verwenden Sie dmacmd. exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
+Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd. exe in *% Program Files\\% Microsoft-Datenmigrations-Assistent\\*installiert. Verwenden Sie dmacmd. exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
 
 > [!NOTE]
 > Dmacmd. exe unterstützt nur das Ausführen von Bewertungen. Migrationen werden zurzeit nicht unterstützt.
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argument  |und Beschreibung  | Erforderlich (j/N)
+|Argument  |BESCHREIBUNG  | Erforderlich (j/N)
 |---------|---------|---------------|
 | `/help or /?`     | Verwenden von "dmacmd. exe"-Hilfe Text        | N
 |`/AssessmentName`     |   Name des Bewertungs Projekts   | J
@@ -61,7 +61,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Beispiele für Bewertungen mithilfe der CLI
 
-**Dmacmd.exe**
+**Dmacmd. exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -248,7 +248,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argument  |und Beschreibung  | Erforderlich (j/N)
+|Argument  |BESCHREIBUNG  | Erforderlich (j/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Ausführen der SKU-Bewertung mithilfe der DMA-Befehlszeile | J
 |`/SkuRecommendationInputDataFilePath` | Vollständiger Pfad zur Leistungsdaten Bank Datei, die von dem Computer erfasst wird, der Ihre Datenbanken | J
@@ -270,7 +270,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Beispiele für SKU-Bewertungen mithilfe der CLI
 
-**Dmacmd.exe**
+**Dmacmd. exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -337,6 +337,6 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Datenmigrations-Assistent](https://aka.ms/get-dma) herunterladen.
 - Der Artikel [identifiziert die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank](https://aka.ms/dma-sku-recommend-sqldb).

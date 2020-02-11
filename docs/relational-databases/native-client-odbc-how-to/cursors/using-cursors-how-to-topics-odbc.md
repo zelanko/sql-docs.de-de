@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fa0411d322e3e16b8fe1bebf6f84fb626b0f82e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781499"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Verwenden von Cursorn (Vorgehensweisen) (ODBC)
@@ -27,13 +27,13 @@ ms.locfileid: "73781499"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Cursor &#40;-ODBC verwenden&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [Verwenden von Cursorn &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Verwenden der Rowsetbindung &#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Verwenden der Rowsetbindung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [Abrufen und Aktualisieren von Rowsets &#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [Abrufen und Aktualisieren von Rowsets &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweisen zu ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

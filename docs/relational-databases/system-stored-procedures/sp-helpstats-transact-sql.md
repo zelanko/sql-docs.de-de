@@ -1,5 +1,5 @@
 ---
-title: Sp_helpstats (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpstats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048404"
 ---
-# <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
+# <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt statistische Informationen zu Spalten und Indizes der angegebenen Tabelle zurück.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Um Informationen zu Statistiken abzurufen, Fragen Sie die [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) und [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) Katalogsichten.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Fragen Sie die Katalog Sichten [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) und [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) ab, um Informationen zu Statistiken zu erhalten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,29 +44,29 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object_name'` Gibt die Tabelle für die statistische Informationen bereitgestellt. *Object_name* ist **nvarchar(520)** und darf nicht null sein. Es kann ein ein- oder zweiteiliger Name angegeben werden.  
+`[ @objname = ] 'object_name'`Gibt die Tabelle an, für die Statistik Informationen bereitgestellt werden sollen. *object_name* ist vom Datentyp **nvarchar (520)** und darf nicht NULL sein. Es kann ein ein- oder zweiteiliger Name angegeben werden.  
   
-`[ @results = ] 'value'` Gibt an, wie viele Informationen bereitstellen. Gültige Einträge sind **alle** und **Statistiken**. **ALLE** Listet die Statistiken aller Indizes und Spalten mit Statistiken erstellt wurden; **Statistiken** Listet nur Statistiken, die nicht mit einem Index zugeordnet. *Wert* ist **nvarchar(5)** hat den Standardwert STATS.  
+`[ @results = ] 'value'`Gibt den Umfang der bereitgestellten Informationen an. Gültige Einträge sind **alle** und **Statistiken**. **Alle** listet Statistiken für alle Indizes und auch Spalten auf, für die Statistiken erstellt wurden. **Statistiken listet nur Statistiken** auf, die keinem Index zugeordnet sind. der Wert ist vom Datentyp **nvarchar (5)** und hat den Standard *Wert* stats.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
  In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|**statistics_name**|Der Name der Statistik. Gibt **Sysname** und darf nicht null sein.|  
-|**statistics_keys**|Die Schlüssel, auf denen die Statistik basiert. Gibt **nvarchar(2078)** und darf nicht null sein.|  
+|**statistics_name**|Der Name der Statistik. Gibt " **vom Datentyp sysname** " zurück und kann nicht NULL sein.|  
+|**statistics_keys**|Die Schlüssel, auf denen die Statistik basiert. Gibt **nvarchar (2078)** zurück und darf nicht NULL sein.|  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie DBCC SHOW_STATISTICS, um detaillierte statistische Informationen zu einem bestimmten Index oder einer bestimmten Statistik anzuzeigen. Weitere Informationen finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) und [Sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie DBCC SHOW_STATISTICS, um detaillierte statistische Informationen zu einem bestimmten Index oder einer bestimmten Statistik anzuzeigen. Weitere Informationen finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) und [sp_helpindex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Durch Ausführen von `sp_createstats` werden einspaltige Statistiken für alle in Frage kommenden Spalten aller Benutzertabellen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt. Anschließend wird `sp_helpstats` ausgeführt, um die für die `Customer`-Tabelle erstellten Statistiken zu ermitteln.  
+ Durch Ausführen von [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] werden einspaltige Statistiken für alle in Frage kommenden Spalten aller Benutzertabellen in der `sp_createstats`-Datenbank erstellt. Anschließend wird `sp_helpstats` ausgeführt, um die für die `Customer`-Tabelle erstellten Statistiken zu ermitteln.  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,8 +98,8 @@ EXEC sp_helpstats
   
  `PK_Customer_CustomerID        CustomerID`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

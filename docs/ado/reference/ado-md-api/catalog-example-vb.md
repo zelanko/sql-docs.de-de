@@ -1,5 +1,5 @@
 ---
-title: Katalog-Beispiel (VB) | Microsoft-Dokumentation
+title: Katalog Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b0886302a48f7b9b3ee8e261014c0784d51fc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930415"
 ---
 # <a name="catalog-example-vb"></a>Katalog-Beispiel (VB)
-Diese Visual Basic-Projekt erstellt einen neuen Cube mit MDX. Klicken Sie dann dokumentiert die Struktur eines Cubes in Microsoft Word-Dokument.  
+Dieses Visual Basic Projekt erstellt einen neuen Cube mithilfe von MDX. Anschließend wird die Struktur eines Cubes in einem Microsoft Word-Dokument dokumentiert.  
   
 ```  
 Private Sub cmdCreateDocForCube_Click()  

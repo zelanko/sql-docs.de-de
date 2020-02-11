@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811230"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
@@ -23,7 +23,7 @@ ms.locfileid: "68811230"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>Konfigurieren einer speicheroptimierten Tabelle als Abonnent  
  Führen Sie die folgenden Schritte aus, um eine speicheroptimierte Tabelle als Abonnenten zu konfigurieren.  
   
- **Erstellen und Aktivieren der Veröffentlichung**  
+ **Erstellen und Aktivieren einer Veröffentlichung**  
   
 1.  Erstellen einer Veröffentlichung  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68811230"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navigieren Sie zum Ordner für Momentaufnahmen. Der Standard Speicherort ist "c:\Programme\Microsoft SQL server\mssql12.". INSTANCE > \mssql\repldata\unc\xxx\yyyymmddhhmmss\\". \<  
+2.  Navigieren Sie zum Ordner für Momentaufnahmen. Der Standard Speicherort ist "c:\Programme\Microsoft SQL server\mssql12.". \<Instance> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
   
 3.  Suchen Sie nach **. Sch** -Datei für die Tabelle, und öffnen Sie Sie in Management Studio. Ändern Sie das Tabellenschema, und aktualisieren Sie die gespeicherte Prozedur, wie im Folgenden beschrieben.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "68811230"
     go  
     ```  
   
-5.  Erstellen Sie eine Abonnenten Datenbank mithilfe der Option **Elevate to Snapshot Isolation** , und legen Sie die Standardsortierung auf Latin1_General_CS_AS_KS_WS fest, wenn nicht-Unicode-Zeichen Datentypen verwendet werden.  
+5.  Erstellen Sie eine Abonnenten Datenbank mithilfe der Option **Elevate to Snapshot Isolation** , und legen Sie die Standardsortierung auf Latin1_General_CS_AS_KS_WS fest, wenn Sie nicht-Unicode-Zeichen Datentypen verwenden.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -263,7 +263,7 @@ ms.locfileid: "68811230"
     GO  
     ```  
   
- **Kein Synchronisierungs Abonnement hinzufügen**  
+ **Hinzufügen eines "No sync"-Abonnements**  
   
  Fügen Sie ein "No sync"-Abonnement hinzu.  
   
@@ -282,7 +282,7 @@ GO
   
  Speicheroptimierte Tabellen empfangen nun Updates vom Verleger.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Es wird nur die unidirektionale Transaktionsreplikation unterstützt. Die Peer-zu-Peer-Transaktionsreplikation wird nicht unterstützt.  
   
  Speicheroptimierte Tabellen können nicht veröffentlicht werden.  
@@ -301,7 +301,7 @@ GO
   
 -   Es gelten Einschränkungen für das Aktualisieren des Primärschlüssels von Tabellen, die mit einer speicheroptimierten Tabelle auf einem Abonnenten repliziert werden. Weitere Informationen finden Sie unter [Replizieren von Änderungen an einem Primärschlüssel](#PrimaryKey).  
   
--   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen finden Sie unter [Von In-Memory OLTP nicht unterstützte T-SQL-Konstrukte](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
+-   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen finden Sie unter [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Ändern einer Schemadatei  
   
@@ -316,7 +316,7 @@ GO
 ##  <a name="PrimaryKey"></a>Replizieren von Änderungen an einem Primärschlüssel  
  Der Primärschlüssel einer speicheroptimierten Tabelle kann nicht aktualisiert werden. Wenn Sie ein Primärschlüsselupdate auf einem Abonnenten replizieren möchten, ändern Sie die gespeicherte Updateprozedur so, dass der Updatevorgang als DELETE/INSERT-Paar übermittelt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Replikation](sql-server-replication.md)  
   
   

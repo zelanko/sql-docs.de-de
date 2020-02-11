@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982774"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982774"
 
   Aktualisiert die Metadaten für die angegebene nicht schemagebundene gespeicherte Prozedur, benutzerdefinierte Funktion oder Sicht, den DML-Trigger, DDL-Trigger auf Datenbankebene oder DDL-Trigger auf Serverebene in der aktuellen Datenbank. Persistente Metadaten für diese Objekte, z. B. Datentypen von Parametern, können aufgrund von Änderungen an den zugrunde liegenden Objekten veraltet sein.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,9 +56,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'module\_name'` ist der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Datentyp **nvarchar**und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.  
+`[ @name = ] 'module\_name'`Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Datentyp **nvarchar**und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.  
   
-`[ , @namespace = ] ' \<class> '` ist die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-Wert ist, ist \<Klasse > erforderlich. *\<Klasse >* ist vom Datentyp **nvarchar**(20). Gültige Eingaben sind:  
+`[ , @namespace = ] ' \<class> '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-Wert ist \<, ist Class> erforderlich. Class>ist vom Datentyp **nvarchar**(20). * \<* Gültige Eingaben sind:  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **sp_refreshsqlmodule** sollte ausgeführt werden, wenn Änderungen an den Objekten vorgenommen werden, die dem Modul zugrunde liegen, das sich auf seine Definition auswirkt. Andernfalls kann das Modul bei einer Abfrage oder einem Aufruf unerwartete Ergebnisse generieren. Zum Aktualisieren einer Ansicht können Sie entweder **sp_refreshsqlmodule** oder **sp_refreshview** mit den gleichen Ergebnissen verwenden.  
   
  **sp_refreshsqlmodule** wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften oder SET-Optionen aus, die dem-Objekt zugeordnet sind.  
@@ -168,8 +168,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Datenbank-Engine gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_refreshview &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

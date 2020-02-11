@@ -18,24 +18,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 66db10c8ac64fee4e6e9ccbc405ab5b804adb32a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779522"
 ---
-# <a name="procedures"></a>Vorgehensweisen
+# <a name="procedures"></a>Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Eine gespeicherte Prozedur ist ein vorkompiliertes ausführbares Objekt, das eine oder mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen enthält. Gespeicherte Prozeduren können Ein- und Ausgabeparameter enthalten und auch einen ganzzahligen Rückgabecode ausgeben. Eine Anwendung kann kann mithilfe von Katalogfunktionen verfügbare gespeicherte Prozeduren auflisten.  
   
- ODBC-Anwendungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sollten gespeicherte Prozeduren nur mithilfe der direkten Ausführung aufrufen. Wenn eine Verbindung mit früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hergestellt wurde, implementiert der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) , indem eine temporäre gespeicherte Prozedur erstellt wird, die dann für **SQLExecute**aufgerufen wird. Es erhöht den Aufwand, damit **SQLPrepare** eine temporäre gespeicherte Prozedur erstellt, die nur die gespeicherte Ziel Prozedur aufruft und die gespeicherte Ziel Prozedur direkt ausführt. Selbst bei einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss der Aufruf eines zusätzlichen Roundtrips durch das Netzwerk vorbereitet und ein Ausführungsplan, mit dem nur der Ausführungsplan der gespeicherten Prozedur aufgerufen wird, erstellt werden.  
+ ODBC-Anwendungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sollten gespeicherte Prozeduren nur mithilfe der direkten Ausführung aufrufen. Bei einer Verbindung mit früheren Versionen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von implementiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) , indem eine temporäre gespeicherte Prozedur erstellt wird, die dann für **SQLExecute**aufgerufen wird. Es erhöht den Aufwand, damit **SQLPrepare** eine temporäre gespeicherte Prozedur erstellt, die nur die gespeicherte Ziel Prozedur aufruft und die gespeicherte Ziel Prozedur direkt ausführt. Selbst bei einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss der Aufruf eines zusätzlichen Roundtrips durch das Netzwerk vorbereitet und ein Ausführungsplan, mit dem nur der Ausführungsplan der gespeicherten Prozedur aufgerufen wird, erstellt werden.  
   
  Beim Ausführen einer gespeicherten Prozedur sollten ODBC-Anwendungen die ODBC CALL-Syntax verwenden. Der Treiber ist für die Verwendung eines Remoteprozeduraufrufsmechanismus zum Aufrufen der Prozedur optimiert, sofern die ODBC CALL-Syntax verwendet wird. Dies ist effizienter als der Mechanismus, der verwendet wird, um eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE-Anweisung an den Server zu senden.  
   
  Weitere Informationen finden Sie unter [Ausführen gespeicherter Prozeduren](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von &#40;Anweisungen (ODBC)&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Anweisungen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

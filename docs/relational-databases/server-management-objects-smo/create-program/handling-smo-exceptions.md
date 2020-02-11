@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4fdf4e03eeb839aad74588f3fb338d10fc949220
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148703"
 ---
 # <a name="handling-smo-exceptions"></a>Behandeln von SMO-Ausnahmen
@@ -38,15 +38,15 @@ ms.locfileid: "70148703"
 > [!NOTE]  
 >  Die **SqlException** -Ausnahme wird im Namespace " **System. Data. SqlClient** " deklariert.  
   
- ![Ein Diagramm, in dem die Ebenen angezeigt werden, von denen ein Flussebenen](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Ein Diagramm, in dem die Ebenen angezeigt werden, von denen ein Flussebenen")  
+ ![Diagramm mit Ausnahmeflussebenen](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Diagramm mit Ausnahmeflussebenen")  
   
  Die Abbildung zeigt den Verlauf der Ausnahmen durch die Anwendungsebenen.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Abfangen einer Ausnahme in Visual Basic  
- In diesem Codebeispiel wird die Verwendung des **try... Catch...** Schließlich[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung zum Abfangen einer SMO-Ausnahme. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+ In diesem Codebeispiel wird die Verwendung des **try... Catch... Schließlich** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung zum Abfangen einer SMO-Ausnahme. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -83,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Abfangen einer Ausnahme in Visual C#  
- In diesem Codebeispiel wird die Verwendung des **try... Catch...** Die visuelle C# Anweisung zum Abfangen einer SMO-Ausnahme. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu Visual C#.  
+ In diesem Codebeispiel wird die Verwendung des **try... Catch... **Die Visual c#-Anweisung zum Schluss fängt eine SMO-Ausnahme ab. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu Visual C#.  
   
 ```csharp  
 {   

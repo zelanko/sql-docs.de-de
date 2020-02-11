@@ -14,10 +14,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67412695"
 ---
 # <a name="glossary"></a>Glossar
@@ -47,7 +47,7 @@ ms.technology:
 |ActiveX-Datenobjekte|Eine Datenzugriffsschnittstelle, die mit OLE DB-konformen Datenquellen kommuniziert und zur Herstellung einer Datenverbindung sowie zum Abrufen, Ändern und Aktualisieren von Daten dient.|  
 |ActiveX-Datenobjekte (Multidimensional)|Ein sprachenunabhängiger Satz von objektbasierten Datenzugriffsschnittstellen auf höherer Ebene, der für mehrdimensionale Datenanwendungen optimiert wurde.|  
 |Adapterhost|Der Stammabstrakt-Klassenadapter, der die Übergabe zwischen dem Adapter und dem StreamInsight-Server am ENQUEUE-Interaktionspunkt definiert. Er stellt alle erforderlichen Adapterdienste bereit, z. B. die Speicherverwaltung und die Ausnahmebehandlung.|  
-|ADO|Eine Datenzugriffsschnittstelle, die mit OLE DB-kompatiblen Datenquellen kommuniziert und zur Herstellung einer Datenverbindung sowie zum Abrufen, Ändern und Aktualisieren von Daten dient.|  
+|ADO|Eine Datenzugriffsschnittstelle, die mit OLE DB-konformen Datenquellen kommuniziert und zur Herstellung einer Datenverbindung sowie zum Abrufen, Ändern und Aktualisieren von Daten dient.|  
 |ADO MD|Ein sprachenunabhängiger Satz von objektbasierten Datenzugriffsschnittstellen auf höherer Ebene, der für mehrdimensionale Datenanwendungen optimiert wurde.|  
 |ADOMD.NET|Ein auf .NET-Basis verwalteter Datenanbieter, der Zugriff auf mehrdimensionale Datenquellen bietet, z. B. Microsoft SQL Server Analysis Services.|  
 |Aggregatfunktion|Eine Funktion, die eine Berechnung für mehrere Werte ausführt und einen einzelnen Wert zurückgibt.|  
@@ -86,9 +86,9 @@ ms.technology:
 |Attributbeziehung formalisieren.|Die Hierarchie, die einem Attribut zugeordnet ist, das eine einzige Ebene enthält, die auf der entsprechenden Spalte in einer Dimensionstabelle basiert.|  
 |Attributtyp|Der Typ der Informationen, die in einem Attribut enthalten sind (beispielsweise Quartale oder Monate in einer Zeitdimension) und eine bestimmte Handhabung mittels Server und Clientanwendungen ermöglichen.|  
 |Überwachen|Der von einem Betriebssystem verwendete Prozess zur Erkennung und Erfassung sicherheitsbezogener Ereignisse. Dazu gehört z. B. der Versuch, Objekte wie Dateien und Verzeichnisse zu erstellen, aufzurufen oder zu löschen. Die Datensätze derartiger Ereignisse werden in einer Datei gespeichert, die als Sicherheitsprotokoll bezeichnet wird. Der zugehörige Inhalt steht nur Benutzern mit entsprechender Freigabe zur Verfügung.|  
-|Authentifizierung|Der Prozess, mit dem die Identität eines Benutzers, Computers, Prozesses oder einer anderen Entität überprüft wird, indem die von der Entität bereitgestellten Anmeldeinformationen überprüft werden. Häufig verwendete Formen von Anmeldeinformationen sind digitale Signaturen, Smartcards, biometrische Daten oder eine Kombination aus Benutzername und Kennwort.|  
-|Authentifikator|Eine Datenstruktur, mit der eine Partei nachweisen kann, dass eine andere Partei einen geheimen Schlüssel kennt. Authentifikatoren integrieren zum Verhindern von Wiederholungsangriffen Zeitstempel in das Kerberos-Authentifizierungsprotokoll. Die Verschlüsselung erfolgt dabei anhand eines mit dem Schlüsselverteilungscenter (Key Distribution Center, KDC) ausgestellten Sitzungsschlüssels.|  
-|Autorisierung|Das Gewähren des Zugriffs auf bestimmte Informationen, Dienste oder Funktionen für eine Person, einen Computerprozess oder ein Gerät. Die Autorisierung wird von der Identität der jeweiligen Personen, Computerprozesse oder Geräte abgeleitet, die den Zugriff anfordern. Der Zugriff wird dabei auf Basis der Authentifizierung überprüft.|  
+|authentication|Der Prozess, mit dem die Identität eines Benutzers, Computers, Prozesses oder einer anderen Entität überprüft wird, indem die von der Entität bereitgestellten Anmeldeinformationen überprüft werden. Häufig verwendete Formen von Anmeldeinformationen sind digitale Signaturen, Smartcards, biometrische Daten oder eine Kombination aus Benutzername und Kennwort.|  
+|authenticator|Eine Datenstruktur, mit der eine Partei nachweisen kann, dass eine andere Partei einen geheimen Schlüssel kennt. Authentifikatoren integrieren zum Verhindern von Wiederholungsangriffen Zeitstempel in das Kerberos-Authentifizierungsprotokoll. Die Verschlüsselung erfolgt dabei anhand eines mit dem Schlüsselverteilungscenter (Key Distribution Center, KDC) ausgestellten Sitzungsschlüssels.|  
+|authorization|Das Gewähren des Zugriffs auf bestimmte Informationen, Dienste oder Funktionen für eine Person, einen Computerprozess oder ein Gerät. Die Autorisierung wird von der Identität der jeweiligen Personen, Computerprozesse oder Geräte abgeleitet, die den Zugriff anfordern. Der Zugriff wird dabei auf Basis der Authentifizierung überprüft.|  
 |Autocommitmodus|Der standardmäßige Transaktionsverwaltungsmodus für die Datenbank-Engine. Die Datenbank-Engine startet automatisch eine Transaktion für jede einzelne Transact-SQL-Anweisung. Wurde die Anweisung ausgeführt, wird auf Grundlage des Erfolgs oder Fehlschlags der Anweisung ein Commit oder ein Rollback für die Transaktion ausgeführt.|  
 |Automatische Konsistenzprüfung|Eine Funktion, durch die automatisch eine Konsistenzüberprüfung für geschützte Datenquellen erfolgt, sobald ein inkonsistentes Replikat entdeckt wird.|  
 |Automatisches Failover|Beim Verlust des primären Replikats tritt automatisch ein Failover statt.|  
@@ -103,15 +103,15 @@ ms.technology:
 |base object|Das Objekt, auf das ein Synonym verweist.|  
 |Basistabelle|Eine Tabelle, die dauerhaft in einer Datenbank gespeichert ist. Auf Basistabellen wird durch Sichten, Cursor, SQL-Anweisungen und gespeicherte Prozeduren verwiesen.|  
 |Einfache Markerkarte|Eine Karte, die bei jedem Ort (z. B. bei Städten) einen Marker mit unterschiedlicher Farbe und Größe sowie mit unterschiedlichem Typ aufweist.|  
-|Batch|Anforderungen oder Transaktionen, die gruppiert wurden.|  
+|batch|Anforderungen oder Transaktionen, die gruppiert wurden.|  
 |Batchauftrag|Computerprozesse, die ohne Benutzerinteraktion ausgeführt werden können.|  
 |Batchverarbeitung|Die Ausführung einer Batchdatei.|  
 |Für Blitvorgänge geeigneter Typ|Ein Datentyp, der über ein eindeutiges Merkmal und eine identische Darstellung im Arbeitsspeicher für verwaltete und nicht verwaltete Umgebungen verfügt. Er kann direkt freigegeben werden.|  
 |BLOB|Ein diskretes Paket aus binären Daten mit einer außergewöhnlichen Größe (z. B. digital gespeicherte Bilder oder Audiospuren) bzw. eine Variable oder Tabellenspalte, die zum Speichern derartiger Werte groß genug ist. Die Bezeichnung "Binary Large Object" verweist in der Regel auf ein Datenpaket, das in einer Datenbank gespeichert ist und als Sequenz von nicht interpretierten Bytes betrachtet wird.|  
-|Block|Eine Transact-SQL-Anweisung, die von "BEGIN" und "END" eingeschlossen ist.|  
+|block|Eine Transact-SQL-Anweisung, die von "BEGIN" und "END" eingeschlossen ist.|  
 |Blockcursor|Ein Cursor mit einer Rowsetgröße, die über dem Wert "1" liegt.|  
 |Blockierende Transaktion|Eine Transaktion, die zum Fehlschlagen einer anderen Transaktion führt.|  
-|Boolescher Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Derartige Ausdrücke können Vergleiche umfassen (Überprüfen von Werten auf Gleichheit oder – bei nicht booleschen Werten, die \< [kleiner als] oder > [größer als] Beziehung) und logische Kombinationen (unter Verwendung von booleschen Operatoren wie AND, OR und XOR) von booleschen Ausdrücken.|  
+|Boolescher Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche umfassen (Testen von Werten auf Gleichheit oder, bei nicht-booleschen Werten, \< der [kleiner als]-oder > [größer als]-Beziehung) und der logischen Kombination (mithilfe von booleschen Operatoren wie and, or und XOR) von booleschen Ausdrücken.|  
 |Boolescher Operator|Ein Operator, der zur Verwendung von booleschen Werten konzipiert ist. Die vier bekanntesten booleschen Operatoren im Bereich der Programmierung sind "AND" (logische Konjunktion), "OR" (logische Inklusion), "XOR" (exklusives "OR") und "NOT" (logische Negation).|  
 |Gebundener Datenstrom|Ein Ereignisdatenstrom, der alle Informationen enthält, die benötigt werden, um Ereignisse zu erzeugen. Entweder entsprechen die Informationen einer bereits instanziierten Datenquelle, oder die Informationen sind ausreichend, damit der StreamInsight-Server die Datenquelle starten kann.|  
 |Begrenzungsrahmen|Der kleinste rechteckige Bereich, der einen Pfad, eine Form oder eine Gruppe von Objekten umgibt.|  
@@ -163,7 +163,7 @@ ms.technology:
 |Karussellsicht|Im PowerPivot-Katalog eine spezielle Sicht, bei der der Vorschaubereich zentriert ist und die Miniaturansichten, die direkt vorangehen und der aktuellen Miniaturansicht folgen, neben dem Vorschaubereich angeordnet sind.|  
 |Löschweitergabe|Im Zusammenhang mit Beziehungen, die referenzielle Integrität zwischen Tabellen erzwingen, das Löschen aller verwandten Datensätze in der verknüpften Tabelle oder den Tabellen, wenn ein Datensatz in der primären Tabelle gelöscht wird.|  
 |Updateweitergabe|Im Zusammenhang mit Beziehungen, die referenzielle Integrität zwischen Tabellen erzwingen, das Aktualisieren aller verwandten Datensätze in der verknüpften Tabelle oder den Tabellen, wenn ein Datensatz in der primären Tabelle geändert wird.|  
-|Fall|Eine abstrakte Sicht von Daten, die durch Attribute und Beziehungen zu anderen Fällen gekennzeichnet ist.|  
+|case|Eine abstrakte Sicht von Daten, die durch Attribute und Beziehungen zu anderen Fällen gekennzeichnet ist.|  
 |Fallschlüssel|Das Element eines Falls, mit dem innerhalb einer Fallmenge auf den Fall verwiesen wird.|  
 |Katalogsichten|Integrierte Sichten, die den Systemkatalog von SQL Server darstellen.|  
 |Schwerwiegender Fehler|Ein Fehler, der zum plötzlichen Ausfall eines Systems oder Programms ohne Möglichkeit zur Wiederherstellung führt. Ein Beispiel für einen schwerwiegenden Fehler ist eine nicht abgefangene Ausnahme, die nicht behandelt werden kann.|  
@@ -180,10 +180,10 @@ ms.technology:
 |Zertifikataussteller|Die Zertifizierungsstelle, die das Zertifikat für den entsprechenden Zweck ausgestellt hat.|  
 |Certificate Lifecycle Manager Client|Eine Suite von CLM-Clienttools (Certificate Lifecycle Manager), durch die Endbenutzer Smartcards einfacher verwalten können. Die Tools umfassen die Smart Card Self Service Control, die Smart Card Personalization Control und die Certificate Profile Update Control. Weitere Informationen erhalten Sie unter "Smart Card Self-Service Control", "Smart Card Personalization Control" und "Certificate Profile Update Control".|  
 |Zertifikat-Manager|Ein CLM-Benutzer (Certificate Lifecycle Manager), der über die entsprechenden CLM-Berechtigungen verfügt, um entweder andere CLM-Benutzer oder die CLM-Anwendung selbst zu verwalten.|  
-|Zertifikat-Manager-Webportal|Eine Webanwendung, die auf dem CLM-Server (Certificate Lifecycle Manager) ausgeführt wird. Dieses Portal ermöglicht, Zertifikate und Smartcards anderer Benutzer zu verwalten. Der Zugriff auf die Webportale für Zertifikatabonnenten und Zertifikat-Manager erfolgt über dieselbe URL (Universal Resource Locator). Der angezeigte Inhalt basiert jedoch auf den Rollen und Berechtigungen eines Benutzers.|  
+|Zertifikat-Manager-Webportal|Eine Webanwendung, die auf dem CLM-Server (Certificate Lifecycle Manager) ausgeführt wird. Dieses Portal ermöglicht Zertifikat Administratoren, die Zertifikate und Smartcards anderer Benutzer zu verwalten. Der Zugriff auf die Webportale für Zertifikatabonnenten und Zertifikat-Manager erfolgt über dieselbe URL (Universal Resource Locator). Der angezeigte Inhalt basiert jedoch auf den Rollen und Berechtigungen eines Benutzers.|  
 |Certificate Profile Update Control|Ein ActiveX-Steuerelement zur Automatisierung des Updates von CLM-Profilen (Certificate Lifecycle Manager) auf Clientcomputern.|  
 |Zertifikatsperre|Der Prozess der Sperrung eines digitalen Zertifikats.|  
-|Zertifikatabonnent|Ein Benutzer, der Zertifikate mit oder ohne Smartcards benötigt. Zertifikatabonnenten können auf eine kleine Anzahl von Funktionen zugreifen, die nur für die Zertifikate des Benutzers ausgeführt werden können.|  
+|Zertifikatabonnent|Ein Benutzer, der Zertifikate mit oder ohne Smartcards benötigt. Zertifikat Abonnenten können auf einige wenige Funktionen zugreifen, die nur für die eigenen Zertifikate des Benutzers ausgeführt werden können.|  
 |Zertifikatabonnent-Webportal|Eine Webanwendung, die auf dem CLM-Server (Certificate Lifecycle Manager) ausgeführt wird. Diese Komponente des CLM-Servers interagiert direkt in einem Self-Service-Modus mit Benutzern. Die spezifische Funktionalität basiert auf Mitgliedschaften und Berechtigungen für Active Directory-Gruppen. Der Zugriff auf die Webportale für Zertifikatabonnenten und Zertifikat-Manager erfolgt über dieselbe URL (Universal Resource Locator). Der angezeigte Inhalt basiert jedoch auf den Rollen und Berechtigungen eines Benutzers.|  
 |Zertifikatvorlage|Ein Windows-basiertes Konstrukt, das das Format und den Inhalt von Zertifikaten auf Grundlage ihres Zwecks angibt. Bei der Anforderung eines Zertifikats über eine Windows-Unternehmenszertifizierungsstelle steht Zertifikatanforderern eine Vielzahl von Zertifikattypen zur Auswahl zur Verfügung, die auf Zertifikatvorlagen basieren.|  
 |Änderungsanwender|Ein Objekt, durch das die Konflikterkennung, Konfliktbehandlung und Änderungsanwendung für einen Änderungsbatch ausgeführt werden.|  
@@ -194,7 +194,7 @@ ms.technology:
 |Zeichencodierung|Eine 1:1-Zuordnung zwischen einem Zeichensatz und einem Zahlensatz.|  
 |Zeichensatz|Eine Gruppierung von alphabetischen, numerischen und anderen Zeichen, die eine bestimmte Beziehung gemeinsam haben. Der Standard-ASCII-Zeichensatz umfasst z. B. Buchstaben, Zahlen, Symbole und Steuerungscodes, die das ASCII-Codierungsschema bilden.|  
 |Diagrammdatenbereich|Ein Berichtselement in einem Berichtslayout, das Daten in einem grafischen Format darstellt.|  
-|Prüfpunkt|Ein Ereignis, bei dem die Datenbank-Engine modifizierte Pufferseiten auf den Datenträger schreibt. Bei jedem Prüfpunkt werden alle Seiten auf den Datenträger geschrieben, die beim letzten Prüfpunkt modifiziert waren und noch nicht auf den Datenträger geschrieben wurden.|  
+|checkpoint|Ein Ereignis, bei dem die Datenbank-Engine modifizierte Pufferseiten auf den Datenträger schreibt. Bei jedem Prüfpunkt werden alle Seiten auf den Datenträger geschrieben, die beim letzten Prüfpunkt modifiziert waren und noch nicht auf den Datenträger geschrieben wurden.|  
 |Prüfsumme|Ein berechneter Wert, mit dem geprüft wird, ob Fehler vorhanden sind, die auftreten können, wenn Daten übertragen oder auf einen Datenträger geschrieben werden. Die Prüfsumme wird für einen bestimmten Datenblock berechnet, indem alle Datenbytes sequenziell mit einer Reihe von arithmetischen oder logischen Vorgängen kombiniert werden. Nachdem die Daten gesendet oder gespeichert wurden, wird anhand der (u. U. fehlerhaft) gesendeten oder gespeicherten Daten auf die gleiche Weise eine neue Prüfsumme berechnet. Stimmen die beiden Prüfsummen nicht überein, ist ein Fehler aufgetreten, und die Daten müssen erneut gesendet oder gespeichert werden. Anhand von Prüfsummen können nicht alle Fehler erkannt werden. Zudem ermöglichen sie keine Korrektur von fehlerhaften Daten.|  
 |Untergeordnetes Element|In einer Baumstruktur die Beziehung eines Knotens zum unmittelbaren Vorgänger.|  
 |Chronik|Eine Tabelle, in der Statusinformationen für eine einzelne Anwendung gespeichert werden. Ein Beispiel hierfür ist ein Ereignisverlauf, der die Speicherung von Ereignisdaten zur Verwendung mit geplanten Abonnements ermöglicht.|  
@@ -204,7 +204,7 @@ ms.technology:
 |Sauberes Herunterfahren|Das fehlerfreie Herunterfahren eines Systems.|  
 |Klartext|Daten in unverschlüsselter oder entschlüsselter Form.|  
 |Klartext|Daten in unverschlüsselter oder entschlüsselter Form.|  
-|CLI|Die Schnittstelle, die durch ODBC zur Verwendung durch eine Anwendung unterstützt wird.|  
+|Befehlszeilenschnittstelle (CLI)|Die Schnittstelle, die durch ODBC zur Verwendung durch eine Anwendung unterstützt wird.|  
 |Clickstreamanalyse|Clickstreamdaten sind Informationen, die Benutzer generieren, während sie von einer Seite zu einer anderen Seite wechseln und auf Elemente innerhalb einer Website klicken, die in der Regel in Protokolldateien gespeichert werden. Website-Designer können anhand von Clickstreamdaten die Benutzerfreundlichkeit einer Website optimieren.|  
 |Bericht mit Durchklicken|Ein Bericht, in dem die zugehörigen Berichtsmodelldaten angezeigt werden, wenn in einem gerenderten Berichts-Generator-Bericht auf die Daten geklickt wird.|  
 |Client|Ein Dienst, eine Anwendung oder ein Gerät, der/die/das in die Microsoft Sync Framework-Architektur integriert werden soll.|  
@@ -217,16 +217,16 @@ ms.technology:
 |CLM Audit|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Erstellung und Anzeige von CLM-Richtlinienvorlagen, die Definition von Verwaltungsrichtlinien in einer Profilvorlage und die Erstellung von CLM-Berichten ermöglicht.|  
 |CLM-Anmeldeinformationen|Benutzerkontoinformationen zur Authentifizierung eines Benutzers für Certificate Lifecycle Manager (CLM). Diese Anmeldeinformationen können als Domänenanmeldeinformationen oder als Einmalkennwörter vorliegen.|  
 |CLM Enroll|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die Benutzern die Angabe von Workflows und der zu sammelnden Daten im Rahmen der Zertifikatausgabe mithilfe einer Vorlage ermöglicht. Diese erweiterte Berechtigung gilt nur für Profilvorlagen.|  
-|CLM Enrollment Agent|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die einem Benutzer oder einer Gruppe das Ausführen von Zertifikatanforderungen für einen anderen Benutzer ermöglicht. Antragsteller des ausgestellten Zertifikats enthält den Namen statt der anfordernden Person-Name.|  
+|CLM Enrollment Agent|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die einem Benutzer oder einer Gruppe das Ausführen von Zertifikatanforderungen für einen anderen Benutzer ermöglicht. Der Betreff des ausgestellten Zertifikats enthält den Namen des Ziel Benutzers und nicht den Namen des Anforderers.|  
 |CLM Recover|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung der Wiederherstellung eines Verschlüsselungsschlüssels von der Datenbank der Zertifizierungsstelle ermöglicht.|  
-|CLM Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Die erneuerungsanforderung wird ein Benutzerzertifikat, dessen Ablaufdatum mit einem neuen Zertifikat, die eine neuen Gültigkeitsdauer ersetzt.|  
+|CLM Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Durch die Erneuerungs Anforderung wird ein Benutzerzertifikat, dessen Ablaufdatum fast erreicht ist, durch ein neues Zertifikat mit einer neuen Gültigkeitsdauer ersetzt.|  
 |CLM-Berichte|Überwachungsinformationen für Aktivitäten zur Anmeldeinformationsverwaltung in Certificate Lifecycle Manager (CLM).|  
 |CLM Request Enroll|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht.|  
 |CLM Request Recover|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung der Wiederherstellung eines Verschlüsselungsschlüssels von der Datenbank der Zertifizierungsstelle ermöglicht.|  
-|CLM Request Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Die erneuerungsanforderung wird ein Benutzerzertifikat, dessen Ablaufdatum mit einem neuen Zertifikat, die eine neuen Gültigkeitsdauer ersetzt.|  
-|CLM Request Revoke|Eine Certificate Lifecycle Manager (CLM) erweiterte-Berechtigung in den Active Directory, die Sperrung eines Zertifikats vor dem Ablauf der Gültigkeitsdauer des Zertifikats ermöglicht. Ein Beispiel erforderlich ist, wenn Computer eines Benutzers oder einer Smartcard (gestohlene) gefährdet ist.|  
-|CLM Request Unblock Smart Card|Eine Certificate Lifecycle Manager (CLM) erweiterte-Berechtigung in den Active Directory, einer Smartcard Benutzer Anzahl PIN (Personal Identification) zurückgesetzt werden sollen, können, gewähren des Zugriffs auf das Schlüsselmaterial einer Smartcard anmelden und dieses Materials erneut eingerichtet werden.|  
-|CLM Revoke|Eine Certificate Lifecycle Manager (CLM) erweiterte-Berechtigung in den Active Directory, die Sperrung eines Zertifikats vor dem Ablauf der Gültigkeitsdauer des Zertifikats ermöglicht. Ein Beispiel erforderlich ist, wenn Computer eines Benutzers oder einer Smartcard (gestohlene) gefährdet ist.|  
+|CLM Request Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Durch die Erneuerungs Anforderung wird ein Benutzerzertifikat, dessen Ablaufdatum fast erreicht ist, durch ein neues Zertifikat mit einer neuen Gültigkeitsdauer ersetzt.|  
+|CLM Request Revoke|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Sperrung eines Zertifikats vor Ablauf der Gültigkeitsdauer des Zertifikats ermöglicht. Dies ist beispielsweise erforderlich, wenn der Computer oder die Smartcard eines Benutzers kompromittiert wurde (gestohlen).|  
+|CLM Request Unblock Smart Card|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die zurück setzung der persönlichen Identifikationsnummer (PIN) der Smartcard ermöglicht, sodass der Zugriff auf das Schlüsselmaterial einer Smartcard ermöglicht und dieses Material wieder hergestellt werden kann.|  
+|CLM Revoke|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Sperrung eines Zertifikats vor Ablauf der Gültigkeitsdauer des Zertifikats ermöglicht. Dies ist beispielsweise erforderlich, wenn der Computer oder die Smartcard eines Benutzers kompromittiert wurde (gestohlen).|  
 |Taktvektor|Eine Auflistung von Taktvektorelementen, die Updates zu einem Replikat darstellt. Jede Änderung, die zwischen 0 und der Taktanzahl auftritt, ist im Vektor enthalten.|  
 |Taktvektorelement|Ein Wertepaar, das aus einem Replikatschlüssel und einer Taktanzahl besteht und die Änderung an einem Replikat darstellt.|  
 |CLR-Funktion|Eine Funktion, die für eine SQL Server-Assembly erstellt wird, deren Implementierung in einer Assembly definiert ist, die in der .NET Framework Common Language Runtime (CLR) erstellt wurde.|  
@@ -249,7 +249,7 @@ ms.technology:
 |kalte Wartezeit|Die Zeit, die verstreicht, wenn der Workflow zum ersten Mal verwendet wird und XOML oder XAML kompiliert werden muss.|  
 |Verzögertes Standby|Bezieht sich auf ein zweites Rechenzentrum, das eine Verfügbarkeit innerhalb von Stunden oder Tagen ermöglicht.|  
 |collation|Ein Satz von Regeln, die bestimmen, wie Daten verglichen, sortiert und dargestellt werden.|  
-|Auflistung|Ein Objekt, das eine Gruppe von verwandten Objekten enthält. Die Objektposition in der Auflistung kann sich ändern, wenn eine Änderung in der Auflistung erfolgt. Daher variiert u. U. die Position eines bestimmten Objekts in einer Auflistung.|  
+|collection|Ein Objekt, das eine Gruppe von verwandten Objekten enthält. Die Objektposition in der Auflistung kann sich ändern, wenn eine Änderung in der Auflistung erfolgt. Daher variiert u. U. die Position eines bestimmten Objekts in einer Auflistung.|  
 |Sammelelement|Eine Instanz eines Sammlertyps, der auf Basis eines bestimmten Satzes von Eingabeeigenschaften und auf Basis der Sammelhäufigkeit erstellt wird. Er dient außerdem zur Erfassung bestimmter Datentypen.|  
 |Sammlungsmodus|Die Häufigkeit der Datensammlung und des Datenuploads für das Verwaltungs-Data Warehouse.|  
 |Sammlungssatz|Eine Gruppe von Sammelelementen, mit der ein Benutzer über die Benutzeroberfläche interagieren kann.|  
@@ -292,11 +292,11 @@ ms.technology:
 |Berechnetes Feld|Ein Wert in einer formatierten Benachrichtigung, der mithilfe eines Transact-SQL-Ausdrucks berechnet worden ist.|  
 |COM-strukturierte Speicherdatei|Eine COM-Verbunddatei (Component Object Model), die von Data Transformation Services (DTS) zum Speichern des Versionsverlaufs eines gespeicherten DTS-Pakets verwendet wird.|  
 |Verkettung|Das Kombinieren von mindestens zwei Zeichenfolgen oder Ausdrücken zu einer einzelnen Zeichenfolge bzw. einem Ausdruck oder das Kombinieren von mindestens zwei Binärzeichenfolgen oder -ausdrücken zu einer einzelnen Binärzeichenfolge oder einem Binärausdruck.|  
-|Parallelität|Ein Vorgang, der es ermöglicht, dass mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern. Das Entity Framework implementiert ein Modell für vollständige Parallelität.|  
+|concurrency|Ein Vorgang, der es ermöglicht, dass mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern. Das Entity Framework implementiert ein Modell für vollständige Parallelität.|  
 |Parallelitätskonflikt|Ein Konflikt, der auftritt, wenn dasselbe Element oder dieselbe Änderungseinheit auf zwei verschiedenen Replikaten geändert wird, die später synchronisiert werden.|  
 |Parallelitätsmodell|Eine Methode, mit der sich eine Anwendung zur Berücksichtigung von parallelen Vorgängen konzipieren lässt, die dieselben zwischengespeicherten Daten verwenden. Windows Server AppFabric unterstützt Modelle für die vollständige und eingeschränkte Parallelität.|  
 |Paralleler Vorgang|Ein Computervorgang, bei dem mindestens zwei Prozesse (Programme) auf den Mikroprozessor zugreifen können und daher nahezu gleichzeitig ausgeführt werden. Da ein Mikroprozessor deutlich kleinere Zeiteinheiten unterstützt, die von Benutzern nicht wahrgenommen werden können, entsteht der Eindruck, dass sogenannte parallele Prozesse gleichzeitig ausgeführt werden. Dies ist in Wirklichkeit jedoch nicht der Fall.|  
-|Bedingter Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Derartige Ausdrücke können Vergleiche umfassen (Überprüfen von Werten auf Gleichheit oder – bei nicht booleschen Werten, die \< [kleiner als] oder > [größer als] Beziehung) und logische Kombinationen (unter Verwendung von booleschen Operatoren wie AND, OR und XOR) von booleschen Ausdrücken.|  
+|Bedingter Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche umfassen (Testen von Werten auf Gleichheit oder, bei nicht-booleschen Werten, \< der [kleiner als]-oder > [größer als]-Beziehung) und der logischen Kombination (mithilfe von booleschen Operatoren wie and, or und XOR) von booleschen Ausdrücken.|  
 |Bedingtes Teilen|Eine Wiederherstellung einer vollständigen Datenbanksicherung, der letzten differenziellen Datenbanksicherung (wenn vorhanden) und der Protokollsicherungen (wenn vorhanden), die seit der vollständigen Datenbanksicherung erstellt wurden.|  
 |CONFIG-Datei|Eine Datei, die computerlesbare Betriebsspezifikationen für eine Hardware- bzw. Softwarekomponente enthält oder Informationen zu einer anderen Datei bzw. zu einem bestimmten Benutzer enthält (z. B. die Anmelde-ID eines Benutzers).|  
 |Konfiguration|In Bezug auf einen einzelnen Mikrocomputer die Gesamtheit der internen und externen Komponenten eines Systems, einschließlich Speicher, Laufwerke, Tastatur, Grafikkarte und weniger wichtige zusätzliche Hardware wie Maus, Modem oder Drucker. Um zur Gewährleistung einer einwandfreien Funktionsweise die Konfiguration einzurichten, sind Software (Betriebssystem und verschiedene Gerätetreiber), über Konfigurationsdateien (z. B. AUTOEXEC.BAT und CONFIG.SYS auf IBM-PCs und entsprechenden Geräten) von Benutzern festgelegte Einstellungen und ggf. auch Hardware (Schalter und Jumper) erforderlich. Obwohl sich die Systemkonfiguration ändern lässt, beispielsweise durch das Erweitern des Arbeitsspeichers oder der Datenträgerkapazität, bleibt die Basisstruktur (Architektur) des Systems unverändert.|  
@@ -313,7 +313,7 @@ ms.technology:
 |Einschränkungskonflikt|Ein Konflikt, bei dem Einschränkungen (z. B. die Beziehung zwischen Ordnern oder der Speicherort identisch benannter Daten innerhalb eines Dateisystems) verletzt werden, die Elementen oder Änderungseinheiten auferlegt wurden.|  
 |Einschränkungsverletzung|Eine Verletzung, die auftritt, wenn die Einschränkungskriterien nicht erfüllt werden.|  
 |eigenständige Datenbank|Eine SQL Server-Datenbank, die die gesamte Benutzerauthentifizierung, Datenbankeinstellungen und Metadaten umfasst, die erforderlich sind, um die Datenbank definieren und darauf zugreifen zu können. In diesem Zusammenhang bestehen keine Konfigurationsabhängigkeiten für die Instanz der SQL Server-Datenbank-Engine, in der die Datenbank installiert ist.|  
-|Container|Ein Ablaufsteuerungselement, das eine Paketstruktur bereitstellt.|  
+|container|Ein Ablaufsteuerungselement, das eine Paketstruktur bereitstellt.|  
 |Inhaltsformatierer|Der Teil des Verteilers, der unformatierte Benachrichtigungsdaten in lesbare Nachrichten umwandelt.|  
 |Symmetrischer Schlüssel|Der kryptografische Schlüssel zur Verschlüsselung und Entschlüsselung von geschütztem Inhalt im Rahmen der Veröffentlichung und Verwendung.|  
 |Konflikt|Innerhalb eines Netzwerks der Wettbewerb von Stationen um die Verwendung einer Kommunikationsleitung oder Netzwerkressource.|  
@@ -321,7 +321,7 @@ ms.technology:
 |Kontextwechsel|Das Ändern der Identität, für die überprüft wird, welche Berechtigungen zum Ausführen von Anweisungen oder Aktionen vorliegen.|  
 |Anschlussmedien|Die Reihe von Wechselsicherungsmedien, die verwendet werden, sobald das anfängliche Medium keinen Speicherplatz mehr bietet. So wird die Kontinuität des Sicherungsvorgangs gewährleistet.|  
 |Anschlussband|Ein Band, das nach dem ersten Band in einer Medienfamilie verwendet wird, sodass die Medienfamilie fortgesetzt werden kann.|  
-|Vertrag|Ein Service Broker-Objekt, das die Nachrichtentypen definiert, die innerhalb einer bestimmten Konversation ausgetauscht werden können.|  
+|contract|Ein Service Broker-Objekt, das die Nachrichtentypen definiert, die innerhalb einer bestimmten Konversation ausgetauscht werden können.|  
 |Ablaufsteuerung|Eine Gruppe von verbundenen Ablaufsteuerungselementen, die Tasks ausführen.|  
 |Bericht mit Gruppenwechsel|Ein Bericht, in dem Daten in benutzerdefinierten Gruppen oder Wechseln zusammengefasst werden. Eine neue Gruppe wird ausgelöst, wenn andere Daten erkannt werden.|  
 |Sprachkonstrukte zur Ablaufsteuerung|Transact-SQL-Schlüsselwörter, die den Ablauf bei der Ausführung von SQL-Anweisungen und Anweisungsblöcken in Triggern, gespeicherten Prozeduren und Batches steuern.|  
@@ -335,14 +335,14 @@ ms.technology:
 |Gegensignieren|Das Signieren eines Dokuments, das bereits von der anderen Partei signiert wurde.|  
 |CPU belegt|Eine statistische Angabe in SQL Server, die die Zeit in Millisekunden angibt, während der die zentrale Verarbeitungseinheit (Central Processing Unit oder CPU) durch SQL Server belegt war.|  
 |Durchforsten|Das Scannen von Inhalten zur Kompilierung und Wartung eines Indexes.|  
-|Anmeldeinformationen|Informationen, die die Identifikation und den Beweis der Identifikation enthalten, die den Zugriff auf lokale Ressourcen und Netzwerkressourcen ermöglichen. Beispiele für Anmeldeinformationen sind Benutzernamen und Kennwörter, Smartcards und Zertifikate.|  
+|Anmeldeinformationen|Die sind die Informationen zur Identifizierung mit Identifikationsnachweis. Sie werden verwendet, um Zugriff auf lokale Ressourcen und Netzwerkressourcen zu erhalten. Beispiele für Anmeldeinformationen sind Benutzernamen und Kennwörter, Smartcards und Zertifikate.|  
 |Datenbankübergreifende Besitzverkettung|Eine Besitzkette, die mehrere Datenbanken umfasst.|  
 |Kreuzvalidierung|Eine Methode zum Auswerten der Genauigkeit eines Data Mining-Modells.|  
 |CTI-Ereignis|Ein spezielles Interpunktionsereignis, das die Vollständigkeit der vorhandenen Ereignisse angibt.|  
 |Cube|Eine Datenmenge, die in einer mehrdimensionalen Struktur organisiert und zusammengefasst ist, die durch Dimensionen und Measures definiert wird.|  
 |Cuberolle|Eine Auflistung von Benutzern und Gruppen mit dem gleichen Zugriff auf einen Cube. Eine Cuberolle wird erstellt, wenn Sie einem Cube eine Datenbankrolle zuweisen und sich diese nur auf den betreffenden Cube bezieht.|  
 |Aktuelles Zeitinkrement-Ereignis|Ein spezielles Interpunktionsereignis, das die Vollständigkeit der vorhandenen Ereignisse angibt.|  
-|Cursor|Ein Element, das auf ein Resultset abbildet und in einer Zeile des Resultsets eine Position einrichtet.|  
+|cursor|Ein Element, das auf ein Resultset abbildet und in einer Zeile des Resultsets eine Position einrichtet.|  
 |Cursordegradierung|Die Rückgabe eines anderen Cursortyps als der vom Benutzer deklarierte Cursortyp.|  
 |Cursorbibliothek|Ein Teil der Anwendungsprogrammierschnittstellen (APIs) der ODBC- und DB-Bibliothek, der zur Implementierung von Clientcursorn dient.|  
 |Benutzerdefinierter Rollup|Eine Aggregationsberechnung, die für eine Dimensionsebene oder ein Dimensionselement angepasst wird und die Aggregatfunktionen der Measures eines Cubes überschreibt.|  
@@ -427,13 +427,13 @@ ms.technology:
 |Datenebenenanwendung|Eine Anwendung, die die SQL Server-Datenbank und Instanzobjekte erfasst, die von einer oder Client/Server-Anwendung oder einer dreistufigen Anwendung verwendet werden.|  
 |Datenebenenanwendungsinstanz|Eine DAC-Kopie, die auf einer Instanz der Datenbank-Engine bereitgestellt wird. Mehrere DAC-Instanzen können auf der gleichen Instanz der Datenbank-Engine vorhanden sein.|  
 |Datenebenenanwendungspaket|Ein XML-Manifest, das alle für die DAC definierten Objekte enthält. Das Paket wird erstellt, wenn ein Entwickler ein DAC-Projekt generiert.|  
-|Datum|Ein SQL Server-Systemdatentyp, der einen Datumswert vom 1. Januar 1 n. Chr. bis zum 31. Dezember 9999 speichert.|  
+|date|Ein SQL Server-Systemdatentyp, der einen Datumswert vom 1. Januar 1 n. Chr. bis zum 31. Dezember 9999 speichert.|  
 |DB|Eine Auflistung von Daten mit entsprechender Formatierung/Anordnung, die das Suchen und Abrufen vereinfacht.|  
 |DBCS|Ein Zeichensatz, der zur Darstellung eines einzelnen Zeichens mehr als nur ein Byte verwenden kann. Ein DBCS umfasst Zeichen, die aus 1 Byte bzw. aus 2 Bytes bestehen. Sprachen wie Chinesisch, Japanisch und Koreanisch basieren auf DBCS.|  
 |DBMS|Eine Softwareebene zwischen der physischen Datenbank und dem Benutzer. Das DBMS dient zur Verwaltung des gesamten Zugriffs auf die Datenbank.|  
 |DDL|Eine Sprache, die alle Attribute und Eigenschaften einer Datenbank definiert, insbesondere Datensatzlayouts, Felddefinitionen, Schlüsselfelder, Dateispeicherorte und Speicherstrategien.|  
 |DDL-Trigger|Eine besondere Art von Triggern, die als Antwort auf DDL-Anweisungen (Data Definition Language) ausgeführt werden.|  
-|Deadlock|Eine Situation, in der zwei Benutzer, von denen jeder bestimmte Daten gesperrt hat, versuchen, die Daten des jeweils anderen Benutzers zu sperren.|  
+|deadlock|Eine Situation, in der zwei Benutzer, von denen jeder bestimmte Daten gesperrt hat, versuchen, die Daten des jeweils anderen Benutzers zu sperren.|  
 |Entscheidungsunterstützung|Systeme, die auf die Unterstützung der komplexen zergliedernden Analysen ausgelegt sind, die zum Ermitteln von Geschäftstrends erforderlich sind.|  
 |Entscheidungsstruktur|Ein strukturähnliches Modell von Daten, das von bestimmten Data Mining-Methoden erstellt wird. Entscheidungsstrukturen können für Vorhersagen verwendet werden.|  
 |Deklaration|Die Bindung eines Bezeichners an die Informationen, die sich darauf beziehen. Beispielsweise bedeutet die Deklaration einer Konstante, den Namen der Konstante an den zugehörigen Wert zu binden. Eine Deklaration tritt normalerweise im Quellcode eines Programms auf. Die tatsächliche Bindung kann zur Kompilierzeit oder zur Laufzeit erfolgen.|  
@@ -465,8 +465,8 @@ ms.technology:
 |Aus der Warteschlange entfernen|Das Entfernen eines Elements aus einer Warteschlange.|  
 |Abgeleitete Spalte|Eine Transformation, mit der neue Spaltenwerte erstellt werden, indem Ausdrücke auf Transformationseingabespalten angewendet werden.|  
 |Deserialisierung|Die Umwandlung eines Objekts von einem seriellen Speicherformat in ein Binärformat, sodass sich ein Objekt ergibt, das von Anwendungen verwendet werden kann. Dies erfolgt, wenn das Objekt mithilfe der Clientabruf-APIs über den Cachecluster abgerufen wird.|  
-|Ziel|Die SSIS-Datenflusskomponente, die Daten in Datenspeicher lädt oder Datasets im Arbeitsspeicher erstellt.|  
-|Ziel|Ein Synchronisierungsanbieter, der eigenes aktuelles Wissen bereitstellt, eine Liste mit Änderungen vom Quellenanbieter akzeptiert, Konflikte zwischen dieser Liste und eigenen Elementen erkennt und Änderungen für den eigenen Datenspeicher übernimmt.|  
+|destination|Die SSIS-Datenflusskomponente, die Daten in Datenspeicher lädt oder Datasets im Arbeitsspeicher erstellt.|  
+|destination|Ein Synchronisierungsanbieter, der eigenes aktuelles Wissen bereitstellt, eine Liste mit Änderungen vom Quellenanbieter akzeptiert, Konflikte zwischen dieser Liste und eigenen Elementen erkennt und Änderungen für den eigenen Datenspeicher übernimmt.|  
 |Zieladapter|Eine Datenflusskomponente, die Daten in einen Datenspeicher lädt.|  
 |Zielanbieter|Ein Synchronisierungsanbieter, der eigenes aktuelles Wissen bereitstellt, eine Liste mit Änderungen vom Quellenanbieter akzeptiert, Konflikte zwischen dieser Liste und eigenen Elementen erkennt und Änderungen für den eigenen Datenspeicher übernimmt.|  
 |Erkennen|Das Finden eines Elements.|  
@@ -474,7 +474,7 @@ ms.technology:
 |Diakritisches Zeichen|Ein Zeichen, das oberhalb oder unterhalb eines Zeichens platziert wird oder durch ein Zeichen geht. Es dient in der Regel zur Angabe der Änderung eines phonetischen Werts gegenüber dem nicht markierten Status.|  
 |Diakritisches Zeichen|Ein Zeichen, das oberhalb oder unterhalb eines Zeichens platziert wird oder durch ein Zeichen geht. Es dient in der Regel zur Angabe der Änderung eines phonetischen Werts gegenüber dem nicht markierten Status.|  
 |Dialekt|Die Syntax und die allgemeinen Regeln, die zum Analysieren einer Zeichenfolge oder einer Abfrageanweisung verwendet werden.|  
-|Rautenförmige Beziehung|Eine Kette von Attributbeziehungen, die sich teilt und wieder vereint, jedoch keine redundanten Beziehungen enthält. Z. B. Tag-Monat > -> Jahr und Tag > Quarter -> Jahr haben die gleichen Start- und Endpunkte, aber keinen keine gemeinsamen Beziehungen.|  
+|Rautenförmige Beziehung|Eine Kette von Attributbeziehungen, die sich teilt und wieder vereint, jedoch keine redundanten Beziehungen enthält. Beispielsweise haben Day->month->Year und Day->Quarter->Year die gleichen Start-und Endpunkte, aber keine gemeinsamen Beziehungen.|  
 |Differenzierer|Eine Schnittstelle zu einem Tool, das ein DifferencingService-Objekt erstellt.|  
 |Differenzielle Sicherung|Eine Sicherung, die nur Änderungen an der Datenbank enthält, die seit der vorherigen Datensicherung vorgenommen wurden, auf der die differenzielle Sicherung basiert.|  
 |Differenzielle Basis|Die letzte vollständige Sicherung aller Daten in einer Datenbank oder einer Teilmenge ihrer Dateien oder Dateigruppen.|  
@@ -509,8 +509,8 @@ ms.technology:
 |DML-Trigger|Eine gespeicherte Prozedur, die ausgeführt wird, wenn Daten in einer angegebenen Tabelle geändert werden.|  
 |DMV|Eine Reihe von integrierten Sichten, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgeben.|  
 |DMX|In Analysis Services eine Anweisung zur programmgesteuerten Ausführung von Miningtasks.|  
-|domain|Der Satz möglicher Werte, die Sie für eine unabhängige Variable in einer Funktion oder für ein Datenbankattribut angeben können.|  
-|domain|Eine Auflistung von Computern in einer vernetzten Umgebung, für die eine gemeinsame Datenbank, Verzeichnisdatenbank oder Struktur freigegeben ist. Eine Domäne wird als Einheit mit herkömmlichen Regeln und Prozeduren verwaltet, die Sicherheitsrichtlinien umfassen können. Dabei verfügt jede Domäne über einen eindeutigen Namen.|  
+|Domäne|Der Satz möglicher Werte, die Sie für eine unabhängige Variable in einer Funktion oder für ein Datenbankattribut angeben können.|  
+|Domäne|Eine Auflistung von Computern in einer vernetzten Umgebung, für die eine gemeinsame Datenbank, Verzeichnisdatenbank oder Struktur freigegeben ist. Eine Domäne wird als Einheit mit herkömmlichen Regeln und Prozeduren verwaltet, die Sicherheitsrichtlinien umfassen können. Dabei verfügt jede Domäne über einen eindeutigen Namen.|  
 |Domänenkontext|Eine clientseitige Darstellung eines Domänendiensts.|  
 |Domänenintegrität|Die Gültigkeit der Einträge einer bestimmten Datenspalte.|  
 |Domänenvorgang|Eine Methode eines Domänendiensts, der für eine Clientanwendung bereitgestellt wird. Sie ermöglicht Clientanwendungen das Ausführen einer Aktion über die Entität, beispielsweise das Abfragen, Aktualisieren, Einfügen oder Löschen von Datensätzen.|  
@@ -518,7 +518,7 @@ ms.technology:
 |Sitzung im Ruhezustand|Eine Sitzung in Voranmeldestatus. Sitzungen können initiiert oder beendet werden, um ihren Status zu ändern. Sie verbleiben in der Regel jedoch im Standby-/Leerlaufmodus (beispielsweise bei Initiierung der Sitzung und Öffnung der Sitzung auf dem Server für die Verwendung durch den Client) oder im Ruhezustand. Dieser liegt beispielsweise vor, wenn die Sitzung beendet wurde und auf dem Server für die Verwendung durch den Client aktuell nicht verfügbar ist.|  
 |Doppelbyte-Zeichensatz|Ein Zeichensatz, der zur Darstellung eines einzelnen Zeichens mehr als nur ein Byte verwenden kann. Ein DBCS umfasst Zeichen, die aus 1 Byte bzw. aus 2 Bytes bestehen. Sprachen wie Chinesisch, Japanisch und Koreanisch basieren auf DBCS.|  
 |Doppelbyte-Zeichensatz|Ein Zeichensatz, der zur Darstellung eines einzelnen Zeichens mehr als nur ein Byte verwenden kann. Ein DBCS umfasst Zeichen, die aus 1 Byte bzw. aus 2 Bytes bestehen. Sprachen wie Chinesisch, Japanisch und Koreanisch basieren auf DBCS.|  
-|down|Funktionsausfall bei Computern, Druckern, Kommunikationsleitungen von Netzwerken und anderer ähnlicher Hardware.|  
+|fahren|Funktionsausfall bei Computern, Druckern, Kommunikationsleitungen von Netzwerken und anderer ähnlicher Hardware.|  
 |Nur herunterladbarer Artikel|Ein Artikel in einer Mergeveröffentlichung, der nur auf dem Verleger oder auf einem Abonnenten, der ein Serverabonnement verwendet, aktualisiert werden kann.|  
 |DPM-Client|Der Data Protection Manager (DPM)-Client ermöglicht Benutzern, ihre Daten gemäß den vom Sicherungsadministrator konfigurierten Unternehmensschutzrichtlinien zu schützen und wiederherzustellen.|  
 |DPM-Engine|Eine richtliniengesteuerte Engine, die vom DPM zum Schutz und Wiederherstellen von Daten verwendet wird.|  
@@ -548,7 +548,7 @@ ms.technology:
 |dump|Das Duplikat eines Programms, eines Datenträgers oder von Daten, das entweder zu Archivierungszwecken oder zum Schützen von Dateien dient.|  
 |Sicherungsgerät|Ein Bandlaufwerk oder Laufwerk, das ein Sicherungsmedium enthält.|  
 |Dynamischer Cursor|Ein Cursor, der Datenänderungen wiedergeben kann, die an den zugrunde liegenden Daten vorgenommen werden, während der Cursor geöffnet ist.|  
-|Dynamischer Filter|Ein Zeilenfilter, der zur Verfügung, mit der Mergereplikation, die Ihnen ermöglicht, die auf einen Abonnenten replizierten Daten zu beschränken auf Grundlage der Systemfunktion oder einer benutzerdefinierten Funktion (z. B.: SUSER_SNAME()).|  
+|Dynamischer Filter|Ein Zeilenfilter, der bei der Mergereplikation zur Verfügung steht und mit dem Daten eingeschränkt werden können, die für einen Abonnenten repliziert werden. Der Zeilenfilter basiert auf der Systemfunktion oder einer benutzerdefinierten Funktion (beispielsweise SUSER_SNAME()).|  
 |Dynamische Sperre|Der Vorgang, mit dem in SQL Server die zum jeweiligen Zeitpunkt kostengünstigsten Sperren ermittelt werden.|  
 |Dynamische Verwaltungsfunktion|Eine Funktion in einer Reihe von integrierten Funktionen, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgibt.|  
 |Dynamische Verwaltungssicht|Eine Reihe von integrierten Sichten, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgeben.|  
@@ -562,10 +562,10 @@ ms.technology:
 |Verschlüsselung|Das Umwandeln lesbarer Daten (Nur-Text) in eine codierte Form (Chiffretext). Dadurch soll der Zugriff durch eine Partei ohne Autorisierung verhindert werden.|  
 |Verschlüsselungsschlüssel|Eine Bitfolge, die in Verbindung mit einem Verschlüsselungsalgorithmus verwendet wird, um Daten zu verschlüsseln und zu entschlüsseln.|  
 |Linienende|Bezieht sich auf Pfade mit nicht verbundenen Enden, z. B. Zeilen oder das Ende eines Strichs. Sie können die Darstellung des Strichs an jedem Ende ändern, indem Sie eine der vier Abdeckungsarten anwenden: flacher Abschluss, runder Abschluss, quadratischer Abschluss und Dreiecksabschluss.|  
-|Endpunkt|Ein Synchronisierungsanbieter und dessen zugeordnetes Replikat.|  
+|endpoint|Ein Synchronisierungsanbieter und dessen zugeordnetes Replikat.|  
 |Endpunktzuordnung|Ein Dienst auf einem Remoteprozeduraufruf-Server (RPC) zur Wartung einer Datenbank für dynamische Endpunkte, der Clients ermöglicht, ein UUID-Paar (Schnittstelle/Objekt) einem lokalen dynamischen Endpunkt zuzuordnen.|  
 |In die Warteschlange einreihen|Das Platzieren (eines Elements) in eine Warteschlange.|  
-|Registrieren|Das Hinzufügen einer SQL Server-Instanz zur Gruppe der SQL Server-Instanzen, die über einen Steuerungspunkt für das Hilfsprogramm verwaltet werden.|  
+|enroll|Das Hinzufügen einer SQL Server-Instanz zur Gruppe der SQL Server-Instanzen, die über einen Steuerungspunkt für das Hilfsprogramm verwaltet werden.|  
 |Registrierung|Der Prozess der Anforderung, des Empfangs und der Installation eines Zertifikats.|  
 |Enrollment Agent|Ein Benutzerkonto, das zur Anforderung von Smartcardzertifikaten für ein anderes Benutzerkonto dient. Für einen Enrollment Agent wird eine bestimmte Zertifikatvorlage angewendet.|  
 |Enterprise-Lizenz|Eine Lizenz zur Autorisierung des Schutzes von Datei- und Anwendungsressourcen auf einem einzelnen Computer.|  
@@ -605,7 +605,7 @@ ms.technology:
 |Ausführungsplanbereich|Eine der Registerkarten, die die Ausgabe für einen geschätzten oder tatsächlichen Ausführungsplan hosten, den SQL Server verwendet.|  
 |Ausführungsstruktur|Der Pfad der Daten im Datenfluss eines SQL Server 2005 Integration Services-Pakets von den Quellen über Transformationen bis zu den Zielen.|  
 |Beendigungsmodul|Eine Zertifikatdienstkomponente, die zur Ausführung der Verarbeitung nach der Zertifikatausstellung dient (beispielsweise die Veröffentlichung eines ausgestellten Zertifikats mittels Active Directory).|  
-|Ablauf|Der Punkt, an dem ein Objekt den Cachetimeoutwert überschreitet. Läuft die Gültigkeit eines Objekts ab, wird es entfernt.|  
+|expiration|Der Punkt, an dem ein Objekt den Cachetimeoutwert überschreitet. Läuft die Gültigkeit eines Objekts ab, wird es entfernt.|  
 |Expliziter Abschluss|Eine explizite Hierarchie, die als oberste Ebene einer abgeleiteten Hierarchiestruktur verwendet wird.|  
 |Explizite Hierarchie|In Master Data Services eine Hierarchie, die konsolidierte Elemente verwendet, um andere konsolidierte und Blattelemente zu gruppieren.|  
 |Explizites Laden|Ein Muster zum Laden von Objekten, bei dem verwandte Objekte erst geladen werden, wenn sie explizit mit der Load-Methode für eine Navigationseigenschaft angefordert werden.|  
@@ -625,7 +625,7 @@ ms.technology:
 |XSL-Transformationen|Eine deklarative, XML-basierte Sprache, die zur Darstellung oder Transformation von XML-Daten dient.|  
 |Block|Ein kontinuierlicher Speicherplatzblock auf einem Datenträger oder einem anderem Speichergerät mit Direktzugriff, der vom Betriebssystem für eine bestimmte Datei oder ein bestimmtes Programm reserviert ist.|  
 |Externes Übermittlungssystem|Ein System, das formatierte Benachrichtigungen an Zieldienste übermittelt, z. B. Microsoft Exchange Server.|  
-|Extrahieren|Das Erstellen einer DAC-Paketdatei, die die Definitionen aller Objekte in einer Datenbank sowie der Datenbank zugeordnete Instanzobjekte enthält.|  
+|extract|Das Erstellen einer DAC-Paketdatei, die die Definitionen aller Objekte in einer Datenbank sowie der Datenbank zugeordnete Instanzobjekte enthält.|  
 |Extrahieren, Transformieren und Laden|Das Extrahieren von Daten aus verschiedenen Quellen, Transformieren von Daten in konsistente Typen und Laden der transformierten Daten für die Verwendung in Anwendungen.|  
 |Facet|Ein Satz logischer vordefinierter Eigenschaften, die das Verhalten oder die Merkmale für bestimmte Typen verwalteter Ziele (z. B. eine Datenbank, Tabelle, Anmeldung, Sicht usw.) im Rahmen von richtlinienbasierter Verwaltung modellieren.|  
 |Facet|Ein Satz logischer vordefinierter Eigenschaften, die das Verhalten oder die Merkmale für bestimmte Typen verwalteter Ziele (z. B. eine Datenbank, Tabelle, Anmeldung, Sicht usw.) im Rahmen von richtlinienbasierter Verwaltung modellieren.|  
@@ -668,14 +668,14 @@ ms.technology:
 |Anpassung|Eines der Kriterien, die zum Auswerten des Erfolgs von einem Data Mining-Algorithmus verwendet werden. Die Anpassung wird in der Regel als Wert zwischen 0 und 1 dargestellt und anhand der Kovarianz zwischen den vorhergesagten Werten und den Istwerten ausgewerteter Fälle sowie anhand der Division durch die Standardabweichungen der gleichen vorhergesagten Werte und Istwerte berechnet.|  
 |Feste Datenbankrolle|Eine vordefinierte Rolle, die in jeder Datenbank vorhanden ist. Der Bereich der Rolle ist auf die Datenbank beschränkt, in der sie definiert ist.|  
 |Feste Serverrolle|Eine vordefinierte Rolle, die auf Serverebene vorhanden ist. Der Gültigkeitsbereich der Rolle ist auf die SQL Server-Instanz beschränkt, in der sie definiert ist.|  
-|FS|Ein Schlüssel in einer Datenbanktabelle, die von einer anderen Tabelle stammt (auch bekannt als "referenzierte Tabelle"), dessen Werte in der referenzierten Tabelle mit dem Primärschlüssel (PS) oder eindeutigen Schlüssel übereinstimmen.|  
+|FK|Ein Schlüssel in einer Datenbanktabelle, die von einer anderen Tabelle stammt (auch bekannt als "referenzierte Tabelle"), dessen Werte in der referenzierten Tabelle mit dem Primärschlüssel (PS) oder eindeutigen Schlüssel übereinstimmen.|  
 |Flatfile|Eine Datei, die aus Datensätzen von einem einzigen Datensatztyp besteht und in der keine eingebetteten Strukturinformationen enthalten sind, die die Beziehungen zwischen den Datensätzen bestimmen.|  
 |Vereinfachen|Das Umwandeln einer geschachtelten Struktur in eine vereinfachte Struktur.|  
 |Vereinfachte Schnittstelle|Eine Schnittstelle, die Elemente aus mehreren Schnittstellen vereint.|  
 |Vereinfachtes Rowset|Ein mehrdimensionales Dataset, das als zweidimensionales Rowset dargestellt ist, bei dem eindeutige Kombinationen aus Elementen von mehreren Dimensionen auf einer Achse kombiniert sind.|  
 |Flexible ID|Ein Bezeichner, der verschiedenen Synchronisierungsentitäten zugewiesen ist, z. B. Replikaten. Der Bezeichner kann eine feste oder eine variable Länge aufweisen.|  
 |Flexible ID|Ein Bezeichner, der verschiedenen Synchronisierungsentitäten zugewiesen ist, z. B. Replikaten. Der Bezeichner kann eine feste oder eine variable Länge aufweisen.|  
-|Foldanzahl|Ein Wert, der die Anzahl an Partitionen darstellt, die innerhalb des ursprünglichen Datasets erstellt werden.|  
+|fold count|Ein Wert, der die Anzahl an Partitionen darstellt, die innerhalb des ursprünglichen Datasets erstellt werden.|  
 |Ordnerhierarchie|Ein begrenzter Namespace, der alle Berichte, Ordner, freigegebenen Datenquellenelemente und Ressourcen eindeutig identifiziert, die auf einem Berichtsserver gespeichert und von diesem verwaltet werden.|  
 |Erzwungener Dienst|In einer Datenbank-Spiegelungssitzung ein Failover, das vom Datenbankbesitzer initiiert wird, wenn der Prinzipalserver ausfällt, und bei dem der Dienst auf die Spiegeldatenbank übertragen wird, während er einen unbekannten Status aufweist. Daten gehen möglicherweise verloren.|  
 |Fremdschlüssel|Ein Schlüssel in einer Datenbanktabelle, die von einer anderen Tabelle stammt (auch bekannt als "referenzierte Tabelle"), dessen Werte in der referenzierten Tabelle mit dem Primärschlüssel (PS) oder eindeutigen Schlüssel übereinstimmen.|  
@@ -722,8 +722,8 @@ ms.technology:
 |Granularitätsattribut|Das Attribut, mit dem die Granularitätsebene für eine gegebene Dimension in Beziehung zu einer gegebenen Measuregruppe angegeben wird.|  
 |Grafischer Abfrage-Designer|Ein von Reporting Services bereitgestellter Abfrage-Designer, mit dem Benutzer eine Abfrage interaktiv erstellen und die Ergebnisse für Datenquellentypen (SQL Server, Oracle, OLE DB und ODBC) anzeigen können.|  
 |Grafikgrundtyp|Eine Basisform (ein Punkt, eine Linie, ein Kreis, eine Kurve oder ein Polygon), die ein Grafikadapter als diskrete Entität bearbeiten kann.|  
-|Gruppe|Eine Auflistung von Benutzern, Computern, Kontakten und anderen Gruppen, die als Sicherheits- oder E-Mail-Verteilungsauflistung verwendet wird. Verteilergruppen werden nur für E-Mails verwendet. Sicherheitsgruppen dienen zur Erteilung von Zugriffen auf Ressourcen und werden auch als E-Mail-Verteilungslisten verwendet.|  
-|Gruppierung (grouping)|Eine Datenmenge, die zusammen in einem Bericht gruppiert wird.|  
+|group|Eine Auflistung von Benutzern, Computern, Kontakten und anderen Gruppen, die als Sicherheits- oder E-Mail-Verteilungsauflistung verwendet wird. Verteilergruppen werden nur für E-Mails verwendet. Sicherheitsgruppen dienen zur Erteilung von Zugriffen auf Ressourcen und werden auch als E-Mail-Verteilungslisten verwendet.|  
+|Gruppierung|Eine Datenmenge, die zusammen in einem Bericht gruppiert wird.|  
 |Zeichen halber Breite|Ein Zeichen in einem Doppelbyte-Zeichensatz, das durch ein Byte dargestellt wird und in der Regel über eine Variante vollständiger Breite verfügt.|  
 |Festplatte|Eine nicht biegsame Platte mit einer Beschichtung aus Material, in dem Daten magnetisch mit Lese-/Schreibköpfen erfasst werden können.|  
 |Renderer mit hartem Seitenumbruch|Eine Renderingerweiterung zur Beibehaltung des Berichtslayouts und der Formatierung, damit die resultierende Datei für den konsistenten Druck optimiert ist oder der Bericht online in einem Buchformat angezeigt werden kann.|  
@@ -741,12 +741,12 @@ ms.technology:
 |Hoher Grenzwert|Ein Schwellenwert für die Arbeitsspeichernutzung auf jedem Cachehost, der angibt, wann Objekte aus dem Arbeitsspeicher entfernt werden. Dieser Vorgang erfolgt unabhängig davon, ob die Gültigkeit der Objekte abgelaufen ist, und er wird ausgeführt, bis die Arbeitsspeichernutzung wieder auf den niedrigen Grenzwert zurückgeht.|  
 |Oberer Whisker|Der höchste Wert, der kein Ausreißer auf einem Boxplotdiagramm ist.|  
 |Tipp|Tipps sind Optionen oder Strategien, die angegeben werden, um durch den SQL Server-Abfrageprozessor für SELECT-, INSERT-, UPDATE- oder DELETE-Anweisungen erzwungen zu werden. Der Tipp überschreibt jeden Ausführungsplan, den der Abfrageoptimierer möglicherweise für eine Abfrage auswählt.|  
-|Verlauf|Eine Liste mit den Aktionen eines Benutzers in einem Programm. Diese Liste kann beispielsweise Befehle enthalten, die in einer Betriebssystemshell eingegeben wurden, sowie mithilfe von Gopher weitergeleitete Menüs oder Links, die in einem Webbrowser verwendet wurden.|  
-|Holdability|Verweist auf die Möglichkeit, Resultsets geöffnet ("gehalten") zu lassen, die verarbeitet wurden und anschließend normalerweise geschlossen werden. Zum Beispiel:  "SQL Server unterstützt die Holdability nur auf Verbindungsebene."|  
+|history|Eine Liste mit den Aktionen eines Benutzers in einem Programm. Diese Liste kann beispielsweise Befehle enthalten, die in einer Betriebssystemshell eingegeben wurden, sowie mithilfe von Gopher weitergeleitete Menüs oder Links, die in einem Webbrowser verwendet wurden.|  
+|Holdability|Verweist auf die Möglichkeit, Resultsets geöffnet ("gehalten") zu lassen, die verarbeitet wurden und anschließend normalerweise geschlossen werden. Beispiel: "SQL Server unterstützt die Holdability-Eigenschaft nur auf Verbindungsebene."|  
 |Zurückgehaltene Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Zurückhalten von Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Speicher für zurückgehaltene Daten|Die Data Mining-Struktur, die verwendet wird, um die zurückgehaltenen Daten zwischenzuspeichern. Sie enthält Verweise auf die zurückgehaltenen Daten.|  
-|Home|Der Stammordner im Namespace des Berichtsserverordners.|  
+|Privat|Der Stammordner im Namespace des Berichtsserverordners.|  
 |Startseite|Ein Dokument, das in einem Hypertextsystem als Anfangspunkt dient. Im World Wide Web bezeichnet dieser Begriff eine Einstiegsseite für eine Gruppe von Webseiten und anderen Dateien einer Website. Die Startseite wird standardmäßig angezeigt, wenn ein Besucher mit einem Webbrowser zu einer Website navigiert.|  
 |Homogene Daten|Daten aus mehreren Datenquellen, die alle von der gleichen Software verwaltet werden.|  
 |Hop|Bei der Datenkommunikation ein Abschnitt des Pfads zwischen Routern in einem weit verstreuten Netzwerk.|  
@@ -787,7 +787,7 @@ ms.technology:
 |Anfangsband|In einem Mediensatz, der Bandsicherungsmedien verwendet, das erste Band in einer Medienfamilie.|  
 |Innerer Join|Ein Vorgang, bei dem Zeilen aus mehreren Quelltabellen abgerufen werden, indem die Werte aus in den Quelltabellen gemeinsam genutzten Spalten verglichen werden. Mit einem inneren Join werden Zeilen einer Quelltabelle ausgeschlossen, für die in den anderen Quelltabellen keine übereinstimmenden Zeilen vorhanden sind.|  
 |Persönliche Authentifizierung|Die physische Authentifizierung zum Abschließen einer Zertifikatanforderungstransaktion. Beispiel: Ein Endbenutzer, der die Aufhebung der Blockierung seiner Geheimzahl (PIN) anfordert, sucht einen Zertifikat-Manager auf, um sich durch Identifikation persönlich zu authentifizieren, z. B. anhand eines Mitarbeiterausweises oder eines Führerscheins.|  
-|InProc|Eine Situation, in denen das COM-Objekt-Code wird aus einer DLL-Datei geladen und befindet sich im selben Prozess wie der Client.|  
+|InProc|Eine Situation, in der der Code des COM-Objekts aus einer DLL-Datei geladen wird und sich im selben Prozess wie der Client befindet.|  
 |Eingabeadapter|Ein Adapter, der eingehende Ereignisdatenströme von externen Quellen (z. B. Datenbanken, Dateien, Tickerfeeds, Netzwerkports, Herstellungsgeräte usw.) akzeptiert.|  
 |Eingabeelement|Ein Element, dessen Wert direkt aus der Datenquelle geladen wird, statt aus anderen Daten berechnet zu werden.|  
 |Eingabeset|Die Datenmenge, die für einen Wertausdruck mit mehrdimensionalen Ausdrücken (MDX, Multidimensional Expressions) bereitgestellt wird und mit der dieser Ausdruck operiert.|  
@@ -797,7 +797,7 @@ ms.technology:
 |Einfügeereignis|Die Ereignisart, die verwendet wurde, um den Eingang eines Ereignisses im Datenstrom anzugeben. Der Einfügeereignistyp besteht aus Metadaten, die die gültige Lebensdauer des Ereignisses und die Nutzlastfelder (Daten) des Ereignisses definieren.|  
 |Einfügeabfrage|Eine Abfrage, bei der bestimmte Spalten und Zeilen von einer Tabelle in eine andere oder innerhalb derselben Tabelle kopiert werden.|  
 |Werte einfügen-Abfrage|Eine Abfrage (SQL-Anweisung), die zur Erstellung einer neuen Zeile sowie zum Einfügen von Werten in bestimmte Spalten dient.|  
-|Instanz|Eine Kopie von SQL Server, die auf einem Computer ausgeführt wird.|  
+|instance|Eine Kopie von SQL Server, die auf einem Computer ausgeführt wird.|  
 |Instanzsteuerungsanbieter|Ein Anbieter, der Ihnen ermöglicht, Steuerungsbefehle für Workflowinstanzen in einem Instanzspeicher auszustellen. Mithilfe eines SQL-Steuerungsanbieters können Sie z. B. Instanzen anhalten, fortsetzen oder beenden, die in einer SQL Server-Datenbank gespeichert sind. Wenn Sie ein Cmdlet ausführen, das eine Workflowinstanz in einem Instanzspeicher steuert, verwendet das Cmdlet den Steuerungsanbieter intern, damit der Instanzspeicher Befehle an die Instanz sendet.|  
 |Instanzabfrageanbieter|Ein Anbieter, der Ihnen ermöglicht, Abfragen für einen Instanzspeicher auszustellen. Mithilfe eines SQL-Abfrageanbieters können Sie z. B. in einer SQL Server-Datenbank gespeicherte Workflowinstanzen abfragen. Wenn Sie ein Cmdlet ausführen, das Instanzen für einen Instanzspeicher abfragt, ruft das Cmdlet Instanzen mithilfe des Abfrageanbieters aus diesem Speicher intern ab.|  
 |Instanzspeicher|Eine Gruppe von Datenbanktabellen, die den Status und die Metadaten von Workflowinstanzen speichern.|  
@@ -828,11 +828,11 @@ ms.technology:
 |Durchlaufen|Das wiederholte Ausführen von mindestens einer Anweisung. Derartig ausgeführte Anweisungen befinden sich in einer sogenannten Warteschleife.|  
 |Auftrag|Eine bestimmte Reihe von Vorgängen (Schritte genannt), die sequenziell von einem Programm ausgeführt werden, um eine Aktion abzuschließen.|  
 |Auftragsverlauf|Protokoll, das einen historischen Datensatz von Aufträgen enthält.|  
-|Join|Das Kombinieren der Inhalte aus mindestens zwei Tabellen und das Erzeugen eines Resultsets, das Zeilen und Spalten aus jeder Tabelle enthält. Tabellen werden in der Regel mit gemeinsamen Daten verknüpft.|  
+|join|Das Kombinieren der Inhalte aus mindestens zwei Tabellen und das Erzeugen eines Resultsets, das Zeilen und Spalten aus jeder Tabelle enthält. Tabellen werden in der Regel mit gemeinsamen Daten verknüpft.|  
 |Joinspalte|Eine Spalte, auf die in einer Joinbedingung verwiesen wird.|  
 |Joinbedingung|Eine Vergleichsklausel, durch die angegeben wird, wie Tabellen durch ihre Joinspalten verbunden sind.|  
 |Joinfilter|Ein in der Mergereplikation verwendeter Filter, der den Zeilenfilter einer Tabelle auf eine verknüpfte Tabelle erweitert.|  
-|Joinoperator|Ein Vergleichsoperator in einer Joinbedingung, der bestimmt, wie die beiden Seiten der Bedingung ausgewertet und welche Zeilen zurückgegeben werden.|  
+|join-Operator|Ein Vergleichsoperator in einer Joinbedingung, der bestimmt, wie die beiden Seiten der Bedingung ausgewertet und welche Zeilen zurückgegeben werden.|  
 |Joinpfad|Eine Reihe von Joins, die angeben, wie zwei Tabellen zueinander in Beziehung stehen.|  
 |Verknüpfungstabelle|Eine Tabelle, die eine Beziehung zwischen anderen Tabellen herstellt.|  
 |Kagi-Diagramm|Ein Diagramm, das meistens zeitunabhängig ist und zur Nachverfolgung von Kursbewegungen sowie zur Vereinfachung von Entscheidungen im Hinblick auf den Aktienkauf dient.|  
@@ -846,11 +846,11 @@ ms.technology:
 |Key Performance Indicator|Ein vordefiniertes Measure zur Nachverfolgung der Leistung strategischer Ziele, Pläne, Initiativen oder Geschäftsprozesse. Ein Key Performance Indicator (KPI) wird für ein Ziel ausgewertet. Ein expliziter und messbarer Wert, der direkt von einer Datenquelle abgerufen wird. KPIs werden verwendet, um die Leistung in einem bestimmten Bereich zu messen, z. B. Einnahmen pro Kunde.|  
 |Schlüsselbereichssperre|Eine Sperre, die zum Sperren von Bereichen zwischen Datensätzen in einer Tabelle verwendet wird, um auf diese Weise Phantomeinfügungen oder -löschungen in einer Gruppe von Datensätzen zu vermeiden. Durch Schlüsselbereichssperren werden serialisierbare Transaktionen ermöglicht.|  
 |Schlüsselwiederherstellung|Das Wiederherstellen des privaten Schlüssels eines Benutzers.|  
-|Key Recovery Agent|Ein bestimmter Benutzer, die mit einem zertifikatadministrator zum privaten Schlüssel eines Benutzers wiederherstellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
+|Key Recovery Agent|Ein benannter Benutzer, der mit einem Zertifikat Administrator zusammenarbeitet, um den privaten Schlüssel eines Benutzers wiederherzustellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
 |Keysetgesteuerter Cursor|Ein Cursor, der die Auswirkungen von Updates anzeigt, die von anderen Benutzern an den im Cursor enthaltenen Zeilen vorgenommen werden, während der Cursor geöffnet ist. Die Auswirkungen von Einfügungen oder Löschvorgängen werden jedoch nicht angezeigt.|  
 |Wissen|Die Metadaten zu allen Änderungen, die bei einem Teilnehmer aufgetreten sind und die dieser verwaltet.|  
 |KPI|Ein vordefiniertes Measure zur Nachverfolgung der Leistung strategischer Ziele, Pläne, Initiativen oder Geschäftsprozesse. Ein Key Performance Indicator (KPI) wird für ein Ziel ausgewertet. Ein expliziter und messbarer Wert, der direkt von einer Datenquelle abgerufen wird. KPIs werden verwendet, um die Leistung in einem bestimmten Bereich zu messen, z. B. Einnahmen pro Kunde.|  
-|KRA|Ein bestimmter Benutzer, die mit einem zertifikatadministrator zum privaten Schlüssel eines Benutzers wiederherstellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
+|KRA|Ein benannter Benutzer, der mit einem Zertifikat Administrator zusammenarbeitet, um den privaten Schlüssel eines Benutzers wiederherzustellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
 |Sprache für Programme, die Unicode nicht unterstützen|Eine Einstellung unter "Regions- und Sprachoptionen", die die Standardcodepages und die zugehörigen Bitmapschriftdateien für einen bestimmten Computer angibt. Diese Einstellung betrifft alle Benutzer des entsprechenden Computers. Dank der Standardcodepages und Schriftarten kann eine Nicht-Unicode-Anwendung, die für eine bestimmte Betriebssystemsprachversion geschrieben wurde, ordnungsgemäß unter einer anderen Betriebssystemsprachversion ausgeführt werden.|  
 |Sprachdienstparser|Eine Komponente zur Beschreibung der Funktionen und des Bereichs von Token in Quellcode.|  
 |Sprachdienstscanner|Eine Komponente zur Identifizierung der Tokentypen in Quellcode. Diese Informationen werden zur Syntaxhervorhebung und zum schnellen Identifizieren von Tokentypen verwendet, die andere Vorgänge auslösen können (z. B. übereinstimmende Klammern).|  
@@ -867,7 +867,7 @@ ms.technology:
 |Erlangtes Wissen|Das aktuelle Wissen eines Quellreplikats über einen bestimmten Satz von Änderungen und die protokollierten Konflikte des Replikats.|  
 |Selten verwendet|Der vom Cachecluster verwendete Entfernungstyp, bei dem selten verwendete Objekte vor den zuletzt verwendeten Objekten entfernt werden.|  
 |Linker äußerer Join|Eine Form des äußeren Joins, bei dem alle Zeilen aus der Tabelle ganz links in der JOIN-Klausel eingeschlossen werden. Entsprechen Zeilen in der linken Tabelle keinen Zeilen in der rechten Tabelle, wird allen Resultsetspalten der rechten Tabelle der Wert "NULL" zugeordnet.|  
-|Ebene|Die Bezeichnung für eine Elementgruppe in einer Dimensionshierarchie, bei der alle Elemente der Gruppe die gleiche Distanz vom Stamm der Hierarchie aufweisen. So kann beispielsweise eine Zeithierarchie die Ebenen Jahr, Monat und Tag enthalten.|  
+|Einstellung|Die Bezeichnung für eine Elementgruppe in einer Dimensionshierarchie, bei der alle Elemente der Gruppe die gleiche Distanz vom Stamm der Hierarchie aufweisen. So kann beispielsweise eine Zeithierarchie die Ebenen Jahr, Monat und Tag enthalten.|  
 |Prognosegütediagramm|In Analysis Services ein Diagramm, das die Genauigkeit der Prognosen jedes Data Mining-Modells in der Vergleichsgruppe vergleicht.|  
 |Lightweightpooling|Eine Option, die eine Reduzierung der Systemauslastung ermöglicht, die im Zusammenhang mit übermäßigem Kontextwechsel steht, der in SMP-Umgebungen (Symmetric Multiprocessing) auftreten kann. Dazu wird der Kontextwechsel inline ausgeführt, wodurch sich Benutzer-/Kernelringübergänge reduzieren lassen.|  
 |Linienebene|Die Ebene in einem Kartenbericht, in dem räumliche Daten als Linien angezeigt werden (beispielsweise Linien zur Angabe von Pfaden oder Routen).|  
@@ -917,7 +917,7 @@ ms.technology:
 |Manuelles Failover|In einer Datenbankspiegelungssitzung ein Failover, das vom Datenbankbesitzer initiiert wird, während der Prinzipalserver weiter ausgeführt wird, und das Dienste von der Prinzipaldatenbank zur Spiegeldatenbank überträgt, während die beiden Datenbanken in synchronisiertem Zustand sind.|  
 |m:n-Dimension|Eine Beziehung zwischen einer Dimension und einer Measuregruppe, bei der ein einzelner Fakt mehreren Dimensionselementen und ein einzelnes Dimensionselement mehreren Fakten zugeordnet werden kann. Um die Beziehung zwischen der Dimension und der Faktentabelle zu definieren, wird die Dimension mit einer Zwischenfaktentabelle verknüpft. Diese Zwischenfaktentabelle wird wiederum mit einer Zwischendimensionstabelle verknüpft, die der Faktentabelle zugeordnet ist.|  
 |m:1-Beziehung|Eine Beziehung zwischen zwei Tabellen, bei der eine Zeile in einer Tabelle mit vielen Zeilen in einer anderen Tabelle verknüpft sein kann.|  
-|Zuordnen|Das Zuordnen von Daten zu einem bestimmten Speicherort im Arbeitsspeicher.|  
+|map|Das Zuordnen von Daten zu einem bestimmten Speicherort im Arbeitsspeicher.|  
 |Kartensteuerelement|Ein JavaScript-Steuerelement, das die Objekte, Methoden und Ereignisse enthält, die Sie zur Anzeige der Karten von Bing Maps™ auf Ihrer Website benötigen.|  
 |Kartenkatalog|Der Kartenkatalog enthält Karten aus Berichten, die sich im Kartenkatalogordner für die Berichterstellungsumgebung befinden.|  
 |Kartenebene|Ein untergeordnetes Kartenelement, wobei jede Kartenebene Elemente für die zugehörigen Kartenelemente und Kartenelementattribute umfasst.|  
@@ -925,8 +925,8 @@ ms.technology:
 |Kartenkachel|Eines aus einer Reihe von 256 x 256 Pixel großen Bildern, die zur Erstellung einer Bing-Karte kombiniert werden. Eine Kartenkachel enthält ein Segment der Sicht der Erde in Mercator-Projektion, mit möglichen Straßen- und Textoverlays je nach Stil der Bing-Karte.|  
 |Kartenviewport|Der Bereich der Karte, in dem das Kartenberichtselement angezeigt wird. Beispielsweise kann eine Karte für Deutschland in einen Bericht eingebettet werden, angezeigt wird aber nur der Bereich für Norddeutschland.|  
 |MAPI|Eine Messagingarchitektur, durch die mehrere Anwendungen mit mehreren Messagingsystemen über eine Reihe von Hardwareplattformen interagieren können. MAPI wird auf COM-Basis (Component Object Model) erstellt.|  
-|Zuordnung|Eine Komponente für die Zuordnung von Objekten.|  
-|marker|Ein visueller Indikator, der einen Datenpunkt identifiziert. In einem Kartenbericht entspricht ein Marker dem visuellen Indikator, der die Position jedes Punkts auf der Punktebene identifiziert.|  
+|mapper|Eine Komponente für die Zuordnung von Objekten.|  
+|Marker|Ein visueller Indikator, der einen Datenpunkt identifiziert. In einem Kartenbericht entspricht ein Marker dem visuellen Indikator, der die Position jedes Punkts auf der Punktebene identifiziert.|  
 |Markerkarte|Eine Karte, die bei jedem Ort (z. B. bei Städten) einen Marker mit unterschiedlicher Farbe und Größe sowie mit unterschiedlichem Typ aufweist.|  
 |Warenkorbanalyse|Ein Data Mining-Standardalgorithmus, bei dem eine Liste von Transaktionen analysiert wird, um vorherzusagen, welche Artikel am häufigsten zusammen gekauft werden.|  
 |Masterdaten|Die wichtigen Daten eines Geschäfts (z. B. Kunde, Produkt, Standort, Mitarbeiter und Ressource). Masterdaten werden im Allgemeinen in vier Gruppierungen eingeteilt (Personen, Gegenstände, Orte und Konzepte) und lassen sich weiter kategorisieren. In Bezug auf Personen sind z. B. Kunden, Mitarbeiter und Vertriebsmitarbeiter zu nennen. In Bezug auf Gegenstände sind die Stichworte Produkt, Teil, Lagerposition und Ressource zu nennen. Konzepten können Verträge, Garantienehmer und Lizenzen zugeordnet werden. Abschließend können der Kategorie "Orte" Bürostandorte und geografische Aufteilungen zugeordnet werden.|  
@@ -934,7 +934,7 @@ ms.technology:
 |Master Data Manager|Eine Komponente der Master Data Services-Anwendung zum Verwalten von und Zugreifen auf Masterdaten.|  
 |Master Data Services|Eine Anwendung zur Masterdatenverwaltung, die zur konsistenten Definition und Verwaltung der wichtigen Datenentitäten einer Organisation dient.|  
 |Konfigurations-Manager für Master Data Services|Ein SQL Server-Konfigurations-Manager, der zum Erstellen und Konfigurieren von Master Data Services-Datenbanken, Websites und Webanwendungen verwendet wird.|  
-|master-Datenbank|Die Systemdatenbank, in der alle Informationen auf Systemebene für eine Instanz von SQL Server aufgezeichnet werden.|  
+|Masterdatenbank|Die Systemdatenbank, in der alle Informationen auf Systemebene für eine Instanz von SQL Server aufgezeichnet werden.|  
 |Masterdatei|Die Datei, die mit früheren Versionen von SQL Server installiert wurde und zum Speichern von Systemdatenbanken und Transaktionsprotokollen des Typs "master", "model" und "tempdb" sowie der Beispieldatenbank und des Transaktionsprotokolls des Typs "pubs" dient.|  
 |Masterzusammenführung|Das Kombinieren von Schattenindizes mit dem aktuellen Masterindex, um einen neuen Masterindex zu bilden.|  
 |Masterserver|Ein Server, der Aufträge verteilt und Ereignisse von mehreren Servern empfängt.|  
@@ -943,7 +943,7 @@ ms.technology:
 |MBCS|Ein Zeichensatz mit gemischter Breite, in dem einige Zeichen mehrere Bytes umfassen. Dieser wird insbesondere bei Sprachen wie Japanisch, Chinesisch und Koreanisch verwendet, in denen 256 mögliche Werte eines Single-Byte-Zeichensatzes nicht ausreichend sind, um alle möglichen Zeichen anzuzeigen.|  
 |MDS|Eine Anwendung zur Masterdatenverwaltung, die zur konsistenten Definition und Verwaltung der wichtigen Datenentitäten einer Organisation dient.|  
 |MDX|Eine Sprache zum Abfragen und Bearbeiten von Daten in multidimensionalen Objekten (OLAP-Cubes).|  
-|Measure|In einem Cube eine Menge von in der Regel numerischen Werten, die auf einer Spalte in der Faktentabelle des Cubes beruhen. Measures sind die zentralen Werte, die aggregiert und analysiert werden.|  
+|Kennzahl|In einem Cube eine Menge von in der Regel numerischen Werten, die auf einer Spalte in der Faktentabelle des Cubes beruhen. Measures sind die zentralen Werte, die aggregiert und analysiert werden.|  
 |Measuregruppe|Eine Auflistung verwandter Measures in einem Analysis Services-Cube. Die Measures stammen im Allgemeinen aus der gleichen Faktentabelle.|  
 |Medienfamilie|Daten, die von einem Sicherungsvorgang in ein von einem Mediensatz verwendetes Sicherungsmedium geschrieben wurden. In einem Mediensatz mit nur einem einzelnen Gerät ist nur eine Medienfamilie vorhanden. In Stripesetmedien sind mehrere Medienfamilien vorhanden. Wenn die Stripesetmedien nicht gespiegelt sind, entspricht jedes Gerät einer Familie. Ein gespiegelter Mediensatz enthält zwei bis vier identische Kopien jeder Medienfamilie (Spiegel genannt). Durch das Anfügen von Sicherungen an einen Mediensatz werden die Medienfamilien erweitert.|  
 |Medienheader|Eine Bezeichnung, die Informationen zu den Sicherungsmedien liefert.|  
@@ -951,7 +951,7 @@ ms.technology:
 |Median|Der Mittelwert in einem Satz sortierter Zahlen. Der Median wird folgendermaßen bestimmt: Es wird der kleinste Wert gewählt, für den gilt, dass mindestens die Hälfte der Werte in der Menge nicht größer als der gewählte Wert sind. Ist die Anzahl der Werte in der Menge eine ungerade Zahl, entspricht der Median einem einzelnen Wert. Ist die Anzahl der Werte in der Menge eine gerade Zahl, entspricht der Median der Summe der beiden mittleren Werte, dividiert durch zwei.|  
 |Medianpreisformel|Eine Formel, die den Durchschnitt der höchsten und niedrigsten Preise berechnet.|  
 |Medianwert|Der Mittelwert in einem Satz sortierter Zahlen. Der Median wird folgendermaßen bestimmt: Es wird der kleinste Wert gewählt, für den gilt, dass mindestens die Hälfte der Werte in der Menge nicht größer als der gewählte Wert sind. Ist die Anzahl der Werte in der Menge eine ungerade Zahl, entspricht der Median einem einzelnen Wert. Ist die Anzahl der Werte in der Menge eine gerade Zahl, entspricht der Median der Summe der beiden mittleren Werte, dividiert durch zwei.|  
-|Member|Eine einzelne Position oder ein Element in einer Dimension. Dimensionselemente können benutzerdefiniert oder vordefiniert sein und über zugeordnete Eigenschaften verfügen.|  
+|member|Eine einzelne Position oder ein Element in einer Dimension. Dimensionselemente können benutzerdefiniert oder vordefiniert sein und über zugeordnete Eigenschaften verfügen.|  
 |Elementdelegierung|Ein Modellierungskonzept, das beschreibt, wie Schnittstellenelemente zwischen Schnittstellen zugeordnet werden.|  
 |Elementausdruck|Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.|  
 |Elementeigenschaft|Ein Merkmal eines Dimensionselements. Dimensionselementeigenschaften können alphanumerisch oder boolesch sein oder dem Datentyp "Datum/Uhrzeit" entsprechen. Sie können außerdem benutzerdefiniert oder vordefiniert sein.|  
@@ -965,8 +965,8 @@ ms.technology:
 |Nachrichtentyp|Eine Definition einer Service Broker-Nachricht. Mit dem Nachrichtentyp wird der Name einer Nachricht und die Art der Überprüfung festgelegt, die Service Broker für eingehende Nachrichten dieser Art ausführt.|  
 |Meldungsbereich|Eine der Registerkarten, die die Meldungen hosten, die von SQL Server zurückgegeben werden, nachdem eine TSQL-Abfrage ausgeführt wurde.|  
 |Messaging Application Programming Interface|Eine Messagingarchitektur, durch die mehrere Anwendungen mit mehreren Messagingsystemen über eine Reihe von Hardwareplattformen interagieren können. MAPI wird auf COM-Basis (Component Object Model) erstellt.|  
-|Metadaten|Informationen zu den Eigenschaften oder der Struktur der Daten, die nicht Bestandteil der in den Daten enthaltenen Werte sind.|  
-|Methode|Im Bereich der objektorientierten Programmierung ein benannter Codeblock zur Ausführung eines Tasks bei entsprechendem Aufruf.|  
+|metadata|Informationen zu den Eigenschaften oder der Struktur der Daten, die nicht Bestandteil der in den Daten enthaltenen Werte sind.|  
+|method|Im Bereich der objektorientierten Programmierung ein benannter Codeblock zur Ausführung eines Tasks bei entsprechendem Aufruf.|  
 |Microsoft Message Queuing|Eine Microsoft-Technologie, mit der Anwendungen zu unterschiedlichen Zeiten ausgeführt werden, um so über heterogene Netzwerke und Systeme zu kommunizieren, die u. U. vorübergehend offline sind.|  
 |Microsoft Sequence Clustering-Algorithmus|Ein Algorithmus, der aus der Kombination von Sequenzanalyse und Clustering besteht und zur Identifikation von Clustern ähnlich geordneter Ereignisse in einer Sequenz dient. Die Cluster können verwendet werden, um die wahrscheinliche Reihenfolge der Ereignisse in einer Sequenz auf Grundlage von bekannten Merkmalen vorherzusagen.|  
 |Microsoft SharePoint Foundation für den Import von Verwendungsdaten|Der Standardzeitgeberauftrag für SharePoint Foundation, der Verwendungsprotokolldateien in die Protokollierungsdatenbank importiert.|  
@@ -974,7 +974,7 @@ ms.technology:
 |Microsoft SQL Server|Eine Familie von Verwaltungs- und Analysesystemen für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
 |Microsoft SQL Server 2008 Express|Eine integrierbare Lightweight-Version von Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Ein Entwurfs- und Verwaltungssystem für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
-|Microsoft SQL Server 2008 Express with Tools|Eine kostenlose, leicht zu bedienende Version von der SQL Server Express-Datenplattform, die das grafische Verwaltungstool umfasst: SQL Server Management Studio (SMSS) Express.|  
+|Microsoft SQL Server 2008 Express with Tools|Eine kostenfreie, benutzerfreundliche Version der SQL Server Express-Datenplattform, die das grafische Verwaltungstool umfasst (SQL Server Management Studio (SMSS) Express).|  
 |Microsoft SQL Server-Onlinedokumentation|Eine Sammlung elektronischer Dokumentation, die die vollständige Dokumentation enthält, die mit Microsoft SQL Server geliefert wird.|  
 |Microsoft SQL Server Business Intelligence|Die auf Microsoft SQL Server basierende Dateninfrastruktur und Business Intelligence-Plattform, die aus Microsoft SQL Server Integration Services, der relationalen Engine, Master Data Services, Reporting Services und Analysis Services bestehen.|  
 |Microsoft SQL Server Compact|Ein Verwaltungs- und Analysesystem für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
@@ -990,7 +990,7 @@ ms.technology:
 |Microsoft Time Series-Algorithmus|Ein Algorithmus, der eine lineare Regressionsentscheidungsstruktur verwendet, um zeitbezogene Daten (z. B. Daten zu monatlichem Umsatz oder zu jährlichem Gewinn) zu analysieren. Die damit ermittelten Muster können verwendet werden, um Werte für künftige Zeitschritte vorherzusagen.|  
 |Middleware|Eine Software, die zwischen mindestens zwei Softwaretypen implementiert ist und Informationen, die zwischen diesen Typen ausgetauscht werden, entsprechend umwandelt. Middleware deckt ein breites Spektrum an Software ab und ist im Allgemeinen zwischen einer Anwendung und einem Betriebssystem, einem Netzwerkbetriebssystem oder einem Datenbank-Managementsystem integriert.|  
 |Miningmodell|Ein Objekt, das die Definition eines Data Mining-Prozesses und die Ergebnisse der Trainingsaktivität enthält. Ein Data Mining-Modell gibt z. B. die Eingabe, die Ausgabe, den Algorithmus und andere Eigenschaften des Prozesses an und umfasst die während der Trainingsaktivität erfassten Informationen (z. B. eine Entscheidungsstruktur).|  
-|Miningstruktur|Ein Data Mining-Objekt, in dem die Datendomäne definiert wird, aus der die Miningmodelle erstellt werden.|  
+|mining structure|Ein Data Mining-Objekt, in dem die Datendomäne definiert wird, aus der die Miningmodelle erstellt werden.|  
 |Hilfsteilstrich|Ein Teilstrich, der einer kleineren Skalierungseinheit auf einer Achse entspricht.|  
 |Spiegeldatenbank|In einer Datenbankspiegelungssitzung die Kopie der Datenbank, die normalerweise vollständig mit der Prinzipaldatenbank synchronisiert ist.|  
 |Spiegelserver|In einer Datenbank-Spiegelungskonfiguration die Serverinstanz, auf der sich die Spiegeldatenbank befindet. Der Spiegelserver ist der Spiegelungspartner, dessen Kopie der Datenbank aktuell der Spiegeldatenbank entspricht. Der Spiegelserver ist ein unmittelbar betriebsbereiter Standbyserver.|  
@@ -1085,18 +1085,18 @@ ms.technology:
 |Paket|Eine Informationseinheit, die von einem Computer oder Gerät an einen anderen Computer bzw. ein anderes Gerät in einem Netzwerk gesendet wird.|  
 |Index mit Leerstellen auffüllen|Eine Option, die den Speicherplatz angibt, der auf jeder Seite in den Zwischenebenen des Indexes frei gelassen werden soll.|  
 |Auffüllung|Bei einem Datenspeicher das Hinzufügen mindestens eines Bits (normalerweise Nullen) zu einem Datenblock, um diesen zu füllen. So können die tatsächlichen Datenbits an eine bestimmte Position gezwungen werden, oder es kann verhindert werden, dass die Daten ein Bitmuster duplizieren, das eine feststehende Bedeutung hat (z. B. ein eingebetteter Befehl).|  
-|Seite (page)|Das Zurückgeben der Ergebnisse einer Abfrage in kleineren Teilmengen von Daten. So kann der Benutzer durch das Resultset navigieren, indem er "Seiten" von Daten anzeigt.|  
-|Seite (page)|In einem virtuellen Speichersystem ein Block fester Größe mit fortlaufenden virtuellen Adressen. Dieser Block wird im Rahmen von Auslagerungsvorgängen als Einheit aus dem Arbeitsspeicher auf den Datenträger und zurück kopiert.|  
+|Seite|Das Zurückgeben der Ergebnisse einer Abfrage in kleineren Teilmengen von Daten. So kann der Benutzer durch das Resultset navigieren, indem er "Seiten" von Daten anzeigt.|  
+|Seite|In einem virtuellen Speichersystem ein Block fester Größe mit fortlaufenden virtuellen Adressen. Dieser Block wird im Rahmen von Auslagerungsvorgängen als Einheit aus dem Arbeitsspeicher auf den Datenträger und zurück kopiert.|  
 |Seitenfehler|Die Unterbrechung, die auftritt, wenn Software Daten an einem virtuellen Speicherort, der mit "nicht vorhanden" markiert ist, lesen oder in diesen schreiben möchte.|  
 |Seitenwiederherstellung|Ein Vorgang, bei dem mindestens eine Datenseite wiederhergestellt wird. Die Seitenwiederherstellung ist zum Reparieren einzelner beschädigter Seiten vorgesehen.|  
-|Pager|Ein kleines, drahtloses, elektronisches Gerät, das mit Funksignalen arbeitet und eingehende Telefonnummern oder kurze Textnachrichten aufzeichnet. Einige Pager ermöglichen außerdem den Versand von Nachrichten.|  
+|pager|Ein kleines, drahtloses, elektronisches Gerät, das mit Funksignalen arbeitet und eingehende Telefonnummern oder kurze Textnachrichten aufzeichnet. Einige Pager ermöglichen außerdem den Versand von Nachrichten.|  
 |Pagingsystem|Ein System, über das Benutzer Nachrichten senden und empfangen können, wenn sie sich außerhalb der Reichweite aufhalten.|  
 |PAL|Der primäre Mechanismus für die Sicherung des Verlegers. Enthält eine Liste mit Anmeldungen, Konten und Gruppen, denen Zugriff auf die Veröffentlichung gewährt wird.|  
 |Parallele Ausführung|Die scheinbar gleichzeitige Ausführung von zwei oder mehr Routinen oder Programmen. Die gleichzeitige Ausführung kann mit einem einzelnen Prozess oder mit Zeitanteiltechniken erreicht werden, z. B. durch das Aufteilen von Programmen in verschiedene Tasks oder Ausführungsthreads. Alternativ kann mit mehreren Prozessoren gearbeitet werden.|  
 |Parallele Verarbeitung|Eine Verarbeitungsmethode, die nur auf einem Computer ausgeführt werden kann, der über mindestens zwei gleichzeitig verwendbare Prozessoren verfügt. Der Unterschied zwischen Parallelverarbeitung und Multiprocessing liegt in der Verteilung von Tasks auf die verfügbaren Prozessoren. Beim Multiprocessing kann ein Prozess in sequenzielle Blöcke aufgeteilt werden, wobei ein Prozessor den Zugriff auf eine Datenbank verwaltet, während ein anderer Prozessor die Datenanalyse übernimmt und ein dritter Prozessor die grafische Ausgabe an den Bildschirm verarbeitet. Programmierer, die mit Systemen arbeiten, die die Parallelverarbeitung einsetzen, müssen einen Task so aufteilen, dass er mehr oder weniger gleichmäßig auf die verfügbaren Prozessoren verteilt ist.|  
 |Parametrisierte Abfrage|Eine Abfrage, an die mithilfe von Parametern Eingabewerte übergeben werden können.|  
 |Parametrisierter Bericht|Ein veröffentlichter Bericht, an den mithilfe von Parametern Eingabewerte übergeben werden können.|  
-|Parametrisierter Zeilenfilter|Ein Zeilenfilter, der zur Verfügung, mit der Mergereplikation, die Ihnen ermöglicht, die auf einen Abonnenten replizierten Daten zu beschränken auf Grundlage der Systemfunktion oder einer benutzerdefinierten Funktion (z. B.: SUSER_SNAME()).|  
+|Parametrisierter Zeilenfilter|Ein Zeilenfilter, der bei der Mergereplikation zur Verfügung steht und mit dem Daten eingeschränkt werden können, die für einen Abonnenten repliziert werden. Der Zeilenfilter basiert auf der Systemfunktion oder einer benutzerdefinierten Funktion (beispielsweise SUSER_SNAME()).|  
 |Teilsicherung|Eine Sicherung aller Daten in der primären Dateigruppe, in jeder Lese-Schreib-Dateigruppe und in optional angegebenen Dateien. Eine Teilsicherung einer schreibgeschützten Datenbank enthält nur die primäre Dateigruppe.|  
 |Teilweise Datenbankwiederherstellung|Die Wiederherstellung eines Teils einer Datenbank, der die primäre Dateigruppe und mindestens eine sekundäre Dateigruppe umfasst. Die anderen Dateigruppen bleiben dauerhaft offline, obwohl sie später wiederhergestellt werden können.|  
 |Differenzielle Teilsicherung|Eine Teilsicherung, die differenziell in Bezug auf eine einzelne, frühere Teilsicherung (die Basissicherung) ist. Bei einer schreibgeschützten Datenbank enthält eine differenzielle Teilsicherung nur die primäre Dateigruppe.|  
@@ -1134,17 +1134,17 @@ ms.technology:
 |Schrittweise Wiederherstellung|Eine zusammengesetzte Wiederherstellung, bei der eine Datenbank phasenweise wiederhergestellt wird, wobei jede Phase einer Wiederherstellungssequenz entspricht. Bei der ersten Sequenz werden die Dateien in der primären Dateigruppe sowie (optional) weitere Dateien bis zu einem beliebigen, vom Wiederherstellungsmodell unterstützten Zeitpunkt wiederhergestellt. Anschließend wird die Datenbank online geschaltet. Bei nachfolgenden Wiederherstellungssequenzen werden die verbleibenden Dateien auf einen Stand gebracht, der mit der Datenbank konsistent ist, und dann online geschaltet.|  
 |PIN|Ein eindeutiger und geheimer Identifikationscode, der einem Kennwort ähnelt und einem autorisierten Benutzer zugewiesen ist, um Zugriff auf persönliche Informationen oder Ressourcen über ein elektronisches Gerät zu erhalten.|  
 |PInvoke|Die von der Common Language Runtime bereitgestellte Funktion, mit der verwalteter Code nicht verwaltete systemeigene DLL-Einstiegspunkte aufrufen kann.|  
-|Pivotieren|Das Umsetzen eines Tabellenwertausdrucks, indem die eindeutigen Werte einer Spalte des Ausdrucks in mehrere Spalten der Ausgabe versetzt werden und dabei gegebenenfalls Aggregationen für verbliebene Spaltenwerte erfolgen, die in der endgültigen Ausgabe erwünscht sind.|  
+|pivot|Das Umsetzen eines Tabellenwertausdrucks, indem die eindeutigen Werte einer Spalte des Ausdrucks in mehrere Spalten der Ausgabe versetzt werden und dabei gegebenenfalls Aggregationen für verbliebene Spaltenwerte erfolgen, die in der endgültigen Ausgabe erwünscht sind.|  
 |Pivotwährung|Die Währung, für die Wechselkurse in die Wechselkurs-Measuregruppe eingegeben werden.|  
 |PivotTable|Eine interaktive Technologie in Microsoft Excel oder Access, mit der dynamische Sichten der gleichen Daten einer Liste oder einer Datenbank angezeigt werden können.|  
 |PL/SQL|Die Datenbearbeitungssprache von Oracle, die die Ausführung von SQL-Anweisungen in Sequenzen oder Gruppen ermöglicht und häufig verwendet wird, um Daten in einer Oracle-Datenbank zu bearbeiten. Die Syntax ist der Ada-Programmiersprache ähnlich.|  
 |Platzhalterelement|Eine künstliche Adresse, Anweisung oder ein anderer Bezugspunkt, die bzw. der ausschließlich in einen Computer importiert wird, um vorgeschriebene Bedingungen zu erfüllen, und keine Auswirkungen auf Vorgänge zum Beheben von Problemen hat.|  
-|Nur-Text|Daten in unverschlüsselter oder entschlüsselter Form.|  
+|plaintext|Daten in unverschlüsselter oder entschlüsselter Form.|  
 |Planhinweisliste|Ein SQL Server-Modul, das Abfragehinweise an Abfragen in bereitgestellten Anwendungen anfügt, ohne direkt die Abfrage zu ändern.|  
 |Planar|Dieser Begriff bezieht sich bei Computergrafiken darauf, dass ein Objekt innerhalb einer Ebene liegt.|  
 |Plattformaufruf|Die von der Common Language Runtime bereitgestellte Funktion, mit der verwalteter Code nicht verwaltete systemeigene DLL-Einstiegspunkte aufrufen kann.|  
 |Plattformebene|Die Ebene, die die physischen Server und die Dienste einschließt, die die Dienstebene unterstützen. Die Plattformebene besteht aus vielen Instanzen von SQL Server, von der jede mithilfe der SQL Azure-Struktur verwaltet wird.|  
-|PMML|Eine XML-basierte Sprache, die die Freigabe von definierten Vorhersagemodellen zwischen kompatiblen Anwendungen von Anbietern ermöglicht.|  
+|PMML|Eine XML-basierte Sprache, die die Freigabe von definierten Vorhersagemodellen zwischen konformen Anwendungen von Anbietern ermöglicht.|  
 |Punkt- und Zeichendiagramm|Ein Diagramm, das tägliche Kursbewegungen darstellt, ohne den Zeitverlauf zu berücksichtigen.|  
 |Punkttiefe|Die Tiefe von Datenpunkten, die in einer 3D-Diagrammfläche angezeigt werden.|  
 |Punktereignis|Ein Ereignisvorkommen ab einem einzelnen Zeitpunkt. Es ist nur die Startzeit für das Ereignis erforderlich. Der CEP-Server leitet die gültige Endzeit ab, indem er der Startzeit (der kleinsten Zeiteinheit im zugrunde liegenden Zeitdatentyp) einen Takt hinzufügt, um das gültige Zeitintervall für das Ereignis festzulegen. Punktereignisse sind nur für diese einzelne Zeitinstanz gültig.|  
@@ -1154,7 +1154,7 @@ ms.technology:
 |Zeitpunktwiederherstellung|Der Prozess der Wiederherstellung nur derjenigen Transaktionen in einer Protokollsicherung, für die vor einem bestimmten Zeitpunkt ein Commit ausgeführt wurde, statt die gesamte Sicherung wiederherzustellen.|  
 |Nicht verarbeitbare Nachricht|Eine Nachricht, die Informationen enthält, die eine Anwendung nicht erfolgreich verarbeiten kann. Eine nicht verarbeitbare Nachricht ist keine beschädigte Nachricht und auch keine ungültige Anforderung.|  
 |Richtlinienmodul|Eine Zertifikatdienstkomponente, die bestimmt, ob eine Zertifikatanforderung automatisch genehmigt, abgelehnt oder als ausstehend markiert werden soll.|  
-|Richtlinienbasierte Verwaltung|Eine Reihe von integrierten Funktionen, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgeben. Mit der richtlinienbasierten Verwaltung kann ein Datenbankadministrator den gewünschten Status des Systems deklarieren und das System auf Kompatibilität mit diesem Status prüfen.|  
+|Richtlinienbasierte Verwaltung|Eine Reihe von integrierten Funktionen, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgeben. Mit der richtlinienbasierten Verwaltung kann ein Datenbankadministrator den gewünschten Status des Systems deklarieren und das System auf Konformität mit diesem Status prüfen.|  
 |Poller|Eine Komponente oder Schnittstelle, die den Status anderer Komponenten überwacht. Hierzu ruft der Poller immer wieder den aktuellen Status von der anderen Komponente ab.|  
 |Abrufen|Der Prozess, bei dem der Status jedes Geräts in einem Satz in regelmäßigen Abständen bestimmt wird, damit das aktive Programm die von jedem Gerät generierten Ereignisse verarbeiten kann, etwa ob eine Maustaste gedrückt wurde oder ob an einem seriellen Anschluss neue Daten verfügbar sind. Dieser Prozess unterscheidet sich von der ereignisgesteuerten Verarbeitung, bei der das Betriebssystem ein Programm oder eine Routine mithilfe eines Interrupts oder einer Meldung auf das Vorhandensein eines Ereignisses hinweist, statt jedes Gerät einzeln überprüfen zu müssen.|  
 |Abrufabfrage|Eine SINGLETON-Abfrage, die einen Wert zurückgibt, mit dessen Hilfe Analysis Services bestimmen kann, ob an Tabellen oder anderen relationalen Objekten Änderungen vorgenommen wurden.|  
@@ -1178,12 +1178,12 @@ ms.technology:
 |Präfixlänge|Die Anzahl der Präfixzeichen vor jedem Nichtzeichenfeld in einer BCP-Datendatei im systemeigenen Format.|  
 |Vorwissen|Das minimale Wissen, das ein Zielanbieter für die Verarbeitung einer Änderung oder eines Änderungsbatches benötigt.|  
 |Darstellungsmodell|Ein Datenmodell, bei dem Daten von mehreren Entitäten in der Datenzugriffsebene aggregiert werden. Es wird verwendet, um zu vermeiden, dass eine Entität direkt für das Clientprojekt verfügbar ist.|  
-|Primäre Datenbank|Eine Datenbank mit Lese-/Schreibzugriff, die die aktiven Daten einer Anwendung enthält.|  
+|primäre Datenbank|Eine Datenbank mit Lese-/Schreibzugriff, die die aktiven Daten einer Anwendung enthält.|  
 |Primäre Dimensionstabelle|Bei einem Schneeflockenschema in einem Data Warehouse eine Dimensionstabelle, die direkt mit der Faktentabelle in Beziehung steht und normalerweise mit dieser verknüpft ist.|  
 |Primärer DPM-Server|Ein DPM-Server, der Datei- oder Anwendungsdatenquellen schützt.|  
 |Primärschlüssel|Mindestens ein Feld, mit dem jeder Datensatz in einer Tabelle eindeutig identifiziert werden kann. So wie ein Nummernschild ein Auto identifiziert, identifiziert der Primärschlüssel einen Datensatz eindeutig.|  
 |Primärer Schutz|Ein Typ des Schutzes, bei dem Daten auf dem geschützten Server direkt durch einen primären DPM-Server geschützt werden.|  
-|Primärer Server|In einer Protokollversandkonfiguration die Serverinstanz, in der sich die primäre Datenbank befindet.|  
+|primären Servers|In einer Protokollversandkonfiguration die Serverinstanz, in der sich die primäre Datenbank befindet.|  
 |Primäre Tabelle|Die "1"-Seite von zwei verknüpften Tabellen in einer 1:n-Beziehung. Eine primäre Tabelle sollte über einen Primärschlüssel verfügen, und jeder Datensatz sollte eindeutig sein.|  
 |Prinzipaldatenbank|Bei der Datenbankspiegelung eine Datenbank mit Lese-/Schreibzugriff, deren Transaktionsprotokoll fortlaufend an den Spiegelserver gesendet wird, der das Protokoll in der Spiegeldatenbank wiederherstellt.|  
 |Prinzipalserver|Bei der Datenbankspiegelung der Partner, dessen Datenbank derzeit die Prinzipaldatenbank ist.|  
@@ -1191,18 +1191,18 @@ ms.technology:
 |Privater Schlüssel|Die geheime Hälfte eines kryptografischen Schlüsselpaars, das mit einem Algorithmus für öffentliche Schlüssel verwendet wird. Private Schlüssel werden in der Regel verwendet, um einen symmetrischen Sitzungsschlüssel zu entschlüsseln, Daten digital zu signieren oder mit dem entsprechenden öffentlichen Schlüssel verschlüsselte Daten zu entschlüsseln.|  
 |Proaktives Zwischenspeichern|Ein System, das das Veralten von Daten in einem Cube verwaltet und mit dem Objekte in einem MOLAP-Speicher automatisch aktualisiert und im Cache verarbeitet werden, während Abfragen an einen ROLAP-Speicher umgeleitet werden.|  
 |Prozedurcache|Der Teil des SQL Server-Arbeitsspeicherpools, der zum Speichern von Ausführungsplänen für Transact-SQL-Batches, gespeicherte Prozeduren und Trigger verwendet wird.|  
-|Profilvorlage|Die zentrale Komponente aller CLM-Verwaltungsaktivitäten (Certificate Lifecycle Manager). Die Profilvorlage stellt eine einzelne Verwaltungseinheit, die enthält alle Informationen, die erforderlich sind, um mehrere Zertifikate zu verwalten, die unter Umständen von einer Benutzercommunity während des Lebenszyklus des Zertifikats erforderlich sind. Dies gilt auch für Informationen zum endgültigen Speicherort dieser Zertifikate. Diese können softwarebasiert (Speicherung auf dem lokalen Computer) oder hardwarebasiert (Speicherung auf einer Smartcard) sein. Eine Profilvorlage kann nicht sowohl softwarebasierte als auch smartcardbasierte Zertifikate enthalten.|  
+|Profilvorlage|Die zentrale Komponente aller CLM-Verwaltungsaktivitäten (Certificate Lifecycle Manager). Die Profil Vorlage stellt eine einzelne Verwaltungseinheit bereit, die alle Informationen enthält, die für die Verwaltung mehrerer Zertifikate erforderlich sind, die während des gesamten Lebenszyklus des Zertifikats von einer Benutzer Community benötigt werden. Dies gilt auch für Informationen zum endgültigen Speicherort dieser Zertifikate. Diese können softwarebasiert (Speicherung auf dem lokalen Computer) oder hardwarebasiert (Speicherung auf einer Smartcard) sein. Eine Profilvorlage kann nicht sowohl softwarebasierte als auch smartcardbasierte Zertifikate enthalten.|  
 |Gewinndiagramm|Ein Diagramm, in dem die theoretisch mögliche Gewinnsteigerung dargestellt wird, die sich aus der Verwendung verschiedener Datenmodelle ergibt.|  
 |Programmierbar|Die Fähigkeit, Anweisungen zum Ausführen eines Tasks oder eines Vorgangs zu akzeptieren. Programmierbarkeit ist ein Merkmal von Computern.|  
 |Eigenschaftenseite|Ein Dialogfeld, das Informationen über ein Objekt in der Schnittstelle anzeigt.|  
-|Eigenschaft|Attribut oder Merkmal eines Objekts, das verwendet wird, um dessen Status, Darstellung oder Wert zu definieren.|  
+|property|Attribut oder Merkmal eines Objekts, das verwendet wird, um dessen Status, Darstellung oder Wert zu definieren.|  
 |Eigenschaftenzuordnung|Eine Zuordnung zwischen einer Variablen und einer Eigenschaft eines Paketelements.|  
 |Eigenschaftenseite|Eine Gruppierung von Eigenschaften, die als Seite im Registerkartenformat eines Eigenschaftenblatts dargestellt werden.|  
 |Geschützter Computer|Ein Computer mit Datenquellen, bei denen es sich um Schutzgruppenelemente handelt.|  
 |Geschützter Member|Eine Datenquelle innerhalb einer Schutzgruppe.|  
-|Protokoll|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
-|Provider|Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
-|Provider|Eine Softwarekomponente, die einem Replikat ermöglicht, seine Daten mit anderen Replikaten zu synchronisieren.|  
+|protocol|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
+|Anbieter|Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
+|Anbieter|Eine Softwarekomponente, die einem Replikat ermöglicht, seine Daten mit anderen Replikaten zu synchronisieren.|  
 |Anbieterobjekt|Ein Objekt, das Teil eines Datenanbieters ist, z. B. Oracle-Anbieter für SQL Server.|  
 |NEAR-Suche|Eine Volltextabfrage, die nach denjenigen Vorkommen sucht, in denen sich die angegebenen Wörter nah beieinander befinden.|  
 |Proxykonto|Ein Konto, mit dem zusätzliche Berechtigungen für bestimmte Aktionen denjenigen Benutzern bereitgestellt werden, die nicht über solche Berechtigungen verfügen, aber diese Aktionen ausführen müssen.|  
@@ -1212,7 +1212,7 @@ ms.technology:
 |Veröffentlichungsdatenbank|Eine Datenbank auf dem Verleger, in der Daten und Datenbankobjekte für die Replikation markiert sind und an Abonnenten weitergegeben werden.|  
 |Beibehaltungsdauer der Veröffentlichung|Bei der Mergereplikation die Angabe, wie lange ein Abonnement unsynchronisiert bleiben kann.|  
 |Veröffentlichte Daten|Daten auf dem Verleger, die repliziert wurden.|  
-|Verleger|Ein Server, der Daten zur Replikation für andere Server verfügbar macht. Ein Verleger erkennt zudem geänderte Daten und verwaltet Informationen zu allen Veröffentlichungen am Standort.|  
+|Herausgeber|Ein Server, der Daten zur Replikation für andere Server verfügbar macht. Ein Verleger erkennt zudem geänderte Daten und verwaltet Informationen zu allen Veröffentlichungen am Standort.|  
 |Verlegerdatenbank|Ein Server, der Daten zur Replikation für andere Server verfügbar macht. Ein Verleger erkennt zudem geänderte Daten und verwaltet Informationen zu allen Veröffentlichungen am Standort.|  
 |Verlegerserver|Ein Server, auf dem eine Instanz von Analysis Services ausgeführt wird und auf dem der Quellcube für mindestens einen verknüpften Cube gespeichert ist.|  
 |Veröffentlichungstabelle|Die Tabelle auf dem Verleger, in der Daten für die Replikation markiert wurden und die Bestandteil einer Veröffentlichung ist.|  
@@ -1220,7 +1220,7 @@ ms.technology:
 |Pullreplikation|Eine Replikation, die am Ziel aufgerufen wird.|  
 |Pullabonnement|Ein Abonnement, das auf dem Abonnenten erstellt und verwaltet wird. Der Verteilungs-Agent oder der Merge-Agent für das Abonnement wird auf dem Abonnenten ausgeführt.|  
 |Reine Protokollsicherung|Eine Sicherung, die nur das Transaktionsprotokoll für ein Intervall ohne Massenänderungen enthält.|  
-|Pushabonnement|Der Prozess, bei dem Daten an einen Netzwerkserver gesendet werden.|  
+|push|Der Prozess, bei dem Daten an einen Netzwerkserver gesendet werden.|  
 |Pushreplikation|Eine Replikation, die an der Quelle aufgerufen wird.|  
 |Pushabonnement|Ein Abonnement, das auf dem Verleger erstellt und verwaltet wird.|  
 |Qualifizierte Komponente|Eine Methode, bei der eine Komponente in einer MSI-Datenbank indirekt durch ein Paar aus Komponentenkategorie-GUID und Zeichenfolgenqualifizierer identifiziert wird statt direkt anhand des Komponentenbezeichners.|  
@@ -1258,7 +1258,7 @@ ms.technology:
 |RDL|Ein Satz von Anweisungen, die Layout und Abfrageinformationen eines Berichts beschreiben. RDL besteht aus XML-Elementen, die einer für Reporting Services erstellten XML-Grammatik entsprechen.|  
 |RDL-Sandkasten|Eine Funktion, mit der Sie bestimmte Typen der Ressourcenverwendung von einzelnen Mandanten in einem Szenario erkennen und einschränken können, in dem mehrere Mandanten eine einzelne Webfarm von Berichtsservern gemeinsam nutzen.|  
 |Recordset|Eine Datenstruktur, die aus einer Gruppe von Datenbankdatensätzen besteht. Diese kann aus einer Basistabelle oder aus einer Abfrage an die Tabelle stammen.|  
-|Wiederherstellen|In einen stabilen Zustand zurückversetzen. Ein Computerbenutzer kann verlorene oder beschädigte Daten mit einem Programm wiederherstellen, um eventuelle Restinformationen im Speicher zu suchen und zu retten. Eine Datenbank kann wiederhergestellt werden, indem ihre Integrität wiederhergestellt wird, nachdem sie durch ein Problem beschädigt wurde, etwa durch das nicht ordnungsgemäße Beenden des Datenbankverwaltungsprogramms.|  
+|recover|In einen stabilen Zustand zurückversetzen. Ein Computerbenutzer kann verlorene oder beschädigte Daten mit einem Programm wiederherstellen, um eventuelle Restinformationen im Speicher zu suchen und zu retten. Eine Datenbank kann wiederhergestellt werden, indem ihre Integrität wiederhergestellt wird, nachdem sie durch ein Problem beschädigt wurde, etwa durch das nicht ordnungsgemäße Beenden des Datenbankverwaltungsprogramms.|  
 |recovery|Eine Phase beim Starten der Datenbank, in der ein transaktionskonsistenter Zustand der Datenbank hergestellt wird. Die Wiederherstellung kann ein Rollforward aller Transaktionen in den Protokolldatensätzen (Rollforwardphase) und ein Rollback von Transaktionen, für die noch kein Commit ausgeführt wurde, (Rollbackphase) einschließen, abhängig davon, wie die Datenbank heruntergefahren wurde.|  
 |Wiederherstellungsverzweigung|Ein Bereich von LSNs mit demselben Wiederherstellungsverzweigungs-GUID. Eine neue Wiederherstellungsverzweigung entsteht immer dann, wenn eine Datenbank erstellt wird oder mit RESTORE WITH RECOVERY eine Wiederherstellungsverzweigung generiert wird. Ein Wiederherstellungspfad mit mehreren Verzweigungen, der LSN-Bereiche einschließt, die zwei oder mehr Wiederherstellungs-Verzweigungspunkte abdecken, ist möglich.|  
 |Wiederherstellungs-Verzweigungspunkt|Der Punkt (LSN, GUID), an dem jedes Mal eine neue Wiederherstellungsverzweigung gestartet wird, wenn RESTORE WITH RECOVERY ausgeführt wird. Jeder Wiederherstellungs-Verzweigungspunkt legt für seine Wiederherstellungsverzweigungen eine Beziehung zwischen über- und untergeordneten Elementen fest. Wenn Sie eine Datenbank bis zu einem früheren Zeitpunkt wiederherstellen und die Datenbank ab diesem Punkt verwenden, beginnt der Wiederherstellungs-Verzweigungspunkt einen neuen Wiederherstellungspfad.|  
@@ -1278,8 +1278,8 @@ ms.technology:
 |Schlüssel, auf den verwiesen wird|Ein Primärschlüssel oder eindeutiger Schlüssel, auf den ein Fremdschlüssel verweist.|  
 |Referenzschlüssel|Ein Schlüssel in einer Datenbanktabelle, die von einer anderen Tabelle stammt (auch bekannt als "referenzierte Tabelle"), dessen Werte in der referenzierten Tabelle mit dem Primärschlüssel (PS) oder eindeutigen Schlüssel übereinstimmen.|  
 |Reflexive Beziehung|Eine Beziehung zwischen einer Spalte oder einer Kombination aus Spalten in einer Tabelle und anderen Spalten in derselben Tabelle.|  
-|Bereich|Ein Datencontainer in einem Cache, in dem alle zwischengespeicherten Objekte auf einem einzelnen Cachehost zusammengefasst sind. Cachebereiche ermöglichen mithilfe beschreibender Zeichenfolgen (so genannter Tags) die Suche nach allen zwischengespeicherten Objekten im Bereich.|  
-|Bereich|Eine Auflistung von 128 Blattebenenseiten in logischer Reihenfolge in einer einzelnen Datei. Wird verwendet, um Bereiche einer Datei zu identifizieren, die fragmentiert sind.|  
+|region|Ein Datencontainer in einem Cache, in dem alle zwischengespeicherten Objekte auf einem einzelnen Cachehost zusammengefasst sind. Cachebereiche ermöglichen mithilfe beschreibender Zeichenfolgen (so genannter Tags) die Suche nach allen zwischengespeicherten Objekten im Bereich.|  
+|region|Eine Auflistung von 128 Blattebenenseiten in logischer Reihenfolge in einer einzelnen Datei. Wird verwendet, um Bereiche einer Datei zu identifizieren, die fragmentiert sind.|  
 |Registrierungsmodell|Eine definierte Methode zum Senden und Genehmigen von Registrierungsanforderungen. Ein Unternehmen wählt im Allgemeinen ein Registrierungsmodell aus und ändert seine Verwaltungsrichtlinien entsprechend.|  
 |Regression|Der statistische Prozess, bei dem auf Grundlage anderer Attribute im Dataset mindestens eine kontinuierliche Variable vorausgesagt wird.|  
 |Regressor|Eine Eingabevariable, die eine lineare Beziehung zur Ausgabevariablen hat.|  
@@ -1340,16 +1340,16 @@ ms.technology:
 |Repository-SQL-Schema|Ein Satz von Standardtabellen, anhand dessen die Repository-Engine alle Objekte, Beziehungen und Auflistungen im Repository verwaltet.|  
 |Repository Type Information Model|Ein Kernobjektmodell, das Repositorytypdefinitionen für Meta Data Services darstellt.|  
 |Neuverleger|Ein Abonnent, der Daten veröffentlicht, die er von einem Verleger erhalten hat.|  
-|Reserviertes Zeichen|Ein Tastaturzeichen, das für ein Programm eine besondere Bedeutung hat und folglich im Allgemeinen nicht für die Zuweisung von Namen zu Dateien, Dokumenten und anderen von Benutzern generierten Tools (z. B. Makros) verwendet werden kann. Zeichen häufig für bestimmte Zwecke das Sternchen (*) enthalten reserviert Schrägstrich (/), umgekehrter Schrägstrich (\\), Fragezeichen (?) und senkrechter Strich (&#124;).|  
+|Reserviertes Zeichen|Ein Tastaturzeichen, das für ein Programm eine besondere Bedeutung hat und folglich im Allgemeinen nicht für die Zuweisung von Namen zu Dateien, Dokumenten und anderen von Benutzern generierten Tools (z. B. Makros) verwendet werden kann. Zeichen, die häufig für besondere Verwendungen reserviert sind, umfassen das Sternchen (*), den Schrägstrich (\\/), den umgekehrten Schrägstrich (), das Fragezeichen (?) und den senkrechten Strich (&#124;).|  
 |Auflösungsstrategie|Eine Reihe von Kriterien, die die Repository-Engine beim Auswählen eines Objekts sequenziell auswertet, wobei mehrere Versionen vorhanden sind und die Versionsinformationen im Programm, das den Aufruf gestartet hat, nicht angegeben sind.|  
 |resource|Eine spezielle Variable, die einen Verweis auf eine Datenbankverbindung oder eine Anweisung enthält.|  
 |resource|Ein beliebiges Element in einer Berichtsserver-Datenbank, bei dem es sich nicht um einen Bericht, einen Ordner oder ein freigegebenes Datenquellenelement handelt.|  
 |Ressourcendaten|Ein Typ von Daten, die durch freigegebene und gleichzeitig gelesene und geschriebene Vorgänge gekennzeichnet sind und auf die viele Transaktionen zugreifen. Beispiele für Ressourcendaten sind Benutzerkonten und Auktionselemente.|  
 |Ressourcenkontrolle|Eine Funktion in SQL Server 2008, mit der Benutzer die SQL Server-Arbeitsauslastung und -Ressourcen verwalten können, indem sie Grenzen für den Ressourcenverbrauch durch eingehende Anforderungen festlegen.|  
-|Wiederherstellungsprozess|Ein aus mehreren Phasen bestehender Prozess, bei dem alle Daten und Protokollseiten aus einer angegebenen Sicherung in eine angegebene Datenbank kopiert werden (Datenkopierphase) und ein Rollforward für alle Transaktionen ausgeführt wird, die in der Sicherung protokolliert sind (Rollforwardphase). Zu diesem Zeitpunkt wird bei einer Wiederherstellung standardmäßig ein Rollback für alle unvollständigen Transaktionen ausgeführt (Rollbackphase). Hierdurch wird die Wiederherstellung der Datenbank abgeschlossen, und die Datenbank wird für Benutzer verfügbar gemacht.|  
+|Wiederherstellen|Ein aus mehreren Phasen bestehender Prozess, bei dem alle Daten und Protokollseiten aus einer angegebenen Sicherung in eine angegebene Datenbank kopiert werden (Datenkopierphase) und ein Rollforward für alle Transaktionen ausgeführt wird, die in der Sicherung protokolliert sind (Rollforwardphase). Zu diesem Zeitpunkt wird bei einer Wiederherstellung standardmäßig ein Rollback für alle unvollständigen Transaktionen ausgeführt (Rollbackphase). Hierdurch wird die Wiederherstellung der Datenbank abgeschlossen, und die Datenbank wird für Benutzer verfügbar gemacht.|  
 |Wiederherstellungssequenz|Eine Sequenz von mindestens einem Wiederherstellungsbefehl, mit der in der Regel der Inhalt der wiederherzustellenden Datenbank bzw. der wiederherzustellenden Dateien oder Seiten initialisiert wird (Datenkopierphase), ein Rollforward für protokollierte Transaktionen ausgeführt wird (Rollforwardphase) und ein Rollback für Transaktionen ohne Commit ausgeführt wird (Rollbackphase).|  
 |Resultset|Der Satz von Datensätzen, der sich durch das Ausführen einer Abfrage oder das Anwenden eines Filters ergibt.|  
-|Ergebnisse|Der Satz von Datensätzen, der sich durch das Ausführen einer Abfrage oder das Anwenden eines Filters ergibt.|  
+|results|Der Satz von Datensätzen, der sich durch das Ausführen einer Abfrage oder das Anwenden eines Filters ergibt.|  
 |Ergebnisbereich|Ein Bereich, der Details zu einem in einem anderen Teil der Benutzeroberfläche ausgewählten Element anzeigt. In Microsoft Management Console (MMC) ist der Detailbereich z. B. der rechte Bereich, der Details für das ausgewählte Element in der Konsolenstruktur anzeigt.|  
 |Zurücknahmeereignis|Eine interne Ereignisart, die verwendet wird, um ein vorhandenes Einfügeereignis durch das Ändern der Endzeit des Ereignisses zu ändern.|  
 |Wiederverwendbares Lesezeichen|Ein Lesezeichen, das aus einem Rowset einer bestimmten Tabelle entnommen und für ein anderes Rowset derselben Tabelle verwendet werden kann, um eine Positionierung in einer entsprechenden Zeile zu erreichen.|  
@@ -1382,7 +1382,7 @@ ms.technology:
 |rsconfig (Hilfsprogramm)|Ein Tool zur Verwaltung von Serververbindungen.|  
 |rsconfig.exe|Ein Tool zur Verwaltung von Serververbindungen.|  
 |Regelauslösung|Der Prozess, durch den eine der in der Anwendungsdefinitionsdatei definierten Anwendungsregeln (Ereignisverlaufsregeln, Abonnementereignisregeln und Regeln für geplante Abonnements) ausgeführt wird.|  
-|Endlosabfrage|Eine Abfrage mit einer zu langen Ausführungszeit, die zu einem blockierenden Problem führen kann. Endlosabfragen verwenden Sie ein Timeout Abfrage- oder Sperrtimeout in der Regel nicht.|  
+|Endlosabfrage|Eine Abfrage mit einer zu langen Ausführungszeit, die zu einem blockierenden Problem führen kann. Runaway-Abfragen verwenden normalerweise kein Abfrage-oder Sperr Timeout.|  
 |Laufzeitfehler|Ein Softwarefehler, der auftritt, während ein Programm ausgeführt wird, und von einem Compiler oder einem anderem Überwachungsprogramm erkannt wird.|  
 |Sicherer Code|Code, der von der Common Language Runtime-Umgebung und nicht direkt vom Betriebssystem ausgeführt wird. Verwaltete Codeanwendungen umfassen Common Language Runtime-Dienste wie Garbage Collection, Laufzeittypüberprüfung und Sicherheitsunterstützung usw. Diese Dienste stellen ein einheitliches plattform- und sprachunabhängiges Verhalten von Anwendungen mit verwaltetem Code bereit.|  
 |Sampling|Ein statistischer Prozess, bei dem durch Schlussfolgerungen Kenntnisse über eine Auffüllung oder ein Dataset als Ganzes erlangt werden, indem ein Teil der Auffüllung oder des Datasets beobachtet oder analysiert wird.|  
@@ -1408,7 +1408,7 @@ ms.technology:
 |Sekundäre Datenbank|Eine schreibgeschützte Kopie einer primären Datenbank.|  
 |Sekundärer DPM-Server|Ein DPM-Server, der zusätzlich zu Datei- und Anwendungsdaten mindestens einen primären DPM-Server schützt.|  
 |Sekundärer Schutz|Ein Schutztyp, bei dem Daten auf dem geschützten Server durch einen primären DPM-Server und das Replikat auf dem primären DPM-Server durch einen sekundären DPM-Server geschützt wird.|  
-|Sekundärer Server|In einer Protokollversandkonfiguration die Serverinstanz, die die sekundäre Datenbank enthält. Der sekundäre Server kopiert in regelmäßigen Abständen die neueste Protokollsicherung in der primären Datenbank und stellt das Protokoll in der sekundären Datenbank wieder her. Der sekundäre Server ist ein betriebsbereiter Standbyserver.|  
+|sekundären Servers|In einer Protokollversandkonfiguration die Serverinstanz, die die sekundäre Datenbank enthält. Der sekundäre Server kopiert in regelmäßigen Abständen die neueste Protokollsicherung in der primären Datenbank und stellt das Protokoll in der sekundären Datenbank wieder her. Der sekundäre Server ist ein betriebsbereiter Standbyserver.|  
 |Authentifizierungskomponente|Eine Komponente für die Generierung und Überprüfung von Einmalkennwörtern zur Benutzerauthentifizierung.|  
 |Sicherungsfähig|Entitäten, die mit Berechtigungen gesichert werden können. Die wichtigsten sicherungsfähigen Elemente sind Server und Datenbanken, diskrete Berechtigungen können jedoch auf einer viel differenzierteren Ebene festgelegt werden.|  
 |Secure Sockets Layer|Das Protokoll, bei dem die Sicherheit der Datenkommunikation durch den Einsatz einer Kombination von Datenverschlüsselung, digitalen Zertifikaten und Kryptografie mit öffentlichen Schlüsseln verbessert wird. SSL ermöglicht die Authentifizierung und erhöht die Integrität und den Schutz von Daten in Netzwerken. SSL stellt keine Autorisierung oder Nichtabstreitbarkeit bereit.|  
@@ -1440,9 +1440,9 @@ ms.technology:
 |Dienstprinzipal|Ein global eindeutiger Name, der einer Dienstentität an einem Endpunktknoten innerhalb einer Kerberos-Peer-zu-Peer-Kommunikation zugeordnet ist.|  
 |Dienstprinzipalname|Der Name, über den ein Client eine Instanz eines Diensts eindeutig identifiziert. Er basiert normalerweise auf dem DNS-Namen des Hosts. Der Dienstprinzipalname (service principal name, SPN) wird bei der gegenseitigen Authentifizierung zwischen dem Client und dem Server, der einen bestimmten Dienst hostet, verwendet.|  
 |Hilfsprogramm|Ein Programm, das die Service Broker-Funktionalität verwendet.  Ein Hilfsprogramm kann eine gespeicherte Transact-SQL-Prozedur, eine gespeicherte SQLCLR-Prozedur oder ein externes Programm sein.|  
-|Sitzung|Ein Zeitraum, in dem eine Verbindung aktiv ist und Kommunikation stattfinden kann. Bei der Datenkommunikation zwischen funktionalen Einheiten bezieht sich der Begriff Sitzung auch auf alle Aktivitäten während der Einrichtung, Wartung und Freigabe.|  
-|Sitzungszustand|In ASP.NET ein variabler Speicher, der auf dem Server für den aktuellen Benutzer erstellt wird. Für jeden Benutzer wird ein eigener Sitzungszustand auf dem Server beibehalten. Im Sitzungszustand werden i. d. R. benutzerspezifische Informationen zwischen Postbacks gespeichert.|  
-|Menge|Eine Gruppierung von Dimensionselementen oder Elementen aus einer Datenquelle, die als einzelne Einheit benannt und behandelt werden und auf die verwiesen werden kann. Außerdem können sie mehrmals wiederverwendet werden.|  
+|session|Ein Zeitraum, in dem eine Verbindung aktiv ist und Kommunikation stattfinden kann. Bei der Datenkommunikation zwischen funktionalen Einheiten bezieht sich der Begriff Sitzung auch auf alle Aktivitäten während der Einrichtung, Wartung und Freigabe.|  
+|Sitzungsstatus|In ASP.NET ein variabler Speicher, der auf dem Server für den aktuellen Benutzer erstellt wird. Für jeden Benutzer wird ein eigener Sitzungszustand auf dem Server beibehalten. Im Sitzungszustand werden i. d. R. benutzerspezifische Informationen zwischen Postbacks gespeichert.|  
+|set|Eine Gruppierung von Dimensionselementen oder Elementen aus einer Datenquelle, die als einzelne Einheit benannt und behandelt werden und auf die verwiesen werden kann. Außerdem können sie mehrmals wiederverwendet werden.|  
 |Setup-Initialisierungsdatei|Eine Textdatei, die das INI-Dateiformat von Windows verwendet und in der Konfigurationsinformationen gespeichert werden. Mithilfe dieser Datei kann SQL Server installiert werden, ohne dass ein Benutzer anwesend sein muss, um auf bestimmte Eingabeaufforderungen des Setupprogramms zu reagieren.|  
 |Setupreparatur|Ein Fehlerberichterstellungsprozess, der während des Setups eines Programms ausgeführt werden kann, wenn ein Problem auftritt.|  
 |Schattenkopie|Ein statisches Bild eines Satzes von Daten, z. B. die als Ergebnis einer Abfrage angezeigten Datensätze.|  
@@ -1464,20 +1464,20 @@ ms.technology:
 |Single-Byte-Zeichensatz|Eine Zeichencodierung, in der jedes Zeichen durch 1 Byte dargestellt wird. Single-Byte-Zeichensätze sind mathematisch auf 256 Zeichen beschränkt.|  
 |Einfache Genauigkeit|Eine Gleitkommazahl, die die geringste Genauigkeit von zwei oder mehr Optionen hat, die im Allgemeinen von einer Programmiersprache angeboten werden (z. B. einfache Genauigkeit im Vergleich zu doppelter Genauigkeit).|  
 |Einzelbenutzermodus|In diesem Modus kann nur ein einziger Benutzer auf eine Ressource zugreifen.|  
-|Senke|Ein Gerät oder ein Teil eines Geräts, das etwas von einem anderen Gerät empfängt.|  
+|sink|Ein Gerät oder ein Teil eines Geräts, das etwas von einem anderen Gerät empfängt.|  
 |SKU|Ein eindeutiger Bezeichner für ein Produkt, der normalerweise alphanumerisch ist. Mithilfe der SKU kann ein Produkt zu Inventarzwecken nachverfolgt werden. Eine SKU kann jedem Artikel zugeordnet werden, der gekauft werden kann. So könnte etwa ein Hemd in Stil 3726 und Größe 8 die SKU 3726-8 haben.|  
 |sleep|Das Anhalten eines Vorgangs, ohne dass dieser beendet wird.|  
 |Slice|Eine Teilmenge der Daten in einem Cube, die durch die Beschränkung mindestens einer Dimension durch Elemente der entsprechenden Dimension angegeben wird.|  
 |Slicer|Eine Funktion, die per Mausklick aktivierbare Filtersteuerelemente bereitstellt, die das einfache Beschränken der Anzeigedaten eines Datasets ermöglichen.|  
-|Gleitendes Fenster|Ein Fenster einer festen Länge L, der sich entlang einer Zeitachse entsprechend den Ereignissen des Datenstroms bewegt. Ein neues Fenster wird mit jedem Ereignis auf der Zeitachse erstellt und Startzeit des Ereignisses ab.|  
+|Gleitendes Fenster|Ein Fenster mit fester Länge L, das sich entlang einer Zeitachse entsprechend den Ereignissen des Streams bewegt. Bei jedem Ereignis auf der Zeitachse wird ein neues Fenster erstellt, beginnend mit der Startzeit des Ereignisses.|  
 |Slipstream|Das Integrieren von Updates, Patches oder Service Packs in die grundlegenden Installationsdateien der ursprünglichen Software. Hierdurch wird es möglich, die aktualisierte Software mithilfe der resultierenden Dateien in einem einzigen Schritt zu installieren.|  
 |Slipstreaminstallation|Ein Installationstyp, bei dem die grundlegenden Installationsdateien für ein Betriebssystem oder Programm mit den zugehörigen Service Packs, Updates oder Patches eingeschlossen sind, sodass diese Komponenten in einem einzigen Schritt installiert werden können.|  
-|Smartcard|Ein Kunststoff (kreditkartengroßes oder kleiner) Gerät mit eingebettetem Mikroprozessor und einer kleinen Menge an Speicherplatz, die mit einem Zugriffscode, verwendet wird, um zertifikatbasierte Authentifizierung zu aktivieren. Auf Smartcards werden Zertifikate, öffentliche und private Schlüssel, Kennwörter und andere Arten von persönlichen Informationen sicher gespeichert.|  
+|Smartcard|Ein mittelgroßes Gerät (Kreditkartengröße oder kleiner) mit einem eingebetteten Mikroprozessor und einer kleinen Menge an Speicherplatz, der mit einem Zugriffs Code zum Aktivieren der Zertifikat basierten Authentifizierung verwendet wird. Auf Smartcards werden Zertifikate, öffentliche und private Schlüssel, Kennwörter und andere Arten von persönlichen Informationen sicher gespeichert.|  
 |Smart Card Personalization Control|Ein ActiveX-Steuerelement, das alle Verwaltungsaktivitäten für CLM-Smartcardanwendungen (Certificate Lifecycle Manager) auf einem Clientcomputer ausführt.|  
 |Smartcardprofil|Ein CLM-Profil (Certificate Lifecycle Manager), das bei der Ausführung einer Anforderung mit einer Profilvorlage erstellt wird, die nur auf Smartcards basierende Zertifikatvorlagen einschließt.|  
 |Smartcardleser|Ein Gerät, das in Computer eingebaut ist, um die Verwendung von Smartcards für verbesserte Sicherheitsfunktionen zu ermöglichen.|  
 |Smart Card Self Service Control|Software, die auf einem Clientcomputer installiert ist und Endbenutzern und Administratoren die Verwaltung von Smartcards ermöglicht, indem eine Verbindung vom Clientcomputer zur Smartcard bereitgestellt wird.|  
-|Aufhebung der Smartcardsperre|Aktion zum Binden einer Smartcard mit Administratoranmeldeinformationen, um die persönliche Identifikationsnummer (PIN) zurückgesetzt. versuchen Sie Zähler.|  
+|Aufhebung der Smartcardsperre|Die Aktion zum Binden einer Smartcard mit Administrator Anmelde Informationen zum Zurücksetzen des PIN-Versuchs (Personal Identification Number).|  
 |SMO|Eine Anwendungsprogrammierschnittstelle, die die Integration der SQL Server-Verwaltung in eine beliebige COM- oder OLE-Automatisierungsanwendung unterstützt.|  
 |SMTP|Ein TCP/IP-Protokoll, das den Austausch von E-Mails zwischen Message Transfer Agents (MTAs) steuert.|  
 |Snap-In|Ein Typ von Tool, das Sie einer von Microsoft Management Console (MMC) unterstützten Konsole hinzufügen können. Ein eigenständiges Snap-In kann allein hinzugefügt werden, während ein Erweiterungs-Snap-In nur hinzugefügt werden kann, um die Funktion eines anderen Snap-Ins zu erweitern.|  
@@ -1495,9 +1495,9 @@ ms.technology:
 |Projektmappen-Explorer|Eine Komponente von Microsoft SQL Server Management Studio, mit der Sie Elemente anzeigen und verwalten sowie Aufgaben der Elementverwaltung in einer Projektmappe oder einem Projekt ausführen können.|  
 |Lösungsreihenfolge|Die Reihenfolge der Auswertung (von der obersten zur niedrigsten Lösungsreihenfolge) und Berechnung (von der niedrigsten zur höchsten Lösungsreihenfolge) für berechnete Elemente, benutzerdefinierte Elemente, benutzerdefinierte Rollupformeln und berechnete Zellen in einem einzelnen Berechnungsdurchlauf in einem mehrdimensionalen Cube.|  
 |Sortierreihenfolge|Eine Art der Anordnung von Daten nach Wert- oder Datentyp. Sie können Daten alphabetisch, numerisch oder nach Datum sortieren. Die Sortierreihenfolge kann aufsteigend (1 bis 9 bzw. A bis Z) oder absteigend (9 bis 1 bzw. Z bis A) sein.|  
-|Quelle|Datenträger, Dateien, Dokumente und andere Auflistungen von Informationen, aus denen Daten abgerufen oder deren Daten verschoben werden können.|  
-|Quelle|Die SSIS-Datenflusskomponente, mit der Daten aus verschiedenen externen Datenquellen für die anderen Komponenten im Datenfluss zur Verfügung gestellt werden.|  
-|Quelle|Ein Synchronisierungsanbieter, der alle Änderungen aufführt und an den Zielanbieter sendet.|  
+|source|Datenträger, Dateien, Dokumente und andere Auflistungen von Informationen, aus denen Daten abgerufen oder deren Daten verschoben werden können.|  
+|source|Die SSIS-Datenflusskomponente, mit der Daten aus verschiedenen externen Datenquellen für die anderen Komponenten im Datenfluss zur Verfügung gestellt werden.|  
+|source|Ein Synchronisierungsanbieter, der alle Änderungen aufführt und an den Zielanbieter sendet.|  
 |Quelladapter|Eine Datenflusskomponente, die Daten aus einem Datenspeicher extrahiert.|  
 |Quellcodeverwaltung|Ein Satz von Funktionen, die einen Mechanismus zum Ein- und Auschecken von Quellcode aus einem zentralen Repository einschließen. Dieser Begriff deutet zudem auf ein Versionskontrollsystem hin, mit dem Dateien im Laufe des Entwicklungslebenszyklus verwaltet werden können. So kann nachverfolgt werden, welche Änderungen zu welchem Zeitpunkt von welchem Benutzer und aus welchem Grund vorgenommen werden.|  
 |Quellcodeverwaltung|Ein Satz von Funktionen, die einen Mechanismus zum Ein- und Auschecken von Quellcode aus einem zentralen Repository einschließen. Dieser Begriff deutet zudem auf ein Versionskontrollsystem hin, mit dem Dateien im Laufe des Entwicklungslebenszyklus verwaltet werden können. So kann nachverfolgt werden, welche Änderungen zu welchem Zeitpunkt von welchem Benutzer und aus welchem Grund vorgenommen werden.|  
@@ -1513,7 +1513,7 @@ ms.technology:
 |Räumliche Daten|Daten, die durch 2D- oder 3D-Bilder dargestellt werden. Räumliche Daten können in geometrische Daten (Daten, die Berechnungen mit euklidischer Geometrie verwenden können) und geografische Daten (Daten, die geografische Standorte und Begrenzungen auf der Erde identifizieren) unterteilt werden.|  
 |SPN|Der Name, über den ein Client eine Instanz eines Diensts eindeutig identifiziert. Er basiert normalerweise auf dem DNS-Namen des Hosts. Der Dienstprinzipalname (service principal name, SPN) wird bei der gegenseitigen Authentifizierung zwischen dem Client und dem Server, der einen bestimmten Dienst hostet, verwendet.|  
 |SQL|Eine gängige Datenbankabfrage- und Programmiersprache, mit deren Hilfe der Zugriff auf Daten in relationalen Datenbanksystemen erfolgt und Daten in diesen Systemen abgefragt, aktualisiert und verwaltet werden.|  
-|SQL-Datenbank|Eine Datenbank, die auf Structured Query Language (SQL) basiert.|  
+|SQL database|Eine Datenbank, die auf Structured Query Language (SQL) basiert.|  
 |SQL-Ausdruck|Eine beliebige Kombination aus Operatoren, Konstanten, Literalwerten, Funktionen und Namen von Tabellen und Feldern, die einen einzelnen Datenwert ergibt.|  
 |SQL Native Client|Eine eigenständige Datenzugriffs-API, die sowohl für OLE DB als auch für ODBC verwendet wird.|  
 |SQL Server|Eine Familie von Verwaltungs- und Analysesystemen für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
@@ -1552,7 +1552,7 @@ ms.technology:
 |Blickpunkte des SQL Server-Hilfsprogramms|Eine Funktion des SQL Server-Hilfsprogramms, die Administratoren durch eine Instanz von SQL Server, die als Steuerungspunkt für das Hilfsprogramm (UCP) dient, eine holistische Sicht der Ressourcenintegrität bereitstellt.|  
 |SQL-Anweisung|Ein SQL- oder Transact-SQL-Befehl wie SELECT oder DELETE, der für Daten eine Aktion ausführt.|  
 |SQL-Ablaufverfolgung|Festgelegte, gespeicherte Transact-SQL-Systemprozeduren zum Erstellen von Ablaufverfolgungen für eine Instanz der SQL Server-Datenbank-Engine.|  
-|SQL Writer|Ein VSS-kompatibler Writer, der von SQL Server bereitgestellt wird und die VSS-Interaktion mit SQL Server behandelt.|  
+|SQL Writer|Ein VSS-konformer Writer, der von SQL Server bereitgestellt wird und die VSS-Interaktion mit SQL Server behandelt.|  
 |SQL Writer-Dienst|Ein Dienst, der Windows-Sicherungsprogrammen erlaubt, SQL Server-Datendateien über das Volumeschattenkopie-Dienst-Framework zu kopieren, während SQL Server ausgeführt wird.|  
 |SQL-92|Die 1992 veröffentlichte Version des SQL-Standards.|  
 |SSAS|Eine Funktion von Microsoft SQL Server, die die analytische Onlineverarbeitung (OLAP) und Data Mining für Business Intelligence-Anwendungen unterstützt. Analysis Services dient zur Organisation von Daten über ein Data Warehouse in Cubes mit im Voraus berechneten Aggregationsdaten, um schnelle Antworten auf komplexe analytische Abfragen bereitzustellen.|  
@@ -1561,7 +1561,7 @@ ms.technology:
 |SSRS|Eine serverbasierte Berichterstellungsumgebung, die eine internetbasierte Berichterstellungsfunktionalität für Unternehmen bereitstellt. Mit dieser können Sie Berichte erstellen, die Inhalte aus einer Vielzahl von Datenquellen abrufen, sowie Berichte in verschiedenen Formaten veröffentlichen und Abonnements und Sicherheit zentral verwalten.|  
 |SSRT|Ein von Endbenutzern verwendetes Tool, das zur Wiederherstellung von DPM-Sicherungen dient und keine Aktionen des DPM-Administrators erfordert.|  
 |Bereitgestellte Daten|Daten, die während des Stagingprozesses in SQL Server Master Data Services in Stagingtabellen importiert werden.|  
-|Staging|Der Prozess, mit dem in SQL Server Master Data Services Daten in Stagingtabellen importiert und dann die bereitgestellten Daten als Batch verarbeitet werden, bevor der Import in die master-Datenbank erfolgt.|  
+|staging|Der Prozess, mit dem in SQL Server Master Data Services Daten in Stagingtabellen importiert und dann die bereitgestellten Daten als Batch verarbeitet werden, bevor der Import in die master-Datenbank erfolgt.|  
 |Stagingprozess|Der Prozess, mit dem in SQL Server Master Data Services Daten in Stagingtabellen importiert und dann die bereitgestellten Daten als Batch verarbeitet werden, bevor der Import in die master-Datenbank erfolgt.|  
 |Stagingwarteschlange|Die Batchtabelle in SQL Server Master Data Services, in der bereitgestellte Datensätze als Batches in die Warteschlange aufgenommen werden, um dann in der Master Data Services-Datenbank verarbeitet zu werden.|  
 |Stagingtabelle|Eine Tabelle in SQL Server Master Data Services, die während des Stagingprozesses mit Geschäftsdaten aufgefüllt wird.|  
@@ -1577,7 +1577,7 @@ ms.technology:
 |statement|Eine kompilierte T-SQL-Abfrage.|  
 |Statischer Cursor|Ein Cursor, der ein Resultset in genau dem Status anzeigt, in dem es sich beim Öffnen des Cursors befand.|  
 |Statischer Zeilenfilter|Ein für alle Replikationstypen verfügbarer Filter, mit dem die Daten eingeschränkt werden können, die basierend auf einer WHERE-Klausel auf einen Abonnenten repliziert werden.|  
-|Wortstammerkennung|Bei der Volltextsuche generiert eine Wortstammerkennung für eine bestimmte Sprache Flexionsformen eines Worts nach den Regeln dieser Sprache. Die Wortstammerkennung ist sprachspezifisch.|  
+|stemmer|Bei der Volltextsuche generiert eine Wortstammerkennung für eine bestimmte Sprache Flexionsformen eines Worts nach den Regeln dieser Sprache. Die Wortstammerkennung ist sprachspezifisch.|  
 |Einzelschritt|Das Ausführen der aktuellen Anweisung und das Wechseln in den Unterbrechungsmodus. Hierzu wird der nächste Prozedurschritt aufgerufen, wenn ein Aufruf für eine weitere Prozedur erreicht wird.|  
 |Verwaltungsportal|Eine Funktion von MDS, die eine zentralisierte Steuerung der Masterdaten bereitstellt, einschließlich Elementen und Hierarchien. Außerdem können Datenmodelladministratoren mithilfe dieser Funktion die Datenqualität sicherstellen, indem sie Datenmodelle entwickeln, überprüfen, verwalten und konsistent auf mehreren Domänen erzwingen.|  
 |Stock Keeping Unit|Ein eindeutiger Bezeichner für ein Produkt, der normalerweise alphanumerisch ist. Mithilfe der SKU kann ein Produkt zu Inventarzwecken nachverfolgt werden. Eine SKU kann jedem Artikel zugeordnet werden, der gekauft werden kann. So könnte etwa ein Hemd in Stil 3726 und Größe 8 die SKU 3726-8 haben.|  
@@ -1593,7 +1593,7 @@ ms.technology:
 |StreamInsight-Ereignisflussdebugger|Ein eigenständiges Tool in der Microsoft StreamInsight-Plattform, das Ereignisflussdebugging und -analyse bereitstellt.|  
 |StreamInsight-Plattform|Die Plattform, die aus dem StreamInsight-Server, dem Ereignisfluss-Debugtool, der Visual Studio-IDE und anderen Komponenten für die Entwicklung komplexer Ereignisverarbeitungsanwendungen besteht.|  
 |StreamInsight-Server|Die Kern-Engine und die Adapterframeworkkomponenten von Microsoft StreamInsight. Der StreamInsight-Server kann verwendet werden, um die einer komplexen Ereignisverarbeitungsanwendung zugeordneten Ereignisdatenstroms zu verarbeiten und zu analysieren.|  
-|String|Eine Gruppe von Zeichen oder Zeichenbytes, die als einzelne Entität behandelt werden. Computerprogramme verwenden Zeichenfolgen, um Daten und Befehle zu speichern und zu senden. Bei den meisten Programmiersprachen wird eine Unterscheidung zwischen Zeichenfolgen (z. B. "2674:gstmn") und numerischen Werten (z. B. "470924") gemacht.|  
+|string|Eine Gruppe von Zeichen oder Zeichenbytes, die als einzelne Entität behandelt werden. Computerprogramme verwenden Zeichenfolgen, um Daten und Befehle zu speichern und zu senden. Bei den meisten Programmiersprachen wird eine Unterscheidung zwischen Zeichenfolgen (z. B. "2674:gstmn") und numerischen Werten (z. B. "470924") gemacht.|  
 |Bereichsstreifen|Horizontale oder vertikale Bereiche, die das Hintergrundmuster des Diagramms in regelmäßigen oder benutzerdefinierten Abständen festlegen. Mithilfe von Bereichsstreifen können Sie die Lesbarkeit für das Suchen nach einzelnen Werten im Diagramm verbessern, Termine hervorheben, die in regelmäßigen Abständen auftreten, oder einen bestimmten Schlüsselbereich hervorheben.|  
 |Bereichsstreifen|Horizontale oder vertikale Bereiche, die das Hintergrundmuster des Diagramms in regelmäßigen oder benutzerdefinierten Abständen festlegen. Mithilfe von Bereichsstreifen können Sie die Lesbarkeit für das Suchen nach einzelnen Werten im Diagramm verbessern, Termine hervorheben, die in regelmäßigen Abständen auftreten, oder einen bestimmten Schlüsselbereich hervorheben.|  
 |Stripesetmedien|Ein Mediensatz, der mehrere Medien verwendet, auf die die einzelnen Sicherungen verteilt werden.|  
@@ -1601,7 +1601,7 @@ ms.technology:
 |Structured Query Language|Eine gängige Datenbankabfrage- und Programmiersprache, mit deren Hilfe der Zugriff auf Daten in relationalen Datenbanksystemen erfolgt und Daten in diesen Systemen abgefragt, aktualisiert und verwaltet werden.|  
 |Unterabfrage|Eine SELECT-Anweisung, die mindestens eine Unterabfrage enthält.|  
 |Unterbericht|Ein in einem anderen Bericht enthaltener Bericht.|  
-|Abonnieren|Das Anfordern von Daten von einem Verleger.|  
+|subscribe|Das Anfordern von Daten von einem Verleger.|  
 |subscriber|In Notification Services die Person oder der Prozess, an die bzw. den Benachrichtigungen übermittelt werden.|  
 |subscriber|Eine Datenbankinstanz, die bei der Replikation replizierte Daten empfängt.|  
 |Abonnentendatenbank|Eine Datenbankinstanz, die bei der Replikation replizierte Daten empfängt.|  
@@ -1645,7 +1645,7 @@ ms.technology:
 |Systemtabellen|Integrierte Tabellen, die den Systemkatalog von SQL Server darstellen.|  
 |Systemvariable|Eine von DTS bereitgestellte Variable.|  
 |Registerkartenseite|Ein Teil eines Registerkartensteuerelements, der aus dem Registerkarten-Benutzeroberflächenelement und dem Anzeigebereich besteht, der als Container für Daten oder andere Steuerelemente fungiert. Dies können beispielsweise Textfelder, Kombinationsfelder oder Befehlsschaltflächen sein.|  
-|-Tabelle|Ein Datenbankobjekt, das Daten in Datensätzen (Zeilen) und Feldern (Spalten) speichert. Die Daten beziehen sich normalerweise auf eine bestimmte Kategorie, z. B. Mitarbeiter oder Bestellungen.|  
+|table|Ein Datenbankobjekt, das Daten in Datensätzen (Zeilen) und Feldern (Spalten) speichert. Die Daten beziehen sich normalerweise auf eine bestimmte Kategorie, z. B. Mitarbeiter oder Bestellungen.|  
 |Tabellendatenbereich|Ein Berichtselement in einem Berichtslayout, das Daten in einem spaltenförmigen Format darstellt.|  
 |Tabellen-Designer|Eine visuelle Entwurfsoberfläche, die zum Erstellen und Bearbeiten von TSQL-Tabellen und tabellenbezogenen Objekten verwendet wird.|  
 |Tabellensperre|Eine Sperre einer Tabelle, die alle Daten und Indizes einschließt.|  
@@ -1668,7 +1668,7 @@ ms.technology:
 |Temporäre Smartcard|Eine temporäre Smartcard, die als Ersatz für eine verlorene Smartcard oder für einen Benutzer ausgestellt wird, der für einen beschränkten Zeitraum Zugriff benötigt.|  
 |Temporär gespeicherte Prozedur|Eine Prozedur, die in der temporären Datenbank tempdb platziert und am Ende der Sitzung gelöscht wird.|  
 |Temporäre Tabelle|Eine Tabelle, die in der temporären Datenbank tempdb platziert und am Ende der Sitzung gelöscht wird.|  
-|Mandant|Eine Clientorganisation, die eine einzelne Instanz einer Anwendung über einen Webdienst nutzt. Ein Unternehmen kann eine Instanz der Software auf einer Gruppe von Servern installieren und diese Software mehreren Mandanten als Dienst (SaaS) anbieten.|  
+|tenant|Eine Clientorganisation, die eine einzelne Instanz einer Anwendung über einen Webdienst nutzt. Ein Unternehmen kann eine Instanz der Software auf einer Gruppe von Servern installieren und diese Software mehreren Mandanten als Dienst (SaaS) anbieten.|  
 |Theatersicht|Eine Sicht, bei der die Vorschau in einer SharePoint-Dokumentbibliothek mit PowerPivot-Katalogen zentriert wird, sodass Sie die verfügbaren Arbeitsblätter rotieren lassen können. Kleinere Miniaturansichten jedes Arbeitsblatts werden beidseitig unten auf der Seite angezeigt.|  
 |Thetajoin|Ein Join, der auf einem Vergleich von Skalarwerten basiert.|  
 |Tausendertrennzeichen|Ein Symbol, das in einer Zahl mit vier oder mehr Stellen links vom Dezimaltrennzeichen die Tausender von den Hundertern trennt.|  
@@ -1687,7 +1687,7 @@ ms.technology:
 |Ablaufverfolgungsdatei|Eine Datei, die Datensätze mit den Aktivitäten eines angegebenen Objekts enthält, z. B. eine Anwendung, ein Betriebssystem oder ein Netzwerk. Eine Ablaufverfolgungsdatei kann API-Aufrufe, API-Aktivitäten, die Aktivitäten von Kommunikationsverbindungen und internen Datenflüssen sowie weitere Informationen enthalten.|  
 |Überwachungstoken|Ein für die Transaktionsreplikation verfügbares Leistungsüberwachungstool. Ein Token (eine kleine Menge Daten) wird durch das Replikationssystem gesendet, um zu messen, wie lange eine Transaktion braucht, um den Verteiler und die Abonnenten zu erreichen.|  
 |Nachfolgendes Byte|Der Bytewert, der die zweite Hälfte eines Doppelbytezeichens ist.|  
-|Trainieren|Das Auffüllen eines Modells mit Daten, um Muster aufzudecken, die zum Erstellen von Vorhersagen oder zur Wissensermittlung verwendet werden können.|  
+|Training|Das Auffüllen eines Modells mit Daten, um Muster aufzudecken, die zum Erstellen von Vorhersagen oder zur Wissensermittlung verwendet werden können.|  
 |Trainingsdataset|Eine Menge bekannter und vorhersagbarer Daten, die zum Trainieren des Data Mining-Modells verwendet werden.|  
 |Merkmal|Ein Attribut, das eine Entität beschreibt.|  
 |Merkmalformulierung|Eine Art, eine Beziehung auszudrücken, bei der eine untergeordnete Entität eine Hauptentität beschreibt.|  
@@ -1697,7 +1697,7 @@ ms.technology:
 |Transaktionsbeibehaltungsdauer|Bei der Transaktionsreplikation die Dauer für die Speicherung von Transaktionen in der Verteilungsdatenbank.|  
 |Transaktionsrollback|Ein Rollback für eine vom Benutzer angegebene Transaktion bis zum letzten Sicherungspunkt innerhalb einer Transaktion oder bis zum Anfang einer Transaktion.|  
 |Transaktionsdaten|Daten zu Verkäufen, Lieferungen, Rechnungen, Trouble-Tickets, Forderungen und anderen finanziellen und sonstigen Interaktionen.|  
-|Transaktionsreplikation|Ein Replikationstyp, der in der Regel mit einer Momentaufnahme der Veröffentlichungsdatenbank-Objekte und der entsprechenden Daten beginnt.|  
+|transactional replication|Ein Replikationstyp, der in der Regel mit einer Momentaufnahme der Veröffentlichungsdatenbank-Objekte und der entsprechenden Daten beginnt.|  
 |Transact-SQL|Die Sprache, die Befehle zum Verwalten von SQL Server-Instanzen, zum Erstellen und Verwalten aller Objekte einer SQL Server-Instanz und zum Einfügen, Abrufen, Ändern und Löschen aller Daten in SQL Server-Tabellen enthält. Transact-SQL ist eine Erweiterung der Sprache, die in den von der International Standards Organization (ISO) und dem American National Standards Institute (ANSI) veröffentlichten SQL-Standards definiert ist.|  
 |Transformation|Die SSIS-Datenflusskomponente, mit der Daten geändert, zusammengefasst und bereinigt werden.|  
 |Transformationseingabe|Daten, die in einer Spalte enthalten sind und die während eines Join- oder Suchvorgangs verwendet werden, um die Daten in der Tabelle zu ändern oder zu aggregieren, mit der sie verknüpft wird.|  
@@ -1706,7 +1706,7 @@ ms.technology:
 |Vertrauenswürdige Verbindung|Eine Windows-Netzwerkverbindung, die nur von Benutzern geöffnet werden kann, die vom Netzwerk authentifiziert wurden.|  
 |TSQL-Bereich|Eine der Registerkarten, auf der das Editorsteuerelement gehostet wird, um die TSQL-Codebearbeitung zu ermöglichen.|  
 |Rollierendes Fenster|Ein springendes Fenster, bei dem die Sprunggröße der Fenstergröße entspricht.|  
-|Tupel|Eine geordnete Auflistung von Elementen zur eindeutigen Identifizierung einer Zelle basierend auf einer Kombination von Attributelementen aus jeder Attributhierarchie des Cubes.|  
+|tuple|Eine geordnete Auflistung von Elementen zur eindeutigen Identifizierung einer Zelle basierend auf einer Kombination von Attributelementen aus jeder Attributhierarchie des Cubes.|  
 |Zweiphasencommit|Ein Protokoll, mit dem sichergestellt wird, dass auf mehrere Server angewendete Transaktionen entweder auf allen Servern oder auf keinem Server ausgeführt werden. Zweiphasencommit wird vom Transaktions-Manager koordiniert und von Ressourcen-Managern unterstützt.|  
 |Typüberprüfung|Der von einem Compiler oder einem Interpreter ausgeführte Prozess, mit dem sichergestellt wird, dass eine Variable bei ihrer Verwendung mit dem Datentyp behandelt wird, der für sie deklariert ist.|  
 |Typisierter Adapter|Ein Adapter, der nur einen einzelnen Ereignistyp ausgibt.|  
@@ -1790,7 +1790,7 @@ ms.technology:
 |x-Achse|Die horizontale Bezugslinie in einem Raster oder Diagramm, das über horizontale und vertikale Dimensionen verfügt.|  
 |XML für Analysis|Eine Spezifikation, die einen offenen Standard beschreibt, der den Datenzugriff auf Datenquellen im World Wide Web unterstützt.|  
 |XMLA|Eine Spezifikation, die einen offenen Standard beschreibt, der den Datenzugriff auf Datenquellen im World Wide Web unterstützt.|  
-|XQuery|Eine funktionale Abfragesprache, die auf eine Vielzahl von XML-Datentypen, die von Quilt, XPath und XQL abgeleitet werden, allgemein anwendbar ist. Sowohl Ipedo als auch Software AG implementieren ihre eigenen Versionen der vom W3C vorgeschlagenen Spezifikation für die XQuery-Sprache. Auch bezeichnet als: XML-Abfrage, XQL.|  
+|XQuery|Eine funktionale Abfragesprache, die auf eine Vielzahl von XML-Datentypen, die von Quilt, XPath und XQL abgeleitet werden, allgemein anwendbar ist. Sowohl Ipedo als auch Software AG implementieren ihre eigenen Versionen der vom W3C vorgeschlagenen Spezifikation für die XQuery-Sprache. Diese Sprache wird auch XML Query und XQL genannt.|  
 |XSL|Ein XML-Vokabular, mit dem XML-Daten mithilfe eines Stylesheets, in dem die Präsentationsregeln definiert sind, in ein anderes Format, z. B. HTML, umgewandelt, d. h. transformiert werden können.|  
 |XSL-Transformation|Eine deklarative, XML-basierte Sprache, die zur Darstellung oder Transformation von XML-Daten dient.|  
 |XSLT|Eine deklarative, XML-basierte Sprache, die zur Darstellung oder Transformation von XML-Daten dient.|  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896697"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS-Ausdruck)
@@ -36,7 +36,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die folgenden Hinweise gelten für die TOKEN-Funktion:  
   
 -   Die Trennzeichenfolge kann ein oder mehrere Trennzeichen enthalten.  
@@ -80,7 +80,7 @@ TOKENCOUNT("a:little|white dog","| ,.:")
 TOKENCOUNT("        a little white dog", " ")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)  
   
   

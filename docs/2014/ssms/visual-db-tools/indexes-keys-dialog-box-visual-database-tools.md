@@ -1,5 +1,5 @@
 ---
-title: Indizes und Schlüssel (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
+title: Indizes und Schlüssel (Dialog Feld) (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015416"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Indizes und Schlüssel (Dialogfeld) (Visual Database Tools)
@@ -26,11 +26,11 @@ ms.locfileid: "63015416"
 > [!NOTE]  
 >  Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index**  
  Listet die vorhandenen Primärschlüssel, eindeutigen Schlüssel und Indizes auf. Wenn Sie einen Index oder Schlüssel auswählen, werden dessen Eigenschaften rechts im Datenblatt angezeigt. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Erstellen Sie einen neuen Primärschlüssel, eindeutigen Schlüssel oder Index.  
   
  **Löschen**  
@@ -55,27 +55,27 @@ ms.locfileid: "63015416"
  Zeigt den Namen des Schlüssels oder Indexes an. Wenn ein neuer Index erstellt wird, erhält dieser einen Standardnamen, der auf der Tabelle im aktiven Fenster des Tabellen-Designers basiert. Sie können den Namen jederzeit ändern.  
   
  **Beschreibung**  
- Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ( **…** ) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+ Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann rechts neben dem Eigenschaftenfeld auf die Schaltfläche mit den Auslassungspunkten (**...**). Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
  **Kategorie Tabellen-Designer**  
  Wenn diese Kategorie erweitert ist, werden Informationen zu **Als CLUSTERED erstellen**angezeigt.  
   
- **Als CLUSTERED erstellen**  
+ **Als Clustered erstellen**  
  Erstellen Sie den Schlüssel oder Index als CLUSTERED. Pro Tabelle ist nur ein gruppierter Index zulässig. Die Daten in der Tabelle werden in der Reihenfolge des gruppierten Indexes gespeichert. Weitere Informationen finden Sie unter [Erstellen gruppierter Indizes](../../relational-databases/indexes/indexes.md) und [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
- **Datenbereichsspezifikation**  
- Wird dieses Element erweitert, werden Informationen für **(Datenbereichstyp)** , **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
+ **Angabe des Datenraums**  
+ Wird dieses Element erweitert, werden Informationen für **(Datenbereichstyp)**, **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
   
- **(Datenbereichstyp)**  
+ **(Daten leertyp)**  
  Gibt an, ob dieser Index oder Schlüssel zu einer Dateigruppe oder einem Partitionsschema gehört.  
   
- **Schemaname der Dateigruppe oder Partition**  
+ **Schema Name der Datei Gruppe oder Partition**  
  Zeigt den Namen der Dateigruppe oder des Partitionsschemas an, zu dem er gespeichert wird.  
   
- **Partitionsspaltenliste**  
+ **Partitions Spaltenliste**  
  Zeigt eine durch Trennzeichen getrennte Liste mit Spalten an, die an der Partitionsspaltenfunktion beteiligt sind. Ist nicht verfügbar, wenn im Feld **(Datenbereichstyp)** die Option „Dateigruppe“ ausgewählt ist.  
   
- **Füllspezifikation**  
+ **Füll Spezifikation**  
  Wenn dieses Element erweitert ist, werden Informationen für **Füllfaktor** und **Index mit Leerstellen auffüllen**angezeigt.  
   
  **Füllfaktor**  
@@ -85,36 +85,36 @@ ms.locfileid: "63015416"
   
 -   Bei einem niedrigeren Wert bleiben mehr leere Bereiche auf den Datenseiten übrig. Dadurch wird die Notwendigkeit des Teilens von Datenseiten beim Vergrößern des Indexes verringert. Es ist dadurch aber mehr Speicherplatz erforderlich.  
   
- **Index mit Leerstellen auffüllen**  
+ **Index Auffüllung**  
  Geben Sie an, ob für größer werdende Zwischenseiten in diesem Index der gleiche Prozentwert für leere Bereiche (Auffüllung) gilt, der unter **Füllfaktor** angegeben ist.  
   
  **Doppelte Schlüssel ignorieren**  
  Geben Sie an, was geschieht, wenn eine Zeile, deren Schlüsselwert mit einem vorhandenen Schlüsselwert identisch ist, im Rahmen eines Masseneinfügevorgangs eingefügt wird. Wenn Sie Folgendes auswählen:  
   
--   **Ja** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt eine Warnung aus, ignoriert die eingehende Zeile, die eine Beschädigung verursachen, und versucht, die übrigen Zeilen einzufügen.  
+-   **Ja** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt eine Warnung aus, ignoriert die eingehende Zeile und versucht, die übrigen Zeilen einzufügen.  
   
--   **Nein** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung aus und führt für den gesamten Masseneinfügevorgang einen Rollback aus.  
+-   **Nein** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung aus und führt einen Rollback für den gesamten BULK INSERT-Vorgang aus.  
   
- **Eingeschlossene Spalten**  
+ **Enthaltene Spalten**  
  Zeigt eine durch Trennzeichen getrennte Liste der Namen aller Spalten an, die den Indexschlüssel bilden. Unterschlüsselspalten können nur für nicht gruppierte Indizes angegeben werden. Diese Eigenschaft ist bei XML-Indizes ausgeblendet.  
   
  **Ist deaktiviert**  
  Gibt an, ob dieser Index deaktiviert ist. Dies ist eine schreibgeschützte Eigenschaft. Diese Eigenschaft ist nur dann auf **Ja** festgelegt, wenn der Index außerhalb von Visual Database Tools deaktiviert wurde.  
   
- **Ist Volltextschlüssel**  
+ **Ist voll Text Schlüssel**  
  Geben Sie an, ob der Index ein Volltextschlüssel ist. Weitere Informationen über Volltextschlüssel finden Sie in der SQL Server-Onlinedokumentation. Diese Eigenschaft ist bei XML-Indizes ausgeblendet.  
   
- **Seitensperren sind zulässig**  
+ **Seiten Sperren sind zulässig.**  
  Geben Sie an, ob Sperren auf Seitenebene für diesen Index zugelassen sind. Das Zulassen oder Untersagen von Sperren auf Seitenebene wirkt sich auf die Datenbankleistung aus. Die empfohlene Einstellung lautet **Ja**.  
   
  **Statistiken neu berechnen**  
  Geben Sie an, ob das zugrunde liegende [!INCLUDE[ssDE](../../includes/ssde-md.md)] neue Statistiken berechnet, wenn der Index erstellt wird. Durch das Neuberechnen der Statistiken wird das Erstellen der Indizes verlangsamt, die Abfrageleistung wird jedoch wahrscheinlich erhöht.  
   
- **Zeilensperren sind zulässig**  
+ **Zeilen Sperren sind zulässig.**  
  Geben Sie an, ob das Sperren auf Zeilenebene für diesen Index zugelassen ist. Das Zulassen oder Untersagen von Sperren auf Zeilenebene wirkt sich auf die Datenbankleistung aus. Die empfohlene Einstellung lautet **Ja**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Unique- und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Unique-Einschränkungen und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Primärschlüssel- und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

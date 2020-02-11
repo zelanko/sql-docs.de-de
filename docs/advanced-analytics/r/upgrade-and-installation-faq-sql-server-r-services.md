@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727344"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Häufig gestellte Fragen zu Upgrade und Installation für SQL Server-Machine Learning oder R Server
@@ -24,7 +24,7 @@ Dieses Thema enthält Antworten auf einige häufig gestellte Fragen zur Installa
 + Einige Probleme treten nur bei Upgrades von Vorabversionen auf. Daher sollten Sie sich über die von Ihnen verwendete Version und Edition informieren, bevor Sie mit diesen Hinweisen fortfahren. Führen Sie zum Abrufen der Versionsinformationen in SQL Server Management Studio in einer Abfrage `@@VERSION` aus.
 + Führen Sie so bald wie möglich ein Upgrade auf das aktuelle Release oder Service Release aus, um Probleme zu lösen, die in den neuesten Releases behoben wurden.
 
-**Gilt für:** SQL Server 2016 R Services, SQL Server Machine Learning Services (datenbankintern)
+**Anwendungsbereich:** SQL Server 2016 R Services, SQL Server Machine Learning Services (datenbankintern)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Anforderungen und Einschränkungen für ältere Versionen von SQL Server 2016 
 
@@ -72,7 +72,7 @@ Upgrades von Vorabversionen von SQL Server 2016 werden nicht mehr unterstützt. 
 
 Die folgenden Versionen wurden mit Vorabversionen von SQL Server 2016 installiert:
 
-| Versionsoptionen | Erstellen         |
+| Version | Entwickeln         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -163,7 +163,7 @@ Wenn Sie Probleme beim Entfernen einer älteren Version haben, müssen Sie unter
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (für 7.5.0)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [SQL Server Machine Learning Services (datenbankintern)](../r/sql-server-r-services.md)
 

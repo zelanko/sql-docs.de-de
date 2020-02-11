@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833814"
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
@@ -30,18 +30,18 @@ ms.locfileid: "62833814"
  Der Verbindungs-Manager für Flatfiles kann nur auf eine einzige Datei zugreifen. Wenn Sie auf mehrere Dateien verweisen möchten, verwenden Sie anstelle eines Verbindungs-Managers für Flatfiles einen Verbindungs-Manager für mehrere Flatfiles. Weitere Informationen finden Sie unter [Multiple Flat Files Connection Manager](multiple-flat-files-connection-manager.md).  
   
 ## <a name="column-length"></a>Spaltenlänge  
- Der Verbindungs-Manager für Flatfiles legt die Länge von Zeichenfolgenspalten standardmäßig auf 50 Zeichen fest. Sie können im Dialogfenster **Verbindungs-Manager-Editor für Flatfiles** Beispieldaten auswerten und automatisch die Länge dieser Spalten ändern, um zu vermeiden, dass die Daten abgeschnitten werden oder die Spaltenbreite überschritten wird. Es sei denn, Sie ändern danach die Spaltenlänge in einer Flatfilequelle oder in einer Transformation. Dann bleibt die Spaltenlänge der Zeichenfolgenspalte im gesamten Datenfluss gleich. Wenn diese Zeichenfolgenspalten Zielspalten zugeordnet sind, die schmaler sind, werden in der Benutzeroberfläche Warnungen angezeigt. Darüber hinaus können aufgrund der abgeschnittenen Daten zur Laufzeit Fehler auftreten. Um Fehler bzw. das Abschneiden von Daten zu vermeiden, können Sie im Verbindungs-Manager für Flatfiles, in der Flatfilequelle oder in einer Transformation die Größe der Spalten auf die Größe der Zielspalten ändern. Um die Länge von Ausgabespalten zu ändern, legen Sie die `Length` Eigenschaft der Ausgabespalte auf die **Eingabe- und Ausgabeeigenschaften** Registerkarte die **Erweiterter Editor** Dialogfeld.  
+ Der Verbindungs-Manager für Flatfiles legt die Länge von Zeichenfolgenspalten standardmäßig auf 50 Zeichen fest. Sie können im Dialogfenster **Verbindungs-Manager-Editor für Flatfiles** Beispieldaten auswerten und automatisch die Länge dieser Spalten ändern, um zu vermeiden, dass die Daten abgeschnitten werden oder die Spaltenbreite überschritten wird. Es sei denn, Sie ändern danach die Spaltenlänge in einer Flatfilequelle oder in einer Transformation. Dann bleibt die Spaltenlänge der Zeichenfolgenspalte im gesamten Datenfluss gleich. Wenn diese Zeichenfolgenspalten Zielspalten zugeordnet sind, die schmaler sind, werden in der Benutzeroberfläche Warnungen angezeigt. Darüber hinaus können aufgrund der abgeschnittenen Daten zur Laufzeit Fehler auftreten. Um Fehler bzw. das Abschneiden von Daten zu vermeiden, können Sie im Verbindungs-Manager für Flatfiles, in der Flatfilequelle oder in einer Transformation die Größe der Spalten auf die Größe der Zielspalten ändern. Wenn Sie die Länge der Ausgabespalten ändern möchten, legen `Length` Sie die-Eigenschaft der Ausgabe Spalte auf der Registerkarte **Eingabe-und Ausgabe Eigenschaften** im Dialogfeld **Erweiterter Editor** fest.  
   
  Wenn Sie die Spaltenlängen im Verbindungs-Manager für Flatfiles aktualisieren, nachdem Sie die Flatfilequelle, die den Verbindungs-Manager verwendet, hinzugefügt und geändert haben, ist das manuelle Ändern der Ausgabespaltengröße in der Flatfilequelle nicht erforderlich. Wenn Sie das Dialogfeld **Flatfilequelle** öffnen, stellt die Flatfilequelle eine Option zum Synchronisieren der Spaltenmetadaten bereit.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Konfiguration des Verbindungs-Managers für Flatfiles  
- Wenn Sie einen Flatfile-Verbindungs-Manager einem Paket hinzufügen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, die in eine Flatfile-Verbindung zur Laufzeit aufgelöst wird, legt die Eigenschaften der Flatfile-Verbindung und fügt den Flatfile-Verbindungs-Manager, erstellt der `Connections` -Sammlung des Pakets.  
+ Wenn Sie einem Paket einen Flatfile-Verbindungs-Manager hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fügen, erstellt einen Verbindungs-Manager, der zur Laufzeit in eine Flatfileverbindung aufgelöst wird, die Eigenschaften der Flatfileverbindung festlegt und der-Auflistung des Pakets `Connections` den Verbindungs-Manager für Flatfiles hinzufügt.  
   
  Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `FLATFILE` festgelegt.  
   
  Standardmäßig sucht der Verbindungs-Manager für Flatfiles immer nach einem Zeilentrennzeichen in Daten ohne Anführungszeichen und startet eine neue Zeile, wenn ein Zeilentrennzeichen gefunden wird. Dadurch kann der Verbindungs-Manager für Flatfiles Dateien mit Zeilen, in denen Spaltenfelder fehlen, ordnungsgemäß analysieren.  
   
- In einigen Fällen wird die Paketleistung verbessert, wenn Sie diese Funktion deaktivieren. Sie können diese Funktion deaktivieren, durch Festlegen der Eigenschaft der Flatfile Verbindungs-Managers, **AlwaysCheckForRowDelimiters**zu `False`.  
+ In einigen Fällen wird die Paketleistung verbessert, wenn Sie diese Funktion deaktivieren. Sie können diese Funktion deaktivieren, indem Sie die Eigenschaft Verbindungs-Manager für Flatfiles, **alwayscheckforrowdelimiters**, auf `False`festlegen.  
   
  Es gibt folgende Möglichkeiten, um den Verbindungs-Manager für Flatfiles zu konfigurieren:  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62833814"
   
 -   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Spalten&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweitert&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweiterte Seite&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Verbindungs-Manager-Editor für Flatfiles &#40;Vorschau Seite&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   

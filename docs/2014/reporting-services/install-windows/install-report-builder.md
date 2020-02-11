@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637835"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installieren der eigenständigen Version des Berichts-Generators (Berichts-Generator)
-  Sie können Berichts-Generator über das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53613) oder einen Speicherort installieren, z. b. den öffentlichen Ordner, in den die Datei "ReportBuilder3_x86. msi", das Windows Installer Paket für Berichts-Generator, heruntergeladen wurde.  
+  Sie können Berichts-Generator über das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53613) oder einen Speicherort installieren, z. b. den öffentlichen Ordner, in den die ReportBuilder3_x86. msi, das Windows Installer Paket für Berichts-Generator heruntergeladen wurde.  
   
  Sie können auch eine Befehlszeileninstallation des Berichts-Generators ausführen und Argumente angeben, um die Installation anzupassen. Neben den systeminternen MSI-Standardparametern können Sie die vom Berichts-Generator bereitgestellten benutzerdefinierten Parameter "RBINSTALLDIR" und "REPORTSERVERURL" verwenden. "RBINSTALLDIR" dient zum Angeben des Stamminstallationsordners für den Berichts-Generator. Mit "REPORTSERVERURL" wird der Standardberichtsserver angegeben, der vom Berichts-Generator zum Speichern von Berichten auf dem Server verwendet wird.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73637835"
     -   Klicken Sie auf **Durchsuchen** , um den Standard Speicherort Berichts-Generator anzuzeigen und zu aktualisieren.  
   
         > [!NOTE]  
-        >  Der Standard Installationsordner für Berichts-Generator ist \<Laufwerk > Programme\Microsoft SQL Server.  
+        >  Der Standard Installationsordner für Berichts-Generator ist \<Laufwerk>Programme\Microsoft SQL Server.  
   
     -   Klicken Sie auf Datenträger **Kosten** , um zu erfahren, wie viel Speicherplatz Berichts-Generator beansprucht.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73637835"
     -   Klicken Sie auf **Durchsuchen** , um den Standard Speicherort Berichts-Generator anzuzeigen und zu aktualisieren.  
   
         > [!NOTE]  
-        >  Der Standard Installationsordner für Berichts-Generator ist \<Laufwerk > Programme\Microsoft SQL Server.  
+        >  Der Standard Installationsordner für Berichts-Generator ist \<Laufwerk>Programme\Microsoft SQL Server.  
   
     -   Klicken Sie auf Datenträger **Kosten** , um zu erfahren, wie viel Speicherplatz Berichts-Generator beansprucht.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "73637835"
   
 5.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-6.  Geben Sie im Textfeld Öffnen `cmd.`  
+6.  Geben Sie im Textfeld Öffnen den Befehl  ein.`cmd.`  
   
 7.  Navigieren Sie im Eingabeaufforderungsfenster zu dem Ordner, in dem "ReportBuilder3_x86.msi" gespeichert wurde.  
   
@@ -129,8 +129,8 @@ ms.locfileid: "73637835"
   
 9. Drücken Sie die EINGABETASTE, um den Befehl auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterstützung für Installation, Deinstallation und Berichts-Generator](../install-uninstall-and-report-builder-support.md)   
- [Deinstallieren Sie die eigenständige Version von &#40;Berichts-Generator Berichts-Generator&#41;](install-report-builder.md)  
+ [Deinstallieren Sie die eigenständige Version von Berichts-Generator &#40;Berichts-Generator&#41;](install-report-builder.md)  
   
   

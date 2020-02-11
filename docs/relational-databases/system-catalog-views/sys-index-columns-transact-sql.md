@@ -1,5 +1,5 @@
 ---
-title: index_columns (Transact-SQL) | Microsoft-Dokumentation
+title: sys. index_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122668"
 ---
-# <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
+# <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile pro Spalte, die Teil einer **sys.indexes** Index oder einer unsortierten Tabelle (Heap).  
+  Enthält eine Zeile pro Spalte, die Teil eines **sys. Indexes** -Indexes oder einer ungeordneten Tabelle (Heap) ist.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, für das der Index definiert wird|  
 |**index_id**|**int**|ID des Indexes, in dem die Spalte definiert wird|  
-|**index_column_id**|**int**|Die ID der Indexspalte. **Index_column_id** ist nur innerhalb eindeutig **Index_id**.|  
-|**column_id**|**int**|ID der Spalte in **object_id**.<br /><br /> 0 = Zeilenbezeichner (RID, Row Identifier) in einem nicht gruppierten Index.<br /><br /> **column_id** ist nur innerhalb von **object_id**eindeutig.|  
-|**key_ordinal**|**tinyint**|Ordinalzahl (auf 1 basierend) innerhalb einer Gruppe von Schlüsselspalten.<br /><br /> 0 = Keine Schlüsselspalte oder ein XML-Index, columnstore-Index oder räumlicher Index.<br /><br /> Hinweis: Ein XML-Index oder räumlichen Index kann nicht kein Schlüssel sein, da die zugrunde liegenden Spalten nicht vergleichbar sind, was bedeutet, dass ihre Werte nicht sortiert werden können.|  
+|**index_column_id**|**int**|Die ID der Indexspalte. **index_column_id** ist nur innerhalb **index_id**eindeutig.|  
+|**column_id**|**int**|ID der Spalte in **object_id**.<br /><br /> 0 = Zeilenbezeichner (RID, Row Identifier) in einem nicht gruppierten Index.<br /><br /> **column_id** ist nur innerhalb **object_id**eindeutig.|  
+|**key_ordinal**|**tinyint**|Ordinalzahl (auf 1 basierend) innerhalb einer Gruppe von Schlüsselspalten.<br /><br /> 0 = Keine Schlüsselspalte oder ein XML-Index, columnstore-Index oder räumlicher Index.<br /><br /> Hinweis: ein XML-Index oder räumlicher Index kann kein Schlüssel sein, da die zugrunde liegenden Spalten nicht vergleichbar sind. Dies bedeutet, dass ihre Werte nicht geordnet werden können.|  
 |**partition_ordinal**|**tinyint**|Ordinalzahl (1-basiert) innerhalb einer Gruppe von Partitionierungsspalten. Ein gruppierter columnstore-Index kann maximal 1 Partitionierungsspalte aufweisen.<br /><br /> 0 = Keine Partitionierungsspalte.|  
 |**is_descending_key**|**bit**|1 = Indexschlüsselspalte hat eine absteigende Sortierreihenfolge.<br /><br /> 0 = Indexschlüsselspalte hat eine aufsteigende Sortierreihenfolge, oder die Spalte ist Teil eines columnstore-Indexes oder Hashindexes.|  
-|**is_included_column**|**bit**|1 = Spalte ist eine Nichtschlüsselspalte, die dem Index mit der CREATE INDEX INCLUDE-Klausel hinzugefügt wurde, oder die Spalte ist Teil eines columnstore-Indexes.<br /><br /> 0 = Spalte ist keine eingeschlossene Spalte.<br /><br /> Spalten, die implizit hinzugefügt werden, da sie Teil der Gruppierungsschlüssel sind nicht in aufgeführt werden **index_columns**.<br /><br /> Spalten, die implizit hinzugefügt wurden, da sie eine Partitionierungsspalte sind, werden als 0 zurückgegeben.| 
-|**column_store_order_ordinal**</br> Betrifft: Azure SQL Data Warehouse (Vorschau)|**tinyint**|Ordinalzahl (1-basiert) in der Reihenfolge der Spalten in einem geordneten gruppierten columnstore-Index fest|
+|**is_included_column**|**bit**|1 = Spalte ist eine Nichtschlüsselspalte, die dem Index mit der CREATE INDEX INCLUDE-Klausel hinzugefügt wurde, oder die Spalte ist Teil eines columnstore-Indexes.<br /><br /> 0 = Spalte ist keine eingeschlossene Spalte.<br /><br /> Spalten, die implizit hinzugefügt werden, da Sie Teil des Clustering-Schlüssels sind, sind nicht in **sys. index_columns**aufgeführt.<br /><br /> Spalten, die implizit hinzugefügt wurden, da sie eine Partitionierungsspalte sind, werden als 0 zurückgegeben.| 
+|**column_store_order_ordinal**</br> Gilt für: Azure SQL Data Warehouse (Vorschau)|**tinyint**|Ordinalzahl (1-basiert) innerhalb des Satzes von Order-Spalten in einem geordneten gruppierten columnstore--Index.|
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -83,13 +83,13 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Häufig gestellte Fragen zu Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [sys. Columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [FAQ: Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

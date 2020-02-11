@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aa74f982a5ff1894651d68f06689cba476a16452
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787104"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Um die Parameter einer SQL-Anweisung zu beschreiben, erstellt und führt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung aus, wenn SQLDescribeParam für ein vorbereitetes ODBC-Anweisungs Handle aufgerufen wird. Die Metadaten des Resultsets bestimmen die Eigenschaften der Parameter in der vorbereiteten Anweisung. SQLDescribeParam kann jeden Fehlercode zurückgeben, der von SQLExecute oder SQLExecDirect zurückgegeben werden kann.  
+  Um die Parameter einer SQL-Anweisung zu beschreiben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und führt der Native Client ODBC- [!INCLUDE[tsql](../../includes/tsql-md.md)] Treiber eine SELECT-Anweisung aus, wenn SQLDescribeParam für ein vorbereitetes ODBC-Anweisungs Handle aufgerufen wird. Die Metadaten des Resultsets bestimmen die Eigenschaften der Parameter in der vorbereiteten Anweisung. SQLDescribeParam kann jeden Fehlercode zurückgeben, der von SQLExecute oder SQLExecDirect zurückgegeben werden kann.  
   
- Verbesserungen an der Datenbank-Engine, die mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] beginnen, ermöglichen SQLDescribeParam, genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von SQLDescribeParam zurückgegeben wurden. Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Verbesserungen in der Datenbank- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Engine, beginnend mit "SQLDescribeParam", können genauere Beschreibungen der erwarteten Ergebnisse erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die von SQLDescribeParam in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]früheren Versionen von zurückgegeben wurden. Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Außerdem gibt *ParameterSizePtr* in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]einen Wert zurück, der mit der Definition für die Größe (in Zeichen) der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung entsprechend der Definition in der [ODBC-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=207044)übereinstimmt. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konnte *ParameterSizePtr* der entsprechende Wert **SQL_DESC_OCTET_LENGTH** für den-Typ oder ein irrelevante Spaltengrößen Wert sein, der für SQLBindParameter für einen Typ bereitgestellt wurde. der Wert von, der ignoriert werden soll (z. b.**SQL_INTEGER**).  
+ Außerdem gibt [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] *ParameterSizePtr* , das in neu ist, nun einen Wert zurück, der der Definition der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung entsprechend der Definition in der [ODBC-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=207044)entspricht. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konnte *ParameterSizePtr* der entsprechende Wert **SQL_DESC_OCTET_LENGTH** für den-Typ oder ein irrelevante Spaltengrößen Wert sein, der für SQLBindParameter für einen Typ bereitgestellt wurde. der Wert von, der ignoriert werden soll (z. b.**SQL_INTEGER**).  
   
  Der Treiber unterstützt das Aufrufen von SQLDescribeParam in folgenden Situationen nicht:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73787104"
   
 -   Wenn im [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl Kommentare (/* \*/) vorhanden sind.  
   
- Beim Verarbeiten eines Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen unterstützt der Treiber auch das Aufrufen von SQLDescribeParam für Parameter Markierungen in-Anweisungen nach der ersten Anweisung im Batch nicht.  
+ Beim Verarbeiten eines Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen unterstützt der Treiber auch das Aufrufen von SQLDescribeParam für Parameter Markierungen in-Anweisungen nach der ersten Anweisung im Batch nicht.  
   
  Beim Beschreiben der Parameter vorbereiteter gespeicherter Prozeduren verwendet SQLDescribeParam die gespeicherte System Prozedur [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) , um Parameter Eigenschaften abzurufen. sp_sproc_columns können Daten für gespeicherte Prozeduren innerhalb der aktuellen Benutzerdatenbank melden. Durch das Vorbereiten eines voll qualifizierten Namens einer gespeicherten Prozedur kann SQLDescribeParam Daten Bank übergreifend ausgeführt werden. So kann z. b. die gespeicherte System Prozedur [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) in einer beliebigen Datenbank wie folgt vorbereitet und ausgeführt werden:  
   
@@ -58,7 +58,7 @@ SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- Bei Datentypen mit umfangreichen Werten ist der in *DataTypePtr* zurückgegebene Wert SQL_VARCHAR, SQL_VARBINARY oder SQL_NVARCHAR. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber legt *ParameterSizePtr* auf 0 fest, um anzugeben, dass die Größe des Datentyp Parameters für große Werte unbegrenzt ist. Tatsächliche Größen Werte werden für **varchar** -Standardparameter zurückgegeben.  
+ Bei Datentypen mit umfangreichen Werten ist der in *DataTypePtr* zurückgegebene Wert SQL_VARCHAR, SQL_VARBINARY oder SQL_NVARCHAR. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber legt *ParameterSizePtr* auf 0 fest, um anzugeben, dass die Größe des Datentyp Parameters für große Werte unbegrenzt ist. Tatsächliche Größen Werte werden für **varchar** -Standardparameter zurückgegeben.  
   
 > [!NOTE]  
 >  Wenn der Parameter bereits mit einer Maximalgröße für den SQL_VARCHAR-, SQL_VARBINARY- oder SQL_WVARCHAR-Parameter gebunden wurde, wird die gebundene Größe des Parameters und nicht "unbegrenzt" zurückgegeben.  
@@ -70,27 +70,27 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-and-table-valued-parameters"></a>SQLDescribeParam und Tabellenwertparameter  
  Eine Anwendung kann Tabellenwert Parameter-Informationen für eine vorbereitete Anweisung mit SQLDescribeParam abrufen. Weitere Informationen finden Sie unter [Tabellenwert Parameter-Metadaten für vorbereitete Anweisungen](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- Weitere Informationen zu Tabellenwert Parametern im Allgemeinen finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
+ Weitere Informationen zu Tabellenwert Parametern im Allgemeinen finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>SQLDescribeParam-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zurückgegebenen Werte lauten wie folgt:  
   
-||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
+||*DataTypePtr*|*ParameterSizePtr*|*Decimaldigitsptr*|  
 |-|-------------------|------------------------|------------------------|  
-|DateTime|SQL_TYPE_TIMESTAMP|23|3|  
+|datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
- Weitere Informationen finden Sie unter [Verbesserungen &#40;bei Datum und&#41;Uhrzeit (ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)).  
+ Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>SQLDescribeParam-Unterstützung für große CLR-UDTs  
- **SQLDescribeParam** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;(ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)).  
+ **SQLDescribeParam** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLDescribeParam-Funktion](https://go.microsoft.com/fwlink/?LinkId=59339)   
- [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

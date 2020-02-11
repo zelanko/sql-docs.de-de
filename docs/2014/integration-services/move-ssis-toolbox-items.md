@@ -1,5 +1,5 @@
 ---
-title: Verschieben des SSIS-Toolboxelementen | Microsoft-Dokumentation
+title: Verschieben von SSIS-Toolbox Elementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057560"
 ---
 # <a name="move-ssis-toolbox-items"></a>Verschieben von SSIS-Toolboxelementen
@@ -24,17 +24,17 @@ ms.locfileid: "66057560"
   
 1.  Klicken Sie mit der rechten Maustaste in der SSIS-Toolbox auf ein Element, und klicken Sie dann auf eine der folgenden Optionen:  
   
-    -   **In „Favoriten“ verschieben**  
+    -   **Zu Favoriten wechseln**  
   
-    -   **In „Allgemein“ verschieben**  
+    -   **In "Allgemein" verschieben**  
   
-    -   **In „Andere Quellen“ verschieben**  
+    -   **In andere Quellen verschieben**  
   
-    -   **In „Andere Ziele“ verschieben**  
+    -   **Wechseln zu anderen Zielen**  
   
-    -   **In „Weitere Transformationen“ verschieben**  
+    -   **Zu anderen Transformationen wechseln**  
   
-    -   **In „Andere Aufgaben“ verschieben**  
+    -   **Zu anderen Tasks wechseln**  
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>So aktualisieren Sie die SSIS-Toolbox  
   

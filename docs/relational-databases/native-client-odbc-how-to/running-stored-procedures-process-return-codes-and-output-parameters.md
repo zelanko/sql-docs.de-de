@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780653"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Ausführen gespeicherter Prozeduren: Verarbeiten von Rückgabecodes und Ausgabeparametern
@@ -29,7 +29,7 @@ ms.locfileid: "73780653"
   Gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung erst zur Verfügung, wenn [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA zurückgibt. Wenn ein Fehler von einer gespeicherten Prozedur zurückgegeben wird, wird SQLMoreResults aufgerufen, um mit dem nächsten Ergebnis fortzufahren, bis SQL_NO_DATA zurückgegeben wird.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>So verarbeiten Sie Rückgabecodes und Ausgabeparameter  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73780653"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine gespeicherte Prozedur, die in diesem Beispiel verwendet wird.  
+ Das erste Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine gespeicherte Prozedur, die in diesem Beispiel verwendet wird.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib. Führen Sie dann das Programm aus.  
   
- Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete gespeicherte Prozedur.  
+ Das dritte Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete gespeicherte Prozedur.  
   
 ```  
 use AdventureWorks  
@@ -193,7 +193,7 @@ DROP PROCEDURE TestParm
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-[Abrufen gespeicherter &#40;Prozeduren ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Abrufen gespeicherter Prozeduren &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

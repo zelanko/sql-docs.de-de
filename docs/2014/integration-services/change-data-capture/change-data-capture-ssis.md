@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771696"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
@@ -36,37 +36,37 @@ ms.locfileid: "62771696"
   
  Sobald Change Data Capture von einem Administrator in der Datenbank aktiviert wurde, können Sie ein Paket erstellen, das ein inkrementelles Laden der Änderungsdaten ausführt. Das folgende Diagramm zeigt die Schritte für das Erstellen eines solchen Pakets, das ein inkrementelles Laden von einer einzelnen Tabelle ausführt:  
   
- ![Change Data Capture: Schritte zum Erstellen eines Pakets](../media/cdc-package-creation.gif "Change Data Capture: Schritte zum Erstellen eines Pakets")  
+ ![Schritte der Change Data Capture-Paketerstellung](../media/cdc-package-creation.gif "Schritte der Change Data Capture-Paketerstellung")  
   
  Wie im vorherigen Diagramm gezeigt wurde, umfasst das Erstellen eines Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, die folgenden Schritte:  
   
- **Schritt 1: Entwerfen der Ablaufsteuerung**  
+ **Schritt 1: Entwerfen der Ablauf Steuerung**  
  In der Ablaufsteuerung vom Paket müssen die folgenden Tasks definiert werden:  
   
 -   Berechnen Sie die `datetime`-Werte für den Anfang und das Ende des Intervalls der Änderungen an den Quelldaten, die Sie abrufen möchten.  
   
      Verwenden Sie einen Task "SQL ausführen" oder [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Ausdrücke mit `datetime`-Funktionen, um diese Werte zu berechnen. Speichern Sie dann diese Endpunkte in Paketvariablen für die spätere Verwendung im Paket.  
   
-     **Weitere Informationen:**  [Angeben eines Intervalls von Änderungsdaten](specify-an-interval-of-change-data.md)  
+     **Weitere Informationen:**  [Angeben eines Intervalls von Änderungs Daten](specify-an-interval-of-change-data.md)  
   
 -   Bestimmen Sie, ob die Änderungsdaten für das ausgewählte Intervall bereit sind. Dieser Schritt ist notwendig, da der asynchrone Aufzeichnungsprozess möglicherweise noch nicht den ausgewählten Endpunkt erreicht hat.  
   
      Wenn Sie bestimmen möchten, ob die Daten bereit sind, beginnen Sie mit einem For-Schleifencontainer, um die Ausführung bei Bedarf so lange zu verzögern, bis die Änderungsdaten für das ausgewählte Intervall bereit sind. Verwenden Sie innerhalb des Schleifencontainers einen Task "SQL ausführen", um die Time-Mapping-Tabellen abzufragen, die von Change Data Capture verwaltet werden. Verwenden Sie dann einen Skripttask, der die `Thread.Sleep`-Methode aufruft oder einen weiteren Task "SQL ausführen" mit einer `WAITFOR`-Anweisung, um die Ausführung des Pakets bei Bedarf vorübergehend zu verzögern. Verwenden Sie optional einen weiteren Skripttask, um eine Fehlerbedingung oder ein Timeout zu protokollieren.  
   
-     **Weitere Informationen:**  [Bestimmen, ob die Änderungsdaten bereit sind](determine-whether-the-change-data-is-ready.md)  
+     **Weitere Informationen:**  [bestimmen, ob die Änderungs Daten bereit sind](determine-whether-the-change-data-is-ready.md)  
   
 -   Bereiten Sie die Abfragezeichenfolge vor, mit der die Änderungsdaten abgefragt werden.  
   
      Verwenden Sie einen Skripttask oder einen Task "SQL ausführen", um die SQL-Anweisung zusammenzustellen, mit der Änderungen abgefragt werden.  
   
-     **Weitere Informationen:**  [Vorbereiten zur Abfrage der Änderungsdaten](prepare-to-query-for-the-change-data.md)  
+     **Weitere Informationen:**  [Vorbereiten der Abfrage der Änderungs Daten](prepare-to-query-for-the-change-data.md)  
   
- **Schritt 2: Einrichten der Abfrage für Änderungsdaten**  
+ **Schritt 2: Einrichten der Abfrage für Änderungs Daten**  
  Erstellen Sie die Tabellenwertfunktion, die die Daten abfragt.  
   
  Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die Abfrage zu entwickeln und zu speichern.  
   
- **Weitere Informationen:**  [Abrufen und Verstehen der Änderungsdaten](retrieve-and-understand-the-change-data.md)  
+ **Weitere Informationen finden**Sie[unter Abrufen und verstehen der Änderungs Daten](retrieve-and-understand-the-change-data.md) .    
   
  **Schritt 3: Entwerfen des Datenflusses**  
  Im Datenfluss des Pakets müssen die folgenden Tasks definiert werden:  
@@ -75,13 +75,13 @@ ms.locfileid: "62771696"
   
      Verwenden Sie eine Quellkomponente, um die Änderungstabellen nach den Änderungen abzufragen, die innerhalb des ausgewählten Intervalls liegen, um die Daten abzurufen. Die Quelle ruft eine Transact-SQL-Tabellenwertfunktion auf, die Sie zuvor erstellt haben müssen.  
   
-     **Weitere Informationen:**  [Abrufen und Verstehen der Änderungsdaten](retrieve-and-understand-the-change-data.md)  
+     **Weitere Informationen finden**Sie[unter Abrufen und verstehen der Änderungs Daten](retrieve-and-understand-the-change-data.md) .    
   
 -   Teilen Sie die Änderungen zur Verarbeitung in Einfügungen, Updates und Löschungen auf.  
   
      Wenn Sie die Änderungen aufteilen möchten, verwenden Sie eine Transformation für bedingtes Teilen, um Einfügungen, Updates und Löschungen an verschiedene Ausgaben zur entsprechenden Verarbeitung weiterzuleiten.  
   
-     **Weitere Informationen:**  [Verarbeiten von Einfügungen, Updates und Löschungen](process-inserts-updates-and-deletes.md)  
+     **Weitere Informationen: Verarbeiten von**  [Einfügungen, Updates und Löschungen](process-inserts-updates-and-deletes.md)  
   
 -   Wenden Sie die Einfügungen, Löschungen und Updates auf das Ziel an.  
   
@@ -93,11 +93,12 @@ ms.locfileid: "62771696"
  Der im vorherigen Diagramm und den Schritten beschriebene Prozess umfasst ein inkrementelles Laden aus einer einzelnen Tabelle. Wenn Sie ein inkrementelles Laden aus mehreren Tabellen ausführen müssen, ist der Gesamtprozess identisch. Der Entwurf des Pakets muss jedoch geändert werden, damit die Verarbeitung von mehreren Tabellen unterstützt wird. Weitere Informationen zum Erstellen eines Pakets, das ein inkrementelles Laden aus mehreren Tabellen ausführt, finden Sie unter [Ausführen eines inkrementellen Ladens von mehreren Tabellen](perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Beispiele für Change Data Capture-Pakete  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt zwei Beispiele bereit, in denen veranschaulicht wird, wie Change Data Capture in Paketen verwendet wird. Weitere Informationen finden Sie unter den folgenden Themen:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt zwei Beispiele bereit, in denen veranschaulicht wird, wie Change Data Capture in Paketen verwendet wird. Weitere Informationen finden Sie in den folgenden Themen:  
   
--   [Readme_Change Data Capture-Paketbeispiel für angegebenes Intervall](https://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Readme_Change Data Capture-Paket Beispiel für angegebenes Intervall](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Readme_Change Data Capture since Last Request (Paketbeispiel)](https://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Beispiel für Readme_Change Data Capture seit dem letzten Anforderungspaket](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

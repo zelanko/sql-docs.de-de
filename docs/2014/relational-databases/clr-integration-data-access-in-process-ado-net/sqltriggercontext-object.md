@@ -15,18 +15,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874690"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext-Objekt
-  Die `SqlTriggerContext`-Klasse stellt Kontextinformationen über den Trigger zur Verfügung. Diese Kontextinformationen umfassen den Typ der Aktion, die den Trigger ausgelöst hat, die bei einem UPDATE-Vorgang aktualisierten Spalten und im Falle eines DDL-Triggers (Data Definition Language) eine XML-`EventData`-Struktur, die den auslösenden Vorgang beschreibt. Weitere Informationen und Beispiele zur Verwendung der `SqlTriggerContext` Klasse, finden Sie unter [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md).  
+  Die `SqlTriggerContext`-Klasse stellt Kontextinformationen über den Trigger zur Verfügung. Diese Kontextinformationen umfassen den Typ der Aktion, die den Trigger ausgelöst hat, die bei einem UPDATE-Vorgang aktualisierten Spalten und im Falle eines DDL-Triggers (Data Definition Language) eine XML-`EventData`-Struktur, die den auslösenden Vorgang beschreibt. Weitere Informationen und Beispiele zur Verwendung der `SqlTriggerContext` -Klasse finden Sie unter [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md).  
   
  Weitere Informationen finden Sie in der Referenz zu der `Microsoft.SqlServer.Server.SqlTriggerContext`-Klasse und in der .NET Framework SDK-Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

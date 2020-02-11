@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530942"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Tools und Ansätze zum Verarbeiten (Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "69530942"
  Die Verarbeitung ist ein stark konfigurierbarer Vorgang. Selbiger wird von einem Satz von Verarbeitungsoptionen gesteuert, die bestimmen, ob vollständige oder inkrementelle Verarbeitung auf Objektebene auftritt. Weitere Informationen zu Verarbeitungsoptionen und -objekten finden Sie unter [Verarbeiten von Optionen und Einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) und [Verarbeiten von Analysis Services-Objekten](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zum Verarbeiten von tabellarischen Modellen finden Sie [im tabellarischen &#40;&#41;](../process-data-ssas-tabular.md) [Prozessdatenbank, Tabelle oder Partition](../tabular-models/process-database-table-or-partition-analysis-services.md) und Verarbeiten von Daten in SSAS.  
+>  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zum Verarbeiten von tabellarischen Modellen finden Sie unter Verarbeiten von Daten [Banken, Tabellen oder Partitionen](../tabular-models/process-database-table-or-partition-analysis-services.md) und [Verarbeiten von Daten &#40;SSAS-Tabellen&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Verarbeiten von Objekten in SQL Server Management Studio  
   
@@ -60,7 +60,7 @@ ms.locfileid: "69530942"
   
     -   Measuregruppen oder einzelne Partitionen in der Measuregruppe  
   
-    -   Abmessungen  
+    -   Dimensionen  
   
     -   Miningmodelle  
   
@@ -92,13 +92,14 @@ ms.locfileid: "69530942"
   
 6.  Klicken Sie nach Abschluss der Verarbeitung auf **Schließen**.  
   
-##  <a name="bkmk_impactanalysis"></a> Ausführen der Auswirkungsanalyse, um Objektabhängigkeiten und den Umfang von Vorgängen zu verstehen  
+##  <a name="bkmk_impactanalysis"></a>Ausführen der Auswirkungs Analyse, um Objektabhängigkeiten und den Umfang der Vorgänge zu identifizieren  
   
 1.  Bevor Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verarbeiten, können Sie die Auswirkung auf die verbundenen Objekte analysieren, indem Sie auf **Auswirkungsanalyse** in einem der **Objekte verarbeiten** -Dialogfelder klicken.  
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Dimension, einen Cube, eine Measuregruppe oder eine Partition, um ein Dialogfeld **Objekte verarbeiten** zu öffnen.  
   
-3.  Klicken Sie auf **Auswirkungsanalyse**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] scannt das Modell und berichtet über Neuverarbeitungsanforderungen für Objekte, die auf das für die Verarbeitung ausgewählte verweisen.  
+3.  Klicken Sie auf **Auswirkungsanalyse**. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] scannt das Modell und berichtet über Neuverarbeitungsanforderungen für Objekte, die auf das für die Verarbeitung ausgewählte verweisen.  
   
 ### <a name="processing-objects-using-xmla"></a>Verarbeiten von Objekten mit XMLA  
   
@@ -108,7 +109,7 @@ ms.locfileid: "69530942"
   
 3.  Wählen Sie im Dialogfeld **Verarbeiten** die Verarbeitungsoption aus, die Sie verwenden möchten. Ändern Sie beliebige andere Einstellungen. Führen Sie die Auswirkungsanalyse aus, um die Änderungen zu identifizieren, die ggf. vorgenommen werden müssen.  
   
-4.  Klicken Sie im Bildschirm zum **Verarbeiten von Objekten** auf **Skript** .  
+4.  Klicken Sie im Bildschirm zum Verarbeiten von Objekten **** auf **Skript** .  
   
      Mit diesem Schritt wird ein XMLA-Skript generiert und ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -XMLA-Abfragefenster geöffnet.  
   
@@ -122,13 +123,13 @@ ms.locfileid: "69530942"
   
 1.  Ab dieser Version von SQL Server können Sie Analysis Services PowerShell-Cmdlets zum Verarbeiten von Objekten verwenden. Die folgenden Cmdlets können interaktiv oder per Skript ausgeführt werden:  
   
-    -   [Invoke-ProcessCube cmdlet (Invoke-ProcessCube-Cmdlet)](/powershell/module/sqlserver/invoke-processcube)  
+    -   [Aufruf-processcube-Cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension cmdlet (Invoke-ProcessDimension-Cmdlet)](/powershell/module/sqlserver/invoke-processdimension)  
+    -   [Cmdlet "Aufruf-ProcessDimension"](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition cmdlet (Invoke-ProcessPartition-Cmdlet)](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Aufruf-processpartition-Cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd-Cmdlet](/powershell/module/sqlserver/invoke-ascmd), das verwendet werden kann, um ein XMLA-, MDX- oder DMX-Skript mit Verarbeitungsbefehlen auszuführen.  
+    -   Das [Cmdlet "Start-ascmd](/powershell/module/sqlserver/invoke-ascmd)", das verwendet werden kann, um XMLA-, MDX-oder DMX-Skripts auszuführen, die Verarbeitungs Befehle enthalten.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Überwachungsobjektverarbeitung mit SQL Server Profiler  
   
@@ -140,11 +141,11 @@ ms.locfileid: "69530942"
   
     -   **Command Begin** und **Command End** , um anzuzeigen, wenn die Verarbeitung gestartet und angehalten wird  
   
-    -   **Error** , um sämtliche Fehler aufzuzeichnen  
+    -   **Fehler** beim Erfassen von Fehlern.  
   
-    -   **Progress Report Begin**, **Progress Report Current**und **Progress Report End** , um über den Verarbeitungsstatus zu berichten und die SQL-Abfragen anzuzeigen, die verwendet wurden, um die Daten abzurufen  
+    -   **Progress Report BEGIN**, **Progress Report Current**und **Progress Report End** , um Berichte zum Prozessstatus zu erhalten und die SQL-Abfragen anzuzeigen, die zum Abrufen der Daten verwendet wurden.  
   
-    -   **Execute MDX Script Begin** und **Execute MDX Script End** , um die Cubeberechnungen anzuzeigen  
+    -   **MDX-Skript ausführen BEGIN** und **Execute MDX Script End** , um die Cubeberechnungen anzuzeigen  
   
     -   Fügen Sie alternativ Sperrereignisse hinzu, wenn Sie auf Verarbeitung bezogene Leistungsprobleme diagnostizieren  
   
@@ -156,7 +157,7 @@ ms.locfileid: "69530942"
   
 3.  Bearbeiten Sie den Task, um eine Verbindung zur Datenbank anzugeben und um zu bestimmen, welche Objekte verarbeitet werden sollen und um die Verarbeitungsoption zu bestimmen. Weitere Informationen zum Implementieren dieses Tasks finden Sie unter [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Objekt Verarbeitung für mehrdimensionale Modelle](processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verarbeitung von mehrdimensionalen Modellobjekten](processing-a-multidimensional-model-analysis-services.md)  
   
   

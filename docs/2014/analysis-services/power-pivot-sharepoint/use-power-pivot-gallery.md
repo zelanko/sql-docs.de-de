@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229229"
 ---
 # <a name="use-powerpivot-gallery"></a>Verwenden des PowerPivot-Katalogs
@@ -43,7 +43,7 @@ ms.locfileid: "75229229"
   
  [Voraussetzungen](#prereq)  
   
-##  <a name="prereq"></a>Voraussetzung  
+##  <a name="prereq"></a> Voraussetzungen  
   
 > [!NOTE]  
 >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
@@ -56,7 +56,7 @@ ms.locfileid: "75229229"
 ##  <a name="icons"></a>Symbole im Power Pivot-Katalog  
  Symbole stellen einen visuellen Indikator zur Inhaltsverfügbarkeit und zum Status bereit.  
   
-|Symbol|Beschreibung|  
+|Symbol|BESCHREIBUNG|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|Das Sanduhrsymbol wird angezeigt, wenn ein Miniaturbild jeder Seite im Dokument generiert wird. Aktualisieren Sie die Seite, um das aktualisierte Bild anzuzeigen.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|Das Seitensymbol wird angezeigt, wenn eine Arbeitsmappe oder ein Bericht mehr Seiten aufweist, als im PowerPivot-Katalog angezeigt werden können. Sie können alle Seiten mithilfe einer Clientanwendung anzeigen.|  
@@ -67,9 +67,9 @@ ms.locfileid: "75229229"
 ##  <a name="add"></a>Speichern einer Excel-Arbeitsmappe im Power Pivot-Katalog  
  Sie können [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen in der Bibliothek veröffentlichen, indem Sie alle in Excel 2010 verfügbaren Freigabeverfahren verwenden. In Excel 2010 können Sie mit der Option Speichern unter den gesamten SharePoint-Pfad oder einen Teil davon in einer Bibliothek zu speichern.  
   
-1.  Speichern Sie die Datei.  
+1.  Speichern Sie die Datei .  
   
-2.  1.  **Excel 2010:** Klicken Sie im Menü Datei auf **speichern #a0 senden**.  
+2.  1.  **Excel 2010:** Klicken Sie im Menü Datei auf **speichern & senden**.  
   
     2.  Klicken Sie auf **Auf SharePoint speichern**.  
   

@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8d81d0447558f964839b8849fe141f127fe1e37c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982144"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für jedes Statistikobjekt, das für Tabellen, Indizes und indizierte Sichten in der Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden ist. Jeder Index verfügt über eine entsprechende Statistikzeile mit dem gleichen Namen und der gleichen ID (**index_id** = **stats_id**), doch verfügt nicht jede Statistikzeile über einen entsprechenden Index.  
+  Enthält eine Zeile für jedes Statistikobjekt, das für Tabellen, Indizes und indizierte Sichten in der Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden ist. Jeder Index verfügt über eine entsprechende Statistik Zeile mit dem gleichen Namen und der gleichen ID (**index_id** = **stats_id**), aber nicht jede Statistik Zeile verfügt über einen entsprechenden Index.  
   
- Die Katalogsicht [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) stellt Statistikinformationen für jede Spalte in der Datenbank bereit. Weitere Informationen zu Statistiken finden Sie unter [Statistics](../../relational-databases/statistics/statistics.md).  
+ Die Katalogsicht [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) stellt Statistikinformationen für jede Spalte in der Datenbank bereit. Weitere Informationen zu Statistiken finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md).  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, zu dem diese Statistik gehört.|  
 |**name**|**sysname**|Der Name der Statistik. Ist eindeutig innerhalb des Objekts.|  
@@ -67,13 +67,13 @@ INNER JOIN sys.columns AS c
 WHERE s.object_id = OBJECT_ID('HumanResources.Employee');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Abfragen der SQL Server-System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [Statistik](../../relational-databases/statistics/statistics.md)    
+ [Abfragen der SQL Server System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Statistiken](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys. dm_db_stats_histogram &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

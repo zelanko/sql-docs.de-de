@@ -11,10 +11,10 @@ ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728183"
 ---
 # <a name="import-statuses-master-data-services"></a>Importstatus (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73728183"
 
   Auf der Seite **Stagingbatches** im Funktionsbereich **Integrationsmanagement** sind die folgenden Status möglich.  
   
-|Status|Beschreibung|Status_ID|  
+|Status|BESCHREIBUNG|Status_ID|  
 |------------|-----------------|----------------|  
 |Zur Ausführung vorgemerkt|Die Verarbeitung des Batches wurde nicht gestartet.|1|  
 |Wird ausgeführt|Der Batch wird verarbeitet.|2|  
@@ -31,7 +31,7 @@ ms.locfileid: "73728183"
 |Zum Löschen vorgemerkt|Die Batchverarbeitung wurde beendet, und der Batch wird gelöscht.|4|  
 |Gelöscht|Der Batch wurde gelöscht.|5|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

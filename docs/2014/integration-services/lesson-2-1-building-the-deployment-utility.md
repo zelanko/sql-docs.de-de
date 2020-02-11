@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Erstellen des Bereitstellungshilfsprogramms | Microsoft-Dokumentation'
+title: 'Schritt 1: Erstellen des Bereitstellungs-Hilfsprogramms | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767582"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Schritt 1: Erstellen des Bereitstellungshilfsprogramms
+# <a name="step-1-building-the-deployment-utility"></a>Schritt 1: Erstellen des Bereitstellungs-Hilfsprogramms
   In dieser Aufgabe konfigurieren und erstellen Sie ein Bereitstellungsprogramm für das Deployment Tutorial-Projekt.  
   
  Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschaften des Deployment Tutorial-Projekts ändern. Sie können diese Eigenschaften im Dialogfeld **Deployment Tutorial-Eigenschaftenseiten** konfigurieren. In diesem Dialogfeld müssen Sie die Fähigkeit aktivieren, Konfigurationen während der Bereitstellung zu aktualisieren, und angeben, dass beim Erstellungsvorgang ein Bereitstellungshilfsprogramm generiert werden soll. Nach dem Festlegen der Eigenschaften erstellen Sie das Projekt.  
@@ -34,7 +34,7 @@ ms.locfileid: "62767582"
   
 4.  Erweitern Sie im Dialogfeld **Deployment Tutorial-Eigenschaftenseiten** den Knoten Konfigurationseigenschaften, und klicken Sie auf Bereitstellungshilfsprogramm.  
   
-5.  Im rechten Bereich die **Deployment Tutorial-Eigenschaftenseiten** Dialogfeld überprüfen Sie, ob `AllowConfigurationChanges` nastaven NA hodnotu `true`legen `CreateDeploymentUtility` zu `true`, und aktualisieren Sie optional den Standardwert `DeploymentOutputPath`.  
+5.  Überprüfen Sie im rechten Bereich des Dialog Felds **Deployment Tutorial-Eigenschaften Seiten** , `AllowConfigurationChanges` `true`ob auf festgelegt ist `CreateDeploymentUtility` , `true`legen Sie auf fest, und aktualisieren Sie `DeploymentOutputPath`optional den Standardwert von.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767582"
   
 4.  Überprüfen Sie im Ausgabefenster die folgenden Informationen:  
   
-     Build started: SQL Integration Services project: Incremental ...  
+     Erstellung gestartet: SQL Integration Services-Projekt: Inkrementell ...  
   
      Bereitstellungshilfsprogramm wird erstellt...  
   
@@ -56,16 +56,16 @@ ms.locfileid: "62767582"
   
      Erstellung abgeschlossen -- 0 Fehler, 0 Warnungen  
   
-     ========== Build: 0 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========  
+     ========== Erstellen: 0 erfolgreich, Fehler bei 0, 1 aktuell, 0 übersprungen ==========  
   
 5.  Klicken Sie im Menü **Datei** auf **Beenden**. Wenn Sie zum Speichern der Änderungen an Deployment Tutorial-Elementen aufgefordert werden, klicken Sie auf **Ja**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 2: Überprüfen des Bereitstellungspakets](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Bereitstellungs-Hilfsprogramms](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

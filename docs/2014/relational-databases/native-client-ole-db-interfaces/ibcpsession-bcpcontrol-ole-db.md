@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpcontrol (OLE DB) | Microsoft-Dokumentation'
+title: 'IBCPSession:: BCPControl (OLE DB) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fae6e3ba4f861fa7d75ae3ee4e8825350d80c39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046745"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
@@ -35,29 +35,29 @@ inteOption,
 void *iValue);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mit der **BCPControl**-Methode werden verschiedene Steuerelementparameter für Massenkopiervorgänge festgelegt, einschließlich der Anzahl von Fehlern, die vor dem Abbrechen eines Massenkopiervorgangs zulässig sind, der Nummern der ersten und letzten Zeilen, die aus einer Datendatei kopiert werden sollen, und der Batchgröße.  
   
- Außerdem wird diese Methode dazu verwendet, die SELECT-Anweisung beim Massenkopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzugeben. Sie können festlegen, die `eOption` -Argument auf BCP_OPTION_HINTS und `iValue` Argument ein Zeiger auf eine Breitzeichen-Zeichenfolge, die mit der SELECT-Anweisung vorhanden ist.  
+ Außerdem wird diese Methode dazu verwendet, die SELECT-Anweisung beim Massenkopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzugeben. Sie können das `eOption` Argument auf BCP_OPTION_HINTS und das `iValue` Argument festlegen, um einen Zeiger auf eine breit Zeichen-Zeichenfolge mit der SELECT-Anweisung zu erhalten.  
   
- Mögliche Werte für *eOption* sind:  
+ Mögliche Werte für *eOption* :  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|BCP_OPTION_ABORT|Beendet einen Massenkopiervorgang, der bereits ausgeführt wird. Sie können die **BCPControl**-Methode mit einem *eOption*-Argument von BCP_OPTION_ABORT aus einem anderen Thread aufrufen, um den ausgeführten Massenkopiervorgang anzuhalten. Die *iValue* Argument wird ignoriert.|  
+|BCP_OPTION_ABORT|Beendet einen Massenkopiervorgang, der bereits ausgeführt wird. Sie können die **BCPControl**-Methode mit einem *eOption*-Argument von BCP_OPTION_ABORT aus einem anderen Thread aufrufen, um den ausgeführten Massenkopiervorgang anzuhalten. Das *iValue* -Argument wird ignoriert.|  
 |BCP_OPTION_BATCH|Die Anzahl der Zeilen pro Batch. Der Standardwert ist 0 (null), womit beim Extrahieren von Daten alle Zeilen in einer Tabelle oder beim Kopieren von Daten nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Zeilen in der Benutzerdatendatei angegeben werden. Mit einem Wert kleiner als 1 wird BCP_OPTION_BATCH auf den Standardwert zurückgesetzt.|  
-|BCP_OPTION_DELAYREADFMT|Ein boolescher Wert. Wenn er auf TRUE festgelegt ist, erfolgt das Lesen durch [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) bei der Ausführung. Wenn False (Standard), ibcpsession:: Bcpreadfmt sofort wird die Formatdatei zu lesen. Ein Sequenzfehler tritt erfolgt, wenn `BCP_OPTION_DELAYREADFMT` ist "true", und Sie rufen ibcpsession:: BCPColumns oder ibcpsession:: BCPColFmt.<br /><br /> Ein Sequenzfehler tritt auch aufrufen `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` nach dem Aufruf `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` und ibcpsession:: Bcpwritefmt.<br /><br /> Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).|  
-|BCP_OPTION_FILECP|Das *iValue*-Argument enthält die Nummer der Codepage für die Datendatei. Sie können die Nummer der Codepage angeben, z. B. 1252 oder 850, oder einen der folgenden Werte:<br /><br /> -BCP_FILECP_ACP: Daten in der Datei befinden sich in der Microsoft Windows? die Codepage des Clients.<br />-BCP_FILECP_OEMCP: Daten in der Datei ist, in der OEM-Codepage des Clients (Standard).<br />-BCP_FILECP_RAW: Daten in der Datei befindet sich in der Codepage des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|BCP_OPTION_FILEFMT|Die Versionsnummer des Datendateiformats. Diese kann 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) oder 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) sein. Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden.  Geben Sie beispielsweise zum Importieren von Daten aus einer Textspalte eines [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Servers in eine **varchar(max)** -Spalte auf einem [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Server oder höher den Wert 80 an. Wenn Sie den Wert 80 entsprechend beim Exportieren von Daten aus einer **varchar(max)** -Spalte angeben, werden diese wie Textspalten im [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Format gespeichert und können in eine Textspalte eines[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Servers importiert werden.|  
+|BCP_OPTION_DELAYREADFMT|Ein boolescher Wert. Wenn er auf TRUE festgelegt ist, erfolgt das Lesen durch [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) bei der Ausführung. Der Standardwert false gibt an, dass die Format Datei von IBCPSession:: bcpreadf sofort gelesen wird. Ein Sequenz Fehler tritt auf, `BCP_OPTION_DELAYREADFMT` wenn den Wert true hat und Sie IBCPSession:: BCPColumns oder IBCPSession:: BCPColFmt aufgerufen haben.<br /><br /> Ein Sequenz Fehler tritt auch auf, wenn Sie `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` nach Aufrufen `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` von und IBCPSession:: bcpwrite tefmt aufrufen.<br /><br /> Weitere Informationen finden Sie unter [metadatenermittlung](../native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_FILECP|Das *iValue*-Argument enthält die Nummer der Codepage für die Datendatei. Sie können die Nummer der Codepage angeben, z. B. 1252 oder 850, oder einen der folgenden Werte:<br /><br /> -BCP_FILECP_ACP: Daten in der Datei befinden sich in Microsoft Windows?? Codepage des Clients.<br />-BCP_FILECP_OEMCP: die Daten in der Datei befinden sich auf der OEM-Codepage des Clients (Standard).<br />-BCP_FILECP_RAW: die Daten in der Datei befinden sich auf der Codepage von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|BCP_OPTION_FILEFMT|Die Versionsnummer des Datendateiformats. Diese kann 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) oder 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) sein. Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden.  Geben Sie beispielsweise zum Importieren von Daten aus einer Textspalte eines [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Servers in eine **varchar(max)**-Spalte auf einem [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Server oder höher den Wert 80 an. Wenn Sie den Wert 80 entsprechend beim Exportieren von Daten aus einer **varchar(max)**-Spalte angeben, werden diese wie Textspalten im [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Format gespeichert und können in eine Textspalte eines[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Servers importiert werden.|  
 |BCP_OPTION_FIRST|Die erste Datenzeile der zu kopierenden Datei oder Tabelle. Der Standard ist 1; ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück.|  
-|BCP_OPTION_FIRSTEX|Gibt für BCP-OUT-Vorgänge die erste Zeile der Datenbanktabelle an, die in die Datendatei kopiert werden soll.<br /><br /> Gibt für BCP-IN-Vorgänge die erste Zeile der Datendatei an, die in die Datenbanktabelle kopiert werden soll.<br /><br /> Die *iValue* Parameter wird die Adresse einer 64-Bit-Ganzzahl mit Vorzeichen werden mit dem Wert erwartet. Der maximale Wert, der an BCPFIRSTEX übergeben werden kann, ist 2^63-1.|  
-|BCP_OPTION_FMTXML|Gibt an, dass die generierte Formatdatei das XML-Format aufweisen sollte. Diese Option ist standardmäßig deaktiviert. Die Formatdateien werden standardmäßig als Textdateien gespeichert. Das XML-Format bietet größere Flexibilität, ist jedoch mit einigen Einschränkungen verbunden. Sie können beispielsweise das Präfix und das Abschlusszeichen für ein Feld nicht gleichzeitig angeben, was in älteren Formatdateien durchaus möglich war. **Hinweis**:  XML-Formatdateien werden nur unterstützt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools werden installiert, zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.|  
+|BCP_OPTION_FIRSTEX|Gibt für BCP-OUT-Vorgänge die erste Zeile der Datenbanktabelle an, die in die Datendatei kopiert werden soll.<br /><br /> Gibt für BCP-IN-Vorgänge die erste Zeile der Datendatei an, die in die Datenbanktabelle kopiert werden soll.<br /><br /> Der *iValue* -Parameter wird als Adresse einer signierten 64-Bit-Ganzzahl erwartet, die den Wert enthält. Der maximale Wert, der an BCPFIRSTEX übergeben werden kann, ist 2^63-1.|  
+|BCP_OPTION_FMTXML|Gibt an, dass die generierte Formatdatei das XML-Format aufweisen sollte. Diese Option ist standardmäßig deaktiviert. Die Formatdateien werden standardmäßig als Textdateien gespeichert. Das XML-Format bietet größere Flexibilität, ist jedoch mit einigen Einschränkungen verbunden. Sie können beispielsweise das Präfix und das Abschlusszeichen für ein Feld nicht gleichzeitig angeben, was in älteren Formatdateien durchaus möglich war. **Hinweis:**  XML-Format Dateien werden nur unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stützt, wenn Tools zusammen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Native Client installiert werden.|  
 |BCP_OPTION_HINTS|Das *iValue*-Argument enthält einen Zeichenfolgenzeiger mit Breitzeichen. Die adressierte Zeichenfolge gibt entweder Verarbeitungshinweise für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Massenkopieren oder eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung an, die ein Resultset zurückgibt. Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung angegeben ist, die mehr als ein Resultset zurückgibt, werden alle auf das erste Resultset folgenden Resultsets nicht berücksichtigt.|  
 |BCP_OPTION_KEEPIDENTITY|Wenn das *iValue*-Argument auf TRUE festgelegt ist, wird mit dieser Option angegeben, dass die Massenkopiermethoden Datenwerte einfügen, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalten bereitgestellt werden, die mit einer Identitätsbeschränkung definiert sind. Die Eingabedatei muss Werte für die IDENTITY-Spalten angeben. Wenn dies nicht festgelegt ist, werden neue Identitätswerte für die eingefügten Zeilen generiert. Alle in der Datei für die IDENTITY-Spalten vorhandenen Daten werden ignoriert.|  
 |BCP_OPTION_KEEPNULLS|Bestimmt, ob leere Datenwerte in der Datei in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in NULL-Werte konvertiert werden. Wenn das *iValue*-Argument auf TRUE festgelegt ist, werden leere Werte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in NULL-Werte konvertiert. In der Standardeinstellung werden leere Werte in einen Standardwert für die Spalte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle konvertiert, sofern ein Standardwert angegeben ist.|  
 |BCP_OPTION_LAST|Die letzte zu kopierende Zeile. Standardmäßig werden alle Zeilen kopiert. Ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück.|  
-|BCP_OPTION_LASTEX|Gibt für BCP-OUT-Vorgänge die letzte Zeile der Datenbanktabelle an, die in die Datendatei kopiert werden soll.<br /><br /> Gibt für BCP-IN-Vorgänge die letzte Zeile der Datendatei an, die in die Datenbanktabelle kopiert werden soll.<br /><br /> Die *iValue* Parameter wird die Adresse einer 64-Bit-Ganzzahl mit Vorzeichen werden mit dem Wert erwartet. Der maximale Wert, der an BCPLASTEX übergeben werden kann, ist 2^63-1.|  
-|BCP_OPTION_MAXERRS|Die Anzahl von Fehlern, die zulässig sind, bevor der Massenkopiervorgang fehlschlägt. Der Standardwert ist 10. Ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück. Beim Massenkopieren sind maximal 65.535 Fehler zulässig. Wenn für diese Option größere Werte als 65.535 festgelegt werden, wird diese Option auf 65.535 festgelegt.|  
+|BCP_OPTION_LASTEX|Gibt für BCP-OUT-Vorgänge die letzte Zeile der Datenbanktabelle an, die in die Datendatei kopiert werden soll.<br /><br /> Gibt für BCP-IN-Vorgänge die letzte Zeile der Datendatei an, die in die Datenbanktabelle kopiert werden soll.<br /><br /> Der *iValue* -Parameter wird als Adresse einer signierten 64-Bit-Ganzzahl erwartet, die den Wert enthält. Der maximale Wert, der an BCPLASTEX übergeben werden kann, ist 2^63-1.|  
+|BCP_OPTION_MAXERRS|Die Anzahl von Fehlern, die zulässig sind, bevor der Massenkopiervorgang fehlschlägt. (Standardwert: 10.) Ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück. Beim Massenkopieren sind maximal 65.535 Fehler zulässig. Wenn für diese Option größere Werte als 65.535 festgelegt werden, wird diese Option auf 65.535 festgelegt.|  
 |BCP_OPTION_ROWCOUNT|Gibt die Anzahl von Zeilen zurück, auf die sich der aktuelle (oder letzte) BCP-Vorgang auswirkt.|  
 |BCP_OPTION_TEXTFILE|Die Datendatei ist keine Binärdatei, sondern eine Textdatei. BCP stellt fest, ob es sich bei der Textdatei um eine Unicode-Datei handelt, indem der Unicode-Bytemarker in den ersten beiden Bytes der Datendatei überprüft wird.|  
 |BCP_OPTION_UNICODEFILE|Wenn diese Option auf TRUE festgelegt wurde, bedeutet das, dass die Eingabedatei ein Unicode-Dateiformat ist.|  
@@ -74,7 +74,7 @@ void *iValue);
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anwenderspezifischer Fehler ist aufgetreten. Ausführlichere Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) -Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)-Schnittstelle.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode wurde beispielsweise vor dem Aufruf dieser Funktion nicht aufgerufen.  
@@ -82,7 +82,7 @@ void *iValue);
  E_OUTOFMEMORY  
  Fehler aufgrund nicht genügenden Arbeitsspeichers  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../native-client/features/performing-bulk-copy-operations.md)  
   

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785186"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Konvertieren von DB-Library-Programmen zum Massenkopieren in ODBC-Programme
@@ -46,7 +46,7 @@ ms.locfileid: "73785186"
     |-------------------------|--------------------------------|-------------------------|  
     |Angabe von NULL-Werten|0|-1 (SQL_NULL_DATA)|  
     |Angabe von variablen Daten|-1|-10 (SQL_VARLEN_DATA)|  
-    |Zeichen oder binäre Zeichenfolge mit der Länge 0|NA|0|  
+    |Zeichen oder binäre Zeichenfolge mit der Länge 0|Nicht verfügbar|0|  
   
      In DB-Library gibt der *varlen* -Wert-1 an, dass Daten variabler Länge angegeben werden, die in den ODBC- *cbData* so interpretiert werden, dass nur NULL-Werte angegeben werden. Ändern Sie alle DB-Library- *varlen* -Spezifikationen von-1 in SQL_VARLEN_DATA und alle *varlen* -Spezifikationen von 0 in SQL_NULL_DATA.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785186"
   
     -   **DateTime** -und **smalldatetime** -Zeichen folgen in einem beliebigen Format, das von der DB-Library-Funktion **DBConvert** unterstützt wird.  
   
-    -   Wenn das Feld **internationale Einstellungen verwenden** auf der Registerkarte DB-Library- **Optionen** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client-Netzwerk Hilfsprogramms aktiviert ist, akzeptieren die DB-Library-Massen Kopierfunktionen auch Datumsangaben in dem regionalen Datumsformat, das für die Gebiets Schema Einstellung des Client Computer Registrierung.  
+    -   Wenn das Feld **internationale Einstellungen verwenden** auf der Registerkarte DB-Library- **Optionen** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Netzwerk-Hilfsprogramms aktiviert ist, akzeptieren die DB-Library-Massen Kopierfunktionen auch Datumsangaben in dem regionalen Datumsformat, das für die Gebiets Schema Einstellung der Client Computer Registrierung definiert ist.  
   
      Die DB-Library-Funktionen zum Massen kopieren akzeptieren die ODBC **DateTime** -und **smalldatetime** -Formate nicht.  
   
@@ -108,8 +108,8 @@ ms.locfileid: "73785186"
   
 -   Beim Ausgeben von **Money** -Werten im Zeichenformat stellen ODBC-Funktionen zum Massen kopieren vier Ziffern der Genauigkeit und keine Komma Trennzeichen bereit. DB-Library-Versionen bieten nur zwei Ziffern der Genauigkeit und enthalten die Komma Trennzeichen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massen Kopier &#40;Vorgängen&#41; für ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) -   
- [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Massen Kopier Vorgängen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

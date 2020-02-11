@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890371"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Analysis Services)
@@ -36,51 +36,51 @@ ms.locfileid: "68890371"
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md).  
   
-## <a name="options"></a>Optionen  
- **Analysis Services-Verbindungs-Manager**  
+## <a name="options"></a>Tastatur  
+ **Analysis Services Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Analysis Services-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Neu**  
  Erstellen Sie einen neuen Analysis Services-Verbindungs-Manager.  
   
- **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialog Felds Analysis Services Verbindungs-Manager hinzufügen](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Objektliste**  
- |Eigenschaft|Beschreibung|  
+ |Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|**Objektname**|Listet die angegebenen Objektnamen auf.|  
+|**Objektnamen**|Listet die angegebenen Objektnamen auf.|  
 |**Typ**|Listet die Typen der angegebenen Objekte auf.|  
-|**Verarbeitungsoptionen**|Wählen Sie eine Verarbeitungsoption in der Liste aus.<br /><br /> **Verwandte Themen:** [Objekt Verarbeitung für mehrdimensionale Modelle](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Prozess Optionen**|Wählen Sie eine Verarbeitungsoption in der Liste aus.<br /><br /> **Verwandte Themen**: [Verarbeitung von mehrdimensionalen Modell Objekten](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Einstellungen**|Listet die Verarbeitungseinstellungen für die angegebenen Objekte auf.|  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie der Liste ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie ein Objekt aus, und klicken Sie auf **Löschen**.  
   
- **Auswirkungsanalyse**  
+ **Auswirkungs Analyse**  
  Führen Sie für das ausgewählte Objekt eine Auswirkungsanalyse aus.  
   
- **Verwandte Themen:** [Dialogfeld „Auswirkungsanalyse“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Verwandte Themen:** [Dialog Feld "Auswirkungs Analyse" &#40;Analysis Services Mehrdimensionale Daten&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
- **Zusammenfassung der Batcheinstellungen**  
- |Eigenschaft|Beschreibung|  
+ **Zusammenfassung der Batch Einstellungen**  
+ |Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**Verarbeitungsreihenfolge**|Gibt an, ob die Objekte nacheinander oder als Batch verarbeitet werden; bei Verwendung der parallelen Verarbeitung wird die Anzahl der gleichzeitig verarbeiteten Objekte angegeben.|  
 |**Transaktionsmodus**|Gibt den Transaktionsmodus für die sequenzielle Verarbeitung an.|  
-|**Dimensionsfehler**|Gibt das Verhalten des Tasks bei Auftreten eines Fehlers an.|  
-|**Fehlerprotokollpfad für Dimensionsschlüssel**|Gibt den Pfad der Datei an, in der Fehler protokolliert werden.|  
+|**Dimensions Fehler**|Gibt das Verhalten des Tasks bei Auftreten eines Fehlers an.|  
+|**Fehlerprotokoll Pfad für Dimensions Schlüssel**|Gibt den Pfad der Datei an, in der Fehler protokolliert werden.|  
 |**Betroffene Objekte verarbeiten**|Kennzeichnet, ob abhängige oder betroffene Objekte auch verarbeitet werden.|  
   
  **Einstellungen ändern**  
  Ändern Sie die Verarbeitungsoptionen und die Fehlerbehandlung bei Dimensionsschlüsseln.  
   
- **Verwandte Themen:** [Dialogfeld „Einstellungen ändern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Verwandte Themen:** [Dialog Feld "Einstellungen ändern" &#40;Analysis Services-Mehrdimensionale Daten&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Analysis Services-Verarbeitungstask &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services Verarbeitungs Task-Editor &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)   
  [DDL ausführen (Analysis Services-Task)](control-flow/analysis-services-execute-ddl-task.md)  
   
   

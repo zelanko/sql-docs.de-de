@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4b8e516d2e96c1cc4812a36800fd22371729445d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724863"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Ausführen von Vorhersagen mithilfe eines eingebetteten R-Skripts in einer gespeicherten Prozedur
@@ -189,7 +189,7 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
 
 3. Die Ergebnisse geben an, dass die Wahrscheinlichkeit eines Trinkgelds für diese „Top 10-Fahrten“ sehr niedrig ist, da hier nur Einzelpersonen über eine relativ kurze Entfernung mitgefahren sind.
 
-## <a name="conclusions"></a>Schlussfolgerungen
+## <a name="conclusions"></a>Zusammenfassung
 
 Dies ist der Abschluss für das Lernprogramm. Nachdem Sie erfahren haben, wie Sie R-Code in gespeicherte Prozeduren einbetten, können Sie diese Vorgehensweisen erweitern, um eigene Modelle zu erstellen. Die Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] macht es viel einfacher, R-Modelle für Vorhersagen bereitzustellen und das erneute Trainieren von Modellen im Rahmen eines Unternehmensdatenworkflows zu integrieren.
 

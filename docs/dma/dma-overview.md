@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632855"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Datenmigrations-Assistent
 
-Mit dem Datenmigrations-Assistent (DMA) können Sie ein Upgrade auf eine moderne Datenplattform durchführen, indem Sie Kompatibilitätsprobleme erkennen, die sich auf die Datenbankfunktionalität in ihrer neuen SQL Server oder Azure SQL-Datenbank auswirken können. DMA empfiehlt Leistungs-und Zuverlässigkeitsverbesserungen für Ihre Zielumgebung und ermöglicht Ihnen das Verschieben von Schema, Daten und nicht enthaltenen Objekten vom Quell Server auf den Zielserver.
+Mit dem Datenmigrations-Assistent (DMA) können Sie ein Upgrade auf eine moderne Datenplattform durchführen, indem Sie Kompatibilitätsprobleme erkennen, die sich auf die Datenbankfunktionalität in ihrer neuen SQL Server oder Azure SQL-Datenbank auswirken können. DMA empfiehlt Leistungs- und Zuverlässigkeitsverbesserungen für Ihre Zielumgebung und ermöglicht es Ihnen, Ihr Schema, Ihre Daten und abhängige Objekte vom Quellserver auf Ihren Zielserver zu verschieben.
 
 > [!NOTE]
 > Für große Migrationen (in Bezug auf Anzahl und Größe von Datenbanken) empfiehlt es sich, die [Azure Database Migration Service](/azure/dms/dms-overview)zu verwenden, mit der Datenbanken skaliert migriert werden können.
@@ -34,23 +34,23 @@ Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microso
 
 ## <a name="capabilities"></a>Funktionen
 
-- Bewerten Sie lokale SQL Server Instanzen, die zu Azure SQL-Datenbank (en) migriert werden. Mit dem Bewertungs Workflow können Sie die folgenden Probleme erkennen, die sich auf die Migration der Azure SQL-Datenbank auswirken können. Sie erhalten eine ausführliche Anleitung, wie Sie Sie beheben können.
+- Bewerten Sie lokale SQL Server Instanzen, die zu Azure SQL-Datenbank (en) migriert werden.Mit dem Bewertungs Workflow können Sie die folgenden Probleme erkennen, die sich auf die Migration der Azure SQL-Datenbank auswirken können. Sie erhalten eine ausführliche Anleitung, wie Sie Sie beheben können.
 
-  - Probleme beim Blockieren der Migration: Hiermit werden die Kompatibilitätsprobleme ermittelt, die die Migration der lokalen SQL Server Datenbank (en) zu Azure SQL-Datenbank (en) blockieren. DMA bietet Empfehlungen, die Ihnen helfen, diese Probleme zu beheben.
+  - Probleme beim Blockieren der Migration: Hiermit werden die Kompatibilitätsprobleme ermittelt, die die Migration der lokalen SQL Server Datenbank (en) zu Azure SQL-Datenbank (en) blockieren.DMA bietet Empfehlungen, die Ihnen helfen, diese Probleme zu beheben.
 
-  - Teilweise unterstützte oder nicht unterstützte Funktionen: erkennt teilweise unterstützte oder nicht unterstützte Funktionen, die zurzeit auf der Quell SQL Server Instanz verwendet werden. DMA bietet eine umfassende Reihe von Empfehlungen, alternative Ansätze in Azure und Entschärfung von Schritten, damit Sie Sie in Ihre Migrationsprojekte integrieren können.
+  - Teilweise unterstützte oder nicht unterstützte Funktionen: erkennt teilweise unterstützte oder nicht unterstützte Funktionen, die zurzeit auf der Quell SQL Server Instanz verwendet werden.DMA bietet eine umfassende Reihe von Empfehlungen, alternative Ansätze in Azure und Entschärfung von Schritten, damit Sie Sie in Ihre Migrationsprojekte integrieren können.
 
-- Entdecken Sie Probleme, die ein Upgrade auf eine lokale SQL Server beeinflussen können. Diese werden als Kompatibilitätsprobleme beschrieben und in den folgenden Kategorien organisiert:
+- Entdecken Sie Probleme, die ein Upgrade auf eine lokale SQL Server beeinflussen können.Diese werden als Kompatibilitätsprobleme beschrieben und in den folgenden Kategorien organisiert:
 
-  - Wichtige Änderungen
-  - Verhaltensänderungen
+  - Aktuelle Änderungen
+  -  Behavior Changes
   - Veraltete Features
 
 - Entdecken Sie neue Features auf der Ziel SQL Server Plattform, von der die Datenbank nach einem Upgrade profitieren kann. Diese werden als featureempfehlungen beschrieben und in den folgenden Kategorien organisiert:
 
   - Leistung
   - Sicherheit
-  - Speicherung
+  - Storage
 
 - Migrieren Sie eine lokale SQL Server Instanz zu einer modernen SQL Server Instanz, die lokal oder auf einem virtuellen Azure-Computer (VM) gehostet wird, auf den von Ihrem lokalen Netzwerk aus zugegriffen werden kann. Auf den virtuellen Azure-Computer kann mithilfe von VPN oder anderen Technologien zugegriffen werden. Der Migrations Workflow unterstützt Sie beim Migrieren der folgenden Komponenten:
 
@@ -67,7 +67,7 @@ Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microso
 
   - Informationsprobleme: erkennt teilweise unterstützte oder veraltete Features, die in Quellpaketen verwendet werden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zum Ausführen einer Bewertung müssen Sie ein Mitglied der Rolle SQL Server **sysadmin** sein.
 
@@ -75,28 +75,28 @@ Zum Ausführen einer Bewertung müssen Sie ein Mitglied der Rolle SQL Server **s
 
 DMA ersetzt alle vorherigen Versionen von SQL Server Upgrade Advisor und sollte für die meisten SQL Server Versionen verwendet werden. Die folgenden Quell-und Ziel Versionen werden unterstützt:
 
-**Stammt**
+**Quellen**
 
 - SQL Server 2005
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012
-- SQLServer 2014
+- SQL Server 2014
 - SQL Server 2016
-- SQL Server 2017 unter Windows
+-  SQL Server 2017 unter Windows
 
-**Lern**
+**Ziele**
 
 - SQL Server 2012
-- SQLServer 2014
+- SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 unter Windows und Linux
 - SQL Server 2019
 - Azure SQL-Datenbank – Singleton
-- Verwaltete Azure SQL-Datenbank-Instanz
+- Azure SQL-Datenbank – Verwaltete Instanz
 - SQL Server auf einem virtuellen Azure-Computer
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Bewerten der SQL Server Migration](../dma/dma-assesssqlonprem.md)
 

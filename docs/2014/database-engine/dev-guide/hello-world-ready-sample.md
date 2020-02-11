@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637655"
 ---
 # <a name="hello-world-ready-sample"></a>Beispiel für "Hello World Ready"
   Das Hello World Ready-Beispiel veranschaulicht die grundlegenden Vorgänge, die beim Erstellen, Bereitstellen und Testen einer einfachen gespeicherten World-Ready-Prozedur auf der Basis einer CLR (Common Language Runtime)-Integration ausgeführt werden müssen. Eine World-Ready-Komponente lässt sich problemlos in verschiedene Sprachen für unterschiedliche Märkte in aller Welt lokalisieren, ohne den Quellcode der Komponente zu ändern. Dieses Beispiel zeigt außerdem, wie Sie Daten über einen Ausgabeparameter und einen Datensatz, der dynamisch von der gespeicherten Prozedur erstellt und an den Client zurückgegeben wird, zurückgeben können. Das Beispiel ist fast identisch mit dem Hello World-Beispiel, die Anwendung ist jedoch einfacher und sicherer zu lokalisieren. Das Ändern von lokalisiertem Text erfordert Folgendes:  
   
-1.  Ändern einer XML-Datei (.`resx` Datei) für die jeweilige Kultur im Ressourcenverzeichnis  
+1.  Ändern einer XML-Datei (der.`resx` Datei) für die jeweilige Kultur im Ressourcenverzeichnis  
   
 2.  Erstellen der Ressourcendatei der Kultur mithilfe von `resgen`  
   
@@ -30,12 +30,14 @@ ms.locfileid: "73637655"
   
  Der Quellcode und die Assembly für die eigentliche gespeicherte CLR-Prozedur bleiben unverändert. Ein `build.cmd`-Skript wird bereitgestellt, das veranschaulicht, wie die Ressourcenassemblys kompiliert und verknüpft werden. Obwohl der Quellcode der Anwendung einen Ressourcen-Manager auf der Basis der aktuell ausgeführten Assembly erstellt, müssen Sie die kulturneutralen Ressourcen nicht in die DLL einbetten, die die gespeicherte Prozedur enthält. Das `System.Resources.NeutralResourcesLanguage attribute` lässt die kulturneutralen Ressourcen in einer Satelliten-DLL zu. Es empfiehlt sich, für diesen Zweck eine separate DLL zu verwenden, damit die primäre DLL, in der sich die gespeicherte CLR-Prozedur befindet, nicht geändert werden muss, wenn lokalisierter Text hinzugefügt oder geändert werden muss. Dies erweist sich vor allem für benutzerdefinierte CLR-Typen als hilfreich, die möglicherweise Spalten und andere Abhängigkeiten beinhalten, die es schwierig machen, den Typ zu löschen und erneut hinzuzufügen. Normalerweise müssen die Satelliten-DLL-Versionen mit der Version der Hauptassembly übereinstimmen. Sie können jedoch das `SatelliteContractVersion`-Attribut dazu verwenden, das Aktualisieren der Hauptassembly zuzulassen, ohne gleichzeitig die Satellitenassemblys zu aktualisieren. Weitere Informationen finden Sie in der `ResourceManager`-Klasse in der Microsoft .NET-Dokumentation.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Dieses Beispiel kann nur mit SQL Server 2005 und höheren Versionen ausgeführt werden.  
   
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -76,9 +78,9 @@ ms.locfileid: "73637655"
   
 3.  Erstellen Sie in c:\MySample die Datei `HelloWorld.vb` (für das Visual Basic-Beispiel) oder `HelloWorld.cs` (für das C#-Beispiel), und kopieren Sie den entsprechenden Visual Basic- oder C#-Beispielcode (unten) in die Datei.  
   
-4.  Erstellen Sie in c:\mysample die Datei `messages.resx`, und kopieren Sie den Beispielcode in die Datei.  
+4.  Erstellen Sie in c:\mysample die Datei `messages.resx` , und kopieren Sie den Beispielcode in die Datei.  
   
-5.  Erstellen Sie in c:\mysample die Datei `messages.de.resx`, indem Sie die Datei `messages.resx` als `messages.de.resx` speichern, nachdem Sie die Zeile geändert haben.  
+5.  Erstellen Sie in c:\mysample die Datei `messages.de.resx` , indem Sie die `messages.resx` Datei `messages.de.resx` nach dem Ändern der Zeile speichern.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +88,7 @@ ms.locfileid: "73637655"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  Erstellen Sie in c:\mysample die Datei `messages.es.resx`, indem Sie die Datei `messages.resx` als `messages.es.resx` speichern, nachdem Sie die Zeile geändert haben.  
+6.  Erstellen Sie in c:\mysample die Datei `messages.es.resx` , indem Sie die `messages.resx` Datei `messages.es.resx` nach dem Ändern der Zeile speichern.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +96,7 @@ ms.locfileid: "73637655"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  Erstellen Sie in c:\mysample die Datei `messages.fr.resx`, indem Sie die Datei `messages.resx` als `messages.fr.resx` speichern, nachdem Sie die Zeile geändert haben.  
+7.  Erstellen Sie in c:\mysample die Datei `messages.fr.resx` , indem Sie die `messages.resx` Datei `messages.fr.resx` nach dem Ändern der Zeile speichern.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +104,7 @@ ms.locfileid: "73637655"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  Erstellen Sie in c:\mysample die Datei `messages.fr-FR.resx`, indem Sie die Datei `messages.resx` als `messages.fr-FR.resx` speichern, nachdem Sie die Zeile geändert haben.  
+8.  Erstellen Sie in c:\mysample die Datei `messages.fr-FR.resx` , indem Sie die `messages.resx` Datei `messages.fr-FR.resx` nach dem Ändern der Zeile speichern.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +112,7 @@ ms.locfileid: "73637655"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. Erstellen Sie in c:\mysample die Datei `messages.it.resx`, indem Sie die Datei `messages.resx` als `messages.it.resx` speichern, nachdem Sie die Zeile geändert haben.  
+9. Erstellen Sie in c:\mysample die Datei `messages.it.resx` , indem Sie die `messages.resx` Datei `messages.it.resx` nach dem Ändern der Zeile speichern.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +120,7 @@ ms.locfileid: "73637655"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. Erstellen Sie in c:\mysample die Datei `messages.ja.resx`, indem Sie die Datei `messages.resx` als `messages.ja.resx` speichern, nachdem Sie die Zeile geändert haben.  
+10. Erstellen Sie in c:\mysample die Datei `messages.ja.resx` , indem Sie die `messages.resx` Datei `messages.ja.resx` nach dem Ändern der Zeile speichern.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,7 +144,7 @@ ms.locfileid: "73637655"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
+16. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
   
 17. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   
@@ -450,7 +452,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwendungsszenarios und Beispiele für Common Language Runtime-Integration &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwendungs Szenarien und Beispiele für die CLR-&#41; Integration von Common Language Runtime &#40;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

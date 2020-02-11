@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882357"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
@@ -63,7 +63,7 @@ ms.locfileid: "73882357"
   
 -   Führen Sie Agents fortlaufend statt häufig aus.  
   
-     Wenn Sie die Agents für die fortlaufende Ausführung konfigurieren, statt Zeitpläne für die häufige Ausführung (z. B. jede Minute) zu erstellen, führt dies zu einer verbesserten Leistung der Replikation, da der jeweilige Agent nicht gestartet und beendet werden muss. Wenn Sie für den Verteilungs-Agent die fortlaufende Ausführung festlegen, erfolgt die Propagierung von Änderungen auf andere Server, mit denen in der Topologie eine Verbindung besteht, mit geringer Latenzzeit. Weitere Informationen finden Sie in den folgenden Themen:  
+     Wenn Sie die Agents für die fortlaufende Ausführung konfigurieren, statt Zeitpläne für die häufige Ausführung (z. B. jede Minute) zu erstellen, führt dies zu einer verbesserten Leistung der Replikation, da der jeweilige Agent nicht gestartet und beendet werden muss. Wenn Sie für den Verteilungs-Agent die fortlaufende Ausführung festlegen, erfolgt die Propagierung von Änderungen auf andere Server, mit denen in der Topologie eine Verbindung besteht, mit geringer Latenzzeit. Weitere Informationen finden Sie unter  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Angeben von Synchronisierungszeitplänen](../specify-synchronization-schedules.md)  
   
@@ -71,16 +71,18 @@ ms.locfileid: "73882357"
   
 -   Verwenden Sie den **–MaxCmdsInTran** -Parameter für den Protokolllese-Agent, um unbeabsichtigte, einmalige Engpässe zu vermeiden.  
   
-     Mit dem Parameter **-MaxCmdsInTran** wird die maximale Anzahl von Anweisungen angegeben, die in einer Transaktion zusammengefasst werden, wenn der Protokollleser Befehle in die Verteilungsdatenbank schreibt. Mithilfe dieses Parameters können der Protokolllese-Agent und der Verteilungs-Agent beim Anwenden von Befehlen auf dem Abonnenten umfangreiche Transaktionen (die aus zahlreichen Befehlen bestehen) auf dem Verleger in mehrere kleinere Transaktionen aufteilen. Durch die Angabe dieses Parameters kommt es auf dem Verteiler möglicherweise zu weniger Konflikten, und die Latenzzeit zwischen Verleger und Abonnent kann reduziert werden. Da die ursprüngliche Transaktion in kleineren Einheiten angewendet wird, kann der Abonnent vor Ende der ursprünglichen Transaktion auf Zeilen einer umfangreichen logischen Verleger-Transaktion zugreifen; dies widerspricht der strikten Unteilbarkeit von Transaktionen. **0**ist der Standardwert, durch den die Transaktionsgrenzen des Verlegers beibehalten werden. Dieser Parameter gilt nicht für Oracle-Verleger.  
+     Mit dem Parameter **-MaxCmdsInTran** wird die maximale Anzahl von Anweisungen angegeben, die in einer Transaktion zusammengefasst werden, wenn der Protokollleser Befehle in die Verteilungsdatenbank schreibt. Mithilfe dieses Parameters können der Protokolllese-Agent und der Verteilungs-Agent beim Anwenden von Befehlen auf dem Abonnenten umfangreiche Transaktionen (die aus zahlreichen Befehlen bestehen) auf dem Verleger in mehrere kleinere Transaktionen aufteilen. Durch die Angabe dieses Parameters kommt es auf dem Verteiler möglicherweise zu weniger Konflikten, und die Latenzzeit zwischen Verleger und Abonnent kann reduziert werden. Da die ursprüngliche Transaktion in kleineren Einheiten angewendet wird, kann der Abonnent vor Ende der ursprünglichen Transaktion auf Zeilen einer umfangreichen logischen Verleger-Transaktion zugreifen; dies widerspricht der strikten Unteilbarkeit von Transaktionen. 
+  **0**ist der Standardwert, durch den die Transaktionsgrenzen des Verlegers beibehalten werden. Dieser Parameter gilt nicht für Oracle-Verleger.  
   
     > [!WARNING]  
-    >  `MaxCmdsInTran` ist nicht auf die dauerhafte Aktivierung ausgelegt. Der Parameter ist als Umgehungslösung für den Fall konzipiert, dass versehentlich eine große Anzahl von DML-Vorgängen in einer einzelnen Transaktion ausgeführt wird (was zu einer verzögerten Verteilung der Befehle führen kann, bis sich die gesamte Transaktion in der Verteilungsdatenbank befindet, Sperren aufrecht erhalten werden usw.). Wenn diese Situation häufiger auftritt, sollten Sie Ihre Anwendungen überarbeiten und nach Möglichkeiten suchen, die Transaktionsgröße zu verringern.  
+    >  
+  `MaxCmdsInTran` ist nicht auf die dauerhafte Aktivierung ausgelegt. Der Parameter ist als Umgehungslösung für den Fall konzipiert, dass versehentlich eine große Anzahl von DML-Vorgängen in einer einzelnen Transaktion ausgeführt wird (was zu einer verzögerten Verteilung der Befehle führen kann, bis sich die gesamte Transaktion in der Verteilungsdatenbank befindet, Sperren aufrecht erhalten werden usw.). Wenn diese Situation häufiger auftritt, sollten Sie Ihre Anwendungen überarbeiten und nach Möglichkeiten suchen, die Transaktionsgröße zu verringern.  
   
 -   Verwenden Sie den Parameter " **-abonneptionstreams** " für die Verteilungs-Agent.  
   
      Durch den Parameter **-SubscriptionStreams** kann es zu einer deutlichen Steigerung des Replikationsgesamtdurchsatzes kommen. Er ermöglicht es mehreren Verbindungen mit dem Abonnenten, Batches für Änderungen parallel anzuwenden und eine Vielzahl der Transaktionseigenschaften beizubehalten, die bei Verwendung eines Singlethreads vorhanden waren. Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen. Vor dem Abschluss dieser Wiederholungsphase kann es auf dem Abonnenten vorübergehend zur Transaktionsinkonsistenzen kommen. Nach dem erfolgreichen Ausführen (Commit) der fehlgeschlagenen Batches wird der Abonnent wieder in einen Zustand der Transaktionskonsistenz versetzt.  
   
-     Ein Wert für diesen Agentparameter kann mithilfe der **\@Abonnement Datenströme** von [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)angegeben werden.  
+     Ein Wert für diesen Agentparameter kann mithilfe der ** \@Abonnement Datenströme** von [sp_addsubscription &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)angegeben werden.  
   
 -   Erhöhen Sie den Wert des **-ReadBatchSize** -Parameters für den Protokolllese-Agent.  
   
@@ -94,12 +96,12 @@ ms.locfileid: "73882357"
   
      Über den **-PollingInterval** -Parameter wird angegeben, wie oft das Transaktionsprotokoll einer veröffentlichten Datenbank hinsichtlich Transaktionen für die Replikation abgefragt wird. Die Standardeinstellung ist 5 Sekunden. Wenn Sie diesen Wert verringern, wird das Protokoll häufiger abgefragt. Dies kann zu einer geringeren Latenzzeit bei der Übermittlung von Transaktionen von der Veröffentlichungsdatenbank an die Verteilungsdatenbank führen. Sie sollten jedoch um ein Gleichgewicht zwischen einer geringeren Latenzzeit und der erhöhten Last auf dem Server durch häufigeres Abfragen bemüht sein.  
   
- Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+ Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
 -   [Arbeiten mit Replikations-Agent-Profilen](../agents/replication-agent-profiles.md)  
   
--   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [Anzeigen und Ändern der Befehlszeilenparameter des Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md)  
+-   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../concepts/replication-agent-executables-concepts.md)  
   
   

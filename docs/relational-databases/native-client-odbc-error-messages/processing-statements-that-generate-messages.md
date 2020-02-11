@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d147e5c6fa257a6397635014d868d75e7c8833dd
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783480"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Verarbeiten von Anweisungen, die Meldungen generieren
@@ -44,7 +44,7 @@ SQLExecDirect(hstmt, "SET STATISTICS TIME ON", SQL_NTS90
 SQLExecDirect(hstmt, "SET STATISTICS IO ON", SQL_NTS);  
 ```  
   
- Wenn SET STATISTICS Time oder SET SHOWPLAN on ist, werden **SQLExecute** und **SQLExecDirect** SQL_SUCCESS_WITH_INFO zurückgegeben. an diesem Punkt kann die Anwendung die Ausgabe des Showplan oder der Statistik Zeit abrufen, indem Sie **SQLGetDiagRec** aufruft, bis Sie gibt SQL_NO_DATA zurück. Jede Zeile der SHOWPLAN-Daten wird im folgenden Format ausgegeben:  
+ Wenn SET STATISTICS Time oder SET SHOWPLAN on ist, werden **SQLExecute** und **SQLExecDirect** SQL_SUCCESS_WITH_INFO zurückgegeben. an diesem Punkt kann die Anwendung die Ausgabe des Showplan oder der Statistik Zeit abrufen, indem Sie **SQLGetDiagRec** aufruft, bis SQL_NO_DATA zurückgegeben wird. Jede Zeile der SHOWPLAN-Daten wird im folgenden Format ausgegeben:  
   
 ```  
 szSqlState="01000", *pfNativeError=6223,  
@@ -99,7 +99,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>Verwenden der Anweisungen PRINT und RAISERROR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Print-und RAISERROR-Anweisungen geben auch Daten zurück, indem Sie **SQLGetDiagRec**aufrufen. Print-Anweisungen bewirken, dass die Ausführung der SQL-Anweisung SQL_SUCCESS_WITH_INFO zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt den *SQLSTATE* -Wert 01000 zurück. Ein RAISERROR mit einem Schweregrad bis einschließlich 10 zeigt dasselbe Verhalten wie PRINT. Ein RAISERROR mit einem Schweregrad von 11 oder höher bewirkt, dass die Execute-SQL_ERROR zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt *SQLSTATE* 42000 zurück. Beispielsweise gibt die folgende Anweisung SQL_SUCCESS_WITH_INFO zurück:  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]Print-und RAISERROR-Anweisungen geben auch Daten durch Aufrufen von **SQLGetDiagRec**zurück. Print-Anweisungen bewirken, dass die Ausführung der SQL-Anweisung SQL_SUCCESS_WITH_INFO zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt den *SQLSTATE* -Wert 01000 zurück. Ein RAISERROR mit einem Schweregrad bis einschließlich 10 zeigt dasselbe Verhalten wie PRINT. Ein RAISERROR mit einem Schweregrad von 11 oder höher bewirkt, dass die Execute-SQL_ERROR zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt *SQLSTATE* 42000 zurück. Beispielsweise gibt die folgende Anweisung SQL_SUCCESS_WITH_INFO zurück:  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
@@ -144,11 +144,11 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  Die zeitliche Steuerung von **SQLGetDiagRec** ist wichtig, wenn die Ausgabe von Print-oder RAISERROR-Anweisungen in einem Resultset enthalten ist. Der Aufrufen von **SQLGetDiagRec** zum Abrufen der Print-oder RAISERROR-Ausgabe muss direkt nach der Anweisung erfolgen, die SQL_ERROR oder SQL_SUCCESS_WITH_INFO empfängt. Dies ist einfach, wenn nur eine einzelne SQL-Anweisung ausgeführt wird, wie in den oben stehenden Beispielen. In diesen Fällen gibt der Aufruf von **SQLExecDirect** oder **SQLExecute** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, und **SQLGetDiagRec** kann dann aufgerufen werden. Komplizierter wird es, wenn Schleifen zum Behandeln der Ausgabe einer Reihe von SQL-Anweisungen codiert, oder wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-gespeicherte Prozeduren ausgeführt werden müssen.  
   
- In diesem Fall gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Resultset für jede SELECT-Anweisung zurück, die in einem Batch oder in einer gespeicherten Prozedur ausgeführt wurde. Wenn der Batch bzw. die Prozedur PRINT- oder RAISERROR-Anweisungen enthält, ist die Ausgabe dieser Anweisungen mit den Resultsets der SELECT-Anweisungen verschachtelt. Wenn die erste Anweisung im Batch oder in der Prozedur ein Druck-oder RAISERROR-Wert ist, gibt **SQLExecute** oder **SQLExecDirect** SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück, und die Anwendung muss **SQLGetDiagRec** aufrufen, bis SQL_NO_DATA zurückgegeben wird. Abrufen der Druck-oder RAISERROR-Informationen.  
+ In diesem Fall gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Resultset für jede SELECT-Anweisung zurück, die in einem Batch oder in einer gespeicherten Prozedur ausgeführt wurde. Wenn der Batch bzw. die Prozedur PRINT- oder RAISERROR-Anweisungen enthält, ist die Ausgabe dieser Anweisungen mit den Resultsets der SELECT-Anweisungen verschachtelt. Wenn die erste Anweisung im Batch oder in der Prozedur ein Druck-oder RAISERROR-Wert ist, gibt **SQLExecute** oder **SQLExecDirect** SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück, und die Anwendung muss **SQLGetDiagRec** aufrufen, bis SQL_NO_DATA zum Abrufen der Druck-oder RAISERROR-Informationen zurückgegeben wird.  
   
  Wenn die Print-oder RAISERROR-Anweisung auf eine SQL-Anweisung (z. b. eine SELECT-Anweisung) folgt, werden die Print-oder RAISERROR-Informationen zurückgegeben, wenn [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)in dem Resultset, das den Fehler enthält, positioniert werden. **SQLMoreResults** gibt SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück, je nach Schweregrad der Nachricht. Nachrichten werden durch Aufrufen von **SQLGetDiagRec** abgerufen, bis SQL_NO_DATA zurückgegeben wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Behandlung von Fehlern und Meldungen](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

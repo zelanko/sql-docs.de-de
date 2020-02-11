@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890712"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
@@ -40,7 +40,7 @@ ms.locfileid: "68890712"
  **Data Mining-Abfrage**  
  Geben Sie eine Data Mining-Abfrage ein.  
   
- **Verwandte Themen:**  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Verwandte Themen:**  [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Neue Abfrage erstellen**  
  Erstellt die Data Mining-Abfrage mithilfe eines grafischen Tools.  
@@ -48,40 +48,40 @@ ms.locfileid: "68890712"
  **Verwandte Themen:** [Data Mining-Abfrage](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Optionen der Registerkarte Parameterzuordnung  
- **Parametername**  
+ **Parameter Name**  
  Sie können optional den Parameternamen aktualisieren. Ordnen Sie den Parameter einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
   
- **Variablenname**  
+ **Variablen Name**  
  Wählen Sie in der Liste eine Variable aus, um sie dem Parameter zuzuordnen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt der Liste einen Parameter hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie einen Parameter aus, und klicken Sie anschließend auf **Entfernen**.  
   
 ## <a name="result-set-tab-options"></a>Optionen der Registerkarte Resultset  
- **Ergebnisname**  
+ **Ergebnis Name**  
  Sie können optional den Resultsetnamen aktualisieren. Ordnen Sie das Resultset einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
   
  Nachdem Sie das Ergebnis durch Klicken auf **Hinzufügen**hinzugefügt haben, geben Sie einen eindeutigen Namen für das Ergebnis an.  
   
- **Variablenname**  
+ **Variablen Name**  
  Wählen Sie in der Liste eine Variable aus, um sie dem Resultset zuzuordnen.  
   
  **Ergebnistyp**  
  Gibt an, ob eine einzelne Zeile oder ein vollständiges Resultset zurückgegeben werden soll.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt ein Resultset zur Liste hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie ein Ergebnis aus, und klicken Sie anschließen auf **Entfernen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Miningmodell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Editor für den Data Mining-Abfrage Task &#40;Registerkarte Mining Modell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor für Data Mining-Abfrage Tasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

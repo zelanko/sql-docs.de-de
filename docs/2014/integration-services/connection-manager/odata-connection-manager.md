@@ -11,23 +11,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833108"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
-  Mithilfe eines OData-Verbindungs-Managers kann ein Paket eine Verbindung mit einer OData-Quelle herstellen. Eine OData-Quellkomponente stellt über einen OData-Verbindungs-Manager eine Verbindung mit einer OData-Quelle her und verwendet die Daten des Diensts. Finden Sie unter [OData-Quelle](../data-flow/odata-source.md)Abschnitt, um ausführliche Informationen einschließlich installationsanweisungen für diese Komponenten.  
+  Mithilfe eines OData-Verbindungs-Managers kann ein Paket eine Verbindung mit einer OData-Quelle herstellen. Eine OData-Quellkomponente stellt über einen OData-Verbindungs-Manager eine Verbindung mit einer OData-Quelle her und verwendet die Daten des Diensts. Ausführliche Informationen einschließlich Installationsanweisungen für diese Komponenten finden Sie im Abschnitt [odata-Quelle](../data-flow/odata-source.md).  
   
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>Hinzufügen des Verbindungs-Managers zu einem SSIS-Paket  
  Sie können einem SSIS-Paket einen neuen OData-Verbindungs-Manager auf drei Arten hinzufügen:  
   
 -   Klicken Sie im **Quellen-Editor für OData** auf die Schaltfläche **Neu...** .  
   
--   Mit der rechten Maustaste **Verbindungs-Manager** Ordner in der **Projektmappen-Explorer** , und klicken Sie auf **neuer Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
+-   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verbindungs-Manager** , und klicken Sie auf **neuer Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
   
--   Mit der rechten Maustaste den **Verbindungs-Manager** Bereich am unteren Rand des Pakets, und wählen **neue Verbindung...** . Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
+-   Klicken Sie mit der rechten Maustaste auf den Bereich **Verbindungs-Manager** unten im Paket-Designer, und wählen Sie **neue Verbindung...** aus. Wählen Sie **odata** als **Typ des Verbindungs-Managers**aus.  
   
 ## <a name="connection-manager-authentication"></a>Verbindungs-Manager-Authentifizierung  
  Der OData-Verbindungs-Manager unterstützt zwei Authentifizierungsmodi.  
@@ -39,7 +39,7 @@ ms.locfileid: "62833108"
  Für den anonymen Zugriff wählen Sie die Option Windows-Authentifizierung aus.  
   
 ### <a name="specifying-and-securing-credentials"></a>Festlegen und Sichern von Anmeldeinformationen  
- Wenn Ihr OData-Dienst die Standardauthentifizierung erfordert, können Sie angeben, eines Benutzernamens und Kennworts in der [OData-Verbindungs-Manager-Editor](../odata-connection-manager-editor.md). Die Werte, die Sie in den Editor eingeben, werden im Paket beibehalten. Der Kennwortwert wird gemäß der Schutzebene des Pakets verschlüsselt.  
+ Wenn der odata-Dienst die Standard Authentifizierung erfordert, können Sie im [odata-Verbindungs-Manager-Editor](../odata-connection-manager-editor.md)einen Benutzernamen und ein Kennwort angeben. Die Werte, die Sie in den Editor eingeben, werden im Paket beibehalten. Der Kennwortwert wird gemäß der Schutzebene des Pakets verschlüsselt.  
   
  Es gibt mehrere Möglichkeiten, den Benutzernamen- und Kennwortwert zu externalisieren/parametrisieren. Die beiden Hauptmethoden in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] bestehen darin, Parameter zu verwenden oder die Eigenschaften des Verbindungs-Managers beim Ausführen des Pakets in SQL Server Management Studio direkt festzulegen.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "62833108"
   
 |||  
 |-|-|  
-|Eigenschaft|Description|  
-|URL|Die URL zum Dienstdokument.|  
+|Eigenschaft|BESCHREIBUNG|  
+|url|Die URL zum Dienstdokument.|  
 |UserName|Der Benutzername, der für die Standardauthentifizierung verwendet wird.|  
 |Kennwort|Das Kennwort, das für die Standardauthentifizierung verwendet wird.|  
 |ConnectionString|Stellt weitere Eigenschaften des Verbindungs-Managers dar.|  
   
-## <a name="see-also"></a>Siehe auch  
- [OData Connection Manager Editor](../odata-connection-manager-editor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [OData-Verbindungs-Manager-Editor](../odata-connection-manager-editor.md)  
   
   

@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797778"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Problembehandlung beim SQL Server-Hilfsprogramm
-  Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Ressourcen Integritätsproblemen, die durch einen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-UCP identifiziert werden, finden Sie unter Problembehandlung [SQL Server Resource Health &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Problemen mit der Ressourcen Integrität, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die von einem UCP identifiziert werden, finden Sie unter Problembehandlung [SQL Server Resource Health &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Fehlgeschlagener Vorgang, eine Instanz von SQL Server in ein SQL Server-Hilfsprogramm zu registrieren  
  Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für die Registrierung verwenden, und Sie geben ein Proxykonto an, das zu einer anderen Active Directory-Domäne gehört als die Domäne, wo sich der UCP befindet, ist die Instanzüberprüfung erfolgreich, aber der Registrierungsvorgang schlägt mit der folgenden Fehlermeldung fehl:  
@@ -35,11 +35,11 @@ ms.locfileid: "72797778"
   
 3.  Die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die in das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm registriert werden soll, ist auch ein Element von "Domain_1."  
   
-4.  Stellen Sie während des Registrierungsvorgangs eine Verbindung mit der Instanz von her, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], um sich mit "SA" zu registrieren. Geben Sie ein Proxykonto bei "Domain_2" an.  
+4.  Stellen Sie während des Registrierungsvorgangs eine Verbindung mit der Instanz [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von her, um sich mit "SA" zu registrieren. Geben Sie ein Proxykonto bei "Domain_2" an.  
   
 5.  Die Überprüfung ist erfolgreich, aber die Registrierung schlägt fehl.  
   
- Die Problem Umgehung für dieses Problem besteht im obigen Beispiel darin, eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] um sich mit "SA" beim [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogramm anzumelden und ein Proxy Konto von "Domain_1" bereitzustellen.  
+ Die Problem Umgehung für dieses Problem ist, indem Sie das obige Beispiel verwenden, eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der Instanz von herzustellen, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] um sich mit "SA" bei dem Hilfsprogramm zu registrieren und ein Proxy Konto von "Domain_1" bereitzustellen.  
   
 ## <a name="failed-wmi-validation"></a>Fehlgeschlagene WMI-Überprüfung  
  Wenn WMI nicht ordnungsgemäß auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]konfiguriert wird, zeigen die Vorgänge für das Erstellen des UCPs und die Registrierung verwalteter Instanzen eine Warnung an, der Vorgang wird jedoch nicht blockiert. Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Kontokonfiguration ändern, sodass der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent nicht über die Berechtigung für die erforderlichen WMI-Klassen verfügt, lädt die Datensammlung auf der betroffenen verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht zum UCP hoch. Dies führt im UCP zu grauen Symbolen.  
@@ -114,17 +114,17 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  Erweitern Sie im **Objekt-Explorer**von SSMS den Knoten **Sicherheit** und dann den Knoten **Anmeldeinformationen** .  
   
-    2.  Klicken Sie mit der rechten Maustaste auf **UtilityAgentProxyCredential_\<GUID >** und wählen Sie **Eigenschaften**aus.  
+    2.  Klicken Sie mit der rechten Maustaste auf **UtilityAgentProxyCredential_\<GUID>** und wählen Sie **Eigenschaften**aus.  
   
-    3.  Aktualisieren Sie im Dialogfeld Eigenschaften für Anmelde Informationen die Anmelde Informationen nach Bedarf für die **UtilityAgentProxyCredential_\<GUID >** Credential.  
+    3.  Aktualisieren Sie im Dialogfeld Eigenschaften für Anmelde Informationen die Anmelde Informationen für **die\<UtilityAgentProxyCredential_ GUID>** Anmelde Informationen nach Bedarf.  
   
-    4.  Klicken Sie auf **OK** , um die Änderung zu bestätigen.  
+    4.  Klicken Sie auf **OK**, um die Änderung zu bestätigen.  
   
 -   TCP/IP muss für den UCP und die verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aktiviert sein. Aktivieren Sie TCP/IP über den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager.  
   
 -   Der SQL Server-Browserdienst auf dem UCP sollte gestartet werden und für den automatischen Start konfiguriert sein. Wenn die Verwendung des SQL Server-Browserdiensts in Ihrer Organisation verhindert wird, führen Sie die folgenden Schritte aus, damit eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Verbindung mit dem UCP herstellen kann:  
   
-    1.  Klicken Sie in der Windows-Taskleiste der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]auf **Start**, und klicken Sie dann auf **Ausführen**.  
+    1.  Klicken Sie in der Windows-Taskleiste der verwalteten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Instanz von auf **Start**, und klicken Sie dann auf **Ausführen**.  
   
     2.  Geben Sie im dafür vorgesehenen Feld **cliconfg.exe**ein, und klicken Sie auf OK.  
   
@@ -144,7 +144,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     10. Geben Sie die Nummer des Anschlusses, an dem der UCP lauscht, im Textfeld **Anschlussnummer** an.  
   
-    11. Klicken Sie auf **OK** , um die Änderungen zu speichern.  
+    11. Klicken Sie auf **OK**, um die Änderungen zu speichern.  
   
     12. Wiederholen Sie diese Schritte für jede verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die eine Verbindung mit einem UCP herstellt, auf dem der SQL Server-Browserdienst nicht aktiviert ist.  
   
@@ -164,6 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits beim UCP registriert war, bevor der Benutzer dieser Gruppe hinzugefügt wurde, starten Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienst neu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Fehlerbehebung für die SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

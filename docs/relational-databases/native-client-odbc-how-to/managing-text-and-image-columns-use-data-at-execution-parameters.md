@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9235d096be513e1480dab7e23672e14011c63f0a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781210"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Verwalten von Text- und Image-Spalten: Verwenden von Data-at-Execution-Parametern
@@ -49,11 +49,11 @@ ms.locfileid: "73781210"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu erstellen.  
+ Führen Sie das erste [!INCLUDE[tsql](../../includes/tsql-md.md)]Codelisting () aus, um die im Beispiel verwendete Tabelle zu erstellen.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib. Führen Sie dann das Programm aus.  
   
- Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu löschen.  
+ Führen Sie das dritte [!INCLUDE[tsql](../../includes/tsql-md.md)]Codelisting () aus, um die im Beispiel verwendete Tabelle zu löschen.  
   
 ```  
 use AdventureWorks  
@@ -224,7 +224,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst-wie-Themen &#40;zum Verwalten von Text-und image-Spalten ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Gewusst-wie-Themen zum Verwalten von Text-und image-Spalten &#40;ODBC-&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

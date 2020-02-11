@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit SSMA for Oracle Console (OracleToSQL) | Microsoft-Dokumentation
+title: Arbeiten mit SSMA für die Oracle-Konsole (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,33 +11,33 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68256654"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Arbeiten mit der SSMA-Konsole für Oracle (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration ist Assistant (SSMA) für Oracle jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als eine Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Migrationszyklus reduziert und skaliert Migrationsaufwand erforderlich ist.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Auf die Migration Assistant (SSMA)-Version für Oracle kann jetzt über eine Konsolenanwendung in der Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung zum Ausführen der Befehle. Als Konsolenanwendung ermöglicht SSMA die Interaktion auf Skript Ebene, reduziert den Migrations Zyklen und skaliert den Migrations Aufwand.  
   
-Dieser Abschnitt erläutert das Verfahren zum Migrieren von der Oracle-Datenbank, die mit der SSMA-Console-Anwendung.  
+In diesem Abschnitt wird die Vorgehensweise zum Migrieren der Oracle-Datenbank mithilfe der SSMA-Konsolenanwendung erläutert.  
   
-In diesem Abschnitt behandelten Themen umfassen:  
+Zu den in diesem Abschnitt behandelten Themen gehören:  
   
 |||  
 |-|-|  
-|**Themen**|**Beschreibung**|  
-|[Erste Schritte mit SSMA für Oracle-Konsole &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Erläutert das Verfahren, um die Konsolenanwendung auszuführen.|  
-|[Command Line Options in SSMA-Konsole &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die Anwendung der SSMA-Konsole ausgeführt werden.|  
-|[Erstellen von Skriptdateien &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Erläutert das Erstellen einer Skriptdatei.|  
-|[Erstellen die Variable Value Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|Erläutert, wie zum Erstellen einer Datei Variablenwert.|  
-|[Erstellen die Server-Verbindungsdateien &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|Erläutert, wie eine Server-Verbindungsdatei zu erstellen.|  
-|[Executing the SSMA Console ausführen &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|Beschreibt die Befehle der Skript-Datei die Anwendung der SSMA-Konsole ausgeführt werden.|  
-|[Arbeiten mit den Beispielskriptdateien der Konsole &#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|Beschreibt, wie einfach die Skripts anpassen, die in den Beispieldateien zusammen mit dem Produkt bereitgestellt wurden|  
-|[Verwalten von Kennwörtern &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|Kennwortverschlüsselung und Entschlüsselung und beim Importieren / Exportieren von Kennwortinformationen beschreibt.|  
-|[Generieren von Berichten &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|Listet die Befehle zum Generieren von Berichten.|  
-|[Problembehandlung bei &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
+|**Sonder**|**Beschreibung**|  
+|[Informationen zu den ersten Schritten mit SSMA für die Oracle-Konsole &#40;oracleto SQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Erläutert das Verfahren zum Ausführen der Konsolenanwendung.|  
+|[Befehlszeilenoptionen in der SSMA-Konsole &#40;oracleto SQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter für den Betrieb der SSMA-Konsolenanwendung.|  
+|[Erstellen von Skriptdateien &#40;oracleto SQL-&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Erläutert das Erstellen einer Skriptdatei.|  
+|[Erstellen von Variablen Wert Dateien &#40;oracleto SQL-&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|Erläutert, wie eine Variablen Wert Datei erstellt wird.|  
+|[Erstellen der Server Verbindungs Dateien &#40;oracleto SQL-&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|Erläutert das Erstellen einer Server Verbindungs Datei.|  
+|[Ausführen der SSMA-Konsole &#40;oracleto SQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|Beschreibt die Skriptdatei Befehle zum Betreiben der SSMA-Konsolenanwendung.|  
+|[Arbeiten mit den Beispiel Konsolen Skriptdateien &#40;oracleto SQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|Beschreibt, wie die Skripts, die in den Beispieldateien bereitgestellt wurden, zusammen mit dem Produkt problemlos angepasst werden können.|  
+|[Verwalten von Kenn Wörtern &#40;oracleto SQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|Beschreibt Informationen zur Kenn Wort Verschlüsselung und-Entschlüsselung sowie zum Importieren/Exportieren von Kenn Wort Informationen.|  
+|[Erstellen von Berichten &#40;oracleto SQL-&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|Listet die Befehle zum Generieren von Berichten auf.|  
+|[Problembehandlung &#40;oracleto SQL-&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
-## <a name="see-also"></a>Siehe auch  
-[Erste Schritte mit SSMA für Oracle-Konsole](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Ersten Schritte mit SSMA für die Oracle-Konsole](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
   

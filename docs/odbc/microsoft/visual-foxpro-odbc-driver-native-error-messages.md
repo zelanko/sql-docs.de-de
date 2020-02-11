@@ -1,5 +1,5 @@
 ---
-title: Native Fehlermeldungen des Visual FoxPro-ODBC-Treiber | Microsoft-Dokumentation
+title: Native Fehlermeldungen von Visual FoxPro-ODBC-Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,321 +15,321 @@ ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cb5022df9628607c94754cbbadceecaea02c4db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087780"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Native Fehlermeldungen des Visual FoxPro-ODBC-Treibers
-Die folgenden Tabellen enthalten die Fehlermeldungen, die in der Visual FoxPro-ODBC-Treiber.  
+In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxPro-ODBC-Treiber enthalten sind.  
   
 ## <a name="001"></a>001  
   
 |||  
 |-|-|  
-|1|Feature ist nicht verfügbar.|  
-|2|Fehler beim e/a-Vorgang.|  
-|3|Kostenlose Handle wurde nicht gefunden.|  
+|1|Die Funktion ist nicht verfügbar.|  
+|2|Fehler beim Eingabe-/Ausgabevorgang.|  
+|3|Ein kostenloses Handle wurde nicht gefunden.|  
 |5|Verwendung des nicht zugewiesenen Handles.|  
-|99|Die Prozedur wurde abgebrochen.|  
+|99|Prozedur abgebrochen.|  
   
 ## <a name="100"></a>100  
   
 |||  
 |-|-|  
-|100|Zu viele Dateien geöffnet.|  
-|101|Datei kann nicht geöffnet werden.|  
-|102|Datei kann nicht erstellt werden.|  
+|100|Es sind zu viele Dateien geöffnet.|  
+|101|Die Datei kann nicht geöffnet werden.|  
+|102|Die Datei kann nicht erstellt werden.|  
 |105|Fehler beim Schreiben in die Datei.|  
 |107|Ungültige Schlüssellänge.|  
-|109|Datensatz ist außerhalb des gültigen Bereichs.|  
-|110|Datensatz ist nicht im Index.|  
+|109|Der Datensatz liegt außerhalb des zulässigen Bereichs.|  
+|110|Der Datensatz ist nicht im Index.|  
 |111|Ungültiger Dateideskriptor.|  
-|113|Datei ist nicht geöffnet werden.|  
-|114|Nicht genügend Speicherplatz für *Wert*.|  
+|113|Die Datei ist nicht geöffnet.|  
+|114|Nicht genügend Speicherplatz für den *Wert*.|  
 |115|Ungültiger Vorgang für den Cursor.|  
-|118|Indexdatei stimmt nicht mit Tabelle überein.|  
+|118|Die Index Datei entspricht nicht der Tabelle.|  
 |119|Es ist keine Tabelle geöffnet.|  
-|120|Datei ist nicht vorhanden.|  
-|121|Datei ist bereits vorhanden.|  
-|122|Tabelle wurde kein Index festgelegt.|  
+|120|Die Datei ist nicht vorhanden.|  
+|121|Die Datei ist bereits vorhanden.|  
+|122|Für die Tabelle ist keine Index Reihenfolge festgelegt.|  
 |123|Keine Tabelle.|  
-|125|Der Indexausdruck überschreitet die maximale Länge.|  
-|127|Sie müssen einen logischen Ausdruck mit einer FOR verwenden oder WHILE-Klausel.|  
+|125|Der Index Ausdruck überschreitet die maximale Länge.|  
+|127|Sie müssen einen logischen Ausdruck mit einer for-oder While-Klausel verwenden.|  
 |128|Kein numerischer Ausdruck.|  
-|129|Variable wurde nicht gefunden.|  
-|132|Datei wird verwendet.|  
-|133|Index entspricht nicht die Tabelle. Löschen Sie die Indexdatei und erstellen Sie den Index neu.|  
-|135|Dateiende gefunden.|  
-|136|Anfang der Datei gefunden.|  
-|137|Alias wurde nicht gefunden.|  
-|139|Sie müssen einen logischen Ausdruck mit FILTER verwenden.|  
+|129|Die Variable wurde nicht gefunden.|  
+|132|Die Datei wird verwendet.|  
+|133|Der Index entspricht nicht der Tabelle. Löschen Sie die Indexdatei, und erstellen Sie den Index neu.|  
+|135|Das Dateiende wurde gefunden.|  
+|136|Anfang der gefundenen Datei.|  
+|137|Der Alias wurde nicht gefunden.|  
+|139|Sie müssen einen logischen Ausdruck mit Filter verwenden.|  
 |142|Zyklische Beziehung.|  
-|143|Es wurden keine Felder gefunden, um zu kopieren.|  
-|144|Mit dem Befehl suchen muss vor dem Fortfahren-Befehl ausgegeben werden.|  
-|145|Hierbei muss es sich um ein Zeichen oder ein numerisches Feld sein.|  
-|146|In einer schreibgeschützten Datei kann nicht geschrieben werden.|  
-|147|Zieltabelle ist bereits in einer Beziehung verwendet.|  
-|148|Ausdruck wurde erneut eingegeben, während der Filter ausgeführt wird.|  
-|149|Nicht genügend Arbeitsspeicher für Puffer.|  
-|150|Nicht genügend Arbeitsspeicher für die dateizuordnung.|  
-|155|Ungültiger Zeiger-Aufruf.|  
+|143|Es wurden keine Felder zum Kopieren gefunden.|  
+|144|Der Befehl "suchen" muss vor dem Befehl "Continue" ausgegeben werden.|  
+|145|Muss ein Zeichen oder ein numerisches Schlüsselfeld sein.|  
+|146|In eine schreibgeschützte Datei kann nicht geschrieben werden.|  
+|147|Die Ziel Tabelle ist bereits in einer Beziehung involviert.|  
+|148|Der Ausdruck wurde erneut eingegeben, während der Filter ausgeführt wird.|  
+|149|Nicht genügend Arbeitsspeicher für den Puffer.|  
+|150|Nicht genügend Arbeitsspeicher für die Datei Zuordnung.|  
+|155|Ungültiger Buffdirty-Befehl.|  
 |156|Doppelte Feldnamen.|  
-|158|Keine Felder, die zum Verarbeiten gefunden.|  
-|159|Numerischer Überlauf. Daten verloren gegangen.|  
-|162|Prozedur '*Wert*' wurde nicht gefunden.|  
-|165|*Wert* gehört nicht zum aktuellen Arbeitsbereich.|  
-|170|Variable "*Wert*' wurde nicht gefunden.|  
-|171|Datei kann nicht geöffnet *Wert*.|  
-|173|Datei "*Wert*' ist nicht vorhanden.|  
-|174|"*Wert*' ist keine Variable Arbeitsspeicher.|  
-|175|"*Wert*' ist keine Dateivariable.|  
-|176|"*Wert*' ist kein Array.|  
-|177|Alias'*Wert*' wurde nicht gefunden.|  
-|180|Datei wurde nicht im Arbeitsspeicher, die mit dem Befehl LOAD platziert.|  
-|182|Es ist nicht genügend Arbeitsspeicher zum Abschließen dieses Vorgangs vorhanden.|  
+|158|Es wurden keine Felder zum Verarbeiten gefunden.|  
+|159|Numerischer Überlauf. Die Daten sind verloren gegangen.|  
+|162|Die Prozedur '*value*' wurde nicht gefunden.|  
+|165|der *Wert* ist nicht mit dem aktuellen Arbeitsbereich verknüpft.|  
+|170|Die Variable '*value*' wurde nicht gefunden.|  
+|171|Der Datei *Wert*kann nicht geöffnet werden.|  
+|173|Die Datei '*Wert*' ist nicht vorhanden.|  
+|174|"*value*" ist keine Speicher Variable.|  
+|175|"*value*" ist keine Datei Variable.|  
+|176|'*value*' ist kein Array.|  
+|177|Der Alias '*value*' wurde nicht gefunden.|  
+|180|Die Datei wurde mit dem Load-Befehl nicht im Arbeitsspeicher abgelegt.|  
+|182|Es ist nicht genügend Arbeitsspeicher vorhanden, um diesen Vorgang abzuschließen.|  
   
 ## <a name="200"></a>200  
   
 |||  
 |-|-|  
 |200|Syntaxfehler.|  
-|201|Zu viele Namen, die verwendet werden.|  
-|202|Programm ist zu groß.|  
-|203|Zu viele Speichervariablen.|  
-|205|Fehler der Schachtelung.|  
-|206|Rekursive Makrodefinition.|  
-|209|Zeile ist zu lang.|  
-|210|Verschachtelungstiefe für zulässige DO überschritten.|  
-|211|Ein, wenn &#124; ELSE &#124; ENDIF-Anweisung ist nicht vorhanden.|  
-|212|Schachtelung von Struktur ist zu tief.|  
-|213|Es ist ein Schlüsselwort fehlt in der FOR... ENDFOR oder Fall tun... ENDCASE Befehlsstruktur.|  
-|219|Befehl enthält nicht erkanntes Ausdruck-Schlüsselwort.|  
-|221|Befehl ist nicht vollständig.|  
-|222|Nicht erkannter Befehlsverb.|  
-|224|Ungültiger Arrayzugriff.|  
+|201|Zu viele Namen werden verwendet.|  
+|202|Das Programm ist zu groß.|  
+|203|Zu viele Speicher Variablen.|  
+|205|Schachtelungs Fehler.|  
+|206|Rekursive Makro Definition.|  
+|209|Die Zeile ist zu lang.|  
+|210|Zulässige Schachtelungs Ebene überschritten.|  
+|211|Ein, wenn &#124; else &#124; endif-Anweisung fehlt.|  
+|212|Struktur Schachtelung ist zu tief.|  
+|213|Fehlendes Schlüsselwort in der for... Endfor oder do Case... ENDCASE-Befehlsstruktur.|  
+|219|Der Befehl enthält ein unbekanntes Wort/Schlüsselwort.|  
+|221|In dem Befehl fehlt die erforderliche Klausel.|  
+|222|Unbekanntes Befehls Verb.|  
+|224|Ungültiger Index Verweis.|  
 |227|Fehlender Ausdruck.|  
-|228|Anzahl der Tabelle ist ungültig.|  
+|228|Die Tabellennummer ist ungültig.|  
 |229|Zu wenige Argumente.|  
 |230|Zu viele Argumente.|  
-|233|Anweisung ist im interaktiven Modus nicht zulässig.|  
-|234|Index ist außerhalb des gültigen Bereichs.|  
-|236|Vor dem Fortsetzen verwenden das unterbrochen Sie Programm wurde.|  
-|238|Keine PARAMETER-Anweisung wurde gefunden.|  
-|239|Müssen zusätzliche Parameter angeben.|  
-|240|Ein Zeichenausdruck.|  
-|250|Zu viele Prozedur Befehle gelten.|  
-|252|Kompilierten Code für diese Zeile ist zu lang.|  
-|257|Zeichenfolge des Schlüssels ist zu lang.|  
-|291|Ausdruck für die ASIN() liegt außerhalb des Bereichs.|  
-|292|Darf nicht 0 oder negativ als Argument für LOG10().|  
-|293|Ausdruck für die ACOS() liegt außerhalb des Bereichs.|  
-|294|FOXUSER. DBF-Datei ist ungültig.|  
+|233|Die Anweisung ist im interaktiven Modus nicht zulässig.|  
+|234|Der Index liegt außerhalb des definierten Bereichs.|  
+|236|Programm vor der Verwendung von Resume aussetzen|  
+|238|Es wurde keine Parameter Anweisung gefunden.|  
+|239|Zusätzliche Parameter müssen angegeben werden.|  
+|240|Kein Zeichen Ausdruck.|  
+|250|Es sind zu viele Prozedur Befehle wirksam.|  
+|252|Der kompilierte Code für diese Zeile ist zu lang.|  
+|257|Die Schlüssel Zeichenfolge ist zu lang.|  
+|291|Der mit ASIN () verwendete Ausdruck liegt außerhalb des zulässigen Bereichs.|  
+|292|' 0 ' oder ' negative ' kann nicht als Argument für log10 () verwendet werden.|  
+|293|Der mit Acos () verwendete Ausdruck liegt außerhalb des zulässigen Bereichs.|  
+|294|Foxuser. Die DBF-Datei ist ungültig.|  
 |295|Ungültiger Pfad oder Dateiname.|  
 |296|Fehler beim Lesen der Ressource.|  
-|297|Befehl ist nur im interaktiven Modus zulässig.|  
+|297|Der Befehl ist nur im interaktiven Modus zulässig.|  
   
 ## <a name="300"></a>300  
   
 |||  
 |-|-|  
-|301|Operator/Operand-Typenkonflikt.|  
-|302|Unpassender Datentyp.|  
-|305|Ausdruck, der auf einen ungültigen Wert ausgewertet.|  
-|307|Division durch 0 nicht möglich.|  
-|308|Nicht genügend Stapelspeicher.|  
-|337|Den Befehl PRINTJOB können nicht geschachtelt werden.|  
+|301|Der Operator/Operand-Typ stimmt nicht überein.|  
+|302|Der Datentyp stimmt nicht überein.|  
+|305|Der Ausdruck hat einen ungültigen Wert ausgewertet.|  
+|307|Die Division durch 0 ist nicht möglich.|  
+|308|Nicht genügend Stapel Speicher.|  
+|337|Der PrintJob-Befehl kann nicht geschachtelt werden.|  
   
 ## <a name="400"></a>400  
   
 |||  
 |-|-|  
-|406|Drucker ist nicht bereit.|  
-|407|Ungültiges Argument, die mit der SET-Funktion verwendet werden.|  
-|410|Kann nicht temporäre Dateien erstellt.|  
-|423|Fehler beim Erstellen von OLE-Objekts.|  
-|424|Fehler beim OLE-Objekts in die Zwischenablage kopieren.|  
-|462|*Wert* interner Konsistenzfehler.|  
-|465|Fehler beim SQL-Pass-Through-interne Konsistenz.|  
-|466|Verbindungs-Handle ist ungültig.|  
-|467|Eigenschaft ist ungültig für den lokalen Cursor.|  
-|468|Eigenschaft ist ungültig für Tabellen-Cursor.|  
-|469|Eigenschaftswert ist außerhalb des gültigen Bereichs.|  
-|470|Der Eigenschaftenname ist falsch.|  
-|471|Falsche Format.|  
-|473|Auf Umgebungsebene-Eigenschaft ist ungültig.|  
-|474|Ungültiger Aufruf beim Ausführen einer SQLEXEC()-Sequenz ausgegeben werden.|  
-|479|Ungültiges Update Spaltenname \\ *Wert*\\.|  
-|489|Allgemeine Felder können nicht in einer Update-Anweisung die WHERE-Bedingung verwendet werden. Ändern Sie die WhereType-Eigenschaft der Ansicht.|  
-|491|Es werden keine Update-Tabellen angegeben. Verwenden Sie die Tables-Eigenschaft des Cursors.|  
-|492|Keine Schlüsselspalten angegeben werden, für die Update-Tabelle \\ *Wert*\\. Verwenden Sie die KeyFieldList-Eigenschaft des Cursors.|  
-|493|SQL-Parameter ist nicht vorhanden.|  
-|494|Sichtdefinition wurde geändert.|  
-|495|Warnung: Der Schlüssel durch dieEigenschaft für die Tabelle definierten *Wert* ist nicht eindeutig.|  
-|498|SQL-SELECT-Anweisung ist ungültig.|  
-|499|SQL-Parameter *Wert* ist ungültig.|  
+|406|Der Drucker ist nicht bereit.|  
+|407|Mit der Set-Funktion wurde ein ungültiges Argument verwendet.|  
+|410|Temporäre Arbeitsdateien können nicht erstellt werden.|  
+|423|Fehler beim Erstellen des OLE-Objekts.|  
+|424|Fehler beim Kopieren des OLE-Objekts in die Zwischenablage.|  
+|462|Interner *Wert* interner Konsistenz Fehler.|  
+|465|Interner SQL-Pass-Through-Konsistenz Fehler.|  
+|466|Das Verbindungs Handle ist ungültig.|  
+|467|Die Eigenschaft ist für lokale Cursor ungültig.|  
+|468|Die Eigenschaft ist für Tabellen Cursor ungültig.|  
+|469|Der Eigenschafts Wert liegt außerhalb des gültigen Bereichs.|  
+|470|Falscher Eigenschaftsname.|  
+|471|Falsches Spalten Format.|  
+|473|Die Eigenschaft auf Umgebungs Ebene ist ungültig.|  
+|474|Beim Ausführen einer SQLEXEC ()-Sequenz wurde ein ungültiger-Befehl ausgegeben.|  
+|479|Ungültiger \\ *Wert*\\für Update Spaltenname.|  
+|489|Allgemeine Felder können nicht in der WHERE-Bedingung einer Update-Anweisung verwendet werden. Ändern Sie die Eigenschaft WhereType der Sicht.|  
+|491|Es wurden keine Update Tabellen angegeben. Verwenden Sie die Tables-Eigenschaft des Cursors.|  
+|492|Für den Update Tabellen \\ *Wert*\\werden keine Schlüssel Spalten angegeben. Verwenden Sie die KeyFieldList-Eigenschaft des Cursors.|  
+|493|Der SQL-Parameter fehlt.|  
+|494|Die Sicht Definition wurde geändert.|  
+|495|Warnung: der von der keyfield-Eigenschaft für den Tabellen *Wert* definierte Schlüssel ist nicht eindeutig.|  
+|498|Die SQL-SELECT-Anweisung ist ungültig.|  
+|499|Der SQL-Parameter *Wert* ist ungültig.|  
   
 ## <a name="500"></a>500  
   
 |||  
 |-|-|  
-|502|Der Datensatz kann nicht geschrieben werden, da er verwendet wird.|  
-|503|Datei kann nicht gesperrt werden.|  
+|502|In den Datensatz kann nicht geschrieben werden, da er verwendet wird.|  
+|503|Die Datei kann nicht gesperrt werden.|  
 |508|Fehler beim Initialisieren von OLE.|  
-|520|Es ist keine Datenbank öffnen oder als aktuelle Datenbank festgelegt.|  
-|522|Konnektivität interner Konsistenzfehler.|  
-|523|Ausführung wurde vom Benutzer abgebrochen.|  
-|525|Funktion wird nicht auf Remotetabellen unterstützt.|  
-|526|Verbindungsfehler: *Wert.*|  
-|527|ODBC-Bibliothek, ODBC32 kann nicht geladen werden. DLL.|  
-|528|ODBC-Eintrag Punkt vorhanden, *Wert*.|  
-|530|Abrufen von abgebrochen; Remotetabelle wird geschlossen.|  
+|520|Es ist keine Datenbank geöffnet oder als aktuelle Datenbank festgelegt.|  
+|522|Interner Konnektivitätsfehler.|  
+|523|Die Ausführung wurde vom Benutzer abgebrochen.|  
+|525|Die Funktion wird für Remote Tabellen nicht unterstützt.|  
+|526|Konnektivitätsfehler: *Wert.*|  
+|527|Die ODBC-Bibliothek kann nicht geladen werden, odbc32. DLL.|  
+|528|Der ODBC-Einstiegspunkt fehlt, *Wert*.|  
+|530|Das Abrufen wurde abgebrochen. Remote Tabelle ist geschlossen.|  
 |532|Typkonvertierung wird nicht unterstützt.|  
 |533|Diese Eigenschaft ist schreibgeschützt.|  
-|536|Funktion wird für native Tabellen nicht unterstützt.|  
-|538|Eine gespeicherte Prozedur ausgeführt wird.|  
-|540|Anzahl der Sitzung ist ungültig.|  
-|541|Verbindung *Wert* ist ausgelastet.|  
-|542|Basistabellenfelder geändert wurden und nicht mehr anzeigen von Feldern übereinstimmen. Sichteigenschaften-Feld können nicht festgelegt werden.|  
-|543|Typkonvertierung erforderlich, die für die DataType-Eigenschaft für das Feld "*Wert*' ist ungültig.|  
-|544|DataType-Eigenschaft für das Feld "*Wert*' ist ungültig.|  
-|545|Tabellenpuffer für den Alias \\ *Wert*\ enthält nicht gespeicherte Änderungen.|  
-|546|Tabelle kann nicht während der Ausführung, die Tabelle gebundenen Ausdrucks geschlossen werden.|  
-|547|Eine leere Zeile kann nicht aus einer Sicht in die Basistabelle(n) eingefügt werden.|  
-|548|Tabelle *Wert* verfügt über eine oder mehrere nicht strukturelle Indizes zu öffnen. Schließen Sie diese, und wiederholen Sie die Transaktion zu beginnen.|  
-|549|Data-Sitzung #*Wert* kann nicht freigegeben werden, mit der geöffneten Transaktionen.|  
-|550|. DBC interner Konsistenzfehler.|  
-|557|Die Datenbank muss ausschließlich geöffnet werden.|  
-|559|Eigenschaft wurde nicht gefunden.|  
-|560|Eigenschaftswert ist ungültig.|  
-|561|Datenbank ist ungültig. Überprüfen Sie.|  
-|562|Objekt wurde nicht gefunden *Wert* in der Datenbank.|  
-|563|Ansicht wurde nicht gefunden *Wert* in der aktuellen Datenbank.|  
-|566|Den PACK-Befehl für eine Datenbank kann nicht ausgegeben werden, während die Tabellen verwendet werden.|  
-|567|Primärschlüssel-Eigenschaft ist ungültig. Überprüfen Sie die Datenbank.|  
-|570|Datenbank ist schreibgeschützt.|  
-|571|Der Name *Wert* wird bereits für eine andere verwendet|  
-|575|Objektname ist ungültig.|  
-|577|Tabelle *Wert* Teil einer Beziehung verwiesen wird.|  
-|578|Ungültiger Datenbankname-Tabellenname.|  
-|579|Befehl kann nicht mit Cursorn vom Typ in der Tabelle, die Pufferung der Modus für eine Tabelle erteilt werden.|  
-|580|Funktion wird nicht unterstützt, für nicht. DBC-Tabellen.|  
-|581|Feld *Wert* akzeptiert keine Null *Wert*.|  
-|583|Datensatz Überprüfungsregel verletzt.|  
-|585|Aktualisieren Sie die Konflikt. Verwenden Sie TABLEUPDATE() mit dem lForce-Parameter, um das Update oder TABLEREVERT() Rollback für das Update zu übernehmen.|  
-|586|-Funktion muss die Zeile oder Tabelle, die Pufferung Modus.|  
-|587|Ungültiges geschachtelt bei OLDVAL() oder CURVAL().|  
-|589|Tabellen- oder Zeilenpufferung erfordert, dass SET MULTILOCKS der Wert ON festgelegt ist.|  
-|590|Fehler bei der BEGIN TRANSACTION-Befehl. Schachtelungsebene ist zu tief.|  
-|591|END-Transaktion-Befehl kann nicht ohne einen entsprechenden BEGIN TRANSACTION-Befehl ausgegeben werden.|  
-|592|Befehl "ROLLBACK" kann nicht ohne einen entsprechenden BEGIN TRANSACTION-Befehl ausgegeben werden.|  
-|593|Befehl kann nicht innerhalb einer Transaktion ausgegeben werden.|  
-|594|Versuchen Sie eine Datei nicht zulässig in einer Transaktion nach dem Anwenden von Datensatzsperren der vorherige sperren.|  
-|596|Tabellenpufferung ist nicht aktiviert.|  
-|597|Ansichten müssen entweder DB_BUFOPTROW oder DB_BUFOPTTABLE.|  
-|598|Regel "und" Trigger-Code muss transaktionsverwendung abwägen.|  
-|599|Data-Sitzung #*Wert* wurde gezwungen, ein ROLLBACK aller Transaktionen, um Deadlocks zu vermeiden.|  
+|536|Funktion wird in nativen Tabellen nicht unterstützt.|  
+|538|Eine gespeicherte Prozedur wird ausgeführt.|  
+|540|Die Sitzungsnummer ist ungültig.|  
+|541|Der Verbindungs *Wert* ist ausgelastet.|  
+|542|Die Felder der Basistabelle wurden geändert und stimmen nicht mehr mit sichtfeldern ab. Die Sicht Feldeigenschaften können nicht festgelegt werden.|  
+|543|Die Typkonvertierung, die für die DataType-Eigenschaft für das Feld "*value*" erforderlich ist, ist ungültig.|  
+|544|Die DataType-Eigenschaft für das Feld "*value*" ist ungültig.|  
+|545|Tabellen Puffer für Alias \\ *Wert*\ enthält Änderungen, für die kein Commit ausgeführt wurde.|  
+|546|Die Tabelle kann während der Ausführung eines Tabellen gebundenen Ausdrucks nicht geschlossen werden.|  
+|547|Eine leere Zeile kann nicht aus einer Sicht in die Basistabelle (n) eingefügt werden.|  
+|548|Der Tabellen *Wert* weist mindestens einen nicht strukturellen Index auf. Schließen Sie diese, und wiederholen Sie die BEGIN TRANSACTION-Transaktion.|  
+|549|Der*Wert* der Daten Sitzung "#" kann nicht mit geöffneten Transaktionen freigegeben werden.|  
+|550|. Interner DBC-Konsistenz Fehler.|  
+|557|Die Datenbank muss exklusiv geöffnet werden.|  
+|559|Die Eigenschaft wurde nicht gefunden.|  
+|560|Der Eigenschafts Wert ist ungültig.|  
+|561|Die Datenbank ist ungültig. Überprüfen Sie.|  
+|562|Der Objekt *Wert* wurde in der Datenbank nicht gefunden.|  
+|563|Der Ansichts *Wert* wurde in der aktuellen Datenbank nicht gefunden.|  
+|566|Der Pack-Befehl kann nicht für eine Datenbank ausgestellt werden, solange die Tabellen verwendet werden.|  
+|567|Die Primärschlüssel Eigenschaft ist ungültig. Überprüfen Sie die Datenbank.|  
+|570|Die Datenbank ist schreibgeschützt.|  
+|571|Der Name- *Wert* wird bereits für einen anderen verwendet.|  
+|575|Der Objektname ist ungültig.|  
+|577|Auf den Tabellen *Wert* wird in einer Beziehung verwiesen.|  
+|578|Ungültiger Datenbanktabellen Name.|  
+|579|Der Befehl kann nicht für eine Tabelle mit Cursorn im Tabellen Puffer Modus ausgegeben werden.|  
+|580|Das Feature wird für nicht-nicht unterstützt. DBC-Tabellen.|  
+|581|Der *Feldwert* akzeptiert keinen NULL- *Wert*.|  
+|583|Die Daten Satz Validierungs Regel wird verletzt.|  
+|585|Update Konflikt. Verwenden Sie TABLEUPDATE () mit dem lforce-Parameter, um ein Commit für das Update oder tablerevert () auszuführen und ein Rollback für das Update auszuführen.|  
+|586|Die Funktion erfordert den Zeilen-oder Tabellen Puffer Modus.|  
+|587|Unzulässiges geschaltes OLDVAL () oder currval ().|  
+|589|Die Tabellen-oder Zeilen Pufferung erfordert, dass SET MULTILOCKS auf ON festgelegt ist.|  
+|590|Fehler bei BEGIN TRANSACTION Befehl. Die Schachtelungs Ebene ist zu tief.|  
+|591|Der Befehl zum Beenden der Transaktion kann nicht ohne einen entsprechenden BEGIN TRANSACTION Befehl ausgegeben werden.|  
+|592|Der Rollback-Befehl kann nicht ohne einen entsprechenden BEGIN TRANSACTION Befehl ausgegeben werden.|  
+|593|Der Befehl kann nicht innerhalb einer Transaktion ausgegeben werden.|  
+|594|Ungültiger Versuch, eine Datei Sperre in einer Transaktion durchführen, nachdem vorherige Datensatzsperren durch genommen wurden.|  
+|596|Die Tabellen Pufferung ist nicht aktiviert.|  
+|597|Sichten erfordern entweder DB_BUFOPTROW oder DB_BUFOPTTABLE.|  
+|598|Der Regel-und Auslöse Code muss die Transaktions Verwendung ausgleichen.|  
+|599|Der Wert der Daten Sitzung #*value* wurde gezwungen, ein Rollback aller Transaktionen durchzuführen, um Deadlock zu vermeiden|  
   
 ## <a name="600"></a>600  
   
 |||  
 |-|-|  
-|601|Aliasname wird bereits verwendet.|  
-|602|Vorgang ist ungültig für eine Gutschrift, Allgemein oder Bild-Feld.|  
-|612|Menü oder Menüelement definiert ist.|  
-|618|Menü ist nicht mit Menü definieren definiert wurde.|  
-|624|Menütitel wurde mit definieren PAD nicht definiert.|  
-|625|Menü ist nicht mit definieren POPUP definiert wurde.|  
-|631|Arraydimensionen sind ungültig.|  
-|637|Datei muss geöffnet werden, ausschließlich, um die Memo-Datei zu konvertieren.|  
-|638|Feld muss ein Memo-Feld sein.|  
-|649|Keine vorherigen PRINTJOB-Befehl, der mit diesem Befehl entsprechen.|  
-|651|Abbrechen oder Anhalten ist nicht zulässig.|  
-|659|Die Tabelle besitzt Memofelder, die nicht konvertiert werden können, während schreibgeschützt öffnen.|  
-|683|Index-Tag wurde nicht gefunden.|  
+|601|Der Alias Name wird bereits verwendet.|  
+|602|Der Vorgang ist für ein Memo-, Allgemeines oder Bild Feld ungültig.|  
+|612|Es ist kein Menü oder Menü Element definiert.|  
+|618|Das Menü wurde nicht mit dem Menü "definieren" definiert.|  
+|624|Der Menütitel wurde nicht mit dem define-Pad definiert.|  
+|625|Das Menü wurde nicht mit der Option Popup definieren definiert.|  
+|631|Array Dimensionen sind ungültig.|  
+|637|Die Datei muss exklusiv geöffnet werden, um die Memo Datei zu konvertieren.|  
+|638|Das Feld muss ein Memo Feld sein.|  
+|649|Kein vorheriger PrintJob-Befehl, der diesem Befehl entspricht.|  
+|651|Abbrechen oder aussetzen ist nicht zulässig.|  
+|659|Die Tabelle enthält Memo Felder, die nicht konvertiert werden können, während Sie schreibgeschützt öffnen.|  
+|683|Das Indextag wurde nicht gefunden.|  
   
 ## <a name="700"></a>700  
   
 |||  
 |-|-|  
-|700|Datensatz wird von einem anderen Benutzer.|  
-|701|Datei muss ausschließlich geöffnet werden.|  
-|702|Datei wird von einem anderen Benutzer.|  
-|703|Datensatz ist nicht gesperrt.|  
-|705|Dateizugriff wird verweigert.|  
-|706|Kann nicht sortiert. IDX-Dateien in absteigender Reihenfolge.|  
-|707|Strukturelle. CDX-Datei wurde nicht gefunden.|  
-|708|Datei ist in einem anderen Arbeitsbereich geöffnet.|  
-|712|Feldname ist bereits vorhanden oder ungültig.|  
-|714|Fenster "*Wert*' wurde nicht definiert.|  
-|718|Datei ist schreibgeschützt.|  
-|722|Präprozessor-Ausdruck ist ungültig.|  
-|734|Eigenschaft *Wert* wurde nicht gefunden.|  
-|737|*Wert* ist eine Methode, Ereignisse oder Objekt.|  
-|738|Eigenschaft *Wert* ist nicht, eine Methode oder ein Ereignis.|  
-|740|*Wert* ist eine schreibgeschützte Eigenschaft.|  
-|748|Diese Datei ist nicht kompatibel mit der aktuellen Version von Visual FoxPro.|  
-|750|Datei wurde in einer späteren Version von Visual FoxPro, als die aktuelle Version erstellt.|  
-|763|Eigenschaft *Wert* ist bereits vorhanden.|  
-|773|Datenbank-Objekttyp ist ungültig.|  
+|700|Der Datensatz wird von einem anderen Benutzer verwendet.|  
+|701|Die Datei muss exklusiv geöffnet werden.|  
+|702|Die Datei wird von einem anderen Benutzer verwendet.|  
+|703|Der Datensatz ist nicht gesperrt.|  
+|705|Der Dateizugriff wurde verweigert.|  
+|706|Kann nicht sortiert werden. IDX-Dateien in absteigender Reihenfolge.|  
+|707|Bau. Die CDX-Datei wurde nicht gefunden.|  
+|708|Die Datei ist in einem anderen Arbeitsbereich geöffnet.|  
+|712|Der Feldname ist ein Duplikat oder ungültig.|  
+|714|Das Fenster '*Wert*' wurde nicht definiert.|  
+|718|Die Datei ist schreibgeschützt.|  
+|722|Der Präprozessorausdruck ist ungültig.|  
+|734|Der Eigenschafts *Wert* wurde nicht gefunden.|  
+|737|der *Wert* ist eine Methode, ein Ereignis oder ein Objekt.|  
+|738|Der Eigenschafts *Wert* ist keine Methode oder ein Ereignis.|  
+|740|der *Wert* ist eine schreibgeschützte Eigenschaft.|  
+|748|Diese Datei ist mit der aktuellen Version von Visual FoxPro nicht kompatibel.|  
+|750|Die Datei wurde in einer neueren Version von Visual FoxPro erstellt als die aktuelle Version.|  
+|763|Der Eigenschafts *Wert* ist bereits vorhanden.|  
+|773|Der Daten Bank Objekttyp ist ungültig.|  
 |784|Dieses Objekt wird von einer Basisklasse abgeleitet und verfügt nicht über eine übergeordnete Klasse.|  
   
 ## <a name="800"></a>800  
   
 |||  
 |-|-|  
-|802|SQL: Tabelle wurde nicht gefunden.|  
+|802|SQL: die Tabelle kann nicht gefunden werden.|  
 |872|Zu viele Spalten.|  
 |879|Kein Primärschlüssel.|  
-|884|Die Eindeutigkeit des Indexes *Wert* verletzt wird.|  
-|885|Nur die strukturelle Tags können als Kandidaten definiert werden.|  
-|886|Index ist nicht mit NULL-Werte akzeptiert.|  
-|887|Ungültige Rekursion in regelauswertung.|  
-|888|Tag-Name ist zu lang.|  
+|884|Die Eindeutigkeit des *Indexwerts* wird verletzt.|  
+|885|Nur strukturelle Tags können als Kandidat definiert werden.|  
+|886|Der Index akzeptiert NULL nicht.|  
+|887|Ungültige Rekursion bei der Regelauswertung.|  
+|888|Der TagName ist zu lang.|  
   
 ## <a name="900"></a>900  
   
 |||  
 |-|-|  
-|901|Funktionswert-Argument, Typ oder Anzahl ist ungültig.|  
-|902|Fehler bei der ausdrucksauswertung.|  
-|903|Zeichenfolge ist zu lang.|  
-|904|** oder ^ Domänenfehler.|  
-|905|LOG(): 0 (null) oder eine negative Zahl, die als Argument verwendet.|  
-|906|Sqrt()-Argument darf nicht negativ sein.|  
-|912|Vorgang ist unzulässig für ein Allgemein.|  
-|914|Codepagenummer ist ungültig.|  
-|915|Sortierreihenfolge "*Wert*' wurde nicht gefunden.|  
-|918|Dateiname ist zu lang.|  
-|922|Volume ist nicht vorhanden.|  
-|923|Objekt *Wert* wurde nicht gefunden.|  
-|924|*Wert* ist kein Objekt.|  
-|925|Unbekanntes Element *Wert*.|  
-|928|Anweisung ist nur innerhalb einer Klassendefinition gültig.|  
-|929|*Wert* kann nur innerhalb einer Methode verwendet werden.|  
-|930|Kann nicht neu definiert *Wert*.|  
-|931|Anweisung ist nicht in einer Prozedur.|  
-|934|Anweisung ist nur gültig, in einer Methode.|  
-|935|Das aktuelle Objekt erbt nicht von Klasse *Wert*.|  
-|937|Prozedurdatei "*Wert*' wurde nicht gefunden.|  
-|938|Objekt ist nicht Bestandteil einer *Wert*.|  
-|939|MIT / ENDWITH-Konflikt.|  
-|940|Ausdruck gilt nicht außerhalb von WITH / ENDWITH.|  
-|941|Fehlercode ist ungültig.|  
-|942|Arrays können keine Objekte zugewiesen werden.|  
-|943|Member *Wert* wird nicht auf ein Objekt ausgewertet.|  
-|945|Das aktuelle Objekt wurde freigegeben.|  
-|947|Ausdruck ist zu komplex.|  
-|951|Das Objekt verwendet, können nicht gelöscht werden.|  
-|955|WINDOWS-TASTE. INI/Registrierung ist beschädigt.|  
-|957|Fehler beim Zugriff auf den Druckerwarteschlangen.|  
+|901|Der Funktions Argument Wert, der Typ oder die Anzahl ist ungültig.|  
+|902|Fehler bei der Ausdrucks Auswertung.|  
+|903|Die Zeichenfolge ist zu lang für die Anpassung.|  
+|904|* * oder ^ Domänen Fehler.|  
+|905|Log (): 0 (null) oder negativ als Argument verwendet.|  
+|906|Das sqrt ()-Argument darf nicht negativ sein.|  
+|912|Der Vorgang ist für ein allgemeines Feld ungültig.|  
+|914|Die Code Page Nummer ist ungültig.|  
+|915|Die Sortiersequenz '*Wert*' wurde nicht gefunden.|  
+|918|Der Dateiname ist zu lang.|  
+|922|Das Volume ist nicht vorhanden.|  
+|923|Der Objekt *Wert* wurde nicht gefunden.|  
+|924|der *Wert* ist kein Objekt.|  
+|925|Unbekannter Element *Wert*.|  
+|928|Die Anweisung ist nur innerhalb einer Klassendefinition gültig.|  
+|929|der *Wert* kann nur innerhalb einer Methode verwendet werden.|  
+|930|*Wert*kann nicht neu definiert werden.|  
+|931|Die-Anweisung ist nicht in einer-Prozedur.|  
+|934|Die Anweisung ist nur innerhalb einer Methode gültig.|  
+|935|Das aktuelle Objekt erbt nicht vom Klassen *Wert*.|  
+|937|Die Prozedur Datei '*Wert*' wurde nicht gefunden.|  
+|938|Das Objekt ist nicht in einem *Wert*enthalten.|  
+|939|With/EndWith stimmen nicht überein.|  
+|940|Der Ausdruck ist außerhalb von With/EndWith nicht gültig.|  
+|941|Der Fehlercode ist ungültig.|  
+|942|-Objekten können Arrays nicht zugewiesen werden.|  
+|943|Der Element *Wert* wird nicht zu einem Objekt ausgewertet.|  
+|945|Das aktuelle-Objekt wurde freigegeben.|  
+|947|Der Ausdruck ist zu komplex.|  
+|951|Das verwendete Objekt kann nicht gelöscht werden.|  
+|955|Erringen. INI/Registrierung ist beschädigt.|  
+|957|Fehler beim Zugriff auf den Druckerspooler.|  
 |959|Ungültige Koordinaten.|  
-|960|Ungültige Neudefinition des Variable *Wert*.|  
-|971|Kann nicht kompiliert werden, bis der aktuelle COMPILE-Befehl abgeschlossen ist.|  
-|972|Array *Wert* verwendet wird.|  
-|974|Arrays können keine Elemente des Arrays zugewiesen werden.|  
-|976|Rückverweis kann nicht aufgelöst werden.|  
-|988|Currency-Wert ist außerhalb des gültigen Bereichs.|  
-|990|Abbrechen.|  
-|999|Funktion ist nicht implementiert.|
+|960|Ungültige Neudefinition des Variablen *Werts*.|  
+|971|Kann erst kompiliert werden, wenn der aktuelle Kompilierungs Befehl abgeschlossen ist.|  
+|972|Der *Arraywert* wird verwendet.|  
+|974|Arrays können nicht Array Elementen zugewiesen werden.|  
+|976|Der Backlink kann nicht aufgelöst werden.|  
+|988|Der Währungswert liegt außerhalb des zulässigen Bereichs.|  
+|990|Abbrechen|  
+|999|Die Funktion ist nicht implementiert.|
