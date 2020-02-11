@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957244"
 ---
 # <a name="create-a-database-master-key"></a>Erstellen eines Datenbank-Hauptschlüssels
@@ -25,21 +25,21 @@ In diesem Thema wird beschrieben, wie Sie in `master` [!INCLUDE[ssCurrent](../..
 
 **In diesem Thema**
 
-- **Bevor Sie beginnen:**
+- **Vorbereitungen:**
 
-  [Sicherung](#Security)
+  [Sicherheit](#Security)
 
 - [So erstellen Sie einen Datenbank-Hauptschlüssel mithilfe von Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a>Bevor Sie beginnen
+## <a name="BeforeYouBegin"></a> Vorbereitungen
 
-### <a name="Security"></a>Sicherung
+### <a name="Security"></a> Sicherheit
 
-#### <a name="Permissions"></a>Griff
+#### <a name="Permissions"></a> Berechtigungen
 
 Erfordert die CONTROL-Berechtigung für die Datenbank.
 
-## <a name="TsqlProcedure"></a>Verwenden von Transact-SQL
+## <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>So erstellen Sie einen Datenbank-Hauptschlüssel
 

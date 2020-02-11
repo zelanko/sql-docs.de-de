@@ -1,5 +1,5 @@
 ---
-title: Sp_getbindtoken (Transact-SQL) | Microsoft-Dokumentation
+title: sp_getbindtoken (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,22 @@ ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124001"
 ---
-# <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
+# <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt einen eindeutigen Bezeichner für die Transaktion zurück. Dieser eindeutige Bezeichner ist eine Zeichenfolge, mit der Sitzungen mithilfe von sp_bindsession gebunden werden.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen Multiple Active Results Sets (MARS) oder verteilte Transaktionen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen Multiple Active Results Sets (MARS) oder verteilte Transaktionen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,17 +43,17 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@out_token=]'*Return_value*"  
- Das Token, das zum Binden von Sitzungen verwendet wird. *Return_value* ist **varchar(255)** hat keinen Standardwert.  
+ [@out_token=] '*return_value*'  
+ Das Token, das zum Binden von Sitzungen verwendet wird. *return_value* ist vom Datentyp **varchar (255)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Sp_getbindtoken gibt ein gültiges Token zurück, nur, wenn die gespeicherte Prozedur innerhalb einer aktiven Transaktion ausgeführt wird. Andernfalls gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Fehlermeldung zurück. Zum Beispiel:  
+## <a name="remarks"></a>Bemerkungen  
+ sp_getbindtoken gibt nur dann ein gültiges Token zurück, wenn die gespeicherte Prozedur innerhalb einer aktiven Transaktion ausgeführt wird. Andernfalls gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Fehlermeldung zurück. Beispiel:  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Wenn Sp_getbindtoken zum Eintragen einer verteilten transaktionsverbindung innerhalb einer geöffneten Transaktion verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das gleiche Token zurück. Zum Beispiel:  
+ Wenn sp_getbindtoken zum Eintragen einer verteilten Transaktions Verbindung innerhalb einer geöffneten Transaktion verwendet wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt das gleiche Token zurück. Beispiel:  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,9 +126,9 @@ SELECT @bind_token AS Token;
   
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Srv_getbindtoken &#40;gespeicherte API für erweiterte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
+ [srv_getbindtoken &#40;API für erweiterte gespeicherte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

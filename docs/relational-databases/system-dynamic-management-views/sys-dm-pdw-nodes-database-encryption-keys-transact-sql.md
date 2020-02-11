@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401641"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -24,20 +24,20 @@ ms.locfileid: "74401641"
 
   Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel für die Datenbank zurück. **sys. dm_pdw_nodes_database_encryption_keys** stellt diese Informationen für jeden Knoten bereit. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|database_id|**wartenden**|ID der physischen Datenbank auf jedem Knoten.|  
-|encryption_state|**wartenden**|Gibt an, ob die Datenbank auf diesem Knoten verschlüsselt oder nicht verschlüsselt ist.<br /><br /> 0 = Kein Verschlüsselungsschlüssel für die Datenbank vorhanden, keine Verschlüsselung<br /><br /> 1 = Unverschlüsselt<br /><br /> 2 = Verschlüsselung wird ausgeführt<br /><br /> 3 = Verschlüsselt.<br /><br /> 4 = Schlüsseländerung wird ausgeführt<br /><br /> 5 = Entschlüsselung wird ausgeführt<br /><br /> 6 = Schutz Änderung wird ausgeführt (das Zertifikat, das den Verschlüsselungsschlüssel für die Datenbank verschlüsselt, wird geändert.)|  
-|create_date|**DateTime**|Zeigt das Datum der Erstellung des Verschlüsselungsschlüssels an.|  
-|regenerate_date|**DateTime**|Zeigt das Datum der Neugenerierung des Verschlüsselungsschlüssels an.|  
-|modify_date|**DateTime**|Zeigt das Datum der Änderung des Verschlüsselungsschlüssels an.|  
-|set_date|**DateTime**|Zeigt das Datum der Anwendung des Verschlüsselungsschlüssels auf die Datenbank an.|  
-|opened_date|**DateTime**|Zeigt das Datum an, an dem der Datenbankschlüssel zuletzt geöffnet wurde.|  
+|database_id|**int**|ID der physischen Datenbank auf jedem Knoten.|  
+|encryption_state|**int**|Gibt an, ob die Datenbank auf diesem Knoten verschlüsselt oder nicht verschlüsselt ist.<br /><br /> 0 = Kein Verschlüsselungsschlüssel für die Datenbank vorhanden, keine Verschlüsselung<br /><br /> 1 = Unverschlüsselt<br /><br /> 2 = Verschlüsselung wird ausgeführt<br /><br /> 3 = Verschlüsselt.<br /><br /> 4 = Schlüsseländerung wird ausgeführt<br /><br /> 5 = Entschlüsselung wird ausgeführt<br /><br /> 6 = Schutz Änderung wird ausgeführt (das Zertifikat, das den Verschlüsselungsschlüssel für die Datenbank verschlüsselt, wird geändert.)|  
+|create_date|**datetime**|Zeigt das Datum der Erstellung des Verschlüsselungsschlüssels an.|  
+|regenerate_date|**datetime**|Zeigt das Datum der Neugenerierung des Verschlüsselungsschlüssels an.|  
+|modify_date|**datetime**|Zeigt das Datum der Änderung des Verschlüsselungsschlüssels an.|  
+|set_date|**datetime**|Zeigt das Datum der Anwendung des Verschlüsselungsschlüssels auf die Datenbank an.|  
+|opened_date|**datetime**|Zeigt das Datum an, an dem der Datenbankschlüssel zuletzt geöffnet wurde.|  
 |key_algorithm|**varchar (?)**|Zeigt den Algorithmus an, der für den Schlüssel verwendet wird.|  
-|key_length|**wartenden**|Zeigt die Länge des Schlüssels an.|  
+|key_length|**int**|Zeigt die Länge des Schlüssels an.|  
 |encryptor_thumbprint|**varbin**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
 |percent_complete|**wirkliche**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|  
-|node_id|**wartenden**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|  
+|node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

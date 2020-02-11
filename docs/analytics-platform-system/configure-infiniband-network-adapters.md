@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401293"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Konfigurieren von InfiniBand-Netzwerkadaptern für Analytics Platform System
 In diesem Thema wird beschrieben, wie die InfiniBand-Netzwerkadapter auf einem Client Server ohne Appliance konfiguriert werden, um eine Verbindung mit dem Steuer Knoten für parallele Data Warehouse (PDW) herzustellen. Verwenden Sie diese Anweisungen, um grundlegende Konnektivität und hohe Verfügbarkeit zu erhalten, sodass das Laden, sichern und andere Prozesse automatisch eine Verbindung mit dem aktiven InfiniBand-Netzwerk herstellen.  
   
-## <a name="Basics"></a>Beschreibung  
+## <a name="Basics"></a>BESCHREIBUNG  
 Diese Anweisungen veranschaulichen, wie Sie die richtigen InfiniBand-IP-Adressen und Subnetzmasken auf dem mit InfiniBand verbundenen Server finden und dann festlegen. Außerdem wird erläutert, wie der Server für die Verwendung des APS-Appliance-DNS festgelegt wird, damit Ihre Verbindung in das aktive InfiniBand-Netzwerk aufgelöst wird.  
   
 Für hohe Verfügbarkeit verfügt APS über zwei InfiniBand-Netzwerke, eine aktiv und eine passive. Jedes InfiniBand-Netzwerk verfügt über eine andere IP-Adresse für den Steuer Knoten. Wenn das aktive InfiniBand-Netzwerk ausfällt, wird das passive InfiniBand-Netzwerk zum aktiven Netzwerk. Wenn dies geschieht, stellt ein Skript oder ein Prozess automatisch eine Verbindung mit dem aktiven InfiniBand-Netzwerk her, ohne die Skript Parameter zu ändern.  
@@ -48,7 +48,7 @@ Wenn der Name Ihrer PDW-Region beispielsweise mypdw lautet und der Gerätename m
   
 ## <a name="BeforeBegin"></a>Bevor Sie beginnen  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
 Sie benötigen ein APS-Appliance-Domänen Konto, um sich beim ad01-Knoten anzumelden. Beispiel: F12345 * \administrator "  
   
 Sie benötigen ein Windows-Konto auf dem Client Server, das über die Berechtigung zum Konfigurieren der Netzwerkadapter verfügt.  
@@ -98,7 +98,7 @@ Um Ihre eigenen geschäftlichen Anforderungen zu erfüllen, können Sie den Clie
   
 ## <a name="Sec2"></a>Schritt 2: Konfigurieren der InfiniBand-Netzwerk Adapter Einstellungen auf dem Client Server  
 
-### <a name="notes"></a>Hinweise  
+### <a name="notes"></a>Notizen  
   
 -   In den folgenden Schritten wird gezeigt, wie Sie Ihren Server bei den APS-DNS-Servern registrieren.  
   

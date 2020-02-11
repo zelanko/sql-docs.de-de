@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763206"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2:: bcpsetbulkmode stellt eine Alternative zum [IBCPSession:: BCPColFmt &#40;-&#41; OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spalten Formats bereit. Anders als bei IBCPSession:: bcpcolf, bei dem einzelne Spalten Format Attribute festgelegt werden, werden von IBCPSession2:: bcpsetbulkmode alle Attribute festgelegt.  
+  IBCPSession2:: bcpsetbulkmode stellt eine Alternative zum [IBCPSession:: BCPColFmt-&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spalten Formats bereit. Anders als bei IBCPSession:: bcpcolf, bei dem einzelne Spalten Format Attribute festgelegt werden, werden von IBCPSession2:: bcpsetbulkmode alle Attribute festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,10 +39,10 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *property*  
+ *Property*  
  Eine Konstante vom Typ BYTE. Eine Liste der Konstanten finden Sie in der Tabelle im Abschnitt mit Hinweisen.  
   
- *pField*  
+ *pfield*  
  Der Zeiger auf den Wert des Feldabschlusszeichens.  
   
  cbField  
@@ -54,7 +54,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  Die Länge in Bytes des Zeilenabschlusszeichenwerts.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  IBCPSession2:: bcpsetbulkmode kann eine der folgenden zurückgeben:  
   
 |||  
@@ -65,14 +65,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|Das Argument war ungültig.|  
 |**E_OUTOFMEMORY**|Fehler aufgrund von nicht genügend Arbeitsspeicher.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  IBCPSession2:: bcpsetbulkmode kann zum Massen kopieren aus einer Abfrage oder einer Tabelle verwendet werden. Wenn IBCPSession2::BCPSetBulkMode zum Massenkopieren aus einer Abfrageanweisung verwendet wird, muss es vor dem Aufruf von `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` aufgerufen werden, um die Abfrageanweisung anzugeben.  
   
  Kombinieren Sie nicht in einem einzelnen Befehlstext die RPC-Aufrufsyntax mit der Batchabfragesyntax (z. B.`{rpc func};SELECT * from Tbl`).  Dies bewirkt, dass ICommandPrepare::P repas einen Fehler zurückgibt und verhindert, dass Metadaten abgerufen werden. Verwenden Sie ODBC CALL-Syntax (z. B.`{call func}; SELECT * from Tbl`), wenn Sie die Ausführung gespeicherter Prozeduren und die Batchabfrage in einem einzelnen Befehlstext kombinieren müssen.  
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in bcp. EXE und in IBCPSession:: BCPColFmt mit der *eUserDataType* -Eigenschaft auf **BCP_TYPE_SQLCHARACTER**festgelegt.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der-w-Option in bcp. EXE und IBCPSession:: BCPColFmt mit der *eUserDataType* -Eigenschaft ist auf **BCP_TYPE_SQLNCHAR**festgelegt.|  
@@ -361,7 +361,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

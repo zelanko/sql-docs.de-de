@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832607"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
@@ -32,7 +32,7 @@ ms.locfileid: "62832607"
   
 -   **Trennzeichen** Standardmäßig enthält die Liste der Trennzeichen die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
--   **Symbole** standardmäßig die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'`~ = & / @!? [] ()-<>{}| #* ^ %`. For example, if the symbols are "`()-"", der Wert "(425) 123-4567" mit dem Token ["(", "425",")", "123", "-", "4567",")"].  
+-   **Symbole** Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'`~ =&/@!? () <> []{}| # * ^%`. For example, if the symbols are "`()-"", wird der Wert "(425) 123-4567" als "[" ("," 425 ",") "," 123 ","-"," 4567 ",") "] tokenisiert.  
   
  Ein Zeichen kann nicht zugleich ein Trennzeichen und ein Symbol sein.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62832607"
 |---------|----------|  
 |Straße|Straße|  
 |Straße|Allee|  
-|Straße|Platz|  
+|Straße|Ort|  
 |Straße|Weg|  
   
  Anhand dieser Kombination aus Tags könnte das resultierende Muster für eine Straßenbezeichnung dem folgenden Muster ähneln:  
@@ -71,15 +71,15 @@ ms.locfileid: "62832607"
 ## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
  Für eine **Anforderung für Spaltenmusterprofil**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
--   **Daten**, die die Optionen **TableOrView** und **Spalte** enthalten  
+-   **Daten**, die die Optionen **TableOrView** und **Column** enthalten  
   
 -   **Allgemein**  
   
--   **Options**  
+-   **Optionen**  
   
 ### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **TableOrView**  
  Wählen Sie die vorhandene Tabelle oder die Sicht aus, die die Spalte enthält, für die ein Profil erstellt werden soll.  
@@ -87,12 +87,12 @@ ms.locfileid: "62832607"
  Weitere Informationen finden Sie im Abschnitt "TableorView-Optionen" in diesem Thema.  
   
  **Spalte**  
- Wählen Sie die vorhandene Spalte aus, für die ein Profil erstellt werden soll. Wählen Sie **(\*)** aus, um ein Profil für alle Spalten zu erstellen.  
+ Wählen Sie die vorhandene Spalte aus, für die ein Profil erstellt werden soll. Wählen **Sie\*()** aus, um ein Profil für alle Spalten  
   
  Weitere Informationen finden Sie im Abschnitt "Spaltenoptionen" in diesem Thema.  
   
 #### <a name="tableorview-options"></a>TableOrView-Optionen  
- **Schema**  
+ **Chaos**  
  Gibt das Schema an, zu dem die ausgewählte Tabelle gehört. Diese Option ist schreibgeschützt.  
   
  **Table**  
@@ -109,41 +109,41 @@ ms.locfileid: "62832607"
  Diese Option gilt nicht für das Spaltenmusterprofil.  
   
 ### <a name="general-options"></a>Allgemeine Optionen  
- **RequestID**  
+ **RequestId**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Optionen  
- **MaxNumberOfPatterns**  
+### <a name="options"></a>Tastatur  
+ **Maxnumofpatterns**  
  Geben Sie die maximale Anzahl von Mustern an, die das Profil berechnen soll. Der Standardwert dieser Option ist 10. Der Maximalwert ist 100.  
   
- **PercentageDataCoverageDesired**  
+ **Prozagedatacoveragegewünschter**  
  Geben Sie den Prozentwert der Daten an, die die berechneten Muster abdecken sollen. Der Standardwert dieser Option ist 95 (Prozent).  
   
  **CaseSensitive**  
  Geben Sie an, ob bei den Mustern die Groß-/Kleinschreibung beachtet werden soll. Der Standardwert für diese Option ist **False**.  
   
- **Delimiters**  
+ **Trennzeichen**  
  Führen Sie die Zeichen auf, die als Entsprechung der Leerzeichen zwischen Wörtern behandelt werden sollen, wenn Text mit Token versehen wird. Standardmäßig enthält die Liste der **Trennzeichen** die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
- **Symbols**  
- Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und " @ " für E-Mail-Adressen enthalten. Standardmäßig wird die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'`~ = & / @!? [] ()-<>{}| #* ^ %'.  
+ **MB**  
+ Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'`~ =&/@!? () <> []{}| # * ^% '.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
- **TagTableConnectionManager**  
+ **Tagtableconnectionmanager**  
  Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tagtabelle enthält.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
- **TagTableName**  
+ **Tagtablename**  
  Wählen Sie die vorhandene Tagtabelle aus, die zwei Zeichenfolgenspalten mit der Bezeichnung "Tag" und "Begriff" aufweisen muss.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
-## <a name="see-also"></a>Siehe auch  
- [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
- [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Editor für den Datenprofilerstellungs-Task &#40;&#41;Seite Allgemein](../general-page-of-integration-services-designers-options.md)   
+ [Schnell Profil Formular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

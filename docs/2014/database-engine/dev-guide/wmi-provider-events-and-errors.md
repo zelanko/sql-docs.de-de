@@ -1,5 +1,5 @@
 ---
-title: WMI-Anbieterereignisse und Fehler | Microsoft-Dokumentation
+title: Ereignisse und Fehler des WMI-Anbieters | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780266"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Ereignisse und Fehler für WMI-Anbieter
@@ -28,7 +28,7 @@ ms.locfileid: "62780266"
  0x8007052f  
  Anmeldefehler: Eingeschränktes Benutzerkonto. Mögliche Ursachen hierfür sind, dass leere Kennwörter nicht zulässig sind, Einschränkungen der Anmeldezeiten vorliegen oder eine Richtlinieneinschränkung erzwungen wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine (Fehler und Ereignisse)](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b3b3ccbab2d77f92fe9d28ae616939b8fa02ea4c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245167"
 ---
 # <a name="find-in-files"></a>In Dateien suchen
-  Die Registerkarte **in Dateien** Suchen des Fensters Suchen und ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
+  Die Registerkarte **In Dateien suchen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
   
  Das Dialogfeld **Suchen und Ersetzen** kann auch über Symbolleistenschaltflächen und Tastenkombinationen geöffnet werden.  
   
@@ -47,22 +47,22 @@ ms.locfileid: "75245167"
 > [!NOTE]  
 >  Wenn die für **Suchen in** ausgewählte Option eine aus der Quellcodeverwaltung ausgecheckte Datei durchsuchen soll, wird nur die Version der Datei durchsucht, die auf den lokalen Computer heruntergeladen wurde.  
   
- **Suchen in**  
+ **Look in**  
  Wählen Sie aus dieser Liste einen vordefinierten Suchbereich, oder geben Sie über das Dialogfeld **Suchordner auswählen** eine Gruppe von Verzeichnissen an.  
   
  **Aktuelles Dokument**  
  Diese Option steht zur Verfügung, wenn ein Dokument in einem Editor geöffnet ist. Dabei wird nur das aktive Dokument nach der unter **Suchen nach**angegebenen Zeichenfolge durchsucht.  
   
- **Alle geöffneten Dokumente**  
+ **Alle offenen Dokumente**  
  Durchsucht alle zurzeit zum Bearbeiten geöffneten Dokumente.  
   
  **Aktuelles Projekt**  
  Durchsucht alle Dateien im aktuellen Projekt.  
   
- **Gesamte Projekt Mappe**  
+ **Gesamte Projektmappe**  
  Durchsucht alle Dateien in der aktiven Projektmappe.  
   
- **Unterordner einschließen**  
+ **Unterordner einbeziehen**  
  Gibt an, dass die Unterordner des unter **Suchen in** angegebenen Ordners durchsucht werden. Dazu ist ein benutzerdefinierter Verzeichnissatz erforderlich.  
   
  **Durchsuchen**  
@@ -71,22 +71,22 @@ ms.locfileid: "75245167"
 ## <a name="find-options"></a>Mit  
  Sie können den Abschnitt **Suchoptionen** reduzieren oder erweitern. Die folgenden Optionen können aktiviert oder deaktiviert werden.  
   
- **Großbuchstaben vergleichen**  
- Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen neben der inhaltlichen Übereinstimmung auch die Groß-/Kleinschreibung identisch ist. Beispielsweise gibt eine Suche nach **MyObject** bei aktivierter Kontrollkästchen Groß- **/Kleinschreibung** suchen "MyObject", aber nicht "MyObject" oder "MyObject" zurück.  
+ **Groß-/Kleinschreibung beachten**  
+ Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen neben der inhaltlichen Übereinstimmung auch die Groß-/Kleinschreibung identisch ist. Eine Suche nach **MyObject** bei aktiviertem Kontrollkästchen **Groß-/Kleinschreibung beachten** gibt "MyObject", nicht aber "myobject" oder "MYOBJECT" zurück.  
   
- **Ganzes Wort suchen**  
+ **Nur ganzes Wort suchen**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen jeweils das ganze Wort übereinstimmt. Eine Suche nach **MyObject** gibt beispielsweise "MyObject", nicht aber "CMyObject" oder "MyObjectC" zurück.  
   
- **Konsum**  
+ **Verwenden Sie**  
  Gibt an, wie in den Textfeldern **Suchen nach** oder **Ersetzen durch** eingegebene Sonderzeichen interpretiert werden sollen. Zur Auswahl stehen **Platzhalter** und **Reguläre Ausdrücke**.  
   
- **Reguläre Ausdrücke**  
+ **Regular Expressions**  
  Mithilfe spezieller Notationen werden zu suchende Textmuster definiert. Eine Liste finden Sie unter [Suchen von Text mit regulären Ausdrücken](search-text-with-regular-expressions.md).  
   
  **Platzhalter**  
  Sonderzeichen, wie Sternchen (`*`) und Fragezeichen (`?`), stellen ein oder mehrere Zeichen dar. Eine Liste finden Sie unter [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md).  
   
- **Diese Dateitypen betrachten**  
+ **Nach diesen Dateitypen suchen**  
  Diese Liste gibt die Dateitypen an, die in den unter **Suchen in**angegebenen Verzeichnissen durchsucht werden sollen. Wird dieses Feld leer gelassen, werden alle Dateien in den unter **Suchen in** angegebenen Verzeichnissen durchsucht.  
   
 ```  
@@ -107,13 +107,13 @@ ms.locfileid: "75245167"
  **Fenster "Suchergebnisse 1"**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden die Ergebnisse der aktuellen Suche an den Inhalt im Fenster "Suchergebnisse 1" angehängt. Dieses Fenster wird automatisch geöffnet, um die Suchergebnisse anzuzeigen. Zum manuellen Öffnen des Fensters klicken Sie im Menü **Ansicht** auf **Weitere Fenster** und dann auf **Suchergebnisse 1**.  
   
- **Fenster "Suchergebnisse 2"**  
+ **Ergebnisse suchen: 2**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden die Ergebnisse der aktuellen Suche an den Inhalt im Fenster Suchergebnisse 2 angehängt. Dieses Fenster wird automatisch geöffnet, um die Suchergebnisse anzuzeigen. Zum manuellen Öffnen des Fensters klicken Sie im Menü **Ansicht** auf **Weitere Fenster** und dann auf **Suchergebnisse 2**.  
   
  **Nur Dateinamen anzeigen**  
  Zeigt einen Eintrag je Datei an, die eine Übereinstimmung für die Suchbedingung enthält, statt einen Eintrag je Treffer entweder im Fenster Suchergebnisse 1 oder Suchergebnisse 2. Diese Option steht in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]nicht zur Verfügung.  
   
- **Geänderte Dateien geöffnet lassen, nachdem alle ersetzen**  
+ **Geänderte Dateien offen lassen, nachdem alles ersetzt wurde**  
  Wenn diese Option aktiviert ist, bleiben alle Dateien geöffnet, in denen Ersetzungen vorgenommen wurden. Auf diese Weise können Sie die Änderungen rückgängig machen oder speichern. Speichereinschränkungen können eine Begrenzung der Anzahl der Dateien, die nach einem Ersetzungsvorgang geöffnet bleiben, zur Folge haben.  
   
 > [!CAUTION]  
@@ -128,8 +128,8 @@ ms.locfileid: "75245167"
  **Zur Suche in Dateien wechseln**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **In Dateien suchen** .  
   
- **Zur Suche nach Symbolen wechseln**  
+ **Zur Symbolsuche wechseln**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **Symbol suchen** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Management Studio Tastenkombinationen](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

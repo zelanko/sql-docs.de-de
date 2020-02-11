@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4e4ecf91491a88e002c92a82d321e5712d48ef76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399818"
 ---
 # <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
@@ -24,18 +24,18 @@ ms.locfileid: "74399818"
 
   Enthält eine Zeile für jedes in columnstore--Indizes verwendete Wörterbuch. Wörterbücher werden zum Codieren bestimmter, aber nicht aller Datentypen verwendet. Daher verfügen nicht alle Spalten in einem columnstore-Index über Wörterbücher. Ein Wörterbuch kann als primäres Wörterbuch (für alle Segmente) und möglicherweise für weitere sekundäre Wörterbücher vorhanden sein, die für eine Teilmenge der Spaltensegmente verwendet werden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|Gibt die Partitions-ID an. Ist innerhalb einer Datenbank eindeutig.|  
-|**hobt_id**|**bigint**|ID des Heap-oder B-Struktur Index ("hubt") für die Tabelle, die diesen columnstore--Index aufweist.|  
-|**column_id**|**wartenden**|ID der columnstore-Spalte.|  
-|**dictionary_id**|**wartenden**|ID des Wörterbuchs.|  
-|**Version**|**wartenden**|Version des Wörterbuchformats.|  
-|**Sorte**|**wartenden**|Wörterbuchtyp:<br /><br /> 1-Hash Wörterbuch mit **int** -Werten<br /><br /> 2-nicht verwendet<br /><br /> 3-Hash-Wörterbuch mit Zeichen folgen Werten<br /><br /> 4-Hash Wörterbuch mit **float** -Werten|  
-|**last_id**|**wartenden**|Die letzte Daten-ID im Wörterbuch.|  
-|**entry_count**|**bigint**|Die Anzahl von Einträgen im Wörterbuch.|  
-|**on_disc_size**|**bigint**|Größe des Wörterbuchs in Byte.|  
-|**pdw_node_id**|**wartenden**|Eindeutiger Bezeichner [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eines Knotens.|  
+|**partition_id**|**BIGINT**|Gibt die Partitions-ID an. Ist innerhalb einer Datenbank eindeutig.|  
+|**hobt_id**|**BIGINT**|ID des Heap-oder B-Struktur Index ("hubt") für die Tabelle, die diesen columnstore--Index aufweist.|  
+|**column_id**|**int**|ID der columnstore-Spalte.|  
+|**dictionary_id**|**int**|ID des Wörterbuchs.|  
+|**Version**|**int**|Version des Wörterbuchformats.|  
+|**type**|**int**|Wörterbuchtyp:<br /><br /> 1-Hash Wörterbuch mit **int** -Werten<br /><br /> 2-nicht verwendet<br /><br /> 3-Hash-Wörterbuch mit Zeichen folgen Werten<br /><br /> 4-Hash Wörterbuch mit **float** -Werten|  
+|**last_id**|**int**|Die letzte Daten-ID im Wörterbuch.|  
+|**entry_count**|**BIGINT**|Die Anzahl von Einträgen im Wörterbuch.|  
+|**on_disc_size**|**BIGINT**|Größe des Wörterbuchs in Byte.|  
+|**pdw_node_id**|**int**|Eindeutiger Bezeichner [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eines Knotens.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung.  

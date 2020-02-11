@@ -16,19 +16,19 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771140"
 ---
-# <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
+# <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Entfernt Überwachungs Token-Datensätze aus den Systemtabellen [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) und [MStracer_history &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Verteiler für die Verteilungsdatenbank ausgeführt.
+Entfernt Überwachungs Token-Datensätze aus den [MStracer_tokens &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) und MStracer_history &#40;Systemtabellen von [Transact-SQL](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Verteiler für die Verteilungsdatenbank ausgeführt.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,13 +46,13 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 Der Name der Veröffentlichung, in die das Überwachungstoken eingefügt wurde. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Dieser Parameter ist erforderlich.
 
 `[ @tracer_id= ] tracer_id`  
-Die ID des zu löschenden Überwachungstokens. Der Datentyp ist " **int**". Der Standardwert ist *NULL*. Wenn der Wert *null*ist, werden alle Überwachungs Token gelöscht, die zur Veröffentlichung gehören.
+Die ID des zu löschenden Überwachungstokens. Der Datentyp ist " **int**". Der Standardwert ist *null*. Wenn der Wert *null*ist, werden alle Überwachungs Token gelöscht, die zur Veröffentlichung gehören.
 
 `[ @cutoff_date= ] cutoff_date`  
-Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der Datentyp ist " **DateTime**". Der Standardwert ist *NULL*.
+Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der **Datentyp ist "DateTime**". Der Standardwert ist *null*.
 
 `[ @publisher= ] 'publisher'`  
-Der Name des Verlegers. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert ist *NULL*.
+Der Name des Verlegers. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert ist *null*.
 
 > [!NOTE]
 > Dieser Parameter sollte nur für nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger oder beim Ausführen der gespeicherten Prozedur vom Verteiler angegeben werden.
@@ -67,27 +67,27 @@ Der Name der Veröffentlichungsdatenbank. Der Datentyp ist vom Datentyp **vom Da
 
 **0** (Erfolg) oder **1** (Fehler)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 **sp_deletetracertokenhistory** wird bei der Transaktions Replikation verwendet.  
 
-Wenn Sie beide Parameter angeben *tracer_id* und *cutoff_date*, tritt ein Fehler auf.
+Wenn Sie beide Parameter *tracer_id* und *cutoff_date*angeben, tritt ein Fehler auf.
 
-Wenn Sie **sp_deletetracertokenhistory** nicht zum Löschen von Überwachungs Token-Metadaten ausführen, werden die Informationen bei einer regelmäßigen geplanten Verlaufs Bereinigung gelöscht.
+Wenn Sie **sp_deletetracertokenhistory** nicht zum Löschen von Überwachungs Token-Metadaten ausführen, werden die Informationen beim regelmäßigen geplanten Verlaufs Bereinigung gelöscht.
 
-Überwachungs Token-IDs können durch Ausführen von [ &#40;sp_helptracertokens Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) oder durch Abfragen der MStracer_tokens [ &#40;-Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) -Systemtabelle ermittelt werden.
+Überwachungs Token-IDs können durch Ausführen [sp_helptracertokens &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) oder durch Abfragen der [MStracer_tokens &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) Systemtabelle ermittelt werden.
 
 ## <a name="permissions"></a>Berechtigungen
 
-Nur die folgenden Mitarbeiter verfügen über die Berechtigung zum Ausführen von **sp_deletetracertokenhistory**:
+Nur die folgenden Mitarbeiter verfügen über die Berechtigung, **sp_deletetracertokenhistory**auszuführen:
 
 - Mitglieder der **replmonitor** -Rollen in der Verteilungs Datenbank
 - Mitglieder der festen Server Rolle **sysadmin** .
-- Mitglieder der Fixed-Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank.
+- Mitglieder der Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank.
 - Der **db_owner** der fixierten Datenbank.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
-[sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)
+[sp_helptracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

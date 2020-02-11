@@ -1,5 +1,5 @@
 ---
-title: dm_exec_query_optimizer_info (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_query_optimizer_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,36 +21,36 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68255351"
 ---
-# <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt ausführliche Statistiken zur Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierers zurück. Diese Sicht können Sie beim Optimieren einer Arbeitsauslastung verwenden, um Probleme oder Verbesserungen bei der Abfrageoptimierung zu identifizieren. Sie können beispielsweise anhand der Gesamtanzahl der Optimierungen, des Wertes für die verstrichene Zeit und des Endkostenwertes die Abfrageoptimierungen der aktuellen Arbeitsauslastung und sämtliche während des Optimierungsvorgangs beobachteten Änderungen vergleichen. Einige Leistungsindikatoren stellen Daten bereit, die nur für die interne Diagnose von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relevant sind. Diese Leistungsindikatoren sind als "Internal only" gekennzeichnet.  
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
+>  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Name|Datentyp|Beschreibung|  
+|Name|Datentyp|BESCHREIBUNG|  
 |----------|---------------|-----------------|  
-|**Leistungsindikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
-|**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
-|**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**Indikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
+|**vorkommt**|**BIGINT**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
+|**Wert**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
     
-## <a name="remarks"></a>Hinweise  
- **dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Leistungsindikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle abfrageoptimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt, Änderungen an **Dm_exec_query_optimizer_info**, einschließlich der beiden Benutzer und systemgenerierten Abfragen. Ausführung eines bereits zwischengespeicherten Plans ändert sich nicht auf die Werte in **Dm_exec_query_optimizer_info**nur Optimierungen sind von Bedeutung.  
+## <a name="remarks"></a>Bemerkungen  
+ **sys. dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Indikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle Abfrage Optimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Änderungen an **dm_exec_query_optimizer_info**bestimmt, einschließlich Benutzer-und System generierter Abfragen. Durch die Ausführung eines bereits zwischengespeicherten Plans werden Werte in **dm_exec_query_optimizer_info**nicht geändert, nur Optimierungen sind von Bedeutung.  
   
-|Leistungsindikator|Vorkommen|Wert|  
+|Leistungsindikator|Vorkommen|value|  
 |-------------|----------------|-----------|  
 |optimizations|Gesamtzahl der Optimierungen.|Nicht verfügbar|  
 |elapsed time|Gesamtzahl der Optimierungen.|Durchschnittlich verstrichene Zeit pro Optimierung einer einzelnen Anweisung (Abfrage), in Sekunden.|  
@@ -76,13 +76,13 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert d
 |update stmt|Anzahl der für UPDATE-Anweisungen ausgeführten Optimierungen.|Nicht verfügbar|  
 |contains subquery|Anzahl der Optimierungen für eine Abfrage, die mindestens eine Unterabfrage enthält.|Nicht verfügbar|  
 |unnest failed|Nur intern|Nur intern|  
-|Tabellen|Gesamtzahl der Optimierungen.|Gesamtzahl der Tabellen, auf die pro optimierte Abfrage verwiesen wird.|  
-|hints|Häufigkeit, mit der ein Hinweis angegeben wurde. Zu diesen Hinweisen gehören: JOIN, GROUP, UNION und FORCE ORDER-Abfragehinweise, Set-Option FORCE PLAN sowie joinhinweise.|Nicht verfügbar|  
+|tables|Gesamtzahl der Optimierungen.|Gesamtzahl der Tabellen, auf die pro optimierte Abfrage verwiesen wird.|  
+|hints|Häufigkeit, mit der ein Hinweis angegeben wurde. Zu diesen Hinweisen gehören die Abfragehinweise JOIN, GROUP, UNION und FORCE ORDER, die SET-Option FORCE PLAN sowie Joinhinweise.|Nicht verfügbar|  
 |order hint|Häufigkeit, mit der ein FORCE ORDER-Hinweis angegeben wurde.|Nicht verfügbar|  
 |join hint|Häufigkeit, mit der der Joinalgorithmus von einem Joinhinweis erzwungen wurde.|Nicht verfügbar|  
 |view reference|Häufigkeit, mit der in einer Abfrage auf eine Sicht verwiesen wurde.|Nicht verfügbar|  
 |remote query|Anzahl der Optimierungen, bei denen die Abfrage auf mindestens eine Remotedatenquelle verwiesen hat, wie z. B. auf eine Tabelle mit einem vierteiligen Namen oder ein OPENROWSET-Ergebnis.|Nicht verfügbar|  
-|maximum DOP|Gesamtzahl der Optimierungen.|Durchschnittlicher effektiver MAXDOP-Wert für einen optimierten Plan. Standardmäßig richtet durch effektive MAXDOP die **Max. Grad an Parallelität** Server-Konfiguration aus, und kann für eine bestimmte Abfrage durch den Wert des MAXDOP-Abfragehinweises überschrieben werden.|  
+|maximum DOP|Gesamtzahl der Optimierungen.|Durchschnittlicher effektiver MAXDOP-Wert für einen optimierten Plan. Standardmäßig wird das effektive MAXDOP durch die Server Konfigurationsoption **Max. Grad an Parallelität** bestimmt und kann für eine bestimmte Abfrage durch den Wert des MAXDOP-Abfrage Hinweises überschrieben werden.|  
 |maximum recursion level|Anzahl der Optimierungen, bei denen mit dem Abfragehinweis eine höhere MAXRECURSION-Ebene als 0 angegeben wurde.|Durchschnittliche MAXRECURSION-Ebene in Optimierungen, bei denen mit dem Abfragehinweis eine maximale Rekursionsebene angegeben wurde.|  
 |indexed views loaded|Nur intern|Nur intern|  
 |indexed views matched|Anzahl der Optimierungen, bei denen für mindestens eine indizierte Sicht eine Übereinstimmung gefunden wurde.|Durchschnittliche Anzahl der übereinstimmenden Sichten.|  
@@ -117,7 +117,7 @@ SELECT ISNULL(value,0.0) AS ElapsedTimePerOptimization
 FROM sys.dm_exec_query_optimizer_info WHERE counter = 'elapsed time';  
 ```  
   
-### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>D. Anteil der Optimierungen mit Unterabfragen  
+### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>D: Anteil der Optimierungen mit Unterabfragen  
  Wie hoch liegt der Anteil der optimierten Abfragen mit einer Unterabfrage?  
   
 ```  
@@ -127,9 +127,9 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
         AS ContainsSubqueryFraction;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

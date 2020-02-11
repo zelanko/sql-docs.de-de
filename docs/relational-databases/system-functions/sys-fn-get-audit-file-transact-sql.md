@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981873"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981873"
 
   Gibt Informationen von einer Überwachungsdatei zurück, die von einer Serverüberwachung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,31 +45,31 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>Argumente  
  *file_pattern*  
- Gibt das Verzeichnis oder den Pfad und den Dateinamen für den zu lesenden Überwachungsdateisatz an. Type ist vom Datentyp **nvarchar (260)** . 
+ Gibt das Verzeichnis oder den Pfad und den Dateinamen für den zu lesenden Überwachungsdateisatz an. Type ist vom Datentyp **nvarchar (260)**. 
  
  - **SQL Server**:
     
-    Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, um mehrere Dateien aus einem Überwachungs Datei Satz zu erfassen. Zum Beispiel:  
+    Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, um mehrere Dateien aus einem Überwachungs Datei Satz zu erfassen. Beispiel:  
   
-    -   **\<Pfad >\\** alle Überwachungs Dateien am angegebenen Speicherort erfassen \*.  
+    -   **Pfad>\\ -alle Überwachungs Dateien am angegebenen Speicherort \<** erfassen.  
   
-    -   **\<Pfad > \ LoginsAudit_ {GUID}** -alle Überwachungs Dateien erfassen, die über den angegebenen Namen und das GUID-paar verfügen.  
+    -   **Pfad> \ LoginsAudit_ {GUID}-alle Überwachungs Dateien erfassen, die über den angegebenen Namen und das GUID-paar verfügen. \<**  
   
-    -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
+    -   **Pfad> \ LoginsAudit_ {GUID} _00_29384. sqlaudit-eine bestimmte Überwachungs Datei sammeln. \<**  
   
  - **Azure SQL-Datenbank oder Azure SQL Data Warehouse**:
  
-    Dieses Argument wird verwendet, um eine BLOB-URL (einschließlich Speicher Endpunkt und Container) anzugeben. Obwohl ein Platzhalter Zeichen nicht unterstützt wird, können Sie ein partielles Dateinamen Präfix (anstelle des vollständigen BLOB-namens) verwenden, um mehrere Dateien (BLOBs) zu sammeln, die mit diesem Präfix beginnen. Zum Beispiel:
+    Dieses Argument wird verwendet, um eine BLOB-URL (einschließlich Speicher Endpunkt und Container) anzugeben. Obwohl ein Platzhalter Zeichen nicht unterstützt wird, können Sie ein partielles Dateinamen Präfix (anstelle des vollständigen BLOB-namens) verwenden, um mehrere Dateien (BLOBs) zu sammeln, die mit diesem Präfix beginnen. Beispiel:
  
-      - **\<Storage_endpoint\>/\<Container\>/\<Servername\>/\<DatabaseName**\>/: sammelt alle Überwachungs Dateien (BLOB) für die jeweilige Datenbank.    
+      - **\<\> Storage_endpoint\>\>Container\>Servername/DatabaseName: sammelt alle Überwachungs Dateien (BLOB) für die jeweilige Datenbank.// \<\<\<**    
       
-      - **\<Storage_endpoint\>/\<-Container\>/\<Servername\>/\<DatabaseName\>/\<AuditName\>** /\<\>/\<. xel-sammelt eine bestimmte Überwachungs Datei (BLOB).\>
+      - **\>\>Storage_endpoint\>/\<Container\>Servername DatabaseName/\>AuditName\<samationdate/Dateiname. xel: sammelt eine bestimmte Überwachungs Datei (BLOB).\>/\<\>//\< \<\<\<**
   
 > [!NOTE]  
 >  Einen Pfad ohne ein Dateinamenmuster zu übergeben generiert einen Fehler.  
   
  *initial_file_name*  
- Gibt den Pfad und den Namen einer bestimmten Datei im Überwachungsdateisatz an, von der an die Überwachungsdatensätze gelesen werden sollen. Type ist vom Datentyp **nvarchar (260)** .  
+ Gibt den Pfad und den Namen einer bestimmten Datei im Überwachungsdateisatz an, von der an die Überwachungsdatensätze gelesen werden sollen. Type ist vom Datentyp **nvarchar (260)**.  
   
 > [!NOTE]  
 >  Das *initial_file_name* Argument muss gültige Einträge enthalten oder entweder den Standardwert | NULL-Wert.  
@@ -83,30 +83,30 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  In der folgenden Tabelle wird der Inhalt der Überwachungsdatei beschrieben, die von dieser Funktion zurückgegeben werden kann.  
   
-| Spaltenname | Type | und Beschreibung |  
+| Spaltenname | type | BESCHREIBUNG |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID der Aktion. Lässt keine NULL-Werte zu. |  
-| additional_information | **nvarchar(4000)** | Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird so analysiert, dass ungültige XML-Zeichen wie `'\<'`, `'>'``'/'`, `'_x'`mit Escapezeichen versehen werden. Sie werden als `_xHHHH\_`mit Escapezeichen versehen. HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen. |
-| affected_rows | **bigint** | **Gilt für**: nur Azure SQL-DB<br /><br /> Anzahl der von der ausgeführten Anweisung betroffenen Zeilen. |  
+| additional_information | **nvarchar(4000)** | Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird so analysiert, dass ungültige XML-Zeichen `'\<'`wie `'>'`, `'/'`, `'_x'`, mit Escapezeichen versehen werden. Sie werden mit Escapezeichen versehen `_xHHHH\_`. HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen. |
+| affected_rows | **BIGINT** | **Gilt für**: nur Azure SQL-DB<br /><br /> Anzahl der von der ausgeführten Anweisung betroffenen Zeilen. |  
 | application_name | **nvarchar(128)** | **Gilt für**: Azure SQL-DB + SQL Server (beginnend mit 2017)<br /><br /> Der Name der Client Anwendung, die die Anweisung ausgeführt hat, die das Überwachungs Ereignis verursacht hat. |  
-| audit_file_offset | **bigint** | **Gilt für**: nur SQL Server<br /><br /> Der Pufferoffset in der Datei, die den Überwachungsdatensatz enthält. Lässt keine NULL-Werte zu. |  
+| audit_file_offset | **BIGINT** | **Gilt für**: nur SQL Server<br /><br /> Der Pufferoffset in der Datei, die den Überwachungsdatensatz enthält. Lässt keine NULL-Werte zu. |  
 | audit_schema_version | **int** | Immer 1 |  
-| class_type | **varchar(2)** | Der Typ der überwachbaren Entität, bei der die Überwachung auftritt. Lässt keine NULL-Werte zu. |  
-| client_ip | **nvarchar(128)** | **Gilt für**: Azure SQL-DB + SQL Server (beginnend mit 2017)<br /><br />    Quell-IP der Client Anwendung |  
-| connection_id | GUID | **Gilt für**: Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Die ID der Verbindung auf dem Server. |
-| data_sensitivity_information | nvarchar(4000) | **Gilt für**: nur Azure SQL-DB<br /><br /> Informationstypen und Vertraulichkeits Bezeichnungen, die von der überwachten Abfrage zurückgegeben werden, basierend auf den klassifizierten Spalten in der Datenbank. Weitere Informationen zum [ermitteln und Klassifizieren von Daten in Azure SQL-Datenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
-| Datenbankname | **sysname** | Der Datenbankkontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL für Überwachungen auf Serverebene zurück. |  
+| class_type | **varchar (2)** | Der Typ der überwachbaren Entität, bei der die Überwachung auftritt. Lässt keine NULL-Werte zu. |  
+| client_ip | **nvarchar(128)** | **Gilt für**: Azure SQL-DB + SQL Server (beginnend mit 2017)<br /><br />    Quell-IP-Adresse der Clientanwendung |  
+| connection_id | GUID | **Gilt für**: Azure SQL-Datenbank und verwaltete Instanz<br /><br /> ID der Verbindung auf dem Server |
+| data_sensitivity_information | nvarchar(4000) | **Gilt für**: nur Azure SQL-DB<br /><br /> Informationstypen und Vertraulichkeitsbezeichnungen, die von der überwachten Abfrage zurückgegeben werden (je nach klassifizierter Spalte in der Datenbank) Weitere Informationen: [Azure SQL-Datenbank: Datenermittlung und -klassifizierung](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| database_name | **sysname** | Der Datenbankkontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL für Überwachungen auf Serverebene zurück. |  
 | database_principal_id | **int** |ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird. Lässt keine NULL-Werte zu. Wenn dies nicht anwendbar ist, wird 0 zurückgegeben. Zum Beispiel bei einem Servervorgang.|
 | database_principal_name | **sysname** | Aktueller Benutzer. Lässt NULL-Werte zu. Gibt NULL zurück, wenn nicht verfügbar. |  
-| duration_milliseconds | **bigint** | **Gilt für**: Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Ausführungsdauer der Abfrage in Millisekunden |
+| duration_milliseconds | **BIGINT** | **Gilt für**: Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Ausführungsdauer der Abfrage in Millisekunden |
 | event_time | **datetime2** | Datum und Uhrzeit, zu der die überprüfbare Aktion ausgelöst wird. Lässt keine NULL-Werte zu. |  
 | file_name | **varchar (260)** | Der Pfad und der Name der Überwachungsprotokolldatei, aus der der Datensatz stammt. Lässt keine NULL-Werte zu. |
-| is_column_permission | **bit** | Flag, das angibt, ob dies eine Berechtigung auf Spaltenebene ist. Lässt keine NULL-Werte zu. Gibt 0 zurück wenn permission_bitmask = 0.<br /> 1 = TRUE<br /> 0 = false |
-| object_id | **int** | Die ID der Entität, bei der die Überwachung aufgetreten ist. Dazu gehören:<br /> Server Objekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt keine NULL-Werte zu. Gibt 0 zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |  
-| object_name | **sysname** | Der Name der Entität, bei der die Überwachung aufgetreten ist. Dazu gehören:<br /> Server Objekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |
+| is_column_permission | **bit** | Flag, das angibt, ob die Berechtigung auf Benutzerebene erteilt wurde Lässt keine NULL-Werte zu. Gibt 0 zurück wenn permission_bitmask = 0.<br /> 1 = TRUE<br /> 0 = false |
+| object_id | **int** | ID der Entität, für die die Überwachung durchgeführt wurde Dazu gehören:<br /> Serverobjekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt keine NULL-Werte zu. Gibt 0 zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |  
+| object_name | **sysname** | Name der Entität, für die die Überwachung durchgeführt wurde Dazu gehören:<br /> Serverobjekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |
 | permission_bitmask | **varbinary(16)** | In einigen Aktionen sind dies die Berechtigungen, die gewährt, verweigert oder widerrufen wurden. |
-| response_rows | **bigint** | **Gilt für**: Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Anzahl der Zeilen, die im Resultset zurückgegeben werden. |  
-| schema_name | **sysname** | Der Schemakontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL für Überwachungen zurück, die außerhalb eines Schemas auftreten. |  
+| response_rows | **BIGINT** | **Gilt für**: Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Anzahl der Zeilen, die im Resultset zurückgegeben werden. |  
+| schema_name | **sysname** | Schemakontext, in dem die Aktion durchgeführt wurde Lässt NULL-Werte zu. Gibt NULL für Überwachungen zurück, die außerhalb eines Schemas auftreten. |  
 | sequence_group_id | **varbinary** | **Gilt für**: nur SQL Server (beginnend mit 2016)<br /><br />  Eindeutiger Bezeichner |  
 | sequence_number | **int** | Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist. Lässt keine NULL-Werte zu. |  
 | server_instance_name | **sysname** | Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Das Standardformat Server\Instanz wird verwendet. |  
@@ -116,18 +116,18 @@ fn_get_audit_file ( file_pattern,
 | session_id | **smallint** | Die ID der Sitzung, in der das Ereignis aufgetreten ist. Lässt keine NULL-Werte zu. |  
 | session_server_principal_name | **sysname** | Der Server Prinzipal für die Sitzung. Lässt NULL-Werte zu. |  
 | statement | **nvarchar(4000)** | TSQL-Anweisung, falls vorhanden. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
-| succeeded | **bit** | Gibt an, ob die Aktion erfolgreich ausgelöst wurde. Lässt keine NULL-Werte zu. Für alle Ereignisse außer Anmeldeereignisse meldet dies nur, ob die Berechtigungsüberprüfung erfolgreich war oder fehlgeschlagen ist, nicht der Vorgang.<br /> 1 = Erfolg<br /> 0 = Fehler |
-| target_database_principal_id | **int** | Der Datenbankprinzipal, auf dem der GRANT/DENY/REVOKE-Vorgang ausgeführt wird. Lässt keine NULL-Werte zu. Falls nicht zutreffend, wird 0 zurückgegeben. |  
-| target_database_principal_name | **sysname** | Der Ziel Benutzer der Aktion. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
-| target_server_principal_id | **int** | Serverprinzipal, auf dem der GRANT/DENY/REVOKE-Vorgang ausgeführt wird. Lässt keine NULL-Werte zu. Falls nicht zutreffend, wird 0 zurückgegeben. |  
-| target_server_principal_name | **sysname** | Ziel Anmeldung der Aktion. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
-| target_server_principal_sid | **varbinary** | SID der Ziel Anmeldung. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
-| transaction_id | **bigint** | **Gilt für**: nur SQL Server (beginnend mit 2016)<br /><br /> Eindeutiger Bezeichner zur Identifizierung mehrerer Überwachungs Ereignisse in einer Transaktion |  
-| user_defined_event_id | **smallint** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Eine benutzerdefinierte Ereignis-ID wurde als Argument an **sp_audit_write**übermittelt. **Null** für Systemereignisse (Standard) und ungleich 0 (null) für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| succeeded | **bit** | Gibt an, ob die Aktion, die das Ereignis ausgelöst hat, erfolgreich war Lässt keine NULL-Werte zu. Für alle Ereignisse außer Anmeldeereignisse meldet dies nur, ob die Berechtigungsüberprüfung erfolgreich war oder fehlgeschlagen ist, nicht der Vorgang.<br /> 1 = success<br /> 0 = Fehler |
+| target_database_principal_id | **int** | Datenbankprinzipal, auf dem der GRANT-, DENY- oder REVOKE-Vorgang ausgeführt wird Lässt keine NULL-Werte zu. Falls nicht zutreffend, wird 0 zurückgegeben. |  
+| target_database_principal_name | **sysname** | Zielbenutzer der Aktion Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
+| target_server_principal_id | **int** | Serverprinzipal, auf dem der GRANT-, DENY- oder REVOKE-Vorgang ausgeführt wird Lässt keine NULL-Werte zu. Falls nicht zutreffend, wird 0 zurückgegeben. |  
+| target_server_principal_name | **sysname** | Zielanmeldung der Aktion Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
+| target_server_principal_sid | **varbinary** | SID der Zielanmeldung Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
+| transaction_id | **BIGINT** | **Gilt für**: nur SQL Server (beginnend mit 2016)<br /><br /> Eindeutiger Bezeichner zur Identifizierung mehrerer Überwachungs Ereignisse in einer Transaktion |  
+| user_defined_event_id | **smallint** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Eine benutzerdefinierte Ereignis-ID wurde als Argument an **sp_audit_write**übermittelt. **Null** für Systemereignisse (Standard) und ungleich 0 (null) für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [sp_audit_write &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
 | user_defined_information | **nvarchar(4000)** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Wird verwendet, um zusätzliche Informationen aufzuzeichnen, die der Benutzer mithilfe der gespeicherten Prozedur **sp_audit_write** im Überwachungs Protokoll aufzeichnen möchte. |  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn das *file_pattern* Argument, das an **fn_get_audit_file** übermittelt wird, auf einen Pfad oder eine Datei verweist, die nicht vorhanden ist, oder wenn die Datei keine Überwachungs Datei ist, wird die **MSG_INVALID_AUDIT_FILE** Fehlermeldung zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL-Datenbank**
 
-  In diesem Beispiel wird aus einer Datei mit dem Namen `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`gelesen:  
+  Dieses Beispiel liest aus einer Datei mit dem Namen `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  In diesem Beispiel werden alle Überwachungs Protokolle von Servern, die mit `Sh`beginnen, gelesen: 
+  In diesem Beispiel werden alle Überwachungs Protokolle von Servern gelesen, `Sh`die mit beginnen: 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
@@ -178,7 +178,7 @@ Ein vollständiges Beispiel für das Erstellen einer Überwachung finden Sie unt
 
 Informationen zum Einrichten der Azure SQL-Daten Bank Überwachung finden [Sie unter "Einstieg in die SQL-Daten Bank](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)Überwachung".
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

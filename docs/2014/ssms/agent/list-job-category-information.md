@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798207"
 ---
 # <a name="list-job-category-information"></a>Auflisten von Informationen zu Auftragskategorien
-  Auflisten von Informationen zu Auftrags Kategorien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects.  
+  Auflisten von Informationen zu Auftrags Kategorien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[tsql](../../includes/tsql-md.md)] von oder SQL Server Management Objects.  
 
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
 
   
@@ -45,10 +45,10 @@ ms.locfileid: "72798207"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_help_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_help_category &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
   
   
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So listen Sie Informationen zu Auftragskategorien auf**  
   
- Verwenden Sie die `JobCategory`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects &#40;SMO&#41; -Programmier Handbuch](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Verwenden Sie die `JobCategory`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects &#40;SMO&#41;-Programmier Handbuch](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  

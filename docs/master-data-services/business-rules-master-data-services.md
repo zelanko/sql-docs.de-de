@@ -14,10 +14,10 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728692"
 ---
 # <a name="business-rules-master-data-services"></a>Geschäftsregeln (Master Data Services)
@@ -48,11 +48,11 @@ ms.locfileid: "73728692"
   
 2.  **Wert ändern**  
   
-3.  **Überprüfung**  
+3.  **Überprüfen**  
   
 4.  **Externe Aktion**  
   
-5.  **Benutzerdefiniertes Aktionsskript**  
+5.  **Benutzerdefiniertes Aktions Skript**  
   
  Innerhalb dieser Gruppen werden Aktionen in der Prioritätsreihenfolge übernommen, von der niedrigsten zur höchsten. Vier separate Regeln könnten so z. B. **Standardwertaktionen** aufweisen. Die **Standardwertaktion** , die zuerst erfolgt, hängt von der Prioritätsreihenfolge ab, die auf Web-Benutzeroberfläche angegeben wurde.  
   
@@ -71,29 +71,29 @@ ms.locfileid: "73728692"
 ## <a name="system-settings"></a>Systemeinstellungen  
  Es gibt zwei Einstellungen in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , die sich auf Geschäftsregeln auswirken. Sie können diese Einstellungen in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder direkt in der Tabelle Systemeinstellungen anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Erstellen und veröffentlichen Sie eine neue Geschäftsregel.|[Erstellen und Veröffentlichen einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Fügen Sie einer Geschäftsregel mehrere Bedingungen hinzu.|[Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Erstellen Sie eine Geschäftsregel, damit Attribute über Werte verfügen müssen.|[Erfordern von Attributwerten &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Erstellen Sie eine Geschäftsregel, um eine Aktion auf der Grundlage der Änderungen an Attributwerten auszuführen.|[Initiieren von Aktionen auf der Grundlage von Attributwertänderungen &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Erstellen Sie eine Geschäftsregel, um ein benutzerdefiniertes Skript als Bedingung zu verwenden.|[Geschäftsregelerweiterung &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Erstellen Sie eine Geschäftsregel, um ein benutzerdefiniertes Skript als Aktion zu verwenden.|[Geschäftsregelerweiterung &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Ändern Sie den Namen einer vorhandenen Geschäftsregel.|[Ändern des Namens einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Erstellen Sie eine Geschäftsregel, damit Attribute über Werte verfügen müssen.|[Attributwerte &#40;Master Data Services erforderlich&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Erstellen Sie eine Geschäftsregel, um eine Aktion auf der Grundlage der Änderungen an Attributwerten auszuführen.|[Initiieren von Aktionen auf der Grundlage von Attribut Wertänderungen &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Erstellen Sie eine Geschäftsregel, um ein benutzerdefiniertes Skript als Bedingung zu verwenden.|[Geschäftsregel Erweiterung &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Erstellen Sie eine Geschäftsregel, um ein benutzerdefiniertes Skript als Aktion zu verwenden.|[Geschäftsregel Erweiterung &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Ändern Sie den Namen einer vorhandenen Geschäftsregel.|[Ändern Sie den Namen einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
 |Konfigurieren Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , um Benachrichtigungen zu senden, wenn Geschäftsregeln angewendet werden.|[Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Wenden Sie Geschäftsregeln auf bestimmte Elemente an.|[Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Wenden Sie Geschäftsregeln auf bestimmte Elemente an.|[Überprüfen bestimmter Mitglieder anhand von Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Schließen Sie eine Geschäftsregel aus, damit sie nicht verwendet wird.|[Ausschließen einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|Löschen Sie eine vorhandene Geschäftsregel.|[Löschen einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|Löschen Sie eine vorhandene Geschäftsregel.|[Hiermit wird eine Geschäftsregel &#40;Master Data Services gelöscht&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services Übersicht &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Überprüfung &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [Master Data Services der Überprüfung &#40;&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Änderungsnachverfolgung &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   

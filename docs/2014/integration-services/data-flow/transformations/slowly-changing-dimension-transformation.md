@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900202"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
@@ -46,7 +46,7 @@ ms.locfileid: "62900202"
   
 -   Veränderliches Attribut überschreibt vorhandene Datensätze. Diese Art von Änderung ist mit einer Änderung vom Typ 1 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an die Ausgabe **Ausgabe: Updates von veränderlichen Attributen**weiter.  
   
--   Verlaufsattribut erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren. Als einzige Änderung in einem vorhandenen Datensatz ist das Update einer Spalte zulässig, die angibt, ob der Datensatz aktuell oder abgelaufen ist. Diese Art von Änderung ist mit einer Änderung vom Typ 2 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an diese beiden Ausgaben weiter: **Ausgabe der Einfügevorgänge im Verlaufsattribut** und **Neue Ausgabe**.  
+-   Verlaufsattribut erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren. Als einzige Änderung in einem vorhandenen Datensatz ist das Update einer Spalte zulässig, die angibt, ob der Datensatz aktuell oder abgelaufen ist. Diese Art von Änderung ist mit einer Änderung vom Typ 2 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an zwei Ausgaben weiter: **Ausgabe der Einfügevorgänge im Verlaufsattribut** und **Neue Ausgabe**.  
   
 -   Festes Attribut gibt an, dass der Spaltenwert nicht geändert werden darf. Die Transformation für langsam veränderliche Dimensionen erkennt Änderungen und kann die Zeilen mit Änderungen an die Ausgabe **Ausgabe des festen Attributs**weiterleiten.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62900202"
   
  In der folgenden Tabelle werden die Transformationsausgaben und die Anforderungen der nachfolgenden Datenflüsse beschrieben. Für die Anforderungen wird der Datenfluss beschrieben, den der Assistent für langsam veränderliche Dimensionen erstellt.  
   
-|Ausgabe|Beschreibung|Datenflussanforderungen|  
+|Output|BESCHREIBUNG|Datenflussanforderungen|  
 |------------|-----------------|----------------------------|  
 |**Ausgabe: Updates von veränderlichen Attributen**|Der Datensatz in der Nachschlagetabelle wird aktualisiert. Diese Ausgabe wird für veränderliche Attributzeilen verwendet.|Eine Transformation für OLE DB-Befehl aktualisiert den Datensatz mithilfe einer UPDATE-Anweisung.|  
 |**Ausgabe des festen Attributs**|Die Werte in Zeilen, die nicht geändert werden dürfen, stimmen nicht mit Werten in der Nachschlagetabelle überein. Diese Ausgabe wird für feste Attributzeilen verwendet.|Es wird kein Standarddatenfluss erstellt. Falls für die Transformation konfiguriert ist, dass sie fortgesetzt wird, wenn Änderungen an Spalten fester Attribute gefunden werden, sollten Sie einen Datenfluss zum Aufzeichnen dieser Zeilen erstellen.|  
@@ -89,11 +89,11 @@ ms.locfileid: "62900202"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
- Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Konfigurieren der Ausgaben der Transformation für langsam veränderliche Dimensionen  
  Das Koordinieren der Updates und der Einfügungen von Datensätzen in Dimensionstabellen kann eine komplexe Aufgabe sein, insbesondere wenn Änderungen vom Typ 1 und Typ 2 verwendet werden. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer stellt zwei Möglichkeiten bereit, um die Unterstützung langsam veränderlicher Dimensionen zu konfigurieren:  

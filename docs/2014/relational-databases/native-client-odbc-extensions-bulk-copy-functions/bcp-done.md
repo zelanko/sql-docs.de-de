@@ -1,5 +1,5 @@
 ---
-title: Bcp_done | Microsoft-Dokumentation
+title: bcp_done | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689076"
 ---
-# <a name="bcpdone"></a>'bcp_done'
+# <a name="bcp_done"></a>'bcp_done'
   Beendet einen Massenkopiervorgang aus Programmvariablen nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der mit [bcp_sendrow](bcp-sendrow.md)ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,13 +43,13 @@ hdbc
  *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  Die Anzahl von Zeilen, die nach dem letzten Aufruf von [bcp_batch](bcp-batch.md) permanent gespeichert wurden, oder -1 im Fall eines Fehlers.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Rufen Sie **bcp_done** nach dem letzten Aufruf von [bcp_sendrow](bcp-sendrow.md) oder [bcp_moretext](bcp-moretext.md)auf. Wenn Sie **bcp_done** nach dem Kopieren aller Daten nicht aufrufen, treten Fehler auf.  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopierfunktionen](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493936"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definieren einer referenzierten Beziehung
@@ -30,7 +30,7 @@ ms.locfileid: "69493936"
   
      Beachten Sie, dass das **Reseller Sales-Sales Amount** -Measure durch die **Country-Region** -Attributelemente in der **Regions** -Hierarchie nicht richtig dimensioniert ist. Der Wert für **Reseller Sales-Sales Amount** wird für jedes **Country-Region** -Attributelement wiederholt.  
   
-     ![Dimensionierte Reseller Sales-Sales Amount-Measure](../../2014/tutorials/media/l5-referencedrelationship-1.gif "Dimensionierte Reseller Sales-Sales Amount-Measure")  
+     ![Dimensioniertes Reseller Sales-Sales Amount-Measure](../../2014/tutorials/media/l5-referencedrelationship-1.gif "Dimensioniertes Reseller Sales-Sales Amount-Measure")  
   
 4.  Öffnen Sie den Datenquellensicht-Designer für die **Adventure Works DW 2012** -Datenquellensicht.  
   
@@ -46,17 +46,17 @@ ms.locfileid: "69493936"
   
      Beachten Sie, dass die Cubedimension **Geography** aktuell keine Beziehung zur **Internet Sales** -oder **Reseller Sales** -Measuregruppe aufweist.  
   
-8.  Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten ( **...** ) in der Zelle **Vollständiger Name** an der Schnittmenge der **Customer** -Dimension und der **Internet Sales** -Measure-Gruppe.  
+8.  Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) in der Zelle **Vollständiger Name** an der Schnittmenge der **Customer** -Dimension und der **Internet Sales** -Measure-Gruppe.  
   
      Beachten Sie im Dialogfeld **Beziehung definieren** , dass eine Beziehung vom Typ **Regulär** zwischen der **DimCustomer** -Dimensionstabelle und der **FactInternetSales** -Measuregruppentabelle basierend auf der **CustomerKey** -Spalte in jeder dieser Tabellen definiert ist. Alle von Ihnen innerhalb dieses Lernprogramms bis zu diesem Punkt definierten Beziehungen waren reguläre Beziehungen.  
   
      Die folgende Abbildung zeigt das Dialogfeld **Beziehung definieren** mit einer regulären Beziehung zwischen der **DimCustomer** -Dimensionstabelle und der **FactInternetSales** -Measuregruppentabelle.  
   
-     ![Beziehung definieren Dialogfeld](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Beziehung definieren Dialogfeld")  
+     ![Beziehung definieren (Dialogfeld)](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Beziehung definieren (Dialogfeld)")  
   
 9. Klicken Sie auf **Abbrechen**.  
   
-10. Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten ( **...** ) in der unbenannten Zelle am Schnittpunkt der **geography** -Dimension und der **Reseller Sales** -Measure-Gruppe.  
+10. Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) in der unbenannten Zelle am Schnittpunkt der **geography** -Dimension und der **Reseller Sales** -Measure-Gruppe.  
   
      Beachten Sie im Dialogfeld **Beziehung definieren** , dass aktuell keine Beziehung zwischen der Geography-Cubedimension und der Reseller Sales-Measuregruppe definiert ist. Sie können keine reguläre Beziehung definieren, weil keine direkte Beziehung zwischen der Dimensionstabelle für die Geography-Dimension und der Faktentabelle für die Reseller Sales-Measuregruppe vorhanden ist.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "69493936"
   
      Das Geography Key-Attribut in der Reseller-Dimension wird nur zum Verknüpfen der Geography-Dimension mit der Reseller Sales-Faktentabelle verwendet. Weil es nicht zum Durchsuchen verwendet wird, gibt es keinen Grund dafür, diese Attributhierarchie als sichtbar zu definieren. Zusätzlich wirkt sich das Sortieren und Optimieren der Attributhierarchie nur negativ auf die Verarbeitungsleistung aus. Allerdings muss das Attribut als der Link zwischen den zwei Dimensionen aktiviert sein.  
   
-4.  Wechseln Sie zum Cube-Designer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für den Tutorial-Cube, klicken Sie auf die Registerkarte **Dimensions Verwendung** , und klicken Sie dann auf die Schaltfläche mit den Auslassungs Punkten ( **...** ), die sich in der Schnittmenge der **Reseller Sales** -Measure-Gruppe und  
+4.  Wechseln Sie zum Cube-Designer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für den Tutorial-Cube, klicken Sie auf die Registerkarte **Dimensions Verwendung** , und klicken Sie dann auf die Schaltfläche **mit den** Auslassungs Punkten (**...**), die sich in der Schnittmenge der **Reseller Sales** -Measure-Gruppe und  
   
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -118,13 +118,13 @@ ms.locfileid: "69493936"
   
      Beachten Sie, dass das **Reseller Sales-Sales Amount** -Measure jetzt durch das **Country-Region** -Attribut in der benutzerdefinierten **Geographies** -Hierarchie richtig dimensioniert ist, wie in der folgenden Abbildung dargestellt.  
   
-     ![Beziehung definieren \(Dialogfeld\)](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Beziehung definieren \(Dialogfeld\)")  
+     ![Beziehung definieren (Dialogfeld)](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Beziehung definieren (Dialogfeld)")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Definieren einer Faktenbeziehung](lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Attributbeziehungen](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Attribut Beziehungen](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Definieren einer Beziehung, auf die verwiesen wird, und deren Eigenschaften](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

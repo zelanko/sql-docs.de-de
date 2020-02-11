@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff5d5a983bda1dd5efa68c282373f37ab8fda571
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63055650"
 ---
-# <a name="mssqleng018456"></a>MSSQL_ENG018456
+# <a name="mssql_eng018456"></a>MSSQL_ENG018456
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63055650"
 ## <a name="user-action"></a>Benutzeraktion  
  Stellen Sie sicher, dass Sie ein Kennwort für dieses Konto angegeben haben. Weitere Informationen finden Sie unter [Schützen des Verteilers](security/secure-the-distributor.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)  
   
   

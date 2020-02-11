@@ -1,5 +1,5 @@
 ---
-title: Implementieren von MERGE-Funktionalität | Microsoft-Dokumentation
+title: Implementieren von Merge-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015921"
 ---
 # <a name="implementing-merge-functionality"></a>Implementieren von MERGE-Funktionalität
@@ -46,8 +46,8 @@ IF @i = 0
    INSERT....  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md)   
- [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte.](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

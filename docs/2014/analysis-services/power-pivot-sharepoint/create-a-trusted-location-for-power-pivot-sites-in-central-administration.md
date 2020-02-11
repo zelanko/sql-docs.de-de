@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684087"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration
@@ -64,6 +64,6 @@ ms.locfileid: "74684087"
 ## <a name="see-also"></a>Weitere Informationen  
  [PowerPivot-Katalog](../../2014-toc/index.yml)  
  [Erstellen und Anpassen des Power Pivot-Katalogs](create-and-customize-power-pivot-gallery.md)   
- [Verwenden des Power Pivot-Katalogs](use-power-pivot-gallery.md)  
+ [Verwenden des PowerPivot-Katalogs](use-power-pivot-gallery.md)  
   
   
