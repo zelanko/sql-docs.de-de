@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175455"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lektion 7: Verschieben von Datendateien nach Azure Storage
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lektion 7: Verschieben von Datendateien in Azure Storage
   In dieser Lektion erfahren Sie, wie Sie Ihre Datendateien in Azure Storage (aber nicht in Ihre SQL Server Instanz) verschieben. Für diese Lektion müssen Sie Lektion 4, 5 und 6 nicht abschließen.  
   
  Wenn Sie die Datendateien in Azure Storage verschieben möchten, können Sie `ALTER DATABASE` die-Anweisung verwenden, um den Speicherort der Datendateien zu ändern.  
@@ -63,7 +63,7 @@ ms.locfileid: "70175455"
   
     ```  
   
-3.  Wenn Sie dies ausführen, wird folgende Meldung angezeigt: "Die Datei" TestDB1Alter "wurde im System Katalog geändert. Der neue Pfad wird beim nächsten Start der Datenbank verwendet. "  
+3.  Wenn Sie dies ausführen, wird folgende Meldung angezeigt: "die Datei" TestDB1Alter "wurde im System Katalog geändert. Der neue Pfad wird beim nächsten Start der Datenbank verwendet. "  
   
 4.  Schalten Sie dann die Datenbank offline.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175455"
   
     ```  
   
-5.  Nun müssen Sie die Datendateien mit einer der folgenden Methoden in Azure Storage kopieren: [Azcopy-Tool](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)oder ein Drittanbieter-Speicher-Explorer-Tool.  
+5.  Nun müssen Sie die Datendateien mit einer der folgenden Methoden in Azure Storage kopieren: [azcopy-Tool](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)oder ein Drittanbieter-Speicher-Explorer-Tool.  
   
      **Wichtig:** Wenn Sie diese neue Erweiterung verwenden, stellen Sie immer sicher, dass Sie ein seitenblob und kein blockblob erstellen.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "70175455"
   
  **Nächste Lektion:**  
   
- [Lektion 8: Wiederherstellen einer Datenbank auf Azure Storage](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [Lektion 8. Wiederherstellen einer Datenbank auf Azure Storage](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919044"
 ---
 # <a name="data-collection"></a>Datensammlung
@@ -36,7 +36,8 @@ ms.locfileid: "62919044"
 ## <a name="data-collector-concepts"></a>Datensammlerkonzepte  
  Der Datensammler ist in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]integriert und verwendet beides intensiv. Bevor Sie mit dem Datensammler arbeiten, sollten Sie Kenntnisse über bestimmte Konzepte hinsichtlich dieser beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten haben.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird zum Planen und Ausführen von Sammlungsaufträgen verwendet. Sie sollten mit den folgenden Konzepten vertraut sein:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird zum Planen und Ausführen von Sammlungsaufträgen verwendet. Sie sollten mit den folgenden Konzepten vertraut sein:  
   
 -   Auftrag  
   
@@ -50,17 +51,19 @@ ms.locfileid: "62919044"
   
  Weitere Informationen finden Sie unter [Automatisierte Administrationstasks &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) wird verwendet, um Pakete auszuführen, die Daten von einzelnen Datenanbietern auflisten. Sie sollten mit den folgenden Tools und Konzepten von [!INCLUDE[ssIS](../../includes/ssis-md.md)] vertraut sein:  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) wird verwendet, um Pakete auszuführen, die Daten von einzelnen Datenanbietern auflisten. Sie sollten mit den folgenden Tools und Konzepten von [!INCLUDE[ssIS](../../includes/ssis-md.md)] vertraut sein:  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paket  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]Paketen  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketkonfiguration  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketkonfiguration  
   
  Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="data-collector-terminology"></a>Terminologie zum Datensammler  
  target  
- Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Unterstützung für Datensammlung. Weitere Informationen zu unterstützten Editionen finden Sie im Abschnitt "Verwaltbarkeit" [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Unterstützung für Datensammlung. Weitere Informationen zu unterstützten Editionen finden Sie im Abschnitt "Verwaltbarkeit" der [Funktionen, die von den Editionen von SQL Server 2014 unterstützt](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)werden.  
   
  Ein *Zielstamm* definiert eine Teilstruktur in der Zielhierarchie. Ein *Zielsatz* ist die Gruppe von Zielen, die aus dem Anwenden eines Filters auf eine von einem Zielstamm definierte Unterstruktur resultiert. Ein Zielstamm kann eine Datenbank, eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder eine Computerinstanz sein.  
   

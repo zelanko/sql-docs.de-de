@@ -13,20 +13,20 @@ ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 824942890ef8f6c7a301cc3befddb483ba3cc8be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053700"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: Vollständig  
+ Unterstützung: vollständig  
   
- ODBC-API-Übereinstimmung: Kern-Ebene  
+ ODBC-API-Konformität: kernstufe  
   
- Beendet die Verarbeitung, die mit einem bestimmten verknüpften *Befehls beschäftigt*, schließt alle geöffneten Cursor verknüpft ist, mit der *Befehls beschäftigt*ausstehende Ergebnisse verworfen und gibt optional alle der Anweisung zugeordnete Ressourcen frei Handle.  
+ Beendet die Verarbeitung eines bestimmten *hstmt*, schließt alle geöffneten Cursor, die dem *hstmt*zugeordnet sind, verwirft ausstehende Ergebnisse und gibt optional alle dem Anweisungs Handle zugeordneten Ressourcen frei.  
   
- Weitere Informationen finden Sie unter [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) in die *ODBC Programmer's Reference*.
+ Weitere Informationen finden Sie unter [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) in der *ODBC Programmer es Reference*.

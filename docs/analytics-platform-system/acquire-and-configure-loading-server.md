@@ -1,5 +1,5 @@
 ---
-title: 'Abrufen #a0 Konfigurieren des Lade Servers'
+title: Abrufen & Konfigurieren des Lade Servers
 description: In diesem Artikel wird beschrieben, wie Sie einen Lade Server als nicht-Appliance-Windows-System zum Übermitteln von Daten Ladevorgängen an parallele Data Warehouse (PDW) erwerben und konfigurieren.
 author: mzaman1
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401484"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Einen Lade Server für parallele Data Warehouse erwerben und konfigurieren
 In diesem Artikel wird beschrieben, wie Sie einen Lade Server als nicht-Appliance-Windows-System zum Übermitteln von Daten Ladevorgängen an parallele Data Warehouse (PDW) erwerben und konfigurieren.  
   
-## <a name="Basics"></a>Grundlagen  
+## <a name="Basics"></a>Kenntnisse  
 Der Lade Server:  
   
 -   Es muss sich nicht um einen einzelnen Server handeln. Sie können gleichzeitig mit mehreren Lade Servern laden.  
@@ -86,7 +86,7 @@ Wenn Sie beabsichtigen, Integration Services zum Laden zu verwenden, müssen Sie
 --> 
   
 ## <a name="Step5"></a>Schritt 5: Starten des Ladens  
-Sie sind nun bereit, mit dem Laden von Daten zu beginnen. Weitere Informationen finden Sie unter:  
+Sie sind nun bereit, mit dem Laden von Daten zu beginnen. Weitere Informationen finden Sie unter  
   
 1.  ["dwloader-Befehlszeilen Lade Tool](dwloader.md)  
   

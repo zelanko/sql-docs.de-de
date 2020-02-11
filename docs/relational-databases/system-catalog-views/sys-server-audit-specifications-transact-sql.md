@@ -1,5 +1,5 @@
 ---
-title: server_audit_specifications (Transact-SQL) | Microsoft-Dokumentation
+title: sys. server_audit_specifications (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125006"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
+# <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält Informationen über die Serverüberwachungsspezifikationen in einer SQL Server-Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Name der Serverspezifikation.|  
-|**server_specification_id**|**Int**|ID der **Server_specification**.|  
-|**create_date**|**Datetime**|Datum, an dem die Überwachungsserverspezifikation erstellt wurde.|  
-|**modified_date**|**Datetime**|Datum, an dem die Überwachungsserverspezifikation zuletzt geändert wurde.|  
-|**is_state_enabled**|**tinyint**|Überwachungsspezifikationsstatus:<br /><br /> 0 – DEAKTIVIERT<br /><br /> 1 - AKTIVIERT|  
+|**name**|**Vom Datentyp sysname**|Name der Serverspezifikation.|  
+|**server_specification_id**|**Wartenden**|ID des **server_specification**.|  
+|**create_date**|**DateTime**|Datum, an dem die Überwachungsserverspezifikation erstellt wurde.|  
+|**modified_date**|**DateTime**|Datum, an dem die Überwachungsserverspezifikation zuletzt geändert wurde.|  
+|**is_state_enabled**|**tinyint**|Überwachungsspezifikationsstatus:<br /><br /> 0-deaktiviert<br /><br /> 1-aktiviert|  
 |**audit_GUID**|**uniqueidentifier**|GUID für die Überwachung, die diese Spezifikation enthält. Wird während der Enumeration der Elementserver-Überwachungsspezifikationen beim Serverstart verwendet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale mit den **ALTER ANY SERVER AUDIT** oder **VIEW ANY DEFINITION** -Berechtigung haben Zugriff auf diese Katalogsicht. Darüber hinaus der Prinzipal nicht verweigert werden muss **VIEW ANY DEFINITION** Berechtigung.  
+ Prinzipale mit der Berechtigung **Alter any Server Audit** oder **View any Definition** haben Zugriff auf diese Katalog Sicht. Außerdem darf dem Prinzipal die **View any Definition** -Berechtigung nicht verweigert werden.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

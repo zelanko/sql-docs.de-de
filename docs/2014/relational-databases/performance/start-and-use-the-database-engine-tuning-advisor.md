@@ -20,16 +20,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150644"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
   In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
-##  <a name="Initialize"></a> Initialisieren des Datenbankoptimierungsratgebers  
+##  <a name="Initialize"></a>Initialisieren des Datenbankoptimierungsratgeber  
  Bei der ersten Verwendung muss ein Benutzer, der Mitglied der festen Serverrolle **sysadmin** ist, den Datenbankoptimierungsratgeber starten. Das liegt daran, dass mehrere Systemtabellen in der Datenbank `msdb` erstellt werden müssen, um das Optimieren von Vorgängen zu unterstützen. Die Initialisierung ermöglicht darüber hinaus Benutzern, die Mitglieder der festen Datenbankrolle **db_owner** sind, Arbeitsauslastungen für Tabellen in Datenbanken zu optimieren, die sie besitzen.  
   
  Ein Benutzer mit Systemadministratorberechtigungen muss eine der folgenden Aktionen ausführen.  
@@ -38,7 +38,7 @@ ms.locfileid: "63150644"
   
 -   Verwenden Sie das Hilfsprogramm **dta** , um die erste Arbeitsauslastung zu optimieren. Weitere Informationen hierzu finden Sie unter [Verwenden des dta-Hilfsprogramms](#dta) an späterer Stelle in diesem Thema.  
   
-##  <a name="Start"></a> Starten Sie den Datenbankoptimierungsratgeber  
+##  <a name="Start"></a>Starten Sie die Datenbankoptimierungsratgeber  
  Sie können die grafische Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankoptimierungsratgebers auf verschiedene Arten starten, um in einer Reihe von Szenarien das Optimieren von Datenbanken zu unterstützen. Zu den unterschiedlichen Startmöglichkeiten des Datenbankoptimierungsratgebers gehören Folgende: über das Menü **Start** , über das Menü **Extras** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], über den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]und über das Menü **Extras** in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Wenn Sie den Datenbankoptimierungsratgeber zum ersten Mal starten, wird das Dialogfeld **Verbindung mit Server herstellen** angezeigt, in dem Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben können, zu der Sie eine Verbindung herstellen möchten.  
   
 > [!WARNING]  
@@ -50,7 +50,7 @@ ms.locfileid: "63150644"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>So starten Sie den Datenbankoptimierungsratgeber in SQL Server Management Studio  
   
-1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**Extras** auf **Datenbankoptimierungsratgeber**.  
+1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Extras** auf **Datenbankoptimierungsratgeber**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>So starten Sie den Datenbankoptimierungsratgeber über den Abfrage-Editor von SQL Server Management Studio  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63150644"
   
 1.  Klicken Sie in SQL Server Profiler im Menü **Extras** auf **Datenbankoptimierungsratgeber**.  
   
-##  <a name="Create"></a> Erstellen einer Arbeitsauslastung  
+##  <a name="Create"></a>Erstellen einer Arbeitsauslastung  
  Die Arbeitsauslastung besteht aus einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für eine oder mehrere Datenbanken ausgeführt werden, die Sie optimieren möchten. Der Datenbankoptimierungsratgeber analysiert diese Arbeitsauslastungen, um Indizes oder Partitionsstrategien zu empfehlen, die die Abfrageleistung Ihres Servers verbessern.  
   
  Sie können mit einer der folgenden Methoden ein neue Arbeitsauslastung erstellen.  
@@ -78,7 +78,7 @@ ms.locfileid: "63150644"
   
 -   Arbeitsauslastungen können ebenfalls in eine XML-Eingabedatei eingebettet werden, in der Sie auch für jedes Ereignis eine Gewichtung angeben können. Weitere Informationen zum Bestimmen eingebetteter Arbeitslasten finden Sie weiter unten in diesem Thema unter [Erstellen einer XML-Eingabedatei](#XMLInput) .  
   
-###  <a name="SSMS"></a> So erstellen Sie Transact-SQL-Skriptarbeitsauslastungen  
+###  <a name="SSMS"></a>So erstellen Sie Transact-SQL-Skript Arbeits Auslastungen  
   
 1.  Starten Sie den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63150644"
   
 3.  Speichern Sie die Datei mit der Erweiterung **SQL**. Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
   
-###  <a name="Profiler"></a> So erstellen Sie Arbeitsauslastungen für Ablaufverfolgungsdateien und -tabellen  
+###  <a name="Profiler"></a>So erstellen Sie Arbeits Auslastungen für Ablauf Verfolgungs Dateien und-Tabellen  
   
 1.  Starten Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mithilfe einer der folgenden Methoden:  
   
@@ -98,11 +98,11 @@ ms.locfileid: "63150644"
   
     -   [Erstellen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
-    -   [Speichern von Ablaufverfolgungsergebnissen in einer Datei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
+    -   [Speichert Ablauf Verfolgungs Ergebnisse in einer Datei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   
          Der Datenbankoptimierungsratgeber setzt voraus, dass die Ablaufverfolgungsdatei für die Arbeitsauslastung eine Rolloverdatei ist. Weitere Informationen zu Rolloverdateien finden Sie unter [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
-    -   [Speichern von Ablaufverfolgungsergebnissen in einer Tabelle &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
+    -   [Speichern von Ablauf Verfolgungs Ergebnissen in einer Tabelle &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
   
          Stellen Sie sicher, dass die Ablaufverfolgung beendet wurde, bevor Sie eine Ablaufverfolgungstabelle als Arbeitsauslastung verwenden.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "63150644"
   
  Wenn Sie Ihre eigene Vorlage verwenden möchten, stellen Sie sicher, dass die folgenden Ablaufverfolgungsereignisse aufgezeichnet werden:  
   
--   **RPC:Completed**  
+-   **RPC: abgeschlossen**  
   
--   **SQL:BatchCompleted**  
+-   **SQL: batchabgeschlossene**  
   
--   **SP:StmtCompleted**  
+-   **SP: stmtabgeschlossene**  
   
  Sie können auch die **Starting** -Versionen dieser Ablaufverfolgungsereignisse verwenden. Zum Beispiel **SQL:BatchStarting**. Jedoch beinhalten die **Completed** -Versionen dieser Ablaufverfolgungsereignisse die **Duration** -Spalte, die es dem Datenbankoptimierungsratgeber ermöglichen, die Arbeitsauslastung effizienter zu optimieren. Der Datenbankoptimierungsratgeber optimiert keine anderen Arten von Ablaufverfolgungsereignissen. Weitere Informationen zu diesen Ablaufverfolgungsereignissen finden Sie unter [Stored Procedures Event Category](../event-classes/stored-procedures-event-category.md) und [TSQL Event Category](../event-classes/tsql-event-category.md). Informationen zum Verwenden der gespeicherten Prozeduren der SQL-Ablaufverfolgung zum Erstellen einer Arbeitsauslastung der Ablaufverfolgungsdatei finden Sie unter [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63150644"
   
  Der Datenbankoptimierungsratgeber optimiert nun die neue Arbeitsauslastung, da in der Ablaufverfolgung keine Anmeldeinformationen angegeben sind. Wenn **LoginName** für eine Anweisung nicht vorhanden ist, optimiert der Datenbankoptimierungsratgeber diese Anweisung, indem er die Identität des Benutzers annimmt, der die Optimierungssitzung gestartet hat (ein Mitglied der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** ).  
   
-##  <a name="Tune"></a> Optimieren einer Datenbank  
+##  <a name="Tune"></a>Optimieren einer Datenbank  
  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Hilfsprogramms **dta** .  
   
 > [!NOTE]  
@@ -142,7 +142,7 @@ ms.locfileid: "63150644"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>Verwenden der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers  
  Auf der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers können Sie eine Datenbank mithilfe des Plancache oder mithilfe von Arbeitsauslastungsdateien oder -tabellen optimieren Mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers können Sie die Ergebnisse Ihrer aktuellen Optimierungssitzung und die Ergebnisse voriger Optimierungssitzungen mühelos anzeigen. Weitere Informationen zu den Benutzeroberflächenoptionen finden Sie später in diesem Thema unter [Benutzeroberflächenbeschreibungen](#UI) . Weitere Informationen zum Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
-####  <a name="PlanCache"></a> So optimieren Sie eine Datenbank mit dem Plancache  
+####  <a name="PlanCache"></a>So optimieren Sie eine Datenbank mit dem Plancache  
   
 1.  Starten Sie den Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
   
@@ -162,9 +162,9 @@ ms.locfileid: "63150644"
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungs Sitzung und fordert Sie auf, zu entscheiden, ob Sie auf der Grundlage der bis zu diesem Zeitpunkt ausgeführten Analyse Datenbankoptimierungsratgeber Empfehlungen generieren möchten.  
   
-    -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
+    -   **Analyse beenden** beendet die Optimierungs Sitzung, ohne Empfehlungen zu erstellen.  
   
 > [!NOTE]  
 >  Das Anhalten des Datenbankoptimierungsratgebers wird nicht unterstützt. Wenn Sie auf die Symbolleistenschaltfläche **Analyse starten** klicken, nachdem Sie auf eine der beiden Symbolleistenschaltflächen **Analyse beenden** oder **Analyse beenden (mit Empfehlungen)** geklickt haben, startet der Datenbankoptimierungsratgeber eine neue Optimierungssitzung.  
@@ -175,7 +175,7 @@ ms.locfileid: "63150644"
   
 2.  Erstellen Sie eine Arbeitsauslastung. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Erstellen einer Arbeitsauslastung](#Create) .  
   
-3.  Starten Sie den Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
+3.  Starten Sie Datenbankoptimierungsratgeber, und melden Sie sich bei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]einer Instanz von an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
   
 4.  Geben Sie auf der Registerkarte **Allgemein** einen Namen in **Sitzungsname** ein, um eine neue Optimierungssitzung zu erstellen.  
   
@@ -204,14 +204,14 @@ ms.locfileid: "63150644"
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungs Sitzung und fordert Sie auf, zu entscheiden, ob Sie auf der Grundlage der bis zu diesem Zeitpunkt ausgeführten Analyse Datenbankoptimierungsratgeber Empfehlungen generieren möchten.  
   
-    -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
+    -   **Analyse beenden** beendet die Optimierungs Sitzung, ohne Empfehlungen zu erstellen.  
   
 > [!NOTE]  
 >  Das Anhalten des Datenbankoptimierungsratgebers wird nicht unterstützt. Wenn Sie auf die Symbolleistenschaltfläche **Analyse starten** klicken, nachdem Sie auf eine der beiden Symbolleistenschaltflächen **Analyse beenden** oder **Analyse beenden (mit Empfehlungen)** geklickt haben, startet der Datenbankoptimierungsratgeber eine neue Optimierungssitzung.  
   
-###  <a name="dta"></a> Verwenden des dta-Hilfsprogramms  
+###  <a name="dta"></a>Verwenden des Hilfsprogramms DTA  
  Das Hilfsprogramm [dta](../../tools/dta/dta-utility.md) stellt eine ausführbare Datei für Eingabeaufforderungen zur Verfügung, mit der Datenbanken optimiert werden können. Sie können auf diese Weise den Datenbankoptimierungsratgeber in Batchdateien und Skripts verwenden. Das Hilfsprogramm **dta** akzeptiert Plancacheeinträge, Ablaufverfolgungsdateien und -tabellen sowie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts als Arbeitsauslastung. Außerdem akzeptiert es XML-Eingaben, die dem XML-Schema des Datenbankoptimierungsratgebers entsprechen. Dieses Schema steht auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100)zur Verfügung.  
   
  Beachten Sie Folgendes, bevor Sie eine Arbeitsauslastung mit dem Hilfsprogramm **dta** optimieren:  
@@ -258,7 +258,7 @@ ms.locfileid: "63150644"
     dta -E -D DatabaseName -if WorkloadFile -s SessionName  
     ```  
   
-     Dabei gibt `-E` an, dass die Optimierungssitzung eine vertrauenswürdige Verbindung (anstelle von Benutzernamen und Kennwort) verwendet. Und `-D` gibt den Namen der zu optimierenden Datenbank an. Standardmäßig stellt das Hilfsprogramm eine Verbindung zur Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer her. (Verwenden Sie die Option `-S`, um eine Remotedatenbank laut dem folgenden Verfahren oder eine benannte Instanz anzugeben.) Die Option `-if` gibt den Namen und Pfad zu einer Arbeitsauslastungsdatei an (wobei es sich um ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript oder um eine Ablaufverfolgungsdatei handeln kann), während `-s` einen Namen für die Optimierungssitzung angibt.  
+     Dabei gibt `-E` an, dass die Optimierungssitzung eine vertrauenswürdige Verbindung (anstelle von Benutzernamen und Kennwort) verwendet. Und `-D` gibt den Namen der zu optimierenden Datenbank an. Standardmäßig stellt das Hilfsprogramm eine Verbindung zur Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer her. (Verwenden Sie die Option `-S` , um eine Remotedatenbank laut dem folgenden Verfahren oder eine benannte Instanz anzugeben.) Die Option `-if` gibt den Namen und Pfad zu einer Arbeitsauslastungsdatei an (wobei es sich um ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript oder um eine Ablaufverfolgungsdatei handeln kann), während `-s` einen Namen für die Optimierungssitzung angibt.  
   
      Die vier hier gezeigten Optionen (Datenbankname, Arbeitsauslastung, Verbindungstyp und Sitzungsname) müssen angegeben werden.  
   
@@ -295,10 +295,10 @@ ms.locfileid: "63150644"
   
 5.  Wenn das Hilfsprogramm die Optimierung der Arbeitsauslastung abgeschlossen hat, können Sie die Ergebnisse von Optimierungssitzungen über die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers anzeigen. Alternativ können Sie über die Option **-ox** auch angeben, dass die Optimierungsempfehlungen in eine XML-Datei geschrieben werden sollen. Weitere Informationen finden Sie unter [dta Utility](../../tools/dta/dta-utility.md).  
   
-##  <a name="XMLInput"></a> Erstellen einer XML-Eingabedatei  
+##  <a name="XMLInput"></a>Erstellen einer XML-Eingabedatei  
  Wenn Sie mit der XML-Entwicklung bereits gut vertraut sind, können Sie XML-Formatdateien erstellen, mit denen der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber Arbeitsauslastungen optimieren kann. Um diese XML-Dateien zu erstellen, verwenden Sie Ihre bevorzugten XML-Tools, und bearbeiten Sie eine Beispieldatei, oder generieren Sie eine Instanz des XML-Schemas für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber.  
   
- Das XML-Schema für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ist in Ihrer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an folgendem Speicherort verfügbar:  
+ Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] XML-Schema des-Optimierungs Ratgebers [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist in der-Installation am folgenden Speicherort verfügbar:  
   
  C:\Programme\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -321,7 +321,7 @@ ms.locfileid: "63150644"
 > [!NOTE]  
 >  Wenn Sie eine Inlinearbeitsauslastung verwenden möchten (d.h. eine Arbeitsauslastung, die direkt in der XML-Eingabedatei angegeben wird), verwenden Sie das [Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-##  <a name="UI"></a> Benutzeroberflächenbeschreibungen  
+##  <a name="UI"></a>Beschreibungen der Benutzeroberfläche  
   
 ### <a name="tools-menuoptions-page"></a>Extras (Menü)/Optionen (Seite)  
  Mit diesem Dialogfeld können Sie allgemeine Konfigurationsparameter für den Datenbankoptimierungsratgeber angeben.  
@@ -332,16 +332,16 @@ ms.locfileid: "63150644"
  **Schriftart ändern**  
  Gibt die Bildschirm-Schriftart an, die von den Tabellen des Datenbankoptimierungsratgebers verwendet werden.  
   
- **Anzahl der Elemente in der Liste zuletzt verwendeter Objekte**  
+ **Anzahl von Elementen in den zuletzt verwendeten Listen**  
  Gibt die Anzahl der Sitzungen oder Dateien an, die im Menü **Datei** unter **Zuletzt geöffnete Sitzungen** oder **Zuletzt geöffnete Dateien** angezeigt werden sollen.  
   
- **Die letzten Optimierungsoptionen speichern**  
+ **Letzte Optimierungs Optionen speichern**  
  Behält die Optimierungsoptionen zwischen Sitzungen bei. Standardmäßig ausgewählt. Deaktivieren Sie dieses Kontrollkästchen, wenn beim Start immer die Standardeinstellungen des Datenbankoptimierungsratgebers verwendet werden sollen.  
   
- **Dauerhaftes Löschen von Sitzungen bestätigen**  
+ **Vor dem permanenten Löschen von Sitzungen Fragen**  
  Zeigt vor dem Löschen von Sitzungen ein Bestätigungsdialogfeld an.  
   
- **Vor dem Beenden der Sitzungsanalyse fragen**  
+ **Vor dem Beenden der Sitzungs Analyse Fragen**  
  Zeigt vor dem Beenden der Analyse einer Arbeitsauslastung ein Bestätigungsdialogfeld an.  
   
 #### <a name="general-tab-options"></a>Allgemeine Optionen (Registerkarte)  
@@ -350,7 +350,7 @@ ms.locfileid: "63150644"
  **Sitzungsname**  
  Geben Sie einen Namen für die Sitzung an. Der Sitzungsname weist einer Optimierungssitzung einen Namen zu. Anhand dieses Namens können Sie die Optimierungssitzung später überprüfen.  
   
- **Zuletzt geöffnete Dateien**  
+ **Datei**  
  Geben Sie eine SQL-Skript- oder Ablaufverfolgungsdatei für eine Arbeitsauslastung an. Geben Sie Pfad und Dateinamen im zugehörigen Textfeld an. Der Datenbankoptimierungsratgeber setzt voraus, dass die Ablaufverfolgungsdatei für die Arbeitsauslastung eine Rolloverdatei ist. Weitere Informationen zu Rolloverdateien finden Sie unter [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
  **Table**  
@@ -367,7 +367,7 @@ database_name.owner_name.table_name
  **Plancache**  
  Geben Sie den Plancache als Arbeitsauslastung an. Dadurch können Sie die manuelle Erstellung einer Auslastung vermeiden. Der Datenbankoptimierungsratgeber wählt die obersten 1.000 Ereignisse aus, die für die Analyse verwendet werden sollen.  
   
- **Xml**  
+ **Basi**  
  Wird erst angezeigt, wenn Sie eine Arbeitsauslastungsabfrage aus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importieren.  
   
  So importieren Sie eine Arbeitsauslastungsabfrage aus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
@@ -376,40 +376,41 @@ database_name.owner_name.table_name
   
 2.  Klicken Sie mit der rechten Maustaste auf die markierte Abfrage, und klicken Sie auf **Abfrage mit dem Datenbankoptimierungsratgeber analysieren**.  
   
- **Suchen Sie nach einer Arbeitsauslastungsdatei/Suchen Sie nach einer Arbeitsauslastungstabelle**  
+ **Nach Arbeitsauslastung suchen [Datei oder Tabelle]**  
  Wenn Sie als Arbeitsauslastungsquelle **Datei** oder **Tabelle** ausgewählt haben, können Sie mithilfe dieser Schaltfläche zum Durchsuchen das gewünschte Ziel auswählen.  
   
- **Zeigen Sie eine Vorschau der XML-Arbeitsauslastung an**  
+ **Vorschau der XML-Arbeitsauslastung anzeigen**  
  Zeigt eine aus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importierte, XML-formatierte Arbeitsauslastung an.  
   
- **Datenbank für Arbeitsauslastungsanalyse**  
+ **Datenbank für Arbeits Auslastungs Analyse**  
  Geben Sie die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt. Nach dem Beginn der Optimierung stellt der Datenbankoptimierungsratgeber Verbindungen mit den Datenbanken her, die über die `USE DATABASE` -Anweisungen in der Arbeitsauslastung angegeben sind.  
   
  **Zu optimierende Datenbanken und Tabellen auswählen**  
  Geben Sie die zu optimierenden Datenbanken und Tabellen an. Um alle Datenbanken anzugeben, aktivieren Sie das Kontrollkästchen in der Spaltenüberschrift **Name** . Zur Angabe bestimmter Datenbanken aktivieren Sie jeweils das Kontrollkästchen neben dem Datenbanknamen. Standardmäßig werden alle Tabellen der ausgewählten Datenbanken bei der Optimierungssitzung automatisch berücksichtigt. Um Tabellen auszuschließen, klicken Sie auf den Pfeil in der Spalte **Ausgewählte Tabellen** , und deaktivieren Sie dann die Kontrollkästchen neben den Tabellen, die nicht optimiert werden sollen.  
   
- **Ausgewählte Tabellen** (Pfeil nach unten)  
+ **Ausgewählter Tabellen** -Pfeil nach unten  
  Erweitern Sie die Tabellenliste, um die Auswahl einzelner zu optimierender Tabellen zu ermöglichen.  
   
- **Optimierungsprotokoll speichern**  
+ **Optimierungs Protokoll speichern**  
  Erstellen Sie ein Protokoll, und zeichnen Sie die während der Sitzung auftretenden Fehler auf.  
   
 > [!NOTE]  
->  Der Datenbankoptimierungsratgeber aktualisiert die Zeileninformationen für die auf der Registerkarte **Allgemein** angezeigten Tabellen nicht automatisch. Er verlässt sich stattdessen auf die Metadaten in der Datenbank. Wenn Sie vermuten, dass die Zeileninformationen veraltet sind, können Sie für die entsprechenden Objekte den Befehl DBCC UPDATEUSAGE ausführen.  
+>  Datenbankoptimierungsratgeber aktualisiert die Zeilen Informationen für die auf der Registerkarte **Allgemein** angezeigten Tabellen nicht automatisch. Stattdessen basiert Sie auf den Metadaten in der Datenbank. Wenn Sie vermuten, dass die Zeileninformationen veraltet sind, können Sie für die entsprechenden Objekte den Befehl DBCC UPDATEUSAGE ausführen.  
   
 ##### <a name="tuning-tab-options"></a>Optimierungsoptionen (Registerkarte)  
  Auf der Registerkarte **Optimierungsoptionen** werden die Standardeinstellungen der allgemeinen Optimierungsoptionen geändert. Eine Änderung der Einstellungen auf der Registerkarte **Optimierungsoptionen** ist vor dem Starten einer Optimierungssitzung nicht erforderlich.  
   
- **Optimierungszeit begrenzen**  
+ **Optimierungs Zeit begrenzen**  
  Begrenzt die Dauer der aktuellen Optimierungssitzung. Wenn der Optimierung mehr Zeit eingeräumt wird, erhöht sich die Qualität der Empfehlungen. Um bestmögliche Empfehlungen zu erhalten, sollte diese Option nicht ausgewählt werden.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber beansprucht während der Analyse die Systemressourcen. Um die Optimierung vor dem Beginn von Zeiträumen mit erwartungsgemäß hoher Arbeitsauslastung auf dem optimierten Server zu beenden, verwenden Sie **Optimierungszeit begrenzen** .  
+>  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber beansprucht während der Analyse die Systemressourcen. Um die Optimierung vor dem Beginn von Zeiträumen mit erwartungsgemäß hoher Arbeitsauslastung auf dem optimierten Server zu beenden, verwenden Sie **Optimierungszeit begrenzen** .  
   
  **Erweiterte Optionen**  
  Mithilfe des Dialogfelds **Erweiterte Optimierungsoptionen** können Sie den maximalen Speicherplatz, die maximale Anzahl an Schlüsselspalten sowie Onlineindexempfehlungen konfigurieren.  
   
- **Max. Speicherplatz für Empfehlungen definieren (MB)**  
+ **Definieren Sie max. Speicherplatz für Empfehlungen (MB)**  
  Geben Sie die maximale Größe des Speicherplatzes ein, der den Empfehlungen des Datenbankoptimierungsratgebers entsprechend für physische Entwurfsstrukturen verwendet werden darf.  
   
  Wenn an dieser Stelle kein Wert eingegeben wird, nimmt der Datenbankoptimierungsratgeber die kleinere der folgenden Beschränkungen des Speicherplatzes an:  
@@ -418,22 +419,22 @@ database_name.owner_name.table_name
   
 -   Der freie Speicherplatz auf allen angefügten Laufwerken plus die Rohdatengröße.  
   
- **Plancacheereignisse aus allen Datenbanken einschließen**  
+ **Plan Cache Ereignisse aus allen Datenbanken einschließen**  
  Geben Sie an, dass Plancacheereignisse aus allen Datenbanken analysiert werden.  
   
- **Max. Spaltenanzahl je Index**  
+ **Max. Spalten pro Index**  
  Geben Sie die maximale Spaltenanzahl an, die in Indizes enthalten sein sollen. Der Standardwert ist 1023.  
   
- **Alle Empfehlungen sind Offlineempfehlungen**  
+ **Alle Empfehlungen sind offline.**  
  Generiert die bestmöglichen Empfehlungen, ohne zu empfehlen, dass physische Entwurfsstrukturen online erstellt werden sollen.  
   
- **Sofern möglich, Onlineempfehlungen generieren**  
+ **Online Empfehlungen generieren, wenn möglich**  
  Wählt beim Erstellen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zum Implementieren der Empfehlungen Methoden aus, die implementiert werden können, während der Server online ist. Diese Auswahl wird auch getroffen, wenn eine schnellere Offline-Methode verfügbar ist.  
   
- **Nur Onlineempfehlungen generieren**  
+ **Nur Online Empfehlungen generieren**  
  Gibt nur Empfehlungen, bei denen der Server online bleiben kann.  
   
- **Beenden am**  
+ **Abbrechen um**  
  Gibt das Datum und die Uhrzeit des Zeitpunkts an, zu dem der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber beendet werden soll.  
   
  **Indizes und indizierte Sichten**  
@@ -443,7 +444,7 @@ database_name.owner_name.table_name
  Empfehlungen werden nur zum Hinzufügen indizierter Sichten eingeschlossen. Für gruppierte und nicht gruppierte Indizes werden keine Empfehlungen gegeben.  
   
  **Gefilterte Indizes einschließen**  
- Enthält Empfehlungen zum Hinzufügen von gefilterten Indizes. Diese Option steht zur Verfügung, wenn Sie eine der folgenden Strukturen für ein physisches Design auswählen: **Indizes und indizierte Sichten**, **Indizes** oder **nicht gruppierter Indizes**.  
+ Enthält Empfehlungen zum Hinzufügen von gefilterten Indizes. Diese Option ist verfügbar, wenn Sie eine dieser physischen Entwurfsstrukturen auswählen: **Indizes und indizierte Sichten**, **Indizes**oder **Nicht gruppierte Indizes**.  
   
  **Indizes**  
  Empfehlungen werden nur zum Hinzufügen gruppierter und nicht gruppierter Indizes eingeschlossen. Für indizierte Sichten werden keine Empfehlungen gegeben.  
@@ -451,7 +452,7 @@ database_name.owner_name.table_name
  **Nicht gruppierte Indizes**  
  Empfehlungen werden nur für nicht gruppierte Indizes eingeschlossen. Für gruppierte Indizes und indizierte Sichten werden keine Empfehlungen gegeben.  
   
- **Nur Auslastung vorhandener physischer Entwurfsstrukturen bewerten**  
+ **Nur die Nutzung vorhandener physischer Entwurfs Strukturen auswerten**  
  Bewertet die Effizienz der aktuellen Indizes. Für weitere Indizes oder indizierte Sichten werden jedoch keine Empfehlungen gegeben.  
   
  **Keine Partitionierung**  
@@ -463,13 +464,13 @@ database_name.owner_name.table_name
  **Ausgerichtete Partitionierung**  
  Neu empfohlene Partitionen werden so ausgerichtet, dass sie leicht zu warten sind.  
   
- **Keine vorhandenen physischen Entwurfsstrukturen beibehalten**  
+ **Keine vorhandenen physischen Entwurfs Strukturen beibehalten**  
  Es werden Empfehlungen für das Verwerfen unnötiger vorhandener Indizes, Sichten und Partitionierungen gegeben. Wenn eine vorhandene physische Entwurfsstruktur für die Arbeitsauslastung nützlich ist, wird vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber nicht empfohlen, diese zu verwerfen.  
   
  **Nur Indizes beibehalten**  
  Behält alle vorhandenen Indizes bei, empfiehlt jedoch, unnötige indizierte Sichten und Partitionierungen zu verwerfen.  
   
- **Alle vorhandenen physischen Entwurfsstrukturen beibehalten**  
+ **Alle vorhandenen physischen Entwurfs Strukturen beibehalten**  
  Alle vorhandenen Indizes, indizierten Sichten und Partitionierungen werden beibehalten.  
   
  **Nur gruppierte Indizes beibehalten**  
@@ -483,11 +484,11 @@ database_name.owner_name.table_name
   
  Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
--   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+-   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungs Sitzung und fordert Sie auf, zu entscheiden, ob Sie auf der Grundlage der bis zu diesem Zeitpunkt ausgeführten Analyse Datenbankoptimierungsratgeber Empfehlungen generieren möchten.  
   
--   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
+-   **Analyse beenden** beendet die Optimierungs Sitzung, ohne Empfehlungen zu erstellen.  
   
- **Optimierungsstatus**  
+ **Optimierungs Status**  
  Zeigt den aktuellen Status des Optimierungsvorgangs an. Enthält die Anzahl der durchgeführten Aktionen und die Anzahl der erhaltenen Fehler-, Erfolgs- und Warnmeldungen.  
   
  **Details**  
@@ -499,14 +500,14 @@ database_name.owner_name.table_name
  **Status**  
  Zeigt den Status des Aktionsschritts an.  
   
- **MessageBox**  
+ **Meldung**  
  Enthält alle Meldungen, die von den Aktionsschritten zurückgegeben werden.  
   
- **Optimierungsprotokoll**  
+ **Optimierungs Protokoll**  
  Enthält Informationen bezüglich dieser Optimierungssitzung. Um dieses Protokoll zu drucken, klicken Sie mit der rechten Maustaste auf das Protokoll, und klicken Sie auf **Drucken**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Anzeigen und arbeiten mit der Ausgabe des Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)   
+ [dta](../../tools/dta/dta-utility.md)  
   
   

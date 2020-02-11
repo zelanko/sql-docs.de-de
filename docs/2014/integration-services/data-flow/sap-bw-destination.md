@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770867"
 ---
 # <a name="sap-bw-destination"></a>SAP BW-Ziel
@@ -79,7 +79,7 @@ ms.locfileid: "62770867"
   
 -   Testen Sie den Datenladevorgang anhand der ausgewählten Optionen.  
   
- Sie können auch die Protokollierung von RFC-Funktionsaufrufen durch das Ziel aktivieren. (Diese Protokollierung wird separat von der optionalen Protokollierung ausgeführt, die Sie für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete aktivieren können.) Sie aktivieren die Protokollierung von RFC-Funktionsaufrufen bei der Konfiguration des SAP BW-Verbindungs-Managers, der vom Ziel verwendet wird. Weitere Informationen zur Konfiguration des SAP BW-Verbindungs-Managers finden Sie unter [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
+ Sie können auch die Protokollierung von RFC-Funktionsaufrufen durch das Ziel aktivieren. (Diese Protokollierung wird separat von der optionalen Protokollierung ausgeführt, die Sie für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete aktivieren können.) Sie aktivieren die Protokollierung von RFC-Funktionsaufrufen bei der Konfiguration des SAP BW-Verbindungs-Managers, der vom Ziel verwendet wird. Weitere Informationen zur Konfiguration des SAP BW-Verbindungs-Managers finden Sie unter [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62770867"
   
 -   [InfoPackage erstellen](create-infopackage.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Komponenten von Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Komponenten von Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

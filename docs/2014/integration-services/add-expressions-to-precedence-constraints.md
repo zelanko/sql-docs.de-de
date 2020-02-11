@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen | Microsoft-Dokumentation
+title: Hinzufügen von Ausdrücken zu Rang folgen Einschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061895"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen
@@ -46,17 +46,17 @@ ms.locfileid: "66061895"
   
 |Auswertungsvorgang|Einschränkung wird ausgewertet zu|Ausdruck wird ausgewertet zu|Eingeschränkte ausführbare Datei wird ausgeführt|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Einschränkung|Wahr|Nicht zutreffend|Wahr|  
+|Einschränkung|True|–|True|  
 |Einschränkung|False|–|False|  
-|expression|Nicht zutreffend|Wahr|Wahr|  
-|expression|Nicht zutreffend|False|False|  
-|Einschränkung und Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung und Ausdruck|Wahr|False|False|  
-|Einschränkung und Ausdruck|False|Wahr|False|  
+|Ausdruck|–|True|True|  
+|Ausdruck|–|False|False|  
+|Einschränkung und Ausdruck|True|True|True|  
+|Einschränkung und Ausdruck|True|False|False|  
+|Einschränkung und Ausdruck|False|True|False|  
 |Einschränkung und Ausdruck|False|False|False|  
-|Einschränkung oder Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung oder Ausdruck|Wahr|False|Wahr|  
-|Einschränkung oder Ausdruck|False|Wahr|Wahr|  
+|Einschränkung oder Ausdruck|True|True|True|  
+|Einschränkung oder Ausdruck|True|False|True|  
+|Einschränkung oder Ausdruck|False|True|True|  
 |Einschränkung oder Ausdruck|False|False|False|  
   
 ### <a name="to-add-an-expression-to-a-precedence-constraint"></a>So fügen Sie einer Rangfolgeneinschränkung einen Ausdruck hinzu  
@@ -68,8 +68,8 @@ ms.locfileid: "66061895"
 ## <a name="external-resources"></a>Externe Ressourcen  
  Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
-## <a name="see-also"></a>Siehe auch  
- [Mehrere Rangfolgeneinschränkungen](../../2014/integration-services/multiple-precedence-constraints.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mehrere Rang folgen Einschränkungen](../../2014/integration-services/multiple-precedence-constraints.md)   
  [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md)  
   
   

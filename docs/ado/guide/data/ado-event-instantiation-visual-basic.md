@@ -1,5 +1,5 @@
 ---
-title: 'ADO-Ereignisinstanziierung: Visual Basic | Microsoft-Dokumentation'
+title: 'ADO-Ereignis Instanziierung: Visual Basic | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926070"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO-Ereignisinstanziierung: Visual Basic
-Um ADO-Ereignisse in Microsoft® Visual Basic® behandeln zu können, müssen Sie deklarieren, einem auf Modulebene Variablen mithilfe der **WithEvents** Schlüsselwort. Die Variable kann nur als Teil eines Moduls Klasse deklariert werden und muss auf der Modulebene deklariert werden. Dies ist nicht so restriktiv wie es, aber scheint da Visual Basic **Formular** Objekte sind ebenfalls Klassen. Die einfachste Möglichkeit zum Behandeln von ADO-Ereignissen wird zum Deklarieren einer Variablen mit **WithEvents**. Das folgende Beispiel verarbeitet die **ConnectComplete** -Ereignis für eine **Verbindung** Objekt:  
+Um ADO-Ereignisse in Microsoft® Visual Basic® behandeln zu können, müssen Sie eine Variable auf Modulebene mithilfe des **widervents** -Schlüssel Worts deklarieren. Die Variable kann nur als Teil eines Klassen Moduls deklariert werden und muss auf Modulebene deklariert werden. Dies ist jedoch nicht so restriktiv wie anscheinend, da Visual Basic **Form** -Objekte auch Klassen sind. Die einfachste Möglichkeit, ADO-Ereignisse zu verarbeiten, besteht darin, eine Variable mithilfe von **wiwitvents**zu deklarieren. Im folgenden Beispiel wird das **ConnectComplete** -Ereignis für ein **Verbindungs** Objekt behandelt:  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +65,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- Die **Verbindung** -Objekt deklariert wird, auf die **Formular** mithilfe der **WithEvents** Schlüsselwort, um die Behandlung von Ereignissen zu aktivieren. Der Form_Load-Ereignishandler erstellt das Objekt tatsächlich durch Zuweisung eines neuen **Verbindung** -Objekt *ConnEvent* , und klicken Sie dann die Verbindung wird geöffnet. Natürlich möchten eine echte Anwendung weitere Verarbeitung in den Form_Load-Ereignishandler als hier dargestellt wird.
+ Das **Verbindungs** Objekt wird auf der **Formular** Ebene deklariert, wobei das **widervents** -Schlüsselwort verwendet wird, um die Ereignis Behandlung zu aktivieren. Der Form_Load Ereignishandler erstellt das Objekt tatsächlich durch Zuweisen eines neuen **Verbindungs** Objekts zu *connecvent* und öffnet dann die Verbindung. Natürlich würde eine echte Anwendung im Form_Load Ereignishandler mehr Verarbeitungsvorgänge ausführen als hier gezeigt wird.

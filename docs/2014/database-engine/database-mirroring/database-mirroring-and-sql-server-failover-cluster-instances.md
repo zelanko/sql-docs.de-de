@@ -15,19 +15,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755589"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Datenbankspiegelung und SQL Server-Failoverclusterinstanzen
   Ein Failovercluster ist eine Kombination eines oder mehrerer physischer Datenträger in einer Clustergruppe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clusterdienste (MSCS, Microsoft Cluster Service), auch als Ressourcengruppe bezeichnet, die teilnehmende Knoten des Clusters sind. Die Ressourcengruppe ist als Failoverclusterinstanz konfiguriert, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hostet. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz wird im Netzwerk wie ein einzelner Computer angezeigt, besitzt jedoch Funktionalität, die ein Failover von einem Knoten zu einem anderen ermöglicht, falls ein Knoten nicht mehr verfügbar ist. Weitere Informationen finden Sie unter [ Always On-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
- Failovercluster stellen Unterstützung für hohe Verfügbarkeit für eine gesamte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz bereit, während die Datenbankspiegelung Unterstützung für hohe Verfügbarkeit für eine einzelne Datenbank bereitstellt. Datenbankspiegelung kann zwischen Failoverclustern, aber auch zwischen einem Failovercluster und einem nicht zu einem Cluster gehörenden Host ausgeführt werden.  
+ Failovercluster stellen Unterstützung für hohe Verfügbarkeit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine gesamte-Instanz bereit, im Gegensatz zur Daten Bank Spiegelung, die Unterstützung für hohe Verfügbarkeit für eine einzelne Datenbank bereitstellt. Datenbankspiegelung kann zwischen Failoverclustern, aber auch zwischen einem Failovercluster und einem nicht zu einem Cluster gehörenden Host ausgeführt werden.  
   
 > [!NOTE]  
->  Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)hostet.  
+>  Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ## <a name="mirroring-and-clustering"></a>Spiegelung und Clusterunterstützung  
  Wenn die Spiegelung zusammen mit Clustern verwendet wird, befinden sich sowohl der Prinzipalserver als auch der Spiegelserver auf Clustern, wobei der Prinzipalserver auf der Failoverclusterinstanz eines Clusters und der Spiegelserver auf der Failoverclusterinstanz eines anderen Clusters ausgeführt wird. Sie können aber auch eine Spiegelungssitzung einrichten, in der sich ein Partner auf der Failoverclusterinstanz eines Clusters und der andere Partner auf einem separaten, nicht zu einem Cluster gehörenden Computer befindet.  
@@ -41,9 +41,9 @@ ms.locfileid: "62755589"
   
  In der folgenden Abbildung wird ein automatisches Failover zwischen Clustern in einer Spiegelungssitzung dargestellt, die im Hochsicherheitsmodus mit einem Zeugen (der ein automatisches Failover unterstützt) ausgeführt wird.  
   
- ![Ein Failover auf einem Cluster](../media/dbm-and-failover-clustering.gif "A failover on a cluster")  
+ ![Failover bei einem Cluster](../media/dbm-and-failover-clustering.gif "Failover bei einem Cluster")  
   
- Die drei Serverinstanzen in der spiegelungssitzung befinden sich auf drei verschiedenen Clustern: **Cluster_A**, **Cluster_B**, und **Cluster_C**. Auf jedem Cluster wird eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ausgeführt. Wenn die Spiegelungssitzung beginnt, ist die Failoverclusterinstanz auf **Cluster_A** der Prinzipalserver, die Failoverclusterinstanz auf **Cluster_B** ist der Spiegelserver, und die Failoverclusterinstanz auf **Cluster_C** ist der Zeuge in der Spiegelungssitzung. Schließlich fällt der aktive Knoten auf **Cluster_A** aus, sodass der Prinzipalserver nicht mehr verfügbar ist.  
+ Die drei Serverinstanzen in der Spiegelungssitzung befinden sich auf drei verschiedenen Clustern: **Cluster_A**, **Cluster_B**und **Cluster_C**. Auf jedem Cluster wird eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ausgeführt. Wenn die Spiegelungssitzung beginnt, ist die Failoverclusterinstanz auf **Cluster_A** der Prinzipalserver, die Failoverclusterinstanz auf **Cluster_B** ist der Spiegelserver, und die Failoverclusterinstanz auf **Cluster_C** ist der Zeuge in der Spiegelungssitzung. Schließlich fällt der aktive Knoten auf **Cluster_A** aus, sodass der Prinzipalserver nicht mehr verfügbar ist.  
   
  Bevor der Cluster ein Failover ausführen kann, erkennt der Spiegelserver mithilfe des Zeugen den Ausfall des Prinzipalservers. Der Spiegelserver führt ein Rollforward für seine Datenbank aus und schaltet sie so schnell wie möglich als neue Prinzipaldatenbank online. Wenn das Failover für **Cluster_A** beendet ist, ist der ehemalige Prinzipalserver nun der Spiegelserver und synchronisiert seine Datenbank mit der aktuellen Prinzipaldatenbank auf **Cluster_B**.  
   
@@ -53,19 +53,19 @@ ms.locfileid: "62755589"
 ### <a name="high-performance-mode-session"></a>Sitzung im Hochleistungsmodus  
  Wenn Sie beabsichtigen, eine Datenbank im Hochleistungsmodus zu spiegeln, sollten Sie den Prinzipalserver auf der Failoverclusterinstanz eines Clusters und den Spiegelserver auf einem nicht zu einem Cluster gehörenden Server an einem Remotestandort ausführen. Wenn für den Cluster ein Failover zu einem anderen Knoten ausgeführt wird, bleibt die Failoverclusterinstanz weiterhin Prinzipalserver in der Spiegelungssitzung. Falls Probleme auftreten, die den gesamten Cluster betreffen, können Sie den Dienst auf dem Spiegelserver erzwingen.  
   
- **So richten Sie einen neuen SQL Server-Failovercluster ein**  
+ **So richten Sie einen neuen SQL Server Failovercluster ein**  
   
 -   [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
- **So richten Sie die Datenbankspiegelung ein**  
+ **So richten Sie Daten Bank Spiegelung ein**  
   
 -   [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
- [AlwaysOn-Failoverclusterinstanzen (SQLServer)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
+ [AlwaysOn-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

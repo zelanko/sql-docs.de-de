@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771216"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
@@ -73,7 +73,7 @@ ms.locfileid: "62771216"
   
 -   **Berechnen des Startdatums und der Startzeit**. Sie verwenden das Enddatum und die Endzeit des vorherigen Ladens als aktuelles Startdatum und aktuelle Startzeit. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, können Sie diesen Wert mit den `datetime`-Funktionen von Transact-SQL oder der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Ausdruckssprache berechnen. Andernfalls müssen Sie möglicherweise die Endpunkte zwischen den Ausführungen persistent speichern und einen Task "SQL ausführen" oder einen Skripttask verwenden, um den vorherigen Endpunkt zu laden.  
   
--   **Berechnen des Enddatums und der Endzeit**. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, berechnen Sie das aktuelle Enddatum und die aktuelle Endzeit als Offset des Startdatums und der Startzeit. In diesem Fall können Sie diesen Wert berechnen, mit der `datetime` -Funktionen von Transact-SQL oder der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache.  
+-   **Berechnen des Enddatums und der Endzeit**. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, berechnen Sie das aktuelle Enddatum und die aktuelle Endzeit als Offset des Startdatums und der Startzeit. Sie können diesen Wert auch mit den `datetime` Funktionen von Transact-SQL oder der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache berechnen.  
   
  In der folgenden Prozedur verwendet das Änderungsintervall ein unveränderliches Intervall und setzt voraus, dass das Paket für inkrementelles Laden ohne Ausnahme täglich ausgeführt wird. Andernfalls würden Änderungsdaten für verpasste Intervalle verloren gehen. Der Startpunkt für das Intervall ist vorgestern Mitternacht, d. h. vor 24 bis 48 Stunden. Der Endpunkt für das Intervall ist gestern Mitternacht, d. h. in der vorherigen Nacht vor 0 bis 24 Stunden.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62771216"
   
  **Nächstes Thema:** [Bestimmen, ob die Änderungsdaten bereit sind](determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Variablen in Paketen](../use-variables-in-packages.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md)   
  [SQL ausführen (Task)](../control-flow/execute-sql-task.md)   

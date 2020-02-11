@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670922"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informationen zur Änderungsnachverfolgung (SQL Server)
-  Die Änderungsnachverfolgung ist eine einfache Lösung, die einen effizienten Änderungsnachverfolgungsmechanismus für Anwendungen bereitstellt. Normalerweise mussten Anwendungsentwickler benutzerdefinierte Mechanismen zur Änderungsnachverfolgung implementieren, damit die Anwendungen Änderungen an Daten in einer Datenbank abfragen und auf Informationen im Zusammenhang mit den Änderungen zugreifen konnten. Erstellung dieser Mechanismen war i. d. r. sehr viel Arbeit häufig verbunden und eine Kombination von Triggern, `timestamp` Spalten, neuen Tabellen zum Speichern von Nachverfolgungsinformationen und benutzerdefinierten cleanupprozessen.  
+  Die Änderungsnachverfolgung ist eine einfache Lösung, die einen effizienten Änderungsnachverfolgungsmechanismus für Anwendungen bereitstellt. Normalerweise mussten Anwendungsentwickler benutzerdefinierte Mechanismen zur Änderungsnachverfolgung implementieren, damit die Anwendungen Änderungen an Daten in einer Datenbank abfragen und auf Informationen im Zusammenhang mit den Änderungen zugreifen konnten. Das Erstellen dieser Mechanismen umfasste in der Regel viel Arbeit und beteiligte häufig eine Kombination von Triggern, `timestamp` Spalten, neuen Tabellen zum Speichern von nach Verfolgungs Informationen und benutzerdefinierten Cleanupprozessen.  
   
  Die Anforderungen an die Menge erforderlicher Informationen zu den Änderungen variieren je nach Anwendungstyp. Anwendungen können die Änderungsnachverfolgung verwenden, um die folgenden Fragen zu den an einer Benutzertabelle vorgenommenen Änderungen zu beantworten:  
   
@@ -47,12 +47,12 @@ ms.locfileid: "62670922"
 ### <a name="one-way-synchronization-applications"></a>Unidirektionale Synchronisierungsanwendungen  
  Es können unidirektionale Synchronisierungsanwendungen, z. B. ein Client oder eine Zwischenspeicherungsanwendung auf der mittleren Ebene, erstellt werden, die die Änderungsnachverfolgung verwenden. Wie in der folgenden Abbildung dargestellt, müssen für eine Zwischenspeicherungsanwendung Daten in [!INCLUDE[ssDE](../../includes/ssde-md.md)] gespeichert und in anderen Datenspeichern zwischengespeichert werden. Die Anwendung muss in der Lage sein, den Cache auf dem aktuellen Stand zu halten, indem dieser mit allen an den Datenbanktabellen vorgenommenen Änderungen aktualisiert wird. Es werden keine Änderungen zurück an [!INCLUDE[ssDE](../../includes/ssde-md.md)]übergeben.  
   
- ![Zeigt Anwendungen mit unidirektionaler Synchronisierung](../../database-engine/media/one-waysync.gif "Shows one-way synchronization applications")  
+ ![Zeigt Anwendungen mit unidirektionaler Synchronisierung](../../database-engine/media/one-waysync.gif "Zeigt Anwendungen mit unidirektionaler Synchronisierung")  
   
 ### <a name="two-way-synchronization-applications"></a>Bidirektionale Synchronisierungsanwendungen  
  Es können auch bidirektionale Synchronisierungsanwendungen erstellt werden, die die Änderungsnachverfolgung verwenden. In diesem Szenario werden die Daten in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit mindestens einem Datenspeicher synchronisiert. Die Daten in diesen Speichern können aktualisiert werden, und die Änderungen müssen wieder mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]synchronisiert werden.  
   
- ![Zeigt Anwendungen mit bidirektionaler Synchronisierung](../../database-engine/media/two-waysync.gif "Shows two-way synchronization applications")  
+ ![Zeigt Anwendungen mit bidirektionaler Synchronisierung](../../database-engine/media/two-waysync.gif "Zeigt Anwendungen mit bidirektionaler Synchronisierung")  
   
  Ein gutes Beispiel für eine bidirektionale Synchronisierungsanwendung ist eine gelegentlich verbundene Anwendung. In einer Anwendung dieses Typs fragt eine Clientanwendung einen lokalen Speicher ab und aktualisiert diesen. Wenn eine Verbindung zwischen einem Client und einem Server verfügbar ist, führt die Anwendung die Synchronisierung mit einem Server aus, und geänderte Daten fließen in beide Richtungen.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62670922"
   
  Informationen zu den an den einzelnen Zeilen vorgenommenen Änderungen können auch mithilfe der Änderungsnachverfolgung abgerufen werden. Dazu zählen z. B. der Typ des DML-Vorgangs, der die Änderung (Einfügung, Update oder Löschung) bewirkt hat, oder die Spalten, die im Rahmen eines Updatevorgangs geändert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktivieren und Deaktivieren der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Verwenden der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
  [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   

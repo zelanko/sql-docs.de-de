@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771106"
 ---
 # <a name="look-up-infoobject"></a>InfoObject suchen
@@ -44,7 +44,7 @@ ms.locfileid: "62771106"
  Sie können das Dialogfeld **InfoObject suchen** auch öffnen, indem Sie im Abschnitt **Attribute** des Dialogfelds **Neues InfoObject erstellen** auf **Hinzufügen** klicken.  
   
 ## <a name="lookup-options"></a>Suchoptionen  
- In den Suchtextfeldern können Sie Ergebnisse filtern, indem Sie das Platzhalterzeichen (*) oder eine Teilzeichenfolge in Kombination mit dem Platzhalterzeichen (*) verwenden. Wenn Sie ein Suchfeld jedoch leer lassen, werden beim Suchvorgang nur leere Zeichenfolgen in diesem Feld abgeglichen.  
+ In den Suchtextfeldern können Sie Ergebnisse filtern, indem Sie das Platzhalterzeichen (*) oder eine Teilzeichenfolge in Kombination mit dem Platzhalterzeichen verwenden. Wenn Sie ein Suchfeld jedoch leer lassen, werden beim Suchvorgang nur leere Zeichenfolgen in diesem Feld abgeglichen.  
   
  **Merkmale**  
  Suchen Sie die InfoObjects, die die Eigenschaften darstellen.  
@@ -78,13 +78,13 @@ ms.locfileid: "62771106"
   
  Wenn die Liste der verfügbaren InfoObjects angezeigt wird, wählen Sie das gewünschte InfoObject aus. Daraufhin werden die zugehörigen Optionen vom Ziel mit den erforderlichen Werten aufgefüllt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [InfoCube für Transaktionsdaten erstellen](create-infocube-for-transaction-data.md)   
  [InfoSource erstellen](create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](create-infosource-for-transaction-data.md)   
  [InfoSource für Masterdaten erstellen](create-infosource-for-master-data.md)   
- [Hinzufügen](create-new-infoobject.md)   
+ [Neues InfoObject erstellen](create-new-infoobject.md)   
  [Ziel-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

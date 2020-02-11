@@ -32,10 +32,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065062"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Erstellen einer Sitzung für erweiterte Ereignisse mithilfe des Assistenten (Objekt-Explorer)
@@ -53,44 +53,44 @@ ms.locfileid: "66065062"
   
 -   [Festlegen von Sitzungseigenschaften](#BKMK_SetSessionProperties)  
   
--   [Wählen Sie aus](#BKMK_ChooseTemplate)  
+-   [Auswählen einer Vorlage](#BKMK_ChooseTemplate)  
   
--   [Aufzuzeichnende Ereignisse auswählen](#BKMK_SelectEventsToCapture)  
+-   [Auswählen von Ereignissen für die Aufzeichnung](#BKMK_SelectEventsToCapture)  
   
--   [Globale Felder aufzeichnen](#BKMK_CaptureGlobalFields)  
+-   [Aufzeichnen von globalen Feldern](#BKMK_CaptureGlobalFields)  
   
--   [Filter für Sitzungsereignisse festlegen](#BKMK_SetSessionEventFilters)  
+-   [Festlegen von Filtern für Sitzungsereignisse](#BKMK_SetSessionEventFilters)  
   
--   [Sitzungsdatenspeicher angeben](#BKMK_SpecifySessionDataOutput)  
+-   [Angeben des Sitzungsdatenspeichers](#BKMK_SpecifySessionDataOutput)  
   
 -   [Zusammenfassung](#BKMK_Summary)  
   
--   [Ereignissitzung erstellen](#BKMK_CreateEventSession)  
+-   [Ereignis Sitzung erstellen](#BKMK_CreateEventSession)  
   
-##  <a name="BKMK_Welcome"></a> Einführung  
+##  <a name="BKMK_Welcome"></a>Einführung  
  Gehen Sie auf der Seite **Einführung** wie folgt vor:  
   
 -   Klicken Sie auf der Seite **Einführung** des Assistenten für neue Sitzungen auf **Weiter**.  
   
      Aktivieren Sie das Kontrollkästchen **Diese Seite nicht mehr anzeigen**, wenn Sie den Assistenten mehrmals verwenden werden und nicht bei jedem Start des Assistenten die Einführung lesen möchten.  
   
-##  <a name="BKMK_SetSessionProperties"></a> Festlegen von Sitzungseigenschaften  
+##  <a name="BKMK_SetSessionProperties"></a>Festlegen von Sitzungs Eigenschaften  
  Geben Sie auf der Seite **Sitzungseigenschaften festlegen** die folgenden Werte ein:  
   
 -   Geben Sie im Feld **Sitzungsname** einen aussagekräftigen Namen für die Ereignissitzung ein.  
   
      Wenn Sie möchten, dass die Sitzung gestartet wird, wenn Sie den Server starten, aktivieren Sie das Kontrollkästchen **Ereignissitzung beim Serverstart starten** , und klicken Sie dann auf **Weiter**.  
   
-##  <a name="BKMK_ChooseTemplate"></a> Wählen Sie aus  
+##  <a name="BKMK_ChooseTemplate"></a>Vorlage auswählen  
  Führen Sie auf der Seite **Vorlage auswählen** die folgenden Schritte aus:  
   
 -   Aktivieren Sie die Option **Diese Ereignissitzungsvorlage verwenden** , um aus einem Satz vorkonfigurierter Vorlagen für häufig auftretende Probleme eine Auswahl zu treffen. Wählen Sie die gewünschte Vorlage aus der Dropdownliste aus, und klicken Sie dann auf **Weiter**.  
   
-     -oder-  
+     ODER  
   
 -   Aktivieren Sie die Option **Keine Vorlage verwenden** , wenn Sie keine vorkonfigurierte Vorlage verwenden möchten, und klicken Sie dann auf **Weiter**.  
   
-##  <a name="BKMK_SelectEventsToCapture"></a> Aufzuzeichnende Ereignisse auswählen  
+##  <a name="BKMK_SelectEventsToCapture"></a>Ereignisse für die Erfassung auswählen  
  Gehen Sie auf der Seite **Aufzuzeichnende Ereignisse auswählen** wie folgt vor:  
   
 1.  Wählen Sie die Ereignisse, die Sie aufzeichnen möchten, aus der **Ereignisbibliothek**aus, und klicken Sie auf den Pfeil nach rechts. Durch UMSCHALT+Klicken oder STRG+Klicken können Sie mehrere Ereignisse in der Ereignisbibliothek auswählen.  
@@ -104,7 +104,7 @@ ms.locfileid: "66065062"
     > [!NOTE]  
     >  Ereignisse aus dem Kanal **Debuggen** sind standardmäßig ausgeblendet. Um Debugereignisse anzuzeigen, wählen Sie **Debuggen** aus der Dropdownliste **Kanal** aus.  
   
-##  <a name="BKMK_CaptureGlobalFields"></a> Globale Felder aufzeichnen  
+##  <a name="BKMK_CaptureGlobalFields"></a>Globale Felder erfassen  
  Globale Felder (auch als Aktionen bezeichnet) werden verwendet, um einzelne oder mehrere Aktionen für die ausgewählten Ereignisse zuzuordnen. Wenn Sie auf der Seite **Vorlage auswählen** eine Vorlage auswählten, werden alle globalen Felder, die in der Vorlage definiert sind, auf dieser Seite angezeigt.  
   
  Gehen Sie auf der Seite **Globale Felder aufzeichnen** wie folgt vor:  
@@ -116,7 +116,7 @@ ms.locfileid: "66065062"
     > [!NOTE]  
     >  Die ausgewählten Aktionen werden nach **Namen** sortiert, sodass Sie die Möglichkeit haben, die zugeordneten Aktionen in alphabetischer Reihenfolge anzuzeigen. Sie können nach auch nach Beschreibung oder dem Aktivierungs-/Deaktivierungsstatus sortieren, indem Sie auf die Spaltenüberschrift neben dem Feldnamen klicken.  
   
-##  <a name="BKMK_SetSessionEventFilters"></a> Filter für Sitzungsereignisse festlegen  
+##  <a name="BKMK_SetSessionEventFilters"></a>Festlegen von Sitzungs Ereignis filtern  
  Sie können Filter (auch als Prädikate bezeichnet) anwenden, um die Ereignisse, die Sie aufzeichnen möchten, einzuschränken. Gehen Sie auf der Seite **Filter für Sitzungsereignisse festlegen** wie folgt vor:  
   
 1.  Wenn Sie keine vorkonfigurierte Vorlage verwenden, erstellen die Filterkriterien, und klicken dann auf **Weiter**.  
@@ -130,7 +130,7 @@ ms.locfileid: "66065062"
     > [!NOTE]  
     >  Wenn Sie eine Gruppenklausel für den Filter konfigurieren, werden redundante Klammern aus dem Filter entfernt, nachdem das Ergebnis gespeichert wurde. Wenn Sie z. B. einen Filter erstellen, der **Klausel 1** und **Klausel 2**gruppiert, werden Klammern um die Klauseln angezeigt. Nachdem Sie den Filter gespeichert haben, werden die redundanten Klammern entfernt. Das Entfernen der Klammern hat keine Auswirkungen auf die Filterlogik.  
   
-##  <a name="BKMK_SpecifySessionDataOutput"></a> Sitzungsdatenspeicher angeben  
+##  <a name="BKMK_SpecifySessionDataOutput"></a>Angeben des Sitzungsdaten Speichers  
  Auf der Seite **Sitzungsdatenspeicher angeben** geben Sie an, wie Daten für die Analyse erfasst werden sollen. SQL Server Erweiterte Ereignisse verwendet Ziele für die Datenausgabe. Ziele speichern Ereignisdaten und können Aktionen, wie z. B. das Schreiben in eine Datei und das Aggregieren von Ereignisdaten, ausführen. Überlegen Sie sich, wie Sie die Daten für die Analyse erfassen möchten, und gehen Sie auf der Seite **Sitzungsdatenspeicher angeben** folgendermaßen vor:  
   
 1.  Bei großen Datasets und beim Erstellen von historischen Datensätzen aktivieren Sie das Kontrollkästchen **Daten zur späteren Analyse in einer Datei speichern** , und gehen Sie dann wie folgt vor:  
@@ -153,7 +153,7 @@ ms.locfileid: "66065062"
   
     4.  Im Feld **Anzahl beizubehaltender Ereignisse (pro Typ)** geben Sie mithilfe der NACH-OBEN- und der NACH-UNTEN-TASTE die Anzahl der Ereignisse (pro Typ) ein, die Sie beibehalten möchten, oder wählen diese aus.  
   
-##  <a name="BKMK_Summary"></a> Zusammenfassung  
+##  <a name="BKMK_Summary"></a>FAS  
  Gehen Sie auf der Seite **Zusammenfassung** wie folgt vor:  
   
 1.  Stellen Sie sicher, dass die Auswahl richtig ist. Erweitern Sie die Ereignissitzungsknoten, um zu überprüfen, dass die gesamte Auswahl in die Ereignissitzung eingeschlossen wird.  
@@ -162,14 +162,14 @@ ms.locfileid: "66065062"
   
 3.  Klicken Sie auf **Fertig stellen** , um die Ereignissitzung zu erstellen.  
   
-##  <a name="BKMK_CreateEventSession"></a> Ereignissitzung erstellen  
+##  <a name="BKMK_CreateEventSession"></a>Ereignis Sitzung erstellen  
  Nachdem die Ereignissitzung erfolgreich erstellt wurde, gehen Sie auf der Seite **Ereignissitzung erstellen** folgendermaßen vor:  
   
 1.  Klicken Sie auf **Ereignissitzung direkt nach dem Erstellen der Sitzung starten** , um die Sitzung zu starten, nachdem Sie den Assistenten geschlossen haben. Sie müssen die Ereignissitzung unmittelbar nach dem Erstellen der Sitzung starten, damit Sie die Livedaten beobachten können.  
   
 2.  Klicken Sie auf **Livedaten während der Aufzeichnung auf dem Bildschirm ansehen** , um Livedaten für die Ereignissitzung anzuzeigen. Unmittelbar nach der Erstellung der Sitzung wird für die Livedaten eine Ablaufverfolgung gestartet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Sitzung für erweiterte Ereignisse im Dialogfeld für neue Sitzungen](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

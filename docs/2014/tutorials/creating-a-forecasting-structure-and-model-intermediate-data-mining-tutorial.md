@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Planungserstellungsstruktur und eines Modells (mittleres Datamining Tutorial) | Microsoft-Dokumentation
+title: Erstellen einer Planungsstruktur und eines Modells (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204811"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer Struktur und eines Modells zur Planungserstellung (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -22,47 +22,47 @@ ms.locfileid: "63204811"
   
 ### <a name="to-create-a-forecasting-mining-structure"></a>So legen Sie eine Forecasting-Miningstruktur an  
   
-1.  Im Projektmappen-Explorer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], mit der rechten Maustaste **Miningstrukturen** , und wählen Sie **neue Miningstruktur**.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Projektmappen-Explorer in mit der rechten Maustaste auf **Mining Strukturen** , und wählen Sie **neue Mining Struktur**aus.  
   
 2.  Klicken Sie auf der Seite **Willkommen** auf **Weiter**.  
   
-3.  Auf der **Definitionsmethode auswählen** überprüfen Sie, ob Seite **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+3.  Überprüfen Sie auf der Seite **Definitions Methode auswählen** , ob **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **weiter**.  
   
-4.  Auf der **Erstellen von Data Mining-Struktur** Seite **welche Datamining-Technik möchten Sie verwenden?** Option **Microsoft Time Series**, und klicken Sie dann auf  **Nächste**.  
+4.  Wählen Sie auf der Seite **Data Mining-Struktur erstellen** unter **welche Data Mining Technik möchten Sie verwenden?** die Option **Microsoft Time Series**aus, und klicken Sie dann auf **weiter**.  
   
-5.  Auf der **Datenquellensicht auswählen** Seite **verfügbare Datenquellensichten**Option **SalesByRegion**.  
+5.  Wählen Sie auf der Seite **Datenquellen Sicht auswählen** unter **Verfügbare Datenquellen Sichten**die Option **SalesByRegion**aus.  
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Auf der **Tabellentypen angeben** Seite, stellen Sie sicher, dass das Kontrollkästchen in der **Fall** Spalte für die vTimeSeries-Tabelle ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+7.  Vergewissern Sie sich auf der Seite **Tabellentypen angeben** , dass das Kontrollkästchen in der Spalte **Fall** für die Tabelle vTimeSeries ausgewählt ist, und klicken Sie dann auf **weiter**.  
   
-8.  Auf der **Trainingsdaten angeben** Seite, wählen Sie die Kontrollkästchen in der **Schlüssel** für die ModelRegion und ReportingDate-Spalten.  
+8.  Aktivieren Sie auf der Seite **Trainingsdaten angeben** die Kontrollkästchen in der Spalte **Schlüssel** für die Spalten ModelRegion und ReportingDate.  
   
-     ReportingDate muss in der Standardeinstellung ausgewählt werden, da Sie diese Spalte als logischen primären Schlüssel angegeben, wenn Sie die Datenquellensicht erstellt haben. ModelRegion als sekundären Schlüssel hinzufügen, weisen Sie den Algorithmus eine separate Zeitreihe für jede Kombination aus Modell und Region, die in diesem Feld aufgelistete zu erstellen.  
+     ReportingDate muss standardmäßig ausgewählt werden, da Sie diese Spalte beim Erstellen der Datenquellen Sicht als logischen Primärschlüssel angegeben haben. Wenn Sie ModelRegion als zweiten Schlüssel hinzufügen, weisen Sie den Algorithmus an, eine separate Zeitreihe für jede Kombination aus Modell und Region zu erstellen, die in diesem Feld aufgeführt ist.  
   
-9. Wählen Sie die Kontrollkästchen in der **Eingabe** und **vorhersagbar** Spalten für die Menge, Spalte, und klicken Sie dann auf **Weiter**.  
+9. Aktivieren Sie die Kontrollkästchen in den **Eingabe** -und **vorhersagbaren** Spalten für die Menge und die Spalte, und klicken Sie dann auf **weiter**.  
   
-     Durch Auswahl **vorhersagbar**, Sie angeben, dass Sie Vorhersagen für die Daten in diesem Artikel erstellen möchten. Da Sie jedoch die Prognose anhand von vergangenen Daten erstellen möchten, müssen Sie die Spalte auch als Eingabe hinzufügen.  
+     Wenn Sie **vorhersagbar**auswählen, geben Sie an, dass Sie Vorhersagen für die Daten in dieser Spalte erstellen möchten. Da Sie jedoch die Prognose anhand von vergangenen Daten erstellen möchten, müssen Sie die Spalte auch als Eingabe hinzufügen.  
   
-10. Auf der Seite **Inhalt und Datentyp der Spalten angeben**, überprüfen Sie die Auswahl.  
+10. Überprüfen Sie auf der Seite **Inhalt und Datentyp der Spalten angeben**die Auswahl.  
   
-     Die ModelRegion-Spalte festgelegt wurde, als eine **Schlüssel** Spalte und die ReportingDate-Spalte wird automatisch festgelegt, als eine **Key Time** Spalte. Es kann von jedem Schlüsseltyp nur jeweils einer vorhanden sein.  
+     Die Model Region-Spalte wird als **Schlüssel** Spalte festgelegt, und die ReportingDate-Spalte wird automatisch als **Key Time** -Spalte bezeichnet. Es kann von jedem Schlüsseltyp nur jeweils einer vorhanden sein.  
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Auf der **Abschließen des Assistenten** Seite für **Miningstrukturname**, Typ `Forecasting`.  
+12. Geben `Forecasting`Sie auf der Seite **Assistenten abschließen** für **Mining Struktur Name den Namen**ein.  
   
     > [!NOTE]  
     >  Die Option zum Aktivieren von Drillthroughs ist für Zeitreihenmodelle nicht verfügbar.  
   
-13. In **Miningmodellname**, Typ `Forecasting`, und klicken Sie dann auf **Fertig stellen**.  
+13. Geben `Forecasting`Sie unter **Mining Modellname den Namen**ein, und klicken Sie dann auf **Fertig**stellen.  
   
-     Data Mining-Designer wird geöffnet und zeigt die `Forecasting` Miningstruktur, die Sie gerade erstellt haben.  
+     Der Data Mining-Designer wird geöffnet `Forecasting` , um die soeben erstellte Mining Struktur anzuzeigen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Ändern der Planungserstellungsstruktur &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Ändern der Planungsstruktur &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   

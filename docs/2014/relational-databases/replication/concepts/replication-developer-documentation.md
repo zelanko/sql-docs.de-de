@@ -1,5 +1,5 @@
 ---
-title: Entwickler&#39;Benutzerhandbuch (Replikation) | Microsoft-Dokumentation
+title: Entwickler&#39;s Guide (Replikation) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721932"
 ---
-# <a name="developer39s-guide-replication"></a>Entwickler&#39;Benutzerhandbuch (Replikation)
+# <a name="developer39s-guide-replication"></a>Entwickler&#39;s Guide (Replikation)
   Durch die Fähigkeit, eine Replikationstopologie programmgesteuert zu konfigurieren, zu warten und zu überwachen, können Sie häufig anfallende Replikationstasks vereinfachen und die Benutzerfreundlichkeit Ihrer replikationsbasierten Anwendungen verbessern. Durch die Programmierung der Replikation können den Endbenutzern benutzerdefinierte Replikationsfunktionen bereitgestellt werden, ohne dass diese mit gespeicherten Replikationsprozeduren und ausführbaren Dateien von Replikations-Agents vertraut sein müssen oder die von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] implementierte Replikationsbenutzeroberfläche verwenden müssen.  
   
  Im Folgenden werden Szenarien vorgestellt, in denen Ihre Anwendungen von einem programmgesteuerten Zugriff auf Replikationsdienste profitieren können:  
@@ -40,13 +40,13 @@ ms.locfileid: "62721932"
  [Konzepte für die Replikationsprogrammierung](replication-programming-concepts.md)  
  Beschreibt die Planungsschritte zur Entwicklung einer Anwendung, die die Replikation verwendet.  
   
- [Replication System Stored Procedures Concepts (Konzepte für gespeicherte Systemprozeduren für die Replikation)](replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)  
  Beschreibt, wie gespeicherte Systemprozeduren verwendet werden können, um programmgesteuerten Zugriff in einer Replikationstopologie bereitzustellen.  
   
- [Konzepte für Replikationsverwaltungsobjekte (RMO)](replication-management-objects-concepts.md)  
+ [Replication Management Objects Concepts](replication-management-objects-concepts.md)  
  Erläutert die Konzepte zum Verwenden von Replikationsverwaltungsobjekten (RMO). Hierbei handelt es sich um eine verwaltete Codeassembly, die Replikationsfunktionen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kapselt.  
   
- [Ausführbare Konzepte für die Programmierung von Replikations-Agents](replication-agent-executables-concepts.md)  
+ [Ausführbare Konzepte für die Programmierung von Replikations-Agent](replication-agent-executables-concepts.md)  
  Beschreibt die Verwendung von ausführbaren Dateien von Replikations-Agents.  
 
   

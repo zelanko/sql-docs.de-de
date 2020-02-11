@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773752"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
@@ -83,7 +83,7 @@ ms.locfileid: "62773752"
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  Registerkarte Data Warehouse – Zeigt Konfigurationsdetails für das UMDW (Utility Management Data Warehouse) an.  
   
- Datenbeibehaltung  
+ Datenaufbewahrung  
  Geben Sie die Beibehaltungsdauer von Auslastungsdaten an, die für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]gesammelt wurden. Der Standardzeitraum beträgt ein Jahr. Der Minimalwert beträgt einen Monat. Der längste unterstützte Wert beträgt zwei Jahre.  
   
  Konfigurationsinformationen für das Hilfsprogramm-Data Warehouse  
@@ -91,9 +91,9 @@ ms.locfileid: "62773752"
   
 -   UMDW-Name: Sysutility_mdw_\<GUID>_DATA.  
   
--   Uploadhäufigkeit des Sammlungssatzes: Alle 15 Minuten.  
+-   Uploadfrequenz für den Sammlungssatz: Alle 15 Minuten  
   
- Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk >: \Programme\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, wobei \<Systemlaufwerk > ist normalerweise C:\ Laufwerk. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
+ Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<Systemlaufwerk> normalerweise Laufwerk C:\ entspricht. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
   
 > [!NOTE]  
 >  Der Speicherort der UMDW-Datei (sysutility_mdw) kann mithilfe von Detach/Attach oder ALTER DATABASE geändert werden. Es wird empfohlen, ALTER DATABASE zu verwenden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -101,8 +101,8 @@ ms.locfileid: "62773752"
  Wiederherstellen vordefinierter Standardwerte  
  Um die Einstellungen auf dieser Registerkarte auf die Standardwerte zurückzusetzen, klicken Sie auf die Schaltfläche **Standardwerte wiederherstellen** und anschließend auf **Anwenden**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dashboard des Hilfsprogramms &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Hilfsprogramm des Utility-Dashboards &#40;&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  

@@ -1,5 +1,5 @@
 ---
-title: Web Service Task-Editor (Seite Allgemein) | Microsoft-Dokumentation
+title: Editor für den Task ' Webdienst ' (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054541"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor für den Task 'Webdienst' (Seite Allgemein)
@@ -26,17 +26,17 @@ ms.locfileid: "66054541"
   
  Weitere Informationen zu diesem Task finden Sie unter [Webdienst (Task)](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Optionen  
- **HTTPConnection**  
- Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+## <a name="options"></a>Tastatur  
+ **Httpconnection**  
+ Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der HTTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
   
- **Verwandte Themen:**  [HTTP-Verbindungs-Manager](connection-manager/http-connection-manager.md), [HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Verwandte Themen:**  [HTTP-Verbindungs-Manager](connection-manager/http-connection-manager.md), [HTTP-Verbindungs-Manager-Editor &#40;Server Seite&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
- **WSDLFile**  
- Geben Sie den vollqualifizierten Pfad der auf dem Computer lokalen WSDL-Datei an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um nach dieser Datei zu suchen.  
+ **Feld WSDLFile angeben**  
+ Geben Sie den vollqualifizierten Pfad der auf dem Computer lokalen WSDL-Datei an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um nach dieser Datei zu suchen.  
   
  Wenn Sie die WSDL-Datei bereits manuell auf den Computer heruntergeladen haben, wählen Sie diese Datei aus. Wenn die WSDL-Datei jedoch noch nicht heruntergeladen wurde, führen Sie folgende Schritte aus:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66054541"
   
 -   Wählen Sie diese leere Datei für die Option **WSDLFile** aus.  
   
--   Legen Sie den Wert der **OverwriteWSDLFile** zu `True` auf die leere Datei mit der tatsächlichen WSDL-Datei überschrieben werden kann.  
+-   Legen Sie den Wert von **overwrite tewsdlfile** auf `True` fest, damit die leere Datei mit der tatsächlichen WSDL-Datei überschrieben werden kann.  
   
 -   Klicken Sie auf **WSDL herunterladen** , um die tatsächliche WSDL-Datei herunterzuladen und die leere Datei zu überschreiben.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66054541"
  **OverwriteWSDLFile**  
  Geben Sie an, ob die WSDL-Datei für den Task Webdienst überschrieben werden kann.  
   
- Wenn Sie, zum Herunterladen der WSDL-Datei beabsichtigen mithilfe der **WSDL herunterladen** Schaltfläche, legen Sie diesen Wert auf `True`.  
+ Wenn Sie die WSDL-Datei mithilfe der Schaltfläche **WSDL herunter** laden herunterladen möchten, legen Sie `True`diesen Wert auf fest.  
   
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task Webdienst an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
@@ -70,10 +70,10 @@ ms.locfileid: "66054541"
   
  Diese Schaltfläche wird erst aktiviert, wenn Sie den Namen einer vorhandenen lokalen Datei im Feld **WSDLFile** angeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task „Webdienst“ &#40;Seite „Eingabe“&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor für den Task „Webdienst“ &#40;Seite „Ausgabe“&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor für den Task ' Webdienst ' &#40;Eingabe Seite&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Editor für den Task ' Webdienst ' &#40;Ausgabe Seite&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   
   

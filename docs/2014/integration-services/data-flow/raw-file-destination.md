@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770856"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -53,7 +53,7 @@ ms.locfileid: "62770856"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für die „WriteOption“-Eigenschaft beschrieben.  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Anfügen|Fügt Daten an eine vorhandene Datei an. Die Metadaten der angefügten Daten müssen mit dem Dateiformat übereinstimmen.|  
 |Immer erstellen|Erstellt immer eine neue Datei.|  
@@ -113,7 +113,7 @@ ms.locfileid: "62770856"
   
 1.  Legen Sie die „WriteOption“-Eigenschaft auf **CreateOnce** oder **CreateAlways**fest, und führen Sie dann eine Iteration der Schleife aus. Die Datei ist erstellt. Dadurch wird sichergestellt, dass die Metadaten der angefügten Daten mit der Datei übereinstimmen.  
   
-2.  Zurücksetzen auf die "WriteOption"-Eigenschaft **Append** und legen Sie die ValidateExternalMetadata-Eigenschaft auf `False`.  
+2.  Setzen Sie die Eigenschaft "Write Option" auf " **Append** " zurück, und legen Sie die Eigenschaft `False`ValidateExternalMetadata auf fest.  
   
  Wenn Sie die Option **TruncateAppend** statt der Option **Append** verwenden, werden die Zeilen abgeschnitten, die in einer vorherigen Iteration hinzugefügt wurden, und dann neue Zeilen angefügt. Das Verwenden der Option **TruncateAppend** erfordert auch, dass die Daten im Dateiformat übereinstimmen.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62770856"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), auf sqlservercentral.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Rohdatendatei-Quelle](raw-file-source.md)   
  [Datenfluss](data-flow.md)  
   

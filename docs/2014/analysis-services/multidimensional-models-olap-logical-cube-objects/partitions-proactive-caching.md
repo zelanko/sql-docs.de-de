@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727274"
 ---
 # <a name="proactive-caching-partitions"></a>Proaktives Zwischenspeichern (Partitionen)
@@ -42,8 +42,8 @@ ms.locfileid: "62727274"
 ### <a name="maximizing-performance"></a>Maximieren der Leistung  
  Wenn Sie die Leistung maximieren und gleichzeitig die Latenzzeit reduzieren möchten, kann die Zwischenspeicherung auch ohne Löschen der aktuellen MOLAP-Objekte verwendet werden. Abfragen werden dann weiterhin für MOLAP-Objekte ausgeführt, während Daten in einen neuen Cache gelesen und dort verarbeitet werden. Diese Methode bietet eine bessere Leistung, kann jedoch dazu führen, dass Abfragen während des Erstellens des neuen Caches alte Daten zurückgeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Speichern von Dimensionen](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [Festlegen des Partitionsspeichers &#40;Analysis Services – Mehrdimensional&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dimensions Speicher](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
+ [Festlegen des Partitions Speichers &#40;Analysis Services-mehrdimensionalen&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

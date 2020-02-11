@@ -1,5 +1,5 @@
 ---
-title: Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren | Microsoft-Dokumentation
+title: Referenz zur Benutzeroberfläche des Dialog Felds "Paket exportieren" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,24 +15,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058910"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
   Verwenden Sie das in **verfügbare Dialogfeld** Paket exportieren [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket an einen anderen Speicherort zu exportieren und optional die Schutzebene zu ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Paketspeicherort**  
- Wählen Sie den Speichertyp aus, in den das Paket exportiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
+ Wählen Sie den Speichertyp aus, in den das Paket exportiert werden soll. Die folgenden Optionen sind verfügbar:  
   
  **SQL Server**  
   
  **Dateisystem**  
   
- **SSIS-Paketspeicher**  
+ **SSIS-Paket Speicher**  
   
  **Server**  
  Geben Sie einen Servernamen ein, oder wählen Sie einen Server aus der Liste aus.  
@@ -53,14 +53,14 @@ ms.locfileid: "66058910"
  Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
   
- **Schutzebene**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ **Schutz Ebene**  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Kopie des Pakets speichern](../../2014/integration-services/save-copy-of-package.md)   
- [Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referenz zur Benutzeroberfläche des Dialog Felds Paket importieren](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Speichern von Paketen](save-packages.md)   
  [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   

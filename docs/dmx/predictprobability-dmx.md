@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893903"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
@@ -33,11 +33,11 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Rückgabetyp  
  Ein Skalarwert.  
   
-## <a name="remarks"></a>Remarks  
- Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket Missing States einschließen möchten, legen Sie den \<vorhergesagten Status > auf **INCLUDE_NULL**fest. Um die Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben, legen Sie den \<vorhergesagten Status > auf NULL fest.  
+## <a name="remarks"></a>Bemerkungen  
+ Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket für fehlende Zustände einschließen möchten \<, legen Sie den vorhergesagten Status> auf **INCLUDE_NULL**fest. Legen Sie den \<vorhergesagten Status> auf NULL fest, um die Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben.  
   
 > [!NOTE]  
->  Einige Miningmodelle stellen keine Wahrscheinlichkeitswerte zur Verfügung und können diese Funktion daher nicht verwenden. Zudem werden Wahrscheinlichkeitswerte für jeden einzelnen Zielwert unterschiedlich berechnet, oder sie können eine in Abhängigkeit von dem abgefragten Modelltyp unterschiedliche Interpretation aufweisen. Weitere Informationen zur Berechnung der Wahrscheinlichkeit für einen bestimmten Modelltyp finden Sie im Thema zu einzelnen Algorithmen unter [Mining Modell Inhalt &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Einige Miningmodelle stellen keine Wahrscheinlichkeitswerte zur Verfügung und können diese Funktion daher nicht verwenden. Zudem werden Wahrscheinlichkeitswerte für jeden einzelnen Zielwert unterschiedlich berechnet, oder sie können eine in Abhängigkeit von dem abgefragten Modelltyp unterschiedliche Interpretation aufweisen. Weitere Informationen zur Berechnung der Wahrscheinlichkeit für einen bestimmten Modelltyp finden Sie im Thema einzelner Algorithmus im Thema [Mining Modell Inhalt &#40;Analysis Services-Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine natürliche PREDICTION JOIN-Anweisung verwendet, um basierend auf dem TM Decision Tree-Miningmodell zu bestimmen, ob es wahrscheinlich ist, dass eine Person ein Fahrrad kaufen wird. Außerdem wird die Wahrscheinlichkeit für die Vorhersage bestimmt. Dieses Beispiel enthält zwei PredictProbability-Funktionen, eine für jeden möglichen Wert. Wenn Sie dieses Argument auslassen, gibt die Funktion die Wahrscheinlichkeit für den wahrscheinlichsten Wert zurück.  
@@ -62,9 +62,9 @@ NATURAL PREDICTION JOIN
 |----------------|-----------------------|----------------------|  
 |1|0.867074195848097|0.132755556974282|  
   
-## <a name="see-also"></a>Siehe auch  
- [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX &#40;&#41; -Funktionen](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
