@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 70e99073f07e7e285d1fcbfad51cf9a275dd9441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896151"
 ---
 # <a name="implementing-external-metadata"></a>Implementieren externer Metadaten
@@ -77,7 +77,7 @@ End Sub
 ### <a name="connected-validation"></a>Verbundene Überprüfung  
  Besteht eine Verbindung einer Komponente mit einer externen Datenquelle, werden die Spalten in den Eingabe- oder Ausgabeauflistungen direkt anhand der externen Datenquelle überprüft. Darüber hinaus müssen die Spalten in der externen Metadatensammlung überprüft werden. Dies ist erforderlich, da die externe Metadatensammlung unter **Erweiterter Editor** in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verändert werden kann, und Änderungen, die an der Sammlung vorgenommen werden, nicht erkennbar sind. Daher müssen die Komponenten, wenn eine Verbindung besteht, sicherstellen, dass die Spalten in der externen Metadatensammlung weiterhin den Spalten der externen Datenquelle entsprechen.  
   
- Sie können auch die externe Metadatensammlung Ausblenden der **Erweiterter Editor** durch Festlegen der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> -Eigenschaft der Auflistung zu `false`. Dadurch wird jedoch auch die Registerkarte **Spaltenzuordnung** des Editors ausgeblendet, über die Benutzer Spalten der Eingabe- und Ausgabeauflistungen den Spalten in der externen Metadatenspaltenauflistung zuordnen können. Ein Festlegen dieser Eigenschaft auf den Wert `false` verhindert nicht, dass Entwickler die Auflistung programmgesteuert verändern, bietet jedoch Schutz für die externe Metadatenspaltenauflistung einer Komponente, die ausschließlich in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwendet wird.  
+ Sie können die externe Metadatenauflistung im **Erweiterter Editor** ausblenden, indem Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> -Eigenschaft der-Auflistung auf `false`festlegen. Dadurch wird jedoch auch die Registerkarte **Spaltenzuordnung** des Editors ausgeblendet, über die Benutzer Spalten der Eingabe- und Ausgabeauflistungen den Spalten in der externen Metadatenspaltenauflistung zuordnen können. Ein Festlegen dieser Eigenschaft auf den Wert `false` verhindert nicht, dass Entwickler die Auflistung programmgesteuert verändern, bietet jedoch Schutz für die externe Metadatenspaltenauflistung einer Komponente, die ausschließlich in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwendet wird.  
   
 ### <a name="disconnected-validation"></a>Getrennte Überprüfung  
  Ist die Verbindung einer Komponente mit einer externen Datenquelle getrennt, ist die Überprüfung einfacher, da die Spalten in der Eingabe- oder Ausgabeauflistung direkt anhand der Spalten der externen Metadatensammlung und nicht anhand der externen Datenquelle überprüft werden. Eine Komponente sollte eine getrennte Überprüfung ausführen, wenn keine Verbindung mit der externen Datenquelle besteht oder die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft den Wert `false` aufweist.  
@@ -108,9 +108,9 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../../data-flow/data-flow.md)  
   
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873492"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "62873492"
   
 2.  Klicken Sie mit der rechten Maustaste auf einen Sammlungssatz, der den Modus mit Zwischenspeicherung verwendet, beispielsweise **Abfragestatistik**, und klicken Sie dann auf **Eigenschaften** , um das Dialogfeld [Eigenschaften für Datensammlungssätze](#CollectionSet) zu öffnen.  
   
-3.  Sie können die Sammelhäufigkeit auf der Seite **Allgemein** ändern. Führen Sie hierzu folgende Schritte aus:  
+3.  Sie können die Sammelhäufigkeit auf der Seite **Allgemein** ändern. Gehen Sie dazu folgendermaßen vor:  
   
     1.  Doppelklicken Sie im Detailbereich auf die Zahl, die in der Tabelle **Sammelelemente** für die Spalte **Sammelhäufigkeit (Sek)** angezeigt wird.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62873492"
   
 |||  
 |-|-|  
-|**Nicht zwischengespeichert. Für Datensammlung und -upload wird derselbe Zeitplan verwendet.**|Wenn diese Option aktiviert ist, geben Sie einen der folgenden Werte an:<br /><br /> **Bedarfsgesteuert**. Daten werden nach Bedarf aufgelistet und hochgeladen.<br /><br /> **Zeitplan** Daten werden nach einem Zeitplan aufgelistet und hochgeladen. Klicken Sie auf **Auswählen** , um einen vordefinierten Zeitplan aus der Liste auszuwählen, oder klicken Sie auf **Neu** , um einen neuen Zeitplan zu erstellen.|  
+|**Nicht zwischengespeichert. Für Datensammlung und -upload wird derselbe Zeitplan verwendet.**|Wenn diese Option aktiviert ist, geben Sie einen der folgenden Werte an:<br /><br /> **Bedarfs**gesteuert. Daten werden nach Bedarf aufgelistet und hochgeladen.<br /><br /> **Zeitplan**. Daten werden nach einem Zeitplan aufgelistet und hochgeladen. Klicken Sie auf **Auswählen** , um einen vordefinierten Zeitplan aus der Liste auszuwählen, oder klicken Sie auf **Neu** , um einen neuen Zeitplan zu erstellen.|  
 |**Zwischengespeichert. Sammeln und Zwischenspeichern von Daten gemäß bestimmten Sammlungshäufigkeiten. Zwischengespeicherte Daten werden gemäß einem separaten Zeitplan hochgeladen.**|Daten werden gemäß bestimmten Sammlungshäufigkeiten aufgelistet und zwischengespeichert. Die aufgelisteten Daten werden gemäß einem separaten Zeitplan hochgeladen.|  
   
  **Sammelhäufigkeit (Sek)**  
@@ -161,7 +161,7 @@ ms.locfileid: "62873492"
   
  Auf dieser Seite können Sie eine Beschreibung des Sammlungssatzes anzeigen, auf den diese Eigenschaftenseite verweist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Datensammlungen](manage-data-collection.md)   
  [Datensammlung](data-collection.md)  
   

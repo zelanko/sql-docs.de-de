@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895509"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulieren einer Fehlerausgabe für die Skriptkomponente
@@ -46,7 +46,7 @@ ms.locfileid: "62895509"
   
 7.  Wählen Sie auf der Seite **Eingabespalten** die Spalten aus, die Sie in der Skripttransformation verarbeiten möchten. In diesem Beispiel wird nur die CountryRegionName-Spalte verwendet. Verfügbare Eingabespalten, die Sie nicht auswählen, werden einfach unverändert im Datenfluss durchlaufen.  
   
-8.  Auf der **Eingaben und Ausgaben** Seite, fügen Sie eine neue, zweite Ausgabe und legen Sie dessen `SynchronousInputID` Wert, der die ID der Eingabe fest, die auch der Wert ist von der `SynchronousInputID` -Eigenschaft der Standardausgabe. Legen Sie die `ExclusionGroup`-Eigenschaft beider Ausgaben auf denselben Wert ungleich Null (z. B. 1) fest, um anzugeben, dass jede Zeile nur an eine der beiden Ausgaben weitergeleitet wird. Geben Sie der neuen Fehlerausgabe einen aussagekräftigen Namen, z. B. "MeineFehlerausgabe".  
+8.  Fügen Sie auf der Seite **Eingaben und Ausgaben** eine neue, zweite Ausgabe hinzu, und legen `SynchronousInputID` Sie Ihren Wert auf die ID der Eingabe fest, die auch der Wert der `SynchronousInputID` -Eigenschaft der Standardausgabe ist. Legen Sie die `ExclusionGroup`-Eigenschaft beider Ausgaben auf denselben Wert ungleich Null (z. B. 1) fest, um anzugeben, dass jede Zeile nur an eine der beiden Ausgaben weitergeleitet wird. Geben Sie der neuen Fehlerausgabe einen aussagekräftigen Namen, z. B. "MeineFehlerausgabe".  
   
 9. Fügen Sie der neuen Fehlerausgabe zusätzliche Ausgabespalten hinzu, um die gewünschten Fehlerinformationen aufzuzeichnen, zu denen zum Beispiel der Fehlercode, die ID der Spalte mit dem Fehler und möglicherweise die Fehlerbeschreibung zählen können. In diesem Beispiel werden die neuen Spalten, ErrorColumn und ErrorMessage, erstellt. Wenn Sie vordefinierte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehler in Ihren eigenen Implementierungen erkennen, stellen Sie sicher, dass Sie eine ErrorCode-Spalte für die Fehlernummer hinzufügen.  
   
@@ -99,11 +99,11 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehlerbehandlung in Daten](../data-flow/error-handling-in-data.md)   
- [Verwenden von Fehlerausgaben in einer Datenflusskomponente](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
+ [Verwenden von Fehler Ausgaben in einer Datenfluss Komponente](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Erstellen einer synchronen Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 
   
   

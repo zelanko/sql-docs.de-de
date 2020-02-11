@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27ec5fcac246c9907d38d8e0eff4e82befb0a04e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771306"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Verwalten eines lokalen CDC Service
@@ -56,7 +56,7 @@ ms.locfileid: "62771306"
   
          Sie können auch mit der rechten Maustaste auf den CDC-Dienst klicken, für den Sie die Eigenschaften bearbeiten möchten, und dann **Eigenschaften**wählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Manage an Oracle CDC Service](manage-an-oracle-cdc-service.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwalten eines Oracle CDC Service](manage-an-oracle-cdc-service.md)  
   
   

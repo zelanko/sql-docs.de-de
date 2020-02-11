@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066258"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63066258"
   
 ## <a name="any-pane"></a>Alle Bereiche  
   
-|**Aktion**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Drücken Sie**|**Sie**|  
 |------------|---------------|---------------|  
 |Wechseln zwischen den Bereichen des Abfrage- und Sicht-Designers|F6, UMSCHALT+F6|Klicken Sie auf eine beliebige Stelle im Zielbereich.|  
   
@@ -36,13 +36,13 @@ ms.locfileid: "63066258"
   
 ## <a name="diagram-pane"></a>Diagrammbereich  
   
-|**Aktion**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Drücken Sie**|**Sie**|  
 |------------|---------------|---------------|  
 |Wechseln zwischen Tabellen, anderen tabellenähnlich strukturierten Objekten und zu Joinlinien, sofern verfügbar|TAB oder UMSCHALT+TAB|Klicken Sie auf die Tabelle, das tabellenähnlich strukturierte Objekt oder die Joinlinie, um zu diesem Element zu wechseln.|  
 |Wechseln zwischen den Spalten in einer Tabelle oder einem tabellenähnlich strukturierten Objekt|Pfeiltasten|Klicken Sie auf die Spalte, zu der Sie wechseln möchten.|  
 |Auswählen der Datenspalte für die Ausgabe|LEERTASTE oder PLUS|Klicken Sie auf das Kontrollkästchen neben Spaltennamen.|  
 |Entfernen der ausgewählten Datenspalte aus der Abfrageausgabe|LEERTASTE oder MINUS|Klicken Sie auf das Kontrollkästchen neben Spaltennamen.|  
-|Entfernen der ausgewählten Tabelle, des tabellenähnlich strukturierten Objekts oder der Joinlinie aus der Abfrage|DELETE|Klicken mit der rechten Maustaste, und wählen Sie **Entfernen**aus.|  
+|Entfernen der ausgewählten Tabelle, des tabellenähnlich strukturierten Objekts oder der Joinlinie aus der Abfrage|Delete|Klicken mit der rechten Maustaste, und wählen Sie **Entfernen**aus.|  
   
 > [!NOTE]  
 >  Wenn mehrere Elemente markiert sind, wirkt sich das Drücken dieser Taste auf alle ausgewählten Elemente aus. Sie können mehrere Elemente markieren, indem Sie beim Klicken STRG gedrückt halten.  
@@ -51,7 +51,7 @@ ms.locfileid: "63066258"
   
 ## <a name="criteria-pane"></a>Kriterienbereich  
   
-|Aktion|Tastenkombination|Mausaktion|  
+|To|Drücken Sie|Klicken Sie auf |  
 |--------|-----------|-----------|  
 |Wechseln zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
 |Wechseln in die letzte Zeile der aktuellen Spalte|STRG+NACH-UNTEN||  
@@ -59,15 +59,15 @@ ms.locfileid: "63066258"
 |Wechseln zur obersten linken Zelle im angezeigten Bereich des Datenblatts|STRG+POS1||  
 |Wechseln zur obersten rechten Zelle|STRG+ENDE||  
 |Wechseln in eine Dropdownliste|NACH-OBEN oder NACH-UNTEN|Klicken Sie auf die Schaltfläche in der Zelle.|  
-|Markieren einer gesamten Spalte eines Datenblatts|STRG+LEERTASTE|Klicken Sie auf den Spaltenkopf.|  
+|Markieren einer gesamten Spalte eines Datenblatts|STRG+LEERTASTE|Die Spaltenüberschrift.|  
 |Wechseln zwischen dem Bearbeitungsmodus und dem Modus für die Zellenauswahl|F2||  
-|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+C||  
+|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG + C||  
 |Ausschneiden des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+X||  
 |Einfügen von Text aus der Zwischenablage (im Bearbeitungsmodus)|STRG+V||  
 |Wechseln zwischen dem Einfüge- und dem Überschreibmodus beim Bearbeiten in einer Zelle|EINFG||  
 |Aktivieren bzw. Deaktivieren des Kontrollkästchens in der Ausgabespalte|LEERTASTE|Klicken Sie auf das Kontrollkästchen.|  
-|Löschen des markierten Inhalts einer Zelle|DELETE||  
-|Löschen aller Werte einer markierten Spalte eines Datenblatts|DELETE||  
+|Löschen des markierten Inhalts einer Zelle|Delete||  
+|Löschen aller Werte einer markierten Spalte eines Datenblatts|Delete||  
 |Einfügen einer Zeile zwischen vorhandenen Zeilen|EINFG, nach dem Markieren der Zeile des Datenblatts||  
 |Hinzufügen der Spalte „Oder...“|EINFG, nach dem Markieren einer Spalte „Oder...“||  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63066258"
   
 ## <a name="results-pane"></a>Ergebnisbereich  
   
-|**Aktion**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Drücken Sie**|**Sie**|  
 |------------|---------------|---------------|  
 |Bewegen zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
 |Wechseln zur ersten oder letzten Zelle in der aktuellen Zeile|POS1 oder ENDE||  
@@ -97,12 +97,12 @@ ms.locfileid: "63066258"
 |Markieren bis zum letzten Zeichen in einer Zelle|UMSCHALT+ENDE||  
 |Wechseln zwischen dem Bearbeitungsmodus und dem Modus für die Zellenauswahl|F2||  
 |Wechseln zwischen dem Einfüge- und dem Überschreibmodus beim Bearbeiten in einer Zelle|EINFG||  
-|Löschen einer Zeile aus der Tabelle|DELETE||  
+|Löschen einer Zeile aus der Tabelle|Delete||  
 |Rückgängig machen von Änderungen an der aktuellen Zelle|ESC in der geänderten Zelle||  
 |Rückgängig machen von Änderungen an der aktuellen Zeile|ESC in einer nicht geänderten Zelle||  
 |Eingeben von Null in eine Zelle|STRG+0||  
-|Kopieren von markierten Spalten oder Zeilen in die Zwischenablage|STRG+C||  
-|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+C||  
+|Kopieren von markierten Spalten oder Zeilen in die Zwischenablage|STRG + C||  
+|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG + C||  
 |Ausschneiden des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+X||  
 |Einfügen von Text aus der Zwischenablage (im Bearbeitungsmodus)|STRG+V||  
   
@@ -111,7 +111,7 @@ ms.locfileid: "63066258"
   
  Weitere Informationen finden Sie unter [Ergebnisbereich &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

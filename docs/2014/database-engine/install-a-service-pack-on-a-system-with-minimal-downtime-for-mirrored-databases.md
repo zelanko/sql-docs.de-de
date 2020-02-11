@@ -1,5 +1,5 @@
 ---
-title: Installieren Sie ein Servicepack auf einem System mit minimaler Ausfallzeit von gespiegelten Datenbanken | Microsoft-Dokumentation
+title: Installieren eines Service Packs auf einem System mit minimalen Ausfallzeiten für gespiegelte Datenbanken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779594"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installieren eines Service Packs auf einem System mit minimaler Downtime der gespiegelten Datenbanken
-  In diesem Thema wird beschrieben, wie beim Installieren von Service Packs und Hotfixes die Ausfallzeit von gespiegelten Datenbanken minimiert werden kann. Dieser Prozess umfasst ein sequenzielles Upgrade der Instanzen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], die von der Datenbankspiegelung betroffen sind. Diese Form des Updates, die so genannte eine *paralleles Update*, reduziert Ausfallzeiten auf ein einziges Failover. Beachten Sie, dass für den Modus für hohe Leistung-Sitzungen, in denen der Spiegelserver vom Prinzipalserver geografisch entfernt ist, ein paralleles Update möglicherweise nicht geeignet.  
+  In diesem Thema wird beschrieben, wie beim Installieren von Service Packs und Hotfixes die Ausfallzeit von gespiegelten Datenbanken minimiert werden kann. Dieser Prozess umfasst ein sequenzielles Upgrade der Instanzen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], die von der Datenbankspiegelung betroffen sind. Diese Art von Update, das als paralleles *Update*bezeichnet wird, reduziert Ausfallzeiten auf nur ein einzelnes Failover. Unter Umständen ist das parallele Update nicht für Sitzungen im hochleistungsfähigen Modus geeignet, bei denen sich der Spiegelserver und der Prinzipalserver an unterschiedlichen geografischen Orten befinden.  
   
  Ein paralleles Update ist ein mehrstufiger Prozess, der aus den folgenden Phasen besteht:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62779594"
   
      **So sichern Sie eine Datenbank**  
   
-    -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+    -   [Erstellen Sie eine vollständige Datenbanksicherung &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  Führen Sie den [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)-Befehl für jede Prinzipaldatenbank aus.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "62779594"
   
 1.  Ändern Sie den Betriebsmodus vor der Ausführung eines parallelen Updates in den Modus für hohe Sicherheit ohne automatisches Failover, wenn sich eine Spiegelungssitzung im Modus für hohe Leistung befindet. Verwenden Sie eine der folgenden Methoden:  
   
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Ändern der **Betriebsmodus** option **hohe Sicherheit ohne automatisches Failover (synchron)** mithilfe der [Seite wird gespiegelt](../relational-databases/databases/database-properties-mirroring-page.md) von der **Datenbank Eigenschaften** Dialogfeld. Informationen über den Zugriff auf diese Seite finden Sie unter [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Ändern Sie im Dialogfeld **Datenbankeigenschaften** auf der Seite **Spiegelung** die Option [Betriebsmodus](../relational-databases/databases/database-properties-mirroring-page.md) in **Hohe Sicherheit ohne automatisches Failover (synchron)** . Informationen über den Zugriff auf diese Seite finden Sie unter [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Die transaktionssicherheit auf FULL festgelegt. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Legen Sie die Transaktionssicherheit auf FULL fest. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>So führen Sie das parallele Update aus  
   
-1.  Um Ausfallzeiten zu minimieren, empfehlen wir Folgendes: Starten Sie das parallele Update durch das Aktualisieren aller spiegelungspartner, die derzeit als Spiegelserver in allen spiegelungssitzungen fungiert. Möglicherweise müssen an dieser Stelle mehrere Serverinstanzen aktualisiert werden.  
+1.  Zur Minimierung der Downtime wird Folgendes empfohlen: Starten Sie das parallele Update mit dem Aktualisieren aller Spiegelungspartner, die aktuell als Spiegelserver in allen Spiegelungssitzungen fungieren. Möglicherweise müssen an dieser Stelle mehrere Serverinstanzen aktualisiert werden.  
   
     > [!NOTE]  
     >  Ein Zeuge kann jederzeit während der Ausführung des parallelen Updates aktualisiert werden. Wenn beispielsweise eine Serverinstanz in Sitzung 1 als Spiegelserver und in Sitzung 2 als Zeuge fungiert, können Sie die Serverinstanz nun aktualisieren.  
@@ -89,7 +89,7 @@ ms.locfileid: "62779594"
   
     -   Wenn bereits eine Serverinstanz als Spiegelserver in allen Spiegelungssitzungen fungiert, installieren Sie das Service Pack bzw. den Hotfix auf dieser Serverinstanz.  
   
-    -   Wenn alle Serverinstanzen aktuell als Prinzipalserver fungiert in allen spiegelungssitzungen sind, wählen Sie eine Serverinstanz zuerst aktualisiert. Führen Sie dann ein manuelles Failover für alle Prinzipaldatenbanken aus, und aktualisieren Sie die Serverinstanz, indem Sie das Service Pack bzw. das Hotfix installieren.  
+    -   Wenn alle Server Instanzen aktuell als Prinzipal Server in allen Spiegelungs Sitzungen fungieren, wählen Sie eine Serverinstanz aus, die zuerst aktualisiert werden soll. Führen Sie dann ein manuelles Failover für alle Prinzipaldatenbanken aus, und aktualisieren Sie die Serverinstanz, indem Sie das Service Pack bzw. das Hotfix installieren.  
   
      Nach dem Update nimmt eine Serverinstanz automatisch wieder an den zugehörigen Spiegelungssitzungen teil.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "62779594"
   
     -   [Manueller Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Manuelles Failover für eine Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   [Manuelles Failover für eine Datenbank-Spiegelungs Sitzung &#40;Transact-SQL-&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
      Informationen zum Verwalten des potenziellen Datenverlusts finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-2.  Warten Sie bei jeder Spiegelungssitzung, deren Spiegelserverinstanz gerade aktualisiert wurde, die Synchronisierung der Sitzung ab. Stellen Sie dann eine Verbindung mit der Prinzipalserverinstanz her, und führen Sie manuell ein Failover zur Sitzung aus. Bei einem Failover die aktualisierte Serverinstanz wird zum Prinzipalserver für die jeweilige Sitzung, und der frühere Prinzipalserver wird zum Spiegelserver.  
+2.  Warten Sie bei jeder Spiegelungssitzung, deren Spiegelserverinstanz gerade aktualisiert wurde, die Synchronisierung der Sitzung ab. Stellen Sie dann eine Verbindung mit der Prinzipalserverinstanz her, und führen Sie manuell ein Failover zur Sitzung aus. Bei einem Failover wird die aktualisierte Serverinstanz zum Prinzipal Server dieser Sitzung, und der frühere Prinzipal Server wird zum Spiegel Server.  
   
      Ziel dieses Schritts ist es, dass eine andere Serverinstanz zum Spiegelserver in jeder Spiegelungssitzung wird, an der sie als Partner beteiligt ist.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62779594"
 4.  Installieren Sie das Service Pack bzw. den Hotfix auf allen Serverinstanzen, die nun als Spiegelserver in allen Spiegelungssitzungen fungieren, an denen sie als Partner beteiligt sind. Möglicherweise müssen an dieser Stelle mehrere Server aktualisiert werden.  
   
     > [!IMPORTANT]  
-    >  Es ist möglich, dass in einer komplexen Spiegelungskonfiguration manche Serverinstanz nach wie vor der ursprüngliche Prinzipalserver in mindestens einer Spiegelungssitzung ist. Wiederholen Sie die Schritte 2 bis 4 für diese Serverinstanzen, bis alle Beteiligten Instanzen aktualisiert werden.  
+    >  Es ist möglich, dass in einer komplexen Spiegelungskonfiguration manche Serverinstanz nach wie vor der ursprüngliche Prinzipalserver in mindestens einer Spiegelungssitzung ist. Wiederholen Sie die Schritte 2-4 für diese Server Instanzen, bis alle beteiligten Instanzen aktualisiert wurden.  
   
 5.  Setzen Sie die Spiegelungssitzung fort.  
   
@@ -123,24 +123,24 @@ ms.locfileid: "62779594"
   
 1.  Sie haben die folgenden Möglichkeiten, um den Modus einer Sitzung wieder in den Modus für hohe Leistung zu ändern:  
   
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Ändern der **Betriebsmodus** option **hohe Leistung (asynchron)** mithilfe der [Seite wird gespiegelt](../relational-databases/databases/database-properties-mirroring-page.md) von der **Datenbankeigenschaften**Dialogfeld.  
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Ändern Sie im Dialogfeld **Datenbankeigenschaften** auf der Seite **Spiegelung** die Option [Betriebsmodus](../relational-databases/databases/database-properties-mirroring-page.md) in **Hohe Leistung (asynchron)** .  
   
-    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Verwendung [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) die transaktionssicherheit auf OFF eingestellt.  
+    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Verwenden Sie [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) , um die Transaktionssicherheit auf OFF festzulegen.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>So fügen Sie einen Zeugen wieder einer Spiegelungssitzung hinzu  
   
 1.  Im Modus für hohe Sicherheit können Sie den Zeugen in jeder Spiegelungssitzung wiederherstellen.  
   
-     **Um den Zeugen wiederherzustellen.**  
+     **So stellen Sie den Zeugen wieder her**  
   
     -   [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [Hinzufügen eines Datenbankspiegelungs-Zeugen mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE-Datenbankspiegelung &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
  [Betriebsmodi der Datenbankspiegelung](database-mirroring/database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   

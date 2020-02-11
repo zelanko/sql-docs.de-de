@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Hinzufügen von Fehlerflussumleitungen | Microsoft-Dokumentation'
+title: 'Lektion 4: Hinzufügen der Fehler Fluss Umleitung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891328"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Lektion 4: Hinzufügen der Fehlerflussumleitung
-  Um mögliche Fehler im Transformationsprozess zu behandeln, können Sie mithilfe von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auf der Grundlage von Komponenten oder Spalten entscheiden, wie Daten zu handhaben sind, die nicht transformiert werden können. Sie können einen Fehler in bestimmten Spalten ignorieren, die gesamte fehlgeschlagene Zeile umleiten, oder die gesamte Komponente als fehlerhaft behandeln. Standardmäßig sind alle Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] so konfiguriert, dass sie bei Fehlern fehlschlagen. Das Behandeln einer Komponente als fehlerhaft verursacht wiederum die Behandlung des Pakets als fehlerhaft, und die gesamte nachfolgende Verarbeitung wird beendet.  
+  Um Fehler zu behandeln, die im Transformationsprozess auftreten können [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , bietet Ihnen die Möglichkeit, für einzelne Komponenten und pro Spalte zu entscheiden, wie Daten behandelt werden, die nicht transformiert werden können. Sie können einen Fehler in bestimmten Spalten ignorieren, die gesamte fehlgeschlagene Zeile umleiten, oder die gesamte Komponente als fehlerhaft behandeln. Standardmäßig sind alle Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] so konfiguriert, dass sie bei Fehlern fehlschlagen. Das Behandeln einer Komponente als fehlerhaft verursacht wiederum die Behandlung des Pakets als fehlerhaft, und die gesamte nachfolgende Verarbeitung wird beendet.  
   
  Anstatt das Beenden durch Fehler der Paketausführung zuzulassen, ist es eine bewährte Vorgehensweise, potenzielle Verarbeitungsfehler zu konfigurieren und zu handhaben, wenn sie innerhalb der Transformation auftreten. Während das Ignorieren von Fehlern möglich ist, um die erfolgreiche Ausführung Ihrer Pakete sicherzustellen, ist es oft besser, die fehlgeschlagene Zeile zu einem anderen Verarbeitungspfad umzuleiten, wo die Daten und Fehler bestehen bleiben sowie zu einem späteren Zeitpunkt untersucht und erneut verarbeitet werden können.  
   
- In dieser Lektion erstellen Sie eine Kopie des Pakets, das Sie in entwickelt haben [Lektion 3: Hinzufügen der Protokollierung](lesson-3-add-logging-with-ssis.md). Beim Arbeiten mit diesem neuen Paket werden Sie eine beschädigte Version einer der Beispieldatendateien erstellen. Durch die beschädigte Datei wird beim Ausführen des Pakets ein Verarbeitungsfehler erzwungen.  
+ In dieser Lektion erstellen Sie eine Kopie des Pakets, das Sie in [Lesson 3: Adding Logging](lesson-3-add-logging-with-ssis.md)entwickelt haben. Beim Arbeiten mit diesem neuen Paket werden Sie eine beschädigte Version einer der Beispieldatendateien erstellen. Durch die beschädigte Datei wird beim Ausführen des Pakets ein Verarbeitungsfehler erzwungen.  
   
  Zur Behandlung von Fehlerdaten fügen Sie ein Flatfileziel hinzu, und konfigurieren Sie es. Das Flatfileziel schreibt alle Zeilen, die keinen Suchwert in der Lookup Currency Key-Transformation finden, in eine Datei.  
   

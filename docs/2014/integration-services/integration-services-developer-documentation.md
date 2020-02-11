@@ -1,5 +1,5 @@
 ---
-title: Entwickler&#39;Benutzerhandbuch (Integrationsservices) | Microsoft-Dokumentation
+title: Entwickler&#39;s Guide (Integration Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892411"
 ---
-# <a name="developer39s-guide-integration-services"></a>Entwickler&#39;Benutzerhandbuch (Integrationsservices)
+# <a name="developer39s-guide-integration-services"></a>Entwickler&#39;s Guide (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst ein völlig neu konzipiertes Objektmodell mit vielen verbesserten Funktionen, um das Erweitern und Programmieren von Paketen einfacher, flexibler und leistungsstärker zu gestalten. Entwickler haben die Möglichkeit, fast jeden Aspekt von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paketen zu erweitern und zu programmieren.  
   
  Als [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Entwickler gibt es zwei grundlegende Ansätze, die Sie bei der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Programmierung verfolgen können:  
@@ -72,7 +72,7 @@ ms.locfileid: "62892411"
  [Programmgesteuerte Ausführung und Verwaltung von Paketen](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Beschreibt, wie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete programmgesteuert aufgezählt, ausgeführt und verwaltet werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  [Fehler- und Meldungsreferenz von Integration Services](integration-services-error-and-message-reference.md)  
  Listet die vordefinierten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlercodes sowie ihre symbolischen Namen und Beschreibungen auf.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62892411"
   
 -   CodePlex-Beispiele, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services](sql-server-integration-services.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786603"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Konfigurieren von Datenbank-Engine-Instanzen (SQL Server)
@@ -31,11 +31,11 @@ ms.locfileid: "62786603"
 |----------------------|-----------|  
 |Beschreibt die verschiedenen Optionen zur Instanzkonfiguration und das Anzeigen oder Ändern dieser Optionen.|[Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)|  
 |Beschreibt, wie Sie die Standardspeicherorte von neuen Daten- und Protokolldateien in der Instanz anzeigen und konfigurieren.|[Anzeigen oder Ändern der Standardspeicherorte für Daten- und Protokolldateien &#40;SQL Server Management Studio&#41;](view-or-change-the-default-locations-for-data-and-log-files.md)|  
-|Beschreibt, wie Sie SQL Server für die Verwendung von Soft-NUMA konfigurieren.|[Konfigurieren von SQLServer zur Verwendung von Soft-NUMA &#40;SQLServer&#41;](soft-numa-sql-server.md)|  
+|Beschreibt, wie Sie SQL Server für die Verwendung von Soft-NUMA konfigurieren.|[Konfigurieren Sie SQL Server für die Verwendung von Soft-NUMA-&#40;SQL Server&#41;](soft-numa-sql-server.md)|  
 |Beschreibt, wie ein TCP/IP-Port einer Affinität von TCP/IP-Ports zu NUMA-Knoten (Non-Uniform Memory Access) zugeordnet wird.|[Zuordnen von TCP/IP-Ports zu NUMA-Knoten &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)|  
 |Beschreibt, wie Sie die Windows-Richtlinie Lock Pages In Memory aktivieren. Mit dieser Richtlinie werden die Konten bestimmt, die einen Prozess zum Speichern von Daten im physischen Speicher verwenden können, um das systemgesteuerte Auslagern der Daten in den virtuellen Arbeitsspeicher zu vermeiden.|[Aktivieren der Option Sperren von Seiten im Speicher &#40;Windows&#41;](enable-the-lock-pages-in-memory-option-windows.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine-Instanzen &#40;SQL Server&#41;](database-engine-instances-sql-server.md)  
   
   

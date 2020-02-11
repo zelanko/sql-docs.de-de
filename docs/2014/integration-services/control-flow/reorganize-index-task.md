@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4869120627fd867fa3bd0573381477fc31a97f5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830571"
 ---
 # <a name="reorganize-index-task"></a>Index neu organisieren (Task)
@@ -43,7 +43,7 @@ ms.locfileid: "62830571"
 ## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Anzeigen dieser Eigenschaften im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   

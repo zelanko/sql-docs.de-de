@@ -1,5 +1,5 @@
 ---
-title: 'Verbindung (Visual C++-Syntaxindex mit #import) | Microsoft-Dokumentation'
+title: 'Verbindung (Visual C++ Syntax Index mit #Import) | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933519"
 ---
-# <a name="connection-visual-c-syntax-index-with-import"></a>Verbindung (Visual C++-Syntaxindex mit #import)
+# <a name="connection-visual-c-syntax-index-with-import"></a>Verbindung (Visual C++ Syntax Index mit #Import)
 ## <a name="methods"></a>Methoden  
   
 ```  
@@ -87,5 +87,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

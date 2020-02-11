@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771026"
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
@@ -31,14 +31,14 @@ ms.locfileid: "62771026"
   
 -   **Batch**: In diesem Modus versucht das ODBC-Ziel, basierend auf den erkannten Funktionen des ODBC-Anbieters die effizienteste Einfügemethode zu verwenden. Für die meisten modernen ODBC-Anbieter umfasst dies das Vorbereiten einer INSERT-Anweisung mit Parametern und das anschließende Verwenden einer Arrayparameterbindung pro Zeile (wobei die Arraygröße über die **BatchSize** -Eigenschaft gesteuert wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
   
--   **Zeile für Zeile**: In diesem Modus bereitet das ODBC-Ziel eine INSERT-Anweisung mit Parametern vor und verwendet **SQL Execute**, um Zeilen einzeln einzufügen.  
+-   **Zeile für Zeile**: In diesem Modus bereitet das ODBC-Ziel eine INSERT-Anweisung mit Parametern vor und verwendet **SQL Execute** , um Zeilen einzeln einzufügen.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Das ODBC-Ziel verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Der Wert, der dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Quelldatenbank. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
+-   **Fehlercode**: Ruft die Zahl ab, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Quelldatenbank. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
 -   Die Spalten mit den Standardausgabedaten.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "62771026"
   
 -   [Laden von Daten mithilfe des ODBC-Ziels](odbc-destination.md)  
   
--   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
+-   [Benutzerdefinierte Eigenschaften von ODBC-Zielen](odbc-destination-custom-properties.md)  
   
   

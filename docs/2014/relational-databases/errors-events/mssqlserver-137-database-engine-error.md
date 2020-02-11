@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915687"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
 ## <a name="details"></a>Details  
   
@@ -33,13 +33,13 @@ ms.locfileid: "62915687"
 |Meldungstext|Die "%.*ls"-Skalarvariable muss deklariert werden.|  
   
 ## <a name="explanation"></a>Erklärung  
- Dieser Fehler tritt auf, wenn in einem SQL-Skript eine Variable verwendet wird, ohne dass die Variable zuerst deklariert wurde. Im folgenden Beispiel wird beispielsweise Fehler 137 für die SET- und die SELECT-Anweisung zurückgegeben, weil **@mycol** nicht deklariert wurde.  
+ Dieser Fehler tritt auf, wenn in einem SQL-Skript eine Variable verwendet wird, ohne dass die Variable zuerst deklariert wurde. Im folgenden Beispiel wird der Fehler 137 für die Set-und die SELECT **@mycol** -Anweisung zurückgegeben, da nicht deklariert ist.  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- Eine der etwas komplizierteren Ursachen für diesen Fehler ist u. a. die Verwendung einer Variablen, die außerhalb der EXECUTE-Anweisung deklariert wurde. Angenommen, die in der SELECT-Anweisung angegebene Variable **@mycol** ist für die SELECT-Anweisung lokal. Das bedeutet, dass sie sich außerhalb der EXECUTE-Anweisung befindet.  
+ Eine der etwas komplizierteren Ursachen für diesen Fehler ist u. a. die Verwendung einer Variablen, die außerhalb der EXECUTE-Anweisung deklariert wurde. Beispielsweise ist die in **@mycol** der SELECT-Anweisung angegebene Variable für die SELECT-Anweisung lokal. Daher befindet Sie sich außerhalb der EXECUTE-Anweisung.  
   
  USE AdventureWorks2012;  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62915687"
 ## <a name="user-action"></a>Benutzeraktion  
  Überprüfen Sie, ob alle in einem SQL-Skript verwendeten Variablen deklariert wurden, bevor sie an anderer Stelle im Skript verwendet werden.  
   
- Schreiben Sie das Skript um, sodass es nicht auf Variablen in der EXECUTE-Anweisung verweist, die außerhalb davon deklariert wurden. Zum Beispiel:  
+ Schreiben Sie das Skript um, sodass es nicht auf Variablen in der EXECUTE-Anweisung verweist, die außerhalb davon deklariert wurden. Beispiel:  
   
  USE AdventureWorks2012;  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62915687"
   
  EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
  [SET-Anweisungen (Transact-SQL)](/sql/t-sql/statements/set-statements-transact-sql)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  

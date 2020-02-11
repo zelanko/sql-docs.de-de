@@ -1,5 +1,5 @@
 ---
-title: CubeDefs-Auflistung – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: CubeDefs-Auflistungs Eigenschaften,-Methoden und-Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e80c7ae85b32bde70f863181b808256f91302917
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938592"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>CubeDefs-Collection – Eigenschaften, Methoden und Ereignisse
@@ -26,10 +26,10 @@ ms.locfileid: "67938592"
  [Item-Eigenschaft](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
- [CubeDefs-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [CubeDefs-Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

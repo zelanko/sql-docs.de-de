@@ -1,5 +1,5 @@
 ---
-title: Sequence Expressions (XQuery) | Microsoft-Dokumentation
+title: Sequenz Ausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,16 +17,17 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946309"
 ---
 # <a name="sequence-expressions-xquery"></a>Sequenzausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die XQuery-Operatoren, die zum Konstruieren, Filtern und Kombinieren einer Sequenz von Elementen verwendet werden. Ein Element kann es sich um ein atomarer Wert oder ein Knoten sein.  
+  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die XQuery-Operatoren, die zum Konstruieren, Filtern und Kombinieren einer Sequenz von Elementen verwendet werden. Bei einem Element kann es sich um einen atomaren Wert oder einen Knoten handeln.  
   
 ## <a name="constructing-sequences"></a>Konstruieren von Sequenzen  
  Mithilfe des Kommaoperators können Sie eine Sequenz konstruieren, die Items zu einer einzigen Sequenz verkettet.  
@@ -88,7 +89,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- Sie können die Elemente in der Sequenz mit zählen die **:Count()** Funktion.  
+ Sie können die Elemente in der Sequenz zählen, indem Sie die **FN: count ()** -Funktion verwenden.  
   
 ```  
 declare @x xml  
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Beispiel C  
- Die folgende Abfrage wird angegeben, für die AdditionalContactInfo-Spalte, der die **Xml** Typ in der Contact-Tabelle. Diese Spalte speichert zusätzliche Kontaktinformationen, z. B. eine oder mehrere zusätzliche Telefonnummern, Pagernummern und Adressen. Die \<TelephoneNumber >, \<Pager >, und die anderen Knoten können an beliebiger Stelle im Dokument. Die Abfrage konstruiert eine Sequenz, die alle enthält die \<"telephoneNumber" > untergeordnete Elemente des Kontextknotens aus, gefolgt von der \<Pager > untergeordnete Elemente. Beachten Sie die Verwendung des Kommasequenzoperators im zurückgegebenen Ausdruck `($a//act:telephoneNumber, $a//act:pager)`.  
+ Die folgende Abfrage wird für die AdditionalContactInfo-Spalte des **XML** -Typs in der Contact-Tabelle angegeben. Diese Spalte speichert zusätzliche Kontaktinformationen, z. B. eine oder mehrere zusätzliche Telefonnummern, Pagernummern und Adressen. Die \<telefonienumber-> \<, Pager> und andere Knoten können an beliebiger Stelle im Dokument angezeigt werden. Die Abfrage erstellt eine Sequenz, die alle \<telefonienumber-> untergeordneten Elemente des Kontext Knotens enthält, \<gefolgt vom Pager> untergeordneten Elementen. Beachten Sie die Verwendung des Kommasequenzoperators im zurückgegebenen Ausdruck `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -131,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtern von Sequenzen  
- Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Pfadausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Die folgende Abfrage gibt z. B. eine Sequenz von drei <`a`> Element-Knoten:  
+ Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Die folgende Abfrage gibt z. b. eine Sequenz von drei `a` <> Elementknoten zurück:  
   
 ```  
 declare @x xml  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Nur abrufen <`a`>-Elemente, die über das attra-Attribut verfügen, können Sie einen Filter im Prädikat angeben. Die resultierende Sequenz müssen nur eine <`a`> Element.  
+ Wenn Sie nur <`a`> Elemente mit dem Attribut attrA abrufen möchten, können Sie im Prädikat einen Filter angeben. Die resultierende Sequenz weist nur eine <`a`>-Element auf.  
   
 ```  
 declare @x xml  
@@ -169,7 +170,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- Weitere Informationen zur Vorgehensweise beim Angeben von Prädikaten in einem Pfadausdruck finden Sie unter [angeben von Prädikaten in einem Schritt eines Pfadausdrucks](../xquery/path-expressions-specifying-predicates.md).  
+ Weitere Informationen zum Angeben von Prädikaten in einem Pfad Ausdruck finden Sie unter [Angeben von Prädikaten in einem Pfad Ausdrucks Schritt](../xquery/path-expressions-specifying-predicates.md).  
   
  Das folgende Beispiel erstellt einen Sequenzausdruck aus Teilbäumen und wendet dann einen Filter auf die Sequenz an.  
   
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- Das folgende Beispiel wendet einen Prädikatfilter an. Der Ausdruck sucht nach Elementen <`a`> und <`b`>-Element enthalten <`c`>.  
+ Das folgende Beispiel wendet einen Prädikatfilter an. Der Ausdruck findet Elemente <`a`> und <`b`>, die Element <`c`> enthalten.  
   
 ```  
 declare @x xml  
@@ -238,11 +239,11 @@ SELECT @x.query('
   
 -   Der XQuery-range-Ausdruck wird nicht unterstützt.  
   
--   Die Sequenzen müssen homogen sein. Das heißt, dass alle Items in einer Sequenz entweder Knoten oder atomare Werte sein müssen. Dies wird statisch überprüft.  
+-   Die Sequenzen müssen homogen sein. Das heißt, dass alle Items in einer Sequenz entweder Knoten oder atomare Werte sein müssen. Dies wird statisch geprüft.  
   
 -   Das Kombinieren von Sequenzen mit dem union-, intersect- oder except-Operator wird nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Ausdrücke](../xquery/xquery-expressions.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811324"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff
@@ -34,21 +34,21 @@ ms.locfileid: "62811324"
   
 3.  Klicken Sie im Dialogfeld zum **Auswählen von Benutzern, Computer, Dienstkonto oder Gruppen** oben in der Speicherortliste auf **Speicherorte**, wählen Sie den Computernamen aus, und klicken Sie auf **OK**.  
   
-4.  In der **Geben Sie die zu verwendenden Objektnamen** geben der Namen des pro-Dienst-SID, die in der Onlinedokumentation aufgeführt **konfigurieren Windows-Dienstkonten und-Berechtigungen**. (Für die [!INCLUDE[ssDE](../../includes/ssde-md.md)] pro-Dienst-SID verwendet **NT SERVICE\MSSQLSERVER** für eine Standardinstanz oder **NT SERVICE\MSSQL$ InstanceName** für eine benannte Instanz.)  
+4.  Geben Sie im Feld **Geben Sie die zu ausgewäfenden Objektnamen** ein den Namen der pro-Dienst-SID ein, die im Thema **Konfigurieren von Windows-Dienst Konten und-Berechtigungen**aufgeführt ist. (Verwenden Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die pro-Dienst-SID **NT service\mssqlserver** für eine Standard Instanz oder **NT service\mssql $ instanceName** für eine benannte Instanz.)  
   
 5.  Klicken Sie auf **Namen überprüfen** , um den Eintrag zu überprüfen. Bei der Überprüfung wird häufig der Fehler zurückgegeben, dass der Name nicht gefunden wurde. Wenn Sie auf **OK**klicken, wird das Dialogfeld **Mehrere Namen gefunden** angezeigt.  
   
-6.  Wählen Sie jetzt entweder den pro-Dienst-SID, **MSSQLSERVER** oder **NT SERVICE\MSSQL$ InstanceName**, und klicken Sie dann auf **OK**.  
+6.  Wählen Sie nun die pro-Dienst-SID aus, entweder **MSSQLSERVER** oder **NT service\mssql $ instanceName**, und klicken Sie dann auf **OK**.  
   
 7.  Klicken Sie erneut auf **OK** , um zum Dialogfeld **Berechtigungen** zurückzukehren.  
   
-8.  In der **Gruppen- oder Benutzernamen** Namen wählen die pro-Dienst-SID, und klicken Sie dann in der **Berechtigungen für** \<Name > Wählen Sie im der **zulassen** für dasKontrollkästchen **Vollzugriff**.  
+8.  Wählen Sie im Feld **Gruppen-oder Benutzer** Namen die pro-Dienst-SID aus, und aktivieren Sie dann im Feld **Berechtigungen für** \<Name> das Kontrollkästchen **zulassen** für **voll**Zugriff.  
   
 9. Klicken Sie auf **Anwenden**und dann zweimal auf **OK** , um das Dialogfeld zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)   
- [Verschieben von Systemdatenbanken](../../relational-databases/databases/system-databases.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwalten der Datenbank-Engine Dienste](manage-the-database-engine-services.md)   
+ [Verschieben von System Datenbanken](../../relational-databases/databases/system-databases.md)   
  [Verschieben von Benutzerdatenbanken](../../relational-databases/databases/move-user-databases.md)  
   
   

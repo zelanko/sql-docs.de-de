@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128608"
 ---
 # <a name="alter-an-extended-events-session"></a>Ändern einer Sitzung für erweiterte Ereignisse
   Nachdem Sie eine Sitzung für erweiterte Ereignisse erstellt haben, können Sie diese je nach Bedarf mithilfe des **SQL Server-Assistenten für erweiterte Ereignisse**ändern.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
  Sie können kein Ziel für aktive und inaktive Sitzungen ändern, und Sie können zudem für eine aktive Sitzung die Konfigurationen für erweiterte Eigenschaften nicht ändern.  
   
  Folgende Änderungen sind sowohl für aktive als auch inaktive Ereignissitzungen möglich:  
@@ -48,7 +48,7 @@ ms.locfileid: "63128608"
   
 -   Nehmen Sie im Dialogfeld **Eigenschaften** die entsprechenden Änderungen vor, und klicken Sie dann auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   

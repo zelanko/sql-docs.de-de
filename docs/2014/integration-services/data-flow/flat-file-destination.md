@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902445"
 ---
 # <a name="flat-file-destination"></a>Flatfileziel
@@ -44,9 +44,9 @@ ms.locfileid: "62902445"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für Flatfiles** festlegen können:  
   
--   [Ziel-Editor für Flatfiles &#40;Seite „Verbindungs-Manager“&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für Flatfiles &#40;Seite Verbindungs-Manager&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Flatfiles &#40;Seite „Zuordnungen“&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Flatfiles &#40;Seite Zuordnungen&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62902445"
 ## <a name="related-tasks"></a>Related Tasks  
  Informationen zum Festlegen der Eigenschaften einer Datenflusskomponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Flatfilequelle](flat-file-source.md)   
  [Datenfluss](data-flow.md)  
   

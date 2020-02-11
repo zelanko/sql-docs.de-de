@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899943"
 ---
 # <a name="xml-source"></a>XML-Quelle
@@ -69,17 +69,17 @@ ms.locfileid: "62899943"
   
  Die XML-Quelle unterstützt mehrere reguläre Ausgaben und Fehlerausgaben.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt das Dialogfeld **Quellen-Editor für XML**zum Konfigurieren der XML-Quelle ein. Dieses Dialogfeld steht im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zur Verfügung.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt das Dialogfeld **XML-Quell Code Bearbeitung**zum Konfigurieren der XML-Quelle ein. Dieses Dialogfeld steht im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zur Verfügung.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für XML** festlegen können:  
   
--   [Quellen-Editor für XML &#40;Seite Verbindungs-Manager&#41;](../xml-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für XML-&#40;&#41;Seite Verbindungs-Manager](../xml-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für XML &#40;Seite Spalten&#41;](../xml-source-editor-columns-page.md)  
+-   [Der Quellen-Editor für XML-&#40;Spalten&#41;](../xml-source-editor-columns-page.md)  
   
--   [Quellen-Editor für XML &#40;Seite Fehlerausgabe&#41;](../xml-source-editor-error-output-page.md)  
+-   [Quellen-Editor für XML-&#40;Seite Fehlerausgabe&#41;](../xml-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -95,6 +95,6 @@ ms.locfileid: "62899943"
  [Extrahieren von Daten mithilfe der XML-Quelle](xml-source.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Technischer Artikel [mithilfe einer XML-Datei so konfigurieren Sie ein SSIS-Paket](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
+ Technischer Artikel [Verwenden einer XML-Datei zum Konfigurieren eines SSIS-Pakets](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

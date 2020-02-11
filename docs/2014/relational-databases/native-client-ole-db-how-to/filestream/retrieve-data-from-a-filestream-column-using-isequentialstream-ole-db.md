@@ -11,23 +11,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070827"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Abrufen von Daten aus einer FILESTREAM-Spalte mithilfe von ISequentialStream (OLE DB)
   Dieses Beispiel veranschaulicht die Verwendung einer ISequentialStream-Schnittstelle in einer ICommandText-Schnittstelle, um einen einzigen Datensatz aus einer FILESTREAM-Spalte abzurufen.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Weitere Informationen zur FILESTREAM-Funktion finden Sie [unter FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Beispiel  
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Erstellen Sie die Tabelle, aus der in diesem Beispiel gelesen wird, mithilfe eines der folgenden Beispiele:  
   
--   [Senden von Daten an eine FILESTREAM-Spalte mithilfe von ISequentialStream, das an einen ICommandText-Parameter gebunden ist &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Senden von Daten an eine FILESTREAM-Spalte mithilfe von ISequentialStream, der an den ICommandText-Parameter &#40;OLE DB gebunden ist&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
 -   [Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   

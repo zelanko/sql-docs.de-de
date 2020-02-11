@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913749"
 ---
-# <a name="mssqlserver5228"></a>MSSQLSERVER_5228
+# <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62913749"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Meldungstext|Tabellenfehler: Objekt-ID O_ID, index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Typ TYPE), Seite PG_ID, Zeile R_ID. DBCC hat einen unvollständigen Cleanup bei einem Vorgang zur Onlineindexerstellung erkannt. (Der Spaltenwert für die Cleanupmarkierung lautet VALUE.)|  
+|Meldungstext|Tabellenfehler: Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ), Seite PG_ID, Zeile R_ID. DBCC hat einen unvollständigen Cleanup bei einem Vorgang zur Onlineindexerstellung erkannt. (Der Spaltenwert für die Cleanupmarkierung lautet VALUE.)|  
   
 ## <a name="explanation"></a>Erklärung  
  Für Objekt *O_ID*, Index *I_ID* und Partition *PN_ID* wurde eine nicht abgeschlossene Onlineindexerstellung erkannt. Dies äußert sich durch das Vorhandensein einer Spalte für die Cleanupmarkierung für die Zeile *R_ID*. Eine Spalte für die Cleanupmarkierung wird verwendet, wenn Datensätze aus mehreren Quellen während einer Onlineindexerstellung abgeglichen werden. In der Fehlermeldung wird zudem der Wert der Spalte für die Cleanupmarkierung angegeben.  
@@ -58,7 +58,7 @@ ms.locfileid: "62913749"
 ### <a name="results-of-running-repair-options"></a>Ergebnis der Ausführung von REPAIR-Optionen  
  Durch Ausführen von REPAIR werden der angegebene Index sowie alle abhängigen Indizes neu erstellt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

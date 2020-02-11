@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a0516d2e038f206c140f010c2ca4a459f79956a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902047"
 ---
 # <a name="flat-file-custom-properties"></a>Benutzerdefinierte Eigenschaften der Flatfile
@@ -24,18 +24,18 @@ ms.locfileid: "62902047"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Flatfilequelle beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|Zeichenfolge|Der Name einer Ausgabespalte, die den Dateinamen enthält. Wenn kein Name angegeben wird, wird keine Ausgabespalte generiert, die den Dateinamen enthält.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Quellen-Editor für Flatfiles** verfügbar, kann jedoch im Dialogfeld **Erweiterter Editor** festgelegt werden.|  
+|FileNameColumnName|String|Der Name einer Ausgabespalte, die den Dateinamen enthält. Wenn kein Name angegeben wird, wird keine Ausgabespalte generiert, die den Dateinamen enthält.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Quellen-Editor für Flatfiles**verfügbar, kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden.|  
 |RetainNulls|Boolean|Ein Wert, der angibt, ob NULL-Werte aus der Quelldatei als NULL-Werte beibehalten werden sollen, wenn die Daten von der Data Transformation-Pipeline-Engine verarbeitet werden. Der Standardwert dieser Eigenschaft ist `False`.|  
   
  Die Ausgabe der Flatfilequelle verfügt nicht über benutzerdefinierte Eigenschaften.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Flatfilequelle. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von DTS oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Weitere Informationen finden Sie unter [Fast Parse](../fast-parse.md) und [Standard Parse](../standard-parse.md). Der Standardwert dieser Eigenschaft ist `False`.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Quellen-Editor für Flatfiles** verfügbar, kann jedoch im Dialogfeld **Erweiterter Editor** festgelegt werden.|  
+|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von DTS oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Weitere Informationen finden Sie unter [Fast Parse](../fast-parse.md) und [Standard Parse](../standard-parse.md). Der Standardwert dieser Eigenschaft ist `False`.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Quellen-Editor für Flatfiles**verfügbar, kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden.|  
   
  Weitere Informationen finden Sie unter [Flat File Source](flat-file-source.md).  
   
@@ -45,16 +45,16 @@ ms.locfileid: "62902047"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Flatfileziels. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|Header|Zeichenfolge|Ein Textblock, der in die Datei eingefügt wird, bevor Daten geschrieben werden.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
+|Header|String|Ein Textblock, der in die Datei eingefügt wird, bevor Daten geschrieben werden.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
 |Overwrite|Boolean|Ein Wert, der angibt, ob eine vorhandene Zieldatei mit demselben Namen überschrieben werden soll oder ob an diese Datei angehängt werden soll. Der Standardwert dieser Eigenschaft ist `True`.|  
   
  Die Eingabe und die Eingabespalten des Flatfileziels verfügen nicht über benutzerdefinierte Eigenschaften.  
   
  Weitere Informationen finden Sie unter [Flat File Destination](flat-file-destination.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Common Properties](../common-properties.md)  
   
   

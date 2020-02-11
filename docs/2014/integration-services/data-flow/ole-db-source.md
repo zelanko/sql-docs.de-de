@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770996"
 ---
 # <a name="ole-db-source"></a>OLE DB-Quelle
@@ -80,7 +80,7 @@ ms.locfileid: "62770996"
  Die gespeicherte Prozedur erwartet, dass die `@StartProductID` - und `@CheckDate`-Variablen Parameterwerte bereitstellen. Dabei ist die Reihenfolge, in der die Parameter in der **Mappings** -Liste angezeigt werden, irrelevant. Die einzige Voraussetzung ist, dass die Parameternamen den Variablennamen der gespeicherten Prozedur entsprechen. Das gilt auch für das \@-Zeichen.  
   
 ### <a name="mapping-parameters-to-variables"></a>Zuordnen von Parametern zu Variablen  
- Die Parameter werden Variablen zugeordnet, die die Parameterwerte zur Laufzeit bereitstellen. Bei den Variablen handelt es sich in der Regel um benutzerdefinierte Variablen, obwohl Sie auch die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Systemvariablen verwenden können. Stellen Sie beim Verwenden von benutzerdefinierten Variablen sicher, dass Sie den Datentyp auf einen Typ festlegen, der mit dem Datentyp der Spalte, auf die der zugeordnete Parameter verweist, kompatibel ist. Weitere Informationen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  
+ Die Parameter werden Variablen zugeordnet, die die Parameterwerte zur Laufzeit bereitstellen. Bei den Variablen handelt es sich in der Regel um benutzerdefinierte Variablen, obwohl Sie auch die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Systemvariablen verwenden können. Stellen Sie beim Verwenden von benutzerdefinierten Variablen sicher, dass Sie den Datentyp auf einen Typ festlegen, der mit dem Datentyp der Spalte, auf die der zugeordnete Parameter verweist, kompatibel ist. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>Problembehandlung der OLE DB-Quelle  
  Sie können die von der OLE DB-Quelle an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme beim Laden von Daten aus externen Datenquellen durch die OLE DB-Quelle behandeln. Aktivieren Sie zum Protokollieren der von der OLE DB-Quelle an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -90,11 +90,11 @@ ms.locfileid: "62770996"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für OLE DB** festlegen können:  
   
--   [Quellen-Editor für OLE DB &#40;Seite „Verbindungs-Manager“&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB Quellen-Editor &#40;Seite Verbindungs-Manager&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für OLE DB &#40;Seite „Spalten“&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB &#40;Seite "Spalten" des Quellen-Editors&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Quellen-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB Quellen-Editor &#40;Seite Fehlerausgabe&#41;](../ole-db-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62770996"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Wiki-Artikel, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), auf social.technet.microsoft.com.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Ziel](ole-db-destination.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Datenfluss](data-flow.md)  

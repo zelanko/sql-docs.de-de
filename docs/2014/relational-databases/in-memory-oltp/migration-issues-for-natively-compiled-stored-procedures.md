@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015282"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren
@@ -24,7 +24,7 @@ ms.locfileid: "63015282"
   
 -   [Erstellen von und Zugreifen auf Tabellen in TempDB aus nativ kompilierten gespeicherten Prozeduren](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
   
--   [Simulieren einer EXISTS-Klausel in einer nativ kompilierten gespeicherten Prozedur](simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md)  
+-   [Simulieren einer EXISTS-Klausel in einer systemintern kompilierten gespeicherten Prozedur](simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md)  
   
 -   [Implementieren von MERGE-Funktionalität](implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)  
   
@@ -32,9 +32,9 @@ ms.locfileid: "63015282"
   
 -   [Implementieren eines äußeren Joins](implementing-an-outer-join.md)  
   
--   [Implementieren des OR-Operators in nativ kompilierten gespeicherten Prozeduren](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
+-   [Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

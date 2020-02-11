@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b43cd194a2bfcf93b74b53fa2e9cb3a6a3eaff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913790"
 ---
-# <a name="mssqlserver4846"></a>MSSQLSERVER_4846
+# <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
     
 ## <a name="details"></a>Details  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62913790"
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Starten der Erfassung von Leistungsindikatoren für **SQL Server: Buffer Manager**, **SQL Server: Speicher-Manager**.  
+2.  Sammeln Sie Leistungsindikatoren für **SQL Server: Puffer-Manager** und **SQL Server: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden SQL Server-Speicherkonfigurationsparameter:  
   

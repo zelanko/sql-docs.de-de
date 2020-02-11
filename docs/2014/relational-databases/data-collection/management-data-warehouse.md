@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918338"
 ---
 # <a name="management-data-warehouse"></a>Verwaltungs-Data Warehouse
@@ -39,7 +39,7 @@ ms.locfileid: "62918338"
   
  In der folgenden Tabelle werden die Datenbanktabellen im core-Schema beschrieben. Mithilfe dieser Datenbanktabellen kann der Datensammler nachverfolgen, woher die Daten kamen, wer sie eingefügt hat und wann sie in das Data Warehouse hochgeladen wurden.  
   
-|Tabellenname|Description|  
+|Tabellenname|BESCHREIBUNG|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Speichert Informationen darüber, wie die Leistungsindikatoren in den Berichten des Verwaltungs-Data Warehouse gruppiert und aggregiert werden sollen.|  
 |core.snapshots_internal|Identifiziert jede neue Momentaufnahme. Immer dann, wenn ein neues Uploadpaket beginnt, einen neuen Datenbatch in ein Data Warehouse hochzuladen, wird in diese Tabelle eine neue Zeile eingefügt.|  
@@ -125,7 +125,7 @@ ms.locfileid: "62918338"
 |Die Tabelle core.performance_counter_report_group_items wurde dem Abschnitt „Core-Schema“ hinzugefügt.|  
 |Die Liste von Tabellen im Abschnitt "Momentaufnahme-Schema" wurde aktualisiert. snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory und snapshots.io_virtual_file_stats wurden hinzugefügt. snapshots.os_process_memory und snapshots.distinct_query_stats wurden entfernt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für das Verwaltungs-Data Warehouse &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Datensammlung](data-collection.md)   

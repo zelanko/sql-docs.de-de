@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900645"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Erstellen und Bereitstellen eines Cache für die Transformation für Suche
@@ -26,7 +26,7 @@ ms.locfileid: "62900645"
   
  Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in einem Verweisdataset verknüpft werden.  
   
- Sie erstellen eine Cachedatei, indem Sie einen Cacheverbindungs-Manager und eine Transformation für Cachetransformation verwenden. Weitere Informationen finden Sie unter [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) und [Cache Transform](cache-transform.md).  
+ Sie erstellen eine Cachedatei, indem Sie einen Cacheverbindungs-Manager und eine Transformation für Cachetransformation verwenden. Weitere Informationen finden Sie unter [Cacheverbindungs-Manager](../../connection-manager/cache-connection-manager.md) und [Cachetransformation](cache-transform.md).  
   
  Weitere Informationen zur Transformation für Suche und zu Cachedateien finden Sie unter [Lookup Transformation](lookup-transformation.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62900645"
   
 5.  Stellen Sie das Paket für das Dateisystem bereit. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Bereitstellungs-Hilfsprogramms](../../create-a-deployment-utility.md)  
   
   

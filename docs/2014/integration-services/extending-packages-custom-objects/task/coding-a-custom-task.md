@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896106"
 ---
 # <a name="coding-a-custom-task"></a>Codieren eines benutzerdefinierten Tasks
@@ -55,7 +55,8 @@ ms.locfileid: "62896106"
 -   Der Code in der `Validate`-Methode wird auch von <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> aufgerufen, bevor der Task ausgeführt wird, und <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> bricht die Ausführung ab, wenn die Validierung fehlschlägt.  
   
 #### <a name="user-interface-considerations-during-validation"></a>Überlegungen zur Benutzeroberfläche während der Validierung  
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> umfasst eine <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>-Schnittstelle als Parameter für die `Validate`-Methode. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>-Schnittstelle umfasst die Methoden, die von dem Task aufgerufen werden, um Ereignisse für die Runtime-Engine auszulösen. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A>-Methode und die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>-Methode werden aufgerufen, wenn eine Warnung oder eine Fehlerbedingung während der Validierung auftritt. Für beide Warnungsmethoden sind die gleichen Parameter erforderlich. Dazu gehören ein Fehlercode, eine Quellkomponente, eine Beschreibung, eine Hilfedatei sowie Hilfekontextinformationen. Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer verwendet diese Informationen, um visuelle Hinweise auf der Entwurfsoberfläche anzuzeigen. Die vom Designer bereitgestellten visuellen Hinweise enthalten ein Ausrufezeichen, das neben dem Task auf der Entwurfsoberfläche angezeigt wird. Dieser visuelle Hinweis signalisiert dem Benutzer, dass der Task zusätzliche Konfiguration erfordert, bevor die Ausführung fortgesetzt werden kann.  
+ 
+  <xref:Microsoft.SqlServer.Dts.Runtime.Task> umfasst eine <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>-Schnittstelle als Parameter für die `Validate`-Methode. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>-Schnittstelle umfasst die Methoden, die von dem Task aufgerufen werden, um Ereignisse für die Runtime-Engine auszulösen. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A>-Methode und die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>-Methode werden aufgerufen, wenn eine Warnung oder eine Fehlerbedingung während der Validierung auftritt. Für beide Warnungsmethoden sind die gleichen Parameter erforderlich. Dazu gehören ein Fehlercode, eine Quellkomponente, eine Beschreibung, eine Hilfedatei sowie Hilfekontextinformationen. Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer verwendet diese Informationen, um visuelle Hinweise auf der Entwurfsoberfläche anzuzeigen. Die vom Designer bereitgestellten visuellen Hinweise enthalten ein Ausrufezeichen, das neben dem Task auf der Entwurfsoberfläche angezeigt wird. Dieser visuelle Hinweis signalisiert dem Benutzer, dass der Task zusätzliche Konfiguration erfordert, bevor die Ausführung fortgesetzt werden kann.  
   
  Mit dem Ausrufezeichen wird auch eine QuickInfo angezeigt, die eine Fehlermeldung enthält. Die Fehlermeldung wird vom Task im Beschreibungsparameter des Ereignisses bereitgestellt. Fehlermeldungen werden auch in der **Aufgabenliste** von [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt, sodass der Benutzer einen zentralen Ort zur Anzeige aller Validierungsfehler erhält.  
   
@@ -157,19 +158,19 @@ End Class
  In diesem Abschnitt wird beschrieben, wie die `Execute`-Methode verwendet wird, die von Tasks geerbt und überschrieben wird. In diesem Abschnitt werden auch verschiedene Methoden zum Bereitstellen von Informationen zu den Ergebnissen der Taskausführung erläutert.  
   
 ### <a name="execute-method"></a>Execute-Methode  
- Tasks, die in einem Paket enthalten sind, werden ausgeführt, wenn ihre `Execute`-Methode von der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Laufzeit aufgerufen wird. Die grundlegende Geschäftslogik und Funktionalität von Tasks ist in dieser Methode implementiert. Die Ergebnisse der Ausführung werden durch Ausgeben von Meldungen, Zurückgeben eines Werts aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Enumeration und Überschreiben der `get`-Eigenschaft der `ExecutionValue`-Eigenschaft bereitgestellt.  
+ Tasks, die in einem Paket enthalten sind, werden ausgeführt, wenn ihre [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Methode von der `Execute`-Laufzeit aufgerufen wird. Die grundlegende Geschäftslogik und Funktionalität von Tasks ist in dieser Methode implementiert. Die Ergebnisse der Ausführung werden durch Ausgeben von Meldungen, Zurückgeben eines Werts aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Enumeration und Überschreiben der `get`-Eigenschaft der `ExecutionValue`-Eigenschaft bereitgestellt.  
   
  Die <xref:Microsoft.SqlServer.Dts.Runtime.Task>-Basisklasse stellt eine Standardimplementierung der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode bereit. Die benutzerdefinierten Tasks überschreiben diese Methode, um ihre Laufzeitfunktionalität zu definieren. Das <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>-Objekt umschließt den Task, sodass dieser von der Runtime-Engine und den anderen Objekten in dem Paket isoliert wird. Aufgrund dieser Isolation erkennt der Task seine Stelle in dem Paket bezüglich der Ausführungsreihenfolge nicht und wird nur ausgeführt, wenn er durch die Laufzeit aufgerufen wird. Durch diese Architektur werden Probleme verhindert, die auftreten können, wenn Tasks während der Ausführung das Paket ändern. Der Task erhält nur durch die Objekte, die ihm in der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode als Parameter bereitgestellt werden, Zugriff auf die anderen Objekte in dem Paket. Mithilfe dieser Parameter können Tasks Ereignisse auslösen, Einträge in das Ereignisprotokoll schreiben, auf die Variablenauflistung zugreifen und Verbindungen zu Datenquellen in Transaktionen eintragen, während gleichzeitig die Isolation beibehalten wird, die erforderlich ist, um die Stabilität und Zuverlässigkeit des Pakets zu garantieren.  
   
  In der folgenden Tabelle sind die für den Task in der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode bereitgestellten Parameter aufgeführt.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Enthält eine Auflistung von <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekten, die für den Task verfügbar sind.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Enthält die Variablen, die für den Task verfügbar sind. Die Tasks verwenden Variablen durch den VariableDispenser; die Tasks verwenden keine Variablen direkt. Der VariableDispenser sperrt und entsperrt Variablen und verhindert Deadlocks oder Überschreibungen.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Enthält die Methoden, die von dem Task zum Auslösen von Ereignissen in der Runtime-Engine aufgerufen werden.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Enthält Methoden und Eigenschaften, die von dem Task zum Schreiben von Ereignissen in das Ereignisprotokoll verwendet werden.|  
-|Objekt|Enthält ggf. das Transaktionsobjekt, von dem der Container ein Teil ist. Dieser Wert wird als Parameter an die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A>-Methode eines <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekts übergeben.|  
+|Object|Enthält ggf. das Transaktionsobjekt, von dem der Container ein Teil ist. Dieser Wert wird als Parameter an die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A>-Methode eines <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekts übergeben.|  
   
 ### <a name="providing-execution-feedback"></a>Bereitstellen von Feedback zur Ausführung  
  Bei Tasks wird der Code in `try/catch`-Blöcke eingebunden, um zu verhindern, dass Ausnahmen in der Runtime-Engine ausgelöst werden. Dadurch wird sichergestellt, dass das Paket die Ausführung abschließt und nicht unerwartet beendet wird. Die Runtime-Engine bietet jedoch andere Mechanismen zur Behandlung von Fehlerbedingungen, die während der Ausführung eines Tasks auftreten können. Dazu gehört das Ausgeben von Fehler- und Warnmeldungen, das Zurückgeben eines Werts aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Struktur, das Ausgeben von Meldungen, das Zurückgeben des <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Werts sowie das Offenlegen von Informationen zu den Ergebnissen der Taskausführung durch die <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>-Eigenschaft.  
@@ -285,9 +286,9 @@ Public Class SampleTask
 End Class  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines benutzerdefinierten Tasks](creating-a-custom-task.md)   
  [Codieren eines benutzerdefinierten Tasks](coding-a-custom-task.md)   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task](developing-a-user-interface-for-a-custom-task.md)  

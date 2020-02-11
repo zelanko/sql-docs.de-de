@@ -11,43 +11,44 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771576"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
-  Die `SSISDB` Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekte (SSIS), die zum Bereitstellen der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
+  Der `SSISDB` -Katalog ist der zentrale Punkt für die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Arbeit mit (SSIS)-Projekten, die Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf dem-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
   
- Die Objekte, die im rowsetcache der `SSISDB` Katalog enthalten Projekte, Pakete, Parameter, Umgebungen und verwendungsverläufe.  
+ Die Objekte, die im `SSISDB` Katalog gespeichert werden, umfassen Projekte, Pakete, Parameter, Umgebungen und Betriebsverlauf.  
   
- Sie untersuchen, Objekte, Einstellungen und operative Daten, die in gespeichert werden die `SSISDB` -Katalog durch Abfragen der Sichten in der `SSISDB` Datenbank. Sie verwalten die Objekte durch Aufrufen von gespeicherten Prozeduren in der `SSISDB` -Datenbank oder über die Benutzeroberfläche des der `SSISDB` Katalog. In vielen Fällen kann der gleiche Task in der Benutzeroberfläche oder durch das Aufrufen einer gespeicherten Prozedur ausgeführt werden.  
+ Sie überprüfen die Objekte, Einstellungen und operativen Daten, die im `SSISDB` Katalog gespeichert werden, indem Sie die Sichten in der `SSISDB` Datenbank Abfragen. Sie verwalten die Objekte, indem Sie gespeicherte Prozeduren in der `SSISDB` Datenbank oder über die Benutzer `SSISDB` Oberfläche des Katalogs aufrufen. In vielen Fällen kann der gleiche Task in der Benutzeroberfläche oder durch das Aufrufen einer gespeicherten Prozedur ausgeführt werden.  
   
  Zur Verwaltung der Datenbank `SSISDB` wird empfohlen, Standardunternehmensrichtlinien für die Verwaltung von Benutzerdatenbanken anzuwenden. Informationen zum Erstellen von Wartungsplänen finden Sie unter [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Die `SSISDB` Katalog und die `SSISDB` -Datenbank unterstützen Windows PowerShell. Weitere Informationen zum Verwenden von SQL Server mit Windows PowerShell finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Beispiele zur Verwendung von Windows PowerShell zum Abschließen von Tasks, z. B. zum Bereitstellen eines Projekts, finden Sie im Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)auf blogs.msdn.com.  
+ Der `SSISDB` -Katalog und `SSISDB` die-Datenbank unterstützen Windows PowerShell. Weitere Informationen zum Verwenden von SQL Server mit Windows PowerShell finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Beispiele zur Verwendung von Windows PowerShell zum Abschließen von Tasks, z. B. zum Bereitstellen eines Projekts, finden Sie im Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)auf blogs.msdn.com.  
   
- Weitere Informationen zum Anzeigen von Vorgangsdaten finden Sie unter [Überwachen von Paketausführungen und anderen Vorgängen](../performance/monitor-running-packages-and-other-operations.md).  
+ Weitere Informationen zum Anzeigen von Vorgangs Daten finden Sie unter über [Wachen von Paket Ausführungen und anderen Vorgängen](../performance/monitor-running-packages-and-other-operations.md).  
   
- Sie Zugriff auf die `SSISDB` im Katalog [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] durch Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine und erweitert die **Integration Services-Kataloge** Knoten im Objekt-Explorer. Sie Zugriff auf die `SSISDB` Datenbank [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] durch den Datenbankknoten im Objekt-Explorer erweitern.  
-  
-> [!NOTE]  
->  Sie können nicht umbenannt werden die `SSISDB` Datenbank.  
+ Sie greifen auf `SSISDB` den Katalog [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in zu, indem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie eine Verbindung mit dem Datenbank-Engine herstellen und dann den Knoten **Integration Services Kataloge** in Objekt-Explorer erweitern. Sie greifen auf `SSISDB` die Datenbank [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in zu, indem Sie den Knoten Datenbanken in Objekt-Explorer erweitern.  
   
 > [!NOTE]  
->  Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die `SSISDB` Datenbank angefügt ist, beendet oder reagiert nicht, die ISServerExec.exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
+>  Sie können die `SSISDB` Datenbank nicht umbenennen.  
+  
+> [!NOTE]  
+>  Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, `SSISDB` mit der die Datenbank verbunden ist, beendet wird oder nicht reagiert, wird der Prozess isserverexec. exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
 >   
 >  Wenn für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen ein Failover als Teil eines Clusterfailovers durchgeführt wird, werden die ausgeführten Pakete nicht neu gestartet. Sie können Prüfpunkte verwenden, um Pakete neu zu starten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Katalogobjektbezeichner  
- Wenn Sie im Katalog ein neues Objekt erstellen, weisen Sie dem Objekt einen Namen zu. Der Objektname ist der Bezeichner. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt Regeln, welche Zeichen in einem Bezeichner verwendet werden können. Namen für die folgenden Objekte müssen den Regeln für Bezeichner entsprechen.  
+ Wenn Sie im Katalog ein neues Objekt erstellen, weisen Sie dem Objekt einen Namen zu. Der Objektname ist der Bezeichner. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt Regeln, welche Zeichen in einem Bezeichner verwendet werden können. Namen für die folgenden Objekte müssen den Regeln für Bezeichner entsprechen.  
   
 -   Ordner  
   
--   Projekt  
+-   Project  
   
--   Umgebung  
+-   Environment  
   
 -   Parameter  
   
@@ -60,7 +61,8 @@ ms.locfileid: "62771576"
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
+-   
+  \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   
@@ -78,7 +80,8 @@ ms.locfileid: "62771576"
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
+-   
+  \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   
@@ -92,22 +95,22 @@ ms.locfileid: "62771576"
 ### <a name="operations-and-project-version-cleanup"></a>Bereinigung von Projektversionen und Vorgängen  
  Statusdaten für viele der Vorgänge im Katalog werden in internen Datenbanktabellen gespeichert. Beispielsweise wird im Katalog der Status von Paketausführungen und Projektbereitstellungen nachverfolgt. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet, um alte Daten zu entfernen. Dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag wird bei der Installation von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt.  
   
- Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt durch das Bereitstellen unter dem gleichen Namen im gleichen Ordner im Katalog aktualisieren oder erneut bereitstellen. Standardmäßig immer Sie ein Projekt erneut bereitstellen, die `SSISDB` Katalog behält die vorherige Version des Projekts. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** verwendet, um alte Versionen von Projekten zu entfernen.  
+ Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt durch das Bereitstellen unter dem gleichen Namen im gleichen Ordner im Katalog aktualisieren oder erneut bereitstellen. Standardmäßig behält der `SSISDB` Katalog jedes Mal, wenn Sie ein Projekt erneut bereitstellen, die vorherige Version des Projekts bei. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** verwendet, um alte Versionen von Projekten zu entfernen.  
   
- Die folgenden `SSISDB` Katalogeigenschaften definieren, wie sich dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag verhält. Sie können die Eigenschaften anzeigen oder ändern, indem Sie das Dialogfeld **Katalogeigenschaften** verwenden, oder [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) und [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Die folgenden `SSISDB` Katalog Eigenschaften definieren, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sich dieser-Agentauftrag verhält. Sie können die Eigenschaften anzeigen oder ändern, indem Sie das Dialogfeld **Katalogeigenschaften** verwenden, oder [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) und [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Protokolle regelmäßig bereinigen**  
  Der Auftragsschritt für die Vorgangsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
   
- **Beibehaltungsdauer (Tage)**  
+ **Beibehaltungs Dauer (Tage)**  
  Definiert das maximale Alter von zulässigen Vorgangsdaten (in Tagen). Ältere Daten werden entfernt.  
   
- Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den maximalen Wert von beschränkt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` Daten. Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
+ Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den maximalen Wert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` Daten beschränkt. Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Alte Versionen regelmäßig entfernen**  
  Der Auftragsschritt für die Projektversionsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
   
- **Maximale Anzahl der Versionen pro Projekt**  
+ **Maximale Anzahl von Versionen pro Projekt**  
  Definiert, wie viele Versionen eines Projekts im Katalog gespeichert sind. Frühere Versionen von Projekten werden entfernt.  
   
 ### <a name="encryption-algorithm"></a>Verschlüsselungsalgorithmus  
@@ -131,7 +134,7 @@ ms.locfileid: "62771576"
   
  Eine Änderung des Verschlüsselungsalgorithmus ist sehr aufwändig. Der Server muss zuerst alle Konfigurationswerte mithilfe des zuvor angegebenen Algorithmus entschlüsseln. Anschließend müssen die Werte vom Server mithilfe des neuen Algorithmus wieder verschlüsselt werden. In diesem Zeitraum können keine anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge auf dem Server ausgeführt werden. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge weiterhin ohne Unterbrechung ausgeführt werden können, ist der Wert für den Verschlüsselungsalgorithmus im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Dialogfeld schreibgeschützt.  
   
- So ändern Sie die **Verschlüsselungsalgorithmus** legen Sie die Einstellung der Eigenschaft, die `SSISDB` -Datenbank in den Einzelbenutzermodus, und klicken Sie dann rufen Sie die gespeicherten Catalog. configure_catalog-Prozedur. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name* -Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Um die Eigenschaften Einstellung **Verschlüsselungsalgorithmus** zu ändern, legen `SSISDB` Sie die Datenbank auf den Einzelbenutzermodus fest, und nennen Sie dann die gespeicherte Prozedur catalog. configure_catalog. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name*-Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Weitere Informationen zum Einzelbenutzermodus finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Informationen zur Verschlüsselung sowie zu Algorithmen für die Verschlüsselung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie in den Themen im Abschnitt [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -149,7 +152,7 @@ ms.locfileid: "62771576"
 |Serverweiter Standardprotokolliergrad|SERVER_LOGGING_LEVEL|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Projekte, Umgebungen und Pakete sind in Ordnern enthalten, bei denen es sich um sicherungsfähige Objekte handelt. Sie können einem Ordner Berechtigungen gewähren, einschließlich der MANAGE_OBJECT_PERMISSIONS-Berechtigung. MANAGE_OBJECT_PERMISSIONS ermöglicht es Ihnen, die Verwaltung von Ordnerinhalten an einen Benutzer zu delegieren, ohne dass Sie dem Benutzer die Mitgliedschaft in der ssis_admin-Rolle erteilen müssen. Sie haben auch die Möglichkeit, Projekten, Umgebungen und Vorgängen Berechtigungen zu erteilen. Vorgänge schließen das Initialisieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Bereitstellen von Projekten, erstellen und Starten von Ausführungen, Überprüfen von Projekten und Paketen, und Konfigurieren der `SSISDB` Katalog.  
+ Projekte, Umgebungen und Pakete sind in Ordnern enthalten, bei denen es sich um sicherungsfähige Objekte handelt. Sie können einem Ordner Berechtigungen gewähren, einschließlich der MANAGE_OBJECT_PERMISSIONS-Berechtigung. MANAGE_OBJECT_PERMISSIONS ermöglicht es Ihnen, die Verwaltung von Ordnerinhalten an einen Benutzer zu delegieren, ohne dass Sie dem Benutzer die Mitgliedschaft in der ssis_admin-Rolle erteilen müssen. Sie haben auch die Möglichkeit, Projekten, Umgebungen und Vorgängen Berechtigungen zu erteilen. Zu den Vorgängen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]gehören initialisieren, Bereitstellen von Projekten, erstellen und starten von Ausführungen, überprüfen von `SSISDB` Projekten und Paketen und Konfigurieren des Katalogs.  
   
  Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
@@ -157,7 +160,7 @@ ms.locfileid: "62771576"
   
  Wenn der Prinzipal anderen Prinzipalen Berechtigungen erteilt oder verweigert hat, widerrufen Sie die vom Berechtigenden erteilten Berechtigungen, bevor der Prinzipal entfernt werden kann. Andernfalls wird eine Fehlermeldung zurückgegeben, wenn das System versucht, den Prinzipal zu entfernen. Der Trigger entfernt alle Berechtigungsdatensätze, bei denen der Datenbankprinzipal ein Empfänger ist.  
   
- Es wird empfohlen, dass der Trigger nicht deaktiviert ist, da dadurch sichergestellt wird, die keine verwaisten Berechtigungsdatensätze vorhanden sind, nachdem ein Datenbankprinzipal aus gelöscht wurde die `SSISDB` Datenbank.  
+ Es wird empfohlen, den-Wert nicht zu deaktivieren, da er sicherstellt, dass keine verwaisten Berechtigungsdaten Sätze vorliegen, `SSISDB` nachdem ein Daten Bank Prinzipal aus der Datenbank gelöscht wurde.  
   
 ### <a name="managing-permissions"></a>Verwalten von Berechtigungen  
  Sie können Berechtigungen mit der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Benutzeroberfläche, gespeicherten Prozeduren und dem <xref:Microsoft.SqlServer.Management.IntegrationServices> -Namespace verwalten.  
@@ -168,10 +171,10 @@ ms.locfileid: "62771576"
   
 -   Verwenden Sie für ein Projekt die Seite **Berechtigungen** im [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Rufen Sie zum Verwalten von Berechtigungen mithilfe von Transact-SQL [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) und [catalog.revoke_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database) auf. Fragen Sie [catalog.effective_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database) ab, um effektive Berechtigungen für das aktuelle Prinzipal für alle Objekte anzuzeigen. Dieses Thema enthält Beschreibungen der verschiedenen Berechtigungstypen. Fragen Sie [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database) ab, um Berechtigungen anzuzeigen, die explizit dem Benutzer zugewiesen wurden.  
+ Um Berechtigungen mithilfe von Transact-SQL zu verwalten, nennen Sie [catalog. grant_permission &#40;ssisdb-Daten Bank&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. deny_permission &#40;ssisdb-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) und [catalog. revoke_permission &#40;&#41;ssisdb-Datenbank ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Fragen Sie [catalog.effective_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database) ab, um effektive Berechtigungen für das aktuelle Prinzipal für alle Objekte anzuzeigen. Dieses Thema enthält Beschreibungen der verschiedenen Berechtigungstypen. Fragen Sie [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database) ab, um Berechtigungen anzuzeigen, die explizit dem Benutzer zugewiesen wurden.  
   
 ## <a name="folders"></a>Ordner  
- Ein Ordner enthält eine oder mehrere Projekte und Umgebungen im der `SSISDB` Katalog. Sie können die Ansicht [catalog.folders &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) verwenden, um auf Informationen über Ordner im Katalog zuzugreifen. Sie können folgende gespeicherte Prozeduren zum Verwalten von Ordnern verwenden.  
+ Ein Ordner enthält ein oder mehrere Projekte und Umgebungen im- `SSISDB` Katalog. Sie können die Ansicht [catalog.folders &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) verwenden, um auf Informationen über Ordner im Katalog zuzugreifen. Sie können folgende gespeicherte Prozeduren zum Verwalten von Ordnern verwenden.  
   
 -   [catalog.create_folder &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
   

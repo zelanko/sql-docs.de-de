@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 427223e6c11d47091741e032dc79b0ecafef1d00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913489"
 ---
-# <a name="mssqlserver7910"></a>MSSQLSERVER_7910
+# <a name="mssqlserver_7910"></a>MSSQLSERVER_7910
     
 ## <a name="details"></a>Details  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62913489"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|Meldungstext|Reparaturvorgang: Die Seite wurde der P_ID zu Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Typ TYPE) zugeordnet.|  
+|Meldungstext|Reparaturvorgang: Die Seite P_ID wurde der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (Typ TYPE) zugeordnet.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dies ist eine Informationsmeldung von REPAIR, die besagt, dass eine Seite dem Einzelseiten-Slotarray einer IAM-Seite (Index Allocation Map) zugeordnet wurde.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- None  
+ Keine  
   
   

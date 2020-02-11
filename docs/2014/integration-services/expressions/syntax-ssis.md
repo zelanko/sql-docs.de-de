@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768836"
 ---
 # <a name="syntax-ssis"></a>Syntax (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62768836"
 > [!NOTE]  
 >  In vorherigen Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]galt eine maximale Zeichenlänge von 4000 Zeichen für das Auswertungsergebnis eines Ausdrucks, wenn das Ergebnis vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp DT_WSTR oder DT_STR war. Diese Begrenzung wurde aufgehoben.  
   
- Beispielausdrücke, in denen bestimmte Operatoren und Funktionen verwendet werden, finden Sie in den Themen zu den einzelnen Operatoren und Funktionen: [Operatoren &#40;SSIS-Ausdruck&#41&#41;](operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41&#41;](functions-ssis-expression.md).  
+ Beispielausdrücke, in denen bestimmte Operatoren und Funktionen verwendet werden, finden Sie in den Themen zu den einzelnen Operatoren und Funktionen unter [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md).  
   
  Beispielausdrücke, in denen mehrere Operatoren und Funktionen sowie Bezeichner und Literale verwendet werden, finden Sie unter [Beispiele für erweiterte SQL Server Integration Services-Ausdrücke](examples-of-advanced-integration-services-expressions.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62768836"
 ###### <a name="equality-operators"></a>Gleichheitsoperatoren  
  Die Ausdrucksauswertungsgrammatik enthält den Gleichheitsoperator (==). Dieser Operator ist das Äquivalent zum =-Operator in Transact-SQL bzw. zum ==-Operator in C#.  
   
-## <a name="functions"></a>Funktionen  
+## <a name="functions"></a>Functions  
  Die Ausdruckssprache enthält Datums- und Zeitfunktionen, mathematische Funktionen und Zeichenfolgenfunktionen, die mit Transact-SQL-Funktionen und C#-Methoden vergleichbar sind.  
   
  Einige Funktionen besitzen zwar denselben Namen wie Transact-SQL-Funktionen, weisen jedoch in der Ausdrucksauswertung eine etwas andere Funktionalität auf.  

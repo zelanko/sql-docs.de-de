@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832872"
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
@@ -64,7 +64,7 @@ ms.locfileid: "62832872"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den Masseneinfügungstask  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`BulkInsertTaskBegin`|Zeigt den Beginn der Masseneinfügung an.|  
 |`BulkInsertTaskEnd`|Zeigt die Fertigstellung der Masseneinfügung an.|  
@@ -89,11 +89,11 @@ ms.locfileid: "62832872"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Masseneinfügungstask-Editor &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Massen Einfügungs Task-Editor &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Masseneinfügungstask-Editor &#40;Seite „Verbindung“&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Massen Einfügungs Task-Editor &#40;Verbindungs Seite&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Masseneinfügungstask-Editor &#40;Seite „Optionen“&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Massen Einfügungs Task-Editor &#40;Options Seite&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

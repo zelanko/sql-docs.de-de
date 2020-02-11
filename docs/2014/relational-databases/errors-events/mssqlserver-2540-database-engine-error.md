@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27b71e75e370cd1a5c5af93a4ba0b34a69db16a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914840"
 ---
-# <a name="mssqlserver2540"></a>MSSQLSERVER_2540
+# <a name="mssqlserver_2540"></a>MSSQLSERVER_2540
     
 ## <a name="details"></a>Details  
   
@@ -48,6 +48,6 @@ ms.locfileid: "62914840"
  Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
- Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden.  
+ Nicht zutreffend Dieser Fehler kann nicht automatisch repariert werden.  
   
   

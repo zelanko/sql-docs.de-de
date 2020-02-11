@@ -1,5 +1,5 @@
 ---
-title: Ändern Sie die OData-Quellabfrage zur Laufzeit | Microsoft-Dokumentation
+title: Ändern der odata-Quell Abfrage zur Laufzeit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901187"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Ändern einer OData-Quellabfrage zur Laufzeit
-  Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft **[OData-Quelle].[Abfrage]** des Datenflusstasks einen Ausdruck hinzufügen.  
+  Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft [OData-Quelle].[Abfrage] des Datenflusstasks einen **Ausdruck** hinzufügen.  
   
  Beachten Sie, dass die Spalten gegenüber der Entwurfszeit unverändert bleiben müssen, da bei der Paketausführung ansonsten ein Fehler auftritt. Geben Sie bei Verwendung der $select-Abfrageoption die gleichen Spalten (in der gleichen Reihenfolge) an. Eine sicherere Alternative zur Verwendung der $select-Option besteht darin, die nicht benötigten Spalten direkt über die Benutzeroberfläche der Quellkomponente zu deaktivieren.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62901187"
   
 1.  Klicken Sie mit der rechten Maustaste auf **Datenflusstask**, und wählen Sie die Option **Parametrisieren** aus.  
   
-2.  Wählen Sie im Dialogfeld **Parametrisieren** für **Eigenschaft** **[\<Name der OData-Quellkomponente>].[ Abfrage]** aus.  
+2.  Wählen Sie im Dialogfeld **Parametrisieren** für **Eigenschaft\<** [**Name der OData-Quellkomponente>].[ Abfrage]** aus.  
   
 3.  Wählen Sie **Neuen Parameter erstellen** oder **Vorhandenen Parameter verwenden**aus.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "62901187"
   
 2.  Heben Sie im Fenster **Eigenschaften** die Eigenschaft **Ausdrücke** hervor.  
   
-3.  Klicken Sie auf der... (Auslassungspunkte) Schaltfläche, um das Hochfahren der **Eigenschaftsausdrucks-Editor**.  
+3.  Klicken Sie auf... (Ellipsen), um den **Eigenschafts Ausdrucks-Editor**zu aktivieren.  
   
 4.  Wählen Sie die Eigenschaft **[OData-Quelle].[Abfrage]** aus.  
   
-5.  Klicken Sie auf der... (Auslassungspunkte) Schaltfläche **Ausdruck**.  
+5.  Klicken Sie auf... (Ellipsen) Schaltfläche für **Ausdruck**.  
   
 6.  Geben Sie den **Ausdruck**ein.  
   

@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874115"
 ---
 # <a name="altering-an-assembly"></a>Ändern einer Assembly
@@ -30,7 +30,7 @@ ALTER ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- Mit ALTER ASSEMBLY werden zurzeit ausgeführte Prozesse, die die Assembly verwenden, nicht unterbrochen. Die Prozesse werden mit der unveränderten Assembly weiterhin ausgeführt. Mit ALTER ASSEMBLY können die Signaturen gängiger CLR-Funktionen (Common Language Runtime), Aggregatfunktionen, gespeicherter Prozeduren und Trigger nicht geändert werden. Neue öffentliche Methoden können der Assembly hinzugefügt werden. Private Methoden können beliebig bearbeitet werden, während öffentliche Methoden nur so lange bearbeitet werden können, wie die Signaturen oder Attribute unverändert bleiben. Felder, die in einem systemeigenen serialisierten benutzerdefinierten Typ enthalten sind, einschließlich Datenelemente oder Basisklassen, können nicht mithilfe von ALTER ASSEMBLY geändert werden. Alle anderen Änderungen werden nicht unterstützt. Weitere Informationen finden Sie unter [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
+ Mit ALTER ASSEMBLY werden zurzeit ausgeführte Prozesse, die die Assembly verwenden, nicht unterbrochen. Die Prozesse werden mit der unveränderten Assembly weiterhin ausgeführt. Mit ALTER ASSEMBLY können die Signaturen gängiger CLR-Funktionen (Common Language Runtime), Aggregatfunktionen, gespeicherter Prozeduren und Trigger nicht geändert werden. Neue öffentliche Methoden können der Assembly hinzugefügt werden. Private Methoden können beliebig bearbeitet werden, während öffentliche Methoden nur so lange bearbeitet werden können, wie die Signaturen oder Attribute unverändert bleiben. Felder, die in einem systemeigenen serialisierten benutzerdefinierten Typ enthalten sind, einschließlich Datenelemente oder Basisklassen, können nicht mithilfe von ALTER ASSEMBLY geändert werden. Alle anderen Änderungen werden nicht unterstützt. Weitere Informationen finden Sie unter [Alter Assembly &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>Ändern des Berechtigungssatzes einer Assembly  
  Der Berechtigungssatz einer Assembly kann auch mit der ALTER ASSEMBLY-Anweisung geändert werden. Die folgende Anweisung ändert den Berechtigungssatz der SQLCLRTest-Assembly in `EXTERNAL_ACCESS`.  
@@ -51,10 +51,10 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von CLR-Integrationsassemblys](managing-clr-integration-assemblies.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwalten von CLR Integration](managing-clr-integration-assemblies.md)   
  [Erstellen einer Assembly](creating-an-assembly.md)   
- [Löschen von Assemblys](dropping-an-assembly.md)   
+ [Löschen einer Assembly](dropping-an-assembly.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
   
