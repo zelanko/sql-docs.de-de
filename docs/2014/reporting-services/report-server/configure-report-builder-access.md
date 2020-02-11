@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104027"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
-  Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver zusammen installiert wird.  
+  Berichts-Generator ist ein Ad-hoc-Bericht Erstellungs Tool [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , das mit einem für den einheitlichen Modus oder im SharePoint-Integrationsmodus konfigurierten Berichts Server installiert wird.  
   
  Der Zugriff auf den Berichts-Generator ist von den folgenden Faktoren abhängig:  
   
@@ -34,10 +34,11 @@ ms.locfileid: "66104027"
   
  Es muss ein veröffentlichtes Berichtsmodell vorliegen, das bearbeitet werden kann, um den Berichts-Generator verwenden zu können.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Der Berichts-Generator ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Auf dem Clientcomputer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 installiert sein. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
+ Auf dem Client Computer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2,0 installiert sein. 
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
   
  Sie müssen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 oder höher verwenden.  
   
@@ -107,7 +108,7 @@ ms.locfileid: "66104027"
   
     4.  Geben Sie im Feld Beschreibung eine Rollenbeschreibung ein, damit die Benutzer im Berichts-Manager wissen, wozu ihre Rolle dient.  
   
-    5.  Fügen Sie die folgenden Aufgaben: **Berichte lesen**, **Anzeigen von Berichten**, **Ansichtsmodelle**, **-Ressourcen anzeigen**, **Ordner anzeigen**, und  **Einzelne Abonnements verwalten**s.  
+    5.  Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen**und **Einzelne Abonnements verwalten**.  
   
     6.  Klicken Sie auf **OK** , um die Rolle zu speichern.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "66104027"
   
 7.  Klicken Sie auf die Registerkarte **Ordnereinstellungen** .  
   
-8.  Klicken Sie auf die Registerkarte **Sicherheit** .  
+8.  Klicken Sie auf die Registerkarte **Sicherheit**.  
   
 9. Wenn für den Benutzer oder die Gruppe, für den bzw. die Sie den Zugriff auf den Berichts-Generator konfigurieren möchten, klicken Sie auf **Bearbeiten**.  
   
@@ -159,12 +160,12 @@ ms.locfileid: "66104027"
 |---------------------------------------|--------------------------------------------------------------------|  
 |Negotiate (Standard)<br /><br /> NTLM (Standard)|Bei Verwendung der integrierten Sicherheit von Windows sind authentifizierte Anforderungen von ClickOnce und Berichts-Generator in der Regel erfolgreich, wenn Client und Server in der gleichen Domäne bereitgestellt wurden, wenn der Benutzer sich beim Clientcomputer unter einem Domänenkonto angemeldet hat, das zum Zugriff auf den Berichts-Generator berechtigt ist, und wenn der Berichtsserver für die Windows-Authentifizierung konfiguriert wurde.<br /><br /> Die Anforderungen sind erfolgreich, da ClickOnce und die Browserverbindung mit dem Berichtsserver über die gleiche Benutzeridentität verfügen.<br /><br /> Anforderungen schlagen fehl, wenn der Benutzer Internet Explorer mit der Option Ausführen als geöffnet und keine Standardanmeldeinformationen angegeben hat. Falls die Benutzersitzung auf dem Berichtsserver unter einem bestimmten Konto eingerichtet und ClickOnce unter einem anderen Konto ausgeführt wird, dann verweigert der Berichtsserver den Zugriff auf die Dateien.|  
 |Kerberos|Internet Explorer, der für den Einsatz des Berichts-Generators erforderlich ist, unterstützt Kerberos nicht direkt.|  
-|Standardauthentifizierung|ClickOnce unterstützt die Standardauthentifizierung nicht. Es werden keine Anforderungen formuliert, die die Standardauthentifizierung im Authentifizierungsheader angeben. Es werden keine Anmeldeinformationen übergeben oder Benutzer zur Angabe von Anmeldeinformationen aufgefordert. Sie können diese Probleme umgehen, indem Sie den anonymen Zugriff auf die Anwendungsdateien des Berichts-Generators aktivieren.<br /><br /> Anforderungen sind erfolgreich, wenn Sie anonyme Zugriffe auf die Anwendungsdateien des Berichts-Generators zulassen, weil der Berichtsserver den Authentifizierungsheader ignoriert. Weitere Informationen zum Aktivieren des anonymen Zugriffs auf den Berichts-Generator finden Sie unter [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](../security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Nachdem ClickOnce die Anwendungsdateien abgerufen hat, öffnet der Berichts-Generator eine separate Verbindung mit einem Berichtsserver. Die Benutzer müssen ihre Anmeldeinformationen erneut eingeben, damit die Verbindung zwischen Berichts-Generator und Berichtsserver hergestellt werden kann. Der Berichts-Generator erfasst keine Anmeldeinformationen von Internet Explorer oder ClickOnce.<br /><br /> Anforderungen schlagen fehl, wenn der Berichtsserver für die Standardauthentifizierung konfiguriert wurde und der anonyme Zugriff auf die Programmdateien des Berichts-Generators nicht aktiviert wurde. Die Anforderung schlägt fehl, da in ClickOnce-Anforderungen die integrierte Sicherheit von Windows angegeben wird. Wenn Sie einen Berichtsserver für die Standardauthentifizierung konfigurieren, weist der Server die Anforderung zurück, weil darin ein unzulässiges Sicherheitspaket angegeben wird und weil sie nicht die vom Server erwarteten Anmeldeinformationen enthält.<br /><br /> Falls der Berichtsserver für die Verwendung von SharePoint im integrierten Modul konfiguriert ist und die SharePoint-Site die grundlegende Authentifizierung verwendet, erhalten Benutzer zudem die Fehlermeldung 401, wenn Sie versuchen, den Berichts-Generator mithilfe von ClickOnce auf ihren Clientcomputern zu installieren. Der Grund hierfür liegt darin, dass SharePoint ein Cookie verwendet, um eine Benutzerauthentifizierung für die Dauer der Sitzung beizubehalten, ClickOnce dieses Cookie jedoch nicht unterstützt. Wenn ein Benutzer eine ClickOnce-Anwendung wie den Berichts-Generator startet, leitet die Anwendung das Cookie nicht an SharePoint weiter, weshalb SharePoint den Zugriff verweigert und den Fehler 401 zurückgibt.<br /><br /> Sie können dieses Problem umgehen, indem Sie eine der folgenden Optionen ausprobieren:<br /><br /> Wählen Sie die **Kennwo** option, wenn Sie die Benutzeranmeldeinformationen bereitstellen.<br /><br /> Aktivieren Sie den anonymen Zugriff auf die SharePoint-Websiteauflistung.<br /><br /> Konfigurieren Sie die Umgebung, damit der Benutzer keine Anmeldeinformationen bereitstellen muss. Beispielsweise können Sie den SharePoint-Server in einer Intranetumgebung so konfigurieren, dass er Teil einer Arbeitsgruppe ist. Anschließend können Sie Benutzerkonten auf den lokalen Computern erstellen.|  
+|Standardauthentifizierung|ClickOnce unterstützt die Standardauthentifizierung nicht. Es werden keine Anforderungen formuliert, die die Standardauthentifizierung im Authentifizierungsheader angeben. Es werden keine Anmeldeinformationen übergeben oder Benutzer zur Angabe von Anmeldeinformationen aufgefordert. Sie können diese Probleme umgehen, indem Sie den anonymen Zugriff auf die Anwendungsdateien des Berichts-Generators aktivieren.<br /><br /> Anforderungen sind erfolgreich, wenn Sie anonyme Zugriffe auf die Anwendungsdateien des Berichts-Generators zulassen, weil der Berichtsserver den Authentifizierungsheader ignoriert. Weitere Informationen zum Aktivieren des anonymen Zugriffs auf den Berichts-Generator finden Sie unter [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](../security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Nachdem ClickOnce die Anwendungsdateien abgerufen hat, öffnet der Berichts-Generator eine separate Verbindung mit einem Berichtsserver. Die Benutzer müssen ihre Anmeldeinformationen erneut eingeben, damit die Verbindung zwischen Berichts-Generator und Berichtsserver hergestellt werden kann. Der Berichts-Generator erfasst keine Anmeldeinformationen von Internet Explorer oder ClickOnce.<br /><br /> Anforderungen schlagen fehl, wenn der Berichtsserver für die Standardauthentifizierung konfiguriert wurde und der anonyme Zugriff auf die Programmdateien des Berichts-Generators nicht aktiviert wurde. Die Anforderung schlägt fehl, da in ClickOnce-Anforderungen die integrierte Sicherheit von Windows angegeben wird. Wenn Sie einen Berichtsserver für die Standardauthentifizierung konfigurieren, weist der Server die Anforderung zurück, weil darin ein unzulässiges Sicherheitspaket angegeben wird und weil sie nicht die vom Server erwarteten Anmeldeinformationen enthält.<br /><br /> Falls der Berichtsserver für die Verwendung von SharePoint im integrierten Modul konfiguriert ist und die SharePoint-Site die grundlegende Authentifizierung verwendet, erhalten Benutzer zudem die Fehlermeldung 401, wenn Sie versuchen, den Berichts-Generator mithilfe von ClickOnce auf ihren Clientcomputern zu installieren. Der Grund hierfür liegt darin, dass SharePoint ein Cookie verwendet, um eine Benutzerauthentifizierung für die Dauer der Sitzung beizubehalten, ClickOnce dieses Cookie jedoch nicht unterstützt. Wenn ein Benutzer eine ClickOnce-Anwendung wie den Berichts-Generator startet, leitet die Anwendung das Cookie nicht an SharePoint weiter, weshalb SharePoint den Zugriff verweigert und den Fehler 401 zurückgibt.<br /><br /> Sie können dieses Problem umgehen, indem Sie eine der folgenden Optionen ausprobieren:<br /><br /> Wählen Sie die Option **Kennwort speichern** aus, wenn Sie Ihre Benutzer Anmelde Informationen eingeben.<br /><br /> Aktivieren Sie den anonymen Zugriff auf die SharePoint-Websiteauflistung.<br /><br /> Konfigurieren Sie die Umgebung, damit der Benutzer keine Anmeldeinformationen bereitstellen muss. Beispielsweise können Sie den SharePoint-Server in einer Intranetumgebung so konfigurieren, dass er Teil einer Arbeitsgruppe ist. Anschließend können Sie Benutzerkonten auf den lokalen Computern erstellen.|  
 |Benutzerdefiniert|Wenn Sie einen Berichtsserver für die Verwendung einer benutzerdefinierten Authentifizierung konfigurieren, wird der anonyme Zugriff auf dem Berichtsserver aktiviert, und die Anforderungen werden ohne Authentifizierungsprüfung akzeptiert.<br /><br /> Nachdem ClickOnce die Anwendungsdateien abgerufen hat, öffnet der Berichts-Generator eine separate Verbindung mit einem Berichtsserver. Die Benutzer müssen ihre Anmeldeinformationen erneut eingeben, damit die Verbindung zwischen Berichts-Generator und Berichtsserver hergestellt werden kann. Der Berichts-Generator erfasst keine Anmeldeinformationen von Internet Explorer oder ClickOnce.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Authentifizierung mit dem Berichtsserver](../security/authentication-with-the-report-server.md)   
- [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Planen der Reporting Services-und Power View Browser Unterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Starten Sie Berichts-Generator &#40;Berichts-Generator&#41;](../report-builder/start-report-builder.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   

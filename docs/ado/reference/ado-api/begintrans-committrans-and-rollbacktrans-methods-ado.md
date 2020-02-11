@@ -1,5 +1,5 @@
 ---
-title: BeginTrans, CommitTrans und RollbackTrans-Methode (ADO) | Microsoft-Dokumentation
+title: BeginTrans-, CommitTrans-und RollbackTrans-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -23,20 +23,20 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920526"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans-, CommitTrans- und RollbackTrans-Methode (ADO)
-Diese Transaktionsmethoden verwalten transaktionsverarbeitung in einem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt wie folgt:  
+Diese Transaktions Methoden verwalten die Transaktionsverarbeitung innerhalb eines [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekts wie folgt:  
   
--   **BeginTrans** beginnt eine neue Transaktion.  
+-   **BeginTrans** Startet eine neue Transaktion.  
   
--   **CommitTrans** speichert Änderungen und beendet die aktuelle Transaktion. Sie können auch eine neue Transaktion starten.  
+-   **CommitTrans** Speichert alle Änderungen und beendet die aktuelle Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.  
   
--   **RollbackTrans** verwirft alle Änderungen, die während der aktuellen Transaktion vorgenommen wurden, und beendet die Transaktion. Sie können auch eine neue Transaktion starten.  
+-   **RollbackTrans** Bricht alle Änderungen ab, die während der aktuellen Transaktion vorgenommen wurden, und beendet die Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,33 +49,33 @@ object.RollbackTrans
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **BeginTrans** aufgerufen werden können, wie eine Funktion, zurückgibt eine **lange** Variable, der angibt, der Schachtelungsebene der Transaktion.  
+ **BeginTrans** kann als eine Funktion aufgerufen werden, die eine **lange** Variable zurückgibt, die die Schachtelungs Ebene der Transaktion angibt.  
   
 #### <a name="parameters"></a>Parameter  
- *object*  
- Ein **Verbindung** Objekt.  
+ *Objekt*  
+ Ein **Verbindungs** Objekt.  
   
 ## <a name="connection"></a>Verbindung  
- Verwenden Sie diese Methoden mit einem **Verbindung** Objekt, wenn Sie speichern oder eine Reihe von Änderungen an den Quelldaten als einzelne Einheit abbrechen möchten. Z. B. um Geld zwischen Konten zu übertragen, Sie Subtraktion einen Betrag von einem, und fügen die gleiche Menge in die andere. Wenn die Updates entweder ein Fehler auftritt, Wägen Sie die Konten nicht mehr. Diese Änderungen innerhalb einer geöffneten Transaktion wird sichergestellt, dass entweder alle oder keine der Änderungen durch.  
+ Verwenden Sie diese Methoden mit einem **Verbindungs** Objekt, wenn Sie eine Reihe von Änderungen, die an den Quelldaten vorgenommen wurden, als einzelne Einheit speichern oder abbrechen möchten. Wenn Sie z. b. Geld zwischen Konten übertragen möchten, subtrahieren Sie einen Betrag von einem-Wert, und fügen Sie dem anderen denselben Betrag hinzu. Wenn ein Update fehlschlägt, werden die Konten nicht mehr ausgeglichen. Durch die Durchführung dieser Änderungen innerhalb einer geöffneten Transaktion wird sichergestellt, dass entweder alle oder keine der Änderungen durchlaufen werden.  
   
 > [!NOTE]
->  Nicht alle Anbieter unterstützen Transaktionen. Überprüfen Sie, ob der Anbieter definierte Eigenschaft "**Transaktion DDL**" wird in der **Verbindung** des Objekts [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlung, der angibt, dass der Anbieter unterstützt Transaktionen. Wenn der Anbieter keine Transaktionen unterstützt, wird das Aufrufen einer der folgenden Methoden einen Fehler zurück.  
+>  Nicht alle Anbieter unterstützen Transaktionen. Vergewissern Sie sich, dass die vom Anbieter definierte Eigenschaft "**Transaction DDL**" in der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung des **Verbindungs** Objekts angezeigt wird. Dies deutet darauf hin, dass der Anbieter Transaktionen unterstützt. Wenn der Anbieter keine Transaktionen unterstützt, wird beim Aufrufen einer dieser Methoden ein Fehler zurückgegeben.  
   
- Nach dem Aufrufen der **BeginTrans** -Methode der Anbieter wird nicht mehr sofort ein Commit ausgeführt bis zum Aufruf von **CommitTrans** oder **RollbackTrans** zum Beenden der die Transaktion.  
+ Nachdem Sie die **BeginTrans** -Methode aufgerufen haben, führt der Anbieter die von Ihnen vorgenommenen Änderungen nicht mehr sofort aus, bevor Sie **CommitTrans** oder **RollbackTrans** aufrufen, um die Transaktion zu beenden.  
   
- Für Anbieter, die Unterstützung von geschachtelten Transaktionen, die Aufrufen der **BeginTrans** Methode innerhalb einer geöffneten Transaktion startet, eine neue, geschachtelte Transaktion. Der Rückgabewert gibt an, der Schachtelungsebene: der Rückgabewert von "1" gibt an, Sie haben eine Transaktion der obersten Ebene geöffnet (d. h. die Transaktion ist nicht geschachtelt innerhalb einer anderen Transaktion), "2" gibt an, dass Sie eine Transaktion der zweiten Ebene (a geöffnet haben Transaktion geschachtelt innerhalb einer Transaktion der obersten Ebene), und so weiter. Aufrufen von **CommitTrans** oder **RollbackTrans** wirkt sich auf nur die zuletzt geöffnete Transaktion; müssen Sie schließen oder Rollback für die aktuelle Transaktion aus, bevor Sie alle auf höherer Ebene Transaktionen auflösen können.  
+ Für Anbieter, die geschachtelte Transaktionen unterstützen, wird beim Aufrufen der **BeginTrans** -Methode innerhalb einer geöffneten Transaktion eine neue geschachtelte Transaktion gestartet. Der Rückgabewert gibt die Schachtelungs Ebene an: der Rückgabewert "1" gibt an, dass Sie eine Transaktion der obersten Ebene geöffnet haben (d. h., die Transaktion ist nicht in einer anderen Transaktion geschachtelt), "2" zeigt an, dass Sie eine Transaktion der zweiten Ebene geöffnet haben (a Transaktion, die in einer Transaktion der obersten Ebene geschachtelt ist usw. Der Aufruf von **CommitTrans** oder **RollbackTrans** wirkt sich nur auf die zuletzt geöffnete Transaktion aus. Sie müssen die aktuelle Transaktion schließen oder zurücksetzen, bevor Sie Transaktionen höherer Ebene auflösen können.  
   
- Aufrufen der **CommitTrans** Methode speichert die Änderungen in einer geöffneten Transaktion für die Verbindung, und beendet die Transaktion. Aufrufen der **RollbackTrans** Methode kehrt alle Änderungen innerhalb einer geöffneten Transaktion und beendet die Transaktion. Beide Methoden aufrufen, wenn es keine Transaktion geöffnet ist, wird ein Fehler generiert.  
+ Durch Aufrufen der **CommitTrans** -Methode werden Änderungen gespeichert, die innerhalb einer geöffneten Transaktion für die Verbindung vorgenommen werden, und die Transaktion wird beendet. Durch Aufrufen der **RollbackTrans** -Methode werden alle Änderungen, die innerhalb einer geöffneten Transaktion vorgenommen wurden, zurückgesetzt und die Transaktion beendet. Wenn Sie eine der Methoden aufrufen, wenn keine geöffnete Transaktion vorhanden ist, wird ein Fehler generiert.  
   
- Je die **Verbindung** des Objekts [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) Eigenschaft, die durch Aufrufen der **CommitTrans** oder **RollbackTrans** Methoden möglicherweise eine neue Transaktion wird automatisch gestartet. Wenn die **Attribute** -Eigenschaftensatz auf **AdXactCommitRetaining**, des Anbieters startet automatisch eine neue Transaktion nach einem **CommitTrans** aufrufen. Wenn die **Attribute** -Eigenschaftensatz auf **AdXactAbortRetaining**, des Anbieters startet automatisch eine neue Transaktion nach einem **RollbackTrans** aufrufen.  
+ Abhängig von der Eigenschaft [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) des **Verbindungs** Objekts wird durch das Aufrufen der **CommitTrans** -Methode oder der **RollbackTrans** -Methode möglicherweise automatisch eine neue Transaktion gestartet. Wenn die Eigenschaft **Attribute** auf **adxactcommitbehält**festgelegt ist, startet der Anbieter nach einem **CommitTrans** -Rückruf automatisch eine neue Transaktion. Wenn die Eigenschaft **Attribute** auf **adxactabortretribute**festgelegt ist, startet der Anbieter nach einem **RollbackTrans** -Rückruf automatisch eine neue Transaktion.  
   
-## <a name="remote-data-service"></a>Remote Data Service  
- Die **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden sind nicht verfügbar für eine clientseitige **Verbindung** Objekt.  
+## <a name="remote-data-service"></a>Remote Datendienst  
+ Die Methoden **BeginTrans**, **CommitTrans**und **RollbackTrans** sind auf einem Client seitigen **Verbindungs** Objekt nicht verfügbar.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [BeginTrans, CommitTrans und RollbackTrans-Methoden – Beispiel (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans, CommitTrans und RollbackTrans-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [BeginTrans-, CommitTrans-und RollbackTrans-Methoden Beispiel (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans-, CommitTrans-und RollbackTrans-Methoden Beispiel (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

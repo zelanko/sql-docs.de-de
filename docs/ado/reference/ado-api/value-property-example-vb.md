@@ -1,5 +1,5 @@
 ---
-title: Wert der Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für Wert Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938784"
 ---
 # <a name="value-property-example-vb"></a>Value-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt die [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft mit dem [Feld](../../../ado/reference/ado-api/field-object.md) und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte durch anzeigen und die Eigenschaftswerte für die ***Mitarbeiter*** Tabelle.  
+Dieses Beispiel veranschaulicht die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft mit [Feld](../../../ado/reference/ado-api/field-object.md) -und [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekten, indem Feld-und Eigenschaftswerte für die ***Employees*** -Tabelle angezeigt werden.  
   
 ```  
 'BeginValueVB  
@@ -100,7 +100,7 @@ End Sub
 'EndValueVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

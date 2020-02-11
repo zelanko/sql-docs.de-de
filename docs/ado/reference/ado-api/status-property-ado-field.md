@@ -1,5 +1,5 @@
 ---
-title: Status-Eigenschaft (ADO Field) | Microsoft-Dokumentation
+title: Status-Eigenschaft (ADO-Feld) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,35 +18,35 @@ ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930838"
 ---
 # <a name="status-property-ado-field"></a>Status-Eigenschaft (ADO-Feld)
-Gibt den Status einer [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
+Gibt den Status eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts an.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt eine [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) Wert. Der Standardwert ist **AdFieldOK**.  
+ Gibt einen [fieldstatuusenum](../../../ado/reference/ado-api/fieldstatusenum.md) -Wert zurück. Der Standardwert ist **adFieldOK**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="record-field-status"></a>Datensatzstatus-Feld  
- Ändert sich der Wert des eine **Feld** Objekt in der Fields-Sammlung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt werden zwischengespeichert, bis des Objekts des [Update](../../../ado/reference/ado-api/update-method.md) Methode wird aufgerufen. Wenn die Änderung an der Wert des Felds einen Fehler verursacht, löst OLE DB zu diesem Zeitpunkt den Fehler **DB_E_ERRORSOCCURRED** (2147749409). Die Status-Eigenschaft aller der **Feld** Objekte in der **Felder** -Auflistung, die den Fehler verursacht hat, enthält einen Wert aus der [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) , beschreibt die Ursache des das Problem.  
+## <a name="record-field-status"></a>Status des Daten Satz Felds  
+ Änderungen am Wert eines **Feld** Objekts in der Fields-Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts werden zwischengespeichert, bis die [Update](../../../ado/reference/ado-api/update-method.md) -Methode des Objekts aufgerufen wird. Wenn die Änderung an dem Wert des Felds einen Fehler verursacht hat, löst OLE DB den Fehler **DB_E_ERRORSOCCURRED** (2147749409) aus. Die Status-Eigenschaft aller **Feld** Objekte in der **Fields** -Auflistung, die den Fehler verursacht hat, enthält einen Wert aus dem [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) , der die Ursache des Problems beschreibt.  
   
- Zur Verbesserung der Leistung, Hinzufügungen und löschungen von der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Sammlungen von der **Datensatz** Objekt werden zwischengespeichert, bis die **Update** -Methode aufgerufen wird, und klicken Sie dann die Änderungen werden in einer Batchaktualisierung optimistische vorgenommen. Wenn die **Update** -Methode nicht aufgerufen wird, der Server wird nicht aktualisiert. Wenn alle Updates ein Fehler auftritt, und klicken Sie dann ein OLE DB-Anbieter-Fehler (DB_E_ERRORSOCCURRED) zurückgegeben wird und die **Status** Eigenschaft gibt an, die kombinierten Werte des Statuscodes Vorgang und Fehler. Z. B. **AdFieldPendingInsert OR AdFieldPermissionDenied**. Die **Status** -Eigenschaft für jedes **Feld** können verwendet werden, um zu bestimmen, warum die **Feld** wurde nicht hinzugefügt, geändert oder gelöscht.  
+ Um die Leistung zu verbessern, werden Ergänzungen und Löschvorgänge für die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistungen des **Datensatz** -Objekts bis zum Aufruf der **Update** -Methode zwischengespeichert, und die Änderungen werden dann in einem optimistischen Batch Update vorgenommen. Wenn die **Update** -Methode nicht aufgerufen wird, wird der Server nicht aktualisiert. Wenn ein Update fehlschlägt, wird ein Fehler des OLE DB Anbieters (DB_E_ERRORSOCCURRED) zurückgegeben, und die **Status** -Eigenschaft gibt die kombinierten Werte des Vorgangs und des Fehler Status Codes an. Beispielsweise **adfieldpdinginsert oder adfieldpermissiondenied**. Mithilfe der Eigenschaft **Status** für jedes **Feld** können Sie feststellen, warum das **Feld** nicht hinzugefügt, geändert oder gelöscht wurde.  
   
- Viele Arten von Problemen beim Hinzufügen, ändern oder Löschen einer **Feld** gemeldet werden, über die **Status** Eigenschaft. Wenn der Benutzer löscht z. B. eine **Feld**, für die Löschung markiert ist die **Felder** Auflistung. Wenn die nachfolgenden **Update** gibt einen Fehler zurück, da der Benutzer versucht hat, löschen Sie eine **Feld** für die sie verfügen nicht über die Berechtigung, die **Feld** müssen eine  **Status** von **AdFieldPermissionDenied OR AdFieldPendingDelete**. Aufrufen der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode Wiederherstellungen ursprünglichen Werte und legt die **Status** zu **AdFieldOK**.  
+ Viele Arten von Problemen, die beim Hinzufügen, ändern oder Löschen eines **Felds** auftreten, werden über die Eigenschaft **Status** gemeldet. Wenn der Benutzer z. b. ein **Feld**löscht, wird er aus der **Fields** -Auflistung zum Löschen markiert. Wenn bei der nachfolgenden **Aktualisierung** ein Fehler zurückgegeben wird, weil der Benutzer versucht hat, ein **Feld** zu löschen, für das Sie nicht über die erforderliche Berechtigung verfügen, hat das **Feld** den **Status** **adfieldpermissiondenied oder adfieldpdingdelete**. Durch Aufrufen der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode werden ursprüngliche Werte wieder hergestellt, und der **Status** wird auf **adFieldOK**festgelegt.  
   
- Auf ähnliche Weise die **Update** Methode möglicherweise einen Fehler zurück, da eine neue **Feld** hinzugefügt und einen Ungültiger Wert angegeben wurde. In diesem Fall die neue **Feld** werden in der **Felder** Auflistung und haben den Status der **AdFieldPendingInsert** und vielleicht **AdFieldCantCreate** (abhängig von Ihrem Anbieter). Sie können einen geeigneten Wert angeben, für die neue **Feld** , und rufen Sie **Update** erneut aus.  
+ Entsprechend gibt die **Update** -Methode möglicherweise einen Fehler zurück, da ein neues **Feld** hinzugefügt wurde und ein unzulässiger Wert angegeben wurde. In diesem Fall ist das neue **Feld** in der **Fields** -Auflistung enthalten und hat den Status **adfieldpdinginsert** und möglicherweise **adfieldcantcreate** (je nach Anbieter). Sie können einen geeigneten Wert für das neue **Feld** angeben und **Update** erneut abrufen.  
   
-## <a name="recordset-field-status"></a>Recordset-Feldstatus  
- Ändert sich der Wert des eine **Feld** Objekt in der Fields-Sammlung, der entweder ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) werden zwischengespeichert, bis des Objekts des [Update](../../../ado/reference/ado-api/update-method.md) Methode wird aufgerufen. Wenn die Änderung an der Wert des Felds einen Fehler verursacht, löst OLE DB zu diesem Zeitpunkt den Fehler **DB_E_ERRORSOCCURRED** (2147749409). Die Status-Eigenschaft aller der **Feld** Objekte in der **Felder** -Auflistung, die den Fehler verursacht hat, enthält einen Wert aus der [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) , beschreibt die Ursache des das Problem.  
+## <a name="recordset-field-status"></a>Status des Recordset-Felds  
+ Änderungen am Wert eines **Feld** Objekts in der Fields-Auflistung eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) werden zwischengespeichert, bis die [Update](../../../ado/reference/ado-api/update-method.md) -Methode des Objekts aufgerufen wird. Wenn die Änderung an dem Wert des Felds einen Fehler verursacht hat, löst OLE DB den Fehler **DB_E_ERRORSOCCURRED** (2147749409) aus. Die Status-Eigenschaft aller **Feld** Objekte in der **Fields** -Auflistung, die den Fehler verursacht hat, enthält einen Wert aus dem [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) , der die Ursache des Problems beschreibt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Status-Eigenschaft – Beispiel (Field) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Status Eigenschafts Beispiel (Feld) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Status-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

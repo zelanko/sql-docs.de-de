@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu ADOX | Microsoft-Dokumentation
+title: ADOX-Grundlagen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,28 +13,28 @@ ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923265"
 ---
 # <a name="adox-fundamentals"></a>ADOX-Grundlagen
-Microsoft® ActiveX® Data Objects Extensions für Datendefinitionssprache und Sicherheit (ADOX) ist eine Erweiterung der ADO-Objekte und -Programmiermodell verwendet. ADOX enthält Objekte für die Schema-Erstellung und Änderung sowie Sicherheit. Da es sich um eine schemabearbeitung Vorgehensweise objektbasiert ist, können Sie Code schreiben, die für verschiedene Datenquellen unabhängig von deren systemeigenen Syntax verwendet werden.  
+Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) ist eine Erweiterung der ADO-Objekte und des Programmiermodells. ADOX umfasst Objekte für das Erstellen und Ändern von Schemas sowie für die Sicherheit. Da es sich um einen objektbasierten Ansatz für die Schema Bearbeitung handelt, können Sie Code schreiben, der unabhängig von den Unterschieden in der nativen Syntax für verschiedene Datenquellen verwendet werden kann.  
   
- ADOX ist eine zugehörige Bibliothek mit den Kernobjekten für ADO. Er macht zusätzliche Objekte zum Erstellen, ändern und Löschen von Schemaobjekten, z. B. Tabellen und Prozeduren verfügbar. Darüber hinaus wird die Sicherheitsobjekte, um Benutzer und Gruppen verwalten und zu erteilen und Widerrufen von Berechtigungen für Objekte enthält.  
+ ADOX ist eine begleitende Bibliothek zu den Kern-ADO-Objekten. Es macht zusätzliche Objekte zum Erstellen, ändern und Löschen von Schema Objekten verfügbar, z. b. Tabellen und Prozeduren. Außerdem enthält es Sicherheits Objekte zum Verwalten von Benutzern und Gruppen sowie zum erteilen und widerrufen von Berechtigungen für Objekte.  
   
- Um ADOX mit Ihrem Entwicklungs-Tool verwenden zu können, sollten Sie einen Verweis auf die Typbibliothek ADOX einrichten. Die Beschreibung der ADOX-Bibliothek ist "Microsoft ADO Ext-Sicherheit". Der Name der ADOX-Bibliothek ist Msadox.dll, und die Programm-ID (ProgID) ist "ADOX". Weitere Informationen zum Einrichten der Verweise auf Bibliotheken finden Sie in der Dokumentation zu Ihrem Entwicklungstool.  
+ Um ADOX mit dem Entwicklungs Tool zu verwenden, sollten Sie einen Verweis auf die ADOX-Typbibliothek einrichten. Die Beschreibung der ADOX-Bibliothek lautet "Microsoft ADO Ext. for DDL and Security". Der Name der ADOX-Bibliotheksdatei lautet Msadox. dll, und die Programm-ID (ProgID) ist "ADOX". Weitere Informationen zum Einrichten von Verweisen auf Bibliotheken finden Sie in der Dokumentation zu Ihrem Entwicklungs Tool.  
   
- Microsoft OLE DB-Anbieter für Microsoft Jet-Datenbank-Engine bietet vollständige Unterstützung für ADOX. Bestimmte Features des ADOX möglicherweise je nach Datenanbieter nicht unterstützt werden.  
+ Der Microsoft OLE DB-Anbieter für Microsoft Jet Datenbank-Engine unterstützt ADOX vollständig. Bestimmte Funktionen von ADOX werden je nach Datenanbieter möglicherweise nicht unterstützt.  
   
- In diesem Dokument wird davon ausgegangen, Kenntnisse der Microsoft® Visual Basic® Sprache und eine allgemeine Kenntnisse der ADO-Programmierung. Weitere Informationen zu ADO, finden Sie unter den [ADO Programmer's Guide](../../../ado/guide/ado-programmer-s-guide.md). Weitere grundlegende Informationen zu ADOX finden Sie unter den folgenden Themen:  
+ In diesem Dokument wird davon ausgegangen, dass Sie über die Microsoft® Visual Basic®-Programmiersprache und allgemeine Kenntnisse von ADO verfügen. Weitere Informationen zu ADO finden Sie im [ADO-Programmier Handbuch](../../../ado/guide/ado-programmer-s-guide.md). Weitere Informationen zu ADOX finden Sie in den folgenden Themen:  
   
 -   [ADOX-Objektmodell](../../../ado/reference/adox-api/adox-object-model.md)  
   
--   [ADO-Objekte](../../../ado/reference/adox-api/adox-objects.md)  
+-   [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md)  
   
--   [ADOX-Auflistungen](../../../ado/reference/adox-api/adox-collections.md)  
+-   [ADOX-Collections](../../../ado/reference/adox-api/adox-collections.md)  
   
 -   [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)  
   
@@ -42,14 +42,14 @@ Microsoft® ActiveX® Data Objects Extensions für Datendefinitionssprache und S
   
 -   [ADOX-Beispiele](../../../ado/reference/adox-api/adox-code-examples.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADOX-API-Referenz](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX-Codebeispiele](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX-Auflistungen](../../../ado/reference/adox-api/adox-collections.md)   
+ [ADOX-Code Beispiele](../../../ado/reference/adox-api/adox-code-examples.md)   
+ [ADOX-Sammlungen](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX-Enumerationskonstanten](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
  [ADOX-Methoden](../../../ado/reference/adox-api/adox-methods.md)   
  [ADOX-Objektmodell](../../../ado/reference/adox-api/adox-object-model.md)   
- [ADO-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
+ [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
  [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../../../ado/guide/ado-programmer-s-guide.md)
+ [ADO-Programmierhandbuch](../../../ado/guide/ado-programmer-s-guide.md)

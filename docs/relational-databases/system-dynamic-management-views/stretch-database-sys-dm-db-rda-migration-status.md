@@ -1,5 +1,5 @@
 ---
-title: dm_db_rda_migration_status (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_db_rda_migration_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,33 +19,33 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937065"
 ---
-# <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - dm_db_rda_migration_status
+# <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jeden Batch von migrierten Daten aus jeder Stretch-aktivierte Tabelle auf der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Batches werden durch ihre Start- und Endzeit identifiziert.  
+  Enthält eine Zeile für jeden Batch von migrierten Daten aus jeder Stretch-aktivierten Tabelle in der lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von. Batches werden anhand ihrer Startzeit und Endzeit identifiziert.  
   
- **dm_db_rda_migration_status** bezieht sich auf der aktuellen Datenbank verwendet. Stellen Sie sicher, dass Sie im Kontext Datenbank der Stretch-fähigen Tabellen sind für den Migrationsstatus angezeigt werden sollen.  
+ **sys. dm_db_rda_migration_status** ist auf den aktuellen Daten Bank Kontext beschränkt. Stellen Sie sicher, dass Sie sich im Daten Bank Kontext der Stretch-enable-Tabellen befinden, für die Sie den Migrationsstatus anzeigen möchten.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], die Ausgabe des **dm_db_rda_migration_status** ist auf 200 Zeilen beschränkt.  
+ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ist die Ausgabe von **sys. dm_db_rda_migration_status** auf 200 Zeilen beschränkt.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|Die ID der Tabelle aus der Zeilen migriert wurden.|  
-|**database_id**|**int**|Die ID der Datenbank aus der Zeilen migriert wurden.|  
-|**migrated_rows**|**bigint**|Die Anzahl der Zeilen, die in diesem Batch migriert werden.|  
-|**start_time_utc**|**datetime**|Die UTC-Zeit, an dem der Batch gestartet wurde.|  
-|**end_time_utc**|**datetime**|Die UTC-Zeit, an dem der Batch beendet.|  
-|**error_number**|**int**|Wenn der Batch, die Fehlernummer des Fehlers ein Fehler, die aufgetreten sind auftritt; andernfalls Null.|  
-|**error_severity**|**int**|Wenn der Batch, den Schweregrad des Fehlers ein Fehler, die aufgetreten sind auftritt; andernfalls Null.|  
-|**error_state**|**int**|Wenn der Batch, den Status des Fehlers ein Fehler, die aufgetreten sind auftritt; andernfalls Null.<br /><br /> Die **Error_state** gibt an, die Bedingung oder den Speicherort, in dem der Fehler aufgetreten ist.|  
+|**table_id**|**int**|Die ID der Tabelle, aus der die Zeilen migriert wurden.|  
+|**database_id**|**int**|Die ID der Datenbank, aus der die Zeilen migriert wurden.|  
+|**migrated_rows**|**BIGINT**|Die Anzahl der in diesem Batch migrierten Zeilen.|  
+|**start_time_utc**|**datetime**|Die UTC-Zeit, zu der der Batch gestartet wurde.|  
+|**end_time_utc**|**datetime**|Die UTC-Zeit, zu der der Batch beendet wurde.|  
+|**error_number**|**int**|Wenn der Batch fehlschlägt, wird die Fehlernummer des aufgetretenen Fehlers angezeigt. andernfalls NULL.|  
+|**error_severity**|**int**|Wenn der Batch fehlschlägt, wird der Schweregrad des aufgetretenen Fehlers verursacht. andernfalls NULL.|  
+|**error_state**|**int**|Wenn der Batch fehlschlägt, wird der Status des aufgetretenen Fehlers angezeigt. andernfalls NULL.<br /><br /> Der **ERROR_STATE** gibt die Bedingung oder den Speicherort an, an dem der Fehler aufgetreten ist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

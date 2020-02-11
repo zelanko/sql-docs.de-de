@@ -18,10 +18,10 @@ ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091893"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>Sichern und Wiederherstellen von Tabellen (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68091893"
  Enthält eine Zeile für jede markierte Transaktion, für die ein Commit ausgeführt wurde.  
   
  [restorefile](../../relational-databases/system-tables/restorefile-transact-sql.md)  
- Enthält eine Zeile für jede wiederhergestellte Datei. Dazu gehören die Dateien, die indirekt nach Dateigruppennamen wiederhergestellt werden.  
+ Enthält eine Zeile für jede wiederhergestellte Datei. Hierzu gehören Dateien, die indirekt nach Dateigruppen Namen wieder hergestellt wurden.  
   
  [restorefilegroup](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)  
  Enthält eine Zeile für jede wiederhergestellte Dateigruppe.  

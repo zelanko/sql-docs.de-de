@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Öffnen von Tabellen (Textdateitreiber) | Microsoft-Dokumentation
+title: Erstellen und Öffnen von Tabellen (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,11 +13,11 @@ ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b36c02d772682088a799cfca66f5bbf3e169a67f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096544"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>Erstellen und Öffnen von Tabellen (Textdateitreiber)
-Wenn der Text-Treiber verwendet wird, wird eine neue Tabelle mit dem angegebenen Format in "Odbcinst.ini" erstellt. Wenn nicht angegeben, werden die Tabellen im CSVDELIMITED Format erstellt. Standardmäßig Spalten standardmäßig auf 11 Zeichen und FLOAT-Spalten standardmäßig 22 Zeichen. DATE-Spalten verwenden Sie das Format JJJJ-MM-TT. CHAR und LONGCHAR Spalten sind die Breite in der CREATE-Anweisung angegeben.
+Wenn der Text Treiber verwendet wird, wird eine neue Tabelle mit dem in "Odbcinst. ini" angegebenen Format erstellt. Wenn keine Angabe besteht, werden Tabellen im csvdelizierten Format erstellt. Standardmäßig werden ganzzahlige Spalten standardmäßig 11 Zeichen und float-Spalten standardmäßig 22 Zeichen lang angezeigt. Für Datums Spalten wird das Format yyyy-mm-dd verwendet. CHAR-und LONGCHAR-Spalten sind die in der CREATE-Anweisung angegebene Breite.

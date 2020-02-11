@@ -1,5 +1,5 @@
 ---
-title: VARCHAR-Spaltengröße (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
+title: Varchar-Spaltengröße (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a3156c3f71eb4b3f7b8319da5d5fec7514f08b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087957"
 ---
 # <a name="varchar-column-size-odbc-driver-for-oracle"></a>VARCHAR-Spaltengröße (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- In 8 wurde die maximale Größe einer VARCHAR-Spalte von 2000 auf 4.000 Byte erhöht. Die Oracle-Clientsoftware 7.3.x hat keine Möglichkeit, einen Parameterwert, der größer als 2000 Bytes zu binden. Aus diesem Grund, wenn Sie eine Tabelle mit einer VARCHAR-Spalte, der größer als 2000 Bytes erstellen, werden Sie zum Ausführen von parametrisierten einfügungen, Updates, löschungen und Abfragen dafür mit Daten, die überschreitet den Grenzwert von 2000-Byte-der-Clientsoftware kann nicht. Da sowohl der ODBC-Treiber für Oracle der OLE DB-Anbieter für Oracle verwenden parametrisierte einfügungen, Updates, löschungen und Abfragen, werden sie in diesem Fall ORA-01026 Fehler gemeldet. Daten, die innerhalb der Beschränkungen, die von der Oracle-Clientsoftware funktioniert. Um diese 2000-Byte-Grenze zu vermeiden, müssen Sie die Clientsoftware auf 8 aktualisieren (8.0.4.1.1c oder höher).
+ In Oracle8 wurde die maximale Größe einer varchar-Spalte von 2000 auf 4000 Byte angehoben. Die Oracle 7.3. x-Client Software kann einen Parameterwert, der größer als 2000 Byte ist, nicht binden. Wenn Sie also eine Tabelle mit einer Spalte vom Typ "varchar" mit mehr als 2000 Bytes erstellen, können Sie keine parametrisierten Einfügungen, Updates, Löschungen und Abfragen mit Daten ausführen, die das 2000-Byte-Limit der Client Software überschreiten. Da sowohl der ODBC-Treiber für Oracle als auch der OLE DB-Anbieter für Oracle parametrisierte Einfügungen, Updates, Löschungen und Abfragen verwenden, werden in diesem Fall Ora-01026-Fehler gemeldet. Daten, die sich innerhalb der von der Oracle-Client Software erzwungenen Grenzwerte befinden, funktionieren. Um dieses 2000-Byte-Limit zu vermeiden, müssen Sie die Client Software auf Oracle8 (8.0.4.1.1 c oder höher) aktualisieren.

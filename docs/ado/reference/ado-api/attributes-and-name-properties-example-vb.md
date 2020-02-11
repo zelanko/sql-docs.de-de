@@ -1,5 +1,5 @@
 ---
-title: Attribute und Name Eigenschaften – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für Attribute und namens Eigenschaften (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920580"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes- und Name-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet den [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft, um die Namen der einzelnen anzuzeigen **Feld** und **Eigenschaft** Objekt.  
+In diesem Beispiel wird der Wert der Eigenschaft [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) für [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md)-, [Feld](../../../ado/reference/ado-api/field-object.md)-und [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekte angezeigt. Er verwendet die [Name](../../../ado/reference/ado-api/name-property-ado.md) -Eigenschaft, um den Namen der einzelnen **Felder** und **Eigenschaften** Objekte anzuzeigen.  
   
 ```  
 ' BeginAttributesVB  
@@ -126,9 +126,9 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Attributes-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Attribute-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
+ [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Name-Eigenschaft (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Charset-Eigenschaft (ADO) | Microsoft-Dokumentation
+title: CharSet-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920081"
 ---
 # <a name="charset-property-ado"></a>Charset-Eigenschaft (ADO)
-Gibt den Zeichensatz in den der Inhalt einer [Stream](../../../ado/reference/ado-api/stream-object-ado.md) übersetzt werden soll, für die Speicherung im internen Puffer von der **Stream** Objekt.  
+Gibt den Zeichensatz an, in den der Inhalt eines [Textstreams](../../../ado/reference/ado-api/stream-object-ado.md) für den Speicher im internen Puffer des **Streamobjekts** übersetzt werden soll.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt eine **Zeichenfolge** Wert, der angibt, das Zeichen festgelegt werden, in dem der Inhalt des der **Stream** übersetzt werden. Der Standardwert ist **Unicode**. Zulässige Werte sind typische Zeichenfolgen, die über die Schnittstelle übergeben werden, als Zeichen Satz Internetnamen (z. B. "Iso-8859-1", "Windows-1252" und So weiter). Eine Liste der Namen das Zeichen, die von einem System bekannt sind, finden Sie unter dem Unterschlüssel des HKEY_CLASSES_ROOT\MIME\Database\Charset in der Windows-Registrierung.  
+ Legt einen **Zeichen** folgen Wert fest, der den Zeichensatz angibt, in den der Inhalt des **Streams** übersetzt wird, oder gibt ihn zurück. Der Standardwert ist **Unicode**. Zulässige Werte sind typische Zeichen folgen, die über die Schnittstelle als Namen von Internet Zeichensätzen übergeben werden (z. b. "ISO-8859-1", "Windows-1252" usw.). Eine Liste der Namen der Zeichensätze, die von einem System bekannt sind, finden Sie in den unter Schlüsseln HKEY_CLASSES_ROOT \mime\database\charset in der Windows-Registrierung.  
   
-## <a name="remarks"></a>Hinweise  
- In einem Text **Stream** Textdaten befindet sich in den Zeichensatz, der vom angegebenen Objekt der **Charset** Eigenschaft. Der Standardwert ist Unicode. Die **Charset** Eigenschaft wird verwendet, für die Konvertierung von Daten in die **Stream** oder kommenden aus der **Stream**. Z. B. wenn die **Stream** enthält ISO-8859-1-Daten als auch, dass Daten, auf ein BSTR kopiert werden, das **Stream** Objekt die Daten in Unicode konvertiert. Das Gegenteil trifft ebenfalls zu.  
+## <a name="remarks"></a>Bemerkungen  
+ In einem **Textstreamobjekt** werden Textdaten im Zeichensatz gespeichert, der durch die **CharSet** -Eigenschaft angegeben wird. Der Standardwert ist Unicode. Die **CharSet** -Eigenschaft wird zum Umrechnen von Daten verwendet, die in den **Stream** fließen oder aus dem **Stream**stammen. Wenn der **Stream** beispielsweise ISO-8859-1-Daten enthält und diese Daten in ein BSTR-Objekt kopiert werden, konvertiert das **Stream** -Objekt die Daten in Unicode. Umgekehrt trifft dies auch zu.  
   
- Für eine offene **Stream**, die aktuelle [Position](../../../ado/reference/ado-api/position-property-ado.md) muss am Anfang der **Stream** (0) festlegen können **Charset**.  
+ Bei einem geöffneten **Stream**muss sich die aktuelle [Position](../../../ado/reference/ado-api/position-property-ado.md) am Anfang des **Streams** (0) befinden, damit **CharSet**festgelegt werden kann.  
   
- **CharSet** wird verwendet, nur mit Text **Stream** Objekte ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**). Diese Eigenschaft wird ignoriert, wenn **Typ** ist **AdTypeBinary**.  
+ **CharSet** wird nur mit **textstreamobjekten** ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) : **adtypetext**) verwendet. Diese Eigenschaft wird ignoriert, wenn der **Typ** **adTypeBinary**ist.  
   
- Ein Codebeispiel finden Sie unter [Schritt 4: Auffüllen des Texfelds "Details"](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
+ Ein Codebeispiel finden Sie unter [Step 4: Auffüllen des Details-Textfelds](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

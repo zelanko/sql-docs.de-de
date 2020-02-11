@@ -1,5 +1,5 @@
 ---
-title: Unterschlüssel für Standardtreiber default | Microsoft-Dokumentation
+title: Standardtreiber-Unterschlüssel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,26 @@ ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e82644d3bddab5d4f6fde6f7103bd9731872bab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094191"
 ---
 # <a name="default-driver-subkey"></a>Unterschlüssel für Standardtreiber
-Der Standard-Unterschlüssel enthält einen einzelnen Wert, der den Treiber, die von der Standarddatenquelle verwendete beschreibt. Das Format dieses Werts wird in der folgenden Tabelle dargestellt.  
+Der Standard Unterschlüssel enthält einen einzelnen Wert, der den von der Standarddaten Quelle verwendeten Treiber beschreibt. Das Format dieses Werts ist in der folgenden Tabelle dargestellt.  
   
-|Name|Datentyp|Daten|  
+|Name|Datentyp|Data|  
 |----------|---------------|----------|  
-|**Treiber**|REG_SZ|*Standard-Treiber-Beschreibung*|  
+|**Treiber**|REG_SZ|*Default-Driver-Description*|  
   
- Die *Treiber standardbeschreibung* Name ist identisch mit den Namen des Werts unter der ODBC-Treiber-Unterschlüssel, die den Treiber beschreibt.  
+ Der Name der *Standardtreiber Beschreibung* ist mit dem Namen des Werts unter dem Unterschlüssel ODBC-Treiber identisch, der den Treiber beschreibt.  
   
- Beispielsweise, wenn die Standarddatenquelle SQL Server-Treiber verwendet, der Wert unter dem Unterschlüssel Standardwert möglicherweise:  
+ Wenn die Standarddaten Quelle z. b. den SQL Server-Treiber verwendet, kann der Wert unter dem Standard Unterschlüssel wie folgt lauten:  
   
 ```  
 Driver : REG_SZ : SQL Server  
 ```  
   
 > [!NOTE]  
->  Der Standardtreiber, die innerhalb des Unterschlüssels "Standard" kann entweder ein Standardbenutzer DSN oder einen Standardsystem-DSN verweisen. Wenn sowohl ein Standardsystem als auch eine Standardbenutzer-DSN DSN erstellt wurden, der Standardtreiber richtet sich nach der DSN, der zuletzt erstellt wurde, damit es ein gültiger Eintrag für den DSN möglicherweise nicht, die zuerst erstellt wurde.
+>  Der Standardtreiber, der im Standard Unterschlüssel enthalten ist, kann entweder auf einen Standardbenutzer-DSN oder auf einen standardmäßigen System-DSN verweisen. Wenn sowohl ein Standardbenutzer-DSN als auch ein standardmäßiger System-DSN erstellt wurde, wird der Standardtreiber von dem zuletzt erstellten DSN festgelegt, sodass es sich möglicherweise nicht um einen gültigen Eintrag für den DSN handelt, der zuerst erstellt wurde.

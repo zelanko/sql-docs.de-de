@@ -1,5 +1,5 @@
 ---
-title: Sys.Schemas (Transact-SQL) | Microsoft-Dokumentation
+title: sys. Schemas (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018339"
 ---
-# <a name="schemas-catalog-views---sysschemas"></a>Schemas Katalogsichten – sys.schemas
+# <a name="schemas-catalog-views---sysschemas"></a>Schemas-Katalog Sichten-sys. Schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Enthält eine Zeile für jedes Datenbankschema.  
@@ -35,27 +35,27 @@ ms.locfileid: "68018339"
 > [!NOTE]  
 >  Datenbankschemas unterscheiden sich von XML-Schemas, die verwendet werden, um das Inhaltsmodell von XML-Dokumenten zu definieren.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Der Name des Schemas. Ist in der Datenbank eindeutig.|  
+|**name**|**sysname**|Name des Schemas. Ist in der Datenbank eindeutig.|  
 |**schema_id**|**int**|Die ID des Schemas. Ist in der Datenbank eindeutig.|  
 |**principal_id**|**int**|Die ID des Prinzipals, der das Schema besitzt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 Datenbankschemas dienen als Namespaces oder Container für Objekte, wie z. B. Tabellen, Sichten, Prozeduren und Funktionen, die in der Katalogsicht **sys.objects** zu finden sind.  
 
-Jedes Schema verfügt über einen Besitzer. Der Besitzer ist ein sicherheitsrelevanter [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Jedes Schema weist einen Besitzer auf. Der Besitzer ist ein Sicherheits [Prinzipal](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
 
 [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 
-[Katalogsichten für Schemas &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+[Schemas-Katalog Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
 
-[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

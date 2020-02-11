@@ -1,5 +1,5 @@
 ---
-title: OpenSchema-Methode – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für OpenSchema-Methode (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c511e9328bb64928a027df5f9ff72bf93da17a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931889"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema-Methode – Beispiel (VC++)
-Dieses Beispiel verwendet die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode zum Anzeigen der den Namen und Typ der einzelnen Tabellen in der ***Pubs*** Datenbank.  
+In diesem Beispiel wird die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode verwendet, um den Namen und den Typ der einzelnen Tabellen in der ***Pubs*** -Datenbank anzuzeigen.  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -193,5 +193,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)

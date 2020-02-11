@@ -1,5 +1,5 @@
 ---
-title: Arten von Änderungen | Microsoft-Dokumentation
+title: Typen von Änderungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087807"
 ---
 # <a name="types-of-changes"></a>Änderungstypen
-Drei Arten von Änderungen werden vorgenommen, in ODBC *3.x* (und alle ODBC-Version). Jeder dieser wirkt sich unterschiedlich auf Abwärtskompatibilität und in eine andere Weise behandelt wird. Diese Änderungen werden in der folgenden Tabelle beschrieben.  
+In ODBC *3. x* (und allen Versionen von ODBC) werden drei Typen von Änderungen vorgenommen. Jede dieser Auswirkungen wirkt sich auf die Abwärtskompatibilität anders aus und wird auf andere Weise behandelt. Diese Änderungen werden in der folgenden Tabelle beschrieben.  
   
-|Typ der Änderung|Beschreibung|  
+|Änderungstyp|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|Neue Funktionen|Hierbei handelt es sich um neue Funktionen zu ODBC *3.x*, z. B. Out-of-Line-Bindung oder Deskriptoren. Diese implementiert werden, nur, wenn die Anwendung und Treiber als auch der Treiber-Manager, Version sind *3.x*, es gibt also keinen Versuch, diese abwärts kompatibel zu machen.|  
-|Doppelte Funktionen|Hierbei handelt es sich um Funktionen, die in ODBC vorhanden *2.x* und ODBC *3.x* jedoch auf unterschiedliche Weise in den einzelnen implementiert werden. Die Funktionen **SQLAllocHandle** und **SQLAllocStmt** sind ein Beispiel. Abwärtskompatibilität für diese Probleme und andere doppelten Funktionen werden hauptsächlich von Zuordnungen im Treiber-Manager verarbeitet.|  
-|Verhaltensänderungen|Hierbei handelt es sich um Funktionen, die in ODBC anders behandelt werden *2.x* und ODBC *3.x*. Ein DateTime-Wert **#define** ist ein Beispiel. Diese Funktionen werden von der ODBC behandelt *3.x* Treiber auf der Grundlage von einer umgebungseinstellung-Attribut. (Finden Sie unter [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md) für Weitere Informationen.)|
+|Neue Funktionen|Dabei handelt es sich um Features, die neu in ODBC *3. x*sind, z. b. out-of-Line-Bindungen oder Deskriptoren. Diese werden nur implementiert, wenn die Anwendung und der Treiber sowie der Treiber-Manager Version *3. x*haben. Daher wird nicht versucht, diese Abwärtskompatibilität herzustellen.|  
+|Doppelte Features|Dabei handelt es sich um Funktionen, die in ODBC *2. x* und ODBC *3. x* vorhanden sind, aber auf unterschiedliche Weise implementiert werden. Es handelt sich um ein Beispiel für die Funktionen **sqlzuweisung CHandle** und **sqlzuweisung** . Abwärts Kompatibilitätsprobleme bei diesen und anderen doppelten Features werden größtenteils durch Zuordnungen im Treiber-Manager behandelt.|  
+|Verhaltensänderungen|Dabei handelt es sich um Funktionen, die in ODBC *2. x* und ODBC *3. x*anders behandelt werden. Ein DateTime- **#define** ist ein Beispiel. Diese Features werden vom ODBC *3. x* -Treiber basierend auf einer Umgebungs Attribut Einstellung behandelt. (Weitere Informationen finden Sie unter [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md) .)|

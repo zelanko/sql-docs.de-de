@@ -1,5 +1,5 @@
 ---
-title: Local-Name-aus-QName (XQuery) | Microsoft-Dokumentation
+title: local-name-from-QName (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004560"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Funktionen, die sich auf QNames beziehen – local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt einen xs: NCName, die den lokalen Anteil des vom angegebenen QName darstellt *$arg*. Das Ergebnis ist eine leere Sequenz, wenn *$arg* die leere Sequenz.  
+  Gibt einen xs: NCName zurück, der den lokalen Teil von QName darstellt, der durch *$arg*angegeben wird. Das Ergebnis ist eine leere Sequenz, wenn *$arg* die leere Sequenz ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,15 +38,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  Der QName, aus dem der lokale Name extrahiert werden soll.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
   
- Im folgenden Beispiel wird die **local-name-from-QName()** Funktion zum Abrufen der lokale Name und Namespace-URI-Teile von einem QName-Typ-Wert. Das Beispiel führt die folgenden Aktionen aus:  
+ Im folgenden Beispiel wird die **local-name-from-QName ()-** Funktion verwendet, um die lokalen Namen und Namespace-URI-Teile aus einem QName-Typwert abzurufen. Das Beispiel führt die folgenden Aktionen aus:  
   
 -   Erstellen einer XML-Schemaauflistung.  
   
 -   Erstellen einer Tabelle mit einer Spalte des Typs xml. Der xml-Typ wird mithilfe der XML-Schemaauflistung typisiert.  
   
--   Speichern einer XML-Beispielinstanz in der Tabelle. Mithilfe der **query()** -Methode der Xml-Datentyps, der Abfrageausdruck ausgeführt, um den lokalen namensanteil des Werts vom Typ QName aus der Instanz abzurufen.  
+-   Speichern einer XML-Beispielinstanz in der Tabelle. Mithilfe der **Query ()** -Methode des XML-Datentyps wird der Abfrage Ausdruck ausgeführt, um den lokalen Namensteil des QName-typwerts aus der-Instanz abzurufen.  
   
 ```sql
 DROP TABLE T  
@@ -75,7 +75,7 @@ FROM T
 -- Result = https://someURI  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Functions Related to QNames sich &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Funktionen im Zusammenhang mit QNames &#40;XQuery-&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

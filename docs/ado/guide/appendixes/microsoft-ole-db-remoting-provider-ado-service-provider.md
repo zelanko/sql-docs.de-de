@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Remoting-Anbieter (ADO-Dienstanbieter) | Microsoft-Dokumentation
+title: Microsoft OLE DB Remoting Provider (ADO-Dienstanbieter) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926599"
 ---
-# <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über die Microsoft OLE DB Remoting-Anbieter
-Der Microsoft OLE DB-Anbieter für Remoting können einen lokalen Benutzer auf einem Clientcomputer, um Datenanbieter auf einem Remotecomputer aufzurufen. Geben Sie die Data-Anbieter-Parameter für den Remotecomputer, wie Sie tun würden, würden Sie einen lokalen Benutzer auf dem Remotecomputer. Geben Sie dann die Parameter, die den Remoting-Anbieter für den Remotecomputer zugreifen. Sie können dann den Remotecomputer zugreifen, als wären Sie ein lokaler Benutzer.
+# <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über den Microsoft OLE DB Remoting-Anbieter
+Der Microsoft OLE DB Remoting-Anbieter ermöglicht einem lokalen Benutzer auf einem Client Computer das Aufrufen von Datenanbietern auf einem Remote Computer. Geben Sie die Datenanbieter Parameter für den Remote Computer so an, als wären Sie ein lokaler Benutzer auf dem Remote Computer. Geben Sie dann die Parameter an, die vom Remote Anbieter für den Zugriff auf den Remote Computer verwendet werden. Sie können dann auf den Remote Computer zugreifen, als handele es sich um einen lokalen Benutzer.
 
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.
 
-## <a name="provider-keyword"></a>Anbieterschlüsselwort
- Um den OLE DB-Anbieter für Remoting aufzurufen, geben Sie das folgende Schlüsselwort und Wert in der Verbindungszeichenfolge ein. (Beachten Sie den leeren Bereich in der Name des Anbieters ein.)
+## <a name="provider-keyword"></a>Provider-Schlüsselwort
+ Um den OLE DB Remoting-Anbieter aufzurufen, geben Sie das folgende Schlüsselwort und den Wert in der Verbindungs Zeichenfolge an. (Beachten Sie den Leerraum im Anbieter Namen.)
 
 ```vb
 "Provider=MS Remote"
@@ -37,47 +37,47 @@ Der Microsoft OLE DB-Anbieter für Remoting können einen lokalen Benutzer auf e
 ## <a name="additional-keywords"></a>Zusätzliche Schlüsselwörter
  Wenn dieser Dienstanbieter aufgerufen wird, sind die folgenden zusätzlichen Schlüsselwörter relevant.
 
-|Schlüsselwort|Beschreibung|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
-|**Data Source**|Gibt den Namen der remote-Datenquelle. Es wird an den OLE DB-Anbieter für Remoting für die Verarbeitung übergeben.<br /><br /> Dieses Schlüsselwort entspricht der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts [Connect](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaft.|
+|**Data Source**|Gibt den Namen der Remote Datenquelle an. Sie wird zur Verarbeitung an den OLE DB Remoting-Anbieter übermittelt.<br /><br /> Dieses Schlüsselwort entspricht dem [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft des DataControl-Objekts.|
 
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
- Wenn diesem Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften hinzugefügt, auf die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)des Objekts [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.
+ Wenn dieser Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung des [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md)Objekts hinzugefügt.
 
-|Name der dynamischen Eigenschaft|Beschreibung|
+|Name der dynamischen Eigenschaft|BESCHREIBUNG|
 |---------------------------|-----------------|
-|**DFMode**|Gibt den Data Factory-Modus. Eine Zeichenfolge, die die gewünschte Version gibt an, die [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt auf dem Server. Legen Sie diese Eigenschaft vor dem Öffnen einer Verbindungs zum Anfordern einer bestimmten Version von der **DataFactory**. Wenn die benötigte Version nicht verfügbar ist, wird es versucht werden, verwenden Sie die vorherige Version. Wenn keine vorherige Version vorhanden ist, tritt ein Fehler auf. Wenn **DFMode** kleiner als die verfügbare Version ist, tritt ein Fehler auf. Diese Eigenschaft ist schreibgeschützt, nachdem eine Verbindung hergestellt wird.<br /><br /> Dabei kann es sich um eine der folgenden Zeichenfolgenwerte gültig sein:<br /><br /> -"25"-Version 2.5 (Standard)<br />-   "21"-Version 2.1<br />-   "20"-Version 2.0<br />-"15" – Version 1.5|
-|**Befehlseigenschaften**|Gibt die Werte, die auf die Zeichenfolge der (Rowset)-Befehlseigenschaften, die an den Server gesendet werden, durch den MS Remote-Anbieter hinzugefügt werden. Der Standardwert für diese Zeichenfolge ist Vt_empty.|
-|**Aktuelle DFMode**|Gibt die tatsächliche Anzahl von der **DataFactory** auf dem Server. Überprüfen Sie diese Eigenschaft, um festzustellen, ob die Version im angeforderten der **DFMode** Eigenschaft berücksichtigt wurde.<br /><br /> Die folgenden gültigen Long Integer-Wert-Werte sind möglich:<br /><br /> -25-Version 2.5 (Standard)<br />-21-Version 2.1<br />-20-Version 2.0<br />-15-Version 1.5<br /><br /> Hinzufügen von "DFMode = 20;" zur Verbindungszeichenfolge bei Verwendung der **MSRemote** Anbieter kann die Leistung Ihres Servers verbessern, beim Aktualisieren von Daten. Mit dieser Einstellung die **RDSServer.DataFactory** Objekt auf dem Server einen weniger ressourcenintensiv-Modus verwendet. Die folgenden Funktionen sind jedoch nicht in dieser Konfiguration verfügbar:<br /><br /> – Verwenden von parametrisierten Abfragen.<br />– Abrufen der Parameter oder eine Spalte Informationen vor dem Aufruf der **Execute** Methode.<br />– Festlegen **Transact Updates** zu **"true"** .<br />-Abrufen des Zeilenstatus.<br />– Aufrufen der **Resync** Methode.<br />-Aktualisieren (explizit oder automatisch) über die **Update Resync** Eigenschaft.<br />– Festlegen **Befehl** oder **Recordset** Eigenschaften.<br />– Die Verwendung **AdCmdTableDirect**.|
-|**Ereignishandler**|Gibt den Namen des eine serverseitige Anpassung-Programm (oder Ereignishandler), die die Funktionalität von erweitert die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), und alle Parameter, die vom Handler verwendet, die alle durch Kommas getrennt (","). Ein **String-Wert**.|
-|**Internet-Zeitüberschreitung.**|Gibt die maximale Anzahl von Millisekunden für eine Anforderung zum und vom Server zu übertragen. (Der Standardwert ist 5 Minuten.)|
-|**Remote-Anbieter**|Gibt den Namen des Datenanbieters auf dem Remoteserver verwendet werden.|
-|**Remoteserver**|Gibt an, das Serverprotokoll Name und die Kommunikation, die von dieser Verbindung verwendet werden. Diese Eigenschaft entspricht der [RDS. DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt [Server](../../../ado/reference/rds-api/server-property-rds.md) Eigenschaft.|
-|**Transact-Updates**|Bei Festlegung auf **"true"** , dieser Wert gibt an, die bei [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) erfolgt auf dem Server, wird er innerhalb einer Transaktion ausgeführt werden. Der Standardwert für diese boolesche Eigenschaft für die dynamische ist **"false"** .|
+|**DFMode**|Gibt den DataFactory-Modus an. Eine Zeichenfolge, die die gewünschte Version des [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekts auf dem Server angibt. Legen Sie diese Eigenschaft fest, bevor Sie eine Verbindung öffnen, um eine bestimmte Version des **DataFactory**anzufordern. Wenn die angeforderte Version nicht verfügbar ist, wird versucht, die vorherige Version zu verwenden. Wenn keine vorangehende Version vorhanden ist, tritt ein Fehler auf. Wenn **DFMode** kleiner als die verfügbare Version ist, tritt ein Fehler auf. Diese Eigenschaft ist schreibgeschützt, nachdem eine Verbindung hergestellt wurde.<br /><br /> Kann einer der folgenden gültigen Zeichen folgen Werte sein:<br /><br /> -"25"-Version 2,5 (Standard)<br />-"21"-Version 2,1<br />-"20"-Version 2,0<br />-15, Version 1,5|
+|**Befehls Eigenschaften**|Gibt Werte an, die der Zeichenfolge der Command (Rowset)-Eigenschaften hinzugefügt werden, die vom MS-Remote Anbieter an den Server gesendet werden. Der Standardwert für diese Zeichenfolge ist VT_EMPTY.|
+|**Aktueller DFMode**|Gibt die tatsächliche Versionsnummer des **DataFactory** auf dem Server an. Überprüfen Sie diese Eigenschaft, um festzustellen, ob die in der **DFMode** -Eigenschaft angeforderte Version berücksichtigt wurde.<br /><br /> Kann einer der folgenden gültigen Long-ganzzahligen Werte sein:<br /><br /> -25-Version 2,5 (Standard)<br />-21-Version 2,1<br />-20-Version 2,0<br />-15-Version 1,5<br /><br /> Wenn Sie "DFMode = 20;" der Verbindungs Zeichenfolge hinzufügen, wenn Sie den **msremote** -Anbieter verwenden, kann die Leistung des Servers beim Aktualisieren von Daten verbessert werden. Mit dieser Einstellung verwendet das **RDSServer. DataFactory** -Objekt auf dem Server einen weniger ressourcenintensiven Modus. Die folgenden Funktionen sind in dieser Konfiguration jedoch nicht verfügbar:<br /><br /> -Verwenden von parametrisierten Abfragen.<br />: Abrufen von Parameter-oder Spalten Informationen vor dem Aufrufen der **Execute** -Methode.<br />-Die **Transact-Updates** werden auf **true**festgelegt.<br />-Zeilen Status wird erhalten.<br />-Aufrufen der **Resync** -Methode.<br />-Aktualisieren (explizit oder automatisch) über die Eigenschaft " **Resync aktualisieren** ".<br />-Festlegen von **Befehls** -oder **Recordseteigenschaften** .<br />-Verwenden von **adCmdTableDirect**.|
+|**Handler**|Gibt den Namen eines serverseitigen Anpassungsprogramms (oder-Handlers) an, das die Funktionalität von [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom Handler verwendet werden, die durch Kommas (",") getrennt sind. Ein **String-Wert**.|
+|**Internet Timeout**|Gibt die maximale Anzahl von Millisekunden an, die auf die Übertragung einer Anforderung zum und vom Server gewartet werden soll. (Der Standardwert ist 5 Minuten.)|
+|**Remote Anbieter**|Gibt den Namen des Datenanbieters an, der auf dem Remote Server verwendet werden soll.|
+|**Remote Server**|Gibt den Servernamen und das Kommunikationsprotokoll an, die von dieser Verbindung verwendet werden sollen. Diese Eigenschaft entspricht dem [RDS. Datacontro](../../../ado/reference/rds-api/datacontrol-object-rds.md) Object [Server](../../../ado/reference/rds-api/server-property-rds.md) -Eigenschaft.|
+|**Transact-Updates**|Wenn der Wert auf **true**festgelegt ist, gibt dieser Wert an, dass, wenn [Update Batch](../../../ado/reference/ado-api/updatebatch-method.md) auf dem Server ausgeführt wird, innerhalb einer Transaktion ausgeführt wird. Der Standardwert für diese boolesche dynamische Eigenschaft ist **false**.|
 
- Sie können auch beschreibbare dynamische Eigenschaften festlegen, durch deren Namen als Schlüsselwörter in der Verbindungszeichenfolge angeben. Legen Sie z. B. die **Internet-Zeitüberschreitung** dynamische Eigenschaft auf fünf Sekunden, indem Sie angeben:
+ Sie können auch beschreibbare dynamische Eigenschaften festlegen, indem Sie Ihre Namen als Schlüsselwörter in der Verbindungs Zeichenfolge angeben. Legen Sie z. b. die dynamische Eigenschaft **Internet Timeout** auf fünf Sekunden fest, indem Sie Folgendes angeben:
 
 ```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
- Sie können auch festlegen oder Abrufen eine dynamische Eigenschaft durch Angabe seines Namens als Index für die **Eigenschaften** Eigenschaft. Das folgende Beispiel zeigt das Abrufen und drucken den aktuellen Wert des der **Internet-Zeitüberschreitung** dynamische Eigenschaft, und legen Sie dann einen neuen Wert:
+ Sie können auch eine dynamische Eigenschaft festlegen oder abrufen, indem Sie Ihren Namen als Index für die **Properties** -Eigenschaft angeben. Im folgenden Beispiel wird gezeigt, wie Sie den aktuellen Wert der dynamischen Eigenschaft **Internet Timeout** erhalten und ausdrucken und dann einen neuen Wert festlegen:
 
 ```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Hinweise
- In ADO 2.0 konnte die OLE DB-Anbieter für Remoting nur in angegeben werden die *ActiveConnection* Parameter, der die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt **öffnen** Methode. ADO 2.1 ab, der Anbieter kann auch angegeben werden der *"ConnectionString"* Parameter der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt **öffnen** Methode.
+## <a name="remarks"></a>Bemerkungen
+ In ADO 2,0 konnte der OLE DB Remoting-Anbieter nur im *ActiveConnection* -Parameter der **Open** -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts angegeben werden. Ab ADO 2,1 kann der Anbieter auch im *ConnectionString* -Parameter der [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt-Methode " **Open** " angegeben werden.
 
- Das Äquivalent der **RDS. DataControl** Objekt [SQL](../../../ado/reference/rds-api/sql-property.md) Eigenschaft ist nicht verfügbar. Die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt **öffnen** Methode *Quelle* Argument wird stattdessen verwendet.
+ Die Entsprechung des **RDS. **Die [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft des DataControl-Objekts ist nicht verfügbar. Stattdessen wird das **Open** -method- *Quell* Argument des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet.
 
- **Beachten Sie** Angabe "...; Remote Provider = MS Remote;... "würde zu einem Szenario mit vier Ebenen erstellen. Szenarien mit mehr als drei Ebenen wurden nicht getestet und sollte nicht erforderlich.
+ **Hinweis** Angeben von "...; Remote Anbieter = MS Remote;... " würde ein Szenario mit vier Ebenen erstellen. Szenarien, die drei Ebenen überschreiten, wurden nicht getestet und sollten nicht benötigt werden.
 
 ## <a name="example"></a>Beispiel
- In diesem Beispiel führt eine Abfrage für die **Autoren** Tabelle mit den **Pubs** Datenbank auf einem Server mit dem Namen *Ihr Server*. Die Namen der remote-Datenquelle und Remoteserver finden Sie in der [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode der der[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt, und die SQL-Abfrage wird angegeben, der[öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode der der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Ein **Recordset** Objekt zurückgegeben, bearbeitet und zum Aktualisieren der Datenquelle verwendet wird.
+ In diesem Beispiel wird eine Abfrage für die Tabelle " **Authors** " der **Pubs** -Datenbank auf einem Server namens " *yourserver*" durchführt. Die Namen der Remote Datenquelle und des Remote Servers werden in der [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode des[Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts bereitgestellt, und die SQL-Abfrage wird in der[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts angegeben. Ein **Recordset** -Objekt wird zurückgegeben, bearbeitet und zum Aktualisieren der Datenquelle verwendet.
 
 ```vb
 Dim rs as New ADODB.Recordset
@@ -90,5 +90,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>Siehe auch
- [Übersicht über die OLE DB Remoting-Anbieter](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+## <a name="see-also"></a>Weitere Informationen
+ [Übersicht über den OLE DB Remoting-Anbieter](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

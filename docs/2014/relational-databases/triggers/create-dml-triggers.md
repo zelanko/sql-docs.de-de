@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796390"
 ---
 # <a name="create-dml-triggers"></a>Erstellen von DML-Triggern
   In diesem Thema wird beschrieben, wie ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -DML-Trigger mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unter Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] - CREATE TRIGGER-Anweisung erstellt wird.  
   
-##  <a name="Top"></a> Vorbereitungsmaßnahmen  
+##  <a name="Top"></a> Vorbereitungen  
   
 ### <a name="limitations-and-restrictions"></a>Einschränkungen  
  Eine Liste der Einschränkungen in Zusammenhang mit der Erstellung von DML-Triggern finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
@@ -58,10 +58,10 @@ ms.locfileid: "72796390"
   
     |Parameter|value|  
     |---------------|-----------|  
-    |Author|*Ihr Name*|  
+    |Autor|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |Description|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
-    |Schema_Name|Purchasing|  
+    |BESCHREIBUNG|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
+    |Schema_Name|Erwerb|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|UPDATE und DELETE aus der Liste entfernen.|  

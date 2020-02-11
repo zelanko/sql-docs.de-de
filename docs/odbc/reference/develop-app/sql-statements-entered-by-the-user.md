@@ -1,5 +1,5 @@
 ---
-title: SQL-Anweisungen, die vom Benutzer eingegebene | Microsoft-Dokumentation
+title: Vom Benutzer eingegebene SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086076"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Vom Benutzer eingegebene SQL-Anweisungen
-Anwendungen, die häufig auch Ausführen von ad-hoc-Analysen können Benutzer SQL-Anweisungen direkt eingeben. Zum Beispiel:  
+Anwendungen, die eine Ad-hoc-Analyse durchführen, ermöglichen es auch häufig, SQL-Anweisungen direkt einzugeben. Beispiel:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -48,4 +48,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Dieser Ansatz vereinfacht die Anwendung codieren; die Anwendung basiert auf den Benutzer auf die SQL-Anweisung zu erstellen und für die Datenquelle aus, um die Anweisung die Gültigkeit zu überprüfen. Da es schwierig ist, eine grafische Benutzeroberfläche zu schreiben, die die feinheiten der SQL angemessen verfügbar macht, möglicherweise die einfach den Benutzer auffordert, geben Sie den Text der SQL-Anweisung, dass eine Alternative vorzuziehen. Dies erfordert jedoch die Benutzer wissen, nicht nur SQL, sondern auch das Schema der Datenquelle abgefragt wird. Einige Anwendungen bieten eine grafische Benutzeroberfläche der Benutzer kann nach der Erstellen einer einfachen SQL-Anweisung und bieten auch eine Text-Schnittstelle, die mit der der Benutzer es ändern kann.
+ Dieser Ansatz vereinfacht die Anwendungs Codierung. die Anwendung basiert auf dem Benutzer, um die SQL-Anweisung zu erstellen, und auf der Datenquelle, um die Gültigkeit der Anweisung zu überprüfen. Da es schwierig ist, eine grafische Benutzeroberfläche zu schreiben, die die Feinheiten von SQL adäquat verfügbar macht, ist es möglicherweise eine bevorzugte Alternative, den Benutzer aufzufordern, den Text der SQL-Anweisung einzugeben. Dies erfordert jedoch, dass der Benutzer nicht nur SQL, sondern auch das Schema der Datenquelle kennt, die abgefragt wird. Einige Anwendungen stellen eine grafische Benutzeroberfläche bereit, mit der der Benutzer eine einfache SQL-Anweisung erstellen und eine Textschnittstelle bereitstellen kann, mit der der Benutzer Sie ändern kann.

@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797878"
 ---
-# <a name="get-help-sql-server-powershell"></a>Aufrufen der SQL Server PowerShell-Hilfe
+# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Es stehen mehrere Informationsquellen zur Verwendung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieters für Windows PowerShell und Cmdlets zur Verfügung. Dazu gehört auch die Hilfe, die in der Windows PowerShell-Umgebung verfügbar ist.  
   
-## <a name="before-you-begin"></a>Vorbereitungsmaßnahmen  
+## <a name="before-you-begin"></a>Vorbereitungen  
  Informationen zu Windows PowerShell finden Sie unter [Erste Schritte mit Windows PowerShell](https://technet.microsoft.com/library/hh857337.aspx).  
   
  Eine Übersicht über die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlets und -Anbieter finden Sie unter [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
 ### <a name="help-in-the-windows-powershell-environment"></a>Hilfe in der Windows PowerShell-Umgebung  
- Verwenden Sie das Cmdlet **Get-Help** , um Hilfe in der Windows PowerShell-Umgebung aufzurufen. **Get-Help** stellt grundlegende Hilfe zur Windows PowerShell-Sprache und den verschiedenen in Windows PowerShell verfügbaren Cmdlets und Anbietern bereit.  
+ Verwenden Sie das Cmdlet **Get-Help** , um Hilfe in der Windows PowerShell-Umgebung aufzurufen. " **Get-Help** " stellt grundlegende Hilfe zur Windows PowerShell-Sprache und den verschiedenen in Windows PowerShell verfügbaren Cmdlets und Anbietern bereit.  
   
  Weitere Informationen zur Verwendung von **Get-Help**finden Sie unter [Abrufen von Hilfeinformationen: Get-Help](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
@@ -42,14 +42,14 @@ ms.locfileid: "72797878"
   
  Die Eingaben *-Query* oder *-QueryFromFile* können Folgendes enthalten:  
   
--   **sqlcmd** -Variablen und -Befehle. Informationen zu diesen Variablen und Befehlen finden Sie unter [sqlcmd (Hilfsprogramm)](../tools/sqlcmd-utility.md)im Abschnitt „Hinweise“.  
+-   **sqlcmd** -Variablen und-Befehle. Informationen zu diesen Variablen und Befehlen finden Sie unter [sqlcmd (Hilfsprogramm)](../tools/sqlcmd-utility.md)im Abschnitt „Hinweise“.  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen verwendet werden. Weitere Informationen über die [!INCLUDE[tsql](../includes/tsql-md.md)]-Sprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference).  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)]Äußerungen. Weitere Informationen über die [!INCLUDE[tsql](../includes/tsql-md.md)]-Sprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference).  
   
 -   XQuery-Anweisungen. Weitere Informationen zu der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützten XQuery-Sprache finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>Aufrufen von Hilfe für ein SQL Server-Cmdlet  
- **So rufen Sie Hilfe für ein Cmdlet auf**  
+ **So erhalten Sie Hilfe zu einem Cmdlet**  
   
 -   Führen Sie "Get-Help" aus, und geben Sie dabei den Namen des Cmdlet und die Ebene der Hilfe an, die zurückgegeben werden soll.  
   
@@ -89,7 +89,7 @@ Get-Help -Category provider
 ```  
   
 ## <a name="get-help-about-the-sql-server-provider"></a>Aufrufen von Hilfe zum SQL Server-Anbieter  
- **So rufen Sie Hilfe zum Anbieter auf**  
+ **So erhalten Sie Hilfe zum Anbieter**  
   
 1.  Ausführen von "Get-Help" mit Angabe des Namens "SQLServer"  
   
@@ -101,7 +101,7 @@ Get-Help SQLServer
 ```  
   
 ## <a name="list-methods-and-properties"></a>Auflisten von Methoden und Eigenschaften  
- **So listen Sie die Methoden und die Eigenschaften für einen Knoten in einem SQL Server-Anbieterpfad auf**  
+ **So Listen Sie die Methoden und Eigenschaften für einen Knoten in einem SQL Server-Anbieter Pfad auf**  
   
 1.  Verweisen Sie mit CD auf einen Knoten im SQL Server-Pfad, oder erstellen Sie einen Variablensatz zu diesem Speicherort.  
   
@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
  [Verwenden der Datenbank-Engine-Cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

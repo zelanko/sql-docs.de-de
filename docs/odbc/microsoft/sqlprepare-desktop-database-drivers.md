@@ -13,11 +13,11 @@ ms.assetid: dbc8f17b-2913-4bdf-841c-d79213993cd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62d91d6e5493665af55e440dcdd8594e03241978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996346"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (Desktop-Datenbanktreiber)
-Ein Fehler zum Zeitpunkt der Ausführung nicht bei der Vorbereitung der Anweisung wird durch eine Anweisung vorbereitet, eine falsche Anzahl von Spalten zurückgegeben.
+Eine Anweisung, die mit einer falschen Anzahl von Spalten vorbereitet wurde, gibt während der Ausführung einen Fehler zurück, nicht bei der Anweisungs Vorbereitung.

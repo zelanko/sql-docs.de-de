@@ -1,5 +1,5 @@
 ---
-title: 'Anhang A: Anbieter | Microsoft-Dokumentation'
+title: 'Anhang A: Anbieter | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,60 +17,60 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926970"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten und Dienstanbieter
-In diesem Abschnitt werden drei Arten von Anbietern: Datenanbieter, Dienstanbietern und Dienstkomponenten. Anbieter können in zwei Kategorien unterteilt: die Bereitstellung von Daten und die Dienste bereitstellen. Ein *Datenanbieter* besitzt seine eigenen Daten und macht Sie sie in tabellarischer Form für Ihre Anwendung verfügbar. Ein *Dienstanbieter* kapselt einen Dienst starten, indem Sie erzeugen und Nutzen von Daten, die Funktionen in den ADO-Anwendungen zu erweitern. Ein Dienstanbieter sind als auch noch weiter definiert eine *Dienstkomponente*, die zusammen mit anderen Dienstanbietern oder Komponenten funktionieren müssen.
+# <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten-und Dienstanbieter
+In diesem Abschnitt werden drei Arten von Anbietern behandelt: Datenanbieter, Dienstanbieter und Dienst Komponenten. Anbieter lassen sich in zwei Kategorien unterteilen: solche, die Daten bereitstellen Ein *Datenanbieter* besitzt seine eigenen Daten und macht Sie in tabellarischer Form für Ihre Anwendung verfügbar. Ein *Dienstanbieter* kapselt einen Dienst, indem er Daten erzeugt und nutzt, um Features in Ihren ADO-Anwendungen zu erweitern. Ein Dienstanbieter kann auch weiter als *Dienst Komponente*definiert werden, die zusammen mit anderen Dienstanbietern oder Komponenten verwendet werden muss.
 
 ## <a name="data-providers"></a>Datenanbieter
- ADO ist leistungsfähiger und flexibler, da immer noch verfügbar das gleiche Programmiermodell, unabhängig davon, welche Funktionen für alle angegebenen Anbieter machen und mit jedem der mehrere verschiedene Datenanbieter verbinden können.
+ ADO ist leistungsstark und flexibel, da es eine Verbindung mit einem von mehreren unterschiedlichen Datenanbietern herstellen kann und immer noch dasselbe Programmiermodell verfügbar macht, unabhängig von den spezifischen Features eines beliebigen Anbieters.
 
- Da jede Datenanbieter eindeutig ist, variiert wie die Anwendung mit ADO interagiert etwas vom Datenanbieter jedoch. Die Unterschiede werden in der Regel in einer von drei Kategorien:
+ Da jeder Datenanbieter eindeutig ist, variiert die Interaktion der Anwendung mit ADO jedoch geringfügig vom Datenanbieter. Die Unterschiede lassen sich normalerweise in eine von drei Kategorien unterteilen:
 
--   Verbindungsparameter in die ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft.
+-   Verbindungsparameter in der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft.
 
--   [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Nutzung Objekt.
+-   Verwendung des [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts.
 
--   Anbieterspezifische [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Verhalten.
+-   Anbieter spezifisches [recordsetverhalten](../../../ado/reference/ado-api/recordset-object-ado.md) .
 
- Details für jede der derzeit verfügbaren von Microsoft-Datenanbieter werden wie folgt aufgeführt.
+ Details zu jedem der derzeit von Microsoft verfügbaren Datenanbietern werden wie folgt aufgelistet.
 
 |Bereich|Thema|
 |----------|-----------|
-|ODBC-Datenbanken|[Microsoft OLE DB-Anbieter für ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
-|Microsoft Indexdienst|[Microsoft OLE DB-Anbieter für Microsoft Indexdienst](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
-|Active Directory-Dienst|[Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|Microsoft Jet-Datenbanken|[OLE DB-Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
-|Microsoft SQL Server|[Microsoft OLE DB-Anbieter für SQLServer](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
+|ODBC-Datenbanken|[Microsoft OLE DB-Anbieter für ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
+|Microsoft-Indizierungs Dienst|[Microsoft OLE DB-Anbieter für Microsoft Indexdienst](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
+|Active Directory-Dienst|[Microsoft OLE DB-Anbieter für Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|Microsoft Jet-Datenbanken|[OLE DB Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Microsoft SQL Server|[Microsoft OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle-Datenbanken|[Microsoft OLE DB-Anbieter für Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
-|Internet-Publishing|[Microsoft OLE DB-Anbieter für Internet-Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|Einfache Datenquellen|[Einfache Microsoft OLE DB-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|Internet Publishing|[Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
+|Einfache Datenquellen|[Microsoft OLE DB Simple-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
-## <a name="provider-specific-dynamic-properties"></a>Dynamische Eigenschaften der anbieterspezifischen
- Die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte enthalten die dynamische Eigenschaften, die spezifisch für die Anbieter. Diese Eigenschaften enthalten Informationen zu Funktionen, die spezifisch für den Anbieter über die integrierte Eigenschaften, die ADO unterstützt.
+## <a name="provider-specific-dynamic-properties"></a>Anbieterspezifische dynamische Eigenschaften
+ Die [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistungen der [Connection](../../../ado/reference/ado-api/connection-object-ado.md)-, [Command](../../../ado/reference/ado-api/command-object-ado.md)-und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte enthalten dynamische Eigenschaften, die für den Anbieter spezifisch sind. Diese Eigenschaften enthalten Informationen zu den Funktionen, die für den Anbieter spezifisch sind, über die von ADO unterstützten integrierten Eigenschaften hinaus.
 
- Verwenden Sie nach dem Herstellen der Verbindung, und Erstellen dieser Objekte, die [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode für die **Eigenschaften** Auflistung des Objekts, das die anbieterspezifischen Eigenschaften zu erhalten. Finden Sie in der Dokumentation des Anbieters und der [OLE DB Programmer's Guide](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) ausführliche Informationen über diese dynamischen Eigenschaften.
+ Nachdem Sie die Verbindung hergestellt und diese Objekte erstellt haben, verwenden Sie die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode für die **Properties** -Auflistung des-Objekts, um die anbieterspezifischen Eigenschaften abzurufen. Ausführliche Informationen zu diesen dynamischen Eigenschaften finden Sie in der Dokumentation des Anbieters und im [OLE DB Programmierer-Handbuch](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) .
 
 ## <a name="service-providers"></a>Dienstanbieter
- Um einen Dienstanbieter verwenden zu können, müssen Sie ein Schlüsselwort angeben. Sie sollten auch die anbieterspezifische dynamische Eigenschaften mit jedem Dienstanbieter kennen. Anbieterspezifische Informationen sind für jeden Dienstanbieter aufgeführt, die derzeit von Microsoft verfügbar ist:
+ Wenn Sie einen Dienstanbieter verwenden möchten, müssen Sie ein Schlüsselwort angeben. Sie sollten auch die anbieterspezifischen dynamischen Eigenschaften kennen, die den einzelnen Dienstanbietern zugeordnet sind. Anbieterspezifische Details werden für jeden Dienstanbieter aufgelistet, der zurzeit von Microsoft zur Verfügung gestellt wird:
 
 -   [Microsoft Data Shaping Service für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
 
--   [Microsoft OLE DB-Persistenz-Provider](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+-   [Microsoft OLE DB-Persistenzanbieter](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
--   [Microsoft OLE DB-Anbieter für Remoting](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
+-   [Microsoft OLE DB Remoting-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
 
 ## <a name="service-components"></a>Dienstkomponenten
- Die [Cursor Service für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) Dienstkomponente ergänzt die Cursorfunktionen der Unterstützung von Datenanbietern. Außerdem müssen ein Schlüsselwort und dynamische Eigenschaften hat.
+ Der [Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) Dienst Komponente ergänzt die Cursor Unterstützungsfunktionen von Datenanbietern. Außerdem ist ein Schlüsselwort erforderlich, das über dynamische Eigenschaften verfügt.
 
- Weitere Informationen zu OLE DB-Anbieter, finden Sie unter [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
+ Weitere Informationen zu OLE DB Anbietern finden Sie unter [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
 
-## <a name="provider-commands"></a>Anbieterbefehle
- Für jeden Anbieter hier aufgeführt, wenn Ihre Anwendungen zulassen, dass die Benutzer zur Eingabe von SQL-Anweisungen wie die Anbieterbefehle, müssen Sie immer die Benutzereingabe überprüft und mögliche Hacker-Angriffe, die potenziell gefährliche SQL-Anweisungen, wie z. B. mit aufmerksam sein `DROP TABLE t1`, als Teil der Benutzereingabe.
+## <a name="provider-commands"></a>Anbieter Befehle
+ Für jeden hier aufgeführten Anbieter müssen Sie, wenn Ihre Anwendungen Benutzern gestatten, SQL-Anweisungen als Anbieter Befehle einzugeben, immer die Benutzereingaben überprüfen und potenzielle Hackerangriffe mithilfe potenziell gefährlicher SQL-Anweisungen, wie z `DROP TABLE t1`. b. als Teil der Benutzereingabe, überprüfen.
 
-## <a name="see-also"></a>Siehe auch
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst ](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB-Anbieter für Microsoft Indexdienst](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Microsoft OLE DB-Anbieter für ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB-Anbieter für Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Microsoft OLE DB-Anbieter für SQLServer](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [Microsoft OLE DB-Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh-Methode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+## <a name="see-also"></a>Weitere Informationen
+ ADO- [Verbindungs Objekt (](../../../ado/reference/ado-api/connection-object-ado.md) [Command Object)](../../../ado/reference/ado-api/command-object-ado.md) [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [Microsoft OLE DB Provider für Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB Provider for Microsoft-Indizierungs Dienst](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Microsoft OLE DB Provider für ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB-Anbieter für Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Microsoft OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [Microsoft OLE DB-Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) - [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) - [Aktualisierungs Methode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

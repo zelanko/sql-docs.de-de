@@ -20,18 +20,18 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28fcf56293516937455afc387a8d478734f5b006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121383"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
- **SQLDataSources** gibt Informationen zu einer Datenquelle zurück. Diese Funktion ist nur vom Treiber-Manager implementiert werden.  
+ **SQLDataSources** gibt Informationen zu einer Datenquelle zurück. Diese Funktion wird nur vom Treiber-Manager implementiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,74 +49,74 @@ SQLRETURN SQLDataSources(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *EnvironmentHandle*  
- [Eingabe] Umgebungshandles.  
+ *Environment-THandle*  
+ Der Umgebungs Handle.  
   
- *Richtung*  
- [Eingabe] Bestimmt, welche Datenquelle des Treiber-Managers über Informationen zurückgibt. Mögliche Werte sind:  
+ *Orientierung*  
+ Der Bestimmt, welche Datenquelle der Treiber-Manager Informationen zurückgibt. Mögliche Werte sind:  
   
- SQL_FETCH_NEXT (auf der nächsten Datenquellenname in der Liste abrufen), SQL_FETCH_FIRST (abzurufenden vom Anfang der Liste), SQL_FETCH_FIRST_USER (zum Abrufen der ersten Benutzer-DSN) oder SQL_FETCH_FIRST_SYSTEM (abzurufenden vom ersten System-DSN).  
+ SQL_FETCH_NEXT (um den nächsten Datenquellen Namen in der Liste abzurufen), SQL_FETCH_FIRST (um vom Anfang der Liste abzurufen), SQL_FETCH_FIRST_USER (zum Abrufen des ersten Benutzer-DSN) oder SQL_FETCH_FIRST_SYSTEM (zum Abrufen des ersten System-DSN).  
   
- Wenn *Richtung* nastaven NA hodnotu SQL_FETCH_FIRST, nachfolgende Aufrufe von **SQLDataSources** mit *Richtung* auf SQL_FETCH_NEXT zurückgeben, sowohl Benutzer-als auch System-DSNs. Wenn *Richtung* nastaven NA hodnotu SQL_FETCH_FIRST_USER, alle nachfolgenden Aufrufe **SQLDataSources** mit *Richtung* auf SQL_FETCH_NEXT zurückgeben, nur die Benutzer-DSNs. Wenn *Richtung* nastaven NA hodnotu SQL_FETCH_FIRST_SYSTEM, alle nachfolgenden Aufrufe **SQLDataSources** mit *Richtung* auf SQL_FETCH_NEXT zurückgeben, nur System-DSNs.  
+ Wenn *Direction* auf SQL_FETCH_FIRST festgelegt ist, werden bei nachfolgenden Aufrufen von **SQLDataSources** mit *Richtung* auf SQL_FETCH_NEXT sowohl Benutzer-als auch System-DSNs zurückgegeben. Wenn *Direction* auf SQL_FETCH_FIRST_USER festgelegt ist, werden bei allen nachfolgenden Aufrufen von **SQLDataSources** mit *Richtung* auf SQL_FETCH_NEXT nur Benutzer-DSNs zurückgegeben. Wenn *Direction* auf SQL_FETCH_FIRST_SYSTEM festgelegt ist, werden bei allen nachfolgenden Aufrufen von **SQLDataSources** mit der *Richtung* auf SQL_FETCH_NEXT nur System-DSNs zurückgegeben.  
   
- *ServerName*  
- [Ausgabe] Zeiger auf einen Puffer, in den Namen der Datenquelle zurückgegeben werden sollen.  
+ *Servername*  
+ Ausgeben Zeiger auf einen Puffer, in den der Datenquellen Name zurückgegeben werden soll.  
   
- Wenn *ServerName* NULL ist, *NameLength1Ptr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer, der auf zurückgegeben *ServerName*.  
+ Wenn *Servername* NULL ist, gibt *NameLength1Ptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den *Servername*zeigt.  
   
  *BufferLength1*  
- [Eingabe] Länge der **ServerName* Puffer, in Zeichen; Dies muss nicht länger als SQL_MAX_DSN_LENGTH sowie das Null-Abschlusszeichen sein.  
+ Der Länge des **Servername* -Puffers in Zeichen; Dies muss nicht länger als SQL_MAX_DSN_LENGTH plus das NULL-Terminierungs Zeichen sein.  
   
  *NameLength1Ptr*  
- [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *ServerName*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *BufferLength1*, der Name der Datenquelle in \* *ServerName* auf abgeschnitten *BufferLength1* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme des NULL-Beendigungs Zeichens) zurückgegeben \*werden soll, die in *Servername*zurückgegeben werden soll. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength1*ist, wird der Datenquellen Name in \* *Servername* auf *BufferLength1* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
  *Beschreibung*  
- [Ausgabe] Zeiger auf einen Puffer, in die die Beschreibung des Treibers verknüpft ist, mit der Datenquelle zurückgegeben werden sollen. Z. B. Access oder SQL Server.  
+ Ausgeben Zeiger auf einen Puffer, in den die Beschreibung des Treibers zurückgegeben werden soll, der der Datenquelle zugeordnet ist. Beispielsweise dBASE oder SQL Server.  
   
- Wenn *Beschreibung* NULL ist, *NameLength2Ptr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer, der auf zurückgegeben *Beschreibung*.  
+ Wenn *Description* den Wert NULL hat, gibt *NameLength2Ptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den die *Beschreibung*zeigt.  
   
  *BufferLength2*  
- [Eingabe] Länge in Zeichen von der **Beschreibung* Puffer.  
+ Der Länge in Zeichen des **Description* -Puffers.  
   
  *NameLength2Ptr*  
- [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *Beschreibung*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *BufferLength2*, um die treiberbeschreibung in \* *Beschreibung* auf abgeschnitten *BufferLength2*  abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (ausgenommen des NULL-Beendigungs Zeichens) zurückgegeben werden \*soll, die in der *Beschreibung*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength2*ist, wird die Beschreibung des Treibers in \* *Description* auf *BufferLength2* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt, wird SQL_ERROR oder SQL_INVALID_HANDLE.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLDataSources** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *HandleType*SQL_HANDLE_ENV auf, und ein *behandeln* von *EnvironmentHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLDataSources** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLDataSources** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_ENV und einem *handle* von *environmenthandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLDataSources** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|(DM)-Treiber-Manager-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichenfolgendaten, rechts abgeschnitten|(DM) des Puffers \* *ServerName* nicht groß genug war, der vollständige Name der Datenquelle zurückgegeben. Aus diesem Grund wurde der Name verkürzt angezeigt. Die Länge der Namen der gesamten Datenquelle wird im zurückgegeben \* *NameLength1Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (DM) des Puffers \* *Beschreibung* nicht groß genug war, um die vollständige treiberbeschreibung zurückzugeben. Aus diesem Grund wurde die Beschreibung abgeschnitten. Die Länge der die ungekürzte datenquellenbeschreibung wird zurückgegeben, **NameLength2Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler.|(DM) ist ein Fehler aufgetreten für die gab es keine spezifischen SQLSTATE und für die keine implementierungsabhängige SQLSTATE definiert wurde. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber-Managers (DM) wurde, kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *BufferLength1* war kleiner als 0.<br /><br /> (DM) für Argument angegebene Wert *BufferLength2* war kleiner als 0.|  
-|HY103|Ungültiger Abrufcode|(DM) der Wert für das Argument angegebene *Richtung* war nicht gleich SQL_FETCH_FIRST SQL_FETCH_FIRST_USER, SQL_FETCH_FIRST_SYSTEM oder SQL_FETCH_NEXT.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|01000|Allgemeine Warnung|(DM) Treiber-Manager-spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|(DM) der Puffer \* *Server* Name war nicht groß genug, um den Namen der kompletten Datenquelle zurückzugeben. Daher wurde der Name abgeschnitten. Die Länge des gesamten Datenquellen namens wird in \* *NameLength1Ptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (DM) die Puffer \* *Beschreibung* war nicht groß genug, um die komplette Treiber Beschreibung zurückzugeben. Daher wurde die Beschreibung abgeschnitten. Die Länge der den ungekürzten anzuzeigen-Datenquellen Beschreibung wird in **NameLength2Ptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|HY000|Allgemeiner Fehler|(DM) ein Fehler ist aufgetreten, für den kein bestimmter SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|(DM) der Treiber-Manager konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY010|Funktions Sequenz Fehler|(DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der für das Argument *BufferLength1* angegebene Wert war kleiner als 0 (null).<br /><br /> (DM) der für das Argument *BufferLength2* angegebene Wert war kleiner als 0 (null).|  
+|HY103|Ungültiger Abruf Code|(DM) der für die Argument *Richtung* angegebene Wert war nicht gleich SQL_FETCH_FIRST, SQL_FETCH_FIRST_USER, SQL_FETCH_FIRST_SYSTEM oder SQL_FETCH_NEXT.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
   
 ## <a name="comments"></a>Kommentare  
- Da **SQLDataSources** implementiert im Treiber-Manager wird für alle Treiber unabhängig davon, einen bestimmten Treiber Einhaltung von Standards unterstützt.  
+ Da **SQLDataSources** im Treiber-Manager implementiert ist, wird es für alle Treiber unabhängig von der Standards-Konformität eines bestimmten Treibers unterstützt.  
   
- Kann eine Anwendung aufrufen **SQLDataSources** mehrere Male auf, um alle Datenquellennamen abzurufen. Der Treiber-Manager ruft diese Informationen aus den Systeminformationen ab. Der Treiber-Manager gibt SQL_NO_DATA zurück, wenn es keine weitere Datenquellennamen sind. Wenn **SQLDataSources** mit SQL_FETCH_NEXT aufgerufen wird, unmittelbar nachdem SQL_NO_DATA zurückgegeben wird, wird der Name der ersten Datenquelle zurückgegeben. Informationen zur Verwendung von zurückgegebenen Informationen in einer Anwendungs **SQLDataSources**, finden Sie unter [Auswählen einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ Eine Anwendung kann **SQLDataSources** mehrmals aufrufen, um alle Datenquellen Namen abzurufen. Der Treiber-Manager ruft diese Informationen aus den Systeminformationen ab. Wenn keine weiteren Datenquellen Namen vorhanden sind, gibt der Treiber-Manager SQL_NO_DATA zurück. Wenn **SQLDataSources** mit SQL_FETCH_NEXT unmittelbar nach der Rückgabe SQL_NO_DATA aufgerufen wird, wird der erste Datenquellen Name zurückgegeben. Informationen dazu, wie eine Anwendung die von **SQLDataSources**zurückgegebenen Informationen verwendet, finden Sie unter [Auswählen einer Datenquelle oder eines Treibers](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
- Wenn SQL_FETCH_NEXT, um übergeben wird **SQLDataSources** beim ersten Aufruf ist, wird der Name der ersten Datenquelle zurückgegeben.  
+ Wenn SQL_FETCH_NEXT an **SQLDataSources** übergeben wird, wenn er zum ersten Mal aufgerufen wird, wird der erste Datenquellen Name zurückgegeben.  
   
- Der Treiber ermittelt, wie die Datenquellennamen mit tatsächlichen Datenquellen zugeordnet werden.  
+ Der Treiber bestimmt, wie Datenquellen Namen tatsächlichen Datenquellen zugeordnet werden.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Ermitteln und Auflisten von Werten, die für die Verbindung mit einer Datenquelle|[SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|Ermitteln und Auflisten von Werten, die für die Verbindung mit einer Datenquelle erforderlich sind|[SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Herstellen einer Verbindung mit einer Datenquelle|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Herstellen einer Verbindung mit einer Datenquelle mit einer Zeichenfolge oder eines Dialogfelds Verbindungsdialogfeld|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Zurückgeben von Beschreibungen der Treiber und Attribute|[SQLDrivers-Funktion](../../../odbc/reference/syntax/sqldrivers-function.md)|  
+|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriveConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Zurückgeben von Treiber Beschreibungen und-Attributen|[SQLDrivers-Funktion](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

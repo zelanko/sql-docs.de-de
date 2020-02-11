@@ -14,488 +14,488 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a91f051badfabe19373825edd156e6b2c21ca2c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911376"
 ---
 # <a name="odbc-glossary"></a>ODBC-Glossar
-## <a name="a"></a>A  
- **Access-plan**  
- Ein Plan generiert, die von der Datenbank-Engine zum Ausführen einer SQL-Anweisung. Äquivalent zu den ausführbaren Code kompiliert, die von einer dritten Generation Sprache wie z. B. c  
+## <a name="a"></a>Ein  
+ **Zugriffs Plan**  
+ Ein Plan, der von der Datenbank-Engine zum Ausführen einer SQL-Anweisung generiert wird. Entspricht dem ausführbaren Code, der aus einer Programmiersprache der dritten Generation wie C kompiliert wurde.  
   
- **Aggregate-Funktion**  
- Eine Funktion, die einen einzelnen Wert aus einer Gruppe von Werten, die häufig zusammen mit generiert **GROUP BY** und **HAVING** Klauseln. Aggregatfunktionen **AVG**, **Anzahl**, **MAX**, **MIN**, und **Summe**. Auch bekannt als *Mengenfunktionen*. *Siehe auch* skalaren Funktion.  
+ **Aggregatfunktion**  
+ Eine Funktion, die einen einzelnen Wert aus einer Gruppe von Werten generiert, die häufig mit **Group by** **-und** with-Klauseln verwendet werden. Aggregatfunktionen umfassen **AVG**, **count**, **Max**, **Min**und **Sum**. Auch als *Set-Funktionen*bezeichnet. *Siehe auch* Skalarfunktion.  
   
  **ANSI**  
- American National Standards Institute. Der ODBC-API basiert auf der ANSI-Call-Level-Schnittstelle.  
+ American National Standards Institute. Die ODBC-API basiert auf der ANSI-Schnittstelle auf Aufrufebene.  
   
  **APD**  
- *Finden Sie unter* anwendungsparameterdeskriptor (APD).  
+ *Weitere Informationen finden* Sie unter Application Parameter Deskriptor (APD).  
   
  **API**  
- Application-Programmierschnittstelle. Ein Satz von Routinen, die eine Anwendung verwendet, um anzufordern, und führen Sie die Low-Level-Dienste. Der ODBC-API besteht aus der ODBC-Funktionen.  
+ Anwendungsprogrammierschnittstelle. Eine Reihe von Routinen, die eine Anwendung verwendet, um Dienste auf niedrigerer Ebene anzufordern und auszuführen. Die ODBC-API besteht aus den ODBC-Funktionen.  
   
- **application**  
- Ein ausführbares Programm, das Funktionen der ODBC-API aufruft.  
+ **Asyl**  
+ Ein ausführbares Programm, das Funktionen in der ODBC-API aufruft.  
   
- **anwendungsparameterdeskriptor (APD)**  
- Ein Deskriptor, der beschreibt, die dynamischen Parameter in einer SQL-Anweisung vor der Konvertierung von der Anwendung angegebenes verwendet.  
+ **Anwendungsparameter Deskriptor (APD)**  
+ Ein Deskriptor, der die dynamischen Parameter beschreibt, die in einer SQL-Anweisung vor allen von der Anwendung angegebenen Konvertierungen verwendet werden.  
   
- **Zeile anwendungsdeskriptor (ARD)**  
- Ein Deskriptor, der Metadaten und Daten in der Anwendung Puffern, beschreiben eine Zeile mit Daten, die nach der Datenkonvertierung von der Anwendung angegebenes darstellt.  
+ **Anwendungs Zeilen Deskriptor (ARD)**  
+ Ein Deskriptor, der die Spalten Metadaten und Daten in den Puffer der Anwendung darstellt und eine Daten Zeile nach jeder von der Anwendung angegebenen Datenkonvertierung beschreibt.  
   
- **ARD**  
- *Finden Sie unter* Zeile anwendungsdeskriptor (ARD).  
+ **Mäuse**  
+ *Weitere Informationen finden* Sie unter Anwendungs Zeilen Deskriptor (ARD).  
   
  **Autocommit-Modus**  
- Eine Commit-Transaktionsmodus, in dem eine Transaktionen ein Commit ausgeführt werden, sofort nach der sie ausgeführt werden.  
+ Ein transaktionscommitmodus, in dem Transaktionen unmittelbar nach ihrer Ausführung committet werden.  
   
 ## <a name="b"></a>B  
- **Unterschied im Verhalten**  
- Eine Änderung in bestimmte Funktionen von ODBC *3.x* Verhalten zu ODBC *2.x* Verhalten oder umgekehrt. Durch Ändern des umgebungsattributs SQL_ATTR_ODBC_VERSION verursacht.  
+ **Verhaltensänderung**  
+ Eine Änderung in bestimmten Funktionen vom ODBC *3. x* -Verhalten zu ODBC *2. x* -Verhalten oder umgekehrt. Wird durch Ändern des SQL_ATTR_ODBC_VERSION Environment-Attributs verursacht.  
   
- **Binary large Object (BLOB)**  
- Beliebige binären Daten über eine bestimmte Anzahl von Bytes, beispielsweise 255. In der Regel viel länger. Diese Daten in der Regel an gesendet und abgerufen werden, aus der Datenquelle in Teilen. Auch bekannt als *long-Daten*.  
+ **Binary Large Object (BLOB)**  
+ Alle Binärdaten über eine bestimmte Anzahl von Bytes, z. b. 255. In der Regel viel länger. Diese Daten werden in der Regel an die Datenquelle gesendet und in Teilen aus der Datenquelle abgerufen. Wird auch als *Long Data*bezeichnet.  
   
- **Bindung**  
- Als Verb, das Act eine Spalte in einem Resultset oder ein Parameter in einer SQL-Anweisung mit einer Anwendungsvariablen verknüpft. Als ein Nomen, die Zuordnung.  
+ **lichere**  
+ Als Verb wird das Verknüpfen einer Spalte in einem Resultset oder eines Parameters in einer SQL-Anweisung mit einer Anwendungsvariablen behandelt. Als Substantiv die Zuordnung.  
   
- **Offset der Bindung**  
- Ein Wert, der die pufferadressen Daten und den Längenindikator/pufferadressen hinzugefügt, für alle neue Adressen für die Daten Abfragen, was von Spalte oder Parameter gebunden wird.  
+ **Bindungs Offset**  
+ Ein Wert, der den Datenpuffer Adressen und Längen-/indikatorpufferadressen für alle gebundenen Spalten-oder Parameterdaten hinzugefügt wird und neue Adressen erzeugt.  
   
  **Blockcursor**  
- Ein Cursor kann mehr als eine Zeile mit Daten zu einem Zeitpunkt abrufen.  
+ Ein Cursor, der mehrere Daten Zeilen gleichzeitig abrufen können soll.  
   
- **buffer**  
- Einen Speicherbereich Anwendung verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Puffer treten häufig paarweise: eine *Datenpuffer* und *Länge des Datenpuffers*.  
+ **ert**  
+ Ein Teil des Anwendungs Speichers, der verwendet wird, um Daten zwischen der Anwendung und dem Treiber zu übergeben. Puffer sind häufig paarweise enthalten: ein *Datenpuffer* und ein *Daten Längenpuffer*.  
   
- **byte**  
- Acht Bits oder ein Oktett. *Siehe auch* Oktett.  
+ **Hobby**  
+ 8 Bits oder ein Oktett. *Siehe auch* Octett.  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  **C-Datentyp**  
- Der Datentyp einer Variablen in einem C-Programm in diesem Fall die Anwendung.  
+ Der Datentyp einer Variablen in einem C-Programm, in diesem Fall die Anwendung.  
   
- **catalog**  
- Der Satz von Systemtabellen in einer Datenbank, die die Form der Datenbank zu beschreiben. Auch bekannt als eine *Schema* oder *Datenwörterbuch*.  
+ **sieren**  
+ Der Satz von Systemtabellen in einer Datenbank, die die Form der Datenbank beschreiben. Wird auch als *Schema* oder *Datenwörterbuch*bezeichnet.  
   
- **Katalogfunktion**  
- Eine ODBC-Funktion zum Abrufen von Informationen aus der Datenbank-Katalog verwendet wird.  
+ **Catalog-Funktion**  
+ Eine ODBC-Funktion, die zum Abrufen von Informationen aus dem Katalog der Datenbank verwendet wird.  
   
- **BEFEHLSZEILENSCHNITTSTELLE**  
- *Finden Sie unter* API.  
+ **CLI**  
+ *Siehe* Found.  
   
- **Client/server**  
- Eine Zugriffsstrategie für die Datenbank in dem einen oder mehrere Clients Daten über einen Server zugreifen. Die Clients implementieren in der Regel die Benutzeroberfläche, während die Serversteuerelemente Access-Datenbank.  
+ **Client/Server**  
+ Eine Datenbankzugriffs Strategie, in der mindestens ein Client über einen Server auf Daten zugreift. Die Clients implementieren in der Regel die Benutzeroberfläche, während der Server den Datenbankzugriff steuert.  
   
- **column**  
- Der Container für ein einzelnes Element der Informationen in einer Zeile. Auch bekannt als *Feld*.  
+ **Kolumne**  
+ Der Container für ein einzelnes Element von Informationen in einer Zeile. Wird auch als " *Field*" bezeichnet.  
   
- **commit**  
- Um die Änderungen in einer Transaktion permanent zu machen.  
+ **einzusetzen**  
+ , Um die Änderungen in einer Transaktion permanent zu machen.  
   
- **concurrency**  
- Die Fähigkeit von mehr als eine Transaktion, die Zugriff auf die gleichen Daten zur gleichen Zeit.  
+ **Concurrency**  
+ Die Fähigkeit von mehr als einer Transaktion, gleichzeitig auf dieselben Daten zuzugreifen.  
   
- **Übereinstimmungsebene**  
- Einen diskreten Satz von Funktionen, die durch einen Treiber oder eine Datenquelle unterstützt. ODBC definiert die API-Konformitätsgrad und SQL-Übereinstimmungsebenen.  
+ **Konformitätsstufe**  
+ Eine diskrete Gruppe von Funktionen, die von einem Treiber oder einer Datenquelle unterstützt werden. ODBC definiert API-Konformitätsstufen und SQL-Konformitäts Ebenen.  
   
  **connection**  
- Eine bestimmte Instanz von einem Treiber und einer Datenquelle.  
+ Eine bestimmte Instanz eines Treibers und einer Datenquelle.  
   
- **Verbindung durchsuchen**  
- Suchen das Netzwerk für die Datenquellen für die Verbindung ein. Durchsuchen der Verbindung kann mehrere Schritte umfassen. Beispielsweise kann der Benutzer zunächst das Netzwerk nach Servern durchsuchen und navigieren Sie dann auf einen bestimmten Server für eine Datenbank.  
+ **Durchsuchen von Verbindungen**  
+ Suchen des Netzwerks nach Datenquellen, mit denen eine Verbindung hergestellt werden soll. Das Durchsuchen von Verbindungen kann mehrere Schritte umfassen. Beispielsweise kann der Benutzer das Netzwerk zuerst nach Servern durchsuchen und dann einen bestimmten Server nach einer Datenbank durchsuchen.  
   
- **Verbindungshandles**  
+ **Verbindungs Handle**  
  Ein Handle für eine Datenstruktur, die Informationen über eine Verbindung enthält.  
   
- **Aktuelle Zeile**  
- Die Zeile derzeit die Cursor verweist. Positionierte Operationen werden auf der aktuellen Zeile.  
+ **aktuelle Zeile**  
+ Die Zeile, auf die der Cursor zurzeit zeigt. Positionierte Vorgänge agieren in der aktuellen Zeile.  
   
- **Cursor**  
- Eine Softwarekomponente, die Zeilen von Daten an die Anwendung zurückgibt. Wahrscheinlich nach blinkenden Cursors auf dem Terminalserver die benannt werden. nur als Cursor zeigt die aktuelle Position auf dem Bildschirm, ein Cursor in einem Resultset gibt an, die aktuelle Position im Resultset.  
+ **Hand**  
+ Ein Softwareelement, das Daten Zeilen an die Anwendung zurückgibt. Wird wahrscheinlich nach dem blinkende Cursor auf einem Computerterminal benannt. ebenso wie dieser Cursor die aktuelle Position auf dem Bildschirm anzeigt, gibt ein Cursor auf einem Resultset die aktuelle Position im Resultset an.  
   
 ## <a name="d"></a>D  
  **Datenpuffer**  
- Ein Puffer wird verwendet, um Daten zu übergeben. Häufig in Verbindung mit einem Puffer ist eine *Länge des Datenpuffers*.  
+ Ein Puffer, der verwendet wird, um Daten zu übergeben. Einem Datenpuffer ist häufig ein *Daten Längenpuffer*zugeordnet.  
   
  **Datenwörterbuch**  
- *Finden Sie unter* Katalog.  
+ *Siehe* catalog.  
   
- **Länge des Datenpuffers**  
- Ein Puffer verwendet, um die Länge des Werts in ein entsprechendes übergeben *Datenpuffer*. Der Datenpuffer für die Länge dient auch zum Speichern von Indikatoren, z. B., ob der Wert Null-terminiert ist.  
+ **Daten Längenpuffer**  
+ Ein Puffer, der verwendet wird, um die Länge des Werts in einem entsprechenden *Datenpuffer*zu übergeben. Der Daten Längenpuffer wird auch zum Speichern von Indikatoren verwendet, z. b. ob der Datenwert NULL-terminiert ist.  
   
  **Datenquelle**  
- Die Daten, die der Benutzer den Zugriff und die zugehörigen Betriebssystem, DBMS und Network-Plattform (sofern vorhanden) möchte.  
+ Die Daten, auf die der Benutzer zugreifen möchte, sowie das zugehörige Betriebssystem, DBMS und die Netzwerkplattform (sofern vorhanden).  
   
  **Datentyp**  
- Der Typ der Daten. ODBC definiert C und SQL-Datentypen. *Siehe auch* "Typindikator".  
+ Der Typ der Daten. ODBC definiert die C-und SQL-Datentypen. *Siehe auch* Typindikator.  
   
  **Data-at-Execution-Spalte**  
- Eine Spalte, die für die Daten, nach dem gesendet werden **SQLSetPos** aufgerufen wird. So genannt, da die Daten auf, die in einem Rowset Puffer platziert wird, statt Ausführungszeit gesendet werden. Long-Daten werden in der Regel in Teilen, die zum Zeitpunkt der Ausführung gesendet.  
+ Eine Spalte, für die Daten gesendet werden, nachdem **SQLSetPos** aufgerufen wurde. Das heißt, weil die Daten zur Ausführungszeit gesendet und nicht in einem rowsetpuffer abgelegt werden. Lange Daten werden in der Regel in Teilen zur Ausführungszeit gesendet.  
   
- **Data-at-Execution-parameter**  
- Ein Parameter für die Daten, nach dem gesendet werden **SQLExecute** oder **SQLExecDirect** aufgerufen wird. So genannt, da die Daten gesendet werden, wenn die SQL-Anweisung ausgeführt wird, anstatt in einem Parameterpuffer platziert wird. Long-Daten werden in der Regel in Teilen, die zum Zeitpunkt der Ausführung gesendet.  
+ **Data-at-Execution-Parameter**  
+ Ein Parameter, für den Daten gesendet werden, nachdem **SQLExecute** oder **SQLExecDirect** aufgerufen wurde. Das heißt, weil die Daten gesendet werden, wenn die SQL-Anweisung ausgeführt wird, anstatt Sie in einem Parameter Puffer zu platzieren. Lange Daten werden in der Regel in Teilen zur Ausführungszeit gesendet.  
   
- **database**  
- Eine diskrete Sammlung von Daten in einem DBMS. Auch ein DBMS.  
+ **Verbindung**  
+ Eine diskrete Auflistung von Daten in einem DBMS. Außerdem ein DBMS.  
   
- **Datenbank-engine**  
- Die Software in einem DBMS, die analysiert und SQL-Anweisungen ausgeführt und greift auf die physischen Daten.  
+ **Datenbank-Engine**  
+ Die Software in einem DBMS, die SQL-Anweisungen analysiert und ausführt und auf die physischen Daten zugreift.  
   
  **DBMS**  
- Datenbank-Managementsystem. Eine Softwareebene zwischen der physischen Datenbank und dem Benutzer. Das DBMS dient zur Verwaltung des gesamten Zugriffs auf die Datenbank.  
+ Daten Bank Verwaltungs System. Eine Softwareebene zwischen der physischen Datenbank und dem Benutzer. Das DBMS dient zur Verwaltung des gesamten Zugriffs auf die Datenbank.  
   
- **DBMS-basierten Treibers**  
- Ein Treiber, der physische Daten über eine eigenständige Datenbank-Engine zugreift.  
+ **DBMS-basierter Treiber**  
+ Ein Treiber, der über eine eigenständige Datenbank-Engine auf physische Daten zugreift.  
   
  **DDL**  
- Die Datendefinitionssprache. Diese Anweisungen in SQL, die nicht an, um zu bearbeiten, müssen Daten zu definieren. Z. B. **CREATE TABLE**, **CREATE INDEX**, **GRANT**, und **widerrufen**.  
+ Datendefinitionssprache. Diese Anweisungen in SQL, die definieren, dass Daten nicht geändert werden. Beispielsweise **CREATE TABLE**, **Index erstellen**, **erteilen**und **widerrufen**.  
   
  **Begrenzungsbezeichner**  
- Ein Bezeichner, der in Anführungszeichen für Bezeichner eingeschlossen ist, sodass Schlüsselwörter (auch bekannt als aus einem Bezeichner in Anführungszeichen entsprechen) oder Sonderzeichen enthalten kann.  
+ Ein Bezeichner, der in bezeichneranführungs Zeichen eingeschlossen ist, sodass er Sonderzeichen oder Vergleichs Schlüsselwörter enthalten kann (auch als Bezeichner in Anführungszeichen bezeichnet).  
   
- **descriptor**  
- Eine Datenstruktur, die Informationen über die Spaltendaten oder dynamischen Parametern enthält. Die physikalische Darstellung des Deskriptors ist nicht definiert. Anwendungen erhalten direkten Zugriff auf den Deskriptor eines nur durch die Felder bearbeiten von Aufrufen von ODBC-Funktionen, mit dem Deskriptorhandle.  
+ **Deskriptor**  
+ Eine Datenstruktur, die Informationen zu Spaltendaten oder dynamischen Parametern enthält. Die physische Darstellung des Deskriptors ist nicht definiert. Anwendungen erhalten nur einen direkten Zugriff auf einen Deskriptor, indem Sie die zugehörigen Felder durch Aufrufen von ODBC-Funktionen mit dem Deskriptorhandle bearbeiten.  
   
- **Desktop-Datenbank**  
- Ein DBMS auf einem PC ausgeführt werden soll. Im Allgemeinen diese bieten einer eigenständige Datenbank-Engine keine DBMS und Zieltreiber müssen durch einen dateibasierten Treibers zugegriffen werden. Die Triebwerke in diese Treiber eingeschränkte Unterstützung für SQL und Transaktionen in der Regel. Z. B. dBASE, Paradox, Btrieve oder Microsoft® FoxPro®.  
+ **Desktop Datenbank**  
+ Ein DBMS, das auf einem persönlichen Computer ausgeführt werden soll. Im allgemeinen stellen diese DBMSs keine eigenständige Datenbank-Engine bereit und müssen über einen dateibasierten Treiber aufgerufen werden. Die Module in diesen Treibern haben in der Regel geringere Unterstützung für SQL und Transaktionen. Beispiel: dBASE, Paradox, Btrieve oder Microsoft® FoxPro®.  
   
- **Diagnose**  
- Ein Datensatz mit diagnostischen Angaben über die letzte Funktion, die aufgerufen wird, verwendet ein bestimmtes Handle. DiagnoseDatensätze sind Umgebung "," Verbindung "," Anweisung "und" Deskriptorhandles zugeordnet.  
+ **Diagnostics**  
+ Ein Datensatz, der Diagnoseinformationen über die letzte Funktion mit dem Namen enthält, die ein bestimmtes Handle verwendet haben. Diagnosedaten Sätze sind Umgebungs-, Verbindungs-, Anweisungs-und Deskriptorhandles zugeordnet.  
   
  **DML**  
- Datenbearbeitungssprache. Diese Anweisungen in SQL, die nicht an, um zu definieren, Daten zu bearbeiten. Z. B. **einfügen**, **UPDATE**, **löschen**, und **wählen**.  
+ Daten Bearbeitungs Sprache. Diese Anweisungen in SQL, die bearbeiten, anstatt Daten zu definieren. Beispielsweise **Insert**, **Update**, **Delete**und **Select**.  
   
- **Treiber**  
- Eine routinemäßige-Bibliothek, die die Funktionen der ODBC-API verfügbar macht. Treiber sind spezifisch für eine einzelne DBMS.  
+ **Trei**  
+ Eine Routine Bibliothek, die die Funktionen in der ODBC-API verfügbar macht. Treiber sind für ein einzelnes DBMS spezifisch.  
   
  **Treiber-Manager**  
- Eine routinemäßige-Bibliothek, die Zugriff auf Treiber für die Anwendung verwaltet. Der Treiber-Manager geladen und entladen wird (oder eine Verbindung mit her, und trennt die Verbindung) Aufrufe Treiber und übergibt an die ODBC-Funktionen, um den richtigen Treiber.  
+ Eine Routine Bibliothek, die den Zugriff auf Treiber für die Anwendung verwaltet. Der Treiber-Manager lädt und entlädt (bzw. stellt eine Verbindung mit dem Treiber her und trennt ihn) und übergibt Aufrufe an ODBC-Funktionen an den richtigen Treiber.  
   
- **Setup-DLL für Treiber**  
- Eine DLL, die treiberspezifische Funktionen für Installation und Konfiguration enthält.  
+ **Treiber-Setup-DLL**  
+ Eine DLL, die Treiber spezifische Installations-und Konfigurationsfunktionen enthält.  
   
- **Dynamic-cursor**  
- Einen bildlauffähigen Cursor aktualisiert, gelöscht oder eingefügt werden, in das Resultset Zeilen erkennen kann.  
+ **Dynamischer Cursor**  
+ Ein Bild lauffähigen Cursor, der Zeilen erkennen kann, die im Resultset aktualisiert, gelöscht oder eingefügt wurden.  
   
  **Dynamisches SQL**  
- Ein Typ von embedded SQL-Anweisungen sind in dem SQL erstellt und zur Laufzeit kompiliert werden soll. *Siehe auch* statische SQL-Anweisungen.  
+ Ein eingebetteter SQL-Typ, in dem SQL-Anweisungen zur Laufzeit erstellt und kompiliert werden. *Siehe auch* statisches SQL.  
   
 ## <a name="e"></a>E  
- **Embedded SQL**  
- SQL-Anweisungen, die direkt in einem Programm, das in einer anderen Sprache, z. B. COBOL oder C. ODBC enthalten sind embedded SQL nicht verwendet. *Siehe auch* statische SQL-Anweisungen *und* dynamischem SQL.  
+ **eingebettetes SQL**  
+ SQL-Anweisungen, die direkt in einem in einer anderen Sprache geschriebenen Programm enthalten sind, wie z. b. COBOL oder C. ODBC, verwenden Embedded SQL nicht. *Siehe auch* statisches SQL *und* dynamisches SQL.  
   
- **environment**  
- Einem globalen Kontext in dem für den Datenzugriff der Umgebung zugeordnet ist, alle Informationen, die global in der Art, z. B. eine Liste aller Verbindungen in dieser Umgebung ist.  
+ **Umgebung**  
+ Ein globaler Kontext, in dem auf Daten zugegriffen werden soll. der Umgebung zugeordnet sind alle Informationen, die Global sind, z. b. eine Liste aller Verbindungen in dieser Umgebung.  
   
- **Umgebungshandles**  
+ **Umgebungs Handle**  
  Ein Handle für eine Datenstruktur, die Informationen über die Umgebung enthält.  
   
- **ESCAPE-Klausel**  
- Eine Klausel in einer SQL-Anweisung.  
+ **Escape-Klausel**  
+ Eine-Klausel in einer SQL-Anweisung.  
   
- **execute**  
- Um eine SQL-Anweisung auszuführen.  
+ **auszuführen**  
+ Zum Ausführen einer SQL-Anweisung.  
   
-## <a name="f"></a>V  
- **FAT cursor**  
- *Finden Sie unter* Blockcursor.  
+## <a name="f"></a>F  
+ **FAT-Cursor**  
+ *Siehe* Block Cursor.  
   
- **fetch**  
- Um eine oder mehrere Zeilen aus einem Resultset abgerufen werden.  
+ **Fetti**  
+ , Wenn eine oder mehrere Zeilen aus einem Resultset abgerufen werden sollen.  
   
- **field**  
- *Finden Sie unter* Spalte.  
+ **Flächen**  
+ *Siehe* Spalte.  
   
- **dateibasierte Treiber**  
- Ein Treiber, der physische Daten direkt zugreift. In diesem Fall wird der Treiber enthält eine Datenbank-Engine und fungiert gleichzeitig als Treiber und -Datenquelle.  
+ **Datei basierter Treiber**  
+ Ein Treiber, der direkt auf physische Daten zugreift. In diesem Fall enthält der Treiber eine Datenbank-Engine und fungiert sowohl als Treiber als auch als Datenquelle.  
   
- **Datei als Datenquelle**  
- Eine Datenquelle, für welche, die Verbindung Informationen in einer DSN-Datei gespeichert werden.  
+ **Datei Datenquelle**  
+ Eine Datenquelle, für die Verbindungsinformationen in einer DSN-Datei gespeichert werden.  
   
  **Fremdschlüssel**  
- Eine Spalte oder Spalten in einer Tabelle, die den Primärschlüssel in einer anderen Tabelle entsprechen.  
+ Eine Spalte oder Spalten in einer Tabelle, die mit dem Primärschlüssel in einer anderen Tabelle verglichen werden.  
   
- **Vorwärtscursor**  
- Ein Cursor, der nur vorwärts durch die Ergebnisse und in der Regel verschieben kann ruft nur eine Zeile zu einem Zeitpunkt ab. Die meisten relationale Datenbanken unterstützen nur Vorwärtscursor.  
+ **Vorwärts Cursor**  
+ Ein Cursor, der sich nur durch das Resultset vorwärts bewegen und in der Regel jeweils nur eine Zeile abruft. Die meisten relationalen Datenbanken unterstützen nur vorwärts Cursor.  
   
 ## <a name="h"></a>H  
- **Handle**  
- Ein Wert, der eindeutig etwas wie eine Datei oder -Struktur identifiziert. Handles sind sinnvoll, nur für die Software, die erstellt und verwendet sie jedoch durch eine andere Software, die Elemente identifizieren übergeben werden. ODBC definiert Handles für Umgebungen, die Verbindungen, Anweisungen und Deskriptoren.  
+ **bewältigen**  
+ Ein Wert, der einen eindeutigen Wert angibt, z. b. eine Datei oder eine Datenstruktur. Handles sind nur für die Software von Bedeutung, die Sie erstellt und verwendet, aber von anderer Software zur Identifizierung von Informationen an Sie übermittelt wird. ODBC definiert Handles für Umgebungen, Verbindungen, Anweisungen und Deskriptoren.  
   
 ## <a name="i"></a>I  
- **IPD (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor)**  
- Ein Deskriptor, der beschreibt, die dynamischen Parameter in einer SQL-Anweisung nach der Konvertierung von der Anwendung angegebenes verwendet.  
+ **Implementierungs Parameter Deskriptor (IPD)**  
+ Ein Deskriptor, der die dynamischen Parameter beschreibt, die in einer SQL-Anweisung nach allen von der Anwendung angegebenen Konvertierungen verwendet werden.  
   
- **implementierungszeilendeskriptors (IRD)**  
- Ein Deskriptor, der eine Zeile mit Daten vor der Konvertierung von der Anwendung angegebenes beschreibt.  
+ **Implementierungs Zeilen Deskriptor (IRD)**  
+ Ein Deskriptor, der eine Daten Zeile vor allen von der Anwendung angegebenen Konvertierungen beschreibt.  
   
- **Installationsprogramm-DLL**  
- Eine DLL, die ODBC-Komponenten installiert und konfiguriert,-Datenquellen.  
+ **Installer-dll**  
+ Eine DLL, die ODBC-Komponenten installiert und Datenquellen konfiguriert.  
   
- **Integritätserweiterungsfunktion**  
- Eine Teilmenge von SQL entwickelt, um die Integrität einer Datenbank zu gewährleisten.  
+ **Integritäts Erweiterungs Funktion**  
+ Eine Teilmenge von SQL, die zur Aufrechterhaltung der Integrität einer Datenbank entworfen wurde.  
   
- **Interface-Konformitätsgrad**  
- Die Ebene der von einem Treiber unterstützten 3.7 der ODBC-Schnittstelle Hierbei kann es sich um Core, Level 1 und Ebene 2 sein.  
+ **Schnittstellen Konformitäts Ebene**  
+ Die Ebene der von einem Treiber unterstützten ODBC 3,7-Schnittstelle. kann "Core", "Level 1" oder "Level 2" sein.  
   
- **Interoperabilität**  
- Die Fähigkeit einer Anwendung auf den gleichen Code verwenden, beim Zugriff auf Daten in anderen DBMS.  
+ **interoper**  
+ Die Fähigkeit einer Anwendung, beim Zugriff auf Daten in unterschiedlichen DBMSs denselben Code zu verwenden.  
   
  **IPD**  
- *Finden Sie unter* IPD (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor).  
+ *Siehe* Implementierungs Parameter Deskriptor (IPD).  
   
  **IRD**  
- *Finden Sie unter* Implementierung Zeile Deskriptor (IRD).  
+ *Siehe* Implementierungs Zeilen Deskriptor (IRD).  
   
  **ISO/IEC**  
- Internationale Standards Organisation/Internationalen Elektrotechnischen Kommission. Der ODBC-API basiert auf der ISO/IEC-Call-Level-Schnittstelle.  
+ International Standards Organization/Internationale Elektrotechnische Kommission. Die ODBC-API basiert auf der ISO/IEC-Schnittstelle auf der Telefon Ebene.  
   
 ## <a name="j"></a>J  
  **Join**  
- Ein Vorgang in einer relationalen Datenbank, die die Zeilen in zwei oder mehr Tabellen verknüpft, indem Sie passende Werte in bestimmte Spalten dient.  
+ Ein Vorgang in einer relationalen Datenbank, der die Zeilen in zwei oder mehr Tabellen durch übereinstimmende Werte in angegebenen Spalten verknüpft.  
   
 ## <a name="k"></a>K  
- **key**  
- Eine Spalte oder Spalten, deren Werte eine Zeile zu identifizieren. *Siehe auch* Fremdschlüssel *und* Primärschlüssel.  
+ **wichtigen**  
+ Eine Spalte oder Spalten, deren Werte eine Zeile identifizieren. *Siehe auch* Fremdschlüssel *und* Primärschlüssel.  
   
  **Keyset**  
- Ein Satz von Schlüsseln, die von einem gemischten oder keysetgesteuerte Cursor verwendet, um die Zeilen erneut abzurufen.  
+ Ein Satz von Schlüsseln, die von einem gemischten oder keysetgesteuerten Cursor zum erneuten Abrufen von Zeilen verwendet werden.  
   
- **keysetgesteuerter cursor**  
- Welches einen bildlauffähigen Cursor, der aktualisierten und gelöschte Zeilen mit einem Keyset erkennt.  
+ **Keysetgesteuerter Cursor**  
+ Ein Bild lauffähigen Cursor, der aktualisierte und gelöschte Zeilen mithilfe eines Keysets erkennt.  
   
 ## <a name="l"></a>L  
- **literal**  
- Eine breitzeichendarstellung eines Werts der tatsächlichen Daten in einer SQL­Anweisung.  
+ **wahrsten**  
+ Eine Zeichen Darstellung eines tatsächlichen Datenwerts in einer SQL-Anweisung.  
   
- **locking**  
- Der Prozess, mit dem ein DBMS den Zugriff auf eine Zeile in einer mehrbenutzerumgebung beschränkt. Das DBMS in der Regel legt ein bit auf eine Zeile oder die physische Seite mit je einer Zeile, die die Zeile gibt an, oder Seite ist gesperrt.  
+ **gelungen**  
+ Der Prozess, durch den ein DBMS den Zugriff auf eine Zeile in einer mehr Benutzerumgebung einschränkt. Das DBMS legt normalerweise ein Bit für eine Zeile oder die physische Seite mit einer Zeile fest, die angibt, dass die Zeile oder Seite gesperrt ist.  
   
- **Long-Daten**  
- Alle Binär- oder Zeichendatentypen Daten über eine bestimmte Länge, wie z. B. 255 Bytes oder Zeichen. In der Regel viel länger. Diese Daten in der Regel an gesendet und abgerufen werden, aus der Datenquelle in Teilen. Auch bekannt als *BLOB*s oder *CLOB*s.  
+ **lange Daten**  
+ Alle Binär-oder Zeichendaten über eine bestimmte Länge, z. b. 255 Bytes oder Zeichen. In der Regel viel länger. Diese Daten werden in der Regel an die Datenquelle gesendet und in Teilen aus der Datenquelle abgerufen. Auch als *BLOB*s oder *CLOB*bezeichnet.  
   
 ## <a name="m"></a>M  
- **Computer-Datenquelle**  
- Eine Datenquelle, für welche, die Verbindung Informationen, auf dem System (z. B. die Registrierung gespeichert werden).  
+ **Computer Datenquelle**  
+ Eine Datenquelle, für die Verbindungsinformationen auf dem System gespeichert werden (z. b. die Registrierung).  
   
- **Manualcommit-Modus**  
- Eine Transaktion Commit-Modus in der Transaktionen werden explizit ein durch den Aufruf Commit müssen **SQLTransact**.  
+ **manueller Commit-Modus**  
+ Ein transaktionscommitmodus, in dem Transaktionen explizit durch Aufrufen von **SQLTransact**committet werden müssen.  
   
- **metadata**  
- Daten, die einen Parameter in einer SQL-Anweisung oder eine Spalte in einem Resultset zu beschreiben. Z. B. den-Datentyp, Länge in Byte, und die Genauigkeit eines Parameters.  
+ **benötigten**  
+ Daten, die einen Parameter in einer SQL-Anweisung oder eine Spalte in einem Resultset beschreiben. Beispielsweise der Datentyp, die Byte Länge und die Genauigkeit eines Parameters.  
   
  **Treiber mit mehreren Ebenen**  
- *Finden Sie unter* DBMS-basierten Treibers.  
+ *Siehe* DBMS-basierter Treiber.  
   
 ## <a name="n"></a>N  
  **NULL-Wert**  
- Wenn kein Wert explizit zugewiesen. Ein NULL-Wert unterscheidet sich vor allem eine 0 (null) oder ein Leerzeichen.  
+ Es ist kein explizit zugewiesener Wert vorhanden. Ein NULL-Wert unterscheidet sich insbesondere von 0 (null) oder leer.  
   
 ## <a name="o"></a>O  
- **octet**  
- Acht Bits oder ein Byte. *Siehe auch* Byte.  
+ **Oktett**  
+ 8 Bits oder ein Byte. *Siehe auch* Byte.  
   
- **Oktettlänge**  
- Die Länge in Oktetten einen Puffer oder die darin enthaltenen Daten.  
+ **Oktett-Länge**  
+ Die Länge in Oktette eines Puffers oder der darin enthaltenen Daten.  
   
  **ODBC**  
- Öffnen Sie die Datenbankverbindung an. Eine Spezifikation für eine API, die einen standardmäßigen Satz von Routinen definiert, mit denen eine Anwendung Daten in einer Datenquelle zugreifen können.  
+ Open Database Connectivity. Eine Spezifikation für eine API, die einen Standardsatz von Routinen definiert, mit dem eine Anwendung auf Daten in einer Datenquelle zugreifen kann.  
   
  **ODBC-Administrator**  
- Ein ausführbares Programm, das das Installationsprogramm-DLL für die Konfiguration von Datenquellen aufruft.  
+ Ein ausführbares Programm, das die Installationsprogramm-dll zum Konfigurieren von Datenquellen aufruft.  
   
  Gruppe öffnen  
- Ein Unternehmen, die Standards veröffentlicht. Insbesondere veröffentlicht es SQL Access Group (SAG)-Standards.  
+ Ein Unternehmen, das Standards veröffentlicht. Insbesondere werden die Standards der SQL-Zugriffs Gruppe ("-Dienst") veröffentlicht.  
   
- **vollständige Parallelität**  
- Eine Strategie zur Steigerung der Parallelität in dem Zeilen nicht gesperrt werden. Bevor sie aktualisiert oder gelöscht werden, überprüft ein Cursor stattdessen, um festzustellen, ob sie geändert wurden, seit sie zuletzt gelesen wurden. Wenn dies der Fall ist, schlägt fehl, die Update- oder Delete. *Siehe auch* pessimistische Parallelität.  
+ **optimistische Parallelität**  
+ Eine Strategie zum Erhöhen der Parallelität, in der Zeilen nicht gesperrt sind. Stattdessen prüft ein Cursor vor der Aktualisierung oder Löschung, ob Sie seit dem letzten Lesen geändert wurden. Wenn dies der Fall ist, schlägt die Aktualisierung oder Löschung fehl. *Siehe auch* pessimistische Parallelität.  
   
- **äußere Joins**  
- Ein join, bei die entsprechenden und nicht übereinstimmenden Zeilen zurückgegeben werden. Die Werte aller Spalten aus der nicht übereinstimmenden Tabelle in nicht übereinstimmenden Zeilen werden auf NULL festgelegt.  
+ **Äußerer Join**  
+ Ein Join, bei dem sowohl übereinstimmende als auch nicht passende Zeilen zurückgegeben werden. Die Werte aller Spalten aus der nicht übereinstimmenden Tabelle in nicht übereinstimmenden Zeilen werden auf NULL festgelegt.  
   
- **Besitzer**  
+ **Eigentor**  
  Der Besitzer einer Tabelle.  
   
 ## <a name="p"></a>P  
- **parameter**  
- Eine Variable in einer SQL­Anweisung mit einer parametermarkierung oder ein Fragezeichen (?) markiert. Parameter sind gebunden, an Anwendungsvariablen und deren Werte abgerufen werden, wenn die Anweisung ausgeführt wird.  
+ **Parame**  
+ Eine Variable in einer SQL-Anweisung, die mit einer Parameter Markierung oder einem Fragezeichen (?) markiert ist. Parameter werden an Anwendungsvariablen und ihre Werte gebunden, die beim Ausführen der Anweisung abgerufen werden.  
   
- **Parameterdeskriptor**  
- Ein Deskriptor, der beschreibt, die Laufzeit-Parameter, die in eine SQL-Anweisung entweder vor der Konvertierung von der Anwendung (einen Anwendungsdienst-Deskriptor-Parameter oder APD) oder nach der Konvertierung angegeben, die von der Anwendung (eine Implementierung angegeben verwendet Parameterdeskriptor oder Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor).  
+ **Parameter Deskriptor**  
+ Ein Deskriptor, der die in einer SQL-Anweisung verwendeten Lauf Zeitparameter beschreibt, entweder vor einer Konvertierung, die von der Anwendung (einem Anwendungsparameter Deskriptor oder einer APD) angegeben wird, oder nach einer von der Anwendung angegebenen Konvertierung (eine Implementierung Parameter Deskriptor oder IPD).  
   
- **Parameterarray-Vorgang**  
- Ein Array mit Werten, die eine Anwendung festlegen können, um anzugeben, dass der entsprechende Parameter sollen, in ignoriert werden eine **SQLExecDirect** oder **SQLExecute** Vorgang.  
+ **Parameter Vorgangs Array**  
+ Ein Array, das Werte enthält, die von einer Anwendung festgelegt werden können, um anzugeben, dass der entsprechende Parameter in einem **SQLExecDirect** -oder **SQLExecute** -Vorgang ignoriert werden soll.  
   
- **Parameterarray-status**  
- Ein Array mit den Status eines Parameters, nach einem Aufruf von **SQLExecDirect** oder **SQLExecute**.  
+ **Parameter Status Array**  
+ Ein Array, das nach einem-Befehl von **SQLExecDirect** oder **SQLExecute**den Status eines Parameters enthält.  
   
- **die eingeschränkte Parallelität**  
- Eine Strategie für die Implementierung der Serialisierbarkeit, in dem Zeilen gesperrt werden, so dass andere Transaktionen, die sie ändern können. *Siehe auch* optimistische Parallelität *und* Serialisierbarkeit.  
+ **Eingeschränkte Parallelität**  
+ Eine Strategie zum Implementieren der Serialisierbarkeit, bei der Zeilen gesperrt werden, sodass Sie von anderen Transaktionen nicht geändert werden können. *Siehe auch* vollständige Parallelität *und* Serialisierbarkeit.  
   
- **positionierte operation**  
- Jeder Vorgang, der auf der aktuellen Zeile angewendet werden. Z. B. positioniert Update und delete-Anweisungen, **SQLGetData**, und **SQLSetPos**.  
+ **positionierter Vorgang**  
+ Jeder Vorgang, der für die aktuelle Zeile fungiert. Beispielsweise positionierte UPDATE-und DELETE-Anweisungen, **SQLGetData**und **SQLSetPos**.  
   
- **positionierte Update-Anweisung**  
- Eine SQL-Anweisung verwendet, um die Werte in der aktuellen Zeile zu aktualisieren.  
+ **positionierte UPDATE-Anweisung**  
+ Eine SQL-Anweisung, die verwendet wird, um die Werte in der aktuellen Zeile zu aktualisieren.  
   
- **positionierte Delete-Anweisung**  
- Eine SQL-Anweisung verwendet, um die aktuelle Zeile gelöscht wird.  
+ **Positionierte DELETE-Anweisung**  
+ Eine SQL-Anweisung, mit der die aktuelle Zeile gelöscht wird.  
   
- **prepare**  
- Um eine SQL-Anweisung zu kompilieren. Ein Zugriffsplan wird durch die Vorbereitung einer SQL-Anweisung erstellt.  
+ **erstellt**  
+ So kompilieren Sie eine SQL-Anweisung Ein Zugriffs Plan wird erstellt, indem eine SQL-Anweisung vorbereitet wird.  
   
  **Primärschlüssel**  
  Eine Spalte oder Spalten, die eine Zeile in einer Tabelle eindeutig identifiziert.  
   
- **procedure**  
- Eine Gruppe eine oder mehrere vorkompilierte SQL-Anweisungen, die als ein benanntes Objekt in einer Datenbank gespeichert sind.  
+ **Dringlichkeit**  
+ Eine Gruppe mit einer oder mehreren vorkompilierten SQL-Anweisungen, die als benanntes Objekt in einer Datenbank gespeichert werden.  
   
- **Prozedurspalte**  
- Ein Argument in einem Prozeduraufruf, der von einer Prozedur oder eine Spalte in einem Resultset, die von einer Prozedur erstellten zurückgegebene Wert.  
+ **Spalte "Procedure"**  
+ Ein Argument in einem Prozedur Befehl, der Wert, der von einer Prozedur zurückgegeben wird, oder eine Spalte in einem Resultset, das durch eine Prozedur erstellt wurde.  
   
 ## <a name="q"></a>Q  
- **Qualifizierer**  
+ **Turnier**  
  Eine Datenbank, die eine oder mehrere Tabellen enthält.  
   
- **query**  
- Eine SQL-Anweisung. Manchmal verwendet, um das bedeutet, dass eine **wählen** Anweisung.  
+ **Such**  
+ Eine SQL-Anweisung. Wird manchmal verwendet, um eine **Select** -Anweisung zu verwenden.  
   
- **Bezeichner in Anführungszeichen**  
- Ein Bezeichner, der in Anführungszeichen für Bezeichner eingeschlossen ist, damit Schlüsselwörtern (die auch in SQL-92, als durch Trennzeichen getrennten Bezeichner bezeichnet werden) entsprechen oder Sonderzeichen enthalten kann.  
+ **bezeichnerbezeichner**  
+ Ein Bezeichner, der in bezeichneranführungs Zeichen eingeschlossen ist, sodass er Sonderzeichen oder Übereinstimmungs Schlüsselwörter (auch in SQL-92 als Begrenzungs Bezeichner bezeichnet) enthalten kann.  
   
 ## <a name="r"></a>R  
  **Basis**  
- Die Basis eines Systems Anzahl. In der Regel 2 "oder" 10 ".  
+ Die Basis eines Zahlen Systems. Normalerweise 2 oder 10.  
   
- **record**  
- *Finden Sie unter* Zeile.  
+ **Aufnahme**  
+ *Siehe* Zeile.  
   
  **Resultset**  
- Der Satz von Zeilen, die Ausführung von erstellt eine **wählen** Anweisung.  
+ Der Satz von Zeilen, der durch Ausführen einer **Select** -Anweisung erstellt wird.  
   
  **Rückgabecode**  
  Der Wert, der von einer ODBC-Funktion zurückgegeben wird.  
   
- **Zurücksetzen**  
- Um die Werte geändert, die von einer Transaktion an den ursprünglichen Zustand zurück.  
+ **Rollback**  
+ , Um die von einer Transaktion geänderten Werte in ihren ursprünglichen Zustand zurückzusetzen.  
   
- **row**  
- Ein Satz von verknüpften Spalten, die eine bestimmte Entität zu beschreiben. Auch bekannt als eine *Datensatz*.  
+ **Zeile**  
+ Ein Satz verwandter Spalten, die eine bestimmte Entität beschreiben. Wird auch als *Datensatz*bezeichnet.  
   
- **Zeile Deskriptor**  
- Ein Deskriptor, der beschreibt, die Spalten eines Resultsets, die entweder vor der Konvertierung von der Anwendung (ein Implementierungszeilendeskriptor oder IRD) oder nach der Konvertierung angegeben, die von der Anwendung (einen Anwendungsdienst-Deskriptor Zeile oder ARD) angegeben.  
+ **Zeilen Deskriptor**  
+ Ein Deskriptor, der die Spalten eines Resultsets beschreibt, entweder vor allen von der Anwendung angegebenen Konvertierungen (einem Implementierungs Zeilen Deskriptor oder IRD) oder nach einer von der Anwendung (einem Anwendungs Zeilen Deskriptor oder einer ARD) angegebenen Konvertierung.  
   
- **Zeile Operation-array**  
- Ein Array mit Werten, die eine Anwendung festlegen können, um anzugeben, dass die entsprechende Zeile soll, in ignoriert werden einem **SQLSetPos** Vorgang.  
+ **Zeilen Vorgangs Array**  
+ Ein Array, das Werte enthält, die von einer Anwendung festgelegt werden können, um anzugeben, dass die entsprechende Zeile bei einem **SQLSetPos** -Vorgang ignoriert werden soll.  
   
- **zeilenstatusarray**  
- Ein Array mit den Status einer Zeile nach einem Aufruf von **SQLFetch**, **SQLFetchScroll**, oder **SQLSetPos**.  
+ **Zeilen Status Array**  
+ Ein Array, das nach einem Aufrufen von **SQLFetch**, **SQLFetchScroll**oder **SQLSetPos**den Status einer Zeile enthält.  
   
- **rowset**  
- Der Satz von Zeilen, die in einen einzelnen Abruf von einem Blockcursor zurückgegeben.  
+ **Rowset**  
+ Der Satz von Zeilen, die in einem einzelnen Abruf durch einen Block Cursor zurückgegeben werden.  
   
- **Rowset-Puffer**  
- Die Puffer gebunden an die Spalten eines Resultsets und bei der die Daten für eine gesamte Rowset zurückgegeben werden.  
+ **rowsetpuffer**  
+ Die Puffer, die an die Spalten eines Resultsets gebunden sind und in denen die Daten für ein gesamtes Rowset zurückgegeben werden.  
   
-## <a name="s"></a>S  
- **SAG**  
- *Finden Sie unter* SQL-Zugriffsgruppe (SAG).  
+## <a name="s"></a>E  
+ **Sägen**  
+ *Siehe* SQL Access Group (SAG).  
   
  **Skalarfunktion**  
- Eine Funktion, die einen einzelnen Wert aus einem einzelnen Wert generiert. Beispiel: eine Funktion, die die Groß-/Kleinschreibung von Zeichendaten geändert.  
+ Eine Funktion, die einen einzelnen Wert aus einem einzelnen Wert generiert. Beispielsweise eine Funktion, mit der die Groß-/Kleinschreibung von Zeichendaten geändert wird.  
   
- **schema**  
- *Finden Sie unter* Katalog.  
+ **Chaos**  
+ *Siehe* catalog.  
   
- **bildlauffähige cursor**  
- Ein Cursor, der über das Resultset vorwärts oder rückwärts bewegen kann.  
+ **scrollfähigen Cursor**  
+ Ein Cursor, der vorwärts oder rückwärts durch das Resultset verschoben werden kann.  
   
  **Serialisierbarkeit**  
- Gibt an, ob zwei Transaktionen gleichzeitig ausgeführt werden zu einem Ergebnis, das gleiche wie die serielle (oder nacheinander) Ausführung dieser Transaktionen ist. Serializable-Transaktionen sind erforderlich, um die Datenbankintegrität zu verwalten.  
+ Gibt an, ob zwei Transaktionen, die gleichzeitig ausgeführt werden, ein Ergebnis erzeugt, das mit der seriellen (oder sequenziellen) Ausführung dieser Transaktionen identisch ist. Serialisierbare Transaktionen sind erforderlich, um die Datenbankintegrität beizubehalten.  
   
- **Server-Datenbank**  
- Ein DBMS in einer Client-/serverumgebung ausgeführt werden soll. Diese DBMS stellen ein eigenständiges Datenbankmodul, das bietet eine umfangreiche für SQL und Transaktionen Unterstützung bereit. Sie werden über die DBMS-basierten Treibern zugegriffen. Z.B. Oracle, Informix, DB/2 oder Microsoft® SQL Server.  
+ **Server Datenbank**  
+ Ein DBMS, das in einer Client-/Server-Umgebung ausgeführt werden soll. Diese DBMSs stellen ein eigenständiges Datenbankmodul bereit, das umfangreiche Unterstützung für SQL und Transaktionen bietet. Der Zugriff erfolgt über DBMS-basierte Treiber. Zum Beispiel Oracle, Informix, DB/2 oder Microsoft® SQL Server.  
   
  **Set-Funktion**  
- *Finden Sie unter* Aggregatfunktion.  
+ *Siehe* Aggregatfunktion.  
   
  **Setup-DLL**  
- *Finden Sie unter* Setup-DLL für Treiber *und* Translator-Setup-DLL.  
+ *Weitere Informationen finden* Sie unter Treiber Setup *-dll und Setup-* dll  
   
- **ein-Ebenen-Treiber**  
- *Finden Sie unter* dateibasierten Treibers.  
+ **Single-Tier-Treiber**  
+ *Weitere Informationen finden* Sie unter Datei basierter Treiber.  
   
  **SQL**  
- Strukturierte Abfragesprache. Eine Sprache, die von relationalen Datenbanken verwendet werden, zum Abfragen, aktualisieren und zu verwalten.  
+ strukturierte Abfragesprache. Eine Sprache, die von relationalen Datenbanken zum Abfragen, aktualisieren und Verwalten von Daten verwendet wird.  
   
- **SQL-Zugriffsgruppe (SAG)**  
- Ein Branchenkonsortium von Unternehmen, die mit SQL-Datenbank-Managementsysteme befassen. Die Open Group Call-Level-Interface basiert auf Arbeit, die ursprünglich von der SQL-Zugriffsgruppe.  
+ **SQL-Zugriffs Gruppe (SAG)**  
+ Ein Branchen Konsortium von Unternehmen, die sich mit SQL DBMSs beschäftigen. Die Schnittstelle auf der Ebene der geöffneten Gruppe basiert auf der ursprünglich von der SQL-Zugriffs Gruppe ausgeführten Arbeit.  
   
- **SQL-Konformitätsgrad**  
- Der Ebene der SQL-92-Grammatik, die vom Treiber unterstützt; Eintrag FIPS Transitional, zwischen- oder vollständige möglich.  
+ **SQL-Konformitätsstufe**  
+ Die Ebene der SQL-92-Grammatik, die von einem Treiber unterstützt wird. kann "Entry", "fps Transition", "Intermediate" oder "Full" lauten  
   
  **SQL-Datentyp**  
- Der Datentyp einer Spalte oder Parameter, wie er wird in der Datenquelle gespeichert.  
+ Der Datentyp einer Spalte oder eines Parameters, wie er in der Datenquelle gespeichert ist.  
   
  **SQLSTATE**  
- Ein fünfstelligen-Wert, der einen bestimmten Fehler angibt.  
+ Ein-Wert mit fünf Zeichen, der einen bestimmten Fehler angibt.  
   
  **SQL-Anweisung**  
- Eine vollständige Ausdruck in SQL, beginnt mit einem Schlüsselwort und vollständig beschreibt eine Aktion an, die ausgeführt werden. Wählen Sie z. B. * FROM Orders. SQL-Anweisungen sollten nicht mit Anweisungen verwechselt werden.  
+ Ein vollständiger Ausdruck in SQL, der mit einem Schlüsselwort beginnt und eine Aktion, die ausgeführt werden soll, vollständig beschreibt. Wählen Sie z. b. * from Orders aus. SQL-Anweisungen sollten nicht mit-Anweisungen verwechselt werden.  
   
- **state**  
- Eine klar definierte Bedingung eines Elements. Beispielsweise muss eine Verbindung über sieben Zustände, einschließlich der verfügbare, zugewiesene, verbundene und daher Daten. Bestimmte Vorgänge möglich nur, wenn ein Element in einem bestimmten Zustand befindet. Beispielsweise kann eine Verbindung freigegeben werden, nur, wenn es in einem zugeordneten Zustand befindet und nicht der Fall, z. B. ist, wenn er verbunden ist.  
+ **Land**  
+ Eine klar definierte Bedingung eines Elements. Eine Verbindung besteht z. b. aus sieben Zuständen, einschließlich der nicht zugeordneten, zugeordneten, verbundenen und benötigten Daten. Bestimmte Vorgänge können nur ausgeführt werden, wenn sich ein Element in einem bestimmten Zustand befindet. Beispielsweise kann eine Verbindung nur freigegeben werden, wenn Sie sich in einem zugewiesenen Zustand befindet, nicht, wenn Sie sich z. b. in einem verbundenen Zustand befindet.  
   
  **Zustandsübergang**  
- Das Verschieben eines Elements von einem Zustand in einen anderen. ODBC definiert strengen Statusübergänge für Umgebungen, Verbindungen und Anweisungen.  
+ Die Bewegung eines Elements von einem Zustand in einen anderen. ODBC definiert strenge Zustandsübergänge für Umgebungen, Verbindungen und Anweisungen.  
   
- **statement**  
- Ein Container für alle Informationen im Zusammenhang mit einer SQL-Anweisung. -Anweisungen sollten mit SQL-Anweisungen nicht verwechselt werden.  
+ **an**  
+ Ein Container für alle Informationen im Zusammenhang mit einer SQL-Anweisung. -Anweisungen sollten nicht mit SQL-Anweisungen verwechselt werden.  
   
- **Anweisungshandle**  
- Ein Handle für eine Datenstruktur, die Informationen zu einer Anweisung enthält.  
+ **Anweisungs Handle**  
+ Ein Handle für eine Datenstruktur, die Informationen über eine-Anweisung enthält.  
   
- **static-cursor**  
- Welches ein bildlauffähiger Cursor, der Updates, die nicht erkannt, löschen oder Einfügen von im Resultset. In der Regel implementiert, indem eine Kopie des Resultsets.  
+ **Statischer Cursor**  
+ Ein Bild lauffähigen Cursor, der im Resultset keine Updates, Löschungen oder Einfügungen erkennen kann Wird normalerweise durch Erstellen einer Kopie des Resultsets implementiert.  
   
- **statische SQL-Anweisungen**  
- Ein Typ von embedded SQL-Anweisungen sind in dem SQL hartcodiert und kompiliert, wenn der Rest des Programms kompiliert wird. *Siehe auch* dynamischem SQL.  
+ **statisches SQL**  
+ Ein Typ von eingebettetem SQL, bei dem SQL-Anweisungen hart codiert und kompiliert werden, wenn der Rest des Programms kompiliert wird. *Siehe auch* dynamisches SQL.  
   
  **gespeicherte Prozedur**  
- *Finden Sie unter* Verfahren.  
+ *Siehe* Procedure.  
   
 ## <a name="t"></a>T  
- **table**  
+ **glaub**  
  Eine Auflistung von Zeilen.  
   
  **Thunking**  
- Die Konvertierung von 16-Bit-Adressen auf 32-Bit-Adressen (oder umgekehrt), wenn 16-Bit-Anwendungen mit 32-Bit-ODBC-Treiber verwendet werden.  
+ Die Konvertierung von 16-Bit-Adressen in 32-Bit-Adressen oder umgekehrt, wenn 16-Bit-Anwendungen mit 32-Bit-ODBC-Treibern verwendet werden.  
   
- **transaction**  
- Eine unteilbare Arbeitseinheit. Die Arbeit in einer Transaktion muss als Ganzes abgeschlossen werden; Wenn Sie einen beliebigen Teil der Transaktion ein Fehler auftritt, schlägt die gesamte Transaktion fehl.  
+ **Geschäfte**  
+ Unteilbare Arbeitseinheit. Die Arbeit in einer Transaktion muss als Ganzes abgeschlossen werden. Wenn bei einem Teil der Transaktion ein Fehler auftritt, misslingt die gesamte Transaktion.  
   
- **Transaktionsisolation**  
- Der Vorgang eine Transaktion vor den Auswirkungen von allen anderen Transaktionen isoliert.  
+ **Transaktions Isolation**  
+ Der Vorgang der Isolierung einer Transaktion von den Auswirkungen aller anderen Transaktionen.  
   
- **Transaktionsisolationsstufe**  
- Ein Maß, wie gut eine Transaktion isoliert ist. Es gibt fünf Isolationsstufen von Transaktionen: Read Uncommitted Committed, Repeatable Read, serialisierbar und Versionsverwaltung zu lesen.  
+ **Transaktions Isolationsstufe**  
+ Ein Measure, wie gut eine Transaktion isoliert ist. Es gibt fünf Transaktions Isolations Stufen: Read nicht Commit, Read Commit, Repeatable Read, serialisierbar und Versionierung.  
   
- **Translator-DLL**  
- Eine DLL verwendet, um Daten aus einem Zeichensatz in eine andere zu übersetzen.  
+ **Konvertierungs-DLL**  
+ Eine DLL, die verwendet wird, um Daten von einem Zeichensatz in einen anderen zu konvertieren.  
   
- **Translator-Setup-DLL**  
- Eine DLL, die Translator-spezifische Funktionen für Installation und Konfiguration enthält.  
+ **Setup-DLL für Translator**  
+ Eine DLL, die Konvertierungs spezifische Installations-und Konfigurationsfunktionen enthält.  
   
- **Zweiphasen-commit**  
- Der Prozess der Commit einer verteilten Transaktions in zwei Phasen. In der ersten Phase überprüft der Prozessor für die Transaktion an, dass alle Teile der Transaktion ein Commit ausgeführt werden können. In der zweiten Phase werden alle Teile der Transaktion ein Commit ausgeführt. Wenn Sie einen beliebigen Teil der Transaktion in der ersten Phase angibt, dass sie ein Commit ausgeführt werden kann, tritt in der zweite Phase nicht. ODBC unterstützt zwei-Phasen-Commits nicht.  
+ **Zweiphasencommit**  
+ Der Prozess des Commits einer verteilten Transaktion in zwei Phasen. In der ersten Phase überprüft der Transaktionsprozessor, ob für alle Teile der Transaktion ein Commit ausgeführt werden kann. In der zweiten Phase werden für alle Teile der Transaktion ein Commit ausgeführt. Wenn ein Teil der Transaktion in der ersten Phase angibt, dass kein Commit ausgeführt werden kann, wird die zweite Phase nicht ausgeführt. ODBC unterstützt keine Zweiphasencommits.  
   
  **Typindikator**  
- Ein ganzzahliger Wert übergeben oder von einer ODBC-Funktion an, dass der Datentyp von einer Anwendungsvariablen, Parameter oder einer Spalte zurückgegeben. ODBC definiert typindikatoren für C- und SQL-Datentypen.  
+ Ein ganzzahliger Wert, der an eine ODBC-Funktion übergeben oder zurückgegeben wird, um den Datentyp einer Anwendungsvariablen, eines Parameters oder einer Spalte anzugeben. ODBC definiert Typindikatoren für C-und SQL-Datentypen.  
   
-## <a name="v"></a>B  
- **Anzeigen**  
- Eine alternative Möglichkeit der Blick auf die Daten in einer oder mehreren Tabellen. Eine Sicht ist in der Regel eine Teilmenge der Spalten aus einer oder mehreren Tabellen erstellt. In ODBC sind Ansichten in der Tabellen in der Regel entspricht.
+## <a name="v"></a>V  
+ **Anschauung**  
+ Eine alternative Methode, um die Daten in einer oder mehreren Tabellen zu betrachten. Eine Sicht wird in der Regel als Teilmenge der Spalten aus einer oder mehreren Tabellen erstellt. In ODBC entsprechen Sichten im Allgemeinen den Tabellen.

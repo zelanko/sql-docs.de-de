@@ -1,5 +1,5 @@
 ---
-title: Sp_adduser (Transact-SQL) | Microsoft-Dokumentation
+title: sp_adduser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117901"
 ---
-# <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
+# <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fügt der aktuellen Datenbank einen neuen Benutzer hinzu.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,29 +44,29 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'` Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss einer vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder Windows-Anmeldung.  
+`[ @loginame = ] 'login'`Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder der Windows-Anmeldung. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *Login* muss ein vorhandener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmelde Name oder Windows-Anmelde Name sein.  
   
-`[ @name_in_db = ] 'user'` Ist der Name für den neuen Datenbankbenutzer. *Benutzer* ist eine **Sysname**, hat den Standardwert NULL. Wenn *Benutzer* nicht angegeben ist, der Namen des neuen Datenbankbenutzers standardmäßig die *Anmeldung* Name. Angeben von *Benutzer* benennt dem neuen Benutzer mit einem Namen in der Datenbank, die den Anmeldenamen auf Serverebene unterscheidet.  
+`[ @name_in_db = ] 'user'`Der Name des neuen Daten Bank Benutzers. *User* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Benutzer* nicht angegeben ist, wird der Name des neuen Daten Bank Benutzers standardmäßig auf den *Anmelde* Namen festgelegt. Durch Angeben eines *Benutzers* erhält der neue Benutzer einen anderen Namen als den Anmelde Namen auf Serverebene.  
   
-`[ @grpname = ] 'role'` Ist die Datenbankrolle, die Mitglied der neue Benutzer wird. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Rolle* muss eine gültige Datenbankrolle in der aktuellen Datenbank sein.  
+`[ @grpname = ] 'role'`Die Daten Bank Rolle, deren Mitglied der neue Benutzer wird. *Role* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. die *Rolle* muss eine gültige Daten Bank Rolle in der aktuellen Datenbank sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_adduser** erstellt auch ein Schema mit dem Namen des Benutzers ab.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_adduser** wird auch ein Schema mit dem Namen des Benutzers erstellt.  
   
  Definieren Sie nach dem Hinzufügen eines Benutzers mit den Anweisungen GRANT, DENY und REVOKE die Berechtigungen für die Aktivitäten, die der Benutzer ausführen darf.  
   
- Verwendung **Sys. server_principals** um eine Liste gültiger Anmeldenamen anzuzeigen.  
+ Verwenden Sie **sys. server_principals** , um eine Liste gültiger Anmelde Namen anzuzeigen.  
   
- Verwendung **Sp_helprole** um eine Liste der gültigen Rollennamen anzuzeigen. Bei Angabe einer Rolle erhält der Benutzer automatisch die für diese Rolle definierten Berechtigungen. Wenn eine Rolle nicht angegeben wird, erhält der Benutzer die Berechtigungen, die auf den Standardwert **öffentliche** Rolle. Zum Hinzufügen eines Benutzers zu einer Rolle, die einen Wert für die *Benutzernamen* muss angegeben werden. (*Benutzername* können identisch sein *Login_id*.)  
+ Verwenden Sie **sp_helprole** , um eine Liste der gültigen Rollennamen anzuzeigen. Bei Angabe einer Rolle erhält der Benutzer automatisch die für diese Rolle definierten Berechtigungen. Wenn keine Rolle angegeben wird, erhält der Benutzer die Berechtigungen, die der standardmäßigen **Public** -Rolle erteilt wurden. Zum Hinzufügen eines Benutzers zu einer Rolle muss ein Wert für den *Benutzernamen* angegeben werden. (der*Benutzername* kann mit *login_id*identisch sein.)  
   
- Benutzer **Gast** bereits in jeder Datenbank vorhanden ist. Hinzufügen eines Benutzers **Gast** wird dieser aktiviert, wenn sie zuvor deaktiviert war. In der Standardeinstellung Benutzer **Gast** ist in neuen Datenbanken deaktiviert.  
+ Der Benutzer **Gast** ist bereits in jeder Datenbank vorhanden. Durch das Hinzufügen des Benutzers **Guest** wird dieser Benutzer aktiviert, wenn er zuvor deaktiviert war. Standardmäßig ist der Benutzer **Gast** in neuen Datenbanken deaktiviert.  
   
- **Sp_adduser** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
+ **sp_adduser** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
- Sie können nicht hinzugefügt werden eine **Gast** Benutzer da eine **Gast** Benutzer, die bereits in jeder Datenbank vorhanden ist. So aktivieren Sie die **Gast** Benutzer, Grant **Gast** CONNECT-Berechtigung wie folgt:  
+ Ein **Gast** Benutzer kann nicht hinzugefügt werden, da ein **Gast** Benutzer bereits in jeder Datenbank vorhanden ist. Um den **Gast** Benutzer zu aktivieren, erteilen Sie die Berechtigung **Guest** Connect wie hier gezeigt:  
   
 ```  
 GRANT CONNECT TO guest;  
@@ -86,7 +86,7 @@ EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Hinzufügen eines Datenbankbenutzers mit der gleichen Anmelde-ID  
- Im folgenden Beispiel wird der Benutzer `Arvind` der aktuellen Datenbank für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `Arvind` hinzugefügt. Dieser Benutzer gehört, auf den Standardwert **öffentliche** Rolle.  
+ Im folgenden Beispiel wird der Benutzer `Arvind` der aktuellen Datenbank für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `Arvind` hinzugefügt. Dieser Benutzer gehört zur standardmäßigen **Public** -Rolle.  
   
 ```  
 EXEC sp_adduser 'Arvind';  
@@ -99,14 +99,14 @@ EXEC sp_adduser 'Arvind';
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_addrole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [Erstellen eines Benutzer &#40;Transact-SQL-&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_grantdbaccess &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

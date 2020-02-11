@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial) | Microsoft-Dokumentation'
+title: 'Schritt 5: DataControl ist verwendbar (RDS-Tutorial) | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,23 +13,23 @@ ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922055"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: Nutzbarmachen von DataControl (RDS-Tutorial)
-Das zurückgegebene **Recordset** Objekt für die Verwendung verfügbar ist. Sie können überprüfen, navigieren Sie oder bearbeiten Sie sie, wie jede andere **Recordset**. Was Sie tun können, mit der **Recordset** hängt von Ihrer Umgebung. Visual Basic und Visual C++, haben Sie visuelle Steuerelemente, mit dem eine **Recordset** direkt oder indirekt mit Hilfe des Steuerelements ein aktivieren.  
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)
+Das zurückgegebene **Recordset** -Objekt ist zur Verwendung verfügbar. Sie können Sie wie jedes andere **Recordset**überprüfen, navigieren oder bearbeiten. Was Sie mit dem **Recordset** tun können, hängt von Ihrer Umgebung ab. Visual Basic und Visual C++ über visuelle Steuerelemente verfügen, die ein **Recordset** direkt oder indirekt mit der Unterstützung eines aktivierenden Daten Steuer Elements verwenden können.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Z. B. Wenn Sie eine Webseite in Microsoft Internet Explorer anzeigen, Sie möchten Anzeigen der **Recordset** Objektdaten in einem visual-Steuerelement. Visuelle Steuerelemente auf einer Webseite können nicht zugegriffen werden. eine **Recordset** direkt. Allerdings können Zugriff auf die **Recordset** -Objekt über die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md). Die **RDS. DataControl** verwendet wird, indem Sie eine Visualisierung steuern, wann die [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) -Eigenschaftensatz auf die **Recordset** Objekt.  
+ Wenn Sie z. b. eine Webseite in Microsoft Internet Explorer anzeigen, möchten Sie möglicherweise die Daten des **Recordset** -Objekts in einem visuellen Steuerelement anzeigen. Visuelle Steuerelemente auf einer Webseite können nicht direkt auf ein **Recordset** -Objekt zugreifen. Allerdings können Sie über das RDS auf das **Recordset** -Objekt zugreifen [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md). Das **RDS. DataControl** kann von einem visuellen Steuerelement verwendet werden, wenn die [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) -Eigenschaft auf das **Recordset** -Objekt festgelegt ist.  
   
- Visuellen Steuerelements müssen die **Typ** Parameter festgelegt wird, um die **RDS. DataControl**, und die zugehörige **DATAFLD** -Eigenschaftensatz auf eine **Recordset** Objekt-Feld (Spalte).  
+ Für das visuelle Steuerelement Objekt muss sein **dataSrc** -Parameter auf RDS festgelegt sein **. DataControl**und die zugehörige **Datafld** -Eigenschaft sind auf ein **Recordset** -Objektfeld (Spalte) festgelegt.  
   
- In diesem Tutorial legen die **SourceRecordset** Eigenschaft:  
+ Legen Sie in diesem Tutorial die **SourceRecordset** -Eigenschaft fest:  
   
 ```vb
 Sub RDSTutorial5()  
@@ -43,6 +43,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Schritt 6: Änderungen werden an den Server (RDS-Tutorial) gesendet.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

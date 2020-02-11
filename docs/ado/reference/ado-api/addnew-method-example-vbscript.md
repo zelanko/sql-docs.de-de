@@ -1,5 +1,5 @@
 ---
-title: AddNew-Methode – Beispiel (VBScript) | Microsoft-Dokumentation
+title: AddNew-Methode (Beispiel) (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921281"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew-Methode – Beispiel (VBScript)
-Dieses Beispiel verwendet die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um einen neuen Eintrag mit dem angegebenen Namen zu erstellen.  
+In diesem Beispiel wird die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) -Methode verwendet, um einen neuen Datensatz mit dem angegebenen Namen zu erstellen.  
   
- Verwenden Sie das folgende Beispiel in einer Active Server Page (ASP). Verwenden Sie **finden** suchen Sie die Datei Adovbs.inc, und fügen ihn in das Verzeichnis, das Sie verwenden möchten. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **AddNewVBS.asp**. Sie können das Ergebnis in einem beliebigen Clientbrowser anzeigen.  
+ Verwenden Sie das folgende Beispiel in einer Active Server Seite (ASP). Verwenden Sie **Suchen** , um die Datei adovsb. Inc zu suchen, und platzieren Sie Sie in dem Verzeichnis, das Sie verwenden möchten. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **addnewvsb. ASP**. Sie können das Ergebnis in einem beliebigen Client Browser anzeigen.  
   
- Um das Beispiel ausführen zu können, fügen Sie einen neuen Datensatz in das HTML-Formular hinzu. Klicken Sie auf **Hinzufügen neuer**. Finden Sie unter den [löschen-Methode – Beispiel](../../../ado/reference/ado-api/delete-method-example-vbscript.md) zum Entfernen unerwünschter Datensätze.  
+ Fügen Sie einen neuen Datensatz in das HTML-Formular ein, um das Beispiel zu testen. Klicken Sie auf **neue hinzufügen**. Siehe das [Beispiel](../../../ado/reference/ado-api/delete-method-example-vbscript.md) für eine Delete-Methode, um unerwünschte Datensätze zu entfernen  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -212,6 +212,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [AddNew-Methode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

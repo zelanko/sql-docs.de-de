@@ -1,5 +1,5 @@
 ---
-title: Member-Funktionen mit | Microsoft-Dokumentation
+title: Verwenden von Element Funktionen | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 54f600eb020472f93067f7b9fe1e867f2730d670
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097098"
 ---
 # <a name="using-member-functions"></a>Verwenden von Elementfunktionen
@@ -20,7 +20,7 @@ ms.locfileid: "68097098"
 
   Eine Elementfunktion ist eine Multidimensional Expressions (MDX)-Funktion, die ein Element zurückgibt. Elementfunktionen sind genau wie Tupelfunktionen und Mengenfunktionen wesentlich für das Aushandeln mehrdimensionaler Strukturen, die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zu finden sind.  
   
- Von den zahlreichen Elementfunktionen in MDX, am wichtigsten ist die **CurrentMember** -Funktion, die verwendet wird, um das aktuelle Element in einer Hierarchie zu ermitteln. Die folgende Abfrage veranschaulicht, wie sie zusammen mit den **übergeordneten**, **Vorgänger**, und **Prevmember** Funktionen:  
+ Von den vielen Element Funktionen in MDX ist das wichtigste die **CurrentMember** -Funktion, die verwendet wird, um das aktuelle Element in einer Hierarchie zu bestimmen. Die folgende Abfrage veranschaulicht, wie Sie zusammen mit den über **geordneten**, **Vorgänger**-und **PrevMember** -Funktionen verwendet wird:  
   
  `WITH`  
   
@@ -46,9 +46,9 @@ ms.locfileid: "68097098"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
  [Verwenden von Tupelfunktionen](../mdx/using-tuple-functions.md)   
- [Using Set Functions (Verwenden von Mengenfunktionen)](../mdx/using-set-functions.md)  
+ [Verwenden von Mengenfunktionen](../mdx/using-set-functions.md)  
   
   

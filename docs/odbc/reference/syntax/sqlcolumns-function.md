@@ -20,18 +20,18 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118665"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: Gruppe öffnen  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: Open Group  
   
  **Zusammenfassung**  
- **SQLColumns** die Liste der Spaltennamen in angegebenen Tabellen zurückgegeben. Der Treiber gibt diese Informationen, die als Resultset für das angegebene *StatementHandle*.  
+ **SQLColumns** gibt die Liste der Spaltennamen in angegebenen Tabellen zurück. Der Treiber gibt diese Informationen als Resultset für das angegebene *StatementHandle*zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,94 +51,94 @@ SQLRETURN SQLColumns(
   
 ## <a name="arguments"></a>Argumente  
  *StatementHandle*  
- [Eingabe] Anweisungshandle.  
+ Der Anweisungs Handle.  
   
- *Katalogname*  
- [Eingabe] Name des Katalogs. Wenn ein Treiber unterstützt die Kataloge für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS, eine leere Zeichenfolge ruft ("") gibt an, die Tabellen, denen keine Kataloge. *CatalogName* darf kein Suchmuster Zeichenfolge enthalten.  
+ *CatalogName*  
+ Der Katalog Name. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die nicht über Kataloge verfügen. *CatalogName* darf kein Zeichen folgen-Suchmuster enthalten.  
   
 > [!NOTE]  
->  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *CatalogName* wird als Bezeichner behandelt und der Fall ist nicht von Bedeutung. Ist dies SQL_FALSE, *CatalogName* ein normales Argument ist, wird es buchstäblich behandelt und der Fall ist von Bedeutung. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+>  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *CatalogName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist *CatalogName* ein normales Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung. Weitere Informationen finden Sie unter [Argumente in Katalog Funktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  *NameLength1*  
- [Eingabe] Länge in Zeichen des **CatalogName*.  
+ Der Länge in Zeichen von **CatalogName*.  
   
- *SchemaName*  
- [Eingabe] Zeichenfolge Suchmuster für den Schemanamen an. Wenn ein Treiber unterstützt die Schemas für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS, eine leere Zeichenfolge ruft ("") gibt an, die Tabellen, die keine Schemas aufweisen.  
+ *Schema Name*  
+ Der Zeichen folgen Suchmuster für Schema Namen. Wenn ein Treiber für einige Tabellen Schemas unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die keine Schemas aufweisen.  
   
 > [!NOTE]  
->  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *SchemaName* wird als Bezeichner behandelt und der Fall ist nicht von Bedeutung. Ist dies SQL_FALSE, *SchemaName* Wertargument Muster ist, wird es buchstäblich behandelt und der Fall ist von Bedeutung.  
+>  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird Schema *Name* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist Schema *Name* ein Muster Wert Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength2*  
- [Eingabe] Länge in Zeichen des **SchemaName*.  
+ Der Länge in Zeichen von * Schema*Name*.  
   
  *TableName*  
- [Eingabe] Eine Zeichenfolge Suchmuster für den Tabellennamen.  
+ Der Zeichen folgen Suchmuster für Tabellennamen.  
   
 > [!NOTE]  
->  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *TableName* wird als Bezeichner behandelt und der Fall ist nicht von Bedeutung. Ist dies SQL_FALSE, *TableName* Wertargument Muster ist, wird es buchstäblich behandelt und der Fall ist von Bedeutung.  
+>  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *TableName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist *TableName* ein Muster Wert Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength3*  
- [Eingabe] Länge in Zeichen des **TableName*.  
+ Der Länge in Zeichen von **TableName*.  
   
  *ColumnName*  
- [Eingabe] Eine Zeichenfolge Suchmuster für den Spaltennamen.  
+ Der Zeichen folgen Suchmuster für Spaltennamen.  
   
 > [!NOTE]  
->  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *ColumnName* wird als Bezeichner behandelt und der Fall ist nicht von Bedeutung. Ist dies SQL_FALSE, *ColumnName* Wertargument Muster ist, wird es buchstäblich behandelt und der Fall ist von Bedeutung.  
+>  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *ColumnName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist *ColumnName* ein Muster Wert Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength4*  
- [Eingabe] Länge in Zeichen des **ColumnName*.  
+ Der Länge in Zeichen von **ColumnName*.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLColumns** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLColumns** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLColumns** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLColumns** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
-|24000|Ungültiger Cursorstatus|Ein Cursor geöffnet, auf war die *StatementHandle*, und **SQLFetch** oder **SQLFetchScroll** war aufgerufen wurde. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** wurden keine SQL_NO_DATA zurückgegeben wird, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor geöffnet, auf war die *StatementHandle* aber **SQLFetch** oder **SQLFetchScroll** nicht aufgerufen wurde.|  
-|40001|Serialisierungsfehler|Die Transaktion wurde wegen eines Deadlocks Ressource mit einer anderen Transaktion ein Rollback ausgeführt.|  
-|40003|Unbekannter Anweisungsabschluss|Fehler bei der zugeordnete Verbindung während der Ausführung dieser Funktion und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Es wurde der Treiber kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
-|HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* von einem anderen Thread in einem Multithread-Anwendung.|  
-|HY009|Ungültige Verwendung eines null-Zeiger|Das Anweisungsattribut SQL_ATTR_METADATA_ID wurde festgelegt auf SQL_TRUE, die *CatalogName* Argument wurde ein null-Zeiger ist, und die SQL_CATALOG_NAME *Informationsart* gibt zurück, die Namen Katalog werden unterstützt.<br /><br /> (DM) das Anweisungsattribut SQL_ATTR_METADATA_ID wurde Wert auf SQL_TRUE festgelegt, und die *SchemaName*, *TableName*, oder *ColumnName* Argument wurde ein null-Zeiger.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLColumns** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert eines der Argumente Länge Name war kleiner als 0, jedoch nicht SQL_NTS gleich.|  
-|||Der Wert eines der Argumente Namen Länge überschritten Wert für maximale Länge für die entsprechenden Katalog oder den Namen an. Die maximale Länge der einzelnen Katalog oder der Name abgerufen werden kann, durch den Aufruf **SQLGetInfo** mit der *Informationsart* Werte. (Siehe "Kommentare".)|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert.|Ein Katalogname wurde angegeben, und der Treiber oder die Datenquelle Kataloge nicht unterstützt.<br /><br /> Ein Schemaname angegeben wurde, und der Treiber oder die Datenquelle unterstützt keine Schemas.<br /><br /> Ein Suchmuster für die Zeichenfolge, die für die Schemanamen, Tabellenname und Spaltenname angegeben wurde, und die Datenquelle unterstützt nicht das Suchmuster für eine oder mehrere dieser Argumente.<br /><br /> Die Kombination aus der aktuellen Einstellungen der SQL_ATTR_CONCURRENCY und SQL_ATTR_CURSOR_TYPE-Anweisungsattribute wurde durch das Treiber oder die Datenquelle nicht unterstützt.<br /><br /> Das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt wurde, und das SQL_ATTR_CURSOR_TYPE-Attribut-Anweisung wurde festgelegt, um einen Cursortyp, die der Treiber für den Lesezeichen nicht unterstützt.|  
-|HYT00|Timeout abgelaufen|Zeitraum für das Timeout ist abgelaufen, bevor die Datenquelle über das Resultset zurückgegeben. Das Timeout festgelegt ist, über **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
-|IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
-|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle*geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben hat, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle* geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
+|40001|Serialisierungsfehler|Für die Transaktion wurde ein Rollback ausgeführt, weil ein Ressourcen Deadlock mit einer anderen Transaktion aufgetreten ist.|  
+|40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY009|Ungültige Verwendung des NULL-Zeigers|Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *CatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, *und das Schema*Name-, *TableName*-oder *ColumnName* -Argument war ein NULL-Zeiger.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLColumns** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der Wert eines der namens Längen Argumente war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
+|||Der Wert eines der namens Längen Argumente hat den maximalen Längen Wert für den entsprechenden Katalog oder Namen überschritten. Die maximale Länge jedes Katalogs oder Namens kann durch Aufrufen von **SQLGetInfo** mit den *InfoType* -Werten erreicht werden. (Siehe "Kommentare")|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Optionales Feature nicht implementiert|Es wurde ein Katalog Name angegeben, und der Treiber oder die Datenquelle unterstützt keine Kataloge.<br /><br /> Es wurde ein Schema Name angegeben, und der Treiber oder die Datenquelle unterstützt keine Schemas.<br /><br /> Für den Schema Namen, den Tabellennamen oder den Spaltennamen wurde ein Zeichen folgen Suchmuster angegeben, und die Datenquelle unterstützt keine Suchmuster für mindestens ein Argument.<br /><br /> Die Kombination der aktuellen Einstellungen der Attribute SQL_ATTR_CONCURRENCY und SQL_ATTR_CURSOR_TYPE Anweisung wurde vom Treiber oder der Datenquelle nicht unterstützt.<br /><br /> Das SQL_ATTR_USE_BOOKMARKS Statement-Attribut wurde auf SQL_UB_VARIABLE festgelegt, und das Attribut der SQL_ATTR_CURSOR_TYPE-Anweisung wurde auf einen Cursortyp festgelegt, für den der Treiber keine Lesezeichen unterstützt.|  
+|HYT00|Timeout abgelaufen|Das Abfrage Timeout ist abgelaufen, bevor die Datenquelle das Resultset zurückgegeben hat. Der Timeout Zeitraum wird mithilfe von **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT festgelegt.|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *StatementHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
+|IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
+|IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
   
 ## <a name="comments"></a>Kommentare  
- Diese Funktion wird in der Regel vor der anweisungsausführung zum Abrufen von Informationen zu den Spalten für eine Tabelle oder Tabellen aus der Datenquelle des Katalogs verwendet. **SQLColumns** können verwendet werden, um das Abrufen von Daten für alle Typen von Elementen, die vom **SQLTables**. Neben der Basistabellen der Sicht, dies kann (ist aber nicht beschränkt auf) Ansichten, Synonyme, Systemtabellen und So weiter. Im Gegensatz dazu die Funktionen **SQLColAttribute** und **SQLDescribeCol** beschreiben die Spalten in einem Resultset und die Funktion **SQLNumResultCols** gibt die Anzahl der die Spalten in einem Resultset. Weitere Informationen finden Sie unter [von Katalogdaten verwendet](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ Diese Funktion wird in der Regel vor der Anweisungs Ausführung verwendet, um Informationen über Spalten für eine Tabelle oder Tabellen aus dem Katalog der Datenquelle abzurufen. **SQLColumns** kann zum Abrufen von Daten für alle Typen von Elementen verwendet werden, die von **SQLTables**zurückgegeben werden. Zusätzlich zu den Basistabellen kann dies (aber nicht beschränkt auf) Sichten, Synonyme, Systemtabellen usw. enthalten. Im Gegensatz dazu beschreiben die Funktionen **SQLColAttribute** und **SQLDescribeCol** die Spalten in einem **Resultset, und die SQLNumResultCols** -Funktion gibt die Anzahl der Spalten in einem Resultset zurück. Weitere Informationen finden Sie unter [Verwenden von Katalogdaten](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
 > [!NOTE]  
->  Weitere Informationen über die allgemeine Verwendung, Argumenten und zurückgegebenen Daten des ODBC-Katalogfunktionen, finden Sie unter [Katalogfunktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
+>  Weitere Informationen über die allgemeine Verwendung, Argumente und zurückgegebene Daten von ODBC-Katalog Funktionen finden Sie unter [Katalog Funktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- **SQLColumns** gibt die Ergebnisse als ein standard, geordnet nach TABLE_CAT, nach "TABLE_SCHEM", Tabellenname und ORDINAL_POSITION Resultset zurück.  
-  
-> [!NOTE]  
->  Wenn eine Anwendung mit einer ODBC 2. funktioniert. *x* -Treiber verwenden, wird keine ORDINAL_POSITION-Spalte im Resultset zurückgegeben. Als Ergebnis, bei der Arbeit mit ODBC 2. *x* Treiber, die Reihenfolge der Spalten in der Spaltenliste zurückgegebenes **SQLColumns** ist nicht unbedingt identisch mit der Reihenfolge der Spalten zurückgegeben, wenn die Anwendung eine SELECT-Anweisung für alle ausführt die Spalten in dieser Tabelle.  
+ **SQLColumns** gibt die Ergebnisse als Standardresultset zurück, geordnet nach TABLE_CAT, TABLE_SCHEM, TABLE_NAME und ORDINAL_POSITION.  
   
 > [!NOTE]  
->  **SQLColumns** möglicherweise nicht alle Spalten zurück. Beispielsweise kann ein Treiber nicht die Informationen zu Pseudo-Spalten, z. B. Oracle ROWID zurück. Anwendungen können gültige Spalte, verwenden Sie, ob sie von zurückgegeben wird **SQLColumns**.  
+>  Wenn eine Anwendung mit einem ODBC 2 funktioniert. *x* -Treiber, es wird keine ORDINAL_POSITION Spalte im Resultset zurückgegeben. Dies hat zur Folge, dass Sie mit ODBC 2 arbeiten. *x* -Treiber: die Reihenfolge der Spalten in der von **SQLColumns** zurückgegebenen Spaltenliste ist nicht notwendigerweise identisch mit der Reihenfolge der Spalten, die zurückgegeben werden, wenn die Anwendung eine SELECT-Anweisung für alle Spalten in dieser Tabelle ausführt.  
+  
+> [!NOTE]  
+>  **SQLColumns** gibt möglicherweise nicht alle Spalten zurück. Beispielsweise gibt ein Treiber möglicherweise keine Informationen zu Pseudo Spalten zurück, wie z. b. Oracle ROWID. Anwendungen können beliebige gültige Spalten verwenden, unabhängig davon, ob Sie von **SQLColumns**zurückgegeben werden.  
 >   
->  Einige Spalten, die zurückgegeben werden können **SQLStatistics** werden nicht zurückgegeben **SQLColumns**. Z. B. **SQLColumns** kehrt die Spalten in einem Index erstellt, die über einen Ausdruck oder einen Filter, z. B. Gehalt "+" Vorteile "oder" DEPT = 0012.  
+>  Einige Spalten, die von **SQLStatistics** zurückgegeben werden können, werden von **SQLColumns**nicht zurückgegeben. **SQLColumns** gibt z. b. nicht die Spalten in einem Index zurück, der für einen Ausdruck oder Filter erstellt wurde, wie z. b. "Gehalt + Benefits" oder "TPT = 0012".  
   
- Die Länge der VARCHAR-Spalten werden nicht in der Tabelle angezeigt; die tatsächliche Länge hängt von der Datenquelle ab. Um zu bestimmen, die tatsächliche Länge der Spalten TABLE_CAT, nach "TABLE_SCHEM", Tabellenname und Spaltenname, eine Anwendung aufrufen kann **SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN, und SQL_MAX_COLUMN_NAME_LEN-Optionen.  
+ Die Längen von varchar-Spalten werden in der Tabelle nicht angezeigt. die tatsächlichen Längen hängen von der Datenquelle ab. Zum Bestimmen der tatsächlichen Längen der Spalten TABLE_CAT, TABLE_SCHEM, TABLE_NAME und column_name kann eine Anwendung **SQLGetInfo** mit den Optionen SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN und SQL_MAX_COLUMN_NAME_LEN aufrufen.  
   
- Die folgenden Spalten wurden umbenannt, ODBC 3. *x*. Die Änderungen an wirken Abwärtskompatibilität sich nicht, da Anwendungen durch die Nummer der Spalte binden.  
+ Die folgenden Spalten wurden für ODBC 3 umbenannt. *x*. Die Spaltennamen Änderungen wirken sich nicht auf die Abwärtskompatibilität aus, da Anwendungen nach Spaltennummer gebunden werden.  
   
-|ODBC 2.0-Spalte|ODBC 3. *x* Spalte|  
+|ODBC 2,0-Spalte|ODBC 3. *x* -Spalte|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
@@ -147,7 +147,7 @@ SQLRETURN SQLColumns(
 |SCALE|DECIMAL_DIGITS|  
 |RADIX|NUM_PREC_RADIX|  
   
- Die folgenden Spalten wurden zurückgegebenes Resultset hinzugefügt **SQLColumns** ODBC 3. *X*:  
+ Die folgenden Spalten wurden dem Resultset hinzugefügt, das von **SQLColumns** für ODBC 3 zurückgegeben wurde. *x*:  
   
 |||  
 |-|-|  
@@ -155,31 +155,31 @@ SQLRETURN SQLColumns(
 |COLUMN_DEF|SQL_DATA_TYPE|  
 |IS_NULLABLE|SQL_DATETIME_SUB|  
   
- Die folgende Tabelle enthält die Spalten im Resultset. Zusätzliche Spalten nach Spalte 18 (IS_NULLABLE) können vom Treiber definiert werden. Eine Anwendung sollte Zugriff auf treiberspezifischen Spalten erhalten, indem nach unten am Ende des Resultsets anstatt einer expliziten Ordinalposition zählen. Weitere Informationen finden Sie unter [Daten von Katalogfunktionen zurückgegeben](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
+ In der folgenden Tabelle werden die Spalten im Resultset aufgelistet. Zusätzliche Spalten, die über die Spalte 18 (IS_NULLABLE) hinausgehen, können vom Treiber definiert werden. Eine Anwendung sollte Zugriff auf Treiber spezifische Spalten erhalten, indem Sie vom Ende des Resultsets abzählt, anstatt eine explizite Ordinalposition anzugeben. Weitere Informationen finden Sie unter [von Katalog Funktionen zurückgegebene Daten](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Spaltenname|Spalte<br /><br /> number|Datentyp|Kommentare|  
+|Spaltenname|Column<br /><br /> number|Datentyp|Kommentare|  
 |-----------------|-----------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|Name des Katalogs; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Kataloge für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, denen keine Kataloge.|  
-|NACH "TABLE_SCHEM" (ODBC 1.0)|2|Varchar|Schemanamen; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  
-|TABLE_NAME (ODBC 1.0)|3|Varchar, die nicht NULL|Tabellenname.|  
-|COLUMN_NAME (ODBC 1.0)|4|Varchar, die nicht NULL|Name der Spalte. Der Treiber gibt eine leere Zeichenfolge für eine Spalte, die nicht über einen Namen verfügt.|  
-|DATA_TYPE (ODBC 1.0)|5|Smallint nicht NULL|SQL-Datentyp. Dies kann einen ODBC-SQL-Datentyp oder die treiberspezifischen SQL-Datentyp sein. Bei "DateTime" "und" Interval-Datentypen gibt diese Spalte den präzisen Datentyp (z. B. SQL_TYPE_DATE oder SQL_INTERVAL_YEAR_TO_MONTH, anstatt die nonconcise Datentyp z. B. SQL_DATETIME oder SQL_INTERVAL) zurück. Eine Liste der gültigen ODBC-SQL-Datentypen, finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D: Datentypen. Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.<br /><br /> Die Datentypen für ODBC 3 zurückgegeben. *x* und ODBC-2. *X* Anwendungen können unterschiedlich sein. Weitere Informationen finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
-|TYPE_NAME (ODBC 1.0)|6|Varchar, die nicht NULL|Daten Datenquelle abhängiger Datentypname; "z. B. CHAR", "VARCHAR", "MONEY", "LONG VARBINAR" oder "CHAR () für BIT-Daten".|  
-|COLUMN_SIZE (ODBC 1.0)|7|Integer|Wenn DATA_TYPE SQL_CHAR oder SQL_VARCHAR sein wird, enthält diese Spalte die maximale Länge in Zeichen der Spalte an. Für Datetime-Datentypen ist dies die Gesamtzahl der Zeichen, die erforderlich sind, um den Wert anzuzeigen, wenn es in Zeichen konvertiert wird. Für numerische Datentypen ist dies entweder die Gesamtanzahl von Ziffern oder die Gesamtanzahl von Bits, die in der Spalte zulässig gemäß der NUM_PREC_RADIX-Spalte. Für die Interval-Datentypen, ist dies die Anzahl der Zeichen in die Darstellung der das Intervall literal (gemäß der Genauigkeit für anführenden Intervallwert, finden Sie unter [Datentyplänge Intervall](../../../odbc/reference/appendixes/interval-data-type-length.md) in Anhang D: Die Datentypen). Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen.|  
-|DIE BUFFER_LENGTH (ODBC 1.0)|8|Integer|Die Länge in Bytes der Daten, die auf einen Vorgang SQLGetData, SQLFetch oder SQLFetchScroll übertragen werden, wenn SQL_C_DEFAULT angegeben wird. Für numerische Daten kann die Größe der in der Datenquelle gespeicherten Daten diese Größe unterscheiden. Dieser Wert kann von COLUMN_SIZE-Spalte für Daten im Zeichenformat abweichen. Weitere Informationen zu Länge, finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen.|  
-|DIE DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|Die Gesamtanzahl der Ziffern rechts vom Dezimaltrennzeichen an. SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP enthält diese Spalte die Anzahl der Ziffern in der Komponente für Sekundenbruchteile. Für die anderen Datentypen ist dies die Dezimalstellen der Spalte in der Datenquelle. Für die Interval-Datentypen, die eine Komponente enthalten, enthält diese Spalte die Anzahl der Ziffern rechts vom Dezimaltrennzeichen an (Sekundenbruchteile). Für die Interval-Datentypen, die keine Zeitangabe enthalten, ist diese Spalte 0. Weitere Informationen zu Dezimalstellen, finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen. NULL wird für Datentypen zurückgegeben, in dem kein DECIMAL_DIGITS anwendbar.|  
-|NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|Für numerische Datentypen entweder "10" oder "2. Wenn es 10 ist, geben Sie die Werte in der COLUMN_SIZE- und DECIMAL_DIGITS die Anzahl der Dezimalstellen für die Spalte zulässig sind. Beispielsweise würde ein NUM_PREC_RADIX von 10 und eine COLUMN_SIZE 12, ein DECIMAL_DIGITS 5 eine DECIMAL(12,5)-Spalte zurückgegeben wird. eine Spalte "float" konnte eine NUM_PREC_RADIX von 10 und eine COLUMN_SIZE 15 DECIMAL_DIGITS von NULL zurückgeben.<br /><br /> Wenn sie auf "2" ist, geben Sie die Werte in der COLUMN_SIZE- und DECIMAL_DIGITS die Anzahl der Bits, die in der Spalte zulässig. Eine "float"-Spalte kann z. B. eine Basis von 2 ist, eine COLUMN_SIZE 53 und DECIMAL_DIGITS von NULL zurückgegeben.<br /><br /> NULL wird für Datentypen zurückgegeben, in dem kein NUM_PREC_RADIX anwendbar.|  
-|NULL-WERTE ZULÄSST (ODBC 1.0)|11|Smallint nicht NULL|SQL_NO_NULLS, wenn die Spalte keine NULL-Werte einschließen kann.<br /><br /> SQL_NULLABLE, wenn die Spalte NULL-Werte akzeptiert.<br /><br /> SQL_NULLABLE_UNKNOWN, wenn nicht bekannt ist, ob die Spalte NULL-Werte annimmt.<br /><br /> Für diese Spalte zurückgegebene Wert unterscheidet sich von der für die Spalte IS_NULLABLE zurückgegebene Wert. Die NULLABLE-Spalte gibt an, mit Bestimmtheit, dass eine Spalte NULL-Werte akzeptiert, aber nicht unbedingt sicher, dass eine Spalte keine NULL-Werte akzeptiert angeben. Die Spalte IS_NULLABLE gibt an, mit Bestimmtheit, dass eine Spalte kann keine NULL-Werte akzeptieren, aber nicht unbedingt sicher, dass eine Spalte NULL-Werte akzeptiert angeben.|  
-|HINWEISE (ODBC 1.0)|12|Varchar|Eine Beschreibung der Spalte.|  
-|COLUMN_DEF (ODBC 3.0)|13|Varchar|Der Standardwert der Spalte. Der Wert in dieser Spalte muss als Zeichenfolge interpretiert werden, wenn er in Anführungszeichen eingeschlossen ist.<br /><br /> Wenn NULL als Standardwert angegeben wurde, ist diese Spalte das Wort NULL ist, nicht in Anführungszeichen eingeschlossen. Wenn der Standardwert ungekürzt dargestellt werden kann, enthält diese Spalte abgeschnitten, ohne die Anführungszeichen einschließen. Wenn kein Standardwert angegeben wurde, ist diese Spalte NULL.<br /><br /> Der Wert des COLUMN_DEF dienen zum Generieren einer neuen Spaltendefinition, außer, wenn der Wert abgeschnitten enthalten.|  
-|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint nicht NULL|SQL-Datentyp, wie er im Feld Datensatz SQL_DESC_TYPE in IRD angezeigt wird. Dies kann einen ODBC-SQL-Datentyp oder die treiberspezifischen SQL-Datentyp sein. Diese Spalte entspricht der DATA_TYPE-Spalte, mit Ausnahme von "DateTime" "und" Interval-Datentypen. Diese Spalte gibt den nonconcise Datentyp (z. B. SQL_DATETIME oder SQL_INTERVAL), anstelle des präzisen Datentyp (z. B. SQL_TYPE_DATE oder SQL_INTERVAL_YEAR_TO_MONTH) für "DateTime" und die Interval-Datentypen zurück. Wenn diese Spalte SQL_DATETIME oder SQL_INTERVAL zurückgibt, kann im speziellen Datentyp aus der Spalte noch SQL_DATETIME_SUB ermittelt werden. Eine Liste der gültigen ODBC-SQL-Datentypen, finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D: Datentypen. Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.<br /><br /> Die Datentypen für ODBC 3 zurückgegeben. *x* und ODBC-2. *X* Anwendungen können unterschiedlich sein. Weitere Informationen finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
-|NOCH SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|Der Untertypcode für Datetime "und" Interval-Datentypen. Für andere Datentypen gibt diese Spalte einen NULL-Wert zurück. Weitere Informationen zu Datetime "und" Interval Untercodes, finden Sie unter "SQL_DESC_DATETIME_INTERVAL_CODE" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).|  
-|CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|Die maximale Länge in Byte von einem Zeichen- oder Binärdaten-Datentypspalte. Bei allen anderen Datentypen gibt diese Spalte einen NULL-Wert zurück.|  
-|ORDINAL_POSITION (ODBC 3.0)|17|Integer nicht NULL|Die Ordnungsposition einer Spalte innerhalb der Tabelle. Die erste Spalte in der Tabelle ist die Zahl 1.|  
-|IS_NULLABLE (ODBC 3.0)|18|Varchar|"Nein", wenn die Spalte keine NULL-Werte enthält.<br /><br /> "YES", wenn die Spalte NULL-Werte einschließen kann.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> Für diese Spalte zurückgegebene Wert unterscheidet sich von der für die NULLABLE-Spalte zurückgegebene Wert. (Siehe die Beschreibung der Spalte NULL-Werte zulässt.)|  
+|TABLE_CAT (ODBC 1,0)|1|Varchar|Katalog Name; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für die Tabellen zurückgegeben, die über keine Kataloge verfügen.|  
+|TABLE_SCHEM (ODBC 1,0)|2|Varchar|Schema Name; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber für einige Tabellen Schemas unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für Tabellen zurückgegeben, die keine Schemas aufweisen.|  
+|Table_name (ODBC 1,0)|3|Varchar not NULL|Tabellenname.|  
+|Column_name (ODBC 1,0)|4|Varchar not NULL|Spaltenname. Der Treiber gibt eine leere Zeichenfolge für eine Spalte zurück, die über keinen Namen verfügt.|  
+|Data_type (ODBC 1,0)|5|Smallint nicht NULL|SQL-Datentyp. Hierbei kann es sich um einen ODBC-SQL-Datentyp oder um einen treiberspezifischen SQL-Datentyp handeln. Für DateTime-und interval-Datentypen gibt diese Spalte den präzisen Datentyp (z. b. SQL_TYPE_DATE oder SQL_INTERVAL_YEAR_TO_MONTH anstelle des nicht präzisen Datentyps, z. b. SQL_DATETIME oder SQL_INTERVAL), zurück. Eine Liste der gültigen ODBC-SQL-Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D: Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie in der Dokumentation des Treibers.<br /><br /> Die Datentypen, die für ODBC 3 zurückgegeben werden. *x* und ODBC 2. *x* -Anwendungen können unterschiedlich sein. Weitere Informationen finden Sie unter abwärts [Kompatibilität und Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
+|Type_name (ODBC 1,0)|6|Varchar not NULL|Datenquellen abhängiger Datentyp Name; Beispiel: "char", "varchar", "Money", "Long varbinar" oder "char () for Bit Data".|  
+|COLUMN_SIZE (ODBC 1,0)|7|Integer|Wenn data_type SQL_CHAR oder SQL_VARCHAR ist, enthält diese Spalte die maximale Länge der Spalte in Zeichen. Bei datetime-Datentypen ist dies die Gesamtzahl der Zeichen, die erforderlich sind, um den Wert beim Konvertieren in Zeichen anzuzeigen. Bei numerischen Datentypen entspricht dies entweder der Gesamtanzahl der Ziffern oder der Gesamtzahl der in der Spalte zulässigen Bits gemäß der NUM_PREC_RADIX Spalte. Bei interval-Datentypen ist dies die Anzahl der Zeichen in der Zeichen Darstellung des intervallliterals (wie durch die vorangehende Genauigkeit von Intervallen definiert). Weitere Informationen finden Sie unter [Intervall Datentyp Länge](../../../odbc/reference/appendixes/interval-data-type-length.md) in Anhang D: Datentypen. Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeige Größe](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen.|  
+|BUFFER_LENGTH (ODBC 1,0)|8|Integer|Die Länge der Daten in Bytes, die auf einen SQLGetData-, SQLFetch-oder SQLFetchScroll-Vorgang übertragen werden, wenn SQL_C_DEFAULT angegeben wird. Bei numerischen Daten unterscheidet sich diese Größe möglicherweise von der Größe der Daten, die in der Datenquelle gespeichert sind. Dieser Wert kann sich von COLUMN_SIZE Spalte für Zeichendaten unterscheiden. Weitere Informationen über die Länge finden Sie unter [Spaltengröße, Dezimalstellen, Länge von Oktett übertragen und Anzeige Größe](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen.|  
+|DECIMAL_DIGITS (ODBC 1,0)|9|Smallint|Die Gesamtanzahl der signifikanten Ziffern rechts vom Dezimaltrennzeichen. Bei SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP enthält diese Spalte die Anzahl der Ziffern in der Komponente für Sekundenbruchteile. Bei den anderen Datentypen handelt es sich hierbei um die Dezimalstellen der Spalte in der Datenquelle. Für Intervall Datentypen, die eine Zeitkomponente enthalten, enthält diese Spalte die Anzahl der Ziffern rechts vom Dezimaltrennzeichen (Sekundenbruchteile). Für Intervall Datentypen, die keine Zeitkomponente enthalten, ist diese Spalte 0. Weitere Informationen zu Dezimalziffern finden Sie unter [Spaltengröße, Dezimalstellen, Länge des Oktetts übertragen und Anzeige Größe](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen. NULL wird für Datentypen zurückgegeben, bei denen DECIMAL_DIGITS nicht anwendbar ist.|  
+|NUM_PREC_RADIX (ODBC 1,0)|10|Smallint|Für numerische Datentypen, entweder 10 oder 2. Wenn der Wert 10 ist, gibt die Werte in COLUMN_SIZE und DECIMAL_DIGITS die Anzahl der für die Spalte zulässigen Dezimalstellen an. Beispielsweise würde eine dezimale Spalte (12, 5) eine NUM_PREC_RADIX von 10, eine COLUMN_SIZE von 12 und eine DECIMAL_DIGITS von 5 zurückgeben. eine float-Spalte kann eine NUM_PREC_RADIX von 10, eine COLUMN_SIZE 15 und eine DECIMAL_DIGITS NULL zurückgeben.<br /><br /> Wenn der Wert 2 ist, haben die Werte in COLUMN_SIZE und DECIMAL_DIGITS die Anzahl der in der Spalte zulässigen Bits. Eine float-Spalte könnte z. b. ein Radix von 2, eine COLUMN_SIZE von 53 und eine DECIMAL_DIGITS NULL zurückgeben.<br /><br /> NULL wird für Datentypen zurückgegeben, bei denen NUM_PREC_RADIX nicht anwendbar ist.|  
+|Nullable (ODBC 1,0)|11|Smallint nicht NULL|SQL_NO_NULLS, wenn die Spalte keine NULL-Werte enthalten darf.<br /><br /> SQL_NULLABLE, wenn die Spalte NULL-Werte akzeptiert.<br /><br /> SQL_NULLABLE_UNKNOWN, wenn nicht bekannt ist, ob die Spalte NULL-Werte akzeptiert.<br /><br /> Der für diese Spalte zurückgegebene Wert unterscheidet sich von dem Wert, der für die IS_NULLABLE Spalte zurückgegeben wurde. Die Nullable-Spalte gibt mit Sicherheit an, dass eine Spalte NULL-Werte akzeptieren kann, aber nicht mit Sicherheit angeben kann, dass eine Spalte keine NULL-Werte akzeptiert. Die Spalte IS_NULLABLE gibt mit Sicherheit an, dass eine Spalte keine NULL-Werten annehmen kann, aber nicht mit der Gewissheit angeben kann, dass eine Spalte NULL-Werten akzeptiert.|  
+|Hinweise (ODBC 1,0)|12|Varchar|Eine Beschreibung der Spalte.|  
+|COLUMN_DEF (ODBC 3,0)|13|Varchar|Der Standardwert der Spalte. Der Wert in dieser Spalte sollte als Zeichenfolge interpretiert werden, wenn er in Anführungszeichen eingeschlossen ist.<br /><br /> Wenn NULL als Standardwert angegeben wurde, ist diese Spalte das Wort NULL und nicht in Anführungszeichen eingeschlossen. Wenn der Standardwert nicht ohne Abschneiden dargestellt werden kann, enthält diese Spalte abgeschnitten, ohne einfache Anführungszeichen einzuschließen. Wenn kein Standardwert angegeben wurde, ist diese Spalte NULL.<br /><br /> Der Wert COLUMN_DEF kann verwendet werden, um eine neue Spaltendefinition zu erstellen, außer wenn Sie den abgeschnittene Wert enthält.|  
+|SQL_DATA_TYPE (ODBC 3,0)|14|Smallint nicht NULL|SQL-Datentyp, wie er im Feld SQL_DESC_TYPE Datensatz im IRD angezeigt wird. Hierbei kann es sich um einen ODBC-SQL-Datentyp oder um einen treiberspezifischen SQL-Datentyp handeln. Diese Spalte ist mit Ausnahme der Datentypen datetime und Interval identisch mit der Spalte data_type. Diese Spalte gibt den nicht präzisen Datentyp (z. b. SQL_DATETIME oder SQL_INTERVAL) anstelle des präzisen Datentyps (z. b. SQL_TYPE_DATE oder SQL_INTERVAL_YEAR_TO_MONTH) für DateTime-und interval-Datentypen zurück. Wenn diese Spalte SQL_DATETIME oder SQL_INTERVAL zurückgibt, kann der spezifische Datentyp aus der SQL_DATETIME_SUB Spalte ermittelt werden. Eine Liste der gültigen ODBC-SQL-Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D: Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie in der Dokumentation des Treibers.<br /><br /> Die Datentypen, die für ODBC 3 zurückgegeben werden. *x* und ODBC 2. *x* -Anwendungen können unterschiedlich sein. Weitere Informationen finden Sie unter abwärts [Kompatibilität und Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
+|SQL_DATETIME_SUB (ODBC 3,0)|15|Smallint|Der Untertyp Code für DateTime-und interval-Datentypen. Für andere Datentypen gibt diese Spalte einen NULL-Wert zurück. Weitere Informationen zu DateTime-und Interval-Subcodes finden Sie unter "SQL_DESC_DATETIME_INTERVAL_CODE" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).|  
+|CHAR_OCTET_LENGTH (ODBC 3,0)|16|Integer|Die maximale Länge in Bytes für eine Zeichen-oder Binär Datentyp Spalte. Bei allen anderen Datentypen gibt diese Spalte einen NULL-Wert zurück.|  
+|ORDINAL_POSITION (ODBC 3,0)|17|Integer nicht NULL|Die Ordnungsposition einer Spalte innerhalb der Tabelle. Die erste Spalte in der Tabelle ist Nummer 1.|  
+|IS_NULLABLE (ODBC 3,0)|18|Varchar|"No", wenn die Spalte keine Nullen enthält.<br /><br /> "Yes", wenn die Spalte NULL-Werten enthalten könnte.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> Der für diese Spalte zurückgegebene Wert unterscheidet sich von dem für die Nullable-Spalte zurückgegebenen Wert. (Siehe die Beschreibung der Spalte, die NULL-Werte zulässt.)|  
   
 ## <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel deklariert eine Anwendung Puffer für das Resultset zurückgegebenes **SQLColumns**. Ruft **SQLColumns** zur Beschreibung der jede Spalte in der EMPLOYEE-Tabelle ein Resultset zurückgegeben. Es ruft dann **SQLBindCol** zum Binden der Spalten im Resultset den Puffern. Schließlich die Anwendung ruft jede Zeile von Daten mit **SQLFetch** und verarbeitet es.  
+ Im folgenden Beispiel deklariert eine Anwendung Puffer für das von **SQLColumns**zurückgegebene Resultset. Es wird **SQLColumns** aufgerufen, um ein Resultset zurückzugeben, das jede Spalte in der Employee-Tabelle beschreibt. Anschließend wird **SQLBindCol** aufgerufen, um die Spalten im Resultset an die Puffer zu binden. Schließlich ruft die Anwendung jede Daten Zeile mit **SQLFetch** ab und verarbeitet sie.  
   
 ```cpp  
 // SQLColumns_Function.cpp  
@@ -285,18 +285,18 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Binden einen Puffer an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Anweisungsverarbeitung Abbrechen|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Zurückgeben von Berechtigungen für eine oder mehrere Spalten|[SQLColumnPrivileges-Funktion](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|Abrufen eines Zeilenblocks von Daten oder ein Ergebnis durchblättern festlegen|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Abrufen mehrerer Zeilen von Daten|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Zurückgeben von Spalten, die eine Zeile eindeutig zu identifizieren oder Spalten, die durch eine Transaktion automatisch aktualisiert.|[SQLSpecialColumns-Funktion](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
-|Zurückgeben von Statistiken und Indizes|[SQLStatistics-Funktion](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
+|Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Zurückgeben von Berechtigungen für eine Spalte oder Spalten|[SQLColumnPrivileges-Funktion](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
+|Abrufen eines Datenblocks oder Scrollen durch ein Resultset|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Abrufen mehrerer Daten Zeilen|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Zurückgeben von Spalten, die eine Zeile eindeutig identifizieren, oder Spalten, die automatisch durch eine Transaktion aktualisiert werden|[SQLSpecialColumns-Funktion](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
+|Zurückgeben von Tabellenstatistiken und Indizes|[SQLStatistics-Funktion](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
 |Zurückgeben einer Liste von Tabellen in einer Datenquelle|[SQLTables-Funktion](../../../odbc/reference/syntax/sqltables-function.md)|  
 |Zurückgeben von Berechtigungen für eine Tabelle oder Tabellen|[SQLTablePrivileges-Funktion](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

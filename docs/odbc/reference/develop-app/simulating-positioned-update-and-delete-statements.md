@@ -1,5 +1,5 @@
 ---
-title: Simulieren von positioniert, Update und Delete-Anweisungen | Microsoft-Dokumentation
+title: Simulieren von positionierten Update-und DELETE-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,78 +17,78 @@ ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107533"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulieren von positionierten Aktualisierungen und DELETE-Anweisungen
-Wenn die Datenquelle nicht positioniertes Update unterstützt und-Anweisungen DELETE, kann der Treiber diese simulieren. Beispielsweise wird die ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen. Die allgemeine Strategie zum Simulieren positionierte Update- und Delete-Anweisungen werden positionierte-Anweisungen zu komplexen zu konvertieren. Dies erfolgt durch Ersetzen der **WHERE CURRENT OF** -Klausel mit einer komplexen **, in denen** -Klausel, die die aktuelle Zeile angibt.  
+Wenn die Datenquelle positionierte UPDATE-und DELETE-Anweisungen nicht unterstützt, kann der Treiber diese simulieren. Beispielsweise simuliert die ODBC-Cursor Bibliothek positionierte UPDATE-und DELETE-Anweisungen. Die allgemeine Strategie zum simulieren positionierter Update-und DELETE-Anweisungen besteht darin, positionierte Anweisungen in durchsuchte zu konvertieren. Dies erfolgt durch Ersetzen der **WHERE CURRENT of** -Klausel durch eine durchsuchte **Where** -Klausel, die die aktuelle Zeile identifiziert.  
   
- Z. B. weil der CustID-Spalte jeder Zeile in der Customers-Tabelle eindeutig identifiziert, löschen die positionierte-Anweisung  
+ Da die CustID-Spalte beispielsweise jede Zeile in der Customers-Tabelle eindeutig identifiziert, wird die positionierte DELETE-Anweisung  
   
 ```  
 DELETE FROM Customers WHERE CURRENT OF CustCursor  
 ```  
   
- kann in konvertiert werden  
+ kann konvertiert werden in  
   
 ```  
 DELETE FROM Customers WHERE (CustID = ?)  
 ```  
   
- Der Treiber möglicherweise verwenden Sie eine der folgenden *Zeilenbezeichner* in die **, in denen** Klausel:  
+ Der Treiber kann einen der folgenden *Zeilen* Bezeichner in der **Where** -Klausel verwenden:  
   
--   Spalten, deren Werte dienen, um eindeutig auf jede Zeile in der Tabelle zu identifizieren. Zum Beispiel der Aufruf **SQLSpecialColumns** mit SQL_BEST_ROWID gibt die optimale(n) Spalte(n) oder eine Gruppe von Spalten, die diesem Zweck dienen.  
+-   Spalten, deren Werte dienen, um jede Zeile in der Tabelle eindeutig zu identifizieren. Wenn Sie z. b. **SQLSpecialColumns** mit SQL_BEST_ROWID aufrufen, wird die optimale Spalte oder Gruppe von Spalten zurückgegeben, die diesen Zweck erfüllen.  
   
--   Pseudo-Spalten zur Verfügung gestellt, von einigen Datenquellen im Rahmen, die jede Zeile eindeutig identifiziert. Dies können auch abgerufen werden durch Aufrufen von **SQLSpecialColumns**.  
+-   Pseudo Spalten, die von einigen Datenquellen bereitgestellt werden, um jede Zeile eindeutig zu identifizieren. Diese können auch durch Aufrufen von **SQLSpecialColumns**abgerufen werden.  
   
--   Einen eindeutigen Index, sofern verfügbar.  
+-   Ein eindeutiger Index, falls verfügbar.  
   
 -   Alle Spalten im Resultset.  
   
- Genau die Spalten, die ein Treiber, in verwenden sollten der **, in denen** Klausel erstellt, hängt der Treiber. Für einige Daten können Datenquellen, das Festlegen eines zeilenbezeichners kostspielig sein. Es ist jedoch schneller ausgeführt und wird sichergestellt, dass eine simulierte-Anweisung aktualisiert oder löscht jeweils nur eine Zeile. Abhängig von den Funktionen des zugrunde liegenden DBMS kann die mithilfe eines zeilenbezeichners einrichten, aufwändig sein. Es ist jedoch schneller ausgeführt und wird sichergestellt, dass eine simulierte-Anweisung aktualisiert oder löscht nur eine Zeile. Die Möglichkeit, alle Spalten im Resultset ist in der Regel viel leichter einzurichten. Allerdings ist langsamer ausgeführt und, wenn die Spalten eine Zeile nicht eindeutig identifiziert, kann dazu führen, die Zeilen, die unabsichtlich aktualisiert oder gelöscht, insbesondere dann, wenn für das Ergebnis die select-Liste festgelegt enthält keine alle Spalten, die in der zugrunde liegenden Tabelle vorhanden.  
+ Welche Spalten ein Treiber in der **Where** -Klausel verwenden sollte, die er erstellt, hängt vom Treiber ab. Bei einigen Datenquellen kann das Ermitteln eines Zeilen Bezeichners kostspielig sein. Es ist jedoch schneller, Sie auszuführen und sicherzustellen, dass eine simulierte Anweisung höchstens eine Zeile aktualisiert oder löscht. Abhängig von den Funktionen des zugrunde liegenden DBMS kann die Einrichtung eines Zeilen Bezeichners teuer sein. Es ist jedoch schneller auszuführen und sicherzustellen, dass eine simulierte Anweisung nur eine Zeile aktualisiert oder löscht. Die Option, alle Spalten im Resultset zu verwenden, ist in der Regel viel einfacher einzurichten. Die Ausführung ist jedoch langsamer. wenn die Spalten eine Zeile nicht eindeutig identifizieren, kann dazu führen, dass Zeilen versehentlich aktualisiert oder gelöscht werden, insbesondere dann, wenn die Auswahlliste für das Resultset nicht alle Spalten enthält, die in der zugrunde liegenden Tabelle vorhanden sind.  
   
- Abhängig von dem der genannten Strategien des Treibers unterstützt, eine Anwendung kann auswählen, welche Strategie den Treiber mit der SQL_ATTR_SIMULATE_CURSOR-Anweisungsattribut verwendet werden sollen. Obwohl es merkwürdig für eine Anwendung, das Risiko des versehentlich aktualisieren oder Löschen einer Zeile erscheint, kann die Anwendung dieses Risiko entfernen, indem Sie sicherstellen, dass die Spalten im Resultset jede Zeile im Resultset eindeutig identifizieren. Hierdurch wird dem Treiber den Aufwand zu diesem Zweck müssen gespeichert.  
+ Abhängig davon, welche der oben genannten Strategien der Treiber unterstützt, kann eine Anwendung auswählen, welche Strategie der Treiber mit dem SQL_ATTR_SIMULATE_CURSOR Statement-Attribut verwenden soll. Obwohl es für eine Anwendung möglicherweise unmerk würdig erscheint, eine Zeile versehentlich zu aktualisieren oder zu löschen, kann die Anwendung dieses Risiko entfernen, indem Sie sicherstellt, dass die Spalten im Resultset die einzelnen Zeilen im Resultset eindeutig identifizieren. Dies spart den Treiber, um dies zu tun.  
   
- Der Treiber gewählt, die eine Zeilen-ID verwenden, fängt die **SELECT FOR UPDATE** -Anweisung, die das Resultset erstellt. Wenn die Spalten in der select-Liste eine Zeile nicht effektiv identifizieren, fügt der Treiber die erforderlichen Spalten am Ende der select-Liste hinzu. Einige Datenquellen haben eine einzelne Spalte, die eine Zeile, z. B. die ROWID-Spalte in Oracle immer eindeutig identifiziert. Wenn eine solche Spalte verfügbar ist, verwendet der Treiber dies. Andernfalls ruft der Treiber **SQLSpecialColumns** für jede Tabelle in der **FROM** -Klausel, um eine Liste der Spalten abzurufen, die jede Zeile eindeutig identifizieren. Eine allgemeine Beschränkung, die durch dieses Verfahren entsteht ist, dass Cursor Simulation schlägt fehl, wenn es mehr als eine Tabelle in der **FROM** Klausel.  
+ Wenn der Treiber die Verwendung eines Zeilen Bezeichners auswählt, fängt er die **Select for Update** -Anweisung ab, die das Resultset erstellt. Wenn die Spalten in der SELECT-Liste eine Zeile nicht effektiv identifizieren, fügt der Treiber die erforderlichen Spalten am Ende der Auswahlliste hinzu. Einige Datenquellen verfügen über eine einzelne Spalte, die eine Zeile (z. b. die ROWID-Spalte in Oracle) immer eindeutig identifiziert. Wenn eine solche Spalte verfügbar ist, verwendet der Treiber diesen. Andernfalls ruft der Treiber **SQLSpecialColumns** für jede Tabelle in der **from** -Klausel auf, um eine Liste der Spalten abzurufen, die jede Zeile eindeutig identifizieren. Eine allgemeine Einschränkung, die sich aus dieser Technik ergibt, besteht darin, dass die Cursor Simulation fehlschlägt, wenn in der **from** -Klausel mehr als eine Tabelle vorhanden ist.  
   
- Unabhängig davon, wie Zeilen durch der Treiber identifiziert werden, in der Regel entfernt die **FOR UPDATE OF** Klausel aus der **SELECT FOR UPDATE** Anweisung vor dem Senden an die Datenquelle. Die **FOR UPDATE OF** -Klausel wird verwendet, nur mit, Update positioniert und-Anweisungen DELETE. Datenquellen, die nicht unterstützen positioniert, Update und Delete-Anweisungen in der Regel nicht unterstützt wird angezeigt.  
+ Unabhängig davon, wie der Treiber Zeilen identifiziert, wird die **for Update of** -Klausel in der Regel aus der **Select for Update** -Anweisung entfernt, bevor Sie an die Datenquelle gesendet wird. Die **for Update of** -Klausel wird nur für positionierte UPDATE-und DELETE-Anweisungen verwendet. Datenquellen, die positionierte UPDATE-und DELETE-Anweisungen nicht unterstützen, unterstützen Sie in der Regel nicht.  
   
- Wenn die Anwendung ein positioniertes Update oder Delete-Anweisung für die Ausführung sendet, wird der Treiber ersetzt die **WHERE CURRENT OF** -Klausel mit einer **, in denen** Klausel, die die Zeilen-ID enthält. Die Werte dieser Spalten abgerufen werden, aus dem Cache verwaltet, die vom Treiber für jede Spalte, die verwendet wird, in der **, in denen** Klausel. Nachdem der Treiber ersetzt hat die **, in denen** -Klausel, sendet er die Anweisung an die Datenquelle für die Ausführung.  
+ Wenn die Anwendung eine positionierte UPDATE-oder DELETE-Anweisung zur Ausführung übermittelt, ersetzt der Treiber die **WHERE CURRENT of** -Klausel durch eine **Where** -Klausel, die den Zeilen Bezeichner enthält. Die Werte dieser Spalten werden aus einem Cache abgerufen, der vom Treiber für jede Spalte, die in der **Where** -Klausel verwendet wird, verwaltet werden. Nachdem der Treiber die **Where** -Klausel ersetzt hat, sendet er die-Anweisung zur Ausführung an die Datenquelle.  
   
- Nehmen wir beispielsweise an, dass die Anwendung die folgende Anweisung zum Erstellen eines Resultsets übermittelt:  
+ Nehmen wir beispielsweise an, dass die Anwendung die folgende Anweisung übermittelt, um ein Resultset zu erstellen:  
   
 ```  
 SELECT Name, Address, Phone FROM Customers FOR UPDATE OF Phone, Address  
 ```  
   
- Wenn die Anwendung SQL_ATTR_SIMULATE_CURSOR zum Anfordern einer Garantie, dass der festgelegt wurde, und wenn die Datenquelle keine Pseudospalte, die eine Zeile immer eindeutig identifiziert bereitstellt, der Treiber ruft **SQLSpecialColumns** für die Customers-Tabelle ermittelt, dass CustID ist der Schlüssel zur Customers-Tabelle in der select-Liste hinzugefügt und entfernt die **FOR UPDATE OF** Klausel:  
+ Wenn die Anwendung SQL_ATTR_SIMULATE_CURSOR festgelegt hat, um eine Garantie der Eindeutigkeit anzufordern, und die Datenquelle keine Pseudo Spalte bereitstellt, die eine Zeile immer eindeutig identifiziert, ruft der Treiber **SQLSpecialColumns** für die Customers-Tabelle auf, ermittelt, dass CustID der Schlüssel für die Customers-Tabelle ist, und entfernt die **for Update of** -Klausel:  
   
 ```  
 SELECT Name, Address, Phone, CustID FROM Customers  
 ```  
   
- Wenn eine Garantie, dass der nicht von die Anwendung angefordert hat, entfernt der Treiber nur die **FOR UPDATE OF** Klausel:  
+ Wenn die Anwendung keine Garantie für Eindeutigkeit angefordert hat, entfernt der Treiber nur die **for Update of** -Klausel:  
   
 ```  
 SELECT Name, Address, Phone FROM Customers  
 ```  
   
- Nehmen wir an die Anwendung führt einen Bildlauf durch die Ergebnisse und sendet die folgenden positioniertes Update-Anweisung für die Ausführung, wobei der Name des Cursors ist Cust, über das Resultset:  
+ Angenommen, die Anwendung führt einen Bildlauf durch das Resultset durch und übermittelt die folgende positionierte UPDATE-Anweisung zur Ausführung, wobei cust der Name des Cursors über dem Resultset ist:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE CURRENT OF Cust  
 ```  
   
- Wenn eine Garantie, dass der nicht von die Anwendung angefordert hat, wird der Treiber ersetzt die **, in denen** Klausel und bindet den CustID-Parameter an die Variable in seinem Cache:  
+ Wenn die Anwendung keine Garantie für Eindeutigkeit angefordert hat, ersetzt der Treiber die **Where** -Klausel und bindet den CustID-Parameter an die Variable im Cache:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE (CustID = ?)  
 ```  
   
- Wenn eine Garantie, dass der nicht von die Anwendung angefordert hat, wird der Treiber ersetzt die **, in denen** -Klausel und die Parameter Name, Adresse und Telefonnummer in diese Klausel, um die Variablen in seinem Cache:  
+ Wenn die Anwendung keine Garantie der Eindeutigkeit angefordert hat, ersetzt der Treiber die **Where** -Klausel und bindet den Namen, die Adresse und die Telefon Parameter in dieser Klausel an die Variablen im Cache:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ?  

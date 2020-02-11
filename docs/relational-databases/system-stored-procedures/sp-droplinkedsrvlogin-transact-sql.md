@@ -1,5 +1,5 @@
 ---
-title: Sp_droplinkedsrvlogin (Transact-SQL) | Microsoft-Dokumentation
+title: sp_droplinkedsrvlogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097664"
 ---
-# <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
+# <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Entfernt eine vorhandene Zuordnung zwischen einem Anmeldenamen auf dem lokalen Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und einem Anmeldenamen auf dem Verbindungsserver.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +40,19 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rmtsrvname = ] 'rmtsrvname'` Der Name eines Verbindungsservers, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -anmeldenamenzuordnung gilt. *Rmtsrvname* ist **Sysname**, hat keinen Standardwert. *Rmtsrvname* muss bereits vorhanden sein.  
+`[ @rmtsrvname = ] 'rmtsrvname'`Der Name eines Verbindungs Servers, für den die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen Zuordnung gilt. *rmzrvname* ist vom Datentyp **vom Datentyp sysname**und hat keinen Standardwert. *rmzrvname* muss bereits vorhanden sein.  
   
-`[ @locallogin = ] 'locallogin'` Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldenamen auf dem lokalen Server, die eine Zuordnung mit dem Verbindungsserver *Rmtsrvname*. *Locallogin* ist **Sysname**, hat keinen Standardwert. Eine Zuordnung für *Locallogin* zu *Rmtsrvname* muss bereits vorhanden sein. Wenn der Wert NULL ist, erstellt die standardzuordnung von **Sp_addlinkedserver**, die alle Anmeldenamen auf dem lokalen Server Anmeldenamen auf dem Verbindungsserver zuordnet, gelöscht.  
+`[ @locallogin = ] 'locallogin'`Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name auf dem lokalen Server, der eine Zuordnung zum Verbindungs Server *rmzrvname*aufweist. *loczuweisung* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Eine Zuordnung für " *loczuweisung* " zu " *rmtrvname* " muss bereits vorhanden sein. Wenn der Wert NULL ist, wird die von **sp_addlinkedserver**erstellte Standard Zuordnung, die alle Anmeldungen auf dem lokalen Server den Anmeldungen auf dem Verbindungs Server zuordnet, gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die vorhandene Zuordnung für einen Anmeldenamen gelöscht wird, der lokale Server verwendet die standardzuordnung von erstellten **Sp_addlinkedserver** Wenn sie eine Verbindung mit dem Verbindungsserver für diesen Anmeldenamen. Um die standardzuordnung zu ändern, verwenden **Sp_addlinkedsrvlogin**.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn die vorhandene Zuordnung für eine-Anmeldung gelöscht wird, verwendet der lokale Server die von **sp_addlinkedserver** erstellte Standard Zuordnung, wenn eine Verbindung mit dem Verbindungs Server für diesen Anmelde Namen hergestellt wird. Verwenden Sie **sp_addlinkedsrvlogin**, um die Standard Zuordnung zu ändern.  
   
- Wenn die standardzuordnung auch gelöscht wird, nur Anmeldungen, die explizit eine anmeldenamenzuordnung auf den Verbindungsserver mit erteilt wurden **Sp_addlinkedsrvlogin**, können Zugriff auf den Verbindungsserver.  
+ Wenn die Standard Zuordnung ebenfalls gelöscht wird, können nur Anmeldungen, denen explizit eine Anmelde Namen Zuordnung für den Verbindungs Server zugewiesen wurde, mithilfe von **sp_addlinkedsrvlogin**auf den Verbindungs Server zugreifen.  
   
- **Sp_droplinkedsrvlogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
+ **sp_droplinkedsrvlogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY LOGIN-Berechtigung auf dem Server.  
@@ -73,9 +73,9 @@ EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_addlinkedserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

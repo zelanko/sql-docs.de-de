@@ -14,15 +14,15 @@ ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096312"
 ---
 # <a name="delete-statement-limitations"></a>Einschränkungen der DELETE-Anweisung
-Die DELETE-Anweisung wird für den Microsoft Excel- oder Textdateien-Treiber nicht unterstützt. Beachten Sie, dass die INSERT-Anweisung für den Text-Treiber unterstützt wird.  
+Die DELETE-Anweisung wird für den Microsoft Excel-oder Text-Treiber nicht unterstützt. Beachten Sie, dass die INSERT-Anweisung für den Text Treiber unterstützt wird.  
   
- DBASE-Treiber unterstützt nicht das Packen von einer Tabelle, um die Werte "gelöscht" zu entfernen.  
+ Der dBase-Treiber unterstützt das Packen einer Tabelle zum Entfernen von "gelöschten" Werten nicht.  
   
- Für die Paradox-Treiber, eine Zeile aus einer Tabelle zu löschen muss die Tabelle einen eindeutigen Index (Paradox-Primärschlüssel) verfügen.
+ Damit der Paradox-Treiber eine Zeile aus einer Tabelle löschen kann, muss die Tabelle über einen eindeutigen Index verfügen (Paradox-Primärschlüssel).

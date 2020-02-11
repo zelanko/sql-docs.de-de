@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103761"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)
@@ -25,7 +25,7 @@ ms.locfileid: "66103761"
 > [!IMPORTANT]  
 >  Gehen Sie beim Ändern der Konfigurationsdateien vorsichtig vor. Wenn Sie eine Einstellung ändern, die für die interne Verwendung reserviert ist, wird möglicherweise die Installation deaktiviert. Im Allgemeinen sollten Sie Konfigurationseinstellungen nur ändern, wenn ein bestimmtes Problem behoben werden muss. Weitere Informationen darüber, welche Einstellungen problemlos geändert werden können, finden Sie unter [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) oder [RSReportDesigner Configuration File](rsreportdesigner-configuration-file.md) Weitere Informationen zu Konfigurationsdateien finden Sie in der [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Produktdokumentation.  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
 -   [Lesen und Verwenden von Konfigurationswerten](#bkmk_read_values)  
   
@@ -86,18 +86,18 @@ ms.locfileid: "66103761"
   
     -   [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
-5.  Speichern Sie die Datei.  
+5.  Speichern Sie die Datei .  
   
 6.  Überprüfen Sie die Ablaufverfolgungs-Protokolldateien, um zu überprüfen, dass keine Fehler aufgetreten sind. Wenn Fehlerbedingungen auftreten, wurde eine Einstellung oder ihr Wert falsch angegeben. Gültige Werte für die Einstellungen finden Sie unter [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) . Weitere Informationen zum Anzeigen von Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](report-server-service-trace-log.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RSReportServer-Konfigurationsdatei](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService-Konfigurationsdatei](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner-Konfigurationsdatei](rsreportdesigner-configuration-file.md)   
  [Bereitstellen von Datenverarbeitungserweiterungen](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Bereitstellen von Übermittlungserweiterungen](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Bereitstellen von Renderingerweiterungen](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichts Elements](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services-Konfigurationsdateien](reporting-services-configuration-files.md)  
   
   

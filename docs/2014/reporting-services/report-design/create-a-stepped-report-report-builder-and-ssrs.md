@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106130"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Erstellen von abgestuften Berichten (Berichts-Generator und SSRS)
   Ein abgestufter Bericht zeigt Detailzeilen oder Untergruppen wie im folgenden Beispiel unter einer übergeordneten Gruppe eingerückt in der gleichen Spalte an.  
   
- ![Gerenderter abgestufter Bericht](../media/steppedreportrendered.gif "Rendered stepped report")  
+ ![Gerenderter gestufter Bericht](../media/steppedreportrendered.gif "Gerenderter gestufter Bericht")  
   
  Bei herkömmlichen Tabellenberichten wird die übergeordnete Gruppe in einer angrenzenden Spalte im Bericht platziert. Der neue Tablix-Datenbereich ermöglicht es Ihnen, eine Gruppe und Detailzeilen bzw. Untergruppen zur gleichen Spalte hinzuzufügen. Um die Gruppenzeilen von den Detailzeilen oder Zeilen untergeordneter Gruppen zu unterscheiden, können Sie entweder eine Formatierung wie eine Schriftfarbe anwenden oder die Detailzeilen mit einem Einzug versehen.  
   
@@ -48,15 +48,15 @@ ms.locfileid: "66106130"
   
      Sie haben jetzt einen grundlegenden Tabellenbericht. Beim Rendern werden eine Spalte mit dem Gruppeninstanzwert und eine oder mehrere weitere Spalten mit gruppierten Detaildaten angezeigt. Die folgende Abbildung zeigt, wie der Datenbereich auf der Entwurfsoberfläche aussehen könnte.  
   
-     ![Tabellendatenbereich mit Gruppe](../media/tabledataregionwithgroup.gif "Table data region with group")  
+     ![Tabellendatenbereich mit Gruppe](../media/tabledataregionwithgroup.gif "Tabellendatenbereich mit Gruppe")  
   
      Die folgende Abbildung zeigt, wie der gerenderte Datenbereich beim Anzeigen des Berichts aussehen könnte.  
   
-     ![Gerenderter gruppierter Bericht](../media/tablereportrendered.gif "Rendered grouped report")  
+     ![Gerenderter gruppierter Bericht](../media/tablereportrendered.gif "Gerenderter gruppierter Bericht")  
   
 3.  Für einen abgestuften Bericht benötigen Sie die erste Spalte, die die Gruppeninstanz enthält, nicht. Kopieren Sie stattdessen den Wert in der Gruppenkopfzelle, löschen Sie die Gruppenspalte, und fügen Sie den Wert in das erste Textfeld in der Gruppenkopfzeile ein. Um die Gruppenspalte zu entfernen, klicken Sie mit der rechten Maustaste auf die Gruppenspalte oder die Zelle, und klicken Sie auf **Spalten löschen**. Die folgende Abbildung zeigt, wie der Datenbereich auf der Entwurfsoberfläche aussehen könnte.  
   
-     ![Datenbereich mit Gruppenkopfzeile](../media/tabledataregiongroupheader.gif "Data region with group header row")  
+     ![Datenbereich mit Gruppenkopfzeile](../media/tabledataregiongroupheader.gif "Datenbereich mit Gruppenkopfzeile")  
   
 4.  Ändern Sie die Auffüllung der Detaildatenzelle, um die Detailzeilen unter der Gruppenkopfzeile in der gleichen Spalte einzurücken.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66106130"
   
     2.  Erweitern Sie im Eigenschaftenbereich unter **Ausrichtung**die Eigenschaften für **Auffüllung**.  
   
-    3.  Für **Links**, geben Sie einen neuen auffüllungswert ein, z. B. `.5in`. Durch die Auffüllung wird der Text in der Zelle um den angegebenen Wert eingerückt. Die Standardauffüllung ist 2 Punkt. Gültige Werte für die Auffüllungseigenschaften sind Zahlen über null (0) gefolgt von einem Größenkennzeichner.  
+    3.  Geben Sie für **Links**einen neuen Auffüll Wert ein, z `.5in`. b.. Durch die Auffüllung wird der Text in der Zelle um den angegebenen Wert eingerückt. Die Standardauffüllung ist 2 Punkt. Gültige Werte für die Auffüllungseigenschaften sind Zahlen über null (0) gefolgt von einem Größenkennzeichner.  
   
          Die folgenden Größenkennzeichner sind verfügbar:  
   
@@ -78,11 +78,11 @@ ms.locfileid: "66106130"
   
      Ihr Datenbereich sollte dem folgenden Beispiel ähneln.  
   
-     ![Datenbereich für abgestuften Bericht](../media/steppedreportdataregion.gif "Data region for stepped report")  
+     ![Datenbereich für gestuften Bericht](../media/steppedreportdataregion.gif "Datenbereich für gestuften Bericht")  
   
-     **Datenbereich für abgestuftes Berichtslayout**  
+     **Datenbereich für abgestuftes Berichts Layout**  
   
-     Klicken Sie auf der Registerkarte **Home** auf **Ausführen**. Der Bericht zeigt die Gruppe mit eingezogenen Ebenen für die Untergruppenwerte an.  
+     Klicken Sie auf der Registerkarte **Startseite** auf **Ausführen**. Der Bericht zeigt die Gruppe mit eingezogenen Ebenen für die Untergruppenwerte an.  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>So erstellen Sie einen abgestuften Bericht mit mehreren Gruppen  
   
@@ -103,9 +103,9 @@ ms.locfileid: "66106130"
   
 3.  Ändern Sie die Auffüllung für die Zelle, die die Gruppendaten enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   

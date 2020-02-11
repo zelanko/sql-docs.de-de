@@ -1,5 +1,5 @@
 ---
-title: Sp_db_increased_partitions | Microsoft-Dokumentation
+title: sp_db_increased_partitions | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108259"
 ---
-# <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
+# <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aktiviert oder deaktiviert die Unterstützung für bis zu 15.000 Partitionen für die angegebene Datenbank.  
@@ -32,7 +32,7 @@ ms.locfileid: "68108259"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,14 +44,14 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @dbname=] '*Database_name*"  
- Der Name der Datenbank. *Dbname* ist **Sysname** hat den Standardwert NULL. Wenn *Dbname* nicht angegeben ist, wird die aktuelle Datenbank verwendet wird.  
+ [ @dbname= ] "*database_name*"  
+ Der Name der Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *dbname* nicht angegeben wird, wird die aktuelle Datenbank verwendet.  
   
- [ @increased_partitions=] '*Increased_partitions*"  
- Aktiviert oder deaktiviert die Unterstützung für bis zu 15.000 Partitionen in der angegebenen Datenbank. *Increased_partitions* ist **varchar(6)** hat den Standardwert NULL. Zulässige Werte sind 'ON' bzw. 'TRUE', um die Unterstützung zu aktivieren, und 'OFF' bzw. 'FALSE', um die Unterstützung zu deaktivieren. Wenn *Increased_partitions* nicht angegeben ist, wird die Prozedur zurückgibt, 1, um anzugeben, Unterstützung für die angegebene Datenbank aktiviert ist, oder 0, um die Unterstützung ist deaktiviert.  
+ [ @increased_partitions= ] "*increased_partitions*"  
+ Aktiviert oder deaktiviert die Unterstützung für bis zu 15.000 Partitionen in der angegebenen Datenbank. *increased_partitions* ist vom Datentyp **varchar (6)** und hat den Standardwert NULL. Zulässige Werte sind 'ON' bzw. 'TRUE', um die Unterstützung zu aktivieren, und 'OFF' bzw. 'FALSE', um die Unterstützung zu deaktivieren. Wenn *increased_partitions* nicht angegeben wird, gibt die Prozedur 1 zurück, um anzugeben, dass die Unterstützung für die angegebene Datenbank aktiviert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER DATABASE-Berechtigung für die angegebene Datenbank.  

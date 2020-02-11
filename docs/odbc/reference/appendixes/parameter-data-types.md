@@ -1,5 +1,5 @@
 ---
-title: Parameterdatentypen | Microsoft-Dokumentation
+title: Parameter Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.openlocfilehash: 5140c69184332b1760859421b7e802a5163a0f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100604"
 ---
 # <a name="parameter-data-types"></a>Parameterdatentypen
-Obwohl jedes Parameters angegeben **SQLBindParameter** wird definiert, mit einer SQL-Datentyp, die Parameter in einer SQL-Anweisung keine systeminternen Datentyp haben. Parametermarkierungen können daher in einer SQL­Anweisung enthalten sein, nur dann, wenn ihre Datentypen, die von einem anderen Operanden in der Anweisung abgeleitet werden können. Z. B. in einem arithmetischen Ausdruck wie z. B.? + COLUMN1, den Datentyp des Parameters kann von den Datentyp der benannten Spalte COLUMN1 verhältnisschwellenwert abgeleitet werden. Eine Anwendung kann nicht auf eine parametermarkierung verwenden, wenn der Datentyp kann nicht bestimmt werden.  
+Obwohl jeder Parameter, der mit **SQLBindParameter** angegeben wird, mit einem SQL-Datentyp definiert wird, haben die Parameter in einer SQL-Anweisung keinen systeminternen Datentyp. Daher können Parameter Markierungen nur in eine SQL-Anweisung eingeschlossen werden, wenn Ihre Datentypen von einem anderen Operanden in der Anweisung abgeleitet werden können. Beispielsweise in einem arithmetischen Ausdruck wie? + COLUMN1, der Datentyp des Parameters kann aus dem Datentyp der benannten Spalte abgeleitet werden, die durch COLUMN1 dargestellt wird. Eine Anwendung kann keine Parameter Markierung verwenden, wenn der Datentyp nicht bestimmt werden kann.  
   
- In der folgende Tabelle wird beschrieben, wie ein Datentyp für mehrere Typen von Parametern, die in Übereinstimmung mit der SQL-92 bestimmt wird. Eine umfassendere Spezifikation für das Ableiten von der Parametertyp, wenn andere SQL-Klauseln verwendet werden, finden Sie in der SQL-92-Spezifikation.  
+ In der folgenden Tabelle wird beschrieben, wie ein-Datentyp in Übereinstimmung mit SQL-92 für verschiedene Typen von Parametern bestimmt wird. Eine umfassendere Spezifikation zum Ableiten des Parameter Typs, wenn andere SQL-Klauseln verwendet werden, finden Sie in der SQL-92-Spezifikation.  
   
-|Speicherort des Parameters|Davon ausgegangen, dass-Datentyp|  
+|Speicherort des Parameters|Übernommene Datentyp|  
 |---------------------------|-----------------------|  
-|Einer der Operanden des binären Operators arithmetischen oder Vergleichsoperationen|Identisch mit der andere operand|  
-|Der erste Operand in einem **BETWEEN** Klausel|Identisch mit dem zweiten operand|  
-|Der zweite oder dritte Operand in einem **BETWEEN** Klausel|Identisch mit den ersten Operanden|  
-|Ein Ausdruck für die **IN**|Identisch mit den ersten Wert oder der Ergebnisspalte der Unterabfrage|  
-|Ein Wert, der Verwendung **IN**|Identisch mit dem Ausdruck oder der erste Wert, wenn eine parametermarkierung im Ausdruck vorliegt.|  
-|Einen Musterwert mit verwendet **wie**|VARCHAR|  
-|Ein Updatewert, der Verwendung **aktualisieren**|Der Update-Spalte|
+|Ein Operand eines binären arithmetischen oder Vergleichs Operators|Identisch mit dem anderen Operanden|  
+|Der erste Operand in einer **between** -Klausel.|Identisch mit dem zweiten Operanden|  
+|Der zweite oder dritte Operand in einer **between** -Klausel.|Identisch mit dem ersten Operanden|  
+|Ein Ausdruck, **der mit in** verwendet wird|Identisch mit dem ersten Wert oder der Ergebnisspalte der Unterabfrage.|  
+|Ein mit **in** verwendeter Wert.|Identisch mit dem Ausdruck oder dem ersten Wert, wenn ein Parametermarker im Ausdruck vorhanden ist.|  
+|Ein mit **like** verwendeter Musterwert|VARCHAR|  
+|Ein Update Wert, der mit **Update** verwendet wird.|Identisch mit der Update-Spalte|

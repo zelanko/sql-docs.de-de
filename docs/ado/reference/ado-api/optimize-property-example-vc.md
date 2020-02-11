@@ -1,5 +1,5 @@
 ---
-title: Optimieren Sie die Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für eine Optimierungs Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931836"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel zeigt die [Feld](../../../ado/reference/ado-api/field-object.md) Objekt dynamisch **optimieren** Eigenschaft. Die **Zip** Feld der **Autoren** -Tabelle in der **Pubs** Datenbank ist nicht indiziert. Festlegen der [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft **"true"** auf die **Zip** Feld autorisiert, ADO, zum Erstellen eines Indexes, die die Leistung verbessert die [finden](../../../ado/reference/ado-api/find-method-ado.md)Methode.  
+In diesem Beispiel wird die Eigenschaft " [Feld](../../../ado/reference/ado-api/field-object.md) Objekt dynamisch **optimieren** " veranschaulicht. Das **ZIP** -Feld der Tabelle " **Authors** " in der **Pubs** -Datenbank ist nicht indiziert. Wenn die Eigenschaft [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) für das **ZIP** -Feld auf **true** festgelegt wird, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode verbessert.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -132,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 Silver CT Zweigstelle Walnut Creek Zertifizierungsstelle**   
-## <a name="see-also"></a>Siehe auch  
+ **Akiko yokomoto 3 Silver CT. Nussbaum Creek ca**   
+## <a name="see-also"></a>Weitere Informationen  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Dynamische Eigenschaft Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Optimize – dynamische Eigenschaft (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

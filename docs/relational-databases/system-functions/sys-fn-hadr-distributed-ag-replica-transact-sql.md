@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4e6437a07aa571fc538f2630124dd52496d08e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906169"
 ---
-# <a name="sysfnhadrdistributedagreplica-transact-sql"></a>Sys.fn_hadr_distributed_ag_replica (Transact-SQL)
+# <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Wird verwendet, um ein Replikat in einer verteilten verfügbarkeitsgruppe mit der lokalen verfügbarkeitsgruppe zuzuordnen.  
+  Wird verwendet, um ein Replikat in einer verteilten Verfügbarkeits Gruppe der lokalen Verfügbarkeits Gruppe zuzuordnen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,23 +41,23 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Lag_Id*"  
- Ist der Bezeichner der verteilten verfügbarkeitsgruppe. *Lag_Id* Typ **Uniqueidentifier**.  
+ "*lag_Id*"  
+ Der Bezeichner der verteilten Verfügbarkeits Gruppe. *lag_Id* ist vom Datentyp **uniqueidentifier**.  
   
- "*Replica_id*"  
- Ist der Bezeichner, der ein Replikat in der verteilten verfügbarkeitsgruppe. *Replica_id* Typ **Uniqueidentifier**.  
+ "*replica_id*"  
+ Der Bezeichner eines Replikats in der verteilten Verfügbarkeits Gruppe. *replica_id* ist vom Datentyp **uniqueidentifier**.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  Gibt die folgenden Informationen zurück.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|Eindeutiger Bezeichner (GUID) der lokalen verfügbarkeitsgruppe.|  
+|**group_id**|**uniqueidentifier**|Eindeutiger Bezeichner (GUID) der lokalen Verfügbarkeits Gruppe.|  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="using-sysfnhadrdistributedagreplica"></a>Verwenden von sys.fn_hadr_distributed_ag_replica  
- Das folgende Beispiel gibt eine Tabelle mit der lokalen verfügbarkeitsgruppe Gruppen-ID, die dem angegebenen verteilte verfügbarkeitsgruppe und Replikat zugeordnet ist.  
+### <a name="using-sysfn_hadr_distributed_ag_replica"></a>Verwenden von sys. fn_hadr_distributed_ag_replica  
+ Im folgenden Beispiel wird eine Tabelle mit dem Bezeichner der lokalen Verfügbarkeits Gruppe zurückgegeben, der der angegebenen verteilten Verfügbarkeits Gruppe und dem Replikat zugeordnet ist.  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  
@@ -67,10 +67,10 @@ SELECT * FROM sys.fn_hadr_distributed_ag_replica(@lagId, @replicaId)
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Funktionen von AlwaysOn-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [AlwaysOn-Verfügbarkeitsgruppen Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Verteilte Verfügbarkeits Gruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
