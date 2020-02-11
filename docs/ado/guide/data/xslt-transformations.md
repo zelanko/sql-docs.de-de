@@ -13,19 +13,19 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923343"
 ---
 # <a name="xslt-transformations"></a>XSLT-Transformationen
-XSLT kann auf den generierten XML-Code, um ihn in ein anderes Format zu transformieren angewendet werden. Grundlegendes zu XML-Format in ADO hilft bei der Entwicklung von XSLT-Vorlagen, die es in ein benutzerfreundlicheres Format transformiert werden können.  
+XSLT kann auf den generierten XML-Code angewendet werden, um ihn in ein anderes Format umzuwandeln. Wenn Sie das XML-Format in ADO verstehen, können Sie XSLT-Vorlagen entwickeln, die Sie in ein benutzerfreundliches Formular umwandeln können.  
   
- Beispielsweise wissen Sie, dass jede Zeile des Recordsets als Element innerhalb des Elements Rs: Daten Z: Zeile gespeichert wird. Auf ähnliche Weise wird jedes Feld des Recordset-Objekts als ein Attribut / Wert-Paar für dieses Element gespeichert.  
+ Beispielsweise wissen Sie, dass jede Zeile des Recordsets als z:row-Element im RS: Data-Element gespeichert wird. Ebenso wird jedes Feld des Recordsets als Attribut/Wert-Paar für dieses Element gespeichert.  
   
-## <a name="remarks"></a>Hinweise  
- Die folgende XSLT-Skript kann angewendet werden, dem XML-Code im vorherigen Abschnitt gezeigt, um ihn in eine HTML-Tabelle transformieren, die im Browser angezeigt werden:  
+## <a name="remarks"></a>Bemerkungen  
+ Das folgende XSLT-Skript kann auf den im vorherigen Abschnitt gezeigten XML-Code angewendet werden, um ihn in eine HTML-Tabelle umzuwandeln, die im Browser angezeigt werden soll:  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -50,7 +50,7 @@ XSLT kann auf den generierten XML-Code, um ihn in ein anderes Format zu transfor
 </html>  
 ```  
   
- Die XSLT-Datei konvertiert, den XML-Stream, die von der ADO speichern-Methode generiert, das in einer HTML-Tabelle, die jedes Feld des Recordset-Objekts zusammen mit einer Überschrift der Tabelle angezeigt wird. Tabellenüberschriften und Zeilen werden auch verschiedene Schriftarten und Farben zugewiesen.  
+ XSLT konvertiert den XML-Stream, der von der ADO-Speichermethode generiert wurde, in eine HTML-Tabelle, in der jedes Feld des Recordsets zusammen mit einer Tabellen Überschrift angezeigt wird. Tabellen Überschriften und-Zeilen werden auch unterschiedliche Schriftarten und Farben zugewiesen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

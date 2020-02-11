@@ -1,5 +1,5 @@
 ---
-title: Aufrufen einer gespeicherten Prozedur als Methode für ein Verbindungsobjekt | Microsoft-Dokumentation
+title: Aufrufen einer gespeicherten Prozedur als Methode für ein Verbindungs Objekt | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925895"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Aufrufen einer gespeicherten Prozedur als Methode für ein Connection-Objekt
-Sie können eine gespeicherte Prozedur aufrufen, als handele es sich um eine systemeigene Methode auf die zugeordneten offenen **Verbindung** Objekt. Dies ist vergleichbar mit der einen benannten Befehl aufrufen, für die **Verbindung** Objekt.  
+Eine gespeicherte Prozedur kann so aufgerufen werden, als ob es sich um eine systemeigene Methode auf dem zugeordneten geöffneten **Verbindungs** Objekt handelt. Dies ähnelt dem Aufrufen eines benannten Befehls für das **Verbindungs** Objekt.  
   
- Im folgende Visual Basic-Codebeispiel ruft eine gespeicherte Prozedur in der Northwind-Beispieldatenbank, namens CustOrdersOrders, die Einfachheit halber hier erneut angezeigt wird.  
+ Im folgenden Visual Basic Codebeispiel wird eine gespeicherte Prozedur in der Northwind-Beispieldatenbank mit dem Namen CustOrdersOrders aufgerufen, die hier zur Verfügung gestellt wird.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +34,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie eine gespeicherte Prozedur aufrufen, als handele es sich um eine systemeigene Methode auf einem geöffneten Element zugeordneten **Verbindung** Objekt.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine gespeicherte Prozedur aufgerufen wird, als ob es sich um eine systemeigene Methode auf einem zugeordneten geöffneten **Verbindungs** Objekt handelt.  
   
 ```  
 Const DS = "MySQLServer"  
@@ -78,5 +78,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

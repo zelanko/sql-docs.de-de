@@ -1,5 +1,5 @@
 ---
-title: Lesen, ReadText, schreiben und WriteText-Methoden – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für Read-, Read-, Write-und Write-Text-Methoden (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931441"
 ---
-# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Lesen, ReadText, schreiben und WriteText-Methoden – Beispiel (VB)
-In diesem Beispiel wird veranschaulicht, wie zum Lesen des Inhalts eines Textfelds in sowohl Text als eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) und eine binäre **Stream**. Andere Eigenschaften und Methoden, die dargestellt sind [Position](../../../ado/reference/ado-api/position-property-ado.md), [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), und [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>"Read", "Read", "Write" und "Write-Text"-Methoden Beispiel (VB)
+In diesem Beispiel wird veranschaulicht, wie der Inhalt eines Textfelds in einem [Textstream](../../../ado/reference/ado-api/stream-object-ado.md) und einem binären **Stream**gelesen wird. Weitere Eigenschaften und Methoden, die angezeigt werden, sind [Position](../../../ado/reference/ado-api/position-property-ado.md), [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md), Zeichen [Satz](../../../ado/reference/ado-api/charset-property-ado.md)und [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
 ```  
 'BeginReadVB  
@@ -110,13 +110,13 @@ End Sub
 'EndReadVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Charset-Eigenschaft (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
- [Positionseigenschaft (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [CharSet-Eigenschaft (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
+ [Position-Eigenschaft (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Read-Methode](../../../ado/reference/ado-api/read-method.md)   
- [ReadText-Methode](../../../ado/reference/ado-api/readtext-method.md)   
- [SetEOS-Methode](../../../ado/reference/ado-api/seteos-method.md)   
- [Size-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
+ [Read Text-Methode](../../../ado/reference/ado-api/readtext-method.md)   
+ [Methode "-Methode"](../../../ado/reference/ado-api/seteos-method.md)   
+ [Size-Eigenschaft (ADO-Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Write-Methode](../../../ado/reference/ado-api/write-method.md)   
  [WriteText-Methode](../../../ado/reference/ado-api/writetext-method.md)

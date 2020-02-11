@@ -1,5 +1,5 @@
 ---
-title: Connect-Abschnitt der Anpassungsdatei | Microsoft-Dokumentation
+title: Connect-Abschnitt der Anpassungs Datei | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922807"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
-Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern. Die **verbinden** Abschnitt gibt Ausnahmen, um dieses Verhalten. Z. B., wenn alle der **verbinden** Abschnitte wurden, fehlt oder ist leer, und dann in der Standardeinstellung keine Verbindungen hergestellt werden konnte.  
+Das Standardverhalten des Handlers besteht darin, alle Verbindungen abzulehnen. Der Abschnitt " **Connect** " gibt Ausnahmen für dieses Verhalten an. Wenn z. b. alle **Connect** -Abschnitte nicht vorhanden oder leer waren, können standardmäßig keine Verbindungen hergestellt werden.  
   
- Die **verbinden** Abschnitt enthalten kann:  
+ Der Abschnitt " **Connect** " kann Folgendes enthalten:  
   
--   Ein Zugriffseintrag, der angibt, der Standardwert Lese- und Schreibvorgänge, die für diese Verbindung zulässig. Bei wird kein Standard-Access-Eintrag im Abschnitt wird der Abschnitt ignoriert werden.  
+-   Ein Standard Zugriffs Eintrag, der die für diese Verbindung zulässigen Standard Lese-und Schreibvorgänge angibt. Wenn im Abschnitt kein Standard Zugriffs Eintrag vorhanden ist, wird der Abschnitt ignoriert.  
   
--   Eine neue Verbindungszeichenfolge, die die Client-Verbindungszeichenfolge ersetzt.  
+-   Eine neue Verbindungs Zeichenfolge, die die Client Verbindungs Zeichenfolge ersetzt.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
- Ein Zugriffseintrag hat das Format:  
+ Ein Standard Zugriffs Eintrag hat folgendes Format:  
   
 ```console
   
@@ -42,7 +42,7 @@ accessRight
   
 ```  
   
- Ein Ersatz-Verbindungszeichenfolgeneintrag hat folgendes Format:  
+ Der Eintrag der Verbindungs Zeichenfolge für die Ersetzung hat folgendes Format:  
   
 ```console
   
@@ -51,24 +51,24 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-|Segment|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
-|**Verbinden**|Eine Literalzeichenfolge, die dies weist darauf hin, ist ein Eintrag der Verbindungszeichenfolge.|  
-|**_connectionString_**|Eine Zeichenfolge, die die gesamte Client-Verbindungszeichenfolge ersetzt.|  
-|**Zugriff**|Eine Literalzeichenfolge, die dies weist darauf hin ist ein Zugriffseintrag.|  
-|**_accessRight_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** -Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** -Benutzer kann die Datenquelle lesen.<br />-    **"ReadWrite"** -Benutzer Lese- oder Schreibzugriff auf Daten in die Datenquelle.|  
+|**Herstellen einer Verbindung**|Eine Literalzeichenfolge, die angibt, dass dies ein Verbindungs Zeichen folgen Eintrag ist|  
+|**_ConnectionString_**|Eine Zeichenfolge, die die gesamte Client Verbindungs Zeichenfolge ersetzt.|  
+|**zugreifen**|Eine Literalzeichenfolge, die angibt, dass dies ein Zugriffs Eintrag ist|  
+|**_accessright_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** : der Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   Schreib **geschützt: der** Benutzer kann die Datenquelle lesen.<br />-   " **Lesewrite** ": der Benutzer kann die Datenquelle lesen oder in diese schreiben.|  
   
- Wenn Sie eine Verbindung (in "Auswirkung", "das Deaktivieren des Standardverhaltens von Handler") zulassen möchten, legen Sie den Zugriffseintrag in der **standardmäßig verbinden** Abschnitt `Access=ReadWrite`, und löschen, oder kommentieren Sie alle anderen **Verbinden** _Bezeichner_ Abschnitt.  
+ Wenn Sie eine beliebige Verbindung zulassen möchten (damit das Standardverhalten des Handlers deaktiviert wird), legen Sie den Zugriffs Eintrag im Abschnitt **Connect default** auf `Access=ReadWrite`fest, und löschen Sie alle anderen **Verbindungs** -ID _-Abschnitte,_ oder kommentieren Sie Sie aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Logs-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [SQL-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [UserList-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Abschnitt "Anpassungs Datei Protokolle"](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [SQL-Abschnitt der Anpassungs Datei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Benutzer Listen Abschnitt "Anpassungs Datei"](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Grundlegendes zur Anpassungs Datei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

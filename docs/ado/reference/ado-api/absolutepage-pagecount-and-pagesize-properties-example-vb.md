@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage, PageCount und PageSize Eigenschaften – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für AbsolutePage, PageCount und pageSize-Eigenschaften (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,13 +17,13 @@ ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad832a1e0028005ff1893df43fbadcd078bc2859
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921857"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage, PageCount und PageSize Eigenschaften – Beispiel (VB)
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>Beispiel für AbsolutePage, PageCount und pageSize-Eigenschaften (VB)
 ```  
 'BeginAbsolutePageVB  
   
@@ -100,7 +100,7 @@ End Sub
 'EndAbsolutePageVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [AbsolutePage-Eigenschaft (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

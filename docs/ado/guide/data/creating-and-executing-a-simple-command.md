@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925735"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Erstellen und Ausführen eines einfachen Befehls
-Ein einfacher Befehl ist ein nicht parametrisiert und erfordert keine Dauerhaftigkeit. Es gibt drei Möglichkeiten zum Erstellen und Ausführen eines einfachen Befehls.  
+Ein einfacher Befehl ist ein Befehl, der nicht parametrisiert ist und keine Persistenz erfordert. Es gibt drei Möglichkeiten, einen einfachen Befehl zu erstellen und auszuführen.  
   
--   Mit einem **Befehl** Objekt  
+-   Verwenden eines **Befehls** Objekts  
   
--   Mit einem **Verbindung** Objekt  
+-   Verwenden eines **Verbindungs** Objekts  
   
--   Mit einem **Recordset** Objekt  
+-   Verwenden eines **Recordset** -Objekts  
   
-## <a name="using-a-command-object"></a>Verwenden ein Command-Objekt  
- Zum Erstellen eines einfachen Befehls mithilfe einer **Befehl** Objekt ist, müssen Sie die Anweisungen zum Zuweisen der **CommandText-Eigenschaft** Eigenschaft eine **Befehl** Objekt, und legen Sie den entsprechenden Wert für die **CommandType** Eigenschaft. Ausführen des Befehls erfordert, dass eine offene Verbindung zugewiesen wird die **ActiveConnection** Eigenschaft der **Befehl** Objekts, gefolgt von einem Aufruf der **ausführen** Methode auf der **Befehl** Objekt.  
+## <a name="using-a-command-object"></a>Verwenden eines Befehls Objekts  
+ Um einen einfachen Befehl mithilfe eines **Befehls** Objekts zu erstellen, müssen Sie die Anweisung der **CommandText** -Eigenschaft eines **Befehls** Objekts zuweisen und den entsprechenden Wert für die **CommandType** -Eigenschaft festlegen. Das Ausführen des Befehls erfordert, dass der **ActiveConnection** -Eigenschaft des **Command** -Objekts eine geöffnete Verbindung zugewiesen wird, gefolgt von einem Rückruf der **Execute** -Methode für das **Command** -Objekt.  
   
- Der folgende Codeausschnitt zeigt die grundlegende Methode der Verwendung der **Befehl** Objekt zum Ausführen eines Befehls für eine Datenquelle. In diesem Beispiel verwendet einen Befehl Zeilen zurückgeben, und gibt die Ergebnisse der Ausführung des Befehls als eine **Recordset** Objekt.  
+ Der folgende Code Ausschnitt zeigt die grundlegende Methode der Verwendung des **Command** -Objekts zum Ausführen eines Befehls für eine Datenquelle. In diesem Beispiel wird ein Zeilen Rückgabe Befehl verwendet, und die Ergebnisse der Befehlsausführung werden als **Recordset** -Objekt zurückgegeben.  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>Verwenden eines Recordsetobjekts  
- Sie können auch einen Befehl als Textzeichenfolge und Pas erstellen sie die **öffnen** Methode für eine **Recordset** Objekt, zusammen mit den Befehlstyp (AdCmdText), für die Ausführung. Der folgende Codeausschnitt veranschaulicht dies.  
+## <a name="using-a-recordset-object"></a>Verwenden eines Recordset-Objekts  
+ Sie können auch einen Befehl als Text **Zeichenfolge** erstellen und ihn für die Ausführung in einem Recordset-Objekt mit der **Open** -Methode für ein Recordset-Objekt versehen. Dies wird im folgenden Code Ausschnitt veranschaulicht.  
   
 ```  
   
@@ -146,8 +146,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>Verwenden eines Verbindungsobjekts  
- Sie können auch einen Befehl für ein Verbindungsobjekt der geöffneten ausführen. Jetzt wird der im vorherigen Codebeispiel wird dies:  
+## <a name="using-a-connection-object"></a>Verwenden eines Verbindungs Objekts  
+ Sie können auch einen Befehl für ein geöffnetes Verbindungs Objekt ausführen. Das vorherige Codebeispiel wird jetzt zu diesem:  
   
 ```  
 Const DS = "MySqlServer"  

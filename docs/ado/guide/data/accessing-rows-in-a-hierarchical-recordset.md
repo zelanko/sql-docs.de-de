@@ -14,24 +14,24 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926357"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Zugreifen auf Zeilen in einem hierarchischen Recordset (Beispiel)
-Das folgende Beispiel zeigt die Schritte in einer hierarchischen Zeilen mit Zugriff zum [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
+Das folgende Beispiel zeigt die erforderlichen Schritte für den Zugriff auf Zeilen in einem hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
 
-1.  **Recordset** Objekte aus der **Autoren** und **Titleauthor** Tabellen nach Autor-ID verknüpft sind
+1.  **Recordset** -Objekte aus den Tabellen " **Authors** " und " **titleauthor** " sind durch die Autoren-ID verknüpft.
 
-2.  Die äußere Schleife zeigt die vor-und Nachnamen des Autors, Status und Identifikation.
+2.  Die äußere Schleife zeigt den vor-und Nachnamen, den Status und die Identifizierung jedes Autors an.
 
-3.  Das angefügte **Recordset** für jede Zeile abgerufen wird, aus der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung zugewiesen *RstTitleAuthor*.
+3.  Das angefügte **Recordset** für jede Zeile wird aus der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung abgerufen und *rsttitleauthor*zugewiesen.
 
-4.  Die innere Schleife zeigt vier Felder aus jeder Zeile in der angefügten **Recordset**.
+4.  Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten **Recordset**an.
 
- Die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) -Eigenschaftensatz auf **"false"** zur Veranschaulichung, damit Sie sehen im Kapitel über das Ändern explizit in jeder Iteration der äußeren Schleife. Um das Codebeispiel effizienter zu gestalten, können Sie die Zuweisung in Schritt 3 vor der ersten Zeile in Schritt 2: verschieben, damit die Zuweisung wird nur einmal ausgeführt. Legen Sie dann die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) Eigenschaft **"true"** , sodass *RstTitleAuthor* implizit automatisch ändert und im entsprechenden Kapitel immer *Rst* in eine neue Zeile verschoben wird.
+ Die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) -Eigenschaft ist zur Veranschaulichung auf **false** festgelegt, sodass Sie das Kapitel ändern in jeder Iterations Schleife der äußeren Schleife explizit sehen können. Um das Codebeispiel effizienter zu gestalten, können Sie die Zuweisung in Schritt 3 vor der ersten Zeile in Schritt 2 verschieben, sodass die Zuweisung nur einmal ausgeführt wird. Legen Sie dann die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) -Eigenschaft auf **true**fest, damit *rsttitleauthor* implizit und automatisch in das entsprechende Kapitel wechselt, wenn *RST* zu einer neuen Zeile wechselt.
 
 ## <a name="example"></a>Beispiel
 
@@ -67,5 +67,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>Siehe auch
- [Daten strukturieren (Übersicht)](../../../ado/guide/data/data-shaping-overview.md) [Field-Objekt](../../../ado/reference/ado-api/field-object.md) [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service für OLE DB (ADO-Dienstanbieter) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [erforderliche Anbieter für die Datenstrukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md) [Shape APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md) [Befehle in Form Allgemeine](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+## <a name="see-also"></a>Weitere Informationen
+ [Übersicht über die Daten Strukturierung](../../../ado/guide/data/data-shaping-overview.md) [Field Object](../../../ado/reference/ado-api/field-object.md) [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Strukturierung Service for OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [erforderliche Anbieter für das Strukturieren von Daten strukturieren von](../../../ado/guide/data/required-providers-for-data-shaping.md) [](../../../ado/guide/data/shape-append-clause.md) [Form Befehlen in der allgemeinen](../../../ado/guide/data/shape-commands-in-general.md) [Form COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)

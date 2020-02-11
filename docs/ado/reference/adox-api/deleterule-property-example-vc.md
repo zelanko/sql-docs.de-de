@@ -1,5 +1,5 @@
 ---
-title: DeleteRule-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: DeleteRule-Eigenschaft (Beispiel) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b73773b064fd50d8b1422a9a0aad2fe67aa71e91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6dc6d3284018aecd247baad6e66aaa332b721459
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966397"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911094"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel zeigt die [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) Eigenschaft eine [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekt. Der Code Fügt ein neues [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und definiert dann einen neuen Primärschlüssel festlegen **DeleteRule** zu **AdRICascade**.  
+In diesem Beispiel wird die [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) -Eigenschaft eines [Key](../../../ado/reference/adox-api/key-object-adox.md) -Objekts veranschaulicht. Der Code fügt eine neue [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) an und definiert dann einen neuen Primärschlüssel, wobei **DeleteRule** auf **adricascade**festgelegt wird.  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -100,13 +100,13 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DeleteRule-Eigenschaft (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

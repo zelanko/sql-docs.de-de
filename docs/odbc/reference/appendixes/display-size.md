@@ -1,5 +1,5 @@
 ---
-title: Anzeigegröße | Microsoft-Dokumentation
+title: Anzeige Größe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,31 +16,31 @@ ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130021"
 ---
 # <a name="display-size"></a>Anzeigegröße
-Die Größe einer Spalte ist die maximale Anzahl von Zeichen, die zum Anzeigen von Daten in Form von Zeichen erforderlich sind. In der folgende Tabelle definiert die Größe für jede ODBC-SQL-Datentyp.  
+Die Anzeige Größe einer Spalte ist die maximale Anzahl von Zeichen, die zum Anzeigen von Daten im Zeichenformat benötigt werden. In der folgenden Tabelle wird die Anzeige Größe für jeden ODBC SQL-Datentyp definiert.  
   
-|SQL-Typ-ID|Anzeigegröße|  
+|SQL-Typbezeichner|Anzeige Größe|  
 |-------------------------|------------------|  
-|Alle Typen mit Zeichen [a]|Die definierten (bei festen Typen) oder (für Variablentypen) maximale Anzahl von Zeichen, die zum Anzeigen der Daten in Form von Zeichen erforderlich.|  
-|SQL_DECIMAL SQL_NUMERIC|Die Genauigkeit der Spalte plus 2 (eine Anmeldung, *Genauigkeit* Ziffern und ein Dezimaltrennzeichen). Beispielsweise ist die Größe einer Spalte, die als NUMERIC(10,3) definiert 12.|  
+|Alle Zeichen Typen [a]|Der definierte (für festgelegte Typen) oder die maximale Anzahl von Zeichen (für Variablen Typen), die zum Anzeigen der Daten im Zeichenformat erforderlich sind.|  
+|SQL_DECIMAL SQL_NUMERIC|Die Genauigkeit der Spalte plus 2 (ein Zeichen, *Genauigkeits* Ziffern und ein Dezimaltrennzeichen). Beispielsweise ist die Anzeige Größe einer Spalte, die als numerisch (10, 3) definiert ist, 12.|  
 |SQL_BIT|1 (1 Ziffer).|  
-|SQL_TINYINT|4, wenn Sie signiert (eine Anmeldung und 3 Ziffern) oder 3 bei einem unsignierten (3 Ziffern).|  
-|SQL_SMALLINT|6, wenn Sie signiert (eine Anmeldung und 5 Ziffern) oder 5 Falls (5-stellig) ohne Vorzeichen.|  
-|SQL_INTEGER|11 Wenn (eine Anmeldung und 10-Ziffern) signiert oder 10 bei einem unsignierten (10 Ziffern).|  
-|SQL_BIGINT|20 (eine Anmeldung und 19 Ziffern, wenn angemeldet oder 20 Ziffern bei einem unsignierten).|  
-|SQL_REAL|14 (ein Zeichen, 7 Ziffern, einem Dezimaltrennzeichen, der Buchstabe *E*, ein Zeichen und 2 Ziffern).|  
-|SQL_FLOAT SQL_DOUBLE|24 (ein Zeichen, 15 Dezimalstellen, ein Dezimaltrennzeichen, der Buchstabe *E*, ein Zeichen und 3 Ziffern).|  
-|[A] alle binären Typen|Die definiert oder (für Variablentypen) maximale Länge der Spalte x 2. (Jedes binäre Byte wird durch eine hexadezimale Zahl mit 2 Stellen dargestellt.)|  
-|SQL_TYPE_DATE|10 (ein Datum im Format *jjjj-mm-tt*).|  
-|SQL_TYPE_TIME|8 (eine Uhrzeit im Format *hh: mm:* )<br /><br /> - oder -<br /><br /> 9 + *s* (eine Uhrzeit im Format *hh: mm:* [: ss. fff...], wobei *s* ist die Genauigkeit der Sekundenbruchteile).|  
-|SQL_TYPE_TIMESTAMP|19 (für den Zeitstempel in der *jjjj-mm-tt hh: mm:* Format)<br /><br /> - oder -<br /><br /> 20 + *s* (für den Zeitstempel in der *jjjj-mm-tt hh: mm:* [: ss. fff...]-Format, in denen *s* ist die Genauigkeit der Sekundenbruchteile).|  
-|Alle Interval-Datentypen|Finden Sie unter [Länge des Datentyps Interval](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
-|SQL_GUID|36 (die Anzahl der Zeichen in der *Aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* Format|  
+|SQL_TINYINT|4, wenn signiert (ein Vorzeichen und 3 Ziffern) oder 3, wenn kein Vorzeichen (3 Ziffern) ist.|  
+|SQL_SMALLINT|6, wenn signiert (ein Vorzeichen und 5 Ziffern) oder 5, wenn kein Vorzeichen (5 Ziffern) ist.|  
+|SQL_INTEGER|11, wenn signiert (ein-und 10-Ziffern) oder 10, wenn kein Vorzeichen (10 Ziffern) ist.|  
+|SQL_BIGINT|20 (ein Vorzeichen und 19 Ziffern, wenn signiert oder 20 Ziffern, wenn nicht signiert).|  
+|SQL_REAL|14 (ein Zeichen, 7 Ziffern, ein Dezimaltrennzeichen, der Buchstabe *E*, ein Vorzeichen und zwei Ziffern).|  
+|SQL_FLOAT SQL_DOUBLE|24 (ein Vorzeichen, 15 Ziffern, ein Dezimaltrennzeichen, der Buchstabe *E*, ein Vorzeichen und 3 Ziffern).|  
+|Alle binären Typen [a]|Die definierte oder maximale Länge (für Variablen Typen) der Spalte 2. (Jedes binäre Byte wird durch eine zweistellige hexadezimal Zahl dargestellt.)|  
+|SQL_TYPE_DATE|10 (ein Datum im Format *yyyy-mm-dd*).|  
+|SQL_TYPE_TIME|8 (eine Uhrzeit im Format *hh: mm: SS*)<br /><br /> - oder -<br /><br /> 9 + *s* (eine Uhrzeit im Format *hh: mm: SS*[. fff...], wobei *s* für die Genauigkeit der Sekundenbruchteile steht).|  
+|SQL_TYPE_TIMESTAMP|19 (für einen Zeitstempel im Format *yyyy-mm-dd hh: mm: SS* )<br /><br /> - oder -<br /><br /> 20 + *s* (für einen Zeitstempel im Format *yyyy-mm-dd hh: mm: SS*[. fff...], wobei *s* für die Genauigkeit der Sekundenbruchteile steht).|  
+|Alle Intervall Datentypen|Siehe [Intervall Datentyp Länge](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
+|SQL_GUID|36 (die Anzahl der Zeichen im *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* -Format|  
   
- [a] Wenn der Treiber die Spalte oder Parameter die Länge von Variablentypen nicht bestimmen kann, gibt er SQL_NO_TOTAL zurück.
+ [a] Wenn der Treiber die Spalten-oder Parameter Länge von Variablen Typen nicht bestimmen kann, wird SQL_NO_TOTAL zurückgegeben.

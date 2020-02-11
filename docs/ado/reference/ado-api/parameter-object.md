@@ -16,42 +16,42 @@ ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931666"
 ---
 # <a name="parameter-object"></a>Parameter-Objekt
-Stellt einen Parameter oder die zugeordnete Argument ein [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur.  
+Stellt einen Parameter oder ein Argument dar, der einem [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur zugeordnet ist.  
   
-## <a name="remarks"></a>Hinweise  
- Viele Anbieter unterstützt die parametrisierte Befehle. Hierbei handelt es sich um Befehle, die in denen die gewünschte Aktion einmal definiert wird, aber Variablen (oder Parameter) werden verwendet, um einige Details des Befehls alter. Beispielsweise kann eine SQL SELECT-Anweisung einen Parameter verwenden, definieren Sie die entsprechenden Kriterien eine WHERE-Klausel und eine andere, um den Spaltennamen für eine SORT BY-Klausel definieren.  
+## <a name="remarks"></a>Bemerkungen  
+ Viele Anbieter unterstützen parametrisierte Befehle. Dabei handelt es sich um Befehle, bei denen die gewünschte Aktion einmal definiert ist, aber Variablen (oder Parameter) zum Ändern einiger Details des Befehls verwendet werden. Beispielsweise könnte eine SQL-SELECT-Anweisung einen-Parameter verwenden, um die Übereinstimmungs Kriterien einer WHERE-Klausel zu definieren, und einen anderen zum Definieren des Spaltennamens für eine Sort by-Klausel.  
   
- **Parameter** Objekte darstellen, Parameter, die parametrisierte Abfragen zugeordnet werden soll, oder den in/Out-Argumenten und Rückgabewerten von gespeicherten Prozeduren. Abhängig von den Funktionen von der Anbieter, einige Auflistungen, Methoden oder Eigenschaften eine **Parameter** Objekt möglicherweise nicht zur Verfügung.  
+ **Parameter** Objekte stellen Parameter dar, die parametrisierten Abfragen zugeordnet sind, oder die in/out-Argumente und die Rückgabewerte gespeicherter Prozeduren. Abhängig von der Funktionalität des Anbieters sind einige Auflistungen, Methoden oder Eigenschaften eines **Parameter** Objekts möglicherweise nicht verfügbar.  
   
- Mit den Auflistungen, Methoden und Eigenschaften einer **Parameter** -Objekts können Sie folgende Möglichkeiten:  
+ Mit den Auflistungen, Methoden und Eigenschaften eines **Parameter** Objekts können Sie folgende Aufgaben ausführen:  
   
--   Festlegen oder Zurückgeben der Name eines Parameters mit dem [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft.  
+-   Legen Sie den Namen eines Parameters mit der Eigenschaft [Name](../../../ado/reference/ado-api/name-property-ado.md) fest, oder geben Sie ihn zurück.  
   
--   Festlegen oder den Wert eines Parameters mit Zurückgeben der [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft. **Wert** ist die Standardeigenschaft der **Parameter** Objekt.  
+-   Legen Sie den Wert eines Parameters mit der [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft fest oder geben Sie ihn zurück. **Value** ist die Standard Eigenschaft des **Parameter** Objekts.  
   
--   Festlegen oder Zurückgeben von Parametereigenschaften mit der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md), [Richtung](../../../ado/reference/ado-api/direction-property.md), [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [ Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md), und [Typ](../../../ado/reference/ado-api/type-property-ado.md) Eigenschaften.  
+-   Festlegen oder Zurückgeben von Parameter Merkmalen mit den Eigenschaften [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md), [Richtung](../../../ado/reference/ado-api/direction-property.md), [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md), [numericskala](../../../ado/reference/ado-api/numericscale-property-ado.md), [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md)und [Typ](../../../ado/reference/ado-api/type-property-ado.md) .  
   
--   Übergeben Sie lange Binär-oder Zeichendatentypen an einen Parameter mit dem [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) Methode.  
+-   Übergeben Sie lange Binär-oder Zeichendaten an einen Parameter mit der [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) -Methode.  
   
--   Zugriff auf Anbieter-spezifischen Attribute mithilfe der [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
+-   Greifen Sie mithilfe der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung auf anbieterspezifische Attribute zu.  
   
- Wenn Sie wissen, dass die Namen und zugeordnete Eigenschaften der Parameter der gespeicherten Prozedur oder eine parametrisierte Abfrage, die Sie aufrufen möchten, können Sie die [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) Methode zum Erstellen **Parameter** Objekte und die entsprechenden Einstellungen und die Verwendung der [Append](../../../ado/reference/ado-api/append-method-ado.md) Methode zum Hinzufügen der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung. Auf diese Weise können Sie festlegen und Zurückgeben von Werten ohne Aufruf der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode für die **Parameter** Auflistung abzurufende die Parameterinformationen vom Anbieter, eine potenziell ressourcenintensiver Vorgang.  
+ Wenn Sie die Namen und Eigenschaften der Parameter kennen, die der gespeicherten Prozedur oder der parametrisierten Abfrage zugeordnet sind, die Sie aufrufen möchten, können Sie mit der Methode "| [ateparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) " **Parameter** Objekte mit den entsprechenden Eigenschafts Einstellungen erstellen und die [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode verwenden, um Sie der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung hinzuzufügen. Dies ermöglicht es Ihnen, Parameterwerte festzulegen und zurückzugeben, ohne die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode für die **Parameter** Auflistung aufrufen zu müssen, um die Parameterinformationen vom Anbieter abzurufen, ein potenziell ressourcenintensiver Vorgang.  
   
- Die **Parameter** Objekt ist nicht sicher für Skripting.  
+ Das **Parameter** Objekt ist für die Skripterstellung nicht sicher.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Parameter-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Parameter Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Kreateparameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
