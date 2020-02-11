@@ -10,17 +10,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d5e44dac2201953858f06d834b1831aa1a22fe3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247280"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656577"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Führen Sie ein Upgrade von SQL Server 2005 aus?
   Das Ende des erweiterten Support für SQL Server 2005 ist ein guter Grund für das Upgrade auf eine neuere Version von SQL Server und der Azure SQL-Datenbank. Ein Upgrade ermöglicht es Ihnen, Sicherheit und Compliance beizubehalten, eine bahnbrechende Leistung zu erzielen, und die Infrastruktur Ihrer Datenplattform zu optimieren.  
   
- Weitere Informationen, Anleitungen und Tools zum Planen und Automatisieren Ihres Upgrades oder Ihrer Migration finden Sie unter [SQL Server 2005-Supportende](https://www.microsoft.com/server-cloud/products/sql-server-2005/).  
+ Weitere Informationen, Anleitungen und Tools zum Planen und Automatisieren Ihres Upgrades oder Ihrer Migration finden Sie unter [SQL Server 2005-Supportende](https://www.microsoft.com/sql-server/sql-server-2005).  
   
 ## <a name="why-upgrade"></a>Gründe für ein Upgrade  
   
@@ -74,14 +74,14 @@ ms.locfileid: "75247280"
   
     -   Um den ausführlicheren technischen Upgradeleitfaden im PDF-Format herunterzuladen, [klicken Sie hier](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
   
--   Weitere Informationen, Anleitungen und Tools zum Planen und Automatisieren Ihres Upgrades oder Ihrer Migration finden Sie unter [SQL Server 2005-Supportende](https://www.microsoft.com/server-cloud/products/sql-server-2005/).  
+-   Weitere Informationen, Anleitungen und Tools zum Planen und Automatisieren Ihres Upgrades oder Ihrer Migration finden Sie unter [SQL Server 2005-Supportende](https://www.microsoft.com/sql-server/sql-server-2005).  
   
 ## <a name="get-sql-server-2014"></a>SQL Server 2014 herunterladen  
  [Klicken Sie hier](https://www.microsoft.com/evalcenter/evaluate-sql-server-2014), um eine Evaluierungsversion von SQL Server 2014 herunterzuladen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server 2014](https://www.microsoft.com/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005-Support Ende](https://www.microsoft.com/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/getting-started-sql-server-2014)   
+ [SQL Server 2005-Support Ende](https://www.microsoft.com/sql-server/sql-server-2005)   
  [Upgrade von SQL Server 2005 auf SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

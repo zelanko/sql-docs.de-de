@@ -1,5 +1,5 @@
 ---
-title: Provider- und DefaultDatabase-Eigenschaften-Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für Anbieter und DefaultDatabase-Eigenschaften (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931486"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider- und DefaultDatabase-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel zeigt die [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft dazu drei [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekte mithilfe von anderen Anbietern. Darüber hinaus verwendet er die [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Eigenschaft, um die Standarddatenbank für den Microsoft ODBC-Anbieter festzulegen.  
+In diesem Beispiel wird die [Provider](../../../ado/reference/ado-api/provider-property-ado.md) -Eigenschaft veranschaulicht, indem drei [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekte mit unterschiedlichen Anbietern geöffnet werden. Außerdem wird die Standarddatenbank für den Microsoft ODBC-Anbieter mit der [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) -Eigenschaft festgelegt.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -133,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase-Eigenschaft](../../../ado/reference/ado-api/defaultdatabase-property.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [DefaultDatabase (Eigenschaft)](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

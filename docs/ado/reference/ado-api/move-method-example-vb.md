@@ -1,5 +1,5 @@
 ---
-title: Move – Methodenbeispiel (VB) | Microsoft-Dokumentation
+title: Move-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932121"
 ---
 # <a name="move-method-example-vb"></a>Move-Methode – Beispiel (VB)
-Dieses Beispiel verwendet die [verschieben](../../../ado/reference/ado-api/move-method-ado.md) Methode, um den Datensatzzeiger zu positionieren, basierend auf Benutzereingaben.  
+In diesem Beispiel wird die [Move](../../../ado/reference/ado-api/move-method-ado.md) -Methode verwendet, um den Daten Satz Zeiger basierend auf der Benutzereingabe zu positionieren.  
   
 ```  
 'BeginMoveVB  
@@ -126,6 +126,6 @@ End Sub
 'EndMoveVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

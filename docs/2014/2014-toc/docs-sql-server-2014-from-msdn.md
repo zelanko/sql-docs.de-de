@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2014-Dokumentation werden gleitende | Microsoft-Dokumentation
-description: Die Microsoft-Dokumentation für SQL Server 2014 wechselt vor Juli 2018 von MSDN hier in der Dokumentation.
+title: SQL Server 2014-Dokumente verschieben | Microsoft-Dokumentation
+description: Die Microsoft-Dokumentation für SQL Server 2014 wird vor dem 2018. Juli von MSDN zu diesem Thema in der Dokumentation verschoben.
 author: mightypen
 manager: craigg
 ms.prod: sql-server-2014
@@ -10,45 +10,45 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473638"
 ---
-# <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Dokumentation für SQL Server 2014 wird zu Docs verschoben.
+# <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Die Dokumentation für SQL Server 2014 wird zu Docs verschoben
 
-Dieser Artikel beschreibt die bevorstehenden Umstieg Artikel der von Microsoft SQL Server 2014-Dokumentation. In diesem Artikel wird Ende April 2018 geschrieben wird, und die Verschiebung erfolgt vor dem Juli 2018.
+In diesem Artikel wird beschrieben, wie Sie die Artikel zu den Microsoft-SQL Server 2014-Dokumentation in Kürze verschieben. Dieser Artikel wird am Ende April 2018 geschrieben, und der Umstieg erfolgt vor dem 2018. Juli.
 
-## <a name="links-to-sql-server-2014-documentation-on-msdn"></a>Links zur Dokumentation von SQL Server 2014 auf MSDN
+## <a name="links-to-sql-server-2014-documentation-on-msdn"></a>Links zu SQL Server 2014-Dokumentation auf MSDN
 
-Die folgenden Links sind in der SQL Server 2014-Dokumentation, die auf Microsoft gespeichert hat seine *MSDN* Website. Vor Juli 2018 wird Microsoft diese Artikel der Dokumentation zu der neuen verschoben *Docs* Website:
+Die folgenden Links finden Sie in der Dokumentation zu SQL Server 2014, die Microsoft auf der *MSDN* -Website gespeichert hat. Vor dem 2018 werden diese Dokumentations Artikel von Microsoft auf die neue *docs* -Website verschoben:
 
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
-- *Onlinedokumentation für SQL Server 2014*
+- *Onlinedokumentation für SQLServer 2014*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
-MSDN ist eine Initialism für *Microsoft Developer Network*.
+MSDN ist ein initialismus für *Microsoft Developer Network*.
 
 
-## <a name="redirectors"></a>Redirectors
+## <a name="redirectors"></a>Redirectordienste
 
-Die veralteten MSDN-HTTP-Adressen werden für mindestens ein paar Jahren nach dem Verschieben funktionieren weiterhin. Redirectors fängt die MSDN-Anforderungen und leitet sie durch ihre entsprechenden neue Adresse in der Dokumentation. Allerdings werden nach dem Verschieben Folgendes erfüllt sein:
+Die veralteten MSDN-HTTP-Adressen funktionieren nach dem verschieben noch mindestens einige Jahre. Redirectors fangen die MSDN-Anforderungen ab und leiten Sie mit ihrer neuen entsprechenden Adresse in der Dokumentation weiter. Nach dem Verschieben sind die folgenden Elemente jedoch "true":
 
-- Sie werden besser, arbeiten mit den neuen HTTP-Adressen, die direkt auf Dokumente zu navigieren.
-- Die Bing und Google-Crawler werden gestartet, paketwiederherstellung, und die alte MSDN-Adressen zu umgehen.
+- Es ist besser, mit den neuen HTTP-Adressen zu arbeiten, die direkt zu docs navigieren.
+- Die "Print"-und "Google Crawl"-Crawler starten die Delta-und die alten MSDN-Adressen.
 
 
 ## <a name="after-the-move"></a>Nach dem Verschieben
 
-Nach dem Wechsel zu *Docs*, die Adresse des SQL Server 2014 hauptdokumentationsartikel werden:
+Nach der *Umstellung auf die*Dokumentation lautet die Adresse des Artikels "root SQL Server 2014-Dokumentation" wie folgt:
 
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 
 
 ## <a name="related-links"></a>Verwandte Links
 
-- [Hauptdokumentationsartikel für SQL Server 2016 und höher](https://docs.microsoft.com/sql/?view=sql-server-2016)
+- [Stamm Dokumentations Artikel für SQL Server 2016 und spätere Versionen](https://docs.microsoft.com/sql/?view=sql-server-2016)
 

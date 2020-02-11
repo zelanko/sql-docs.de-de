@@ -1,5 +1,5 @@
 ---
-title: Sortieren Sie die Eigenschaft | Microsoft-Dokumentation
+title: Sort-Eigenschaft | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,39 +22,39 @@ ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930944"
 ---
 # <a name="sort-property"></a>Sort-Eigenschaft
-Gibt einen oder mehrere Feldnamen auf dem die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sortiert ist, und gibt an, ob jedes Feld in aufsteigender oder absteigender Reihenfolge sortiert wird.  
+Gibt einen oder mehrere Feldnamen an, für die das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sortiert ist, und gibt an, ob die einzelnen Felder in aufsteigender oder absteigender Reihenfolge sortiert sind.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Zeichenfolge** Wert, der das Feld gibt Namen, der **Recordset** für die Sortierung. Jeder Name wird durch ein Komma getrennt, und optional durch ein Leerzeichen und dem Schlüsselwort folgt **ASC**, das Feld in aufsteigender Reihenfolge sortiert oder **DESC**, das Feld in absteigender Reihenfolge sortiert. In der Standardeinstellung Wenn kein Schlüsselwort angegeben ist, wird das Feld in aufsteigender Reihenfolge sortiert.  
+ Legt einen **Zeichen** folgen Wert fest, der die Feldnamen in dem **Recordset** angibt, nach dem sortiert werden soll, oder gibt ihn zurück. Jeder Name wird durch ein Komma getrennt, und es folgt optional ein leeres und das Schlüsselwort **ASC**, das das Feld in aufsteigender Reihenfolge sortiert, oder **DESC**, das das Feld in absteigender Reihenfolge sortiert. Wenn kein Schlüsselwort angegeben wird, wird das Feld standardmäßig in aufsteigender Reihenfolge sortiert.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Eigenschaft erfordert die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft festgelegt werden, um **AdUseClient**. Ein temporärer Index erstellt werden für jedes Feld im angegebenen die **Sortierreihenfolge** Eigenschaft, wenn ein Index noch nicht vorhanden ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Eigenschaft erfordert, dass die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist. Ein temporärer Index wird für jedes Feld erstellt, das in der **Sort** -Eigenschaft angegeben ist, wenn noch kein Index vorhanden ist.  
   
- Der Sortiervorgang ist effizient, da die Daten physisch nicht neu angeordnet, sondern einfach in der Reihenfolge, die vom Index angegebenen zugegriffen wird.  
+ Der Sortiervorgang ist effizient, da die Daten nicht physisch neu angeordnet werden, sondern nur in der vom Index angegebenen Reihenfolge aufgerufen wird.  
   
- Bei den Wert des der **sortieren** -Eigenschaft ist etwas anderes als eine leere Zeichenfolge, die **sortieren** Reihenfolge der Eigenschaft hat Vorrang vor der Reihenfolge im eine **ORDER BY** Klausel enthalten in der SQL-Anweisung, die zum Öffnen der **Recordset**.  
+ Wenn der Wert der **Sort** -Eigenschaft etwas anderes als eine leere Zeichenfolge ist, hat die **Sortier** Eigenschaften Reihenfolge Vorrang vor der Reihenfolge, die in einer **Order by** -Klausel in der SQL-Anweisung, die zum Öffnen des **Recordsets**verwendet wird, angegeben ist.  
   
- Die **Recordset** muss nicht geöffnet werden, bevor Sie den Zugriff auf die **sortieren** Eigenschaft kann zu einem beliebigen Zeitpunkt nach festgelegt werden die **Recordset** -Objekt instanziiert wird.  
+ Das **Recordset** muss vor dem Zugriff auf die **Sort** -Eigenschaft nicht geöffnet werden. Sie kann jederzeit festgelegt werden, nachdem das **Recordset** -Objekt instanziiert wurde.  
   
- Festlegen der **Sortierreihenfolge** Eigenschaft auf eine leere Zeichenfolge wird die Zeilen in der ursprünglichen Reihenfolge zurücksetzen und Löschen temporärer Indizes. Vorhandene Indizes werden nicht gelöscht werden.  
+ Wenn Sie die **Sort** -Eigenschaft auf eine leere Zeichenfolge festlegen, werden die Zeilen auf Ihre ursprüngliche Reihenfolge zurückgesetzt und temporäre Indizes gelöscht. Vorhandene Indizes werden nicht gelöscht.  
   
- Nehmen Sie an einer **Recordset** enthält drei Felder, die mit dem Namen *FirstName*, *MiddleInitial*, und *"LastName"* . Legen Sie die **sortieren** Eigenschaft, um die Zeichenfolge "`lastName DESC, firstName ASC`", welcher Reihenfolge werden die **Recordset** nach dem Nachnamen in absteigender Reihenfolge aus, und klicken Sie dann nach Vornamen in aufsteigender Reihenfolge. Der Wert von MiddleInitial wird ignoriert.  
+ Angenommen, ein **Recordset** enthält drei Felder namens *FirstName*, *Mittel dleinitial*und *LastName*. Legen Sie die **Sort** -Eigenschaft auf die Zeichen`lastName DESC, firstName ASC`Folge "" fest, die das **Recordset** nach dem Nachnamen in absteigender Reihenfolge sortiert, und dann nach dem Vornamen in aufsteigender Reihenfolge. Der erste Mittelwert wird ignoriert.  
   
- Kein Feld kann den Namen "ASC" oder "DESC", da diese Namen in mit den Schlüsselwörtern Konflikt **ASC** und **DESC**. Sie können einen Alias für ein Feld mit einem in Konflikt stehende Namen erstellen, mit der **AS** Schlüsselwort in der Abfrage, die gibt die **Recordset**.  
+ Es kann kein Feld mit den Namen "ASC" oder "DESC" benannt werden, da diese Namen mit den Schlüsselwörtern **ASC** und **DESC**in Konflikt stehen. Sie können einen Alias für ein Feld mit einem in Konflikt stehenden Namen erstellen, indem Sie das **As** -Schlüsselwort in der Abfrage verwenden, die das **Recordset**zurückgibt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Sort-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Sort-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Optimieren Sie die dynamische Eigenschaft (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für eine Sortier Eigenschaft (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
+ [Beispiel für eine Sortier Eigenschaft (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
+ [Optimieren von Eigenschaften-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [SortColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

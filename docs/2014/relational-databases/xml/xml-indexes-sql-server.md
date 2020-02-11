@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631363"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-Indizes (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62631363"
   
 -   Sekundärer XML-Index  
   
- Der erste Index für die Spalte des Datentyps `xml` muss der primäre XML-Index sein. Mithilfe des primären XML-Index werden drei Arten sekundärer Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
+ Der erste Index für die Spalte des Datentyps `xml` muss der primäre XML-Index sein. Mithilfe des primären XML-Indexes werden drei Arten sekundärer Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
   
 > [!NOTE]  
 >  Sie können einen XML-Index nur dann erstellen oder bearbeiten, wenn die Datenbankoptionen korrekt für die Arbeit mit dem `xml`-Datentyp festgelegt sind. Weitere Informationen finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](use-full-text-search-with-xml-columns.md).  
@@ -93,7 +93,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Primärschlüssel der Basistabelle. Der Primärschlüssel der Basistabelle wird im primären XML-Index für den Rückwärtsjoin mit der Basistabelle dupliziert, und die maximale Anzahl von Spalten im Primärschlüssel der Basistabelle ist auf 15 beschränkt.  
   
- Diese Knoteninformationen werden zum Auswerten und Erstellen der XML-Ergebnisse für eine angegebene Abfrage verwendet. Zu Optimierungszwecken werden der Tagname und die Knotentypinformationen als ganze Zahlen codiert; die Path-Spalte verwendet die gleiche Codierung. Pfade werden außerdem in umgekehrter Reihenfolge gespeichert, damit eine Pfadzuordnung erfolgen kann, wenn nur das Pfadsuffix bekannt ist. Zum Beispiel:  
+ Diese Knoteninformationen werden zum Auswerten und Erstellen der XML-Ergebnisse für eine angegebene Abfrage verwendet. Zu Optimierungszwecken werden der Tagname und die Knotentypinformationen als ganze Zahlen codiert; die Path-Spalte verwendet die gleiche Codierung. Pfade werden außerdem in umgekehrter Reihenfolge gespeichert, damit eine Pfadzuordnung erfolgen kann, wenn nur das Pfadsuffix bekannt ist. Beispiel:  
   
 -   `//ContactRecord/PhoneNumber` , wobei nur die beiden letzten Schritte bekannt sind.  
   
@@ -103,13 +103,13 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Der Abfrageprozessor verwendet den primären XML-Index für Abfragen, die [xml-Datentypmethoden](/sql/t-sql/xml/xml-data-type-methods) beinhalten und entweder Skalarwerte oder die XML-Teilbäume vom primären Index selbst wiedergeben. (Dieser Index speichert alle notwendigen Informationen, um die XML-Instanz zu rekonstruieren).  
   
- Die folgende Abfrage gibt z. B. gespeicherte Zusammenfassungsinformationen der `CatalogDescription``xml` Type-Spalte in der `ProductModel` Tabelle. Die Abfrage gibt <`Summary`>-Informationen nur für die Produktmodelle zurück, deren Katalogbeschreibung auch die <`Features`>-Beschreibung speichert.  
+ Die folgende Abfrage gibt beispielsweise Zusammenfassungs Informationen zurück, die `CatalogDescription``xml` in der Type- `ProductModel` Spalte in der-Tabelle gespeichert sind. Die Abfrage gibt <`Summary`>-Informationen nur für die Produktmodelle zurück, deren Katalogbeschreibung auch die <`Features`>-Beschreibung speichert.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- Hinsichtlich des primären XML-Indexes werden die einzelnen XML-BLOB-Instanzen in der Basistabelle nicht aufgeteilt, sondern die Zeilen in dem Index, der dem jeweiligen XML-BLOB entspricht, werden sequenziell nach dem in der `exist()`-Methode angegebenen Ausdruck durchsucht. Wenn der Pfad in der Path-Spalte im Index gefunden wird, wird das <`Summary`>-Element mit seinen Unterstrukturen aus dem primären XML-Index abgerufen und in einen XML-BLOB als Ergebnis der `query()`-Methode konvertiert.  
+ Hinsichtlich des primären XML-Indexes werden die einzelnen XML-BLOB-Instanzen in der Basistabelle nicht aufgeteilt, sondern die Zeilen in dem Index, der dem jeweiligen XML-BLOB entspricht, werden sequenziell nach dem in der `exist()` -Methode angegebenen Ausdruck durchsucht. Wenn der Pfad in der Path-Spalte im Index gefunden wird, wird das <`Summary`>-Element mit seinen Unterstrukturen aus dem primären XML-Index abgerufen und in einen XML-BLOB als Ergebnis der `query()`-Methode konvertiert.  
   
  Beachten Sie, dass der primäre XML-Index beim Abrufen einer vollständigen XML-Instanz nicht verwendet wird. Die folgende Abfrage ruft z. B. die gesamte XML-Instanz aus der Tabelle ab, die die Produktionsanweisungen für ein bestimmtes Produktmodell beschreibt.  
   
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`, wobei die Abfrage nach dem <`book`>-Element sucht, das ein Attribut mit dem Wert `"someValue"` aufweist.  
   
- Die folgende Abfrage gibt `ContactID` aus der `Contact` -Tabelle zurück. Die `WHERE` -Klausel gibt einen Filter, der nach Werten in sucht die `AdditionalContactInfo``xml` Type-Spalte. Die Kontakt-IDs werden nur zurückgegeben, wenn der entsprechende XML-BLOB mit den zusätzlichen Kontaktinformationen eine bestimmte Rufnummer enthält. Da das <`telephoneNumber`>-Element an beliebiger Position im XML auftreten kann, gibt der path-Ausdruck die descendant-or-self-Achse an.  
+ Die folgende Abfrage gibt `ContactID` aus der `Contact` -Tabelle zurück. Die `WHERE` -Klausel gibt einen Filter an, der nach Werten `AdditionalContactInfo``xml` in der Type-Spalte sucht. Die Kontakt-IDs werden nur zurückgegeben, wenn der entsprechende XML-BLOB mit den zusätzlichen Kontaktinformationen eine bestimmte Rufnummer enthält. Da das <`telephoneNumber`>-Element an beliebiger Position im XML auftreten kann, gibt der path-Ausdruck die descendant-or-self-Achse an.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  In dieser Situation ist der Suchwert für <`number`> bekannt, kann jedoch an beliebiger Position in der XML-Instanz als untergeordnetes Element des <`telephoneNumber`>-Elements angezeigt werden. Diese Art der Abfrage kann möglicherweise von einer Indexsuche profitieren, die auf einem bestimmten Wert basiert.  
   
 ### <a name="property-secondary-index"></a>Sekundärer PROPERTY-Index  
- Abfragen, die einen oder mehrere Werte aus einzelnen XML-Instanzen abrufen, können möglicherweise von einem PROPERTY-Index profitieren. Dieses Szenario tritt auf, wenn Sie Objekteigenschaften mithilfe von Abrufen der **Value()-Methode** Methode der `xml` Typ und der Wert des Primärschlüssels des Objekts bekannt ist.  
+ Abfragen, die einen oder mehrere Werte aus einzelnen XML-Instanzen abrufen, können möglicherweise von einem PROPERTY-Index profitieren. Dieses Szenario tritt auf, wenn Sie Objekteigenschaften mithilfe der **value ()** -Methode des `xml` -Typs abrufen und wenn der Primärschlüssel Wert des-Objekts bekannt ist.  
   
  Der PROPERTY-Index basiert auf Spalten (PK, Pfad- und Knotenwert) des primären XML-Indexes, wobei PK der Primärschlüssel der Basistabelle ist.  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Mit Ausnahme der Unterschiede, die weiter unten in diesem Thema beschrieben wird, Erstellen eines XML-index für eine`xml` Typspalte ist ähnlich wie beim Erstellen eines Indexes auf einem nicht-`xml` Type-Spalte. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen können zum Erstellen und Verwalten von XML-Indizes verwendet werden:  
+ Mit Ausnahme der Unterschiede, die weiter unten in diesem Thema beschrieben werden, ähnelt`xml` das Erstellen eines XML-Indexes für eine Typspalte dem Erstellen`xml` eines Indexes für eine Spalte, die nicht vom Typ ist. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen können zum Erstellen und Verwalten von XML-Indizes verwendet werden:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
@@ -213,7 +213,7 @@ WHERE ProductModelID = 19
   
  Der von XML-Indizes verwendete Speicherplatz kann in der Tabellenwertfunktion [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)gefunden werden. Sie stellt für alle Indextypen Informationen bereit, wie z. B. zur Anzahl der belegten Datenträgerseiten, zur durchschnittlichen Zeilengröße in Byte und zur Anzahl der Datensätze. Dieses schließt auch XML-Indizes ein. Diese Informationen sind für jede Datenbankpartition verfügbar. XML-Indizes verwenden das Partitionierungsschema und die Partitionierungsfunktion der Basistabelle.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)   
  [XML-Daten &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
