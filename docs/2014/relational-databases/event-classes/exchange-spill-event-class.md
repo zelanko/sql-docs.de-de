@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663675"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill-Ereignisklasse
   Die **Exchange Spill** -Ereignisklasse gibt an, dass die Kommunikationspuffer in einem parallelen Abfrageplan vorübergehend in die **tempdb** -Datenbank geschrieben wurden. Dies tritt nur selten auf, und auch nur, wenn ein Abfrageplan mehrere Bereichsscans hat.  
   
- Normalerweise verfügt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die diese Bereichsscans generiert, über viele BETWEEN-Operatoren, wobei jeder dieser Operatoren einen Zeilenbereich aus einer Tabelle oder aus einem Index auswählt. Alternativ können Sie mehrere Bereiche, die mit Ausdrücken wie abrufen (T.a > 10 AND T.a \< 20) oder (T.a > 100 AND T.a \< 120). Darüber hinaus müssen die Abfragepläne erfordern, dass diese Bereiche der Reihenfolge nach gescannt werden. Dies geschieht aufgrund einer ORDER BY-Klausel für T.a oder weil ein Iterator im Plan erfordert, dass die Tupel in einer bestimmten Reihenfolge verwendet werden.  
+ Normalerweise verfügt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die diese Bereichsscans generiert, über viele BETWEEN-Operatoren, wobei jeder dieser Operatoren einen Zeilenbereich aus einer Tabelle oder aus einem Index auswählt. Alternativ können Sie mehrere Bereiche mithilfe von Ausdrücken wie (t. a > 10 und t. a \< 20) oder (T. a > 100 und t. a \< 120) abrufen. Darüber hinaus müssen die Abfragepläne erfordern, dass diese Bereiche der Reihenfolge nach gescannt werden. Dies geschieht aufgrund einer ORDER BY-Klausel für T.a oder weil ein Iterator im Plan erfordert, dass die Tupel in einer bestimmten Reihenfolge verwendet werden.  
   
  Wenn ein Abfrageplan für eine solche Abfrage mehrere **Parallelism** -Operatoren aufweist, werden die von den **Parallelism** -Operatoren verwendeten Speicherkommunikationspuffer vollständig gefüllt. Das kann dazu führen, dass der Ausführungsfortschritt der Abfrage beendet wird. In dieser Situation schreibt einer der **Parallelism** -Operatoren seinen Ausgabepuffer in **tempdb** (dieser Vorgang wird *Austauschüberlauf*genannt), damit Zeilen aus einigen seiner Eingabepuffer verwendet werden können. Letztendlich werden die übergelaufenen Zeilen wieder an den Consumer zurückgegeben, wenn dieser in der Lage ist, sie zu verarbeiten.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62663675"
   
 ## <a name="exchange-spill-event-class-data-columns"></a>Datenspalten für Exchange Spill-Ereignisklassen  
   
-|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
@@ -74,7 +74,7 @@ ms.locfileid: "62663675"
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
 |**XactSequence**|**bigint**|Das Token, das die aktuelle Transaktion beschreibt.|50|Ja|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Festlegen von Indexoptionen](../indexes/set-index-options.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  

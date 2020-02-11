@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667064"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -29,8 +29,8 @@ ms.locfileid: "62667064"
 |Ereignis-ID|2601|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Symbolischer Name|Nicht zutreffend|  
-|Meldungstext|Eine Zeile mit doppeltem Schlüssel kann nicht in das '%.*ls'-Objekt mit dem eindeutigen '%.\*ls'-Index eingefügt werden.|  
+|Symbolischer Name|–|  
+|Meldungstext|Eine Zeile mit doppeltem Schlüssel kann in das „%1!s!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
   
 ## <a name="explanation"></a>Erklärung  
  Das ist ein allgemeiner Fehler, der unabhängig davon ausgelöst werden kann, ob eine Datenbank repliziert wird. Bei replizierten Datenbanken wird der Fehler in der Regel ausgelöst, weil Primärschlüssel in der Topologie nicht richtig verwaltet wurden. In einer verteilten Umgebung muss unbedingt sichergestellt werden, dass in mehreren Knoten nicht der gleiche Wert in eine Primärschlüsselspalte oder eine andere eindeutige Spalte eingefügt wird. Die folgenden Ursachen können zugrunde liegen:  
@@ -41,7 +41,7 @@ ms.locfileid: "62667064"
   
 -   Es wird eine Tabelle mit einer Identitätsspalte verwendet, die Spalte wird jedoch nicht ordnungsgemäß verwaltet.  
   
--   Bei der Mergereplikation dieser Fehler kann auch auftreten, während eines INSERTS in die Systemtabelle **MSmerge_contents**; der Fehler wird ausgelöst, ähnelt: Zeile mit doppeltem Schlüssel kann nicht in 'MSmerge_contents'-Objekt mit dem eindeutigen Index 'ucl1SycContents.' eingefügt werden.  
+-   Bei der Mergereplikation kann dieser Fehler auch während eines INSERTs in die **MSmerge_contents**-Systemtabelle ausgelöst werden; die Fehlermeldung lautet dann ungefähr folgendermaßen: Eine Zeile mit doppeltem Schlüssel kann in das 'MSmerge_contents'-Objekt mit dem eindeutigen 'ucl1SycContents'-Index nicht eingefügt werden.  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Die erforderliche Aktion hängt davon ab, weshalb der Fehler ausgelöst wurde:  
@@ -62,7 +62,7 @@ ms.locfileid: "62667064"
   
      Dieser Fehler kann auftreten, wenn für die Joinsfiltereigenschaft **join_unique_key**ein falscher Wert festgelegt wurde. Diese Eigenschaft sollte nur auf TRUE festgelegt werden, wenn die verknüpfte Spalte in der übergeordneten Tabelle eindeutig ist. Wenn die Eigenschaft auf TRUE festgelegt ist, die Spalte jedoch nicht eindeutig ist, wird dieser Fehler ausgelöst. Weitere Informationen zum Festlegen dieser Eigenschaft finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)  
   
   
