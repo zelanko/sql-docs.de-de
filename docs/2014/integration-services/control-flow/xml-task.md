@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232726"
 ---
 # <a name="xml-task"></a>XML-Task
@@ -46,7 +46,7 @@ ms.locfileid: "75232726"
   
  Falls es sich bei der Quelle um eine Variable handelt, enthält die angegebene Variable den Pfad des XML-Dokuments.  
   
- Falls es sich bei der Quelle um einen Dateiverbindungs-Manager handelt, stellt der angegebene Dateiverbindungs-Manager die Quellinformationen bereit. Der Dateiverbindungs-Manager wird separat vom XML-Task konfiguriert, und im XML-Task wird dann darauf verwiesen. Die Verbindungszeichenfolge aller Dateiverbindungs-Manager gibt den Pfad der XML-Datei an. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](../connection-manager/file-connection-manager.md).  
+ Falls es sich bei der Quelle um einen Dateiverbindungs-Manager handelt, stellt der angegebene Dateiverbindungs-Manager die Quellinformationen bereit. Der Dateiverbindungs-Manager wird separat vom XML-Task konfiguriert, und im XML-Task wird dann darauf verwiesen. Die Verbindungszeichenfolge aller Dateiverbindungs-Manager gibt den Pfad der XML-Datei an. Weitere Informationen finden Sie unter [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
  Der XML-Task kann so konfiguriert werden, dass das Ergebnis des Vorgangs in einer Variablen oder in einer Datei gespeichert wird. Falls Sie das Ergebnis in einer Datei speichern, verwendet der XML-Task einen Dateiverbindungs-Manager für den Zugriff auf die Datei. Sie können die Ergebnisse des Diffgram-Objekts, das vom Diff-Vorgang generiert wird, in Dateien und Variablen speichern.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75232726"
 |Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Diff|Vergleicht zwei XML-Dokumente miteinander. Diff verwendet das XML-Quelldokument als Basisdokument und vergleicht es mit einem zweiten XML-Dokument, stellt die Unterschiede fest und schreibt diese in ein XML-Diffgram-Dokument. Dieser Vorgang schließt Eigenschaften zum Anpassen des Vergleichs ein.|  
-|Zusammenführen|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
+|Merge|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
 |Patch|Wendet die Ausgabe des Diff-Vorgangs, ein so genanntes Diffgram-Dokument, auf ein XML-Dokument an, um ein neues übergeordnetes Dokument zu erstellen, das Inhalt aus dem Diffgram-Dokument einschließt.|  
 |Überprüfen|Überprüft das XML-Dokument mithilfe eines DTD-(Document Type Definition-) bzw. XSD-(XML Schema Definition-)Schemas.|  
 |XPath|Führt XPath-Abfragen und -Auswertungen aus.|  
@@ -71,12 +71,12 @@ ms.locfileid: "75232726"
 |------------|-----------------|  
 |**IgnoreComments**|Dieser Wert gibt an, ob Kommentarknoten verglichen werden.|  
 |**IgnoreNamespaces**|Dieser Wert gibt an, ob der Namespace-URI (Uniform Resource Identifier) eines Elements und dessen Attributnamen verglichen werden. Falls diese Option auf `true` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace, als identisch betrachtet.|  
-|**Ignoreprefixes**|Dieser Wert gibt an, ob Präfixe von Element- und Attributnamen verglichen werden. Falls diese Option auf `true,` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace-URI und Präfix, als identisch betrachtet.|  
-|**Ignorexmldeclaration**|Dieser Wert gibt an, ob die XML-Deklarationen verglichen werden.|  
+|**IgnorePrefixes**|Dieser Wert gibt an, ob Präfixe von Element- und Attributnamen verglichen werden. Falls diese Option auf `true,` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace-URI und Präfix, als identisch betrachtet.|  
+|**IgnoreXMLDeclaration**|Dieser Wert gibt an, ob die XML-Deklarationen verglichen werden.|  
 |**IgnoreOrderOfChildElements**|Dieser Wert gibt an, ob die Reihenfolge von untergeordneten Elementen verglichen wird. Falls diese Option auf `true` festgelegt ist, werden untergeordnete Elemente, die sich nur bezüglich der Position in einer Liste gleichgeordneter Elemente unterscheiden, als identisch betrachtet.|  
 |**IgnoreWhiteSpaces**|Dieser Wert gibt an, dass Leerzeichen verglichen werden.|  
 |**IgnoreProcessingInstructions**|Dieser Wert gibt an, ob Verarbeitungsanweisungen verglichen werden.|  
-|**Ignoredtd**|Dieser Wert gibt an, ob die DTD ignoriert wird.|  
+|**IgnoreDTD**|Dieser Wert gibt an, ob die DTD ignoriert wird.|  
   
 ### <a name="merge-operation"></a>Merge-Vorgang  
  Wenn Sie eine XPath-Anweisung zur Identifizierung des Mergespeicherorts im Quelldokument verwenden, wird erwartet, dass diese Anweisung einen einzelnen Knoten zurückgibt. Wenn die Anweisung mehrere Knoten zurückgibt, wird nur der erste Knoten verwendet. Der Inhalt des zweiten Dokuments wird unter dem ersten Knoten zusammengeführt, den die XPath-Abfrage zurückgibt.  
@@ -121,9 +121,9 @@ ms.locfileid: "75232726"
   
 -   [Editor für den XML-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validieren von XML mit dem XML-Task](xml-task.md)  
+-   [Validieren von XML-Dokumenten mit dem XML-Task](xml-task.md)  
   
--   [Ausdrucks Seite](../expressions/expressions-page.md)  
+-   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen von Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   

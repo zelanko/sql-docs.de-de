@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085457"
 ---
 # <a name="odbc-api-reference"></a>ODBC-API-Referenz
-In die Themen in diesem Abschnitt beschreiben die einzelnen ODBC-Funktion in alphabetischer Reihenfolge. Jede Funktion wird als eine C-Funktion "Language" Programmierschnittstelle definiert. Die folgenden: Beschreibungen  
+In den Themen in diesem Abschnitt werden die einzelnen ODBC-Funktionen in alphabetischer Reihenfolge beschrieben. Jede Funktion ist als Funktion der C-Programmiersprache definiert. Die Beschreibungen umfassen Folgendes:  
   
 -   Zweck  
   
--   ODBC-version  
+-   ODBC-Version  
   
--   Standard CLI-Konformitätsgrad  
+-   Standard-CLI-Konformitätsstufe  
   
 -   Syntax  
   
@@ -41,14 +41,14 @@ In die Themen in diesem Abschnitt beschreiben die einzelnen ODBC-Funktion in alp
   
 -   Verweise auf verwandte Funktionen  
   
- Der standard CLI-Konformitätsgrad kann einen der folgenden sein: ISO-92, ODBC-Gruppe zu öffnen oder als veraltet markiert. Eine Funktion, die wie ISO-92-konformen auch in Version 1, öffnen Sie die angezeigt wird markiert, da die Open Group eine reine der ISO-92 ist. Eine Funktion, die als "Open Group-kompatibel" gekennzeichnet, die auch in ODBC 3. angezeigt werden. *x*, da ODBC 3. *X* ist eine reine Obermenge der öffnen Sie die Version 1. Eine Funktion, die gekennzeichnet werden, wie in keiner der beiden standardmäßigen ODBC-konformen angezeigt wird. Eine Funktion, die markiert, als veraltet, wurde in ODBC 3. als veraltet markiert. *x*.  
+ Die standardmäßige CLI-Konformitäts Ebene kann eine der folgenden sein: ISO 92, Open Group, ODBC oder deprecated. Eine Funktion, die als ISO 92-Konformität gekennzeichnet ist, wird auch in Open Group Version 1 angezeigt, da Open Group eine reine supermenge von ISO 92 ist. Eine Funktion, die als Open Group-kompatibel gekennzeichnet ist, wird auch in ODBC 3 angezeigt. *x*, da ODBC 3. *x* ist eine reine supermenge der geöffneten Gruppen Version 1. Eine Funktion, die als ODBC-kompatibel gekennzeichnet ist, wird in keinem Standard angezeigt. Eine Funktion, die als veraltet markiert ist, wurde in ODBC 3 als veraltet markiert. *x*.  
   
- Behandlung von Diagnoseinformationen finden Sie auf die [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) funktionsbeschreibung. Der SQLSTATE-Werten zugeordnete Text enthalten eine Beschreibung der Bedingung ist jedoch dient nicht zum Schreiben von bestimmtem Text vor.  
+ Die Behandlung von Diagnoseinformationen wird in der Beschreibung der [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) -Funktion beschrieben. Der mit SQLSTATE-Werten verknüpfte Text ist enthalten, um eine Beschreibung der Bedingung bereitzustellen, ist aber nicht zum vorschreiben von spezifischem Text vorgesehen.  
   
 > [!NOTE]  
->  Treiber-spezifische Informationen zu ODBC-Funktionen finden Sie im Abschnitt für den Treiber.  
+>  Treiber spezifische Informationen zu ODBC-Funktionen finden Sie im Abschnitt für den Treiber.  
   
- Dieser Abschnitt enthält Themen, die für die folgenden Funktionen:  
+ Dieser Abschnitt enthält Themen zu den folgenden Funktionen:  
   
 -   [SQLAllocConnect-Funktion](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -94,7 +94,7 @@ In die Themen in diesem Abschnitt beschreiben die einzelnen ODBC-Funktion in alp
   
 -   [SQLDisconnect-Funktion](../../../odbc/reference/syntax/sqldisconnect-function.md)  
   
--   [SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+-   [SQLDriveConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
   
 -   [SQLDrivers-Funktion](../../../odbc/reference/syntax/sqldrivers-function.md)  
   

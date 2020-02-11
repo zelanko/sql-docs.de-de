@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243158"
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
@@ -49,7 +49,7 @@ ms.locfileid: "75243158"
   
  Die folgende Tabelle enthält die verschiedenen Möglichkeiten, mit denen Sie bestimmen können, wie Anweisungen im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ausgeführt werden.  
   
-|Aktion|Vorgehensweise|  
+|Action|Verfahren|  
 |------------|---------------|  
 |Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Klicken Sie im Menü **Debuggen** auf **weiter**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **weiter** .|  
 |Ausführen eines Einzelschritts in die nächste Anweisung oder in das nächste Modul|Klicken Sie im Menü **Debuggen** auf Einzel **Schritt**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche Einzel **Schritt** .<br /><br /> Drücken Sie F11.|  
@@ -58,6 +58,6 @@ ms.locfileid: "75243158"
 |Ausführen bis zur aktuellen Cursorposition|Klicken Sie mit der rechten Maustaste auf das Abfrage-Editor-Fenster, und klicken Sie dann auf **Ausführen bis Cursorposition**.<br /><br /> Drücken Sie STRG+F10.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Transact-SQL-Debugger](transact-sql-debugger-information.md)  
+ [Transact-SQL-Debuggerinformationen](transact-sql-debugger-information.md)  
   
   

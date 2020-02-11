@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_database_firewall_rule (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sp_delete_database_firewall_rule (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/04/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130682"
 ---
-# <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL-Datenbank)
+# <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Entfernt die firewalleinstellung auf Datenbankebene von Ihrer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Datenbank-Firewall-Regeln konfiguriert und für die master-Datenbank und für Benutzerdatenbanken auf gelöscht werden können, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
+  Entfernt die Firewalleinstellung auf Daten Bank [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Ebene aus dem. Datenbank-Firewallregeln können für die Master Datenbank und für Benutzer Datenbanken unter [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]konfiguriert und gelöscht werden.   
   
  
 ## <a name="syntax"></a>Syntax  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>Argumente  
  `[@name =] [N]'name'`  
- Der Name der Firewalleinstellung auf Datenbankebene, die entfernt wird. *Namen* ist **vom Datentyp nvarchar(128)** hat keinen Standardwert. Der Unicode-Bezeichner `N` ist optional für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ Der Name der Firewalleinstellung auf Datenbankebene, die entfernt wird. *Name ist vom Datentyp* **nvarchar (128)** und hat keinen Standardwert. Der Unicode- `N` Bezeichner ist [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]optional für. 
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur die Server serverebenenprinzipal-Anmeldung erstellt, die im Rahmen des Bereitstellungsprozesses oder ein Azure Active Directory-Dienstprinzipal zugewiesen, wie Firewallregeln auf Datenbankebene Admin löschen zu kann.  
+ Firewallregeln auf Datenbankebene können nur von der Prinzipal Anmeldung auf Serverebene oder einem Azure Active Directory Prinzipal, der als Administrator zugewiesen wurde, gelöscht werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Firewall auf Datenbankebene, die Einstellung mit dem Namen `Example DB Setting 1`.
+ Im folgenden Beispiel wird die Firewalleinstellung auf Daten Bank `Example DB Setting 1`Ebene mit dem Namen entfernt.
   
 ```  
 -- Remove database-level firewall setting  
@@ -54,12 +54,12 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Azure SQL-Datenbankfirewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Vorgehensweise: Konfigurieren der Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [Sp_set_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [Sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
- [Sys. database_firewall_rules &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Azure SQL-Daten Bank Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [sp_set_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
+ [sys. database_firewall_rules &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   
 

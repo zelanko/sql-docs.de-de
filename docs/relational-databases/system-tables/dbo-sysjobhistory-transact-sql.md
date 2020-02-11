@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobhistory (Transact-SQL) | Microsoft-Dokumentation
+title: dbo. sysjobhistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85710deec2e7ab5e79ed7a514e3b625c6232484e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902202"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761834"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "67902202"
 Enthält Informationen zur Ausführung geplanter Aufträge durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent.
   
 > [!NOTE]
-> Die Daten werden in den meisten Fällen aktualisiert, nur nach Abschluss des Auftragsschritts aus, und die Tabelle in der Regel enthält keine Einträge für Auftragsschritte, die gerade ausgeführt werden, aber in einigen zugrunde liegenden Prozesse Fällen *führen* enthalten Informationen zu Bearbeitung von Auftragsschritten.
+> In den meisten Fällen werden die Daten erst aktualisiert, nachdem der Auftrags Schritt abgeschlossen wurde, und die Tabelle enthält in der Regel keine Datensätze für Auftrags Schritte, die derzeit ausgeführt werden. in einigen Fällen enthalten die zugrunde *liegenden Prozesse jedoch* Informationen zu laufenden Auftrags Schritten.
 
 Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Eindeutiger Bezeichner für die Zeile.|  
 |**job_id**|**uniqueidentifier**|Auftrags-ID.|  
@@ -45,18 +45,18 @@ Diese Tabelle wird in der **msdb** -Datenbank gespeichert.
 |**sql_message_id**|**int**|ID einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlermeldung, die beim Fehlschlagen des Auftrags zurückgegeben wird.|  
 |**sql_severity**|**int**|Schweregrad eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers.|  
 |**Nachricht**|**nvarchar(4000)**|Text (falls vorhanden) eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers.|  
-|**run_status**|**int**|Status der Auftragsausführung:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br />**4** = wird ausgeführt|  
+|**run_status**|**int**|Status der Auftragsausführung:<br /><br /> **0** = fehlgeschlagen<br /><br /> **1** = erfolgreich<br /><br /> **2** = Wiederholung<br /><br /> **3** = abgebrochen<br /><br />**4** = in Bearbeitung|  
 |**run_date**|**int**|Datum, an dem die Ausführung des Auftrags oder Schrittes gestartet wurde. Bei einem In-Progress-Verlauf ist dies das Datum/die Uhrzeit, an dem bzw. zu der der Verlauf geschrieben wurde.|  
-|**run_time**|**int**|Uhrzeit, zu der der Auftrag oder Schritt gestartet wurde.|  
-|**run_duration**|**int**|Verstrichene Zeit bei der Ausführung des Auftrags oder Schritts im **HHMMSS** Format.|  
+|**run_time**|**int**|Zeitpunkt, zu dem der Auftrag oder Schritt im **HHMMSS** -Format gestartet wurde.|  
+|**run_duration**|**int**|Verstrichene Zeit für die Ausführung des Auftrags oder Schritts im **HHMMSS** -Format.|  
 |**operator_id_emailed**|**int**|ID des Operators, der bei Abschluss des Auftrags benachrichtigt wurde.|  
 |**operator_id_netsent**|**int**|ID des Operators, der bei Abschluss des Auftrags durch eine Meldung benachrichtigt wurde.|  
 |**operator_id_paged**|**int**|ID des Operators, der mithilfe eines Pagers bei Abschluss des Auftrags benachrichtigt wurde.|  
 |**retries_attempted**|**int**|Anzahl der Wiederholungsversuche für den Auftrag oder Schritt.|  
-|**server**|**sysname**|Name des Servers, auf dem der Auftrag ausgeführt wurde.|  
+|**Servers**|**sysname**|Name des Servers, auf dem der Auftrag ausgeführt wurde.|  
   
   ## <a name="example"></a>Beispiel
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage konvertiert die **Run_time** und **Run_duration** Spalten in einem benutzerfreundlicheren Format.  Führen Sie das Skript in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+ Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden Abfrage werden die **run_time** -und **run_duration** Spalten in ein benutzerfreundliches Format konvertiert.  Führen Sie das Skript [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in aus.
  
  ```sql
  SET NOCOUNT ON;

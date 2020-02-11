@@ -1,5 +1,5 @@
 ---
-title: AppendChunk und GetChunk-Methode – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für AppendChunk und GetChunk-Methoden (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e68bbb558a3cc7fef9428fd63a4fecc4881c997d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991c295f5437d16ed10aafeacf184722046941a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920619"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76922560"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk- und GetChunk-Methode – Beispiel (VC++)
-Dieses Beispiel verwendet die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) Methoden für ein Bildfeld mit Daten aus einem anderen Datensatz zu füllen.  
+In diesem Beispiel werden die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) -Methode und die [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) -Methode verwendet, um ein Bildfeld mit Daten aus einem anderen Datensatz zu füllen.  
   
 ```  
 // BeginAppendChunkCpp.cpp  
@@ -183,7 +183,7 @@ void AppendChunkX() {
       while (lngOffSet < lngLogoSize) {  
          varChunk = pRstPubInfo->Fields->Item["logo"]->GetChunk(ChunkSize);  
   
-         // Copy the data only upto the Actual Size of Field.    
+         // Copy the data only up to the Actual Size of Field.    
          for (long index = 0 ; index <= (ChunkSize - 1) ; index++) {  
             hr = SafeArrayGetElement(varChunk.parray, &index, &chData);  
             if (SUCCEEDED(hr)) {  
@@ -265,7 +265,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [AppendChunk-Methode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk-Methode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

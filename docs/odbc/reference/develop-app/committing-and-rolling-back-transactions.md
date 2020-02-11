@@ -1,5 +1,5 @@
 ---
-title: Commit und Rollback für Transaktionen | Microsoft-Dokumentation
+title: Commit und Rollback von Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083311"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Ausführen von Commits und Rollbacks von Transaktionen
-Um einen commit oder Rollback für eine Transaktion aus, in den Manualcommit-Modus, eine Anwendung ruft **SQLEndTran**. Treiber für DBMS-Systeme, die Transaktionen, in der Regel unterstützen implementieren Sie diese Funktion durch Ausführen einer **COMMIT** oder **ROLLBACK** Anweisung. Der Treiber-Manager wird nicht aufgerufen. **SQLEndTran** Wenn die Verbindung im Autocommit-Modus ist es einfach gibt SQL_SUCCESS zurück, selbst wenn die Anwendung versucht, ein Rollback der Transaktion auszuführen. Da der Treiber für DBMS-Systeme, die keine Transaktionen unterstützen, immer im Autocommit Modus sind, können sie entweder zuerst **SQLEndTran** SQL_SUCCESS zurück, ohne eine Aktion auszuführen oder gar nicht implementiert.  
+Um einen Commit oder Rollback einer Transaktion im manuellen Commitmodus auszuführen, ruft eine Anwendung **SQLEndTran**auf. Treiber für DBMSs, die Transaktionen unterstützen, implementieren diese Funktion in der Regel durch Ausführen einer **Commit** -oder **Rollback** -Anweisung. Der Treiber-Manager ruft **SQLEndTran** nicht auf, wenn sich die Verbindung im Autocommit-Modus befindet. Sie gibt einfach SQL_SUCCESS zurück, auch wenn die Anwendung versucht, ein Rollback für die Transaktion auszuführen. Da sich Treiber für DBMSs, die keine Transaktionen unterstützen, immer im Autocommit-Modus befinden, können Sie entweder **SQLEndTran** implementieren, um SQL_SUCCESS zurückzugeben, ohne dies zu tun oder überhaupt nicht zu implementieren.  
   
 > [!NOTE]  
->  Anwendungen sollten nicht commit oder Rollback für Transaktionen aus, indem Sie Ausführung **COMMIT** oder **ROLLBACK** -Anweisungen mit **SQLExecute** oder **SQLExecDirect**. Die Auswirkungen auf diese Weise sind nicht definiert. Mögliche Probleme enthalten, der Treiber, die nicht mehr wissen, wenn eine Transaktion aktiv ist und diese Anweisungen, die Fehler für Datenquellen, die keine Transaktionen unterstützen. Diese Anwendungen sollten Aufrufen **SQLEndTran** stattdessen.  
+>  Anwendungen sollten keine Commit-oder Rollback-Transaktionen ausführen, indem Sie **Commit** -oder **Rollback** -Anweisungen mit **SQLExecute** oder **SQLExecDirect**ausführen. Die Auswirkungen auf diese Weise sind nicht definiert. Mögliche Probleme können darin liegen, dass der Treiber nicht mehr weiß, wann eine Transaktion aktiv ist, und dass diese Anweisungen für Datenquellen fehlschlagen, die keine Transaktionen unterstützen. Diese Anwendungen sollten stattdessen **SQLEndTran** aufruft.  
   
- Wenn eine Anwendung das Umgebungshandle, übergibt **SQLEndTran** aber nicht übergeben eines Verbindungshandles, die der Treiber-Manager im Prinzip ruft **SQLEndTran** mit das Umgebungshandle für jeden Treiber, verfügt über eine oder mehrere Verbindungen in der Umgebung. Der Treiber führt dann einen Commit für die Transaktionen für jede Verbindung in der Umgebung. Allerdings ist es wichtig zu wissen, dass weder der Treiber als auch der Treiber-Manager auf den Verbindungen in der Umgebung einen Zweiphasen-Commit ausführt; Dies ist lediglich eine Vereinfachung der Programmierung gleichzeitig aufrufen **SQLEndTran** für alle Verbindungen in der Umgebung.  
+ Wenn eine Anwendung das Umgebungs Handle an **SQLEndTran** übergibt, aber kein Verbindungs Handle übergibt, ruft der Treiber-Manager konzeptionell **SQLEndTran** mit dem Umgebungs Handle für jeden Treiber auf, der über mindestens eine aktive Verbindung in der Umgebung verfügt. Der Treiber führt dann für jede Verbindung in der Umgebung einen Commit für die Transaktionen aus. Es ist jedoch wichtig zu wissen, dass weder der Treiber noch der Treiber-Manager einen Zweiphasencommit für die Verbindungen in der Umgebung ausführt. Dies ist lediglich eine Programmier praktische Möglichkeit, um **SQLEndTran** gleichzeitig für alle Verbindungen in der Umgebung aufzurufen.  
   
- (Ein *Zweiphasen-Commit* wird in der Regel verwendet, um Transaktionen zu committen, das über mehrere Datenquellen hinweg verteilt sind. In der ersten Phase werden die Datenquellen abgerufen, gibt an, ob sie ihren Teil der Transaktion ausführen können. In der zweiten Phase wird die Transaktion tatsächlich bei all denjenigen Datenquellen ein Commit ausgeführt. Wenn alle Datenquellen in der ersten Phase zu antworten, dass sie die Transaktion keinen Commit durchführen können, erfolgt die zweite Phase nicht.)
+ (In der Regel wird ein *Zweiphasencommit* verwendet, um Transaktionen zu übertragen, die über mehrere Datenquellen verteilt sind. In der ersten Phase werden die Datenquellen abgerufen, unabhängig davon, ob Sie einen Commit für ihren Teil der Transaktion durchführen können. In der zweiten Phase wird für die Transaktion tatsächlich ein Commit für alle Datenquellen ausgeführt. Wenn eine Datenquelle in der ersten Phase antwortet, dass Sie keinen Commit für die Transaktion durchführen können, erfolgt die zweite Phase nicht.)

@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d41aab8066b4ce1ee4e45fa9c363e60479868a5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243042"
 ---
 # <a name="quickwatch-dialog-box"></a>Dialogfeld 'Schnellüberwachung'
   Mithilfe des Dialogfelds **Schnellüberwachung** können Sie beim Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code schnell den Datentyp und den Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks anzeigen, wie z. B. einer Variable oder eines Parameters. Um mehrere Ausdrücke zu beobachten, können Sie den Ausdruck auch einem **Überwachungsfenster** hinzufügen.  
   
 ## <a name="task-list"></a>Aufgabenliste  
- **So greifen Sie auf das Dialogfeld "schnell Überwachung" zu**  
+ **So greifen Sie auf das Dialogfeld Schnellüberwachung zu**  
   
 -   Klicken Sie im Menü **Debuggen** auf **Schnellüberwachung**.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75243042"
   
     -   Variablen  
   
-    -   Parameter  
+    -   Parameter.  
   
     -   Systemfunktionen, deren Name mit „@@“ beginnt.  
   
@@ -45,22 +45,22 @@ ms.locfileid: "75243042"
   
 2.  Klicken Sie auf **Neu auswerten**.  
   
- **So fügen Sie den schnell Überwachungs Ausdruck einem Überwachungsfenster hinzu**  
+ **So fügen Sie den Ausdruck der Schnellüberwachung einem Überwachungsfenster hinzu**  
   
 -   Klicken Sie auf **Überwachung hinzufügen**.  
   
- **So ändern Sie den Wert des Ausdrucks der schnell Überwachung**  
+ **So ändern Sie den Wert des Ausdrucks der Schnellüberwachung**  
   
 -   Klicken mit der rechten Maustaste auf den Ausdruck, und wählen Sie anschließend **Wert bearbeiten**aus.  
   
-## <a name="options"></a>Optionen  
- **Ausdrucks Liste**  
+## <a name="options"></a>Tastatur  
+ **Ausdruckliste**  
  Zeigt den aktuell ausgewählten Ausdruck an. Die Dropdownliste enthält einen Satz von Ausdrücken, deren Anzeige Sie auswählen können. In der Liste sind jene Ausdrücke aufgeführt, die im Bereich des Stapelrahmens verfügbar sind, der im Fenster **Aufrufliste** aktuell ausgewählt ist. Um einen anderen Ausdruck anzuzeigen, geben Sie entweder den Ausdruck ein, oder wählen Sie ihn aus der Liste aus. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt die folgenden Ausdrücke: Variablen, Parameter und die Systemfunktionen, deren Namen mit @@ beginnen.  
   
- **Werte Raster**  
+ **Werteraster**  
  Zeigt die Eigenschaften des Ausdrucks an, der gerade beobachtet wird.  
   
- **Benennen**  
+ **Name**  
  Entspricht dem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdruck, der beobachtet wird.  
   
  **Wert**  
@@ -70,15 +70,15 @@ ms.locfileid: "75243042"
   
  Ein Lupensymbol in einer **Wertzelle** zeigt an, dass die [!INCLUDE[tsql](../../includes/tsql-md.md)] Debuggerschnellansicht verfügbar ist. In der Liste können Sie **Text-Schnellansicht**, **XML-Schnellansicht**oder **HTML-Schnellansicht**angeben. Um eine Debuggerschnellansicht zu starten, klicken Sie auf das Lupensymbol. Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger öffnet ein Dialogfeld, in dem die Daten in einem für den Datentyp geeigneten Format angezeigt werden.  
   
- **Type**  
+ **Typ**  
  Zeigt den Datentyp des Ausdrucks an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Debugger](transact-sql-debugger.md)   
- [Informationen zum Transact-SQL-Debugger](transact-sql-debugger-information.md)   
- [Überwachungs Fenster](transact-sql-debugger-watch-window.md)   
- [Fenster "lokal"](transact-sql-debugger-locals-window.md)   
- [Fenster "Fenster"](transact-sql-debugger-call-stack-window.md)   
- [Ausdrücke &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Transact-SQL-Debuggerinformationen](transact-sql-debugger-information.md)   
+ [Überwachung (Fenster)](transact-sql-debugger-watch-window.md)   
+ [Lokal (Fenster)](transact-sql-debugger-locals-window.md)   
+ [Fenster 'Aufrufliste'](transact-sql-debugger-call-stack-window.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
   
   

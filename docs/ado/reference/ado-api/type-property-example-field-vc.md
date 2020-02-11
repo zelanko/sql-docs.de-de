@@ -1,5 +1,5 @@
 ---
-title: Geben Sie die Eigenschaft – Beispiel (Field) (VC++) | Microsoft-Dokumentation
+title: Beispiel für eine Typeigenschaft (Feld) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936659"
 ---
 # <a name="type-property-example-field-vc"></a>Type-Eigenschaft – Beispiel (Field) (VC++)
-In diesem Beispiel wird veranschaulicht, die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Anzeigen des Namens der Konstante, die entspricht dem Wert der Eigenschaft der **Typ** -Eigenschaft aller der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Mitarbeiter*** Tabelle. Die Feldtyp-Funktion ist zum Ausführen dieser Prozedur erforderlich.  
+In diesem Beispiel wird die [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft veranschaulicht, indem der Name der Konstante angezeigt wird, die dem Wert der **Type** -Eigenschaft aller [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Employees*** -Tabelle entspricht. Die FieldType-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -154,22 +154,22 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Felder in der Employee-Tabelle:**  
- **Name: Emp_id**  
- **Typ: AdChar**  
- **Name: Fname**  
- **Type: adVarChar**  
- **Name: Minit**  
- **Typ: AdChar**  
- **Name: Lname**  
- **Type: adVarChar**  
- **Name: dem job_id-Wert**  
- **Type: adSmallInt**  
- **Name: Job_lvl**  
- **Type: adUnsignedTinyInt**  
- **Name: Pub_id**  
- **Typ: AdChar**  
- **Name: Hire_date**  
- **Type: adDBTimeStamp**   
-## <a name="see-also"></a>Siehe auch  
+ **Name: emp_id**  
+ **Typ: adchar**  
+ **Name: "Name"**  
+ **Typ: adVarChar**  
+ **Name: minit**  
+ **Typ: adchar**  
+ **Name: lname**  
+ **Typ: adVarChar**  
+ **Name: job_id**  
+ **Typ: adsmallint**  
+ **Name: job_lvl**  
+ **Typ: adunsignedtinyint**  
+ **Name: pub_id**  
+ **Typ: adchar**  
+ **Name: hire_date**  
+ **Typ: adDBTimestamp**   
+## <a name="see-also"></a>Weitere Informationen  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

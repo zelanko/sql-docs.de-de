@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244946"
 ---
 # <a name="color-coding-in-query-editors"></a>Farbcodierung im Abfrage-Editor
@@ -27,14 +27,14 @@ ms.locfileid: "75244946"
   
 |Color|Category|  
 |-----------|--------------|  
-|Rot|SQL-Zeichenfolge|  
-|Dunkelgrün|Anmerkungen|  
+|Red|SQL-Zeichenfolge|  
+|Dunkelgrün|Comment|  
 |Schwarz auf silberfarbenem Hintergrund|SQLCMD-Befehl|  
 |Magenta|Systemfunktion|  
 |Grün|Systemtabelle, Sicht oder Tabellenwertfunktion. Außerdem die Systemschemas sys und INFORMATION_SCHEMA.|  
 |Blau|Schlüsselwort|  
 |Blaugrün|Zeilennummern oder Vorlagenparameter|  
-|Kastanienbraun|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherte Prozedur|  
+|Kastanienbraun|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )|  
 |Dunkelgrau|Operatoren|  
   
 ## <a name="status-bar"></a>Statusleiste  

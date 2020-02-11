@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ee3d5bb623de84704de97b798573b769d85ae15
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243058"
 ---
 # <a name="output-window"></a>Ausgabefenster
@@ -27,8 +27,8 @@ ms.locfileid: "75243058"
   
 -   Klicken Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Ausgabe**.  
   
-## <a name="options"></a>Optionen  
- **Liste der Ausgabe Bereiche**  
+## <a name="options"></a>Tastatur  
+ **Liste der Ausgabebereiche**  
  Zeigt eine Liste der Ausgabebereiche an, die angezeigt werden können. Es können mehrere Informationsbereiche verfügbar sein, je nachdem, welche Tools das Fenster **Ausgabe** nutzen, um Informationen an den Benutzer zu übermitteln.  
   
  **Ausgabebereich**  

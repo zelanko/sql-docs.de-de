@@ -19,16 +19,16 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e73098a63f193ab868854674d2e77c3ba372c29c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957114"
 ---
-# <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
-  *Transparent Data Encryption* (TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] -Datendateien, die als Verschlüsselung ruhender Daten bezeichnet werden. Sie können verschiedene Vorsichtsmaßnahmen zum Schützen der Datenbank treffen, z.B. Entwerfen eines sicheren Systems, Verschlüsseln vertraulicher Datenbestände und Erstellen einer Firewall für die Datenbankserver. Im Falle eines Diebstahls physischer Medien (Festplatten, Sicherungsbänder oder Ähnliches) kann eine böswillige Partei die Datenbank jedoch einfach wiederherstellen oder anfügen und die Daten durchsuchen. Eine Lösung besteht darin, die vertraulichen Daten in der Datenbank zu verschlüsseln und die Schlüssel zu schützen, die zum Verschlüsseln der Daten mit einem Zertifikat verwendet werden. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
+# <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
+  *Transparent Data Encryption* (TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] -Datendateien, die als Verschlüsselung ruhender Daten bezeichnet werden. Sie können verschiedene Vorsichtsmaßnahmen zum Schützen der Datenbank treffen, z.B. Entwerfen eines sicheren Systems, Verschlüsseln vertraulicher Datenbestände und Erstellen einer Firewall für die Datenbankserver. Im Falle eines Diebstahls physischer Medien (Festplatten, Sicherungsbänder oder Ähnliches) kann eine böswillige Partei die Datenbank jedoch einfach wiederherstellen oder anfügen und die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
   
- TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten- und Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der Masterdatenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird. TDE schützt „ruhende Daten“, also die Daten und die Protokolldateien. Sie ermöglicht die Einhaltung von Gesetzen, Bestimmungen und Richtlinien, die in vielen Branchen etabliert sind. Dadurch können Softwareentwickler Daten mithilfe der AES- und 3DES-Verschlüsselungsalgorithmen verschlüsseln, ohne vorhandene Anwendungen ändern zu müssen.  
+ TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten- und Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der Masterdatenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird. TDE schützt die "ruhenden" Daten, also die Daten- und die Protokolldateien. Sie entspricht den in vielen Branchen etablierten Gesetzen, Bestimmungen und Richtlinien. Dadurch können Softwareentwickler Daten mithilfe der AES- und 3DES-Verschlüsselungsalgorithmen verschlüsseln, ohne vorhandene Anwendungen ändern zu müssen.  
   
 > [!IMPORTANT]
 >  TDE stellt keine Verschlüsselung über Kommunikationskanäle bereit. Weitere Informationen zum Verschlüsseln von Daten über Kommunikationskanäle finden Sie unter [Aktivieren von verschlüsselten Verbindungen für die Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -48,13 +48,13 @@ ms.locfileid: "74957114"
   
  Die Vorschau des Status von TDE gilt auch in der Teilmenge der geografischen Regionen, in denen die Versionsproduktfamilie V12 von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] als jetzt allgemein verfügbar angekündigt wird. TDE für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] dient nicht zur Verwendung in den Produktionsdatenbanken bis [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ankündigt, dass TDE von der Vorschau zu GA heraufgestuft wird. Weitere Informationen zu [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 finden Sie unter [Neuerungen in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
- **Informationen für[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+ **Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
  Nachdem sie gesichert wurde, kann die Datenbank mit dem richtigen Zertifikat wiederhergestellt werden. Weitere Informationen zu Zertifikaten finden Sie unter [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
  Wenn Sie TDE aktivieren, sollten Sie das Zertifikat und den privaten Schlüssel, der dem Zertifikat zugeordnet ist, unmittelbar danach sichern. Sollte das Zertifikat einmal nicht mehr verfügbar sein, oder sollten Sie die Datenbank auf einem anderen Server wiederherstellen oder anfügen müssen, müssen Sie über Sicherungen sowohl des Zertifikats als auch des privaten Schlüssels verfügen, da Sie andernfalls die Datenbank nicht öffnen können. Das zum Verschlüsseln verwendete Zertifikat sollte beibehalten werden, selbst wenn TDE für die Datenbank nicht mehr aktiviert ist. Selbst wenn die Datenbank nicht verschlüsselt ist, können Teile des Transaktionsprotokolls nach wie vor geschützt sein. Für bestimmte Vorgänge wird das Zertifikat ggf. weiterhin benötigt, bis eine vollständige Sicherung der Datenbank ausgeführt wurde. Ein abgelaufenes Zertifikat kann immer noch verwendet werden, um Daten mit TDE zu verschlüsseln und zu entschlüsseln.  
   
- **Verschlüsselungs Hierarchie**  
+ **Verschlüsselungshierarchie**  
   
  Die folgende Abbildung zeigt die Architektur der TDE-Verschlüsselung. Nur die Datenbankebenenelemente (der Datenbankverschlüsselungsschlüssel und die ALTER DATABASE-Teile können vom Benutzer bei der Verwendung von TDE in [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]konfiguriert werden.  
   
@@ -110,19 +110,19 @@ GO
   
 |Befehl oder Funktion|Zweck|  
 |-------------------------|-------------|  
-|[Erstellen eines Daten Bank Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Erstellt einen Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
-|[Alter Database-Verschlüsselungsschlüssel &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Ändert den Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
-|[Drop Database Encryption Key &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-database-transact-sql)|Entfernt den Schlüssel, der verwendet wurde, um eine Datenbank zu verschlüsseln.|  
-|[ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Erklärt die `ALTER DATABASE`-Option, mit der TDE aktiviert wird.|  
+|[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Erstellt einen Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
+|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Ändert den Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
+|[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|Entfernt den Schlüssel, der verwendet wurde, um eine Datenbank zu verschlüsseln.|  
+|[ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Erklärt die `ALTER DATABASE`-Option, mit der TDE aktiviert wird.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Katalogsichten und dynamische Verwaltungssichten  
  In der folgenden Tabelle werden die Katalogsichten und die dynamischen Verwaltungssichten von TDE erläutert.  
   
 |Katalogsicht oder dynamische Verwaltungssicht|Zweck|  
 |---------------------------------------------|-------------|  
-|[sys.-Datenbanken &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Katalogsicht, die Datenbankinformationen anzeigt.|  
-|[sys. Zertifikate &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Katalogsicht, die die Zertifikate in einer Datenbank anzeigt.|  
-|[sys. dm_database_encryption_keys &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Dynamische Verwaltungssicht, die Informationen zu den in einer Datenbank verwendeten Verschlüsselungsschlüsseln und dem aktuellen Status der Verschlüsselung einer Datenbank bereitstellt.|  
+|[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Katalogsicht, die Datenbankinformationen anzeigt.|  
+|[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Katalogsicht, die die Zertifikate in einer Datenbank anzeigt.|  
+|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Dynamische Verwaltungssicht, die Informationen zu den in einer Datenbank verwendeten Verschlüsselungsschlüsseln und dem aktuellen Status der Verschlüsselung einer Datenbank bereitstellt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Jede Funktion und jeder Befehl von TDE erfordert bestimmte Berechtigungen, die in den zuvor gezeigten Tabellen beschrieben wurden.  
@@ -143,7 +143,7 @@ GO
   
  Verschlüsselte Daten lassen sich deutlich weniger komprimieren als entsprechende unverschlüsselte Daten. Wenn TDE zum Verschlüsseln einer Datenbank verwendet wird, wird der für die Sicherung benötigte Speicherplatz durch die Sicherungskomprimierung nicht wesentlich geringer. Daher wird davon abgeraten, TDE zusammen mit der Sicherungskomprimierung zu verwenden.  
   
-### <a name="restrictions"></a>Einschränkungen  
+### <a name="restrictions"></a>Beschränkungen  
  Die folgende Vorgänge sind während der ersten Datenbankverschlüsselung, einer Schlüsseländerung oder der Datenbankentschlüsselung nicht erlaubt:  
   
 -   Löschen einer Datei aus einer Dateigruppe in der Datenbank  
@@ -233,9 +233,9 @@ GO
  [Verschieben einer TDE-geschützten Datenbank in eine andere SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
  [Aktivieren von TDE mithilfe von EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Transparent Data Encryption mit Azure SQL-Datenbank](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
- [SQL Server Verschlüsselung](sql-server-encryption.md)   
- [SQL Server und die Verschlüsselungsschlüssel für die Datenbank &#40;Datenbank-Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server-Verschlüsselung](sql-server-encryption.md)   
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Security Center für SQL Server Datenbank-Engine und Azure SQL-Datenbank](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [FileStream-&#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
+ [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   
   

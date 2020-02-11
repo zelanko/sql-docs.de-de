@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adf6b91b1c83f490ffe6c85fecd374fca7c1a085
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253182"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migration vom einheitlichen vom SharePoint-Modus (SSRS)
@@ -22,35 +22,35 @@ ms.locfileid: "75253182"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Einheitlicher Modus | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus  
   
-##  <a name="bkmk_native_to_sharepoint"></a>Reporting Services Migrationstool  
+##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services-Migrationstool  
  Das Tool unterstützt die Migration von Inhalten von einer Bereitstellung im einheitlichen Modus zu einer Bereitstellung im SharePoint-Modus. Das Tool unterstützt keine Migration von SharePoint-Modus zu SharePoint-Modus oder vom SharePoint-Modus zum einheitlichen Modus.  
   
- Weitere Informationen finden Sie unter [Reporting Services Migrations Tool](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560)).  
+ Weitere Informationen finden Sie unter [Reporting Services-Migrationstool](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ## <a name="use-script-to-migrate-content"></a>Migrieren von Inhalten mithilfe von Skripts  
  Wenn das Migrationstool Ihren Anforderungen nicht entspricht, können Sie die Berichtsserverdaten manuell migrieren. Im Folgenden sind die Schritte zusammengefasst, die Sie ausführen, um Berichtselemente von einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung zu einer anderen zu migrieren. Bei dieser Methode wird der einheitliche Modus oder der SharePoint-Modus als Quell- oder Zielserver unterstützt.  
   
 1.  Sichern und stellen Sie die Verschlüsselungsschlüssel wieder her. Dies ist der Schlüssel, der zum Verschlüsseln von Daten verwendet wird. Der Verschlüsselungsschlüssel wird außerdem zur Verschlüsselung von Kennwörtern verwendet, z. B. die für Datenquellenverbindungen gespeicherten Kennwörter. Kennwörter selbst können jedoch nicht migriert werden und müssen in der Zielumgebung erneut eingegeben werden.  
   
-2.  RSS-Skripts: ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ** Schreiben eines Visual Basic Skripts, das SOAP-Methoden des Report Server-Webdiensts zum Kopieren von Daten zwischen Datenbanken aufruft Verwenden Sie das Hilfsprogramm **RS.exe** , um das Skript auszuführen. RS.exe wird mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert.  
+2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS-Skripts:** Schreiben Sie ein Visual Basic-Skript, das SOAP-Methoden des Berichtsserver-Webdiensts aufruft, um Daten von einer Datenbank in eine andere Datenbank zu kopieren. Verwenden Sie das Hilfsprogramm **RS.exe** , um das Skript auszuführen. RS.exe wird mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert.  
   
     -   [Beispiel Reporting Services Skript "Rs. exe" zum Migrieren von Inhalten Zwischenberichts Servern](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). In den Themen wird erläutert, wie Sie das von CodePlex herunterladbare Beispielskript verwenden.  
   
     -   Das RSS-Beispielskript auf CodePlex finden Sie unter [Reporting Services-Skript "RS.exe" zum Migrieren von Inhalten von einem Berichtsserver zu einem anderen](https://azuresql.codeplex.com/releases/view/115207).  
   
-    -   [Skripterstellung und PowerShell mit Reporting Services](../tools/scripting-and-powershell-with-reporting-services.md)  
+    -   [Scripting and PowerShell with Reporting Services (Skripterstellung und PowerShell mit Reporting Services)](../tools/scripting-and-powershell-with-reporting-services.md)  
   
  In der folgenden Tabelle sind die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Objekte zusammengefasst, die Sie mithilfe von Skripts migrieren können:  
   
-|Objekt|Skripterstellung möglich|Kommentare|  
+|Object|Skripterstellung möglich|Kommentare|  
 |------------|---------------------|--------------|  
 |Berichte|Ja|Nach der Migration geben Sie die Kennwörter für Datenquellen erneut ein.|  
 |Datenquellen|Ja|Nach der Migration verknüpfen Sie Berichte erneut mit Datenquellen.|  
 |Modelle|Ja||  
-|DATASETS|Ja||  
+|Datasets|Ja||  
 |Berichtsteile||Nach der Migration überprüfen oder aktualisieren Sie den Pfad zu den Berichtsteilen.|  
 |Zeitpläne|Ja|Weitere Informationen finden Sie unter dem Thema zur ListSchedules-Methode [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
-|Abonnements|Ja|Weitere Informationen finden Sie in den [Methoden Abonnement und](../report-server-web-service/methods/subscription-and-delivery-methods.md) Übermittlungs Methoden der Listen Abonnements und der changeabonneptionowner-Methode<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
+|Abonnements|ja|Weitere Informationen finden Sie in den [Methoden Abonnement und](../report-server-web-service/methods/subscription-and-delivery-methods.md) Übermittlungs Methoden der Listen Abonnements und der changeabonneptionowner-Methode<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |Momentaufnahmen|||  
 ||||  
   

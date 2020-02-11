@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d82ab18ebf1a8b7771e6afd37dcd14ed58ed35c8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243022"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL-Debugger
@@ -37,25 +37,24 @@ ms.locfileid: "75243022"
   
      Wenn Sie sicher sind, dass in der gespeicherten Prozedur keine Fehler vorliegen, können Sie sie überspringen. Die Prozedur wird vollständig ausgeführt, und die Ergebnisse werden an den Code zurückgegeben.  
   
-     Wenn Sie eine gespeicherte Prozedur oder eine Funktion debuggen möchten, können Sie das Modul im Einzelschrittmodus ausführen. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnet ein neues Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors, das mit dem Quellcode für das Modul aufgefüllt wird, schaltet das Fenster in den Debugmodus und hält dann die Ausführung bei der ersten Anweisung im Modul an. Sie können dann durch den Modulcode navigieren, indem Sie z. B. Breakpoints festlegen oder den Code schrittweise durchlaufen.  
+     Wenn Sie eine gespeicherte Prozedur oder eine Funktion debuggen möchten, können Sie das Modul im Einzelschrittmodus ausführen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnet ein neues Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors, das mit dem Quellcode für das Modul aufgefüllt wird, schaltet das Fenster in den Debugmodus und hält dann die Ausführung bei der ersten Anweisung im Modul an. Sie können dann durch den Modulcode navigieren, indem Sie z. B. Breakpoints festlegen oder den Code schrittweise durchlaufen.  
   
  Weitere Informationen zum Navigieren im Code mithilfe des Debuggers finden Sie unter [Schrittweises Durchlaufen von Transact-SQL-Code](step-through-transact-sql-code.md).  
   
 ## <a name="viewing-debugger-information"></a>Anzeigen von Debuggerinformationen  
  Jedes Mal, wenn der Debugger die Ausführung bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung anhält, können Sie den aktuellen Ausführungsstatus in den folgenden Debuggerfenstern anzeigen:  
   
--   **** Lokal und **ansehen.** Diese Fenster zeigen die aktuell zugeordneten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrücke an. Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die zu einem einzelnen Skalarausdruck ausgewertet werden. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt die Anzeige von Ausdrücken, die auf [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen oder -Parameter oder auf die integrierten Funktionen verweisen, deren Namen mit @@ beginnen. Diese Fenster zeigen auch die Datenwerte an, die den Ausdrücken derzeit zugewiesen sind.  
+-   **Lokal** und **Überwachen** Diese Fenster zeigen die aktuell zugeordneten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrücke an. Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die zu einem einzelnen Skalarausdruck ausgewertet werden. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt die Anzeige von Ausdrücken, die auf [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen oder -Parameter oder auf die integrierten Funktionen verweisen, deren Namen mit @@ beginnen. Diese Fenster zeigen auch die Datenwerte an, die den Ausdrücken derzeit zugewiesen sind.  
   
--   **Schnell Überwachung.** In diesem Fenster wird der Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks angezeigt. Außerdem können Sie diesen Ausdruck in einem **Überwachen** Überwachungsfenster speichern.  
+-   **Schnellüberwachung.** In diesem Fenster wird der Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks angezeigt. Außerdem können Sie diesen Ausdruck in einem **Überwachen** Überwachungsfenster speichern.  
   
--   **Haltepunkte.** In diesem Fenster können die derzeit festgelegten Breakpoints angezeigt und verwaltet werden.  
+-   **Breakpoints.** In diesem Fenster können die derzeit festgelegten Breakpoints angezeigt und verwaltet werden.  
   
--   **-Aufrufstapel.** In diesem Fenster wird der aktuelle Ausführungsort angezeigt. Außerdem zeigt es Informationen über die Art und Weise an, in der die Ausführung vom ursprünglichen Abfrage-Editor-Fenster über Funktionen, gespeicherte Prozeduren oder Trigger geleitet wurde, um den aktuellen Ausführungsort zu erreichen.  
+-   **Aufrufliste.** In diesem Fenster wird der aktuelle Ausführungsort angezeigt. Außerdem zeigt es Informationen über die Art und Weise an, in der die Ausführung vom ursprünglichen Abfrage-Editor-Fenster über Funktionen, gespeicherte Prozeduren oder Trigger geleitet wurde, um den aktuellen Ausführungsort zu erreichen.  
   
--   **Ausgeben.** In diesem Fenster werden verschiedene Meldungen und Programmdaten angezeigt, wie z. B. Systemmeldungen des Debuggers.  
+-   **Ausgabe.** In diesem Fenster werden verschiedene Meldungen und Programmdaten angezeigt, wie z. B. Systemmeldungen des Debuggers.  
   
--   **Ergebnisse** und **Meldungen.** Diese Registerkarten im Abfrage-Editor-Fenster zeigen die Ergebnisse der zuvor ausgeführten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an.  
+-   **Ergebnisse** und **Meldungen** Diese Registerkarten im Abfrage-Editor-Fenster zeigen die Ergebnisse der zuvor ausgeführten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an.  
   
 ## <a name="transact-sql-debugger-tasks"></a>Transact-SQL-Debuggertasks  
   
@@ -64,9 +63,9 @@ ms.locfileid: "75243022"
 |Beschreibt das Konfigurieren des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers.|[Konfigurieren des Transact-SQL-Debuggers](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |Beschreibt, wie der Betrieb des Debuggers gestartet, angehalten und gesteuert wird.|[Ausführen des Transact-SQL-Debuggers](transact-sql-debugger.md)|  
 |Beschreibt die Verwendung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers, um Code in Einzelschritten auszuführen.|[Schrittweises Durchlaufen von Transact-SQL-Code](step-through-transact-sql-code.md)|  
-|Beschreibt die Verwendung des Debuggers, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Daten, z. B. Parameter und Variablen, und Systeminformationen anzuzeigen.|[Informationen zum Transact-SQL-Debugger](transact-sql-debugger-information.md)|  
+|Beschreibt die Verwendung des Debuggers, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Daten, z. B. Parameter und Variablen, und Systeminformationen anzuzeigen.|[Transact-SQL-Debuggerinformationen](transact-sql-debugger-information.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

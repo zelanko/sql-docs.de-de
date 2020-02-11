@@ -17,14 +17,14 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931173"
 ---
 # <a name="save-method"></a>Save-Methode
-Speichert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
+Speichert das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,40 +35,40 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameter  
  *Ziel*  
- Dies ist optional. Ein **Variant** , die den vollständigen Pfadnamen der Datei darstellt, in denen die **Recordset** gespeichert werden soll, oder ein Verweis auf eine **Stream** Objekt.  
+ Optional. Eine **Variante** , die den kompletten Pfadnamen der Datei darstellt, in der das **Recordset** gespeichert werden soll, oder einen Verweis auf ein **Stream** -Objekt.  
   
- *PersistFormat*  
- Dies ist optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der angibt, in dem das Format der **Recordset** (XML oder ADTG) gespeichert werden soll. Der Standardwert ist **AdPersistADTG**.  
+ *Persistformat*  
+ Optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der das Format angibt, in dem das **Recordset** gespeichert werden soll (XML oder ADTG). Der Standardwert ist **adPersistADTG**.  
   
-## <a name="remarks"></a>Hinweise  
- Die [Methode speichern](../../../ado/reference/ado-api/save-method.md) Methode kann nur aufgerufen werden, auf einem geöffneten **Recordset**. Verwenden der [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode, um spätere Wiederherstellung der **Recordset** aus *Ziel*.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Methode zum [Speichern der Methode](../../../ado/reference/ado-api/save-method.md) kann nur für ein offenes **Recordset**aufgerufen werden. Verwenden Sie die [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode, um das **Recordset** später aus dem *Ziel*wiederherzustellen.  
   
- Wenn die [Filtereigenschaft](../../../ado/reference/ado-api/filter-property.md) Eigenschaft ist aktiviert, die **Recordset**, und klicken Sie dann nur die Zeilen zugegriffen werden kann, unter dem Filter gespeichert werden. Wenn die **Recordset** hierarchisch aufgebaut ist, klicken Sie dann auf der aktuellen untergeordneten **Recordset** und seine untergeordneten Elemente gespeichert werden, einschließlich der übergeordneten **Recordset**. Wenn die Save-Methode eines untergeordneten Elements **Recordset** wird aufgerufen, das untergeordnete Element und alle zugehörigen untergeordneten Elemente werden gespeichert, das übergeordnete Element ist jedoch nicht.  
+ Wenn die Eigenschaft [Filter Eigenschaft](../../../ado/reference/ado-api/filter-property.md) für das **Recordset**wirksam ist, werden nur die Zeilen, auf die der Filter zugreifen kann, gespeichert. Wenn das **Recordset** hierarchisch ist, werden das aktuelle untergeordnete **Recordset** und seine untergeordneten Elemente gespeichert, einschließlich des übergeordneten **Recordsets**. Wenn die Save-Methode eines untergeordneten **Recordsets** aufgerufen wird, werden das untergeordnete Element und alle zugehörigen untergeordneten Elemente gespeichert, das übergeordnete Element ist jedoch nicht.  
   
- Beim ersten Sie speichern die **Recordset**, ist er optional an *Ziel*. Wenn Sie weglassen *Ziel*, eine neue Datei erstellt werden mit einem Namen, die auf den Wert der Source-Eigenschaft des festgelegt die **Recordset**.  
+ Wenn Sie das **Recordset**zum ersten Mal speichern, ist es optional, das *Ziel*anzugeben. Wenn Sie das *Ziel*weglassen, wird eine neue Datei mit einem Namen erstellt, der auf den Wert der Source-Eigenschaft des **Recordsets**festgelegt ist.  
   
- Lassen Sie *Ziel* anschließend aufgerufen **speichern** nach dem ersten Speichern oder einen Fehler zur Laufzeit erfolgt. Wenn Sie anschließend einen Aufruf **speichern** mit einem neuen *Ziel*, **Recordset** auf das neue Ziel gespeichert wird. Allerdings werden das neue Ziel und das ursprüngliche Ziel sowohl geöffnet sein.  
+ Lassen Sie das *Ziel* aus, wenn Sie anschließend " **Speichern** " nach dem ersten Speichern aufzurufen, oder ein Laufzeitfehler auftritt. Wenn Sie anschließend **Speichern** mit einem neuen *Ziel*aufzurufen, wird das **Recordset** im neuen Ziel gespeichert. Allerdings sind das neue Ziel und das ursprüngliche Ziel beide geöffnet.  
   
- **Speichern** schließt nicht die **Recordset** oder *Ziel*, sodass Sie fortfahren können, um die Arbeit mit der **Recordset** und die neuesten Änderungen zu speichern. *Ziel* bleibt bestehen, bis die **Recordset** geschlossen wird.  
+ Durch **Speichern** wird das **Recordset** oder das *Ziel*nicht geschlossen, sodass Sie weiterhin mit dem **Recordset** arbeiten und die neuesten Änderungen speichern können. Das *Ziel* bleibt geöffnet, bis das **Recordset** geschlossen ist.  
   
- Aus Gründen der Sicherheit der **speichern** Methode lässt nur die Verwendung von niedrigen und benutzerdefinierte Einstellungen aus einem Skript, das von Microsoft Internet Explorer ausgeführt werden.  
+ Aus Sicherheitsgründen ermöglicht die **Save** -Methode nur die Verwendung von niedrigen und benutzerdefinierten Sicherheitseinstellungen aus einem Skript, das von Microsoft Internet Explorer ausgeführt wird.  
   
- Wenn die **speichern** Methode wird aufgerufen, während eines asynchronen **Recordset** abzurufen, ausführen oder Aktualisieren der Vorgang wird ausgeführt, klicken Sie dann **speichern** wartet, bis der asynchrone Vorgang ist abgeschlossen.  
+ Wenn die **Save** -Methode während des asynchronen **Recordsets** zum Abrufen, ausführen oder Aktualisieren aufgerufen wird, wird die Wartezeit bis zum Abschluss des asynchronen Vorgangs **gespeichert** .  
   
- Datensätze gespeichert werden, beginnend mit der ersten Zeile der **Recordset**. Wenn die **speichern** -Methode abgeschlossen ist, wird die aktuelle Zeilenposition verschoben, in die erste Zeile des der **Recordset**.  
+ Datensätze werden ab der ersten Zeile des **Recordsets**gespeichert. Wenn die **Save** -Methode abgeschlossen ist, wird die aktuelle Zeilen Position in die erste Zeile des **Recordsets**verschoben.  
   
- Legen Sie für optimale Ergebnisse die [CursorLocation-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft **AdUseClient** mit **speichern**. Wenn Ihr Anbieter nicht alle Funktionen zum Speichern von unterstützt **Recordset** Objekten, die der Cursor-Dienst wird diese Funktionalität bereitstellen.  
+ Um optimale Ergebnisse zu erzielen, legen Sie die Eigenschaft für die [Cursor Location-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) mithilfe von **Save**auf **adUseClient** fest. Wenn Ihr Anbieter nicht alle Funktionen unterstützt, die zum Speichern von **Recordset** -Objekten erforderlich sind, stellt der Cursor Dienst diese Funktionalität bereit.  
   
- Wenn eine **Recordset** wird beibehalten, mit der **CursorLocation** -Eigenschaft auf festgelegt **AdUseServer**, die Updatefunktion für die **Recordset**ist beschränkt. In der Regel nur für einzelne Tabellen Updates, einfügungen und löschungen (hängt von Anbieterfunktionen) sind. Die [Resync-Methode](../../../ado/reference/ado-api/resync-method.md) Methode ist auch in dieser Konfiguration nicht verfügbar.  
+ Wenn ein **Recordset** persistent ist und die Eigenschaft **Cursor Location** auf **adeeserver**festgelegt ist, ist die Aktualisierungs Funktion für das **Recordset** eingeschränkt. In der Regel sind nur Aktualisierungen der einzelnen Tabelle, Einfügungen und Löschungen zulässig (abhängig von der Anbieter Funktionalität). Die Methode Methode der [erneuten Synchronisierung](../../../ado/reference/ado-api/resync-method.md) ist in dieser Konfiguration ebenfalls nicht verfügbar.  
   
 > [!NOTE]
->  Speichern einer **Recordset** mit **Felder** des Typs **AdVariant**, **AdIDispatch**, oder **AdIUnknown** ist nicht von ADO unterstützt und kann zu unvorhersehbare Ergebnissen führen.  
+>  Das Speichern eines **Recordsets** mit **Feldern** vom Typ " **advariant**", " **adidispatch**" oder " **adiunknown** " wird nicht von ADO unterstützt und kann zu unvorhersehbaren Ergebnissen führen.  
   
- Nur Filter in Form von Zeichenfolgen mit Kriterien (z. B. OrderDate > "12/31/1999") Auswirkungen auf den Inhalt, der eine persistierte **Recordset**. Filter, die mit einem Array von erstellten **Lesezeichen** oder mithilfe eines Werts aus der [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) wirkt sich nicht auf den Inhalt des beibehaltenen **Recordset**. Diese Regeln gelten für **Recordset**s, die mit einem clientseitigen oder serverseitigen Cursor erstellt.  
+ Nur Filter in Form von Kriterienzeichenfolgen (z. b. OrderDate > ' 12/31/1999 ') wirken sich auf den Inhalt eines persistent gespeicherten **Recordsets**aus. Filter, die mit einem Array von **Lesezeichen** erstellt wurden oder einen Wert aus dem [filtergroupum](../../../ado/reference/ado-api/filtergroupenum.md) verwenden, wirken sich nicht auf den Inhalt des beibehaltenen **Recordsets**aus. Diese Regeln gelten für **Recordsets**, die entweder mit Client seitigen oder serverseitigen Cursorn erstellt wurden.  
   
- Da die *Ziel* Parameter akzeptiert jedes Objekt, das die OLE DB-IStream-Schnittstelle unterstützt, können Sie speichern einen **Recordset** direkt an das ASP-Response-Objekt. Weitere Informationen finden Sie unter den **Speicherszenario für XML-Recordset**.  
+ Da der *Destination* -Parameter jedes Objekt akzeptieren kann, das die OLE DB IStream-Schnittstelle unterstützt, können Sie ein **Recordset** direkt im ASP-Antwortobjekt speichern. Weitere Informationen finden Sie im XML- **Recordset-persistenzszenario**.  
   
- Sie können auch speichern eine **Recordset** im XML-Format mit einer Instanz von einem MSXML-DOM-Objekt, wie in den folgenden Visual Basic-Code angezeigt wird:  
+ Sie können auch ein **Recordset** im XML-Format in einer Instanz eines MSXML-DOM-Objekts speichern, wie im folgenden Visual Basic Code gezeigt:  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  
@@ -83,9 +83,9 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  Zwei Einschränkungen gelten beim Speichern von hierarchischen Recordsets (Daten-Shapes) im XML-Format. Sie können nicht in XML gespeichert, wenn die hierarchische **Recordset** ausstehende Updates enthält und Sie können eine parametrisierte speichern hierarchische **Recordset**.  
+>  Beim Speichern hierarchischer Recordsets (Daten Formen) im XML-Format gelten zwei Einschränkungen. In XML kann nicht gespeichert werden, wenn das hierarchische **Recordset** ausstehende Updates enthält, und Sie können kein parametrisiertes hierarchisches **Recordset**speichern.  
   
- Ein **Recordset** gespeichert in XML ist Format gespeichert, mit UTF-8-Format. Wenn eine solche Datei in eine ADO-Stream geladen wird, das Stream-Objekt wird nicht versucht, öffnen Sie eine **Recordset** aus dem Stream, wenn die Charset-Eigenschaft des Streams auf den entsprechenden Wert für das UTF-8-Format festgelegt ist.  
+ Ein im XML-Format gespeichertes **Recordset** wird mit dem UTF-8-Format gespeichert. Wenn eine solche Datei in einen ADO-Stream geladen wird, versucht das Stream-Objekt nicht, ein **Recordset** aus dem Stream zu öffnen, es sei denn, die CharSet-Eigenschaft des Streams wird auf den entsprechenden Wert für das UTF-8-Format festgelegt.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -93,9 +93,9 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |-|-|  
 |[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Speichern Sie und öffnen Sie die Methode – Beispiel (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Speichern Sie und öffnen Sie die Methode – Beispiel (VC++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open Sie-Methode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für das Speichern und Öffnen von Methoden (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [Beispiel für das Speichern und Öffnen von Methoden (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
+ [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open-Methode (ADO-Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [SaveToFile-Methode](../../../ado/reference/ado-api/savetofile-method.md)

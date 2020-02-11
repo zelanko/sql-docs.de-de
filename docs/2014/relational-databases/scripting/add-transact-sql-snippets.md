@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244821"
 ---
 # <a name="add-transact-sql-snippets"></a>Hinzufügen von Transact-SQL-Ausschnitten
@@ -36,7 +36,7 @@ ms.locfileid: "75244821"
   
 2.  Wählen Sie das Menü **Extras** aus, und klicken Sie auf **Codeausschnitt-Manager**.  
   
-3.  Klicken Sie auf die Schaltfläche **Hinzufügen**.  
+3.  Klicken Sie auf die Schaltfläche **Hinzufügen** .  
   
 4.  Navigieren Sie zum Ordner, der die Codeausschnitte enthält, und klicken Sie auf die Schaltfläche **Ordner auswählen** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75244821"
   
 2.  Wählen Sie das Menü **Extras** aus, und klicken Sie auf **Codeausschnitt-Manager**.  
   
-3.  Klicken Sie auf die Schaltfläche **Importieren**.  
+3.  Klicken Sie auf die Schaltfläche **Import** (Importieren).  
   
 4.  Navigieren Sie zum Ordner, der den Ausschnitt enthält, klicken Sie auf die SNIPPET-Datei, und klicken Sie auf die Schaltfläche **Öffnen** .  
   
@@ -106,11 +106,11 @@ ms.locfileid: "75244821"
   
 3.  Wählen Sie das Menü **Extras** aus, und klicken Sie auf **Codeausschnitt-Manager**.  
   
-4.  Klicken Sie auf die Schaltfläche **Importieren**.  
+4.  Klicken Sie auf die Schaltfläche **Import** (Importieren).  
   
 5.  Navigieren Sie zum Ordner, der die Datei "TryCatch.snippet" enthält, klicken Sie auf die Datei "TryCatch.snippet", und klicken Sie auf die Schaltfläche **Öffnen** . Im Ordner **Eigene Codeausschnitte** sollte kein TryCatch-Ausschnitt vorhanden sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Einfügen von Transact-SQL-Umschließungs Ausschnitten](insert-surround-with-transact-sql-snippets.md)  
+ [Einfügen von Transact-SQL-Umschließungsausschnitten](insert-surround-with-transact-sql-snippets.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit Azure Sqldb (SybaseToSQL) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit Azure SQL-Datenbank (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,57 +10,57 @@ ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083475"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-DB (SybaseToSQL)
-Verwenden Sie die Connect zu Azure SQL-Datenbank (Dialogfeld), für die Verbindung der Azure SQL-Datenbank, die Sie migrieren möchten.  
+Verwenden Sie das Dialogfeld Verbindung mit Azure SQL-Datenbank herstellen, um eine Verbindung mit der Azure SQL DB-Datenbank herzustellen, die Sie migrieren möchten.  
   
-Zum Zugriff auf dieses Dialogfeld, in der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit Azure SQL-Datenbank**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **Wiederherstellen der Verbindung zur Azure SQL-Datenbank.**  
+Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü Datei die Option **mit Azure SQL**- **Datenbank** verbinden aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit der Azure SQL** -Datenbank her.  
   
-## <a name="options"></a>Optionen  
-**Servername**  
+## <a name="options"></a>Tastatur  
+**Server Name**  
   
-Wählen Sie aus, oder geben Sie den Servernamen für die Verbindung mit Azure SQL-Datenbank.  
+Wählen Sie den Server Namen für die Verbindung mit Azure SQL-Datenbank aus, oder geben Sie diesen  
   
 **Datenbank**  
   
-Wählen Sie aus, geben Sie ein oder **Durchsuchen** der Name der Datenbank.  
+Wählen **Sie den Daten** Banknamen aus, oder geben Sie ihn ein.  
   
 > [!IMPORTANT]  
-> SSMA für Sybase unterstützt keine Verbindung mit der master-Datenbank in Azure SQL-Datenbank.  
+> SSMA für Sybase unterstützt keine Verbindung mit der Master-Datenbank in Azure SQL-Datenbank.  
   
 **Benutzername**  
   
-Geben Sie den Benutzernamen, mit der SSMA mit der Azure SQL-Datenbank verbinden  
+Geben Sie den Benutzernamen ein, den SSMA zum Herstellen einer Verbindung mit der Azure SQL-Datenbank verwendet.  
   
 **Kennwort**  
   
-Geben Sie das Kennwort für den Benutzernamen ein.  
+Geben Sie das Kennwort für den Benutzernamen ein,  
   
-**Encrypt**  
+**Eingegebenen**  
   
-SSMA empfiehlt verschlüsselte Verbindung für Azure SQL-Datenbank.  
+SSMA empfiehlt eine verschlüsselte Verbindung mit Azure SQL-Datenbank.  
   
-## <a name="create-azure-database"></a>Erstellen von Azure-Datenbank  
-Wenn keine Datenbanken in Azure SQL-DB-Konto vorhanden sind, können Sie die erste Datenbank erstellen.  
+## <a name="create-azure-database"></a>Azure-Datenbank erstellen  
+Wenn sich keine Datenbanken im Azure SQL-DB-Konto befinden, können Sie die erste Datenbank erstellen.  
   
-Führen Sie die folgenden Schritte aus, um eine neue Datenbank zum ersten Mal erstellen,  
+Führen Sie die folgenden Schritte aus, um eine neue Datenbank zum ersten Mal zu erstellen:  
   
-1.  Klicken Sie auf die Schaltfläche zum Durchsuchen, die in Verbindung zu Azure SQL-Datenbank (Dialogfeld) vorhanden ist  
+1.  Klicken Sie auf die Schaltfläche Durchsuchen, die im Dialogfeld Verbindung mit Azure SQL-Datenbank herstellen vorhanden ist.  
   
-2.  Wenn keine Datenbanken vorhanden sind, werden die folgenden zwei Menüelemente angezeigt.  
+2.  Wenn keine Datenbanken vorhanden sind, werden die folgenden zwei Menü Elemente angezeigt.  
   
-    1.  **(keine Datenbanken gefunden.)**  die deaktiviert und ausgegraut, ständig  
+    1.  **(keine Datenbanken gefunden)** , die deaktiviert und ständig ausgegraut sind  
   
-    2.  **Erstellen Sie neue Datenbank** die ist nur aktiviert, wenn keine Datenbanken für Azure SQL-DB-Konto vorhanden sind. Nach dem Klicken auf dieses Menüelement, für Azure-Datenbank erstellen (Dialogfeld) mit Datenbanknamen und Größe vorhanden ist.  
+    2.  **Erstellen Sie eine neue Datenbank** , die nur aktiviert ist, wenn keine Datenbanken im Azure SQL-DB-Konto vorhanden sind. Wenn Sie auf dieses Menü Element klicken, ist das Dialogfeld Azure-Datenbank erstellen mit Datenbankname und-Größe vorhanden.  
   
-3.  Zum Zeitpunkt der Erstellung der Datenbank sind die folgenden beiden Parameter als Eingabe übergeben:  
+3.  Zum Zeitpunkt der Erstellung der Datenbank werden die folgenden beiden Parameter als Eingabe angegeben:  
   
     1.  **Datenbankname:** Geben Sie den Datenbanknamen ein.  
   
-    2.  **Größe der Datenbank:** Wählen Sie die Größe der Datenbank, die Sie benötigen, um in Azure SQL-DB-Konto zu erstellen.  
+    2.  **Datenbankgröße:** Wählen Sie die Datenbankgröße aus, die Sie im Azure SQL-DB-Konto erstellen müssen.  
   

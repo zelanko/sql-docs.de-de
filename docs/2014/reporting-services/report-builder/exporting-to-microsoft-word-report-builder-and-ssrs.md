@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244502"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "75244502"
   
  Spaltenberichte im Newsletterformat werden nicht in Word gerendert. Der Berichtshauptteil, Seitenhintergrundbilder und Farben werden nicht gerendert.  
   
-##  <a name="Pagination"></a>Paginierung  
+##  <a name="Pagination"></a> Paginierung  
  Nachdem der Bericht in Word geöffnet wurde, wird er auf Grundlage des Seitenformats erneut paginiert. Durch die erneute Paginierung können Seitenumbrüche an unerwünschten Stellen eingefügt werden. In einigen Fällen kann der exportierte Bericht zwei aufeinander folgende Seitenumbrüche in einer Zeile oder hinzugefügte leere Seiten enthalten. Sie können versuchen, die Paginierung von Word zu ändern, indem Sie die Seitenränder anpassen.  
   
  Dieser Renderer unterstützt nur logische Seitenumbrüche.  
@@ -57,7 +57,7 @@ ms.locfileid: "75244502"
 ##  <a name="DocumentProperties"></a>Dokumenteigenschaften  
  Der Word-Renderer schreibt die folgenden Metadaten in die DOCX-Datei.  
   
-|Berichtselementeigenschaften|Beschreibung|  
+|Berichtselementeigenschaften|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |Berichtstitel (Berichtstitel)|Titel|  
 |Autor des Berichts|Autor|  
@@ -82,7 +82,7 @@ ms.locfileid: "75244502"
   
  Um dieses Problem zu umgehen, verwenden Sie mehrere Textausführungen statt eines komplexen Ausdrucks, wenn Sie Ausdrücke in Fuß- und Kopfzeilen verwenden. Die folgenden beiden Ausdrücke sind äquivalent. Der Erste ist ein komplexer Ausdruck, der Zweite verwendet Textausführungen. Der Word-Renderer analysiert nur den zweiten Ausdruck erfolgreich.  
   
-##  <a name="Interactivity"></a>Interaktivität  
+##  <a name="Interactivity"></a> Interaktivität  
  Einige interaktive Elemente werden in Word unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
@@ -184,13 +184,13 @@ ms.locfileid: "75244502"
 ##  <a name="Differences"></a>Unterschiede zwischen dem Word-und dem Word 2003-Renderer  
  Es gibt keinen visuellen Unterschied zwischen Berichten, die mit dem Word- bzw. Word 2003-Renderer gerendert werden. Möglicherweise fallen Ihnen jedoch kleinere Unterschiede zwischen dem Word- und dem Word 2003-Format auf.  
   
-##  <a name="DeviceInfo"></a>Geräte Informationseinstellungen  
+##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, beispielsweise Hyperlinks und Drillthroughlinks auslassen oder alle Elemente erweitern, die unabhängig vom ursprünglichen Status des Elements beim Rendern aktiviert bzw. deaktiviert werden können. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [Word Device Information Settings](../word-device-information-settings.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhaltensweisen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

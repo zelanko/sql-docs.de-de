@@ -1,5 +1,5 @@
 ---
-title: Datenbereinigung
+title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,13 +10,13 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251766"
 ---
-# <a name="data-cleansing"></a>Datenbereinigung
+# <a name="data-cleansing"></a>Data Cleansing
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -98,14 +98,14 @@ ms.locfileid: "75251766"
   
  Beim Exportieren der bereinigten Daten auf der Seite **Exportieren** im Assistenten für die Bereinigung von Data Quality-Projekten können Sie angeben, ob die bereinigten Daten im standardisierten Format exportiert werden sollen, indem Sie das Kontrollkästchen **Ausgabe standardisieren** aktivieren. Standardmäßig werden die gereinigten Daten im standardisierten Format exportiert, das heißt, das Kontrollkästchen ist aktiviert. Weitere Informationen zum Exportieren der bereinigten Daten finden Sie unter [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a>Verwandte Aufgaben  
+##  <a name="Related"></a> Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt das Konfigurieren von Schwellenwerten für Bereinigungsaktivitäten.|[Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Beschreibt, wie Daten mithilfe der Wissenserstellung in DQS bereinigt werden.|[Bereinigen von Daten mit DQS-&#40;interner&#41; wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |Beschreibt, wie Daten mithilfe der Informationen des Verweisdatendiensts bereinigt werden.|[Bereinigen von Daten mit Verweis Daten &#40;externen&#41; Kenntnissen](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-|Beschreibt, wie eine Verbunddomäne gereinigt wird.|[Bereinigen von Daten in einer Verbund Domäne](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
+|Beschreibt, wie eine Verbunddomäne gereinigt wird.|[Bereinigen von Daten in einer Verbunddomäne](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Quality-Projekte &#40;DQS-&#41;](../data-quality-services/data-quality-projects-dqs.md)   

@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257468"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Datentyp Konvertierungen und die SQL: datatype-Anmerkung (SQLXML 4,0)
@@ -43,11 +43,11 @@ ms.locfileid: "75257468"
 |XSD-Datentyp|SQL Server-Konvertierung|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Datum|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|decimal|CONVERT(money, COLUMN)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Zeit|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Alle anderen|Keine zusätzliche Konvertierung|  
   
 > [!NOTE]  
@@ -58,27 +58,27 @@ ms.locfileid: "75257468"
   
 |SQL Server-Datentyp|XSD-Datentyp|  
 |--------------------------|-------------------|  
-|**bigint**|**long**|  
-|**ärer**|**base64Binary**|  
+|**BIGINT**|**lange**|  
+|**BINARY**|**base64Binary**|  
 |**bit**|**booleschen**|  
 |**Char**|**Schnür**|  
-|**DateTime**|**DateTime**|  
-|**mierte**|**mierte**|  
-|**Hafen**|**Maß**|  
+|**datetime**|**DateTime**|  
+|**Decimal**|**Decimal**|  
+|**float**|**double**|  
 |**Klang**|**base64Binary**|  
-|**wartenden**|**wartenden**|  
-|**money**|**mierte**|  
-|**NCHAR**|**Schnür**|  
+|**int**|**int**|  
+|**money**|**Decimal**|  
+|**nchar**|**Schnür**|  
 |**ntext**|**Schnür**|  
 |**nvarchar**|**Schnür**|  
-|**isch**|**mierte**|  
-|**wirkliche**|**Hafen**|  
+|**isch**|**Decimal**|  
+|**wirkliche**|**float**|  
 |**smalldatetime**|**DateTime**|  
-|**smallint**|**kurzem**|  
-|**smallmoney**|**mierte**|  
+|**smallint**|**short**|  
+|**SMALLMONEY**|**Decimal**|  
 |**sql_variant**|**Schnür**|  
 |**sysname**|**Schnür**|  
-|**Text**|**Schnür**|  
+|**text**|**Schnür**|  
 |**timestamp**|**DateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
@@ -191,7 +191,7 @@ ms.locfileid: "75257468"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B: Angeben des SQL-Datentyps mit "sql:datatype"  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Angeben des SQL-Datentyps mit "sql:datatype"  
  Ein funktionierendes Beispiel finden Sie unter Beispiel G in [XML Bulk Load examples &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In diesem Beispiel wird ein GUID-Wert, der "{" und "}" enthält, massengeladen. Das Schema in diesem Beispiel gibt den **SQL: datatype** -Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, um den Datentyp als **uniqueidentifier**zu identifizieren. In diesem Beispiel wird veranschaulicht, wann **SQL: datatype** im Schema angegeben werden muss.  
   
   

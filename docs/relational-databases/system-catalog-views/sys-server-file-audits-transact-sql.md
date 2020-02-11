@@ -1,5 +1,5 @@
 ---
-title: Sys. server_file_audits (Transact-SQL) | Microsoft-Dokumentation
+title: sys. server_file_audits (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,45 +20,45 @@ ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133134"
 ---
-# <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
+# <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält erweiterte Informationen über den dateiüberwachungstyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Enthält erweiterte Informationen über den Datei Überwachungstyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|Die ID der Überwachung.|  
-|NAME|**sysname**|Der Name der Überwachung.|  
+|name|**sysname**|Der Name der Überwachung.|  
 |audit_guid|**uniqueidentifier**|GUID der Überwachung.|  
 |create_date|**datetime**|Das UTC-Datum, an dem die Dateiüberwachung erstellt wurde.|  
-|modify_date|**datatime**|Das UTC-Datum, an dem die Dateiüberwachung zuletzt geändert wurde.|  
+|modify_date|**DataTime**|Das UTC-Datum, an dem die Dateiüberwachung zuletzt geändert wurde.|  
 |principal_id|**int**|Die ID des Besitzers der Überwachung, wie sie auf dem Server registriert wurde.|  
-|Typ|**char(2)**|Überwachungstyp:<br /><br /> 0 = NT-Sicherheitsereignisprotokoll<br /><br /> 1 = NT-Anwendungsereignisprotokoll<br /><br /> 2 = Datei auf Dateisystem|  
-|type_desc|**nvarchar(60)**|Beschreibung des Überwachungstyps.|  
+|type|**char (2)**|Überwachungstyp:<br /><br /> 0 = NT-Sicherheitsereignisprotokoll<br /><br /> 1 = NT-Anwendungsereignisprotokoll<br /><br /> 2 = Datei auf Dateisystem|  
+|type_desc|**nvarchar (60)**|Beschreibung des Überwachungstyps.|  
 |on_failure|**tinyint**|Bei Fehlerbedingung:<br /><br /> 0 = Weiter<br /><br /> 1 = Serverinstanz herunterfahren<br /><br /> 2 = Fehler bei Vorgang|  
-|on_failure_desc|**nvarchar(60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
+|on_failure_desc|**nvarchar (60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = Deaktiviert<br /><br /> 1 = Aktiviert|  
 |queue_delay|**int**|Vorgeschlagene maximale Wartezeit in Millisekunden, bevor auf den Datenträger geschrieben wird. Wenn 0, garantiert die Überwachung einen Schreibvorgang, bevor das Ereignis fortgesetzt werden kann.|  
-|predicate|**nvarchar(8000)**|Prädikatausdruck, der auf das Ereignis angewendet wird.|  
-|max_file_size|**bigint**|Maximale Größe der Überwachungsdatei in MB:<br /><br /> 0 = Unbegrenzt/Nicht anwendbar auf den ausgewählten Überwachungstyp.|  
+|predicate|**nvarchar (8000)**|Prädikatausdruck, der auf das Ereignis angewendet wird.|  
+|max_file_size|**BIGINT**|Maximale Größe der Überwachungsdatei in MB:<br /><br /> 0 = Unbegrenzt/Nicht anwendbar auf den ausgewählten Überwachungstyp.|  
 |max_rollover_files|**int**|Maximale Anzahl von Dateien zur Verwendung mit der Rolloveroption.|  
 |max_files|**int**|Maximale Anzahl von Dateien zur Verwendung ohne die Rolloveroption.|  
 |reserved_disk_space|**int**|Pro Datei zu reservierender Speicherplatz.|  
 |log_file_path|**nvarchar(260)**|Pfad zum Speicherort der Überwachung. Dateipfad für Dateiüberwachung, Anwendungsprotokollpfad für Anwendungsprotokollüberwachung.|  
-|log_file_name|**nvarchar(260)**|Basisname für die in CREATE AUDIT DDL angegebene Protokolldatei. Die Base_log_name-Datei wird eine inkrementelle Zahl als Suffix an den Namen der Protokolldatei erstellen hinzugefügt.|  
+|log_file_name|**nvarchar(260)**|Basisname für die in CREATE AUDIT DDL angegebene Protokolldatei. Der base_log_name Datei wird eine inkrementelle Zahl als Suffix hinzugefügt, um den Namen der Protokolldatei zu erstellen.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale mit den **ALTER ANY SERVER AUDIT** oder **VIEW ANY DEFINITION** -Berechtigung haben Zugriff auf diese Katalogsicht. Darüber hinaus der Prinzipal nicht verweigert werden muss **VIEW ANY DEFINITION** Berechtigung.  
+ Prinzipale mit der Berechtigung **Alter any Server Audit** oder **View any Definition** haben Zugriff auf diese Katalog Sicht. Außerdem darf dem Prinzipal die **View any Definition** -Berechtigung nicht verweigert werden.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
@@ -71,7 +71,7 @@ ms.locfileid: "68133134"
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [Sys. server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys. server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
  [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   

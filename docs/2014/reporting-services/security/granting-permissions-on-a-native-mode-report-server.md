@@ -22,12 +22,12 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101941"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76971392"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bestimmt mithilfe der rollenbasierten Autorisierung und eines Authentifizierungssubsystems, wer Vorgänge ausführen und auf Elemente auf einem Berichtsserver zugreifen kann. Die rollenbasierte Autorisierung teilt die Aktionen, die ein Benutzer oder eine Gruppe ausführen kann, in Rollen ein. Die Authentifizierung basiert auf der integrierten Windows-Authentifizierung oder auf einem von Ihnen bereitgestellten benutzerdefinierten Authentifizierungsmodul. Bei beiden Authentifizierungstypen können vordefinierte oder benutzerdefinierte Rollen verwendet werden.  
@@ -53,10 +53,8 @@ ms.locfileid: "66101941"
 >  Wenn Sie einen Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert haben, müssen Sie die Berechtigungen auf der SharePoint-Website festlegen, um den Zugriff auf Berichtsserverelemente zu gewähren. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## <a name="who-sets-permissions"></a>Wer Berechtigungen festgelegt  
- Anfänglich können nur Benutzer, die Mitglieder der lokalen Administratorgruppe sind, auf einen Berichtsserver zugreifen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit zwei Standardrollenzuweisungen installiert, die Zugriff auf Element- und auf Systemebene für Mitglieder der lokalen Administratorgruppe gewähren. Mithilfe dieser integrierten Rollenzuweisungen können lokale Administratoren anderen Benutzern Zugriff auf den Berichtsserver gewähren und Berichtsserverelemente verwalten. Die integrierten Rollenzuweisungen können nicht gelöscht werden. Ein lokaler Administrator verfügt immer über die Berechtigung zur vollständigen Verwaltung einer Berichtsserverinstanz.  
-  
- Da Vollberechtigungen für einen Berichtsserver Berechtigungen auf Element- und Systemebene umfassen, wird ein lokaler Administrator folgenden Rollen zugewiesen:  
-  
+ Anfänglich können nur Benutzer, die Mitglieder der lokalen Administratorgruppe sind, auf einen Berichtsserver zugreifen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit zwei Standardrollenzuweisungen installiert, die Zugriff auf Element- und auf Systemebene für Mitglieder der lokalen Administratorgruppe gewähren. Lokale Administratoren können diese integrierten Rollenzuweisungen verwenden, um anderen Benutzern Zugriff auf den Berichts Server zu gewähren und Berichts Server Elemente zu verwalten. Die integrierten Rollenzuweisungen können nicht gelöscht werden. Ein lokaler Administrator verfügt immer über die Berechtigung zur vollständigen Verwaltung einer Berichtsserverinstanz.  
+ 
  Bevor eine Berichtsserverinstanz auf einem lokalen Computer, auf dem Windows Vista oder Windows Server 2008 ausgeführt wird, verwaltet werden kann, sind zusätzliche Konfigurationsschritte erforderlich. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="how-permissions-are-stored"></a>Wie Berechtigungen gespeichert werden  
@@ -65,17 +63,17 @@ ms.locfileid: "66101941"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>Aufgaben und Tools zum Verwalten von Berechtigungen  
  Verwenden Sie die folgenden Tools, um Rollendefinitionen und -zuweisungen zu verwalten.  
   
-|Tool|Richtlinienübersicht|  
+|Tool|Aufgaben|  
 |----------|-----------|  
 |Management Studio - zum Anzeigen, Ändern, Erstellen und Löschen von Rollendefinitionen|[Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
 |Berichts-Manager - zum Zuweisen von Benutzern und Gruppen zu Rollen|[Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vordefinierte Rollen](role-definitions-predefined-roles.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentifizierung mit dem Berichtsserver](authentication-with-the-report-server.md)   
- (create-and-manage-role-assignments.md)   
+ (Create-and-manage-role-assignments.MD)   
  [Sicherheit und Schutz für Reporting Services](reporting-services-security-and-protection.md)   
- [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

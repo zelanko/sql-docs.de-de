@@ -1,5 +1,5 @@
 ---
-title: Katalogfunktionen in ODBC | Microsoft-Dokumentation
+title: Katalog Funktionen in ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,34 +14,34 @@ ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8cd46fbc8f633ef31f00fa60ced885f9455f185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68062733"
 ---
 # <a name="catalog-functions-in-odbc"></a>Katalogfunktionen in ODBC
-ODBC enthält die folgenden Katalogfunktionen:  
+ODBC enthält die folgenden Katalog Funktionen:  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
-|**SQLTables**|Gibt eine Liste der Kataloge, Schemas, Tabellen und Tabellentypen in der Datenquelle zurück.|  
-|**SQLColumns**|Gibt eine Liste der Spalten in einer oder mehreren Tabellen zurück.|  
-|**SQLStatistics**|Gibt eine Liste der Statistiken zu einer einzelnen Tabelle. Gibt auch eine Liste von Indizes dieser Tabelle zugeordnet.|  
-|**SQLSpecialColumns**|Gibt eine Liste der Spalten, die eine Zeile in einer einzelnen Tabelle eindeutig identifiziert. Gibt auch eine Liste der Spalten, in dieser Tabelle, die automatisch aktualisiert werden.|  
-|**SQLPrimaryKeys**|Gibt eine Liste der Spalten, die den Primärschlüssel einer Tabelle zu erstellen.|  
-|**SQLForeignKeys**|Gibt eine Liste von Fremdschlüsseln in einer einzelnen Tabelle oder eine Liste von Fremdschlüsseln in anderen Tabellen, die auf einer einzelnen Tabelle verweisen zurück.|  
-|**SQLTablePrivileges**|Gibt eine Liste der Berechtigungen, die einer oder mehreren Tabellen zugeordnet.|  
-|**SQLColumnPrivileges**|Gibt eine Liste der Berechtigungen, die eine oder mehrere Spalten in einer einzelnen Tabelle zugeordnet sind.|  
-|**SQLProcedures**|Gibt eine Liste der Verfahren in der Datenquelle zurück.|  
-|**SQLProcedureColumns**|Gibt eine Liste von Eingabe-und Ausgabeparameter, der Rückgabewert und die Spalten im Resultset einer einzigen Prozedur zurück.|  
-|**SQLGetTypeInfo**|Gibt eine Liste der SQL-Datentypen, die von der Datenquelle unterstützt. Diese Datentypen werden in der Regel in verwendet **CREATE TABLE** und **ALTER TABLE** Anweisungen.|  
+|**SQLTables**|Gibt eine Liste von Katalogen, Schemas, Tabellen oder Tabellentypen in der Datenquelle zurück.|  
+|**SQLColumns**|Gibt eine Liste von Spalten in einer oder mehreren Tabellen zurück.|  
+|**'SQLStatistics'**|Gibt eine Liste von Statistiken zu einer einzelnen Tabelle zurück. Gibt außerdem eine Liste von Indizes zurück, die dieser Tabelle zugeordnet sind.|  
+|**'SQLSpecialColumns'**|Gibt eine Liste von Spalten zurück, die eine Zeile in einer einzelnen Tabelle eindeutig identifiziert. Gibt auch eine Liste der Spalten in dieser Tabelle zurück, die automatisch aktualisiert werden.|  
+|**SQLPrimaryKeys**|Gibt eine Liste von Spalten zurück, die den Primärschlüssel einer einzelnen Tabelle bilden.|  
+|**SQLForeignKeys**|Gibt eine Liste von Fremdschlüsseln in einer einzelnen Tabelle oder eine Liste von Fremdschlüsseln in anderen Tabellen zurück, die auf eine einzelne Tabelle verweisen.|  
+|**SQLTablePrivileges**|Gibt eine Liste der Berechtigungen zurück, die einer oder mehreren Tabellen zugeordnet sind.|  
+|**SQLColumnPrivileges**|Gibt eine Liste von Berechtigungen zurück, die einer oder mehreren Spalten in einer einzelnen Tabelle zugeordnet sind.|  
+|**'SQLProcedures'**|Gibt eine Liste der Prozeduren in der Datenquelle zurück.|  
+|**SQLProcedureColumns**|Gibt eine Liste von Eingabe-und Ausgabeparametern, den Rückgabewert und die Spalten im Resultset einer einzelnen Prozedur zurück.|  
+|**SQLGetTypeInfo**|Gibt eine Liste der SQL-Datentypen zurück, die von der Datenquelle unterstützt werden. Diese Datentypen werden im Allgemeinen in **CREATE TABLE** -und **ALTER TABLE** -Anweisungen verwendet.|  
   
- Da **SQLTables**, **SQLColumns**, **SQLStatistics**, und **SQLSpecialColumns** entsprechen die Open Group-CLI und **SQLGetTypeInfo** entspricht dem ISO-92-Befehlszeilenschnittstelle, die sie von den meisten-Treibern implementiert werden. Die übrigen Katalogfunktionen sind in der ODBC-Konformitätsgrad.  
+ Da **SQLTables**, **SQLColumns**, **SQLStatistics**und **SQLSpecialColumns** der Open Group-CLI entsprechen und **SQLGetTypeInfo** der ISO 92-CLI entspricht, werden Sie von den meisten Treibern implementiert. Die verbleibenden Katalog Funktionen befinden sich im ODBC-Konformitäts Grad.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Daten, die von Katalogfunktionen zurückgegeben werden](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)  
+-   [Von Katalogfunktionen zurückgegebene Daten](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)  
   
 -   [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)  
   

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243293"
 ---
 # <a name="search-documents-interactively"></a>Interaktives Durchsuchen von Dokumenten
-  Mithilfe des Dialog Felds Suchen **und ersetzen** können Sie eine oder mehrere geöffnete Dateien oder Fenster durchsuchen und die Such Übereinstimmungen nacheinander durchsuchen. Bei dieser Technik können Sie einzelne Suchübereinstimmungen im Kontext der jeweiligen Textpassage überprüfen. Außerdem können Sie Massensuchvorgänge ausführen und Suchübereinstimmungen über das Dialogfeld **Suchen und Ersetzen** im Berichtsformat überprüfen.  
+  Mithilfe des Dialogfelds **Suchen und Ersetzen** können Sie einzelne oder mehrere geöffnete Dateien oder Fenster durchsuchen und sich einzeln durch die Suchübereinstimmungen bewegen. Bei dieser Technik können Sie einzelne Suchübereinstimmungen im Kontext der jeweiligen Textpassage überprüfen. Außerdem können Sie Massensuchvorgänge ausführen und Suchübereinstimmungen über das Dialogfeld **Suchen und Ersetzen** im Berichtsformat überprüfen.  
   
 ### <a name="to-search-all-open-documents"></a>So durchsuchen Sie alle geöffneten Dokumente  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75243293"
   
 5.  Klicken Sie auf **Ersetzen**, und klicken Sie wiederholt auf **Ersetzen** , bis die letzte Übereinstimmung in der letzten Datei ersetzt wurde. Wenn Sie eine Übereinstimmung auslassen möchten, die nicht ersetzt werden soll, klicken Sie auf **Weitersuchen** .  
   
-     – oder –  
+     Oder  
   
      Wählen Sie die Option **Alle ersetzen** aus, um alle Übereinstimmungen zu ersetzen. In einem Meldungsfeld wird die Gesamtanzahl der Ersetzungen angezeigt.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75243293"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Inkrementelles Durchsuchen eines aktiven Dokuments](search-an-active-document-incrementally.md)   
- [Suchen und ersetzen](search-and-replace.md)   
+ [Suchen und Ersetzen](search-and-replace.md)   
  [Durchsuchen von Dokumenten mithilfe von Ergebnislisten](search-documents-using-results-lists.md)   
  [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md)   
  [Suchen von Text mit regulären Ausdrücken](search-text-with-regular-expressions.md)  

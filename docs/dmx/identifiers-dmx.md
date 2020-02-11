@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074813"
 ---
 # <a name="identifiers-dmx"></a>Bezeichner (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Alle Objekte in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] muss einen Bezeichner haben. Der Name eines Objekts ist dessen Bezeichner. Server, Datenbanken und Datenbankenobjekte (Datenquellen, Datenquellensichten, Cubes, Dimensionen, Miningmodelle usw.) haben Bezeichner.  
+  Alle Objekte in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] müssen über einen Bezeichner verfügen. Der Name eines Objekts ist dessen Bezeichner. Server, Datenbanken und Datenbankenobjekte (Datenquellen, Datenquellensichten, Cubes, Dimensionen, Miningmodelle usw.) haben Bezeichner.  
   
  In Data Mining-Erweiterungen (DMX) gibt es zwei Klassen von Bezeichnern:  
   
@@ -28,8 +28,8 @@ ms.locfileid: "68074813"
   
  Ein Objektbezeichner wird erstellt, wenn Sie das Objekt definieren. Sie verwenden den Bezeichner dann dazu, auf das Objekt zu verweisen. Ein Bezeichner kann bis zu 100 Zeichen lang sein.  
   
-##  <a name="RegularIdentifiers"></a> Reguläre Bezeichner  
- Reguläre Bezeichner in DMX entsprechen den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Regeln für das Format von Bezeichnern. Für einen regulären Bezeichner sind in DMX keine Begrenzungszeichen erforderlich. Es folgt ein Beispiel für eine DMX-Anweisung, die einen regulären Bezeichner ohne Trennzeichen verwendet:  
+##  <a name="RegularIdentifiers"></a>Reguläre Bezeichner  
+ Reguläre Bezeichner in DMX entsprechen den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Regeln für das Format von Bezeichnern. Für einen regulären Bezeichner sind in DMX keine Begrenzungszeichen erforderlich. Im folgenden finden Sie ein Beispiel für eine DMX-Anweisung, die einen regulären, nicht Begrenzungs Bezeichner verwendet:  
   
 ```  
 SELECT * FROM Clustering.CONTENT;  
@@ -40,25 +40,25 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  Das erste Zeichen eines regulären Bezeichners muss eines der folgenden Zeichen sein:  
   
-    -   Ein Buchstabe gemäß Unicode-Standard 2.0. Dazu gehören die lateinischen Zeichen von a bis z und von A bis Z sowie Buchstaben aus anderen Sprachen.  
+    -   Ein Buchstabe gemäß Definition durch den Unicode-Standard 2,0. Dazu gehören die lateinischen Zeichen von a bis z und von A bis Z sowie Buchstaben aus anderen Sprachen.  
   
     -   Ein Unterstrich (_)  
   
 2.  Im Anschluss daran können die folgenden Zeichen verwendet werden:  
   
-    -   Buchstaben, wie in Unicode-Standard 2.0 definiert.  
+    -   Im Unicode-Standard 2,0 definierte Buchstaben.  
   
     -   Dezimalzahlen aus dem lateinischen Grundalphabet oder anderen nationalen Schriften.  
   
     -   Ein Unterstrich (_)  
   
-3.  Der Bezeichner darf kein reserviertes DMX-Wort sein. Bei reservierten Wörtern wird in DMX nicht nach Groß-/Kleinschreibung unterschieden. Weitere Informationen finden Sie unter [reservierte Schlüsselwörter &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md).  
+3.  Der Bezeichner darf kein reserviertes DMX-Wort sein. Bei reservierten Wörtern wird in DMX nicht nach Groß-/Kleinschreibung unterschieden. Weitere Informationen finden Sie unter [reservierte Schlüsselwörter &#40;DMX-&#41;](../dmx/reserved-keywords-dmx.md).  
   
 4.  Der Bezeichner darf keine eingebetteten Leerzeichen oder Sonderzeichen enthalten.  
   
  Wenn Sie in DMX-Anweisungen Bezeichner verwenden, die nicht diesen Regeln entsprechen, müssen Sie diese Bezeichner in eckige Klammern setzen.  
   
-##  <a name="DelimitedIdentifiers"></a> Begrenzungsbezeichner  
+##  <a name="DelimitedIdentifiers"></a>Begrenzungs Bezeichner  
  Begrenzungsbezeichner sind in eckige Klammern ([ ]) eingeschlossen.  Das folgende Beispiel besteht aus einer DMX-Anweisung mit einem Begrenzungsbezeichner, der diesen Regeln entspricht.  
   
 ```  
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Wenn Sie reservierte Wörter für Objektnamen oder Teile von Objektnamen verwenden.  
   
-     Es empfiehlt sich, keine reservierten Schlüsselwörter als Objektnamen zu verwenden. Datenbanken, die Aktualisierung von früheren Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die Wörter, die nicht reserviert waren in der früheren Version von einfügen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aber zu den reservierten Wörtern für[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Bis Sie den Namen des Objekts ggf. ändern, können Sie mit einem Begrenzungsbezeichner auf ein solches Objekt verweisen.  
+     Es empfiehlt sich, keine reservierten Schlüsselwörter als Objektnamen zu verwenden. Datenbanken, die Sie von früheren Versionen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] von aktualisieren, enthalten möglicherweise Bezeichner, die Wörter enthalten, die in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] früheren Version von nicht reserviert waren[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], für die jedoch reservierte Wörter sind. Bis Sie den Namen des Objekts ggf. ändern, können Sie mit einem Begrenzungsbezeichner auf ein solches Objekt verweisen.  
   
 -   Wenn Sie Zeichen verwenden, die nicht als qualifizierte Bezeichner aufgeführt sind.  
   
@@ -95,15 +95,15 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>Begrenzen von mehrteiligen Bezeichnern  
  Wenn Sie vollqualifizierte Objektnamen verwenden, ist es u. U. erforderlich, mehr als einen der Bezeichner, aus denen sich der Objektname zusammensetzt, zu begrenzen. Sie müssen jeden Bezeichner einzeln begrenzen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Struktur und Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Syntax Elemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Operator Verweis](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Syntax Konventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Struktur und Verwendung von DMX-Vorhersage Abfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Grundlegendes zur SELECT-Anweisung (DMX)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

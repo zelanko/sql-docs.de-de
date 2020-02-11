@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189829"
 ---
 # <a name="alert-properties-history-page"></a>Warnungseigenschaften (Seite Verlauf)
-  Mithilfe dieser Seite können Sie den Verlauf von Agentwarnungen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
+  Verwenden Sie diese Seite, um den Verlauf von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen anzuzeigen und zu ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Datum der letzten Warnung**  
  Zeigt das Datum, an dem das angegebenen Ereignis zuletzt auftrat, bzw. **(Nie aufgetreten)** an, wenn das Ereignis seit Erstellung des Alarms nicht aufgetreten ist.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68189829"
  **Anzahl zurücksetzen**  
  Setzt die Informationen auf dieser Seite zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [Benachrichtigungen](alerts.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Warnungen](alerts.md)  
   
   

@@ -13,24 +13,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154775"
 ---
-# <a name="connect-to-azure-storage-restore"></a>Verbindung mit Azure Storage herstellen (Wiederherstellen)
-  Mit dem Dialogfeld können Sie die Verbindung mit den Azure-Speicherkonto Informationen angeben, um den Dateispeicher im Azure-Speicherkonto abzurufen. Nachdem Sie die erforderlichen Informationen angegeben haben, klicken Sie auf **verbinden** , um die Verbindung mit dem Azure-Speicher herzustellen.  
+# <a name="connect-to-azure-storage-restore"></a>Verbinden mit Azure Storage (Wiederherstellen)
+  Über das Dialogfeld können Sie die Verbindung zum Azure-Speicherkonto angeben, um den Dateispeicher im Azure-Speicherkonto abzurufen. Nachdem Sie die erforderlichen Informationen angegeben haben, klicken Sie auf **Verbinden**, um die Verbindung zum Azure-Speicher herzustellen.  
   
-## <a name="azure-storage-account"></a>Azure-Speicherkonto  
+## <a name="azure-storage-account"></a>Azure Storage-Konto  
  **Speicherkonto**  
- Wählen Sie den Namen des Azure-Speicher Kontos aus, das Sie verwenden möchten, oder geben Sie ihn ein. Im Dropdownfeld werden die zuvor verwendeten Konten aufgeführt.  
+ Geben Sie den Namen des Azure-Speicherkontos an, das Sie verwenden möchten. Im Dropdownfeld werden die zuvor verwendeten Konten aufgeführt.  
   
  **Kontoschlüssel**  
- Geben Sie den Zugriffsschlüssel des Azure-Speicher Kontos an.  
+ Geben Sie den Zugriffsschlüssel für das Azure-Speicherkonto an.  
   
  **Sichere Endpunkte (HTTPS) verwenden** – Kontrollkästchen  
- Wählen Sie diese Option aus, um eine sichere Verbindung mit Azure Storage herzustellen: empfohlen.  
+ Wählen Sie diese Option, um eine sichere Verbindung zu Azure Storage herzustellen (empfohlen).  
   
  **Kontoschlüssel speichern** – Kontrollkästchen  
  Aktivieren Sie dieses Kontrollkästchen, wenn SQL Server den Zugriffsschlüssel für dieses Speicherkonto speichern soll.  

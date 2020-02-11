@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e2c29e97a360b9e595b972643645e2e8d549c67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892017"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle
@@ -27,30 +27,30 @@ ms.locfileid: "68892017"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Einheitlicher Modus &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint-Modus|  
   
  **In diesem Thema:**  
   
--   [Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle (einheitlicher Modus)](#bkmk_stored_credentials_data_source_native)  
+-   [Konfigurieren gespeicherter Anmelde Informationen für eine Berichts spezifische Datenquelle (einheitlicher Modus)](#bkmk_stored_credentials_data_source_native)  
   
--   [Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle (SharePoint-Modus)](#bkmk_stored_credentials_data_source_sharepoint)  
+-   [Konfigurieren gespeicherter Anmelde Informationen für eine Berichts spezifische Datenquelle (SharePoint-Modus)](#bkmk_stored_credentials_data_source_sharepoint)  
   
--   [Konfigurieren von gespeicherten Anmeldeinformationen für eine freigegebene Datenquelle (einheitlicher Modus)](#bkmk_stored_credentials_shared_data_source_native)  
+-   [Konfigurieren gespeicherter Anmelde Informationen für eine freigegebene Datenquelle (einheitlicher Modus)](#bkmk_stored_credentials_shared_data_source_native)  
   
--   [Konfigurieren von gespeicherten Anmeldeinformationen für eine freigegebene Datenquelle (SharePoint-Modus)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
+-   [Konfigurieren gespeicherter Anmelde Informationen für eine freigegebene Datenquelle (SharePoint-Modus)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
-##  <a name="bkmk_top"></a> Sicherheitsrichtlinienanforderungen für gespeicherte Anmeldeinformationen  
- ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Für das Konto, das Sie für gespeicherte Anmeldeinformationen verwenden, muss eine der folgenden Sicherheitsrichtlinien auf dem Berichtsserver konfiguriert sein. Es wird empfohlen, dass Sie die Richtlinie mit den mindestens erforderlichen Berechtigungen für Ihre Umgebung auswählen.  
+##  <a name="bkmk_top"></a>Sicherheitsrichtlinien Anforderungen für gespeicherte Anmelde Informationen  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Es ist erforderlich, dass das Konto, das Sie für gespeicherte Anmelde Informationen verwenden, für eine der folgenden Sicherheitsrichtlinien auf dem Berichts Server konfiguriert ist. Es wird empfohlen, dass Sie die Richtlinie mit den mindestens erforderlichen Berechtigungen für Ihre Umgebung auswählen.  
   
-1.  **Lokal anmelden zulassen**. Weitere Informationen finden Sie unter [Lokal anmelden zulassen](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Lokale Anmeldung zulassen** Weitere Informationen finden Sie unter [Lokal anmelden zulassen](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Anmelden als Stapelverarbeitungsauftrag**. Weitere Informationen finden Sie unter [Anmelden als Stapelverarbeitungsauftrag](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Melden Sie sich als Batch Auftrag an**. Weitere Informationen finden Sie unter [Anmelden als Stapelverarbeitungsauftrag](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
 3.  Allgemeine Informationen zu Richtlinien finden Sie unter [Bearbeiten von Sicherheitseinstellungen für ein Gruppenrichtlinienobjekt](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
-##  <a name="bkmk_stored_credentials_data_source_native"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle (einheitlicher Modus)  
+##  <a name="bkmk_stored_credentials_data_source_native"></a>Konfigurieren gespeicherter Anmelde Informationen für eine Berichts spezifische Datenquelle (einheitlicher Modus)  
   
-1.  Navigieren Sie im Berichts-Manager im einheitlichen Modus zu dem Ordner, der den Bericht enthält. Klicken Sie auf das Kontextmenüelement ![Kontextmenü im Berichts-Manager für SSRS-Elemente](../media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items").  
+1.  Navigieren Sie im Berichts-Manager im einheitlichen Modus zu dem Ordner, der den Bericht enthält. Klicken Sie ![im Berichts-Manager für SSRS-Elemente](../media/ssrs-report-manager-item-context-menu.png "Kontextmenü im Berichts-Manager für SSRS-Elemente")auf das Kontextmenü Element Kontextmenü.  
   
 2.  Klicken Sie auf **Verwalten** und dann auf **Datenquellen**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68892017"
   
 4.  Wählen Sie in der Liste **Datenquellentyp** die Datenverarbeitungserweiterung aus, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
   
-5.  Geben Sie in das Feld **Verbindungszeichenfolge**die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] hergestellt wird:  
+5.  Geben Sie für **Verbindungs Zeichenfolge**die Verbindungs Zeichenfolge an, die der Berichts Server zum Herstellen einer Verbindung mit der Datenquelle verwendet. Das folgende Beispiel veranschaulicht eine Verbindungs Zeichenfolge zum Herstellen einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Verbindung mit der-Datenbank:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -72,21 +72,21 @@ ms.locfileid: "68892017"
   
     -   Wenn Benutzername und Kennwort Datenbank-Anmeldeinformationen sind, wählen Sie **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**nicht aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, können Sie die Option **Die Identität des authentifizierten Benutzers annehmen, nachdem eine Verbindung zur Datenquelle hergestellt wurde**auswählen.  
   
-8.  Klicken Sie auf **Übernehmen**.  
+8.  Klicken Sie auf **Anwenden**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") , das mit der [Sicherheit der Sicherheitsrichtlinien Anforderungen für gespeicherte Anmelde](#bkmk_top) Informationen verwendet wird  
   
-##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle (SharePoint-Modus)  
+##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a>Konfigurieren gespeicherter Anmelde Informationen für eine Berichts spezifische Datenquelle (SharePoint-Modus)  
   
-1.  Rufen Sie die Dokumentbibliothek mit den Bericht auf, und klicken Sie anschließend auf das offene Menü ![Kontextmenü der Dokumentbibliothek für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items").  
+1.  Navigieren Sie zu der Dokumentbibliothek, die den Bericht enthält, und klicken Sie dann auf das ![Kontextmenü der Dokumentbibliothek öffnen für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "Kontextmenü der Dokumentbibliothek für SSRS-Elemente").  
   
-2.  Klicken Sie auf das zweite offene Menü ![Kontextmenü der Dokumentbibliothek für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items") und anschließend auf **Datenquellen verwalten**.  
+2.  Klicken Sie auf zweites ![Kontextmenü Dokumentbibliothek für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "Kontextmenü der Dokumentbibliothek für SSRS-Elemente") öffnen, und klicken Sie dann auf **Datenquellen verwalten**.  
   
 3.  Klicken Sie auf den Namen der **benutzerdefinierten** Datenquelle, die Sie mit gespeicherten Anmeldeinformationen konfigurieren möchten.  
   
 4.  Wählen Sie in der Liste **Datenquellentyp** die Datenverarbeitungserweiterung aus, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
   
-5.  Geben Sie in das Feld **Verbindungszeichenfolge**die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] hergestellt wird:  
+5.  Geben Sie für **Verbindungs Zeichenfolge**die Verbindungs Zeichenfolge an, die der Berichts Server zum Herstellen einer Verbindung mit der Datenquelle verwendet. Das folgende Beispiel veranschaulicht eine Verbindungs Zeichenfolge zum Herstellen einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Verbindung mit der-Datenbank:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -98,23 +98,24 @@ ms.locfileid: "68892017"
   
     -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<Domäne>\\<Konto\> an, und klicken Sie anschließend auf **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden.**  
   
-    -   Wenn der Benutzername und das Kennwort Datenbankanmeldeinformationen sind, wählen Sie nicht **Als Windows-Anmeldeinformationen verwenden**aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, wählen Sie ggf. die Option **Ausführungskontext für dieses Konto festlegen**aus.  
+    -   Wenn der Benutzername und das Kennwort Datenbankanmeldeinformationen sind, wählen Sie nicht **Als Windows-Anmeldeinformationen verwenden**aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, können Sie die Option **Ausführungs Kontext für dieses Konto festlegen**auswählen.  
   
 8.  Klicken Sie auf **OK**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") , das mit der [Sicherheit der Sicherheitsrichtlinien Anforderungen für gespeicherte Anmelde](#bkmk_top) Informationen verwendet wird  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine freigegebene Datenquelle (einheitlicher Modus)  
+##  <a name="bkmk_stored_credentials_shared_data_source_native"></a>Konfigurieren gespeicherter Anmelde Informationen für eine freigegebene Datenquelle (einheitlicher Modus)  
   
-1.  Navigieren Sie im Berichts-Manager im einheitlichen Modus zum freigegebenen Datenquellenelement. ![Symbol freigegebene Datenquelle](../media/hlp-16datasource.png "Shared data source icon")  
+1.  Navigieren Sie im Berichts-Manager im einheitlichen Modus zum freigegebenen Datenquellenelement. ![Symbol für freigegebene Datenquelle](../media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")  
   
-2.  Klicken Sie auf das Kontextmenüelement ![Kontextmenü im Berichts-Manager für SSRS-Elemente](../media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items") und anschließend auf **Verwalten**.  
+2.  Klicken Sie ![im Berichts-Manager für SSRS-Elemente](../media/ssrs-report-manager-item-context-menu.png "Kontextmenü im Berichts-Manager für SSRS-Elemente") auf das Kontextmenü Kontextmenü, und klicken Sie dann auf **Verwalten**.  
   
-3.  Geben Sie in der Liste **Datenquellentyp** die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
+3.  Geben Sie in der Liste **Daten Quellentyp** die Datenverarbeitungs Erweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
   
-4.  Geben Sie in das Feld **Verbindungszeichenfolge**die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
+4.  Geben Sie für **Verbindungs Zeichenfolge**die Verbindungs Zeichenfolge an, die der Berichts Server zum Herstellen einer Verbindung mit der Datenquelle verwendet. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
   
-     Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung zur lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] -Datenbank hergestellt wird:  
+     Das folgende Beispiel veranschaulicht eine Verbindungs Zeichenfolge, die zum Herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] einer Verbindung mit der lokalen Datenbank verwendet wird:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -126,23 +127,24 @@ ms.locfileid: "68892017"
   
     -   Wenn Benutzername und Kennwort Datenbank-Anmeldeinformationen sind, wählen Sie **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**nicht aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, können Sie die Option **Die Identität des authentifizierten Benutzers annehmen, nachdem eine Verbindung zur Datenquelle hergestellt wurde**auswählen.  
   
-6.  Klicken Sie auf **Übernehmen**.  
+6.  Klicken Sie auf **Anwenden**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") , das mit der [Sicherheit der Sicherheitsrichtlinien Anforderungen für gespeicherte Anmelde](#bkmk_top) Informationen verwendet wird  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine freigegebene Datenquelle (SharePoint-Modus)  
+##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a>Konfigurieren gespeicherter Anmelde Informationen für eine freigegebene Datenquelle (SharePoint-Modus)  
   
-1.  Rufen Sie in der Dokumentbibliothek das freigegebene Datenquellelement auf. ![Freigegebenes Datenquellsymbol](../media/hlp-16datasource.png "Shared data source icon")  
+1.  Navigieren Sie in der Dokumentbibliothek zum freigegebenen Datenquellen Element. ![Symbol für freigegebene Datenquelle](../media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")  
   
-2.  Klicken Sie zunächst auf das Kontextmenü ![Kontextmenü der Dokumentbibliothek für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items") und anschließend auf das zweite Kontextmenü ![Kontextmenü der Dokumentbibliothek für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items").  
+2.  Klicken Sie auf das Kontextmenü Kontextmenü der ![Dokumentbibliothek für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "Kontextmenü der Dokumentbibliothek für SSRS-Elemente") , und klicken Sie dann auf das zweite Kontextmenü Kontextmenü der ![Dokumentbibliothek für SSRS-Elemente](../media/ssrs-sharepoint-item-context-menu.png "Kontextmenü der Dokumentbibliothek für SSRS-Elemente").  
   
 3.  Klicken Sie auf **Datenquellendefinition bearbeiten**.  
   
-4.  Geben Sie in der Liste **Datenquellentyp** die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
+4.  Geben Sie in der Liste **Daten Quellentyp** die Datenverarbeitungs Erweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
   
-5.  Geben Sie in das Feld **Verbindungszeichenfolge**die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
+5.  Geben Sie für **Verbindungs Zeichenfolge**die Verbindungs Zeichenfolge an, die der Berichts Server zum Herstellen einer Verbindung mit der Datenquelle verwendet. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
   
-     Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung zur lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] -Datenbank hergestellt wird:  
+     Das folgende Beispiel veranschaulicht eine Verbindungs Zeichenfolge, die zum Herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] einer Verbindung mit der lokalen Datenbank verwendet wird:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -156,13 +158,13 @@ ms.locfileid: "68892017"
   
 7.  Klicken Sie auf **OK**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") , das mit der [Sicherheit der Sicherheitsrichtlinien Anforderungen für gespeicherte Anmelde](#bkmk_top) Informationen verwendet wird  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md)   
- [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Datenquellen &#40;Seite „Eigenschaften“, Berichts-Manager&#41;](../data-sources-properties-page-report-manager.md)   
- [Neue Datenquelle (Seite, Berichts-Manager)](../new-data-source-page-report-manager.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](../../integration-services/connection-manager/data-sources.md)   
+ [Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
+ [Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Die Eigenschaften Seite "Datenquellen" &#40;Berichts-Manager&#41;](../data-sources-properties-page-report-manager.md)   
+ [Die Seite "neue Datenquelle" &#40;Berichts-Manager&#41;](../new-data-source-page-report-manager.md)  
   
   

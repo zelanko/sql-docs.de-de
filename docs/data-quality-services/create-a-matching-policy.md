@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251786"
 ---
 # <a name="create-a-matching-policy"></a>Erstellen einer Abgleichsrichtlinie
@@ -28,14 +28,14 @@ ms.locfileid: "75251786"
   
  Die Abgleichsrichtlinienerstellung wird in drei Phasen ausgeführt: ein Zuordnungsprozess, in dem Sie die Datenquelle identifizieren und Domänen zu Spalten zuordnen, ein Abgleichsrichtlinienprozess, in dem Sie eine oder mehrere Abgleichsregeln erstellen und jede Abgleichsregel separat testen, und ein Abgleichsergebnisseprozess, in dem Sie alle Abgleichsregeln zusammen ausführen und die Richtlinie der Wissensdatenbank hinzufügen, wenn Sie mit ihr zufrieden sind. Jeder dieser Prozesse wird auf einer separaten Seite des Abgleichsrichtlinienaktivitäts-Assistenten ausgeführt, sodass Sie zwischen den Seiten hin und her wechseln, den Prozess erneut auszuführen, einen bestimmten Abgleichsrichtlinienprozess schließen und dann zur gleichen Phase des Prozesses zurückkehren können. Nach dem gemeinsamen Testen aller Regeln können Sie, falls erforderlich, zur Seite **Abgleichsrichtlinie** zurückkehren, eine einzelne Regel ändern, sie wieder separat testen und zur Seite **Abgleichsergebnisse** zurückkehren, um alle Regeln erneut gemeinsam auszuführen. DQS stellt Ihnen Statistiken zu den Quelldaten, den Abgleichsregeln und den Abgleichsergebnissen bereit, die es Ihnen ermöglichen, informierte Entscheidungen zur Abgleichsrichtlinie zu treffen, damit Sie sie optimieren können.  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, wenn sich die Quelldaten in einer Excel-Datei befinden. Andernfalls sind Sie nicht in der Lage, die Excel-Datei in der Zuordnungsphase auszuwählen. Die von Microsoft Excel erstellten Dateien können die Erweiterung .xlsx, .xls oder .csv haben. Wenn die 64-Bit-Version von Excel verwendet wird, werden nur Excel 2003-Dateien (.xls) unterstützt; Excel 2007- oder 2010-Dateien (.xlsx) werden nicht unterstützt. Wenn Sie die 64-Bit-Version von Excel 2007 oder 2010 verwenden, speichern Sie die Datei als XLS-Datei oder CSV-Datei, oder installieren Sie stattdessen eine 32-Bit-Version von Excel.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um eine Abgleichsrichtlinie zu erstellen.  
   
 ##  <a name="MatchingRules"></a>Festlegen von Übereinstimmungs Regel Parametern  
@@ -62,7 +62,7 @@ ms.locfileid: "75251786"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
-2.  Klicken Sie auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Neue Wissensdatenbank** , um in einer neuen Wissensdatenbank eine Abgleichsrichtlinie zu erstellen. Geben Sie einen Namen für die Wissensdatenbank ein, geben Sie eine Beschreibung ein, und legen Sie **Wissensdatenbank erstellen aus** wie gewünscht fest. Klicken Sie für die Aktivität auf **Abgleichsrichtlinie** . Klicken Sie zum Fortfahren auf **Weiter**.  
+2.  Klicken Sie auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Neue Wissensdatenbank** , um in einer neuen Wissensdatenbank eine Abgleichsrichtlinie zu erstellen. Geben Sie einen Namen für die Wissensdatenbank ein, geben Sie eine Beschreibung ein, und legen Sie **Wissensdatenbank erstellen aus** wie gewünscht fest. Klicken Sie für die Aktivität auf **Abgleichsrichtlinie** . Klicken Sie zum Fortfahren auf **Weiter** .  
   
 3.  Klicken Sie auf **Wissensdatenbank öffnen** , um die Abgleichsrichtlinie in einer vorhandenen Wissensdatenbank zu erstellen oder zu ändern. Wählen Sie die Wissensdatenbank aus, wählen Sie **Abgleichsrichtlinie**aus, und klicken Sie dann auf **Weiter**. Sie können auch unter **Zuletzt verwendete Wissensdatenbank**auf eine Wissensdatenbank klicken. Wenn Sie eine Wissensdatenbank öffnen, die geschlossen wurde, während an einer Abgleichsrichtlinie gearbeitet wurde, fahren Sie mit der Phase fort, in der die Abgleichsrichtlinienaktivität geschlossen wurde (wie von der Spalte **Status** für die Wissensdatenbank in der Wissensdatenbanktabelle oder im Wissensdatenbanknamen unter **Zuletzt verwendete Wissensdatenbank**angegeben). Wenn Sie eine Wissensdatenbank öffnen, die eine Abgleichsrichtlinie enthält und abgeschlossen wurde, wechseln Sie zur Seite **Abgleichsrichtlinie** . Wenn Sie eine Wissensdatenbank öffnen, die keine Abgleichsrichtlinie enthält und abgeschlossen wurde, wechseln Sie zur Seite **Zuordnung** .  
   
@@ -215,7 +215,7 @@ ms.locfileid: "75251786"
   
 -   **Feldname**  
   
--   **Domänen Name**  
+-   **Domänenname**  
   
 -   **Neu**: die Anzahl der neuen Werte und der prozentuale Anteil neuer Werte im Vergleich zu vorhandenen Werten in der Domäne  
   

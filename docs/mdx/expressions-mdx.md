@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893590"
 ---
 # <a name="expressions-mdx"></a>Ausdrücke (MDX)
@@ -25,14 +25,14 @@ ms.locfileid: "68893590"
   
  Ein einfacher Ausdruck kann einer der folgenden Ausdrücke sein:  
   
- Konstante  
+ Dauerhaft  
  Eine Konstante ist ein Symbol, das einen bestimmten Datenwert in MDX darstellt. Zeichenfolgen-, numerische und Datumswerte können als Konstanten gerendert werden. Im Gegensatz zu numerischen Konstanten müssen Zeichenfolgen- und Datumskonstanten in einfache Anführungszeichen (') eingeschlossen werden.  
   
  Skalarfunktion  
  Eine Skalarfunktion gibt einen einzelnen Wert im Kontext einer Auswertung in MDX zurück. Zum Verständnis, wie Skalarfunktionen von MDX ausgewertet werden, muss der Unterschied zu den anderen MDX-Ausdrücken klar sein, denn die meisten MDX-Ausdrücke, -Anweisungen und -Skripts werden nicht für ein einzelnes Datenelement, sondern iterativ für eine Gruppe von Datenelementen (z. B. Zellen oder Elemente) ausgewertet. Zu dem Zeitpunkt, zu dem eine Skalarfunktion ausgewertet wird, ermittelt die Funktion üblicherweise nur den Wert für ein einzelnes Datenelement.  
   
  Objektbezeichner  
- MDX ist wegen der Beschaffenheit der mehrdimensionalen Daten objektorientiert. Objektbezeichner werden in MDX als einfache Ausdrücke angesehen. Weitere Informationen zu bezeichlern finden Sie unter Bezeichner [ &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
+ MDX ist wegen der Beschaffenheit der mehrdimensionalen Daten objektorientiert. Objektbezeichner werden in MDX als einfache Ausdrücke angesehen. Weitere Informationen zu bezeichlern finden Sie unter Bezeichner [&#40;MDX-&#41;](../mdx/identifiers-mdx.md).  
   
  Ein komplexer Ausdruck kann aus Kombinationen dieser Entitäten erstellt werden, die durch Operatoren verknüpft sind.  
   
@@ -73,18 +73,18 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Using Cube and Subcube Expressions (Verwenden von Cube- und Teilcubeausdrücken)](../mdx/using-cube-and-subcube-expressions.md)|Definiert Cube- und Teilcubeausdrücke.|  
-|[Using Dimension Expressions (Verwenden von Dimensionsausdrücken)](../mdx/using-dimension-expressions.md)|Definiert Dimensionsausdrücke.|  
-|[Using Member Expressions (Verwenden von Elementausdrücken)](../mdx/using-member-expressions.md)|Definiert Elementausdrücke.|  
-|[Using Tuple Expressions (Verwenden von Tupelausdrücken)](../mdx/using-tuple-expressions.md)|Definiert Tupelausdrücke.|  
-|[Using Set Expressions (Verwenden von Mengenausdrücken)](../mdx/using-set-expressions.md)|Definiert Mengenausdrücke.|  
-|[Using Scalar Expressions (Verwenden von Skalarausdrücken)](../mdx/using-scalar-expressions.md)|Definiert skalare Ausdrücke.|  
-|[Working with Empty Values (Arbeiten mit leeren Werten)](../mdx/working-with-empty-values.md)|Beschreibt, was ein leerer Wert ist und wie leere Werte gehandhabt werden.|  
+|[Verwenden von Cube- und Teilcubeausdrücken](../mdx/using-cube-and-subcube-expressions.md)|Definiert Cube- und Teilcubeausdrücke.|  
+|[Verwenden von Dimensionsausdrücken](../mdx/using-dimension-expressions.md)|Definiert Dimensionsausdrücke.|  
+|[Verwenden von Elementausdrücken](../mdx/using-member-expressions.md)|Definiert Elementausdrücke.|  
+|[Verwenden von Tupelausdrücken](../mdx/using-tuple-expressions.md)|Definiert Tupelausdrücke.|  
+|[Verwenden von Mengenausdrücken](../mdx/using-set-expressions.md)|Definiert Mengenausdrücke.|  
+|[Verwenden von Skalarausdrücken](../mdx/using-scalar-expressions.md)|Definiert skalare Ausdrücke.|  
+|[Arbeiten mit leeren Werten](../mdx/working-with-empty-values.md)|Beschreibt, was ein leerer Wert ist und wie leere Werte gehandhabt werden.|  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

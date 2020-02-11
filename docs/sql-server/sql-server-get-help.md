@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926949"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244409"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server-Hilfe und -Feedback
 
@@ -22,7 +22,7 @@ In diesem Artikel werden verschiedene Möglichkeiten erläutert, um Hilfe bei Ih
 
 ## <a name="contact-microsoft-support"></a>Microsoft-Support kontaktieren
 
-Kunden mit einem Supportplan können [ein Ticket beim Microsoft-Support öffnen](https://support.microsoft.com/en-us/hub/4343728/support-for-business).  Weitere Informationen finden Sie unter [Supportoptionen für Unternehmen](https://support.microsoft.com/en-us/help/4341255/support-for-business). 
+Kunden mit einem Supportplan können [ein Ticket beim Microsoft-Support öffnen](https://support.microsoft.com/hub/4343728/support-for-business).  Weitere Informationen finden Sie unter [Supportoptionen für Unternehmen](https://support.microsoft.com/help/4341255/support-for-business). 
 
 Kunden ohne Supportplan können die Community um Hilfe bitten oder einen Fehler über UserVoice unter [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback) einreichen.
 
@@ -50,7 +50,7 @@ Es gibt viele MSDN-Foren, die Ihnen bei Ihren Fragen zu SQL Server behilflich se
 
 Es gibt einige Communitys, die Ihnen bei Ihren Problemen mit SQL Server behilflich sein können. 
 
-- [Stack Overflow (Stapelüberlauf)](https://stackoverflow.com/questions/tagged/sql-server)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange (DBA-Stapelaustausch)](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Unter dem Hashtag #sqlhelp erhalten Sie Hilfe von der Community auf Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 

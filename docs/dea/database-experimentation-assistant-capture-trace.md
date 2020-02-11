@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258531"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831547"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -133,7 +133,7 @@ Wenn beim Ausführen einer Ablauf Verfolgungs Erfassung ein Fehler angezeigt wir
 
 - Der Name des Computers, auf dem SQL Server ausgeführt wird, ist gültig. Versuchen Sie, eine Verbindung mit dem Computer herzustellen, auf dem SQL Server ausgeführt wird, indem Sie SQL Server Management Studio (SSMS) verwenden.
 - Die Firewallkonfiguration blockiert keine Verbindungen mit dem Computer, auf dem SQL Server ausgeführt wird.
-- Der Benutzer verfügt über die Berechtigungen, die im Blogbeitrag [Replay Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)aufgeführt sind.
+- Der Benutzer verfügt über die Berechtigungen, die in den häufig gestellten Fragen zur wieder [Gabe](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)aufgeführt sind.
 - Der Ablauf Verfolgungs Name folgt nicht der standardrolloverkonvention (Erfassung\_1). Versuchen Sie stattdessen, Namen von Ablauf\_Verfolgungen wie z. b. Capture 1A oder Capture1
 
 Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt werden, und Lösungen für deren Behebung:
@@ -147,6 +147,6 @@ Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt w
 
 Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code*sehen, finden Sie unter [Datenbank-Engine Fehler](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) ausführliche Beschreibungen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen zum Konfigurieren der Distributed Replay Tools in SQL Server vor der Wiedergabe einer aufgezeichneten Ablauf Verfolgung finden Sie unter [configure Distributed Replay for Assistent für Datenbankexperimente](database-experimentation-assistant-configure-replay.md).

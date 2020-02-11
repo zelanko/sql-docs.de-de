@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211763"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbank-Engine)
@@ -38,7 +38,7 @@ ms.locfileid: "68211763"
   
  [Einschränkungen](#Restrictions)  
   
- [Tabellenwertparameter im Vergleich zu BULK INSERT-Vorgängen](#BulkInsert)  
+ [Tabellenwertparameter und BULK INSERT-Vorgänge](#BulkInsert)  
   
  [Beispiel](#Example)  
   
@@ -66,20 +66,21 @@ ms.locfileid: "68211763"
 ##  <a name="Restrictions"></a> Einschränkungen  
  Für Tabellenwertparameter gelten die folgenden Einschränkungen:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spaltenstatistiken für Tabellenwertparameter werden nicht verwaltet.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spaltenstatistiken für Tabellenwertparameter werden nicht verwaltet.  
   
 -   Tabellenwertparameter müssen als READONLY-Eingabeparameter an [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen übergeben werden. Für Tabellenwertparameter im Hauptteil einer Routine können keine DML-Vorgänge wie UPDATE, DELETE oder INSERT durchgeführt werden.  
   
 -   Tabellenwertparameter können nicht als Ziel einer SELECT INTO-Anweisung oder einer INSERT EXEC-Anweisung verwendet werden. Tabellenwertparameter können in der FROM-Klausel von SELECT INTO oder in der Zeichenfolge oder gespeicherten Prozedur von INSERT EXEC enthalten sein.  
   
-##  <a name="BulkInsert"></a> Tabellenwertparameter vs. BULK INSERT-Vorgänge  
+##  <a name="BulkInsert"></a>Tabellenwert Parameter im Vergleich zu BULK INSERT Vorgängen  
  Die Verwendung von Tabellenwertparametern ist mit anderen Methoden zur Verwendung setbasierter Variablen vergleichbar. Sehr große Datasets können mit Tabellenwertparametern jedoch häufig schneller verarbeitet werden. Im Vergleich zu Massenvorgängen, bei denen die Startkosten höher sind, eignen sich Tabellenwertparameter optimal zum Einfügen von weniger als 1000 Zeilen.  
   
  Wiederverwendete Tabellenparameter nutzen den Zwischenspeicher für temporäre Tabellen. Diese Zwischenspeicherung ermöglicht eine bessere Skalierbarkeit als vergleichbare BULK INSERT-Vorgänge. Bei kleineren Vorgängen zum Einfügen von Zeilen können Sie u. U. eine bessere Leistung erzielen, wenn Sie Parameterlisten oder Batch-Anweisungen statt BULK INSERT-Vorgänge oder Tabellenwertparameter verwenden. Die Programmierung dieser Methoden ist allerdings komplexer, und die Leistung nimmt mit steigender Zeilenanzahl schnell ab.  
   
  Tabellenwertparameter eignen sich mindestens so gut wie vergleichbare Parameterarray-Implementierungen.  
   
-##  <a name="Example"></a> Beispiel  
+##  <a name="Example"></a>Beispiel  
  Im folgenden Beispiel wird [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet. Es zeigt, wie Sie einen Tabellenwertparameter erstellen, eine Variable deklarieren, die darauf verweist, Daten in die Parameterliste einfügen und die Werte dann an eine gespeicherte Prozedur übergeben.  
   
 ```  
@@ -119,13 +120,13 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
- [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
- [sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
- [sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Create Type &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-type-transact-sql)   
+ [Deklarieren @local_variable &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [sys. types &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
+ [sys. Parameters &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
+ [sys. parameter_type_usages &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

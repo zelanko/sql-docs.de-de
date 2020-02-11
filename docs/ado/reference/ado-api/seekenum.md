@@ -1,5 +1,5 @@
 ---
-title: SeekEnum | Microsoft-Dokumentation
+title: Seekenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,35 +16,35 @@ ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931069"
 ---
 # <a name="seekenum"></a>SeekEnum
-Gibt den Typ der [Seek](../../../ado/reference/ado-api/seek-method.md) ausgeführt.  
+Gibt den Typ des auszuführenden [Suchtyps](../../../ado/reference/ado-api/seek-method.md) an.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|Sucht den ersten Schlüssel gleich *KeyValues*.|  
-|**adSeekLastEQ**|2|Sucht den letzte Schlüssel gleich *KeyValues*.|  
-|**adSeekAfterEQ**|4|Sucht entweder einen Schlüssel gleich *KeyValues* oder nach dem entsprechen, in denen aufgetreten wäre.|  
-|**adSeekAfter**|8|Sucht einen Schlüssel nach dem Where eine Übereinstimmung mit *KeyValues* würde aufgetreten sind.|  
-|**adSeekBeforeEQ**|16|Sucht entweder einen Schlüssel gleich *KeyValues*Markierung oder kurz vor, in denen diese Übereinstimmung aufgetreten wäre.|  
-|**adSeekBefore**|32|Kurz vor dem Ausführen sucht einen Schlüssel, wenn eine Übereinstimmung mit *KeyValues* würde aufgetreten sind.|  
+|**adseekfirsteq**|1|Sucht den ersten Schlüssel, der mit *KeyValues*übereinstimmt.|  
+|**adseeklasteq**|2|Sucht den letzten Schlüssel, der mit *KeyValues*übereinstimmt.|  
+|**adseekaftereq**|4|Sucht entweder nach einem Schlüssel, der mit *KeyValues* identisch ist, oder direkt nach dem Speicherort der Übereinstimmung.|  
+|**adseekafter**|8|Sucht direkt nach einem Schlüssel, nach dem eine Entsprechung mit *KeyValues* aufgetreten wäre.|  
+|**adseekbeforeeq**|16|Sucht entweder nach einem Schlüssel, der mit *KeyValues*identisch ist, oder direkt vor dem, wo die Übereinstimmung aufgetreten wäre.|  
+|**adseekbefore**|32|Sucht direkt vor der Suche nach einer Taste, bei der eine Entsprechung mit *KeyValues* aufgetreten wäre.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Dauerhaft|  
 |--------------|  
-|AdoEnums.Seek.FIRSTEQ|  
-|AdoEnums.Seek.LASTEQ|  
-|AdoEnums.Seek.AFTEREQ|  
-|AdoEnums.Seek.AFTER|  
-|AdoEnums.Seek.BEFOREEQ|  
-|AdoEnums.Seek.BEFORE|  
+|Adoerums. Seek. firsteq|  
+|Adoerums. Seek. lasteq|  
+|Adoerums. Seek. aftereq|  
+|Adoerums. Seek. after|  
+|Adoerums. Seek. beforeeq|  
+|Adoerums. Seek. before|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)

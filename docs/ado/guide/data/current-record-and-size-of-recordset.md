@@ -14,36 +14,36 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a01e17ea9c786a724e5869a28bf4d8927b58ac81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925693"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Aktueller Datensatz und Größe des Recordsets
-In diesem Abschnitt wird beschrieben, wie Sie die aktuelle Position des Cursors im Beispiel finden **Recordset** in [JScript-Codebeispiel zum Zurückgeben eines Recordsets](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
+In diesem Abschnitt wird beschrieben, wie Sie die aktuelle Position des Cursors im Beispiel **Recordset** in [JScript-Code Beispiel zum Zurückgeben eines Recordsets](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)suchen.  
   
 ## <a name="current-record"></a>Aktueller Datensatz  
- Der aktuelle Datensatz im Dataset entspricht, die durch die Position des Cursors von gezeigt die **Recordset** Objekt. Wenn eine **Recordset** Objekt wird aus der Datenquelle zurückgegeben, als das Ergebnis des Aufrufs **Recordset.Open**, **Recordset.Open**, oder **Connection.Execute**  (einschließlich **Connection.NamedCommand** und **Connection.StoredProcedure**), der Cursor auf den ersten Datensatz festgelegt ist. In der Beispiel-Dataset ist der anfänglichen aktuelle Datensatz "Onkel Bobs organische Dried Birnen" Element.  
+ Der aktuelle Datensatz im Dataset entspricht dem, der von der Position des Cursors des **Recordset** -Objekts hervorgehoben wird. Wenn ein **Recordset** -Objekt von der Datenquelle als Ergebnis des Aufrufs von **Recordset. Open**, **Command. Execute**oder **Connection. Execute** (einschließlich **Connection. namedcommand** und **Connection. StoredProcedure**) zurückgegeben wird, wird der Cursor so festgelegt, dass er auf den ersten Datensatz verweist. Im Beispiel DataSet ist der anfängliche aktuelle Datensatz der "Onkel Bob es Organic getrocknete Birnen"-Element.  
   
 ## <a name="size-of-recordset"></a>Größe des Recordsets  
- Zum Ermitteln der Größe einer **Recordset** Objekt, rufen Sie den Wert von der **Recordset.RecordCount** Eigenschaft. Dieser Wert ist eine lange ganze Zahl, die gibt die Anzahl der Datensätze in der **Recordset**. Wenn das Dataset aus der OLE DB-Anbieter für Microsoft SQL Server zurückgegeben wird, wird mit diesem Wert die Anzahl der zurückgegebenen Zeilen. Lesen der **RecordCount** Eigenschaft für ein geschlossenes **Recordset** verursacht einen Fehler.  
+ Um die Größe eines **Recordset** -Objekts zu ermitteln, können Sie den Wert der **Recordset. RecordCount** -Eigenschaft abrufen. Dieser Wert ist eine lange ganze Zahl, die die Anzahl der Datensätze im **Recordset**angibt. Wenn das Dataset für Microsoft SQL Server vom OLE DB-Anbieter zurückgegeben wird, gibt dieser Wert die Anzahl der zurückgegebenen Zeilen zurück. Das Lesen der **RecordCount** -Eigenschaft für ein geschlossenes **Recordset** verursacht einen Fehler.  
   
- Wenn die Anzahl der Datensätze nicht bestimmt werden kann, ist es sich bei der Wert der Eigenschaft um 1.  
+ Wenn die Anzahl der Datensätze nicht bestimmt werden kann, ist der Wert der-Eigenschaft-1.  
   
- Der Wert des der **RecordCount** Eigenschaft hängt auch von den Funktionen des Anbieters und den Typ des Cursors verwendet. Für einen Vorwärtscursor ist der Wert-1 auf. Für einen statischen oder einen Keyset-Cursor, der Wert ist die tatsächliche Anzahl der zurückgegebenen Datensätze in der **Recordset** Objekt. Für einen dynamischen Cursor ist der Wert entweder-1 oder die tatsächliche Anzahl der Datensätze, abhängig von der Datenquelle.  
+ Der Wert der **RecordCount** -Eigenschaft hängt auch von den Funktionen des Anbieters und dem verwendeten Cursortyp ab. Bei einem Vorwärts Cursor ist der Wert-1. Bei einem statischen oder Keysetcursor entspricht der Wert der tatsächlichen Anzahl von Datensätzen, die im **Recordset** -Objekt zurückgegeben werden. Bei einem dynamischen Cursor ist der Wert entweder-1 oder die tatsächliche Anzahl von Datensätzen, abhängig von der Datenquelle.  
   
- Ein Cursor, der unterstützt **Recordcount** müssen Arbeit schwieriger und aus diesem Grund erfordert mehr rechenleistung als ein Cursor nicht unterstützt **Recordcount**. Wenn Sie nicht benötigen, die Anzahl der Datensätze zu wissen, können verschiedene Cursortyp Informationen verbessert die Leistung Ihrer Anwendung, insbesondere dann, wenn Sie ein großes DataSet behandelt werden müssen.  
+ Ein Cursor, der **RecordCount** unterstützt, muss schwieriger arbeiten und erfordert daher eine höhere Rechenleistung, als ein Cursor **RecordCount**nicht unterstützt. Wenn Sie die Anzahl der Datensätze nicht kennen müssen, können Sie mithilfe eines anderen Cursor Typs die Leistung Ihrer Anwendung verbessern, insbesondere, wenn Sie ein großes Dataset verwenden müssen.  
   
- In einigen Fällen ein Anbieter oder der Cursor kann nicht feststellen der **RecordCount** Wert ohne zuerst alle Datensätze aus der Datenquelle abgerufen. Aufrufen, um sicherzustellen, dass genau zählen, die **Recordset**. **MoveLast** Methode vor dem Aufruf **Recordset.RecordCount**.  
+ In einigen Fällen kann ein Anbieter oder Cursor den **RecordCount** -Wert nicht ermitteln, ohne zuerst alle Datensätze aus der Datenquelle abzurufen. Um eine genaue Zählung sicherzustellen, nennen Sie das **Recordset**. Die "" **-Methode vor** dem Aufruf von " **Recordset. RecordCount**".  
   
- Das Beispiel **Recordset** Objekt abgerufen, mit der [JScript-Codebeispiel](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) verwendet einen Vorwärtscursor, daher ist das Aufrufen **RecordCount** für dieses Objekt führt immer-1. Wenn Sie die Zeile des Codes ändern, die Aufrufe der **Recordset**. **Open** Methode, wie im folgenden Beispiel gezeigt die **RecordCount** Eigenschaft gibt die tatsächliche Anzahl der abgerufenen Datensätze zurück.  
+ Das **Recordset** -Beispiel Objekt, das mit dem [JScript-Code Beispiel](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) abgerufen wird, verwendet einen Vorwärts Cursor, sodass der Aufruf von **RecordCount** für dieses Objekt immer zu "-1" führt. Wenn Sie die Codezeile ändern, die das **Recordset**aufruft. **Open** -Methode wie im folgenden Beispiel gezeigt, gibt die **RecordCount** -Eigenschaft die tatsächliche Anzahl der abgerufenen Datensätze zurück.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- Grund hierfür ist, statische Cursor mit dem [Microsoft OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) unterstützen **RecordCount**. In diesem Beispiel fünf Datensätze vorhanden sind und somit **RecordCount** sollte den Wert 5 ergibt.  
+ Dies liegt daran, dass statische Cursor mit dem [Microsoft OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) **RecordCount**unterstützen. In diesem Beispiel gibt es fünf Datensätze, sodass **RecordCount** den Wert 5 ergeben sollte.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

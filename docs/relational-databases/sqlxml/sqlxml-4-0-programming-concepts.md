@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242621"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0-Programmierkonzepte
@@ -30,10 +30,10 @@ ms.locfileid: "75242621"
   
  Dieser Abschnitt enthält Informationen zur SQLXML 4.0.  
   
- [SQLXML ist nicht in SQL Server installiert.](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
+ [SQLXML ist in SQL Server nicht installiert](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
  Beschreibt die Installation von SQLXML 4.0.  
   
- [Neues in SQLXML 4,0 SP1](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
+ [Neues in SQLXML 4.0 SP1](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
  Beschreibt die Updates und die Erweiterungen in SQLXML 4.0 und stellt Links zu relevanten Themen in dieser Dokumentation bereit.  
   
  [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "75242621"
  [Verwenden von XPath-Abfragen in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Beschreibt, wie mit einer Teilmenge der Xpath-Sprache die von dem mit Anmerkungen versehenen XSD-Schema erstellten XML-Sichten abgefragt werden können und liefert Beispiele dazu.  
   
- [Verwenden von Updategrams zum Ändern von Daten in SQLXML 4,0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Stellt Informationen über Updategrams bereit, die Daten in einer Datenbank ändern, indem sie mit den XML-Sichten verwendet werden, die von den mit Anmerkungen versehenen XSD- oder XDR-Schemas erzeugt wurden.  
   
  [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
@@ -76,6 +76,6 @@ ms.locfileid: "75242621"
  Listet Punkte auf, die bei der Arbeit mit SQLXML 4.0 berücksichtigt werden sollten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server der XML-Daten &#40;&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

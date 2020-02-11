@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243702"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
@@ -35,7 +35,7 @@ ms.locfileid: "75243702"
   
 -   Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem anderen Computer verbunden ist, müssen Sie den Debugger für das Remotedebuggen konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren des Transact-SQL-Debuggers](configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Server Rolle sysadmin ist.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
   
 -   Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster muss entweder mithilfe einer Windows-Authentifizierung oder mithilfe eines Anmeldenamens für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, der Mitglied der festen Serverrolle sysadmin ist, verbunden werden.  
   
@@ -74,38 +74,38 @@ ms.locfileid: "75243702"
   
  Die folgende Tabelle enthält die Menübefehle, Symbolleistenschaltflächen und Tastenkombinationen für den Debugger.  
   
-|Menübefehle für das Debuggen|Editor-Verknüpfungsbefehl|Symbolleistenschaltfläche|Tastenkombinationen|Aktion|  
+|Menübefehle für das Debuggen|Editor-Verknüpfungsbefehl|Symbolleistenschaltfläche|Tastenkombinationen|Action|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Fenster/Breakpoints**|Nicht verfügbar|**Breakpoints**|STRG+ALT+B|Zeigt das Fenster **Breakpoints** an, in dem Sie Breakpoints anzeigen und verwalten können.|  
 |**Fenster/Überwachung/Überwachen 1**|Nicht verfügbar|**Breakpoints/Überwachung/Überwachen 1**|STRG+ALT+W, 1|Zeigt das Fenster **Überwachen 1** an.|  
 |**Fenster/Überwachung/Überwachen 2**|Nicht verfügbar|**Breakpoints/Überwachung/Überwachen 2**|STRG+ALT+W, 2|Zeigt das Fenster **Überwachen 2** an.|  
 |**Fenster/Überwachung/Überwachen 3**|Nicht verfügbar|**Breakpoints/Überwachung/Überwachen 3**|STRG+ALT+W, 3|Zeigt das Fenster **Überwachen 3** an.|  
 |**Fenster/Überwachung/Überwachen 4**|Nicht verfügbar|**Breakpoints/Überwachung/Überwachen 4**|STRG+ALT+W, 4|Zeigt das Fenster **Überwachen 4** an.|  
-|**Fenster/Lokal**|Nicht verfügbar|**Breakpoints/Lokal**|STRG+ALT+V, L|Zeigt das **Fenster** "lokal" an.|  
-|**Fenster/Aufrufliste**|Nicht verfügbar|**Breakpoints/Aufrufliste**|STRG+ALT+C|Zeigen Sie das Fenster "Fenster **aufrufen** " an.|  
-|**Fenster/Threads**|Nicht verfügbar|**Breakpoints/Threads**|STRG+ALT+H|Zeigen Sie das Fenster **Threads** an.|  
-|**Auch**|Nicht verfügbar|**Auch**|ALT+F5|Den Vorgang bis zum nächsten Breakpoint ausführen **Fortfahren** ist erst aktiv, wenn Sie sich auf ein Abfrage-Editor-Fenster im Debugmodus konzentrieren.|  
-|**Debuggen starten**|Nicht verfügbar|**Debuggen starten**|ALT+F5|Versetzt ein Abfrage-Editor-Fenster in den Debugmodus und führt den Vorgang bis zum ersten Breakpoint aus. Wenn sich Ihr Fokus auf ein Abfrage-Editor-Fenster richtet, das sich im Debugmodus befindet, wird **Debuggen starten** durch **Weiter**ersetzt.|  
+|**Fenster/Lokal**|Nicht verfügbar|**Breakpoints/Lokal**|STRG+ALT+V, L|Anzeigen des Fensters **Lokal**|  
+|**Fenster/Aufrufliste**|Nicht verfügbar|**Breakpoints/Aufrufliste**|STRG+ALT+C|Anzeigen des Fensters **Aufrufliste**|  
+|**Fenster/Threads**|Nicht verfügbar|**Breakpoints/Threads**|STRG+ALT+H|Anzeigen des Fensters **Threads**|  
+|**Fortsetzen**|Nicht verfügbar|**Fortsetzen**|ALT+F5|Den Vorgang bis zum nächsten Breakpoint ausführen **Weiter** ist erst dann aktiv, wenn der Fokus auf ein Abfrage-Editor-Fenster verschoben wird, das sich im Debugmodus befindet.|  
+|**Debuggen**|Nicht verfügbar|**Debuggen**|ALT+F5|Versetzt ein Abfrage-Editor-Fenster in den Debugmodus und führt den Vorgang bis zum ersten Breakpoint aus. Wenn sich Ihr Fokus auf ein Abfrage-Editor-Fenster richtet, das sich im Debugmodus befindet, wird **Debuggen starten** durch **Weiter**ersetzt.|  
 |**Alle unterbrechen**|Nicht verfügbar|**Alle unterbrechen**|STRG+ALT+UNTBR|Diese Funktion wird vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger nicht verwendet.|  
-|**Debuggen Abbrechen**|Nicht verfügbar|**Debuggen Abbrechen**|UMSCHALT+F5|Deaktiviert den Debugmodus für ein Abfrage-Editor-Fenster und stellt den normalen Modus wieder her.|  
+|**Debuggen beenden**|Nicht verfügbar|**Debuggen beenden**|UMSCHALT+F5|Deaktiviert den Debugmodus für ein Abfrage-Editor-Fenster und stellt den normalen Modus wieder her.|  
 |**Debuggen**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Beendet den Debugmodus, führt jedoch die übrigen Anweisungen im Abfrage-Editor-Fenster aus.|  
 |**Einzelschritt**|Nicht verfügbar|**Einzelschritt**|F11|Führt die nächste Anweisung aus und öffnet außerdem ein neues Abfrage-Editor-Fenster im Debugmodus, wenn die nächste Anweisung eine gespeicherte Prozedur, einen Trigger oder eine Funktion ausführt.|  
-|**Prozedur Schritt**|Nicht verfügbar|**Prozedur Schritt**|F10|Wie **Einzelschritt**, mit dem Unterschied, dass keine Funktionen, gespeicherten Prozeduren oder Trigger debuggt werden.|  
+|**Überspringen**|Nicht verfügbar|**Überspringen**|F10|Wie **Einzelschritt**, mit dem Unterschied, dass keine Funktionen, gespeicherten Prozeduren oder Trigger debuggt werden.|  
 |**Rücksprung**|Nicht verfügbar|**Rücksprung**|UMSCHALT+F11|Führt den restlichen Code in einem Trigger, einer Funktion oder einer gespeicherten Prozedur aus, ohne bei Breakpoints anzuhalten. Der normale Debugmodus wird fortgesetzt, wenn die Steuerung an den Code, der das Modul aufgerufen hat, zurückgegeben wird.|  
-|Nicht verfügbar|**Ausführen bis** Hand|Nicht verfügbar|STRG+F10|Führt den gesamten Code von der letzten Halteposition bis zur aktuellen Cursorposition aus, ohne bei Breakpoints anzuhalten.|  
+|Nicht verfügbar|**Ausführen bis** Cursorposition|Nicht verfügbar|STRG+F10|Führt den gesamten Code von der letzten Halteposition bis zur aktuellen Cursorposition aus, ohne bei Breakpoints anzuhalten.|  
 |**Schnellüberwachung**|**Schnellüberwachung**|Nicht verfügbar|STRG+ALT+Q|Zeigt das Fenster **Schnellüberwachung** an.|  
 |**Haltepunkt umschalten**|**Breakpoint/Breakpoint einfügen**|Nicht verfügbar|F9|Positioniert einen Breakpoint bei der aktuellen oder ausgewählten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|  
 |Nicht verfügbar|**Breakpoint/Breakpoint löschen**|Nicht verfügbar|Nicht verfügbar|Löscht den Breakpoint aus der ausgewählten Zeile.|  
 |Nicht verfügbar|**Breakpoint/Breakpoint deaktivieren**|Nicht verfügbar|Nicht verfügbar|Deaktiviert den Breakpoint in der ausgewählten Zeile. Der Breakpoint bleibt in der Codezeile, beendet aber keine Ausführung, bis er erneut aktiviert wird.|  
 |Nicht verfügbar|**Breakpoint/Breakpoint aktivieren**|Nicht verfügbar|Nicht verfügbar|Aktiviert den Breakpoint in der ausgewählten Zeile.|  
 |**Alle Breakpoints löschen**|Nicht verfügbar|Nicht verfügbar|STRG+UMSCHALT+F9|Löscht alle Breakpoints.|  
-|**Deaktivieren aller Haltepunkte**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Deaktiviert alle Breakpoints.|  
+|**Alle Breakpoints deaktivieren**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Deaktiviert alle Breakpoints.|  
 |Nicht verfügbar|**Überwachung hinzufügen**|Nicht verfügbar|Nicht verfügbar|Fügt dem **Überwachungsfenster** den ausgewählten Ausdruck hinzu.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Debugger](transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](step-through-transact-sql-code.md)   
- [Informationen zum Transact-SQL-Debugger](transact-sql-debugger-information.md)   
- [Datenbank-Engine Abfrage-Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Transact-SQL-Debuggerinformationen](transact-sql-debugger-information.md)   
+ [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

@@ -13,22 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6707dc2e3c317c8b573eada62b2db07adbfa9d4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243102"
 ---
 # <a name="call-stack-window"></a>Fenster 'Aufrufliste'
-  Das Fenster " **aufrufsstapel** " zeigt die Module in der aufrufsstapel sowie die Datentypen und Werte von Parametern an, die an die Module weitergegeben werden. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module umfassen gespeicherte Prozeduren, benutzerdefinierte Funktionen und Trigger. Um die Aufrufliste anzuzeigen, müssen Sie sich im Debugmodus befinden.  
+  Im Fenster **Aufrufliste** werden die Module in der Aufrufliste angezeigt sowie die Datentypen und die Werte aller Parameter, die an die Module übergeben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module umfassen gespeicherte Prozeduren, benutzerdefinierte Funktionen und Trigger. Um die Aufrufliste anzuzeigen, müssen Sie sich im Debugmodus befinden.  
   
 ## <a name="task-list"></a>Aufgabenliste  
- **So greifen Sie auf das Fenster "aufrufen" zu**  
+ **So greifen Sie auf das Fenster Aufrufliste zu**  
   
 -   Klicken Sie im Menü **Debuggen** auf **Fenster**und dann auf **Aufrufliste**.  
   
- **So ändern Sie den aktuellen Aufrufstapel Rahmen**  
+ **So ändern Sie den aktuellen Aufruflistenrahmen**  
   
  Sie können eine der folgenden Prozeduren verwenden, um einen Stapelrahmen zum aktuellen Rahmen zu machen:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "75243102"
   
 -   Doppelklicken Sie auf den Stapelrahmen.  
   
- **So zeigen Sie die Quelle eines anderen Frames als dem aktuellen Frame an**  
+ **So zeigen Sie die Quelle eines anderen Rahmens an, der nicht der aktuelle Rahmen ist**  
   
 -   Klicken Sie mit der rechten Maustaste auf den Stapelrahmen, und klicken Sie dann auf **Gehe zu Quellcode**.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "75243102"
  Alle Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** werden auf Grundlage des aktuellen Stapelrahmens ausgewertet. Im Abfrage-Editor-Fenster wird der Code für den aktuellen Rahmen angezeigt. Standardmäßig ist der aktuelle Stapelrahmen der Rahmen, in dem der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger die Ausführung angehalten hat. Wenn Sie den aktuellen Stapelrahmen zu einem anderen Rahmen ändern, werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** im Kontext des neuen Rahmens neu ausgewertet, und der Quellcode des neuen Rahmens wird im Abfrage-Editor-Fenster angezeigt.  
   
 ## <a name="columns"></a>Spalten  
- **Benennen**  
+ **Name**  
  Zeigt Informationen über ein Modul in der Aufrufliste an.  
   
  Für die letzte Zeile in der Aufrufliste werden unter **Name** das Abfrage-Editor-Quellcodefenster und die Zeilennummer des ersten Aufrufs an den Stapel aufgelistet. Für die anderen Zeilen hat **Name** das Format **Modul(Instanz.Datenbank)(Parameterliste) Zeilennummer**.  
@@ -54,7 +53,7 @@ ms.locfileid: "75243102"
  **Modul**  
  Der Name der gespeicherten Prozedur, Funktion oder gespeicherten Prozedur, die einen Aufruf zum nächsten Rahmen ausgelöst hat.  
   
- **Instance. Database**  
+ **Instanz.Datenbank**  
  Die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sowie die Datenbank, die das Modul enthält.  
   
  **Parameterliste**  
@@ -63,10 +62,10 @@ ms.locfileid: "75243102"
  **LineNumber**  
  Für alle Zeilen mit Ausnahme der obersten gibt **Zeilennummer** an, welche Zeile im Modul einen Aufruf zum Rahmen ausgelöst hat. Für die oberste Zeile gibt **Zeilennummer** die Zeile an, auf die der Debugger gerade fokussiert ist.  
   
- **Kurse**  
+ **Sprache**  
  Zeigt **Transact-SQL** für [!INCLUDE[tsql](../../includes/tsql-md.md)]an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Debugger](transact-sql-debugger.md)   
- [Informationen zum Transact-SQL-Debugger](transact-sql-debugger-information.md)   
+ [Transact-SQL-Debuggerinformationen](transact-sql-debugger-information.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](step-through-transact-sql-code.md)  

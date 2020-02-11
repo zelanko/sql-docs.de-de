@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Beheben von Fehlern | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Beheben von Fehlern
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e7cc581bc721f3174b5526ecf44941ee2d455634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035174"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241397"
 ---
 # <a name="how-to-fix-errors"></a>Gewusst wie: Beheben von Fehlern
+
 Im Bereich "Fehlerliste" werden alle Bereitstellungs- und Buildfehler angezeigt. Wenn Sie Datenbankentitäten und ihre Definitionen bearbeiten, werden durch die Bearbeitung im Transact\-SQL-Editor oder Tabellen-Designer verursachte Syntax- und Semantikfehler ebenfalls in der Liste angezeigt. Die Fehlerliste wird dynamisch aktualisiert, wenn Sie Skripts auf unterschiedlichen Registerkarten bearbeiten. Sie können dann die identifizierten Fehler für die weitere Problembehandlung nachverfolgen.  
   
 > [!WARNING]  

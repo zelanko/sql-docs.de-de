@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: c6e67b2eacfd428bc296596699ff65939789d1e8
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957274"
 ---
 # <a name="back-up-the-service-master-key"></a>Sichern des Diensthauptschlüssels
@@ -24,28 +24,28 @@ ms.locfileid: "74957274"
   
  **In diesem Thema**  
   
--   **Bevor Sie beginnen:**  
+-   **Vorbereitungen:**  
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherung](#Security)  
+     [Sicherheit](#Security)  
   
 -   [So sichern Sie den Dienst Hauptschlüssel](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a>Einschränkungen  
+###  <a name="Restrictions"></a> Einschränkungen  
   
 -   Der Hauptschlüssel muss geöffnet und entschlüsselt sein, bevor er gesichert wird. Wenn er mit dem Diensthauptschlüssel verschlüsselt wird, muss der Hauptschlüssel nicht explizit geöffnet werden. Wenn der Hauptschlüssel jedoch nur mit einem Kennwort verschlüsselt wird, muss er explizit geöffnet werden.  
   
 -   Es wird empfohlen, dass Sie sofort nach der Erstellung eine Sicherung des Hauptschlüssels anlegen und diese an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CONTROL-Berechtigung für die Datenbank.  
   
-##  <a name="Procedure"></a>Verwenden von Transact-SQL  
+##  <a name="Procedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-back-up-the-service-master-key"></a>So sichern Sie den Diensthauptschlüssel  
   

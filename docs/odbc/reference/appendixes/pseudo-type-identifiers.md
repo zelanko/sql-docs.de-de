@@ -1,5 +1,5 @@
 ---
-title: Pseudo-Typ-IDs | Microsoft-Dokumentation
+title: Pseudo-Typbezeichner | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057226"
 ---
 # <a name="pseudo-type-identifiers"></a>Pseudotypbezeichner
-Zur Vereinfachung der Programmierung Anwendung definiert ODBC eine Anzahl von Pseudo-Typ-IDs. Diese IDs stimmen nicht mit tatsächlichen Datentypen tatsächlich überein, aber stattdessen je nach Situation, lösen in vorhandene Datentypen.  
+Zur einfacheren Anwendungsprogrammierung definiert ODBC eine Reihe von Pseudo-typbezeichlern. Diese Bezeichner entsprechen nicht tatsächlich den tatsächlichen Datentypen, sondern können in Abhängigkeit von der Situation in vorhandene Datentypen aufgelöst werden.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Standardmäßiger C-Datentyp](../../../odbc/reference/appendixes/default-c-data-types.md)  
+-   [Standardmäßige C-Datentypen](../../../odbc/reference/appendixes/default-c-data-types.md)  
   
--   [Bookmark-C-Datentyp](../../../odbc/reference/appendixes/bookmark-c-data-type.md)  
+-   [Textmarke, C-Datentyp](../../../odbc/reference/appendixes/bookmark-c-data-type.md)  
   
 -   [SQL_ARD_TYPE](../../../odbc/reference/appendixes/sql-ard-type.md)  
   

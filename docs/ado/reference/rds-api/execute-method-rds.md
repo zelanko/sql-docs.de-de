@@ -14,17 +14,17 @@ ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964315"
 ---
 # <a name="execute-method-rds"></a>Execute-Methode (RDS)
-Führt die Anforderung und erstellt ein ADO-Recordset für die Verwendung in ADO, 2.5 und höher.  
+Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2,5 und höher.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,50 +35,50 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Eine Zeichenfolge, die für die Verbindung der OLE DB-Anbieter für die Ausführung wird, in dem die Anforderung gesendet werden. Wenn ein Handler mithilfe des Parameters *HandlerString* können sie bearbeiten oder Ersetzen Sie die Verbindungszeichenfolge.  
+ Eine Zeichenfolge, die zum Herstellen einer Verbindung mit dem OLE DB Anbieter verwendet wird, an den die Anforderung zur Ausführung gesendet wird. Wenn ein Handler mithilfe von *handlerstring* angegeben wird, kann er die Verbindungs Zeichenfolge bearbeiten oder ersetzen.  
   
- *HandlerString*  
- Ein mit dem zweiteiligen-Zeichenfolge, die den Handler, der mit dieser Ausführung zu verwendende identifiziert. Die Zeichenfolge besteht aus zwei Teilen. Der erste Teil enthält den Namen (ProgID) des Handlers verwendet werden. Der zweite Teil enthält Argumente, die an den Handler übergeben werden. Die Details der Interpretation der Argumentzeichenfolge sind spezifisch für jeden Handler. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt. Die Zeichenfolge mit Befehlsargumenten kann zusätzliche Kommas enthalten. Die Argumente sind optional.  
+ *Handlerstring*  
+ Eine zweiteilige Zeichenfolge, die den Handler identifiziert, der bei dieser Ausführung verwendet werden soll. Die Zeichenfolge enthält zwei Teile. Der erste Teil enthält den Namen (ProgID) des zu verwendenden Handlers. Der zweite Teil enthält Argumente, die an den Handler übermittelt werden sollen. Die Details, wie die Argument Zeichenfolge interpretiert wird, sind spezifisch für jeden Handler. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt. Die Argument Zeichenfolge kann zusätzliche Kommas enthalten. Die Argumente sind optional.  
   
  *QueryString*  
- Ein Befehl in der Befehlssprache, die vom OLE DB-Anbieters identifiziert, die in der Verbindungszeichenfolge unterstützt wird. Für SQL-basierten Anbieter *QueryString* möglicherweise eine Transact-SQL-Befehl-Anweisung enthalten, aber dies eventuell nicht möglich, für nicht-SQL-Anbieter (z. B. MSDataShape) eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] abfrageanweisung.  
+ Ein Befehl in der Befehlssprache, der von dem in der Verbindungs Zeichenfolge identifizierten OLE DB Anbieter unterstützt wird. Bei SQL-basierten Anbietern kann *QueryString* eine Transact-SQL-Befehls Anweisung enthalten, aber bei nicht-SQL-Anbietern (z. b. MSDataShape) kann dies keine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage Anweisung sein.  
   
- Wenn ein Handler verwendet wird, kann der Handler ändern oder Ersetzen Sie den Wert, der hier angegebene. Der Handler in der Regel ersetzt z.B. *QueryString* mit einer Abfragezeichenfolge aus der Initialisierungsdatei. Standardmäßig wird die Datei "Msdfmap.ini" verwendet.  
+ Wenn ein Handler verwendet wird, kann der Handler den hier angegebenen Wert ändern oder ersetzen. Der-Handler ersetzt z. b. in der Regel *QueryString* durch eine Abfrage Zeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "msdfmap. ini" verwendet.  
   
- *lFetchOptions*  
- Gibt den Typ des asynchronen abrufen.  
+ *lfetchoptions*  
+ Gibt den Typ des asynchronen fetchen an.  
   
  Weitere Informationen finden Sie unter [FetchOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
   
  *TableID*  
- Ein **Variant** vom Typ entweder VT_EMPTY oder VT_BSTR. Wenn dieser Wert des Typs VT_EMPTY ist, wird sie ignoriert. Ist vom Typ VT_BSTR, wird das Recordset mithilfe erstellt **AdCmdTableDirect** und der hier angegebene Wert und die *QueryString* Parameter wird ignoriert.  
+ Eine **Variante** vom Typ entweder VT_EMPTY oder VT_BSTR. Wenn dieser Wert vom Typ VT_EMPTY ist, wird er ignoriert. Wenn der Typ VT_BSTR ist, wird das Recordset mithilfe von **adCmdTableDirect** erstellt, und der hier angegebene Wert und der *QueryString* -Parameter werden ignoriert.  
   
- *lExecuteOptions*  
- Eine Bitmaske von Optionen:  
+ *lexecuteoptions*  
+ Eine Bitmaske der Ausführungs Optionen:  
   
- 1 =*ReadOnly* Öffnen des Recordsets mit **AdLockReadOnly**.  
+ 1 =*Schreib* geschützt das Recordset wird mithilfe von **adlockread only**geöffnet.  
   
- 2 =*NoBatch* Öffnen des Recordsets mit **AdLockOptimistic**.  
+ 2 =*nobatch* das Recordset wird mithilfe von **adlockoptimistisch**geöffnet.  
   
- 4 =*AllParamInfoSupplied* der Aufrufer garantiert Parameterinformationen für alle Parameter angegeben wird, im *pParameters*.  
+ 4 =*allparaminfoist* der Aufrufer stellt sicher, dass Parameterinformationen für alle Parameter in *pparameters*angegeben werden.  
   
- 8 =*GetInfo* Parameterinformationen für die Abfrage wird vom OLE DB-Anbieter abgerufen und zurückgegeben, die der *pParameters* Parameter. Die Abfrage nicht ausgeführt wird und kein Recordset wird zurückgegeben.  
+ 8 =*GetInfo* -Parameterinformationen für die Abfrage werden vom OLE DB Anbieter abgerufen und im *pparameters* -Parameter zurückgegeben. Die Abfrage wird nicht ausgeführt, und es wird kein Recordset zurückgegeben.  
   
- 16 =*GetHiddenColumns* Öffnen des Recordsets mit **AdLockBatchOptimistic** und ausgeblendeten Spalten werden in das Recordset enthalten sein.  
+ 16 =*gethiddencolumns* das Recordset wird mithilfe von **adlockbatchoptimier** geöffnet, und alle verborgenen Spalten werden in das Recordset eingeschlossen.  
   
- *ReadOnly*, *NoBatch* und *GetHiddenColumns* sind sich gegenseitig ausschließende Optionen; allerdings generiert keine Fehler, um mehr als einer davon festzulegen. Wenn mehrere Optionen festgelegt werden, *GetHiddenColumns* hat Vorrang vor allen anderen gefolgt von *ReadOnly*. Wenn keine Optionen, standardmäßig angegeben sind Öffnen des Recordsets mit **AdLockBatchOptimistic** ausgeblendete Spalten nicht im Recordset enthalten sind.  
+ Schreibgeschützt, *nobatch* und *gethiddencolumns* sind Optionen, *die sich gegen*seitig ausschließen. Es wird jedoch kein Fehler generiert, wenn mehr als ein Wert festgelegt wird. Wenn mehrere Optionen festgelegt sind, hat *gethiddencolumns* Vorrang vor allen anderen, gefolgt *von "* schreibgeschützt". Wenn keine Optionen angegeben werden, wird das Recordset standardmäßig mithilfe von **adlockbatchoptimier** geöffnet, und verborgene Spalten sind nicht im Recordset enthalten.  
   
- *pParameters*  
- Ein **Variant** , ein sicheres Array von Parameterdefinitionen enthält. Wenn die *GetInfo* Option angegeben wurde, im *lExecuteOptions*, dieser Parameter wird verwendet, um die Parameterdefinitionen abgerufen, die vom OLE DB-Anbieter zurück. Andernfalls kann dieser Parameter leer sein.  
+ *pparameters*  
+ Eine **Variante** , die ein sicheres Array von Parameter Definitionen enthält. Wenn die *GetInfo* -Option in *lexecuteoptions*angegeben wurde, wird dieser Parameter verwendet, um die Parameter Definitionen zurückzugeben, die vom OLE DB Anbieter abgerufen werden. Andernfalls kann dieser Parameter leer sein.  
   
- *lcid*  
- Die LCID verwendet, um Fehler zu erstellen, die zurückgegeben werden *pInformation*.  
+ *LCID*  
+ Die LCID, die verwendet wird, um Fehler zu erstellen, die in *pinformation*zurückgegeben werden.  
   
- *pInformation*  
- Ein Zeiger auf die von Execute zurückgegebenen Informationsfehler. Wenn der Wert NULL ist, wird keine Fehlerinformationen zurückgegeben.  
+ *pinformation*  
+ Ein Zeiger auf Informationen, die von Execute zurückgegeben werden. Wenn der Wert NULL ist, werden keine Fehlerinformationen zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
- Die *HandlerString* Parameter kann null sein. Was in diesem Fall geschieht, hängt davon ab, wie die RDS-Server konfiguriert ist. Eine Zeichenfolge Handler "MSDFMAP.handler" gibt an, dass der Handler für Microsoft bereitgestellt (Msdfmap.dll) verwendet werden soll. Eine Zeichenfolge Handler "MASDFMAP.handler,sample.ini" gibt an, dass der Handler für Msdfmap.dll verwendet werden soll und das Argument "sample.ini" an den Ereignishandler übergeben werden sollen. MSDFMAP.dll interpretiert das Argument als eine Richtung auf die sample.ini verwenden, um die Verbindungs- und Zeichenfolgen zu überprüfen.  
+## <a name="remarks"></a>Bemerkungen  
+ Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler ("msdfmap. dll") verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, Sample. ini" gibt an, dass der msdfmap. dll-Handler verwendet werden sollte und dass das Argument "Sample. ini" an den Handler übermittelt werden soll. Msdfmap. dll interpretiert das Argument als Richtung, um die Verbindungs-und Abfrage Zeichenfolgen mit der Datei "Sample. ini" zu überprüfen.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

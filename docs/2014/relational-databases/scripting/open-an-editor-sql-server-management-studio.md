@@ -11,18 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 443ff4762fe653850af8ba23166bd880298bae52
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242029"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-, MDX-, DMX- oder XML/A-Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden. Nach dem Öffnen werden alle Editor-Fenster als Registerkarte im zentralen Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt.  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] unterstützt vier Editoren: [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor zum Bearbeiten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, DMX- und MDX-Editoren zum Bearbeiten von Skripts mit diesen Sprachen und XML/A-Editor zum Bearbeiten von XML/A-Skripts oder XML-Dateien. Diese Editoren können alle auch zum Bearbeiten von Textdateien verwendet werden.  
+## <a name="before-you-begin"></a>Vorbereitungen  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] unterstützt vier Editoren: [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor zum Bearbeiten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, DMX- und MDX-Editoren zum Bearbeiten von Skripts mit diesen Sprachen und XML/A-Editor zum Bearbeiten von XML/A-Skripts oder XML-Dateien. Diese Editoren können alle auch zum Bearbeiten von Textdateien verwendet werden.  
   
 ### <a name="limitations-and-restrictions"></a>Einschränkungen  
  Falls Sie Dateien mit Benutzern an anderen Standorten gemeinsam nutzen, an denen andere Codepages verwendet werden, sollten Sie die Datei mit der entsprechenden Unicode-Codepage speichern, um Fehler beim Lesen der Datei zu vermeiden. Auch wenn Sie Dateien für UNIX oder Macintosh speichern, sollten Sie darauf achten, die Dateien im geeigneten Dokumentformat zu speichern. Klicken Sie im Menü **Datei** auf **Speichern unter**, klicken Sie auf den Pfeil neben der Schaltfläche **Speichern** , klicken Sie auf **Mit Codierung speichern** , und wählen Sie dann unter **Zeilenenden** entweder **Unix** oder **Macintosh**aus.  
@@ -36,34 +35,33 @@ ms.locfileid: "75242029"
 ### <a name="using-the-filenew-menu"></a>Verwenden des Menüs "Datei/Neu"  
  Klicken Sie im Menü **Datei** auf **Neu**, und wählen Sie dann eine Abfrage-Editor-Option aus:  
   
--   **Abfrage mit aktueller Verbindung** : öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Wenn Sie z. b. in Objekt-Explorer eine Instanz von auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] von ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
+-   **Abfrage mit aktueller Verbindung**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbank-Engine Abfrage** : öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]Instanz von erforderlichen Informationen zu erhalten.  
+-   **Datenbank-Engine-Abfrage**: Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlichen Informationen abzurufen.  
   
--   **Analysis Services MDX-Abfrage** : öffnet einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] neuen MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]mit einer Instanz von erforderlichen Informationen zu erhalten.  
+-   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
--   **Analysis Services DMX-Abfrage** : öffnet einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] neuen DMX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]mit einer Instanz von erforderlichen Informationen zu erhalten.  
+-   **Analysis Services DMX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -DMX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
--   **Analysis Services XML/a-Abfrage** : öffnet einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] neuen XML/a-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]mit einer Instanz von erforderlichen Informationen zu erhalten.  
+-   **Analysis Services XML/A-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -XML/A-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
 ### <a name="using-the-fileopen-menu"></a>Verwenden des Menüs "Datei/Öffnen"  
- Klicken Sie im Menü **Datei** auf **Öffnen**, und navigieren Sie anschließend zu einer Datei, und öffnen Sie sie. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird der entsprechende Editor-Typ für die Dateierweiterung geöffnet, der Inhalt der Datei ins Editor-Fenster kopiert und außerdem ggf. ein Dialogfeld für die Verbindung geöffnet. Wenn Sie z. B. eine Datei mit der Erweiterung ".sql" öffnen, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet, der Inhalt in die SQL-Datei kopiert und ein Verbindungsdialogfeld geöffnet. Wenn Sie eine Datei mit einer Erweiterung öffnen, die keinem bestimmten Editor zugeordnet ist, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein Text-Editor-Fenster geöffnet und der Inhalt der Datei dort hinein kopiert.  
+ Klicken Sie im Menü **Datei** auf **Öffnen**, und navigieren Sie anschließend zu einer Datei, und öffnen Sie sie. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird der entsprechende Editor-Typ für die Dateierweiterung geöffnet, der Inhalt der Datei ins Editor-Fenster kopiert und außerdem ggf. ein Dialogfeld für die Verbindung geöffnet. Wenn Sie z. B. eine Datei mit der Erweiterung ".sql" öffnen, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet, der Inhalt in die SQL-Datei kopiert und ein Verbindungsdialogfeld geöffnet. Wenn Sie eine Datei mit einer Erweiterung öffnen, die keinem bestimmten Editor zugeordnet ist, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein Text-Editor-Fenster geöffnet und der Inhalt der Datei dort hinein kopiert.  
   
  Weitere Informationen finden Sie unter [Zuordnen von Dateierweiterungen zu einem Code-Editor](associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Verwenden der Symbolleiste  
  Klicken Sie auf der Symbolleiste **Standard** auf eine der folgenden Schaltflächen:  
   
--   **Neue Abfrage** : öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann auf die Schaltfläche **Neue Abfrage** klicken, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
+-   **Neue Abfrage**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann auf die Schaltfläche **Neue Abfrage** klicken, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbank-Engine Abfrage** : öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]Instanz von erforderlichen Informationen zu erhalten.  
+-   **Datenbank-Engine-Abfrage**: Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlichen Informationen abzurufen.  
   
--   **Analysis Services MDX-Abfrage** : öffnet einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] neuen MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]mit einer Instanz von erforderlichen Informationen zu erhalten.  
+-   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
--   **Analysis Services DMX-Abfrage** : öffnet einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] neuen DMX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]mit einer Instanz von erforderlichen Informationen zu erhalten.  
+-   **Analysis Services DMX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -DMX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
--   **Analysis Services XML/a-Abfrage** : öffnet einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] neuen XML/a-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]mit einer Instanz von erforderlichen Informationen zu erhalten.  
+-   **Analysis Services XML/A-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -XML/A-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
 ### <a name="using-object-explorer"></a>Verwenden des Objekt-Explorers  
  Im **Objekt-Explorer**:  

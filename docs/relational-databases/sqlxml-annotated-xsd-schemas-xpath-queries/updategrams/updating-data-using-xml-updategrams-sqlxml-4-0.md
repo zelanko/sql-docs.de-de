@@ -28,10 +28,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3526595d169f5283f849017f1fabec24f33d553c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255994"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
@@ -121,7 +121,7 @@ ms.locfileid: "75255994"
 
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B: Aktualisieren von mehreren Datensätzen mit dem Attribut "updg:id"  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Aktualisieren von mehreren Datensätzen mit dem Attribut "updg:id"  
  In diesem Beispiel führt das Updategram zwei Updates auf die HumanResources.Shift-Tabelle in der AdventureWorks-Datenbank aus:  
   
 -   Es ändert den Namen der ursprünglichen Tagschicht, die um 7.00 Uhr beginnt, von "Day" in "Early Morning".  
@@ -157,7 +157,7 @@ ms.locfileid: "75255994"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>c. Angeben von \<Multiple vor> \<und nach> Blöcken  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Angeben von \<Multiple vor> \<und nach> Blöcken  
  Um Mehrdeutigkeit zu vermeiden, können Sie das Update Gram in Beispiel B schreiben, indem Sie mehrere ** \<vor>** und ** \<nach>** Block Paaren verwenden. Das angeben ** \<von vor>** und ** \<nach>** Paaren ist eine Möglichkeit, mehrere Updates mit mindestens einer Verwirrung anzugeben. Außerdem müssen Sie das **updg: ID** -Attribut nicht verwenden, wenn jedes der ** \<vor>** und ** \<nachdem>** Blöcke höchstens ein Element angeben.  
   
 > [!NOTE]  
@@ -194,7 +194,7 @@ ms.locfileid: "75255994"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. Angeben mehrerer \<Synchronisierungs> Blöcke  
+### <a name="d-specifying-multiple-sync-blocks"></a>D: Angeben mehrerer \<Synchronisierungs> Blöcke  
  Sie können mehrere ** \<Synchronisierungs>** Blöcke in einem Update Gram angeben. Jeder ** \<angegebene Synchronisierungs>** Block ist eine unabhängige Transaktion.  
   
  Im folgenden Update Gram aktualisiert der erste ** \<Synchronisierungs>** einen Datensatz in der Sales. Customer-Tabelle. Der Einfachheit halber gibt das Updategram nur die erforderlichen Spaltenwerte an, nämlich den Identitätswert (CustomerID) und den zu aktualisierenden Wert (SalesPersonID).  

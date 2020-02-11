@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3994a9d0bc863367edf5b1844772b94a63f19d4d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257253"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Einführung in DiffGrams für SQLXML 4.0
@@ -73,11 +73,11 @@ ms.locfileid: "75257253"
 ## <a name="understanding-the-diffgram-processing-logic"></a>Grundlegendes zur DiffGram-Verarbeitungslogik  
  Die DiffGram-Verarbeitungslogik verwendet bestimmte Regeln, um zu bestimmen, ob es sich bei einem Vorgang um einen Einfüge-, Aktualisieren- oder Löschvorgang handelt. Diese Regeln werden in der folgenden Tabelle beschrieben.  
   
-|Vorgang|Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Einfügen|Ein DiffGram zeigt einen Einfügevorgang an, wenn ein Element in der ** \<DataInstance->** Block, jedoch nicht im entsprechenden ** \<vor>** Block angezeigt wird, und das **diffgr: hasChanges** -Attribut (**diffgr: hasChanges = eingefügt**) für das Element angegeben wird. In diesem Fall fügt das DiffGram die Daten Satz Instanz, die im ** \<DataInstance->** Block angegeben ist, in die Datenbank ein.<br /><br /> Wenn das **diffgr: hasChanges** -Attribut nicht angegeben wird, wird das-Element von der Verarbeitungslogik ignoriert, und es wird kein INSERT-Vorgang ausgeführt. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).|  
-|Update|Das DiffGram zeigt einen Update Vorgang an, wenn ein Element im- \<Element vor>-Block vorhanden ist, für das ein entsprechendes-Element im ** \<DataInstance->** Block vorhanden ist (d. h. beide Elemente verfügen über ein **diffgr: ID** -Attribut mit demselben Wert) und das **diffgr: hasChanges** -Attribut mit **dem Wert,** der für das-Element im ** \<Data>instance**<br /><br /> Wenn das **diffgr: hasChanges** -Attribut für das-Element in der ** \<DataInstance->** Block nicht angegeben wird, wird von der Verarbeitungslogik ein Fehler zurückgegeben. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Wenn **diffgr: parameted** im ** \<before>** -Block angegeben wird, wird die über-/Unterordnungsbeziehung der von der **parameentid** angegebenen Elemente verwendet, um die Reihenfolge zu bestimmen, in der die Datensätze aktualisiert werden.|  
-|„Löschen“|Ein DiffGram gibt einen Löschvorgang an, wenn ein Element im ** \<vor>** Block, jedoch nicht in der entsprechenden ** \<DataInstance>** Block angezeigt wird. In diesem Fall löscht das DiffGram die Daten Satz Instanz, die im ** \<vor>** Block aus der Datenbank angegeben wird. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Wenn **diffgr: parameted** im ** \<before>** -Block angegeben wird, wird die über-/Unterordnungsbeziehung der von der **parameentid** angegebenen Elemente verwendet, um die Reihenfolge zu bestimmen, in der Datensätze gelöscht werden.|  
+|Aktualisieren|Das DiffGram zeigt einen Update Vorgang an, wenn ein Element im- \<Element vor>-Block vorhanden ist, für das ein entsprechendes-Element im ** \<DataInstance->** Block vorhanden ist (d. h. beide Elemente verfügen über ein **diffgr: ID** -Attribut mit demselben Wert) und das **diffgr: hasChanges** -Attribut mit **dem Wert,** der für das-Element im ** \<Data>instance**<br /><br /> Wenn das **diffgr: hasChanges** -Attribut für das-Element in der ** \<DataInstance->** Block nicht angegeben wird, wird von der Verarbeitungslogik ein Fehler zurückgegeben. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Wenn **diffgr: parameted** im ** \<before>** -Block angegeben wird, wird die über-/Unterordnungsbeziehung der von der **parameentid** angegebenen Elemente verwendet, um die Reihenfolge zu bestimmen, in der die Datensätze aktualisiert werden.|  
+|Löschen|Ein DiffGram gibt einen Löschvorgang an, wenn ein Element im ** \<vor>** Block, jedoch nicht in der entsprechenden ** \<DataInstance>** Block angezeigt wird. In diesem Fall löscht das DiffGram die Daten Satz Instanz, die im ** \<vor>** Block aus der Datenbank angegeben wird. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Wenn **diffgr: parameted** im ** \<before>** -Block angegeben wird, wird die über-/Unterordnungsbeziehung der von der **parameentid** angegebenen Elemente verwendet, um die Reihenfolge zu bestimmen, in der Datensätze gelöscht werden.|  
   
 > [!NOTE]  
 >  DiffGrams können keine Parameter übergeben werden.  

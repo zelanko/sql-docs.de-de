@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243069"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL-Debuggerinformationen
@@ -44,7 +44,7 @@ ms.locfileid: "75243069"
   
  Das Fenster **Lokal** zeigt Informationen über die lokalen Variablen im aktuellen Bereich des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers an. Der Satz von Ausdrücken, die im Fenster **Lokal** aufgeführt sind, ändert sich, wenn der Debugger die verschiedenen Teile des Codes durchläuft.  
   
- Die Ausdrücke in der **Schnellüberwachung** und den vier **Überwachungsfenster** sind nicht darauf beschränkt, die Bezeichner einer Variablen aufzulisten. Sie können einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdruck angeben, dessen Auswertung einen einzelnen Wert ergibt. Beispiele:   
+ Die Ausdrücke in der **Schnellüberwachung** und den vier **Überwachungsfenster** sind nicht darauf beschränkt, die Bezeichner einer Variablen aufzulisten. Sie können einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdruck angeben, dessen Auswertung einen einzelnen Wert ergibt. Beispiele:  
   
 -   Der Name einer Variablen, z.B. @IntegerCounter.  
   
@@ -96,12 +96,12 @@ ms.locfileid: "75243069"
  Im Debugmodus sind die Registerkarten **Ergebnisse** und **Meldungen** nach wie vor im Abfrage-Editor aktiv. Auf der Registerkarte **Ergebnisse** werden weiterhin die Resultsets aus den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen angezeigt, die während einer Debuggingsitzung ausgeführt werden. Auf der Registerkarte **Meldungen** werden weiterhin Systemmeldungen angezeigt, wie z. B. „ *xx* Zeilen betroffen“, und die Ausgabe von PRINT- und RAISERROR-Anweisungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fenster "lokal"](transact-sql-debugger-locals-window.md)   
- [Überwachungs Fenster](transact-sql-debugger-watch-window.md)   
- [Dialog Feld "schnell Überwachung"](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Fenster "Breakpoints"](transact-sql-debugger-breakpoints-window.md)   
- [Fenster "Fenster"](transact-sql-debugger-call-stack-window.md)   
- [Thread Fenster](transact-sql-debugger-threads-window.md)   
+ [Lokal (Fenster)](transact-sql-debugger-locals-window.md)   
+ [Überwachung (Fenster)](transact-sql-debugger-watch-window.md)   
+ [Dialogfeld 'Schnellüberwachung'](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Fenster 'Breakpoints'](transact-sql-debugger-breakpoints-window.md)   
+ [Fenster 'Aufrufliste'](transact-sql-debugger-call-stack-window.md)   
+ [Fenster 'Threads'](transact-sql-debugger-threads-window.md)   
  [Ausgabefenster](transact-sql-debugger-output-window.md)   
  [Transact-SQL-Debugger](transact-sql-debugger.md)  
   

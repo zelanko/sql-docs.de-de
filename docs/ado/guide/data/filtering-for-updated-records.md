@@ -1,5 +1,5 @@
 ---
-title: Filterung für aktualisierte Datensätze | Microsoft-Dokumentation
+title: Filtern nach aktualisierten Datensätzen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925339"
 ---
 # <a name="filtering-for-updated-records"></a>Filtern nach aktualisierten Datensätzen
-Bevor Sie UpdateBatch aufrufen, können Sie die Recordset-Filter-Eigenschaft, um nur die Datensätze anzuzeigen, die seit dem Öffnen des Recordsets geändert wurden oder dem letzten Aufruf von UpdateBatch. Zu diesem Zweck legen Sie Filter gleich AdFilterPendingRecords, um zu bestimmen, wie viele Datensätze aktualisiert werden, wie im Codebeispiel im nächsten Abschnitt gezeigt.  
+Bevor Sie UpdateBatch aufrufen, können Sie mit der Recordset-Filter Eigenschaft nur die Datensätze anzeigen, die seit dem Öffnen des Recordsets oder dem letzten Aufrufen von UpdateBatch geändert wurden. Legen Sie zu diesem Zweck Filter auf adfilterpdingrecords fest, um zu bestimmen, wie viele Datensätze aktualisiert werden, wie im Codebeispiel im nächsten Abschnitt gezeigt.  
   
-## <a name="remarks"></a>Hinweise  
- In diesem Beispiel wird das vorherige UpdateBatch-Beispiel durch das Recordset filtern, kurz bevor die UpdateBatch aufgerufen, der Benutzer angezeigt, auf welche Datensätze ändern und Möglichkeit zum Abbrechen des Updates (mithilfe der CancelBatch-Methode) erweitert.  
+## <a name="remarks"></a>Bemerkungen  
+ In diesem Beispiel wird das vorherige Update Batch-Beispiel erweitert, indem das Recordset direkt vor dem Aufrufen von UpdateBatch gefiltert wird, sodass der Benutzer anzeigt, welche Datensätze geändert werden, und dass das Update abgebrochen werden kann (mithilfe der CancelBatch-Methode).  
   
 ```  
 'BeginFilterPend  
@@ -54,5 +54,5 @@ Bevor Sie UpdateBatch aufrufen, können Sie die Recordset-Filter-Eigenschaft, um
 'EndFilterPend  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Batchmodus](../../../ado/guide/data/batch-mode.md)

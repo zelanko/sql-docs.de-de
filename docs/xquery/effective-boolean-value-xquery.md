@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929956"
 ---
 # <a name="effective-boolean-value-xquery"></a>Effektiver boolescher Wert (XQuery)
@@ -37,15 +37,15 @@ ms.locfileid: "67929956"
   
 -   Logische Ausdrücke  
   
--   Die [funktioniert nicht](../xquery/functions-on-boolean-values-not-function.md)  
+-   Die [not-Funktion](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   Die WHERE-Klausel eines FLWOR-Ausdrucks  
   
 -   [Bedingte Ausdrücke](../xquery/conditional-expressions-xquery.md)  
   
--   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
+-   [Quantifizierte Ausdrücke](../xquery/quantified-expressions-xquery.md)  
   
- Das folgende Beispiel zeigt einen effektiven booleschen Wert. Wenn die **Wenn** -Ausdruck verarbeitet wird, wird der effektive boolesche Wert der Bedingung bestimmt. Da `/a[1]` eine leere Sequenz zurückgibt, ist der effektive boolesche Wert False. Das Ergebnis wird als XML mit einem Textknoten (false) zurückgegeben.  
+ Das folgende Beispiel zeigt einen effektiven booleschen Wert. Wenn der **if** -Ausdruck verarbeitet wird, wird der effektive boolesche Wert der Bedingung bestimmt. Da `/a[1]` eine leere Sequenz zurückgibt, ist der effektive boolesche Wert False. Das Ergebnis wird als XML mit einem Textknoten (false) zurückgegeben.  
   
 ```  
 value is false  
@@ -64,15 +64,15 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- Bei Abfragen typisierter **Xml** Spalten oder Variablen, Sie können Knoten vom booleschen Typ haben. Die **data()** in diesem Fall einen booleschen Wert zurückgibt. Wenn der Abfrageausdruck einen booleschen Wert zurückgibt, ist der effektive boolesche Wert True, was im nächsten Beispiel dargestellt ist. Das Beispiel zeigt außerdem Folgendes:  
+ Beim Abfragen von typisierten **XML** -Spalten oder-Variablen können Knoten des booleschen Typs vorhanden sein. In diesem Fall gibt die **Daten ()** einen booleschen Wert zurück. Wenn der Abfrageausdruck einen booleschen Wert zurückgibt, ist der effektive boolesche Wert True, was im nächsten Beispiel dargestellt ist. Das Beispiel zeigt außerdem Folgendes:  
   
--   Es wird eine XML-Schemaauflistung erstellt. Das Element \<b > in der Auflistung weist den Typ Boolesch.  
+-   Es wird eine XML-Schemaauflistung erstellt. Das Element \<b> in der Auflistung weist einen booleschen Typ auf.  
   
--   Eine typisierte **Xml** Variable wird erstellt und abgefragt werden kann.  
+-   Eine typisierte **XML** -Variable wird erstellt und abgefragt.  
   
 -   Der Ausdruck `data(/b[1])` gibt einen booleschen True-Wert zurück. Der effektive boolesche Wert ist deshalb in diesem Fall True.  
   
--   Der Ausdruck `data(/b[2])` gibt einen booleschen Wert für "false". Der effektive boolesche Wert ist deshalb in diesem Fall False.  
+-   Der Ausdruck `data(/b[2])` gibt einen booleschen Wert false zurück. Der effektive boolesche Wert ist deshalb in diesem Fall False.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -88,8 +88,8 @@ SELECT @x.query('if (data(/b[2])) then "true" else "false"')
 go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XQuery-Grundlagen](../xquery/xquery-basics.md)   
- [FLWOR-Anweisung und-Iteration &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR-Anweisung und Iterations &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242973"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Verwenden des Eigenschaftenfensters in Management Studio
@@ -51,6 +51,6 @@ ms.locfileid: "75242973"
 4.  Klicken Sie im SQL-Abfrage-Editor auf der Registerkarte **Ausführungsplan** auf die Symbole des Operators, um Informationen zu den Operatoren im Eigenschaftenfenster anzuzeigen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Eigenschaften Fenster &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
+ [Eigenschaftenfenster &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

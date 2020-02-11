@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243165"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Verwenden von sqlcmd mit Skriptvariablen
@@ -103,7 +103,7 @@ ms.locfileid: "75243165"
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
  Mithilfe von **sqlcmd** definierte Variablen werden als Skriptvariablen bezeichnet. In der folgenden Tabelle sind die **sqlcmd** -Skriptvariablen aufgelistet.  
   
-|Variable|Zugehörige Option|R/W|Standardwert|  
+|Variable|Zugehörige Option|R/W|Standard|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -116,7 +116,7 @@ ms.locfileid: "75243165"
 |SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-m|R/W|"0"|  
+|SQLCMDERRORLEVEL|-M|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = unbegrenzt|  
 |SQLCMDEDITOR||R/W|"edit.com"|  
@@ -149,7 +149,7 @@ ms.locfileid: "75243165"
   
  `sqlcmd -i c:\test.sql`  
   
-### <a name="b-using-the-setvar-command-interactively"></a>B: Interaktives Verwenden des setvar-Befehls  
+### <a name="b-using-the-setvar-command-interactively"></a>B. Interaktives Verwenden des setvar-Befehls  
  Im folgenden Beispiel wird veranschaulicht, wie eine Skriptvariable mithilfe des `setvar` -Befehls interaktiv festgelegt wird.  
   
  `sqlcmd`  
@@ -166,7 +166,7 @@ ms.locfileid: "75243165"
   
  `1>`  
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>c. Verwenden von Eingabeaufforderung-Umgebungsvariablen innerhalb von "sqlcmd"  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Verwenden von Eingabeaufforderung-Umgebungsvariablen innerhalb von "sqlcmd"  
  
   `are` Im folgenden Beispiel werden vier Umgebungsvariablen festgelegt und dann von `sqlcmd`aufgerufen.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "75243165"
   
  `4> GO`  
   
-### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. Verwenden von Umgebungsvariablen auf Benutzerebene in "sqlcmd"  
+### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D: Verwenden von Umgebungsvariablen auf Benutzerebene in "sqlcmd"  
  Im folgenden Beispiel wird die `%Temp%` -Umgebungsvariable auf Benutzerebene an der Eingabeaufforderung festgelegt und an die `sqlcmd` -Eingabedatei übergeben. Zum Abrufen der Umgebungsvariable auf Benutzerebene doppelklicken Sie unter **Systemsteuerung**auf **System**. Klicken Sie auf die Registerkarte **Erweitert** , und klicken Sie dann auf **Umgebungsvariablen**.  
   
  In der Eingabedatei `c:\testscript.txt`ist der folgende Code enthalten:  

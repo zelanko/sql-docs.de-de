@@ -20,18 +20,18 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3ca7ed4f6bbcd31b8f67b95dc14a2c6c301b5a59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138832"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLMoreResults** bestimmt, ob weitere Ergebnisse anzeigt, die sich auf eine Anweisung mit verfügbaren **wählen**, **UPDATE**, **einfügen**, oder  **Löschen Sie** Anweisungen und, wenn dies der Fall ist, initialisiert verarbeiten, um diese Ergebnisse zu erzielen.  
+ **SQLMoreResults** bestimmt, ob weitere Ergebnisse für eine Anweisung verfügbar sind, die **Select**-, **Update**-, **Insert**-oder **Delete** -Anweisungen enthält. wenn dies der Fall ist, wird die Verarbeitung für diese Ergebnisse initialisiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,78 +43,78 @@ SQLRETURN SQLMoreResults(
   
 ## <a name="arguments"></a>Argumente  
  *StatementHandle*  
- [Eingabe] Anweisungshandle.  
+ Der Anweisungs Handle.  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE, OR SQL_PARAM_DATA_AVAILABLE.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLMoreResults** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* SQL _HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLMoreResults** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLMoreResults** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLMoreResults** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01S02|Optionswert wurde geändert.|Der Wert einer Anweisung-Attributs als Batches geändert wurde verarbeitet. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
-|40001|Serialisierungsfehler|Die Transaktion wurde aufgrund eines Deadlocks Ressource mit einer anderen Transaktion ein Rollback ausgeführt.|  
-|40003|Unbekannter Anweisungsabschluss|Fehler bei der zugeordnete Verbindung während der Ausführung dieser Funktion und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die **SQLMoreResults** Funktion aufgerufen wurde und, bevor es ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* . Die **SQLMoreResults** Funktion wurde erneut aufgerufen, auf die *StatementHandle*.<br /><br /> Die **SQLMoreResults** Funktion aufgerufen wurde und, bevor es ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*  von einem anderen Thread in einer multithread-Anwendung.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLMoreResults** Funktion aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
-|IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
-|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01s02 entsprechen|Der Optionswert wurde geändert.|Der Wert eines Anweisungs Attributs wurde bei der Verarbeitung des Batches geändert. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|40001|Serialisierungsfehler|Für die Transaktion wurde aufgrund eines Ressourcen Deadlocks mit einer anderen Transaktion ein Rollback ausgeführt.|  
+|40003|Anweisungs Vervollständigung unbekannt|Die zugeordnete Verbindung konnte während der Ausführung dieser Funktion nicht hergestellt werden, und der Status der Transaktion kann nicht bestimmt werden.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die **SQLMoreResults** -Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die **SQLMoreResults** -Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die **SQLMoreResults** -Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLMoreResults** -Funktion aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *StatementHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
+|IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
+|IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
   
 ## <a name="comments"></a>Kommentare  
- **Wählen Sie** Anweisungen Resultsets zurückgeben. **UPDATE**, **einfügen**, und **löschen** Anweisungen die Anzahl der betroffenen Zeilen zurückgegeben. Wenn eine dieser Anweisungen zusammengefasst werden, mit Arrays von Parametern (nummeriert in aufsteigender Reihenfolge der Parameter in der Reihenfolge, die sie in den Batch angezeigt werden) oder in Prozeduren gesendet, sie können mehrere Resultsets zurückgeben oder Zeilenanzahl. Weitere Informationen zu Batches von Anweisungen und Arrays von Parametern, finden Sie unter [Batches von SQL-Anweisungen](../../../odbc/reference/develop-app/batches-of-sql-statements.md) und [Arrays von Parameterwerten](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
+ **Select** -Anweisungen geben Resultsets zurück. Durch **Update**-, **Insert**-und **Delete** -Anweisungen wird die Anzahl der betroffenen Zeilen zurückgegeben. Wenn eine dieser Anweisungen in einem Batch verarbeitet und mit Arrays von Parametern übermittelt wird (in steigender Reihenfolge der Parameter in der Reihenfolge, in der Sie im Batch angezeigt werden), oder in Prozeduren, können Sie mehrere Resultsets oder Zeilen Anzahlen zurückgeben. Weitere Informationen zu Batches von Anweisungen und Arrays von Parametern finden Sie unter [Batches von SQL-Anweisungen](../../../odbc/reference/develop-app/batches-of-sql-statements.md) und [Arrays von Parameterwerten](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
- Nach dem Ausführen des Batches, wird die Anwendung auf das erste Resultset positioniert. Die Anwendung kann Aufrufen **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**, und alle Metadatenfunktionen, auf das erste oder alle nachfolgenden Resultset mit Vorwärtscursor, wie es gäbe es nur ein einzelnes Resultset. Wenn sie mit dem ersten Resultset abgeschlossen ist, ruft die Anwendung **SQLMoreResults** , in das nächste Resultset zu verschieben. Wenn ein anderes Resultset oder Count verfügbar ist, **SQLMoreResults** gibt SQL_SUCCESS zurück, und initialisiert die Resultset oder die Anzahl für die weitere Verarbeitung. Zeile Count – Generieren von Anweisungen angezeigt, in der Zwischenzeit generiert Set-Anweisungen führen, sie können ausgeführt werden, durch Aufrufen von **SQLMoreResults**. Nach dem Aufruf **SQLMoreResults** für **UPDATE**, **einfügen**, oder **löschen** -Anweisungen, die eine Anwendung kann eine Aufrufen **SQLRowCount**.  
+ Nach dem Ausführen des Batches wird die Anwendung auf dem ersten Resultset positioniert. Die Anwendung kann **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, **SQLSetPos**und alle Metadatenfunktionen auf dem ersten oder allen nachfolgenden Resultsets aufrufen, genauso als wäre es nur ein einzelnes Resultset. Sobald das erste Resultset abgeschlossen ist, ruft die Anwendung **SQLMoreResults** auf, um zum nächsten Resultset zu wechseln. Wenn ein anderes Resultset oder eine andere Anzahl verfügbar ist, gibt **SQLMoreResults** SQL_SUCCESS zurück und initialisiert das Resultset oder die Anzahl für die weitere Verarbeitung. Wenn eine der Zeilen Anzahl generierende Anweisungen zwischen Resultset-generierten-Anweisungen angezeigt werden, können Sie durch den Aufruf von **SQLMoreResults durch den Aufruf von sqlmoreres** Nach dem Aufruf von **SQLMoreResults** für **Update**-, **Insert**-oder **Delete** -Anweisungen kann eine Anwendung **SQLRowCount**aufrufen.  
   
- Wenn es eine aktuelle Resultset mit Zeilen Resultsetzeile wurde, **SQLMoreResults** verwirft das Resultset und das nächste Resultset oder zählen verfügbar macht. Wenn alle Ergebnisse verarbeitet wurden, **SQLMoreResults** SQL_NO_DATA zurückgibt. Für einige Treiber sind Output-Parameter und Rückgabewerte nicht verfügbar, bis alle Resultsets und Zeilen verarbeitet wurden. Für solche Treiber, Ausgabeparameter und Rückgabewerte, die beim verfügbar **SQLMoreResults** SQL_NO_DATA zurückgibt.  
+ Wenn ein Aktuelles Resultset mit nicht abgerufenen Zeilen vorhanden ist, verwirft **SQLMoreResults** das Resultset und macht das nächste Resultset oder die nächste Anzahl verfügbar. Wenn alle Ergebnisse verarbeitet wurden, gibt **SQLMoreResults** SQL_NO_DATA zurück. Bei manchen Treibern sind Ausgabeparameter und Rückgabewerte erst verfügbar, wenn alle Resultsets und Zeilenzähler verarbeitet wurden. Bei solchen Treibern werden Ausgabeparameter und Rückgabewerte verfügbar, wenn **SQLMoreResults** SQL_NO_DATA zurückgibt.  
   
- Alle Bindungen, die festgelegt wurden, für das vorherige Resultset immer noch bleiben gültig. Wenn die spaltenstrukturen für dieses Resultset unterschiedlich sind, klicken Sie dann aufrufen **SQLFetch** oder **SQLFetchScroll** verursachen einen Fehler oder abschneiden. Um dies zu verhindern, muss die Anwendung aufrufen **SQLBindCol** explizit nach Bedarf erneut binden (oder durch Festlegen von deskriptorfeldern tun). Sie können auch die Anwendung aufrufen **SQLFreeStmt** mit einer *Option* SQL_UNBIND alle Spaltenpuffer aufzuheben.  
+ Alle Bindungen, die für das vorherige Resultset festgelegt wurden, sind weiterhin gültig. Wenn sich die Spalten Strukturen für dieses Resultset unterscheiden, kann das Aufrufen von **SQLFetch** oder **SQLFetchScroll** zu einem Fehler oder einem Abschneiden führen. Um dies zu verhindern, muss die Anwendung **SQLBindCol** aufrufen, um nach Bedarf explizit erneut zu binden (oder durch Festlegen von Deskriptorfeldern). Alternativ kann die Anwendung **SQLFreeStmt** mit der *Option* SQL_UNBIND zum Aufheben der Bindung aller Spalten Puffer aufzurufen.  
   
- Die Werte der Anweisungsattribute, z. B. Cursortyp, Cursorparallelität, Keysetgröße oder maximale Länge möglicherweise ändern, während die Anwendung über den Batch durch Aufrufe von navigiert **SQLMoreResults**. In diesem Fall **SQLMoreResults** gibt SQL_SUCCESS_WITH_INFO und SQLSTATE 01 s 02 (der Optionswert wurde geändert).  
+ Die Werte von Anweisungs Attributen, z. b. Cursortyp, Cursor Parallelität, Keysetgröße oder maximale Länge, können sich ändern, wenn die Anwendung durch Aufrufe von **SQLMoreResults**durch den Batch navigiert. In diesem Fall gibt **SQLMoreResults** SQL_SUCCESS_WITH_INFO und SQLSTATE 01s02 (Optionswert wurde geändert) zurück.  
   
- Aufrufen von **SQLCloseCursor**, oder **SQLFreeStmt** mit einer *Option* von SQL_CLOSE, verwirft alle Resultsets und Zeilenanzahl, die als Ergebnis der Ausführung von verfügbar waren der Batch. Gibt zurück, das Anweisungshandle auf den zugeordneten oder vorbereitete Zustand. Aufrufen von **SQLCancel** eine asynchron ausgeführte Funktion abgebrochen, wenn ein Batch ausgeführt wurde und das Anweisungshandle im ausgeführten, Cursor positioniert, oder asynchroner Zustand alle Ergebnisse Mengen führt und Zeilenanzahl generiert, indem der Batch wird verworfen, wenn der Aufruf von "Abbrechen" erfolgreich war. Klicken Sie dann die Anweisung, die auf die vorbereiteten oder zugeordneten Zustand zurückgesetzt werden.  
+ Durch den Aufruf von **SQLCloseCursor**oder **SQLFreeStmt** mit der *Option* SQL_CLOSE werden alle Resultsets und Zeilenzähler verworfen, die als Ergebnis der Ausführung des Batches verfügbar waren. Das Anweisungs Handle kehrt entweder in den zugeordneten oder vorbereiteten Zustand zurück. Wenn Sie **SQLCancel** aufrufen, um eine asynchron ausgeführte Funktion abzubrechen, wenn ein Batch ausgeführt wurde und das Anweisungs Handle sich im Ausführungs-, Cursor-oder asynchronen Zustand befindet, führt dies dazu, dass alle Resultsets und Zeilen Anzahlen, die von dem Batch generiert werden, bei erfolgreicher Ausführung des Cancel-Aufrufs Die Anweisung kehrt dann in den vorbereiteten oder zugewiesenen Zustand zurück.  
   
- Wenn ein Batch von Anweisungen oder eine Prozedur mit anderen SQL-Anweisungen kombiniert **wählen**, **UPDATE**, **einfügen**, und **löschen** -Anweisungen Diese anderen Anweisungen wirken sich nicht **SQLMoreResults**.  
+ Wenn ein Batch von Anweisungen oder eine Prozedur andere SQL-Anweisungen mit **Select**-, **Update**-, **Insert**-und **Delete** -Anweisungen vermischt, wirken sich diese anderen Anweisungen nicht auf **SQLMoreResults**aus.  
   
  Weitere Informationen finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Wenn eine gesuchte aktualisieren, insert oder-Anweisung in DELETE ein Batch von Anweisungen hat keine Auswirkungen auf alle Zeilen in der Datenquelle **SQLMoreResults** gibt SQL_SUCCESS zurück. Dies unterscheidet sich von die Groß-/Kleinschreibung ein gesuchtes Update, insert oder delete-Anweisung, die ausgeführt wird, über **SQLExecDirect**, **SQLExecute**, oder **SQLParamData**, Gibt SQL_NO_DATA zurück, wenn sie alle Zeilen in der Datenquelle nicht beeinträchtigt wird. Wenn eine Anwendung ruft **SQLRowCount** zum Abrufen der Anzahl der Zeilen nach einem Aufruf von **SQLMoreResults** Zeilen hat keine Auswirkungen **SQLRowCount** gibt SQL_NO_DATA zurück.  
+ Wenn eine gesuchte Update-, INSERT-oder DELETE-Anweisung in einem Batch von-Anweisungen keine Auswirkungen auf Zeilen in der Datenquelle hat, gibt **SQLMoreResults** SQL_SUCCESS zurück. Dies unterscheidet sich von der Groß-/Kleinschreibung einer durchsuchten Update-, INSERT-oder DELETE-Anweisung, die über **SQLExecDirect**, **SQLExecute**oder **SQLParamData**ausgeführt wird, die SQL_NO_DATA zurückgibt, wenn Sie keine Auswirkungen auf Zeilen in der Datenquelle hat. Wenn eine Anwendung **SQLRowCount** aufruft, um die Zeilen Anzahl nach einem Aufruf von **SQLMoreResults** nicht zu beeinflussen, gibt **SQLRowCount** SQL_NO_DATA zurück.  
   
- Weitere Informationen zu den gültigen Sequenzierung der ergebnisverarbeitung Funktionen, finden Sie unter [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Weitere Informationen zur gültigen Sequenzierung von Funktionen zur Ergebnis Verarbeitung finden Sie unter [Anhang B: ODBC-Status Übergangs Tabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Weitere Informationen über SQL_PARAM_DATA_AVAILABLE und gestreamte Output-Parameter, finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+ Weitere Informationen zu SQL_PARAM_DATA_AVAILABLE und gestreamt-Ausgabeparametern finden [Sie unter Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
-## <a name="availability-of-row-counts"></a>Verfügbarkeit von Zeilenanzahlen  
- Wenn ein Batch mehrere aufeinander folgende Zeile Count – Generieren von Anweisungen enthält, ist es möglich, dass diese Zeilenanzahl in nur einem Zeilenanzahl Rollup enthalten sind. Beispielsweise verfügt ein Batch einfügen fünf Anweisungen, und dann bestimmte Datenquellen von fünf einzelne Zeilenanzahl zurückgegeben werden. Bestimmte Daten aus anderen Quellen zurückgeben, nur eine Zeilenanzahl, die die Summe der fünf einzelne Zeilenanzahlen darstellt.  
+## <a name="availability-of-row-counts"></a>Verfügbarkeit der Zeilen Anzahl  
+ Wenn ein Batch mehrere aufeinander folgende, Zeilen zählungs generierende Anweisungen enthält, wird es möglich sein, dass diese Zeilenzähler in nur eine Zeilen Anzahl aufgerundet werden. Wenn ein Batch z. b. fünf INSERT-Anweisungen enthält, können bestimmte Datenquellen fünf einzelne Zeilen Anzahlen zurückgeben. Bestimmte andere Datenquellen geben nur eine Zeilen Anzahl zurück, die die Summe der fünf einzelnen Zeilen Zählungen darstellt.  
   
- Wenn ein Batch eine Kombination von Set generiertem Ergebnis und Zeile Count – Generieren von Anweisungen enthält, Zeilenanzahl oder möglicherweise nicht zur Verfügung zu. Das Verhalten des Treibers in Bezug auf die Verfügbarkeit der Zeilenanzahl wird aufgelistet, in den Typ der SQL_BATCH_ROW_COUNT-Informationen zur Verfügung, durch einen Aufruf von **SQLGetInfo**. Nehmen wir beispielsweise an, dass der Batch enthält eine **wählen**, gefolgt von zwei **einfügen**s und einen anderen **wählen**. Klicken Sie dann sind die folgenden Fälle möglich:  
+ Wenn ein Batch eine Kombination aus Resultset-Generierungs-und Zeilen Anzahl Generierungs Anweisungen enthält, ist die Zeilen Anzahl möglicherweise überhaupt nicht verfügbar. Das Verhalten des Treibers in Bezug auf die Verfügbarkeit von Zeilen Anzahlen wird im SQL_BATCH_ROW_COUNT Informationstyp aufgelistet, der durch einen **SQLGetInfo-Befehl**verfügbar ist. Nehmen wir beispielsweise an, dass der Batch eine **Select**-, gefolgt von zwei **Insert**s und eine andere **Select**-Option enthält. Dann sind die folgenden Fälle möglich:  
   
--   Die Zeilenanzahl, die die beiden entspricht **einfügen** Anweisungen sind überhaupt nicht verfügbar. Der erste Aufruf **SQLMoreResults** positionieren Sie für das Resultset des zweiten **wählen** Anweisung.  
+-   Die Zeilen Anzahl, die den beiden **Insert** -Anweisungen entspricht, ist überhaupt nicht verfügbar. Der erste Befehl von **SQLMoreResults** positioniert Sie im Resultset der zweiten **Select** -Anweisung.  
   
--   Die Zeilenanzahl, die die beiden entspricht **einfügen** Anweisungen einzeln verfügbar sind. (Einen Aufruf von **SQLGetInfo** keinen SQL_BRC_ROLLED_UP Bits für den Typ der SQL_BATCH_ROW_COUNT Informationen zurückgibt.) Der erste Aufruf **SQLMoreResults** positionieren Sie auf die Anzahl der Zeilen des ersten **einfügen**, und der zweite Aufruf wird positionieren Sie Sie auf die Anzahl der Zeilen des zweiten **einfügen**. Der dritte Aufruf von **SQLMoreResults** positionieren Sie für das Resultset des zweiten **wählen** Anweisung.  
+-   Die Zeilen Anzahl, die den beiden **Insert** -Anweisungen entspricht, ist einzeln verfügbar. (Ein **SQLGetInfo-Befehl** gibt nicht das SQL_BRC_ROLLED_UP Bit für den SQL_BATCH_ROW_COUNT Informationstyp zurück.) Der erste **SQLMoreResults** -Befehl positioniert Sie nach der Zeilen Anzahl der ersten **Einfügung**, und der zweite-Befehl positioniert Sie auf der Zeilen Anzahl der zweiten **Einfügung**. Der dritte **SQLMoreResults** -Befehl positioniert Sie im Resultset der zweiten **Select** -Anweisung.  
   
--   Die Zeilenanzahl, die die beiden entspricht **fügt** sammlungsverwaltung in einem einzelnen Zeilenanzahl, die verfügbar ist. (Einen Aufruf von **SQLGetInfo** gibt zurück, das bit für den Informationstyp SQL_BATCH_ROW_COUNT SQL_BRC_ROLLED_UP.) Der erste Aufruf **SQLMoreResults** positionieren Sie die Rollup-Zeilenanzahl und der zweite Aufruf von **SQLMoreResults** positionieren Sie für das Resultset des zweiten **wählen**.  
+-   Die Zeilen Anzahl, die den beiden **Einfügungen** entspricht, wird in eine einzelne Zeilen Anzahl hochgefahren, die verfügbar ist. (Ein Aufrufen von **SQLGetInfo** gibt das SQL_BRC_ROLLED_UP Bit für den SQL_BATCH_ROW_COUNT Informationstyp zurück.) Der erste **SQLMoreResults** -Befehl positioniert Sie an der Anzahl der Aufzählungs Zeilen, und der zweite **SQLMoreResults** -Befehl positioniert Sie im Resultset der zweiten **Select**-Option.  
   
- Bestimmten Treiber stellen die Zeilenanzahl nur für explizite Batches und nicht für gespeicherte Prozeduren verfügbar sind.  
+ Bestimmte Treiber stellen Zeilen Anzahlen nur für explizite Batches und nicht für gespeicherte Prozeduren zur Verfügung.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Anweisungsverarbeitung Abbrechen|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Abrufen eines Zeilenblocks von Daten oder ein Ergebnis durchblättern festlegen|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Abrufen einer einzelnen Zeile oder einen Block von Daten in eine Richtung Vorwärtscursor|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Abrufen von teilweise oder vollständig eine Spalte mit Daten|[SQLGetData-Funktion](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Abrufen eines Datenblocks oder Scrollen durch ein Resultset|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Abrufen einer einzelnen Zeile oder eines Datenblocks in Vorwärtsrichtung|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Abrufen eines Teils oder aller Datenspalten|[SQLGetData-Funktion](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [Abrufen von Ausgabeparametern mithilfe von SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

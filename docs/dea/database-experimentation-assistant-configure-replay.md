@@ -2,7 +2,7 @@
 title: Wiedergabe für SQL Server Upgrades konfigurieren
 description: Konfigurieren von Distributed Replay für Assistent für Datenbankexperimente
 ms.custom: seo-lt-2019
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2ef570f531bcd37a2a5f7be1f3a900c4b8a4c112
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317729"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761534"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Konfigurieren von Distributed Replay für Assistent für Datenbankexperimente
 
@@ -48,10 +48,12 @@ So richten Sie den Controller Dienst ein:
 3. Öffnen Sie "Services. msc", und wechseln Sie zum **SQL Server Distributed Replay Controller** -Dienst.
 4. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie dann **Eigenschaften**aus. Legen Sie das Dienst Konto auf ein Konto fest, das dem Controller und den Client Computern im Netzwerk gemeinsam ist.
 5. Wählen Sie **OK** aus, um das **Eigenschaften** Fenster zu schließen.
-6. Starten Sie den **SQL Server Distributed Replay Controller** -Dienst über "Services. msc" neu. Sie können auch die folgenden Befehle in der Befehlszeile ausführen, um den Dienst neu zu starten:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. Starten Sie den **SQL Server Distributed Replay Controller** -Dienst über "Services. msc" neu. Sie können auch die folgenden Befehle in der Befehlszeile ausführen, um den Dienst neu zu starten:
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. Weitere Konfigurationsoptionen finden Sie unter [Konfigurieren von Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+Weitere Konfigurationsoptionen finden Sie unter [Konfigurieren von Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="configure-dcom"></a>Konfigurieren von DCOM
 
@@ -68,9 +70,10 @@ Diese Konfiguration ist nur auf dem Controller Computer erforderlich.
 9. Fügen Sie den Benutzer hinzu, der die Wiedergabe startet. Erteilt dem Benutzer lokale Zugriffsberechtigungen. Wenn der Benutzer einen Remote Zugriff auf den Controller Dienst plant, sollten Sie dem Benutzer Remote Zugriffsberechtigungen einräumen.
 10. Wählen Sie **OK** aus, um die Änderungen zu übertragen und zur Registerkarte **Sicherheit** zurückzukehren.
 11. Wählen Sie **OK** aus, um die Änderungen zu übertragen.
-12. Starten Sie den SQL Server Distributed Replay Controller-Dienst über "Services. msc" neu. Sie können auch die folgenden Befehle in der Befehlszeile ausführen, um den Dienst neu zu starten:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. Starten Sie den SQL Server Distributed Replay Controller-Dienst über "Services. msc" neu. Sie können auch die folgenden Befehle in der Befehlszeile ausführen, um den Dienst neu zu starten:
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## <a name="set-up-the-client-service"></a>Einrichten des Client Dienstanbieter
 
@@ -81,12 +84,16 @@ Verwenden Sie vor dem Einrichten des-Client Dienstanbieter Netzwerk Tools wie Pi
 3. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie dann **Eigenschaften**aus. Legen Sie das Dienst Konto auf ein Konto fest, das sowohl dem Controller als auch den Client Computern im Netzwerk gemeinsam ist.
 4. Wählen Sie **OK** aus, um das **Eigenschaften** Fenster zu schließen. Wenn Sie den Schritt SQL Server Installer-Assistent übersprungen haben, um den Distributed Replay-Client zu konfigurieren, können Sie ihn über die Konfigurationsdatei konfigurieren. Bei einer typischen Installation befindet sich die Konfigurationsdatei unter "c:\Programme (x86) \Microsoft SQL Server\<Version\>\tools\dreplayclient\dreplayclient.config".
 5. Stellen Sie sicher, dass die Datei dreplayclient. config den Namen des Controller Computers als Controller für die Registrierung enthält.
-6. Starten Sie den SQL Server Distributed Replay-Client Dienst über "Services. msc" neu. Sie können auch die folgenden Befehle in der Befehlszeile ausführen, um den Dienst neu zu starten:<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. Starten Sie den SQL Server Distributed Replay-Client Dienst über "Services. msc" neu. Sie können auch die folgenden Befehle in der Befehlszeile ausführen, um den Dienst neu zu starten:
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. Distributed Replay Controller Protokolle befinden sich unter "c:\Programme (x86) \Microsoft SQL Server\<Version\>\tools\dreplayclient\log". Die Protokolle geben an, ob sich der Client selbst beim Controller registrieren kann.
-8. Wenn die Konfiguration erfolgreich ist, wird im Protokoll die Meldung "bei Controller <Controller Name\>registriert" angezeigt.
-9. Weitere Konfigurationsoptionen finden Sie unter [Konfigurieren von Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+    Distributed Replay Controller Protokolle befinden sich unter "c:\Programme (x86) \Microsoft SQL Server\<Version\>\tools\dreplayclient\log". Die Protokolle geben an, ob sich der Client selbst beim Controller registrieren kann.
+
+    Wenn die Konfiguration erfolgreich ist, wird im Protokoll die **mit Controller <Controller\>Name registrierte**Nachricht angezeigt.
+
+Weitere Konfigurationsoptionen finden Sie unter [Konfigurieren von Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Einrichten Distributed Replay Verwaltungs Tools
 
@@ -119,6 +126,6 @@ Die folgenden Schritte müssen für jede Wiedergabe ausgeführt werden:
 2. Erteilen von Berechtigungen für den Benutzer des Client Dienst Kontos für den Zugriff auf die Datenbanken unter der SQL Server Instanz. Berechtigungen sind erforderlich, damit die Abfragen für die SQL Server Instanz ausgeführt werden.
 3. Starten Sie die Wiedergabe.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen dazu, wie Sie eine aufgezeichnete Ablauf Verfolgung in einer aktualisierten Testumgebung wiedergeben, finden Sie unter Wiedergeben [einer Ablauf Verfolgung in Assistent für Datenbankexperimente](database-experimentation-assistant-replay-trace.md).

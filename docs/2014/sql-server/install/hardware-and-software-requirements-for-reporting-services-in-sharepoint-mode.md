@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245627"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Hardware- und Softwareanforderungen für Reporting Services im SharePoint-Modus
@@ -29,7 +29,7 @@ ms.locfileid: "75245627"
   
 -   [Weitere Informationen](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a>Voraussetzung  
+##  <a name="bkmk_prereq"></a> Voraussetzungen  
   
 -   Bei lokalen Installationen muss das Konto, das sich während der Installation von SharePoint und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] angemeldet hat, Mitglied der Administratorgruppe im lokalen Betriebssystem sein. Das Setupkonto muss kein Mitglied der Administratorgruppe für die SharePoint-Farm sein.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75245627"
 
  Lesen Sie die aktuelle [Power View-Dokumentation](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) auf Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]ist eine Funktion von Microsoft Excel 2013 und ist Teil des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services-Add-Ins für Microsoft SharePoint Server 2010 und 2013 Enterprise Editions.  
   
-##  <a name="bkmk_more_information"></a>Weitere Informationen
+##  <a name="bkmk_more_information"></a> Weitere Informationen
 
  Weitere Informationen zu SharePoint-Änderungen finden [Sie unter Änderungen von SharePoint 2010 zu SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   

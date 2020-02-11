@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c666d02449190ca6a88ac43c96ab7aee9676be4d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242646"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML ist in SQL Server nicht installiert
@@ -27,9 +27,9 @@ ms.locfileid: "75242646"
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>Verhalten von SQLXML 4.0 SP1 mit neuen Datentypen, die SQLOLEDB und SQL Server Native Client-OLE DB-Anbieter verwenden  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]in wurden die folgenden Datentypen eingeführt, die Entwickler, die SQLXML verwenden, möglicherweise verwenden:  
   
--   **Datum**  
+-   **Date**  
   
--   **Zeit**  
+-   **Time**  
   
 -   **Datetime2**  
   
@@ -38,6 +38,6 @@ ms.locfileid: "75242646"
  Wenn Sie SQLXML 4,0 SP1 mit SQLOLEDB oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]verwenden, werden diese Typen als Zeichen folgen für einen Entwickler angezeigt. SQLXML 4,0 SP1 aktiviert diese vier neuen Datentypen als integrierte skalare Typen, wenn Sie mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Anbieter 11,0 oder höher verwendet werden. Wenn Sie SQLXML 4.0 SP1 noch nicht heruntergeladen haben, kann die Zuordnung dieser Typen zu anderen als Zeichenfolgentypen zum Abschneiden einiger Daten führen. Beispielsweise führt die Zuordnung von **DateTime2** zu **xsd:date** will cause data zu be truncated zu the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **DateTime** -Genauigkeit von 3,33 Millisekunden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmier Konzepte von SQLXML 4,0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+ [SQLXML 4.0-Programmierkonzepte](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
   

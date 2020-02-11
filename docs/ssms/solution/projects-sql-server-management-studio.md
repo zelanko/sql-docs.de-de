@@ -1,6 +1,6 @@
 ---
-title: Projekte (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Projekte (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c994120589a4fa31c5968743a38f89a8ad2d1dfc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b1a0df1686543cfe69a998149ede45ea2f845894
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259449"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251869"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projekte (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Mit dem Eigenschaftenfenster in [!INCLUDE[ssManStudio](../../includes/ssmanstudi
   
 |Taskbeschreibung|Thema|  
 |--------------------|---------|  
-|Beschreibt, wie ein neues Projekt in einer Projektmappe erstellt wird.|[Erstellen eines Projekts](../../ssms/solution/create-a-project.md)|  
+|Beschreibt, wie ein neues Projekt in einer Projektmappe erstellt wird.|[Create a Project (Erstellen eines Projekts)](../../ssms/solution/create-a-project.md)|  
 |Beschreibt, wie einer Projektmappe ein vorhandenes Projekt hinzugefügt wird.|[Hinzufügen eines vorhandenen Projekts zu einer Projektmappe](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
 |Beschreibt, wie der Standardspeicherort zum Speichern von Projektdateien geändert wird.|[Ändern des Standardspeicherorts für Projekte](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Beschreibt, wie die aktuellen Eigenschaften eines Projekts angezeigt werden.|[Anzeigen der Projekteigenschaften](../../ssms/solution/view-project-properties.md)|  

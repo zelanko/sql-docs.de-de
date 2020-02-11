@@ -15,18 +15,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205965"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Task 'Operator benachrichtigen' (Wartungsplan)
-  Mithilfe des Dialogfelds **Task 'Operator benachrichtigen'** können Sie dem Wartungsplan eine automatische Benachrichtigung hinzufügen. Um diesen Task zu verwenden, muss die Datenbank-E-Mail aktiviert und ordnungsgemäß mit MSDB als Mailhost-Datenbank konfiguriert sein. Außerdem ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentoperator mit einer gültigen E-Mail-Adresse erforderlich.  
+  Im Dialogfeld " **Operatoren benachrichtigen** " können Sie dem Wartungsplan eine automatische Benachrichtigung hinzufügen. Um diese Aufgabe verwenden zu können, muss Datenbank-E-Mail aktiviert und ordnungsgemäß mit msdb als Mailhost-Datenbank konfiguriert sein, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und es muss ein-Agent-Operator mit einer gültigen e-Mail-Adresse vorhanden sein.  
   
  Dieser Task verwendet die gespeicherte Prozedur sp_notify_operator.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68205965"
  **Zu benachrichtigende Operatoren**  
  Gibt den Empfänger der E-Mail an.  
   
- **Betreff einer Benachrichtigungsmeldung**  
+ **Betreff der Benachrichtigungs Meldung**  
  Geben Sie den Text an, der in der Betreffzeile der Benachrichtigungsmeldung enthalten sein soll.  
   
- **Textkörper einer Benachrichtigungsmeldung**  
+ **Benachrichtigungs Nachrichtentext**  
  Geben Sie den Text an, der in dem Textkörper der Benachrichtigungsmeldung enthalten sein soll.  
   
  **T-SQL anzeigen**  
@@ -49,23 +49,23 @@ ms.locfileid: "68205965"
 >  Wenn die Anzahl der betroffenen Objekte groß ist, kann die Anzeige erhebliche Zeit in Anspruch nehmen.  
   
 ## <a name="new-connection-dialog-box"></a>Neue Verbindung (Dialogfeld)  
- **Verbindungsname**  
+ **Verbindungs Name**  
  Geben Sie einen Namen für die neue Verbindung ein.  
   
- **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
+ **Servernamen auswählen oder eingeben**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
  **Aktualisieren**  
  Mithilfe dieser Option aktualisieren Sie die Liste der verfügbaren Server.  
   
- **Geben Sie Informationen zum Anmelden am Server ein**  
+ **Geben Sie Informationen ein, um sich beim Server anzumelden.**  
  Legt fest, wie die Authentifizierung gegenüber dem Server stattfindet.  
   
- **Integrierte Sicherheit von Windows NT verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] her.  
+ **Integrierte Sicherheit von Windows verwenden**  
+ Stellen Sie mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung eine Verbindung mit einer Instanz von her.  
   
- **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her. Diese Option ist nicht verfügbar.  
+ **Einen bestimmten Benutzernamen und ein bestimmtes Kennwort verwenden**  
+ Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her. Diese Option ist nicht verfügbar.  
   
  **Benutzername**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
@@ -73,8 +73,8 @@ ms.locfileid: "68205965"
  **Kennwort**  
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail](../database-mail/database-mail.md)   
- [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
+ [sp_notify_operator &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
   
   

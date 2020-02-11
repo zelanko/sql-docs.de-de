@@ -1,5 +1,5 @@
 ---
-title: ADO-Java-Klassen-Wrapper | Microsoft-Dokumentation
+title: ADO-Java-Klassen Wrapper | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927008"
 ---
 # <a name="ado-java-class-wrappers"></a>ADO-Java-Klassen-Wrapper
-Dieser Code deklariert eine Instanz von der ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Klassenwrapper und initialisiert, auf die gleiche Zeile des Codes. Es darüber hinaus deklariert Variablen für jeden der Argumente in der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode, dies gilt insbesondere für [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) und [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (da Java unterstützt keine aufgelistet Typen). Er öffnet und schließt die **Recordset** Objekt. Rs1 lediglich auf NULL festlegen, plant diese Variable freigegeben werden, wenn Java der systematischen und unterbrochene-Version von nicht verwendeten Objekten ausführt.  
+Dieser Code deklariert eine Instanz des ADO- [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Klassen-Wrapper und initialisiert Sie, alle in derselben Codezeile. Außerdem werden Variablen für jedes der Argumente in der [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode deklariert, insbesondere für [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) und Cursor Type (da Java Enumerationstypen nicht unterstützt). [](../../../ado/reference/ado-api/cursortype-property-ado.md) Das **Recordset** -Objekt wird geöffnet und geschlossen. Durch Festlegen von "RS1 auf NULL" wird lediglich die Freigabe dieser Variablen geplant, wenn Java die systematische und vorübergehende Freigabe nicht verwendeter Objekte ausführt.  
   
 ```java
 public static void main( String args[])  
@@ -40,5 +40,5 @@ public static void main( String args[])
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Using the Microsoft SDK for Java (Verwenden des Microsoft SDK für Java)](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden des Microsoft SDK für Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)
