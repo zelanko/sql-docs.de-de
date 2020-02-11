@@ -1,5 +1,5 @@
 ---
-title: Textformat (Textdateitreiber) | Microsoft-Dokumentation
+title: Text Datei Format (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,37 +16,37 @@ ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912446"
 ---
 # <a name="text-file-format-text-file-driver"></a>Textformat (Textdateitreiber)
-Der Text der ODBC-Treiber unterstützt beide Textdateien mit durch Trennzeichen getrennte und fester Breite an. Eine Textdatei besteht aus einer optionalen Kopfzeile und NULL oder mehr Textzeilen.  
+Der ODBC-Text Treiber unterstützt sowohl Textdateien mit Trennzeichen als auch Textdateien mit fester Breite. Eine Textdatei besteht aus einer optionalen Kopfzeile und 0 (null) oder mehr Textzeilen.  
   
- Obwohl die Headerzeile das gleiche Format wie die anderen Zeilen in der Textdatei verwendet wird, interpretiert der Text der ODBC-Treiber die Header-Zeile-Einträge als Spaltennamen und keine Daten.  
+ Obwohl die Kopfzeile dasselbe Format wie die anderen Zeilen in der Textdatei verwendet, interpretiert der ODBC-Text Treiber die Header Zeilen Einträge als Spaltennamen und nicht als Daten.  
   
- Eine durch Trennzeichen getrennten Textzeile enthält eine oder mehrere Datenwerte, die durch Trennzeichen getrennte: Kommas, Tabstopps oder ein benutzerdefiniertes Trennzeichen. Dieselbe Trennzeichen muss in der gesamten Datei verwendet werden. NULL-Werte werden durch zwei Trennzeichen in einer Zeile ohne Daten zwischen ihnen gekennzeichnet. Zeichenfolgen in einer Zeile durch Trennzeichen getrennten Text können in doppelte Anführungszeichen eingeschlossen werden (""). Keine Leerzeichen können vor oder nach einer durch Trennzeichen getrennten Werten auftreten.  
+ Eine durch Trennzeichen getrennte Textzeile enthält einen oder mehrere Datenwerte, die durch Trennzeichen getrennt sind: Kommas, Registerkarten oder ein benutzerdefiniertes Trennzeichen. Das gleiche Trennzeichen muss in der gesamten Datei verwendet werden. NULL-Datenwerte werden durch zwei Trennzeichen in einer Zeile ohne Daten zwischen Ihnen bezeichnet. Zeichen folgen in einer durch Trennzeichen getrennten Textzeile können in doppelte Anführungszeichen ("") eingeschlossen werden. Es können keine Leerzeichen vor oder nach durch Trennzeichen getrennten Werten vorkommen.  
   
- Die Breite der einzelnen Einträge Daten in einer Textdatei mit fester Breite Zeile wird in einem Schema angegeben. NULL-Werte werden durch Leerzeichen angegeben.  
+ Die Breite jedes Daten Eintrags in einer Textzeile mit fester Breite wird in einem Schema angegeben. NULL-Datenwerte werden durch Leerzeichen gekennzeichnet.  
   
- Tabellen sind auf ein Maximum von 255 Felder beschränkt. Feldnamen werden auf 64 Zeichen beschränkt und Feldbreiten sind auf 32.766 Zeichen beschränkt. Datensätze sind auf 65.000 Bytes beschränkt.  
+ Tabellen sind auf maximal 255 Felder beschränkt. Feldnamen sind auf 64 Zeichen beschränkt, und die Feldbreite ist auf 32.766 Zeichen beschränkt. Datensätze sind auf 65.000 Bytes beschränkt.  
   
  Eine Textdatei kann nur für einen einzelnen Benutzer geöffnet werden. Mehrere Benutzer werden nicht unterstützt.  
   
- Die folgende Grammatik, geschrieben für Programmierer, definiert das Format einer Textdatei, die vom ODBC-Texttreiber gelesen werden können:  
+ Die folgende, für Programmierer geschriebene Grammatik definiert das Format einer Textdatei, die vom ODBC-Text Treiber gelesen werden kann:  
   
 |Format|Darstellung|  
 |------------|--------------------|  
-|Nicht-kursiv|Zeichen, die wie gezeigt eingegeben werden müssen|  
+|Nicht kursiv|Zeichen, die wie gezeigt eingegeben werden müssen|  
 |*Kursiv*|Argumente, die an anderer Stelle in der Grammatik definiert sind|  
 |eckige Klammern ([])|Optionale Elemente|  
-|geschweifte Klammern ({})|Eine Liste von sich gegenseitig ausschließende Optionen|  
-|vertikaler Balken (&#124;)|Separate sich gegenseitig ausschließende Optionen|  
-|Auslassungspunkte (...)|Elemente, die einmal oder mehrmals wiederholt werden kann|  
+|geschweifte{}Klammern ()|Eine Liste der sich gegenseitig ausschließenden Optionen|  
+|vertikale Balken (&#124;)|Trennen von gegenseitig ausschließenden Optionen|  
+|Auslassungszeichen (...)|Elemente, die einmal oder mehrmals wiederholt werden können|  
   
- Das Format einer Textdatei ist:  
+ Das Format einer Textdatei lautet:  
   
 ```  
 text-file ::=  
@@ -67,7 +67,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  Die Breite jeder Spalte in einer Textdatei mit fester Breite ist in der Datei Schema.ini angegeben.  
+>  Die Breite jeder Spalte in einer Textdatei mit fester Breite wird in der Datei "Schema. ini" angegeben.  
   
 ```  
   
@@ -87,7 +87,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  Das Trennzeichen in einer benutzerdefinierten getrennte Textdatei wird in der Datei Schema.ini angegeben.  
+>  Das Trennzeichen in einer benutzerdefinierten, durch Trennzeichen getrennten Textdatei wird in der Datei "Schema. ini" angegeben.  
   
 ```  
 quote-character ::= "  
@@ -113,11 +113,11 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  Für durch Trennzeichen getrennte Dateien wird ein NULL-Wert durch keine Daten zwischen zwei Trennzeichen dargestellt.  
+>  Bei durch Trennzeichen getrennten Dateien wird ein NULL-Wert durch keine Daten zwischen zwei Trennzeichen dargestellt.  
   
 ```  
 fixed-width-null ::= <SPACE>...  
 ```  
   
 > [!NOTE]  
->  Für Dateien mit fester Breite wird ein NULL-Wert durch Leerzeichen dargestellt.
+>  Bei Dateien mit fester Breite wird NULL durch Leerzeichen dargestellt.

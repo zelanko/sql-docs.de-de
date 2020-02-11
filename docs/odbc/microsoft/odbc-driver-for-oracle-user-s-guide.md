@@ -1,5 +1,5 @@
 ---
-title: ODBC-Treiber für Oracle-Benutzers&#39;Benutzerhandbuch | Microsoft-Dokumentation
+title: Leitfaden für den ODBC-Treiber für Oracle-Benutzer&#39;s | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915789"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC-Treiber für Oracle-Benutzers&#39;Benutzerhandbuch
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Leitfaden für den ODBC-Treiber für Oracle-Benutzer&#39;s
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Der ODBC-Treiber für Oracle-Benutzerhandbuch richtet sich an der Hilfe zum Setup, die über zugegriffen werden kann, als Ergänzung zu den [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md).  
+ Der ODBC-Treiber für Oracle-Benutzerhandbuch soll die Setup Hilfe ergänzen, auf die über den [ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md)zugegriffen werden kann.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Treiberversionsschema](../../odbc/microsoft/driver-version-scheme.md)  
   
--   [Installieren der Clientsoftware](../../odbc/microsoft/installing-the-software-odbc.md)  
+-   [Installieren der Software](../../odbc/microsoft/installing-the-software-odbc.md)  
   
 -   [Oracle-Software-Patches](../../odbc/microsoft/oracle-software-patches.md)  
   

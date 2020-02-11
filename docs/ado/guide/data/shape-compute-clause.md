@@ -1,5 +1,5 @@
 ---
-title: Strukturieren von COMPUTE-Klausel | Microsoft-Dokumentation
+title: Shape-COMPUTE-Klausel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924144"
 ---
 # <a name="shape-compute-clause"></a>SHAPE COMPUTE-Klausel
-Eine Shape COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; optional, deren Inhalt neue Kapitel oder berechnete Spalten werden, Spalten oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten von den untergeordneten **Recordset** in aufgeführt die optionale BY-Klausel.  
+Eine Shape-COMPUTE-Klausel generiert ein übergeordnetes **Recordset**, dessen Spalten aus einem Verweis auf das untergeordnete **Recordset**bestehen. optionale Spalten, deren Inhalt Kapitel, neue oder berechnete Spalten ist, oder das Ergebnis der Ausführung von Aggregatfunktionen für das untergeordnete **Recordset** oder ein zuvor geformtes **Recordset**. und alle Spalten aus dem untergeordneten **Recordset** , die in der optionalen BY-Klausel aufgeführt sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,61 +32,61 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Beschreibung  
- Die Teile des diese Klausel lauten wie folgt aus:  
+## <a name="description"></a>BESCHREIBUNG  
+ Diese Klausel enthält folgende Teile:  
   
- *child-command*  
- Besteht aus einem der folgenden:  
+ *untergeordneter Befehl*  
+ Besteht aus einer der folgenden:  
   
--   Einen Abfragebefehl in geschweiften Klammern ("{}"), die ein untergeordnetes Element zurückgibt **Recordset** Objekt. Die Ausgabe des Befehls wird an den zugrunde liegenden Datenanbieter und die Syntax hängt von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
+-   Ein Abfragebefehl in geschweiften Klammern ("{}"), der ein untergeordnetes **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
   
--   Der Name eines vorhandenen strukturiert **Recordset**.  
+-   Der Name eines vorhandenen geformten **Recordsets**.  
   
--   Eine andere Form-Befehl.  
+-   Ein anderer Shape-Befehl.  
   
--   Das TABLE-Schlüsselwort, gefolgt vom Namen einer Tabelle in der Datenanbieter.  
+-   Das Tabellen Schlüsselwort, gefolgt vom Namen einer Tabelle im Datenanbieter.  
   
- *child-alias*  
- Ein Alias zum Verweisen auf die **Recordset** zurückgegebenes der *untergeordneten-Befehl.* Die *untergeordnete-Alias* ist in der Liste der Spalten in der COMPUTE-Klausel erforderlich und definiert die Beziehung zwischen den übergeordneten und untergeordneten **Recordset** Objekte.  
+ *untergeordneter Alias*  
+ Ein Alias, mit dem auf das **Recordset** verwiesen wird, das vom untergeordneten Befehl zurückgegeben wird *.* Der untergeordnete Alias ist in der Liste der Spalten in der COMPUTE *-* Klausel erforderlich und definiert die Beziehung zwischen dem übergeordneten und dem untergeordneten **Recordset** -Objekt.  
   
- *appended-column-list*  
- Eine Liste, in der jedes Element eine Spalte in der generierten übergeordneten Element definiert. Jedes Element enthält, entweder eine Kapitelspalte, eine neue Spalte, einer berechneten Spalte oder einen Wert, der durch eine Aggregatfunktion für das untergeordnete Element **Recordset**.  
+ *angefügte Spaltenliste*  
+ Eine Liste, in der jedes Element eine Spalte im generierten übergeordneten Element definiert. Jedes Element enthält entweder eine Kapitel Spalte, eine neue Spalte, eine berechnete Spalte oder einen Wert, der sich aus einer Aggregatfunktion für das untergeordnete **Recordset**ergibt.  
   
- *grp-field-list*  
- Eine Liste der Spalten in den übergeordneten und untergeordneten **Recordset** Objekten, das angibt, wie Zeilen in der untergeordneten gruppiert werden sollen.  
+ *GRP-Feldliste*  
+ Eine Liste von Spalten in den übergeordneten und untergeordneten **Recordset** -Objekten, die angibt, wie Zeilen im untergeordneten Element gruppiert werden sollen.  
   
- Für jede Spalte in der *Grp--Feldliste* ist es eine entsprechende Spalte in den untergeordneten und übergeordneten **Recordset** Objekte. Für jede Zeile in der übergeordneten **Recordset**, *Grp Feldliste* Spalten verfügen über eindeutige Werte und das untergeordnete Element **Recordset** verwiesen wird, durch das übergeordnete Zeile besteht ausschließlich aus untergeordneten Zeilen, deren *Grp Feldliste* Spalten enthalten die gleichen Werte wie die übergeordnete Zeile.  
+ Für jede Spalte in der " *GRP-field-list* " gibt es eine entsprechende Spalte in den untergeordneten und übergeordneten **Recordset** -Objekten. Für jede Zeile im übergeordneten **Recordset**verfügen die *GRP-field-list-* Spalten über eindeutige Werte, und das untergeordnete **Recordset** , auf das von der übergeordneten Zeile verwiesen wird, besteht nur aus untergeordneten Zeilen, deren *GRP-field-list-* Spalten dieselben Werte wie die übergeordnete Zeile aufweisen.  
   
- Wenn die BY-Klausel enthalten, ist das untergeordnete Element **Recordset**die Zeilen werden basierend auf den Spalten in der COMPUTE-Klausel gruppiert werden. Das übergeordnete Element **Recordset** enthält eine Zeile für jede Gruppe von Zeilen in der untergeordneten **Recordset**.  
+ Wenn die by-Klausel eingeschlossen ist, werden die Zeilen des untergeordneten **Recordsets**basierend auf den Spalten in der COMPUTE-Klausel gruppiert. Das übergeordnete **Recordset** enthält eine Zeile für jede Gruppe von Zeilen im untergeordneten **Recordset**.  
   
- Wenn die BY-Klausel weggelassen wird, das gesamte untergeordnete **Recordset** behandelt, als eine einzelne Gruppe und das übergeordnete Element **Recordset** genau eine Zeile enthält. Diese Zeile verweist auf das gesamte untergeordnete **Recordset**. Die BY-Klausel auslassen, können Sie zum Berechnen von "Gesamtsumme" Aggregate über das gesamte untergeordnete **Recordset**.  
+ Wenn die by-Klausel weggelassen wird, wird das gesamte untergeordnete **Recordset** als eine einzelne Gruppe behandelt, und das übergeordnete **Recordset** enthält genau eine Zeile. Diese Zeile verweist auf das gesamte untergeordnete **Recordset**. Das Weglassen der by-Klausel ermöglicht es Ihnen, "Gesamtsumme"-Aggregate für das gesamte untergeordnete **Recordset**zu berechnen.  
   
- Zum Beispiel:  
+ Beispiel:  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- Unabhängig davon, wie das übergeordnete Element **Recordset** wird gebildet (COMPUTE oder ANFÜGEN), enthält es eine Kapitelspalte, die verwendet wird, um es auf ein untergeordnetes Element verknüpfen **Recordset**. Wenn Sie möchten, das übergeordnete Element **Recordset** kann auch über die untergeordneten Zeilen enthalten, Spalten, die Aggregate (SUM, MIN, MAX, usw.) enthalten. Sowohl das übergeordnete Element und dem untergeordneten Element **Recordset** Spalten, die einen Ausdruck in der Zeile enthalten darf der **Recordset**sowie Spalten, die neue und anfangs leere.  
+ Unabhängig davon, wie das übergeordnete **Recordset** (mithilfe von COMPUTE oder mithilfe von Append) formatiert wird, enthält es eine Kapitel Spalte, die verwendet wird, um es mit einem untergeordneten **Recordset**zu verknüpfen. Wenn Sie möchten, kann das übergeordnete **Recordset** auch Spalten enthalten, die Aggregate (Sum, min, Max usw.) für die untergeordneten Zeilen enthalten. Sowohl das übergeordnete als auch das untergeordnete **Recordset** enthalten möglicherweise Spalten, die einen Ausdruck in der Zeile im **Recordset**enthalten, sowie neue und Anfangs leere Spalten.  
   
 ## <a name="operation"></a>Vorgang  
- Die *untergeordneten Befehl* ausgegeben wird, an den Anbieter, wodurch ein untergeordnetes Element **Recordset**.  
+ Der untergeordnete *Befehl* wird an den Anbieter ausgegeben, der ein untergeordnetes **Recordset**zurückgibt.  
   
- Die COMPUTE-Klausel gibt die Spalten des übergeordneten Elements **Recordset**, die möglicherweise einen Verweis auf das untergeordnete Element **Recordset**, einem oder mehreren Aggregaten, eines berechneten Ausdrucks oder neue Spalten. Wenn eine BY-Klausel vorhanden ist, werden die Spalten, die sie definiert außerdem das dem übergeordneten angefügt **Recordset**. Die BY-Klausel gibt an, wie die Zeilen der untergeordneten **Recordset** gruppiert werden.  
+ Die COMPUTE-Klausel gibt die Spalten des übergeordneten **Recordsets**an. Hierbei kann es sich um einen Verweis auf das untergeordnete **Recordset**, ein oder mehrere Aggregate, einen berechneten Ausdruck oder neue Spalten handeln. Wenn eine by-Klausel vorhanden ist, werden die definierten Spalten auch an das übergeordnete **Recordset**angehängt. Die by-Klausel gibt an, wie die Zeilen des untergeordneten **Recordsets** gruppiert werden.  
   
- Nehmen wir beispielsweise an, dass Sie eine Tabelle namens Demographics verfügen, besteht aus Status, Stadt und der Bevölkerung Felder. (Die Auffüllung-Abbildungen in der Tabelle dienen lediglich als Beispiel).  
+ Nehmen Sie beispielsweise an, Sie verfügen über eine Tabelle mit dem Namen Demographics, die aus den Feldern State, City und Population besteht. (Die Bevölkerungszahlen in der Tabelle werden ausschließlich als Beispiel bereitgestellt.)  
   
-|Status|Ort|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|oder|Medford|200,000|  
-|oder|Portland|400,000|  
-|CA|Los Angeles|800,000|  
-|CA|SAN Diego|600,000|  
-|WA|Tacoma|500,000|  
-|oder|Corvallis|300,000|  
+|WA|Seattle|700.000|  
+|oder|Medford|200.000|  
+|oder|Portland|400.000|  
+|CA|Los Angeles|800.000|  
+|CA|San Diego|600.000|  
+|WA|Tacoma|500.000|  
+|oder|Corvallis|300.000|  
   
- Geben Sie jetzt diese Form-Befehl aus:  
+ Geben Sie nun diesen Form Befehl aus:  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -94,52 +94,52 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Dieser Befehl öffnet ein geformten **Recordset** mit zwei Ebenen. Die übergeordnete Ebene ist eine generierte **Recordset** mit einer Spalte aggregieren (`SUM(rs.population)`), eine Spalte verweisen auf das untergeordnete Element **Recordset** (`rs`), und eine Spalte zum Gruppieren des untergeordneten **Recordset** (`state`). Die untergeordnete Ebene ist die **Recordset** von den Abfragebefehl zurückgegeben (`select * from demographics`).  
+ Dieser Befehl öffnet ein geformtes **Recordset** mit zwei Ebenen. Die übergeordnete Ebene ist ein generiertes **Recordset** mit einer Aggregat`SUM(rs.population)`Spalte (), eine Spalte, die auf das unter`rs`geordnete **Recordset** () verweist, und eine Spalte zum Gruppieren`state`des untergeordneten **Recordsets** (). Die untergeordnete Ebene ist das **Recordset** , das vom Abfragebefehl`select * from demographics`zurückgegeben wird ().  
   
- Das untergeordnete Element **Recordset** Detailzeilen werden nach Zustand gruppiert, aber ansonsten keine bestimmte Reihenfolge. Die Gruppen werden, also nicht in alphabetischer oder numerischer Reihenfolge. Wenn Sie möchten, dass das übergeordnete Element **Recordset** um bestellt werden, können Sie die **Sortieren des Recordset** Methode, um das übergeordnete order **Recordset**.  
+ Die Detail Zeilen des untergeordneten **Recordsets** werden nach dem Zustand gruppiert, aber andernfalls in keiner bestimmten Reihenfolge. Das heißt, die Gruppen werden nicht in alphabetischer oder numerischer Reihenfolge angegeben. Wenn Sie möchten, dass das übergeordnete **Recordset** sortiert wird, können Sie das übergeordnete **Recordset**mit der **Recordset-Sortiermethode sortieren** .  
   
- Sie können jetzt im geöffneten übergeordneten navigieren **Recordset** und Zugriff auf die Details der untergeordneten **Recordset** Objekte. Weitere Informationen finden Sie unter [den Zugriff auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Sie können jetzt im geöffneten übergeordneten **Recordset** navigieren und auf die untergeordneten Detail- **Recordset** -Objekte zugreifen. Weitere Informationen finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="resultant-parent-and-child-detail-recordsets"></a>Übergeordnete und untergeordnete Detail Recordsets  
+## <a name="resultant-parent-and-child-detail-recordsets"></a>Resultierende übergeordnete und untergeordnete Detail Recordsets  
   
 ### <a name="parent"></a>Parent  
   
-|SUM (Rs. Auffüllung)|rs|Status|  
+|Sum (RS). Bevölkerungs|rs|State|  
 |---------------------------|--------|-----------|  
-|1,300,000|Verweis auf child1|CA|  
-|1,200,000|Verweis auf child2|WA|  
-|1,100,000|Verweis auf child3|oder|  
+|1,3 Millionen|Verweis auf child1|CA|  
+|1,2 Millionen|Verweis auf child2|WA|  
+|1,1 Millionen|Verweis auf Child3|oder|  
   
 ## <a name="child1"></a>Child1  
   
-|Status|Ort|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800,000|  
-|CA|SAN Diego|600,000|  
+|CA|Los Angeles|800.000|  
+|CA|San Diego|600.000|  
   
 ## <a name="child2"></a>Child2  
   
-|Status|Ort|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|WA|Tacoma|500,000|  
+|WA|Seattle|700.000|  
+|WA|Tacoma|500.000|  
   
 ## <a name="child3"></a>Child3  
   
-|Status|Ort|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
-|oder|Medford|200,000|  
-|oder|Portland|400,000|  
-|oder|Corvallis|300,000|  
+|oder|Medford|200.000|  
+|oder|Portland|400.000|  
+|oder|Corvallis|300.000|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Daten strukturieren (Übersicht)](../../../ado/guide/data/data-shaping-overview.md)   
+ [Übersicht über die Daten Strukturierung](../../../ado/guide/data/data-shaping-overview.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Erforderliche Anbieter für die Strukturierung der Daten](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
- [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Erforderliche Anbieter für die Daten Strukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape-APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
+ [Shape-Befehle im allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic for Applications-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)

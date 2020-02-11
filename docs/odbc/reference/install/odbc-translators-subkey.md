@@ -1,5 +1,5 @@
 ---
-title: Unterschlüssel für ODBC-Konvertierungsprogramme | Microsoft-Dokumentation
+title: Unterschlüssel für ODBC-Übersetzer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d26f2d33d81e08cfe4bddff9b2260bd2f098f00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093941"
 ---
 # <a name="odbc-translators-subkey"></a>Unterschlüssel für ODBC-Konvertierungsprogramme
-Die Werte unter dem Unterschlüssel für ODBC-Konvertierungsprogramme Auflisten der installierten Übersetzer. Das Format dieser Werte wird in der folgenden Tabelle dargestellt.  
+Mit den Werten unter dem Unterschlüssel ODBC-Übersetzer werden die installierten Konvertierer aufgelistet. Das Format dieser Werte wird in der folgenden Tabelle dargestellt.  
   
-|Name|Datentyp|Daten|  
+|Name|Datentyp|Data|  
 |----------|---------------|----------|  
-|*translator-desc*|REG_SZ|**installiert**|  
+|*Übersetzer*|REG_SZ|**Lierter**|  
   
- Die *Translator-Desc* Name wird von der Translator-Entwickler definiert.  
+ Der Name des Konvertierungs Programms wird vom Entwickler des *Konvertierers* definiert.  
   
- Nehmen wir beispielsweise an, dass ein Benutzer die Microsoft® Code Seite Translator und eine benutzerdefinierte ASCII zu EBCDIC-Konvertierer installiert ist. Die Werte unter dem Unterschlüssel für ODBC-Konvertierungsprogramme könnte folgendermaßen aussehen:  
+ Nehmen wir beispielsweise an, dass ein Benutzer den Microsoft® Codepage Translator und einen benutzerdefinierten ASCII-Code für den EBCDIC-Konvertierer installiert hat. Die Werte unter dem Unterschlüssel ODBC-Übersetzer können wie folgt lauten:  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

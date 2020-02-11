@@ -1,5 +1,5 @@
 ---
-title: Replikationstabellen (Transact-SQL) | Microsoft-Dokumentation
+title: Replikations Tabellen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910237"
 ---
 # <a name="replication-tables-transact-sql"></a>Replikationstabellen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Eine Replikationstopologie wird von Replikationssystemtabellen unterstützt. Wird eine Benutzerdatenbank als Verleger oder Abonnent konfiguriert, fügt die Replikation der Datenbank Systemtabellen hinzu. Diese Tabellen werden beim Entfernen einer Benutzerdatenbank aus einer Replikationstopologie ebenfalls entfernt. Allgemeine Regeln zur Verwendung von Systemtabellen finden Sie [Systemtabellen &#40;Transact-SQL&#41;](system-tables-transact-sql.md).  
+  Eine Replikationstopologie wird von Replikationssystemtabellen unterstützt. Wird eine Benutzerdatenbank als Verleger oder Abonnent konfiguriert, fügt die Replikation der Datenbank Systemtabellen hinzu. Diese Tabellen werden beim Entfernen einer Benutzerdatenbank aus einer Replikationstopologie ebenfalls entfernt. Allgemeine Regeln zum Verwenden von Systemtabellen finden Sie unter [Systemtabellen &#40;Transact-SQL-&#41;](system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Replikationstabellen  
  Es folgt eine Liste der bei der Replikation verwendeten Systemtabellen, nach Datenbank gruppiert.  
@@ -34,7 +34,7 @@ ms.locfileid: "67910237"
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;Transact-SQL&#41;](msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;Transact-SQL-&#41;](msreplication-options-transact-sql.md)||  
 | &nbsp; | &nbsp; |
  
 ### <a name="replication-tables-in-the-msdb-database"></a>Replikationstabellen in der msdb-Datenbank  
@@ -73,7 +73,7 @@ ms.locfileid: "67910237"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- Diese Tabellen in der Verteilungsdatenbank werden zum Replizieren von Daten aus nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. Weitere Informationen finden Sie unter [nicht-SQL Server-Verleger](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ Diese Tabellen in der Verteilungs Datenbank werden zum Replizieren von Daten von einem nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] --Verleger verwendet. Weitere Informationen finden Sie unter [nicht-SQL Server-Verleger](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910237"
  
 |||  
 |-|-|  
-|[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_\<Schema>_\<Tabelle>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  
@@ -138,8 +138,8 @@ ms.locfileid: "67910237"
 |[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [Veröffentlichung und Verteilung deaktivieren](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

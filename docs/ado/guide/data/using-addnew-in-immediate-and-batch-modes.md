@@ -1,5 +1,5 @@
 ---
-title: AddNew-Methode im unmittelbaren mit Batch-Modi | Microsoft-Dokumentation
+title: Verwenden von AddNew im unmittelbaren und im Batch Modus | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,15 @@ ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 265b1dcd3cdc1aa7f18f0ca54dc2cf54df2da158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923627"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>Verwenden von AddNew im unmittelbaren und im Batchmodus
-Das Verhalten von der **AddNew** Methode hängt von der Updatemodus von der **Recordset** Objekt und gibt an, ob Sie übergeben die *FieldList* und *Werte*Argumente.  
+Das Verhalten der **AddNew** -Methode hängt vom Aktualisierungs Modus des **Recordset** -Objekts und davon ab, ob die Argumente *FieldList* und *Values* übergeben werden.  
   
- Im sofortupdatemodus (in dem der Anbieter schreibt Änderungen in der zugrunde liegenden Datenquelle nach Aufrufen der **aktualisieren** Methode), wird beim Aufruf der **AddNew** -Methode ohne Argumente legt die  **EditMode** Eigenschaft **AdEditAdd.** Der Anbieter wird jeder Wert feldänderungen lokal zwischengespeichert. Aufrufen der **Update** Methode wird der neue Datensatz in der Datenbank und setzt die **EditMode** Eigenschaft **AdEditNone.** Übergeben der *FieldList* und *Werte* Argumente ADO sofort wird der neue Datensatz in der Datenbank (keine **Update** Aufruf erforderlich ist); die **EditMode**  Eigenschaftswert nicht ändert (**AdEditNone**).  
+ Im sofortigen Update Modus (in dem der Anbieter Änderungen in die zugrunde liegende Datenquelle schreibt, nachdem Sie die **Update** -Methode aufgerufen haben), wird durch Aufrufen der **AddNew** -Methode ohne Argumente die **EditMode** -Eigenschaft auf **adEditAdd** festgelegt. Der Anbieter speichert alle Feldwert Änderungen lokal zwischen. Durch Aufrufen der **Update** -Methode wird der neue Datensatz in der Datenbank bereitgestellt, und die **EditMode** -Eigenschaft wird auf " **adEditNone** " zurückgesetzt. Wenn Sie die Argumente *FieldList* und *Values* übergeben, sendet ADO den neuen Datensatz sofort an die Datenbank (kein **Update** -Befehl erforderlich); der **EditMode** -Eigenschafts Wert ändert sich nicht (**adEditNone**).  
   
- Im Batchmodus Update Aufrufen der **AddNew** -Methode ohne Argumente legt die **EditMode** Eigenschaft **AdEditAdd**. Der Anbieter wird jeder Wert feldänderungen lokal zwischengespeichert. Aufrufen der **Update** Methode fügt den neuen Eintrag mit dem aktuellen **Recordset** und setzt die **EditMode** Eigenschaft **AdEditNone**, aber der Anbieter nicht die Änderungen an der zugrunde liegenden Datenbank gesendet, bis zum Aufruf der **UpdateBatch** Methode. Übergeben der *FieldList* und *Werte* Argumente ADO sendet des neuen Eintrags an den Anbieter für die Speicherung in einem Cache, muss die **UpdateBatch** Methode, um die neue Posten Notieren Sie sich an den zugrunde liegenden Datenbank. Weitere Informationen zu **Update** und **UpdateBatch**, finden Sie unter [wird aktualisiert und Beibehalten von Daten](../../../ado/guide/data/updating-and-persisting-data.md).
+ Im Batch Update Modus wird durch Aufrufen der **AddNew** -Methode ohne Argumente die **EditMode** -Eigenschaft auf **adEditAdd**festgelegt. Der Anbieter speichert alle Feldwert Änderungen lokal zwischen. Wenn Sie die **Update** -Methode aufrufen, wird der neue Datensatz dem aktuellen **Recordset** hinzugefügt, und die **EditMode** -Eigenschaft wird auf " **adEditNone**" zurückgesetzt, aber der Anbieter sendet die Änderungen nicht an die zugrunde liegende Datenbank, bis Sie die **UpdateBatch** -Methode aufrufen. Wenn Sie die Argumente *FieldList* und *Values* übergeben, sendet ADO den neuen Datensatz zum Speichern in einem Cache an den Anbieter. Sie müssen die **UpdateBatch** -Methode aufrufen, um den neuen Datensatz in der zugrunde liegenden Datenbank zu veröffentlichen. Weitere Informationen zu **Update** und Update **Batch**finden Sie unter [aktualisieren und](../../../ado/guide/data/updating-and-persisting-data.md)beibehalten von Daten.
