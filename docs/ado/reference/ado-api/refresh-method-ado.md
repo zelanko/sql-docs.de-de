@@ -18,14 +18,14 @@ ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931254"
 ---
 # <a name="refresh-method-ado"></a>Refresh-Methode (ADO)
-Aktualisiert die Objekte in eine Sammlung von verfügbaren Objekte entsprechend, und klicken Sie auf spezifische an den Anbieter an.  
+Aktualisiert die Objekte in einer Auflistung, um die Objekte widerzuspiegeln, die von und für den Anbieter verfügbar sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,39 +34,39 @@ Aktualisiert die Objekte in eine Sammlung von verfügbaren Objekte entsprechend,
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die **aktualisieren** Methode führt verschiedene Aufgaben abhängig von der Sammlung, von dem Sie ihn aufrufen.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Aktualisierungs** Methode führt verschiedene Aufgaben aus, abhängig von der Sammlung, von der Sie aufgerufen wird.  
   
 ### <a name="parameters"></a>Parameter  
- Mit der **aktualisieren** Methode für die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung von einer [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt ruft Anbieters Parameterinformationen für die gespeicherte Prozedur oder parametrisierte Abfrage angegeben der **Befehl** Objekt. Die Auflistung werden leer, um Anbieter, die keine Aufrufe von gespeicherten Prozeduren oder parametrisierte Abfragen unterstützen.  
+ Wenn Sie die **Refresh** -Methode für die [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) -Auflistung eines [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekts verwenden, werden Anbieter seitige Parameterinformationen für die gespeicherte Prozedur oder parametrisierte Abfrage abgerufen, die im **Command** -Objekt angegeben sind. Die Auflistung ist leer für Anbieter, die keine Aufrufe gespeicherter Prozeduren oder parametrisierte Abfragen unterstützen.  
   
- Legen Sie die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft der **Befehl** Objekt auf eine gültige [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt, die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft auf einen gültigen Befehl ein und die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) Eigenschaft **AdCmdStoredProc** vor dem Aufruf der **aktualisieren** Methode.  
+ Sie sollten die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft des **Befehls** Objekts auf ein gültiges [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft auf einen gültigen Befehl und die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) -Eigenschaft auf **adCmdStoredProc** festlegen, bevor Sie die **Refresh** -Methode aufrufen.  
   
- Wenn Sie Zugriff auf die **Parameter** Auflistung vor dem Aufruf der **aktualisieren** ADO-Methode wird automatisch die Methode aufrufen und füllen Sie die Sammlung für Sie.  
+ Wenn Sie auf die **Parameter** Auflistung zugreifen, bevor Sie die **Refresh** -Methode aufrufen, ruft ADO automatisch die-Methode auf und füllt die-Auflistung für Sie auf.  
   
 > [!NOTE]
->  Bei Verwendung der **aktualisieren** Methode zum Abrufen von Informationen zu den Parametern aus dem Anbieter, und es gibt eine oder mehrere Daten variabler Länge-Typ zurück, [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekten, die ADO möglicherweise arbeitsspeicherzuweisung für die Parameter basierend Klicken Sie auf ihre maximal möglichen Größe, die während der Ausführung einen Fehler verursachen werden. Sollten Sie explizit festlegen der [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md) -Eigenschaft für diese Parameter vor dem Aufruf der [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) Methode, um Fehler zu vermeiden.  
+>  Wenn Sie die **Refresh** -Methode verwenden, um Parameterinformationen vom Anbieter abzurufen, und ein oder mehrere Datentyp [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekte variabler Länge zurückgibt, kann ADO Arbeitsspeicher für die Parameter basierend auf Ihrer maximalen potenziellen Größe zuweisen, was zu einem Fehler während der Ausführung führt. Sie sollten die [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) -Eigenschaft für diese Parameter explizit festlegen, bevor Sie die [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) -Methode aufrufen, um Fehler zu verhindern.  
   
 ### <a name="fields"></a>Felder  
- Mithilfe der **aktualisieren** Methode für die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung wirkt sich nicht sichtbar. Um Änderungen aus der zugrunde liegenden Datenbankstruktur abzurufen, müssen Sie verwenden entweder die [Requery](../../../ado/reference/ado-api/requery-method.md) Methode oder, wenn Sie die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt unterstützt keine Lesezeichen die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)Methode.  
+ Die Verwendung der **Refresh** -Methode für die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung hat keinen sichtbaren Effekt. Zum Abrufen von Änderungen aus der zugrunde liegenden Datenbankstruktur müssen Sie entweder die [Requery](../../../ado/reference/ado-api/requery-method.md) -Methode oder, wenn das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt keine Lesezeichen unterstützt, die Methode " [muvefirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) " verwenden.  
   
 ### <a name="properties"></a>Eigenschaften  
- Mithilfe der **aktualisieren** Methode für eine **Eigenschaften** Auflistung einiger Objekte füllt die Auflistung mit den dynamischen Eigenschaften, die der Anbieter verfügbar macht. Diese Eigenschaften stellen Informationen über spezifische Funktionen bereit, an den Anbieter, über die integrierten Eigenschaften ADO unterstützt.  
+ Die Verwendung der **Refresh** -Methode für eine **Properties** -Auflistung einiger Objekte füllt die Auflistung mit den dynamischen Eigenschaften auf, die der Anbieter verfügbar macht. Diese Eigenschaften enthalten Informationen über die für den anbieterspezifischen Funktionen, die über die von ADO unterstützten integrierten Eigenschaften hinausgehen.  
   
 ## <a name="applies-to"></a>Gilt für  
   
 ||||  
 |-|-|-|  
-|[Axes-Auflistung](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns-Auflistung](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs-Auflistung](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Auflistung von Dimensionen](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Errors-Collection](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields-Sammlung](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Groups-Sammlung](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchies-Auflistung](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Auflistung von Indizes](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Keys-Auflistung](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels-Auflistung](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members-Auflistung](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters-Auflistung](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Positionen-Auflistung](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Procedures-Auflistung](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables-Auflistung](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users-Sammlung](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Achsen Sammlung](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns-Sammlung](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs-Sammlung](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
+|[Dimensions Auflistung](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Fehlersammlung](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields-Auflistung](../../../ado/reference/ado-api/fields-collection-ado.md)|  
+|[Groups-Sammlung](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchien-Auflistung](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Index Sammlung](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Schlüssel Sammlung](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels-Auflistung](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members-Auflistung](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
+|[Parameters-Auflistung](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Positions Auflistung](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
+|['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tabellen Sammlung](../../../ado/reference/adox-api/tables-collection-adox.md)|[Benutzer Sammlung](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views-Auflistung](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Siehe auch  
- [Refresh – Methodenbeispiel (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Refresh – Methodenbeispiel (VC++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Aktualisierungs Methode (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
+ [Beispiel für eine Aktualisierungs Methode (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Refresh-Methode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

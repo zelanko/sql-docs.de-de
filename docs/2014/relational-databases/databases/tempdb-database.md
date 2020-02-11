@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916882"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
@@ -33,7 +33,7 @@ ms.locfileid: "62916882"
   
 -   Zeilenversionen, die von Datenänderungstransaktionen für Funktionen, wie z. B. Onlineindexvorgänge, Multiple Active Result Sets (MARS) und AFTER-Trigger, generiert wurden.  
   
- Die Operationen in **tempdb** werden minimal protokolliert. Hierdurch kann für die Transaktion ein Rollback ausgeführt werden. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von **nichts in** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb**nicht zulässig.  
+ Die Operationen in **tempdb** werden minimal protokolliert. Hierdurch kann für die Transaktion ein Rollback ausgeführt werden. **tempdb** wird bei jedem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Start von neu erstellt, sodass das System immer mit einer sauberen Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Aus diesem Grund wird in **tempdb** nie alles von einer Sitzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer anderen gespeichert. Sicherungs-und Wiederherstellungs Vorgänge sind in **tempdb**nicht zulässig.  
   
 ## <a name="physical-properties-of-tempdb"></a>physische Eigenschaften von tempdb  
  Die folgende Tabelle listet die anfänglichen Konfigurationswerte der **tempdb** -Daten- und Protokolldateien auf. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
@@ -43,7 +43,7 @@ ms.locfileid: "62916882"
 |Primäre Daten|tempdev|tempdb.mdf|Automatische Vergrößerung um 10 Prozent, bis der Datenträger voll ist|  
 |Log|templog|templog.ldf|Automatische Vergrößerung um 10 Prozent bis maximal 2 TB|  
   
- Die Größe des **Tempdb** kann die Leistung eines Systems beeinträchtigen. Z. B. wenn die **Tempdb** ist zu klein, die systemverarbeitung ist möglicherweise zu systemverarbeitung mit anfallenden die Datenbank zur Unterstützung von den Anforderungen Ihrer Workload jedes Mal, den Sie starten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können diesen zusätzlichen Aufwand vermeiden, durch Erhöhen der Größe der **Tempdb**.  
+ Die Größe von **tempdb** kann sich auf die Leistung eines Systems auswirken. Wenn z. b. die **tempdb** -Größe zu klein ist, kann die Systemverarbeitung für die automatische Vergrößerung der Datenbank zu stark ausgelastet sein, um die Arbeits Auslastungs Anforderung bei jedem Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu unterstützen. Sie können diesen mehr Aufwand vermeiden, indem Sie die Größe von **tempdb**erhöhen.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Leistungsverbesserungen in tempdb  
  Die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tempdb **wurde in** folgendermaßen verbessert:  
@@ -54,13 +54,13 @@ ms.locfileid: "62916882"
   
 -   Der Protokollierungsaufwand für **tempdb** wurde reduziert. Dadurch wird die für die **tempdb** -Protokolldatei verwendete Datenträger-E/A-Bandbreite reduziert.  
   
--   Der Algorithmus für die Zuordnung von gemischten Seiten in **Tempdb** wurde verbessert.  
+-   Der Algorithmus für die Zuordnung gemischter Seiten in **tempdb** wurde verbessert.  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>Verschieben der tempdb-Daten- und -Protokolldateien  
- Weitere Informationen zum Verschieben der **tempdb** -Daten- und -Protokolldateien finden Sie unter [Verschieben von Systemdatenbanken](system-databases.md).  
+ Informationen zum Verschieben der **tempdb** -Daten-und-Protokolldateien finden Sie unter [Verschieben von System Datenbanken](system-databases.md).  
   
 ### <a name="database-options"></a>Datenbankoptionen  
- Die folgende Tabelle nennt die Standardwerte für die einzelnen Datenbankoptionen in der **tempdb** -Datenbank und gibt an, ob die entsprechende Option geändert werden kann. Zum Anzeigen der aktuellen Einstellungen dieser Optionen verwenden Sie die Katalogsicht [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
+ In der folgenden Tabelle wird der Standardwert für jede Datenbankoption in der **tempdb** -Datenbank aufgelistet, und es wird angezeigt, ob die Option geändert werden kann. Zum Anzeigen der aktuellen Einstellungen dieser Optionen verwenden Sie die Katalogsicht [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
@@ -71,17 +71,17 @@ ms.locfileid: "62916882"
 |ANSI_WARNINGS|OFF|Ja|  
 |ARITHABORT|OFF|Ja|  
 |AUTO_CLOSE|OFF|Nein|  
-|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_CREATE_STATISTICS|EIN|Ja|  
 |AUTO_SHRINK|OFF|Nein|  
-|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS|EIN|Ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
 |CHANGE_TRACKING|OFF|Nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
 |CURSOR_DEFAULT|GLOBAL|Ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein <br /><br /> Nein <br /><br /> Nein|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
-|DB_CHAINING|ON|Nein|  
+|DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
 |NUMERIC_ROUNDABORT|OFF|Ja|  
 |PAGE_VERIFY|CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE für Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Ja|  
@@ -95,8 +95,8 @@ ms.locfileid: "62916882"
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
-## <a name="restrictions"></a>Restrictions  
- Die folgenden Operationen können mit der **tempdb** -Datenbank nicht ausgeführt werden:  
+## <a name="restrictions"></a>Beschränkungen  
+ Die folgenden Vorgänge können für die **tempdb** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateigruppen.  
   
@@ -104,13 +104,13 @@ ms.locfileid: "62916882"
   
 -   Ändern der Sortierung. Die Standardsortierung entspricht der Serversortierung.  
   
--   Ändern des Datenbankbesitzers Der Besitzer von**tempdb** ist **sa**.  
+-   Ändern des Datenbankbesitzers **tempdb** ist im Besitz von **sa**.  
   
 -   Erstellen einer Datenbankmomentaufnahme.  
   
 -   Löschen der Datenbank.  
   
--   Löschen des **guest** -Benutzers aus der Datenbank.  
+-   Der **Gast** Benutzer wird aus der Datenbank gelöscht.  
   
 -   Aktivieren von Change Data Capture  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62916882"
   
  [Verschieben von Datenbankdateien](move-database-files.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Arbeiten mit tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

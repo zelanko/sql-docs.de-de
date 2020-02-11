@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206962"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
@@ -27,12 +27,14 @@ ms.locfileid: "68206962"
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|BESCHREIBUNG|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
-|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie dies durch `SELECT column_list FROM`  *\< Funktionsname >* `()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
-|\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|ADDING TAPE DEVICE|Die veraltete Funktionen Sp_addumpdevice'`tape`' wurde gefunden. Verwenden Sie Sp_addumpdevice'`disk`"stattdessen. Tritt einmal pro Verwendung auf.|  
+|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie `SELECT column_list FROM` dies durch * \< function_name>. * `()` Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
+|
+  \@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. 
+  \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
+|ADDING TAPE DEVICE|Die als veraltet markierte Funktion sp_addumpdevice`tape`' ' wurde gefunden. Verwenden Sie stattdessen`disk`sp_addumpdevice ' '. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Gesamtanzahl der Verwendungen der veralteten Funktion – der TORN_PAGE_DETECTION-Option von ALTER DATABASE – seit dem Start der Serverinstanz. Verwenden Sie stattdessen die Syntax PAGE_VERIFY. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
 |ALTER LOGIN WITH SET CREDENTIAL|Die veraltete Funktionssyntax ALTER LOGIN WITH SET CREDENTIAL oder ALTER LOGIN WITH NO CREDENTIAL wurde gefunden. Verwenden Sie stattdessen die Syntax ADD oder DROP CREDENTIAL. Tritt einmal pro Kompilierung auf.|  
@@ -58,7 +60,7 @@ ms.locfileid: "68206962"
 |DBCC INDEXDEFRAG|Die Anweisung DBCC INDEXDEFRAG wurde gefunden. Schreiben Sie die Anweisung so um, dass sie die REORGANIZE-Option von ALTER INDEX verwendet. Tritt einmal pro Abfrage auf.|  
 |DBCC SHOWCONTIG|Die Anweisung DBCC SHOWCONTIG wurde gefunden. Fragen Sie sys.dm_db_index_physical_stats nach diesen Informationen ab. Tritt einmal pro Abfrage auf.|  
 |DEFAULT-Schlüsselwort als Standardwert|Syntax, die das DEFAULT-Schlüsselwort als Standardwert verwendet, wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|Veralteter Verschlüsselungsalgorithmus|Der veraltete Verschlüsselungsalgorithmus rc4 wird in der nächsten Version von SQL Server entfernt. Nutzen Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie eine Änderung von Anwendungen, in denen sie aktuell verwendet wird. Der RC4-Algorithmus ist schwach und wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.|  
+|Veralteter Verschlüsselungsalgorithmus|Der veraltete Verschlüsselungsalgorithmus rc4 wird in der nächsten Version von SQL Server entfernt. Nutzen Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie eine Änderung von Anwendungen, in denen sie aktuell verwendet wird. Der RC4-Algorithmus ist schwach und wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.|  
 |DESX-Algorithmus|Syntax, die den DESX-Verschlüsselungsalgorithmus verwendet, wurde gefunden. Verwenden Sie einen anderen Algorithmus für die Verschlüsselung. Tritt einmal pro Kompilierung auf.|  
 |dm_fts_active_catalogs|Der dm_fts_active_catalogs-Leistungsindikator bleibt immer auf dem Wert 0, da einige Spalten der sys.dm_fts_active_catalogs-Sicht nicht als veraltet markiert werden. Um eine veraltete Spalte zu überwachen, verwenden Sie den spaltenspezifischen Leistungsindikator, wie z.B. dm_fts_active_catalogs.is_paused.|  
 |dm_fts_active_catalogs.is_paused|Die is_paused-Spalte der dynamischen Verwaltungssicht [sys.dm_fts_active_catalogs](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql) wurde gefunden. Vermeiden Sie die Verwendung dieser Spalte. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
@@ -102,7 +104,7 @@ ms.locfileid: "68206962"
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden.|  
 |Lithuanian_Classic|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden.|  
-|Macedonian|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden. Verwenden Sie stattdessen Macedonian_FYROM_90.|  
+|Mazedonisch|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden. Verwenden Sie stattdessen Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|Die Syntax MODIFY FILEGROUP READONLY wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die READ_ONLY-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
 |MODIFY FILEGROUP READWRITE|Die Syntax MODIFY FILEGROUP READWRITE wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die READ_WRITE-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
 |Mehr als zweiteiliger Spaltenname|Eine Abfrage hat in der Spaltenliste einen drei- oder vierteiligen Namen verwendet. Ändern Sie die Abfrage so, dass sie die mit dem Standard kompatiblen zweiteiligen Namen verwendet. Tritt einmal pro Kompilierung auf.|  
@@ -112,14 +114,14 @@ ms.locfileid: "68206962"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Verweise auf die veraltete Funktionsys.numbered_procedure_parameters wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |numbered_procedures|Verweise auf die veraltete Funktionsys.numbered_procedures wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR (Format: RAISERROR Integer String)-Syntax wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
+|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR integer string) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
 |OLEDB für Ad-hoc-Verbindungen|SQLOLEDB wird nicht als Anbieter unterstützt. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für Ad-hoc-Verbindungen.|  
 |PERMISSIONS|Verweise auf die systeminterne PERMISSIONS-Funktion wurden gefunden. Fragen Sie stattdessen sys.fn_my_permissions ab. Tritt einmal pro Abfrage auf.|  
 |ProcNums|Die veraltete ProcNums-Syntax wurde gefunden. Schreiben Sie die Anweisungen um, um die Verweise zu entfernen. Tritt einmal pro Kompilierung auf.|  
 |READTEXT|Die Syntax READTEXT wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp `varchar(max)` verwendet und die Datentypsyntax `text` entfernt wird. Tritt einmal pro Abfrage auf.|  
-|RESTORE DATABASE oder LOG WITH DBO_ONLY|Die RESTORE ... WITH DBO_ONLY-Syntax wurde gefunden. Verwenden Sie stattdessen die RESTORE ... RESTRICTED_USER-Syntax.|  
-|RESTORE DATABASE oder LOG WITH MEDIAPASSWORD|Die RESTORE ... WITH MEDIAPASSWORD-Syntax wurde gefunden. WITH MEDIAPASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
-|RESTORE DATABASE oder LOG WITH PASSWORD|Die RESTORE ... WITH PASSWORD-Syntax wurde gefunden. WITH PASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
+|RESTORE DATABASE oder LOG WITH DBO_ONLY|Die Wiederherstellung... WITH DBO_ONLY Syntax gefunden wurde. Restore verwenden... Stattdessen RESTRICTED_USER.|  
+|RESTORE DATABASE oder LOG WITH MEDIAPASSWORD|Die Wiederherstellung... WITH Media Password-Syntax wurde gefunden. WITH MEDIAPASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
+|RESTORE DATABASE oder LOG WITH PASSWORD|Die Wiederherstellung... WITH Password-Syntax wurde gefunden. WITH PASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
 |Zurückgeben von Ergebnissen aus Triggern|Dieses Ereignis tritt einmal pro Triggeraufruf auf. Schreiben Sie den Trigger so um, dass er keine Resultsets zurückgibt.|  
 |ROWGUIDCOL|Die Syntax ROWGUIDCOL wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die $rowguid-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
 |SET ANSI_NULLS OFF|Die Syntax SET ANSI_NULLS OFF wurde gefunden. Entfernen Sie diese veraltete Syntax. Tritt einmal pro Kompilierung auf.|  
@@ -162,7 +164,7 @@ ms.locfileid: "68206962"
 |sp_control_dbmasterkey_password|Die gespeicherte Prozedur sp_control_dbmasterkey_password überprüft nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer künftigen Version muss der Hauptschlüssel vorhanden sein, und das Kennwort, das in der gespeicherten Prozedur sp_control_dbmasterkey_password verwendet wird, muss einem der Kennwörter zum Verschlüsseln des Datenbank-Hauptschlüssels entsprechen.|  
 |sp_create_removable|Die Prozedur sp_create_removable wurde gefunden. Verwenden Sie stattdessen CREATE DATABASE. Tritt einmal pro Abfrage auf.|  
 |sp_db_vardecimal_storage_format|Die Verwendung des Speicherformats `vardecimal` wurde erkannt. Verwenden Sie stattdessen die Datenkomprimierung.|  
-|sp_dbcmptlevel|Die Prozedur sp_dbcmptlevel wurde gefunden. Verwenden Sie ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Tritt einmal pro Abfrage auf.|  
+|sp_dbcmptlevel|Die Prozedur sp_dbcmptlevel wurde gefunden. Verwenden Sie ALTER DATABASE... Legen Sie stattdessen COMPATIBILITY_LEVEL fest. Tritt einmal pro Abfrage auf.|  
 |sp_dbfixedrolepermission|Die Prozedur sp_dbfixedrolepermission wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_dboption|Die Prozedur sp_dboption wurde gefunden. Verwenden Sie stattdessen ALTER DATABASE und DATABASEPROPERTYEX. Tritt einmal pro Kompilierung auf.|  
 |sp_dbremove|Die Prozedur sp_dbremove wurde gefunden. Verwenden Sie stattdessen DROP DATABASE. Tritt einmal pro Abfrage auf.|  
@@ -238,7 +240,7 @@ ms.locfileid: "68206962"
 |sysobjects|Verweise auf sysobjects wurden gefunden. Verwenden Sie stattdessen sys.objects. Tritt einmal pro Kompilierung auf.|  
 |sysoledbusers|Verweise auf sysoledbusers wurden gefunden. Verwenden Sie stattdessen sys.linked_logins. Tritt einmal pro Kompilierung auf.|  
 |sysopentapes|Verweise auf sysopentapes wurden gefunden. Verwenden Sie stattdessen sys.dm_io_backup_tapes. Tritt einmal pro Kompilierung auf.|  
-|sysperfinfo|Verweise auf sysperfinfo wurden gefunden. Verwenden Sie stattdessen sys.dm_os_performance_counters. stattdessen. Tritt einmal pro Kompilierung auf.|  
+|sysperfinfo|Verweise auf sysperfinfo wurden gefunden. Verwenden Sie stattdessen sys.dm_os_performance_counters. instead. (Anforderungsobjekt konnte nicht analysiert werden: Erwartet wurde, dass ‚key‘ und ‚value‘ für base_parameters des JSON-Zuordnungsfelds festgelegt werden. Stattdessen wurde ‚key: „...“‘ festgelegt.) Tritt einmal pro Kompilierung auf.|  
 |syspermissions|Verweise auf syspermissions wurden gefunden. Verwenden Sie stattdessen sys.database_permissions und sys.server_permissions. Tritt einmal pro Kompilierung auf.|  
 |sysprocesses|Verweise auf sysprocesses wurden gefunden. Verwenden Sie stattdessen sys.dm_exec_connections, sys.dm_exec_sessions und sys.dm_exec_requests. Tritt einmal pro Kompilierung auf.|  
 |sysprotects|Verweise auf sysprotects wurden gefunden. Verwenden Sie stattdessen sys.database_permissions und sys.server_permissions. Tritt einmal pro Kompilierung auf.|  
@@ -259,16 +261,16 @@ ms.locfileid: "68206962"
 |XMLDATA|Die Syntax FOR XML wurde gefunden. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für den expliziten Modus. Tritt einmal pro Kompilierung auf.|  
 |XP_API|Eine Anweisung einer erweiterten gespeicherten Prozedur wurde gefunden. Darf nicht verwendet werden.|  
 |xp_grantlogin|Die Prozedur xp_grantlogin wurde gefunden. Verwenden Sie stattdessen CREATE LOGIN. Tritt einmal pro Kompilierung auf.|  
-|xp_loginconfig|Die Prozedur xp_loginconfig wurde gefunden. Verwenden Sie stattdessen das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY. Tritt einmal pro Abfrage auf.|  
+|xp_loginConfig|Die Prozedur xp_loginconfig wurde gefunden. Verwenden Sie stattdessen das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY. Tritt einmal pro Abfrage auf.|  
 |xp_revokelogin|Die Prozedur xp_revokelogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE oder DROP LOGIN. Tritt einmal pro Kompilierung auf.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete Datenbankmodulfeatures in SQLServer 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Als veraltet markierte Full-Text-Search-Funktionen in SQLServer 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Deprecation Announcement-Ereignisklasse](../event-classes/deprecation-announcement-event-class.md)   
- [Deprecation Final Support (Ereignisklasse)](../event-classes/deprecation-final-support-event-class.md)   
- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQLServer 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Nicht mehr unterstützte Funktionen der Volltextsuche in SQLServer 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Veraltete Datenbank-Engine Features in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Als veraltet markierte Funktionen der voll Text Suche in SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ [Depreationankündigungs-Ereignisklasse](../event-classes/deprecation-announcement-event-class.md)   
+ [Depreation Final Support (Ereignisklasse)](../event-classes/deprecation-final-support-event-class.md)   
+ [Nicht mehr unterstützte Datenbank-Engine Funktionen in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Nicht mehr unterstützte Funktionen der voll Text Suche in SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Verwenden von SQL Server-Objekten](use-sql-server-objects.md)  
   
   

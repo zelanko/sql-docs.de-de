@@ -1,5 +1,5 @@
 ---
-title: Projektmappen und Projekte zur Quellcodeverwaltung hinzufügen | Microsoft-Dokumentation
+title: Projektmappen und Projekte zur Quell Code Verwaltung hinzufügen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62792090"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Hinzufügen von Projektmappen und Projekten zur Quellcodeverwaltung
@@ -29,12 +29,12 @@ ms.locfileid: "62792090"
   
  In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Hinzufügen von Projektmappen zur Quellcodeverwaltung](../../2014/database-engine/add-solutions-to-source-control.md)|Beschreibt die Projekttypen, die Sie hinzufügen können, und enthält Anweisungen zum Hinzufügen einer Projektmappe zur Quellcodeverwaltung.|  
 |[Hinzufügen von Projekten zur Quellcodeverwaltung](../../2014/database-engine/add-projects-to-source-control.md)|Enthält Anweisungen zum Hinzufügen eines Projekts zu einer Projektmappe.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Öffnen von Projektmappen und Projekten aus der Quellcodeverwaltung](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

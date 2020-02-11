@@ -1,5 +1,5 @@
 ---
-title: Absolute und Relative URLs | Microsoft-Dokumentation
+title: Absolute und relative URLs | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,79 +15,79 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926364"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
-Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann es sich um eine Datei, Verzeichnis, HTML-Seite, Image, Programm usw. sein.  
+Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer oder einem vernetzten Computer gespeichert ist. Bei dem Ziel kann es sich um eine Datei, ein Verzeichnis, eine HTML-Seite, ein Bild, ein Programm usw. handeln.  
   
- Ein *absolute URL* enthält alle Informationen, die erforderlich sind, um eine Ressource zu suchen.  
+ Eine *absolute URL* die alle Informationen enthält, die erforderlich sind, um eine Ressource zu suchen.  
   
- Ein *relativen URL* sucht eine Ressource mit der eine absolute URL als Ausgangspunkt. Aktiviert ist, die "vollständige URL" des Ziels, werden angegeben durch die Verkettung der absolute und relative URLs.  
+ Eine *relative URL* die eine Ressource mit einem absolute URL als Ausgangspunkt verwendet. Tatsächlich wird die "Complete URL" des Ziels durch Verkettung der absoluten und relativen URLs angegeben.  
   
- Ein *absolute URL* verwendet das folgende Format: *Scheme://server/path/resource*  
+ Ein *absolute URL* verwendet das folgende Format: *Scheme://Server/Path/Resource*  
   
- Eine relative URL in der Regel besteht aus nur die *Pfad*, und optional die *Ressource*, aber kein *Schema* oder *Server*. In den folgenden Tabellen definieren die einzelnen Bestandteile von der vollständigen URL-Format.  
+ Ein relative URL besteht in der Regel nur aus dem *Pfad*und optional der *Ressource*, aber keinem *Schema* oder *Server*. In den folgenden Tabellen werden die einzelnen Teile des gesamten URL-Formats definiert.  
   
- *scheme*  
- Gibt an, wie die *Ressource* zugegriffen werden soll.  
+ *Schrift*  
+ Gibt an, wie auf die *Ressource* zugegriffen werden soll.  
   
- *server*  
- Gibt den Namen des Computers, in denen die *Ressource* befindet.  
+ *Servers*  
+ Gibt den Namen des Computers an, auf dem sich die *Ressource* befindet.  
   
- *path*  
- Gibt die Sequenz von Verzeichnissen, die an das Ziel führt. Wenn *Ressource* wird ausgelassen, ist das Ziel der letzten Verzeichnisses in *Pfad*.  
+ *ADS*  
+ Gibt die Sequenz von Verzeichnissen an, die zum Ziel führen. Wenn *Resource* weggelassen wird, ist das Ziel das letzte Verzeichnis im *Pfad*.  
   
- *resource*  
- Wenn enthalten, *Ressource* ist das Ziel, und ist üblicherweise der Name einer Datei. Möglicherweise eine *einfache Datei,* mit einem einzelnen binären Stream von Bytes, oder ein *strukturierte Dokument* , die eine oder mehrere Speicher und binären Datenströmen von Bytes enthält.  
+ *Ressource*  
+ Wenn dieses enthalten ist, ist die *Ressource* das Ziel und in der Regel der Name einer Datei. Dabei kann es sich um eine *einfache Datei handeln,* die einen einzelnen binären Stream von Bytes enthält, oder um ein *strukturiertes Dokument,* das mindestens ein Speicher und binäre Streams von Bytes enthält.  
   
-## <a name="url-scheme-registration"></a>URL-Schema-Registrierung  
- Wenn ein Anbieter auf URLs unterstützt, wird der Anbieter eine oder mehrere URL-Schemas registriert. Registrierung bedeutet, dass alle URLs, die mithilfe des Schemas der registrierte Anbieter automatisch aufgerufen werden. Z. B. die *http* Schema registriert ist, um die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). ADO wird davon ausgegangen, dass alle URLs, die mit dem Präfix "http" Web-Ordner oder Dateien mit dem Internet-Publishing-Anbieter darstellen. Informationen zu den Schemas, die von Ihrem Anbieter registriert wurden finden Sie unter der Dokumentation Ihres Anbieters.  
+## <a name="url-scheme-registration"></a>URL-Schema Registrierung  
+ Wenn ein Anbieter URLs unterstützt, registriert der Anbieter mindestens ein URL-Schema. Die Registrierung bedeutet, dass alle URLs, die das Schema verwenden, automatisch den registrierten Anbieter aufrufen. Beispielsweise wird das *http* -Schema beim [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)registriert. ADO geht davon aus, dass alle URLs mit dem Präfix "http" Webordner oder Dateien darstellen, die mit dem Internet Publishing Provider verwendet werden sollen. Informationen zu den Schemas, die von Ihrem Anbieter registriert werden, finden Sie in der Dokumentation Ihres Anbieters.  
   
 ## <a name="defining-context-with-a-url"></a>Definieren von Kontext mit einer URL  
- Eine offene Verbindung, dargestellt durch die Funktion eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt werden zum Einschränken der nachfolgende Vorgänge mit der Datenquelle dargestellt, über diese Verbindung. Die Verbindung definiert, also den Kontext für nachfolgende Vorgänge.  
+ Eine Funktion einer geöffneten Verbindung, die durch ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt dargestellt wird, besteht darin, nachfolgende Vorgänge auf die Datenquelle zu beschränken, die durch diese Verbindung repräsentiert wird. Das heißt, die Verbindung definiert den Kontext für nachfolgende Vorgänge.  
   
- Bei ADO 2.7 oder höher kann eine absolute URL auch einen Kontext definieren. Z. B., wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt wird geöffnet, mit einer absoluten URL, eine **Verbindung** -Objekt implizit erstellt, um die durch die URL angegebene Ressource darstellen.  
+ Mit ADO 2,7 oder höher kann ein absolute URL auch einen Kontext definieren. Wenn z. b. ein [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) Objekt mit einem absolute URL geöffnet wird, wird implizit ein **Verbindungs** Objekt erstellt, das die durch die URL angegebene Ressource darstellt.  
   
- Eine absolute URL, die einen Kontext definiert kann angegeben werden, der *ActiveConnection* Parameter, der die **Datensatz** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Eine absolute URL kann auch angegeben werden, als Wert für die "URL ="-Schlüsselwort in der **Verbindung** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode *"ConnectionString"* -Parameter und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode *ActiveConnection* Parameter.  
+ Eine absolute URL, die einen Kontext definiert, kann im *ActiveConnection* -Parameter der [Open](../../../ado/reference/ado-api/open-method-ado-record.md) -Methode des **Datensatz** -Objekts angegeben werden. Eine absolute URL kann auch als Wert des Schlüssel Worts "URL =" in der **Verbindungs** [Objekt-](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode " *ConnectionString* " und des " [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Object [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method *ActiveConnection* "-Parameters angegeben werden.  
   
- Kontext kann auch definiert werden, indem Sie öffnen ein **Datensatz** oder **Recordset** -Objekt, ein Verzeichnis darstellt, da diese Objekte bereits über einen implizit oder explizit deklarierten verfügen **Verbindung**  -Objekt, das Kontext gibt.  
+ Der Kontext kann auch definiert werden, indem ein **Datensatz** -oder **Recordset** -Objekt geöffnet wird, das ein Verzeichnis darstellt, da diese Objekte bereits über ein implizit oder explizit deklariertes **Verbindungs** Objekt verfügen, das den Kontext angibt.  
   
-## <a name="scoped-operations"></a>Bereichsbezogene Vorgänge  
- Der Kontext definiert auch Bereich –, also das Verzeichnis und seinen Unterverzeichnissen ein, die in nachfolgenden Vorgängen teilnehmen kann. Die **Datensatz** Objekt verfügt über mehrere Bereichsbezogene Methoden, die in einem Verzeichnis ausgeführt werden und alle Unterverzeichnisse. Dazu gehören das [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), und [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+## <a name="scoped-operations"></a>Bereichs bezogene Vorgänge  
+ Der Kontext definiert auch den Bereich, d. h. das Verzeichnis und seine Unterverzeichnisse, die an nachfolgenden Vorgängen teilnehmen können. Das **Datensatz** -Objekt verfügt über mehrere Bereichs bezogene Methoden, die für ein Verzeichnis und alle Unterverzeichnisse ausgeführt werden. Zu diesen Methoden gehören [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), " [muverecord](../../../ado/reference/ado-api/moverecord-method-ado.md)" und " [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)".  
   
-## <a name="relative-urls-as-command-text"></a>Relative URLs als Befehlstext  
- Können Sie angeben, einen Befehl für die Datenquelle ausgeführt werden, durch Eingabe einer Zeichenfolge in die *CommandText* Parameter der **Verbindung** des Objekts [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) -Methode, und in der  *Quelle* Parameter, der die **Recordset** des Objekts [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode.  
+## <a name="relative-urls-as-command-text"></a>Relative URLs als Befehls Text  
+ Sie können einen Befehl angeben, der für die Datenquelle ausgeführt werden soll, indem Sie eine Zeichenfolge in den *CommandText* -Parameter der [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) -Methode des **Verbindungs** Objekts eingeben und im *Source* -Parameter der [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode des **Recordset** -Objekts.  
   
- Eine relative URL kann angegeben werden, der *CommandText* oder *Quelle* Parameter. Die relative URL stellt einen Befehl, z. B. einen SQL-Befehl keine tatsächlich dar; Es gibt lediglich die Parameter. Der Kontext der aktiven Verbindung muss eine absolute URL sein und die *Option* -Parameter muss festgelegt werden, um **AdCmdTableDirect**.  
+ Eine relative URL kann im *CommandText* -Parameter oder im *Source* -Parameter angegeben werden. Der relative URL stellt keinen Befehl dar, wie z. b. einen SQL-Befehl. Sie gibt lediglich die Parameter an. Der Kontext der aktiven Verbindung muss ein absolute URL sein, und der *Option* -Parameter muss auf **adCmdTableDirect**festgelegt sein.  
   
- Das folgende Codebeispiel zeigt z. B. zum Öffnen einer **Recordset** auf die Datei ///Readme25.txt von Winnt/system32-Verzeichnis:  
+ Im folgenden Codebeispiel wird z. b. gezeigt, wie ein **Recordset** in der Datei "Readme25. txt" im Verzeichnis "winnt/system32" geöffnet wird:  
   
 ```  
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- Die absolute URL in der Verbindungszeichenfolge gibt den Server (`YourServer`) und den Pfad (`Winnt`). Diese URL definiert auch den Kontext.  
+ Der absolute URL in der Verbindungs Zeichenfolge gibt den`YourServer`Server () und den`Winnt`Pfad () an. Diese URL definiert auch den Kontext.  
   
- Die relative URL im Befehlstext die absolute URL als Ausgangspunkt verwendet und gibt an, der Rest des Pfads (`system32`) und die Datei zu öffnen (`Readme25.txt`).  
+ Der relative URL im Befehls Text verwendet die absolute URL als Ausgangspunkt und gibt den Rest des Pfads (`system32`) und die zu öffnende Datei an (`Readme25.txt`).  
   
- Das Feld "Options" (`adCmdTableDirect`) gibt an, dass der Typ eine relative URL.  
+ Das Optionsfeld (`adCmdTableDirect`) gibt an, dass der Befehlstyp eine relative URL ist.  
   
- Wenn Sie beispielsweise der folgende Code wird geöffnet eine **Recordset** auf dem Inhalt der `Winnt` Verzeichnis:  
+ Ein weiteres Beispiel: der folgende Code öffnet ein **Recordset** für den Inhalt des `Winnt` Verzeichnisses:  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
-## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB-Anbieter bereitgestellte URL-Schemas  
- Der erste Teil einer vollqualifizierten URL ist die *Schema* , die Zugriff auf die Ressource identifiziert, nach dem Rest der URL verwendet wird. Beispiele sind HTTP (Hypertext Transfer Protocol) und FTP (File Transfer Protocol).  
+## <a name="ole-db-provider-supplied-url-schemes"></a>Vom Anbieter bereitgestellte URL-Schemas OLE DB  
+ Der führende Teil einer voll qualifizierten URL ist das *Schema* , das für den Zugriff auf die Ressource verwendet wird, die durch den Rest der URL identifiziert wird. Beispiele hierfür sind http (Hypertext Transfer Protocol) und FTP (Dateiübertragungsprotokoll).  
   
- ADO unterstützt OLE DB-Anbieter, die ihre eigenen URL-Schemas zu erkennen. Z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *,* die "veröffentlicht" Windows 2000-Dateien, greift auf das vorhandene HTTP-Schema erkannt.  
+ ADO unterstützt OLE DB Anbietern, die eigene URL-Schemas erkennen. Beispielsweise erkennt der [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* der auf "veröffentlichte" Windows 2000-Dateien zugreift, das vorhandene http-Schema.  
   
-## <a name="see-also"></a>Siehe auch  
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

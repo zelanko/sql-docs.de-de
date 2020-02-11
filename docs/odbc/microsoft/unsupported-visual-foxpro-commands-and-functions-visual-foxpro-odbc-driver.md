@@ -1,5 +1,5 @@
 ---
-title: Nicht unterstützte Visual FoxPro-Befehle und Funktionen | Microsoft-Dokumentation
+title: Nicht unterstützte Visual FoxPro-Befehle und-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,306 +17,306 @@ ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912321"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Nicht unterstützte Visual FoxPro-Befehle und -Funktionen (Visual FoxPro-ODBC-Treiber)
-Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microsoft® Visual FoxPro unterstützt werden, werden von der Visual FoxPro-ODBC-Treiber nicht unterstützt.  
+In der folgenden Tabelle sind FoxPro-Befehle und Funktionen aufgeführt, die nicht vom Visual FoxPro-ODBC-Treiber unterstützt werden, sondern von Microsoft® Visual FoxPro-® unterstützt werden.  
   
- Wenn Ihre Anwendung mit Daten, deren Regeln, Trigger, Standardwerte interagiert oder gespeicherte Prozeduren, diese Visual FoxPro-Befehle oder Funktionen aufrufen, kann der Treiber ein Fehler generiert.  
+ Wenn die Anwendung mit Daten interagiert, deren Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren diese Visual FoxPro-Befehle oder-Funktionen aufzurufen, kann der Treiber einen Fehler generieren.  
   
-## <a name="unsupported-visual-foxpro-commands-and-functions"></a>Nicht unterstützte Visual FoxPro-Befehle und Funktionen  
-  
-||||  
-|-|-|-|  
-|#DEFINE #UNDEF|#IF... Präprozessor #ENDIF-Anweisung|#IFDEF &#124; #IFNDEF|  
-|# Präprozessor INCLUDEDIREKTIVE|:: Bereichsauflösungsoperator|! Befehl (finden Sie unter Ausführung &#124; ! -Befehl)|  
-|? &#124; ?? Befehl|??? Befehl|\ &#124; \\\ Befehl|  
-|@ ... BOX-Befehl|@ ... CLASS-Befehl|@ ... Befehl zum Löschen|  
-|@ ... Bearbeiten: Felder Befehl Bearbeiten|@ ... Geben Sie Befehl|@ ... GET|  
-|@ ... KONTEXTMENÜBEFEHL von ""|@ ... PROMPT-Befehl|@ ... Angenommen, Befehl|  
-|@ ... Bildlauf-Befehl|@ ... -Befehl||  
-  
-## <a name="a"></a>A  
+## <a name="unsupported-visual-foxpro-commands-and-functions"></a>Nicht unterstützte Visual FoxPro-Befehle und-Funktionen  
   
 ||||  
 |-|-|-|  
-|Befehl akzeptieren|ACLASS ()-Funktion|KONTEXTMENÜBEFEHL von "" aktivieren|  
-|POPUP-Befehl aktivieren|Bildschirm-Befehl aktivieren|Aktivieren des Befehls "Fenster"|  
-|ActivateCell-Methode|Befehl "Klasse hinzufügen"|ADIR ()-Funktion|  
-|AFONT ()-Funktion|AINSTANCE ()-Funktion|Arbeitsspeicher-Systemvariable _ALIGNMENT|  
-|AMEMBERS ()-Funktion|ANSITOOEM ()-Funktion|APRINTERS ()-Funktion|  
-|ASELOBJ ()-Funktion|Hilfe-Befehl||  
+|#DEFINE... #undef|#If... #endif Präprozessordirektive|#IFDEF &#124; #ifndef|  
+|#INCLUDE-Präprozessordirektive|:: Scope Resolution-Operator|! (Siehe Ausführen von &#124;! S|  
+|? &#124;? Get-Help|??? Get-Help|Befehl \ \\&#124; \|  
+|@ ... Box-Befehl|@ ... Class-Befehl|@ ... Befehl "Löschen"|  
+|@ ... Befehl "Bearbeiten-Felder bearbeiten"|@ ... Befehl "ausfüllen"|@ ... Erhalten|  
+|@ ... Menübefehl|@ ... Befehl zur Eingabeaufforderung|@ ... Befehl zum Beispiel|  
+|@ ... Scrollbefehl|@ ... TO-Befehl||  
+  
+## <a name="a"></a>Ein  
+  
+||||  
+|-|-|-|  
+|Accept-Befehl|AClass ()-Funktion|Menübefehl "aktivieren"|  
+|Popup Befehl aktivieren|Bildschirm Befehl aktivieren|Befehl "Fenster aktivieren"|  
+|Activatecell-Methode|Klassen Befehl hinzufügen|ADIR ()-Funktion|  
+|Afont ()-Funktion|Ainstance ()-Funktion|System Speicher Variable _ALIGNMENT|  
+|AMEMBERS ()-Funktion|Ansigeoem ()-Funktion|Aprinters ()-Funktion|  
+|Aselobj ()-Funktion|Assist-Befehl||  
   
 ## <a name="b"></a>B  
   
 ||||  
 |-|-|-|  
-|BALKEN ()-Funktion|BARCOUNT ()-Funktion|BARPROMPT ()-Funktion|  
-|Arbeitsspeicher-Systemvariable _BEAUTIFY|Arbeitsspeicher-Systemvariable _BOX|Befehl Suchen|  
-|Arbeitsspeicher-Systemvariable _BROWSER|Erstellen von APP-Befehl|Erstellen Sie die EXE-Befehl|  
-|BUILD Projektbefehl|Arbeitsspeicher-Systemvariable _BUILDER||  
+|Bar ()-Funktion|Barcount ()-Funktion|Barprompt ()-Funktion|  
+|System Speicher Variable _BEAUTIFY|System Speicher Variable _BOX|Befehl zum Durchsuchen|  
+|System Speicher Variable _BROWSER|Befehl "App erstellen"|Befehl "Build exe"|  
+|Build Project-Befehl|System Speicher Variable _BUILDER||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _CALCVALUE|Arbeitsspeicher-Systemvariable _CLIPTEXT|Arbeitsspeicher-Systemvariable _CONVERTER|  
-|Arbeitsspeicher-Systemvariable _CUROBJ|Aufrufbefehl für|CANCEL-Befehl|  
-|CAPSLOCK ()-Funktion|Befehl "CD"|Befehl zum Ändern|  
-|CHDIR-Befehl|CHRSAW ()-Funktion|Schließen MEMO-Befehl|  
-|CNTBAR ()-Funktion|CNTPAD ()-Funktion|Spalte ()-Funktion|  
-|Kompilieren Sie Befehl|Kompilieren Sie die DATABASE-Befehl|Kompilieren Sie die FORM-Befehl|  
-|COMPOBJ ()-Funktion|Container-Objekt|Control-Objekt|  
-|Befehl "Datei kopieren"|Kopieren Sie MEMO-Befehl|Erstellen Sie den Befehl Klasse|  
-|Erstellen Sie CLASSLIB-Befehl|Erstellen Sie die Farbe SET-Befehl|CREATE-Befehl|  
-|CONNECTION-Befehl erstellen|Erstellen Sie die DATABASE-Befehl|Formular erstellen|  
-|VOM Befehl erstellen|Erstellen von LABEL-Befehl|KONTEXTMENÜBEFEHL von "" erstellen|  
-|Befehl "Projekt" erstellen|Abfragebefehl zu erstellen|Bericht-Befehl erstellen|  
-|Bildschirm-Befehl erstellen|SQL-Ansicht-Befehl erstellen|Erstellen von TRIGGER-Befehl|  
-|Erstellen von VIEW (Befehl)|CREATEOBJECT ()-Funktion|CURDIR ()-Funktion|  
+|System Speicher Variable _CALCVALUE|System Speicher Variable _CLIPTEXT|System Speicher Variable _CONVERTER|  
+|System Speicher Variable _CUROBJ|Befehl "Befehl"|Cancel-Befehl|  
+|CapsLock ()-Funktion|CD-Befehl|Befehl "ändern"|  
+|Chdir-Befehl|Chrsaw ()-Funktion|Befehl "Schließen"|  
+|Cntbar ()-Funktion|Cntpad ()-Funktion|Col ()-Funktion|  
+|Kompilierungs Befehl|Befehl "Datenbank kompilieren"|Befehl "Formular kompilieren"|  
+|COMPOBJ ()-Funktion|Container Objekt|Control-Objekt|  
+|Befehl "Datei kopieren"|Memo Befehl Kopieren|Create Class-Befehl|  
+|Befehl "classlib erstellen"|Befehl "Farbsatz erstellen"|Create-Befehl|  
+|Befehl "Verbindung erstellen"|CREATE DATABASE-Befehl|Befehl "Formular erstellen"|  
+|Create from-Befehl|Befehl "Bezeichnung erstellen"|Menübefehl "erstellen"|  
+|Create Project-Befehl|Create Query-Befehl|Befehl "Bericht erstellen"|  
+|Bildschirm Befehl erstellen|Befehl zum Erstellen einer SQL-Ansicht|Create-Befehl-Befehl|  
+|CREATE VIEW-Befehl|Funktion "up Object ()"|Cursor ()-Funktion|  
   
 ## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _DBLCLICK|Arbeitsspeicher-Systemvariable _DIARYDATE|DBSETPROP ()-Funktion|  
-|DDE-Funktionen|KONTEXTMENÜBEFEHL von "" deaktivieren|Deaktivieren Sie POPUP-Befehl|  
-|Deaktivieren des Befehls "Fenster"|DECLARE - DLL-Befehl|Deklarieren Sie Befehl|  
-|LEISTE den Befehl definieren|Definieren Sie im Feld Befehl|Definieren Sie den Befehl Klasse|  
-|KONTEXTMENÜBEFEHL von "" definieren|Definieren von PAD-Befehl|Definieren der POPUP-Befehl|  
-|Definieren des Befehls "Fenster"|Verbindungsbefehl "löschen"|Datenbankbefehl "löschen"|  
-|Dateibefehl "löschen"|TRIGGER-Befehl "löschen"|Ansichtsbefehl "löschen"|  
-|Befehl "DIR"|DIRECTORY-Befehl|Anzeigebefehl|  
-|Anzeige VERBINDUNGEN-Befehl|DATABASE-Anzeigebefehl|Anzeige DLLS-Befehl|  
-|FILES-Anzeigebefehl|Befehl "Arbeitsspeicher" anzeigen|Objekte-Anzeigebefehl|  
-|Die PROZEDUREN Anzeigebefehl|Anzeige-Statusbefehls|Befehl der Anzeige-Struktur|  
-|Tabellen-Anzeigebefehl|Ansichten-Anzeigebefehl|Befehl bilden|  
+|System Speicher Variable _DBLCLICK|System Speicher Variable _DIARYDATE|DBSETPROP ()-Funktion|  
+|DDE-Funktionen|Menübefehl "deaktivieren"|Popup Befehl deaktivieren|  
+|Befehl "Fenster deaktivieren"|DECLARE-DLL-Befehl|DECLARE-Befehl|  
+|Balken Befehl definieren|Befehl "Feld definieren"|Befehl "Klasse definieren"|  
+|Menübefehl "definieren"|Befehl "Pad definieren"|Popup Befehl definieren|  
+|Befehl "Fenster definieren"|Befehl "Verbindung löschen"|Befehl zum Löschen einer Datenbank|  
+|Befehl "Datei löschen"|DELETE-Befehl zum Löschen|Befehl "Ansicht löschen"|  
+|DIR-Befehl|Verzeichnis Befehl|Anzeige Befehl|  
+|Befehl "Verbindungen anzeigen"|Befehl "Datenbank anzeigen"|Befehl "DLLs anzeigen"|  
+|Befehl "Dateien anzeigen"|Befehl "Speicher anzeigen"|Befehl "Objekte anzeigen"|  
+|Befehl "Befehle anzeigen"|Befehl "Status anzeigen"|Befehl "Struktur anzeigen"|  
+|Befehl "Tabellen anzeigen"|Befehl "Ansichten anzeigen"|Befehl "Do Form"|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
-|BEARBEITUNGSBEFEHL|Fehler-Befehl||  
-|Befehl löschen|Externer Befehl|EXPORT-Befehl|  
-|Befehl Auswerfen|Befehl "Seite" Auswerfen||  
+|Befehl "Bearbeiten"|Fehler Befehl||  
+|Löschbefehl|Externer Befehl|Export Befehl|  
+|Eject-Befehl|Befehl "Eject page"||  
   
-## <a name="f"></a>V  
+## <a name="f"></a>F  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _FOXDOC|Arbeitsspeicher-Systemvariable _FOXGRAPH|FEOF ()-Funktion|  
-|FCLOSE ()-Funktion|FCREATE ()-Funktion|FGETS ()-Funktion|  
-|FERROR ()-Funktion|FFLUSH ()-Funktion|FKLABEL ()-Funktion|  
-|Filter-Befehl|Befehl "Suchen"|FOPEN ()-Funktion|  
-|FKMAX ()-Funktion|FONTMETRIC ()-Funktion|FSEEK ()-Funktion|  
-|FPUTS ()-Funktion|FREAD ()-Funktion||  
-|FWRITE ()-Funktion|FCHSIZE ()-Funktion||  
+|System Speicher Variable _FOXDOC|System Speicher Variable _FOXGRAPH|Feof ()-Funktion|  
+|Funktion "f Close ()"|Funktion "f Create ()"|Funktion "f Gets ()"|  
+|Ferror ()-Funktion|Fflush ()-Funktion|Sklabel ()-Funktion|  
+|Filer-Befehl|Befehl Suchen|Funktion "f Open ()"|  
+|Funktion "Funktion"|FONTMETRIC ()-Funktion|Funktion "f Seek ()"|  
+|F ()-Funktion|Fread ()-Funktion||  
+|Funktion "f schreiben ()"|F-Size ()-Funktion||  
   
 ## <a name="g"></a>G  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _GENGRAPH|Arbeitsspeicher-Systemvariable _GENMENU|Arbeitsspeicher-Systemvariable _GENPD|  
-|Arbeitsspeicher-Systemvariable _GENSCRN|Arbeitsspeicher-Systemvariable _GENXTAB|GETBAR ()-Funktion|  
-|GETCOLOR ()-Funktion|GETDIR ()-Funktion|GETEXPR-Befehl|  
-|GETFILE ()-Funktion|GETFONT ()-Funktion|GETOBJECT-()-Funktion|  
-|GETPAD ()-Funktion|GETPICT ()-Funktion|GETPRINTER ()-Funktion|  
+|System Speicher Variable _GENGRAPH|System Speicher Variable _GENMENU|System Speicher Variable _GENPD|  
+|System Speicher Variable _GENSCRN|System Speicher Variable _GENXTAB|Getbar ()-Funktion|  
+|GetColor ()-Funktion|GETDIR ()-Funktion|Getexpr-Befehl|  
+|GetFile ()-Funktion|GetFont ()-Funktion|GetObject ()-Funktion|  
+|Getpad ()-Funktion|Getpict ()-Funktion|GetPrinter ()-Funktion|  
   
 ## <a name="h"></a>H  
   
 ||||  
 |-|-|-|  
-|Befehl "Hilfe"|KONTEXTMENÜBEFEHL von "" ausblenden|Ausblenden der POPUP-Befehl|  
-|Ausblenden des Befehls "Fenster"|HOME ()-Funktion||  
+|Hilfe Befehl|Menübefehl ausblenden|Popup Befehl Ausblenden|  
+|Fenster Befehl Ausblenden|Home ()-Funktion||  
   
 ## <a name="i"></a>I  
   
 ||||  
 |-|-|-|  
-|IMESTATUS ()-Funktion|IMPORT-Befehl|Eingabe-Befehl|  
-|INDEX für den Befehl|INKEY ()-Funktion|ISCOLOR ()-Funktion|  
-|Einfügen (Befehl)|INSMODE ()-Funktion||  
-|ISMOUSE ()-Funktion|Arbeitsspeicher-Systemvariable _INDENT||  
+|IMEStatus ()-Funktion|Import Befehl|Eingabe Befehl|  
+|Index für Befehl|Inkey ()-Funktion|IsColor ()-Funktion|  
+|Befehl Einfügen|Insmode ()-Funktion||  
+|Ismouse ()-Funktion|System Speicher Variable _INDENT||  
   
 ## <a name="j"></a>J  
   
 ||||  
 |-|-|-|  
-|JOIN-Befehl|||  
+|Joinbefehl|||  
   
 ## <a name="k"></a>K  
   
 ||||  
 |-|-|-|  
-|Tastenkombination|||  
+|Tastatur Befehl|||  
   
 ## <a name="l"></a>L  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _LMARGIN|LABEL-Befehl|LASTKEY ()-Funktion|  
-|"LineNo" ()-Funktion|Auflisten der Befehle|VERBINDUNGEN auflisten (Befehl)|  
-|-Befehl|LocFile ABGELEGT ()-Funktion||  
+|System Speicher Variable _LMARGIN|Befehl "Bezeichnung"|LastKey ()-Funktion|  
+|LineNo ()-Funktion|Befehle auflisten|Befehl "Verbindungen auflisten"|  
+|Befehl "Laden"|LocFile ()-Funktion||  
   
 ## <a name="m"></a>M  
   
 ||||  
 |-|-|-|  
-|MCOL ()-Funktion|MD-Befehl|Menü ", Befehl|  
-|Arbeitsspeicher ()-Funktion|KONTEXTMENÜBEFEHL von ""|MKDIR-Befehl|  
-|Menü ()-Funktion|MESSAGEBOX ()-Funktion|Ändern der CONNECTION-Befehl|  
-|Ändern Sie den Befehl Klasse|Ändern der COMMAND-Befehl|Ändern Sie FORM-Befehl|  
-|Ändern Sie die DATABASE-Befehl|Befehl "FILE" ändern|Ändern Sie MEMO-Befehl|  
-|Ändern Sie allgemeine-Befehl|Ändern Sie Bezeichnung-Befehl|Ändern Sie die Projekt-Befehl|  
-|KONTEXTMENÜBEFEHL von "" ändern|Ändern der PROCEDURE-Befehl|Ändern der Bildschirm-Befehl|  
-|Ändern der Abfragebefehl|Ändern Sie BERICHTSSERVER-Befehl|Ändern Sie im Fenster-Befehl|  
-|Ändern Sie die Struktur-Befehl|Ändern von VIEW (Befehl)|Verschieben des Befehls "Fenster"|  
-|Der Befehl für Maus|Verschieben Sie POPUP-Befehl|MROW ()-Funktion|  
-|MRKBAR ()-Funktion|MRKPAD ()-Funktion||  
-|MWINDOW ()-Funktion|MDOWN ()-Funktion||  
+|MCol ()-Funktion|MD-Befehl|Menü zu Befehl|  
+|Memory ()-Funktion|Menübefehl|Mkdir-Befehl|  
+|Menu ()-Funktion|MessageBox ()-Funktion|Verbindungs Befehl ändern|  
+|Befehl "Klasse ändern"|Befehl "Befehl ändern"|Befehl "Formular ändern"|  
+|Befehl zum Ändern der Datenbank|Befehl "Datei ändern"|Memo Befehl ändern|  
+|Befehl "Allgemein ändern"|Befehl "Bezeichnung ändern"|Befehl "Projekt ändern"|  
+|Menübefehl "ändern"|Modify PROCEDURE-Befehl|Bildschirm Befehl ändern|  
+|Abfragebefehl ändern|Befehl "Bericht ändern"|Befehl "Fenster ändern"|  
+|Struktur ändern (Befehl)|Befehl "Ansicht ändern"|Befehl "Fenster verschieben"|  
+|Maus Befehl|Popup Befehl Verschieben|Mrow ()-Funktion|  
+|Mrkbar ()-Funktion|Mrkpad ()-Funktion||  
+|Mwindow ()-Funktion|Mdown ()-Funktion||  
   
 ## <a name="n"></a>N  
   
 ||||  
 |-|-|-|  
-|NUM-Taste ()-Funktion|||  
+|NumLock ()-Funktion|||  
   
 ## <a name="o"></a>O  
   
 ||||  
 |-|-|-|  
-|OBJNUM ()-Funktion|OBJTOCLIENT ()-Funktion|AUF MENÜLEISTE den Befehl|  
-|OEMTOANSI ()-Funktion|AUF APLABOUT-Befehl|KONTEXTMENÜBEFEHL von auf "Beenden"|  
-|AUF der Escapebefehl|AUF der LEISTE-Befehl "Beenden"|Schlüssel =-Befehl|  
-|ON EXIT-PAD-Befehl|ON EXIT-POPUP-Befehl|ON-PAD-Befehl|  
-|ZUM Befehl "Beschriftung"|AUF MACHELP-Befehl|ZUM LEISTE-Befehl "Auswahl"|  
-|AUF der Seite "-Befehl|AUF READERROR-Befehl|AUF Auswahl POPUP-Befehl|  
-|AUF den Menübefehl für die Auswahl|ZUM PAD-Befehl "Auswahl"||  
-|AUF den Befehl "Herunterfahren"|OBJVAR ()-Funktion||  
+|Objnum ()-Funktion|Objto Client ()-Funktion|ON-Bar-Befehl|  
+|Oemto ANSI ()-Funktion|Befehl "on aplabout"|Menübefehl "beenden"|  
+|Befehl bei Escapezeichen|Befehl beim Beenden der Leiste|ON Key =-Befehl|  
+|ON Exit Pad-Befehl|Befehl "on Exit Popup"|ON-Pad-Befehl|  
+|Befehl "Schlüssel Bezeichnung"|Auf dem Befehl "machelp"|Befehl auf der Auswahl Leiste|  
+|On Page-Befehl|ON ReadError-Befehl|Popup Befehl bei Auswahl|  
+|Befehl im Menü "Auswahl"|Befehl "on Selection Pad"||  
+|Befehl zum Herunterfahren|ObjVar ()-Funktion||  
   
 ## <a name="p"></a>P  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _PADVANCE|Arbeitsspeicher-Systemvariable _PAGENO|Arbeitsspeicher-Systemvariable _PBPAGE|  
-|Arbeitsspeicher-Systemvariable _PCOLNO|Arbeitsspeicher-Systemvariable _PCOPIES|Arbeitsspeicher-Systemvariable _PDRIVER|  
-|Arbeitsspeicher-Systemvariable _PDSETUP|Arbeitsspeicher-Systemvariable _PECODE|Arbeitsspeicher-Systemvariable _PEJECT|  
-|Arbeitsspeicher-Systemvariable _PEPAGE|Arbeitsspeicher-Systemvariable _PLENGTH|Arbeitsspeicher-Systemvariable _PLINENO|  
-|Arbeitsspeicher-Systemvariable _PLOFFSET|Arbeitsspeicher-Systemvariable _PPITCH|Arbeitsspeicher-Systemvariable _PQUALITY|  
-|Arbeitsspeicher-Systemvariable _PRETEXT|Arbeitsspeicher-Systemvariable _PSCODE|Arbeitsspeicher-Systemvariable _PSPACING|  
-|Arbeitsspeicher-Systemvariable _PWAIT|PACK-DATABASE-Befehl|AUFFÜLLZEICHEN ()-Funktion|  
-|PCOL ()-Funktion|PEMSTATUS ()-Funktion|MAKRO-Befehl "WIEDERGEBEN"|  
-|POPUPFENSTER Tastaturbefehl|POP Menübefehl|POP-POPUP-Befehl|  
-|Popups ()-Funktion|PRINTJOB... ENDPRINTJOB-Befehl|PRINTSTATUS ()-Funktion|  
-|PRMBAR ()-Funktion|PRMPAD ()-Funktion|PROMPT ()-Funktion|  
-|PROW ()-Funktion|PRTINFO ()-Funktion|WICHTIGE PUSH-Befehl|  
-|KONTEXTMENÜBEFEHL von "PUSH"|PUSH-POPUP-Befehl|PUTFILE-()-Funktion|  
+|System Speicher Variable _PADVANCE|System Speicher Variable _PAGENO|System Speicher Variable _PBPAGE|  
+|System Speicher Variable _PCOLNO|System Speicher Variable _PCOPIES|System Speicher Variable _PDRIVER|  
+|System Speicher Variable _PDSETUP|System Speicher Variable _PECODE|System Speicher Variable _PEJECT|  
+|System Speicher Variable _PEPAGE|System Speicher Variable _PLENGTH|System Speicher Variable _PLINENO|  
+|System Speicher Variable _PLOFFSET|System Speicher Variable _PPITCH|System Speicher Variable _PQUALITY|  
+|System Speicher Variable _PRETEXT|System Speicher Variable _PSCODE|System Speicher Variable _PSPACING|  
+|System Speicher Variable _PWAIT|Pack-Datenbankbefehl|Pad ()-Funktion|  
+|PCOL ()-Funktion|Pemstatus ()-Funktion|Befehl "wiedergeben"|  
+|Pop-Schlüssel Befehl|Pop-Menübefehl|Popup Befehl Pop|  
+|Popup ()-Funktion|PrintJob... Befehl "endprintjob"|PRINTSTATUS ()-Funktion|  
+|Prmbar ()-Funktion|Prmpad ()-Funktion|Prompt ()-Funktion|  
+|Prow ()-Funktion|Prtinfo ()-Funktion|Befehl "Push Key"|  
+|Menübefehl "Push"|Befehl "Push Popup"|PutFile ()-Funktion|  
   
 ## <a name="q"></a>Q  
   
 ||||  
 |-|-|-|  
-|Befehl "Beenden"|||  
+|Befehl "beenden"|||  
   
 ## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _RMARGIN|Remotedesktop-Befehl|READKEY ()-Funktion|  
-|Befehl lesen|KONTEXTMENÜBEFEHL von "" Lesen|RELEASE-BALKEN-Befehl|  
-|Refresh()-Funktion|NEUINDIZIEREN-Befehl|RELEASE-LIBRARY-Befehl|  
-|Version CLASSLIB-Befehl|RELEASE-Befehl|RELEASE-PAD-Befehl|  
-|RELEASE-MENÜS-Befehl|RELEASE-MODULE-Befehl|Version von WINDOWS-Befehl|  
-|RELEASE-POPUPS-Befehl|RELEASE-PROCEDURE-Befehl|Umbenennen eines Menübefehls|  
-|Befehl "Klasse" entfernen|Benennen Sie den Befehl Klasse|Benennen Sie VIEW (Befehl)|  
-|Verbindungsbefehl umbenennen|Benennen Sie die TABLE-Befehl|Wiederherstellen von Befehl|  
-|Bericht-Befehl|REQUERY ()-Funktion|Fenster-Befehl "Wiederherstellen"|  
-|MAKROS-Befehl "Wiederherstellen"|Bildschirm-Befehl "Wiederherstellen"|RGBSCHEME ()-Funktion|  
-|Befehl "fortsetzen"|RGB ()-Funktion|RUN &#124; ! Befehl|  
-|RMDIR-Befehl|Zeile ()-Funktion||  
-|RUNSCRIPT-Befehl|RDLEVEL ()-Funktion||  
+|System Speicher Variable _RMARGIN|RD-Befehl|Read Key ()-Funktion|  
+|Lesebefehl|Menübefehl lesen|Befehl der releaseleiste|  
+|Refresh ()-Funktion|REINDEX-Befehl|Release Library-Befehl|  
+|Release classlib-Befehl|Releasebefehl|Release Pad-Befehl|  
+|Befehl für releasemenüs|Releasemodulbefehl|Befehl "Windows veröffentlichen"|  
+|Befehl "Popups freigeben"|Befehl "Release Procedure"|Befehl Umbenennen|  
+|Befehl "Klasse entfernen"|Class-Befehl Umbenennen|Befehl "View"|  
+|Verbindungs Befehl Umbenennen|Befehl Tabellen umbenennen|Restore from-Befehl|  
+|Bericht Befehl|Requery ()-Funktion|Befehl "Wiederherstellen"|  
+|Restore Makros-Befehl|Befehl zum Wiederherstellen|RGBSCHEME ()-Funktion|  
+|Resume-Befehl|RGB ()-Funktion|Führen Sie &#124; aus. Get-Help|  
+|Rmdir-Befehl|Row ()-Funktion||  
+|Befehl "RunScript"|Rdlevel ()-Funktion||  
   
-## <a name="s"></a>S  
+## <a name="s"></a>E  
   
 ||||  
 |-|-|-|  
-|Speichern Sie den Befehl MAKROS|Speichern Sie die Bildschirm-Befehl|Befehl Speichern|  
-|Speichern Sie die WINDOWS-Befehl|Schema ()-Funktion|SCOLS ()-Funktion|  
-|Bildlauf-Befehl|Arbeitsspeicher-Systemvariable Entwurfsfeatures|SET-Befehl|  
-|Alternative SET-Befehl|SET ANSI-Befehl|SET-APLABOUT-Befehl|  
-|SET-AUTOSAVE-Befehl|SET-BELL-Befehl|SET-BLINK-Befehl|  
-|SET-Rahmen-Befehl|Einfacher BRSTATUS-Befehl SET|SET-CLASSLIB-Befehl|  
-|Befehl zum Löschen festlegen|SET-Uhr-Befehl|Farbe des SET-Befehls|  
-|SET-Farbe des Schema-Befehl|SET-COLOR-SET-Befehls|Befehl SET Farbe|  
-|SET-Befehls-kompatibel|SET-CONFIRM-Befehl|SET-Konsolenbefehl|  
-|SET-CPCOMPILE|SET-CPDIALOG|SET-CURRENCY-Befehl|  
-|SET CURSOR (Befehl)|SET-DATASESSION-Befehl|SET-DEBUG-Befehl|  
-|Die DEZIMALSTELLEN Befehl SET|SET-TRENNZEICHEN-Befehl|SET-DEVELOPMENT-Befehl|  
-|SET-DEVICE-Befehl|SET-Anzeige-Befehl|SET-DOHISTORY-Befehl|  
-|SET ECHO-Befehl|SET-ESCAPE-Befehl|Befehl SET-FORMAT|  
-|Befehl der SET-Funktion|SET-Überschriften (Befehl)|SET-HELP-Befehl|  
-|SET-HELPFILTER-Befehl|SET-INTENSITÄT-Befehl|SET-KEY-Befehls|  
-|SET-KEYCOMP-Befehl|SET-LOGERRORS-Befehl|SET-MACDESKTOP-Befehl|  
-|SET-MACHELP-Befehl|SET-MACKEY-Befehl|SET-MARGIN-Befehl|  
-|Markieren Sie SET-Befehls|Festlegen Sie Markierung Befehl|SET-MEMOWIDTH-Befehl|  
-|Befehl SET-Nachricht|SET-Maus-Befehl|SET-KILOMETERSTAND-Befehl|  
-|OLEOBJECT-Befehl SET|SET-PALETTE (Befehl)|SET-PDSETUP-Befehl|  
-|SET-Punkt-Befehl|SET-PRINTER-Befehl|SET-READBORDER-Befehl|  
-|SET-REFRESH-Befehl|Befehl SET-Ressource|SET-Sicherheit-Befehl|  
-|SET-ANZEIGETAFEL-Befehl|SET-Sekunden-Befehl|SET-TRENNZEICHEN-Befehl|  
-|Zeichnen von SCHATTEN-Befehl SET|Überspringen der SET-Befehls|SET-SPACE-Befehl|  
-|Befehl SET-STATUS|Festlegen der Statusleiste (Befehl)|SET-Schritt-Befehl|  
-|KURZNOTIZ SET-Befehl|SET-SYSFORMATS-Befehl|SET-SYSMENU-Befehl|  
-|SET-TALK-Befehl|SET-TEXTMERGE-Befehl|SET TEXTMERGE TRENNZEICHEN-Befehl|  
-|Befehl SET-TOPIC|Befehl SET Thema-ID|SET-TRBETWEEN-Befehl|  
-|SET-TYPEAHEAD-Befehl|Befehl SET-Ansicht|Festes ZEITFENSTER, MEMO-Befehl|  
-|SET-XCMDFILE-Befehl|Arbeitsspeicher-Systemvariable _SHELL|GET-Befehl "SHOW"|  
-|ANZEIGEN (Befehl) Ruft|KONTEXTMENÜBEFEHL von "anzeigen"|OBJECT-Befehl anzeigen|  
-|POPUP-Befehl anzeigen|Befehl "SHOW-Fenster"|Größe POPUP-Befehl|  
-|Fenster-Befehl Größe|SKPBAR ()-Funktion|SKPPAD ()-Funktion|  
-|SOUNDEX ()-Funktion|Arbeitsspeicher-Systemvariable _SPELLCHK|SQL-Funktionen|  
-|SROWS ()-Funktion|Arbeitsspeicher-Systemvariable _STARTUP|Befehl "Anhalten"|  
-|Sys()-Funktionen mit Ausnahme von SYS(2011)|SYSMETRIC ()-Funktion||  
+|Befehl zum Speichern von Makros|Bildschirm Befehl speichern|In Befehl speichern|  
+|Windows-Befehl speichern|Scheme ()-Funktion|Scols ()-Funktion|  
+|Scrollbefehl|System Speicher Variable _SCREEN|SET-Befehl|  
+|Alternativen Befehl festlegen|SET ANSI-Befehl|Befehl "aplabout" festlegen|  
+|Befehl "Autosave" festlegen|Befehl "Glocken festlegen"|Befehl "blink festlegen"|  
+|Befehl "Rahmen festlegen"|Befehl "brstatus" festlegen|Befehl "classlib festlegen"|  
+|Befehl "Löschen" festlegen|Befehl "Uhr festlegen"|Farbe des Befehls festlegen|  
+|Befehl "Schema Farbe festlegen"|Befehl "Farbsatz festlegen"|Farbe auf Befehl festlegen|  
+|Kompatiblen Befehl festlegen|Befehl "bestätigen" festlegen|Konsolen Befehl festlegen|  
+|Festlegen von cpcompile|Festlegen von cpdialog|Befehl "Währung festlegen"|  
+|Befehl "Cursor festlegen"|Set DataSession-Befehl|Befehl "Debug festlegen"|  
+|Set decimals-Befehl|Set Delimiters-Befehl|Befehl zum Festlegen der Entwicklung|  
+|Geräte Befehl festlegen|Anzeige Befehl festlegen|Befehl "dohistory festlegen"|  
+|Befehl "Echo festlegen"|Befehl "Escape" festlegen|Befehl "Format festlegen"|  
+|Set Function-Befehl|Befehl "Befehle festlegen"|Befehl "Hilfe festlegen"|  
+|Befehl "HELPFILTER festlegen"|Befehl "Intensität festlegen"|Befehl "Schlüssel festlegen"|  
+|Befehl "keycomp festlegen"|Befehl "logerrors festlegen"|Befehl "macdesktop festlegen"|  
+|Befehl "machelp festlegen"|Befehl "Mackey festlegen"|Befehl "Rand festlegen"|  
+|Markierung des Befehls festlegen|Markierung auf Befehl festlegen|Befehl "memowidth festlegen"|  
+|Befehl "Nachricht festlegen"|Befehl "Maus festlegen"|Set Odometer-Befehl|  
+|OLEObject-Befehl festlegen|Befehl "Palette festlegen"|Festlegen des pdsetup-Befehls|  
+|Befehl "Punkt festlegen"|Drucker Befehl festlegen|Befehl "Read border festlegen"|  
+|Befehl "Aktualisieren" festlegen|Ressourcen Befehl festlegen|Befehl "Sicherheit festlegen"|  
+|Befehl zum Festlegen der Anzeige|Befehl "Sekunden festlegen"|Befehl "Separator festlegen"|  
+|Befehl "Shadows" festlegen|Befehl zum Überspringen des Befehls festlegen|Befehl "Bereich festlegen"|  
+|Befehl "Status festlegen"|Befehl "Status Leiste festlegen"|Befehl "Schritt festlegen"|  
+|Befehl "kurz festlegen"|Befehl "sysformats festlegen"|Befehl "sysmenu festlegen"|  
+|Talk-Befehl festlegen|TEXTMERGE-Befehl festlegen|TEXTMERGE-Trennzeichen festlegen (Befehl)|  
+|Befehl "Thema festlegen"|Befehl "Topic-ID festlegen"|Befehl "trbetween" festlegen|  
+|Befehl "typeahead" festlegen|Befehl "Ansicht festlegen"|Fenster des Memo Befehls festlegen|  
+|Set xcmdfile-Befehl|System Speicher Variable _SHELL|Befehl "Get" anzeigen|  
+|Befehl "Befehle anzeigen"|Menübefehl anzeigen|Befehl "Objekt anzeigen"|  
+|Popup Befehl anzeigen|Befehl "Fenster anzeigen"|Popup Befehl "Größe"|  
+|Befehl "Größen Fenster"|Skpbar ()-Funktion|Skppad ()-Funktion|  
+|SOUNDEX ()-Funktion|System Speicher Variable _SPELLCHK|SQL-Funktionen|  
+|Srows ()-Funktion|System Speicher Variable _STARTUP|Suspend-Befehl|  
+|Sys ()-Funktionen mit Ausnahme von sys (2011)|Sysmetric ()-Funktion||  
   
 ## <a name="t"></a>T  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _TABS|TEXTS WIRD AUFGEHOBEN... ENDTEXT-Befehl|TXTWIDTH ()-Funktion|  
-|TRANSFORMIEREN ()-Funktion|Arbeitsspeicher-Systemvariable _TRANSPORT||  
-|Befehlseingabe|Arbeitsspeicher-Systemvariable _THROTTLE||  
+|System Speicher Variable _TABS|Text... ENDTEXT-Befehl|TxtWidth ()-Funktion|  
+|Transform ()-Funktion|System Speicher Variable _TRANSPORT||  
+|Befehl "Type"|System Speicher Variable _THROTTLE||  
   
 ## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  
-|AKTUALISIERTE ()-Funktion|Verwenden Sie den Befehl||  
+|Aktualisierte ()-Funktion|Befehl verwenden||  
   
-## <a name="v"></a>B  
+## <a name="v"></a>V  
   
 ||||  
 |-|-|-|  
-|Überprüfen Sie die DATABASE-Befehl|VARREAD ()-Funktion|VERSION ()-Funktion|  
+|VALIDATE DATABASE-Befehl|Varread ()-Funktion|Version ()-Funktion|  
   
 ## <a name="w"></a>W  
   
 ||||  
 |-|-|-|  
-|_WINDOWS-Systemvariablen für Arbeitsspeicher|Arbeitsspeicher-Systemvariable _WIZARD|WCHILD ()-Funktion|  
-|Warten Sie, Befehl|WBORDER ()-Funktion|WFONT ()-Funktion|  
-|WCOLS ()-Funktion|WEXIST ()-Funktion|WLROW ()-Funktion|  
-|MIT... ENDWITH-Befehl|WLAST ()-Funktion|WONTOP ()-Funktion|  
-|WMAXIMUM ()-Funktion|WLCOL ()-Funktion|WREAD ()-Funktion|  
-|WOUTPUT ()-Funktion|WMINIMUM ()-Funktion|WVISIBLE ()-Funktion|  
-|WPARENT ()-Funktion|WTITLE ()-Funktion||  
-|WROWS ()-Funktion|Arbeitsspeicher-Systemvariable _WRAP||  
+|System Speicher Variable _WINDOWS|System Speicher Variable _WIZARD|Wchild ()-Funktion|  
+|Wait-Befehl|Wborder ()-Funktion|Wfont ()-Funktion|  
+|Wcols ()-Funktion|Wexist ()-Funktion|Wlrow ()-Funktion|  
+|Mit... Befehl "EndWith"|Wlast ()-Funktion|WONTOP ()-Funktion|  
+|Wmaximum ()-Funktion|Wlcol ()-Funktion|Wread ()-Funktion|  
+|Woutput ()-Funktion|Wminimal ()-Funktion|Wvisible ()-Funktion|  
+|Wparent ()-Funktion|Wtitle ()-Funktion||  
+|Wrows ()-Funktion|System Speicher Variable _WRAP||  
   
 ## <a name="z"></a>Z  
   
 ||||  
 |-|-|-|  
-|ZOOM-Befehls "Fenster"|||
+|Befehl "Zoom Fenster"|||

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827946"
 ---
 # <a name="create-infosource"></a>InfoSource erstellen
@@ -35,7 +35,7 @@ ms.locfileid: "62827946"
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoSource**aus, und klicken Sie dann auf **Erstellen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Transaktionsdaten**  
  Erstellen Sie eine neue InfoSource für Transaktionsdaten.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62827946"
   
  Wenn Sie diese Option auswählen, wird auch das Dialogfeld **InfoSource für Masterdaten erstellen** geöffnet. Sie verwenden das Dialogfeld **InfoSource für Masterdaten erstellen** , um die neue InfoSource zu erstellen. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create InfoSource for Master Data](create-infosource-for-master-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

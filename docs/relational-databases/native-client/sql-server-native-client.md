@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759352"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -29,7 +29,7 @@ SNAC (oder SQL Server Native Client) ist ein Begriff, der austauschbar verwendet
 > Weitere Informationen und das Herunterladen der SNAC-oder ODBC-Treiber finden Sie im [Blogbeitrag "SNAC Lifecycle: Blog](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)".
 > Weitere Informationen zum ODBC-Treiber für SQL Server finden Sie unter [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
- Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Funktionen, die mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]veröffentlicht wurden, der letzten verfügbaren Version von SQL Server Native Client:
+ Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Funktionen, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]die mit veröffentlicht wurden, der letzten verfügbaren Version von SQL Server Native Client:
 
 -   [SQL Server Native Client-Unterstützung für LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -47,7 +47,7 @@ ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 
 
 -   Erweiterbarkeit von C-Datentypen. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
-     Um dieses Feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client zu unterstützen, kann SQLGetDescField **SQL_C_SS_TIME2** (für **Zeit** Typen) oder **SQL_C_SS_TIMESTAMPOFFSET** (für **DateTimeOffset**) anstelle von **SQL_C_BINARY**zurückgeben, wenn die Anwendung verwendet ODBC 3,8. Weitere Informationen finden Sie [unter Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Um dieses Feature in Native Client zu unterstützen, kann SQLGetDescField **SQL_C_SS_TIME2** (bei **Zeit** Typen) oder **SQL_C_SS_TIMESTAMPOFFSET** (für **DateTimeOffset**) anstelle von **SQL_C_BINARY**zurückgeben, wenn die Anwendung ODBC 3,8 verwendet. Weitere Informationen finden Sie [unter Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
 -   Mehrmals aufrufen von **SQLGetData** mit einem kleinen Puffer, um einen großen Parameterwert abzurufen. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 
@@ -59,6 +59,6 @@ ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 
 
 -   [Verhaltensänderungen des ODBC-Treibers bei der Behandlung von Zeichenkonvertierungen](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
- [SQL Server Native Client-Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [SQL Server Native Client-Funktionen](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

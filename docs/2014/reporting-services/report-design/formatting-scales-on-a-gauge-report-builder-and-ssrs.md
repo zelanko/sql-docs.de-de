@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b7d4b7abc3070aa712316995c1d924fd73cbe8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105775"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS)
   Eine Messgerätskala umfasst den durch einen Mindestwert und einen Höchstwert begrenzten Bereich von Zahlen, der auf dem Messgerät angezeigt wird. Typischerweise enthält eine Messgerätskala Messgerätbezeichnungen und Teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen. Eine Messgerätskala ist generell mindestens einem Messgerätzeiger zugeordnet. Sie können mehrere Skalen auf einem Messgerät festlegen.  
   
- ![Übersicht von Elementen auf einer Messgerätskala](../media/scaleoverviewdiagram.gif "Overview of elements on a gauge scale")  
+ ![Übersicht über die Elemente auf einer Messgerätskala](../media/scaleoverviewdiagram.gif "Übersicht über die Elemente auf einer Messgerätskala")  
   
  Im Gegensatz zu Diagrammen mit mehreren Gruppen zeigen Messgeräte nur einen Wert an. Sie müssen den Mindestwert und den Höchstwert der Skala definieren. Die Intervalle werden automatisch basierend auf dem festgelegten Mindest- und Höchstwert berechnet.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66105775"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DefiningMinMax"></a> Definieren des Mindestwerts, des Höchstwerts und der Intervalle für eine Skala  
+##  <a name="DefiningMinMax"></a>Definieren von minimal, maximal und Intervallen in einer Skala  
  Auf Messgeräten werden häufig KPIs (Key Performance Indicators) angezeigt, die in Prozentsätzen von 0 bis 100 gemessen werden. Dabei handelt es sich somit um die Standardwerte für den Mindest- und Höchstwert des jeweiligen Messgeräts. Möglicherweise wird von diesen Werten jedoch nicht die gewünschte Werteskala dargestellt. Da keine integrierte Logik vorhanden ist, mit der die vom KPI-Datenfeld dargestellten Werte bestimmt werden, werden der Mindestwert und der Höchstwert vom Messgerät nicht automatisch berechnet. Wenn das KPI-Datenfeld keinen Wert zwischen 0 und 100 enthält, müssen Sie den Mindest- und den Höchstwert explizit festlegen, um einen Kontext für den auf dem Messgerät angezeigten Wert bereitzustellen.  
   
  Die Skala enthält Haupt- und Hilfsteilstriche. Darüber hinaus weist die Skala Bezeichnungen auf, die i. d. R. den Hauptteilstrichen zugeordnet sind. Eine Skala kann beispielsweise Hauptteilstriche bei den Werten 0, 20, 40, 60, 80 und 100 aufweisen. Die Bezeichnungen müssen diesen Teilstrichen entsprechen. Die Differenz zwischen den Bezeichnungswerten wird als Skalaintervall bezeichnet. In diesem Beispiel ist das Skalaintervall auf 20 festgelegt. Sie können die Intervalleigenschaft im Dialogfeld **Radiale Skalierungseigenschaften** oder **Lineare Skalierungseigenschaften** festlegen.  
@@ -46,21 +46,21 @@ ms.locfileid: "66105775"
   
 1.  Geben Sie den Mindest- und den Höchstwert an. Diese Werte werden für das Dataset nicht automatisch berechnet. Daher müssen Sie die Werte im Dialogfeld **Eigenschaften** für das Messgerät angeben.  
   
-2.  Wenn Sie keinen Wert für Intervall angeben, wird der Standardwert Automatisch verwendet. Das heißt, dass die Anwendung anhand der im ersten Schritt festgelegten Mindest- und Höchstwerte eine Anzahl von Intervallen mit gleichem Abstand berechnet. Wenn Sie einen Wert für Intervall angeben, berechnet das Messgerät die Differenz zwischen Mindestwert und Höchstwert und dividiert das Ergebnis durch den Wert, der für Intervall festgelegt wurde.  
+2.  Wenn Sie keinen Wert für Intervall angeben, lautet der Standardwert "Auto". Dies bedeutet, dass die Anwendung eine gleichmäßige Anzahl von Intervallen basierend auf den minimalen und maximalen Werten berechnet, die im ersten Schritt angegeben werden. Wenn Sie einen Wert für Intervall angeben, berechnet das Messgerät die Differenz zwischen Mindestwert und Höchstwert und dividiert das Ergebnis durch den Wert, der für Intervall festgelegt wurde.  
   
  Außerdem sind Eigenschaften vorhanden, mit denen Bezeichnungs- und Teilstrichintervalle definiert werden können. Wenn Sie einen Wert für diese Eigenschaften angeben, überschreiben diese den angegebenen Wert für die Skalaintervalleigenschaft. Wenn das Skalaintervall beispielsweise auf Automatisch festgelegt ist, das Bezeichnungsintervall jedoch auf den Wert 4 festgelegt wird, werden die Bezeichnungen bei 0, 4, 8 usw. angezeigt, die Hauptteilstriche werden jedoch weiterhin anhand der Berechnung des Messgeräts bestimmt. Dies kann zu Situationen führen, in denen die Bezeichnungen nicht mit den Teilstrichen synchronisiert sind. Es empfiehlt sich, beim Festlegen eines Bezeichnungsintervalls die Teilstriche auszublenden.  
   
  Der Intervalloffset bestimmt die Anzahl der Einheiten, die bis zur Anzeige der ersten Bezeichnung ausgelassen werden. Das angegebene Intervall wird für alle nachfolgenden Hauptteilstriche und Bezeichnungen auf der Skala verwendet. Wenn der Wert 0 für Bezeichnungs- und Teilstrichintervalle angegeben wird, entspricht dies dem Zurücksetzen des Intervalls auf den Wert "Automatisch".  
   
   
-##  <a name="ReducingCollisions"></a> Verringern von Bezeichnungskollisionen mit Multiplikatoren  
+##  <a name="ReducingCollisions"></a>Reduzieren von Bezeichnungs Kollisionen mit Multiplikatoren  
  Wenn die Werte viele Stellen aufweisen, können sie möglicherweise die Lesbarkeit des Messgeräts beeinträchtigen. Mithilfe eines Skalenmultiplikators können Sie die Skalierung der Werte vergrößern oder verkleinern. Beim Angeben eines Skalenmultiplikators wird jeder ursprüngliche Wert auf der Skala vor seiner Anzeige auf der Skala mit dem Multiplikator multipliziert. Wenn Sie die Skalierung der Werte verringern möchten, müssen Sie eine Dezimalzahl angeben. Wenn sich die Skala beispielsweise von 0 bis 10000 erstreckt, Sie jedoch auf dem Messgerät die Zahlen 0 bis 10 anzeigen möchten, können Sie den Multiplikatorwert 0,001 angeben.  
   
 > [!NOTE]  
 >  Durch das Angeben eines Multiplikators wird nicht der tatsächliche Wert des Aggregatfelds, das vom Messgerät verwendet wird, multipliziert. Es werden lediglich die Werte der Bezeichnungen multipliziert, die auf dem Messgerät angezeigt werden, nachdem Mindestwert, Höchstwert und Intervalle definiert wurden. Bei Verwendung eines Multiplikators empfiehlt es sich, die Intervallberechnungen weiterhin automatisch ausführen zu lassen.  
   
   
-##  <a name="SpecifyingScaleBar"></a> Angeben von Skalabalkenbreite, Skalierungsradius und Skalawinkeln für eine radiale Skala  
+##  <a name="SpecifyingScaleBar"></a>Angeben der Breite, des RADIUS und der Winkel des Skalabalkens auf einer radialen Skala  
  Legen Sie im Dialogfeld **Radiale Skalierungseigenschaften** auf der Seite **Layout** die Skalabalkenbreite, den Skalierungsradius sowie den Startwinkel und den Mittelpunktswinkel der Skala fest. Mithilfe dieser Eigenschaften können Sie Größe und Format der Skala anpassen. Wenn Sie beispielsweise die Skalabezeichnungen außerhalb der Skala positionieren, müssen Sie den Radius der Skalierung ändern, damit die Bezeichnungen in das Messgerät passen.  
   
 > [!NOTE]  
@@ -70,23 +70,23 @@ ms.locfileid: "66105775"
   
  Der Skalierungsradius entspricht der Entfernung vom Mittelpunkt des Messgeräts bis zum Mittelpunkt des Skalabalkens. Der Wert des Skalierungsradius wird als Prozentsatz des Messgerätdurchmessers gemessen. Es wird empfohlen, für den Skalierungsradius keinen höheren Wert als 35 anzugeben. Wenn Sie einen höheren Wert als 35 angeben, wird die Skala wahrscheinlich außerhalb der Grenzen des Messgeräts gezeichnet. In der folgenden Abbildung wird veranschaulicht, wie der Skalierungsradius in Bezug auf den Durchmesser des Messgeräts auf dem Skalabalken gemessen wird.  
   
- ![Skalierungsradius im Bezug auf Messgerätedurchmesser](../media/scaleradiusdiagram.gif "Scale radius relative to gauge diameter")  
+ ![Skalierungsradius in Bezug auf den Messgerätdurchmesser](../media/scaleradiusdiagram.gif "Skalierungsradius in Bezug auf den Messgerätdurchmesser")  
   
  Der Startwinkel ist der Drehwinkel (zwischen 0 und 360), bei dem die Skala beginnt. Die Nullposition (0) befindet sich unten im Messgerät, und der Startwinkel wird im Uhrzeigersinn gedreht. Bei einem Startwinkel von 90 Grad wird die Skala an der 9-Uhr-Position begonnen.  
   
  Der Mittelpunktswinkel entspricht der Gradzahl (zwischen 0 und 360), um die die Skala gedreht wird. Bei einem Mittelpunktswinkel von 360 Grad wird eine Skala erzeugt, die einen vollständigen Kreis darstellt. Dies ist hilfreich, wenn Sie ein Messgerät entwerfen möchten, das einer Uhr ähnelt.  
   
   
-##  <a name="PositioningLabels"></a> Positionieren von Bezeichnungen auf einer linearen oder radialen Skala  
+##  <a name="PositioningLabels"></a>Positionieren von Bezeichnungen auf einer linearen oder radialen Skala  
  Es sind zwei Eigenschaften verfügbar, mit denen die Position von Bezeichnungen bestimmt werden kann. Mit der Eigenschaft zum Bestimmen der Bezeichnungsposition wird angeben, ob die Bezeichnungen innerhalb oder außerhalb des Skalabalkens oder auf dem Skalabalken angezeigt werden. Mit der Eigenschaft zum Angeben des Abstands wird der Abstand der Bezeichnungen von der Skala vom Skalabalken aus festgelegt. Wenn Sie Bezeichnungen innerhalb des Skalabalkens positionieren möchten, geben Sie eine negative Zahl an. Wenn sich die Bezeichnungen beispielsweise außerhalb der Skala befinden und Sie als Abstand von der Skala den Wert 10 festgelegt haben, werden die Bezeichnungen um 10 Einheiten von ihrer normalen Position nach außen verschoben angezeigt, wobei eine Einheit wie folgt definiert ist:  
   
 -   1 % des Messgerätdurchmessers auf einem radialen Messgerät oder  
   
 -   1 % der Messgeräthöhe oder der Messgerätbreite (je nachdem, welcher Wert kleiner ist) auf einem linearen Messgerät  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatieren von Zeigern auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)  

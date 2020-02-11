@@ -11,21 +11,21 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 18bf18341a30def47cdf2b09f2eb11d6aede2b98
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786258"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Verbesserungen an der Datenbank-Engine, die mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] beginnen, ermöglichen sqlnumparameams, genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von sqlnumpara zurückgegeben wurden.  
+  Verbesserungen an der Datenbank- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Engine, die mit beginnen, ermöglichen es sqlnumpara Metern, genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von sqlnumpara zurückgegeben wurden.  
   
  Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sqlnumpara](https://go.microsoft.com/fwlink/?LinkId=58404) -Funktion  
- [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Sqlnumparametriams-Funktion](https://go.microsoft.com/fwlink/?LinkId=58404)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

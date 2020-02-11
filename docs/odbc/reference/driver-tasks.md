@@ -1,5 +1,5 @@
 ---
-title: Treiber-Aufgaben | Microsoft-Dokumentation
+title: Treiber Aufgaben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915463"
 ---
 # <a name="driver-tasks"></a>Treiberaufgaben
-Bestimmte Aufgaben, die vom Treiber ausgeführt:  
+Bestimmte Aufgaben, die von Treibern ausgeführt werden, umfassen Folgendes:  
   
--   Herstellen einer Verbindung mit und Trennen von der Datenquelle.  
+-   Verbindung mit der Datenquelle wird hergestellt, und die Verbindung wird getrennt.  
   
--   Überprüfung auf Funktionsfehler, die vom Treiber-Manager nicht aktiviert.  
+-   Es wird auf Funktionsfehler überprüft, die vom Treiber-Manager nicht überprüft werden.  
   
--   Initiierenden-Transaktionen Dies ist für die Anwendung transparent.  
+-   Initiieren von Transaktionen; Dies ist für die Anwendung transparent.  
   
--   SQL-Anweisungen an die Datenquelle für die Ausführung wird übermittelt. Der Treiber muss mit DBMS-spezifische SQL ODBC-SQL ändern; Dies ist häufig auf, und Ersetzen Sie dabei Escape-Klauseln, die von ODBC mit speziellen DBMS-SQL definiert.  
+-   SQL-Anweisungen werden zur Ausführung an die Datenquelle übermittelt. Der Treiber muss ODBC SQL in DBMS-spezifisches SQL ändern; Dies ist oft auf das Ersetzen von Escape-Klauseln beschränkt, die von ODBC durch DBMS-spezifische SQL definiert werden.  
   
--   Senden von Daten zu und Abrufen von Daten aus der Datenquelle, einschließlich der Konvertierung von Datentypen, wie von der Anwendung angegeben.  
+-   Senden von Daten an und Abrufen von Daten aus der Datenquelle, einschließlich der Datentypen, wie von der Anwendung angegeben.  
   
--   Zuordnen von DBMS-spezifische Fehler zu ODBC SQLSTATEs.
+-   Zuordnen von DBMS-spezifischen Fehlern zu ODBC Sqlstates.

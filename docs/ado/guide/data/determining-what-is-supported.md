@@ -1,5 +1,5 @@
 ---
-title: Bestimmen, was unterstützt wird | Microsoft-Dokumentation
+title: Ermitteln der unterstützten Vorgänge | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925523"
 ---
 # <a name="determining-what-is-supported"></a>Bestimmen der unterstützten Vorgänge
-Die **unterstützt** Methode wird verwendet, um zu bestimmen, ob ein angegebenes **Recordset** Objekt unterstützt, eine bestimmte Art von Funktionalität. Es hat die folgende Syntax:  
+Die **unterstützte** -Methode wird verwendet, um zu bestimmen, ob ein angegebenes **Recordset** -Objekt einen bestimmten Funktionstyp unterstützt. Es weist die folgende Syntax auf:  
   
 ```  
   
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die **unterstützt** Methode gibt einen booleschen Wert, der angibt, ob der Anbieter alle CursorOptions Argument identifizierten Funktionen unterstützt. Können Sie die **unterstützt** Methode, um zu bestimmen, welche Funktionalität einer **Recordset** -Objekt unterstützt. Wenn die **Recordset** Objekt unterstützt die Funktionen, deren entsprechenden Konstanten in sind *CursorOptions*, **unterstützt** Methodenrückgabe **"true"** . Andernfalls wird **"false"** .  
+## <a name="remarks"></a>Bemerkungen  
+ Die **unterstützte** Methode gibt einen booleschen Wert zurück, der angibt, ob der Anbieter alle Funktionen unterstützt, die durch das Cursor options-Argument identifiziert werden. Sie können die **unterstützte** Methode verwenden, um zu bestimmen, welche Arten von Funktionen ein **Recordset** -Objekt unterstützt. Wenn das **Recordset** -Objekt die Funktionen unterstützt, deren zugehörige Konstanten in *Cursor Options*enthalten sind, gibt die **unterstützte** Methode **true**zurück. Andernfalls wird **false**zurückgegeben.  
   
- Mithilfe der **unterstützt** -Methode, die Sie überprüfen können, für die Fähigkeit von der **Recordset** Objekt, das neue Datensätze hinzufügen, verwenden von Lesezeichen, verwenden Sie die **finden** verwenden Scrollen-Methode verwenden, die  **Index** -Eigenschaft, und zum Durchführen von BatchUpdates. Eine vollständige Liste von Konstanten und ihre Bedeutungen, finden Sie unter [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
+ Mithilfe der **unterstützten** -Methode können Sie überprüfen, ob das **Recordset** -Objekt neue Datensätze hinzufügen, Lesezeichen verwenden, die **Find** -Methode verwenden, den scrollvorgang verwenden, die **Index** -Eigenschaft verwenden und Batch Aktualisierungen ausführen kann. Eine umfassende Liste der Konstanten und ihrer Bedeutungen finden Sie unter [Cursor optionenum](../../../ado/reference/ado-api/cursoroptionenum.md).  
   
- Obwohl die **unterstützt** Methodenrückgabewert möglicherweise **"true"** für eine bestimmte Funktionalität, dies garantiert nicht, dass der Anbieter das Feature unter allen Umständen zur Verfügung stellen kann. Die **unterstützt** -Methode einfach zurückgegeben, ob der Anbieter unterstützt den angegebenen Funktionen können unter bestimmten Bedingungen erfüllt sind. Z. B. die **unterstützt** Methode hinweisen, die eine **Recordset** -Objekt unterstützt die Aktualisierung, auch wenn der Cursor auf einen mehrere Join der Tabellen - basiert, einige Spalten der sind nicht aktualisierbar.
+ Obwohl die **unterstützte** Methode möglicherweise für eine bestimmte Funktionalität **true** zurückgibt, gewährleistet Sie nicht, dass der Anbieter die Funktion unter allen Umständen verfügbar machen kann. Die **unterstützte** Methode gibt einfach zurück, ob der Anbieter die angegebene Funktionalität unterstützen kann, vorausgesetzt, dass bestimmte Bedingungen erfüllt sind. Beispielsweise kann die **unterstützte** Methode angeben, dass ein **Recordset** -Objekt Updates unterstützt, auch wenn der Cursor auf einem Join mehrerer Tabellen basiert. einige Spalten, die nicht aktualisierbar sind, sind möglicherweise nicht aktualisierbar.

@@ -1,5 +1,5 @@
 ---
-title: Sp_syscollector_create_collector_type (Transact-SQL) | Microsoft-Dokumentation
+title: sp_syscollector_create_collector_type (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032632"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
+# <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt einen Sammlertyp für den Datensammler. Ein sammlertyp ist ein logischer Wrapper für die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und zum Hochladen der Daten in das Verwaltungs-Datawarehouse bereitstellen.  
+  Erstellt einen Sammlertyp für den Datensammler. Ein Sammlertyp ist ein logischer Wrapper um [!INCLUDE[ssIS](../../includes/ssis-md.md)] die Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und das Hochladen in die Verwaltungs Data Warehouse bereitstellen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,23 +46,23 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collector_type_uid =] '*Collector_type_uid*"  
- Ist die GUID für den sammlertyp. *Collector_type_uid* ist **Uniqueidentifier** und wenn es NULL ist, es wird automatisch erstellt und als Ausgabe zurückgegeben.  
+ [ @collector_type_uid = ] "*collector_type_uid*"  
+ Die GUID für den Sammlertyp. *collector_type_uid* ist vom Datentyp **uniqueidentifier** , und wenn er NULL ist, wird er automatisch erstellt und als Output zurückgegeben.  
   
- [ @name =] '*Namen*"  
- Der Name des Sammlertyps. *Namen* ist **Sysname** und muss angegeben werden.  
+ [ @name = ] "*Name*"  
+ Der Name des Sammlertyps. *Name ist vom Datentyp* **vom Datentyp sysname** und muss angegeben werden.  
   
- [ @parameter_schema =] '*Parameter_schema*"  
- Das XML-Schema für diesen Sammlertyp. *Parameter_schema* ist **Xml** hat den Standardwert NULL.  
+ [ @parameter_schema = ] "*parameter_schema*"  
+ Das XML-Schema für diesen Sammlertyp. *parameter_schema* ist vom Typ **XML** und hat den Standardwert NULL.  
   
- [ @parameter_formatter =] '*Parameter_formatter*"  
- Die Vorlage, mit der das XML für die Eigenschaftenseite des Sammlungssatzes umgewandelt werden kann. *Parameter_formatter* ist **Xml** hat den Standardwert NULL.  
+ [ @parameter_formatter = ] "*parameter_formatter*"  
+ Die Vorlage, mit der das XML für die Eigenschaftenseite des Sammlungssatzes umgewandelt werden kann. *parameter_formatter* ist vom Typ **XML** und hat den Standardwert NULL.  
   
  [@collection_package_id = ] *collection_package_id*  
- Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Sammlungspaket verweist, das vom Sammlungssatz verwendet wird. *collection_package_id* is **uniqueidentifer** and is required.  
+ Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Sammlungspaket verweist, das vom Sammlungssatz verwendet wird. *collection_package_id* ist vom datnoch **uniqueidentifier** und ist erforderlich.  
   
- [@upload_package_id =] *Upload_package_id*  
- Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *Upload_package_id* ist **Uniqueidentifier** und ist erforderlich.  
+ [@upload_package_id = ] *upload_package_id*  
+ Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *upload_package_id* ist vom Datentyp **uniqueidentifier** und ist erforderlich.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -108,7 +108,7 @@ EXEC sp_syscollector_create_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   

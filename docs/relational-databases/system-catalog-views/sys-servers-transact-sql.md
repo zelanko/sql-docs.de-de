@@ -1,5 +1,5 @@
 ---
-title: Sys.Servers (Transact-SQL) | Microsoft-Dokumentation
+title: sys. Servers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132948"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "68132948"
 
   Enthält eine Zeile für jeden registrierten Verbindungs- oder Remoteserver sowie eine Zeile für den lokalen Server, bei dem **server_id** = 0 ist.  
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Lokale ID des Verbindungsservers.|  
-|**name**|**sysname**|Wenn **Server_id** = 0, der zurückgegebene Wert ist, den Namen des Servers.<br /><br /> Wenn **Server_id** > 0 ist, der zurückgegebene Wert wird der lokale Name des Verbindungsservers.|  
-|**product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt an, eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Anbieter**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.|  
+|**name**|**sysname**|Wenn **server_id** = 0 ist, ist der zurückgegebene Wert der Servername.<br /><br /> Wenn **server_id** > 0, ist der zurückgegebene Wert der lokale Name des Verbindungs Servers.|  
+|**Product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.|  
+|**ab**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.|  
 |**data_source**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Datenquelle.|  
-|**location**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  
+|**Hotels**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  
 |**provider_string**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Anbieterzeichenfolge.<br /><br /> Besitzt den Wert NULL, wenn der Aufrufer nicht über die ALTER ANY LINKED SERVER-Berechtigung verfügt.|  
-|**catalog**|**sysname**|Die Verbindungseigenschaft des OLE DB-Katalogs. Ist NULL, wenn nichts angegeben wird.|  
+|**sieren**|**sysname**|Die Verbindungseigenschaft des OLE DB-Katalogs. Ist NULL, wenn nichts angegeben wird.|  
 |**connect_timeout**|**int**|Das Verbindungstimeout in Sekunden. Ist 0, wenn nichts angegeben wird.|  
 |**query_timeout**|**int**|Abfragetimeout in Sekunden. Ist 0, wenn nichts angegeben wird.|  
 |**is_linked**|**bit**|0 = Ist ein Server im alten Format, der mithilfe von **sp_addserver**hinzugefügt wurde und ein anderes Verhalten hinsichtlich RPC und verteilter Transaktionen aufweist.<br /><br /> 1 = Standardverbindungsserver.|  
@@ -65,17 +65,17 @@ ms.locfileid: "68132948"
   
  Zum Anzeigen des lokalen Servers (**server_id** = 0) sind keine Berechtigungen erforderlich.  
   
- Wenn Sie einen Verbindungs- oder Remoteserver erstellen, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine standardmäßige Anmeldenamenzuordnung zur **public** -Serverrolle erstellt. Standardmäßige anmeldenamenzuordnung bedeutet, dass alle Anmeldungen alle Verbindungs- und Remoteserver angezeigt werden können. Wenn Sie die Sichtbarkeit auf diese Server beschränken möchten, entfernen Sie die standardmäßige Anmeldenamenzuordnung, indem Sie [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) ausführen und NULL für den *locallogin* -Parameter angeben.  
+ Wenn Sie einen Verbindungs- oder Remoteserver erstellen, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine standardmäßige Anmeldenamenzuordnung zur **public** -Serverrolle erstellt. Die standardmäßige Anmeldungs Zuordnung bedeutet, dass alle verknüpften und Remote Server von allen Anmeldungen angezeigt werden können. Wenn Sie die Sichtbarkeit auf diese Server beschränken möchten, entfernen Sie die standardmäßige Anmeldenamenzuordnung, indem Sie [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) ausführen und NULL für den *locallogin* -Parameter angeben.  
   
- Wenn die standardmäßige Anmeldenamenzuordnung gelöscht wird, können die Verbindungs- bzw. Remoteserver nur von den explizit als verknüpfte Anmeldung oder Remoteanmeldung hinzugefügten Benutzern angezeigt werden, die auch über einen Anmeldenamen dafür verfügen.  Die folgenden Berechtigungen sind erforderlich, um alle Verbindungs- und Remoteserver-Server nach der die standardmäßige anmeldenamenzuordnung anzuzeigen:  
+ Wenn die standardmäßige Anmeldenamenzuordnung gelöscht wird, können die Verbindungs- bzw. Remoteserver nur von den explizit als verknüpfte Anmeldung oder Remoteanmeldung hinzugefügten Benutzern angezeigt werden, die auch über einen Anmeldenamen dafür verfügen.  Die folgenden Berechtigungen sind erforderlich, um alle Verbindungs-und Remote Server nach der standardmäßigen Anmelde Namen Zuordnung anzuzeigen:  
   
-- `ALTER ANY LINKED SERVER` oder `ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER`noch`ALTER ANY LOGIN ON SERVER`  
 - Mitgliedschaft in den festen Serverrollen **setupadmin** oder **sysadmin**  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Verbindungsserver-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [Verknüpfte Server-Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

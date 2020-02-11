@@ -1,5 +1,5 @@
 ---
-title: Festlegen des Dienststartkontos für SQL Server-Agent (SQL Server-Konfigurations-Manager) | Microsoft-Dokumentation
+title: Festlegen des Dienst Start Kontos für SQL Server-Agent (SQL Server-Konfigurations-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033659"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
@@ -32,7 +32,7 @@ ms.locfileid: "63033659"
   
      [Sicherheit](#Security)  
   
--   [So legen Sie das Dienststartkonto für den SQL Server-Agent mit SQL Server Management Studio fest](#SSMSProcedure)  
+-   [So legen Sie das Dienst Start Konto für SQL Server-Agent mithilfe SQL Server Management Studio fest](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63033659"
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Funktionen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent muss konfiguriert werden, um die Anmeldeinformationen eines Kontos zu verwenden, die ein Mitglied der `sysadmin` festen Serverrolle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
+ Der-Agent muss für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung der Anmelde Informationen eines Kontos konfiguriert werden, das Mitglied der `sysadmin` Fixed-Server Rolle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, um seine Funktionen ausführen zu können. Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
   
 -   Anmelden als Dienst (SeServiceLogonRight)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "63033659"
   
 -   Anpassen des Arbeitsspeicherkontingents für einen Prozess (SeIncreaseQuotaPrivilege)  
   
- Weitere Informationen zu den Windows-Berechtigungen, die für die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienstkonten und Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Weitere Informationen zu den Windows-Berechtigungen, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das-Agent-Dienst Konto erforderlich sind, finden [Sie unter Auswählen eines Kontos für den SQL Server-Agent Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>So legen Sie das Dienststartkonto für den SQL Server-Agent fest  
   
@@ -71,16 +71,16 @@ ms.locfileid: "63033659"
   
 5.  Wählen Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Konsolenbereich **SQL Server-Dienste**aus.  
   
-6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server-Agent** _(Servername)_ , wobei *Servername* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Instanz ist, für die Sie das Dienststartkonto ändern möchten. Wählen Sie anschließend **Eigenschaften**aus.  
+6.  Klicken Sie im Detailfenster mit der rechten Maustaste auf **SQL Server-Agent**_(server_name)_, wobei *server_name* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agentinstanz ist, für die Sie das Dienst Start Konto ändern möchten, und wählen Sie **Eigenschaften**aus.  
   
-7.  Wählen Sie im Dialogfeld **SQL Server-Agent** _(Servername)_ **Eigenschaften** auf der Registerkarte **Anmelden** eine der folgenden Optionen unter **Anmelden als**aus:  
+7.  Wählen Sie im Dialogfeld **Eigenschaften** von **SQL Server-Agent**_(server_name)_ auf der Registerkarte **Anmelden** eine der folgenden Optionen unter **Anmelden als**aus:  
   
     -   **Integriertes Konto**: Wählen Sie diese Option aus, wenn die Aufträge nur Ressourcen vom lokalen Server benötigen. Informationen zum Auswählen eines integrierten Kontotyps finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](https://msdn.microsoft.com/library/ms191543.aspx).  
   
         > [!IMPORTANT]  
         >  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lokale Dienstkonto **in** wird nicht für den [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Agentdienst unterstützt.  
   
-    -   **Dieses Konto**: Wählen Sie diese Option aus, wenn die Aufträge Ressourcen aus dem gesamten Netzwerk benötigen, einschließlich Anwendungsressourcen, wenn Sie Ereignisse an andere Windows-Anwendungsprotokolle weiterleiten möchten oder wenn Sie Operatoren per E-Mail oder Pager benachrichtigen möchten.  
+    -   **Dieses Konto**: Wählen Sie diese Option aus, wenn Ihre Aufträge Ressourcen im gesamten Netzwerk benötigen, einschließlich Anwendungs Ressourcen. Wenn Sie Ereignisse an andere Windows-Anwendungsprotokolle weiterleiten möchten; oder wenn Sie Operatoren per e-Mail oder Pagern benachrichtigen möchten.  
   
          Bei Auswahl dieser Option:  
   

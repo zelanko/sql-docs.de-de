@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245714"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Zielserver (Registerkarte Zielserverstatus)
   Mithilfe dieser Seite können Sie den Status der Zielserver für diesen Masterserver anzeigen.  
   
-## <a name="options"></a>Optionen  
- **Zielserver**  
+## <a name="options"></a>Tastatur  
+ **Ziel Server**  
  Zeigt den Namen des Zielservers an.  
   
  **Ortszeit**  
@@ -41,10 +41,10 @@ ms.locfileid: "63245714"
  **Abruf erzwingen**  
  Klicken Sie auf diese Schaltfläche, um das Abrufen des Masterservers durch die ausgewählten Zielserver zu erzwingen.  
   
- **Austritt erzwingen**  
+ **Erzwingen der Ausführung**  
  Klicken Sie auf diese Schaltfläche, um das Austragen der ausgewählten Zielserver beim Masterserver zu erzwingen.  
   
- **Anweisungen bereitstellen**  
+ **Post-Anweisungen**  
  Stellt die Anweisungen den ausgewählten Zielservern bereit.  
   
  **Automatische Aktualisierung aktivieren**  
@@ -53,7 +53,7 @@ ms.locfileid: "63245714"
  **Aktualisieren alle**  
  Gibt an, wie oft die Informationen auf dieser Seite aktualisiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Automatisierte Verwaltung in einem Unternehmen](automated-administration-across-an-enterprise.md)  
   
   

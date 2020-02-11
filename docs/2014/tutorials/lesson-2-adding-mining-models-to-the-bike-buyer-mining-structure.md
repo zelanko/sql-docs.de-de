@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur | Microsoft-Dokumentation'
+title: 'Lektion 2: Hinzufügen von Mining Modellen zur Bike Buyer-Mining Struktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131745"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur
-  In dieser Lektion fügen Sie zwei Miningmodelle der Bike Buyer-Miningstruktur, die Sie erstellt [Lektion 1: Erstellen der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Diese Miningmodelle ermöglichen es Ihnen, mit einem Modell die Daten zu prüfen und mit einem anderen Vorhersagen zu erstellen.  
+  In dieser Lektion fügen Sie der Bike Buyer-Mining Struktur, die Sie [Lektion 1: Erstellen der Bike Buyer-Mining Struktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)erstellt haben, zwei Mining Modelle hinzu. Diese Miningmodelle ermöglichen es Ihnen, mit einem Modell die Daten zu prüfen und mit einem anderen Vorhersagen zu erstellen.  
   
- Untersuchen, wie potenzielle Kunden nach ihren Merkmalen kategorisiert werden können, erstellen Sie ein Miningmodell auf Basis der [Microsoft Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). In einer späteren Lektion prüfen Sie, wie dieser Algorithmus Cluster von Kunden mit ähnlichen Merkmalen ermittelt. So könnten Sie beispielsweise ermitteln, dass bestimmte Kunden nicht weit voneinander entfernt leben, mit dem Fahrrad zur Arbeit fahren und über einen ähnlichen Bildungsstand verfügen. Sie können diese Cluster dazu verwenden, das Beziehungsgefüge zwischen unterschiedlichen Kunden besser zu verstehen. Mithilfe der gewonnenen Informationen können Sie dann eine Marketingstrategie erstellen, die auf bestimmte Kunden abzielt.  
+ Um herauszufinden, wie potenzielle Kunden anhand ihrer Merkmale kategorisiert werden können, erstellen Sie ein Mining Modell, das auf dem [Microsoft Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)basiert. In einer späteren Lektion prüfen Sie, wie dieser Algorithmus Cluster von Kunden mit ähnlichen Merkmalen ermittelt. So könnten Sie beispielsweise ermitteln, dass bestimmte Kunden nicht weit voneinander entfernt leben, mit dem Fahrrad zur Arbeit fahren und über einen ähnlichen Bildungsstand verfügen. Sie können diese Cluster dazu verwenden, das Beziehungsgefüge zwischen unterschiedlichen Kunden besser zu verstehen. Mithilfe der gewonnenen Informationen können Sie dann eine Marketingstrategie erstellen, die auf bestimmte Kunden abzielt.  
   
- Um vorherzusagen, ob ein potenzieller Kunde wahrscheinlich ein Fahrrad kaufen, erstellen Sie ein Miningmodell auf Basis der [Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Dieser Algorithmus analysiert die mit allen potenziellen Kunden verknüpften Informationen und sucht Merkmale, die für die Vorhersage, ob diese Kunden ein Fahrrad kaufen werden, hilfreich sein können. Anschließend vergleicht der Algorithmus die Merkmale von Kunden, die in der Vergangenheit ein Fahrrad gekauft haben, mit den Merkmalen potenzieller Neukunden, um zu bestimmen, wie wahrscheinlich es ist, dass diese potenziellen Neukunden ein Fahrrad kaufen werden.  
+ Um vorherzusagen, ob ein potenzieller Kunde wahrscheinlich ein Fahrrad kaufen wird, erstellen Sie ein Mining Modell, das auf dem [Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)basiert. Dieser Algorithmus analysiert die mit allen potenziellen Kunden verknüpften Informationen und sucht Merkmale, die für die Vorhersage, ob diese Kunden ein Fahrrad kaufen werden, hilfreich sein können. Anschließend vergleicht der Algorithmus die Merkmale von Kunden, die in der Vergangenheit ein Fahrrad gekauft haben, mit den Merkmalen potenzieller Neukunden, um zu bestimmen, wie wahrscheinlich es ist, dass diese potenziellen Neukunden ein Fahrrad kaufen werden.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
- Um der Miningstruktur ein Miningmodell hinzuzufügen, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
+ Um der Mining Struktur ein Mining Modell hinzuzufügen, verwenden Sie die Anweisung [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) . Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
 -   Identifizieren der Miningstruktur  
   
@@ -61,7 +61,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Informationen zum Benennen eines Objekts in DMX finden Sie unter [Bezeichner &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Weitere Informationen zum Benennen eines Objekts in DMX finden Sie unter Bezeichner [&#40;DMX-&#41;](/sql/dmx/identifiers-dmx).  
   
  Die nächsten Codezeilen definieren Spalten der Miningstruktur, die vom Miningmodell verwendet werden:  
   
@@ -86,7 +86,7 @@ ADD MINING MODEL [<mining model name>]
 <mining model column> PREDICT  
 ```  
   
- Die letzte Codezeile ist optional und definiert einen Filter, der zum Trainieren und Testen des Modells verwendet wird. Weitere Informationen zum Anwenden von Filtern für Miningmodelle finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Die letzte Codezeile ist optional und definiert einen Filter, der zum Trainieren und Testen des Modells verwendet wird. Weitere Informationen zum Anwenden von Filtern auf Mining Modelle finden Sie unter [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgenden Aufgaben aus:  
@@ -102,7 +102,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>So fügen Sie ein Entscheidungsstruktur-Miningmodell hinzu  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** zu Abfrage-Editor und eine neue, leere Abfrage zu öffnen.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** , um den Abfrage-Editor und eine neue, leere Abfrage zu öffnen.  
   
 2.  Kopieren Sie das allgemeine Beispiel der ALTER MINING STRUCTURE-Anweisung in die leere Abfrage.  
   
@@ -197,18 +197,18 @@ ADD MINING MODEL [<mining model name>]
     WITH DRILLTHROUGH  
     ```  
   
-7.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+7.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-8.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `DT_Model.dmx`.  
+8.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `DT_Model.dmx`.  
   
-9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+9. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
 ## <a name="adding-a-clustering-mining-model-to-the-structure"></a>Hinzufügen eines Clustering-Miningmodells zur Struktur  
  Sie können nun der Bike Buyer-Struktur ein Miningmodell hinzufügen, das auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus basiert. Da das Clustering-Miningmodell alle Spalten verwendet, die in der Miningstruktur definiert sind, können Sie der Struktur das Modell vereinfacht hinzufügen, indem Sie darauf verzichten, die Miningspalten zu definieren.  
   
 #### <a name="to-add-a-clustering-mining-model"></a>So fügen Sie ein Clustering-Miningmodell hinzu  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** zum Öffnen von Abfrage-Editor wird geöffnet und eine neue, leere Abfrage.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** , um den Abfrage-Editor zu öffnen und eine neue, leere Abfrage zu öffnen.  
   
 2.  Kopieren Sie das allgemeine Beispiel der ALTER MINING STRUCTURE-Anweisung in die leere Abfrage.  
   
@@ -265,11 +265,11 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Clustering   
     ```  
   
-7.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+7.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-8.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Clustering_Model.dmx`.  
+8.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `Clustering_Model.dmx`.  
   
-9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+9. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
  In der nächsten Lektion verarbeiten Sie die Modelle und die Miningstruktur.  
   

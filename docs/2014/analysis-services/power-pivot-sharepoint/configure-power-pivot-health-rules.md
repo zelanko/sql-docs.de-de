@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797628"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot-Integritätsregeln − Konfigurieren
@@ -28,7 +28,7 @@ ms.locfileid: "72797628"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Hinweis:** Integritätsregeleinstellungen werden für die SQL Server Analysis Services-Instanz und die PowerPivot-Dienstanwendung getrennt konfiguriert. Konfigurieren Sie Integritätsregeln für jeden Dienst mithilfe der Anweisungen in diesem Thema. Bei einer SharePoint 2013-Bereitstellung verwendet [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nur die Dienstanwendung. Daher werden durch [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] verschiedene Sätze von Integritätsregeln für unterschiedliche SharePoint-Versionen installiert. Weitere Informationen finden Sie in der Spalte "Version" im Thema Integritäts [Regel Referenz &#40;PowerPivot für SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), oder Sie können den folgenden Windows PowerShell-Befehl ausführen, um die installierten Regeln anzuzeigen.  
+ **Hinweis:** Integritäts Regel Einstellungen werden für die SQL Server Analysis Services-Instanz und die Power Pivot-Dienst Anwendung separat konfiguriert. Konfigurieren Sie Integritätsregeln für jeden Dienst mithilfe der Anweisungen in diesem Thema. Bei einer SharePoint 2013-Bereitstellung verwendet [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nur die Dienstanwendung. Daher werden durch [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] verschiedene Sätze von Integritätsregeln für unterschiedliche SharePoint-Versionen installiert. Weitere Informationen finden Sie in der Spalte "Version" im Thema Integritäts [Regel Referenz &#40;PowerPivot für SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), oder Sie können den folgenden Windows PowerShell-Befehl ausführen, um die installierten Regeln anzuzeigen.  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
@@ -36,13 +36,13 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  **In diesem Thema:**  
   
- [Anzeigen von Power Pivot-Integritäts Regeln](#bkmk_view)  
+ [Anzeigen von PowerPivot-Integritätsregeln](#bkmk_view)  
   
- [Konfigurieren von Integritätsregeln zum Auswerten der Serverstabilität (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
+ [Konfigurieren von Integritäts Regeln zum Auswerten der Server Stabilität (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
   
- [Konfigurieren von Integritäts Regeln zum Auswerten der Anwendungs Stabilität (Power Pivot-Dienst Anwendung)](#bkmk_evaluate_application_stability)  
+ [Konfigurieren von Integritätsregeln zum Auswerten der Anwendungsstabilität (PowerPivot-Dienstanwendung)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  Sie müssen Dienstanwendungsadministrator sein, um die Konfigurationseigenschaften der Analysis Services-Instanz und PowerPivot-Dienstanwendung zu ändern.  
   
 ##  <a name="bkmk_view"></a>Anzeigen von Power Pivot-Integritäts Regeln  
@@ -57,12 +57,12 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  Klicken Sie dazu auf die Regel, um die Regeldefinition zu öffnen, und klicken Sie im Menüband auf **Jetzt ausführen** . Klicken Sie auf **Schließen** , um zur Seite **Probleme und Lösungen überprüfen** zurückzuwechseln und den Bericht anzuzeigen. Wenn die Regel ein Problem erkannt hat, wird eine Warnung oder ein Fehler auf der Seite gemeldet. In einigen Fällen kann es einige Minuten dauern, bis der Fehler oder die Warnung angezeigt wird.  
   
-##  <a name="bkmk_HR_SSAS"></a> Konfigurieren von Integritätsregeln zum Auswerten der Serverstabilität (SQL Server Analysis Services)  
+##  <a name="bkmk_HR_SSAS"></a>Konfigurieren von Integritäts Regeln zum Auswerten der Server Stabilität (SQL Server Analysis Services)  
  Die Analysis Services-Instanz enthält Integritätsregeln, die Probleme auf der Systemebene erkennen (CPU, Arbeitsspeicher und Speicherplatz für Zwischenspeicherung). Befolgen Sie die nachfolgenden Anweisungen, um Schwellenwerte zu ändern, die bestimmte Integritätsregeln auslösen.  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration im Abschnitt **Systemeinstellungen** auf **Dienste auf dem Server verwalten**.  
   
-2.  Wählen Sie am oberen Rand der Seite den Server in der SharePoint-Farm aus, der eine Instanz von Analysis Services (in der folgenden Abbildung ist der Servername AW-SRV033) hat. **SQL Server Analysis Services** werden in der Liste der Dienste angezeigt.  
+2.  Wählen Sie am oberen Rand der Seite den Server in der SharePoint-Farm aus, der eine Instanz von Analysis Services (in der folgenden Abbildung ist der Servername AW-SRV033) hat. **SQL Server Analysis Services** wird in der Liste der Dienste angezeigt.  
   
      ![Screenshot der Seite "Dienste auf dem Server verwalten"](../media/ssas-centraladmin-servicesonserver.gif "Screenshot der Seite "Dienste auf dem Server verwalten"")  
   
@@ -91,7 +91,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Die hohe Verbindungsanzahl weist darauf hin, dass weitere Server zur Bewältigung der aktuellen Arbeitslast bereitgestellt werden sollten**.  
   
      Nicht genügend Speicherplatz (Standardwert ist 5 %)  
-     Der Speicherplatz wird verwendet, um jedes Mal PowerPivot-Daten zwischenzuspeichern, wenn eine Datenbank angefordert wird. Mit dieser Regel wissen Sie, wann nicht genügend Speicherplatz zur Verfügung steht. Standardmäßig wird diese Integritätsregel ausgelöst, wenn der Speicherplatz auf dem Laufwerk mit dem Sicherungsordner geringer als 5 % ist. Weitere Informationen zur Datenträger Verwendung finden Sie unter [Konfigurieren der Speicher &#40;Platz&#41;Verwendung PowerPivot für SharePoint](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
+     Der Speicherplatz wird verwendet, um jedes Mal PowerPivot-Daten zwischenzuspeichern, wenn eine Datenbank angefordert wird. Mit dieser Regel wissen Sie, wann nicht genügend Speicherplatz zur Verfügung steht. Standardmäßig wird diese Integritätsregel ausgelöst, wenn der Speicherplatz auf dem Laufwerk mit dem Sicherungsordner geringer als 5 % ist. Weitere Informationen zur Datenträger Verwendung finden Sie unter [Konfigurieren der Speicherplatz Verwendung &#40;PowerPivot für SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
      Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Das Laufwerk, auf dem PowerPivot-Daten zwischengespeichert werden, verfügt über unzureichenden Speicherplatz**.  
   
@@ -100,15 +100,15 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
 ##  <a name="bkmk_evaluate_application_stability"></a>Konfigurieren von Integritäts Regeln zum Auswerten der Anwendungs Stabilität (Power Pivot-Dienst Anwendung)  
   
-1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
+1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
 2.  Klicken Sie auf der Seite Dienstanwendungen auf **PowerPivot-Standarddienstanwendung**.  
   
-     ![Screenshot der Seite "manageservice-Anwendung"](../media/ssas-centraladmin-app.gif "Screenshot der Seite "manageservice-Anwendung"")  
+     ![Screenshot der Seite "Dienstanwendungen verwalten"](../media/ssas-centraladmin-app.gif "Screenshot der Seite "Dienstanwendungen verwalten"")  
   
 3.  Das PowerPivot-Management-Dashboard wird angezeigt. Klicken Sie auf **Einstellungen für Dienstanwendung konfigurieren** in der Liste **Aktionen** , um die Seite mit den Einstellungen der Dienstanwendung zu öffnen.  
   
-     ![Screenshot des Dashboards, Fokus auf Aktionsliste](../media/ssas-centraladmin-actionslist.gif "Screenshot des Dashboards, Fokus auf Aktionsliste")  
+     ![Screenshot des Dashboards, Fokus auf Liste "Aktionen"](../media/ssas-centraladmin-actionslist.gif "Screenshot des Dashboards, Fokus auf Liste "Aktionen"")  
   
 4.  Ändern Sie in den Integritätsregeleinstellungen die folgenden Einstellungen:  
   
@@ -123,10 +123,10 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      Suchen nach Updates für PowerPivot Management Dashboard.xlsx (Standardwert ist 5 Tage)  
      Die Datei PowerPivot Management Dashboard.xlsx ist eine in PowerPivot-Management-Dashboard von Berichten verwendete Datenquelle. In einer Standardserverkonfiguration wird die XLSX-Datei täglich mit von SharePoint und dem PowerPivot-Systemdienst erfassten Verwendungsdaten aktualisiert. Wenn die Datei nicht aktualisiert wird, meldet eine Integritätsregel dies als Problem. Standardmäßig wird die Regel ausgelöst, wenn sich der Zeitstempel der Datei 5 Tage lang nicht geändert hat.  
   
-     Weitere Informationen zur Sammlung von Verwendungs Daten finden Sie unter [Konfigurieren der Sammlung von &#40;Verwendungs Daten für PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+     Weitere Informationen zur Sammlung von Verwendungs Daten finden Sie unter [Konfigurieren der Sammlung von Verwendungs Daten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
      Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Verwendungsdaten werden nicht mit der erwarteten Häufigkeit aktualisiert**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der Speicherplatz &#40;Verwendung&#41; PowerPivot für SharePoint](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
- [PowerPivot-Management-Dashboard und -Verwendungsdaten](power-pivot-management-dashboard-and-usage-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren der Speicherplatz Verwendung &#40;PowerPivot für SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
+ [PowerPivot-Management-Dashboard und Verwendungsdaten](power-pivot-management-dashboard-and-usage-data.md)  

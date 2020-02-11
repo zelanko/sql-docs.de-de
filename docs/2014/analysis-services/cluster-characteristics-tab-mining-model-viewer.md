@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Clustermerkmale" (Miningmodell-Viewer)-Cluster | Microsoft-Dokumentation
+title: Registerkarte "Cluster Merkmale" (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087993"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Registerkarte "Clustermerkmale" (Miningmodell-Viewer)
   Auf der Registerkarte **Clustermerkmale** können Sie die Eigenschaften eines Clusters in einem Clusteringmodell oder die Gruppe aller Fälle im Modell untersuchen. Das Diagramm zeigt die Wichtigkeit jedes Attribut/Wert-Paars als ein Merkmal, das den Cluster definiert, im Vergleich zu anderen Clustern.  
   
- **Weitere Informationen finden Sie unter** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im benutzerdefinierten Viewer geöffnet.  
   
  **Viewer**  
@@ -37,18 +37,18 @@ ms.locfileid: "66087993"
  **Cluster**  
  Wählen Sie den anzuzeigenden Cluster aus, oder wählen Sie **Auffüllung (Alle)** aus, um die Verteilung der Attribute für das ganze Modell anzuzeigen.  
   
- **Merkmale für \<Cluster >**  
+ **Merkmale für \<Cluster>**  
  Das Diagramm enthält die folgenden Spalten, in denen die Merkmale des ausgewählten Clusters beschrieben werden.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Variable**|Listet die Attribute aus dem Miningmodell auf, die im ausgewählten Cluster vorhanden sind.|  
 |**Werte**|Listet die Werte der aktuellen Attribute auf, die im derzeit ausgewählten Cluster vorhanden sind.|  
-|**Wahrscheinlichkeit**|Der Balken gibt die Stärke des Attribut/Wert-Paars als kennzeichnendes Merkmal dieses Clusters an. Wenn Sie mit der Maus auf den Balken zeigen, wird der Wahrscheinlichkeitswert als Prozentsatz angezeigt. Dies gibt für diese Attribut/Wert-Kombination in jedem einzelnen Fall die Wahrscheinlichkeit an, dass der Fall in diesen Cluster gehört.|  
+|**Probability**|Der Balken gibt die Stärke des Attribut/Wert-Paars als kennzeichnendes Merkmal dieses Clusters an. Wenn Sie mit der Maus auf den Balken zeigen, wird der Wahrscheinlichkeitswert als Prozentsatz angezeigt. Dies gibt für diese Attribut/Wert-Kombination in jedem einzelnen Fall die Wahrscheinlichkeit an, dass der Fall in diesen Cluster gehört.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

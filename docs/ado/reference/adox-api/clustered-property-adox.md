@@ -20,25 +20,25 @@ ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966991"
 ---
 # <a name="clustered-property-adox"></a>Clustered-Eigenschaft (ADOX)
 Gibt an, ob der Index gruppiert ist.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest, und gibt eine **booleschen** Wert.  
+ Legt einen **booleschen** Wert fest und gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Standardwert ist **False**.  
   
- Diese Eigenschaft ist schreibgeschützt und auf [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte, die bereits einer Auflistung angefügt wurden.  
+ Diese Eigenschaft ist für [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für die Clustered-Eigenschaft (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Clustered-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)

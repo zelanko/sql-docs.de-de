@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830149"
 ---
 # <a name="transfer-database-task"></a>Datenbanken übertragen (Task)
@@ -32,7 +32,7 @@ ms.locfileid: "62830149"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Übertragung von Datenbanken zwischen verschiedenen Versionen von SQL Server  
  Der Task "Datenbank übertragen" kann eine Datenbank zwischen Instanzen verschiedener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen übertragen.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Der Task "Datenbanken übertragen" meldet keinen schrittweisen Fortschritt der Fehlermeldungsübertragung; er meldet nur 0 % und 100 % der Ausführung.  
   
 ## <a name="execution-value"></a>Ausführungswert  
@@ -71,9 +71,9 @@ ms.locfileid: "62830149"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „Datenbanken übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task Datenbanken übertragen &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task „Datenbanken übertragen“ &#40;Seite „Datenbanken“&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor für den Task "Datenbanken übertragen" &#40;&#41;Seite](../transfer-database-task-editor-databases-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

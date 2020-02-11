@@ -1,5 +1,5 @@
 ---
-title: Sp_indexoption (Transact-SQL) | Microsoft-Dokumentation
+title: sp_indexoption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,23 +18,24 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030914"
 ---
-# <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
+# <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Legt Werte für Sperrenoptionen für benutzerdefinierte gruppierte und nicht gruppierte Indizes oder Tabellen ohne gruppierten Index fest.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wählt automatisch zwischen Sperren auf Seitenebene, Zeilenebene und Tabellenebene aus. Sie müssen diese Optionen nicht manuell festlegen. **Sp_indexoption** wird bereitgestellt für erfahrene Benutzer, die mit Bestimmtheit wissen, die ein bestimmter Typ von Sperre stets ist geeignet.  
+ 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wählt automatisch zwischen Sperren auf Seitenebene, Zeilenebene und Tabellenebene aus. Sie müssen diese Optionen nicht manuell festlegen. **sp_indexoption** wird für erfahrene Benutzer bereitgestellt, die mit Sicherheit sicher sind, dass eine bestimmte Art von Sperre immer geeignet ist.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Verwenden Sie stattdessen [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Verwenden Sie stattdessen [Alter Index &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,38 +47,38 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @IndexNamePattern = ] 'table_or_index_name'` Ist der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder eines Indexes. *Table_or_index_name* ist **nvarchar(1035)** , hat keinen Standardwert. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Index- oder Tabellenname angegeben wird. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Wenn ein Tabellenname ohne Index angegeben wird, wird der angegebene Optionswert für alle Indizes dieser Tabelle und für die Tabelle selbst, falls kein gruppierter Index vorhanden ist, festgelegt.  
+`[ @IndexNamePattern = ] 'table_or_index_name'`Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder eines benutzerdefinierten Indexes. *table_or_index_name* ist vom Datentyp **nvarchar (1035)** und hat keinen Standardwert. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Index- oder Tabellenname angegeben wird. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Wenn ein Tabellenname ohne Index angegeben wird, wird der angegebene Optionswert für alle Indizes dieser Tabelle und für die Tabelle selbst, falls kein gruppierter Index vorhanden ist, festgelegt.  
   
-`[ @OptionName = ] 'option_name'` Ist ein indexoptionsname. *Option_name* ist **varchar(35)** , hat keinen Standardwert. *Option_name* kann einen der folgenden Werte aufweisen.  
+`[ @OptionName = ] 'option_name'`Ist ein Index Options Name. *option_name* ist vom Datentyp **varchar (35)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Mit TRUE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden. Mit FALSE werden keine Zeilensperren verwendet. Der Standardwert ist TRUE.|  
 |**AllowPageLocks**|Mit TRUE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden. Mit FALSE werden keine Seitensperren verwendet. Der Standardwert ist TRUE.|  
 |**DisAllowRowLocks**|Mit TRUE werden keine Zeilensperren verwendet. Mit FALSE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden.|  
 |**DisAllowPageLocks**|Mit TRUE werden keine Seitensperren verwendet. Mit FALSE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden.|  
   
-`[ @OptionValue = ] 'value'` Gibt an, ob die *Optionsname* Einstellung ist aktiviert (TRUE, ON, Ja oder 1) oder deaktiviert (FALSE, OFF, No oder 0). *Wert* ist **varchar(12)** , hat keinen Standardwert.  
+`[ @OptionValue = ] 'value'`Gibt an, ob die *option_name* Einstellung aktiviert ist (true, on, yes oder 1) oder deaktiviert (false, Off, No oder 0). der Wert ist vom Datentyp **varchar (12)** und hat keinen Standard *Wert* .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder größer als 0 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- XML-Indizes werden nicht unterstützt. Wenn Sie einen XML-Index angeben oder einen Tabellennamen ohne Indexnamen angeben und die Tabelle einen XML-Index enthält, wird für die Anweisung ein Fehler gemeldet. Verwenden Sie zum Festlegen dieser Optionen [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) stattdessen.  
+## <a name="remarks"></a>Bemerkungen  
+ XML-Indizes werden nicht unterstützt. Wenn Sie einen XML-Index angeben oder einen Tabellennamen ohne Indexnamen angeben und die Tabelle einen XML-Index enthält, wird für die Anweisung ein Fehler gemeldet. Verwenden Sie stattdessen [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) , um diese Optionen festzulegen.  
   
- Verwenden Sie zum Anzeigen der aktuellen Zeile und der Seitensperren Eigenschaften [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) oder [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.  
+ Verwenden Sie [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) oder die [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalog Sicht, um die aktuellen Zeilen-und Seiten Sperr Eigenschaften anzuzeigen.  
   
--   Zeilen-, Seiten- und Tabellenebene beim Zugriff auf den Index zulässig sind beim **AllowRowLocks** = "true" oder **DisAllowRowLocks** = "false", und **AllowPageLocks** = "true" oder  **DisAllowPageLocks** = "false". Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.  
+-   Sperren auf Zeilen-, Seiten-und Tabellenebene sind beim Zugriff auf den Index zulässig, wenn **AllowRowLocks** = true oder **DisAllowRowLocks** = false und **AllowPageLocks** = true oder **DisAllowPageLocks** = false. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.  
   
- Nur eine Sperre auf Tabellenebene ist zulässig, wenn der Zugriff auf den Index bei **AllowRowLocks** = FALSE oder **DisAllowRowLocks** = TRUE und **AllowPageLocks** = FALSE oder  **DisAllowPageLocks** = "true".  
+ Beim Zugriff auf den Index ist nur eine Sperre auf Tabellenebene zulässig, wenn **AllowRowLocks** = false oder **DisAllowRowLocks** = true und **AllowPageLocks** = false oder **DisAllowPageLocks** = true ist.  
   
  Wenn ein Tabellenname ohne Index angegeben wird, werden die Einstellungen auf alle Indizes dieser Tabelle angewendet. Wenn die zugrunde liegende Tabelle keinen gruppierten Index aufweist (d. h., es handelt sich um einen Heap), werden die Einstellungen wie folgt angewendet:  
   
--   Wenn **AllowRowLocks** oder **DisAllowRowLocks** sind auf "true" oder "false" festgelegt, die Einstellung wird angewendet, die dem Heap und alle zugehörigen nicht gruppierten Indizes.  
+-   Wenn **AllowRowLocks** oder **DisAllowRowLocks** auf "true" oder "false" festgelegt ist, wird die Einstellung auf den Heap und alle zugehörigen nicht gruppierten Indizes angewendet.  
   
--   Wenn **AllowPageLocks** Option auf "true" festgelegt ist oder **DisAllowPageLocks** wird festgelegt auf "false", die Einstellung angewendet wird, auf dem Heap und alle zugehörigen nicht gruppierten Indizes.  
+-   Wenn die Option **AllowPageLocks** auf true oder **DisAllowPageLocks** auf false festgelegt ist, wird die Einstellung auf den Heap und alle zugehörigen nicht gruppierten Indizes angewendet.  
   
--   Wenn **AllowPageLocks** Option ist "false" festgelegt oder **DisAllowPageLocks** ist auf "true" festgelegt, die Einstellung vollständig angewendet, die nicht gruppierten Indizes. Das heißt, alle Seitensperren sind für die nicht gruppierten Indizes nicht zulässig. Auf dem Heap sind nur freigegebene Sperren (S), Updatesperren (U) und exklusive Sperren (X) für die Seite nicht zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann weiterhin eine beabsichtigte Seitensperre (IS, IU oder IX) für interne Zwecke abrufen.  
+-   Wenn die **AllowPageLocks** -Option auf false festgelegt ist oder **DisAllowPageLocks** auf true festgelegt ist, wird die Einstellung vollständig auf die nicht gruppierten Indizes angewendet. Das heißt, alle Seitensperren sind für die nicht gruppierten Indizes nicht zulässig. Auf dem Heap sind nur freigegebene Sperren (S), Updatesperren (U) und exklusive Sperren (X) für die Seite nicht zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann weiterhin eine beabsichtigte Seitensperre (IS, IU oder IX) für interne Zwecke abrufen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
@@ -85,7 +86,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. Festlegen einer Option auf einen bestimmten Index  
- Im folgenden Beispiel wird keine Seitensperren zulässt, auf die `IX_Customer_TerritoryID` index für die `Customer` Tabelle.  
+ Im folgenden Beispiel werden Seiten Sperren für den `IX_Customer_TerritoryID` Index der- `Customer` Tabelle nicht zugelassen.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +118,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Festlegen einer Option für eine Tabelle ohne gruppierten Index  
- Im folgenden Beispiel werden Seitensperren für eine Tabelle ohne gruppierten Index (ein Heap) nicht zugelassen. Die `sys.indexes` -Katalogsicht wird abgefragt, vor und nach der `sp_indexoption` Prozedur wird ausgeführt, um die Ergebnisse der Anweisung anzuzeigen.  
+ Im folgenden Beispiel werden Seitensperren für eine Tabelle ohne gruppierten Index (ein Heap) nicht zugelassen. Die `sys.indexes` -Katalog Sicht wird vor und nach dem Ausführen der `sp_indexoption` Prozedur abgefragt, um die Ergebnisse der Anweisung anzuzeigen.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -138,7 +139,7 @@ WHERE OBJECT_NAME (object_id) = N'DatabaseLog';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

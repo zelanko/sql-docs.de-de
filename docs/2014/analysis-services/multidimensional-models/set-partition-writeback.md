@@ -1,5 +1,5 @@
 ---
-title: Festlegen des Rückschreibens von Partitionen | Microsoft-Dokumentation
+title: Festlegen des Rück Schreibens von Partitionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072895"
 ---
 # <a name="set-partition-writeback"></a>Einrichten des Rückschreibens von Partitionen
@@ -57,11 +57,11 @@ ms.locfileid: "66072895"
   
  Beim Konvertieren der Rückschreibetabelle zu einer Partition wird auch der Schreibzugriff für die Partition deaktiviert. Alle Richtlinien für unbeschränkte Lese-/Schreiboperationen und alle Lese-/Schreibberechtigungen für die Zellen der Partition sind deaktiviert, und Endbenutzer können keine Änderungen an den angezeigten Cubedaten durchführen. (Endbenutzer mit deaktivierten Richtlinien für unbeschränkte Lese-/Schreiboperationen oder deaktivierten Lese-/Schreibberechtigungen können den Cube jedoch weiterhin durchsuchen.) Leseberechtigungen und Berechtigungen, die durch die Option Lesen (abhängig) erteilt werden, sind nicht betroffen.  
   
- Verwenden Sie zum Konvertieren von Rückschreibedaten in eine Partition das Dialogfeld **In Partition konvertieren**. Öffnen Sie dieses Dialogfeld, indem Sie mit der rechten Maustaste auf die Rückschreibetabelle einer Partition mit aktiviertem Schreibzugriff in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] klicken. Geben Sie einen Namen für die Partition an, und geben Sie an, ob die Aggregation für die Partition später oder beim Erstellen der Partition entworfen werden soll. Um die Aggregation zu demselben Zeitpunkt zu erstellen, zu dem die Partition von Ihnen ausgewählt wird, müssen Sie die Option zum Kopieren des Aggregationsentwurfs aus einer vorhandenen Partition auswählen. Dies ist normalerweise, aber nicht notwendigerweise, die aktuelle Rückschreibepartition. Sie haben auch die Möglichkeit, die Partition gleichzeitig zu verarbeiten und zu erstellen.  
+ Verwenden Sie zum Konvertieren von Rückschreibedaten in eine Partition das Dialogfeld **In Partition konvertieren** . Öffnen Sie dieses Dialogfeld, indem Sie mit der rechten Maustaste auf die Rückschreibetabelle einer Partition mit aktiviertem Schreibzugriff in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken. Geben Sie einen Namen für die Partition an, und geben Sie an, ob die Aggregation für die Partition später oder beim Erstellen der Partition entworfen werden soll. Um die Aggregation zu demselben Zeitpunkt zu erstellen, zu dem die Partition von Ihnen ausgewählt wird, müssen Sie die Option zum Kopieren des Aggregationsentwurfs aus einer vorhandenen Partition auswählen. Dies ist normalerweise, aber nicht notwendigerweise, die aktuelle Rückschreibepartition. Sie haben auch die Möglichkeit, die Partition gleichzeitig zu verarbeiten und zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Partitionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Aktivieren des Rückschreibens in einen OLAP-Cube auf Zellebene in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Aktivieren und Sichern der Dateneingabe mit Analysis Services-Rückschreiben](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Aktivieren des Rück Schreibens in einen OLAP-Cube auf Zellen Ebene in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Aktivieren und Sichern der Dateneingabe mit Analysis Services Rück schreiben](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

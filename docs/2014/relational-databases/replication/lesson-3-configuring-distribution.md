@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721097"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lektion 3: Konfigurieren der Verteilung
@@ -28,18 +28,18 @@ ms.locfileid: "62721097"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Replikation**, und klicken Sie anschließend auf **Verteilung konfigurieren**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Replikation** , und klicken Sie anschließend auf **Verteilung konfigurieren**.  
   
     > [!NOTE]  
-    >  Wenn Sie **localhost[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anstelle des tatsächlichen Servernamens verwendet haben, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, werden Sie in einer Warnmeldung darauf hingewiesen, dass**  nicht in der Lage ist, eine Verbindung mit dem Server **"localhost"** herzustellen. Klicken Sie im Warnungsdialogfeld auf **OK**. Ändern Sie im Dialogfeld **Verbindung mit Server herstellen** die Angabe für **Servername** von **localhost** in den Namen des Servers. Klicken Sie auf **Verbinden**.  
+    >  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]localhost** anstelle des tatsächlichen Servernamens verwendet haben, um eine Verbindung mit ** herzustellen, werden Sie in einer Warnmeldung darauf hingewiesen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht in der Lage ist, eine Verbindung mit dem Server **"localhost"** herzustellen. Klicken Sie im Warnungsdialogfeld auf **OK** . Ändern Sie im Dialogfeld **Verbindung mit Server herstellen** die Angabe für **Servername** von **localhost** in den Namen des Servers. Klicken Sie auf **Verbinden**.  
   
      Der Verteilungskonfigurations-Assistent wird gestartet.  
   
-3.  Auf der **Verteiler** Seite **"** _\<ServerName >_ **' als seinen eigenen Verteiler verwenden; fungiert SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**, und klicken Sie dann auf **Weiter**.  
+3.  Wählen Sie auf der Seite **Verteiler** die Option **"**_\<Servername>_ **" als seinen eigenen Verteiler aus. SQL Server erstellt eine Verteilungs Datenbank und ein Protokoll**, und klicken Sie dann auf **weiter**.  
   
 4.  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht ausgeführt wird, wählen Sie auf der Seite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent-Start** die Option **Ja**, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum automatischen Starten konfigurieren. Klicken Sie auf **Weiter**.  
   
-5.  Geben Sie im Textfeld **Momentaufnahmeordner** die Zeichenfolge **\\\\** \<_Machine_Name>_ **\repldata** ein, wobei \<*Machine_Name>* der Name des Verlegers ist, und klicken Sie anschließend auf **Weiter**.  
+5.  Geben ** \\ **Sie \< _Machine_Name>_ **\repldata** im Textfeld **Momentaufnahme Ordner** ein \<, in dem *Machine_Name>* der Name des Verlegers ist, und klicken Sie dann auf **weiter**.  
   
 6.  Übernehmen Sie die Standardwerte auf den restlichen Seiten des Assistenten.  
   
@@ -49,22 +49,22 @@ ms.locfileid: "62721097"
   
 1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung**aus.  
   
-2.  Klicken Sie auf der Seite **Allgemein** auf **Suchen**, geben Sie im Feld **Geben Sie die zu verwendenden Objektnamen ein** die Zeichenfolge \<_Machine_Name>_ **\repl_snapshot** ein, wobei \<*Machine_Name>* der Name des lokalen Verlegerservers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie anschließend auf **OK**.  
+2.  Klicken Sie auf der Seite **Allgemein** auf **Suchen**, \<geben Sie _Machine_Name>_ **\ repl_snapshot** im Feld **Geben Sie die zu ausgewäfenden Objektnamen** ein ein, wobei \< *Machine_Name>* der Name des lokalen Verleger Servers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
   
 3.  Wählen Sie auf der Seite **Benutzerzuordnung** in der Liste **Benutzer, die dieser Anmeldung zugeordnet sind** sowohl die **Verteilungs** - als auch die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aus.  
   
-     In der **Mitgliedschaft in Datenbankrolle** Liste Wählen Sie die `db_owner` Rolle für die Anmeldung bei beiden Datenbanken.  
+     Wählen Sie in der Liste **Daten bankrollen Mitgliedschaft** die `db_owner` Rolle für den Anmelde Namen für beide Datenbanken aus.  
   
 4.  Klicken Sie auf **OK** , um die Anmeldung zu erstellen.  
   
-5.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_logreader zu erstellen. Diese Anmeldung muss auch für Benutzer, die Elemente zugeordnet werden die `db_owner` -Datenbankrolle in der **Verteilung** und **AdventureWorks** Datenbanken.  
+5.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_logreader zu erstellen. Diese Anmeldung muss auch Benutzern zugeordnet werden, die Mitglieder der `db_owner` Fixed-Daten Bank Rolle in den Datenbanken **Distribution** und **AdventureWorks** sind.  
   
-6.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_distribution zu erstellen. Diese Anmeldung muss zugeordnet werden, zu einem Benutzer, die ein Mitglied der `db_owner` -Datenbankrolle in der **Verteilung** Datenbank.  
+6.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_distribution zu erstellen. Diese Anmeldung muss einem Benutzer zugeordnet werden, der Mitglied der `db_owner` festgelegten Daten Bank Rolle in der **Verteilungs** Datenbank ist.  
   
 7.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_merge zu erstellen. Diese Anmeldung muss Benutzerzuordnungen in den Datenbanken **distribution** und **AdventureWorks** haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verteilung konfigurieren](configure-distribution.md)   
- [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md)  
+ [Replikations-agentsicherheitsmodell](security/replication-agent-security-model.md)  
   
   

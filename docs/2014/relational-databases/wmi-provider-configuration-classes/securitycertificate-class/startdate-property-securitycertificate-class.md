@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 893e72d73062dc78ddbe33deb9b66941c30fb2a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209356"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate-Eigenschaft (SecurityCertificate-Klasse)
@@ -36,16 +36,16 @@ object
 .StartDate [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
- Ein [SecurityCertificate-Klasse] Securitycertificate-class.md)-Objekt, das ein Sicherheitszertifikat darstellt.  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
+ Ein SecurityCertificate-Class.MD-Objekt (SecurityCertificate-Klasse]), das ein Sicherheitszertifikat darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der das Datum angibt, ab dem die Gültigkeit des Sicherheitszertifikats beginnt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

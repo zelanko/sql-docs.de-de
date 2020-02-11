@@ -1,5 +1,5 @@
 ---
-title: 'Verwaltungstool für Befehlszeilen: SqlLocalDB.exe | Microsoft-Dokumentation'
+title: 'Verwaltungs Tool für Befehlszeilen: sqllocaldb. exe | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126946"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Verwaltungstool für Befehlszeilen: SqlLocalDB.exe
@@ -28,7 +28,7 @@ ms.locfileid: "68126946"
 ## <a name="sqllocaldb-options"></a>SqlLocalDB-Optionen  
  SqlLocalDB unterstützt die folgenden Optionen.  
   
-|Option|Funktion|  
+|Option|Funktionsbeschreibung|  
 |------------|------------------|  
 |`-?`|Druckt Hilfetext.|  
 |`create\|c "instance name" [version-number] [-s]`|Erstellt eine neue LocalDB-Instanz mit einem angegebenen Namen und einer Version.<br /><br /> Wenn der [Versionsnummer]-Parameter weggelassen wird, wird standardmäßig die SqlLocalDB-Buildversion verwendet.<br /><br /> -s startet die neue LocalDB-Instanz nach dem Erstellen.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68126946"
 |||  
 |`trace\|t on\|off`|Aktiviert und deaktiviert die Ablaufverfolgung.|  
   
- SqlLocalDB behandelt Leerzeichen als Trennzeichen. Sie müssen die Instanznamen mit Anführungszeichen umschließen, die Leerzeichen und Sonderzeichen enthalten. Zum Beispiel:  
+ SqlLocalDB behandelt Leerzeichen als Trennzeichen. Sie müssen die Instanznamen mit Anführungszeichen umschließen, die Leerzeichen und Sonderzeichen enthalten. Beispiel:  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

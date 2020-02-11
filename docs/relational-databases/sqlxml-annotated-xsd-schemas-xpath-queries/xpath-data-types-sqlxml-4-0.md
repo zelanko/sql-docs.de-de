@@ -29,10 +29,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247089"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
@@ -48,7 +48,7 @@ ms.locfileid: "75247089"
   
 -   Boolesche Operatoren (AND, OR)  
   
--   Relationale Operatoren (\<, \<#a0, =, >=)  
+-   Relationale Operatoren (\<, \<>, =, >=)  
   
 -   Gleichheitsoperatoren (=, !=)  
   
@@ -90,13 +90,13 @@ ms.locfileid: "75247089"
   
 |XDR-Datentyp|Entsprechung<br /><br /> XPath-Datentyp|Verwendete SQL Server-Konvertierung|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Nicht zutreffend|KeineEmployeeID|  
+|Nonebin.base64bin.hex|–|KeineEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|– (es gibt keinen Datentyp in XPath, der dem fixed14.4 XDR-Datentyp entspricht)|CONVERT(money, EmployeeID)|  
 |date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|in<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Die Datums-und Uhrzeit Konvertierungen sind so konzipiert, dass Sie funktionieren, ob der Wert in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der Datenbank mit dem **DateTime-Datentyp** oder einer **Zeichenfolge**gespeichert wird. Beachten Sie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dass der **DateTime-Datentyp** keine **Zeitzone** verwendet und eine geringere Genauigkeit aufweist als der XML- **Zeit** Datentyp. Wenn Sie den **Zeitzone** -Datentyp oder die zusätzliche Genauigkeit einschließen möchten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichern Sie die Daten in mithilfe eines **Zeichen** folgen Typs.  
   
@@ -131,7 +131,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||X ist unbekannt|X ist **Zeichenfolge**|X ist **Zahl**|X ist ein **boolescher** Wert.|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) #a0 0|X != 0|-|  
+|boolean(X)|-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -150,7 +150,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Der Zeichenfolge wird das Präfix "E-" hinzugefügt, und das Ergebnis wird dann mit `N'E-1'` verglichen.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B: Führen Sie mehrere Datentypkonvertierungen in einer XPath-Abfrage aus  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Führen Sie mehrere Datentypkonvertierungen in einer XPath-Abfrage aus  
  Betrachten Sie die folgende, für ein mit Anmerkungen versehenes XSD-Schema angegebene XPath-Abfrage: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Diese XPath-Abfrage gibt alle ** \<OrderDetail->** Elemente zurück, die `@UnitPrice * @OrderQty > 98`das Prädikat erfüllen. Wenn der **UnitPrice** mit einem **festgelegten 14,4** -Datentyp im Schema mit Anmerkungen versehen wird, entspricht dieses Prädikat dem SQL-Ausdruck:  

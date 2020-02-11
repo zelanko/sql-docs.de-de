@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579987"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website
@@ -24,7 +24,7 @@ Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzu
 
 **Das Berichts-Viewer-Webpart ist ein eigenständiges Lösungspaket und ist nicht dem integrierten SharePoint-Modus für SQL Server Reporting Services verknüpft.**
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 > [!IMPORTANT]
 > Ab der Version „15.X.X.X“ können Sie das ReportViewerWebPart parallel mit Ihren vorhandenen Anwendungen im integrierten SharePoint-Modus von Reporting Services installieren.
@@ -38,7 +38,7 @@ Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzu
 
 **Unterstützte Reporting Services-Versionen:**  
 * SQL Server 2008 Reporting Services und höher (einheitlicher Modus).
-* Power BI-Berichtsserver
+* Power BI-Berichtsserver
 
 ## <a name="download-the-report-viewer-web-part-solution-package"></a>Das Herunterladen des Projektmappenpakets des Berichts-Viewer-Webparts
 

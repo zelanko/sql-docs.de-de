@@ -1,5 +1,5 @@
 ---
-title: Seite "abhängige Elemente" (Berichts-Manager) | Microsoft-Dokumentation
+title: Abhängige Elemente (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109328"
 ---
 # <a name="dependent-items-page-report-manager"></a>Abhängige Elemente (Seite) (Berichts-Manager)
@@ -33,7 +33,7 @@ ms.locfileid: "66109328"
   
 4.  Wählen Sie die Registerkarte **Abhängige Elemente** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Zeigt den Namen des Berichts oder Modells an. Klicken Sie auf den Namen, um den Bericht zu öffnen. Klicken Sie auf den Namen des Modells, um dessen Eigenschaftenseiten zu öffnen.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66109328"
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den Bericht aus der Berichtsserver-Datenbank zu löschen. Aktivieren Sie das Kontrollkästchen neben den zu löschenden Elementen, bevor Sie auf **Löschen**klicken.  
   
- **Verschieben**  
+ **Move**  
  Klicken Sie auf diese Schaltfläche, um einen Bericht oder Modell innerhalb der Ordnerhierarchie zu verschieben. Bevor Sie auf **Verschieben**klicken, aktivieren Sie die Kontrollkästchen neben den zu verschiebenden Elementen. Dadurch wird die Seite Elemente verschieben geöffnet, auf der Sie die Ordner nach einem neuen Speicherort durchsuchen können.  
   
  **Bearbeiten**  
@@ -52,19 +52,19 @@ ms.locfileid: "66109328"
  **Typ**  
  Zeigt das Symbol für den Elementtyp an.  
   
- **Änderungsdatum**  
+ **Geändert am**  
  Zeigt das Datum und die Uhrzeit der letzten Änderung des Berichts oder Modells an.  
   
  **Geändert von**  
  Zeigt den Namen des Benutzers an, der die Elementeigenschaften zuletzt geändert hat.  
   
- **Beim Ausführen**  
+ **Wann ausgeführt**  
  Bei Berichten, die als Momentaufnahmen zur Berichtsausführung ausgeführt werden, wird mit dieser Option das Datum und die Uhrzeit der letzten Aktualisierung des Berichts angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

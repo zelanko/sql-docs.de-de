@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282033"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Anzeigen der Seite Details zum Objekt-Explorer
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann für jedes im Objekt-Explorer ausgewählte Objekt einen Bericht anzeigen. Dieser Bericht wird als Seite Details zum Objekt-Explorer bezeichnet und von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]erstellt. Er wird im Dokumentfenster geöffnet.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Bericht kann für jedes in Objekt-Explorer ausgewählte Objekt angezeigt werden. Dieser Bericht wird als Seite Details zum Objekt-Explorer bezeichnet und von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]erstellt. Er wird im Dokumentfenster geöffnet.  
   
 ## <a name="showing-the-object-explorer-details-page"></a>Anzeigen der Seite Details zum Objekt-Explorer  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63282033"
   
  Die Seite **Details zum Objekt-Explorer** enthält zwei Bereiche. Der Bereich **Liste** im oberen Teil der Seite zeigt eine Liste der Objekte im ausgewählten Knoten des Objekt-Explorers an. Unter dem Bereich **Liste** werden im Bereich **Details** Informationen angezeigt, die höchstwahrscheinlich für jeden Objekttyp von Interesse sind. Wenn Sie viele Elemente löschen möchten, verwenden Sie die Ansicht **Liste** , um mehrere Objekte gleichzeitig auszuwählen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Auswählen des Schemas für Tastenkombinationen](lesson-1-6-select-the-keyboard-shortcut-scheme.md)  
   
   

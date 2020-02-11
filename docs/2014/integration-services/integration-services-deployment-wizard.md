@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Bereitstellungs-Assistent | Microsoft-Dokumentation
+title: Bereitstellungs-Assistent für Integration Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,47 +13,47 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058010"
 ---
 # <a name="integration-services-deployment-wizard"></a>Bereitstellungs-Assistent für Integration Services
   Der Bereitstellungs-Assistent für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Projekte im SSISDB-Katalog auf einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz bereit, die das Projektbereitstellungsmodell verwendet.  
   
- Starten der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Bereitstellungs-Assistenten aus einem geöffneten Projekt im [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Option **bereitstellen** aus der **Projekt** im Menü. Um den Assistenten zu starten, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], erweitern Sie die **Integration Services-Kataloge** > **SSISDB** mit der rechten Maustaste der Knoten im Objekt-Explorer die **Projekte** Ordner, und klicken Sie dann auf **-Projekt bereitstellen**.  
+ Um den Bereitstellungs-Assistenten in einem geöffneten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]in zu starten **, wählen Sie** im Menü **Projekt** die Option bereitstellen aus. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Um den Assistenten in zu starten, erweitern Sie den Knoten **Integration Services Kataloge** > **ssisdb** in Objekt-Explorer, klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie dann auf **Projekt**bereitstellen.  
   
- Der Assistent führt Sie die folgenden vier Schritte aus. Klicken Sie auf **Weiter** mit dem nächsten Schritt, verschieben oder **zurück** zum vorherigen Schritt zurückgegeben.  
+ Der Assistent führt Sie die folgenden vier Schritte aus. Klicken Sie auf **weiter** , um zum nächsten Schritt zu wechseln **, oder zurück, um zum** vorherigen Schritt zurückzukehren.  
   
-1.  **Wählen Sie Quelle** - Option der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, das Sie bereitstellen möchten.  
+1.  **Quelle auswählen** : Wählen Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] das Projekt aus, das Sie bereitstellen möchten.  
   
-2.  **Wählen Sie Ziel** -wählen Sie das Projektziel.  
+2.  **Ziel auswählen** : Wählen Sie das Projektziel aus.  
   
-3.  **Überprüfen Sie** -angezeigt.  
+3.  **Review** : zeigt Ihre Auswahl an.  
   
-4.  **Bereitstellen/Ergebnisse** – stellt das Projekt bereit und zeigt die Ergebnisse an.  
+4.  Bereitstellen **/Ergebnisse** : stellt das Projekt bereit und zeigt die Ergebnisse an.  
   
-## <a name="select-source"></a>Quellen auswählen  
- Um eine projektbereitstellungsdatei bereitzustellen, die Sie erstellt haben, wählen **projektbereitstellungsdatei** und geben Sie den Pfad zur ispac-Datei, oder klicken Sie auf **Durchsuchen** finden sie in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Projektordner. Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog**aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein.  
+## <a name="select-source"></a>Auswählen der Quelle  
+ Um eine von Ihnen erstellte Projekt Bereitstellungs Datei bereitzustellen, wählen Sie **Projekt Bereitstellungs Datei** aus, und geben Sie den Pfad zur ispac-Datei ein, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder klicken Sie auf **Durchsuchen** , um Sie im Projektordner zu suchen Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog**aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein.  
   
- Wenn Sie den Assistenten in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] starten, dann wählt der Assistent standardmäßig das geöffnete Projekt als Quelle aus und überspringt diesen Schritt. Um zu diesem Schritt zurückzukehren und eine andere Quelle auszuwählen, klicken Sie auf **zurück** oder klicken Sie auf **Quelle auswählen** im linken Bereich.  
+ Wenn Sie den Assistenten in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] starten, dann wählt der Assistent standardmäßig das geöffnete Projekt als Quelle aus und überspringt diesen Schritt. Wenn Sie zu diesem Schritt zurückkehren und eine andere Quelle auswählen möchten, klicken Sie auf zurück **, oder klicken** Sie im linken Bereich auf **Quelle auswählen** .  
   
 ## <a name="select-destination"></a>Ziel auswählen  
  Um den Zielordner für das Projekt im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog auszuwählen, geben Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz ein, oder klicken Sie auf **Durchsuchen** , um aus einer Liste von Servern auszuwählen. Geben Sie den Projektpfad in SSISDB ein, oder klicken Sie auf **Durchsuchen** , um ihn auszuwählen.  
   
  Wenn Sie den Assistenten in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] starten, dann wählt der Assistent standardmäßig die verbundene Serverinstanz aus und gibt den Pfad für das ausgewählte Projekt ein. Sie können diese Werte ändern, um das Projekt an einem anderen Speicherort bereitzustellen.  
   
-## <a name="review"></a>Lesen Sie  
+## <a name="review"></a>Überprüfung  
  Mit dem Assistenten können Sie die von Ihnen ausgewählten Einstellungen überprüfen, bevor Sie das Projekt bereitstellen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.  
   
 ## <a name="deployresults"></a>Bereitstellen/Ergebnisse  
- Beim Klicken auf **bereitstellen** aus der **Review** Seite das Projekt bereitgestellt wird und die **Ergebnisse** Seite zeigt den Erfolg oder Misserfolg der einzelnen Aktionen. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...**  um die Ergebnisse als XML-Datei zu speichern.  
+ Wenn Sie auf der Seite **überprüfen** auf Bereitstellen klicken, wird das Projekt bereitgestellt, **und auf der** Seite **Ergebnisse** wird der Erfolg oder Misserfolg der einzelnen Aktionen angezeigt. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...** , um die Ergebnisse in einer XML-Datei zu speichern.  
   
  Klicken Sie auf **Schließen**, um den Assistenten zu beenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Bereitstellen von Projekten auf dem Integration Services-Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Bereitstellen von Projekten auf Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Bereitstellung von Projekten und Paketen](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

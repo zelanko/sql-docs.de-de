@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287358"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   Sie fragt das Rowset `SalesOrder` ab, das in der `FROM`-Klausel angegeben ist. Das Ergebnis ist ein XML-Code mit einem oder mehreren <`SalesOrder`>-Elementen.  
   
--   Gibt den `AUTO` -Modus und die `TYPE` -Direktive an. `AUTO` -Modus wandelt das Abfrageergebnis in XML, und die `TYPE` -Direktive wird das Ergebnis als `xml` Typ.  
+-   Gibt den `AUTO` -Modus und die `TYPE` -Direktive an. `AUTO`der-Modus wandelt das Abfrageergebnis in XML um `TYPE` , und die-Direktive gibt das Ergebnis als `xml` -Typ zurück.  
   
 -   Sie schließt zwei geschachtelte `SELECT` -Anweisungen ein, die durch ein Komma voneinander getrennt sind. Die erste geschachtelte `SELECT` -Anweisung ruft die Bestellinformationen (Kopfzeile und Details) ab, und die zweite geschachtelte `SELECT` -Anweisung ruft die Informationen zum Vertriebsmitarbeiter ab.  
   
@@ -165,7 +165,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von geschachtelten FOR XML-Abfragen](use-nested-for-xml-queries.md)  
   
   

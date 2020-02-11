@@ -1,5 +1,5 @@
 ---
-title: Allgemeine Eigenschaftenseite Berichtsteile (Berichts-Manager) | Microsoft-Dokumentation
+title: Allgemeine Eigenschaften (Seite), Berichts Teile (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109088"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Allgemeine Eigenschaften (Seite), Berichtsteile (Berichts-Manager)
@@ -33,8 +33,8 @@ ms.locfileid: "66109088"
   
 3.  Klicken Sie in der Dropdownliste auf **Verwalten**. Die Eigenschaftenseite Allgemein wird geöffnet.  
   
-## <a name="options"></a>Optionen  
- **Änderungsdatum**  
+## <a name="options"></a>Tastatur  
+ **Geändert am**  
  Datum und Uhrzeit, zu denen die Berichtsteileigenschaften zuletzt auf dem Server geändert wurden oder eine neue Version des Berichtsteils auf dem Server veröffentlicht wurde. Schreibgeschützt.  
   
  **Geändert von**  
@@ -67,21 +67,21 @@ ms.locfileid: "66109088"
  **Löschen**  
  Entfernen Sie den Berichtsteil aus der Berichtsserver-Datenbank. Durch das Löschen eines Berichtsteils vom Server wird nicht verhindert, dass vorhandene Berichte, denen der Berichtsteil hinzugefügt wurde, gerendert werden.  
   
- **Verschieben**  
- Klicken Sie auf diese Option, um die Seite Elemente verschieben zu öffnen und einen Berichtsteil innerhalb der Ordnerhierarchie des Berichtsservers zu verschieben. Weitere Informationen finden Sie unter [Seite "Elemente" verschieben &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Move**  
+ Klicken Sie auf diese Option, um die Seite Elemente verschieben zu öffnen und einen Berichtsteil innerhalb der Ordnerhierarchie des Berichtsservers zu verschieben. Weitere Informationen finden Sie auf der [Seite zum Verschieben von Elementen &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Download**  
+ **Downloaden**  
  Extrahieren Sie eine Kopie der Berichtsteildefinition, die als RSC-Datei gespeichert werden soll. Die RSC-Datei kann in einen Berichtsserverordner hochgeladen oder zum Ersetzen eines vorhandenen Berichtsteils in einem Berichtsserverordner verwendet werden.  
   
- **Ersetzen**  
+ **Stelle**  
  Ersetzen Sie die Berichtsteildefinition durch eine andere Definition aus einer RSC-Datei.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwaltung von Berichtsteilen](report-design/managing-report-parts.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwalten von Berichts teilen](report-design/managing-report-parts.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Report Parts and Datasets in Report Builder (Berichtsteile und Datasets in Berichts-Generator)](report-data/report-parts-and-datasets-in-report-builder.md)  
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Berichtsteile und Datasets in Berichts-Generator](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

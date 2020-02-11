@@ -1,5 +1,5 @@
 ---
-title: Installieren von Distributed Replay von der Eingabeaufforderung | Microsoft-Dokumentation
+title: Installieren von Distributed Replay von der Eingabeaufforderung aus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149737"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Installieren von Distributed Replay von der Eingabeaufforderung
@@ -37,18 +37,18 @@ ms.locfileid: "63149737"
   
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Installation.  
   
-|Parameter|Beschreibung|Unterstützte Werte|  
+|Parameter|BESCHREIBUNG|Unterstützte Werte|  
 |---------------|-----------------|----------------------|  
-|/CTLRSVCACCOUNT<br /><br /> **Optional**|Dienstkonto für den Distributed Replay Controller-Dienst.|Überprüft Konto und Kennwort.|  
-|/CTLRSVCPASSWORD<br /><br /> **Optional**|Kennwort für das Distributed Replay Controller-Dienstkonto.|Überprüft Konto und Kennwort.|  
-|/CTLRSTARTUPTYPE<br /><br /> **Optional**|Starttyp für den Distributed Replay Controller-Dienst.|Automatic<br /><br /> Disabled<br /><br /> Manuell|  
-|/CTLRUSERS<br /><br /> **Optional**|Geben Sie an, welche Benutzer über Berechtigungen für den Distributed Replay Controller-Dienst verfügen.|Satz von Benutzerkontozeichenfolgen, mit „ “ (Leerzeichen) als Trennzeichen.<br /><br /> **Wichtige**: Wenn Sie den Distributed Replay Controller-Dienst konfigurieren, können Sie eine oder mehrere Benutzerkonten angeben, die zum Ausführen der Distributed Replay Client-Dienste verwendet werden. Die folgenden Kontotypen werden unterstützt:<br /><br /> Domänenbenutzerkonto<br /><br /> Vom Benutzer erstelltes lokales Benutzerkonto<br /><br /> Administrator<br /><br /> Virtuelles Konto und verwaltetes Dienstkonto (Managed Service Account, MSA)<br /><br /> Netzwerkdienste, lokale Dienste und System<br /><br /> <br /><br /> Gruppenkonten (lokales oder Domänenbenutzerkonto) und andere integrierte Konten (wie "Jeder") werden nicht akzeptiert.|  
-|/CLTSVCACCOUNT<br /><br /> **Optional**|Dienstkonto für den Distributed Replay Client-Dienst.|Überprüft Konto und Kennwort.|  
-|/CLTSVCPASSWORD<br /><br /> **Optional**|Kennwort für das Distributed Replay Client-Dienstkonto.|Überprüft Konto und Kennwort.|  
-|/CLTSTARTUPTYPE<br /><br /> **Optional**|Starttyp für den Distributed Replay Client-Dienst.|Automatic<br /><br /> Disabled<br /><br /> Manuell|  
-|/CLTCTLRNAME<br /><br /> **Optional**|Der Computername, mit dem der Client für den Distributed Replay Controller-Dienst kommuniziert.||  
-|/CLTWORKINGDIR<br /><br /> **Optional**|Das Arbeitsverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
-|/CLTRESULTDIR<br /><br /> **Optional**|Das Ergebnisverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
+|/CTLRSVCACCOUNT<br /><br /> **Optionale**|Dienstkonto für den Distributed Replay Controller-Dienst.|Überprüft Konto und Kennwort.|  
+|/CTLRSVCPASSWORD<br /><br /> **Optionale**|Kennwort für das Distributed Replay Controller-Dienstkonto.|Überprüft Konto und Kennwort.|  
+|/CTLRSTARTUPTYPE<br /><br /> **Optionale**|Starttyp für den Distributed Replay Controller-Dienst.|Automatisch<br /><br /> Disabled<br /><br /> Manuell|  
+|/CTLRUSERS<br /><br /> **Optionale**|Geben Sie an, welche Benutzer über Berechtigungen für den Distributed Replay Controller-Dienst verfügen.|Satz von Benutzerkontozeichenfolgen, mit „ “ (Leerzeichen) als Trennzeichen.<br /><br /> **Wichtig**: Wenn Sie den Distributed Replay Controller-Dienst konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:<br /><br /> Domänenbenutzerkonto<br /><br /> Vom Benutzer erstelltes lokales Benutzerkonto<br /><br /> Administrator<br /><br /> Virtuelles Konto und verwaltetes Dienstkonto (Managed Service Account, MSA)<br /><br /> Netzwerkdienste, lokale Dienste und System<br /><br /> <br /><br /> Gruppenkonten (lokales oder Domänenbenutzerkonto) und andere integrierte Konten (wie "Jeder") werden nicht akzeptiert.|  
+|/CLTSVCACCOUNT<br /><br /> **Optionale**|Dienstkonto für den Distributed Replay Client-Dienst.|Überprüft Konto und Kennwort.|  
+|/CLTSVCPASSWORD<br /><br /> **Optionale**|Kennwort für das Distributed Replay Client-Dienstkonto.|Überprüft Konto und Kennwort.|  
+|/CLTSTARTUPTYPE<br /><br /> **Optionale**|Starttyp für den Distributed Replay Client-Dienst.|Automatisch<br /><br /> Disabled<br /><br /> Manuell|  
+|/CLTCTLRNAME<br /><br /> **Optionale**|Der Computername, mit dem der Client für den Distributed Replay Controller-Dienst kommuniziert.||  
+|/CLTWORKINGDIR<br /><br /> **Optionale**|Das Arbeitsverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
+|/CLTRESULTDIR<br /><br /> **Optionale**|Das Ergebnisverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
   
 ### <a name="sample-syntax"></a>Beispielsyntax:  
  **So installieren Sie die Distributed Replay Controller-Komponente**  
@@ -57,7 +57,7 @@ ms.locfileid: "63149737"
 setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /CTLRUSERS="domain\user1" "domain\user2" /CTLRSVCACCOUNT="domain\svcuser" /CTLRSVCPASSWORD="password" /CTLRSTARTUPTYPE=Automatic  
 ```  
   
- **So installieren Sie die Distributed Replay Client-Komponente**  
+ **So installieren Sie die Distributed Replay Client Komponente**  
   
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  

@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit Oracle-Datenbank (OracleToSQL) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit Oracle Database (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,118 +13,118 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: fc25c36a0d0133975414f4c7270da2974b552f40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266189"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Herstellen einer Verbindung mit Oracle Database (OracleToSQL)
-Migrieren von Oracle-Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie müssen eine Verbindung, mit der Oracle-Datenbank, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten zu allen Oracle-Schemas ab, und anschließend in der Oracle-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen zu den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
+Zum Migrieren von Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken zu müssen Sie eine Verbindung mit der Oracle-Datenbank herstellen, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, werden von SSMA Metadaten zu allen Oracle-Schemas abgerufen und anschließend im Bereich Oracle-metadatenexplorer angezeigt. SSMA speichert Informationen über den Datenbankserver, speichert aber keine Kenn Wörter.  
   
-Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank.  
+Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten.  
   
-Metadaten für die Oracle-Datenbank wird nicht automatisch aktualisiert. Stattdessen sollten Sie die Metadaten in Oracle-Metadaten-Explorer zu aktualisieren, müssen Sie manuell es aktualisieren. Weitere Informationen finden Sie im Abschnitt "Aktualisieren von Oracle-Metadaten" weiter unten in diesem Thema.  
+Metadaten über die Oracle-Datenbank werden nicht automatisch aktualisiert. Wenn Sie die Metadaten im Oracle-metadatenexplorer aktualisieren möchten, müssen Sie Sie stattdessen manuell aktualisieren. Weitere Informationen finden Sie im Abschnitt "Aktualisieren von Oracle-Metadaten" weiter unten in diesem Thema.  
   
 ## <a name="required-oracle-permissions"></a>Erforderliche Oracle-Berechtigungen  
-Das Konto, das verwendet wird, für die Verbindung zur Oracle-Datenbank muss zumindest **CONNECT** Berechtigungen. Dies ermöglicht der SSMA zum Abrufen von Metadaten aus Schemas im Besitz des Benutzers eine Verbindung herstellt. Um Metadaten für Objekte in anderen Schemas zu erhalten, und klicken Sie dann die Objekte in diesen Schemas konvertieren, muss das Konto folgenden Berechtigungen verfügen:  
+Das Konto, das zum Herstellen einer Verbindung mit der Oracle-Datenbank verwendet wird, muss mindestens über **Connect** -Berechtigungen verfügen. Dies ermöglicht SSMA das Abrufen von Metadaten aus Schemas im Besitz des Benutzers, der eine Verbindung herstellt. Zum Abrufen von Metadaten für Objekte in anderen Schemas und zum anschließenden Konvertieren von Objekten in diesen Schemas muss das Konto über die folgenden Berechtigungen verfügen:  
   
--   ERSTELLEN SIE EINE PROZEDUR  
+-   beliebige Prozedur erstellen  
   
--   FÜHREN SIE EINE PROZEDUR  
+-   beliebige Prozedur ausführen  
   
--   WÄHLEN SIE EINE TABELLE  
+-   beliebige Tabelle auswählen  
   
--   WÄHLEN SIE EINE BELIEBIGE SEQUENZ  
+-   beliebige Sequenz auswählen  
   
--   ERSTELLEN SIE EINEN BELIEBIGEN TYP  
+-   beliebigen Typ erstellen  
   
--   ERSTELLEN SIE EINEN BELIEBIGEN TRIGGER  
+-   beliebigen-Auslösers  
   
--   WÄHLEN SIE ALLE WÖRTERBUCH  
+-   beliebiges Wörterbuch auswählen  
   
 ## <a name="establishing-a-connection-to-oracle"></a>Herstellen einer Verbindung mit Oracle  
-Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten werden vom SSMA verwendet, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax, und wenn es Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können diese Metadaten im Oracle-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
+Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadaten der Datenbank und fügt diese Metadaten dann der Projektdatei hinzu. Diese Metadaten werden von SSMA verwendet, wenn Objekte in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax konvertiert werden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migriert werden. Sie können diese Metadaten im Bereich Oracle-metadatenexplorer durchsuchen und die Eigenschaften einzelner Datenbankobjekte überprüfen.  
   
 > [!IMPORTANT]  
-> Bevor Sie versuchen, eine Verbindung herstellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren.  
+> Bevor Sie versuchen, eine Verbindung herzustellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren kann.  
   
-**Verbindung mit Oracle**  
+**Zum Herstellen einer Verbindung mit Oracle**  
   
-1.  Auf der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit Oracle**.  
+1.  Wählen Sie im Menü **Datei** die Option **mit Oracle verbinden**aus.  
   
-    Wenn Sie zuvor mit Oracle verbunden, gibt der Namen des Befehls werden **Wiederherstellen der Verbindung mit Oracle**.  
+    Wenn Sie zuvor eine Verbindung mit Oracle hergestellt haben, wird der Befehls Name **erneut mit Oracle**verbunden.  
   
-2.  In der **Anbieter** Kontrollkästchen **Oracle-Client-Anbieter** oder **OLE DB-Anbieter**, je nachdem, welcher Anbieter installiert ist. Der Standardwert ist Oracle-Client.  
+2.  Wählen Sie im Feld **Anbieter** die Option **Oracle-Client Anbieter** oder **OLE DB Anbieter**aus, je nachdem, welcher Anbieter installiert ist. Der Standardwert ist Oracle Client.  
   
-3.  In der **Modus** wählen **Modus "Standard"** , **TNSNAME Modus**, oder **verbindungszeichenfolgenmodus**.  
+3.  Wählen Sie im Feld **Modus** entweder den **Standard Modus**, den **TNSNAME-Modus**oder den **Verbindungs Zeichen folgen Modus**aus.  
   
-    Verwenden Sie Modus "standard", um den Servernamen und Port anzugeben. Verwenden Sie Namen Dienstmodus, um die Oracle-Dienstname manuell anzugeben. Verwenden Sie verbindungszeichenfolgenmodus, um eine vollständige Verbindungszeichenfolge bereitstellen.  
+    Verwenden Sie den Standardmodus, um den Servernamen und den Port anzugeben. Verwenden Sie den Dienstnamen Modus, um den Oracle-Dienstnamen manuell anzugeben. Verwenden Sie den Verbindungs Zeichen folgen Modus, um eine vollständige Verbindungs Zeichenfolge  
   
-4.  Bei Auswahl von **Modus "Standard"** , geben Sie die folgenden Werte:  
+4.  Wenn Sie den **Standard Modus**auswählen, geben Sie die folgenden Werte an:  
   
-    1.  In der **Servernamen** Feld eingeben oder auswählen, den Namen oder IP-Adresse des Datenbankservers.  
+    1.  Geben Sie im Feld **Server Name** den Namen oder die IP-Adresse des Datenbankservers ein, oder wählen Sie ihn aus.  
   
-    2.  Wenn der Datenbankserver nicht konfiguriert ist, um auf Clientverbindungen standardmäßig port (1521) verwenden, geben Sie die Portnummer, die verwendet wird, für Oracle-Verbindungen in der **Serverport** Feld.  
+    2.  Wenn der Datenbankserver nicht für die Annahme von Verbindungen über den Standardport (1521) konfiguriert ist, geben Sie im Feld **Serverport** die Portnummer ein, die für Oracle-Verbindungen verwendet wird.  
   
-    3.  In der **Oracle SID** Geben Sie die ID des Systems.  
+    3.  Geben Sie im Feld **Oracle sid** den System Bezeichner ein.  
   
-    4.  In der **Benutzernamen** Geben Sie eine Oracle-Konto, das die erforderlichen Berechtigungen verfügt.  
+    4.  Geben Sie im Feld **Benutzername** ein Oracle-Konto ein, das über die erforderlichen Berechtigungen verfügt.  
   
-    5.  In der **Kennwort** Geben Sie das Kennwort für den angegebenen Benutzernamen ein.  
+    5.  Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.  
   
-5.  Bei Auswahl von **TNSNAME Modus**, geben Sie die folgenden Werte:  
+5.  Wenn Sie den **TNSNAME-Modus**auswählen, geben Sie die folgenden Werte an:  
   
-    1.  In der **Connect Bezeichner** Geben Sie eine Verbindung herstellen (TNS Alias) der Bezeichner der Datenbank.  
+    1.  Geben Sie im Feld **Verbindungs Bezeichner** den Verbindungs Bezeichner (TNS-Alias) der Datenbank ein.  
   
-    2.  In der **Benutzernamen** Geben Sie eine Oracle-Konto, das die erforderlichen Berechtigungen verfügt.  
+    2.  Geben Sie im Feld **Benutzername** ein Oracle-Konto ein, das über die erforderlichen Berechtigungen verfügt.  
   
-    3.  In der **Kennwort** Geben Sie das Kennwort für den angegebenen Benutzernamen ein.  
+    3.  Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.  
   
-6.  Bei Auswahl von **verbindungszeichenfolgenmodus**, geben Sie eine Verbindungszeichenfolge in der **Verbindungszeichenfolge** Feld.  
+6.  Wenn Sie den **Verbindungs Zeichen folgen Modus**auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.  
   
-    Das folgende Beispiel zeigt eine OLE DB-Verbindungszeichenfolge:  
+    Das folgende Beispiel zeigt eine OLE DB Verbindungs Zeichenfolge:  
   
     `Provider=OraOLEDB.Oracle;Data Source=MyOracleDB;User Id=myUsername;Password=myPassword;`  
   
-    Das folgende Beispiel zeigt eine Oracle-Client-Verbindungszeichenfolge, die die integrierte Sicherheit verwendet wird:  
+    Das folgende Beispiel zeigt eine Oracle-Client Verbindungs Zeichenfolge, die die integrierte Sicherheit verwendet:  
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    Weitere Informationen finden Sie unter [auf Oracle Verbinden &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
+    Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Oracle &#40;oracleto SQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
-## <a name="reconnecting-to-oracle"></a>Wiederherstellen der Verbindung mit Oracle  
-Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank. Sie können offline arbeiten, bis Sie die Metadaten aktualisieren, laden Sie die Datenbankobjekte in möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und Daten migrieren.  
+## <a name="reconnecting-to-oracle"></a>Erneutes Herstellen einer Verbindung mit Oracle  
+Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten. Sie können offline arbeiten, bis Sie Metadaten aktualisieren, Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]laden und Daten migrieren möchten.  
   
-## <a name="refreshing-oracle-metadata"></a>Aktualisieren von Metadaten für Oracle  
-Metadaten für die Oracle-Datenbank wird nicht automatisch aktualisiert. Die Metadaten in Oracle-Metadaten-Explorer ist eine Momentaufnahme der Metadaten, wenn Sie zuerst eine Verbindung hergestellt oder der letzten, dass Sie manuell die Metadaten aktualisiert werden. Sie können die Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  
+## <a name="refreshing-oracle-metadata"></a>Aktualisieren von Oracle-Metadaten  
+Metadaten über die Oracle-Datenbank werden nicht automatisch aktualisiert. Bei den Metadaten im Oracle-metadatenexplorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung hergestellt haben, oder wenn Sie das letzte Mal manuell Sie können Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  
   
-**Aktualisieren von Metadaten**  
+**So aktualisieren Sie Metadaten**  
   
 1.  Stellen Sie sicher, dass Sie mit der Datenbank verbunden sind.  
   
-2.  Wählen Sie in Oracle-Metadaten-Explorer das Kontrollkästchen neben jedem Schema oder die Datenbank-Objekt, das Sie aktualisieren möchten.  
+2.  Aktivieren Sie im Oracle-metadatenexplorer das Kontrollkästchen neben jedem Schema oder Datenbankobjekt, das Sie aktualisieren möchten.  
   
-3.  Mit der rechten Maustaste **Schemas**, oder die einzelnes Schema oder die Datenbank-Objekt, und wählen Sie dann **Refresh from Database aktualisieren**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Schemas**oder das einzelne Schema oder Datenbankobjekt, und wählen Sie dann **aus Datenbank aktualisieren aus**.  
   
-    SSMA wird angezeigt, wenn Sie nicht über eine aktive Verbindung verfügen, die **Herstellen einer Verbindung mit Oracle** Dialogfeld, sodass Sie eine Verbindung herstellen können.  
+    Wenn Sie nicht über eine aktive Verbindung verfügen, zeigt SSMA das Dialogfeld **Verbindung mit Oracle herstellen an** , sodass Sie eine Verbindung herstellen können.  
   
-4.  Geben Sie in der Aktualisierung von Datenbank (Dialogfeld) welche Objekte aktualisiert.  
+4.  Geben Sie im Dialogfeld aus Datenbank aktualisieren an, welche Objekte aktualisiert werden sollen.  
   
-    -   Um ein Objekt zu aktualisieren, klicken Sie auf die **Active** Feld neben dem Objekt, bis ein Pfeil angezeigt wird.  
+    -   Um ein Objekt zu aktualisieren, klicken Sie auf das **aktive** Feld neben dem Objekt, bis ein Pfeil angezeigt wird.  
   
-    -   Um zu verhindern, dass ein Objekt aktualisiert wird, klicken Sie auf die **Active** Feld neben dem Objekt, bis ein **X** angezeigt wird.  
+    -   Um zu verhindern, dass ein Objekt aktualisiert wird, klicken Sie auf das **aktive** Feld neben dem Objekt, bis ein **X** angezeigt wird.  
   
-    -   Klicken Sie zum Aktualisieren, oder lehnen Sie eine Kategorie von Objekten ab, auf die **Active** Feld neben dem Ordner "Kategorie".  
+    -   Um eine Kategorie von Objekten zu aktualisieren oder abzulehnen, klicken Sie auf das **aktive** Feld neben dem Kategorieordner.  
   
-    Um die Definitionen der farbcodierung anzuzeigen, klicken Sie auf die **Legende** Schaltfläche.  
+    Um die Definitionen der Farbcodierung anzuzeigen, klicken Sie auf die Schaltfläche **Legende** .  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>Nächster Schritt  
   
--   Der nächste Schritt des Migrationsvorgangs besteht darin [Herstellen einer Verbindung mit einer Instanz von SQL Server](connecting-to-sql-server-oracletosql.md).  
+-   Der nächste Schritt des Migrations Vorgangs besteht darin, [eine Verbindung mit einer Instanz von SQL Server herzustellen](connecting-to-sql-server-oracletosql.md).  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von Oracle-Datenbanken zu SQL Server &#40;oracleto SQL-&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

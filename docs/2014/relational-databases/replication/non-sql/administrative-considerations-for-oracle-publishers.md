@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022556"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern
@@ -62,7 +62,7 @@ ms.locfileid: "63022556"
   
  Informationen zum Löschen und Neukonfigurieren des Verlegers finden Sie im Abschnitt zu Änderungen, die eine Neukonfiguration des Verlegers erforderlich machen, im Thema [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md)   
  [Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](oracle-publishing-overview.md)  

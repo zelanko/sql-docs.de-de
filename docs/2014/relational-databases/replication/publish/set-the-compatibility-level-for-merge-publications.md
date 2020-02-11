@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199321"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Festlegen des Kompatibilitätsgrads von Mergeveröffentlichungen
@@ -32,7 +32,7 @@ ms.locfileid: "68199321"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Der Kompatibilitätsgrad wird auf der Seite **Abonnententypen** des Assistenten für neue Veröffentlichung festgelegt. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Create a Publication](create-a-publication.md)festgelegt wird. Nach dem Erstellen einer Veröffentlichungsmomentaufnahme kann der Kompatibilitätsgrad zwar erhöht, nicht aber gesenkt werden. Das Erhöhen des Kompatibilitätsgrades erfolgt auf der Seite **Allgemein** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md). Wenn Sie den Veröffentlichungskompatibilitätsgrad erhöhen, können alle vorhandenen Abonnements auf Servern, auf denen eine Version vor diesem Kompatibilitätsgrad ausgeführt wird, nicht mehr synchronisiert werden.  
   
 > [!NOTE]  
@@ -51,11 +51,11 @@ ms.locfileid: "68199321"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>So legen Sie den Veröffentlichungskompatibilitätsgrad einer Mergeveröffentlichung fest  
   
-1.  Führen Sie auf dem Verleger [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) unter Angabe eines Werts für **@publication_compatibility_level** aus, damit die Veröffentlichung mit älteren Versionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kompatibel ist. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
+1.  Führen Sie auf dem Verleger [sp_addmergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)aus, und geben **@publication_compatibility_level** Sie dabei einen Wert für an, damit die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Veröffentlichung mit älteren Versionen von kompatibel ist. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>So ändern Sie den Veröffentlichungskompatibilitätsgrad einer Mergeveröffentlichung  
   
-1.  Führen Sie [Sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) unter Angabe von **publication_compatibility_level-Wert** für **@property** und des entsprechenden Veröffentlichungskompatibilitätsgrads für **@value** aus.  
+1.  Führen Sie [sp_changemergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus, **@property** und geben Sie **publication_compatibility_level** für und den **@value**entsprechenden Veröffentlichungs Kompatibilitäts Grad für an.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>So bestimmen Sie den Veröffentlichungskompatibilitätsgrad einer Mergeveröffentlichung  
   
@@ -128,7 +128,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Create a Publication](create-a-publication.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Veröffentlichung](create-a-publication.md)  
   
   

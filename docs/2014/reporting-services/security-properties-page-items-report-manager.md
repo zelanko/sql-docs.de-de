@@ -1,5 +1,5 @@
 ---
-title: Sicherheit (Eigenschaftenseite) Elementen (Berichts-Manager) | Microsoft-Dokumentation
+title: Sicherheit (Eigenschaften Seite), Elemente (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102171"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Sicherheit (Eigenschaftenseite) (Elemente, Berichts-Manager)
@@ -50,19 +50,19 @@ ms.locfileid: "66102171"
  Aktivieren Sie das Kontrollkästchen neben der Gruppe oder dem Benutzernamen, den Sie löschen möchten, und klicken Sie auf **Löschen**. Die letzte Rollenzuweisung kann nicht gelöscht werden. Dasselbe gilt für eine integrierte Rollenzuweisung (Beispiel: "VORDEFINIERT\Administratoren"), in der die Sicherheitsbasis für den Berichtsserver definiert ist. Durch das Löschen einer Rollenzuweisung werden weder Gruppen- oder Benutzerkonten noch Rollendefinitionen gelöscht.  
   
  **Neue Rollenzuweisung**  
- Klicken Sie auf diese Schaltfläche, um die Seite Neue Rollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Rollenzuweisungen für das aktuelle Element erstellen. Weitere Informationen finden Sie unter [neue Rollenzuweisung: Bearbeiten Sie die Rollenseite für die Zuweisung &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um die Seite Neue Rollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Rollenzuweisungen für das aktuelle Element erstellen. Weitere Informationen finden Sie unter [neue Rollenzuweisung: Seite "Rollenzuweisung bearbeiten" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
  **Zur übergeordneten Sicherheit zurückkehren**  
  Aktivieren Sie diese Option, um die Sicherheitseinstellungen des Elements auf die des übergeordneten Elements zurückzusetzen. Wenn die Vererbung in der Berichtsserver-Ordnerhierarchie nicht unterbrochen ist, werden die Sicherheitseinstellungen des Ordners Home auf der höchsten Ebene verwendet.  
   
- **Gruppen- oder Benutzernamen**  
+ **Gruppe oder Benutzer**  
  Führt die Gruppen und Benutzer auf, die Teil einer vorhandenen Rollenzuweisung für das aktuelle Element sind. Vorhandene Rollenzuweisungen für den aktuellen Ordner werden für Gruppen und Benutzer definiert, die in dieser Spalte angezeigt werden. Sie können auf einen Gruppen- oder Benutzernamen klicken, um Einzelheiten zu Rollenzuweisungen anzuzeigen oder zu bearbeiten.  
   
- **Roles**  
+ **Rollen**  
  Führt eine oder mehrere Rollendefinitionen auf, die Teil einer vorhandenen Rollenzuweisung sind. Wenn einem Gruppen- oder Benutzerkonto mehrere Rollen zugewiesen sind, kann diese Gruppe bzw. dieser Benutzer alle Aufgaben ausführen, die zu diesen Rollen gehören. Wenn Sie die mit einer Rolle verbundenen Aufgaben anzeigen möchten, verwenden Sie SQL Server Management Studio, um die mit einer Rollendefinition verbundenen Aufgaben anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Vordefinierte Rollen](security/role-definitions-predefined-roles.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Rollenzuweisungen](security/role-assignments.md)   

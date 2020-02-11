@@ -1,5 +1,5 @@
 ---
-title: Dokumentieren von Miningmodellen (Data Mining-Add-ins für Excel) | Microsoft-Dokumentation
+title: Dokumentieren von Mining Modellen (Data Mining-Add-Ins für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081588"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Dokumentieren von Miningmodellen (Data Mining-Add-Ins für Excel)
-  ![Schaltfläche für Dokument-Modell, Data Mining-Menüband](media/dmc-docmodel.gif "Dokumentmodell-Schaltfläche, Data Mining-Menüband")  
+  ![Dokumentmodell (Schaltfläche auf Data Mining-Menüband)](media/dmc-docmodel.gif "Dokumentmodell (Schaltfläche auf Data Mining-Menüband)")  
   
- Die **Dokumentmodell** -Assistent erstellt einen Bericht, der nützliche Informationen über die Miningmodelle bereitstellt, die Sie erstellt haben. Durch Dokumentieren der erstellten Modelle können Sie die Datenquelle zurückverfolgen, die zum Generieren eines Modells verwendet wurde. Zudem können Sie so zusätzliche Informationen zur Verarbeitung des Modells abrufen und Parameteränderungen nachverfolgen, die die Ergebnisse des Modells beeinflussen.  
+ Der **Dokument Modell** -Assistent erstellt einen Bericht, der nützliche Informationen zu den von Ihnen erstellten Mining Modellen bereitstellt. Durch Dokumentieren der erstellten Modelle können Sie die Datenquelle zurückverfolgen, die zum Generieren eines Modells verwendet wurde. Zudem können Sie so zusätzliche Informationen zur Verarbeitung des Modells abrufen und Parameteränderungen nachverfolgen, die die Ergebnisse des Modells beeinflussen.  
   
 ## <a name="using-the-document-model-wizard"></a>Verwenden des Dokumentmodell-Assistenten  
   
-1.  Klicken Sie auf die **Data Mining** Registerkarte.  
+1.  Klicken Sie auf die Registerkarte **Data Mining** .  
   
-2.  In der **Modellverwendung** auf **Dokumentmodell**.  
+2.  Klicken Sie in der Gruppe **Modell Verwendung** auf **Dokument Modell**.  
   
-3.  In der **Modell auswählen** Dialogfeld Wählen Sie das Modell für den Bericht, und klicken Sie dann auf **Weiter**. Führen Sie die **Dokumentmodell** Assistenten separat für jedes Modell, das Sie dokumentieren möchten.  
+3.  Wählen Sie im Dialogfeld **Modell auswählen** das Modell aus, für das der Bericht angezeigt werden soll, und klicken Sie dann auf **weiter**. Sie müssen den **Dokument Modell** -Assistenten für jedes Modell, das Sie dokumentieren möchten, separat ausführen.  
   
-4.  In der **dokumentationsdetails auswählen** Dialogfeld Wählen Sie eine der beiden Optionen: **Führen Sie die Informationen** oder **Zusammenfassungsinformationen**.  
+4.  Wählen Sie im Dialogfeld **Dokumentations Details auswählen** eine der beiden folgenden Optionen aus: **umfassende Informationen** oder **Zusammenfassungs Informationen**.  
   
 5.  Klicken Sie auf **Fertig stellen**.  
   
-6.  Der Assistent erstellt automatisch ein neues Arbeitsblatt mit dem angegebenen Bericht, mit dem Titel **Modelldokumentation**,  
+6.  Der Assistent erstellt automatisch ein neues Arbeitsblatt, das den angegebenen Bericht mit der Bezeichnung **Modelldokumentation**enthält.  
   
 ## <a name="understanding-the-report"></a>Grundlegendes zum Bericht  
  Wenn Sie einen Bericht erstellen, in dem ein Data Mining-Modell dokumentiert wird, können Sie eine Zusammenfassung erstellen, die den Namen und eine Beschreibung des Modells enthält. Sie können aber auch einen vollständigen Bericht erstellen, der Details zur zugrunde liegenden Struktur und ausführliche Informationen zum Miningmodell enthält.  
@@ -62,7 +62,7 @@ ms.locfileid: "66081588"
 ||Lineare Regression|Anzahl von Strukturen (immer 1)<br /><br /> Anzahl von Knoten (immer 1)|  
 ||Naive Bayes|Wichtige Attribute|  
 ||Neuronales Netzwerk|Anzahl von Eingabeknoten<br /><br /> Anzahl von Ausgabeknoten<br /><br /> Anzahl ausgeblendeter Knoten|  
-||Sequenzclustering|Anzahl von Clustern|  
+||Sequenzclustering|Anzahl der Cluster|  
   
 ### <a name="complete-report"></a>Vollständiger Bericht  
  Der vollständige Bericht enthält sämtliche Informationen des Zusammenfassungsberichts und zusätzlich Angaben zu den im Modell verwendeten Datenspalten und die Ergebnisse der Analyse:  
@@ -70,14 +70,14 @@ ms.locfileid: "66081588"
 ||||  
 |-|-|-|  
 |**Metadaten**|Modellmetadaten|Algorithmusparameter und -werte|  
-||Spaltenmetadaten|Spaltenname<br /><br /> Verwendung<br /><br /> Datentyp<br /><br /> Inhaltstyp<br /><br /> Werte (Liste diskreter Werte oder Wertebereich)|  
-|**Modellstatistiken**|Kontinuierliche Spalten|Der Mittelwert<br /><br /> Mindestwert<br /><br /> Höchstwert<br /><br /> Wurzel des mittleren quadratischen Fehlers<br /><br /> Mittlerer absoluter Fehler<br /><br /> Logarithmisches Ergebnis<br /><br /> Regressionsformel (nur für lineare Regressionsmodelle)|  
-||Diskrete Spalten|Anzahl von Übergaben<br /><br /> Die Anzahl der fehlerhaften<br /><br /> Logarithmisches Ergebnis<br /><br /> Lift|  
+||Spaltenmetadaten|Spaltenname<br /><br /> Verwendung<br /><br /> Datentyp<br /><br /> Content-Typ<br /><br /> Werte (Liste diskreter Werte oder Wertebereich)|  
+|**Modellstatistiken**|Kontinuierliche Spalten|Mittelwert<br /><br /> Mindestwert<br /><br /> Maximalwert<br /><br /> Wurzel des mittleren quadratischen Fehlers<br /><br /> Mittlerer absoluter Fehler<br /><br /> Logarithmisches Ergebnis<br /><br /> Regressionsformel (nur für lineare Regressionsmodelle)|  
+||Diskrete Spalten|Anzahl von Übergaben<br /><br /> Anzahl der Fehler<br /><br /> Logarithmisches Ergebnis<br /><br /> Lift|  
   
 > [!NOTE]  
->  Sie können jeden Modelltyp dokumentieren, der von SQL Server Analysis Services unterstützt wird. Deshalb sind in der Tabelle Modelltypen aufgeführt, die mit den Tabellenanalysetools oder den Assistenten im Data Mining-Client nicht erstellt werden können. Sie können jedoch alle Modelltypen erstellen, mit der **Erweiterter Editor für Data Mining**. Weitere Informationen finden Sie unter [Abfrage &#40;SQL Server Data Mining-Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
+>  Sie können jeden Modelltyp dokumentieren, der von SQL Server Analysis Services unterstützt wird. Deshalb sind in der Tabelle Modelltypen aufgeführt, die mit den Tabellenanalysetools oder den Assistenten im Data Mining-Client nicht erstellt werden können. Allerdings können Sie alle Modelltypen mit dem **erweiterten Data Mining-Abfrage-Editor**erstellen. Weitere Informationen finden Sie unter [Abfrage &#40;SQL Server Data Mining-Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Bereitstellen und Skalieren von Miningmodellen &#40;Data Mining-Add-ins für Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bereitstellen und Skalieren von Mining Modellen &#40;Data Mining-Add-Ins für Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

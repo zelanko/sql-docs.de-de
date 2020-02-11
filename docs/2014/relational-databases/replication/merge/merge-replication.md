@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250568"
 ---
 # <a name="merge-replication"></a>Mergereplikation
@@ -43,6 +43,6 @@ ms.locfileid: "63250568"
   
  Im folgenden Diagramm werden die in der Mergereplikation verwendeten Komponenten dargestellt.  
   
- ![Komponenten und Datenfluss der Mergereplikation](../media/merge.gif "Merge replication components and data flow")  
+ ![Komponenten und Datenfluss für Mergereplikation](../media/merge.gif "Komponenten und Datenfluss für Mergereplikation")  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105221"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tupel) (MDX)
@@ -41,24 +41,24 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *String_Expression2*  
  Ein gültiger Zeichenfolgenausdruck, bei dem es sich normalerweise um ein als Zeichenfolge ausgedrücktes Tupel handelt.  
   
- *Index*  
+ *Sin*  
  Ein gültiger numerischer Ausdruck, der ein bestimmtes Tupel über die Position in der zurückzugebenden Menge angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Element** -Funktion ein Tupel aus der angegebenen Menge zurück. Es gibt drei Möglichkeiten zum Aufrufen der **Element** Funktion:  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Item** -Funktion gibt ein Tupel aus der angegebenen Menge zurück. Es gibt drei Möglichkeiten, die **Item** -Funktion aufzurufen:  
   
--   Wenn ein einzelner Zeichenfolgenausdruck angegeben wird, die **Element** Funktion das angegebene Tupel zurück. Beispiel: "([2005].Q3, [Store05])".  
+-   Wenn ein einzelner Zeichen folgen Ausdruck angegeben wird, gibt die **Item** -Funktion das angegebene Tupel zurück. Beispiel: "([2005].Q3, [Store05])".  
   
--   Wenn mehr als ein Zeichenfolgenausdruck angegeben wird, die **Element** Funktion gibt die durch die angegebenen Koordinaten definierte Tupel zurück. Die Anzahl der Zeichenfolgen muss der Anzahl der Achsen entsprechen, und jede Zeichenfolge muss eine eindeutige Hierarchie identifizieren. Beispiel: "[2005].Q3", "[Store05]".  
+-   Wenn mehr als ein Zeichen folgen Ausdruck angegeben wird, gibt die **Item** -Funktion das von den angegebenen Koordinaten definierte Tupel zurück. Die Anzahl der Zeichenfolgen muss der Anzahl der Achsen entsprechen, und jede Zeichenfolge muss eine eindeutige Hierarchie identifizieren. Beispiel: "[2005].Q3", "[Store05]".  
   
--   Wenn eine ganze Zahl angegeben wird, die **Element** -Funktion das Tupel zurück, der die nullbasierte Position gemäß wird *Index*.  
+-   Wenn eine ganze Zahl angegeben wird, gibt die **Item** -Funktion das Tupel zurück, das sich an der durch den *Index*angegebenen Null basierten Position befindet.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ([1996],Sales) zurückgegeben:  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
   
- Im folgenden Beispiel wird ein Ebenenausdruck verwendet und Internet Sales Amount für alle Bundesstaaten in Australien sowie deren prozentualer Anteil an der Summe von Internet Sales Amount für Australien zurückgegeben. Dieses Beispiel verwendet die Item-Funktion, um das erste (und nur Tupel) aus dem Satz von zurückgegebenen Extrahieren der **Vorgänger** Funktion.  
+ Im folgenden Beispiel wird ein Ebenenausdruck verwendet und Internet Sales Amount für alle Bundesstaaten in Australien sowie deren prozentualer Anteil an der Summe von Internet Sales Amount für Australien zurückgegeben. In diesem Beispiel wird die Item-Funktion verwendet, um das erste (und einzige Tupel) aus der von der **Vorgänger Funktion zurück** gegebenen Menge zu extrahieren.  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   
@@ -77,7 +77,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

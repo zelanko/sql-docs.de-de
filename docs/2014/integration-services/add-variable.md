@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Variablen | Microsoft-Dokumentation
+title: Variable hinzufügen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061784"
 ---
 # <a name="add-variable"></a>Variable hinzufügen
   Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften einer neuen Variablen angeben.  
   
-## <a name="options"></a>Optionen  
- **Container**  
+## <a name="options"></a>Tastatur  
+ **Kum**  
  Wählen Sie in der Liste einen Container aus. Der Container definiert den Gültigkeitsbereich der Variablen. Der Container kann entweder das Paket oder eine im Paket enthaltene ausführbare Datei sein.  
   
  **Name**  
@@ -43,7 +43,7 @@ ms.locfileid: "66061784"
  **Schreibgeschützt**  
  Wählen Sie diese Option aus, wenn die Variable schreibgeschützt sein soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [SQL Server Integration Services-Datentypen](data-flow/integration-services-data-types.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)  

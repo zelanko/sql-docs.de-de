@@ -1,5 +1,5 @@
 ---
-title: Sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft-Dokumentation
+title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -12,23 +12,23 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056447"
 ---
-# <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>Sp_pdw_log_user_data_masking (SQL Data Warehouse)
+# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Verwendung **Sp_pdw_log_user_data_masking** Aktivieren von Benutzerdaten maskiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle. Benutzer datenmaskierung wirkt sich auf die Anweisungen für alle Datenbanken auf dem Gerät.  
+  Verwenden Sie **sp_pdw_log_user_data_masking** , um die Benutzerdaten [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Maskierung in Aktivitäts Protokollen zu aktivieren. Die Maskierung von Benutzerdaten wirkt sich auf die Anweisungen für alle Datenbanken auf dem Gerät aus  
   
 > [!IMPORTANT]  
->  Die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle betroffen **Sp_pdw_log_user_data_masking** sind bestimmte [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle. **Sp_pdw_log_user_data_masking** wirkt sich nicht auf Datenbankprotokolle oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokolle.  
+>  Die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokolle, die von **sp_pdw_log_user_data_masking** betroffen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sind, sind bestimmte Aktivitäts Protokolle. **sp_pdw_log_user_data_masking** wirkt sich nicht auf Daten Bank Transaktionsprotokolle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Fehlerprotokolle aus.  
   
- **Hintergrund:** In der Standardkonfiguration [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle enthalten vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, und es in einigen Fällen enthalten Benutzerdaten enthalten Vorgänge wie z. B. **einfügen**, **UPDATE**, und **Wählen** Anweisungen. Wenn auf dem Gerät ein Problem vorliegt können die Analyse der Bedingungen, die die Ursache des Problems, ohne das Problem reproduzieren. Um zu verhindern, dass die Benutzerdaten in geschriebenen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] -Aktivitätsprotokollen, Kunden können auswählen, um die datenmaskierung Benutzer mit dieser gespeicherten Prozedur zu aktivieren. Die Anweisungen werden weiterhin in geschrieben [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle, aber alle die Literale in Anweisungen, die Benutzerdaten enthalten unter Umständen werden maskiert werden; mit einigen vordefinierten Konstanten Werte ersetzt.  
+ **Hintergrund:** In den standardmäßigen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Konfigurations Aktivitäts Protokollen sind [!INCLUDE[tsql](../../includes/tsql-md.md)] vollständige Anweisungen enthalten. in einigen Fällen können Benutzerdaten in Vorgängen wie **Insert**-, **Update**-und **Select** -Anweisungen enthalten sein. Im Falle eines Problems auf der Appliance können dadurch die Bedingungen, die das Problem verursacht haben, analysiert werden, ohne dass das Problem reproduziert werden muss. Um zu verhindern, dass die Benutzerdaten in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokolle geschrieben werden, können Kunden die Benutzerdaten Maskierung mithilfe dieser gespeicherten Prozedur aktivieren. Die-Anweisungen werden weiterhin in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokolle geschrieben, aber alle Literale in-Anweisungen, die möglicherweise Benutzerdaten enthalten, werden maskiert. ersetzt durch einige vordefinierte Konstante Werte.  
   
- Wenn die transparente datenverschlüsselung auf dem Gerät aktiviert ist, maskieren Sie die Benutzerdaten in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle wird automatisch aktiviert.  
+ Wenn die transparente Datenverschlüsselung auf dem Gerät aktiviert ist, wird die Maskierung der [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Benutzerdaten in den Aktivitäts Protokollen automatisch aktiviert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,41 +39,41 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parameter  
-`[ @masking_mode = ] masking_mode` Bestimmt, ob transparent Data Encryption Log Maskieren von Benutzerdaten aktiviert ist. *Masking_mode* ist **Int**, und kann einen der folgenden Werte:  
+`[ @masking_mode = ] masking_mode`Bestimmt, ob die Daten Maskierung für die transparente Datenverschlüsselung aktiviert ist. *masking_mode* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen:  
   
--   0 = deaktiviert, Benutzer, die Daten, in angezeigt der [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle.  
+-   0 = deaktiviert, Benutzerdaten werden in den [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokollen angezeigt.  
   
--   1 = Enabled "," User-Anweisungen Daten angezeigt, in werden der [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle, aber die Benutzerdaten werden maskiert.  
+-   1 = aktiviert, Benutzerdaten Anweisungen werden in den [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokollen angezeigt, aber die Benutzerdaten werden maskiert.  
   
--   2 = Anweisungen, die mit Benutzerdaten, die nicht, um geschrieben werden die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle.  
+-   2 = Anweisungen, die Benutzerdaten enthalten, werden nicht [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] in die Aktivitäts Protokolle geschrieben.  
   
- Ausführen von **Sp_pdw_ Log_user_data_masking** ohne Parameter gibt den aktuellen Status der TDE Log Benutzer die datenmaskierung auf dem Gerät als skalare Resultset zurück.  
+ Wenn **sp_pdw_ log_user_data_masking** ohne Parameter ausgeführt wird, wird der aktuelle Zustand der TDE-Protokoll Benutzerdaten Maskierung auf dem Gerät als skalares Resultset zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
- Benutzerdaten maskiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] aktiviert die Ersetzung von literalen-Aktivitätsprotokolle mit vordefinierten Konstanten Werten in **wählen** und DML-Anweisungen, wie sie Benutzerdaten enthalten können. Festlegen von *Masking_mode* 1 wird nicht maskiert Metadaten, z. B. Spaltennamen oder Tabellennamen. Festlegen von *Masking_mode* auf 2 entfernt-Anweisungen mit Metadaten, z. B. Spaltennamen oder Tabellennamen.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Maskierung von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Benutzerdaten in Aktivitäts Protokollen ermöglicht die Ersetzung von literalen mit vordefinierten Konstanten Werten in **Select** -und DML-Anweisungen, da Sie Benutzerdaten enthalten können. Wenn Sie *masking_mode* auf 1 festlegen, werden Metadaten nicht maskiert, wie z. b. Spaltennamen oder Tabellennamen. Wenn Sie *masking_mode* auf 2 festlegen, werden-Anweisungen mit Metadaten entfernt, z. b. Spaltennamen oder Tabellennamen.  
   
- Benutzerdaten maskiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle wird wie folgt implementiert:  
+ Die Benutzerdaten Maskierung in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokollen wird folgendermaßen implementiert:  
   
--   TDE und Benutzer datenmaskierung [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle sind standardmäßig deaktiviert. Die Anweisungen werden nicht automatisch maskiert werden, wenn Verschlüsselung der Datenbank nicht auf dem Gerät aktiviert ist.  
+-   TDE und die Maskierung von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Benutzerdaten in Aktivitäts Protokollen sind standardmäßig deaktiviert. Die-Anweisungen werden nicht automatisch maskiert, wenn die Datenbankverschlüsselung auf dem Gerät nicht aktiviert ist.  
   
--   Aktivieren von TDE automatisch auf dem Gerät aktiviert die datenmaskierung für die Benutzer im [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle.  
+-   Durch das Aktivieren von TDE auf dem Gerät wird die Benutzerdaten Maskierung in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokollen automatisch aktiviert.  
   
--   Deaktivieren von TDE wirkt sich nicht auf Benutzerdaten im maskiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle.  
+-   Die Deaktivierung von TDE wirkt sich nicht auf die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Benutzerdaten Maskierung in Aktivitäts Protokollen aus.  
   
--   Sie können explizit aktivieren, Benutzer datenmaskierung [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle mit der **Sp_pdw_log_user_data_masking** Verfahren.  
+-   Mithilfe des [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] **sp_pdw_log_user_data_masking** Verfahrens können Sie die Maskierung von Benutzerdaten in Aktivitäts Protokollen explizit aktivieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Sysadmin** feste Datenbankrolle oder **CONTROL SERVER** Berechtigung.  
+ Erfordert die Mitgliedschaft in der festen Daten Bank Rolle **sysadmin** oder die **Control Server** -Berechtigung.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die TDE-Log-Benutzerdaten, die auf dem Gerät maskiert.  
+ Im folgenden Beispiel wird die TDE-Protokollierung der Benutzerdaten auf dem Gerät aktiviert.  
   
 ```  
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_pdw_database_encryption aktiviert werden &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

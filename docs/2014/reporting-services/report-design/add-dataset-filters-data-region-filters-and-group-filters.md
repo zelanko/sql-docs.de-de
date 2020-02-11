@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen von datasetfiltern, Datenbereichs Filtern und Gruppen Filtern (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106628"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern (Berichts-Generator und SSRS)
@@ -47,26 +47,26 @@ ms.locfileid: "66106628"
   
 -   **Für die Reihen- oder Kategoriegruppen in einem Diagrammdatenbereich** : Legen Sie einen Filter für eine Reihen- oder Kategoriegruppe fest, wenn Sie bestimmte Werte für einen Gruppierungsausdruck ein- oder ausschließen möchten, um die im Diagramm angezeigten Werte zu steuern.  
   
-##  <a name="FilterEquations"></a> Grundlegendes zur Filtergleichung  
+##  <a name="FilterEquations"></a>Grundlegendes zu einer Filter Gleichung  
  Zur Laufzeit konvertiert der Berichtsprozessor den Wert in den angegebenen Datentyp und vergleicht dann anhand des festgelegten Operators Ausdruck und Wert. In der folgenden Liste werden die einzelnen Bestandteile der Filtergleichung beschrieben:  
   
--   **Ausdruck** : Definiert das Filterelement. Im Allgemeinen handelt es sich hierbei um ein Datasetfeld.  
+-   **Ausdruck** Definiert, was gefiltert werden soll. Im Allgemeinen handelt es sich hierbei um ein Datasetfeld.  
   
--   **Datentyp** : Legt den Datentyp fest, der bei der Auswertung der Filtergleichung durch den Berichtsprozessor zur Laufzeit verwendet werden soll. Bei dem gewählten Datentyp muss es sich um einen vom Berichtsdefinitionsschema unterstützten Datentyp handeln.  
+-   **Datentyp** Gibt den Datentyp an, der verwendet werden soll, wenn die Filter Gleichung zur Laufzeit vom Berichts Prozessor ausgewertet wird. Bei dem gewählten Datentyp muss es sich um einen vom Berichtsdefinitionsschema unterstützten Datentyp handeln.  
   
--   **Operator** : Definiert, wie die beiden Teile der Filtergleichung miteinander verglichen werden.  
+-   **Operator** Definiert, wie die beiden Teile der Filter Gleichung verglichen werden.  
   
--   `Value` Definiert den im Vergleich verwendeten Ausdruck fest.  
+-   `Value`Definiert den Ausdruck, der im Vergleich verwendet werden soll.  
   
  In den folgenden Abschnitten werden die einzelnen Bestandteile der Filtergleichung vorgestellt.  
   
-### <a name="expression"></a>expression  
- Wenn die Filtergleichung zur Laufzeit vom Berichtsprozessor ausgewertet wird, müssen Ausdruck und Wert denselben Datentyp aufweisen. Der Datentyp des unter **Ausdruck** ausgewählten Felds wird durch die Datenverarbeitungserweiterung oder den Datenanbieter, über den die Daten aus der Datenquelle abgerufen werden, vorgegeben. Der Datentyp des Ausdrucks, der eingegebenen `Value` richtet sich nach [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Standardwerte. Die verfügbaren Datentypen sind abhängig von den für eine Berichtsdefinition unterstützten Datentypen. Die Werte aus der Datenbank werden ggf. vom Datenanbieter in einen CLR-Typ konvertiert.  
+### <a name="expression"></a>Ausdruck  
+ Wenn die Filtergleichung zur Laufzeit vom Berichtsprozessor ausgewertet wird, müssen Ausdruck und Wert denselben Datentyp aufweisen. Der Datentyp des unter **Ausdruck** ausgewählten Felds wird durch die Datenverarbeitungserweiterung oder den Datenanbieter, über den die Daten aus der Datenquelle abgerufen werden, vorgegeben. Der Datentyp des Ausdrucks, den Sie für `Value` eingeben, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] standardmäßig festgelegt. Die verfügbaren Datentypen sind abhängig von den für eine Berichtsdefinition unterstützten Datentypen. Die Werte aus der Datenbank werden ggf. vom Datenanbieter in einen CLR-Typ konvertiert.  
   
 ### <a name="data-type"></a>Datentyp  
  Damit der Berichtsprozessor zwei Werte vergleichen kann, müssen diese Werte denselben Datentyp aufweisen. Die folgende Tabelle zeigt die Zuordnung zwischen CLR-Datentypen und Berichtsdefinitionsdatentypen. Die aus einer Datenquelle abgerufenen Daten werden u. U. in einen Datentyp konvertiert, der sich vom Typ der Berichtsdaten unterscheidet.  
   
-|**Datentyp des Berichtsdefinitionsschemas**|**CLR-Typ(en)**|  
+|**Datentyp des Berichts Definitions Schemas**|**CLR-Typ (en)**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`, `DateTimeOffset`|  
@@ -79,22 +79,22 @@ ms.locfileid: "66106628"
 ### <a name="operator"></a>Operator  
  Die folgende Tabelle enthält die Operatoren, die in Filtergleichungen verwendet werden können, und beschreibt, welche Elemente zur Auswertung der Filtergleichung vom Berichtsprozessor verwendet werden.  
   
-|Operator|Aktion|  
+|Operator|Action|  
 |--------------|------------|  
-|**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Vergleicht den Ausdruck mit einem Wert.|  
-|**TopN, BottomN**|Vergleicht den Ausdruck mit einem `Integer`-Wert.|  
-|**TopPercent, BottomPercent**|Vergleicht den Ausdruck mit einem `Integer`- oder einem `Float`-Wert.|  
+|**Gleich, wie, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Vergleicht den Ausdruck mit einem Wert.|  
+|**TopN, bottomn**|Vergleicht den Ausdruck mit einem `Integer`-Wert.|  
+|**Topprozent, bottomprozent**|Vergleicht den Ausdruck mit einem `Integer`- oder einem `Float`-Wert.|  
 |**Zwischen**|Prüft, ob der Ausdruck zwischen zwei Werten (einschließlich) liegt.|  
 |**In**|Prüft, ob der Ausdruck in einem Satz von Werten enthalten ist.|  
   
-### <a name="value"></a>Wert  
+### <a name="value"></a>value  
  Der Value-Ausdruck legt den abschließenden Teil der Filtergleichung fest. Der Berichtsprozessor konvertiert den ausgewerteten Ausdruck in den festgelegten Datentyp und wertet dann die gesamte Filtergleichung aus, um zu ermitteln, ob die unter Ausdruck angegebenen Daten den Filter passieren dürfen.  
   
  Wenn der Ausdruck in einen Datentyp konvertiert werden soll, bei dem es sich nicht um einen Standard-CLR-Datentyp handelt, müssen Sie den Ausdruck so ändern, dass explizit in einen Datentyp konvertiert wird. Sie können hierfür die im Dialogfeld **Ausdruck** unter **Allgemeine Funktionen**, **Konvertierung**aufgelisteten Konvertierungsfunktionen verwenden. Beispiel: Das Feld `ListPrice` repräsentiert Daten, die mit einem **money** -Datentyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle gespeichert sind. Die Datenverarbeitungserweiterung gibt den Feldwert als <xref:System.Decimal> -Datentyp zurück. Wenn Sie einen Filter festlegen möchten, durch den nur Werte über **€ 50000,00** in der Berichtswährung verwendet werden, konvertieren Sie den Wert mit dem Ausdruck `=CDec(50000.00)`in einen Dezimalwert.  
   
  Dieser Wert kann auch einen Parameterverweis enthalten, mit dem Benutzer interaktiv einen Filterwert auswählen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)  
   

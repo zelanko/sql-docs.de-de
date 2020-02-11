@@ -1,5 +1,5 @@
 ---
-title: sys. DM _db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809904"
 ---
-# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Räumliche Daten: sys. DM _db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Räumliche Daten-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Führt die Indizes und die Einschränkungen auf, die in Folge der Änderung des Kompatibilitätsgrads in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deaktiviert werden. Indizes und Einschränkungen, die persistierte berechnete Spalten enthalten, deren Ausdrücke räumliche UDTs verwenden, werden nach einem Upgrade oder einer Änderung des Kompatibilitätsgrads deaktiviert. Bestimmen Sie die Auswirkungen einer Änderung des Kompatibilitätsgrads mithilfe dieser dynamischen Verwaltungsfunktion.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +40,19 @@ ms.locfileid: "68809904"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="Arguments"></a> Argumente  
+##  <a name="Arguments"></a>Argumente  
  *compatibility_level*  
- **int** -Wert, der den Kompatibilitätsgrad angibt, den Sie festlegen möchten.  
+ **int** , der den Kompatibilitäts Grad angibt, den Sie festlegen möchten.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**class**|**int**|1 = Einschränkungen<br /><br /> 7 = Indizes und Heaps|  
-|**class_desc**|**nvarchar(60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
+|**klassi**|**int**|1 = Einschränkungen<br /><br /> 7 = Indizes und Heaps|  
+|**class_desc**|**nvarchar (60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
 |**major_id**|**int**|OBJECT ID der Einschränkungen<br /><br /> OBJECT ID der Tabelle, die Indizes und Heaps enthält|  
 |**minor_id**|**int**|NULL für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|**gkeit**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
+|**gkeit**|**nvarchar (60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Persistente berechnete Spalten, die systeminterne Funktionen verwenden, werden bei einer Änderung des Kompatibilitätsgrads deaktiviert. Darüber hinaus werden persistierte berechnete Spalten, die eine Geometry-Methode oder Geography-Methode verwenden, beim Upgrade einer Datenbank deaktiviert.  
@@ -70,7 +70,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geografie:: STGeomFromText**  
   
--   **Geografie:: STLineFromText**  
+-   **Geography:: STLineFromText**  
   
 -   **Geografie:: STPolyFromText**  
   
@@ -106,18 +106,18 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geografie:: BufferWithTolerance**  
   
--   **Geografie:: Analysieren**  
+-   **Geography:: Analyse**  
   
--   **Geografie:: Ver**  
+-   **Geografie:: Reduce**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Verhalten der deaktivierten Objekte  
  **Indizes**  
   
- Wenn der gruppierte Index deaktiviert ist oder ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "Der Abfrage Prozessor kann keinen Plan durchführen, da der Index '%. \*ls ' für Tabelle oder Sicht '%. \*ls ' ist deaktiviert. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade **neu, indem Sie Alter Index on... aufrufen. REBUILD** ändern.  
+ Wenn der gruppierte Index deaktiviert ist oder ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "der Abfrage Prozessor kann keinen Plan durchführen, da der Index '%. \*ls ' für Tabelle oder Sicht '%. \*ls ' ist deaktiviert. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade neu, indem Sie **Alter Index on... aufrufen. Neu erstellen**.  
   
  **Heaps**  
   
- Wenn eine Tabelle mit einem deaktivierten Heap verwendet wird, wird der folgende Fehler ausgelöst. Um diese Objekte erneut zu aktivieren, erstellen Sie nach dem Upgrade **erneut, indem Sie Alter Index all on... aufrufen. REBUILD** ändern.  
+ Wenn eine Tabelle mit einem deaktivierten Heap verwendet wird, wird der folgende Fehler ausgelöst. Um diese Objekte erneut zu aktivieren, erstellen Sie nach dem Upgrade erneut, indem Sie **Alter Index all on... aufrufen. Neu erstellen**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -132,11 +132,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Wenn Sie versuchen, den Heap während eines Online Vorgangs neu zu erstellen, wird ein Fehler ausgelöst.  
   
- **Check-Einschränkungen und Fremdschlüssel**  
+ **CHECK-Einschränkungen und Fremdschlüssel**  
   
- Deaktivierte CHECK-Einschränkungen und Fremdschlüssel lösen keinen Fehler aus. Die Einschränkungen werden jedoch nicht erzwungen, wenn Zeilen geändert werden. Um diese Objekte erneut zu aktivieren, überprüfen Sie die Einschränkungen nach dem **Upgrade durch Aufrufen von ALTER TABLE... CHECK-** EINSCHRÄNKUNG.  
+ Deaktivierte CHECK-Einschränkungen und Fremdschlüssel lösen keinen Fehler aus. Die Einschränkungen werden jedoch nicht erzwungen, wenn Zeilen geändert werden. Um diese Objekte erneut zu aktivieren, überprüfen Sie die Einschränkungen nach dem Upgrade durch Aufrufen von **ALTER TABLE... Check-Einschränkung**.  
   
- **Persistente berechnete Spalten**  
+ **Permanent berechnete Spalten**  
   
  Da eine Deaktivierung einzelner Spalten nicht möglich ist, wird die gesamte Tabelle deaktiviert, indem der gruppierte Index oder der Heap deaktiviert wird.  
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 996b93f04d9e9fc063bbacbb5f4a7588794ad208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191520"
 ---
-# <a name="mssqleng014121"></a>MSSQL_ENG014121
+# <a name="mssql_eng014121"></a>MSSQL_ENG014121
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63191520"
   
  Führen Sie [sp_dropdistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql) für alle Verteilungsdatenbanken aus, die diesem Verteiler zugeordnet. Nachdem alle Verteilungsdatenbankenzuordnungen entfernt sind, können Sie die Verteilung deaktivieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)   
  [Verteilung konfigurieren](configure-distribution.md)  
   

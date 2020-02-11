@@ -1,5 +1,5 @@
 ---
-title: KPI-Formular-Editor (Registerkarte ' KPIs ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: KPI-Formular-Editor (Registerkarte ' KPIs ', Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079452"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Formular-Editor (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -25,7 +25,7 @@ ms.locfileid: "66079452"
 > [!NOTE]  
 >  Der Bereich wird nur in der Formularansicht angezeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie den Namen des KPIs ein.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66079452"
  Es wird empfohlen, dass dieser Ausdruck eine Dezimalzahl zwischen-1 und 1 zurückgibt. Eine niedrigere Zahl stellt eine negative Situation dar, während eine höhere Zahl eine positive Situation darstellt.  
   
 > [!NOTE]  
->  Werte unter – 1 und größer als 1 ist möglich, aber möglicherweise nicht ordnungsgemäß interpretiert werden von Clientanwendungen von Drittanbietern.  
+>  Werte unter-1 und über 1 sind möglich, können aber möglicherweise von Client Anwendungen von Drittanbietern nicht ordnungsgemäß interpretiert werden.  
   
  **Trend**  
  Erweitern Sie diese Option, um die Optionen **Trendgrafik** und **Trendausdruck** anzuzeigen.  
@@ -82,15 +82,15 @@ ms.locfileid: "66079452"
  Der Trendausdruck kann auf beliebigen zeitbasierten Kriterien basieren, die in einem gegebenen Geschäftskontext einen Sinn ergeben. Es wird empfohlen, dass dieser Ausdruck eine Dezimalzahl zwischen-1 und 1 zurückgibt. Eine niedrigere Zahl stellt im Zeitverlauf einen negativen Trend dar, eine höhere Zahl stellt im Zeitverlauf einen positiven Trend dar.  
   
 > [!NOTE]  
->  Werte unter – 1 und größer als 1 ist möglich, aber möglicherweise nicht ordnungsgemäß interpretiert werden von Clientanwendungen von Drittanbietern.  
+>  Werte unter-1 und über 1 sind möglich, können aber möglicherweise von Client Anwendungen von Drittanbietern nicht ordnungsgemäß interpretiert werden.  
   
- **Weitere Eigenschaften**  
- Erweitern Sie diese Option, um die Optionen **Anzeigeordner**, **Übergeordneter KPI**, **Aktuelles Zeitelement**, **Gewichtung** **und Beschreibung** anzuzeigen.  
+ **Zusätzliche Eigenschaften**  
+ Erweitern Sie diese Option, um die Optionen **Anzeigeordner**, **Übergeordneter KPI**, **Aktuelles Zeitelement**, **Gewichtung****und Beschreibung** anzuzeigen.  
   
  **Anzeigeordner**  
  Geben Sie die Kategorisierung des KPIs ein, die von der Clientanwendung zum Anzeigen verwendet werden soll.  
   
- Verwenden Sie einen umgekehrten Schrägstrich (\\), um die Ordnernamen in einem Anzeigeordner zu trennen, und ein Semikolon (;), um mehrere Anzeigeordner voneinander zu trennen. Beispiel: `Category\Goal\Scientific;Category\Goal\Metric`.  
+ Verwenden Sie einen umgekehrten Schrägstrich (\\), um die Ordnernamen in einem Anzeigeordner zu trennen, und ein Semikolon (;), um mehrere Anzeigeordner voneinander zu trennen. Geben Sie beispielsweise `Category\Goal\Scientific;Category\Goal\Metric` ein.  
   
  **Übergeordneter KPI**  
  Wählen Sie einen vorhandenen KPI aus, unter dem der von der Clientanwendung zu verwendende KPI kategorisiert werden soll.  
@@ -106,7 +106,7 @@ ms.locfileid: "66079452"
 > [!IMPORTANT]  
 >  Der MDX-Ausdruck muss den eindeutigen Namen eines Elements innerhalb einer Zeitdimension zurückgeben, die der unter **Zugeordnete Measuregruppe**angegebenen Measuregruppe zugeordnet ist.  
   
- **Weight**  
+ **Gewicht**  
  Erweitern Sie diese Option, um den MDX-Ausdruck für den Gewichtungsfaktor des KPIs anzuzeigen oder zu bearbeiten.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  
@@ -114,7 +114,7 @@ ms.locfileid: "66079452"
  **Beschreibung**  
  Geben Sie die optionale Beschreibung des KPIs ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [KPIs &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [KPIs &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

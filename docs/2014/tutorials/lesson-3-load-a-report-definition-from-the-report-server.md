@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Laden Sie eine Berichtsdefinition vom Berichtsserver | Microsoft-Dokumentation'
+title: 'Lektion 3: Laden einer Berichts Definition vom Berichts Server | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63042516"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lektion 3: Laden einer Berichtsdefinition vom Berichtsserver
@@ -22,7 +22,7 @@ ms.locfileid: "63042516"
   
 ### <a name="to-load-a-report-definition"></a>So laden Sie eine Berichtsdefinition  
   
-1.  Fügen Sie ein privates Feld am oberen Rand der `ReportUpdater` Klasse (Modul bei Verwendung von [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) für die `Report` Klasse. Mit diesem Feld wird für die Ausführungszeit der Anwendung ein Verweis auf den Bericht beibehalten, der vom Berichtsserver geladen wird.  
+1.  Fügen Sie ein privates Feld am Anfang der- `ReportUpdater` Klasse (Modul, wenn Sie verwenden [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) für die `Report` -Klasse hinzu. Mit diesem Feld wird für die Ausführungszeit der Anwendung ein Verweis auf den Bericht beibehalten, der vom Berichtsserver geladen wird.  
   
     ```csharp  
     private Report _report;  
@@ -97,10 +97,10 @@ ms.locfileid: "63042516"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion schreiben Sie Code zum Aktualisieren der Berichtsdefinition, die vom Berichtsserver geladen wurde. Siehe [Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ In der nächsten Lektion schreiben Sie Code zum Aktualisieren der Berichtsdefinition, die vom Berichtsserver geladen wurde. Weitere Informationen finden Sie [unter Lektion 4: Programm gesteuertes Aktualisieren der Berichts Definition](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema &#40;SSRS-Tutorial generiert wurden&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

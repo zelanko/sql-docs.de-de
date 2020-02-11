@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889762"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle zurückgibt, wie \<z. b. ein Tabellen Spalten Verweis > oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie \<z. b. ein Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellen Ausdrucks >  
+ \<Tabellen Ausdrucks>  
   
-## <a name="remarks"></a>Hinweise  
- Die **BottomSum** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des \<Rang Ausdrucks > Argument für jede Zeile, sodass die Summe \<des Rang Ausdrucks > Werte mindestens dem angegebenen Gesamtwert entspricht, der durch das \<Sum >-Argument angegeben wird. **BottomSum** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Summenwert erreicht wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **BottomSum** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des \<Rang Ausdrucks> Argument für jede Zeile, sodass die Summe des \<Rang Ausdrucks> Werte mindestens dem angegebenen Gesamtwert entspricht, der durch das \<Sum>-Argument angegeben wird. **BottomSum** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Summenwert erreicht wird.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  
@@ -56,16 +56,16 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
 |Modell|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291283016|0.252695851|  
-|Water Bottle|2866|0.192620472|0.175205052|  
-|Patchkit|2113|0.142012232|0.132389356|  
-|Mountain Tire Tube|1992|0.133879965|0.125304948|  
-|Mountain-200|1755|0.117951475|0.111260823|  
-|Road Tire Tube|1588|0.106727603|0.101229538|  
-|Cycling Cap|1473|0.098998589|0.094256014|  
-|Fender Set – Mountain|1415|0.095100477|0.090718432|  
-|Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|Sport-100|4334|0,291283016|0,252695851|  
+|Water Bottle|2866|0,192620472|0,175205052|  
+|Patchkit|2113|0,142012232|0,132389356|  
+|Mountain Tire Tube|1992|0,133879965|0,125304948|  
+|Mountain-200|1755|0,117951475|0,111260823|  
+|Road Tire Tube|1588|0,106727603|0,101229538|  
+|Cycling Cap|1473|0,098998589|0,094256014|  
+|Fender Set – Mountain|1415|0,095100477|0,090718432|  
+|Mountain Bottle Cage|1367|0,091874454|0,087780332|  
+|Road Bottle Cage|1195|0,080314537|0,077173962|  
   
  Die BottomSum-Funktion nimmt die Ergebnisse dieser Abfrage und gibt die Zeilen mit den niedrigsten Werten zurück, die die angegebene Anzahl summieren.  
   
@@ -82,7 +82,7 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument der BottomSum-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die-Tabelle durch Aufrufen der Vorhersagefunktion und Verwenden des INCLUDE_STATISTICS-Arguments zurückgegeben.  
+ Das erste Argument der BottomSum-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die-Tabelle zurückgegeben, indem die Vorhersagefunktion aufgerufen und das INCLUDE_STATISTICS-Argument verwendet wird.  
   
  Das zweite Argument der BottomSum-Funktion ist die Spalte in der Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $PROBABILITY zum Zurückgeben von Zeilen verwendet, die mindestens eine Wahrscheinlichkeit von 50 % ergeben.  
   
@@ -97,9 +97,9 @@ NATURAL PREDICTION JOIN
   
  **Hinweis** Dieses Beispiel wird nur zur Veranschaulichung der Verwendung von "BottomSum" bereitgestellt. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX ( &#40;bottomprozent)&#41;](../dmx/bottompercent-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX-&#41;im unteren Prozentsatz](../dmx/bottompercent-dmx.md)  
   
   

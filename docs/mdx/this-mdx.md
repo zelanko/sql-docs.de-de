@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893561"
 ---
 # <a name="this-mdx"></a>This (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68893561"
 This   
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **Diese** Funktion kann anstelle eines Teilcubeausdrucks verwendet werden, um den aktuellen Teilcube innerhalb des aktuellen Gültigkeits Bereichs innerhalb des MDX-Berechnungs Skripts bereitzustellen. **Diese** Funktion muss auf der linken Seite einer Zuweisung verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
@@ -73,8 +73,8 @@ This
   
  `End Scope;`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Berechnungen](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892393"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -33,7 +33,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>Rückgabetyp  
  Ein Skalarwert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **ClusterDistance** -Funktion gibt den Abstand zwischen dem Eingabe Fall und dem Cluster mit der höchsten Wahrscheinlichkeit für diesen Eingabe Fall zurück.  
   
  Im Fall von K-Means-Clustering, bei dem jeder Fall nur zu einem Cluster gehören kann und die Mitgliedschaftsgewichtung 1,0 beträgt, ist der Clusterabstand immer 0. In K-Means wird jedoch davon ausgegangen, dass jeder Cluster einen Schwerpunkt besitzt. Sie können den Wert des Schwerpunkts abrufen, indem Sie im Miningmodellinhalt die geschachtelte Tabelle NODE_DISTRIBUTION abfragen oder durchsuchen. Weitere Informationen zu diesem Algorithmus finden Sie unter [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
@@ -42,22 +42,23 @@ ClusterDistance([<ClusterID expression>])
   
  ClusterDistance (n) = 1-(mitgliedführungs Gewichtung (n))  
   
- Oder:  
+ Alternative:  
   
  ClusterDistance (n) = 1-clusterwahrscheinlichkeits (n))  
   
 ## <a name="related-prediction-functions"></a>Zugehörige Vorhersagefunktionen  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt folgende zusätzliche Funktionen für die Abfrage von Clusteringmodellen bereit:  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt folgende zusätzliche Funktionen für die Abfrage von Clusteringmodellen bereit:  
   
--   Verwenden Sie [die &#40;Cluster-&#41; DMX](../dmx/cluster-dmx.md) -Funktion, um den wahrscheinlichsten Cluster zurückzugeben.  
+-   Verwenden Sie die Funktion [Cluster &#40;DMX-&#41;](../dmx/cluster-dmx.md) , um den wahrscheinlichsten Cluster zurückzugeben.  
   
--   Verwenden Sie die [DMX &#40;&#41; -Funktion Clusterwahrscheinlichkeiten](../dmx/clusterprobability-dmx.md) zum Ermitteln der Wahrscheinlichkeit, dass ein Fall zu einem bestimmten Cluster gehört. Dieser Wert stellt die Umkehrung des Clusterabstands dar.  
+-   Verwenden Sie die Funktion [clusterwahrscheinlichkeit &#40;DMX-&#41;](../dmx/clusterprobability-dmx.md) , um die Wahrscheinlichkeit zu ermitteln, dass ein Fall zu einem bestimmten Cluster gehört. Dieser Wert stellt die Umkehrung des Clusterabstands dar.  
   
--   Verwenden Sie die [DMX&#41; - &#40;Funktion "präthistogram](../dmx/predicthistogram-dmx.md) ", um ein Histogramm der Wahrscheinlichkeit zurückzugeben, dass der Eingabe Fall in jedem Cluster des Modells vorhanden ist.  
+-   Verwenden Sie die Funktion [präthistogram &#40;DMX-&#41;](../dmx/predicthistogram-dmx.md) , um ein Histogramm der Wahrscheinlichkeit zurückzugeben, dass der Eingabe Fall in den Clustern des Modells vorhanden ist.  
   
--   Verwenden Sie die [DMX &#40;&#41; -Funktion "prätcaselikelihood](../dmx/predictcaselikelihood-dmx.md) ", um ein Measure zwischen 0 und 1 zurückzugeben, das angibt, wie wahrscheinlich ein Eingabe Fall vorhanden sein muss, wenn das vom Algorithmus erlernte Modell berücksichtigt wird.  
+-   Verwenden Sie die Funktion " [prätcaselikelihood &#40;DMX-&#41;](../dmx/predictcaselikelihood-dmx.md) , um ein Measure zwischen 0 und 1 zurückzugeben, das angibt, wie wahrscheinlich ein Eingabe Fall vorhanden sein muss, wenn das vom Algorithmus erlernte Modell vorhanden ist.  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>"Example1" Abrufen der clusterentfernung zum wahrscheinlichsten Cluster  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Beispiel 1: Abrufen des Clusterabstands zum wahrscheinlichsten Cluster  
  Im folgenden Beispiel wird der Abstand von dem angegebenen Fall zu dem Cluster angegeben, zu dem der Fall höchstwahrscheinlich gehört.  
   
 ```  
@@ -75,7 +76,7 @@ NATURAL PREDICTION JOIN
   
  Beispielergebnisse:  
   
-|expression|  
+|Ausdruck|  
 |----------------|  
 |0.0477390930705145|  
   
@@ -87,7 +88,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |Cluster 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>"Example2" Abrufen der Entfernung zu einem angegebenen Cluster  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Beispiel 2: Abrufen des Abstands zu einem bestimmten Cluster  
  In der folgenden Syntax wird das Schemarowset für den Inhalt eines Miningmodells verwendet, um eine Liste mit Knoten-IDs und Knotenbeschriftungen für die Cluster zurückzugeben, die im Miningmodell vorhanden sind. Anschließend können Sie die Knoten Beschriftung als Clusterbezeichnerargument in der **ClusterDistance** -Funktion verwenden.  
   
 ```  
@@ -124,10 +125,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>Siehe auch  
- [Cluster &#40;-DMX&#41;](../dmx/cluster-dmx.md)   
- [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
- [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Cluster &#40;DMX-&#41;](../dmx/cluster-dmx.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Mining Modell Inhalt für Clustering-Modelle &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

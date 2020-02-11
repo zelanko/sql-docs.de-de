@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,38 +23,38 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265687"
 ---
-# <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt Informationen zu allen Spinlock-Wartevorgängen, die nach Typ strukturiert.  
+Gibt Informationen zu allen Spinlock-warte Vorgängen nach Typ organisiert zurück.  
   
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|Der Name des Spinlock-Typs.|  
-|Konflikte|**bigint**|Wie oft ein Thread versucht, für den Spinlock und blockiert, weil ein anderer thread zurzeit enthält das Spinlock.|  
-|Führt Spin-Vorgänge|**bigint**|Die Anzahl der Versuche, die ein Thread führt eine Schleife, bei dem Versuch, den Spinlock abzurufen.|  
-|spins_per_collision|**real**|Das Verhältnis von Fäden pro Konflikt.|  
-|sleep_time|**bigint**|Die Zeitspanne in Millisekunden, die Threads benötigt im Falle einer Wartezeit im Standbymodus.|  
-|Backoffs auch|**int**|Die Anzahl wie oft ein Thread, der "rotierender" ein Fehler auftritt, das Spinlock abzurufen und im Zeitplanungsmodul.|  
+|name|**nvarchar(256)**|Der Name des Spinlock-Typs.|  
+|Stöße|**BIGINT**|Gibt an, wie oft ein Thread versucht, die Spinlock abzurufen, und wird blockiert, da ein anderer Thread derzeit die Spinlock-Sperre besitzt.|  
+|HS|**BIGINT**|Gibt an, wie oft ein Thread eine Schleife ausführt, während versucht wird, das Spinlock abzurufen.|  
+|spins_per_collision|**wirkliche**|Das Verhältnis von Drehungen pro Kollision.|  
+|sleep_time|**BIGINT**|Die Zeitspanne in Millisekunden, die Threads im Fall eines Backoff im Standbymodus verbracht haben.|  
+|Backoffs auch|**int**|Gibt an, wie oft ein Thread, der "spinnt" ist, den Spinlock nicht abrufen kann und den Scheduler ergibt.|  
 
 
 ## <a name="permissions"></a>Berechtigungen  
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.    
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.    
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  
- Sys. dm_os_spinlock_stats kann verwendet werden, um die Quelle der Spinlock-Konflikte zu identifizieren. In einigen Fällen können Sie möglicherweise lösen oder Reduzieren von Spinlock-Konflikte. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
+ sys. dm_os_spinlock_stats kann zum Identifizieren der Quelle von Spinlock-Konflikten verwendet werden. In einigen Situationen können Sie möglicherweise Spinlock-Konflikte auflösen oder verringern. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
- Sie können den Inhalt der Sys. dm_os_spinlock_stats zurücksetzen, indem Sie mithilfe von `DBCC SQLPERF` wie folgt:  
+ Sie können den Inhalt von sys. dm_os_spinlock_stats zurücksetzen, `DBCC SQLPERF` indem Sie wie folgt verwenden:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -67,11 +67,11 @@ GO
 >  Diese Statistiken werden nicht persistent gespeichert, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Alle Daten stellen einen Gesamtwert seit dem letzten Zurücksetzen der Statistiken oder dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar.  
   
 ## <a name="spinlocks"></a>Spinlocks  
- Ein Spinlock ist ein lightweight-Synchronisierungsobjekt verwendet, um den Zugriff auf die Datenstrukturen serialisiert, die anschließend in der Regel für einen kurzen Zeitraum aufrechterhalten werden. Wenn ein Thread versucht, die Zugriff auf eine Ressource, die von einem SpinLock festgehalten, die von einem anderen Thread gehalten wird geschützt, der Thread wird Ausführen einer Schleife, oder "starten" und versuchen Sie es noch Mal, Zugriff auf die Ressource sofort zurückgegeben wird, den Scheduler als ein Objekt oder eine andere Ressource Warte. Der Thread weiterhin sich drehende, bis die Ressource verfügbar ist, oder die Schleife abgeschlossen wird, an diesem Punkt der Thread den Scheduler ergeben, und wechseln Sie zurück, in der ausführbaren Warteschlange. Diese Vorgehensweise verringert übermäßig viele Threads wechseln des Kontexts, wenn bei einem SpinLock festgehalten Konflikte hoch ist, erhebliche CPU-Auslastung kann jedoch angezeigt werden.
+ Ein Spinlock ist ein schlankes Synchronisierungs Objekt, das verwendet wird, um den Zugriff auf Datenstrukturen zu serialisieren, die in der Regel für kurze Zeit aufbewahrt werden. Wenn ein Thread versucht, auf eine Ressource zuzugreifen, die durch einen Spinlock geschützt ist, der von einem anderen Thread aufbewahrt wird, führt der Thread eine Schleife aus, oder es wird versucht, erneut auf die Ressource zuzugreifen, anstatt den Scheduler sofort wie bei einem Latch oder einer anderen Ressource bereitzustellen. Warte. Der Thread wird fortgesetzt, bis die Ressource verfügbar ist, oder die Schleife wird beendet. zu diesem Zeitpunkt führt der Thread den Scheduler aus und wechselt zurück in die ausführbare Warteschlange. Durch diese Vorgehensweise wird die übermäßige Thread Kontext Umschaltung verringert. Wenn jedoch ein Konflikt zwischen Spinlock vorliegt, wird möglicherweise eine beträchtliche CPU-Auslastung festgestellt.
    
- Die folgende Tabelle enthält kurze Beschreibungen der einige der am häufigsten verwendeten Spinlock-Typen.  
+ Die folgende Tabelle enthält kurze Beschreibungen einiger der gängigsten Spinlock-Typen.  
   
-|Spinlocktyp|Beschreibung|  
+|SpinLock-Typ|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |ABR|Nur interne Verwendung.|
 |ADB_CACHE|Nur interne Verwendung.|
@@ -83,54 +83,54 @@ GO
 |APRC_VALIDATION_QUEUE_LIST|Nur interne Verwendung.|
 |ASYNC_OP_ADMIN_CLIENT_REGISTRATION_LIST|Nur interne Verwendung.|
 |ASYNC_OP_ADMIN_WORK_REGISTRATION_HASH_TABLE|Nur interne Verwendung.|
-|ASYNCSTATSLIST|Nur interne Verwendung.|
+|Asyncstatuslist|Nur interne Verwendung.|
 |BACKUP|Nur interne Verwendung.|
 |BACKUP_COPY_CONTEXT|Nur interne Verwendung.|
 |BACKUP_CTX|Nur interne Verwendung.|
 |BASE_XACT_HASH|Nur interne Verwendung.|
 |BLOCKER_ENUM|Nur interne Verwendung.|
-|BPREPARTITION|Nur interne Verwendung.|
-|BPWORKFILE|Nur interne Verwendung.|
+|Bprepartition|Nur interne Verwendung.|
+|Bpworkfile|Nur interne Verwendung.|
 |BUF_HASH|Nur interne Verwendung.|
 |BUF_LINK|Nur interne Verwendung.|
 |BUF_WRITE_LOG|Nur interne Verwendung.|
 |CACHEOBJ_DBG|Nur interne Verwendung.|
-|CHANNELFORCECLOSEMANAGER|Nur interne Verwendung.|
+|Channelforceclosemanager|Nur interne Verwendung.|
 |CHECK_AGGREGATE_STATE|Nur interne Verwendung.|
 |CLR_HOSTTASK|Nur interne Verwendung.|
 |CLR_SPIN_LOCK|Nur interne Verwendung.|
 |CMED_DATABASE|Nur interne Verwendung.|
 |CMED_HASH_SET|Nur interne Verwendung.|
-|COLUMNDATASETSESSIONLIST|Nur interne Verwendung.|
+|Columndatasetsessionlist|Nur interne Verwendung.|
 |COLUMNSTORE_HASHTABLE|Nur interne Verwendung.|
 |COLUMNSTOREBUILDSTATE_LIST|Nur interne Verwendung.|
 |COM_INIT|Nur interne Verwendung.|
-|KEIN COMMIT AUSGEFÜHRT|Nur interne Verwendung.|
+|Commit ausgeführt|Nur interne Verwendung.|
 |COMPPLAN_SKELETON|Nur interne Verwendung.|
 |CONNECTION_MANAGER|Nur interne Verwendung.|
-|STELLT EINE VERBINDUNG HER|Nur interne Verwendung.|
-|CSIBUILDMEM|Nur interne Verwendung.|
+|Stan|Nur interne Verwendung.|
+|Csibuildmem|Nur interne Verwendung.|
 |CURSOR|Nur interne Verwendung.|
-|CURSQL|Nur interne Verwendung.|
-|DATAPORTCONSUMER|Nur interne Verwendung.|
-|DATAPORTSOURCEINFOCREDIT|Nur interne Verwendung.|
-|DATAPORTSOURCEINFOQUEUE|Nur interne Verwendung.|
+|Cursor|Nur interne Verwendung.|
+|Dataportconsumer|Nur interne Verwendung.|
+|Dataportsourceinfocredit|Nur interne Verwendung.|
+|Dataportsourceinfoqueue|Nur interne Verwendung.|
 |DATASET_FREELIST|Nur interne Verwendung.|
 |DBCC_CHECK|Nur interne Verwendung.|
 |DBSEEDING_OPERATION|Nur interne Verwendung.|
 |DBT_HASH|Nur interne Verwendung.|
 |DBT_IO_LIST|Nur interne Verwendung.|
-|DBTABLE|Steuert den Zugriff auf eine Struktur in-Memory-Daten für jede Datenbank in einer SQL-Server, die die Eigenschaften für diese Datenbank enthält. Finden Sie unter [in diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789) für Weitere Informationen. |
+|DBTABLE|Steuert den Zugriff auf eine Datenstruktur im Arbeitsspeicher für jede Datenbank in einer SQL Server, die die Eigenschaften dieser Datenbank enthält. Weitere Informationen hierzu finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
 |DEFERRED_WF_EXT_DROP|Nur interne Verwendung.|
 |DEK_INSTANCE|Nur interne Verwendung.|
 |DELAYED_PARTITIONED_STACK|Nur interne Verwendung.|
-|DELETEBITMAP|Nur interne Verwendung.|
+|Deletebitmap|Nur interne Verwendung.|
 |DIAG_MANAGER|Nur interne Verwendung.|
 |DIAG_OBJECT|Nur interne Verwendung.|
 |DIGEST_CACHE|Nur interne Verwendung.|
-|DINPBUF|Nur interne Verwendung.|
-|DIRECTLOGCONSUMER|Nur interne Verwendung.|
-|DP_LIST|Steuert den Zugriff auf die Liste der modifizierten Seiten für eine Datenbank, die indirekten Prüfpunkt aktiviert wurde. Finden Sie unter [in diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) für Weitere Informationen.|
+|Dinpbuf|Nur interne Verwendung.|
+|Directlogconsumer|Nur interne Verwendung.|
+|DP_LIST|Steuert den Zugriff auf die Liste der geänderten Seiten für eine Datenbank, für die ein indirekter Prüfpunkt aktiviert ist. Weitere Informationen hierzu finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
 |DROP|Nur interne Verwendung.|
 |DROP_TEMPO|Nur interne Verwendung.|
 |DROPPED_ALLOC_UNIT|Nur interne Verwendung.|
@@ -159,7 +159,7 @@ GO
 |GHOST_HASH|Nur interne Verwendung.|
 |GLOBAL_SCHEDULER_LIST|Nur interne Verwendung.|
 |GLOBAL_TRACE_FLAGS|Nur interne Verwendung.|
-|GLOBALTRANS|Nur interne Verwendung.|
+|Globaltrans|Nur interne Verwendung.|
 |GROUP_COMMIT_FEEDBACK_LOOP|Nur interne Verwendung.|
 |GUARDIAN|Nur interne Verwendung.|
 |HADR_AGH_X_ACCESS|Nur interne Verwendung.|
@@ -171,23 +171,23 @@ GO
 |HADR_PRIORITY_QUEUE|Nur interne Verwendung.|
 |HADR_TRANSPORT_CONTROL|Nur interne Verwendung.|
 |HADR_TRANSPORT_LIST|Nur interne Verwendung.|
-|HADRSEEDINGLIST|Nur interne Verwendung.|
+|Hadrseedinglist|Nur interne Verwendung.|
 |HOBT_DROPPED|Nur interne Verwendung.|
 |HOBT_HASH|Nur interne Verwendung.|
 |HTTP|Nur interne Verwendung.|
 |HTTP_CONNCACHE|Nur interne Verwendung.|
 |HTTP_ENDPOINT|Nur interne Verwendung.|
-|IDENTITY|Nur interne Verwendung.|
+|IDENTITÄT|Nur interne Verwendung.|
 |INDEX_CREATE|Nur interne Verwendung.|
 |IO_DISPENSER_PAUSE|Nur interne Verwendung.|
 |IO_RG_VOLUME_HASHTABLE|Nur interne Verwendung.|
-|IOREQ|Nur interne Verwendung.|
-|ISSRESOURCE|Nur interne Verwendung.|
+|Ioreq|Nur interne Verwendung.|
+|Issresource|Nur interne Verwendung.|
 |KTM_ENLISTMENT|Nur interne Verwendung.|
 |LANG_RES_LOAD|Nur interne Verwendung.|
 |LIVE_TARGET_TVF|Nur interne Verwendung.|
 |LOCK_FREE_LIST|Nur interne Verwendung.|
-|LOCK_HASH|Schützt den Zugriff auf die Sperren-Manager-Hash-Tabelle, die Informationen zu den Sperren in einer Datenbank gespeichert. Finden Sie unter [in diesem Artikel](https://support.microsoft.com/kb/2926217) für Weitere Informationen.|
+|LOCK_HASH|Schützt den Zugriff auf die Hash Tabelle des Sperren-Managers, in der Informationen zu den Sperren gespeichert werden, die in einer Datenbank gespeichert sind. Weitere Informationen hierzu finden Sie in [diesem Artikel](https://support.microsoft.com/kb/2926217).|
 |LOCK_NOTIFICATION|Nur interne Verwendung.|
 |LOCK_RESOURCE_ID|Nur interne Verwendung.|
 |LOCK_RW_ABTX_HASH_SET|Nur interne Verwendung.|
@@ -206,11 +206,11 @@ GO
 |LOG_CONSOLIDATION|Nur interne Verwendung.|
 |LOG_RG_GOVERNOR|Nur interne Verwendung.|
 |LOGCACHE_ACCESS|Nur interne Verwendung.|
-|LOGFLUSHQ|Nur interne Verwendung.|
-|LOGIOSEQ|Nur interne Verwendung.|
-|LOGIOSEQMAPPENDINGMESSAGEQUEUE|Nur interne Verwendung.|
-|LOGLC|Nur interne Verwendung.|
-|LOGLFM|Nur interne Verwendung.|
+|Logflushq|Nur interne Verwendung.|
+|Logioabq|Nur interne Verwendung.|
+|Logioseqmappdingmessagequeue|Nur interne Verwendung.|
+|Loglc|Nur interne Verwendung.|
+|Loglfm|Nur interne Verwendung.|
 |LOGON_TRIGGER_CACHE|Nur interne Verwendung.|
 |LOGPOOL_HASHBUCKET|Nur interne Verwendung.|
 |LOGPOOL_REFCOUNTEDOBJECT|Nur interne Verwendung.|
@@ -219,9 +219,9 @@ GO
 |LPE_BATCH|Nur interne Verwendung.|
 |LPE_SESSION|Nur interne Verwendung.|
 |LPE_SXTP|Nur interne Verwendung.|
-|LSID|Nur interne Verwendung.|
-|LSLIST|Nur interne Verwendung.|
-|LSNREFLIST|Nur interne Verwendung.|
+|Lsid|Nur interne Verwendung.|
+|Lslist|Nur interne Verwendung.|
+|Lsnreflist|Nur interne Verwendung.|
 |LSS_SYNC_DTC|Nur interne Verwendung.|
 |MD_CHANGE_NOTIFICATION|Nur interne Verwendung.|
 |MDB_REMOTE_BATCH_STATS_HASH_TABLE|Nur interne Verwendung.|
@@ -240,8 +240,8 @@ GO
 |OPT_IDX_STATS|Nur interne Verwendung.|
 |OPT_INFO_MGR|Nur interne Verwendung.|
 |PAGE_WORKITEMLIST|Nur interne Verwendung.|
-|PAGECOPIER|Nur interne Verwendung.|
-|PARALLELREDOCACHE|Nur interne Verwendung.|
+|Pagecopier|Nur interne Verwendung.|
+|Parallelredocache|Nur interne Verwendung.|
 |PARTITIONED_HEAP_FREE_LIST|Nur interne Verwendung.|
 |PROGRESS_REPORT|Nur interne Verwendung.|
 |QE_SHUTDOWN|Nur interne Verwendung.|
@@ -260,25 +260,25 @@ GO
 |QUERY_STORE_READ_ONLY_FLAGS|Nur interne Verwendung.|
 |QUERY_STORE_SELF_AGG|Nur interne Verwendung.|
 |QUERY_STORE_STMT_COMP_AGG|Nur interne Verwendung.|
-|QUERYEXEC|Nur interne Verwendung.|
-|QUERYSCAN|Nur interne Verwendung.|
+|QueryExec|Nur interne Verwendung.|
+|Queryscan|Nur interne Verwendung.|
 |RANGE_GENERATION|Nur interne Verwendung.|
 |READ_AHEAD|Nur interne Verwendung.|
-|REDOMGRSTATE|Nur interne Verwendung.|
+|Redomgrstate|Nur interne Verwendung.|
 |REMOTE_SESSION_CACHE|Nur interne Verwendung.|
-|REMOTEBLOCKIO|Nur interne Verwendung.|
-|REMOTEOP|Nur interne Verwendung.|
+|Remoteblockio|Nur interne Verwendung.|
+|Remoteop|Nur interne Verwendung.|
 |REPL_LOGREADER_HISTORY_CACHE|Nur interne Verwendung.|
 |REPL_LOGREADER_PERDB_HISTORY_CACHE|Nur interne Verwendung.|
-|RESMANAGER|Nur interne Verwendung.|
+|Resmanager|Nur interne Verwendung.|
 |RESSOURCE|Nur interne Verwendung.|
-|RESQUEUE|Nur interne Verwendung.|
+|ResQueue|Nur interne Verwendung.|
 |RFS_THREAD_QUEUE|Nur interne Verwendung.|
 |RG_TIMER|Nur interne Verwendung.|
 |ROWGROUP_VERSIONS|Nur interne Verwendung.|
-|RPCCHANNELPOOL|Nur interne Verwendung.|
-|RPCPACKAGE|Nur interne Verwendung.|
-|RPCREQUESTORCONTEXT|Nur interne Verwendung.|
+|Rpcchannelpool|Nur interne Verwendung.|
+|Rpcpackage|Nur interne Verwendung.|
+|Rpkrequestorcontext|Nur interne Verwendung.|
 |RWLOCK_LAST|Nur interne Verwendung.|
 |SATELLITE_CONNECTION|Nur interne Verwendung.|
 |SBS_CLIENT_ENDPOINTS|Nur interne Verwendung.|
@@ -302,12 +302,12 @@ GO
 |SLO_INFO_LIST|Nur interne Verwendung.|
 |SNI|Nur interne Verwendung.|
 |SNI_NODE_PENDING_IO_QUEUE|Nur interne Verwendung.|
-|SOAPSESSIONS|Nur interne Verwendung.|
+|Soapsessions|Nur interne Verwendung.|
 |SOS_ABORT_TASK|Nur interne Verwendung.|
 |SOS_ACTIVEDESCRIPTOR|Nur interne Verwendung.|
 |SOS_BLOCKALLOCPARTIALLIST|Nur interne Verwendung.|
 |SOS_BLOCKDESCRIPTORBUCKET|Nur interne Verwendung.|
-|SOS_CACHESTORE|Synchronisiert den Zugriff auf verschiedene in-Memory-Caches in SQL Server wie z. B. den Plancache oder temporäre Tabellencache. Schwerwiegende Konflikte für diesen spinlocktyp kann viele verschiedene Dinge je nach den spezifischen Cache bedeuten, die in Konflikt. Wenden Sie sich an [!INCLUDE[msCoName](../../includes/msconame-md.md)] Microsoft Support Services, um Hilfe zur Problembehandlung dieses Spinlock-Typs. |
+|SOS_CACHESTORE|Synchronisiert den Zugriff auf verschiedene in-Memory-Caches in SQL Server z. b. im Plancache oder temporären Tabellencache. Ein starker Konflikt bei diesem Spinlock-Typ kann viele verschiedene Dinge bedeuten, abhängig vom spezifischen Cache, der Konflikte verursacht. Wenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sie sich an Microsoft Support Services, um Hilfe bei der Behebung dieses Spinlock-Typs |
 |SOS_CACHESTORE_CLOCK|Nur interne Verwendung.|
 |SOS_CLOCKALG_INTERNODE_SYNC|Nur interne Verwendung.|
 |SOS_DEBUG_HOOK|Nur interne Verwendung.|
@@ -355,20 +355,20 @@ GO
 |SQLTRACE_FILE_BUFFER|Nur interne Verwendung.|
 |SRVPROC|Nur interne Verwendung.|
 |STACK_HASHER|Nur interne Verwendung.|
-|SUBLATCH|Nur interne Verwendung.|
-|SUBPDESC|Nur interne Verwendung.|
+|Sublatch|Nur interne Verwendung.|
+|Subpabsc|Nur interne Verwendung.|
 |SUBPDESC_LIST|Nur interne Verwendung.|
 |SVC_BROKER_CTRL|Nur interne Verwendung.|
 |SVC_BROKER_DEBUG_LIST|Nur interne Verwendung.|
 |SVC_BROKER_LIST|Nur interne Verwendung.|
 |SVC_BROKER_OBJECT|Nur interne Verwendung.|
 |SYNCPOINT_RESOURCE|Nur interne Verwendung.|
-|TaskElapsedExecutionMonitor|Nur interne Verwendung.|
+|Taskelapandexecutionmonitor|Nur interne Verwendung.|
 |TDS_TVP|Nur interne Verwendung.|
-|TESTTEAM|Nur interne Verwendung.|
-|TESTTEAMEXPONENTIAL|Nur interne Verwendung.|
-|TESTTEAMEXPONENTIALTASTAS|Nur interne Verwendung.|
-|TESTTEAMTASTAS|Nur interne Verwendung.|
+|Testteam|Nur interne Verwendung.|
+|Testteamexponentielle|Nur interne Verwendung.|
+|Testteamexponentialtastas|Nur interne Verwendung.|
+|Testteamtastas|Nur interne Verwendung.|
 |TMP_SESS_KEY|Nur interne Verwendung.|
 |TSQL_DEBUG|Nur interne Verwendung.|
 |TXFRM_REPL|Nur interne Verwendung.|
@@ -382,21 +382,21 @@ GO
 |XACT_LOCK_INFO|Nur interne Verwendung.|
 |XACT_LOCKINFO_TASK|Nur interne Verwendung.|
 |XACT_WORKSPACE|Nur interne Verwendung.|
-|XCB|Nur interne Verwendung.|
+|Xcb|Nur interne Verwendung.|
 |XCB_FREE_LIST|Nur interne Verwendung.|
 |XCB_HASH|Nur interne Verwendung.|
 |XCHNG_TRACE|Nur interne Verwendung.|
 |XDES|Nur interne Verwendung.|
 |XDES_HASH|Nur interne Verwendung.|
-|XDESMGR|Nur interne Verwendung.|
-|XDESTABLELIST|Nur interne Verwendung.|
+|XDE smgr|Nur interne Verwendung.|
+|Xdestablelist|Nur interne Verwendung.|
 |XE_RATE_LIMITER_STRETCHDB|Nur interne Verwendung.|
 |XE_SESSION_STORAGE|Nur interne Verwendung.|
 |XID_ARRAY|Nur interne Verwendung.|
 |XIO_BLOCKLIST|Nur interne Verwendung.|
 |XIO_REQSTR|Nur interne Verwendung.|
 |XIO_SEQNUMBUMP|Nur interne Verwendung.|
-|XIOSTATS|Nur interne Verwendung.|
+|Xiostats|Nur interne Verwendung.|
 |XTP_RT_DATA_LIST|Nur interne Verwendung.|
 |XTS_MGR|Nur interne Verwendung.|
 |XVB_CSN|Nur interne Verwendung.|
@@ -404,15 +404,15 @@ GO
  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  
- [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
- [Wann ist Spinlock eine erhebliche Treiber der CPU-Auslastung in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
+ [Wann ist Spinlock ein bedeutender Treiber der CPU-Auslastung in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [Diagnose und Behebung von Spinlock-Konflikte für SQLServer](https://www.microsoft.com/download/details.aspx?id=26666)
+ [Diagnostizieren und Beheben von Spinlock-Konflikten auf SQL Server](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 

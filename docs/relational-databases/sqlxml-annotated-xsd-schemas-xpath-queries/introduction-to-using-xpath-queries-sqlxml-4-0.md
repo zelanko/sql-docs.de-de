@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246592"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
@@ -59,7 +59,7 @@ ms.locfileid: "75246592"
   
      In SQLXML 4.0 werden Abfragen des Stammelements (/) nicht unterstützt. Jede XPath-Abfrage muss bei einem ** \<ElementType** der obersten Ebene>im Schema beginnen.  
   
--   **Melden von Fehlern**  
+-   **Fehler melden**  
   
      Die XPath-Spezifikation des W3C definiert keine Fehlerbedingungen. XPath-Abfragen, die keine Knoten auswählen, geben eine leere Knotengruppe zurück. In SQLXML 4.0 kann eine Abfrage viele Arten von Fehlermeldungen zurückgeben.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "75246592"
 ## <a name="supported-functionality"></a>Unterstützte Funktionalität  
  In der folgenden Tabelle werden die Funktionen der XPath-Sprache aufgeführt, die in SQLXML 4.0 implementiert sind.  
   
-|Feature|Item|Link zu Beispielabfragen|  
+|Funktion|Element|Link zu Beispielabfragen|  
 |-------------|----------|----------------------------|  
 |Achsen|**Attribute**, **untergeordnete Elemente, über** **geordnete**Elemente und **Self** -Achsen|[Angeben von Achsen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prädikate mit booleschen Werten einschließlich aufeinander folgender und geschachtelter Prädikate||[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Alle relationalen Operatoren|=,! =, <, \<=, #a1, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Alle relationalen Operatoren|=,! =, <, \<=, >, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Arithmetische Operatoren|+, -, *, div|[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Explizite Konvertierungs Funktionen|**Number ()**, **String ()**, **Boolean ()**|[Angeben von expliziten Konvertierungs Funktionen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |Boolesche Operatoren|AND, OR|[Angeben von booleschen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +105,7 @@ ms.locfileid: "75246592"
 ## <a name="unsupported-functionality"></a>Nicht unterstützte Funktionalität  
  In der folgenden Tabelle werden die Funktionen der XPath-Sprache aufgeführt, die in SQLXML 4.0 nicht implementiert sind.  
   
-|Feature|Item|  
+|Funktion|Element|  
 |-------------|----------|  
 |Achsen|**Vorgänger, Vorgänger** **-or-self**, **Nachfolger**, Nachfolger **oder-selbst (//)**, **folgt**, nach dem **folgenden**neben geordneten Element, **Namespace**, **vorangehende**, **vorangestelltem** neben geordnetes Element|  
 |Prädikate mit numerischen Werten||  
@@ -118,7 +118,7 @@ ms.locfileid: "75246592"
   
  Bei der Angabe von XPath-Abfragen in einer Vorlage ist Folgendes zu beachten:  
   
--   XPath kann Zeichen wie #a0 oder #a1 enthalten, die in XML eine besondere Bedeutung haben (und die Vorlage ist ein XML-Dokument). Sie müssen diese Zeichen mithilfe von XML-#a0 Codierungen mit Escapezeichen versehen oder den XPath in der URL angeben.  
+-   XPath kann Zeichen wie < oder & enthalten, die in XML eine besondere Bedeutung haben (und die Vorlage ist ein XML-Dokument). Sie müssen diese Zeichen mithilfe von XML-& Codierungen mit Escapezeichen versehen oder den XPath in der URL angeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von XPath-Abfragen in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

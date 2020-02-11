@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401669"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-SQL)
@@ -26,25 +26,25 @@ ms.locfileid: "74401669"
 
 Enthält eine Zeile für jede Spalte in einem columnstore-Index.
 
-| Spaltenname                 | Datentyp  | Beschreibung                                                  |
+| Spaltenname                 | Datentyp  | BESCHREIBUNG                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
-| **partition_id**            | **bigint** | Gibt die Partitions-ID an. Ist innerhalb einer Datenbank eindeutig.     |
-| **hobt_id**                 | **bigint** | ID des Heaps oder B-Struktur-Indexes (hobt) für die Tabelle, die diesen columnstore-Index aufweist. |
-| **column_id**               | **wartenden**    | ID der columnstore-Spalte.                                |
-| **segment_id**              | **wartenden**    | Die ID des Spaltensegments. Aus Gründen der Abwärtskompatibilität wird der Spaltenname weiterhin segment_id aufgerufen, obwohl dies die Zeilen Gruppen-ID ist. Sie können ein Segment mithilfe <hobt_id, partition_id, column_id>, <segment_id> eindeutig identifizieren. |
-| **Version**                 | **wartenden**    | Die Version des Spaltensegmentformats.                        |
-| **encoding_type**           | **wartenden**    | Codierungstyp, der für dieses Segment verwendet wird:<br /><br /> 1 = VALUE_BASED-keine Zeichenfolge/Binärdatei ohne Wörterbuch (ähnlich wie 4 mit einigen internen Variationen)<br /><br /> 2 = VALUE_HASH_BASED-nicht-Zeichenfolge/binäre Spalte mit allgemeinen Werten im Wörterbuch<br /><br /> 3 = STRING_HASH_BASED Zeichenfolge/binäre Spalte mit allgemeinen Werten im Wörterbuch<br /><br /> 4 = STORE_BY_VALUE_BASED-keine Zeichenfolge/Binärdatei ohne Wörterbuch<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED Zeichenfolge/Binärdatei ohne Wörterbuch<br /><br /> Alle Codierungen nutzen, wenn möglich, die bitkomprimierung und die Codierung der Lauf Länge. |
-| **row_count**               | **wartenden**    | Die Anzahl der Zeilen in der Zeilengruppe.                             |
-| **has_nulls**               | **wartenden**    | 1, wenn das Spaltensegment NULL-Werte enthält.                     |
-| **base_id**                 | **bigint** | Die Basiswert-ID, wenn Codierungstyp 1 verwendet wird.  Wenn Codierungstyp 1 nicht verwendet wird, wird base_id auf 1 festgelegt. |
-| **magnitude**               | **Hafen**  | Größe, wenn Codierungstyp 1 verwendet wird.  Wenn Codierungstyp 1 nicht verwendet wird, wird die Größe auf 1 festgelegt. |
-| **primary__dictionary_id**  | **wartenden**    | ID des primären Wörterbuchs. Ein Wert ungleich 0 (null) verweist auf das lokale Wörterbuch für diese Spalte im aktuellen Segment (d. h. die Zeilen Gruppe). Der Wert-1 gibt an, dass kein lokales Wörterbuch für dieses Segment vorhanden ist. |
-| **secondary_dictionary_id** | **wartenden**    | ID des sekundären Wörterbuchs. Ein Wert ungleich 0 (null) verweist auf das lokale Wörterbuch für diese Spalte im aktuellen Segment (d. h. die Zeilen Gruppe). Der Wert-1 gibt an, dass kein lokales Wörterbuch für dieses Segment vorhanden ist. |
-| **min_data_id**             | **bigint** | Die minimale Daten-ID im Spalten Segment.                       |
-| **max_data_id**             | **bigint** | Maximale Daten-ID im Spalten Segment.                       |
-| **null_value**              | **bigint** | Ein Wert, der zum Darstellen von NULL-Werten verwendet wird.                               |
-| **on_disk_size**            | **bigint** | Die Größe des Segments in Byte.                                    |
-| **pdw_node_id**             | **wartenden**    | Eindeutiger Bezeichner [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eines Knotens. |
+| **partition_id**            | **BIGINT** | Gibt die Partitions-ID an. Ist innerhalb einer Datenbank eindeutig.     |
+| **hobt_id**                 | **BIGINT** | ID des Heaps oder B-Struktur-Indexes (hobt) für die Tabelle, die diesen columnstore-Index aufweist. |
+| **column_id**               | **int**    | ID der columnstore-Spalte.                                |
+| **segment_id**              | **int**    | Die ID des Spaltensegments. Aus Gründen der Abwärtskompatibilität wird der Spaltenname weiterhin segment_id aufgerufen, obwohl dies die Zeilen Gruppen-ID ist. Sie können ein Segment mithilfe <hobt_id, partition_id, column_id>, <segment_id> eindeutig identifizieren. |
+| **Version**                 | **int**    | Die Version des Spaltensegmentformats.                        |
+| **encoding_type**           | **int**    | Codierungstyp, der für dieses Segment verwendet wird:<br /><br /> 1 = VALUE_BASED-keine Zeichenfolge/Binärdatei ohne Wörterbuch (ähnlich wie 4 mit einigen internen Variationen)<br /><br /> 2 = VALUE_HASH_BASED-nicht-Zeichenfolge/binäre Spalte mit allgemeinen Werten im Wörterbuch<br /><br /> 3 = STRING_HASH_BASED Zeichenfolge/binäre Spalte mit allgemeinen Werten im Wörterbuch<br /><br /> 4 = STORE_BY_VALUE_BASED-keine Zeichenfolge/Binärdatei ohne Wörterbuch<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED Zeichenfolge/Binärdatei ohne Wörterbuch<br /><br /> Alle Codierungen nutzen, wenn möglich, die bitkomprimierung und die Codierung der Lauf Länge. |
+| **row_count**               | **int**    | Die Anzahl der Zeilen in der Zeilengruppe.                             |
+| **has_nulls**               | **int**    | 1, wenn das Spaltensegment NULL-Werte enthält.                     |
+| **base_id**                 | **BIGINT** | Die Basiswert-ID, wenn Codierungstyp 1 verwendet wird.  Wenn Codierungstyp 1 nicht verwendet wird, wird base_id auf 1 festgelegt. |
+| **magnitude**               | **float**  | Größe, wenn Codierungstyp 1 verwendet wird.  Wenn Codierungstyp 1 nicht verwendet wird, wird die Größe auf 1 festgelegt. |
+| **primary__dictionary_id**  | **int**    | ID des primären Wörterbuchs. Ein Wert ungleich 0 (null) verweist auf das lokale Wörterbuch für diese Spalte im aktuellen Segment (d. h. die Zeilen Gruppe). Der Wert-1 gibt an, dass kein lokales Wörterbuch für dieses Segment vorhanden ist. |
+| **secondary_dictionary_id** | **int**    | ID des sekundären Wörterbuchs. Ein Wert ungleich 0 (null) verweist auf das lokale Wörterbuch für diese Spalte im aktuellen Segment (d. h. die Zeilen Gruppe). Der Wert-1 gibt an, dass kein lokales Wörterbuch für dieses Segment vorhanden ist. |
+| **min_data_id**             | **BIGINT** | Die minimale Daten-ID im Spalten Segment.                       |
+| **max_data_id**             | **BIGINT** | Maximale Daten-ID im Spalten Segment.                       |
+| **null_value**              | **BIGINT** | Ein Wert, der zum Darstellen von NULL-Werten verwendet wird.                               |
+| **on_disk_size**            | **BIGINT** | Die Größe des Segments in Byte.                                    |
+| **pdw_node_id**             | **int**    | Eindeutiger Bezeichner [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eines Knotens. |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -82,7 +82,7 @@ ORDER BY    table_nm
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die **VIEW SERVER STATE**-Berechtigung.
+Erfordert die **View Server State** -Berechtigung.
 
 ## <a name="see-also"></a>Weitere Informationen
 

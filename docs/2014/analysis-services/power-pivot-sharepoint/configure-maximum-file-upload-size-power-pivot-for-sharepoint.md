@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der maximalen Dateiuploadgröße (PowerPivot für SharePoint) | Microsoft-Dokumentation
+title: Maximale Dateiuploadgröße konfigurieren (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071819"
 ---
-# <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Konfigurieren der maximalen Dateiuploadgröße (PowerPivot für SharePoint)
+# <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Maximale Dateiuploadgröße konfigurieren (PowerPivot für SharePoint)
   PowerPivot-Arbeitsmappen enthalten oft große Datenmengen, was dazu führt, dass Dateien die maximal für SharePoint-Uploads zulässige Dateigröße überschreiten. Wenn Sie versuchen, eine Datei hochzuladen, die die Obergrenze überschreitet, wird die folgende Fehlermeldung in SharePoint angezeigt:  
   
 -   „Die angegebene Datei ist größer als die maximal unterstützte Dateigröße.“  
@@ -28,7 +28,7 @@ ms.locfileid: "66071819"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>Konfigurieren der maximalen Dateigröße für Excel Services  
   
-1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
+1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
 2.  Klicken Sie auf den Namen der Excel Services-Anwendung.  
   

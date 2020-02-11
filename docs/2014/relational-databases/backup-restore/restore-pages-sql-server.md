@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921040"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "62921040"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="WhenUseful"></a> Wann ist eine Seitenwiederherstellung sinnvoll?  
  Eine Seitenwiederherstellung ist zum Reparieren einzelner beschädigter Seiten vorgesehen. Die Wiederherstellung weniger Einzelseiten erfolgt möglicherweise schneller als eine Dateiwiederherstellung, sodass sich die Menge der Daten reduziert, die während der Wiederherstellung offline sind. Wenn Sie jedoch mehrere Seiten in einer Datei wiederherstellen müssen, erweist sich die Wiederherstellung der vollständigen Datei in der Regel als effizienter. Wenn auf einem Gerät sehr viele Seiten beschädigt sind, kann das ein Hinweis auf einen Gerätefehler sein. In diesem Fall sollten Sie die Datei nach Möglichkeit an einem anderen Speicherort wiederherstellen und das Gerät reparieren.  
@@ -62,7 +62,7 @@ ms.locfileid: "62921040"
   
     -   Transaktionsprotokoll  
   
-    -   Zuordnungsseiten: Global Allocation Map (GAM) Seiten, freigegeben Global Allocation Map SGAM () und Seite Free Space (PFS) Seiten.  
+    -   Zuordnungsseiten: GAM-Seiten (Global Allocation Map), SGAM-Seiten (Shared Global Allocation Map) und PFS-Seiten (Page Free Space).  
   
     -   Seite 0 von allen Datendateien (die Startseite der Datei)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62921040"
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Ab [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Seitenwiederherstellungen.  
   
 #### <a name="to-restore-pages"></a>So stellen Sie Seiten wieder her  
@@ -115,7 +115,7 @@ ms.locfileid: "62921040"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Aufgaben**, zeigen Sie auf **Wiederherstellen**, und klicken Sie anschließend auf **Seite**. Daraufhin wird das Dialogfeld **Seite wiederherstellen** geöffnet.  
   
-     **Restore**  
+     **Wiederherstellen**  
      Über diesen Abschnitt führen Sie die gleiche Funktion wie mit **Wiederherstellen in** unter [Datenbank wiederherstellen (Seite „Allgemein“)](../../integration-services/general-page-of-integration-services-designers-options.md)aus.  
   
      **Datenbank**  
@@ -134,7 +134,7 @@ ms.locfileid: "62921040"
     |------------|------------|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Komponente**|Die gesicherte Komponente: **Datenbank**, **Datei** oder **\<leer>** (bei Transaktionsprotokollen).|  
-    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
+    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
     |**Server**|Der Name der Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s, von der der Sicherungsvorgang ausgeführt wurde.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  
@@ -217,7 +217,7 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)   

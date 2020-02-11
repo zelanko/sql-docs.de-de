@@ -19,10 +19,10 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670565"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>System Informations Schema-Sichten (Transact-SQL)
@@ -34,13 +34,14 @@ Eine Informationsschemasicht ist eine der Methoden, die [!INCLUDE[ssNoVersion](.
 > [!IMPORTANT]
 > An Informationsschemasichten wurden einige Änderungen vorgenommen, wodurch die Abwärtskompatibilität nicht mehr gegeben ist. Diese Änderungen werden in den betreffenden Themen für die jeweiligen Sichten beschrieben.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine dreiteilige Benennungskonvention beim Verweis auf den aktuellen Server. Der ISO-Standard unterstützt ebenfalls eine dreiteilige Benennungskonvention. Die Namen, die in den beiden Konventionen verwendet werden, sind jedoch unterschiedlich. Die Informationsschemasichten sind in einem speziellen Schema namens INFORMATION_SCHEMA definiert. Dieses Schema ist in jeder Datenbank enthalten. Jede Informationsschemasicht enthält die Metadaten für alle in der jeweiligen Datenbank gespeicherten Datenobjekte. In der folgenden Tabelle werden die Beziehungen zwischen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Namen und den SQL-Standardnamen aufgeführt.
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine dreiteilige Benennungskonvention beim Verweis auf den aktuellen Server. Der ISO-Standard unterstützt ebenfalls eine dreiteilige Benennungskonvention. Die Namen, die in den beiden Konventionen verwendet werden, sind jedoch unterschiedlich. Die Informationsschemasichten sind in einem speziellen Schema namens INFORMATION_SCHEMA definiert. Dieses Schema ist in jeder Datenbank enthalten. Jede Informationsschemasicht enthält die Metadaten für alle in der jeweiligen Datenbank gespeicherten Datenobjekte. In der folgenden Tabelle werden die Beziehungen zwischen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Namen und den SQL-Standardnamen aufgeführt.
 
 |SQL Server-Name|Entsprechender SQL-Standardname|
 |---------------------|-----------------------------------------------|
 |Datenbank|Katalog|
 |Schema|Schema|
-|Objekt|Objekt|
+|Object|Object|
 |benutzerdefinierter Datentyp|Domain|
 
 Diese Namenzuordnungskonvention betrifft die folgenden ISO-kompatiblen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sichten.
@@ -60,7 +61,7 @@ Diese Namenzuordnungskonvention betrifft die folgenden ISO-kompatiblen [!INCLUDE
 
 Darüber hinaus enthalten einige Sichten Verweise auf verschiedene Klassen von Daten, z. B. Zeichendaten oder binäre Daten.
 
-Wenn Sie auf die Informationsschemasichten verweisen, müssen Sie einen qualifizierten Namen verwenden, der den Namen des `INFORMATION_SCHEMA`-Schemas enthält. Zum Beispiel:
+Wenn Sie auf die Informationsschemasichten verweisen, müssen Sie einen qualifizierten Namen verwenden, der den Namen des `INFORMATION_SCHEMA`-Schemas enthält. Beispiel:
 
 ```sql
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
@@ -68,8 +69,8 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [System Sichten &#40;(Transact-SQL)&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

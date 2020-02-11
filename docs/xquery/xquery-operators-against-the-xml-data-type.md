@@ -1,5 +1,5 @@
 ---
-title: XQuery-Operatoren für den Xml-Datentyp | Microsoft-Dokumentation
+title: XQuery-Operatoren für den XML-Datentyp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945956"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>XQuery-Operatoren für den xml-Datentyp
@@ -32,16 +32,16 @@ ms.locfileid: "67945956"
   
 -   Operatoren für Wertvergleiche (eq, ne, lt, gt, le, ge)  
   
--   Operatoren für allgemeine Vergleiche (=,! =, \<, >, \<=, > =)  
+-   Operatoren für allgemeine Vergleiche (=,! = \<,, > \<, =, >=)  
   
  Weitere Informationen zu diesen Operatoren finden Sie unter [Vergleichsausdrücke &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-general-operators"></a>A. Verwenden von allgemeinen Operatoren  
- Die folgende Abfrage zeigt die Verwendung allgemeiner Operatoren, die für Sequenzen gelten, sowie das Vergleichen von Sequenzen. Die Abfrage ruft eine Sequenz von Rufnummern für jeden Kunden aus der **AdditionalContactInfo** Spalte die **wenden Sie sich an** Tabelle. Diese Sequenz wird dann mit der Sequenz von zwei Rufnummern ("111-111-1111", "222-2222") verglichen.  
+ Die folgende Abfrage zeigt die Verwendung allgemeiner Operatoren, die für Sequenzen gelten, sowie das Vergleichen von Sequenzen. Die Abfrage ruft eine Sequenz von Telefonnummern für jeden Kunden aus der **AdditionalContactInfo** -Spalte der **Contact** -Tabelle ab. Diese Sequenz wird dann mit der Sequenz von zwei Rufnummern ("111-111-1111", "222-2222") verglichen.  
   
- Die Abfrage verwendet die **=** Vergleichsoperator. Jeder Knoten in der Sequenz auf der rechten Seite des der **=** Operator wird verglichen, wobei jeder Knoten in der Sequenz auf der linken Seite. Wenn die Knoten entsprechen ergibt, der knotenvergleich **"true"** . Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
+ Die Abfrage verwendet den **=** Vergleichs Operator. Jeder Knoten in der Sequenz auf der rechten Seite des **=** Operators wird mit jedem Knoten in der Sequenz auf der linken Seite verglichen. Wenn die Knoten Stimmen, ist der Knoten Vergleich " **true**". Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -55,7 +55,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Es ist eine weitere Möglichkeit, beachten Sie, wie die vorherige Abfrage funktioniert: Jeder rufnummernwert abgerufen, die von der **AdditionalContactInfo** Spalte mit dem Satz von zwei Rufnummern verglichen wird. Wenn der Wert im Satz enthalten ist, wird der betreffende Kunde im Ergebnis zurückgegeben.  
+ Es gibt eine weitere Möglichkeit, zu beobachten, wie die vorherige Abfrage funktioniert: jeder Wert der Telefonnummer, der aus der **AdditionalContactInfo** -Spalte abgerufen wurde, wird mit dem Satz von zwei Telefonnummern verglichen. Wenn der Wert im Satz enthalten ist, wird der betreffende Kunde im Ergebnis zurückgegeben.  
   
 ### <a name="b-using-a-numeric-operator"></a>B. Verwenden eines numerischen Operators  
  Der +-Operator in dieser Abfrage ist ein Wertoperator, weil er sich auf ein einzelnes Element bezieht. Der Wert 1 wird z. B. zu einer Chargengröße addiert, die von der Abfrage zurückgegeben wird:  
@@ -78,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. Verwenden eines Wertoperators  
- Die folgende Abfrage ruft die <`Picture`>-Elemente für ein Produktmodell, wobei die Bildgröße "small" ist:  
+ Die folgende Abfrage ruft die <`Picture`> Elemente für ein Produktmodell ab, wobei die Bildgröße "Small" ist:  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -91,10 +91,10 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Da beide der Operanden der **Eq** Operator atomare Werte, der Wert-Operator wird verwendet, in der Abfrage. Sie können die gleiche Abfrage schreiben, mithilfe des allgemeinen Vergleichsoperators ( **=** ).  
+ Da beide Operanden für den **EQ** -Operator atomarische Werte sind, wird der Value-Operator in der Abfrage verwendet. Sie können dieselbe Abfrage mit dem allgemeinen Vergleichs Operator ( **=** ) schreiben.  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery-Funktionen für den Xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den XML-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

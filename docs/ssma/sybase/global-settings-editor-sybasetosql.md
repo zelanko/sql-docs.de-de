@@ -1,5 +1,5 @@
 ---
-title: Globale Einstellungen (Editor) (SybaseToSQL) | Microsoft-Dokumentation
+title: Globale Einstellungen (Editor) (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d3f818b7e6041761d3684ac35374298c47335de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029072"
 ---
 # <a name="global-settings-editor-sybasetosql"></a>Globale Einstellungen (Editor) (SybaseToSQL)
-Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld die Einstellungen für Code-Editor-Fenster.  
+Verwenden Sie die Seite Editor des Dialog Felds **globale Einstellungen** , um Einstellungen für Code-Editor-Fenster anzugeben.  
   
-Die Editor-Einstellungen, für den Zugriff auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **Editor**.  
+Um **auf die Editor** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Editor**aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Zeilennummern anzeigen**  
-Wählen Sie zum Anzeigen von Zeilennummern im Code-Editor-Fenster **"true"** .  
+Wählen Sie **true**aus, um die Zeilennummern in den Code-Editor-Fenstern anzuzeigen.  
   
-Wenn ein Code-Editor-Fenster aktiviert ist, wenn Sie diese Einstellung ändern, müssen Sie möglicherweise erneut auswählen, das aktuelle Objekt, um die Anzeige zu aktualisieren.  
+Wenn ein Code-Editor-Fenster ausgewählt wird, wenn Sie diese Einstellung ändern, müssen Sie möglicherweise das aktuelle Objekt erneut auswählen, um die Anzeige zu aktualisieren.  
   

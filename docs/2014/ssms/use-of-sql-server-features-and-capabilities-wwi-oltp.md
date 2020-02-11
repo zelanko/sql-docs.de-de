@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280489"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
@@ -25,7 +25,7 @@ ms.locfileid: "63280489"
   
  In der folgenden Tabelle sind die Argumente für externe Tools aufgeführt.  
   
-|Name|Argument|Beschreibung|  
+|Name|Argument|BESCHREIBUNG|  
 |----------|--------------|-----------------|  
 |**Elementpfad**|$(ItemPath)|Der vollständige Dateiname der aktuellen Quelle (definiert als Laufwerk + Pfad + Dateiname); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  
 |**Elementverzeichnis**|$(ItemDir)|Das Verzeichnis der aktuellen Quelle (definiert als Laufwerk + Pfad); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  
@@ -43,10 +43,10 @@ ms.locfileid: "63280489"
 |**Projektmappenverzeichnis**|$(SolutionDir)|Das Verzeichnis der aktuellen Projektmappe (definiert als Laufwerk + Pfad).|  
 |**Projektmappen-Dateiname**|$(SolutionFileName)|Der Dateiname der aktuellen Projektmappe (definiert als Laufwerk + Pfad + Dateiname).|  
   
- <sup>1</sup> die aktuelle Zeile, die aktuelle Spalte oder den aktuellen Text basiert auf der Position des Cursors im Text-Editor wie in der Statusleiste dargestellt.  
+ <sup>1</sup> die aktuelle Zeile, die aktuelle Spalte oder der aktuelle Text basiert auf der Position des Cursors im Text-Editor, wie in der Statusleiste angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Externe Tools (Dialogfeld)](external-tools-dialog-box.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Externe Tools (Dialog Feld)](external-tools-dialog-box.md)   
  [Allgemeine Benutzeroberflächenelemente](general-user-interface-elements.md)  
   
   

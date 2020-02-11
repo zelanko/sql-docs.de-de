@@ -18,36 +18,36 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072647"
 ---
-# <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
+# <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_identity_range_allocations** Tabelle wird verwendet, um den Verlauf von identitätsbereichszuweisungen, identitätsbereichszuweisungen zu Verlegern und Abonnenten für veröffentlichte Artikel nachverfolgt. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSmerge_identity_range_allocations** Tabelle dient zum Nachverfolgen des Verlaufs der Identitäts Bereichs Zuweisungen für Verleger und Abonnenten für veröffentlichte Artikel. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
-|**publisher_db**|**nvarchar(128)**|Der Name der Veröffentlichungsdatenbank.|  
-|**publication**|**nvarchar(128)**|Der Name der Veröffentlichung.|  
-|**article**|**nvarchar(128)**|Der Name des Artikels.|  
-|**subscriber**|**nvarchar(128)**|Den Namen des Abonnenten.|  
-|**subscriber_db**|**nvarchar(128)**|Der Name der Abonnementdatenbank.|  
+|**publisher_db**|**nvarchar(128)**|Der Name der Veröffentlichungs Datenbank.|  
+|**ung**|**nvarchar(128)**|Der Name der Veröffentlichung.|  
+|**Artikel**|**nvarchar(128)**|Der Name des Artikels.|  
+|**Abonnenten**|**nvarchar(128)**|Den Namen des Abonnenten.|  
+|**subscriber_db**|**nvarchar(128)**|Der Name der Abonnement Datenbank.|  
 |**is_pub_range**|**bit**|Zeigt an, ob der Identitätsbereich einem Verleger zugewiesen ist.|  
 |**ranges_allocated**|**tinyint**|Die Anzahl zugewiesener Identitätsbereiche.|  
-|**range_begin**|**numeric(38)**|Der Anfangswert des Bereichs.|  
-|**' range_end '**|**numeric(38)**|Der letzte Wert des Bereichs.|  
-|**next_range_begin**|**numeric(38)**|Der Anfangswert des nächsten zuzuweisenden Bereichs.|  
-|**next_range_end**|**numeric(38)**|Der letzte Wert des nächsten zuzuweisenden Bereichs.|  
-|**max_used**|**numeric(38)**|Der höchste verwendete Identitätswert.|  
+|**range_begin**|**numerisch (38)**|Der Anfangswert des Bereichs.|  
+|**range_end**|**numerisch (38)**|Der letzte Wert des Bereichs.|  
+|**next_range_begin**|**numerisch (38)**|Der Anfangswert des nächsten zuzuweisenden Bereichs.|  
+|**next_range_end**|**numerisch (38)**|Der letzte Wert des nächsten zuzuweisenden Bereichs.|  
+|**max_used**|**numerisch (38)**|Der höchste verwendete Identitätswert.|  
 |**time_of_allocation**|**datetime**|Der Zeitpunkt, zu dem die Zuweisung erfolgte.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

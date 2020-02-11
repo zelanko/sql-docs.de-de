@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893693"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Erweiterte Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -26,17 +26,17 @@ ms.locfileid: "68893693"
   
  **Schritte**  
   
-1.  [Vorbereiten der erweiterten Umsatzdaten (für Vorhersagen)](#bkmk_newExtendData)  
+1.  [Vorbereiten der erweiterten Umsatzdaten (für die Vorhersage)](#bkmk_newExtendData)  
   
 2.  [Vorbereiten der aggregierten Daten (zum Erstellen des Modells)](#bkmk_newReplaceData)  
   
-3.  [Vorbereiten der Reihen Daten (für Kreuz Vorhersagen)](#bkmk_CrossData2)  
+3.  [Vorbereiten der Reihendaten (für Kreuzvorhersagen)](#bkmk_CrossData2)  
   
-4.  [Vorhersagen mit erweitern](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+4.  [Vorhersagen mit EXTEND](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
-5.  [Erstellen des Kreuz Vorhersagemodells](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+5.  [Erstellen des Modells für Kreuzvorhersagen](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [Vorhersagen mit Replace](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [Vorhersagen mit REPLACE](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 7.  [Überprüfen der neuen Vorhersagen](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68893693"
   
      **Datenquelle**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Tabellen und Sichten auswählen**: Wählen Sie die soeben erstellte Tabelle newsalesdata aus.  
+     **Tabellen und Sichten auswählen**: Wählen Sie die Tabelle aus, die Sie soeben erstellt haben, newsalesdata.  
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68893693"
 >  Sie verwenden diese Daten nur für Vorhersagen; daher ist es nicht wichtig, dass sie unvollständig sind.  
   
 ##  <a name="bkmk_CrossData2"></a>Erstellen der Daten für das Kreuz Vorhersagemodell  
- Die im ursprünglichen Vorhersagemodell verwendeten Daten wurden bereits von der vTimeSeries-Ansicht gruppiert, die mehrere Fahrradmodelle in eine kleinere Anzahl von Kategorien reduziert und Ergebnisse aus einzelnen Ländern in Regionen zusammengeführt hat. Sie erstellen ein Modell, das für weltweite Prognosen verwendet werden kann, indem Sie direkt im Datenquellensicht-Designer einige zusätzliche einfache Aggregationen erstellen. Die neue Datenquellensicht enthält nur die Summe und den Durchschnitt der Umsätze aller Produkte in allen Regionen.  
+ Die Daten, die im ursprünglichen Prognosemodell verwendet wurden, wurden in der Sicht vTimeSeries bereits ein wenig gruppiert, da dort mehrere Fahrradmodelle in eine kleinere Anzahl von Kategorien und die Ergebnisse einzelner Länder in Regionen zusammengeführt wurden. Sie erstellen ein Modell, das für weltweite Prognosen verwendet werden kann, indem Sie direkt im Datenquellensicht-Designer einige zusätzliche einfache Aggregationen erstellen. Die neue Datenquellensicht enthält nur die Summe und den Durchschnitt der Umsätze aller Produkte in allen Regionen.  
   
  Nachdem Sie die für das Modell verwendete Datenquelle erstellt haben, müssen Sie eine neue Datenquellensicht erstellen, die für Vorhersage verwendet werden soll. Wenn Sie z. B. die Umsätze in Europa mit dem neuen weltweite Modell vorhersagen möchten, dürfen Sie nur Daten aus der Region Europa eingeben. Daher richten Sie eine neue Datenquellensicht ein, die die ursprünglichen Daten filtert, und ändern die Filterbedingung für jeden Satz von Vorhersageabfragen.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68893693"
   
 2.  Klicken Sie auf der Begrüßungsseite des Assistenten auf **Weiter**.  
   
-3.  Wählen Sie auf der Seite **Datenquelle auswählen** [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]aus und klicken Sie dann auf **Weiter**.  
+3.  Wählen Sie auf der Seite **Datenquelle auswählen**[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]aus und klicken Sie dann auf **Weiter**.  
   
 4.  Wählen Sie auf der Seite **Tabellen und Sichten**, keine Tabellen hinzufügen aus. Klicken Sie einfach auf **weiter**.  
   
@@ -152,9 +152,9 @@ ms.locfileid: "68893693"
   
      **Datenquelle**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Tabellen und Sichten auswählen**: Keine Tabellen auswählen  
+     **Tabellen und Sichten auswählen**: keine Tabellen auswählen  
   
-     **Name**: `T1000 Pacific Region`  
+     **Name**:`T1000 Pacific Region`  
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
@@ -162,9 +162,9 @@ ms.locfileid: "68893693"
   
      Das Dialogfeld **Benannte Abfrage erstellen** wird geöffnet. Geben Sie den Namen erneut ein und fügen Sie die folgende Beschreibung hinzu:  
   
-     **Name**: `T1000 Pacific Region`  
+     **Name**:`T1000 Pacific Region`  
   
-     **Beschreibung:** **Nach`vTimeSeries`Region und Modell Filtern**  
+     **Beschreibung**: **nach`vTimeSeries`Region und Modell Filtern**  
   
 5.  Geben Sie im Textbereich die folgende Abfrage ein, und klicken Sie dann auf "OK":  
   
@@ -181,12 +181,12 @@ ms.locfileid: "68893693"
   
      Sie verwenden diese Daten als Eingabe in das Modell, wenn Sie Abfragen für Kreuzvorhersagen erstellen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Zeitreihen Vorhersagen mit aktualisiertem Data &#40;Mining-Tutorial für Data Mining&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Zeitreihen Vorhersagen mit aktualisierten Data &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Datenquellsichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
+ [Datenquellensichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63227012"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>Anzeigen von Joineigenschaften (Visual Database Tools)
@@ -32,7 +32,7 @@ ms.locfileid: "63227012"
   
      Die Eigenschaften des Join werden im Eigenschaftenfenster angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Abfragen mit Joins &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153834"
 ---
-# <a name="lesson-3-create-a-sql-server-credential"></a>Lektion 3: Erstellen von SQL Server-Anmeldeinformationen
+# <a name="lesson-3-create-a-sql-server-credential"></a>Lektion 3: Erstellen von SQL Server-Anmeldeinformationen
   In dieser Lektion erstellen Sie Anmelde Informationen zum Speichern der Sicherheitsinformationen, die für den Zugriff auf das Azure-Speicherkonto verwendet werden.  
   
  SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature-Schlüsselwerte gespeichert. Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen.  
   
- Allgemeine Informationen zu Anmelde Informationen finden Sie [unter &#40;Anmelde&#41;Informationen Datenbank-Engine](security/authentication-access/credentials-database-engine.md).  
+ Allgemeine Informationen zu Anmelde Informationen finden Sie unter [Anmelde Informationen &#40;Datenbank-Engine&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  Die Anforderungen zum Erstellen einer SQL Server Anmelde Informationen, die unten beschrieben werden, gelten speziell für das Feature [SQL Server Datendateien in Azure](databases/sql-server-data-files-in-microsoft-azure.md) . Informationen zum Erstellen von Anmelde Informationen für Sicherungs Prozesse in Azure Storage finden [Sie unter Lektion 2: Erstellen Sie eine SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)Anmelde Informationen.  
+>  Die Anforderungen zum Erstellen einer SQL Server Anmelde Informationen, die unten beschrieben werden, gelten speziell für das Feature [SQL Server Datendateien in Azure](databases/sql-server-data-files-in-microsoft-azure.md) . Informationen zum Erstellen von Anmelde Informationen für Sicherungs Prozesse in Azure Storage finden Sie unter [Lektion 2: Erstellen eines SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)Anmelde Informationen.  
   
  Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu erstellen:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "70153834"
   
     ```  
   
-     Ausführliche Informationen finden Sie unter [Create Credential &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) in SQL Server-Onlinedokumentation.  
+     Ausführliche Informationen finden Sie unter [Create Credential &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql) in SQL Server-Onlinedokumentation.  
   
 5.  Um alle verfügbaren Anmeldeinformationen anzuzeigen, können Sie im Abfragefenster die folgende Anweisung ausführen:  
   
@@ -55,10 +55,10 @@ ms.locfileid: "70153834"
     SELECT * from sys.credentials  
     ```  
   
-     Weitere Informationen zu sys. Anmelde Informationen finden Sie unter [sys. &#40;Anmelde Informationen Transact&#41; -SQL](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) in SQL Server-Onlinedokumentation.  
+     Weitere Informationen zu sys. Anmelde Informationen finden Sie unter [sys. Anmelde Informationen &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) in SQL Server-Onlinedokumentation.  
   
  **Nächste Lektion:**  
   
- [Lektion 4: Erstellen einer Datenbank in Azure Storage](lesson-3-database-backup-to-url.md)  
+ [Lektion 4: Erstellen einer Datenbank in Azure Storage](lesson-3-database-backup-to-url.md)  
   
   

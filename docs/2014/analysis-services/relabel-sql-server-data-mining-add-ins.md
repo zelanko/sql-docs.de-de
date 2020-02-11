@@ -1,5 +1,5 @@
 ---
-title: Neu bezeichnen (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Relabel (SQL Server Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5471720cbd3084c661dec93d9c7f4f680e066b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070401"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Neu bezeichnen (SQL Server Data Mining-Add-Ins)
-  ![Office 13-Symbol für das Tool neu bezeichnen](media/dm13-relabel.gif "Office 13-Symbol für Tool neu bezeichnen")  
+  ![Office 13-Symbol für das Tool "Neu bezeichnen"](media/dm13-relabel.gif "Office 13-Symbol für das Tool "Neu bezeichnen"")  
   
  Im Data Mining-Client für Excel können Sie neue Bezeichnungen für Ihre Daten erstellen, um die Ergebnisse der Analyse übersichtlicher zu gestalten.  
   
@@ -36,29 +36,29 @@ ms.locfileid: "66070401"
   
 ## <a name="using-the-relabel-wizard"></a>Verwenden des Assistenten zum Neubezeichnen  
   
-1.  In der **Data Mining** des Menübands, klicken Sie auf **Bereinigen** und wählen Sie dann **neu bezeichnen**.  
+1.  Klicken Sie im Menüband **Data Mining** auf **Bereinigen** , und wählen Sie dann **erneut Bezeichnung**aus.  
   
 2.  Wählen Sie die Tabelle oder den Datenbereich mit den zu bereinigenden Daten aus.  
   
-3.  In der **neu bezeichnen** Seite des Assistenten wählen Sie eine einzelne Spalte auswählen die Spalte aus der Dropdownliste aus, oder indem Sie auf die Spalte in der **Datenstichproben** Bereich.  
+3.  Wählen Sie auf der Seite **neu bezeichnen** des Assistenten eine einzelne Spalte aus. Wählen Sie hierzu entweder die Spalte aus der Dropdown Liste aus, oder klicken Sie auf die Spalte im Bereich **Daten Stichproben** .  
   
-     Die **Datenstichproben** Bereich zeigt nur etwa 50 Datenzeilen, aber sie werden Stichproben erstellt, um sicherzustellen, dass Sie eine gute von Werten Spannweite.  
+     Im Bereich **Daten Stichproben** werden nur ungefähr 50 Daten Zeilen angezeigt. Sie werden jedoch als Stichprobe angezeigt, um sicherzustellen, dass Sie eine gute Verteilung von Werten sehen.  
   
-     Klicken Sie auf die Spaltenüberschrift für **Anzahl** durch die Anzahl der einzelnen Werte zu sortieren.  
+     Klicken Sie auf die Spaltenüberschrift für **count** , um nach der Anzahl der einzelnen Werte zu sortieren.  
   
-     Sie können auch sortieren, indem **ursprüngliche Bezeichnungen**, dies ist hilfreich, wenn Sie zunächst alle höchsten oder niedrigsten Werte neu bezeichnen möchten.  
+     Sie können auch nach **ursprünglichen Bezeichnungen**sortieren. Dies ist praktisch, wenn Sie alle höchsten oder niedrigsten Werte zuerst neu bezeichnen möchten.  
   
-4.  In der **neu bezeichnen** Datenseite des Assistenten, überprüfen Sie die Werte in der **ursprüngliche Bezeichnungen** Spalte, und entscheiden Sie, wie Sie möchten die gruppiert oder bearbeitet werden.  
+4.  Überprüfen Sie auf der Seite Daten **neu bezeichnen** des Assistenten die Werte in der Spalte **Original Bezeichnungen** , und entscheiden Sie, wie Sie diese gruppieren oder bearbeiten möchten.  
   
-5.  Geben Sie einen neuen Wert in der Zeile unter **neue Bezeichnungen**. Sie können auch einen Wert aus der Liste der vorhandenen Werte auswählen. Bei der Eingabe neuer Werte werden diese sofort für die Wiederverwendung verfügbar.  
+5.  Geben Sie einen neuen Wert in die Zeile unter **neue Bezeichnungen**ein. Sie können auch einen Wert aus der Liste der vorhandenen Werte auswählen. Bei der Eingabe neuer Werte werden diese sofort für die Wiederverwendung verfügbar.  
   
-6.  Wenn Sie genügend Zeilen eingegeben haben, klicken Sie auf **Weiter**, und klicken Sie auf die **Ziel auswählen** Seite, und wählen Sie in dem Sie die neu bezeichneten Daten speichern müssen.  
+6.  Wenn Sie genügend Zeilen eingegeben haben, klicken Sie auf **weiter**, und wählen Sie auf der Seite **Ziel auswählen** aus, wo Sie die neu zu speichernden Daten speichern möchten.  
   
-    -   **Das aktuelle Arbeitsblatt als neue Spalte hinzugefügt**  
+    -   **Dem aktuellen Arbeitsblatt als neue Spalte hinzufügen**  
   
          Klicken Sie auf diese Option, um der Tabelle eine neue Spalte mit den neuen Werten hinzuzufügen.  
   
-    -   **Kopieren Sie Blattdaten mit Änderungen in ein neues Arbeitsblatt**  
+    -   **Blattdaten mit Änderungen in ein neues Arbeitsblatt kopieren**  
   
          Klicken Sie auf diese Option, um ein neues Arbeitsblatt mit den aktualisierten Daten zu erstellen.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66070401"
   
          Klicken Sie auf diese Option, um die ursprünglichen Daten durch die neuen Werte zu ersetzen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Durchsuchen und Bereinigen von Daten](exploring-and-cleaning-data.md)  
   
   

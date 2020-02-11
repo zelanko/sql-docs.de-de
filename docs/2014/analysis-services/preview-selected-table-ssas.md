@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070721"
 ---
 # <a name="preview-selected-table-ssas"></a>Vorschau der ausgewählten Tabelle (SSAS)
@@ -29,10 +29,10 @@ ms.locfileid: "66070721"
  Die Darstellung der Daten auf dieser Seite garantiert nicht, dass der Import erfolgreich ist. Der Import ist nicht erfolgreich, wenn der auf der Seite Identitätswechselinformationen angegebene Benutzername nicht über ausreichend Berechtigungen zum Lesen aus der ausgewählten Datenbank verfügt.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Kontrollkästchen im Spaltenheader**  
+ **Kontrollkästchen in der Spaltenüberschrift**  
  Aktivieren Sie das Kontrollkästchen, um die Spalte in den Datenimport einzuschließen. Deaktivieren Sie das Kontrollkästchen, um die Spalte aus dem Datenimport zu entfernen.  
   
- **Nach-unten Schaltfläche in der Kopfzeile der Spalte**  
+ **Schaltfläche mit Abwärtspfeil in der Spaltenüberschrift**  
  Filtern Sie Daten in der Spalte.  
   
  **Zeilenfilter löschen**  

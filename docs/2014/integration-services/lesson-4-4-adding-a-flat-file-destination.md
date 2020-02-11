@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767372"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Schritt 4: Hinzufügen eines Flatfileziels
@@ -36,17 +36,17 @@ ms.locfileid: "62767372"
   
 6.  Überprüfen Sie im Dialogfeld **Flatfileformat** , ob **Mit Trennzeichen** ausgewählt ist, und klicken Sie anschließend auf **OK**.  
   
-7.  In der **Dateiverbindungs-Manager-Editor für Flatfiles**in die **Name des Verbindungs-Managers** geben `Error Data`.  
+7.  Geben `Error Data`Sie im **Verbindungs-Manager-Editor für Flatfiles**im Feld Name des Verbindungs-Managers den **Namen** ein.  
   
 8.  Klicken Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** auf **Durchsuchen**, und suchen Sie den Ordner, in dem die Datei gespeichert werden soll.  
   
-9. In der **öffnen** im Dialogfeld für **Dateiname**, Typ `ErrorOutput.txt`, und klicken Sie dann auf **öffnen**.  
+9. Geben `ErrorOutput.txt`Sie im Dialogfeld **Öffnen** für **Dateiname den Namen**ein, und klicken Sie dann auf **Öffnen**.  
   
 10. Prüfen Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** , ob das Feld **Gebietsschema** den Wert Englisch (USA) und das Feld **Codepage** den Wert 1252 (ANSI -Latin I) enthält.  
   
 11. Klicken Sie im Optionen-Bereich auf **Spalten**.  
   
-     Beachten Sie, dass zusätzlich zu der Spalten aus der Quelldatendatei drei neue Spalten vorhanden sind: ErrorCode, ErrorColumn und ErrorDescription. Diese Spalten werden von der Fehlerausgabe der Lookup Currency Key-Transformation und vom Skript in der Get Error Description-Transformation generiert und können dazu verwendet werden, die Ursache für das Fehlschlagen der Zeile zu beheben.  
+     Beachten Sie, dass zusätzlich zu den Spalten aus der Quelldatendatei drei neue Spalten vorhanden sind: ErrorCode, ErrorColumn und ErrorDescription. Diese Spalten werden von der Fehlerausgabe der Lookup Currency Key-Transformation und vom Skript in der Get Error Description-Transformation generiert und können dazu verwendet werden, die Ursache für das Fehlschlagen der Zeile zu beheben.  
   
 12. Klicken Sie auf **OK**.  
   

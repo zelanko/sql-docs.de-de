@@ -1,5 +1,5 @@
 ---
-title: Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Mining Modell Inhalt von Sequence Clustering-Modellen (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083566"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Data Mining)
-  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Sequence Clustering-Algorithmus verwenden. Eine Erklärung der auf die Miningmodellinhalte bezogenen allgemeinen und statistischen Terminologie, die für alle Modelltypen gilt, finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Sequence Clustering-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, und Statistikterminologie finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Grundlegendes zur Struktur von Sequence Clustering-Modellen  
  Ein Sequence Clustering-Modell verfügt über einen einzigen übergeordneten Knoten (NOTE_TYPE = 1), der das Modell und die zugehörigen Metadaten darstellt. Der übergeordnete Knoten mit der Bezeichnung **(Alle)** verfügt über einen verknüpften Sequenzknoten (NODE_TYPE = 13), der alle Übergänge auflistet, die in den Trainingsdaten erkannt wurden.  
   
- ![Struktur von Sequence clustering-Modell](../media/modelcontent-seqclust.gif "Struktur von Sequence clustering-Modell")  
+ ![Struktur des Sequenzclustermodells](../media/modelcontent-seqclust.gif "Struktur des Sequenzclustermodells")  
   
  Der Algorithmus erstellt darüber hinaus diverse Cluster. Dies basiert auf den Übergängen, die in den Daten und allen anderen Eingabeattributen gefunden wurden, die bei der Erstellung des Modells enthalten waren. Ein Beispiel hierfür sind die demografischen Kundendaten usw. Jeder Cluster (NODE_TYPE = 5) enthält seinen eigenen Sequenzknoten (NODE_TYPE = 13), der nur die Übergänge auflistet, die verwendet wurden, um diesen spezifischen Cluster zu erstellen. Vom Sequenzknoten aus können Sie ein Drilldown zu den Details über die einzelnen Statusübergänge vornehmen (NODE_TYPE = 14).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66083566"
  NODE_TYPE  
  Ein Sequence Clustering-Modell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|Beschreibung|  
+|Knotentyp-ID|BESCHREIBUNG|  
 |------------------|-----------------|  
 |1 (Model)|Stammknoten für das Modell|  
 |5 (Cluster)|Enthält die Anzahl der im Cluster enthaltenen Übergänge, eine Liste der Attribute und die Statistik, die die Werte im Cluster beschreibt.|  
@@ -71,11 +71,11 @@ ms.locfileid: "66083566"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
- **Modellstamm** Kardinalitätswert, der der Anzahl der Cluster plus 1 entspricht. Weitere Informationen finden Sie unter [Kardinalität](#bkmk_cardinality).  
+ **Modell** Stamm Der Kardinalitätswert ist größer als die Anzahl der Cluster Plus 1. Weitere Informationen finden Sie unter [Kardinalität](#bkmk_cardinality).  
   
- **Clusterknoten** Kardinalität beträgt immer 1, da jeder Cluster über einen einzelnen untergeordneten Knoten verfügt, der die Liste der Sequenzen im Cluster enthält.  
+ **Cluster Knoten** Kardinalität ist immer 1, da jeder Cluster über einen einzelnen untergeordneten Knoten verfügt, der die Liste der Sequenzen im Cluster enthält.  
   
- **Sequenzknoten** Kardinalität gibt die Anzahl von Übergängen an, die in diesem Cluster enthalten sind. Beispielsweise gibt die Kardinalität des Sequenzknotens für den Modellstamm Aufschluss darüber, wie viele Übergänge im gesamten Modell gefunden wurden.  
+ **Sequenz Knoten** Kardinalität gibt die Anzahl von Übergängen an, die in diesem Cluster enthalten sind. Beispielsweise gibt die Kardinalität des Sequenzknotens für den Modellstamm Aufschluss darüber, wie viele Übergänge im gesamten Modell gefunden wurden.  
   
  PARENT_UNIQUE_NAME  
  Der eindeutige Name des dem Knoten übergeordneten Elements.  
@@ -92,22 +92,22 @@ ms.locfileid: "66083566"
  Immer leer.  
   
  NODE_PROBABILITY  
- **Modellstamm** Immer 0.  
+ **Modell** Stamm Immer 0.  
   
- **Clusterknoten** Die angepasste Wahrscheinlichkeit des Clusters im Modell. Die angepassten Wahrscheinlichkeiten ergeben als Summe nicht 1, da die beim Sequence Clustering verwendete Clustermethode die partielle Mitgliedschaft in mehreren Clustern erlaubt.  
+ **Cluster Knoten** Die angepasste Wahrscheinlichkeit des Clusters im Modell. Die angepassten Wahrscheinlichkeiten ergeben als Summe nicht 1, da die beim Sequence Clustering verwendete Clustermethode die partielle Mitgliedschaft in mehreren Clustern erlaubt.  
   
- **Sequenzknoten** Immer 0.  
+ **Sequenz Knoten** Immer 0.  
   
- **Übergangsknoten** Immer 0.  
+ **Übergangs Knoten** Immer 0.  
   
  MARGINAL_PROBABILITY  
- **Modellstamm** Immer 0.  
+ **Modell** Stamm Immer 0.  
   
- **Clusterknoten** Der gleiche Wert wie NODE_PROBABILITY.  
+ **Cluster Knoten** Derselbe Wert wie NODE_PROBABILITY.  
   
- **Sequenzknoten** Immer 0.  
+ **Sequenz Knoten** Immer 0.  
   
- **Übergangsknoten** Immer 0.  
+ **Übergangs Knoten** Immer 0.  
   
  NODE_DISTRIBUTION  
  Eine Tabelle, die Wahrscheinlichkeiten und andere Informationen enthält. Weitere Informationen finden Sie unter [NODE_DISTRIBUTION-Tabelle](#bkmk_NODEDIST).  
@@ -115,21 +115,21 @@ ms.locfileid: "66083566"
  NODE_SUPPORT  
  Die Anzahl der Übergänge, die diesen Knoten unterstützen. Sind daher 30 Beispiele der Sequenz "Produkt A gefolgt von Produkt B" in den Trainingsdaten vorhanden, ist die Gesamtunterstützung 30.  
   
- **Modellstamm** Gesamtanzahl der Übergänge im Modell.  
+ **Modell** Stamm Die Gesamtanzahl der Übergänge im Modell.  
   
- **Clusterknoten** Rohunterstützung für den Cluster, d. h. Anzahl der Trainingsfälle, die Fälle zu diesem Cluster beitragen.  
+ **Cluster Knoten** Unformatierte Unterstützung für den Cluster, d. h. die Anzahl der Trainings Fälle, die Fälle zu diesem Cluster beitragen.  
   
- **Sequenzknoten** Immer 0.  
+ **Sequenz Knoten** Immer 0.  
   
- **Übergangsknoten** Prozentzahl der Fälle im Cluster, die einen spezifischen Übergang darstellen. Kann 0 sein oder einen positiven Wert haben. Wird berechnet durch die Rohunterstützung für den Clusterknoten multipliziert mit der Wahrscheinlichkeit des Clusters.  
+ **Übergangs Knoten** Prozentsatz der Fälle im Cluster, die einen bestimmten Übergang darstellen. Kann 0 sein oder einen positiven Wert haben. Wird berechnet durch die Rohunterstützung für den Clusterknoten multipliziert mit der Wahrscheinlichkeit des Clusters.  
   
  Dieser Wert gibt Aufschluss darüber, wie viele Trainingsfälle zum Übergang beigetragen haben.  
   
  MSOLAP_MODEL_COLUMN  
- Nicht verfügbar.  
+ Nicht zutreffend  
   
  MSOLAP_NODE_SCORE  
- Nicht verfügbar.  
+ Nicht zutreffend  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Identisch mit NODE_DESCRIPTION.  
@@ -149,16 +149,16 @@ ms.locfileid: "66083566"
 |Sequenzknoten für Modell|Mehrere Übergangsknoten|Listet alle Produkte im Modell auf, mit Unterstützung und Wahrscheinlichkeit.<br /><br /> Da die Anzahl der Sequenzen für das Modell auf dieser Ebene bekannt ist, sind die Berechnungen für Unterstützung und Wahrscheinlichkeit unkompliziert:<br /><br /> Unterstützung = Anzahl von Fällen<br /><br /> Wahrscheinlichkeit = interne Wahrscheinlichkeit jeder Sequenz im Modell. Alle Wahrscheinlichkeiten sollten eine Summe von 1 ergeben.|  
 |Einzelne Clusterknoten|Knoten mit Sequenzen nur für diesen Cluster|Listet alle Produkte in einem Cluster auf, aber stellt die Unterstützungs- und Wahrscheinlichkeitswerte nur für Produkte bereit, die für den Cluster charakteristisch sind.<br /><br /> Die Unterstützung stellt den angepassten Unterstützungswert für jeden Fall in diesem Cluster dar. Bei den Wahrscheinlichkeitswerten handelt es sich um die angepasste Wahrscheinlichkeit.|  
 |Sequenzknoten für einzelne Cluster|Mehrere Knoten mit Übergängen für Sequenzen nur in diesem Cluster|Genau die gleichen Informationen wie in einzelnen Clusterknoten.|  
-|Übergange|Keine untergeordneten Elemente|Listet Übergänge für den verwandten ersten Status auf.<br /><br /> Die Unterstützung ist ein angepasster Unterstützungswert, der die Fälle angibt, die an jedem Übergang teilnehmen. Bei der Wahrscheinlichkeit handelt es sich um eine angepasste Wahrscheinlichkeit, die als Prozentzahl angegeben wird.|  
+|Transitions|Keine untergeordneten Elemente|Listet Übergänge für den verwandten ersten Status auf.<br /><br /> Die Unterstützung ist ein angepasster Unterstützungswert, der die Fälle angibt, die an jedem Übergang teilnehmen. Bei der Wahrscheinlichkeit handelt es sich um eine angepasste Wahrscheinlichkeit, die als Prozentzahl angegeben wird.|  
   
-###  <a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION-Tabelle  
+###  <a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION Tabelle  
  Die NODE_DISTRIBUTION-Tabelle bietet detaillierte Informationen über Wahrscheinlichkeit und Unterstützung für die Übergänge und Sequenzen eines spezifischen Clusters.  
   
- Der Übergangstabelle wird immer eine Zeile hinzugefügt, um mögliche `Missing`-Werte darzustellen. Informationen darüber, was die `Missing` Wert bedeutet, und es Auswirkungen auf Berechnungen finden Sie unter [fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Der Übergangstabelle wird immer eine Zeile hinzugefügt, um mögliche `Missing`-Werte darzustellen. Informationen dazu, was der `Missing` Wert bedeutet und wie er sich auf Berechnungen auswirkt, finden Sie unter [fehlende Werte &#40;Analysis Services Data Mining-&#41;](missing-values-analysis-services-data-mining.md).  
   
  Die Berechnungen für Unterstützung und Wahrscheinlichkeit unterscheiden sich in Abhängigkeit davon, ob die Berechnung für die Trainingsfälle oder das fertige Modell gilt. Grund hierfür ist, dass die Standard-Clusteringmethode, Expectation Maximization (EM), davon ausgeht, dass jeder Fall zu mehr als einem Cluster gehören kann. Bei der Berechnung der Unterstützung für Fälle im Modell können unformatierte Zähler und interne Wahrscheinlichkeiten verwendet werden. Allerdings müssen die Wahrscheinlichkeiten für jede Sequenz in einem Cluster durch die Summe aller möglichen Sequenz- und Clusterkombinationen gewichtet werden.  
   
-###  <a name="bkmk_cardinality"></a> Kardinalität  
+###  <a name="bkmk_cardinality"></a>Kardinalität  
  In einem Clustering-Modell sagt die Kardinalität des übergeordneten Knotens üblicherweise aus, wie viele Cluster im Modell vorhanden sind. Allerdings verfügt ein Sequence Clustering-Modell über zwei Arten von Knoten auf der Clusterebene: die eine Art Knoten enthält Cluster, die andere Art Knoten enthält eine Liste der Sequenzen für das Modell insgesamt.  
   
  Um also die Anzahl der Cluster im Modell zu bestimmen, nehmen Sie den Wert von NODE_CARDINALITY für den Knoten (Alle) und ziehen 1 ab. Wenn das Modell zum Beispiel 9 Cluster erstellt hat, ist die Kardinalität des Modellstamms 10. Dies liegt daran, dass das Modell 9 Clusterknoten enthält, die jeweils über einen eigenen Sequenzknoten verfügen. Hinzu kommt ein Sequenzknoten mit der Beschriftung 10, der die Sequenzen für das Modell darstellt.  
@@ -176,7 +176,7 @@ ORDER BY Count(*) DESC
   
  Aus diesen Ergebnissen ergibt sich, dass die Auftragsnummern "SO72656", "SO58845" und "SO70714" mit jeweils acht die längsten Sequenzen enthalten. Mithilfe von Bestellungs-IDs können Sie die Details einer bestimmten Bestellung einsehen, um festzustellen, welche Artikel in welcher Bestellung gekauft wurden.  
   
-|OrderNumber|LineNumber|Model|  
+|OrderNumber|LineNumber|Modell|  
 |-----------------|----------------|-----------|  
 |SO58845|1|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
@@ -233,17 +233,17 @@ ORDER BY Count(*) DESC
 |Produkt|Unterstützung (NODE_DISTRIBUTION-Tabelle)|Wahrscheinlichkeit (NODE_DISTRIBUTION-Tabelle)|Wahrscheinlichkeit (aus Diagramm)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(nicht angezeigt)|  
-|Cycling Cap|10.876056|0.030985915|0.03|  
-|Fender Set – Mountain|80.087324|0.228169014|0.23|  
+|Cycling Cap|10.876056|0.030985915|0,03|  
+|Fender Set – Mountain|80.087324|0.228169014|0,23|  
 |Half-Finger Gloves|0.9887324|0.002816901|0.00|  
 |Hydration Pack|0.9887324|0.002816901|0.00|  
-|LL Mountain Tire|51.414085|0.146478873|0.15|  
+|LL Mountain Tire|51.414085|0.146478873|0,15|  
 |Long-Sleeve Logo Jersey|2.9661972|0.008450704|0.01|  
-|Mountain Bottle Cage|87.997183|0.250704225|0.25|  
+|Mountain Bottle Cage|87.997183|0.250704225|0,25|  
 |Mountain Tire Tube|16.808451|0.047887324|0.05|  
-|Short-Sleeve Classic Jersey|10.876056|0.030985915|0.03|  
+|Short-Sleeve Classic Jersey|10.876056|0.030985915|0,03|  
 |Sport-100|20.76338|0.05915493|0.06|  
-|Water Bottle|18.785915|0.053521127|0.25|  
+|Water Bottle|18.785915|0.053521127|0,25|  
   
  Obwohl der Fall, den wir anfangs aus den Trainingsdaten ausgewählt hatten, das Produkt "Mountain-500" gefolgt von "LL Mountain Tire" enthielt, sieht man, dass es viele weitere mögliche Sequenzen gibt. Um detaillierte Informationen über jeden Cluster zu finden, müssen Sie den Vorgang des Drilldowns aus der Liste der Sequenzen im Cluster auf die tatsächlichen Übergänge für jeden Status oder jedes Produkt wiederholen.  
   
@@ -260,9 +260,9 @@ ORDER BY Count(*) DESC
   
  Informationen darüber, wie Sie eine Liste der beobachteten Pfade durch die Abfrage des Modellinhalts erhalten, und weitere Beispiele für Abfragen eines Sequence Clustering-Modells finden Sie unter [Abfragebeispiele für Sequenzclusteringmodelle](clustering-model-query-examples.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Abfragebeispiele für Sequenzclusteringmodelle](clustering-model-query-examples.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Modell Inhalt &#40;Analysis Services Data Mining-&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md)   
+ [Sequenzclusteringmodellabfragebeispiele](clustering-model-query-examples.md)  
   
   

@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189020"
 ---
 # <a name="operators"></a>Operatoren
@@ -47,13 +47,13 @@ ms.locfileid: "68189020"
  Die Kontaktinformationen eines Operators definieren, wie der Operator benachrichtigt wird. Operatoren können per E-Mail, per Pager oder über den Befehl **net send** benachrichtigt werden:  
   
 > [!IMPORTANT]  
->  Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
+>  Die Pager-und **net send** -Optionen werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
--   **E-Mail-Benachrichtigung**  
+-   **Benachrichtigung per E-Mail**  
   
      Der Operator wird per E-Mail benachrichtigt. Für die E-Mail-Benachrichtigung geben Sie die E-Mail-Adresse des Operators an.  
   
--   **Pagerbenachrichtigung**  
+-   **Pager-Benachrichtigung**  
   
      Die Pagingfunktionen werden mithilfe von E-Mail implementiert. Für die Pagerbenachrichtigung geben Sie die E-Mail-Adresse an, unter der der Operator die Pagernachrichten empfängt. Zum Einrichten der Pagerbenachrichtigung müssen Sie Software auf dem Mailserver installieren, auf dem eingehende E-Mails verarbeitet und in eine Pagernachricht konvertiert werden. Mit der Software können unterschiedliche Methoden genutzt werden:  
   
@@ -73,14 +73,14 @@ ms.locfileid: "68189020"
   
          **Betreff:**  
   
-         **Cc**:  
+         **CC**:  
   
-         **An**:  
+         **Zu**:  
   
     > [!NOTE]  
     >  Bei Verwendung eines alphanumerischen Pagingsystems mit niedriger Kapazität können Sie den gesendeten Text kürzen, indem Sie den Fehlertext aus der Pagerbenachrichtigung ausschließen. Dies empfiehlt sich beispielsweise für Systeme, die auf 64 Zeichen pro Seite begrenzt sind.  
   
--   **net sendnotification**  
+-   **NET SEND Notification**  
   
      Hiermit senden Sie dem Operator eine Nachricht über den Befehl **NET SEND** . Bei **NET SEND**geben Sie den Empfänger (Computer oder Benutzer) einer Netzwerknachricht an.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68189020"
   
      Die primären Operatoren sind nicht erreichbar, weil beispielsweise die Pageradresse fehlerhaft ist oder die betreffenden Operatoren möglicherweise gerade außer Dienst sind.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann nicht auf Systemtabellen in der **msdb** -Datenbank zugreifen.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent kann nicht auf Systemtabellen in der **msdb** -Datenbank zugreifen.  
   
      In der **sysnotifications** -Systemtabelle werden die Aufgaben der Operatoren bei Warnungen angegeben.  
   
@@ -118,10 +118,10 @@ ms.locfileid: "68189020"
 |||  
 |-|-|  
 |**Aufgaben**|**Thema**|  
-|Tasks beim Erstellen eines Operators|[Erstellen eines Operators](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|Tasks beim Zuordnen von Warnungen|[Zuweisen von Warnungen zu einem Operator](assign-alerts-to-an-operator.md)<br /><br /> [Definieren der Antwort auf eine Warnung &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [Sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Zuweisen von Warnungen zu einem Operator](assign-alerts-to-an-operator.md)|  
+|Tasks beim Erstellen eines Operators|[Erstellen eines Operators](create-an-operator.md)<br /><br /> [Bestimmen eines Ausfallsicherheitsoperators](designate-a-fail-safe-operator.md)|  
+|Tasks beim Zuordnen von Warnungen|[Zuweisen von Warnungen zu einem Operator](assign-alerts-to-an-operator.md)<br /><br /> [Hiermit wird die Antwort auf eine Warnung &#40;SQL Server Management Studio definiert&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Zuweisen von Warnungen zu einem Operator](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

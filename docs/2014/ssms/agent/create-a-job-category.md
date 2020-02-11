@@ -15,25 +15,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 07b942ad64043f93f014a54246b42ef5375ade97
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798275"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
   In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects erstellen können.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent stellt integrierte Auftragskategorien bereit, denen Aufträge zugewiesen werden können. Sie können auch eine Auftragskategorie erstellen und diesen Aufträge zuweisen. Auftragskategorien helfen Ihnen dabei, Ihre Aufträge zum einfachen Filtern und Gruppieren zu organisieren. Sie können z. B. alle Aufträge für die Datenbanksicherung in der Datenbankwartungskategorie organisieren. Sie können zudem eigene Auftragskategorien erstellen.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent stellt integrierte Auftragskategorien bereit, denen Aufträge zugewiesen werden können. Sie können auch eine Auftragskategorie erstellen und diesen Aufträge zuweisen. Auftragskategorien helfen Ihnen dabei, Ihre Aufträge zum einfachen Filtern und Gruppieren zu organisieren. Sie können z. B. alle Aufträge für die Datenbanksicherung in der Datenbankwartungskategorie organisieren. Sie können zudem eigene Auftragskategorien erstellen.  
   
  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Multiserverkategorien sind nur auf einem Masterserver vorhanden. Auf einem Masterserver ist nur eine Standardauftragskategorie verfügbar: [**Nicht kategorisiert (Multiserver)**]. Beim Herunterladen eines Multiserverauftrags wird seine Kategorie auf dem Zielserver in **Aufträge vom MSX** geändert.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
@@ -46,7 +47,7 @@ ms.locfileid: "72798275"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Hinzufügen**.  
+4.  Klicken Sie im Dialogfeld **Auftrags Kategorien verwalten**_server_name_ auf **Hinzufügen**.  
   
 5.  Geben Sie im neuen Dialogfeld **Name** einen Namen für die neue Auftragskategorie ein.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "72798275"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Aktualisieren** , um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
+8.  Klicken Sie im Dialogfeld **Auftrags Kategorien verwalten**_server_name_ auf **Aktualisieren** , um sicherzustellen, dass die neue Auftrags Kategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
   
  Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftrags Kategorien: Verwalten von Auftrags Kategorien](job-categories-manage-job-categories.md) und [Auftrags Kategorien Eigenschaften und neuer Auftrags Kategorie](job-categories-properties-new-job-category.md).  
 
@@ -79,7 +80,7 @@ ms.locfileid: "72798275"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_add_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_add_category &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql).  
 
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So erstellen Sie eine Auftragskategorie**  

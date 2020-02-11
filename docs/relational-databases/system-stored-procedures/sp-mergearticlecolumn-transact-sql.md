@@ -1,5 +1,5 @@
 ---
-title: Sp_mergearticlecolumn (Transact-SQL) | Microsoft-Dokumentation
+title: sp_mergearticlecolumn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078158"
 ---
-# <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
+# <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Führt eine vertikale Partitionierung einer Mergeveröffentlichung durch. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Führt eine vertikale Partitionierung einer Mergeveröffentlichung durch. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,36 +43,36 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Ist der Name des Artikels in der Veröffentlichung. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'`Der Name des Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @column = ] 'column'` Gibt die Spalten für die die vertikale Partition erstellt. *Spalte* ist **Sysname**, hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. *Spalte* darf nicht NULL sein, wenn *Vorgang* nastaven NA hodnotu **löschen**. Führen Sie zum Ausschließen von Spalten aus einem Artikel **Sp_mergearticlecolumn** , und geben Sie *Spalte* und `@operation = N'drop'` für jede Spalte, die entfernt werden aus dem angegebenen *Artikel*.  
+`[ @column = ] 'column'`Identifiziert die Spalten, für die die vertikale Partition erstellt werden soll. *Column* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. die *Spalte* darf nicht NULL sein, wenn der *Vorgang* auf **Drop**festgelegt ist. Um Spalten aus einem Artikel auszuschließen, führen **Sie sp_mergearticlecolumn** aus, und `@operation = N'drop'` geben Sie für jede Spalte, die aus dem angegebenen *Artikel*entfernt werden soll, eine *Spalte* an.  
   
-`[ @operation = ] 'operation'` Ist der Replikationsstatus. *Vorgang* ist **nvarchar(4)** , hat den Standardwert ADD. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** wird die Spalte gelöscht.  
+`[ @operation = ] 'operation'`Der Replikations Status. der *Vorgang* ist vom Datentyp **nvarchar (4)** und hat den Standardwert Add. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** löscht die Spalte.  
   
-`[ @schema_replication = ] 'schema_replication'` Gibt an, dass eine schemaänderung weitergegeben wird, wenn der Merge-Agent ausgeführt wird. *Schema_replication* ist **nvarchar(5)** , hat den Standardwert "false".  
+`[ @schema_replication = ] 'schema_replication'`Gibt an, dass eine Schema Änderung weitergegeben wird, wenn die Merge-Agent ausgeführt wird. *schema_replication* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
 > [!NOTE]  
->  Nur **"false"** wird für unterstützt *Schema_replication*.  
+>  Für *schema_replication*wird nur **false** unterstützt.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig erklärt. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
   
- **0** gibt an, dass Änderungen am Mergeartikel nicht die Momentaufnahme ungültig werden.  
+ der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass die Momentaufnahme ungültig wird.  
   
- **1** gibt an, dass Änderungen am Mergeartikel die Momentaufnahme ungültig ist, wird möglicherweise Wenn dies zutrifft, wird ein Wert von **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
+ der Wert **1** gibt an, dass Änderungen am Mergeartikel bewirken können, dass die Momentaufnahme ungültig wird. wenn dies der Fall ist, wird mit dem Wert **1** die Berechtigung zum Eintreten der neuen Momentaufnahme erteilt.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_` Aktiviert oder deaktiviert die Möglichkeit, die das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ähnelt ein wenig mit dem Standardwert **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_`Aktiviert oder deaktiviert die Möglichkeit, dass das Abonnement erneut initialisiert werden kann. *force_reinit_subscription* ist ein Bit mit einem Standardwert von **0**.  
   
- **0** gibt an, dass Änderungen am Mergeartikel nicht werden dazu, dass das Abonnement erneut initialisiert werden.  
+ der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass das Abonnement erneut initialisiert wird.  
   
- **1** gibt an, dass Änderungen am Mergeartikel bewirken, dass das Abonnement erneut initialisiert werden, können und wenn dies der Fall, der Wert ist **1** erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
+ der Wert **1** gibt an, dass Änderungen am Mergeartikel bewirken können, dass das Abonnement erneut initialisiert wird. wenn dies der Fall ist, wird mit dem Wert **1** die Berechtigung für die erneute Initialisierung des Abonnements erteilt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_mergearticlecolumn** wird bei der Mergereplikation verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_mergearticlecolumn** wird bei der Mergereplikation verwendet.  
   
  Eine Identitätsspalte kann nicht aus dem Artikel gelöscht werden, wenn die automatische Identitätsbereichsverwaltung verwendet wird. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
@@ -84,11 +84,11 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_mergearticlecolumn**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_mergearticlecolumn**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Definieren und Ändern eines Joinfilters zwischen Mergeartikeln](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Definieren und Ändern eines parametrisierten Zeilen Filters für einen Mergeartikel](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

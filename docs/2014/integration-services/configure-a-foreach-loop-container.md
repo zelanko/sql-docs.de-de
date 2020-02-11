@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren des Foreach-Schleifencontainer | Microsoft-Dokumentation
+title: Konfigurieren eines Foreach-Schleifen Containers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060875"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Konfigurieren eines Foreach-Schleifencontainers
@@ -63,16 +63,17 @@ ms.locfileid: "66060875"
   
          Wenn EnumerationType den Wert **ElementCollection**hat, legen Sie OuterXPathStringSourceType und OuterXPathString wie oben beschrieben fest. Klicken Sie anschließend auf „InnerElementType“, und wählen Sie einen Enumerationstyp für die inneren Elemente aus. Klicken Sie dann auf „InnerXPathStringSourceType“. Je nachdem, welchen Wert Sie für „InnerXPathStringSourceType“ festgelegt haben, wählen Sie eine Variable bzw. eine Dateiverbindung aus, erstellen eine neue Variable bzw. Dateiverbindung oder geben die Zeichenfolge für den inneren XPath-Ausdruck ein.  
   
-    -   Wenn Sie den Foreach-SMO-Enumerator verwenden möchten, wählen Sie eine vorhandene ADO.NET-Verbindung aus oder klicken in der Liste **Verbindung** auf **Neue Verbindung**. Dann geben Sie die zu verwendende Zeichenfolge ein oder klicken auf **Durchsuchen**. Entscheiden Sie sich für **Durchsuchen**, dann können Sie im Dialogfeld **SMO-Enumeration auswählen** den aufzuzählenden Objekttyp und den Enumerationstyp auswählen. Klicken Sie anschließend auf **OK**.  
+    -   Wenn Sie den Foreach-SMO-Enumerator verwenden möchten, wählen Sie eine vorhandene ADO.NET-Verbindung aus oder klicken in der Liste **Verbindung** auf **Neue Verbindung**. Dann geben Sie die zu verwendende Zeichenfolge ein oder klicken auf **Durchsuchen**. 
+  **Dadurch** haben Sie im Dialogfeld **SMO-Enumeration auswählen** die Möglichkeit, den aufzuzählenden Objekttyp und den Enumerationstyp auszuwählen. Klicken Sie dann auf **OK**.  
   
-6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit der Ellipse **(…)** , um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](expressions/add-or-change-a-property-expression.md).  
+6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit der Ellipse **(…)**, um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Die in der Liste **Eigenschaft** aufgeführten Eigenschaften hängen vom Enumerator ab.  
   
 7.  Klicken Sie optional auf **Variablenzuordnungen** , um Objekteigenschaften dem Auflistungswert zuzuordnen, und führen Sie dann folgende Aktionen aus:  
   
-    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie auf **\<Neue Variable>** , um eine neue Variable zu erstellen.  
+    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie auf **\<Neue Variable>**, um eine neue Variable zu erstellen.  
   
     2.  Wenn Sie eine neue Variable hinzufügen, legen Sie die Variableneigenschaften im Dialogfeld **Variable hinzufügen** fest, und klicken Sie auf **OK**.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "66060875"
   
 9. Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Foreach-Schleifencontainer](control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Foreach Loop Container](control-flow/foreach-loop-container.md) (Foreach-Schleifencontainer)  
   
   

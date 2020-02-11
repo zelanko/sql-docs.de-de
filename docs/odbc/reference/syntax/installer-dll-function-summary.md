@@ -1,5 +1,5 @@
 ---
-title: Installationsprogramm-DLL – Funktionszusammenfassung | Microsoft-Dokumentation
+title: Zusammenfassung der Installer DLL-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,38 +14,38 @@ ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6d2a865764a3d802a7e5a5341226d7d1aa855f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095686"
 ---
 # <a name="installer-dll-function-summary"></a>Installer-DLL – Funktionsübersicht
-Die folgende Tabelle beschreibt die Funktionen in die Installationsprogramm-DLL. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Installationsprogramm-DLL-API-Referenz](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
+In der folgenden Tabelle werden die Funktionen in der Installationsprogramm-dll beschrieben. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Installations](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)Programm-dll-API-Referenz.  
   
 |Aufgabe|Funktionsname|Zweck|  
 |----------|-------------------|-------------|  
-|Installieren von ODBC|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Lädt die Setup-DLL für Treiber-spezifische.|  
-||[SQLGetInstalledDrivers](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Gibt eine Liste der installierten Treiber.|  
-||[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|Fügt einen Treiber in der Systeminformationen.|  
-||[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|Gibt das Zielverzeichnis für den Treiber-Manager zurück.|  
-||[SQLInstallerError](../../../odbc/reference/syntax/sqlinstallererror-function.md)|Gibt Informationen über Fehler oder Status die Installer-Funktionen zurück.|  
-||[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|Fügt einen Übersetzer die Systeminformationen hinzu.|  
-||[SQLPostInstallerError](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|Ermöglicht eine Treiber oder Übersetzer-Setup-Bibliothek, um Fehler zu melden.|  
-||[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|Entfernt einen Treiber aus den Systeminformationen.|  
-||[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|Entfernt ODBC-Komponenten, aus der Systeminformationen.|  
-||[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|Entfernt das Konvertierungsprogramm aus der Systeminformationen.|  
-|Konfigurieren von Datenquellen|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Ruft den Setup-DLL für Treiber-spezifische.|  
-||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Zeigt ein Dialogfeld zum Hinzufügen einer Datenquelle.|  
-||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Ruft den Konfigurationsmodus zu wechseln, der angibt, in dem der Odbc.ini Eintrag Auflisten von DSN-Werte in den Systeminformationen ab.|  
-||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Schreibt einen Wert in der Systeminformationen.|  
-||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Zeigt ein Dialogfeld zum Auswählen von eines Übersetzers.|  
-||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Zeigt ein Dialogfeld zum Konfigurieren von Datenquellen und Treiber.|  
-||[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|Liest Informationen aus der Datei-DSNs.|  
-||[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Die Standarddatenquelle wird entfernt.|  
-||[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|Entfernt eine Datenquelle an.|  
-||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Legt den Konfigurationsmodus zu wechseln, der angibt, in dem der Odbc.ini Eintrag Auflisten von DSN-Werte in den Systeminformationen fest.|  
-||[SQLValidDSN](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|Überprüft die Länge und die Gültigkeit der Namen der Datenquelle.|  
-||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Fügt eine Datenquelle an.|  
-||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Schreibt Informationen in dem Datei-DSNs.|  
-||[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Ruft einen Wert aus der Systeminformationen.|
+|Installieren von ODBC|[Sqlconfigdriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Lädt die Treiber spezifische Setup-DLL.|  
+||[Sqlgetinstalleddrivers](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Gibt eine Liste der installierten Treiber zurück.|  
+||[Sqlinstalldriverex](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|Fügt den Systeminformationen einen Treiber hinzu.|  
+||[Sqlinstalldrivermanager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|Gibt das Zielverzeichnis für den Treiber-Manager zurück.|  
+||[Sqlinstallererror](../../../odbc/reference/syntax/sqlinstallererror-function.md)|Gibt Fehler-oder Statusinformationen für die Installer-Funktionen zurück.|  
+||[Sqlinstalltranslatorex](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|Fügt den Systeminformationen einen Konvertierer hinzu.|  
+||[Sqlpostinstallererror](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|Ermöglicht es einer Treiber-oder Konvertierungs-Setup Bibliothek, Fehler zu melden.|  
+||[Sqlremovedriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|Entfernt einen Treiber aus den Systeminformationen.|  
+||[Sqlremovedrivermanager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|Entfernt ODBC-Kernkomponenten aus den Systeminformationen.|  
+||[Sqlremovetranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|Entfernt den Übersetzer aus den Systeminformationen.|  
+|Konfigurieren von Datenquellen|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Ruft die Treiber spezifische Setup-DLL auf.|  
+||[Sqlkreatedatasource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Zeigt ein Dialogfeld zum Hinzufügen einer Datenquelle an.|  
+||[Sqlgetconfigmode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Ruft den Konfigurations Modus ab, der angibt, wo der ODBC. ini-Eintrag DSN-Werte in den Systeminformationen aufgeführt werden.|  
+||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Schreibt einen Wert in die Systeminformationen.|  
+||[Sqlgettranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Zeigt ein Dialogfeld an, in dem ein Translator ausgewählt werden soll.|  
+||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Zeigt ein Dialogfeld zum Konfigurieren von Datenquellen und Treibern an.|  
+||[Sqllesfiledsn](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|Liest Informationen aus Datei-DSNs.|  
+||[Sqlremovedefaultdatasource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Entfernt die Standarddaten Quelle.|  
+||[Sqlremovedsnfromini](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|Entfernt eine Datenquelle.|  
+||[Sqlsetconfigmode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Legt den Konfigurations Modus fest, der angibt, wo der ODBC. ini-Eintrag DSN-Werte in den Systeminformationen aufgeführt werden.|  
+||[Sqlvaliddsn](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|Überprüft die Länge und die Gültigkeit des Datenquellen namens.|  
+||[Sqlschreitedsnder ini](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Fügt eine Datenquelle hinzu.|  
+||[Sqlschreitefiledsn](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Schreibt Informationen in Datei-DSNs.|  
+||[Sqlschreiteprivateprofilestring](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Ruft einen Wert aus den Systeminformationen ab.|

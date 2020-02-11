@@ -1,5 +1,5 @@
 ---
-title: Key Performance Indicators (KPIs) in mehrdimensionalen Modellen | Microsoft-Dokumentation
+title: Key Performance Indicator (KPIs) in mehrdimensionalen Modellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074794"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
@@ -37,7 +37,7 @@ ms.locfileid: "66074794"
   
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. So verwendet z. B. die Vertriebsabteilung eines Unternehmens den monatlichen Bruttogewinn als KPI, während die Personalabteilung desselben Unternehmens den vierteljährlichen Umsatz pro Mitarbeiter als KPI verwendet. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten, greifen Führungskräfte oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Auflistung von Berechnungen dar, die mit einer Measuregruppe in einem Cube verknüpft sind, die zur Auswertung der Geschäftserfolge verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse eines KPI anzeigen sollen.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Sammlung von Berechnungen dar, die einer Measure-Gruppe in einem Cube zugeordnet sind und zum Auswerten des Geschäftserfolgs verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse eines KPI anzeigen sollen.  
   
  Zu den wichtigsten Vorteilen von KPIs in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt, dass sie serverbasiert sind und von verschiedenen Clientanwendungen verwendet werden können. Serverbasierte KPIs stellen eine einzelne Version im Gegensatz zu separaten Versionen in separaten Clientanwendungen dar. Die Durchführung der manchmal komplexen Berechnungen auf dem Server statt auf jedem Clientcomputer kann Leistungsvorteile bieten.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66074794"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|Ziel|Ein numerischer MDX-Ausdruck oder eine Berechnung, der bzw. die den Zielwert des KPI zurückgibt.|  
-|Wert|Ein numerischer MDX-Ausdruck, der den Ist-Wert des KPI zurückgibt.|  
+|Zielsetzung|Ein numerischer MDX-Ausdruck oder eine Berechnung, die den Zielwert des KPI zurückgibt.|  
+|value|Ein numerischer MDX-Ausdruck, der den tatsächlichen Wert des KPI zurückgibt.|  
 |Status|Ein MDX-Ausdruck, der den Status des KPI zu einem bestimmten Zeitpunkt darstellt.<br /><br /> Der MDX-Ausdruck "Status" sollte einen normalisierter Wert zwischen -1 und 1 zurückgeben. Werte, die kleiner oder gleich -1 sind, werden als "ungültig" oder "niedrig" interpretiert. Ein Wert von null (0) wird als "akzeptabel" oder "mittelmäßig" interpretiert. Werte, die größer oder gleich 1 sind, werden als "gut" oder "hoch" interpretiert.<br /><br /> Optional kann eine unbegrenzte Anzahl mit Zwischenwerten zurückgegeben werden, die zum Anzeigen einer beliebigen Anzahl zusätzlicher Status verwendet wird, wenn es die Clientanwendung unterstützt.|  
-|Trend|Ein MDX-Ausdruck, der den Wert des KPI im Lauf der Zeit auswertet. Der Trend kann ein beliebiges zeitbasiertes Kriterium sein, das in bestimmten geschäftlichen Zusammenhängen nützlich ist.<br /><br /> Der Trend-MDX-Ausdruck versetzt einen Anwender des Produkts im geschäftlichen Bereich in die Lage, zu ermitteln, ob sich ein KPI im Lauf der Zeit verbessert oder verschlechtert.|  
+|Trend|Ein MDX-Ausdruck, der den Wert des KPI im Zeitverlauf auswertet. Der Trend kann ein beliebiges zeitbasiertes Kriterium sein, das in einem bestimmten Geschäftskontext hilfreich ist.<br /><br /> Der Trend-MDX-Ausdruck versetzt einen Anwender des Produkts im geschäftlichen Bereich in die Lage, zu ermitteln, ob sich ein KPI im Lauf der Zeit verbessert oder verschlechtert.|  
 |Statusindikator|Ein visuelles Element, das einen schnellen Überblick über den Status eines KPI gibt. Die Anzeige des Elements wird durch den Wert des MDX-Ausdrucks bestimmt, der den Status auswertet.|  
 |Trendindikator|Ein visuelles Element, das einen schnellen Überblick über den Trend eines KPI gibt. Die Anzeige des Elements wird durch den Wert des MDX-Ausdrucks bestimmt, der den Trend auswertet.|  
 |Anzeigeordner|Der Ordner, in dem der KPI für den Benutzer angezeigt wird, wenn er den Cube durchsucht.|  
@@ -60,9 +60,10 @@ ms.locfileid: "66074794"
 ## <a name="parent-kpis"></a>Übergeordnete KPIs  
  Ein Unternehmen kann verschiedene Unternehmensmaßsysteme auf unterschiedlichen Ebenen nachverfolgen. So kann z. B. mit nur zwei oder drei KPIs der Geschäftserfolg für das gesamte Unternehmen bestimmt werden, während diese unternehmensweiten KPIs auf drei oder vier anderen KPIs basieren können, die von den Geschäftsbereichen im gesamten Unternehmen nachverfolgt werden. Außerdem können die Geschäftsbereiche in einem Unternehmen unterschiedliche Statistiken zum Berechnen desselben KPI verwenden, dessen Ergebnisse in den unternehmensweiten KPI umgewandelt werden.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lässt Sie eine Über-/Unterordnungsbeziehung zwischen KPIs definieren. Durch diese Über-/Unterordnungsbeziehung können die Ergebnisse des untergeordneten KPI zum Berechnen des übergeordneten KPI verwendet werden. Clientanwendungen können diese Beziehung auch verwenden, um übergeordnete und untergeordnete KPIs entsprechend anzuzeigen.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lässt Sie eine Über-/Unterordnungsbeziehung zwischen KPIs definieren. Durch diese Über-/Unterordnungsbeziehung können die Ergebnisse des untergeordneten KPI zum Berechnen des übergeordneten KPI verwendet werden. Clientanwendungen können diese Beziehung auch verwenden, um übergeordnete und untergeordnete KPIs entsprechend anzuzeigen.  
   
-## <a name="weights"></a>Gewichtungen  
+## <a name="weights"></a>Weights  
  Gewichtungen können außerdem untergeordneten KPIs zugeordnet werden. Gewichtungen ermöglichen es [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , beim Berechnen des Werts des übergeordneten KPI die Ergebnisse des untergeordneten KPI proportional anzupassen.  
   
 ## <a name="retrieving-and-displaying-kpis"></a>Abrufen und Anzeigen von KPIs  
