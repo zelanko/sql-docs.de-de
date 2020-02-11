@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831477"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
+  Mit dem Task "Nachrichten Warteschlange" können Sie Message Queuing (auch als MSMQ bezeichnet) verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Nachrichten zwischen Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungs Warteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
   
  Mit dem Task Nachrichtenwarteschlange können Sie Vorgänge im gesamten Unternehmen koordinieren. Nachrichten können in eine Warteschlange eingereiht und später übermittelt werden, falls das Ziel nicht verfügbar oder ausgelastet ist. Beispielsweise können mit diesem Task Nachrichten für den Offlinelaptopcomputer von Vertriebsmitarbeitern, die ihre Nachrichten beim Herstellen einer Verbindung mit dem Netzwerk erhalten, einer Warteschlange hinzugefügt werden. Der Task Nachrichtenwarteschlange kann für folgende Zwecke verwendet werden:  
   
@@ -47,13 +47,17 @@ ms.locfileid: "62831477"
 ## <a name="message-types"></a>Nachrichtentypen  
  Es gibt folgende Möglichkeiten, um die Nachrichtentypen zu konfigurieren, die der Task Nachrichtenwarteschlange bereitstellt:  
   
--   `Data file` gibt an, dass eine Datei die Nachricht enthält. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die Datei gespeichert wird und eine vorhandene Datei überschreiben wird, und das Paket angeben, von dem der Task Nachrichten empfangen kann.  
+-   
+  `Data file` gibt an, dass eine Datei die Nachricht enthält. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die Datei gespeichert wird und eine vorhandene Datei überschreiben wird, und das Paket angeben, von dem der Task Nachrichten empfangen kann.  
   
--   `String` definiert die Nachricht als Zeichenfolge. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die empfangene Zeichenfolge mit einer benutzerdefinierten Zeichenfolge verglichen und abhängig vom Vergleich die entsprechende Maßnahme ergriffen wird. Ein Zeichenfolgenvergleich kann genau sein, die Groß-/Kleinschreibung beachten oder die Groß-/Kleinschreibung ignorieren sowie eine Teilzeichenfolge verwenden.  
+-   
+  `String` definiert die Nachricht als Zeichenfolge. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die empfangene Zeichenfolge mit einer benutzerdefinierten Zeichenfolge verglichen und abhängig vom Vergleich die entsprechende Maßnahme ergriffen wird. Ein Zeichenfolgenvergleich kann genau sein, die Groß-/Kleinschreibung beachten oder die Groß-/Kleinschreibung ignorieren sowie eine Teilzeichenfolge verwenden.  
   
--   `String message to variable` gibt die Quellnachricht als Zeichenfolge an, die an eine Zielvariable gesendet wird. Sie können den Task so konfigurieren, dass die empfangene Zeichenfolge mit einer benutzerdefinierten Zeichenfolge mithilfe eines genauen Vergleichs, eines Vergleichs mit Beachtung der Groß-/Kleinschreibung oder eines Teilzeichenfolge-Vergleichs verglichen wird. Dieser Nachrichtentyp ist nur verfügbar, wenn der Task Nachrichten empfängt.  
+-   
+  `String message to variable` gibt die Quellnachricht als Zeichenfolge an, die an eine Zielvariable gesendet wird. Sie können den Task so konfigurieren, dass die empfangene Zeichenfolge mit einer benutzerdefinierten Zeichenfolge mithilfe eines genauen Vergleichs, eines Vergleichs mit Beachtung der Groß-/Kleinschreibung oder eines Teilzeichenfolge-Vergleichs verglichen wird. Dieser Nachrichtentyp ist nur verfügbar, wenn der Task Nachrichten empfängt.  
   
--   `Variable` gibt an, dass die Nachricht mindestens eine Variable enthält. Sie können den Task so konfigurieren, dass die in der Nachricht enthaltenen Namen der Variablen angegeben werden. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass sowohl das Paket, von dem Nachrichten empfangen werden können, als auch die Variable, die das Ziel der Nachricht ist, angegeben werden.  
+-   
+  `Variable` gibt an, dass die Nachricht mindestens eine Variable enthält. Sie können den Task so konfigurieren, dass die in der Nachricht enthaltenen Namen der Variablen angegeben werden. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass sowohl das Paket, von dem Nachrichten empfangen werden können, als auch die Variable, die das Ziel der Nachricht ist, angegeben werden.  
   
 ## <a name="sending-messages"></a>Senden von Nachrichten  
  Beim Konfigurieren des Tasks Nachrichtenwarteschlange zum Senden von Nachrichten können Sie einen der zurzeit von der Message Queuing-Technologie unterstützten Verschlüsselungsalgorithmen, RC2 und RC4, zum Verschlüsseln der Nachricht verwenden. Diese Verschlüsselungsalgorithmen werden inzwischen im Vergleich zu neueren Algorithmen, die von der Message Queuing-Technologie noch nicht unterstützt werden, beide als kryptografisch schwach betrachtet. Daher sollten Sie Ihren Kryptografiebedarf sorgfältig überdenken, wenn Sie Nachrichten mithilfe des Tasks Nachrichtenwarteschlange senden.  
@@ -74,7 +78,7 @@ ms.locfileid: "62831477"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Nachrichtenwarteschlange'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|Zeigt an, dass das Öffnen der Warteschlange beendet wurde.|  
 |`MSMQBeforeOpen`|Zeigt an, dass das Öffnen der Warteschlange begonnen wurde.|  
@@ -88,11 +92,11 @@ ms.locfileid: "62831477"
 ## <a name="configuration-of-the-message-queue-task"></a>Konfiguration des Tasks "Nachrichtenwarteschlange"  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task Nachrichten Warteschlange &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Empfangen“&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor für den Task ' Nachrichten Warteschlange ' &#40;&#41;Seite](../message-queue-task-editor-receive-page.md)  
   
--   [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Senden“&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor für den Task Nachrichten Warteschlange &#40;&#41;Seite senden](../message-queue-task-editor-send-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -101,7 +105,7 @@ ms.locfileid: "62831477"
 ## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Anzeigen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   

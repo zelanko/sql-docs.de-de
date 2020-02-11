@@ -13,26 +13,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919294"
 ---
 # <a name="assembly-properties-general-page"></a>Assemblyeigenschaften (Seite Allgemein)
   Mithilfe dieser Seite können Sie die für die Assembly festgelegten Eigenschaften anzeigen und ändern.  
   
-## <a name="options"></a>Optionen  
- **AssemblyName**  
+## <a name="options"></a>Tastatur  
+ **Assemblyname**  
  Zeigt den Assemblynamen an, der immer mit dem Namen der CLR-Assembly übereinstimmt.  
   
  **Assemblybesitzer**  
  Geben Sie den Besitzernamen oder Schemanamen ein, oder wählen Sie einen aus der Liste aus.  
   
  **Berechtigungssatz**  
- Legen Sie die Sicherheitsstufe für die Assembly fest. Drei Sicherheitsstufen stehen zur Verfügung: **Sichere**, **externen Zugriff**, und **Unsafe** Zugriff.  
+ Legen Sie die Sicherheitsstufe für die Assembly fest. Drei Sicherheitsstufen stehen zur Verfügung: **Sicher**, **Externer Zugriff**und **Uneingeschränkt** .  
   
- **Pfad zur assembly**  
+ **Pfad zur Assembly**  
  Geben Sie den Pfad zur Assemblydatei ein.  
   
  **Durchsuchen**  
@@ -48,7 +48,7 @@ ms.locfileid: "62919294"
  **Version**  
  Zeigt die Versionsnummer der Assembly an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

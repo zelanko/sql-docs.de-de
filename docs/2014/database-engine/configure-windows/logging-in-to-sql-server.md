@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782113"
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
-  Sie können sich mithilfe eines beliebigen grafischen Administrationstools oder von der Eingabeaufforderung aus bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden.  
+  Sie können sich bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe eines der grafischen Verwaltungs Tools oder über eine Eingabeaufforderung anmelden.  
   
  Wenn Sie sich mithilfe eines grafischen Administrationstools, wie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , bei einer Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anmelden, werden Sie zum Angeben eines Servernamens, eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamens und gegebenenfalls eines Kennworts aufgefordert. Wenn Sie sich mithilfe der Windows-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden, müssen Sie den SQL Server-Anmeldenamen nicht jedes Mal angeben, wenn Sie auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugreifen. Stattdessen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ihr [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto zum automatischen Anmelden verwendet. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Authentifizierung im gemischten Modus ausgeführt wird (die Modi[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung), und wenn Sie zum Anmelden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden möchten, müssen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62782113"
 |----------------------|-------------------------------|  
 |Verbindung mit einer Standardinstanz unter Verwendung des Standardprotokolls. (Dies ist der empfohlene Eintrag für eine Standardinstanz.)|APPHOST|  
 |Verbindung mit einer benannten Instanz unter Verwendung des Standardprotokolls. (Dies ist der empfohlene Eintrag für eine benannte Instanz.)|APPHOST\SQLEXPRESS|  
-|Verbindung mit einer Standardinstanz auf dem gleichen Computer unter Verwendung eines Punkts, der angibt, dass die Instanz auf dem lokalen Computer ausgeführt wird.|zugreifen.|  
+|Verbindung mit einer Standardinstanz auf dem gleichen Computer unter Verwendung eines Punkts, der angibt, dass die Instanz auf dem lokalen Computer ausgeführt wird.|.|  
 |Verbindung mit einer benannten Instanz auf dem gleichen Computer unter Verwendung eines Punkts, der angibt, dass die Instanz auf dem lokalen Computer ausgeführt wird.|.\SQLEXPRESS|  
 |Verbindung mit einer Standardinstanz auf dem gleichen Computer unter Verwendung von "localhost", um anzugeben, dass die Instanz auf dem lokalen Computer ausgeführt wird.|localhost|  
 |Verbindung mit einer benannten Instanz auf dem gleichen Computer unter Verwendung von "localhost", um anzugeben, dass die Instanz auf dem lokalen Computer ausgeführt wird.|localhost\SQLEXPRESS|  
@@ -63,8 +63,10 @@ ms.locfileid: "62782113"
 |Verbindung mit einer benannten Instanz durch Angabe der IP-Adresse und des verwendeten TCP-Ports (in diesem Fall 2828).|192.168.17.28,2828|  
 |Verbindung mit einer Standardinstanz nach Name unter Erzwingung einer TCP-Verbindung.|tcp:APPHOST|  
 |Verbindung mit einer benannten Instanz nach Name unter Erzwingung einer TCP-Verbindung.|tcp:APPHOST\SQLEXPRESS|  
-|Verbindung mit einer Standardinstanz unter Angabe eines Named Pipe-Namens.|\\\APPHOST\pipe\unit\app|  
-|Verbindung mit einer benannten Instanz unter Angabe eines Named Pipe-Namens.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
+|Verbindung mit einer Standardinstanz unter Angabe eines Named Pipe-Namens.|
+  \\\APPHOST\pipe\unit\app|  
+|Verbindung mit einer benannten Instanz unter Angabe eines Named Pipe-Namens.|
+  \\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Verbindung mit einer Standardinstanz nach Name unter Erzwingung einer Named Pipe-Verbindung.|np:APPHOST|  
 |Verbindung mit einer benannten Instanz nach Name unter Erzwingung einer Named Pipe-Verbindung.|np:APPHOST\SQLEXPRESS|  
   
@@ -78,11 +80,11 @@ WHERE session_id = @@SPID;
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Anmelden an einer Instanz von SQL Server &#40;Befehlszeile&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
+ [Melden Sie sich bei einer Instanz von SQL Server &#40;Eingabeaufforderung an&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Die folgenden Ressourcen können beim Beheben von Verbindungsproblemen hilfreich sein:  
   
--   [So beheben Sie Verbindungsfehler mit der SQL Server-Datenbank-Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [Problembehandlung beim Herstellen einer Verbindung mit dem SQL Server Datenbank-Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
 -   [Schritte zum Beheben von SQL-Konnektivitätsproblemen](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   

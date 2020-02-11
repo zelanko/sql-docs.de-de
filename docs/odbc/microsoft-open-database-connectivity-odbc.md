@@ -11,41 +11,41 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efea2f63d92e85afc8f77fde1d1226280714481c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901611"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
-Die Microsoft Open Database Connectivity (ODBC)-Schnittstelle ist eine C-Sprache Programmierschnittstelle, die für Anwendungen, um Daten aus einer Vielzahl von Datenbank-Managementsystemen (DBMS) zugreifen kann. ODBC ist eine Schnittstelle auf niedriger Ebene hohe Leistung, die speziell für relationale Datenspeicher entworfen wurde.  
+Die Schnittstelle von Microsoft Open Database Connectivity (ODBC) ist eine Schnittstelle für die Programmiersprache C, die es Anwendungen ermöglicht, auf Daten von einer Vielzahl von Datenbank-Managementsystemen (DBMSs) zuzugreifen. ODBC ist eine leistungsstarke Schnittstelle auf niedriger Ebene, die speziell für relationale Datenspeicher entwickelt wurde.  
   
- Die ODBC-Schnittstelle ermöglicht, dass maximale Interoperabilität eine Anwendung Daten in verschiedenen DBMS-Systeme über eine einzelne Schnittstelle zugreifen kann. Darüber hinaus wird die Anwendung unabhängig von der alle DBMS können aus dem Zugriff auf Daten. Benutzer der Anwendung können wird aufgerufen, Treibern, die Schnittstelle zwischen einer Anwendung und ein bestimmtes DBMS-Software-Komponenten hinzufügen.  
+ Die ODBC-Schnittstelle ermöglicht maximale Interoperabilität: eine Anwendung kann über eine einzige Schnittstelle auf Daten in verschiedenen DBMSs zugreifen. Darüber hinaus ist diese Anwendung unabhängig von DBMS, von dem aus Sie auf Daten zugreift. Benutzer der Anwendung können Softwarekomponenten hinzufügen, die als Treiber bezeichnet werden, die eine Schnittstelle zwischen einer Anwendung und einem bestimmten DBMS haben.  
   
 ## <a name="documentation"></a>Dokumentation  
  [ODBC-Programmierreferenz](../odbc/reference/odbc-programmer-s-reference.md)  
   
- Dokumentation zu ODBC-Schnittstellen und Methoden.  
+ Dokumentation zu ODBC-Schnittstellen und-Methoden.  
   
  [ODBC-Datenquellen-Administrator](../odbc/admin/odbc-data-source-administrator.md)  
   
- Microsoft ODBC-Datenquellen-Administrator verwaltet Datenbank-Treibern und Datenquellen.  
+ Der Microsoft ODBC-Datenquellen-Administrator verwaltet Datenbanktreiber und Datenquellen.  
   
- [Von Microsoft gelieferte ODBC-Treiber](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)  
+ [Von Microsoft bereitgestellte ODBC-Treiber](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)  
   
- Dokumentation für ODBC-Desktop-Datenbanktreiber, den ODBC-Treiber für Oracle und der Visual FoxPro® ODBC-Treiber.  
+ Dokumentation für die ODBC Desktop-Datenbanktreiber, den ODBC-Treiber für Oracle und den Visual FoxPro-® ODBC-Treiber.  
   
  [ODBC-Test](../odbc/odbc-test.md)  
   
- Microsoft ODBC-Test ist eine ODBC-fähige Anwendung, die Sie zum Testen der ODBC-Treiber verwenden können.  
+ Der Microsoft ODBC-Test ist eine ODBC-fähige Anwendung, die Sie zum Testen von ODBC-Treibern verwenden können.  
   
  [ODBC-Glossar](../odbc/odbc-glossary.md)  
   
- Definiert die Bedingungen, die relevant für ODBC.  
+ Definiert die für ODBC relevanten Begriffe.  
   
- [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
+ [Odbcconf. Speichert](../odbc/odbcconf-exe.md)  
   
- Beschreibt das Befehlszeile-Hilfsprogramm für die Konfiguration der Treiber und Namen von Datenquellen.  
+ Beschreibt das Befehlszeilen-Hilfsprogramm zum Konfigurieren von Treibern und Datenquellen Namen.  
   
-## <a name="support"></a>Unterstützung  
- Informationen zu Supportoptionen finden Sie auf die [Microsoft Help and Support](https://go.microsoft.com/fwlink?linkid=5521) Website.
+## <a name="support"></a>Support  
+ Informationen zu Supportoptionen finden Sie auf der [Microsoft Hilfe-und Support-](https://go.microsoft.com/fwlink?linkid=5521) Website.

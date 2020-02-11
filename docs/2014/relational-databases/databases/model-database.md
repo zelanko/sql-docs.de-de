@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916946"
 ---
 # <a name="model-database"></a>model-Datenbank
@@ -56,9 +56,9 @@ ms.locfileid: "62916946"
 |ANSI_WARNINGS|OFF|Ja|  
 |ARITHABORT|OFF|Ja|  
 |AUTO_CLOSE|OFF|Ja|  
-|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_CREATE_STATISTICS|EIN|Ja|  
 |AUTO_SHRINK|OFF|Ja|  
-|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS|EIN|Ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
 |CHANGE_TRACKING|OFF|Nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
@@ -73,27 +73,27 @@ ms.locfileid: "62916946"
 |PARAMETERIZATION|SIMPLE|Ja|  
 |QUOTED_IDENTIFIER|OFF|Ja|  
 |READ_COMMITTED_SNAPSHOT|OFF|Ja|  
-|RECOVERY|Hängt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition<sup>1</sup>|Ja|  
+|RECOVERY|Abhängig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition<sup>1</sup>|Ja|  
 |RECURSIVE_TRIGGERS|OFF|Ja|  
 |Service Broker-Optionen|DISABLE_BROKER|Nein|  
 |TRUSTWORTHY|OFF|Nein|  
   
- <sup>1</sup> zum Überprüfen des aktuellen Wiederherstellungsmodells der Datenbank finden Sie unter [anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oder [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> Informationen zum Überprüfen des aktuellen Wiederherstellungs Modells der Datenbank finden Sie unter [anzeigen oder Ändern des Wiederherstellungs Modells einer Datenbank &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oder [sys. Database &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Die folgenden Operationen können an der **model** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateien oder Dateigruppen.  
   
 -   Ändern der Sortierung. Die Standardsortierung entspricht der Serversortierung.  
   
--   Ändern des Datenbankbesitzers Der Besitzer von**model** ist **sa**.  
+-   Ändern des Datenbankbesitzers Das **Modell** ist im Besitz von **sa**.  
   
 -   Löschen der Datenbank.  
   
--   Löschen des **guest** -Benutzers aus der Datenbank.  
+-   Der **Gast** Benutzer wird aus der Datenbank gelöscht.  
   
 -   Aktivieren von Change Data Capture  
   

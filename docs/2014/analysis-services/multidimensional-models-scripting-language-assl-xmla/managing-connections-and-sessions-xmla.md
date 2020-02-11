@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62701997"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Verwalten von Verbindungen und Sitzungen (XMLA)
-  *Statusbehaftung* ist eine Bedingung, die während der die der Server beibehalten, die Identität und den Kontext eines Clients zwischen Methodenaufrufen werden. *Zustandsfreiheit* ist eine Bedingung, die während der der Server nicht mehr weiß hat der Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  
+  *Status* Behaftung ist eine Bedingung, bei der der Server die Identität und den Kontext eines Clients zwischen Methoden aufrufen beibehält. Die *Status losigkeit* ist eine Bedingung, bei der der Server die Identität und den Kontext eines Clients nicht speichert, nachdem ein Methoden aufrufwerk abgeschlossen wurde.  
   
- Um statusfreiheit unterstützt XML for Analysis (XMLA) *Sitzungen* , mit denen eine Reihe von Anweisungen, die zusammen ausgeführt werden. Ein Beispiel einer solchen Reihe von Anweisungen ist die Erstellung eines berechneten Elements, das in nachfolgenden Abfragen verwendet wird.  
+ Zum Bereitstellen von Status Behaftung werden von XML for Analysis (XMLA) *Sitzungen* unterstützt, mit denen eine Reihe von Anweisungen gleichzeitig ausgeführt werden kann. Ein Beispiel einer solchen Reihe von Anweisungen ist die Erstellung eines berechneten Elements, das in nachfolgenden Abfragen verwendet wird.  
   
  Im Allgemeinen folgen Sitzungen in XMLA dem folgenden Verhalten gemäß der Spezifikation OLE DB 2.6:  
   
@@ -35,17 +35,17 @@ ms.locfileid: "62701997"
   
 -   Mehrere Befehle können im Kontext einer einzelnen Sitzung ausgeführt werden.  
   
--   Unterstützung für Transaktionen im XMLA-Kontext wird durch anbieterspezifische Befehle, die gesendet werden, mit der [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) Methode.  
+-   Die Unterstützung für Transaktionen im XMLA-Kontext erfolgt über anbieterspezifische Befehle, die mit der [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) -Methode gesendet werden.  
   
  XMLA definiert eine Möglichkeit zur Unterstützung von Sitzungen in einer Webumgebung, deren Modus Ähnlichkeit hat mit dem Zugang, der von dem DAV-Protokoll (Distributed Authoring and Versioning) für die Implementierung von Sperrungen in einer lose verbundenen Umgebung verwendet wird. Diese Implementierung entspricht DAV insofern, als der Anbieter die Möglichkeit hat, Sitzungen aus mehreren Gründen ablaufen zu lassen (beispielsweise bei Timeout oder Verbindungsfehlern). Wenn Sitzungen unterstützt werden, müssen Webdienste in der Lage sein, unterbrochene Befehlssätze, die neu gestartet werden müssen, zu verarbeiten.  
   
  Die Spezifikation des Simple Object Access Protocol (SOAP) des World Wide Web Consortium (W3C) empfiehlt die Verwendung von SOAP-Headern für die Erstellung von neuen Protokollen auf der Grundlage von SOAP-Nachrichten. In der folgenden Tabelle werden die SOAP-Headerelemente und -attribute aufgeführt, die XMLA für die Initiierung, Erhaltung und Beendigung von Sitzungen definiert.  
   
-|SOAP-header|Description|  
+|SOAP-Header|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |BeginSession|Dieser Header fordert bei dem Anbieter die Erstellung einer neuen Sitzung an. Der Anbieter sollte mit der Erstellung einer neuen Sitzung antworten und die Sitzungs-ID als Teil des Sitzungsheaders in der SOAP-Antwort zurückgeben.|  
-|SessionID|Der Wertbereich enthält die Sitzungs-ID, die für den Rest der Sitzung in jedem Methodenaufruf verwendet werden muss. Der Anbieter sendet dieses Tag in der SOAP-Antwort, und der Client muss dieses Attribut ebenfalls mit jedem Sitzungsheaderelement senden.|  
-|Session|Dieser Header muss für jeden Methodenaufruf in der Sitzung verwendet werden, und die Sitzungs-ID muss im Wertbereich des Headers enthalten sein.|  
+|SessionId|Der Wertbereich enthält die Sitzungs-ID, die für den Rest der Sitzung in jedem Methodenaufruf verwendet werden muss. Der Anbieter sendet dieses Tag in der SOAP-Antwort, und der Client muss dieses Attribut ebenfalls mit jedem Sitzungsheaderelement senden.|  
+|Sitzung|Dieser Header muss für jeden Methodenaufruf in der Sitzung verwendet werden, und die Sitzungs-ID muss im Wertbereich des Headers enthalten sein.|  
 |EndSession|Verwenden Sie diesen Header, um die Sitzung zu beenden. Die Sitzungs-ID muss im Wertbereich enthalten sein.|  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "62701997"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID in den Bereich des Rückgabeheaders mit der XMLA-Headertag \<SessionId >.  
+2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID im Bereich des Rückgabe Headers unter Verwendung des XMLA- \<Header Tags SessionID>.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +93,7 @@ ms.locfileid: "62701997"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Wenn die Sitzung abgeschlossen ist, ist die \<EndSession >-Tag wird verwendet, mit dem verwandten Sitzungs-ID-Wert.  
+4.  Wenn die Sitzung beendet ist, wird \<das EndSession->-Tag verwendet, das den zugehörigen Sitzungs-ID-Wert enthält.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -105,7 +105,7 @@ ms.locfileid: "62701997"
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln mit XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

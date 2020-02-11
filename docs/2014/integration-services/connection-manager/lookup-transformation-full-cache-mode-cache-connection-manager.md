@@ -1,5 +1,5 @@
 ---
-title: Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager | Microsoft-Dokumentation
+title: Implementieren einer Such Transformation im voll Cache Modus mit dem Cacheverbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833678"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager
@@ -49,7 +49,7 @@ ms.locfileid: "62833678"
   
 -   Konfigurieren Sie die Cacheverbindungs-Manager in verschiedenen Paketen, um die gleiche Cachedatei zu verwenden.  
   
- Weitere Informationen finden Sie unter den folgenden Themen:  
+ Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Cachetransformation](../data-flow/transformations/cache-transform.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62833678"
   
 -   [Sequenzcontainer](../control-flow/sequence-container.md)  
   
- Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Gewusst wie: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>So implementieren Sie eine Transformation für Suche im Vollcachemodus in einem Paket mit dem Cacheverbindungs-Manager und einer Datenquelle im Datenfluss  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62833678"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "62833678"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
@@ -273,13 +273,13 @@ ms.locfileid: "62833678"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
 9. Führen Sie das Paket aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [SQL Server Integration Services-Transformationen](../data-flow/transformations/integration-services-transformations.md)  

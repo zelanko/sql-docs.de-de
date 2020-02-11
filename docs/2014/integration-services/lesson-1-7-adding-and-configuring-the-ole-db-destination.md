@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767559"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels
@@ -24,7 +24,7 @@ ms.locfileid: "62767559"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>So fügen Sie das Beispiel-OLE DB-Ziel hinzu und konfigurieren es  
   
-1.  Erweitern Sie **Andere Ziele**in der **SSIS-Toolbox**, und ziehen Sie **OLE DB-Ziel** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Fügen Sie das OLE DB-Ziel direkt unterhalb der Transformation **Lookup Date Key** ein.  
+1.  Erweitern Sie in der **SSIS-Toolbox**die Option **andere Ziele**, und ziehen Sie **OLE DB Ziel** auf die Entwurfs Oberfläche der Registerkarte **Datenfluss** . Platzieren Sie das OLE DB Ziel direkt unterhalb der Transformation **Lookup Date Key** .  
   
 2.  Klicken Sie auf die Transformation **Lookup Date Key** , und ziehen Sie den grünen Pfeil zum neu hinzugefügten **OLE DB-Ziel** , um die zwei Komponenten miteinander zu verbinden.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62767559"
   
 6.  Stellen Sie im Dialogfeld **Ziel-Editor für OLE DB** sicher, dass **localhost.AdventureWorksDW2012** im Feld **OLE DB-Verbindungs-Manager** ausgewählt ist.  
   
-7.  Geben Sie im Feld **Name der Tabelle oder Sicht** **[dbo].[FactCurrencyRate]** ein, oder wählen Sie diese Zeichenfolge aus.  
+7.  Geben Sie im Feld **Name der Tabelle oder Sicht****[dbo].[FactCurrencyRate]** ein, oder wählen Sie diese Zeichenfolge aus.  
   
 8.  Klicken Sie auf die Schaltfläche **Neu** , um eine neue Tabelle zu erstellen.  Ändern Sie den Namen der Tabelle im Skript in **NewFactCurrencyRate**.  Klicken Sie auf **OK**.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "62767559"
   
 13. Klicken Sie mit der rechten Maustaste auf das Ziel **Sample OLE DB Destination** und anschließend auf **Eigenschaften**.  
   
-14. Überprüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)** und`DefaultCodePage` -Eigenschaftensatz auf **1252**.  
+14. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** und die`DefaultCodePage` -Eigenschaft auf **1252**festgelegt ist.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Step 8: Vereinfachen des Pakets aus Lektion 1 zu verstehen](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Schritt 8: Vereinfachen des Layouts des Lektion 1-Pakets](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Ziel](data-flow/ole-db-destination.md)  
   
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920046"
 ---
 # <a name="sqlcontext-object"></a>SqlContext-Objekt
@@ -26,18 +26,23 @@ ms.locfileid: "62920046"
   
  Der Kontext des aufrufenden Codes wird in einem `SqlContext`-Objekt abstrahiert. Weitere Informationen zu `SqlTriggerContext`-Methoden und -Eigenschaften finden Sie in der Referenzdokumentation zur `Microsoft.SqlServer.Server.SqlTriggerContext`-Klasse im [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-SDK.  
   
- `SqlContext` stellt den Zugriff auf folgende Komponenten bereit:  
+ 
+  `SqlContext` stellt den Zugriff auf folgende Komponenten bereit:  
   
--   `SqlPipe`: Die `SqlPipe` -Objekt stellt die "Pipe" dar, über die Ergebnisse an den Client erreichen. Weitere Informationen zu den `SqlPipe` Objekt, finden Sie unter [SqlPipe-Objekt](sqlpipe-object.md).  
+-   
+  `SqlPipe`: Das `SqlPipe`-Objekt stellt die "Pipe" dar, d. h. den Kanal, durch den die Ergebnisse den Client erreichen. Weitere Informationen zum- `SqlPipe` Objekt finden Sie unter [SqlPipe-Objekt](sqlpipe-object.md).  
   
--   `SqlTriggerContext`: Die `SqlTriggerContext` Objekt kann nur von innerhalb eines CLR-Triggers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zu den `SqlTriggerContext` Objekt, finden Sie unter [SqlTriggerContext-Objekt](sqltriggercontext-object.md).  
+-   
+  `SqlTriggerContext`: Das `SqlTriggerContext`-Objekt kann nur innerhalb eines CLR-Triggers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zum- `SqlTriggerContext` Objekt finden Sie unter [SqlTriggerContext-Objekt](sqltriggercontext-object.md).  
   
--   `IsAvailable`: Die `IsAvailable` Eigenschaft wird verwendet, um die Verfügbarkeit des Kontexts zu ermitteln.  
+-   
+  `IsAvailable`: Die `IsAvailable`-Eigenschaft wird verwendet, um die Verfügbarkeit des Kontexts zu ermitteln.  
   
--   `WindowsIdentity`: Die `WindowsIdentity` Eigenschaft wird verwendet, um die Windows-Identität des Aufrufers abrufen.  
+-   
+  `WindowsIdentity`: Die `WindowsIdentity`-Eigenschaft wird verwendet, um die Windows-Identität des aufrufenden Programms abzurufen.  
   
 ## <a name="determining-context-availability"></a>Bestimmen der Kontextverfügbarkeit  
- Fragen Sie die `SqlContext`-Klasse ab, um zu ermitteln, ob der gerade ausgeführte Code prozessintern ausgeführt wird. Überprüfen Sie dazu die `IsAvailable`-Eigenschaft des `SqlContext`-Objekts. Die `IsAvailable`-Eigenschaft ist schreibgeschützt und gibt `True` zurück, wenn der aufrufende Code innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird und auf andere `SqlContext`-Elemente zugegriffen werden kann. Wenn die `IsAvailable`-Eigenschaft `False` zurückgibt, lösen alle anderen `SqlContext`-Elemente eine `InvalidOperationException`-Ausnahme aus, falls sie verwendet werden. Wenn `IsAvailable` `False` zurückgibt, schlagen alle Versuche, ein Verbindungsobjekt zu öffnen, bei denen "context connection=true" festgelegt ist, fehl.  
+ Fragen Sie die `SqlContext`-Klasse ab, um zu ermitteln, ob der gerade ausgeführte Code prozessintern ausgeführt wird. Überprüfen Sie dazu die `IsAvailable`-Eigenschaft des `SqlContext`-Objekts. Die `IsAvailable`-Eigenschaft ist schreibgeschützt und gibt `True` zurück, wenn der aufrufende Code innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird und auf andere `SqlContext`-Elemente zugegriffen werden kann. Wenn die `IsAvailable`-Eigenschaft `False` zurückgibt, lösen alle anderen `SqlContext`-Elemente eine `InvalidOperationException`-Ausnahme aus, falls sie verwendet werden. Wenn `IsAvailable``False` zurückgibt, schlagen alle Versuche, ein Verbindungsobjekt zu öffnen, bei denen "context connection=true" festgelegt ist, fehl.  
   
 ## <a name="retrieving-windows-identity"></a>Abrufen der Windows-Identität  
  Innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführter CLR-Code wird immer im Kontext des Prozesskontos aufgerufen. Wenn der Code bestimmte Aktionen mit der Identität des aufrufenden Benutzers anstelle der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozessidentität ausführen soll, sollte mithilfe der `WindowsIdentity`-Eigenschaft des `SqlContext`-Objekts ein Identitätstoken abgerufen werden. Die `WindowsIdentity`-Eigenschaft gibt eine `WindowsIdentity`-Instanz zurück, die die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Identität des aufrufenden Benutzers darstellt, bzw. NULL, wenn der Client über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung identifiziert wurde. Nur mit der `EXTERNAL_ACCESS`-Berechtigung oder `UNSAFE`-Berechtigung markierte Assemblys können auf diese Eigenschaft zugreifen.  
@@ -127,7 +132,7 @@ Public Shared Sub  WindowsIDTestProcVB ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SqlPipe-Objekt](sqlpipe-object.md)   
  [SqlTriggerContext-Objekt](sqltriggercontext-object.md)   
  [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md)   

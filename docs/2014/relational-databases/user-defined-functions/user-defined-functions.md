@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211695"
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
@@ -27,7 +27,7 @@ ms.locfileid: "68211695"
   
  [Vorteile von benutzerdefinierten Funktionen](#Benefits)  
   
- [Arten von Funktionen](#FunctionTypes)  
+ [Funktionstypen](#FunctionTypes)  
   
  [Richtlinien](#Guidelines)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68211695"
   
  [Verwandte Aufgaben](#Tasks)  
   
-##  <a name="Benefits"></a> Vorteile von benutzerdefinierten Funktionen  
+##  <a name="Benefits"></a>Vorteile von benutzerdefinierten Funktionen  
  Benutzerdefinierte Funktionen bieten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgenden Vorteile:  
   
 -   Modulare Programmierung.  
@@ -59,11 +59,11 @@ ms.locfileid: "68211695"
 > [!NOTE]  
 >  Benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen in Abfragen können nur auf einem einzelnen Thread (serieller Ausführungsplan) ausgeführt werden.  
   
-##  <a name="FunctionTypes"></a> Arten von Funktionen  
+##  <a name="FunctionTypes"></a>Funktionstypen  
  Skalarfunktion  
  Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion gibt es keinen Funktionshauptteil; der Skalarwert ist das Ergebnis einer einzelnen SELECT-Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion enthält der in einem BEGIN…END-Block definierte Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme von `text`, `ntext`, `image`, `cursor` und `timestamp` sein.  
   
- Tabellenwertfunktionen  
+ Table-Valued Functions  
  Benutzerdefinierte Tabellenwertfunktionen geben einen `table`-Datentyp zurück. Bei einer Inlinefunktion mit Tabellenrückgabe gibt es keinen Funktionshauptteil; die Tabelle ist das Resultset einer einzelnen SELECT-Anweisung.  
   
  Systemfunktionen  
@@ -79,7 +79,7 @@ ms.locfileid: "68211695"
   
  Wie oft eine in einer Abfrage angegebene Funktion tatsächlich ausgeführt wird, kann bei den vom Abfrageoptimierer erstellten Ausführungsplänen variieren. Ein Beispiel hierfür ist eine Funktion, die von einer Unterabfrage in einer WHERE-Klausel aufgerufen wird. Wie oft die Unterabfrage und deren Funktion ausgeführt wird, kann bei den verschiedenen Zugriffsmethoden variieren, die der Abfrageoptimierer auswählt.  
   
-##  <a name="ValidStatements"></a> Gültige Anweisungen in einer Funktion  
+##  <a name="ValidStatements"></a>Gültige Anweisungen in einer Funktion  
  Die folgenden Anweisungstypen sind in einer Funktion zulässig:  
   
 -   DECLARE-Anweisungen zum Definieren von lokalen Datenvariablen und lokalen Cursorn für die Funktion.  
@@ -120,7 +120,7 @@ ms.locfileid: "68211695"
   
  Eine Liste der deterministischen und nicht deterministischen integrierten Systemfunktionen finden Sie unter [Deterministische und nicht deterministische Funktionen](../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a> Schemagebundene Funktionen  
+##  <a name="SchemaBound"></a>Schema gebundene Funktionen  
  CREATE FUNCTION unterstützt eine SCHEMABINDING-Klausel, die die Funktion an das Schema von Objekten bindet, auf die verwiesen wird, wie z. B. Tabellen, Sichten und andere benutzerdefinierte Funktionen. Der Versuch, ein Objekt zu ändern oder zu löschen, auf das von einer schemagebundenen Funktion verwiesen wird, erzeugt einen Fehler.  
   
  Die folgenden Bedingungen müssen erfüllt sein, um SCHEMABINDING in CREATE FUNCTION angeben zu können:  
@@ -133,7 +133,7 @@ ms.locfileid: "68211695"
   
  Mit ALTER FUNCTION können Sie die Schemabindung entfernen. Die ALTER FUNCTION-Anweisung sollte die Funktion neu definieren, ohne WITH SCHEMABINDING anzugeben.  
   
-##  <a name="Parameters"></a> Angeben von Parametern  
+##  <a name="Parameters"></a>Angeben von Parametern  
  Eine benutzerdefinierte Funktion verwendet null oder mehr Eingabeparameter und gibt einen Skalarwert oder eine Tabelle zurück. Eine Funktion kann maximal 1024 Eingabeparameter haben. Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert zu erhalten. In diesem Punkt gibt es einen Unterschied zu den Parametern einer benutzerdefinierten gespeicherten Prozedur. Fehlt im Aufruf einer benutzerdefinierten gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet. Benutzerdefinierte Funktionen unterstützen keine Ausgabeparameter.  
   
 ##  <a name="Tasks"></a> Verwandte Aufgaben  

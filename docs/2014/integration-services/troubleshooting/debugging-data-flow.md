@@ -17,20 +17,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766193"
 ---
 # <a name="debugging-data-flow"></a>Debuggen des Datenflusses
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer enthalten Funktionen und Tools, mit denen Sie die Datenflüsse in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer enthalten Funktionen und Tools, mit denen Sie die Datenflüsse in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer stellt Daten-Viewer bereit.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer stellt Daten-Viewer bereit.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Transformationen stellen die Zeilenanzahl bereit.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Transformationen stellen die Zeilenanzahl bereit.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer stellt zur Laufzeit Fortschrittsberichte bereit.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer stellt zur Laufzeit Fortschrittsberichte bereit.  
   
 ## <a name="data-viewers"></a>Daten-Viewer  
  Daten-Viewer zeigen Daten zwischen zwei Komponenten in einem Datenfluss an. Mit Daten-Viewern können Daten angezeigt werden, wenn die Daten von einer Datenquelle extrahiert werden und an einen Datenfluss weitergegeben werden, vor und nach dem Update der Daten durch eine Transformation sowie vor dem Laden der Daten in das Ziel.  
@@ -61,14 +64,14 @@ ms.locfileid: "62766193"
   
  In der folgenden Tabelle wird die Farbcodierung beschrieben.  
   
-|Farbe|Beschreibung|  
+|Color|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Keine Farbe|Wartet auf den Aufruf durch die Datenfluss-Engine.|  
 |Gelb|Führt eine Transformation aus, extrahiert Daten oder lädt Daten.|  
-|Green|Wurde erfolgreich ausgeführt.|  
-|Rot|Wurde mit Fehlern ausgeführt.|  
+|Grün|Wurde erfolgreich ausgeführt.|  
+|red|Wurde mit Fehlern ausgeführt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tools zur Problembehandlung für die Paketentwicklung](troubleshooting-tools-for-package-development.md)  
   
   

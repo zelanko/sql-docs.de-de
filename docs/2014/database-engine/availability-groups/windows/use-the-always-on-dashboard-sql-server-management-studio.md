@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788727"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Verwenden des AlwaysOn-Dashboards (SQL Server Management Studio)
@@ -53,7 +53,7 @@ ms.locfileid: "62788727"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanz) verbunden sein, die entweder das primäre Verfügbarkeitsreplikat oder ein sekundäres Replikat einer Verfügbarkeitsgruppe hostet.  
   
 ###  <a name="Security"></a> Sicherheit  
@@ -61,13 +61,13 @@ ms.locfileid: "62788727"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert CONNECT-, VIEW SERVER STATE- und VIEW ANY DEFINITION-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Um das AlwaysOn-Dashboard zu starten.  
+##  <a name="SSMSProcedure"></a>So starten Sie das AlwaysOn-Dashboard  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her, auf der das AlwaysOn-Dashboard ausgeführt werden soll.  
   
 2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** , klicken Sie mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen** , und klicken Sie dann auf **Dashboard anzeigen**.  
   
-###  <a name="DashboardOptions"></a> So ändern Sie AlwaysOn-Dashboard-Optionen  
+###  <a name="DashboardOptions"></a>So ändern Sie AlwaysOn-dashboardoptionen  
  Sie können das [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Dialogfeld **Optionen** verwenden, um das Verhalten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn-Dashboards für das automatische Aktualisieren und Aktivieren einer automatisch definierten AlwaysOn-Richtlinie zu konfigurieren.  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
@@ -76,10 +76,10 @@ ms.locfileid: "62788727"
   
 3.  Zum Aktivieren einer benutzerdefinierten Richtlinie wählen Sie **Benutzerdefinierte AlwaysOn-Richtlinie aktivieren**aus.  
   
-##  <a name="AvGroupsView"></a> Zusammenfassung zu Verfügbarkeitsgruppen  
+##  <a name="AvGroupsView"></a>Verfügbarkeits Gruppen Zusammenfassung  
  Im Verfügbarkeitsgruppen-Bildschirm wird eine Zusammenfassungszeile für jede Verfügbarkeitsgruppe angezeigt, für die die verbundene Serverinstanz ein Replikat hostet. In diesem Bereich werden die folgenden Spalten angezeigt.  
   
- **Name der Verfügbarkeitsgruppe**  
+ **Name der Verfügbarkeits Gruppe**  
  Der Name einer Verfügbarkeitsgruppe, für die die verbundene Serverinstanz ein Replikat hostet.  
   
  **Primäre Instanz**  
@@ -93,37 +93,37 @@ ms.locfileid: "62788727"
 -   **Manuell**. Gibt an, dass kein Replikat im automatischen Failovermodus ist.  
   
  **Probleme**  
- Klicken Sie auf den Link **Probleme** , um die Problembehandlungsdokumentation für ein angegebenes Problem zu öffnen. Eine Liste aller AlwaysOn-Richtlinienprobleme finden Sie [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Klicken Sie auf den Link **Probleme** , um die Problembehandlungsdokumentation für ein angegebenes Problem zu öffnen. Eine Liste aller AlwaysOn-Richtlinien Probleme finden Sie unter [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Klicken Sie auf die Spaltenüberschriften, um die Verfügbarkeitsgruppeninformationen nach dem Namen der Verfügbarkeitsgruppe, primärer Instanz, Failovermodus oder Problem zu sortieren.  
   
-##  <a name="AvGroupDetails"></a> Verfügbarkeitsgruppendetails  
+##  <a name="AvGroupDetails"></a>Verfügbarkeits Gruppen Details  
  Die folgenden Detailinformationen werden für die Verfügbarkeitsgruppe angezeigt, die Sie im Zusammenfassungsbildschirm auswählen:  
   
- **Status der Verfügbarkeitsgruppe**  
+ **Status der Verfügbarkeits Gruppe**  
  Zeigt den Zustand für die Verfügbarkeitsgruppe an.  
   
- **Primary instance**  
+ **Primäre Instanz**  
  Der Name der Serverinstanz, die das primäre Replikat der Verfügbarkeitsgruppe hostet.  
   
- **Failover mode**  
+ **Failovermodus**  
  Zeigt den Failovermodus an, für den das Replikat konfiguriert ist. Die folgenden Werte für den Failovermodus sind möglich:  
   
 -   **Automatisch**. Gibt an, dass ein oder mehrere Replikate im automatischen Failovermodus sind.  
   
 -   **Manuell**. Gibt an, dass kein Replikat im automatischen Failovermodus ist.  
   
- **Clusterstatus**  
+ **Cluster Status**  
  Name und Zustand des Clusters, auf dem die Instanz des verbundenen Servers und die Verfügbarkeitsgruppe ein Elementknoten ist.  
   
-##  <a name="AvReplicaDetails"></a> Verfügbarkeitsreplikatdetails  
+##  <a name="AvReplicaDetails"></a>Verfügbarkeits Replikat  
  Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:  
   
  **Name**  
  Der Namen der Serverinstanz, die das Verfügbarkeitsreplikat hostet. Diese Spalte wird standardmäßig angezeigt.  
   
- **Rolle**  
+ **Spielen**  
  Gibt die aktuelle Rolle des Verfügbarkeitsreplikats an, entweder **Primär** oder **Sekundär**. Informationen über [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Rollen finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md). Diese Spalte wird standardmäßig angezeigt.  
   
  **Failovermodus**  
@@ -133,40 +133,40 @@ ms.locfileid: "62788727"
   
 -   **Manuell**. Gibt an, dass kein Replikat im automatischen Failovermodus ist.  
   
- **Synchronisierungsstatus**  
- Gibt an, ob ein sekundäres Replikat gerade mit dem primärem Replikat synchronisiert wird. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
+ **Synchronisierungs Status**  
+ Gibt an, ob ein sekundäres Replikat gerade mit dem primärem Replikat synchronisiert wird. Diese Spalte wird standardmäßig angezeigt. Mögliche Werte:  
   
 -   **Nicht synchronisiert**. Mindestens eine Datenbank im Replikat ist nicht synchronisiert oder wurde noch nicht mit der Verfügbarkeitsgruppe verknüpft.  
   
--   **Wird synchronisiert**. Mindestens eine Datenbank im Replikat wird synchronisiert.  
+-   Wird **synchronisiert**. Mindestens eine Datenbank im Replikat wird synchronisiert.  
   
 -   **Synchronisiert**. Alle Datenbanken im sekundären Replikat werden mit den entsprechenden primären Datenbanken auf dem aktuellen primären Replikat (falls vorhanden) oder auf dem letzten primären Replikat synchronisiert.  
   
     > [!NOTE]  
     >  Im Leistungsmodus befindet sich die Datenbank nie im Status "Synchronisiert".  
   
--   **NULL**. Unbekannter Status. Dieser Wert tritt auf, wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren kann (d. h., der lokale Knoten ist nicht Teil des WSFC-Quorums).  
+-   **Null**. Unbekannter Status. Dieser Wert tritt auf, wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren kann (d. h., der lokale Knoten ist nicht Teil des WSFC-Quorums).  
   
  **Probleme**  
- Listet den Namen des Problems auf. Dieser Wert wird standardmäßig angezeigt. Eine Liste aller AlwaysOn-Richtlinienprobleme finden Sie [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Listet den Namen des Problems auf. Dieser Wert wird standardmäßig angezeigt. Eine Liste aller AlwaysOn-Richtlinien Probleme finden Sie unter [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Verfügbarkeitsmodus**  
- Gibt die Replikateigenschaft an, die Sie für jedes Verfügbarkeitsreplikat einzeln festgelegt haben. Dieser Wert wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
+ Gibt die Replikateigenschaft an, die Sie für jedes Verfügbarkeitsreplikat einzeln festgelegt haben. Dieser Wert wird standardmäßig ausgeblendet. Mögliche Werte:  
   
 -   **Asynchron**. Das sekundäre Replikat wird nie mit dem primären Replikat synchronisiert.  
   
--   **Synchronous**. Beim Aufholen zur primären Datenbank geht eine sekundäre Datenbank in diesen Status über und bleibt aufgeholt, solange die Datensynchronisierung für die Datenbank ausgeführt wird.  
+-   **Synchron**. Beim Aufholen zur primären Datenbank geht eine sekundäre Datenbank in diesen Status über und bleibt aufgeholt, solange die Datensynchronisierung für die Datenbank ausgeführt wird.  
   
- **Primärer Verbindungsmodus**  
+ **Primärer Verbindungs Modus**  
  Gibt den Modus an, der zum Herstellen einer Verbindung mit dem primären Replikat verwendet wird.  Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Sekundärer Verbindungsmodus**  
+ **Sekundärer Verbindungs Modus**  
  Gibt den Modus an, der zum Herstellen einer Verbindung mit dem sekundären Replikat verwendet wird.  Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Verbindungsstatus**  
- Gibt an, ob ein sekundäres Replikat derzeit mit dem primären Replikat verbunden ist. Diese Spalte wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
+ Gibt an, ob ein sekundäres Replikat derzeit mit dem primären Replikat verbunden ist. Diese Spalte wird standardmäßig ausgeblendet. Mögliche Werte:  
   
--   **Getrennt**. Gibt bei einem Remoteverfügbarkeitsreplikat an, dass es vom lokalen Verfügbarkeitsreplikat getrennt ist. Die Antwort des lokalen Replikats auf den Status "Getrennt" hängt wie folgt von dessen Rolle ab:  
+-   Nicht **getrennt**. Gibt bei einem Remoteverfügbarkeitsreplikat an, dass es vom lokalen Verfügbarkeitsreplikat getrennt ist. Die Antwort des lokalen Replikats auf den Status "Getrennt" hängt wie folgt von dessen Rolle ab:  
   
     -   Wenn auf dem primären Replikat ein sekundäres Replikat getrennt ist, werden die sekundären Datenbanken auf dem primären Replikat als **Nicht synchronisiert** gekennzeichnet, und das primäre Replikat wartet, bis das sekundäre Replikat wieder verbunden ist.  
   
@@ -174,43 +174,43 @@ ms.locfileid: "62788727"
   
 -   **Verbunden**. Ein Remoteverfügbarkeitsreplikat, das derzeit mit dem lokalen Replikat verbunden ist.  
   
- **Betriebszustand**  
- Gibt den aktuellen Betriebszustand des sekundären Replikats an. Dieser Wert wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
+ **Betriebsstatus**  
+ Gibt den aktuellen Betriebszustand des sekundären Replikats an. Dieser Wert wird standardmäßig ausgeblendet. Mögliche Werte:  
   
- **0**. Ausstehendes Failover  
+ **0**. ausstehendes Failover  
   
- **1**. Ausstehend  
+ **1**. ausstehend  
   
  **2**. Online  
   
- **3**. Offline  
+ **3**. offline  
   
  **4**. Fehler  
   
  **5**. Fehler, kein Quorum  
   
- **NULL**. Das Replikat ist nicht lokal  
+ **Null**. Das Replikat ist nicht lokal  
   
- **Nummer des letzten Verbindungsfehlers**  
+ **Letzter Verbindungsfehler Nr.**  
  Die Nummer des letzten Verbindungsfehlers.  Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Beschreibung des letzten Verbindungsfehlers**  
  Die Beschreibung des letzten Verbindungsfehlers.  Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Timestamp des letzten Verbindungsfehlers**  
+ **Zeitstempel des letzten Verbindungsfehlers**  
  Der Timestamp des letzten Verbindungsfehlers. Dieser Wert wird standardmäßig ausgeblendet.  
   
 > [!NOTE]  
 >  Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> So gruppieren Sie Verfügbarkeitsgruppeninformationen  
+##  <a name="AvDbDetails"></a>So gruppieren Sie Verfügbarkeits Gruppeninformationen  
  Klicken Sie zum Gruppieren der Informationen auf **Gruppieren nach**, und wählen Sie eine der folgenden Möglichkeiten aus:  
   
--   **Verfügbarkeitsreplikate**  
+-   **Replikate**  
   
--   **Verfügbarkeitsdatenbanken**  
+-   **Verfügbarkeits Datenbanken**  
   
--   **Synchronization state**  
+-   **Synchronisierungs Status**  
   
 -   **Failoverbereitschaft**  
   
@@ -224,16 +224,16 @@ ms.locfileid: "62788727"
  **Replikat**  
  Der Name der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die das Verfügbarkeitsreplikat hostet. Dieser Wert wird standardmäßig angezeigt.  
   
- **Synchronisierungsstatus**  
+ **Synchronisierungs Status**  
  Gibt an, ob die Verfügbarkeitsdatenbank gerade mit dem primärem Replikat synchronisiert wird. Dieser Wert wird standardmäßig angezeigt. Folgende Synchronisierungsstatus sind möglich:  
   
--   **Synchronisierung wird nicht ausgeführt**.  
+-   **Synchronisierung wird nicht**durchgeführt.  
   
     -   Gibt bei der primären Rolle an, dass die Datenbank nicht bereit ist, das Transaktionsprotokoll mit den entsprechenden sekundären Datenbanken zu synchronisieren.  
   
     -   Gibt bei einer sekundären Datenbank an, dass die Protokollsynchronisierung für die Datenbank aufgrund eines Verbindungsproblems nicht gestartet wurde oder beim Start oder einem Rollenwechsel verschiedene Übergangsstatuswerte durchläuft.  
   
--   **Wird synchronisiert**.  
+-   Wird **synchronisiert**.  
   
      Auf einem primären Replikat:  
   
@@ -263,21 +263,21 @@ ms.locfileid: "62788727"
     > [!CAUTION]  
     >  Wenn eine Datenbank den Status INITIALIZING aufweist, befindet sich die Datenbank nach einem erzwungenen Failover zum sekundären Replikat immer in einem Status, in dem sie nicht gestartet werden kann.  
   
- **Failover Readiness**  
- Gibt an, für welches Verfügbarkeitsreplikat ein Failover mit oder ohne potenziellen Datenverlust ausgeführt werden kann. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
+ **Failoverbereitschaft**  
+ Gibt an, für welches Verfügbarkeitsreplikat ein Failover mit oder ohne potenziellen Datenverlust ausgeführt werden kann. Diese Spalte wird standardmäßig angezeigt. Mögliche Werte:  
   
 -   **Datenverlust**  
   
 -   **Kein Datenverlust**  
   
  **Probleme**  
- Listet den Namen des Problems auf. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
+ Listet den Namen des Problems auf. Diese Spalte wird standardmäßig angezeigt. Mögliche Werte:  
   
 -   **Warnungen**. Klicken Sie, um die Schwellenwerte und Warnungen anzuzeigen.  
   
 -   **Kritisch**. Klicken Sie, um die kritischen Probleme anzuzeigen.  
   
- Eine Liste aller AlwaysOn-Richtlinienprobleme finden Sie [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Eine Liste aller AlwaysOn-Richtlinien Probleme finden Sie unter [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Angehalten**  
  Gibt an, ob der Status der Datenbank **Angehalten** oder **Fortgesetzt**lautet. Dieser Wert wird standardmäßig ausgeblendet.  
@@ -300,46 +300,46 @@ ms.locfileid: "62788727"
  **Protokoll-Senderate (KB/s)**  
  Gibt die Rate in KB pro Sekunde an, mit der Protokolldatensätze an das sekundäre Replikat gesendet werden. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Größe der Wiederholungswarteschlange (KB)**  
+ **Größe der Wiederholungs Warteschlange (KB)**  
  Gibt die Menge an Protokolldatensätzen in den Protokolldateien des sekundären Replikats an, die noch nicht wiederhergestellt wurden. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Rollforwardrate (KB/s)**  
+ **Wiederholungs Rate (KB/Sek.)**  
  Gibt die Rate in KB pro Sekunde an, mit der die Protokolldatensätze wiederhergestellt werden. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Dateidatenstrom-Senderate (KB/s)**  
+ **FileStream-Senderate (KB/Sek.)**  
  Gibt die Rate des Dateidatenstroms in KB pro Sekunde an, mit der Transaktionen an das Replikat gesendet werden. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Protokollende-LSN**  
+ **Protokoll Ende-LSN**  
  Gibt die tatsächliche Protokollfolgenummer (LSN) an, die dem letzten Protokolldatensatz im Protokollcache auf den primären und sekundären Replikaten entspricht. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Wiederherstellungs-LSN**  
  Gibt bei einem primären Replikat das Ende des Transaktionsprotokolls an, bevor das Replikat nach einer Wiederherstellung oder einem Failover neue Protokolldatensätze schreibt. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Kürzungs-LSN**  
+ **Trunationlsn**  
  Gibt den minimalen Protokollkürzungswert für das primäre Replikat an. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **LSN des letzten Commits**  
  Gibt die tatsächliche LSN an, die dem letzten Commitdatensatz im Transaktionsprotokoll entspricht. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Letzte Commitzeit**  
+ **Uhrzeit des letzten Commit**  
  Gibt die Zeit an, die dem letzten Commitdatensatz entspricht. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **LSN des letzten Sendevorgangs**  
+ **Letzte gesendete LSN**  
  Gibt den Punkt an, bis zu dem alle Protokollblöcke vom primären Replikat gesendet wurden. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Letzte Sendezeit**  
+ **Zeitpunkt des letzten Sende Zeitraums**  
  Gibt die Zeit an, zu der der letzte Protokollblock gesendet wurde. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **LSN des letzten Empfangsvorgangs**  
+ **LSN des letzten Empfangs**  
  Gibt den Punkt an, bis zu dem alle Protokollblöcke vom sekundären Replikat empfangen wurden, das die sekundäre Datenbank hostet. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Letzte Empfangszeit**  
+ **Zeitpunkt des letzten Empfangs**  
  Gibt die Zeit an, zu der der in der letzten Meldung empfangene Protokollblockbezeichner auf dem sekundären Replikat gelesen wurde. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **LSN der letzten Festschreibung**  
  Gibt den Punkt an, bis zu dem alle Protokolldatensätze auf dem sekundären Replikat auf den Datenträger geleert wurden. Dieser Wert wird standardmäßig ausgeblendet.  
   
- **Uhrzeit der letzten Festschreibung**  
+ **Zeitpunkt der letzten Festschreibung**  
  Gibt die Zeit an, zu der der Protokollblockbezeichner für die letzte festgeschriebene LSN auf dem sekundären Replikat empfangen wurde. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **LSN der letzten Wiederholung**  
@@ -350,10 +350,10 @@ ms.locfileid: "62788727"
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer verfügbarkeitsgruppe &#40;SQLServer&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Verwenden Sie AlwaysOn-Richtlinien, um die Integrität einer Verfügbarkeits Gruppe &#40;SQL Server anzuzeigen&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. dm_os_performance_counters &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
   

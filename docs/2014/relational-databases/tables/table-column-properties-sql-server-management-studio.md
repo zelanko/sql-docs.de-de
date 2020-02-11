@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211797"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Tabellenspalteneigenschaften (SQL Server Management Studio)
@@ -45,7 +45,7 @@ ms.locfileid: "68211797"
  **Länge**  
  Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an. Diese Eigenschaft ist nur für zeichenbasierte Datentypen verfügbar.  
   
- **Dezimalstellen**  
+ **Skalieren**  
  Zeigt die Höchstzahl von Ziffern an, die rechts neben dem Komma für Werte in dieser Spalte angezeigt werden können. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
  **Genauigkeit**  
@@ -81,37 +81,37 @@ ms.locfileid: "68211797"
  **DTS-veröffentlicht**  
  Zeigt, ob die Spalte DTS-veröffentlicht ist.  
   
- **Volltextspezifikation**  
+ **Voll Text Spezifikation**  
  Zeigt Informationen zum Volltextindex an. Der Wert dieser Eigenschaft ist der Wert der untergeordneten Eigenschaft **(Ist volltextindiziert)** und zeigt an, ob diese Spalte volltextindiziert ist.  
   
 > [!NOTE]  
 >  Erweitern Sie zum Ändern des für die **Volltextspezifikation** -Eigenschaft angezeigten Werts die Eigenschaft, und bearbeiten Sie die untergeordnete Eigenschaft **Ist volltextindiziert** .  
   
--   **Ist volltextindiziert** Gibt an, ob diese Spalte volltextindiziert ist. Diese Eigenschaft kann nur dann auf **Ja** festgelegt werden, wenn für den Datentyp der Spalte eine Volltextsuche möglich ist und wenn für die Spalte in der zugehörigen Tabelle ein Volltextindex angegeben ist. Klicken Sie zum Bearbeiten diese Eigenschaft auf den Wert, erweitern Sie die Dropdownliste, und wählen Sie einen Wert aus.  
+-   **Ist voll Text indiziert** Gibt an, ob diese Spalte voll Text indiziert ist. Diese Eigenschaft kann nur dann auf **Ja** festgelegt werden, wenn für den Datentyp der Spalte eine Volltextsuche möglich ist und wenn für die Spalte in der zugehörigen Tabelle ein Volltextindex angegeben ist. Klicken Sie zum Bearbeiten diese Eigenschaft auf den Wert, erweitern Sie die Dropdownliste, und wählen Sie einen Wert aus.  
   
--   **Volltexttypspalte** zeigt den Namen der Spalte an, für den diese Spalte volltextindiziert ist. Diese Eigenschaft muss festgelegt sein, wenn die **Datentyp** -Eigenschaft für diese Spalte entweder **image** oder **varbinary**ist. Die in dieser Eigenschaft benannte Spalte muss vom Typ **[n]char, [n]varchar,** oder **xml**sein, und die Dropdownliste für diese Eigenschaft enthält nur Spalten, die von einem dieser drei Datentypen sind. Zeilen in den Spalten, die durch diese Eigenschaft benannt werden, zeigen den Dokumenttyp der entsprechenden Zeilen in Spalten an, die mit Volltextsuche durchsucht werden können. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
+-   **Voll Texttyp-Spalte** Zeigt den Namen der Spalte an, für die diese Spalte voll Text indiziert ist. Diese Eigenschaft muss festgelegt sein, wenn die **Datentyp** -Eigenschaft für diese Spalte entweder **image** oder **varbinary**ist. Die in dieser Eigenschaft benannte Spalte muss vom Typ **[n]char, [n]varchar,** oder **xml**sein, und die Dropdownliste für diese Eigenschaft enthält nur Spalten, die von einem dieser drei Datentypen sind. Zeilen in den Spalten, die durch diese Eigenschaft benannt werden, zeigen den Dokumenttyp der entsprechenden Zeilen in Spalten an, die mit Volltextsuche durchsucht werden können. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
--   **Sprache** Gibt die Sprache für die Wörtertrennung an, die zum Indizieren der Spalte verwendet wird. Der in der Eigenschaft gespeicherte Wert ist der Gebietsschemabezeichner für die Wörtertrennung. Weitere Informationen zur Wörtertrennung und zu LCIDs, finden Sie unter Wörtertrennung und Wortstammerkennungen. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
+-   **Sprache** Gibt die Sprache der Wörter Trennung an, die zum Indizieren der Spalte verwendet wird. Der in der Eigenschaft gespeicherte Wert ist der Gebietsschemabezeichner für die Wörtertrennung. Weitere Informationen zur Wörtertrennung und zu LCIDs, finden Sie unter Wörtertrennung und Wortstammerkennungen. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
  **Statistische Semantik**  
  Wählen Sie aus, ob die statistische semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
  Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist die Option **Statistische Semantik** auf **Nein** festgelegt, und sie kann nicht geändert werden. Wenn Sie die Option **Statistische Semantik** auf **Ja** festlegen, bevor Sie eine **Sprache**auswählen, sind in der Spalte **Sprache** nur die Sprachen verfügbar, für die das semantische Sprachmodell unterstützt wird.  
   
- **Hat Nicht-SQL Server-Abonnent**  
+ **Hat nicht SQL Server Abonnenten**  
  Gibt an, ob die Spalte auf einen Abonnenten repliziert wird, der kein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist.  
   
- **Identitätsspezifikation**  
+ **Identitäts Spezifikation**  
  Zeigt Informationen darüber an, ob und wie diese Spalte die Eindeutigkeit der Werte erzwingt. Der Wert dieser Eigenschaft zeigt an, ob diese Spalte eine Identitätsspalte ist, und gleicht dem Wert der untergeordneten Eigenschaft **Ist Identity**.  
   
 > [!NOTE]  
 >  Zum Ändern des Werts für die **Identitätsspezifikation** -Eigenschaft erweitern Sie die untergeordnete Eigenschaft **Ist Identität** .  
   
--   **Ist Identity** Zeigt an, ob diese Spalte eine Identitätsspalte ist. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
+-   **Ist Identity** Gibt an, ob diese Spalte eine Identitäts Spalte ist. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
--   **ID-Startwert** Zeigt den Ausgangswert an, der während des Erstellens dieser Identitätsspalte angegeben wurde. Dieser Wert wird der ersten Tabellenzeile zugewiesen. Wenn Sie nichts eingeben, wird standardmäßig der Wert 1 zugewiesen. Um diese Eigenschaft zu bearbeiten, geben Sie den Wert direkt ein.  
+-   ID- **Seed** Zeigt den Ausgangswert an, der während der Erstellung dieser Identitäts Spalte angegeben wurde. Dieser Wert wird der ersten Tabellenzeile zugewiesen. Wenn Sie nichts eingeben, wird standardmäßig der Wert 1 zugewiesen. Um diese Eigenschaft zu bearbeiten, geben Sie den Wert direkt ein.  
   
--   **ID-Schrittweite** Zeigt den inkrementellen Wert an, der während des Erstellens dieser Identitätsspalte angegeben wurde. Bei diesem Wert handelt es sich um das Inkrement, der dem **ID-Startwert** für jede weitere Zeile hinzugefügt wird. Wenn Sie nichts eingeben, wird standardmäßig der Wert 1 zugewiesen. Um diese Eigenschaft zu bearbeiten, geben Sie den Wert direkt ein.  
+-   ID- **Inkrement** Zeigt den Inkrement-Wert an, der während der Erstellung dieser Identitäts Spalte angegeben wurde. Bei diesem Wert handelt es sich um das Inkrement, der dem **ID-Startwert** für jede weitere Zeile hinzugefügt wird. Wenn Sie nichts eingeben, wird standardmäßig der Wert 1 zugewiesen. Um diese Eigenschaft zu bearbeiten, geben Sie den Wert direkt ein.  
   
  **Indizierbar**  
  Zeigt, ob die ausgewählte Spalte indiziert werden kann. Beispiel: Nichtdeterministische, berechnete Spalten können nicht indiziert werden.  
@@ -119,19 +119,20 @@ ms.locfileid: "68211797"
  **Merge-veröffentlicht**  
  Zeigt, ob die Spalte eine Mergeveröffentlichung ist.  
   
- **Not For Replication**  
+ **Nicht für Replikation**  
  Gibt an, ob die ursprünglichen Identitätswerte bei der Replikation erhalten bleiben. Weitere Informationen zur Replikation finden Sie unter CREATE TABLE. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
- **Repliziert**  
+ **Gebaut**  
  Zeigt, ob diese Spalte an einem anderen Speicherort repliziert wird.  
   
- **RowGuid**  
+ **ROWGUID**  
  Gibt an, ob von SQL Server die Spalte als ROWGUID verwendet wird. Sie können diesen Wert nur für eine eindeutige Identitätsspalte auf **Yes** festlegen. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
  **Größe**  
  Zeigt die für den Datentyp der Spalte zulässige Größe in Byte an. Beispiel: Ein nchar-Datentyp kann eine Länge von 10 besitzen (die Anzahl der Zeichen), wegen der Unicode-Zeichensätze aber eine Größe von 20 Byte besitzen.  
   
 > [!NOTE]  
->  Die Länge für **(max)** -Datentypen ist für jede Zeile unterschiedlich. **sp_help** gibt (-1) als Länge von **(max)** -Spalten zurück. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zeigt -1 als Spaltengröße an.  
+>  Die Länge für **(max)** -Datentypen ist für jede Zeile unterschiedlich. **sp_help** gibt (-1) als Länge von **(max)** -Spalten zurück. 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zeigt -1 als Spaltengröße an.  
   
   

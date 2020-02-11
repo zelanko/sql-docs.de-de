@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211986"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Erstellen einer Server- und Datenbank-Überwachungsspezifikation
@@ -35,7 +35,7 @@ ms.locfileid: "68211986"
   
      [Sicherheit](#Security)  
   
--   **So erstellen Sie eine Server- und Datenbank-Überwachungsspezifikation mit**  
+-   **So erstellen Sie eine Serverüberwachung und Daten Bank Überwachungs Spezifikation mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,13 +58,13 @@ ms.locfileid: "68211986"
   
 -   Nachdem eine Datenbank-Überwachungsspezifikation erstellt wurde, kann diese von Prinzipalen mit den Berechtigungen CONTROL SERVER und ALTER ANY DATABASE AUDIT oder von Prinzipalen mit Zugriff auf das sysadmin-Konto angezeigt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen**, und wählen Sie dann **Neue Überwachung...** aus. Weitere Informationen finden Sie unter [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](create-a-server-audit-and-server-audit-specification.md).  
+2.  Klicken Sie **mit der rechten** Maustaste auf den Ordner Überwachungen, und wählen Sie neue über **Prüfung**aus. Weitere Informationen finden Sie unter [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Nachdem Sie alle Optionen ausgewählt haben, klicken Sie auf **OK**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211986"
   
 2.  Erweitern Sie den Ordner **Sicherheit** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbank-Überwachungsspezifikationen** und dann auf **Neue Datenbank-Überwachungsspezifikation...** .  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbank-Überwachungsspezifikationen** und dann auf **Neue Datenbank-Überwachungsspezifikation...**.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbank-Überwachungsspezifikation erstellen** verfügbar.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "68211986"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im folgenden Beispiel wird die Serverüberwachung mit dem Namen `Audit_Pay_Tables`, in der die SELECT- und INSERT-Anweisungen des `dbo`-Benutzers überwacht werden, für die `HumanResources.EmployeePayHistory`-Tabelle anhand der obigen Serverüberwachung erstellt.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im folgenden Beispiel wird die Serverüberwachung mit dem Namen `Audit_Pay_Tables` , in der die SELECT- und INSERT-Anweisungen des `dbo` -Benutzers überwacht werden, für die `HumanResources.EmployeePayHistory` -Tabelle anhand der obigen Serverüberwachung erstellt.  
   
     ```  
     USE AdventureWorks2012 ;   

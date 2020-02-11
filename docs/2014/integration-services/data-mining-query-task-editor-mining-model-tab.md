@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890774"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Miningmodell)
@@ -45,18 +45,18 @@ ms.locfileid: "68890774"
  **Neu**  
  Erstellt einen neuen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Verbindungs-Manager.  
   
- **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds „Analysis Services-Verbindungs-Manager hinzufügen“](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Verwandte Themen:** [Dialog Feld "Hinzufügen von Analysis Services-Verbindungs-Manager](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md) "  
   
- **Miningstruktur**  
+ **Mining Struktur**  
  Wählt eine Miningstruktur in der Liste aus.  
   
- **Miningmodelle**  
+ **Mining Modelle**  
  Wählt ein auf der ausgewählten Miningstruktur aufgebautes Miningmodell aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Abfrage&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Editor für Data Mining-Abfrage Tasks &#40;Abfrage Registerkarte&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Editor für Data Mining-Abfrage Tasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

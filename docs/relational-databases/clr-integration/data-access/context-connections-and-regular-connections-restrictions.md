@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen hinsichtlich regulärer Verbindungen und Kontextverbindungen | Microsoft-Dokumentation
+title: Einschränkungen für reguläre Verbindungen und Kontext Verbindungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68216410"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Kontextverbindungen und reguläre Verbindungen: Einschränkungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema werden die Einschränkungen besprochen, denen die Codeausführung im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozess durch Kontextverbindungen und reguläre Verbindungen unterliegt.  
+  In diesem Thema werden die Einschränkungen erläutert, die im zusammen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Hang mit der Ausführung von Code im Prozess durch Kontext-und reguläre Verbindungen  
   
 ## <a name="restrictions-on-context-connections"></a>Einschränkungen für Kontextverbindungen  
  Berücksichtigen Sie bei der Anwendungsentwicklung die folgenden Einschränkungen, die für Kontextverbindungen gelten:  
@@ -34,24 +34,24 @@ ms.locfileid: "68216410"
   
 -   Die Batchverarbeitung von Updates wird in Kontextverbindungen nicht unterstützt  
   
--   **SqlNotificationRequest** kann nicht mit Befehlen verwendet werden, die für eine Kontextverbindung ausgeführt werden.  
+-   **SqlNotificationRequest** kann nicht mit Befehlen verwendet werden, die für eine Kontext Verbindung ausgeführt werden.  
   
 -   Befehle, die für die Kontextverbindung ausgeführt werden, können nicht abgebrochen werden. Die **SqlCommand.Cancel** -Methode ignoriert die Anforderung stillschweigend.  
   
 -   Wenn "context connection=true" verwendet wird, können keine anderen Schlüsselwörter in Verbindungszeichenfolgen angegeben werden.  
   
--   Die **SqlConnection.DataSource** Eigenschaft gibt null, wenn die Verbindungszeichenfolge für die **SqlConnection** ist "kontextverbindung = True", anstelle des Namens der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Die **SqlConnection. DataSource** -Eigenschaft gibt NULL zurück, wenn die Verbindungs Zeichenfolge für " **SqlConnection** " anstelle des Namens der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]"context connection = true" ist.  
   
 -   Die Festlegung der **SqlCommand.CommandTimeout** -Eigenschaft hat keine Auswirkungen, wenn der Befehl für eine Kontextverbindung ausgeführt wird.  
   
 ## <a name="restrictions-on-regular-connections"></a>Einschränkungen für reguläre Verbindungen  
  Berücksichtigen Sie bei der Anwendungsentwicklung die folgenden Einschränkungen, die für reguläre Verbindungen gelten:  
   
--   Die asynchrone Befehlsausführung mit internen Servern wird nicht unterstützt. Wenn in der Verbindungszeichenfolge eines Befehls "async=true" angegeben wird, dann führt die Ausführung des Befehls dazu, dass die **System.NotSupportedException** -Ausnahme ausgelöst wird. Diese Meldung wird angezeigt: "Asynchroner Verarbeitung wird nicht unterstützt, wenn die Ausführung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Prozess."  
+-   Die asynchrone Befehlsausführung mit internen Servern wird nicht unterstützt. Wenn in der Verbindungszeichenfolge eines Befehls "async=true" angegeben wird, dann führt die Ausführung des Befehls dazu, dass die **System.NotSupportedException** -Ausnahme ausgelöst wird. Die folgende Meldung wird angezeigt: "Die asynchrone Verarbeitung wird bei einer Ausführung im Rahmen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozesses nicht unterstützt".  
   
--   Das**SqlDependency** -Objekt wird nicht unterstützt.  
+-   Das **sqlabhängigkeits** -Objekt wird nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Kontextverbindung](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   
