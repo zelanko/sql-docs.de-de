@@ -1,5 +1,5 @@
 ---
-title: Neue serverregistrierung und Serverregistrierung (Registerkarte Allgemein) (Reporting Services) bearbeiten | Microsoft-Dokumentation
+title: Neue Server Registrierung oder Server Registrierung bearbeiten (Registerkarte Allgemein) (Reporting Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62844272"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Neue Serverregistrierung und Serverregistrierung bearbeiten (Registerkarte Allgemein) (Reporting Services)
@@ -24,9 +24,9 @@ ms.locfileid: "62844272"
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Reporting Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe wie **Reporting Services**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Servertyp**  
- Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich **Registrierte Server** angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
+ Wenn ein Server über registrierte Server registriert ist, ist das Feld **Servertyp** schreibgeschützt und entspricht dem im Bereich **registrierte Server** angezeigten Servertyp. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
  **Servername**  
  Geben Sie die Berichtsserverinstanz an, zu der eine Verbindung hergestellt werden soll. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]können Sie über den Instanznamen des Berichtsservers auf einen Berichtsserver zugreifen. Für jede SQL Server-Instanz, die Sie installieren, ist eine Berichtsserverinstanz zulässig. Wenn Sie die Standardinstanz verwenden, geben Sie den Namen der SQL Server-Instanz ein. Wenn Sie eine benannte Instanz verwenden, geben Sie zum Verbinden mit dem Berichtsserver die benannte Instanz im Format MSSQL$InstanceName ein.  
@@ -40,20 +40,20 @@ ms.locfileid: "62844272"
  **Standardauthentifizierung**  
  Stellen Sie die Verbindung mit **Standardauthentifizierung** her, wenn die Reporting Services-Installation für die Verwendung der Standardauthentifizierung konfiguriert ist.  
   
- **Formularauthentifizierung**  
+ **Formular Authentifizierung**  
  Stellen Sie die Verbindung mit **Formularauthentifizierung** her, wenn die Reporting Services-Installation für die Verwendung der Formularauthentifizierung konfiguriert ist.  
   
- **Benutzername**  
+ **Benutzer Name**  
  Geben Sie den Benutzernamen ein, der für die Verbindung verwendet werden soll. Diese Option ist nur verfügbar, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
   
  **Kennwort**  
- Geben Sie das Kennwort für den Benutzernamen ein. Diese Option kann nur bearbeitet werden, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
+ Geben Sie das Kennwort für den Benutzernamen ein, Diese Option kann nur bearbeitet werden, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
   
  **Kennwort speichern**  
  Speichert das eingegebene Kennwort. Diese Option ist nur verfügbar, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
   
 > [!NOTE]  
->  Wenn Sie das Kennwort gespeichert haben und für die Zukunft nicht mehr speichern möchten, deaktivieren Sie das Kontrollkästchen, und klicken Sie auf **Speichern**.  
+>  Wenn Sie das Kennwort gespeichert haben und es nicht mehr speichern möchten, deaktivieren Sie dieses Kontrollkästchen, und klicken Sie dann auf **Speichern**.  
   
  **Name des registrierten Servers**  
  Der Name, der unter Registrierte Server angezeigt werden soll. Dieser Name muss mit dem Eintrag im Feld **Servername** nicht übereinstimmen.  
@@ -64,7 +64,7 @@ ms.locfileid: "62844272"
  **Test**  
  Klicken Sie hier, um die Verbindung mit dem unter **Servername**ausgewählten Server zu testen.  
   
- **Speichern**  
+ **Sicher**  
  Klicken Sie hier, um die Einstellungen des registrierten Servers zu speichern.  
   
   

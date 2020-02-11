@@ -17,27 +17,27 @@ ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938457"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis-Eigenschaft (ADO MD)
-Gibt Informationen über die aktuelle [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+Gibt Filter Informationen zum aktuellen [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)an.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md) -Objekt und ist schreibgeschützt.  
+ Gibt ein [Achsen](../../../ado/reference/ado-md-api/axis-object-ado-md.md) Objekt zurück und ist schreibgeschützt.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **FilterAxis** -Eigenschaft zum Zurückgeben von Informationen zu den Dimensionen, die verwendet wurden, um die Daten in Slices aufzuteilen. Die [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) Eigenschaft der **Achse** gibt die Anzahl der Dimensionen zurück. Diese Achse ist in der Regel nur eine Zeile.  
+## <a name="remarks"></a>Bemerkungen  
+ Mit der **FilterAxis** -Eigenschaft geben Sie Informationen zu den Dimensionen zurück, die zum Segmentieren der Daten verwendet wurden. Die [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) -Eigenschaft der **Achse** gibt die Anzahl der Slicerdimensionen zurück. Diese Achse weist in der Regel nur eine Zeile auf.  
   
- Die **Achse** zurückgegebenes **FilterAxis** befindet sich nicht der [Achsen](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) Sammlung für einen [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekt.  
+ Die von **FilterAxis** zurückgegebene **Achse** ist nicht in der [Achsen](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) Auflistung für ein [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) -Objekt enthalten.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Dimension-Objekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
+ [Dimensions Objekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [DimensionCount-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)

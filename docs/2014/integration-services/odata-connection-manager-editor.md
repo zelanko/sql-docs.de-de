@@ -1,5 +1,5 @@
 ---
-title: OData-Verbindungs-Manager-Editor | Microsoft-Dokumentation
+title: Odata-Verbindungs-Manager-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057375"
 ---
 # <a name="odata-connection-manager-editor"></a>OData-Verbindungs-Manager-Editor
   Verwenden Sie das Dialogfeld **OData-Verbindungs-Manager-Editor** , um eine Verbindung hinzufügen oder eine vorhandene Verbindung mit einer OData-Quelle zu bearbeiten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Name des Verbindungs-Managers.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66057375"
  **Verbindung testen**  
  Klicken Sie auf diese Schaltfläche, um die Verbindung mit der OData-Quelle zu testen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OData-Verbindungs-Manager](connection-manager/odata-connection-manager.md)  
   
   

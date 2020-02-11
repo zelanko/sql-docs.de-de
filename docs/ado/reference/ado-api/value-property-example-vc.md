@@ -1,5 +1,5 @@
 ---
-title: Wert der Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für Wert Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944464"
 ---
 # <a name="value-property-example-vc"></a>Value-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel zeigt die [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft mit dem [Feld](../../../ado/reference/ado-api/field-object.md) und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte durch anzeigen und die Eigenschaftswerte für die ***Mitarbeiter*** Tabelle.  
+Dieses Beispiel veranschaulicht die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft mit [Feld](../../../ado/reference/ado-api/field-object.md) -und [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekten, indem Feld-und Eigenschaftswerte für die ***Employees*** -Tabelle angezeigt werden.  
   
 ```  
 // BeginValueCpp.cpp  
@@ -169,7 +169,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
