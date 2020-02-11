@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f032cd8a9e8d5305f4eef82f815b4f0e328756a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097425"
 ---
-# <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>UnattendedExecutionAccount-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
+# <a name="unattendedexecutionaccount-property-wmi-msreportserver_configurationsetting"></a>UnattendedExecutionAccount-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt das Benutzerkonto zurück, dessen Identität der Berichtsserver bei der unbeaufsichtigten Ausführung von Berichten annimmt. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,12 +42,12 @@ public string UnattendedExecutionAccount;
  Ein `String`-Objekt, das den Kontonamen darstellt  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
   
   

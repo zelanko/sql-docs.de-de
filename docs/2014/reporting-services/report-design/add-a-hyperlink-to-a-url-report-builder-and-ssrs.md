@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106817"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "66106817"
   
 3.  Wählen Sie **Gehe zu URL**. Im Dialogfeld für diese Option wird ein zusätzlicher Abschnitt angezeigt.  
   
-4.  Geben Sie in **URL auswählen**eine URL oder einen Ausdruck ein (bzw. wählen Sie diese aus), der eine URL ergibt, oder klicken Sie auf den Dropdownpfeil, und klicken Sie auf den Namen eines Felds, das eine URL enthält.  
+4.  Geben Sie in **URL auswählen**eine URL oder einen Ausdruck, der eine URL ergibt, ein (bzw. wählen Sie diese aus), oder klicken Sie auf den Dropdownpfeil, und klicken Sie auf den Namen eines Felds, das eine URL enthält.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66106817"
   
 7.  Klicken Sie zum Testen des Links auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen, und klicken Sie dann auf das Berichtselement, für das Sie den Link festgelegt haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Erstellen einer Dokumentstruktur &#40;Berichts-Generator und SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
   

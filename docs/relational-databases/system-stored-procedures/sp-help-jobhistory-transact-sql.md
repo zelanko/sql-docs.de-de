@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobhistory (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_jobhistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054928"
 ---
-# <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
+# <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Stellt Informationen zu den Aufträgen für Server in der Domäne zur Multiserveradministration bereit.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,76 +53,76 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` ID des Auftrags. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id`Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @step_id = ] step_id` Die Schritt-ID. *Step_id* ist **Int**, hat den Standardwert NULL.  
+`[ @step_id = ] step_id`Die Schritt-ID. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @sql_message_id = ] sql_message_id` Die ID der Fehlermeldung, die von Microsoft SQL Server beim Ausführen des Auftrags zurückgegeben werden soll. *Sql_message_id* ist **Int**, hat den Standardwert NULL.  
+`[ @sql_message_id = ] sql_message_id`Die ID der Fehlermeldung, die von Microsoft SQL Server beim Ausführen des Auftrags zurückgegeben wird. *sql_message_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @sql_severity = ] sql_severity` Der Schweregrad der Fehlermeldung, die von SQL Server beim Ausführen des Auftrags zurückgegeben werden soll. *Sql_severity* ist **Int**, hat den Standardwert NULL.  
+`[ @sql_severity = ] sql_severity`Der Schweregrad der Fehlermeldung, die von SQL Server beim Ausführen des Auftrags zurückgegeben wird. *sql_severity* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @start_run_date = ] start_run_date` Das Datum, an der Auftrag gestartet wurde. *Start_run_date*ist **Int**, hat den Standardwert NULL. *Start_run_date* muss, werden die im Formular eingegebenen YYYYMMDD, wobei YYYY ein vier Zeichen bestehende Jahreszahl ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen bestehenden-Tagesname ist.  
+`[ @start_run_date = ] start_run_date`Das Datum, an dem der Auftrag gestartet wurde. *start_run_date*ist vom Datentyp **int**und hat den Standardwert NULL. *start_run_date* muss im Format YYYYMMDD eingegeben werden, wobei yyyy ein vierjähriges Jahr ist, mm ein aus zwei Zeichen bestehende Monats Name und DD ein zwei Zeichen täglicher Name ist.  
   
-`[ @end_run_date = ] end_run_date` Das Datum, an das der Auftrag abgeschlossen wurde. *End_run_date* ist **Int**, hat den Standardwert NULL. *End_run_date*muss, werden im Formular eingegebenen YYYYMMDD, wobei YYYY eine vierstellige Jahresangabe ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen bestehenden-Tagesname ist.  
+`[ @end_run_date = ] end_run_date`Das Datum, an dem der Auftrag abgeschlossen wurde. *end_run_date* ist vom Datentyp **int**und hat den Standardwert NULL. *end_run_date*muss im Format YYYYMMDD eingegeben werden, wobei yyyy ein vierstelliges Jahr ist, mm ein aus zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen täglicher Name ist.  
   
-`[ @start_run_time = ] start_run_time` Die Zeit, die der Auftrag gestartet wurde. *Start_run_time* ist **Int**, hat den Standardwert NULL. *Start_run_time*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
+`[ @start_run_time = ] start_run_time`Der Zeitpunkt, zu dem der Auftrag gestartet wurde. *start_run_time* ist vom Datentyp **int**und hat den Standardwert NULL. *start_run_time*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
   
-`[ @end_run_time = ] end_run_time` Der Zeitpunkt, an der der Auftrag beendet wurde. *End_run_time* ist **Int**, hat den Standardwert NULL. *End_run_time*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
+`[ @end_run_time = ] end_run_time`Der Zeitpunkt, zu dem die Ausführung des Auftrags abgeschlossen wurde. *end_run_time* ist vom Datentyp **int**und hat den Standardwert NULL. *end_run_time*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
   
-`[ @minimum_run_duration = ] minimum_run_duration` Die minimale Länge der Zeit für den Abschluss des Auftrags. *Minimum_run_duration* ist **Int**, hat den Standardwert NULL. *Minimum_run_duration*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
+`[ @minimum_run_duration = ] minimum_run_duration`Die minimale Zeitspanne für den Abschluss des Auftrags. *minimum_run_duration* ist vom Datentyp **int**und hat den Standardwert NULL. *minimum_run_duration*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
   
-`[ @run_status = ] run_status` Der Ausführungsstatus des Auftrags. *Run_status* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @run_status = ] run_status`Der Ausführungs Status des Auftrags. *run_status* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0**|Fehler|  
+|**0**|Failed|  
 |**1**|Erfolgreich|  
 |**2**|Wiederholen (nur Schritte)|  
-|**3**|Canceled|  
-|**4**|In Bearbeitung befindlichen Nachrichten|  
-|**5**|Unbekannt|  
+|**€**|Canceled|  
+|**4**|In Bearbeitung befindliche Nachricht|  
+|**5@@**|Unknown|  
   
-`[ @minimum_retries = ] minimum_retries` Die Mindestanzahl an, wie oft, die Wiederholen eines Auftrags ausführen soll. *Minimum_retries* ist **Int**, hat den Standardwert NULL.  
+`[ @minimum_retries = ] minimum_retries`Die Mindestanzahl der Wiederholungs Versuche für einen Auftrag. *minimum_retries* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @oldest_first = ] oldest_first` Gibt an, ob die Ausgabe die ältesten Aufträge zuerst angezeigt. *Oldest_first* ist **Int**, hat den Standardwert **0**, der die neuesten Aufträge zuerst dargestellt. **1** die ältesten Aufträge zuerst präsentiert.  
+`[ @oldest_first = ] oldest_first`Gibt an, ob die Ausgabe zuerst mit den ältesten Aufträgen angezeigt werden soll. *oldest_first* ist vom Datentyp **int**. der Standardwert ist **0**, wodurch zuerst die neuesten Aufträge dargestellt werden. **1** zeigt zuerst die ältesten Aufträge an.  
   
-`[ @server = ] 'server'` Der Name des Servers, auf dem der Auftrag ausgeführt wurde. *Server* ist **nvarchar(30)** , hat den Standardwert NULL.  
+`[ @server = ] 'server'`Der Name des Servers, auf dem der Auftrag ausgeführt wurde. der *Server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
   
-`[ @mode = ] 'mode'` Gibt, ob SQL Server alle Spalten im Resultset ausgibt (**vollständige**) oder eine Zusammenfassung der Spalten. *Modus* ist **vom Datentyp varchar(7)** , hat den Standardwert **Zusammenfassung**.  
+`[ @mode = ] 'mode'`Gibt an, ob SQL Server alle Spalten im Resultset (**Full**) oder eine Zusammenfassung der Spalten ausgibt. der *Modus* ist vom Datentyp **varchar (7)** und hat den Standardwert **Summary**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Die tatsächliche Spaltenliste hängt vom Wert der *Modus*. Die umfassendste Sammlung von Spalten ist unten dargestellt und wird zurückgegeben, wenn *Modus* ist "FULL".  
+ Die tatsächliche Spaltenliste hängt vom Wert des- *Modus*ab. Der umfassendste Satz von Spalten wird unten angezeigt und wird zurückgegeben, wenn der *Modus* voll ist.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Verlaufseintrags-ID|  
-|**job_id**|**uniqueidentifier**|ID des Auftrags.|  
-|**job_name**|**sysname**|Name des Auftrags.|  
-|**step_id**|**int**|Schritt-ID (werden **0** für einen Auftragsverlauf).|  
+|**job_id**|**uniqueidentifier**|Identifikationsnummer des Auftrags.|  
+|**job_name**|**sysname**|Auftrags Name.|  
+|**step_id**|**int**|Schritt-ID (ist **0** für einen Auftrags Verlauf).|  
 |**step_name**|**sysname**|Schrittname (NULL für einen Auftragsverlauf).|  
 |**sql_message_id**|**int**|Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritte die letzte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehlernummer, die beim Ausführen des Befehls gemeldet wurde.|  
 |**sql_severity**|**int**|Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritte der höchste [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehlerschweregrad, der beim Ausführen des Befehls gemeldet wurde.|  
-|**Nachricht**|**nvarchar(1024)**|Meldung zu Auftrags- oder Schrittverlauf.|  
+|**Nachricht**|**nvarchar (1024)**|Verlaufsmeldung des Auftrags oder Schritts.|  
 |**run_status**|**int**|Ergebnis des Auftrags oder Schritts.|  
 |**run_date**|**int**|Datum, an dem das Ausführen des Auftrags oder Schritts begann.|  
 |**run_time**|**int**|Uhrzeit, zu der das Ausführen des Auftrags oder Schritts begann.|  
 |**run_duration**|**int**|Vergangene Ausführungszeit des Auftrags oder Schritts im Format HHMMSS.|  
-|**operator_emailed**|**nvarchar(20)**|Operator, der bezüglich dieses Auftrags per E-Mail benachrichtigt wurde (NULL für Schrittverlauf).|  
-|**operator_netsent**|**nvarchar(20)**|Operator, dem bezüglich dieses Auftrags eine Netzwerknachricht gesendet wurde (NULL für Schrittverlauf).|  
-|**operator_paged**|**nvarchar(20)**|Operator, der bezüglich dieses Auftrags per Pager benachrichtigt wurde (NULL für Schrittverlauf).|  
+|**operator_emailed**|**nvarchar (20)**|Operator, der bezüglich dieses Auftrags per E-Mail benachrichtigt wurde (NULL für Schrittverlauf).|  
+|**operator_netsent**|**nvarchar (20)**|Operator, dem bezüglich dieses Auftrags eine Netzwerknachricht gesendet wurde (NULL für Schrittverlauf).|  
+|**operator_paged**|**nvarchar (20)**|Operator, der bezüglich dieses Auftrags per Pager benachrichtigt wurde (NULL für Schrittverlauf).|  
 |**retries_attempted**|**int**|Die Wiederholungsversuche für den Schritt (für einen Auftragsverlauf immer 0).|  
-|**server**|**nvarchar(30)**|Server, auf dem der Schritt oder Auftrag ausgeführt wird. Ist immer (**lokalen**).|  
+|**Servers**|**nvarchar (30)**|Server, auf dem der Schritt oder Auftrag ausgeführt wird. Ist immer (**local**).|  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_help_jobhistory** gibt einen Bericht mit den Verlauf des angegebenen geplanten Aufträge zurück. Werden keine Parameter angegeben, enthält der Bericht den Verlauf aller geplanten Aufträge.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_help_jobhistory** gibt einen Bericht mit dem Verlauf der angegebenen geplanten Aufträge zurück. Werden keine Parameter angegeben, enthält der Bericht den Verlauf aller geplanten Aufträge.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -132,7 +132,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Mitglieder der **SQLAgentUserRole** -Datenbankrolle kann nur den Verlauf für Aufträge, deren Besitzer, anzeigen.  
+ Mitglieder der **SQLAgentUserRole** -Daten Bank Rolle können nur den Verlauf für Aufträge anzeigen, deren Besitzer Sie sind.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -163,8 +163,8 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_purge_jobhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

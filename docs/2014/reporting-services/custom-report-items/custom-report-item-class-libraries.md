@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264890"
 ---
 # <a name="custom-report-item-class-libraries"></a>Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
@@ -63,7 +63,7 @@ ms.locfileid: "63264890"
 |`OnPaint`|Wird als Reaktion auf das `Paint`-Ereignis aufgerufen.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Dieses Attribut wird zur Identifizierung des Typs des benutzerdefinierten Berichtselements verwendet. Der Name muss den Wert der entsprechen der <`Name`>-Attribut der `ReportItem` Element in der Konfigurationsdatei des Berichts-Designer.  
+ Dieses Attribut wird zur Identifizierung des Typs des benutzerdefinierten Berichtselements verwendet. Der Name muss dem Wert des <`Name`>-Attributs des- `ReportItem` Elements in der Berichts-Designer Konfigurationsdatei entsprechen.  
   
 #### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63264890"
 |`DataSetName`|Der Name des Datasets mit den Feldern, die abgelegt werden soll.|  
 |`Fields`|Die Auflistung von Feldern (`Microsoft.ReportDesigner.Field`), die abgelegt werden sollen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsdefinitionssprache (SSRS)](../reports/report-definition-language-ssrs.md)   
  [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)   
  [Creating a Custom Report Item Design-Time Component (Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement)](creating-a-custom-report-item-design-time-component.md)  

@@ -1,5 +1,5 @@
 ---
-title: Bestimmen der installierten Oracle-Komponenten | Microsoft-Dokumentation
+title: Ermitteln installierter Oracle-Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079013"
 ---
 # <a name="determining-installed-oracle-components"></a>Bestimmen der installierten Oracle-Komponenten
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Um zu bestimmen, die Oracle-Komponenten, die auf Ihrem System (und deren Versionen) installiert, navigieren Sie zum Verzeichnis \Orainst das Oracle home-Verzeichnis. Öffnen Sie eine der folgenden Dateien: NT.RGS, Win95.rgs oder Win98.rgs.  
+ Navigieren Sie zum Verzeichnis "\orainst" unter dem Oracle-Basisverzeichnis, um die auf Ihrem System installierten Oracle-Komponenten (und deren Versionen) zu ermitteln. Öffnen Sie eine der folgenden Textdateien: NT. RGS, Win95. RGS oder Win98. rgs.  
   
- Das Dateiformat ist ähnlich der folgenden:  
+ Das Dateiformat ähnelt dem folgenden:  
   
 ```  
 0 ntinstall     all    "orainst"  "3.3.1.0.0C"  "Oracle Installer"  
@@ -37,4 +37,4 @@ ms.locfileid: "68079013"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- Die RGS-Dateien enthalten auch Informationen zur Installation und Beschreibungen der einzelnen Komponenten.
+ Die RGS-Dateien enthalten außerdem Installationsinformationen und Beschreibungen der einzelnen Komponenten.

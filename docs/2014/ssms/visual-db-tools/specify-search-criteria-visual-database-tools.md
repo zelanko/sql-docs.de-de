@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277123"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Angeben von Suchkriterien (Visual Database Tools)
@@ -60,7 +60,7 @@ ms.locfileid: "63277123"
  Erklärt, wie alle Zeilen zurückgegeben werden, deren Wert in einer bestimmten Spalte nicht dem in der Abfrageanweisung angegebenen Wert entspricht.  
   
  [Einschließen oder Ausschließen von Zeilen &#40;Visual Database Tools&#41;](include-or-exclude-rows-visual-database-tools.md)  
- Erklärt die Konzepte hinter den in Abfragen verwendeten Klauseln und Operatoren   
+ Erklärt die Konzepte hinter den in Abfragen verwendeten Klauseln und Operatoren  
   
  [Ausschließen doppelter Zeilen &#40;Visual Database Tools&#41;](exclude-duplicate-rows-visual-database-tools.md)  
  Erklärt, wie doppelte Zeilen aus SELECT-Abfragen gefiltert werden.  

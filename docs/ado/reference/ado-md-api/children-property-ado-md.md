@@ -17,23 +17,23 @@ ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbec9733044127d23e75364697a41ccd7e8910e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911521"
 ---
 # <a name="children-property-ado-md"></a>Children-Eigenschaft (ADO MD)
-Gibt eine [Mitglieder](../../../ado/reference/ado-md-api/members-collection-ado-md.md) Sammlung, für die aktuellen [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) ist das übergeordnete Element in der Hierarchie.  
+Gibt eine [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) -Auflistung zurück, für die [das aktuelle Element](../../../ado/reference/ado-md-api/member-object-ado-md.md) das übergeordnete Element in der Hierarchie ist.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **Mitglieder** Auflistung ist schreibgeschützt.  
+ Gibt eine **Members** -Auflistung zurück und ist schreibgeschützt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **untergeordnete Elemente** Eigenschaft enthält eine **Mitglieder** Sammlung, für die aktuellen **Member** ist das hierarchische übergeordnete Element. Untergeordnete Ebene **Member** Objekte verfügen über keine untergeordneten Elemente der **Mitglieder** Auflistung. Diese Eigenschaft wird nur unterstützt, auf **Member** Objekte für eine [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekt. Ein Fehler auftritt, wenn diese Eigenschaft, von verwiesen wird **Member** Objekte für eine [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Children** -Eigenschaft enthält eine **Members** -Auflistung, für die **das aktuelle Element** das hierarchische übergeordnete Element ist. Element Objekte **auf** Blatt Ebene verfügen über keine untergeordneten Elemente in der **Members** -Auflistung. Diese Eigenschaft wird nur für **Member** -Objekte unterstützt, die zu einem [Ebenenobjekt](../../../ado/reference/ado-md-api/level-object-ado-md.md) gehören. Ein Fehler tritt auf, **Wenn von Element** Objekten, die zu einem [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt gehören, auf diese Eigenschaft verwiesen wird.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ChildCount-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)

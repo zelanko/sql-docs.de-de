@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273737"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
   In dieser exemplarischen Vorgehensweise wird das Erstellen und Ändern eines Datenbankdiagramms und das Ausführen von Änderungen an der Datenbank mithilfe der Datenbankdiagrammkomponente erläutert. Es wird in Einzelschritten erklärt, wie Diagrammen Tabellen hinzugefügt werden, wie Beziehungen zwischen Tabellen erstellt werden, wie Einschränkungen und Indizes für Spalten erstellt werden und wie die Ebene der Informationen geändert wird, die für die einzelnen Tabellen angezeigt werden.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein:  
   
 -   Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank  
@@ -44,7 +44,7 @@ ms.locfileid: "63273737"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
-     Wenn die Datenbank nicht über die erforderlichen Objekte zum Erstellen von Diagrammen verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
+     Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
   
      Das Dialogfeld **Tabelle hinzufügen** wird angezeigt.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273737"
   
 1.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle. Zeigen Sie im Kontextmenü auf **Tabellensicht**, und klicken Sie dann auf **Standard**.  
   
-     Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
+     Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle, klicken Sie auf **Tabellensicht** , und wählen Sie **Schlüssel**aus.  
   
@@ -70,17 +70,17 @@ ms.locfileid: "63273737"
   
 1.  Klicken Sie mit der rechten Maustaste auf den Datenbank-Designer außerhalb der vorhandenen Tabellen, und wählen Sie **Neue Tabelle**aus.  
   
-2.  In der **Namen auswählen** Dialogfeld klicken Sie auf **OK** um die Standardnamen `Table1`.  
+2.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen `Table1`zu übernehmen.  
   
-     Es wird ein neues Tabellenraster mit drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
+     Ein neues Tabellenraster mit drei Spalten wird angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
   
-3.  Fügen Sie die folgende Informationen zur `Table1`:  
+3.  Fügen Sie die folgenden Informationen `Table1`hinzu:  
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|Überprüft|  
-    |`T1col2`|`varchar(50)`|Überprüft|  
-    |`T1col3`|`float`|Überprüft|  
+    |`T1col1`|`int`|Aktiviert|  
+    |`T1col2`|`varchar(50)`|Aktiviert|  
+    |`T1col3`|`float`|Aktiviert|  
   
 4.  Klicken Sie mit der rechten Maustaste auf `T1col1` , und wählen Sie **Primärschlüssel festlegen**aus.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63273737"
   
 5.  Klicken Sie im Menü **Datei** auf **Diagramm1 speichern**.  
   
-6.  In der **Namen auswählen** Dialogfeld klicken Sie auf **OK** um die Standardnamen `Diagram1`.  
+6.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen `Diagram1`zu übernehmen.  
   
 7.  Das Dialogfeld **Speichern** wird angezeigt, und in einer Meldung wird darüber informiert, dass `Table1` in der Datenbank gespeichert wird. Klicken Sie auf **Ja**.  
   
@@ -111,7 +111,8 @@ ms.locfileid: "63273737"
   
 4.  Geben Sie `T1col3 > 5` ein und klicken Sie dann auf **OK**.  
   
-     `Table1` verfügt jetzt über die Einschränkung, dass alle in `T1col3` eingegebenen Werte größer als 5 sein müssen.  
+     
+  `Table1` verfügt jetzt über die Einschränkung, dass alle in `T1col3` eingegebenen Werte größer als 5 sein müssen.  
   
 5.  Klicken Sie auf **Schließen**.  
   
@@ -119,11 +120,11 @@ ms.locfileid: "63273737"
   
 1.  Erstellen Sie im Datenbank-Designer eine neue Tabelle mit dem Namen `Table2` und mit folgenden Spalten:  
   
-    |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
+    |**Spalten Name**|**Datentyp**|**NULL-Werte zulassen**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|nicht aktiviert|  
-    |`T2col2`|`varchar(50)`|Überprüft|  
-    |`T2col3`|`xml`|Überprüft|  
+    |`T2col2`|`varchar(50)`|Aktiviert|  
+    |`T2col3`|`xml`|Aktiviert|  
   
     > [!NOTE]  
     >  Die Spalten in einer Fremdschlüsselbeziehung, die sich auf der Seite des Primärschlüssels befinden, müssen Teil eines Primärschlüssels oder einer Unique-Einschränkung sein.  
@@ -206,13 +207,13 @@ ms.locfileid: "63273737"
   
 -   Kopieren des Diagramms in eine Bitmap  
   
-## <a name="see-also"></a>Siehe auch  
- [Anpassen des Umfangs der in Diagrammen angezeigten Informationen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Einrichten des Datenbankdiagramm-Designer &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Passen Sie die Menge der Informationen an, die in Diagrammen &#40;Visual Database Tools angezeigt werden&#41;](visual-database-tools.md)   
+ [Einrichten des Daten Bank Diagramm-Designers &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [Hinzufügen von Tabellen zu Diagrammen &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
  [Erstellen von Beziehungen zwischen Tabellen in einem Diagramm &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Erstellen von XML-Indizes](../../relational-databases/xml/create-xml-indexes.md)   
- [Kopieren eines datenbankdiagrammimages in die Zwischenablage &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Kopieren eines Images eines Daten Bank Diagramms in die Zwischenablage &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Verwenden von Diagrammlayout &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

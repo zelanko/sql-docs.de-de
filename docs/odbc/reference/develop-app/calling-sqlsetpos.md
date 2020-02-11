@@ -17,14 +17,14 @@ ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068684"
 ---
 # <a name="calling-sqlsetpos"></a>Aufrufen von SQLSetPos
-In ODBC *2.x*, der Zeiger auf die zeilenstatusarray wurde ein Argument für **SQLExtendedFetch**. Die zeilenstatusarray wurde durch einen Aufruf von später aktualisiert **SQLSetPos**. Einige Treiber auf die Tatsache, die dieses Array nicht zwischen ändert basierten **SQLExtendedFetch** und **SQLSetPos**. In ODBC *3.x*, der Zeiger auf die Statusarray wird einem Beschreibungsfeld und aus diesem Grund die Anwendung kann ganz einfach ändern, damit auf ein anderes Array zu verweisen. Dies liegt möglicherweise ein Problem bei der Verwendung einer ODBC *3.x* mit einer ODBC-Anwendung funktioniert *2.x* Treiber jedoch ist der Aufruf **SQLSetStmtAttr** der Zeiger für den arraystatus festgelegt und ist der Aufruf  **SQLFetchScroll** zum Abrufen von Daten. Der Treiber-Manager wird es als eine Sequenz von Aufrufen an zugeordnet **SQLExtendedFetch**. Im folgenden Code wird ein Fehler würde normalerweise ausgelöst, wenn der Treiber-Manager das zweite entspricht **SQLSetStmtAttr** bei der Arbeit mit einer ODBC-aufrufen *2.x* Treiber:  
+In ODBC *2. x*war der Zeiger auf das Zeilen Status Array ein Argument für **SQLExtendedFetch**. Das Zeilen Status Array wurde später durch einen-Befehl von **SQLSetPos**aktualisiert. Einige Treiber haben sich darauf verlassen, dass sich dieses Array zwischen **sqlextende** und **SQLSetPos**nicht ändert. In ODBC *3. x*ist der Zeiger auf das Status Array ein Deskriptorfeld, und die Anwendung kann Sie problemlos so ändern, dass Sie auf ein anderes Array verweist. Dies kann ein Problem darstellen, wenn eine ODBC *3. x* -Anwendung mit einem ODBC *2. x* -Treiber arbeitet, aber **SQLSetStmtAttr** aufruft, um den Array Status Zeiger festzulegen, und **SQLFetchScroll** zum Abrufen von Daten aufruft. Der Treiber-Manager ordnet ihn als Sequenz von Aufrufen von **SQLExtendedFetch**zu. Im folgenden Code wird normalerweise ein Fehler ausgelöst, wenn der Treiber-Manager beim Arbeiten mit einem ODBC *2. x* -Treiber den zweiten **SQLSetStmtAttr** -Befehl zuordnet:  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -33,12 +33,12 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- Der Fehler wird ausgelöst, wenn gab es keine Möglichkeit, ändern den Status Zeilenzeiger in ODBC *2.x* zwischen den Aufrufen **SQLExtendedFetch**. Stattdessen führt der Treiber-Manager die folgenden Schritte aus, bei der Arbeit mit einer ODBC- *2.x* Treiber:  
+ Der Fehler wird ausgelöst, wenn es keine Möglichkeit gab, den Zeilen Status Zeiger in ODBC *2. x* zwischen den Aufrufen von **SQLExtendedFetch**zu ändern. Stattdessen führt der Treiber-Manager bei der Arbeit mit einem ODBC *2. x* -Treiber die folgenden Schritte aus:  
   
-1.  Initialisiert ein internes-Treiber-Manager-Flag *fSetPosError* auf "true".  
+1.  Initialisiert ein internes Treiber-Manager-Flag *fsetposerror* auf true.  
   
-2.  Wenn eine Anwendung ruft **SQLFetchScroll**, legt der Treiber-Manager *fSetPosError* auf "false".  
+2.  Wenn eine Anwendung **SQLFetchScroll**aufruft, legt der Treiber-Manager *fsetposerror* auf false fest.  
   
-3.  Wenn die Anwendung ruft **SQLSetStmtAttr** um SQL_ATTR_ROW_STATUS_PTR festzulegen, legt der Treiber-Manager *fSetPosError* gleich ToTRUE.  
+3.  Wenn die Anwendung **SQLSetStmtAttr** aufruft, um SQL_ATTR_ROW_STATUS_PTR festzulegen, legt der Treiber-Manager *fsetposerror* auf den Wert "detrue" fest.  
   
-4.  Wenn die Anwendung ruft **SQLSetPos**, mit *fSetPosError* gleich "true", der Treiber-Manager löst SQL_ERROR mit SQLSTATE HY011 (Attribut kann nicht jetzt festgelegt werden) an, dass die Anwendung Es wurde versucht, rufen Sie **SQLSetPos** nach dem Ändern der Status der Zeilenzeiger jedoch vor dem Aufruf **SQLFetchScroll**.
+4.  Wenn die Anwendung **SQLSetPos**aufruft, wobei *fsetposerror* gleich true ist, löst der Treiber-Manager SQL_ERROR mit SQLState HY011 (das Attribut kann jetzt nicht festgelegt werden) aus, um anzugeben, dass die Anwendung versucht hat, **SQLSetPos** nach dem Ändern des Zeilen Status Zeigers, aber vor dem Aufrufen von **SQLFetchScroll**aufzurufen.

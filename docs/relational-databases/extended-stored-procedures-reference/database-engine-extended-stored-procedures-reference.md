@@ -13,19 +13,20 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064201"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Datenbank-Engine: Erweiterte gespeicherten Prozeduren – Referenz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
- Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-API für erweiterte gespeicherte Prozeduren war in der Vergangenheit Teil von Open Data Services. Sie bietet eine serverbasierte Anwendungsprogrammierschnittstelle (Application Programming Interface, API) zum Erweitern der Funktionalität von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die API besteht aus C-Funktionen, C++-Funktion und Makros, die zum Erstellen von Anwendungen verwendet werden.  
+ Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] API für erweiterte gespeicherte Prozeduren, die bereits Teil von Open Data Services ist, bietet eine serverbasierte Anwendungsprogrammierschnittstelle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Application Programming Interface, API) zum Erweitern der Funktionalität. Die API besteht aus C-Funktionen, C++-Funktion und Makros, die zum Erstellen von Anwendungen verwendet werden.  
   
  Mit dem Erscheinen neuerer und leistungsfähigerer Technologien wie beispielsweise der CLR-Integration ist der Bedarf an erweiterten gespeicherten Prozeduren weitgehend verschwunden.  
   

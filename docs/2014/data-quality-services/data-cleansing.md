@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 465d20f425a479f173ed5a9c2b5f5ec96ec7f707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480809"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -34,9 +34,9 @@ ms.locfileid: "65480809"
   
  Die folgende Abbildung zeigt an, wie die Datenbereinigung in DQS erfolgt:  
   
- ![Datenbereinigungsprozess in DQS](../../2014/data-quality-services/media/dqs-cleansingprocess.gif "Data Cleansing Process in DQS")  
+ ![Datenbereinigungsprozess in DQS](../../2014/data-quality-services/media/dqs-cleansingprocess.gif "Datenbereinigungsprozess in DQS")  
   
-##  <a name="ComputerAssisted"></a> Computerunterstützte Bereinigung  
+##  <a name="ComputerAssisted"></a>Computer gestützte Bereinigung  
  Der DQS-Datenbereinigungsprozess führt die Bereinigung der Daten mithilfe der Wissensdatenbank aus und schlägt Änderungen an den Daten vor. Der Data Steward hat Zugriff auf alle vorgeschlagenen Änderungen, sodass er diese bewerten und korrigieren kann. So führt der Data Steward eine Datenbereinigung aus  
   
 1.  Erstellen Sie ein Data Quality-Projekt, wählen Sie eine Wissensdatenbank aus, wofür Sie eine Analyse ausführen und Ihre Daten bereinigen möchten, und wählen Sie die Aktivität **Bereinigung** aus. Mehrere Data Quality-Projekte können die gleiche Wissensdatenbank verwenden.  
@@ -54,24 +54,26 @@ ms.locfileid: "65480809"
   
  Der computergestützte Prozess zeigt die Informationen bezüglich der Datenqualität im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] für den interaktiven Bereinigungsprozess an. Bei der Kategorisierung von Daten werden von DQS nicht nur die Syntaxfehlerregeln eingehalten, sondern auch Verweisdaten, erweiterte Algorithmen und ein *Vertrauensgrad*verwendet. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an. Der Vertrauensgrad basiert auf den folgenden Schwellenwerten:  
   
--   *Schwellenwert für die automatische Korrektur* – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, außer wenn sie vom Data Steward abgelehnt werden Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   
+  *Schwellenwert für die automatische Korrektur* – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, außer wenn sie vom Data Steward abgelehnt werden Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   *Schwellenwert für automatische Vorschläge* (unter dem Schwellenwert für die automatische Korrektur) – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, wenn sie vom Data Steward genehmigt werden. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   
+  *Schwellenwert für automatische Vorschläge* (unter dem Schwellenwert für die automatische Korrektur) – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, wenn sie vom Data Steward genehmigt werden. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
  Jeder Wert, der über einen Vertrauensgrad unter dem Schwellenwert für die automatischen Vorschläge verfügt, wird von DQS nicht verändert, außer wenn der Data Steward eine Änderung angibt.  
   
-##  <a name="Interactive"></a> Interaktive Bereinigung  
+##  <a name="Interactive"></a>Interaktive Bereinigung  
  Auf Grundlage des computergestützten Bereinigungsprozesses stellt DQS dem Data Steward Informationen bereit, die dieser für die Bewertung von Datenänderungen benötigt. DQS kategorisiert die Daten auf den folgenden fünf Registerkarten:  
   
--   **Vorgeschlagen:** Werte, für die DQS Vorschläge gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *Schwellenwert für automatische Vorschläge*, aber niedriger als der *Schwellenwert für automatische Korrekturen* ist. Diese Werte sollten Sie überprüfen und genehmigen bzw. ablehnen.  
+-   **Vorgeschlagen**: Werte, für die DQS Vorschläge gefunden hat, die einen Vertrauensgrad aufweisen, der höher ist als der Schwellenwert für *Automatische Vorschläge* , aber niedriger als der Schwellenwert für die *Automatische Korrektur* . Diese Werte sollten Sie überprüfen und genehmigen bzw. ablehnen.  
   
--   **Neu:** Gültige Werte für die DQS verfügt nicht über genug Informationen (Vorschläge) und aus diesem Grund kann keiner anderen Registerkarte zugeordnet werden. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.  
+-   **Neu**: gültige Werte, für die DQS nicht über genügend Informationen (Vorschlag) verfügt und daher keiner anderen Registerkarte zugeordnet werden kann. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der kleiner ist als der Schwellenwert für *Automatische Vorschläge* , aber hoch genug, um als gültig markiert zu werden.  
   
--   **Ungültig:** Werte, die wurden als ungültig markiert in der Domäne in der Wissensdatenbank oder Werte, die eine domänenregel oder Verweisdaten verletzt. Diese Registerkarte enthält zudem Werte, die während des interaktiven Bereinigungsprozesses vom Benutzer auf einer der anderen vier Registerkarten abgelehnt wurden.  
+-   **Ungültig**: Werte, die in der Domäne in der Wissensdatenbank als ungültig markiert wurden, oder Werte, die eine Domänen Regel oder Verweis Daten nicht bestanden haben. Diese Registerkarte enthält zudem Werte, die während des interaktiven Bereinigungsprozesses vom Benutzer auf einer der anderen vier Registerkarten abgelehnt wurden.  
   
--   **Korrigiert:** Werte, die von DQS während des automatisierten Bereinigungsprozesses korrigiert wurden, da für den Wert eine Korrektur mit einem Vertrauensgrad oberhalb des *Schwellenwerts für automatische Korrekturen* gefunden wurde. Diese Registerkarte enthält auch Werte, für die der Benutzer während der interaktiven Bereinigung einen richtigen Wert in der Spalte **Korrigieren in** angegeben hat und dies dann genehmigt hat, indem er auf das Optionsfeld der Spalte **Genehmigen** in einer der anderen vier Registerkarten geklickt hat.  
+-   **Korrigiert**: Werte, die von DQS während des automatisierten Bereinigungs Prozesses korrigiert wurden, da DQS eine Korrektur für den Wert mit einem Vertrauensgrad oberhalb des Schwellenwerts für die *Automatische Korrektur* gefunden hat. Diese Registerkarte enthält auch Werte, für die der Benutzer während der interaktiven Bereinigung einen richtigen Wert in der Spalte **Korrigieren in** angegeben hat und dies dann genehmigt hat, indem er auf das Optionsfeld der Spalte **Genehmigen** in einer der anderen vier Registerkarten geklickt hat.  
   
--   **Richtig:** Werte, die richtig gefunden wurden. Beispielsweise stimmt der Wert mit dem Domänenwert überein. Sie können die DQS-Bereinigung bei Bedarf überschreiben, indem Sie Werte unter dieser Registerkarte ablehnen oder ein alternatives Wort in der Spalte **Korrigieren in** angeben und anschließenden auf das Optionsfeld der Spalte **Annehmen** klicken. Diese Registerkarte enthält auch Werte, die vom Benutzer während der interaktiven Bereinigung durch Klicken auf das Optionsfeld in der Spalte **Genehmigen** auf der Registerkarte **Neu** oder **Ungültig** genehmigt wurden.  
+-   **Richtig**: Werte, die richtig gefunden wurden. Beispielsweise stimmt der Wert mit dem Domänenwert überein. Sie können die DQS-Bereinigung bei Bedarf überschreiben, indem Sie Werte unter dieser Registerkarte ablehnen oder ein alternatives Wort in der Spalte **Korrigieren in** angeben und anschließenden auf das Optionsfeld der Spalte **Annehmen** klicken. Diese Registerkarte enthält auch Werte, die vom Benutzer während der interaktiven Bereinigung durch Klicken auf das Optionsfeld in der Spalte **Genehmigen** auf der Registerkarte **Neu** oder **Ungültig** genehmigt wurden.  
   
 > [!NOTE]  
 >  Auf den Registerkarten **Vorgeschlagen**, **Korrigiert**und **Richtig** zeigt DQS den führenden Wert für eine Domäne (falls anwendbar) in der Spalte **Korrigieren in** für den jeweiligen Domänenwert an.  
@@ -84,12 +86,12 @@ ms.locfileid: "65480809"
   
  Die folgende Abbildung zeigt, wie die Datenbereinigung mithilfe der [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung erfolgt:  
   
- ![Datenbereinigung im Data Quality-Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Data Cleansing in Data Quality Client")  
+ ![Datenbereinigung im Data Quality-Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Datenbereinigung im Data Quality-Client")  
   
-##  <a name="Leading"></a> Korrektur des führenden Werts  
+##  <a name="Leading"></a>Korrektur des führenden Werts  
  Die Korrektur des führenden Werts gilt für Domänenwerte, die über Synonyme verfügen, und der Benutzer möchte einen der Synonymwerte als führenden Wert anstelle von anderen für die konsistente Darstellung des Werts verwenden. Beispielsweise sind „New York“, „NYC“ und „Big Apple“ Synonyme. Der Benutzer möchte jedoch „New York“ als führenden Wert anstelle von „NYC“ und „Big Apple“ verwenden. DQS unterstützt während des Bereinigungsprozesses die Korrektur des führenden Werts, um Ihnen beim Standardisieren der Daten zu helfen. Die Korrektur des führenden Werts wird nur ausgeführt, wenn die Domäne für das Gleiche aktiviert wurde, als sie erstellt wurde. Standardmäßig ist bei allen Domänen die Korrektur des führenden Werts aktiviert, außer wenn Sie beim Erstellen einer Domäne das Kontrollkästchen **Führende Werte verwenden** deaktiviert haben. Weitere Informationen zu diesem Kontrollkästchen finden Sie unter [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
-##  <a name="Standardize"></a> Standardisieren bereinigter Daten  
+##  <a name="Standardize"></a>Standardisieren bereinigter Daten  
  Sie können auswählen, ob Sie die bereinigten Daten im standardisierten Format auf Grundlage des für Domänen definierten Ausgabeformats ausgegeben möchten. Wählen beim Erstellen einer Domäne die Formatierung aus, die beim Ausgeben der Datenwerte in der Domäne angewendet wird. Weitere Informationen zum Angeben von Ausgabeformaten einer Domäne finden Sie in der Liste **Formatausgabe** in [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
  Beim Exportieren der bereinigten Daten auf der Seite **Exportieren** im Assistenten für die Bereinigung von Data Quality-Projekten können Sie angeben, ob die bereinigten Daten im standardisierten Format exportiert werden sollen, indem Sie das Kontrollkästchen **Ausgabe standardisieren** aktivieren. Standardmäßig werden die gereinigten Daten im standardisierten Format exportiert, das heißt, das Kontrollkästchen ist aktiviert. Weitere Informationen zum Exportieren der bereinigten Daten finden Sie unter [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
@@ -98,13 +100,13 @@ ms.locfileid: "65480809"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt das Konfigurieren von Schwellenwerten für Bereinigungsaktivitäten.|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|Beschreibt, wie Daten mithilfe der Wissenserstellung in DQS bereinigt werden.|[Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
-|Beschreibt, wie Daten mithilfe der Informationen des Verweisdatendiensts bereinigt werden.|[Bereinigen von Daten mit Wissen über &#40;externe&#41; Verweisdaten](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|Beschreibt das Konfigurieren von Schwellenwerten für Bereinigungsaktivitäten.|[Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Beschreibt, wie Daten mithilfe der Wissenserstellung in DQS bereinigt werden.|[Bereinigen von Daten mit DQS-&#40;interner&#41; wissen](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
+|Beschreibt, wie Daten mithilfe der Informationen des Verweisdatendiensts bereinigt werden.|[Bereinigen von Daten mit Verweis Daten &#40;externen&#41; Kenntnissen](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Beschreibt, wie eine Verbunddomäne gereinigt wird.|[Bereinigen von Daten in einer Verbunddomäne](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Quality-Projekte &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Quality-Projekte &#40;DQS-&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
  [Datenabgleich](../../2014/data-quality-services/data-matching.md)  
   
   

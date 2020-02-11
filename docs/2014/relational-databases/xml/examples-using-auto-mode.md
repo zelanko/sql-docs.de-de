@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287812"
 ---
 # <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
@@ -136,7 +136,7 @@ FOR XML AUTO;
 <SOH Name="Eugene Huang" SalesOrderID="43767" />  
 ```  
   
- Um die <`IndividualCustomer`>-Elemente abzurufen, die das `Name`-Attribut besitzen, das die Kopfzeileninformationen zu jeder Bestellung als ein Unterelement enthält, wird die Abfrage mithilfe eines untergeordneten SELECT-Ausdrucks umgeschrieben. Der innere SELECT-Ausdruck erstellt eine temporäre `IndividualCustomer`-Tabelle mit der berechneten Spalte, die die Namen der einzelnen Kunden enthält. Diese Tabelle wird anschließend mit der `SalesOrderHeader` -Tabelle verknüpft, um das Resultset zu erzielen.  
+ Um die <`IndividualCustomer`>-Elemente abzurufen, die das `Name`-Attribut besitzen, das die Kopfzeileninformationen zu jeder Bestellung als ein Unterelement enthält, wird die Abfrage mithilfe eines untergeordneten SELECT-Ausdrucks umgeschrieben. Der innere SELECT-Ausdruck erstellt eine temporäre `IndividualCustomer` -Tabelle mit der berechneten Spalte, die die Namen der einzelnen Kunden enthält. Diese Tabelle wird anschließend mit der `SalesOrderHeader` -Tabelle verknüpft, um das Resultset zu erzielen.  
   
  Beachten Sie, dass die `Sales.Customer` -Tabelle individuelle Kundeninformationen speichert, wozu auch der `PersonID` -Wert für den Kunden gehört. Diese `PersonID` wird dann zum Suchen des Kontaktnamens in der `Person.Person` -Tabelle verwendet.  
   
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Standardmäßig wird beim Verwenden des AUTO-Modus zum Abrufen von Binärdaten statt der Binärdaten ein Verweis (eine relative URL auf das virtuelle Stammverzeichnis der Datenbank, in der die Abfrage ausgeführt wurde) zurückgegeben. Das geschieht, wenn die Option BINARY BASE64 nicht angegeben wurde.  
   
- Wenn der AUTO-Modus einen URL-Verweis auf die Binärdaten in Datenbanken zurückgibt, die die Groß-/Kleinschreibung nicht berücksichtigen, und wenn der in der Abfrage angegebene Tabellen- oder Spaltenname nicht mit dem Tabellen- oder Spaltennamen in der Datenbank übereinstimmt, wird die Abfrage ausgeführt. Allerdings ist dann die im Verweis zurückgegebene Groß-/Kleinschreibung nicht konsistent. Zum Beispiel:  
+ Wenn der AUTO-Modus einen URL-Verweis auf die Binärdaten in Datenbanken zurückgibt, die die Groß-/Kleinschreibung nicht berücksichtigen, und wenn der in der Abfrage angegebene Tabellen- oder Spaltenname nicht mit dem Tabellen- oder Spaltennamen in der Datenbank übereinstimmt, wird die Abfrage ausgeführt. Allerdings ist dann die im Verweis zurückgegebene Groß-/Kleinschreibung nicht konsistent. Beispiel:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -269,7 +269,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Falls die Werte der Elemente oder Attribute ein URL-Sonderzeichen enthalten, das in der URL eine besondere Bedeutung hat, werden sie nur im DBOBJECT URL-Wert codiert. Dies geschieht nur, wenn das Sonderzeichen Teil eines Tabellen- oder Spaltennamens ist. Im Resultset wird das `#` -Zeichen, das Teil des Tabellennamens `Col#&2` ist, als `_x0023_ in the DBOJBECT URL`codiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des AUTO-Modus mit FOR XML](use-auto-mode-with-for-xml.md)  
   
   

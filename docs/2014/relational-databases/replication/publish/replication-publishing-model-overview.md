@@ -23,14 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 71c462baf00d4129b4efaea0eb39b3a08e6c7ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261886"
 ---
 # <a name="replication-publishing-model-overview"></a>Das Replikationsveröffentlichungsmodell (Übersicht)
-  Bei der Replikation wird zur Darstellung der Komponenten in einer Replikationstopologie – Verleger, Verteiler, Abonnenten, Veröffentlichungen, Artikel und Abonnements – ein Modell verwendet, das an Bereiche aus dem Verlagswesen angelehnt ist. Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation funktioniert dabei so ähnlich wie ein Zeitschriftenabonnement:  
+  Bei der Replikation wird zur Darstellung der Komponenten in einer Replikationstopologie – Verleger, Verteiler, Abonnenten, Veröffentlichungen, Artikel und Abonnements – ein Modell verwendet, das an Bereiche aus dem Verlagswesen angelehnt ist. Es ist hilfreich, die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replikation in Bezug auf das Magazin zu betrachten:  
   
 -   Ein Zeitschriftenverlag (Verleger) stellt eine oder mehrere Zeitschrift(en) (Veröffentlichungen) her.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63261886"
   
  ![Komponenten und Datenfluss für Replikation](../media/replintro1.gif "Komponenten und Datenfluss für Replikation")  
   
-## <a name="publisher"></a>Verleger  
+## <a name="publisher"></a>Herausgeber  
  Der Verleger ist eine Datenbankinstanz, die anderen Speicherorten per Replikation Daten zur Verfügung stellt. Der Verleger kann eine oder mehrere Veröffentlichungen besitzen, die jeweils einen logisch zusammengehörigen Satz von Objekten und Daten enthalten, der repliziert werden kann.  
   
 ## <a name="distributor"></a>Verteiler  
@@ -61,12 +61,12 @@ ms.locfileid: "63261886"
 ## <a name="publication"></a>Veröffentlichung  
  Eine Veröffentlichung ist eine Auflistung einer oder mehrerer Artikel aus einer Datenbank. Die Gruppierung mehrerer Artikel zu einer Veröffentlichung erleichtert die Angabe eines logisch zusammengehörigen Satzes von Datenbankobjekten und Daten, die als Einheit repliziert werden.  
   
-## <a name="subscription"></a>Abonnement  
+## <a name="subscription"></a>Subscription  
  Unter einem Abonnement wird die Anforderung eines Exemplars einer Veröffentlichung durch einen Abonnenten verstanden. Das Abonnement definiert, welche Veröffentlichung wo und wann empfangen werden soll. Es gibt zwei Arten von Abonnements: Push und Pull. Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Replikations-Agents](../agents/replication-agents-overview.md)   
- [Types of Replication](../types-of-replication.md)   
- [Konfigurieren der Replikation für AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) [Warten einer AlwaysOn-Veröffentlichungsdatenbank &#40;SQLServer&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Replication Agents (Übersicht)](../agents/replication-agents-overview.md)   
+ [Replikations Typen](../types-of-replication.md)   
+ [Konfigurieren der Replikation für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) verwalten [einer AlwaysOn-Veröffentlichungs Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   

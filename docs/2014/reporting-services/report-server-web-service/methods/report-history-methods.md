@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f78dba913c4daa1c2e47682b282721b5f0fe27d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260685"
 ---
 # <a name="report-history-methods"></a>Berichtsverlaufsmethoden
   Mit diesen Methoden können Sie Momentaufnahmen zum Elementverlauf erstellen und verwalten.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateItemHistorySnapshot%2A>|Generiert eine Momentaufnahme des Verlaufs eines angegebenen Katalogelements.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItemHistorySnapshot%2A>|Löscht eine einzelne Momentaufnahme des Verlaufs eines angegebenen Katalogelements.|  
@@ -34,7 +34,7 @@ ms.locfileid: "63260685"
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|Gibt an, wie viele Momentaufnahmen eines Elements der Berichtsserver beibehält.|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Legt Elementverlaufsoptionen fest, die angeben, wann eine Elementverlaufs-Momentaufnahme für ein angegebenes Katalogelement erstellt wird.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](report-server-web-service-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Beispiel für die Diagnose von Gateways | Microsoft-Dokumentation
+title: Beispiel für Gateways-Diagnose | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50476cb92d477bb9a72ac8d4311d24572b0368e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069681"
 ---
 # <a name="gateways-diagnostic-example"></a>Beispiel für die Diagnose von Gateways
-In einer gatewayarchitektur sendet ein Treiber Anforderungen mit einem Gateway, die ODBC unterstützt. Das Gateway sendet Anforderungen an ein DBMS. Da es sich um die Komponente, die mit dem Treiber-Manager-Schnittstellen ist, formatiert und gibt Argumente für der Treiber **SQLGetDiagRec**.  
+In einer gatewayarchitektur sendet ein Treiber Anforderungen an ein Gateway, das ODBC unterstützt. Das Gateway sendet die Anforderungen an ein DBMS. Da es sich um die Komponente handelt, die eine Schnittstelle mit dem Treiber-Manager hat, formatiert und gibt der Treiber Argumente für **SQLGetDiagRec**aus.  
   
- Z. B. kann Oracle basierend ein Gateway Rdb auf Microsoft Open Data Services, und wenn Rdb die EMPLOYEE-Tabelle nicht finden konnte, das Gateway diese diagnosemeldung generiert:  
+ Wenn Oracle z. b. ein Gateway für RDB unter Microsoft geöffnet Data Services und RDB den Tabellen Mitarbeiter nicht finden konnte, generiert das Gateway möglicherweise die folgende Diagnose Meldung:  
   
 ```  
 "[42S02][-1][DEC][ODS Gateway][Rdb]%SQL-F-RELNOTDEF, Table EMPLOYEE is not defined "  
    "in schema."  
 ```  
   
- Aufgrund des Fehlers in der Datenquelle, mit das Gateway die diagnosemeldung ein Präfix für die Datenquellen-ID (Rdb) hinzugefügt. Da das Gateway konnte von der Komponente, die mit der Datenquelle verbunden, werden die diagnosemeldung Präfixe für die Hersteller (Dez) und den Bezeichner ([ODS-Gateway]) hinzugefügt. Es hinzugefügt auch der SQLSTATE-Wert und der Rdb-Fehlercode an den Anfang der diagnosemeldung. Dies gestattet es die Semantik der eigene Nachrichtenstruktur beibehalten, und geben Sie immer noch die ODBC-Diagnoseinformationen an den Treiber. Der Treiber analysiert die Fehlerinformationen an die Error-Anweisung angefügt werden, durch das Gateway.  
+ Da der Fehler in der Datenquelle aufgetreten ist, hat das Gateway der Diagnose Nachricht ein Präfix für den Datenquellen Bezeichner ([RDB]) hinzugefügt. Da das Gateway die Komponente war, die mit der Datenquelle interstand, wurden der Diagnose Nachricht Präfixe für den Hersteller ([Dec]) und den Bezeichner ([ODS Gateway]) hinzugefügt. Außerdem wurde der SQLSTATE-Wert und der RDB-Fehlercode am Anfang der Diagnose Nachricht hinzugefügt. Dadurch konnte die Semantik Ihrer eigenen Nachrichtenstruktur beibehalten werden, und die ODBC-Diagnoseinformationen werden dem Treiber weiterhin bereitgestellt. Der Treiber analysiert die Fehlerinformationen, die vom Gateway an die Fehler Anweisung angehängt werden.  
   
- Da der Gateway-Treiber die Komponente, die mit dem Treiber-Manager-Schnittstellen ist, verwenden sie die vorherige diagnosemeldung zum Formatieren und die folgenden Rückgabewerte von **SQLGetDiagRec**:  
+ Da der gatewaytreiber die Komponente ist, die mit dem Treiber-Manager über eine Schnittstelle verfügt, wird die vorhergehende Diagnose Meldung verwendet, um die folgenden Werte von **SQLGetDiagRec**zu formatieren und zurückzugeben:  
   
 ```  
 SQLSTATE:         "42S02"  

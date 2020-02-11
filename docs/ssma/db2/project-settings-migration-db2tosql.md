@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Migration) (DB2ToSQL) | Microsoft-Dokumentation
+title: Projekteinstellungen (Migration) (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,52 +10,52 @@ ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 40c6c1063ff738428072f3198cae8827e78e2390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060148"
 ---
-# <a name="project-settings-migration-db2tosql"></a>Project Settings (Migration) (DB2ToSQL)
-Der Seite für die Migration von der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA Daten aus DB2 in migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="project-settings-migration-db2tosql"></a>Projekteinstellungen (Migration) (DB2ToSQL)
+Die Seite Migration des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 zu migriert.  
   
-Im Bereich für die Migration steht in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Der Bereich Migration ist sowohl in den Dialogfeldern **Projekteinstellungen** als auch **Standard Projekteinstellungen** verfügbar.  
   
--   Die Einstellungen für alle SSMA-Projekten auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, um angezeigt oder geändert werden, von **Migration Zielversion** öffnen Sie auf die Dropdownliste **allgemeine** am unteren Rand der linken Bereich ein, und klicken Sie dann auf **Migration**.  
+-   Wenn Sie Einstellungen für alle SSMA-Projekte angeben möchten, wählen Sie **im Menü Extras die Option** **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Migration**.  
   
--   Die Einstellungen für das aktuelle Projekt, auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand im linken Bereich, und klicken Sie dann auf **Migration**.  
+-   Um Einstellungen für das aktuelle Projekt anzugeben, wählen Sie **im Menü Extras** die **Option Projekteinstellungen**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Migration**.  
   
-## <a name="migration-engine"></a>Ein Migrationsmodul  
+## <a name="migration-engine"></a>Migrations-Engine  
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Ein Migrationsmodul**|Gibt an, während der Datenmigration, verwendet Datenbank-Engine. Client-Side-Datenmigration bezieht sich auf SSMA-Client zum Abrufen der Daten aus der Quelle und die masseneinfügung von Daten in SQL Server. Datenmigration für Server-Seite bezieht sich auf SSMA Data Migration-Engine (Bulk Copy Program) auf das SQL Server als SQL-Agent-Auftrag Abrufen von Daten aus der Quelle und Einfügen direkt in SQL Server und so zusätzlichen Client-Hop (bessere Leistung).<br /><br />**Im Modus Standard**:  Client-Seite-Migration Datenmodul<br /><br />**Vollständige**:  Client-Seite-Migration Datenmodul<br /><br />**Vollständiger Modus**:  Client-Seite-Migration Datenmodul|  
+|**Migrations-Engine**|Gibt die während der Daten Migration verwendete Datenbank-Engine an. Bei der Client seitigen Datenmigration wird der SSMA-Client zum Abrufen der Daten aus der Quelle und zum Massen Einfügen dieser Daten in SQL Server bezeichnet. Die Server seitige Datenmigration bezieht sich auf die SSMA-Datenmigrations-Engine (Massen Kopier Programm), die im SQL Server Feld ausgeführt wird, als SQL-Agentauftrag, der Daten aus der Quelle abruft und direkt in SQL Server einfügt, wodurch ein zusätzlicher Client-Hop (bessere Leistung) vermieden wird.<br /><br />**Standardmodus**: Client seitiges Datenmigrations-Engine<br /><br />**Optimistischer Modus**: Client seitiges Datenmigrations-Engine<br /><br />**Vollständiger Modus**: Client seitiges Datenmigrations-Engine|  
   
 > [!IMPORTANT]  
-> Wenn die **Migrationsmodul** Option wird festgelegt, um **Servermodul für die Migration von Seite Daten**, ein neues Projekt, das Festlegen der Option **verwenden 32-Bit-Server-Seite-Migration-Datenmodul** angezeigt wird . Es gibt an, ob es sich bei 32-Bit oder 64-Bit-Windows-Verwaltungsinstrumentation (Bulk Copy Program, BCP)-Hilfsprogramm zum Migrieren von Daten verwendet wird.  
+> Wenn die Option **Migrations-Engine** auf **serverseitiges Datenmigrations-Engine**festgelegt ist, wird eine neue Projekt Einstellungs Option **Use 32-Bit Server seitiges Data Migration Engine** angezeigt. Hiermit wird angegeben, ob zum Migrieren von Daten das 32-Bit-oder 64-Bit-Hilfsprogramm für das Massen Kopier Programm verwendet wird.  
   
 ## <a name="miscellaneous-options"></a>Sonstige Optionen  
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Batchgröße**|Gibt den Batch Größe, die während der Migration von Daten verwendet.<br /><br />**Im Modus Standard**:  10000<br /><br />**Vollständige**:  10000<br /><br />**Vollständiger Modus**:  10000|  
-|**Check-Einschränkungen**|Gibt an, ob SSMA Einschränkungen überprüft werden sollen, wenn sie Daten in SQL Server-Tabellen einfügt.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
-|**Data Migration-Timeout**|Gibt das Timeout verwendet wird, während der Datenmigration<br /><br />**Im Modus Standard**:  15<br /><br />**Vollständige**:  15<br /><br />**Vollständiger Modus**:  15|  
-|**Erweiterte Daten Migrationsoptionen**|Zeigt zusätzliche Daten Migrationsoptionen für jede Tabelle in separate detailregisterkarte.<br /><br />**Im Modus Standard**:  Ausblenden<br /><br />**Vollständige**:  Ausblenden<br /><br />**Vollständiger Modus**:  Ausblenden|  
-|**Trigger auslösen**|Gibt an, ob SSMA einfügen Trigger ausgelöst werden soll, wenn sie Daten in SQL Server-Tabellen hinzufügt.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
-|**Identität beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  False|  
-|**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
-|**Markieren Sie Trim String-Vorgang mit Fehler**|Wenn die Größe der Zielspalte kleiner als die Länge der Zeichenfolge ist, wird der Wert abgeschnitten und als Fehler gekennzeichnet.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
-|**On Error**|Die Datenmigration beendet, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Beenden Sie Migration:** Daten-Migrationsvorgang beendet<br /><br />**Gehen Sie zur nächsten Tabelle:** Beendet die Datenmigration für die aktuelle Tabelle und geht zur nächsten<br /><br />**Fahren Sie mit dem nächsten Batch fort:** Migration von Daten zu den aktuellen Batch beendet und geht zur nächsten<br /><br />**Im Modus Standard**: Fahren Sie mit dem nächsten Batch fort<br /><br />**Vollständige**: Fahren Sie mit dem nächsten Batch fort<br /><br />**Vollständiger Modus**: Fahren Sie mit dem nächsten Batch fort|  
-|**Ersetzen Sie dies nicht unterstützte Datumswerte**|Gibt an, ob SSMA Datumsangaben beheben sollte, die älter als Frühestes unterstütztes sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **"DateTime"** Datum (01 Januar 1753).<br /><br />Um das aktuelle Datum zu erhalten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datumsangaben vor dem 01 Januar 1753 wird in eine Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten enthalten, die konvertieren.<br /><br />Wählen Sie zum Konvertieren von Datumsangaben vor dem 01 Januar 1753 auf NULL **durch NULL Ersetzen**.<br /><br />Um Datumsangaben vor dem 01 Januar 1753 mit einem unterstützten Datum ersetzen möchten, wählen Sie **ersetzen Sie dies durch nächste unterstützte Datum**.<br /><br />**Im Modus Standard**: Keine Aktion durchführen<br /><br />**Vollständige**: Keine Aktion durchführen<br /><br />**Vollständiger Modus**: Ersetzen Sie dies durch nächste unterstützte Datum|  
-|**Tabellensperre**|Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Ruft eine Massenaktualisierungssperre für die Dauer des Massenkopiervorgangs ab. Wenn der Wert "false" ist, wird eine Sperre auf Zeilenebene festgelegt.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
+|**Batch Größe**|Gibt die Batch Größe an, die während der Datenmigration verwendet wird.<br /><br />**Standardmodus**: 10000<br /><br />**Optimistischer Modus**: 10000<br /><br />**Vollständiger Modus**: 10000|  
+|**Check-Einschränkungen**|Gibt an, ob SSMA Einschränkungen überprüfen soll, wenn Daten in SQL Server Tabellen eingefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
+|**Timeout bei der Daten Migration**|Gibt das während der Datenmigration verwendete Timeout an.<br /><br />**Standardmodus**: 15<br /><br />**Optimistischer Modus**: 15<br /><br />**Vollständiger Modus**: 15|  
+|**Erweiterte Daten Migrations Optionen**|Zeigt zusätzliche Daten Migrations Optionen für jede Tabelle auf einer separaten Detail Registerkarte an.<br /><br />**Standardmodus**: Ausblenden<br /><br />**Optimistischer Modus**: Ausblenden<br /><br />**Vollmodus**: Ausblenden|  
+|**Trigger auslösen**|Gibt an, ob SSMA Einfügetrigger auslösen soll, wenn Daten SQL Server Tabellen hinzugefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
+|**Identität beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: false|  
+|**NULL-Werten beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
+|**Zeichen folgen-Trim-Vorgang mit Fehler markieren**|Wenn die Ziel Spaltengröße kleiner als die Länge der Quell Zeichenfolge ist, wird der Wert abgeschnitten und als Fehler markiert.<br /><br />**Standardmodus**: Ja<br /><br />**Optimistischer Modus**: Ja<br /><br />**Vollständiger Modus**: Ja|  
+|**Bei Fehler**|Beendet die Datenmigration, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Migration Abbrechen:** Beendet den Daten Migrations Vorgang.<br /><br />**Weiter zur nächsten Tabelle:** Beendet die Datenmigration zur aktuellen Tabelle und geht zum nächsten<br /><br />**Zum nächsten Batch wechseln:** Beendet die Datenmigration zum aktuellen Batch und geht zum nächsten<br /><br />**Standardmodus**: fahren Sie mit dem nächsten Batch fort<br /><br />**Optimistischer Modus**: mit dem nächsten Batch fortfahren<br /><br />**Vollständiger Modus**: mit dem nächsten Batch fortfahren|  
+|**Nicht unterstützte Datumsangaben ersetzen**|Gibt an, ob SSMA Datumsangaben vor dem frühesten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** -Datum (01. Januar 1753) korrigieren soll.<br /><br />Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.<br /><br />Um Datumsangaben vor 01. Januar 1753 in NULL zu konvertieren, wählen Sie **durch Null Ersetzen**aus.<br /><br />Um Datumsangaben vor 01. Januar 1753 durch ein unterstütztes Datum zu ersetzen, wählen Sie **durch das nächste unterstützte Datum ersetzen**aus.<br /><br />**Standardmodus**: nichts tun<br /><br />**Optimistischer Modus**: nichts tun<br /><br />**Vollständiger Modus**: durch das nächste unterstützte Datum ersetzen|  
+|**Tabellensperre**|Gibt an, ob SSMA Tabellen sperrt, wenn während der Datenmigration Daten zu Tabellen hinzugefügt werden. Erhält eine Massen Aktualisierungs Sperre für die Dauer des Massen Kopiervorgangs. Wenn der Wert false ist, wird auf Zeilenebene eine Sperre festgelegt.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
   
-## <a name="parallel-data-migration"></a>Parallele Datenmigration  
+## <a name="parallel-data-migration"></a>Parallele Daten Migration  
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Parallel Data Migration-Modus**|Gibt den Modus für Verzweigung Threads verwendet werden, um parallele Datenmigration zu aktivieren. Im Auto-Modus wählt SSMA für die Anzahl von Threads (standardmäßig 10), verzweigt haben, um Daten zu migrieren. Im benutzerdefinierten Modus kann Benutzer angeben, die Anzahl der Threads, die zum Migrieren von Daten verzweigt (Mindestwert ist 1, und der Höchstwert ist 100). Derzeit unterstützt nur Client-Seite-Migration Datenmodul parallele Datenmigration.<br /><br />**Im Modus Standard**:  Auto<br /><br />**Vollständige**:  Auto<br /><br />**Vollständiger Modus**:  Auto|  
+|**Paralleler Daten Migrations Modus**|Gibt den Modus an, der zum Verzweigen von Threads verwendet wird, um die parallele Datenmigration Im Auto-Modus wählt SSMA die Anzahl der Threads (standardmäßig 10) aus, die zum Migrieren von Daten verzweigt werden. Im benutzerdefinierten Modus kann der Benutzer die Anzahl der Threads angeben, die für die Datenmigration verzweigt werden sollen (der Minimalwert ist 1 und der Höchstwert 100). Derzeit unterstützt nur die Client seitige Daten Migrations-Engine die parallele Datenmigration.<br /><br />**Standardmodus**: automatisch<br /><br />**Optimistischer Modus**: automatisch<br /><br />**Vollständiger Modus**: automatisch|  
   
 > [!IMPORTANT]  
-> Wenn die **Parallel Data Migration-Modus** Option wird festgelegt, um **benutzerdefinierte**, ein neues Projekt, das Festlegen der Option **Threadanzahl** wird angezeigt. Es gibt die Anzahl von Threads, die für die Migration von Daten verwendet.  
+> Wenn die Option " **paralleler Daten Migrations Modus** " auf " **Benutzer**definiert" festgelegt ist, wird eine neue Projekt Einstellungs Option **Thread Anzahl** angezeigt. Gibt die Anzahl von Threads an, die für die Datenmigration verwendet werden.  
   

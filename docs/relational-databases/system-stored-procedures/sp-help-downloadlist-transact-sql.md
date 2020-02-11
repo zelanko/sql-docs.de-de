@@ -1,5 +1,5 @@
 ---
-title: Sp_help_downloadlist (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_downloadlist (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055192"
 ---
-# <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
+# <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Listet alle Zeilen in der **Sysdownloadlist** -Systemtabelle für den angegebenen Auftrag oder alle Zeilen, wenn kein Auftrag angegeben wird.  
+  Listet alle Zeilen in der **sysdownloadlist** -Systemtabelle für den angegebenen Auftrag oder alle Zeilen auf, wenn kein Auftrag angegeben wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,59 +46,59 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die Auftrags-ID für den Informationen zurückgegeben werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id`Die ID des Auftrags, für den Informationen zurückgegeben werden sollen. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+>  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @operation = ] 'operation'` Der gültige Vorgang für den angegebenen Auftrag. *Vorgang* ist **varchar(64)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @operation = ] 'operation'`Der gültige Vorgang für den angegebenen Auftrag. *Operation* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**FEHLER**|Servervorgang, der den Zielserver vollziehen des Austritts aus dem Master-anfordert **SQLServerAgent** Service.|  
+|**Mängel**|Der Server Vorgang, der den Austritt des Zielservers vom Master- **SQLServerAgent** -Dienst anfordert.|  
 |**DELETE**|Auftragsvorgang, mit dem ein gesamter Auftrag entfernt wird|  
 |**INSERT**|Auftragsvorgang, der einen gesamten Auftrag einfügt oder einen vorhandenen Auftrag aktualisiert. Dieser Vorgang schließt ggf. alle Auftragsschritte und Zeitpläne ein.|  
-|**ERNEUT EINZUTRAGEN.**|Servervorgang, der bewirkt, dass der Zielserver die Eintragsinformationen, einschließlich des Abrufintervalls und der Zeitzone, erneut an die Multiserverdomäne sendet. Der Zielserver auch downloadet erneut die **MSXOperator** Details.|  
-|**SET-POLL**|Servervorgang, der festlegt, in welchem Intervall (in Sekunden) die Zielserver die Multiserverdomäne abfragen. Wenn angegeben, *Wert* wird als der erforderliche Intervallwert interpretiert, und kann ein Wert von **10** zu **28.800**.|  
-|**START**|Auftragsvorgang, der den Start der Auftragsausführung anfordert|  
-|**BEENDEN**|Auftragsvorgang, der das Beenden der Auftragsausführung anfordert|  
-|**ZEITPUNKT DER SYNCHRONISIERUNG**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
-|**UPDATE**|Auftragsvorgang, der aktualisiert nur die **Sysjobs** Informationen für einen Auftrag, nicht die Schritte eines Auftrags oder Zeitpläne. Aufruf erfolgt automatisch durch **Sp_update_job**.|  
+|**RE-ENLIST**|Servervorgang, der bewirkt, dass der Zielserver die Eintragsinformationen, einschließlich des Abrufintervalls und der Zeitzone, erneut an die Multiserverdomäne sendet. Der Zielserver lädt auch die **MSXOperator** -Details erneut herunter.|  
+|**SET-POLL**|Servervorgang, der festlegt, in welchem Intervall (in Sekunden) die Zielserver die Multiserverdomäne abfragen. Wenn angegeben, wird der *Wert* als erforderlicher Intervall Wert interpretiert und kann ein Wert zwischen **10** und **28.800**sein.|  
+|**Begonnen**|Auftragsvorgang, der den Start der Auftragsausführung anfordert|  
+|**Anzuhalten**|Auftragsvorgang, der das Beenden der Auftragsausführung anfordert|  
+|**SYNC-TIME**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
+|**UPDATE**|Auftrags Vorgang, bei dem nur die **sysjobs** -Informationen für einen Auftrag und nicht die Auftrags Schritte oder Zeitpläne aktualisiert werden. Wird automatisch von **sp_update_job**aufgerufen.|  
   
-`[ @object_type = ] 'object_type'` Der Typ des Objekts für den angegebenen Auftrag. *Object_type* ist **varchar(64)** , hat den Standardwert NULL. *Object_type* kann JOB oder SERVER sein. Weitere Informationen zu gültigen *Object_type*Werte finden Sie unter [Sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'`Der Objekttyp für den angegebenen Auftrag. *object_type* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. *object_type* kann entweder "Job" oder "Server" sein. Weitere Informationen zu gültigen *object_type*Werten finden Sie unter [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'` Der Name des Objekts. *Object_name* ist **Sysname**, hat den Standardwert NULL. Wenn *Object_type* Wert JOB aufweist, *Object_name*ist der Name des Auftrags. Wenn *Object_type*Server und *Object_name*ist der Servername.  
+`[ @object_name = ] 'object_name'`Der Name des Objekts. *object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *object_type* Auftrag ist, ist *object_name*der Auftrags Name. Wenn *object_type*Server ist, ist *object_name*der Servername.  
   
-`[ @target_server = ] 'target_server'` Der Name des Zielservers. *Target_server* ist **vom Datentyp nvarchar(128)** , hat den Standardwert NULL.  
+`[ @target_server = ] 'target_server'`Der Name des Zielservers. *target_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
   
-`[ @has_error = ] has_error` Ist, gibt an, ob der Auftrag Fehler bestätigen soll. *Has_error* ist **Tinyint**, hat den Standardwert NULL, womit keine Fehler bestätigt werden sollen. **1** gibt an, dass alle Fehler bestätigt werden sollen.  
+`[ @has_error = ] has_error`Gibt an, ob der Auftrag Fehler bestätigen soll. *has_error* ist vom Datentyp **tinyint**. der Standardwert ist NULL. der Wert gibt an, dass keine Fehler bestätigt werden sollen. der Wert **1** gibt an, dass alle Fehler bestätigt werden sollen.  
   
-`[ @status = ] status` Der Status des Auftrags. *Status* ist **Tinyint**, hat den Standardwert NULL.  
+`[ @status = ] status`Der Status des Auftrags. *Status* ist vom Datentyp **tinyint**. der Standardwert ist NULL.  
   
-`[ @date_posted = ] date_posted` Legen Sie Datum und Uhrzeit, zu dem alle Einträge, die am oder nach dem angegebenen Datum und Uhrzeit im Resultset enthalten sein soll. *Date_posted* ist **"DateTime"** , hat den Standardwert NULL.  
+`[ @date_posted = ] date_posted`Das Datum und die Uhrzeit, für die alle Einträge, die an oder nach dem angegebenen Datum und der angegebenen Uhrzeit vorgenommen werden, in das Resultset eingeschlossen werden sollen. *date_posted* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Eindeutige, ganzzahlige ID der Anweisung|  
-|**source_server**|**nvarchar(30)**|Computername des Servers, vom dem die Anweisung stammt. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0, dies ist immer der Computername des Masterservers (MSX).|  
+|**source_server**|**nvarchar (30)**|Computername des Servers, vom dem die Anweisung stammt. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0 ist dies immer der Computername des Master Servers (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Vorgangscode für die Anweisung|  
 |**object_name**|**sysname**|Objekt, das von der Anweisung betroffen ist|  
-|**object_id**|**uniqueidentifier**|ID des Objekts von der Anweisung betroffen (**Job_id** für ein Auftragsobjekt oder 0 x 00 für ein Serverobjekt) oder ein spezifischer Datenwert für die **Operation_code**.|  
-|**target_server**|**nvarchar(30)**|Zielserver, der diese Anweisung herunterladen soll|  
-|**error_message**|**nvarchar(1024)**|Gegebenenfalls Fehlermeldung vom Zielserver, falls beim Verarbeiten dieser Anweisung ein Problem aufgetreten ist.<br /><br /> Hinweis: Fehlermeldungen blockieren alle weiteren Downloadvorgänge durch den Zielserver.|  
+|**object_id**|**uniqueidentifier**|ID des Objekts, das von der Anweisung betroffen ist (**job_id** für ein Auftrags Objekt oder 0x00 für ein Server Objekt), oder ein Datenwert, der für die **operation_code**spezifisch ist.|  
+|**target_server**|**nvarchar (30)**|Zielserver, der diese Anweisung herunterladen soll|  
+|**error_message**|**nvarchar (1024)**|Gegebenenfalls Fehlermeldung vom Zielserver, falls beim Verarbeiten dieser Anweisung ein Problem aufgetreten ist.<br /><br /> Hinweis: jede Fehlermeldung blockiert alle weiteren Downloads durch den Zielserver.|  
 |**date_posted**|**datetime**|Datum, an dem die Anweisung für die Tabelle bereitgestellt wurde|  
 |**date_downloaded**|**datetime**|Datum, an dem die Anweisung durch den Zielserver heruntergeladen wurde|  
-|**status**|**tinyint**|Status des Auftrags:<br /><br /> **0** = Noch nicht heruntergeladen<br /><br /> **1** = erfolgreich heruntergeladen.|  
+|**Stands**|**tinyint**|Status des Auftrags:<br /><br /> **0** = noch nicht heruntergeladen<br /><br /> **1** = erfolgreich heruntergeladen.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig verfügen Mitglieder der festen Serverrolle **sysadmin** über die Berechtigungen zum Ausführen dieser Prozedur.  
+ Die Berechtigungen zum Ausführen dieser Prozedur werden standardmäßig Mitgliedern der festen Server Rolle **sysadmin** zugewiesen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Zeilen in der `sysdownloadlist`-Tabelle für den Auftrag `NightlyBackups` aufgelistet.  
@@ -119,7 +119,7 @@ EXEC dbo.sp_help_downloadlist
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

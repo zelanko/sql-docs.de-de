@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264962"
 ---
 # <a name="custom-report-item-architecture"></a>Architektur des benutzerdefinierten Berichtselements
@@ -25,16 +25,16 @@ ms.locfileid: "63264962"
 ## <a name="the-run-time-component"></a>Die Laufzeitkomponente  
  Die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement wird vom Berichtsprozessor zur Laufzeit aufgerufen. Die Laufzeitkomponente akzeptiert Daten, die vom Berichtsprozessor zur Laufzeit übergeben werden, verarbeitet diese Daten und gibt ein Bild zurück, das das gerenderte, benutzerdefinierte Berichtselement enthält.  
   
- ![Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Custom report item run-time component")  
+ ![Laufzeitkomponente des benutzerdefinierten Berichtselements](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Laufzeitkomponente des benutzerdefinierten Berichtselements")  
   
 ## <a name="the-design-time-component"></a>Die Entwurfszeitkomponente  
  Über die Entwurfszeitkomponente kann das benutzerdefinierte Berichtselement in der Berichts-Designer-Schnittstelle in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] definiert und bearbeitet werden. Die Entwurfszeitkomponente besteht aus mehreren Untersteuerungselementen, die das Aussehen und die Eigenschaften des benutzerdefinierten Berichtselements in der Entwurfsumgebung steuern.  
   
- ![Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Custom report item design-time component")  
+ ![Entwurfszeitkomponente des benutzerdefinierten Berichtselements](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Entwurfszeitkomponente des benutzerdefinierten Berichtselements")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Erstellen einer Entwurfszeit Komponente für ein benutzerdefiniertes Berichts Element](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

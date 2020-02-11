@@ -1,5 +1,5 @@
 ---
-title: Sys.external_tables (Transact-SQL) | Microsoft-Dokumentation
+title: sys. external_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,40 +12,40 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054314"
 ---
-# <a name="sysexternaltables-transact-sql"></a>Sys.external_tables (Transact-SQL)
+# <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Enthält eine Zeile für jede externe Tabelle in der aktuellen Datenbank.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|\<geerbte Spalten >||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
-|max_column_id_used|**int**|Höchste Spalten-ID für diese Tabelle hat Sie bisher verwendet.||  
+|\<geerbte Spalten>||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
+|max_column_id_used|**int**|Maximale Spalten-ID, die jemals für diese Tabelle verwendet wurde.||  
 |uses_ansi_nulls|**bit**|Beim Erstellen der Tabelle war die Datenbankoption SET ANSI_NULLS auf ON festgelegt.||  
 |data_source_id|**int**|Objekt-ID für die externe Datenquelle.||  
-|file_format_id|**int**|Für externe Tabellen über eine externe Datenquelle HADOOP ist dies die Objekt-ID für das externe Dateiformat.||  
-|location|**nvarchar(4000)**|Für externe Tabellen über eine externe Datenquelle HADOOP ist dies der Pfad der externen Daten in HDFS.||  
-|reject_type|**tinyint**|Für externe Tabellen über eine externe Datenquelle HADOOP ist dies die Möglichkeit, abgelehnte Zeilen gezählt werden, wenn externe Daten Abfragen.|Wert: die Anzahl der abgelehnten Zeilen.<br /><br /> Prozentsatz – der Prozentsatz der abgelehnten Zeilen.|  
-|reject_value|**float**|Für externe Tabellen über eine externe Datenquelle HADOOP:<br /><br /> Für *Reject_type =* Wert, dies ist die Anzahl der ablehnungen von Zeile zu ermöglichen, bevor die Abfrage fehlschlägt.<br /><br /> Für *Reject_type* = Prozentsatz, dies ist der Prozentsatz von Zeilen ablehnungen zu ermöglichen, bevor die Abfrage fehlschlägt.||  
-|reject_sample_value|**int**|Für *Reject_type* = Prozentsatz, dies ist die Anzahl der Zeilen an, entweder erfolgreich oder erfolglos, laden, bevor Sie den Prozentsatz der abgelehnten Zeilen zu berechnen.|NULL, wenn Reject_type = Wert.|  
-|distribution_type|**int**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies die Verteilung der Daten der Zeilen in der zugrunde liegenden Basistabellen.|0 – Sharding<br /><br /> 1 - Replikation<br /><br /> 2: Round-Robin-|  
-|distribution_desc|**nvarchar(120)**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies den Verteilungstyp, die als Zeichenfolge angezeigt.||  
-|sharding_column_id|**int**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER und sharded-Verteilung ist dies die Spalten-ID der Spalte, die die Sharding-Schlüsselwerte enthält.||  
-|remote_schema_name|**sysname**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies das Schema, in denen die Basistabelle in den Remotedatenbanken (falls abweichend aus dem Schema, in die externe Tabelle definiert ist) befindet.||  
-|remote_object_name|**sysname**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies der Name der Basistabelle in den Remotedatenbanken (falls abweichend vom Namen der externen Tabelle).||  
+|file_format_id|**int**|Bei externen Tabellen über eine externe Hadoop-Datenquelle handelt es sich hierbei um die Objekt-ID für das externe Dateiformat.||  
+|location|**nvarchar(4000)**|Bei externen Tabellen über eine externe Hadoop-Datenquelle handelt es sich hierbei um den Pfad der externen Daten in HDFS.||  
+|reject_type|**tinyint**|Bei externen Tabellen über eine externe Hadoop-Datenquelle ist dies die Art und Weise, wie abgelehnte Zeilen beim Abfragen externer Daten gezählt werden.|Value: die Anzahl der abgelehnten Zeilen.<br /><br /> Prozentsatz: der Prozentsatz der abgelehnten Zeilen.|  
+|reject_value|**float**|Für externe Tabellen über eine externe Hadoop-Datenquelle:<br /><br /> Bei *reject_type =* value ist dies die Anzahl der Zeilen Umschreibungen, die zulässig sind, bevor ein Fehler bei der Abfrage auftritt.<br /><br /> Bei *reject_type* = Prozentsatz ist dies der Prozentsatz der Zeilen Umschreibungen, die zugelassen werden, bevor die Abfrage fehlschlägt.||  
+|reject_sample_value|**int**|Bei *reject_type* = Prozentsatz ist dies die Anzahl der Zeilen, die entweder erfolgreich oder erfolglos geladen werden sollen, bevor der Prozentsatz der abgelehnten Zeilen berechnet wird.|NULL, wenn reject_type = Value.|  
+|distribution_type|**int**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle handelt es sich hierbei um die Datenverteilung der Zeilen in den zugrunde liegenden Basistabellen.|0-Sharding<br /><br /> 1-repliziert<br /><br /> 2-Roundrobin|  
+|distribution_desc|**nvarchar (120)**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle ist dies der Verteilungstyp, der als Zeichenfolge angezeigt wird.||  
+|sharding_column_id|**int**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle und eine shardverteilung ist dies die Spalten-ID der Spalte, die die shardingschlüsselwerte enthält.||  
+|remote_schema_name|**sysname**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle ist dies das Schema, in dem sich die Basistabelle auf den Remote Datenbanken befindet (wenn Sie sich von dem Schema unterscheidet, in dem die externe Tabelle definiert ist).||  
+|remote_object_name|**sysname**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle ist dies der Name der Basistabelle in den Remote Datenbanken (wenn Sie sich vom Namen der externen Tabelle unterscheidet).||  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. external_file_formats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys. external_data_sources &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

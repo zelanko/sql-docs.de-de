@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478512"
 ---
 # <a name="transactions-master-data-services"></a>Transaktionen (Master Data Services)
@@ -43,9 +43,9 @@ ms.locfileid: "65478512"
 >  Administratoren können alle Transaktionen für alle Benutzer anzeigen, solange nicht die Berechtigungsstufe „schreibgeschützt“ im Funktionsbereich **Versionsverwaltung** festgelegt ist. Wenn z.B. die Berechtigung „schreibgeschützt“ und UPDATE-Berechtigungsebene für den Administrator festgelegt ist, kann dieser keine anderen Transaktionen anzeigen, da die Berechtigung „schreibgeschützt“ Vorrang vor der UPDATE-Berechtigung hat.
 
 ## <a name="system-settings"></a>Systemeinstellungen  
- Im [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ist eine Einstellung verfügbar, die beeinflusst, ob Transaktionen beim Bereitstellen von Datensätzen aufgezeichnet werden. Diese Einstellung wirkt sich nur auf SQL Server 2008 R2 aus. Sie können diese Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder direkt in der Tabelle „Systemeinstellungen“ der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](system-settings-master-data-services.md).  
+ Im [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ist eine Einstellung verfügbar, die beeinflusst, ob Transaktionen beim Bereitstellen von Datensätzen aufgezeichnet werden. Diese Einstellung wirkt sich nur auf SQL Server 2008 R2 aus. Sie können diese Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder direkt in der Tabelle „Systemeinstellungen“ der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](system-settings-master-data-services.md).  
   
- Wenn Sie Daten in diese Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] importieren, können Sie angeben, ob Transaktionen beim Initiieren der gespeicherten Prozedur protokolliert werden. Weitere Informationen finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+ Wenn Sie Daten in diese Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]importieren, können Sie angeben, ob Transaktionen beim Initiieren der gespeicherten Prozedur protokolliert werden. Weitere Informationen finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
 ## <a name="concurrency"></a>Parallelität  
  Wenn ein bestimmter Entitätswert gleichzeitig in mehr als einer Explorersitzung angezeigt wird, sind gleichzeitige Bearbeitungen zum gleichen Wert möglich. Gleichzeitige Bearbeitungen werden nicht automatisch von MDS erkannt. Dies kann auftreten, wenn mehrere Benutzer den MDS-Explorer im Webbrowser von mehreren Sitzungen, z. B. von mehreren Computern, mehreren Browserregisterkarten oder Fenstern oder mehreren Benutzerkonten, verwenden.  

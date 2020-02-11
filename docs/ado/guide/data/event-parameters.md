@@ -1,5 +1,5 @@
 ---
-title: Ereignisparameter | Microsoft-Dokumentation
+title: Ereignis Parameter | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925364"
 ---
 # <a name="event-parameters"></a>Ereignisparameter
-Jeder Ereignishandler verfügt über eine Status-Parameter, der steuert, den Ereignishandler. Für Ereignisse zum Abschluss wird auch dieser Parameter verwendet, um anzugeben, den Erfolg oder Misserfolg des Vorgangs, der das Ereignis generiert hat. Umfassendste Ereignisse haben auch einen Fehlerparameter, um Aufschluss über alle Fehler, die aufgetreten sind, und einen oder mehrere Objektparameter, die auf die ADO-Objekte, die zum Ausführen des Vorgangs zu verweisen. Z. B. die [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) Ereignis enthält die Objektparameter, für die **Befehl**, **Recordset**, und **Verbindung** Objekte mit dem Ereignis verknüpft ist. Im folgenden Microsoft® Visual Basic® Beispiel sehen Sie die pCommand pRecordset und pConnection-Objekten, die darstellen der **Befehl**, **Recordset**, und **Verbindung** Objekte, mit denen, die **Execute** Methode.  
+Jeder Ereignishandler verfügt über einen Status Parameter, der den Ereignishandler steuert. Bei Abschluss Ereignissen wird dieser Parameter auch verwendet, um den Erfolg oder Misserfolg des Vorgangs anzugeben, der das Ereignis generiert hat. Die meisten vollständigen Ereignisse verfügen auch über einen Fehler Parameter, um Informationen zu ggf. aufgetretenen Fehlern und einen oder mehrere Objekt Parameter bereitzustellen, die auf die ADO-Objekte verweisen, die zum Ausführen des Vorgangs verwendet werden. Das Ereignis [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) enthält z. b. Objekt Parameter für die **Befehle**, **Recordsets**und **Verbindungs** Objekte, die dem Ereignis zugeordnet sind. Im folgenden Beispiel zu Microsoft® Visual Basic® werden die Objekte pcommand, precordset und pconnection angezeigt, die den **Befehl**, das **Recordset**und die **Verbindungs** Objekte darstellen, die von der **Execute** -Methode verwendet werden.  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -36,36 +36,36 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
      ByVal pConnection As ADODB.Connection)  
 ```  
   
- Mit Ausnahme der **Fehler** Objekt, auf die Ereignisse werden die gleichen Parameter übergeben werden. Mit diesem können Sie alle Objekte untersuchen, die in den ausstehenden Vorgang verwendet wird, und bestimmen, ob der Vorgang zugelassen werden soll, um den Vorgang abzuschließen.  
+ Mit Ausnahme des **Error** -Objekts werden die gleichen Parameter an die-Ereignisse des-Objekts übermittelt. Auf diese Weise können Sie jedes der Objekte untersuchen, die im ausstehenden Vorgang verwendet werden, und bestimmen, ob der Vorgang beendet werden soll.  
   
- Haben Sie einige Ereignishandler eine *Grund* -Parameter, der enthält zusätzliche Informationen darüber, warum das Ereignis aufgetreten ist. Z. B. die **WillMove** und **MoveComplete** Ereignisse können auftreten, aufgrund eines die Navigation-Methoden (**MoveNext**, **MovePrevious**usw.) aufgerufen wird oder als Ergebnis einer erneuten Abfrage.  
+ Einige Ereignishandler verfügen über einen *reason* -Parameter, der zusätzliche Informationen darüber bereitstellt, warum das Ereignis aufgetreten ist. Beispielsweise können die Ereignisse " **WillMove** " und " **MoveComplete** " auftreten, wenn eine der Navigationsmethoden (**MoveNext**, **MovePrevious**usw.) aufgerufen wird, oder als Ergebnis einer Anforderung.  
   
-## <a name="status-parameter"></a>Status-Parameter  
- Wenn die Ereignishandler-Routine aufgerufen wird, die *Status* Parameter auf einen der folgenden Werte festgelegt ist.  
+## <a name="status-parameter"></a>Status Parameter  
+ Wenn die Ereignishandlerroutine aufgerufen wird, wird der *Status* Parameter auf einen der folgenden Werte festgelegt.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**adStatusOK**|Übergeben sowohl die wird als auch die Ereignisse zum Abschluss. Dieser Wert bedeutet, dass den Vorgang, der das Ereignis wurde erfolgreich abgeschlossen verursacht hat.|  
-|**adStatusErrorsOccurred**|Um nur Ereignisse zum Abschluss übergeben. Dieser Wert bedeutet, dass der Vorgang, der das Ereignis ausgelöst wurde nicht erfolgreich war, oder ein Ereignis wird der Vorgang wurde abgebrochen. Überprüfen Sie die *Fehler* -Parameter für weitere Details.|  
-|**adStatusCantDeny**|Um nur die Ereignisse werden übergeben. Dieser Wert bedeutet, dass das Ereignis wird der Vorgang abgebrochen werden kann nicht an. Sie müssen ausgeführt werden.|  
+|**adStatus**|Wird an die beiden-und-Abschluss Ereignisse übermittelt. Dieser Wert bedeutet, dass der Vorgang, der das Ereignis ausgelöst hat, erfolgreich abgeschlossen wurde.|  
+|**adstatuuserrorsoccurrred**|Wird nur an Complete-Ereignisse übermittelt. Dieser Wert bedeutet, dass der Vorgang, der das Ereignis verursacht hat, nicht erfolgreich war, oder ein Ereignis hat den Vorgang abgebrochen. Weitere Informationen finden Sie im *Fehler* Parameter.|  
+|**adStatus-kandeny**|An werden nur Ereignisse übermittelt. Dieser Wert bedeutet, dass der Vorgang nicht vom Ereignis Ereignis abgebrochen werden kann. Er muss ausgeführt werden.|  
   
- Wenn Sie in das Ereignis wird, die der Vorgang fortgesetzt werden soll ermitteln, lassen Sie die *Status* Parameter unverändert. Solange die eingehenden Status-Parameter nicht, um festgelegt wurde **AdStatusCantDeny**, jedoch können Sie den ausstehenden Vorgang abbrechen, indem ändern *Status* zu **AdStatusCancel**. Wenn Sie dies tun, ist die ausgelöste Ereignis, das dem Vorgang zugeordnete seine *Status* Parametersatz zu **AdStatusErrorsOccurred**. Die **Fehler** an das Abschlussereignis übergebene Objekt enthält den Wert **AdErrOperationCancelled**.  
+ Wenn Sie in dem Ereignis feststellen, dass der Vorgang fortgesetzt werden soll, lassen Sie den *Status* Parameter unverändert. Solange der eingehende Status Parameter nicht auf **adStatusCantDeny**festgelegt wurde, können Sie den ausstehenden Vorgang jedoch abbrechen, indem Sie den *Status* in **adStatusCancel**ändern. Wenn Sie dies tun, ist der *Status* Parameter für das Complete-Ereignis, das dem Vorgang zugeordnet ist, auf **adstatuserrorsoccurrred**festgelegt. Das **Fehler** Objekt, das an das Complete-Ereignis übertragen wird, enthält den Wert **aderroperationabgeb Rochen**.  
   
- Wenn Sie nicht mehr ein Ereignis verarbeiten möchten, legen Sie *Status* zu **AdStatusUnwantedEvent** und empfängt die Anwendung nicht mehr benachrichtigt, wenn das Ereignis. Beachten Sie jedoch, dass einige Ereignisse für mehr als einer der Gründe ausgelöst werden können. In diesem Fall müssen Sie angeben **AdStatusUnwantedEvent** für jeden möglichen Grund. Beispielsweise zum Beenden des Empfangs der Benachrichtigung über ausstehende **RecordChange** Ereignisse, müssen Sie festlegen, die *Status* Parameter **AdStatusUnwantedEvent** für  **AdRsnAddNew**, **AdRsnDelete**, **AdRsnUpdate**, **AdRsnUndoUpdate**, **AdRsnUndoAddNew**, **AdRsnUndoDelete**, und **AdRsnFirstChange** eintreten.  
+ Wenn Sie ein Ereignis nicht mehr verarbeiten möchten, können Sie den *Status* auf **adStatusUnwantedEvent** festlegen, und Ihre Anwendung erhält keine Benachrichtigung mehr über dieses Ereignis. Denken Sie jedoch daran, dass einige Ereignisse aus mehr als einem Grund ausgelöst werden können. In diesem Fall müssen Sie für jeden möglichen Grund **adStatus-unwantedebug** angeben. Wenn Sie z. b. keine Benachrichtigung über **ausstehende recordchange** -Ereignisse mehr erhalten möchten, Sie müssen den *Status* -Parameter auf **adStatusUnwantedEvent** für **adrsnaddnew**, **adrsndelete**, **adrsnupdate**, **adrsnundoupdate**, **adrsnundoaddnew**, **adrsnundodelete**und **adrsnfirstchange** festlegen, wenn diese auftreten.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**adStatusUnwantedEvent**|Fordern Sie an, dass dieser Ereignishandler keine weiteren Benachrichtigungen erhalten.|  
-|**adStatusCancel**|Fordern Sie Abbruch des Vorgangs, der ausgeführt wird.|  
+|**adStatus-unwantedebug**|Fordern Sie an, dass dieser Ereignishandler keine weiteren Benachrichtigungen empfängt.|  
+|**adStatus Cancel**|Anforderungs Abbruch des Vorgangs, der ausgeführt werden soll.|  
   
-## <a name="error-parameter"></a>Fehlerparameter  
- Die *Fehler* Parameter ist ein Verweis auf ein ADO- [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn die *Status* Parameter auf festgelegt ist **AdStatusErrorsOccurred**, **Fehler** Objekt enthält die Details, warum der Vorgang fehlgeschlagen ist. Ein vollständiges Ereignis zugeordnete wird Ereignis den Vorgang durch Festlegen von abgebrochen hat die *Status* Parameter **AdStatusCancel**, das Fehlerobjekt, das ist immer festgelegt, um  **AdErrOperationCancelled**.  
+## <a name="error-parameter"></a>Error-Parameter  
+ Der *Error* -Parameter ist ein Verweis auf ein ADO- [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn der *Status* Parameter auf **adstatuserrorsoccurrred**festgelegt ist, enthält das **Fehler** Objektdetails darüber, warum der Vorgang fehlgeschlagen ist. Wenn das Ereignis, das einem abgeschlossenen Ereignis zugeordnet ist, den Vorgang abgebrochen hat, indem der *Status* Parameter auf **adStatusCancel**festgelegt wurde, wird das Fehler Objekt immer auf **aderroperationcancel**festgelegt.  
   
 ## <a name="object-parameter"></a>Object-Parameter  
- Jedes Ereignis empfängt ein oder mehrere Objekte, die die Objekte, die an dem Vorgang beteiligt sind darstellt. Z. B. die **ExecuteComplete** -Ereignis empfängt. ein **Befehl** Objekt eine **Recordset** -Objekt, und ein **Verbindung** Objekt.  
+ Jedes Ereignis empfängt mindestens ein-Objekt, das die Objekte darstellt, die an dem Vorgang beteiligt sind. Das Ereignis **ExecuteComplete** erhält z. b. ein **Befehls** Objekt, ein **Recordset** -Objekt und ein **Verbindungs** Objekt.  
   
-## <a name="reason-parameter"></a>Parameter Grund  
- Die *Grund* Parameter *AdReason*, enthält zusätzliche Informationen darüber, warum das Ereignis aufgetreten ist. Ereignisse mit einem *AdReason* Parameter kann auch für denselben Vorgang für einen anderen Grund jedes Mal mehrere Male aufgerufen werden. Z. B. die **WillChangeRecord** Ereignishandler wird aufgerufen, für Vorgänge, die ausgeführt oder rückgängig gemacht, das Einfügen, löschen oder die Änderung eines Datensatzes. Wenn Sie ein Ereignis verarbeitet, nur wenn er einem bestimmten Grund auftritt, können Sie verwenden möchten. die *AdReason* Parameter, um die Vorkommen filtern Sie nicht interessiert sind. Z. B. wenn, zum Verarbeiten von Datensatz-Change-Ereignissen nur, wenn sie auftreten gewünscht, da ein Eintrag hinzugefügt wurde, können Sie etwa wie folgt verwenden.  
+## <a name="reason-parameter"></a>Reason-Parameter  
+ Der Parameter " *reason* ", *adReason*, bietet zusätzliche Informationen darüber, warum das Ereignis aufgetreten ist. Ereignisse mit einem *adReason* -Parameter können auch für denselben Vorgang mehrmals aufgerufen werden, und zwar aus einem anderen Grund jedes Mal. Der **WillChangeRecord** -Ereignishandler wird z. b. für Vorgänge aufgerufen, die im Begriff sind, das Einfügen, löschen oder Ändern eines Datensatzes rückgängig zu machen oder rückgängig zu machen. Wenn Sie ein Ereignis nur dann verarbeiten möchten, wenn es aus einem bestimmten Grund auftritt, können Sie den *adReason* -Parameter verwenden, um die vorkommen herauszufiltern, an denen Sie nicht interessiert sind. Wenn Sie z. b. Daten Satz Änderungs Ereignisse nur dann verarbeiten möchten, wenn Sie auftreten, weil ein Datensatz hinzugefügt wurde, können Sie Folgendes verwenden:  
   
 ```  
 ' BeginEventExampleVB01  
@@ -82,12 +82,12 @@ End Sub
 ' EndEventExampleVB01  
 ```  
   
- In diesem Fall kann die Benachrichtigung möglicherweise für jede der anderen Gründe auftreten. Es wird jedoch nur einmal für jeden Grund auftreten. Nachdem die Benachrichtigung einmal für jeden Grund aufgetreten ist, erhalten Sie Benachrichtigungen nur für das Hinzufügen eines neuen Datensatzes.  
+ In diesem Fall kann für jeden der anderen Gründe eine Benachrichtigung auftreten. Allerdings wird Sie nur einmal pro Grund ausgeführt. Nachdem die Benachrichtigung aus jedem Grund einmal aufgetreten ist, erhalten Sie nur dann eine Benachrichtigung, wenn ein neuer Datensatz hinzugefügt wird.  
   
- Im Gegensatz dazu müssen Sie *AdStatus* zu **AdStatusUnwantedEvent** nur einmal an, die Anforderung einen Ereignishandler, ohne eine **AdReason** empfangenden Parameter Stop-Ereignis Benachrichtigungen.  
+ Im Gegensatz dazu müssen Sie *adStatus* nur einmal auf **adStatusUnwantedEvent** festlegen, um anzufordern, dass ein Ereignishandler ohne einen **adReason** -Parameter den Empfang von Ereignis Benachrichtigungen beenden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Zusammenwirken der Ereignishandler](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [Zusammenarbeiten von Ereignis Handlern](../../../ado/guide/data/how-event-handlers-work-together.md)   
+ [Ereignistypen](../../../ado/guide/data/types-of-events.md)

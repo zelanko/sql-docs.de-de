@@ -1,5 +1,5 @@
 ---
-title: Sp_helptrigger (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helptrigger (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048222"
 ---
-# <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
+# <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die Typen der DML-Trigger zurück, die in der angegebenen Tabelle für die aktuelle Datenbank definiert sind. ' sp_helptrigger ' kann nicht mit DDL-Triggern verwendet werden. Abfrage der [gespeicherte Systemprozeduren](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) stattdessen-Katalogsicht angezeigt.  
+  Gibt die Typen der DML-Trigger zurück, die in der angegebenen Tabelle für die aktuelle Datenbank definiert sind. sp_helptrigger kann nicht mit DDL-Triggern verwendet werden. Fragen Sie stattdessen die Katalog Sicht der [gespeicherten System Prozeduren](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) ab.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,23 +41,23 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tabname = ] 'table'` Ist der Name der Tabelle in der aktuellen Datenbank für die Triggerinformationen zurückgegeben werden sollen. *Tabelle* ist **nvarchar(776)** , hat keinen Standardwert.  
+`[ @tabname = ] 'table'`Der Name der Tabelle in der aktuellen Datenbank, für die die auslöserinformationen zurückgegeben werden sollen. *Table ist vom Datentyp* **nvarchar (776)** und hat keinen Standardwert.  
   
-`[ @triggertype = ] 'type'` Ist der Typ des DML-Trigger, um die Informationen zurückgegeben werden sollen. *Typ* ist **char(6)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @triggertype = ] 'type'`Der Typ des DML-Triggers, über den Informationen zurückgegeben werden sollen. *Type ist vom Datentyp* **char (6)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**DELETE**|Gibt DELETE-Triggerinformationen zurück.|  
 |**INSERT**|Gibt INSERT-Triggerinformationen zurück.|  
 |**UPDATE**|Gibt UPDATE-Triggerinformationen zurück.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
  Die folgende Tabelle zeigt die im Resultset enthaltenen Informationen an.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Name des Triggers.|  
 |**trigger_owner**|**sysname**|Name des Besitzers der Tabelle, für die der Trigger definiert ist.|  
@@ -69,7 +69,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**trigger_schema**|**sysname**|Name des Schemas, zu dem der Trigger gehört.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) Berechtigung für die Tabelle.  
+ Erfordert die Konfigurations Berechtigung für die [Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md) für die Tabelle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `sp_helptrigger` ausgeführt, um Informationen zu den Triggern in der `Person.Person`-Tabelle zu erzeugen.  
@@ -80,8 +80,8 @@ GO
 EXEC sp_helptrigger 'Person.Person';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

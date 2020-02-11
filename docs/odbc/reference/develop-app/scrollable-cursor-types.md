@@ -1,5 +1,5 @@
 ---
-title: Scrollbare Cursortypen | Microsoft-Dokumentation
+title: Scrollbare Cursor Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,34 +14,34 @@ ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061629"
 ---
 # <a name="scrollable-cursor-types"></a>Scrollbare Cursortypen
-Die vier Typen von bildlauffähigen Cursor werden statische, dynamische, keysetgesteuerte und gemischte. Statische Cursor erkennen wenige oder gar keine Änderungen jedoch relativ günstig zu implementieren sind. Dynamische Cursor erkennen alle Änderungen jedoch aufwendig zu implementieren. Keysetgesteuerte und gemischte Cursor liegen zwischen, die meisten Änderungen erkennen, aber auf weniger Kosten als dynamische Cursor.  
+Die vier Typen von scrollfähigen Cursorn sind statisch, dynamisch, keysetgesteuert und gemischt. Statische Cursor erkennen wenige oder keine Änderungen, sind aber relativ kostengünstig zu implementieren. Dynamische Cursor erkennen alle Änderungen, sind aber aufwendig zu implementieren. Keysetgesteuerte und gemischte Cursor befinden sich dazwischen und erkennen die meisten Änderungen, aber weniger Kosten als dynamische Cursor.  
   
- Die folgenden Begriffe werden verwendet, um die Eigenschaften für jede Art von bildlauffähigen Cursor zu definieren:  
+ Die folgenden Begriffe werden verwendet, um die Merkmale der einzelnen scrollfähigen Cursor Typen zu definieren:  
   
--   **Besitzen Sie Updates, löschungen und einfügungen.** Updates, löschungen und einfügungen, die über den Cursor, entweder durch einen Aufruf von **SQLBulkOperations** oder **SQLSetPos** oder mit ein positioniertes update oder delete-Anweisung.  
+-   **Eigene Updates, Löschungen und Einfügungen.** Aktualisierungen, Löschungen und Einfügungen, die über den Cursor durchgeführt werden, entweder durch einen **SQLBulkOperations** -oder **SQLSetPos** -Befehl oder eine positionierte UPDATE-oder DELETE-Anweisung.  
   
--   **Andere aktualisiert, gelöscht und fügt ein.** Updates, löschungen und nicht von den Cursor, einschließlich derjenigen, die von anderen Vorgängen in der gleichen Transaktion vorgenommenen einfügungen, die durch andere Transaktionen und die von anderen Anwendungen.  
+-   **Andere Updates, Löschungen und Einfügungen.** Updates, Löschungen und Einfügungen, die nicht vom Cursor vorgenommen werden, einschließlich derjenigen, die von anderen Vorgängen in derselben Transaktion, von anderen Transaktionen und von anderen Anwendungen vorgenommenen Vorgängen durchgeführt wurden.  
   
--   **Mitgliedschaft.** Der Satz von Zeilen im Resultset.  
+-   **Mitglied.** Der Satz von Zeilen im Resultset.  
   
--   **Die Reihenfolge.** Die Reihenfolge, in der Zeilen vom Cursor zurückgegeben werden.  
+-   **Reihenfolge.** Die Reihenfolge, in der Zeilen vom Cursor zurückgegeben werden.  
   
--   **Werte.** Die Werte in jeder Zeile im Resultset.  
+-   **Werte.** Die Werte in den einzelnen Zeilen im Resultset.  
   
- Informationen zum Aktualisieren, löschen und Einfügen von Daten zu erhalten, finden Sie unter [Übersicht über die Daten Aktualisierung](../../../odbc/reference/develop-app/updating-data-overview.md).  
+ Informationen zum Aktualisieren, löschen und Einfügen von Daten finden Sie unter Übersicht über das Aktualisieren von [Daten](../../../odbc/reference/develop-app/updating-data-overview.md).  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Statische ODBC-Cursor](../../../odbc/reference/develop-app/odbc-static-cursors.md)  
   
--   [Dynamische Cursor von ODBC](../../../odbc/reference/develop-app/odbc-dynamic-cursors.md)  
+-   [Dynamische ODBC-Cursor](../../../odbc/reference/develop-app/odbc-dynamic-cursors.md)  
   
 -   [Keysetgesteuerte Cursor](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
   

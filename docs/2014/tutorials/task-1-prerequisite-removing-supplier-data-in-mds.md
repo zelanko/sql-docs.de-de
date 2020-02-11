@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten in MDS | Microsoft-Dokumentation'
+title: 'Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten in MDS | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,78 +11,78 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481227"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten aus MDS
-  In dieser Aufgabe entfernen Sie die Lieferantendaten, die in MDS gespeichert werden. Sie hochgeladen haben, die Daten manuell mit **MDS-Excel-Add-in** in der vorherigen Lektion. Das SSIS-Paket, das Sie in dieser Lektion erstellen, lädt die Daten für Sie automatisch in MDS hoch. Bevor Sie das SSIS-Paket testen, müssen Sie daher die Lieferantendaten aus MDS entfernen, die abgeleitete Hierarchie entfernen, die Entitäten "Supplier" und "State" entfernen und die Entität "Supplier" ohne Daten erstellen.  
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten in MDS
+  In dieser Aufgabe entfernen Sie die Lieferantendaten, die in MDS gespeichert werden. Sie haben die Daten in der vorherigen Lektion manuell mithilfe des **MDS-Excel-Add-ins** hochgeladen. Das SSIS-Paket, das Sie in dieser Lektion erstellen, lädt die Daten für Sie automatisch in MDS hoch. Bevor Sie das SSIS-Paket testen, müssen Sie daher die Lieferantendaten aus MDS entfernen, die abgeleitete Hierarchie entfernen, die Entitäten "Supplier" und "State" entfernen und die Entität "Supplier" ohne Daten erstellen.  
   
-1.  Starten Sie **Master Data Manager** durch Navigieren zu **http://localhost/MDS** oder die Website und die angegebene eingabeanwendung beim Konfigurieren von MDS. Weiterhin die **Master Data Manager** öffnen, klicken Sie auf **SQL Server 2012 Master Data Services** oben, um zum Wechseln der **auf der Startseite**.  
+1.  Starten Sie **Master Data Manager** , indem **http://localhost/MDS** Sie zu oder der Website und Anwendung navigieren, die Sie beim Konfigurieren von MDS angegeben haben. Wenn Sie die **Master Data Manager** geöffnet gehalten haben, klicken Sie oben auf **SQL Server 2012 Master Data Services** , um zur **Startseite**zu wechseln.  
   
-2.  Klicken Sie auf **Systemverwaltung** in die **Verwaltungsaufgaben** Abschnitt.  
+2.  Klicken Sie im Abschnitt **administrative Aufgaben** auf **System Verwaltung** .  
   
-3.  Zeigen Sie auf den **verwalten** im Menü, und klicken Sie auf **abgeleitete Hierarchien**. Sie müssen die abgeleitete Hierarchie löschen **SuppliersInState** vor dem Löschen von Entitäten in der **Lieferanten** Modell.  
+3.  Zeigen Sie mit der Maus auf **Verwalten** im Menü, und klicken Sie auf **abgeleitete Hierarchien**. Sie müssen die abgeleitete Hierarchie **suppliersinstate** löschen, bevor Sie die Entitäten im Modell **Suppliers** löschen.  
   
-4.  Wählen Sie **SuppliersInState** aus der **abgeleitete Hierarchie** aus, und klicken Sie auf **X (löschen)** auf der Symbolleiste.  
+4.  Wählen Sie in der Liste **abgeleitete Hierarchie** den Eintrag **suppliersinstate** aus, und klicken Sie auf der Symbolleiste auf die Schaltfläche **X**  
   
-5.  Klicken Sie auf **OK** , Löschvorgang zu bestätigen.  
+5.  Klicken Sie zum Bestätigen des Löschvorgangs auf **OK** .  
   
-6.  Zeigen Sie auf den **verwalten** im Menü, und klicken Sie auf **Entitäten**.  
+6.  Zeigen Sie mit der Maus auf **Verwalten** im Menü, und klicken Sie auf **Entitäten**.  
   
-7.  Klicken Sie auf **Lieferanten** , und klicken Sie auf **löschen (X)** Schaltfläche auf der Symbolleiste, um die Entität zu löschen. Klicken Sie auf **OK** in den Meldungsfeldern.  
+7.  Klicken **Sie in** der Symbolleiste auf die Schaltfläche **Löschen (X)** , um die Entität zu löschen. Klicken Sie in den Meldungs Feldern auf **OK** .  
   
-8.  Wiederholen Sie den vorherigen Schritt löschen **Zustand** Entität.  
+8.  Wiederholen Sie den vorherigen Schritt zum Löschen der **Zustands** Entität.  
   
-9. Schließen Sie nicht **Master Data Manager**.  
+9. Schließen Sie **Master Data Manager**nicht.  
   
-10. Wechseln Sie zu der Excel-Fenster, **Cleansed and Matched Suppliers.xls** Datei geöffnet. Wechseln Sie zu der **Sheet1** unten auf der Registerkarte.  
+10. Wechseln Sie zum Excel-Fenster, das bereinigt wurde und die Datei **Suppliers. xls** geöffnet ist. Wechseln Sie im unteren Bereich zur Registerkarte **Sheet1** .  
   
-11. Wählen Sie nur die **erste Zeile mit Headern**. Wählen Sie keiner anderen Zeile. Sie die Entitäten, die auf Grundlage der Excel-Spalten erstellt werden soll, aber keine Daten hochgeladen werden soll. Daher wählen Sie nur die erste Zeile mit den Headern aus.  
+11. Wählen Sie nur die **erste Zeile mit Headern**aus. Wählen Sie keine andere Zeile aus. Sie möchten die Entitäten auf der Grundlage der Excel-Spalten erstellen, aber keine Daten hochladen. Daher wählen Sie nur die erste Zeile mit den Headern aus.  
   
-12. Klicken Sie auf **Masterdaten** in der Menüleiste.  
+12. Klicken Sie in der Menüleiste auf **Master Daten** .  
   
-13. Klicken Sie auf **Entität erstellen** aus dem Menüband.  
+13. Klicken Sie im Menüband auf **Entität erstellen** .  
   
-14. In **Verbindungen verwalten** Dialogfeld, wenn die Verbindung mit nicht angezeigt wird **lokalen MDS-Server** unter **vorhandene Verbindungen**, gehen Sie folgendermaßen vor:  
+14. Wenn im Dialogfeld **Verbindungen verwalten** die Verbindung mit dem **lokalen MDS-Server** unter **vorhandene Verbindungen**nicht angezeigt wird, gehen Sie wie folgt vor:  
   
-    1.  Wählen Sie **erstellen Sie eine neue Verbindung**, und klicken Sie auf **neu** Schaltfläche.  
+    1.  Wählen Sie **neue Verbindung erstellen**aus, und klicken Sie auf die Schaltfläche **neu** .  
   
-    2.  Geben Sie im Dialogfeld "neue Verbindung hinzufügen" die **Local MDS Server** für **Beschreibung** und **http://localhost/MDS** für **MDS-Serveradresse**, und klicken Sie auf **OK** um das Dialogfeld zu schließen.  
+    2.  Geben Sie im Dialogfeld neue Verbindung hinzufügen den **Namen local MDS Server** für **http://localhost/MDS** **Beschreibung** und für **MDS-Server Adresse**ein, und klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
-15. In **Verbindungen verwalten** wählen Sie im Dialogfeld **Local MDS Server** (http://localhost/MDS), klicken Sie auf **testen** zum Testen der Verbindung. Klicken Sie auf **OK** im Meldungsfeld auf.  
+15. Wählen Sie im Dialogfeld **Verbindungen verwalten** die Option **lokaler MDS-Server** aus (http://localhost/MDS)klicken Sie auf **Testen** , um die Verbindung zu testen. Klicken Sie im Meldungs Feld auf **OK** .  
   
-16. Klicken Sie auf **Connect** zum Herstellen eine Verbindung mit dem MDS-Server.  
+16. Klicken Sie auf **verbinden** , um eine Verbindung mit dem MDS-Server herzustellen.  
   
-17. In der **Entität erstellen** Dialogfeld Feld, gehen Sie folgendermaßen vor:  
+17. Führen Sie im Dialogfeld **Entität erstellen** die folgenden Schritte aus:  
   
-    1.  Überprüfen Sie, ob **Bereich** nastaven NA hodnotu **$1: $1**.  
+    1.  Vergewissern Sie sich, dass der **Bereich** auf **$1: $1**festgelegt ist.  
   
-    2.  Wählen Sie **Lieferanten** für **Modell**.  
+    2.  Wählen Sie **Suppliers** für **Model**aus.  
   
-    3.  Wählen Sie **VERSION_1** für **Version**.  
+    3.  Wählen Sie **VERSION_1** für die **Version**aus.  
   
-    4.  Typ **Lieferanten** für **neuer Entitätsname**.  
+    4.  Geben Sie **Supplier** als **neuen Entitäts Namen**ein.  
   
-    5.  Wählen Sie **SupplierID** für **Code**.  
+    5.  Wählen Sie **SupplierID** für **Code**aus.  
   
-    6.  Wählen Sie **Lieferantenname** für **Namen**.  
+    6.  Wählen Sie **Lieferanten Name** für **Name**aus.  
   
-    7.  Klicken Sie auf **OK** zum Erstellen der Entität, und schließen Sie das Dialogfeld.  
+    7.  Klicken Sie auf **OK** , um die Entität zu erstellen und das Dialogfeld zu schließen.  
   
-18. Schließen **Excel** und **speichern nicht** der Datei.  
+18. Schließen Sie **Excel** , und **Speichern Sie** die Datei nicht.  
   
-19. In **Master Data Manager**, aktualisieren Sie den Internet-Browser, und überprüfen Sie, ob **Lieferanten** Entität wird in der Liste angezeigt.  
+19. Aktualisieren Sie in **Master Data Manager**den Internetbrowser, und vergewissern Sie sich, dass die Entität **Supplier** in der Liste angezeigt wird.  
   
-20. Wechseln Sie zu der **Startseite** durch Klicken auf **SQL Server 2012 Master Data Services** oben.  
+20. Wechseln Sie zur **Startseite** , indem Sie oben auf **SQL Server 2012 Master Data Services** klicken.  
   
-21. Überprüfen Sie, ob **Lieferanten** Modell ausgewählt ist **Modell** und **VERSION_1** ausgewählt ist **Version**.  
+21. Vergewissern Sie sich, dass das Modell **Suppliers** als **Modell** ausgewählt ist und **VERSION_1** für die **Version**ausgewählt ist.  
   
-22. Klicken Sie auf **Explorer**. Beachten Sie, dass die **Lieferanten** Entität mit den Attributen wird erstellt, mit **keine Werte**.  
+22. Klicken Sie auf **Explorer**. Beachten Sie, dass die Entität " **Supplier** " mit allen Attributen **ohne Werte**erstellt wird.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2 &#40;Optional&#41;: Erstellen einer MDS-Abonnementsicht mithilfe von Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [Aufgabe 2 &#40;optionale&#41;: Erstellen einer MDS-Abonnement Sicht mithilfe Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

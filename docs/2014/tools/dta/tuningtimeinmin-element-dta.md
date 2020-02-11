@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268162"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin-Element (DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "63268162"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|`unsignedInt`, unbegrenzte Länge.|  
+|**Datentyp und -länge**|
+  `unsignedInt`, unbegrenzte Länge.|  
 |**Standardwert**|480 Minuten (8 Stunden).|  
 |**Vorkommen**|Erforderlich, sofern kein Wert für das `NumberOfEvents`-Element festgelegt wurde.|  
   
@@ -47,11 +48,11 @@ ms.locfileid: "63268162"
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Untergeordnete Elemente**|None|  
+|**Untergeordnete Elemente**|Keine|  
   
 ## <a name="example"></a>Beispiel  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Im folgenden Codebeispiel wird gezeigt, wie 12 Stunden als maximale Optimierungszeit festgelegt werden:  
   
 ## <a name="code"></a>Code  
@@ -66,7 +67,7 @@ ms.locfileid: "63268162"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

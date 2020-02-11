@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479353"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Schützen einer Master Data Manager-Webanwendung
@@ -23,7 +23,7 @@ ms.locfileid: "65479353"
 > [!NOTE]  
 >  Für die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung kann entweder HTTP oder HTTPS verwendet werden, jedoch nicht beides.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie die Prozedur aus  
   
 -   Sie müssen Administrator auf dem Webserver sein, auf dem [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] installiert ist.  
@@ -36,7 +36,7 @@ ms.locfileid: "65479353"
   
 2.  Klicken Sie im Bereich **Verbindungen** unter **Websites**auf die Website, auf der die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung gehostet wird.  
   
-3.  Klicken Sie im **Aktionsbereich** auf **Bindungen**.  
+3.  Klicken Sie im Bereich **Aktionen** auf **Bindungen**.  
   
 4.  Klicken Sie auf **Hinzufügen**.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "65479353"
   
 9. Klicken Sie zum Schließen des Dialogfelds **Sitebindungen** auf **Schließen**.  
   
-10. Öffnen Sie die Datei "Web.config" von *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\WebApplication.  
+10. Öffnen Sie nun die Datei "Web. config" unter *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\webapplication.  
   
 11. Suchen Sie nach der Zeichenfolge `<security mode="Message">` , und ändern Sie diese in `<security mode="Transport">`.  
   
 12. Speichern und schließen Sie die Datei. Wenn Sie einen Fehler erhalten, kann dies daran liegen, dass Sie die Benutzerkontensteuerung aktiviert haben. Weitere Informationen finden Sie unter [Deaktivieren der Benutzerkontensteuerung](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Benutzer sollten jetzt per HTTPS auf die Website zugreifen können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen Sie eine Master Data Manager-Webanwendung &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)  
   
   

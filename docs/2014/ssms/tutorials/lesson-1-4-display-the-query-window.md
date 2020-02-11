@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63281985"
 ---
 # <a name="display-the-query-window"></a>Anzeigen des Abfragefensters
@@ -26,11 +26,11 @@ ms.locfileid: "63281985"
   
 1.  Klicken Sie auf der Hauptsymbolleiste auf **Datenbank-Engine-Abfrage**. Klicken Sie im Dialogfeld **Verbindung mit Datenbank-Engine herstellen** auf **Verbinden**.  
   
-2.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf Ihren Server und anschließend auf **Neue Abfrage**. In diesem Fall verwendet der Abfrage-Editor die Verbindungsinformationen des registrierten Servers.  
+2.  Klicken Sie in Objekt-Explorer mit der rechten Maustaste auf Ihren Server, und klicken Sie dann auf **neue Abfrage**. In diesem Fall verwendet der Abfrage-Editor die Verbindungsinformationen des registrierten Servers.  
   
      Beachten Sie, dass die Fenster als Fenster im Registerformat auf der rechten Seite des Objekt-Explorers angezeigt werden.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Anzeigen der Seite Details zum Objekt-Explorer](lesson-1-5-show-the-object-explorer-details-page.md)  
   
   

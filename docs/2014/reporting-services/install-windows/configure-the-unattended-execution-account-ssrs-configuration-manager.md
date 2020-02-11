@@ -19,13 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108891"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
   
 -   Senden Sie Verbindungsanforderungen über das Netzwerk für Berichte, die Datenbankauthentifizierung verwenden, oder stellen Sie die Verbindung mit externen Berichtsdatenquellen her, für die keine Authentifizierung erforderlich ist oder verwendet wird. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md) in der SQL Server-Onlinedokumentation.  
@@ -35,31 +36,31 @@ ms.locfileid: "66108891"
  Mit unbeaufsichtigter Berichtsverarbeitung wird jede Berichtsausführung bezeichnet, die durch ein Ereignis (entweder ein geplantes Ereignis oder ein Datenaktualisierungsereignis) und nicht durch eine Benutzeranforderung ausgelöst wird. Der Berichtsserver verwendet das Konto für die unbeaufsichtigte Berichtsverarbeitung, um sich am Computer anzumelden, der die externe Datenquelle hostet. Dieses Konto ist erforderlich, da die Anmeldeinformationen des für den Berichtsserver verwendeten Dienstkontos nie für Verbindungen mit anderen Computern verwendet werden.  
   
 > [!IMPORTANT]  
->  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Insbesondere wird, wenn Sie das Ablaufen ein Kennworts zulassen oder die Kontoinformationen in Active Directory geändert wird, den folgenden Fehler beim nächsten auftreten, die ein Bericht verarbeitet wird: "Fehler bei der Anmeldung (RsLogonFailed) Anmeldefehler: Unbekannter Benutzername oder falsches Kennwort." Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
+>  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Besonders, wenn Sie das Ablaufen eines Kennworts zulassen oder wenn die Kontoinformationen in Active Directory geändert werden, tritt bei der nächsten Verarbeitung eines Berichts der folgende Fehler auf: "Fehler bei der Anmeldung (rsLogonFailed) Anmeldefehler: unbekannter Name oder falsches Kennwort." Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
   
 ## <a name="how-to-configure-the-account"></a>Konfigurieren des Kontos  
  Sie müssen ein Domänenbenutzerkonto verwenden. Damit das Konto seinen Zweck erfüllt, sollte es nicht mit dem Konto identisch sein, unter dem Report Server-Webdienst ausgeführt wird. Verwenden Sie unbedingt ein Konto mit minimalen Berechtigungen (Nur-Lese-Zugriff mit Berechtigungen für Netzwerkverbindungen ist ausreichend) und eingeschränktem Zugriff auf die Computer, die Datenquellen und Ressourcen für den Berichtsserver bereitstellen. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Verwenden Sie zum Angeben des Kontos das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder das Hilfsprogramm **rsconfig** . Das einfachste Verfahren zum Konfigurieren des Kontos für die unbeaufsichtigte Ausführung besteht darin, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool auszuführen und die Anmeldeinformationen auf der Seite Ausführungskonto anzugeben.  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben** aus.  
+2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben**aus.  
   
 3.  Geben Sie das Konto und das Kennwort ein, geben Sie das Kennwort erneut ein, und klicken Sie anschließend auf **Anwenden**.  
   
 ### <a name="using-rsconfig-utility"></a>Verwendung des RSCONFIG-Hilfsprogramms  
- Eine andere Möglichkeit, das Konto festzulegen, bietet das **rsconfig** -Hilfsprogramm. Verwenden Sie zum Angeben des Kontos das **-e** -Argument von **rsconfig**. Die Angabe des **-e** -Arguments für **rsconfig** bewirkt, dass das Hilfsprogramm die Kontoinformationen in die Konfigurationsdatei schreibt. Sie müssen keinen Pfad zu RSReportServer.Config angeben. Führen Sie folgende Schritte aus, um das Konto zu konfigurieren.  
+ Eine andere Möglichkeit, das Konto festzulegen, bietet das **rsconfig** -Hilfsprogramm. Verwenden Sie zum Angeben des Kontos das **-e** -Argument von **rsconfig**. Die Angabe des **-e** -Arguments für **rsconfig** bewirkt, dass das Hilfsprogramm die Kontoinformationen in die Konfigurationsdatei schreibt. Sie müssen keinen Pfad zur Datei RSreportserver.config angeben. Führen Sie die folgenden Schritte aus, um das Konto zu konfigurieren.  
   
 1.  Erstellen Sie ein Domänenkonto, oder wählen Sie ein Domänenkonto aus, das auf Computer und Server zugreifen kann, die Daten oder Dienste für einen Berichtsserver bereitstellen. Sie sollten ein Konto verwenden, das über beschränkte Berechtigungen verfügt (z. B. Nur-Lese-Zugriff).  
   
-2.  Öffnen Sie eine Eingabeaufforderung: Auf der **starten** Menü klicken Sie auf **ausführen**, Typ **Cmd**, und klicken Sie dann auf **OK**.  
+2.  Öffnen Sie eine Eingabeaufforderung: Klicken Sie im **Startmenü** auf **Ausführen**, geben Sie **cmd**ein, und klicken Sie anschließend auf **OK**.  
   
 3.  Geben Sie den folgenden Befehl ein, um das Konto in einer lokalen Berichtsserverinstanz zu konfigurieren:  
   
-     **rsConfig -e -u\<Domäne/Benutzername> -p\<Kennwort**  
+     **rsconfig-e-u\<Domäne/username>-p\<-Kennwort>**  
   
- **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md).  
+ **rsconfig-e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm (SSRS)](../tools/rsconfig-utility-ssrs.md).  
   
 ### <a name="how-account-information-is-stored"></a>Speichern von Kontoinformationen  
  Wenn Sie das Konto festlegen, werden die folgenden Einstellungen als verschlüsselte Werte in der Datei RSreportserver.config in einer lokalen oder einer Remote-Berichtsserverinstanz angegeben:  
@@ -77,7 +78,7 @@ ms.locfileid: "66108891"
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>Verwenden des Kontos für die unbeaufsichtigte Berichtsverarbeitung  
  Zum Abrufen von Imagedateien verwendet der Berichtsserver das Konto automatisch, ohne dass Sie aktiv werden müssen. Sie müssen auf der Seite „Datenquelleneigenschaften“ der Berichtsdatenquelle oder der freigegebenen Datenquelle eine Option für den **Anmeldeinformationstyp** festlegen, um über das Konto eine Verbindung mit externen Datenquellen von Berichtsdaten herzustellen:  
   
--   Wählen Sie im Berichts-Manager oder auf einer SharePoint-Website die **Anmeldeinformationen sind nicht erforderlich** Option.  
+-   Wählen Sie in Berichts-Manager oder auf einer SharePoint-Website die Option **Anmelde Informationen sind nicht erforderlich** aus.  
   
  Das Konto für die unbeaufsichtigte Berichtsverarbeitung wird hauptsächlich dazu verwendet, die Verbindung mit externen Servern herzustellen, und nicht für die Anmeldung bei Datenbankservern. Möchten Sie die Kontoanmeldeinformationen zur Anmeldung an einer Datenbank verwenden, müssen Sie die Anmeldeinformationen in der Verbindungszeichenfolge angeben. Sie können **Integrated Security=SSPI** angeben, wenn der Datenbankserver die integrierte Sicherheit von Windows unterstützt und das für die unbeaufsichtigte Berichtsverarbeitung verwendete Konto über die Berechtigung zum Lesen der Datenbank verfügt. Andernfalls müssen Sie den Benutzernamen und das Kennwort in die Verbindungszeichenfolge eingeben. Dort wird es als Klartext jedem Benutzer angezeigt, der zur Bearbeitung von Datenquellen-Verbindungseigenschaften berechtigt ist.  
   
@@ -103,7 +104,7 @@ ms.locfileid: "66108891"
   
  Die Kontoinformationen werden aus der Datei RSReportServer.config entfernt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Konfigurations-Manager &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurations-Manager für Reporting Services &#40;del-&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255234"
 ---
 # <a name="validate-subscriptions"></a>Abonnements überprüfen
   Im Dialogfeld **Abonnements überprüfen** können Sie angeben, dass Abonnements für eine Transaktionsveröffentlichung überprüft werden sollen, sobald der Verteilungs-Agent für die einzelnen Abonnements das nächste Mal ausgeführt wird. Die Ergebnisse der Überprüfung werden im Replikationsmonitor angezeigt. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Alle SQL Server-Abonnements überprüfen**  
  Wählen Sie diese Option aus, um Daten für alle SQL Server-Abonnements für diese Veröffentlichung zu überprüfen.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63255234"
  **Überprüfungsoptionen**  
  Klicken Sie auf diese Option, um auf das Dialogfeld **Optionen für die Abonnementüberprüfung** zuzugreifen, in dem Sie angeben können, ob die Zeilenanzahlüberprüfung oder die binäre Prüfsummenüberprüfung verwendet werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überprüfen von replizierten Daten](validate-data-at-the-subscriber.md)  
   
   

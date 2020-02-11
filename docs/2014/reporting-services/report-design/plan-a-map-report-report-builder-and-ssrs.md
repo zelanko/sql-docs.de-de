@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105468"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105468"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> Angeben des Zweckes der Karte  
+##  <a name="MapPurpose"></a>Geben Sie den Zweck der Zuordnung an.  
  Ein gut entworfener Bericht stellt Informationen bereit, die Benutzern helfen, sich ihren Anliegen zu widmen. Um eine nützliche, leicht verständliche Kartenansicht zu erstellen, entscheiden Sie, welchen Fragen Sie mit der Karte beantworten wollen. Sie können beispielsweise auf einer Karte die folgenden Arten von Daten visuell darstellen, um Marktchanchen zu identifizieren:  
   
 -   Anteilige Verkäufe in jedem Laden.  
@@ -38,7 +38,7 @@ ms.locfileid: "66105468"
   
  
   
-##  <a name="Data"></a> Angeben der räumlichen und analytischen Daten  
+##  <a name="Data"></a>Angeben der räumlichen und analytischen Daten  
  Sie müssen angeben, welche räumlichen und analytischen Daten Sie benötigen.  
   
  Analytische Daten können aus einem Berichtsdataset, aus Beispieldaten einer Karte aus dem Kartenkatalog oder aus analytischen Daten, die in den räumlichen Daten einer ESRI-Shape-Datei enthalten sind, stammen.  
@@ -77,9 +77,9 @@ ms.locfileid: "66105468"
   
  Räumliche Daten müssen die folgenden Felder enthalten:  
   
--   **Spatial data.** Ein Feld für räumliche Daten, das die Koordinatensätze enthält, die die einzelnen Punkte, Linien und Polygone definieren.  
+-   **Räumliche Daten.** Ein Feld für räumliche Daten, das die Koordinatensätze enthält, die die einzelnen Punkte, Linien und Polygone definieren.  
   
--   **Übereinstimmungsfelder.** Mindestens ein Feld, das jedes räumliche Datenfeld eindeutig identifiziert. Beispielsweise können Sie für einen Punkt, der einen Ladenstandort darstellt, den Namen des Ladens verwenden. Wenn der Name des Ladens in den räumlichen Daten nicht eindeutig ist, können Sie zusätzlich den Namen des Ortes einschließen.  
+-   **Übereinstimmungs Felder.** Mindestens ein Feld, das jedes räumliche Datenfeld eindeutig identifiziert. Beispielsweise können Sie für einen Punkt, der einen Ladenstandort darstellt, den Namen des Ladens verwenden. Wenn der Name des Ladens in den räumlichen Daten nicht eindeutig ist, können Sie zusätzlich den Namen des Ortes einschließen.  
   
  Die Übereinstimmungsfelder werden verwendet, um die räumlichen Daten mit den analytischen Daten zu verknüpfen.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105468"
   
 
   
-##  <a name="MapType"></a> Auswählen eines Kartentyps  
+##  <a name="MapType"></a>Auswählen eines Karten Typs  
  Bei der Ausführung des Karten-Assistenten fügen Sie dem Bericht eine Karte und die erste Kartenebene hinzu. Mit dem Assistenten können Sie dem Bericht einen der folgenden Typen von Karten hinzufügen:  
   
 -   Eine Standardkarte, die Standorte ohne zugeordnete analytische Daten anzeigt.  
@@ -111,14 +111,14 @@ ms.locfileid: "66105468"
   
 |Assistentensymbol|Ebenenformat|Ebenentyp|Beschreibung und Optionen|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_Kartentyp_Polygon_Standard](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Standardkarte|Polygon|Eine Karte, die nur Bereiche anzeigt, wie z. B. Vertriebsgebiete.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe. Eine Palette ist ein vordefinierter Satz von Farben. Wenn alle Farben in einer Palette zugewiesen wurden, werden Farbschattierungen zugewiesen.|  
-|![rs_Kartentyp_Polygon_AnalytischeFarbkarte](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Analytische Farbkarte|Polygon|Eine Karte, die analytische Daten mithilfe unterschiedlicher Farben anzeigt, wie z. B. Umsatzdaten nach Bereich.|  
-|![rs_Kartentyp_Polygon_Blasendiagramm](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Blasendiagrammkarte|Polygon|Eine Karte, die analytische Daten durch unterschiedliche Blasengrößen für unterschiedliche Bereiche anzeigt, wie z. B. Umsatzdaten nach Bereich.<br /><br /> Optionen: Verändern Sie Farben von Bereichen anhand eines zweiten analytischen Felds, und geben Sie farbregeln aus.|  
-|![rs_Kartentyp_Linien_Standard](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Standardkarte (Linien)|Linie|Eine Karte, die nur Linien anzeigt, wie z. B. Lieferrouten.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe.|  
-|![rs_Kartentyp_Linien_Analytisch](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Analytische Karte (Linien)|Linie|Eine Karte, die unterschiedliche Linienfarben und -breiten enthält, wie z. B. für die Anzahl gelieferter Pakete und für Pünktlichkeitsmetriken nach Route.<br /><br /> Optionen: Verändern Sie Linienstärke anhand eines analytischen Felds, verändern Sie Linienfarbe anhand eines zweiten analytischen Felds, und geben Sie farbregeln.|  
-|![rs_Kartentyp_Marker_Einfach](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Einfache Markerkarte|Punkt|Eine Karte, die für jeden Standort einen Marker anzeigt, z. B. für Städte.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe, und ändern Sie Markierungsstil.|  
-|![rs_Kartentyp_Marker_Blasendiagramm](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Blasendiagramm-Markerkarte|Punkt|Eine Karte, die eine Blase für jeden Standort anzeigt, wobei die Blasengröße von einem analytischen Datenfeld abhängt, z. B. Umsatzdaten nach Stadt.<br /><br /> Optionen: Variieren Sie die blasenfarbe anhand eines zweiten analytischen Felds, und geben Sie farbregeln an.|  
-|![rs_Kartentyp_Marker_Analytisch](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Analytische Markerkarte|Punkt|Eine Karte, die an jedem Standort einen Marker anzeigt, wobei Farbe, Größe und Typ der Marker auf analytischen Daten basieren, wie z. B. Produkte mit den besten Verkaufszahlen, Gewinnspanne und Rabattstrategie.<br /><br /> Optionen: Variieren Sie Markertyp anhand eines analytischen Felds, variieren Sie die Markergröße anhand eines zweiten analytischen Felds, variieren Sie die Markerfarbe anhand eines dritten analytischen Felds, und geben Sie farbregeln.|  
+|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Standardkarte|Polygon|Eine Karte, die nur Bereiche anzeigt, wie z. B. Vertriebsgebiete.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe. Eine Palette ist ein vordefinierter Satz von Farben. Wenn alle Farben in einer Palette zugewiesen wurden, werden Farbschattierungen zugewiesen.|  
+|![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Analytische Farbkarte|Polygon|Eine Karte, die analytische Daten mithilfe unterschiedlicher Farben anzeigt, wie z. B. Umsatzdaten nach Bereich.|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Blasendiagrammkarte|Polygon|Eine Karte, die analytische Daten durch unterschiedliche Blasengrößen für unterschiedliche Bereiche anzeigt, wie z. B. Umsatzdaten nach Bereich.<br /><br /> Optionen: Verändern Sie die Farben von Bereichen anhand eines zweiten analytischen Felds, und geben Sie Farbregeln an.|  
+|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Standardkarte (Linien)|Zeile|Eine Karte, die nur Linien anzeigt, wie z. B. Lieferrouten.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe.|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Analytische Karte (Linien)|Zeile|Eine Karte, die unterschiedliche Linienfarben und -breiten enthält, wie z. B. für die Anzahl gelieferter Pakete und für Pünktlichkeitsmetriken nach Route.<br /><br /> Optionen: Verändern Sie Linienstärke anhand eines analytischen Felds, verändern Sie die Linienfarbe anhand eines zweiten analytischen Felds, und geben Sie Farbregeln an.|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Einfache Markerkarte|Point|Eine Karte, die für jeden Standort einen Marker anzeigt, z. B. für Städte.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe, und ändern Sie das Markerformat.|  
+|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Blasendiagramm-Markerkarte|Point|Eine Karte, die eine Blase für jeden Standort anzeigt, wobei die Blasengröße von einem analytischen Datenfeld abhängt, z. B. Umsatzdaten nach Stadt.<br /><br /> Optionen: Verändern Sie die Blasenfarbe anhand eines zweiten analytischen Felds, und geben Sie Farbregeln an.|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Analytische Markerkarte|Point|Eine Karte, die an jedem Standort einen Marker anzeigt, wobei Farbe, Größe und Typ der Marker auf analytischen Daten basieren, wie z. B. Produkte mit den besten Verkaufszahlen, Gewinnspanne und Rabattstrategie.<br /><br /> Optionen: Verändern Sie den Markertyp anhand eines analytischen Felds, verändern Sie die Markergröße anhand eines zweiten analytischen Felds, verändern Sie die Markerfarbe anhand eines dritten analytischen Felds, und geben Sie Farbregeln an.|  
   
  Nachdem Sie mit dem Karten-Assistenten eine Karte hinzugefügt haben, können Sie mit dem Ebenen-Assistenten zusätzliche Ebenen erstellen oder die Optionen für eine Ebene ändern. Weitere Informationen zu Assistenten finden Sie unter [Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -126,16 +126,16 @@ ms.locfileid: "66105468"
   
  
   
-##  <a name="Legend"></a> Planen von Legenden  
+##  <a name="Legend"></a>Planen von Legenden  
  Um den Benutzern die Interpretation einer Karte zu erleichtern, können Sie mehrere Kartenlegenden, eine Farbskala und eine Entfernungsskala hinzufügen. Planen Sie beim Entwerfen einer Karte, wo die Legenden angezeigt werden sollen. Sie können die folgenden Informationen zu jeder Legende angeben:  
   
--   **Ort der Legende.** Legenden können beispielsweise innerhalb oder außerhalb des Viewports angezeigt werden, sowie an 12 diskreten Orten relativ zum Viewport.  
+-   **Speicherort der Legende.** Legenden können beispielsweise innerhalb oder außerhalb des Viewports angezeigt werden, sowie an 12 diskreten Orten relativ zum Viewport.  
   
--   **Legendenarten**. Sie können beispielsweise Eigenschaften für den Schriftschnitt, die Rahmenart, Trennlinien und die Füllung angeben.  
+-   **Legenden Stile**. Sie können beispielsweise Eigenschaften für den Schriftschnitt, die Rahmenart, Trennlinien und die Füllung angeben.  
   
--   **Legendentitel.** Sie können beispielsweise den Titeltext angeben und unabhängig steuern, ob der Titel für eine Kartenlegende oder die Farbskala angezeigt werden soll.  
+-   **Legenden Titel.** Sie können beispielsweise den Titeltext angeben und unabhängig steuern, ob der Titel für eine Kartenlegende oder die Farbskala angezeigt werden soll.  
   
--   **Kartenlegendenlayout.** Kartenlegenden können beispielsweise als hohe oder breite Tabellen angezeigt werden.  
+-   **Karten Legenden Layout.** Kartenlegenden können beispielsweise als hohe oder breite Tabellen angezeigt werden.  
   
  Der Inhalt der Legende wird während der Berichtsverarbeitung auf der Grundlage von Regeloptionen automatisch erstellt, die Sie für jede Ebene festlegen.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66105468"
   
 
   
-##  <a name="Embedding"></a> Finden eines Gleichgewichts zwischen Definitionsgröße und Verarbeitungszeit des Berichts  
+##  <a name="Embedding"></a>Ausgleichen der Größe der Berichts Definition und der Berichts Verarbeitungszeit  
  Um Berichte für Karten gut zu entwerfen, müssen Sie ein Gleichgewicht zwischen den Optionen finden, die die Leistung und die Definitionsgröße des Berichts steuern. Kartenelemente, die auf räumlichen Daten oder Bing-Kartenkacheln basieren, können statisch sein und in die Berichtsdefinition eingebettet werden oder dynamisch sein und bei jeder Verarbeitung des Berichts erstellt werden. Sie müssen die Zielkonflikte für statische und dynamische Kartendaten bewerten und das für Ihre Situation angemessene Gleichgewicht suchen. Beachten Sie die folgenden Informationen, um diese Entscheidung zu treffen:  
   
 -   Eingebettete Kartenelemente können die Größe der Berichtsdefinition bedeutend erhöhen, aber reduzieren die Zeit, die erforderlich ist, um die Karte im Bericht anzuzeigen. Möglicherweise gelten für den Berichtsserver Größenbeschränkungen, die Sie berücksichtigen müssen.  
@@ -160,10 +160,10 @@ ms.locfileid: "66105468"
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Kartenbericht (Berichts-Generator)](../tutorial-map-report-report-builder.md)   
+ [Tutorial: Karten Bericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Karten Berichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

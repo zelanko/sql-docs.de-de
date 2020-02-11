@@ -1,5 +1,5 @@
 ---
-title: Auswählen des Tabellenlayouts | Microsoft-Dokumentation
+title: Tabellen Layout auswählen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109851"
 ---
 # <a name="choose-the-table-layout"></a>Auswählen des Tabellenlayouts
   Verwenden Sie die Seite Tabellenlayout auswählen des Berichts-Assistenten, um das Layout der Tabelle im Bericht auszuwählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Abgestuft**  
  Erstellen Sie einen Bericht, der eine Spalte für jedes Feld enthält, wobei Gruppenfelder in Kopfzeilen von Gruppen auf der linken Seite der Detailfeldspalten angezeigt werden. Dieser Tabellentyp enthält keine Gruppenfußzeilen.  
   
- **Block**  
+ **Baustein**  
  Erstellen Sie einen Bericht, der eine Spalte für jedes Feld enthält, wobei Gruppenfelder in der ersten Detailzeile für jede Gruppe angezeigt werden. Dieser Tabellentyp enthält nur dann Gruppenfußzeilen, wenn auch die Option **Mit Teilergebnissen** angegeben ist.  
   
  **Mit Teilergebnissen**  
@@ -35,7 +35,7 @@ ms.locfileid: "66109851"
  **Drilldown aktivieren**  
  Wählen Sie diese Option aus, um die inneren Gruppen des Berichts auszublenden, und aktivieren Sie einen Sichtbarkeitswechsel, wodurch ein Drilldownbericht entsteht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hilfe des Berichts-Assistenten](../../2014/reporting-services/report-wizard-help.md)  
   
   

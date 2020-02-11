@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105237"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level-Funktion (Berichts-Generator und SSRS)
@@ -31,13 +31,13 @@ Level(scope)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Bereich*  
+ *scope*  
  (`String`) (optional). Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Gibt einen Wert vom Typ `Integer` zurück. Wenn *Bereich* gibt eine Dataset oder einem Datenbereich oder eine nicht rekursive Gruppierung (d. h. eine Gruppierung ohne `Parent` Element), `Level` gibt 0 zurück. Wenn *scope* weggelassen wird, wird die Ebene des aktuellen Bereichs zurückgegeben.  
+ Gibt einen Wert vom Typ `Integer` zurück. Wenn *Scope* ein DataSet oder einen Datenbereich angibt oder eine nicht rekursive Gruppierung (d. h. eine Gruppierung ohne `Parent` -Element) `Level` angibt, wird 0 zurückgegeben. Wenn *scope* weggelassen wird, wird die Ebene des aktuellen Bereichs zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der von der `Level`-Funktion zurückgegebene Wert ist nullbasiert, d. h., die erste Ebene in einer Hierarchie hat den Wert 0.  
   
  Die `Level`-Funktion kann verwendet werden, um den Einzug in einer rekursiven Hierarchie, z. B. einer Mitarbeiterliste, bereitzustellen.  
@@ -51,7 +51,7 @@ Level(scope)
 =Level("Employees")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   

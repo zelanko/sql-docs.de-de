@@ -1,5 +1,5 @@
 ---
-title: Übersicht über multidimensionale Schemas und Daten | Microsoft-Dokumentation
+title: Übersicht über mehrdimensionale Schemas und Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,32 +13,32 @@ ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923188"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Übersicht über mehrdimensionale Schemas und Daten
-## <a name="understanding-multidimensional-schemas"></a>Grundlegendes zu MDX-Schemas  
- Das zentrale Metadatenobjekt in ADO MD ist die *Cube*, die besteht aus einem strukturierten Satz von verwandten Dimensionen, Hierarchien, Ebenen und Elemente.  
+## <a name="understanding-multidimensional-schemas"></a>Grundlegendes zu mehrdimensionalen Schemas  
+ Das zentrale Metadatenobjekt in ADO MD ist der *Cube*, der aus einer strukturierten Menge verwandter Dimensionen, Hierarchien, Ebenen und Elemente besteht.  
   
- Ein *Dimension* ist eine unabhängige Kategorie von Daten aus der mehrdimensionalen Datenbank, die Geschäftsentitäten abgeleitet. Eine Dimension enthält in der Regel die Elemente, die als Kriterien eine Abfrage für die Measures der Datenbank verwendet werden.  
+ Eine *Dimension* ist eine unabhängige Kategorie von Daten aus ihrer mehrdimensionalen Datenbank, die von Ihren Geschäfts Entitäten abgeleitet ist. Eine Dimension enthält normalerweise Elemente, die als Abfrage Kriterien für die Measures der Datenbank verwendet werden sollen.  
   
- Ein *Hierarchie* entspricht dem Pfad der Aggregation einer Dimension. Eine Dimension möglicherweise mehrere Ebenen der Granularität, die über-/ unterordnungsbeziehung aufweisen. Eine Hierarchie definiert, wie diese Ebenen verknüpft sind.  
+ Eine *Hierarchie* ist ein Pfad zur Aggregation einer Dimension. Eine Dimension kann mehrere Granularitätsebene aufweisen, die über Beziehungen zwischen übergeordneten und untergeordneten Elementen verfügen. Eine Hierarchie definiert, wie diese Ebenen verknüpft sind.  
   
- Ein *Ebene* ist ein Schritt der Aggregation in einer Hierarchie. Für Dimensionen mit mehreren Ebenen von Informationen ist jede Ebene ein auf.  
+ Eine *Ebene* ist ein Aggregations Schritt in einer Hierarchie. Bei Dimensionen mit mehreren Informationsebenen ist jede Ebene eine Ebene.  
   
- Ein *Member* ein Datenelement in einer Dimension ist. In der Regel erstellen eine Beschriftung oder ein Maß für die Datenbank mithilfe von Membern zu beschreiben.  
+ Ein *Member* ist ein Datenelement in einer Dimension. In der Regel erstellen Sie eine Beschriftung oder beschreiben ein Measure der Datenbank mithilfe von Membern.  
   
- Cubes werden durch dargestellt [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) Objekte im ADO MD. Dimensionen, Hierarchien, Ebenen und Elemente werden auch durch die entsprechenden ADO MD-Objekte dargestellt: [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md), und [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ Cubes werden in ADO MD durch [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) -Objekte dargestellt. Dimensionen, Hierarchien, Ebenen und [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)werden auch durch die entsprechenden ADO MD Objekte dargestellt: [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md)und Element.  
   
-### <a name="dimensions"></a>Abmessungen  
- Die Dimensionen eines Cubes richten sich nach Ihrer Geschäftseinheiten und die Arten von Daten, die in der Datenbank modelliert werden. In der Regel ist jede Dimension, eine unabhängige Einstiegspunkt oder einen Mechanismus zum Auswählen von Daten.  
+### <a name="dimensions"></a>Dimensionen  
+ Die Dimensionen eines Cubes hängen von Ihren Geschäfts Entitäten und Datentypen ab, die in der Datenbank modelliert werden sollen. In der Regel handelt es sich bei jeder Dimension um einen unabhängigen Einstiegspunkt oder Mechanismus zum Auswählen von Daten.  
   
- Ein Cube mit Verkaufsdaten hat beispielsweise die folgenden fünf Dimensionen: Vertriebsmitarbeiter, Geography, Zeit, Produkte und Measures. Die Measures-Dimension enthält Werte des tatsächlichen Umsatzdaten, während die anderen Dimensionen darstellen Möglichkeiten zum Kategorisieren und gruppiert die Werte für die Verkaufsdaten.  
+ Ein Cube, der Umsatzdaten enthält, hat beispielsweise die folgenden fünf Dimensionen: SalesPerson, Geography, Time, Products und Measures. Die Measures-Dimension enthält tatsächliche Umsatzdaten Werte, während die anderen Dimensionen Methoden zum Kategorisieren und Gruppieren der Umsatzdaten Werte darstellen.  
   
- Die Geography-Dimension sind die folgenden Elemente:  
+ Die Geography-Dimension verfügt über die folgenden Member:  
   
 ```console
 {All, North America, Europe, Canada, USA, UK, Germany, Canada-West,  
@@ -51,25 +51,25 @@ Hamburg, Munich, Stuttgart}
 ```  
   
 ### <a name="hierarchies"></a>Hierarchien  
- Definieren von Hierarchien die Methoden in denen die Ebenen einer Dimension "Rollup" oder gruppiert werden können. Eine Dimension kann mehr als eine Hierarchie aufweisen. Eine natürliche Hierarchie ist in der Geography-Dimension vorhanden:  
+ Hierarchien definieren die Möglichkeiten, mit denen die Ebenen einer Dimension "hochskalieren" oder gruppiert werden können. Eine Dimension kann über mehr als eine Hierarchie verfügen. In der Geography-Dimension ist eine natürliche Hierarchie vorhanden:  
   
 ### <a name="levels"></a>Levels  
- In der Beispiel-Geography-Dimension in der vorherigen Abbildung dargestellte stellt jedes Feld eine Ebene in der Hierarchie dar.  
+ In der in der vorherigen Abbildung abgebildeten geography-Beispiel Dimension stellt jedes Feld eine Ebene in der Hierarchie dar.  
   
- Jede Ebene weist eine Menge von Elementen, wie folgt aus:  
+ Jede Ebene verfügt über eine Reihe von Membern, wie im folgenden dargestellt:  
   
--   die Welt `= {All}`  
+-   die Welt`= {All}`  
   
--   Kontinente `= {North America, Europe}`  
+-   Sub`= {North America, Europe}`  
   
--   Länder `= {Canada, USA, UK, Germany}`  
+-   Länder`= {Canada, USA, UK, Germany}`  
   
--   Regionen `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   An`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Städte `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Städte`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Member  
- Elemente auf der Blattebene einer Hierarchie keine untergeordneten Elemente aufweisen, und Elemente auf der Stammebene kein übergeordnetes Element aufweisen. Alle anderen Elemente verfügen über mindestens ein übergeordnetes Element und mindestens ein untergeordnetes Element. Ein teilweise Durchlauf der Hierarchiestruktur in der Geography-Dimension gibt z. B. die folgenden über-und untergeordneten Beziehungen:  
+### <a name="members"></a>Members  
+ Elemente auf der Blatt Ebene einer Hierarchie haben keine untergeordneten Elemente, und Elemente auf der Stamm Ebene haben kein übergeordnetes Element. Alle anderen Member haben mindestens ein übergeordnetes Element und mindestens ein untergeordnetes Element. Beispielsweise ergibt eine partielle Durchquerung der Hierarchiestruktur in der Geography-Dimension die folgenden Beziehungen zwischen übergeordneten und untergeordneten Elementen:  
   
 -   `{All} (parent of) {Europe, North America}`  
   
@@ -79,11 +79,11 @@ Hamburg, Munich, Stuttgart}
   
 -   `{USA-NW} (parent of) {Boise, Seattle}`  
   
- Mitglieder können auf eine oder mehrere Hierarchien pro Dimension konsolidiert werden. Erwägen Sie eine Time-Dimension, es zwei Möglichkeiten gibt, die Rollup auf der Year-Ebene auf der Ebene von Tagen:  
+ Member können in einer oder mehreren Hierarchien pro Dimension konsolidiert werden. Stellen Sie sich eine Zeitdimension vor, in der es zwei Möglichkeiten gibt, ein Rollup auf die Year-Ebene von der Days-Ebene auszuführen  
   
- Dieses Beispiel veranschaulicht außerdem ein weiteres Merkmal: Einige Member der Ebene der Hierarchie Jahr-Woche-Woche werden nicht in einer beliebigen Ebene der Quarter-Year-Hierarchie angezeigt. Daher muss eine Hierarchie nicht eingeschlossen werden alle Elemente einer Dimension.  
+ Dieses Beispiel veranschaulicht auch ein weiteres Merkmal: einige Member der Wochen-Hierarchie werden in keiner Ebene der Year-Quarter-Hierarchie angezeigt. Daher muss eine Hierarchie nicht alle Elemente einer Dimension enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

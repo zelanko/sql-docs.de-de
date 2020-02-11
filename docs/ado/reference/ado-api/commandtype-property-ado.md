@@ -16,30 +16,30 @@ ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919696"
 ---
 # <a name="commandtype-property-ado"></a>CommandType-Eigenschaft (ADO)
-Gibt den Typ des eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  
+Gibt den Typ eines [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt eine oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte.  
+ Legt einen oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) -Werte fest oder gibt ihn zurück.  
   
 > [!NOTE]
->  Verwenden Sie nicht die **CommandTypeEnum** Werte **AdCmdFile** oder **AdCmdTableDirect** mit **CommandType**. Diese Werte können nur verwendet werden, als Optionen, mit der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) und [Requery](../../../ado/reference/ado-api/requery-method.md) Methoden eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+>  Verwenden Sie die **commandtypeaufum** -Werte **adcmdfile** oder **adCmdTableDirect** nicht mit **CommandType**. Diese Werte können nur als Optionen mit den [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -und [Requery](../../../ado/reference/ado-api/requery-method.md) -Methoden eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)verwendet werden.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **Befehlstyp (CommandType)** Eigenschaft zur Auswertung der Optimierung der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **CommandType** -Eigenschaft, um die Auswertung der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft zu optimieren.  
   
- Wenn die **Befehlstyp (CommandType)** Eigenschaftswert wird auf den Standardwert festgelegt **AdCmdUnknown**, treten möglicherweise Leistungseinbußen hinnehmbar da ADO Aufrufe an den Anbieter zu entscheiden, ob vornehmen, muss die  **CommandText** -Eigenschaft ist eine SQL-Anweisung, einer gespeicherten Prozedur oder einen Tabellennamen an. Wenn Sie wissen, welche Art von Befehl, die Sie verwenden werden, Festlegen der **Befehlstyp (CommandType)** rowsetcache ADO, um direkt auf den gewünschten Code zu wechseln. Wenn die **Befehlstyp (CommandType)** Eigenschaft entspricht nicht den Typ des Befehls in die **CommandText** -Eigenschaft, ein Fehler auftritt, beim Aufrufen der [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) Methode.  
+ Wenn der **CommandType** -Eigenschafts Wert auf den Standardwert **adCmdUnknown**festgelegt ist, kann die Leistung beeinträchtigt werden, da ADO Aufrufe an den Anbieter ausführen muss, um zu bestimmen, ob die **CommandText** -Eigenschaft eine SQL-Anweisung, eine gespeicherte Prozedur oder ein Tabellenname ist. Wenn Sie wissen, welche Art von Befehl Sie verwenden, weist das Festlegen der **CommandType** -Eigenschaft ADO an, direkt zum relevanten Code zu wechseln. Wenn die **CommandType** -Eigenschaft nicht mit dem Typ des Befehls in der **CommandText** -Eigenschaft identisch ist, tritt ein Fehler auf, wenn Sie die [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) -Methode aufruft.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)

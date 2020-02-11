@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480006"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy
@@ -26,8 +26,8 @@ ms.locfileid: "65480006"
   
  Wenn Sie ein Paket bereitstellen möchten, das nur Modellobjekte enthält, können Sie stattdessen den Modellbereitstellungs-Assistenten in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung verwenden. Weitere Informationen finden Sie unter [Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Diese Version des Tools MDSModelDeploy kann nicht mehrere Gigabyte (GB) Arbeitsspeicher verwenden. Beim Erstellen oder Bereitstellen von großen Modellen **Model-Objekte und Daten** Option "nicht genügend Arbeitsspeicher" oder "Stream war zu lang"-Fehler können auftreten. Um dieses Problem zu beheben, verwenden Sie MDS staging, um die Daten bereitzustellen; oder ein upgrade auf die MDS-2016 oder höher, die die aktualisierte Version des Tools MDSModelDeploy enthält.
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+> Diese Version des mdsmodelbereitstellungs-Tools kann nicht mehr als Gigabyte (GB) Arbeitsspeicher verwenden. Wenn Sie große Modelle mithilfe der Option **Modell Objekte und Daten** erstellen oder bereitstellen, tritt möglicherweise der Fehler "nicht genügend Arbeitsspeicher" oder "der Stream war zu lang" auf. Um dieses Problem zu beheben, verwenden Sie das MDS-Staging zum Bereitstellen der Daten. oder führen Sie ein Upgrade auf MDS 2016 oder eine höhere Version durch, einschließlich der aktualisierten Version des mdsmodelbereitstellungs-Tools.
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 1.  Die grundlegenden Berechtigungen zum Ausführen des MDSModelDeploy-Tools lauten wie folgt:  
@@ -46,7 +46,7 @@ ms.locfileid: "65480006"
   
     -   Funktionsberechtigung für den MDS-Explorer  
   
-    -   Funktionsberechtigung für die MDS-Integrationsmanagement  
+    -   Funktions Berechtigung für die MDS-Integrations Verwaltung  
   
     -   Funktionsberechtigung für die MDS-Systemverwaltung  
   
@@ -58,7 +58,7 @@ ms.locfileid: "65480006"
   
  Es muss ein Modell vorhanden sein, aus dem Sie ein Paket erstellen können. Weitere Informationen finden Sie unter [Erstellen eines Modells &#40;Master Data Services&#41;](create-a-model-master-data-services.md).  
   
- Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)zuzugreifen.  
+ Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>So erstellen Sie ein Modellbereitstellungspaket mit MDSModelDeploy  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65480006"
   
 2.  Navigieren Sie zum Speicherort von "MDSModelDeploy.exe".  
   
-    -   Wenn MDS am Standardspeicherort installiert wurde, wird die Datei im *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\Configuration.  
+    -   Wenn MDS am Standard Speicherort installiert wurde, befindet sich die Datei unter *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\configuration.  
   
     -   Wenn MDS nicht am Standardspeicherort installiert wurde, suchen Sie auf dem lokalen Computer nach der Datei "MDSModelDeploy.exe".  
   
@@ -98,8 +98,8 @@ ms.locfileid: "65480006"
   
 -   [Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Optionen für Modellbereitstellung &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Modell Bereitstellungs Optionen &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
  [Bereitstellen von Modellen &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

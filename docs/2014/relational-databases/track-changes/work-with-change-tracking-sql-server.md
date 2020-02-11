@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270226"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "63270226"
   
      Die folgende Abbildung zeigt, wie CHANGETABLE(CHANGES ...) verwendet wird, um Änderungen abzurufen.  
   
-     ![Beispiel für Abfrageausgabe bei der Änderungsnachverfolgung](../../database-engine/media/queryoutput.gif "Beispiel für Abfrageausgabe bei der Änderungsnachverfolgung")  
+     ![Beispiel einer Ausgabe einer Änderungsnachverfolgungs-Abfrage](../../database-engine/media/queryoutput.gif "Beispiel einer Ausgabe einer Änderungsnachverfolgungs-Abfrage")  
   
  CHANGE_TRACKING_CURRENT_VERSION()-Funktion  
  Diese Funktion wird zum Abrufen der aktuellen Version verwendet. Diese wird das nächste Mal verwendet, wenn Änderungen abgerufen werden. Diese Version stellt die Version der letzten Transaktion dar, für die ein Commit ausgeführt wurde.  
@@ -431,7 +431,7 @@ COMMIT TRAN
   
 -   Zeichnen Sie die Versionsnummer der letzten Synchronisierung auf dem Server auf, wenn ein Client Änderungen abfragt. Wenn ein Problem mit den Daten vorliegt, stimmen die Versionsnummern der letzten Synchronisierung nicht überein. Dies weist darauf hin, dass eine Neuinitialisierung erforderlich ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
  [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Umbenennen einer Analysis Services-Instanz | Microsoft-Dokumentation
+title: Umbenennen einer Analysis Services Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079619"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Umbenennen einer Analysis Services-Instanz
-  Sie können eine vorhandene Instanz von umbenennen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mithilfe der **Instanz umbenennen** Dialogfeld.  
+  Mit dem Dialogfeld [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Instanz umbenennen** können Sie eine vorhandene Instanz von umbenennen.  
   
 > [!IMPORTANT]  
 >  Das Tool zum Umbenennen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen wird beim Umbenennen der Instanz mit erhöhten Rechten ausgeführt und aktualisiert den Windows-Dienstnamen, Sicherheitskonten und Registrierungseinträge, die dieser Instanz zugeordnet sind. Um sicherzustellen, dass diese Aktionen stattfinden, muss das Tool als lokaler Systemadministrator ausgeführt werden.  
@@ -35,7 +35,7 @@ ms.locfileid: "66079619"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>So benennen Sie eine Instanz von Analysis Services um  
   
-1.  Starten Sie die **Instanzumbenennung** Tool **asinstancerename.exe**, von C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Starten Sie das Tool zum **Umbenennen von Instanzen** ( **asinstancerename. exe**) aus c:\Programme\Microsoft SQL server\110\tools\binn\managementstudio.  
   
 2.  Wählen Sie im Dialogfeld **Instanz umbenennen** aus der Liste **Umzubenennende Instanz** die Instanz aus, die Sie umbenennen möchten.  
   
@@ -57,22 +57,22 @@ ms.locfileid: "66079619"
   
      Das Aktualisieren eines Datenbank-Anmeldenamens oder von Dateiberechtigungen ist erforderlich, wenn Sie ein virtuelles Konto zum Bereitstellen des Diensts verwendet haben. Virtuelle Konten basieren auf dem Instanznamen. Wenn Sie die Instanz umbenennen, wird daher gleichzeitig auch das virtuelle Konto aktualisiert. Dies bedeutet, dass alle vorherigen Anmeldenamen oder Berechtigungen, die Sie für die vorherige Instanz erstellt haben, nicht mehr gültig sind.  
   
-     Dies wird im folgenden Beispiel veranschaulicht. Nehmen wir an, dass Sie einen Server im tabellarischen Modus als Instanz mit dem Namen "Tabular" mit dem virtuellen Standardkonto, was in der folgenden Konfiguration installiert:  
+     Dies wird im folgenden Beispiel veranschaulicht. Angenommen, Sie haben einen Server im tabellarischen Modus als Instanz mit dem Namen "tabellarisch" unter Verwendung des virtuellen Standard Kontos installiert. Dies führt zu folgender Konfiguration:  
   
-    1.  Instanzname = \<Server > \TABULAR  
+    1.  Instanzname \<= Server> \tabellarisch  
   
     2.  Dienstname = MSOLAP$TABULAR  
   
     3.  Virtuelles Konto = NT-Dienst\ MSOLAP$TABULAR  
   
-     Jetzt nehmen Sie die Instanz in "TAB2" umbenennen. Nach der Namensänderung würde die Konfiguration wie folgt aussehen:  
+     Nehmen Sie nun an, Sie benennen die Instanz in "Tab2" um. Nach der Namensänderung würde die Konfiguration wie folgt aussehen:  
   
-    1.  Instanzname = \<Server > \TAB2  
+    1.  Instanzname \<= Server> \tab2  
   
     2.  Dienstname = MSOLAP$TAB2  
   
     3.  Virtuelles Konto = NT-Dienst\ MSOLAP$TAB2  
   
-     Wie Sie sehen können, sind Datenbank- und Dateiberechtigungen, die "NT-dienst\ MSOLAP$ TABULAR" zuvor gewährt wurden, nicht mehr gültig. Um sicherzustellen, dass Tasks und vom Dienst ausgeführten Vorgänge ausgeführt werden, wie zuvor, nun müssen "NT-dienst\ MSOLAP$ TAB2" neue Datenbank- und Dateiberechtigungen gewähren.  
+     Wie Sie sehen können, sind Datenbank-und Dateiberechtigungen, die zuvor "NT-Dienst \ MSOLAP $ tabellarisch" erteilt wurden, nicht mehr gültig. Um sicherzustellen, dass die vom Dienst ausgeführten Tasks und Vorgänge wie zuvor ausgeführt werden, müssen Sie jetzt der "NT-Dienst \ MSOLAP $ Tab2" neue Datenbank-und Dateiberechtigungen erteilen.  
   
   

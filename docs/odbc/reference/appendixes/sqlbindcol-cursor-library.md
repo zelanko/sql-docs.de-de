@@ -1,5 +1,5 @@
 ---
-title: SQLBindCol (Cursor Library) | Microsoft-Dokumentation
+title: SQLBindCol (Cursor Bibliothek) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064973"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (Cursorbibliothek)
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- In diesem Thema erläutert die Verwendung von der **SQLBindCol** -Funktion in der Cursorbibliothek. Allgemeine Informationen zur **SQLBindCol**, finden Sie unter [SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+ In diesem Thema wird die Verwendung der **SQLBindCol** -Funktion in der Cursor Bibliothek erläutert. Allgemeine Informationen zu **SQLBindCol**finden Sie unter [SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
- Ordnet eine oder mehrere Puffer für die Cursorbibliothek zum Zurückgeben des aktuellen Rowsets in die Anwendung. Ruft **SQLBindCol** einmal oder mehrmals, um diese Puffer auf das Resultset zu binden.  
+ Eine Anwendung ordnet einen oder mehrere Puffer zu, damit die Cursor Bibliothek das aktuelle Rowset in zurückgibt. **SQLBindCol** wird einmal oder mehrmals aufgerufen, um diese Puffer an das Resultset zu binden.  
   
- Kann eine Anwendung aufrufen **SQLBindCol** Ergebnis erneut binden Resultsetspalten nach aufgerufen wurde **SQLExtendedFetch**, **SQLFetch**, oder **SQLFetchScroll**, solange die C-Datentyp, die Spaltengröße und die Dezimalstellen der gebundenen Spalte unverändert bleiben. Die Anwendung muss den Cursor zum Binden von Spalten in anderen Adressen nicht geschlossen.  
+ Eine Anwendung kann **SQLBindCol** aufrufen, um die Resultsetspalten erneut zu binden, nachdem Sie **SQLExtendedFetch**, **SQLFetch**oder **SQLFetchScroll**aufgerufen hat, sofern der C-Datentyp, die Spaltengröße und die Dezimalziffern der gebundenen Spalte unverändert bleiben. Die Anwendung muss den Cursor nicht schließen, um Spalten erneut an verschiedene Adressen zu binden.  
   
- Die Cursorbibliothek unterstützt das Festlegen der SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut Bindung Offsets zu verwenden. (**SQLBindCol** muss nicht aufgerufen werden, für diese erneute Bindung stattfinden.) Wenn die Cursorbibliothek verwendet wird, mit einer ODBC- *3.x* Treiber, der Offset für die Bindung ist nicht verwendet werden, wenn **SQLFetch** aufgerufen wird. Der Offset für die Bindung wird verwendet, wenn **SQLFetch** wird aufgerufen, wenn die Cursorbibliothek verwendet wird, mit einer ODBC- *2.x* Treiber da **SQLFetch** dann zugeordnet  **SQLExtendedFetch**.  
+ Die Cursor Bibliothek unterstützt das Festlegen des SQL_ATTR_ROW_BIND_OFFSET_PTR Anweisungs Attributs für die Verwendung von Bindungs Offsets. (**SQLBindCol** muss nicht aufgerufen werden, damit diese erneute Bindung stattfindet.) Wenn die Cursor Bibliothek mit einem ODBC *3. x* -Treiber verwendet wird, wird der Bindungs Offset nicht verwendet, wenn **SQLFetch** aufgerufen wird. Der Bindungs Offset wird verwendet, wenn **SQLFetch** aufgerufen wird, wenn die Cursor Bibliothek mit einem ODBC *2. x* -Treiber verwendet wird, da **SQLFetch** dann **SQLExtendedFetch**zugeordnet wird.  
   
- Die Cursorbibliothek unterstützt Aufrufen **SQLBindCol** die Lesezeichenspalte zu binden.  
+ Die Cursor Bibliothek unterstützt das Aufrufen von **SQLBindCol** , um die Lesezeichen Spalte zu binden.  
   
- Beim Arbeiten mit ODBC *2.x* -Treiber verwenden, gibt die Cursorbibliothek SQLSTATE HY090 zurück (ungültige Zeichenfolgen- oder Pufferlänge.) Wenn **SQLBindCol** wird aufgerufen, um die Länge des Puffers für eine Lesezeichenspalte nicht auf einen Wert festgelegt gleich 4. Beim Arbeiten mit ODBC *3.x* -Treiber die Cursorbibliothek ermöglicht den Puffer, in eine beliebige Größe aufweisen.
+ Bei der Arbeit mit einem ODBC *2. x* -Treiber gibt die Cursor Bibliothek SQLSTATE HY090 (ungültige Zeichen folgen-oder Pufferlänge) zurück, wenn **SQLBindCol** aufgerufen wird, um die Pufferlänge für eine Lesezeichen Spalte auf einen nicht gleich 4-Wert festzulegen. Wenn Sie mit einem ODBC *3. x* -Treiber arbeiten, ermöglicht die Cursor Bibliothek die Größe des Puffers.

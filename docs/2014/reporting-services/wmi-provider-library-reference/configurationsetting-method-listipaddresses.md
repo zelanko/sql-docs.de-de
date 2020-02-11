@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098323"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses-Methode (WMI: MSReportServer_ConfigurationSetting)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>ListIPAddresses-Methode (WMI: MSReportServer_ConfigurationSetting)
   Listet die IP-Adressen für den Berichtsservercomputer auf.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,13 +37,13 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *IPAddress[]*  
+ *IPAddress []*  
  [out] Die Liste der IP-Adressen für den Computer  
   
- *IPVersion[]*  
+ *IPVersion []*  
  [out] Die Version für die IP-Adressen  
   
- *IsDhcpEnabled[]*  
+ *Isdhcpabled []*  
  [out] Gibt an, ob die IP-Adressen DHCP-aktiviert sind  
   
  *Länge*  
@@ -55,15 +55,15 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Fehlercode gibt an, dass der Aufruf nicht erfolgreich war.  
   
-## <a name="remarks"></a>Hinweise  
- *IPVersion* -Zeichenfolgen sind V4 und V6.  
+## <a name="remarks"></a>Bemerkungen  
+ *IPVersion* -Zeichen folgen sind V4, V6.  
   
- Wenn *IsDhcpEnabled* ist `True`, *IP-Adresse* ist dynamisch. Eine Verwendung für SSL-Bindungen wird nicht empfohlen.  
+ Wenn *isdhcpabled* ist `True`, ist die *IPAddress* dynamisch. Eine Verwendung für SSL-Bindungen wird nicht empfohlen.  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
   
   

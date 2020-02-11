@@ -1,5 +1,5 @@
 ---
-title: Abfrageoptionen Ausführung (Seite "ANSI") | Microsoft-Dokumentation
+title: Ausführung von Abfrage Optionen (Seite ANSI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089079"
 ---
 # <a name="query-options-execution-ansi-page"></a>Abfrageausführung (Seite ANSI)
-  Mithilfe dieser Seite können Sie festlegen, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard (ANSI) angegebenen Einstellungen ausführt.  
+  Verwenden Sie diese Seite, um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anzugeben, dass die Abfragen mithilfe aller oder eines Teils der im ISO-Standard (ANSI) angegebenen Einstellungen ausgeführt werden soll.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **SET ANSI_DEFAULTS**  
+ **ANSI_DEFAULTS festlegen**  
  Wählt alle Standard-ISO-Einstellungen aus. Dieses Feld ist standardmäßig nicht verfügbar, weil nur einige der ISO-Einstellungen konfiguriert sind.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -53,7 +53,7 @@ ms.locfileid: "66089079"
  **SET ANSI_NULLS**  
  Gibt an, dass sich der Gleichheitsoperator (`=`) und der Ungleichheitsoperator (`<>`) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn **SET ANSI_NULLS** ausgewählt ist, werden alle Vergleiche mit einem NULL-Wert in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn **SET ANSI_NULLS** nicht ausgewählt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Diese Option ist standardmäßig aktiviert.  
   
- **Standard wiederherstellen**  
+ **Auf Standard zurücksetzen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

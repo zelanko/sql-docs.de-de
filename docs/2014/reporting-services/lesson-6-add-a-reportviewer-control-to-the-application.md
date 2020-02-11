@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108418"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung
@@ -34,7 +34,7 @@ ms.locfileid: "66108418"
   
      Nachdem Sie einen Bericht ausgewählt haben, werden automatisch Instanzen der im Bericht verwendeten Datenquellen erstellt. Der Code wird generiert, um jede DataTable (und den zugehörigen [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) -Container) zu instanziieren. Gemäß den einzelnen, im Bericht verwendeten Datenquellen wird der Entwurfsoberfläche ein [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) -Steuerelement hinzugefügt. Dieses Datenquellen-Steuerelement wird automatisch konfiguriert.  
   
-     Wenn Sie Microsoft Visual Studio 2012 verwenden, stellen Sie sicher, dass mit "DataSet1", die vollständig mit dem Projektnamespace qualifiziert ist das ObjectDataSource-Steuerelement gebunden ist, wenn der vollqualifizierte Name im aufgeführt ist die **Geschäftsobjektauswählen**Dropdown-Listenfeld (z. B. Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Sie greifen auf das Listenfeld, indem Sie mit der rechten Maustaste ObjectDataSource-Steuerelement, und klicken Sie dann auf **Konfigurieren von Datenquellen**.  
+     Wenn Sie Microsoft Visual Studio 2012 verwenden, stellen Sie sicher, dass das ObjectDataSource-Steuerelement an dataSet1 gebunden ist, das mit dem Project-Namespace voll qualifiziert ist, wenn der voll qualifizierte Name im Dropdown-Listenfeld **Wählen Sie Ihr Geschäftsobjekt** (z. b. projectnamespace. DataSet1TableAdapters. ProductTableAdapter) aufgeführt ist. Um auf das Listenfeld zuzugreifen, klicken Sie mit der rechten Maustaste auf ObjectDataSource, und klicken Sie dann auf **Datenquelle konfigurieren**.  
   
 6.  Klicken Sie im Menü Erstellen auf Website erstellen.  
   

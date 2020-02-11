@@ -1,5 +1,5 @@
 ---
-title: Initialisieren eines Transaktionsabonnements von einer Sicherung (Replikationsprogrammierung mit Transact-SQL) | Microsoft-Dokumentation
+title: Initialisieren eines Transaktions Abonnements von einer Sicherung (Replikations Programmierung mit Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793306"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>Initialisieren eines Transaktionsabonnements von einer Sicherung (Replikationsprogrammierung mit Transact-SQL)
@@ -34,9 +34,9 @@ ms.locfileid: "67793306"
   
     -   Wenn der Wert **1**ist, unterstützt die Veröffentlichung diese Funktionalität.  
   
-    -   Ist der Wert **0**, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **Allow_initialize_from_backup** für  **\@Eigenschaft** und den Wert `true` für  **\@Wert**.  
+    -   Ist der Wert **0**, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **allow_initialize_from_backup** für ** \@** die-Eigenschaft und den `true` Wert für ** \@Value**an.  
   
-2.  Führen Sie für eine neue Veröffentlichung [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert `true` für **Allow_initialize_from_backup**. Weitere Informationen finden Sie unter [Create a Publication](publish/create-a-publication.md).  
+2.  Führen Sie für eine neue Veröffentlichung [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert `true` für **allow_initialize_from_backup**an. Weitere Informationen finden Sie unter [Create a Publication](publish/create-a-publication.md).  
   
     > [!WARNING]  
     >  Um fehlende Abonnentendaten zu vermeiden, wenn Sie **sp_addpublication** mit `@allow_initialize_from_backup = N'true'`verwenden, sollten Sie immer `@immediate_sync = N'true'`verwenden.  
@@ -47,29 +47,29 @@ ms.locfileid: "67793306"
   
 5.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank die gespeicherte Prozedur [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus. Geben Sie die folgenden Parameter an:  
   
-    -   **\@Sync_type** -Wert **initialisieren mit der Sicherung**.  
+    -   sync_type-der Wert **initialisieren with Backup**. ** \@**  
   
-    -   **\@Backupdevicetype** – der Typ des Sicherungsmediums: **logische** (Standard), **Datenträger**, oder **Band**.  
+    -   backupdevicetype: der Typ des Sicherungs Mediums: **logisch** (Standard **), Daten**Träger oder **Band**. ** \@**  
   
-    -   **\@Backupdevicename** -das logische oder physische Sicherungsmedium, für die Wiederherstellung verwendet.  
+    -   backupdevicename: das logische oder physische Sicherungsmedium, das für die Wiederherstellung verwendet werden soll. ** \@**  
   
          Für ein logisches Gerät geben Sie den Namen des Sicherungsmediums an, der beim Erstellen des Geräts mit **sp_addumpdevice** festgelegt wurde.  
   
          Geben Sie für ein physisches Gerät einen vollständigen Pfad und einen Dateinamen an, z. B. `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\BACKUP\Mybackup.dat'` oder `TAPE = '\\.\TAPE0'`.  
   
-    -   (Optional)  **\@Kennwort** -ein Kennwort, das bereitgestellt wurde, als der Sicherungssatz erstellt wurde.  
+    -   Optionale Password: ein Kennwort, das angegeben wurde, als der Sicherungs Satz erstellt wurde. ** \@**  
   
-    -   (Optional)  **\@Mediapassword** -ein Kennwort, das bereitgestellt wurde, als der Mediensatz formatiert wurde.  
+    -   Optionale Media Password: ein Kennwort, das angegeben wurde, als der Medien Satz formatiert wurde. ** \@**  
   
-    -   (Optional)  **\@Fileidhint** -Bezeichner für den Sicherungssatz wiederhergestellt werden. **1** gibt z. B. den ersten Sicherungssatz auf dem Sicherungsmedium an und **2** den zweiten Sicherungssatz.  
+    -   Optionale "fleidhint": Bezeichner für den Sicherungs Satz, der wieder hergestellt werden soll. ** \@** **1** gibt z. B. den ersten Sicherungssatz auf dem Sicherungsmedium an und **2** den zweiten Sicherungssatz.  
   
-    -   (Optional für Bandmedien)  **\@nicht entladen** -Geben Sie den Wert **1** (Standard), wenn das Band aus dem Laufwerk werden soll, nachdem die Wiederherstellung abgeschlossen ist und **0** Wenn es nicht entladen werden soll .  
+    -   (Optional für Bandgeräte) entladen: Geben Sie den Wert **1** (Standardwert) an, wenn das Band nach Abschluss der Wiederherstellung vom Laufwerk entladen werden soll, und **0** , wenn es nicht entladen werden soll. ** \@**  
   
 6.  (Optional) Führen Sie für ein Pullabonnement [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) und [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) im Abonnenten für die Abonnementdatenbank aus. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 7.  (Optional) Starten Sie den Verteilungs-Agent. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) oder [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../databases/copy-databases-with-backup-and-restore.md)   
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

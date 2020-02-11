@@ -16,27 +16,27 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921420"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize-Eigenschaft (ADO)
-Gibt die tatsächliche Länge der der Wert eines Felds in Bytes an.  
+Gibt die tatsächliche Länge des Werts eines Felds in Bytes an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Gibt eine **lange** Wert.  
+ Gibt einen **Long** -Wert zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **ActualSize** zurückzugebende die tatsächliche Länge der Eigenschaft ein [Feld](../../../ado/reference/ado-api/field-object.md) Wert des Objekts. Für alle Felder der **ActualSize** Eigenschaft ist schreibgeschützt. Wenn die Länge des ADO ermittelt werden kann die **Feld** Wert des Objekts, das **ActualSize** -Eigenschaft gibt **ActualSize**.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **ActualSize** -Eigenschaft, um die tatsächliche Länge des Werts eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts zurückzugeben. Die **ActualSize** -Eigenschaft ist für alle Felder schreibgeschützt. Wenn ADO die Länge des **Feld** Objekt Werts nicht ermitteln kann, gibt die **ActualSize** -Eigenschaft **adunknown**zurück.  
   
- Die **ActualSize** und [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) Eigenschaften unterschiedlich sind, wie im folgenden Beispiel gezeigt. Ein **Feld** Objekt mit dem deklarierten Typ **AdVarChar** und eine maximale Länge von 50 Zeichen gibt eine **DefinedSize** Eigenschaftswert von 50 jedoch  **ActualSize** Eigenschaftswert zurückgegeben wird, die Länge der Daten in das Feld für den aktuellen Datensatz gespeichert. **Felder** mit einem **DefinedSize** größer als 255 Byte als Spalten variabler Länge behandelt werden.  
+ Die Eigenschaften **ActualSize** und [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) sind unterschiedlich, wie im folgenden Beispiel gezeigt. Ein **Feld** Objekt mit einem deklarierten Typ von **adVarChar** und eine maximale Länge von 50 Zeichen gibt einen **DefinedSize** -Eigenschafts Wert von 50 zurück, aber der Rückgabewert der **ActualSize** -Eigenschaft ist die Länge der Daten, die im Feld für den aktuellen Datensatz gespeichert sind. **Felder** mit einer **DefinedSize** größer als 255 Bytes werden als Spalten variabler Länge behandelt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ActualSize und DefinedSize – Beispiel (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [ActualSize und DefinedSize – Beispiel (VC++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für ActualSize und DefinedSize-Eigenschaften (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [Beispiel für ActualSize und DefinedSize-Eigenschaften (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [DefinedSize-Eigenschaft](../../../ado/reference/ado-api/definedsize-property.md)

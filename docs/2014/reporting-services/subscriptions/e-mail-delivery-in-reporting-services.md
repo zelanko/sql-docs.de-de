@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100887"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine E-Mail-Übermittlungserweiterung, mit der Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden können. Die E-Mail-Übermittlungserweiterung wird mit dem Reporting Services-Konfigurations-Manager und durch Bearbeiten der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationsdateien konfiguriert.  
   
- Um einen Bericht per E-Mail zu verteilen oder zu empfangen, definieren Sie entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Es kann jeweils immer nur ein Bericht abonniert und verteilt werden. Es ist nicht möglich, ein Abonnement zu erstellen, das mehrere Berichte in einer einzigen E-Mail-Nachricht übermittelt. Weitere Informationen zu Abonnements finden Sie unter [erstellen, ändern und Löschen von Standardabonnements &#40;Reporting Services im einheitlichen Modus&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Um einen Bericht per E-Mail zu verteilen oder zu empfangen, definieren Sie entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Es kann jeweils immer nur ein Bericht abonniert und verteilt werden. Es ist nicht möglich, ein Abonnement zu erstellen, das mehrere Berichte in einer einzigen E-Mail-Nachricht übermittelt. Weitere Informationen zu Abonnements finden Sie unter [erstellen, ändern und Löschen von Standard Abonnements &#40;Reporting Services im einheitlichen Modus&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus &#124; SharePoint 2010 und SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint-Modus &#124; SharePoint 2010 und SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Einheitlicher Modus|  
   
 ## <a name="e-mail-delivery-options"></a>Optionen für die E-Mail-Übermittlung  
  Die Berichtsserver-E-Mail-Übermittlung kann Berichte wie folgt übermitteln:  
@@ -37,9 +37,9 @@ ms.locfileid: "66100887"
   
 -   Senden einer Benachrichtigung in der Betreffzeile einer E-Mail-Nachricht. Standardmäßig enthält die Betreffzeile in der Abonnementdefinition die folgenden Variablen, die bei der Verarbeitung des Abonnements durch berichtsspezifische Informationen ersetzt werden:  
   
-     **@ReportName** gibt den Namen des Berichts an.  
+     **@ReportName**Gibt den Namen des Berichts an.  
   
-     **@ExecutionTime** gibt an, wann der Bericht ausgeführt wurde.  
+     **@ExecutionTime**Gibt an, wann der Bericht ausgeführt wurde.  
   
      Diese Variablen können Sie mit statischem Text kombinieren, und den Text in der Betreffzeile können Sie für jedes Abonnement ändern.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66100887"
   
      Falls Ihr Browser HTML 4.0 und MHTML unterstützt und Sie das Webarchiv-Renderingformat auswählen, wird der Bericht in die Nachricht eingebettet. Bei allen anderen Renderingformaten (CSV, PDF usw.) werden Berichte als Anlagen übermittelt. Diese Funktion können Sie in der Konfigurationsdatei RSReportServer deaktivieren.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] führt keine Überprüfung der Größe der Anlage oder Nachricht vor dem Senden des Berichts durch. Überschreitet die Anlage oder Nachricht den von Ihrem Mailserver zugelassenen Höchstwert, wird der Bericht nicht übermittelt. Wählen Sie bei großen Berichten eine andere Übermittlungsoption aus (z.B. URL oder Benachrichtigung).  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]die Größe der Anlage oder Nachricht wird nicht vor dem Senden des Berichts überprüft. Überschreitet die Anlage oder Nachricht den von Ihrem Mailserver zugelassenen Höchstwert, wird der Bericht nicht übermittelt. Wählen Sie bei großen Berichten eine andere Übermittlungsoption aus (z.B. URL oder Benachrichtigung).  
   
  Die Übermittlungsoptionen, die bestimmen, wie ein Bericht übermittelt wird, werden beim Erstellen des Abonnements festgelegt. Wenn Sie im Abonnement z.B. **Link einschließen** auswählen, enthält die E-Mail-Nachricht einen Link zum Bericht.  
   
@@ -71,18 +71,18 @@ ms.locfileid: "66100887"
   
  Informationen zum Konfigurieren eines Berichtsservers im einheitlichen Modus finden Sie im folgenden Thema:  
   
--   [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS-Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [E-Mail-Einstellungen – Konfigurations-Manager &#40;einheitlicher SSRS-Modus&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [E-Mail-Einstellungen-Configuration Manager &#40;SSRS im einheitlichen Modus&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  Informationen zum Konfigurieren eines Berichtsservers im SharePoint-Modus finden Sie im folgenden Thema:  
   
--   [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Konfigurieren Sie E-Mail für eine Reporting Services-Dienst Anwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Datengesteuerte Abonnements](data-driven-subscriptions.md)   
- [Rollenzuweisungen](../security/role-assignments.md)  
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [Role Assignments (Rollenzuweisungen)](../security/role-assignments.md)  
   
   

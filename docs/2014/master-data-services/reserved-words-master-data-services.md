@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482573"
 ---
 # <a name="reserved-words-master-data-services"></a>Reservierte Wörter (Master Data Services)
@@ -34,34 +34,35 @@ ms.locfileid: "65482573"
   
 -   [Attribute](#attributes)  
   
--   [Element](#members)  
+-   [Mitglieder](#members)  
   
-##  <a name="models"></a> Modelle  
- Bei der Erstellung eines Modells mit dem Namen festgelegt **Namen**, aktivieren Sie nicht **Entität mit demselben Namen wie Modell erstellen** da **Namen** kann nicht für den Namen einer Entität verwendet werden.  
+##  <a name="models"></a>Bilder  
+ Wenn Sie ein Modell erstellen, dessen Name auf **Name**festgelegt ist, wählen Sie **Entität mit gleichem Namen wie Modell erstellen** nicht aus, da **Name** nicht für den Namen einer Entität verwendet werden kann.  
   
-##  <a name="entities"></a> Entitäten  
- **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
+##  <a name="entities"></a>Kleinstunternehmen  
+ 
+  **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
   
-##  <a name="exhierarchies"></a> Explizite Hierarchien  
+##  <a name="exhierarchies"></a>Explizite Hierarchien  
  Für explizite Hierarchienamen können Sie **Name** oder **Code**verwenden.  
   
-##  <a name="attributes"></a> Attribute  
+##  <a name="attributes"></a>Legt  
   
--   **ID**  
+-   **id**  
   
 -   **Code**  
   
 -   **Name**  
   
--   **EnterDTM**  
+-   **Enterdtm**  
   
--   **EnterUserID**  
+-   **Enteruserid**  
   
--   **EnterUserName**  
+-   **Enter username**  
   
--   **LastChgDTM**  
+-   **Lastchgdtm**  
   
--   **LastChgUserID**  
+-   **Lastchguserid**  
   
 -   **Status_ID**  
   
@@ -69,10 +70,10 @@ ms.locfileid: "65482573"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Element  
- Für Elemente können keine **MDMMemberStatus** oder **Stamm** für die **Code** Attributwert.  
+##  <a name="members"></a>Parlamentariern  
+ Für Member können Sie **mdmmembership Status** oder **root** nicht für den **Code** Attribut Wert verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Master Data Services](master-data-services-overview-mds.md)  
   
   

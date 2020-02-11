@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287780"
 ---
 # <a name="examples-using-path-mode"></a>Beispiele: Verwenden des PATH-Modus
@@ -55,7 +55,7 @@ GO
   
  `</row>`  
   
- Das folgende Ergebnis ist mit dem der Abfrage im `RAW`-Modus mit angegebener Option `ELEMENTS` identisch. Es wird elementzentrierter XML-Code mit einem standardmäßigen <`row`>-Element für jede Zeile des Resultsets zurückgegeben.  
+ Das folgende Ergebnis ist mit dem der Abfrage im `RAW` -Modus mit angegebener Option `ELEMENTS` identisch. Es wird elementzentrierter XML-Code mit einem standardmäßigen <`row`>-Element für jede Zeile des Resultsets zurückgegeben.  
   
 ```  
 USE AdventureWorks2012;  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Dies ist das Teilergebnis. Da die Abfrage als Spaltenname ManuInstr angegeben wird, wird der XML-Code von zurückgegebenen der `query()` Methode umschlossen wird eine <`ManuInstr`> tag wie im folgenden gezeigt:  
+ Dies ist das Teilergebnis. Da in der Abfrage "ManuInstr" als Spaltenname angegeben ist, wird der `query()` von der-Methode zurückgegebene `ManuInstr` XML-Code in ein <>-Tag umschließt, wie im folgenden dargestellt:  
   
  `<Root>`  
   
@@ -382,7 +382,7 @@ FOR XML PATH('ProductModelData');
 ```  
   
 ## <a name="adding-namespaces-in-the-resulting-xml"></a>Hinzufügen von Namespaces zu XML-Ergebnissen  
- Wie unter [Hinzufügen von Namespaces mit WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)beschrieben, können Sie WITH XMLNAMESPACES verwenden, um Namespaces in Abfragen im PATH-Modus aufzunehmen. Angenommen, die in der SELECT-Klausel angegebenen Namen enthalten Namespacepräfixe. Die folgende Abfrage im `PATH`-Modus konstruiert dieses XML-Ergebnis mit Namespaces.  
+ Wie unter [Hinzufügen von Namespaces mit WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)beschrieben, können Sie WITH XMLNAMESPACES verwenden, um Namespaces in Abfragen im PATH-Modus aufzunehmen. Angenommen, die in der SELECT-Klausel angegebenen Namen enthalten Namespacepräfixe. Die folgende Abfrage im `PATH` -Modus konstruiert dieses XML-Ergebnis mit Namespaces.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -393,7 +393,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- Das dem <`English`>-Element hinzugefügte `@xml:lang`-Attribut ist im vordefinierten XML-Namespace definiert.  
+ Das dem <`@xml:lang`>-Element hinzugefügte `English`-Attribut ist im vordefinierten XML-Namespace definiert.  
   
  Dies ist das Ergebnis:  
   
@@ -464,7 +464,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des PATH-Modus mit FOR XML](use-path-mode-with-for-xml.md)  
   
   

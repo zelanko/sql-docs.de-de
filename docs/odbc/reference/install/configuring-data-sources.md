@@ -13,19 +13,19 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068617"
 ---
 # <a name="configuring-data-sources"></a>Konfigurieren von Datenquellen
-Informationen zu den Datenquellen werden in der systemregistrierung gespeichert. Benutzer ändern die Informationen über ein Verwaltungsprogramm der Datenquelle. Dies kann der ODBC-Administrator, das ODBC-Systemsteuerung-Gerät oder einen-Verwaltungsprogramm, die von einer Anwendung oder den Treiber Entwickler geschrieben sein.  
+Informationen zu Datenquellen werden in der Systemregistrierung gespeichert. Benutzer ändern Datenquellen Informationen mithilfe eines Verwaltungs Programms. Hierbei kann es sich um den ODBC-Administrator, das ODBC-System Steuerungs Gerät oder ein von einer Anwendung oder einem Treiber Entwickler geschriebenes Verwaltungs Programm handeln.  
   
  Sie können PowerShell-Befehle verwenden, um Datenquellen zu ändern. Weitere Informationen zu diesen PowerShell-Befehlen finden Sie unter [Windows Data Access Components PowerShell-Befehle](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
 > [!NOTE]  
->  Dieser Abschnitt richtet sich nach Microsoft Windows®-Plattformen zur Verfügung. Wie die Datenquellen auf anderen Plattformen konfiguriert sind, ist plattformspezifisch.  
+>  Dieser Abschnitt ist spezifisch für Microsoft Windows®-Plattformen. Wie Datenquellen auf anderen Plattformen konfiguriert werden, ist plattformspezifisch.  
   
  Dieser Abschnitt enthält das folgende Thema:  
   

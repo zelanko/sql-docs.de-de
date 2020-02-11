@@ -1,5 +1,5 @@
 ---
-title: Projekteinstellungen (Typzuordnung) (AccessToSQL) | Microsoft-Dokumentation
+title: Projekteinstellungen (Typzuordnung) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,62 +17,62 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066660"
 ---
-# <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (AccessToSQL)
-Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt. Sie können auch die replikationsdatentyp-Zuordnungen für einzelne Objekte angeben. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Ziel-Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
+# <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (accesstosql)
+Mit den Projekteinstellungen für die Typzuordnung können Sie Standardtypmappings für das SSMA-Projekt festlegen. Sie können auch Typzuordnungen für einzelne Datenbankobjekte angeben. Weitere Informationen finden Sie unter [Zuordnung von Quell-und Ziel Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
   
-Zuordnung eines Typs finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder:  
+Die Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar:  
   
--   Verwenden der **Projekteinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für das aktuelle Projekt. Einstellungen für die Zuordnung, für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, und klicken Sie dann auf **Typzuordnung** im linken Bereich.  
+-   Verwenden Sie das Dialogfeld **Projekteinstellungen** , um Konfigurationsoptionen für das aktuelle Projekt festzulegen. Um auf die typzuordnungseinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus, und klicken Sie dann im linken Bereich auf **Typzuordnung** .  
   
--   Verwenden der **Projekt Standardeinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für alle Projekte. Einstellungen für die Zuordnung, für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden,  **Migration Zielversion** Dropdownliste aus, und klicken Sie dann auf **Type Mapping** im linken Bereich.  
+-   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die typzuordnungseinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, und klicken Sie im linken Bereich auf **Typzuordnung** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Quelltyp**  
-Der Access-Datentyp zugeordnet werden soll.  
+Der zuzuordnende Zugriffs Datentyp.  
   
 **Zieltyp**  
-Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datentyp für den angegebenen Datentyp für den Zugriff.  
+Der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder SQL Azure Datentyp für den angegebenen Zugriffs Datentyp.  
   
-Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen.  
+Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datentypen.  
   
 |Access-Datentyp|SQL Server-Datentyp|  
 |--------------------|------------------------|  
-|**Binary [\*... \*]**|**varbinary[\*]**|  
-|**boolean**|**bit**|  
-|**byte**|**tinyint**|  
-|**Währung**|**money**|  
+|**binärer\*Wert [.. \*]**|**varbinary [\*]**|  
+|**booleschen**|**bit**|  
+|**Hobby**|**tinyint**|  
+|**currency**|**money**|  
 |**date**|**datetime**|  
-|**decimal**|**float**|  
+|**Decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**long**|**int**|  
-|**longbinary**|**varbinary(max)**|  
+|**lange**|**int**|  
+|**LONGBINARY**|**varbinary(max)**|  
 |**Memo**|**nvarchar(max)**|  
-|**Memo** Access 97:|**varchar(max)**|  
-|**einzelne**|**real**|  
-|**Text [\*... \*]**|**Nvarchar [\*]**|  
-|**Text [\*... \*]** – für Access 97|**Varchar [\*]**|  
+|**Memo** für Zugriff 97|**varchar(max)**|  
+|**Gänger**|**wirkliche**|  
+|**Text [\*.. \*]**|**nvarchar [\*]**|  
+|**Text [\*.. ] \*** -für Access 97|**varchar [\*]**|  
   
-**Hinzufügen**  
-Klicken Sie auf diese Option, um einen Datentyp der Zuordnungsliste hinzuzufügen.  
+**Add (Hinzufügen)**  
+Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  
   
 **Bearbeiten**  
-Klicken Sie auf diese Option, um einen Datentyp aus der Zuordnung zu bearbeiten.  
+Klicken Sie hierauf, um einen Datentyp in der Liste Zuordnung zu bearbeiten.  
   
-**Entfernen**  
-Klicken Sie auf diese Option, um die ausgewählte Zuordnung von Datentypen aus der Zuordnungsliste zu entfernen.  
+**Remove**  
+Klicken Sie hierauf, um die ausgewählte Datentyp Zuordnung aus der Liste Zuordnung zu entfernen.  
   
-**Standard wiederherstellen**  
-Klicken Sie auf diese Option, um alle datentypzuordnungen der SSMA-Standardwerte zurückzusetzen.  
+**Auf Standard zurücksetzen**  
+Klicken Sie hier, um alle Datentyp Zuordnungen auf die SSMA-Standardwerte zurückzusetzen.  
   
-## <a name="see-also"></a>Siehe auch  
-[Mapping Source and Target Data Types (Zuordnen von Quell- und Zieldatentypen)](mapping-source-and-target-data-types-accesstosql.md)  
-[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>Weitere Informationen  
+[Zuordnen von Quell- und Zieldatentypen](mapping-source-and-target-data-types-accesstosql.md)  
+[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

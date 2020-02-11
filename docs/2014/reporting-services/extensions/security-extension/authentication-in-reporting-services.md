@@ -16,19 +16,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282153"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentifizierung in Reporting Services
   Unter Authentifizierung versteht man den Prozess, Benutzerrechte für eine bestimmte Identität einzurichten. Es gibt viele Techniken, die Sie verwenden können, um einen Benutzer zu authentifizieren. Die gängigste Methode ist die Verwendung von Kennwörtern. Wenn Sie beispielsweise die Formularauthentifizierung implementieren, benötigen Sie eine Implementierung, bei der die Benutzer nach den Anmeldeinformationen durchsucht werden (normalerweise über eine Oberfläche, in der Anmeldename und Kennwort angefordert werden) und bei der die Benutzer mit einem Datenspeicher, z. B. einer Datenbanktabelle oder einer Konfigurationsdatei, abgeglichen werden. Wenn die Anmeldeinformationen nicht validiert werden können, schlägt der Authentifizierungsprozess fehl, und der Benutzer nimmt eine anonyme Identität an.  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Benutzerdefinierte Authentifizierung in den Reporting Services  
- In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] behandelt das Windows-Betriebssystem die Benutzerauthentifizierung entweder über integrierte Sicherheitsfunktionen oder über die ausdrückliche Annahme und Validierung der Anmeldeinformationen des Benutzers. Die benutzerdefinierte Authentifizierung kann in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] so entwickelt werden, dass zusätzliche Authentifizierungsschemen unterstützt werden. Dies wird durch die Sicherheitserweiterungsschnittstelle <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> ermöglicht. Alle Erweiterungen erben für jede vom Berichtsserver bereitgestellte und verwendete Erweiterung von der <xref:Microsoft.ReportingServices.Interfaces.IExtension>-Basisschnittstelle. <xref:Microsoft.ReportingServices.Interfaces.IExtension> und <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> sind Elemente des <xref:Microsoft.ReportingServices.Interfaces>-Namespace.  
+ In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] behandelt das Windows-Betriebssystem die Benutzerauthentifizierung entweder über integrierte Sicherheitsfunktionen oder über die ausdrückliche Annahme und Validierung der Anmeldeinformationen des Benutzers. Die benutzerdefinierte Authentifizierung kann in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] so entwickelt werden, dass zusätzliche Authentifizierungsschemen unterstützt werden. Dies wird durch die Sicherheitserweiterungsschnittstelle <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> ermöglicht. Alle Erweiterungen erben für jede vom Berichtsserver bereitgestellte und verwendete Erweiterung von der <xref:Microsoft.ReportingServices.Interfaces.IExtension>-Basisschnittstelle. 
+  <xref:Microsoft.ReportingServices.Interfaces.IExtension> und <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> sind Elemente des <xref:Microsoft.ReportingServices.Interfaces>-Namespace.  
   
- Die primäre Möglichkeit, auf einem Berichtsserver in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] authentifiziert zu werden, ist die <xref:ReportService2010.ReportingService2010.LogonUser%2A>-Methode. Dieses Element des Reporting Services-Webdiensts kann verwendet werden, um die Benutzeranmeldeinformationen zur Validierung an einen Berichtsserver zu übergeben. Die zugrunde liegende sicherheitserweiterung implementiert **IAuthenticationExtension.LogonUser** den benutzerdefinierten Authentifizierungscode enthält. Im Beispiel zur Formularauthentifizierung wird mit **LogonUser** eine Authentifizierungsprüfung der angegebenen Anmeldeinformationen und eines benutzerdefinierten Benutzerspeichers in einer Datenbank durchgeführt. Ein Beispiel für die Implementierung von **LogonUser** sieht folgendermaßen aus:  
+ Die primäre Möglichkeit, auf einem Berichtsserver in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] authentifiziert zu werden, ist die <xref:ReportService2010.ReportingService2010.LogonUser%2A>-Methode. Dieses Element des Reporting Services-Webdiensts kann verwendet werden, um die Benutzeranmeldeinformationen zur Validierung an einen Berichtsserver zu übergeben. Die zugrunde liegende Sicherheits Erweiterung implementiert **IAuthenticationExtension. LogonUser** , das den benutzerdefinierten Authentifizierungscode enthält. Im Beispiel zur Formularauthentifizierung wird mit **LogonUser** eine Authentifizierungsprüfung der angegebenen Anmeldeinformationen und eines benutzerdefinierten Benutzerspeichers in einer Datenbank durchgeführt. Ein Beispiel für die Implementierung von **LogonUser** sieht folgendermaßen aus:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -102,13 +103,13 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  In folgender Abbildung sehen Sie die Methode, wie Benutzer im Webdienst authentifiziert werden, wenn Ihre Anwendung mit einem Berichtsserver eingesetzt wird, der für die Verwendung einer benutzerdefinierten Authentifizierungserweiterung konfiguriert ist.  
   
- ![Reporting Services-Sicherheitsauthentifizierungsfluss](../../media/rosettasecurityextensionauthenticationflow.gif "Reporting Services security authentication flow")  
+ ![Reporting Services-Sicherheitsauthentifizierungsfluss](../../media/rosettasecurityextensionauthenticationflow.gif "Reporting Services-Sicherheitsauthentifizierungsfluss")  
   
  Wie in Abbildung 2 gezeigt, sieht der Authentifizierungsprozess folgendermaßen aus:  
   
 1.  Eine Clientanwendung ruft die Webdienstmethode <xref:ReportService2010.ReportingService2010.LogonUser%2A> auf, um einen Benutzer zu authentifizieren.  
   
-2.  Der Webdienst Ruft die <xref:ReportService2010.ReportingService2010.LogonUser%2A> Methode Ihrer sicherheitserweiterung auf, genauer gesagt die Klasse, die implementiert **IAuthenticationExtension**.  
+2.  Der-Webdienst ruft die <xref:ReportService2010.ReportingService2010.LogonUser%2A> -Methode Ihrer Sicherheits Erweiterung auf, insbesondere die-Klasse, die **IAuthenticationExtension**implementiert.  
   
 3.  Die Implementierung von <xref:ReportService2010.ReportingService2010.LogonUser%2A> überprüft den Benutzernamen und das Kennwort im Benutzerspeicher oder in der Sicherheitsinstanz.  
   
@@ -126,7 +127,8 @@ internal static bool VerifyPassword(string suppliedUserName,
 ## <a name="forms-authentication"></a>Formularauthentifizierung  
  Die Formularauthentifizierung ist eine Art der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Authentifizierung, bei der ein authentifizierter Benutzer zu einem HTML-Formular geleitet wird. Sobald der Benutzer seine Anmeldeinformationen angibt, gibt das System ein Cookie aus, das ein Authentifizierungsticket enthält. Bei späteren Anforderungen prüft das System zuerst das Cookie, um festzustellen, ob der Benutzer bereits durch den Berichtsserver authentifiziert wurde.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann so erweitert werden, dass die Formularauthentifizierung unterstützt wird. Hierzu werden Sicherheitserweiterungsschnittstellen verwendet, die über die Reporting Services-API zur Verfügung gestellt werden. Wenn Sie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] so erweitern, dass die Formularauthentifizierung verwendet wird, verwenden Sie für die gesamte Kommunikation mit dem Berichtsserver SSL (Secure Sockets Layer), damit sich unberechtigte Benutzer keinen Zugang auf das Cookie eines anderen Benutzers verschaffen können. SSL ermöglicht Clients und dem Berichtsserver eine gegenseitige Authentifizierung, um sicherzustellen, dass keine anderen Computer den Inhalt der Kommunikation zwischen zwei Computern lesen können. Alle Daten, die über SSL-Verbindung von einem Client versendet werden, sind verschlüsselt, sodass unberechtigte Benutzer an den Berichtsserver gesandte Kennwörter und Daten nicht abfangen können.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann so erweitert werden, dass die Formularauthentifizierung unterstützt wird. Hierzu werden Sicherheitserweiterungsschnittstellen verwendet, die über die Reporting Services-API zur Verfügung gestellt werden. Wenn Sie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] so erweitern, dass die Formularauthentifizierung verwendet wird, verwenden Sie für die gesamte Kommunikation mit dem Berichtsserver SSL (Secure Sockets Layer), damit sich unberechtigte Benutzer keinen Zugang auf das Cookie eines anderen Benutzers verschaffen können. SSL ermöglicht Clients und dem Berichtsserver eine gegenseitige Authentifizierung, um sicherzustellen, dass keine anderen Computer den Inhalt der Kommunikation zwischen zwei Computern lesen können. Alle Daten, die über SSL-Verbindung von einem Client versendet werden, sind verschlüsselt, sodass unberechtigte Benutzer an den Berichtsserver gesandte Kennwörter und Daten nicht abfangen können.  
   
  Die Formularauthentifizierung wird normalerweise implementiert, um Konten und die Authentifizierung für Nicht-Windows-Plattformen zu unterstützen. Einem Benutzer, der auf einen Berichtsserver zugreifen möchte, wird eine grafische Oberfläche angezeigt, und die angegebenen Anmeldeinformationen werden zur Authentifizierung an eine Sicherheitsinstanz übergeben.  
   
@@ -144,9 +146,11 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   Die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Authentifizierung muss auf „Formular“ eingestellt sein. Sie konfigurieren die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Authentifizierung für den Berichtsserver in der Datei Web.config.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann Benutzer entweder über die Windows-Authentifizierung oder die benutzerdefinierte Authentifizierung authentifizieren, jedoch nicht über beide. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt nicht die gleichzeitige Verwendung von mehreren Sicherheitserweiterungen.  
+-   
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann Benutzer entweder über die Windows-Authentifizierung oder die benutzerdefinierte Authentifizierung authentifizieren, jedoch nicht über beide. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt nicht die gleichzeitige Verwendung von mehreren Sicherheitserweiterungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren von Sicherheitserweiterungen](../security-extension/implementing-a-security-extension.md)  
   
   

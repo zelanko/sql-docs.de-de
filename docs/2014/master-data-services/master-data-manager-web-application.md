@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482906"
 ---
 # <a name="master-data-manager-web-application"></a>Master Data Manager-Webanwendung [Master Data Services]
@@ -26,10 +26,10 @@ ms.locfileid: "65482906"
   
  [Funktionsbereich "Versionsverwaltung" &#40;Master Data Manager&#41;](../../2014/master-data-services/version-management-functional-area-master-data-manager.md)  
   
- [Funktionsbereich "Integrationsmanagement" &#40;Master Data Manager&#41;](../../2014/master-data-services/integration-management-functional-area-master-data-manager.md)  
+ [Funktionsbereich "Integrations Management" &#40;Master Data Manager&#41;](../../2014/master-data-services/integration-management-functional-area-master-data-manager.md)  
   
- [Funktionsbereich "Systemverwaltung" &#40;Master Data Manager&#41;](../../2014/master-data-services/system-administration-functional-area-master-data-manager.md)  
+ [Funktionsbereich "System Verwaltung" &#40;Master Data Manager&#41;](../../2014/master-data-services/system-administration-functional-area-master-data-manager.md)  
   
- [Funktionsbereich "Benutzer- und Gruppenberechtigungen" &#40;Master Data Manager&#41;](../../2014/master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
+ [Funktionsbereich "Benutzer-und Gruppenberechtigungen" &#40;Master Data Manager&#41;](../../2014/master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Zuordnen des Umgebungshandles | Microsoft-Dokumentation
+title: Zuordnen des Umgebungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077186"
 ---
 # <a name="allocating-the-environment-handle"></a>Zuordnen des Umgebungshandles
-Die erste Aufgabe für jede ODBC-Anwendung ist beim Laden der Treiber-Manager. wie Sie dies tun, ist abhängig vom Betriebssystem. Z. B. auf einem Computer unter Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional oder Microsoft Windows® 95/98, die Anwendung entweder enthält links zu der Treiber-Manager-Bibliothek oder Aufrufe  **LoadLibrary** zum Laden der DLL-Treiber-Manager.  
+Die erste Aufgabe für jede ODBC-Anwendung besteht darin, den Treiber-Manager zu laden. wie dies geschieht, hängt vom Betriebssystem ab. Beispielsweise wird auf einem Computer, auf dem Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional oder Microsoft Windows® 95/98 ausgeführt wird, die Anwendung entweder mit der Treiber-Manager-Bibliothek verknüpft, oder es wird **LoadLibrary** aufgerufen, um die Treiber-Manager-DLL zu laden.  
   
- Die nächste Aufgabe, die ausgeführt werden muss, bevor eine Anwendung eine ODBC-Funktion aufrufen kann, ist die ODBC-Umgebung zu initialisieren, und ordnen Sie ein Umgebungshandle wie folgt:  
+ Der nächste Task, der ausgeführt werden muss, bevor eine Anwendung eine andere ODBC-Funktion aufruft, besteht darin, die ODBC-Umgebung zu initialisieren und ein Umgebungs Handle wie folgt zuzuordnen:  
   
-1.  Die Anwendung deklariert eine Variable vom Typ SQLHENV. Es ruft dann **SQLAllocHandle** und übergibt die Adresse dieser Variablen und die SQL_HANDLE_ENV-Option. Zum Beispiel:  
+1.  Die Anwendung deklariert eine Variable vom Typ sqlhenv. Anschließend wird **sqlzugewiesene CHandle** aufgerufen und die Adresse dieser Variablen und die SQL_HANDLE_ENV-Option weitergeleitet. Beispiel:  
   
     ```  
     SQLHENV henv1;  
@@ -38,12 +38,12 @@ Die erste Aufgabe für jede ODBC-Anwendung ist beim Laden der Treiber-Manager. w
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv1);  
     ```  
   
-2.  Der Treiber-Manager weist eine Struktur zum Speichern von Informationen über die Umgebung und gibt das Umgebungshandle in der Variablen.  
+2.  Der Treiber-Manager ordnet eine Struktur zu, in der Informationen über die Umgebung gespeichert werden, und gibt das Umgebungs Handle in der Variablen zurück.  
   
- Der Treiber-Manager wird nicht aufgerufen. **SQLAllocHandle** im Treiber auf dieser Zeit, da er nicht, welcher Treiber weiß für das aufrufen. Erfolgt eine Verzögerung, Aufrufen **SQLAllocHandle** im Treiber, bis die Anwendung eine Funktion für die Verbindung mit einer Datenquelle aufruft. Weitere Informationen finden Sie unter [Treiber-Manager-Rolle in der Verbindungsprozess](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)weiter unten in diesem Abschnitt.  
+ Der Treiber-Manager ruft zu diesem Zeitpunkt nicht " **sqlzuweisung** " im Treiber auf, weil er nicht weiß, welcher Treiber aufgerufen werden soll. Der Aufruf von **sqlverbinchandle** im Treiber wird verzögert, bis die Anwendung eine Funktion zum Herstellen einer Verbindung mit einer Datenquelle aufruft. Weitere Informationen finden Sie unter [Treiber-Manager-Rolle im Verbindungsprozess](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)weiter unten in diesem Abschnitt.  
   
- Wenn die Anwendung mithilfe von ODBC abgeschlossen ist, gibt das Umgebungshandle mit frei **SQLFreeHandle**. Nach der Freigabe der der umgebungs, ist es ein anwendungsprogrammierungsfehler Fehler Handle von der Umgebung in einem Aufruf von einer ODBC-Funktion zu verwenden. Dies ist also nicht definierte, aber wahrscheinlich schwerwiegende Folgen.  
+ Wenn die Anwendung die Verwendung von ODBC beendet hat, gibt Sie das Umgebungs Handle mit **SQLFreeHandle**frei. Nach dem Freigeben der Umgebung handelt es sich um einen Anwendungs Programmierfehler, der das Handle der Umgebung in einem Rückruf einer ODBC-Funktion verwendet. Dies hat nicht definierte, aber wahrscheinlich schwerwiegende Konsequenzen.  
   
- Wenn **SQLFreeHandle** aufgerufen wird, wird der Treiberversionen, die die Struktur verwendet, um Informationen über die Umgebung zu speichern. Beachten Sie, dass **SQLFreeHandle** kann nicht für ein Umgebungshandle erst aufgerufen werden, nachdem alle Verbindungshandles, die auf diesem Umgebungshandle freigegeben wurden.  
+ Wenn **SQLFreeHandle** aufgerufen wird, gibt der Treiber die Struktur frei, die zum Speichern von Informationen über die Umgebung verwendet wird. Beachten Sie, dass **SQLFreeHandle** für ein Umgebungs Handle erst aufgerufen werden kann, nachdem alle Verbindungs Handles für dieses Umgebungs Handle freigegeben wurden.  
   
- Weitere Informationen über das Umgebungshandle finden Sie unter [Umgebung verarbeitet](../../../odbc/reference/develop-app/environment-handles.md).
+ Weitere Informationen zum Umgebungs Handle finden Sie unter [Umgebungs Handles](../../../odbc/reference/develop-app/environment-handles.md).

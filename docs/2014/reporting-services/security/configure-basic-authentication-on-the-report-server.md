@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102157"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
@@ -38,9 +38,9 @@ ms.locfileid: "66102157"
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-     Die Datei befindet sich unter  *\<Laufwerk >:* \Programme\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
+     Die Datei befindet sich unter * \<Laufwerk>:* \Programme\Microsoft SQL server\msrs12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Finden Sie <`Authentication`>.  
+2.  Suchen Sie `Authentication` nach <>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Die erste XML-Struktur stellt Platzhalter bereit, über die Sie alle im nächsten Abschnitt beschriebenen Elemente angegeben können:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66102157"
           </AuthenticationTypes>  
     ```  
   
-4.  Fügen Sie ihn über die vorhandenen Einträge für <`Authentication`>.  
+4.  Fügen Sie Sie über die vorhandenen Einträge für `Authentication` <> ein.  
   
      Wenn Sie mehrere Authentifizierungstypen verwenden, fügen Sie lediglich das `RSWindowsBasic`-Element ein, löschen Sie jedoch die Einträge für `RSWindowsNegotiate`, `RSWindowsNTLM` oder `RSWindowsKerberos` nicht.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "66102157"
   
      Beachten Sie, dass Sie `Custom` nicht mit anderen Authentifizierungstypen verwenden können.  
   
-5.  Ersetzen Sie leere Werte für <`Realm`> oder <`DefaultDomain`> mit Werten, die für Ihre Umgebung gültig sind.  
+5.  Ersetzen Sie leere Werte für `Realm` <> oder `DefaultDomain` <> durch Werte, die für Ihre Umgebung gültig sind.  
   
-6.  Speichern Sie die Datei.  
+6.  Speichern Sie die Datei .  
   
 7.  Wenn Sie eine horizontal skalierte Bereitstellung konfiguriert haben, wiederholen Sie diese Schritte für andere in der Bereitstellung vorhandene Berichtsserver.  
   
@@ -84,9 +84,10 @@ ms.locfileid: "66102157"
 ## <a name="rswindowsbasic-reference"></a>Referenz auf RSWindowsBasic  
  Beim Konfigurieren der Standardauthentifizierung können die folgenden Elemente angegeben werden.  
   
-|Element|Required|Gültige Werte|  
+|Element|Erforderlich|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> `3` = Klartextanmeldung, wobei die Anmeldeinformationen in das Authentifizierungspaket, die mit jeder HTTP-Anforderung gesendet wird beibehalten, so, dass der Server die Identität des Benutzers beim Verbinden mit anderen Servern im Netzwerk. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden nicht unterstützt, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|
+  `2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> `3`= Klartext-Anmeldung, bei der Anmelde Informationen im Authentifizierungs Paket beibehalten werden, das mit jeder HTTP-Anforderung gesendet wird, sodass der Server die Identität des Benutzers annehmen kann, wenn er eine Verbindung mit anderen Servern im Netzwerk herstellt. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]nicht unterstützt.|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   
@@ -101,7 +102,7 @@ ms.locfileid: "66102157"
   
 -   Fügen Sie das `IsReportBuilderAnonymousAccessEnabled`-Element in RSReportServer.config ein, und stellen Sie es auf `True` ein. Nachdem Sie die Datei gespeichert haben, erstellt der Berichtsserver einen neuen Endpunkt zum Berichts-Generator. Der Endpunkt wird intern verwendet, um auf Programmdateien zuzugreifen und hat keine programmatische Schnittstelle, die Sie im Code verwenden können. Dank des separaten Endpunkts kann der Berichts-Generator in seiner eigenen Anwendungsdomäne innerhalb der Service-Prozessgrenze ausgeführt werden.  
   
--   Optional können Sie ein Konto mit Minimalprivilegien angeben, um Anforderungen in einem Sicherheitskontext zu verarbeiten, der sich von dem des Berichtsservers unterscheidet. Dieses Konto ist das anonyme Konto, mit dem Sie auf Dateien des Berichts-Generators zugreifen können, die sich auf einem Berichtsserver befinden. Das Konto legt die Identität des Threads im ASP.NET-Workerprozess fest. Die in diesem Thread ausgeführten Anforderungen werden ohne eine Authentifizierungsprüfung an den Berichtsserver übergeben. Dieses Konto entspricht der IUSR_\<Machine > Konto in IIS (Internetinformationsdienste), dient zum Festlegen des Sicherheitskontexts für ASP.NET Worker verarbeitet, wenn anonymer Zugriff und Identitätswechsel aktiviert sind. Um das Konto anzugeben, fügen Sie es einer Web.config-Datei auf dem Berichts-Generator hinzu.  
+-   Optional können Sie ein Konto mit Minimalprivilegien angeben, um Anforderungen in einem Sicherheitskontext zu verarbeiten, der sich von dem des Berichtsservers unterscheidet. Dieses Konto ist das anonyme Konto, mit dem Sie auf Dateien des Berichts-Generators zugreifen können, die sich auf einem Berichtsserver befinden. Das Konto legt die Identität des Threads im ASP.NET-Workerprozess fest. Die in diesem Thread ausgeführten Anforderungen werden ohne eine Authentifizierungsprüfung an den Berichtsserver übergeben. Dieses Konto entspricht dem IUSR_\<Computer> Konto in Internetinformationsdienste (IIS), das verwendet wird, um den Sicherheitskontext für ASP.net-Arbeitsprozesse festzulegen, wenn anonymer Zugriff und Identitätswechsel aktiviert sind. Um das Konto anzugeben, fügen Sie es einer Web.config-Datei auf dem Berichts-Generator hinzu.  
   
  Der Berichtsserver muss für die Standardauthentifizierung konfiguriert sein, wenn Sie den anonymen Zugriff auf die Programmdateien des Berichts-Generators aktivieren möchten. Wenn der Berichtsserver nicht für die Standardauthentifizierung konfiguriert ist, erhalten Sie eine Fehlermeldung, sobald Sie versuchen, den anonymen Zugriff zu aktivieren.  
   
@@ -137,7 +138,7 @@ ms.locfileid: "66102157"
   
      Der Authentifizierungsmodus muss auf `Windows` festgelegt werden, wenn Sie eine Web.config-Datei aufnehmen möchten.  
   
-     `Identity impersonate` kann `True` oder `False` sein.  
+     `Identity impersonate`kann oder `True` `False`sein.  
   
     -   Legen Sie `False` fest, wenn ASP.NET das Sicherheitstoken nicht lesen darf. Die Anforderung wird im Sicherheitskontext des Berichtsserverdienstes ausgeführt.  
   
@@ -155,8 +156,8 @@ ms.locfileid: "66102157"
   
 8.  Starten Sie den Berichtsserver neu.  
   
-## <a name="see-also"></a>Siehe auch  
- [Anwendungsdomänen für Berichtsserveranwendungen](../report-server/application-domains-for-report-server-applications.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Anwendungs Domänen für Berichts Server Anwendungen](../report-server/application-domains-for-report-server-applications.md)   
  [Sicherheit und Schutz für Reporting Services](reporting-services-security-and-protection.md)  
   
   

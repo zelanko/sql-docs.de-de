@@ -1,5 +1,5 @@
 ---
-title: Speichern Sie die Datei unter (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Datei speichern unter (Dialog Feld) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070050"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datei speichern unter' (Analysis Services – Mehrdimensionale Daten)
@@ -26,18 +26,18 @@ ms.locfileid: "66070050"
   
 -   Klicken Sie im Dialogfeld**Datenbank sichern**in der **Remotesicherungsdatei** -Spalte des Rasters für die Option **Speicherort für Remotepartitionssicherungen** auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
   
-## <a name="options"></a>Optionen  
- **Wählen Sie den Ordner**  
+## <a name="options"></a>Tastatur  
+ **Ordner auswählen**  
  Wählen Sie einen Ordner aus, um für **Ausgewählter Pfad** den gewünschten Pfad festzulegen.  
   
- **Ausgewählte Pfad**  
+ **Ausgewählter Pfad**  
  Ändern Sie gegebenenfalls den Pfad, den Sie in der Liste **Wählen Sie den Ordner aus**ausgewählt haben, oder wählen Sie eine Datei aus, die nicht unter **Wählen Sie den Ordner aus**aufgeführt ist.  
   
  **Dateiname**  
  Ändern Sie gegebenenfalls die Datei, die Sie in der Liste **Wählen Sie den Ordner aus**ausgewählt haben, oder wählen Sie eine Datei aus, die nicht unter **Wählen Sie den Ordner aus**aufgeführt ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Im Dialogfeld Datenbank sichern &#40;Analysis Services – mehrdimensionale Daten&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Dialog Feld "Datenbank sichern" &#40;Analysis Services Mehrdimensionale Daten&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

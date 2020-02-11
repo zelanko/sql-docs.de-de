@@ -1,5 +1,5 @@
 ---
-title: Optionen (Designer – Pläne Seite) | Microsoft-Dokumentation
+title: Optionen (Designer-Seite "Wartungspläne") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283180"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>Optionen (Designer – Pläne Seite)
+# <a name="options-designers-maintenance-plans-page"></a>Optionen (Designer-Seite "Wartungspläne")
   Bestimmen Sie mithilfe des Dialogfelds **Optionen** das Standardverhalten des Designers, wenn einer Entwurfsoberfläche neue Formen hinzugefügt werden. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Designer**, und wählen Sie **Wartungspläne**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  

@@ -20,14 +20,14 @@ ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920237"
 ---
 # <a name="cancel-method-ado"></a>Cancel-Methode (ADO)
-Bricht einen ausstehenden asynchronen Methodenaufruf Ausführung ab.  
+Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ Bricht einen ausstehenden asynchronen Methodenaufruf Ausführung ab.
 object.Cancel  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **Abbrechen** Methode, um die Ausführung eines asynchronen Methodenaufrufs beendet: d. h. eine Methode aufgerufen, mit der **AdAsyncConnect**, **AdAsyncExecute**, oder **AdAsyncFetch** Option.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **Cancel** -Methode, um die Ausführung eines asynchronen Methoden Aufrufs zu beenden, d. h. eine Methode, die mit der Option **adasyncconnect**, **adAsyncExecute**oder **adasyncfetch** aufgerufen wird.  
   
- Die folgende Tabelle zeigt, welcher Task beendet wird, bei der Verwendung der **Abbrechen** Methode für einen bestimmten Typ des Objekts.  
+ In der folgenden Tabelle wird gezeigt, welche Aufgabe beendet wird, wenn Sie die **Cancel** -Methode für einen bestimmten Objekttyp verwenden.  
   
-|Wenn *Objekt* ist ein|Der letzte asynchrone Aufruf dieser Methode wird beendet.|  
+|Wenn das *Objekt* ein|Der letzte asynchrone Aufrufe dieser Methode wird beendet.|  
 |----------------------|-------------------------------------------------------------|  
-|[Befehl](../../../ado/reference/ado-api/command-object-ado.md)|[Ausführen](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)|[Führen Sie](../../../ado/reference/ado-api/execute-method-ado-connection.md) oder [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[Datensatz](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), oder [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[Datei](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Befehl](../../../ado/reference/ado-api/command-object-ado.md)|[Auszuführen](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)|[Ausführen](../../../ado/reference/ado-api/execute-method-ado-connection.md) oder [Öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
+|[Aufnahme](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [muverecord](../../../ado/reference/ado-api/moverecord-method-ado.md)oder [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Datenstrom](../../../ado/reference/ado-api/stream-object-ado.md)|[Öffnen](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -56,15 +56,15 @@ object.Cancel
 |[Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
-## <a name="see-also"></a>Siehe auch  
- [Cancel – Methodenbeispiel (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
- [Cancel – Methodenbeispiel (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [Cancel – Methodenbeispiel (VC++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Cancel-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
+ [Cancel-Methode (Beispiel) (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
+ [Beispiel für eine Abbruch Methode (VC + +)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
  [Cancel-Methode (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [CancelUpdate-Methode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Open Sie-Methode (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)
+ [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)

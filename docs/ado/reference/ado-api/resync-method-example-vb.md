@@ -1,5 +1,5 @@
 ---
-title: Resync – Methodenbeispiel (VB) | Microsoft-Dokumentation
+title: Resync-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8ad898c7a02a46b12c546ae11b2387f8da0479e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917155"
 ---
 # <a name="resync-method-example-vb"></a>Resync-Methode – Beispiel (VB)
-Dieses Beispiel veranschaulicht die Verwendung der [Resync](../../../ado/reference/ado-api/resync-method.md) Methode, um Daten in ein statisches Recordset zu aktualisieren.  
+In diesem Beispiel wird die Verwendung der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode zum Aktualisieren von Daten in einem statischen Recordset veranschaulicht.  
   
 ```  
 'BeginResyncVB  
@@ -103,6 +103,6 @@ End Sub
 'EndResyncVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)

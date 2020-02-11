@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106813"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht
@@ -44,7 +44,7 @@ ms.locfileid: "66106813"
     ```  
   
     > [!IMPORTANT]  
-    >  Wenn Sie wie oben gezeigt die Klammern um die Variable nicht einschließen, der Bericht nicht gerendert und der Fehler "die Skalarvariable muss deklariert werden" wird angezeigt.  
+    >  Wenn Sie die Variable nicht wie oben dargestellt in Klammern einschließen, wird der Bericht nicht mehr angezeigt, und der Fehler "die Skalarvariable muss deklariert werden" wird angezeigt.  
   
      Für die Abfragevariable wird automatisch ein Datasetparameter für ein eingebettetes Dataset oder ein freigegebenes Dataset erstellt. Für den Datasetparameter wird automatisch ein Berichtsparameter erstellt.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106813"
     ```  
   
     > [!IMPORTANT]  
-    >  Wenn Sie wie oben gezeigt die Klammern um die Variable nicht einschließen, der Bericht nicht gerendert und der Fehler "die Skalarvariable muss deklariert werden" wird angezeigt.  
+    >  Wenn Sie die Variable nicht wie oben dargestellt in Klammern einschließen, wird der Bericht nicht mehr angezeigt, und der Fehler "die Skalarvariable muss deklariert werden" wird angezeigt.  
   
      Für die Abfragevariable wird automatisch ein Datasetparameter für ein eingebettetes Dataset oder ein freigegebenes Dataset erstellt. Für den Datasetparameter wird automatisch ein Berichtsparameter erstellt.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66106813"
   
      Weitere Informationen finden Sie unter [Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter (Berichts-Generator und SSRS)](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
