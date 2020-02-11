@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057396"
 ---
 # <a name="multiple-transactions"></a>Mehrere Transaktionen
@@ -36,7 +36,7 @@ ms.locfileid: "66057396"
   
  Das folgende Diagramm zeigt die fünf nicht miteinander verbundenen Transaktionen im Paket. Eine Transaktion wird durch den Sequenzcontainer gestartet, und vier Transaktionen werden durch die SQL Ausführen-Tasks gestartet.  
   
- ![Implementierung von mehreren Transaktionen](media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![Implementierung von mehreren Transaktionen](media/mw-dts-trans2.gif "Implementierung von mehreren Transaktionen")  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Konfigurieren eines Pakets für die Verwendung von Transaktionen](../relational-databases/native-client-ole-db-transactions/transactions.md)  

@@ -1,5 +1,5 @@
 ---
-title: Verwaltung von Anmeldenamen und Aufträgen für die Datenbanken einer verfügbarkeitsgruppe (SQLServer) | Microsoft-Dokumentation
+title: Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeits Gruppe (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774282"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeitsgruppe (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62774282"
   
      Die Serverinstanzen, die die Verfügbarkeitsreplikate einer Verfügbarkeitsgruppe hosten, könnten unterschiedlich konfiguriert sein, z. B. mit anderen Bandlaufwerkbuchstaben. Bei den Aufträgen für die einzelnen Verfügbarkeitsreplikate müssen derartige Unterschiede berücksichtigt werden.  
   
-     Beachten Sie, dass Sicherungsaufträge die [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) -Funktion verwenden können, um zu identifizieren, ob das lokale Replikat entsprechend den Sicherungseinstellungen der Verfügbarkeitsgruppe das bevorzugte Replikat für Sicherungen ist. Mit dem [Wartungsplanungs-Assistenten](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) erstellte Sicherungsaufträge verwenden diese Funktion systemintern. Für andere Sicherungsaufträge empfiehlt es sich, diese Funktion in den Sicherungsaufträgen als Bedingung zu verwenden, sodass sie nur auf dem bevorzugten Replikat ausgeführt werden. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Beachten Sie, dass Sicherungsaufträge die [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) -Funktion verwenden können, um zu identifizieren, ob das lokale Replikat entsprechend den Sicherungseinstellungen der Verfügbarkeitsgruppe das bevorzugte Replikat für Sicherungen ist. Mit dem [Wartungsplanungs-Assistenten](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) erstellte Sicherungsaufträge verwenden diese Funktion systemintern. Für andere Sicherungsaufträge empfiehlt es sich, diese Funktion in den Sicherungsaufträgen als Bedingung zu verwenden, sodass sie nur auf dem bevorzugten Replikat ausgeführt werden. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Anmeldungen**  
   
@@ -65,8 +65,8 @@ ms.locfileid: "62774282"
   
 -   [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Eigenständige Datenbanken](../relational-databases/databases/contained-databases.md)   
  [Erstellen von Aufträgen](../ssms/agent/create-jobs.md)  
   

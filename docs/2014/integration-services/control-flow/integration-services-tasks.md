@@ -27,10 +27,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831436"
 ---
 # <a name="integration-services-tasks"></a>Integration Services-Tasks
@@ -38,10 +38,11 @@ ms.locfileid: "62831436"
   
  Mit einer Programmiersprache, die COM unterstützt, wie z. B. Visual Basic, oder einer .NET-Programmiersprache, wie z. B. C#, können Sie auch benutzerdefinierte Tasks erstellen.  
   
- Der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer, das grafische Tool in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Arbeiten mit Paketen, stellt die Entwurfsoberfläche zum Erstellen von Paketablaufsteuerungen und benutzerdefinierte Editoren zum Konfigurieren von Tasks bereit. Darüber hinaus können Sie für das Objektmodell von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programmieren, dass Pakete programmgesteuert erstellt werden.  
+ Der [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, das grafische Tool in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Arbeiten mit Paketen, stellt die Entwurfs Oberfläche zum Erstellen der Paket Ablauf Steuerung bereit und stellt benutzerdefinierte Editoren zum Konfigurieren von Tasks bereit. Sie können das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Objektmodell auch so programmieren, dass Pakete Programm gesteuert erstellt werden.  
   
 ## <a name="types-of-tasks"></a>Tasktypen  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt die folgenden Arten von Tasks ein.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt die folgenden Arten von Tasks ein.  
   
  Datenflusstask  
  Dieser Task führt Datenflüsse aus, um Daten zu extrahieren, Transformationen auf Spaltenebene anzuwenden und Daten zu laden.  

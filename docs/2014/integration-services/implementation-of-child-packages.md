@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058192"
 ---
 # <a name="implementation-of-child-packages"></a>Implementierung von untergeordneten Paketen
@@ -41,7 +41,7 @@ ms.locfileid: "66058192"
   
 -   Exportieren von Paketen mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Bereitstellen von Paketen durch Erstellen eines Bereitstellungshilfsprogramms für das Projekt, in dem die bereitzustellenden Pakete enthalten sind, und anschließendes Ausführen des Paketinstallations-Assistenten zum Installieren der Pakete im Dateisystem bzw. in einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+-   Bereitstellen von Paketen durch Erstellen eines Bereitstellungshilfsprogramms für das Projekt, in dem die bereitzustellenden Pakete enthalten sind, und anschließendes Ausführen des Paketinstallations-Assistenten zum Installieren der Pakete im Dateisystem bzw. in einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Paket Bereitstellung &#40;SSIS-&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Sie müssen die Bereitstellung für jeden zu verwendenden Remoteserver wiederholen.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66058192"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Debuggen der Aufträge des SQL Server-Agents und der untergeordneten Pakete  
  Sie können die Aufträge des SQL Server-Agents und ihre untergeordneten Pakete testen, indem Sie eine der folgenden Methoden verwenden:  
   
--   Ausführen der einzelnen untergeordneten Pakete im SSIS-Designer, indem Sie im Menü **Debuggen** / **Starten ohne Debugging**.  
+-   Ausführen der einzelnen untergeordneten Pakete im SSIS-Designer, indem Sie auf **Debuggen** / **Starten ohne Debugging**klicken.  
   
 -   Ausführen der einzelnen Aufträge des SQL Server-Agents auf dem Remotecomputer mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um sicherzustellen, dass die Pakete ausgeführt werden.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66058192"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), auf andyleonard.blog.  
+-   Blogeintrag zu [SSIS: Zugreifen auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)auf "andyleonard. Blog".  
   
--   Artikel [Task "Paket ausführen"](../integration-services/control-flow/execute-package-task.md).  
+-   Artikel [Paket ausführen (Task](../integration-services/control-flow/execute-package-task.md)).  
   
   

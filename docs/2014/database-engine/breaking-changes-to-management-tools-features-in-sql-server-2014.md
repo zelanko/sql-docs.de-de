@@ -1,5 +1,5 @@
 ---
-title: Wichtige Änderungen an Funktionen der Verwaltungstools in SQLServer 2014 | Microsoft-Dokumentation
+title: Wichtige Änderungen an Funktionen der Verwaltungs Tools in SQL Server 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73e2c6ecb4ae2f829c02897ed5c6ab5d84f1ba4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787014"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Wichtige Änderungen an Funktionen der Verwaltungstools in SQL Server 2014
@@ -31,12 +31,12 @@ ms.locfileid: "62787014"
 ### <a name="smo-has-been-reversioned-in-includesssql11includessssql11-mdmd"></a>SMO liegt in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] in einer neuen Version vor.  
  Mit SMO aus [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] oder früheren Versionen entwickelter Code kann nicht ohne kleinere Änderungen für [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erstellt werden. Weitere Informationen finden Sie unter [Backward Compatibility in SMO](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md).  
 
-## <a name="previous-versions"></a> Wichtige Änderungen in SQLServer 2005  
+## <a name="previous-versions"></a>Wichtige Änderungen in SQL Server 2005  
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abwärtskompatibilität](../../2014/getting-started/backward-compatibility.md)  
- [Weitere Informationen zu wichtigen Änderungen an Funktionen der Verwaltungstools in SQLServer 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
+ [Weitere Informationen zu wichtigen Änderungen an Funktionen der Verwaltungs Tools in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

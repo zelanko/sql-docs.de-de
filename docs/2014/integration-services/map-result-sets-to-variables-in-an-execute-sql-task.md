@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057759"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Zuordnen von Resultsets zu Variablen in einem Task „SQL ausführen“
@@ -30,11 +30,11 @@ ms.locfileid: "66057759"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
-2.  Doppelklicken Sie im **Projektmappen-Explorer**auf das Paket, um es zu öffnen.  
+2.  Doppelklicken Sie in **Projektmappen-Explorer**auf das Paket, um es zu öffnen.  
   
 3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
   
-4.  Wenn das Paket noch keinen Task SQL ausführen enthält, fügen Sie der Ablaufsteuerung des Pakets einen solchen Task hinzu. Weitere Informationen finden Sie unter [hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Wenn das Paket noch keinen Task SQL ausführen enthält, fügen Sie der Ablaufsteuerung des Pakets einen solchen Task hinzu. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablauf Steuerung](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
 5.  Doppelklicken Sie auf den Task SQL ausführen.  
@@ -59,13 +59,13 @@ ms.locfileid: "66057759"
   
 11. Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)   
- [Resultsets den Task "SQL ausführen"](result-sets-in-the-execute-sql-task.md)   
- [Task "Paket ausführen"](control-flow/execute-package-task.md)   
- [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
- [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
- [Verwenden Sie die Werte von Variablen und Parametern in einem untergeordneten Paket](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [Resultsets im Task "SQL ausführen"](result-sets-in-the-execute-sql-task.md)   
+ [Task ' Paket ausführen '](control-flow/execute-package-task.md)   
+ [Paket Konfigurationen](../../2014/integration-services/package-configurations.md)   
+ [Erstellen von Paket Konfigurationen](../../2014/integration-services/create-package-configurations.md)   
+ [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Parameter (Dialogfeld) (MDX) Abfrage | Microsoft-Dokumentation
+title: Dialog Feld "Abfrage Parameter" (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070527"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Dialogfeld "Abfrageparameter" (MDX)
   Verwenden Sie das Dialogfeld **Abfrageparameter** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , um MDX-Abfragen, die zum Definieren von Sätzen, Dimensionen und Teilcubes verwendet werden, Parameter hinzuzufügen. Sie können das Dialogfeld **Abfrageparameter** anzeigen, indem Sie im Dialogfeld **MDX-Abfrage-Generator** auf das Symbol **Parameter** klicken.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Parameter**  
  Geben Sie einen Parameternamen ein, um mit der Erstellung eines neuen Parameters zu beginnen, oder bearbeiten Sie den Namen eines vorhandenen Parameters.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66070527"
  Wählen Sie eine Hierarchie aus der Liste aus, wenn der Parameter für eine bestimmte Hierarchie übernommen wird.  
   
  **Mehrere Werte**  
- Description  
+ BESCHREIBUNG  
   
- **Default**  
+ **Standard**  
  Geben Sie ggf. den Standardwert für den Parameter an. Standardmäßig ist kein Wert zugewiesen.  
   
  **Andere**  

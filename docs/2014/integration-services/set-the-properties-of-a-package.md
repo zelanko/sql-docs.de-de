@@ -1,5 +1,5 @@
 ---
-title: Legen Sie die Eigenschaften eines Pakets | Microsoft-Dokumentation
+title: Festlegen der Eigenschaften eines Pakets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055802"
 ---
 # <a name="set-the-properties-of-a-package"></a>Festlegen der Eigenschaften eines Pakets
@@ -45,7 +45,7 @@ ms.locfileid: "66055802"
   
 5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Festlegen von Paketeigenschaften](set-package-properties.md)  
   

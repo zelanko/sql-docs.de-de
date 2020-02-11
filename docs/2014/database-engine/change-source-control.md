@@ -1,5 +1,5 @@
 ---
-title: Quellcodeverwaltung ändern | Microsoft-Dokumentation
+title: Quell Code Verwaltung ändern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812746"
 ---
 # <a name="change-source-control"></a>Quellcodeverwaltung ändern
   Erstellt und verwaltet die Verbindungen und Bindungen, über die eine lokal gespeicherte Projektmappe bzw. ein Projekt mit einem Ordner in der Datenbank für die Quellcodeverwaltung verknüpft ist.  
   
 ## <a name="dialog-box-access"></a>Zugriff auf das Dialogfeld  
- Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ein Element im Projektmappen-Explorer aus. Auf der **Datei** Menü klicken Sie auf **Quellcodeverwaltung**, und klicken Sie dann **Quellcodeverwaltung ändern**.  
+ Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ein Element im Projektmappen-Explorer aus. Klicken Sie im Menü **Datei** auf **Quell**Code Verwaltung, und **ändern**Sie dann Quell Code Verwaltung.  
   
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Bind**  
  Ordnet ausgewählte Elemente einem angegebenen Speicherort auf dem Quellcode-Verwaltungsserver zu. So können Sie mit dieser Schaltfläche beispielsweise den letzten bekannten Ordner und die Datenbank auf dem Quellcode-Verwaltungsserver binden. Wenn kein zuletzt verwendeter Serverordner bzw. eine Serverdatenbank gefunden wird, werden Sie aufgefordert einen anderen bzw. eine andere anzugeben.  
   
@@ -38,15 +38,15 @@ ms.locfileid: "62812746"
  Navigiert zu einem neuen Speicherort auf dem Quellcode-Verwaltungsserver für das angegebene Element.  
   
  **Spalten**  
- Identifizieren Sie die anzuzeigenden Spalten sowie die Reihenfolge, in der sie angezeigt werden.  
+ Identifizieren Sie die anzuzeigenden Spalten und die Reihenfolge, in der Sie angezeigt werden.  
   
- **Verbinden**  
+ **Herstellen einer Verbindung**  
  Erstellt eine Verbindung zwischen ausgewählten Elementen und dem Quellcode-Verwaltungsserver.  
   
- **Verbunden**  
+ **Hängt**  
  Zeigt den Verbindungsstatus einer ausgewählten Projektmappe bzw. eines Projekts an.  
   
- **Trennen**  
+ **Verschluss**  
  Trennt die Verbindung der lokalen Kopie einer Projektmappe bzw. eines Projekts auf Ihrem Computer zu ihrer Masterkopie in der Datenbank. Verwenden Sie diesen Befehl, bevor Sie Ihren Computer vom Quellcode-Verwaltungsserver trennen (z. B., wenn Sie auf Ihrem Laptop offline arbeiten).  
   
  **OK**  
@@ -61,29 +61,29 @@ ms.locfileid: "62812746"
  **Serverbindung**  
  Gibt die Bindung des Elements an einen Quellcode-Verwaltungsserver an.  
   
- **Servername**  
+ **Server Name**  
  Zeigt den Namen des Quellcode-Verwaltungsservers an, an den die betreffende Projektmappe bzw. das Projekt gebunden ist.  
   
- **Projektmappe oder eines Projekts**  
+ **Projektmappe/Projekt**  
  Zeigt die Namen der einzelnen Projektmappen und Projekte in der aktuellen Auswahl an.  
   
- **Sort**  
+ **Sortieren**  
  Sortiert die Reihenfolge der angezeigten Spalten.  
   
  **Status**  
- Identifiziert den Bindungs- und Verbindungsstatus eines Elements. Optionen sind möglich:  
+ Identifiziert den Bindungs- und Verbindungsstatus eines Elements. Mögliche Optionen:  
   
 |**Option**|**Beschreibung**|  
 |----------------|---------------------|  
 |Gültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden und mit ihm verbunden.|  
-|Ungültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden bzw. von ihm getrennt. Verwenden der **zur Quellcodeverwaltung hinzufügen** Befehl anstelle von **binden** für dieses Element.|  
+|Ungültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden bzw. von ihm getrennt. Verwenden Sie den Befehl **zur Quell Code Verwaltung hinzufügen** anstelle von **Bind** für dieses Element.|  
 |Unknown|Der Status des Elements, das sich unter Quellcodeverwaltung befindet, wurde noch nicht ermittelt.|  
 |Nicht gesteuert|Das Element wurde nicht unter Quellcodeverwaltung gestellt.|  
   
  **Unbind**  
- Anzeigen der **Quellcodeverwaltung** im Dialogfeld können Sie ausgewählte Elemente aus der quellcodeverwaltung zu entfernen und dauerhaft von ihren aktuellen Ordnern trennen.  
+ Zeigt das Dialogfeld **Quell** Code Verwaltung an, in dem Sie ausgewählte Elemente aus der Quell Code Verwaltung entfernen und die Zuordnung der Elemente zu Ihren aktuellen Ordnern dauerhaft aufheben können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Quellcodeverwaltung des Projektmappen-Explorers](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

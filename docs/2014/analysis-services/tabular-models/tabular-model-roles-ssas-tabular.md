@@ -1,5 +1,5 @@
 ---
-title: Rollen tabellarischer Modelle (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Tabellarische Modell Rollen (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066452"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Rollen tabellarischer Modelle (SSAS – tabellarisch)
@@ -24,8 +24,8 @@ ms.locfileid: "66066452"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Aufgabe|Beschreibung|  
+|Aufgabe|BESCHREIBUNG|  
 |----------|-----------------|  
-|[Verwalten von Rollen mit SSMS &#40;SSAS – tabellarisch&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Beschreibt, wie Sie Rollen erstellen, Elemente in einer Rolle hinzufügen und entfernen, Berechtigungen für eine Rolle ändern sowie Filter auf Zeilenebene mit DAX hinzufügen, bearbeiten oder entfernen.|  
+|[Verwalten von Rollen mit SSMS &#40;tabellarischen SSAS-&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Beschreibt, wie Sie Rollen erstellen, Elemente in einer Rolle hinzufügen und entfernen, Berechtigungen für eine Rolle ändern sowie Filter auf Zeilenebene mit DAX hinzufügen, bearbeiten oder entfernen.|  
   
   

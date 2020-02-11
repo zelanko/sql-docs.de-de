@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: jt000
 ms.author: jasontre
 ms.openlocfilehash: 738908549caa157557a16b1ae05575231a15c734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580589"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart – Reporting Services
@@ -24,7 +24,7 @@ Der Berichts-Viewer-Webpart weist einige Einstellungen auf, die konfiguriert wer
 
 So können Sie auf die Websiteeinstellungen zugreifen:
 
-1. Wählen Sie auf Ihrer SharePoint-Website das **Zahnradsymbol** in der oberen linken Ecke und anschließend **Websiteeinstellungen** aus.
+1. Klicken Sie auf Ihrer SharePoint-Website auf das **Zahnradsymbol** in der oberen linken Ecke und anschließend auf **Site Settings** (Websiteeinstellungen).
 
     ![Websiteeinstellungen über das Zahnradsymbol.](media/sharepoint-site-settings.png)
 

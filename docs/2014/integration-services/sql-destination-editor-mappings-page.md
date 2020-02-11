@@ -1,5 +1,5 @@
 ---
-title: SQL-Ziel-Editor (Seite Zuordnungen) | Microsoft-Dokumentation
+title: Ziel-Editor für SQL (Seite Zuordnungen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055476"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Ziel-Editor für SQL (Seite Zuordnungen)
@@ -26,7 +26,7 @@ ms.locfileid: "66055476"
   
  Weitere Informationen zum SQL Server-Ziel finden Sie unter [SQL Server Destination](data-flow/sql-server-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66055476"
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für SQL &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für SQL &#40;Seite „Erweitert“&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
+ [Der Ziel-Editor für SQL &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für SQL &#40;Seite "Erweitert"&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [Massenladen von Daten mithilfe des SQL Server-Ziels](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

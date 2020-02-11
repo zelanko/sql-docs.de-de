@@ -1,5 +1,5 @@
 ---
-title: Datenfluss (Registerkarte) steuern | Microsoft-Dokumentation
+title: Registerkarte "Ablauf Steuerung" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060363"
 ---
 # <a name="control-flow-tab"></a>Ablaufsteuerung (Registerkarte)
@@ -40,8 +40,8 @@ ms.locfileid: "66060363"
   
  Um diese Funktionen einzelnen Tasks und Containern in [!INCLUDE[ssIS](../includes/ssis-md.md)] hinzuzufügen, klicken Sie mit der rechten Maustaste auf das entsprechende Objekt auf der Entwurfsoberfläche, und wählen Sie dann die gewünschte Option.  
   
-## <a name="see-also"></a>Siehe auch  
- [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Rang folgen Einschränkungen](control-flow/precedence-constraints.md)   
  [SSIS-Designer](ssis-designer.md)   
  [Ablaufsteuerung](control-flow/control-flow.md)  
   

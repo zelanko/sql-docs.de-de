@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Seite "anfängliche Datensynchronisierung" (AlwaysOn-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation
+title: Seite "anfängliche Datensynchronisierung auswählen" (AlwaysOn-Verfügbarkeits Gruppen-Assistenten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789469"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Seite 'Anfängliche Datensynchronisierung auswählen' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
@@ -38,7 +38,7 @@ ms.locfileid: "62789469"
   
      Wenn die Sicherungs- und Wiederherstellungsvorgänge besondert gesichert sein müssen, wird empfohlen, dass Sie die Option **Nur verknüpfen** oder **Anfängliche Datensynchronisierung überspringen** aktivieren.  
   
-##  <a name="Full"></a> Vollständig  
+##  <a name="Full"></a>Voll  
  Für jede primäre Datenbank werden mit der Option **Vollständig** mehrere Vorgänge in einem Workflow ausgeführt: Erstellen einer vollständigen und Protokollsicherung der primären Datenbank, Erstellen der entsprechenden sekundären Datenbanken durch Wiederherstellen dieser Sicherungen auf jeder Serverinstanz, die ein sekundäres Replikat hostet, und Verknüpfen jeder sekundären Datenbank mit der Verfügbarkeitsgruppe.  
   
  Aktivieren Sie diese Option nur, wenn die Umgebung die folgenden Voraussetzungen zum Verwenden der vollständigen anfänglichen Datensynchronisierung erfüllt und der Assistent die Datensynchronisierung automatisch starten soll.  
@@ -91,14 +91,14 @@ ms.locfileid: "62789469"
   
      [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   Wenn Sie einer Verfügbarkeitsgruppe eine oder mehrere primäre Datenbanken für den Protokollversand hinzufügen, können Sie möglicherweise eine oder mehrere der entsprechenden sekundären Datenbanken aus dem Protokollversand nach [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]migrieren. Weitere Informationen finden Sie unter [Voraussetzungen für das Migrieren vom Protokollversand zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+-   Wenn Sie einer Verfügbarkeitsgruppe eine oder mehrere primäre Datenbanken für den Protokollversand hinzufügen, können Sie möglicherweise eine oder mehrere der entsprechenden sekundären Datenbanken aus dem Protokollversand nach [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]migrieren. Weitere Informationen finden Sie unter [Voraussetzungen für das Migrieren vom Protokoll Versand zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
     > [!NOTE]  
     >  Nachdem Sie alle sekundären Datenbanken für die Verfügbarkeitsgruppe erstellt haben, sofern Sie Sicherungen auf sekundären Replikaten ausführen möchten, müssen Sie die Voreinstellung zur automatisierten Sicherung der Verfügbarkeitsgruppe neu konfigurieren.  
   
      **Weitere Informationen:**  
   
-     [Voraussetzungen für das Migrieren vom Protokollversand zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [Voraussetzungen für das Migrieren vom Protokoll Versand zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -116,13 +116,13 @@ ms.locfileid: "62789469"
   
 -   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQLServer&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
+-   [Starten Sie die Daten Verschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
 -   [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

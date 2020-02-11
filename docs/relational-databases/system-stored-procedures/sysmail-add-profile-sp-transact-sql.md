@@ -18,10 +18,10 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70211282"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70211282"
 
   Erstellt ein neues Profil für Datenbank-E-Mail.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +41,20 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_name = ] 'profile\_name'` den Namen für das neue Profil an. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @profile_name = ] 'profile\_name'`Der Name des neuen Profils. *profile_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
  
    > [!NOTE]
    > Der Name des Profils, der den SQL-Agent von Azure SQL verwaltete Instanz verwendet, muss aufgerufen werden **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'` Sie die optionale Beschreibung für das neue Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
+`[ @description = ] 'description'`Die optionale Beschreibung für das neue Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT` gibt die ID für das neue Profil zurück. *new_profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT`Gibt die ID für das neue Profil zurück. *new_profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Remarks  
- Ein Datenbank-E-Mail-Profil kann eine beliebige Anzahl von Datenbank-E-Mail-Konten enthalten. Gespeicherte Prozeduren von Datenbank-E-Mail können nach dem Profilnamen oder der von dieser Prozedur generierten Profil-ID auf ein Profil verweisen. Weitere Informationen zum Hinzufügen eines Kontos zu einem Profil finden Sie [unter &#40;sysmail_add_profileaccount_sp Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Datenbank-E-Mail-Profil kann eine beliebige Anzahl von Datenbank-E-Mail-Konten enthalten. Gespeicherte Prozeduren von Datenbank-E-Mail können nach dem Profilnamen oder der von dieser Prozedur generierten Profil-ID auf ein Profil verweisen. Weitere Informationen zum Hinzufügen eines Kontos zu einem Profil finden Sie unter [sysmail_add_profileaccount_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
  Der Profilname und die Beschreibung können mit der gespeicherten Prozedur **sysmail_update_profile_sp**geändert werden, während die Profil-ID für die Lebensdauer des Profils konstant bleibt.  
   
@@ -91,10 +91,10 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen Sie ein Datenbank-E-Mail Konto](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Datenbank-E-Mail von Konfigurationsobjekten](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Datenbank-E-Mail gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Erstellen eines Datenbank-E-Mail Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Konfigurationsobjekte Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Datenbank-E-Mail gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

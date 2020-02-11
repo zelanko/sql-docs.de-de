@@ -1,5 +1,5 @@
 ---
-title: Aktivieren der Paketprotokollierung in SQL Server Data Tools | Microsoft-Dokumentation
+title: Aktivieren der Paket Protokollierung in SQL Server Data Tools | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059280"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Aktivieren der Paketprotokollierung in SQL Server Data Tools
@@ -43,7 +43,8 @@ ms.locfileid: "66059280"
   
     -   Verwenden Sie für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]einen OLE DB-Verbindungs-Manager. Weitere Informationen finden Sie unter [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-    -   Führen Sie für das Windows-Ereignisprotokoll keine Aktion durch. [!INCLUDE[ssIS](../includes/ssis-md.md)] erstellt das Protokoll automatisch.  
+    -   Führen Sie für das Windows-Ereignisprotokoll keine Aktion durch. 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] erstellt das Protokoll automatisch.  
   
     -   Verwenden Sie für XML-Dateien einen Dateiverbindungs-Manager.  
   
@@ -67,8 +68,8 @@ ms.locfileid: "66059280"
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Integration Services &#40;SSIS-&#41; Protokollierung](performance/integration-services-ssis-logging.md)   
  [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

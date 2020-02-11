@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736363"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
@@ -63,10 +63,10 @@ GO
  Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die Prozedur **my_proc** drei Parameter mit den Namen **\@first**, **\@second** und **\@third** erwartet, können die Werte, die an die Prozedur übergeben werden, den Parameternamen wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  Wenn ein Parameterwert im Format **\@parameter =** _value_ angegeben wird, müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **\@parameter =** _value_ übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
+>  Wenn ein Parameterwert im Format ** \@Parameter =**_value_angegeben wird, müssen alle nachfolgenden Parameter auf diese Weise bereitgestellt werden. Wenn die Parameterwerte nicht im Format ** \@Parameter =**_value_übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, da die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
 > 
 > [!WARNING]
->  Jeder Parameter, der im Format **\@parameter =** _value_ übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
+>  Jeder Parameter, der im Format ** \@Parameter =**_value_ mit dem Parameter falsch geschrieben wird, bewirkt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dass einen Fehler generiert und die Prozedur Ausführung verhindert.  
   
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen  
  Parameter müssen mit einem Datentyp definiert werden, wann sie in einer CREATE PROCEDURE-Anweisung deklariert werden. Durch den Datentyp eines Parameters werden der Typ und der Wertebereich festgelegt, die beim Aufruf der Prozedur für den Parameter akzeptiert werden. Wenn Sie z. B. einen Parameter mit dem `tinyint`-Datentyp definieren, werden nur numerische Werte im Bereich von 0 bis 255 als Werte für diesen Parameter akzeptiert. Wenn eine Prozedur mit einem Wert ausgeführt wird, der nicht mit dem Datentyp kompatibel ist, wird ein Fehler zurückgegeben.  
@@ -126,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht übersprungen werden, solange der fünfte Parameter eingeschlossen ist, außer wenn die Parameter im Format **\@parameter =** _value_ angegeben werden.  
+ Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht übersprungen werden, solange der fünfte Parameter enthalten ist, es sei denn, die Parameter werden im Format ** \@Parameter =**_value_angegeben.  
   
 ## <a name="specifying-parameter-direction"></a>Angeben der Parameterrichtung  
  Die Parameterrichtung ist entweder Eingabe, d. h. ein Wert wird in den Textkörper der Prozedur übergeben, oder Ausgabe, d. h. die Prozedur gibt einen Wert an das aufrufende Programm zurück. Standardmäßig wird ein Eingabeparameter verwendet.  
@@ -164,10 +164,10 @@ GO
   
 ```  
   
- Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die OUTPUT-Parameter **\@cost** und **\@compareprices** werden mit Sprachkonstrukten zur Ablaufsteuerung verwendet, um eine Meldung im Fenster **Meldungen** zurückzugeben.  
+ Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die Ausgabeparameter ** \@Cost** und ** \@Compareprices** werden mit der Ablauf steuerungssprache verwendet, um eine Meldung im Fenster **Meldungen** zurückzugeben.  
   
 > [!NOTE]  
->  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Jedoch müssen der Datentyp und die Parameterpositionierung übereinstimmen, es sei denn **\@listprice=** _variable_ wird verwendet.  
+>  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Allerdings müssen der Datentyp und die Position des Parameters identisch sein (es sei denn ** \@, ListPrice =** _Variable_ wird verwendet).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -202,7 +202,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

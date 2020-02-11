@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770417"
 ---
 # <a name="merge-transformation"></a>Transformation für Zusammenführen
@@ -71,7 +71,7 @@ ms.locfileid: "62770417"
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Zusammenführungsjoin](merge-join-transformation.md)   
  [Transformation für UNION ALL](union-all-transformation.md)   
  [Datenfluss](../data-flow.md)   

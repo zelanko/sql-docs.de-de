@@ -1,5 +1,5 @@
 ---
-title: Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
+title: Angeben von expliziten Konvertierungs Funktionen in XPath-Abfragen (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010696"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen (SQLXML 4.0)
-  In den folgenden Beispielen wird gezeigt, wie explizite Konvertierungsfunktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie explizite Konvertierungsfunktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Verwenden der expliziten Konvertierungsfunktion number()  
  Die `number()`-Funktion konvertiert ein Argument in eine Zahl.  
   
- Wenn des Werts des **ContactID** ist nicht numerisch, die folgende Abfrage konvertiert **ContactID** in eine Zahl und vergleicht ihn mit dem Wert 4. Die Abfrage gibt dann alle  **\<Mitarbeiter >** untergeordneten-Elemente des Kontextknotens mit der **ContactID** -Attribut den numerischen Wert 4 aufweist:  
+ Wenn der Wert von " **ContactID** " nicht numerisch ist, konvertiert die folgende Abfrage " **ContactID** " in eine Zahl und vergleicht sie mit dem Wert 4. Die Abfrage gibt dann alle ** \<** untergeordneten>untergeordneten Elemente des Kontext Knotens zurück, wobei das **ContactID** -Attribut den numerischen Wert 4 aufweist:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -42,11 +42,11 @@ ms.locfileid: "66010696"
 /Contact[number(@ContactID) = 4]  
 ```  
   
- Anders ausgedrückt, gibt die Abfrage einen Mitarbeiter mit einem **ContactID** von 4.  
+ In relationalen Begriffen gibt die Abfrage einen Mitarbeiter mit der **ContactID** -ID 4 zurück.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   
-1.  Kopieren der [Schema Beispielcode](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) und fügen Sie ihn in eine Textdatei. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
+1.  Kopieren Sie den [Beispiel Schema Code](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) , und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
   
 2.  Erstellen Sie die folgende Vorlage (ExplicitConversionA.xml), und speichern Sie sie in dem Verzeichnis, in dem SampleSchema1.xml gespeichert wurde.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66010696"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Das Resultset für diese Vorlagenausführung sieht so aus:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66010696"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Verwenden der expliziten Konvertierungsfunktion string()  
  Die `string()`-Funktion konvertiert ein Argument in eine Zeichenfolge.  
   
- Die folgende Abfrage konvertiert **ContactID** in eine Zeichenfolge und vergleicht Wert mit dem Zeichenfolgenwert "4". Die Abfrage gibt alle  **\<Mitarbeiter >** untergeordneten-Elemente des Kontextknotens mit einem **ContactID** mit einem Zeichenfolgenwert "4":  
+ Mit der folgenden Abfrage wird " **ContactID** " in eine Zeichenfolge konvertiert und mit dem Zeichen folgen Wert "4" verglichen. Die Abfrage gibt alle ** \<** untergeordneten>untergeordneten Elemente des Kontext Knotens zurück, deren **ContactID** den Zeichen folgen Wert "4" aufweist:  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
@@ -95,7 +95,7 @@ ms.locfileid: "66010696"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   
-1.  Kopieren der [Schema Beispielcode](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) und fügen Sie ihn in eine Textdatei. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
+1.  Kopieren Sie den [Beispiel Schema Code](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) , und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
   
 2.  Erstellen Sie die folgende Vorlage (ExplicitConversionB.xml), und speichern Sie sie in dem Verzeichnis, in dem SampleSchema1.xml gespeichert wurde.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66010696"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie das Resultset der Vorlagenausführung:  
   

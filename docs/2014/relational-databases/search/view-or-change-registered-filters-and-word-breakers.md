@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 97bf5b2f1838531c305cf663d050201d5f34ce82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010930"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen
@@ -67,7 +67,7 @@ ms.locfileid: "66010930"
   
 1.  Vergewissern Sie sich bei der Vorbereitung zur Installation einer DLL-Datei, die neue Wörtertrennungen oder Filter enthält, dass diese nicht den gleichen Namen einer DLL-Datei hat, die bereits auf Ihrer Serverinstanz installiert ist.  
   
-2.  Kopieren Sie die neue DLL-Datei in das Verzeichnis, das die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard-DLL-Dateien für die Serverinstanz enthält. Der Standardspeicherort ist:  
+2.  Kopieren Sie die neue DLL-Datei in das Verzeichnis, das die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard-DLL-Dateien für die Serverinstanz enthält. Dies ist der Standardspeicherort:  
   
      C:\Programme\Microsoft SQL Server\MSSQL.*Instanzname*\MSSQL\Binn  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66010930"
     EXEC sp_fulltext_service 'restart_all_fdhosts';   
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md)   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md)  

@@ -1,5 +1,5 @@
 ---
-title: Fuzzy Lookup Transformations-Editor (Registerkarte Verweistabelle) | Microsoft-Dokumentation
+title: Transformations-Editor für Fuzzysuche (Registerkarte Verweis Tabelle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058304"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Verweistabelle)
@@ -28,12 +28,12 @@ ms.locfileid: "66058304"
 >  Durch die Transformation für die Fuzzysuche wird eine Arbeitskopie der Verweistabelle erstellt. Die nachfolgend beschriebenen Indizes werden für diese Arbeitstabelle mithilfe einer Spezialtabelle erstellt, und nicht mit einem normalen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Index. Durch die Transformation werden die vorhandenen Quelltabellen nicht verändert, sofern Sie nicht **Gespeicherten Index beibehalten**auswählen. In diesem Fall wird ein Trigger für die Verweistabelle erstellt, der die Arbeitstabelle und die Suchindextabelle auf der Grundlage von Änderungen an der Verweistabelle aktualisiert.  
   
 > [!NOTE]  
->  Die `Exhaustive` und die `MaxMemoryUsage` Eigenschaften der Transformation für Fuzzysuche sind nicht verfügbar, in der **Fuzzy Lookup Transformations-Editor**, aber kann festgelegt werden, mithilfe der **Erweiterter Editor**. Darüber hinaus kann ein Wert größer als 100 für `MaxOutputMatchesPerInput` kann angegeben werden, nur in der **Erweiterter Editor**. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzysuche von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Die `Exhaustive` -Eigenschaft `MaxMemoryUsage` und die-Eigenschaft der Transformation für Fuzzysuche sind im **Transformations-Editor für Fuzzysuche**nicht verfügbar, können jedoch mit dem- **Erweiterter Editor**festgelegt werden. Außerdem kann ein Wert, der größer als 100 `MaxOutputMatchesPerInput` für ist, nur in der **Erweiterter Editor**angegeben werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzysuche von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Weitere Informationen zur Transformation für Fuzzysuche finden Sie unter [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
- **Teilcache**  
+## <a name="options"></a>Tastatur  
+ **OLE DB Verbindungs-Manager**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -42,13 +42,13 @@ ms.locfileid: "66058304"
  **Neuen Index generieren**  
  Geben Sie an, dass die Transformation einen neuen Index erstellen soll, der für die Suche verwendet wird.  
   
- **Name der Verweistabelle**  
+ **Name der Verweis Tabelle**  
  Wählen Sie die vorhandene Tabelle aus, die als Verweis-(Such-)Tabelle verwendet werden soll.  
   
  **Neuen Index speichern**  
  Wählen Sie diese Option aus, wenn Sie den neuen Suchindex speichern möchten.  
   
- **Name des neuen Indexes**  
+ **Neuer Indexname**  
  Wenn Sie den neuen Suchindex speichern möchten, geben Sie einen beschreibenden Namen für den Index ein.  
   
  **Gespeicherten Index beibehalten**  
@@ -65,7 +65,7 @@ ms.locfileid: "66058304"
  **Name eines vorhandenen Indexes**  
  Wählen Sie einen zu einem früheren Zeitpunkt erstellten Index aus der Liste aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Spalten“&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Transformations-Editor für Fuzzysuche &#40;Registerkarte Erweitert&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  

@@ -1,5 +1,5 @@
 ---
-title: Registerkarte Ereignishandler | Microsoft-Dokumentation
+title: Registerkarte "Ereignishandler" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059286"
 ---
 # <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  
   
-## <a name="options"></a>Optionen  
- **Ausführbare Datei**  
+## <a name="options"></a>Tastatur  
+ **Bares**  
  Wählen Sie die ausführbare Datei aus, für die Sie einen Ereignishandler erstellen möchten. Bei der ausführbaren Datei kann es sich um ein Paket, einen Task oder Container im Paket handeln.  
   
  **Ereignishandler**  
@@ -32,14 +32,14 @@ ms.locfileid: "66059286"
  **Löschen**  
  Wählen Sie einen Ereignishandler aus, und entfernen Sie ihn anschließend aus dem Paket, indem Sie auf **Löschen** klicken.  
   
- **Klicken Sie hier, um das Erstellen einer \<Ereignishandlernamen > für die ausführbare Datei \<Name der ausführbaren Datei >**  
+ **Klicken Sie hier, um \<einen Ereignishandlernamen> \<für den Namen der ausführbaren Datei zu erstellen>**  
  Klicken Sie, um den Ereignishandler zu erstellen.  
   
  Erstellen Sie den Steuerungsfluss, indem Sie grafische Objekte, die [!INCLUDE[ssIS](../includes/ssis-md.md)] -Tasks und -Container darstellen, aus der **Toolbox** auf die Entwurfsoberfläche der Registerkarte **Ereignishandler** ziehen und diese Objekte dann verbinden, indem Sie Rangfolgeneinschränkungen zum Definieren der Ausführungssequenz verwenden.  
   
  Klicken Sie außerdem mit der rechten Maustaste auf die Entwurfsoberfläche, um Anmerkungen hinzuzufügen, und klicken Sie anschließend im Menü auf **Anmerkung hinzufügen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Ablaufsteuerung](control-flow/control-flow.md)   
  [SSIS-Designer](ssis-designer.md)   

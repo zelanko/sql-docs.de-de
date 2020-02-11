@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874447"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
@@ -72,9 +72,9 @@ ms.locfileid: "70874447"
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>Schätzen der Dienstunterbrechung beim automatischen Failover  
  In der folgende Abbildung wird veranschaulicht, wie die Fehlererkennung und die Failoverzeit zur Gesamtzeit beitragen, die zum Abschließen eines automatischen Failovers auf **Partner_B**erforderlich ist. Das Failover benötigt Zeit zum Ausführen des Rollforwards für die Datenbank (die Rollforwardphase) sowie zusätzlich ein wenig Zeit, um die Datenbank online zu schalten. In der Rollbackphase wird ein Rollback für Transaktionen ohne Commit ausgeführt wird. Diese Phase erfolgt, nachdem die Prinzipaldatenbank online geschaltet wurde, und wird nach dem Failover fortgesetzt. Die Datenbank ist während der Rollbackphase verfügbar.  
   
- ![Error detection and failover time (Fehlererkennung und Failoverzeit)](../media/dbm-failovauto-time.gif "Error detection and failover time (Fehlererkennung und Failoverzeit)")  
+ ![Fehlererkennung und Failoverzeit](../media/dbm-failovauto-time.gif "Fehlererkennung und Failoverzeit")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  

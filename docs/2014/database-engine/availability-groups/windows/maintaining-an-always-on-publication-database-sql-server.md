@@ -1,5 +1,5 @@
 ---
-title: Warten einer Always On-Veröffentlichungsdatenbank (SQLServer) | Microsoft-Dokumentation
+title: Verwalten einer AlwaysOn-Veröffentlichungs Datenbank (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791987"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Warten einer AlwaysOn-Veröffentlichungsdatenbank (SQL Server)
@@ -32,17 +32,17 @@ ms.locfileid: "62791987"
   
 -   Der Replikationsmonitor zeigt immer Veröffentlichungsinformationen unter dem ursprünglichen Verleger an. Diese Informationen können jedoch von einem beliebigen Replikat aus im Replikationsmonitor angezeigt werden, indem der ursprüngliche Verleger als Server hinzugefügt wird.  
   
--   Bei Verwendung von gespeicherten Prozeduren oder Replikationsverwaltungsobjekten (RMO, Replication Management Objects) zum Verwalten der Replikation im primären Replikat müssen Sie in Fällen, in denen Sie den Verlegernamen angeben, den Namen der Instanz angeben, auf der die Datenbank für die Replikation aktiviert wurde. Den entsprechenden Namen ermitteln Sie mithilfe der `PUBLISHINGSERVERNAME`-Funktion. Wenn eine Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe beitritt, sind die in den sekundären Datenbankreplikaten gespeicherten Replikationsmetadaten mit denen im primären Replikat identisch. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der primären Replikatdatenbank zur Replikation aktiviert wurden, der in den Systemtabellen des sekundären Replikats gespeicherte Verlegerinstanzname dem Namen der primären Replikatdatenbank und nicht dem Namen der sekundären Replikatdatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur sekundären Replikatdatenbank erfolgt. Z. B. Wenn Sie Replikation mit gespeicherten Prozeduren bei einem sekundären Replikat nach einem Failover konfigurieren und Sie möchten ein Pullabonnement für eine Veröffentlichungsdatenbank, die bei einem anderen Replikat aktiviert wurde, geben Sie den Namen des ursprünglichen Verlegers statt der aktuellen Verlegers als die *@publisher* Parameter `sp_addpullsubscription` oder `sp_addmergepulllsubscription`. Wenn Sie jedoch eine Veröffentlichungsdatenbank nach einem Failover aktivieren, entspricht der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen des aktuellen primären Hosts. In diesem Fall würden Sie den Hostnamen des aktuellen primären Replikats für den *@publisher* -Parameter verwenden.  
+-   Bei Verwendung von gespeicherten Prozeduren oder Replikationsverwaltungsobjekten (RMO, Replication Management Objects) zum Verwalten der Replikation im primären Replikat müssen Sie in Fällen, in denen Sie den Verlegernamen angeben, den Namen der Instanz angeben, auf der die Datenbank für die Replikation aktiviert wurde. Den entsprechenden Namen ermitteln Sie mithilfe der `PUBLISHINGSERVERNAME`-Funktion. Wenn eine Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe beitritt, sind die in den sekundären Datenbankreplikaten gespeicherten Replikationsmetadaten mit denen im primären Replikat identisch. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der primären Replikatdatenbank zur Replikation aktiviert wurden, der in den Systemtabellen des sekundären Replikats gespeicherte Verlegerinstanzname dem Namen der primären Replikatdatenbank und nicht dem Namen der sekundären Replikatdatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur sekundären Replikatdatenbank erfolgt. Wenn Sie z. b. die Replikation mit gespeicherten Prozeduren auf einem sekundären Replikat nach einem Failover konfigurieren und ein Pullabonnement für eine Veröffentlichungs Datenbank verwenden möchten, die auf einem anderen Replikat aktiviert wurde, müssen Sie *@publisher* den Namen `sp_addpullsubscription` des `sp_addmergepulllsubscription`ursprünglichen Verlegers anstelle des aktuellen Verlegers als-Parameter von oder angeben. Wenn Sie jedoch eine Veröffentlichungsdatenbank nach einem Failover aktivieren, entspricht der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen des aktuellen primären Hosts. In diesem Fall verwenden Sie den Hostnamen des aktuellen primären Replikats für den *@publisher* -Parameter.  
   
     > [!NOTE]  
-    >  Bei einigen Prozeduren wie z. B. `sp_addpublication`, wird die *@publisher* Parameter wird nur für Verleger, die keine Instanzen von sind unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; in diesen Fällen ist es nicht relevant für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
+    >  Bei einigen Prozeduren, `sp_addpublication`z. *@publisher* b., wird der-Parameter nur für Verleger unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stützt, die keine Instanzen von sind. in diesen Fällen ist er für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn nicht relevant.  
   
 -   Synchronisieren Sie die Pullabonnements vom Abonnenten und die Pushabonnements vom aktiven Verleger aus, um ein Abonnement in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] nach einem Failover zu synchronisieren.  
   
 ##  <a name="RemovePublDb"></a> Entfernen einer veröffentlichten Datenbank aus einer Verfügbarkeitsgruppe  
  Berücksichtigen Sie die folgenden Probleme, wenn eine veröffentlichte Datenbank aus einer Verfügbarkeitsgruppe entfernt wird, oder wenn eine Verfügbarkeitsgruppe, die eine veröffentlichte Elementdatenbank aufweist, gelöscht wird.  
   
--   Wenn die Veröffentlichungsdatenbank beim ursprünglichen Verleger aus einem primären Replikat der verfügbarkeitsgruppe entfernt wird, müssen Sie ausführen `sp_redirect_publisher` ohne Angabe eines Werts für die *@redirected_publisher* Parameter zum Entfernen der Umleitung für das Verleger-/Datenbankpaar.  
+-   Wenn die Veröffentlichungs Datenbank beim ursprünglichen Verleger aus einem primären Replikat der Verfügbarkeits Gruppe entfernt wird, `sp_redirect_publisher` müssen Sie ausführen, ohne einen *@redirected_publisher* Wert für den-Parameter anzugeben, um die Umleitung für das Verleger-/Datenbankpaar zu entfernen.  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -68,7 +68,7 @@ ms.locfileid: "62791987"
     > [!NOTE]  
     >  Wenn eine Verfügbarkeitsgruppe entfernt wird, die über veröffentlichte Mitgliedsdatenbanken verfügt, oder wenn eine veröffentlichte Datenbank aus einer Verfügbarkeitsgruppe entfernt wird, werden alle Kopien der veröffentlichten Datenbanken im Wiederherstellungsstatus belassen. Nach der Wiederherstellung wird jede Datenbank als veröffentlichte Datenbank angezeigt. Nur eine Kopie sollte mit Veröffentlichungsmetadaten beibehalten werden. Um die Replikation für eine veröffentlichte Datenbankkopie zu deaktivieren, entfernen Sie zuerst alle Abonnements und Veröffentlichungen aus der Datenbank.  
   
-     Führen Sie `sp_dropsubscription` aus, um die Veröffentlichungsabonnements zu entfernen. Vergessen Sie nicht, den Parameter *@ignore_distributributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
+     Führen Sie `sp_dropsubscription` aus, um die Veröffentlichungsabonnements zu entfernen. Stellen Sie sicher, dass der *@ignore_distributributor* -Parameter auf 1 festgelegt ist, um die Metadaten für die aktive Veröffentlichungs Datenbank auf dem Verteiler beizubehalten.  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "62791987"
         @ignore_distributor = 1;  
     ```  
   
-     Führen Sie `sp_droppublication` aus, um alle Veröffentlichungen zu entfernen. Auch hier dürfen Sie nicht vergessen, den Parameter *@ignore_distributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
+     Führen Sie `sp_droppublication` aus, um alle Veröffentlichungen zu entfernen. Legen Sie den-Parameter *@ignore_distributor* auf 1 fest, um die Metadaten für die aktive Veröffentlichungs Datenbank auf dem Verteiler beizubehalten.  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -102,18 +102,18 @@ ms.locfileid: "62791987"
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Konfigurieren der Replikation für AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](always-on-availability-groups-sql-server.md)  
+-   [Konfigurieren der Replikation für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-availability-groups-sql-server.md)  
   
--   [Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replicate-track-change-data-capture-always-on-availability.md)  
+-   [Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
--   [Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
+-   [Replikations Abonnenten und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität (SQLServer)](always-on-availability-groups-interoperability-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server-Replikation](../../../relational-databases/replication/sql-server-replication.md)  
   
   

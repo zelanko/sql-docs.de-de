@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812296"
 ---
 # <a name="change-server-authentication-mode"></a>Ändern des Serverauthentifizierungsmodus
@@ -44,7 +44,7 @@ ms.locfileid: "62812296"
 ###  <a name="Security"></a> Sicherheit  
  Das Systemadministratorkonto ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto und oft das Ziel böswilliger Benutzer. Aktivieren Sie das Systemadministratorkonto nur dann, wenn die Anwendung es erfordert. Es ist sehr wichtig, dass Sie für die Systemadministratoranmeldung ein sicheres Kennwort verwenden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-change-security-authentication-mode"></a>So ändern Sie den Authentifizierungsmodus  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62812296"
   
 #### <a name="to-enable-the-sa-login"></a>Informationen zum Aktivieren des Anmeldenamens "sa"  
   
-1.  Erweitern Sie im Objekt-Explorer **Sicherheit**, erweitern Sie Anmeldungen, mit der rechten Maustaste `sa`, und klicken Sie dann auf **Eigenschaften**.  
+1.  Erweitern Sie in Objekt-Explorer den Knoten **Sicherheit**, erweitern Sie Anmeldungen, klicken `sa`Sie mit der rechten Maustaste, und klicken Sie dann auf **Eigenschaften**.  
   
 2.  Auf der Seite **Allgemein** müssen Sie möglicherweise ein Kennwort für die Anmeldung erstellen und bestätigen.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62812296"
   
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: Rückgängigmachen von Auscheckvorgängen | Microsoft-Dokumentation
+title: Auschecken rückgängig machen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773396"
 ---
 # <a name="undo-checkouts"></a>Rückgängigmachen von Auscheckvorgängen
-  Sie können die **Rückgängig: Auschecken** Befehl aus, um einen vorhandenen Auscheckvorgang abbrechen. Dies bietet sich vor allem an, wenn Sie eine Datei geändert und gespeichert haben und zu einem späteren Zeitpunkt ein Rollback für die Änderungen ausführen müssen.  
+  Mit dem Befehl **Rückgängig** Auschecken können Sie ein vorhandenes Checkout abbrechen. Dies bietet sich vor allem an, wenn Sie eine Datei geändert und gespeichert haben und zu einem späteren Zeitpunkt ein Rollback für die Änderungen ausführen müssen.  
   
- Abhängig von den Optionen legen Sie in der **Rückgängig: Auschecken erweiterte Optionen** im Dialogfeld die Studio-Umgebung die Arbeitskopie des Elements verlässt, auf dem lokalen Datenträger oder durch die neueste Version unter quellcodeverwaltung ersetzt. Wenn ein Benutzer das Element außerhalb des Kontexts des Quellcodeverwaltungssystems geändert hat, handelt es sich bei der abgerufenen Version möglicherweise nicht um die letzte Version.  
+ Abhängig von den Optionen, die Sie im Dialogfeld **Erweiterte Optionen rückgängig machen** festlegen, verlässt die Studio-Umgebung entweder die Arbeitskopie des Elements auf dem lokalen Datenträger oder ersetzt Sie durch die neueste Version der Quell Code Verwaltung. Wenn ein Benutzer das Element außerhalb des Kontexts des Quellcodeverwaltungssystems geändert hat, handelt es sich bei der abgerufenen Version möglicherweise nicht um die letzte Version.  
   
 ### <a name="to-undo-a-checkout"></a>So machen Sie einen Auscheckvorgang rückgängig  
   
 1.  Wählen Sie im Projektmappen-Explorer das Projekt aus.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **Rückgängig: Auschecken**.  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf Auschecken **rückgängig machen**.  
   
-3.  In der **Rückgängig: Auschecken** (Dialogfeld), wählen die gewünschten Optionen aus, und klicken Sie dann auf die **Rückgängig: Auschecken** Schaltfläche.  
+3.  Wählen Sie im Dialogfeld **rückgängig machen** die entsprechenden Optionen aus, und klicken Sie dann auf die Schaltfläche **rückgängig machen** .  
   
      **Spalten**  
      Bestimmt die anzuzeigenden Spalten und die Reihenfolge, in der sie angezeigt werden.  
@@ -45,10 +45,10 @@ ms.locfileid: "62773396"
      **Name**  
      Zeigt die Namen der Elemente an, für die das Auschecken rückgängig gemacht werden soll. Die Elemente werden mit einem aktivierten Kontrollkästchen neben dem Namen angezeigt. Wenn für ein Element das Auschecken nicht rückgängig gemacht werden soll, deaktivieren Sie das entsprechende Kontrollkästchen.  
   
-     **Options**  
+     **Optionen**  
      Zeigt die für das Quellcodeverwaltungs-Plug-In spezifischen Optionen zum Rückgängigmachen des Auscheckens, wenn Sie auf den Pfeil rechts neben der Schaltfläche klicken.  
   
-     **Sort**  
+     **Sortieren**  
      Sortiert die Reihenfolge der Anzeigespalten.  
   
      **Strukturansicht**  
@@ -57,7 +57,7 @@ ms.locfileid: "62773396"
      **Rückgängig: Auschecken**  
      Macht das Auschecken rückgängig, wobei alle Änderungen an der ausgecheckten Datei verworfen werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Auschecken von Dateien](../../2014/database-engine/check-out-files.md)   
  [Verwalten von Auscheckvorgängen](../../2014/database-engine/manage-checkouts.md)  
   

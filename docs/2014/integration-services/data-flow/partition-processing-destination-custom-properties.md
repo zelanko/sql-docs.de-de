@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770946"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Benutzerdefinierte Eigenschaften des Ziels für Partitionsverarbeitung
@@ -22,25 +22,25 @@ ms.locfileid: "62770946"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Ziels für Partitionsverarbeitung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Description|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
-|ASConnectionString|Zeichenfolge|Die Verbindungszeichenfolge zu einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt oder einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|KeyDuplicate|Ganze Zahl (Enumeration)|Wenn usedefaultconfiguration `False`, ein Wert, wie Fehler aufgrund doppelter Schlüssel behandelt werden soll. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `IgnoreError` (0).|  
-|KeyErrorAction|Ganze Zahl (Enumeration)|Wenn usedefaultconfiguration `False`, ein Wert, wie Schlüsselfehler behandelt werden soll. Die möglichen Werte sind `ConvertToUnknown` (0) und `DiscardRecord` (1). Der Standardwert dieser Eigenschaft ist `ConvertToUnknown` (0).|  
-|KeyErrorLimit|Integer|Wenn usedefaultconfiguration `False`, die Obergrenze von Schlüsselfehlern, die zulässig sind.|  
-|KeyErrorLimitAction|Ganze Zahl (Enumeration)|Wenn usedefaultconfiguration `False`, einen Wert an die Aktion beim `KeyErrorLimit` erreicht ist. Die möglichen Werte sind `StopLogging` (1) und `StopProcessing` (0). Der Standardwert dieser Eigenschaft ist `StopProcessing` (0).|  
-|KeyErrorLogFile|Zeichenfolge|Wenn usedefaultconfiguration `False`, der Pfad und Dateiname der Fehlerprotokolldatei.|  
-|KeyNotFound|Ganze Zahl (Enumeration)|Wenn usedefaultconfiguration `False`, ein Wert, wie Fehler aufgrund fehlender Schlüssel behandelt werden soll. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `ReportAndContinue` (1).|  
-|NullKeyConvertedToUnknown|Ganze Zahl (Enumeration)|Wenn usedefaultconfiguration `False`, ein Wert, der wie null-Schlüssel behandelt werden sollen, die in den unbekannten Wert konvertiert. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `IgnoreError` (0).|  
-|NullKeyNotAllowed|Ganze Zahl (Enumeration)|Wenn usedefaultconfiguration `False`, ein Wert, der wie nicht erlaubte Nullwerte behandelt werden sollen. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `ReportAndContinue` (1).|  
+|ASConnectionString|String|Die Verbindungszeichenfolge zu einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt oder einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|KeyDuplicate|Ganze Zahl (Enumeration)|Wenn UseDefaultConfiguration den `False`Wert hat, ein Wert, der angibt, wie doppelte Schlüsselfehler behandelt werden. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `IgnoreError` (0).|  
+|KeyErrorAction|Ganze Zahl (Enumeration)|Wenn UseDefaultConfiguration der `False`Wert ist, ein Wert, der angibt, wie Schlüsselfehler behandelt werden. Die möglichen Werte sind `ConvertToUnknown` (0) und `DiscardRecord` (1). Der Standardwert dieser Eigenschaft ist `ConvertToUnknown` (0).|  
+|KeyErrorLimit|Integer|Wenn UseDefaultConfiguration den `False`Wert hat, ist die Obergrenze von zulässigen Schlüsselfehlern.|  
+|KeyErrorLimitAction|Ganze Zahl (Enumeration)|Wenn UseDefaultConfiguration den `False`Wert hat, ein Wert, der die Aktion angibt `KeyErrorLimit` , die ausgeführt werden soll, wenn erreicht wird. Die möglichen Werte sind `StopLogging` (1) und `StopProcessing` (0). Der Standardwert dieser Eigenschaft ist `StopProcessing` (0).|  
+|KeyErrorLogFile|String|Wenn UseDefaultConfiguration den `False`Wert hat, der Pfad und der Dateiname der Fehlerprotokoll Datei.|  
+|KeyNotFound|Ganze Zahl (Enumeration)|Wenn UseDefaultConfiguration den `False`Wert hat, ein Wert, der angibt, wie Fehler aufgrund fehlender Schlüssel behandelt werden. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `ReportAndContinue` (1).|  
+|NullKeyConvertedToUnknown|Ganze Zahl (Enumeration)|Wenn UseDefaultConfiguration den `False`Wert hat, ein Wert, der angibt, wie NULL-Schlüssel behandelt werden, die in den unbekannten Wert konvertiert wurden. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `IgnoreError` (0).|  
+|NullKeyNotAllowed|Ganze Zahl (Enumeration)|Wenn UseDefaultConfiguration der `False`Wert ist, ein Wert, der angibt, wie unzulässige Nullen behandelt werden. Die möglichen Werte sind `IgnoreError` (0), `ReportAndContinue` (1) und `ReportAndStop` (2). Der Standardwert dieser Eigenschaft ist `ReportAndContinue` (1).|  
 |ProcessType|Ganze Zahl (Enumeration)|Der Typ der von der Transformation verwendeten Partitionsverarbeitung. Die möglichen Werte sind `ProcessAdd` (1) (inkrementell), `ProcessFull` (0) und `ProcessUpdate` (2).|  
-|UseDefaultConfiguration|Boolean|Ein Wert, der angibt, ob die Transformation die Standardfehlerkonfiguration verwendet. Wenn diese Eigenschaft `False`, verwendet die Transformation die Werte von der benutzerdefinierten Fehlerbehandlungseigenschaften in diese Tabelle einschließlich KeyDuplicate, KeyErrorAction usw. aufgeführt.|  
+|UseDefaultConfiguration|Boolean|Ein Wert, der angibt, ob die Transformation die Standardfehlerkonfiguration verwendet. Wenn diese Eigenschaft ist `False`, verwendet die Transformation die Werte der benutzerdefinierten Fehler Behandlungs Eigenschaften, die in dieser Tabelle aufgeführt sind, einschließlich KeyDuplicate, KeyErrorAction und so weiter.|  
   
  Die Eingabe und die Eingabespalten des Ziels für Partitionsverarbeitung verfügen nicht über benutzerdefinierte Eigenschaften.  
   
  Weitere Informationen finden Sie unter [Partition Processing Destination](partition-processing-destination.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Common Properties](../common-properties.md)  
   
   

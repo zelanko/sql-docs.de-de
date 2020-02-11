@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721652"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
@@ -101,7 +101,8 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
  Wenn Sie einen Verleger zum ersten Mal verwenden, müssen Sie auch einen Verteiler und eine Momentaufnahmefreigabe konfigurieren. Der Merge-Agent bei jedem Abonnenten muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen. Weitere Informationen finden Sie unter [Verteilung konfigurieren](configure-distribution.md) und [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
   
- `gen` ist ein reserviertes Wort in Websync-Dateien (XML). Versuchen Sie nicht, Tabellen zu veröffentlichen, in denen Spalten mit dem Namen `gen` enthalten sind.  
+ 
+  `gen` ist ein reserviertes Wort in Websync-Dateien (XML). Versuchen Sie nicht, Tabellen zu veröffentlichen, in denen Spalten mit dem Namen `gen` enthalten sind.  
   
 ## <a name="configuring-the-subscription"></a>Konfigurieren des Abonnements  
  Nachdem Sie eine Veröffentlichung aktiviert und IIS konfiguriert haben, erstellen Sie ein Pullabonnement und geben an, dass es mithilfe von IIS synchronisiert werden soll. (Die Websynchronisierung wird nur für Pullabonnements unterstützt.)  
@@ -124,7 +125,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 -   Wenn Sie große Datenmengen replizieren, müssen Sie ggf. die Batchgröße des Merge-Agents anpassen.  
   
- Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird angegeben, mit der`DownloadGenerationsPerBatch` "und" -`UploadGenerationsPerBatch` Parameter des Merge-Agents. Weitere Informationen finden Sie unter [Replication Merge Agent](agents/replication-merge-agent.md).  
+ Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird mithilfe der Parameter-`DownloadGenerationsPerBatch` und-`UploadGenerationsPerBatch` Parameter des Merge-Agent angegeben. Weitere Informationen finden Sie unter [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Geben Sie für große Datenmengen eine kleine Zahl für die einzelnen Batchverarbeitungsparameter an. Es wird empfohlen, mit dem Wert 10 zu beginnen und dann je nach Anwendungsanforderungen und -leistung diesen Wert zu optimieren. Normalerweise werden diese Parameter in einem Agentprofil angegeben. Weitere Informationen zu Profilen finden Sie unter [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +145,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
      Weitere Informationen zu den erforderlichen Berechtigungen für die Agents finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Geben Sie das Domänenkonto an, das auch vom Merge-Agent verwendet wird, wenn Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements ein Konto und ein Kennwort oder wenn Sie Werte für die Parameter **@internet_url** und **@internet_login** von [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Dieses Konto muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen.  
+-   Geben Sie das Domänen Konto an, das das Merge-Agent verwendet, wenn Sie auf der Seite **Webserver Informationen** des Assistenten für neue Abonnements ein Konto und ein Kennwort angeben oder wenn Sie Werte **@internet_url** für **@internet_login** die Parameter und [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)angeben. Dieses Konto muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen.  
   
 -   Jede Veröffentlichung sollte ein separates virtuelles Verzeichnis für IIS verwenden.  
   
@@ -163,7 +164,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
 > [!IMPORTANT]  
 >  Das Öffnen von Ports in der Firewall kann dazu führen, dass der Server böswilligen Angriffen ausgesetzt ist. Daher sollten Sie Ports grundsätzlich nur dann öffnen, wenn Sie sicher sind, dass Sie das Konzept von Firewallsystemen verstanden haben. Weitere Informationen finden Sie unter [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Websynchronisierung für die Mergereplikation](web-synchronization-for-merge-replication.md)  
   
   

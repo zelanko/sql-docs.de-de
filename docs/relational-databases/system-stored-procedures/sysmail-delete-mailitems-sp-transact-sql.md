@@ -18,10 +18,10 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70846638"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70846638"
 
   Löscht E-Mail-Nachrichten dauerhaft aus den internen Tabellen der Datenbank-E-Mail.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +40,20 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@sent_before = ] 'sent_before'` löscht e-Mails bis zu dem Datum und der Uhrzeit, die als *sent_before* -Argument angegeben werden. Das Argument *sent_before* ist vom Datentyp **datetime**und hat den Standardwert NULL. NULL steht für alle Daten.  
+`[ \@sent_before = ] 'sent_before'`Löscht e-Mails bis zu dem Datum und der Uhrzeit, die als *sent_before* Argument angegeben werden. *sent_before* ist vom **Datentyp DateTime** und hat den Standardwert NULL. NULL steht für alle Daten.  
   
-`[ \@sent_status = ] 'sent_status'` löscht e-Mails des Typs, der durch *sent_status*angegeben wird. Das Argument *sent_status* ist vom Datentyp **varchar(8)** ohne Standardwert. Gültige Einträge sind **sent**, **unsent**, **retrying**, und **failed**. NULL steht für alle Status.  
+`[ \@sent_status = ] 'sent_status'`Löscht e-Mails des Typs, der durch *sent_status*angegeben wird. *sent_status* ist vom Datentyp **varchar (8)** und hat keinen Standardwert. Gültige Einträge werden **gesendet**, **** **nicht**gesendet, **wiederholt**und sind fehlerhaft. NULL steht für alle Status.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Remarks  
- Datenbank-E-Mail-Nachrichten und deren Anlagen werden in der **msdb** Datenbank gespeichert. Nachrichten sollten in regelmäßigen Abständen gelöscht werden, um zu verhindern, dass **msdb** sehr groß wird. Zur Einhaltung eventueller Aufbewahrungspflichten verwenden Sie ein für Sie in Frage kommendes Dokumentenmanagement. Mithilfe der gespeicherten Prozedur **sysmail_delete_mailitems_sp** können Sie E-Mail-Nachrichten dauerhaft aus den Datenbank-E-Mail-Tabellen löschen. Mithilfe eines optionalen Arguments können Sie nur ältere E-Mails löschen, indem Sie ein Datum und eine Uhrzeit angeben. E-Mails, die älter sind als dieses Argument, werden gelöscht. Sie müssen zwingend mindestens ein Argument angeben, also entweder **@sent_before** oder **@sent_status**. Sie müssen für **\@sent_before** oder **\@sent_status**ein Argument angeben. Um alle Nachrichten zu löschen, verwenden Sie **\@sent_before = getdate ()** .  
+## <a name="remarks"></a>Bemerkungen  
+ Datenbank-E-Mail Meldungen und deren Anhänge werden in der **msdb** -Datenbank gespeichert. Nachrichten sollten in regelmäßigen Abständen gelöscht werden, um zu verhindern, dass **msdb** größer als erwartet wird, und dass Sie dem Dokument Aufbewahrungs Programm Ihrer Organisation entsprechen. Verwenden Sie die gespeicherte Prozedur **sysmail_delete_mailitems_sp** , um e-Mail-Nachrichten dauerhaft aus den Datenbank-E-Mail Tabellen zu löschen. Mithilfe eines optionalen Arguments können Sie nur ältere E-Mails löschen, indem Sie ein Datum und eine Uhrzeit angeben. E-Mails, die älter sind als dieses Argument, werden gelöscht. Ein weiteres optionales Argument ermöglicht es Ihnen, nur e-Mails eines bestimmten Typs zu löschen, die als **sent_status** Argument angegeben sind. Sie müssen für ** \@sent_before** oder ** \@sent_status**ein Argument angeben. Um alle Nachrichten zu löschen, verwenden ** \@Sie sent_before = getdate ()**.  
   
- Mit den E-Mails werden auch die Anlagen gelöscht, die zu diesen Nachrichten gehören. Das Löschen der E-Mails löscht allerdings keine entsprechenden Einträge in **sysmail_event_log**. Um Elemente aus dem Protokoll zu löschen, verwenden Sie die gespeicherte Prozedur [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md).  
+ Mit den E-Mails werden auch die Anlagen gelöscht, die zu diesen Nachrichten gehören. Beim Löschen von e-Mail werden die entsprechenden Einträge in **sysmail_event_log**nicht gelöscht. Verwenden Sie [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) , um Elemente aus dem Protokoll zu löschen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig besitzen nur Mitglieder der **sysadmin** -Serverrolle und der **DatabaseMailUserRole** die Berechtigungen zur Ausführung der Prozedur. Mitglieder der **Sssadmin** -Serverrolle können über diese Prozedur sämtliche E-Mails löschen, unabhängig vom Benutzer, der die E-Mail gesendet hat. Mitglieder der **DatabaseMailUserRole** können nur die von ihrem eigenen Benutzer gesendeten E-Mails löschen.  
+ Standardmäßig wird dieser gespeicherten Prozedur die Ausführung für Mitglieder von der festen Server Rolle **sysadmin** und **DatabaseMailUserRole**erteilt. Mitglieder der festen Server Rolle **sysadmin** können diese Prozedur ausführen, um e-Mails zu löschen, die von allen Benutzern gesendet werden. Mitglieder von **DatabaseMailUserRole** können nur die von diesem Benutzer gesendeten e-Mails löschen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -85,10 +85,10 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sysmail_allitems &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

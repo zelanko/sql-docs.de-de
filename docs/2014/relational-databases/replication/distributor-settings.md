@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld 'Verteilereinstellungen für ' | Microsoft-Dokumentation
+title: Dialogfeld "Verteiler Einstellungen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721349"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server-Replikation "Verteiler" (Dialogfeld)
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Dialogfeld "Verteiler Einstellungen" SQL Server-Replikation
   Im Dialogfeld **Verteilereinstellungen** können Sie die Einstellungen für Verteiler ändern, die dem linken Bereich des Replikationsmonitors hinzugefügt wurden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Beim Starten des Replikationsmonitors automatisch Verbindung herstellen**  
  Wählen Sie diese Option aus, damit der Replikationsmonitor eine Verbindung mit dem Verteiler herstellen und Statusinformationen abrufen kann.  
   
- **Verbindung**  
+ **Connection**  
  Klicken Sie hier, um das Dialogfeld **Verbindung mit Server herstellen** anzuzeigen. In diesem Dialogfeld können Sie die Verbindungseigenschaften und die Anmeldeinformationen anzeigen, die vom Replikationsmonitor zum Herstellen einer Verbindung mit dem Verteiler verwendet werden.  
   
  **Status dieses Verteilers und seiner Veröffentlichungen automatisch aktualisieren**  
@@ -43,7 +43,7 @@ ms.locfileid: "62721349"
  **Neue Gruppe**  
  Klicken Sie auf diese Option, um eine neue Verlegergruppe zu erstellen. Eine Verlegergruppe stellt eine einfache Möglichkeit dar, um die Verleger innerhalb des Replikationsmonitors zu organisieren. Gruppen haben keinen Einfluss auf die Replikation der Daten oder die Beziehungen zwischen den Servern in der Replikationstopologie.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)  
   

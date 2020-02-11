@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774584"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Konfigurieren des Protokollversands (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62774584"
   
 -   **Vorbereitungen:**  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
      [Sicherheit](#Security)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62774584"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Die primäre Datenbank muss das vollständige oder massenprotokollierte Wiederherstellungsmodell verwenden. Durch Umstellen der Datenbank auf die einfache Wiederherstellung ist der Protokollversand nicht mehr funktionsfähig.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774584"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die gespeicherten Prozeduren für den Protokollversand erfordern die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>So konfigurieren Sie den Protokollversand  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774584"
   
 8.  Beachten Sie den Sicherungszeitplan im Feld **Zeitplan** unter **Sicherungsauftrag**. Wenn Sie den Zeitplan für Ihre Installation anpassen möchten, klicken Sie auf **Zeitplan** , und passen Sie den Zeitplan des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bei Bedarf an.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Wenn Sie eine Protokollversandkonfiguration erstellen, können Sie das Verhalten der Sicherungskomprimierung von Protokollsicherungen steuern, indem Sie eine der folgenden Optionen auswählen: **Standardservereinstellung verwenden**, **Sicherung komprimieren** oder **Sicherung nicht komprimieren**. Weitere Informationen finden Sie unter [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Beim Erstellen einer Protokollversandkonfiguration können Sie das Verhalten der Sicherungskomprimierung von Protokollsicherungen durch Auswahl einer der folgenden Optionen steuern: **Standardservereinstellung verwenden**, **Sicherung komprimieren**oder **Sicherung nicht komprimieren**. Weitere Informationen finden Sie unter [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Klicken Sie auf **OK**.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "62774584"
   
 9. Führen Sie auf dem primären Server [sp_add_log_shipping_primary_secondary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql) aus, um die erforderlichen Informationen über die neue sekundäre Datenbank dem primären Server hinzuzufügen.  
   
-10. Aktivieren Sie auf dem sekundären Server den Kopier- und den Wiederherstellungsauftrag. Weitere Informationen finden Sie unter [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+10. Aktivieren Sie auf dem sekundären Server den Kopier- und den Wiederherstellungsauftrag. Weitere Informationen finden sie unter [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Aktualisieren des Protokollversands auf SQLServer 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Aktualisieren des Protokoll Versands auf SQL Server 2014 &#40;Transact-SQL-&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Hinzufügen einer sekundären Datenbank zu einer Protokollversandkonfiguration &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62774584"
   
 -   [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Protokollversandtabellen und gespeicherte Prozeduren](log-shipping-tables-and-stored-procedures.md)  
   

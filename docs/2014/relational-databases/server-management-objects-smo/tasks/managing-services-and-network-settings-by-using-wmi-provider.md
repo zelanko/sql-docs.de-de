@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796628"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
@@ -30,7 +30,7 @@ ms.locfileid: "72796628"
 ## <a name="example"></a>Beispiel  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Für Programme, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI-Anbieter verwenden, müssen Sie die `Imports`-Anweisung einschließen, um den WMI-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports`-Anweisungen und vor jeglichen Deklarationen in der Anwendung wie folgt ein:  
+ Für Programme, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI-Anbieter verwenden, müssen Sie `Imports` die-Anweisung einschließen, um den WMI-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports`-Anweisungen und vor jeglichen Deklarationen in der Anwendung wie folgt ein:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -175,5 +175,5 @@ $svc.ServiceState
 "Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konzepte des WMI-Anbieters für die Konfigurationsverwaltung](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

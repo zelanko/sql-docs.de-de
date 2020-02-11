@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721782"
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
@@ -82,9 +82,9 @@ ms.locfileid: "62721782"
   
  Mit den Optionen unter **Anweisungsübermittlung** wird angegeben, ob eine gespeicherte Prozedur verwendet wird und wenn ja, welches Format für an die Prozedur übergebene Parameter verwendet werden soll. Die Optionen für **gespeicherte Prozeduren** ermöglichen es Ihnen, die Prozeduren zu verwenden, die die Replikation automatisch erstellt, oder diese durch von Ihnen erstellte benutzerdefinierte Prozeduren zu ersetzen.  
   
- Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](transactional/transactional-articles-specify-how-changes-are-propagated.md)  
+ Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- **Replizieren**  
+ **Replikat**  
  Diese Option gilt nur für gespeicherte Prozeduren. Sie bestimmt, ob die Definition der gespeicherten Prozedur (die CREATE PROCEDURE-Anweisung) oder deren Ausführung repliziert wird. Wenn Sie die Ausführung der Prozedur replizieren, wird die Prozedurdefinition auf den Abonnenten repliziert, nachdem das Abonnement initialisiert wurde. Wenn die Prozedur auf dem Verleger ausgeführt wird, führt die Replikation die zugehörige Prozedur auf dem Abonnenten aus. Dies kann in Fällen, in denen große Batchvorgänge ausgeführt werden, zu einer deutlich verbesserten Leistung führen. Weitere Informationen finden Sie unter [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Optionen für Mergeveröffentlichungen  
@@ -124,7 +124,7 @@ ms.locfileid: "62721782"
  Wenn Sie den Standardkonfliktlöser auswählen, werden Konflikte in Abhängigkeit vom verwendeten Abonnementtyp basierend auf der jedem Abonnenten zugewiesenen Priorität oder der ersten auf dem Verleger geschriebenen Änderung gelöst. Weitere Informationen finden Sie unter [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Benutzerdefinierten Konfliktlöser verwenden (registriert auf dem Verteiler)**  
- Wenn Sie einen Artikelkonfliktlöser verwenden möchten (entweder einen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] bereitgestellten oder einen von Ihnen geschriebenen), müssen Sie einen Konfliktlöser aus dem Listenfeld auswählen. Weitere Informationen finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Wenn Sie einen Artikelkonfliktlöser verwenden möchten (entweder einen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] bereitgestellten oder einen von Ihnen geschriebenen), müssen Sie einen Konfliktlöser aus dem Listenfeld auswählen. Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)angegeben wird.  
   
  Wenn der Konfliktlöser eine Eingabe erfordert, geben Sie diese im Textfeld **Geben Sie die vom Konfliktlöser benötigten Informationen ein** an. Weitere Informationen zu den für benutzerdefinierte [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Konfliktlöser erforderlichen Eingaben finden Sie unter [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62721782"
   
 -   Für einige Typen sind mehrere Typen zur Auswahl vorhanden. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt die Verwendung der Standardzuordnung, sofern die Anwendung keine andere Zuordnung erfordert. Weitere Informationen finden Sie unter [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](publish/view-and-modify-publication-properties.md)   
  [Erstellen und Anwenden der Anfangsmomentaufnahme](create-and-apply-the-initial-snapshot.md)   

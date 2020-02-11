@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7a039055daf8574d0c6b217c26d6f5572dd015c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762566"
 ---
-# <a name="mssqlserver8645"></a>MSSQLSERVER_8645
+# <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
     
 ## <a name="details"></a>Details  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62762566"
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Starten der Erfassung von Leistungsindikatoren für **SQL Server: Buffer Manager**, **SQL Server: Speicher-Manager**.  
+2.  Sammeln Sie Leistungsindikatoren für **SQL Server: Puffer-Manager** und **SQL Server: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden SQL Server-Speicherkonfigurationsparameter:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62762566"
   
 -   Wenn Anwendungen außer SQL Server Ressourcen verbrauchen, sollten Sie diese Anwendungen beenden oder auf einem separaten Server ausführen. Dadurch fällt der Mangel an externem Arbeitsspeicher weg.  
   
--   Wenn Sie **Max. Serverarbeitsspeicher** konfiguriert haben, erhöhen Sie den betreffenden Wert.  
+-   Wenn Sie **Max. Serverarbeitsspeicher**  konfiguriert haben, erhöhen Sie dessen Wert.  
   
  Führen Sie die folgenden DBCC-Befehle aus, um mehrere SQL Server-Speichercaches freizugeben.  
   

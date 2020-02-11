@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770387"
 ---
 # <a name="ole-db-command-transformation"></a>Transformation für OLE DB-Befehl
@@ -49,7 +49,7 @@ ms.locfileid: "62770387"
 ## <a name="related-tasks"></a>Related Tasks  
  Sie können die Transformation konfigurieren, indem Sie entweder den [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder das Objektmodell verwenden. Details zur Konfiguration der Transformation mithilfe des [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designers finden Sie unter  [Konfigurieren der Transformation für OLE DB-Befehl](../../configure-the-ole-db-command-transformation.md). Details zum programmgesteuerten Konfigurieren dieser Transformation finden Sie im Entwicklerhandbuch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../data-flow.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   

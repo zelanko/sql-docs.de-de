@@ -14,13 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779788"
 ---
 # <a name="features-in-sql-server-management-studio"></a>Funktionen in SQL Server Management Studio
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] enthält die folgenden allgemeinen Funktionen:  
   
 -   Unterstützt die meisten Verwaltungsaufgaben für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -64,7 +65,8 @@ ms.locfileid: "62779788"
   
 -   Integrierte Quellcodeverwaltung für Projektmappen und Skriptprojekte mit Unterstützung für das Speichern und Verwalten der Kopien von Skripts, die sich im Laufe der Zeit ändern.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] IntelliSense-Unterstützung für MDX-Anweisungen.  
+-   
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] IntelliSense-Unterstützung für MDX-Anweisungen.  
   
 ## <a name="object-explorer-features"></a>Funktionen des Objekt-Explorers  
  Der Objekt-Explorer von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ist ein integriertes Tool zum Anzeigen und Verwalten von Objekten auf allen Servertypen. Es stehen folgende Funktionen zur Verfügung:  
@@ -78,13 +80,14 @@ ms.locfileid: "62779788"
  Weitere Informationen finden Sie unter [Objekt-Explorer](../ssms/object/object-explorer.md).  
   
 ## <a name="extensibility"></a>Erweiterbarkeit  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] basiert auf der Visual Studio Isolated Shell, die die Erweiterbarkeit (Add-Ins/Plug-Ins) standardmäßig unterstützt. Sie können auf die Visual Studio-Erweiterbarkeitsdienste zurückgreifen, um die benutzerdefinierten Funktionen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]offenzulegen. Diese Erweiterbarkeit wird jedoch nicht unterstützt.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] basiert auf der Visual Studio Isolated Shell, die die Erweiterbarkeit (Add-Ins/Plug-Ins) standardmäßig unterstützt. Sie können auf die Visual Studio-Erweiterbarkeitsdienste zurückgreifen, um die benutzerdefinierten Funktionen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]offenzulegen. Diese Erweiterbarkeit wird jedoch nicht unterstützt.  
   
  Einige Benutzer und Drittanbieter haben Erweiterungen für [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]entwickelt. Zwar raten wir davon nicht grundsätzlich ab, dennoch ist dabei zu beachten, dass eine derartige Erweiterbarkeit nicht unterstützt wird, weshalb Probleme bezüglich der Abwärts-/Aufwärtskompatibilität auftreten können. Microsoft veröffentlicht keine Dokumentation zum Erweitern von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Dennoch stehen Communityblogs und Beispielcodes zur Verfügung, die Sie möglicherweise nutzen können.  
   
  Microsoft unterstützt keine [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Installationen, wenn bereits [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Erweiterungen installiert sind. Haben Sie also [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Erweiterungen installiert, entfernen Sie diese ggf., bevor Sie sich an den Microsoft-Kundensupport bezüglich eines [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Problems wenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

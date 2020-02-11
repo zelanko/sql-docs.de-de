@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808251"
 ---
 # <a name="continue-with-restore"></a>Wiederherstellung fortsetzen
@@ -24,18 +24,18 @@ ms.locfileid: "62808251"
   
  Wenn Sie auf **Nein** klicken, wird die Wiederherstellungssequenz beendet, und die Datenbank bleibt im Wiederherstellungsstatus. Verwenden Sie je nach Bedarf den Task **Datenbank wiederherstellen** oder **Transaktionsprotokoll wiederherstellen** , um die Wiederherstellung zu einem späteren Zeitpunkt fortzusetzen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Mediensatz**  
  Zeigt den Namen des nächsten Mediensatzes an (sofern verfügbar).  
   
- **Sicherungssatz**  
+ **Sicherungs Satz**  
  Zeigt den Namen des Sicherungssatzes an.  
   
- **Beschreibung des Sicherungssatzes**  
+ **Sicherungs Satz Beschreibung**  
  Zeigt eine Beschreibung des Sicherungssatzes an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Anzeigen der Inhalte eines Sicherungsbands oder einer -datei &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Anzeigen der Inhalte eines Sicherungs Bands oder einer Datei &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
  [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [Wiederherstellen einer Datenbanksicherung &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  

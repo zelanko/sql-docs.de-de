@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor (Skriptseite) | Microsoft-Dokumentation
+title: Transformations-Editor für Skripterstellung (Seite Skript) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056057"
 ---
 # <a name="script-transformation-editor-script-page"></a>Transformations-Editor für Skripterstellung (Seite Skript)
   Auf der Registerkarte **Skript** des Dialogfelds **Transformations-Editor für Skripterstellung** können Sie ein Skript und verknüpfte Eigenschaften angeben.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Skriptkomponente](data-flow/transformations/script-component.md) und [Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Tastatur  
  **Eigenschaften**  
  Zeigt die Skripttransformationseigenschaften an und ermöglicht Änderungen. Viele dieser Eigenschaften sind schreibgeschützt. Die folgenden Eigenschaften können Sie ändern:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Beschreibung**|Beschreibt den Zweck der Skripttransformation.|  
 |**LocaleID**|Gibt das Gebietsschema für die Bereitstellung regionsspezifischer Informationen für das Bestellen sowie für Datums- und Zeitformate an.|  
@@ -39,17 +39,17 @@ ms.locfileid: "66056057"
 |**ReadOnlyVariables**|Geben Sie eine durch Trennzeichen getrennte Liste von Variablen für den schreibgeschützten Zugriff durch die Skripttransformation ein.<br /><br /> Hinweis: Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.|  
 |**ReadWriteVariables**|Geben Sie eine durch Trennzeichen getrennte Liste von Variablen für den Lese-/Schreibzugriff durch die Skripttransformation ein.<br /><br /> Hinweis: Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.|  
 |**ScriptLanguage**|Wählen Sie die Skriptsprache aus, die von der Skriptkomponente verwendet werden soll.<br /><br /> Um die Standardskriptsprache für Skriptkomponenten und Skripttasks festzulegen, verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache** . Weitere Informationen finden Sie unter [General Page](general-page-of-integration-services-designers-options.md).|  
-|**UserComponentTypeName**|Gibt die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost>-Klasse und die `Microsoft.SqlServer.TxScript`-Assembly an, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Infrastruktur unterstützen.|  
+|**Usercomponenttypame**|Gibt die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost>-Klasse und die `Microsoft.SqlServer.TxScript`-Assembly an, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Infrastruktur unterstützen.|  
   
  **Skript bearbeiten**  
- Verwenden Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Tools für Anwendungen (VSTA), um ein Skript zu erstellen oder zu ändern.  
+ Verwenden [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Sie Tools for Applications (VSTA), um ein Skript zu erstellen oder zu ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Skriptkomponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
- [Transformations-Editor für Skripterstellung &#40;Seite Eingabespalten&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Transformations-Editor für Skripterstellung &#40;Seiten Eingaben und Ausgaben&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Transformations-Editor für Skripterstellung &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Skript Komponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite Eingabe Spalten&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite "Eingaben und Ausgaben"&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Skript Transformations-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Zusätzliche Skriptkomponentenbeispiele](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

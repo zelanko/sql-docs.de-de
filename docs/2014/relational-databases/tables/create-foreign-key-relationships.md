@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761615"
 ---
 # <a name="create-foreign-key-relationships"></a>Erstellen von Fremdschlüssel-Beziehungen
@@ -30,7 +30,7 @@ ms.locfileid: "62761615"
   
      [Sicherheit](#Security)  
   
--   **Zum Erstellen Sie Fremdschlüsselbeziehungen mit:**  
+-   **So erstellen Sie Fremdschlüsselbeziehungen mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62761615"
   
 -   FOREIGN KEY-Einschränkungen werden nicht auf temporäre Tabellen angewendet.  
   
--   Wenn ein Fremdschlüssel für eine Spalte eines CLR-benutzerdefinierten Typs definiert wird, muss die Implementierung des Typs eine binäre Sortierreihenfolge unterstützen. Weitere Informationen finden Sie unter [CLR User-Defined Types](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+-   Wenn ein Fremdschlüssel für eine Spalte eines CLR-benutzerdefinierten Typs definiert wird, muss die Implementierung des Typs eine binäre Sortierreihenfolge unterstützen. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 -   Eine Spalte vom Typ `varchar(max)` kann nur dann in eine FOREIGN KEY-Einschränkung einbezogen werden, wenn der Primärschlüssel, auf den verwiesen wird, ebenfalls als `varchar(max)`-Typ definiert ist.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "62761615"
   
  Zum Erstellen eines Fremdschlüssels für eine vorhandene Tabelle ist die ALTER-Berechtigung für die Tabelle erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>So erstellen Sie eine Fremdschlüsselbeziehung im Tabellen-Designer  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, die sich auf der Fremdschlüsselseite der Beziehung befinden soll, und klicken Sie auf **Entwerfen**.  
   
-     Die Tabelle wird im **Tabellen-Designer**geöffnet.  
+     Die Tabelle wird in **Tabellen-Designer**geöffnet.  
   
 2.  Klicken Sie im Menü **Tabellen-Designer** auf **Beziehungen**.  
   
@@ -83,13 +83,13 @@ ms.locfileid: "62761615"
   
 4.  Klicken Sie in der Liste **Ausgewählte Beziehung** auf die Beziehung.  
   
-5.  Klicken Sie im Datenblatt rechts auf **Tabellen- und Spaltenspezifikation**, und klicken Sie anschließend auf die rechts neben der Eigenschaft angezeigten Auslassungspunkte ( **...** ).  
+5.  Klicken Sie im Datenblatt rechts auf **Tabellen- und Spaltenspezifikation**, und klicken Sie anschließend auf die rechts neben der Eigenschaft angezeigten Auslassungspunkte (**...**).  
   
 6.  Wählen Sie im Dialogfeld **Tabellen und Spalten** in der Dropdownliste **Primärschlüssel** die Tabelle aus, die sich auf der Primärschlüsselseite der Beziehung befinden soll.  
   
 7.  Wählen Sie im darunter angezeigten Datenblatt die Spalten aus, die für den Primärschlüssel der Tabelle verwendet werden sollen. Geben Sie in die jeweils links neben den einzelnen Spalten angrenzende Datenblattzelle die entsprechende Fremdschlüsselspalte aus der Fremdschlüsseltabelle ein.  
   
-     Der**Tabellen-Designer** schlägt einen Namen für die Beziehung vor. Wenn Sie diesen Namen ändern möchten, bearbeiten Sie den Inhalt des Textfelds **Beziehungsname** .  
+     **Tabellen-Designer** schlägt einen Namen für die Beziehung vor. Wenn Sie diesen Namen ändern möchten, bearbeiten Sie den Inhalt des Textfelds **Beziehungsname** .  
   
 8.  Klicken Sie auf **OK** , um die Beziehung zu erstellen.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62761615"
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>So erstellen Sie einen Fremdschlüssel in einer neuen Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62761615"
   
 #### <a name="to-create-a-foreign-key-in-an-existing-table"></a>So erstellen Sie einen Fremdschlüssel in einer vorhandenen Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

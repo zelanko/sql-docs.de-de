@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779135"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Überlegungen zur Installation von SQL Server mit SysPrep
@@ -28,7 +28,7 @@ ms.locfileid: "62779135"
   
      In diesem Schritt können Sie die Konfiguration einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]abschließen. Während dieses Schritts können Sie Informationen zum Computer, zum Netzwerk und zum Konto bereitstellen.  
   
- Weitere Informationen zur Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von SysPrep finden Sie [installieren SQL Server 2014 mit SysPrep](install-sql-server-using-sysprep.md).  
+ Weitere Informationen zum Installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von mithilfe von syationp finden Sie unter [Install SQL Server 2014 using syationp](install-sql-server-using-sysprep.md).  
   
 ## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Allgemeine Verwendungsmöglichkeiten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Sie können die SysPrep-Funktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt verwenden:  
@@ -65,7 +65,7 @@ ms.locfileid: "62779135"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer werden automatisch vorbereitet, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie werden abgeschlossen, wenn Sie mithilfe des Schritts "Image abschließen" die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz abschließen.  
   
- Informationen zu unterstützten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Informationen zu den unterstützten Editionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Beim Konfigurieren einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können Sie ein Editionsupgrade ausführen. Diese Option wird nicht für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express-Editionen unterstützt.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62779135"
   
 -   Greifen Sie auf den Schritt **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz** auf der Seite **Erweitert** des **Installationscenters**zu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein Bereitstellungs-Hilfsprogramms | Microsoft-Dokumentation
+title: Erstellen eines Bereitstellungs Hilfsprogramms | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060233"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -29,7 +29,7 @@ ms.locfileid: "66060233"
   
  In der folgenden Tabelle sind die Eigenschaften des Bereitstellungshilfsprogramms aufgeführt.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Ein Wert, der angibt, ob Konfigurationen während der Bereitstellung aktualisiert werden können.|  
 |CreateDeploymentUtility|Ein Wert, der angibt, ob beim Erstellen des Projekts ein Paketbereitstellungshilfsprogramm erstellt wird. Diese Eigenschaft muss auf `True` festgelegt sein, um ein Bereitstellungshilfsprogramm zu erstellen.|  
@@ -45,11 +45,11 @@ ms.locfileid: "66060233"
   
 2.  Klicken Sie mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**.  
   
-3.  Klicken Sie im Dialogfeld **\<Projektname>-Eigenschaftenseiten** auf **Bereitstellungshilfsprogramm**.  
+3.  Klicken Sie im Dialogfeld ** \<Projektname> Eigenschaften Seiten** auf **Bereitstellungs Hilfsprogramm**.  
   
-4.  Um Paketkonfigurationen aktualisieren, wenn Pakete bereitgestellt werden, legen **AllowConfigurationChanges** zu `True`.  
+4.  Zum Aktualisieren von Paket Konfigurationen bei der Bereitstellung von Paketen legen Sie **AllowConfigurationChanges** auf `True`fest.  
   
-5.  Legen Sie `CreateDeploymentUtility` auf `True` fest.  
+5.  Setzen Sie `CreateDeploymentUtility` auf `True`.  
   
 6.  Aktualisieren Sie bei Bedarf den Speicherort des Bereitstellungshilfsprogramms, in dem Sie die `DeploymentOutputPath`-Eigenschaft ändern.  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66060233"
   
 9. Im **Ausgabe** -Fenster können Sie den Erstellungsprozess verfolgen, in dem auch Fehler bei der Erstellung angezeigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
- [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
- [Bereitstellen von Paketen mithilfe des Bereitstellungshilfsprogramms](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Paket Konfigurationen](../../2014/integration-services/package-configurations.md)   
+ [Erstellen von Paket Konfigurationen](../../2014/integration-services/create-package-configurations.md)   
+ [Bereitstellen von Paketen mithilfe des Bereitstellungs Hilfsprogramms](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Paket Bereitstellung &#40;SSIS-&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

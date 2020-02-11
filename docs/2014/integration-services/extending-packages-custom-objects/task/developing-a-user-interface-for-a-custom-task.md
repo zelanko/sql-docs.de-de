@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768911"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task
@@ -33,7 +33,7 @@ ms.locfileid: "62768911"
   
  Bei der Entwicklung einer benutzerdefinierten Benutzeroberfläche für einen Task werden zwei wichtige Klassen verwendet. Diese Klassen werden in der folgenden Tabelle beschrieben.  
   
-|Class|Description|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Ein Attribut, das einen verwalteten Task identifiziert und über seine Eigenschaften Informationen zur Entwurfszeit angibt, um zu kontrollieren, wie der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer das Objekt anzeigt, bzw. wie er mit ihm interagiert.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Eine vom Task verwendete Schnittstelle, um den Task seiner benutzerdefinierten Benutzeroberfläche zuzuordnen.|  
@@ -49,12 +49,12 @@ ms.locfileid: "62768911"
   
  In der folgenden Tabelle werden die Eigenschaften des <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attributs beschrieben.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Zeigt den Tasknamen in der Toolbox der Ablaufsteuerung an.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Die Taskbeschreibung (geerbt von <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Diese Eigenschaft wird in QuickInfos angezeigt.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|Das im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer angezeigte Symbol.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Sollte bei Verwendung auf einen der Werte in der <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>-Enumeration festgelegt werden. Beispiel: `RequiredProductLevel = DTSProductLevel.None`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Sollte bei Verwendung auf einen der Werte in der <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>-Enumeration festgelegt werden. Beispiel: `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Enthält Kontaktinformationen, falls für den Task technischer Support benötigt wird.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Weist dem Task einen Typ zu.|  
 |Attribute.TypeId|Ruft bei Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. Weitere Informationen finden Sie in der .NET Framework-Klassenbibliothek unter der `Attribute.TypeID`-Eigenschaft.|  
@@ -197,9 +197,9 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines benutzerdefinierten Tasks](creating-a-custom-task.md)   
  [Codieren eines benutzerdefinierten Tasks](coding-a-custom-task.md)   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task](developing-a-user-interface-for-a-custom-task.md)  

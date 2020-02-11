@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813678"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Affinity I/O Mask (Serverkonfigurationsoption)
   Für die Ausführung von Multitasking verschieben [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 und Windows Server 2003 gelegentlich Prozessthreads zwischen den Prozessoren. Obwohl dies aus der Sicht des Betriebssystems effizient ist, kann diese Aktivität die Leistung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei starker Systemauslastung reduzieren, da jeder Prozessorcache wiederholt mit Daten geladen wird. Unter diesen Bedingungen kann das Zuweisen bestimmter Threads zu bestimmten Prozessoren die Leistung verbessern, da das erneute Laden von Prozessoren vermieden wird. Eine solche Zuordnung zwischen einem Thread und einem Prozessor wird als Prozessoraffinität bezeichnet.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Prozessoraffinität durch zwei Affinitätsmaskenoptionen: **affinity mask** (auch als **CPU-Affinitätsmaske**bezeichnet) und **affinity I/O mask**. Weitere Informationen zur Option **affinity mask** finden Sie unter [Affinitätsmaske (Serverkonfigurationsoption)](affinity-mask-server-configuration-option.md). CPU- und E/A-Affinitätsunterstützung für Server mit 33–64 Prozessoren erfordert die zusätzliche Verwendung von [affinity64 mask (Serverkonfigurationsoption)](affinity64-mask-server-configuration-option.md) bzw. [affinity64 Input-Output mask (Serverkonfigurationsoption)](affinity64-input-output-mask-server-configuration-option.md) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die Prozessor Affinität durch zwei Affinitäts Masken Optionen: **Affinitäts Maske** (auch als **CPU-Affinitäts Maske**bezeichnet) und **Affinitäts**-e/a-Maske. Weitere Informationen zur Option **affinity mask** finden Sie unter [Affinitätsmaske (Serverkonfigurationsoption)](affinity-mask-server-configuration-option.md). Die Unterstützung der CPU-und e/a-Affinität für Server mit 33-und 64-Prozessoren erfordert die zusätzliche Verwendung der Server [Konfigurationsoption affinity64 Mask](affinity64-mask-server-configuration-option.md) bzw. [affinity64 Input-Output Mask (Server Konfigurationsoption](affinity64-input-output-mask-server-configuration-option.md) ).  
   
 > [!NOTE]  
 >  Affinitätsunterstützung für Server mit 33 bis 64 Prozessoren steht nur auf 64-Bit-Betriebssystemen zur Verfügung.  
@@ -48,7 +48,7 @@ ms.locfileid: "62813678"
   
  Ein 1-Bit im E/A-Affinitätsmuster gibt an, dass die entsprechende CPU für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge geeignet ist; ein 0-Bit gibt an, dass keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge für die entsprechende CPU geplant werden sollen. Sind alle Bits auf 0 festgelegt oder ist **affinity I/O mask** nicht angegeben, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge für eine beliebige CPU geplant, die für die Verarbeitung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Threads geeignet ist.  
   
- Da das Festlegen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** einen spezialisierten Vorgang darstellt, sollte er nur bei Bedarf ausgeführt werden. In den meisten Fällen kann eine optimale Leistung durch die standardmäßige Affinität von Windows 2000 oder Windows Server 2003 erzielt werden.  
+ Da das Festlegen der Option Affinity I/O Mask [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** (Affinität E/A Maske) von ** einen spezialisierten Vorgang darstellt, sollte er nur bei Bedarf ausgeführt werden. In den meisten Fällen kann eine optimale Leistung durch die standardmäßige Affinität von Windows 2000 oder Windows Server 2003 erzielt werden.  
   
  Wenn Sie die Option **affinity I/O mask** angeben, müssen Sie sie mit der Konfigurationsoption **affinity mask** verwenden. Aktivieren Sie in der Option **affinity I/O mask** und in der Option **affinity mask** nicht dieselbe CPU. Die Bits, die den einzelnen CPUs entsprechen, sollten sich jeweils in einem der folgenden drei Zustände befinden:  
   
@@ -58,12 +58,12 @@ ms.locfileid: "62813678"
   
 -   0 in der Option **affinity I/O mask** und 1 in der Option **affinity mask** .  
   
- Die Option **affinity I/O mask** ist eine erweiterte Option. Bei Verwendung der `sp_configure` gespeicherte Systemprozedur, um die Einstellung ändern, können Sie **Affinity i/o Mask** nur, wenn **erweiterte Optionen anzeigen** auf 1 festgelegt ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist für das erneute Konfigurieren der Option **affinity I/O mask** ein Neustart der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz erforderlich.  
+ Die Option **affinity I/O mask** ist eine erweiterte Option. Wenn Sie die Einstellung mithilfe `sp_configure` der gespeicherten System Prozedur ändern, können Sie die **Affinitäts-e/a-Maske** nur ändern, wenn **Erweiterte Optionen anzeigen** auf 1 festgelegt ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist für das erneute Konfigurieren der Option **affinity I/O mask** ein Neustart der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz erforderlich.  
   
 > [!CAUTION]  
 >  Konfigurieren Sie nicht die CPU-Affinität im Windows-Betriebssystem und gleichzeitig die Affinitätsmaske in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diese Einstellungen zielen auf dasselbe Ergebnis. Wenn die Konfigurationen inkonsistent sind, kann dies zu unvorhersehbaren Ergebnissen führen. Die CPU-Affinität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird am besten mit der entsprechenden Option von `sp_configure` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

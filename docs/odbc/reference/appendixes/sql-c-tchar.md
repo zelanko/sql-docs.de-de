@@ -15,11 +15,11 @@ ms.assetid: 9e27c8bd-ee15-4ce9-b70a-34cf1bf16f4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68a03de54a8a5f63a994578d64c6bce5a1279138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057046"
 ---
-# <a name="sqlctchar"></a>SQL_C_TCHAR
-Der Typbezeichner SQL_C_TCHAR identifiziert nicht tatsächlich einen Datentyp; Es ist ein Makro, das in der Headerdatei für die Unicode-Konvertierung vorhanden ist. Sie wird von SQL_C_CHAR oder SQL_C_WCHAR ersetzt, abhängig von der Einstellung des Unicode- **#define**. Es empfiehlt sich für eine Anwendung, Übertragen von Zeichendaten, die als eine ANSI- und Unicode-Anwendung kompiliert werden.
+# <a name="sql_c_tchar"></a>SQL_C_TCHAR
+Der SQL_C_TCHAR Typbezeichner identifiziert nicht tatsächlich einen Datentyp. Es handelt sich um ein Makro, das in der Header Datei für die Unicode-Konvertierung vorhanden ist. Sie wird durch SQL_C_CHAR oder SQL_C_WCHAR ersetzt, abhängig von der Einstellung der Unicode- **#define**. Es ist nützlich für eine Anwendung, die Zeichendaten überträgt, die als ANSI-und Unicode-Anwendung kompiliert werden.

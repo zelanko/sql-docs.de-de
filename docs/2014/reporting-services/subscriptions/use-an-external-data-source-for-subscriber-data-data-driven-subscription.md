@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100643"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Verwenden einer externen Datenquelle für Abonnentendaten (datengesteuertes Abonnement)
@@ -60,7 +60,7 @@ ms.locfileid: "66100643"
 -   Vom Berichtsserver wird eine Berichtsübermittlung für jede Zeile im Resultset erstellt. Wenn das Resultset aus dreihundert Zeilen besteht, versucht der Berichtsserver, dreihundert Berichte zu übermitteln.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>Festlegen von Übermittlungsoptionen mithilfe von Variablendaten aus einer Abonnentendatenbank  
- Sie können Daten in der Abonnentendatenbank verwenden, um die Übermittlungsoptionen für die einzelnen Empfänger anzupassen. Mit der von Ihnen verwendeten Art der Übermittlungserweiterung wird bestimmt, welche Optionen verfügbar sind. Falls Sie die E-Mail-Übermittlungserweiterung des Berichtsservers verwenden, sollte die Abfrage für jeden Abonnenten einen E-Mail-Alias enthalten. Wenn Sie die Dateifreigabeübermittung verwenden, sollten die Abonnentendaten Werte enthalten, die zum Erstellen abonnentenspezifischer Berichtsdateien oder zum Bereitstellen eines Ziels für die Übermittlung verwendet werden können. Weitere Informationen finden Sie unter [Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md) und [e-Mail-Übermittlung in Reporting Services](e-mail-delivery-in-reporting-services.md).  
+ Sie können Daten in der Abonnentendatenbank verwenden, um die Übermittlungsoptionen für die einzelnen Empfänger anzupassen. Mit der von Ihnen verwendeten Art der Übermittlungserweiterung wird bestimmt, welche Optionen verfügbar sind. Falls Sie die E-Mail-Übermittlungserweiterung des Berichtsservers verwenden, sollte die Abfrage für jeden Abonnenten einen E-Mail-Alias enthalten. Wenn Sie die Dateifreigabeübermittung verwenden, sollten die Abonnentendaten Werte enthalten, die zum Erstellen abonnentenspezifischer Berichtsdateien oder zum Bereitstellen eines Ziels für die Übermittlung verwendet werden können. Weitere Informationen finden Sie unter [Dateifreigabe Übermittlung in Reporting Services](file-share-delivery-in-reporting-services.md) und [e-Mail-Übermittlung in Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Übergeben von Parameterwerten aus der Abonnentendatenbank an den Bericht  
  Wenn Sie ein datengesteuertes Abonnement für einen parametrisierten Bericht erstellen, können Sie Variablenparameterwerte verwenden, um die Ausgabe der einzelnen Berichte anzupassen. Beispielsweise könnte die Abonnentendatenbank Mitarbeiteridentifikationsnummern, Einstellungsdaten, Tätigkeitsbezeichnungen und Informationen zum Bürostandort enthalten, mit denen Berichtsdaten gefiltert werden können. Falls der Bericht Parameter akzeptiert, die auf diesen oder anderen verfügbaren Spaltendaten basieren, können Sie den Parameter der entsprechenden Spalte zuordnen.  
@@ -78,7 +78,7 @@ ms.locfileid: "66100643"
   
  Falls Sie solche Änderungen vornehmen, müssen Sie das Abonnement aktualisieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen, ändern und Löschen eines datengesteuerten Abonnements](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Abonnements und Übermittlung (Reporting Services)](subscriptions-and-delivery-reporting-services.md)  

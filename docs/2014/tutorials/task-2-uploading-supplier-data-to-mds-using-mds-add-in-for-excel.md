@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-in für Excel | Microsoft-Dokumentation'
+title: 'Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe MDS-Add-in für Excel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,58 +11,58 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484662"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-Ins für Excel
-  In dieser Aufgabe veröffentlichen Sie die bereinigten Daten und Lieferantendaten zu **MDS** mithilfe der **MDS-Add-in für Excel**. Sie erstellen eine Entität mit dem Namen **Lieferanten** in die **Lieferanten** Modell, die Sie in der vorherigen Lektion erstellt haben. Die Entität weist ein Attribut für jede Spalte in der Excel-Datei auf. Die Attribute der Entität "Supplier" Code und den Namen entsprechen den **SupplierID** und **Lieferantenname** Spalten in Excel.  
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-Ins für Excel
+  In dieser Aufgabe veröffentlichen Sie die bereinigten und Lieferantendaten mithilfe der **MDS-Add-in für Excel**in **MDS** . Sie erstellen eine Entität mit dem Namen **Lieferant** in dem Modell **Suppliers** , das Sie in der vorherigen Lektion erstellt haben. Die Entität weist ein Attribut für jede Spalte in der Excel-Datei auf. Die Attribute "Code" und "Name" der Entität "Supplier" entsprechen den Spalten **SupplierID** und **Supplier Name** in Excel.  
   
-1.  Open **bereinigt und abgeglichen Suppliers.xls** in **Excel**.  
+1.  Öffnen Sie **bereinigt und übereinstimmende Suppliers. xls** in **Excel**.  
   
-2.  Drücken Sie **STRG + A** um alle Daten auszuwählen. Es ist **wichtig** , dass Sie die gesamten Daten im Arbeitsblatt auszuwählen.  
+2.  Drücken Sie **STRG + A** , um die gesamten Daten auszuwählen. Es ist **wichtig** , dass Sie die gesamten Daten in der Tabelle auswählen.  
   
-3.  Klicken Sie auf **Masterdaten** in der Menüleiste.  
+3.  Klicken Sie in der Menüleiste auf **Master Daten** .  
   
-4.  Klicken Sie auf **Entität erstellen** Schaltfläche auf dem Menüband.  
+4.  Klicken Sie im Menüband auf Schaltfläche **Entität erstellen** .  
   
-     ![Excel – Masterdaten (Registerkarte) - erstellen-Schaltfläche "Entität"](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel – Masterdaten (Registerkarte) - Entity-Schaltfläche \"erstellen\"")  
+     ![Excel – Masterdaten (Registerkarte) – Entität erstellen (Schaltfläche)](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel – Masterdaten (Registerkarte) – Entität erstellen (Schaltfläche)")  
   
-5.  In **Verbindungen verwalten** Dialogfeld, wenn die Verbindung mit nicht angezeigt wird **lokalen MDS-Server** unter **vorhandene Verbindungen**, gehen Sie folgendermaßen vor:  
+5.  Wenn im Dialogfeld **Verbindungen verwalten** die Verbindung mit dem **lokalen MDS-Server** unter **vorhandene Verbindungen**nicht angezeigt wird, gehen Sie wie folgt vor:  
   
-    1.  Wählen Sie **erstellen Sie eine neue Verbindung**, und klicken Sie auf **neu** Schaltfläche.  
+    1.  Wählen Sie **neue Verbindung erstellen**aus, und klicken Sie auf die Schaltfläche **neu** .  
   
-    2.  In der **neue Verbindung hinzufügen** (Dialogfeld), Typ **Local MDS Server** für **Beschreibung** und **http://localhost/MDS** für  **MDS-Serveradresse**, und klicken Sie auf **OK** um das Dialogfeld zu schließen.  
+    2.  Geben Sie im Dialogfeld **neue Verbindung hinzufügen** den **Namen local MDS Server** für **http://localhost/MDS** **Beschreibung** und für **MDS-Server Adresse**ein, und klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
-6.  In **Verbindungen verwalten** wählen Sie im Dialogfeld **Local MDS Server** (http://localhost/MDS), klicken Sie auf **testen** zum Testen der Verbindung. Klicken Sie auf **OK** im Meldungsfeld auf.  
+6.  Wählen Sie im Dialogfeld **Verbindungen verwalten** die Option **lokaler MDS-Server** aus (http://localhost/MDS)klicken Sie auf **Testen** , um die Verbindung zu testen. Klicken Sie im Meldungs Feld auf **OK** .  
   
-7.  Klicken Sie auf **Connect** zur Verbindung mit des MDS-Servers.  
+7.  Klicken Sie auf **verbinden** , um eine Verbindung zum MDS-Server herzustellen.  
   
-8.  In der **Entität erstellen** wählen Sie im Dialogfeld **Lieferanten** für die **Modell**.  
+8.  Wählen Sie im Dialogfeld **Entität erstellen** die Option **Suppliers** für das **Modell**aus.  
   
-9. Sicherstellen, dass **VERSION_1** ausgewählt ist **Version**.  
+9. Stellen Sie sicher, dass für die **Version** **VERSION_1** ausgewählt ist.  
   
-10. Geben Sie **Lieferanten** für **neuer Entitätsname**.  
+10. Geben Sie **Supplier** als **neuen Entitäts Namen**ein.  
   
-11. Wählen Sie **SupplierID** für **die Spalte, die einen eindeutigen Bezeichner enthält** Feld (Sie können auch einen Code automatisch generieren). Sie sind im Wesentlichen eine Zuordnung der **SupplierID** -Spalte in **Excel** auf die **Code** Attribut **Lieferanten** Entität.  
+11. Wählen Sie **SupplierID** für **die Spalte aus, die ein eindeutiges Bezeichnerfeld enthält** (Sie können auch automatisch einen Code generieren). Sie ordnen die **SupplierID-** Spalte in **Excel** im Wesentlichen dem Attribut " **Code** " der Entität " **Supplier** " zu.  
   
-12. Wählen Sie **Lieferantenname** für **die Spalte mit Namen** Feld. Sie sind im Wesentlichen eine Zuordnung der **Supplier Name** -Spalte in **Excel** auf die **Namen** Attribut der **Lieferanten** Entität. Die **Code** und **Namen** Attribute sind obligatorische Attribute für eine Entität in MDS.  
+12. Wählen Sie **Lieferanten Name** für **die Spalte aus, die das Feld Namen enthält** . Im wesentlichen ordnen Sie die Spalte " **Supplier Name** " in **Excel** dem **namens** Attribut der Entität " **Supplier** " zu. Die Attribute " **Code** " und " **Name** " sind obligatorische Attribute für eine Entität in MDS.  
   
-     ![Erstellen Sie im Dialogfeld Entität](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "erstellen Entität (Dialogfeld)")  
+     ![Entität erstellen (Dialogfeld)](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "Entität erstellen (Dialogfeld)")  
   
-13. Klicken Sie auf **OK** um die Entität in MDS zu erstellen, veröffentlichen Sie die Masterdaten in der Entität aus, und schließen **Entität erstellen** Dialogfeld.  
+13. Klicken Sie auf **OK** , um die Entität in MDS zu erstellen, die Master Daten in der Entität zu veröffentlichen und das Dialogfeld **Entität erstellen** zu schließen.  
   
-14. Nun sollte ein neues Arbeitsblatt mit dem Titel **Lieferanten**, dies ist der Name der Entität, in Ihrer Excel-Arbeitsblatt hinzugefügt, und Sie sollte am oberen Rand des Arbeitsblatts angezeigt werden, dass das Arbeitsblatt mit dem MDS-Server verbunden ist. Beachten Sie, dass das ursprüngliche Arbeitsblatt (mit dem Titel **Sheet1**) noch vorhanden ist.  
+14. Nun sollte das neue Blatt **Lieferant**angezeigt werden, bei dem es sich um den Namen der Entität handelt, der dem Excel-Arbeitsblatt hinzugefügt wird. oben im Arbeitsblatt sollten Sie sehen, dass das Arbeitsblatt mit dem MDS-Server verbunden ist. Beachten Sie, dass das ursprüngliche Arbeitsblatt (mit dem Namen **Sheet1**) noch vorhanden ist.  
   
-     ![Excel – Lieferanten und Tabelle1 Registerkarten](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel – Lieferanten und Tabelle1-Registerkarten")  
+     ![Excel – Registerkarten für Lieferanten und Tabelle1](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel – Registerkarten für Lieferanten und Tabelle1")  
   
-     ![Excel – anzeigen von Details zur MDS-Verbindung](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel – anzeigen von Details zur MDS-Verbindung")  
+     ![Excel – Anzeigen von Details zur MDS-Verbindung](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel – Anzeigen von Details zur MDS-Verbindung")  
   
-15. Behalten Sie **Excel** zu öffnen.  
+15. Lassen Sie **Excel** geöffnet.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
- [Aufgabe 3: Überprüfen der Daten im Master Data Manager](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [Aufgabe 3: Überprüfen der Daten im Master Data Manager](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

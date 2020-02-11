@@ -1,5 +1,5 @@
 ---
-title: Ausführen eines Pakets in SQL Server Datatools | Microsoft-Dokumentation
+title: Ausführen eines Pakets in SQL Server Data Tools | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056423"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Ausführen eines Pakets in SQL Server Data Tools
   Das Ausführen von Paketen in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erfolgt zumeist beim Entwickeln, Debuggen und Testen von Paketen. Wenn Sie ein Paket im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer ausführen, wird das Paket immer sofort ausgeführt.  
   
- Während ein Paket ausgeführt wird, zeigt der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer den Fortschritt der Paketausführung auf der **Status** -Registerkarte an. Sie können den Start- und Endzeitpunkt des Pakets sowie seine Tasks und Container sehen. Außerdem werden Informationen über Tasks und Container im Paket angezeigt, deren Ausführung fehlerhaft ist. Wenn die Ausführung des Pakets beendet wurde, sind die Laufzeitinformationen weiterhin auf der Registerkarte **Ausführungsergebnisse** verfügbar. Weitere Informationen finden Sie im Abschnitt "Fortschrittsberichte" im Thema [Debugging Control Flow](control-flow/control-flow.md).  
+ Während ein Paket ausgeführt wird, [!INCLUDE[ssIS](../includes/ssis-md.md)] zeigt der-Designer den Fortschritt der Paket Ausführung **auf der Register** Karte Status an. Sie können die Start-und Abschlusszeit des Pakets und dessen Tasks und Container sowie Informationen zu allen Tasks oder Containern im Paket anzeigen, bei denen ein Fehler aufgetreten ist. Nachdem die Ausführung des Pakets abgeschlossen ist, sind die Laufzeitinformationen auf der Registerkarte **Ausführungs Ergebnisse** weiterhin verfügbar. Weitere Informationen finden Sie im Abschnitt "Progress Reporting" im Thema [Debuggen der Ablauf Steuerung](control-flow/control-flow.md).  
   
- **Entwurfszeitbereitstellung**. Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ausführen, wird das Paket erstellt und dann in einem Ordner bereitgestellt. Vor dem Ausführen des Pakets können Sie den Ordner angeben, in dem das Paket bereitgestellt wird. Wenn Sie keinen Ordner angeben, wird standardmäßig der Ordner **bin** verwendet. Dieser Bereitstellungstyp wird als Entwurfszeitbereitstellung bezeichnet.  
+ **Entwurfszeit Bereitstellung**. Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ausführen, wird das Paket erstellt und dann in einem Ordner bereitgestellt. Vor dem Ausführen des Pakets können Sie den Ordner angeben, in dem das Paket bereitgestellt wird. Wenn Sie keinen Ordner angeben, wird standardmäßig der Ordner **bin** verwendet. Dieser Bereitstellungstyp wird als Entwurfszeitbereitstellung bezeichnet.  
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>So führen Sie ein Paket in SQL Server-Datentools aus  
   
@@ -45,11 +45,11 @@ ms.locfileid: "66056423"
   
 1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projektordner, der das auszuführende Paket enthält. Klicken Sie anschließend auf **Eigenschaften**.  
   
-2.  Klicken Sie im Dialogfeld **\<Projektname>-Eigenschaftenseiten** auf **Erstellen**.  
+2.  Klicken Sie im Dialogfeld ** \<Projektname> Eigenschaften Seiten** auf **Erstellen**.  
   
 3.  Aktualisieren Sie den Wert der OutputPath-Eigenschaft, und geben Sie den Ordner an, den Sie für die Entwurfszeitbereitstellung verwenden möchten. Klicken Sie anschließend auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführung von Projekten und Paketen](packages/run-integration-services-ssis-packages.md)   
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md) (Integration Services-Pakete [SSIS])  
   

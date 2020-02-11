@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 488e07e86ba5a7febcb0675611136a1e0d792007
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798258"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Erstellen eines Transact-SQL-Auftragsschritts
-  In diesem Thema wird beschrieben, wie Sie einen Auftragsschritt des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, der [!INCLUDE[tsql](../../includes/tsql-md.md)] - Skripts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects ausführt, erstellen können.  
+  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie einen-Agent- [!INCLUDE[tsql](../../includes/tsql-md.md)] Auftrags Schritt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit [!INCLUDE[tsql](../../includes/tsql-md.md)]dem Skripts in mithilfe von, oder SQL Server Management Objects ausgeführt werden.  
   
  Diese Auftragsschrittskripts können gespeicherte Prozeduren und erweiterte gespeicherte Prozeduren aufrufen. Ein einzelner [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritt kann mehrere Batches und eingebettete GO-Befehle enthalten. Weitere Informationen zum Erstellen eines Auftrags finden Sie unter [Erstellen von Aufträgen](create-jobs.md).  
   
@@ -30,9 +30,9 @@ ms.locfileid: "72798258"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
--   **So erstellen Sie einen Transact-SQL-Auftragsschritt mit**  
+-   **So erstellen Sie einen Transact-SQL-Auftrags Schritt mit:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -40,9 +40,9 @@ ms.locfileid: "72798258"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
@@ -55,7 +55,7 @@ ms.locfileid: "72798258"
   
 3.  Klicken Sie im Dialogfeld **Auftragseigenschaften** auf die Seite **Schritte** und dann auf **Neu**.  
   
-4.  Nehmen Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**eine Eingabe vor.  
+4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen für den Auftrag ein.  
   
 5.  Klicken Sie in der Liste **Typ** auf **Transact-SQL-Skript (TSQL)**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "72798258"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_add_jobstep &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So erstellen Sie einen Transact-SQL-Auftragsschritt**  

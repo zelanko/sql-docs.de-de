@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768706"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS-Ausdruck)
@@ -39,7 +39,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion teilt die <character_expression>-Zeichenfolge in einen Satz von Token auf, die von den im <delimiter_string> festgelegten Trennzeichen getrennt wurden, und gibt dann das N-te Token zurück, wobei N für die vom \<occurrence>-Parameter festgelegte Anzahl der Vorkommen des Tokens steht. Beispiele für die Verwendung dieser Funktion finden Sie im Abschnitt "Beispiele".  
   
  Die folgenden Hinweise gelten für die TOKEN-Funktion:  
@@ -99,7 +99,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)  
   
   

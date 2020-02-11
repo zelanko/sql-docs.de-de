@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "-Verleger hinzufügen"
+title: Dialogfeld ' Verleger hinzufügen '
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676916"
 ---
-# <a name="sql-server-replication-add-publisher-dialog-box"></a>Dialogfeld für SQL Server-Replikation-Verleger hinzufügen 
-  Mithilfe des Dialogfelds **Verleger hinzufügen** können Sie dem linken Bereich des Replikationsmonitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>Dialogfeld ' Verleger hinzufügen ' SQL Server-Replikation 
+  Im Dialogfeld **Verleger hinzufügen** können Sie dem linken Bereich des Replikations Monitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
   
-## <a name="options"></a>Optionen  
- **Hinzufügen**  
- Klicken Sie auf diese Option, um den Typ des hinzuzufügenden Verlegers auszuwählen. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** gestartet. Folgende Optionen sind verfügbar:  
+## <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
+ Klicken Sie auf diese Option, um den Typ des hinzuzufügenden Verlegers auszuwählen. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** gestartet. Die Optionen sind:  
   
--   **SQL Server-Verleger hinzufügen...**  
+-   **SQL Server Verleger hinzufügen...**  
   
      Stellen Sie mithilfe des Dialogfelds **Verbindung mit Server herstellen** eine Verbindung mit dem Verleger her.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62676916"
   
      Stellen Sie mithilfe des Dialogfelds [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
--   **Geben Sie einen Verteiler an, und fügen Sie seine Verleger hinzu…**  
+-   **Geben Sie einen Verteiler an, und fügen Sie seine Verleger hinzu...**  
   
      Stellt mithilfe des Dialogfelds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung mit Server herstellen **eine Verbindung mit dem** -Verteiler her, der einem oder mehreren Verlegern zugeordnet ist.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62676916"
 > [!NOTE]  
 >  Verteiler und Verleger werden oft auf derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt, aber der Verteiler kann auch auf einer anderen Instanz ausgeführt werden (diese Konfiguration wird als Remoteverteiler bezeichnet).  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie einen Verleger in dem Raster im oberen Bereich des Dialogfelds aus, und klicken Sie auf **Entfernen** , um den Verleger aus der Liste der hinzuzufügenden Verleger zu entfernen.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "62676916"
  **Neue Gruppe**  
  Klicken Sie auf diese Option, um eine neue Verlegergruppe zu erstellen. Eine Verlegergruppe stellt eine einfache Möglichkeit dar, um die Verleger innerhalb des Replikationsmonitors zu organisieren. Gruppen haben keinen Einfluss auf die Replikation der Daten oder die Beziehungen zwischen den Servern in der Replikationstopologie.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)  
   

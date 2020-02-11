@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057623"
 ---
 # <a name="multicast-transformation-editor"></a>Transformations-Editor für Multicast
@@ -26,14 +26,14 @@ ms.locfileid: "66057623"
   
  Weitere Informationen zur Multicasttransformation finden Sie unter [Multicast Transformation](data-flow/transformations/multicast-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Ausgaben**  
  Wählen Sie auf der linken Seite eine Ausgabe, um die entsprechenden Eigenschaften in der Tabelle auf der rechten Seite anzuzeigen.  
   
  **Eigenschaften**  
  Bis auf die Ausnahmen **Name** und **Beschreibung**werden alle Ausgabeeigenschaften schreibgeschützt angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformation für bedingtes Teilen](data-flow/transformations/conditional-split-transformation.md)  
   

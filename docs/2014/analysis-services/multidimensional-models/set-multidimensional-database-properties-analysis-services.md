@@ -1,5 +1,5 @@
 ---
-title: Legen Sie Eigenschaften für mehrdimensionale Datenbanken (Analysis Services) | Microsoft-Dokumentation
+title: Festlegen von Eigenschaften für mehrdimensionale Datenbanken (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073002"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Festlegen von Eigenschaften für mehrdimensionale Datenbanken (Analysis Services)
-  Es gibt eine Reihe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankeigenschaften, die Sie im Datenbank-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] konfigurieren können.  
+  Es gibt eine Reihe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Daten Bank Eigenschaften, die Sie im [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Datenbank-Designer konfigurieren können.  
   
  In diesem Designer können Sie die folgenden Aufgaben ausführen:  
   
@@ -28,24 +28,25 @@ ms.locfileid: "66073002"
   
 -   Sie können eine Beschreibung der Datenbank bereitstellen, die den Benutzern angezeigt werden kann. Sie können auch den Namen der Datenbank anzeigen; es ist jedoch nicht möglich, den Namen zu ändern. Zum Ändern des Datenbanknamens müssen Sie die Eigenschaften des Projekts bearbeiten.  
   
--   Sie können Übersetzungen für den Datenbanknamen und eine Beschreibung für eine oder mehrere Sprachen bereitstellen. Weitere Informationen finden Sie unter [Cubeübersetzungen](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Dimensionsübersetzungen](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), und [Übersetzungen &#40;Analysis Services&#41;](../translations-analysis-services.md).  
+-   Sie können Übersetzungen für den Datenbanknamen und eine Beschreibung für eine oder mehrere Sprachen bereitstellen. Weitere Informationen finden Sie unter [Cubeübersetzungen](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Dimensions Übersetzungen](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)und [Übersetzungen &#40;Analysis Services&#41;](../translations-analysis-services.md).  
   
 -   Sie können die standardmäßigen Kontotypzuordnungen anzeigen und bearbeiten. Kontotypzuordnungen werden verwendet, wenn ein oder mehrere Measures die *ByAccount* -Aggregationsfunktion verwenden. Für jeden Kontotyp können Sie einen Alias angeben und die Standardaggregationsfunktion ändern, die dem Kontotyp zugeordnet ist. Weitere Informationen zum Ändern der Standardaggregation finden Sie unter [Semiadditives Verhalten definieren](define-semiadditive-behavior.md).  
   
 ## <a name="database-properties"></a>Datenbankeigenschaften  
  Zusätzlich zu den oben genannten gibt es eine Reihe von Datenbankeigenschaften, die Sie im Eigenschaftenfenster konfigurieren können.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Aggregationspräfix|Das allgemeine Präfix, das für Aggregationsnamen für alle Partitionen in einer Datenbank verwendet werden kann. Weitere Informationen finden Sie unter [AggregationPrefix-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl).|  
 |Sortierung|Wenn das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird, erbt die Datenbank den Wert der Collation-Servereigenschaft, es sei denn, Sie stellen hier einen anderen Wert bereit.|  
 |DataSourceImpersonationInfo|Gibt den standardmäßigen Identitätswechselmodus für alle Datenquellenobjekte in der Datenbank an. Es handelt sich hierbei um den Modus, den der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienst beim Verarbeiten von Objekten, Synchronisieren von Servern und Ausführen der Data Mining-Anweisungen OpenQuery und SystemOpenSchema verwendet.|  
-|Geschätzte Größe|Gibt eine geschätzte Größe der Datenbankdateien auf dem Datenträger an. Wenn Daten an mehreren Orten gespeichert sind, beschränkt sich diese Schätzung auf die Datendateien, die unter dem Datenbankordner gespeichert wurden.<br /><br /> `EstimatedSize` kann auch als Grundlage zum Schätzen des Arbeitsspeichers verwendet werden. Im Vergleich zu der auf dem Datenträger benötigten Datenkapazität liegen die Arbeitsspeicheranforderungen normalerweise höher. Dies liegt an den zusätzlichen Datenstrukturen, die beim Laden der Datenbank in den Arbeitsspeicher erstellt werden.<br /><br /> Um die Arbeitsspeicheranforderungen genauer einzuschätzen, können Sie auch den Task-Manager verwenden. So lässt sich der Analysis Services-Prozessarbeitsspeicher vor und nach der Verarbeitung der Datenbank überprüfen, um die Arbeitsspeichernutzung zu ermitteln und daraus die Arbeitsspeicheranforderungen der Datenbank abzuleiten.|  
+|Geschätzte Größe|Gibt eine geschätzte Größe der Datenbankdateien auf dem Datenträger an. Wenn Daten an mehreren Orten gespeichert sind, beschränkt sich diese Schätzung auf die Datendateien, die unter dem Datenbankordner gespeichert wurden.<br /><br /> 
+  `EstimatedSize` kann auch als Grundlage zum Schätzen des Arbeitsspeichers verwendet werden. Im Vergleich zu der auf dem Datenträger benötigten Datenkapazität liegen die Arbeitsspeicheranforderungen normalerweise höher. Dies liegt an den zusätzlichen Datenstrukturen, die beim Laden der Datenbank in den Arbeitsspeicher erstellt werden.<br /><br /> Um die Arbeitsspeicheranforderungen genauer einzuschätzen, können Sie auch den Task-Manager verwenden. So lässt sich der Analysis Services-Prozessarbeitsspeicher vor und nach der Verarbeitung der Datenbank überprüfen, um die Arbeitsspeichernutzung zu ermitteln und daraus die Arbeitsspeicheranforderungen der Datenbank abzuleiten.|  
 |Sprache|Wenn das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird, erbt die Datenbank den Wert der Language-Servereigenschaft, es sei denn, Sie stellen hier einen anderen Wert bereit.|  
 |MasterDataSourceID|Wird zusammen mit Remotepartitionen verwendet. Weitere Informationen finden Sie unter [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40;Dialogfeld, SSAS – mehrdimensional&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dialog Feld "Daten Bank Eigenschaften" &#40;SSAS-mehrdimensionale&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [Konfigurieren von Analysis Services Projekteigenschaften &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

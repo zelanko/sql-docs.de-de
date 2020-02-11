@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 Data Access Components | Microsoft-Dokumentation
+title: SQLXML 4,0-Datenzugriffs Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014354"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 Data Access Components
+  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 enthält drei Datenanbieter, mit denen XML-Daten in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank eingefügt und darin abgefragt werden können:  
   
 -   SQLXMLOLEDB-Anbieter  
@@ -40,7 +41,7 @@ ms.locfileid: "66014354"
      Macht die SQLXML 4.0-Funktionalität über eine neue Datenzugriffstechnologie verfügbar, die die aktuellen Versionen der Microsoft Data Access Components (MDAC) erweitern und vervollständigen. SQLNCLI11 stellt die vollständige Unterstützung für in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführte Funktionen bereit. Weitere Informationen finden Sie unter [SQL Server Native Client-Programmierung](../../native-client/sql-server-native-client-programming.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [SQLXMLOLEDB-Anbieter &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  
+ [SQLXMLOLEDB-Anbieter &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  
  Beschreibt den SQLXMLOLEDB-Anbieter und erläutert seine Verwendung.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Beziehungen (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Beziehungen (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066700"
 ---
 # <a name="relationships-ssas-tabular"></a>Beziehungen (SSAS – tabellarisch)
@@ -33,7 +33,7 @@ ms.locfileid: "66066700"
   
 -   [Anforderungen für Beziehungen](#requirements)  
   
--   [Inferenz von Beziehungen](#detection)  
+-   [Ableiten von Beziehungen](#detection)  
   
 -   [Erkennen von Beziehungen beim Importieren von Daten](#bkmk_detection)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66066700"
 ##  <a name="what"></a> Vorteile  
  Eine Beziehung ist eine Verbindung zwischen zwei Datentabellen, die auf mindestens einer Spalte in jeder Tabelle basiert. Um zu verstehen, warum Beziehungen nützlich sind, stellen Sie sich vor, dass Sie in Ihrem Unternehmen die Daten für Kundenbestellungen verfolgen möchten. Sie könnten alle Daten in einer einzelnen Tabelle verfolgen, die über eine Struktur wie die folgende verfügt:  
   
-|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Produkt|Quantity|  
+|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Produkt|Menge|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -54,9 +54,9 @@ ms.locfileid: "66066700"
   
  Dieser Ansatz kann umgesetzt werden, bedeutet aber, dass viele redundante Daten gespeichert werden müssen, z. B. die Kunden-E-Mail-Adresse für jede Bestellung. Speicher ist zwar billig, aber wenn sich die E-Mail-Adresse eines Kunden ändert, müssen Sie sicherstellen, dass jede Zeile für diesen Kunden aktualisiert wird. Eine Lösung für dieses Problem ist, die Daten in mehrere Tabellen aufzuteilen und zwischen diesen Tabellen Beziehungen zu definieren. Dieser Ansatz wird in *relationalen Datenbanken* wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet. Eine Datenbank, die Sie in ein Modell importieren, könnte die Bestelldaten z. B. mit drei verknüpften Tabellen darstellen:  
   
-### <a name="customers"></a>Customers  
+### <a name="customers"></a>Kunden  
   
-|[CustomerID]|Name|EMail|  
+|[CustomerID]|Name|Email|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -68,9 +68,9 @@ ms.locfileid: "66066700"
 |1|.05|  
 |2|.10|  
   
-### <a name="orders"></a>Orders  
+### <a name="orders"></a>Aufträge  
   
-|[CustomerID]|OrderID|OrderDate|Produkt|Quantity|  
+|[CustomerID]|OrderID|OrderDate|Produkt|Menge|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
@@ -83,13 +83,13 @@ ms.locfileid: "66066700"
   
  In einer relationalen Datenbank gibt es mehrere Typen von *Schlüsseln*, die in der Regel nur Spalten mit besonderen Eigenschaften sind. Die folgenden vier Schlüsseltypen können in relationalen Datenbanken verwendet werden:  
   
--   *Primärschlüssel*: Identifiziert eine Zeile in einer Tabelle eindeutig, z.B. CustomerID in der Customers-Tabelle.  
+-   *Primärschlüssel*: identifiziert eine Zeile in einer Tabelle eindeutig, z. b. CustomerID in der Customers-Tabelle.  
   
--   *Alternativschlüssel* (oder *Kandidatenschlüssel*): Eine eindeutige Spalte, die nicht mit dem Primärschlüssel identisch ist. In einer Tabelle für Mitarbeiter kann beispielsweise eine Mitarbeiter-ID und eine Sozialunterstützungsnummer gespeichert werden, die beide eindeutig sind.  
+-   *Alternativer Schlüssel* (oder *Kandidaten Schlüssel*): eine andere Spalte als der eindeutige Primärschlüssel. In einer Tabelle für Mitarbeiter kann beispielsweise eine Mitarbeiter-ID und eine Sozialunterstützungsnummer gespeichert werden, die beide eindeutig sind.  
   
--   *Fremdschlüssel*: Eine Spalte, die auf eine eindeutige Spalte in einer anderen Tabelle verweist, z.B. die CustomerID-Spalte in der Orders-Tabelle, die auf CustomerID in der Customers-Tabelle verweist.  
+-   *Fremdschlüssel*: eine Spalte, die auf eine eindeutige Spalte in einer anderen Tabelle verweist, z. b. CustomerID in der Orders-Tabelle, die auf CustomerID in der Customers-Tabelle verweist.  
   
--   *Zusammengesetzter Schlüssel*: Ein Schlüssel, der aus mehr als einer Spalte besteht. Zusammengesetzte Schlüssel werden in Tabellenmodellen nicht unterstützt. Weitere Informationen finden Sie unter "Zusammengesetzte Schlüssel und Suchspalten" in diesem Thema.  
+-   Zusammen *gesetzter Schlüssel*: ein Schlüssel, der aus mehr als einer Spalte besteht. Zusammengesetzte Schlüssel werden in Tabellenmodellen nicht unterstützt. Weitere Informationen finden Sie unter "Zusammengesetzte Schlüssel und Suchspalten" in diesem Thema.  
   
  In Tabellenmodellen wird der Primärschlüssel oder Alternativschlüssel als *verknüpfte Suchspalte*oder einfach als *Suchspalte*bezeichnet. Wenn eine Tabelle sowohl über einen Primärschlüssel als auch einen Alternativschlüssel verfügt, können Sie beide als Suchspalte verwenden. Der Fremdschlüssel wird als *Quellspalte* oder nur als *Spalte*bezeichnet. In unserem Beispiel wird zwischen CustomerID in der Orders-Tabelle (die Spalte) und CustomerID (die Suchspalte) in der Customers-Tabelle eine Beziehung definiert. Wenn Sie Daten aus einer relationalen Datenbank importieren, wählt der Modell-Designer standardmäßig den Fremdschlüssel aus einer Tabelle und den entsprechenden Primärschlüssel aus der anderen Tabelle aus. Sie können jedoch jede Spalte verwenden, die über eindeutige Werte für die Suchspalte verfügt.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66066700"
   
  In der folgenden Tabelle werden die Beziehungen zwischen den drei Tabellen angezeigt:  
   
-|Beziehung|Typ|Suchspalte|Spalte|  
+|Beziehung|type|Suchspalte|Column|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|1:1|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|1:n|Customers.CustomerID|Orders.CustomerID|  
@@ -106,13 +106,13 @@ ms.locfileid: "66066700"
 ### <a name="relationships-and-performance"></a>Beziehungen und Leistung  
  Nach dem Erstellen einer Beziehung muss der Modell-Designer normalerweise alle Formeln neu berechnen, die Spalten aus den Tabellen in der neu erstellten Beziehung verwenden. Die Verarbeitung nimmt, je nach Datenmenge und Komplexität der Beziehungen, einige Zeit in Anspruch.  
   
-##  <a name="requirements"></a> Anforderungen für Beziehungen  
+##  <a name="requirements"></a>Anforderungen für Beziehungen  
  Beim Erstellen von Beziehungen müssen im Modell-Designer mehrere Anforderungen beachtet werden:  
   
 ### <a name="single-active-relationship-between-tables"></a>Nur eine aktive Beziehung zwischen zwei Tabellen  
- Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. In AdventureWorks DW 2012 enthält beispielsweise die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
+ Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. Beispiel: In AdventureWorks DW 2012 enthält die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
   
- \* Beziehung: Table [Spalte 1] -> Table [Spalte 2] - Status: Fehler - Ursache: Eine Beziehung kann nicht erstellt werden, zwischen Tabellen \<Tabelle 1 > und \<in Tabelle 2 >. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
+ \*Beziehung: Tabelle [Spalte 1]-> Tabelle [Spalte 2]-Status: Fehler-Ursache: eine Beziehung kann nicht zwischen Tabellen \<Tabelle 1> und \<Tabelle 2> erstellt werden. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
   
  Wenn Sie zwei Tabellen mit mehreren Beziehungen zueinander haben, müssen Sie mehrere Kopien der Tabelle importieren, die die Suchspalte enthält, und dann eine Beziehung zwischen jedem Tabellenpaar erstellen.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66066700"
   
  Wenn Sie im Modell-Designer eine Beziehung zwischen zwei Tabellen erstellen möchten und mehrere Spalten die Primär- und Fremdschlüssel definieren, müssen Sie die Werte kombinieren, um vor dem Erstellen der Beziehung eine einzelne Schlüsselspalte zu erstellen. Sie können dies vor dem Importieren von Daten durchführen, oder Sie können den Schritt im Modell-Designer ausführen, indem Sie eine berechnete Spalte erstellen.  
   
-###  <a name="bkmk_many_to_many"></a> m:n-Beziehungen  
+###  <a name="bkmk_many_to_many"></a>M:n-Beziehungen  
  Tabellarische Modelle unterstützen keine m:n-Beziehungen und im Modell-Designer können keine *Verknüpfungstabellen* hinzugefügt werden. Sie können jedoch DAX-Funktionen verwenden, um m:n-Beziehungen zu modellieren.  
   
 ### <a name="self-joins-and-loops"></a>Selbstjoins und Schleifen  
@@ -153,7 +153,7 @@ ms.locfileid: "66066700"
   
  Wenn Sie versuchen, eine Beziehung zu erstellen, die die Erstellung einer Schleife bedingt, wird ein Fehler ausgelöst.  
   
-##  <a name="detection"></a> Inferenz von Beziehungen  
+##  <a name="detection"></a>Ableiten von Beziehungen  
  In einigen Fällen werden Beziehungen zwischen Tabellen automatisch verkettet. Wenn Sie beispielsweise eine Beziehung zwischen den beiden ersten unten aufgeführten Tabellenpaaren erstellen, wird abgeleitet, dass auch zwischen den Tabellen des dritten Tabellenpaars eine Beziehung besteht, die dann automatisch erstellt wird.  
   
  Products und Category -- manuell erstellt  
@@ -164,17 +164,17 @@ ms.locfileid: "66066700"
   
  Damit Beziehungen automatisch verkettet werden, müssen die Beziehungen in eine Richtung zeigen, so wie oben gezeigt. Wenn ursprünglich z. B. Beziehungen zwischen Sales und Products und Sales und Customers bestehen, wird keine Beziehung abgeleitet. Das liegt daran, dass die Beziehung zwischen Products und Customers eine m:n-Beziehung ist.  
   
-##  <a name="bkmk_detection"></a> Erkennen von Beziehungen beim Importieren von Daten  
+##  <a name="bkmk_detection"></a>Erkennen von Beziehungen beim Importieren von Daten  
  Wenn Sie aus einer relationalen Datenquellentabelle importieren, erkennt der Tabellenimport-Assistent vorhandene Beziehungen in den entsprechenden Quelltabellen auf Grundlage der Quellschemadaten. Wenn verknüpfte Tabellen importiert werden, werden die entsprechenden Beziehungen im Modell dupliziert.  
   
-##  <a name="bkmk_manually_create"></a> Manuelles Erstellen von Beziehungen  
+##  <a name="bkmk_manually_create"></a>Manuelles Erstellen von Beziehungen  
  Während die meisten Beziehungen zwischen Tabellen in einer einzelnen relationalen Datenquelle automatisch erkannt und im Tabellenmodell erstellt werden, gibt es auch viele Instanzen, bei denen Beziehungen zwischen Modelltabellen manuell erstellt werden müssen.  
   
  Wenn das Modell Daten aus mehreren Quellen enthält, müssen Beziehungen wahrscheinlich manuell erstellt werden. Zum Beispiel können Sie Customers-, CustomerDiscounts- und Orders-Tabellen aus einer relationalen Datenquelle importieren. Beziehungen, die zwischen diesen Tabellen an der Quelle vorhanden sind, werden automatisch im Modell erstellt. Anschließend fügen Sie möglicherweise eine andere Tabelle aus einer anderen Quelle hinzu, zum Beispiel importieren Sie Bereichsdaten aus einer Geografietabelle in eine Microsoft Excel-Arbeitsmappe. Sie können dann manuell eine Beziehung zwischen einer Spalte in der Customers-Tabelle und einer Spalte in der Geografietabelle erstellen.  
   
  Um Beziehungen in einem Tabellenmodell manuell zu erstellen, können Sie den Modell-Designer in der Diagrammsicht oder das Dialogfeld "Beziehungen verwalten" verwenden. In der Diagrammsicht werden Tabellen mit den bestehenden Beziehungen in einem grafischen Format angezeigt. Sie können auf eine Spalte in einer Tabelle klicken und den Cursor in eine andere Tabelle ziehen, um problemlos in der richtigen Reihenfolge eine Beziehung zwischen den Tabellen zu erstellen. Im Dialogfeld "Beziehungen verwalten" werden Beziehungen zwischen Tabellen in einem einfachen Tabellenformat angezeigt. So erfahren Sie, wie Sie Beziehungen manuell erstellen können: [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)verwendet.  
   
-##  <a name="bkmk_dupl_errors"></a> Doppelte Werte und andere Fehler  
+##  <a name="bkmk_dupl_errors"></a>Doppelte Werte und andere Fehler  
  Wenn Sie eine Spalte auswählen, die nicht in der Beziehung verwendet werden kann, wird ein rotes X neben der Spalte angezeigt. Sie können den Mauszeiger auf das Fehlersymbol bewegen, um eine Meldung anzuzeigen, die weitere Informationen zum Problem enthält. Beispiele für Probleme, die es unmöglich machen können, eine Beziehung zwischen den ausgewählten Spalten zu erstellen, sind:  
   
 |Problem oder Meldung|Lösung|  
@@ -184,13 +184,13 @@ ms.locfileid: "66066700"
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Beschreibt, wie Sie manuell eine Beziehung zwischen zwei Tabellen erstellen.|  
-|[Löschen von Beziehungen &#40;SSAS – tabellarisch&#41;](relationships-ssas-tabular.md)|Beschreibt das Löschen einer Beziehung und welche Auswirkungen dies haben kann.|  
+|[Erstellen Sie eine Beziehung zwischen zwei Tabellen &#40;tabellarischen SSAS-&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Beschreibt, wie Sie manuell eine Beziehung zwischen zwei Tabellen erstellen.|  
+|[Löschen von Beziehungen &#40;tabellarischen SSAS-&#41;](relationships-ssas-tabular.md)|Beschreibt das Löschen einer Beziehung und welche Auswirkungen dies haben kann.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellen und Spalten &#40;SSAS – tabellarisch&#41;](tables-and-columns-ssas-tabular.md)   
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](../import-data-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellen und Spalten &#40;tabellarischen SSAS-&#41;](tables-and-columns-ssas-tabular.md)   
+ [Importieren von Daten &#40;tabellarischen SSAS-&#41;](../import-data-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle | Microsoft-Dokumentation
+title: Erstellen einer Dimension durch das Erstellen einer nicht Zeittabelle in der Datenquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,34 +16,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076438"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension ohne vorhandene Datenquelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Nichtzeittabelle in der Datenquelle generieren** aus. Um in der zugrunde liegenden Datenquelle eine neue Dimensionstabelle zu erstellen, müssen Sie über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Wenn Sie eine Dimension ohne vorab definierte Datenquellensicht definieren, können Sie entweder eine vollständig neue Dimension definieren oder eine Dimensionsvorlage verwenden.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von eine Dimension ohne vorhandene Datenquelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Nichtzeittabelle in der Datenquelle generieren** aus. Um in der zugrunde liegenden Datenquelle eine neue Dimensionstabelle zu erstellen, müssen Sie über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Wenn Sie eine Dimension ohne vorab definierte Datenquellensicht definieren, können Sie entweder eine vollständig neue Dimension definieren oder eine Dimensionsvorlage verwenden.  
   
  Im Dimensions-Assistenten werden Dimensionsvorlagen bereitgestellt, die Sie als Grundlage für verschiedene gängige Dimensionstypen verwenden können. Sie haben die Wahl zwischen den folgenden Dimensionstypen:  
   
 -   Konto  
   
--   Customer  
+-   Kunde  
   
--   date  
+-   Date  
   
--   Department  
+-   Abteilung  
   
 -   Destination Currency  
   
--   Employee  
+-   Mitarbeiter  
   
--   Geography  
+-   Gebiet  
   
 -   Internet Sales Order Details  
   
--   Organization  
+-   Organisation  
   
 -   Produkt  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66076438"
   
  Wenn Sie das Kontrollkästchen **Dies ist eine veränderliche Dimension** aktivieren, definiert der Dimensions-Assistent die in der folgenden Tabelle aufgeführten Attribute:  
   
-|Attribut|Typ|  
+|attribute|type|  
 |---------------|----------|  
 |SCD-Original-ID|SCDOriginalID|  
 |SCD-Enddatum|SCDEndDate|  
@@ -103,8 +103,8 @@ ms.locfileid: "66076438"
 ## <a name="completing-the-dimension-wizard"></a>Abschließen des Dimensions-Assistenten  
  Geben Sie auf der Seite **Assistenten abschließen** einen Namen für die neue Dimension ein, und zeigen Sie die Dimensionsstruktur an. Aktivieren Sie das Kontrollkästchen **Schema jetzt generieren** , damit nach dem Klicken auf **Fertig stellen**der Schemagenerierungs-Assistent gestartet wird. In den meisten Fällen sollten Sie dieses Kontrollkästchen nicht aktivieren, wenn Sie weitere Objekte erstellen möchten. Wenn Sie dieses Kontrollkästchen nicht aktivieren, können Sie das Schema später mithilfe des Dimensions-Designers generieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](create-a-time-dimension-by-generating-a-time-table.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Zeit Dimension durch das Erzeugen einer Zeittabelle](create-a-time-dimension-by-generating-a-time-table.md)   
  [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](create-a-time-dimension-by-generating-a-time-table.md)  
   
   

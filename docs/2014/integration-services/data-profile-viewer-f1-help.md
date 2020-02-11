@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059721"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Datenprofil-Viewer (F1-Hilfe)
@@ -28,16 +28,16 @@ ms.locfileid: "66059721"
  Weitere Informationen zum Verwenden des Datenprofil-Viewers finden Sie unter [Datenprofil-Viewer](control-flow/data-profile-viewer.md). Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks, der die Profilausgabe erstellt, die Sie im Datenprofil-Viewer analysieren, finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](control-flow/data-profiling-task.md).  
   
 ## <a name="static-options"></a>Statische Optionen  
- **Datei**  
+ **Öffnen**  
  Klicken Sie, um nach der gespeicherten Datei zu suchen, die die Ausgabe des Datenprofilerstellungs-Tasks enthält.  
   
- Bereich**Profile**  
+ Bereich " **profile** "  
  Erweitern Sie die Struktur im Bereich **Profile** , um die Profile anzuzeigen, die in der Ausgabe enthalten sind. Wählen Sie ein Profil aus, um die Ergebnisse für dieses Profil anzuzeigen.  
   
- Bereich**Meldung**  
+ **** Meldungs Bereich  
  Zeigt Statusmeldungen an.  
   
- Bereich**Drilldown**  
+ **Drilldown** -Bereich  
  Zeigt die Datensätze an, die mit einem Wert in der Ausgabe übereinstimmen, wenn die vom Datenprofilerstellungs-Task verwendete Datenquelle verfügbar ist.  
   
  Beispiel: Wenn Sie die Ausgabe eines Verteilungsprofils für Spaltenwert für eine Spalte US-Bundesstaat anzeigen, enthält der Bereich **Detaillierte Wertverteilung** möglicherweise eine Zeile für "WA". Doppelklicken Sie auf die Zeile im Bereich **Detaillierte Wertverteilung** , um die Datenreihen anzuzeigen, bei denen der Wert der Bundesstaatspalte im Drilldownbereich „WA“ lautet.  
@@ -47,7 +47,7 @@ ms.locfileid: "66059721"
 ### <a name="profile-type--column-length-distribution-profile"></a>Profiltyp = Verteilungsprofil für Spaltenlänge  
   
 #### <a name="column-length-distribution-profile---column-pane"></a>Verteilungsprofil für Spaltenlänge – Bereich \<Spalte>  
- **Mindestlänge**  
+ **Minimale Länge**  
  Zeigt die Mindestlänge der Werte in dieser Spalte an.  
   
  **Maximale Länge**  
@@ -66,10 +66,10 @@ ms.locfileid: "66059721"
  **Länge**  
  Zeigt die in der Spalte, für die ein Profil erstellt wurde, gefundenen Spaltenlängen an.  
   
- **Count**  
+ **Countdown**  
  Zeigt die Anzahl von Zeilen an, in denen der Wert der Spalte, für die ein Profil erstellt wurde, die in der Spalte **Länge** angezeigte Länge hat.  
   
- **Prozentwert**  
+ **Aler**  
  Zeigt den Prozentsatz der Zeilen an, in denen der Wert der Spalte, für die ein Profil erstellt wurde, die in der Spalte **Länge** angezeigte Länge hat.  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Profiltyp = Profil für Spalten-NULL-Verhältnis  
@@ -91,10 +91,10 @@ ms.locfileid: "66059721"
  Zeigt die Anzahl der Zeilen in der Tabelle oder Sicht an.  
   
 #### <a name="pattern-distribution-pane"></a>Bereich 'Musterverteilung'  
- **Muster**  
+ **Bau**  
  Zeigt das für die Spalte, für die ein Profil erstellt wurde, berechnete Muster an.  
   
- **Prozentwert**  
+ **Aler**  
  Zeigt den Prozentsatz der Zeilen an, deren Werte mit dem in der Spalte **Muster** angezeigten Muster übereinstimmen.  
   
 ### <a name="profile-type--column-statistics-profile"></a>Profiltyp = Spaltenstatistikprofil  
@@ -103,13 +103,13 @@ ms.locfileid: "66059721"
  **Minimum**  
  Zeigt den in der Spalte, für die ein Profil erstellt wurde, gefundenen Mindestwert an.  
   
- **Maximum**  
+ **Maximale**  
  Zeigt den in der Spalte, für die ein Profil erstellt wurde, gefundenen Höchstwert an.  
   
- **Mittelwert**  
+ **Bedeutete**  
  Zeigt den Durchschnitt der in der Spalte, für die ein Profil erstellt wurde, gefundenen Werte an.  
   
- **Standardabweichung**  
+ **Standard Abweichung**  
  Zeigt die Standardabweichung der in der Spalte, für die ein Profil erstellt wurde, gefundenen Werte an.  
   
 ### <a name="profile-type--column-value-distribution-profile"></a>Profiltyp = Verteilungsprofil für Spaltenwert  
@@ -125,26 +125,26 @@ ms.locfileid: "66059721"
  **Wert**  
  Zeigt die in der Spalte, für die ein Profil erstellt wurde, gefundenen unterschiedlichen Werte an.  
   
- **Count**  
+ **Countdown**  
  Zeigt die Anzahl von Zeilen an, in denen die Spalte, für die ein Profil erstellt wurde, den in der Spalte **Wert** angezeigten Wert aufweist.  
   
- **Prozentwert**  
+ **Aler**  
  Zeigt den Prozentsatz der Zeilen an, in denen die Spalte, für die ein Profil erstellt wurde, den in der Spalte **Wert** angezeigten Wert aufweist.  
   
 ### <a name="profile-type--candidate-key-profile"></a>Profiltyp = Kandidatenschlüsselprofil  
   
 #### <a name="candidate-key-profile---table-pane"></a>Kandidatenschlüsselprofil – Bereich \<Tabelle>  
- **Schlüsselspalten**  
+ **Schlüssel Spalten**  
  Zeigt die Spalten an, die als Kandidatenschlüssel für die Profilerstellung ausgewählt wurden.  
   
  **Schlüsselstärke**  
  Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
   
 #### <a name="key-violations-pane"></a>Bereich 'Schlüsselverletzungen'  
- **\<Spalte1>, \<Spalte2> usw.**  
+ **\<column1>, \<Column2> usw.**  
  Zeigt die doppelten Werte an, die in der Spalte, für die ein Profil erstellt wurde, gefunden wurden.  
   
- **Count**  
+ **Countdown**  
  Zeigt die Anzahl der Zeilen an, in denen die angegebene Spalte den in der ersten Spalte angezeigten Wert aufweist.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Profiltyp = Funktionales Abhängigkeitsprofil  
@@ -164,17 +164,17 @@ ms.locfileid: "66059721"
 > [!NOTE]  
 >  Ein hoher Prozentsatz an fehlerhaften Werten in den Daten könnte zu unerwarteten Werten aus einem funktionalen Abhängigkeitsprofil führen. Beispiel: 90 % der Zeilen haben den Bundesstaatenwert "WI" für den PLZ-Wert "98052". Das Profil meldet Zeilen, die den korrekten Bundesstaatenwert "WA" aufweisen, als Verletzungen.  
   
- **\<Name der determinanten Spalte>**  
+ **\<Name der Determinanten Spalte>**  
  Zeigt den Wert der determinanten Spalte oder einer Kombination aus Spalten in dieser Instanz einer funktionalen Abhängigkeitsverletzung an.  
   
  **\<Name der abhängigen Spalte>**  
  Zeigt den Wert der abhängigen Spalte in dieser Instanz einer funktionalen Abhängigkeitsverletzung an.  
   
- **Unterstützte Anzahl**  
+ **unterstützte Anzahl**  
  Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte festlegt.  
   
  **Verletzungsanzahl**  
- Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte nicht festlegt. (Dabei handelt es sich um die Zeilen, in denen der abhängige Wert der in der Spalte **\<dependent column name>** angezeigte Wert ist.)  
+ Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte nicht festlegt. (Hierbei handelt es sich um die Zeilen, in denen der abhängige Wert der Wert ist, der in der ** \<Spalte Name>** Spalte angegeben ist.)  
   
  **Unterstützter Prozentsatz**  
  Zeigt den Prozentsatz der Zeilen an, in denen die determinante Spalte die abhängige Spalte festlegt.  
@@ -192,13 +192,13 @@ ms.locfileid: "66059721"
  Zeigt die Stärke (als Prozentsatz) der Überlappung zwischen Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass es Fälle gibt, in denen der untergeordnete Wert nicht in den übergeordneten Werten enthalten ist.  
   
 #### <a name="inclusion-violations-pane"></a>Bereich 'Inklusionsverletzungen'  
- **\<Spalte1>, \<Spalte2> usw.**  
+ **\<column1>, \<Column2> usw.**  
  Zeigt die Werte aus der bzw. den untergeordneten Spalte(n) an, die nicht in der bzw. den übergeordneten Spalte(n) gefunden wurden.  
   
- **Count**  
+ **Countdown**  
  Zeigt die Anzahl der Zeilen an, in denen die angegebene Spalte den in der ersten Spalte angezeigten Wert aufweist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenprofil-Viewer](control-flow/data-profile-viewer.md)   
  [Datenprofilerstellungs-Task und -Viewer](control-flow/data-profiling-task-and-viewer.md)  
   

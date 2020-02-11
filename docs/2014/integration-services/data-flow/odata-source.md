@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771036"
 ---
 # <a name="odata-source"></a>OData-Quelle
   Sie verwenden die OData-Quellkomponente in einem SSIS-Paket, um Daten aus den OData (Open Data Protocol)-Diensten zu nutzen. Die Komponente unterstützt die OData-Protokolle v2 und v3 sowie die ATOM- und JSON-Datenformate.  
   
 > [!NOTE]  
->  Die OData-Quelle kann verwendet werden, um Daten aus SharePoint-Listen zu lesen. Um alle Listen auf dem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: http://\<Server > / listData.svc. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](https://msdn.microsoft.com/library/ff521587.aspx).  
+>  Die OData-Quelle kann verwendet werden, um Daten aus SharePoint-Listen zu lesen. Um alle Listen auf Ihrem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL\<: http://Server>/_vti_bin/listData.svc. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](https://msdn.microsoft.com/library/ff521587.aspx).  
   
 ## <a name="odata-format"></a>OData-Format  
  Die meisten OData-Dienste geben Ergebnisse in verschiedenen Formaten zurück. Sie können das Format des Resultsets mithilfe der $format-Abfrageoption angeben. Formate wie JSON und JSON Light sind effizienter als ATOM/XML und erzielen bei der Übertragung großer Datenmengen möglicherweise eine bessere Leistung. In der folgenden Tabelle sind Ergebnisse aus Beispieltests dargestellt. Wie Sie erkennen können, ergab der Wechsel von ATOM zu JSON einen Leistungszuwachs von 30-53% und der Wechsel von ATOM zum neuen JSON Light-Format (verfügbar in WCF Data Services 5.1) einen Leistungszuwachs von 67 %.  
@@ -41,19 +41,19 @@ ms.locfileid: "62771036"
   
 -   [Installieren und Deinstallieren der OData-Quellkomponente](../install-and-uninstall-odata-source-component.md)  
   
--   [Tutorial: Verwenden der OData-Quelle &#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
+-   [Tutorial: Verwenden der odata-Quelle &#91;SSIS-&#93;](tutorial-using-the-odata-source.md)  
   
 -   [Ändern einer OData-Quellabfrage zur Laufzeit](modify-odata-source-query-at-runtime.md)  
   
--   [Quellen-Editor für OData &#40;Seite „Verbindung“&#41;](../odata-source-editor-connection-page.md)  
+-   [Quellen-Editor für odata &#40;Verbindungs Seite&#41;](../odata-source-editor-connection-page.md)  
   
--   [Quellen-Editor für OData &#40;Seite Spalten&#41;](../odata-source-editor-columns-page.md)  
+-   [Der Quellen-Editor für odata &#40;Spalten Seite&#41;](../odata-source-editor-columns-page.md)  
   
--   [Quellen-Editor für OData &#40;Seite „Fehlerausgabe“&#41;](../odata-source-editor-error-output-page.md)  
+-   [Quellen-Editor für odata &#40;Seite "Fehlerausgabe"&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [OData-Quelleneigenschaften](odata-source-properties.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OData-Verbindungs-Manager](../connection-manager/odata-connection-manager.md)  
   
   

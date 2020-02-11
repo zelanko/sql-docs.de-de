@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657479"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installieren von Clienttools auf einem SQL Server-Failovercluster
@@ -23,7 +23,9 @@ ms.locfileid: "62657479"
  Wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools während des Setups auf dem ersten Knoten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusters installiert werden, werden sie automatisch allen Knoten hinzugefügt, die unter Umständen später mit Knoten hinzufügen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt werden.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation wird nicht automatisch den zusätzlichen Knoten hinzugefügt, die dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cluster mit der Option Knoten hinzufügen hinzugefügt werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation kann manuell in den Knoten installiert werden, die eine lokale Kopie der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation aufweisen sollen.  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation wird nicht automatisch den zusätzlichen Knoten hinzugefügt, die dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cluster mit der Option Knoten hinzufügen hinzugefügt werden. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation kann manuell in den Knoten installiert werden, die eine lokale Kopie der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation aufweisen sollen.  
   
  Wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools nicht während der ersten Installation des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusters installieren, können Sie sie später wie unten beschrieben installieren.  
   
@@ -43,16 +45,16 @@ ms.locfileid: "62657479"
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Installieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools über die Eingabeaufforderung  
   
-1.  So installieren Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clienttools und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online, führen Sie den folgenden Befehl: Setup.exe/q/Action=Install/Features = Tools  
+1.  Zur Installation der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools und der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation müssen Sie folgenden Befehl ausführen: Setup.exe/q/Action=Install /Features=Tools  
   
-2.  So installieren Sie nur die grundlegenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verwaltungstools führen Sie den folgenden Befehl: Setup.exe/q/Action=Install Features = SSMS. Damit wird die [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] -Unterstützung für [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], das sqlcmd-Dienstprogramm und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Anbieter installiert.  
+2.  Wenn Sie nur die grundlegenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verwaltungstools installieren möchten, müssen Sie folgenden Befehl verwenden: Setup.exe/q/Action=Install Features=SSMS. Damit wird die [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] -Unterstützung für [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], das sqlcmd-Dienstprogramm und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Anbieter installiert.  
   
-3.  So installieren Sie die vollständige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verwaltungstools, führen Sie den folgenden Befehl aus: Setup.exe/q/Action=Install/Features = ADV_SSMS. Weitere Informationen zu den Parameterwerten für die Funktionen finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+3.  Wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verwaltungstools vollständig installieren möchten, müssen Sie folgenden Befehl verwenden: Setup.exe/q/Action=Install /Features=ADV_SSMS. Weitere Informationen zu den Parameterwerten für die Funktionen finden Sie unter [Install SQL Server 2014 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Deinstallieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools  
- Sie werden in der Systemsteuerung unter Software als **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** angezeigt und können dort auch entfernt werden. Wenn Sie die Option Knoten entfernen zum Deinstallieren einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] im Failovercluster verwenden, werden die Clientkomponenten nicht gleichzeitig deinstalliert.  
+ Sie werden in der Systemsteuerung unter Software als ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **angezeigt und können dort entfernt werden. Wenn Sie die Option Knoten entfernen zum Deinstallieren einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] im Failovercluster verwenden, werden die Clientkomponenten nicht gleichzeitig deinstalliert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

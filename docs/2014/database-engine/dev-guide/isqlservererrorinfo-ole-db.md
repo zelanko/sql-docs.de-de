@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d15b7ca5ed84f2cc828696c6a7fe8b8771e8a374
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781046"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
@@ -26,12 +26,12 @@ ms.locfileid: "62781046"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[ISQLServerErrorInfo::GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|Gibt einen Zeiger auf eine SSERRORINFO-Struktur des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters zurück, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerdetails enthält.|  
+|[ISQLServerErrorInfo:: GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|Gibt einen Zeiger auf eine SSERRORINFO-Struktur des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters zurück, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerdetails enthält.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnittstellen &#40;OLE-DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Schnittstellen &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   
  [SQL Server-Fehlerdetail](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   
   

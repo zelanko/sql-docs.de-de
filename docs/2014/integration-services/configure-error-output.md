@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060637"
 ---
 # <a name="configure-error-output"></a>Fehlerausgabe konfigurieren
@@ -24,7 +24,7 @@ ms.locfileid: "66060637"
   
  Weitere Informationen zum Arbeiten mit Fehlerausgaben finden Sie unter [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66060637"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

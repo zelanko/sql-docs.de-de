@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_check_object_signatures (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fn_check_object_signatures (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046312"
 ---
-# <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
+# <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Gibt eine Liste mit allen signierbaren Objekten zurück und gibt an, ob ein Objekt von einem angegebenen Zertifikat oder asymmetrischem Schlüssel signiert wird. Wenn das Objekt von dem angegebenen Zertifikat dem asymmetrischen Schlüssel signiert wird, gibt sie außerdem zurück, ob die Signatur des Objekts gültig ist.  
   
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,30 +45,30 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- {'\@*Klasse*'}  
+ {'\@*Class*'}  
  Identifiziert den Typ des Fingerabdrucks, der bereitgestellt wird:  
   
 -   ‚Zertifikat’  
   
 -   ‚asymmetrischer Schlüssel’  
   
- \@*Klasse* ist **Sysname**.  
+ \@*Class* ist vom **Datentyp vom Datentyp sysname**.  
   
  { \@ *Fingerabdruck* }  
- SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des asymmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird. \@*Fingerabdruck* ist **varbinary(20)** .  
+ SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des asymmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird. \@*Fingerabdruck* ist vom Datentyp **varbinary (20)**.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
- Die folgende Tabelle listet die Spalten, die **Fn_check_object_signatures** zurückgibt.  
+ In der folgenden Tabelle werden die Spalten aufgelistet, die **fn_check_object_signatures** zurückgibt.  
   
-|Spalte|Typ|Beschreibung|  
+|Column|type|BESCHREIBUNG|  
 |------------|----------|-----------------|  
-|Typ|**nvarchar(120)**|Gibt die Typbeschreibung oder -assembly zurück.|  
+|type|**nvarchar (120)**|Gibt die Typbeschreibung oder -assembly zurück.|  
 |entity_id|**int**|Gibt die Objekt-ID des Objekts zurück, das ausgewertet wird.|  
 |is_signed|**int**|Gibt 0 zurück, wenn das Objekt nicht durch den bereitgestellten Fingerabdruck signiert wird. Gibt 1 zurück, wenn das Objekt durch den bereitgestellten Fingerabdruck signiert wird.|  
 |is_signature_valid|**int**|Wenn der is_signed-Wert 1 ist, wird 0 zurückgegeben, wenn die Signatur nicht gültig ist. Gibt den Wert 1 zurück, wenn die Signatur gültig ist.<br /><br /> Wenn der is_signed-Wert 0 ist, wird immer 0 zurückgegeben.|  
   
-## <a name="remarks"></a>Hinweise  
- Verwendung **Fn_check_object_signatures** zu bestätigen, dass böswillige Benutzer Objekte nicht manipuliert wurden.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie **fn_check_object_signatures** , um zu bestätigen, dass die Objekte von böswilligen Benutzern nicht manipuliert wurden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DEFINITION-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel.  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [IS_OBJECTSIGNED &#40;Transact-SQL-&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

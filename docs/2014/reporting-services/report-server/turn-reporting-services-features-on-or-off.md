@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103191"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Aktivieren und Deaktivieren der Reporting Services-Funktionen
@@ -33,13 +33,13 @@ ms.locfileid: "66103191"
   
 -   [Report Builder (Berichts-Generator)](#ReportBuilder)  
   
--   [Integrierte Sicherheit von Windows für Berichtsdatenquellen](#WinIntSec)  
+-   [Integrierte Sicherheit von Windows für Berichtsdaten Quellen](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Report Server Web Service  
+##  <a name="RSWebSvc"></a>Report Server-Webdienst  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>So aktivieren bzw. deaktivieren Sie den Berichtsserver-Webdienst, indem Sie die Konfiguration bearbeiten  
   
-1.  Öffnen Sie die Datei `RsReportServer.config` in einem Texteditor. Weitere Informationen finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+1.  Öffnen Sie die Datei `RsReportServer.config` in einem Text-Editor. Weitere Informationen finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 2.  Um den Berichtsserver-Webdienst zu aktivieren, setzen Sie `IsWebServiceEnabled` auf `true`:  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66103191"
   
 4.  Führen Sie unter **Facet-Eigenschaften**Folgendes durch:  
   
-    -   Um auf die Berichtsserver-Webdienst zu aktivieren, setzen **WebServiceAndHTTPAccessEnabled** zu `True`.  
+    -   Um den Report Server-Webdienst zu aktivieren, legen Sie **WebServiceAndHTTPAccessEnabled** auf `True`fest.  
   
-    -   Um die Berichtsserver-Webdienst zu deaktivieren, setzen **WebServiceAndHTTPAccessEnabled** zu `False`.  
+    -   Legen Sie **WebServiceAndHTTPAccessEnabled** auf `False`fest, um den Report Server-Webdienst zu deaktivieren.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> Geplante Ereignisse und Übermittlung  
+##  <a name="Sched"></a>Scheduled Events und Übermittlung  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>So aktivieren bzw. deaktivieren Sie geplante Ereignisse und die Übermittlung, indem Sie die Konfiguration bearbeiten  
   
@@ -108,16 +108,16 @@ ms.locfileid: "66103191"
   
 4.  Führen Sie unter **Facet-Eigenschaften**Folgendes durch:  
   
-    -   Um geplante Ereignisse und Übermittlung aktivieren, setzen **ScheduleEventsAndReportDeliveryEnabled** zu `True`.  
+    -   Um geplante Ereignisse und die Übermittlung zu aktivieren, legen Sie **scheduleeventsandreportdeliveryaktiviauf** `True`fest.  
   
-    -   Um geplante Ereignisse und Übermittlung zu deaktivieren, setzen **ScheduleEventsAndReportDeliveryEnabled** zu `False`.  
+    -   Um geplante Ereignisse und die Übermittlung zu deaktivieren, legen Sie **scheduleeventsandreportdeliveryaktiviauf** `False`fest.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  Die Hintergrundverarbeitung kann nicht vollständig deaktiviert werden, da sie Datenbankverwaltungsfunktionen enthält, die für den Serverbetrieb benötigt werden.  
   
-##  <a name="ReportManager"></a> Berichts-Manager  
+##  <a name="ReportManager"></a>Berichts-Manager  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>So aktivieren bzw. deaktivieren Sie den Berichts-Manager, indem Sie die Konfiguration bearbeiten  
   
@@ -141,19 +141,19 @@ ms.locfileid: "66103191"
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung zu der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz her, die Sie konfigurieren möchten.  
   
-2.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Knoten, zeigen Sie auf **Richtlinien**, und klicken Sie auf **Facets**.  
+2.  Klicken Sie in **Objekt-Explorer**mit der rechten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Maustaste auf den Knoten, zeigen Sie auf **Richtlinien**, und klicken Sie auf **Facetten**.  
   
 3.  Wählen Sie in der Liste **Facet** den Eintrag **Oberflächenkonfiguration für Reporting Services**aus.  
   
 4.  Führen Sie unter **Facet-Eigenschaften**Folgendes durch:  
   
-    -   Um Berichts-Manager zu aktivieren, setzen **ReportManagerEnabled** zu `True`.  
+    -   Um Berichts-Manager zu aktivieren, legen Sie **reportmanageraktivierte** auf `True`fest.  
   
-    -   Um Berichts-Manager zu aktivieren, setzen **ReportManagerEnabled** zu `False`.  
+    -   Um Berichts-Manager zu deaktivieren, legen Sie **reportmanageraktivierte** auf `False`fest.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a> Berichts-Generator  
+##  <a name="ReportBuilder"></a>Berichts-Generator  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>So aktivieren bzw. deaktivieren Sie den Berichts-Generator mithilfe von SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103191"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a> Integrierte Sicherheit von Windows  
+##  <a name="WinIntSec"></a>Integrierte Sicherheit von Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>So aktivieren bzw. deaktivieren Sie die integrierte Windows-Sicherheit mithilfe von SQL Server Management Studio  
   
@@ -179,13 +179,13 @@ ms.locfileid: "66103191"
   
 3.  Klicken Sie im Dialogfeld **Servereigenschaften** unter **Seite auswählen**auf **Sicherheit**.  
   
-    -   Um die integrierte Sicherheit von Windows zu aktivieren, wählen Sie die Option **Integrierte Sicherheit von Windows für Berichtsdatenquellen aktivieren** .  
+    -   Um die integrierte Sicherheit von Windows zu aktivieren, wählen Sie die Option **integrierte Sicherheit von Windows für Berichtsdaten Quellen aktivieren aus** .  
   
-    -   Um die integrierte Sicherheit von Windows zu deaktivieren, heben Sie die Auswahl der Option **Integrierte Sicherheit von Windows für Berichtsdatenquellen aktivieren** auf.  
+    -   Um die integrierte Sicherheit von Windows zu deaktivieren, deaktivieren Sie die Option **integrierte Sicherheit von Windows für Berichtsdaten Quellen aktivieren** .  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

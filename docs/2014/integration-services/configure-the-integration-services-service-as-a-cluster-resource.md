@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Diensts als Clusterressource konfigurieren | Microsoft-Dokumentation
+title: Konfigurieren des Integration Services Dienstanbieter als Cluster Ressource | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060570"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Konfigurieren des Integration Services-Diensts als Clusterressource
-  Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Diensts als Clusterressource die Nachteile überwiegen, finden in diesem Abschnitt alle erforderlichen Konfigurationsanweisungen. [!INCLUDE[msCoName](../includes/msconame-md.md)] rät dennoch von einer Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource ab.  
+  Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource die Nachteile überwiegen, finden in diesem Abschnitt alle erforderlichen Konfigurationsanweisungen. [!INCLUDE[msCoName](../includes/msconame-md.md)] rät dennoch von einer Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource ab.  
   
  Sie müssen Sie die folgenden Tasks ausführen, um den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst als Clusterressource zu konfigurieren.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66060570"
   
 -   Schalten Sie den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst als Clusterressource online.  
   
- Nach dem Konfigurieren des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Diensts auf einem Cluster oder auf einem beliebigen Server müssen Sie möglicherweise DCOM-Berechtigungen konfigurieren, bevor Sie von einem Clientcomputer aus eine Verbindung mit dem Dienst herstellen können. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Integration Services-Remoteserver &#40;SSIS-Dienst&#41;](../../2014/integration-services/connect-to-a-remote-integration-services-server-ssis-service.md).  
+ Nach dem Konfigurieren des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts auf einem Cluster oder auf einem beliebigen Server müssen Sie möglicherweise DCOM-Berechtigungen konfigurieren, bevor Sie von einem Clientcomputer aus eine Verbindung mit dem Dienst herstellen können. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Integration Services-Remoteserver &#40;SSIS-Dienst&#41;](../../2014/integration-services/connect-to-a-remote-integration-services-server-ssis-service.md).  
   
- Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst kann keine Anmeldeinformationen delegieren. Daher können Sie in der msdb-Datenbank gespeicherte Pakete nicht mithilfe von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] verwalten, wenn die folgenden Bedingungen zutreffen:  
+ Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst kann keine Anmeldeinformationen delegieren. Daher können Sie in der msdb-Datenbank gespeicherte Pakete nicht mithilfe von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] verwalten, wenn die folgenden Bedingungen zutreffen:  
   
 -   Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden auf separaten Servern oder virtuellen Servern ausgeführt.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66060570"
   
 3.  Öffnen Sie die Konfigurationsdatei auf dem freigegebenen Datenträger in einem Text- oder XML-Editor. Ändern Sie den Wert des `ServerName`-Elements in den Namen des virtuellen Servers mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], der sich in der gleichen Ressourcengruppe befindet.  
   
-4.  Ändern Sie den Wert von der `StorePath` zu den vollqualifizierten Pfad des Elements der **Pakete** Ordner auf dem freigegebenen Datenträger in einem vorherigen Schritt erstellt haben.  
+4.  Ändern Sie den Wert des `StorePath` -Elements in den voll qualifizierten Pfad des **Paket** Ordners, der in einem vorherigen Schritt auf dem freigegebenen Datenträger erstellt wurde.  
   
 5.  Ersetzen Sie den Wert der Datei **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in der Registrierung durch den vollqualifizierten Pfad und Namen der Dienstkonfigurationsdatei auf dem freigegebenen Datenträger.  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77f98e86a5ac4b03d4a21b0242a2324c61b2081a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768816"
 ---
 # <a name="operator-precedence-and-associativity"></a>Operatorenrangfolge und -assoziativität
@@ -27,9 +27,9 @@ ms.locfileid: "62768816"
   
 |Operatorsymbol|Vorgangstyp|Assoziativität|  
 |---------------------|-----------------------|-------------------|  
-|( )|expression|Von links nach rechts|  
-|-, !, ~|Unär|Von rechts nach links|  
-|Umwandlungen|Unär|Von rechts nach links|  
+|( )|Ausdruck|Von links nach rechts|  
+|-, !, ~|Unäroperatoren|Von rechts nach links|  
+|Umwandlungen|Unäroperatoren|Von rechts nach links|  
 |*, / ,%|Multiplikativ|Von links nach rechts|  
 |+, -|Additiv|Von links nach rechts|  
 |\<, >, \<=, >=|Relational|Von links nach rechts|  
@@ -41,7 +41,7 @@ ms.locfileid: "62768816"
 |&#124;&#124;|Logisches OR|Von links nach rechts|  
 |? decodiert werden:|Bedingter Ausdruck|Von rechts nach links|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md)  
   
   

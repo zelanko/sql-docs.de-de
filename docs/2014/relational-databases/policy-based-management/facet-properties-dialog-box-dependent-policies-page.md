@@ -13,29 +13,29 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704916"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Abhängige Richtlinien'
   Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf dieses Facet der richtlinienbasierten Verwaltung verweisen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Listet den Namen jeder Richtlinie auf, die auf das aktuelle Facet verweist.  
   
- **Enabled**  
+ **Aktiviert**  
  Ein Häkchen gibt an, dass die Richtlinie derzeit aktiviert ist. Ist leer, wenn die Richtlinie nicht aktiviert ist.  
   
- **Verlauf**  
+ **History**  
  Klicken Sie auf den Link **Verlauf anzeigen** , um den Bericht zum Ausführungsverlauf anzuzeigen.  
   
  **Erstellt**  
  Das Datum, an dem die Richtlinie erstellt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor (Seite Allgemein) | Microsoft-Dokumentation
+title: Transformations-Editor für Suche (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057843"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Transformations-Editor für Suche (Seite 'Allgemein')
@@ -24,8 +24,8 @@ ms.locfileid: "66057843"
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
- **Vollcache**  
+## <a name="options"></a>Tastatur  
+ **Vollständiger Cache**  
  Das Verweisdataset wird generiert und in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
   
  **Teilcache**  
@@ -37,7 +37,7 @@ ms.locfileid: "66057843"
  **Cacheverbindungs-Manager**  
  Die Transformation für Suche wird für die Verwendung eines Cacheverbindungs-Managers konfiguriert. Diese Option ist nur verfügbar, wenn die Option Vollcache ausgewählt ist.  
   
- **Teilcache**  
+ **OLE DB Verbindungs-Manager**  
  Die Transformation für Suche wird für die Verwendung eines OLE DB-Verbindungs-Managers konfiguriert.  
   
  **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen**  
@@ -50,11 +50,11 @@ ms.locfileid: "66057843"
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
-## <a name="see-also"></a>Siehe auch  
- [Cache Connection Manager](connection-manager/cache-connection-manager.md)   
- [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Cacheverbindungs-Manager](connection-manager/cache-connection-manager.md)   
+ [Transformations-Editor für Suche &#40;Verbindungs Seite&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Transformations-Editor für Suche &#40;Seite „Spalten“&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [Transformations-Editor für Suche &#40;Seite "Erweitert"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Transformations-Editor für Suche &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798153"
 ---
 # <a name="stop-a-job"></a>Stop a Job
-  In diesem Thema wird das Beenden eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags beschrieben. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der SQL Server-Agent ausführt.  
+  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein-Agent-Auftrag beendet wird. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der SQL Server-Agent ausführt.  
   
--   **Vorbereitungen:**  ,  
+-   Vorbereitungen **:** ,  
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
--   **So halten Sie einen Auftrag an mit**  
+-   **So verhindern Sie einen Auftrag mit:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72798153"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72798153"
   
 -   Bei einem Multiserverauftrag wird eine STOP-Anweisung für den Auftrag an alle Zielserver des Auftrags gesendet.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
@@ -79,7 +79,7 @@ ms.locfileid: "72798153"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_stop_job &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
 

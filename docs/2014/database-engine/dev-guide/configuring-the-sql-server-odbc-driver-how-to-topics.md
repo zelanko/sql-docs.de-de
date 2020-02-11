@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von SQL Server-ODBC-Treiber – Themen | Microsoft-Dokumentation
+title: Gewusst-wie-Themen zum Konfigurieren des SQL Server ODBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753672"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>Themen zur Vorgehensweise: Konfigurieren des SQL Server-ODBC-Treibers
@@ -22,11 +22,11 @@ ms.locfileid: "62753672"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Hinzufügen einer Datenquelle &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+-   [Hinzufügen einer Datenquelle &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
--   [Löschen einer Datenquelle &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)  
+-   [Löschen einer Datenquelle &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweisen zu ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

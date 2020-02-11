@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073765"
 ---
 # <a name="tuples"></a>Tupel
@@ -40,7 +40,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Wenn Sie in einer Abfrage eine Achse für eine Menge angeben (in diesem Fall bestehend aus einem einzigen Tupel), müssen Sie zunächst eine Menge für die Spaltenachse und dann eine Menge für die Zeilenachse angeben. Die Spaltenachse wird auch als *axis(0)* oder einfach *0* bezeichnet. Weitere Informationen zu MDX-Abfragen finden Sie unter [Die grundlegende MDX-Abfrage &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Wenn Sie in einer Abfrage eine Achse für eine Menge angeben (in diesem Fall bestehend aus einem einzigen Tupel), müssen Sie zunächst eine Menge für die Spaltenachse und dann eine Menge für die Zeilenachse angeben. Die Spaltenachse wird auch als *axis(0)* oder einfach *0*bezeichnet. Weitere Informationen zu MDX-Abfragen finden Sie unter [Die grundlegende MDX-Abfrage &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
 ### <a name="tuples-as-values-or-member-references"></a>Tupel als Werte oder Elementverweise  
  Wie das vorherige Beispiel zeigte, können Sie ein Tupel in einer Abfrage verwenden, um den Wert in der Zelle zurückzugeben, auf die das Tupel verweist. Sie können ein Tupel aber auch in einem Ausdruck verwenden, um explizit auf das im Tupel angegebene Element zu verweisen. Abfragen und Ausdrücke können mithilfe von Funktionen Tupel zurückgeben oder verarbeiten. Mit einem Tupel kann entweder auf den Wert einer Zelle, die das Tupel angibt, verwiesen werden oder, bei Verwendung in einer Funktion, eine Kombination von Elementen angegeben werden.  
@@ -62,10 +62,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  Auf ein Attributelement kann entweder mit seinem Elementnamen oder seinem Elementschlüssel verwiesen werden. Der Verweis auf [CY 2004] im vorherigen Beispiel könnte durch &[2004] ersetzt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Cuberaum](cube-space.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Cube-Bereich](cube-space.md)   
  [Autoexists](autoexists.md)   
- [Verwenden von Elementen, Tupeln und Mengen &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [Arbeiten mit Membern, Tupeln und Mengen &#40;MDX-&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

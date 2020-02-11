@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783239"
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
@@ -63,13 +63,13 @@ ms.locfileid: "72783239"
     select @permissions  
     ```  
   
-4.  Erstellen Sie eine Kopie der Tabelle, und kopieren Sie die Daten aus der ursprünglichen Tabelle in die Tabellenkopie. Die Kopie kann mithilfe der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>erstellt werden.  
+4.  Erstellen Sie eine Kopie der Tabelle, und kopieren Sie die Daten aus der ursprünglichen Tabelle in die Tabellenkopie. Die Kopie kann mit den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>erstellt werden.  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Wenn genügend Arbeitsspeicher verfügbar ist, kann `T_copy` eine Speicher optimierte Tabelle sein, wodurch die Daten schneller kopiert werden. <sup>2</sup>  
+     Wenn genügend Arbeitsspeicher verfügbar ist, `T_copy` kann eine Speicher optimierte Tabelle sein, wodurch die Daten schneller kopiert werden. <sup>2</sup>  
   
 5.  Löschen Sie die schemagebundenen Objekte, die auf die ursprüngliche Tabelle verweisen.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783239"
   
 10. Starten Sie die Arbeitsauslastung auf `T`.  
   
- <sup>1</sup> beachten Sie, dass in diesem Beispiel `T_copy` auf dem Datenträger persistent gespeichert wird. Wenn eine Sicherung von `T` verfügbar ist, kann `T_copy` eine nicht dauerhafte oder eine temporäre Tabelle sein.  
+ <sup>1</sup> beachten Sie `T_copy` , dass in diesem Beispiel auf dem Datenträger persistent gespeichert wird. Wenn eine Sicherung von `T` verfügbar ist, kann `T_copy` eine nicht dauerhafte oder eine temporäre Tabelle sein.  
   
- <sup>2</sup> für `T_copy` muss genügend Arbeitsspeicher zur vorhanden sein. Der Arbeitsspeicher wird bei `DROP TABLE` nicht sofort freigegeben. Wenn `T_copy` speicheroptimiert ist, muss genügend Arbeitsspeicher für zwei zusätzliche Kopien von `T` verfügbar sein. Wenn `T_copy` eine datenträgerbasierte Tabelle ist, wird nur Speicher für eine zusätzliche Kopie von `T` benötigt, da der Garbage Collector erst entsprechende Schritte ausführen muss, nachdem die alte Version von `T` gelöscht wurde.  
+ <sup>2</sup> es muss genügend Arbeitsspeicher für `T_copy`vorhanden sein. Der Arbeitsspeicher wird bei `DROP TABLE` nicht sofort freigegeben. Wenn `T_copy` speicheroptimiert ist, muss genügend Arbeitsspeicher für zwei zusätzliche Kopien von `T` verfügbar sein. Wenn `T_copy` eine datenträgerbasierte Tabelle ist, wird nur Speicher für eine zusätzliche Kopie von `T` benötigt, da der Garbage Collector erst entsprechende Schritte ausführen muss, nachdem die alte Version von `T` gelöscht wurde.  
   
 ## <a name="changing-schema-powershell"></a>Ändern des Schemas (PowerShell)  
  Die folgenden PowerShell-Skripts bereiten Schemaänderungen vor und generieren diese, indem Skripts für die Tabelle und die zugehörigen Berechtigungen erstellt werden.  
@@ -100,7 +100,7 @@ prepare_schema_change.ps1 <serverName> <databaseName> <schemaName> <tableName>
   
 -   Löscht schemagebundene Objekte, die auf die Tabelle verweisen.  
   
--   Löscht die Tabelle.  
+-   Löschen Sie die Tabelle.  
   
 -   Erstellt die Tabelle mit dem neuen Schema neu und wendet die Berechtigungen erneut an.  
   
@@ -223,7 +223,7 @@ Write-Host ""
   
  Das folgende PowerShell-Skript führt die Schemaänderungen aus, für die im vorherigen Beispiel ein Skript erstellt wurde. Dieses Skript erwartet eine Tabelle als Argument und führt die Schemaänderungsskripts aus, die für diese Tabelle und die zugehörigen gespeicherten Prozeduren generiert wurden.  
   
- Syntax: execute_schema_change. ps1 *Servername * * db_name `schema_name`table_name*  
+ Verwendung: execute_schema_change. ps1 *server_name * * db_name`schema_name`table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -293,5 +293,5 @@ Write-Host "--done--"
 Write-Host ""  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Speicheroptimierte Tabellen](memory-optimized-tables.md)  

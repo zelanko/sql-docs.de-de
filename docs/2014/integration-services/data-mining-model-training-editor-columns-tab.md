@@ -1,5 +1,5 @@
 ---
-title: Data Mining Modell-Trainings-Editor (Registerkarte Spalten) | Microsoft-Dokumentation
+title: Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059891"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten)
@@ -26,7 +26,7 @@ ms.locfileid: "66059891"
   
  Weitere Informationen zum Ziel des Data Mining-Modelltrainings finden Sie unter [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Ziehen Sie Eingabespalten, um sie Miningstrukturspalten zuzuordnen.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66059891"
  **Miningstrukturspalten**  
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte Verbindung&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   

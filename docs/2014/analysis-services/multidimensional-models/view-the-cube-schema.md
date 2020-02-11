@@ -1,5 +1,5 @@
 ---
-title: Anzeigen des Cubeschemas | Microsoft-Dokumentation
+title: Anzeigen des Cube-Schemas | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072505"
 ---
 # <a name="view-the-cube-schema"></a>Anzeigen des Cubeschemas
@@ -24,7 +24,7 @@ ms.locfileid: "66072505"
   
  Wenn Sie einen Cube erstellen, ist das im Bereich **Datenquellensicht** auf der Registerkarte **Cubestruktur** angezeigte Diagramm anfänglich identisch mit dem Diagramm **Alle Tabellen anzeigen** in der Datenquellensicht für das Projekt oder die Datenbank. Sie können dieses Diagramm durch jedes vorhandene Diagramm in der Datenquellensicht ersetzen und im Bereich **Datenquellensicht** Anpassungen vornehmen.  
   
- Während Sie das Diagramm im **Cube-Designer**bearbeiten, sind im Menü **Datenquellensicht** Befehle verfügbar, die auf die Registerkarte oder auf beliebige ausgewählte Objekte auf der Registerkarte angewendet werden. Sie können auch mit der rechten Maustaste auf den Diagrammhintergrund oder auf ein Objekt im Diagramm klicken, um Befehle für das Diagramm oder ausgewählte Objekt auszuführen. Folgende Aktionen sind möglich:  
+ Während Sie das Diagramm im **Cube-Designer**bearbeiten, sind im Menü **Datenquellensicht** Befehle verfügbar, die auf die Registerkarte oder auf beliebige ausgewählte Objekte auf der Registerkarte angewendet werden. Sie können auch mit der rechten Maustaste auf den Diagrammhintergrund oder auf ein Objekt im Diagramm klicken, um Befehle für das Diagramm oder ausgewählte Objekt auszuführen. Ihre Möglichkeiten:  
   
 -   Umschalten zwischen Diagramm- und Strukturformat.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66072505"
   
  Darüber hinaus können Sie die in der folgenden Tabelle aufgeführten Aktionen ausführen:  
   
-|Aktion|Aktion|  
+|To|Aktion|  
 |--------|-------------|  
 |Verwenden eines Diagramms aus der Datenquellensicht des Cubes|Zeigen Sie im Menü **Datenquellensicht** auf **Diagramm kopieren von**, und klicken Sie dann auf das Diagramm für die Datenquellensicht, das Sie verwenden möchten.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , zeigen Sie auf **Diagramm kopieren von**, und klicken Sie dann in der Datenquellensicht auf das gewünschte Diagramm. Da durch diese Methode eine unabhängige Kopie des Diagramms erstellt wird, werden Änderungen, die Sie auf der Registerkarte **Cube-Generator** vornehmen, im ursprünglichen Diagramm nicht angezeigt.|  
 |Ausschließliches Anzeigen der im Cube verwendeten Tabellen|Klicken Sie im Menü **Datenquellensicht** auf **Nur verwendete Tabellen anzeigen**.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und klicken Sie dann auf **Nur verwendete Tabellen anzeigen**.|  

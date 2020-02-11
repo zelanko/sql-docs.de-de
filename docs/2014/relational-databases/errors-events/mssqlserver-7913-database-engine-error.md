@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f15575b5a410fdc2430d4914b3c2bc0456f54158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762300"
 ---
-# <a name="mssqlserver7913"></a>MSSQLSERVER_7913
+# <a name="mssqlserver_7913"></a>MSSQLSERVER_7913
     
 ## <a name="details"></a>Details  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62762300"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_REPAIR_EXTENT_DEALLOCATED|  
-|Meldungstext|Reparaturvorgang: Block P_ID in Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Type-Typ) wurde aufgehoben.|  
+|Meldungstext|Reparaturvorgang: Die Zuordnung des Blocks P_ID zu Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) wurde aufgehoben.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dies ist eine Informationsmeldung von REPAIR, die angibt, dass die Zuordnung eines Blocks von dem angegebenen Objekt aufgehoben wurde.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- None  
+ Keine  
   
   

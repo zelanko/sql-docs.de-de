@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155537"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL-Datenbank)
@@ -32,11 +32,11 @@ ms.locfileid: "70155537"
 
   **Hinweis: Dies gilt nur für Azure SQL-Datenbank v11.**  
   
- Listet die Anzahl, den Typ und die Dauer der Datenbanken auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server auf.  
+ Listet die Anzahl, den Typ und die Dauer der Datenbanken [!INCLUDE[ssSDS](../../includes/sssds-md.md)] auf dem Server auf.  
   
  Die **sys. database_usage** -Sicht enthält die folgenden Spalten.  
   
-|Column Name|und Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |time|Das Datum, an dem die Verwendungsereignisse eingetreten sind.|  
 |sku|Der Typ der Dienst Ebene für die Datenbank: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
@@ -45,11 +45,11 @@ ms.locfileid: "70155537"
 ## <a name="permissions"></a>Berechtigungen  
  Der schreibgeschützte Zugriff auf diese Ansicht ist für alle Benutzer verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **sys. database_usage** -Sicht gibt eine Zeile für jeden Tag Ihres Abonnements zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL-Datenbank-Preis Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Konten und Abrechnung in Azure SQL-Datenbank](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Preis Details zur SQL-Datenbank](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Konten und Abrechnung in der Azure SQL-Datenbank](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

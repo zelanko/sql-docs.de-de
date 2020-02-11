@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721752"
 ---
 # <a name="replication-agent-profiles"></a>Replikations-Agent-Profile
@@ -46,7 +46,7 @@ ms.locfileid: "62721752"
   
 ||default|  
 |-|-------------|  
-|**-BcpBatchSize**|100000|  
+|**-BcpBatchSize**|100.000|  
 |**-HistoryVerboseLevel**|2|  
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
@@ -68,7 +68,7 @@ ms.locfileid: "62721752"
   
 ||default|Ausführlicher Verlauf|Synchronisierungsverwaltung von Windows|Fortsetzen bei Datenkonsistenzfehlern|Verteilungsprofil für das OLE DB-Streaming|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
+|**-BcpBatchSize**|100.000|100.000|1000|100.000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
@@ -89,7 +89,7 @@ ms.locfileid: "62721752"
   
 ||default|Ausführlicher Verlauf|Synchronisierungsverwaltung von Windows|Zeilenanzahlüberprüfung|Überprüfung der Zeilenanzahl und Prüfsumme|Langsame Links|Server-zu-Server für hohes Volumen|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
+|**-BcpBatchSize**|100.000|100.000|1000|100.000|100.000|100.000|100.000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
@@ -125,9 +125,9 @@ ms.locfileid: "62721752"
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwaltung des Replikations-Agents](replication-agent-administration.md)   
  [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+ [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../concepts/replication-agent-executables-concepts.md)  
   
   

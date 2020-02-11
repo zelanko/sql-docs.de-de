@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720937"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults-Methode (SInstance-Klasse)
-  Legt alle Standardwerte für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fest, wobei die Option zum Überschreiben vorhandener Daten besteht.  
+  Legt alle Standardwerte für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fest, wobei die Option zum Überschreiben vorhandener Daten vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +39,22 @@ OverwriteAll
   
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
  Ein [SInstance-Klassenobjekt](sinstance-class.md) , das eine Serverinstanz darstellt.  
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
-|*OverwriteAll*|Ein boleescher Wert, der angibt, ob vorhandene Werte in der Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clients überschreiben werden sollen: `true`, wenn vorhandene Daten überschrieben werden, bzw. `false`, wenn vorhandene Daten nicht überschrieben werden.|  
+|*Overschreiteall*|Ein boleescher Wert, der angibt, ob vorhandene Werte in der Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clients überschreiben werden sollen: `true`, wenn vorhandene Daten überschrieben werden, bzw. `false`, wenn vorhandene Daten nicht überschrieben werden.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

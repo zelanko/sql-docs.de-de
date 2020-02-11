@@ -17,22 +17,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721319"
 ---
 # <a name="errors-and-events-reference-replication"></a>Fehler- und Ereignisreferenz (Replikation)
   Dieser Abschnitt der Dokumentation enthält Informationen zu Ursachen und Lösungen für eine Reihe von Fehlern, die im Zusammenhang mit der Replikation auftreten können.  
   
-|Fehler|MessageBox|  
+|Fehler|`Message`|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „*ls“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
-|[MSSQL_ENG002627](mssql-eng002627.md)|Verletzung der %ls-Einschränkung ' %. * ls'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
+|[MSSQL_ENG002601](mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%1!s!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
+|[MSSQL_ENG002627](mssql-eng002627.md)|Verletzung der %1!s!-Einschränkung '%2!s!'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
 |[MSSQL_ENG003165](mssql-eng003165.md)|Die %1!s!-Datenbank wurde wiederhergestellt; beim Wiederherstellen/Entfernen der Replikation wurde jedoch ein Fehler erkannt. Die Datenbank ist offline. Weitere Informationen finden Sie im Thema 'MSSQL_ENG003165' in der SQL Server-Onlinedokumentation.|  
-|[MSSQL_ENG003724](mssql-eng003724.md)|Kann nicht %s_msg %s_msg ' %. * ls, da sie für die Replikation verwendet wird.|  
-|[MSSQL_ENG004929](mssql-eng004929.md)|Die % s_msg-Objekt kann nicht geändert werden kann ' %. * ls, da es für die Replikation veröffentlicht wird.|  
+|[MSSQL_ENG003724](mssql-eng003724.md)|Das %1!s! von '%3!s!' (%2!s!) ist nicht möglich, da das Objekt für die Replikation verwendet wird.|  
+|[MSSQL_ENG004929](mssql-eng004929.md)|Das %1!s!-Objekt '%2!s!' kann nicht geändert werden, da es für die Replikation veröffentlicht wird.|  
 |MSSQL_ENG007395. Siehe [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Für den OLE DB-Anbieter '%1!s!' für den Verbindungsserver '%2!s!' konnte keine geschachtelte Transaktion gestartet werden. Eine geschachtelte Transaktion war erforderlich, da die Option XACT_ABORT auf OFF festgelegt war.|  
 |[MSSQL_ENG014005](mssql-eng014005.md)|Die Veröffentlichung konnte nicht gelöscht werden. Es besteht ein Abonnement für sie.|  
 |[MSSQL_ENG014010](mssql-eng014010.md)|Der Server '%1!s!' ist nicht als Abonnementserver definiert.|  
@@ -41,9 +41,9 @@ ms.locfileid: "62721319"
 |[MSSQL_ENG014120](mssql-eng014120.md)|Die %1!s!-Verteilungsdatenbank konnte nicht gelöscht werden. Diese Verteilerdatenbank ist einem Verleger zugeordnet.|  
 |[MSSQL_ENG014121](mssql-eng014121.md)|Der Verteiler '%1!s!' konnte nicht gelöscht werden. Dieser Verteiler besitzt zugeordnete Verteilungsdatenbanken.|  
 |[MSSQL_ENG014144](mssql-eng014144.md)|Der '%s'-Abonnent kann nicht gelöscht werden. Für ihn sind Abonnements in der %2!s!-Veröffentlichungsdatenbank vorhanden.|  
-|[MSSQL_ENG014150](mssql-eng014150.md)|Replikations-%1!: %2! (Agent) erfolgreich. %s|  
+|[MSSQL_ENG014150](mssql-eng014150.md)|Replikations-%1!: %2! (Agent) erfolgreich. %3!|  
 |[MSSQL_ENG014151](mssql-eng014151.md)|Replikations-%1!s!: Fehler beim %2!s!-Agent. %3!|  
-|[MSSQL_ENG014152](mssql-eng014152.md)|Replikations-%1!: %2! (Agent) ist für die Wiederholung geplant. %s|  
+|[MSSQL_ENG014152](mssql-eng014152.md)|Replikations-%1!: %2! (Agent) ist für die Wiederholung geplant. %3!|  
 |[MSSQL_ENG014157](mssql-eng014157.md)|Das Abonnement des Abonnenten '%1!s!' für die %2!s!-Veröffentlichung ist abgelaufen und wurde gelöscht.|  
 |[MSSQL_ENG014160](mssql-eng014160.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Mindestens ein Abonnement für diese Veröffentlichung ist abgelaufen.|  
 |[MSSQL_ENG014161](mssql-eng014161.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Protokolllese-Agent und der Verteilungs-Agent ausgeführt werden und die Latenzzeitanforderung erfüllen können.|  
@@ -51,7 +51,7 @@ ms.locfileid: "62721319"
 |[MSSQL_ENG014163](mssql-eng014163.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014164](mssql-eng014164.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014165](mssql-eng014165.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
-|[MSSQL_ENG018456](mssql-eng018456.md)|Fehler bei der Anmeldung für Benutzer ' %. * ls'.%. \*ls|  
+|[MSSQL_ENG018456](mssql-eng018456.md)|Fehler bei der Anmeldung für den Benutzer '%.*ls'.%.\*ls|  
 |[MSSQL_ENG018752](mssql-eng018752.md)|Nur jeweils ein Protokolllese-Agent oder eine protokollbezogene Prozedur (sp_repldone, sp_replcmds oder sp_replshowcmds) kann eine Verbindung mit einer Datenbank herstellen. Falls Sie eine protokollbezogene Prozedur ausgeführt haben, löschen Sie vor dem Starten des Protokolllese-Agents oder dem Ausführen einer weiteren protokollbezogenen Prozedur die Verbindung, über die sie ausgeführt wurde, oder führen Sie 'sp_replflush' über diese Verbindung aus.|  
 |[MSSQL_ENG020554](mssql-eng020554.md)|Vom Replikations-Agent wurde in %ld Minuten keine Statusmeldung protokolliert. Möglicherweise reagiert der Agent nicht mehr, oder das System ist stark ausgelastet. Überprüfen Sie, ob Datensätze an das Ziel repliziert werden und ob die Verbindungen mit dem Abonnenten, Verleger und Verteiler noch aktiv sind.|  
 |[MSSQL_ENG020557](mssql-eng020557.md)|Der Agent wird heruntergefahren. Weitere Informationen finden Sie im Auftragsverlauf des SQL Server-Agents für den Auftrag '%s'.|  
@@ -76,7 +76,7 @@ ms.locfileid: "62721319"
 |MSSQL_ENG021642. Siehe [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen '%1!s!' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus.|  
 |MSSQL_ENG021663. Siehe [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Für die [%1!s!].[%2!s!]-Quelltabelle wurde kein gültiger Primärschlüssel gefunden.|  
 |MSSQL_ENG021684. Siehe [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Der Administratoranmeldung für den '%s'-Oracle-Verleger sind unzureichende Berechtigungen zugeordnet.|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|"%s" muss eine gültige Windows-Anmeldung in der Form sein: "MACHINE Login" oder "DOMAIN Login". Lesen Sie die Dokumentation zu '%3!s!'.|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%1!s!' muss eine gültige Windows-Anmeldung der folgenden Form sein: 'MACHINE\Login' oder 'DOMAIN\Login'. Lesen Sie die Dokumentation zu '%3!s!'.|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|Der %1!s!-Agent-Auftrag muss vor dem Fortsetzen des Vorgangs über '%2!s!' hinzugefügt werden. Lesen Sie die Dokumentation zu '%3!s!'.|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|Der Prozess konnte '%1' nicht auf '%2' ausführen.|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|Vom Mergeprozess konnte der Generierungsverlauf auf '%1' nicht geändert werden. Führen Sie zur Problembehandlung einen Neustart der Synchronisierung mit ausführlicher Verlaufsprotokollierung aus, und geben Sie eine Ausgabedatei an, in die geschrieben werden soll.|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753632"
 ---
 # <a name="installing-smo"></a>Installieren von SMO
@@ -26,7 +26,7 @@ ms.locfileid: "62753632"
   
  Standardmäßig werden die SMO-Assemblys im Verzeichnis [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] installiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Schnellstart-Installation von SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

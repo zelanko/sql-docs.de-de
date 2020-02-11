@@ -1,5 +1,5 @@
 ---
-title: Angeben des Inhalts einer slicerachse (MDX) | Microsoft-Dokumentation
+title: Angeben des Inhalts einer Slicerachse (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074060"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>Angeben des Inhalts einer Slicerachse (MDX)
@@ -66,7 +66,7 @@ FROM [Adventure Works]
 WHERE([Customer].[Customer Geography].[Country].&[United States], [Product].[Category].&[1])  
 ```  
   
- Wenn Sie mehrere Elemente aus derselben Hierarchie verwenden möchten, muss der WHERE-Klausel eine Menge hinzugefügt werden. Die folgende Abfrage zeigt beispielsweise den Wert von Internet Sales Amount für alle Kalenderjahre für Kunden, die Produkte in der Kategorie Bikes gekauft haben und die in den USA oder im Vereinigten Königreich wohnen:  
+ Wenn Sie mehrere Elemente aus derselben Hierarchie verwenden möchten, muss der WHERE-Klausel eine Menge hinzugefügt werden. Die folgende Abfrage zeigt beispielsweise den Wert von Internet Sales Amount für alle Kalenderjahre für Kunden, die Produkte in der Kategorie Bikes gekauft haben und die in den USA oder in Großbritannien wohnen:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -79,6 +79,6 @@ WHERE(
   
 ```  
   
- Wie oben erwähnt, werden bei Verwendung einer Menge in der WHERE-Klausel implizit Werte für alle Elemente in der Menge aggregiert. In diesem Fall zeigt die Abfrage aggregierte Werte für die USA und das Vereinigte Königreich in jeder Zelle.  
+ Wie oben erwähnt, werden bei Verwendung einer Menge in der WHERE-Klausel implizit Werte für alle Elemente in der Menge aggregiert. In diesem Fall zeigt die Abfrage aggregierte Werte für die USA und Großbritannien in jeder Zelle.  
   
   

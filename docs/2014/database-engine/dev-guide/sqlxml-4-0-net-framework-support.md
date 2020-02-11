@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 .NET Framework-Unterstützung | Microsoft-Dokumentation
+title: SQLXML 4,0-.NET Framework Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780513"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 .NET Framework-Unterstützung
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 unterstützt Funktionen, mit denen Sie Anwendungen schreiben können, um von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf XML-Daten zuzugreifen, um die Daten in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Umgebung einzubinden, um die Daten zu verarbeiten und um die Aktualisierungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückzusenden. Dieser Abschnitt dokumentiert .NET Framework-Unterstützungsfunktionen und stellt Beispiele für ihre Verwendung bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwaltete SQLXML-Klassen](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
+ [SQLXML, verwaltete Klassen](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  Dokumentiert verwaltete SQLXML-Klassen und ihre Eigenschaften und Methoden.  
   
  [Verwenden von DiffGrams zum Ändern von Daten in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md)  
@@ -34,7 +35,7 @@ ms.locfileid: "62780513"
  [Verwenden von SQLXML-Massenladen in der .NET-Umgebung](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/sqlxml-4-0-net-framework-support-using-bulk-load.md)  
  Beschreibt, wie SQLXML-Massenladenvorgänge mit .NET Framework verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

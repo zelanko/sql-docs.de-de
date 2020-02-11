@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4227b0af8453a40e9dd63b4aef170d52f8115b2
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782926"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Entfernen einer Verfügbarkeitsgruppe (SQL Server)
@@ -36,9 +36,9 @@ ms.locfileid: "72782926"
   
      [Sicherheit](#Security)  
   
--   **So löschen Sie eine Verfügbarkeitsgruppe mithilfe von:**  
+-   **So löschen Sie eine Verfügbarkeits Gruppe mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,12 +58,12 @@ ms.locfileid: "72782926"
   
 -   Auf einem sekundären Replikat sollte DROP AVAILABILITY GROUP nur im Notfall verwendet werden. Das liegt daran, dass durch Löschen einer Verfügbarkeitsgruppe die Verfügbarkeitsgruppe offline geschaltet wird. Wenn Sie die Verfügbarkeitsgruppe aus einem sekundären Replikat löschen, kann das primäre Replikat nicht bestimmen, ob der OFFLINE-Status aufgrund des Quorumverlusts, eines erzwungenen Failovers oder eines DROP AVAILABILITY GROUP-Befehls aufgetreten ist. Das primäre Replikat geht in den Status RESTORING über, um eine mögliche Split Brain-Situation zu verhindern. Weitere Informationen finden Sie unter [Funktionsweise: DROP AVAILABILITY GROUP-Verhaltensweisen](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (Blog von CSS SQL Server-Ingenieuren).  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung. Um eine Verfügbarkeitsgruppe zu löschen, die nicht von der lokalen Serverinstanz gehostet wird, benötigen Sie die CONTROL SERVER-Berechtigung oder die CONTROL-Berechtigung für diese Verfügbarkeitsgruppe.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So löschen Sie eine Verfügbarkeitsgruppe**  
   
 1.  Wenn möglich, stellen Sie in Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Replikat hostet, oder stellen Sie eine Verbindung zu einer anderen Serverinstanz her, die für AlwaysOn-Verfügbarkeitsgruppen in einem WSFC-Knoten aktiviert ist, der die richtigen Sicherheitsanmeldeinformationen für die Verfügbarkeitsgruppe besitzt. Erweitern Sie die Serverstruktur.  
@@ -119,10 +119,10 @@ ms.locfileid: "72782926"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedContent"></a>Verwandte Inhalte  
+##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Funktionsweise: DROP AVAILABILITY GROUP-Verhaltensweisen](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (Blog von CSS SQL Server-Ingenieuren)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  

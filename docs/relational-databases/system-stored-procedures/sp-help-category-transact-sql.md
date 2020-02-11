@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304803"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72304803"
 
   Stellt Informationen zu den angegebenen Klassen von Aufträgen, Warnungen oder Operatoren bereit.  
    
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,53 +42,53 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @class = ] 'class'` die-Klasse, zu der Informationen angefordert werden. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert **Job**. die *Klasse* kann einen der folgenden Werte aufweisen.  
+`[ @class = ] 'class'`Die Klasse, über die Informationen angefordert werden. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert **Job**. die *Klasse* kann einen der folgenden Werte aufweisen.  
   
-|ReplTest1|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**JOB**|Stellt Informationen zu einer Auftragskategorie bereit.|  
+|**Auftrag**|Stellt Informationen zu einer Auftragskategorie bereit.|  
 |**Warnung**|Stellt Informationen zu einer Warnungskategorie bereit.|  
 |**KOM**|Stellt Informationen zu einer Operatorkategorie bereit.|  
   
-`[ @type = ] 'type'` der Typ der Kategorie, für die Informationen angefordert werden. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @type = ] 'type'`Der Typ der Kategorie, für die Informationen angefordert werden. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|ReplTest1|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**LOCAL**|Lokale Auftrags Kategorie.|  
-|**MultiServer**|Multiserver-Auftragskategorie|  
-|**NONE**|Kategorie für eine andere Klasse als **Job**.|  
+|**Nah**|Lokale Auftrags Kategorie.|  
+|**MULTI-SERVER**|Multiserver-Auftragskategorie|  
+|**Gar**|Kategorie für eine andere Klasse als **Job**.|  
   
-`[ @name = ] 'name'` den Namen der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @name = ] 'name'`Der Name der Kategorie, für die Informationen angefordert werden. *Name ist vom Datentyp* **vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @suffix = ] suffix` gibt an, ob die **category_type** Spalte im Resultset eine ID oder ein Name ist. *Suffix* ist vom Typ **Bit**. der Standardwert ist **0**. **1** zeigt den **category_type** als Namen an, und **0** zeigt ihn als ID an.  
+`[ @suffix = ] suffix`Gibt an, ob die **category_type** Spalte im Resultset eine ID oder ein Name ist. *Suffix* ist vom Typ **Bit**. der Standardwert ist **0**. **1** zeigt den **category_type** als Namen an, und **0** zeigt ihn als ID an.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn **\@Suffix** **0**ist, gibt **sp_help_category** das folgende Resultset zurück:  
+ Wenn ** \@Suffix** **0**ist, gibt **sp_help_category** das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
 |**category_type**|**tinyint**|Typ der Kategorie:<br /><br /> **1** = lokal<br /><br /> **2** = MultiServer<br /><br /> **3** = keine|  
-|**name**|**sysname**|Kategoriename|  
+|**name**|**sysname**|Name der Kategorie|  
   
- Wenn **\@Suffix** **1**ist, gibt **sp_help_category** das folgende Resultset zurück:  
+ Wenn ** \@Suffix** **1**ist, gibt **sp_help_category** das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
 |**category_type**|**sysname**|Art der Kategorie: Eine von " **local**", " **MultiServer**" oder " **None** ".|  
-|**name**|**sysname**|Kategoriename|  
+|**name**|**sysname**|Name der Kategorie|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_category** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Werden keine Parameter angegeben, stellt das Resultset Informationen zu allen Auftragskategorien bereit.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -125,10 +125,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691849"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-  IBCPSession2-Schnittstelle ist eine Erweiterung IBCPSession, die eine Memberfunktion bereitstellt, die eine Alternative zum Aufrufen von ibcpsession:: BCPColFmt für jede Spalte ist.  IBCPSession2 IBCPSession erbt, und fügt eine neue Methode hinzu: [IBCPSession2::BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  
+  Die IBCPSession2-Schnittstelle ist eine Erweiterung von IBCPSession, die eine Element Funktion bereitstellt, die eine Alternative zum Aufrufen von IBCPSession:: BCPColFmt für jede Spalte darstellt.  IBCPSession2 erbt von IBCPSession und fügt eine neue Methode hinzu: [IBCPSession2:: bcpsetbulkmode](ibcpsession2-bcpsetbulkmode.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnittstellen &#40;OLE-DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Schnittstellen &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

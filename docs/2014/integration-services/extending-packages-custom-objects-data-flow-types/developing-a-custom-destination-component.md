@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f090cd6dbfaa0194bc02af581fc4765fca9eac0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768976"
 ---
 # <a name="developing-a-custom-destination-component"></a>Entwickeln einer benutzerdefinierten Zielkomponente
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet Entwicklern die Möglichkeit, in benutzerdefinierte Zielkomponenten zu schreiben, die eine Verbindung mit einer beliebigen benutzerdefinierten Datenquelle herstellen und Daten in dieser speichern können. Benutzerdefinierte Zielkomponenten sind hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die nicht über eine der vorhandenen Quellkomponenten, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind, zugegriffen werden kann.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Entwicklern die Möglichkeit, benutzerdefinierte Ziel Komponenten zu schreiben, die eine Verbindung mit Daten in einer beliebigen benutzerdefinierten Datenquelle herstellen und diese speichern [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] können. Benutzerdefinierte Zielkomponenten sind hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die nicht über eine der vorhandenen Quellkomponenten, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind, zugegriffen werden kann.  
   
  Zielkomponenten verfügen über eine oder mehrere Eingaben und keine Ausgabe. Zur Entwurfszeit erstellen und konfigurieren sie Verbindungen und lesen Spaltenmetadaten aus der externen Datenquelle. Während der Ausführung stellen sie eine Verbindung zu ihrer externen Datenquelle her und fügen Zeilen, die von den Komponenten upstream im Datenfluss empfangen wurden, zur externen Datenquelle hinzu. Wenn die externe Datenquelle vor der Ausführung der Komponente besteht, dann muss die Zielkomponente außerdem sicherstellen, dass die Datentypen der Spalten, die die Komponente empfängt, zu den Datentypen der Spalten der externen Datenquelle passen.  
   
@@ -481,10 +481,10 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwickeln einer benutzerdefinierten Quellkomponente](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Entwickeln einer benutzerdefinierten Quell Komponente](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
  [Erstellen eines Ziels mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

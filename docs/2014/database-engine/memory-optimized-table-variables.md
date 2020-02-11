@@ -1,5 +1,5 @@
 ---
-title: Speicheroptimierte Tabellenvariablen | Microsoft-Dokumentation
+title: Speicher optimierte Tabellen Variablen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774414"
 ---
 # <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen
@@ -36,9 +36,9 @@ ms.locfileid: "62774414"
   
 -   Tabellenvariablen können zum Simulieren von Cursorn in systemintern kompilierten gespeicherten Prozeduren verwendet werden, um Einschränkungen der Oberfläche in systemintern kompilierten gespeicherten Prozeduren zu umgehen.  
   
- Wie bei speicheroptimierten Tabellen erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine DLL für jeden speicheroptimierten Tabellentyp. (Kompilierung wird aufgerufen, wenn der Typ eine Speicheroptimierte Tabelle erstellt wird und nicht verwendet werden, wenn zur Erstellung von speicheroptimierten Tabellenvariablen verwendet.) Diese DLL beinhaltet die Funktionen für den Zugriff auf Indizes und das Abrufen von Daten aus den Tabellenvariablen. Wenn eine speicheroptimierte Tabellenvariable basierend auf dem Tabellentyp deklariert wird, wird in der Benutzersitzung eine Instanz der Tabelle und der Indexstrukturen entsprechend dem Tabellentyp erstellt. Die Tabellenvariable kann anschließend auf dieselbe Weise wie datenträgerbasierte Tabellenvariablen verwendet werden. Sie können in der Tabellenvariablen Zeilen einfügen, aktualisieren und löschen, und Sie können die Variablen in [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfragen verwenden. Sie können die Variablen auch als Tabellenwertparameter (TVPs) an systemintern kompilierte und interpretierte gespeicherte Prozeduren übergeben.  
+ Wie bei speicheroptimierten Tabellen erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine DLL für jeden speicheroptimierten Tabellentyp. (Die Kompilierung wird aufgerufen, wenn der Speicher optimierte Tabellentyp erstellt wird, und nicht, wenn er zum Erstellen von Speicher optimierten Tabellen Variablen verwendet wird.) Diese DLL beinhaltet die Funktionen für den Zugriff auf Indizes und das Abrufen von Daten aus den Tabellen Variablen. Wenn eine speicheroptimierte Tabellenvariable basierend auf dem Tabellentyp deklariert wird, wird in der Benutzersitzung eine Instanz der Tabelle und der Indexstrukturen entsprechend dem Tabellentyp erstellt. Die Tabellenvariable kann anschließend auf dieselbe Weise wie datenträgerbasierte Tabellenvariablen verwendet werden. Sie können in der Tabellenvariablen Zeilen einfügen, aktualisieren und löschen, und Sie können die Variablen in [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfragen verwenden. Sie können die Variablen auch als Tabellenwertparameter (TVPs) an systemintern kompilierte und interpretierte gespeicherte Prozeduren übergeben.  
   
- Das folgende Beispiel zeigt einen speicheroptimierten Tabellentyp aus dem AdventureWorks-basierten In-Memory-OLTP-Beispiel ([Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
+ Das folgende Beispiel zeigt einen Speicher optimierten Tabellentyp aus dem AdventureWorks-basierten in-Memory-OLTP-Beispiel ([SQL Server 2014 in-Memory OLTP-Beispiel](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
 ```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -60,7 +60,8 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  Das Beispiel zeigt, dass die Syntax von speicheroptimierten Tabellentypen der von datenträgerbasierten Tabellentypen ähnelt, mit folgenden Ausnahmen:  
   
--   `MEMORY_OPTIMIZED=ON` gibt an, dass der Tabellentyp speicheroptimiert ist.  
+-   
+  `MEMORY_OPTIMIZED=ON` gibt an, dass der Tabellentyp speicheroptimiert ist.  
   
 -   Der Typ muss mindestens einen Index aufweisen. Wie bei speicheroptimierten Tabellen können Sie nicht gruppierte und Hashindizes verwenden.  
   
@@ -186,7 +187,7 @@ GO
   
  Arbeitsspeicher wird als Teil des einzelnen PGPOOL-Arbeitsspeicherconsumers der Datenbank behandelt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transact-SQL-Unterstützung für In-Memory-OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Transact-SQL-Unterstützung für OLTP im Arbeitsspeicher](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

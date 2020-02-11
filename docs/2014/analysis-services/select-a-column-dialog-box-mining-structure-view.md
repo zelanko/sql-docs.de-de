@@ -1,5 +1,5 @@
 ---
-title: Auswählen einer Spalte (Dialogfeld) (Miningstruktur-Ansicht) | Microsoft-Dokumentation
+title: Spalte auswählen (Dialog Feld) (Mining Struktur-Ansicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069920"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Spalte auswählen (Dialogfeld) (Miningstruktur-Ansicht)
   Verwenden Sie das Dialogfeld **Spalte auswählen** , um der Miningstruktur Spalten hinzuzufügen. Das Dialogfeld enthält unterschiedliche Optionen, abhängig davon, ob Sie mit einem OLAP-Miningmodell oder einem relationalen Miningmodell arbeiten.  
   
-## <a name="options"></a>Optionen  
- **Quelltabelle**  
+## <a name="options"></a>Tastatur  
+ **Quell Tabelle**  
  Die Tabelle, auf der das Miningmodell basiert.  
   
  Diese Option wird nur bei relationalen Miningmodellen verwendet.  
   
- **Quellspalte**  
+ **Quell Spalte**  
  Eine Liste aller verfügbaren Spalten in der Quelltabelle, die Sie der Miningstruktur hinzufügen können.  
   
  Diese Option wird nur bei relationalen Miningmodellen verwendet.  
@@ -40,13 +40,13 @@ ms.locfileid: "66069920"
   
  Diese Option wird nur bei relationalen Miningmodellen verwendet.  
   
- **Verknüpfte Attribute und measures**  
+ **Verknüpfte Attribute und Measures**  
  Eine Liste aller verfügbaren Measures und Attribute, die Sie der Miningstruktur hinzufügen können.  
   
  Diese Option wird nur bei OLAP-Miningmodellen verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Mining-Strukturansicht &#40;Datamining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Strukturansicht &#40;Data Mining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Hinzufügen von Spalten zu einer Miningstruktur](data-mining/add-columns-to-a-mining-structure.md)  
   
   

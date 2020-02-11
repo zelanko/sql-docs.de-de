@@ -1,5 +1,5 @@
 ---
-title: DQS-Bereinigung Transformations-Editor (Dialogfeld) | Microsoft-Dokumentation
+title: Transformations-Editor für die DQS-Bereinigung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059416"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Transformations-Editor für die DQS-Bereinigung (Dialogfeld)
@@ -54,7 +54,7 @@ ms.locfileid: "66059416"
  Wählen Sie eine vorhandene DQS-Wissensdatenbank für die verbundene Datenquelle aus. Weitere Informationen zur DQS-Wissensdatenbank finden Sie unter [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Verschlüsseln der Verbindung**  
- Gibt an, ob die Verbindung verschlüsselt wird, um die Datenübertragung zwischen dem DQS-Server zu verschlüsseln und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Geben Sie an, ob die Verbindung verschlüsselt werden soll, um die Datenübertragung zwischen dem DQS- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Server und zu verschlüsseln.  
   
  **Verfügbare Domänen**  
  Listet die verfügbaren Domänen für die ausgewählte Wissensdatenbank auf. Es gibt zwei Typen von Domänen: einzelne Domänen und Verbunddomänen, die aus mindestens zwei einzelnen Domänen bestehen.  
@@ -101,7 +101,7 @@ ms.locfileid: "66059416"
  **Ausgabe standardisieren**  
  Gibt an, ob die Daten im standardisierten Format auf Grundlage des für Domänen definierten Ausgabeformats ausgegeben werden. Weitere Informationen zum standardisierten Format finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md).  
   
- **Vertrauen**  
+ **Confidence**  
  Gibt an, ob der Vertrauensgrad für korrigierte Daten eingeschlossen wird. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an. Weitere Informationen zu Vertrauensgraden finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md).  
   
  **Reason**  
@@ -111,7 +111,7 @@ ms.locfileid: "66059416"
  Gibt an, ob weitere, von einem vorhandenen Verweisdatenanbieter empfangene Daten ausgegeben werden. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  **Angefügtes Datenschema**  
- Gibt an, ob das Datenschema ausgegeben wird. Weitere Informationen finden Sie unter [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Gibt an, ob das Datenschema ausgegeben wird. Weitere Informationen finden Sie unter [Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="manager"></a> Festlegen der Optionen im Dialogfeld "Verbindungs-Manager für DQS-Bereinigung"  
  **Servername**  
@@ -128,7 +128,7 @@ ms.locfileid: "66059416"
   
 3.  Klicken Sie auf **Hinzufügen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anwenden von Datenqualitätsregeln auf eine Datenquelle](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

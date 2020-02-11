@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23dd102c0144761d3c84d0735357318f27666706
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782834"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Leistungsindikatoren für den MSRS 2014-Webdienst im SharePoint-Modus und den MSRS 2014-Windows-Dienst im SharePoint-Modus, Leistungsobjekte (SharePoint-Modus)
@@ -30,13 +30,13 @@ ms.locfileid: "72782834"
 > [!NOTE]  
 >  Mit diesen Leistungsobjekten werden Ereignisse auf dem lokalen Berichtsserver überwacht. Wenn Sie einen Berichtsserver in einer Bereitstellung für horizontales Skalieren ausführen, beziehen sich die Zahlen auf den aktuellen Server, nicht auf die Bereitstellung für horizontales Skalieren insgesamt.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im SharePoint-Modus  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint-Modus  
   
  Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation. [Laufzeit-Profilerstellung](https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  **In diesem Thema:**  
   
--   [Leistungsindikatoren für den MSRS 2014-Webdienst im SharePoint-Modus](#bkmk_webservice)  
+-   [Leistungsindikatoren für den MSRS 2014-Webdienst im SharePoint Modus](#bkmk_webservice)  
   
 -   [Leistungsindikatoren für den MSRS 2014-Windows-Dienst im SharePoint Modus](#bkmk_windowsservice)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72782834"
   
  In der folgenden Tabelle werden die im `MSRS 2014 Web Service SharePoint Mode`-Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Indikator|und Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`Active Sessions`|Die Anzahl der aktiven Sitzungen. Dieser Leistungsindikator stellt eine kumulierte Anzahl aller durch Berichtsausführungen generierten Browsersitzungen bereit, unabhängig davon, ob sie noch aktiv sind.<br /><br /> Der Leistungsindikator wird verringert, wenn Sitzungsdatensätze entfernt werden. Standardmäßig werden Sitzungen nach einer Inaktivität von zehn Minuten entfernt.|  
 |`Cache Hits/Sec`|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Es handelt sich um Anforderungen für erneut gerenderte Berichte, nicht um Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Weitere Informationen finden Sie unter `Total Cache Hits` weiter unten in diesem Thema.)|  
@@ -55,7 +55,7 @@ ms.locfileid: "72782834"
 |`Cache Misses/Sec`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Bericht aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |`Cache Misses/Sec (Semantic Models)`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Modell aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |`First Session Requests/Sec`|Die Anzahl neuer Benutzersitzungen, die pro Sekunde aus dem Berichtsservercache gestartet werden.|  
-|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der*In-Memory-Cache* ist ein Bestandteil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
+|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der *in-Memory-Cache* ist ein Teil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
 |`Memory Cache Misses/Sec`|Die Anzahl, wie oft Berichte pro Sekunde nicht aus dem Arbeitsspeichercache abgerufen werden konnten.|  
 |`Next Session Requests/Sec`|Die Anzahl der Anforderungen für Berichte, die in einer vorhandenen Sitzung geöffnet sind, pro Sekunde (z. B. Berichte, die aus der Momentaufnahme einer Sitzung gerendert wurden).|  
 |`Report Requests`|Die Anzahl der Berichte, die derzeit aktiv sind und vom Berichtsserver verarbeitet werden.|  
@@ -65,7 +65,7 @@ ms.locfileid: "72782834"
 |`Total Cache Hits (Semantic Models)`|Die Gesamtanzahl der Anforderungen für ein Modell aus dem Cache, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von ASP.NET beendet wird.|  
 |`Total Cache Misses`|Die Anzahl, wie oft ein Bericht insgesamt nicht aus dem Cache zurückgegeben werden konnte, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] beendet wird. Mit diesem Leistungsindikator bestimmen Sie, ob ausreichend Speicherplatz und Arbeitsspeicher vorhanden sind.|  
 |`Total Cache Misses (Semantic Models)`|Die Gesamthäufigkeit, mit der ein Modell nicht aus dem Cache zurückgegeben werden konnte, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von ASP.NET beendet wird. Mit diesem Leistungsindikator bestimmen Sie, ob ausreichend Speicherplatz und Arbeitsspeicher vorhanden sind.|  
-|`Total Memory Cache Hits`|Die Gesamtzahl der zwischengespeicherten Berichte, die aus dem Arbeitsspeichercache zurückgegeben wurden, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] beendet wird. Der*In-Memory-Cache* ist ein Bestandteil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
+|`Total Memory Cache Hits`|Die Gesamtzahl der zwischengespeicherten Berichte, die aus dem Arbeitsspeichercache zurückgegeben wurden, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] beendet wird. Der *in-Memory-Cache* ist ein Teil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
 |`Total Memory Cache Misses`|Die Gesamtzahl der Cachefehlversuche für den In-Memory-Cache, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] beendet wird.|  
 |`Total Processing Failures`|Die Anzahl der Fehler bei der Anforderungsverarbeitung im Berichtsserver-Webdienst.|  
 |`Total Rejected Threads`|Die Gesamtanzahl der für die asynchrone Verarbeitung abgelehnten Threads, die anschließend im selben Thread als synchrone Prozesse verarbeitet wurden. Jede Datenquelle wird in einem Thread verarbeitet. Falls die Anzahl der Threads die Kapazität überschreitet, werden Threads für die asynchrone Verarbeitung abgelehnt und seriell verarbeitet.|  
@@ -77,7 +77,7 @@ ms.locfileid: "72782834"
   
  In der folgenden Tabelle werden die im `MSRS 2014 Windows Service SharePoint mode`-Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Indikator|und Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`Active Sessions`|Die Anzahl der aktiven Sitzungen, die in der Berichtsserver-Datenbank gespeichert sind. Dieser Leistungsindikator liefert die Gesamtanzahl aller verfügbaren Browsersitzungen, die aus Berichtsabonnements generiert wurden, unabhängig davon, ob sie noch aktiv sind oder nicht.|  
 |`Alerting: event queue length`||  
@@ -96,7 +96,7 @@ ms.locfileid: "72782834"
 |`Delivers/Sec`|Die Anzahl der Berichtsübermittlungen pro Sekunde, von jeder Übermittlungserweiterung.|  
 |`Events/Sec`|Die Anzahl der pro Sekunde verarbeiteten Ereignisse. Zu den überwachten Ereignissen gehören `SnapshotUpdated` und `TimedSubscription`.|  
 |`First Session Requests/Sec`|Die Anzahl neuer Berichtsausführungssitzungen, die pro Sekunde erstellt wurden.|  
-|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der*In-Memory-Cache* ist ein Bestandteil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
+|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der *in-Memory-Cache* ist ein Teil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
 |`Memory Cache Misses/Sec`|Die Angabe, wie oft Berichte pro Sekunde nicht aus dem In-Memory-Cache abgerufen werden können.|  
 |`Next Session Requests/Sec`|Die Anzahl der Anforderungen für Berichte, die in einer vorhandenen Sitzung geöffnet sind, pro Sekunde (z. B. Berichte, die aus der Momentaufnahme einer Sitzung gerendert wurden).|  
 |`Report Requests`|Die Anzahl der Berichte, die derzeit aktiv sind und vom Berichtsserver verarbeitet werden. Verwenden Sie diesen Leistungsindikator, um die Zwischenspeicherungsstrategie auszuwerten. Es können u. U. wesentlich mehr Anforderungen als generierte Berichte vorhanden sein.|  
@@ -104,7 +104,7 @@ ms.locfileid: "72782834"
 |`Requests/Sec`|Die Gesamtanzahl erfolgreicher Anforderungen, die vom Berichtsserverdienst pro Sekunde verarbeitet wurden.|  
 |`Snapshot Updates/Sec`|Die Gesamtanzahl der Updates von Berichtsausführungs-Momentaufnahmen pro Sekunde.|  
 |`Total App Domain Recycles`|Die Gesamtzahl der Anwendungsdomänenzyklen, nachdem der Berichtsserver-Windows-Dienst gestartet wurde.|  
-|**Cacheleerungen gesamt**|Die Gesamtzahl der Cacheupdates des Berichtsservers, nachdem der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, wenn die Anwendungsdomäne wiederverwendet wird. Siehe `Cache Flushes/Sec`.|  
+|**Cache Leerungen Gesamt**|Die Gesamtzahl der Cacheupdates des Berichtsservers, nachdem der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, wenn die Anwendungsdomäne wiederverwendet wird. Siehe `Cache Flushes/Sec`.|  
 |`Total Cache Hits`|Die Gesamtzahl der Anforderungen nach direkt aus dem Cache verarbeiteten Berichten, nachdem der Berichtsserver-Windows-Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, wenn die Anwendungsdomäne wiederverwendet wird. Siehe `Cache Hits/Sec`.|  
 |`Total Cache Hits (Semantic Models)`|Die Gesamtanzahl der Modellanforderungen, die direkt aus dem Cache verarbeitet wurden, nachdem der Berichtsserver-Windows-Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, wenn die Anwendungsdomäne wiederverwendet wird.|  
 |`Total Cache Misses`|Die Gesamtanzahl, wie oft ein Bericht nicht aus dem Cache zurückgegeben werden konnte, nachdem der Berichtsserver-Windows-Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, wenn die Anwendungsdomäne wiederverwendet wird. Siehe `Cache Misses/Sec`.|  
@@ -119,8 +119,8 @@ ms.locfileid: "72782834"
 |`Total Requests`|Die Gesamtzahl der erfolgreich ausgeführten Berichte, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, wenn die Anwendungsdomäne wiederverwendet wird.|  
 |`Total Snapshot Updates`|Die Gesamtanzahl der Updates von Berichtsausführungs-Momentaufnahmen.|  
   
-##  <a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
- ![PowerShell-bezogener Inhalt](../media/rs-powershellicon.jpg "PowerShell-bezogener Inhalt") Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen countersetname mit "MSR" beginnt.  
+##  <a name="bkmk_powershell"></a>Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
+ ![PowerShell-bezogener Inhalt](../media/rs-powershellicon.jpg "PowerShell-Inhalt") Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen countersetname mit "MSR" beginnt.  
   
 ```powershell
 Get-Counter -ListSet msr*
@@ -139,6 +139,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 (Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Überwachen der Leistung des Berichtsservers](monitoring-report-server-performance.md)   
- [Leistungsindikatoren für den MSRS 2014-Webdienst und den MSRS 2014-Windows &#40;-Dienst-Leistungs Objekte im einheitlichen Modus&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Überwachen der Leistung des Berichts Servers](monitoring-report-server-performance.md)   
+ [Leistungsindikatoren für den MSRS 2014-Webdienst und den MSRS 2014-Windows-Dienst-Leistungs Objekte &#40;einheitlichen Modus&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

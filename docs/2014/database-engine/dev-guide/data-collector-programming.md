@@ -1,5 +1,5 @@
 ---
-title: Programmieren mit dem Datensammler | Microsoft-Dokumentation
+title: Programmierung von Datensammlern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 11da8d77f5ea97dc435b9af23090d1d34da0f05c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753115"
 ---
 # <a name="data-collector-programming"></a>Programmieren mit dem Datensammler
@@ -24,6 +24,6 @@ ms.locfileid: "62753115"
   
  Die folgende Abbildung zeigt Schlüsselelemente des Datensammler-Objektmodells.  
   
- ![Objektmodell für den Collector](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "Objektmodell für den Datensammler")  
+ ![Objektmodell für den Datensammler](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "Objektmodell für den Datensammler")  
   
   

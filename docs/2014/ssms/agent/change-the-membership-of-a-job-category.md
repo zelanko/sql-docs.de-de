@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782787"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -31,9 +31,9 @@ ms.locfileid: "72782787"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
--   **So ändern Sie die Mitgliedschaft einer Auftragskategorie mit**  
+-   **So ändern Sie die Mitgliedschaft einer Auftrags Kategorie mit:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "72782787"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
@@ -56,13 +56,13 @@ ms.locfileid: "72782787"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Wählen Sie im Dialogfeld **Auftragskategorien verwalten -** _Servername_ die Auftragskategorie aus, die Sie bearbeiten möchten, und klicken Sie dann auf **Aufträge anzeigen**.  
+4.  Wählen Sie im Dialogfeld **Auftrags Kategorien verwalten**_server_name_ die Auftrags Kategorie aus, die Sie bearbeiten möchten, und klicken Sie dann auf **Aufträge anzeigen**.  
   
 5.  Aktivieren Sie das Kontrollkästchen **Alle Aufträge anzeigen** .  
   
 6.  Um der Kategorie einen Auftrag hinzuzufügen, aktivieren Sie im Hauptraster in der **Select** -Spalte das Kontrollkästchen, das dem Auftrag entspricht. Um einen Auftrag aus der Kategorie zu entfernen, deaktivieren Sie das Kontrollkästchen. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten -** _Servername_ .  
+7.  Schließen Sie das Dialogfeld **Auftrags Kategorien verwalten**_server_name_ .  
   
 ##  <a name="TSQL"></a> Verwenden von Transact-SQL  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72782787"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_update_job &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So ändern Sie die Mitgliedschaft einer Auftragskategorie**  

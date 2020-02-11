@@ -1,5 +1,5 @@
 ---
-title: Referenz zur Benutzeroberfläche des Dialogfelds Rollen-Paket | Microsoft-Dokumentation
+title: Referenz zur Benutzeroberfläche des Dialog Felds Paket Rollen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056810"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paketrollen
-  Verwenden Sie das Dialogfeld **Paketrollen**, das in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügbar ist, um die Rollen auf Datenbankebene anzugeben, die Lesezugriff auf das Paket besitzen, sowie die Rollen auf Datenbankebene, die Schreibzugriff auf das Paket besitzen. Rollen auf Datenbankebene gelten nur für Pakete, die in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**-Datenbank gespeichert sind.  
+  Verwenden Sie das Dialogfeld **Paketrollen** , das in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]verfügbar ist, um die Rollen auf Datenbankebene anzugeben, die Lesezugriff auf das Paket besitzen, sowie die Rollen auf Datenbankebene, die Schreibzugriff auf das Paket besitzen. Rollen auf Datenbankebene gelten nur für Pakete, die in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** -Datenbank gespeichert sind.  
   
  Weitere Informationen zu den Rollen auf Datenbankebene von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und ihren Berechtigungen finden Sie unter [Integration Services-Rollen &#40;SSIS-Dienst&#41;](security/integration-services-roles-ssis-service.md).  
   
@@ -30,17 +30,17 @@ ms.locfileid: "66056810"
   
  Die **ownersid** -Spalte in der **sysssispackages** -Tabelle enthält die eindeutige Sicherheits-ID des Benutzers, der das Paket erstellt hat.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Paketname**  
  Gibt den Namen des Pakets an.  
   
- **Leserolle**  
+ **Leser-Rolle**  
  Auswählen einer Rolle in der Liste.  
   
- **Schreibrolle**  
+ **Writer-Rolle**  
  Auswählen einer Rolle in der Liste  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Rollen auf Datenbankebene](../relational-databases/security/authentication-access/database-level-roles.md)   
  [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   

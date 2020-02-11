@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786735"
 ---
 # <a name="collations-and-code-pages"></a>Sortierungen und Codepages
+  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] weist Einschränkungen bei unterstützten Codepages für (var)char-Spalten in speicheroptimierten Tabellen und unterstützten Sortierungen auf, die in Indizes und in systemintern kompilierten gespeicherten Prozeduren verwendet werden.  
   
  Die Codepage für einen (var)char-Wert bestimmt die Zuordnung zwischen Zeichen und der Bytedarstellung, die in der Tabelle gespeichert ist. So entspricht z. B. bei der Windows Latin 1-Codepage (1252; der[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Standard) das Zeichen „a“ dem Byte 0x61.  
@@ -82,7 +83,7 @@ GO
   
 -   Alle Ausdrücke und Sortiervorgänge in systemintern kompilierten gespeicherten Prozeduren müssen BIN2-Sortierungen verwenden. Es wird impliziert, dass alle Vergleiche und Sortiervorgänge auf den Unicode-Codepunkten der Zeichen (binäre Darstellung) basieren. Beispielsweise wird bei allen Sortierungen nach Groß-/Kleinschreibung unterschieden ("Z" kommt vor "a"). Bei Bedarf kann für Sortierungen und Vergleiche ohne Beachtung der Groß-/Kleinschreibung interpretiertes [!INCLUDE[tsql](../includes/tsql-md.md)] verwendet werden.  
   
--   Abschneiden von UTF-16-Daten wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Dies bedeutet, n (Var) Char (*n*) Werte können nicht konvertiert werden, n (Var) Char-Typ (*ich*), wenn *ich* < *n*, wenn die Sortierung hat _SC-Eigenschaft. Beispielsweise wird Folgendes nicht unterstützt:  
+-   Abschneiden von UTF-16-Daten wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Dies < *bedeutet, dass*n (var) char (*n*)-Werte nicht in den Typ n (var) char (*i*) konvertiert werden können *, wenn die*Sortierung über _SC Eigenschaft verfügt. Beispielsweise wird Folgendes nicht unterstützt:  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -142,7 +143,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

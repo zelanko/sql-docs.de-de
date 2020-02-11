@@ -1,5 +1,5 @@
 ---
-title: Ausführen von XPath-Abfragen mit Namespaces (verwaltete SQLXML Klassen) | Microsoft-Dokumentation
+title: Ausführen von XPath-Abfragen mit Namespaces (verwaltete SQLXML-Klassen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 793107e91425e4fa0df23211a6d4ea42afef8c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010794"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Ausführen von XPath-Abfragen mit Namespaces (Verwaltete SQLXML-Klassen)
   XPath-Abfragen können Namespaces enthalten. Wenn die Schemaelemente mit Namespace angegeben wurden (einen Zielnamespace verwenden), dann müssen mit diesem Schema ausgeführte XPath-Abfragen diesen Namespace angeben.  
   
- Weil die Verwendung des Platzhalterzeichens (*) in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 nicht unterstützt wird, müssen Sie die XPath-Abfrage mithilfe eines Namespacepräfixes angeben. Um das Präfix aufzulösen, verwenden Sie die Namespaces-Eigenschaft, die Namespacebindung an.  
+ Weil die Verwendung des Platzhalterzeichens (*) in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 nicht unterstützt wird, müssen Sie die XPath-Abfrage mithilfe eines Namespacepräfixes angeben. Um das Präfix aufzulösen, geben Sie mit der Namespace-Eigenschaft die Namespace Bindung an.  
   
- Im folgenden Beispiel gibt die XPath-Abfrage Namespaces mit dem Platzhalterzeichen (\*) und die local-name() and Namespace-URI()=' XPath-Funktionen. Diese XPath-Abfrage gibt alle Elemente zurück, bei denen der lokale Name `Employee` und der Namespace-URI `urn:myschema:Contacts` lautet:  
+ Im folgenden Beispiel gibt die XPath-Abfrage Namespaces mit den Platzhalter Zeichen (\*) und den XPath-Funktionen local-Name () und Namespace-URI () an. Diese XPath-Abfrage gibt alle Elemente zurück, bei denen der lokale Name `Employee` und der Namespace-URI `urn:myschema:Contacts` lautet:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -52,9 +52,9 @@ ms.locfileid: "66010794"
 </schema>  
 ```  
   
- Da den Target Namespace dieses Schemas definiert wird, muss eine XPath-Abfrage (z. B. "Employee") mit diesem Schema den Namespace enthalten.  
+ Da dieses Schema den Ziel Namespace definiert, muss eine XPath-Abfrage (z. b. "Employee") für dieses Schema den Namespace enthalten.  
   
- Die folgende C#-Beispielanwendung führt mit dem angegebenen XSD-Schema (MySchema.xml) eine XPath-Abfrage aus. Um das Präfix aufzulösen, geben Sie die Namespacebindung mithilfe der Namespaces-Eigenschaft des SqlXmlCommand-Objekt.  
+ Die folgende C#-Beispielanwendung führt mit dem angegebenen XSD-Schema (MySchema.xml) eine XPath-Abfrage aus. Um das Präfix aufzulösen, geben Sie die Namespace Bindung mithilfe der Namespaces-Eigenschaft des SqlXmlCommand-Objekts an.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  
@@ -96,7 +96,7 @@ class Test
   
 1.  Speichern Sie das oben in diesem Beispiel bereitgestellte XSD-Schema (MySchema.xml) in einem Ordner.  
   
-2.  Speichern Sie die c#-Code (DocSample.cs), der bereitgestellt wird, in diesem Beispiel im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
+2.  Speichern Sie den c#-Code (DocSample.cs), der in diesem Beispiel bereitgestellt wird, im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
   
 3.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   

@@ -1,5 +1,5 @@
 ---
-title: Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts | Microsoft-Dokumentation
+title: Implementieren einer Signatur Richtlinie durch Festlegen eines Registrierungs Werts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058221"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
@@ -34,7 +34,7 @@ ms.locfileid: "66058221"
   
  In der folgenden Tabelle werden die gültigen Werte der DWORD-Daten und ihre verbundenen Richtlinien aufgelistet.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Keine administrative Einschränkung.|  
 |1|Blockieren von ungültigen Signaturen.<br /><br /> Bei dieser Einstellung werden nicht signierte Pakete nicht blockiert.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66058221"
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-2.  Geben Sie im Dialogfeld Ausführen `Regedit`, und klicken Sie dann auf **OK**.  
+2.  Geben `Regedit`Sie im Dialogfeld Ausführen ein, und klicken Sie dann auf **OK**.  
   
 3.  Suchen Sie den Schlüssel HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66058221"
   
 5.  Aktualisieren Sie den Namen des neuen Werts auf `BlockedSignatureStates`.  
   
-6.  Mit der rechten Maustaste `BlockedSignatureStates` , und klicken Sie auf **ändern**.  
+6.  Klicken Sie mit `BlockedSignatureStates` der rechten Maustaste auf **ändern**.  
   
 7.  Geben Sie im Dialogfeld **DWORD-Wert bearbeiten** den Wert 0, 1, 2, oder 3 ein.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66058221"
   
 9. Klicken Sie im Menü **Datei** auf **Beenden**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identifizieren der Quelle von Paketen mit digitalen Signaturen](security/identify-the-source-of-packages-with-digital-signatures.md)  
   

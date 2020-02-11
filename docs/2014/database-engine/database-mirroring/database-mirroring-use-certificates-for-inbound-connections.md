@@ -1,5 +1,5 @@
 ---
-title: Zulassen der Datenbankspiegelungs-Endpunkt für die Verwendung von Zertifikaten für eingehende Verbindungen (Transact-SQL) | Microsoft-Dokumentation
+title: Zulassen der Verwendung von Zertifikaten für eingehende Verbindungen für einen Datenbankspiegelungs-Endpunkt (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807558"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Ermöglichen des Verwendens von Zertifikaten für eingehende Verbindungen für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "62807558"
   
  Die folgende Prozedur beschreibt diese Schritte detailliert. Für jeden Schritt enthält die Prozedur ein Beispiel für das Konfigurieren einer Serverinstanz auf einem System namens HOST_A. Im zugehörigen Beispielabschnitt werden dieselben Schritte für eine andere Serverinstanz auf einem System namens HOST_B beschrieben.  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>So konfigurieren Sie Serverinstanzen für eingehende Spiegelungsverbindungen (auf HOST_A)  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>So konfigurieren Sie Serverinstanzen für eingehende Spiegelungsverbindungen (auf HOST_A)  
   
 1.  Erstellen eines Anmeldenamens für das andere System  
   
@@ -157,13 +157,13 @@ GO
   
  Weitere Informationen zum Erstellen einer Spiegeldatenbank, einschließlich eines Transact-SQL-Beispiels, finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Ein Transact-SQL-Beispiel zum Einrichten einer Sitzungs im hochleistungsmodus finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Ein Transact-SQL-Beispiel zum Einrichten einer Sitzung im Hochleistungsmodus finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Verwenden Sie zum Kopieren eines Zertifikats zu einem anderen System eine sichere Kopiermethode. Seien Sie äußerst vorsichtig, um Ihre Zertifikate zu schützen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Transport Sicherheit für Daten Bank Spiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT (Endpunktberechtigungen) (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Einrichten einer verschlüsselten Spiegeldatenbank](set-up-an-encrypted-mirror-database.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   

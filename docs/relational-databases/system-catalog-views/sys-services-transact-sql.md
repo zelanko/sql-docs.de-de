@@ -1,5 +1,5 @@
 ---
-title: Sys.Services (Transact-SQL) | Microsoft-Dokumentation
+title: sys. Services (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19e65117a03de6b473eced3c7c1379943c851a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078661"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68078661"
 
   Diese Katalogsicht enthält eine Zeile für jeden Dienst in der Datenbank.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nach Groß-/Kleinschreibung unterschiedener Name des in der Datenbank eindeutigen Diensts. Lässt keine NULL-Werte zu.|  
 |**service_id**|**int**|Bezeichner des Diensts. Lässt keine NULL-Werte zu.|  

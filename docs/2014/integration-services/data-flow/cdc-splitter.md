@@ -13,22 +13,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828231"
 ---
 # <a name="cdc-splitter"></a>CDC-Splitter
   Der CDC-Splitter teilt einen einzelnen Fluss von Änderungszeilen aus einem CDC-Quelldatenfluss in unterschiedliche Datenflüsse für Einfüge-, Update und Löschvorgänge auf. Der Datenfluss wird basierend auf der erforderlichen Spalte `__$operation` und seinen Standardwerten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen geteilt.  
   
-|Wert des Vorgangs|Ausgabe|Description|  
+|Wert des Vorgangs|Output|BESCHREIBUNG|  
 |------------------------|------------|-----------------|  
-|1|DELETE|Gelöschte Zeile|  
-|2|Insert|Eingefügte Zeile (nicht verfügbar bei Verwendung des CDC-Modus **Net with merge** )|  
-|3|Update|Zeile vor Update (nur bei Verwendung des CDC-Modus **All with Old Values** verfügbar)|  
-|4|Update|Zeile nach Update (folgt auf die Zeile vor Update)|  
-|5|Update|Mergezeile (nur bei Verwendung des CDC-Modus **Net with merge** verfügbar)|  
+|1|Löschen|Gelöschte Zeile|  
+|2|Einfügen|Eingefügte Zeile (nicht verfügbar bei Verwendung des CDC-Modus **Net with merge** )|  
+|3|Aktualisieren|Zeile vor Update (nur bei Verwendung des CDC-Modus **All with Old Values** verfügbar)|  
+|4|Aktualisieren|Zeile nach Update (folgt auf die Zeile vor Update)|  
+|5|Aktualisieren|Mergezeile (nur bei Verwendung des CDC-Modus **Net with merge** verfügbar)|  
 |Andere|Fehler||  
   
  Sie können den Splitter verwenden, um vordefinierte INSERT-, DELETE- und UPDATE-Ausgaben zur weiteren Verarbeitung zu verbinden.  
@@ -40,9 +40,9 @@ ms.locfileid: "62828231"
   
  Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Auf 1 festlegen.  
+-   **Fehlercode**: Auf 1 festgelegt.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
 -   **Fehlerzeilenspalten**: Die Eingabespalten der Zeile, die den Fehler verursacht hat.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62828231"
   
 -   Klicken Sie auf dem Bildschirm **Datenfluss** des [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] -Projekts mit der rechten Maustaste auf den CDC-Splitter, und wählen Sie **Erweiterten Editor anzeigen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Weiterleiten des CDC-Datenstroms gemäß Änderungstyp](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

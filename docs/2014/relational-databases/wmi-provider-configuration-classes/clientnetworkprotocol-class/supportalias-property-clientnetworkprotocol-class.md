@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62826756"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias-Eigenschaft (ClientNetworkProtocol-Klasse)
@@ -36,8 +36,8 @@ object
 .SupportAlias [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
  Ein [ClientNetworkProtocol-Klassenobjekt](clientnetworkprotocol-class.md) , das das vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
@@ -47,9 +47,9 @@ object
   
  Wenn der Wert "False" lautet, unterstützt das Clientnetzwerkprotokoll keine Aliase.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

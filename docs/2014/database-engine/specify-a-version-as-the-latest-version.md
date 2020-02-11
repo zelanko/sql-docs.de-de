@@ -1,5 +1,5 @@
 ---
-title: Angeben einer Version als die neueste Version | Microsoft-Dokumentation
+title: Geben Sie eine Version als neueste Version an | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773476"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Angeben einer Version als letzte Version
@@ -28,40 +28,40 @@ ms.locfileid: "62773476"
   
  Sie können die letzte Version folgendermaßen bestimmen:  
   
--   **Festhalten einer Version**. Wenn Sie eine Dateiversion festhalten, werden Versionen, die jünger als die festgehaltene Version sind, nicht gelöscht. Außerdem können Sie das Festhalten einer Datei aufheben, die Sie zuvor festgehalten haben. Dabei wird die zuletzt eingecheckte Version der Datei zur letzten Version. Sie können aber keine festgehaltene Datei auschecken.  
+-   **Anhenung einer Version**. Wenn Sie eine Dateiversion festhalten, werden Versionen, die jünger als die festgehaltene Version sind, nicht gelöscht. Außerdem können Sie das Festhalten einer Datei aufheben, die Sie zuvor festgehalten haben. Dabei wird die zuletzt eingecheckte Version der Datei zur letzten Version. Sie können aber keine festgehaltene Datei auschecken.  
   
--   **Rollback zu einer angegebenen Version**. Wenn Sie ein Rollback zu einer Version ausführen, werden alle aktuelleren Versionen aus der Quellcodeverwaltung gelöscht. Sie können dann die letzte verbleibende Version auschecken.  
+-   **Rollback zu einer bestimmten Version**. Wenn Sie ein Rollback zu einer Version ausführen, werden alle aktuelleren Versionen aus der Quellcodeverwaltung gelöscht. Sie können dann die letzte verbleibende Version auschecken.  
   
 ### <a name="to-pin-a-version"></a>So halten Sie eine Version fest  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], öffnen Sie die Projektmappe.  
+1.  Öffnen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Sie in die Projekt Mappe.  
   
 2.  Wählen Sie im Projektmappen-Explorer die Datei aus, die Sie als letzte Version angeben möchten.  
   
-3.  Auf der **Datei** Startmenü **Quellcodeverwaltung** , und klicken Sie auf **ViewHistory**.  
+3.  Zeigen Sie im Menü **Datei** auf **Quell** Code Verwaltung, und klicken Sie auf **ViewHistory**.  
   
-4.  In der **Verlauf** \<Datei > Dialogfeld Feld, wählen Sie die Version, die Sie verwenden möchten, geben Sie als die neueste Version aus, und klicken Sie auf **Pin**.  
+4.  Wählen Sie im Dialogfeld **Verlauf der** \<Datei> die Version aus, die Sie als letztes angeben möchten, **und klicken Sie auf**anheften.  
   
      Die von Ihnen ausgewählte Version wird mit einem entsprechenden Symbol als aktuelle Dateiversion gekennzeichnet. Wenn eine andere Version in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] geladen wurde, werden Sie aufgefordert, die Datei neu zu laden.  
   
 ### <a name="to-roll-back-to-a-version"></a>So führen Sie ein Rollback zu einer Version aus  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], öffnen Sie die Projektmappe.  
+1.  Öffnen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Sie in die Projekt Mappe.  
   
 2.  Wählen Sie im Projektmappen-Explorer das Element aus, das Sie als letzte Version angeben möchten.  
   
-3.  Auf der **Datei** Startmenü **Quellcodeverwaltung** , und klicken Sie auf **Verlauf**.  
+3.  Zeigen Sie im Menü **Datei** auf **Quell** Code Verwaltung, und klicken Sie auf **Verlauf**.  
   
-4.  In der **Verlaufsoptionen** Dialogfeld klicken Sie auf **OK** zum Anzeigen der **Versionsgeschichte von Datei** im Dialogfeld.  
+4.  Klicken Sie im Dialogfeld Versions Verlaufs **Optionen** auf **OK** , um das Dialogfeld **Verlauf der Datei** anzuzeigen.  
   
-5.  In der **Versionsgeschichte von Datei** Feld, wählen Sie die Version, die Sie verwenden möchten, geben Sie als letzte Version, und klicken Sie auf **Rollback**.  
+5.  Wählen Sie im Feld **Verlauf der Datei** die Version aus, die Sie als neueste Version angeben möchten, und klicken Sie auf **Rollback**.  
   
      Eine Meldung wird angezeigt, in der Sie darüber benachrichtigt werden, dass alle Versionen nach der von Ihnen ausgewählten Version gelöscht werden.  
   
-6.  Klicken Sie auf **Ja** Rollback zur ausgewählten Version.  
+6.  Klicken Sie auf **Ja** , um ein Rollback zur ausgewählten Version auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von Eincheckvorgängen](../../2014/database-engine/manage-checkins.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Check-Ins verwalten](../../2014/database-engine/manage-checkins.md)   
  [Einchecken von Dateien](../../2014/database-engine/check-in-files.md)  
   
   

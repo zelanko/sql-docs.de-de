@@ -1,5 +1,5 @@
 ---
-title: Editor für Fuzzygruppierung Transformation (Registerkarte Erweitert) | Microsoft-Dokumentation
+title: Transformations-Editor für Fuzzygruppierung (Registerkarte Erweitert) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,28 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058369"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Transformations-Editor für Fuzzygruppierung (Registerkarte Erweitert)
   Geben Sie mithilfe der Registerkarte **Erweitert** von **Transformations-Editor für Fuzzygruppierung** die Ein- und Ausgabespalten an, legen Sie Schwellenwerte für die Ähnlichkeit fest, und definieren Sie Begrenzungszeichen.  
   
 > [!NOTE]  
->  Die `Exhaustive` und die `MaxMemoryUsage` Eigenschaften der Transformation für Fuzzygruppierung sind nicht verfügbar, in der **Transformation Editor für Fuzzygruppierung**, aber kann festgelegt werden, mithilfe der **Erweiterter Editor**. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzgruppierung von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Die `Exhaustive` -Eigenschaft `MaxMemoryUsage` und die-Eigenschaft der Transformation für Fuzzygruppierung sind im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, können jedoch mit dem- **Erweiterter Editor**festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzgruppierung von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Weitere Informationen zur Transformation für Fuzzygruppierung finden Sie unter [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-## <a name="options"></a>Optionen  
- **Name der Eingabeschlüsselspalte**  
+## <a name="options"></a>Tastatur  
+ **Name der Eingabe Schlüssel Spalte**  
  Geben Sie den Namen einer Ausgabespalte an, die den eindeutigen Bezeichner für jede Eingabezeile enthält. Die `_key_in`-Spalte enthält einen für jede Zeile eindeutigen Wert.  
   
- **Name der Ausgabeschlüsselspalte**  
+ **Name der Ausgabe Schlüssel Spalte**  
  Geben Sie den Namen einer Ausgabespalte an, die den eindeutigen Bezeichner für die kanonische Zeile einer Gruppe doppelter Zeilen enthält. Die `_key_out`-Spalte entspricht dem `_key_in`-Wert der kanonischen Datenzeile.  
   
- **Name der Ähnlichkeitsergebnisspalte**  
+ **Name der Ähnlichkeits Bewertungs Spalte**  
  Geben Sie einen Namen für die Spalte an, die das Ähnlichkeitsergebnis enthält. Das Ähnlichkeitsergebnis ist ein Wert zwischen 0 und 1, der die Ähnlichkeit zwischen der Eingabezeile und der kanonischen Zeile anzeigt. Je näher das Ergebnis an 1 liegt, desto genauer stimmt die Zeile mit der kanonischen Zeile überein.  
   
  **Schwellenwert für Ähnlichkeit**  
@@ -45,7 +45,7 @@ ms.locfileid: "66058369"
  **Tokentrennzeichen**  
  Die Transformation bietet einen Standardsatz von Trennzeichen, um Daten mit Tokens zu versehen. Sie können durch Bearbeiten der Liste aber ggf. Trennzeichen hinzufügen oder entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678994"
 ---
 # <a name="advanced-save-options"></a>Erweiterte Speicheroptionen
-  Mithilfe dieses Dialogfelds können Sie ein Sprachcodierungsschema auswählen und die Zeichen festlegen, die am Ende jeder Zeile eingefügt werden. Für den Zugriff auf die **Erweiterte Speicheroptionen** Dialogfelds die **Datei** Menü klicken Sie auf **speichern** \<Abfragename > **.sql unter** auf Öffnen Sie die **Datei speichern unter** (Dialogfeld), klicken Sie auf den Pfeil nach unten auf der **speichern** Schaltfläche, und klicken Sie dann auf **mit Codierung speichern**.  
+  Mithilfe dieses Dialogfelds können Sie ein Sprachcodierungsschema auswählen und die Zeichen festlegen, die am Ende jeder Zeile eingefügt werden. Um auf das Dialogfeld **Erweiterte Speicheroptionen** zuzugreifen, klicken Sie im Menü **Datei** auf Abfrage Name>**. SQL** **Speichern** \<unter, um das Dialogfeld **Datei speichern** unter zu öffnen, klicken Sie auf den Pfeil nach unten auf der Schaltfläche **Speichern** , und klicken Sie dann auf **mit Codierung speichern**.  
   
-## <a name="options"></a>Optionen  
- **Codierung**  
+## <a name="options"></a>Tastatur  
+ **Codieren**  
  Mithilfe dieses Listenfelds können Sie auf die Zieldatei ein neues Sprachcodierungsschema anwenden.  
   
  **Zeilenenden**  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714717"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
@@ -60,11 +60,11 @@ ms.locfileid: "62714717"
   
  Ob Filter verfügbar sind, ist von der Datenspalte abhängig. Einige Datenspalten können nicht gefiltert werden. Filterbare Datenspalten können nur durch bestimmte relationale Operatoren gefiltert werden, wie Sie der folgenden Tabelle entnehmen können.  
   
-|Relationaler Operator|Operatorsymbol|Description|  
+|Relationaler Operator|Operatorsymbol|BESCHREIBUNG|  
 |-------------------------|---------------------|-----------------|  
-|Wie|Wie|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
+|Wie|LIKE|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
 |Nicht wie|Nicht wie|Die Ereignisablaufverfolgungsdaten dürfen nicht dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
-|Ist gleich|=|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Wert entsprechen. Mehrere Werte sind zulässig.|  
+|Equals|=|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Wert entsprechen. Mehrere Werte sind zulässig.|  
 |Ungleich|<>|Die Ereignisablaufverfolgungsdaten dürfen dem eingegebenen Wert nicht entsprechen. Mehrere Werte sind zulässig.|  
 |Größer als|>|Die Ereignisablaufverfolgungsdaten müssen größer als der eingegebene Wert sein.|  
 |Größer als oder gleich|>=|Die Ereignisablaufverfolgungsdaten müssen mindestens so groß wie der eingegebene Wert sein.|  
@@ -85,7 +85,7 @@ ms.locfileid: "62714717"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Dauer**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**Fehler**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -126,8 +126,8 @@ ms.locfileid: "62714717"
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ereignisse in dieser Datenspalte zu filtern. Weitere Informationen finden Sie unter [Filtern von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**Zustand**|=, <>, >=, <=|  
-|**Success**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|**Erfolgreich**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ereignisse in dieser Datenspalte zu filtern. Weitere Informationen finden Sie unter [Filtern von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -137,7 +137,7 @@ ms.locfileid: "62714717"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> Wenn die Ablaufverfolgung für Ereignisse aus der **Osql** Hilfsprogramm oder **Sqlcmd** Dienstprogramm immer angefügt **%** Filtern in der **TextData**  Datenspalte.  
+ <sup>1</sup> Wenn **%** Sie die Ablauf Verfolgung von Ereignissen aus dem Hilfsprogramm **osql** oder dem Hilfsprogramm **sqlcmd** ausführen, fügen Sie den Filtern in der **TextData** -Datenspalte immer an.  
   
  Die SQL-Ablaufverfolgung nimmt aus Gründen der Sicherheit automatisch alle Informationen aus sicherheitsbezogenen gespeicherten Prozeduren von der Ablaufverfolgung aus, die sich auf Kennwörter auswirken. Dieser Sicherheitsmechanismus kann nicht konfiguriert werden und ist immer wirksam. Auf diese Weise wird die Aufzeichnung von Kennwörtern durch Benutzer verhindert, die normalerweise berechtigt sind, Ablaufverfolgungen für alle Aktivitäten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auszuführen.  
   

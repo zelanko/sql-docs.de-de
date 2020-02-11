@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767382"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Schritt 2: Erstellen einer beschädigten Datei
@@ -34,12 +34,12 @@ ms.locfileid: "62767382"
   
     3.  Klicken Sie auf die Datei SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Der Text-Editor suchen und ersetzen alle Instanzen von `VEB` und Ersetzen Sie sie durch `BAD`.  
+2.  Verwenden Sie die Funktion "suchen und ersetzen" des Text-Editors, `VEB` um alle Instanzen von `BAD`zu suchen und diese durch zu ersetzen.  
   
-3.  Speichern Sie im gleichen Ordner wie die anderen Beispieldatendateien die geänderte Datei als `Currency_BAD.txt`.  
+3.  Speichern Sie im gleichen Ordner wie die anderen Beispiel Datendateien die geänderte Datei unter `Currency_BAD.txt`.  
   
     > [!IMPORTANT]  
-    >  Stellen Sie sicher, dass `Currency_BAD.txt` als die anderen Beispieldatendateien die gleichen Ordner gespeichert.  
+    >  Stellen Sie sicher `Currency_BAD.txt` , dass in demselben Ordner wie die anderen Beispiel Datendateien gespeichert wird.  
   
 4.  Schließen Sie den Texteditor.  
   

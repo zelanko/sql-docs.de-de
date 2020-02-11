@@ -1,5 +1,5 @@
 ---
-title: Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation
+title: Verwaltete Instanz Details (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774342"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
@@ -26,23 +26,23 @@ ms.locfileid: "62774342"
   
  Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nach Auslastungskategorie an:  
   
--   Grünes Häkchen ![](../../2014/database-engine/media/well-utilized.gif "Normal ausgelastet"): Die Anzahl verwalteter Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegen keine Richtlinien zur Ressourcenverwendung verstoßen. Die Ressourcen sind normal ausgelastet.  
+-   Grünes Häkchen – ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") : Anzahl der verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die nicht gegen Richtlinien zur Ressourcennutzung verstoßen. Die Ressourcen sind normal ausgelastet.  
   
--   Grüner Abwärtspfeil ![](../../2014/database-engine/media/utility-down-arrow.gif "Hilfsprogramm_Abwärtspfeil"): Die Ressourcen sind unterausgelastet.  
+-   Grüner Pfeil nach unten – ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") : Die Ressourcen sind unterausgelastet.  
   
--   Roter Aufwärtspfeil ![](../../2014/database-engine/media/utility-up-arrow.gif "Hilfsprogramm_Aufwärtspfeil"): Die Ressourcen sind überausgelastet.  
+-   Roter Pfeil nach oben – ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") : Die Ressourcen sind überausgelastet.  
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
- Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)**. Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Die folgenden Spalten enthalten standardmäßig Zustandsinformationen zu den einzelnen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Instanz-CPU: Zeigt den Zustand der Prozessorauslastung für diese Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [ Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Instanz-CPU: Zeigt den Zustand der Prozessorauslastung für diese Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [reduzieren von Rauschen in Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Um den Verlauf der Prozessorauslastung für diese Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]anzuzeigen bzw. die Richtliniengrenzwerte einzusehen oder zu ändern, klicken Sie auf die Registerkarte **CPU-Auslastung** .  
   
--   Computer-CPU: Zeigt den Zustand der Prozessorauslastung für den Computer an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für den Computer festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [ Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Computer-CPU: Zeigt den Zustand der Prozessorauslastung für den Computer an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für den Computer festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [reduzieren von Rauschen in Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Um den Verlauf der Prozessorauslastung für diese Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]anzuzeigen bzw. die Richtliniengrenzwerte einzusehen oder zu ändern, klicken Sie auf die Registerkarte **CPU-Auslastung** .  
   
@@ -68,17 +68,17 @@ ms.locfileid: "62774342"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: ("True" oder "false")  
+-   Gruppiert: (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Groß-/Kleinschreibung beachten: ("True" oder "false")  
+-   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
   
 -   Sprache:  
   
--   Zuletzt gemeldet: In dieser Spalte wird UCP lokale Datum und Uhrzeit, die mit dem Datentyp "DateTime". Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
+-   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz und die CPU-Auslastung des Computers.  
@@ -165,19 +165,19 @@ ms.locfileid: "62774342"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: ("True" oder "false")  
+-   Gruppiert: (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Groß-/Kleinschreibung beachten: ("True" oder "false")  
+-   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
   
 -   Sprache:  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Dashboard des Hilfsprogramms &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [SQL Server-Hilfsprogramm des Utility-Dashboards &#40;&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Problembehandlung beim SQL Server-Hilfsprogramm](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  

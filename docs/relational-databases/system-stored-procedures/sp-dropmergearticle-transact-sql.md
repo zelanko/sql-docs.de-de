@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergearticle (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dropmergearticle (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056482"
 ---
-# <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
+# <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt einen Artikel aus einer Mergeveröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Entfernt einen Artikel aus einer Mergeveröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,38 +43,38 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, aus denen einen Artikel gelöscht werden. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung, aus der ein Artikel gelöscht werden soll. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Ist der Name des Artikels, der aus der angegebenen Veröffentlichung zu löschen. *Artikel*ist **Sysname**, hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn *Artikel* ist **alle**, die Veröffentlichung noch muss gelöscht werden separat aus dem Artikel.  
+`[ @article = ] 'article'`Der Name des Artikels, der aus der angegebenen Veröffentlichung gelöscht werden soll. der *Artikel*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn der *Artikel* voll **ständig**ist, muss die Veröffentlichung getrennt vom Artikel abgelegt werden.  
   
-`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**.  
+`[ @ignore_distributor = ] ignore_distributor`Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
-`[ @reserved = ] reserved` ist für die zukünftige Verwendung reserviert. *reservierte* ist **nvarchar(20)** , hat den Standardwert NULL.  
+`[ @reserved = ] reserved`Ist für die zukünftige Verwendung reserviert. *reserved* ist vom Datentyp **nvarchar (20)** und hat den Standardwert NULL.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig erklärt. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *force_invalidate_snapshot* ist ein **Bit**und hat den Standardwert **0**.  
   
- **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird.  
+ der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass die Momentaufnahme ungültig wird.  
   
- **1** bedeutet, dass am Mergeartikel Änderungen kann dazu führen, dass die Momentaufnahme ungültig wird. wenn dies zutrifft, wird ein Wert von **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
+ **1** bedeutet, dass Änderungen am Mergeartikel bewirken können, dass die Momentaufnahme ungültig wird. wenn dies der Fall ist, wird mit dem Wert **1** die Berechtigung zum Auftreten der neuen Momentaufnahme erteilt.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Bestätigt, dass das Löschen des Artikels erneute Initialisierung vorhandener Abonnements erfordert. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Bestätigt, dass das Löschen des Artikels erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist ein **Bit**, der Standardwert ist **0**.  
   
- **0** gibt an, dass Löschen des Artikels nicht das Abonnement erneut initialisiert werden kann.  
+ der Wert **0** gibt an, dass das Löschen des Artikels nicht dazu führt, dass das Abonnement erneut initialisiert wird.  
   
- **1** bedeutet, dass dieser Artikel führt dazu, dass vorhandene Abonnements erneut initialisiert werden gelöscht und Berechtigung für den erneuten abonnementinitialisierung erteilt.  
+ **1** bedeutet, dass das Löschen des Artikels dazu führt, dass vorhandene Abonnements erneut initialisiert werden, und die Berechtigung zur erneuten Initialisierung des Abonnements erteilt.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata` Nur interne Verwendung.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_dropmergearticle** wird bei der Mergereplikation verwendet. Weitere Informationen zum Löschen von Artikeln finden Sie unter [hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_dropmergearticle** wird bei der Mergereplikation verwendet. Weitere Informationen zum [Löschen von Artikeln finden Sie unter Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- Ausführen von **Sp_dropmergearticle** zum Löschen eines Artikels aus einer Veröffentlichung entfernt nicht das Objekt aus der Veröffentlichungsdatenbank bzw. das entsprechende Objekt aus der Abonnementdatenbank. Verwenden Sie `DROP <object>`, um diese Objekte bei Bedarf manuell zu entfernen.  
+ Durch das Ausführen **sp_dropmergearticle** zum Löschen eines Artikels aus einer Veröffentlichung wird das Objekt nicht aus der Veröffentlichungs Datenbank oder dem entsprechenden Objekt aus der Abonnement Datenbank entfernt. Verwenden Sie `DROP <object>`, um diese Objekte bei Bedarf manuell zu entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergearticle**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_dropmergearticle**ausführen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -154,12 +154,12 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Löschen eines Artikels](../../relational-databases/replication/publish/delete-an-article.md)   
  [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

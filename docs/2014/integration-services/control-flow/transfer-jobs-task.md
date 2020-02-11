@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829896"
 ---
 # <a name="transfer-jobs-task"></a>Aufträge übertragen (Task)
@@ -39,7 +39,7 @@ ms.locfileid: "62829896"
 ## <a name="transferring-jobs-between-instances-of-sql-server"></a>Übertragen von Aufträgen zwischen Instanzen von SQL Server  
  Die Task "Aufträge übertragen" unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellen und -Ziele. Es gibt keinerlei Beschränkungen, welche Version Sie als Quelle oder Ziel verwenden.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Der Task Aufträge übertragen löst ein Informationsereignis aus, in dem die Anzahl der übertragenen Aufträge angegeben ist, und ein Warnungsereignis, wenn ein Auftrag überschrieben wird. Während der Auftrag übertragen wird, werden keine Angaben zum Fortschritt des Vorgangs gemacht – es wird lediglich 0 % und bei Abschluss 100 % angezeigt.  
   
 ## <a name="execution-value"></a>Ausführungswert  
@@ -62,7 +62,7 @@ ms.locfileid: "62829896"
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task Aufträge übertragen &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Aufträge übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor für den Task Aufträge übertragen &#40;Seite Aufträge&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62829896"
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   

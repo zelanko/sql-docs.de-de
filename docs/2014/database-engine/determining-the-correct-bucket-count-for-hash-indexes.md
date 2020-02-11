@@ -1,5 +1,5 @@
 ---
-title: Bestimmen der korrekten Bucketanzahl für Hashindizes | Microsoft-Dokumentation
+title: Bestimmen der korrekten Bucketanzahl für Hash Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754242"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Bestimmen der korrekten Bucketanzahl für Hashindizes
@@ -24,7 +24,7 @@ ms.locfileid: "62754242"
   
  Weitere Informationen zu nicht gruppierten Hashindizes finden Sie unter [Hash Indexes](hash-indexes.md) und [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Für jeden Hashindex in einer speicheroptimierten Tabelle wird eine Hashtabelle zugeordnet. Die Größe der Hashtabelle zugeordnet, für ein Index, durch angegeben wird die `BUCKET_COUNT` Parameter im [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) oder [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Die Bucketanzahl wird intern bis zur nächsten Zweierpotenz aufgerundet. Wenn als Bucketanzahl beispielsweise 300.000 angegeben wird, führt dies zu einer tatsächlichen Bucketanzahl von 524.288.  
+ Für jeden Hashindex in einer speicheroptimierten Tabelle wird eine Hashtabelle zugeordnet. Die Größe der Hash Tabelle, die für einen Index zugeordnet ist, wird `BUCKET_COUNT` durch den-Parameter in [CREATE TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-table-transact-sql) oder [Create Type &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-type-transact-sql)angegeben. Die Bucketanzahl wird intern bis zur nächsten Zweierpotenz aufgerundet. Wenn als Bucketanzahl beispielsweise 300.000 angegeben wird, führt dies zu einer tatsächlichen Bucketanzahl von 524.288.  
   
  Links zu einem Artikel und Videos zur Bucketanzahl finden Sie unter [Bestimmen der richtigen Bucketanzahl für Hashindizes (In-Memory OLTP)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -63,7 +63,7 @@ FROM
  Beim Beispielindex für (SpecialOfferID, ProductID) ist dies 121317/484 = 251. Dies bedeutet, dass der Durchschnitt von Indexschlüsselwerten 251 beträgt und es sich daher hier um einen nicht gruppierten Index handeln sollte.  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Problembehandlung für die Bucketanzahl  
- Bucketanzahl in speicheroptimierten Tabellen verwenden um beheben, [Sys. dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) um Statistiken zu den leeren Buckets und die Länge der zeilenketten zu erhalten. Mit der folgenden Abfrage können Statistiken zu allen Hashindizes in der aktuellen Datenbank abgerufen werden. Die Abfrage kann einige Zeit in Anspruch nehmen, wenn die Datenbank große Tabellen enthält.  
+ Um Probleme mit der Bucketanzahl in Speicher optimierten Tabellen zu beheben, verwenden Sie [sys. dm_db_xtp_hash_index_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) , um Statistiken über die leeren Bucket und die Länge der Zeilen Ketten abzurufen. Mit der folgenden Abfrage können Statistiken zu allen Hashindizes in der aktuellen Datenbank abgerufen werden. Die Abfrage kann einige Zeit in Anspruch nehmen, wenn die Datenbank große Tabellen enthält.  
   
 ```sql  
 SELECT   
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Zwei wichtige Indikatoren für den Zustand von Hashindizes lauten wie folgt:  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* gibt die Anzahl der leeren Buckets im Hashindex an.  
+ *empty_bucket_percent* gibt die Anzahl der leeren Bucket im Hashindex an.  
   
  Wenn *empty_bucket_percent* kleiner als 10 Prozent ist, ist die Bucketanzahl wahrscheinlich zu niedrig. Im Idealfall sollte *empty_bucket_percent* mindestens 33 Prozent betragen. Wenn die Bucketanzahl der Anzahl der Indexschlüsselwerte entspricht, ist ca. 1/3 der Buckets aufgrund der Hashverteilung leer.  
   
  *avg_chain_length*  
- *avg_chain_length* gibt die durchschnittliche Länge der Zeilenketten in den Hashbuckets an.  
+ *avg_chain_length* die die durchschnittliche Länge der Zeilen Ketten in den hashbuchern angibt.  
   
  Wenn *avg_chain_length* größer als 10 und *empty_bucket_percent* größer als 10 Prozent ist, sind wahrscheinlich zahlreiche doppelte Indexschlüsselwerte vorhanden, und ein nicht gruppierter Index wäre besser geeignet. Eine durchschnittliche Kettenlänge von 1 ist ideal.  
   
@@ -132,16 +132,16 @@ GO
 |Indexname|total_bucket_count|empty_bucket_count|empty_bucket_percent|avg_chain_length|max_chain_length|  
 |----------------|--------------------------|--------------------------|----------------------------|------------------------|------------------------|  
 |IX_Status|8|4|50|65536|65536|  
-|IX_OrderSequence|32768|13|0|8|26|  
-|PK_SalesOrd_B14003C3F8FB3364|262144|96319|36|1|8|  
+|IX_OrderSequence|32.768|13|0|8|26|  
+|PK_SalesOrd_B14003C3F8FB3364|262.144|96319|36|1|8|  
   
  Betrachten Sie die drei Hashindizes für diese Tabelle:  
   
--   IX_Status: 50 Prozent der Buckets sind leer, was gut ist. Die durchschnittliche Kettenlänge ist jedoch sehr hoch (65.536). Dies weist auf eine große Anzahl doppelter Werte hin. Die Verwendung eines nicht gruppierten Hashindexes ist in diesem Fall daher nicht sinnvoll. Stattdessen sollte ein nicht gruppierter Index verwendet werden.  
+-   IX_Status: 50 Prozent der Buckets sind leer, das ist positiv. Die durchschnittliche Kettenlänge ist jedoch sehr hoch (65.536). Dies weist auf eine große Anzahl doppelter Werte hin. Die Verwendung eines nicht gruppierten Hashindexes ist in diesem Fall daher nicht sinnvoll. Stattdessen sollte ein nicht gruppierter Index verwendet werden.  
   
--   IX_OrderSequence: 0 Prozent der Buckets sind leer, zu niedrig ist. Darüber hinaus beträgt die durchschnittliche Kettenlänge 8. Da die Werte in diesem Index eindeutig sind, bedeutet dies, dass durchschnittlich jedem Bucket 8 Werte zugeordnet sind. Die Bucketanzahl sollte erhöht werden. Da der Indexschlüssel 262.144 eindeutige Werte enthält, sollte die Bucketanzahl mindestens 262.144 betragen. Wenn zukünftiges Wachstum erwartet wird, sollte die Zahl größer sein.  
+-   IX_OrderSequence: 0 Prozent der Buckets sind leer. Dieser Wert ist zu niedrig. Darüber hinaus beträgt die durchschnittliche Kettenlänge 8. Da die Werte in diesem Index eindeutig sind, bedeutet dies, dass durchschnittlich jedem Bucket 8 Werte zugeordnet sind. Die Bucketanzahl sollte erhöht werden. Da der Indexschlüssel 262.144 eindeutige Werte enthält, sollte die Bucketanzahl mindestens 262.144 betragen. Wenn zukünftiges Wachstum erwartet wird, sollte die Zahl größer sein.  
   
--   Primärschlüsselindex (pk__salesorder…): 36 Prozent der Buckets sind leer, was gut ist. Außerdem beträgt die durchschnittliche Kettenlänge 1, was ebenfalls positiv ist. Es ist keine Änderung erforderlich.  
+-   Primärschlüssel Index (PK__SalesOrder...): 36 Prozent der Eimer sind leer, was gut ist. Außerdem beträgt die durchschnittliche Kettenlänge 1, was ebenfalls positiv ist. Es ist keine Änderung erforderlich.  
   
  Weitere Informationen zur Fehlerbehebung bei speicheroptimierten Hashindizes finden Sie unter [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
@@ -177,7 +177,7 @@ GO
 -   Wenn es sich bei den wichtigsten leistungskritischen Vorgängen um vollständige Indexscans handelt, verwenden Sie eine Bucketanzahl, die nah an der tatsächlichen Anzahl von Indexschlüsselwerten liegt.  
   
 ### <a name="big-tables"></a>Große Tabellen  
- Bei großen Tabellen kann die Arbeitsspeicherauslastung zu einem Problem werden. Beispielsweise ist der Mehraufwand für die Hashtabellen mit einer Tabelle von 250 Millionen Zeilen, die 4 Hashindizes, jeder mit einer Bucketanzahl von einer Milliarde, 4 Indizes * 1 Milliarde Buckets \* 8 Bytes = 32 GB Arbeitsspeicher. Wenn eine Bucketanzahl von 250 Millionen für jeden der Indizes ausgewählt wird, beträgt die benötigte Leistung für die Hashtabellen 8 GB. Beachten Sie, dass dies zusätzlich zu den 8 Bytes speicherauslastung jeder Index ist von jeder einzelnen Zeile, 8 GB in diesem Szenario wird hinzugefügt (4 Indizes \* 8 Byte \* 250 Millionen Zeilen).  
+ Bei großen Tabellen kann die Arbeitsspeicherauslastung zu einem Problem werden. Bei einer 250 Millionen-Zeilen Tabelle mit vier Hash Indizes, die jeweils über eine Bucketanzahl von 1 Milliarde verfügen, beträgt der Aufwand für die Hash Tabellen beispielsweise 4 Indizes * \* 1 Milliarde Bucket 8 Bytes = 32 Gigabyte Arbeitsspeicher Auslastung. Wenn eine Bucketanzahl von 250 Millionen für jeden der Indizes ausgewählt wird, beträgt die benötigte Leistung für die Hashtabellen 8 GB. Beachten Sie, dass dies zusätzlich zu den 8 Bytes der Speicherauslastung liegt, die jeder Index jeder einzelnen Zeile hinzufügt, d. h. 8 Gigabyte in diesem Szenario \* (4 \* Indizes 8 Bytes 250 Millionen Zeilen).  
   
  Vollständige Tabellenscans befinden sich normalerweise nicht im leistungskritischen Pfad für OLTP-Arbeitsauslastungen. Daher muss eine Wahl zwischen Arbeitsspeicherauslastung und Leistung von Punktsuchen und Einfügevorgängen getroffen werden:  
   
@@ -185,7 +185,7 @@ GO
   
 -   Beim Optimieren der Leistung für Punktsuchen ist eine höhere Bucketanzahl (das Zwei- oder Dreifache der Anzahl von eindeutigen Indexwerten) angemessen. Eine höhere Bucketanzahl würde eine erhöhte Speicherauslastung bedeuten und die benötigte Zeit für einen vollständigen Indexscan verlängern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Indizes für speicheroptimierte Tabellen](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

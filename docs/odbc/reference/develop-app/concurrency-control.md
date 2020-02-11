@@ -1,5 +1,5 @@
 ---
-title: Parallelitätssteuerung | Microsoft-Dokumentation
+title: Gleichzeitigkeitssteuerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083264"
 ---
-# <a name="concurrency-control"></a>Parallelitätssteuerung
-*Parallelität* ist die Fähigkeit von zwei Transaktionen, die die gleichen Daten zur gleichen Zeit verwenden und mit höheren Transaction Isolation in der Regel weniger ist. Dies ist da Transaktionsisolation normalerweise durch Sperren von Zeilen implementiert wird und wie weitere Zeilen gesperrt sind, weniger Transaktionen abgeschlossen werden, können ohne durch eine gesperrte Zeile zumindest vorübergehend blockiert. Während reduzierter Parallelität in der Regel als ein Kompromiss für höheren Isolationsstufen von Transaktionen beibehalten Datenbankintegrität akzeptiert wird, kann es ein Problem bei der interaktiven Anwendungen, mit hoher Lese-/Schreibzugriff-Aktivität, die Cursor verwendet werden.  
+# <a name="concurrency-control"></a>Gleichzeitigkeitssteuerung
+*Parallelität ist die* Fähigkeit von zwei Transaktionen, dieselben Daten gleichzeitig zu verwenden, und mit erhöhter Transaktions Isolation kommt es in der Regel zu reduzierter Parallelität. Dies liegt daran, dass die Transaktions Isolation normalerweise durch das Sperren von Zeilen implementiert wird. wenn mehr Zeilen gesperrt sind, können weniger Transaktionen abgeschlossen werden, ohne mindestens vorübergehend durch eine gesperrte Zeile blockiert zu werden. Obwohl die geringere Parallelität im Allgemeinen als Kompromiss für die höheren Transaktions Isolations Stufen, die für die Beibehaltung der Datenbankintegrität erforderlich sind, akzeptiert wird, kann es in interaktiven Anwendungen mit hoher Lese-/Schreibaktivität, die Cursor verwenden, zu einem Problem werden.  
   
- Nehmen wir beispielsweise an, die eine Anwendung ausgeführt wird, die SQL-Anweisung **wählen \* FROM Orders**. Ruft **SQLFetchScroll** , scrollen Sie auf das Ergebnis festgelegt und ermöglicht dem Benutzer, zu aktualisieren, löschen oder Einfügen von Bestellungen. Nachdem der Benutzer aktualisieren, löschen oder eine Bestellung fügt, überträgt die Anwendung die Transaktion aus.  
+ Angenommen, eine Anwendung führt die SQL-Anweisung **Select \* from Orders aus**. Er ruft **SQLFetchScroll** auf, um einen Bildlauf um das Resultset durchzuführen, und ermöglicht dem Benutzer das Aktualisieren, löschen oder Einfügen von Aufträgen. Nachdem der Benutzer eine Bestellung aktualisiert, gelöscht oder eingefügt hat, führt die Anwendung einen Commit für die Transaktion aus.  
   
- Wenn die Isolationsstufe Repeatable Read ist, die Transaktion kann – je nachdem, wie sie implementiert wird: Sperren jede Zeile, die vom **SQLFetchScroll**. Wenn die Isolationsstufe Serializable ist, kann die Transaktion die gesamte Orders-Tabelle sperren. In beiden Fällen gibt die Transaktion ihre Sperren frei, nur, wenn sie ein Commit oder Rollback ausgeführt. Also wenn der Benutzer viel Zeit mit dem Lesen von Bestellungen und sehr wenig Zeit verbringt, aktualisieren, löschen oder eingefügt werden, ist die Transaktion problemlos eine große Anzahl von Zeilen sperren kann, sodass sie nicht verfügbar sind, anderen Benutzern.  
+ Wenn die Isolationsstufe REPEATABLE READ ist, kann die Transaktion abhängig von ihrer Implementierung eine Sperre für jede Zeile durchführen, die von **SQLFetchScroll**zurückgegeben wurde. Wenn die Isolationsstufe serialisierbar ist, sperrt die Transaktion möglicherweise die gesamte Orders-Tabelle. In beiden Fällen gibt die Transaktion ihre Sperren nur dann frei, wenn ein Commit oder ein Rollback ausgeführt wird. Wenn der Benutzer also viel Zeit mit dem Lesen von Bestellungen und sehr wenig Zeit verbringt, ihn zu aktualisieren, zu löschen oder einzufügen, könnte die Transaktion eine große Anzahl von Zeilen problemlos sperren, sodass Sie für andere Benutzer nicht verfügbar sind.  
   
- Dies ist ein Problem, selbst wenn der Cursor schreibgeschützt ist, und die Anwendung dem Benutzer ermöglicht, die nur vorhandene Bestellungen zu lesen. In diesem Fall die Anwendung führt einen Commit der Transaktion und sperren, freigegeben, wenn aufgerufen **SQLCloseCursor** (im Autocommit-Modus) oder **SQLEndTran** (im Manualcommit-Modus).  
+ Dies ist ein Problem, auch wenn der Cursor schreibgeschützt ist und die Anwendung es dem Benutzer ermöglicht, nur vorhandene Bestellungen zu lesen. In diesem Fall führt die Anwendung einen Commit für die Transaktion aus und gibt Sperren frei, wenn Sie **SQLCloseCursor** (im Autocommit-Modus) oder **SQLEndTran** (im manuellen Commitmodus) aufruft.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Parallelitätstypen](../../../odbc/reference/develop-app/concurrency-types.md)  
   
--   [Vollständige Parallelität](../../../odbc/reference/develop-app/optimistic-concurrency.md)
+-   [Optimistische Nebenläufigkeit](../../../odbc/reference/develop-app/optimistic-concurrency.md)

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 525e60450e1cae635cd3a825108dc5a68f80fe42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771289"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Erstellen und Bearbeiten eines CDC Service
@@ -60,8 +60,8 @@ ms.locfileid: "62771289"
   
 5.  Klicken Sie im Dialogfeld Verbindung mit Oracle herstellen auf **OK** . Beide Dialogfelder werden geschlossen, und der Dienst wird aktualisiert und registriert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Change Data Capture Designer für Oracle von Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
- [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
+ [Erstellen und Bearbeiten eines Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
   
   

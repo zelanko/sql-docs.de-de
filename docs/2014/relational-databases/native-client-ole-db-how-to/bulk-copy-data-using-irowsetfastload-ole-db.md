@@ -1,5 +1,5 @@
 ---
-title: Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB) | Microsoft-Dokumentation
+title: Massen Daten kopieren mithilfe von IRowsetFastLoad (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655685"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
@@ -27,12 +27,12 @@ ms.locfileid: "62655685"
   
  Der Consumer informiert SQLOLEDB über die Anforderung zum Massenkopieren, indem er die SQLOLEDB-anbieterspezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegt. Der Consumer erstellt eine SQLOLEDB-Sitzung, wobei der Eigenschaftensatz auf die Datenquelle festgelegt wird. Die neue Sitzung lässt den Consumerzugriff auf `IRowsetFastLoad` zu.  
   
- Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von `IRowsetFastLoad` zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle **IRFLTable** in der Datenbank erstellen.  
+ Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von `IRowsetFastLoad` zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle " **unfltable** " in der Datenbank erstellen.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>So massenkopieren Sie Daten in eine SQL Server-Tabelle  
   

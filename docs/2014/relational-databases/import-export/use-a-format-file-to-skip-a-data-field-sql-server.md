@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011715"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Auslassen eines Datenfelds mithilfe einer Formatdatei (SQL Server)
   Eine Datendatei kann mehr Felder enthalten, als Spalten in der Tabelle vorhanden sind. In diesem Thema wird beschrieben, wie Nicht-XML- und XML-Formatdateien an eine Datendatei mit mehr Feldern angepasst werden können, indem die Tabellenspalten den entsprechenden Datenfeldern zugeordnet und die übrigen Felder ignoriert werden.  
   
 > [!NOTE]  
->  Mit einer Nicht-XML- oder XML-Formatdatei kann eine Datendatei mithilfe eines **bcp**-Befehls, einer BULK INSERT-Anweisung oder einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung verwendet werden. Weitere Informationen finden Sie unter [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Eine nicht-XML-oder XML-Format Datei kann verwendet werden, um einen Massen Import einer Datendatei in die-Tabelle mit einem **bcp** -Befehl, einer BULK INSERT-Anweisung oder einer INSERT... SELECT * FROM OPENROWSET (BULK...)-Anweisung. Weitere Informationen finden Sie unter [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-data-file-and-table"></a>Beispiel für Datendatei und Tabelle  
  Die in diesem Thema enthaltenen Beispiele über die geänderten Formatdateien basieren auf der folgenden Tabelle und Datendatei.  
   
 ### <a name="sample-table"></a>Beispieltabelle  
- Für die Beispiele muss in der `myTestSkipField` -Beispieldatenbank unter dem [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Schema eine Tabelle mit dem Namen `dbo` erstellt werden. Wenn Sie diese Tabelle erstellen möchten, führen Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor folgenden Code aus:  
+ Für die Beispiele muss in der `myTestSkipField` -Beispieldatenbank unter dem [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Schema eine Tabelle mit dem Namen `dbo` erstellt werden. Führen Sie zum Erstellen dieser Tabelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Abfrage-Editor den folgenden Code aus:  
   
 ```  
 USE AdventureWorks2012;  
@@ -61,7 +61,7 @@ GO
   
 -   Der zweiten Spalte ( `FirstName`) das dritte Datenfeld zuordnen.  
   
--   Der dritten Spalte (`LastName`) das vierte Datenfeld zuordnen.  
+-   Der dritten Spalte ( `LastName`) das vierte Datenfeld zuordnen.  
   
 ## <a name="non-xml-format-file-for-more-data-fields"></a>Nicht-XML-Formatdatei für weitere Datenfelder  
  Die Formatdatei `myTestSkipField.fmt` ordnet die Felder in `myTestSkipField-c.dat` den Spalten der `myTestSkipField`-Tabelle zu. Die Formatdatei verwendet das Zeichendatenformat. Damit eine Spaltenzuordnung ausgelassen werden kann, muss der Wert für die Spaltenreihenfolge auf 0 festgelegt werden, wie für die `ExtraField` -Spalte in der Formatdatei veranschaulicht.  
@@ -141,11 +141,11 @@ GO
 > [!NOTE]  
 >  Informationen über die Syntax eines XML-Schemas und weitere Beispiele von XML-Formatdateien finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Verwenden Sie eine Format Datei, um eine Tabellenspalte &#40;SQL Server zu überspringen&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

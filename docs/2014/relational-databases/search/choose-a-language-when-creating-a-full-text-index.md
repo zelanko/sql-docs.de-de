@@ -20,23 +20,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012730"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text von der Volltext-Engine in Token zerlegt und anschließend indiziert wird.  
   
 > [!NOTE]  
->  Um für einen Volltextindex eine Spaltensprache anzugeben, verwenden Sie beim Angeben der Spalte die Klausel *language_term*. Weitere Informationen finden Sie unter [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql) und [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
+>  Um für einen Volltextindex eine Spaltensprache anzugeben, verwenden Sie beim Angeben der Spalte die Klausel *language_term* . Weitere Informationen finden Sie unter [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql) und [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
 ##  <a name="langsupp"></a> Sprachunterstützung in Volltextsuche  
  Dieser Abschnitt enthält eine Einführung in die Wörtertrennung und Wortstammerkennung und beschreibt, wie die Volltextsuche die LCID der Spaltensprache verwendet.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Einführung in Wörtertrennung und Wortstammerkennung  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höhere Versionen enthalten eine vollständige neue Familie von wörtertrennungen und wortstammerkennungen, die wesentlich besser geeignet als die zuvor in verfügbar sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]und höhere Versionen enthalten eine komplett neue Familie von Wörter Trennungen und Wort Stamm Erkennungen, die wesentlich besser als die zuvor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]in verfügbaren sind.  
   
 > [!NOTE]  
 >  Die Microsoft Natural Language Group (MS NLG) hat diese neuen linguistischen Komponenten implementiert und bietet dazu Unterstützung an.  
@@ -49,7 +49,7 @@ ms.locfileid: "66012730"
   
 -   Sicherheit  
   
-     Die neuen wörtertrennungen sind standardmäßig aktiviert, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aufgrund von sicherheitsverbesserungen der linguistischen Komponenten. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
+     Die neuen Wörter Trennungen sind aufgrund von Sicherheits [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbesserungen in linguistischen komponentenstandard mäßig aktiviert. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +61,7 @@ ms.locfileid: "66012730"
   
 -   Für eine Vielzahl von Sprachen ist die Wörtertrennung standardmäßig in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthalten und aktiviert.  
   
- Eine Liste der Sprachen, für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] umfasst eine wörtertrennung und wortstammerkennung, finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Eine Liste der Sprachen, für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Wörter Trennung und Wort Stamm Erkennung gilt, finden Sie unter [sys. fulltext_languages &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -108,7 +108,7 @@ ms.locfileid: "66012730"
 ##  <a name="type"></a> Auswirkung des Spaltentyps auf Volltextsuche  
  Ein weiterer Aspekt bei der Wahl der Sprache ist die Art und Weise, wie die Daten dargestellt werden. Für Daten, die nicht in `varbinary(max)`-Spalten gespeichert sind, erfolgt keine spezielle Filterung. Stattdessen durchläuft der Text die Worteinheitenerkennungs-Komponente i. A. unverändert.  
   
- Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall Sie zwei Optionen: die bevorzugte Methode besteht darin, den Text im Datenspeicher `varbinary(max)` Spalte und den Dokumenttyp anzugeben, damit die Daten gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
+ Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall haben Sie zwei Möglichkeiten: die bevorzugte Methode besteht darin, die Textdaten in `varbinary(max)` der Spalte zu speichern und den Dokumenttyp anzugeben, damit Sie gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
   
 > [!NOTE]  
 >  Eine sprachbasierte Wortstammerkennung ist nicht möglich, wenn Sie die neutrale Sprache angeben.  
@@ -120,7 +120,7 @@ ms.locfileid: "66012730"
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

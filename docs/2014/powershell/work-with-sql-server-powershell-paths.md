@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782732"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Verwenden von SQL Server PowerShell-Pfaden
@@ -22,7 +22,7 @@ ms.locfileid: "72782732"
   
 1.  [Vorbereitungen](#BeforeYouBegin)  
   
-2.  **So arbeiten Sie an einem Pfadknoten:**  [Auflisten von Methoden und Eigenschaften](#ListPropMeth), [Verwenden von Methoden und Eigenschaften](#UsePropMeth)  
+2.  So **arbeiten Sie an einem Pfad Knoten: Auflisten von**[Methoden und Eigenschaften](#ListPropMeth), [Verwenden von Methoden und Eigenschaften](#UsePropMeth)    
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Nach der Navigation zu einem Knoten in einem [!INCLUDE[ssDE](../includes/ssde-md.md)] -Anbieterpfad können Sie zwei Arten von Aktionen ausführen:  
@@ -46,7 +46,7 @@ $MyDBVar | Get-Member -Type Methods
 $MyDBVar | Get-Member -Type Properties  
 ```  
   
- Sie können auch **Get-Member** verwenden, um die dem Endknoten eines Windows PowerShell-Pfads zugeordneten Methoden und Eigenschaften aufzulisten.  
+ Sie können **Get-Member** ebenfalls verwenden, um die dem Endknoten eines Windows PowerShell-Pfads zugeordneten Methoden und Eigenschaften aufzulisten.  
   
  In diesem Beispiel wird zum Knoten Databases in einem SQLSERVER:-Pfad navigiert, und die Auflistungseigenschaften werden aufgeführt:  
   
@@ -74,7 +74,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- In diesem Beispiel wird die SMO- **Skript** Methode verwendet, um ein Skript zu generieren, das die `CREATE VIEW` Anweisungen enthält, die Sie benötigen, um die Sichten in AdventureWorks2012 neu zu erstellen:  
+ In diesem Beispiel wird die SMO- **Skript** Methode verwendet, um ein Skript `CREATE VIEW` zu generieren, das die Anweisungen enthält, die Sie benötigen, um die Sichten in AdventureWorks2012 neu zu erstellen:  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
@@ -93,7 +93,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)   
  [Navigieren in SQL Server PowerShell-Pfaden](navigate-sql-server-powershell-paths.md)   
  [Konvertieren von URNs in SQL Server-Anbieterpfade](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

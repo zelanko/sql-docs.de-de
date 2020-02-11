@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Funktionen und gespeicherten Prozeduren | Microsoft-Dokumentation
+title: Benutzerdefinierte Funktionen und gespeicherte Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727856"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Benutzerdefinierte Funktionen und gespeicherte Prozeduren
-  Mit ADOMD.NET-Serverobjekten können Sie die benutzerdefinierte Funktion (UDF) oder gespeicherten Prozeduren zum Erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die mit Metadaten und Daten vom Server interagieren. Diese prozessinternen Methoden werden durch Multidimensional Expressions (MDX)- oder Data Mining Extensions (DMX)-Anweisungen aufgerufen, um zusätzliche Funktionen bereitzustellen, die nicht den Wartezeiten eines Netzwerks unterworfen sind.  
+  Mit ADOMD.NET-Server Objekten können Sie benutzerdefinierte Funktionen (User Defined Function, UDF) oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeicherte Prozeduren für erstellen, die mit Metadaten und Daten vom Server interagieren. Diese prozessinternen Methoden werden durch Multidimensional Expressions (MDX)- oder Data Mining Extensions (DMX)-Anweisungen aufgerufen, um zusätzliche Funktionen bereitzustellen, die nicht den Wartezeiten eines Netzwerks unterworfen sind.  
   
 ## <a name="udf-examples"></a>UDF-Beispiele  
  Eine benutzerdefinierte Funktion (UDF) ist eine Methode, die im Zusammenhang mit einer MDX- oder DMX-Anweisung aufgerufen wird, eine beliebige Anzahl an Parametern unterstützt und jede Art von Daten zurückgeben kann.  
@@ -81,7 +81,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- Das vorherige Beispiel wird in folgendem MDX-Beispiel aufgerufen. In diesem Beispiel MDX fünf zufällige Bundesstaaten oder Provinzen aus abgerufen werden die **Adventure Works** Datenbank.  
+ Das vorherige Beispiel wird in folgendem MDX-Beispiel aufgerufen. In diesem MDX-Beispiel werden fünf Zufalls Zustände oder Provinzen aus der **Adventure Works** -Datenbank abgerufen.  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

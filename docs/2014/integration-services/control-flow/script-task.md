@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830561"
 ---
 # <a name="script-task"></a>Skripttask
@@ -41,7 +41,7 @@ ms.locfileid: "62830561"
  Nachdem Sie entschieden haben, dass die Skriptkomponente für Ihr Paket geeignet ist, müssen Sie das Skript entwickeln, das vom Task verwendet wird, und den Task konfigurieren.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>Erstellen und Ausführen des Skripts, das vom Task verwendet wird  
- Der Skripttask verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) als Umgebung zum Erstellen der Skripts und der Engine, mit der die Skripts ausgeführt werden.  
+ Der Skripttask verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) als Umgebung zum Erstellen der Skripts und der Engine, mit der die Skripts ausgeführt werden.  
   
  VSTA enthält alle Standardfunktionen der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Umgebung, z.B. den [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Editor mit Farbcodierung, IntelliSense und den **Objekt-Explorer**. VSTA verwendet zudem den Debugger, der auch von anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Entwicklungstools verwendet wird. Breakpoints im Skript sind vollständig mit Breakpoints in Tasks und Containern von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] kompatibel. VSTA unterstützt die Programmiersprachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "62830561"
  Diese Eigenschaften können Sie mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Konfigurieren des Skripttasks im Designer  
- In der folgenden Tabelle wird das `ScriptTaskLogEntry`-Ereignis beschrieben, das für den Skripttask protokolliert werden kann. Die `ScriptTaskLogEntry` Ereignis ausgewählt ist, für die Protokollierung auf der **Details** Registerkarte die **SSIS-Protokolle konfigurieren** Dialogfeld. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
+ In der folgenden Tabelle wird das `ScriptTaskLogEntry`-Ereignis beschrieben, das für den Skripttask protokolliert werden kann. Das `ScriptTaskLogEntry` Ereignis wird für die Protokollierung auf der Registerkarte **Details** des Dialog Felds **SSIS-Protokolle konfigurieren** ausgewählt. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Der Task schreibt für jeden Aufruf der `Log`-Methode des `Dts`-Objekts einen Protokolleintrag. Der Task schreibt diese Einträge, wenn der Code ausgeführt wird. Weitere Informationen finden Sie unter [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
@@ -89,6 +89,6 @@ ms.locfileid: "62830561"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
+-   Technischer Artikel [Vorgehensweise: Senden von E-Mails mit Zustellungsbenachrichtigung in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
   
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797963"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Anhalten einer Verfügbarkeitsdatenbank (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72797963"
   
 |Angehaltene Datenbank|Auswirkung des Anhaltebefehls|  
 |------------------------|-------------------------------|  
-|Sekundäre Datenbank|Nur die lokale sekundäre Datenbank wird angehalten, und ihr Synchronisierungsstatus wird NOT SYNCHRONIZING. Andere sekundäre Datenbanken sind nicht betroffen. Die angehaltene Datenbank empfängt keine Daten (Protokolldatensätze) mehr und wendet keine Daten mehr an und beginnt, hinter die primäre Datenbank zu fallen. Vorhandene Verbindungen mit dem lesbaren sekundären Replikat können weiter verwendet werden. Neue Verbindungen mit der angehaltenen Datenbank auf dem lesbaren sekundären Replikat werden erst zugelassen, wenn Datenverschiebung fortgesetzt wird.<br /><br /> Die primäre Datenbank bleibt verfügbar. Wenn Sie jede der entsprechenden sekundären Datenbanken anhalten, wird die primären Datenbank ungeschützt ausgeführt.<br /><br /> **\*\* Wichtig \*\*** Während eine sekundäre Datenbank angehalten ist, sammelt die Sendewarteschlange der entsprechenden primären Datenbank nicht gesendete Transaktionsprotokoll-Datensätze. Verbindungen mit dem sekundären Replikat geben Daten zurück, die verfügbar waren, als die Datenverschiebung angehalten wurde.|  
+|Sekundäre Datenbank|Nur die lokale sekundäre Datenbank wird angehalten, und ihr Synchronisierungsstatus wird NOT SYNCHRONIZING. Andere sekundäre Datenbanken sind nicht betroffen. Die angehaltene Datenbank empfängt keine Daten (Protokolldatensätze) mehr und wendet keine Daten mehr an und beginnt, hinter die primäre Datenbank zu fallen. Vorhandene Verbindungen mit dem lesbaren sekundären Replikat können weiter verwendet werden. Neue Verbindungen mit der angehaltenen Datenbank auf dem lesbaren sekundären Replikat werden erst zugelassen, wenn Datenverschiebung fortgesetzt wird.<br /><br /> Die primäre Datenbank bleibt verfügbar. Wenn Sie jede der entsprechenden sekundären Datenbanken anhalten, wird die primären Datenbank ungeschützt ausgeführt.<br /><br /> ** \* Wichtig \* \* ** Während eine sekundäre Datenbank angehalten wird, sammelt die Sende Warteschlange der entsprechenden primären Datenbank nicht gesendete Transaktionsprotokoll-Datensätze. Verbindungen mit dem sekundären Replikat geben Daten zurück, die verfügbar waren, als die Datenverschiebung angehalten wurde.|  
 |Primäre Datenbank|Die primäre Datenbank beendet die Datenverschiebung zu jeder verbundenen sekundären Datenbank. Die primäre Datenbank wird weiterhin in einem ungeschützten Modus ausgeführt. Die primäre Datenbank bleibt für Clients verfügbar, und vorhandene Verbindungen in einer lesbaren sekundären Datenbank bleiben verwendbar, und neue Verbindungen können hergestellt werden.|  
   
 > [!NOTE]  
@@ -47,15 +47,15 @@ ms.locfileid: "72797963"
   
      [Sicherheit](#Security)  
   
--   **Anhalten einer Datenbank mit:**  
+-   **So halten Sie eine Datenbank an mit:**  
   
--   [SQL Server Management Studio](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Nachverfolgung:** [Vermeiden eines vollen Transaktionsprotokolls](#FollowUp)  
+-   Nach **Verfolgung:** [vermeiden eines vollständigen Transaktions Protokolls](#FollowUp)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
@@ -64,20 +64,20 @@ ms.locfileid: "72797963"
 ###  <a name="Restrictions"></a> Einschränkungen  
  Ein SUSPEND-Befehl gibt einen Wert zurück, sobald es vom Replikat akzeptiert wurde, das die Zieldatenbank hostet. Das Anhalten der Datenbank ist jedoch dadurch asynchron.  
   
-###  <a name="Prerequisites"></a>Voraussetzungen  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen mit der Serverinstanz verbunden sein, die die Datenbank hostet, die angehalten werden soll. Um eine primäre Datenbank und die entsprechenden sekundären Datenbanken anzuhalten, stellen Sie eine Verbindung mit der Serverinstanz her, die das primäre Replikat hostet. Um eine sekundäre Datenbank anzuhalten und die primäre Datenbank verfügbar zu lassen, stellen Sie eine Verbindung mit dem sekundären Replikat her.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
  Bei Engpässen ist das Anhalten einer oder mehrerer sekundärer Datenbanken möglicherweise kurz nützlich, um die Leistung auf dem primären Replikat vorübergehend zu verbessern. Solange eine sekundäre Datenbank angehalten bleibt, kann das Transaktionsprotokoll der entsprechenden primären Datenbank nicht abgeschnitten werden. Dies führt dazu, dass sich Protokolldatensätze auf der primären Datenbank ansammeln. Daher wird empfohlen, dass Sie eine angehaltene sekundäre Datenbank schnell fortsetzen oder entfernen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Vermeiden eines vollen Transaktionsprotokolls](#FollowUp).  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So halten Sie eine Datenbank an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz mit dem Verfügbarkeitsreplikat her, auf der eine Datenbank angehalten werden soll, und erweitern Sie die Serverstruktur. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).  
@@ -102,7 +102,7 @@ ms.locfileid: "72797963"
   
 2.  Halten Sie die Datenbank mithilfe der folgenden [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)-Anweisung an:  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* Set HADR Suspend  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So halten Sie eine Datenbank an**  
@@ -124,7 +124,7 @@ ms.locfileid: "72797963"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>Nachverfolgung: Vermeiden eines vollständigen Transaktions Protokolls  
  Wenn ein automatischer Prüfpunkt für eine Datenbank ausgeführt wird, wird normalerweise das zugehörige Transaktionsprotokoll nach der nächsten Protokollsicherung auf diesen Prüfpunkt gekürzt. Wenn jedoch eine sekundäre Datenbank angehalten wird, bleiben alle aktuellen Protokolldatensätze auf der primären Datenbank aktiv. Wenn das Transaktionsprotokoll voll ist (weil die maximale Größe erreicht wurde oder weil für die Serverinstanz der Speicherplatz nicht ausreicht), kann die Datenbank keine Updates mehr ausführen.  
   
  Führen Sie eine der folgenden Aktionen aus, um dieses Problem zu umgehen:  
@@ -135,7 +135,7 @@ ms.locfileid: "72797963"
   
 -   Entfernen Sie die sekundäre Datenbank. Weitere Informationen finden Sie unter [Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
- **So beheben Sie die Fehler eines vollständigen Transaktionsprotokolls**  
+ **So beheben Sie Probleme mit einem vollen Transaktionsprotokoll**  
   
 -   [Problembehandlung bei vollen Transaktionsprotokollen &#40;SQL Server-Fehler 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
@@ -143,6 +143,6 @@ ms.locfileid: "72797963"
   
 -   [Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

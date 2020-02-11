@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827911"
 ---
 # <a name="create-new-infoobject"></a>Neues InfoObject erstellen
@@ -61,7 +61,7 @@ ms.locfileid: "62827911"
  **InfoObject-Name**  
  Geben Sie einen Namen für das InfoObject ein.  
   
- **Kurze Beschreibung**  
+ **Kurzbeschreibung**  
  Geben Sie eine kurze Beschreibung für das InfoObject ein.  
   
  **Lange Beschreibung**  
@@ -129,17 +129,17 @@ ms.locfileid: "62827911"
  **InfoObject-Typ**  
  Zeigt den InfoObject-Typ an. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |KYF|Kennzahlen|  
-|UNI|Einheiten|  
+|UNI|Units|  
 |TIM|Zeitmerkmale|  
   
 ### <a name="attributes-options"></a>Optionen für "Attribute"  
  Verwenden Sie die folgenden Optionen, um Attribute für ein erstelltes InfoObject hinzuzufügen und zu entfernen:  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie ein bestehendes InfoObject als Attribut hinzu.  
   
  Um ein vorhandenes InfoObject hinzuzufügen, klicken Sie auf Hinzufügen und verwenden dann das Dialogfeld **InfoObject suchen** für die Suche nach dem InfoObject. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up InfoObject](look-up-infoobject.md).  
@@ -149,14 +149,14 @@ ms.locfileid: "62827911"
   
  Um ein neues InfoObject zu erstellen und hinzuzufügen, klicken Sie auf Neu und verwenden dann eine neue Instanz des Dialogfelds **Neues InfoObject erstellen** , um das neue InfoObject zu erstellen.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt das ausgewählte InfoObject aus der Liste **Attribute** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [InfoCube für Transaktionsdaten erstellen](create-infocube-for-transaction-data.md)   
  [InfoSource erstellen](create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](create-infosource-for-transaction-data.md)   
  [InfoSource für Masterdaten erstellen](create-infosource-for-master-data.md)   
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

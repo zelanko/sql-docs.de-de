@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659942"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol-Klasse
-  [ServerNetworkProtocol-Klasse] Servernetworkprotocol-class.md) darstellt, Netzwerkprotokolle, die auf einer Instanz von installiert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht, die die Kommunikation mit Clients über ein Netzwerk.  
+  Die [ServerNetworkProtocol-Klasse] ServerNetworkProtocol-Class.MD) stellt Netzwerkprotokolle dar, die auf [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer Instanz von installiert sind und die Kommunikation mit Clients über ein Netzwerk ermöglichen.  
   
- Mit dem [ServerNetworkProtocol-Klasse] Servernetworkprotocol-class.md) können Sie folgende Aktionen ausführen:  
+ Mit der [ServerNetworkProtocol-Klasse] ServerNetworkProtocol-Class.MD) können Sie folgende Aktionen ausführen:  
   
 -   Überprüfen des Namens, der Version, .dll-Datei, Anzahl von Eigenschaften und des Anzeigenamens des Server-Netzwerkprotokolls, auf das verwiesen wird.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62659942"
   
 -   Aktivieren und Deaktivieren des Server-Netzwerkprotokolls.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099552"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Festlegen von Bereitstellungseigenschaften (Reporting Services)
@@ -42,23 +42,23 @@ ms.locfileid: "66099552"
     > [!NOTE]  
     >  Sie können mehrere Konfigurationen verwenden, um schnell zwischen verschiedenen Berichtsservern oder Einstellungen zu wechseln.  
   
-3.  In der **OutputPath** Textfeld Geben oder fügen Sie den Pfad in Ihrem lokalen Dateisystem in der erstellungsüberprüfung, Bereitstellung und Berichtsvorschau verwendete Berichtsdefinition gespeichert. Der Pfad muss sich von dem für das Projekt verwendeten Pfad und einem relativen Pfad unterscheiden, der einem untergeordneten Ordner des Projektpfads entspricht.  
+3.  Im Textfeld **OutputPath** können Sie den Pfad in Ihrem lokalen Dateisystem eingeben oder einfügen, um die in der Buildüberprüfung, Bereitstellung und Berichts Vorschau verwendete Berichtsdefinition zu speichern. Der Pfad muss sich von dem für das Projekt verwendeten Pfad und einem relativen Pfad unterscheiden, der einem untergeordneten Ordner des Projektpfads entspricht.  
   
-4.  In der **ErrorLevel** Textfeld den Schweregrad der Probleme, die als Fehler gemeldet werden. Probleme beim Erstellen von Berichten, Datenquellen oder anderen Projektressourcen mit Schweregrad Ebenen kleiner oder gleich dem Wert des **ErrorLevel** werden als Fehler gemeldet, andernfalls die Probleme als Warnungen gemeldet. Jeder Fehler führt dazu, dass die Erstellung fehlschlägt. Die gültigen Schweregrade sind 0 bis einschließlich 4. Der Standardwert ist 2.  
+4.  Geben Sie im Textfeld **ERRORLEVEL** den Schweregrad der Erstellungs Probleme ein, die als Fehler gemeldet werden. Probleme, die bei der Erstellung von Berichten, Datenquellen oder anderen Projektressourcen auftreten, deren Schweregrad kleiner oder gleich dem Wert von **ERRORLEVEL** ist, werden als Fehler gemeldet. Andernfalls werden die Probleme als Warnungen gemeldet. Jeder Fehler führt dazu, dass die Erstellung fehlschlägt. Die gültigen Schweregrade sind 0 bis einschließlich 4. Der Standardwert ist 2.  
   
      **ErrorLevel** kann verwendet werden, um die Vertraulichkeit des Berichterstellung zu erhöhen oder zu verringern. Wenn beispielsweise ein Bericht mit einer Karte während der Bereitstellung auf einem [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Berichtsserver erstellt wird, wird standardmäßig ein Fehler angezeigt, und der Bericht wird nicht erstellt. Wenn Sie **ErrorLevel** herabsetzen, wird die Karte aus dem Bericht entfernt, eine Warnung angezeigt und die Berichterstellung fortgesetzt.  
   
-5.  In der **StartItem** wählen einen Bericht im Vorschaufenster oder in einem Browserfenster angezeigt, wenn das Berichtsprojekt ausgeführt wird.  
+5.  Wählen Sie in der Liste **StartItem** einen Bericht aus, der im Vorschaufenster oder in einem Browserfenster angezeigt werden soll, wenn das Berichts Projekt ausgeführt wird.  
   
 6.  Wählen Sie in der Liste **OverwriteDataSources** den Wert **TRUE** aus, um bei jedem Veröffentlichen von freigegebenen Datenquellen die freigegebene Datenquelle auf dem Server zu überschreiben, oder wählen Sie **FALSE** aus, um die Datenquelle auf dem Server beizubehalten.  
   
-7.  In der **TargetServerVersion** Liste, wählen Sie entweder die [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Version [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder wählen Sie **Version erkennen** um automatisch die auf installierte Version zu ermitteln der Server, den Sie durch die **TargetServer URL** Eigenschaft. Der Standardwert ist **SQL Server 2008 R2**.  
+7.  Wählen Sie in der Liste **targetserverversion** entweder die [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Version von aus, oder wählen Sie **Version erkennen** aus, um automatisch die Version zu ermitteln, die auf dem durch die Eigenschaft **TargetServer URL** identifizierten Server installiert ist. Der Standardwert ist **SQL Server 2008 R2**.  
   
      Verwenden Sie **TargetServerVersion** , um die erstellten Berichte unter dem in OutputPath angegebenen Pfad für die Version des Berichtsservers anzupassen, der in **TargetServerURL**angegeben ist.  
   
 8.  Geben Sie im Textfeld **TargetDataSourceFolder** den Ordner auf dem Berichtsserver ein, in dem die veröffentlichten, freigegebenen Datenquellen gespeichert werden sollen. Der Standardwert für **TargetDataSourceFolder** lautet Datenquellen. Wenn Sie hierfür keinen Wert angeben, werden die Datenquellen an dem in **TargetReportFolder**angegebenen Speicherort veröffentlicht.  
   
-9. Geben Sie im Textfeld **TargetReportFolder** den Ordner auf dem Berichtsserver ein, in dem die veröffentlichten Berichte gespeichert werden sollen. Der Standardwert für **TargetReportFolder** ist der Name des Berichtsprojekts.  
+9. Geben Sie im Textfeld **TargetReportFolder** den Ordner auf dem Berichtsserver ein, in dem die veröffentlichten Berichte gespeichert werden sollen. Der Standardwert für **TargetReportFolder** ist der Name des Berichts Projekts.  
   
     > [!NOTE]  
     >  Für einen Berichtsserver, der im einheitlichen Modus ausgeführt wird, müssen Sie im Zielordner über Berechtigungen zum **Veröffentlichen** verfügen, um Berichte in diesem Ordner zu veröffentlichen. Berechtigungen zum Veröffentlichen werden über eine Rollenzuweisung erteilt, bei der das Benutzerkonto einer Rolle zugeordnet wird, die Veröffentlichungsvorgänge enthalt. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Rollenzuweisungen](../security/create-and-manage-role-assignments.md). Für einen Berichtsserver, der im integrierten SharePoint-Modus ausgeführt wird, müssen Sie auf der SharePoint-Website über Berechtigungen als **Mitglied** oder **Eigentümer** verfügen. Weitere Informationen finden Sie unter [Referenz zu SharePoint Website- und Listenberechtigungen für Berichtsserverelemente](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
@@ -80,10 +80,10 @@ ms.locfileid: "66099552"
     > [!NOTE]  
     >  Wenn **Erstellen** ausgewählt ist, erstellt der Berichts-Designer das Berichtsprojekt und überprüft es auf Fehler, bevor es auf einem Berichtsserver veröffentlicht oder eine Vorschau angezeigt wird. Wenn **Bereitstellen** ausgewählt ist, veröffentlicht der Berichts-Designer die Berichte gemäß der Definition in den Bereitstellungseigenschaften auf dem Berichtsserver. Wenn **Bereitstellen** nicht ausgewählt ist, zeigt der Berichts-Designer den in der **StartItem** -Eigenschaft angegebenen Bericht in einem lokalen Vorschaufenster an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Datenquellen und Berichten](../reports/publishing-data-sources-and-reports.md)   
- [Ausführen einer Vorschau für Berichte](../reports/previewing-reports.md)   
- [Berichts-Designer (F1-Hilfe)](report-designer-f1-help.md)   
+ [Anzeigen einer Vorschau für Berichte](../reports/previewing-reports.md)   
+ [Berichts-Designer F1-Hilfe](report-designer-f1-help.md)   
  [Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Eigenschaftsseiten für Projekt (Dialogfeld)](project-property-pages-dialog-box.md)   
  [Veröffentlichen von Berichten auf einem Berichtsserver](../reports/publishing-reports-to-a-report-server.md)  

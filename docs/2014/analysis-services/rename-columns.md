@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070319"
 ---
 # <a name="lesson-3-rename-columns"></a>Lektion 3: Umbenennen von Spalten
@@ -23,23 +23,23 @@ ms.locfileid: "66070319"
 > [!IMPORTANT]  
 >  Das Umbenennen von Spalten ist zum Abschluss dieses Lernprogramms nicht notwendig. Übrige Lektionen, insbesondere diejenigen über die Erstellung von Beziehungen und berechneten Spalten und Measures mit DAX-Formeln, verweisen auf die in dieser Lektion beschriebenen Spaltenanzeigenamen. Wenn Sie Spalten umbenennen möchten, sind die DAX-Formeln in den Lektionen 5, 6 und 7 zu bearbeiten, um die ursprünglichen in dieser Lektion bereitgestellten Namen der Quellspalten zu verwenden.  
   
- Geschätzte Zeit zum Abschließen dieser Lektion: **20 Minuten**  
+ Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
- Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
+## <a name="prerequisites"></a>Voraussetzungen  
+ Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der vorgegebenen Reihenfolge durchgeführt werden sollte. Sie sollten vor dem Ausführen der Tasks in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Umbenennen von Spalten  
   
 #### <a name="to-rename-columns"></a>So benennen Sie Spalten um  
   
-1.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Customer** .  
+1.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Customer**.  
   
      Wenn Sie auf eine Registerkarte klicken, wird diese Tabelle im Modell-Designer-Fenster aktiv.  
   
-2.  Doppelklicken dem **CustomerKey** Spalte benennen, und geben Sie `Customer  Id`, und drücken Sie dann die EINGABETASTE.  
+2.  Doppelklicken Sie auf den Spaltennamen **CustomerKey** , `Customer  Id`geben Sie ein, und drücken Sie dann die EINGABETASTE.  
   
     > [!TIP]  
-    >  Sie können auch umbenennen eine Spalte in der **Spaltenname** -Eigenschaft in der Spaltenwerts **Eigenschaften** Fenster oder in der Diagrammsicht angezeigt.  
+    >  Sie können eine Spalte auch im **Eigenschaften** Fenster der Spalte oder in der Diagramm Sicht in der Eigenschaft **Spalten Name** umbenennen.  
   
 3.  Benennen Sie die verbleibenden Spalten in der Tabelle **Customer** sowie die Spalten in den verbleibenden Tabellen um. Ersetzen Sie dabei den Quellnamen durch den entsprechenden Anzeigenamen:  
   
@@ -48,39 +48,39 @@ ms.locfileid: "66070319"
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
-    |CustomerAlternateKey|Customer Alternate ID|  
-    |FirstName|First Name|  
+    |CustomerAlternateKey|Customer Alternate Id|  
+    |FirstName|First Name (Vorname)|  
     |MiddleName|Middle Name|  
-    |LastName|Last Name|  
+    |LastName|Last Name (Nachname)|  
     |NameStyle|Name Style|  
     |BirthDate|Birth Date|  
     |MaritalStatus|Marital Status|  
-    |EmailAddress|Email Address|  
+    |EmailAddress|E-Mail-Adresse|  
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|Education|  
+    |EnglishEducation|Fortbildung|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Adresszeile 1|  
     |AddressLine2|Address Line 2|  
-    |Phone|Phone Number|  
+    |Phone|Rufnummer|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **Datum**  
+     **Date**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|date|  
+    |FullDateAlternateKey|Date|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
     |DayNumberOfYear|Day of Year|  
     |WeekNumberOfYear|Week Number of Year|  
     |EnglishMonthName|Month Name|  
-    |MonthNumberOfYear|Month|  
+    |MonthNumberOfYear|Month (Monat)|  
     |CalendarQuarter|Calendar Quarter|  
     |CalendarYear|Calendar Year|  
     |CalendarSemester|Calendar Semester|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070319"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geography**  
+     **Human**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -97,10 +97,10 @@ ms.locfileid: "66070319"
     |StateProvinceName|State Province Name|  
     |CountryRegionCode|Country Region Code|  
     |EnglishCountryRegionName|Country Region Name|  
-    |PostalCode|Postal Code|  
+    |PostalCode|Postleitzahl|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **Produkt**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -121,7 +121,7 @@ ms.locfileid: "66070319"
     |Dealer Price|Dealer Price|  
     |ModelName|Model Name|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Beschreibung|  
+    |EnglishDescription|BESCHREIBUNG|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Status|Product Status|  
@@ -134,7 +134,7 @@ ms.locfileid: "66070319"
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
     |EnglishProductCategoryName|Product Category Name|  
   
-     **Produktunterkategorie**  
+     **Product Subcategory**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -143,7 +143,7 @@ ms.locfileid: "66070319"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Internetumsätze**  
+     **Internet Verkäufe**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -171,6 +171,6 @@ ms.locfileid: "66070319"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>Nächster Schritt  
- Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 4: Als Datumstabelle markieren](lesson-3-mark-as-date-table.md).  
+ Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 4: Markieren als Datumstabelle](lesson-3-mark-as-date-table.md).  
   
   

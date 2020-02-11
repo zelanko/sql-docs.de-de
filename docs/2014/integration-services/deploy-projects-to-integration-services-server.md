@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Projekten für Integration Services-Server | Microsoft-Dokumentation
+title: Bereitstellen von Projekten auf Integration Services Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059579"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
@@ -23,20 +23,20 @@ ms.locfileid: "66059579"
  Weitere Informationen zu Umgebungen finden Sie unter [Erstellen und Zuordnen einer Serverumgebung](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
 > [!NOTE]  
->  Wie in vorherigen Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]können Sie auch in der aktuellen Version Pakete auf einer SQL Server-Instanz bereitstellen und den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst zum Ausführen und Verwalten der Pakete verwenden. Sie verwenden das Paketbereitstellungsmodell. Weitere Informationen finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+>  Wie in vorherigen Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]können Sie auch in der aktuellen Version Pakete auf einer SQL Server-Instanz bereitstellen und den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst zum Ausführen und Verwalten der Pakete verwenden. Sie verwenden das Paketbereitstellungsmodell. Weitere Informationen finden Sie unter [Paket Bereitstellung &#40;SSIS-&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Um auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server ein Projekt bereitzustellen, führen Sie die folgenden Tasks aus:  
   
 1.  Erstellen Sie einen SSISDB-Katalog, falls noch nicht geschehen. Weitere Informationen finden Sie unter [Erstellen des SSIS-Katalogs](catalog/ssis-catalog.md).  
   
-2.  Konvertieren Sie das Projekt mit dem **Assistenten für die Konvertierung von Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert)  
+2.  Konvertieren Sie das Projekt mit dem Assistenten für die Konvertierung von **Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert).  
   
     -   Wenn Sie das Projekt in [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]erstellt haben, verwendet das Projekt standardmäßig das Projektbereitstellungsmodell.  
   
     -   Wenn Sie das Projekt in einer früheren Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]erstellt haben, konvertieren Sie das Projekt nach dem Öffnen der Projektdatei in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]in das Projektbereitstellungsmodell.  
   
         > [!NOTE]  
-        >  Wenn das Projekt mindestens eine Datenquelle enthält, werden die Datenquellen entfernt, wenn die Projektkonvertierung abgeschlossen wird. Fügen Sie einen Verbindungs-Manager auf Projektebene hinzu, um eine Verbindung mit einer Datenquelle herzustellen, die von den Paketen im Projekt gemeinsam genutzt werden kann. Weitere Informationen finden Sie unter [hinzufügen, löschen oder Freigeben eines Verbindungs-Managers in einem Paket](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+        >  Wenn das Projekt mindestens eine Datenquelle enthält, werden die Datenquellen entfernt, wenn die Projektkonvertierung abgeschlossen wird. Fügen Sie einen Verbindungs-Manager auf Projektebene hinzu, um eine Verbindung mit einer Datenquelle herzustellen, die von den Paketen im Projekt gemeinsam genutzt werden kann. Weitere Informationen finden Sie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
          Abhängig davon, ob Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** von [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.  
   
@@ -50,35 +50,35 @@ ms.locfileid: "66059579"
   
      Weitere Informationen zum Upgraden von Paketen finden Sie unter [Upgraden von Integration Services-Paketen](install-windows/upgrade-integration-services-packages.md) und [Upgraden von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Stellen Sie das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereit. Weitere Informationen finden Sie in den folgenden Anweisungen: [So stellen Sie ein Projekt auf dem Integration Services-Server bereit](#deploy)  
+3.  Stellen Sie das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereit. Weitere Informationen finden Sie in den folgenden Anweisungen: [So stellen Sie ein Projekt auf dem Integration Services-Server bereit](#deploy).  
   
 4.  (Optional) Erstellen Sie eine Umgebung für das bereitgestellte Projekt. Weitere Informationen finden Sie unter [Erstellen und Zuordnen einer Serverumgebung](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a> So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell  
+##  <a name="convert"></a>So konvertieren Sie ein Projekt in das Projekt Bereitstellungs Modell  
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
-     -oder-  
+     Oder  
   
      Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
 2.  Schließen Sie den Assistenten ab. Weitere Informationen finden Sie unter [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a> So stellen Sie ein Projekt auf dem Integration Services-Server bereit  
+##  <a name="deploy"></a>So stellen Sie ein Projekt auf dem Integration Services Server bereit  
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und wählen Sie dann im Menü **Projekt** die Option **Bereitstellen** aus, um den **Bereitstellungs-Assistent für Integration Services**zu starten.  
   
-     -oder-  
+     Oder  
   
      Erweitern Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] den Knoten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** im Objekt-Explorer, und navigieren Sie anschließend zum Projektordner des bereitzustellenden Projekts. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
   
-     -oder-  
+     Oder  
   
      Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**zur Verfügung.  
   
 2.  Klicken Sie auf der Seite **Quelle auswählen** auf **Projektbereitstellungsdatei** , um die Bereitstellungsdatei für das Projekt auszuwählen.  
   
-     -oder-  
+     ODER  
   
      Klicken Sie auf **Integration Services-Katalog** , um ein Projekt auszuwählen, das bereits im SSISDB-Katalog bereitgestellt wurde.  
   

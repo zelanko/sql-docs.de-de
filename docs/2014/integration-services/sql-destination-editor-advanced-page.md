@@ -1,5 +1,5 @@
 ---
-title: SQL-Ziel-Editor (Seite erweitert) | Microsoft-Dokumentation
+title: Ziel-Editor für SQL (Seite erweitert) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055460"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Ziel-Editor für SQL (Seite Erweitert)
@@ -26,11 +26,11 @@ ms.locfileid: "66055460"
   
  Weitere Informationen zum SQL Server-Ziel finden Sie unter [SQL Server Destination](data-flow/sql-server-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Identität beibehalten**  
  Gibt an, ob der Task Werte in Identitätsspalten einfügen soll. Der Standardwert dieser Eigenschaft ist `False`.  
   
- **NULL-Werte beibehalten**  
+ **NULL-Werten beibehalten**  
  Gibt an, ob der Task NULL-Werte beibehalten soll. Der Standardwert dieser Eigenschaft ist `False`.  
   
  **Tabellensperre**  
@@ -49,27 +49,27 @@ ms.locfileid: "66055460"
 >  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
   
  **Letzte Zeile**  
- Gibt die letzte einzufügende Zeile an. Der Standardwert dieser Eigenschaft ist **-1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
+ Gibt die letzte einzufügende Zeile an. Der Standardwert dieser Eigenschaft ist **-1**und gibt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
   
  **Maximale Anzahl von Fehlern**  
- Gibt die Anzahl der Fehler an, die auftreten können, bevor die Masseneinfügung abgebrochen wird. Der Standardwert dieser Eigenschaft ist **-1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
+ Gibt die Anzahl der Fehler an, die auftreten können, bevor die Masseneinfügung abgebrochen wird. Der Standardwert dieser Eigenschaft ist **-1**und gibt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
   
- **Timeout**  
+ **Zeit**  
  Gibt die Anzahl der Sekunden an, die abgewartet werden, bevor die Masseneinfügung aufgrund eines Timeouts abgebrochen wird.  
   
  **Spalten sortieren**  
  Geben Sie die Namen der zu sortierenden Spalten an. Jede Spalte kann in auf- oder absteigender Reihenfolge sortiert werden. Wenn Sie mehrere Spalten verwenden, nach denen sortiert werden soll, trennen Sie die Namen in der Liste mit Kommas.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für SQL &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für SQL &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Der Ziel-Editor für SQL &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für SQL &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Massenladen von Daten mithilfe des SQL Server-Ziels](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

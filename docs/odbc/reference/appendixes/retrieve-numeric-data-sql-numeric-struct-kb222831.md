@@ -1,6 +1,6 @@
 ---
-title: Abrufen von numerischen Daten mit SQL_NUMERIC_STRUCT | Microsoft-Dokumentation
-description: C /C++ mithilfe von ODBC mit SQL_NUMERIC_STRUCT, die im Zusammenhang mit SQL_C_NUMERIC ruft der numerische Datentyp für die SQL Server ab.
+title: Abrufen numerischer Daten mit SQL_NUMERIC_STRUCT | Microsoft-Dokumentation
+description: C/C++ mit ODBC Ruft den SQL Server numerischen Datentyp mithilfe SQL_NUMERIC_STRUCT ab, der mit SQL_C_NUMERIC verknüpft ist.
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -11,27 +11,27 @@ ms.date: 07/13/2017
 ms.author: genemi
 author: MightyPen
 ms.openlocfilehash: 296a6bd9b5e0ab64fe7ecc7d78924a02e5fda9cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057188"
 ---
-# <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Abrufen von numerischen Daten mit SQL\_numerischen\_Struktur
+# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>Abrufen numerischer Daten mit\_der\_numerischen SQL-Struktur
 
-In diesem Artikel wird beschrieben, wie numerische Daten aus dem SQL Server-ODBC-Treiber in einer numerischen Struktur abgerufen wird. Es wird beschrieben, wie die richtigen Werte, die mit bestimmten Genauigkeit zu erhalten, und Skalieren die Werte.
+In diesem Artikel wird beschrieben, wie numerische Daten aus dem SQL Server ODBC-Treiber in eine numerische Struktur abgerufen werden. Außerdem wird beschrieben, wie Sie die richtigen Werte mit bestimmten Genauigkeits-und Skalierungs Werten erhalten.
 
-Dieser Datentyp ist die Anwendung, numerische Daten direkt zu behandeln. Um das Jahr 2003 eingeführt ODBC 3.0 einen neuen ODBC-C-Datentyp, identifizierte **SQL\_C\_numerischen**. Dieser Datentyp ist seit 2017 weiterhin relevant.
+Mit diesem Datentyp können Anwendungen numerische Daten direkt verarbeiten. Im Jahr 2003 führte ODBC 3,0 einen neuen ODBC-C-Datentyp ein, der **von\_SQL\_C numeric**identifiziert wird. Dieser Datentyp ist weiterhin ab 2017 relevant.
 
-Der C-Puffer, der verwendet wird, ist die Definition des Typs **SQL\_numerischen\_Struktur**. Diese Struktur hat Feldern zum Speichern von der Genauigkeit, Dezimalstellen, Anmeldung und Wert der numerischen Daten. Der Wert selbst wird als eine skalierte ganze Zahl, mit dem niedrigstwertigen Byte Anfang der am weitesten links stehende Position gespeichert. 
+Der verwendete C-Puffer weist die Typdefinition der **\_numerischen SQL\_-Struktur**auf. Diese Struktur enthält Felder zum Speichern der Genauigkeit, der Skala, des Zeichens und des Werts der numerischen Daten. Der Wert selbst wird als eine skalierte Ganzzahl mit dem geringsten signifikanten Byte gespeichert, beginnend an der äußersten linken Position. 
 
-Der Artikel [C-Datentypen](c-data-types.md) enthält weitere Informationen über das Format und die Verwendung von SQL\_numerischen\_Struktur. In der Regel die [Anhang D](appendix-d-data-types.md) erläutert, der der ODBC 3.0 Programmer's Reference-Datentypen.
-
-
-## <a name="sqlnumericstruct-overview"></a>SQL\_numerischen\_Übersicht über die Struktur
+Der Artikel [C-Datentypen](c-data-types.md) bietet weitere Informationen über das Format und die Verwendung\_der\_numerischen SQL-Struktur. Im Allgemeinen werden die Datentypen in der [Anhang D](appendix-d-data-types.md) der ODBC 3,0-Programmier Referenz erläutert.
 
 
-Die SQL-Anweisung\_numerischen\_Struktur ist in der Headerdatei sqltypes.h wie folgt definiert:
+## <a name="sql_numeric_struct-overview"></a>Übersicht\_über\_die numerische SQL-Struktur
+
+
+Die numerische\_\_SQL-Struktur wird in der Header Datei SqlTypes. h wie folgt definiert:
 
 
 ```c
@@ -46,22 +46,22 @@ typedef struct tagSQL_NUMERIC_STRUCT
 ```
 
             
-Die Felder für Genauigkeit und Dezimalstellenanzahl der numerischen Struktur werden für die Eingabe aus einer Anwendung nur für die Ausgabe aus dem Treiber für die Anwendung nie verwendet.
+Die Felder für Genauigkeit und Skala der numerischen Struktur werden nie für die Eingabe aus einer Anwendung verwendet, sondern nur für die Ausgabe des Treibers an die Anwendung.
 
-Der Treiber verwendet die standardmäßige Genauigkeit von (treiberdefinierten) und den Standardwert (0), wenn Daten an die Anwendung zurückgibt. Wenn die Anwendung die Werte für Genauigkeit und Dezimalstellen angibt, wird der Treiber geht die und verkürzt die Nachkommastellen der numerischen Daten.
+Der Treiber verwendet die Standardgenauigkeit (Treiber definiert) und die Standardskala (0), wenn Daten an die Anwendung zurückgegeben werden. Wenn die Anwendung keine Werte für Genauigkeit und dezimal Stellung angibt, geht der Treiber von der Standardeinstellung aus und verkürzt den Dezimalteil der numerischen Daten.
 
-## <a name="sqlnumericstruct-code-sample"></a>SQL\_numerischen\_STRUCT-Codebeispiel
+## <a name="sql_numeric_struct-code-sample"></a>Code\_Beispiel\_für numerische SQL-Struktur
 
-In diesem Codebeispiel wird veranschaulicht:
+Dieses Codebeispiel zeigt Ihnen Folgendes:
 
-- Legt die Genauigkeit fest.
-- Die Skalierungsgruppe.
-- Rufen Sie die korrekten Werte. 
+- Legen Sie die Genauigkeit fest.
+- Legen Sie die Skala fest.
+- Rufen Sie die richtigen Werte ab. 
 
 > [!Note]
-> DIE NUTZUNG DURCH SIE ÜBER DEN CODE IN DIESEM ARTIKEL IST AUF EIGENE GEFAHR. 
+> Jede Verwendung durch den Code, der in diesem Artikel bereitgestellt wird, hat ihr eigenes Risiko. 
 >
-> Microsoft bietet diese Codebeispiele "wie besehen" ohne Gewährleistung jeglicher Art, ausdrücklich oder konkludent, einschließlich, aber nicht beschränkt auf konkludente Garantien der Marktgängigkeit und/oder der Eignung für einen bestimmten Zweck.
+> Microsoft stellt diese Codebeispiele "wie immer" bereit, ohne jegliche Gewährleistungen jeglicher Art, entweder ausgedrückt oder impliziert, einschließlich, aber nicht beschränkt auf die impliziten Gewährleistungen der Handels Üblichkeit und/oder Eignung für einen bestimmten Zweck.
 
 ```c
 #include <stdio.h>
@@ -226,17 +226,17 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-In der numerischen Struktur ist das Val-Feld ein Array von Zeichen von 16 Elementen. Beispielsweise 25.212 auf 25212 skaliert, und die Skalierung ist 3. Im Hexadezimalformat angegeben wäre diese Zahl 627 C.
+In der numerischen Struktur ist das Feld Val ein Zeichen Array mit 16 Elementen. Beispielsweise wird 25,212 auf 25212 skaliert, und die Skala ist 3. Im hexadezimalen Format wäre diese Zahl 627c.
 
-Der Treiber gibt Folgendes zurück:
+Der Treiber gibt die folgenden Elemente zurück:
 
-- Das entsprechende Zeichen vom 7C, handelt es sich "|" (über die Pipeline) in das erste Element des Zeichenarrays.
-- Die Entsprechung der 62, "b" in das zweite Element handelt.
-- Die Reste der Arrayelemente enthalten Nullen (0), damit der Puffer enthält "| b\0".
+- Das entsprechende Zeichen von 7C, d. h. "|". (Pipe) im ersten Element des Zeichen Arrays.
+- Die Entsprechung von 62, bei der es sich um "b" im zweiten Element handelt.
+- Die Reste der Array Elemente enthalten Nullen, sodass der Puffer "| B\0" enthält.
 
-Jetzt ist die Herausforderung der skalierte Ganzzahl aus diesem Zeichenfolgenarray zu erstellen. Jedes Zeichen in der Zeichenfolge entspricht zwei hexadezimale Ziffern, z. B. am wenigsten signifikanten Ziffern (LSD) und die signifikanteste Ziffer (MSD). Die skalierte Ganzzahl-Wert konnte durch Multiplikation der einzelnen Ziffern (LSD & MSD) generiert werden, mit der ein Vielfaches von 16, beginnend mit 1.
+Nun besteht die Herausforderung darin, die skalierte Ganzzahl aus diesem Zeichen folgen Array zu erstellen. Jedes Zeichen in der Zeichenfolge entspricht zwei hexadezimalen Ziffern, d. h. der am wenigsten signifikanten Ziffer (LSD) und der signifikantesten Ziffer (MSD). Der skalierte ganzzahlige Wert kann generiert werden, indem jede Ziffer (LSD & MSD) mit einem Vielfachen von 16 (beginnend mit 1) multipliziert wird.
 
-Code, der die Konvertierung von little-endian-Modus in die skalierte Ganzzahl implementiert. Es ist, muss der Anwendungsentwickler, um diese Funktionalität zu implementieren. Im folgenden Codebeispiel wird nur eine von den vielen Möglichkeiten.
+Code, der die Konvertierung von Little-Endian-Modus in die skalierte Ganzzahl implementiert. Der Anwendungsentwickler muss diese Funktion implementieren. Das folgende Codebeispiel stellt nur eine der vielen möglichen Möglichkeiten dar.
 
 
 ```c
@@ -265,21 +265,21 @@ long strtohextoval()
 ### <a name="applies-to-versions"></a>Gilt für Versionen
 
 
-Die vorherigen Informationen zu SQL\_numerischen\_Struktur angewendet wird, um die folgenden Versionen:
+Die vorstehenden Informationen zur\_numerischen\_SQL-Struktur gelten für die folgenden Produktversionen:
 
-- Microsoft ODBC-Treiber für Microsoft SQL Server 3.7
-- Microsoft Data Access Components 2.1
-- Microsoft Data Access Components 2.5
-- Microsoft Data Access Components 2.6
-- Microsoft Data Access Components 2.7
-
-
-## <a name="sqlcnumeric-overview"></a>SQL\_C\_numerischen-Übersicht
+- Microsoft ODBC Driver for Microsoft SQL Server 3,7
+- Microsoft Data Access Components 2,1
+- Microsoft Data Access Components 2,5
+- Microsoft Data Access Components 2,6
+- Microsoft Data Access Components 2,7
 
 
-Das folgende Beispielprogramm veranschaulicht die Verwendung von SQL\_C\_numerischen 123,45 in eine Tabelle eingefügt. In der Tabelle ist die Spalte als einen numerischen Wert oder eine Dezimalzahl, die mit einer Genauigkeit von 5, und mit Skalierung 2 definiert.
+## <a name="sql_c_numeric-overview"></a>Übersicht\_über\_SQL C numeric
 
-Der ODBC-Treiber, die, den Sie verwenden, um dieses Programm ausgeführt werden, muss ODBC 3.0-Funktionalität unterstützen.
+
+Das folgende Beispielprogramm veranschaulicht die Verwendung von SQL\_C\_numeric, indem 123,45 in eine Tabelle eingefügt wird. In der-Tabelle ist die-Spalte als numerisch oder Decimal definiert, mit der Genauigkeit 5 und mit der Skala 2.
+
+Der ODBC-Treiber, den Sie zum Ausführen dieses Programms verwenden, muss die ODBC 3,0-Funktionalität unterstützen.
 
 
 ```c

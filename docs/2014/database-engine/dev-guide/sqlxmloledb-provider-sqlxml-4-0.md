@@ -1,5 +1,5 @@
 ---
-title: SQLXMLOLEDB-Anbieter (SQLXML 4.0) | Microsoft-Dokumentation
+title: SQLXMLOLEDB-Anbieter (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780290"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB-Anbieter (SQLXML 4.0)
   Der SQLXMLOLEDB-Anbieter ist ein OLE DB-Anbieter, der [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML-Funktionalität durch ADO verfügbar macht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in den SQLXMLOLEDB-Anbieter &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [Einführung in den SQLXMLOLEDB-Anbieter &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Stellt grundlegende Informationen über den SQLXMLOLEDB-Anbieter bereit und listet SQLXMLOLEDB-spezifische Eigenschaften auf.  
   
- [Verwenden den SQLXMLOLEDB-Anbieter &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [Verwenden des SQLXMLOLEDB-Anbieters &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Stellt Beispiele für verschiedene Tasks mit dem SQLXMLOLEDB-Anbieter bereit.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwaltete SQLXML-Klassen](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Programmierung für SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   

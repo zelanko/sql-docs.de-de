@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650515"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription (Ereignisklasse)
@@ -26,15 +26,16 @@ ms.locfileid: "62650515"
   
 ## <a name="qnsubscription-event-class-data-columns"></a>Datenspalten der QN:Subscription-Ereignisklasse  
   
-|Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|type|BESCHREIBUNG|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|`nvarchar`|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Ja|  
-|DatabaseID|`int`|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die Server Name-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
+|DatabaseID|`int`|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database*-Anweisung ausgegeben wurde. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die Server Name-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  
 |EventClass|`int`|Ereignistyp = 199.|27|Nein|  
 |EventSequence|`int`|Die Sequenznummer für dieses Ereignis.|51|Nein|  
-|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Abonnement wird registriert: Gibt an, wann das Abfragebenachrichtigungsabonnement erfolgreich in der Datenbank registriert wird.<br /><br /> Abonnement, die zurückgesetzt werden: Gibt an, wann die [!INCLUDE[ssDE](../../includes/ssde-md.md)] empfängt eine Anforderung, die mit ein vorhandenes Abonnement übereinstimmt. In diesem Fall legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] für den Timeoutwert des vorhandenen Abonnements den in der neuen Abonnementanforderung festgelegten Timeoutwert fest.<br /><br /> Abonnement wurde ausgelöst: Gibt an, wann ein Benachrichtigungsabonnement eine benachrichtigungsmeldung erzeugt.<br /><br /> Broker-Fehler bei der Auslösung: Gibt an, wann eine benachrichtigungsmeldung aufgrund von schlägt fehl, einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] Fehler.<br /><br /> Fehler bei der Auslösung ohne Broker-Fehler: Gibt an, wenn eine Meldung ein Fehler auftritt, aber keine [!INCLUDE[ssSB](../../includes/sssb-md.md)] Fehler.<br /><br /> Broker-Fehler abgefangen: Gibt an, dass [!INCLUDE[ssSB](../../includes/sssb-md.md)] in der von die abfragebenachrichtigung verwendeten Konversation einen Fehler übermittelt.<br /><br /> Abonnement löschen Versuch: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] hat versucht, das Löschen eines abgelaufenen Abonnement, um Ressourcen freizugeben.<br /><br /> Fehler beim Löschen des Abonnements: Gibt an, dass beim Löschen eines abgelaufenen Abonnements fehlgeschlagen ist. Die Löschung des Abonnements wird in [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch erneut geplant, um Ressourcen frei zu geben.<br /><br /> Das Abonnement gelöscht: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein abgelaufenes Abonnement wurde erfolgreich gelöscht.|21|Ja|  
+|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Subscription registered: Gibt an, wann das Abfragebenachrichtigungsabonnement erfolgreich in der Datenbank registriert wird.<br /><br /> Abonnement Rewound: gibt an, [!INCLUDE[ssDE](../../includes/ssde-md.md)] wann eine Abonnement Anforderung erhält, die genau mit einem vorhandenen Abonnement übereinstimmt. In diesem Fall legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] für den Timeoutwert des vorhandenen Abonnements den in der neuen Abonnementanforderung festgelegten Timeoutwert fest.<br /><br /> Subscription fired: Gibt an, wann ein Benachrichtigungsabonnement eine Benachrichtigungsmeldung erzeugt.<br /><br /> Fehler beim Auslösen des Broker-Fehlers: gibt an, wann eine Benachrichtigungs [!INCLUDE[ssSB](../../includes/sssb-md.md)] Meldung aufgrund eines Fehlers fehlschlägt.<br /><br /> Fehler beim Auslösen ohne Broker-Fehler: gibt an, wann eine Benachrichtigungs Meldung fehlschlägt [!INCLUDE[ssSB](../../includes/sssb-md.md)] , aber nicht aufgrund eines Fehlers fehlschlägt.<br /><br /> Broker-Fehler abgefangen: gibt [!INCLUDE[ssSB](../../includes/sssb-md.md)] an, dass einen Fehler in der Konversation übermittelt hat, den die Abfrage Benachrichtigung verwendet.<br /><br /> Versuch zum Löschen von Abonnements: gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, dass versucht hat, ein abgelaufenes Abonnement zu löschen, um Ressourcen freizugeben.<br /><br /> Subscription deletion failed: Gibt an, dass beim Löschen eines abgelaufenen Abonnement ein Fehler generiert wurde. Die Löschung des Abonnements wird in [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch erneut geplant, um Ressourcen frei zu geben.<br /><br /> Abonnement zerstört: gibt an, [!INCLUDE[ssDE](../../includes/ssde-md.md)] dass erfolgreich ein abgelaufenes Abonnement gelöscht hat.|21|Ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  
@@ -43,7 +44,7 @@ ms.locfileid: "62650515"
 |NTDomainName|`nvarchar`|Die Windows-Domäne, der der Benutzer angehört.|7|Ja|  
 |NTUserName|`nvarchar`|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Ja|  
 |RequestID|`int`|Der Bezeichner der Anforderung, die die Anweisung enthält.|49|Ja|  
-|ServerName|`nvarchar`|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
+|Servername|`nvarchar`|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn beispielsweise eine Anwendung mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt und eine Anweisung als Login2 ausführt, zeigt SessionLoginName "Login1" an, und LoginName zeigt "Login2" an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SPID|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |StartTime|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  

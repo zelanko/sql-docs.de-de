@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057199"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Ziel-Editor für ODBC (Seite "Fehlerausgabe")
@@ -34,12 +34,12 @@ ms.locfileid: "66057199"
   
 -   Klicken Sie im **Ziel-Editor für ODBC**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
   
-### <a name="column"></a>Spalte  
+### <a name="column"></a>Column  
  Wird nicht verwendet.  
   
 ### <a name="error"></a>Fehler  
@@ -48,7 +48,7 @@ ms.locfileid: "66057199"
 ### <a name="truncation"></a>Abschneiden  
  Wählen Sie aus, wie das ODBC-Ziel Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Zeigt eine Beschreibung des Fehlers an.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  
@@ -69,7 +69,7 @@ ms.locfileid: "66057199"
 ### <a name="redirect-flow"></a>Zeile umleiten  
  Die Zeile, die den Fehler oder die Kürzung verursacht, wird an die Fehlerausgabe des ODBC-Ziels umgeleitet. Weitere Informationen finden Sie unter "ODBC-Ziel".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ziel-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Ziel-Editor für ODBC &#40;Seite Zuordnungen&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   

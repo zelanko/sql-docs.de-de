@@ -18,10 +18,10 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305099"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72305099"
   Entfernt alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftragsschrittprotokolle, die mit den Argumenten angegeben sind. Verwenden Sie diese gespeicherte Prozedur, um die **sysjobstepslogs** -Tabelle in der **msdb** -Datenbank beizubehalten.  
   
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,21 +43,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] 'job_id'` die Auftrags-ID des Auftrags, der das zu entfernende Auftrags Schritt Protokoll enthält. *job_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @job_id = ] 'job_id'`Die ID des Auftrags, der das zu entfernende Auftrags Schritt Protokoll enthält. *job_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` den Namen des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > **Hinweis:** Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @step_id = ] step_id` die ID des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. Wenn Sie nicht eingeschlossen werden, werden alle Auftrags Schritt Protokolle im Auftrag gelöscht, es sei denn, **\@older_than** oder **\@larger_than** angegeben werden. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @step_id = ] step_id`Die ID des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. Wenn Sie nicht eingeschlossen werden, werden alle Auftrags Schritt Protokolle im Auftrag gelöscht ** \@** , es sei denn, older_than oder ** \@larger_than** wurden angegeben. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @step_name = ] 'step_name'` den Namen des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @step_name = ] 'step_name'`Der Name des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > **Hinweis:** Es können entweder *step_id* oder *step_name* angegeben werden, beide können jedoch nicht angegeben werden.  
   
-`[ @older_than = ] 'date'` das Datum und die Uhrzeit des ältesten Auftrags Schritt Protokolls, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Es können sowohl **\@older_than** als auch **\@larger_than** angegeben werden.  
+`[ @older_than = ] 'date'`Das Datum und die Uhrzeit des ältesten Auftrags Schritt Protokolls, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Sowohl ** \@older_than** als auch ** \@larger_than** können angegeben werden.  
   
-`[ @larger_than = ] 'size_in_bytes'` die Größe des größten Auftrags Schritt Protokolls in Bytes, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Es können sowohl **\@larger_than** als auch **\@older_than** angegeben werden.  
+`[ @larger_than = ] 'size_in_bytes'`Die Größe des größten Auftrags Schritt Protokolls in Bytes, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Sowohl ** \@larger_than** als auch ** \@older_than** können angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -65,13 +65,13 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **sp_delete_jobsteplog** in der **msdb** -Datenbank.  
   
- Wenn keine Argumente außer **\@job_id** oder **\@job_name** angegeben werden, werden alle Auftrags Schritt Protokolle für den angegebenen Auftrag gelöscht.  
+ Wenn keine Argumente außer ** \@job_id** oder ** \@job_name** angegeben werden, werden alle Auftrags Schritt Protokolle für den angegebenen Auftrag gelöscht.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -124,8 +124,8 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [SQL Server-Agent gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_help_jobsteplog &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

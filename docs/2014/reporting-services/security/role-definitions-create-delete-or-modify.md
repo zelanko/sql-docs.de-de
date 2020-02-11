@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101809"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Erstellen, Löschen oder Ändern einer Rolle (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66101809"
   
  Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um Rollen zu erstellen, zu ändern oder zu löschen. Sie können nur Rollen löschen, die nicht verwendet werden.  
   
- Sie können die Zuweisungen von Benutzern und Gruppen zu von Ihnen erstellten Rollen mit dem Berichts-Manager vornehmen: Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)sollten nur sehr wenige Benutzer zugewiesen werden.  
+ Sie können die Zuweisungen von Benutzern und Gruppen zu von Ihnen erstellten Rollen mit dem Berichts-Manager vornehmen: Weitere Informationen finden Sie unter [Gewähren von Benutzer Zugriff auf einen Berichts Server &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md).  
   
 > [!NOTE]  
 >  Wenn ein Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert wird und Sie eine Verbindung zur SharePoint-Website hergestellt haben, in die der Berichtsserver integriert ist, können Sie die Berechtigungsebenen zur Steuerung des Zugriffs auf Inhalt und Vorgänge des Berichtsservers anzeigen lassen und ändern.  
@@ -45,7 +45,7 @@ ms.locfileid: "66101809"
   
      Falls Sie eine Rollendefinition auf Systemebene erstellen, können Sie mit der rechten Maustaste auf **Systemrollen**klicken und anschließend auf **Neue Systemrolle**zeigen.  
   
-4.  Geben Sie einen eindeutigen Namen für die Rolle ein. Der Name muss mindestens ein Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten, er darf jedoch folgende Zeichen nicht enthalten: ; ? : \@ & = + , $ / * \< > | " or /.  
+4.  Geben Sie einen eindeutigen Namen für die Rolle ein. Der Name muss mindestens ein Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten, er darf jedoch folgende Zeichen nicht enthalten: ; ? : \@ & = +, $/* \< > | "oder/.  
   
 5.  Geben Sie optional eine Beschreibung ein. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird diese Beschreibung nur auf dieser Seite angezeigt. Benutzer, die dieses Element im Berichts-Manager anzeigen, können diese Beschreibung in diesem Tool anzeigen.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66101809"
   
 2.  Erweitern Sie den Ordner Sicherheit.  
   
-3.  Erweitern Sie den Ordner Rollen, um eine Rollendefinition auf Elementebene zu löschen oder zu ändern. Führen Sie eine der folgenden Aktionen aus:  
+3.  Erweitern Sie den Ordner Rollen, um eine Rollendefinition auf Elementebene zu löschen oder zu ändern. Führen Sie einen der folgenden Schritte aus:  
   
     1.  Klicken Sie zum Löschen einer Rollendefinition mit der rechten Maustaste auf das Element, und klicken Sie anschließend auf **Löschen**. Das Dialogfeld **Objekt löschen** wird angezeigt. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66101809"
   
          Wählen Sie die Aufgaben aus, die Mitglieder dieser Rolle ausführen können, und klicken Sie dann auf **OK**.  
   
-4.  Erweitern Sie den Ordner **Systemrollen** , um eine Rollendefinition auf Systemebene zu löschen oder zu ändern. Führen Sie eine der folgenden Aktionen aus:  
+4.  Erweitern Sie den Ordner **Systemrollen** , um eine Rollendefinition auf Systemebene zu löschen oder zu ändern. Führen Sie einen der folgenden Schritte aus:  
   
     1.  Klicken Sie zum Löschen einer Systemrollendefinition auf Systemebene mit der rechten Maustaste auf das Element, und klicken Sie anschließend auf **Löschen**. Das Dialogfeld **Objekt löschen** wird angezeigt. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66101809"
   
          Wählen Sie die Aufgaben aus, die Mitglieder dieser Rolle ausführen können, und klicken Sie dann auf **OK** , um die Änderungen zu übernehmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
- (create-and-manage-role-assignments.md)   
- [Reporting Services in SQL Server Management Studio (SSRS)](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ (Create-and-manage-role-assignments.MD)   
+ [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

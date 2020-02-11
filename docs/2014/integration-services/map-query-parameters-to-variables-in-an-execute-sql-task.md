@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Abfrageparametern zu Variablen in einem Task "SQL ausführen" | Microsoft-Dokumentation
+title: Zuordnen von Abfrage Parametern zu Variablen in einem Task "SQL ausführen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057797"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen
@@ -38,7 +38,7 @@ ms.locfileid: "66057797"
   
 3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
   
-4.  Wenn das Paket noch keinen Task SQL ausführen enthält, fügen Sie der Ablaufsteuerung des Pakets einen solchen Task hinzu. Weitere Informationen finden Sie unter [hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Wenn das Paket noch keinen Task SQL ausführen enthält, fügen Sie der Ablaufsteuerung des Pakets einen solchen Task hinzu. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablauf Steuerung](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
 5.  Doppelklicken Sie auf den Task SQL ausführen.  
@@ -58,7 +58,7 @@ ms.locfileid: "66057797"
     |Verbindungstyp|Parametermarkierung|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET und SQLMOBILE|@\<Parametername>|  
+    |ADO.NET und SQLMOBILE|@\<Parameter Name>|  
     |ODBC|?|  
     |EXCEL und OLE DB|?|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66057797"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     Beispiele zur Verwendung von Parametern mit gespeicherten Prozeduren finden Sie [Parameter und Rückgabecodes im Task SQL ausführen](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+     Beispiele zum Verwenden von Parametern mit gespeicherten Prozeduren finden Sie unter [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 7.  Klicken Sie auf **Parameterzuordnung**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66057797"
     |Verbindungstyp|Parametername|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET und SQLMOBILE|@\<Parametername>|  
+    |ADO.NET und SQLMOBILE|@\<Parameter Name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL und OLE DB|0, 1, 2, 3, ...|  
   
@@ -103,9 +103,9 @@ ms.locfileid: "66057797"
   
 14. Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)   
- [Parameter und Rückgabecodes dem Task "SQL ausführen"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [Parameter und Rückgabe Codes im Task "SQL ausführen"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

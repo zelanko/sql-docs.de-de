@@ -1,5 +1,5 @@
 ---
-title: Massenladen von Daten in Tabellen in einer Mergeveröffentlichung (Replikationsprogrammierung mit Transact-SQL) | Microsoft-Dokumentation
+title: Massen Laden von Daten in Tabellen in einer Mergeveröffentlichung (Replikations Programmierung mit Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721762"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>Massenladen von Daten in Tabellen in einer Mergeveröffentlichung (Replikationsprogrammierung mit Transact-SQL)
@@ -34,6 +34,6 @@ ms.locfileid: "62721762"
   
     -   Führen Sie den Massenkopiervorgang mithilfe der FIRE_TRIGGERS-Option aus.  
   
-    -   Führen Sie in der Datenbank, in die Daten eingefügt wurden, [sp_addtabletocontents (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql) aus. Geben Sie den Namen der Tabelle an, in die die Daten für **@table_name** aus.  
+    -   Führen Sie in der Datenbank, in die Daten eingefügt wurden, [sp_addtabletocontents (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql) aus. Geben Sie den Namen der Tabelle an **@table_name**, in die die Daten eingefügt wurden.  
   
   

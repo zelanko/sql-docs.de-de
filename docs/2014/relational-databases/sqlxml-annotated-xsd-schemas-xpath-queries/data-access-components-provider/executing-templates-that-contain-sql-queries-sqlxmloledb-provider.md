@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Vorlagen, die SQL-Abfragen (SQLXMLOLEDB-Anbieter) enthalten. | Microsoft-Dokumentation
+title: Ausführen von Vorlagen, die SQL-Abfragen enthalten (SQLXMLOLEDB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cdf149720e853725a7f2fc9d0c03b24ea2caf9f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013114"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die SQL-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
-  Dieses Beispiel veranschaulicht die Verwendung der SQLXMLOLEDB-Anbieter spezifischen ClientSideXML-Eigenschaft. In dieser clientseitigen ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer einfachen SQL-Abfrage besteht, auf dem Server ausgeführt.  
+  Dieses Beispiel veranschaulicht die Verwendung der anbieterspezifischen SQLXMLOLEDB-Eigenschaft ClientSideXML. In dieser clientseitigen ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer einfachen SQL-Abfrage besteht, auf dem Server ausgeführt.  
   
- Da die ClientSideXML-Eigenschaft auf "true" festgelegt ist, wird die SELECT-Anweisung ohne die FOR XML-Klausel an den Server gesendet. Der Server führt die Abfrage aus und gibt ein Rowset an den Client zurück. Der Client wendet dann die FOR XML-Transformation auf das Rowset an und generiert ein XML-Dokument.  
+ Da die ClientSideXML-Eigenschaft auf true festgelegt ist, wird die SELECT-Anweisung ohne die for XML-Klausel an den Server gesendet. Der Server führt die Abfrage aus und gibt ein Rowset an den Client zurück. Der Client wendet dann die FOR XML-Transformation auf das Rowset an und generiert ein XML-Dokument.  
   
- Die XML-Vorlage stellt ein einzelnes Stammelement für der obersten Ebene (\<ROOT >) für die XML-Dokument, das generiert wird; daher wird die XML-Stammeigenschaft nicht bereitgestellt.  
+ Die XML-Vorlage stellt ein einzelnes Stamm Element (\<root>) der obersten Ebene für das generierte XML-Dokument bereit. Daher wird die XML-Stamm Eigenschaft nicht bereitgestellt.  
   
  Zum Ausführen der XML-Vorlagen muss der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} angegeben werden.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Anforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

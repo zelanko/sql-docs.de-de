@@ -1,5 +1,5 @@
 ---
-title: Bcp_readfmt | Microsoft-Dokumentation
+title: bcp_readfmt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688668"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
   Liest eine Datendatei-Formatdefinition aus der angegebenen Formatdatei.  
   
 ## <a name="syntax"></a>Syntax  
@@ -49,20 +49,20 @@ szFormatFile
  *szFormatFile*  
  Pfad und Dateiname der Datei, die die Formatwerte für die Datendatei enthält.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
- Nach dem `bcp_readfmt` die Formatwerte gelesen, nimmt Sie geeignete Aufrufe an [Bcp_columns](bcp-columns.md) und [Bcp_colfmt](bcp-colfmt.md). Sie brauchen keine Formatdatei zu analysieren, um diese Aufrufe zu tätigen.  
+## <a name="remarks"></a>Bemerkungen  
+ Nachdem `bcp_readfmt` die Format Werte gelesen hat, werden die entsprechenden Aufrufe an [bcp_columns](bcp-columns.md) und [bcp_colfmt](bcp-colfmt.md)durchführt. Sie brauchen keine Formatdatei zu analysieren, um diese Aufrufe zu tätigen.  
   
- Um eine Formatdatei beizubehalten, rufen [Bcp_writefmt](bcp-writefmt.md). Aufrufe von `bcp_readfmt` können auf gespeicherte Formate verweisen. Weitere Informationen finden Sie unter [bcp_init](bcp-init.md).  
+ Um eine Format Datei beizubehalten, wenden Sie [bcp_writefmt](bcp-writefmt.md)an. Aufrufe von `bcp_readfmt` können auf gespeicherte Formate verweisen. Weitere Informationen finden Sie unter [bcp_init](bcp-init.md).  
   
- Alternativ können Sie das Hilfsprogramm zum Massenkopieren (**Bcp**) können Sie die benutzerdefinierte Datenformate in Dateien, die auf Sie verweisen können speichern `bcp_readfmt`. Weitere Informationen zu den **Bcp** -Hilfsprogramm und die Struktur der **Bcp** -datenformatdateien finden Sie unter [Massenimport und-Export von Daten &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Alternativ kann das Hilfsprogramm zum Massen kopieren (**bcp**) benutzerdefinierte Datenformate in Dateien speichern, auf die von `bcp_readfmt`verwiesen werden kann. Weitere Informationen zum **bcp** -Hilfsprogramm und zur Struktur von **bcp** -Datenformat Dateien finden Sie unter [Massen Import und-Export von Daten &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- Die `BCPDELAYREADFMT` Wert, der die *eOption* Parameter [Bcp_control](bcp-control.md) ändert das Verhalten von Bcp_readfmt.  
+ Der `BCPDELAYREADFMT` Wert des *eOption* -Parameters von [bcp_control](bcp-control.md) ändert das Verhalten von bcp_readfmt.  
   
 > [!NOTE]  
->  Die Formatdatei muss Version 4.2 oder höher erstellt wurden die **Bcp** Hilfsprogramm.  
+>  Die Format Datei muss von Version 4,2 oder höher des **bcp** -Hilfsprogramms erstellt worden sein.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -109,7 +109,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopierfunktionen](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

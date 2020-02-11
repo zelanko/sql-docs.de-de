@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829477"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Wertinklusionsprofil (Datenprofilerstellungs-Task)
@@ -57,11 +57,11 @@ ms.locfileid: "62829477"
   
 -   **Allgemein**  
   
--   **Options**  
+-   **Optionen**  
   
 ### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **SubsetTableOrView**  
  Wählen Sie die vorhandene Tabelle oder Sicht aus, für die ein Profil erstellt werden soll.  
@@ -102,15 +102,15 @@ ms.locfileid: "62829477"
 > [!NOTE]  
 >  Wenn Sie den Platzhalter **(\*)** für **ColumnName** verwenden, ist **CompareOptions** schreibgeschützt und auf die **Default**-Einstellung festgelegt.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Default**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
+|**Standard**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
 |**DictionarySort**|Sortiert und vergleicht Daten anhand der Sortier- und Vergleichsregeln, die in Wörterbüchern für die zugeordnete Sprache definiert sind, oder nach dem jeweiligen Alphabet.|  
   
  Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreCase**|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |**IgnoreNonSpace**|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann "å" mit "a" identisch.|  
@@ -121,13 +121,13 @@ ms.locfileid: "62829477"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Keine**  
  Wählen Sie die Schwellenwerteinstellung aus, um die Ausgabe des Profils zu verfeinern. Der Standardwert dieser Eigenschaft ist **Specified**. Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Keine**|Gibt keinen Schwellenwert an. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
+|**None**|Gibt keinen Schwellenwert an. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **InclusionStrengthThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird nur gemeldet, wenn die untergeordneten Werte vollständig in den übergeordneten Werten enthalten sind.|  
   
@@ -139,9 +139,9 @@ ms.locfileid: "62829477"
  **Keine**  
  Geben Sie den übergeordneten Schwellenwert an. Der Standardwert dieser Eigenschaft ist **Specified**. Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Keine**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird unabhängig von der Schlüsselstärke der übergeordneten Spalte gemeldet.|  
+|**None**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird unabhängig von der Schlüsselstärke der übergeordneten Spalte gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **SupersetColumnsKeyThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn die Schlüsselstärke der übergeordneten Spalte größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird nur gemeldet, wenn die übergeordneten Spalten ein genauer Schlüssel in der übergeordneten Tabelle sind.|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62829477"
  **MaxNumberOfViolations**  
  Geben Sie die maximale Anzahl von Inklusionsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **InclusionThresholdSetting**ausgewählt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

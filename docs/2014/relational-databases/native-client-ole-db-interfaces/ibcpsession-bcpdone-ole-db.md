@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft-Dokumentation
+title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743196"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -33,8 +33,8 @@ ms.locfileid: "62743196"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Nach dem Aufruf der **BCPDone**-Methode kann kein weiterer Vorgang für die [IBCPSession](ibcpsession-ole-db.md)-Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) -Methode.  
+## <a name="remarks"></a>Bemerkungen  
+ Nach dem Aufruf der [BCPDone](ibcpsession-ole-db.md)-Methode kann kein weiterer Vorgang für die **IBCPSession**-Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md)-Methode.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
@@ -62,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Sie könnten BCP verwenden, um diese Daten mit dem folgenden Befehl wieder der Tabelle hinzuzufügen:  
   
- **bcp master..fltest in outfile.dat -n -T -S** *Server*  
+ **bcp-Master.. fltest in outfile. dat-n-T-S** - *Server*  
   
  Sie müssen beim Kompilieren dieses Beispiels sqlncli11.lib angeben.  
   
@@ -461,7 +461,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../native-client/features/performing-bulk-copy-operations.md)  
   

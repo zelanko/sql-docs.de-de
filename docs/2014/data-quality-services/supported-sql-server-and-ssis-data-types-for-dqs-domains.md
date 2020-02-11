@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 06e593c676c206f863bdb110be5c93e5003b4e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484088"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen
@@ -23,31 +23,31 @@ ms.locfileid: "65484088"
 > [!NOTE]  
 >  Der Datentyp der Quellspalte wird in XLSX- und XLS-Dateien vom häufigsten Datentyp in den ersten acht Zeilen bestimmt. Wenn eine Zelle diesem Datentyp nicht entspricht, erhält sie einen NULL-Wert. Entsprechend wird auch in CSV-Dateien der Datentyp der Quellspalte vom häufigsten Datentyp in den ersten acht Zeilen bestimmt.  
   
-##  <a name="SQLServer"></a> Unterstützte SQL Server-Datentypen  
+##  <a name="SQLServer"></a>Unterstützte SQL Server-Datentypen  
  Die folgende Tabelle enthält Informationen zu den für jeden DQS-Domänendatentyp unterstützten SQL Server-Datentypen:  
   
 |DQS-Domänendatentyp|Unterstützte SQL Server-Datentypen|  
 |--------------------------|------------------------------------|  
-|date|date|  
-|Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> REAL<br /><br /> SMALLMONEY|  
-|Integer|BIGINT<br /><br /> ssNoversion<br /><br /> smallint<br /><br /> TINYINT|  
-|Zeichenfolge|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
+|Date|date|  
+|Decimal|Decimal<br /><br /> float<br /><br /> money<br /><br /> NUMERIC<br /><br /> real<br /><br /> SMALLMONEY|  
+|Integer|BIGINT<br /><br /> INT<br /><br /> SMALLINT<br /><br /> TINYINT|  
+|String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   
  Die restlichen SQL Server-Datentypen werden in DQS nicht unterstützt. Informationen zu allen unterstützten SQL Server-Datentypen finden Sie unter[Data Types &#40;Transact-SQL&#41; (Datentypen &#40;Transact-SQL&#41;)](/sql/t-sql/data-types/data-types-transact-sql).  
   
-##  <a name="SSIS"></a> Unterstützte SSIS-Datentypen  
+##  <a name="SSIS"></a>Unterstützte SSIS-Datentypen  
  Die folgende Tabelle enthält Informationen zu den für jeden DQS-Domänendatentyp unterstützten SSIS-Datentypen:  
   
 |DQS-Domänendatentyp|Unterstützter SSIS-Datentyp|  
 |--------------------------|------------------------------|  
-|date|DT_DATE|  
+|Date|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |Integer|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
-|Zeichenfolge|DT_STR<br /><br /> DT_WSTR|  
+|String|DT_STR<br /><br /> DT_WSTR|  
   
  Die restlichen SSIS-Datentypen werden in DQS nicht unterstützt. Informationen zu allen SSIS-Datentypen finden Sie unter [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md)  
   
   

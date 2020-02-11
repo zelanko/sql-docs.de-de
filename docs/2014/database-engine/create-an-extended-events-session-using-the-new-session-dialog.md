@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Sitzung für erweiterte Ereignisse mithilfe des Dialogfelds für die neue Sitzung | Microsoft-Dokumentation
+title: Erstellen einer Sitzung für erweiterte Ereignisse mit dem Dialog Feld "neue Sitzung" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39dd8c4f333df1528f3894ffc6dfe01a48a91f2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065017"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Erstellen einer Sitzung für erweiterte Ereignisse im Dialogfeld für neue Sitzungen
   Mit dem Dialogfeld "Neue Sitzung" können Sie eine Sitzung für erweiterte Ereignisse definieren, die Ihre Daten erfasst, anzeigt und analysiert. Mit dem Dialogfeld "Neue Sitzung" werden alle Funktionen erweiterter Ereignisse angezeigt.  
   
- Mit dem [Assistenten für neue Sitzungen](../ssms/object/object-explorer.md) können Sie zudem eine Sitzung für erweiterte Ereignisse definieren, mit der die meisten Funktionen erweiterter Ereignisse unterstützt werden.  
+ Mit dem Assistenten für neue Sitzungen [](../ssms/object/object-explorer.md) können Sie zudem eine Sitzung für erweiterte Ereignisse definieren, mit der die meisten Funktionen erweiterter Ereignisse unterstützt werden.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
  Um das Dialogfeld für eine neue Sitzung im Objekt-Explorer zu öffnen, erweitern Sie den Knoten **Verwaltung** , und erweitern Sie dann **Erweiterte Ereignisse**. Klicken Sie mit der rechten Maustaste auf **Sitzungen**, und klicken Sie dann auf **Neue Sitzung**.  
   
 ##  <a name="BeforeYouBegin"></a> Berechtigungen  
@@ -58,7 +58,7 @@ ms.locfileid: "66065017"
   
 6.  Aktivieren Sie im Abschnitt **Kausalitätsverfolgung** das Kontrollkästchen **Nachverfolgen, in welcher Beziehung Ereignisse zueinander stehen** , um die Arbeit über mehrere Tasks nachzuverfolgen.  
   
-     Weitere Informationen zur kausalitätsverfolgung finden Sie unter "Sitzungsinhalt und-Eigenschaften" in der [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md) Thema.  
+     Weitere Informationen zur Kausalitäts Verfolgung finden Sie unter "Sitzungs Inhalt und-Eigenschaften" im Thema [SQL Server Sitzungen für erweiterte Ereignisse](../relational-databases/extended-events/sql-server-extended-events-sessions.md) .  
   
      Um der Sitzung Ereignisse hinzuzufügen, klicken Sie im Bereich **Seite auswählen** auf **Ereignisse**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66065017"
   
 2.  Klicken Sie auf der Seite **Ereignisse** auf **Auswählen** (die Schaltfläche **Auswählen** ist abgeblendet, wenn Sie sich bereits auf dem Bildschirm **Ereignisse auswählen, die Sie aufzeichnen möchten** befinden).  
   
-     Sie können in der Tabelle nach einem beliebigen Wort suchen, indem Sie im Feld **Ereignisbibliothek** den Text eingeben, den Sie suchen möchten. Wenn Sie z. B. das Ereignis **lock_acquired** suchen möchten, können Sie **lock** oder **lock acquire**eingeben.  
+     Sie können in der Tabelle nach einem beliebigen Wort suchen, indem Sie im Feld **Ereignisbibliothek** den Text eingeben, den Sie suchen möchten. Wenn Sie z. b. das **lock_acquired** Ereignis suchen möchten, können Sie **Lock** -oder **Lock**-Abruf eingeben.  
   
 3.  Wählen Sie im Abschnitt **Ereignisbibliothek** aus der Dropdownliste aus, wie Sie nach den Ereignissen suchen möchten, die Sie aufzeichnen möchten. Sie können beispielsweise nach Ereignisnamen oder Ereignisnamen und ihren Beschreibungen suchen. Geben Sie die Suchkriterien im Feld **Suchen** ein.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66065017"
   
 -   **event_file**. Wird eingesetzt, um die Ereignissitzungsausgabe aus vollständigen Speicherpuffern auf die Festplatte zu schreiben.  
   
--   **histogram**. Dient dazu, die Häufigkeit eines bestimmten Ereignisses auf Grundlage einer bestimmten Ereignisspalte oder Aktion zu zählen.  
+-   **Histogramm**. Dient dazu, die Häufigkeit eines bestimmten Ereignisses auf Grundlage einer bestimmten Ereignisspalte oder Aktion zu zählen.  
   
 -   **pair_matching**. Ereignispaarbildung wird eingesetzt, um zu bestimmen, wann ein spezifisches, kombiniertes Ereignis nicht als Paar auftritt.  
   
@@ -161,12 +161,12 @@ ms.locfileid: "66065017"
   
     |Ziel|Zieleigenschaften|  
     |------------|-----------------------|  
-    |**etw_classic_sync_target**|**Name der Sitzungsprotokolldatei auf Server**. Geben Sie den Protokolldateinamen und das Verzeichnis auf dem Server ein, oder klicken Sie auf **Durchsuchen** , um die Protokolldatei zu suchen und auszuwählen.<br /><br /> **Maximale Protokolldateigröße**. Geben Sie die maximale Protokolldateigröße für das ETW-Ereignis (Ereignisablaufverfolgung für Windows) ein. Der Standardwert ist 20 MB. Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Puffergröße**. Geben Sie die Puffergröße im Arbeitsspeicher für die Ereignissitzung ein. Der Standardwert ist 128 KB. Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Sitzungsname**. Geben Sie einen aussagekräftigen Namen für die ETW-Sitzung ein.<br /><br /> **Bei Schreibfehler in ETW wiederholen**. Aktivieren Sie dieses Kontrollkästchen, um die Veröffentlichung des Ereignisses im ETW-Subsystem erneut zu versuchen.<br /><br /> **Maximale Anzahl von Wiederholungen**. Geben Sie die maximale Anzahl von erneuten Versuchen für die Veröffentlichung des Ereignisses im ETW-Subsystem an, bevor das Ereignis gelöscht wird. Die Standardanzahl von Wiederholungen beträgt 0 (null). Für diese Zieleigenschaft bedeuten 0 (null) keine Wiederholungen.|  
+    |**etw_classic_sync_target**|**Der Name der Sitzungsprotokoll Datei auf dem Server**. Geben Sie den Protokolldateinamen und das Verzeichnis auf dem Server ein, oder klicken Sie auf **Durchsuchen** , um die Protokolldatei zu suchen und auszuwählen.<br /><br /> **Maximale Protokolldatei Größe**. Geben Sie die maximale Protokolldateigröße für das ETW-Ereignis (Ereignisablaufverfolgung für Windows) ein. Der Standardwert ist 20 MB. Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Puffergröße**. Geben Sie die Puffergröße im Arbeitsspeicher für die Ereignissitzung ein. Der Standardwert ist 128 KB. Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Sitzungsname**. Geben Sie einen aussagekräftigen Namen für die ETW-Sitzung ein.<br /><br /> **Wiederholen Sie den Fehler beim Schreiben in etw**. Aktivieren Sie dieses Kontrollkästchen, um die Veröffentlichung des Ereignisses im ETW-Subsystem erneut zu versuchen.<br /><br /> **Maximale Anzahl von Wiederholungen**. Geben Sie die maximale Anzahl von erneuten Versuchen für die Veröffentlichung des Ereignisses im ETW-Subsystem an, bevor das Ereignis gelöscht wird. Die Standardanzahl von Wiederholungen beträgt 0 (null). Für diese Zieleigenschaft bedeuten 0 (null) keine Wiederholungen.|  
     |**event_counter**|Es gibt keine Zieleigenschaften für den Ereigniszähler.|  
-    |**event_file**|**Dateiname auf Server**. Geben Sie das Verzeichnis und den Zieldateinamen auf dem Server ein, oder klicken Sie auf **Durchsuchen** , um die Zieldatei zu suchen und auszuwählen.<br /><br /> **Maximale Dateigröße**. Geben Sie die maximale Dateigröße für das Dateiziel an. Wenn Sie keine maximale Dateigröße angeben, wird die Datei immer größer, bis der Speicherplatz auf dem Datenträger erschöpft ist. Die Standarddateigröße beträgt 1 Gigabyte (GB). Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Dateirollover aktivieren**. Aktivieren Sie dieses Kontrollkästchen, um einen Dateirollover für das Dateiziel zu aktivieren.<br /><br /> **Maximale Anzahl von Rolloverdateien**. Geben Sie die maximale Anzahl der Dateien an, die Sie im Dateisystem beibehalten möchten.|  
-    |**histogram**|**Ereignis, nach dem gefiltert werden soll**. Wählen Sie das Ereignis, nach dem gefiltert werden soll aus der Dropdownliste aus. Sie können nach einen beliebigen Ereignis filtern, das in der Ereignissitzung vorhanden ist. Sie können auch auswählen,  **\<None >** aus der Dropdown-Liste alle Ereignisse und die basisbuckets für die Aktion einzuschließen.<br /><br /> **Buckets basieren auf: Aktion**. Aktivieren Sie diese Option, um die Buckets auf dem Aktionsnamen zu basieren, der als Datenquelle verwendet wird, und wählen Sie dann die Aktion aus der Dropdownliste aus.<br /><br /> **Buckets basieren auf: Feld**. Aktivieren Sie diese Option, um die Buckets auf dem Ereignisfeld zu basieren, das als Datenquelle verwendet wird, und wählen Sie dann das Feld aus der Dropdownliste aus.<br /><br /> **Maximale Bucketanzahl**. Geben Sie die maximale Anzahl von Buckets ein, die Sie beibehalten möchten. Wenn dieser Wert erreicht wird, ignoriert die Ereignissitzung alle neuen Ereignisse, die nicht zu den vorhandenen Buckets gehören.|  
-    |**pair_matching**|**Ereignisse: Beginnen Sie mit**. Wählen Sie den Ereignisnamen, der das Anfangsereignis in einer paarweise zugeordneten Sequenz angibt, aus der Dropdownliste aus.<br /><br /> **Ereignisse: Enden**. Wählen Sie den Ereignisnamen, der das Endereignis in einer paarweise zugeordneten Sequenz angibt, aus der Dropdownliste aus.<br /><br /> **Felder und Aktionen: Beginnen Sie mit**. Wählen Sie das Anfangsfeld und/oder eine Aktion in einer paarweise zugeordneten Sequenz aus der Dropdownliste aus.<br /><br /> **Felder und Aktionen: Enden**. Wählen Sie das Endfeld und/oder eine Aktion in einer paarweise zugeordneten Sequenz aus der Dropdownliste aus.<br /><br /> **Neue nicht gepaarte Ereignisse bei ungenügendem Arbeitsspeicher verwerfen**. Aktivieren Sie dieses Kontrollkästchen, um die Sammlung von Ereignissen für das pair_matching-Ziel zu beenden, wenn nicht genügend Arbeitsspeicher vorhanden ist. Wenn wieder mehr Arbeitsspeicher vorhanden ist, wird die Sammlung von Ereignissen fortgesetzt.<br /><br /> **Maximale verwaiste Ereignisse**. Geben Sie die maximale Anzahl verwaister Ereignisse an, die Sie im Arbeitsspeicher beibehalten möchten.|  
-    |**ring_buffer**|**Anzahl beizubehaltender Ereignisse**. Geben Sie mithilfe der NACH-OBEN-TASTE und der NACH-UNTEN-TASTE die Anzahl von Ereignissen an, die Sie beibehalten möchten. Der Standardwert lautet 1000.<br /><br /> **Maximale Pufferspeichergröße**. Geben Sie die Höchstmenge des verfügbaren Arbeitsspeichers ein. Vorhandene Ereignisse werden gelöscht, wenn dieser Wert erreicht wird. Die Standardspeichergröße beträgt 0 Megabyte (MB) (bedeutet unbeschränkt). Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Angegebene Anzahl von Ereignissen (pro Typ) bei vollem Puffer beibehalten**. Aktivieren Sie diese Option, um eine angegebene Anzahl von Ereignissen jedes Typs im Puffer beizubehalten.<br /><br /> **Anzahl beizubehaltender Ereignisse (pro Typ)** . Geben Sie die gewünschte Anzahl von Ereignissen jedes Typs ein, die im Puffer gespeichert werden soll.|  
+    |**event_file**|**Dateiname auf dem Server**. Geben Sie das Verzeichnis und den Zieldateinamen auf dem Server ein, oder klicken Sie auf **Durchsuchen** , um die Zieldatei zu suchen und auszuwählen.<br /><br /> **Maximale Dateigröße**. Geben Sie die maximale Dateigröße für das Dateiziel an. Wenn Sie keine maximale Dateigröße angeben, wird die Datei immer größer, bis der Speicherplatz auf dem Datenträger erschöpft ist. Die Standarddateigröße beträgt 1 Gigabyte (GB). Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Aktivieren Sie Dateirollover**. Aktivieren Sie dieses Kontrollkästchen, um einen Dateirollover für das Dateiziel zu aktivieren.<br /><br /> **Maximale Anzahl von Dateien**. Geben Sie die maximale Anzahl der Dateien an, die Sie im Dateisystem beibehalten möchten.|  
+    |**Histogramm**|**Ereignis, nach dem gefiltert werden soll**. Wählen Sie das Ereignis, nach dem gefiltert werden soll aus der Dropdownliste aus. Sie können nach einen beliebigen Ereignis filtern, das in der Ereignissitzung vorhanden ist. Sie können auch ** \<keine>** in der Dropdown Liste auswählen, um alle Ereignisse und die Basis Behälter für die Aktion einzuschließen.<br /><br /> **Basis Bucket auf: Aktion**. Aktivieren Sie diese Option, um die Buckets auf dem Aktionsnamen zu basieren, der als Datenquelle verwendet wird, und wählen Sie dann die Aktion aus der Dropdownliste aus.<br /><br /> **Basis Bucket für: Feld**. Aktivieren Sie diese Option, um die Buckets auf dem Ereignisfeld zu basieren, das als Datenquelle verwendet wird, und wählen Sie dann das Feld aus der Dropdownliste aus.<br /><br /> **Maximale Anzahl von**Buchern. Geben Sie die maximale Anzahl von Buckets ein, die Sie beibehalten möchten. Wenn dieser Wert erreicht wird, ignoriert die Ereignissitzung alle neuen Ereignisse, die nicht zu den vorhandenen Buckets gehören.|  
+    |**pair_matching**|**Ereignisse: beginnen mit**. Wählen Sie den Ereignisnamen, der das Anfangsereignis in einer paarweise zugeordneten Sequenz angibt, aus der Dropdownliste aus.<br /><br /> **Ereignisse: enden mit**. Wählen Sie den Ereignisnamen, der das Endereignis in einer paarweise zugeordneten Sequenz angibt, aus der Dropdownliste aus.<br /><br /> **Felder und Aktionen: beginnen mit**. Wählen Sie das Anfangsfeld und/oder eine Aktion in einer paarweise zugeordneten Sequenz aus der Dropdownliste aus.<br /><br /> **Felder und Aktionen: enden mit**. Wählen Sie das Endfeld und/oder eine Aktion in einer paarweise zugeordneten Sequenz aus der Dropdownliste aus.<br /><br /> **Verwerfen neuer nicht paarweise zugeordnete Ereignisse, wenn Speicherauslastung auftritt**. Aktivieren Sie dieses Kontrollkästchen, um die Sammlung von Ereignissen für das pair_matching-Ziel zu beenden, wenn nicht genügend Arbeitsspeicher vorhanden ist. Wenn wieder mehr Arbeitsspeicher vorhanden ist, wird die Sammlung von Ereignissen fortgesetzt.<br /><br /> **Maximale verwaiste Ereignisse**. Geben Sie die maximale Anzahl verwaister Ereignisse an, die Sie im Arbeitsspeicher beibehalten möchten.|  
+    |**ring_buffer**|**Anzahl der**beizubehaltenden Ereignisse. Geben Sie mithilfe der NACH-OBEN-TASTE und der NACH-UNTEN-TASTE die Anzahl von Ereignissen an, die Sie beibehalten möchten. Der Standardwert lautet 1000.<br /><br /> **Maximale Pufferspeicher Größe**. Geben Sie die Höchstmenge des verfügbaren Arbeitsspeichers ein. Vorhandene Ereignisse werden gelöscht, wenn dieser Wert erreicht wird. Die Standardspeichergröße beträgt 0 Megabyte (MB) (bedeutet unbeschränkt). Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Behalten Sie eine angegebene Anzahl von Ereignissen (pro Typ) bei, wenn der Puffer voll ist**. Aktivieren Sie diese Option, um eine angegebene Anzahl von Ereignissen jedes Typs im Puffer beizubehalten.<br /><br /> **Anzahl der zu behaltenden Ereignisse (pro Typ)**. Geben Sie die gewünschte Anzahl von Ereignissen jedes Typs ein, die im Puffer gespeichert werden soll.|  
   
 5.  Wenn Sie erweiterte Konfigurationseigenschaften festlegen möchten, wählen Sie im Abschnitt **Seite auswählen** die Option **Erweitert** aus.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66065017"
   
     2.  **Verlust mehrerer Ereignisse**. Aktivieren Sie diese Option, um den Verlust mehrerer Ereignisse zuzulassen.  
   
-    3.  **Kein Ereignisverlust**. Aktivieren Sie diese Option, wenn Sie den Verlust von Ereignissen verhindern möchten. Diese Option wird nicht empfohlen.  
+    3.  **Kein Ereignis Verlust**. Aktivieren Sie diese Option, wenn Sie den Verlust von Ereignissen verhindern möchten. Diese Option wird nicht empfohlen.  
   
         > [!NOTE]  
         >  Einige Ereignisse, z. B. das **sqlos.wait_info** -Ereignis, sind nicht kompatibel mit dem Ereignisbeibehaltungsmodus **Kein Ereignisverlust** .  
@@ -200,7 +200,7 @@ ms.locfileid: "66065017"
   
 6.  Gehen Sie wie folgt vor, um die Optionen für den **Speicherpartitionsmodus** anzugeben:  
   
-    1.  **Keiner**. Aktivieren Sie diese Option, wenn Sie keinen Speicherpartitionsmodus benötigen.  
+    1.  **Keine**. Aktivieren Sie diese Option, wenn Sie keinen Speicherpartitionsmodus benötigen.  
   
     2.  **Pro Knoten**. Aktivieren Sie diese Option, wenn Sie den Speicher pro Knoten partitionieren möchten.  
   
@@ -208,9 +208,9 @@ ms.locfileid: "66065017"
   
  Um die Konfigurationsstandardwerte für die vorherigen Sitzungseigenschaften wiederherzustellen, klicken Sie auf **Standardwerte wiederherstellen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Sitzung für erweiterte Ereignisse mittels Abfrage-Editor](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
- [Erstellen einer Sitzung für erweiterte Ereignisse mithilfe des Assistenten &#40;Objekt-Explorer&#41;](../ssms/object/object-explorer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
+ [Erstellen Sie eine Sitzung für erweiterte Ereignisse mithilfe des Assistenten &#40;Objekt-Explorer&#41;](../ssms/object/object-explorer.md)   
  [Schreiben einer Sitzung für erweiterte Ereignisse](../../2014/database-engine/script-an-extended-event-session.md)  
   
   

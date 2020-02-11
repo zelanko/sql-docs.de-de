@@ -1,5 +1,5 @@
 ---
-title: 'Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten | Microsoft-Dokumentation'
+title: 'Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu. Die folgenden Verbindungen wurden nicht aktualisiert: Power Pivot-Daten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070978"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
@@ -24,7 +24,7 @@ ms.locfileid: "66070978"
   
 |||  
 |-|-|  
-|Betrifft|PowerPivot für SharePoint|  
+|Anwendungsbereich|PowerPivot für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Excel Services sind dafür konfiguriert, den externen Datenzugriff zu verweigern.|  
 |Meldungstext|Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten|  
@@ -35,7 +35,7 @@ ms.locfileid: "66070978"
 ## <a name="user-action"></a>Benutzeraktion  
  Ändern Sie die Konfigurationseinstellungen, um eingebettete Datenquellen zuzulassen.  
   
-1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
+1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
 2.  Klicken Sie auf **Excel Services-Anwendung**.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66070978"
   
 6.  Klicken Sie auf **OK**.  
   
- Alternativ können Sie einen neuen vertrauenswürdigen Speicherort für Websites erstellen, die PowerPivot-Arbeitsmappen enthalten, und dann die Konfigurationseinstellungen nur für diese Website ändern. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Alternativ können Sie einen neuen vertrauenswürdigen Speicherort für Websites erstellen, die PowerPivot-Arbeitsmappen enthalten, und dann die Konfigurationseinstellungen nur für diese Website ändern. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_bindrule (Transact-SQL) | Microsoft-Dokumentation
+title: sp_bindrule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046029"
 ---
-# <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
+# <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Bindet eine Regel an eine Spalte oder an einen Aliasdatentyp.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwendung[Unique- und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md) stattdessen. Überprüfen Sie die Einschränkungen werden erstellt, mit dem CHECK-Schlüsselwort, der die [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) Anweisungen.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden[Sie stattdessen UNIQUE-Einschränkungen und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Check-Einschränkungen werden mit dem Check-Schlüsselwort der Anweisungen [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) erstellt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,31 +45,31 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rulename = ] 'rule'` Ist der Name einer Regel, die von der CREATE RULE-Anweisung erstellt. *Regel* ist **nvarchar(776)** , hat keinen Standardwert.  
+`[ @rulename = ] 'rule'`Der Name einer Regel, die von der CREATE RULE-Anweisung erstellt wurde. die *Regel* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert.  
   
-`[ @objname = ] 'object_name'` Ist in der Tabelle und Spalte oder der Aliasdatentyp, für den die Regel gebunden werden wird. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
+`[ @objname = ] 'object_name'`Die Tabelle und Spalte oder der Alias Datentyp, an den die Regel gebunden werden soll. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
   
- *Object_name* ist **nvarchar(776)** hat keinen Standardwert. Wenn *Object_name* ist ein einteiliger Name, wird er als einen Aliasdatentyp aufgelöst. Ein zwei- oder dreiteiliger Name wird zunächst als Tabelle und Spalte aufgelöst. Wenn die Auflösung fehlschlägt, wird er als Aliasdatentyp aufgelöst. Vorhandene Spalten des aliasdatentyps erben standardmäßig *Regel* , wenn eine Regel direkt auf die Spalte gebunden wurde.  
+ *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Wenn *object_name* ein einteilige Name ist, wird er als Alias Datentyp aufgelöst. Ein zwei- oder dreiteiliger Name wird zunächst als Tabelle und Spalte aufgelöst. Wenn die Auflösung fehlschlägt, wird er als Aliasdatentyp aufgelöst. Standardmäßig erben vorhandene Spalten des Alias Datentyps die *Regel* , es sei denn, eine Regel wurde direkt an die Spalte gebunden.  
   
 > [!NOTE]  
->  *Object_name* darf die Klammer **[** und **]** Zeichen als Begrenzungsbezeichner. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
+>  *object_name* können die Klammer Zeichen **[** und **]** als Begrenzungs Bezeichner enthalten. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 >  Regeln, die für Ausdrücke erstellt werden, die Aliasdatentypen verwenden, können an Spalten oder Aliasdatentypen gebunden werden. Wenn darauf verwiesen wird, schlägt jedoch die Kompilierung fehl. Vermeiden Sie die Verwendung von Regeln, die für Aliasdatentypen erstellt wurden.  
   
-`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Binden einer Regel an einen Aliasdatentyp verwendet. *Future_only_flag* ist **varchar(15)** hat den Standardwert NULL. Dieser Parameter, die bei Festlegung auf **Futureonly** verhindert, dass vorhandene Spalten eines aliasdatentyps die neue Regel erben. Wenn *Futureonly_flag* NULL ist, die neue Regel an alle Spalten des aliasdatentyps, der aktuell keine Regel haben oder die die vorhandene Regel des aliasdatentyps, gebunden ist.  
+`[ @futureonly = ] 'futureonly_flag'`Wird nur beim Binden einer Regel an einen Alias Datentyp verwendet. *future_only_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn dieser Parameter auf **futureonly** festgelegt ist, wird verhindert, dass vorhandene Spalten eines Alias Datentyps die neue Regel erben. Wenn *futureonly_flag* NULL ist, wird die neue Regel an alle Spalten des Alias Datentyps gebunden, die derzeit keine Regel haben oder die die vorhandene Regel des Alias Datentyps verwenden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- Sie können eine neue Regel an eine Spalte binden, (obwohl empfohlen) eine CHECK-Einschränkung zu verwenden wird, oder einen Aliasdatentyp mit **Sp_bindrule** ohne die Bindung einer vorhandenen Regel. Die alte Regel wird überschrieben. Wenn eine Regel an eine Spalte gebunden wird, für die eine CHECK-Einschränkung vorhanden ist, werden alle Einschränkungen ausgewertet. Das Binden einer Regel an einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp ist nicht möglich.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können eine neue Regel an eine Spalte binden (obwohl eine Check-Einschränkung bevorzugt wird) oder an einen Alias Datentyp mit **sp_bindrule** , ohne die Bindung für eine vorhandene Regel aufzuheben. Die alte Regel wird überschrieben. Wenn eine Regel an eine Spalte gebunden wird, für die eine CHECK-Einschränkung vorhanden ist, werden alle Einschränkungen ausgewertet. Das Binden einer Regel an einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp ist nicht möglich.  
   
- Die Regel tritt in Kraft, wenn eine INSERT-Anweisung ausgeführt wird, nicht aber beim Binden. Sie können eine Zeichenregel an eine Spalte binden **numerischen** -Datentyp, obwohl dieser INSERT-Vorgang nicht gültig ist.  
+ Die Regel tritt in Kraft, wenn eine INSERT-Anweisung ausgeführt wird, nicht aber beim Binden. Sie können eine Zeichen Regel an eine Spalte des **numerischen** Datentyps binden, obwohl ein solcher Einfügevorgang ungültig ist.  
   
- Vorhandene Spalten des aliasdatentyps erben die neue Regel, es sei denn, *Futureonly_flag* angegeben ist, als **Futureonly**. Neue Spalten, die mit dem Aliasdatentyp definiert sind, erben immer die Regel. Wenn jedoch die ALTER COLUMN-Klausel einer ALTER TABLE-Anweisung den Datentyp einer Spalte in einen Aliasdatentyp ändert, der an eine Regel gebunden ist, wird diese Regel nicht an die Spalte vererbt. Die Regel muss speziell auf die Spalte gebunden werden, mithilfe von **Sp_bindrule**.  
+ Vorhandene Spalten des Alias Datentyps erben die neue Regel, es sei denn, *futureonly_flag* als **futureonly**angegeben. Neue Spalten, die mit dem Aliasdatentyp definiert sind, erben immer die Regel. Wenn jedoch die ALTER COLUMN-Klausel einer ALTER TABLE-Anweisung den Datentyp einer Spalte in einen Aliasdatentyp ändert, der an eine Regel gebunden ist, wird diese Regel nicht an die Spalte vererbt. Die Regel muss mithilfe **sp_bindrule**an die Spalte gebunden werden.  
   
- Wenn Sie eine Regel an eine Spalte binden, zugehörige Informationen hinzugefügt die **sys.columns** Tabelle. Wenn Sie eine Regel an einen Aliasdatentyp binden, zugehörige Informationen hinzugefügt die **sys.types** Tabelle.  
+ Wenn Sie eine Regel an eine Spalte binden, werden der Tabelle **sys. Columns** zugehörige Informationen hinzugefügt. Wenn Sie eine Regel an einen Alias Datentyp binden, werden der Tabelle **sys. types** zugehörige Informationen hinzugefügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Um eine Regel an eine Tabellenspalte zu binden, benötigen Sie die ALTER-Berechtigung für die Tabelle. Um eine Regel an einen Aliasdatentyp zu binden, benötigen Sie die CONTROL-Berechtigung für den Aliasdatentyp oder die ALTER-Berechtigung für das Schema, dem der Typ angehört.  
@@ -86,7 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Binden einer Regel an einen Aliasdatentyp  
- Unter der Annahme, eine Regel namens `rule_ssn` und ein Aliasdatentyp namens `ssn` sind vorhanden, wird in diesem Beispiel `rule_ssn` an `ssn` gebunden. Alle Spalten vom Datentyp `ssn` erben in einer CREATE TABLE-Anweisung die Regel `rule_ssn`. Vorhandene Spalten des Typs `ssn` erben ebenfalls die `rule_ssn` auszuschließen, es sei denn, **Futureonly** für angegeben *Futureonly_flag*, oder `ssn` verfügt über eine Regel, die direkt an sie gebunden. An Spalten gebundene Regeln haben immer Vorrang vor den an Datentypen gebundenen Regeln.  
+ Unter der Annahme, eine Regel namens `rule_ssn` und ein Aliasdatentyp namens `ssn` sind vorhanden, wird in diesem Beispiel `rule_ssn` an `ssn` gebunden. Alle Spalten vom Datentyp `ssn` erben in einer CREATE TABLE-Anweisung die Regel `rule_ssn`. Vorhandene Spalten vom Typ `ssn` Erben auch die `rule_ssn` Regel, sofern nicht **futureonly** für *futureonly_flag*angegeben ist oder `ssn` eine Regel direkt an Sie gebunden ist. An Spalten gebundene Regeln haben immer Vorrang vor den an Datentypen gebundenen Regeln.  
   
 ```  
 USE master;  
@@ -94,7 +94,7 @@ GO
 EXEC sp_bindrule 'rule_ssn', 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>C. Verwenden von futureonly_flag  
+### <a name="c-using-the-futureonly_flag"></a>C. Verwenden des futureonly_flag  
  Im folgenden Beispiel wird die Regel `rule_ssn` an den Aliasdatentyp `ssn` gebunden. Da `futureonly` angegeben wurde, sind keine vorhandenen Spalten des Typs `ssn` betroffen.  
   
 ```  
@@ -103,8 +103,8 @@ GO
 EXEC sp_bindrule rule_ssn, 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. Verwendung von begrenzungsbezeichnern  
- Das folgende Beispiel zeigt die Verwendung von begrenzungsbezeichnern im *Object_name* Parameter.  
+### <a name="d-using-delimited-identifiers"></a>D: Verwenden von Begrenzungs Bezeichnerzeichen  
+ Das folgende Beispiel zeigt die Verwendung von Begrenzungs bezeichnerbezeichnerbezeichnerzeichen in *object_name* -Parametern.  
   
 ```  
 USE master;  
@@ -117,12 +117,12 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Erstellen einer Regel &#40;Transact-SQL-&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [Drop Rule &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [sp_unbindrule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

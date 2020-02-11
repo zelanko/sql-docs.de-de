@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806751"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "62806751"
   
  Verwenden Sie zum Kopieren eines Zertifikats zu einem anderen System eine sichere Kopiermethode. Seien Sie äußerst vorsichtig, um Ihre Zertifikate zu schützen.  
   
-##  <a name="ExampleH2"></a> Beispiel  
+##  <a name="ExampleH2"></a>Beispiel  
  Das folgende Beispiel zeigt, welche Aktionen für einen der Partner ausgeführt werden müssen, der auf HOST_A gespeichert ist. In diesem Beispiel sind die beiden Partner die Standardserverinstanzen auf drei Computersystemen. Die beiden Serverinstanzen werden in nicht vertrauenswürdigen Windows-Domänen ausgeführt, daher ist zertifikatbasierte Authentifizierung erforderlich.  
   
  HOST_A übernimmt die anfängliche Prinzipalrolle, während die Spiegelrolle von HOST_B übernommen wird.  
@@ -58,9 +58,9 @@ ms.locfileid: "62806751"
   
      Weitere Informationen zum Erstellen einer Spiegeldatenbank finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
-4.  [Konfigurieren der Spiegelungspartner](#ConfigureMirroringPartners)  
+4.  [Konfigurieren der Spiegelungs Partner](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Konfigurieren ausgehender Verbindungen  
+###  <a name="ConfiguringOutboundConnections"></a>Konfigurieren ausgehender Verbindungen  
  **So konfigurieren Sie Host_A für ausgehende Verbindungen**  
   
 1.  Erstellen Sie in der master-Datenbank den Datenbankhauptschlüssel, sofern erforderlich.  
@@ -106,7 +106,7 @@ ms.locfileid: "62806751"
   
 5.  Kopieren Sie C:\HOST_A_cert.cer mithilfe einer sicheren Kopiermethode auf HOST_B.  
   
- **So konfigurieren Sie Host_B für ausgehende Verbindungen**  
+ **So konfigurieren Sie HOST_B für ausgehende Verbindungen**  
   
 1.  Erstellen Sie in der master-Datenbank den Datenbankhauptschlüssel, sofern erforderlich.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62806751"
   
  Weitere Informationen finden Sie unter [Ermöglichen des Verwendens von Zertifikaten für ausgehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
   
-###  <a name="ConfigureInboundConnections"></a> Konfigurieren eingehender Verbindungen  
+###  <a name="ConfigureInboundConnections"></a>Konfigurieren eingehender Verbindungen  
  **So konfigurieren Sie Host_A für eingehende Verbindungen**  
   
 1.  Erstellen Sie auf HOST_A einen Anmeldenamen für HOST_B.  
@@ -186,7 +186,7 @@ ms.locfileid: "62806751"
     GO  
     ```  
   
- **So konfigurieren Sie Host_B für eingehende Verbindungen**  
+ **So konfigurieren Sie HOST_B für eingehende Verbindungen**  
   
 1.  Erstellen Sie auf HOST_B einen Anmeldenamen für HOST_B.  
   
@@ -222,14 +222,14 @@ ms.locfileid: "62806751"
 > [!IMPORTANT]  
 >  Wenn Sie die Ausführung im Modus für hohe Sicherheit mit automatischem Failover planen, müssen Sie die gleichen Setupschritte zum Konfigurieren des Zeugen für aus- und eingehende Verbindungen ausführen. Für das Setup der eingehenden Verbindungen bei Verwendung eines Zeugen ist es erforderlich, Anmeldungen und Benutzer für den Zeugen auf beiden Partnern und für beide Partner auf dem Zeugen einzurichten.  
   
- Weitere Informationen finden Sie unter [Ermöglichen des Verwendens von Zertifikaten für eingehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
+ Weitere Informationen finden Sie unter [Ermöglichen des Verwendens von Zertifikaten für eingehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)verwendet.  
   
 ### <a name="creating-the-mirror-database"></a>Erstellen der Spiegeldatenbank  
  Weitere Informationen zum Erstellen einer Spiegeldatenbank finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
-###  <a name="ConfigureMirroringPartners"></a> Konfigurieren der Spiegelungspartner  
+###  <a name="ConfigureMirroringPartners"></a>Konfigurieren der Spiegelungs Partner  
   
-1.  Legen Sie für die Spiegelserverinstanz auf HOST_B die Serverinstanz auf HOST_A als Partner fest (hierdurch wird sie zur ersten Prinzipalserverinstanz): Ersetzen Sie `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`durch eine gültige Netzwerkadresse. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md)verwendet.  
+1.  Legen Sie für die Spiegelserverinstanz auf HOST_B die Serverinstanz auf HOST_A als Partner fest (hierdurch wird sie zur ersten Prinzipalserverinstanz): Ersetzen Sie `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`durch eine gültige Netzwerkadresse. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md).  
   
     ```  
     --At HOST_B, set server instance on HOST_A as partner (principal server):  
@@ -257,28 +257,28 @@ ms.locfileid: "62806751"
     ```  
   
     > [!NOTE]  
-    >  Wenn Sie im Modus für hohe Sicherheit mit automatischem Failover ausführen möchten, behalten Sie Transaktion Safety auf FULL (Standardeinstellung) und der Zeuge so schnell wie möglich nach Ausführung der zweiten SET PARTNER hinzufügen **" *`partner_server`* "** Anweisung. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
+    >  Wenn Sie beabsichtigen, den Modus für hohe Sicherheit mit automatischem Failover auszuführen, lassen Sie die Option Transaktionssicherheit auf vollständig festgelegt (Standardeinstellung), und fügen Sie den Zeugen so bald wie möglich nach der Ausführung der zweiten Set Partner **'*`partner_server`*'** -Anweisung hinzu. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Ermöglichen des Verwendens von Zertifikaten für eingehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [Ermöglicht einem Datenbankspiegelungs-Endpunkt die Verwendung von Zertifikaten für eingehende Verbindungen &#40;Transact-SQL-&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Ermöglichen des Verwendens von Zertifikaten für ausgehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [Ermöglicht einem Datenbankspiegelungs-Endpunkt die Verwendung von Zertifikaten für ausgehende Verbindungen &#40;Transact-SQL-&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
+-   [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [Problembehandlung für die Datenbankspiegelungskonfiguration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Angeben einer Servernetzwerkadresse (Datenbankspiegelung)](specify-a-server-network-address-database-mirroring.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Transport Sicherheit für Daten Bank Spiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Geben Sie eine Server-Netzwerkadresse &#40;Daten Bank Spiegelung an&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL-&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
+ [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

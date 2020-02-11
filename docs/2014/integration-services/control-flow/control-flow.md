@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60aa1e7f4e671540d8ece08a24696a3a46998c82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832631"
 ---
 # <a name="control-flow"></a>Ablaufsteuerung
-  Ein Paket besteht aus einer Ablaufsteuerung und optional einem oder mehreren Datenflüssen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Ablaufsteuerungselementen bereit: Container für die Strukturen in Paketen, Tasks für die Funktionalität sowie Rangfolgeneinschränkungen, mit denen die ausführbaren Dateien, Container und Tasks zu einer geordneten Ablaufsteuerung verbunden werden.  
+  Ein Paket besteht aus einer Ablaufsteuerung und optional einem oder mehreren Datenflüssen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Ablauf Steuerungselementen bereit: Container, die Strukturen in Paketen bereitstellen, Tasks, die Funktionen bereitstellen, und Rang folgen Einschränkungen, mit denen die ausführbaren Dateien, Container und Tasks mit einer geordneten Ablauf Steuerung verbunden werden.  
   
  Weitere Informationen finden Sie unter [Precedence Constraints](precedence-constraints.md), [Integration Services Containers](integration-services-containers.md)und [Integration Services Tasks](integration-services-tasks.md).  
   
@@ -47,19 +47,21 @@ ms.locfileid: "62832631"
   
 -   Hinzufügen von Tasks, mit denen Ablaufsteuerung unterstützt, Daten vorbereitet, Workflow- und Business Intelligence-Funktionen ausgeführt und Skript implementiert wird.  
   
-     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält eine Reihe von Tasks, mit denen Sie Ablaufsteuerungen erstellen können, die die Unternehmensanforderungen des Pakets erfüllen. Falls im Paket Daten verwendet werden müssen, muss die Ablaufsteuerung mindestens einen Datenflusstask enthalten. Beispielsweise kann es sein, dass mit einem Paket Daten extrahiert, Datenwerte aggregiert und dann die Ergebnisse in eine Datenquelle geschrieben werden müssen.  Weitere Informationen finden Sie unter [Integration Services-Tasks](integration-services-tasks.md) und [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
+     
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält eine Reihe von Tasks, mit denen Sie Ablaufsteuerungen erstellen können, die die Unternehmensanforderungen des Pakets erfüllen. Falls im Paket Daten verwendet werden müssen, muss die Ablaufsteuerung mindestens einen Datenflusstask enthalten. Beispielsweise kann es sein, dass mit einem Paket Daten extrahiert, Datenwerte aggregiert und dann die Ergebnisse in eine Datenquelle geschrieben werden müssen.  Weitere Informationen finden Sie unter [Integration Services-Tasks](integration-services-tasks.md) und [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 -   Verbinden von Containern und Tasks zu einer geordneten Ablaufsteuerung mithilfe von Rangfolgeneinschränkungen.  
   
      Nachdem Sie der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** einen Task oder Container hinzugefügt haben, fügt der [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer dem Element automatisch einen Konnektor hinzu. Enthält ein Paket mehrere Elemente, Tasks oder Container, können Sie sie zu einer Ablaufsteuerung verknüpfen, indem Sie die entsprechenden Konnektoren von einem Element in ein anderes Element ziehen.  
   
-     Der Konnektor zwischen zwei Elementen stellt eine Rangfolgeneinschränkung dar. Eine Rangfolgeneinschränkung definiert die Beziehung zwischen den beiden verbundenen Elementen. Sie gibt die Reihenfolge an, in der Tasks und Container zur Laufzeit ausgeführt werden, sowie die Bedingungen, unter denen Tasks und Container ausgeführt werden. Beispielsweise kann eine Rangfolgeneinschränkung definieren, dass ein Task erfolgreich ausgeführt werden muss, damit der nächste Task in der Ablaufsteuerung ausgeführt wird. Weitere Informationen finden Sie unter [Precedence Constraints](precedence-constraints.md).  
+     Der Konnektor zwischen zwei Elementen stellt eine Rangfolgeneinschränkung dar. Eine Rangfolgeneinschränkung definiert die Beziehung zwischen den beiden verbundenen Elementen. Sie gibt die Reihenfolge an, in der Tasks und Container zur Laufzeit ausgeführt werden, sowie die Bedingungen, unter denen Tasks und Container ausgeführt werden. Beispielsweise kann eine Rangfolgeneinschränkung definieren, dass ein Task erfolgreich ausgeführt werden muss, damit der nächste Task in der Ablaufsteuerung ausgeführt wird. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](precedence-constraints.md).  
   
 -   Hinzufügen von Verbindungs-Managern.  
   
      Viele Tasks erfordern eine Verbindung mit einer Datenquelle, und Sie müssen dem Paket die vom Task benötigten Verbindungs-Manager hinzufügen. In Abhängigkeit vom verwendeten Enumeratortyp erfordert der Foreach-Schleifencontainer möglicherweise auch einen Verbindungs-Manager. Sie können die Verbindungs-Manager beim Erstellen der Ablaufsteuerung für jedes einzelne Element hinzufügen, oder aber bevor Sie mit dem Erstellen der Ablaufsteuerung beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](../create-connection-managers.md).  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer enthält außerdem viele Entwurfszeitfunktionen, mit denen Sie die Entwurfsoberfläche verwalten und die Ablaufsteuerung selbstdokumentierend gestalten können.  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer enthält außerdem viele Entwurfszeitfunktionen, mit denen Sie die Entwurfsoberfläche verwalten und die Ablaufsteuerung selbstdokumentierend gestalten können.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

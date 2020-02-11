@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und Miningstruktur | Microsoft-Dokumentation'
+title: 'Lektion 1: Erstellen eines Zeitreihen-Mining Modells und einer Mining Struktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678451"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lektion 1: Erstellen eines Miningmodells und einer Miningstruktur für eine Zeitreihe
@@ -22,8 +22,8 @@ ms.locfileid: "62678451"
   
  In dieser Lektion wird davon ausgegangen, dass Sie mit Forecasting-Modellen sowie mit den Anforderungen des Microsoft Time Series-Algorithmus vertraut sind. Weitere Informationen finden Sie unter [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
-## <a name="create-mining-model-statement"></a>Erstellen von MINING MODEL-Anweisung  
- Um ein Miningmodell direkt erstellen, und die zugrunde liegende Miningstruktur automatisch generieren, verwenden Sie die [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
+## <a name="create-mining-model-statement"></a>Create Mining Model-Anweisung  
+ Um ein Mining Modell direkt zu erstellen und die zugrunde liegende Mining Struktur automatisch zu generieren, verwenden Sie die Anweisung [Create Mining Model &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx) . Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
 -   Benennen des Modells  
   
@@ -51,9 +51,9 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Der Name für die zugrunde liegende Struktur wird von Analysis Services automatisch generiert, indem "_structure" an den Modellnamen angefügt wird. Dadurch ist sichergestellt, dass sich der Strukturname vom Modellnamen unterscheidet. Informationen zum Benennen eines Objekts in DMX finden Sie unter [Bezeichner &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Der Name für die zugrunde liegende Struktur wird von Analysis Services automatisch generiert, indem "_structure" an den Modellnamen angefügt wird. Dadurch ist sichergestellt, dass sich der Strukturname vom Modellnamen unterscheidet. Weitere Informationen zum Benennen eines Objekts in DMX finden Sie unter Bezeichner [&#40;DMX-&#41;](/sql/dmx/identifiers-dmx).  
   
- Die nächste Codezeile definiert die Schlüsselspalte für das Miningmodell, mit der bei einem Zeitreihenmodell ein Zeitschritt in den Quelldaten eindeutig identifiziert wird. Der Zeitschritt wird identifiziert, mit der `KEY TIME` -Schlüsselwörtern im Anschluss an die Spalte und die Datentypen. Wenn ein Zeitreihenmodell über einen separaten Reihenschlüssel verfügt, wird es anhand des `KEY`-Schlüsselworts identifiziert.  
+ Die nächste Codezeile definiert die Schlüsselspalte für das Miningmodell, mit der bei einem Zeitreihenmodell ein Zeitschritt in den Quelldaten eindeutig identifiziert wird. Der Zeit Schritt wird durch die `KEY TIME` Schlüsselwörter nach dem Spaltennamen und den Datentypen identifiziert. Wenn ein Zeitreihenmodell über einen separaten Reihenschlüssel verfügt, wird es anhand des `KEY`-Schlüsselworts identifiziert.  
   
 ```  
 <key columns>  
@@ -72,7 +72,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 -   Ändern der Abfrage zum Erstellen des Miningmodells  
   
--   Führen Sie die Abfrage  
+-   Ausführen der Abfrage  
   
 ## <a name="creating-the-query"></a>Erstellen einer Abfrage  
  Im ersten Schritt stellen Sie eine Verbindung zu einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] her und erstellen eine neue DMX-Abfrage in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -81,9 +81,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In der **Herstellen einer Verbindung mit Server** im Dialogfeld für **Servertyp**Option **Analysis Services**. In **Servernamen**, Typ `LocalHost`, oder den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die Sie für diese Lektion herstellen möchten. Klicken Sie auf **Verbinden**.  
+2.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** unter **Servertyp**die Option **Analysis Services**aus. Geben Sie unter **Server Name**den Namen ein, oder geben `LocalHost`Sie den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Namen der Instanz von ein, mit der Sie für diese Lektion eine Verbindung herstellen möchten. Klicken Sie auf **Verbinden**.  
   
-3.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+3.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -172,33 +172,33 @@ CREATE MINING MODEL [Mining Model Name]
   
     ```  
   
-6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+6.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Forecasting_MIXED.dmx`.  
+7.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `Forecasting_MIXED.dmx`.  
   
 ## <a name="executing-the-query"></a>Ausführen der Abfrage  
  Im letzten Schritt führen Sie die Abfrage aus. Nachdem Sie eine Abfrage erstellt und gespeichert haben, muss diese ausgeführt werden, damit das Miningmodell und die Miningstruktur auf dem Server erstellt werden. Weitere Informationen zum Ausführen von Abfragen im Abfrage-Editor finden Sie unter [Datenbank-Engine-Abfrage-Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>So führen Sie die Abfrage aus  
   
--   Klicken Sie im Abfrage-Editor auf der Symbolleiste **Execute**.  
+-   Klicken Sie im Abfrage-Editor auf der Symbolleiste auf **Ausführen**.  
   
-     Der Status der Abfrage wird angezeigt, der **Nachrichten** Registerkarte am unteren Rand des Abfrage-Editors nach Abschluss der Ausführung die Anweisung. Die Meldung sollte Folgendes anzeigen:  
+     Der Status der Abfrage wird auf der Registerkarte **Nachrichten** unten im Abfrage-Editor angezeigt, nachdem die Ausführung der Anweisung abgeschlossen wurde. Die Meldung sollte Folgendes anzeigen:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Eine neue Struktur mit dem Namen **Forecasting_MIXED_Structure** jetzt vorhanden ist, auf dem Server, zusammen mit dem verwandten Miningmodell **Forecasting_MIXED**.  
+     Auf dem Server ist nun eine neue Struktur mit dem Namen **Forecasting_MIXED_Structure** vorhanden, zusammen mit dem zugehörigen Mining Modell **Forecasting_MIXED**.  
   
- In der nächsten Lektion fügen Sie ein anzuzeigendes Miningmodell die **Forecasting_MIXED** Miningstruktur, die Sie gerade erstellt haben.  
+ In der nächsten Lektion fügen Sie der **Forecasting_MIXED** Mining Struktur, die Sie soeben erstellt haben, ein Mining Modell hinzu.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
- [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Modell Inhalt von Zeitreihen Modellen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

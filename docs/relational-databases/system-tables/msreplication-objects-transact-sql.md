@@ -18,27 +18,27 @@ ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079082"
 ---
-# <a name="msreplicationobjects-transact-sql"></a>MSreplication_objects (Transact-SQL)
+# <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSreplication_objects** Tabelle enthält eine Zeile für jedes Objekt, das Replikation in der Abonnentendatenbank zugeordnet ist. Diese Tabelle wird in der Abonnementdatenbank gespeichert.  
+  Die **MSreplication_objects** Tabelle enthält eine Zeile für jedes Objekt, das der Replikation in der Abonnenten Datenbank zugeordnet ist. Diese Tabelle wird in der Abonnement Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Der Name des Verlegers.|  
+|**Gebers**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**publication**|**sysname**|Der Name der Veröffentlichung.|  
+|**ung**|**sysname**|Der Name der Veröffentlichung.|  
 |**object_name**|**sysname**|Der Name des Objekts.|  
-|**object_type**|**char(2)**|Der Objekttyp:<br /><br /> **u** = Tabelle.<br /><br /> **t** = Trigger.<br /><br /> **p** = gespeicherte Prozedur.|  
-|**article**|**sysname**|Der Name des Artikels, dem das Objekt zugeordnet ist|  
+|**object_type**|**char (2)**|Der Objekttyp:<br /><br /> **u** = Tabelle.<br /><br /> **t** =-auslöst.<br /><br /> **p** = gespeicherte Prozedur.|  
+|**Artikel**|**sysname**|Der Name des Artikels, dem das Objekt zugeordnet ist|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

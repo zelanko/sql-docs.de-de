@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 131f86336c2eecb4995304fc87e15a7b910833ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768986"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten
   Nachdem Sie den Code für ein benutzerdefiniertes Objekt für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geschrieben haben, müssen Sie die Assembly erstellen, bereitstellen und in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer integrieren, um sie für die Nutzung in Paketen verfügbar zu machen, sie zu testen und zu debuggen.  
   
-##  <a name="top"></a> Schritte zum Erstellen, Bereitstellen und Debuggen eines benutzerdefinierten Objekts für Integration Services  
+##  <a name="top"></a>Schritte zum entwickeln, bereitstellen und Debuggen eines benutzerdefinierten Objekts für Integration Services  
  Sie haben bereits die benutzerdefinierte Funktionalität für das Objekt geschrieben. Jetzt müssen Sie es testen und Benutzern zur Verfügung stellen. Die Schritte sind für alle Typen benutzerdefinierter Objekte, die Sie für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellen können, ähnlich.  
   
  Nachfolgend finden Sie die Schritte zum Erstellen, Bereitstellen und Debuggen:  
@@ -31,17 +31,17 @@ ms.locfileid: "62768986"
   
 2.  [Erstellen](#building) Sie die Assembly.  
   
-3.  [Stellen Sie die Assembly bereit](#deploying), indem Sie sie verschieben oder in den entsprechenden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Ordner kopieren.  
+3.  Stellen [Sie die Assembly](#deploying) bereit, indem Sie Sie verschieben oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in den entsprechenden Ordner kopieren.  
   
-4.  [Installieren](#installing) Sie die Assembly im globalen Assemblycache (Global Assembly Cache, GAC).  
+4.  [Installieren](#installing) Sie die Assembly im globalen Assemblycache (GAC).  
   
      Das Objekt wird der Toolbox automatisch hinzugefügt.  
   
-5.  [Beheben](#troubleshooting) Sie ggf. Probleme bei der Bereitstellung.  
+5.  Behandeln Sie ggf. [Probleme](#troubleshooting) bei der Bereitstellung.  
   
-6.  [Testen](#testing) und debuggen Sie den Code.  
+6.  [Testen](#testing) und Debuggen Sie Ihren Code.  
   
-##  <a name="signing"></a> Signieren der Assembly  
+##  <a name="signing"></a>Signieren der Assembly  
  Wenn eine Assembly freigegeben werden soll, muss sie im GAC installiert sein. Nachdem die Assembly dem globalen Assemblycache hinzugefügt wurden, kann die Assembly von Anwendungen wie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] genutzt werden. Für den globalen Assemblycache muss die Assembly mit einem starken Namen signiert werden, um sicherzustellen, dass eine Assembly global eindeutig ist. Eine Assembly mit starkem Namen verfügt über einen vollqualifizierten Namen, der den Namen, öffentlichen Schlüssel und die Versionsnummer der Assembly umfasst. Anhand dieser Informationen wird die Assembly von der Laufzeit gefunden und von anderen Assemblys mit demselben Namen unterschieden.  
   
  Um eine Assembly mit einem starken Namen zu signieren, müssen Sie zuerst über ein Schlüsselpaar verfügen oder eines erstellen, das aus einem öffentlichen und einem privaten Schlüssel besteht. Dieses kryptografische Schlüsselpaar wird während der Erstellung zum Generieren einer Assembly mit starkem Namen verwendet.  
@@ -54,9 +54,9 @@ ms.locfileid: "62768986"
   
 -   Signieren einer Assembly mit einem starken Namen  
   
- Sie können die Assembly mühelos in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] beim Erstellen mit einem starken Namen signieren. Wählen Sie im Dialogfeld **Projekteigenschaften** die Registerkarte **Signierung** aus. Aktivieren Sie die Option **Assembly signieren**, und geben Sie dann den Pfad der Schlüsseldatei (.snk) an.  
+ Sie können die Assembly mühelos in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] beim Erstellen mit einem starken Namen signieren. Wählen Sie im Dialogfeld **Projekteigenschaften** die Registerkarte **Signierung** aus. Wählen Sie die Option zum **Signieren der Assembly** aus, und geben Sie dann den Pfad der Schlüsseldatei (. snk) an.  
   
-##  <a name="building"></a> Erstellen der Assembly  
+##  <a name="building"></a>Assembly wird aufgebaut  
  Nach der Signierung des Projekts müssen Sie das Projekt oder die Projektmappe erstellen bzw. neu erstellen, indem Sie die im **Build**-Menü von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] verfügbaren Befehle verwenden. Die Lösung enthält möglicherweise ein separates Projekt für eine benutzerdefinierte Benutzeroberfläche, die ebenfalls mit einem starken Namen signiert sein muss und zur gleichen Zeit erstellt werden kann.  
   
  Der einfachste Weg, um die nächsten zwei Schritte (Bereitstellen der Assembly und Installieren im globalen Assemblycache) auszuführen, besteht darin, ein Skript für diese Schritte als Postbuildereignis in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zu erstellen. Buildereignisse stehen unter „Projekteigenschaften“ auf der Seite **Kompilieren** für ein [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Projekt und auf der Seite **Buildereignisse** für ein C#-Projekt zur Verfügung. Der vollständige Pfad ist für Eingabeaufforderungs-Hilfsprogramme wie **gacutil.exe** erforderlich. Pfade mit Leerzeichen und Makros wie $(TargetPath), mit denen Pfade mit Leerzeichen erweitert werden, müssen von Anführungszeichen umschlossen werden.  
@@ -69,8 +69,8 @@ ms.locfileid: "62768986"
 copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProviders "  
 ```  
   
-##  <a name="deploying"></a> Bereitstellen der Assembly  
- Der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer sucht die benutzerdefinierten Objekte, die in Paketen verwendet werden können, indem die Dateien in mehreren Ordnern aufgezählt werden, die bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt werden. Wenn der Standardwert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation verwendet werden, der Ordner befindet sich unter **c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\DTS**. Aber wenn Sie für Ihr benutzerdefiniertes Objekt ein Setupprogramm erstellen, den Wert der checken Sie die **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** Registrierungsschlüssel, um den Speicherort dieser überprüfen Ordner.  
+##  <a name="deploying"></a>Bereitstellen der Assembly  
+ Der [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer sucht die benutzerdefinierten Objekte, die für die Verwendung in Paketen verfügbar sind, indem er die Dateien auflistet, die in einer Reihe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] von Ordnern gefunden wurden, die bei der Installation von erstellt werden. Wenn die Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installationseinstellungen verwendet werden, befindet sich dieser Ordner im Verzeichnis **c:\Programme\Microsoft SQL server\120\dts**. Wenn Sie jedoch für Ihr benutzerdefiniertes Objekt ein Setup Programm erstellen, sollten Sie den Wert des Registrierungsschlüssels **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL server\120\ssis\setup\dtspath** überprüfen, um den Speicherort dieses Ordners zu überprüfen.  
   
  Sie können die Assembly auf zwei Arten im Ordner platzieren:  
   
@@ -78,11 +78,11 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 -   Erstellen Sie die Assembly direkt im entsprechenden Ordner.  
   
- Die folgenden Bereitstellungsordner unter **c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\DTS** werden für die unterschiedlichen Typen benutzerdefinierter Objekte verwendet:  
+ Die folgenden Bereitstellungs Ordner unter **c:\Programme\Microsoft SQL server\120\dts** werden für die verschiedenen Typen von benutzerdefinierten Objekten verwendet:  
   
 |Benutzerdefiniertes Objekt|Bereitstellungsordner|  
 |-------------------|-----------------------|  
-|Aufgabe|Richtlinienübersicht|  
+|Aufgabe|Aufgaben|  
 |Ziel-Editor für Dimensionsverarbeitung|Verbindungen|  
 |Protokollanbieter|LogProviders|  
 |Datenflusskomponente|PipelineComponents|  
@@ -90,7 +90,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 > [!NOTE]  
 >  Assemblys werden in diese Ordner kopiert, um die Aufzählung der verfügbaren Tasks, Verbindungs-Manager usw. zu unterstützen. Sie müssen daher keine Assemblys, die nur die benutzerdefinierte Benutzeroberfläche für benutzerdefinierte Objekte enthalten, in diesen Ordnern bereitstellen.  
   
-##  <a name="installing"></a> Installieren der Assembly im globalen Assemblycache  
+##  <a name="installing"></a>Installieren der Assembly im globalen Assemblycache  
  Verwenden Sie das Befehlszeilentool **gacutil.exe**, oder ziehen Sie die Assemblys in das Verzeichnis `%system%\assembly`, um die Taskassembly im globalen Assemblycache (GAC) zu installieren. Sie können auch ganz einfach den Aufruf von **gacutil.exe** in ein Postbuildereignis einschließen.  
   
  Der folgende Befehl installiert eine Komponente namens *MyTask.dll* in den GAC mithilfe von **gacutil.exe**.  
@@ -101,7 +101,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
  Weitere Informationen zum globalen Assemblycache finden Sie unter Globales Assemblycache-Tool (Gactutil.exe) in den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Tools.  
   
-##  <a name="troubleshooting"></a> Behandeln von Problemen bei der Bereitstellung  
+##  <a name="troubleshooting"></a>Problembehandlung der Bereitstellung  
  Wenn das benutzerdefinierte Objekt in der **Toolbox** oder der Liste verfügbarer Objekte angezeigt wird, Sie es jedoch keinem Paket hinzufügen können, versuchen Sie Folgendes:  
   
 1.  Suchen Sie im globalen Assemblycache nach mehreren Versionen der Komponente. Wenn im globalen Assemblycache mehrere Versionen der Komponente vorliegen, kann der Designer u. U. die Komponente nicht laden. Löschen Sie alle Instanzen der Assembly aus dem globalen Assemblycache, und fügen Sie die Assembly wieder hinzu.  
@@ -112,10 +112,10 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 4.  Fügen Sie [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] an **devenv.exe** an, und legen Sie einen Breakpoint fest, um den Initialisierungscode zu durchlaufen und sicherzustellen, dass keine Ausnahmen auftreten.  
   
-##  <a name="testing"></a> Testen und Debuggen des Codes  
+##  <a name="testing"></a>Testen und Debuggen von Code  
  Am einfachsten können Sie die Laufzeitmethoden eines benutzerdefinierten Objekts debuggen, indem Sie nach dem Erstellen des benutzerdefinierten Objekts **dtexec.exe** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aus starten und ein Paket, das diese Komponente verwendet, ausführen.  
   
- Wenn Sie die Methoden der Komponente zur Entwurfszeit, z. B. debuggen möchten die `Validate` -Methode, öffnen Sie ein Paket, das die Komponente in eine zweite Instanz von verwendet [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und fügen Sie an der **devenv.exe** Prozess.  
+ Wenn Sie die Entwurfszeit Methoden der Komponente (z. b. die `Validate` -Methode) debuggen möchten, öffnen Sie ein-Paket, das die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Komponente in einer zweiten Instanz von verwendet, und fügen Sie Sie an den **devenv. exe** -Prozess an.  
   
  Wenn Sie auch die Laufzeitmethoden der Komponente debuggen möchten, wenn ein Paket offen ist und in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer ausgeführt wird, müssen Sie die Ausführung des Pakets anhalten, damit Sie auch für den **DtsDebugHost.exe**-Prozess einen Anfügevorgang durchführen können.  
   
@@ -123,13 +123,13 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  Signieren und erstellen Sie Ihr Projekt in der Debug-Konfiguration, stellen Sie es bereit, und installieren Sie es im globalen Assemblycache wie in diesem Thema beschrieben.  
   
-2.  Auf der **Debuggen** Registerkarte **Projekteigenschaften**Option **externes Programm starten** als die **Startaktion**, und suchen Sie nach  **DTExec.exe**, das standardmäßig in c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\DTS\Binn installiert wird.  
+2.  Wählen Sie in den **Projekteigenschaften**auf der Registerkarte **Debuggen** die Option **externes Programm starten** als **Start Aktion**aus, und suchen Sie **dtexec. exe**, das standardmäßig unter c:\Programme\Microsoft SQL server\120\dz\binn installiert wird.  
   
 3.  Geben Sie im Textfeld **Befehlszeilenoptionen** unter **Startoptionen** die Befehlszeilenargumente ein, die zum Ausführen eines Pakets erforderlich sind, das die Komponente verwendet. Oftmals besteht das Befehlszeilenargument aus dem /F[ILE]-Schalter gefolgt vom Pfad und dem Namen der .dtsx-Datei. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md).  
   
 4.  Legen Sie sofern erforderlich im Quellcode Breakpoints in den Laufzeitmethoden der Komponente fest.  
   
-5.  Führen Sie Ihr Projekt aus.  
+5.  Führen Sie das Projekt aus.  
   
 #### <a name="to-debug-a-custom-objects-design-time-methods-by-attaching-to-sql-server-data-tools"></a>So debuggen Sie die Entwurfszeitmethoden eines benutzerdefinierten Objekts durch das Anfügen zu SQL Server-Datentools  
   
@@ -151,9 +151,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Kehren Sie zum angehaltenen Paket zurück, und setzen Sie den Vorgang über den Breakpoint hinaus fort, oder klicken Sie auf **OK**, um das Meldungsfeld, das vom Skripttask aufgerufen wird, zu verwenden, und setzen Sie die Paketausführung und den Debugvorgang fort.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln benutzerdefinierter Objekte für Integration Services](developing-custom-objects-for-integration-services.md)   
  [Beibehalten von benutzerdefinierten Objekten](persisting-custom-objects.md)   
  [Tools zur Problembehandlung für die Paketentwicklung](../troubleshooting/troubleshooting-tools-for-package-development.md)  

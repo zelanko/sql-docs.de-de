@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor (Seite im Verbindungs-Manager) | Microsoft-Dokumentation
+title: Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,42 +15,42 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056198"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** von **Transformations-Editor für Skripterstellung** können Sie Verbindungen angeben, die vom Skript verwendet werden.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Tastatur  
- **Connection managers**  
+ **Verbindungs-Manager**  
  Zeigen Sie die Liste der Verbindungen an, die durch das Skript verwendet werden können.  
   
  **Name**  
  Geben Sie einen eindeutigen aussagekräftigen Namen für die Verbindung ein.  
   
  **Verbindungs-Manager**  
- Wählen Sie einen Verbindungs-Manager aus der Liste aus, oder wählen Sie **\<Neue Verbindung>** aus, um das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** zu öffnen.  
+ Wählen Sie aus der Liste der verfügbaren Verbindungs-Manager aus, oder wählen Sie ** \<neue Verbindungs>** aus, um das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** zu  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung für die Verbindung ein.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie der Liste **Verbindungs-Manager** eine weitere Verbindung hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Entfernen Sie die ausgewählte Verbindung aus der Liste **Verbindungs-Manager** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Skriptkomponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
- [Transformations-Editor für Skripterstellung &#40;Seite Eingabespalten&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Transformations-Editor für Skripterstellung &#40;Seiten Eingaben und Ausgaben&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Skript Komponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite Eingabe Spalten&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite "Eingaben und Ausgaben"&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Skript Seite&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Zusätzliche Skriptkomponentenbeispiele](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011960"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam-Beispieltabelle (SQL Server)
@@ -29,11 +29,11 @@ ms.locfileid: "66011960"
   
  Die **myTeam** -Tabelle enthält die folgenden Spalten.  
   
-|Spalte|Datentyp|NULL-Zulässigkeit|Description|  
+|Column|Datentyp|NULL-Zulässigkeit|BESCHREIBUNG|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Nicht NULL|Primärschlüssel für die Zeilen. Mitarbeiter-ID eines Mitglieds meines Teams.|  
 |**Name**|`nvarchar(50)`|Nicht NULL|Name eines Mitglieds meines Teams.|  
-|**Title**|`nvarchar(50)`|NULL zulassen|Titel des Mitarbeiters in meinem Team.|  
+|**Titel**|`nvarchar(50)`|Nullable|Titel des Mitarbeiters in meinem Team.|  
 |**Hintergrund**|`nvarchar(50)`|Nicht NULL|Datum und Uhrzeit des letzten Updates der Zeile. (Standardwert)|  
   
  **So erstellen Sie HumanResources.myTeam**  
@@ -71,7 +71,7 @@ ms.locfileid: "66011960"
     > [!NOTE]  
     >  Bei diesen Anweisungen wird die vierte Spalte ( `Background`) ausgelassen. Diese besitzt einen Standardwert. Das Auslassen dieser Spalte bewirkt, dass diese Spalte bei der `INSERT` -Anweisung leer bleibt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Massenimport und -export von Daten &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)  
   
   

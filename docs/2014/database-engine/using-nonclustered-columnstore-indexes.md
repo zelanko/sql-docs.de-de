@@ -1,5 +1,5 @@
 ---
-title: Verwenden von nicht gruppierten columnstore-Indizes | Microsoft-Dokumentation
+title: Verwenden nicht gruppierter columnstore-Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773787"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Verwenden nicht gruppierter Columnstore-Indizes
@@ -24,21 +24,21 @@ ms.locfileid: "62773787"
   
  Informationen zum Verwenden von gruppierten Columnstore-Indizes finden Sie unter [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="contents"></a>Inhalt  
+## <a name="contents"></a>Contents  
   
--   [Erstellen Sie einen nicht gruppierten columnstore-Index](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
+-   [Erstellen eines nicht gruppierten Columnstore-Indexes](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
   
--   [Ändern der Daten in einen nicht gruppierten columnstore-Index](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
+-   [Ändern der Daten in einem nicht gruppierten columnstore-Index](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
-##  <a name="load"></a> Erstellen Sie einen nicht gruppierten columnstore-Index  
- Um Daten in einen nicht gruppierten columnstore-Index zuladen, laden Sie zuerst Daten in eine herkömmliche Rowstore-Tabelle gespeichert, die als Heap oder gruppierten index und dann [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) zum Erstellen einer columnstore-Index.  
+##  <a name="load"></a>Erstellen eines nicht gruppierten columnstore-Indexes  
+ Zum Laden von Daten in einen nicht gruppierten columnstore--Index laden Sie zuerst Daten in eine herkömmliche rowstore-Tabelle, die als Heap oder gruppierter Index gespeichert ist, und verwenden Sie dann [Create columnstore-Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) , um einen columnstore--Index zu erstellen.  
   
  ![Laden von Daten in einen columnstore-Index](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Laden von Daten in einen columnstore-Index")  
   
-##  <a name="change"></a> Ändern der Daten in einen nicht gruppierten columnstore-Index  
+##  <a name="change"></a>Ändern der Daten in einem nicht gruppierten columnstore-Index  
  Wenn Sie einen nicht gruppierten Columnstore-Index für eine Tabelle erstellen, können Sie die Daten in dieser Tabelle nicht mehr direkt ändern. Eine Abfrage mit INSERT, UPDATE, MERGE oder DELETE schlägt fehl und gibt eine Fehlermeldung zurück. Um Daten in der Tabelle hinzuzufügen oder zu ändern, können Sie eine der folgenden Aktionen ausführen:  
   
--   Deaktivieren Sie den columnstore-Index. Anschließend können Sie die Daten in der Tabelle aktualisieren. Wenn Sie den Columnstore-Index deaktivieren, können Sie den Columnstore-Index nach dem Aktualisieren der Daten neu erstellen. Zum Beispiel:  
+-   Deaktivieren Sie den columnstore--Index. Anschließend können Sie die Daten in der Tabelle aktualisieren. Wenn Sie den Columnstore-Index deaktivieren, können Sie den Columnstore-Index nach dem Aktualisieren der Daten neu erstellen. Beispiel:  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -46,7 +46,7 @@ ms.locfileid: "62773787"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Löschen Sie den columnstore-Index, aktualisieren Sie die Tabelle, und klicken Sie dann erstellen Sie den columnstore-Index mit CREATE COLUMNSTORE INDEX neu. Zum Beispiel:  
+-   Löschen Sie den columnstore--Index, aktualisieren Sie die Tabelle, und erstellen Sie dann den columnstore--Index mit CREATE columnstore-Index neu. Beispiel:  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

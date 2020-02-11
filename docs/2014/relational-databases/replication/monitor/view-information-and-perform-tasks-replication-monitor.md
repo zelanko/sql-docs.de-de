@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667131"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor
@@ -30,18 +30,18 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
 
   Der Replikationsmonitor stellt die folgenden Registerkarten mit Informationen zur ausgewählten Veröffentlichung bereit:  
   
--   **Alle Abonnements** -auf dieser Registerkarte werden Informationen zu allen Abonnements für die ausgewählte Veröffentlichung angezeigt.  
+-   **Alle Abonnements** : auf dieser Registerkarte werden Informationen zu allen Abonnements für die ausgewählte Veröffentlichung angezeigt.  
   
--   **Agents** -auf dieser Registerkarte zeigt Informationen zu allen Agents, die von einer Veröffentlichung verwendet wird:  
+-   **Agents** : Diese Registerkarte zeigt Informationen zu allen Agents an, die von einer Veröffentlichung verwendet werden:  
   
     -   Momentaufnahme-Agent, der von allen Veröffentlichungen verwendet wird.    
     -   Protokolllese-Agent, der von allen Transaktionsveröffentlichungen verwendet wird.    
     -   Dem Warteschlangenlese-Agent, der von Transaktionsveröffentlichungen verwendet wird, die Abonnements mit verzögertem Update über eine Warteschlange aufweisen.  
   
--   **Warnungen** (bei Verteilern, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird)   
+-   **Warnungen** (für Verteiler, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] auf denen und höher ausgeführt wird)   
     -   Auf dieser Registerkarte können Sie Warnungen für Agents angeben.  
   
--   **Überwachungstoken** (nur bei der Transaktionsreplikation für Verteiler, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird)  
+-   Überwachungs **Token** (nur bei der Transaktions Replikation für Verteiler, auf [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] denen und höher ausgeführt wird)  
   
      Über diese Registerkarte können Sie die Latenzzeit messen, d. h. die Zeitspanne zwischen dem Ausführen des Commit für eine Transaktion auf dem Verleger und dem Ausführen des Commit für die entsprechende Aktion auf dem Abonnenten.  
   
@@ -53,20 +53,20 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
 2.  Zum Anzeigen und Ändern von Veröffentlichungseigenschaften klicken Sie mit der rechten Maustaste auf die Veröffentlichung, und klicken Sie dann auf **Eigenschaften**.    
 3.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Alle Abonnements** .  
   
-     Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
+     Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Auf dieser Registerkarte können Sie auch auf ausführlichere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](view-information-and-perform-tasks-replication-monitor.md).  
   
-4.  Um Informationen zu Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).    
-5.  Um Informationen zu Agentwarnungen und Schwellenwerten anzuzeigen, klicken Sie auf die Registerkarte **Warnungen** . Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
-6.  Um Informationen zu Überwachungstoken anzuzeigen, klicken Sie auf die Registerkarte **Überwachungstoken** . Weitere Informationen zu Überwachungstoken finden Sie unter [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
+4.  Um Informationen zu Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Auf dieser Registerkarte können Sie auch auf ausführlichere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](view-information-and-perform-tasks-replication-monitor.md).    
+5.  Zum Anzeigen von Informationen zu Warnungen und Schwellenwerten für Warnungen klicken Sie auf die Registerkarte **Warnungen** . Weitere Informationen finden Sie unter [Festlegen von Schwellenwerten und Warnungen im Replikations Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
+6.  Um Informationen zu Überwachungs Token anzuzeigen, klicken Sie auf die Registerkarte Überwachungs **Token** . Weitere Informationen zur Verwendung von Überwachungs Token finden Sie unter [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="for-a-publisher"></a>Verleger
   Der Replikationsmonitor bietet folgende Registerkarten, auf denen Informationen zu dem ausgewählten Verleger angezeigt werden:  
   
--   **Veröffentlichungen** -auf dieser Registerkarte werden Informationen zu allen Veröffentlichungen auf dem ausgewählten Verleger angezeigt.  
+-   **Veröffentlichungen** : Diese Registerkarte zeigt Informationen zu allen Veröffentlichungen auf dem ausgewählten Verleger an.  
   
--   **Überwachungsliste für Abonnements** -diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen auf dem ausgewählten Verleger, die Fehler, Warnungen oder die vorhandenen Leistung aufweisen. Bei Verteilern, auf denen Versionen vor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt werden, wird diese Registerkarte nicht angezeigt.  
+-   **Überwachungsliste für Abonnements** : Diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen, die auf dem ausgewählten Verleger verfügbar sind und Fehler, Warnungen oder die schlechtesten Leistung aufweisen. Diese Registerkarte wird nicht für Verteiler angezeigt, auf [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]denen Versionen vor ausgeführt werden.  
   
--   **Agents** Registerkarte - auf dieser Registerkarte zeigt ausführliche Informationen zu den Agents und Aufträge, die verwendet wird, werden von allen Typen der Replikation. Über diese Registerkarte können Sie zudem alle Agents und Aufträge starten und beenden.  
+-   Registerkarte " **Agents** ": Diese Registerkarte zeigt ausführliche Informationen zu den Agents und Aufträgen an, die von allen Replikations Typen verwendet werden. Über diese Registerkarte können Sie zudem alle Agents und Aufträge starten und beenden.  
   
  Wenn Sie weitere Informationen zu den Optionen auf den einzelnen Registerkarten anzeigen möchten, klicken Sie im rechten Bereich auf die Registerkarte, und klicken Sie anschließend auf der Menüleiste auf **Hilfe** . Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](start-the-replication-monitor.md).  
   
@@ -74,12 +74,12 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, und klicken Sie dann auf einen Verleger.    
 2.  Um Informationen zu allen Veröffentlichungen anzuzeigen, klicken Sie auf die Registerkarte **Veröffentlichungen** .    
-3.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Überwachungsliste für Abonnements** . Über diese Registerkarte können Sie auch auf ausführliche Informationen zugreifen und Aufgaben ausführen:    
+3.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Überwachungsliste für Abonnements** . Auf dieser Registerkarte können Sie auch auf ausführlichere Informationen zugreifen und Aufgaben ausführen:    
     -   Wenn Sie detaillierte Informationen zum Agent angezeigt bekommen möchten, der dem jeweiligen Abonnement zugeordnet ist, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.    
     -   Wenn Sie die Eigenschaften eines Abonnements anzeigen möchten, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie anschließend auf **Eigenschaften**.    
     -   Wenn Sie ein Pushabonnement synchronisieren möchten, klicken Sie mit der rechten Maustaste auf das betreffende Abonnement, und klicken Sie dann auf **Synchronisierung starten**.    
     -   Wenn Sie ein Abonnement erneut initialisieren möchten, klicken Sie mit der rechten Maustaste auf das betreffende Abonnement, und klicken Sie dann auf **Abonnement erneut initialisieren**.   
-4.  Um Informationen zu Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Sie können von dieser Registerkarte aus auch auf detailliertere Informationen zugreifen und Aufgaben ausführen:    
+4.  Um Informationen zu Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Auf dieser Registerkarte können Sie auch auf ausführlichere Informationen zugreifen und Aufgaben ausführen:    
     -   Wenn Sie ausführliche Informationen zu einem Agent (z. B. Informationsmeldungen und Fehlermeldungen) anzeigen möchten, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Details anzeigen**.    
     -   Wenn Sie detaillierte Informationen zu dem Auftrag anzeigen möchten, durch den der Agent ausgeführt wird (z. B. Zeitplan, Details zu den Auftragsschritten usw.), klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie anschließend auf **Eigenschaften**.    
     -   Wenn Sie die Profile für den Agent verwalten möchten, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agentprofil**. Weitere Informationen finden Sie unter [Arbeiten mit Replikations-Agent-Profilen](../agents/replication-agent-profiles.md).    
@@ -90,35 +90,35 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
 
   Der Replikationsmonitor umfasst folgende Registerkarten mit Informationen zu Abonnements:  
   
--   **Alle Abonnements** -auf dieser Registerkarte werden Informationen zu allen Abonnements für die ausgewählte Veröffentlichung angezeigt.  
+-   **Alle Abonnements** : auf dieser Registerkarte werden Informationen zu allen Abonnements für die ausgewählte Veröffentlichung angezeigt.  
   
--   **Überwachungsliste für Abonnements** -diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen auf dem ausgewählten Verleger, die Fehler, Warnungen oder die vorhandenen Leistung aufweisen. Bei Verteilern, auf denen Versionen vor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt werden, wird diese Registerkarte nicht angezeigt.  
+-   **Überwachungsliste für Abonnements** : Diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen, die auf dem ausgewählten Verleger verfügbar sind und Fehler, Warnungen oder die schlechtesten Leistung aufweisen. Für Verteiler, auf denen Versionen vor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt werden, wird diese Registerkarte nicht angezeigt.  
   
  Weitere Informationen zu den Optionen der einzelnen Registerkarten finden Sie, wenn Sie auf die Registerkarte im rechten Bereich und dann auf **Hilfe** auf der Menüleiste klicken. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](start-the-replication-monitor.md).  
   
-### <a name="all-subscriptions-tab"></a>Registerkarte "alle Abonnements"  
+### <a name="all-subscriptions-tab"></a>Registerkarte alle Abonnements  
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.   
 2.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Alle Abonnements** . Um nur die Abonnements anzuzeigen, die sich in einem bestimmten Status befinden, wie z. B. diejenigen, die gerade synchronisiert werden, wählen Sie die entsprechende Option aus der Dropdownliste **Anzeigen** aus.   
-3.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
+3.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Auf dieser Registerkarte können Sie auch auf ausführlichere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](view-information-and-perform-tasks-replication-monitor.md).  
   
 ### <a name="subscription-watch-list-tab"></a>Registerkarte „Überwachungsliste für Abonnements“  
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, und klicken Sie dann auf einen Verleger.   
 2.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Überwachungsliste für Abonnements** .  
 3.  Wählen Sie den anzuzeigenden Abonnementtyp aus der Dropdownliste **\<SubscriptionType>-Abonnements anzeigen** aus. Um nur die Abonnements anzuzeigen, die sich in einem bestimmten Status befinden, wie z. B. diejenigen, die gerade synchronisiert werden, wählen Sie die entsprechende Option aus der Dropdownliste **Anzeigen** aus.    
-4.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
+4.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Auf dieser Registerkarte können Sie auch auf ausführlichere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## <a name="for-publication-agents"></a>Veröffentlichungs-Agents
 
-  Der Replikationsmonitor stellt die Registerkarte **Agents** bereit, auf der Informationen zu den Agents enthalten sind, die der ausgewählten Veröffentlichung zugeordnet sind. Der Verteilungs-Agent und Merge-Agent sind Abonnements zugeordnet. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
+  Der Replikationsmonitor stellt die Registerkarte **Agents** bereit, auf der Informationen zu den Agents enthalten sind, die der ausgewählten Veröffentlichung zugeordnet sind. Die Verteilungs-Agent und Merge-Agent sind Abonnements zugeordnet. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](view-information-and-perform-tasks-replication-monitor.md).  
   
  Diese Registerkarte enthält Informationen zu folgenden Agents:    
 -   Momentaufnahme-Agent, der von allen Veröffentlichungen verwendet wird.    
 -   Protokolllese-Agent, der von allen Transaktionsveröffentlichungen verwendet wird.    
 -   Warteschlangenlese-Agent, der von Transaktionsveröffentlichungen verwendet wird, die für Abonnements mit verzögertem Update über eine Warteschlange aktiviert wurden.  
   
- Wenn Sie weitere Informationen zu den Optionen dieser Registerkarte erhalten möchten, klicken Sie auf der Menüleiste auf **Hilfe** . Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](start-the-replication-monitor.md).  
+ Wenn Sie weitere Informationen zu den Optionen auf dieser Registerkarte anzeigen möchten, klicken Sie auf der Menüleiste auf **Hilfe** . Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](start-the-replication-monitor.md).  
   
 ### <a name="view-information-and-perform-tasks"></a>Anzeigen von Informationen und Ausführen von Aufgaben 
   
@@ -136,9 +136,9 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
 ### <a name="view-information-and-perform-tasks"></a>Anzeigen von Informationen und Ausführen von Aufgaben
   Im Replikationsmonitor gibt es zwei Registerkarten, über die Sie auf Informationen zu den Agents zugreifen können, die dem jeweiligen Abonnement zugeordnet sind:  
   
--   **Alle Abonnements** -auf dieser Registerkarte werden Informationen zu allen Abonnements für die ausgewählte Veröffentlichung angezeigt.  
+-   **Alle Abonnements** : auf dieser Registerkarte werden Informationen zu allen Abonnements für die ausgewählte Veröffentlichung angezeigt.  
   
--   **Überwachungsliste für Abonnements** -diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen auf dem ausgewählten Verleger, die Fehler, Warnungen oder die vorhandenen Leistung aufweisen. Bei Verteilern, auf denen Versionen vor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt werden, wird diese Registerkarte nicht angezeigt.  
+-   **Überwachungsliste für Abonnements** : Diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen, die auf dem ausgewählten Verleger verfügbar sind und Fehler, Warnungen oder die schlechtesten Leistung aufweisen. Für Verteiler, auf denen Versionen vor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt werden, wird diese Registerkarte nicht angezeigt.  
   
  Weitere Informationen zu den Optionen der einzelnen Registerkarten finden Sie, wenn Sie auf die Registerkarte im rechten Bereich und dann auf **Hilfe** auf der Menüleiste klicken. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](start-the-replication-monitor.md).  
   
@@ -166,7 +166,7 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
     -   Wenn Sie die Profile für den Agent verwalten möchten, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agentprofil**. Weitere Informationen finden Sie unter [Arbeiten mit Replikations-Agent-Profilen](../agents/replication-agent-profiles.md).  
   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md)   
  [Überwachen der Replikation](../monitoring-replication.md)  
   

@@ -14,34 +14,34 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721160"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lektion 1: Erstellen von Windows-Konten für die Replikation
   In dieser Lektion erstellen Sie Windows-Konten zum Ausführen von Replikations-Agents. Sie erstellen für die folgenden Agents ein separates Windows-Konto auf dem lokalen Server:  
   
-|Agent|Speicherort|Account name|  
+|Agent|Location|Kontoname|  
 |-----------|--------------|------------------|  
-|Momentaufnahme-Agent|Verleger|\<*machine_name*>\repl_snapshot|  
-|Protokolllese-Agent|Verleger|\<*machine_name*>\repl_logreader|  
-|Verteilungs-Agent|Verleger und Abonnent|\<*machine_name*>\repl_distribution|  
-|Merge-Agent|Verleger und Abonnent|\<*machine_name*>\repl_merge|  
+|Momentaufnahme-Agent|Herausgeber|\<*machine_name*> \ repl_snapshot|  
+|Protokolllese-Agent|Herausgeber|\<*machine_name*> \ repl_logreader|  
+|Verteilungs-Agent|Verleger und Abonnent|\<*machine_name*> \ repl_distribution|  
+|Merge-Agent|Verleger und Abonnent|\<*machine_name*> \ repl_merge|  
   
 > [!NOTE]  
 >  In den Replikationslernprogrammen wird für Verleger und Verteiler dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam verwendet. Verleger und Abonnent können dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam verwenden; dies ist jedoch keine Anforderung. Wenn der Verleger und Abonnent dieselbe Instanz verwenden, sind die Schritte zum Erstellen von Konten auf dem Verleger nicht erforderlich.  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>So erstellen Sie lokale Windows-Konten für Replikations-Agents auf dem Verleger  
   
-1.  Öffnen Sie auf dem Verleger in der Systemsteuerung in **Verwaltung** das Tool **Computerverwaltung** .  
+1.  Öffnen Sie auf dem Verleger in der Systemsteuerung unter **Verwaltung** die Option **Computer Verwaltung** .  
   
 2.  Erweitern Sie unter **System**den Eintrag **Lokale Benutzer und Gruppen**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Benutzer** und anschließend auf **Neuer Benutzer**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Benutzer** und anschließend auf **neuer Benutzer**.  
   
-4.  Geben Sie `repl_snapshot` in die **Benutzernamen** , geben Sie das Kennwort und weitere relevante Informationen ein, und klicken Sie dann auf **erstellen** um das Konto Repl_snapshot zu erstellen.  
+4.  Geben `repl_snapshot` Sie in das Feld **Benutzername** ein, geben Sie das Kennwort und andere relevante Informationen an, und klicken Sie dann auf **Erstellen** , um das repl_snapshot Konto zu erstellen.  
   
 5.  Wiederholen Sie den letzten Schritt, um die Konten repl_logreader, repl_distribution und repl_merge zu erstellen.  
   
@@ -49,22 +49,22 @@ ms.locfileid: "62721160"
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>So erstellen Sie lokale Windows-Konten für Replikations-Agents auf dem Abonnenten  
   
-1.  Öffnen Sie auf dem Abonnenten in der Systemsteuerung in **Verwaltung** das Tool **Computerverwaltung** .  
+1.  Öffnen Sie auf dem Abonnenten in der Systemsteuerung unter **Verwaltung** die Option **Computer Verwaltung** .  
   
 2.  Erweitern Sie unter **System**den Eintrag **Lokale Benutzer und Gruppen**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Benutzer** und anschließend auf **Neuer Benutzer**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Benutzer** und anschließend auf **neuer Benutzer**.  
   
-4.  Geben Sie `repl_distribution` in die **Benutzernamen** , geben Sie das Kennwort und weitere relevante Informationen ein, und klicken Sie dann auf **erstellen** das Konto repl_distribution zu erstellen.  
+4.  Geben `repl_distribution` Sie in das Feld **Benutzername** ein, geben Sie das Kennwort und andere relevante Informationen an, und klicken Sie dann auf **Erstellen** , um das repl_distribution Konto zu erstellen.  
   
 5.  Wiederholen Sie den letzten Schritt, um das Konto repl_merge zu erstellen.  
   
 6.  Klicken Sie auf **Schließen**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben Windows-Konten für Replikations-Agents erfolgreich erstellt. Als Nächstes konfigurieren Sie den Momentaufnahmeordner. Siehe [Lektion 2: Vorbereiten des Momentaufnahmeordners](lesson-2-preparing-the-snapshot-folder.md).  
+ Sie haben Windows-Konten für Replikations-Agents erfolgreich erstellt. Als Nächstes konfigurieren Sie den Momentaufnahmeordner. Weitere Informationen finden Sie unter [Lektion 2: Vorbereiten des Momentaufnahmeordners](lesson-2-preparing-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
   
   

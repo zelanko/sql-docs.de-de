@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787867"
 ---
 # <a name="browse-for-servers-local-servers"></a>Nach Servern suchen (lokale Server)
   Wenn eine Verbindung mit einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponente hergestellt wird und Sie nicht den genauen Namen des Computers mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]kennen, klicken Sie im Feld **Servername** auf **Suche fortsetzen**, um das Dialogfeld **Nach Servern suchen** zu öffnen.  
   
-## <a name="options"></a>Optionen  
- **Wählen Sie den Server für die Verbindungsherstellung aus**  
- Legen Sie den Server fest, zu dem eine Verbindung hergestellt werden soll, indem Sie auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz klicken, die in der Baumstruktur angezeigt wird. Sie können ein- oder Ausblenden der Teile der Strukturansicht durch Klicken auf den Knoten mit markiert einen **+** oder **-** Symbol.  
+## <a name="options"></a>Tastatur  
+ **Wählen Sie den Server für die Verbindung aus.**  
+ Legen Sie den Server fest, zu dem eine Verbindung hergestellt werden soll, indem Sie auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz klicken, die in der Baumstruktur angezeigt wird. Sie können Teile der Strukturansicht ein-oder ausblenden, indem Sie auf die Knoten klicken, **+** die **-** mit einem-oder-Symbol gekennzeichnet sind.  
   
   

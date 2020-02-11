@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770301"
 ---
 # <a name="transform-data-with-transformations"></a>Transformieren von Daten mit Transformationen
@@ -26,7 +26,7 @@ ms.locfileid: "62770301"
   
  Im folgenden Diagramm wird ein einfacher Datenfluss mit einer Quelle, zwei Transformationen und einem Ziel dargestellt.  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![Datenfluss](../../media/mw-dts-08.gif "Datenfluss")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen stellen die folgende Funktionalität bereit:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62770301"
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenflusstask](../../control-flow/data-flow-task.md)   
  [Datenfluss](../data-flow.md)   
  [Verbinden von Komponenten mit Pfaden](../../connect-components-with-paths.md)   

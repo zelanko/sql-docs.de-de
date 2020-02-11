@@ -1,5 +1,5 @@
 ---
-title: Sp_droplogin (Transact-SQL) | Microsoft-Dokumentation
+title: sp_droplogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056499"
 ---
-# <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
+# <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Entfernt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen. Dadurch wird der Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter diesem Anmeldenamen verhindert.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Drop Login](../../t-sql/statements/drop-login-transact-sql.md) .  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'` Ist die Anmeldung entfernt werden soll. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss bereits vorhanden sein, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @loginame = ] 'login'`Der Anmelde Name, der entfernt werden soll. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Anmelde* Name muss bereits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- **sp_droplogin** ruft DROP LOGIN auf.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_droplogin** Ruft Drop Login auf.  
   
  **sp_droplogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
@@ -63,9 +63,9 @@ DROP LOGIN Victoria;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Drop Login &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
