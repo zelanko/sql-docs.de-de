@@ -1,5 +1,5 @@
 ---
-title: Delete-Methode (ADO Recordset) | Microsoft-Dokumentation
+title: Delete-Methode (ADO-Recordset) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,10 +17,10 @@ ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919122"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete-Methode (ADO-Recordset)
@@ -34,32 +34,32 @@ recordset.Delete AffectRecords
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *AffectRecords*  
- Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der bestimmt, wie viele Datensätze der **löschen** Methode wirkt sich auf. Der Standardwert ist **AdAffectCurrent**.  
+ *Affectrecords*  
+ Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der bestimmt, wie viele Datensätze von der **Delete** -Methode betroffen sind. Der Standardwert ist **adaffectcurrent**.  
   
 > [!NOTE]
->  **AdAffectAll** und **AdAffectAllChapters** sind keine gültigen Argumente, **löschen**.  
+>  " **adaffectall** " und " **adaffectallchapters** " sind keine gültigen Argumente zum **Löschen**.  
   
-## <a name="remarks"></a>Hinweise  
- Mithilfe der **löschen** Methode kennzeichnet den aktuellen Datensatz oder eine Gruppe von Datensätzen in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt zum Löschen. Wenn die **Recordset** Objekt nicht Datensatz löschen, kann ein Fehler auftritt. Wenn Sie sich im sofortupdatemodus sind, werden die Löschvorgänge in der Datenbank sofort. Wenn ein Datensatz (aufgrund von Datenbank-integritätsverletzungen, z. B.) wurde erfolgreich gelöscht werden kann, der Datensatz bleibt im Bearbeitungsmodus nach dem Aufruf von [Update](../../../ado/reference/ado-api/update-method.md). Dies bedeutet, dass Sie die Aktualisierung mit abbrechen müssen [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) vor dem Verlassen des aktuellen Datensatzes (z. B. mit [schließen](../../../ado/reference/ado-api/close-method-ado.md), [verschieben](../../../ado/reference/ado-api/move-method-ado.md), oder [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+## <a name="remarks"></a>Bemerkungen  
+ Mithilfe der **Delete** -Methode wird der aktuelle Datensatz oder eine Gruppe von Datensätzen in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt zum Löschen markiert. Wenn das **Recordset** -Objekt das Löschen von Datensätzen nicht zulässt, tritt ein Fehler auf. Wenn Sie sich im sofortigen Update Modus befinden, werden Löschungen sofort in der Datenbank ausgeführt. Wenn ein Datensatz nicht erfolgreich gelöscht werden kann (z. b. aufgrund von Daten Bank Integritäts Verstößen), verbleibt der Datensatz nach dem [Update Update](../../../ado/reference/ado-api/update-method.md)im Bearbeitungsmodus. Dies bedeutet, dass Sie das Update mit [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) abbrechen müssen, bevor Sie den aktuellen Datensatz verschieben (z. b. mit " [Close](../../../ado/reference/ado-api/close-method-ado.md)", " [Move](../../../ado/reference/ado-api/move-method-ado.md)" oder " [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)").  
   
- Wenn Sie im Modus "Batch-Update" sind, werden die Datensätze zum Löschen aus dem Cache markiert und das eigentliche löschen erfolgt beim Aufrufen der [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode. Verwenden der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die gelöschten Datensätze anzuzeigen.  
+ Wenn Sie sich im Batch Aktualisierungs Modus befinden, werden die Datensätze zum Löschen aus dem Cache markiert, und der tatsächliche Löschvorgang erfolgt, wenn Sie die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode aufrufen. Verwenden Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft, um die gelöschten Datensätze anzuzeigen.  
   
- Abrufen von Feldwerten aus den gelöschten Datensatz generiert einen Fehler. Nach dem Löschen des aktuellen Datensatzes, bleibt der gelöschte Datensatz aktuell, bis Sie zu einem anderen Datensatz verschieben. Sobald Sie Abkehr von den gelöschten Datensatz, es nicht mehr zugänglich ist.  
+ Beim Abrufen von Feldwerten aus dem gelöschten Datensatz wird ein Fehler generiert. Nach dem Löschen des aktuellen Datensatzes bleibt der gelöschte Datensatz aktuell, bis Sie zu einem anderen Datensatz wechseln. Nachdem Sie den gelöschten Datensatz entfernt haben, ist er nicht mehr zugänglich.  
   
- Wenn Sie Löschvorgänge in einer Transaktion schachteln, können Sie mit der Wiederherstellen gelöschter Datensätze mit den [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode. Wenn Sie im Modus "Batch-Update" sind, können Sie Abbrechen, einen ausstehenden Löschvorgang oder eine Gruppe von ausstehenden Löschvorgängen mit dem [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methode.  
+ Wenn Sie Löschungen in einer Transaktion Schachteln, können Sie gelöschte Datensätze mit der [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode wiederherstellen. Wenn Sie sich im Batch Aktualisierungs Modus befinden, können Sie ein ausstehendes löschen oder eine Gruppe von ausstehenden Löschungen mit der [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) -Methode abbrechen.  
   
- Wenn der Versuch zum Löschen von Datensätzen aufgrund eines Konflikts mit dem zugrunde liegenden fehlschlägt (z. B. ein Datensatz wurde bereits gelöscht von einem anderen Benutzer), der Anbieter gibt Warnungen an, die die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung jedoch kein Programm angehalten wird die Ausführung. Ein Laufzeitfehler tritt auf, nur dann, wenn Konflikte für alle angeforderten Datensätze bestehen.  
+ Wenn der Versuch, Datensätze zu löschen, aufgrund eines Konflikts mit den zugrunde liegenden Daten (z. b. ein Datensatz bereits von einem anderen Benutzer gelöscht) fehlschlägt, gibt der Anbieter Warnungen an die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung zurück, hält die Ausführung des Programms jedoch nicht an. Ein Laufzeitfehler tritt nur auf, wenn für alle angeforderten Datensätze Konflikte vorliegen.  
   
- Wenn die [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamische Eigenschaft festgelegt ist, und die **Recordset** ist das Ergebnis der Ausführung einer JOIN-Operation für mehrere Tabellen, und klicken Sie dann die **löschen** Methode wird nur gelöscht werden. Zeilen aus der Tabelle, die mit dem Namen in der [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) Eigenschaft.  
+ Wenn die dynamische Eigenschaft der [eindeutigen Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) festgelegt ist und das **Recordset** das Ergebnis der Ausführung eines Verknüpfungs Vorgangs für mehrere Tabellen ist, löscht die **Delete** -Methode nur Zeilen aus der Tabelle mit dem Namen in der [eindeutigen Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) -Eigenschaft.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Delete – Methodenbeispiel (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
- [Delete – Methodenbeispiel (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
- [Delete – Methodenbeispiel (VC++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
- [Delete-Methode (Fields-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete-Methode (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Delete-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
+ [Delete-Methode (Beispiel) (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
+ [Delete-Methode (Beispiel) (VC + +)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
+ [Delete-Methode (ADO Fields-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete-Methode (ADO Parameters-Sammlung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [DeleteRecord-Methode (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Execute, Requery und Clear-Methode – Beispiel (JScript) | Microsoft-Dokumentation
+title: Beispiel für Execute, Requery und Clear Methods (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4ceafffc9d6b87428ae3da58a2f824bb7ed3c34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918825"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute, Requery und Clear-Methode – Beispiel (JScript)
-In diesem Beispiel wird veranschaulicht, die **Execute** Methode, die beim Ausführen von beiden eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet er die [Requery](../../../ado/reference/ado-api/requery-method.md) Methode zum Abrufen der aktuellen Daten in eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und die [löschen](../../../ado/reference/ado-api/clear-method-ado.md) Methode, um den Inhalt löschen der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)Auflistung. (Die **Fehler** Auflistung erfolgt über die **Verbindung** Objekt die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Nennen Sie die Datei **ExecuteJS.asp**.  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>Beispiel für Execute, Requery und Clear Methods (JScript)
+In diesem Beispiel wird die **Execute** -Methode veranschaulicht, wenn Sie sowohl über ein [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt als auch über ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt ausgeführt wird Außerdem wird die [Requery](../../../ado/reference/ado-api/requery-method.md) -Methode verwendet, um aktuelle Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abzurufen, und die [Clear](../../../ado/reference/ado-api/clear-method-ado.md) -Methode, um den Inhalt der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung zu löschen. (Der Zugriff auf die **Fehler** Sammlung erfolgt über das **Verbindungs** Objekt der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md).) Nennen Sie die Datei " **executejs. ASP**".  
   
 ```  
 <!-- BeginExecuteJS -->  
@@ -178,12 +178,12 @@ BODY {
 <!-- EndExecuteJS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)   
  [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)

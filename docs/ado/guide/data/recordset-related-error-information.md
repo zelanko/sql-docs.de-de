@@ -1,5 +1,5 @@
 ---
-title: Recordset-bezogene Fehlerinformationen | Microsoft-Dokumentation
+title: Recordsetbezogene Fehlerinformationen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3f8e8d9802b5d0c73af73aff20d929c188b9292
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924373"
 ---
 # <a name="recordset-related-error-information"></a>Fehlerinformationen in Bezug auf Recordsets
-Während der Stapelverarbeitung der **Status** Eigenschaft der **Recordset** -Objekt stellt Informationen über die einzelnen Datensätze in der **Recordset**. Bevor eine Batchaktualisierung stattfindet, die **Status** Eigenschaft der **Recordset** gibt Informationen zu Datensätzen hinzugefügt, geändert und gelöscht werden. Nach dem **UpdateBatch** aufgerufen wurde, die **Status** Eigenschaft gibt an, den Erfolg oder Misserfolg des Vorgangs. Wie Sie von Datensatz zu Datensatz, in verschoben der **Recordset**, den Wert des der **Status** eigenschaftsänderungen, um den Status des aktuellen Datensatzes beschreiben.
+Während der Batch Verarbeitung stellt die **Status** -Eigenschaft des **Recordset** -Objekts Informationen über die einzelnen Datensätze im **Recordset**bereit. Bevor ein Batch Update durchgeführt wird, gibt die **Status** -Eigenschaft des **Recordsets** Informationen zu Datensätzen wieder, die hinzugefügt, geändert und gelöscht werden sollen. Nachdem **UpdateBatch** aufgerufen wurde, gibt die Eigenschaft **Status** an, dass der Vorgang erfolgreich war oder fehlgeschlagen ist. Wenn Sie von Datensatz zu Datensatz im **Recordset**wechseln, ändert sich der Wert der **Status** -Eigenschaft, um den Status des aktuellen Datensatzes zu beschreiben.
