@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480767"
 ---
 # <a name="data-quality-client-application"></a>Data Quality-Clientanwendung
@@ -36,11 +36,11 @@ ms.locfileid: "65480767"
 |Inhaltsbeschreibung|Thema|  
 |-------------------------|-----------|  
 |Beschreibt die Verwendung von Wissensdatenbanken und Domänen in DQS.|[DQS-Wissensdatenbanken und -Domänen](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Beschreibt die Bereinigung Ihrer Daten in DQS.|[Datenbereinigung](../../2014/data-quality-services/data-cleansing.md)|  
+|Beschreibt die Bereinigung Ihrer Daten in DQS.|[Data Cleansing](../../2014/data-quality-services/data-cleansing.md)|  
 |Beschreibt das Ausführen des Abgleichs in DQS.|[Datenabgleich](../../2014/data-quality-services/data-matching.md)|  
-|Beschreibt die Verwaltung von DQS.|[DQS-Verwaltung](../../2014/data-quality-services/dqs-administration.md)|  
+|Beschreibt die Verwaltung von DQS.|[DQS-Administration](../../2014/data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Startbildschirm des Data Quality-Clients](../../2014/data-quality-services/data-quality-client-home-screen.md)  
   
   

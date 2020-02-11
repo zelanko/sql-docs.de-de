@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107628"
 ---
 # <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
@@ -28,9 +28,9 @@ ms.locfileid: "66107628"
   
 -   Speichern Sie Versionen von gerenderten Berichten mithilfe des Berichtsverlaufs als Verlaufskopie.  
   
- Weitere Informationen zum Anzeigen und Verwalten von Berichten direkt auf dem Berichtsserver finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) und [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
+ Weitere Informationen zum Anzeigen und Verwalten von Berichten direkt auf dem Berichtsserver finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) und [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md) in der -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a> Speichern von Berichtsdefinitionen  
+##  <a name="SavingReportDefinitions"></a>Speichern von Berichts Definitionen  
  Auch wenn Sie Berichte auf dem Computer speichern können, hat das Speichern der Berichte auf einem Berichtsserver viele Vorteile.  
   
  Das Speichern eines Berichts auf einem Berichtsserver hat die folgenden Vorteile:  
@@ -52,7 +52,7 @@ ms.locfileid: "66107628"
 
   
 ##  <a name="ExportingAndSavingReports"></a> Exportieren und Speichern von Berichten  
- Falls Sie nur wenige Berichte archivieren müssen, sollten Sie einen Bericht exportieren und als Datei speichern. Nachdem Sie einen Bericht in eine Anwendung exportiert haben (z. B. PDF oder Excel), können Sie ihn als Datei speichern und in einem geschützten freigegebenen Verzeichnis im Netzwerk platzieren. Oder Sie laden eine gespeicherte PDF- oder Excel-Datei als Ressourcenelement hoch, falls Sie alle Kopien eines Berichts unabhängig vom Format in der Berichtsserver-Datenbank speichern möchten. Weitere Informationen zum Exportieren eines Berichts finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41; ](export-reports-report-builder-and-ssrs.md) und [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ Falls Sie nur wenige Berichte archivieren müssen, sollten Sie einen Bericht exportieren und als Datei speichern. Nachdem Sie einen Bericht in eine Anwendung exportiert haben (z. B. PDF oder Excel), können Sie ihn als Datei speichern und in einem geschützten freigegebenen Verzeichnis im Netzwerk platzieren. Oder Sie laden eine gespeicherte PDF- oder Excel-Datei als Ressourcenelement hoch, falls Sie alle Kopien eines Berichts unabhängig vom Format in der Berichtsserver-Datenbank speichern möchten. Weitere Informationen zum Exportieren eines Berichts finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md) und [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
@@ -72,13 +72,13 @@ ms.locfileid: "66107628"
   
 -   [Speichern eines Berichts in einer SharePoint-Bibliothek &#40;Berichts-Generator&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Speichern von Berichten auf Ihrem Computer &#40;Berichts-Generator&#41;](../save-reports-to-your-computer-report-builder.md)  
+-   [Speichern Sie die Berichte auf Ihrem Computer &#40;Berichts-Generator&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
+ [Unterstützung für Installation, Deinstallation und Berichts-Generator](../install-uninstall-and-report-builder-support.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Drucken von Berichten (Berichts-Generator und SSRS)](print-reports-report-builder-and-ssrs.md)  

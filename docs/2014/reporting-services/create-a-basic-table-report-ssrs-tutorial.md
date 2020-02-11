@@ -15,26 +15,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109678"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)
-  In diesem Tutorial wurde entwickelt, unterstützt Sie beim Erstellen eines einfachen Tabellenberichts basierend auf den [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank mithilfe von Berichts-Designer. Sie können die Berichte auch mithilfe des Berichts-Generators oder des Berichts-Assistenten erstellen. In diesem Lernprogramm erstellen Sie ein Berichtsprojekt, richten Verbindungsinformationen ein, definieren eine Abfrage, fügen einen Tabellendatenbereich hinzu und zeigen den Bericht in der Vorschau an.  
+  Dieses Tutorial hilft Ihnen, mit dem Berichts-Designer einen einfachen Tabellenbericht zu erstellen, der auf der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Datenbank basiert. Sie können die Berichte auch mithilfe des Berichts-Generators oder des Berichts-Assistenten erstellen. In diesem Lernprogramm erstellen Sie ein Berichtsprojekt, richten Verbindungsinformationen ein, definieren eine Abfrage, fügen einen Tabellendatenbereich hinzu und zeigen den Bericht in der Vorschau an.  
   
 > [!NOTE]  
->  Zum Durcharbeiten dieses Lernprogramms müssen Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus ausführen. Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im integrierten SharePoint-Modus verwenden, können die Schritte nicht ausgeführt werden, in denen Berichtsserver-URLs enthalten sind. Weitere Informationen zu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modi finden Sie unter [Reporting Services-Berichtsserver](reporting-services-report-server.md).  
+>  Zum Durcharbeiten dieses Lernprogramms müssen Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus ausführen. Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im integrierten SharePoint-Modus verwenden, können die Schritte nicht ausgeführt werden, in denen Berichtsserver-URLs enthalten sind. Weitere Informationen zu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modi finden Sie unter [Reporting Services-Berichts Server](reporting-services-report-server.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Datenbankmodul.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Datenbank-Engine.  
   
--   Die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank.  Weitere Informationen finden Sie unter [Adventure Works für SQL Server 2012 (Adventure Works für SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. Weitere Informationen zur Unterstützung für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Beispieldatenbanken und Beispielcode für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], finden Sie unter [Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) auf der CodePlex-Website.  
+-   Die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank.  Weitere Informationen finden Sie unter [Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. Weitere Informationen zur Unterstützung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Beispiel Datenbanken und Beispielcode für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]finden Sie unter [Übersicht über Datenbanken und Beispiele](https://go.microsoft.com/fwlink/?LinkId=110391) auf der CodePlex-Website.  
   
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. installiert haben.  
+-   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
@@ -43,10 +43,10 @@ ms.locfileid: "66109678"
   
  Sie müssen auch über Leseberechtigung verfügen, um Daten aus der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank abrufen zu können.  
   
-## <a name="tasks"></a>Richtlinienübersicht  
+## <a name="tasks"></a>Aufgaben  
  [Lektion 1: Erstellen eines Berichtsserverprojekts &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
- [Lektion 2: Angeben von Verbindungsinformationen &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+ [Lektion 2: Angeben von Verbindungsinformationen &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
   
  [Lektion 3: Definieren eines Datasets für den Tabellenbericht &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
@@ -54,12 +54,12 @@ ms.locfileid: "66109678"
   
  [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
   
- [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+ [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  Anzeige der Lernprogramme empfehlen wir, hinzuzufügen, **Weiter** und **zurück** in der Symbolleiste der Dokumentanzeige die Schaltflächen. Weitere Informationen finden Sie weiter oben unter  
+>  Wenn Sie Tutorials überprüfen, empfiehlt es sich, der Symbolleiste in der Dokument Anzeige **die Schaltflächen** **weiter** und zurück hinzuzufügen. Weitere Informationen finden Sie unter:  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
   

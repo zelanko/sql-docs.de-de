@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bb152b749041451cdb3a3294c24d8b172c49a99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108451"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)
@@ -27,17 +27,17 @@ ms.locfileid: "66108451"
 1.  Klicken Sie in **Toolbox**auf **Tabelle**, und klicken Sie anschließend auf die Entwurfsoberfläche und ziehen Sie die Maus. Vom Berichts-Designer wird ein Tabellendatenbereich mit drei Spalten in der Mitte der Entwurfsoberfläche gezeichnet.  
   
     > [!NOTE]  
-    >  Die **Toolbox** kann auf der linken Seite des **Berichtsdatenbereichs** als Registerkarte angezeigt werden. Zum Öffnen der **Toolbox**bewegen Sie den Mauszeiger über die Registerkarte **Toolbox** . Falls die **Toolbox** noch nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Toolbox**.  
+    >  Die **Toolbox** kann auf der linken Seite des **Berichtsdatenbereichs** als Registerkarte angezeigt werden. Um die **Toolbox**zu öffnen, bewegen Sie den Mauszeiger über die Registerkarte **Toolbox** . Wenn die **Toolbox** nicht sichtbar ist, klicken Sie im Menü **Ansicht** auf **Toolbox**.  
   
-2.  In der **Berichtsdaten** Bereich, erweitern Sie die **AdventureWorksDataset** Dataset, um die Felder anzuzeigen.  
+2.  Erweitern Sie im **Berichtsdaten** Bereich das **AdventureWorksDataSet** -DataSet, um die Felder anzuzeigen.  
   
-3.  Ziehen Sie das Feld Date aus dem **Berichtsdaten** Bereich, um die erste Spalte in der Tabelle.  
+3.  Ziehen Sie das Feld Date aus dem **Berichtsdatenbereich** in die erste Spalte in der Tabelle.  
   
      Wenn Sie das Feld in der ersten Spalte ablegen, werden zwei Vorgänge ausgeführt. Zunächst wird in der Datenzelle der als *Feldausdruck*bezeichnete Feldname in Klammern: `[Date]`angezeigt. Dann wird automatisch der Kopfzeile ein Wert für den Spaltenkopf hinzugefügt, und zwar direkt über dem Feldausdruck. Standardmäßig ist die Spalte der Name des Felds. Sie können den Kopfzeilentext auswählen und einen neuen Namen eingeben.  
   
-4.  Ziehen Sie das Feld Order aus dem **Berichtsdaten** in die zweite Spalte in der Tabelle.  
+4.  Ziehen Sie das Feld Order aus dem **Berichtsdatenbereich** in die zweite Spalte in der Tabelle.  
   
-5.  Ziehen Sie das Feld "Product" über die **Berichtsdaten** in die dritte Spalte in der Tabelle.  
+5.  Ziehen Sie das Feld Product aus dem **Berichtsdatenbereich** in die dritte Spalte in der Tabelle.  
   
 6.  Ziehen Sie das Feld Qty an den rechten Rand der dritten Spalte, bis Sie einen vertikalen Cursor erhalten und der Mauszeiger ein Pluszeichen [+] aufweist. Wenn Sie die Maustaste loslassen, wird eine vierte Spalte für `[Qty]`erstellt.  
   
@@ -48,18 +48,18 @@ ms.locfileid: "66108451"
   
      Die folgende Abbildung zeigt einen Datenbereich einer Tabelle, der mit folgenden Feldern aufgefüllt wurde: Date, Order, Product, Qty und Line Total.  
   
-     ![Entwurf, Tabelle mit Kopfzeile und Detailzeile](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, Tabelle mit Kopfzeile und Detailzeile")  
+     ![Entwurf, Tabelle mit Kopfzeile und Detailzeile](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Entwurf, Tabelle mit Kopfzeile und Detailzeile")  
   
 ## <a name="preview-your-report"></a>Zeigen Sie den Bericht in der Vorschau an.  
  Wenn Sie einen Bericht in der Vorschau anzeigen, können Sie den gerenderten Bericht überprüfen, ohne ihn zuvor auf einem Berichtsserver zu veröffentlichen. Es empfiehlt sich beispielsweise, den Bericht zur Entwurfszeit häufig in der Vorschau anzuzeigen. Wenn Sie den Bericht in der Vorschau anzuzeigen, wird auch eine Überprüfung des Entwurfs und der Datenverbindungen ausgeführt, damit Sie Fehler und Probleme korrigieren können, bevor Sie den Bericht auf einem Berichtsserver veröffentlichen.  
   
 #### <a name="to-preview-a-report"></a>So zeigen Sie die Vorschau eines Berichts an  
   
--   Klicken Sie auf die Registerkarte **Vorschau** . Der Berichts-Designer führt den Bericht aus und zeigt ihn in der Vorschau an.  
+-   Klicken Sie auf die Registerkarte **Vorschau** . Berichts-Designer führt den Bericht aus und zeigt ihn in der Vorschau Ansicht an.  
   
      In der folgenden Abbildung wird ein Teil des Berichts in der Ansicht Vorschau angezeigt.  
   
-     ![Vorschau, Detailzeilen der Tabelle mit 5 Spalten](../../2014/tutorials/media/rs-basictabledetailspreview.gif "Preview, Detail rows of table with 5 columns")  
+     ![Vorschau, Detailzeilen der Tabelle mit 5 Spalten](../../2014/tutorials/media/rs-basictabledetailspreview.gif "Vorschau, Detailzeilen der Tabelle mit 5 Spalten")  
   
      Beachten Sie, dass die Währungsangabe (in der Spalte Line Total) sechs Stellen nach dem Dezimaltrennzeichen aufweist und dass das Datum einen Zeitstempel enthält. Diese Formatierung wird in der nächsten Lektion korrigiert.  
   
@@ -67,10 +67,10 @@ ms.locfileid: "66108451"
 >  Klicken Sie im Menü **Datei** auf **Alle Speichern** , um den Bericht zu speichern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Siehe [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+ Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Weitere Informationen finden Sie unter [Lektion 5: Formatieren eines Berichts (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellen (Berichts-Generator und SSRS)](report-design/tables-report-builder-and-ssrs.md)   
- [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

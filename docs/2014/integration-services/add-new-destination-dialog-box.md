@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen neuer Ziel (Dialogfeld) | Microsoft-Dokumentation
+title: Dialog Feld "neues Ziel hinzufügen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061862"
 ---
 # <a name="add-new-destination-dialog-box"></a>Neues Ziel hinzufügen (Dialogfeld)
   In der folgenden Tabelle sind die Optionen im Dialogfeld "Neues Ziel hinzufügen" aufgeführt.  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Zieltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
-|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **\<Neu>** , um einen neuen Verbindungs-Manager zu erstellen.|  
+|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie ** \<auf neu>** , um einen neuen Verbindungs-Manager zu|  
 |Nur installierte anzeigen|Geben Sie an, ob nur installierte Ziele angezeigt werden sollen.|  
 |OK|Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern, und öffnen Sie die entsprechenden nachfolgenden Dialogfelder, um zusätzliche Optionen zu konfigurieren.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen eines Ziels mit dem Ziel-Assistenten](data-flow/destination-assistant.md)  
   
   

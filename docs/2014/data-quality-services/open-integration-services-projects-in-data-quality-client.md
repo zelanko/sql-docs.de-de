@@ -11,13 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480371"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Öffnen von Integration Services-Projekten im Data Quality-Client
+  
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ermöglicht es Ihnen, im Batchmodus ein Bereinigungsprojekt auszuführen. Manchmal möchten Sie allerdings die Bereinigungsergebnisse vielleicht in einem Integration Services-Paket überprüfen, wie Sie auch die Bereinigungsergebnisse auf der Registerkarte **Ergebnisse verwalten und anzeigen** einer Bereinigungsaktivität in einem Data Quality-Projekt in DQS überprüfen können. DQS ermöglicht es Ihnen, Integration Services-Projekte nur in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] wie ein beliebiges anderes Data Quality-Projekt im Bildschirm **Projekt öffnen** zu öffnen und eine interaktive Bereinigung der Bereinigungsergebnisse in einem Integration Services-Projekt durchzuführen.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
@@ -30,7 +31,7 @@ ms.locfileid: "65480371"
   
 -   Sie können ein gesperrtes Integration Services-Projekt nicht aus [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]löschen. Zum Löschen müssen Sie es zunächst entsperren.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen das Ausführen eines Integration Services-Projekts, das ein Paket mit einer DQS-Bereinigungskomponente enthält, erfolgreich abgeschlossen haben, um es in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]anzuzeigen und zu öffnen.  
   
 ###  <a name="Security"></a> Sicherheit  
@@ -38,17 +39,17 @@ ms.locfileid: "65480371"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen die Rolle „dqs_kb_editor“ oder „dqs_kb_operator“ in der Datenbank DQS_MAIN haben, um ein Integration Services-Projekt zu öffnen.  
   
-##  <a name="Open"></a> Öffnen eines Integration Services-Projekts  
+##  <a name="Open"></a>Öffnen eines Integration Services Projekts  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
-2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Data Quality-Projekt öffnen**. Der Bildschirm **Projekt öffnen** wird angezeigt.  
+2.  Klicken Sie [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] im-Startbildschirm auf **Data Quality-Projekt öffnen**. Der Bildschirm **Projekt öffnen** wird angezeigt.  
   
 3.  Im Bildschirm **Projekt öffnen** können Sie ein Integration Services-Projekt auf eine der folgenden Weisen identifizieren:  
   
-    1.  **Projektname:** Die Auflistung von Integration Services-Projekten erfolgt anhand der folgenden Namensterminologie: "Package.DQS Cleansing_ *\<Datum > **\<Zeit >* _ {GUID}." Bei jeder erfolgreichen Ausführung des gleichen Pakets in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]wird ein neues Projekt auf dem Bildschirm **Projekt öffnen** aufgelistet.  
+    1.  **Projekt Name**: Integration Services Projekte werden mit der folgenden Benennungs Terminologie aufgelistet: "Package. DQS Cleansing_*\<Date> *\<* Time>*_ {GUID}". Bei jeder erfolgreichen Ausführung des gleichen Pakets in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]wird ein neues Projekt auf dem Bildschirm **Projekt öffnen** aufgelistet.  
   
-    2.  **Projekttyp:** Für Integration Services-Projekte wird **SSIS** auf dem Bildschirm **Projekt öffnen** als Projekttyp angezeigt.  
+    2.  **Projekttyp**: Integration Services Projekte haben **SSIS** als Projekttyp im Bildschirm **Projekt öffnen** .  
   
      Wählen Sie ein Projekt aus, und klicken Sie auf **Weiter**.  
   
@@ -58,6 +59,6 @@ ms.locfileid: "65480371"
   
 6.  Klicken Sie nach dem Exportieren der Daten auf **Fertig stellen** , um das Integration Services-Projekt zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
- [DQS-Bereinigungstransformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Transformation für DQS-Bereinigung](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services-Projekte &#40;SSIS&#41;](../integration-services/integration-services-ssis-projects-and-solutions.md)  

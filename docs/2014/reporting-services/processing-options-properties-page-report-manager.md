@@ -1,5 +1,5 @@
 ---
-title: Verarbeitungsoptionen Eigenschaftenseite (Berichts-Manager) | Microsoft-Dokumentation
+title: Verarbeitungsoptionen (Eigenschaften Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108036"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Verarbeitungsoptionen (Eigenschaftenseite) (Berichts-Manager)
@@ -36,8 +36,8 @@ ms.locfileid: "66108036"
   
 4.  Wählen Sie die Registerkarte **Verarbeitungsoptionen** aus.  
   
-## <a name="options"></a>Optionen  
- **Diesen Bericht ausführen immer mit den neuesten Daten**  
+## <a name="options"></a>Tastatur  
+ **Diesen Bericht immer mit den neuesten Daten ausführen**  
  Verwenden Sie diese Option, wenn die Berichtsdaten abgerufen werden sollen, sobald der Benutzer den Bericht auswählt. Wenn eine zwischengespeicherte Kopie des Berichts verfügbar ist, wird diese an den Benutzer zurückgegeben; andernfalls erfolgt das Abrufen und Rendern der Daten, wenn ein Benutzer den Bericht auswählt.  
   
  Wählen Sie die Option **Keine temporären Kopien dieses Berichts zwischenspeichern** aus, wenn der Bericht immer mit den neuesten Daten ausgeführt werden soll. Jeder Benutzer, der den Bericht öffnet, löst eine Abfrage in der Datenquelle aus, in der die im Bericht verwendeten Daten enthalten sind.  
@@ -48,7 +48,7 @@ ms.locfileid: "66108036"
   
  Es kann auch ein Ablaufzeitplan mit einer anderen Angabe als Minuten für einen zwischengespeicherten Bericht verwendet werden. Um beispielsweise einen zwischengespeicherten Bericht am Ende des Tages ablaufen zu lassen, können Sie eine bestimmte Uhrzeit in der Nacht angeben, nach der die Kopie ungültig wird.  
   
- **Diesen Bericht aus einer ausführungsmomentaufnahme Rendern**  
+ **Diesen Bericht aus einer Ausführungsmomentaufnahme rendern**  
  Verwenden Sie diese Option, um einen Bericht abzurufen, der zu einem von Ihnen geplanten Zeitpunkt als Momentaufnahme gespeichert wurde. Wenn Sie diese Option auswählen, können Sie die Datenverarbeitung so planen, dass sie außerhalb der Spitzenbetriebszeiten auftritt. Anders als bei zwischengespeicherten Kopien, die beim Öffnen des Berichts durch einen Benutzer erstellt werden, wird eine Momentaufnahme erstellt und anschließend gemäß einem Zeitplan aktualisiert. Momentaufnahmen haben kein Ablaufdatum, sie können verwendet werden, bis sie durch neuere Versionen ersetzt werden.  
   
  Momentaufnahmen, die als Ergebnis von Berichtsausführungseinstellungen generiert werden, weisen dieselben Merkmale auf wie Momentaufnahmen zum Berichtsverlauf. Sie unterscheiden sich darin, dass nur eine Momentaufnahme zur Berichtsausführung und möglicherweise zahlreiche Momentaufnahmen zum Berichtsverlauf vorhanden sind. Auf Momentaufnahmen zum Berichtsverlauf wird über die Seite Verlauf des Berichts zugegriffen, auf der zahlreiche Instanzen eines Berichts gespeichert sind, so wie sie zu unterschiedlichen Zeitpunkten vorhanden waren. Auf Momentaufnahmen zur Berichtsausführung greifen Benutzer dagegen genau wie beim Zugriff auf Liveberichte von Ordnern aus zu. Bei den Momentaufnahmen zur Berichtsausführung erhalten Benutzer keinen grafischen Hinweis, dass es sich bei dem Bericht um eine Momentaufnahme handelt.  
@@ -60,7 +60,7 @@ ms.locfileid: "66108036"
   
  Dieser Wert gilt für die Berichtsverarbeitung auf einem Berichtsserver. Durch diesen Wert wird kein Timeout für die Datenverarbeitung auf dem Datenbankserver festgelegt, der die Daten für den Bericht zur Verfügung stellt. Wenn Sie diesen Wert festlegen, müssen Sie jedoch genügend Zeit sowohl für die Daten- als auch für die Berichtsverarbeitung zur Verfügung stellen. Die Zählung für die Berichtsverarbeitung beginnt mit der Auswahl des Berichts und endet mit dem Öffnen des Berichts.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Berichtsverarbeitungseigenschaften](report-server/set-report-processing-properties.md)   
  [Zwischenspeichern von Berichten (SSRS)](report-server/caching-reports-ssrs.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md)   

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank | Microsoft-Dokumentation
+title: Konfigurieren von in-Memory-oder directquery-Zugriff für eine tabellarische Modelldatenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067184"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Konfigurieren von speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank
   In diesem Thema wird beschrieben, wie die Verbindungseigenschaften eines bereits bereitgestellten tabellarischen Modells geändert werden, um die Verwendung des Modells im DirectQuery-Modus zu aktivieren.  
   
- Weitere Informationen zu diesen Eigenschaften und die Konfiguration für die häufigsten Szenarien finden Sie unter [DirectQuery-Bereitstellungsszenarien &#40;SSAS – tabellarisch&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
+ Weitere Informationen zu diesen Eigenschaften und zur Konfiguration für die gängigsten Szenarien finden Sie unter [directquery-Bereitstellungs Szenarien &#40;tabellarischen SSAS-&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
-## <a name="requirements"></a>Anforderungen  
- Es sind mehrere Schritte nötig, um den DirectQuery-Modus auf ein tabellarisches Modell anwenden zu können. Du musst:  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ Es sind mehrere Schritte nötig, um den DirectQuery-Modus auf ein tabellarisches Modell anwenden zu können. Die Voraussetzungen lauten wie folgt:  
   
 1.  Stellen Sie sicher, dass das Modell keine Funktionen hat, die möglicherweise Überprüfungsfehler im DirectQuery-Modus verursachen.  
   
@@ -35,15 +35,15 @@ ms.locfileid: "66067184"
   
  In diesem Thema wird davon ausgegangen, dass Sie das Modell erstellt und überprüft haben und den DirectQuery-Zugriff nur noch von einem Client (beispielsweise [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]) aktivieren müssen.  
   
-## <a name="procedure"></a>Prozedur  
+## <a name="procedure"></a>Verfahren  
   
 #### <a name="change-the-connection-string-properties-of-the-model"></a>Ändern der Verbindungszeichenfolgen-Eigenschaften eines Modells  
   
 1.  Öffnen Sie in SQL Server Management Studio die Instanz, für die Sie das Modell bereitgestellt haben.  
   
-2.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste in des Namens der Model-Datenbank, und wählen **Eigenschaften**.  
+2.  Klicken Sie in Objekt-Explorer mit der rechten Maustaste auf den Namen der Model-Datenbank, und wählen Sie **Eigenschaften**aus.  
   
-3.  Suchen Sie die Eigenschaft **DirectQueryMode**. Diese Eigenschaft muss auf einen dieser Werte festgelegt werden, um die Verwendung der relationalen Datenquelle zu aktivieren:  
+3.  Suchen Sie die Eigenschaft **directquerymode**. Diese Eigenschaft muss auf einen dieser Werte festgelegt werden, um die Verwendung der relationalen Datenquelle zu aktivieren:  
   
     -   **DirectQuery**  
   

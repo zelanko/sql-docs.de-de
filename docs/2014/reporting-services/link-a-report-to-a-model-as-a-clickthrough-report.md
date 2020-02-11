@@ -1,5 +1,5 @@
 ---
-title: Verknüpfen eines Berichts mit einem Modell als Bericht mit durchklicken | Microsoft-Dokumentation
+title: Verknüpfen eines Berichts mit einem Modell als Bericht mit durch Klicken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108371"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Verknüpfen eines Berichts mit einem Modell als Bericht mit Durchklicken
@@ -31,7 +31,7 @@ ms.locfileid: "66108371"
   
 1.  Öffnen Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 oder höher.  
   
-2.  Geben Sie die URL des Berichts-Managers in die Adressleiste des Webbrowsers ein. Standardmäßig lautet die URL http://\<*ComputerName*> / reports.  
+2.  Geben Sie die URL des Berichts-Managers in die Adressleiste des Webbrowsers ein. Standardmäßig lautet die URL http://\<*Computername*>/Reports.  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>So erstellen Sie einen benutzerdefinierten Bericht mit Durchklicken  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108371"
   
 5.  Um den benutzerdefinierten Bericht anzuzeigen, wenn auf eine Instanz der ausgewählten Entität geklickt wird, klicken Sie auf die Schaltfläche **Durchsuchen** des Berichts mit einer einzigen Instanz.  
   
-     -oder-  
+     Oder  
   
      Um den benutzerdefinierten Bericht anzuzeigen, wenn auf eine Multiinstanz der ausgewählten Entität geklickt wird, klicken Sie auf die Schaltfläche **Durchsuchen** des Multiinstanzberichts.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66108371"
   
 7.  Klicken Sie auf **Anwenden**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichte mit durchklicken &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichte mit durch Klicken &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
   
   

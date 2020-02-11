@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftenseite "Allgemein", "Ordner (Berichts-Manager) | Microsoft-Dokumentation
+title: Allgemeine Eigenschaften (Seite), Ordner (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109132"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Allgemein (Eigenschaftenseite, Ordner) (Berichts-Manager)
   Verwenden Sie die Seite Allgemeine Eigenschaften für Ordner, um Eigenschaften für die von Ihnen erstellten Ordner anzuzeigen und festzulegen. Informationen zum Benutzer, der den Ordner erstellt oder geändert hat, und zum Zeitpunkt der Änderung werden oben auf der Seite Allgemeine Eigenschaften angezeigt.  
   
- Die Ordnereigenschaften schließen auch Sicherheitseinstellungen ein. Weitere Informationen zur ordnersicherheit finden Sie unter [sichere Ordner](security/secure-folders.md).  
+ Die Ordnereigenschaften schließen auch Sicherheitseinstellungen ein. Weitere Informationen zur Ordner Sicherheit finden Sie unter [sichere Ordner](security/secure-folders.md).  
   
  Ordner mit besonderem Zweck wie z. B. Home, Meine Berichte und Benutzerordner können weder umbenannt noch innerhalb des Namespace des Berichtsservers verschoben werden. Die Eigenschaftenseite Allgemein steht für diese Ordner nicht zur Verfügung.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66109132"
   
 2.  Klicken Sie unter dem Ordnerbanner auf der Symbolleiste auf **Ordnereinstellungen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
- Geben Sie einen Namen für den Ordner an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ * \< > | "oder / beim Angeben eines Namens.  
+ Geben Sie einen Namen für den Ordner an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ * \< > | "oder/, wenn ein Name angegeben wird.  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung des Ordnerinhalts ein. Diese Beschreibung wird für Benutzer, die über die Berechtigung zum Zugreifen auf den Ordner verfügen, auf der Seite Inhalt angezeigt.  
@@ -49,10 +49,10 @@ ms.locfileid: "66109132"
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den Ordner und seinen Inhalt zu entfernen.  
   
- **Verschieben**  
+ **Move**  
  Klicken Sie auf diese Schaltfläche, um einen Bericht oder Ordner innerhalb des Namespace des Berichtsservers zu verschieben. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie einen anderen Ordner als Speicherort aussuchen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   

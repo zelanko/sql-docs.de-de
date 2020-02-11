@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Modells mithilfe des Berichts-Manager | Microsoft-Dokumentation
+title: Erstellen eines Modells mit Berichts-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109670"
 ---
 # <a name="create-a-model-using-report-manager"></a>Erstellen eines Modells mithilfe des Berichts-Managers
@@ -26,7 +26,7 @@ ms.locfileid: "66109670"
  Das von Ihnen generierte Berichtsmodell basiert vollständig auf dem Schema der freigegebenen Datenquelle. Sie können weder auswählen, welche Teile der Datenquelle im Modell enthalten sind, noch können Sie die Regeln oder Metadaten eines generierten Modells bearbeiten. Sie können jedoch Eigenschaften für das Modell festlegen, nachdem es generiert wurde, und Rollenzuweisungen definieren, die den Zugriff auf das gesamte Modell oder auf Teile desselben einschränken.  
   
 > [!NOTE]  
->  Ein Oracle-basiertes Modell generiert, mit dem Berichts-Manager oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] enthält Datenbankobjekte, die Teil des Schemas für das Benutzerkonto an, die zur Verbindung mit der Oracle-Datenquelle sind. Der Name des Benutzerkontos wird in den Anmeldeinformationen für die Datenquelleneigenschaften angegeben.  
+>  Ein mit Berichts-Manager oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] generiertes Oracle-basiertes Modell enthält Datenbankobjekte, die Teil des Schemas für das Benutzerkonto sind, das zum Herstellen einer Verbindung mit der Oracle-Datenquelle verwendet wird. Der Name des Benutzerkontos wird in den Anmeldeinformationen für die Datenquelleneigenschaften angegeben.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>So erstellen Sie mithilfe des Berichts-Managers eine neue Datenquelle für ein Berichtsmodell  
   
@@ -40,15 +40,15 @@ ms.locfileid: "66109670"
   
 5.  Überprüfen Sie, ob das Kontrollkästchen **Diese Datenquelle aktivieren** aktiviert ist.  
   
-6.  Wählen Sie in der Liste **Verbindungstyp** den Typ der Datenquelle aus, mit der Sie eine Verbindung herstellen möchten. Der Verbindungstyp muss einer der folgenden sein: **Oracle**, **Microsoft SQL Server** oder **Microsoft SQL Server Analysis Services**.  
+6.  Wählen Sie in der Liste **Verbindungstyp** den Typ der Datenquelle aus, mit der Sie eine Verbindung herstellen möchten. Als Verbindungstyp muss einer der folgenden angegeben werden: **Oracle**, **Microsoft SQL Server** oder **Microsoft SQL Server Analysis Services**.  
   
 7.  Geben Sie im Feld **Verbindungszeichenfolge** die Verbindungszeichenfolge ein, die auf die Datenbank zeigt.  
   
 8.  Wählen Sie die Verbindungsmethode aus, die Benutzer des Berichts-Generators zum Herstellen der Verbindung mit der Datenbank verwenden müssen.  
   
-    -   Windows-Authentifizierung: Wählen Sie diese Option aus, wenn Sie möchten, dass das Betriebssystem zur Authentifizierung [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Benutzer. Diese Option ermöglicht es [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , Sicherheitsfunktionen von Windows, z. B. die Kennwortverschlüsselung, für die Authentifizierung von Benutzern zu verwenden. Es wird nachdrücklich empfohlen, diese Option auszuwählen.  
+    -   Windows-Authentifizierung: Wählen Sie diese Option aus, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer vom Betriebssystem authentifiziert werden sollen. Diese Option ermöglicht es [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , Sicherheitsfunktionen von Windows, z. B. die Kennwortverschlüsselung, für die Authentifizierung von Benutzern zu verwenden. Es wird nachdrücklich empfohlen, diese Option auszuwählen.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung: Wählen Sie diese Option aus, wenn die Benutzer verwenden sollen eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmeldekonto, das Sie erstellt haben. Die Benutzer müssen einen gültigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben.  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Authentifizierung: Wählen Sie diese Option aus, wenn Sie möchten, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dass Benutzer ein von Ihnen erstelltes Anmelde Konto verwenden. Die Benutzer müssen einen gültigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben.  
   
         > [!CAUTION]  
         >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
@@ -79,9 +79,9 @@ ms.locfileid: "66109670"
   
      Das Berichtsmodell wird erstellt und in dem von Ihnen angegebenen Ordner gespeichert. Sie können diesem Modell Berechtigungen mit dem Berichts-Manager zuweisen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](security/granting-permissions-on-a-native-mode-report-server.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Neue Datenquelle (Seite, Berichts-Manager)](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Die Seite "neue Datenquelle" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   

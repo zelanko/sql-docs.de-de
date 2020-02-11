@@ -1,5 +1,5 @@
 ---
-title: Umbenennen einer Tabelle oder Spalte (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Umbenennen einer Tabelle oder Spalte (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066689"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Umbenennen einer Tabelle oder Spalte (SSAS – tabellarisch)
@@ -46,7 +46,7 @@ ms.locfileid: "66066689"
   
 -   Steuerzeichen  
   
--   Die folgenden Zeichen (die nicht in den Namen der Analysis Services-Objekte zulässig sind):., ': / \\*|? & % $! += () []{}<>  
+-   Die folgenden Zeichen (die in den Namen von Analysis Services-Objekten nicht gültig sind):.,; ':/ \\*|? &% $! + = () []{}<>  
   
 -   Von Analysis Services reservierte Schlüsselwörter, einschließlich Funktionsnamen und Operatoren von Multidimensional Expressions (MDX) und Data Mining Extensions (DMX)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66066689"
   
  Darüber hinaus müssen alle Berechnungen, die die umbenannte Tabelle oder Spalten in der umbenannten Tabelle verwenden, ebenfalls aktualisiert werden, und die von diesen Berechnungen abgeleiteten Daten müssen aktualisiert und neu berechnet werden. Je nach Anzahl der betroffenen Tabellen und Berechnungen kann dies einige Zeit in Anspruch nehmen. Der beste Zeitpunkt zum Umbenennen von Tabellen ist daher entweder während des Importvorgangs oder bevor Sie komplexe Beziehungen und Berechnungen erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellen und Spalten &#40;SSAS – tabellarisch&#41;](tables-and-columns-ssas-tabular.md)   
- [Aus PowerPivot importieren &#40;SSAS – tabellarisch&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Importieren aus Analysis Services &#40;SSAS – tabellarisch&#41;](import-from-analysis-services-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellen und Spalten &#40;tabellarischen SSAS-&#41;](tables-and-columns-ssas-tabular.md)   
+ [Aus Power Pivot &#40;tabellarischen SSAS-&#41;importieren](import-from-power-pivot-ssas-tabular.md)   
+ [Aus Analysis Services &#40;tabellarischen SSAS-&#41;importieren](import-from-analysis-services-ssas-tabular.md)  
   
   

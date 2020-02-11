@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107998"
 ---
 # <a name="query-builder-report-wizard"></a>Abfrage-Generator (Berichts-Assistent)
@@ -46,13 +46,13 @@ ms.locfileid: "66107998"
  **Befehlstyp**  
  Gibt Text, die gespeicherte Prozedur oder den Tabellendirektmodus (TableDirect) an. Ob ein Befehlstyp verfügbar ist, hängt von der Datenverarbeitungserweiterung ab, die Sie angegeben haben.  
   
- **Abfragebereich**  
+ **Abfrage Bereich**  
  Geben Sie die Abfrage ein.  
   
  **Ergebnisbereich**  
  Zeigt das von der Abfrage zurückgegebene Resultset an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Hilfe des Berichts-Assistenten](../../2014/reporting-services/report-wizard-help.md)  
   

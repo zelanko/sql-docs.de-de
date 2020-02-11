@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253511"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)
@@ -34,15 +34,15 @@ ms.locfileid: "63253511"
   
 -   Deaktivieren Sie im **Kriterienbereich**in der Spalte **Ausgabe** das Kontrollkästchen der zu entfernenden Datenspalte. (Wenn Sie die Spalte wieder in die Abfrageergebnisse aufnehmen möchten, können Sie das Kontrollkästchen in der Spalte **Ausgabe** erneut aktivieren.)  
   
-     -oder-  
+     Oder  
   
 -   Entfernen Sie die Spalte aus der Ausgabeliste im [SQL-Bereich](sql-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Spalten zu Abfragen &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
  [Entfernen von Spalten aus Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Sortieren und gruppieren Abfrageergebnisse &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Sortieren und Gruppieren von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Zusammenfassen von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

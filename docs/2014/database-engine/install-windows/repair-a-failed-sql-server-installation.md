@@ -1,5 +1,5 @@
 ---
-title: Eine SQL Server 2014-Installation reparieren | Microsoft-Dokumentation
+title: Reparieren einer SQL Server 2014-Installation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046664"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Entfernen einer SQL Server 2014-Installation
@@ -75,7 +75,7 @@ ms.locfileid: "67046664"
     Setup.exe /q /ACTION=Repair /INSTANCENAME=instancename  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](view-and-read-sql-server-setup-log-files.md)   
  [Themen zu Vorgehensweisen für die Installation](../../sql-server/install/installation-how-to-topics.md)  
   

@@ -11,36 +11,36 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108405"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   Fügen Sie dem Bericht Gruppierungen und Gesamtwerte hinzu, um Daten zu gruppieren und zusammenzufassen.  
   
- Informationen zum Hinzufügen laufender Gesamtwerte zu Berichten finden Sie unter: [Hinzufügen von Gesamtwerten zu Reporting Services (SSRS)-Berichte](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
+ Weitere Informationen zum Hinzufügen von laufenden Summen zu Berichten finden Sie unter [Hinzufügen von Summen zu Reporting Services Berichten (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **In diesem Thema:**  
   
--   [Zum Gruppieren von Daten in einem Bericht](#bkmk_groupdata)  
+-   [So gruppieren Sie Daten in einem Bericht](#bkmk_groupdata)  
   
--   [Zum Hinzufügen von Gesamtwerten zu einem Bericht](#bkmk_addtotals)  
+-   [So fügen Sie einem Bericht Summen hinzu](#bkmk_addtotals)  
   
--   [Ein Bericht einen tagesgesamtwert hinzu](#bkmk_adddailytotal)  
+-   [So fügen Sie einem Bericht ein Tagesergebnis hinzu](#bkmk_adddailytotal)  
   
--   [Ein Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
+-   [So fügen Sie einem Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
   
--   [So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)](#bkmk_publishreport)  
+-   [So veröffentlichen Sie den Bericht auf dem Berichts Server (optional)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a> Zum Gruppieren von Daten in einem Bericht  
+##  <a name="bkmk_groupdata"></a>So gruppieren Sie Daten in einem Bericht  
   
 1.  Klicken Sie auf die Registerkarte **Entwurf** .  
   
-2.  Wenn Sie den Bereich **Zeilengruppen** nicht sehen, klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche. Klicken Sie auf **Sicht** und dann auf **Gruppierung**.  
+2.  Wenn der Bereich **Zeilen Gruppen** nicht angezeigt wird, klicken Sie mit der rechten Maustaste auf die Entwurfs Oberfläche, und klicken Sie auf **anzeigen** und dann auf **Gruppierung**.  
   
-3.  Ziehen Sie im **Berichtsdatenbereich** das Feld `Date` in den Bereich **Zeilengruppen**. Platzieren Sie das Feld über der Zeile **(Details)** .  
+3.  Ziehen Sie im **Berichtsdatenbereich** das Feld `Date` in den Bereich **Zeilengruppen**. Platzieren Sie das Feld über der Zeile **(Details)**.  
   
      Beachten Sie, dass das Zeilenhandle nun Klammern zum Anzeigen einer Gruppe aufweist. Außerdem verfügt die Tabelle nun auf jeder Seite der vertikalen gepunkteten Linie einmal über die Spalte Date.  
   
@@ -48,19 +48,19 @@ ms.locfileid: "66108405"
   
 4.  Ziehen Sie im **Berichtsdatenbereich** das Feld `Order` in den Bereich **Zeilengruppen**. Platzieren das Feld unter Date und über **Details**.  
   
-     Beachten Sie, dass das Zeilenhandle nun zweimal Klammern zum Anzeigen von zwei Gruppen aufweist. Die Tabelle verfügt jetzt über zwei `Order` Spalten zu.  
+     Beachten Sie, dass das Zeilenhandle nun zweimal Klammern zum Anzeigen von zwei Gruppen aufweist. Die Tabelle verfügt nun auch `Order` über zwei Spalten.  
   
-5.  Löschen Sie die ursprünglichen Datum und die Reihenfolge der Spalten, die **rechten** der doppelten Linie. Dadurch werden die einzelnen Datensatzwerte entfernt, und nur der Gruppenwert wird angezeigt. Wählen Sie die Spaltenhandles für die beiden Spalten aus, klicken Sie mit der rechten Maustaste und wählen Sie **Spalten löschen**aus.  
+5.  Löschen Sie die ursprünglichen Spalten Date und Order**rechts** der doppelten Linie. Dadurch werden die einzelnen Datensatzwerte entfernt, und nur der Gruppenwert wird angezeigt. Wählen Sie die Spaltenhandles für die beiden Spalten aus, klicken Sie mit der rechten Maustaste und wählen Sie **Spalten löschen**aus.  
   
-     ![Zu löschende Spalten auswählen](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Select columns to delete")  
+     ![Auswählen der zu löschenden Spalten](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Auswählen der zu löschenden Spalten")  
   
      Die Spaltenkopfzeilen und der Datumswert können erneut formatiert werden.  
   
 6.  Wechseln Sie zur Registerkarte **Vorschau** , um eine Vorschau des Berichts anzuzeigen. Die Vorschau sollte ähnlich der folgenden Abbildung aussehen:  
   
-     ![Nach „Date“ (Datum) und dann nach „Order“ (Auftrag) gruppierte Tabelle](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Table grouped by date and then order")  
+     ![Tabelle gruppiert nach 'Date' und dann 'Order'](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Tabelle gruppiert nach 'Date' und dann 'Order'")  
   
-##  <a name="bkmk_addtotals"></a> Zum Hinzufügen von Gesamtwerten zu einem Bericht  
+##  <a name="bkmk_addtotals"></a>So fügen Sie einem Bericht Summen hinzu  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
@@ -78,15 +78,15 @@ ms.locfileid: "66108405"
   
 6.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Hellgrau**und dann auf **OK**.  
   
-     ![Designansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Designansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen")  
+     ![Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen")  
   
-##  <a name="bkmk_adddailytotal"></a> Ein Bericht einen tagesgesamtwert hinzu  
+##  <a name="bkmk_adddailytotal"></a>So fügen Sie einem Bericht ein Tagesergebnis hinzu  
   
-1.  Mit der rechten Maustaste in der Zelle Order, zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **nach**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Zelle Order , zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **Danach**.  
   
-     Dadurch werden eine neue Zeile mit der Menge und dem Gesamtbetrag in Dollar für jeden Tag und die Bezeichnung "**insgesamt**" in der Spalte Order.  
+     Dadurch wird eine neue Zeile mit Summen der Menge und Dollarbetrag für jeden Tag und der Bezeichnung "**Total**" in der Spalte Order hinzugefügt.  
   
-2.  Geben Sie in der gleichen Zelle zuerst das Wort **Daily** und anschließend das Wort **Total** ein, um **Daily Total**zu erhalten.  
+2.  Geben Sie das Wort **Daily** in der gleichen Zelle vor dem Wort **Total** ein, sodass es die **tägliche Summe**liest.  
   
 3.  Wählen Sie die Zelle **Daily Total** aus, und markieren Sie die beiden Zellen für **Sum** sowie die leere Zelle dazwischen.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "66108405"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a> Ein Bericht ein Gesamtergebnis hinzu  
+##  <a name="bkmk_addgrandtotal"></a>So fügen Sie einem Bericht ein Gesamtergebnis hinzu  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Zelle Date, zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **Danach**.  
   
-     Dadurch wird eine neue Zeile, die mit der Menge und dem Gesamtbetrag in Dollar für den gesamten Bericht hinzugefügt und die **insgesamt** -Bezeichnung in den `Date` Spalte.  
+     Dadurch wird eine neue Zeile mit Summen der Menge und dem Dollarbetrag für den gesamten Bericht und die **Gesamt** Bezeichnung in der `Date` Spalte hinzugefügt.  
   
 2.  Geben Sie in der gleichen Zelle zuerst das Wort **Grand** und anschließend das Wort **Total** ein, um **Grand Total**zu erhalten.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66108405"
   
 4.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Hellblau**und dann auf **OK**.  
   
-     ![Designansicht: Gesamtergebnis in einfacher Tabelle](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Designansicht: Gesamtergebnis in einfacher Tabelle")  
+     ![Entwurfsansicht: Gesamtergebnis in einfacher Tabelle](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Entwurfsansicht: Gesamtergebnis in einfacher Tabelle")  
   
 5.  Klicken Sie auf "Vorschau".  
   
@@ -114,25 +114,25 @@ ms.locfileid: "66108405"
   
      ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Vorschau: Einfache Tabelle mit Gesamtergebnis")  
   
-##  <a name="bkmk_publishreport"></a> So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)  
+##  <a name="bkmk_publishreport"></a>So veröffentlichen Sie den Bericht auf dem Berichts Server (optional)  
   
 1.  Ein optionaler Schritt besteht darin, den vervollständigten Bericht auf dem Berichtsserver im einheitlichen Modus zu veröffentlichen, damit Sie den Bericht im Berichts-Manager anzeigen können.  
   
 2.  Klicken Sie auf der Symbolleiste auf **Projekt** , und klicken Sie dann auf auf die Option für die **Eigenschaften des Lernprogramms**.  
   
-3.  In der **TargetServerURL** Geben Sie den Namen des Namens des Berichtsservers, z. B. **http://\<Servername > / Reportserver**  
+3.  Geben Sie in **TargetServerURL** den Namen des Berichts Servers ein, z. b. **http://\<Servername>/ReportServer**  
   
-4.  Klicken Sie auf **OK**.  
+4.  Klicken Sie auf **OK**  
   
 5.  Klicken Sie auf der Symbolleiste auf **Erstellen** , und klicken Sie dann auf **Tutorial bereitstellen**.  
   
      Wenn Sie im Ausgabefenster eine Meldung wie die Folgende sehen, war die Bereitstellung erfolgreich:  
   
-    > ---Build gestartet: Project: tutorial, Configuration: "Debug"---"Überspringen 'Sales Orders.rdl'". Element ist auf dem neuesten Stand. Build abgeschlossen: Schritte 0 Fehler, 0 Warnungen---bereitstellen: Project: tutorial, Configuration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 erfolgreich oder aktuell, 0 fehlgeschlagen, 0 übersprungen ==== bereitstellen: 1 erfolgreich, 0 fehlgeschlagen, 0 übersprungen ====  
+    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Das Element ist auf dem neuesten Stand. Build abgeschlossen--0 Fehler, 0 Warnungen------Bereitstellung gestartet: Projekt: Tutorial, Konfiguration: Debuggen------\<bereitstellen auf http://Servername>/reportserverdeploying Bericht "/Tutorial/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen = = = = = = = = = = Build: 1 erfolgreich oder aktuell, 0 fehlgeschlagen, 0 übersprungen = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
   
      Wenn Sie eine Fehlermeldung wie die Folgende sehen, überprüfen Sie, ob Sie über Berechtigungen für den Berichtsserver verfügen und ob Sie [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] mit Administratorrechten gestartet haben.  
   
-    > "Die Berechtigungen für Benutzer ' XXXXXXXX\\< Ihr Benutzername\>' sind nicht ausreichend zum Ausführen des Vorgangs"  
+    > "Die dem Benutzer ' xxxxxxxx\\<Ihrem Benutzernamen\>' gewährten Berechtigungen reichen zum Ausführen dieses Vorgangs nicht aus."  
   
 6.  Starten Sie Berichts-Manager mit Administratorrechten, indem Sie z. B. mit der rechten Maustaste auf das Symbol für Internet Explorer und dann auf **Als Administrator ausführen**klicken.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66108405"
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben nun das Lernprogramm zum Erstellen eines grundlegenden Tabellenberichts erfolgreich abgeschlossen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108440"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten
@@ -40,7 +40,7 @@ ms.locfileid: "66108440"
   
     1.  Ziehen Sie **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**und **StockedQty** aus **Verfügbare Felder** in das Feld **Werte** .  
   
-    2.  Klicken Sie auf den Pfeil neben **Sum(ProductID)** , **Sum(PurchaseOrderID)** , **Sum(PurchaseOrderDetailID)** , **Sum(OrderQty)** ,  **SUM(ReceivedQty)** , **Sum(RejectedQty)** , und **Sum(StockedQty)** und deaktivieren Sie die **Summe** Auswahl.  
+    2.  Klicken Sie auf den Pfeil neben **Sum (ProductID)**, **Sum (PurchaseOrderID)**, **Sum (purchaseorderdetailid)**, **Sum (OrderQty)**, **Sum (receivedqty)**, **Sum (RejectedQty)** und **Sum (stockedqty)** , und löschen Sie die **Sum** -Auswahl.  
   
 7.  Klicken Sie zweimal auf **Weiter** , und klicken Sie auf **Fertig stellen** , um den **Berichts-Assistenten**zu schließen.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108440"
   
 8.  Fügen Sie bei geöffneter RDLC-Datei auf folgende Weise einen Parameter hinzu:  
   
-    1.  Klicken Sie im **Berichtsdatenbereich** auf **Parameter** , und klicken Sie dann auf **Parameter hinzufügen**.  
+    1.  Klicken Sie im **** Berichtsdatenbereich auf **Parameter** , und klicken Sie dann auf **Parameter hinzufügen**.  
   
     2.  Geben Sie im Feld **Name** die Zeichenfolge **productid** ein.  
   

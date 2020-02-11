@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108028"
 ---
 # <a name="publish-reports"></a>Veröffentlichen von Berichten
@@ -39,9 +39,9 @@ ms.locfileid: "66108028"
     > [!NOTE]  
     >  Wenn Sie einen Bericht veröffentlichen, müssen Sie auch die freigegebenen Datenquellen bereitstellen, die vom Bericht verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Datenquellen und Berichten](reports/publishing-data-sources-and-reports.md)   
- [Ausführen einer Vorschau für Berichte](reports/previewing-reports.md)   
+ [Anzeigen einer Vorschau für Berichte](reports/previewing-reports.md)   
  [Veröffentlichen von Berichten auf einem Berichtsserver](reports/publishing-reports-to-a-report-server.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  

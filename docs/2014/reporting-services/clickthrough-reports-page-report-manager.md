@@ -1,5 +1,5 @@
 ---
-title: Berichte mit durchklicken (Seite) (Berichts-Manager) | Microsoft-Dokumentation
+title: Berichte mit durch Klicken (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109799"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Berichte mit Durchklicken (Seite) (Berichts-Manager)
@@ -42,21 +42,21 @@ ms.locfileid: "66109799"
   
 2.  Zeigen Sie auf das Modell, und klicken Sie auf den Dropdownpfeil.  
   
-3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite **Allgemeine Eigenschaften** für das Modell geöffnet.  
+3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite **Allgemeine** Eigenschaften für das Modell geöffnet.  
   
 4.  Wählen Sie die Registerkarte **Durchklicken** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Modellelementhierarchie**  
  Zeigt die im Modellnamespace enthaltenen Entitäten, Ordner und Elemente an, für die Sie einen benutzerdefinierten Bericht bereitstellen können.  
   
- **Einzelinstanz-Bericht**  
+ **Bericht mit einer einzigen Instanz**  
  Gibt an, welcher benutzerdefinierte Bericht verwendet wird, wenn die Benutzernavigation eine Sicht von Einzelinstanzdaten erforderlich macht. Klicken Sie auf die Schaltfläche zum Durchsuchen, um den gewünschten Bericht auszuwählen.  
   
  **Bericht mit mehreren Instanzen**  
  Gibt an, welcher benutzerdefinierte Bericht verwendet wird, wenn die Benutzernavigation eine Sicht von Mehrfachinstanzdaten erforderlich macht. Klicken Sie auf die Schaltfläche zum Durchsuchen, um den gewünschten Bericht auszuwählen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Berichten](../../2014/reporting-services/publish-reports.md)  
   
   

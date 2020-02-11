@@ -1,5 +1,5 @@
 ---
-title: Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint | Microsoft-Dokumentation
+title: Aktivieren des Berichts Servers und Power View von Integrationsfunktionen in SharePoint | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110026"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint
-  Die Websitesammlungsfunktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden in der Regel standardmäßig aktiviert, nachdem Sie das [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Add-In für SharePoint-Produkte installiert haben. In einigen Situationen müssen Sie die Funktionen manuell aktivieren.  
+  Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Website Sammlungs Funktionen werden in der Regel standardmäßig aktiviert, nachdem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] Sie das-Add-in für SharePoint-Produkte installiert haben. In einigen Situationen müssen Sie die Funktionen manuell aktivieren.  
   
  Wenn Sie nach der Installation des SharePoint-Produkts das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint 2010-Produkte installieren, werden die Berichtsserverintegrationsfunktion und die Power View-Integrationsfunktion nur für Stammwebsitesammlungen aktiviert. Für andere Websitesammlungen müssen Sie die Funktionen manuell aktivieren. Wenn Sie z. B. eine Websitesammlung von **http://[Mein Servername]/Websites/[Websitesammlungsname]** besitzen, müssen Sie die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Websitesammlungsfunktionen manuell aktivieren.  
   
@@ -26,15 +26,15 @@ ms.locfileid: "66110026"
   
  "SharePoint Web App 80 besitzt keine Stammwebsitesammlung"  
   
- Die Nachricht wird finden Sie in der Add-in-Installationsprotokoll "RS_SP_ # .log" wobei # eine inkrementelle Zahl steht. Die Protokolldatei befindet sich im temporären Ordner des aktuellen Benutzers, z. B. C:\Benutzer\\[Benutzername]\AppData\Local\Temp. Weitere Informationen zu Protokollierungsoptionen mit dem Add-in finden Sie unter [installieren oder deinstallieren Sie das Reporting Services-Add-in für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Die Meldung befindet sich im Add-in-Installationsprotokoll mit dem Namen "RS_SP_ #. log", wobei "#" eine inkrementellen Zahl ist. Die Protokolldatei befindet sich im temporären Ordner des aktuellen Benutzers, z. b. c:\Users\\[Benutzername] \AppData\Local\Temp. Weitere Informationen zu Protokollierungs Optionen mit dem Add-in finden Sie unter [installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
--   [So aktivieren Sie die Websitesammlungsfunktion für die Berichtsserver- und Power View-Integration:](#bkmk_features)  
+-   [So aktivieren Sie die Website Sammlungs Funktionen des Berichts Servers und der Power View-Integration:](#bkmk_features)  
   
--   [So aktivieren oder deaktivieren Sie die Websitesammlungsfunktion für die Berichtsserver-Zentraladministration:](#bkmk_centraladmin)  
+-   [So aktivieren oder deaktivieren Sie die Website Sammlungs Funktion für Reporting Services zentral Administration:](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a> So aktivieren Sie die Websitesammlungsfunktion für die Berichtsserver- und Power View-Integration:  
+##  <a name="bkmk_features"></a>So aktivieren Sie die Website Sammlungs Funktionen des Berichts Servers und der Power View-Integration:  
   
 1.  Öffnen Sie den Browser für die Website, auf der die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen aktiviert werden sollen.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66110026"
   
  Verwenden Sie zum Deaktivieren der Funktionen die gleiche Prozedur, klicken Sie jedoch auf **Deaktivieren** statt auf **Aktivieren**.  
   
-##  <a name="bkmk_centraladmin"></a> So aktivieren oder deaktivieren Sie die Websitesammlungsfunktion für die Berichtsserver-Zentraladministration:  
+##  <a name="bkmk_centraladmin"></a>So aktivieren oder deaktivieren Sie die Website Sammlungs Funktion für Reporting Services zentral Administration:  
   
 1.  Öffnen Sie den Browser für die SharePoint-Zentraladministration.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66110026"
 ## <a name="next-steps"></a>Nächste Schritte  
  Nachdem die Funktion aktiviert wurde, können Sie die Serverintegration fortsetzen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren oder Deinstallieren des Reporting Services Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

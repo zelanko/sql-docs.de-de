@@ -1,5 +1,5 @@
 ---
-title: DataSet Properties Dialog Box, Parameter (Berichts-Generator) | Microsoft-Dokumentation
+title: Dataseteigenschaften (Dialog Feld), Parameter (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109389"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Dataseteigenschaften (Dialogfeld), Parameter (Berichts-Generator)
-  Wählen Sie **Parameter** auf die **Dataseteigenschaften** hinzufügen, ändern und löschen die Abfrageparameter im Dialogfeld.  
+  Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Parameter** aus, um Abfrage Parameter hinzuzufügen, zu ändern und zu löschen.  
   
  Bei eingebetteten Datasets gelten die Optionen für das Dataset in der Berichtsdefinition.  
   
@@ -28,8 +28,8 @@ ms.locfileid: "66109389"
   
  Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Optionen  
- **Hinzufügen**  
+## <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
  Fügt der Liste einen neuen Parameter hinzu.  
   
  **Löschen**  
@@ -60,12 +60,12 @@ ms.locfileid: "66109389"
   
  Um NULL anzugeben, aktivieren Sie die Option NULL zulassen.  
   
- **Schreibgeschützt**  
+ **Nur Leseberechtigung**  
  Nur für freigegebene Datasets.  
   
  Aktivieren Sie diese Option, um diesen Parameter in der freigegebenen Datasetdefinition als schreibgeschützt zu markieren. Wenn das freigegebene Dataset einem Bericht hinzugefügt wird, wird der Parameter nicht in den Eigenschaften angezeigt. Wenn das freigegebene Dataset auf dem Berichtsserver zwischengespeichert wird, kann der Wert nicht geändert werden.  
   
- **NULL zulassen**  
+ **Nullable**  
  Nur für freigegebene Datasets.  
   
  Aktivieren Sie diese Option, um NULL-Werte zuzulassen.  
@@ -75,11 +75,11 @@ ms.locfileid: "66109389"
   
  Aktivieren Sie diese Option, wenn ein Verweis auf einen Berichtsparameter sich in einem Ausdruck im freigegebenen Datasetfilter befindet und nicht in der Abfrage. Wenn Sie diese Option aktivieren, müssen Sie keinen Standardwert für diesen Parameter angeben, wenn die Abfrage ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [DataSet Properties Dialog Box, Query &#40;Berichts-Generator&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Dataseteigenschaften (Dialog Feld), Abfrage &#40;Berichts-Generator&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator)](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

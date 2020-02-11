@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245793"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
@@ -105,7 +105,7 @@ ms.locfileid: "63245793"
   
 4.  Wechseln Sie mit der TAB-TASTE zur Liste **Steuerelemente** , und wählen Sie mit den Pfeiltasten die zu ändernde Schaltfläche aus.  
   
-5.  Drücken Sie **ALT+A**, um die Option **Auswahl ändern** auszuwählen.  
+5.  Drücken Sie **ALT+A**, um die Option **Auswahl ändern**auszuwählen.  
   
 6.  Wechseln Sie im Kontextmenü mit der TAB-TASTE zum Feld **Name**, und geben Sie einen Namen für die Symbolleistenschaltfläche ein. Geben Sie dabei vor dem Buchstaben, den Sie als Zugriffstaste verwenden möchten, ein kaufmännisches Und-Zeichen (&) ein.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "63245793"
   
 3.  Wechseln Sie mit der TAB-TASTE zur Liste **Steuerelemente** , und wählen Sie mit den Pfeiltasten die zu ändernde Schaltfläche aus.  
   
-4.  Drücken Sie ALT+A, um die Option **Auswahl ändern** auszuwählen.  
+4.  Drücken Sie ALT+A, um die Option **Auswahl ändern**auszuwählen.  
   
 5.  Wechseln Sie im Kontextmenü mit der TAB-TASTE zum Feld **Name**, und geben Sie einen Namen für die Symbolleistenschaltfläche ein. Geben Sie dabei vor dem Buchstaben, den Sie als Zugriffstaste verwenden möchten, ein kaufmännisches Und-Zeichen (&) ein.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "63245793"
 > [!NOTE]  
 >  Einige Befehle sind nur verfügbar, wenn in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] relevanter Inhalt angezeigt wird. Wenn keine Befehle im Menü verfügbar sind, ist das Menüelement nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tastenkombinationen für SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
   
   

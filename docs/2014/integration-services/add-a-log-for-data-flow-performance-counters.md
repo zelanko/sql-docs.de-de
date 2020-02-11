@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062060"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Hinzufügen eines Protokolls für Datenfluss-Leistungsindikatoren
@@ -62,8 +62,8 @@ ms.locfileid: "66062060"
     > [!NOTE]  
     >  Sie müssen den Dienst Leistungsprotokolle und Warnungen mithilfe eines lokalen Kontos oder eines Domänenkontos starten, das Mitglied der Administratorengruppe ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Performance Counters](performance/performance-counters.md)   
- [Anzeigen der Protokolleinträge im Fenster 'Protokollereignisse'](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Leistungsindikatoren](performance/performance-counters.md)   
+ [Anzeigen der Protokolleinträge im Fenster „Protokollereignisse“](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

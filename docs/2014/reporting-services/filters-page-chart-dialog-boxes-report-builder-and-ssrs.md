@@ -1,5 +1,5 @@
 ---
-title: Seite "Filter", Diagramm-Dialogfelder (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Filter (Seite), Diagramm Dialogfelder (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109142"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Filter (Seite), Diagramm-Dialogfelder (Berichts-Generator und SSRS)
   Klicken Sie auf **Filter** im:  
   
--   Dialogfeld**Kategoriegruppeneigenschaften** , um Datenpunkte in einer Reihe zu filtern, die nach Kategorie gruppiert wurde.  
+-   Dialogfeld **Kategoriegruppeneigenschaften** , um Datenpunkte in einer Reihe zu filtern, die nach Kategorie gruppiert wurde.  
   
--   Dialogfeld**Diagrammeigenschaften** , um allgemeine Filteroptionen für das Diagramm zu definieren.  
+-   **Diagramm Eigenschaften** (Dialogfeld), um Filteroptionen für das Diagramm zu definieren.  
   
--   Dialogfeld**Reihengruppeneigenschaften** , um die Anzahl der Reihen in der ausgewählten Gruppe einzuschränken.  
+-   **Reihen Gruppen Eigenschaften** (Dialogfeld), um die Anzahl der Reihen in der ausgewählten Gruppe einzuschränken.  
   
-## <a name="options"></a>Optionen  
- **Hinzufügen**  
+## <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
  Klicken Sie auf diese Option, um der Liste eine neue Filterklausel hinzuzufügen.  
   
  **Löschen**  
@@ -47,9 +47,9 @@ ms.locfileid: "66109142"
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Filter in der Liste nach unten zu verschieben.  
   
  **Ausdruck**  
- Geben Sie den Ausdruck ein, auf den ein Filter angewendet werden soll, oder wählen Sie ihn aus. Klicken Sie auf die Schaltfläche „Ausdruck“ (**fx**), um den Ausdruck zu bearbeiten.  
+ Geben Sie den Ausdruck ein, auf den ein Filter angewendet werden soll, oder wählen Sie ihn aus. Klicken Sie auf die Ausdrucks Schaltfläche (**FX**), um den Ausdruck zu bearbeiten.  
   
- **Data type**  
+ **Datentyp**  
  Wählen Sie den Datentyp für **Wert**. Wählen Sie, sofern möglich, einen Datentyp aus, der dem Datentyp für **Ausdruck**entspricht.  
   
  Die Werte in **Ausdruck** und **Wert** müssen mit dem gleichen Datentyp ausgewertet werden. Wenn **Ausdruck** beispielsweise auf ein Feld mit dem Datentyp „System.Int32“ festgelegt ist und **Wert** auf 7 festgelegt ist, wählen Sie aus der Dropdownliste den Wert **Ganze Zahl**.  
@@ -62,7 +62,7 @@ ms.locfileid: "66109142"
  **Wert**  
  Geben Sie den Ausdruck oder Wert, mit dem der Ausdruck ausgewertet werden soll, in **Ausdruck**ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   

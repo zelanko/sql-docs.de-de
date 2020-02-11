@@ -1,5 +1,5 @@
 ---
-title: Measures (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Measures (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067009"
 ---
 # <a name="measures-ssas-tabular"></a>Measures (SSAS – tabellarisch)
@@ -24,9 +24,9 @@ ms.locfileid: "66067009"
   
 -   [Vorteile](#bkmk_understanding)  
   
--   [Definieren von Measures mit dem Measureraster](#bkmk_def_mg)  
+-   [Definieren von Measures mit dem measureraster](#bkmk_def_mg)  
   
--   [Eigenschaften von Measures](#bkmk_properties)  
+-   [Measure-Eigenschaften](#bkmk_properties)  
   
 -   [Verwenden eines Measures in einem KPI](#bkmk_KPI)  
   
@@ -57,18 +57,18 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |-------------------------|------------------------|  
 |Audio|$2,731,061,308.69|  
 |Cameras and Camcorders|$620,623,675.75|  
-|Computers|$392,999,044.59|  
+|Computer|$392,999,044.59|  
 |Tv and Video|$946,989,702.51|  
 |**Grand Total**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> Definieren von Measures mit dem Measureraster  
- Measures werden zur Entwurfszeit mithilfe des Measurerasters im Modell-Designer erstellt. Jede Tabelle verfügt über ein Measureraster. Standardmäßig wird das Measureraster unter jeder Tabelle im Modell-Designer angezeigt. Sie können auch festlegen, das Measureraster für eine bestimmte Tabelle nicht anzuzeigen. Um die Anzeige des measurerasters für eine Tabelle zu wechseln, klicken Sie auf die **Tabelle** , und klicken Sie dann auf **Measureraster anzeigen**.  
+##  <a name="bkmk_def_mg"></a>Definieren von Measures mit dem measureraster  
+ Measures werden zur Entwurfszeit mithilfe des Measurerasters im Modell-Designer erstellt. Jede Tabelle verfügt über ein Measureraster. Standardmäßig wird das Measureraster unter jeder Tabelle im Modell-Designer angezeigt. Sie können auch festlegen, das Measureraster für eine bestimmte Tabelle nicht anzuzeigen. Zum Umschalten der Anzeige des measurerasters einer Tabelle klicken Sie auf das Menü **Tabelle** und dann auf measureraster **anzeigen**.  
   
  Im Measureraster können Sie wie folgt Measures erstellen:  
   
 -   Klicken Sie auf eine leere Zelle im Measureraster, und geben Sie dann in der Bearbeitungsleiste eine DAX-Formel ein. Wenn Sie die Formelerstellung mit EINGABE abschließen, wird das Measure in der Zelle des Measurerasters angezeigt.  
   
--   Erstellen Sie ein Measure mithilfe einer Standardaggregationsfunktion, indem Sie auf eine Spalte, auf der Symbolleiste auf die Schaltfläche AutoSumme (∑) und dann auf eine Standardaggregationsfunktion klicken. Standardaggregationen sind: Summe, Mittelwert, Anzahl, DistinctCount, Max, Min. Measures, die mithilfe der Schaltfläche AutoSumme erstellt wurden, werden im Measureraster immer direkt unterhalb der Spalte angezeigt.  
+-   Erstellen Sie ein Measure mithilfe einer Standardaggregationsfunktion, indem Sie auf eine Spalte, auf der Symbolleiste auf die Schaltfläche AutoSumme (∑) und dann auf eine Standardaggregationsfunktion klicken. Standardaggregationen: Summe, Mittelwert, Anzahl, DistinctCount, Max, Min. Measures, die mithilfe der Schaltfläche AutoSumme erstellt wurden, werden im Measureraster immer direkt unterhalb der Spalte angezeigt.  
   
  Bei Verwendung von AutoSumme wird der Name des Measures standardmäßig durch den Namen der zugeordneten Spalte definiert, auf den ein Doppelpunkt und dann die Formel folgt. Der Name kann auf der Bearbeitungsleiste oder in der Einstellung der Eigenschaft **Measurename** im Eigenschaftenfenster geändert werden. Wenn Sie ein Measure mithilfe einer benutzerdefinierten Formel erstellen, können Sie einen Namen in der Bearbeitungsleiste eingeben, auf den ein Doppelpunkt und dann die Formel folgt. Alternativ können Sie einen Namen in der Einstellung der Eigenschaft **Measurename** im Eigenschaftenfenster eingeben.  
   
@@ -79,30 +79,30 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Wenn für das Modell Perspektiven definiert wurden, werden in diese Perspektiven nicht automatisch Measures eingefügt. Sie müssen einer Perspektive Measures manuell mithilfe des Dialogfelds Perspektiven hinzufügen. Weitere Informationen finden Sie unter [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_properties"></a> Eigenschaften von Measures  
+##  <a name="bkmk_properties"></a>Measure-Eigenschaften  
  Jedes Measure verfügt über Eigenschaften, durch die es definiert wird. Measureeigenschaften können zusammen mit den Eigenschaften der zugeordneten Spalte im Eigenschaftenfenster bearbeitet werden. Measures verfügen über die folgenden Eigenschaften:  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|BESCHREIBUNG|  
 |--------------|---------------------|-----------------|  
 |**Beschreibung**|Leer|Die Beschreibung der Maßeinheit. Die Beschreibung wird nicht mit dem Measure in einem Berichterstellungsclient angezeigt.|  
-|**Format**|Wird automatisch durch den Datentyp der Spalte bestimmt, auf die im Formelausdruck verwiesen wird.|Das Format des Measures. Beispielsweise Währung oder Prozentsatz.|  
+|**Ges**|Wird automatisch durch den Datentyp der Spalte bestimmt, auf die im Formelausdruck verwiesen wird.|Das Format des Measures. Beispielsweise Währung oder Prozentsatz.|  
 |**Formel**|Die Formel, die bei der Erstellung des Measures in die Bearbeitungsleiste eingefügt wurde.|Die Formel des Measures.|  
 |**Measurename**|Bei Verwendung von AutoSumme ist der Measurename gefolgt von einem Doppelpunkt dem Spaltennamen vorangestellt. Wenn eine benutzerdefinierte Formel eingegeben wird, geben Sie einen Namen gefolgt von einem Doppelpunkt und dann die Formel ein.|Der Name des Measures, so wie er in der Feldliste des Berichterstellungsclients angezeigt wird.|  
   
-##  <a name="bkmk_KPI"></a> Verwenden eines Measures in einem KPI  
+##  <a name="bkmk_KPI"></a>Verwenden eines Measures in einem KPI  
  Ein KPI (Key Performance Indicator) wird durch einen *Basiswert* definiert, der wiederum durch ein Measure festgelegt wird, und mit einem *Zielwert* verglichen, der ebenfalls durch ein Measure oder durch einen absoluten Wert definiert wird. Ein KPI umfasst außerdem den *Status*. Damit wird berechnet, wo der Basiswert zwischen den Schwellenwerten für den Zielwert ausgewertet wird. Das Ergebnis wird in einem grafischen Format angezeigt. KPIs werden oft von Geschäftsleuten verwendet, um Trends in wichtigen Geschäftsmetriken aufzudecken.  
   
  Jedes Measure kann als Basismeasure eines KPIs verwendet werden. Klicken Sie mit der rechten Maustaste auf ein Measure und anschließend auf **KPI erstellen**, um einen KPI im Measureraster zu erstellen. Das Dialogfeld Key Performance Indicator wird dort angezeigt, wo Sie anschließend einen Zielwert (definiert durch ein Measure oder einen absoluten Wert) angeben und Statusschwellenwerte und einen Grafiktyp definieren können. Weitere Informationen finden Sie unter [KPIs &#40;SSAS – tabellarisch&#41;](kpis-ssas-tabular.md), um die Anzeige des Measurerasters für eine Tabelle einzuschalten.  
   
 ##  <a name="bkmk_rel_tasks"></a> Verwandte Aufgaben  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Erstellen und Verwalten von Measures &#40;SSAS – tabellarisch&#41;](measures-ssas-tabular.md)|Beschreibt, wie Measures mithilfe des Measurerasters im Modell-Designer erstellt und verwaltet werden.|  
+|[Erstellen und Verwalten von Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)|Beschreibt, wie Measures mithilfe des Measurerasters im Modell-Designer erstellt und verwaltet werden.|  
   
-## <a name="see-also"></a>Siehe auch  
- [KPIs &#40;SSAS – tabellarisch&#41;](kpis-ssas-tabular.md)   
- [Erstellen und Verwalten von KPIs &#40;SSAS – tabellarisch&#41;](create-and-manage-kpis-ssas-tabular.md)   
- [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](ssas-calculated-columns.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [KPIs &#40;tabellarischen SSAS-&#41;](kpis-ssas-tabular.md)   
+ [Erstellen und Verwalten von KPIs &#40;tabellarischen SSAS-&#41;](create-and-manage-kpis-ssas-tabular.md)   
+ [Berechnete Spalten &#40;tabellarischen SSAS-&#41;](ssas-calculated-columns.md)  
   
   

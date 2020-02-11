@@ -1,5 +1,5 @@
 ---
-title: Änderungen am Verhalten von String-Length und Substring | Microsoft-Dokumentation
+title: Änderungen am Verhalten von String-length und Teil Zeichenfolge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428848"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>Änderungen am Verhalten von string-length und substring
-  Die [String-Length-Funktion &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) und [substring-Funktion &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) Funktionen möglicherweise andere Ergebnisse, wenn mit XML-Datenbanken verwendet werden, enthalten zurück Ersatzzeichen enthalten.  
+  Die [String-length-Funktion &#40;XQuery-&#41;](/sql/xquery/functions-on-string-values-string-length) und die [Teil Zeichenfolge-Funktion &#40;XQuery-&#41;](/sql/xquery/functions-on-string-values-substring) Funktionen können unterschiedliche Ergebnisse zurückgeben, wenn Sie mit XML-Datenbanken mit Ersatz Zeichen verwendet werden.  
   
-## <a name="description"></a>Description  
- Wenn eine Datenbank festgelegt ist, als kompatibel mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], das Verhalten der [String-Length-Funktion &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) und [substring-Funktion &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) Funktionen von Änderungen beim Umgang mit ergänzenden Unicode-Zeichen. Jedes ergänzende Unicode-Zeichen, das definitionsgemäß um einen Codepunkt größer als U+FFFF ist, wird von diesen Funktionen als ein Zeichen statt als zwei Zeichen (wie in früheren Versionen) gezählt.  
+## <a name="description"></a>BESCHREIBUNG  
+ Wenn eine Datenbank für die Kompatibilität mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]festgelegt ist, ändert sich das Verhalten der [String-length-Funktion &#40;XQuery-&#41;](/sql/xquery/functions-on-string-values-string-length) und die [Teil Zeichenfolge-Funktion &#40;XQuery-&#41;](/sql/xquery/functions-on-string-values-substring) Functions beim Umgang mit ergänzenden Unicode-Zeichen. Jedes ergänzende Unicode-Zeichen, das definitionsgemäß um einen Codepunkt größer als U+FFFF ist, wird von diesen Funktionen als ein Zeichen statt als zwei Zeichen (wie in früheren Versionen) gezählt.  
   
- Weitere Informationen über Ersatzzeichen finden Sie unter [Surrogates and Supplementary Characters](https://go.microsoft.com/fwlink/?LinkId=178317).  
+ Weitere Informationen zu Ersatz Zeichen finden Sie unter [Surrogates und ergänzende Zeichen](https://go.microsoft.com/fwlink/?LinkId=178317).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 11: Hinzufügen bedingter Split-Transformation, um Duplikate zu filtern | Microsoft-Dokumentation'
+title: 'Aufgabe 11: Hinzufügen der Transformation für bedingtes Teilen zum Filtern von Duplikaten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65476749"
 ---
-# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Aufgabe 11: Hinzufügen der Transformation „Bedingtes Teilen“ zur Filterung von Duplikaten
+# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Aufgabe 11: Hinzufügen der Transformation 'Bedingtes Teilen', um Duplikate zu filtern
   In dieser Aufgabe fügen Sie die Transformation für bedingtes Teilen zum Datenfluss hinzu. Mit dieser Transformation können Sie Duplikate aus dem eingehenden Recordset filtern. Die Transformation für Fuzzygruppierung gruppiert die gefundenen übereinstimmenden Datensätze und wählt einen der Datensätze als Pivotdatensatz aus. Alle Datensätze in einer Gruppe verfügen über denselben _key_out-Wert. Für den Pivotdatensatz in der Gruppe sind der _key_in-Wert und der _key_out-Wert gleich. Für die anderen Datensätze in der Gruppe sind die Werte für _key_in und _key_out unterschiedlich. Wenn Sie mit condition _key_in==_key_out filtern, erhalten Sie daher nur die Pivotzeile in der Gruppe.  
   
-1.  Drag & Drop **für bedingtes Teilen** Transformationen von **allgemeine** im Abschnitt der **SSIS-Toolbox** auf die **Datenfluss** Registerkarte.  
+1.  Ziehen Sie die Transformation für **bedingtes Teilen** aus **Common** section in der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** .  
   
-2.  Mit der rechten Maustaste **Transformation für bedingtes Teilen** in die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Filterduplikate+++** , und drücken Sie **EINGABETASTE**.  
+2.  Klicken Sie **mit der rechten** Maustaste auf die **Transformation für bedingtes Teilen** , und klicken Sie dann auf **Umbenennen**. Geben Sie **Filter Duplikate** ein, und drücken **Sie Eingabe**.  
   
-3.  Connect **Gruppe ' Suppliers ' mit übereinstimmenden IDs** zu **Duplikate zu filtern**.  
+3.  Verbinden Sie **Gruppen Lieferanten mit übereinstimmenden IDs** , um **Duplikate zu filtern**.  
   
-4.  Doppelklicken Sie auf **Filterduplikate+++** zum Starten der **bedingte Split Transformation Editor** Dialogfeld.  
+4.  Doppelklicken Sie auf **Filter Duplikate** , um das Dialogfeld **Transformations-Editor für bedingtes Teilen aufzurufen** .  
   
-5.  Erweitern Sie **Spalten** in der linken oberen Bereich.  
+5.  Erweitern Sie im linken oberen Bereich die Option **Spalten** .  
   
-6.  Drag & Drop **_key_in** auf die **Bedingung** Spalte.  
+6.  Ziehen Sie **_key_in** in die Spalte **Bedingung** .  
   
-7.  Typ == (gleich) neben **_key_in** und Drag & Drop **_key_out**.  
+7.  Geben Sie = = (entspricht) neben **_key_in** ein, und ziehen Sie **_key_out**.  
   
-8.  Klicken Sie auf **Fall 1** in die **Ausgabename** Spalte, Datentyp **eindeutige Datensätze**, und drücken Sie die **EINGABETASTE**.  
+8.  Klicken Sie in der Spalte **Ausgabe Name** auf **Fall 1** , geben Sie **eindeutige Datensätze**ein, und drücken **Sie Eingabe**Taste.  
   
-     ![Conditional Split Transformation Editor](../../2014/tutorials/media/et-addingconditionalsplittransformtofilterduplicates.jpg "Conditional Split Transformation Editor")  
+     ![Transformations-Editor für bedingtes Teilen](../../2014/tutorials/media/et-addingconditionalsplittransformtofilterduplicates.jpg "Transformations-Editor für bedingtes Teilen")  
   
-9. Klicken Sie auf **OK** schließen die **Conditional Split Transformation Editor** Dialogfeld.  
+9. Klicken Sie zum Schließen des Dialog Felds **Transformations-Editor für bedingtes Teilen** auf **OK** .  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 12: Hinzufügen der abgeleitete Spalte-Transformation, die von MDS erforderliche Spalten hinzuzufügen](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
+ [Aufgabe 12: Hinzufügen der Transformation 'Abgeleitete Spalten', um für MDS erforderliche Spalten hinzuzufügen](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
   
   

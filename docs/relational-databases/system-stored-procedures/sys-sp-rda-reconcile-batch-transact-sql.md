@@ -1,5 +1,5 @@
 ---
-title: sp_rda_reconcile_batch (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_rda_reconcile_batch (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 98094273d37bf0622eb903b9ad177817e4bb12d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905095"
 ---
-# <a name="syssprdareconcilebatch-transact-sql"></a>sp_rda_reconcile_batch (Transact-SQL)
+# <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Gleicht die Batch-ID, die in der Stretch-aktivierten SQL Server-Tabelle gespeichert werden, mit der Batch-ID im Azure-Remotetabelle gespeichert.  
+  Gibt die Batch-ID, die in der Stretch-aktivierten SQL Server Tabelle gespeichert ist, mit der in der Azure-Remote Tabelle gespeicherten Batch-ID aus.  
   
- In der Regel müssen Sie nur ausführen **Sp_rda_reconcile_batch** , wenn Sie die am häufigsten vor kurzem migrierten Daten manuell aus der Remotetabelle gelöscht haben. Wenn Sie manuell Remotedaten, die den aktuelle Batch enthält löschen, die Batch-IDs sind nicht synchron und Migration angehalten wird.  
+ In der Regel müssen Sie nur **sp_rda_reconcile_batch** ausführen, wenn Sie die zuletzt migrierten Daten manuell aus der Remote Tabelle gelöscht haben. Wenn Sie Remote Daten manuell löschen, die den letzten Batch enthalten, sind die Batch-IDs nicht synchron, und die Migration wird beendet.  
  
- Zum Löschen von Daten, die bereits zu Azure migriert wurde, finden Sie unter den Hinweisen auf dieser Seite.
+ Informationen zum Löschen von Daten, die bereits zu Azure migriert wurden, finden Sie in den Hinweisen auf dieser Seite.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
 ## <a name="syntax"></a>Syntax  
   
@@ -43,27 +43,27 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \@Objname = ' *\@Objname*"  
- Der Name des Stretch-aktivierten SQL Server-Tabelle.  
+ \@objname = '*\@objname*'  
+ Der Name der SQL Server Tabelle, für die Stretch aktiviert ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Benötigen Sie Db_owner-Berechtigungen.  
+ Erfordert db_owner Berechtigungen.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Sie möchten Daten löschen, die bereits zu Azure migriert wurde, gehen Sie folgendermaßen vor.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn Sie Daten löschen möchten, die bereits zu Azure migriert wurden, führen Sie die folgenden Schritte aus.  
   
 1.  Anhalten der Datenmigration. Weitere Informationen finden Sie unter [Anhalten und Fortsetzen der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
-2.  Löschen Sie die Daten aus der Stagingtabelle für SQL Server durch Ausführen eines DELETE-Befehls mit dem Hinweis stage_only durch. Weitere Informationen finden Sie unter [durchführen administrativer Aktualisierungs- und Löschvorgänge](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
+2.  Löschen Sie die Daten aus der SQL Server Stagingtabelle, indem Sie einen DELETE-Befehl mit dem STAGE_ONLY-Hinweis ausführen. Weitere Informationen finden Sie unter [Erstellen von administrativen Updates und Löschungen](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
   
-3.  Löschen Sie diese Daten aus Azure-Remotetabelle, durch Ausführen eines DELETE-Befehls mit dem REMOTE_ONLY-Hinweis.  
+3.  Löschen Sie die gleichen Daten aus der Azure-Remote Tabelle, indem Sie einen DELETE-Befehl mit dem REMOTE_ONLY-Hinweis ausführen.  
   
-4.  Führen Sie **Sp_rda_reconcile_batch**.  
+4.  Führen Sie **sp_rda_reconcile_batch**aus.  
   
 5.  Fortsetzen der Datenmigration. Weitere Informationen finden Sie unter [Anhalten und Fortsetzen der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
 ## <a name="example"></a>Beispiel  
- Wenn der Batch-IDs abstimmen möchten, führen Sie die folgende Anweisung aus.  
+ Führen Sie die folgende Anweisung aus, um die Batch-IDs abzustimmen.  
   
 ```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  

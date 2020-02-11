@@ -1,5 +1,5 @@
 ---
-title: Seite zur Datenquellenauswahl (Berichts-Manager) | Microsoft-Dokumentation
+title: Seite zur Datenquellen Auswahl (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109439"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Seite zur Datenquellenauswahl (Berichts-Manager)
@@ -35,21 +35,21 @@ ms.locfileid: "66109439"
   
 5.  Wählen Sie im Eigenschaftenbereich **Eine freigegebene Datenquelle** aus, und klicken Sie dann auf **Durchsuchen**.  
   
-## <a name="options"></a>Optionen  
- **Speicherort**  
+## <a name="options"></a>Tastatur  
+ **Location**  
  Geben Sie den vollständigen Pfad zum freigegebenen Datenquellenelement an, wobei Sie mit dem Namen des Stammordners beginnen. Sie können den Pfadnamen eingeben oder die Baumansicht verwenden, um zur gewünschten freigegebenen Datenquelle zu wechseln.  
   
- **Strukturansicht**  
+ **Baumansicht**  
  Zeigt die Ordnerstruktur des Berichtsserver-Namespace an. Klicken Sie auf ein freigegebenes Datenquellenelement, um den vollständigen Pfad zum Feld **Speicherort** hinzuzufügen.  
   
  **OK**  
  Klicken Sie auf diese Schaltfläche, um die Datenquellenauswahl zur Eigenschaftenseite Datenquellen zu kopieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Berichtsdatenquellen](report-data/manage-report-data-sources.md)   
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Datenquellen (Eigenschaftenseite) (Berichts-Manager)](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [Neue Datenquelle (Seite, Berichts-Manager)](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Die Eigenschaften Seite "Datenquellen" &#40;Berichts-Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
+ [Die Seite "neue Datenquelle" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

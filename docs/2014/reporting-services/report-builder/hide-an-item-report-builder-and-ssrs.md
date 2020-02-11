@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5daf807904f833a5e8cbe8f237d3f5df77e3887b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107821"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ausblenden eines Elements (Berichts-Generator und SSRS)
@@ -49,7 +49,7 @@ ms.locfileid: "66107821"
   
         > [!NOTE]  
         >  Wenn Sie einen Ausdruck für die Sichtbarkeit angeben, legen Sie die Hidden-Eigenschaft des Berichtselements wie im folgenden Bild dargestellt fest. Der ausgewertete Ausdruck zeigt das Berichtselement an, wenn der Wert False lautet, und blendet das Berichtselement aus, wenn der Wert True lautet.   
-        > ![Properties_Visibility Dialogfeld und ausgeblendete Eigenschaft](../media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
+        > ![Properties_Visibility dialog and Hidden property](../media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
   
 4.  Klicken Sie zweimal auf **OK** .  
   
@@ -69,9 +69,9 @@ ms.locfileid: "66107821"
   
 3.  Führen Sie im Dialogfeld **Spaltensichtbarkeit** die Schritte 3 und 4 der ersten Prozedur aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element &#40;Berichts-Generator und SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Drilldown-Aktion &#40;Berichts-Generator und SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Hinzufügen einer Erweiterungs-oder Reduzier Aktion zu einem Element &#40;Berichts-Generator und SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

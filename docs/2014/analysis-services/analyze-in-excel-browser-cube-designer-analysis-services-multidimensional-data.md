@@ -1,5 +1,5 @@
 ---
-title: In Excel analysieren (Registerkarte ' Browser ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: In Excel analysieren (Registerkarte ' Browser ', Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062367"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>In Excel analysieren (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
-  Die Funktion**In Excel analysieren** bietet dem Cubeentwickler eine Möglichkeit, schnell zu überprüfen, wie ein Projekt für den Endbenutzer aussehen würde. Über die Funktion **In Excel analysieren** wird Microsoft Excel geöffnet; stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Diese Funktion ersetzt das Office-Websteuerelement, durch das in vorherigen Versionen eine eingebettete PivotTable auf der Registerkarte Browser bereitgestellt wurde.  
+  " **In Excel analysieren** " bietet dem Cube-Entwickler eine Möglichkeit, schnell zu überprüfen, wie ein Projekt für den Endbenutzer aussehen würde. Über die Funktion **In Excel analysieren** wird Microsoft Excel geöffnet; stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Diese Funktion ersetzt das Office-Websteuerelement, durch das in vorherigen Versionen eine eingebettete PivotTable auf der Registerkarte Browser bereitgestellt wurde.  
   
  **So zeigen Sie Cubedaten an**  
   
@@ -44,16 +44,16 @@ ms.locfileid: "66062367"
   
  Weitere Informationen zur Funktion **In Excel analysieren** finden Sie in den folgenden Ressourcen.  
   
- [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [In Excel analysieren &#40;tabellarischen SSAS-&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Analysieren eines Tabellenmodells in Excel &#40;SSAS – tabellarisch&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Analysieren eines tabellarischen Modells in Excel &#40;tabellarischen SSAS-&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
- [Durchsuchen von Daten und Metadaten im Cube](multidimensional-models/browse-data-and-metadata-in-cube.md)  
+ [Durchsuchen von Daten und Metadaten in Cube](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Browser &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Symbolleiste &#40;Registerkarte ' Browser ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadaten &#40;Registerkarte ' Browser ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Abfrage- und Filterbereich &#40;Registerkarte ' Browser ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Browser &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Symbolleiste &#40;Registerkarte "Browser", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Metadaten &#40;Registerkarte "Browser", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Abfragen und Filtern &#40;Registerkarte "Browser", Cube-Designer&#41; &#40;Analysis Services-mehrdimensionalen Daten&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

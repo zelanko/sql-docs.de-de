@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108700"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "66108700"
   
  Sie können den symmetrischen Schlüssel nur dann erneut erstellen, wenn der Server ausgeführt wird. Das erneute Erstellen der Verschlüsselungsschlüssel und das erneute Verschlüsseln des Inhalts unterbricht die Serveroperationen. Sie müssen den Server offline nehmen, während die erneute Verschlüsselung ausgeführt wird. Während dieser Zeit sollten keine Anforderungen an den Server gestellt werden.  
   
- Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Erneutes Erstellen der Verschlüsselungsschlüssel (Reporting Services-Konfigurationstool)  
   
@@ -115,8 +115,8 @@ ms.locfileid: "66108700"
   
 4.  Für Abonnements, die verschlüsselte Daten verwenden (d. h. die Dateifreigabe-Übermittlungserweiterung und alle verschlüsselten Übermittlungserweiterungen von Drittanbietern) öffnen Sie jedes Abonnement, und geben Sie die Anmeldeinformationen erneut ein. Abonnements, die Übermittlungsoption Berichtsserver-E-Mail verwenden, verwenden keine verschlüsselten Daten und sind bei einer Schlüsseländerung nicht betroffen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

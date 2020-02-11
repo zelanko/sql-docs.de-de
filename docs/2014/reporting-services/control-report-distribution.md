@@ -1,5 +1,5 @@
 ---
-title: Steuern der Berichtsverteilung | Microsoft-Dokumentation
+title: Steuern der Berichts Verteilung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,17 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109700"
 ---
 # <a name="control-report-distribution"></a>Steuern der Berichtsverteilung
   Sie können einen Berichtsserver so konfigurieren, dass die Sicherheitsrisiken im Zusammenhang mit der Verteilung per E-Mail und Dateifreigabe minimiert werden.  
   
 ## <a name="securing-reports"></a>Sichern von Berichten  
- Der erste Schritt beim Steuern der Berichtsverteilung besteht im Sichern des Berichts vor unbefugtem Zugriff. Wenn ein Bericht in einem Abonnement verwendet werden soll, muss er gespeicherte Anmeldeinformationen verwenden, die für alle Übermittlungen identisch sind. Jeder Benutzer mit Zugriff auf den Bericht im Berichtsserver kann diesen ausführen und möglicherweise verteilen. Um dies zu verhindern, müssen Sie den Zugriff auf den Bericht auf die erforderlichen Benutzer beschränken. Weitere Informationen finden Sie unter [sichere Berichte und Ressourcen](security/secure-reports-and-resources.md) und [sichere Ordner](security/secure-folders.md).  
+ Der erste Schritt beim Steuern der Berichtsverteilung besteht im Sichern des Berichts vor unbefugtem Zugriff. Wenn ein Bericht in einem Abonnement verwendet werden soll, muss er gespeicherte Anmeldeinformationen verwenden, die für alle Übermittlungen identisch sind. Jeder Benutzer mit Zugriff auf den Bericht im Berichtsserver kann diesen ausführen und möglicherweise verteilen. Um dies zu verhindern, müssen Sie den Zugriff auf den Bericht auf die erforderlichen Benutzer beschränken. Weitere Informationen finden Sie unter [Sichern von Berichten und Ressourcen](security/secure-reports-and-resources.md) und [sicheren Ordnern](security/secure-folders.md).  
   
  Streng vertrauliche Berichte, die den Zugriff mithilfe der Datenbanksicherheit autorisieren, können nicht mit einem Abonnement verteilt werden.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66109700"
 ## <a name="controlling-file-share-delivery"></a>Steuern der Dateifreigabeübermittlung  
  Mit der Dateifreigabeübermittlung wird ein Bericht an eine Datei auf einer Festplatte gesendet. Nachdem die Datei auf den Datenträger gespeichert wurde, unterliegt sie nicht mehr dem rollenbasierten Sicherheitsmodell, mit dem der Berichtsserver den Benutzerzugriff steuert. Um einen Bericht zu sichern, der an einen Datenträger übermittelt wurde, können Sie Zugriffssteuerungslisten (ACLs, Access Control Lists) in der Datei selbst oder im Ordner, in dem die Datei gespeichert ist, platzieren. Je nach Betriebssystem sind möglicherweise zusätzliche Sicherheitsoptionen verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS-Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Create and Manage Subscriptions for Native Mode Report Servers (Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus)](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
+ [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

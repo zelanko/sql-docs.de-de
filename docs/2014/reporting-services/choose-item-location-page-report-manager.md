@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Element ", Seite" Speicherort "(Berichts-Manager) | Microsoft-Dokumentation
+title: Seite "Speicherort für Elemente auswählen" (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109900"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Speicherort für Elemente auswählen (Seite) (Berichts-Manager)
@@ -51,18 +51,18 @@ ms.locfileid: "66109900"
   
 4.  Klicken Sie auf der Registerkarte **Allgemein** auf der Eigenschaftenseite auf **Speicherort ändern** , um die Seite Speicherort für Elemente auswählen zu öffnen.  
   
-## <a name="options"></a>Optionen  
- **Speicherort**  
+## <a name="options"></a>Tastatur  
+ **Location**  
  Geben Sie den Namen des Ordners an, der das von Ihnen erstellte Element enthalten soll. Sie können den vollständigen Namen eingeben oder die Baumansicht verwenden, um zu dem gewünschten Ordner zu wechseln.  
   
- **Strukturansicht**  
+ **Baumansicht**  
  Zeigt die Ordnerstruktur des Namespace des Berichtsservers an. Klicken Sie auf einen Ordnernamen, um den vollständigen Pfad zum Feld **Speicherort** hinzuzufügen.  
   
  Klicken Sie auf die Symbole zum Erweitern (+) und Reduzieren (-) in der Strukturansicht, um die Ordner zu öffnen und zu schließen, ohne dass die Ordnernamen zum Feld **Speicherort** hinzugefügt werden. Zum Hinzufügen eines Ordnernamens zum Feld **Speicherort** klicken Sie auf den Namen des Ordners.  
   
-## <a name="see-also"></a>Siehe auch  
- [Neuer verknüpfter Bericht (Seite) (Berichts-Manager)](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [Neues Modell (Seite) &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Die Seite "Neuer verknüpfter Bericht" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [Die Seite "neues Modell" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

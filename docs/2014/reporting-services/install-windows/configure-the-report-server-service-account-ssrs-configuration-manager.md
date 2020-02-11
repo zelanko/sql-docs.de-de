@@ -10,19 +10,20 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261072"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Konfigurieren des Berichtsserver-Dienstkontos (SSRS-Konfigurations-Manager)
 
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird als Einzeldienst mit einem Report Server-Webdienst (Berichts-Manager) und einer Hintergrundverarbeitungsanwendung implementiert, die für die geplante Berichtsverarbeitung und die Abonnementübermittlung verwendet wird. In diesem Thema wird erläutert, wie das Dienstkonto zu Beginn konfiguriert wird. Außerdem wird beschrieben, wie das Konto oder das Kennwort mit dem Reporting Services-Konfigurationstool geändert wird.  
   
 ## <a name="initial-configuration"></a>Anfängliche Konfiguration
 
- Das Berichtsserver-Dienstkonto wird während der Ausführung von Setup definiert. Sie können den Dienst unter einem Domänenbenutzerkonto oder unter einem integrierten Konto wie einem `NetworkService`-Konto ausführen. Es gibt kein Standardkonto ein. alle Konten, die Sie, in angeben der [Serverkonfiguration – Dienstkonten](../../sql-server/install/server-configuration-service-accounts.md) Seite des Installations-Assistenten wird das Konto für den Berichtsserverdienst.  
+ Das Berichtsserver-Dienstkonto wird während der Ausführung von Setup definiert. Sie können den Dienst unter einem Domänenbenutzerkonto oder unter einem integrierten Konto wie einem `NetworkService`-Konto ausführen. Es ist kein Standardkonto vorhanden. welches Konto Sie im Installations-Assistenten auf der Seite [Server Konfiguration-Dienst Konten](../../sql-server/install/server-configuration-service-accounts.md) angeben, wird zum ersten Konto des Berichts Server Dienstanbieter.  
   
 > [!IMPORTANT]
 > Der Report Server-Webdienst und der Berichts-Manager sind [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Anwendungen; sie werden jedoch nicht unter dem [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Konto ausgeführt. Die Einzeldienstarchitektur führt beide ASP.NET-Anwendungen im Rahmen der gleichen Berichtsserver-Prozessidentität aus. Dies ist eine wichtige Änderung gegenüber früheren Versionen, in denen der Report Server-Webdienst und der Berichts-Manager unter der gleichen, in IIS angegebenen [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Arbeitsprozessidentität ausgeführt wurden.
@@ -33,7 +34,7 @@ ms.locfileid: "63261072"
   
 - Das neue Konto wird automatisch der auf dem lokalen Computer erstellten Berichtsservergruppe hinzugefügt. Diese Gruppe wird in den Zugriffssteuerungslisten (Access Control Lists, ACLs) angegeben, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dateien schützen.  
   
-- Die Anmeldeberechtigungen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz, die als Host für die Berichtsserver-Datenbank fungiert, werden automatisch aktualisiert. Das neue Konto wird der **RSExecRole**hinzugefügt.  
+- Aktualisiert automatisch die Anmelde Berechtigungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz, die zum Hosten der Berichts Server-Datenbank verwendet wird. Das neue Konto wird der **RSExecRole**hinzugefügt.  
   
      Die Datenbankanmeldung für das alte Konto wird nicht automatisch entfernt. Stellen Sie sicher, dass nicht mehr benötigte Konten entfernt werden. Weitere Informationen finden Sie unter [Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)](../report-server/report-server-database-ssrs-native-mode.md) in der SQL Server-Onlinedokumentation.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "63261072"
     > [!NOTE]  
     > Wenn der Berichtsserver Teil einer Bereitstellung für horizontales Skalieren ist, ist nur der Berichtsserver betroffen, den Sie aktualisieren. Auf die Verschlüsselungsschlüssel für andere Berichtsserver in der Bereitstellung hat die Änderung des Dienstkontos keine Auswirkung.  
   
- Anweisungen dazu, wie Sie das Konto festzulegen, finden Sie unter [Konfigurieren eines Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
+ Anweisungen zum Festlegen des Kontos finden Sie unter [Konfigurieren eines Dienst Kontos &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
 ## <a name="choosing-an-account"></a>Auswählen eines Kontos
 
@@ -62,11 +63,11 @@ ms.locfileid: "63261072"
   
  Die folgenden Richtlinien und Links in diesem Abschnitt können Ihnen helfen, den für Ihre Bereitstellung am besten geeigneten Ansatz zu finden.  
   
-- [Dienstkonto &#40;einheitlicher SSRS-Modus&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
+- Das [Dienst Konto &#40;SSRS im einheitlichen Modus&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server-Onlinedokumentation.  
+- [Konfigurieren Sie Windows-Dienst Konten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server-Onlinedokumentation.  
   
-- [The Services and Service Accounts Security Planning Guide (Handbuch zur Planung der Sicherheit von Diensten und Dienstkonten)](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)  
+- [Das Sicherheits Planungs Handbuch für Dienst-und Dienst Konten](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Aktualisieren eines abgelaufenen Kennworts
 
@@ -74,11 +75,11 @@ ms.locfileid: "63261072"
   
  Gehen Sie wie folgt vor, um das Kennwort zurückzusetzen:  
   
-1. Auf der **starten** , zeigen Sie auf **Systemsteuerung**, zeigen Sie auf **Administratortools**, und klicken Sie auf **Services**.  
+1. Zeigen Sie im **Startmenü** auf **Systemsteuerung**, zeigen Sie auf **Verwaltungs Tools**, und klicken Sie dann auf **Dienste**.  
   
-2. Mit der rechten Maustaste **SQL Server Reporting Services**Option **Eigenschaften**.  
+2. Klicken **Sie mit**der rechten Maustaste auf **SQL Server Reporting Services**.  
   
-3. Klicken Sie auf **anmelden**, und geben Sie das neue Kennwort.  
+3. Klicken Sie **auf Anmelden**, und geben Sie das neue Kennwort ein.  
   
 4. Nachdem Sie das Kennwort aktualisiert haben, starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool, und aktualisieren Sie das Kenwort auf der Seite Dienstkonto. Dieser zusätzliche Schritt ist erforderlich, um die Kontoinformationen zu aktualisieren, die intern vom Berichtsserver gespeichert werden.  
   
@@ -94,29 +95,29 @@ ms.locfileid: "63261072"
   
  Nach dem Zurücksetzen der Datenbankzugriffsinformationen sollten Sie den [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]-Dienst neu starten, um sicherzustellen, dass die alte Verbindung nicht mehr verwendet wird.  
   
-1. In **Verwaltung**, klicken Sie auf **SharePoint 2010 Central Administration**.  
+1. Klicken Sie unter **Verwaltung**auf **SharePoint 2010-zentral Administration**.  
   
-2. Klicken Sie auf **Anwendungsverwaltung**.  
+2. Klicken Sie auf **Anwendungs Verwaltung**.  
   
-3. Klicken Sie im Abschnitt Reporting Services auf **Gewähren von Datenbankzugriff**.  
+3. Klicken Sie im Abschnitt Reporting Services auf **Datenbankzugriff gewähren**.  
   
 4. Klicken Sie auf **OK**. Das Dialogfeld Anmeldeinformationen eingeben wird angezeigt.  
   
 5. Geben Sie die Anmeldeinformationen eines Benutzers ein, der ein Mitglied der Gruppe lokaler Administratoren auf dem Computer ist, der den Berichtsserver hostet. Die Anmeldeinformationen werden für eine einmalige Verbindung mit dem Berichtsservercomputer zum Abrufen von Dienstkontoinformationen verwendet. Die für jedes Dienstkonto erstellte Datenbankanmeldung wird in SharePoint-Datenbanken aktualisiert.  
   
-6. Um den Dienst neu starten, klicken Sie auf **Vorgänge**.  
+6. Um den Dienst neu zu starten, klicken Sie auf **Vorgänge**.  
   
-7. Klicken Sie in der Topologie und Dienste auf **Dienste auf dem Server**.  
+7. Klicken Sie in Topologie und Dienste **auf Dienste auf dem Server**.  
   
-8. Klicken Sie für Windows SharePoint Services-Webanwendung auf **beenden**.  
+8. Klicken Sie für Windows SharePoint Services-Webanwendung auf " **Abbrechen**".  
   
 9. Warten Sie, bis der Dienst beendet wird.  
   
-10. Klicken Sie auf **starten**.  
+10. Klicken Sie auf **Start**.  
   
 > [!NOTE]  
 > Für SharePoint-Produkte und -Technologien sind Domänenkonten zur Dienstkonfiguration erforderlich, wie der SharePoint-Modus für Reporting Services.  
   
 ## <a name="next-steps"></a>Nächste Schritte
 
- [Konfigurieren eines Dienstkontos &#40;SSRS-Konfigurations-Manager&#41; ](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [-Dienstkonto &#40;einheitlicher SSRS-Modus&#41; ](../../sql-server/install/service-account-ssrs-native-mode.md) [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfiguration Manager&#41; ](configure-report-server-urls-ssrs-configuration-manager.md) [Reporting Services-Konfigurations-Manager &#40;im einheitlichen Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)
+ [Konfigurieren Sie ein Dienst Konto &#40;SSRS-Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [Dienst Konto &#40;SSRS im einheitlichen Modus&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [Konfigurieren von Berichts Server-URLs &#40;SSRS Configuration Manager](configure-report-server-urls-ssrs-configuration-manager.md)&#41;Konfigurations-Manager für Reporting Services &#40;&#41;im einheitlichen [Modus](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)

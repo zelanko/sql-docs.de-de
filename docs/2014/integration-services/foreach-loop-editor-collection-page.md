@@ -1,5 +1,5 @@
 ---
-title: Foreach-Schleifen-Editor (Seite Auflistung) | Microsoft-Dokumentation
+title: Foreach-Schleifen-Editor (Seite Sammlung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428802"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach-Schleifen-Editor (Seite Auflistung)
-  Verwenden Sie die Seite **Auflistung** des Dialogfelds **Foreach-Schleifen-Editor**, um den Enumeratortyp anzugeben und den Enumerator zu konfigurieren.  
+  Verwenden Sie die Seite **Auflistung** des Dialogfelds **Foreach-Schleifen-Editor** , um den Enumeratortyp anzugeben und den Enumerator zu konfigurieren.  
   
  Weitere Informationen zu Foreach-Schleifencontainern und ihrer Konfiguration finden Sie unter [Foreach-Schleifencontainer](control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
@@ -28,22 +28,22 @@ ms.locfileid: "66428802"
  **Enumerator**  
  Wählen Sie den Enumeratortyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Foreach-Datei-Enumerator**|Zählt Dateien auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Datei-Enumerator** die dynamischen Optionen angezeigt.|  
-|**Foreach-Element-Enumerator**|Zählt Werte in einem Element auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Element-Enumerator** die dynamischen Optionen angezeigt.|  
+|**Foreach-Datei Enumerator**|Zählt Dateien auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Datei-Enumerator** die dynamischen Optionen angezeigt.|  
+|**Foreach-Element Enumerator**|Zählt Werte in einem Element auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Element-Enumerator** die dynamischen Optionen angezeigt.|  
 |**Foreach-ADO-Enumerator**|Zählt Tabellen oder Zeilen in Tabellen auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADO-Enumerator** die dynamischen Optionen angezeigt.|  
-|**Enumerator für Foreach-ADO.NET-Schemarowset**|Zählt ein Schema auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADO-Enumerator** die dynamischen Optionen angezeigt.|  
-|**Foreach-Enumerator für Daten aus Variable**|Zählt den Wert in einer Variablen auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Enumerator für Daten aus Variable** die dynamischen Optionen angezeigt.|  
+|**Foreach ADO.NET Schemarowset-Enumerator**|Zählt ein Schema auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADO-Enumerator** die dynamischen Optionen angezeigt.|  
+|**Foreach-Enumerator aus Variable**|Zählt den Wert in einer Variablen auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Enumerator für Daten aus Variable** die dynamischen Optionen angezeigt.|  
 |**Foreach-NodeList-Enumerator**|Zählt Knoten in einem XML-Dokument auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-NodeList-Enumerator** die dynamischen Optionen angezeigt.|  
 |**Foreach-SMO-Enumerator**|Zählt ein SMO-Objekt auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-SMO-Enumerator** die dynamischen Optionen angezeigt.|  
-|**Foreach-Azure-Blob-Enumerator**|Zählt Blobdateien am angegebenen Blobspeicherort auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Azure-Blob-Enumerator** die dynamischen Optionen angezeigt.|  
-|**Foreach-ADLS-Datei-Enumerator**|Auflisten von Dateien, die Azure Data Lake Store mit Filtern. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADLS-Datei-Enumerator** die dynamischen Optionen angezeigt.|
+|**Foreach-Azure-BLOB-Enumerator**|Zählt Blobdateien am angegebenen Blobspeicherort auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Azure-Blob-Enumerator** die dynamischen Optionen angezeigt.|  
+|**Foreach-ADLS-Datei-Enumerator**|Auflisten von Dateien auf ADLS mit Filtern. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADLS-Datei-Enumerator** die dynamischen Optionen angezeigt.|
   
  **Ausdrücke**  
- Klicken Sie auf die Option **Ausdrücke**, oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit der Ellipse **(…)** , um einen Eigenschaftsausdruck für eine Enumeratoreigenschaft hinzuzufügen oder einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
+ Klicken Sie auf die Option **Ausdrücke**, oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit der Ellipse **(…)**, um einen Eigenschaftsausdruck für eine Enumeratoreigenschaft hinzuzufügen oder einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
   
- **Verwandte Themen:**  [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Eigenschaftsausdrucks-Editor](expressions/property-expressions-editor.md), [Ausdrucks-Generator](expressions/expression-builder.md)  
+ **Verwandte Themen:**[Integration Services &#40;SSIS-&#41; Ausdrücke](expressions/integration-services-ssis-expressions.md), [Eigenschafts Ausdrucks-Editor](expressions/property-expressions-editor.md), [Ausdrucks](expressions/expression-builder.md) -Generator    
   
 ## <a name="enumerator-dynamic-options"></a>Dynamische Enumeratoroptionen  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66428802"
 > [!NOTE]  
 >  Sie können Platzhalterzeichen (*) verwenden, um die in die Sammlung einzuschließenden Dateien anzugeben. Verwenden Sie zum Einbeziehen von Dateien, deren Name „abc“ enthält, beispielsweise den folgenden Filter: \*abc\*.  
 >   
->  Wenn Sie eine Dateierweiterung angeben, gibt der Enumerator auch Dateien mit derselben Erweiterung mit angehängten zusätzlichen Zeichen zurück. (Dieses Verhalten entspricht dem Verhalten des **dir**-Befehls im Betriebssystem, mit dem 8.3-Dateinamen auf Abwärtskompatibilität überprüft werden.) Dieses Verhalten des Enumerators könnte unerwartete Ergebnisse verursachen. Angenommen, Sie möchten nur Excel 2003-Dateien auflisten und geben „.xls“ an. Der Enumerator gibt in diesem Fall auch Excel 2007-Dateien zurück, da diese Dateien die Erweiterung, ".xlsx", haben.  
+>  Wenn Sie eine Dateierweiterung angeben, gibt der Enumerator auch Dateien mit derselben Erweiterung mit angehängten zusätzlichen Zeichen zurück. (Dieses Verhalten entspricht dem Verhalten des **dir** -Befehls im Betriebssystem, mit dem 8.3-Dateinamen auf Abwärtskompatibilität überprüft werden.) Dieses Verhalten des Enumerators könnte unerwartete Ergebnisse verursachen. Angenommen, Sie möchten nur Excel 2003-Dateien auflisten und geben „.xls“ an. Der Enumerator gibt in diesem Fall auch Excel 2007-Dateien zurück, da diese Dateien die Erweiterung, ".xlsx", haben.  
 >   
->  Sie können einen Ausdruck verwenden, um die in eine Sammlung einzubeziehenden Dateien anzugeben. Erweitern Sie dazu auf der Seite **Sammlung** die Option **Ausdrücke**, wählen Sie die **FileSpec**-Eigenschaft aus, und klicken Sie anschließend auf die Schaltfläche mit der Ellipse („…“), um den Eigenschaftsausdruck hinzuzufügen. Weitere Informationen zum dynamischen auswählen angegebener Dateien finden Sie unter [SSIS – dynamisches Einstellen von File Mask: FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)  
+>  Sie können einen Ausdruck verwenden, um die in eine Sammlung einzubeziehenden Dateien anzugeben. Erweitern Sie dazu auf der Seite **Sammlung** die Option **Ausdrücke**, wählen Sie die **FileSpec**-Eigenschaft aus, und klicken Sie anschließend auf die Schaltfläche mit der Ellipse („…“), um den Eigenschaftsausdruck hinzuzufügen. Weitere Informationen zum dynamischen auswählen angegebener Dateien finden Sie unter [SSIS-Dynamisches Festlegen von File Mask: filespec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html) .  
   
- **Vollqualifiziert**  
+ **Voll qualifiziert**  
  Wählen Sie diese Option aus, um den vollqualifizierten Pfad von Dateinamen abzurufen. Wenn in der Dateioption Platzhalterzeichen angegeben wurden, stimmen die zurückgegebenen vollqualifizierten Pfade mit dem Filter überein.  
   
  **Nur Name**  
@@ -83,7 +83,7 @@ ms.locfileid: "66428802"
  **Name und Erweiterung**  
  Wählen Sie diese Option aus, um die Dateinamen und die Dateinamenerweiterungen abzurufen. Wenn in der Dateioption Platzhalterzeichen angegeben wurden, stimmen die zurückgegebenen Dateinamen und Dateierweiterungen mit dem Filter überein.  
   
- **Unterordner durchlaufen**  
+ **Unterordner durchsuchen**  
  Wählen Sie diese Option aus, wenn die Unterordner in der Enumeration berücksichtigt werden sollen.  
   
 ### <a name="enumerator--foreach-item-enumerator"></a>Enumerator = Foreach-Element-Enumerator  
@@ -91,7 +91,7 @@ ms.locfileid: "66428802"
   
  Um die Eigenschaften des Tasks „Prozess ausführen“ zu aktualisieren, ordnen Sie Elementspalten mithilfe des Spaltenindex Variablen zu. Die erste im Enumeratorelement definierte Spalte hat den Indexwert 0, die zweite den Wert 1 usw. Die Variablenwerte werden bei jeder Wiederholung der Schleife aktualisiert. Die Eigenschaften `Executable` und `WorkingDirectory` des Tasks Prozess ausführen können dann mithilfe von Eigenschaftsausdrücken, die diese Variablen verwenden, aktualisiert werden.  
   
- **Elemente für die ForEach-Elementsammlung definieren**  
+ **Definieren der Elemente in der for each-Element Auflistung**  
  Geben Sie einen Wert für jede Spalte in der Tabelle an.  
   
 > [!NOTE]  
@@ -100,95 +100,95 @@ ms.locfileid: "66428802"
 > [!NOTE]  
 >  Wenn die angegebenen Werte nicht mit dem Spaltendatentyp kompatibel sind, wird der Text rot angezeigt.  
   
- **Datentyp der Spalte**  
+ **Spaltendatentyp**  
  Führt den Datentyp der aktiven Spalte auf.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie ein Element aus, und klicken Sie anschließend auf **Entfernen**, um es aus der Liste zu entfernen.  
   
  **Spalten**  
  Klicken Sie auf diese Option, um den Datentyp der Spalten im Element zu konfigurieren.  
   
- **Verwandte Themen:** [Foreach-Elementspalten (Dialogfeld, Referenz zur Benutzeroberfläche)](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
+ **Verwandte Themen:** [Referenz zur Benutzeroberfläche für jedes Element Spalten-Dialog Feld](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
   
 ### <a name="enumerator--foreach-ado-enumerator"></a>Enumerator = Foreach-ADO-Enumerator  
  Mithilfe des Foreach-ADO-Enumerators werden Zeilen oder Tabellen in einem in einer Variablen gespeicherten ADO- oder ADO.NET-Objekt aufgezählt. Wenn die Foreach-Schleife z. B. einen Skripttask enthält, mit dem ein Dataset in eine Variable geschrieben wird, können Sie mithilfe des Foreach-ADO-Enumerators die Zeilen im Dataset aufzählen. Enthält die Variable ein ADO.NET-Dataset, dann kann der Enumerator zum Aufzählen von Zeilen in mehreren Tabellen oder zum Aufzählen von Tabellen konfiguriert werden.  
   
- **ADO-Objektquellvariable**  
- Wählen Sie eine benutzerdefinierte Variable aus der Liste aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
+ **ADO-Objekt Quellvariable**  
+ Wählen Sie eine benutzerdefinierte Variable aus der Liste aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
 > [!NOTE]  
 >  Der Datentyp der Variablen muss „Object“ sein, andernfalls tritt ein Fehler auf.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
  **Zeilen in der ersten Tabelle**  
  Wählen Sie diese Option aus, um nur Zeilen in der ersten Tabelle aufzuzählen.  
   
- **Zeilen in allen Tabellen (nur ADO.NET-Dataset)**  
+ **Zeilen in allen Tabellen (nur ADO.NET DataSet)**  
  Wählen Sie diese Option aus, um Zeilen in allen Tabellen aufzuzählen. Diese Option ist nur verfügbar, wenn die aufzuzählenden Objekte alle Elemente desselben ADO.NET-Datasets sind.  
   
- **Alle Tabellen (nur ADO.NET-Dataset)**  
+ **Alle Tabellen (nur ADO.NET DataSet)**  
  Wählen Sie diese Option aus, um nur Tabellen aufzuzählen.  
   
 ### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Enumerator für Foreach-ADO.NET-Schemarowset  
  Mithilfe des Enumerators für Foreach ADO.NET-Schemarowset kann ein Schema für eine angegebene Datenquelle aufgezählt werden. Wenn die Foreach-Schleife z. B. einen Task „SQL ausführen“ enthält, können Sie mit dem Enumerator für Foreach ADO.NET-Schemarowset Schemas aufzählen (beispielsweise die Spalten in der **AdventureWorks**-Datenbank) und mit dem Task „SQL ausführen“ Schemaberechtigungen abrufen.  
   
  **Verbindung**  
- Wählen Sie einen ADO.NET-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen ADO.NET-Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen ADO.NET-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen ADO.NET-Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der ADO.NET-Verbindungs-Manager muss einen .NET-Anbieter für OLE DB verwenden. Wenn Sie eine Verbindung mit SQL Server herstellen, ist der empfohlene Anbieter der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, der im Dialogfeld **Verbindungs-Manager** im Abschnitt **.NET-Anbieter für OleDb** aufgeführt ist.  
   
- **Verwandte Themen:** [ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](configure-ado-net-connection-manager.md)  
+ **Verwandte Themen:** [ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md), [Konfigurieren des ADO.NET-Verbindungs-Managers](configure-ado-net-connection-manager.md)  
   
- **Schema**  
+ **Chaos**  
  Hiermit wählen Sie das aufzuzählende Schema aus.  
   
  **Einschränkungen festlegen**  
  Hiermit legen Sie die Einschränkungen fest, die auf das angegebene Schema angewendet werden sollen.  
   
- **Verwandte Themen:** [Schemaeinschränkungen (Dialogfeld)](../../2014/integration-services/schema-restrictions-dialog-box.md)  
+ **Verwandte Themen:** [Dialog Feld "Schema Einschränkungen](../../2014/integration-services/schema-restrictions-dialog-box.md) "  
   
 ### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerator = Foreach-Enumerator für Daten aus Variable  
  Mithilfe des Foreach-Enumerators für Daten aus Variablen werden aufzählbare Objekte in einer angegebenen Variable aufgezählt. Wenn die Foreach-Schleife z. B. einen Task „SQL ausführen“ enthält, der eine Abfrage ausführt und das Ergebnis in einer Variablen speichert, können Sie den Foreach-Enumerator für Daten aus Variablen zum Aufzählen der Abfrageergebnisse verwenden.  
   
  **Variable**  
- Wählen Sie in der Liste eine Variable aus, oder klicken Sie auf \<**Neue Variable…** >, um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable aus der Liste aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach-NodeList-Enumerator  
  Mithilfe des Foreach-NodeList-Enumerators werden alle XML-Knoten aufgezählt, die zum Ergebnis der Anwendung eines XPath-Ausdrucks auf eine XML-Datei gehören. Wenn die Foreach-Schleife beispielsweise einen Skripttask enthält, können Sie mit dem Foreach-NodeList-Enumerator einen Wert, der den Kriterien des XPath-Ausdrucks entspricht, aus der XML-Datei an den Skripttask übergeben.  
   
- Der XPath-Ausdruck, der auf die XML-Datei angewendet wird, ist der in der OuterXPathString-Eigenschaft gespeicherte äußere XPath-Vorgang. Wenn der XPath-Enumerationstyp, um festgelegt ist `ElementCollection`, kann anwenden, der Foreach-NodeList-Enumerator einen inneren XPath-Ausdruck, in der InnerXPathString-Eigenschaft, um eine Auflistung von Elementen gespeichert.  
+ Der XPath-Ausdruck, der auf die XML-Datei angewendet wird, ist der in der OuterXPathString-Eigenschaft gespeicherte äußere XPath-Vorgang. Wenn der XPath-Enumerationstyp auf `ElementCollection`festgelegt ist, kann der Foreach-NodeList-Enumerator einen inneren XPath-Ausdruck, der in der InnerXPathString-Eigenschaft gespeichert ist, auf eine Auflistung von Elementen anwenden.  
   
  Weitere Informationen zum Arbeiten mit XML-Dokumenten und -Daten finden Sie unter "[XML im .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in der MSDN Library.  
   
  **DocumentSourceType**  
  Hiermit wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Direkte Eingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **DocumentSource**  
  Wenn für **DocumentSourceType** die Option **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit der Ellipse („…“), um im Dialogfeld **Dokumentquellen-Editor** den XML-Code anzugeben.  
   
- Wenn **DocumentSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wenn **DocumentSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Wenn **DocumentSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
+ Wenn **DocumentSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md).  
+ **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md).  
   
  **EnumerationType**  
  Hiermit wählen Sie einen Enumerationstyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Navigator**|Die Enumeration erfolgt mithilfe eines XPathNavigator.|  
 |**Node**|Zählt Knoten auf, die von einem XPath-Vorgang zurückgegeben wurden.|  
@@ -198,61 +198,61 @@ ms.locfileid: "66428802"
  **OuterXPathStringSourceType**  
  Hiermit wählen Sie den Quelltyp der XPath-Zeichenfolge aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Direkte Eingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  `OuterXPathString`  
  Wenn **OuterXPathStringSourceType** auf **Direkteingabe** festgelegt ist, geben Sie die XPath-Zeichenfolge an.  
   
- Wenn **OuterXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wenn **OuterXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Wenn **OuterXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
+ Wenn **OuterXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md).  
+ **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md).  
   
- **InnerElementType**  
- Wenn **EnumerationType** nastaven NA hodnotu `ElementCollection`, wählen Sie den Typ des inneren Elements in der Liste.  
+ **Inner Element Type**  
+ Wenn **EnumerationType** auf `ElementCollection`festgelegt ist, wählen Sie den Typ des inneren Elements in der Liste aus.  
   
  **InnerXPathStringSourceType**  
  Hiermit wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Direkte Eingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  `InnerXPathString`  
  Wenn **InnerXPathStringSourceType** auf **Direkteingabe** festgelegt ist, geben Sie die XPath-Zeichenfolge an.  
   
- Wenn **InnerXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wenn **InnerXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Wenn **InnerXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
+ Wenn **InnerXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md).  
+ **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md).  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach-SMO-Enumerator  
  Mithilfe des Foreach-SMO-Enumerators werden SMO-Objekte (SQL Server Management Object) aufgezählt. Wenn die Foreach-Schleife z. B. einen Task SQL ausführen enthält, können Sie den Foreach-SMO-Enumerator zum Aufzählen der Tabellen in der **AdventureWorks** -Datenbank und Ausführen von Abfragen, mit denen die Anzahl von Zeilen pro Tabelle ermittelt wird, verwenden.  
   
  **Verbindung**  
- Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- Verwandte Themen: [ADONET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](configure-ado-net-connection-manager.md)  
+ Verwandte Themen: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
- **Aufzählen**  
+ **Auflisten**  
  Hier geben Sie das aufzuzählende SMO-Objekt an.  
   
  **Durchsuchen**  
  Hiermit wählen Sie die SMO-Enumeration aus.  
   
- **Verwandte Themen:** [Das Dialogfeld „SMO-Enumeration auswählen“](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
+ **Verwandte Themen:** [SMO-Enumeration auswählen (Dialog Feld](../../2014/integration-services/select-smo-enumeration-dialog-box.md) )  
   
 ### <a name="enumerator--foreach-azure-blob-enumerator"></a>Enumerator = Foreach-Azure-Blob-Enumerator  
  Der  **Azure-Blob-Enumerator**ermöglicht einem SSIS-Paket das Aufzählen von Blob-Dateien an angegebenen Blob-Speicherort. Der Name von aufgezählten Blob-Dateien kann in einer Variablen gespeichert und in Aufgaben innerhalb des Foreach-Schleifencontainers verwendet werden.  
@@ -260,30 +260,30 @@ ms.locfileid: "66428802"
  **Azure Storage-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure Storage-Konto verweist.  
   
- Verwandte Themen: [Azure Storage-Verbindungs-Manager](connection-manager/azure-storage-connection-manager.md).  
+ Verwandte Themen: [Azure Storage Connection Manager](connection-manager/azure-storage-connection-manager.md).  
   
- **Blobcontainername**  
+ **BLOB-Container Name**  
  Geben Sie den Namen des Blob-Containers an, der die aufzuzählenden Blob-Dateien enthält.  
   
- **Blobverzeichnis**  
+ **BLOB-Verzeichnis**  
  Geben Sie das Blob-Verzeichnis an, das die aufzuzählenden Blob-Dateien enthält. Das Blobverzeichnis ist eine virtuelle hierarchische Struktur.  
   
- **Blobnamensfilter**  
+ **BLOB-namens Filter**  
  Geben Sie einen Namensfilter zum Auflisten von Dateien mit einem bestimmten Namensmuster an. Beispiel: „MeinArbeitsblatt*.xls\* “ schließt „MeinArbeitsblatt001.xls“ und „MeinArbeitsblattABC.xlsx“ ein.  
   
- **Blobzeitraumfilter „von/bis“**  
+ **BLOB-Zeitbereich von/zu-Filter**  
  Geben Sie einen Filter für den Zeitraum an. Dateien, die nach **TimeRangeFrom** und vor **TimeRangeTo** geändert wurden, werden aufgezählt.  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumerator = Foreach-ADLS-Datei-Enumerator  
-Die **ADLS-Dateienumerator** ermöglicht einem SSIS-Paket zum Aufzählen von Dateien, die Azure Data Lake Store mit Filtern. Der Schrägstrich (`/`) – mit Präfix vollständiger Pfad der aufgelisteten Dateien in einer Variablen gespeichert und in Aufgaben innerhalb des Foreach-Schleifencontainers verwendet werden kann.
+### <a name="enumerator--foreach-adls-file-enumerator"></a> Enumerator = Foreach-ADLS-Datei-Enumerator  
+Der **ADLS-Datei-Enumerator** ermöglicht einem SSIS-Paket das Auflisten von Dateien auf ADLS mit Filtern. Der Schrägstrich`/`(): der vollständige Pfad von enumerationsdateien kann in einer Variablen gespeichert und in Aufgaben innerhalb des Foreach-Schleifen Containers verwendet werden.
   
-**AzureDataLakeConnection**  
+**Azuredatalakeconnection**  
 Gibt einen Azure Data Lake-Verbindungs-Manager an oder erstellt einen neuen Azure Data Lake-Verbindungs-Manager, der auf ein ADLS-Konto verweist.   
   
 **AzureDataLakeDirectory**  
-Gibt das ADLS-Verzeichnis zu suchen.
+Gibt das zu durchsuchende ADLS-Verzeichnis an.
   
-**FileNamePattern**  
-Gibt einen Dateinamensfilter an. Nur Dateien, deren Name mit dem angegebenen Muster übereinstimmt, werden aufgezählt werden. Die Platzhalterzeichen `*` und `?` werden unterstützt. 
+**Datamepattern**  
+Gibt einen Dateinamensfilter an. Nur Dateien, deren Name mit dem angegebenen Muster übereinstimmt, werden aufgezählt. Die Platzhalterzeichen `*` und `?` werden unterstützt. 
   
 **SearchRecursively**  
 Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.  
@@ -292,12 +292,12 @@ Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.
   
 -   Blogeintrag [SSIS – Foreach NodeList-Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671)auf  auf bidn.combidn.com.  
   
--   Blogeintrag, [SSIS – dynamisches Einstellen von File Mask: FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html).  
+-   Blog Eintrag [SSIS: Dynamisches Festlegen von File Mask: filespec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach-Schleifen-Editor &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Foreach-Schleifen-Editor &#40;Seite Variablenzuordnungen&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Foreach-Schleifen-Editor &#40;Seite Variablen Zuordnungen&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [For-Schleifencontainer](control-flow/for-loop-container.md)  
   

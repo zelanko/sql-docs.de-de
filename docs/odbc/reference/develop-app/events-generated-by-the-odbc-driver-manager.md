@@ -1,5 +1,5 @@
 ---
-title: Vom-ODBC-Treiber-Manager generierte Ereignisse | Microsoft-Dokumentation
+title: Vom ODBC-Treiber-Manager generierte Ereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901350"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Vom ODBC-Treiber-Manager generierte Ereignisse
 > [!IMPORTANT]  
->  Unterstützung für Visual Studio Analyzer wurde ab Windows 8 (Visual Studio Analyzer wurde nur in früheren Versionen von Visual Studio enthalten.) entfernt. Verwenden Sie eine Alternative zur Problembehandlung Mechanismus BID-Verfolgung.  
+>  Die Unterstützung für Visual Studio Analyzer wurde ab Windows 8 entfernt (Visual Studio Analyzer war nur in früheren Versionen von Visual Studio enthalten.) Verwenden Sie für einen alternativen Mechanismus zur Problembehandlung die Auftrags Ablauf Verfolgung.  
   
- Vom ODBC-Treiber-Manager generierte Ereignisse werden registriert, wenn auf die Schaltfläche "Starten Sie Visual Studio Analyzer" geklickt wird. Das Tool selbst bietet systemdefinierte Ereignisse sowie die Möglichkeit, benutzerdefinierte Ereignisse zu erstellen. Weitere Informationen zu Ereignissen finden Sie unter den *Visual Studio Analyzer-Referenzhandbuch* innerhalb der Visual Studio-Suite-Dokumentation.  
+ Ereignisse, die vom ODBC-Treiber-Manager generiert werden, werden beim Klicken auf die Schaltfläche Start Visual Studio Analyzer registriert. Das Tool selbst bietet System definierte Ereignisse und die Möglichkeit, benutzerdefinierte Ereignisse zu erstellen. Weitere Informationen zu Ereignissen finden Sie im *Visual Studio Analyzer Reference Guide* in der Visual Studio-Dokumentations Suite.  
   
-|Visual Studio Analyzer-Ereignis|Beschreibung|  
+|Visual Studio Analyzer Ereignis|BESCHREIBUNG|  
 |----------------------------------|-----------------|  
-|**Call**|Generiert für jede ODBC-API-Eintrag.|  
-|**ReturnException**|Generiert für jede ODBC-API-Rückgabe ist der Rückgabecode SQL_ERROR zurück.|  
-|**ReturnNormal**|Für jede ODBC-API-Rückgabe generiert, wenn der Rückgabecode nicht als SQL_ERROR ist.|  
-|**Verbindung starten**|Gibt an, dass eine Verbindung gestartet. generiert, wenn der ODBC-Treiber-Manager des Treibers Verbindungs-APIs aufruft.|  
-|**Verbindung abgeschlossen**|Gibt an, dass eine Verbindung hergestellt. generiert, wenn der Treiber die Verbindung APIs zum ODBC-Treiber-Manager zurückgeben.|  
-|**Trennen der Verbindung starten**|Generiert, wenn der ODBC-Treiber-Manager des Treibers aufruft **SQLDisconnect** Funktion.|  
-|**Trennen der Verbindung abgeschlossen**|Generiert wird, wenn des Treibers die **SQLDisconnect** Funktionsergebnis ist auf der ODBC-Treiber-Manager.|  
-|**QuerySend**|Generiert, wenn der ODBC-Treiber-Manager des Treibers aufruft **SQLPrepare**, **SQLExecute**, **SQLExecDirect** Funktionen sowie Katalogfunktionen z. B. **SQLTables** und **SQLColumns**.|  
-|**QueryResult**|Generiert, wenn der Treiber ein Resultset an den ODBC-Treiber-Manager für Funktionen, die im Zusammenhang mit Abfragen zurückgibt.|  
-|**TransactionStart**|Generiert, wenn eine Anwendung den Wert der SQL_ATTR_AUTOCOMMIT auf SQL_AUTOCOMMIT_OFF festlegt, oder nachdem eine Anwendung wurde erfolgreich aufgerufen **SQLEndTran**.|  
-|**TransactionCommit**|Generiert, wenn eine Anwendung ruft **SQLEndTran** um eine lokale Transaktion zu übernehmen.|  
-|**TransactionRollback**|Generiert, wenn eine Anwendung ruft **SQLEndTran** Rollback für eine lokale Transaktion.|  
-|**JoinDTC**|Generiert, wenn eine Anwendung der Distributed Transaction Coordinator (DTC) verknüpft.|  
-|**LeaveDTC**|Generiert, wenn eine Anwendung der Distributed Transaction Coordinator (DTC) verlässt.|
+|**Aufruf**|Wird bei jedem ODBC-API-Eintrag generiert.|  
+|**Rückkehrnexception**|Wird bei jeder ODBC-API-Rückgabe generiert, wenn der Rückgabecode SQL_ERROR ist.|  
+|**Returnnormal**|Wird bei jeder ODBC-API-Rückgabe generiert, wenn der Rückgabecode nicht SQL_ERROR ist.|  
+|**Verbindungs Start**|Gibt an, dass eine Verbindung gestartet wurde. wird generiert, wenn der ODBC-Treiber-Manager die Verbindungs-APIs des Treibers aufruft.|  
+|**Verbindung wurde beendet**|Gibt an, dass eine Verbindung abgeschlossen wurde. wird generiert, wenn die Verbindungs-APIs des Treibers zum ODBC-Treiber-Manager zurückkehren.|  
+|**Starten der Verbindung trennen**|Wird generiert, wenn der ODBC-Treiber-Manager die **SQLDisconnect** -Funktion des Treibers aufruft.|  
+|**Verbindung getrennt**|Wird generiert, wenn die **SQLDisconnect** -Funktion des Treibers zum ODBC-Treiber-Manager zurückkehrt.|  
+|**QuerySend**|Wird generiert, wenn der ODBC-Treiber-Manager die **SQLPrepare**-, **SQLExecute**-, **SQLExecDirect** -Funktionen des Treibers sowie Katalog Funktionen wie **SQLTables** und **SQLColumns**aufruft.|  
+|**QueryResult**|Wird generiert, wenn der Treiber ein Resultset für Funktionen mit Abfragen an den ODBC-Treiber-Manager zurückgibt.|  
+|**Transaktionstart**|Wird generiert, wenn eine Anwendung den Wert von SQL_ATTR_AUTOCOMMIT auf SQL_AUTOCOMMIT_OFF festlegt oder wenn eine Anwendung **SQLEndTran**erfolgreich aufruft.|  
+|**Transaktioncommit**|Wird generiert, wenn eine Anwendung **SQLEndTran** aufruft, um einen Commit für eine lokale Transaktion durchzusetzen.|  
+|**Transaktionrollback**|Wird generiert, wenn eine Anwendung **SQLEndTran** aufruft, um ein Rollback für eine lokale Transaktion auszuführen.|  
+|**JoinDTC**|Wird generiert, wenn eine Anwendung dem Distributed Transaction Coordinator (DTC) Beitritt.|  
+|**LeaveDTC**|Wird generiert, wenn eine Anwendung die Distributed Transaction Coordinator (DTC) verlässt.|

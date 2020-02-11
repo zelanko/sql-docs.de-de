@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Konfigurieren von Tabellen Verhaltenseigenschaften für Power View Berichte (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6ade5a39c974af7a87bb33aab6da490e0c3ae0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066838"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch)
   Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] unterscheidet sich von anderen Berichtsanwendungen darin, dass es Gruppenelemente automatisch während des Berichtsentwurfs gruppiert, indem die von Ihnen in der Berichtsfeldliste positionierten Spalten gegenüber dem von Ihnen verwendeten Präsentationsformat ausgewertet werden. In den meisten Fällen führt die Standardgruppierung zu einem optimalen Ergebnis. Für einige Tabellen, hauptsächlich solche, die Detaildaten enthalten, führt das Standardgruppierungsverhalten jedoch manchmal zur Gruppierung von Zeilen, bei denen dies nicht erwünscht ist. Für solche Tabellen können Sie Eigenschaften festlegen, die ändern, wie Gruppen ausgewertet werden.  
+ 
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] unterscheidet sich von anderen Berichtsanwendungen darin, dass es Gruppenelemente automatisch während des Berichtsentwurfs gruppiert, indem die von Ihnen in der Berichtsfeldliste positionierten Spalten gegenüber dem von Ihnen verwendeten Präsentationsformat ausgewertet werden. In den meisten Fällen führt die Standardgruppierung zu einem optimalen Ergebnis. Für einige Tabellen, hauptsächlich solche, die Detaildaten enthalten, führt das Standardgruppierungsverhalten jedoch manchmal zur Gruppierung von Zeilen, bei denen dies nicht erwünscht ist. Für solche Tabellen können Sie Eigenschaften festlegen, die ändern, wie Gruppen ausgewertet werden.  
   
  Die Festlegung von Tabellenverhaltenseigenschaften wird für Tabellen empfohlen, in denen die einzelnen Zeilen von primärem Interesse sind, z. B. Mitarbeiter- oder Kundendatensätze. Im Gegensatz dazu gehören zu den Tabellen, für die sich diese Eigenschaften nicht eignen, solche, die als Nachschlagetabellen fungieren (z. B., eine Datumstabelle, eine Produktkategorietabelle oder eine Abteilungstabelle, bei denen die Tabelle aus einer relativ kleinen Anzahl von Zeilen und Spalten besteht), oder Zusammenfassungstabellen, die Zeilen enthalten, die nur zusammengefasst interessant sind (z. B., Volkszählungsdaten, für die ein Rollup nach Geschlecht, Alter oder Geografie ausgeführt wird). Für Nachschlage- und Zusammenfassungstabellen führt das Standardgruppierungsverhalten zum besten Ergebnis.  
   
@@ -31,16 +32,16 @@ ms.locfileid: "66066838"
   
  Tabellenverhaltenseigenschaften schließen Folgendes ein:  
   
--   **Zeilen-ID** – gibt eine Spalte an, die nur eindeutige Werte enthält. Dadurch kann diese Spalte als interner Gruppierungsschlüssel verwendet werden.  
+-   **Zeilen Bezeichner** : gibt eine Spalte an, die nur eindeutige Werte enthält, sodass diese Spalte als interner Gruppierungs Schlüssel verwendet werden kann.  
   
--   **Eindeutige Zeilen beibehalten** – gibt an, welche Spalten Werte enthalten, die als eindeutig behandelt werden sollen, auch wenn sie Duplikate sind (z.B. Mitarbeitervorname und Nachname betreffend; in jenen Fällen, bei denen zwei oder mehr Mitarbeiter den gleichen Namen haben).  
+-   **Eindeutige Zeilen beibehalten** : gibt an, welche Spaltenwerte bereitstellen, die als eindeutig behandelt werden sollen, auch wenn Sie Duplikate sind (z. b. Employee First Name und Nachname), wenn zwei oder mehr Mitarbeiter denselben Namen haben.  
   
--   **Standardbeschriftung** – legt fest, welche Spalte einen Anzeigenamen angibt, um Zeilendaten (z.B. Mitarbeitername in einem Mitarbeiterdatensatz) darzustellen.  
+-   **Standard Bezeichnung** : gibt an, welche Spalte einen anzeigen Amen zur Darstellung von Zeilendaten bereitstellt (z. b. Mitarbeiter Name in einem Mitarbeiterdaten Satz).  
   
--   **Standardbild** – gibt an, welche Spalte ein Bild bereitstellt, das die Zeilendaten (z.B. eine Foto-ID in einem Mitarbeiterdatensatz) darstellt.  
+-   **Standard Image** : gibt an, welche Spalte ein Bild bereitstellt, das die Zeilendaten (z. b. eine Foto-ID in einem Mitarbeiterdaten Satz) darstellt.  
   
 > [!NOTE]  
->  Im folgenden Abschnitt layoutoptimierungen vom Standpunkt eines bestimmten Präsentationsformats finden Sie unter:  [Optimieren für bestimmte Layouts](#bkmk_optimizeforlayout).  
+>  Im folgenden Abschnitt finden Sie weitere Informationen, um Layoutoptimierungen vom Standpunkt eines bestimmten Präsentationsformats aus anzugehen:  [Optimieren für bestimmte Layouts](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Öffnen des Dialogfelds 'Tabellenverhalten'  
   
@@ -51,11 +52,11 @@ ms.locfileid: "66066838"
 3.  Legen Sie im Dialogfeld **Tabellenverhalten** den **Zeilenbezeichner**fest, und geben Sie dann weitere Eigenschaften in diesem Dialogfeld an.  
   
 ## <a name="setting-the-row-identifier-property"></a>Festlegen der Eigenschaft des Zeilenbezeichners  
- Innerhalb der Tabelle gibt der Zeilenbezeichner eine einzelne Spalte an, die nur eindeutige Werte und keine Leerzeichenwerte enthält. Die Zeilen-ID-Eigenschaft wird verwendet, so ändern Sie die Gruppierung, damit eine Gruppe nicht basiert auf der feldkomposition einer Zeile, sondern auf einer festen Spalte, die zur eindeutigen Identifizierung eine Zeile, unabhängig von Feldern, die in einem bestimmten Berichtslayout verwendet verwendet wird.  
+ Innerhalb der Tabelle gibt der Zeilenbezeichner eine einzelne Spalte an, die nur eindeutige Werte und keine Leerzeichenwerte enthält. Die Eigenschaft Zeilen Bezeichner wird verwendet, um die Gruppierung zu ändern, sodass eine Gruppe nicht auf der Feld Komposition einer Zeile basiert, sondern auf einer festgelegten Spalte, die immer verwendet wird, um eine Zeile eindeutig zu identifizieren, unabhängig von den Feldern, die in einem bestimmten Berichtslayout verwendet werden.  
   
  Wenn Sie diese Eigenschaft festlegen, ändert sich das Standardgruppierungsverhalten von dynamischer Gruppierung (basierend auf den Spalten im Arbeitsbereich) zu einem festen Gruppierungsverhalten, bei dem anhand der Zeilen-ID zusammengefasst wird. Die Änderung des Standardgruppierungsverhaltens ist relevant für Berichtslayouts, z. B. eine Matrix, die andernfalls für jede Spalte in der Zeile eine Gruppierung durchführt (oder Teilergebnisse anzeigt).  
   
- In [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], Festlegung eines zeilenbezeichners die folgenden zusätzlichen Eigenschaften aktiviert: **Eindeutige Zeilen beibehalten** Eigenschaft **Standardbeschriftung** -Eigenschaft und **Standardbild** Eigenschaft.  
+ In [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]werden durch die Festlegung eines Zeilenbezeichners die folgenden zusätzlichen Eigenschaften aktiviert: die Eigenschaft zu **Eindeutige Zeilen beibehalten** , die Eigenschaft zur **Standardbeschriftung** und die Eigenschaft zum **Standardbild** .  
   
  Sie können auch **Zeilenbezeichner** für sich als eigenständige Eigenschaft verwenden, um Folgendes zu aktivieren:  
   
@@ -86,13 +87,13 @@ ms.locfileid: "66066838"
 > [!NOTE]  
 >  Bilder können aus URL-Adressen in eine Bilddatei auf einem Webserver oder als in der Arbeitsmappe eingebettete Binärdaten übertragen werden. Wenn das Bild auf einer URL basiert, stellen Sie sicher, dass die Spalte auch als Bildtyp festgelegt wird, damit [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] das Bild abruft, anstatt die URL als Textdaten im Bericht anzuzeigen.  
   
-##  <a name="bkmk_optimizeforlayout"></a> Optimieren für bestimmte Layouts  
+##  <a name="bkmk_optimizeforlayout"></a>Optimieren für bestimmte Layouts  
  In diesem Abschnitt werden die Auswirkungen beschrieben, wenn Tabellenverhaltenseigenschaften vom Standpunkt eines bestimmten Präsentationsformats aus und anhand der Merkmale der Daten festgelegt werden. Wenn Sie für das Layout eines Matrixberichts eine Feinabstimmung durchzuführen versuchen, können Sie z. B. diese Informationen verwenden, um verstehen zu können, wie eine Matrixpräsentation mit Tabellenverhaltenseigenschaften im Modell verbessert werden kann.  
   
 ### <a name="images-are-missing"></a>Bilder fehlen  
  Die von Ihnen im Modell festgelegten Eigenschaften bestimmen, ob Bilder in einem Bericht visuell dargestellt oder als Textwerte im Bericht dargestellt werden.  
   
- ![Bild-URLs werden als Text in einem Bericht angezeigt.](../media/ssas-rptprop-noimageurl.gif "Bild-URLs werden als Text in einem Bericht angezeigt.")  
+ ![Bild-URLs werden in einem Bericht als Text angezeigt.](../media/ssas-rptprop-noimageurl.gif "Bild-URLs werden in einem Bericht als Text angezeigt.")  
   
  Standardmäßig wird Text im Modell als Text im Bericht interpretiert. Wenn eine Textspalte eine URL-Adresse zu einem Berichtsbild darstellt, müssen Sie beachten, dass Sie die Eigenschaft **Bild-URL** festlegen, damit [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] die Bilddatei abrufen kann. Bei binären Bildern müssen Sie die Eigenschaft **Zeilenbezeichner** festlegen.  
   
@@ -105,33 +106,33 @@ ms.locfileid: "66066838"
   
  Um das Standardgruppierungsverhalten zu ändern, müssen Sie die Eigenschaften zum **Zeilenbezeichner** und zu **Eindeutige Zeilen beibehalten** festlegen. Wählen Sie bei **Eindeutige Zeilen beibehalten**die Spalte "Nachname" aus, damit dieser Wert für eine Zeile wiederholt wird, auch wenn er bereits in einer anderen Zeile angezeigt wird. Nachdem Sie die Eigenschaften geändert haben und die Arbeitsmappe erneut veröffentlichen, können Sie den gleichen Bericht erstellen. Allerdings können Sie nun beide Kunden namens **Jon Yang**zusammen mit dem jeweils ordnungsgemäß zugeordneten **jährlichen Einkommen** ansehen.  
   
- ![Zeile von Daten mit Duplikaten nach Zeilen-ID](../media/ssas-jonyang.gif "Zeile von Daten mit Duplikaten nach Zeilen-ID")  
+ ![Zeilendaten mit Duplikaten nach Zeilen-ID](../media/ssas-jonyang.gif "Zeilendaten mit Duplikaten nach Zeilen-ID")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>Matrixlayout ist überfüllt  
  Wenn Sie in einer Matrix eine Detailtabelle präsentieren, stellt die Standardgruppierung einen zusammengefassten Wert für jede Spalte bereit. Je nach Zielsetzungen können dies mehr Zusammenfassungen sein als Sie nutzen möchten. Um dieses Verhalten zu ändern, können Sie den **Zeilenbezeichner**festlegen. Sie müssen keine zusätzlichen Eigenschaften festlegen. Die Festlegung des Zeilenbezeichners ist ausreichend, um die Gruppierung zu ändern, damit Zusammenfassungen auf der Grundlage eines eindeutigen Zeilenbezeichners für jede Zeile berechnet werden können.  
   
  Vergleichen Sie die folgenden Abbildungen vorher und nachher, in denen die Auswirkung der Einstellung dieser Eigenschaft für ein Matrixlayout angezeigt wird.  
   
- **Vorher: Standardgruppierung auf der Grundlage von Feldern in der matrix**  
+ **Before: Standard Gruppierung auf der Grundlage von Feldern in der Matrix**  
   
- ![Nach Zeilenbezeichner gruppiertes Matrixlayout](../media/ssas-rptprop-matrixrowid.gif "nach Zeilenbezeichner gruppiertes Matrixlayout")  
+ ![Nach Zeilenbezeichner gruppiertes Matrixlayout](../media/ssas-rptprop-matrixrowid.gif "Nach Zeilenbezeichner gruppiertes Matrixlayout")  
   
- **Nachher: Gruppierung zum Zeilenbezeichner**  
+ **Nachher: Gruppierung auf Zeilen Bezeichner**  
   
- ![Nach Zeilenbezeichner gruppiertes Matrixlayout](../media/ssas-rptprop-matrixrowid.gif "nach Zeilenbezeichner gruppiertes Matrixlayout")  
+ ![Nach Zeilenbezeichner gruppiertes Matrixlayout](../media/ssas-rptprop-matrixrowid.gif "Nach Zeilenbezeichner gruppiertes Matrixlayout")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>Das Diagramm zeigt zu viele Elemente und Ebenen auf der Achse an.  
  Die Diagrammberichte, die Detaildaten anzeigen, sollen den Zeilenbezeichner als Achse verwenden. Ohne Zeilenbezeichner ist die Achse unbestimmt, was zu einem Layout führt, das unter Umständen nicht sinnvoll ist. Um dieses Verhalten zu ändern, können Sie den **Zeilenbezeichner**festlegen. Sie müssen keine zusätzlichen Eigenschaften festlegen. Die Festlegung des Zeilenbezeichners ist ausreichend, um die Gruppierung zu ändern, damit Zusammenfassungen auf der Grundlage eines eindeutigen Zeilenbezeichners für jede Zeile berechnet werden können.  
   
  Vergleichen Sie die folgenden Abbildungen vorher und nachher, in denen die Auswirkung der Einstellung dieser Eigenschaft für ein Diagrammlayout angezeigt wird. Hierbei handelt es sich um den gleichen Bericht mit identischen Feldern und identischer Präsentation. Der einzige Unterschied besteht darin, dass in der untersten Abbildung ein Bericht angezeigt wird, nachdem der **Zeilenbezeichner** in der Elemententabelle festgelegt wurde.  
   
- **Vorher: Die standardgruppierung auf Grundlage der Felder in einem Diagramm**  
+ **Vor: Standard Gruppierung auf Grundlage von Feldern in einem Diagramm**  
   
- ![Diagramm entsprechend der standardgruppierung auf Feldebene](../media/ssas-rptprop-chartfieldgroup.gif "Diagramm entsprechend der standardgruppierung auf Feldebene")  
+ ![Diagramm auf Grundlage der Standardgruppierung auf Feldebene](../media/ssas-rptprop-chartfieldgroup.gif "Diagramm auf Grundlage der Standardgruppierung auf Feldebene")  
   
- **Nachher: Gruppierung zu Zeilenbezeichner (Zeilenbezeichner wird zur Achse)**  
+ **Nachher: Gruppierung auf Zeilen Bezeichner (Zeilen Bezeichner wird zur Achse)**  
   
- ![Diagramm-ID der zeilengruppierung entsprechend](../media/ssas-rptprop-chartrowid.gif "Diagramm entsprechend der zeilengruppierung-ID")  
+ ![Diagramm auf Grundlage der Zeilen-ID-Gruppierung](../media/ssas-rptprop-chartrowid.gif "Diagramm auf Grundlage der Zeilen-ID-Gruppierung")  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Nachdem Sie die Tabellen im Modell ausgewertet und die Tabellenverhaltenseigenschaften zu jenen Tabellen festgelegt haben, die Detailzeilen enthalten, welche stets als einzelne Elemente angezeigt werden sollen, können Sie das Modell durch zusätzliche Eigenschaften oder Einstellungen weiter optimieren.  

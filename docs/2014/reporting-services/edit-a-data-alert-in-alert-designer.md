@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 948bf1fd8145da9db9d0e0b81beabb8e7b3efaf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109251"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Bearbeiten einer Datenwarnung im Warnungs-Designer
@@ -27,7 +27,7 @@ ms.locfileid: "66109251"
   
  Das folgende Bild zeigt das Kontextmenü einer Datenwarnung im Datenwarnungs-Manager.  
   
- ![Datenwarnungs-Designer öffnen, indem Sie auf „Bearbeiten“ klicken](media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
+ ![Öffnen des Daten-Warnungs-Designers durch Klicken auf "Bearbeiten"](media/rs-alertmanageriwopendesigner.gif "Öffnen des Daten-Warnungs-Designers durch Klicken auf "Bearbeiten"")  
   
  Die folgende Prozedur enthält die Schritte zum Öffnen der Warnungsdefinition im Datenwarnungs-Designer über den Datenwarnungs-Manager, um sie zu bearbeiten.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "66109251"
     > [!NOTE]  
     >  Wenn der Bericht und die aus dem Bericht generierten Datenfeeds geändert wurden, ist die Warnungsdefinition möglicherweise nicht mehr gültig. Dies tritt auf, wenn eine Spalte, auf die die Warnungsdefinition in ihren Regeln verweist, vom Bericht gelöscht wird, den Datentyp ändert, oder wenn der Bericht gelöscht oder verschoben wird. Sie können eine ungültige Warnungsdefinition öffnen. Sie können sie jedoch nicht erneut speichern, sofern sie nicht gemäß der aktuellen Version des Berichtsdatenfeeds gültig ist, auf dem sie basiert. Weitere Informationen dazu, wie Datenfeeds aus Berichten generiert werden, finden Sie unter [Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenwarnungs-Manager für Warnungsadministratoren](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenwarnungs-Manager für Warnungs Administratoren](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md)  
   
   

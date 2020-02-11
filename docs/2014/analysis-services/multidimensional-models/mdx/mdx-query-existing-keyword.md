@@ -1,5 +1,5 @@
 ---
-title: EXISTING-Schlüsselwort (MDX) | Microsoft-Dokumentation
+title: Vorhandenes Schlüsselwort (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073967"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING-Schlüsselwort (MDX)
@@ -35,11 +35,11 @@ Existing Set_Expression
  *Set_Expression*  
  Ein gültiger MDX-Mengenausdruck (Multidimensional Expressions).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Standardmäßig werden Mengen im Kontext des Cubes ausgewertet, der die Elemente der Menge enthält. Das `Existing`-Schlüsselwort erzwingt dagegen die Auswertung einer angegebenen Menge im aktuellen Kontext.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der `Aggregate`-Funktion ausgewertet wurden. Das [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) und [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) werden zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet. Die `Existing` -Schlüsselwort erzwingt die Menge der `Filter` Funktion im aktuellen Kontext – d. h., die für die Washington und Oregon-Elemente der State-Province-Attributhierarchie ausgewertet werden sollen.  
+ Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der `Aggregate`-Funktion ausgewertet wurden. Das [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) und [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) werden zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet. Das `Existing` -Schlüsselwort erzwingt die `Filter` Auswertung der Menge in der Funktion im aktuellen Kontext, d. h. für die Washington-und Oregon-Elemente der State-Province-Attribut Hierarchie.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -76,14 +76,14 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Count &#40;Menge&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)   
- [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Anzahl &#40;fest geleg&#41; &#40;MDX-&#41;](/sql/mdx/count-set-mdx)   
+ [AddCalculatedMembers &#40;MDX-&#41;](/sql/mdx/addcalculatedmembers-mdx)   
+ [&#40;MDX-&#41;aggregieren](/sql/mdx/aggregate-mdx)   
+ [&#40;MDX-&#41;Filtern](/sql/mdx/filter-mdx)   
+ [Eigenschaften &#40;MDX-&#41;](/sql/mdx/properties-mdx)   
+ [DrilldownLevel-&#40;MDX-&#41;](/sql/mdx/drilldownlevel-mdx)   
+ [Hierarchize &#40;MDX-&#41;](/sql/mdx/hierarchize-mdx)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

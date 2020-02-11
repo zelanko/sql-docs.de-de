@@ -1,5 +1,5 @@
 ---
-title: Genauigkeitsdiagramm (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Genauigkeits Diagramm (SQL Server Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062988"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Genauigkeitsdiagramm (SQL Server Data Mining-Add-Ins)
-  ![Genauigkeit diagrammschaltfläche im Data Mining-Menüband](media/dmc-accchart.gif "Schaltfläche \"Genauigkeitsdiagramm\" im Data Mining-Menüband")  
+  ![Schaltfläche "Genauigkeitsdiagramm" im Menüband "Data Mining"](media/dmc-accchart.gif "Schaltfläche "Genauigkeitsdiagramm" im Menüband "Data Mining"")  
   
- Mit einem Genauigkeitsdiagramm können Sie ein Modell auf ein neues Dataset anwenden und anschließend bewerten, wie leistungsfähig das Modell ist. Vom Assistenten erstellte Genauigkeitsdiagramm ist ein *prognosegütediagramm*, d.h. eine Art von Diagramm, das häufig verwendet wird, um die Genauigkeit von Datamining-Modells messen. Bei diesem Genauigkeitsdiagrammtyp handelt es sich um eine grafische Darstellung der Verbesserung, die Sie durch das Verwenden des angegebenen Data Mining-Modells im Vergleich zu Vorhersagen nach dem Zufallsprinzip und dem Idealfall erhalten, dass 100 Prozent der Vorhersagen genau sind. Sie können mehrere Modelle in einem Diagramm vergleichen.  
+ Mit einem Genauigkeitsdiagramm können Sie ein Modell auf ein neues Dataset anwenden und anschließend bewerten, wie leistungsfähig das Modell ist. Das von diesem Assistenten erstellte Genauigkeits Diagramm ist ein *Lift Diagramm*, bei dem es sich um einen Diagrammtyp handelt, der häufig zum Messen der Genauigkeit eines Data Mining Modells verwendet wird. Bei diesem Genauigkeitsdiagrammtyp handelt es sich um eine grafische Darstellung der Verbesserung, die Sie durch das Verwenden des angegebenen Data Mining-Modells im Vergleich zu Vorhersagen nach dem Zufallsprinzip und dem Idealfall erhalten, dass 100 Prozent der Vorhersagen genau sind. Sie können mehrere Modelle in einem Diagramm vergleichen.  
   
 ## <a name="example"></a>Beispiel  
  Angenommen, die Marketingabteilung von Adventure Works Cycles möchte eine zielgerichtete Mailingkampagne starten. Aus vergangenen Kampagnen weiß man, dass typischerweise mit einer Antwortquote von 10 Prozent zu rechnen ist. Eine Liste mit 10.000 potenziellen Kunden ist in einer Tabelle in der Datenbank gespeichert. Ausgehend von der typischen Antwortquote ist zu erwarten, dass 1.000 Kunden antworten.  
@@ -41,29 +41,29 @@ ms.locfileid: "66062988"
 ## <a name="using-the-accuracy-chart-wizard"></a>Verwenden des Genauigkeitsdiagramm-Assistenten  
  Beim Erstellen eines Genauigkeitsdiagramms müssen Sie auf eine bereits vorhandene Data Mining-Struktur verweisen. Sie können die Genauigkeit mehrerer Modelle messen, die auf dieser Struktur basieren, sofern sie das Gleiche vorhersagen.  
   
- Wenn Sie nicht sicher sind, welche Strukturen verfügbar sind, können Sie den Server durchsuchen. Weitere Informationen finden Sie unter [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
+ Wenn Sie nicht sicher sind, welche Strukturen verfügbar sind, können Sie den Server durchsuchen. Weitere Informationen finden Sie unter durch [Suchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
 #### <a name="to-create-an-accuracy-chart"></a>So erstellen Sie ein Genauigkeitsdiagramm  
   
-1.  Klicken Sie auf die **Data Mining-Client** Menüband.  
+1.  Klicken Sie auf das Menüband **Data Mining-Client** .  
   
-2.  In der **Genauigkeit und Überprüfung** auf **Genauigkeitsdiagramm**.  
+2.  Klicken Sie in der Gruppe **Genauigkeit und Überprüfung** auf **Genauigkeits Diagramm**.  
   
-3.  In der **Struktur oder Modell auswählen** Dialogfeld Wählen Sie das Modell, das Sie auswerten möchten. Klicken Sie auf **Weiter**.  
+3.  Wählen Sie im Dialogfeld **Struktur oder Modell auswählen** das Modell aus, das Sie auswerten möchten. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
     >  Sie müssen ein Modell auswählen, das weitgehend mit den Daten übereinstimmt, die Sie überprüfen möchten.  
   
-4.  In der **geben vorherzusagende Spalte und vorherzusagenden Wert** Dialogfeld auf die Spalte, die Sie vorhersagen möchten, und einem Zielwert, falls zutreffend. Klicken Sie auf **Weiter**.  
+4.  Wählen Sie im Dialogfeld zu vorher zusagende **Spalte und vorher zusagenden Wert angeben** die Spalte aus, die Sie vorhersagen möchten, und wählen Sie ggf. einen Zielwert aus. Klicken Sie auf **Weiter**.  
   
      Im Beispiel oben könnten Sie beispielsweise die Spalte auswählen, die die Kundenreaktion wiedergibt, und den Zielwert als "Wird wahrscheinlich kaufen" festlegen.  
   
     > [!NOTE]  
     >  Für kontinuierliche Werte können Sie keine Vorhersage erstellen. Sie können jedoch die Spalte diskretisieren, indem Sie die Werte in diskrete Wertebereiche aufteilen. Dies müssen Sie tun, bevor Sie das Data Mining-Modell erstellen.  
   
-5.  In der **Quelldaten auswählen** Dialogfeld geben die Quelle der Daten, die Sie über das Modell übergeben werden, um eine Vorhersage zu erstellen.  
+5.  Geben Sie im Dialogfeld **Quelldaten auswählen** die Quelle der Daten an, die Sie über das Modell durchlaufen, um eine Vorhersage zu erstellen.  
   
-6.  Bei Verwendung eine externe Quelle von Daten und nicht die Testdaten, die mit dem Modell gespeichert sind, in der **Beziehung angeben** Dialogfeld Zuordnung die Spalten in der neuen Datenquelle den Spalten ein, die im Datamining-Modell.  
+6.  Wenn Sie eine externe Datenquelle verwenden und nicht die Testdaten, die mit dem Modell gespeichert werden, ordnen Sie im Dialogfeld **Beziehungen angeben** die Spalten in den neuen Quelldaten den Spalten zu, die im Data Mining Modell verwendet werden.  
   
      Wenn sich die Spaltennamen ähneln, werden sie automatisch vom Assistenten zugeordnet. Manche Spalten der Eingabedaten sind möglicherweise irrelevant für die Analyse und können deshalb ignoriert werden. Bestimmte Spalten sind jedoch erforderlich, damit die Eingabe vom Data Mining-Modell verarbeitet werden kann. Bei diesen Spalten handelt es sich möglicherweise um eine Transaktions-ID, den Zielwert oder Spalten, die für die Vorhersage verwendet werden. Wenn Sie eine erforderliche Spalte nicht zuordnen, gibt der Assistent eine Warnmeldung aus.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "66062988"
   
      Der Assistent erstellt einen Bericht, der das Prognosegütediagramm und zugrunde liegende Daten enthält.  
   
-### <a name="requirements"></a>Anforderungen  
- Wenn Sie einen diskreten Wert vorhersagen, müssen Sie den Zielwert auswählen, den Sie vorhersagen möchten. Wenn Ihre Daten mit einer Antwort kategorisiert werden z. B. "Ja: Kaufen"als 1 und die Antwort" Nein: Nicht kaufen"als 2, müssen Sie entweder 1 oder 2 als Vorhersagewerte angeben. Wenn Sie jedoch einen Wertebereich vorhersagen möchten, können Sie nur zwei Werte gleichzeitig vergleichen. Wenn Sie beispielsweise ein Ergebnis über 5 vorhersagen möchten, müssen Sie Ihre Quelldaten möglicherweise neu bezeichnen und ein neues Modell erstellen, in dem die Ergebnisse in zwei Gruppen aufgeteilt werden: größer als 5 und kleiner als 5 Anschließend können Sie die Genauigkeit dieser beiden Gruppen vergleichen.  
+### <a name="requirements"></a>Requirements (Anforderungen)  
+ Wenn Sie einen diskreten Wert vorhersagen, müssen Sie den Zielwert auswählen, den Sie vorhersagen möchten. Wenn Ihre Daten beispielsweise mit einer Antwort "Ja: Kaufen" als 1 und der Antwort "Nein: Nicht kaufen" als 2 kategorisiert werden, müssen Sie 1 oder 2 als Vorhersagewerte festlegen. Wenn Sie jedoch einen Wertebereich vorhersagen möchten, können Sie nur zwei Werte gleichzeitig vergleichen. Wenn Sie beispielsweise ein Ergebnis über 5 vorhersagen möchten, müssen Sie Ihre Quelldaten möglicherweise neu bezeichnen und ein neues Modell erstellen, in dem die Ergebnisse in zwei Gruppen aufgeteilt werden: größer als 5 und kleiner als 5 Anschließend können Sie die Genauigkeit dieser beiden Gruppen vergleichen.  
   
 ## <a name="understanding-accuracy"></a>Grundlegendes zur Genauigkeit  
  Sie können zwei Arten von Diagrammen erstellen: ein Diagramm, in dem Sie einen Status der vorhersagbaren Spalte angeben, und eines, in dem Sie den Status nicht angeben.  
@@ -83,7 +83,7 @@ ms.locfileid: "66062988"
   
  Weitere Informationen zur Funktionsweise eines Prognosegütediagramms und zur Berechnung der Genauigkeit anhand der zufälligen und idealen Vorhersagezeilen finden Sie im Thema "Prognosegütediagramm" in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
- [Validieren von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Validieren von Modellen und Verwenden von Modellen für Vorhersage &#40;Data Mining-Add-Ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

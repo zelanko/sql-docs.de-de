@@ -1,5 +1,5 @@
 ---
-title: LastPeriods (MDX) | Microsoft-Dokumentation
+title: Lastzeiträume (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905785"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
@@ -28,20 +28,20 @@ LastPeriods(Index [ ,Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Index*  
+ *Sin*  
  Ein gültiger numerischer Ausdruck, der eine Anzahl von Zeiträumen angibt.  
   
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die angegebene Anzahl von Zeiträumen positiv ist die **LastPeriods** Funktionsergebnis ist eine Menge von Elementen, die mit dem Element beginnen, das hinterherhinkt *Index* -1 aus dem angegebenen Elementausdruck befindet, und endet mit dem angegebene Member. Die Anzahl der Elemente, die von der Funktion zurückgegebene ist gleich *Index*.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn die angegebene Anzahl von Zeiträumen positiv ist, gibt die **Last Zeiträume** -Funktion eine Menge von Membern zurück, die mit dem Element beginnen, das *Index* -1 aus dem angegebenen Element Ausdruck verzögert und mit dem angegebenen Element endet. Die Anzahl der von der Funktion zurückgegebenen Member ist gleich dem *Index*.  
   
- Wenn die angegebene Anzahl von Zeiträumen negativ ist, ist die **LastPeriods** Funktion gibt eine Menge von Elementen, die mit dem angegebenen Element beginnt und endet mit dem Element, das führt (- *Index* - 1) aus dem angegebenen Member. Die Anzahl der Elemente, die von der Funktion zurückgegebene ist gleich dem absoluten Wert des *Index*.  
+ Wenn die angegebene Anzahl von Zeiträumen negativ ist, gibt die **Last Zeiträume** -Funktion eine Menge von Membern zurück, die mit dem angegebenen Element beginnen und mit dem Member endet, der (- *Index* -1) aus dem angegebenen Element führt. Die Anzahl der von der Funktion zurückgegebenen Member ist gleich dem absoluten Wert des *Indexes*.  
   
- Wenn die angegebene Anzahl von Zeiträumen NULL ist, ist die **LastPeriods** Funktion die leere Menge zurück. Dies ist im Gegensatz zu den **Lag** -Funktion, die das angegebene Element zurück, wenn 0 angegeben wird.  
+ Wenn die angegebene Anzahl von Zeiträumen 0 (null) ist, gibt die **Last Zeiträume** -Funktion die leere Menge zurück. Dies unterscheidet sich von der **lag** -Funktion, die den angegebenen Member zurückgibt, wenn 0 angegeben wird.  
   
- Wenn ein Element nicht angegeben wird, die **LastPeriods** Funktion verwendet **Time.CurrentMember**. Wenn keine Dimension als Time-Dimension markiert ist, wird die Funktion fehlerfrei analysiert und ausgeführt, erzeugt aber bei der Clientanwendung einen Zellenfehler.  
+ Wenn ein Member nicht angegeben wird, verwendet die Funktion " **lastzeiträume** " **time. CurrentMember**. Wenn keine Dimension als Time-Dimension markiert ist, wird die Funktion fehlerfrei analysiert und ausgeführt, erzeugt aber bei der Clientanwendung einen Zellenfehler.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Standardmeasurewert für das zweite, dritte und vierte Geschäftsquartal des Geschäftsjahres 2002 zurückgegeben.  
@@ -65,7 +65,7 @@ SELECT LastPeriods
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

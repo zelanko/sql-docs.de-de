@@ -1,5 +1,5 @@
 ---
-title: Erstellen im Bereich einer Sitzung berechnete Elemente (MDX) | Microsoft-Dokumentation
+title: Erstellen berechneter Elemente im Bereich einer Sitzung (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074552"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Erstellen berechneter Elemente im Bereich einer Sitzung (MDX)
-  Zum Erstellen eines berechneten Elements, das während einer gesamten MDX-Sitzung (Multidimensional Expressions) verfügbar ist, verwenden Sie die [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)-Anweisung. Ein berechnetes Element, das mit der CREATE MEMBER-Anweisung erstellt wurde, wird erst entfernt, nachdem die MDX-Sitzung geschlossen wurde.  
+  Zum Erstellen eines berechneten Elements, das während einer gesamten MDX-Sitzung (Multidimensional Expressions) verfügbar ist, verwenden Sie die [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) -Anweisung. Ein berechnetes Element, das mit der CREATE MEMBER-Anweisung erstellt wurde, wird erst entfernt, nachdem die MDX-Sitzung geschlossen wurde.  
   
  Wie in diesem Thema erläutert wird, ist die Syntax der CREATE MEMBER-Anweisung unkompliziert und einfach zu verwenden.  
   
@@ -51,7 +51,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen berechneter Elemente im Bereich einer Abfrage &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen berechneter Elemente im Bereich einer Abfrage &#40;MDX-&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

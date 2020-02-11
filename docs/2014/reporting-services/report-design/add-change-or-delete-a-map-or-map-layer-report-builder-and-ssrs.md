@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13a67a94f6478c085995142085a93fa85bb27d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106704"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
@@ -39,20 +39,20 @@ ms.locfileid: "66106704"
   
  Optionen können am einfachsten mit dem Kartenebenen-Assistenten hinzugefügt, entfernt oder geändert werden. Sie können Optionen über den Bereich Karte auch manuell ändern. Klicken Sie zum Anzeigen des Bereichs **Karte** in der Karte auf die Entwurfsoberfläche für Berichte. Die folgende Abbildung zeigt die Teile des Bereichs an:  
   
- ![RS_Kartenebenenbereich](../media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- Kartenebenen werden von unten nach oben in der Reihenfolge gezeichnet, in der sie im Kartenbereich angezeigt werden. In der vorstehenden Abbildung wird die Kachelebene zuerst gezeichnet, und die Polygonebene wird zuletzt gezeichnet. Ebenen, die später gezeichnet werden, können Kartenelemente auf früher gezeichneten Ebenen verdecken. Sie können die Reihenfolge der Ebenen mit den Pfeiltasten auf der Symbolleiste des Bereichs Karte ändern. Um Ebenen anzuzeigen oder auszublenden, schalten Sie das Sichtbarkeitssymbol um. Sie können die Transparenz einer Ebene ändern, auf die `Visibility` auf der Seite die **Ebenendaten** Eigenschaftendialogfeld.  
+ Kartenebenen werden von unten nach oben in der Reihenfolge gezeichnet, in der sie im Kartenbereich angezeigt werden. In der vorstehenden Abbildung wird die Kachelebene zuerst gezeichnet, und die Polygonebene wird zuletzt gezeichnet. Ebenen, die später gezeichnet werden, können Kartenelemente auf früher gezeichneten Ebenen verdecken. Sie können die Reihenfolge der Ebenen mit den Pfeiltasten auf der Symbolleiste des Bereichs Karte ändern. Um Ebenen anzuzeigen oder auszublenden, schalten Sie das Sichtbarkeitssymbol um. Sie können die Transparenz einer Ebene auf der `Visibility` Seite des Dialog Felds Eigenschaften für **Ebenendaten** ändern.  
   
  In der folgenden Tabelle werden die Symbole für den Bereich **Karte** angezeigt:  
   
-|Symbol|Description|Verwendung|  
+|Symbol|BESCHREIBUNG|Einsatzgebiete|  
 |------------|-----------------|-----------------|  
-|![RS_Symbol_Kartenebenenassistent](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Kartenebenen-Assistent|Um mit einem Assistenten eine Ebene hinzuzufügen, klicken Sie auf **Assistent für neue Ebenen**.|  
-|![RS_SymbolKarteEbeneHinzufügen](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Ebene hinzufügen|Um manuell eine Ebene hinzuzufügen, klicken Sie auf **Ebene hinzufügen**, und klicken Sie dann auf den Typ der Kartenebene, die Sie hinzufügen möchten.|  
-|![RS_SymbolKartePolygonEbene](../media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Polygonebene|Fügen Sie eine Kartenebene hinzu, die Bereiche oder Formen anzeigt, die auf Sätzen von Polygonkoordinaten basieren.|  
-|![RS_SymbolKarteLinienebene](../media/rs-iconmaplinelayer.gif "rs_IconMapPolygonLayer")|Linienebene|Fügen Sie eine Kartenebene hinzu, die Pfade oder Routen anzeigt, die auf Sätzen von Linienkoordinaten basieren.|  
-|![RS_SymbolKartePunktebene](../media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Punktebene|Fügen Sie eine Kartenebene hinzu, die Orte anzeigt, die auf Sätzen von Punktkoordinaten basieren.|  
-|![RS_SymbolKarteKachelebene](../media/rs-iconmaptilelayer.gif "rs_IconMapPointLayer")|Kachelebene|Fügen Sie eine Kartenebene hinzu, die Bing Map-Kacheln anzeigt, die dem aktuellen vom Viewport definierten Kartenansichtbereich entsprechen.|  
+|![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Kartenebenen-Assistent|Um mit einem Assistenten eine Ebene hinzuzufügen, klicken Sie auf **Assistent für neue Ebenen**.|  
+|![rs_IconMapAddLayer](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Ebene hinzufügen|Um manuell eine Ebene hinzuzufügen, klicken Sie auf **Ebene hinzufügen**, und klicken Sie dann auf den Typ der Kartenebene, die Sie hinzufügen möchten.|  
+|![rs_IconMapPolygonLayer](../media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Polygonebene|Fügen Sie eine Kartenebene hinzu, die Bereiche oder Formen anzeigt, die auf Sätzen von Polygonkoordinaten basieren.|  
+|![rs_IconMapLineLayer](../media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Linienebene|Fügen Sie eine Kartenebene hinzu, die Pfade oder Routen anzeigt, die auf Sätzen von Linienkoordinaten basieren.|  
+|![rs_IconMapPointLayer](../media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Punktebene|Fügen Sie eine Kartenebene hinzu, die Orte anzeigt, die auf Sätzen von Punktkoordinaten basieren.|  
+|![rs_IconMapTileLayer](../media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Kachelebene|Fügen Sie eine Kartenebene hinzu, die Bing Map-Kacheln anzeigt, die dem aktuellen vom Viewport definierten Kartenansichtbereich entsprechen.|  
   
  Am unteren Rand der Karte befindet sich der Kartenansichtsbereich. Um die Optionen für Zentrieren und Zoomen der Karte zu ändern, verwenden Sie die Pfeiltasten, um den Ansichtsmittelpunkt festzulegen, und den Schieberegler, um die Zoomstufe festzulegen.  
   
@@ -61,26 +61,26 @@ ms.locfileid: "66106704"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> So fügen Sie eine Ebene über den Kartenebenen-Assistenten hinzu  
+##  <a name="AddLayer"></a>So fügen Sie eine Ebene über den Karten Ebenen-Assistenten hinzu  
   
 -   Klicken Sie auf dem Menüband im Menü **Einfügen** auf **Karte**und dann auf **Karte Wizard.** . Mit dem Assistenten können Sie der vorhandenen Karte eine Ebene hinzufügen. Die meisten Assistentenseiten sind im Karten-Assistenten und im Kartenebenen-Assistenten identisch.  
   
      Weitere Informationen finden Sie unter [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
 
-##  <a name="ChangeLayer"></a> So ändern Sie die Optionen für eine Ebene mit dem Kartenebenen-Assistenten  
+##  <a name="ChangeLayer"></a>So ändern Sie die Optionen für eine Ebene mithilfe des Karten Ebenen-Assistenten  
   
--   Führen Sie den Karten-Assistenten aus. Mit diesem Assistenten können Sie die Optionen für eine von Ihnen erstellte Ebene mithilfe des Kartenebenen-Assistenten ändern. Klicken Sie im Kartenbereich mit der rechten Maustaste auf die Ebene, und klicken Sie auf die Schaltfläche für den Ebenen-Assistenten (![RS_SymbolKartenebenenassistent](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+-   Führen Sie den Karten-Assistenten aus. Mit diesem Assistenten können Sie die Optionen für eine von Ihnen erstellte Ebene mithilfe des Kartenebenen-Assistenten ändern. Klicken Sie im Kartenbereich mit der rechten Maustaste auf die Ebene, und klicken Sie auf der Symbolleiste auf die Schaltfläche für den Ebenen-Assistenten (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Weitere Informationen finden Sie unter [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
 
-##  <a name="AddVectorLayer"></a> So fügen Sie eine Punkt-, Linien- oder Polygonebene über die Symbolleiste des Kartenbereichs hinzu  
+##  <a name="AddVectorLayer"></a>So fügen Sie eine Punkt-, Linien-oder Polygon Ebene über die Symbolleiste des Karten Bereichs hinzu  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen**, und klicken Sie in der Dropdownliste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Linie**oder **Polygon**.  
+2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen** , und klicken Sie in der Dropdownliste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Linie**oder **Polygon**.  
   
     > [!NOTE]  
-    >  Sie können eine Kartenebene auch manuell hinzufügen und konfigurieren. Es empfiehlt sich jedoch, neue Ebenen mit dem Kartenebenen-Assistenten hinzuzufügen. Um den Assistenten über die Symbolleiste des Kartenbereichs zu starten, klicken Sie auf die Schaltfläche für den Ebenen-Assistenten (![RS_SymbolKartenebenenassistent](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Sie können eine Kartenebene auch manuell hinzufügen und konfigurieren. Es empfiehlt sich jedoch, neue Ebenen mit dem Kartenebenen-Assistenten hinzuzufügen. Um den Assistenten über die Symbolleiste des Karten Bereichs zu starten, klicken Sie auf die Schaltfläche des Ebenen-Assistenten (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Klicken Sie mit der rechten Maustaste auf die Ebene, und klicken Sie anschließend auf **Ebenendaten**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66106704"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="FilterAnalyticalData"></a> So filtern Sie analytische Daten für die Ebene  
+##  <a name="FilterAnalyticalData"></a>So filtern Sie analytische Daten für die Ebene  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66106704"
   
 4.  Definieren Sie eine Filtergleichung, um die in der Kartenanzeige verwendeten analytischen Daten zu beschränken. Weitere Informationen finden Sie unter [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
 
-##  <a name="PointProperties"></a> So steuern Sie Punkteigenschaften für eine Punktebene oder für Polygonmittelpunkte  
+##  <a name="PointProperties"></a>So steuern Sie Punkt Eigenschaften für eine Punkt Ebene oder für Polygon Mittelpunkte  
   
 1.  Wählen Sie **Allgemein** im Dialogfeld **Punkteigenschaften von Karten** aus, um Bezeichnung, QuickInfo und Markertypoptionen für die folgenden Kartenelemente zu ändern:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66106704"
   
     -   Der Mittelpunkt für alle dynamischen oder eingebetteten Polygone auf einer Polygonebene. Farbregeln, Größenregeln und Markertypregeln für Mittelpunkte überschreiben diese Optionen. Verwenden Sie die Seite [Eigenschaften für eingebettete Punkte der Karte (Dialogfeld), Marker](../map-embedded-point-properties-dialog-box-marker.md) , um Optionen für einen bestimmten eingebetteten Punkt zu überschreiben.  
 
-##  <a name="Embedded"></a> So geben Sie eingebettete Daten als Quelle räumlicher Daten an  
+##  <a name="Embedded"></a>So geben Sie eingebettete Daten als Quelle räumlicher Daten an  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66106704"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="ESRI"></a> So geben Sie eine ESRI-Shape-Datei als Quelle räumlicher Daten an  
+##  <a name="ESRI"></a>So geben Sie eine ESRI-Shape-Datei als Quelle räumlicher Daten an  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "66106704"
 4.  Geben Sie unter **Dateiname**den Speicherort einer ESRI-Shape-Datei ein, oder klicken Sie auf **Durchsuchen** , um eine ESRI-Shape-Datei auszuwählen.  
   
     > [!NOTE]  
-    >  Wenn sich die Shape-Datei auf dem lokalen Computer befindet, werden die räumlichen Daten in die Berichtsdefinition eingebettet. Um die Daten bei der Verarbeitung des Berichts dynamisch abzurufen, müssen Sie die ESRI-Shape-Datei (.shp) und die zugehörige Unterstützungsdatei (.dbf) auf den Berichtsserver hochladen. Weitere Informationen finden Sie unter "Vorgehensweise: Hochladen einer Datei oder eines Berichts (Berichts-Manager) "in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation.  
+    >  Wenn sich die Shape-Datei auf dem lokalen Computer befindet, werden die räumlichen Daten in die Berichtsdefinition eingebettet. Um die Daten bei der Verarbeitung des Berichts dynamisch abzurufen, müssen Sie die ESRI-Shape-Datei (.shp) und die zugehörige Unterstützungsdatei (.dbf) auf den Berichtsserver hochladen. Weitere Informationen finden Sie unter „Vorgehensweise: Hochladen einer Datei oder eines Berichts (Berichts-Manager)“ in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="DatasetField"></a> So geben Sie ein Berichtsdataset-Feld als Quelle räumlicher Daten an  
+##  <a name="DatasetField"></a>So geben Sie ein Berichts Dataset-Feld als Quelle räumlicher Daten an  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66106704"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="TileLayer"></a> So fügen Sie eine Kachelebene hinzu  
+##  <a name="TileLayer"></a>So fügen Sie eine Kachel Ebene hinzu  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "66106704"
     > [!NOTE]  
     >  Eine Kachelebene kann auch hinzugefügt werden, wenn Sie im Karten-Assistenten oder im Kartenebenen-Assistenten eine Polygon-, Linien- oder Punktebene hinzufügen. Wählen Sie auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen** die Option **Bing Maps-Hintergrund für diese Kartenansicht hinzufügen**aus.  
 
-##  <a name="DrawingOrder"></a> So ändern Sie die Zeichnungsreihenfolge einer Ebene  
+##  <a name="DrawingOrder"></a>So ändern Sie die Zeichnungsreihenfolge einer Ebene  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66106704"
   
 3.  Klicken Sie auf der Symbolleiste des Kartenbereichs auf die NACH-OBEN- oder NACH-UNTEN-TASTE, um die Zeichnungsreihenfolge der einzelnen Ebenen zu ändern.  
 
-##  <a name="Transparency"></a> So ändern Sie die Transparenz einer Polygon-, Linien- oder Punktebene  
+##  <a name="Transparency"></a>So ändern Sie die Transparenz einer Polygon-, Linien-oder Punkt Ebene  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "66106704"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="TileTransparency"></a> So ändern Sie die Transparenz einer Kachelebene  
+##  <a name="TileTransparency"></a>So ändern Sie die Transparenz einer Kachel Ebene  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "66106704"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="Secure"></a> So geben Sie eine sichere Verbindung für eine Kachelebene an  
+##  <a name="Secure"></a>So geben Sie eine sichere Verbindung für eine Kachel Ebene an  
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66106704"
   
  Die Verbindung für den Bing Maps-Webdienst ruft Bing Maps-Kacheln für diese Ebene mithilfe des HTTP-SSL (Secure Sockets Layer)-Diensts ab.  
 
-##  <a name="Language"></a> So geben Sie die Sprache für Kachelbezeichnungen an  
+##  <a name="Language"></a>So geben Sie die Sprache für Kachel Bezeichnungen an  
   
 1.  Standardmäßig wird die Sprache für Kachelformate mit Bezeichnungen vom Standardgebietsschema für den Berichts-Generator bestimmt. Sie können die Spracheinstellung für Kachelbezeichnungen auf die folgende Weise anpassen.  
   
@@ -234,9 +234,9 @@ ms.locfileid: "66106704"
   
      Die Reihenfolge zum Festlegen der Kachelbezeichnungssprache ist: Berichtseigenschaft „Language“, Standardgebietsschema für den Berichts-Generator und Karteneigenschaft „TileLanguage“.  
 
-##  <a name="ConditionalHide"></a> So blenden Sie eine Ebene auf der Grundlage einer Viewport-Zoomstufe bedingt aus  
+##  <a name="ConditionalHide"></a>So blenden Sie eine Ebene auf der Grundlage der Viewport-Zoomstufe bedingt aus  
   
-1.  Legen Sie `Visibility` Optionen, um die Anzeige für eine kartenebene zu steuern.  
+1.  Legen `Visibility` Sie Optionen fest, um die Anzeige für eine Kartenebene zu steuern.  
   
     -   Klicken Sie im Bereich „Kartenebenen“ mit der rechten Maustaste auf eine Ebene, um sie auszuwählen, und klicken Sie auf der Symbolleiste „Kartenebenen“ auf „Eigenschaften“, um **Kartenebeneneigenschaften**zu öffnen.  
   
@@ -250,6 +250,6 @@ ms.locfileid: "66106704"
   
      Sie können die Ebene auch bedingt ausblenden. Weitere Informationen finden Sie unter [Ausblenden eines Elements &#40;Berichts-Generator und SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Karten Berichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  

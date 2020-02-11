@@ -1,5 +1,5 @@
 ---
-title: Allgemeine Eigenschaftenseite, freigegebene Datenquellen (Berichts-Manager) | Microsoft-Dokumentation
+title: Allgemeine Eigenschaften (Seite), freigegebene Datenquellen (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109075"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Allgemein (Eigenschaftenseite) (Freigegebene Datenquellen, Berichts-Manager)
@@ -31,7 +31,7 @@ ms.locfileid: "66109075"
   
 3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für die freigegebene Datenquelle geöffnet.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Gibt einen Namen für die freigegebene Datenquelle an, der zum Identifizieren des Elements innerhalb des Berichtsserver-Namespaces verwendet wird.  
   
@@ -44,31 +44,31 @@ ms.locfileid: "66109075"
  **Diese Datenquelle aktivieren**  
  Mit dieser Option können Sie die freigegebene Datenquelle aktivieren oder deaktivieren. Sie können die freigegebene Datenquelle deaktivieren, um die Verarbeitung aller Berichte, Berichtsmodelle und datengesteuerten Abonnements zu verhindern, die auf dieses Element verweisen.  
   
- **Datenquellentyp**  
- Gibt die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird. Der Berichtsserver enthält Datenverarbeitungserweiterungen für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC und OLE DB. Weitere Datenverarbeitungserweiterungen können von Drittanbietern zur Verfügung stehen.  
+ **Daten Quellentyp**  
+ Gibt die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird. Der Berichts Server enthält Datenverarbeitungs Erweiterungen für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC und OLE DB. Weitere Datenverarbeitungserweiterungen können von Drittanbietern zur Verfügung stehen.  
   
  Beachten Sie, dass Sie bei Verwendung von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services nur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenquellen auswählen können.  
   
  **Verbindungszeichenfolge**  
- Geben Sie die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung mit der Datenquelle verwendet wird. Der Verbindungstyp bestimmt die Syntax, die Sie verwenden sollten. So ist z.B. eine Verbindungszeichenfolge für die XML-Datenverarbeitungserweiterung eine URL zu einem XML-Dokument. In den meisten Fällen gibt eine typische Verbindungszeichenfolge den Datenbankserver und die Datendatei an. Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] hergestellt wird:  
+ Geben Sie die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung mit der Datenquelle verwendet wird. Der Verbindungstyp bestimmt die Syntax, die Sie verwenden sollten. So ist z.B. eine Verbindungszeichenfolge für die XML-Datenverarbeitungserweiterung eine URL zu einem XML-Dokument. In den meisten Fällen gibt eine typische Verbindungszeichenfolge den Datenbankserver und die Datendatei an. Das folgende Beispiel veranschaulicht eine Verbindungs Zeichenfolge zum Herstellen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] Verbindung mit der-Datenbank:  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
 ```  
   
- **Herstellen einer Verbindung mit**  
+ **Verbindung herstellen über**  
  Gibt Optionen an, die bestimmen, wie Anmeldeinformationen abgerufen werden.  
   
 > [!IMPORTANT]  
 >  Falls die Verbindungszeichenfolge Anmeldeinformationen enthält, werden die in diesem Abschnitt festgelegten Optionen und Werte ignoriert. Beachten Sie, dass bei Angabe der Anmeldeinformationen in der Verbindungszeichenfolge die Werte für alle Benutzer, die diese Seite anzeigen, in Klartext angezeigt werden.  
   
- **Anmeldeinformationen der Benutzer den Bericht ausführen**  
+ **Bereitgestellte Anmeldeinformationen vom Benutzer, der den Bericht ausführt**  
  Jeder Benutzer muss einen Benutzernamen und ein Kennwort für den Zugriff auf die Datenquelle eingeben. Sie können den Text der Eingabeaufforderung definieren, in der die Benutzeranmeldeinformationen angefordert werden. Die Standardtextzeichenfolge lautet: "Geben Sie einen Benutzernamen und ein Kennwort für den Zugriff auf die Datenquelle ein".  
   
  Aktivieren Sie das Kontrollkästchen **Als Windows-Anmeldeinformationen verwenden, wenn eine Verbindung mit der Datenquelle hergestellt wird** , wenn es sich bei den durch den Benutzer bereitgestellten Informationen um Anmeldeinformationen der Windows-Authentifizierung handelt. Lassen Sie dieses Kontrollkästchen deaktiviert, wenn Sie die Datenbankauthentifizierung (z. B. die SQL Server-Authentifizierung) verwenden.  
   
- **Anmeldeinformationen sind sicher auf dem Berichtsserver gespeichert.**  
- Speichern Sie einen verschlüsselten Benutzernamen und ein Kennwort in der Berichtsserver-Datenbank. Wählen Sie diese Option aus, um einen Bericht unbeaufsichtigt auszuführen (z. B. Berichte, die durch Zeitpläne initiiert werden oder durch Ereignisse anstelle einer Benutzeraktion). Wenn Sie die Standardsicherheitseinstellungen verwenden, muss der Benutzername ein Windows-Domänenkonto sein. Geben Sie das Konto im folgenden Format: \<Domäne >\\< Benutzername\>. Das von Ihnen angegebene Konto muss über lokale Systemadministratorberechtigungen auf dem Computer verfügen, der die von dem Bericht verwendete Datenquelle hostet.  
+ **Anmeldeinformationen, die sicher auf dem Berichtsserver gespeichert sind**  
+ Speichern Sie einen verschlüsselten Benutzernamen und ein Kennwort in der Berichtsserver-Datenbank. Wählen Sie diese Option aus, um einen Bericht unbeaufsichtigt auszuführen (z.B. Berichte, die durch Zeitpläne oder durch Ereignisse anstelle einer Benutzeraktion initiiert werden). Wenn Sie die Standardsicherheitseinstellungen verwenden, muss der Benutzername ein Windows-Domänenkonto sein. Geben Sie das Konto im folgenden Format \<an: \\ Domäne>\><Benutzername. Das von Ihnen angegebene Konto muss über lokale Systemadministratorberechtigungen auf dem Computer verfügen, der die von dem Bericht verwendete Datenquelle hostet.  
   
  Aktivieren Sie das Kontrollkästchen **Als Windows-Anmeldeinformationen verwenden, wenn eine Verbindung mit der Datenquelle hergestellt wird** , wenn es sich bei den Informationen um Anmeldeinformationen der Windows-Authentifizierung handelt. Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie Datenbankauthentifizierung (z. B. eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung) verwenden.  
   
@@ -84,7 +84,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Anmeldeinformationen sind nicht erforderlich**  
  Geben Sie an, dass keine Anmeldeinformationen für den Zugriff auf die Datenquelle erforderlich sind. Beachten Sie, dass diese Option keine Auswirkungen hat, wenn für die Datenquelle eine Benutzeranmeldung erforderlich ist. Sie sollten diese Option nur auswählen, wenn für die Datenquellenverbindung keine Benutzeranmeldeinformationen erforderlich sind.  
   
- Um diese Option verwenden zu können, müssen Sie vorher das unbeaufsichtigte Ausführungskonto für die Bereitstellung des Berichtsservers konfiguriert haben. Das unbeaufsichtigte Ausführungskonto wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn keine anderen Quellen für Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet. Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Um diese Option verwenden zu können, müssen Sie vorher das unbeaufsichtigte Ausführungskonto für die Bereitstellung des Berichtsservers konfiguriert haben. Das unbeaufsichtigte Ausführungskonto wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn keine anderen Quellen für Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet. Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
@@ -92,16 +92,16 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um die freigegebene Datenquelle zu löschen. Das Löschen einer freigegebenen Datenquelle deaktiviert alle Berichte, Modelle und datengesteuerten Abonnements, die sie verwenden. Um Berichte, Modelle und Abonnements erneut zu aktivieren, müssen Sie alle einzeln öffnen und die entsprechenden Datenquelleneigenschaften so aktualisieren, dass sie eine andere freigegebene Datenquelle verwenden. Für Berichte und Abonnements können Sie Verbindungsinformationen für die Datenquelle als Eigenschaftenwerte der Datenquelle angeben.  
   
- **Verschieben**  
+ **Move**  
  Klicken Sie auf diese Schaltfläche, um die freigegebene Datenquelle an einen anderen Speicherort im Namespace des Berichtsserverordners zu verschieben.  
   
  **Modell generieren**  
  Klicken Sie auf diese Schaltfläche, um auf der Basis der freigegebenen Datenquelle ein neues Modell zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Neue Datenquelle (Seite, Berichts-Manager)](../../2014/reporting-services/new-data-source-page-report-manager.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Die Seite "neue Datenquelle" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

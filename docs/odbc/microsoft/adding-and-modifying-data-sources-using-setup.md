@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen und Ändern von Datenquellen mithilfe des Setups | Microsoft-Dokumentation
+title: Hinzufügen und Ändern von Datenquellen mithilfe von Setup | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,63 +18,63 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 621d10c3c602b2f406461a24e53b2302e45835eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901402"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Erstellen und Ändern von Datenquellen mithilfe der Einrichtung
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Eine Datenquelle gibt einen Pfad zu den Daten, die eine Netzwerkbibliothek, Server, Datenbank und andere Attribute enthalten können: in diesem Fall die Datenquelle ist der Pfad zu einer Oracle-Datenbank. Um eine Verbindung mit einer Datenquelle herzustellen, überprüft der Treiber-Manager die Windows-Registrierung für Verbindungsinformationen an.  
+ Eine Datenquelle identifiziert einen Pfad zu Daten, die eine Netzwerk Bibliothek, einen Server, eine Datenbank und andere Attribute enthalten können. in diesem Fall ist die Datenquelle der Pfad zu einer Oracle-Datenbank. Zum Herstellen einer Verbindung mit einer Datenquelle prüft der Treiber-Manager die Windows-Registrierung auf bestimmte Verbindungsinformationen.  
   
- Der Registrierungseintrag, der von ODBC-Datenquellen-Administrator erstellt, wird von der ODBC-Treiber-Manager und ODBC-Treiber verwendet. Dieser Eintrag enthält Informationen über jede Datenquelle und den zugehörigen Treiber. Bevor Sie mit einer Datenquelle verbinden können, muss die Verbindungsinformationen in der Registrierung hinzugefügt werden.  
+ Der vom ODBC-Datenquellen-Administrator erstellte Registrierungs Eintrag wird vom ODBC-Treiber-Manager und von ODBC-Treibern verwendet. Dieser Eintrag enthält Informationen zu den einzelnen Datenquellen und den zugehörigen Treibern. Bevor Sie eine Verbindung mit einer Datenquelle herstellen können, müssen die zugehörigen Verbindungsinformationen der Registrierung hinzugefügt werden.  
   
- Verwenden Sie zum Hinzufügen und Konfigurieren von Datenquellen, die [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md). Der ODBC-Administrator aktualisiert Ihre Datenquellen-Verbindungsinformationen an. Hinzufügen von Datenquellen aktualisiert den ODBC-Administrator die Informationen in der Registrierung für Sie.  
+ Verwenden Sie zum Hinzufügen und Konfigurieren von Datenquellen den [ODBC-Daten](../../odbc/admin/odbc-data-source-administrator.md)Quellen-Administrator. Der ODBC-Administrator aktualisiert die Verbindungsinformationen für die Datenquelle. Wenn Sie Datenquellen hinzufügen, aktualisiert der ODBC-Administrator die Registrierungsinformationen für Sie.  
   
-### <a name="to-add-a-data-source-for-windows"></a>Hinzufügen eine Datenquelle für Windows  
+### <a name="to-add-a-data-source-for-windows"></a>So fügen Sie eine Datenquelle für Windows hinzu  
   
-1.  Öffnen Sie die ODBC-Datenquellen-Administrator.  
+1.  Öffnen Sie den ODBC-Datenquellen-Administrator.  
   
-2.  Klicken Sie auf "hinzufügen", klicken Sie im Dialogfeld ODBC-Datenquellen-Administrator. Das Dialogfeld "neue Datenquelle erstellen" angezeigt wird.  
+2.  Klicken Sie im Dialogfeld ODBC-Datenquellen-Administrator auf hinzufügen. Das Dialogfeld neue Datenquelle wird angezeigt.  
   
-3.  Wählen Sie Microsoft ODBC für Oracle, und klicken Sie dann auf "Fertig stellen". Microsoft ODBC für Oracle-Setup-Dialogfeld wird angezeigt.  
+3.  Wählen Sie Microsoft ODBC für Oracle aus, und klicken Sie auf Fertigstellen. Das Setup Dialogfeld für Microsoft ODBC für Oracle wird angezeigt.  
   
-4.  Geben Sie im Data Source Name den Namen der Datenquelle, die Sie zugreifen möchten. Es kann ein beliebiger Name sein, die Sie auswählen.  
+4.  Geben Sie im Feld Datenquellen Name den Namen der Datenquelle ein, auf die Sie zugreifen möchten. Dies kann ein beliebiger Name sein, den Sie auswählen.  
   
-5.  Geben Sie im Feld Beschreibung die Beschreibung für den Treiber aus. Dieses optionale Feld beschreibt den ODBC-Treiber, dem mit die Datenquelle verbindet. Es kann ein beliebiger Name sein, die Sie auswählen.  
+5.  Geben Sie im Feld Beschreibung die Beschreibung für den Treiber ein. In diesem optionalen Feld wird der Datenbanktreiber beschrieben, mit dem die Datenquelle eine Verbindung herstellt. Dies kann ein beliebiger Name sein, den Sie auswählen.  
   
-6.  Geben Sie im Feld Benutzername Ihrer Datenbank-Benutzernamen (die Datenbankbenutzer-ID).  
+6.  Geben Sie im Feld Benutzername Ihren Datenbankbenutzer Namen (Ihre Datenbank-Benutzer-ID) ein.  
   
-7.  Geben Sie in das Feld den Alias der Datenbank, oder die Verbindungszeichenfolge für die Oracle-Server-Engine, die Sie zugreifen möchten.  
+7.  Geben Sie im Feld Server den Datenbankalias oder die Verbindungs Zeichenfolge für die Oracle-Server-Engine ein, auf die Sie zugreifen möchten.  
   
 8.  Klicken Sie auf OK, um diese Datenquelle hinzuzufügen.  
   
 > [!NOTE]  
->  Das Dialogfeld "Datenquellen" angezeigt wird, und den ODBC-Administrator aktualisiert die Informationen in der Registrierung. Der Benutzer benennen und die Verbindungszeichenfolge, die von Ihnen eingegebene werden die Standardwerte für die Verbindung für diese Datenquelle aus, wenn Sie eine Verbindung damit herstellen.  
+>  Das Dialogfeld Datenquellen wird angezeigt, und der ODBC-Administrator aktualisiert die Registrierungsinformationen. Der Benutzername und die Verbindungs Zeichenfolge, die Sie eingegeben haben, werden als Standard Verbindungs Werte für diese Datenquelle angezeigt, wenn Sie eine Verbindung damit herstellen.  
   
-1.  Klicken Sie auf Optionen stellen weitere Angaben über den ODBC-Treiber für Oracle-Setup:  
+1.  Klicken Sie auf Optionen, um weitere Spezifikationen zum ODBC-Treiber für Oracle-Setup zu erstellen:  
   
-    -   **Übersetzung** -klicken Sie auf auswählen, wählen Sie einen Übersetzer geladenen Daten. Der Standardwert ist \<keine Translator >.  
+    -   **Übersetzung** : Klicken Sie auf auswählen, um einen geladenen Datenkonvertierer auszuwählen. Der Standardwert \<ist kein Konvertierungs>.  
   
-    -   **Leistung** -der enthalten Hinweise im Kontrollkästchen Katalogfunktionen angibt, ob es sich bei gibt der Treiber "Hinweise"-Spalten für die [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) Resultset. Der ODBC-Treiber für Oracle bietet schnelleren Zugriff auf, wenn dieser Wert nicht festgelegt ist.  
+    -   **Leistung** : das Kontrollkästchen "Hinweise in Katalog Funktionen einschließen" gibt an, ob der Treiber Hinweise Spalten für das [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) -Resultset zurückgibt. Der ODBC-Treiber für Oracle bietet schnelleren Zugriff, wenn dieser Wert nicht festgelegt ist.  
   
-         Die SYNONYME sind Kontrollkästchen für die SQL-Spalten gibt an, ob der Treiber die Spalteninformationen zurückgegeben. **Puffergröße** gibt die Größe in Byte zugeordnet, um die abgerufene Daten zu erhalten. Der Treiber optimiert werden abgerufen, sodass einen Abruf aus der Oracle-Server genügend Zeilen für einen Puffer mit der angegebenen Größe füllen zurückgibt. Größere Werte sind tendenziell zu erhöhen, wenn eine große Datenmenge abrufen.  
+         Das Kontrollkästchen Synonyme in SQL-Spalten einschließen gibt an, ob der Treiber Spalten Informationen zurückgibt. **Puffergröße** gibt die Größe in Bytes an, die zum Empfangen von abgerufenen Daten zugeordnet ist. Der Treiber optimiert das Abrufen, sodass ein Abruf vom Oracle-Server genügend Zeilen zurückgibt, um einen Puffer mit der angegebenen Größe auszufüllen. Größere Werte verbessern tendenziell die Leistung, wenn Sie viele Daten abrufen.  
   
-    -   **Anpassung** – Kontrollkästchen im erzwingen ODBC DayOfWeek-Standard gibt an, ob das Resultset in das angegebene ODBC-Tag der Woche-Format entspricht (Sonntag = 1; Samstag = 7). Wenn dieses Kontrollkästchen deaktiviert ist, wird der Wert der Gebietsschema-spezifische Oracle zurückgegeben.  
+    -   **Anpassung** : das Kontrollkästchen ODBC DayOfWeek Standard erzwingen gibt an, ob das Resultset dem von ODBC angegebenen Tag-of-week-Format entsprechen soll (Sonntag = 1; Samstag = 7). Wenn dieses Kontrollkästchen deaktiviert ist, wird der Gebiets Schema spezifische Oracle-Wert zurückgegeben.  
   
-         Die SQLDescribeCol **gibt immer einen Wert für Genauigkeit** Kontrollkästchen gibt an, und zwar unabhängig davon, ob der Treiber einen Wert ungleich NULL für zurückgeben soll die *CbColDef* Argument **SQLDescribeCol**. Dieses Verbindungszeichenfolgenattribut gilt nur für Spalten, in denen es keine Skalierung Oracle definiert, ist wie z. B. berechnete numerische, Spalten und Spalten als Zahl ohne eine Genauigkeit oder Dezimalstellenanzahl. Ein **SQLDescribeCol** für die Genauigkeit gibt 130 aufrufen, wenn Oracle diese Informationen nicht bereitstellt. Wenn dieses Kontrollkästchen deaktiviert ist, wird der Treiber stattdessen für diese Spaltentypen 0 zurück.  
+         Das Kontrollkästchen SQLDescribeCol **gibt immer einen Wert für die Genauigkeit zurück** . gibt an, ob der Treiber einen Wert ungleich 0 (null) für das *cbcoldef* -Argument von **SQLDescribeCol**zurückgeben soll. Dieses Verbindungs Zeichen folgen Attribut gilt nur für Spalten, bei denen keine Oracle-definierte Skala vorhanden ist, z. b. berechnete numerische Spalten und Spalten, die als Zahl ohne Genauigkeit oder Dezimalstelle definiert sind. Ein **SQLDescribeCol** -Befehl gibt 130 für die Genauigkeit zurück, wenn Oracle diese Informationen nicht bereitstellt. Wenn dieses Kontrollkästchen deaktiviert ist, gibt der Treiber stattdessen 0 für diese Spaltentypen zurück.  
   
-2.  Klicken Sie auf Hinzufügen, um eine andere Datenquelle hinzuzufügen, oder klicken Sie auf Schließen, um zu beenden.  
+2.  Klicken Sie auf Hinzufügen, um eine weitere Datenquelle hinzuzufügen, oder klicken Sie zum Beenden auf  
   
 ### <a name="to-modify-a-data-source-for-windows"></a>So ändern Sie eine Datenquelle für Windows  
   
-1.  Öffnen Sie die ODBC-Datenquellen-Administrator. Klicken Sie auf die entsprechende Registerkarte aus DSN.  
+1.  Öffnen Sie den ODBC-Datenquellen-Administrator. Klicken Sie auf die entsprechende Registerkarte DSN.  
   
-2.  Wählen Sie die Oracle-Datenquelle, die Sie ändern, und klicken Sie dann auf konfigurieren möchten. Microsoft ODBC für Oracle-Setup-Dialogfeld wird angezeigt.  
+2.  Wählen Sie die zu ändernde Oracle-Datenquelle aus, und klicken Sie dann auf konfigurieren. Das Setup Dialogfeld für Microsoft ODBC für Oracle wird angezeigt.  
   
-3.  Ändern Sie die entsprechenden Datenquellenfeldern, und klicken Sie dann auf OK.  
+3.  Ändern Sie die entsprechenden Datenquellen Felder, und klicken Sie dann auf OK.  
   
- Wenn Sie nach dem die Informationen in diesem Dialogfeld ändern, aktualisiert der ODBC-Administrator Informationen aus der Registrierung.
+ Nachdem Sie die Informationen in diesem Dialogfeld geändert haben, aktualisiert der ODBC-Administrator die Registrierungsinformationen.

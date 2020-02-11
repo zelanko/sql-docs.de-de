@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftenseite "Allgemein", "Ressourcen (Berichts-Manager) | Microsoft-Dokumentation
+title: Allgemeine Eigenschaften (Seite), Ressourcen (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109114"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Allgemein (Eigenschaftenseite, Ressourcen) (Berichts-Manager)
@@ -33,9 +33,9 @@ ms.locfileid: "66109114"
   
 3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für die Ressource geöffnet.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
- Geben Sie einen Namen für die Ressource an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ / * \< > | "oder / beim Angeben eines Namens.  
+ Geben Sie einen Namen für die Ressource an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $/* \< > | "oder/, wenn ein Name angegeben wird.  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung der Ressource ein. Diese Beschreibung wird für Benutzer, die über die Berechtigung zum Zugreifen auf die Ressource verfügen, auf der Seite Inhalt angezeigt.  
@@ -52,16 +52,16 @@ ms.locfileid: "66109114"
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um die Ressource aus der Berichtsserver-Datenbank zu löschen.  
   
- **Verschieben**  
+ **Move**  
  Klicken Sie auf diese Schaltfläche, um eine Ressource in der Ordnerhierarchie des Berichtsservers zu verschieben. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie Ordner nach einem neuen Speicherort durchsuchen können.  
   
- **Ersetzen**  
+ **Stelle**  
  Klicken Sie auf diese Schaltfläche, um die Seite Ressource importieren zu öffnen, mit deren Hilfe Sie eine Ressourcendatei aus einer Dateifreigabe auswählen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Anzeigen der Seite "Ressourcen" &#40;Berichts-Manager&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Sicherheit (Eigenschaftenseite), Elemente, (Berichts-Manager)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [Anzeigen der Seite, Ressourcen &#40;Berichts-Manager&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Sicherheit (Eigenschaften Seite), Elemente &#40;Berichts-Manager&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

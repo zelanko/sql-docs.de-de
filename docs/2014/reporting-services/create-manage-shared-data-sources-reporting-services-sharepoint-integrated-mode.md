@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109631"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)
@@ -36,13 +36,13 @@ ms.locfileid: "66109631"
 2.  Klicken Sie im Menü **Neues Dokument** auf **Berichtsdatenquelle**.  
   
     > [!NOTE]  
-    >  Wenn das Element **Berichtsdatenquelle** nicht im Menü angezeigt wird, wurde der Inhaltstyp für Berichtsdatenquellen noch nicht aktiviert. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Wenn das Element **Berichtsdatenquelle** nicht im Menü angezeigt wird, wurde der Inhaltstyp für Berichtsdatenquellen noch nicht aktiviert. Weitere Informationen finden Sie unter [Hinzufügen von Berichts Server-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  Geben Sie unter **Name**einen beschreibenden Namen für die RSDS-Datei ein.  
   
 4.  Wählen Sie unter **Datenquellentyp**den Datenquellentyp aus der Liste aus. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-5.  Geben Sie unter **Connection String**einen Zeiger auf die Datenquelle und alle anderen Einstellungen an, die zum Herstellen einer Verbindung mit der externen Datenquelle erforderlich sind. Die Syntax der Verbindungszeichenfolge wird durch den von Ihnen verwendeten Datenquellentyp bestimmt. Weitere Informationen und Beispiele finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+5.  Geben Sie unter **Connection String**einen Zeiger auf die Datenquelle und alle anderen Einstellungen an, die zum Herstellen einer Verbindung mit der externen Datenquelle erforderlich sind. Die Syntax der Verbindungszeichenfolge wird durch den von Ihnen verwendeten Datenquellentyp bestimmt. Weitere Informationen und Beispiele finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)Zeichenfolgen in Reporting Services.  
   
 6.  Geben Sie in **Anmeldeinformationen**an, wie der Berichtsserver Anmeldeinformationen für den Zugriff auf die externe Datenquelle erhält. Anmeldeinformationen können für die unbeaufsichtigte Berichtsverarbeitung gespeichert, angefordert, integriert oder konfiguriert werden.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66109631"
   
  Gehen Sie beim Löschen eines Berichtsmodells umsichtig vor. Wenn Sie ein Modell löschen, können Sie die Berichte, die auf diesem Modell im Berichts-Generator basieren, nicht mehr öffnen und ändern. Wenn Sie versehentlich ein Modell löschen, das von vorhandenen Berichten verwendet wird, müssen Sie das Modell erneut generieren, alle Berichte, von denen das Modell verwendet wird, erneut erstellen und speichern und die zu verwendende Modellelementsicherheit erneut angeben. Es ist nicht möglich, das Modell einfach neu zu generieren und es anschließend einem vorhandenen Bericht anzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

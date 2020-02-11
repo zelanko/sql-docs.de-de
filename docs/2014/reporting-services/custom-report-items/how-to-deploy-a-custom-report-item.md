@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Bereitstellen eines benutzerdefinierten Berichtselements | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265078"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Gewusst wie: Bereitstellen eines benutzerdefinierten Berichtselements
+# <a name="how-to-deploy-a-custom-report-item"></a>Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements
   Zum Bereitstellen eines benutzerdefinierten Berichtselements in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] müssen Sie die Konfigurationsdateien des Berichtsservers ändern und die Entwurfszeit- und die Laufzeitkomponentenassemblys in die entsprechenden Anwendungsordner für den Berichts-Designer und den Berichtsserver kopieren.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>So stellen Sie ein benutzerdefiniertes Berichtselement bereit  
   
-1.  Bearbeiten Sie die Datei Rsreportdesigner.config, um die Laufzeit- und Entwurfszeitkomponenten für ein benutzerdefiniertes Berichtselement für die Verwendung im Designer zu konfigurieren. Beachten Sie dabei, dass der `ReportItemName`-Eintrag mit dem in der `CustomReportItemAttribute`-Klasse verwendeten `CustomReportItemDesigner`-Attribut übereinstimmen muss. Zum Beispiel:  
+1.  Bearbeiten Sie die Datei Rsreportdesigner.config, um die Laufzeit- und Entwurfszeitkomponenten für ein benutzerdefiniertes Berichtselement für die Verwendung im Designer zu konfigurieren. Beachten Sie dabei, dass der `ReportItemName`-Eintrag mit dem in der `CustomReportItemAttribute`-Klasse verwendeten `CustomReportItemDesigner`-Attribut übereinstimmen muss. Beispiel:  
   
     ```  
     <ReportItems>  
@@ -38,7 +38,7 @@ ms.locfileid: "63265078"
     </ReportItemConverter>  
     ```  
   
-2.  Bearbeiten Sie die Datei Rsreportserver.config, um die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement zu registrieren. Zum Beispiel:  
+2.  Bearbeiten Sie die Datei Rsreportserver.config, um die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement zu registrieren. Beispiel:  
   
     ```  
     <ReportItems>  
@@ -46,7 +46,7 @@ ms.locfileid: "63265078"
     </ReportItems>  
     ```  
   
-3.  Bearbeiten Sie die Datei Rsssrvpolicy.config, um ein `CodeGroup`-Objekt hinzuzufügen, das dem benutzerdefinierten Berichtselement die richtigen Berechtigungen gewährt. Zum Beispiel:  
+3.  Bearbeiten Sie die Datei Rsssrvpolicy.config, um ein `CodeGroup`-Objekt hinzuzufügen, das dem benutzerdefinierten Berichtselement die richtigen Berechtigungen gewährt. Beispiel:  
   
     ```  
     <CodeGroup   
@@ -65,7 +65,7 @@ ms.locfileid: "63265078"
   
 5.  Kopieren Sie die Entwurfszeitkomponenten-DLL für ein benutzerdefiniertes Berichtselement in das Verzeichnis %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md)   
  [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)  
   

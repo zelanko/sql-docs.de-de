@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67727743"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>Details  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67727743"
   
  Fehlermeldung 1505 gibt die erste Zeile zurück, in der ein Verstoß gegen die Eindeutigkeitseinschränkung vorliegt. Es gibt möglicherweise weitere doppelte Zeilen in der Tabelle. Führen Sie zum Ermitteln aller doppelten Zeilen eine Abfrage der angegebenen Tabelle mit der GROUP BY-Klausel und der HAVING-Klausel aus, um die doppelten Zeilen zu melden. Mit folgender Abfrage werden beispielsweise die Zeilen aus der **Employee**-Tabelle zurückgegeben, die doppelte Vor- und Nachnamen aufweisen.  
   
- SELECT LastName, FirstName, Count (\*) von Dbo. Employee-Gruppe von LastName, FirstName müssen Count (\*) > 1.  
+ Wählen Sie in dbo LastName, FirstName, count (\*) aus. Employee Group by LastName, FirstName mit count (\*) > 1;  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Ziehen Sie die folgenden Lösungen in Betracht:  
@@ -59,9 +59,9 @@ ms.locfileid: "67727743"
   
 -   Wählen Sie die als NOT NULL definierten Spalten aus, wenn Sie die Spalten für einen eindeutigen Index bzw. eine eindeutige Einschränkung auswählen. Damit können Sie die Möglichkeit eines Verstoßes gegen die Eindeutigkeit vermeiden, wenn die Schlüsselwerte mehrerer Zeilen NULL-Werte enthalten.  
   
--   Wenn die doppelten Werte durch Dateneingabefehler entstanden sind, korrigieren Sie die Daten manuell, und erstellen Sie dann den Index bzw. die Einschränkung. Informationen zum Entfernen doppelter Zeilen in einer Tabelle finden Sie im Wissensdatenbankartikel 139444: [Entfernen von doppelten Zeilen aus einer Tabelle in SQL Server](https://support.microsoft.com/kb/139444)  
+-   Wenn die doppelten Werte durch Dateneingabefehler entstanden sind, korrigieren Sie die Daten manuell, und erstellen Sie dann den Index bzw. die Einschränkung. Informationen zum Entfernen von doppelten Zeilen aus einer Tabelle finden Sie im Knowledge Base-Artikel 139444: [Entfernen von doppelten Zeilen aus einer Tabelle in SQL Server](https://support.microsoft.com/kb/139444).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [Erstellen eindeutiger Indizes](../indexes/indexes.md)   
  [Erstellen von Unique-Einschränkungen](../tables/create-unique-constraints.md)  

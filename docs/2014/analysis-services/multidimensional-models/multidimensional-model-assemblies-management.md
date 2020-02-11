@@ -1,5 +1,5 @@
 ---
-title: Verwaltung von mehrdimensionalen Modellassemblys | Microsoft-Dokumentation
+title: Verwaltung von mehrdimensionalen modellassemblys Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073527"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, die mit den Sprachen MDX (Multidimensional Expressions) und DMX (Data Mining Extensions) verwendet werden können. Diese sind für standardmäßige statistische Berechnungen ebenso geeignet wie für das Durchlaufen der Elemente in einer Hierarchie. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet viele intrinsische Funktionen für die Verwendung mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX), die alle von standardmäßigen statistischen Berechnungen bis hin zum Durchlaufen der Elemente in einer Hierarchie erfüllen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sollen. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
   
  Deshalb bietet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Möglichkeit, einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder -Datenbank Assemblys hinzuzufügen. Mithilfe von Assemblys können Sie mit einer beliebigen CLR-Sprache (Common Language Runtime), z. B. Microsoft Visual Basic .NET oder Microsoft Visual C#, externe benutzerdefinierte Funktionen erstellen. Darüber hinaus können Sie COM-Automatisierungssprachen (Component Object Model) wie Microsoft Visual Basic oder Microsoft Visual C++ verwenden.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66073527"
   
  Dem Server kann eine Assembly mit neuen Prozeduren und Funktionen hinzugefügt werden. Sie können Assemblys verwenden, um benutzerdefinierte Funktionen zu verbessern oder hinzuzufügen, die nicht vom Server bereitgestellt werden. Mithilfe von Assemblys können Sie mehrdimensionalen Ausdrücken (MDX), Data Mining-Erweiterungen oder gespeicherten Prozeduren neue Funktionen hinzufügen. Assemblys werden von der Position geladen, auf der die benutzerdefinierte Anwendung ausgeführt wird. Eine Kopie der Binärdateien der Assembly wird zusammen mit den Datenbankdaten auf dem Server gespeichert. Wenn eine Assembly entfernt wird, wird die kopierte Assembly ebenfalls vom Server entfernt.  
   
- Assemblys können zwei unterschiedliche Typen aufweisen: COM und CLR. CLR-Assemblys sind Assemblys, die in .NET Framework-Programmiersprachen wie C#, Visual Basic .NET und Managed C++ entwickelt wurden. COM-Assemblys sind COM-Bibliotheken, die auf dem Server registriert werden müssen.  
+ Assemblys können von zwei verschiedenen Typen sein: COM und CLR. CLR-Assemblys sind Assemblys, die in .NET Framework-Programmiersprachen wie C#, Visual Basic .NET und Managed C++ entwickelt wurden. COM-Assemblys sind COM-Bibliotheken, die auf dem Server registriert werden müssen.  
   
  Assemblys können <xref:Microsoft.AnalysisServices.Server> - oder <xref:Microsoft.AnalysisServices.Database> -Objekten hinzugefügt werden. Serverassemblys können von allen mit dem Server verbundenen Benutzern und allen Objekten auf dem Server aufgerufen werden. Datenbankassemblys können nur von <xref:Microsoft.AnalysisServices.Database> -Objekten aufgerufen werden oder von Benutzern, die mit der Datenbank verbunden sind.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66073527"
   
  Die Sicherheitsinformationen beinhalten den Berechtigungssatz und den für die Ausführung der Assembly verwendeten Identitätswechsel.  
   
-## <a name="calling-user-defined-functions"></a>Aufrufen von benutzerdefinierten Funktionen  
+## <a name="calling-user-defined-functions"></a>Aufrufen benutzerdefinierter Funktionen  
  Das Aufrufen einer benutzerdefinierten Funktion in einer Assembly erfolgt auf dieselbe Art wie das Aufrufen einer systeminternen Funktion, abgesehen davon, dass Sie einen vollqualifizierten Namen verwenden müssen. Beispielsweise ist eine benutzerdefinierte Funktion, die einen von MDX erwarteten Typ zurückgibt, in einer MDX-Abfrage enthalten, wie das folgende Beispiel zeigt:  
   
 ```  
@@ -69,26 +69,27 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Um eine benutzerdefinierte Funktion von einer bestimmten CLR-Assembly aus aufzurufen, wird der benutzerdefinierten Funktion der Assemblyname, der vollständige Klassenname und der Prozedurname vorangestellt, wie im Folgenden dargestellt:  
   
- *Assemblyname*.*VollständigerKlassenname*.*Prozedurname*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*. *FullClassName*. *Prozevername*(*Argument1*, *Argument2*,...)  
   
  Um die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sicherzustellen, ist die folgende Syntax ebenfalls zulässig:  
   
- *Assemblyname*!*VollständigerKlassenname*!*Prozedurname*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*! *FullClassName*! *Prozevername*(*Argument1*, *Argument2*,...)  
   
  Unterstützt eine COM-Bibliothek mehrere Schnittstellen, kann der Prozedurname auch mithilfe der Schnittstellen-ID aufgelöst werden, wie im Folgenden dargestellt:  
   
- *Assemblyname*!*Schnittstellen-ID*!*Prozedurname*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*! *Interfakeid*! *Prozevername*(*Argument1*, *Argument2*,...)  
   
 ## <a name="security"></a>Sicherheit  
  Die Sicherheit für Assemblys basiert auf dem .NET Framework-Sicherheitsmodell, bei dem es sich um ein Codezugriffs-Sicherheitsmodell handelt. .NET Framework unterstützt einen Codezugriffs-Sicherheitsmechanismus, der annimmt, dass die Laufzeit sowohl vollständig vertrauenswürdigen als auch teilweise vertrauenswürdigen Code hosten kann. Die durch die .NET Framework-Codezugriffssicherheit geschützten Ressourcen sind üblicherweise von verwaltetem Code umgeben, der die entsprechenden Berechtigungen anfordert, bevor er den Zugriff auf die Ressource ermöglicht. Die Anforderung der Berechtigung ist nur dann erfüllt, wenn alle aufrufenden Prozesse (auf Assemblyebene) in der Aufrufliste über die entsprechende Ressourcenberechtigung verfügen.  
   
  Für Assemblys wird die Ausführungsberechtigung mit der `PermissionSet`-Eigenschaft des `Assembly`-Objekts erteilt. Die Berechtigungen, die der verwaltete Code erhält, hängen von der gültigen Sicherheitsrichtlinie ab. In einer nicht von[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gehosteten Umgebung werden drei Richtlinienebenen unterschieden: Unternehmen, Computer und Benutzer. Die gültige Berechtigungsliste, die der Code erhält, hängt von der Schnittmenge der Berechtigungen auf diesen drei Ebenen ab.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit. Diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit. Diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
   
  Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Richtlinie auf Hostebene ist eine Kombination der festen Richtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für Systemassemblys und der benutzerdefinierten Richtlinie für Benutzerassemblys. Der benutzerdefinierte Teil der Hostrichtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basiert darauf, dass der Assemblybesitzer einen von drei Berechtigungsbuckets für jede Assembly angibt:  
   
-|Berechtigungseinstellung|Description|  
+|Berechtigungseinstellung|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |`Safe`|Stellt eine interne Berechnungsberechtigung bereit. Dieser Berechtigungsbucket weist keine Berechtigungen für den Zugriff auf die geschützten Ressourcen in .NET Framework zu. Es handelt es hierbei um den Standard-Berechtigungsbucket für eine Assembly, sofern nicht mithilfe der `PermissionSet`-Eigenschaft ein anderer Bucket angegeben wurde.|  
 |`ExternalAccess`|Bietet den gleichen Zugriff wie die `Safe`-Einstellung, zusätzlich jedoch die Möglichkeit, auf externe Systemressourcen zuzugreifen. Dieser Berechtigungsbucket leistet keine Gewähr für Sicherheit (obwohl dieses Szenario gesichert werden kann), wohl aber für Zuverlässigkeit.|  
@@ -105,14 +106,15 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   Wird der Kontext des ursprünglichen aufrufenden Prozesses durch EXECUTE AS geändert, erzeugt der Zugriff auf die externe Ressource einen Fehler.  
   
- Für die `ImpersonationMode`-Eigenschaft kann `ImpersonateCurrentUser` oder `ImpersonateAnonymous` festgelegt werden. Mit der Standardeinstellung, `ImpersonateCurrentUser`, wird eine Assembly unter dem Netzwerk-Anmeldekonto des aktuellen Benutzers ausgeführt. Wenn die `ImpersonateAnonymous` Einstellung wird verwendet, wird des Ausführungskontexts entspricht der Windows-Anmeldung dem Benutzerkonto IUSER_*Servername* auf dem Server. Hierbei handelt es sich um ein Internet-Gastkonto, das nur über eingeschränkte Rechte auf dem Server verfügt. Eine Assembly, die in diesem Kontext ausgeführt wird, kann nur beschränkt auf Ressourcen auf dem lokalen Server zugreifen.  
+ Für die `ImpersonationMode`-Eigenschaft kann `ImpersonateCurrentUser` oder `ImpersonateAnonymous` festgelegt werden. Mit der Standardeinstellung, `ImpersonateCurrentUser`, wird eine Assembly unter dem Netzwerk-Anmeldekonto des aktuellen Benutzers ausgeführt. Wenn die `ImpersonateAnonymous` -Einstellung verwendet wird, entspricht der Ausführungs Kontext dem Windows-Anmelde Benutzerkonto IUSER_*Servername* auf dem Server. Hierbei handelt es sich um ein Internet-Gastkonto, das nur über eingeschränkte Rechte auf dem Server verfügt. Eine Assembly, die in diesem Kontext ausgeführt wird, kann nur beschränkt auf Ressourcen auf dem lokalen Server zugreifen.  
   
 ### <a name="application-domains"></a>Anwendungsdomänen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] macht Anwendungsdomänen nicht direkt verfügbar. Aufgrund eines Assemblysatzes, der in der gleichen Anwendungsdomäne ausgeführt wird, können Anwendungsdomänen während der Ausführung einander erkennen, indem sie den `System.Reflection`-Namespace in .NET Framework oder ein anderes Verfahren anwenden, und sie können einander auf spät gebundene Weise aufrufen. Solche Aufrufe werden der Berechtigungsüberprüfung unterzogen, die im Rahmen der autorisierungsbasierten Sicherheit von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durchgeführt wird.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] macht Anwendungsdomänen nicht direkt verfügbar. Aufgrund eines Assemblysatzes, der in der gleichen Anwendungsdomäne ausgeführt wird, können Anwendungsdomänen während der Ausführung einander erkennen, indem sie den `System.Reflection`-Namespace in .NET Framework oder ein anderes Verfahren anwenden, und sie können einander auf spät gebundene Weise aufrufen. Solche Aufrufe werden der Berechtigungsüberprüfung unterzogen, die im Rahmen der autorisierungsbasierten Sicherheit von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durchgeführt wird.  
   
  Sie sollten sich nicht darauf verlassen, Assemblys in der gleichen Anwendungsdomäne zu finden, da die Grenze der Anwendungsdomäne und die Assemblys, die sich in jeder Domäne befinden, durch die Implementierung definiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen der Sicherheit für gespeicherte Prozeduren](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definieren von gespeicherten Prozeduren](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

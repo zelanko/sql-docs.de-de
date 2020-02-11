@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479615"
 ---
 # <a name="master-data-services-database"></a>Master Data Services-Datenbank
@@ -35,17 +35,17 @@ ms.locfileid: "65479615"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Stagingtabelle für Blattelemente &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
+-   [&#40;Master Data Services der Stagingtabelle für Blatt Elemente&#41;](leaf-member-staging-table-master-data-services.md)  
   
--   [Konsolidierte Elementstagingtabelle &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Konsolidierte Element-Stagingtabelle &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Stagingtabelle für Beziehungen &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
--   [Fehler des Stagingprozesses &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
+-   [Fehler beim Stagingprozess &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Master Data Services-Datenbank](install-windows/create-a-master-data-services-database.md)   
- [Sicherheit von Datenbankobjekten &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
- [Datenbankanmeldenamen, -benutzer und -rollen &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Master Data Services Datenbank](install-windows/create-a-master-data-services-database.md)   
+ [Datenbankobjekt-Sicherheits &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
+ [Daten Bank Anmeldungen,-Benutzer und-Rollen &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

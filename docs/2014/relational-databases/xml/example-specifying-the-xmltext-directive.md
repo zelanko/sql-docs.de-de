@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der XMLTEXT-Anweisung | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der XMLTEXT-Direktive | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597547"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Anweisung
+# <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Direktive
   Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der `XMLTEXT`-Direktive in einer `SELECT`-Anweisung im EXPLICIT-Modus verarbeitet werden.  
   
  Sie sehen hier die `Person` -Tabelle. In dieser Tabelle speichert die `Overflow` -Spalte den unverbrauchten Teil des XML-Dokuments.  
@@ -48,7 +48,7 @@ FOR XML EXPLICIT;
   
  Im resultierenden XML-Dokument:  
   
--   Da für die `Overflow`-Spalte kein *AttributeName*, sondern die `xmltext`-Direktive angegeben ist, werden die Attribute des <`overflow`>-Elements der Attributliste des einschließenden <`Parent`>-Elements angehängt.  
+-   Da für die *-Spalte kein* AttributeName`Overflow`, sondern die `xmltext`-Direktive angegeben ist, werden die Attribute des <`overflow`>-Elements der Attributliste des einschließenden <`Parent`>-Elements angehängt.  
   
 -   Da das `PersonID`-Attribut des <`xmltext`>-Elements in Konflikt zu dem auf der gleichen Elementebene abgerufenen `PersonID`-Attribut steht, wird das Attribut des <`xmltext`>-Elements ignoriert, sogar wenn `PersonID` NULL ist. Im Allgemeinen überschreibt ein Attribut ein Attribut mit demselben Namen in der Überlaufspalte.  
   
@@ -62,7 +62,7 @@ FOR XML EXPLICIT;
   
  Wird dieselbe Abfrage angegeben, und die Überlaufdaten besitzen Unterelemente, werden die Unterelemente in der `Overflow`-Spalte als Unterelemente des einschließenden <`Parent`>-Elements hinzugefügt.  
   
- So werden in diesem Beispiel die Daten in der `Person`-Tabelle so geändert, dass die `Overflow`-Spalte nun Unterelemente besitzt:  
+ So werden in diesem Beispiel die Daten in der `Person` -Tabelle so geändert, dass die `Overflow` -Spalte nun Unterelemente besitzt:  
   
 ```  
 USE tempdb;  
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Wird *AttributeName* mit der `xmltext`-Direktive angegeben, werden die Attribute des <`overflow`>-Elements als Attribute der Unterelemente des einschließenden <`Parent`>-Elements hinzugefügt. Der angegebene Name für *AttributeName* wird zum Namen des Unterelements.  
+ Wird *AttributeName* mit der `xmltext`-Direktive angegeben, werden die Attribute des <`overflow`>-Elements als Attribute der Unterelemente des einschließenden <`Parent`>-Elements hinzugefügt. Der für *attributeName* angegebene Name wird zum Namen des unter Elements.  
   
- In dieser Abfrage *AttributeName*, <`overflow`>, wird angegeben, zusammen mit den `xmltext` Richtlinie:  
+ In dieser Abfrage wird *attributeName*, <`overflow`>, mit der `xmltext` -Direktive angegeben:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -167,7 +167,7 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Wenn die Daten der `XMLTEXT` -Spalte Attribute für das Stammelement enthalten, werden diese Attribute nicht im XML-Datenschema angezeigt, und der MSXML-Parser führt keine Überprüfung des resultierenden XML-Dokumentfragments aus. Zum Beispiel:  
+ Wenn die Daten der `XMLTEXT` -Spalte Attribute für das Stammelement enthalten, werden diese Attribute nicht im XML-Datenschema angezeigt, und der MSXML-Parser führt keine Überprüfung des resultierenden XML-Dokumentfragments aus. Beispiel:  
   
 ```  
 SELECT 1 AS Tag,  
@@ -194,7 +194,7 @@ FOR XML EXPLICIT, xmldata;
   
  `</overflow>`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

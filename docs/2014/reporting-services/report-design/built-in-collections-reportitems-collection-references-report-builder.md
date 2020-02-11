@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106390"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Verweise auf ReportItems-Auflistungen (Berichts-Generator und SSRS)
@@ -24,15 +24,15 @@ ms.locfileid: "66106390"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Verwenden der ReportItems-Werteigenschaft  
- Elemente in der `ReportItems` -Auflistung verfügen über nur eine Eigenschaft: -Wert. Mit dem Wert für ein `ReportItems`-Element können Daten aus einem anderen Feld im Bericht angezeigt oder berechnet werden. Der Zugriff auf den Wert des aktuellen Textfelds kann über den in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] integrierten globalen Me.Value oder einfach über Value erfolgen. In Berichtsfunktionen wie "Erster" und in Aggregatfunktionen müssen Sie jedoch die vollqualifizierte Syntax verwenden.  
+ Elemente in der `ReportItems`-Auflistung verfügen nur über eine Eigenschaft: Wert. Mit dem Wert für ein `ReportItems`-Element können Daten aus einem anderen Feld im Bericht angezeigt oder berechnet werden. Der Zugriff auf den Wert des aktuellen Textfelds kann über den in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] integrierten globalen Me.Value oder einfach über Value erfolgen. In Berichtsfunktionen wie "Erster" und in Aggregatfunktionen müssen Sie jedoch die vollqualifizierte Syntax verwenden.  
   
- Zum Beispiel:  
+ Beispiel:  
   
 -   Dieser Ausdruck wird in einem Textfeld platziert und zeigt den Wert eines `ReportItem`-Textfelds mit dem Namen `Textbox1` an:  
   
      `=ReportItems!Textbox1.Value`  
   
--   Dieser Ausdruck platziert einem `ReportItem` Textfeld Color-Eigenschaft, die Text in Schwarz angezeigt, wenn der Wert > 0 ist; andernfalls wird der Wert in Rot angezeigt:  
+-   Dieser Ausdruck, der in eine `ReportItem` Textfeld-Farb Eigenschaft eingefügt wird, zeigt den Text in schwarz an, wenn der Wert > 0 ist. Andernfalls wird der Wert rot angezeigt:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66106390"
   
  Ein Textfeld in einer Zeile, die sich in einer übergeordneten Gruppe befindet, darf beispielsweise keinen Ausdruck enthalten, der auf den Namen eines Textfelds in einer Zeile einer untergeordneten Gruppe verweist. Ein solcher Ausdruck wird nicht in einen Wert des Berichts aufgelöst, da sich das Textfeld in der untergeordneten Zeile außerhalb des Bereichs befindet. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   

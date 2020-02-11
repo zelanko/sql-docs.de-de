@@ -1,5 +1,5 @@
 ---
-title: Auswählen des Tabellenformats oder Auswählen des Matrixformats | Microsoft-Dokumentation
+title: Wählen Sie den Tabellen Stil aus, oder wählen Sie den Matrix Stil aus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 137d9d4adf1377d730bac2fc6e847f97d02c2c3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109816"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Tabellenformat auswählen/Matrixstil auswählen
-  Mithilfe dieser Seiten des Berichts-Assistenten können Sie die Text- und Linienart des Berichts auswählen. Die Liste der Stile basiert auf einer konfigurierbaren Vorlage. Berichts-Designer bietet die folgenden vordefinierten Vorlagen an: Slate-Objekt, Gesamtstruktur, Unternehmen, fett, Ozean und generische.  
+  Mithilfe dieser Seiten des Berichts-Assistenten können Sie die Text- und Linienart des Berichts auswählen. Die Liste der Stile basiert auf einer konfigurierbaren Vorlage. Der Berichts-Designer stellt die folgenden vordefinierten Vorlagen bereit: Schiefer, Wald, Geschäftlich, Fett, Ozean und Generisch.  
   
  Darüber hinaus können Sie weitere Formatvorlagen hinzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Hilfe des Berichts-Assistenten](../../2014/reporting-services/report-wizard-help.md)  
   

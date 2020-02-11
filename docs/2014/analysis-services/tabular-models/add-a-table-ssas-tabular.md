@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Tabelle (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Hinzufügen einer Tabelle (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067785"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Hinzufügen einer Tabelle (SSAS – tabellarisch)
@@ -38,8 +38,8 @@ ms.locfileid: "66067785"
 > [!NOTE]  
 >  Wenn Sie mehrere Tabellen gleichzeitig aus einer einzelnen Datenquelle importieren, werden im Modell automatisch die Tabellenbeziehungen erstellt, die in der Datenquelle vorhanden waren. Wenn Sie später eine Tabelle hinzufügen, kann es jedoch erforderlich sein, manuell Beziehungen zwischen den neu hinzugefügten und den zuvor importierten Tabellen im Modell zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](../import-data-ssas-tabular.md)   
- [Löschen einer Tabelle &#40;SSAS – tabellarisch&#41;](delete-a-table-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Importieren von Daten &#40;tabellarischen SSAS-&#41;](../import-data-ssas-tabular.md)   
+ [Löschen einer Tabelle &#40;tabellarischen SSAS-&#41;](delete-a-table-ssas-tabular.md)  
   
   

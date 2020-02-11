@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_os_threads (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_pdw_os_threads (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a4b9028d30db3c36157ef3db628dcb7c1cbeda00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899226"
 ---
-# <a name="sysdmpdwosthreads-transact-sql"></a>Sys.dm_pdw_os_threads (Transact-SQL)
+# <a name="sysdm_pdw_os_threads-transact-sql"></a>sys. dm_pdw_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|Die ID der betroffenen Knoten.<br /><br /> Pdw_node_id und Thread_id bilden den Schlüssel für diese Ansicht ein.|Finden Sie unter Node_id in [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|thread_id|**int**|Pdw_node_id und Thread_id bilden den Schlüssel für diese Ansicht ein.||  
+|pdw_node_id|**int**|Die ID des betroffenen Knotens.<br /><br /> pdw_node_id und thread_id den Schlüssel für diese Ansicht bilden.|Weitere Informationen finden Sie unter node_id in [sys. dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|thread_id|**int**|pdw_node_id und thread_id den Schlüssel für diese Ansicht bilden.||  
 |process_id|**int**|||  
-|NAME|**nvarchar(255)**|||  
+|name|**nvarchar(255)**|||  
 |priority|**int**|||  
 |start_time|**datetime**|||  
-|state|**nvarchar(32)**|||  
-|wait_reason|**nvarchar(32)**|||  
-|total_processor_elapsed_time|**bigint**|Kernelzeit insgesamt, die vom Thread verwendet wird.||  
-|total_user_elapsed_time|**bigint**|Benutzerzeit insgesamt, die vom Thread verwendet wird||  
+|state|**nvarchar (32)**|||  
+|wait_reason|**nvarchar (32)**|||  
+|total_processor_elapsed_time|**BIGINT**|Gesamte vom Thread verwendete Kernel Zeit.||  
+|total_user_elapsed_time|**BIGINT**|Gesamte vom Thread verwendete Benutzer Zeit||  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

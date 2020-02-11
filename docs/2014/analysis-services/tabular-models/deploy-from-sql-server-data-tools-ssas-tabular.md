@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von SQL Server-Datentools (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Bereitstellung aus SQL Server Data Tools (SSAS-Tabelle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067299"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Bereitstellen in SQL Server-Datentools (SSAS – tabellarisch)
@@ -24,20 +24,20 @@ ms.locfileid: "66067299"
   
  Abschnitte in diesem Thema:  
   
--   [Konfigurieren der Eigenschaften "Bereitstellungsoptionen" und "Bereitstellungsserver"](#bkmk_deploy)  
+-   [Konfigurieren von Bereitstellungs Optionen und Bereitstellungs Server Eigenschaften](#bkmk_deploy)  
   
--   [Bereitstellen einer Projektmappe für tabellarische Modelle](#bkmk_deploy_proc)  
+-   [Bereitstellen einer Lösung für tabellarische Modelle](#bkmk_deploy_proc)  
   
--   [Bereitstellungsstatus](#bkmk_deploy_status)  
+-   [Bereitstellungs Status](#bkmk_deploy_status)  
   
-##  <a name="bkmk_deploy"></a> Konfigurieren der Eigenschaften "Bereitstellungsoptionen" und "Bereitstellungsserver"  
+##  <a name="bkmk_deploy"></a>Konfigurieren von Bereitstellungs Optionen und Bereitstellungs Server Eigenschaften  
  Bevor Sie die Projektmappe für tabellarische Modelle bereitstellen, müssen Sie die Eigenschaft Bereitstellungsoptionen und die Eigenschaft Bereitstellungsserver angeben. Weitere Informationen zu Bereitstellungseigenschaften und -einstellungen finden Sie unter [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-model-solution-deployment-ssas-tabular.md)eine Projektmappe für tabellarische Modelle bereitzustellen.  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>So konfigurieren Sie die Eigenschaften "Bereitstellungsoptionen" und "Bereitstellungsserver"  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektnamen, und klicken Sie anschließend auf **Eigenschaften**.  
   
-2.  In der  **\<Projektname > Eigenschaften** Dialogfeld im **Bereitstellungsoptionen**, geben Sie Einstellungen aus, wenn diese von den Standardeinstellungen abweichen.  
+2.  Geben Sie im Dialogfeld ** \<Projektname> Eigenschaften** unter **Bereitstellungs Optionen**die Eigenschaften Einstellungen an, falls diese von den Standardeinstellungen abweichen.  
   
     > [!NOTE]  
     >  Für Modelle, die sich im zwischengespeicherten Modus befinden, ist der **Abfragemodus** immer auf **InMemory**festgelegt.  
@@ -48,17 +48,17 @@ ms.locfileid: "66067299"
 3.  Legen Sie unter **Bereitstellungsserver**die Einstellungen der Eigenschaften **Server** (Name), **Edition**, **Datenbank** (Name) und **Cubename** fest, falls diese von den Standardeinstellungen abweichen, und klicken Sie anschließend auf **OK**.  
   
 > [!NOTE]  
->  Sie können auch die Einstellung der Eigenschaft Standardbereitstellungsserver angeben, damit alle neu erstellten Projekte automatisch auf dem angegebenen Server bereitgestellt werden. Weitere Informationen finden Sie unter [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](properties-ssas-tabular.md)eine Projektmappe für tabellarische Modelle bereitzustellen.  
+>  Sie können auch die Einstellung der Eigenschaft Standardbereitstellungsserver angeben, damit alle neu erstellten Projekte automatisch auf dem angegebenen Server bereitgestellt werden. Weitere Informationen finden Sie unter [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](properties-ssas-tabular.md).  
   
-##  <a name="bkmk_deploy_proc"></a> Bereitstellen einer Projektmappe für tabellarische Modelle  
+##  <a name="bkmk_deploy_proc"></a>Bereitstellen einer Lösung für tabellarische Modelle  
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>So stellen Sie eine Projektmappe für tabellarische Modelle bereit  
   
--   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf die **erstellen** Menü klicken Sie auf **bereitstellen \<Projektname >** .  
+-   Klicken [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Sie in im Menü **Build** auf ** \<Projektname>** bereitstellen.  
   
      Im Dialogfeld **Bereitstellen** wird der Status der Metadatenbereitstellung und der Verarbeitung jeder im Modell enthaltenen Tabelle angezeigt (es sei denn, die Eigenschaft „Verarbeitungsoption“ wurde auf „Nicht verarbeiten“ festgelegt). Stellen Sie nach Abschluss des Bereitstellungsprozesses mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit der Analysis Services-Instanz her, und überprüfen Sie, ob das neue Modelldatenbankobjekt erstellt wurde, oder verwenden Sie die Clientberichterstellungsanwendung, um eine Verbindung mit dem bereitgestellten Modell herzustellen.  
   
-##  <a name="bkmk_deploy_status"></a> Bereitstellungsstatus  
+##  <a name="bkmk_deploy_status"></a>Bereitstellungs Status  
  Im Dialogfeld **Bereitstellen** können Sie den Status eines Bereitstellungsvorgangs überwachen. Außerdem kann ein Bereitstellungsvorgang beendet werden.  
   
  **Status**  
@@ -67,11 +67,11 @@ ms.locfileid: "66067299"
  **Details**  
  Listet die bereitgestellten Metadatenelemente sowie den Status für jedes Metadatenelement auf und stellt eine Meldung über etwaige Probleme bereit.  
   
- **Bereitstellung beenden**  
+ **Bereitstellung Abbrechen**  
  Klicken Sie auf diese Option, um den Bereitstellungsvorgang anzuhalten. Diese Option ist nützlich, wenn der Bereitstellungsvorgang zu lange dauert oder wenn es zu viele Fehler gibt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](properties-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bereitstellung von Tabellen Modelllösungen &#40;tabellarischen SSAS-&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [Konfigurieren von Standarddaten Modellierung und Bereitstellungs Eigenschaften &#40;tabellarischen SSAS-&#41;](properties-ssas-tabular.md)  
   
   

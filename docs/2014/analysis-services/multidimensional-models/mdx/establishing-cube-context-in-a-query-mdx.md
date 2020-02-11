@@ -1,5 +1,5 @@
 ---
-title: Des Cubekontexts in einer Abfrage (Multidimensional Expressions) | Microsoft-Dokumentation
+title: Einrichten des Cubekontexts in einer Abfrage (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074599"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Festlegen des Cubekontexts in einer Abfrage (MDX)
@@ -58,7 +58,7 @@ FROM [Adventure Works]
   
  Mit der MDX- [LookupCube](/sql/mdx/lookupcube-mdx) -Funktion können Sie Daten aus Cubes außerhalb des Cubekontexts abrufen. Darüber hinaus stehen Funktionen wie die [Filter](/sql/mdx/filter-mdx) -Funktion zur Verfügung, um den Kontext beim Auswerten der Abfrage vorübergehend einzuschränken.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

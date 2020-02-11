@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793917"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-zu-Peer-Transaktionsreplikation
@@ -49,7 +49,7 @@ ms.locfileid: "67793917"
  In folgenden Szenarien werden die typischen Verwendungsarten der Peer-zu-Peer-Replikation erläutert.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>Topologie mit zwei teilnehmenden Datenbanken  
- ![Peer-zu-Peer-Replikation, zwei Knoten](../media/repl-multinode-01.gif "Peer-toPeer replication, two nodes")  
+ ![Peer-zu-Peer-Replikation, zwei Knoten](../media/repl-multinode-01.gif "Peer-zu-Peer-Replikation, zwei Knoten")  
   
  Die beiden oben stehenden Abbildungen zeigen jeweils zwei teilnehmende Datenbanken, bei denen der Benutzerverkehr über einen Anwendungsserver an die Datenbanken geleitet wird. Diese Konfiguration kann für eine Vielzahl von Anwendungen, von Websites bis zu Arbeitsgruppenanwendungen, verwendet werden, und bietet folgende Vorteile:  
   
@@ -61,12 +61,12 @@ ms.locfileid: "67793917"
   
 -   Links werden Updates zwischen den zwei Servern partitioniert. Falls die Datenbank einen Produktkatalog enthält, können Sie beispielsweise veranlassen, dass eine benutzerdefinierte Anwendung Updates für Produktnamen, die mit den Buchstaben A bis M beginnen, an Knoten **A** und Updates für Produktnamen, die mit den Buchstaben N bis Z beginnen, an Knoten **B** leitet. Updates werden dann auf dem jeweils anderen Knoten repliziert.  
   
--   Auf der rechten Seite werden alle Updates an Knoten **B** geleitet. Von dort aus werden Updates auf Knoten **A** repliziert. Wenn **B** offline ist (z.B. aus Wartungsgründen), kann der Anwendungsserver sämtliche Aktivitäten an **B** leiten. Ist **B** wieder online, können Updates auf ihn geleitet werden, und der Anwendungsserver kann alle Updates zurück an **B** oder weiterhin an **A** leiten.  
+-   Auf der rechten Seite werden alle Updates an Knoten **B**weitergeleitet. Von dort aus werden Updates auf Knoten **A**repliziert. Wenn **B** offline ist (z. B. zur Wartung), kann der Anwendungsserver alle Aktivitäten an **eine**weiterleiten. Wenn **B** wieder online ist, können Updates an ihn weitergeleitet werden, und der Anwendungsserver kann alle Updates zurück an **B** verschieben oder Sie an **einen**weiterleiten.  
   
  Die Peer-zu-Peer-Replikation unterstützt beide Vorgehensweisen, aber das Beispiel für das zentrale Update auf der rechten Seite wird oft auch bei der standardmäßigen Transaktionsreplikation verwendet.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topologien mit drei oder mehr teilnehmenden Datenbanken  
- ![Peer-zu-Peer-Replikation an verteilte Standorte](../media/repl-multinode-02.gif "Peer-to-Peer replication to dispersed locations")  
+ ![Peer-zu-Peer-Replikation an verteilte Standorte](../media/repl-multinode-02.gif "Peer-zu-Peer-Replikation an verteilte Standorte")  
   
  Die oben stehende Abbildung zeigt drei teilnehmende Datenbanken, die Daten für einen weltweiten Software-Support-Anbieter mit Niederlassungen in Los Angeles, London und Taipeh bereitstellen. Die Supportmitarbeiter in den jeweiligen Niederlassungen nehmen Kundenanrufe entgegen und geben Informationen zu sämtlichen Kundenanrufen ein und aktualisieren diese. Der Zeitunterschied zwischen den Zeitzonen, in denen sich die drei Niederlassungen befinden, beträgt jeweils acht Stunden, sodass sich die Arbeitszeiten nicht überschneiden. Wenn die Niederlassung in Taipeh schließt, beginnt der Arbeitstag in der Londoner Niederlassung. Wenn ein Anruf noch bearbeitet wird, wenn eine Niederlassung schließt, wird der Anruf an einen Mitarbeiter in der Niederlassung übertragen, die als nächste öffnet.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "67793917"
   
 -   Höhere Verfügbarkeit bei Ausfällen oder Wartungserfordernissen an einer oder mehreren der teilnehmenden Datenbanken.  
   
-     ![Peer-zu-Peer-Replikation, drei und vier Knoten](../media/repl-multinode-04.gif "Peer-to-Peer replication, three and four nodes")  
+     ![Peer-zu-Peer-Replikation, drei und vier Knoten](../media/repl-multinode-04.gif "Peer-zu-Peer-Replikation, drei und vier Knoten")  
   
  Die oben stehende Abbildung zeigt, wie der drei Knoten umfassenden Topologie ein Knoten hinzugefügt wird. Ein Knoten könnte in diesem Szenario aus folgenden Gründen hinzugefügt werden:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793917"
   
     -   Objektnamen, das Objektschema und Veröffentlichungsnamen sollten identisch sein.  
   
-    -   Bei Veröffentlichungen müssen Schemaänderungen repliziert werden dürfen. (Dies entspricht der Einstellung **1** für die Veröffentlichungseigenschaft **replicate_ddl**, also der Standardeinstellung.) Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md).  
+    -   Bei Veröffentlichungen müssen Schemaänderungen repliziert werden dürfen. (Dies ist eine Einstellung von **1** für die Veröffentlichungs Eigenschaft **replicate_ddl**, bei der es sich um die Standardeinstellung handelt.) Weitere Informationen finden Sie unter [vornehmen von Schema Änderungen in Veröffentlichungs Datenbanken](../publish/make-schema-changes-on-publication-databases.md).  
   
     -   Zeilen- und Spaltenfilterung werden nicht unterstützt.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "67793917"
   
 -   Die Verwendung von Identitätsspalten wird nicht empfohlen. Bei der Verwendung von Identitäten müssen Sie die den Tabellen zugewiesenen Bereiche in jeder teilnehmenden Datenbank manuell verwalten. Weitere Informationen finden Sie im Abschnitt „Zuweisen von Bereichen für die manuelle Identitätsbereichsverwaltung“ im Thema [Replizieren von Identitätsspalten](../publish/replicate-identity-columns.md).  
   
-### <a name="feature-restrictions"></a>Funktionsbezogene Einschränkungen  
+### <a name="feature-restrictions"></a>Featureeinschränkungen  
  Peer-zu-Peer-Replikation unterstützt die zentralen Funktionen der Transaktionsreplikation, unterstützt jedoch nicht die folgenden Optionen:  
   
 -   Initialisierung und erneute Initialisierung mit einer Momentaufnahme.  
@@ -137,24 +137,24 @@ ms.locfileid: "67793917"
   
 -   Der Verteilungs-Agent-Parameter **-SubscriptionStreams** und der Protokolllese-Agent-Parameter **-MaxCmdsInTran**.  
   
--   Die Artikeleigenschaften  **\@Destination_owner** und  **\@Destination_table**.  
+-   Die Artikeleigenschaften ** \@destination_owner** und ** \@destination_table**.  
 
 -   Die Peer-zu-Peer-Transaktionsreplikation unterstützt keine Erstellung von unidirektionalen Transaktionsabonnements an eine Peer-zu-Peer-Veröffentlichung.
   
  Für folgende Eigenschaften gelten spezielle Bedingungen:  
   
--   Die veröffentlichungseigenschaft  **\@Allow_initialize_from_backup** erfordert einen Wert von `true`.  
+-   Die ** \@allow_initialize_from_backup** für `true`die Veröffentlichungs Eigenschaft erfordert den Wert.  
   
--   Die Artikeleigenschaft  **\@Replicate_ddl** erfordert einen Wert von `true`;  **\@Identityrangemanagementoption** erfordert einen Wert von `manual`; und  **\@Status** muss **24** wird festgelegt.  
+-   Für die Artikel Eigenschaft ** \@replicate_ddl** ist der `true`Wert erforderlich. für identityrangemanagementoption ist der `manual`Wert erforderlich. ** \@** und ** \@der Status** erfordert, dass Option **24** festgelegt ist.  
   
--   Der Wert für die Artikeleigenschaften  **\@Ins_cmd**,  **\@Del_cmd**, und  **\@Upd_cmd** kann nicht festgelegt werden, um `SQL`.  
+-   Der Wert für die Artikeleigenschaften ** \@ins_cmd**, ** \@del_cmd**und ** \@upd_cmd** kann nicht auf `SQL`festgelegt werden.  
   
--   Die Abonnementeigenschaft  **\@Sync_type** erfordert einen Wert von `none` oder `automatic`.  
+-   Die Abonnement Eigenschaft ** \@sync_type** erfordert den Wert `none` oder `automatic`.  
   
 ### <a name="maintenance-considerations"></a>Überlegungen in Bezug auf die Wartung  
  Die folgenden Aktionen erfordern, dass das System in den inaktiven Status versetzt werden muss. Dazu müssen alle Aktivitäten an veröffentlichten Tabellen in allen Knoten beendet werden, und es muss sichergestellt werden, dass jeder Knoten alle Änderungen von allen anderen Knoten erhalten hat.  
   
--   Hinzufügen einer [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Knoten zu einer vorhandenen Topologie  
+-   Hinzufügen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eines Knotens zu einer vorhandenen Topologie  
   
 -   Hinzufügen eines Artikels zu einer vorhandenen Veröffentlichung  
   
@@ -168,9 +168,9 @@ ms.locfileid: "67793917"
   
 -   In einer Peer-zu-Peer-Topologie können Abonnements nicht erneut initialisiert werden. Wenn Sie sicherstellen müssen, dass ein Knoten eine neue Kopie der Daten besitzt, stellen Sie an diesem Knoten eine Sicherung wieder her.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Veröffentlichungstypen der Transaktionsreplikation](transactional-replication.md)  
+ [Strategien zum Sichern und Wiederherstellen der Momentaufnahme-und Transaktions Replikation](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
+ [Veröffentlichungs Typen für die Transaktions Replikation](transactional-replication.md)  
   
   

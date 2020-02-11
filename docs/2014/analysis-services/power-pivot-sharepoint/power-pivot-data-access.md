@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Datenzugriff | Microsoft-Dokumentation
+title: Power Pivot-Datenzugriff | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071253"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot-Datenzugriff
@@ -28,7 +28,7 @@ ms.locfileid: "66071253"
   
  Auf einer SharePoint-Farm verwendet Excel Services den lokalen MSOLAP-OLE DB-Anbieter, um eine Verbindung mit PowerPivot-Daten herzustellen. Der Anbieter sendet die Verbindungsanforderung an einen PowerPivot für SharePoint-Server in der Farm. Dieser Server lädt die Daten, führt die Abfrage aus, und gibt das Resultset zurück.  
   
-##  <a name="queryproc"></a> Abfragen von PowerPivot-Daten in SharePoint  
+##  <a name="queryproc"></a>Abfragen von Power Pivot-Daten in SharePoint  
  Wenn Sie eine PowerPivot-Arbeitsmappe aus einer SharePoint-Bibliothek anzeigen, werden die PowerPivot-Daten in der Arbeitsmappe erkannt, extrahiert und getrennt auf Analysis Services-Serverinstanzen innerhalb der Farm verarbeitet, während die Darstellungsschicht von Excel Services gerendert wird. Sie können die vollständig verarbeitete Arbeitsmappe in einem Browserfenster oder in einer Excel 2010-Desktopanwendung anzeigen, die über das PowerPivot-Add-In verfügt.  
   
  Das folgende Diagramm veranschaulicht, wie eine Anforderung für die Abfrageverarbeitung in der Farm weiterverarbeitet wird. Da PowerPivot-Daten Bestandteil einer Excel 2010-Arbeitsmappe sind, wird eine Anforderung für die Abfrageverarbeitung ausgegeben, wenn ein Benutzer eine Excel-Arbeitsmappe aus einer SharePoint-Bibliothek öffnet und mit einer PivotTable oder einem PivotChart interagiert, die bzw. das PowerPivot-Daten enthält.  
@@ -39,7 +39,7 @@ ms.locfileid: "66071253"
   
  Nicht alle Daten in einer PowerPivot-Arbeitsmappe werden durch PowerPivot für SharePoint verarbeitet. Tabellen und Zellendaten in einem Arbeitsblatt werden durch Excel Services verarbeitet. Nur PivotTables, PivotCharts und Slicer, die auf PowerPivot-Daten basieren, werden durch den PowerPivot für SharePoint-Dienst verarbeitet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verbindung mit Analysis Services herstellen](../instances/connect-to-analysis-services.md)   
  [Zugriff auf Daten im tabellarischen Modell](../tabular-models/tabular-model-data-access.md)  
   

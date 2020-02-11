@@ -1,5 +1,5 @@
 ---
-title: Geben Sie die Berichterstellung angeben (Business Intelligence-Assistent) | Microsoft-Dokumentation
+title: Berichts Währungen angeben (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068211"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Währungen für die Berichterstellung angeben (Business Intelligence-Assistent)
@@ -25,15 +25,15 @@ ms.locfileid: "66068211"
 > [!NOTE]  
 >  Diese Seite wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde. Des Weiteren wird diese Seite nicht angezeigt, wenn auf der Seite **Umrechnungstyp auswählen** die Option **m:1** ausgewählt wurde.  
   
-## <a name="options"></a>Optionen  
- **Berichtswährungen**  
+## <a name="options"></a>Tastatur  
+ **Berichts Währungen**  
  Wählen Sie **Berichtswährungen** aus, um alle in der Währungsdimension aufgeführten Elemente in die Berichtswährungsdimension einzuschließen. Deaktivieren Sie **Berichtswährungen** , um alle aufgeführten Elemente auszuschließen.  
   
  Wählen Sie ein bestimmtes Element aus, um das Element in die Berichtswährungsdimension einzuschließen. Deaktivieren Sie ein bestimmtes Element, um das Element auszuschließen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
- [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Business Intelligence Wizard (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
+ [Cube-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Der Dimensions-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

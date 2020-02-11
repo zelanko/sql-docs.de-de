@@ -1,5 +1,5 @@
 ---
-title: Aktionsformular-Editor (Registerkarte ' Aktionen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Aktions Formular-Editor (Registerkarte Aktionen, Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062959"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Aktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich Aktionsformular-Editor auf der Registerkarte **Aktionen** im Cube-Designer können Sie Standardaktionen erstellen und ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie den Namen der Aktion ein.  
   
- **Aktionsziel**  
+ **Aktions Ziel**  
  Erweitern Sie diese Option, um die Optionen **Zieltyp** und **Zielobjekt** anzuzeigen.  
   
  **Zieltyp**  
  Wählen Sie den Typ des Objekts aus, dem die Aktion zugeordnet werden soll. Der Server gibt nur jene Aktionen an den Client zurück, die auf das Objekt vom angegebenen Typ angewendet werden. Die Aktion ist für den Client verfügbar, wenn die **Bedingung** erfüllt ist und die in der folgenden Tabelle angegebenen Objekte ausgewählt sind.  
   
-|Wert|Ausgewähltes Objekt|  
+|value|Ausgewähltes Objekt|  
 |-----------|---------------------|  
 |Attributelemente|Ein Element wird aus einer Ebene ausgewählt, die auf dem Attribut unter **Zielobjekt**basiert.|  
 |Zellen|Die benannte Menge in **Zielobjekt** wird ausgewählt. Wählen Sie **Alle Zellen** aus, um alle Zellen im Cube auszuwählen.|  
-|Cube|Der Cube in **Zielobjekt** wird ausgewählt. Wählen Sie CURRENTCUBE aus, um den aktuellen Cube zu verwenden.<br /><br /> Hinweis: Verwenden von CURRENTCUBE stellt eine zusätzliche Portabilität in Fällen, in denen der Cube umbenannt oder die Aktion in andere Cubes kopiert, bereit. Es wird empfohlen, zum Darstellen des aktuellen Cubes CURRENTCUBE zu verwenden.|  
+|Cube|Der Cube in **Zielobjekt** wird ausgewählt. Wählen Sie CURRENTCUBE aus, um den aktuellen Cube zu verwenden.<br /><br /> Hinweis: Das Verwenden von CURRENTCUBE stellt eine zusätzliche Portabilität für Fälle bereit, in denen der Cube umbenannt oder die Aktion in andere Cubes kopiert wird. Es wird empfohlen, zum Darstellen des aktuellen Cubes CURRENTCUBE zu verwenden.|  
 |Dimensionselemente|Ein Element der Dimension in **Zielobjekt** wird ausgewählt.|  
 |Hierarchy|Die Hierarchie in **Zielobjekt** wird ausgewählt.|  
 |Hierarchieelemente|Ein Element innerhalb der Hierarchie in **Zielobjekt** wird ausgewählt.|  
@@ -46,18 +46,18 @@ ms.locfileid: "66062959"
  **Zielobjekt**  
  Wählen Sie das Objekt aus, dem die Aktion zugeordnet werden soll. Die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz gibt nur die Aktionen an den Client zurück, die auf das ausgewählte Objekt angewendet werden. Die Liste der verfügbaren Objekte wird durch die Auswahl unter **Zieltyp**eingeschränkt.  
   
- **Bedingung (Optional)**  
+ **Bedingung (optional)**  
  Geben Sie einen MDX-Ausdruck (Multidimensional Expressions) ein, der eine optionale Bedingung für das Verwenden in Verbindung mit **Zielobjekt**beschreibt, wodurch die Verfügbarkeit der Aktion weiter eingeschränkt wird. Der Ausdruck muss einen booleschen Wert zurückgeben, der mit "True" anzeigt, dass die Aktion verfügbar ist.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  
   
- **Aktionsinhalt**  
+ **Aktions Inhalt**  
  Erweitern Sie diese Option, um die Optionen **Typ** und **Aktionsausdruck** anzuzeigen.  
   
  **Typ**  
  Wählen Sie den Typ der Aktion aus, der verwendet werden soll, wenn die Aktion ausgeführt wird. Folgende Aktionstypen sind verfügbar:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Dataset|Gibt einen MDX-Ausdruck (Multidimensional Expressions) zurück, der ein mehrdimensionales Dataset darstellt, das von der Clientanwendung ausgeführt und angezeigt wird.|  
 |Proprietär|Gibt eine proprietäre Zeichenfolge zurück, die von Clientanwendungen interpretiert werden kann, die der Einstellung **Anwendung** für diese Aktion zugeordnet sind.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66062959"
  **Aktionsausdruck**  
  Geben Sie den MDX-Ausdruck (Multidimensional Expressions) ein, der die Zeichenfolge zurückgibt, die von der Aktion an die Clientanwendung zwecks Ausführung zurückgegeben wurde.  
   
- **Weitere Eigenschaften**  
+ **Zusätzliche Eigenschaften**  
  Erweitern Sie die Option, um die Optionen **Aufruf**, **Anwendung**, **Beschreibung**, **Beschriftung**und **Beschriftung ist MDX** anzuzeigen.  
   
  **Aufruf**  
@@ -81,13 +81,13 @@ ms.locfileid: "66062959"
   
  Die folgende Tabelle beschreibt die verfügbaren Einstellungen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Batch|Die Aktion sollte als Teil eines Batchvorgangs oder eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks ausgeführt werden.|  
-|Interaktiv|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
+|Interactive|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
 |Beim Öffnen|Die Aktion wird ausgeführt, wenn der Cube erstmalig geöffnet wird.|  
   
- **Application**  
+ **Anwendung**  
  Geben Sie den Namen der Anwendung ein, die die Zeichenfolge interpretieren kann, die von **Aktionsausdruck**zurückgegeben wurde.  
   
  Sie können diese Option auch verwenden, um zu ermitteln, welche Clientanwendung diese Aktion am häufigsten verwendet, oder um entsprechende Symbole neben der Aktion in einem Popupmenü anzuzeigen.  
@@ -98,7 +98,7 @@ ms.locfileid: "66062959"
  **Beschreibung**  
  Geben Sie die optionale Beschreibung der Aktion ein.  
   
- **Beschriftung**  
+ **Caption**  
  Geben Sie die Beschriftung ein, die für die Aktion in der Clientanwendung angezeigt wird, wenn **Beschriftung ist MDX** auf **FALSE**festgelegt ist.  
   
  Geben Sie den MDX-Ausdruck (Multidimensional Expressions) ein, der eine Zeichenfolge für die Beschriftung zurückgibt, wenn **Beschriftung ist MDX** auf **TRUE**festgelegt ist.  
@@ -108,12 +108,12 @@ ms.locfileid: "66062959"
   
  Wählen Sie **True** aus, um anzuzeigen, dass **Beschriftung** einen MDX-Ausdruck enthält, der eine Zeichenfolge mit einer Beschriftung zurückgibt, die für die Aktion in der Clientanwendung angezeigt werden soll. Der MDX-Ausdruck muss aufgelöst werden, bevor die Aktion an die Clientanwendung zurückgegeben wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktionen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Symbolleiste &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Aktionsplaner &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Berechnungstools &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Drillthroughaktionsformular-Editors &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Berichtsaktionsformular-Editors &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Aktionen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Symbolleiste &#40;Registerkarte "Aktionen", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Aktions Planer &#40;Registerkarte Aktionen, Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Berechnungs Tools &#40;Registerkarte "Aktionen", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Drillthrough-Aktions Formular-Editor &#40;Registerkarte Aktionen, Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Berichts Aktions Formular-Editor &#40;Registerkarte Aktionen, Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

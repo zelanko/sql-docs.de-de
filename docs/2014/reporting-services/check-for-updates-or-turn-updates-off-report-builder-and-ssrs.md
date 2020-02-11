@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109857"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109857"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>So aktivieren und deaktivieren Sie Updates von Berichtsteilen  
   
-1.  Klicken Sie auf die Schaltfläche "Berichts-Generator", und klicken Sie dann auf **Optionen**.  
+1.  Klicken Sie auf die Schaltfläche Berichts-Generator, und klicken Sie dann auf **Optionen**.  
   
-2.  In der **Optionen** Dialogfeld auf die **Ressourcen** Registerkarte aktivieren oder Deaktivieren der **Updates von berichtsteilen in meinen Berichten anzeigen** Kontrollkästchen.  
+2.  Aktivieren bzw. deaktivieren Sie im Dialogfeld **Optionen** auf der Registerkarte **Ressourcen** das Kontrollkästchen **Updates für Berichts Teile in meinen Berichten anzeigen** .  
   
 > [!NOTE]  
 >  Dies ist eine Benutzereinstellung. Sie wird für alle Berichte deaktiviert, die Sie öffnen.  
   
 ### <a name="to-check-for-updates"></a>So überprüfen Sie auf Updates  
   
--   Mit der rechten Maustaste in die Entwurfsoberfläche außerhalb des Berichts oder im Hauptteil Berichts, und klicken Sie auf **nach Updates suchen**.  
+-   Klicken Sie mit der rechten Maustaste auf die Entwurfs Oberfläche außerhalb des Berichts oder im Hauptteil des Berichts, und klicken Sie auf **nach Updates suchen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Veröffentlichen und erneutes Veröffentlichen von Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [Suchen nach Berichtsteilen und Festlegen eines Standardordners &#40;Berichts-Generator und SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [Problembehandlung bei Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Report Parts and Datasets in Report Builder (Berichtsteile und Datasets in Berichts-Generator)](report-data/report-parts-and-datasets-in-report-builder.md)  
+ [Berichts Teile &#40;Berichts-Generator und SSRS veröffentlichen und erneut veröffentlichen&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [Suchen nach Berichts teilen und Festlegen eines Standard Ordners &#40;Berichts-Generator und SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [Problembehandlung bei Berichts teilen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Berichtsteile und Datasets in Berichts-Generator](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

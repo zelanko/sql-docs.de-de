@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297569"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Automatisches Anpassen der Größe ausgewählter Tabellen in Diagrammen (Visual Database Tools)
@@ -31,7 +31,7 @@ ms.locfileid: "63297569"
   
 2.  Klicken Sie mit der rechten Maustaste auf eine ausgewählte Tabelle, und wählen Sie im Kontextmenü den Befehl **Größe ausgewählter Tabellen automatisch anpassen**aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

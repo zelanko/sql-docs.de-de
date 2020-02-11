@@ -1,5 +1,5 @@
 ---
-title: Modellelementsicherheit (Seite) (Berichts-Manager) | Microsoft-Dokumentation
+title: Modellelement Sicherheit (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108232"
 ---
 # <a name="model-item-security-page-report-manager"></a>Modellelementsicherheit (Seite) (Berichts-Manager)
@@ -29,7 +29,7 @@ ms.locfileid: "66108232"
   
  Sie können Modellelementsicherheit für Entitäten, Ordner und einzelne Feldern innerhalb eines Modells definieren. Da ein Modell eine breite Vielfalt sicherungsfähiger Elemente umfasst, wurde Berechtigungsvererbung in das Modell integriert, wodurch Sie eine große Zahl von Elementen mittels einer kleinen Anzahl von Rollenzuweisungen sichern können. Die Berechtigungsvererbung basiert auf folgenden Elementen:  
   
--   Model  
+-   Modell  
   
 -   Stammknoten  
   
@@ -60,20 +60,20 @@ ms.locfileid: "66108232"
   
 4.  Wählen Sie die Registerkarte **Modellelementsicherheit** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Einzelne Modellelemente für dieses Modell unabhängig voneinander sichern**  
  Aktivieren Sie dieses Kontrollkästchen, um die Modellelementsicherheit zu aktivieren.  
   
- **Geben Sie die Sicherheit für einzelne Modellelemente im Modus**  
+ **Geben Sie die Sicherheit für einzelne Modellelemente im Modell an**  
  Zeigt alle Elemente eines Modells. Sie können im Modellnamespace navigieren, um das mit Sicherheitseinstellungen zu versehende Element auszuwählen. Sie können jeweils nur ein Element auswählen. Stellen Sie sicher, dass Sie die erste Rollenzuweisung für den Stammknoten erstellt haben, bevor Sie mit anderen Ordnern und Entitäten fortfahren.  
   
  **Berechtigungen vom übergeordneten Element erben**  
  Aktivieren Sie diese Option, wenn das Element die Sicherheitseinstellungen des übergeordneten Elements erben soll.  
   
- **Weisen Sie die Leseberechtigung für die folgenden Benutzer und Gruppen (durch Semikolons getrennt)**  
- Aktivieren Sie diese Option, um das Benutzer- bzw. Gruppenkonto anzugeben, für das Sie den Zugriff definieren. Wenn Sie die Standardsicherheitseinstellungen verwenden, handelt es sich bei den Benutzer- bzw. Gruppenkonten um Windows-Domänenkonten. Geben Sie die Konten im folgenden Format:  *\<Domäne >\\< Konto\>* .  
+ **Weisen Sie den folgenden Benutzern und Gruppen Leseberechtigungen zu (durch Semikolons getrennt)**  
+ Aktivieren Sie diese Option, um das Benutzer- bzw. Gruppenkonto anzugeben, für das Sie den Zugriff definieren. Wenn Sie die Standardsicherheitseinstellungen verwenden, handelt es sich bei den Benutzer- bzw. Gruppenkonten um Windows-Domänenkonten. Geben Sie die Konten im folgenden Format an: * \<Domäne \\>\><Konto*.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](tools/report-server-in-management-studio-f1-help.md)  
   
   

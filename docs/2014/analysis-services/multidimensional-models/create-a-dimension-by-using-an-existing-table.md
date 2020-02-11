@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Dimension anhand einer vorhandenen Tabelle | Microsoft-Dokumentation
+title: Erstellen einer Dimension mithilfe einer vorhandenen Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076421"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Erstellen einer Dimension anhand einer vorhandenen Tabelle
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
   
  Wenn Sie eine Dimension anhand einer vorhandenen Tabelle erstellen, führt Sie der Dimensions-Assistent durch die folgenden Schritte:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66076421"
 ## <a name="selecting-dimension-attributes"></a>Auswählen von Dimensionsattributen  
  Nachdem Sie die Dimensionstabellen ausgewählt haben, geben Sie auf der Seite **Dimensionsattribute auswählen** die Attribute an, die Sie in der Dimension aus diesen Tabellen einschließen möchten. Alle zugrunde liegenden Spalten dieser Tabellen sind als potenzielle Dimensionsattribute verfügbar. Das Dimensionsschlüsselattribut muss ausgewählt und zum Durchsuchen aktiviert werden.  
   
- Standardmäßig legt der Assistent den Typ eines Attributs auf `Regular` fest. Unter Umständen empfiehlt es sich jedoch, bestimmte Attribute einem anderen Attributtyp zuzuordnen, der die Daten besser repräsentiert. Die &lt;localizedText&gt;dbo.DimAccount&lt;/localizedText&gt;-Tabelle in der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW-Beispieldatenbank enthält z. B. eine &lt;localizedText&gt;AccountCodeAlternateKey&lt;/localizedText&gt;-Spalte, die die Kontonummer bereitstellt. Statt den Typ zu `Regular` für dieses Attribut, Sie möchten dieses Attribut zum Zuordnen der `Account Number` Typ.  
+ Standardmäßig legt der Assistent den Typ eines Attributs auf `Regular` fest. Unter Umständen empfiehlt es sich jedoch, bestimmte Attribute einem anderen Attributtyp zuzuordnen, der die Daten besser repräsentiert. Die &lt;localizedText&gt;dbo.DimAccount&lt;/localizedText&gt;-Tabelle in der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW-Beispieldatenbank enthält z. B. eine &lt;localizedText&gt;AccountCodeAlternateKey&lt;/localizedText&gt;-Spalte, die die Kontonummer bereitstellt. Anstatt den Typ für dieses Attribut `Regular` auf festzulegen, sollten Sie dieses Attribut dem `Account Number` Typ zuordnen.  
   
 > [!NOTE]  
 >  Wenn der Dimensionstyp und die Standardattributtypen beim Erstellen der Dimension nicht festgelegt sind, können Sie diese Werte mit dem Business Intelligence-Assistenten festlegen, nachdem die Dimension erstellt wurde. Weitere Informationen finden Sie unter [Hinzufügen von Dimensionsintelligenz zu einer Dimension](bi-wizard-add-dimension-intelligence-to-a-dimension.md) oder (bei Dimensionen vom Typ Accounts) [Hinzufügen von Kontointelligenz zu einer Dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
@@ -85,11 +85,11 @@ ms.locfileid: "66076421"
   
  Zum Abschließen des Assistenten geben Sie auf der Seite **Assistenten abschließen** einen Namen für die neue Dimension ein und überprüfen die Dimensionsstruktur.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](create-a-time-dimension-by-generating-a-time-table.md)   
- [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)   
- [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](create-a-time-dimension-by-generating-a-time-table.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Dimension durch das Erstellen einer nicht Zeittabelle in der Datenquelle](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Erstellen einer Zeit Dimension durch das Erzeugen einer Zeittabelle](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Dimensions Attribut-Eigenschaften Referenz](dimension-attribute-properties-reference.md)   
+ [Erstellen einer Zeit Dimension durch das Erzeugen einer Zeittabelle](create-a-time-dimension-by-generating-a-time-table.md)   
  [Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

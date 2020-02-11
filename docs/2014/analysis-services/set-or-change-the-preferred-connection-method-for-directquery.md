@@ -1,5 +1,5 @@
 ---
-title: Festlegen oder ändern Sie die bevorzugte Verbindungsmethode für DirectQuery | Microsoft-Dokumentation
+title: Festlegen oder Ändern der bevorzugten Verbindungsmethode für directquery | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068700"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery
-  Wenn Sie ein Modell für die Verwendung im DirectQuery-Modus erstellen, müssen Sie zuerst die Entwurfsumgebung konfigurieren, um die Verwendung von DirectQuery zu unterstützen. Zu diesem Zweck finden Sie unter [DirectQuery-Entwurfsmodus aktivieren &#40;SSAS – tabellarisch&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
+  Wenn Sie ein Modell für die Verwendung im DirectQuery-Modus erstellen, müssen Sie zuerst die Entwurfsumgebung konfigurieren, um die Verwendung von DirectQuery zu unterstützen. Informationen hierzu finden Sie unter [enable directquery Design Mode &#40;SSAS tabellarischer&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
   
  Wenn Sie zur Bereitstellung des Modells bereit sind, müssen Sie einige zusätzliche Eigenschaften festlegen, um Benutzern den Zugriff auf das Modell mit einem der DirectQuery-Modi zu ermöglichen:  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66068700"
   
 3.  Ändern Sie im Bereich **Eigenschaften** die Eigenschaft **DirectQueryMode**in einen der Werte, die DirectQuery-Verwendung unterstützen:  
   
-    -   **InMemory mit DirectQuery**: Wenn Sie diese Option verwenden, das Modell bereitgestellt, aber Sie müssen den Cache verarbeiten, bevor Sie Abfragen für das Modell ausführen können.  
+    -   **InMemory mit directquery**: Wenn Sie diese Option verwenden, wird das Modell bereitgestellt, aber Sie müssen den Cache verarbeiten, bevor Sie Abfragen für das Modell ausführen können.  
   
-    -   **DirectQuery mit InMemory**: Wenn Sie diese Option verwenden, werden der Cache für die Verwendung durch Clients verfügbar, wenn er bereits verarbeitet wurde. Wenn Sie das Modell mit dieser Einstellung bereitstellen und den Cache nicht verarbeiten, müssen einige Clients eine Fehlermeldung erhalten, wenn sie versuchen, eine Verbindung mit dem Modell herzustellen.  
+    -   **Directquery mit inMemory**: Wenn Sie diese Option verwenden, ist der Cache zur Verwendung durch Clients verfügbar, wenn er bereits verarbeitet wurde. Wenn Sie das Modell mit dieser Einstellung bereitstellen und den Cache nicht verarbeiten, müssen einige Clients eine Fehlermeldung erhalten, wenn sie versuchen, eine Verbindung mit dem Modell herzustellen.  
   
-    -   **Nur DirectQuery**: Wenn Sie diese Option verwenden, die Metadaten bereitgestellt, aber das Modell enthält keine Daten. Clients, die versuchen, mit dem Modus "Im Arbeitsspeicher" eine Verbindung herzustellen, erhalten eine Fehlermeldung wegen eines nicht vorhandenen Modells oder der fehlenden Verarbeitung.  
+    -   **Nur directquery**: Wenn Sie diese Option verwenden, werden die Metadaten bereitgestellt, aber das Modell enthält keine Daten. Clients, die versuchen, mit dem Modus "Im Arbeitsspeicher" eine Verbindung herzustellen, erhalten eine Fehlermeldung wegen eines nicht vorhandenen Modells oder der fehlenden Verarbeitung.  
   
 4.  Wenn Fehler vorhanden sind, öffnen Sie in Visual Studio die **Fehlerliste** , und beheben Sie alle Probleme, durch die verhindert werden würde, dass das Modell im DirectQuery-Modus bereitgestellt wird.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66068700"
   
 3.  Ändern Sie im Bereich **Eigenschaften** die Eigenschaft **DirectQueryMode**in einen der folgenden Werte:  
   
-    -   **Nur DirectQuery**  
+    -   **Nur directquery**  
   
     -   **InMemory mit DirectQuery**  
   
@@ -62,8 +62,8 @@ ms.locfileid: "66068700"
   
  Diese Eigenschaften sind mit den Eigenschaften identisch, die für das Projekt vor der Bereitstellung in Visual Studio festgelegt werden. Sie können den bevorzugten Verbindungsmodus für den DirectQuery-Modus jederzeit ändern, vorausgesetzt, dass Sie das Modell für die Unterstützung von DirectQuery-Verwendung konfiguriert haben.  
   
-## <a name="see-also"></a>Siehe auch  
- [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Aktivieren des DirectQuery-Entwurfsmodus &#40;SSAS – tabellarisch&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Directquery-Modus &#40;tabellarischen SSAS-&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
+ [Aktivieren des directquery-Entwurfs Modus &#40;tabellarischen SSAS-&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

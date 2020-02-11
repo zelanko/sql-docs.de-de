@@ -1,5 +1,5 @@
 ---
-title: Sp_helpdb (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpdb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67903020"
 ---
-# <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
+# <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu einer angegebenen Datenbank oder zu allen Datenbanken zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,43 +39,43 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'name'` Ist der Name der Datenbank für die Informationen ausgegeben werden. *Namen* ist **Sysname**, hat keinen Standardwert. Wenn *Namen* nicht angegeben ist, **Sp_helpdb** Informationen zu allen Datenbanken in der **sys.databases** -Katalogsicht angezeigt.  
+`[ @dbname = ] 'name'`Der Name der Datenbank, für die Informationen gemeldet werden. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert. Wenn *Name* nicht angegeben wird, **sp_helpdb** Berichte zu allen Datenbanken in der **sys. Datenbanken** -Katalog Sicht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Datenbankname.|  
-|**db_size**|**nvarchar(13)**|Gesamtgröße der Datenbank.|  
-|**Besitzer**|**sysname**|Datenbankbesitzer, z. B. **sa**.|  
-|**dbid**|**smallint**|Datenbank-ID|  
-|**created**|**nvarchar(11)**|Erstellungsdatum der Datenbank.|  
-|**status**|**nvarchar(600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen werden aufgelistet, durch die entsprechenden Werte in Form von *Optionsname*=*Wert*.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**db_size**|**nvarchar (13)**|Gesamtgröße der Datenbank.|  
+|**Eigentor**|**sysname**|Datenbankbesitzer, z. b. **sa**.|  
+|**DBID**|**smallint**|Datenbank-ID|  
+|**Schaff**|**nvarchar(11)**|Erstellungsdatum der Datenbank.|  
+|**Stands**|**nvarchar (600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen werden mit ihren entsprechenden Werten in Form von *option_name*=*Wert*aufgelistet.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Datenbank-Kompatibilitätsgrad: 60, 65, 70, 80 oder 90.|  
   
- Wenn *Namen* angegeben wird, gibt es ein zusätzliches Resultset, das die dateizuordnung für die angegebene Datenbank anzeigt.  
+ Wenn *Name* angegeben wird, gibt es ein zusätzliches Resultset, das die Datei Zuordnung für die angegebene Datenbank anzeigt.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**name**|**NCHAR(128)**|Logischer Dateiname der Datei.|  
-|**fileid**|**smallint**|Die Datei-ID|  
-|**Dateiname**|**NCHAR(260)**|Betriebssystem-Dateiname (physischer Dateiname).|  
-|**filegroup**|**nvarchar(128)**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
-|**size**|**nvarchar(18)**|Dateigröße in MB.|  
-|**maxsize**|**nvarchar(18)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
-|**growth**|**nvarchar(18)**|Vergrößerungsinkrement der Datei. Dies gibt an, die Menge des Speicherplatzes der Datei, die jedes Mal neuer Speicherplatz benötigt wird hinzugefügt.|  
-|**Verwendung**|**varchar(9)**|Verwendung der Datei. Für eine Datendatei ist der Wert **'nur Daten'** und der Wert ist für die Protokolldatei **'nur protokollieren'** .|  
+|**name**|**NCHAR (128)**|Logischer Dateiname der Datei.|  
+|**FileID**|**smallint**|Die Datei-ID|  
+|**Einfügen**|**NCHAR (260)**|Betriebssystem-Dateiname (physischer Dateiname).|  
+|**Datei Gruppe**|**nvarchar(128)**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
+|**Größe**|**nvarchar (18)**|Dateigröße in MB.|  
+|**MaxSize**|**nvarchar (18)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
+|**wachsen**|**nvarchar (18)**|Vergrößerungsinkrement der Datei. Gibt den Speicherplatz an, der der Datei jedes Mal hinzugefügt wird, wenn neuer Speicherplatz benötigt wird.|  
+|**ungs**|**varchar (9)**|Verwendung der Datei. Bei einer Datendatei ist der Wert **' nur Daten** ', und für die Protokolldatei lautet der Wert **' nur protokollieren '**.|  
   
-## <a name="remarks"></a>Hinweise  
- Die **Status** Spalte im Resultset Berichte, die die Optionen auf ON wurde, in der Datenbank festgelegt müssen festlegen. Alle Datenbankoptionen werden nicht gemeldet, indem die **Status** Spalte. Um eine vollständige Liste der die aktuellen Einstellungen der Datenbankoptionen anzuzeigen, verwenden die **sys.databases** -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Status** -Spalte im Resultset meldet, welche Optionen in der Datenbank auf ON festgelegt wurden. Alle Daten Bankoptionen werden nicht von der **Status** -Spalte gemeldet. Verwenden Sie die **sys.** Database-Katalog Sicht, um eine komplette Liste der aktuellen Einstellungen für die Datenbankoption anzuzeigen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Wenn eine einzelne Datenbank angegeben wird, die Mitgliedschaft in der **öffentliche** Rolle in der Datenbank ist erforderlich. Wenn keine Datenbank angegeben ist, Mitgliedschaft in der **öffentliche** -Rolle in der **master** Datenbank ist erforderlich.  
+ Wenn eine einzelne Datenbank angegeben wird, ist die Mitgliedschaft in der **Public** -Rolle in der Datenbank erforderlich. Wenn keine Datenbank angegeben wird, ist die Mitgliedschaft in der **Public** -Rolle in der **Master** -Datenbank erforderlich.  
   
- Wenn eine Datenbank kann nicht zugegriffen werden, **Sp_helpdb** zeigt die Fehlermeldung 15622 und alle verfügbaren Informationen über die Datenbank an, wie möglich.  
+ Wenn auf eine Datenbank nicht zugegriffen werden kann, wird in **sp_helpdb** Fehlermeldung 15622 und so viele Informationen zur Datenbank angezeigt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -94,14 +94,14 @@ EXEC sp_helpdb;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Alter Database &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Create Database &#40;SQL Server Transact-SQL-&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys. File Groups &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys. master_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

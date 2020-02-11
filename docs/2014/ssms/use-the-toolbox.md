@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280672"
 ---
 # <a name="use-the-toolbox"></a>Verwenden der Toolbox
@@ -27,7 +27,7 @@ ms.locfileid: "63280672"
   
  Die Elemente in der Toolbox sind in Abschnitte unterteilt, die als Registerkarten bezeichnet werden. Im Folgenden finden Sie eine Liste der häufigsten Toolboxtasks und wie sie ausgeführt werden.  
   
-|Aktion|Aktion|  
+|To|Aktion|  
 |--------|-------------|  
 |Öffnen der Toolbox|Klicken Sie im Menü **Ansicht** auf **Toolbox**.|  
 |Automatisches Schließen der Toolbox|Öffnen Sie die Toolbox. Aktivieren Sie im Menü **Fenster** die Option **Automatisch im Hintergrund**.|  
@@ -42,7 +42,7 @@ ms.locfileid: "63280672"
 |Ändern der Position eines Elements auf einer erweiterten Toolboxregisterkarte|Ziehen Sie das Element an die neue Stelle, und lassen Sie die Maustaste los.|  
 |Umbenennen eines Toolboxelements|Klicken Sie mit der rechten Maustaste auf das Toolboxelement, und klicken Sie im Kontextmenü auf **Element umbenennen** .|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Allgemeine Benutzeroberflächenelemente](general-user-interface-elements.md)  
   
   

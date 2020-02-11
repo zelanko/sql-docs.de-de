@@ -14,11 +14,11 @@ ms.assetid: 6d43ae52-c6f8-4f07-8911-4d5278dd439e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13a560b4278a0e90b3416c1ecb31b22d77ce33fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901617"
 ---
 # <a name="viewing-drivers"></a>Anzeigen von Treibern
-Zum Konfigurieren von Datenquellen müssen Sie mindestens einen Treiber in Ihrem System installiert haben. Die **Treiber** Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld listet alle Treiber, die auf dem Computer, einschließlich Name, Version, Unternehmen, Dateiname und Erstellungsdatum der Datei von jeder Treiber installiert. Sie müssen den Treiber des Setup-Programm verwenden, zum Hinzufügen oder Löschen einen Treiber in Ihrem System. Weitere Informationen zum Ändern von Treibern finden Sie unter [Datenquellen verwalten](../../odbc/admin/managing-data-sources.md).
+Zum Konfigurieren von Datenquellen muss mindestens ein Treiber auf dem System installiert sein. Auf der Registerkarte **Treiber** im Dialogfeld **ODBC-Datenquellen-Administrator** werden alle auf dem Computer installierten Treiber aufgelistet, einschließlich Name, Version, Unternehmen, Dateiname und Dateierstellungsdatum jedes Treibers. Sie müssen das Setup Programm des Treibers verwenden, um einen Treiber aus Ihrem System hinzuzufügen oder zu löschen. Weitere Informationen zum Ändern von Treibern finden Sie unter [Verwalten von Datenquellen](../../odbc/admin/managing-data-sources.md).

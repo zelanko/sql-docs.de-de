@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267439"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen (SQL Server Profiler)
@@ -36,7 +36,7 @@ ms.locfileid: "63267439"
   
 6.  Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Profiler-Vorlagen](sql-server-profiler-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

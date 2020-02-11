@@ -1,5 +1,5 @@
 ---
-title: Schließen Sie den Assistenten (SSIS-PaketUpgrade-Assistent) | Microsoft-Dokumentation
+title: Assistenten beenden (SSIS-Paket Upgrade-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060928"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Assistenten abschließen (SSIS Paketupgrade-Assistent)
   Verwenden Sie die Seite **Assistenten abschließen** , um die Paketupgradeoptionen zu überprüfen und zu bestätigen, die Sie ausgewählt haben. Dies ist die letzte Seite des Assistenten, auf der Sie zurückgehen und die Optionen für diese Sitzung des Assistenten ändern können.  
   
- **So führen Sie den SSIS Paketupgrade-Assistenten aus**  
+ **So führen Sie den SSIS-Paket Upgrade-Assistenten aus**  
   
 -   [Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Optionen  
- **Zusammenfassungsoptionen**  
+## <a name="options"></a>Tastatur  
+ **Zusammenfassung der Optionen**  
  Überprüfen Sie die Upgradeoptionen, die Sie im Assistenten ausgewählt haben. Um Optionen zu ändern, klicken Sie auf **Zurück** , um zu den vorherigen Assistentenseiten zurückzukehren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren von Integration Services-Paketen](install-windows/upgrade-integration-services-packages.md)  
   
   

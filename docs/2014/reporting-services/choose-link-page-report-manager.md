@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Linkseite (Berichts-Manager) | Microsoft-Dokumentation
+title: Link auswählen (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109887"
 ---
 # <a name="choose-link-page-report-manager"></a>Link auswählen (Seite) (Berichts-Manager)
@@ -35,16 +35,16 @@ ms.locfileid: "66109887"
   
 4.  Klicken Sie auf der Registerkarte **Allgemein** auf der Eigenschaftenseite auf **Link ändern**.  
   
-## <a name="options"></a>Optionen  
- **Speicherort**  
+## <a name="options"></a>Tastatur  
+ **Location**  
  Geben Sie den vollständigen Namen des veröffentlichten Berichts an, einschließlich des Ordnerpfads und des Berichtsnamens. Sie können den vollständigen Namen des Berichts eingeben oder die Strukturansicht verwenden, um zu dem gewünschten Bericht zu wechseln.  
   
- **Strukturansicht**  
+ **Baumansicht**  
  Zeigt alle Ordner in der Berichtsserver-Ordnerhierarchie an. Wenn Sie mithilfe der Strukturansicht einen Wert für das Feld **Speicherort** auswählen möchten, klicken Sie auf den Namen des Berichts.  
   
-## <a name="see-also"></a>Siehe auch  
- [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Neuer verknüpfter Bericht (Seite) (Berichts-Manager)](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Allgemeine Eigenschaften (Seite), Berichte &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Die Seite "Neuer verknüpfter Bericht" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

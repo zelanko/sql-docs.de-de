@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren eines Pakets zur Verwendung von Transaktionen | Microsoft-Dokumentation
+title: Konfigurieren eines Pakets für die Verwendung von Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060863"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Konfigurieren eines Pakets für die Verwendung von Transaktionen
@@ -29,9 +29,9 @@ ms.locfileid: "66060863"
  Im Folgenden wird beschrieben, wie beide Optionen konfiguriert werden.  
   
 ## <a name="configuring-a-single-transaction"></a>Konfigurieren einer einzelnen Transaktion  
- Mit dieser Option initiiert das Paket selbst eine einzelne Transaktion. Sie konfigurieren, dass das Paket zum Initiieren dieser Transaktion, indem Sie die TransactionOption-Eigenschaft des Pakets festlegen `Required`.  
+ Mit dieser Option initiiert das Paket selbst eine einzelne Transaktion. Sie konfigurieren das Paket zum Initiieren dieser Transaktion, indem Sie die transaktionoption-Eigenschaft des Pakets `Required`auf festlegen.  
   
- Danach tragen Sie bestimmte Tasks und Container in dieser einzelnen Transaktion ein. Zum Eintragen eines Tasks oder Containers in einer Transaktion legen Sie die TransactionOption-Eigenschaft dieses Tasks oder Containers auf `Supported`.  
+ Danach tragen Sie bestimmte Tasks und Container in dieser einzelnen Transaktion ein. Zum Eintragen eines Tasks oder Containers in einer Transaktion legen Sie die transaktionoption-Eigenschaft dieses Tasks oder Containers auf `Supported`fest.  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>So konfigurieren Sie ein Paket zur Verwendung einer einzelnen Transaktion  
   
@@ -43,11 +43,11 @@ ms.locfileid: "66060863"
   
 4.  Klicken Sie mit der rechten Maustaste an einer beliebigen Stelle im Hintergrund der Entwurfsoberfläche der Ablaufsteuerung, und klicken Sie anschließend auf **Eigenschaften**.  
   
-5.  In der **Eigenschaften** legen die TransactionOption-Eigenschaft auf `Required`.  
+5.  Legen Sie im Fenster **Eigenschaften** die transaktionoption-Eigenschaft auf `Required`fest.  
   
 6.  Klicken Sie auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf den Task oder den Container, für den Sie die Transaktion registrieren möchten, und klicken Sie auf **Eigenschaften**.  
   
-7.  In der **Eigenschaften** legen die TransactionOption-Eigenschaft auf `Supported`.  
+7.  Legen Sie im Fenster **Eigenschaften** die transaktionoption-Eigenschaft auf `Supported`fest.  
   
     > [!NOTE]  
     >  Um eine Verbindung in einer Transaktion einzutragen, registrieren Sie die Tasks, die die Verbindung verwenden, für die Transaktion. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -55,9 +55,9 @@ ms.locfileid: "66060863"
 8.  Wiederholen Sie die Schritte 6 und 7 für alle Tasks und Container, für die Sie die Transaktion registrieren möchten.  
   
 ## <a name="configuring-multiple-transactions"></a>Konfigurieren mehrerer Transaktionen  
- Mit dieser Option unterstützt das Paket selbst Transaktionen, startet jedoch keine Transaktion. Sie konfigurieren, dass das Paket, um Transaktionen zu unterstützen, indem Sie die TransactionOption-Eigenschaft des Pakets festlegen `Supported`.  
+ Mit dieser Option unterstützt das Paket selbst Transaktionen, startet jedoch keine Transaktion. Sie konfigurieren das Paket für die Unterstützung von Transaktionen, indem Sie die transaktionoption- `Supported`Eigenschaft des Pakets auf festlegen.  
   
- Danach konfigurieren Sie die gewünschten Tasks und Container im Paket, um Transaktionen zu initiieren oder an Transaktionen teilzunehmen. Zum Konfigurieren eines Tasks oder Containers zum Initiieren einer Transaktion legen Sie die TransactionOption-Eigenschaft dieses Tasks oder Containers auf `Required`.  
+ Danach konfigurieren Sie die gewünschten Tasks und Container im Paket, um Transaktionen zu initiieren oder an Transaktionen teilzunehmen. Zum Konfigurieren eines Tasks oder Containers zum Initiieren einer Transaktion legen Sie die transaktionoption-Eigenschaft dieses Tasks oder Containers auf `Required`fest.  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>So konfigurieren Sie die Verwendung mehrerer Transaktionen für ein Paket  
   
@@ -69,25 +69,25 @@ ms.locfileid: "66060863"
   
 4.  Klicken Sie mit der rechten Maustaste an einer beliebigen Stelle im Hintergrund der Entwurfsoberfläche der Ablaufsteuerung, und klicken Sie anschließend auf **Eigenschaften**.  
   
-5.  In der **Eigenschaften** legen die TransactionOption-Eigenschaft auf `Supported`.  
+5.  Legen Sie im Fenster **Eigenschaften** die transaktionoption-Eigenschaft auf `Supported`fest.  
   
     > [!NOTE]  
     >  Das Paket unterstützt Transaktionen, aber die Transaktionen werden von Tasks oder Containern im Paket gestartet.  
   
 6.  Klicken Sie auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf den Task oder den Container im Paket, für den Sie eine Transaktion starten möchten, und klicken Sie auf **Eigenschaften**.  
   
-7.  In der **Eigenschaften** legen die TransactionOption-Eigenschaft auf `Required`.  
+7.  Legen Sie im Fenster **Eigenschaften** die transaktionoption-Eigenschaft auf `Required`fest.  
   
 8.  Wenn eine Transaktion von einem Container gestartet wird, klicken Sie mit der rechten Maustaste auf den Task oder den Container, für den Sie die Transaktion registrieren möchten, und klicken Sie auf **Eigenschaften**.  
   
-9. In der **Eigenschaften** legen die TransactionOption-Eigenschaft auf `Supported`.  
+9. Legen Sie im Fenster **Eigenschaften** die transaktionoption-Eigenschaft auf `Supported`fest.  
   
     > [!NOTE]  
     >  Um eine Verbindung in einer Transaktion einzutragen, registrieren Sie die Tasks, die die Verbindung verwenden, für die Transaktion. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 10. Wiederholen Sie die Schritte 6 bis 9 für alle Tasks und Container, die eine Transaktion initiieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Transaktionen](integration-services-transactions.md)  
   
   

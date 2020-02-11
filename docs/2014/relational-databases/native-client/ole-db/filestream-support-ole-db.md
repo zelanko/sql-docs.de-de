@@ -14,22 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad6aa7b55906e68dba6615140ef2c6afcc3efaa5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62668933"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM-Unterstützung (OLE DB)
-  Beginnend mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 unterstützt OLE DB die verbesserte Funktion FILESTREAM. Weitere Informationen zu diesem Feature finden Sie unter [FILESTREAM-Unterstützung](../features/filestream-support.md). Beispiele finden Sie [Filestream und OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
+  Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 10,0 unterstützt OLE DB die erweiterte FILESTREAM-Funktion. Weitere Informationen zu dieser Funktion finden Sie [unter FILESTREAM-Unterstützung](../features/filestream-support.md). Beispiele finden Sie unter [FileStream und OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
   
- Um `varbinary(max)`-Werte über 2 GB zu senden und zu empfangen, verwendet eine Anwendung `DBTYPE_IUNKNOWN` in Parameter- und Ergebnisbindungen. Für Parameter muss der Anbieter IUnknown:: QueryInterface aufrufen, einer ISequentialStream-Schnittstelle und für Ergebnisse, die einer ISequentialStream-Schnittstelle zurückzugeben.  
+ Um `varbinary(max)`-Werte über 2 GB zu senden und zu empfangen, verwendet eine Anwendung `DBTYPE_IUNKNOWN` in Parameter- und Ergebnisbindungen. Für Parameter muss der Anbieter IUnknown:: QueryInterface für ISequentialStream und für Ergebnisse, die ISequentialStream zurückgeben, aufruft.  
   
- Für OLE DB wird überprüfen im Zusammenhang mit ISequentialStream-Werte erhöht. Wenn *wType* ist `DBTYPE_IUNKNOWN` in die `DBBINDING` Struktur längenüberprüfung möglich deaktiviert, entweder durch Auslassen `DBPART_LENGTH` aus *DwPart* oder durch Festlegen der Länge der Daten (bei Offset *ObLength* im Datenpuffer) auf ~ 0. In diesem Fall überprüft der Provider die Länge des Werts nicht und fordert alle Daten an (oder gibt sie zurück), die über den Datenstrom zur Verfügung stehen. Diese Änderung wird auf alle LOB-Typen (Large Object) und auf XML angewendet, allerdings nur, wenn eine Verbindung zu [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Servern (oder höher) besteht. Auf diese Weise erhalten Entwickler eine höhere Flexibilität, während sie die Konsistenz und Abwärtskompatibilität für vorhandene Anwendungen und Downlevelserver beibehalten.  
+ Bei OLE DB wird die Überprüfung auf ISequentialStream-Werte gelockert. Wenn sich *wType* in `DBTYPE_IUNKNOWN` der `DBBINDING` Struktur befindet, kann die Längen Überprüfung entweder durch Weglassen `DBPART_LENGTH` von *dwPart* oder durch Festlegen der Länge der Daten (bei Offset *obLength* im Datenpuffer) auf ~ 0 deaktiviert werden. In diesem Fall überprüft der Provider die Länge des Werts nicht und fordert alle Daten an (oder gibt sie zurück), die über den Datenstrom zur Verfügung stehen. Diese Änderung wird auf alle LOB-Typen (Large Object) und auf XML angewendet, allerdings nur, wenn eine Verbindung zu [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Servern (oder höher) besteht. Auf diese Weise erhalten Entwickler eine höhere Flexibilität, während sie die Konsistenz und Abwärtskompatibilität für vorhandene Anwendungen und Downlevelserver beibehalten.  
   
- Diese Änderung wirkt sich auf alle Schnittstellen, die Daten, die hauptsächlich IRowset:: GetData ICommand:: Execute und IRowsetFastLoad:: InsertRow übertragen.  
+ Diese Änderung wirkt sich auf alle Schnittstellen aus, die Daten übertragen, hauptsächlich IRowset:: GetData, ICommand:: Execute und IRowsetFastLoad:: InsertRow.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Programmierung für SQL Server Native Client](../sql-server-native-client-programming.md)  
   
   

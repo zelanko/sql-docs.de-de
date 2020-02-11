@@ -1,5 +1,5 @@
 ---
-title: Neues Abonnement oder Abonnement bearbeiten (Berichts-Manager) | Microsoft-Dokumentation
+title: Neues Abonnement oder Abonnement bearbeiten (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108143"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Neues Abonnement oder Abonnement bearbeiten (Berichts-Manager)
   Mithilfe der Seite Neues Abonnement oder Abonnement bearbeiten können Sie ein neues Abonnement erstellen oder ein vorhandenes Abonnement für einen Bericht bearbeiten. Abhängig von Ihrer Rollenzuweisung stehen auf dieser Seite unterschiedliche Optionen zur Verfügung. Benutzer mit erweiterten Berechtigungen können zusätzliche Optionen verwenden.  
   
- Abonnements werden nur für Berichte unterstützt, die unbeaufsichtigt ausgeführt werden können. Der Bericht muss zumindest gespeicherte oder gar keine Anmeldeinformationen verwenden. Wenn der Bericht Parameter verwendet, muss ein Standardwert angegeben werden. Abonnements können inaktiv werden, wenn die Berichtsausführungseinstellungen geändert oder die von den Parametereigenschaften verwendeten Standardwerte entfernt werden. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ Abonnements werden nur für Berichte unterstützt, die unbeaufsichtigt ausgeführt werden können. Der Bericht muss zumindest gespeicherte oder gar keine Anmeldeinformationen verwenden. Wenn der Bericht Parameter verwendet, muss ein Standardwert angegeben werden. Abonnements können inaktiv werden, wenn die Berichtsausführungseinstellungen geändert oder die von den Parametereigenschaften verwendeten Standardwerte entfernt werden. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichts Server](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)im einheitlichen Modus.  
   
 > [!NOTE]  
 >  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -36,17 +36,17 @@ ms.locfileid: "66108143"
   
 3.  Führen Sie im Dropdownmenü einen der folgenden Schritte aus:  
   
-    -   Klicken Sie auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für den Bericht geöffnet. Wählen Sie dann die Registerkarte **Abonnements** aus. Klicken Sie auf der Symbolleiste auf **Neues Abonnement**, oder wählen Sie ein vorhandenes Abonnement aus, und klicken Sie auf **Bearbeiten**.  
+    -   Klicken Sie auf **Manage**. Dadurch wird die Seite Allgemeine Eigenschaften für den Bericht geöffnet. Wählen Sie dann die Registerkarte **Abonnements** aus. Klicken Sie in der Symbolleiste auf **Neues Abonnement**, oder wählen Sie ein vorhandenes Abonnement aus, und klicken Sie auf **Bearbeiten**  
   
     -   Klicken Sie auf **Abonnieren**. Dadurch wird die Seite **Neues Abonnement** für den Bericht geöffnet.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Übermittelt von**  
  Wählen Sie die Übermittlungserweiterung aus, die zum Verteilen des Berichts verwendet werden soll. Abhängig von der ausgewählten Übermittlungserweiterung werden die folgenden Einstellungen angezeigt:  
   
--   E-Mail-Abonnements stellen Felder bereit, die den Benutzern von E-Mail vertraut sind (z. B. die Felder **An**, **Betreff**und **Priorität** ). Geben Sie **Bericht einschließen** an, um den Bericht einzubetten oder anzufügen, oder wählen Sie **Link einschließen** aus, um einem Bericht eine URL hinzuzufügen. Mithilfe von **Renderformat** können Sie ein Präsentationsformat für den angefügten oder eingebetteten Bericht auswählen.  
+-   E-Mail-Abonnements stellen Felder bereit, die den Benutzern per e-Mail vertraut sind (z. b. Felder **an**, **Betreff**und **Priorität** ). Geben Sie **Bericht einschließen** an, um den Bericht einzubetten oder anzufügen, oder wählen Sie **Link einschließen** aus, um einem Bericht eine URL hinzuzufügen. Mithilfe von **Renderformat** können Sie ein Präsentationsformat für den angefügten oder eingebetteten Bericht auswählen.  
   
--   Dateifreigabeabonnements stellen Felder bereit, die es Ihnen ermöglichen, einen Zielspeicherort anzugeben. Jeder beliebige Bericht kann an eine Dateifreigabe übermittelt werden. Berichte, die interaktive Funktionen unterstützen (einschließlich Matrixberichte, in denen ein Drilldown zu unterstützenden Zeilen und Spalten möglich ist), werden jedoch als statische Dateien dargestellt. Drilldownzeilen und -spalten können in einer statischen Datei nicht angezeigt werden. Der dateifreigabename muss im Uniform Naming Convention (UNC)-Format angegeben werden (z. B. \\\mycomputer\public\myreportfiles). Der Pfadname darf keinen abschließenden umgekehrten Schrägstrich enthalten. Die Berichtsdatei wird in einem Dateiformat ausgegeben, das auf dem Renderformat basiert. Wenn Sie beispielsweise **Excel**auswählen, wird der Bericht als XLS-Datei ausgegeben.  
+-   Dateifreigabeabonnements stellen Felder bereit, die es Ihnen ermöglichen, einen Zielspeicherort anzugeben. Jeder beliebige Bericht kann an eine Dateifreigabe übermittelt werden. Berichte, die interaktive Funktionen unterstützen (einschließlich Matrixberichte, in denen ein Drilldown zu unterstützenden Zeilen und Spalten möglich ist), werden jedoch als statische Dateien dargestellt. Drilldownzeilen und -spalten können in einer statischen Datei nicht angezeigt werden. Der Name der Dateifreigabe muss im UNC-Format (Uniform Naming Convention) angegeben werden (z \\. b. \mycomputer\public\myreportfiles). Der Pfadname darf keinen abschließenden umgekehrten Schrägstrich enthalten. Die Berichtsdatei wird in einem Dateiformat ausgegeben, das auf dem Renderformat basiert. Wenn Sie beispielsweise **Excel**auswählen, wird der Bericht als XLS-Datei ausgegeben.  
   
  Die Verfügbarkeit einer Übermittlungserweiterung hängt davon ab, ob sie auf dem Berichtsserver installiert und konfiguriert ist. Berichtsserver-E-Mail stellt die Standardübermittlungserweiterung dar. Sie muss jedoch konfiguriert werden, bevor Sie sie verwenden können. Die Dateifreigabeübermittlung erfordert keine Konfiguration. Sie müssen jedoch einen freigegebenen Ordner definieren, bevor Sie sie verwenden können.  
   
@@ -56,17 +56,17 @@ ms.locfileid: "66108143"
  **Wenn der Berichtsinhalt aktualisiert wurde**  
  Wählen Sie diese Option aus, um eine Berichtsmomentaufnahme zu abonnieren, der auf der Grundlage eines Zeitplans aktualisiert wird. Diese Option wird nur angezeigt, wenn Sie einen Bericht abonnieren, der als Momentaufnahme zur Berichtsausführung ausgeführt wird. Der Inhalt für eine Momentaufnahme zur Berichtsausführung wird in der Regel gemäß einem Zeitplan aktualisiert. Für Berichte, die in diesem Modus ausgeführt werden, können Sie definieren, dass das Abonnement nach der Aktualisierung der Momentaufnahme ausgeführt wird.  
   
- **Wenn die geplante berichtsausführung abgeschlossen ist.**  
+ **Wenn die geplante Berichtsausführung abgeschlossen ist**  
  Erstellen Sie einen Zeitplan, mit dem bestimmt wird, wann das Abonnement verarbeitet wird.  
   
- **Nach einem freigegebenen Zeitplan**  
+ **Auf einem freigegebenen Zeitplan**  
  Wählen Sie einen definierten Zeitplan zur Verarbeitung des Abonnements aus.  
   
- **Geben Sie die Parameterwerte**  
+ **Eingeben von Parameterwerten**  
  Verwenden Sie diese Option, wenn Sie einen Bericht mit Parametern abonnieren. Diese Option steht nur für parametrisierte Berichte zur Verfügung. Beim Abonnieren eines parametrisierten Berichts können Sie die Parameterwerte angeben, mit deren Hilfe die Berichtsversion erstellt wird, die durch das Abonnement übermittelt wird. Sie können z. B. eine Regionalkennzahl angeben, um Vertriebsdaten für eine bestimmte Region auszuwählen. Wenn Sie keinen Wert angeben, wird der Standardwert verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS-Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  

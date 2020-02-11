@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106728"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Hinzufügen eines externen Bilds (Berichts-Generator und SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66106728"
   
      Wenn ein Bild auf einem Berichtsserver im einheitlichen Modus gespeichert ist, geben Sie im Feld **Dieses Bild verwenden** einen relativen Pfad zu dem Bild ein, z.B. „../images/image1.jpg“.  
   
-     Geben Sie für ein Bild auf einem Berichtsserver im integrierten SharePoint-Modus oder einer beliebigen anderen Website, eine vollständige URL für das Bild in der **dieses Bild verwenden** Box-z. B. http://\<SharePointservername > /\<Site > / Documents/Images/Image1.jpg.  
+     Geben Sie für ein Bild auf einem Berichts Server im integrierten SharePoint-Modus oder auf einer beliebigen anderen Website im Feld **dieses Bild verwenden** eine vollständige URL zum Bild ein, z. b\<. http://SharePointServerName\<>/Site>/Documents/images/image1.jpg).  
   
      Weitere Informationen finden Sie unter [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66106728"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Hinzufügen eines Hintergrundbilds &#40;Berichts-Generator und SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
+ [Hinzufügen eines Hintergrundbilds (Berichts-Generator und SSRS)](add-a-background-image-report-builder-and-ssrs.md)   
  [Bildeigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

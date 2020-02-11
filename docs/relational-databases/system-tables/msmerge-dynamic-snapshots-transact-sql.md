@@ -18,24 +18,24 @@ ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a6b0660635812a216525665832b0f16f64538b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67894938"
 ---
-# <a name="msmergedynamicsnapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
+# <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_dynamic_snapshots** Tabelle verfolgt den Speicherort der gefilterten datenmomentaufnahme für jede Partition, die für eine Mergeveröffentlichung mit parametrisierten Zeilenfiltern definiert. Diese Tabelle befindet sich in der **Veröffentlichung** Datenbank.  
+  In der **MSmerge_dynamic_snapshots** Tabelle wird der Speicherort der gefilterten Daten Momentaufnahme für jede Partition nachverfolgt, die für eine Mergeveröffentlichung mit parametrisierten Zeilen filtern definiert ist. Diese Tabelle wird in der **Veröffentlichungs** Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|Die ID der Mergepartition.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Der Standort der gefilterten Datenmomentaufnahme für die Partition.|  
 |**last_updated**|**datetime**|Das Datum, an dem die gefilterte Datenmomentaufnahme aktualisiert wurde.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

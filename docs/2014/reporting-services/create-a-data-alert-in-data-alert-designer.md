@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109707"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
@@ -35,7 +35,7 @@ ms.locfileid: "66109707"
   
      Das folgende Bild zeigt das Menü **Aktionen** an.  
   
-     ![Warnungs-Designer aus SharePoint-Bibliothek öffnen](media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![Öffnen des Warnungs-Designers über die SharePoint-Bibliothek](media/rs-openalertdesigneriw.gif "Öffnen des Warnungs-Designers über die SharePoint-Bibliothek")  
   
      Der Datenwarnungs-Designer wird geöffnet und zeigt die ersten 100 Zeilen des ersten Datenfeeds an, den der Bericht in einer Tabelle generiert.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66109707"
   
      Abhängig vom Datentyp der ausgewählten Spalte sind andere Vergleichsoperatoren aufgeführt. Wenn die Spalte einen Datumsdatentyp aufweist, wird ein Kalendersymbol neben dem Schwellenwert für die Regel angezeigt. Sie können Daten eingeben, indem Sie auf ein Datum im Kalender klicken oder das Datum eingeben.  
   
-     Der Datenwarnungs-Designer bietet zwei Vergleichsmodi: **Werteingabemodus** und **Feldauswahlmodus**. Der Standardmodus ist der **Werteingabemodus**. Sie können OR-Klauseln nur hinzufügen, wenn der **Werteingabemodus** aktiviert ist und Sie den Vergleich **ist** verwenden.  
+     Der Datenwarnungs-Designer stellt zwei Vergleichsmodi bereit: **Werteingabemodus** und **Feldauswahlmodus**. Der Standardmodus ist der **Werteingabemodus**. Sie können OR-Klauseln nur hinzufügen, wenn der **Werteingabemodus** aktiviert ist und Sie den Vergleich **ist** verwenden.  
   
 9. Um eine OR-Klausel hinzuzufügen, klicken Sie auf den Pfeil nach unten und anschließend auf **Werteingabemodus**.  
   
 10. Geben Sie den Vergleichswert ein.  
   
-11. Klicken Sie optional erneut auf die Auslassungspunkte **(...)** .  
+11. Klicken Sie optional erneut auf die Auslassungspunkte **(...)**.  
   
      Die Auslassungspunkte **(...)** werden in der Zeile mit der ersten Klausel angezeigt.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66109707"
   
 12. Klicken Sie optional auf den Pfeil nach unten, wählen Sie **Feldauswahlmodus**und anschließend eine Spalte in der Liste aus.  
   
-     Die Auslassungspunkte **(...)** , auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
+     Die Auslassungspunkte **(...)**, auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
   
 13. Klicken Sie optional erneut auf **Regel hinzufügen** , um weitere Regeln hinzuzufügen.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66109707"
     > [!NOTE]  
     >  Durch das Beenden einer Warnmeldung wird die Warnungsdefinition nicht gelöscht. Nach dem Beenden einer Warnmeldung können Sie diese durch Aktualisieren des Start- und Enddatums erneut starten. Weitere Informationen zum Löschen von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
-18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen nur bei Ergebnisänderungen**.  
+18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen nur bei Ergebnisänderungen** .  
   
      Wenn Sie Warnmeldungen häufig senden, sind redundante Informationen u. U. nicht erwünscht, und Sie sollten das Kontrollkästchen nicht deaktivieren.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "66109707"
   
 20. Aktualisieren Sie optional im Textfeld **Betreff** die Betreffzeile der Warnmeldung.  
   
-     Der Standardbetreff lautet **Datenwarnung für \<Name der Datenwarnung>** .  
+     Der Standardbetreff lautet **Datenwarnung für \<Name der Datenwarnung>**.  
   
 21. Geben Sie optional im Textfeld **Beschreibung** eine Beschreibung der Warnmeldung ein.  
   
 22. Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenwarnungs-Designer](../../2014/reporting-services/data-alert-designer.md)   
- [Datenwarnungs-Manager für Warnungsadministratoren](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Datenwarnungs-Manager für Warnungs Administratoren](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md)  
   
   

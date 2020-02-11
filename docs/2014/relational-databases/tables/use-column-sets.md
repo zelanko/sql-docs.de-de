@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298634"
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
@@ -106,12 +106,12 @@ GO
   
  In diesem Beispiel wurde kein Wert für die Spalte `i`angegeben, und der Wert `0` wurde eingefügt.  
   
-## <a name="using-the-sqlvariant-data-type"></a>Verwenden des sql_variant-Datentyps  
+## <a name="using-the-sql_variant-data-type"></a>Verwenden des sql_variant-Datentyps  
  Der `sql_variant`-Datentyp kann mehrere unterschiedliche Datentypen speichern, z. B. `int`, `char` und `date`. Spaltensätze geben Datentypinformationen zu Dezimalstellen, Genauigkeit und Gebietsschema, die mit einem `sql_variant`-Wert verknüpft sind, in der erstellten XML-Spalte als Attribute aus. Wenn Sie versuchen, diese Attribute in einer benutzerdefinierten XML-Anweisung als Eingabe für einen INSERT- oder UPDATE-Vorgang für einen Spaltensatz bereitzustellen, sind einige dieser Attribute obligatorisch, und anderen wird ein Standardwert zugewiesen. In der folgenden Tabelle sind die Datentypen und die Standardwerte aufgeführt, die vom Server generiert werden, wenn der Wert nicht angegeben wird.  
   
-|Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Genauigkeit|Dezimalstellen|  
+|Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Precision|Skalieren|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
-|`char`, `varchar`, `binary`|-1|'Standardwert'|0|0|8000|Nicht zutreffend**|Nicht verfügbar|  
+|`char`, `varchar`, `binary`|-1|'Standardwert'|0|0|8\.000|Nicht zutreffend**|Nicht verfügbar|  
 |`nvarchar`|-1|'Standardwert'|0|0|4000|Nicht verfügbar|Nicht verfügbar|  
 |`decimal`, `float`, `real`|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|18|0|  
 |`integer`, `bigint`, `tinyint`, `smallint`|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
@@ -121,7 +121,8 @@ GO
 |`money`, `smallmoney`|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
 |`time`|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
   
- \*  „localeID -1“ ist das Standardgebietsschema. Das englischsprachige Gebietsschema ist 1033.  
+ 
+  \*  „localeID -1“ ist das Standardgebietsschema. Das englischsprachige Gebietsschema ist 1033.  
   
  **  Nicht zutreffend = Bei einem SELECT-Vorgang für den Spaltensatz werden für diese Attribute keine Werte ausgegeben. Gibt eine Fehlermeldung zurück, wenn für dieses Attribut von dem Aufrufer in der für einen Spaltensatz in einem INSERT- oder UPDATE-Vorgang bereitgestellten XML-Darstellung ein Wert angegeben wird.  
   
@@ -182,7 +183,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D: Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
  Im folgenden Beispiel werden alle Spalten der Tabelle ausgewählt, die einen Spaltensatz enthält. Es wird eine XML-Spalte mit den kombinierten Werten der Sparsespalten zurückgegeben. Die Sparsespalten werden nicht einzeln zurückgegeben.  
   
 ```  
@@ -255,7 +256,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Spalten mit geringer Dichte](use-sparse-columns.md)  
   
   

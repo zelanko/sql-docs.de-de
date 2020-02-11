@@ -1,5 +1,5 @@
 ---
-title: Berechnete Reihe im Dialogfeld Eigenschaften Marker (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Eigenschaften von berechneten Reihen (Dialog Feld), Marker (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109892"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Eigenschaften von berechneten Reihen (Dialogfeld), Marker (Berichts-Generator und SSRS)
-  Wählen Sie im Dialogfeld **Eigenschaften von berechneten Reihen** die Option **Marker** aus, um die Darstellung von Markern auf den einzelnen Datenpunkten einer Reihe zu definieren. Marker sind nur für bestimmte Diagrammtypen verfügbar. Die folgenden Diagrammtypen unterstützen Marker: Bereich, Balken, Spalte, Polar-, Zeile und Punktdiagramm. Weitere Informationen zu Diagrammfunktionen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
+  Wählen Sie im Dialogfeld **Eigenschaften von berechneten Reihen** die Option **Marker** aus, um die Darstellung von Markern auf den einzelnen Datenpunkten einer Reihe zu definieren. Marker sind nur für bestimmte Diagrammtypen verfügbar. Die folgenden Diagrammtypen unterstützen Marker: Flächendiagramm, Balkendiagramm, Säulendiagramm, Liniendiagramm, Polardiagramm und Punktdiagramm. Weitere Informationen zu Diagrammfunktionen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Markertyp**  
  Wählen Sie einen Markertyp aus, wenn Marker im Diagramm aktiviert werden. Standardmäßig ist der Wert **Kreis**festgelegt.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66109892"
  **Markerrahmenfarbe**  
  Wählen Sie die Rahmenfarbe der Marker aus, die auf den Datenpunkten angezeigt werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

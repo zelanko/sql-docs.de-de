@@ -1,5 +1,5 @@
 ---
-title: Cube-Spaltenauswahl (Dialogfeld) (Berichts-Generator) | Microsoft-Dokumentation
+title: Cubeauswahl (Dialog Feld) (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 007740fbbf7a01139a7b3c1a679e1737d2f29a7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109574"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Cubeauswahl (Dialogfeld) (Berichts-Generator)
   Mithilfe des Dialogfelds **Cubeauswahl** wählen Sie einen anderen Cube als Datenquelle für Ihren Bericht aus. Wenn Sie einen anderen Cube auswählen, ist die Abfrage möglicherweise nicht mehr gültig.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   

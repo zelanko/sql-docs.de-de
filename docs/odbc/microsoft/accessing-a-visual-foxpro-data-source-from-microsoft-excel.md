@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf einer Visual FoxPro-Datenquelle aus Microsoft Excel | Microsoft-Dokumentation
+title: Zugreifen auf eine Visual FoxPro-Datenquelle von Microsoft Excel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,35 +16,35 @@ ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20d4c7d47f2d541efdb1afbb9d757642b5ac83ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901506"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Zugreifen auf eine Visual FoxPro-Datenquelle aus Microsoft Excel
-Wenn Sie Microsoft Query installiert haben, können Sie eine Datenquelle in Microsoft Excel erstellen, die mit Visual FoxPro-Daten verbunden.  
+Wenn Sie Microsoft Query installiert haben, können Sie eine Datenquelle in Microsoft Excel erstellen, die eine Verbindung mit Visual FoxPro-Daten herstellt.  
   
-### <a name="to-access-visual-foxpro-data-from-microsoft-excel"></a>Zugriff auf Visual FoxPro-Daten aus Microsoft Excel  
+### <a name="to-access-visual-foxpro-data-from-microsoft-excel"></a>So greifen Sie auf Visual FoxPro-Daten von Microsoft Excel zu  
   
-1.  Öffnen Sie Microsoft Excel-Arbeitsblatt ein.  
+1.  Öffnen Sie eine Microsoft Excel-Tabelle.  
   
-2.  Wählen Sie aus dem Menü "Daten" Externe Daten abrufen. Microsoft Query wird geöffnet.  
+2.  Wählen Sie im Menü Daten die Option externe Daten erhalten aus. Microsoft-Abfrage wird geöffnet.  
   
-3.  Klicken Sie auf andere, klicken Sie im Dialogfeld Datenquelle auswählen.  
+3.  Klicken Sie im Dialogfeld Datenquelle auswählen auf andere.  
   
-4.  Klicken Sie auf "Neu", klicken Sie im Dialogfeld ODBC-Datenquellen.  
+4.  Klicken Sie im Dialogfeld ODBC-Datenquellen auf neu.  
   
-5.  Klicken Sie im Dialogfeld "Datenquelle hinzufügen" Wählen Sie Microsoft Visual FoxPro-Treiber aus dem Listenfeld von ODBC-Treiber installiert, und klicken Sie auf OK.  
+5.  Wählen Sie im Dialogfeld Datenquelle hinzufügen im Listenfeld installierte ODBC-Treiber die Option Microsoft Visual FoxPro-Treiber aus, und klicken Sie auf OK.  
   
-6.  In der [Dialogfeld ODBC-Visual FoxPro-Setup](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), geben Sie die Namen der Datenquelle, wählen Sie den Typ, geben Sie den Pfad zur Datenbank oder zum Verzeichnis, und klicken Sie auf OK.  
+6.  Geben Sie im [Dialogfeld Setup für ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)den Datenquellen Namen ein, wählen Sie den Datenbanktyp aus, geben Sie den Pfad zur Datenbank oder zum Verzeichnis ein, und klicken Sie auf OK.  
   
-     Der neue Name der Datenquelle wird im Textfeld Datenquelle Geben Sie im Dialogfeld ODBC-Datenquellen angezeigt.  
+     Der neue Datenquellen Name wird im Textfeld Datenquelle eingeben des Dialog Felds ODBC-Datenquellen angezeigt.  
   
 7.  Klicken Sie auf OK.  
   
-     Der neue Name der Datenquelle, die in das Textfeld der verfügbaren Datenquellen im Dialogfeld "Datenquelle auswählen" ausgewählt ist.  
+     Der neue Datenquellen Name wird im Dialogfeld Datenquelle auswählen im Textfeld Verfügbare Datenquellen ausgewählt.  
   
-8.  Klicken Sie auf verwenden.  
+8.  Klicken Sie auf Verwenden.  
   
- Sie können nun das Öffnen der Abfrage Tabellen hinzufügen. Weitere Informationen zum Erstellen einer Abfrage finden Sie unter [Importieren von Daten in Microsoft Excel aus einer Visual FoxPro-Datenbank](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
+ Nun können Sie der geöffneten Abfrage Tabellen hinzufügen. Weitere Informationen zum Aufbau einer Abfrage finden Sie [unter Importieren von Daten in Microsoft Excel aus einer Visual FoxPro-Datenbank](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).

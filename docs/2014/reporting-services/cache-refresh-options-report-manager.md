@@ -1,5 +1,5 @@
 ---
-title: Zwischenspeichern von Optionen zur Cacheaktualisierung (Berichts-Manager) | Microsoft-Dokumentation
+title: Optionen für die Cache Aktualisierung (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109922"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Optionen zur Cacheaktualisierung (Berichts-Manager)
@@ -49,7 +49,7 @@ ms.locfileid: "66109922"
  **Neu aus vorhandenem**  
  Diese Option wird nur aktiviert, wenn genau ein Cacheaktualisierungsplan ausgewählt ist. Durch diese Option wird ein neuer Aktualisierungsplan erstellt, der vom ursprünglichen Plan kopiert wird. Die Seite Cacheaktualisierungsplan wird geöffnet und enthält bereits die Details des ausgewählten Plans. Anschließend können Sie die Optionen für den Aktualisierungsplan ändern und den Plan mit einer neuen Beschreibung speichern.  
   
- **Neuer cacheaktualisierungsplan**  
+ **Neuer Cacheaktualisierungsplan**  
  Klicken Sie auf diese Option, um einen neuen Aktualisierungsplan zu erstellen, der in den aktuellen Cacheaktualisierungsoptionen verwendet werden soll.  
   
  **Bearbeiten**  
@@ -65,14 +65,14 @@ ms.locfileid: "66109922"
  **Konfigurieren**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplan zu öffnen, auf der Sie Angaben zur Häufigkeit machen können.  
   
- Weitere Informationen finden Sie unter [neuer Zeitplan: Seite "Zeitplan" Edit &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Weitere Informationen finden Sie unter [Neuer Zeitplan: Seite "Zeitplan bearbeiten" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
- **Freigegebenen Zeitplan**  
+ **Frei gegebener Zeitplan**  
  Aktivieren Sie diese Option, um einen vorhandenen Zeitplan auszuwählen.  
   
  Weitere Informationen finden Sie unter [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
- **@\<** *Parameter* **>**  
+ **@\<***Parameter***>**  
  Geben Sie eine Kombination von Parameterwerten an. Dieser Abschnitt wird nur angezeigt, wenn das aktuelle Dataset oder der aktuelle Bericht über Parameter verfügt.  
   
  Siehe [Angeben von Parametern](#Parameters) im nächsten Abschnitt.  
@@ -80,7 +80,7 @@ ms.locfileid: "66109922"
  **Standard verwenden**  
  Aktivieren Sie diese Option, um den vordefinierten Standardwert für diesen Parameter zu verwenden.  
   
-##  <a name="Parameters"></a> Angeben von Parametern  
+##  <a name="Parameters"></a>Angeben von Parametern  
  Zum Erstellen eines Cacheaktualisierungsplans muss jeder Parameter für einen Bericht oder ein freigegebenes Dataset über einen Wert verfügen. Wenn für den Bericht oder das freigegebene Datasetelement in der Definition kein Standardwert angegeben ist, müssen Sie einen Wert angeben. Wenn ein Standardwert vorhanden ist, müssen Sie hier keinen Wert zur Verfügung stellen. Wenn Sie trotzdem einen Wert angeben, überschreibt dieser den Standardwert.  
   
  Um mehrere Kombinationen von Parameterwerten anzugeben, erstellen Sie einen separaten Cacheaktualisierungsplan für jede Kombination.  
@@ -90,13 +90,13 @@ ms.locfileid: "66109922"
 ### <a name="shared-dataset-parameters"></a>Parameter für freigegebene Datasets  
  Die folgenden Informationen werden für ein freigegebenes Dataset aus der zugehörigen Definition abgeleitet:  
   
--   **Name** Gibt den Namen des Abfrageparameters an.  
+-   **Name** Gibt den Namen des Abfrage Parameters an.  
   
--   **Type** Gibt den Datentyp des Abfrageparameters an. Da dieser Datentyp unbekannt ist, bis die Datasetabfrage vom Datenanbieter verarbeitet wird, kann der Datentyp erst überprüft werden, nachdem das freigegebene Dataset verarbeitet wurde.  
+-   **Typ** Gibt den Datentyp des Abfrage Parameters an. Da dieser Datentyp unbekannt ist, bis die Datasetabfrage vom Datenanbieter verarbeitet wird, kann der Datentyp erst überprüft werden, nachdem das freigegebene Dataset verarbeitet wurde.  
   
--   **Nullable** Gibt an, ob NULL ein gültiger Wert ist.  
+-   **NULL-Werte** zulassen Gibt an, ob NULL ein gültiger Wert ist.  
   
--   **ReadOnly** Gibt an, ob dieser Parameter in der Definition des freigegebenen Datasets als schreibgeschützt gekennzeichnet ist. Schreibgeschützte Parameter werden nicht in der Parameterliste für Cacheaktualisierungsoptionen angezeigt. Für diese Parameter muss in der Definition des freigegebenen Datasets ein Standardwert vorhanden sein.  
+-   **** Schreibgeschützt Gibt an, ob dieser Parameter in der Definition des freigegebenen Datasets als schreibgeschützt gekennzeichnet ist. Schreibgeschützte Parameter werden nicht in der Parameterliste für Cacheaktualisierungsoptionen angezeigt. Für diese Parameter muss in der Definition des freigegebenen Datasets ein Standardwert vorhanden sein.  
   
 -   **DefaultValues** Standardwerte, die in der Definition des freigegebenen Datasets angegeben wurden. Abfrageparameter können mehrwertig sein. Um die Standardwerte zu überschreiben, geben Sie neue Werte in die Eingabeaufforderungsbereiche des Textfelds ein.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "66109922"
 ### <a name="report-parameters"></a>Berichtsparameter  
  Damit Sie einen Cacheaktualisierungsplan erstellen können, muss jeder Parameterwert für einen Bericht gültig sein. Sie müssen für jeden Berichtsparameter einen Standardwert eingeben oder auswählen. Der festgelegte Wert überschreibt den für den Berichtsparameter auf dem Berichtsserver definierten Standardwert.  
   
- Parameter müssen die Anforderungen erfüllen, die in den Parametereigenschaften auf dem Berichtsserver angegeben wurden. Wenn die Eigenschaft AllowBlank für einen Berichtsparameter false ist, ist eine leere Zeichenfolge beispielsweise keinen gültigen Wert.  
+ Parameter müssen die Anforderungen erfüllen, die in den Parametereigenschaften auf dem Berichtsserver angegeben wurden. Wenn beispielsweise die Eigenschaft AllowBlank für einen Berichts Parameter den Wert false hat, ist eine leere Zeichenfolge kein gültiger Wert.  
   
- Zum Anzeigen oder Ändern von Optionen für Berichtsparameter müssen Sie die Berichtsparameter im Bericht oder unabhängig auf dem Berichtsserver bearbeiten. Weitere Informationen finden Sie unter [Berichtsparameter-Konzept &#40;Berichts-Generator und SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+ Zum Anzeigen oder Ändern von Optionen für Berichtsparameter müssen Sie die Berichtsparameter im Bericht oder unabhängig auf dem Berichtsserver bearbeiten. Weitere Informationen finden Sie unter [Berichts Parameter Konzept &#40;Berichts-Generator und SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>Bedingungen, die bewirken, dass ein Cacheaktualisierungsplan deaktiviert wird  
  Ein Cacheaktualisierungsplan für ein freigegebenes Dataset oder einen Bericht kann unter folgenden Bedingungen deaktiviert werden.  
@@ -127,10 +127,10 @@ ms.locfileid: "66109922"
   
 -   Deaktivieren oder aktivieren Sie die Schreibschutzoption für einen Datasetabfrageparameter, der dem Aktualisierungsplan zugeordnet ist, und speichern Sie dann die neue Definition auf dem Berichtsserver.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben auf Elementebene](security/tasks-and-permissions-item-level-tasks.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Zwischenspeichern von Berichten (SSRS)](report-server/caching-reports-ssrs.md)   
  [Verwalten von freigegebenen Datasets](report-data/manage-shared-datasets.md)  
   

@@ -18,18 +18,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108741"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Verschlüsselungsschlüssel basieren teilweise auf den Profilinformationen des Berichtsserverdiensts. Wenn Sie die Benutzeridentität ändern, mit der Sie den Berichtsserverdienst ausführen, müssen Sie die Schlüssel entsprechend aktualisieren. Wenn Sie das Reporting Services-Konfigurationstool verwenden, um Ihre Identität zu ändern, wird dieser Schritt automatisch für Sie erledigt.  
   
- Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen `RSReportServerNotActivated`-Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie unter [SSRS: Problembehandlung bei Problemen und Fehlern mit Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) im Technet Wiki.  
+ Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen `RSReportServerNotActivated`-Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie im Technet-Wiki unter [SSRS: Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: Beheben von Problemen und Fehlern bei Reporting Services).  
   
 ## <a name="overview-of-the-initialization-process"></a>Übersicht über den Initialisierungsprozess  
  Der Initialisierungsprozess erstellt und speichert einen symmetrischen Schlüssel, der zur Verschlüsselung verwendet wird. Der symmetrische Schlüssel wird von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Kryptografiediensten erstellt und anschließend vom Berichtsserverdienst verwendet, um Daten zu ver- und entschlüsseln. Der symmetrische Schlüssel selbst wird mit einem asymmetrischen Schlüssel verschlüsselt.  
@@ -55,22 +55,22 @@ ms.locfileid: "66108741"
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisieren eines Berichtsservers  
   
--   Verwenden Sie das Reporting Services-Konfigurationstool, um den Berichtsserver zu initialisieren. Die Initialisierung findet automatisch beim Erstellen und Konfigurieren der Berichtsserver-Datenbank statt. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Verwenden Sie das Reporting Services-Konfigurationstool, um den Berichtsserver zu initialisieren. Die Initialisierung findet automatisch beim Erstellen und Konfigurieren der Berichtsserver-Datenbank statt. Weitere Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Um einen Berichtsserver für die Bereitstellung für horizontales Skalieren zu initialisieren, verwenden Sie die Initialisierungsseite im Reporting Services-Konfigurationstool oder das Hilfsprogramm **RSKeymgmt**. Schrittweise Anleitungen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Um einen Berichtsserver für die Bereitstellung für horizontales Skalieren zu initialisieren, verwenden Sie die Initialisierungsseite im Reporting Services-Konfigurationstool oder das Hilfsprogramm **RSKeymgmt** . Detaillierte Anleitungen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 > [!NOTE]  
 >  **RSKeymgmt** ist eine Konsolenanwendung, die Sie über eine Befehlszeile auf einem Computer ausführen, der eine Berichtsserverinstanz hostet, die bereits Teil einer Bereitstellung für horizontales Skalieren ist. Wenn Sie das Hilfsprogramm ausführen, geben Sie Argumente zum Auswählen einer Remote-Berichtsserverinstanz an, die Sie initialisieren möchten.  
   
- Ein Berichtsserver wird nur initialisiert, wenn eine Übereinstimmung zwischen der Installations-ID und dem öffentlichen Schlüssel vorliegt. Bei einer Übereinstimmung wird ein symmetrischer Schlüssel erstellt, der die umkehrbare Verschlüsselung ermöglicht. Wenn die Übereinstimmung fehlschlägt, wird der Berichtsserver deaktiviert. In diesem Fall werden Sie möglicherweise aufgefordert, einen Sicherungsschlüssel anzuwenden oder die verschlüsselten Daten zu löschen, wenn ein Sicherungsschlüssel nicht verfügbar oder ungültig ist. Weitere Informationen zu Verschlüsselungsschlüsseln, die von einem Berichtsserver verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md).  
+ Ein Berichtsserver wird nur initialisiert, wenn eine Übereinstimmung zwischen der Installations-ID und dem öffentlichen Schlüssel vorliegt. Bei einer Übereinstimmung wird ein symmetrischer Schlüssel erstellt, der die umkehrbare Verschlüsselung ermöglicht. Wenn die Übereinstimmung fehlschlägt, wird der Berichtsserver deaktiviert. In diesem Fall werden Sie möglicherweise aufgefordert, einen Sicherungsschlüssel anzuwenden oder die verschlüsselten Daten zu löschen, wenn ein Sicherungsschlüssel nicht verfügbar oder ungültig ist. Weitere Informationen zu Verschlüsselungsschlüsseln, die von einem Berichtsserver verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
->  Sie können auch den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) verwenden, um einen Berichtsserver programmgesteuert zu initialisieren. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../tools/access-the-reporting-services-wmi-provider.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+>  Sie können auch den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) verwenden, um einen Berichtsserver programmgesteuert zu initialisieren. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../tools/access-the-reporting-services-wmi-provider.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Bestätigen der Initialisierung eines Berichtsservers  
  Um die Initialisierung des Berichtsservers zu bestätigen, pingen Sie den Berichtsserver-Webdienst, indem Sie **http://<Servername\</reportserver** in das Befehlsfenster eingeben. Wenn der `RSReportServerNotActivated`-Fehler auftritt, ist die Initialisierung fehlgeschlagen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Umgehung der Zeilenbeschränkung in Excel | Microsoft-Dokumentation
+title: Umgehen der Excel-Zeilen Einschränkung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107552"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Umgehung der Zeilenbeschränkung in Excel
@@ -28,7 +28,7 @@ ms.locfileid: "66107552"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Datenzeile in der Tabelle, und klicken Sie anschließend auf **Gruppe hinzufügen** > **Übergeordnete Gruppe** , um eine äußere Tabellengruppe hinzuzufügen.  
   
-     ![Wählen Sie die übergeordnete Gruppe](../media/datarow-selectparentgroup.png "Select the Parent Group")  
+     ![Auswählen der übergeordneten Gruppe](../media/datarow-selectparentgroup.png "Auswählen der übergeordneten Gruppe")  
   
 3.  Geben Sie die folgende Formel im Ausdrucksfeld **Gruppieren nach** ein, und klicken Sie dann auf **OK** , um die übergeordnete Gruppe hinzuzufügen.  
   
@@ -40,19 +40,19 @@ ms.locfileid: "66107552"
   
 4.  Löschen Sie die Gruppenspalte, indem Sie mit der rechten Maustaste auf die Spaltenüberschrift klicken, auf **Spalten löschen**klicken, **Nur Spalten löschen**auswählen und anschließend auf **OK**klicken.  
   
-     ![Löschen einer Gruppenspalte](../media/groupcolumn-delete-updated.png "Delete a group column")  
+     ![Löschen einer Gruppenspalte](../media/groupcolumn-delete-updated.png "Löschen einer Gruppenspalte")  
   
 5.  Klicken Sie mit der rechten Maustaste im Bereich **Zeilengruppen** auf **Gruppe 1** , und klicken Sie dann auf **Gruppeneigenschaften**.  
   
-     ![Anzeigen von Gruppeneigenschaften](../media/groupproperties-updated.png "View group properties")  
+     ![Anzeigen von Gruppeneigenschaften](../media/groupproperties-updated.png "Anzeigen von Gruppeneigenschaften")  
   
 6.  Wählen Sie im Dialogfeld **Gruppeneigenschaften** auf der Seite **Sortierung** die Standardsortierungsoption aus, und klicken Sie auf **Löschen**.  
   
-     ![Löschen der Standardsortierung](../media/groupproperties-sorting-updated.png "Delete default sorting")  
+     ![Löschen der Standardsortierung](../media/groupproperties-sorting-updated.png "Löschen der Standardsortierung")  
   
 7.  Klicken Sie auf der Seite **Seitenumbrüche** auf **Zwischen den einzelnen Instanzen einer Gruppe** , und klicken Sie auf **OK**.  
   
-     ![Festlegen von Seitenumbrüchen](../media/groupproperties-pagebreaks-updated.png "Set page breaks")  
+     ![Festlegen von Seitenumbrüchen](../media/groupproperties-pagebreaks-updated.png "Festlegen von Seitenumbrüchen")  
   
 8.  Speichern Sie den Bericht. Beim Exportieren des Berichts nach Excel wird dieser in mehrere Arbeitsblätter exportiert. Jedes Arbeitsblatt enthält maximal 65.000 Zeilen.  
   

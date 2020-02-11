@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110073"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimieren der NewOrg-Tabelle
-  Die **NewOrd** in erstellten Tabelle der [Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) Aufgabe enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe einer `hierarchyid`-Datentyp. In dieser Aufgabe werden neue Indizes hinzugefügt, die das Suchen in der `hierarchyid`-Spalte unterstützen.  
+  Die Tabelle " **netword** ", die Sie im Task "Auffüllen [einer Tabelle mit vorhandenen hierarchischen Daten](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) " erstellt haben, enthält alle Mitarbeiter Informationen und stellt die hierarchische Struktur mithilfe eines `hierarchyid` -Datentyps dar. In dieser Aufgabe werden neue Indizes hinzugefügt, die das Suchen in der `hierarchyid`-Spalte unterstützen.  
   
 ## <a name="clustered-index"></a>Gruppierter Index  
- Die `hierarchyid` Spalte (**OrgNode**) ist der Primärschlüssel für die **NewOrg** Tabelle. Als die Tabelle erstellt wurde, enthielt sie den gruppierten Index **PK_NewOrg_OrgNode** , der die Eindeutigkeit der **OrgNode** -Spalte erzwingen sollte. Dieser gruppierte Index unterstützt auch eine Tiefensuche in der Tabelle.  
+ Die `hierarchyid` Spalte (**OrgNode**) ist der Primärschlüssel für die Tabelle " **networg** ". Als die Tabelle erstellt wurde, enthielt sie den gruppierten Index **PK_NewOrg_OrgNode** , der die Eindeutigkeit der **OrgNode** -Spalte erzwingen sollte. Dieser gruppierte Index unterstützt auch eine Tiefensuche in der Tabelle.  
   
 ## <a name="nonclustered-index"></a>Nicht gruppierter Index  
  Dieser Schritt erstellt zwei nicht gruppierte Indizes, um typische Suchoperationen zu unterstützen.  
@@ -71,7 +71,7 @@ ms.locfileid: "66110073"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Tiefensuchindex: Mitarbeiterdatensätze sind angrenzend an ihren Vorgesetzten gespeichert.  
+     Tiefensuchindex: Mitarbeiterdatensätze sind angrenzend an den ihres Managers gespeichert.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66110073"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-index: Zeilen werden gespeichert, **EmployeeID** Sequenz.  
+     Mitarbeiter **Eid**-First Index: Zeilen **werden in der** Reihenfolge der Mitarbeiter der Mitarbeiter gespeichert.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66110073"
     SELECT * FROM EmployeeDemo ;  
     ```  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Zusammenfassung: Konvertieren einer Tabelle in eine hierarchische Struktur](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

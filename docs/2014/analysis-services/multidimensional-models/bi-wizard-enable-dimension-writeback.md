@@ -1,5 +1,5 @@
 ---
-title: Aktivieren des Rückschreibens | Microsoft-Dokumentation
+title: Rück Schreiben von Dimensionen aktivieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076850"
 ---
 # <a name="enable-dimension-writeback"></a>Rückschreiben von Dimensionen aktivieren
@@ -40,7 +40,7 @@ ms.locfileid: "66076850"
 ## <a name="setting-dimension-writeback-capability"></a>Festlegen des Features zum Rückschreiben von Dimensionen  
  Auf der zweiten Seite **Rückschreiben von Dimensionen aktivieren** des Assistenten findet das eigentliche Festlegen der Option **Rückschreiben in der Dimension aktivieren** statt. Durch Auswählen dieser Option wird die `WriteEnabled`-Eigenschaft der Dimension automatisch auf `True` festgelegt. Durch Deaktivieren dieser Option wird die Eigenschaft automatisch auf `False` festgelegt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Beim Erstellen eines neuen Elements müssen Sie jedes Attribut in einer Dimension angeben. Sie können kein Element einfügen, ohne dabei einen Wert für das Schlüsselattribut der Dimension anzugeben. Deshalb unterliegt das Erstellen von Elementen allen Beschränkungen (z.&#160;B. von NULL verschiedene Schlüsselwerte), die für die Dimensionstabelle definiert sind. Sie sollten auch Spalten berücksichtigen, die optional durch Dimensionseigenschaften angegeben werden, z. B. Spalten, die in den Dimensionseigenschaften `CustomRollupColumn`, `CustomRollupPropertiesColumn` oder `UnaryOperatorColumn` angegeben werden.  
   
 > [!WARNING]  
@@ -50,9 +50,9 @@ ms.locfileid: "66076850"
 >   
 >  `"MultipleActiveResultSets=True"`  
 >   
->  Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  Weitere Informationen finden [Sie unter Verwenden von mehreren aktiven Resultsets &#40;Mars&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

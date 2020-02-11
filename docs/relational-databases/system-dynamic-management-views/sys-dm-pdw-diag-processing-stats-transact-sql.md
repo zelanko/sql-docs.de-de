@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899541"
 ---
-# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>Sys.dm_pdw_diag_processing_stats (Transact-SQL)
+# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Zeigt Informationen im Zusammenhang mit der alle internen Diagnoseereignisse, die in vom Administrator definierten diagnosesitzungen aufgenommen werden können. Fragen Sie diese Ansicht, um der Statistik hinter die Diagnose- und Ereignisse Subsysteme dieses Laufwerk die Auffüllung für die anderen DMVs zu verstehen. Es gibt eine Gruppe von Warteschlangen für jeden Prozess auf jedem Knoten.  
+  Zeigt Informationen zu allen internen Diagnose Ereignissen an, die in vom Administrator definierte Diagnose Sitzungen integriert werden könnten. Fragen Sie diese Ansicht ab, um die Statistiken hinter den Diagnose-und Ereignis Subsystemen zu verstehen, die die Auffüllung aller anderen DMVs steuern. Es gibt eine Gruppe von Warteschlangen für jeden Prozess auf jedem Knoten.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**pdw_node_id**|**int**|Appliance-Knoten, die dieses Protokoll stammt.|  
-|**process_id**|**int**|Der Bezeichner des Prozesses ausgeführt wird, senden diese Statistik.|  
+|**pdw_node_id**|**int**|Der Geräteknoten, von dem dieses Protokoll abgeleitet ist.|  
+|**process_id**|**int**|Der Bezeichner des Prozesses, der die Übermittlung dieser Statistik durchführt.|  
 |**target_name**|**nvarchar(255)**|Der Name der Warteschlange.|  
-|**queue_size**|**int**|Die Anzahl der Elemente in die Prozesswarteschlange geleitet. Die Größe der Warteschlange in der Regel ist 0. Eine positive Zahl gibt an, dass das System ausgelastet ist und Backlog von Ereignissen erstellt. Eine positive Anzahl in den anderen Spalten bedeutet, dass System für diese bestimmten Warteschlange beschädigt wurde und alle zugehörigen DMVs.|  
-|**lost_events_count**|**bigint**|Die Anzahl verloren gegangener Ereignisse.|  
+|**queue_size**|**int**|Die Anzahl der Elemente in der Verarbeitungs Warteschlange. Die Warteschlangen Größe beträgt normalerweise 0. Eine positive Zahl gibt an, dass das System ausgelastet ist und einen Rückstand an Ereignissen aufbaut. Eine positive Anzahl in den anderen Spalten bedeutet, dass das System für diese bestimmte Warteschlange und alle zugehörigen DMVs beschädigt wurde.|  
+|**lost_events_count**|**BIGINT**|Die Anzahl der verlorenen Ereignisse.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

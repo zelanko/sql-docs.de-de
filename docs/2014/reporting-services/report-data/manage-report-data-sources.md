@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107251"
 ---
 # <a name="manage-report-data-sources"></a>Verwalten von Berichtsdatenquellen
@@ -39,10 +39,10 @@ ms.locfileid: "66107251"
   
  Beachten Sie, dass das Ändern von Abfragen nicht zu den Verwaltungsaufgaben für Datenquellverbindungen gehört. Um eine Abfrage für einen Bericht oder ein Modell zu ändern, müssen Sie Ihre Änderungen in der Berichts- oder Modelldefinition mit einem Berichterstellungstool durchführen.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Verwaltete Eigenschaften: Typ der Datenquelle, Verbindungszeichenfolgen und Anmeldeinformationen  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Verwaltete Eigenschaften: Datenquelltyp, Verbindungszeichenfolge und Anmeldeinformationen  
  Datenquelleneigenschaften, die Sie auf einem Berichtsserver verwalten können:  
   
-|Eigenschaft|Description|Verwaltung|  
+|Eigenschaft|BESCHREIBUNG|Verwaltung|  
 |--------------|-----------------|----------------------|  
 |Datenquellentyp|Legt fest, welche Datenverarbeitungserweiterung auf dem Berichtsserver für die externen Daten verwendet werden soll. Beispiele für Datenprozessoren: SQL Server, Analysis Services und Oracle.|Der Datenquellentyp ist eine verwaltete Eigenschaft, da er konfigurierbar ist. Sie sollten einen Datenquellentyp jedoch nur konfigurieren, wenn Sie eine neue freigegebene Datenquelle erstellen.<br /><br /> Ändern Sie den Datenquelltyp nicht auf den Eigenschaftenseiten eines veröffentlichten Berichts oder Modells. Andernfalls wird die Verbindung mit Sicherheit ungültig. Es ist sehr unwahrscheinlich, dass die von einem Bericht oder Modell benötigten Datenstrukturen auf einer anderen Datenplattform identisch sind.|  
 |Verbindungszeichenfolge|Richtet die Anfangsverbindung zu einer externen Datenquelle ein. Ein Bericht kann statische oder dynamische Verbindungszeichenfolgen verwenden.<br /><br /> Eine *statische Verbindungszeichenfolge* ist ein Wertesatz, der verwendet wird, um bei jeder Berichtsausführung eine Verbindung zur selben Datenquelle herzustellen.<br /><br /> Eine *dynamische Verbindungszeichenfolge* ist ein Ausdruck, den Sie in den Bericht aufnehmen. Benutzer können mit diesem Ausdruck auswählen, welche Datenquelle zur Laufzeit verwendet werden soll. Sie müssen den Ausdruck und die Datenquellenauswahlliste beim Erstellen des Berichts im Berichts-Generator in den Bericht integrieren.|Es ist sinnvoll, eine Verbindungszeichenfolge zu ändern, wenn Sie eine Datenquelle auf einen anderen Computer verschieben, oder wenn Sie Berichte, die Sie mit Testdaten erstellt haben, in einer Produktionsdatenbank bereitstellen möchten.<br /><br /> Sie können eine statische Verbindungszeichenfolge verwalten, indem Sie die ursprüngliche Zeichenfolge durch eine andere Zeichenfolge ersetzen.<br /><br /> Die Verwaltung einer dynamischen Verbindungszeichenfolge im Berichts-Manager oder auf einer SharePoint-Site ist auf das Ersetzen durch eine statische Verbindungszeichenfolge beschränkt. Sie können den Ausdruck selbst nicht bearbeiten und auch nicht die Auswahlliste der Datenquellen ändern. Um den Ausdruck oder die gültige Werteliste zu ändern, müssen Sie die Berichtsdefinition bearbeiten und auf dem Berichtsserver neu veröffentlichen. Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
@@ -63,24 +63,24 @@ ms.locfileid: "66107251"
 |----------|----------|----------|  
 |Anzeigen von Beispielen für Verbindungszeichenfolgen||[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Wählen Sie eine Methode zum Abrufen von Anmeldeinformationen, um eine Verbindung mit einer Datenquelle herzustellen.||[Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
+|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS-&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Hinzufügen und Verknüpfen mit einer freigegebenen Datenquellendatei (.rds) im Berichtsprojekt|Berichts-Designer|[Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Erstellen einer vordefinierten Liste von Datenquellen, die Benutzer zur Laufzeit auswählen können. Wenn Benutzer Berichte anfordern, stellt der Bericht eine Liste von Datenquellen bereit. Benutzer müssen auswählen, welche Datenquelle vor dem Ausführen des Berichts verwendet werden soll. Um einem Bericht eine Liste der auszuwählenden Datenquellen hinzuzufügen, verwenden Sie einen Ausdruck.<br /><br /> Dies wird als dynamische Datenquellenverbindung bezeichnet.|Berichts-Designer|[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|Berichts-Manager|[Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
-|Speichern von Anmeldeinformationen als Voraussetzung für das Erstellen von Abonnements oder Berichtsmomentaufnahmen|Berichts-Manager|[Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](store-credentials-in-a-reporting-services-data-source.md)|  
-|Bearbeiten von Eigenschaften für die Datenquellenverbindung in einem veröffentlichten Bericht|Berichts-Manager|[Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
+|Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|Berichts-Manager|[Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
+|Speichern von Anmeldeinformationen als Voraussetzung für das Erstellen von Abonnements oder Berichtsmomentaufnahmen|Berichts-Manager|[Store Credentials in a Reporting Services Data Source (Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle)](store-credentials-in-a-reporting-services-data-source.md)|  
+|Bearbeiten von Eigenschaften für die Datenquellenverbindung in einem veröffentlichten Bericht|Berichts-Manager|[Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|SharePoint-Site|[Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
 |Verwenden vorhandener ODC-Verbindungsinformationen mit einem Bericht|SharePoint-Site|[Verwenden einer Office Data Connection &#40;.odc&#41; für Berichte &#40;Reporting Services im integrierten SharePoint-Modus&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Das Verwalten von Datenquellenverbindungen mit Berichtsdatenquellen ist nicht identisch mit dem Verwalten der Berichtsserververbindung mit der Berichtsserver-Datenbank. Weitere Informationen zur Verbindung eines Berichtsservers mit seinem internen Datenspeicher finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Binden eines Berichts oder Modells an eine freigegebene Datenquelle &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](store-credentials-in-a-reporting-services-data-source.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Speichern von Anmelde Informationen in einer Reporting Services Datenquelle](store-credentials-in-a-reporting-services-data-source.md)   
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Datenquellen, die von Reporting Services &#40;SSRS unterstützt werden&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

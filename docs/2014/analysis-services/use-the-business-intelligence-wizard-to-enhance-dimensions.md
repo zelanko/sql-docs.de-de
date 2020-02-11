@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie Business Intelligence-Assistenten zum Erweitern von Dimensionen | Microsoft-Dokumentation
+title: Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065507"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen
@@ -34,11 +34,11 @@ ms.locfileid: "66065507"
   
 -   [Rückschreiben von Dimensionen aktivieren](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Definieren von Datenbankdimensionen](multidimensional-models/define-database-dimensions.md)   
- [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Definieren von Daten Bank Dimensionen](multidimensional-models/define-database-dimensions.md)   
+ [Dimensions Attribut-Eigenschaften Referenz](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Erstellen von benutzerdefinierten Hierarchien](multidimensional-models/user-defined-hierarchies-create.md)   
- [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md)   
+ [Definieren von Attribut Beziehungen](multidimensional-models/attribute-relationships-define.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

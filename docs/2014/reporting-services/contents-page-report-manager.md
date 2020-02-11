@@ -1,5 +1,5 @@
 ---
-title: Inhalt der Seite (Berichts-Manager) | Microsoft-Dokumentation
+title: Inhaltsseite (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109728"
 ---
 # <a name="contents-page-report-manager"></a>Inhalt (Seite, Berichts-Manager)
@@ -22,7 +22,7 @@ ms.locfileid: "66109728"
   
  Die Seite Inhalt zeigt die Elemente, zu deren Anzeige Sie berechtigt sind. Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie die Elemente zudem verschieben, löschen und hinzufügen. Sie müssen auf **Detailansicht** klicken, um auf die Schaltflächen **Löschen** und **Verschieben** zuzugreifen. Wenn keine Elemente angezeigt werden, wenden Sie sich an den Berichtsserveradministrator. Es kann sein, dass Sie keiner Rolle zugewiesen sind, die den Zugriff auf den Inhalt oder die Vorgänge des Berichtsservers ermöglicht.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Neuer Ordner**  
  Klicken Sie auf diese Schaltfläche, um die Seite Neuer Ordner zu öffnen. Auf dieser Seite können Sie einen Ordner unter dem aktuellen Ordner erstellen.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66109728"
   
  Zeigen Sie auf ein Element, und klicken Sie auf den Dropdownpfeil, um das Dropdownmenü zu öffnen, über das Sie Eigenschaften des ausgewählten Elements aufrufen und konfigurieren können.  
   
- **Ansicht "Nebeneinander"**  
+ **Neben-/Untereinanderansicht**  
  Klicken Sie auf diese Schaltfläche, um die Seite **Inhalt**ohne die in der Detailansicht angezeigten Details einzublenden. Die Listenansicht wird standardmäßig angezeigt, wenn Sie einen Ordner öffnen oder auf die Homepage des Berichts-Managers zugreifen.  
   
  Zeigen Sie auf ein Element, und klicken Sie auf den Dropdownpfeil, um das Dropdownmenü zu öffnen, über das Sie Eigenschaften des ausgewählten Elements aufrufen und konfigurieren können.  
@@ -51,10 +51,10 @@ ms.locfileid: "66109728"
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um einen Ordner oder ein anderes Element zu entfernen. Aktivieren Sie das Kontrollkästchen neben den zu löschenden Elementen, bevor Sie auf **Löschen**klicken.  
   
- **Verschieben**  
+ **Move**  
  Klicken Sie auf diese Schaltfläche, um ein Element in der Ordnerhierarchie zu verschieben. Bevor Sie auf **Verschieben**klicken, aktivieren Sie die Kontrollkästchen neben den zu verschiebenden Elementen. Dadurch wird die Seite Elemente verschieben geöffnet, auf der Sie die Ordner nach einem neuen Speicherort durchsuchen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit SSMA-Projekten (MySQLToSQL)) | Microsoft-Dokumentation
+title: Arbeiten mit SSMA-Projekten (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,125 +15,125 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904904"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Arbeiten mit SSMA-Projekten (MySqlToSql)
-Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie zuerst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei mit den folgenden Informationen an:  
+Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie zunächst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei, die die folgenden Informationen enthält:  
   
--   Metadaten über die MySQL-Datenbanken, die Sie in SQL Server oder SQL Azure migrieren möchten.  
+-   Metadaten zu den MySQL-Datenbanken, die Sie zu SQL Server oder SQL Azure migrieren möchten.  
   
--   Metadaten zu der Zielinstanz von SQL Server oder SQL Azure, die die migrierten Objekte und Daten erhält.  
+-   Metadaten zur Ziel Instanz von SQL Server oder SQL Azure, die die migrierten Objekte und Daten empfangen.  
   
--   SQL Server oder SQL Azure-Verbindungsinformationen.  
+-   SQL Server oder SQL Azure Verbindungsinformationen aus.  
   
 -   Projekteinstellungen.  
   
-Wenn Sie ein Projekt öffnen, wird er von MySQL und SQL Server oder SQL Azure getrennt. Mit der Sie offline arbeiten. Weitere Informationen zum Wiederherstellen der Verbindung mit SQL Server, finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+Wenn Sie ein Projekt öffnen, wird es von MySQL getrennt, SQL Server oder SQL Azure. Auf diese Weise können Sie offline arbeiten. Weitere Informationen zum erneuten Herstellen einer Verbindung mit SQL Server finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;mysqldesql&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="reviewing-default-project-settings"></a>Überprüfen die standardmäßigen Projekteinstellungen  
-SSMA enthält verschiedene Einstellungen für konvertieren und laden die Datenbank, Migrieren von Daten und Synchronisieren von SSMA für MySQL und SQL Server oder SQL Azure. Die Standardeinstellungen eignen sich für viele Benutzer. Bevor Sie ein neues SSMA-Projekt erstellen, sollten Sie jedoch die Einstellungen überprüfen. Falls erforderlich, können Sie die Standardeinstellungen ändern, die für alle neuen Projekte verwendet werden.  
+## <a name="reviewing-default-project-settings"></a>Überprüfen der Standard Projekteinstellungen  
+SSMA enthält mehrere Einstellungen zum umrechnen und Laden von Datenbanken, zum Migrieren von Daten und zum Synchronisieren von SSMA mit MySQL und SQL Server oder SQL Azure. Die Standardeinstellungen sind für viele Benutzer geeignet. Bevor Sie jedoch ein neues SSMA-Projekt erstellen, sollten Sie die Einstellungen überprüfen. Falls erforderlich, können Sie die Standardeinstellungen ändern, die für alle neuen Projekte verwendet werden.  
   
-##### <a name="to-review-default-project-settings"></a>Standardprojekteinstellungen überprüfen  
+##### <a name="to-review-default-project-settings"></a>So überprüfen Sie die Standard Projekteinstellungen  
   
-1.  Wählen Sie **Projekt Standardeinstellungen** aus der **Tools** Menü.  
+1.  Wählen **Sie im Menü** Extras die Option **Standard Projekteinstellungen** aus.  
   
-2.  Wählen Sie den Projekttyp in **Migration Zielversion** Dropdownliste aus, welche Einstellungen angezeigt oder geändert werden, und klicken Sie auf **allgemeine** Registerkarte.  
+2.  Wählen Sie in der Dropdown Liste **Migrations Ziel Version** den Projekttyp aus, für den Einstellungen angezeigt/geändert werden sollen, und klicken Sie auf die Registerkarte **Allgemein**  
   
 3.  Klicken Sie im linken Bereich auf **Konvertierung**.  
   
-4.  Klicken Sie im rechten Bereich überprüfen Sie und ändern Sie die Einstellungen nach Bedarf. Weitere Informationen zu diesen Einstellungen finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;MySQLToSQL&#41; ](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
+4.  Überprüfen Sie im rechten Bereich die Einstellungen, und ändern Sie Sie nach Bedarf. Weitere Informationen zu diesen Einstellungen finden Sie unter [Project Settings &#40;Conversion&#41; &#40;mysqltoisql&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
   
-5.  Wiederholen Sie die Schritte 1 bis 3 für die Migration, Synchronisierung, SQL Azure, grafische Benutzeroberfläche und Type Mapping-Seiten.  
+5.  Wiederholen Sie die Schritte 1-3 für die Seiten Migration, Synchronisierung, SQL Azure, GUI und Typzuordnung.  
   
--   Weitere Informationen zu den migrationseinstellungen finden Sie unter [Projekteinstellungen &#40;Migration&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
+-   Informationen zu den Migrations Einstellungen finden Sie unter [Project Settings &#40;Migration&#41; &#40;mysqlto SQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
   
--   Weitere Informationen zu den Einstellungen für die Synchronisierung mit SQL Server finden Sie unter [Projekteinstellungen &#40;Synchronisierung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
+-   Informationen zu den Einstellungen für die Synchronisierung mit SQL Server finden Sie unter [Project Settings &#40;Synchronisierung&#41; &#40;mysqldesql&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
--   Weitere Informationen zu den GUI-Einstellungen finden Sie unter [Project Settings (GUI) (häufig SSMA)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+-   Informationen zu den GUI-Einstellungen finden Sie unter [Projekteinstellungen (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
--   Weitere Informationen zu den Einstellungen der Zuordnung von Datentypen finden Sie unter [Projekteinstellungen &#40;Typzuordnung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+-   Informationen zu den Einstellungen für die Datentyp Zuordnung finden Sie unter [Project Settings &#40;Type Mapping&#41; &#40;mysqlto SQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
--   Weitere Informationen zu SQL Azure-Einstellungen finden Sie unter [Projekteinstellungen &#40;Azure SQL-Datenbank&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   Weitere Informationen zu SQL Azure Einstellungen finden Sie unter [Project Settings &#40;Azure SQL DB&#41; &#40;mysqldesql&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
   
 > [!NOTE]  
-> Die SQL Azure-Einstellungen werden angezeigt, nur, wenn Sie auswählen, **Migration zu SQL Azure** beim Erstellen eines Projekts.  
+> Die SQL Azure Einstellungen werden nur angezeigt, wenn Sie beim Erstellen eines Projekts **Migration zum SQL Azure** auswählen.  
   
 ## <a name="creating-new-projects"></a>Erstellen neuer Projekte  
-Um Daten aus MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie ein Projekt erstellen.  
+Wenn Sie Daten aus MySQL-Datenbanken zu SQL Server oder SQL Azure migrieren möchten, müssen Sie ein Projekt erstellen.  
   
 ##### <a name="to-create-a-new-project"></a>So erstellen Sie ein neues Projekt  
   
-1.  Wählen Sie **neues Projekt** aus der **Datei** Menü. Das Dialogfeld **Neues Projekt** wird angezeigt. Wählen Sie im Menü **Datei** die Option **Neues Projekt** aus. Das Dialogfeld **Neues Projekt** wird angezeigt.  
+1.  Wählen Sie im Menü **Datei** die Option **Neues Projekt** aus. Das Dialogfeld **Neues Projekt** wird angezeigt. Wählen Sie im Menü **Datei** die Option **Neues Projekt** aus. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2.  In der **Namen** Geben Sie einen Namen für Ihr Projekt.  
+2.  Geben Sie im Feld **Name** einen Namen für das Projekt ein.  
   
-3.  In der **Speicherort** Feld, geben Sie ein oder wählen Sie einen Ordner für das Projekt.  
+3.  Geben Sie im Feld **Speicherort** einen Ordner für das Projekt ein, oder wählen Sie einen Ordner aus.  
   
-4.  In der **Migration zu** öffnen Sie die Dropdownliste, wählen Sie die Version des Ziels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Migration verwendet. Die verfügbaren Optionen sind:  
+4.  Wählen Sie in der Dropdown Liste **Migration zu** die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziels aus, die für die Migration verwendet wird. Die verfügbaren Optionen sind:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
     -   Azure SQL-Datenbank  
   
-Und klicken Sie dann auf **OK**  
+Und klicken Sie dann auf **OK** .  
   
 SSMA erstellt die Projektdatei.  
   
 ## <a name="customizing-project-settings"></a>Anpassen von Projekteinstellungen  
-Projekteinstellungen, die an den neuen SSMA-Projekten, die Sie anwenden können auch die Einstellungen für jedes Projekt anpassen, zusätzlich zum Definieren der Standardwert. Weitere Informationen finden Sie unter [Setting Project Options Projektoptionen &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).  
+Zusätzlich zum Definieren der Standard Projekteinstellungen, die für alle neuen SSMA-Projekte gelten, können Sie auch die Einstellungen für jedes Projekt anpassen. Weitere Informationen finden Sie unter [Festlegen von Projektoptionen &#40;mysqlto SQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).  
   
-Wenn Sie die replikationsdatentyp-Zuordnungen zwischen den Quell- und Zieldatenbanken anpassen, können Sie Zuordnungen auf das Projekt, Datenbank oder Objektebene definieren. Weitere Informationen finden Sie unter [Zuordnen von MySQL und SQL Server-Datentypen &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
+Wenn Sie Datentyp Zuordnungen zwischen den Quell-und Ziel Datenbanken anpassen, können Sie Zuordnungen auf Projekt-, Datenbank-oder Objektebene definieren. Weitere Informationen finden Sie unter [Mapping MySQL and SQL Server Data Types &#40;mysqltosql&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
   
 ## <a name="saving-projects"></a>Speichern von Projekten  
-Das Speichern von Projekten-Feature kann der Benutzer im Wesentlichen den projekteinstellungen und (optional) die Datenbank-Metadaten in der SSMA-Projektdatei zu speichern.  
+Die Funktion zum Speichern von Projekten ermöglicht dem Benutzer das Speichern der Projekteinstellungen und optional der Daten Bank Metadaten in der SSMA-Projektdatei.  
   
-##### <a name="to-save-a-project"></a>Um ein Projekt zu speichern.  
+##### <a name="to-save-a-project"></a>So speichern Sie ein Projekt  
   
--   Auf der **Datei** , wählen Sie im Menü **speichern** Projekt.  
+-   Wählen Sie im Menü **Datei** die Option Projekt **Speichern** aus.  
   
-Wenn Datenbanken innerhalb des Projekts geändert haben oder nicht konvertiert wurden, fordert SSMA Sie zum Laden und Speichern von Metadaten. Laden und Speichern von Metadaten können Sie offline arbeiten. Außerdem können Sie eine vollständige Projektdatei an andere Personen ein, z. B. Mitarbeiter des technischen Supports senden. Wenn Sie aufgefordert werden, um Metadaten zu speichern, führen Sie folgende Schritte aus:  
+Wenn sich Datenbanken innerhalb des Projekts geändert haben oder nicht konvertiert wurden, werden Sie von SSMA aufgefordert, Metadaten zu laden und zu speichern. Durch das Laden und Speichern von Metadaten können Sie offline arbeiten. Außerdem können Sie eine komplette Projektdatei an andere Personen senden, z. b. technische Supportmitarbeiter. Wenn Sie zum Speichern von Metadaten aufgefordert werden, gehen Sie wie folgt vor:  
   
-1.  Für jede Datenbank, die dem Status **fehlenden Metadaten**, wählen Sie das Kontrollkästchen neben dem Datenbanknamen. Speichern von Metadaten kann mehrere Minuten dauern. Wenn Sie nicht, um Metadaten an diesem Punkt zu speichern möchten, aktivieren Sie keine Kontrollkästchen.  
+1.  Aktivieren Sie für jede Datenbank, die den Status **fehlender Metadaten**anzeigt, das Kontrollkästchen neben dem Datenbanknamen. Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie an diesem Punkt keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
 2.  Klicken Sie auf **Speichern**.  
   
-SSMA wird die MySQL-Schemas zu analysieren und speichern Sie die Metadaten zu der Projektdatei.  
+SSMA analysiert die MySQL-Schemas und speichert die Metadaten in der Projektdatei.  
   
 ## <a name="opening-projects"></a>Öffnen von Projekten  
-Wenn Sie ein Projekt öffnen, wird er von MySQL und SQL Server oder SQL Azure-getrennt. Dadurch können Sie offline arbeiten. Um Metadaten zu aktualisieren, laden Sie Datenbankobjekte in SQL Server oder SQL Azure aus. Zum Migrieren von Daten müssen Sie eine Verbindung mit SQL Server oder SQL Azure wiederherstellen.  
+Wenn Sie ein Projekt öffnen, wird es von MySQL und von SQL Server oder SQL Azure getrennt. Auf diese Weise können Sie offline arbeiten. Laden Sie Datenbankobjekte in SQL Server oder SQL Azure, um Metadaten zu aktualisieren. Zum Migrieren von Daten müssen Sie erneut eine Verbindung mit SQL Server oder SQL Azure herstellen.  
   
-##### <a name="to-open-a-project"></a>Um ein Projekt zu öffnen.  
+##### <a name="to-open-a-project"></a>So öffnen Sie ein Projekt  
   
-1.  Verwenden Sie eine der folgenden Verfahren:  
+1.  Verwenden Sie eines der folgenden Verfahren:  
   
-    1.  Auf der **Datei** Startmenü **zuletzt geöffnete Projekte**.  
+    1.  Zeigen Sie im Menü **Datei** auf **zuletzt geöffnete Projekte**.  
   
-    2.  Wählen Sie das Projekt, die, das Sie öffnen möchten.  
+    2.  Wählen Sie das Projekt aus, das Sie öffnen möchten.  
   
-    3.  Auf der **Datei** , wählen Sie im Menü **geöffneten Projekt**, suchen Sie die Projektdatei .m2ssproj, wählen Sie die Datei, und klicken Sie dann auf **öffnen**.  
+    3.  Wählen Sie im Menü **Datei** die Option **Projekt öffnen**aus, suchen Sie die Projektdatei. m2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
   
-2.  Verbindung mit MySQL, auf die **Datei** , wählen Sie im Menü **Wiederherstellen der Verbindung mit MySQL**.  
+2.  Um erneut eine Verbindung mit MySQL herzustellen, wählen Sie im Menü **Datei** die Option **Verbindung mit MySQL wieder**herstellen aus.  
   
-3.  Verbindung zu SQL Server, auf die **Datei** , wählen Sie im Menü **Wiederherstellen der Verbindung mit SQL Server**.  
+3.  Um die Verbindung mit SQL Server wiederherzustellen, wählen Sie im Menü **Datei** die Option **Verbindung wiederherstellen mit SQL Server**.  
   
-4.  Verbindung zu SQL Azure, auf die **Datei** , wählen Sie im Menü **Erneutes Verbinden mit SQL Azure.**  
+4.  Um die Verbindung mit SQL Azure wiederherzustellen, wählen Sie im Menü **Datei** die Option **Verbindung wiederherstellen mit SQL Azure.**  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt des Migrationsvorgangs [Herstellen einer Verbindung mit MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+Der nächste Schritt des Migrations Vorgangs ist das [Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Herstellen einer Verbindung mit MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-[Herstellen einer Verbindung mit SQLServer &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Herstellen einer Verbindung mit SQL Server &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

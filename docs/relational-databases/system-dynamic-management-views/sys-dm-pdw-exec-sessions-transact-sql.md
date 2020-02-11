@@ -1,5 +1,5 @@
 ---
-title: dm_pdw_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_pdw_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/22/2019
 ms.prod: sql
@@ -13,37 +13,37 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899406"
 ---
-# <a name="sysdmpdwexecsessions-transact-sql"></a>dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu allen Sitzungen auf dem Gerät zurzeit oder zuletzt geöffnet. Sie enthält eine Zeile für jede Sitzung.  
+  Enthält Informationen zu allen Sitzungen, die aktuell oder zuletzt auf dem Gerät geöffnet sind. Es wird eine Zeile pro Sitzung aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar(32)**|Die Id des die aktuelle Abfrage oder der letzten Abfrage ausführen (wenn die Sitzung beendet wird, und zum Zeitpunkt der Beendigung die Abfrage ausgeführt wurde). Der Schlüssel für diese Sicht.|Für alle Sitzungen im System eindeutig.|  
-|status|**nvarchar(10)**|Für die aktuellen Sitzungen identifiziert, ob die Sitzung derzeit aktiv oder im Leerlauf befindet. Für die vergangenen Sitzungen die Sitzung, die Status angezeigt werden kann geschlossen oder abgebrochen wird (wenn die Sitzung zwangsweise geschlossen wurde).|'AKTIV","GESCHLOSSEN","IM LEERLAUF', BEENDET' '|  
-|request_id|**nvarchar(32)**|Die Id der aktuellen Abfrage oder des letzten Abfrage, die ausgeführt werden soll.|Für alle Anforderungen im System eindeutig. NULL, wenn keine ausgeführt wurde.|  
-|security_id|**varbinary(85)**|Sicherheits-ID des Prinzipals die-Sitzung ausführt.||  
-|login_name|**nvarchar(128)**|Der Anmeldename, der der Prinzipal, der die Sitzung ausgeführt werden soll.|Eine beliebige Zeichenfolge, die Benutzer-Namenskonventionen entsprechen.|  
-|login_time|**datetime**|Datum und Uhrzeit, an dem der Benutzer angemeldet, und dieser Sitzung erstellt wurde.|Gültige **"DateTime"** vor der aktuellen Zeit.|  
-|query_count|**int**|Erfasst die Anzahl der Abfragen/BeschreibungDiese-Sitzung wurde seit der Erstellung ausgeführt werden.|Größer als oder gleich 0.|  
-|is_transactional|**bit**|Zeichnet auf, ob eine Sitzung derzeit innerhalb einer Transaktion befindet.|für automatische Commits 0, 1 für transaktionale.|  
-|Client-ID|**nvarchar(255)**|Zeichnet Clientinformationen für die Sitzung.|Eine beliebige gültige Zeichenfolge.|  
-|App-Name|**nvarchar(255)**|Erfasst Informationen zum Anwendungsnamen im Rahmen des Verbindungsprozesses optional festlegen.|Eine beliebige gültige Zeichenfolge.|  
-|sql_spid|**int**|Die ID der SPID. Verwenden der `session_id` in dieser Sitzung. Verwenden der `sql_spid` Spalte hinzufügen **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Warnung \* \***  enthält diese Spalte geschlossene SPIDs.||  
+|session_id|**nvarchar (32)**|Die ID der aktuellen Abfrage oder der letzten Abfrage Ausführung (wenn die Sitzung beendet wird und die Abfrage zum Zeitpunkt der Beendigung ausgeführt wurde). Der Schlüssel für diese Ansicht.|Eindeutig in allen Sitzungen im System.|  
+|status|**nvarchar (10)**|Gibt bei aktuellen Sitzungen an, ob die Sitzung zurzeit aktiv ist oder sich im Leerlauf befindet. Für vergangene Sitzungen wird der Sitzungs Status möglicherweise als geschlossen oder abgebrochen angezeigt (wenn die Sitzung zwangsweise geschlossen wurde).|"Active", "Closed", "idle", "beendet"|  
+|request_id|**nvarchar (32)**|Die ID der aktuellen Abfrage oder der letzten Abfrage.|Eindeutig für alle Anforderungen im System. NULL, wenn kein Wert ausgeführt wurde.|  
+|security_id|**varbinary(85)**|Sicherheits-ID des Prinzipals, der die Sitzung ausgeführt hat.||  
+|login_name|**nvarchar(128)**|Der Anmelde Name des Prinzipals, der die Sitzung ausgeführt hat.|Eine beliebige Zeichenfolge, die den Benennungs Konventionen für Benutzer entspricht.|  
+|login_time|**datetime**|Datum und Uhrzeit, zu denen der Benutzer angemeldet und diese Sitzung erstellt wurde.|Gültiger **DateTime** -Wert vor der aktuellen Uhrzeit.|  
+|query_count|**int**|Erfasst die Anzahl der Abfragen/Anforderer, die diese Sitzung seit der Erstellung ausgeführt hat.|Größer oder gleich 0 (null).|  
+|is_transactional|**bit**|Erfasst, ob sich eine Sitzung derzeit in einer Transaktion befindet oder nicht.|0 für automatischen Commit, 1 für transaktional.|  
+|client_id|**nvarchar(255)**|Erfasst Client Informationen für die Sitzung.|Eine beliebige gültige Zeichenfolge.|  
+|app_name|**nvarchar(255)**|Erfasst Informationen zu Anwendungsnamen, die optional als Teil des Verbindungsprozesses festgelegt werden.|Eine beliebige gültige Zeichenfolge.|  
+|sql_spid|**int**|Die ID-Nummer der SPID. Verwenden Sie `session_id` diese Sitzung. Verwenden Sie `sql_spid` die-Spalte, um mit **sys. dm_pdw_nodes_exec_sessions**zu verknüpfen.<br /><br /> ** \* Warnung \* \* ** Diese Spalte enthält geschlossene SPIDs.||  
   
- Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "Metadaten" in der [Kapazitätsgrenzen](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) Thema.  
+ Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

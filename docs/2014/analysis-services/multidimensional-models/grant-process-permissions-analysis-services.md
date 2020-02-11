@@ -1,5 +1,5 @@
 ---
-title: Erteilen von Berechtigungen zum Verarbeiten (Analysis Services) | Microsoft-Dokumentation
+title: Erteilen von Verarbeitungs Berechtigungen (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074889"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Erteilen von Berechtigungen zum Verarbeiten (Analysis Services)
@@ -35,9 +35,9 @@ ms.locfileid: "66074889"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zur Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner "Datenbanken", und wählen Sie eine Datenbank aus.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **Neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
+2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
   
-3.  In der **allgemeine** wählen Sie im Bereich der `Process Database` Kontrollkästchen. Aktivieren Sie zusätzlich `Read Definition` So aktivieren Sie auch interaktive Verarbeitung über eines der SQL Server-Tools wie z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+3.  Aktivieren Sie im Bereich **Allgemein** das `Process Database` Kontrollkästchen. Außerdem wählen Sie `Read Definition` aus, um die interaktive Verarbeitung auch über eines der SQL Server Tools (z [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. b.) zu aktivieren.  
   
 4.  Fügen Sie im **Mitgliedschaft** sbereich die Windows-Konten von Benutzern und Gruppen hinzu, welche die Berechtigung besitzen, beliebige Objekte in der Datenbank zu verarbeiten.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66074889"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zur Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner "Datenbanken", und wählen Sie eine Datenbank aus.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **Neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
+2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
   
-3.  In der **allgemeine** , deaktivieren Sie im Bereich der `Process Database` Kontrollkästchen. Datenbankberechtigungen überschreiben die Möglichkeit, Berechtigungen für Objekte mit geringerer Ebene festzulegen. Rollenoptionen sind dann ausgegraut oder können nicht ausgewählt werden.  
+3.  Deaktivieren Sie im Bereich **Allgemein** das `Process Database` Kontrollkästchen. Datenbankberechtigungen überschreiben die Möglichkeit, Berechtigungen für Objekte mit geringerer Ebene festzulegen. Rollenoptionen sind dann ausgegraut oder können nicht ausgewählt werden.  
   
-     Technisch gesehen sind keine Datenbankberechtigungen für dedizierte Verarbeitungsrollen erforderlich. Jedoch ohne `Read Definition` auf Datenbankebene, Sie können keine Datenbank in anzeigen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dadurch wird das Testen schwieriger.  
+     Technisch gesehen sind keine Datenbankberechtigungen für dedizierte Verarbeitungsrollen erforderlich. Aber ohne `Read Definition` auf Datenbankebene können Sie die Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]nicht anzeigen, sodass das Testen schwieriger wird.  
   
 4.  Wählen Sie individuelle Objekte für die Verarbeitung aus:  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66074889"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Festlegen von Verarbeitungsberechtigungen für eine Data Miningstruktur  
  Sie können eine Rolle mit der Berechtigung zur Verarbeitung von Data Miningstrukturen erstellen. einschließlich der Verarbeitung aller Miningmodelle.  
   
- **Drillthrough** und `Read Definition` Berechtigungen, die für das Durchsuchen eines Miningmodells und einer Struktur verwendet werden, sind atomisch und können zur selben Rolle hinzugefügt bzw. in eine andere Rolle ausgelagert.  
+ **Drillthrough** und `Read Definition` Berechtigungen zum Durchsuchen von Mining Modellen und-Strukturen sind atomarisch und können derselben Rolle hinzugefügt oder in eine andere Rolle aufgeteilt werden.  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zur Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner "Datenbanken", und wählen Sie eine Datenbank aus.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **Neue Rolle**. Geben Sie einen Namen und eine Beschreibung an. Stellen Sie sicher, dass im Bereich **General** die Kontrollkästchen für Datenbankberechtigungen deaktiviert sind. Datenbankberechtigungen überschreiben die Möglichkeit, Berechtigungen für Objekte mit geringerer Ebene festzulegen. Rollenoptionen sind dann grau hinterlegt oder können nicht ausgewählt werden.  
+2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an. Stellen Sie sicher, dass im Bereich **General** die Kontrollkästchen für Datenbankberechtigungen deaktiviert sind. Datenbankberechtigungen überschreiben die Möglichkeit, Berechtigungen für Objekte mit geringerer Ebene festzulegen. Rollenoptionen sind dann grau hinterlegt oder können nicht ausgewählt werden.  
   
 3.  Aktivieren Sie im Bereich **Miningstruktur** für jede Miningstruktur das Kontrollkästchen **Verarbeiten** .  
   
@@ -89,10 +89,10 @@ ms.locfileid: "66074889"
   
 5.  Klicken Sie auf **OK** , um die Rollendefinition abzuschließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verarbeiten von Datenbank, Tabelle oder Partition](../tabular-models/process-database-table-or-partition-analysis-services.md)   
- [Verarbeitung von mehrdimensionalen Modellobjekten](processing-a-multidimensional-model-analysis-services.md)   
- [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Objekt Verarbeitung für mehrdimensionale Modelle](processing-a-multidimensional-model-analysis-services.md)   
+ [Erteilen von Daten Bank Berechtigungen &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [Erteilen von Berechtigungen zum Lesen von Definitionen für Objekt Metadaten &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

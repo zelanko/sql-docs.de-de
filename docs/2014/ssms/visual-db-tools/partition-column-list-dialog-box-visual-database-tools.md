@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280376"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Partitionsspaltenliste (Dialogfeld) (Visual Database Tools)
@@ -28,10 +28,10 @@ ms.locfileid: "63280376"
  Datentyp  
  Zeigt die Datentypen der Spalten an, die im Partitionsschema definiert sind.  
   
- Spalte  
+ Column  
  Stellt eine Dropdownliste bereit, aus der Sie die Spalte auswählen können, auf welche die Partitionsfunktion angewendet werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabelleneigenschaften &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

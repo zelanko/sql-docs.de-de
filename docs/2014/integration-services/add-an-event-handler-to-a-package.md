@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Ereignishandlers zu einem Paket | Microsoft-Dokumentation
+title: Hinzufügen eines Ereignis Handlers zu einem Paket | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062030"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Hinzufügen eines Ereignishandlers zu einem Paket
@@ -38,7 +38,7 @@ ms.locfileid: "66062030"
   
 3.  Klicken Sie auf die Registerkarte **Ereignishandler** .  
   
-     ![Screenshot der Designoberfläche mit Ereignishandlern](media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Screenshot der Entwurfsoberfläche mit Ereignishandler](media/eventhandlers.gif "Screenshot der Entwurfsoberfläche mit Ereignishandler")  
   
      Das Erstellen der Ablaufsteuerung und der Datenflüsse in einem Ereignishandler ist mit dem Erstellen der Ablaufsteuerung und der Datenflüsse in einem Paket vergleichbar. Weitere Informationen finden Sie unter [Control Flow](control-flow/control-flow.md) und [Data Flow](data-flow/data-flow.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66062030"
   
 9. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das neue Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

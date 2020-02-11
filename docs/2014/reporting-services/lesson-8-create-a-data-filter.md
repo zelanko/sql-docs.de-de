@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108391"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
@@ -35,15 +35,15 @@ ms.locfileid: "66108391"
   
 1.  Öffnen Sie den untergeordneten Bericht.  
   
-2.  Wählen Sie in der Tablix eine Spaltenüberschrift aus, mit der rechten Maustaste in der grauen Zelle, die oberhalb der Spaltenüberschrift angezeigt wird, und klicken Sie dann auf **Tablix-Eigenschaften**.  
+2.  Wählen Sie im Tablix-Element eine Spaltenüberschrift aus, klicken Sie mit der rechten Maustaste auf die graue Zelle oberhalb der Spaltenüberschrift, und klicken Sie dann auf **Tablix-Eigenschaften**.  
   
 3.  Klicken Sie auf die Seite **Filter** und dann auf **Hinzufügen**.  
   
-4.  In der **Ausdruck** abgelegt wird, klicken Sie `ProductID` aus der Dropdown-Liste. Dies ist die Spalte, auf die Sie den Filter anwenden.  
+4.  Klicken Sie **** im abgelegten Ausdruck `ProductID` auf aus der Dropdown Liste. Dies ist die Spalte, auf die Sie den Filter anwenden.  
   
-5.  Klicken Sie auf den Gleichheitsoperator ( **=** )-Operator in der **Operator** Dropdown-Liste.  
+5.  Klicken Sie in der**=** Dropdown Liste **Operator** auf den Gleichheits Operator ().  
   
-6.  Klicken Sie auf die Schaltfläche "Ausdruck" neben der **Wert** auf **Parameter** in die **Kategorie** Bereich, und doppelklicken Sie dann auf `productid` in die  **Werte** Bereich. Die **Ausdruck festlegen für: Wert** Feld sollte nun ähnlich wie Ausdruck enthalten **= Parameter! "ProductID". Wert**.  
+6.  Klicken Sie neben dem Feld **Wert** auf die Ausdrucks Schaltfläche, klicken Sie im Bereich **Kategorie** auf **Parameter** , und `productid` Doppelklicken Sie dann auf den Bereich **Werte** . Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value**vergleichbaren Ausdruck enthalten.  
   
 7.  Klicken Sie im Dialogfeld **Tablix-Eigenschaften** auf **OK** und ein zweites Mal auf **OK** .  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66108391"
   
 1.  Erweitern Sie im Projektmappen-Explorer Default.aspx, und doppelklicken Sie dann auf Default.aspx.cs.  
   
-2.  Erstellen Sie eine neue Funktion, die einen Parameter akzeptiert `productid`, vom Typ Integer und gibt eine `datatable` Objekt aus, und werden die folgenden Schritte ausgeführt.  
+2.  Erstellen Sie eine neue Funktion, die einen Parameter `productid`vom Typ Integer akzeptiert und ein `datatable` -Objekt zurückgibt, und führt Folgendes aus.  
   
-    1.  Erstellt eine Instanz des Datasets `DataSet2`, in Schritt2 erstellte [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Erstellt eine Instanz des Datasets `DataSet2`, das in Schritt 2 von [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)den untergeordneten Bericht erstellt wurde.  
   
-    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank zum Ausführen der Abfrage, die in definierten **Lektion 4: Definieren Sie eine Verbindung und einer Datentabelle für den untergeordneten Bericht**.  
+    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
   
     3.  Die Abfrage gibt ungefilterte Daten zurück.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "66108391"
   
     1.  Abrufen des Verweises des untergeordneten Berichtsobjekts aus dem *DrillthroughEventArgs* -Parameter.  
   
-    2.  Rufen Sie die Funktion, `GetPurchaseOrderDetail`  
+    2.  Ruft die-Funktion auf.`GetPurchaseOrderDetail`  
   
-    3.  Binden der `PurchaseOrderDetail` DataTable mit dem Bericht die entsprechende Datenquelle.  
+    3.  Binden Sie `PurchaseOrderDetail` die Datentabelle an die entsprechende Datenquelle des Berichts.  
   
          Der vollständige Ereignishandlercode sollte dem folgenden ähnlich sein.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66108391"
             }  
         ```  
   
-6.  Speichern Sie die Datei.  
+6.  Speichern Sie die Datei .  
   
 ## <a name="query-filter"></a>Abfragefilter  
  Führen Sie folgende Aufgaben aus, um einen Abfragefilter zu implementieren.  
@@ -165,9 +165,9 @@ ms.locfileid: "66108391"
   
 2.  Erstellen Sie eine neue Funktion, die den `productid`-Parameter vom Typ Integer akzeptiert, ein `datatable`-Objekt zurückgibt und folgende Schritte ausführt.  
   
-    1.  Erstellt eine Instanz des Datasets `DataSet2`, in Schritt2 erstellte [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Erstellt eine Instanz des Datasets `DataSet2`, das in Schritt 2 von [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)den untergeordneten Bericht erstellt wurde.  
   
-    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank zum Ausführen der Abfrage definierten **Lektion 4: Definieren Sie eine Verbindung und einer Datentabelle für den untergeordneten Bericht**.  
+    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
   
     3.  Die Abfrage enthält den `productid`-Parameter, der gewährleistet, dass die zurückgegebenen Daten auf Grundlage der im übergeordneten Bericht ausgewählten `ProductID` gefiltert werden.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66108391"
   
 1.  Öffnen Sie Default.aspx.  
   
-2.  Klicken Sie auf der ReportViewer-Steuerelement, und klicken Sie dann auf **Eigenschaften**.  
+2.  Klicken Sie mit der rechten Maustaste auf das Report Viewer-Steuerelement, und klicken Sie auf **Eigenschaften**.  
   
 3.  Klicken Sie im Bereich **Eigenschaften** auf das Symbol **Ereignisse** .  
   
@@ -281,7 +281,7 @@ ms.locfileid: "66108391"
             }  
         ```  
   
-6.  Speichern Sie die Datei.  
+6.  Speichern Sie die Datei .  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
  Sie haben erfolgreich einen Datenfilter für die Datentabelle erstellt, die Sie für den untergeordneten Bericht definiert haben. Als Nächstes werden Sie die Websiteanwendung erstellen und ausführen.  

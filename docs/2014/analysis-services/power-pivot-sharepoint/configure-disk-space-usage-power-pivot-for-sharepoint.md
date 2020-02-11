@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint) | Microsoft-Dokumentation
+title: Konfigurieren der Speicherplatz Verwendung (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071810"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint)
@@ -42,7 +42,7 @@ ms.locfileid: "66071810"
   
  Der Sicherungsordner stellt gemeinsam genutzten Cachespeicher für alle PowerPivot-Datenbanken bereit, die auf den lokalen Computer in den Arbeitsspeicher geladen werden. Wenn in der Farm mehrere PowerPivot-Dienstanwendungen definiert sind, kann jeder davon den lokalen Server verwenden, um PowerPivot-Daten zu laden und anschließend zwischenzuspeichern. Sowohl das Laden als auch das Zwischenspeichern von Daten sind Analysis Services-Servervorgänge. Die gesamte Speicherplatzverwendung wird somit auf Ebene der Analysis Services-Instanz im Sicherungsordner verwaltet. Konfigurationseinstellungen, die die Speicherplatzverwendung einschränken, werden daher für einzelne SQL Server Analysis Services-Instanzen festgelegt, die auf einem SharePoint-Anwendungsserver ausgeführt werden.  
   
- Der Cache enthält nur PowerPivot-Datenbanken. PowerPivot-Datenbanken werden in mehreren Dateien unter einem einzelnen übergeordneten Ordner (dem Sicherungsordner) gespeichert. Da PowerPivot-Datenbanken als interne Daten für eine Excel-Arbeitsmappe verwendet werden sollen, sind Datenbanknamen GUID-basiert statt beschreibend. Ein GUID-Ordner unter  **\<ServiceApplicationName >** ist der übergeordnete Ordner einer PowerPivot-Datenbank. Beim Laden von PowerPivot-Datenbanken auf den Server werden zusätzliche Ordner für jede einzelne Datenbank erstellt.  
+ Der Cache enthält nur PowerPivot-Datenbanken. PowerPivot-Datenbanken werden in mehreren Dateien unter einem einzelnen übergeordneten Ordner (dem Sicherungsordner) gespeichert. Da PowerPivot-Datenbanken als interne Daten für eine Excel-Arbeitsmappe verwendet werden sollen, sind Datenbanknamen GUID-basiert statt beschreibend. Ein GUID-Ordner unter ** \<ServiceApplicationName>** ist der übergeordnete Ordner einer Power Pivot-Datenbank. Beim Laden von PowerPivot-Datenbanken auf den Server werden zusätzliche Ordner für jede einzelne Datenbank erstellt.  
   
  Da PowerPivot-Daten unter Umständen in jede Analysis Services-Instanz in einer Farm geladen werden, könnten die gleichen Daten auch auf mehreren Computern in der Farm zwischengespeichert werden. Dabei hat die Leistung Vorrang gegenüber der Speicherplatzauslastung, allerdings haben Benutzer schneller Zugriff auf Daten, wenn diese bereits auf dem Datenträger verfügbar sind.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66071810"
   
  Auf Systemebene können Sie E-Mail-Warnungen erstellen, die Sie benachrichtigen, wenn der Speicherplatz gering ist. Microsoft System Center enthält eine E-Mail-Benachrichtigungsfunktion. Sie können Warnungen auch mithilfe des Ressourcen-Managers für Dateiserver, des Taskplaners oder PowerShell-Skripts einrichten. Unter den folgenden Links erhalten Sie nützliche Informationen zum Einrichten von Benachrichtigungen zu niedrigem Speicherplatz:  
   
--   [Neues im Ressourcen-Manager](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
+-   [Neues in Datei Server Ressourcen-Manager](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx)).  
   
--   [Schrittweise Anleitung für Resource Manager für Dateiserver für Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Datei Server Ressourcen-Manager Schritt-für-Schritt-Anleitung für Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Festlegen von unzureichendem Speicherplatz Warnungen unter Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Festlegen von Warnungen zu niedrigem Speicherplatz auf Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>So schränken Sie den zum Speichern von zwischengespeicherten Dateien verwendeten Speicherplatz ein  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66071810"
   
 3.  Legen Sie unter „Datenträgerverwendung“ einen Wert für **Speicherplatz insgesamt** fest (in Gigabyte), um eine Obergrenze für den zum Zwischenspeichern verwendeten Speicherplatz festzulegen. Der Standardwert beträgt 0, d. h. Analysis Services kann den gesamten verfügbaren Speicherplatz verwenden.  
   
-4.  In der Datenträgerverwendung in der **Löschen von zwischengespeicherten Datenbanken in den letzten "n" Stunden** festlegen, geben Sie zuletzt verwendeten Kriterien zum Leeren des Caches aus, wenn Speicherplatz die maximale Grenze erreicht ist.  
+4.  Geben Sie unter Datenträger Verwendung in der Einstellung **zwischengespeicherte Datenbanken in den letzten n-Stunden löschen** die zuletzt verwendeten Kriterien für das Leeren des Caches an, wenn der Festplatten Speicherplatz den maximalen Grenzwert erreicht.  
   
      Der Standardwert sind 4 Stunden, d. h. alle Datenbanken, die für 4 Stunden oder mehr inaktiv waren, werden aus dem Dateisystem gelöscht. Datenbanken, die inaktiv, aber weiterhin im Arbeitsspeicher vorhanden sind, werden entladen und dann aus dem Dateisystem gelöscht.  
   
@@ -74,26 +74,26 @@ ms.locfileid: "66071810"
   
 1.  Klicken Sie in der Zentraladministration unter „Anwendungsverwaltung“ auf **Dienstanwendungen verwalten**.  
   
-2.  Klicken Sie auf **PowerPivot-Standarddienstanwendung** um das Management-Dashboard zu öffnen.  
+2.  Klicken Sie auf **Power Pivot-Standard Dienst Anwendung** , um das Management-Dashboard zu öffnen.  
   
 3.  Klicken Sie unter „Aktionen“auf **Einstellungen für Dienstanwendung konfigurieren**.  
   
 4.  Im Abschnitt Datenträgercache können Sie angeben, wie lang eine inaktive Datenbank im Arbeitsspeicher bleibt, falls neue Anforderungen empfangen werden (standardmäßig 48 Stunden), und wie lang sie im Cache bleibt (standardmäßig 120 Stunden).  
   
-     Unter**Inaktive Datenbank im Arbeitsspeicher behalten** wird angegeben, wie lang eine inaktive Datenbank im Arbeitsspeicher bleibt, falls neue Anforderungen für diese Daten empfangen werden. Eine aktive Datenbank wird immer im Arbeitsspeicher beibehalten, solange Sie sie abfragen. Wenn die Datenbank jedoch nicht mehr aktiv ist, behält das System sie für einen zusätzlichen Zeitraum im Arbeitsspeicher, falls weitere Anforderungen für diese Daten empfangen werden.  
+     **Inaktive Datenbank im Arbeitsspeicher beibehalten** gibt an, wie lange eine inaktive Datenbank im Arbeitsspeicher bleibt, um neue Anforderungen für diese Daten zu bedienen. Eine aktive Datenbank wird immer im Arbeitsspeicher beibehalten, solange Sie sie abfragen. Wenn die Datenbank jedoch nicht mehr aktiv ist, behält das System sie für einen zusätzlichen Zeitraum im Arbeitsspeicher, falls weitere Anforderungen für diese Daten empfangen werden.  
   
      Da PowerPivot-Datenbanken zuerst zwischengespeichert und dann in den Arbeitsspeicher geladen werden, belegen Datenbankdateien sofort Speicherplatz. Während die Datenbank jedoch aktiv ist (und danach für 48 Stunden), werden alle Anforderungen zuerst an die Datenbank im Arbeitsspeicher weitergeleitet. Dabei wird die zwischengespeicherte Datenbank ignoriert. Nach 48 Stunden Inaktivität wird die Datei aus dem Arbeitsspeicher entladen, bleibt jedoch im Cache, wo sie erneut schnell geladen werden kann, wenn eine neue Verbindungsanforderung für diese Daten von der lokalen PowerPivot-Serverinstanz abgefangen wird. Verbindungsanforderungen an eine inaktive Datenbank werden vom Cache und nicht der Inhaltsbibliothek bedient, wodurch die Auswirkungen auf die Inhaltsdatenbanken minimiert werden.  
   
      Beachten Sie, dass die Inhaltsbibliothek der einzige dauerhafte Speicherort für PowerPivot-Datenbanken ist. Zwischengespeicherte Kopien werden nur verwendet, wenn die Datenbank in der Bibliothek mit der Kopie auf dem Datenträger übereinstimmt.  
   
-     Unter**Inaktive Datenbank im Cache behalten** wird angegeben, wie lange eine inaktive Datenbank im Dateisystem bleibt, nachdem sie aus dem Arbeitsspeicher entladen wurde. Der Cleanupauftrag verwendet diese Einstellung, um die zu löschenden Dateien zu bestimmen. Alle PowerPivot-Datenbanken, die 168 Stunden (48 Stunden im Arbeitsspeicher und 120 Stunden im Cache) lang inaktiv sind, werden durch den Cleanupauftrag vom Datenträger gelöscht.  
+     **Inaktive Datenbank im Cache beibehalten** gibt an, wie lange eine inaktive Datenbank im Dateisystem verbleibt, nachdem Sie aus dem Arbeitsspeicher entladen wurde. Der Cleanupauftrag verwendet diese Einstellung, um die zu löschenden Dateien zu bestimmen. Alle PowerPivot-Datenbanken, die 168 Stunden (48 Stunden im Arbeitsspeicher und 120 Stunden im Cache) lang inaktiv sind, werden durch den Cleanupauftrag vom Datenträger gelöscht.  
   
-5.  Klicken Sie auf **OK** , um die Änderungen zu speichern.  
+5.  Klicken Sie auf **OK**, um die Änderungen zu speichern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Eine PowerPivot für SharePoint-Installation stellt Integritätsregeln bereit, sodass Sie Korrekturmaßnahmen ergreifen können, wenn Probleme bei Zustand, Konfiguration oder Verfügbarkeit des Servers erkannt werden. Einige dieser Regeln bestimmen mithilfe von Konfigurationseinstellungen die Bedingungen, unter denen Integritätsregeln ausgelöst werden. Beim aktiven Optimieren der Serverleistung können Sie auch diese Einstellungen überprüfen, um sicherzustellen, dass die Standardwerte für das System am besten geeignet sind. Weitere Informationen finden Sie unter [PowerPivot-Integritätsregeln − konfigurieren](configure-power-pivot-health-rules.md).  
+ Eine PowerPivot für SharePoint-Installation stellt Integritätsregeln bereit, sodass Sie Korrekturmaßnahmen ergreifen können, wenn Probleme bei Zustand, Konfiguration oder Verfügbarkeit des Servers erkannt werden. Einige dieser Regeln bestimmen mithilfe von Konfigurationseinstellungen die Bedingungen, unter denen Integritätsregeln ausgelöst werden. Beim aktiven Optimieren der Serverleistung können Sie auch diese Einstellungen überprüfen, um sicherzustellen, dass die Standardwerte für das System am besten geeignet sind. Weitere Informationen finden Sie unter [Power Pivot-Integritäts Regeln-konfigurieren](configure-power-pivot-health-rules.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

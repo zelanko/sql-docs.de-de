@@ -1,5 +1,5 @@
 ---
-title: Erteilen von benutzerdefiniertem Zugriff auf dimensiondaten (Analysis Services) | Microsoft-Dokumentation
+title: Gewähren von benutzerdefiniertem Zugriff auf Dimensions Daten (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075062"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Erteilen eines benutzerdefinierten Zugriffs auf Dimensiondaten (Analysis Services)
@@ -41,12 +41,12 @@ ms.locfileid: "66075062"
   
  Die Standarddimensionssicherheit ist die einfachste: Sie wählen einfach aus, welche Dimensionsattribute und Attributhierarchien in die Rolle eingeschlossen oder daraus ausgeschlossen werden. Die erweiterte Sicherheit ist komplexer und erfordert Kenntnisse im MDX-Skripting. Beiden Ansätze werden im Folgenden beschrieben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Nicht alle Measures oder Dimensionselemente können in benutzerdefinierten Zugriffsszenarien verwendet werden. Eine Verbindung schlägt fehl, wenn eine Rolle den Zugriff auf ein Standardmeasure oder -element oder auf Measures einschränkt, die Teil von Measureausdrücken sind.  
   
- **Prüfen Sie, ob Hindernisse für die Dimensionssicherheit vorhanden sind: Standardmeasures, Standardelemente und in Measureausdrücken verwendete Measures.**  
+ **Überprüfen Sie, ob Hindernisse für die Dimensions Sicherheit verwendet werden sollen: Standardmeasures, Standardelemente und Measures, die in Measures verwendet werden**  
   
-1.  Klicken Sie in SQL Server Management Studio mit der rechten Maustaste auf einen Cube, und wählen Sie **Skript für Cube als** | **ALTER in** | **Neues Abfrage-Editor-Fenster**.  
+1.  Klicken Sie in SQL Server Management Studio mit der rechten Maustaste auf einen Cube, und wählen Sie **Skript Cube als** | **Alter in** | **neues Abfrage-Editor-Fenster**aus.  
   
 2.  Suchen Sie nach `DefaultMeasure`. Sie sollten eins für den Cube und eins für jede Perspektive finden. Wenn Sie die Dimensionssicherheit definieren, sollten Sie vermeiden, den Zugriff auf Standardmeasures einzuschränken.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66075062"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, erweitern Sie im Objekt-Explorer das **Rollen** -Element für die entsprechende Datenbank, und klicken Sie dann auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle).  
   
-     Die sollte bereits über Lesezugriff für den Cube verfügen. Weitere Informationen finden Sie unter [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
+     Die sollte bereits über Lesezugriff für den Cube verfügen. Weitere Informationen finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
   
-2.  Wählen Sie unter **Dimensionsdaten** | **Standard**die Dimension aus, für die Sie Berechtigungen festlegen.  
+2.  Wählen Sie unter **Dimensions Daten** | **Basic**die Dimension aus, für die Sie Berechtigungen festlegen.  
   
 3.  Wählen Sie die Attributhierarchie aus. Es werden nicht alle Attribute zur Verfügung stehen. Nur die Attribute mit **AttributeHierarchyEnabled** werden in der Liste **Attributhierarchie** angezeigt.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "66075062"
   
      Alternativ können Sie über die Option **Auswahl aufheben** den Zugriff insgesamt widerrufen und dann auswählen, welche Elemente zugelassen werden. Bei zukünftigen Verarbeitungsvorgängen sind neue Elemente erst sichtbar, wenn Sie die Dimensionsdatensicherheit manuell bearbeiten und den Zugriff darauf zulassen.  
   
-5.  Klicken Sie optional auf **erweitert** aktivieren `Visual Totals` für diese Attributhierarchie. Mit dieser Option werden Aggregation auf der Basis der durch die Rolle verfügbaren Elemente neu berechnet.  
+5.  Klicken Sie optional auf **erweitert** , `Visual Totals` um für diese Attribut Hierarchie zu aktivieren. Mit dieser Option werden Aggregation auf der Basis der durch die Rolle verfügbaren Elemente neu berechnet.  
   
     > [!NOTE]  
-    >  Beim Zuweisen von Berechtigungen, die Dimensionselemente entfernen, werden aggregierte Gesamtwerte nicht automatisch neu berechnet. Nehmen Sie an der `All` Element einer Attributhierarchie gibt die Anzahl 200 zurück, bevor Berechtigungen angewendet werden. Nach dem Anwenden von Berechtigungen, die Zugriff auf einige Elemente Verweigern `All` immer noch 200 zurück, auch wenn die für den Benutzer sichtbaren Elementwerte viel weniger sind. Um Missverständnisse bei den Consumern Ihres Cubes zu vermeiden, können Sie konfigurieren die `All` angehören, das Aggregat nur für die Elemente, zu denen Rollenmitglieder gehören, und nicht als Aggregat für alle Elemente der Attributhierarchie. Zum Aufrufen dieses Verhaltens können `Visual Totals` auf die **erweitert** Registerkarte Wenn dimensionssicherheit konfigurieren. Nach der Aktivierung wird das Aggregat zum Abfragezeitpunkt berechnet, statt von vorab berechneten Aggregationen abgerufen zu werden. Dies kann eine spürbare Auswirkung auf die Abfrageleistung und sollte nur verwendet werden, wenn es notwendig ist.  
+    >  Beim Zuweisen von Berechtigungen, die Dimensionselemente entfernen, werden aggregierte Gesamtwerte nicht automatisch neu berechnet. Angenommen, `All` das Element einer Attribut Hierarchie gibt die Anzahl 200 zurück, bevor Berechtigungen angewendet werden. Nach dem Anwenden von Berechtigungen, mit denen der Zugriff `All` auf einige Member verweigert wird, gibt weiterhin 200 zurück, auch wenn die für den Benutzer sichtbaren Element Werte weitaus weniger groß sind. Um zu vermeiden, dass die Consumer Ihres Cubes verwirrend sind, können `All` Sie das Element so konfigurieren, dass es das Aggregat nur der Member ist, denen Rollen Mitglieder anstelle des Aggregats aller Elemente der Attribut Hierarchie angehören. Um dieses Verhalten aufzurufen, können Sie `Visual Totals` auf der Registerkarte " **erweitert** " aktivieren, wenn Sie die Dimensions Sicherheit konfigurieren. Nach der Aktivierung wird das Aggregat zum Abfragezeitpunkt berechnet, statt von vorab berechneten Aggregationen abgerufen zu werden. Dies kann eine spürbare Auswirkung auf die Abfrageleistung und sollte nur verwendet werden, wenn es notwendig ist.  
   
 ## <a name="hiding-measures"></a>Ausblenden von Measures  
- Stellen Sie in [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)wurde erläutert, dass zum vollständigen Ausblenden aller visuellen Aspekte eines Measures – nicht nur seiner Zellendaten – Berechtigungen für Dimensionselemente erforderlich sind. In diesem Abschnitt wird erklärt, wie Sie den Zugriff auf die Objektmetadaten eines Measures verweigern.  
+ Stellen Sie in [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)wurde erläutert, dass zum vollständigen Ausblenden aller visuellen Aspekte eines Measures – nicht nur seiner Zellendaten – Berechtigungen für Dimensionselemente erforderlich sind. In diesem Abschnitt wird erklärt, wie Sie den Zugriff auf die Objektmetadaten eines Measures verweigern.  
   
-1.  Scrollen Sie unter **Dimensionsdaten** | **Standard**in der Liste der Dimensionen, bis Sie die Cubedimensionen erreichen. Wählen Sie dann **Measuredimension**aus.  
+1.  Führen Sie in **Dimensions Daten** | **Basic**einen Bildlauf nach unten in der Dimensions Liste durch, bis Sie Cubedimensionen erreichen, und wählen Sie dann **Measures Dimension**  
   
 2.  Deaktivieren Sie in der Liste der Measures das Kontrollkästchen für Measures, die für Benutzer nicht angezeigt werden sollten, die eine Verbindung über diese Rolle herstellen.  
   
@@ -84,22 +84,22 @@ ms.locfileid: "66075062"
 >  Überprüfen Sie die Voraussetzungen, um zu erfahren, wie Sie Measures erkennen, die die Rollensicherheit durchbrechen.  
   
 ## <a name="advanced-dimension-security"></a>Erweiterte Dimensionssicherheit  
- Wenn Sie über MDX-Kenntnisse verfügen, besteht ein weiterer Ansatz darin, MDX-Ausdrücke zu schreiben, mit denen die Kriterien festgelegt werden, für welche Elemente der Zugriff zugelassen oder verweigert wird. Klicken Sie auf **Rolle erstellen** | **Dimensionsdaten** | **Erweitert** , um das Skript bereitzustellen.  
+ Wenn Sie über MDX-Kenntnisse verfügen, besteht ein weiterer Ansatz darin, MDX-Ausdrücke zu schreiben, mit denen die Kriterien festgelegt werden, für welche Elemente der Zugriff zugelassen oder verweigert wird. Klicken Sie auf **Rollen** | **Dimensions Daten** | erstellen**erweitert** , um das Skript bereitzustellen.  
   
  Zum Schreiben der MDX-Anweisung können Sie den MDX-Generator verwenden. Informationen dazu finden Sie unter [MDX-Generator &#40;Analysis Services – Mehrdimensionale Daten&#41;](../mdx-builder-analysis-services-multidimensional-data.md). Die Registerkarte **Erweitert** enthält die folgenden Optionen:  
   
  **Attribut**  
  Wählen Sie das Attribut aus, für das Sie Einstellungen der Elementsicherheit verwalten möchten.  
   
- **Zulässige Elementgruppe**  
+ **Zulässige Element Gruppe**  
  Die Eigenschaft AllowedSet kann zu keinen Elementen (Standard), allen Elementen oder einigen Elementen aufgelöst werden. Wenn Sie das Zugreifen auf ein Attribut zulassen und keine Elemente der zulässigen Gruppe definieren, wird Zugriff auf alle Elemente gewährt. Wenn Sie den Zugriff auf ein Attribut zulassen und eine bestimmte Gruppe an Attributelementen definieren, sind nur die ausdrücklich zulässigen Elemente sichtbar.  
   
  Die Erstellung von AllowedSet wirkt sich wellenartig aus, wenn das Attribut Teil einer Hierarchie mit mehreren Ebenen ist. Nehmen wir beispielsweise an, eine Rolle gewährt den Zugriff auf den Staat Washington (gehen Sie von einem Szenario aus, in dem die Rolle Berechtigungen für die Vertriebsabteilung eines Unternehmens im Staat Washington gewährt). Für Personen, die eine Verbindung über diese Rolle herstellen, werden bei Anfragen, die Vorgänger (USA) oder Nachfolger (Seattle und Redmond) enthalten, nur Elemente in einer Kette angezeigt, die den Staat Washington enthält. Da andere Staaten ausdrücklich nicht zulässig sind, ist die Wirkung dieselbe, als wären sie verweigert.  
   
 > [!NOTE]  
->  Wenn Sie eine leere Menge definieren ({}) von Attributelementen, werden keine Elemente des Attributs für die Datenbankrolle sichtbar werden. Eine fehlende zulässige Gruppe wird nicht als leere Gruppe interpretiert.  
+>  Wenn Sie einen leeren Satz ({}) von Attribut Elementen definieren, sind keine Elemente des Attributs für die Daten Bank Rolle sichtbar. Eine fehlende zulässige Gruppe wird nicht als leere Gruppe interpretiert.  
   
- **Verweigerte Elementgruppe**  
+ **Verweigerter Element Satz**  
  Die Eigenschaft DeniedSet kann zu keinen Elementen, allen Elementen (Standard) oder einigen Attributelementen aufgelöst werden. Wenn die verweigerte Gruppe nur eine bestimmte Gruppe von Attributelementen enthält, wird der Datenbankrolle der Zugriff nur auf diese bestimmten Elemente sowie auf Nachfolger verweigert, wenn sich das Attribut in einer Hierarchie mit mehreren Ebenen befindet. Denken Sie an das Beispiel der Vertriebsabteilung im Staat Washington. Wenn Washington in DeniedSet platziert wird, werden den Personen, die eine Verbindung über diese Rolle herstellen, alle Staaten außer Washington und seinen Nachfolgerattributen angezeigt.  
   
  Erinnern Sie sich aus dem vorherigen Abschnitt, dass die verweigerte Gruppe eine feste Auflistung ist. Wenn die Verarbeitung nachfolgend neue Elemente einführt, denen der Zugriff ebenfalls verweigert werden sollte, müssen Sie diese Rolle bearbeiten, um diese Elemente zur Liste hinzuzufügen.  
@@ -113,22 +113,23 @@ ms.locfileid: "66075062"
   
  Beispiel: Eine Datenbankrolle gibt `Male` als Standardelement für das `Gender`-Attribut an. Wenn eine Abfrage nicht ausdrücklich sowohl das `Gender`-Attribut einschließt als auch ein anderes Element für dieses Attribut angibt, gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Dataset zurück, das lediglich männliche (male) Kunden einschließt. Weitere Informationen zum Festlegen des Standardelements finden Sie unter [Definieren eines Standardelements](attribute-properties-define-a-default-member.md).  
   
- **Sichtbarer Gesamtwert aktivieren**  
+ **Visual Total aktivieren**  
  Die VisualTotals-Eigenschaft gibt an, ob die angezeigten aggregierten Zellenwerte gemäß allen Zellenwerten oder nur gemäß den Zellenwerten berechnet werden, die für die Datenbankrolle sichtbar sind.  
   
- Die VisualTotals-Eigenschaft ist standardmäßig deaktiviert (Legen Sie auf `False`). Diese Standardeinstellung maximiert die Leistung, da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Gesamtergebnis aller Zellenwerte schnell berechnen kann, ohne Zeit für das Auswählen der zu berechnenden Zellenwerte aufwenden zu müssen.  
+ Die visualtotal-Eigenschaft ist standardmäßig deaktiviert (festgelegt `False`auf). Diese Standardeinstellung maximiert die Leistung, da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Gesamtergebnis aller Zellenwerte schnell berechnen kann, ohne Zeit für das Auswählen der zu berechnenden Zellenwerte aufwenden zu müssen.  
   
- Das Deaktivieren der VisualTotals-Eigenschaft kann jedoch zum Sicherheitsproblem werden, wenn ein Benutzer die aggregierten Zellenwerte verwenden kann, um Werte für Attributelemente abzuleiten, auf die die Datenbankrolle des Benutzers keinen Zugriff hat. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet beispielsweise die Werte für drei Attributelemente, um einen aggregierten Zellenwert zu berechnen. Die Datenbankrolle verfügt über die Zugriffsrechte zum Anzeigen zwei dieser drei Attributelemente. Mithilfe des aggregierten Zellenwertes wäre ein Mitglied dieser Datenbankrolle in der Lage, den Wert für das dritte Attributelement abzuleiten.  
+ Das Deaktivieren der VisualTotals-Eigenschaft kann jedoch zum Sicherheitsproblem werden, wenn ein Benutzer die aggregierten Zellenwerte verwenden kann, um Werte für Attributelemente abzuleiten, auf die die Datenbankrolle des Benutzers keinen Zugriff hat. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet beispielsweise die Werte für drei Attributelemente, um einen aggregierten Zellenwert zu berechnen. Die Datenbankrolle verfügt über die Zugriffsrechte zum Anzeigen zwei dieser drei Attributelemente. Mithilfe des aggregierten Zellenwertes wäre ein Mitglied dieser Datenbankrolle in der Lage, den Wert für das dritte Attributelement abzuleiten.  
   
- Festlegen der VisualTotals-Eigenschaft auf `True` können dieses Risiko vermeiden. Wenn Sie die VisualTotals-Eigenschaft aktivieren, kann eine Datenbankrolle aggregierte Gesamtergebnisse nur für Dimensionselemente anzeigen, für die die Rolle die entsprechende Berechtigung aufweist.  
+ Durch das Festlegen der visualtotal-Eigenschaft auf `True` kann dieses Risiko beseitigt werden. Wenn Sie die VisualTotals-Eigenschaft aktivieren, kann eine Datenbankrolle aggregierte Gesamtergebnisse nur für Dimensionselemente anzeigen, für die die Rolle die entsprechende Berechtigung aufweist.  
   
- **Check**  
+ **Kontroll**  
  Klicken Sie, um die auf dieser Seite definierte MDX-Syntax zu testen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [Erteilen von Berechtigungen für Data Mining-Strukturen und -Modelle &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Erteilen von Berechtigungen für ein Datenquellenobjekt &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erteilen von Cube-oder Modell Berechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Gewähren von benutzerdefiniertem Zugriff auf Zellen Daten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [Erteilen von Berechtigungen für Data Mining Strukturen und Modelle &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Erteilen von Berechtigungen für ein Datenquellen Objekt &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

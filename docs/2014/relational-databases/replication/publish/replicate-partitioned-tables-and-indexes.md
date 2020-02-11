@@ -17,19 +17,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793295"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replizieren partitionierter Tabellen und Indizes
-  Durch die Partitionierung können große Tabellen oder Indizes einfacher verwaltet werden, da Sie Teilmengen von Daten schnell und effizient verwalten und darauf zugreifen können und gleichzeitig die Integrität einer Datensammlung erhalten können. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Die Replikation unterstützt die Partitionierung durch Bereitstellung einer Gruppe von Eigenschaften, die angeben, wie partitionierte Tabellen und Indizes behandelt werden sollen.  
+  Durch die Partitionierung können große Tabellen oder Indizes einfacher verwaltet werden, da Sie Teilmengen von Daten schnell und effizient verwalten und darauf zugreifen können und gleichzeitig die Integrität einer Datensammlung erhalten können. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../partitions/partitioned-tables-and-indexes.md). Die Replikation unterstützt die Partitionierung durch Bereitstellung einer Gruppe von Eigenschaften, die angeben, wie partitionierte Tabellen und Indizes behandelt werden sollen.  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>Artikeleigenschaften für die Transaktions- und Mergereplikation  
  In der folgenden Tabelle sind die Objekte aufgelistet, die zum Partitionieren von Daten verwendet werden.  
   
-|Objekt|Erstellt mit|  
+|Object|Erstellt mit|  
 |------------|----------------------|  
 |Partitionierte Tabelle oder partitionierter Index|CREATE TABLE oder CREATE INDEX|  
 |Partitionsfunktion|CREATE PARTITION FUNCTION|  
@@ -37,7 +37,7 @@ ms.locfileid: "67793295"
   
  Die erste Gruppe von Eigenschaften, die mit der Partitionierung in Zusammenhang stehen, sind Artikelschemaoptionen, die bestimmen, ob Partitionierungsobjekte auf den Abonnenten kopiert werden sollen. Diese Schemaoptionen können folgendermaßen festgelegt werden:  
   
--   Auf der Seite **Artikeleigenschaften** des Assistenten für neue Veröffentlichungen oder im Dialogfeld Veröffentlichungseigenschaften. Um die in der vorherigen Tabelle aufgeführten Objekte zu kopieren, geben Sie den Wert `true` für die Eigenschaften **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren**. Informationen zum Zugriff auf die Seite **Artikeleigenschaften** finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
+-   Auf der Seite **Artikeleigenschaften** des Assistenten für neue Veröffentlichungen oder im Dialogfeld Veröffentlichungseigenschaften. Um die in der vorherigen Tabelle aufgeführten Objekte zu kopieren, geben Sie den `true` Wert für die Eigenschaften **Tabellen Partitionierungs Schemas kopieren** und **Index Partitionierungs Schemas**kopieren an. Informationen zum Zugriff auf die Seite **Artikeleigenschaften** finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
 -   Mithilfe des Parameters *schema_option* einer der folgenden gespeicherten Prozeduren:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67793295"
   
  Durch die Replikation werden Objekte während der Erstsynchronisierung auf den Abonnenten kopiert. Wenn im Partitionsschema andere Dateigruppen als die PRIMARY-Dateigruppe verwendet werden, müssen diese vor der Erstinitialisierung auf dem Abonnenten vorhanden sein.  
   
- Nachdem der Abonnent initialisiert wurde, werden Datenänderungen an den Abonnenten weitergegeben und auf die entsprechenden Partitionen übertragen. Änderungen am Partitionsschema werden jedoch nicht unterstützt. Bei Transaktions-und Mergereplikationen unterstützen keine Replikation der folgenden Befehle: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME oder die Anweisung REBUILD WITH PARTITION von ALTER INDEX.  Die ihnen zugeordneten Änderungen werden nicht automatisch auf den Abonnenten repliziert. Es liegt in der Zuständigkeit des Benutzers, ähnliche Änderungen manuell für den Abonnenten vorzunehmen.  
+ Nachdem der Abonnent initialisiert wurde, werden Datenänderungen an den Abonnenten weitergegeben und auf die entsprechenden Partitionen übertragen. Änderungen am Partitionsschema werden jedoch nicht unterstützt. Bei Transaktions- und Mergereplikationen wird die Replikation der folgenden Befehle nicht unterstützt: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME bzw. die Anweisung REBUILD WITH PARTITION von ALTER INDEX  Die ihnen zugeordneten Änderungen werden nicht automatisch auf den Abonnenten repliziert. Es liegt in der Zuständigkeit des Benutzers, ähnliche Änderungen manuell für den Abonnenten vorzunehmen.  
   
 ## <a name="replication-support-for-partition-switching"></a>Replikationsunterstützung für Partitionswechsel  
  Ein wesentlicher Vorteil der Tabellenpartitionierung besteht in der Fähigkeit, Teilmengen von Daten rasch und effizient zwischen Partitionen zu verschieben. Daten werden mit dem Befehl SWITCH PARTITION verschoben. Wenn eine Tabelle für die Replikation aktiviert wurde, werden SWITCH PARTITION-Vorgänge aus folgenden Gründen standardmäßig blockiert:  
@@ -70,13 +70,13 @@ ms.locfileid: "67793295"
 ### <a name="enabling-partition-switching"></a>Aktivieren des Partitionswechsels  
  Die folgenden Eigenschaften von Transaktionsveröffentlichungen ermöglichen es den Benutzern, das Verhalten von Partitionswechseln in einer replizierten Umgebung zu steuern:  
   
--   **\@Allow_partition_switch**, bei der Einstellung `true`, kann SWITCH PARTITION für die Veröffentlichungsdatenbank ausgeführt werden.  
+-   Wenn Sie auf festgelegt `true`haben, kann Switch Partition für die Veröffentlichungs Datenbank ausgeführt werden. allow_partition_switch ** \@**  
   
--   **\@Replicate_partition_switch** bestimmt, ob die SWITCH PARTITION DDL-Anweisung auf Abonnenten repliziert werden soll. Diese Option ist nur gültig, wenn  **\@Allow_partition_switch** nastaven NA hodnotu `true`.  
+-   replicate_partition_switch bestimmt, ob die Switch Partition DDL-Anweisung auf Abonnenten repliziert werden soll. ** \@** Diese Option ist nur gültig, wenn ** \@allow_partition_switch** auf `true`festgelegt ist.  
   
  Sie können diese Eigenschaften beim Erstellen der Veröffentlichung mit [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) oder nach der Erstellung der Veröffentlichung mit [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) festlegen. Wie bereits erwähnt, unterstützen Mergereplikationen keine Partitionswechsel. Entfernen Sie die Tabelle aus der Datenbank, um SWITCH PARTITION für eine Tabelle auszuführen, die für Mergereplikationen aktiviert wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)  
   
   

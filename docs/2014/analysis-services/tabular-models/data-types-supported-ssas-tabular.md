@@ -1,5 +1,5 @@
 ---
-title: Datentypen unterstützt (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Unterstützte Datentypen (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284928"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Unterstützte Datentypen (SSAS – tabellarisch)
@@ -24,11 +24,11 @@ ms.locfileid: "67284928"
   
 -   [In tabellarischen Modellen verwendete Datentypen](#bkmk_data_types)  
   
--   [Implizite und explizite Datentypkonvertierungen in DAX-Formeln](#bkmk_implicit)  
+-   [Implizite und explizite Datentyp Konvertierungen in DAX-Formeln](#bkmk_implicit)  
   
--   [Behandeln von Leerzeichen, leeren Zeichenfolgen und Nullwerten](#bkmk_hand_blanks)  
+-   [Behandlung von Leerzeichen, leeren Zeichen folgen und NULL-Werten](#bkmk_hand_blanks)  
   
-##  <a name="bkmk_data_types"></a> In tabellarischen Modellen verwendete Datentypen  
+##  <a name="bkmk_data_types"></a>In tabellarischen Modellen verwendete Datentypen  
  Die folgenden Datentypen werden unterstützt. Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die Daten in einen der folgenden Datentypen konvertiert, auch wenn die ursprüngliche Datenquelle einen anderen Datentyp enthält. Werte, die sich aus Formeln ergeben, verwenden ebenfalls diese Datentypen.  
   
  Im Allgemeinen werden diese Datentypen implementiert, um genaue Berechnungen in berechneten Spalten zu ermöglichen. Die gleichen Einschränkungen gelten aus Konsistenzgründen auch für den Rest der Daten in Modellen.  
@@ -37,26 +37,26 @@ ms.locfileid: "67284928"
   
 ||||  
 |-|-|-|  
-|Datentyp im Modell|Datentyp in DAX|Description|  
+|Datentyp im Modell|Datentyp in DAX|BESCHREIBUNG|  
 |Ganze Zahl|Ein ganzzahliger 64-Bit-Wert (acht Byte) <sup>1, 2</sup>|Zahlen ohne Dezimalstellen. Ganze Zahlen können positiv oder negativ sein, aber müssen ganze Zahlen zwischen -9 223 372 036 854 775 808 (-2^63) und 9 223 372 036 854 775 807 (2^63-1) sein.|  
-|Decimal Number|Eine reelle 64-Bit-Zahl (acht Byte) <sup>1, 2</sup>|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Null (0)<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
+|Dezimalzahl|Eine reelle 64-Bit-Zahl (acht Byte) <sup>1, 2</sup>|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Null<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
 |Boolean|Boolean|Entweder ein True oder ein False-Wert.|  
-|Textmodus|Zeichenfolge|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
-|date|Date/Time|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
-|Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
-|Nicht zutreffend|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
+|Text|String|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
+|Date|Datum/Uhrzeit|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
+|Currency|Currency|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
+|–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
- <sup>1</sup> DAX-Formeln unterstützen keine Datentypen, die kleiner als die in der Tabelle aufgeführt sind.  
+ <sup>1</sup> DAX-Formeln unterstützen keine Datentypen, die kleiner sind als die in der Tabelle aufgeführten.  
   
- <sup>2</sup> , wenn Sie versuchen, Daten zu importieren, sehr große numerische Werte enthält, kann der Importvorgang mit folgendem Fehler fehlschlagen:  
+ <sup>2</sup> Wenn Sie versuchen, Daten mit sehr großen numerischen Werten zu importieren, schlägt der Import möglicherweise mit folgendem Fehler fehl:  
   
- In-Memory-Datenbank-Fehler: Die "\<Spaltenname >" Spalte der '\<Tabellenname > "Tabelle enthält einen Wert" 1. 7976931348623157E + 308", dies wird nicht unterstützt. Der Vorgang wurde abgebrochen.  
+ Fehler in der Arbeitsspeicher Datenbank: die\<Spalte ' Spaltenname> ' der Tabelle\<' Tabellenname> ' enthält den Wert ' 1.7976931348623157 e + 308 ', der nicht unterstützt wird. Der Vorgang wurde abgebrochen.  
   
  Dieser Fehler tritt auf, da der Modell-Designer diesen Wert zur Darstellung von Nullen verwendet. Die Werte in der folgenden Liste sind zum vorherigen erwähnten Nullwert synonym:  
   
 ||  
 |-|  
-|Wert|  
+|value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1,7976931348623158e+308|  
@@ -70,18 +70,18 @@ ms.locfileid: "67284928"
 ### <a name="table-data-type"></a>Table-Datentyp  
  Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie in der [DAX-Funktionsreferenz](/dax/dax-function-reference).  
   
-##  <a name="bkmk_implicit"></a> Implizite und explizite Datentypkonvertierungen in DAX-Formeln  
+##  <a name="bkmk_implicit"></a>Implizite und explizite Datentyp Konvertierungen in DAX-Formeln  
  Jede DAX-Funktion verfügt über bestimmte Anforderungen im Hinblick auf die Datentypen, die als Eingaben und Ausgaben verwendet werden. Einige Funktionen erfordern z. B. ganze Zahlen für einige Argumente und Daten für andere, während für andere Funktionen Text oder Tabellen erforderlich sind.  
   
- Wenn die Daten in der Spalte, die Sie als Argument angeben, nicht mit dem erforderlichen Datentyp kompatibel sind, gibt DAX in vielen Fällen einen Fehler zurück. Sofern möglich, versucht DAX die Daten jedoch implizit in den erforderlichen Datentyp zu konvertieren. Zum Beispiel:  
+ Wenn die Daten in der Spalte, die Sie als Argument angeben, nicht mit dem erforderlichen Datentyp kompatibel sind, gibt DAX in vielen Fällen einen Fehler zurück. Sofern möglich, versucht DAX die Daten jedoch implizit in den erforderlichen Datentyp zu konvertieren. Beispiel:  
   
--   Sie können eine Zahl ist, z. B. "123", als Zeichenfolge eingeben. DAX analysiert die Zeichenfolge und versucht, diese als Zahlendatentyp anzugeben.  
+-   Sie können eine Zahl, z. b. "123", als Zeichenfolge eingeben. DAX analysiert die Zeichenfolge und versucht, diese als Zahlendatentyp anzugeben.  
   
 -   Sie können TRUE + 1 hinzufügen und als Ergebnis 2 abrufen, da TRUE implizit in die Zahl 1 konvertiert wird und der Vorgang 1+1 ausgeführt wird.  
   
 -   Wenn Sie Werte in zwei Spalten hinzufügen und ein Wert als Text ("12") und der andere als Zahl (12) dargestellt wird, konvertiert DAX die Zeichenfolge implizit in eine Zahl und addiert diese dann zu einem Ergebnis in numerischer Form. Vom folgenden Ausdruck wird 44 zurückgegeben: = "22" + 22  
   
--   Wenn Sie zwei Zahlen verketten möchten, stellt das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Add-In sie als Zeichenfolgen dar und verkettet sie dann. Vom folgenden Ausdruck wird "1234" zurückgegeben: = 12 & 34  
+-   Wenn Sie zwei Zahlen verketten möchten, stellt das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Add-In sie als Zeichenfolgen dar und verkettet sie dann. Vom folgenden Ausdruck wird "1234" zurückgegeben: = 12 & 34  
   
  In der folgenden Tabelle werden die impliziten Datentypkonvertierungen zusammengefasst, die in Formeln ausgeführt werden. Im Allgemeinen verhält sich der Designer für semantische Modelle wie Microsoft Excel und führt implizite Konvertierungen aus, wann immer dies möglich und bei dem betreffenden Vorgang erforderlich ist.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "67284928"
   
 ||||||  
 |-|-|-|-|-|  
-|Operator (+)|INTEGER|Währung|real|Date/Time|  
-|INTEGER|INTEGER|Währung|real|Date/Time|  
-|CURRENCY|CURRENCY|CURRENCY|real|Date/Time|  
-|real|real|real|real|Date/Time|  
-|Date/Time|Date/Time|Date/Time|Date/Time|Date/Time|  
+|Operator (+)|INTEGER|CURRENCY|real|Datum/Uhrzeit|  
+|INTEGER|INTEGER|CURRENCY|real|Datum/Uhrzeit|  
+|CURRENCY|CURRENCY|CURRENCY|real|Datum/Uhrzeit|  
+|real|real|real|real|Datum/Uhrzeit|  
+|Datum/Uhrzeit|Datum/Uhrzeit|Datum/Uhrzeit|Datum/Uhrzeit|Datum/Uhrzeit|  
   
  Wenn beispielsweise eine reelle Zahl bei einer Addition in Verbindung mit Währungsdaten verwendet wird, werden beide Werte in REAL konvertiert, und das Ergebnis wird als REAL zurückgegeben.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "67284928"
   
 ||||||  
 |-|-|-|-|-|  
-|Operator (-)|INTEGER|Währung|real|Date/Time|  
-|INTEGER|INTEGER|Währung|real|real|  
+|Operator (-)|INTEGER|CURRENCY|real|Datum/Uhrzeit|  
+|INTEGER|INTEGER|CURRENCY|real|real|  
 |CURRENCY|CURRENCY|CURRENCY|real|real|  
 |real|real|real|real|real|  
-|Date/Time|Date/Time|Date/Time|Date/Time|Date/Time|  
+|Datum/Uhrzeit|Datum/Uhrzeit|Datum/Uhrzeit|Datum/Uhrzeit|Datum/Uhrzeit|  
   
  Wenn beispielsweise ein Datum bei einer Subtraktion mit einem beliebigen anderen Datentyp verwendet wird, werden beide Werte in Datumsangaben konvertiert, und der Rückgabewert ist ebenfalls ein Datum.  
   
@@ -123,8 +123,8 @@ ms.locfileid: "67284928"
   
 ||||||  
 |-|-|-|-|-|  
-|Operator (*)|INTEGER|Währung|real|Date/Time|  
-|INTEGER|INTEGER|Währung|real|INTEGER|  
+|Operator (*)|INTEGER|CURRENCY|real|Datum/Uhrzeit|  
+|INTEGER|INTEGER|CURRENCY|real|INTEGER|  
 |CURRENCY|CURRENCY|real|CURRENCY|CURRENCY|  
 |real|real|CURRENCY|real|real|  
   
@@ -135,11 +135,11 @@ ms.locfileid: "67284928"
   
 ||||||  
 |-|-|-|-|-|  
-|Operator (/)<br /><br /> (Zeile/Spalte)|INTEGER|Währung|real|Date/Time|  
+|Operator (/)<br /><br /> (Zeile/Spalte)|INTEGER|CURRENCY|real|Datum/Uhrzeit|  
 |INTEGER|real|CURRENCY|real|real|  
 |CURRENCY|CURRENCY|real|CURRENCY|real|  
 |real|real|real|real|real|  
-|Date/Time|real|real|real|real|  
+|Datum/Uhrzeit|real|real|real|real|  
   
  Wenn beispielsweise eine ganze Zahl bei einer Division mit einem Währungswert kombiniert wird, werden beide Werte in reelle Zahlen konvertiert, und das Ergebnis ist ebenfalls ein reeller Wert.  
   
@@ -148,23 +148,23 @@ ms.locfileid: "67284928"
   
  Die folgenden DAX-Ausdrücke veranschaulichen dieses Verhalten:  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`, gibt `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")`, gibt zurück.`"Expression is true"`  
   
- `=IF("12">12,"Expression is true", "Expression is false")`, gibt `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")`, gibt zurück.`"Expression is true"`  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`, gibt `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")`, gibt zurück.`"Expression is false"`  
   
  Konvertierungen werden gemäß der folgenden Tabelle implizit für numerische oder Datums-/Uhrzeittypen ausgeführt:  
   
 ||||||  
 |-|-|-|-|-|  
-|Vergleichsoperator|INTEGER|Währung|real|Date/Time|  
-|INTEGER|INTEGER|Währung|real|real|  
+|Vergleichsoperator|INTEGER|CURRENCY|real|Datum/Uhrzeit|  
+|INTEGER|INTEGER|CURRENCY|real|real|  
 |CURRENCY|CURRENCY|CURRENCY|real|real|  
 |real|real|real|real|real|  
-|Date/Time|real|real|real|Date/Time|  
+|Datum/Uhrzeit|real|real|real|Datum/Uhrzeit|  
   
-##  <a name="bkmk_hand_blanks"></a> Behandeln von Leerzeichen, leeren Zeichenfolgen und Nullwerten  
+##  <a name="bkmk_hand_blanks"></a>Behandlung von Leerzeichen, leeren Zeichen folgen und NULL-Werten  
  DAX behandelt Nullwerte (0), Null und leere Zeichenfolgen anders als Microsoft Excel und SQL Server. In diesem Abschnitt werden die Unterschiede beschrieben, und es wird erläutert, wie diese Datentypen behandelt werden.  
   
  Dabei ist wichtig zu beachten, dass ein leerer Wert, eine leere Zelle oder ein fehlender Wert alle durch den gleichen neuen Werttyp (BLANK) dargestellt werden. Wie Leerzeichen in Vorgängen gehandhabt werden (z. B. Hinzufügen oder Verketten), hängt von der jeweiligen Funktion ab. Sie können auch Leerzeichen mit der BLANK-Funktion generieren oder mit der ISBLANK-Funktion nach Leerzeichen suchen. Datenbank-NULLEN werden innerhalb eines Semantikmodells nicht unterstützt, und NULLEN werden implizit in Leerzeichen konvertiert, wenn in einer DAX-Formel auf eine Spalte mit einem Nullwert verwiesen wird.  
@@ -174,13 +174,13 @@ ms.locfileid: "67284928"
   
 ||||  
 |-|-|-|  
-|expression|DAX|Excel|  
+|Ausdruck|DAX|Excel|  
 |BLANK + BLANK|BLANK|0 (Null)|  
 |BLANK +5|5|5|  
 |BLANK * 5|BLANK|0 (Null)|  
-|5/BLANK|Unendlich|Fehler|  
+|5/BLANK|Infinity|Fehler|  
 |0/BLANK|NaN|Fehler|  
-|BLANK/BLANK|Leer|Fehler|  
+|BLANK/BLANK|BLANK|Fehler|  
 |FALSE OR BLANK|FALSE|FALSE|  
 |FALSE AND BLANK|FALSE|FALSE|  
 |TRUE OR BLANK|TRUE|TRUE|  
@@ -190,8 +190,8 @@ ms.locfileid: "67284928"
   
  Informationen zur Behandlung von Leerzeichen durch eine bestimmte Funktion oder einen Operator finden Sie in den einzelnen Themen zu den verschiedenen DAX-Funktionen im Abschnitt [DAX-Funktionsreferenz](/dax/dax-function-reference).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellen &#40;SSAS – tabellarisch&#41;](../data-sources-ssas-tabular.md)   
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](../import-data-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen &#40;tabellarischen SSAS-&#41;](../data-sources-ssas-tabular.md)   
+ [Importieren von Daten &#40;tabellarischen SSAS-&#41;](../import-data-ssas-tabular.md)  
   
   

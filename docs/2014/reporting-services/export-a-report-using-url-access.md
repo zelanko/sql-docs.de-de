@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109185"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportieren von Berichten über URL-Zugriff
-  Optional können Sie angeben, das Format, in dem zum Rendern eines Berichts mithilfe der *Rs: Format* Parameter. Um beispielsweise von einem im einheitlichen Modus ausgeführten Berichtsserver direkt eine PDF-Kopie eines Berichts abzurufen, geben Sie Folgendes an:  
+  Sie können optional das Format angeben, in dem ein Bericht mithilfe des *RS: Format* -Parameters dargestellt werden soll. Um beispielsweise von einem im einheitlichen Modus ausgeführten Berichtsserver direkt eine PDF-Kopie eines Berichts abzurufen, geben Sie Folgendes an:  
   
 ```  
 http://myrshost/ReportServer?/myreport&rs:Format=PDF  
@@ -37,8 +37,8 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
   
  Wenn Sie den *Format* -Parameter nicht als Teil der URL aufnehmen, erkennt der Berichtsserver den Browser und rendert den Bericht im entsprechenden HTML-Format.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)   
- [URL-Zugriffsparameterverweis](url-access-parameter-reference.md)  
+ [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](url-access-parameter-reference.md)  
   
   

@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110140"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Untersuchen der aktuellen Struktur der Mitarbeitertabelle
-  Die Beispieldatenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] enthält im Schema **HumanResources** die Tabelle **Employee** . Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo**erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Dann Fragen Sie die **HumanResources.EmployeeDemo** Tabelle überprüfen, wie die Daten in einer Tabelle strukturiert ist die `hierarchyid` -Datentyp.  
+  Die Beispiel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank enthält eine **Employee** -Tabelle im **HumanResources** -Schema. Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo**erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Anschließend Fragen Sie die **HumanResources. Mitarbeiter Demo** -Tabelle ab, um zu überprüfen, wie die Daten in einer Tabelle strukturiert `hierarchyid` sind, ohne den-Datentyp zu verwenden.  
   
 ### <a name="to-copy-the-employee-table"></a>So kopieren Sie die Mitarbeitertabelle  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66110140"
   
  In der nächsten Aufgabe erstellen Sie eine neue Tabelle mit dem `hierarchyid`-Datentyp und verschieben die Daten in diese neue Tabelle.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)  
   
   

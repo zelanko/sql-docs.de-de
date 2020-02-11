@@ -1,5 +1,5 @@
 ---
-title: Von SQLGetInfo zurückgegebenen Werte für Paradox | Microsoft-Dokumentation
+title: Von SQLGetInfo zurückgegebene Werte für Paradox | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898819"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Von SQLGetInfo zurückgegebenen Werte für Paradox
-Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoType* Argument und die entsprechenden Werte, die vom **SQLGetInfo**. Diese Informationen abgerufen werden, indem Sie die Übergabe der aufgelisteten Programmiersprache C# defines für **SQLGetInfo** in die *fInfoType* Argument. Weitere Informationen zu den Werten, die vom **SQLGetInfo**, finden Sie unter den *ODBC Programmer's Reference*.  
+In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argument und die von **SQLGetInfo**zurückgegebenen Werte aufgelistet. Diese Informationen können abgerufen werden, indem die im *finfotype* -Argument aufgeführte C-Sprache #defines an **SQLGetInfo** übergeben wird. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC Programmer es Reference*.  
   
 > [!NOTE]  
->  In denen **SQLGetInfo** gibt eine 32-Bit-Bitmaske, ein senkrechter Strich (&#124;) stellt ein bitweises OR.  
+>  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Strich (&#124;) ein bitweises OR dar.  
   
-|Informationsart|Rückgabewert|  
+|Infotype|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Startklar|  
+|SQL_AGGREGATE_FUNCTIONS|Alle festgelegt|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|Mehrere Werte|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|Befinden|  
 |SQL_CATALOG_USAGE|Mehrere Werte|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Der DSN aus Odbc.ini, oder "" Wenn Odbc.ini DRIVER-Schlüsselwort verwendet wird|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (Dies hängt von der Datenquelle.)|  
-|SQL_DATABASE_NAME|Datenbankverzeichnis der aktuellen|  
+|SQL_DATA_SOURCE_NAME|Der DSN aus ODBC. ini oder "", wenn das Treiber Schlüsselwort in "ODBC. ini" verwendet wird.|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (hängt von der Datenquelle ab)|  
+|SQL_DATABASE_NAME|Aktuelles Datenbankverzeichnis|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"PARADOX"|  
+|SQL_DBMS_NAME|Gewissen|  
 |SQL_DBMS_VER|Mehrere Werte|  
 |SQL_DDL_INDEX|Mehrere Werte|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Verarbeitet die vom Treiber-Manager.|  
-|SQL_DRIVER_HENV|Verarbeitet die vom Treiber-Manager.|  
-|SQL_DRIVER_HLIB|Verarbeitet die vom Treiber-Manager.|  
-|SQL_DRIVER_HSTMT|Verarbeitet die vom Treiber-Manager.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_HENV|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_HLIB|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_HSTMT|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*Nnnn*" (*Nnnn* gibt das Build-Datum)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 |SQL_GETDATA_EXTENSIONS|Mehrere Werte|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (Anführungszeichen zurück)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (zurück Anführungszeichen)|  
 |SQL_KEYWORDS|Mehrere Werte|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 |SQL_MAX_CHAR_LITERAL_LEN|255|  
 |SQL_MAX_COLUMN_NAME_LEN|25|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (einzuschränken, unbekannt oder nicht anwendbar)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (Limit unbekannt oder nicht zutreffend)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,9 +141,9 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Mehrere Werte|  
-|SQL_ODBC_SAG_CLI_ ÜBEREINSTIMMUNG MIT STANDARDS|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ Konformität|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Treiber-Manager aus|  
+|SQL_ODBC_VER|Aus Treiber-Manager|  
 |SQL_OJ_CAPABILITIES|Mehrere Werte|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Mehrere Werte|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"PARADOX"|  
-|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|Gewissen|  
+|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,.! " [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Mehrere Werte|  
 |SQL_SUBQUERIES|Mehrere Werte|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|Glaub|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Mehrere Werte|  

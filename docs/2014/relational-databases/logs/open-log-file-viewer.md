@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144490"
 ---
 # <a name="open-log-file-viewer"></a>Öffnen des Protokolldatei-Viewers
@@ -54,7 +54,7 @@ ms.locfileid: "63144490"
   
 1.  Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung**.  
   
-2.  Führen Sie eine der folgenden Aktionen aus:  
+2.  Führen Sie einen der folgenden Schritte aus:  
   
     -   Klicken Sie mit der rechten Maustaste auf **SQL Server-Protokolle**, zeigen Sie auf **Sicht**und dann entweder auf **SQL Server-Protokoll** oder **SQL Server- und Windows-Protokoll**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63144490"
   
      Die Protokolle sind **Überwachungsauflistung** und **Windows NT**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Protokolldatei-Viewer](log-file-viewer.md)   
  [SQL Server Audit &#40;Datenbank-Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Anzeigen von Offlineprotokolldateien](view-offline-log-files.md)  

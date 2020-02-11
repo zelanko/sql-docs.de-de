@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Ändern die Berichtsdaten Quelleigenschaften | Microsoft-Dokumentation'
+title: 'Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 619d35c084884aa72de63ff221d5a6f61ea86196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108484"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle
@@ -26,19 +26,19 @@ ms.locfileid: "66108484"
   
 -   [So ändern Sie die Datenquelleneigenschaften](#bkmk_modify_datasource)  
   
--   [So ändern Sie den AdventureWorksDataset](#bkmk_modify_dataset)  
+-   [So ändern Sie das AdventureWorksDataSet](#bkmk_modify_dataset)  
   
--   [Fügen Sie einen Berichtsparameter hinzu und veröffentlichen den Bericht erneut](#bkmk_add_reportparameter)  
+-   [So fügen Sie einen Berichts Parameter hinzu und veröffentlichen den Bericht erneut](#bkmk_add_reportparameter)  
   
--   [Um den Bericht erneut bereitstellen.](#bkmk_redeploy)  
+-   [So stellen Sie den Bericht erneut bereit](#bkmk_redeploy)  
   
-##  <a name="bkmk_modify_datasource"></a> So ändern Sie die Datenquelleneigenschaften  
+##  <a name="bkmk_modify_datasource"></a>So ändern Sie die Datenquellen Eigenschaften  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) mit Administratorrechten aus, z. B. Maustaste auf das Symbol für Internet Explorer, und klicken Sie auf **als Administrator ausführen**.  
+1.  Starten Sie [Berichts-Manager &#40;SSRS im einheitlichen&#41;Modus](../../2014/reporting-services/report-manager-ssrs-native-mode.md) mit Administratorrechten, indem Sie z. b. mit der rechten Maustaste auf das Symbol für Internet Explorer und dann auf **als Administrator ausführen**klicken.  
   
 2.  Navigieren Sie zu dem Ordner, der den Bericht **Sales Orders** enthält, und klicken Sie im Kontextmenü des Berichts auf **Verwalten**.  
   
-     ![Öffnen Sie im Kontextmenü "Bericht" und "verwalten" auswählen](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "Öffnen des berichtskontextmenüs und \"verwalten\" auswählen")  
+     ![Öffnen des Berichtskontextmenüs und Auswählen von "Verwalten"](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "Öffnen des Berichtskontextmenüs und Auswählen von "Verwalten"")  
   
 3.  Klicken Sie auf die Registerkarte **Datenquellen** .  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66108484"
   
 10. Klicken Sie auf **Anwenden**.  
   
-11. Zeigen Sie den Bericht an, um zu überprüfen, ob er mit den von Ihnen angegebenen Anmeldeinformationen ausgeführt wird. Klicken Sie zum Anzeigen des Berichts auf die Registerkarte **Ansicht** . Nach dem Öffnen des Berichts müssen Sie unter Employee einen Namen auswählen und dann auf **Bericht anzeigen** klicken.  
+11. Zeigen Sie den Bericht an, um zu überprüfen, ob er mit den von Ihnen angegebenen Anmeldeinformationen ausgeführt wird. Um den Bericht anzuzeigen, klicken Sie auf die Registerkarte **Ansicht** . Beachten Sie, dass nach dem Öffnen des Berichts ein Mitarbeiter Name ausgewählt werden muss. Klicken Sie dann auf die Schaltfläche **Bericht anzeigen** , um den Bericht anzuzeigen.  
   
-##  <a name="bkmk_modify_dataset"></a> So ändern Sie den AdventureWorksDataset  
+##  <a name="bkmk_modify_dataset"></a>So ändern Sie das AdventureWorksDataSet  
   
 1.  Öffnen Sie den Bericht "Sales Orders" in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -87,15 +87,15 @@ ms.locfileid: "66108484"
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.  Klicken Sie auf **OK**.  
+4.  Klicken Sie auf **OK**  
   
-##  <a name="bkmk_add_reportparameter"></a> Fügen Sie einen Berichtsparameter hinzu und veröffentlichen den Bericht erneut  
+##  <a name="bkmk_add_reportparameter"></a>So fügen Sie einen Berichts Parameter hinzu und veröffentlichen den Bericht erneut  
   
-1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Parameter...** .  
+1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Parameter...**.  
   
 2.  Geben Sie in **Name**den Namen `OrderNumber`ein.  
   
-3.  Geben Sie in **Eingabeaufforderung** `OrderNumber`ein.  
+3.  Geben Sie in **Eingabeaufforderung**`OrderNumber`ein.  
   
 4.  Wählen Sie **Leeren Wert zulassen ("")** aus.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66108484"
   
 6.  Klicken Sie auf **OK**. Dem **Berichtsdatenbereich** wird der Parameter hinzugefügt, und er entspricht der folgenden Abbildung:  
   
-     ![Der neue Parameter wird aus dem berichtsdatenbereich hinzugefügt](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "der neue Parameter wird aus dem berichtsdatenbereich hinzugefügt")  
+     ![Der neue Parameter wird dem Berichtsdatenbereich hinzugefügt](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "Der neue Parameter wird dem Berichtsdatenbereich hinzugefügt")  
   
 7.  Klicken Sie auf die Registerkarte **Vorschau** , um den Bericht auszuführen. Beachten Sie das Parametereingabefeld am oberen Rand des Berichts. Sie haben folgende Möglichkeiten:  
   
@@ -113,21 +113,21 @@ ms.locfileid: "66108484"
   
          ![Berichts-Viewer mit sichtbarem Parameterbereich](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "Berichts-Viewer mit sichtbarem Parameterbereich")  
   
-8.  Stellen Sie den Bericht erneut bereit, damit bei der Abonnementkonfiguration in der nächsten Lektion die in dieser Lektion vorgenommenen Änderungen verwendet werden können. Weitere Informationen zu den Projekteigenschaften, die im tabellenlernprogramm verwendet, finden Sie im Abschnitt "So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)" von [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+8.  Stellen Sie den Bericht erneut bereit, damit bei der Abonnementkonfiguration in der nächsten Lektion die in dieser Lektion vorgenommenen Änderungen verwendet werden können. Weitere Informationen zu den Projekteigenschaften, die im Tabellentutorial verwendet werden, finden Sie im Abschnitt „So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)“ in [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-##  <a name="bkmk_redeploy"></a> Um den Bericht erneut bereitstellen.  
+##  <a name="bkmk_redeploy"></a>So stellen Sie den Bericht erneut bereit  
   
-1.  Stellen Sie den Bericht erneut bereit, damit bei der Abonnementkonfiguration in der nächsten Lektion die in dieser Lektion vorgenommenen Änderungen verwendet werden können. Weitere Informationen zu den Projekteigenschaften, die im tabellenlernprogramm verwendet, finden Sie im Abschnitt "So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)" von [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Stellen Sie den Bericht erneut bereit, damit bei der Abonnementkonfiguration in der nächsten Lektion die in dieser Lektion vorgenommenen Änderungen verwendet werden können. Weitere Informationen zu den Projekteigenschaften, die im Tabellentutorial verwendet werden, finden Sie im Abschnitt „So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)“ in [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Klicken Sie auf der Symbolleiste auf **Erstellen** , und klicken Sie dann auf **Tutorial bereitstellen**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben damit erfolgreich den Bericht so konfiguriert, dass er beim Abrufen von Daten gespeicherte Anmeldeinformationen verwendet. Als Nächstes geben Sie das Abonnement mit den Seiten für datengesteuerte Abonnements im Berichts-Manager an. Siehe [Lektion 3: Definieren eines datengesteuerten Abonnements](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Berichtsdatenquellen](report-data/manage-report-data-sources.md)   
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
   

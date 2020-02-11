@@ -1,5 +1,5 @@
 ---
-title: dm_os_sys_memory (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_sys_memory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,49 +21,49 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899705"
 ---
-# <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
+# <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Gibt Arbeitsspeicherinformationen vom Betriebssystem zurück.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch begrenzt ist, und reagiert auf externen speicherbedingungen auf der Betriebssystemebene und die physischen Grenzen der zugrunde liegenden Hardware. Die Ermittlung des Gesamtsystemstatus ist deshalb eine wichtige Komponente zur Auswertung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherauslastung.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist begrenzt durch den extern verfügbaren Arbeitsspeicher auf Betriebssystemebene sowie durch die physischen Grenzen der zugrunde liegenden Hardware und passt seine Leistung den entsprechenden Gegebenheiten an. Die Ermittlung des Gesamtsystemstatus ist deshalb eine wichtige Komponente zur Auswertung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherauslastung.  
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_sys_memory**.  
+>  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_sys_memory**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**total_physical_memory_kb**|**bigint**|Physischer Gesamtspeicher in Kilobytes (KB), der dem Betriebssystem zur Verfügung steht.|  
-|**available_physical_memory_kb**|**bigint**|Verfügbarer physischer Arbeitsspeicher in KB.|  
-|**total_page_file_kb**|**bigint**|Die vom Betriebssystem gemeldete Commitgrenze in KB.|  
-|**available_page_file_kb**|**bigint**|Gesamtangabe für den in der Auslagerungsdatei nicht genutzten Speicher in KB.|  
-|**system_cache_kb**|**bigint**|Gesamter Arbeitsspeicher im Systemcache in KB.|  
-|**kernel_paged_pool_kb**|**bigint**|Gesamtgröße des ausgelagerten Kernelpools in KB.|  
-|**kernel_nonpaged_pool_kb**|**bigint**|Gesamtgröße des nicht ausgelagerten Kernelpools in KB.|  
-|**system_high_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind ausreichend. Ein Wert von 1 gibt an, dass das Signal für ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
-|**system_low_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind nicht ausreichend. Ein Wert von 1 gibt an, dass das Signal für nicht ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
-|**system_memory_state_desc**|**nvarchar(256)**|Beschreibung des Speicherstatus. Siehe Tabelle unten.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**total_physical_memory_kb**|**BIGINT**|Physischer Gesamtspeicher in Kilobytes (KB), der dem Betriebssystem zur Verfügung steht.|  
+|**available_physical_memory_kb**|**BIGINT**|Verfügbarer physischer Arbeitsspeicher in KB.|  
+|**total_page_file_kb**|**BIGINT**|Die vom Betriebssystem gemeldete Commitgrenze in KB.|  
+|**available_page_file_kb**|**BIGINT**|Gesamtangabe für den in der Auslagerungsdatei nicht genutzten Speicher in KB.|  
+|**system_cache_kb**|**BIGINT**|Gesamter Arbeitsspeicher im Systemcache in KB.|  
+|**kernel_paged_pool_kb**|**BIGINT**|Gesamtgröße des ausgelagerten Kernelpools in KB.|  
+|**kernel_nonpaged_pool_kb**|**BIGINT**|Gesamtgröße des nicht ausgelagerten Kernelpools in KB.|  
+|**system_high_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind ausreichend. Ein Wert von 1 gibt an, dass das Signal für ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter " [kreatememoryresourcenotifi"](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
+|**system_low_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind nicht ausreichend. Ein Wert von 1 gibt an, dass das Signal für nicht ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter " [kreatememoryresourcenotifi"](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
+|**system_memory_state_desc**|**nvarchar(256)**|Beschreibung des Speicherstatus. Siehe hierzu die nachstehende Tabelle.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
-|Bedingung|Wert|  
+|Bedingung|value|  
 |---------------|-----------|  
-|system_high_memory_signal_state = 1<br /><br /> \- und<br /><br /> System_low_memory_signal_state = 0|Ausreichend physischer Speicher verfügbar|  
-|System_high_memory_signal_state = 0<br /><br /> \- und<br /><br /> system_low_memory_signal_state = 1|Nicht ausreichend physischer Speicher verfügbar|  
-|System_high_memory_signal_state = 0<br /><br /> \- und<br /><br /> System_low_memory_signal_state = 0|Konstante physische Speicherauslastung|  
-|system_high_memory_signal_state = 1<br /><br /> \- und<br /><br /> system_low_memory_signal_state = 1|Physischer Speicherstatus befindet sich im Übergang.<br /><br /> Die Signale für ausreichenden und nicht ausreichenden Speicher dürfen nicht gleichzeitig aktiviert sein. Kurzfristige Änderungen auf Betriebssystemebene können jedoch dazu führen, dass eine Benutzermodusanwendung beide Werte als aktiviert betrachtet. Werden beide Signale als aktiviert dargestellt, wird dies als Übergangsstatus interpretiert.|  
+|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|Ausreichend physischer Speicher verfügbar|  
+|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|Nicht ausreichend physischer Speicher verfügbar|  
+|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|Konstante physische Speicherauslastung|  
+|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|Physischer Speicherstatus befindet sich im Übergang.<br /><br /> Die Signale für ausreichenden und nicht ausreichenden Speicher dürfen nicht gleichzeitig aktiviert sein. Kurzfristige Änderungen auf Betriebssystemebene können jedoch dazu führen, dass eine Benutzermodusanwendung beide Werte als aktiviert betrachtet. Werden beide Signale als aktiviert dargestellt, wird dies als Übergangsstatus interpretiert.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

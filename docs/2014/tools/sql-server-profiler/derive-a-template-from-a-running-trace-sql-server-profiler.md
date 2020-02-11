@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276304"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung (SQL Server Profiler)
@@ -34,7 +34,7 @@ ms.locfileid: "63276304"
 > [!NOTE]  
 >  Bei Verwendung einer vorhandenen Vorlagendatei werden Sie gefragt, ob Sie die Datei überschreiben möchten. Sie können nur eine benutzerdefinierte Vorlage auswählen. Vordefinierte systemeigene Ablaufverfolgungsvorlagen können nicht überschrieben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorlagen und Berechtigungen in SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modify a Trace Template &#40;SQL Server Profiler&#41; (Ändern einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41)](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   

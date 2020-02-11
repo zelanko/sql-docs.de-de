@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109226"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Aktivieren und Deaktivieren von RDL-Sandkasten
@@ -28,16 +28,16 @@ ms.locfileid: "66109226"
   
  Bei Aktivierung des RDL-Sandboxing werden die folgenden Funktionen deaktiviert:  
   
--   Benutzerdefinierter Code im **\<Code>** -Element einer Berichtsdefinition.  
+-   Benutzerdefinierter Code im ** \<Code>** -Element einer Berichtsdefinition.  
   
 -   RDL-Abwärtskompatibilitätsmodus für benutzerdefinierte Berichtselemente von [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] .  
   
 -   Benannte Parameter in Ausdrücken.  
   
- In diesem Thema wird beschrieben, jedes Element in der <`RDLSandboxing`>-Element in der Datei "rsreportserver.config". Weitere Informationen zum Ändern dieser Datei finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). In einem Server-Ablaufverfolgungsprotokoll werden Aktivitäten aufgezeichnet, die sich auf die RDL-Sandboxingfunktion beziehen. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](report-server/report-server-service-trace-log.md).  
+ In diesem Thema werden die einzelnen Elemente im `RDLSandboxing` <>-Element in der Datei RSReportServer. config beschrieben. Weitere Informationen zum Ändern dieser Datei finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). In einem Server-Ablaufverfolgungsprotokoll werden Aktivitäten aufgezeichnet, die sich auf die RDL-Sandboxingfunktion beziehen. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Beispielkonfiguration  
- Das folgende Beispiel zeigt die Einstellungen und Beispielwerte für die <`RDLSandboxing`>-Element in der Datei "rsreportserver.config".  
+ Das folgende Beispiel zeigt die Einstellungen und Beispiel Werte für das <`RDLSandboxing`>-Element in der Datei RSReportServer. config.  
   
 ```  
 <RDLSandboxing>  
@@ -59,19 +59,19 @@ ms.locfileid: "66109226"
 ## <a name="configuration-settings"></a>Konfigurationseinstellungen  
  Die folgende Tabelle enthält Informationen zu Konfigurationseinstellungen. Diese Einstellungen werden in der Reihenfolge aufgeführt, in der sie in der Konfigurationsdatei angezeigt werden.  
   
-|Einstellung|Beschreibung|  
+|Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
-|**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  
-|**MaxStringResultLength**|Maximale Anzahl von Zeichen, die für einen Rückgabewert für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 1000|  
-|**MaxArrayResultLength**|Maximale Anzahl von Elementen, die für einen Rückgabewert vom Typ "Array" für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 100|  
-|**Typen**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
-|**Allow**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
+|**Maxexpressionlength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
+|**Maxresourcesize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  
+|**Maxstrauingresultlength**|Maximale Anzahl von Zeichen, die für einen Rückgabewert für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 1000|  
+|**Maxarrayresultlength**|Maximale Anzahl von Elementen, die für einen Rückgabewert vom Typ "Array" für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 100|  
+|**Solche**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
+|**Ließen**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
 |**Namespace**|Attribut für **Erlauben** , das den Namespace darstellt, der mindestens einen gültigen Typ für Value enthält. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|`AllowNew`|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL- **\<Class>** -Element erstellt werden dürfen.<br /><br /> Hinweis: Wenn `RDLSandboxing` aktiviert ist, können keine neuen Arrays erstellt werden, in RDL-Ausdrücken verwendet werden, unabhängig von der Einstellung der `AllowNew`.|  
-|**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**Elemente**|Für die Liste der Typen, die im **\<Types>** -Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
-|**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Hinweis: Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für keinen Typ zugelassen.|  
+|`AllowNew`|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Hinweis: Wenn `RDLSandboxing` aktiviert ist, können in RDL-Ausdrücken keine neuen Arrays erstellt werden, unabhängig von der `AllowNew`Einstellung von.|  
+|**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im-Namespace zulässig sind. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
+|**Mitglieder**|Die Liste der Typen, die in den ** \<Typen>** -Elements enthalten sind, ist die Liste der Elementnamen, die in RDL-Ausdrücken nicht zulässig sind.|  
+|**Deny**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Hinweis: Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für alle Typen nicht zugelassen.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Arbeiten mit Ausdrücken bei aktiviertem RDL-Sandboxing  
  Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die von einem Ausdruck verwendeten Ressourcen zu verwalten:  
@@ -96,9 +96,9 @@ ms.locfileid: "66109226"
   
 -   Statische Elemente eines Typs.  
   
--   Die [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New` Methode.  
+-   Die [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New` -Methode.  
   
--   Das **\<Classes>** -Element in der Berichtsdefinition  
+-   Die ** \<Klassen>** Element in der Berichtsdefinition.  
   
 -   Elemente, die Sie der Sperrliste für einen Typ in der Zulassungsliste hinzugefügt haben.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66109226"
   
  Um ein Element eines Typs zu aktivieren, aber ein Element mit dem gleichen Namen für einen anderen Typ zu verweigern, gehen Sie wie folgt vor:  
   
--   Fügen Sie ein **\<Deny>** -Element für den Elementnamen hinzu.  
+-   Fügen Sie ein ** \<Deny>** -Element für den Elementnamen hinzu.  
   
 -   Erstellen Sie ein Proxyelement mit einem anderen Namen für eine Klasse in einer benutzerdefinierten Assembly für das Element, das Sie aktivieren möchten.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66109226"
   
  Um der Zulassungsliste [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Funktionen für .NET Framework hinzuzufügen, fügen Sie die entsprechenden Typen aus dem Namespace „Microsoft.VisualBasic“ zur Zulassungsliste hinzu.  
   
- Um der Zulassungsliste [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Um beispielsweise verwenden die [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework-Schlüsselwort `Integer`, fügen Sie das folgende XML-Fragment hinzu der  **\<RDLSandboxing >** Element:  
+ Um der Zulassungsliste [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Um z. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Integer` ** \<b** . das .NET Framework-Schlüsselwort zu verwenden, fügen Sie das folgende XML-Fragment zum rdlsandboxing->Element hinzu:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -134,7 +134,7 @@ ms.locfileid: "66109226"
   
  Indem Sie einen Typ aus einer benutzerdefinierten Assembly der Zulassungsliste hinzufügen, gewähren Sie nicht implizit die Ausführungsberechtigung für die Assembly. Sie müssen die Codezugriffs-Sicherheitsdatei spezifisch ändern und die  Ausführungsberechtigung für die Assembly bereitstellen. Weitere Informationen finden Sie unter [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Verwalten der \<Deny > Liste der Mitglieder  
+#### <a name="maintaining-the-deny-list-of-members"></a>Verwalten der \<Deny-> Liste von Membern  
  Wenn Sie der Zulassungsliste einen neuen Typ hinzufügen, verwenden Sie die folgende Liste, um zu bestimmen, wann Sie die Sperrliste von Elementen möglicherweise aktualisieren müssen:  
   
 -   Wenn Sie eine benutzerdefinierte Assembly mit einer Version aktualisieren, in der neue Typen eingeführt werden.  
@@ -148,7 +148,7 @@ ms.locfileid: "66109226"
 -   Wenn Sie einen Berichtsserver aktualisieren, um ein späteres RDL-Schema verarbeiten zu können, da RDL-Typen möglicherweise neue Elemente hinzugefügt wurden.  
   
 ### <a name="working-with-operators-and-new"></a>Arbeiten mit Operatoren und "New"  
- Standardmäßig werden [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Sprachoperatoren für .NET Framework außer `New` immer zugelassen. Die `New` Operator wird gesteuert, indem die `AllowNew` -Attribut für die  **\<zulassen >** Element. Andere Sprachoperatoren, wie z. B. die standardmäßige auflistungsungsaccessoroperator `!` und [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -umwandlungsmakros wie z. B. .NET Framework `CInt`, sind immer zulässig.  
+ Standardmäßig werden [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Sprachoperatoren für .NET Framework außer `New` immer zugelassen. Der `New` -Operator wird vom- `AllowNew` Attribut im ** \<Allow>** -Element gesteuert. Andere sprach Operatoren, wie z. b. der Standard `!` - [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Auflistungs Accessor `CInt`-Operator und .NET Framework Umwandlungs Makros wie, sind immer zulässig.  
   
  Das Hinzufügen von Operatoren, einschließlich benutzerdefinierter Operatoren, zu einer Sperrliste wird nicht unterstützt. Um Operatoren für einen Typ auszuschließen, gehen Sie wie folgt vor:  
   
@@ -164,8 +164,8 @@ ms.locfileid: "66109226"
   
 -   Fügen Sie der Zulassungsliste die Klasse hinzu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RSReportServer-Konfigurationsdatei](report-server/rsreportserver-config-configuration-file.md)   
- [Report Server Service Trace Log (Berichtsserverdienst-Ablaufverfolgungsprotokoll)](report-server/report-server-service-trace-log.md)  
+ [Berichtsserverdienst-Ablaufverfolgungsprotokoll](report-server/report-server-service-trace-log.md)  
   
   

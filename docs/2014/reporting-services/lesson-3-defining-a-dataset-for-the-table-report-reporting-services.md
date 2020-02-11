@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108458"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services)
@@ -24,11 +24,11 @@ ms.locfileid: "66108458"
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>So definieren Sie eine Transact-SQL-Abfrage für Berichtsdaten  
   
-1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Dataset...** . Das Dialogfeld **Dataseteigenschaften** wird angezeigt.  
+1.  Klicken Sie im **Berichtsdaten** Bereich auf **neu**, und klicken Sie dann auf **DataSet...**. Das Dialogfeld **Dataseteigenschaften** wird geöffnet.  
   
 2.  Geben Sie in das Feld **Name** den Namen **AdventureWorksDataset**ein.  
   
-3.  Klicken Sie auf **Verwenden Sie ein in den eigenen Bericht eingebettetes Dataset**.  
+3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**.  
   
 4.  Der Name der Datenquelle, "AdventureWorks2012", muss im Feld **Datenquelle** eingetragen sein, und als **Abfragetyp** muss **Text**verwendet werden.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108458"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  (Optional) klicken Sie auf die Schaltfläche **Abfrage-Designer** . Die Abfrage wird im textbasierten Abfrage-Designer angezeigt. Sie können zum grafischen Abfrage-Designer wechseln, indem Sie auf **Als Text bearbeiten**klicken. Die Ergebnisse der Abfrage anzeigen, indem Sie auf die Ausführung **(!)**  Schaltfläche auf der Symbolleiste des Abfrage-Designers.  
+6.  (Optional) klicken Sie auf die Schaltfläche **Abfrage-Designer** . Die Abfrage wird im textbasierten Abfrage-Designer angezeigt. Sie können zum grafischen Abfrage-Designer wechseln, indem Sie auf **Als Text bearbeiten**klicken. Zeigen Sie die Ergebnisse der Abfrage an, indem Sie auf der Symbolleiste des Abfrage-Designers auf die Schaltfläche Ausführen **(!)** klicken.  
   
      Daraufhin werden die Daten von sechs Feldern aus vier verschiedenen Tabellen in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank angezeigt. Diese Abfrage nutzt Transact-SQL-Funktionen wie Aliase. Beispielsweise wird die Tabelle SalesOrderHeader als "soh" bezeichnet.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "66108458"
      Die Felder des **AdventureWorksDataset** -Datasets werden im Berichtsdatenbereich angezeigt.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
- Damit haben Sie erfolgreich eine Abfrage angegeben, die Daten für Ihren Bericht abruft. Als Nächstes erstellen Sie das Berichtslayout. Siehe [Lektion 4: Hinzufügen einer Tabelle zum Bericht &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Damit haben Sie erfolgreich eine Abfrage angegeben, die Daten für Ihren Bericht abruft. Als Nächstes erstellen Sie das Berichtslayout. Weitere Informationen finden Sie unter [Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfrageentwurfstools im Berichts-Designer SQL-Server-Datatools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
- [SQL Server-Verbindungstyp &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [SQL Server Verbindungstyp &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+ [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

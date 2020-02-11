@@ -13,22 +13,22 @@ ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b3746d9cea2ce5ffb7d03424d7cda4fa1889aabc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905382"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: Teilweise  
+ Unterstützung: partiell  
   
- ODBC-API-Übereinstimmung: Ebene 2  
+ ODBC-API-Konformität: Ebene 2  
   
- Legt Optionen zum Steuern des Verhaltens von Cursorn, die ein Anweisungshandle zugeordnet *Befehls beschäftigt*.  
+ Legt Optionen zum Steuern des Verhaltens von Cursorn fest, die einem Anweisungs Handle ( *hstmt*) zugeordnet sind.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt nur SQL_CONCUR_READ_ONLY; Er unterstützt nicht die *fConcurrency* SQL_CONCUR_ROWVER Wert. Der Treiber konvertiert SQL_KEYSET_SIZE SQL_CURSOR_DYNAMIC und SQL_CURSOR_KEYSET_DRIVEN in SQL_SCROLL_STATIC, mit der Warnung ODBC_01S02.  
+ Der Visual FoxPro-ODBC-Treiber unterstützt nur SQL_CONCUR_READ_ONLY; der SQL_CONCUR_ROWVER für die von " *Datei* " wird nicht unterstützt. Der Treiber konvertiert SQL_KEYSET_SIZE, SQL_CURSOR_DYNAMIC und SQL_CURSOR_KEYSET_DRIVEN in SQL_SCROLL_STATIC mit Warn ODBC_01S02.  
   
- Weitere Informationen finden Sie unter [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) in die *ODBC Programmer's Reference*.
+ Weitere Informationen finden Sie unter [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) in der *ODBC Programmer es Reference*.

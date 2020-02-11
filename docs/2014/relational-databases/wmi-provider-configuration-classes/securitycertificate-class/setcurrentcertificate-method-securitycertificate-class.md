@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270638"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate-Methode (SecurityCertificate-Klasse)
@@ -39,13 +39,13 @@ SHA , SQLInstance
   
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
- Ein [SecurityCertificate-Klasse] Securitycertificate-class.md)-Objekt, das ein Sicherheitszertifikat darstellt.  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
+ Ein SecurityCertificate-Class.MD-Objekt (SecurityCertificate-Klasse]), das ein Sicherheitszertifikat darstellt.  
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*SHA*|Ein Zeichenfolgenwert, der den Secure Hash Algorithm (SHA)-Fingerabdruck für das erforderliche Sicherheitszertifikat angibt.|  
 |*SQLInstance*|Ein Zeichenfolgenwert, der die Instanz angibt, für die das Zertifikat erforderlich ist.|  
@@ -53,9 +53,9 @@ SHA , SQLInstance
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

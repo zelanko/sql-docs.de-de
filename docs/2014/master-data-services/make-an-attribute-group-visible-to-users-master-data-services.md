@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479157"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Sichtbarmachen einer Attributgruppe für Benutzer (Master Data Services)
@@ -22,39 +22,39 @@ ms.locfileid: "65479157"
   
  Beim Erstellen einer Attributgruppe wird diese automatisch für alle Benutzer bis auf den Ersteller ausgeblendet.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Es muss mindestens eine Attributgruppe vorhanden sein. Weitere Informationen finden Sie unter [Create an Attribute Group &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md).  
+-   Es muss mindestens eine Attributgruppe vorhanden sein. Weitere Informationen finden Sie unter [Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md).  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>So machen Sie eine Attributgruppe für Benutzer sichtbar  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
-2.  Auf der **Modellansicht** Seite zeigen Sie auf der Menüleiste **verwalten** , und klicken Sie auf **Attributgruppen**.  
+2.  Zeigen Sie auf der Seite **Modell Ansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **Attribut Gruppen**.  
   
 3.  Wählen Sie aus der Liste **Modell** ein Modell aus.  
   
 4.  Wählen Sie aus der Liste **Entität** eine Entität aus.  
   
-5.  Klicken Sie auf das Pluszeichen **Blattgruppen**, **konsolidierte Gruppen**, oder **Auflistungsgruppen**, je nach Typ der Gruppe, die Sie sichtbar machen möchten.  
+5.  Klicken Sie auf das Pluszeichen, um **Blatt Gruppen**, **konsolidierte Gruppen**oder Auflistungs **Gruppen**zu erweitern, je nach dem Typ der Gruppe, die Sie sichtbar machen möchten.  
   
 6.  Klicken Sie auf das Pluszeichen, um die Gruppe zu erweitern, die Sie sichtbar machen möchten.  
   
-7.  Klicken Sie auf **Benutzer** oder **Gruppen**, abhängig davon, ob Sie die Gruppe für einen Benutzer oder eine Gruppe sichtbar machen.  
+7.  Klicken Sie entweder auf **Benutzer** oder **Gruppen**, je nachdem, ob Sie die Gruppe für einen Benutzer oder eine Gruppe sichtbar machen.  
   
 8.  Klicken Sie auf **ausgewähltes Element bearbeiten**.  
   
-9. Klicken Sie auf Benutzer oder Gruppen in der **verfügbar** ein, und klicken Sie auf die **hinzufügen** Pfeil. Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
+9. Klicken Sie im Feld **verfügbar** auf Benutzer oder Gruppen, und klicken Sie auf den Pfeil **Hinzufügen** . Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
   
 10. Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Attributgruppen &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Attribut Gruppen &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [Erstellen Sie eine Attribut Gruppe &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

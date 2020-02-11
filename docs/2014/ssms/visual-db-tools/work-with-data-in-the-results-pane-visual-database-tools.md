@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313770"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Verwenden von Daten im Ergebnisbereich (Visual Database Tools)
@@ -115,11 +115,11 @@ ms.locfileid: "63313770"
 ### <a name="what-can-not-be-represented-fully"></a>Elemente, die nicht vollständig dargestellt werden können  
  Das, was die Datenbank an den Ergebnisbereich zurückgibt, wird größtenteils vom Anbieter der von Ihnen verwendeten Datenquelle verwaltet. Der Ergebnisbereich kann nicht immer die Daten von allen Datenbankmanagementsystemen übersetzen. Hier werden einige Fälle aufgeführt, bei denen dies so ist.  
   
--   Binäre Datentypen sind für Benutzer, die im Ergebnisbereich arbeiten, häufig nicht sinnvoll, und für den Download dieser Datentypen kann sehr viel Zeit benötigt werden. Damit sie dargestellt werden  *\<Binärdaten >* oder *Null*.  
+-   Binäre Datentypen sind für Benutzer, die im Ergebnisbereich arbeiten, häufig nicht sinnvoll, und für den Download dieser Datentypen kann sehr viel Zeit benötigt werden. Sie werden also durch * \<binäre Daten>* oder *null*dargestellt.  
   
--   Genauigkeit und Skalierung können nicht immer bewahrt werden. Der Ergebnisbereich unterstützt beispielsweise eine Genauigkeit von 27. Wenn Daten über einen Datentyp mit höherer Genauigkeit, die Daten abgeschnitten oder dargestellt werden kann  *\<kann nicht zum Lesen von Daten >* .  
+-   Genauigkeit und Skalierung können nicht immer bewahrt werden. Der Ergebnisbereich unterstützt beispielsweise eine Genauigkeit von 27. Wenn Daten von einem Datentyp mit höherer Genauigkeit sind, können die Daten abgeschnitten werden, oder Sie können durch * \<die Daten>nicht gelesen *werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   

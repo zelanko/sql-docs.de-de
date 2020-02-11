@@ -11,21 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478916"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Erstellen einer Entität (MDS-Add-In für Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren neue Entitäten erstellen, um Daten zu speichern. Wenn Sie eine Entität erstellen, sollten Sie mindestens eine Stichprobenentnahme der Daten laden, die Sie speichern möchten.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf die Funktionsbereiche **Systemverwaltung** und **Explorer** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Sie müssen über ein vorhandenes Modell verfügen, in dem die Entität erstellt werden kann. Weitere Informationen finden Sie unter [Erstellen eines Modells &#40;Master Data Services&#41;](../create-a-model-master-data-services.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65478916"
   
     -   Die Daten sollten eine Kopfzeile haben.  
   
-    -   Es ist hilfreich, wenn die Spalten **Name** und **Code** vorhanden sind. Der**Code** ist ein eindeutiger Bezeichner für jede Zeile.  
+    -   Es ist hilfreich, wenn die Spalten **Name** und **Code** vorhanden sind. **Code** ist ein eindeutiger Bezeichner für jede Zeile.  
   
     -   Außer der Kopfzeile sollte mindestens eine Zeile mit Daten vorhanden sein. Nicht in allen Spalten müssen Werte enthalten sein, aber die Daten sollten repräsentativ für die Daten sein, die in der Entität enthalten sein sollen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65478916"
   
 -   Bestätigen Sie, dass die Attribute mit dem gewünschten Datentyp erstellt wurden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines domänenbasierten Attributs &#40;MDS-Add-In für Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines domänenbasierten Attributs &#40;MDS-Add-in für Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

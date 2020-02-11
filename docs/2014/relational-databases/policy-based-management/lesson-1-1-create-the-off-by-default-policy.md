@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792928"
 ---
 # <a name="create-the-off-by-default-policy"></a>Erstellen der Richtlinie 'Standardmäßig aus'
@@ -28,7 +28,7 @@ ms.locfileid: "67792928"
   
 3.  Bestätigen Sie im Feld **Facet** , dass das Facet **Oberflächenkonfiguration** ausgewählt ist.  
   
-4.  In der **Ausdruck** Bereich, in der **Feld** wählen Sie im  **\@DatabaseMailEnabled**in die **Operator** markieren **=** , und klicken Sie in der **Wert** wählen **"false"** .  
+4.  Wählen Sie im Bereich **Ausdruck** im Feld **Feld** den Eintrag **\@DatabaseMailEnabled**, im Feld **Operator** den Eintrag **=** und im Feld **Wert** den Eintrag **False** aus.  
   
 5.  Geben Sie auf der Seite **Beschreibung** eine Beschreibung der Bedingung ein, und klicken Sie dann auf **OK** , um die Bedingung zu erstellen.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67792928"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Konfigurieren eines Servers für das Ausführen der Richtlinie 'Standardmäßig aus'](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)  
   
   

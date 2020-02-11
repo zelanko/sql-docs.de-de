@@ -1,5 +1,5 @@
 ---
-title: Geben Sie die Trainingsdaten (Datamining-Assistent) | Microsoft-Dokumentation
+title: Trainingsdaten angeben (Data Mining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068068"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Trainingsdaten angeben (Data Mining-Assistent)
@@ -27,46 +27,46 @@ ms.locfileid: "66068068"
 > [!NOTE]  
 >  Unterschiedliche Miningalgorithmen verwenden Schlüssel auf unterschiedliche Art und Weise. Weitere Informationen über die verschiedenen Schlüsselarten finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **Weitere Informationen finden Sie unter** [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden** Sie unter [Mining Strukturen &#40;Analysis Services-Data Mining-&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Mining Modell Spalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md) .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Tabellen/Spalten**  
  Zeigt die Tabellen und Spalten an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben.  
   
- **\<Aktivieren Sie das Kontrollkästchen >**  
+ **\<Kontrollkästchen>**  
  Wählen Sie die Spalten aus, die in die Miningstruktur aufgenommen werden sollen.  
   
  Wenn Ihre Datenquelle geschachtelte Tabellen oder mehrere Ansichten enthält, erweitern Sie die Spaltenliste, um die geschachtelten Tabellen anzuzeigen.  
   
- **Key**  
+ **Schlüssel**  
  Wählen Sie diese Option aus, um die Spalte als eindeutigen Bezeichner für die Daten auszuwählen.  
   
  Bei einer Falltabelle ist der Schlüssel in der Regel der eindeutige Bezeichner.  
   
  Bei einer geschachtelten Tabelle gibt der **Schlüssel** den Bezeichner einer Zeile im Kontext des verbundenen Falls an.  
   
- **Eingabe**  
+ **Input** (Eingabe)  
  Wählen Sie diese Option aus, um die Spalte beim Erstellen von Vorhersagen zu verwenden.  
   
 > [!NOTE]  
 >  Diese Spalte ist nur verfügbar, wenn Sie zusammen mit der Miningstruktur ein Miningmodell erstellen.  
   
- **Vorhersagbare**  
+ **Vorhersagbar**  
  Wählen Sie diese Option aus, um zu aktivieren, dass die Tabelle oder die Spalte auf der Grundlage zukünftiger zusätzlicher Eingaben vorhergesagt werden können.  
   
  Wenn Sie eine geschachtelte Tabelle außerdem als vorhersagbar kennzeichnen, wird die gesamte geschachtelte Tabelle vorhersagbar. Wenn in der geschachtelten Tabelle keine Spalten als Eingabe oder als vorhersagbar gekennzeichnet sind, erscheint die geschachtelte Tabelle in der Miningstruktur, wird aber im Modell ignoriert.  
   
- **Hinweis** Diese Spalte ist nur verfügbar, wenn Sie zusammen mit der Miningstruktur ein Miningmodell erstellen.  
+ **Hinweis** Diese Spalte ist nur verfügbar, wenn Sie ein Mining Modell mit der Mining Struktur erstellen.  
   
  **Vorschlagen**  
  Klicken Sie hierauf, um das Dialogfeld **Verbundene Spalten vorschlagen** zu öffnen, das eine Analyse einer Datenprobe durchführt, um auf der Grundlage der Entropie Eingabespalten zu ermitteln, die die engste Beziehung zur ausgewählten Spalte **Vorhersagbar** haben. Diese Analyse bezieht auch Spalten geschachtelter Tabellen oder Miningstrukturen ein, die auf OLAP-Quellen basieren.  
   
- **Hinweis** Diese Spalte ist nur verfügbar, wenn Sie zusammen mit der Miningstruktur ein Miningmodell erstellen.  
+ **Hinweis** Diese Spalte ist nur verfügbar, wenn Sie ein Mining Modell mit der Mining Struktur erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Verbundene Spalten vorschlagen &#40;Datamining-Assistent&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Tabellentypen angeben &#40;Datamining-Assistent&#41;](specify-table-types-data-mining-wizard.md)   
- [Geben Sie Inhalt und Datentyp der Spaltenwerts &#40;Datamining-Assistent&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Assistent (F1-Hilfe &#40;Analysis Services-Data Mining-&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Verwandte Spalten &#40;Data Mining-Assistenten vorschlagen&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Geben Sie die Tabellentypen &#40;Data Mining-Assistenten an&#41;](specify-table-types-data-mining-wizard.md)   
+ [Geben Sie den Inhalt und den Datentyp der Spalte &#40;Data Mining-Assistenten an&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

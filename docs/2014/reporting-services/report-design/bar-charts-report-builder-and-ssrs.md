@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106491"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Balkendiagramme (Berichts-Generator und SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106491"
   
  Die folgende Abbildung zeigt ein Balkendiagramm. Das Balkendiagramm ist für diese Daten ausgezeichnet geeignet, da alle drei Reihen einen gemeinsamen Zeitraum verwenden und so zuverlässige Vergleiche vorgenommen werden können.  
   
- ![Balkendiagramm](../media/barchart.gif "Bar chart")  
+ ![Balkendiagramm](../media/barchart.gif "Balkendiagramm")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,10 +57,10 @@ ms.locfileid: "66106491"
   
 -   Wenn im Verhältnis zur Größe des Diagramms viele Datenpunkte im Dataset vorhanden sind, wird die Größe der Säulen oder Balken und der Abstand zwischen diesen verringert. Um die Breite der Säulen in einem Diagramm manuell festzulegen, ändern Sie deren Breite in Pixel, indem Sie die **PointWidth** -Eigenschaft ändern. Standardmäßig ist der Wert dieser Eigenschaft 0,8. Wenn Sie die Breite der Säulen oder Balken in einem Diagramm erhöhen, verringert sich der Abstand zwischen den einzelnen Säulen oder Balken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [Leere und NULL-Datenpunkte in Diagrammen &#40;Berichts-Generator und SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Säulendiagramme (Berichts-Generator und SSRS)](column-charts-report-builder-and-ssrs.md)   
  [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

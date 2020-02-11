@@ -1,5 +1,5 @@
 ---
-title: 'Auftragseigenschaften: Neuer Auftrag (Seite "Zeitpläne") | Microsoft-Dokumentation'
+title: 'Auftrags Eigenschaften: neuer Auftrag (Seite "Zeitpläne") | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,32 +13,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695672"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Zeitpläne“)
-  Mithilfe dieser Seite können Sie Zeitpläne für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und verwalten.  
+# <a name="job-properties-new-job-schedules-page"></a>Job Properties: New Job (Schedules Page)
+  Verwenden Sie diese Seite, um Zeitpläne für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzuzeigen und zu organisieren.  
   
-## <a name="options"></a>Optionen  
- **Zeitplanliste**  
+## <a name="options"></a>Tastatur  
+ **Zeit Plan Liste**  
  Führt die Zeitpläne für diesen Auftrag auf.  
   
  **Neu**  
  Erstellt einen neuen Zeitplan. Nachdem Sie den Zeitplan erstellt haben, wird er dem Auftrag hinzugefügt.  
   
- **Auswählen**  
+ **Suchen**  
  Wählt einen Zeitplan aus den vorhandenen Zeitplänen aus. Da ein Auftrag und ein Zeitplan denselben Besitzer haben müssen, können Sie mit dieser Option nur unter Zeitplänen auswählen, deren Besitzer Sie sind.  
   
  **Bearbeiten**  
  Bearbeitet den ausgewählten Zeitplan, um die Eigenschaften des Auftragszeitplans zu ändern.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt den ausgewählten Zeitplan aus der Liste für den Auftrag. Wenn keine anderen Aufträge diesen Zeitplan verwenden, wird der Zeitplan aus der Datenbank gelöscht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren von Aufträgen](implement-jobs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_cluster_nodes (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_cluster_nodes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,31 +19,31 @@ ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900256"
 ---
-# <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
+# <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt für jeden Knoten in der Konfiguration der Failoverclusterinstanz eine Zeile zurück. Wenn die aktuelle Instanz eine Failoverclusterinstanz ist, wird eine Liste mit Knoten zurückgegeben, in denen diese Failoverclusterinstanz (früher "virtueller Server") definiert ist. Wenn die aktuelle Serverinstanz keine Failoverclusterinstanz ist, wird ein leeres Rowset zurückgegeben.  
   
-> **HINWEIS:** Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_cluster_nodes**.  
+> **Hinweis:** Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_cluster_nodes**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Knotenname**|**sysname**|Name eines Knotens in der Failoverclusterinstanzkonfiguration (virtueller Server) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|status|**int**|Status des Knotens in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failoverclusterinstanz: 0, 1, 2, 3, -1. Weitere Informationen finden Sie unter [GetClusterNodeState-Funktion](https://go.microsoft.com/fwlink/?LinkId=204794).|  
-|status_description|**nvarchar(20)**|Beschreibung des Status des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterknotens.<br /><br /> 0 = aktiv<br /><br /> 1 = inaktiv<br /><br /> 2 = angehalten<br /><br /> 3 = verknüpfen<br /><br /> -1 = unbekannt|  
+|**NodeName**|**sysname**|Name eines Knotens in der Failoverclusterinstanzkonfiguration (virtueller Server) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|status|**int**|Status des Knotens in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failoverclusterinstanz: 0, 1, 2, 3,-1. Weitere Informationen finden Sie unter [getclusternodestate-Funktion](https://go.microsoft.com/fwlink/?LinkId=204794).|  
+|status_description|**nvarchar (20)**|Beschreibung des Status des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterknotens.<br /><br /> 0 = aktiv<br /><br /> 1 = inaktiv<br /><br /> 2 = angehalten<br /><br /> 3 = verknüpfen<br /><br /> -1 = unbekannt|  
 |is_current_owner|bit|1 bedeutet, dass dieser Knoten der aktuelle Besitzer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterressource ist.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Failoverclustering unterstützt wird, kann die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf jedem Knoten des Failoverclusters ausgeführt werden, der als Teil der Konfiguration der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz (virtueller Server) designiert ist.  
   
-> **HINWEIS:** Diese Sicht ersetzt die Fn_virtualservernodes-Funktion, die in einer zukünftigen Version als veraltet markiert werden wird.  
+> **Hinweis:** Diese Ansicht ersetzt die fn_virtualservernodes-Funktion, die in einer zukünftigen Version als veraltet eingestuft wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
@@ -62,12 +62,12 @@ FROM sys.dm_os_cluster_nodes;
 |--------------|------------|-------------------------|------------------------|  
 |node1|0|up|1|  
 |node2|0|up|0|  
-|Knoten3|1|down|0|  
+|Knoten3|1|fahren|0|  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.dm_os_cluster_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. dm_os_cluster_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
+ [sys. dm_io_cluster_shared_drives &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys. fn_virtualservernodes &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

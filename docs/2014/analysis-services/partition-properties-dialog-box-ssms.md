@@ -1,5 +1,5 @@
 ---
-title: Partitions-Dialogfeld "Eigenschaften" (SSMS) | Microsoft-Dokumentation
+title: Partitions Eigenschaften (Dialog Feld) (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072161"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Partitionseigenschaften (Dialogfeld, SSMS)
@@ -28,16 +28,16 @@ ms.locfileid: "66072161"
   
 ## <a name="pages"></a>Seiten  
   
-|Seite|Description|  
+|Seite|BESCHREIBUNG|  
 |----------|-----------------|  
-|**Auswahl**|Auf der Seite **Auswahl** wählen Sie die Partition in der Measuregruppe aus, deren Eigenschaften angezeigt oder geändert werden sollen. Weitere Informationen zu dieser Seite finden Sie unter [Auswahl &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
+|**End**|Auf der Seite **Auswahl** wählen Sie die Partition in der Measuregruppe aus, deren Eigenschaften angezeigt oder geändert werden sollen. Weitere Informationen zu dieser Seite finden Sie unter [Auswahl &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
 |**Allgemein**|Auf der Seite **Allgemein** können Sie die allgemeinen Eigenschaften der auf der Seite **Auswahl** ausgewählten Partition anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Allgemein &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md).|  
 |**Proaktives Zwischenspeichern**|Auf der Seite **Proaktives Zwischenspeichern** können Sie die Einstellungen für Speicherung und proaktives Zwischenspeichern für die auf der Seite **Auswahl** ausgewählte Partition anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Proaktives Zwischenspeichern &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md).|  
 |**Fehlerkonfiguration**|Auf der Seite **Fehlerkonfiguration** können Sie die Fehlerkonfigurationseinstellungen für die Verarbeitung der auf der Seite **Auswahl** ausgewählten Partition anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Fehlerkonfiguration für die Verarbeitung von Cubes, Partitionen und Dimensionen &#40;SSAS – Mehrdimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
-## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Remotepartitionen](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Remote Partitionen](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3858f73e1b332acfa1a1bbc640007f6f0884abff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260709"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>Weglassen von Werten für optionale Webdienstobjekte
@@ -28,11 +28,11 @@ ms.locfileid: "63260709"
 > [!IMPORTANT]  
 >  Wird keine Eigenschaft mit den oben genannten Vorgehensweisen festgelegt, kann dies zu unvorgesehenem Verhalten des Webdiensts führen.  
   
- Die Datentypen, die in der Regel Sie die zusätzliche Specified-Eigenschaft zu behandeln müssen sind `Boolean`, `DateTime`, und `Enumeration`.  
+ Die Datentypen, für die Sie normalerweise die zusätzliche angegebene Eigenschaft behandeln `Boolean`müssen `DateTime`, sind `Enumeration`, und.  
   
  Ein Beispiel hierzu finden Sie unter <xref:ReportService2010.ReportingService2010.CreateDataSource%2A>-Methode.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Technische Referenz (SSRS)](../../technical-reference-ssrs.md)  
   

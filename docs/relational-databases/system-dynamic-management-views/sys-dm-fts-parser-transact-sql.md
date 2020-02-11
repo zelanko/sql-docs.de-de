@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_fts_parser (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_fts_parser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,17 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900917"
 ---
-# <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
+# <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt das endgültige tokenisierungsergebnis nach Anwendung einer bestimmten [wörtertrennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), und [Stoppliste](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) -Kombination eine eingegebene Abfragezeichenfolge. Das Tokenisierungsergebnis entspricht der Ausgabe der Volltext-Engine für die angegebene Abfragezeichenfolge.  
+  Gibt das endgültige Tokenisierungsergebnis zurück, nachdem eine bestimmte Kombination aus [Wörter](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)Trennung, [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)und [Stopp Liste](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) auf eine Eingabe der Abfrage Zeichenfolge angewendet wurde. Das Tokenisierungsergebnis entspricht der Ausgabe der Volltext-Engine für die angegebene Abfragezeichenfolge.  
   
  sys.dm_fts_parser ist eine dynamische Verwaltungsfunktion.  
   
@@ -42,54 +42,59 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="arguments"></a>Argumente  
  *query_string*  
- Die zu analysierende Abfrage. *Abfragezeichenfolge* kann eine Zeichenfolgenkette mit [CONTAINS](../../t-sql/queries/contains-transact-sql.md) syntaxunterstützung. Sie können z. B. Flexionsformen, einen Thesaurus und logische Operatoren einschließen.  
+ Die zu analysierende Abfrage. *QUERY_STRING* kann eine Zeichen folgen Kette sein, die Syntax Unterstützung [enthält](../../t-sql/queries/contains-transact-sql.md) . Sie können z. B. Flexionsformen, einen Thesaurus und logische Operatoren einschließen.  
   
- *lcid*  
- Der Gebietsschemabezeichner (LCID) der wörtertrennung für die Analyse zu verwendende *Abfragezeichenfolge*.  
+ *LCID*  
+ Gebiets Schema Bezeichner (Locale Identifier, LCID) der Wörter Trennung, der zum *QUERY_STRING der*verwendet werden soll.  
   
  *stoplist_id*  
- ID der Stoppliste, falls vorhanden, die von der angegebenen wörtertrennung zu verwendende *Lcid*. *Stoplist_id* ist **Int**. Wenn Sie 'NULL' angeben, wird keine Stoppliste verwendet. Wenn Sie 0 angeben, wird die Systemstoppliste STOPLIST verwendet.  
+ ID der Stopp Liste, sofern vorhanden, die von der durch *LCID*identifizierten Wörter Trennung verwendet werden soll. *stoplist_id* ist vom Datentyp **int**. Wenn Sie ' NULL ' angeben, wird keine Stopp Liste verwendet. Wenn Sie 0 angeben, wird die Systemstoppliste STOPLIST verwendet.  
   
- Eine Stopplisten-ID ist innerhalb der Datenbank eindeutig. Um die Stopplisten-ID für einen Volltextindex für die Verwendung einer angegebenen Tabelle erhalten die [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) -Katalogsicht angezeigt.  
+ Eine Stopplisten-ID ist innerhalb der Datenbank eindeutig. Verwenden Sie die [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) -Katalog Sicht, um die Stopp Listen-ID für einen Volltextindex für eine bestimmte Tabelle abzurufen.  
   
  *accent_sensitivity*  
- Boolescher Wert, mit dem gesteuert wird, ob diakritische Zeichen bei der Volltextsuche berücksichtigt werden. *Accent_sensitivity* ist **Bit**, mit einem der folgenden Werte:  
+ Boolescher Wert, mit dem gesteuert wird, ob diakritische Zeichen bei der Volltextsuche berücksichtigt werden. *accent_sensitivity* ist vom **Bit**und weist einen der folgenden Werte auf:  
   
-|Wert|Unterscheidung nach Akzent…|  
+|value|Akzent ist...|  
 |-----------|----------------------------|  
-|0|Keine Unterscheidung<br /><br /> Wörter wie "Cafe" und "Cafe" werden identisch behandelt.|  
-|1|Vertraulich<br /><br /> Wörter wie "Cafe" und "Cafe" werden anders behandelt.|  
+|0|Keine Beachtung von Groß-/Kleinschreibung<br /><br /> Wörter wie "Café" und "Café" werden identisch behandelt.|  
+|1|Sensibel<br /><br /> Wörter wie "Café" und "Café" werden anders behandelt.|  
   
 > [!NOTE]  
->  Um die aktuelle Einstellung dieses Werts für einen Volltextkatalog anzuzeigen, führen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung: `SELECT fulltextcatalogproperty('` *Catalog_name*`', 'AccentSensitivity');`.  
+>  Um die [!INCLUDE[tsql](../../includes/tsql-md.md)] aktuelle Einstellung dieses Werts für einen voll Text Katalog anzuzeigen, führen Sie die folgende Anweisung aus: `SELECT fulltextcatalogproperty('` *Catalog_Name*`', 'AccentSensitivity');`.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|Schlüsselwort (keyword)|**varbinary(128)**|Die hexadezimale Darstellung eines gegebenen Schlüsselworts, das von einer Wörtertrennung zurückgegeben wurde. Diese Darstellung wird zum Speichern des Schlüsselworts im Volltextindex verwendet. Dieser Wert ist nicht lesbar, aber es ist hilfreich für bezüglich eines bestimmten Stichworts zur Ausgabe von anderen dynamischen Verwaltungssichten zurückgegeben, die den Inhalt von einem Volltextindex, z. B. zurückgeben [Sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) und [ dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Hinweis**: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
+|Schlüsselwort (keyword)|**varbinary (128)**|Die hexadezimale Darstellung eines gegebenen Schlüsselworts, das von einer Wörtertrennung zurückgegeben wurde. Diese Darstellung wird zum Speichern des Schlüsselworts im Volltextindex verwendet. Dieser Wert ist nicht Menschen lesbar, aber es ist hilfreich, ein bestimmtes Schlüsselwort mit der Ausgabe zu verknüpfen, die von anderen dynamischen Verwaltungs Sichten zurückgegeben wird, die den Inhalt eines voll Text Indexes zurückgeben, wie z [. b. sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) und [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Hinweis:** OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
 |group_id|**int**|Enthält einen ganzzahligen Wert, mit dem die logische Gruppe unterschieden werden kann, aus der ein gegebener Begriff generiert wurde. Beispiel: Mit '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' werden die folgenden group_id-Werte auf Englisch ausgegeben:<br /><br /> 1: Server<br />2: DB<br />3: DB|  
-|phrase_id|**int**|Enthält einen ganzzahligen Wert, der zur Unterscheidung der Fälle dient, in denen alternative Formen für zusammengesetzte Wörter (z. B. "full-text") von der Wörtertrennung ausgegeben werden. Wenn zusammengesetzte Wörter vorhanden sind (z. B. 'multi-millon'), gibt die Wörtertrennung u. U. alternative Formen aus. Diese alternativen Formen (Ausdrücke) müssen in einigen Fällen unterschieden werden.<br /><br /> Beispiel: Mit '`multi-million`' werden die folgenden phrase_id-Werte auf Englisch ausgegeben:<br /><br /> 1 für `multi`<br />1 für `million`<br />2 für `multimillion`|  
-|occurrence|**int**|Gibt die Reihenfolge der einzelnen Begriffe im Analyseergebnis an. Beispiel: Für den Ausdruck "`SQL Server query processor`" enthält die Spalte occurrence die folgenden Vorkommenwerte auf Englisch:<br /><br /> 1 für `SQL`<br />2 für `Server`<br />3 für `query`<br />4 für `processor`|  
+|phrase_id|**int**|Enthält einen ganzzahligen Wert, der zur Unterscheidung der Fälle dient, in denen alternative Formen für zusammengesetzte Wörter (z. B. "full-text") von der Wörtertrennung ausgegeben werden. Wenn zusammengesetzte Wörter vorhanden sind (z. B. 'multi-millon'), gibt die Wörtertrennung u. U. alternative Formen aus. Diese alternativen Formen (Ausdrücke) müssen in einigen Fällen unterschieden werden.<br /><br /> Beispiel: Mit '`multi-million`' werden die folgenden phrase_id-Werte auf Englisch ausgegeben:<br /><br /> 1 für`multi`<br />1 für`million`<br />2 für`multimillion`|  
+|occurrence|**int**|Gibt die Reihenfolge der einzelnen Begriffe im Analyseergebnis an. Beispiel: Für den Ausdruck "`SQL Server query processor`" enthält die Spalte occurrence die folgenden Vorkommenwerte auf Englisch:<br /><br /> 1 für`SQL`<br />2 für`Server`<br />3 für`query`<br />4 für`processor`|  
 |special_term|**nvarchar(4000)**|Enthält Informationen über die Eigenschaften des Begriffs, der von der Wörtertrennung ausgegeben wird. Hierbei gibt es folgende Möglichkeiten:<br /><br /> Genaue Übereinstimmung<br /><br /> Noise word (Füllwort)<br /><br /> End of Sentence (Ende des Satzes)<br /><br /> End of paragraph (Ende des Absatzes)<br /><br /> End of Chapter (Ende des Kapitels)|  
 |display_term|**nvarchar(4000)**|Enthält die Klartextform des Schlüsselworts. Wie bei den Funktionen für den Zugriff auf den Inhalt des Volltextindexes stimmt der angezeigte Begriff aufgrund der Denormalisierungsgrenze u. U. nicht mit dem ursprünglichen Begriff überein. In der Regel ist er jedoch so genau, dass Sie ihn anhand der ursprünglichen Eingabe identifizieren können.|  
-|expansion_type|**int**|Enthält Informationen über die Beschaffenheit der Erweiterung eines gegebenen Begriffs. Hierbei gibt es folgende Möglichkeiten:<br /><br /> 0 = einzelnes Wort, Schreibweise<br /><br /> 2 = Flexionserweiterung<br /><br /> 4 = Thesauruserweiterung/-ersetzung<br /><br /> Nehmen Sie beispielsweise an, dass der Thesaurus "run" als Erweiterung von `jog` definiert:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Der Begriff `FORMSOF (FREETEXT, run)` generiert die folgende Ausgabe:<br /><br /> `run` (expansion_type=0)<br /><br /> `runs` (expansion_type=2)<br /><br /> `running` (expansion_type=2)<br /><br /> `ran` (expansion_type=2)<br /><br /> `jog` (expansion_type=4)|  
-|source_term|**nvarchar(4000)**|Der Begriff bzw. der Ausdruck, auf dessen Basis ein gegebener Begriff generiert wurde. Beispiel: Aus der Abfrage von '"`word breakers" AND stemmers'` ergeben sich die folgenden source_term-Werte auf Englisch:<br /><br /> `word breakers` für die display_term`word`<br />`word breakers` für die display_term`breakers`<br />`stemmers` für die display_term`stemmers`|  
+|expansion_type|**int**|Enthält Informationen über die Beschaffenheit der Erweiterung eines gegebenen Begriffs. Hierbei gibt es folgende Möglichkeiten:<br /><br /> 0 = einzelnes Wort, Schreibweise<br /><br /> 2 = Flexionserweiterung<br /><br /> 4 = Thesauruserweiterung/-ersetzung<br /><br /> Nehmen Sie beispielsweise an, dass der Thesaurus "run" als Erweiterung von `jog` definiert:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Der Begriff `FORMSOF (FREETEXT, run)` generiert die folgende Ausgabe:<br /><br /> 
+  `run` (expansion_type=0)<br /><br /> 
+  `runs` (expansion_type=2)<br /><br /> 
+  `running` (expansion_type=2)<br /><br /> 
+  `ran` (expansion_type=2)<br /><br /> 
+  `jog` (expansion_type=4)|  
+|source_term|**nvarchar(4000)**|Der Begriff bzw. der Ausdruck, auf dessen Basis ein gegebener Begriff generiert wurde. Beispiel: Aus der Abfrage von '"`word breakers" AND stemmers'` ergeben sich die folgenden source_term-Werte auf Englisch:<br /><br /> `word breakers`für den display_term`word`<br />`word breakers`für den display_term`breakers`<br />`stemmers`für den display_term`stemmers`|  
   
-## <a name="remarks"></a>Hinweise  
- **Sys. dm_fts_parser** unterstützt die Syntax und Funktionen von Volltextprädikaten, wie z. B. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) und [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), und Funktionen, z. B. [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+## <a name="remarks"></a>Bemerkungen  
+ **sys. dm_fts_parser** unterstützt die Syntax und Features von voll Text Prädikaten, wie z. b. " [enthält](../../t-sql/queries/contains-transact-sql.md) " und "frei [Text](../../t-sql/queries/freetext-transact-sql.md)", sowie Funktionen wie " [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) " und " [fretexfähige](../../relational-databases/system-functions/freetexttable-transact-sql.md)".  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Verwenden von Unicode zum Analysieren von Sonderzeichen  
- Wenn Sie eine Abfragezeichenfolge analysieren **Sys. dm_fts_parser** die Sortierung der Datenbank mit dem Sie verbunden sind, verwendet, es sei denn, Sie die Abfragezeichenfolge als Unicode angeben. Aus diesem Grund kann für eine nicht-Unicode-Zeichenfolge, die Sonderzeichen enthält, z. B. Ü oder Ç, enthält die Ausgabe unerwartete, abhängig von der Sortierung der Datenbank sein. Um eine Abfragezeichenfolge unabhängig von der datenbanksortierung zu verarbeiten, die Präfixzeichenfolge mit `N`, d. h. `N'` *Abfragezeichenfolge*`'`.  
+ Wenn Sie eine Abfrage Zeichenfolge analysieren, verwendet **sys. dm_fts_parser** die Sortierung der Datenbank, mit der Sie verbunden sind, es sei denn, Sie geben die Abfrage Zeichenfolge als Unicode an. Daher kann die Ausgabe für eine nicht-Unicode-Zeichenfolge, die Sonderzeichen enthält, wie z. b. "ü" oder "ç", abhängig von der Sortierung der Datenbank unerwartet ausfallen. Um eine Abfrage Zeichenfolge unabhängig von der Daten Bank Sortierung zu verarbeiten, stellen `N`Sie die Zeichenfolge `N'`mit dem Präfix *QUERY_STRING*`'`.  
   
  Weitere Informationen finden Sie unter "C. Anzeigen der Ausgabe einer Zeichenfolge mit Sonderzeichen" später in diesem Thema.  
   
-## <a name="when-to-use-sysdmftsparser"></a>Verwendung von 'sys.dm_fts_parser'  
- **Sys. dm_fts_parser** können zu Debugzwecken sehr effektiv sein. Die wichtigsten Verwendungsszenarios sind:  
+## <a name="when-to-use-sysdm_fts_parser"></a>Verwendung von 'sys.dm_fts_parser'  
+ **sys. dm_fts_parser** kann für Debuggingzwecke sehr leistungsstark sein. Die wichtigsten Verwendungsszenarios sind:  
   
 -   Verdeutlichung der Funktionsweise der Wörtertrennung bei einer gegebenen Eingabe  
   
-     Wenn bei einer Abfrage unerwartete Ergebnisse zurückgegeben werden, kann dies an der Analyse und Trennung der Daten durch die Wörtertrennung liegen. Mit sys.dm_fts_parser können Sie das Ergebnis ermitteln, das eine Wörtertrennung an den Volltextindex übergibt. Außerdem können Sie sehen, bei welchen Begriffen es sich um Stoppwörter handelt, die im Volltextindex nicht gesucht werden. Gibt an, ob ein Begriff für eine bestimmte Sprache, hängt davon ab, ob es sich in der Stoppliste gemäß handelt, ein Stoppwort ist die *Stoplist_id* -Wert, der in der Funktion deklariert wird.  
+     Wenn bei einer Abfrage unerwartete Ergebnisse zurückgegeben werden, kann dies an der Analyse und Trennung der Daten durch die Wörtertrennung liegen. Mit sys.dm_fts_parser können Sie das Ergebnis ermitteln, das eine Wörtertrennung an den Volltextindex übergibt. Außerdem können Sie sehen, bei welchen Begriffen es sich um Stoppwörter handelt, die im Volltextindex nicht gesucht werden. Ob ein Begriff ein Stoppwort für eine bestimmte Sprache ist, hängt davon ab, ob es sich in der durch den *stoplist_id* Wert angegebenen Stopp Liste befindet, die in der Funktion deklariert ist.  
   
      Beachten Sie auch die Einstellung für die Unterscheidung nach Akzent, die dem Benutzer ermöglicht, unter Berücksichtigung dieser Einstellung zu ermitteln, wie die Wörtertrennung die Eingabe analysiert.  
   
@@ -124,7 +129,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  Des Weiteren ist sys.dm_fts_parser eine nützliche Hilfe, um viele andere Probleme bei Volltextabfragen zu verstehen und zu beheben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Sysadmin** Server-Rolle und die Zugriffsrechte für die angegebene Stoppliste behoben.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** und die Zugriffsrechte auf die angegebene Stopp Liste.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -161,14 +166,14 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Volltextsuche und semantische Suche, dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Volltextsuche](../../relational-databases/search/full-text-search.md)   
- [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Voll Text Suche](../../relational-databases/search/full-text-search.md)   
+ [Konfigurieren und Verwalten von Wörter Trennungen und Wort Stamm Erkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Konfigurieren und Verwalten von Thesaurusdateien für die voll Text Suche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
- [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
+ [Abfragen mit voll Text Suche](../../relational-databases/search/query-with-full-text-search.md)   
+ [Abfragen mit voll Text Suche](../../relational-databases/search/query-with-full-text-search.md)   
  [Sicherungsfähige Elemente](../../relational-databases/security/securables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Servereigenschaften in Analysis Services | Microsoft-Dokumentation
+title: Konfigurieren von Server Eigenschaften in Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068902"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Konfigurieren von Servereigenschaften in Analysis Services
@@ -34,13 +34,13 @@ ms.locfileid: "66068902"
   
  [Konfigurieren von Servereigenschaften (Instanz)](#bkmk_config)  
   
- [Referenz zu Servereigenschaften](#bkmk_ref)  
+ [Referenz zu Server Eigenschaften](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a> Konfigurieren von Servereigenschaften (Instanz)  
+##  <a name="bkmk_config"></a>Konfigurieren von Server Eigenschaften (Instanz)  
  Die Eigenschaftenseiten in SQL Server Management Studio enthalten eine Teilmenge der verfügbaren Eigenschaften. Es werden nur die Eigenschaften angezeigt, die mit größerer Wahrscheinlichkeit geändert werden. Den vollständigen Eigenschaftensatz finden Sie in der Datei msmdsrv.ini.  
   
 > [!NOTE]  
->  In diesem Thema werden die Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]nicht dokumentiert. Weitere Informationen zur Bereitstellungskonfiguration finden Sie unter [angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  In diesem Thema werden die Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]nicht dokumentiert. Weitere Informationen zur Bereitstellungs Konfiguration finden Sie unter [Angeben von Konfigurationseinstellungen für die Lösungs Bereitstellung](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Anzeigen oder Festlegen von Konfigurationseigenschaften in Management Studio  
   
@@ -72,18 +72,18 @@ ms.locfileid: "66068902"
   
 4.  Nach dem Speichern der Datei muss der Dienst neu gestartet werden.  
   
-##  <a name="bkmk_ref"></a> Referenz zu Servereigenschaften  
+##  <a name="bkmk_ref"></a>Referenz zu Server Eigenschaften  
  Die Konfigurationseigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spielen bei der Optimierung des Systems eine wichtige Rolle. Wenn Sie z. B. das Verhalten des Abfrageprotokolls an Ihre Anforderungen anpassen möchten, können Sie entsprechende Eigenschaften festlegen.  
   
  In den folgenden Themen werden die verschiedenen Konfigurationseigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erläutert:  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Allgemeine Eigenschaften](general-properties.md)|Bei den allgemeinen Eigenschaften handelt es sich sowohl um grundlegende als auch um erweiterte Eigenschaften. Hierzu zählen Eigenschaften zum Definieren des Datenverzeichnisses, Sicherungsverzeichnisses und anderem Serververhalten.|  
 |[Data Mining-Eigenschaften](data-mining-properties.md)|Die Data Mining-Eigenschaften steuern, welche Data Mining-Algorithmen aktiviert und welche deaktiviert sind. Standardmäßig sind alle Algorithmen aktiviert.|  
 |DSO|DSO wird nicht mehr unterstützt. DSO-Eigenschaften werden ignoriert.|  
 |[Funktionseigenschaften](feature-properties.md)|Die Funktionseigenschaften beziehen sich auf Produktfunktionen. Bei dem größten Teil dieser Eigenschaften handelt es sich um erweiterte Eigenschaften sowie um Eigenschaften zum Steuern der Verbindungen zwischen Serverinstanzen.|  
-|[Dateispeichereigenschaften](filestore-properties.md)|Die Dateispeichereigenschaften sind nur für fortgeschrittene Benutzer gedacht. Hierzu zählen erweiterte Einstellungen für die Speicherverwaltung.|  
+|[FileStore (Eigenschaften)](filestore-properties.md)|Die Dateispeichereigenschaften sind nur für fortgeschrittene Benutzer gedacht. Hierzu zählen erweiterte Einstellungen für die Speicherverwaltung.|  
 |[Eigenschaften des Sperren-Managers](lock-manager-properties.md)|Die Sperren-Manager-Eigenschaften definieren das Serververhalten in Bezug auf Sperrvorgänge und Timeouts. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
 |[Protokolleigenschaften](log-properties.md)|Die Protokolleigenschaften steuern, ob, wann und wie Ereignisse auf dem Server protokolliert werden. Hierzu zählen die Fehlerprotokollierung, die Ausnahmeprotokollierung, der Flight Recorder, die Abfrageprotokollierung und Ablaufverfolgungen.|  
 |[Speichereigenschaften](memory-properties.md)|Die Speichereigenschaften steuern die Speicherverwendung durch den Server. Sie sind in erster Linie für fortgeschrittene Benutzer gedacht.|  
@@ -92,8 +92,8 @@ ms.locfileid: "66068902"
 |[Sicherheitseigenschaften](security-properties.md)|Im Abschnitt Sicherheit sind sowohl grundlegende als auch erweiterte Eigenschaften zum Definieren von Zugriffsberechtigungen enthalten. Hierzu zählen Einstellungen für Administratoren und Benutzer.|  
 |[Threadpooleigenschaften](thread-pool-properties.md)|Die Threadpooleigenschaften steuern, wie viele Threads der Server erstellt. Hierbei handelt es sich vor allem um erweiterte Eigenschaften.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Instanzverwaltung](../instances/analysis-services-instance-management.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Instanzverwaltung](../instances/analysis-services-instance-management.md)   
  [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

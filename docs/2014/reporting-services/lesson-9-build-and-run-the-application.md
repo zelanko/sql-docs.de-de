@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108383"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lektion 9: Erstellen und Ausführen der Anwendung
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   Nachdem Sie einen Datenfilter für die Datentabelle erstellt haben, erstellen Sie im nächsten Schritt eine Websiteanwendung und führen diese aus.  
   
 ### <a name="to-build-and-run-the-application"></a>So erstellen Sie die Anwendung und führen sie aus  
@@ -34,7 +34,7 @@ ms.locfileid: "66108383"
   
 4.  Klicken Sie in der **ReportViewer**-Symbolleiste auf das Symbol **Zurück zum übergeordneten Bericht** , um zurück zum **übergeordneten** Bericht zu navigieren.  
   
-     ![SSRS einen Drilldown durch die Verwendung von ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "Ssrs einen Drilldown durch die Verwendung von ReportViewer")  
+     ![SSRS-Drillthrough mithilfe von Report Viewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "SSRS-Drillthrough mithilfe von Report Viewer")  
   
 5.  Schließen Sie den Browser, um den Vorgang zu beenden.  
   

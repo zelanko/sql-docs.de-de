@@ -1,5 +1,5 @@
 ---
-title: Definieren von benannten Berechnungen in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
+title: Definieren von benannten Berechnungen in einer Datenquellen Sicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075568"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definieren von benannten Berechnungen in einer Datenquellensicht (Analysis Services)
@@ -59,14 +59,14 @@ FROM
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das Projekt, oder stellen Sie eine Verbindung mit der Datenbank her, in der die Datenquellensicht enthalten ist, in der Sie eine benannte Berechnung definieren möchten.  
   
-2.  Erweitern Sie im Projektmappen-Explorer den Ordner **Datenquellensichten** und doppelklicken Sie anschließend auf die Datenquellensicht.  
+2.  Erweitern Sie im Projektmappen-Explorer den Ordner **Datenquellensichten** , und doppelklicken Sie anschließend auf die Datenquellensicht.  
   
 3.  Klicken Sie im Bereich **Tabellen** oder **Diagramm** mit der rechten Maustaste auf die Tabelle, in der Sie die benannte Berechnung definieren möchten, und klicken Sie anschließend auf **Neue benannte Berechnung**. Stellen Sie sicher, dass Sie mit der rechten Maustaste auf den Tabellennamen klicken und nicht auf ein Attribut. Das Menü sollte wie folgt aussehen:  
   
      ![Screenshot des Diagrammarbeitsbereichs, Kontextmenü](../media/ssas-olapdsv-diagram.gif "Screenshot des Diagrammarbeitsbereichs, Kontextmenü")  
   
     > [!NOTE]  
-    >  Um nach einer Tabelle oder Sicht zu suchen, können Sie die Option **Tabelle suchen** verwenden, indem Sie entweder auf das Menü **Datenquellensicht** klicken oder mit der rechten Maustaste auf einen offenen Bereich im Bereich **Tabellen** oder **Diagramm** klicken.  
+    >  Wenn Sie eine Tabelle oder Sicht suchen möchten, können Sie die Option **Tabelle suchen** verwenden, indem Sie entweder auf das Menü **Datenquellen Sicht** klicken oder mit der rechten Maustaste auf einen geöffneten Bereich der **Tabellen** -oder **Diagramm** Bereiche klicken.  
   
 4.  Führen Sie im Dialogfeld **Benannte Berechnung erstellen** folgende Schritte aus:  
   
@@ -83,7 +83,7 @@ FROM
 ## <a name="delete-a-named-calculation"></a>Löschen einer benannten Berechnung  
  Wenn Sie versuchen, eine benannte Berechnung zu löschen, wird eine Liste der im Projekt oder in der Datenbank definierten Objekte angezeigt, die durch den Löschvorgang ungültig werden. Überprüfen Sie die Liste sorgfältig vor dem Löschen der Berechnung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Definieren von benannten Abfragen in einer Datenquellensicht &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Definieren Sie benannte Abfragen in einer Datenquellen Sicht &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

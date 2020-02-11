@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110145"
 ---
 # <a name="viewing-tuning-reports"></a>Anzeigen von Optimierungsberichten
@@ -30,13 +30,13 @@ ms.locfileid: "66110145"
   
      Doppelklicken Sie im Bereich **Sitzungsmonitor** auf **MySession** . Der Datenbankoptimierungsratgeber lädt die Sitzungsinformationen dieser Sitzung.  
   
-2.  Klicken Sie auf die Registerkarte **Berichte** .  
+2.  Klicken Sie auf die Registerkarte **Berichte**.  
   
-3.  Im Bereich **Optimierungszusammenfassung** können Sie Informationen zu dieser Optimierungssitzung anzeigen. Verwenden Sie die Bildlaufleiste, um den gesamten Inhalt des Bereichs anzuzeigen. Beachten Sie die Felder **Prozentsatz für die erwartete Verbesserung** und **Von der Empfehlung verwendeter Speicherplatz (MB)** . Beim Festlegen der Optionen für die Optimierung kann der Platz eingeschränkt werden, der den Empfehlungen zur Verfügung steht. Wählen Sie auf der Registerkarte **Optimierungsoptionen** die Option **Erweiterte Optionen**aus. Aktivieren Sie **Max. Speicherplatz für Empfehlungen definieren (MB)** und geben Sie den maximal zulässigen Speicherplatz für eine empfohlene Konfiguration in Megabytes ein. Mit der Schaltfläche **Zurück** kehren Sie vom Browser der Hilfe zu diesem Tutorial zurück.  
+3.  Im Bereich **Optimierungszusammenfassung** können Sie Informationen zu dieser Optimierungssitzung anzeigen. Verwenden Sie die Bildlaufleiste, um den gesamten Inhalt des Bereichs anzuzeigen. Beachten Sie die Felder **Prozentsatz für die erwartete Verbesserung** und **Von der Empfehlung verwendeter Speicherplatz (MB)**. Beim Festlegen der Optionen für die Optimierung kann der Platz eingeschränkt werden, der den Empfehlungen zur Verfügung steht. Wählen Sie auf der Registerkarte **Optimierungsoptionen** die Option **Erweiterte Optionen**aus. Aktivieren Sie **Max. Speicherplatz für Empfehlungen definieren (MB)** und geben Sie den maximal zulässigen Speicherplatz für eine empfohlene Konfiguration in Megabytes ein. Mit der Schaltfläche **Zurück** kehren Sie vom Browser der Hilfe zu diesem Tutorial zurück.  
   
 4.  Klicken Sie im Bereich **Optimierungsberichte** in der Liste **Bericht auswählen** auf **Anweisungskostenbericht** . Wenn Sie für die Anzeige des Berichts mehr Platz brauchen, ziehen Sie den Rand des Bereichs **Sitzungsmonitor** nach links. Mit jeder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die für eine Tabelle in Ihrer Datenbank ausgeführt wird, sind Leistungskosten verknüpft. Diese Leistungskosten können reduziert werden, indem für Spalten in einer Tabelle, auf die häufig zugegriffen wird, effektive Indizes erstellt werden. Dieser Bericht zeigt, wie hoch die geschätzte Verbesserung in Prozent ist, die bei einer Implementierung der Optimierungsempfehlungen erreicht werden kann, im Vergleich zu den ursprünglichen Kosten bei Ausführen der Anweisung in der Arbeitsauslastung. Beachten Sie, dass die Menge der im Bericht enthaltenen Informationen von der Länge und Komplexität der Arbeitsauslastung abhängt.  
   
-5.  Klicken Sie mit der rechten Maustaste im Raster auf den Bereich **Anweisungskostenbericht** und anschließend auf **In Datei exportieren**. Speichern Sie den Bericht `MyReport`. Dem Dateinamen wird automatisch die Erweiterung .xml angehängt. Sie können die Datei MyReport.xml in Ihrem bevorzugten XML-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen, um den Inhalt des Berichts anzuzeigen.  
+5.  Klicken Sie mit der rechten Maustaste im Raster auf den Bereich **Anweisungskostenbericht** und anschließend auf **In Datei exportieren**. Speichern Sie den Bericht `MyReport`unter. Dem Dateinamen wird automatisch die Erweiterung .xml angehängt. Sie können die Datei MyReport.xml in Ihrem bevorzugten XML-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen, um den Inhalt des Berichts anzuzeigen.  
   
 6.  Kehren Sie zur Registerkarte **Berichte** des Datenbankoptimierungsratgebers zurück, und klicken Sie anschließend noch einmal mit der rechten Maustaste auf **Anweisungskostenbericht** . Überprüfen Sie die weiteren Optionen, die zur Verfügung stehen. Beachten Sie, dass Sie die Schriftart des Berichts, den Sie anzeigen, ändern können. Wenn Sie die Schriftart hier ändern, wird sie auch auf den anderen Seiten im Registerformat geändert.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66110145"
  Sie haben jetzt die Registerkarte **Berichte** der Benutzeroberfläche des Datenbankoptimierungsratgebers für die Optimierungssitzung MySession kennen gelernt. Die gleichen Schritte können Sie ausführen, um die Berichte zu prüfen, die für die Optimierungssitzung EvaluateMySession erstellt wurden. Doppelklicken Sie dazu im Bereich **Sitzungsmonitor** auf **EvaluateMySession** .  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 3: Verwenden des Dta Command Prompt Utility](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lesson 3: Using the dta Command Prompt Utility (Lektion 3: Verwenden des Befehlszeilenprogramms dta)](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

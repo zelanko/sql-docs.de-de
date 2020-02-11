@@ -1,5 +1,5 @@
 ---
-title: Filtern einer geschachtelten Tabelle in einem Miningmodell (mittleres Datamining Tutorial) | Microsoft-Dokumentation
+title: Filtern einer geclusterte Tabelle in einem Mining Modell (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,65 +11,66 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267480"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtern einer geschachtelten Tabelle in einem Miningmodell (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie das Modell erstellt und sich damit vertraut gemacht haben, möchten Sie sich mit einer Teilmenge der Kundendaten näher beschäftigen. Dazu können Sie beispielsweise nur die Einkaufskörbe betrachten, die ein bestimmtes Element enthalten, oder die demografischen Daten von Kunden analysieren, die über einen bestimmten Zeitraum keine Einkäufe getätigt haben.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet die Möglichkeit, die in einem Miningmodell verwendeten Daten zu filtern. Diese Funktion ist hilfreich, da Sie nicht benötigen, um eine neue Datenquellensicht einrichten können, um andere Daten verwenden. Im Lernprogramm zu Data Mining-Grundlagen haben Sie gelernt, Daten in einer flachen Tabelle anhand von Bedingungen für die Falltabelle zu filtern. In dieser Aufgabe erstellen Sie einen Filter für eine geschachtelte Tabelle.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet die Möglichkeit, die in einem Miningmodell verwendeten Daten zu filtern. Diese Funktion ist nützlich, da Sie keine neue Datenquellen Sicht einrichten müssen, um unterschiedliche Daten zu verwenden. Im Lernprogramm zu Data Mining-Grundlagen haben Sie gelernt, Daten in einer flachen Tabelle anhand von Bedingungen für die Falltabelle zu filtern. In dieser Aufgabe erstellen Sie einen Filter für eine geschachtelte Tabelle.  
   
-## <a name="filters-on-nested-vs-case-tables"></a>Filter für geschachtelte Tabellen und. Falltabellen  
+## <a name="filters-on-nested-vs-case-tables"></a>Filter für geschachtelte Tabellen und Filter für Falltabellen  
  Wenn die Datenquellenansicht wie im Modell Association eine Falltabelle und eine geschachtelte Tabelle enthält, können Sie einen Filter für Werte in der Falltabelle, einen Filter für vorhandene oder nicht vorhandene Werte in der geschachtelten Tabelle oder eine Kombination aus beiden verwenden.  
   
  In dieser Aufgabe erstellen Sie zunächst eine Kopie des Modells Association und fügen die Attribute IncomeGroup und Region hinzu, um diese später als Filterkriterien für die Falltabelle verwenden zu können.  
   
 #### <a name="to-create-and-modify-a-copy-of-the-association-model"></a>So erstellen und ändern Sie eine Kopie des Modells Association  
   
-1.  In der **Miningmodelle** Registerkarte [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], mit der rechten Maustaste die `Association` Modell, und wählen **Neues Miningmodell**.  
+1.  Klicken Sie in der Registerkarte [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **Mining Modelle** mit der rechten `Association` Maustaste auf das Modell, und wählen Sie **Neues Mining Modell**aus.  
   
-2.  Für **Modellname**, Typ `Association Filtered`. Für **Algorithmusname**Option **Microsoft Association Rules**. Klicken Sie auf **OK**.  
+2.  Geben `Association Filtered`Sie unter **Modell Name den Namen**ein. Wählen Sie unter **Algorithmusname**die Option **Microsoft Association Rules**aus. Klicken Sie auf **OK**.  
   
-3.  Klicken Sie in der Spalte für das Modell Association Filtered, klicken Sie auf die Zeile IncomeGroup, und ändern Sie den Wert von **ignorieren** zu **Eingabe**.  
+3.  Klicken Sie in der Spalte für das gefilterte Assoziations Modell auf die Zeile IncomeGroup, und ändern Sie den Wert von **ignorieren** in **Eingabe**.  
   
  Anschließend erstellen Sie einen Filter für die Falltabelle im neuen Association-Modell. Durch den Filter werden nur Kunden in der Zielregion oder Kunden mit einem Einkommensniveau entsprechend den Kriterien im Modell verwendet. Nun fügen Sie eine weitere Reihe von Filterbedingungen hinzu, um anzugeben, dass nur Kunden im Modell berücksichtigt werden sollen, in deren Einkaufskorb sich mindestens ein Element befindet.  
   
 #### <a name="to-add-a-filter-to-a-mining-model"></a>So fügen Sie einem Miningmodell einen Filter hinzu  
   
-1.  In der **Miningmodelle** , mit der rechten Maustaste in des Modells Association Filtered, und wählen Sie **Modellfilter festlegen**.  
+1.  Klicken Sie auf der Registerkarte **Mining Modelle** mit der rechten Maustaste auf die gefilterte Modell Zuordnung, und wählen Sie **Modell Filter festlegen**aus.  
   
 2.  Klicken Sie im Dialogfeld **Modellfilter** im Textfeld **Miningstrukturspalte** auf die oberste Zeile im Raster.  
   
-3.  In der **Miningstrukturspalte** Textfeld wählen IncomeGroup.  
+3.  Wählen Sie im Textfeld **Mining Struktur Spalte** die Option IncomeGroup aus.  
   
      Das Symbol auf der linken Seite des Textfelds ändert sich und gibt dadurch an, dass es sich beim ausgewählten Element um eine Spalte handelt.  
   
-4.  Klicken Sie auf die **Operator** Textfeld, und wählen die **=** Operator aus der Liste.  
+4.  Klicken Sie auf das Textfeld **Operator** , **=** und wählen Sie den Operator aus der Liste aus.  
   
-5.  Klicken Sie auf die **Wert** Textfeld, und geben `High` in das Feld ein.  
+5.  Klicken Sie auf das Textfeld **Wert** , `High` und geben Sie in das Feld ein.  
   
 6.  Klicken Sie auf die nächste Zeile im Raster.  
   
-7.  Klicken Sie auf die **und/oder** Textfeld in der nächsten Zeile des Rasters, und wählen **oder**.  
+7.  Klicken Sie in der nächsten Zeile des Rasters auf das Textfeld **und/oder** , und wählen Sie **oder**aus.  
   
-8.  In der **Miningstrukturspalte** Textfeld wählen IncomeGroup. In der **Wert** Textfeld `Moderate`.  
+8.  Wählen Sie im Textfeld **Mining Struktur Spalte** die Option IncomeGroup aus. Geben `Moderate`Sie im Textfeld **Wert den Wert** ein.  
   
-     Die filterbedingung, die Sie erstellt wird automatisch hinzugefügt, die **Ausdruck** Textfeld, und sollte wie folgt angezeigt:  
+     Die von Ihnen erstellte Filterbedingung wird automatisch zum Textfeld **Ausdruck** hinzugefügt und sollte wie folgt aussehen:  
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate'`  
   
-9. Klicken Sie auf die nächste Zeile im Raster, verlassen den Operator als den Standardwert **und**.  
+9. Klicken Sie auf die nächste Zeile im Raster, und belassen Sie den Operator als Standard **und**.  
   
-10. Für **Operator**, übernehmen Sie den Standardwert **Contains**. Klicken Sie auf die **Wert** Textfeld.  
+10. Überlassen Sie für **Operator**den Standardwert **enthält**. Klicken Sie auf das Textfeld **Wert** .  
   
-11. In der **Filter** Dialogfeld, in der ersten Zeile unter **Miningstrukturspalte**Option `Model`.  
+11. Wählen Sie `Model`im Dialogfeld **Filter** in der ersten Zeile unter **Mining Struktur Spalte**die Option aus.  
   
-12. Für **Operator**Option **IS NOT NULL**. Lassen Sie die **Wert** Textfeld leer. Klicken Sie auf **OK**.  
+12. Wählen Sie für **Operator**den Wert **ist nicht NULL**aus. Lassen Sie das Textfeld **Wert** leer. Klicken Sie auf **OK**.  
   
-     Die filterbedingung in die **Ausdruck** Textfeld die **Modellfilter** Dialogfeld wird automatisch aktualisiert, um die neue Bedingung für die geschachtelte Tabelle einzuschließen. Der vollständige Ausdruck lautet wie folgt:  
+     Die Filterbedingung im Textfeld **Ausdruck** des Dialog Felds **Modell Filter** wird automatisch aktualisiert, um die neue Bedingung in die geclusterte Tabelle einzubeziehen. Der vollständige Ausdruck lautet wie folgt:  
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate' AND EXISTS SELECT * FROM [vAssocSeqLineItems] WHERE [Model] <> NULL).`  
   
@@ -77,21 +78,21 @@ ms.locfileid: "63267480"
   
 #### <a name="to-enable-drillthrough-and-to-process-the-filtered-model"></a>So aktivieren Sie Drillthrough und verarbeiten das gefilterte Modell  
   
-1.  In der **Miningmodelle** Registerkarte der rechten Maustaste auf die `Association Filtered` Modell, und wählen **Eigenschaften**.  
+1.  Klicken Sie auf der Registerkarte **Mining Modelle** mit der `Association Filtered` rechten Maustaste auf das Modell, und wählen Sie **Eigenschaften**aus.  
   
-2.  Ändern der **AllowDrillThrough** Eigenschaft **"true"** .  
+2.  Ändern Sie die **AllowDrillThrough** -Eigenschaft in **true**.  
   
-3.  Mit der rechten Maustaste die `Association Filtered` mining-Modell, und wählen Sie **Prozessmodell**.  
+3.  Klicken Sie mit der `Association Filtered` rechten Maustaste auf das Mining Modell, und wählen Sie **Modell verarbeiten**aus.  
   
-4.  Klicken Sie auf **Ja** in der Fehlermeldung zum Bereitstellen des neuen Modells, das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank.  
+4.  Klicken Sie in der Fehlermeldung auf **Ja** , um das neue Modell [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in der Datenbank bereitzustellen.  
   
-5.  In der **Miningstruktur verarbeiten** Dialogfeld klicken Sie auf **ausführen**.  
+5.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten** auf **Ausführen**.  
   
-6.  Wenn die Verarbeitung abgeschlossen ist, klicken Sie auf **schließen** zum Beenden der **Verarbeitungsstatus** (Dialogfeld), und klicken Sie auf **schließen** wieder zu schließen die **Miningstruktur verarbeiten**  Dialogfeld.  
+6.  Klicken Sie nach Abschluss der Verarbeitung auf schließen, **um das Dialogfeld Verarbeitungs Status** zu **Schließen** , und klicken Sie erneut auf schließen, um das Dialogfeld **Mining Struktur verarbeiten** zu **Schließen** .  
   
  Im Microsoft Generic Content Tree Viewer können Sie anhand des Werts für NODE_SUPPORT feststellen, dass das gefilterte Modell weniger Fälle als das ursprüngliche Modell enthält.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mit dem Filter für eine geschachtelte Tabelle, den Sie gerade erstellt haben, wird nur überprüft, ob mindestens eine Zeile in der geschachtelten Tabelle enthalten ist. Sie können jedoch Filterbedingungen erstellen, mit denen das Vorhandensein bestimmter Produkte überprüft wird.  Beispielsweise können Sie folgenden Filter erstellen:  
   
 ```  
@@ -101,16 +102,16 @@ ms.locfileid: "63267480"
   
  Diese Anweisung bewirkt, dass die Kunden in der Falltabelle auf Kunden eingeschränkt werden, die eine Flasche Wasser gekauft haben. Da die Anzahl der Attribute für eine geschachtelte Tabelle jedoch praktisch unbegrenzt ist, stellt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] keine Liste mit möglichen Werten zur Auswahl bereit. Sie müssen stattdessen den genauen Wert eingeben.  
   
- Klicken Sie auf **Abfrage bearbeiten** den Filterausdruck manuell zu ändern. Wenn Sie jedoch einen Teil eines Filterausdrucks manuell ändern, wird das Raster deaktiviert, und anschließend müssen Sie mit dem Filterausdruck im Textbearbeitungsmodus arbeiten. Um den Rasterbearbeitungsmodus wiederherzustellen, müssen Sie den Filterausdruck löschen und von Neuem beginnen.  
+ Sie können auf **Abfrage bearbeiten** klicken, um den Filter Ausdruck manuell zu ändern. Wenn Sie jedoch einen Teil eines Filterausdrucks manuell ändern, wird das Raster deaktiviert, und anschließend müssen Sie mit dem Filterausdruck im Textbearbeitungsmodus arbeiten. Um den Rasterbearbeitungsmodus wiederherzustellen, müssen Sie den Filterausdruck löschen und von Neuem beginnen.  
   
 > [!WARNING]  
 >  In einem Filter für geschachtelte Tabellen kann kein LIKE-Operator verwendet werden.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Vorhersagen von Zuordnungen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Vorhersagen von Zuordnungen &#40;Data&#41;Mining-Lernprogramms](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Modell Filter Syntax und Beispiele &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

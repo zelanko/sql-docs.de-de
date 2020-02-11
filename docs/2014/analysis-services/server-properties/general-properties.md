@@ -39,16 +39,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069032"
 ---
 # <a name="general-properties"></a>Allgemeine Eigenschaften
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. In diesem Thema werden die Servereigenschaften in der Datei msmdsrv.ini dokumentiert, die nicht in einem bestimmten Abschnitt wie Sicherheit, Netzwerk oder ThreadPool behandelt werden. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus, sofern nicht anders angegeben  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Server Modus, sofern nichts anderes angegeben ist  
   
 ## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  `AdminTimeout`  
@@ -60,7 +61,7 @@ ms.locfileid: "66069032"
  Eine Zeichenfolgeneigenschaft, die in einer getrennten Liste die Ordner angibt, die durchsucht werden können, wenn Dateien in Analysis Services-Dialogfeldern gespeichert, geöffnet und gesucht werden. Das Analysis Services-Dienstkonto muss Lese- und Schreibberechtigungen für alle Ordner haben, die Sie der Liste hinzufügen.  
   
  `BackupDir`  
- Eine Zeichenfolgeneigenschaft, die identifiziert den Namen des Verzeichnisses, in dem Sicherungsdateien standardmäßig gespeichert sind, im Ereignisprotokoll als Teil der Backup-Befehl kein Pfad angegeben ist.  
+ Eine Zeichen folgen Eigenschaft, die den Namen des Verzeichnisses identifiziert, in dem Sicherungsdateien standardmäßig gespeichert werden, im Fall, dass kein Pfad als Teil des Backup-Befehls angegeben wird.  
   
  `CollationName`  
  Eine Zeichenfolge, die die Serversortierung identifiziert. Weitere Informationen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -76,12 +77,14 @@ ms.locfileid: "66069032"
  `CoordinatorCancelCount`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die definiert, wie häufig der Server überprüfen soll, ob ein Cancel-Ereignis aufgetreten ist (basierend auf der Anzahl interner Iterationen). Verringern Sie diese Zahl, um häufiger, jedoch zu Lasten der allgemeinen Leistung, eine Überprüfung auf Cancel-Ereignisse durchzuführen.  
   
- `CoordinatorCancelCount` wird im tabellarischen Servermodus ignoriert.  
+ 
+  `CoordinatorCancelCount` wird im tabellarischen Servermodus ignoriert.  
   
  `CoordinatorExecutionMode`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von parallelen Servervorgängen definiert, einschließlich von Verarbeitungs- und Abfragevorgängen. Null (0) bedeutet, dass der Server basierend auf einem internen Algorithmus selbst entscheidet. Eine positive Zahl zeigt die maximale Anzahl von Vorgängen insgesamt an. Eine negative Zahl (mit umgekehrtem Vorzeichen) zeigt die maximale Anzahl von Vorgängen pro Prozessor an.  
   
- `CoordinatorExecutionMode` wird im tabellarischen Servermodus ignoriert.  
+ 
+  `CoordinatorExecutionMode` wird im tabellarischen Servermodus ignoriert.  
   
  Der Standardwert für diese Eigenschaft ist -4. Dies bedeutet, der Server ist auf 4 parallele Vorgänge pro Prozessor eingeschränkt. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -95,11 +98,11 @@ ms.locfileid: "66069032"
  Eine Zeichenfolge, die den Namen des Verzeichnisses zum Speichern von Daten identifiziert.  
   
  `DeploymentMode`  
- Bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird als "Servermodus" in den Dialogfeldern, Meldungen und Dokumentation bezeichnet. Diese Eigenschaft wird basierend auf dem Servermodus, den Sie beim Installieren von Analysis Services ausgewählt haben, von SQL Server-Setup konfiguriert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
+ Bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird in Dialogfeldern, Meldungen und Dokumentation als "Server Modus" bezeichnet. Diese Eigenschaft wird basierend auf dem Servermodus, den Sie beim Installieren von Analysis Services ausgewählt haben, von SQL Server-Setup konfiguriert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Dies ist der Standardwert. Der mehrdimensionale Modus wird angegeben. Er dient zur Verwaltung von mehrdimensionalen Datenbanken, die MOLAP, HOLAP und ROLAP-Speicher sowie Data Mining-Modelle verwenden.|  
 |1|Gibt Analysis Services-Instanzen an, die als Teil einer PowerPivot für SharePoint-Bereitstellung installiert waren. Ändern Sie die Bereitstellungsmoduseigenschaft der Analysis Services-Instanz nicht, die Teil einer PowerPivot für SharePoint-Installation ist. Wenn Sie den Modus ändern, werden PowerPivot-Daten nicht mehr auf dem Server ausgeführt.|  
@@ -131,7 +134,8 @@ ms.locfileid: "66069032"
  Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` gilt für Cubeverarbeitungsbefehle und Rückschreibevorgänge.  
+>  
+  `ForceCommitTimeout` gilt für Cubeverarbeitungsbefehle und Rückschreibevorgänge.  
   
  `IdleConnectionTimeout`  
  Eine Ganzzahleigenschaft, die ein Timeout für inaktive Verbindungen angibt (in Sekunden).  
@@ -153,7 +157,7 @@ ms.locfileid: "66069032"
  Eine Zeichenfolge, die den Namen des Verzeichnisses identifiziert, das die Serverprotokolle enthält. Diese Eigenschaft gilt nur, wenn für die Protokollierung Dateien auf dem Datenträger anstelle von Datenbanktabellen (das Standardverhalten) verwendet werden.  
   
  `MaxIdleSessionTimeout`  
- Eine Ganzzahleigenschaft, die den maximalen Timeoutwert für Verbindungen im Leerlauf in Sekunden definiert. Der Standard ist 0 (null) und gibt an, dass für Sitzungen niemals ein Timeout erfolgt. Allerdings werden Sitzungen im Leerlauf weiterhin entfernt, wenn der Server Ressourceneinschränkungen unterliegt.  
+ Eine Ganzzahleigenschaft, die den maximalen Timeoutwert für Verbindungen im Leerlauf in Sekunden definiert. Der Standardwert ist 0 (null) und zeigt an, dass für Sitzungen nie ein Timeout auftritt. Allerdings werden Sitzungen im Leerlauf weiterhin entfernt, wenn der Server Ressourceneinschränkungen unterliegt.  
   
  `MinIdleSessionTimeout`  
  Eine Ganzzahleigenschaft, die den minimalen Timeoutwert für Verbindungen im Leerlauf in Sekunden definiert. Der Standardwert ist 2.700 Sekunden. Nach Ablauf dieser Zeit kann der Server die Sitzung im Leerlauf beenden, sofern der belegte Arbeitsspeicher benötigt wird.  
@@ -161,7 +165,7 @@ ms.locfileid: "66069032"
  `Port`  
  Eine Ganzzahleigenschaft, die die Portnummer definiert, an der der Server auf Clientverbindungen lauscht. Wird diese Eigenschaft nicht festgelegt, sucht der Server dynamisch nach dem ersten freien Port.  
   
- Der Standardwert für diese Eigenschaft ist Null (0), d. h. es wird standardmäßig Port 2383 verwendet. Weitere Informationen zur Portkonfiguration finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Der Standardwert für diese Eigenschaft ist Null (0), d. h. es wird standardmäßig Port 2383 verwendet. Weitere Informationen zur Portkonfiguration finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  `ServerTimeout`  
  Eine Ganzzahl, die das Timeout für Abfragen definiert (in Sekunden). Der Standardwert beträgt 3600 Sekunden (oder 60 Minuten). Null (0) gibt an, dass für Abfragen kein Timeout erzwungen wird.  
@@ -176,8 +180,8 @@ ms.locfileid: "66069032"
  `StatisticsStoreSize`  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servereigenschaften in Analysis Services](server-properties-in-analysis-services.md)   
- [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren von Server Eigenschaften in Analysis Services](server-properties-in-analysis-services.md)   
+ [Bestimmen des Server Modus einer Analysis Services Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

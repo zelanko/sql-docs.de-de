@@ -1,5 +1,5 @@
 ---
-title: Elemente verschieben-Seite (Berichts-Manager) | Microsoft-Dokumentation
+title: Seite "Elemente verschieben" (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108214"
 ---
 # <a name="move-items-page-report-manager"></a>Elemente verschieben (Seite, Berichts-Manager)
@@ -37,7 +37,7 @@ ms.locfileid: "66108214"
 2.  Klicken Sie auf der Symbolleiste auf **Detailansicht**.  
   
     > [!NOTE]  
-    >  Wenn nur die **Kachelansicht**angezeigt wird, sind Sie bereits in der **Detailansicht**.  
+    >  Wenn nur die **Kachel Ansicht**angezeigt wird, befinden Sie sich bereits in der **Detailansicht**.  
   
 3.  Aktivieren Sie das Kontrollkästchen neben einem Element, und klicken Sie dann auf der Symbolleiste auf **Verschieben** . Sie können mehr als ein Kontrollkästchen aktivieren, wenn Sie mehrere Elemente an den gleichen neuen Speicherort verschieben möchten.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108214"
 2.  Klicken Sie auf der Symbolleiste auf **Kachelansicht**.  
   
     > [!NOTE]  
-    >  Wenn nur **Detailansicht**angezeigt wird, sind Sie bereits in der **Kachelansicht**.  
+    >  Wenn nur die **Detailansicht**angezeigt wird, befinden Sie sich bereits in der **Kachel Ansicht**.  
   
 3.  Zeigen Sie auf ein Element, und klicken Sie auf den Dropdownpfeil.  
   
@@ -64,12 +64,12 @@ ms.locfileid: "66108214"
   
 4.  Klicken Sie auf der Elementsymbolleiste auf **Verschieben**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Allgemeine Eigenschaftenseite, Ordner &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Allgemeine Eigenschaftenseite, Ressourcen &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
- [Allgemeine Eigenschaftenseite, freigegebene Datenquellen &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
+ [Allgemeine Eigenschaften (Seite), Ordner &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+ [Allgemeine Eigenschaften (Seite), Berichte &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Allgemeine Eigenschaften (Seite), Ressourcen &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
+ [Allgemeine Eigenschaften (Seite), freigegebene Datenquellen &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

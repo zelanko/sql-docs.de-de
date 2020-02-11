@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0d725f95fc8e9de0865ad895abd860d5f03687b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662928"
 ---
 # <a name="database-event-category"></a>Datenbank (Ereigniskategorie)
@@ -28,7 +28,7 @@ ms.locfileid: "62662928"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Data File Auto Grow-Ereignisklasse](data-file-auto-grow-event-class.md)|Zeigt an, dass die Datendatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit mit ALTER DATABASE vergrößert wird.|  
 |[Data File Auto Shrink-Ereignisklasse](data-file-auto-shrink-event-class.md)|Zeigt an, dass die Datendatei verkleinert wurde.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62662928"
 |[Log File Auto Grow-Ereignisklasse](log-file-auto-grow-event-class.md)|Zeigt an, dass die Protokolldatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Protokolldatei explizit mit ALTER DATABASE vergrößert wird.|  
 |[Log File Auto Shrink-Ereignisklasse](log-file-auto-shrink-event-class.md)|Zeigt an, dass die Protokolldatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Protokolldatei explizit mit ALTER DATABASE verkleinert wird.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)  
   
   

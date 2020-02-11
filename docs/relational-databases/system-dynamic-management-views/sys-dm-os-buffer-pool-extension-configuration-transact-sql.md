@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900225"
 ---
-# <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+# <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
@@ -33,13 +33,13 @@ ms.locfileid: "67900225"
   
 
   
-| Spaltenname | Datentyp | Beschreibung |
+| Spaltenname | Datentyp | BESCHREIBUNG |
 | :---------- | :-------- | :---------- |
-|path|**Nvarchar**(256)|Pfad und Dateiname des Pufferpoolerweiterungscaches. NULL-Werte sind zulässig.|  
+|path|**nvarchar**(256)|Pfad und Dateiname des Pufferpoolerweiterungscaches. NULL-Werte sind zulässig.|  
 |file_id|**int**|ID der Pufferpoolerweiterungsdatei. Lässt keine NULL-Werte zu.|  
-|state|**int**|Der Status der Pufferpoolerweiterungsfunktion. Lässt keine NULL-Werte zu.<br /><br /> 0 – Die Pufferpoolerweiterung ist deaktiviert<br /><br /> 1 – Die Pufferpoolerweiterung wird deaktiviert<br /><br /> 2 – wird für die zukünftige Verwendung reserviert.<br /><br /> 3 – Die Pufferpoolerweiterung wird aktiviert<br /><br /> 4 – Für die zukünftige Verwendung reserviert<br /><br /> 5 – Die Pufferpoolerweiterung ist aktiviert|  
-|state_description|**Nvarchar**(60)|Beschreibt den Status der Pufferpoolerweiterungsfunktion. Lässt NULL-Werte zu.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = DIE PUFFERPOOLERWEITERUNG IST AKTIVIERT|
-|current_size_in_kb|**bigint**|Aktuelle Größe der Pufferpoolerweiterungsdatei. Lässt keine NULL-Werte zu.|
+|state|**int**|Der Status der Pufferpoolerweiterungsfunktion. Lässt keine NULL-Werte zu.<br /><br /> 0 – Die Pufferpoolerweiterung ist deaktiviert<br /><br /> 1 – Die Pufferpoolerweiterung wird deaktiviert<br /><br /> 2-für die zukünftige Verwendung reserviert<br /><br /> 3 – Die Pufferpoolerweiterung wird aktiviert<br /><br /> 4 – Für die zukünftige Verwendung reserviert<br /><br /> 5 – Die Pufferpoolerweiterung ist aktiviert|  
+|state_description|**nvarchar**(60)|Beschreibt den Status der Pufferpoolerweiterungsfunktion. Lässt NULL-Werte zu.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = aktivierte Puffer Pool Erweiterung|
+|current_size_in_kb|**BIGINT**|Aktuelle Größe der Pufferpoolerweiterungsdatei. Lässt keine NULL-Werte zu.|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="permissions"></a>Berechtigungen  
@@ -65,8 +65,8 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Pufferpoolerweiterung](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Puffer Pool Erweiterung](../../database-engine/configure-windows/buffer-pool-extension.md)   
+ [sys. dm_os_buffer_descriptors &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

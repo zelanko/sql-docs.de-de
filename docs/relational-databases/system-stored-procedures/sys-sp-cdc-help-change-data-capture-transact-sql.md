@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905174"
 ---
-# <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
+# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Change Data Capture-Konfiguration für jede Tabelle zurück, die in der aktuellen Datenbank für Change Data Capture aktiviert ist. Für jede Quelltabelle können bis zu zwei Zeilen zurückgegeben werden: eine Zeile für jede Aufzeichnungsinstanz. Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,34 +45,34 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @source_schema =] '*Source_schema*"  
- Der Name des Schemas, zu dem die Quelltabelle gehört. *Source_schema* ist **Sysname**, hat den Standardwert NULL. Wenn *Source_schema* angegeben wird, *Source_name* muss auch angegeben werden.  
+ [ @source_schema = ] "*source_schema*"  
+ Der Name des Schemas, zu dem die Quelltabelle gehört. *source_schema* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *source_schema* angegeben wird, müssen *source_name* ebenfalls angegeben werden.  
   
- Wenn ungleich NULL, *Source_schema* muss in der aktuellen Datenbank vorhanden sein.  
+ Wenn der Wert nicht NULL ist, müssen *source_schema* in der aktuellen Datenbank vorhanden sein.  
   
- Wenn *Source_schema* ungleich NULL, *Source_name* muss auch nicht NULL sein.  
+ Wenn *source_schema* ungleich NULL ist, müssen *source_name* ebenfalls nicht NULL sein.  
   
- [ @source_name =] '*Source_name*"  
- Der Name der Quelltabelle. *Source_name* ist **Sysname**, hat den Standardwert NULL. Wenn *Source_name* angegeben wird, *Source_schema* muss auch angegeben werden.  
+ [ @source_name = ] "*source_name*"  
+ Der Name der Quelltabelle. *source_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *source_name* angegeben wird, müssen *source_schema* ebenfalls angegeben werden.  
   
- Wenn ungleich NULL, *Source_name* muss in der aktuellen Datenbank vorhanden sein.  
+ Wenn der Wert nicht NULL ist, müssen *source_name* in der aktuellen Datenbank vorhanden sein.  
   
- Wenn *Source_name* ungleich NULL, *Source_schema* muss auch nicht NULL sein.  
+ Wenn *source_name* ungleich NULL ist, müssen *source_schema* ebenfalls nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Name des Quelltabellenschemas.|  
 |source_table|**sysname**|Name der Quelltabelle.|  
 |capture_instance|**sysname**|Name der Aufzeichnungsinstanz.|  
 |object_id|**int**|ID der Änderungstabelle, die der Quelltabelle zugeordnet ist.|  
 |source_object_id|**int**|ID der Quelltabelle.|  
-|start_lsn|**binary(10)**|Protokollfolgenummer (Log Sequence Number, LSN), die den unteren Endpunkt zum Abfragen der Änderungstabelle darstellt.<br /><br /> NULL = Der untere Endpunkt wurde nicht erstellt.|  
-|end_lsn|**binary(10)**|LSN, die den oberen Endpunkt zum Abfragen der Änderungstabelle darstellt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat diese Spalte immer den Wert NULL.|  
+|start_lsn|**Binär (10)**|Protokollfolgenummer (Log Sequence Number, LSN), die den unteren Endpunkt zum Abfragen der Änderungstabelle darstellt.<br /><br /> NULL = Der untere Endpunkt wurde nicht erstellt.|  
+|end_lsn|**Binär (10)**|LSN, die den oberen Endpunkt zum Abfragen der Änderungstabelle darstellt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat diese Spalte immer den Wert NULL.|  
 |supports_net_changes|**bit**|Die Unterstützung für Nettoänderungen ist aktiviert.|  
 |has_drop_pending|**bit**|Wird in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht verwendet.|  
 |role_name|**sysname**|Name der Datenbankrolle, mit deren Hilfe der Zugriff auf die Änderungsdaten gesteuert wird.<br /><br /> NULL = Eine Rolle wird nicht verwendet.|  
@@ -82,11 +82,11 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Liste der Indexspalten, mit deren Hilfe Zeilen in der Quelltabelle eindeutig identifiziert werden.|  
 |captured_column_list|**nvarchar(max)**|Liste der aufgezeichneten Quellspalten.|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn beide *Source_schema* und *Source_name* Standardwert NULL annehmen oder explizit auf NULL, festgelegt werden diese gespeicherte Prozedur gibt Informationen für alle Datenbanken aufzeichnungsinstanzen, die der Aufrufer hat auswählen. der Zugriff auf. Wenn *Source_schema* und *Source_name* nicht NULL sind, nur Informationen zu den bestimmten benannten, aktivierten Tabelle zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn sowohl *source_schema* als auch *source_name* standardmäßig auf NULL festgelegt ist, oder explizit auf NULL festgelegt ist, gibt diese gespeicherte Prozedur Informationen für alle Daten Bank Aufzeichnungs Instanzen zurück, für die der Aufrufer über SELECT-Zugriff verfügt. Wenn *source_schema* und *source_name* ungleich NULL sind, werden nur Informationen für die jeweilige benannte aktivierte Tabelle zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Wenn *Source_schema* und *Source_name* NULL sind, die Autorisierung des Aufrufers bestimmt, welche aktivierten Tabellen im Resultset enthalten sind. Aufrufer müssen über die SELECT-Berechtigung für alle aufgezeichneten Spalten der Aufzeichnungsinstanz verfügen und zudem Mitglied aller definierten Gatingrollen für die einzubeziehenden Tabelleninformationen sein. Mitglieder der db_owner-Datenbankrolle können Informationen zu allen definierten Aufzeichnungsinstanzen anzeigen. Beim Anfordern von Informationen für eine bestimmte aktivierte Tabelle werden auf die benannte Tabelle die gleichen SELECT- und Mitgliedschaftskriterien angewendet.  
+ Wenn *source_schema* und *source_name* NULL sind, bestimmt die Autorisierung des Aufrufers, welche aktivierten Tabellen in das Resultset eingeschlossen werden. Aufrufer müssen über die SELECT-Berechtigung für alle aufgezeichneten Spalten der Aufzeichnungsinstanz verfügen und zudem Mitglied aller definierten Gatingrollen für die einzubeziehenden Tabelleninformationen sein. Mitglieder der db_owner-Datenbankrolle können Informationen zu allen definierten Aufzeichnungsinstanzen anzeigen. Beim Anfordern von Informationen für eine bestimmte aktivierte Tabelle werden auf die benannte Tabelle die gleichen SELECT- und Mitgliedschaftskriterien angewendet.  
   
 ## <a name="examples"></a>Beispiele  
   

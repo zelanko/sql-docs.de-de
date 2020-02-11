@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108552"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Lektion 1: Erstellen Sie eine neue Website
+# <a name="lesson-1-create-a-new-web-site"></a>Lektion 1: Erstellen einer neuen Website
   In dieser Lektion erfahren Sie, wie Sie ein neues Websiteprojekt mithilfe der ASP.NET-Websitevorlage für Visual C# erstellen.  
   
 ### <a name="to-create-a-new-website"></a>So erstellen Sie eine neue Website  
@@ -26,13 +26,13 @@ ms.locfileid: "66108552"
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und wählen Sie **Website**aus.  
   
-3.  In der **neue Website** Dialogfeld die **installierte Vorlagen** wählen Sie im Bereich **Visual C#-** und wählen Sie dann **ASP.NET-Website**.  
+3.  Wählen Sie im Dialogfeld **neue Website** im Bereich **installierte Vorlagen** die Option **Visual c#** aus, und wählen Sie dann **ASP.NET Website**aus.  
   
 4.  Geben Sie im Feld **Speicherort** ein Projektverzeichnis an, und klicken Sie auf **OK**.  
   
  Das Websiteprojekt wird geöffnet.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
- Sie haben erfolgreich ein neues Websiteprojekt erstellt. Als Nächstes erstellen Sie eine Datenverbindung und eine Datentabelle für den übergeordneten Bericht. Siehe [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Sie haben erfolgreich ein neues Websiteprojekt erstellt. Als Nächstes erstellen Sie eine Datenverbindung und eine Datentabelle für den übergeordneten Bericht. Weitere Informationen finden Sie unter [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

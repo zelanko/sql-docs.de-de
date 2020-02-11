@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312617"
 ---
 # <a name="set-the-startup-options"></a>Festlegen der Startoptionen
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann so konfiguriert werden, dass die Entwurfsoberfläche beim Starten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit der von Ihnen bevorzugten Konfiguration geöffnet wird. Wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] so einstellen, dass es mit der gewünschten Konfiguration geöffnet wird, können Sie Zeit sparen.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]kann so konfiguriert werden, dass die Entwurfs Oberfläche für die von Ihnen bevorzugte [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Konfiguration geöffnet wird, wenn gestartet wird. Wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] so einstellen, dass es mit der gewünschten Konfiguration geöffnet wird, können Sie Zeit sparen.  
   
 ## <a name="configuring-startup-options"></a>Konfigurieren von Startoptionen  
   
@@ -28,13 +28,13 @@ ms.locfileid: "63312617"
   
 2.  Erweitern Sie **Umgebung**, und klicken Sie dann auf **Starten**. Überprüfen Sie die Optionen in der Liste **Beim Start** :  
   
-    -   **Objekt-Explorer öffnen**. Diese Option ist die Standardeinstellung.  
+    -   **Öffnen Sie Objekt-Explorer**. Dies ist die Standardoption.  
   
-    -   **Neues Abfragefenster öffnen**.  
+    -   **Öffnen Sie ein neues Abfragefenster**.  
   
-    -   **Objekt-Explorer und neue Abfrage öffnen**.  
+    -   **Öffnen Sie Objekt-Explorer und eine neue Abfrage**.  
   
-    -   **Objekt-Explorer und Aktivitätsmonitor öffnen**.  
+    -   **Öffnen Sie Objekt-Explorer und Aktivitäts Monitor**.  
   
     -   **Leere Umgebung öffnen**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63312617"
   
      Beachten Sie auch die anderen Optionen, die für Sie u. U. interessant sind, wie z. B. **Systemobjekte im Objekt-Explorer ausblenden**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Wiederherstellen der Standardkonfiguration von SQL Server Management Studio](lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  
   
   

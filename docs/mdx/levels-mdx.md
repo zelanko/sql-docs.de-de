@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905646"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
@@ -38,19 +38,19 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Number*  
  Ein gültiger numerischer Ausdruck, der eine Ebenennummer angibt.  
   
- *Ebenenname*  
+ *Level_Name*  
  Ein gültiger Zeichenfolgenausdruck, der einen Ebenennamen angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn eine Ebenennummer angegeben wird, die **Ebenen** Funktion gibt zurück, die auf der angegebenen nullbasierten Position zugeordnet.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn eine Ebenennummer angegeben wird, gibt die **Levels** -Funktion die Ebene zurück, die der angegebenen Null basierten Position zugeordnet ist.  
   
- Wenn ein Ebenenname angegeben wird, die **Ebenen** Funktion die angegebene Ebene zurück.  
+ Wenn ein Ebenen-Name angegeben wird, gibt die **Levels** -Funktion die angegebene Ebene zurück.  
   
 > [!NOTE]  
 >  Verwenden Sie die Syntaxvariante mit dem Zeichenfolgenausdruck für benutzerdefinierte Funktionen.  
   
 ## <a name="examples"></a>Beispiele  
- In den folgenden Beispielen veranschaulicht die **Ebenen** Syntaxen funktionieren.  
+ In den folgenden Beispielen wird jede der **Ebenen** -Syntax Funktionen veranschaulicht.  
   
 ### <a name="numeric"></a>Numeric  
  Im folgenden Beispiel wird die Country-Ebene zurückgegeben:  
@@ -60,7 +60,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Zeichenfolge  
+### <a name="string"></a>String  
  Im folgenden Beispiel wird die Country-Ebene zurückgegeben:  
   
 ```  
@@ -68,7 +68,7 @@ SELECT [Geography].[Geography].Levels('Country') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

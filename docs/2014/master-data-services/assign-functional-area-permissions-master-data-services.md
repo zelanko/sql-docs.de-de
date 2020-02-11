@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480102"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Zuweisen von Berechtigungen für Funktionsbereiche (Master Data Services)
   Weisen Sie Funktionsbereichberechtigungen zu, um Benutzern oder Gruppen Zugriff auf die Funktionsbereiche von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zu gewähren.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Benutzer- und Gruppenberechtigungen** zuzugreifen.  
@@ -46,10 +46,10 @@ ms.locfileid: "65480102"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
- [Sicherheit &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen Sie einen Modell Administrator &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
+ [Sicherheits &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

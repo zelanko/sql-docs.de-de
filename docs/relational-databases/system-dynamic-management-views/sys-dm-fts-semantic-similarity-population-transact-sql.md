@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,18 +19,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900873"
 ---
-# <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
+# <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile mit Statusinformationen über die Auffüllung des Dokumentähnlichkeitsindex für jeden Ähnlichkeitsindex in jeder Tabelle zurück, der ein semantischer Index zugeordnet ist.  
   
- Der Auffüllungsschritt wird nach dem Extraktionsschritt ausgeführt. Statusinformationen zu dem Ähnlichkeit extraktionsschritt ausgeführt, finden Sie unter [Sys. dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Der Auffüllungsschritt wird nach dem Extraktionsschritt ausgeführt. Statusinformationen zum Schritt der Ähnlichkeits Extraktion finden Sie unter [sys. dm_fts_index_population &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
     
 ||||  
 |-|-|-|  
@@ -41,18 +41,18 @@ ms.locfileid: "67900873"
 |**document_count**|**int**|Gesamtzahl der Dokumente in der Auffüllung|  
 |**document_processed_count**|**int**|Anzahl der Dokumente, die seit dem Start dieses Auffüllungszyklus verarbeitet wurden|  
 |**completion_type**|**int**|Status des Abschlusses dieser Auffüllung.|  
-|**completion_type_description**|**nvarchar(120)**|Beschreibung des Abschlusstyps.|  
+|**completion_type_description**|**nvarchar (120)**|Beschreibung des Abschlusstyps.|  
 |**worker_count**|**int**|Anzahl der Arbeitsthreads, die der Ähnlichkeitsextraktion zugeordnet sind|  
-|**status**|**int**|Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden Typen:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> 11 = Auffüllen abgebrochen|  
-|**status_description**|**nvarchar(120)**|Beschreibung des Status der Auffüllung.|  
+|**Stands**|**int**|Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> 11 = Auffüllen abgebrochen|  
+|**status_description**|**nvarchar (120)**|Beschreibung des Status der Auffüllung.|  
 |**start_time**|**datetime**|Zeit des Starts der Auffüllung.|  
 |**incremental_timestamp**|**timestamp**|Stellt den Timestamp des Starts einer vollständigen Auffüllung dar. Für alle anderen Auffüllungstypen ist dieser Wert der letzte Prüfpunkt, für den ein Commit ausgeführt wurde, der den Fortschritt der Auffüllung darstellt.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Weitere Informationen finden Sie unter [verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
+ Weitere Informationen finden Sie unter [Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadaten  
- Weitere Informationen über den Status der semantischen Indizierung, Abfrage [Sys. dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Um weitere Informationen zum Status der semantischen Indizierung zu erhalten, Fragen Sie [sys. dm_fts_index_population &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)ab.  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -67,7 +67,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

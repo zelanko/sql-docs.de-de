@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150357"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Option Status (Verwaltungstool Distributed Replay)
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Verwaltungstool, `DReplay.exe`, ist ein Befehlszeilentool, das Sie für die Kommunikation mit distributed Replay Controller verwenden können. In diesem Thema werden die Befehlszeilenoption **status** und die entsprechende Syntax beschrieben.  
+  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Verwaltungs Tool, `DReplay.exe`, ist ein Befehlszeilen Tool, das Sie für die Kommunikation mit dem verteilten Replay-Controller verwenden können. In diesem Thema werden die Befehlszeilenoption **status** und die entsprechende Syntax beschrieben.  
   
  Mit der **status** -Option wird der Controller abgefragt und der aktuelle Status angezeigt.  
   
- ![Artikellinksymbol](../../database-engine/media/topic-link.gif "Topic link icon") Weitere Informationen zu den Syntaxkonventionen für das Verwaltungstool finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Link Symbol "Thema](../../database-engine/media/topic-link.gif "Symbol für Themenlink") " Weitere Informationen zu den Syntax Konventionen, die mit der Syntax des Verwaltungs Tools verwendet werden, finden Sie unter [Transact-SQL-Syntax Konventionen &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,12 +32,12 @@ dreplay status [-mcontroller] [-fstatus_interval]
 ```  
   
 #### <a name="parameters"></a>Parameter  
- **-m** *Controller*  
+ **-m-** *Controller*  
  Gibt den Computernamen des Controllers an. Sie können mit "`localhost`" oder "`.`" auf den lokalen Computer verweisen.  
   
  Wenn der **-m** -Parameter nicht angegeben ist, wird der lokale Computer verwendet.  
   
- **-f** *Statusintervall*  
+ **-f** *status_interval*  
  Gibt die Häufigkeit (in Sekunden) für die Anzeige des Status an.  
   
  Wenn der **-f** -Parameter nicht angegeben wird, ist das Standardintervall 30 Sekunden.  
@@ -54,7 +54,7 @@ dreplay status -m localhost -f 60
   
  Weitere Informationen finden Sie unter [Distributed Replay Security](distributed-replay-security.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
   

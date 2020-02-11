@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Sie eine For-Schleifencontainer | Microsoft-Dokumentation
+title: Konfigurieren eines for-Schleifen Containers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe51deb631f0c3d794bdce3f05af61b5e030d5e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060832"
 ---
 # <a name="configure-a-for-loop-container"></a>Konfigurieren eines For-Schleifencontainers
@@ -44,8 +44,8 @@ ms.locfileid: "66060832"
   
 7.  Klicken Sie auf **OK** , um den **For-Schleifen-Editor**zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
- [For-Schleifencontainer](control-flow/for-loop-container.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [For-Schleifen Container](control-flow/for-loop-container.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
  [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Berichts-Generator-Optionen im Dialogfeld Einstellungen (Berichts-Generator) | Microsoft-Dokumentation
+title: Dialog Feld "Berichts-Generator Optionen", "Einstellungen" (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107618"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Berichts-Generator-Optionen (Dialogfeld), Einstellungen (Berichts-Generator)
-  Klicken Sie auf die **Berichts-Generator** Schaltfläche, und klicken Sie dann auf **Optionen** Festlegen von Optionen für die Anzeige der zuletzt verwendeten Dateien und Verbindungen. Sie können auch den Standardberichtsserver ändern oder gegebenenfalls einen Standardberichtsserver hinzufügen.  
+  Klicken Sie auf die Schaltfläche **Berichts-Generator** , und klicken Sie dann auf **Optionen** , um Optionen für die Anzeige der letzten Dateien und Verbindungen Sie können auch den Standardberichtsserver ändern oder gegebenenfalls einen Standardberichtsserver hinzufügen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Standardmäßig diesen Berichtsserver oder diese SharePoint-Website verwenden**  
@@ -45,7 +45,7 @@ ms.locfileid: "66107618"
  **Löschen aller letzten Elementlisten**  
  Löscht die aktuellen Listen der zuletzt verwendeten Sites, Server, freigegebenen Datasets, freigegebenen Datenquellenverbindungen und Dokumente.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

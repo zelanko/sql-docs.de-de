@@ -1,5 +1,5 @@
 ---
-title: Verbinden eines Filters oder Dokumentewebparts (Reporting Services im integrierten SharePoint-Modus) | Microsoft-Dokumentation
+title: Connect Filter or Documents Web Part (Reporting Services im integrierten SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109718"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Verbinden eines Filters oder Dokumentwebparts (Reporting Services im integrierten SharePoint-Modus)
@@ -37,17 +37,17 @@ ms.locfileid: "66109718"
   
 3.  Klicken Sie auf **Webpart hinzufügen**.  
   
-4.  Wählen Sie unter **Alle Webparts**in der Kategorie **Verschiedenes** die Option **Berichts-Viewer für SQL Reporting Services**aus.  
+4.  Wählen Sie in **allen Webparts**in der Kategorie **Verschiedenes** die Option **SQL Server Reporting Services Berichts-Viewer**aus.  
   
 5.  Klicken Sie auf **Hinzufügen**. Der Webpart wird oben in der Zone hinzugefügt.  
   
 6.  Klicken Sie in einer anderen Zone auf derselben Webpartseite oder demselben Dashboard auf **Webpart hinzufügen**.  
   
-7.  Wählen Sie unter **Alle Webparts**im Abschnitt **Filter** ein Webpart aus.  
+7.  Wählen Sie in **allen Webparts**im Abschnitt **Filter** ein Webpart aus.  
   
 8.  Klicken Sie auf **Hinzufügen**. Der Webpart wird oben in der Zone hinzugefügt.  
   
-9. Klicken Sie in der Zone mit dem Webpart auf das Menü **bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, zeigen Sie auf **Filterwerte senden an**, und wählen Sie anschließend **Berichts-Viewer** - *Berichtsname*.  
+9. Klicken Sie in der Zone mit dem Webpart auf das Menü **Bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, zeigen **Sie auf Filter Werte senden an**, und wählen Sie dann **Berichts-Viewer** - -*Berichts Name*aus.  
   
 10. Checken Sie Ihre Änderungen ein, und speichern Sie die Seite.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66109718"
   
 3.  Klicken Sie auf **Webpart hinzufügen**.  
   
-4.  Wählen Sie unter **Alle Webparts**im Abschnitt **Listen und Bibliotheken** die Option **Dokumente**aus.  
+4.  Wählen Sie in **allen Webparts**im Abschnitt **Listen und Bibliotheken** die Option **Dokumente aus.**  
   
 5.  Klicken Sie auf **Hinzufügen**. Der Webpart wird oben in der Zone hinzugefügt.  
   
@@ -67,16 +67,16 @@ ms.locfileid: "66109718"
   
 7.  Klicken Sie in einer anderen Zone auf derselben Webpartseite oder demselben Dashboard auf **Webpart hinzufügen**.  
   
-8.  Wählen Sie unter **Alle Webparts**in der Kategorie **Verschiedenes** die Option **Berichts-Viewer für SQL Reporting Services.**  
+8.  Wählen Sie in **allen Webparts**in der Kategorie **Verschiedenes** die Option **SQL Server Reporting Services Berichts-Viewer aus.**  
   
 9. Klicken Sie auf **Hinzufügen**. Der Webpart wird oben in der Zone hinzugefügt.  
   
-10. Klicken Sie in der Zone mit dem Webpart auf das Menü **bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, zeigen Sie auf **Berichtsdefinitionen abrufen von**, und wählen Sie anschließend **Dokumente**aus.  
+10. Klicken Sie in der Zone mit dem Webpart auf das Menü **Bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, zeigen Sie auf **Berichts Definitionen erhalten von**, und wählen Sie dann **Dokumente**aus.  
   
 11. Checken Sie Ihre Änderungen ein, und speichern Sie die Seite.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Fügen Sie das Berichts-Viewer-Webpart einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus hinzu&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Anpassen des Berichts-Viewer-Webparts](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   

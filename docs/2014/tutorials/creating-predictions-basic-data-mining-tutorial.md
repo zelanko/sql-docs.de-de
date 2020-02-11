@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Vorhersagen (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
+title: Erstellen von Vorhersagen (Tutorial zu Data Mining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,35 +11,35 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597533"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Erstellen von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
-  Nachdem Sie entschieden, dass Sie mit den Ergebnissen zufrieden sind und die Genauigkeit Ihrer Miningmodelle getestet haben, können Sie Sie vorhersagen erzeugen, mit dem Generator für Vorhersageabfragen auf die **Miningmodellvorhersage** Registerkarte im Data Mining Designer.  
+  Nachdem Sie die Genauigkeit der Mining Modelle getestet haben und sich entschieden haben, dass Sie mit den Ergebnissen zufrieden sind, können Sie Vorhersagen generieren, indem Sie die Vorhersage Abfrage-Generator auf der Registerkarte **Mining Modellvorhersage** im Data Mining-Designer verwenden.  
   
- Der Generator für Vorhersageabfragen verfügt über drei Sichten. Mit der **Entwurf** und **Abfrage** Ansichten können Sie erstellen und überprüfen Sie Ihre Abfrage. Sie können dann führen Sie die Abfrage und Anzeigen der Ergebnisse in die **Ergebnis** anzeigen.  
+ Der Generator für Vorhersageabfragen verfügt über drei Sichten. Mit den **Entwurfs** -und **Abfrage** Ansichten können Sie die Abfrage erstellen und untersuchen. Anschließend können Sie die Abfrage ausführen und die Ergebnisse in der **Ergebnis** Ansicht anzeigen.  
   
- Alle Vorhersageabfragen verwenden die DMX-Programmiersprache, die Kurzform für Data Mining Extensions (Data Mining-Erweiterungen). DMX hat eine ähnliche Syntax wie T-SQL, wird jedoch für Abfragen von Data Mining-Objekten verwendet. Obwohl DMX-Syntax nicht kompliziert ist, verwenden Sie einen Abfrage-Generator wie diesem oder in der [SQL Server Data Mining-Add-Ins für Office](../../2014/analysis-services/data-mining/sql-server-data-mining-add-ins-for-office.md), ist es einfacher, auswählen von Eingaben, und Erstellen von Ausdrücken, daher wird dringend empfohlen, Sie erfahren, die Grundlagen.  
+ Alle Vorhersageabfragen verwenden die DMX-Programmiersprache, die Kurzform für Data Mining Extensions (Data Mining-Erweiterungen). DMX hat eine ähnliche Syntax wie T-SQL, wird jedoch für Abfragen von Data Mining-Objekten verwendet. Obwohl die DMX-Syntax nicht kompliziert ist, wird die Auswahl von Eingaben und buildausdrücken mit einem Abfrage-Generator wie diesem oder dem in den [SQL Server Data Mining-Add-Ins für Office](../../2014/analysis-services/data-mining/sql-server-data-mining-add-ins-for-office.md)erheblich vereinfacht. Daher wird dringend empfohlen, die Grundlagen zu erlernen.  
   
 ## <a name="creating-the-query"></a>Erstellen einer Abfrage  
  Der erste Schritt beim Erstellen einer Vorhersageabfrage ist die Auswahl eines Miningmodells und einer Eingabetabelle.  
   
 #### <a name="to-select-a-model-and-input-table"></a>So wählen Sie ein Modell und eine Eingabetabelle aus  
   
-1.  Auf der **Miningmodellvorhersage** -Registerkarte des Data Mining-Designers in der **Miningmodell** auf **Modell auswählen**.  
+1.  Klicken Sie im Data Mining-Designer auf der Registerkarte **Mining Modellvorhersage** im Feld **Mining Modell** auf **Modell auswählen**.  
   
-2.  In der **Miningmodell auswählen** Dialogfeld navigieren Sie zur Struktur der **Targeted Mailing** , erweitern Sie die Struktur, wählen `TM_Decision_Tree`, und klicken Sie dann auf **OK**.  
+2.  Navigieren Sie im Dialogfeld **Mining Modell auswählen** durch die Struktur zur Ziel- **Mailing** -Struktur, erweitern Sie die Struktur, `TM_Decision_Tree`wählen Sie aus, und klicken Sie dann auf **OK**.  
   
-3.  In der **Eingabetabelle(n)** auf **Falltabelle auswählen**.  
+3.  Klicken Sie im Feld **Eingabe Tabelle (n) auswählen** auf **Fall Tabelle auswählen**.  
   
-4.  In der **Tabelle auswählen** Dialogfeld die **Datenquelle** wählen Sie die Datenquellensicht [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
+4.  Wählen Sie im Dialogfeld **Tabelle auswählen** in der Liste **Datenquelle** die Datenquellen Sicht [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]aus.  
   
-5.  In **Tabellen-/Sichtname**, wählen die **ProspectiveBuyer (Dbo)** Tabelle, und klicken Sie dann auf **OK**.  
+5.  Wählen Sie unter **Tabellen-/Sichtname**die Tabelle **ProspectiveBuyer (dbo)** aus, und klicken Sie dann auf **OK**.  
   
-     Die `ProspectiveBuyer` Tabelle am ehesten entspricht der **vTargetMail** Falltabelle.  
+     Die `ProspectiveBuyer` Tabelle ähnelt am ehesten der Fall Tabelle **vTargetMail** .  
   
 ## <a name="mapping-the-columns"></a>Zuordnen der Spalten  
  Wenn Sie die Eingabetabelle ausgewählt haben, erstellt der Generator für Vorhersageabfragen eine Standardzuordnung zwischen dem Miningmodell und der Eingabetabelle, die auf den Spaltennamen basiert. Mindestens eine Spalte in der Struktur muss mit einer Spalte in den externen Daten übereinstimmen.  
@@ -49,66 +49,66 @@ ms.locfileid: "67597533"
   
 #### <a name="to-map-the-inputs-to-the-model"></a>So ordnen Sie dem Modell die Eingaben zu  
   
-1.  Mit der rechten Maustaste Verbindungslinien zwischen den **Miningmodell** Fenster aus, um die **Eingabetabelle(n) auswählen** , und wählen **Verbindungen ändern**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Zeilen, die das Fenster **Mining Modell** mit dem Fenster **Eingabe Tabelle auswählen** verbinden, und wählen Sie **Verbindungen ändern**aus.  
   
-     Beachten Sie, dass nicht jede Spalte zugeordnet wird. Wir werden die Zuordnungen hinzufügen, für mehrere **Tabellenspalten**. Wir generieren außerdem eine neue Geburtsdatumsspalte, die auf der aktuellen Datumsspalte basiert, um die Übereinstimmung zwischen den Spalten zu erhöhen.  
+     Beachten Sie, dass nicht jede Spalte zugeordnet wird. Wir fügen Zuordnungen für mehrere **Tabellen Spalten**hinzu. Wir generieren außerdem eine neue Geburtsdatumsspalte, die auf der aktuellen Datumsspalte basiert, um die Übereinstimmung zwischen den Spalten zu erhöhen.  
   
-2.  Klicken Sie unter **Tabellenspalte**, klicken Sie auf die `Bike Buyer` Zelle, und wählen Sie aus der Dropdownliste ProspectiveBuyer.Unknown.  
+2.  Klicken Sie unter **Tabellenspalte**auf `Bike Buyer` die Zelle, und wählen Sie ProspectiveBuyer. Unknown aus der Dropdown Liste aus.  
   
      Dies ordnet die vorhersagbare Spalte [Bike Buyer] einer Eingabetabellenspalte zu.  
   
 3.  Klicken Sie auf **OK**.  
   
-4.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **Targeted Mailing** Datenquellensicht und wählen Sie **Ansicht-Designer**.  
+4.  Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf die gewünschte **Mailing** Datenquellen Sicht, und wählen Sie **Ansicht-Designer**aus.  
   
-5.  Mit der rechten Maustaste in der Tabelle ProspectiveBuyer, und wählen Sie **neue benannte Berechnung**.  
+5.  Klicken Sie mit der rechten Maustaste auf die Tabelle ProspectiveBuyer, und wählen Sie **neue benannte Berechnung**aus.  
   
-6.  In der **benannte Berechnung erstellen** im Dialogfeld für **Spaltenname**, Typ `calcAge`.  
+6.  Geben `calcAge`Sie im Dialogfeld **benannte Berechnung erstellen** im Feld **Spaltenname den Namen**ein.  
   
-7.  Für **Beschreibung**, Typ **Berechnen des Alters basierend auf "BirthDate"** .  
+7.  Geben **** Sie als Beschreibung **Age date based on BirthDate**ein.  
   
-8.  In der **Ausdruck** geben `DATEDIFF(YYYY,[BirthDate],getdate())` , und klicken Sie dann auf **OK**.  
+8.  Geben `DATEDIFF(YYYY,[BirthDate],getdate())` Sie im Feld **Ausdruck** ein, und klicken Sie dann auf **OK**.  
   
-     Da in die Eingabetabelle keine **Alter** Spalte im Modell entspricht Sie können diesen Ausdruck kundenalter auf Grundlage der Spalte "BirthDate" in der Eingabetabelle berechnen. Da **Alter** als die meisten fahrradkäufen identifiziert wurde Spalte für den Kauf eines Fahrrads, müssen sie sowohl im Modell und in der Eingabetabelle vorhanden.  
+     Da die Eingabe Tabelle keine **Alters** Spalte enthält, die der Tabelle im Modell entspricht, können Sie diesen Ausdruck verwenden, um das Kunden Alter anhand der Spalte BirthDate in der Eingabe Tabelle zu berechnen. Da **Age** als die einflussreichste Spalte für die Vorhersage von Fahrrad Käufen identifiziert wurde, muss es sowohl im Modell als auch in der Eingabe Tabelle vorhanden sein.  
   
-9. Wählen Sie im Data Mining-Designer die **Miningmodellvorhersage** Registerkarte, und öffnen Sie erneut die **Verbindungen ändern** Fenster.  
+9. Wählen Sie im Data Mining-Designer die Registerkarte **Mining Modellvorhersage** aus, und öffnen Sie das Fenster **Verbindungen ändern** erneut.  
   
-10. Klicken Sie unter **Tabellenspalte**, klicken Sie auf die **Alter** Zelle, und wählen Sie aus der Dropdownliste ProspectiveBuyer.calcAge.  
+10. Klicken Sie unter **Tabellenspalte**auf die Zelle **Age** , und wählen Sie ProspectiveBuyer. CalcAge aus der Dropdown Liste aus.  
   
     > [!WARNING]  
-    >  Wenn die Spalte in der Liste nicht angezeigt wird, müssen Sie u. U. die Definition der im Designer geladenen Datenquellensicht aktualisieren. Zu diesem Zweck, von der **Datei** , wählen Sie im Menü **alle speichern**, und klicken Sie dann das Schließen und öffnen Sie das Projekt in den Designer erneut.  
+    >  Wenn die Spalte in der Liste nicht angezeigt wird, müssen Sie u. U. die Definition der im Designer geladenen Datenquellensicht aktualisieren. Wählen Sie hierzu im Menü **Datei** die Option **Alle speichern**aus, und schließen Sie dann das Projekt im Designer, und öffnen Sie es erneut.  
   
 11. Klicken Sie auf **OK**.  
   
-## <a name="designing-the-prediction-query"></a>Entwerfen die Vorhersageabfrage  
+## <a name="designing-the-prediction-query"></a>Entwerfen der Vorhersage Abfrage  
   
-1.  Die erste Schaltfläche auf der Symbolleiste des der **Miningmodellvorhersage** Registerkarte ist die **zur Entwurfssicht abfrageentwurfssicht wechseln / zur ergebnissicht wechseln / zur Abfragesicht** Schaltfläche. Klicken Sie auf den Pfeil nach unten, klicken Sie auf diese Schaltfläche, und wählen **Entwurf**.  
+1.  Die erste Schaltfläche auf der Symbolleiste der Registerkarte **Mining Modellvorhersage** ist die Schaltfläche **zur Entwurfs Sicht wechseln/zur Ergebnis Sicht wechseln/zur Abfrage Ansicht wechseln** . Klicken Sie auf der Schaltfläche auf den Pfeil nach unten, und wählen Sie **Entwurf**aus.  
   
-2.  Im Raster auf die **Miningmodellvorhersage** Registerkarte, klicken Sie auf die Zelle in der ersten leeren Zeile in der **Quelle** Spalte, und wählen Sie dann **Vorhersagefunktion**.  
+2.  Klicken Sie im Raster auf der Registerkarte **Mining Modellvorhersage** auf die Zelle in der ersten leeren Zeile in der Spalte **Quelle** , und wählen Sie dann **Vorhersagefunktion**aus.  
   
-3.  In der **Vorhersagefunktion** -Zeile in der **Feld** Spalte `PredictProbability`.  
+3.  Wählen Sie `PredictProbability`in der Zeile **Vorhersagefunktion** in der Spalte **Feld** den Wert aus.  
   
-     In der **Alias** Spalte mit der gleichen Zeile Typ **Wahrscheinlichkeit des Ergebnisses**.  
+     Geben Sie in der Spalte **Alias** der gleichen Zeile die **Wahrscheinlichkeit für Ergebnis**ein.  
   
-4.  Von der **Miningmodell** oben im Fenster auswählen, und ziehen Sie [Bike Buyer] in der **Kriterium/Argument** Zelle.  
+4.  Wählen Sie im obigen Fenster **Mining Modell** die Option [Bike Buyer] aus, und ziehen Sie Sie in die Zelle **Kriterium/Argument** .  
   
-     Wenn Sie die Maustaste loslassen, [TM_Decision_Tree]. [Bike Buyer] angezeigt wird, der **Kriterium/Argument** Zelle.  
+     Wenn Sie los gehen, [TM_Decision_Tree]. [Bike Buyer] wird in der Zelle " **Kriterium/Argument** " angezeigt.  
   
-     Hierdurch wird die Zielspalte für die `PredictProbability`-Funktion angegeben. Weitere Informationen zu Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; Funktionsverweis](/sql/dmx/data-mining-extensions-dmx-function-reference).  
+     Hierdurch wird die Zielspalte für die `PredictProbability`-Funktion angegeben. Weitere Informationen zu Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Klicken Sie auf die nächste leere Zeile in der **Quelle** Spalte, und wählen Sie dann **TM_Decision_Tree** Mining-Modell.  
+5.  Klicken Sie in der Spalte **Quelle** auf die nächste leere Zeile, und wählen Sie dann **TM_Decision_Tree** Mining Modell aus.  
   
-6.  In der `TM_Decision_Tree` -Zeile in der **Feld** Spalte `Bike Buyer`.  
+6.  Wählen Sie `TM_Decision_Tree` `Bike Buyer`in der Zeile in der Spalte **Feld** den Wert aus.  
   
-7.  In der `TM_Decision_Tree` -Zeile in der **Kriterium/Argument** Spalte, Datentyp `=1`.  
+7.  Geben `=1`Sie `TM_Decision_Tree` in der Zeile in der Spalte **Kriterium/Argument** den Namen ein.  
   
-8.  Klicken Sie auf die nächste leere Zeile in der **Quelle** Spalte, und wählen Sie dann **ProspectiveBuyer-Tabelle**.  
+8.  Klicken Sie in der Spalte **Quelle** auf die nächste leere Zeile, und wählen Sie dann **ProspectiveBuyer Table**aus.  
   
-9. In der `ProspectiveBuyer` -Zeile in der **Feld** Spalte **ProspectiveBuyerKey**.  
+9. Wählen Sie `ProspectiveBuyer` in der Zeile in der Spalte **Feld** die Option **ProspectiveBuyerKey**aus.  
   
      Damit wird der Vorhersageabfrage ein eindeutiger Bezeichner hinzugefügt, sodass Sie feststellen können, wer wahrscheinlich ein Fahrrad kaufen wird und wer nicht.  
   
-10. Fügen Sie dem Raster fünf weitere Zeilen hinzu. Wählen Sie für jede Zeile **ProspectiveBuyer-Tabelle** als die **Quelle** und fügen Sie die folgenden Spalten in der **Feld** Zellen:  
+10. Fügen Sie dem Raster fünf weitere Zeilen hinzu. Wählen Sie für jede Zeile **ProspectiveBuyer Table** als **Quelle** aus, und fügen Sie dann die folgenden Spalten in den **Feld** Zellen hinzu:  
   
     -   calcAge  
   
@@ -122,54 +122,54 @@ ms.locfileid: "67597533"
   
  Führen Sie zum Schluss die Abfrage aus, und durchsuchen Sie die Ergebnisse.  
   
- Die **Generator für Vorhersageabfragen** umfasst zusätzlich folgende Steuerelemente:  
+ Die **Vorhersage Abfrage-Generator** enthält auch die folgenden Steuerelemente:  
   
--   **Anzeigen** Kontrollkästchen  
+-   Kontrollkästchen **anzeigen**  
   
      Ermöglicht das Entfernen von Klauseln aus der Abfrage, ohne sie aus dem Designer zu löschen. Diese Funktion kann bei komplexen Abfragen hilfreich sein, wenn Sie die Syntax beibehalten und keine DMX kopieren und in das Fenster einfügen möchten.  
   
--   **Gruppieren**  
+-   **Gruppe**  
   
      Fügt eine öffnende (linke) Klammer am Anfang der ausgewählten Zeile oder eine schließende (rechte) Klammer am Ende der aktuellen Zeile ein.  
   
--   **UND/ODER**  
+-   **und/oder**  
   
      Fügt den `AND`-Operator oder `OR`-Operator unmittelbar nach der aktuellen Funktion oder der Spalte ein.  
   
 #### <a name="to-run-the-query-and-view-results"></a>So führen Sie die Abfrage aus und zeigen die Ergebnisse an  
   
-1.  In der **Miningmodellvorhersage** Registerkarte die **Ergebnis** Schaltfläche.  
+1.  Wählen Sie auf der Registerkarte **Mining Modellvorhersage** die **Ergebnis** Schaltfläche aus.  
   
 2.  Nachdem die Abfrage ausgeführt wurde und die Ergebnisse angezeigt werden, können Sie die Ergebnisse überprüfen.  
   
-     Die **Miningmodellvorhersage** Registerkarte zeigt Kontaktinformationen für potenzielle Kunden, die wahrscheinlich ein Fahrrad kaufen werden. Die **Wahrscheinlichkeit des Ergebnisses** Spalte gibt an, die Wahrscheinlichkeit die Vorhersage zutrifft. Anhand dieser Ergebnisse können Sie entscheiden, welche potenziellen Kunden beim Targeted Mailing angeschrieben werden sollen.  
+     Auf der Registerkarte **Mining Modellvorhersage** werden Kontaktinformationen für potenzielle Kunden angezeigt, die wahrscheinlich Fahrrad Käufer sind. Die **Wahrscheinlichkeit der Ergebnis** Spalte gibt die Wahrscheinlichkeit an, dass die Vorhersage richtig ist. Anhand dieser Ergebnisse können Sie entscheiden, welche potenziellen Kunden beim Targeted Mailing angeschrieben werden sollen.  
   
 3.  An diesem Punkt können Sie die Ergebnisse speichern. Hierfür stehen drei Möglichkeiten zur Verfügung:  
   
-    -   Mit der rechten Maustaste einer Zeile mit Daten in den Ergebnissen, und wählen **Kopie** nur für diesen Wert (und die Spaltenüberschrift) in die Zwischenablage zu speichern.  
+    -   Klicken Sie mit der rechten Maustaste auf eine Daten Zeile in den Ergebnissen, und wählen Sie **Kopieren** aus, um nur diesen Wert (und die Spaltenüberschrift) in der Zwischenablage zu speichern.  
   
-    -   Mit der rechten Maustaste in eine beliebige Zeile in den Ergebnissen, und wählen **Alles kopieren** um das gesamte Resultset, einschließlich Spaltenüberschriften, in die Zwischenablage zu kopieren.  
+    -   Klicken Sie mit der rechten Maustaste auf eine beliebige Zeile in den Ergebnissen, und wählen Sie **Alle kopieren** , um das gesamte Resultset einschließlich der Spaltenüberschriften in die Zwischenablage zu kopieren.  
   
-    -   Klicken Sie auf **Abfrageergebnis speichern** zum Speichern der Ergebnisse direkt in einer Datenbank wie folgt:  
+    -   Klicken Sie auf **Abfrageergebnis speichern** , um die Ergebnisse wie folgt direkt in einer Datenbank zu speichern:  
   
-        1.  In der **speichern Abfrageergebnis der Data Mining** im Dialogfeld Wählen Sie eine Datenquelle oder eine neue Datenquelle zu definieren.  
+        1.  Wählen Sie im Dialogfeld **Ergebnis der Data Mining-Abfrage speichern** eine Datenquelle aus, oder definieren Sie eine neue Datenquelle.  
   
         2.  Geben Sie einen Namen für die Tabelle ein, in die die Abfrageergebnisse eingefügt werden.  
   
-        3.  Verwenden Sie die Option **zur Datenquellensicht hinzufügen**, um eine Tabelle erstellen, und fügen Sie es einer vorhandenen Datenquellensicht hinzu. Dies ist nützlich, wenn Sie alle verknüpfte Tabellen für bleiben soll ein Modell wie z. B. Trainingsdaten, vorhersagequelldaten und Abfrage Ergebnisse-die gleiche Datenquellensicht in.  
+        3.  Verwenden Sie die Option zur Datenquellen Sicht **Hinzufügen**, um die Tabelle zu erstellen und zu einer vorhandenen Datenquellen Sicht hinzuzufügen. Dies ist hilfreich, wenn Sie alle verknüpften Tabellen für ein Modell (z. b. Trainingsdaten, Vorhersage Quelldaten und Abfrageergebnisse) in derselben Datenquellen Sicht beibehalten möchten.  
   
-        4.  Verwenden Sie die Option **überschreiben, falls vorhanden**, um eine vorhandene Tabelle mit den neuesten Ergebnissen zu aktualisieren.  
+        4.  Verwenden Sie die Option über **schreiben, falls vorhanden**, um eine vorhandene Tabelle mit den neuesten Ergebnissen zu aktualisieren.  
   
              Sie müssen die Option verwenden, um die Tabelle zu überschreiben, falls Sie der Vorhersageabfrage Spalten hinzugefügt, die Namen oder Datentypen von Spalten in der Vorhersageabfrage geändert oder ALTER-Anweisungen für die Zieltabelle ausgeführt haben.  
   
-             Auch wenn mehrere Spalten den gleichen Namen (z. B. den Standardspaltennamen **Ausdruck**) müssen Sie einen Alias für die Spalten mit doppelten Namen erstellen, oder es wird ein Fehler ausgelöst werden, wenn der Designer versucht wird, um die Ergebnisse in SQL zu speichern Server. Dies liegt daran, dass mehrere Spalten unter SQL Server nicht über denselben Namen verfügen dürfen.  
+             Wenn mehrere Spalten denselben Namen aufweisen (z. b. den standardmäßigen Spaltennamen **Ausdruck**), müssen Sie außerdem einen Alias für die Spalten mit doppelten Namen erstellen, oder es wird ein Fehler ausgelöst, wenn der Designer versucht, die Ergebnisse in SQL Server zu speichern. Dies liegt daran, dass mehrere Spalten unter SQL Server nicht über denselben Namen verfügen dürfen.  
   
-             Weitere Informationen finden Sie unter [Data Mining-Abfrage Ergebnis im Dialogfeld Speichern &#40;Miningmodellvorhersage-Ansicht&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md).  
+             Weitere Informationen finden Sie unter [Dialog Feld "Ergebnisse der Data Mining-Abfrage speichern" &#40;Mining Modell-Vorhersage Ansicht&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md).  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Verwenden von Drillthrough für Strukturdaten &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Verwenden von Drillthrough für Strukturdaten &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

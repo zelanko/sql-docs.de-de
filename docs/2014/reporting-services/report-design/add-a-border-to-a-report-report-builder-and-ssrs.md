@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106882"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Bericht (Berichts-Generator und SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66106882"
 1.  Klicken Sie mit der rechten Maustaste außerhalb irgendeines Elements auf die Kopfzeile, und klicken Sie anschließend auf **Kopfzeileneigenschaften**. Fügen Sie auf der Registerkarte **Rahmen** einen linken, oberen und rechten Rahmen in dem gewünschten Format hinzu.  
   
     > [!NOTE]  
-    >  Wenn Sie in Ihrem Bericht keine Kopfzeilen verwenden, Sie Rahmen nur um den Berichtshauptteil platzieren können oder Sie können Header hinzufügen der **einfügen** Registerkarte.  
+    >  Wenn Sie in Ihrem Bericht keine Kopfzeilen verwenden, können Sie Rahmen nur um den Berichts Hauptteil platzieren, oder Sie können über die Registerkarte **Einfügen** Header hinzufügen.  
   
 2.  Klicken Sie im Hauptteil mit der rechten Maustaste außerhalb irgendeines Elements auf die Entwurfsoberfläche, und klicken Sie auf **Eigenschaften des Hauptteils**. Fügen Sie auf der Registerkarte **Rahmen** einen linken und rechten Rahmen in dem gewünschten Format hinzu.  
   
 3.  Klicken Sie mit der rechten Maustaste außerhalb irgendeines Elements auf die Fußzeile, und klicken Sie anschließend auf **Fußzeileneigenschaften**. Fügen Sie auf der Registerkarte **Rahmen** einen linken, unteren und rechten Rahmen in dem gewünschten Format hinzu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

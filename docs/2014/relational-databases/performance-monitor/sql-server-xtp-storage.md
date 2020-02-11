@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50e62a9232690deb368096723f428118e9de7aa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151155"
 ---
 # <a name="xtp-storage"></a>XTP-Speicher
   Das Leistungsobjekt "XTP-Speicher" enthält Leistungsindikatoren für den XTP-Speicher in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Diese Tabelle beschreibt die **XTP-Speicher** Leistungsindikatoren.  
+ In dieser Tabelle werden die **XTP-Speicher** Indikatoren beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Geschlossene Prüfpunkte**|Die Anzahl der vom Online-Agent geschlossenen Prüfpunkte.|  
 |**Verarbeitete Prüfpunkte**|Die Anzahl der vom Offline-Prüfpunktthread verarbeiteten Prüfpunkte.|  
@@ -33,7 +33,7 @@ ms.locfileid: "63151155"
 |**Installierte Zusammenführungen**|Die Anzahl der erfolgreich installierten Zusammenführungen.|  
 |**Gesamtanzahl zusammengeführter Dateien**|Die Gesamtanzahl der zusammengeführten Quelldateien. Diese Anzahl kann verwendet werden, um die durchschnittliche Anzahl von Quelldateien in der Zusammenführung zu ermitteln.|  
   
-## <a name="see-also"></a>Siehe auch  
- [XTP &#40;In-Memory-OLTP&#41; -Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XTP-&#40;in-Memory-OLTP&#41; Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
   
   

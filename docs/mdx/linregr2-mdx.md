@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905522"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 
 
-  Berechnet die lineare Regression einer Menge und gibt den Bestimmungskoeffizienten, R<sup>2</sup>.  
+  Berechnet die lineare Regression einer Menge und gibt den Koeffizienten der Bestimmung (R<sup>2</sup>) zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,26 +37,26 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt. Die vom Ausdruck zurückgegebene Zahl stellt den Wert für die X-Achse dar.  
   
-## <a name="remarks"></a>Hinweise  
- Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionszeile hat die folgende Gleichung, in denen eine die Neigung und b ist das Konstante Glied:  
+## <a name="remarks"></a>Bemerkungen  
+ Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionslinie weist die folgende Gleichung auf, wobei a für die Steigung und b das Abfangen ist:  
   
  y = ax+b  
   
- Die **LinRegR2** -Funktion wertet den angegebenen Setagainst den ersten numerischen Expressionto die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion die angegebene Menge für den zweiten numerischen Ausdruck, sofern angegeben, aus, um die Werte für die X-Achse zu erhalten. Wenn Sie den zweiten numerischen AusdruckIS nicht angegeben ist, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die x-Achse an. Die X-Axisargument nicht angegeben wird häufig mit der Time-Dimension verwendet.  
+ Die **LinRegR2** -Funktion wertet das angegebene Seton mit dem ersten numerischen Ausdruck aus, um die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion die angegebene Menge für den zweiten numerischen Ausdruck, sofern angegeben, aus, um die Werte für die X-Achse zu erhalten. Wenn das zweite numerische expressionis nicht angegeben ist, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die x-Achse. Für die Time-Dimension wird das X-Achsen-Argumenthäufig ausgelassen.  
   
- Nach dem Abrufen des Satzes von Punkten, die **LinRegR2** Funktionsergebnis ist eine das statistische Koeffizient R<sup>2</sup> , die die Übereinstimmung der linearen Gleichung mit den Punkten beschreibt.  
+ Nachdem Sie den Satz von Punkten erhalten haben, gibt die **LinRegR2** -Funktion den statistischen R<sup>2</sup> -Wert zurück, der die Anpassung der linearen Gleichung an die Punkte beschreibt.  
   
 > [!NOTE]  
->  Die **LinRegR2** Funktion ignoriert leere Zellen oder Zellen, die Text oder logische Werte enthalten. Zellen mit dem Wert Null (0) werden jedoch von der Funktion berücksichtigt.  
+>  Die **LinRegR2** -Funktion ignoriert leere Zellen oder Zellen, die Text oder logische Werte enthalten. Zellen mit dem Wert Null (0) werden jedoch von der Funktion berücksichtigt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt das statistische Koeffizient R<sup>2</sup> , die die Qualität der Übereinstimmung der linearen Gleichung mit den Punkten für die Unit Sales- und Store sales-Measures beschreibt.  
+ Im folgenden Beispiel wird die statistische R<sup>2</sup> zurückgegeben, die die Eignung der Formel für die lineare Regression an die Punkte für die Unit Sales-und Store Sales-Measures beschreibt.  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

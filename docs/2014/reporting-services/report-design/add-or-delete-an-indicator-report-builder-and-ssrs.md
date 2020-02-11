@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106578"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Hinzufügen oder Löschen eines Indikators (Berichts-Generator und SSRS)
@@ -24,17 +24,17 @@ ms.locfileid: "66106578"
   
  Beim ersten Hinzufügen eines Indikators wird er standardmäßig so konfiguriert, dass Prozentsätze als Maßeinheiten verwendet werden. Die Prozentbereiche sind gleichmäßig über die Elemente des Indikatorsatzes verteilt, und der vom Indikator angezeigte Wertebereich entspricht dem übergeordneten Element des Indikators, z. B. einer Tabelle oder Matrix.  
   
- Sie können die Werte und die Status von Indikatoren aktualisieren. Weitere Informationen finden Sie unter den folgenden Themen:  
+ Sie können die Werte und die Status von Indikatoren aktualisieren. Weitere Informationen finden Sie in den folgenden Themen:  
   
--   [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Ändern von Indikator Symbolen und Indikator Sätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
 -   [Festlegen und Konfigurieren von Maßeinheiten &#40;Berichts-Generator und SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Festlegen des Synchronisierungsbereichs &#40;Berichts-Generator und SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Festlegen des Synchronisierungs Bereichs &#40;Berichts-Generator und SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Da ein Indikator im Messgerätebereich positioniert wird, müssen Sie den Indikator statt des Bereichs auswählen, wenn Sie den Indikator mit dem Dialogfeld **Indikatoreigenschaften** oder dem Bereich **Eigenschaften** konfigurieren möchten. Die folgende Abbildung enthält einen ausgewählten Indikator in dessen Messgerätbereich.  
   
- ![rs_MessgerätBereichMitIndikator](../media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
+ ![rs_GaugePanelWithIndicator](../media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
 > [!NOTE]  
 >  Abhängig von der Spaltenbreite und Länge der Datenwerte kann der Text in Tabellen- oder Matrixzellen umbrochen und in mehreren Zeilen angezeigt werden. In diesem Fall kann das Indikatorsymbol gestreckt und in der Form verändert werden, wodurch u. U. seine Lesbarkeit beeinträchtigt wird. Platzieren Sie den Indikator in einem Rechteck, um sicherzustellen, dass das Symbol nicht verzerrt wird.  
@@ -73,7 +73,7 @@ ms.locfileid: "66106578"
   
 2.  Klicken Sie auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

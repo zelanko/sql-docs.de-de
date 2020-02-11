@@ -1,5 +1,5 @@
 ---
-title: Geben Sie für die Verwendung mit Zeitintelligenz (SSAS – tabellarisch) markieren als Datumstabelle | Microsoft-Dokumentation
+title: Angeben von "als Datums Tabelle markieren" zur Verwendung mit Zeit Intelligenz (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284881"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Angeben von "Als Datumstabelle markieren" zur Verwendung mit Zeitintelligenz (SSAS – tabellarisch)
@@ -36,11 +36,11 @@ ms.locfileid: "67284881"
   
 1.  Klicken Sie im Modell-Designer auf die Datumstabelle.  
   
-2.  Klicken Sie im Menü **Tabelle** auf **Datum**, und klicken Sie dann auf **Als Datumstabelle markieren**  
+2.  Klicken Sie im Menü **Tabelle** auf **Datum**, und klicken Sie dann auf **als Datums Tabelle markieren** .  
   
-3.  Wählen Sie im Dialogfeld **Als Datumstabelle markieren** im Listenfeld **Datum** eine Spalte aus, die als eindeutiger Bezeichner verwendet wird. Diese Spalte muss eindeutige Werte enthalten und sollte den Date-Datentyp aufweisen. Zum Beispiel:  
+3.  Wählen Sie im Dialogfeld **Als Datumstabelle markieren** im Listenfeld **Datum** eine Spalte aus, die als eindeutiger Bezeichner verwendet wird. Diese Spalte muss eindeutige Werte enthalten und sollte den Date-Datentyp aufweisen. Beispiel:  
   
-    |date|  
+    |Date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -50,8 +50,8 @@ ms.locfileid: "67284881"
   
 4.  Erstellen Sie ggf. Beziehungen zwischen Faktentabellen und der Datumstabelle.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berechnungen &#40;SSAS – tabellarisch&#41;](calculations-ssas-tabular.md)   
- [Zeitintelligenzfunktionen &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Berechnungen &#40;tabellarischen SSAS-&#41;](calculations-ssas-tabular.md)   
+ [Zeit Intelligenz Funktionen &#40;DAX-&#41;](/dax/time-intelligence-functions-dax)  
   
   

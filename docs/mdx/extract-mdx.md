@@ -1,5 +1,5 @@
 ---
-title: Extrahieren (MDX) | Microsoft-Dokumentation
+title: Extract (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906041"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
@@ -37,13 +37,13 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Hierarchie zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **extrahieren** Funktionsergebnis ist eine Gruppe, die aus Tupeln aus den extrahierten Hierarchieelementen besteht. Zu jedem Tupel in der angegebenen Menge werden die Elemente der angegebenen Hierarchien in neue Tupel im Resultset extrahiert. Doppelte Tupel werden von der Funktion immer entfernt.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **extract** -Funktion gibt eine Menge zurück, die aus Tupeln aus den extrahierten Hierarchie Elementen besteht. Zu jedem Tupel in der angegebenen Menge werden die Elemente der angegebenen Hierarchien in neue Tupel im Resultset extrahiert. Doppelte Tupel werden von der Funktion immer entfernt.  
   
- Die **extrahieren** Funktion führt die umkehraktion der [Crossjoin](../mdx/crossjoin-mdx.md) Funktion.  
+ Die **extract** -Funktion führt die umgekehrte Aktion der [Crossjoin](../mdx/crossjoin-mdx.md) -Funktion aus.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgende Abfrage zeigt, wie Sie mit der **extrahieren** Funktion auf eine Menge von Tupeln, die zurückgegeben werden, indem die **NonEmpty** Funktion:  
+ Die folgende Abfrage zeigt, wie die **extract** -Funktion für eine Menge von Tupeln verwendet wird, die von der **NonEmpty** -Funktion zurückgegeben werden:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -77,7 +77,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

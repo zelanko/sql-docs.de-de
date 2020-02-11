@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Task DDL-Task-Editor (Seite Allgemein) | Microsoft-Dokumentation
+title: Analysis Services Editor für den Task ' DDL ausführen ' (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061546"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite Allgemein)
-  Auf der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie den Namen und eine Beschreibung des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Tasks „DDL ausführen“ angeben.  
+  Auf der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie den Namen und eine Beschreibung des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tasks „DDL ausführen“ angeben.  
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Task „DDL ausführen“ an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "66061546"
  **Beschreibung**  
  Geben Sie eine Beschreibung des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tasks 'DDL ausführen' ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Analysis Services-Task „DDL ausführen“ &#40;Seite „DDL“&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
+ [Analysis Services DDL-Task-Editor &#40;DDL-Seite ausführen&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [Ablaufsteuerung](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [XML for Analysis-Referenz &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Analysis Services Skriptsprache &#40;ASSL&#41; Referenz](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XML for Analysis &#40;XMLA&#41; Verweis](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

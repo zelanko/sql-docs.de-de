@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Spalten zu einer Tabelle (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Hinzufügen von Spalten zu einer Tabelle (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067768"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Hinzufügen von Spalten zu einer Tabelle (SSAS – tabellarisch)
@@ -61,8 +61,8 @@ ms.locfileid: "66067768"
   
 2.  Klicken Sie auf die oberste Zelle, geben Sie einen Namen ein, und drücken Sie die EINGABETASTE.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabelleneigenschaften bearbeiten &#40; Dialogfeld, SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen &#40;SSAS – tabellarisch&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellen Eigenschaften bearbeiten (Dialog Feld) &#40;SSAS-&#41;](../edit-table-properties-dialog-box-ssas.md)   
+ [Ändern von Tabellen-, Spalten-oder Zeilen Filter Zuordnungen &#40;tabellarischen SSAS-&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   
