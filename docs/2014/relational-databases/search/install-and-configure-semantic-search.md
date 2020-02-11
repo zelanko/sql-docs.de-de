@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637919"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installieren und Konfigurieren der semantischen Suche
@@ -57,7 +57,7 @@ GO
  Die Datenbank für semantische Sprachstatistik wird nicht vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramm installiert. Führen Sie zum Einrichten der semantischen Sprachstatistikdatenbank als erforderliche Komponente für die semantische Indizierung folgende Aufgaben aus:  
   
  **1. Installieren Sie die Datenbank für semantische Sprachstatistik.**  
- 1.  Suchen Sie die semantische Sprachstatistikdatenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationsmedium, oder laden Sie sie aus dem Internet herunter.  
+ 1.  Suchen Sie die semantische Sprachstatistikdatenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium, oder laden Sie sie aus dem Internet herunter.  
   
     -   Suchen Sie das Windows Installer-Paket **SemanticLanguageDatabase.msi** auf den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedien. Suchen Sie je nach Zielsystem die 32-Bit- oder 64-Bit-Version des Installationspakets. Der Name des entsprechenden Ordners identifiziert die 32-Bit- oder 64-Bit-Version der Datei; der Dateiname selbst ist für beide Versionen gleich.  
   
@@ -74,7 +74,7 @@ GO
 > [!IMPORTANT]  
 >  Beim Extrahieren der semantischen Sprachstatistikdatenbank werden der Datenbankdatei und der Protokolldatei am Standardspeicherort im Dateisystem eingeschränkte Berechtigungen zugewiesen. Folglich verfügen Sie möglicherweise nicht über die Berechtigung, die Datenbank anzufügen, wenn Sie diese am Standardspeicherort belassen. Tritt ein Fehler beim Versuch auf, die Datenbank anzufügen, verschieben Sie die Dateien, oder überprüfen Sie die Dateisystemberechtigungen, und korrigieren Sie diese entsprechend.  
   
- **2. Fügen Sie die Datenbank für die semantische Sprachstatistik an.**  
+ **2. Fügen Sie die Datenbank für die semantische sprach Statistik an.**  
  Fügen Sie die Datenbank zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder durch Aufrufen von [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) mit der **FOR ATTACH**-Syntax an. Weitere Informationen finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md).  
   
  Standardmäßig lautet der Name der Datenbank **semanticsdb**. Sie können der Datenbank beim Anfügen einen anderen Namen geben. Sie müssen diesen Namen angeben, wenn Sie die Datenbank im nachfolgenden Schritt registrieren.  
@@ -89,7 +89,7 @@ GO
   
  Bei diesem Codebeispiel wird davon ausgegangen, dass Sie die Datenbank von ihrem Standardspeicherort zu einem neuen Speicherort verschoben haben.  
   
- **3. Registrieren Sie die Datenbank für die semantische Sprachstatistik.**  
+ **3. registrieren Sie die Datenbank für die semantische sprach Statistik.**  
  Rufen Sie die gespeicherte Prozedur [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) auf, und geben Sie den Namen an, den die Datenbank beim Anfügen erhalten hat:  
   
 ```sql  

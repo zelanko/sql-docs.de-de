@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185801"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Bereitstellen geplanter Richtlinien auf mehreren Instanzen
@@ -28,37 +28,37 @@ ms.locfileid: "68185801"
   
  Sie führen diese Aufgaben auf dem Computer durch, auf dem Sie auch die vorherigen Aufgaben dieser Lektion durchgeführt haben.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen  
  Für diese Aufgabe gelten die folgenden Voraussetzungen:  
   
 -   Sie müssen die vorherigen Aufgaben dieser Lektion abgeschlossen haben.  
   
 -   Auf den Instanzen, auf denen Sie die geplanten Richtlinien bereitstellen möchten, muss [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] oder eine höhere Version ausgeführt werden. Die Automatisierung erfordert, dass die Richtlinien lokal gespeichert werden. Dies wird für ältere [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen als [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] nicht unterstützt.  
   
--   Die Server, in dem Sie die geplanten Richtlinien bereitstellen möchten, müssen im Fenster registrierte Server registriert werden, entweder in der **lokale Servergruppen** oder **zentrale Verwaltungsserver** Knoten. Weitere Informationen finden Sie unter den folgenden Themen:  
+-   Die Server, auf denen Sie die geplanten Richtlinien bereitstellen möchten, müssen in den registrierten Servern entweder in den **lokalen Server Gruppen** oder im Knoten für **zentrale Verwaltungs Server** registriert sein. Weitere Informationen finden Sie in den folgenden Themen:  
   
     -   [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
-    -   [Registrieren eines verbundenen Servers &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
+    -   [Registrieren Sie einen verbundenen Server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
   
     -   [Erstellen eines zentralen Verwaltungsservers und einer Servergruppe &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
 ### <a name="to-export-the-scheduled-policies-as-xml-files"></a>So exportieren Sie die geplanten Richtlinien als XML-Dateien  
   
-1.  Erweitern Sie auf dem Server, auf dem Sie geplante Richtlinien, in der vorherigen Aufgabe konfiguriert **Management**, erweitern Sie **richtlinienverwaltung**, und klicken Sie dann auf **Richtlinien**.  
+1.  Erweitern Sie auf dem Server, auf dem Sie in der vorherigen Aufgabe geplante Richtlinien konfiguriert haben, **Verwaltung**, **Richtlinien Verwaltung**, und klicken Sie dann auf **Richtlinien**.  
   
 2.  Klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer**.  
   
-3.  In der **Details zum Objekt-Explorer** Bereich, wählen Sie alle geplanten Best practices-Richtlinien, die auf andere Server über registrierte Server bereitgestellt werden soll.  
+3.  Wählen Sie im Bereich **Objekt-Explorer Details** alle geplanten Best Practices-Richtlinien aus, die Sie auf anderen Servern über registrierte Server bereitstellen möchten.  
   
     > [!NOTE]  
-    >  Klicken Sie auf die **Kategorie** Spaltenüberschrift, um die Richtlinien nach Kategorie sortieren.  
+    >  Sie können auf die Überschrift der **Kategorie** klicken, um die Richtlinien nach Kategorie zu sortieren.  
   
-4.  Mit der rechten Maustaste in der Auswahl, und klicken Sie dann auf **Richtlinie exportieren**.  
+4.  Klicken Sie mit der rechten Maustaste auf die Auswahl, und klicken Sie auf **Richtlinie exportieren**.  
   
-5.  Wenn Sie mehrere Richtlinien für den export ausgewählt haben. die **Ordner** Dialogfeld Wählen Sie einen Zielordner, oder erstellen Sie einen neuen Ordner. In dieser Lektion erstellen Sie einen neuen Ordner mit dem Pfad **C:\Scheduled_BP_Policies**, und klicken Sie dann auf **OK**.  
+5.  Wenn Sie mehrere Richtlinien für den Export ausgewählt haben, wählen Sie im Dialogfeld **Ordner suchen** einen Zielordner aus, oder erstellen Sie einen neuen Ordner. Erstellen Sie für diese Lektion einen neuen Ordner mit dem Pfad **c:\ Scheduled_BP_Policies**, und klicken Sie dann auf **OK**.  
   
-     Wenn Sie nur eine Richtlinie für den export ausgewählt. die **Richtlinie exportieren** Dialogfeld erstellen einen neuen Ordner mit dem Pfad **C:\Scheduled_BP_Policies**, klicken Sie auf **öffnen**, und klicken Sie dann auf **Speichern**.  
+     Wenn Sie nur eine Richtlinie für den Export ausgewählt haben, erstellen Sie im Dialogfeld **Richtlinie exportieren** einen neuen Ordner mit dem Pfad **c:\ Scheduled_BP_Policies**, klicken Sie auf **Öffnen**, und klicken Sie dann auf **Speichern**.  
   
      Die XML-Richtliniendateien werden am Speicherort des Ordners erstellt.  
   
@@ -66,38 +66,38 @@ ms.locfileid: "68185801"
   
 1.  Klicken Sie im Menü **Ansicht** auf **Registrierte Server**.  
   
-2.  Erweitern Sie **Datenbank-Engine**, erweitern Sie entweder **lokale Servergruppen** oder **zentrale Verwaltungsserver**, mit der rechten Maustaste des Knotens, der Sie die Richtlinien bereitstellen möchten, und klicken Sie dann Klicken Sie auf **Richtlinien importieren**.  
+2.  Erweitern Sie **Datenbank-Engine**, erweitern Sie entweder **lokale Server Gruppen** oder **zentrale Verwaltungs Server**, klicken Sie mit der rechten Maustaste auf den Knoten, für den Sie die Richtlinien bereitstellen möchten, und klicken Sie dann auf **Richtlinien importieren**.  
   
     > [!NOTE]  
-    >  Wenn Sie mit der rechten Maustaste **lokale Servergruppen** oder den zentralen Verwaltungsserver selbst, die Richtlinien werden für alle verwalteten Server bereitgestellt werden. Falls Sie mit der rechten Maustaste auf eine bestimmte Servergruppe klicken, werden die Richtlinien nur auf den Servern dieser Gruppe bereitgestellt. Falls Sie mit der rechten Maustaste auf einen bestimmten registrierten Server klicken, werden die Richtlinien nur auf diesem Server bereitgestellt.  
+    >  Wenn Sie mit der rechten Maustaste auf **lokale Server Gruppen** oder den zentralen Verwaltungs Server selbst klicken, werden die Richtlinien auf allen verwalteten Servern bereitgestellt. Falls Sie mit der rechten Maustaste auf eine bestimmte Servergruppe klicken, werden die Richtlinien nur auf den Servern dieser Gruppe bereitgestellt. Falls Sie mit der rechten Maustaste auf einen bestimmten registrierten Server klicken, werden die Richtlinien nur auf diesem Server bereitgestellt.  
   
-3.  Neben **zu importierende Dateien**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
+3.  Klicken Sie neben zu **importierende Dateien**auf die Schaltfläche mit den Auslassungs Punkten (**...**).  
   
-4.  In der **Richtlinie auswählen** (Dialogfeld), navigieren Sie zum Speicherort Ordners, dem Sie die geplanten Richtlinien gespeichert haben. In diesem Beispiel navigieren Sie zum Speicherort **C:\Scheduled_BP_Policies**.  
+4.  Navigieren Sie im Dialogfeld **Richtlinie auswählen** zum Speicherort des Ordners, in dem Sie die geplanten Richtlinien gespeichert haben. Navigieren Sie in diesem Beispiel zum Speicherort **c:\ Scheduled_BP_Policies**.  
   
-5.  Wählen Sie die Richtlinien, die Sie verwenden möchten, in die Zielinstanzen importieren, und klicken Sie dann auf **öffnen**.  
+5.  Wählen Sie die Richtlinien aus, die Sie in die Ziel Instanzen importieren möchten, und klicken Sie dann auf **Öffnen**.  
   
-6.  In der **Import** Dialogfeld die **Richtlinienstatus** wählen den gewünschten Richtlinienstatus. Sie können wählen, ob Sie den Richtlinienstatus beim Importieren beibehalten oder die Richtlinien aktivieren bzw. deaktivieren möchten. Denken Sie daran, dass die Richtlinien aktiviert sein müssen, wenn sie nach einem Zeitplan ausgeführt werden sollen.  
+6.  Wählen Sie im Dialogfeld **importieren** in der Liste **Richtlinien Status** den gewünschten Richtlinien Status aus. Sie können wählen, ob Sie den Richtlinienstatus beim Importieren beibehalten oder die Richtlinien aktivieren bzw. deaktivieren möchten. Denken Sie daran, dass die Richtlinien aktiviert sein müssen, wenn sie nach einem Zeitplan ausgeführt werden sollen.  
   
-7.  Klicken Sie auf **OK** die Richtlinien auf alle Zielinstanzen zu importieren.  
-  
-    > [!NOTE]  
-    >  Wenn Fehler vorliegen, die **Import** Dialogfeld nicht ausgeblendet. Klicken Sie auf die **Log** Seite, um die Meldungen zu prüfen. Klicken Sie auf **Abbrechen** um das Dialogfeld zu schließen.  
-  
-8.  Um die Richtlinien von einer Zielinstanz anzuzeigen, Verbinden mit der Instanz, Objekt-Explorer öffnen, erweitern Sie **Management**, und erweitern Sie dann **Richtlinien**. Daraufhin sollte die importierten Richtlinien in der **Richtlinien** Knoten. Sie können jeweils den Zeitplan anzeigen, indem Sie auf die einzelnen Richtlinien doppelklicken, oder Sie können die Einstellungen ändern.  
+7.  Klicken Sie auf **OK** , um die Richtlinien in alle Ziel Instanzen zu importieren.  
   
     > [!NOTE]  
-    >  Um nach der Ausführung einer geplanten Richtlinie die Auswertungsergebnisse anzuzeigen, öffnen Sie auf der Zielinstanz das Protokoll zum Richtlinienverlauf. Öffnen das Protokoll, mit der Maustaste **richtlinienverwaltung**, und klicken Sie dann auf **Versionsgeschichte**.  
+    >  Wenn Fehler auftreten, wird das Dialogfeld **importieren** nicht ausgeblendet. Klicken Sie auf die Seite **Protokoll** , um die Meldungen zu überprüfen. Klicken Sie auf **Abbrechen**, um das Dialogfeld zu schließen.  
+  
+8.  Um die Richtlinien von einer Ziel Instanz anzuzeigen, stellen Sie eine Verbindung mit der Instanz her, öffnen Sie Objekt-Explorer, erweitern Sie **Verwaltung**, und erweitern Sie dann **Richtlinien**. Die importierten Richtlinien sollten im Knoten **Richtlinien** angezeigt werden. Sie können jeweils den Zeitplan anzeigen, indem Sie auf die einzelnen Richtlinien doppelklicken, oder Sie können die Einstellungen ändern.  
+  
+    > [!NOTE]  
+    >  Um nach der Ausführung einer geplanten Richtlinie die Auswertungsergebnisse anzuzeigen, öffnen Sie auf der Zielinstanz das Protokoll zum Richtlinienverlauf. Um das Protokoll zu öffnen, klicken Sie mit der rechten Maustaste auf **Richtlinien Verwaltung**, und klicken Sie dann auf **Verlauf anzeigen**.  
   
 ## <a name="summary"></a>Zusammenfassung  
  In diesem Lernprogramm wurde gezeigt, wie Sie für eine oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bedarfsgesteuerte und geplante Auswertungen der Best Practices-Richtlinien durchführen.  
   
-## <a name="next"></a>Weiter  
- Dieses Lernprogramm ist beendet. Um zum Start zurückzukehren, finden Sie unter [Lernprogramm: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+## <a name="next"></a>Next (Weiter)  
+ Dieses Lernprogramm ist beendet. Um zum Anfang zurückzukehren, lesen Sie [Tutorial: auswerten bewährter Methoden mithilfe der Richtlinien basierten Verwaltung](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
- Um eine Liste der [!INCLUDE[ssDE](../includes/ssde-md.md)] Tutorials, klicken Sie auf [-Engine-Datenbank-Tutorials](../relational-databases/database-engine-tutorials.md).  
+ Um eine Liste der [!INCLUDE[ssDE](../includes/ssde-md.md)] Tutorials anzuzeigen, klicken Sie auf [Datenbank-Engine Tutorials](../relational-databases/database-engine-tutorials.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

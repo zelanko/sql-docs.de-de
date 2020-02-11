@@ -1,5 +1,5 @@
 ---
-title: Sys.sysreferences (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sysreferences (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3edce02f20a16ebd9814f995f00023f8f3b153de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986495"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
@@ -36,16 +36,16 @@ ms.locfileid: "67986495"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**constid**|**int**|ID der FOREIGN KEY-Einschränkung.|  
-|**fkeyid**|**int**|ID der verweisenden Tabelle|  
+|**"Verbindungs-ID"**|**int**|ID der FOREIGN KEY-Einschränkung.|  
+|**"f keyid"**|**int**|ID der verweisenden Tabelle|  
 |**rkeyid**|**int**|ID der Tabelle, auf die verwiesen wird|  
 |**rkeyindid**|**smallint**|Die Index-ID des eindeutigen Indexes in der Tabelle, auf die verwiesen wird, der die Schlüsselspalten abdeckt, auf die verwiesen wird.|  
 |**keycnt**|**smallint**|Anzahl von Spalten im Schlüssel|  
-|**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**refkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**fkeydbid**|**smallint**|Reserviert.|  
+|**"forkeys"**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Ref Keys**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**"f keydbid"**|**smallint**|Reserviert.|  
 |**rkeydbid**|**smallint**|Reserviert.|  
 |**fkey1**|**smallint**|Spalten-ID der verweisenden Spalte|  
 |**fkey2**|**smallint**|Spalten-ID der verweisenden Spalte|  
@@ -80,8 +80,8 @@ ms.locfileid: "67986495"
 |**rkey15**|**smallint**|Spalten-ID der Spalte, auf die verwiesen wird|  
 |**rkey16**|**smallint**|Spalten-ID der Spalte, auf die verwiesen wird|  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

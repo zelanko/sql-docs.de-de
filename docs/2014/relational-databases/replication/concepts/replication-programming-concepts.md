@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721808"
 ---
 # <a name="replication-programming-concepts"></a>Konzepte für die Replikationsprogrammierung
@@ -81,7 +81,7 @@ ms.locfileid: "62721808"
   
  Die folgenden Themen stellen weitere Informationen über die Sicherheit bereit:  
   
--   [Sicherheit von SQL Server-Replikation](../security/view-and-modify-replication-security-settings.md)  
+-   [SQL Server-Replikation Sicherheit](../security/view-and-modify-replication-security-settings.md)  
   
 -   [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62721808"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>Auswählen der geeigneten Programmierschnittstelle für die Replikation  
  Der letzte Planungsschritt besteht darin, die geeignete Programmierschnittstelle für die Replikation auszuwählen, die die gewünschten Replikationsfunktionen für die ausgewählte Entwicklungsumgebung implementiert. In der folgenden Tabelle sind die verfügbaren Programmierschnittstellen für die Replikation aufgeführt.  
   
-|Schnittstelle|Umgebung|Verwendungszweck|  
+|Schnittstelle|Environment|Verwendung|  
 |---------------|-----------------|----------|  
 |[Replication Management Objects Concepts](replication-management-objects-concepts.md)|Verwalteter Code|Verwaltung, Überwachung und Synchronisierung|  
 |<xref:Microsoft.SqlServer.Replication>|Verwalteter Code|Synchronisierung|  

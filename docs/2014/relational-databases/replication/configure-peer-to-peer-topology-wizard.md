@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10149e8aa940f53bbde69b3b84ead047ff4a2523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721642"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>Assistent zum Konfigurieren der Peer-zu-Peer-Topologie
@@ -32,7 +32,7 @@ ms.locfileid: "62721642"
   
 -   [Neue Peerinitialisierung &#40;Peer-to-Peer Replication&#41;](new-peer-initialization-peer-to-peer-replication.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125814"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
@@ -31,15 +31,15 @@ Wtd( [ Member_Expression ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn ein Elementausdruck nicht angegeben ist, wird der Standardwert ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs Wochen in der ersten Dimension des Typ Time (**Time.CurrentMember**) in der Measuregruppe.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn kein Element Ausdruck angegeben ist, wird standardmäßig der aktuelle Member der ersten Hierarchie mit einer Ebene vom Typ "Wochen" in der ersten Dimension des Typs "Time **. CurrentMember**" in der Measure-Gruppe angegeben.  
   
- Die **Wtd** -Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) Funktion, in dem die Ebene festgelegt wird, *Wochen*. Somit ist `Wtd(Member_Expression)` äquivalent zu `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
+ Die **WTD** -Funktion ist eine Verknüpfungs Funktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) -Funktion, bei der die Ebene auf *Wochen*festgelegt ist. Somit ist `Wtd(Member_Expression)` äquivalent zu `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
-## <a name="see-also"></a>Siehe auch  
- [QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)   
- [MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
- [Seit Jahresbeginn &#40;MDX&#41;](../mdx/ytd-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [QTD-&#40;MDX-&#41;](../mdx/qtd-mdx.md)   
+ [MTD-&#40;MDX-&#41;](../mdx/mtd-mdx.md)   
+ [YTD-&#40;MDX-&#41;](../mdx/ytd-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

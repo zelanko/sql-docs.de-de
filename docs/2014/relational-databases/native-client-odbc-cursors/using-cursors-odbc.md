@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206819"
 ---
 # <a name="using-cursors-odbc"></a>Verwenden von Cursorn (ODBC)
@@ -34,17 +34,17 @@ ms.locfileid: "68206819"
   
 -   Positionierte Updates.  
   
- ODBC-Anwendungen deklarieren und öffnen Cursor oder verwenden cursorspezifische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nur selten. ODBC öffnet automatisch einen Cursor für jedes Resultset, das von einer SQL-Anweisung zurückgegeben wird. Die Charakteristika der Cursor werden von Anweisungsattribute festgelegt gesteuert [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) vor der SQL-Anweisung ausgeführt wird. Die ODBC-API-Funktionen zum Verarbeiten der Resultsets unterstützen sämtliche Cursorfunktionalitäten einschließlich Abrufen, Durchführen eines Bildlaufs und positionierte Updates.  
+ ODBC-Anwendungen deklarieren und öffnen Cursor oder verwenden cursorspezifische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nur selten. ODBC öffnet automatisch einen Cursor für jedes Resultset, das von einer SQL-Anweisung zurückgegeben wird. Die Eigenschaften der Cursor werden mithilfe von Anweisungs Attributen gesteuert, die mit [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) festgelegt werden, bevor die SQL-Anweisung ausgeführt wird. Die ODBC-API-Funktionen zum Verarbeiten der Resultsets unterstützen sämtliche Cursorfunktionalitäten einschließlich Abrufen, Durchführen eines Bildlaufs und positionierte Updates.  
   
  Dies ist ein Vergleich der Funktionsweise von Cursorn in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts und ODBC-Anwendungen.  
   
-|Aktion|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
-|Definieren des Cursorverhaltens|Angeben durch DECLARE CURSOR-Parameter|Festlegen der Cursorattribute mithilfe von [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
-|Öffnen eines Cursors|DECLARE CURSOR OPEN *Cursor_name*|**SQLExecDirect** oder **SQLExecute**|  
-|Abrufen von Zeilen|FETCH|**SQLFetch** oder [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)|  
+|Definieren des Cursorverhaltens|Angeben durch DECLARE CURSOR-Parameter|Festlegen von Cursor Attributen mithilfe von [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
+|Öffnen eines Cursors|DECLARE Cursor geöffnet *cursor_name*|**SQLExecDirect** oder **SQLExecute**|  
+|Zeilen abrufen|FETCH|**SQLFetch** oder [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)|  
 |Positioniertes Update|WHERE CURRENT OF-Klausel mit UPDATE oder DELETE|**SQLSetPos**|  
-|Schließen eines Cursors|Schließen *Cursor_name* DEALLOCATE|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
+|Schließen eines Cursors|Schließen *cursor_name* Aufhebung der Freigabe|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
   
  Die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementierten Servercursor unterstützen die Funktionalität des ODBC-Cursormodells. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Treiber verwendet Servercursor, um die Cursorfunktionalität der ODBC-API zu unterstützen.  
   
@@ -58,14 +58,14 @@ ms.locfileid: "68206819"
   
 -   [Cursoreigenschaften](properties/cursor-properties.md)  
   
--   [Informationen zur Programmierung von Cursor &#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
+-   [Details zur Cursor Programmierung &#40;ODBC-&#41;](programming/cursor-programming-details-odbc.md)  
   
--   [Scrollen und Fetchen von Zeilen](../native-client-ole-db-rowsets/fetching-rows.md)  
+-   [Bildläufe und Abrufen von Zeilen](../native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [Positionierte Updates &#40;ODBC&#41;](positioned-updates-odbc.md)  
+-   [Positionierte Updates &#40;ODBC-&#41;](positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [CLOSE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
  [Cursor](../../relational-databases/cursors.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/deallocate-transact-sql)   

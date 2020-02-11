@@ -1,5 +1,5 @@
 ---
-title: Dynamische Cursor von ODBC | Microsoft-Dokumentation
+title: Dynamische ODBC-Cursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,32 +14,32 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 628de07f90de47efb0546dff84c03f56efb0674c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086300"
 ---
 # <a name="odbc-dynamic-cursors"></a>Dynamische ODBC-Cursor
-Ein dynamischer Cursor handelt es sich um: dynamische. Sie können erkennen, dass alle Änderungen an der Mitgliedschaft, Reihenfolge und Werte des Resultsets nach der der Cursor geöffnet wird. Angenommen ein dynamischer Cursor ruft zwei Zeilen ab, und eine andere Anwendung aktualisiert daraufhin eine dieser Zeilen und löscht die andere. Wenn der dynamische Cursor anschließend versucht, diese Zeilen erneut abzurufen, die gelöschte Zeile nicht gefunden, aber neue Werte für die aktualisierte Zeile zurück.  
+Ein dynamischer Cursor ist genau das: Dynamic. Sie kann alle Änderungen erkennen, die an der Mitgliedschaft, der Reihenfolge und den Werten des Resultsets vorgenommen wurden, nachdem der Cursor geöffnet wurde. Angenommen ein dynamischer Cursor ruft zwei Zeilen ab, und eine andere Anwendung aktualisiert daraufhin eine dieser Zeilen und löscht die andere. Wenn der dynamische Cursor dann versucht, diese Zeilen erneut abzurufen, wird die gelöschte Zeile nicht gefunden, die neuen Werte für die aktualisierte Zeile werden jedoch zurückgegeben.  
   
- Dynamische Cursor erkennen alle Updates, Lösch- und Einfügevorgänge, sowohl ihre eigenen und die von anderen Benutzern. (Dies unterliegt die Isolation von der Transaktion, wie durch das Verbindungsattribut SQL_ATTR_TXN_ISOLATION festgelegt.) Zeilenstatusarray, die vom Attribut SQL_ATTR_ROW_STATUS_PTR-Anweisung angegebenen diese Änderungen und SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED und SQL_ROW_ADDED enthalten kann. Es kann nicht SQL_ROW_DELETED zurückgegeben, da ein dynamic-Cursor keinen gelöschten Zeilen, die außerhalb des Rowsets zurückgibt und daher nicht mehr das Vorhandensein von die gelöschte Zeile im Resultset oder das entsprechende Element in der zeilenstatusarray erkennt. SQL_ROW_ADDED wird nur zurückgegeben, wenn eine Zeile, durch einen Aufruf von aktualisiert wird **SQLSetPos**, nicht verwendet werden, wenn sie von einem anderen Cursor aktualisiert wird.  
+ Dynamische Cursor erkennen alle Updates, Löschungen und Einfügungen, sowohl eigene als auch andere, die von anderen Benutzern vorgenommen wurden. (Dies unterliegt der Isolationsstufe der Transaktion, die vom SQL_ATTR_TXN_ISOLATION Verbindungs Attribut festgelegt wird.) Das vom Attribut der SQL_ATTR_ROW_STATUS_PTR Anweisung angegebene Zeilen Status Array reflektiert diese Änderungen und kann SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED und SQL_ROW_ADDED enthalten. SQL_ROW_DELETED kann nicht zurückgegeben werden, da ein dynamischer Cursor keine gelöschten Zeilen außerhalb des Rowsets zurückgibt und daher nicht mehr erkennt, dass die gelöschte Zeile im Resultset oder das entsprechende Element im Zeilen Status Array vorhanden ist. SQL_ROW_ADDED wird nur zurückgegeben, wenn eine Zeile durch einen-Befehl von **SQLSetPos**aktualisiert wird, nicht wenn Sie von einem anderen Cursor aktualisiert wird.  
   
- Eine Möglichkeit zum Implementieren von dynamischer Cursors in der Datenbank wird durch Erstellen eines selektive Index, das definiert, die Mitgliedschaft und Sortierung des Resultsets festgelegt. Da der Index aktualisiert wird, wenn andere Änderungen vornehmen, ist ein Cursor, die basierend auf solchen Index alle Änderungen. Zusätzliche Auswahl innerhalb des Resultsets, die von diesem Index definiert ist durch die Verarbeitung auf den Index möglich.  
+ Eine Möglichkeit, dynamische Cursor in der Datenbank zu implementieren, besteht darin, einen selektiven Index zu erstellen, der die Mitgliedschaft und die Reihenfolge des Resultsets definiert. Da der Index aktualisiert wird, wenn andere Benutzer Änderungen vornehmen, ist ein Cursor, der auf einem solchen Index basiert, für alle Änderungen sensibel. Eine zusätzliche Auswahl innerhalb des durch diesen Index definierten Resultsets ist möglich, indem der Index verarbeitet wird.  
   
- Dynamische Cursor können durch das Anfordern von des Resultsets auf die durch einen eindeutigen Schlüssel sortiert werden simuliert werden. Durch eine solche Einschränkung Abrufvorgänge erfolgen Ausführen einer **wählen** Anweisung jedes Mal, die der Cursor ruft Zeilen ab. Nehmen wir beispielsweise an das Resultset von dieser Anweisung definiert ist:  
+ Dynamische Cursor können simuliert werden, indem das Resultset nach einem eindeutigen Schlüssel geordnet werden muss. Diese Einschränkung wird durch Ausführen einer **Select** -Anweisung bei jedem Abrufen von Zeilen durch den Cursor durchgeführt. Nehmen wir beispielsweise an, dass das Resultset durch diese Anweisung definiert wird:  
   
 ```  
 SELECT * FROM Customers ORDER BY Name, CustID  
 ```  
   
- Zum Abrufen des nächsten Rowsets in diesem Resultset des Cursors simulierten legt für die Parameter in der folgenden **wählen** Anweisung, um die Werte in der letzten Zeile des aktuellen Rowsets, und anschließend ausgeführt:  
+ Um das nächste Rowset in diesem Resultset abzurufen, legt der simulierte Cursor die Parameter in der folgenden **Select** -Anweisung auf die Werte in der letzten Zeile des aktuellen Rowsets fest und führt Sie dann aus:  
   
 ```  
 SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)  
    ORDER BY Name, CustID  
 ```  
   
- Diese Anweisung erstellt eine zweite Resultset, das erste Rowset, von denen des nächsten Rowsets im ursprünglichen Resultset – in diesem Fall ist, den Satz von Zeilen in der Customers-Tabelle. Der Cursor an die Anwendung das folgende Rowset zurückgibt.  
+ Diese Anweisung erstellt ein zweites Resultset, das erste Rowset, dessen das nächste Rowset im ursprünglichen Resultset ist, in diesem Fall der Satz von Zeilen in der Customers-Tabelle. Der Cursor gibt dieses Rowset an die Anwendung zurück.  
   
- Es ist interessant, beachten Sie, dass ein dynamischer Cursor, die auf diese Weise implementiert tatsächlich viele Resultsets erstellt, wodurch Änderungen an der ursprünglichen Resultset zu erkennen. Die Anwendung nie erfährt von der Existenz von dieser zusätzlichen Resultsets; Sie wird lediglich angezeigt, als wenn der Cursor kann Änderungen an der ursprünglichen Resultset zu erkennen ist.
+ Es ist interessant zu beachten, dass ein dynamischer Cursor, der auf diese Weise implementiert wird, tatsächlich viele Resultsets erstellt, sodass er Änderungen am ursprünglichen Resultset erkennen kann. Die Anwendung erfährt nie, dass diese hilfsresultsets vorhanden sind. Sie wird einfach so angezeigt, als ob der Cursor Änderungen am ursprünglichen Resultset erkennen kann.

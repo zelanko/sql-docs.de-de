@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196427"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
@@ -42,10 +42,10 @@ ms.locfileid: "68196427"
   
 5.  Erstellen Sie den eindeutigen gruppierten Index für die Sicht.  
   
-###  <a name="Restrictions"></a> Erforderliche SET-Optionen für indizierte Sichten  
- Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'** abc **'** + NULL den Wert NULL zurück. Wenn die Option CONCAT_NULL_YIEDS_NULL allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'** abc **'** .  
+###  <a name="Restrictions"></a>Erforderliche SET-Optionen für indizierte Sichten  
+ Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'** abc **'** + NULL den Wert NULL zurück. Wenn die Option CONCAT_NULL_YIEDS_NULL allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'** abc **'**.  
   
- Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen festgelegt werden, auf die Werte der **RequiredValue** Spalte, wenn die folgenden Bedingungen zutrifft:  
+ Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen auf die Werte festgelegt werden, die in der Spalte "Requirements **dvalue** " angezeigt werden, wenn die folgenden Bedingungen eintreten:  
   
 -   Die Sicht und nachfolgende Indizes für die Sicht werden erstellt.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68196427"
   
 -   Die indizierte Sicht wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.  
   
-    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
+    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Standard<br /><br /> OLE DB- und ODBC-Wert|Standard<br /><br /> DB-Library-Wert|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|EIN|EIN|EIN|OFF|  
+    |ANSI_PADDING|EIN|EIN|EIN|OFF|  
+    |ANSI_WARNINGS*|EIN|EIN|EIN|OFF|  
+    |ARITHABORT|EIN|EIN|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|EIN|EIN|EIN|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+    |QUOTED_IDENTIFIER|EIN|EIN|EIN|OFF|  
   
      *Wenn Sie ANSI_WARNINGS auf ON festlegen, wird ARITHABORT implizit auf ON festgelegt.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "68196427"
   
 -   Wenn Sie den Index erstellen, muss die Option IGNORE_DUP_KEY auf OFF (Standardeinstellung) festgelegt sein.  
   
--   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen _Schema_ **.** _Tabellenname_ verwiesen werden.  
+-   Auf Tabellen muss mit zweiteiligen Namen, dem _Schema_, verwiesen werden **.** _TableName_ in der Sicht Definition.  
   
 -   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option WITH SCHEMABINDING erstellt werden.  
   
--   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen _Schema_ **.** _Funktion_verwiesen werden.  
+-   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss durch zweiteilige Namen, _Schema_, verwiesen werden **.** - _Funktion_.  
   
 -   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss NO SQL lauten, und die Eigenschaft für den externen Zugriff muss NO lauten.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68196427"
     |COUNT|ROWSET-Funktionen (OPENDATASOURCE, OPENQUERY, OPENROWSET UND OPENXML)|OUTER-Joins (LEFT, RIGHT oder FULL)|  
     |Abgeleitete Tabelle (durch Angabe einer SELECT-Anweisung in der FROM-Klausel definiert)|Selbstjoins|Durch Angeben von Spalten mit SELECT \* oder SELECT *Tabellenname*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP oder AVG|Allgemeine Tabellenausdrücke (CTE, Common Table Expression)|  
-    |`float`\*, `text`, `ntext`, `image`, `XML`, oder `filestream` Spalten|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
+    |`float`\*`XML` `filestream` -,-,-,-,-oder-Spalten `text` `ntext` `image`|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
     |Volltextprädikate (CONTAIN, FREETEXT)|Eine SUM-Funktion, die auf einen Ausdruck verweist, der NULL zulässt.|ORDER BY|  
     |CLR-benutzerdefinierte Aggregatfunktion|TOP|Die Operatoren CUBE, ROLLUP oder GROUPING SETS|  
     |MIN, MAX|Die Operatoren UNION, EXCEPT oder INTERSECT|TABLESAMPLE|  
@@ -124,7 +124,7 @@ ms.locfileid: "68196427"
     |Spaltensätze mit geringer Dichte|Tabellenwertfunktionen mit Inlinefunktionen oder Funktionen mit mehreren Anweisungen|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*Die indizierte Sicht darf `float` Spalten jedoch solche Spalten nicht im Schlüssel gruppierten Indexes enthalten sein.  
+     \*Die indizierte Sicht kann `float` Spalten enthalten. Allerdings können solche Spalten nicht im Schlüssel des gruppierten Indexes enthalten sein.  
   
 -   Wenn GROUP BY vorhanden ist, muss die VIEW-Definition COUNT_BIG(*) enthalten, während HAVING nicht enthalten sein darf. Diese GROUP BY-Einschränkungen gelten nur für die indizierte Sichtdefinition. Im Ausführungsplan einer Abfrage kann eine indizierte Sicht auch dann verwendet werden, wenn sie diese GROUP BY-Einschränkungen nicht erfüllt.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68196427"
   
  Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
   
-###  <a name="Considerations"></a> Weitere Überlegungen  
+###  <a name="Considerations"></a>Überlegungen  
  Die Einstellung der Option **large_value_types_out_of_row** der Spalten in einer indizierten Sicht wird von der Einstellung für die entsprechende Spalte in der Basistabelle vererbt. Dieser Wert wird mithilfe von [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)festgelegt. Die Standardeinstellung für Spalten, die auf Grundlage von Ausdrücken erstellt werden, ist 0. Das bedeutet, dass umfangreiche Werte innerhalb der Zeile gespeichert werden.  
   
  Indizierte Sichten können für eine partitionierte Tabelle erstellt werden und selbst partitioniert werden.  
@@ -210,14 +210,14 @@ ms.locfileid: "68196427"
   
  Weitere Informationen finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [SET ARITHABORT &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [Festlegen CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [Festlegen NUMERIC_ROUNDABORT &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

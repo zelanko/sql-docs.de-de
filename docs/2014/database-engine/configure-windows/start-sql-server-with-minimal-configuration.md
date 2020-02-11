@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf7065d064e322e45fb95a38aed514b2acfc714a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62756221"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>Starten Sie von SQL Server mit Minimalkonfiguration
@@ -36,10 +36,10 @@ ms.locfileid: "62756221"
 > [!IMPORTANT]  
 >  Stellen Sie mithilfe des **sqlcmd** -Hilfsprogramms und der dedizierten Administratorverbindung (Dedicated Administrator Connection; DAC) eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]her. Wenn Sie eine typische Verbindung verwenden, sollten Sie den SQL Server-Agent-Dienst beenden, bevor Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Modus der Minimalkonfiguration herstellen. Andernfalls verwendet der SQL Server-Agent-Dienst die Verbindung und blockiert sie dadurch.  
   
-## <a name="see-also"></a>Siehe auch  
- [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Starten, anhalten oder Anhalten des SQL Server-Agent Dienstanbieter](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Diagnoseverbindung für Datenbankadministratoren](diagnostic-connection-for-database-administrators.md)   
- [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
+ [sqlcmd-Hilfsprogramm](../../tools/sqlcmd-utility.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)  

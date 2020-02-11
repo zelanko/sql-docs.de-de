@@ -1,5 +1,5 @@
 ---
-title: Tabellenwertparameter (ODBC) | Microsoft-Dokumentation
+title: Tabellenwert Parameter (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467300"
 ---
 # <a name="table-valued-parameters-odbc"></a>Tabellenwertparameter (ODBC)
   Die ODBC-Unterstützung für Tabellenwertparameter ermöglicht einer Clientanwendung die effizientere Versendung von parametrisierten Daten an einen Server, indem mehrere Zeilen über einen Aufruf an den Server gesendet werden.  
   
- Weitere Informationen über Tabellenwertparameter auf dem Server [Use Table-Valued Parameter &#40;-Datenbank-Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Informationen zu Tabellenwert Parametern auf dem Server finden Sie unter [Verwenden von Tabellenwert Parametern &#40;Datenbank-Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC gibt es zwei Methoden zum Versenden von Tabellenwertparametern an den Server:  
   
--   Alle Tabellenwertparameter Daten kann im Speicher gleichzeitig SQLExecDirect oder SQLExecute aufgerufen wird. Wenn es mehrere Zeilen im Tabellenwert gibt, werden diese Daten in Arrays gespeichert.  
+-   Alle Tabellenwert Parameter-Daten können sich im Arbeitsspeicher befinden, wenn SQLExecDirect oder SQLExecute aufgerufen wird. Wenn es mehrere Zeilen im Tabellenwert gibt, werden diese Daten in Arrays gespeichert.  
   
--   Eine Anwendung kann Daten zur Ausführung für einen Tabellenwertparameter angeben, SQLExecDirect oder SQLExecute aufgerufen wird. In diesem Fall können Datenzeilen für den Tabellenwertparameter in Batches oder einzeln bereitgestellt werden, um die Speicheranforderungen zu reduzieren.  
+-   Eine Anwendung kann Daten bei der Ausführung für einen Tabellenwert Parameter angeben, wenn SQLExecDirect oder SQLExecute aufgerufen wird. In diesem Fall können Datenzeilen für den Tabellenwertparameter in Batches oder einzeln bereitgestellt werden, um die Speicheranforderungen zu reduzieren.  
   
  Die erste Option aktiviert gespeicherte Prozeduren, um mehr Geschäftslogik zu kapseln. Beispielsweise könnte eine einzeln gespeicherte Prozedur eine gesamte Bestellungseingabetransaktion kapseln, wenn die Bestellartikel als Tabellenwertparameter übergeben werden. Diese Option ist sehr effizient, da nur ein einzelner Roundtrip zum Server erforderlich ist. Alternativ könnten Sie verschiedene Prozeduren verwenden, um die Bestellungskopfzeile und die Bestellartikel separat zu behandeln. In diesem Fall wäre jedoch weiterer Code und ein komplexerer Vertrag zwischen Client und Server erforderlich.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62467300"
  Beschreibt, wie eine Anwendung Metadaten für einen vorbereiteten Prozeduraufruf abrufen kann.  
   
  [Zusätzliche Tabellenwertparameter-Metadaten](additional-table-valued-parameter-metadata.md)  
- Beschreibt, wie mit SQLProcedureColumns SQLTables und SQLColumns Metadaten für einen Tabellenwertparameter abgerufen.  
+ Beschreibt, wie sqlprocedurecolrens, SQLTables und SQLColumns zum Abrufen von Metadaten für einen Tabellenwert Parameter verwendet werden.  
   
  [Tabellenwertparameter-Datenkonvertierung und andere Fehler und Warnungen](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Beschreibt, wie Fehler in Tabellenwertparameter-Spaltenwerten verarbeitet werden.  
@@ -77,8 +77,8 @@ ms.locfileid: "62467300"
  [Programmierbeispiele für ODBC-Tabellenwertparameter](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
  Beschreibt die Durchführung der häufigsten Aufgaben.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [Tabellenwertparameter &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
+ [Tabellenwert Parameter &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

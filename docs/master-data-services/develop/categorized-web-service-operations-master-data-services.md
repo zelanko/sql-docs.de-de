@@ -11,10 +11,10 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728301"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Kategorisierte Webdienstvorgänge (Master Data Services)
@@ -130,7 +130,7 @@ ms.locfileid: "73728301"
 |<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingLoad%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingProcess%2A>|  
   
- Die folgenden Vorgänge werden verwendet, um Daten mithilfe des in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]integrierten Stagingprozesses zu importieren. Diese Vorgänge sind nur zur Unterstützung von vorhandenen Datenbanken zu verwenden. Greifen Sie für neue Entwicklungen auf die zuvor aufgelisteten Vorgänge zurück.  
+ Die folgenden Vorgänge werden verwendet, um Daten mithilfe des in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] integrierten Stagingprozesses zu importieren. Diese Vorgänge sind nur zur Unterstützung von vorhandenen Datenbanken zu verwenden. Greifen Sie für neue Entwicklungen auf die zuvor aufgelisteten Vorgänge zurück.  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "73728301"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Datenexportvorgänge  
- Anhand dieser Vorgänge werden Daten durch die Verwendung von Abonnementsichten exportiert. Weitere Informationen finden Sie unter [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Anhand dieser Vorgänge werden Daten durch die Verwendung von Abonnementsichten exportiert. Weitere Informationen finden Sie unter [Übersicht: Exportieren von Daten &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  

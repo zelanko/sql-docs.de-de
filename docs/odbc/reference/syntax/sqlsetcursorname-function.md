@@ -1,5 +1,5 @@
 ---
-title: SQLSetCursorName-Funktion | Microsoft-Dokumentation
+title: Sqlsetcurrsorname-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68092987"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
- **SQLSetCursorName** eine aktive Anweisung ein Cursorname zugeordnet. Wenn eine Anwendung nicht aufruft **SQLSetCursorName**, generiert der Treiber die Cursornamen nach Bedarf für die Verarbeitung von SQL-Anweisung.  
+ **SQLSetCursorName** ordnet einen Cursor Namen einer aktiven Anweisung zu. Wenn eine Anwendung **SQLSetCursorName**nicht aufruft, generiert der Treiber nach Bedarf für die Verarbeitung von SQL-Anweisungen Cursor Namen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,46 +45,46 @@ SQLRETURN SQLSetCursorName(
   
 ## <a name="arguments"></a>Argumente  
  *StatementHandle*  
- [Eingabe] Anweisungshandle.  
+ Der Anweisungs Handle.  
   
- *cursorName*  
- [Eingabe] Name des Cursors. Für die effiziente Verarbeitung nicht sollte der Name des Cursors keine führenden oder nachgestellten Leerzeichen enthalten, in der Name des Cursors, und wenn der Name des Cursors einen Begrenzungsbezeichner enthält, das Trennzeichen positioniert werden muss als erstes Zeichen in der Name des Cursors.  
+ *Cursor Name*  
+ Der Der Cursor Name. Zur effizienten Verarbeitung sollte der Cursor Name keine führenden oder nachfolgenden Leerzeichen im Cursor Namen enthalten, und wenn der Cursor Name einen Begrenzungs Bezeichner enthält, sollte das Trennzeichen als erstes Zeichen im Cursor Namen positioniert werden.  
   
- *Namenslänge*  
- [Eingabe] Länge in Zeichen des **CursorName*.  
+ *Namelength*  
+ Der Länge in Zeichen von **Cursor Name*.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLSetCursorName** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetCursorName** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **sqlsetcurrsorname** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die häufig von **sqlsetcurrsorname** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichenfolgendaten, rechts abgeschnitten|Der Name des Cursors überschreitet den maximalen Grenzwert, also nur die maximal zulässige Anzahl von Zeichen verwendet wurde.|  
-|24000|Ungültiger Cursorstatus|Die Anweisung entspricht *StatementHandle* wurde bereits in einem Zustand ausgeführt oder Cursor positioniert.|  
-|34000|Ungültiger Cursorname|Der Name des Cursors im angegebenen **CursorName* war ungültig, da er die maximale Länge, überschreitet wie vom Treiber definiert, oder muss mit "SQLCUR" oder "SQL_CUR."|  
-|3C000|Doppelter Cursorname|Der Name des Cursors im angegebenen **CursorName* ist bereits vorhanden.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY009|Ungültige Verwendung eines null-Zeiger|(DM) das Argument *CursorName* wurde ein null-Zeiger.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese Funktion Aynchronous war immer noch ausgeführt, wenn die **SQLSetCursorName** Funktion aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) das Argument *Namenslänge* war kleiner als 0, aber nicht SQL_NTS gleich.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Cursor Name hat den maximalen Grenzwert überschritten, sodass nur die maximal zulässige Anzahl von Zeichen verwendet wurde.|  
+|24.000|Ungültiger Cursorstatus|Die der *StatementHandle* entsprechende Anweisung war bereits in einem ausgeführten oder Cursor positionierten Zustand.|  
+|34000|Ungültiger Cursorname|Der in **Cursorname* angegebene Cursor Name war ungültig, weil er die vom Treiber definierte maximale Länge überschritten hat oder mit "sqlcur" oder "SQL_CUR" gestartet wurde.|  
+|3c000|Doppelter Cursor Name|Der in **Cursorname* angegebene Cursor Name ist bereits vorhanden.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY009|Ungültige Verwendung des NULL-Zeigers|(DM) das Argument *Cursor Name* war ein NULL-Zeiger.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese aynchronous-Funktion wurde noch ausgeführt, als die **sqlsetcurrsorname** -Funktion aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das *StatementHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der *argumentnamelength* war kleiner als 0, aber nicht gleich SQL_NTS.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *StatementHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
   
 ## <a name="comments"></a>Kommentare  
- Cursor werden verwendet, nur in positioniertes Update und delete-Anweisungen (z. B. **aktualisieren** _Tabellenname_ ... **WHERE CURRENT OF** _Cursorname_). Weitere Informationen finden Sie unter [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Wenn die Anwendung nicht aufruft **SQLSetCursorName** bei der Ausführung einer abfrageanweisung ein Cursorname definiert der Treiber generiert einen Namen, die mit den Buchstaben SQL_CUR beginnt und bis zu 18 Zeichen Länge nicht überschreitet.  
+ Cursor Namen werden nur in positionierten Update-und DELETE-Anweisungen verwendet (z. b. **Update** _Table-Name_ ... **WHERE CURRENT of** _Cursor-Name_). Weitere Informationen finden Sie unter [positionierte UPDATE-und DELETE-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Wenn die Anwendung **SQLSetCursorName** nicht zum Definieren eines Cursor namens aufruft, generiert der Treiber bei der Ausführung einer Abfrage Anweisung einen Namen, der mit den Buchstaben SQL_CUR beginnt und nicht länger als 18 Zeichen ist.  
   
- Alle Cursornamen innerhalb der Verbindung müssen eindeutig sein. Maximal ein Cursorname wird vom Treiber definiert. Für eine optimale Interoperabilität empfiehlt es sich, dass Anwendungen Cursornamen nicht mehr als 18 Zeichen beschränkt. In ODBC 3. *.x*, wenn ein Cursorname ein Bezeichner in Anführungszeichen ist, es die Groß-und Kleinschreibung behandelt wird und darf die Zeichen, dass die Syntax von SQL würde nicht zulässig insbesondere, wie z. B. Leerzeichen behandelt oder Schlüsselwörter reservierte. Wenn ein Cursorname in Groß-und Kleinschreibung behandelt werden muss, muss es als ein Bezeichner in Anführungszeichen übergeben werden.  
+ Alle Cursor Namen innerhalb der Verbindung müssen eindeutig sein. Die maximale Länge eines Cursor namens wird vom Treiber definiert. Für eine maximale Interoperabilität empfiehlt es sich, dass die Cursor Namen von Anwendungen auf höchstens 18 Zeichen beschränkt werden. Wenn in ODBC 3 *. x*ein Cursor Name ein Bezeichner in Anführungszeichen ist, wird er in der Groß-und Kleinschreibung behandelt und kann Zeichen enthalten, die von der SQL-Syntax nicht zugelassen oder besonders behandelt werden, z. b. Leerzeichen oder reservierte Schlüsselwörter. Wenn ein Cursor Name nach Groß-/Kleinschreibung behandelt werden muss, muss er als Bezeichner in Anführungszeichen angegeben werden.  
   
- Ein Cursorname, die entweder explizit festgelegt oder implizit bleibt festgelegt, bis die Anweisung, mit denen sie zugeordnet ist, mit gelöscht wird, **SQLFreeHandle**. **SQLSetCursorName** aufgerufen werden, um ein Cursor für eine Anweisung umbenennen, solange der Cursor in einem Zustand zugeordnet oder vorbereitet ist.  
+ Ein Cursor Name, der entweder explizit oder implizit festgelegt wird, bleibt so lange festgelegt, bis die Anweisung, mit der er verknüpft ist, mit **SQLFreeHandle**gelöscht wird. **SQLSetCursorName** kann aufgerufen werden, um einen Cursor in einer-Anweisung umzubenennen, solange sich der Cursor in einem zugeordneten oder vorbereiteten Zustand befindet.  
   
 ## <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel verwendet eine Anwendung **SQLSetCursorName** um einen Cursornamen für eine Anweisung festzulegen. Klicken Sie dann verwendet die Anweisung zum Abrufen der Ergebnisse aus der Tabelle CUSTOMERS. Abschließend führt er ein positioniertes Update zum Ändern der Telefonnummer des John Smith. Beachten Sie, dass die Anwendung für unterschiedliche Anweisungshandles verwendet die **wählen** und **UPDATE** Anweisungen.  
+ Im folgenden Beispiel verwendet eine Anwendung **SQLSetCursorName** , um einen Cursor Namen für eine Anweisung festzulegen. Anschließend wird diese Anweisung verwendet, um Ergebnisse aus der Customers-Tabelle abzurufen. Schließlich wird ein positioniertes Update durchführt, um die Telefonnummer von John Smith zu ändern. Beachten Sie, dass die Anwendung verschiedene Anweisungs Handles für die **Select** -und **Update** -Anweisungen verwendet.  
   
  Ein weiteres Codebeispiel finden Sie unter [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
@@ -132,13 +132,13 @@ if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Ausführen einer SQL­Anweisung|[SQLExecDirect-Funktion](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Ausführen einer vorbereiteten SQL­Anweisung|[SQLExecute-Funktion](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|Ein Cursorname zurückgeben|[SQLGetCursorName-Funktion](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|  
-|Festlegen von Optionen für die cursorbildlauf|[SQLSetScrollOptions-Funktion](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
+|Ausführen einer SQL-Anweisung|[SQLExecDirect-Funktion](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Ausführen einer vorbereiteten SQL-Anweisung|[SQLExecute-Funktion](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Zurückgeben eines Cursor namens|[SQLGetCursorName-Funktion](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|  
+|Festlegen der Cursor Scrolloptionen|[SQLSetScrollOptions-Funktion](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

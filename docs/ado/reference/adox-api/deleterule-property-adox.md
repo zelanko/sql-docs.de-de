@@ -20,23 +20,23 @@ ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966421"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule-Eigenschaft (ADOX)
-Gibt an, die Aktion ausgeführt wird, wenn ein Primärschlüssel gelöscht wird.  
+Gibt die Aktion an, die ausgeführt wird, wenn ein Primärschlüssel gelöscht wird.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest, und gibt eine **lange** -Wert, der möglich die [diesen zurück](../../../ado/reference/adox-api/ruleenum.md) Konstanten. Der Standardwert ist **AdRINone**.  
+ Legt einen **Long** -Wert fest, der eine der [ruleenum](../../../ado/reference/adox-api/ruleenum.md) -Konstanten sein kann, und gibt diesen zurück. Der Standardwert ist **adrinone**.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Eigenschaft ist schreibgeschützt und auf [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekte, die bereits an eine Auflistung angefügt.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Eigenschaft ist bei [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekten, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für DeleteRule-Eigenschaft (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [DeleteRule-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)

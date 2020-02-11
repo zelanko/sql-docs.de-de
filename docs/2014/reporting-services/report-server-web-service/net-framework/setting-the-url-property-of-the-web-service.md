@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520286"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Festlegen der URL-Eigenschaft des Webdiensts
-  Sie können die Basis-URL des Berichtsserver-Webdiensts, auf den Ihre Anwendung derzeit weiterleitet, jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen ändern. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Zum Beispiel:  
+  Sie können jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Anwendungen die Basis-URL des Report Server-Webdiensts ändern, an den die Anwendung zurzeit gerichtet ist. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Beispiel:  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -106,7 +106,7 @@ class Sample
   
  Weitere Informationen zum Erstellen des ersten Webdienst-Proxys finden Sie unter [Erstellen des Webdienstproxys](creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   

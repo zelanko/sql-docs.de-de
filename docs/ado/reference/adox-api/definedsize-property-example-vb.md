@@ -1,5 +1,5 @@
 ---
-title: DefinedSize-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: DefinedSize-Eigenschaft (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d188ba801112a94d1ac09c6e1bae7fbbe5bccfee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966454"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt die [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Der Code neu definiert die Größe der Spalte "FirstName", der die **Mitarbeiter** Tabelle mit den *Northwind* Datenbank. Klicken Sie dann die Änderung der Werte von den FirstName [Feld](../../../ado/reference/ado-api/field-object.md) von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf der **Mitarbeiter** Tabelle wird angezeigt. Beachten Sie, dass standardmäßig das Feld FirstName mit Leerzeichen aufgefüllt wird, nachdem Sie neu definieren, die **DefinedSize** Eigenschaft.  
+Dieses Beispiel veranschaulicht die [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) -Eigenschaft einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Mit dem Code wird die Größe der FirstName-Spalte der **Employees** -Tabelle der *Northwind* -Datenbank neu definiert. Anschließend wird die Änderung der Werte des [Felds](../../../ado/reference/ado-api/field-object.md) FirstName eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) , das auf der Tabelle **Employees** basiert, angezeigt. Beachten Sie, dass das Feld FirstName standardmäßig mit Leerzeichen aufgefüllt wird, nachdem Sie die **DefinedSize** -Eigenschaft neu definiert haben.  
   
 ```  
 ' BeginDefinedSizeVB  
@@ -149,6 +149,6 @@ End Sub
 ' EndDefinedSizeVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize-Eigenschaft (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

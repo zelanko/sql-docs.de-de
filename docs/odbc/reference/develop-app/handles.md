@@ -1,5 +1,5 @@
 ---
-title: Behandelt | Microsoft-Dokumentation
+title: Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139038"
 ---
 # <a name="handles"></a>Ziehpunkte
-Handles sind nicht transparenten, 32-Bit-Werten, die ein bestimmtes Element zu identifizieren. in ODBC kann dieses Element aus einer Umgebung, Verbindung, Anweisung oder Deskriptor sein. Wenn die Anwendung ruft **SQLAllocHandle**, wird der Treiber-Manager oder der Treiber erstellt ein neues Element vom angegebenen Typ und sein Handle an die Anwendung zurück. Die Anwendung weiter unten verwendet das Handle zum Identifizieren dieses Elements, beim Aufrufen von ODBC-Funktionen. Der Treiber-Manager und der Treiber verwenden das Handle, um Informationen über das Element zu suchen.  
+Handles sind nicht transparente 32-Bit-Werte, die ein bestimmtes Element bezeichnen. in ODBC kann es sich bei diesem Element um eine Umgebung, eine Verbindung, eine Anweisung oder einen Deskriptor handeln. Wenn die Anwendung **sqlzugeteilt**aufruft, erstellt der Treiber-Manager oder Treiber ein neues Element vom angegebenen Typ und gibt dessen Handle an die Anwendung zurück. Die Anwendung verwendet das Handle später, um dieses Element beim Aufrufen von ODBC-Funktionen zu identifizieren. Der Treiber-Manager und der Treiber verwenden das Handle, um Informationen über das Element zu suchen.  
   
- Der folgende Code verwendet beispielsweise zwei Anweisungshandles (*HstmtOrder* und *HstmtLine*) um die Anweisungen zu identifizieren, für die Resultsets von Sales erstellt Bestellungen "und" Sales Zeilennummern Order. Später wird diese Handles verwendet, um zu identifizieren, welches Resultset zum Abrufen von Daten aus.  
+ Der folgende Code verwendet beispielsweise zwei Anweisungs Handles (*hstmtorder* und *hstmtline*), um die Anweisungen zu identifizieren, für die Resultsets von Verkaufsaufträgen und Bestell Zeilennummern erstellt werden sollen. Später werden diese Handles verwendet, um das Resultset zu identifizieren, aus dem Daten abgerufen werden sollen.  
   
 ```  
 SQLHSTMT      hstmtOrder, hstmtLine; // Statement handles.  
@@ -71,17 +71,17 @@ while ((rc = SQLFetch(hstmtOrder)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmtOrder);  
 ```  
   
- Handles sind sinnvoll, nur für die ODBC-Komponente, die sie erstellt wurden. Das heißt, nur die Treiber-Manager interpretieren, verarbeitet der Treiber-Manager und nur ein Treiber kann eine eigene Handles interpretieren.  
+ Handles sind nur für die ODBC-Komponente sinnvoll, von der Sie erstellt wurden. Das heißt, nur der Treiber-Manager kann Treiber-Manager-Handles interpretieren, und nur ein Treiber kann seine eigenen Handles interpretieren.  
   
- Nehmen wir beispielsweise an der Treiber im obigen Beispiel weist eine Struktur zum Speichern von Informationen zu einer Anweisung, und gibt den Zeiger auf diese Struktur als das Anweisungshandle zurück. Wenn die Anwendung ruft **SQLPrepare**, eine SQL-Anweisung übergibt und das Handle der Anweisung verwendet werden, damit die Zeilennummern der Bestellung. Der Treiber sendet die SQL-Anweisung mit der Datenquelle, die vorbereitet werden kann, und gibt eine Access-Plan-ID zurück. Der Treiber verwendet das Handle, um die Struktur zum Speichern dieser Bezeichner zu suchen.  
+ Nehmen wir beispielsweise an, dass der Treiber im vorherigen Beispiel eine-Struktur zum Speichern von Informationen über eine-Anweisung und den Zeiger auf diese-Struktur als Anweisungs Handle zurückgibt. Wenn die Anwendung **SQLPrepare**aufruft, übergibt Sie eine SQL-Anweisung und das Handle der Anweisung, die für Bestell Zeilennummern verwendet wird. Der Treiber sendet die SQL-Anweisung an die Datenquelle, die ihn vorbereitet und einen Zugriffs Plan Bezeichner zurückgibt. Der Treiber verwendet das Handle, um die Struktur zu suchen, in der dieser Bezeichner gespeichert werden soll.  
   
- Wenn die Anwendung ruft später **SQLExecute** um das Resultset der Zeilennummern für einen bestimmten Verkaufsauftrag zu generieren, übergibt er das gleiche Handle. Der Treiber verwendet das Handle, um die Access-Plan-ID aus der Struktur abrufen. Er sendet die ID mit der Datenquelle anzuweisen, die ausführen möchten.  
+ Wenn die Anwendung später **SQLExecute** aufruft, um das Resultset von Zeilennummern für einen bestimmten Verkaufsauftrag zu generieren, übergibt Sie das gleiche handle. Der Treiber verwendet das Handle zum Abrufen des Zugriffs Plan Bezeichners aus der-Struktur. Der Bezeichner wird an die Datenquelle gesendet, um den auszuführenden Plan zu informieren.  
   
- ODBC verfügt über zwei Ebenen von Handles: Treiber-Manager-Handles und Treiber verarbeitet. Die Anwendung verwendet-Treiber-Manager verarbeitet, wenn ODBC-Funktionen aufrufen, da sie diese Funktionen im Treiber-Manager aufruft. Der Treiber-Manager verwendet dieses Handle finden Sie die entsprechenden Treiber-Handle und das Handle der Treiber beim Aufrufen der Funktion im Treiber. Ein Beispiel wie Treiber und Treiber-Manager-Handles verwendet werden, finden Sie unter [Treiber-Manager-Rolle in der Verbindungsprozess](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
+ ODBC verfügt über zwei Ebenen von Handles: Treiber-Manager-Handles und Treiber Handles. Die Anwendung verwendet Treiber-Manager-Handles beim Aufrufen von ODBC-Funktionen, da diese Funktionen im Treiber-Manager aufgerufen werden. Der Treiber-Manager verwendet dieses Handle, um das entsprechende Treiber Handle zu suchen, und verwendet das Treiber handle, wenn die Funktion im Treiber aufgerufen wird. Ein Beispiel für die Verwendung von Treiber-und Treiber-Manager-Handles finden Sie unter [Treiber-Manager-Rolle im Verbindungsprozess](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
   
- Es gibt zwei Ebenen von Handles ist ein Artefakt der ODBC-Architektur; in den meisten Fällen ist es nicht relevant für die Anwendung oder den Treiber. Obwohl in der Regel keinen Grund dafür vorliegt, kann für die Anwendung aus, um zu bestimmen, die Treiber-Handles durch Aufrufen von **SQLGetInfo**.  
+ Es gibt zwei Ebenen von Handles, die ein Element der ODBC-Architektur sind; in den meisten Fällen ist es für die Anwendung oder den Treiber nicht relevant. Obwohl es in der Regel keinen Grund gibt, kann die Anwendung die Treiber Handles durch Aufrufen von **SQLGetInfo**ermitteln.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Umgebungshandles](../../../odbc/reference/develop-app/environment-handles.md)  
   

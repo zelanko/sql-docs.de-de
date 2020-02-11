@@ -17,14 +17,14 @@ ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09e83fd8645a5c0ab604a640478c4cced4870742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949812"
 ---
 # <a name="close-method-ado-md"></a>Close-Methode (ADO MD)
-Schließt einen geöffneten Cellset.  
+Schließt ein geöffnetes Cellset.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,18 +33,18 @@ Schließt einen geöffneten Cellset.
 Cellset.Close  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Mithilfe der **schließen** Methode zum Schließen einer [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Freigeben des Objekts werden die zugehörigen Daten, einschließlich der Daten in allen verknüpften [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md), oder [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekte. Schließen einer **Cellset** wird nicht aus dem Arbeitsspeicher entfernt Sie die Einstellungen ändern und öffnen sie es später noch mal. Um ein Objekt vom Arbeitsspeicher vollständig zu vermeiden, legen Sie die Objektvariable auf **nichts**.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn Sie ein [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) -Objekt mithilfe der **Close** -Methode schließen, werden die zugehörigen Daten, einschließlich der Daten in verknüpften [Zellen](../../../ado/reference/ado-md-api/cell-object-ado-md.md)-, [Achsen](../../../ado/reference/ado-md-api/axis-object-ado-md.md)-, [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) [-oder Element](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekten, freigegeben. Durch das Schließen eines **Cellsets** wird es nicht aus dem Arbeitsspeicher entfernt. Sie können die Eigenschaften Einstellungen ändern und Sie später erneut öffnen. Wenn Sie ein Objekt vollständig aus dem Arbeitsspeicher entfernen möchten, legen Sie die Objekt Variable auf **Nothing**fest.  
   
- Sie können später aufrufen, die [öffnen](../../../ado/reference/ado-md-api/open-method-ado-md.md) Methode, um erneut zu öffnen der **Cellset** über das gleiche oder eine andere Datenquelle Zeichenfolge. Während der **Cellset** -Objekt geschlossen ist, Abrufen von Eigenschaften oder durch Aufrufen von Methoden, die auf die zugrunde liegenden Daten verweisen oder Metadaten wird ein Fehler generiert.  
+ Sie können später die [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) -Methode aufzurufen, um das CellSet mit derselben oder einer anderen Quell **Zeichenfolge** erneut zu öffnen. Während das **Cellset** -Objekt geschlossen wird, generiert das Abrufen von Eigenschaften oder das Aufrufen von Methoden, die auf die zugrunde liegenden Daten oder Metadaten verweisen, einen Fehler.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   
- [Open Sie-Methode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
- [Position-Objekt (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
+ [Open-Methode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
+ [Positions Objekt (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
  [State-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)

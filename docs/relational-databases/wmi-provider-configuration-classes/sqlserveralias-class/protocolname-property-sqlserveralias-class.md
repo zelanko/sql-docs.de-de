@@ -18,10 +18,10 @@ ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660422"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName-Eigenschaft (SqlServerAlias-Klasse)
@@ -36,11 +36,11 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *object*  
+ *Objekt*  
  Ein [SqlServerAlias-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) , das einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Alias darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgewert, der den Namen des vom Serververbindungsalias verwendeten Protokolls angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468192"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
@@ -97,7 +97,7 @@ ms.locfileid: "62468192"
   
     -   Script As  
   
-    -   Richtlinienübersicht  
+    -   Aufgaben  
   
     -   Berichte  
   
@@ -153,9 +153,9 @@ ms.locfileid: "62468192"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Nicht unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Für In-Memory-OLTP-Objekte unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keine Funktionen und Vorgänge, die auch nicht von der Datenbank-Engine unterstützt werden.  
   
- Weitere Informationen zu nicht unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Features finden Sie [unterstützt SQL Server-Funktionen](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Weitere Informationen zu nicht unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen finden Sie [unter Unterstützte SQL Server Features](unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Unterstützung für In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)  
   
   

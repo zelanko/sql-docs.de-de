@@ -18,36 +18,36 @@ ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 802d2075a0146febc4521fb17b65f236533596bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907301"
 ---
-# <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
+# <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSlogreader_agents** Tabelle enthält eine Zeile für jeden auf dem lokalen Verteiler ausgeführten Protokolllese-Agent. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSlogreader_agents** Tabelle enthält eine Zeile für jede Protokolllese-Agent, die auf dem lokalen Verteiler ausgeführt wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Die ID des Protokolllese-Agents.|  
-|**name**|**nvarchar(100)**|Der Name des Protokolllese-Agents|  
+|**Name**|**int**|Die ID des Protokolllese-Agents.|  
+|**name**|**nvarchar (100)**|Der Name des Protokolllese-Agents|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**publication**|**sysname**|Der Name der Veröffentlichung.|  
+|**ung**|**sysname**|Der Name der Veröffentlichung.|  
 |**local_job**|**bit**|Gibt an, ob sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag auf dem lokalen Verteiler befindet.|  
-|**job_id**|**binary(16)**|Die Auftrags-ID|  
-|**profile_id**|**int**|Der Konfigurations-ID aus der [MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle.|  
-|**publisher_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. Dies kann einer der folgenden Modi sein:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  
+|**job_id**|**Binary (16)**|Die Auftrags-ID|  
+|**profile_id**|**int**|Die Konfigurations-ID aus der [MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle.|  
+|**publisher_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. Dies kann einer der folgenden Modi sein:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  
 |**publisher_login**|**sysname**|Der Anmeldename, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird|  
-|**publisher_password**|**nvarchar(524)**|Der verschlüsselte Wert des Kennworts, das verwendet wird, um eine Verbindung mit dem Verleger herzustellen.|  
+|**publisher_password**|**nvarchar (524)**|Der verschlüsselte Wert des Kennworts, das verwendet wird, um eine Verbindung mit dem Verleger herzustellen.|  
 |**job_step_uid**|**uniqueidentifier**|Die eindeutige ID des Auftragsschritts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, in dem der Agent gestartet wird.|  
 |**job_login**|**sysname**||  
-|**job_password**|**nvarchar(524)**||  
+|**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

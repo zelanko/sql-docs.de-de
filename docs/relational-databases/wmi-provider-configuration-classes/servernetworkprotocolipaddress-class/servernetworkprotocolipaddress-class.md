@@ -18,10 +18,10 @@ ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 502fde4cb50dda4588ee71486d938070101e80f2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660432"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress-Klasse
@@ -30,7 +30,7 @@ ms.locfileid: "73660432"
   
  Mit der [ServerNetworkProtocolIPAddress-Klasse](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) können Sie folgende Aufgaben ausführen:  
   
--   Überprüfen des Namens der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Überprüfen Sie den Namen der Instanz [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von.  
   
 -   Überprüfen des IP-Adressnamens und des Protokollnamens.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73660432"
   
 -   Aktivieren und Deaktivieren der IP-Adresse.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

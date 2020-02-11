@@ -11,33 +11,33 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727788"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] zusammengefasst. 
+  In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zusammengefasst. 
   
  Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] organisieren, finden Sie unter [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
   
- **Informationen zur Installation der Master Data Services, zur Einrichtung der Datenbank und Website und zur Bereitstellung der Beispielmodelle finden Sie unter** [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
+ Informationen **zum Installieren Master Data Services, zum Einrichten der-Datenbank und-Website und zum Bereitstellen der Beispiel Modelle finden Sie** unter [Master Data Services Overview (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
- **Download**  
+ **Downloaden**  
   
--   Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Um [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]herunterzuladen, navigieren Sie zum  **[Evaluierungscenter](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
+-   Sie haben ein Azure-Konto?  Wechseln Sie dann **[hier](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] starten, auf dem bereits installiert ist.  
   
 ##  <a name="improved-performance"></a>Verbesserte Leistung  
   
  Durch Leistungsverbesserungen können Sie größere Modelle erstellen, Daten effizienter laden und eine bessere Gesamtleistung erzielen. Dies umfasst die Verbesserung der Leistung für das Add-In für Microsoft, um die Ladezeiten von Daten zu verringern und es dem Add-In zu ermöglichen, größere Entitäten zu verarbeiten.  
   
- Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services-Add-In für Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Die folgenden Funktionsverbesserungen sind enthalten.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "73727788"
   
 ##  <a name="improved-security"></a>Erhöhte Sicherheit  
   
- Über die neue Administratorfunktionsberechtigung erhält ein Benutzer oder eine Gruppe dieselben Berechtigungen wie der Serveradministrator in der vorherigen Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Die Administratorberechtigung kann mehreren Benutzern und Gruppen zugewiesen werden. In der vorherigen Version war der Benutzer, der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ursprünglich installiert hat, der Serveradministrator, und es war schwierig, diese Berechtigung einem anderen Benutzer oder einer Gruppe zu übertragen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+ Über die neue Administratorfunktionsberechtigung erhält ein Benutzer oder eine Gruppe dieselben Berechtigungen wie der Serveradministrator in der vorherigen Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Die Administratorberechtigung kann mehreren Benutzern und Gruppen zugewiesen werden. In der vorherigen Version war der Benutzer, der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ursprünglich installiert hat, der Serveradministrator, und es war schwierig, diese Berechtigung einem anderen Benutzer oder einer Gruppe zu übertragen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  Einem Benutzer kann jetzt auf Modellebene explizit die Administratorberechtigung zugewiesen werden. Dies bedeutet, dass der Benutzer die Administratorberechtigung nicht verliert, wenn ihm später in der Modellunterstruktur andere Berechtigungen zugewiesen werden.  
   
  In dieser Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] werden durch die Einführung der folgenden neuen Berechtigungen mehr Berechtigungsstufen bereitgestellt: Lesen, Erstellen, Aktualisieren und Löschen. Beispielsweise kann jetzt ein Benutzer, der nur über die Berechtigung „Aktualisieren“ verfügt, die Masterdaten aktualisieren, ohne Daten zu erstellen oder zu löschen. Wenn Sie einem Benutzer die Berechtigung „Erstellen“, „Aktualisieren“ oder „Löschen“ erteilen, erhält er auch automatisch die Berechtigung „Lesen“. Die Berechtigungen „Lesen“, „Erstellen“, „Aktualisieren“ und „Löschen“ können auch kombiniert werden.  
   
- Wenn Sie ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]durchführen, werden alte Berechtigungen in neue Berechtigungen konvertiert, wie in der folgenden Tabelle veranschaulicht.  
+ Wenn Sie ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] durchführen, werden alte Berechtigungen in neue Berechtigungen konvertiert, wie in der folgenden Tabelle veranschaulicht.  
   
 |Berechtigung in der vorherigen Version|Neue Berechtigung|  
 |------------------------------------|--------------------|  
@@ -130,44 +130,44 @@ ms.locfileid: "73727788"
   
 -   [Transaktionen &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
--   [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [Sicherheits &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>Verbesserungen der Geschäftsregel
- **Verwalten von Geschäftsregeln (MDS-Add-In für Excel)**  
+ **Verwalten von Geschäftsregeln (MDS-Add-in für Excel)**  
   
  Im Master Data Services-Add-In für Excel können Sie Geschäftsregeln verwalten, indem Sie z. B. Geschäftsregeln erstellen und bearbeiten. Geschäftsregeln werden zum Überprüfen von Daten verwendet.  
  
- **Erweiterung der Geschäftsregeln**  
+ **Business Rules Extension**  
   
  Sie können benutzerdefinierte SQL-Skripts als Erweiterung von Geschäftsregelbedingungen und -aktionen anwenden. SQL-Funktionen können als Bedingung verwendet werden. Gespeicherte SQL-Prozeduren können als Aktion verwendet werden. Weitere Informationen finden Sie unter [Geschäftsregelerweiterung &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md). 
  
- **Neugestaltung der Geschäftsregelverwaltung**  
+ **Überarbeitete Geschäftsregel Verwaltung**  
   
  Die Geschäftsregelverwaltung in MDS wurde völlig umgestaltet, um das Erlebnis zu optimieren. Weitere Informationen finden Sie unter [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   
- **Entfernung von Verwaltungsfunktionen der Geschäftsregel aus dem MDS-Add-In für Excel**  
+ **Die Funktionen der Geschäftsregel Verwaltung wurden aus dem MDS-Add-in für Excel entfernt.**  
   
  Es wurden Geschäftsregelverwaltungsfunktionen aus dem MDS-Add-In für Excel entfernt, da das Erlebnis überarbeitet wurde.    
 
- **Neue Geschäftsregelbedingungen**  
+ **Neue Geschäftsregel Bedingungen**  
   
  Es wurden sieben neue Geschäftsregelbedingungen hinzugefügt, um einen vollständigen Satz von Bedingungen bereitzustellen. Weitere Informationen finden Sie unter [Geschäftsregelbedingungen &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md).  
 
 ## <a name="derived-hierarchy-improvements"></a>Abgeleitete Hierarchieverbesserungen
 
- **m:n-Beziehungen in abgeleiteten Hierarchien**  
+ **M:n-Beziehungen in abgeleiteten Hierarchien**  
   
  Sie können jetzt eine abgeleitete Hierarchie erstellen, in der m:n-Beziehungen angezeigt werden. Eine m:n-Beziehung zwischen zwei Entitäten kann mithilfe einer dritten Entität modelliert werden, die eine Zuordnung zwischen ihnen bietet. Die Zuordnungsentität ist eine Entität mit zwei oder mehr domänenbasierten Attributen, die auf andere Entitäten verweisen.  
   
  Die Entität M verfügt z. B. über ein domänenbasiertes Attribut, das auf A verweist, und über ein domänenbasiertes Attribut, das auf B verweist. Sie können mithilfe der Zuordnungsentität eine Hierarchie von A nach B erstellen.  
   
- Weitere Informationen finden Sie unter [Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
+ Weitere Informationen finden Sie unter [Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
  
  **Bearbeiten von m:n-Beziehungen in abgeleiteten Hierarchien**  
   
  Sie können die m:n-Beziehung bearbeiten, indem Sie die Elemente der Zuordnungsentität ändern. Weitere Informationen finden Sie unter [Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
  
- **Verbessertes Erlebnis bei der Verwaltung abgeleiteter Hierarchien**  
+ **Verbesserung der Verwaltung abgeleiteter Hierarchien**  
   
  Das Erlebnis bei der Verwaltung abgeleiteter Hierarchien in MDS wurde verbessert. Weitere Informationen über diese Funktion finden Sie unter [Erstellen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
@@ -179,7 +179,7 @@ ms.locfileid: "73727788"
   
  Sie können einen nicht gruppierten Index für ein Attribut (einzelner Index) oder für eine Liste von Attributen (zusammengesetzter Index) in einer Entität erstellen, um die Abfrageleistung zu verbessern. Weitere Informationen finden Sie unter [Benutzerdefinierter Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
-  **Attributfilter**  
+  **Attribut Filter**  
   
  Sie können für ein domenbasiertes Attribut für ein Blattelement einen übergeordneten Attributfilter verwenden, um die zulässigen Werte für das domänenbasierte Attribut zu beschränken. Weitere Informationen finden Sie unter [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
  
@@ -189,7 +189,7 @@ ms.locfileid: "73727788"
   
  Sie können Entitätsdaten für verschiedene Modelle gemeinsam nutzen, indem Sie eine Synchronisierungspartnerschaft erstellen. Weitere Informationen finden Sie unter [Entitäten-Synchronisierungspartnerschaft &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md).  
   
- **Dauerhaftes Löschen von vorläufig gelöschten Elementen**  
+ **Vorläufig gelöschte Elemente löschen**  
   
  Sie können jetzt alle vorläufig gelöschten Elemente in einer Modellversion dauerhaft löschen. Durch das Löschen eines Elements wird dieses lediglich deaktiviert (vorläufig gelöscht). Weitere Informationen finden Sie unter [Endgültiges Löschen von Versionselementen &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md).  
  
@@ -207,23 +207,23 @@ ms.locfileid: "73727788"
   
  Mithilfe von Changesets können Sie ausstehende Änderungen an einer Entität speichern sowie anzeigen und ändern. Wenn Änderungen für die Entität genehmigt werden müssen, müssen Sie die ausstehenden Änderungen in einem Changeset speichern und zur Genehmigung durch den Administrator übermitteln. Weitere Informationen finden Sie unter [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
   
- **Changeset: E-Mails und Verwaltung**  
+ **E-Mail-und Verwaltungsgruppe ändern**  
   
  In dieser Version können Sie jetzt alle Änderungen nach Modell und Version anzeigen und verwalten. Sie können auch E-Mail-Benachrichtigungen erhalten, sobald der Changesetstatus für eine Entität geändert wird, für die eine Genehmigung erforderlich ist. Weitere Informationen finden Sie unter [Verwalten von Changesets &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) und [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
   
- **Anzeigen und Verwalten des Revisionsverlaufs**  
+ **Anzeigen und Verwalten des Revisions Verlaufs**  
   
  Sie können den Revisionsverlauf nach Entität und nach Element anzeigen und verwalten. Wenn Sie über Aktualisierungsberechtigungen verfügen, können Sie ein Element auf eine frühere Version zurücksetzen. Weitere Informationen finden Sie unter [Elementrevisionsverlauf &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
  
 ## <a name="tool-and-sample-improvements"></a>Tool und Beispielverbesserungen 
   
- **Speichern oder Öffnen von Abfragedateien im MDS-Add-In für Excel**  
+ **Speichern oder Öffnen von Abfrage Dateien in MDS-Add-in für Excel**  
   
  Sie können auf der Seite des Entitäts-Explorers auf **Excel** klicken, um die Shortcutabfragedateien zu speichern. Sie können auch die auf Ihrem Computer gespeicherte Abfragedatei im MDS-Add-In für Excel öffnen. Die gespeicherte Datei kann mithilfe der Anwendung „QueryOpener“ geöffnet werden. Weitere Informationen finden Sie unter [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
   
  Die Abfragedatei enthält die Filter und Hierarchieinformationen von der Explorer-Seite.  
    
- **Aktualisierung der Bereitstellungspakete für Beispielmodelle**  
+ **Beispiel für Modell Bereitstellungs Pakete aktualisiert**  
   
  Die Beispielpakete wurden aktualisiert, um neue Szenarien zu unterstützen. Weitere Informationen finden Sie unter [Beispiele: Modellbereitstellungspakete (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
@@ -231,7 +231,7 @@ ms.locfileid: "73727788"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>Siehe auch  
- [Master Data Services und Data Quality Services-Funktionen, die von den Editionen von SQL Server 2016 unterstützt](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Veraltete Funktionen von Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
- [Eingestellte Master Data Services-Funktionen](../master-data-services/discontinued-master-data-services-features.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Master Data Services-und Data Quality Services-Features, die von den Editionen von SQL Server 2016 unterstützt werden](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [Veraltete Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)  
+ [Nicht unterstützte Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)

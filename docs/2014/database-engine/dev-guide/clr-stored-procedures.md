@@ -1,5 +1,5 @@
 ---
-title: CLR-gespeicherte Prozeduren | Microsoft-Dokumentation
+title: Gespeicherte CLR-Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,34 +22,34 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753817"
 ---
 # <a name="clr-stored-procedures"></a>CLR-gespeicherte Prozeduren
-  Gespeicherte Prozeduren sind Routinen, die nicht in Skalarausdrücken verwendet werden können. Im Gegensatz zu Skalarfunktionen können sie tabellarische Ergebnisse und Meldungen an den Client zurückgeben, Anweisungen in Datendefinitionssprache (DDL, Data Definition Language) und in Datenbearbeitungssprache (DML, Data Manipulation Language) aufrufen und Ausgabeparameter zurückgeben. Weitere Informationen zu den Vorteilen von CLR-Integration "und" Auswählen zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)], finden Sie unter [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Gespeicherte Prozeduren sind Routinen, die nicht in Skalarausdrücken verwendet werden können. Im Gegensatz zu Skalarfunktionen können sie tabellarische Ergebnisse und Meldungen an den Client zurückgeben, Anweisungen in Datendefinitionssprache (DDL, Data Definition Language) und in Datenbearbeitungssprache (DML, Data Manipulation Language) aufrufen und Ausgabeparameter zurückgeben. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem [!INCLUDE[tsql](../../includes/tsql-md.md)]Code und finden Sie unter [Übersicht über die CLR-Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Anforderungen für gespeicherte CLR-Prozeduren  
- In der common Language Runtime (CLR) werden gespeicherte Prozeduren als öffentliche statische Methoden einer Klasse in implementiert eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Assembly. Die statische Methode kann entweder als ungültig deklariert werden oder gibt einen ganzzahligen Wert zurück. Wenn sie einen ganzzahligen Wert zurückgibt, wird die ganze Zahl von der Prozedur als Rückgabecode behandelt. Zum Beispiel:  
+ In der Common Language Runtime (CLR) werden gespeicherte Prozeduren als öffentliche statische Methoden für eine Klasse in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Assembly implementiert. Die statische Methode kann entweder als ungültig deklariert werden oder gibt einen ganzzahligen Wert zurück. Wenn sie einen ganzzahligen Wert zurückgibt, wird die ganze Zahl von der Prozedur als Rückgabecode behandelt. Beispiel:  
   
  `EXECUTE @return_status = procedure_name`  
   
- Die @return_status Variable enthält den von der Methode zurückgegebenen Wert. Wenn die Methode als ungültig deklariert wird, ist der Rückgabecode 0.  
+ Die @return_status -Variable enthält den Wert, der von der-Methode zurückgegeben wird. Wenn die Methode als ungültig deklariert wird, ist der Rückgabecode 0.  
   
  Wenn die Methode Parameter verwendet, sollte die Anzahl der Parameter in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Implementierung mit der Anzahl der Parameter in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Deklaration der gespeicherten Prozedur übereinstimmen.  
   
- Bei den an eine gespeicherte CLR-Prozedur weitergegebenen Parametern kann es sich um einen beliebigen der systemeigenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typen handeln, die über eine Entsprechung im verwalteten Code verfügen. Damit die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax die Prozedur erstellen kann, sollten diese Typen mit dem am besten passenden systemeigenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ angegeben werden. Weitere Informationen zu typkonvertierungen finden Sie unter [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Bei den an eine gespeicherte CLR-Prozedur weitergegebenen Parametern kann es sich um einen beliebigen der systemeigenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typen handeln, die über eine Entsprechung im verwalteten Code verfügen. Damit die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax die Prozedur erstellen kann, sollten diese Typen mit dem am besten passenden systemeigenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ angegeben werden. Weitere Informationen zu Typkonvertierungen finden Sie unter [Mapping von CLR-Parameter Daten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="table-valued-parameters"></a>Tabellenwertparameter  
- Tabellenwertparameter (Table Valued Parameters, TVPs), benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. TVPs verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten aber größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. TVPs helfen auch, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, z. B. mit einer Liste von skalaren Parametern, können Daten als TVP an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu TVPs finden Sie unter [Tabellenwertparametern &#40;Datenbank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Tabellenwertparameter (Table Valued Parameters, TVPs), benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. TVPs verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten aber größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. TVPs helfen auch, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, z. B. mit einer Liste von skalaren Parametern, können Daten als TVP an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu TVPs finden Sie unter [Verwenden von Tabellenwert Parametern &#40;Datenbank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>Zurückgeben von Ergebnissen von gespeicherten CLR-Prozeduren  
  Informationen werden möglicherweise auf mehrere Weisen in gespeicherten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Prozeduren zurückgegeben. Dies schließt Ausgabeparameter, Tabellenergebnisse und Meldungen ein.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT-Parameter und gespeicherte CLR-Prozeduren  
- Wie bei gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren werden Informationen möglicherweise mit OUTPUT-Parametern in gespeicherten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Prozeduren zurückgegeben. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-DML-Syntax, die zum Erstellen von gespeicherten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Prozeduren verwendet wird, ist mit der Syntax identisch, die zum Erstellen gespeicherter Prozeduren, die in [!INCLUDE[tsql](../../includes/tsql-md.md)] geschrieben werden, verwendet werden. Der entsprechende Parameter im Implementierungscode der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klasse sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Sie müssen Geben Sie den Parameter als Verweis und Anwenden der \<Out() > Attribut aus, einen OUTPUT-Parameter, wie im folgenden dargestellt:  
+ Wie bei gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren werden Informationen möglicherweise mit OUTPUT-Parametern in gespeicherten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Prozeduren zurückgegeben. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-DML-Syntax, die zum Erstellen von gespeicherten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Prozeduren verwendet wird, ist mit der Syntax identisch, die zum Erstellen gespeicherter Prozeduren, die in [!INCLUDE[tsql](../../includes/tsql-md.md)] geschrieben werden, verwendet werden. Der entsprechende Parameter im Implementierungscode der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klasse sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Sie müssen den Parameter als Verweis angeben und das \<out ()->-Attribut zur Darstellung eines Ausgabe Parameters anwenden, wie im folgenden dargestellt:  
   
 ```  
 Imports System.Runtime.InteropServices  
@@ -127,7 +127,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- Die Assembly mit der oben genannten CLR-gespeicherten Prozedur wurde erstellt und auf dem Server, die folgenden erstellt [!INCLUDE[tsql](../../includes/tsql-md.md)] wird verwendet, um die Prozedur in der Datenbank zu erstellen, und gibt *Summe* als OUTPUT-Parameter.  
+ Nachdem die Assembly mit der obigen gespeicherten CLR-Prozedur erstellt und auf dem Server erstellt wurde, wird Folgendes [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um die Prozedur in der Datenbank zu erstellen, und die *Summe* wird als Output-Parameter angegeben.  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -137,7 +137,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Beachten Sie, dass *Summe* deklariert wird, als ein `int` SQL Server-Datentyp, und dass die *Wert* in der CLR-gespeicherte Prozedur definierten Parameter angegeben ist, als eine `SqlInt32` CLR-Datentyp. Wenn ein aufrufendes Programm die gespeicherte CLR-Prozedur ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert automatisch die `SqlInt32` CLR-Datentyp in einen `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.  Weitere Informationen dazu, welche CLR-Datentypen können, und können nicht konvertiert werden, finden Sie unter [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Beachten Sie, dass *Sum* als `int` SQL Server-Datentyp deklariert wird und dass der in der gespeicherten CLR-Prozedur definierte *Wert* Parameter als `SqlInt32` CLR-Datentyp angegeben wird. Wenn ein Aufruf Endes Programm die gespeicherte CLR-Prozedur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführt, konvertiert `SqlInt32` den CLR-Datentyp `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch in einen-Datentyp.  Weitere Informationen zu den CLR-Datentypen, die konvertiert werden können, finden Sie unter [Mapping von CLR-Parameter Daten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="returning-tabular-results-and-messages"></a>Zurückgeben von Tabellenergebnissen und Meldungen  
  Das Zurückgeben von tabellarischen Ergebnissen und Meldungen an den Client erfolgt durch das `SqlPipe`-Objekt, das mithilfe der `Pipe`-Eigenschaft der `SqlContext`-Klasse abgerufen wird. Das `SqlPipe`-Objekt verfügt über eine `Send`-Methode. Durch das Aufrufen der `Send`-Methode können Sie Daten durch die Pipe zur aufrufenden Anwendung senden.  
@@ -148,7 +148,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  Verwenden Sie `SqlPipe.Send(string)`, um Meldungen an die Clientanwendung zu senden. Der Text der Meldung ist auf 8000 Zeichen beschränkt. Wenn die Meldung 8000 Zeichen überschreitet, wird sie abgeschnitten.  
   
 ###### <a name="returning-tabular-results"></a>Zurückgeben von tabellarischen Ergebnissen  
- Um die Ergebnisse einer Abfrage direkt an den Client zu senden, verwenden Sie eine Überladung der `Execute`-Methode des `SqlPipe`-Objekts. Dies ist die effizienteste Methode zum Zurückgeben von Ergebnissen an den Client, da die Daten zu den Netzwerkpuffern übertragen werden, ohne in den verwalteten Arbeitsspeicher kopiert zu werden. Zum Beispiel:  
+ Um die Ergebnisse einer Abfrage direkt an den Client zu senden, verwenden Sie eine Überladung der `Execute`-Methode des `SqlPipe`-Objekts. Dies ist die effizienteste Methode zum Zurückgeben von Ergebnissen an den Client, da die Daten zu den Netzwerkpuffern übertragen werden, ohne in den verwalteten Arbeitsspeicher kopiert zu werden. Beispiel:  
   
  [C#]  
   
@@ -381,7 +381,7 @@ END;
 ```  
   
 > [!NOTE]  
->  Meldungen und Resultsets werden in der Clientanwendung anders abgerufen. Z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Resultsets in den **Ergebnisse** angezeigt, und Meldungen angezeigt, der **Nachrichten** Bereich.  
+>  Meldungen und Resultsets werden in der Clientanwendung anders abgerufen. Beispielsweise werden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Resultsets in der **Ergebnis** Ansicht angezeigt, und Meldungen werden im Bereich **Meldungen** angezeigt.  
   
  Wenn der oben erwähnte Visual C#-Code in einer Datei MyFirstUdp.cs gespeichert und mit Folgendem kompiliert wird:  
   
@@ -407,9 +407,9 @@ AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;
 EXEC HelloWorld;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-benutzerdefinierte Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [CLR-benutzerdefinierte Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Benutzerdefinierte CLR-Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR-Trigger](../../../2014/database-engine/dev-guide/clr-triggers.md)  
   
   

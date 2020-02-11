@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105358"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
@@ -34,10 +34,10 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Intersect** Funktion gibt die Schnittmenge zweier Mengen zurück. Doppelte Werte werden von der Funktion standardmäßig aus den beiden Mengen entfernt, bevor die Schnittmenge gebildet wird. Die beiden angegebenen Mengen müssen dieselbe Dimensionalität haben.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Intersect** -Funktion gibt die Schnittmenge zweier Mengen zurück. Doppelte Werte werden von der Funktion standardmäßig aus den beiden Mengen entfernt, bevor die Schnittmenge gebildet wird. Die beiden angegebenen Mengen müssen dieselbe Dimensionalität haben.  
   
- Der optionale **alle** Flag werden doppelte Werte beibehalten. Wenn **alle** angegeben wird, die **Intersect** Funktion nicht doppelt vorhandene Elemente wie gewohnt überschneidet, und schneidet außerdem jeder doppelte Wert in der ersten Menge, die einen übereinstimmenden doppelten in der zweiten Menge. Die beiden angegebenen Mengen müssen dieselbe Dimensionalität haben.  
+ Das optionale **all** -Flag behält Duplikate bei. Wenn **all** angegeben wird, interschneidet die **Intersect** -Funktion nicht duplizierte Elemente wie üblich und schneidet auch jedes Duplikat in der ersten Menge mit einem übereinstimmenden Duplikat in der zweiten Menge ab. Die beiden angegebenen Mengen müssen dieselbe Dimensionalität haben.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Abfrage gibt die Jahre 2003 und 2004 zurück, die beiden Elemente, die in beiden angegebenen Mengen vorhanden sind:  
@@ -72,7 +72,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

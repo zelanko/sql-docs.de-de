@@ -18,41 +18,41 @@ ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118742"
 ---
 # <a name="buffers"></a>Puffer
-Ein Puffer wird jedem Speicherbereich Anwendung verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Zum Beispiel Anwendungspuffer zugeordnet sein können, oder *gebunden,* Resultsetspalten mit **SQLBindCol**. Wie jede Zeile abgerufen wird, werden die Daten für jede Spalte in diese Puffer zurückgegeben. *Geben Sie Puffer* werden verwendet, um Daten aus der Anwendung an den Treiber; zu übergeben. *Ausgabepuffer* werden verwendet, um Daten aus dem Treiber des an die Anwendung zurückgegeben.  
+Ein Puffer ist ein beliebiger Teil des Anwendungs Speichers, der verwendet wird, um Daten zwischen der Anwendung und dem Treiber zu übergeben. Anwendungs Puffer können z. b. Resultsetspalten mit **SQLBindCol**verknüpft oder *an diese gebunden* werden. Wenn jede Zeile abgerufen wird, werden die Daten für jede Spalte in diesen Puffern zurückgegeben. *Eingabepuffer* werden verwendet, um Daten von der Anwendung an den Treiber zu übergeben. *Ausgabepuffer* werden verwendet, um Daten vom Treiber an die Anwendung zurückzugeben.  
   
 > [!NOTE]  
->  Wenn eine ODBC-Funktion SQL_ERROR zurückgibt, sind die Inhalte der Ausgabeargumente der Funktion nicht definiert.  
+>  Wenn eine ODBC-Funktion SQL_ERROR zurückgibt, ist der Inhalt aller Ausgabe Argumente für diese Funktion nicht definiert.  
   
- Diese Erläuterung bezieht sich auf sich selbst in erster Linie mit Puffern unbestimmten Typ. Die Adressen der diese Puffer werden als Argumente des Typs SQLPOINTER, z. B. die *TargetValuePtr* -Argument in **SQLBindCol**. Allerdings einige der Elemente, die hier erläutert, wie z. B. die Argumente, mit Puffern, gelten auch für Argumente verwendet, um Zeichenfolgen an den Treiber übergeben, wie z. B. die *TableName* -Argument in **SQLTables**.  
+ Diese Erörterung bezieht sich hauptsächlich auf Puffer mit unbestimmtem Typ. Die Adressen dieser Puffer werden als Argumente des Typs SQLPOINTER angezeigt, z. b. das *targetvalueptr* -Argument in **SQLBindCol**. Einige der hier erörterten Elemente, wie z. b. die mit Puffern verwendeten Argumente, gelten jedoch auch für Argumente, die zum Übergeben von Zeichen folgen an den Treiber verwendet werden, wie z. b. das *TableName* -Argument in **SQLTables**.  
   
- In der Regel treten paarweise auf diese Puffer. *Datenpuffer* werden verwendet, um die Daten selbst zu übergeben, während er sich *Längenindikator/Puffer* werden verwendet, um die Länge der Daten in den Datenpuffer oder ein spezieller Wert wie z. B. SQL_NULL_DATA gibt an, dass die Daten NULL sind übergeben. Die Länge der Daten in einen Datenpuffer unterscheidet sich von der Länge des Datenpuffers selbst. Die folgende Abbildung zeigt die Beziehung zwischen den Datenpuffer und Längen-/Indikatorpuffers.  
+ Diese Puffer treten in der Regel paarweise auf. *Datenpuffer* werden verwendet, um die Daten selbst zu übergeben, während *Längen-/Indikatorpuffer* verwendet werden, um die Länge der Daten im Datenpuffer oder einen speziellen Wert, wie z. b. SQL_NULL_DATA, zu übergeben, was darauf hinweist, dass die Daten NULL sind. Die Länge der Daten in einem Datenpuffer unterscheidet sich von der Länge des Daten Puffers selbst. Die folgende Abbildung zeigt die Beziehung zwischen dem Datenpuffer und dem length/Indicator-Puffer.  
   
- ![Datenpuffer und Länge&#47;Indikatorpuffers](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![Datenpuffer-und Längen&#47;Indikator Puffer](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
- Ein Längen-/Indikatorpuffer ist erforderlich, wenn der Datenpuffer Daten mit variabler Länge, wie z. B. Zeichen- oder Binärdaten enthält. Enthält der Datenpuffer-Daten fester Länge, wie z. B. eine ganze Zahl oder Datum-Struktur, ist ein Längen-/Indikatorpuffer nur erforderlich, um Indikatorwerte übergeben werden, da die Länge der Daten bereits bekannt ist. Wenn eine Anwendung ein Längen-/Indikatorpuffer mit fester Länge verwendet wird, ignoriert der Treiber Länge, die sie übergeben.  
+ Ein Längen-/Indikatorpuffer ist immer dann erforderlich, wenn der Datenpuffer Daten variabler Länge enthält, z. b. Zeichen-oder Binärdaten. Wenn der Datenpuffer Daten fester Länge enthält, z. b. eine ganzzahlige oder eine Datums Struktur, ist ein Längen-/Indikatorpuffer nur erforderlich, um Indikatorwerte zu übergeben, da die Länge der Daten bereits bekannt ist. Wenn eine Anwendung einen Längen-/indikatorenpuffer mit Daten fester Länge verwendet, ignoriert der Treiber alle übergebenen Längen.  
   
- Die Länge der sowohl den Datenpuffer und die darin enthaltenen Daten ist in Bytes, im Gegensatz zu Zeichen angegeben. Diese Unterscheidung ist unwichtig für Programme, die ANSI-Zeichenfolgen zu verwenden, da die Länge in Bytes und Zeichen identisch sind.  
+ Die Länge des Daten Puffers und der darin enthaltenen Daten wird in Byte gemessen (im Gegensatz zu Zeichen). Dieser Unterschied ist für Programme, die ANSI-Zeichen folgen verwenden, unerheblich, da Längen in Bytes und Zeichen identisch sind.  
   
- Bei der Datenpuffer eine treiberdefinierten Deskriptorfeld, diagnosefeld oder Attribut darstellt, sollte die Anwendung an den Treiber-Manager die Art des Arguments Funktion angeben, der den Wert des Felds oder Attributs angibt. Die Anwendung erledigt dies durch Festlegen der Length-Argument in einem beliebigen Funktionsaufruf, der das Feld oder ein Attribut auf einen der folgenden Werte festgelegt. (Dasselbe gilt für Funktionen, die die Werte des Felds oder Attributs, mit der Ausnahme, die das Argument mit den Werten verweist, die für die Einstellung-Funktion in das Argument selbst sind abrufen.)  
+ Wenn der Datenpuffer ein Treiber definiertes Deskriptorfeld, ein Diagnose Feld oder ein ungültiges Attribut darstellt, sollte die Anwendung dem Treiber-Manager die Art des Funktionsarguments geben, das den Wert für das Feld oder Attribut angibt. Die Anwendung bewirkt dies, indem das length-Argument in jedem Funktions Aufrufsatz festgelegt wird, der das Feld oder Attribut auf einen der folgenden Werte festlegt. (Gleiches gilt für Funktionen, die die Werte des Felds oder Attributs abrufen, mit der Ausnahme, dass das-Argument auf die Werte zeigt, die für die Setting-Funktion im Argument selbst sind.)  
   
--   Wenn das Funktionsargument, die der Wert des Felds oder Attributs gibt an, ein Zeiger auf eine Zeichenfolge, wird die *Länge* -Argument gibt die Länge der Zeichenfolge oder SQL_NTS.  
+-   Wenn das Funktions Argument, das den Wert für das Feld oder das Attribut angibt, ein Zeiger auf eine Zeichenfolge ist, entspricht das *length* -Argument der Länge der Zeichenfolge oder SQL_NTS.  
   
--   Wenn das Funktionsargument, die der Wert des Felds oder Attributs gibt an, ein Zeiger auf ein binärer Puffer ist, wird die Anwendung platziert das Ergebnis der SQL_LEN_BINARY_ATTR (*Länge*)-Makro in der *Länge* Argument. Dadurch wird einen negativen Wert in der *Länge* Argument.  
+-   Wenn das Funktions Argument, das den Wert für das Feld oder das Attribut angibt, ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des SQL_LEN_BINARY_ATTR (*length*)-Makros im *length* -Argument. Dadurch wird ein negativer Wert in das *length* -Argument eingefügt.  
   
--   Ist das Funktionsargument, die den Wert des Felds oder Attributs gibt an, ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder eine binäre Zeichenfolge, die *Länge* Argument sollte den Wert SQL_IS_POINTER aufweisen.  
+-   Wenn das Funktions Argument, das den Wert für das Feld oder Attribut angibt, ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder eine binäre Zeichenfolge ist, sollte das *length* -Argument den Wert SQL_IS_POINTER haben.  
   
--   Wenn das Funktionsargument, die der Wert des Felds oder Attributs gibt an, einen Wert fester Länge enthält die *Länge* Argument ist SQL_IS_INTEGER SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_ISI_USMALLINT, nach Bedarf.  
+-   Wenn das Funktions Argument, das den Wert für das Feld oder das Attribut angibt, einen Wert mit fester Länge enthält, wird das *length* -Argument entsprechend SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_ISI_USMALLINT.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Verzögerte Puffer](../../../odbc/reference/develop-app/deferred-buffers.md)  
+-   [Zurückgestellte Puffer](../../../odbc/reference/develop-app/deferred-buffers.md)  
   
 -   [Zuweisen und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   

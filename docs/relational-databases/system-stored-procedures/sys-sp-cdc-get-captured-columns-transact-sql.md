@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_get_captured_columns (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_cdc_get_captured_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083742"
 ---
-# <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
+# <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Metadateninformationen von Change Data Capture für die aufgezeichneten Quellspalten zurück, die von der angegebenen Aufzeichnungsinstanz nachverfolgt wurden. Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,17 +44,17 @@ sys.sp_cdc_get_captured_columns
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @capture_instance =] '*Capture_instance*"  
- Der Name der Aufzeichnungsinstanz, die der Quelltabelle zugeordnet ist. *Capture_instance* ist **Sysname** und darf nicht NULL sein.  
+ [ @capture_instance = ] "*capture_instance*"  
+ Der Name der Aufzeichnungsinstanz, die der Quelltabelle zugeordnet ist. *capture_instance* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
- Um über die aufzeichnungsinstanzen für die Tabelle zu melden, führen Sie die [Sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) gespeicherte Prozedur.  
+ Führen Sie die gespeicherte Prozedur [sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) aus, um Berichte zu den Aufzeichnungs Instanzen für die Tabelle zu erstellen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Name des Quelltabellenschemas.|  
 |source_table|**sysname**|Name der Quelltabelle.|  
@@ -62,17 +62,17 @@ sys.sp_cdc_get_captured_columns
 |column_name|**sysname**|Name der aufgezeichneten Quellspalte.|  
 |column_id|**int**|ID der Spalte in der Quelltabelle.|  
 |column_ordinal|**int**|Position der Spalte innerhalb der Quelltabelle.|  
-|data_type|**sysname**|Datentyp der Spalte.|  
+|data_type|**sysname**|Der Spaltendatentyp.|  
 |character_maximum_length|**int**|Maximale Zeichenlänge der zeichenbasierten Spalte; andernfalls NULL.|  
 |numeric_precision|**tinyint**|Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls NULL.|  
 |numeric_precision_radix|**smallint**|Basis der Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls NULL.|  
 |numeric_scale|**int**|Dezimalstellen der Spalte, wenn sie auf numerischen Werten basiert; andernfalls NULL.|  
 |datetime_precision|**smallint**|Genauigkeit der Spalte, wenn sie auf datetime-Werten basiert; andernfalls NULL.|  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie sp_cdc_get_captured_columns, um Spalteninformationen zu den aufgezeichneten Spalten, die durch Abfragen der Capture-Abfragefunktionen Instanz zurückgegeben erhalten [CDC. fn_cdc_get_all_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) oder [CDC. fn_cdc_get_net_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Die Spaltennamen, IDs und Position bleiben während der Lebensdauer der Aufzeichnungsinstanz konstant. Nur die Spaltendatentypen ändern sich, wenn sich der Datentyp der zugrunde liegenden Quellspalte in der nachverfolgten Tabelle ändert. Spalten, die hinzugefügt oder aus einer Quelltabelle gelöscht haben keine Auswirkung auf die aufgezeichneten Spalten der vorhandenen aufzeichnungsinstanzen.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie sys. sp_cdc_get_captured_columns, um Spalten Informationen zu den aufgezeichneten Spalten abzurufen, die durch Abfragen der Aufzeichnungs Instanz-Abfragefunktionen [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) oder [CDC. fn_cdc_get_net_changes_<](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)capture_instance>zurückgegeben werden. Die Spaltennamen, IDs und Position bleiben während der Lebensdauer der Aufzeichnungsinstanz konstant. Nur die Spaltendatentypen ändern sich, wenn sich der Datentyp der zugrunde liegenden Quellspalte in der nachverfolgten Tabelle ändert. Spalten, die zu einer Quelltabelle hinzugefügt oder aus dieser gelöscht werden, wirken sich nicht auf die aufgezeichneten Spalten der vorhandenen Aufzeichnungsinstanzen aus.  
   
- Verwendung [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) zum Abrufen von Informationen zu Data Definition Language (DDL)-Anweisungen, die auf eine Quelltabelle angewendet. Alle DDL-Änderungen, die die Struktur einer nachverfolgten Quellspalte geändert haben, werden im Resultset zurückgegeben.  
+ Verwenden Sie [sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) zum Abrufen von Informationen zu DDL-Anweisungen (Data Definition Language), die auf eine Quell Tabelle angewendet werden. Alle DDL-Änderungen, die die Struktur einer nachverfolgten Quellspalte geändert haben, werden im Resultset zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner". Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer über keine Berechtigungen zum Anzeigen der Quelldaten verfügt, gibt die Funktion den Fehler 22981 zurück ("Das Objekt ist nicht vorhanden oder der Zugriff wurde verweigert").  
@@ -88,7 +88,7 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728470"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Erstellen einer Abonnementsicht zum Exportieren von Daten (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728470"
 
   Erstellen Sie eine Abonnementsicht, um Master Data Services-Daten in Abonnementsysteme zu exportieren. Erstellen Sie eine Sicht Ihrer Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die entsprechende Berechtigung für den Zugriff auf den Funktionsbereich **Integrationsmanagement** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die entsprechende Berechtigung für den Zugriff auf den Funktionsbereich **Integrationsmanagement** verfügen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>So erstellen und bearbeiten Sie eine Abonnementsicht  
   
@@ -65,32 +65,32 @@ ms.locfileid: "73728470"
 ## <a name="view-information"></a>Sichtinformationen  
  Für jede erstellte Sicht wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
-|Spalte|und Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
-|Status|Der Status der Sicht.<br /><br /> Wenn Sie auf **Speichern**klicken, wird das Bild ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Icon zum Aktualisieren des Status ") angezeigt, das angibt, dass die Ansicht aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten einer Sicht Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Icon für Fehlerstatus ") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Icon für OK-Status ") wird angezeigt.|  
-|NAME|Der Name der Abonnementsicht.|  
+|Status|Der Status der Sicht.<br /><br /> Wenn Sie auf **Speichern**klicken, wird das Bild ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status") angezeigt, das angibt, dass die Ansicht aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten einer Sicht Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") wird angezeigt.|  
+|Name|Der Name der Abonnementsicht.|  
 |Modell|Der Name des Modells.|  
 |Version|Der Name der Version.|  
 |Version|Der Name des Versionsflags.|  
 |Entität|Der Name der abgeleiteten Hierarchie.|  
-|Datenquellen|Der Name der Entität.|  
+|Entität|Der Name der Entität.|  
 |Format|Gibt den Typ der Daten in der Sicht an.|  
-|Level|Gibt die Anzahl von Ebenen in der Sicht an, die nur für Sichtformate mit expliziten oder abgeleiteten Ebenen verwendet werden|  
+|Ebene|Gibt die Anzahl von Ebenen in der Sicht an, die nur für Sichtformate mit expliziten oder abgeleiteten Ebenen verwendet werden|  
 |Miteinbeziehen von gelöschten Elementen|Gibt an, ob vorläufig gelöschte Elemente in die Sicht miteinbezogen werden.|  
   
  Wenn Sie auf eine Sicht klicken, werden die folgenden Informationen angezeigt.  
   
--   **Erstellt von**: Der Name des Benutzers, der die Sicht erstellt hat.  
+-   **Erstellt von**: der Name des Benutzers, der die Sicht erstellt hat.  
   
--   **Am**: Das Datum und die Uhrzeit der Erstellung der Sicht.  
+-   **Am**: das Datum und die Uhrzeit der Erstellung der Sicht.  
   
--   **Aktualisiert von**: Der Name des Benutzers, der die Sicht zuletzt aktualisiert hat.  
+-   **Aktualisiert von**: der Name des Benutzers, der die Sicht zuletzt aktualisiert hat.  
   
--   **Am**: Das Datum und die Uhrzeit der letzten Aktualisierung der Sicht.  
+-   **Am**: Datum und Uhrzeit der letzten Aktualisierung der Sicht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht: Exportieren von Daten &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [Löschen einer Abonnementsicht &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [&#40;Master Data Services eine Abonnement Sicht löschen&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [Erstellen Sie ein Versionsflag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

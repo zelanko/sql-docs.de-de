@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ddeee2e1c979a22f45aea8f4ba7279447c733df3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784455"
 ---
 # <a name="cursor-programming-details-odbc"></a>Details über das Programmieren von Cursorn (ODBC)
@@ -30,13 +30,13 @@ ms.locfileid: "73784455"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Implizite Cursor Konvertierungen &#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
+-   [Implizite Cursor Konvertierungen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
   
 -   [Verwenden von Autofetch mit ODBC-Cursorn](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
--   [Schnelle Vorwärts Cursor &#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
+-   [Schnelle Vorwärts Cursor &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von &#40;Cursorn (od&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden von Cursorn &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

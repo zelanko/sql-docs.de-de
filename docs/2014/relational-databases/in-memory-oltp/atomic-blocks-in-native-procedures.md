@@ -11,14 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467280"
 ---
 # <a name="atomic-blocks"></a>ATOMIC-Blöcke
-  `BEGIN ATOMIC` ist Teil des ANSI SQL-Standards. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt ATOMIC-Blöcke nur auf der obersten Ebene systemintern kompilierter gespeicherter Prozeduren.  
+  
+  `BEGIN ATOMIC` ist Teil des ANSI SQL-Standards. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt ATOMIC-Blöcke nur auf der obersten Ebene systemintern kompilierter gespeicherter Prozeduren.  
   
 -   Jede systemintern kompilierte gespeicherte Prozedur enthält genau einen Block mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Dies ist ein ATOMIC-Block.  
   
@@ -31,7 +33,7 @@ ms.locfileid: "62467280"
   
  Wenn eine Sitzung keine aktive Transaktion enthält, wird durch `BEGIN ATOMIC` eine neue Transaktion gestartet. Wenn außerhalb des Blockbereichs keine Ausnahme ausgelöst wird, wird für die Transaktion am Ende des Blocks ein Commit ausgeführt. Wenn der Block eine Ausnahme auslöst (d. h., die Ausnahme wird nicht innerhalb des Blocks abgefangen und behandelt), wird ein Rollback für die Transaktion ausgeführt. Bei Transaktionen, die einen einzelnen ATOMIC-Block (eine einzelne systemintern kompilierte gespeicherte Prozedur) umfassen, ist es nicht notwendig, explizite `BEGIN TRANSACTION`- und `COMMIT`- oder `ROLLBACK`-Anweisungen zu schreiben.  
   
- Systemintern kompilierte gespeicherte Prozeduren unterstützen `TRY`-, `CATCH`- und `THROW`-Konstrukte zur Fehlerbehandlung. `RAISERROR` wird nicht unterstützt.  
+ Systemintern kompilierte gespeicherte Prozeduren unterstützen `TRY`-, `CATCH`- und `THROW`-Konstrukte zur Fehlerbehandlung. `RAISERROR`wird nicht unterstützt.  
   
  Das folgende Beispiel veranschaulicht das Fehlerbehandlungsverhalten bei ATOMIC-Blöcken und systemintern kompilierten gespeicherten Prozeduren:  
   
@@ -123,45 +125,45 @@ ORDER BY c1
 GO  
 ```  
   
- Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines atomic-Blocks auftreten, werden sie dazu führen, dass die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332 und 41333.  
+ Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332 und 41333.  
   
 ## <a name="session-settings"></a>Sitzungseinstellungen  
  Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können mit `BEGIN ATOMIC` angegeben werden, während andere immer denselben festen Wert aufweisen.  
   
  Die folgenden Optionen sind für `BEGIN ATOMIC` erforderlich:  
   
-|Erforderliche Einstellung|Beschreibung|  
+|Erforderliche Einstellung|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|Unterstützte Werte sind `SNAPSHOT`, `REPEATABLEREAD` und `SERIALIZABLE`.|  
 |`LANGUAGE`|Bestimmt Datums- und Uhrzeitformate sowie Systemmeldungen. Alle Sprachen und Aliase in [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) werden unterstützt.|  
   
  Die folgenden Einstellungen sind optional:  
   
-|Optionale Einstellung|Description|  
+|Optionale Einstellung|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |`DATEFORMAT`|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt `DATEFORMAT` das Standarddatumsformat, das `LANGUAGE` zugeordnet ist.|  
 |`DATEFIRST`|Falls angegeben, überschreibt `DATEFIRST` den Standardwert, der `LANGUAGE` zugeordnet ist.|  
-|`DELAYED_DURABILITY`|Unterstützte Werte sind `OFF` und `ON`.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionscommits können entweder vollständig dauerhaft (Standardeinstellung) oder verzögert dauerhaft sein. Weitere Informationen finden Sie unter [Steuern der Transaktionsdauerhaftigkeit](../logs/control-transaction-durability.md).|  
+|`DELAYED_DURABILITY`|Die Werte `OFF` und `ON` werden unterstützt.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Transaktionscommits können entweder vollständig dauerhaft, Standard oder verzögert dauerhaft sein. Weitere Informationen finden Sie unter [Steuern der Transaktions Dauerhaftigkeit](../logs/control-transaction-durability.md).|  
   
  Die folgenden SET-Optionen verfügen für alle ATOMIC-Blöcke in allen systemintern kompilierten gespeicherten Prozeduren über denselben Systemstandardwert:  
   
 |SET-Option|Systemstandard für ATOMIC-Blöcke|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|EIN|  
+|ANSI_PADDING|EIN|  
+|ANSI_WARNING|EIN|  
+|ARITHABORT|EIN|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|EIN|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|EIN|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|EIN|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Nicht abgefangene Ausnahmen bewirken ein Rollback für den ATOMIC-Block, führen jedoch nicht zu einem Abbruch der Transaktion, solange die Transaktion durch den Fehler nicht fehlschlägt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Systemintern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
   
   

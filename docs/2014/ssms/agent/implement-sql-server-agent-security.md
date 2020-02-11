@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137521"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementieren der SQL Server-Agent-Sicherheit
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ermöglicht dem Datenbankadministrator, jeden Auftragsschritt in einem Sicherheitskontext auszuführen, dem lediglich die Berechtigungen erteilt wurden, die zum Durchführen dieses Auftragsschritts erforderlich sind, wie von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy festgelegt. Um Berechtigungen für einen bestimmten Auftragsschritt festzulegen, erstellen Sie einen Proxy mit den erforderlichen Berechtigungen und weisen dann diesen Proxy dem Auftragsschritt zu. Ein Proxy kann für mehrere Auftragsschritte angegeben werden. Für Auftragsschritte, für die dieselben Berechtigungen erforderlich sind, verwenden Sie denselben Proxy.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent ermöglicht dem Datenbankadministrator, jeden Auftrags Schritt in einem Sicherheitskontext auszuführen, der nur über die Berechtigungen verfügt, die zum Ausführen dieses Auftrags [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schritts erforderlich sind, der von einem-Agent-Proxy bestimmt wird. Um Berechtigungen für einen bestimmten Auftragsschritt festzulegen, erstellen Sie einen Proxy mit den erforderlichen Berechtigungen und weisen dann diesen Proxy dem Auftragsschritt zu. Ein Proxy kann für mehrere Auftragsschritte angegeben werden. Für Auftragsschritte, für die dieselben Berechtigungen erforderlich sind, verwenden Sie denselben Proxy.  
   
  Im folgenden Abschnitt wird erläutert, welche Datenbankrolle Sie Benutzern erteilen müssen, damit sie Aufträge mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents erstellen oder ausführen können.  
   
@@ -65,18 +65,18 @@ ms.locfileid: "63137521"
   
 -   ACE hängt von den folgenden Konfigurations-DLL-Elementen ab, die sich im Besitz von SSDP befinden, da diese DLL-APIs von ACE aufgerufen werden:  
   
-    -   **SCO:** Microsoft.SqlServer.Configuration.Sco.dll, einschließlich neuer SCO-Überprüfungen für virtuelle Konten  
+    -   **SCO** -Microsoft. SqlServer. Configuration. SCO. dll, einschließlich neuer SCO-Überprüfungen für virtuelle Konten  
   
-    -   **Cluster:** Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** -Microsoft. SqlServer. Configuration. Cluster. dll  
   
-    -   **SFC:** Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **Sfc** -Microsoft. SqlServer. Configuration. sqlconfigbase. dll  
   
-    -   **Erweiterung:** Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Erweiterung** : Microsoft. SqlServer. Configuration. configextension. dll  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
- [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
+ [sp_droprolemember &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

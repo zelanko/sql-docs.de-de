@@ -16,13 +16,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512550"
 ---
-# <a name="use-the-systemhealth-session"></a>Verwenden der system_health-Sitzung
+# <a name="use-the-system_health-session"></a>Verwenden der system_health-Sitzung
   Bei der system_health-Sitzung handelt es sich um eine standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltene Sitzung für erweiterte Ereignisse. Diese Sitzung wird automatisch beim Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gestartet und ohne merkliche Auswirkungen auf die Leistung ausgeführt. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beheben können. Daher empfiehlt es sich, die Sitzung nicht zu beenden oder zu löschen.  
   
  In der Sitzung werden u. a. folgende Informationen erfasst:  
@@ -67,14 +67,14 @@ WHERE xe.name = 'system_health'
   
  Um die Sitzungsdaten aus der Ereignisdatei anzuzeigen, verwenden Sie die in Management Studio verfügbare Benutzeroberfläche für erweiterte Ereignisse. Weitere Informationen finden Sie unter [View Event Session Data](../../database-engine/view-event-session-data.md) .  
   
-## <a name="restoring-the-systemhealth-session"></a>Wiederherstellen der system_health-Sitzung  
+## <a name="restoring-the-system_health-session"></a>Wiederherstellen der system_health-Sitzung  
  Wenn Sie die system_health-Sitzung gelöscht haben, können Sie diese wiederherstellen, indem Sie die Datei **u_tables.sql** im Abfrage-Editor ausführen. Diese Datei befindet sich im folgenden Ordner, wobei C: dem Laufwerk entspricht, auf dem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Programmdateien installiert haben:  
   
- C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. \< *Instanceid*> \MSSQL\Install  
+ C:\Programme\Microsoft SQL server\mssql12. \< *InstanceId*> \mssql\install  
   
  Wenn Sie die Sitzung wiederhergestellt haben, müssen Sie die Sitzung mit der ALTER EVENT SESSION-Anweisung oder über den Knoten **Erweiterte Ereignisse** im Objekt-Explorer starten. Andernfalls wird die Sitzung beim nächsten Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts automatisch gestartet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tools für erweiterte Ereignisse](extended-events-tools.md)  
   
   

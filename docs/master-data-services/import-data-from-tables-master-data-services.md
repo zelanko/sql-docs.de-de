@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729243"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importieren von Daten aus Tabellen (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73729243"
   
 -   Das Modell darf nicht den Status **Commit wurde ausgeführt**haben.  
   
- **So fügen Sie in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank Daten hinzu, aktualisieren oder löschen sie**  
+ **So können Sie Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank hinzufügen, aktualisieren und löschen**  
   
 1.  Bereiten Sie die Elemente für den Import in die entsprechende Stagingtabelle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank vor, und geben Sie Werte für die Pflichtfelder an. Eine Übersicht der Stagingtabellen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73729243"
   
          Wählen Sie auf der Seite **Stagingbatches** in der Dropdownliste das Modell aus, dem Sie Daten hinzufügen möchten, und klicken Sie anschließend auf **Batches starten**. Der Status der Batchverarbeitung wird im Feld **Status** angezeigt. Weitere Informationen zu Status finden Sie unter [Importstatus &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Seite "stagingbatches" in Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Seite "stagingbatches" in Master Data Manager")  
+         ![Stagingbatchesseite im Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Stagingbatchesseite im Master Data Manager")  
   
          Der Stagingvorgang wird mit den durch die Einstellung **Staging-Batchintervall** in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   

@@ -19,16 +19,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783150"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_colfmt** das Format einer vorhandenen Datendatei an, die in einem Massen Kopiervorgang in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle als Datenquelle verwendet wird. Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_colfmt**angegebenen Spalten Formate erstellt.  
+  Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_colfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle in einem Massen Kopiervorgang in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle verwendet wird. Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_colfmt**angegebenen Spalten Formate erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,19 +49,19 @@ RETCODE bcp_colfmt (
  *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
- *idxuserdatacol*  
+ *idxUserDataCol*  
  Die Ordnungsnummer der Spalte in der Benutzerdatendatei, für die das Format angegeben wird. Die erste Spalte ist 1.  
   
  *eUserDataType*  
  Der Datentyp dieser Spalte in der Benutzerdatei. Wenn Sie sich vom Datentyp der entsprechenden Spalte in der Datenbanktabelle (*idxServerColumn*) unterscheiden, werden die Daten nach Möglichkeit durch Massen kopieren konvertiert.  
   
- in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurde die Unterstützung für die Datentyp Token SQLXML und SQLUDT im *eUserDataType* -Parameter eingeführt.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in wurde die Unterstützung für die Datentyp Token SQLXML und SQLUDT im *eUserDataType* -Parameter eingeführt.  
   
- Der *eUserDataType* -Parameter wird durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp Token in sqlncli. h, nicht von den ODBC-C-Datentyp Enumeratoren, aufgelistet. Sie können beispielsweise mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen SQLCHARACTER-Typs eine Zeichenfolge vom ODBC-Typ SQL_C_CHAR angeben.  
+ Der *eUserDataType* -Parameter wird durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp Token in sqlncli. h, nicht die ODBC-C-Datentyp Enumeratoren, aufgelistet. Sie können beispielsweise mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen SQLCHARACTER-Typs eine Zeichenfolge vom ODBC-Typ SQL_C_CHAR angeben.  
   
  Um die Standarddatendarstellung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp anzugeben, legen Sie diesen Parameter auf 0 fest.  
   
- Bei einem Massen Kopiervorgang aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datei, wenn *eUserDataType* auf SqlDecimal oder SQLNUMERIC festgelegt ist:  
+ Bei einem Massen Kopiervorgang aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datei, wenn *eUserDataType* SqlDecimal oder SQLNUMERIC lautet:  
   
 -   Wenn die Quell Spalte nicht **Dezimal** oder **numerisch**ist, werden die Standardgenauigkeit und die Standardskala verwendet.  
   
@@ -91,7 +91,7 @@ RETCODE bcp_colfmt (
   
  Der *cbUserData* -Wert stellt die Anzahl der Datenbytes dar. Werden Zeichendaten durch Unicode-Zeichen dargestellt, repräsentiert ein positiver *cbUserData* -Parameterwert die Anzahl der Zeichen multipliziert mit der Größe (in Byte) der einzelnen Zeichen.  
   
- *puserdataterm*  
+ *pUserDataTerm*  
  Die Abschlusszeichensequenz, die für diese Spalte verwendet werden soll. Dieser Parameter ist in erster Linie für Zeichendatentypen nützlich, da alle anderen Typen eine feste Länge besitzen oder, im Falle von Binärdaten, einen Indikator für die Länge erfordern, um die Anzahl der vorhandenen Bytes präzise zu erfassen.  
   
  Legen Sie diesen Parameter auf NULL fest, um zu vermeiden, dass extrahierte Daten terminiert werden, oder um anzugeben, dass Daten in einer Benutzerdatei nicht terminiert werden.  
@@ -108,10 +108,10 @@ RETCODE bcp_colfmt (
   
  Wenn dieser Wert 0 ist, wird beim Massenkopieren die Spalte in der Datendatei ignoriert.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mit der **bcp_colfmt** -Funktion können Sie das Benutzerdatei Format für Massen Kopien angeben. Für Massenkopieren besteht ein Format aus folgenden Bestandteilen:  
   
 -   Eine Zuordnung von Benutzerdateispalten zu Datenbankspalten  
@@ -126,7 +126,7 @@ RETCODE bcp_colfmt (
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder **bcp_colfmt** Aufrufe gibt das Format für eine Benutzerdatei Spalte an. Wenn Sie z. b. die Standardeinstellungen für drei Spalten in einer Benutzer Datendatei mit fünf Spalten ändern möchten, rufen Sie zuerst [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** auf, und rufen Sie dann **bcp_colfmt** fünfmal auf, wobei drei dieser Aufrufe Ihr benutzerdefiniertes Format festlegen. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 fest, und legen Sie *cbIndicator*, *cbUserData*und *cbUserDataTerm* auf 0, SQL_VARLEN_DATA bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder **bcp_colfmt** Aufrufe gibt das Format für eine Benutzerdatei Spalte an. Wenn Sie z. b. die Standardeinstellungen für drei Spalten in einer Benutzer Datendatei mit fünf Spalten ändern möchten, rufen Sie zuerst [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** auf, und rufen Sie dann **bcp_colfmt** fünfmal auf, wobei drei dieser Aufrufe Ihr benutzerdefiniertes Format festlegen. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 fest, und legen Sie *cbIndicator*, *cbUserData*und *cbUserDataTerm* auf 0, SQL_VARLEN_DATA bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
  Für *cbIndicator*ist der Wert 8, um anzugeben, dass ein großer Werttyp nun gültig ist. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   
@@ -141,11 +141,11 @@ RETCODE bcp_colfmt (
  Die [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) -Funktion kann verwendet werden, um die Format Spezifikation beizubehalten.  
   
 ## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>'bcp_colfmt'-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Informationen zu den Typen, die mit dem *eUserDataType* -Parameter für Datums-/Uhrzeittypen verwendet werden, finden Sie unter [Massen &#40;Kopier Änderungen für verbesserte&#41;Datums-und Uhrzeit Typen OLE DB und ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Informationen zu den Typen, die mit dem *eUserDataType* -Parameter für Datums-/Uhrzeittypen verwendet werden, finden Sie unter [Massen Kopier Änderungen für verbesserte Datums-und Uhrzeittypen &#40;OLE DB und ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Weitere Informationen finden Sie unter [Verbesserungen &#40;bei Datum und&#41;Uhrzeit (ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)).  
+ Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

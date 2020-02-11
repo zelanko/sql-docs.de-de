@@ -1,5 +1,5 @@
 ---
-title: Überprüfung der Projektkonsistenz | Microsoft-Dokumentation
+title: Konsistenzprüfung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125543"
 ---
 # <a name="consistency-check"></a>Konsistenzprüfung
-Eine konsistenzprüfung wird automatisch vom Treiber ausgeführt, wenn eine Anwendung das SQL_DESC_DATA_PTR-Feld des APD, ARD oder IPD festlegt. Wenn dieses Feld festgelegt ist, überprüft der Treiber an, dass der Wert das SQL_DESC_TYPE-Feld und die Werte für das SQL_DESC_TYPE-Feld in den gleichen Datensatz sind gültig und konsistent.  
+Vom Treiber wird automatisch eine Konsistenzprüfung durchgeführt, wenn eine Anwendung das SQL_DESC_DATA_PTR-Feld der APD, der ARD oder der IPD festlegt. Wenn dieses Feld festgelegt ist, überprüft der Treiber, ob der Wert des SQL_DESC_TYPE Felds und die Werte, die für das SQL_DESC_TYPE Feld im selben Datensatz gelten, gültig und konsistent sind.  
   
- Das SQL_DESC_DATA_PTR-Feld von einem IPD ist normalerweise nicht festgelegt. Allerdings kann eine Anwendung durchführen, um eine konsistenzprüfung des IPD-Feldern zu erzwingen können. Der Wert, der das SQL_DESC_DATA_PTR-Feld des IPD festgelegt ist, werden nicht tatsächlich gespeichert und kann nicht abgerufen werden, durch einen Aufruf von **SQLGetDescField** oder **SQLGetDescRec**; die Einstellung erfolgt nur für das Erzwingen der die konsistenzprüfung. Eine konsistenzprüfung kann nicht auf eine IRD ausgeführt werden.  
+ Das SQL_DESC_DATA_PTR-Feld einer IPD wird normalerweise nicht festgelegt. Allerdings kann eine Anwendung dies tun, um eine Konsistenzprüfung von IPD-Feldern zu erzwingen. Der Wert, auf den das SQL_DESC_DATA_PTR-Feld der IPD festgelegt ist, wird nicht tatsächlich gespeichert und kann nicht durch einen **SQLGetDescField** -oder **SQLGetDescRec**-Befehl abgerufen werden. die Einstellung wird nur zum Erzwingen der Konsistenzprüfung durchgeführt. Eine Konsistenzprüfung kann nicht für einen IRD ausgeführt werden.  
   
- Weitere Informationen zu der konsistenzprüfung, finden Sie unter [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).
+ Weitere Informationen zur Konsistenzprüfung finden Sie unter [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).

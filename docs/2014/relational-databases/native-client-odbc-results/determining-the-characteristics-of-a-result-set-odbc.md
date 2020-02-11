@@ -1,5 +1,5 @@
 ---
-title: Bestimmen der Eigenschaften eines Resultsets (ODBC) legen | Microsoft-Dokumentation
+title: Bestimmen der Eigenschaften eines Resultsets (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200201"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Bestimmen der Eigenschaften eines Resultsets (ODBC)
   Metadaten sind Daten, die andere Daten beschreiben. Resultsetmetadaten beschreiben beispielsweise die Merkmale eines Resultsets, wie die Spaltenanzahl im Resultset, die Datentypen in diesen Spalten, ihre Namen, Genauigkeit und NULL-Zulässigkeit.  
   
- ODBC liefert Metadaten an Anwendungen durch seine API-Katalogfunktionen. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber implementiert viele der ODBC-API-Katalogfunktionen als Aufrufe an eine entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Katalogprozedur.  
+ ODBC liefert Metadaten an Anwendungen durch seine API-Katalogfunktionen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber implementiert viele der ODBC-API-Katalog Funktionen als Aufrufe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer entsprechenden Katalog Prozedur.  
   
  Anwendungen erfordern Metadaten für die meisten Resultsetvorgänge. Die Anwendung verwendet z. B. den Datentyp einer Spalte, um zu bestimmen, welche Art von Variable an diese Spalte gebunden werden soll. Sie verwendet die Bytelänge einer Zeichenspalte, um zu bestimmen, wie viel Platz zur Anzeige von Daten aus dieser Spalte erforderlich ist. Wie eine Anwendung die Metadaten für eine Spalte bestimmt, hängt vom Typ der Anwendung ab.  
   
@@ -38,17 +38,17 @@ ms.locfileid: "63200201"
   
  Ein Anwendung kann folgende Aufrufe durchführen, um die Eigenschaften eines Resultsets zu bestimmen:  
   
--   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) bestimmt, wie viele Spalten von einer Anforderung zurückgegeben.  
+-   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) , um zu bestimmen, wie viele Spalten eine Anforderung zurückgegeben hat.  
   
--   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) oder [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) um eine Spalte im Resultset zu beschreiben.  
+-   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) oder [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) , um eine Spalte im Resultset zu beschreiben.  
   
- Eine wohlgeformte Anwendung wird ausgehend von der Annahme geschrieben, dass das Resultset unbekannt ist, und verwendet die von diesen Funktionen zurückgegebenen Informationen dazu, die Spalten im Resultset zu binden. Eine Anwendung kann diese Funktionen jederzeit aufrufen, nachdem eine Anweisung vorbereitet oder ausgeführt wurde. Um eine optimale Leistung eine Anwendung sollten jedoch aufrufen **SQLColAttribute**, **SQLDescribeCol**, und **SQLNumResultCols** , nachdem eine Anweisung ausgeführt wird.  
+ Eine wohlgeformte Anwendung wird ausgehend von der Annahme geschrieben, dass das Resultset unbekannt ist, und verwendet die von diesen Funktionen zurückgegebenen Informationen dazu, die Spalten im Resultset zu binden. Eine Anwendung kann diese Funktionen jederzeit aufrufen, nachdem eine Anweisung vorbereitet oder ausgeführt wurde. Um eine optimale Leistung zu erzielen, sollte eine Anwendung jedoch nach der Ausführung einer-Anweisung **SQLColAttribute**, **SQLDescribeCol**und **SQLNumResultCols** aufzurufen.  
   
  Sie können mehrere gleichzeitige Abrufe auf Metadaten durchführen. Die den ODBC-API-Implementierungen zugrunde liegenden Systemkatalogprozeduren können mit dem ODBC-Treiber aufgerufen werden, während dieser statische Servercursor verwendet. So können Anwendungen mehrere Aufrufe an ODBC-Katalogfunktionen gleichzeitig verarbeiten.  
   
  Wenn die Anwendung einen bestimmten Metadatensatz mehr als ein Mal verwendet, ist es möglicherweise von Vorteil, wenn die Informationen beim ersten Abrufen in privaten Variablen zwischengespeichert werden. Dadurch werden spätere Aufrufe an die ODBC-Katalogfunktionen für die gleichen Informationen vermieden, durch die der Treiber zu Roundtrips zum Server gezwungen wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Ergebnissen &#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verarbeitungsergebnisse &#40;ODBC-&#41;](processing-results-odbc.md)  
   
   

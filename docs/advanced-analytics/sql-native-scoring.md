@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727288"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Native Bewertung mithilfe der PREDICT-T-SQL-Funktion
@@ -144,7 +144,7 @@ SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### <a name="step-2-run-predict-on-the-model"></a>Schritt 2: Ausführen von PREDICT für das Modell
+### <a name="step-2-run-predict-on-the-model"></a>Schritt 2: Ausführen von PREDICT für das Modell
 
 Die folgende einfache PREDICT-Anweisung ruft eine Klassifizierung aus dem Entscheidungsstrukturmodell mithilfe der Funktion für die **native Bewertung** ab. Die Irisarten werden anhand der von Ihnen angegebenen Attribute, der Länge und Breite der Blütenblätter, vorhergesagt.
 

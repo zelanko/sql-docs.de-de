@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754455"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Einrichten der Datenbankspiegelung (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754455"
   
 1.  Prinzipalserver, Spiegelserver und Zeuge müssen ggf. von separaten Serverinstanzen gehostet werden, die auf getrennten Hostsystemen ausgeführt werden. Jede der Serverinstanzen erfordert einen Datenbankspiegelungs-Endpunkt. Wenn Sie einen Datenbankspiegelungs-Endpunkt erstellen müssen, stellen Sie sicher, dass die anderen Serverinstanzen darauf zugreifen können.  
   
-     Der für die Datenbankspiegelung von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für die Datenbankspiegelung sind zwei Arten von Transportsicherheit verfügbar: die Windows-Authentifizierung oder die zertifikatbasierte Authentifizierung. Weitere Informationen finden Sie unter [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+     Der für die Datenbankspiegelung von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für die Datenbankspiegelung sind zwei Arten von Transportsicherheit verfügbar: die Windows-Authentifizierung oder die zertifikatbasierte Authentifizierung. Weitere Informationen finden Sie unter [Transport Sicherheit für die Daten Bank Spiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Die Anforderungen für den Netzwerkzugriff hängen von der Form der Authentifizierung wie folgt ab:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62754455"
   
          Um die Zertifikatsauthentifizierung für die Datenbankspiegelung für eine bestimmte Serverinstanz zu aktivieren, muss der Systemadministrator jede Serverinstanz konfigurieren, um Zertifikate sowohl für ausgehende als auch für eingehende Verbindungen zu verwenden. Ausgehende Verbindungen müssen zuerst konfiguriert werden. Weitere Informationen finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-2.  Stellen Sie sicher, dass auf dem Spiegelserver Anmeldungen für alle Datenbankbenutzer vorhanden sind. Weitere Informationen finden Sie unter [Einrichten von Anmeldekonten für die Datenbankspiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+2.  Stellen Sie sicher, dass auf dem Spiegelserver Anmeldungen für alle Datenbankbenutzer vorhanden sind. Weitere Informationen finden Sie unter [Einrichten von Anmeldekonten für die Daten Bank Spiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
 3.  Legen Sie auf der Serverinstanz, auf der die Spiegeldatenbank gehostet wird, die übrigen Umgebungseinstellungen fest, die für die gespiegelte Datenbank erforderlich sind. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62754455"
   
     3.  Stellen Sie alle Protokollsicherungen wieder her, die seit der vollständigen oder differenziellen Datenbanksicherung ausgeführt wurden.  
   
-     Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
     > [!IMPORTANT]  
     >  Führen Sie die restlichen Einrichtungsschritte möglichst bald nach der Sicherung der Prinzipaldatenbank aus. Bevor Sie die Spiegelung auf den Partnern beginnen können, sollten Sie auf der ursprünglichen Datenbank eine aktuelle Protokollsicherung erstellen und in der zukünftigen Spiegelungsdatenbank wiederherstellen.  
@@ -93,9 +93,9 @@ ms.locfileid: "62754455"
         >  Im Modus für hohe Leistung muss WITNESS auf OFF festgelegt sein. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  Ein Beispiel der Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten der datenbankspiegelung mithilfe der Microsoft Windows-Authentifizierung, finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Ein Beispiel für die Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  Ein Beispiel der Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten der datenbankspiegelung mithilfe der zertifikatbasierten Sicherheit, finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  Ein Beispiel für die Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten einer Datenbank-Spiegelungssitzung mithilfe der zertifikatbasierten Sicherheit finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
  
   
@@ -115,10 +115,10 @@ ms.locfileid: "62754455"
  [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Enthält ein Beispiel mit sämtlichen Schritten, die für das Erstellen einer Datenbank-Spiegelungssitzung mit einem Zeugen unter Verwendung der Windows-Authentifizierung erforderlich sind.  
   
- [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;SQL Server&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  Enthält ein Beispiel mit sämtlichen Schritten, die für das Erstellen einer Datenbank-Spiegelungssitzung mit einem Zeugen unter Verwendung der zertifikatbasierten Authentifizierung erforderlich sind.  
   
- [Einrichten von Anmeldekonten für die Datenbankspiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [Einrichten von Anmeldekonten für die Daten Bank Spiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Beschreibt, wie eine Anmeldung für eine Remoteserverinstanz erstellt wird, die ein anderes Konto als die lokale Serverinstanz verwendet.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
@@ -146,7 +146,7 @@ ms.locfileid: "62754455"
   
  **Transact-SQL/SQL Server Management Studio**  
   
--   [Vorgehensweise: Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md)  
+-   [Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md)  
   
 -   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -154,10 +154,10 @@ ms.locfileid: "62754455"
   
  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Datenbankspiegelung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Datenbankspiegelung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Transport Sicherheit für Daten Bank Spiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md)  
   
   

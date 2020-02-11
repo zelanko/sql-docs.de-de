@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467583"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
   Große Datenmengen können mit der `ISequentialStream`-Schnittstelle gebunden oder abgerufen werden. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, dass die Daten abgeschnitten werden.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>So rufen Sie Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream ab  
   
@@ -35,11 +35,12 @@ ms.locfileid: "62467583"
   
 3.  Rufen Sie die Spaltendaten mit `IRow::Open()` oder `IRow::GetColumns()` ab.  
   
-    -   `IRow::Open()` kann verwendet werden, um in der Zeile einen `ISequentialStream` zu öffnen. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit `IStream` oder `ISequentialStream` können Daten aus der Spalte gelesen werden).  
+    -   
+  `IRow::Open()` kann verwendet werden, um in der Zeile einen `ISequentialStream` zu öffnen. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit `IStream` oder `ISequentialStream` können Daten aus der Spalte gelesen werden).  
   
-    -   Wenn `IRow::GetColumns()` verwendet wird, die **pData** -Element der DBCOLUMNACCESS-Struktur festgelegt ist, um auf ein Datenstromobjekt zu verweisen.  
+    -   Wenn `IRow::GetColumns()` verwendet wird, wird das **pData** -Element der DBCOLUMNACCESS-Struktur so festgelegt, dass es auf ein Stream-Objekt verweist.  
   
-4.  Verwendung **ISequentialStream::Read()** wiederholt, um die angegebene Anzahl von Bytes in den Puffer des Consumers zu lesen.  
+4.  Verwenden Sie **ISequentialStream:: Read ()** wiederholt, um die angegebene Anzahl von Bytes in den Consumerpuffer zu lesen.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie mithilfe von IRow eine einzelne Zeile abrufen können. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. In diesem Beispiel wird die Verwendung von IRow::Open() sowie IRow::GetColumns() veranschaulicht. Im Beispiel werden die Spaltendaten mithilfe von ISequentialStream::Read gelesen.  
@@ -669,7 +670,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen für OLE DB](ole-db-how-to-topics.md)  
   
   

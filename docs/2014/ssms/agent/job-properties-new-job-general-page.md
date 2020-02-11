@@ -1,5 +1,5 @@
 ---
-title: Auftrag Eigenschaften und neuer Auftrag (Seite Allgemein) | Microsoft-Dokumentation
+title: Auftrags Eigenschaften und neuer Auftrag (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211387"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Auftragseigenschaften und „Neuer Auftrag“ (Seite „Allgemein“)
-  Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften eines Agentauftrags in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
+  Verwenden Sie diese Seite, um die allgemeinen Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags anzuzeigen und zu ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Ändern Sie den Namen des Auftrags.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "68211387"
  **Beschreibung**  
  Ändern Sie die Beschreibung des Auftrags.  
   
- **Enabled**  
+ **Aktiviert**  
  Aktivieren Sie den Auftrag. Wenn der Auftrag nicht aktiviert ist, wird er nicht als Antwort auf einen Zeitplan oder eine Warnung ausgeführt. Sie können den Auftrag jedoch weiterhin mithilfe der gespeicherten Prozedur **sp_start_job** starten.  
   
- **Quelle**  
+ **`Source`**  
  Zeigt den Masterserver für den Auftrag an. Nur auf der Seite **Auftragseigenschaften– Allgemein** verfügbar.  
   
  **Erstellt**  
@@ -53,10 +53,10 @@ ms.locfileid: "68211387"
  **Zuletzt ausgeführt**  
  Zeigt das Datum und die Uhrzeit des Starts der letzten Ausführung des Auftrags an. Nur auf der Seite **Auftragseigenschaften– Allgemein** verfügbar.  
   
- **Auftragsverlauf anzeigen**  
+ **Anzeigen des Auftragsverlaufs**  
  Zeigt den Auftragsverlauf für den Auftrag an. Nur auf der Seite **Auftragseigenschaften– Allgemein** verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren von Aufträgen](implement-jobs.md)   
  [Auftragskategorien: Auftragskategorien verwalten](job-categories-manage-job-categories.md)  
   

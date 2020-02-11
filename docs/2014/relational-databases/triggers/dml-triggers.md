@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196504"
 ---
 # <a name="dml-triggers"></a>DML-Trigger
@@ -59,10 +59,10 @@ ms.locfileid: "68196504"
 |Anwendbarkeit|Tabellen|Tabellen und Sichten|  
 |Anzahl pro Tabelle oder Sicht|Mehrere Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|Ein Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|  
 |Kaskadierende Verweise|Keine Einschränkungen|INSTEAD OF UPDATE- und DELETE-Trigger sind nicht für Tabellen zulässig, die Ziel von kaskadierenden Einschränkungen für die referenzielle Integrität sind.|  
-|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br />Deklarativen referenziellen Aktionen<br />Erstellung der**inserted** - und **deleted** -Tabellen<br />Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle von:  Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
+|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br />Deklarativen referenziellen Aktionen<br />Erstellung der**inserted** - und **deleted** -Tabellen<br />Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
 |Ausführungsreihenfolge|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht verfügbar|  
-|`varchar(max)`, `nvarchar(max)`, und `varbinary(max)` -Spaltenverweise in **eingefügt** und **gelöscht** Tabellen|Allowed|Allowed|  
-|`text`, `ntext`, und `image` -Spaltenverweise in **eingefügt** und **gelöscht** Tabellen|Nicht zulässig|Allowed|  
+|`varchar(max)`- `nvarchar(max)`,- `varbinary(max)` und-Spalten Verweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
+|`text`- `ntext`,- `image` und-Spalten Verweise in **eingefügten** und **gelöschten** Tabellen|Nicht zulässig|Zulässig|  
   
  CLR-Trigger  
  Ein CLR-Trigger kann ein AFTER- oder ein INSTEAD OF-Trigger sein. Bei einem CLR-Trigger kann es sich auch um einen DDL-Trigger handeln. Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  
@@ -82,7 +82,7 @@ ms.locfileid: "68196504"
 |Beschreibt, wie DML-Trigger gelöscht oder deaktiviert werden.|[Löschen oder Deaktivieren von DML-Triggern](delete-or-disable-dml-triggers.md)|  
 |Beschreibt, wie Triggersicherheit verwaltet wird.|[Verwalten der Triggersicherheit](manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   

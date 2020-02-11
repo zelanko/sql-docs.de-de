@@ -1,5 +1,5 @@
 ---
-title: Testen der Berechtigungen&#39;eines Benutzers
+title: Testen der Berechtigungen eines Benutzers&#39;s
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728873"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Testen der Berechtigungen eines Benutzers (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73728873"
   
 4.  Das nächste Mal, wenn Sie das Browserfenster öffnen, werden Sie zur Eingabe eines Benutzernamens und Kennworts aufgefordert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Sicherheits &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

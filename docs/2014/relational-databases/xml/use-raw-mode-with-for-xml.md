@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193245"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Verwenden des RAW-Modus mit FOR XML
@@ -33,11 +33,11 @@ ms.locfileid: "63193245"
  Die Option BINARY BASE64 muss in der FOR XML-Klausel angegeben werden, um die Binärdaten im Base64-codierten Format zurückzugeben. Im RAW-Modus führt das Abrufen von Binärdaten ohne Angabe der Option BINARY BASE64 zu einem Fehler.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- Dieser Abschnitt enthält die folgenden Beispiele:  
+ Dieser Abschnitt enthält folgende Beispiele:  
   
 -   [Beispiel: Abrufen von Produktmodellinformationen als XML](example-retrieving-product-model-information-as-xml.md)  
   
--   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Anweisung](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Direktive](example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Beispiel: Anfordern von Schemas als Ergebnisse mithilfe der Optionen XMLDATA und XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
@@ -45,11 +45,11 @@ ms.locfileid: "63193245"
   
 -   [Beispiel: Umbenennen des &#60;row&#62;-Elements](example-renaming-the-row-element.md)  
   
--   [Beispiel: Angeben eines Stammelements für den mit FOR XML generierten XML-Code](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Beispiel: Angeben eines Stammelements für das durch FOR XML generierte XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
 -   [Beispiel: Abfragen von Spalten des Typs XML](example-querying-xmltype-columns.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Verwenden des AUTO-Modus mit FOR XML](use-auto-mode-with-for-xml.md)   
  [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md)   

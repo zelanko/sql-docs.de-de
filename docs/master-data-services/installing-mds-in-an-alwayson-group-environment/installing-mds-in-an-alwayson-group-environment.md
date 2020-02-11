@@ -1,5 +1,5 @@
 ---
-title: Hochverfügbarkeit und Notfall Wiederherstellung
+title: Hochverfügbarkeit und Notfallwiederherstellung
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728100"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
@@ -29,11 +29,11 @@ In diesem Artikel wird eine Lösung für Master Data Service (MDS) beschrieben, 
 
 Um die Lösung zu implementieren, müssen Sie die folgenden Aufgaben, die in diesem Artikel beschrieben sind, ausführen.
 
-1. [Installieren und Einrichten des Windows Server Failover Clusters (WSFC)](#windows-server-failover-cluster-wsfc)
+1. [Installieren und Einrichten des Windows Server-Failoverclusters (wsfc)](#windows-server-failover-cluster-wsfc).
 
 2. [Richten Sie eine Always on Verfügbarkeits Gruppe ein](#sql-server-always-on-availability-group).
 
-3. [Konfigurieren von MDS zur Ausführung auf einem WSFC-Knoten](#configure-mds-to-run-on-an-wsfc-node)
+3. [Konfigurieren Sie MDS für die ausführen auf einem wsfc-Knoten](#configure-mds-to-run-on-an-wsfc-node).
 
 In den oben aufgeführten Abschnitten werden die Technologien kurz vorgestellt und Anweisungen folgen. Ausführliche Informationen zu den Technologien finden Sie in den Dokumenten, die mit jedem Abschnitt verknüpft sind.
 
@@ -82,15 +82,15 @@ Daher ist es wichtig, dass Sie Ihre Szenarios und Anforderungen im Hinterkopf be
 
 In diesem Abschnitt werden die folgenden Aufgaben behandelt.
 
-1. [Installieren der Windows-Failoverclusterfunktion](#install-failover-cluster-feature)
+1. [Installieren Sie das Windows-Failoverclusterfeature](#install-failover-cluster-feature).
 
-2. [Erstellen eines Windows Server-Failoverclusters](#create-a-windows-server-failover-cluster)
+2. [Erstellen Sie einen Windows Server-Failovercluster](#create-a-windows-server-failover-cluster).
 
 Wie in Abbildung 1 im vorherigen Abschnitt gezeigt, enthält die in diesem Artikel beschriebene Projektmappe den Windows Server-Failovercluster (WSFC). Wir müssen wsfc einrichten, da AGS für die Fehlererkennung und das Failover von wfsc abhängig sind.
 
 WSFC ist ein Feature, das die Hochverfügbarkeit von Anwendungen und Diensten verbessert. Es besteht aus einer Gruppe unabhängiger Windows Server-Instanzen, auf denen der Microsoft-Failoverclusterdienst ausgeführt wird. Die Windows Server-Instanzen (oder Knoten, wie sie manchmal genannt werden) sind miteinander verbunden, sodass sie kommunizieren können und so die Fehlererkennung möglich machen. Der WSFC stellt die Fehlererkennung und Failoverfunktionen bereit. Wenn ein Knoten oder Dienst im Cluster einen Fehler ausgibt, wird der Fehler erkannt, und ein anderer Knoten stellt automatisch oder manuell die auf dem fehlgeschlagenen Knoten gehosteten Dienste bereit. So erfahren Benutzer nur eine minimale Unterbrechung des Diensts, und die Verfügbarkeit des Diensts wird verbessert.  
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 Das Windows Server-Betriebssystem wird auf allen Instanzen installiert, und alle Updates werden gepatcht.
 
@@ -115,7 +115,7 @@ Schließen Sie die folgenden Schritte für jede Windows Server-Instanz ab, um di
 
    ![Assistent zum Hinzufügen von Rollen und Features, benötigt für das Failoverclustering](media/Fig3_RequiredFeaturesFailover.png)
 
-   Abbildung 3
+   Abbildung 3
 
 4. Klicken Sie auf der Seite **Bestätigung** auf **Installieren**, um das Feature für das Failoverclustering zu installieren.
 
@@ -131,9 +131,9 @@ Sobald das WSFC-Feature auf allen Instanzen installiert ist, können Sie den WSF
 
    ![Failovercluster-Manager, Konfiguration überprüfen](media/Fig4_ValidateConfig.png)
 
-   Abbildung 4
+   Abbildung 4
 
-3. Klicken Sie im **Assistent** zum **Überprüfen einer Konfiguration** auf **Weiter**.
+3. Klicken Sie im **Assistent zum ** **Überprüfen einer Konfiguration** auf **Weiter**.
 
 4. Fügen Sie im Dialogfeld **Server oder Cluster auswählen** die Servernamen ein, die SQL Server hosten werden, und klicken Sie anschließend auf **Weiter**. Weitere Informationen in Abbildung 5.
 
@@ -161,9 +161,9 @@ Sobald das WSFC-Feature auf allen Instanzen installiert ist, können Sie den WSF
 
    Abbildung 7
 
-8. Bestätigen Sie auf der Seite **Zusammenfassung**, dass das Kontrollkästchen **Cluster jetzt unter Verwendung der überprüften Knoten erstellen...** aktiviert ist, und klicken Sie dann auf **Beenden**, um den **Assistenten** „**Cluster erstellen**“ zu starten.
+8. Bestätigen Sie auf der Seite **Zusammenfassung**, dass das Kontrollkästchen **Cluster jetzt unter Verwendung der überprüften Knoten erstellen...** aktiviert ist, und klicken Sie dann auf **Beenden**, um den **Assistenten „** **Cluster erstellen**“ zu starten.
 
-9. Klicken Sie im **Cluster erstellen**-**Assistent** auf **Weiter**.
+9. Klicken Sie im **Cluster erstellen-** **Assistent** auf **Weiter**.
 
 10. Geben Sie auf der Seite **Zugriffspunkt für die Clusterverwaltung** den Namen des WSFC-Clusters ein, und klicken Sie auf **Weiter**. In diesem Beispiel verwenden wir „MDS-HA“ als Namen des Clusters. Weitere Informationen in Abbildung 8.
 
@@ -193,9 +193,9 @@ In diesem Abschnitt werden die folgenden Aufgaben behandelt.
 
 1. [Aktivieren Sie SQL Server Always on Verfügbarkeits Gruppe](#enable-sql-server-always-on-availability-groups-on-every-sql-server-instance).
 
-2. [Erstellen einer Verfügbarkeitsgruppe](#create-an-availability-group)
+2. [Erstellen Sie eine Verfügbarkeits Gruppe](#create-an-availability-group).
 
-3. [Überprüfen und Testen der Verfügbarkeitsgruppe](#validation-and-test-the-availability-group)
+3. Über [prüfen und testen Sie die Verfügbarkeits Gruppe](#validation-and-test-the-availability-group).
 
 Always on über zwei Features zum Bereitstellen von Hochverfügbarkeit und Notfall Wiederherstellung für MDS verfügen, basieren beide auf wsfc.
 
@@ -207,9 +207,9 @@ Eine Verfügbarkeits Gruppe bietet Verfügbarkeit auf Datenbankebene. Die Verfü
 
 Die Verfügbarkeit von Hochverfügbarkeit auf Instanzebene wird von den- Der SQL Server-Dienst und die zugehörigen Dienste sind als Ressourcen im wsfc registriert. Die Failoverclusterinstanz-Lösung erfordert zudem symmetrischen freigegebenen Festplattenspeicher, z.B. SAN- oder SMB-Dateifreigaben, die für alle Knoten im WFC-Cluster verfügbar sein müssen.
    
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
-- Installieren Sie SQL Server auf allen Knoten. Weitere Informationen finden Sie unter [Installieren von SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
+- Installieren Sie SQL Server auf allen Knoten. Weitere Informationen finden Sie unter [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
 - (Empfohlen) Installieren Sie genau denselben Satz von SQL Server-Funktionen und die gleiche Version auf jedem Knoten. Insbesondere muss MDS installiert sein.
 
@@ -231,13 +231,13 @@ Die Verfügbarkeit von Hochverfügbarkeit auf Instanzebene wird von den- Der SQL
 
    ![Aktivieren Always on Verfügbarkeits Gruppen Option](media/Fig11_EnableAlwaysOn.png)
 
-   Abbildung 11
+   Abbildung 11
 
 3. Wenn eine Seite „Warnungen“ angezeigt wird, klicken Sie auf **OK**, um den Vorgang fortzusetzen. Weitere Informationen in Abbildung 12.
 
    ![Zum Anhalten und Neustart des Diensts bestätigen](media/Fig12_WarningServiceStopStart.png)
 
-   Abbildung 12
+   Abbildung 12
 
 4. Klicken Sie auf **Neustart**, um den **SQL Server**-Dienst neu zu starten und diese Änderung wirksam zu machen. Weitere Informationen in Abbildung 10.
 
@@ -278,7 +278,7 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
 5. Klicken Sie auf die Datenbank, die Sie gerade auf der Seite **Datenbank auswählen** erstellt haben, und klicken Sie dann auf **Weiter**. Weitere Informationen in Abbildung 15.
 
-   ![Datenbank auswählen](media/Fig15_AvailabilityGroupSelectDatabase.png)
+   ![Wählen Sie die Datenbank aus.](media/Fig15_AvailabilityGroupSelectDatabase.png)
 
    Abbildung 15
 
@@ -298,13 +298,13 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
    Konfigurieren Sie für jedes Replikat die folgenden Einstellungen für **Synchroner Commit**, **Automatisches Failover** und **Lesbares sekundäres Replikat**. Weitere Informationen in Abbildung 17.
 
-**Synchroner Commit**: Dadurch wird sichergestellt, dass wenn für eine Transaktion auf dem primären Replikat der Datenbank ein Commit ausgeführt wird, ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
+**Synchroner Commit**: Dadurch wird sichergestellt, dass die Transaktion für alle anderen synchronen Replikate ausgeführt wird, wenn für eine Transaktion ein Commit für das primäre Replikat einer Datenbank ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
 
 Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Knoten im selben Rechenzentrum befinden. Wenn sie sich in unterschiedlichen Rechenzentren befinden, kann ein synchroner Commit die Leistung der Datenbank verlangsamen. Wenn dieses Kontrollkästchen nicht aktiviert ist, wird ein asynchroner Commit verwendet.
 
-**Automatisches Failover:** Wenn das primäre Replikat ausgefallen ist, wird für die Verfügbarkeitsgruppe automatisch ein Failover auf das sekundäre Replikat ausgeführt, wenn das automatische Failover ausgewählt ist. Dies kann nur auf den Replikaten mit synchronen Commits aktiviert werden.
+**Automatisches Failover:** Wenn das primäre Replikat nicht ausgeführt wird, führt die Verfügbarkeits Gruppe automatisch ein Failover auf das sekundäre Replikat aus, wenn automatisches Failover ausgewählt ist Dies kann nur auf den Replikaten mit synchronen Commits aktiviert werden.
 
-**Lesbares sekundäres Replikat:** Benutzer können standardmäßig keine Verbindung mit sekundären Replikaten herstellen. Dadurch können Benutzer eine Verbindung mit dem sekundären Replikat mit schreibgeschütztem Zugriff herstellen.
+**Lesbare sekundäre Datenbank:** Standardmäßig können Benutzer keine Verbindung mit sekundären Replikaten herstellen. Dadurch können Benutzer eine Verbindung mit dem sekundären Replikat mit schreibgeschütztem Zugriff herstellen.
 
 8. Klicken Sie auf der Seite **Replikate angeben** auf die Registerkarte **Listener** und tun Sie Folgendes: Weitere Informationen in Abbildung 18.
 
@@ -323,7 +323,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 18
 
-9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Weitere Informationen in Abbildung 19.
+9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie auf zum Fortfahren auf **Weiter**. Weitere Informationen in Abbildung 19.
 
    Diese Netzwerkfreigabe dient zum Speichern der Datenbanksicherung zum Erstellen von sekundären Replikaten. Wenn diese nicht für Ihre Organisation verfügbar ist, wählen Sie eine andere Einstellung für die Datensynchronisierung aus. Informationen zur Verwendung anderer Optionen zum Erstellen sekundärer Replikate finden Sie unter [SQL Server 2016 Always on Availability Group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) . In der Abbildung 17 sind auch andere Optionen aufgeführt.
 
@@ -331,7 +331,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 19 
 
-10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
+10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie auf zum Fortfahren auf **Weiter**.
 
 11. Überprüfen Sie auf der Seite **Zusammenfassung** alle Konfigurationseinstellungen, und klicken Sie dann auf **Beenden**. Dadurch wird die Verfügbarkeitsgruppe erstellt und konfiguriert.
 
@@ -343,7 +343,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
 2. Erweitern Sie in **Objekt-Explorer**den Ordner **Always on Hochverfügbarkeit** , klicken Sie mit der rechten Maustaste auf die soeben erstellte [Verfügbarkeits Gruppe im Abschnitt Erstellen einer Verfügbarkeits Gruppe](#create-an-availability-group) , und klicken Sie dann auf **Dashboard anzeigen**. Weitere Informationen in Abbildung 20. Der Status der neuen Verfügbarkeitsgruppe und ihrer Replikate wird angezeigt.
 
-   ![Dashboard anzeigen](media/Fig20_ShowDashboard.png)
+   ![Anzeigen des Dashboards](media/Fig20_ShowDashboard.png)
 
    Abbildung 20 
 
@@ -385,13 +385,13 @@ Die in diesem Artikel vorgestellte Lösung erfordert nur, dass die Datenbank des
 
    Weitere Informationen zu Master Data Services, finden Sie unter [Master Data Services](../master-data-services-overview-mds.md).
 
-## <a name="conclusion"></a>Fazit
+## <a name="conclusion"></a>Zusammenfassung
 
 In diesem Whitepaper haben wir gesehen, wie Sie die Master Data Services-Back-End-Datenbank als Teil einer Verfügbarkeits Gruppe einrichten und konfigurieren. Diese Konfiguration bietet hohe Verfügbarkeit und Notfallwiederherstellung für die Master Data Services-Back-End-Datenbank. Zum Implementieren dieser Konfiguration müssen Sie Windows Server-Failovercluster, AG und Master Data Services installieren und konfigurieren.
 
 ## <a name="feedback"></a>Feedback
 
-War dieses Dokument hilfreich? Senden Sie uns Ihr Feedback, indem Sie auf oben im Artikel auf **Kommentare** klicken. 
+Konnte Ihnen dieses Dokument helfen? Senden Sie uns Ihr Feedback, indem Sie auf oben im Artikel auf **Kommentare** klicken. 
 
 Ihr Feedback unterstützt uns bei der Verbesserung der Qualität unserer Whitepaper. 
 

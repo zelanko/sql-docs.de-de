@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211039"
 ---
 # <a name="start-a-trace"></a>Starten einer Ablaufverfolgung
@@ -43,11 +43,11 @@ ms.locfileid: "68211039"
 > [!NOTE]  
 >  Bei vorhandenen Ablaufverfolgungen können Sie die Eigenschaften zwar anzeigen, aber nicht ändern. Um die Eigenschaften zu ändern, müssen Sie die Ablaufverfolgung beenden oder anhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Anhalten einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
- [Beenden einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
- [Löschen des Inhalts eines Ablaufverfolgungsfensters &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Automatisches Starten einer Ablauf Verfolgung nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Anhalten einer Ablauf Verfolgung &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
+ [Beendet eine Ablauf Verfolgung &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
+ [Löschen eines Ablauf Verfolgungs Fensters &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
  [Ausführen einer Ablaufverfolgung, nachdem sie angehalten oder beendet wurde &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

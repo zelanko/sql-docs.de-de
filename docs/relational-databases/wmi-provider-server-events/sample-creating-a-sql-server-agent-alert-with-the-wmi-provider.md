@@ -15,10 +15,10 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660529"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter
@@ -35,7 +35,7 @@ ms.locfileid: "73660529"
  Die Warnung führt den Auftrag immer dann aus, wenn ein Deadlockdiagrammablaufverfolgungsereignis protokolliert werden würde. Für eine WMI-Warnung erstellt SQL Server-Agent mittels angegebenem Namespace und WQL-Anweisung eine Abfragebenachrichtigung. Für diese Warnung überwacht SQL Server-Agent die Standardinstanz auf dem lokalen Computer. Die WQL-Anweisung fordert ein beliebiges `DEADLOCK_GRAPH`-Ereignis in der Standardinstanz an. Zum Ändern der Instanz, das von der Warnung überwacht wird, ersetzen Sie den Instanznamen durch `MSSQLSERVER` im `@wmi_namespace` für die Warnung.  
   
 > [!NOTE]  
->  Damit SQL Server-Agent WMI-Ereignisse empfangen kann, müssen [!INCLUDE[ssSB](../../includes/sssb-md.md)] in **msdb** und [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]aktiviert werden.  
+>  Damit SQL Server-Agent WMI-Ereignisse empfangen kann [!INCLUDE[ssSB](../../includes/sssb-md.md)] , muss in **msdb** und [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]aktiviert werden.  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +90,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Testen des Beispiels  
- Um zu sehen, dass der Auftrag ausgeführt wird, provozieren Sie einen Deadlock. Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zwei **SQL-Abfrage** Registerkarten, und verbinden Sie beide Abfragen mit derselben Instanz. Führen Sie auf einer der Abfrageregisterkarten das folgende Skript aus. Dieses Skript erzeugt ein Resultset und endet.  
+ Um zu sehen, dass der Auftrag ausgeführt wird, provozieren Sie einen Deadlock. Öffnen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in zwei **SQL-Abfrage** Registerkarten, und verbinden Sie beide Abfragen mit derselben Instanz. Führen Sie auf einer der Abfrageregisterkarten das folgende Skript aus. Dieses Skript erzeugt ein Resultset und endet.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Führen Sie das folgende Skript auf der zweiten Abfrage Registerkarte aus. Dieses Skript erzeugt ein Resultset und blockiert dann das Abrufen einer Sperre für `Production.Product`.  
+ Führen Sie das folgende Skript auf der zweiten Abfrage Registerkarte aus. Dieses Skript erzeugt ein Resultset und dann einen Block, der darauf wartet, `Production.Product`eine Sperre zu erhalten.  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Führen Sie das folgende Skript auf der ersten Abfrage Registerkarte aus. Dieses Skript blockiert und wartet auf das Abrufen einer Sperre für `Production.Location`. Nach einem kurzen Timeout wählt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Skript oder das Skript aus dem Beispiel als Deadlockopfer aus und beendet die Transaktion.  
+ Führen Sie das folgende Skript auf der ersten Abfrage Registerkarte aus. Dieses Skript wird blockiert und wartet darauf, eine Sperre `Production.Location`für zu erhalten. Nach einem kurzen Timeout wählt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Skript oder das Skript aus dem Beispiel als Deadlockopfer aus und beendet die Transaktion.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  
@@ -135,7 +135,7 @@ GO
   
  Die `DeadlockGraph`-Spalte sollte ein XML-Dokument enthalten, das alle Eigenschaften des Deadlockdiagrammereignisses enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

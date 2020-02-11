@@ -18,10 +18,10 @@ ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658936"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Klassen für WMI-Anbieter für die Konfigurationsverwaltung
@@ -44,7 +44,7 @@ ms.locfileid: "73658936"
   
  [ServerNetworkProtocol-Klasse](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)  
   
- [ServerNetworkProtocolIPAddress Class](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
+ [ServerNetworkProtocolIPAddress-Klasse](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
   
  [ServerNetworkProtocolProperty-Klasse](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
   

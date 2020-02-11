@@ -19,41 +19,41 @@ ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966840"
 ---
 # <a name="columns-collection-adox"></a>Columns-Collection (ADOX)
-Enthält alle [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte von einer Tabelle, Index oder Schlüssel.  
+Enthält alle [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekte einer Tabelle, eines Indexes oder eines Schlüssels.  
   
-## <a name="remarks"></a>Hinweise  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) -Methode für eine **Spalten** Auflistung für ADOX eindeutig ist. Sie haben folgende Möglichkeiten:  
+## <a name="remarks"></a>Bemerkungen  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) -Methode für eine **Columns** -Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
--   Fügen Sie eine neue Spalte in der Auflistung der **Append** Methode.  
+-   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Spalte hinzu.  
   
- Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Sie haben folgende Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
--   Zugriff auf eine Spalte in der Auflistung mit den [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
+-   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf eine Spalte in der Auflistung zu.  
   
--   Zurückgeben der Anzahl der Spalten in der Auflistung mit den [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft.  
+-   Gibt die Anzahl der Spalten zurück, die in der Auflistung enthalten sind, mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft.  
   
--   Entfernen einer Spalte aus der Auflistung mit den [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) Methode.  
+-   Entfernen Sie eine Spalte aus der Sammlung mit der [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode.  
   
--   Aktualisieren Sie die Objekte in der Auflistung entsprechend dem aktuellen Schema der Datenbank mit der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung, um das Schema der aktuellen Datenbank mit [der Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-ado.md) widerzuspiegeln.  
   
 > [!NOTE]
->  Beim Anfügen, wird ein Fehler auftreten. ein **Spalte** auf die **Spalten** Auflistung von ein [Index](../../../ado/reference/adox-api/index-object-adox.md) Wenn die **Spalte** ist nicht in einem [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) , ist bereits angefügt, um die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung.  
+>  Wenn eine **Spalte** an die **Columns** -Auflistung eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md) angefügt wird, tritt ein Fehler auf, wenn die **Spalte** nicht in einer [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) vorhanden ist, die bereits an die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung angehängt ist.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Columns Collection Properties, Methods, and Events (Columns-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
+-   [Columns-Collection – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Spalten und Tabellen Append-Methode, Name-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [SortOrder-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Methoden und Tabellen Append-Methoden, Name Property example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Beispiel für eine Beispiel Katalog Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [Sortorider-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

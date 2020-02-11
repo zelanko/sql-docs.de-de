@@ -1,5 +1,5 @@
 ---
-title: Erstellen den Server Connection Files (DB2ToSQL) | Microsoft-Dokumentation
+title: Erstellen der Server Verbindungs Dateien (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,16 +10,16 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989814"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>Erstellen den Server Connection Files (DB2ToSQL)
-Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
+# <a name="creating-the-server-connection-files-db2tosql"></a>Erstellen der Server Verbindungs Dateien (DB2ToSQL)
+Server Informationen können entweder im Abschnitt Server der Skriptdatei oder in einer separaten Server Verbindungs Datei angegeben werden. Der Befehlszeilenparameter für die Server Verbindungs Datei ist, `-c <serverconnectionfile>`. Wenn dieselbe Server-ID sowohl in der Skriptdatei als auch in der Server Verbindungs Datei vorhanden ist, wird die Server Definition in der Skriptdatei berücksichtigt.  
   
-**Anpassen von mit VSTU 1**  
+**Beispiel: 1**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -74,8 +74,8 @@ Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei 
 ```  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt in der Konsole ausgeführt wird [Executing the SSMA Console ausführen &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+Der nächste Schritt beim Betrieb der Konsole ist [die Ausführung der SSMA-Konsole &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console (Ausführen der SSMA-Konsole)](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+## <a name="see-also"></a>Weitere Informationen  
+[Ausführen der SSMA-Konsole](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

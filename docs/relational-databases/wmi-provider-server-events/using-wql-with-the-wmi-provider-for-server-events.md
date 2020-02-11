@@ -17,15 +17,15 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57f7e07de49b2591e9ab0ef74603d674543282e9
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660491"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Verwaltungsanwendungen greifen über den WMI-Anbieter für Serverereignisse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu, indem sie WQL-Anweisungen (WMI Query Language) ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Unter Verwendung von WQL ruft eine Anwendung einen Ereignistyp aus einer spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einer Datenbank oder einem Datenbankobjekt ab. Das einzige zurzeit unterstützte Objekt ist {2}queue{3}. Der WMI-Anbieter für Server Ereignisse übersetzt die Abfrage in eine Ereignis Benachrichtigung, die in der Zieldatenbank für Ereignis Benachrichtigungen mit Daten Bankbereich oder Objektbereich oder in der **Master** Datenbank für Ereignis Benachrichtigungen auf Server Ebene erstellt wird.  
+  Verwaltungsanwendungen greifen über den WMI-Anbieter für Serverereignisse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu, indem sie WQL-Anweisungen (WMI Query Language) ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Unter Verwendung von WQL ruft eine Anwendung einen Ereignistyp aus einer spezifischen Instanz von , einer Datenbank oder einem Datenbankobjekt ab. Das einzige zurzeit unterstützte Objekt ist queue. Der WMI-Anbieter für Server Ereignisse übersetzt die Abfrage in eine Ereignis Benachrichtigung, die in der Zieldatenbank für Ereignis Benachrichtigungen mit Daten Bankbereich oder Objektbereich oder in der **Master** Datenbank für Ereignis Benachrichtigungen auf Server Ebene erstellt wird.  
   
  Betrachten Sie beispielsweise folgende WQL-Abfrage:  
   
@@ -83,7 +83,7 @@ WHERE where_condition
   
  Nur der `=` Operand kann mit **DatabaseName** **, Schema** **Name und ObjectName**verwendet werden. Andere Ausdrücke können nicht mit diesen Ereigniseigenschaften verwendet werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die *where_condition* der Syntax des WMI-Anbieters für Server Ereignisse bestimmt Folgendes:  
   
 -   Der Bereich, in dem der Anbieter versucht, die angegebene *event_type*abzurufen: Serverebene, Datenbankebene oder Objektebene (das einzige derzeit unterstützte Objekt ist Queue). Letztlich bestimmt dieser Bereich den Typ der in der Zieldatenbank erstellten Ereignisbenachrichtigung. Dieser Prozess wird Ereignisbenachrichtigungsregistrierung genannt.  
@@ -92,7 +92,7 @@ WHERE where_condition
   
  Der WMI-Anbieter für Serverereignisse verwendet einen Algorithmus, der von unten nach oben arbeitet und die erstbestmögliche Lösung benutzt, um den engstmöglichen Gültigkeitsbereich für das zugrunde liegende EVENT NOTIFICATION-Argument anzuwenden. Der Algorithmus versucht, die interne Aktivität auf dem Server und bezüglich des Netzwerkverkehrs zwischen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem WMI-Hostprozess zu reduzieren. Der Anbieter überprüft das in der from-Klausel angegebene *event_type* und die Bedingungen in der WHERE-Klausel und versucht, die zugrunde liegende Ereignis Benachrichtigung mit dem engsten Gültigkeitsbereich zu registrieren. Wenn der Anbieter sich nicht im engsten Gültigkeitsbereich registrieren kann, versucht er eine Registrierung in höheren Gültigkeitsbereichen, bis schließlich eine Registrierung erfolgreich ist. Wenn der höchste Bereich auf Serverebene erreicht ist und keine Registrierung zustande kam, wird dem Consumer ein Fehler zurückgegeben.  
   
- Wenn beispielsweise DatabaseName = **'** AdventureWorks **'** in der WHERE-Klausel angegeben ist, versucht der Anbieter, eine Ereignis Benachrichtigung in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zu registrieren. Wenn die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank vorhanden ist und der aufrufende Client über die erforderlichen Berechtigungen zum Erstellen einer Ereignisbenachrichtigung in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]verfügt, ist die Registrierung erfolgreich. Andernfalls wird versucht, die Ereignisbenachrichtigung auf Serverebene zu registrieren. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. In diesem Szenario werden Ereignisse jedoch so lange nicht an den Client zurückgegeben, bis die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt wurde.  
+ Wenn beispielsweise DatabaseName =**'** AdventureWorks **'** in der WHERE-Klausel angegeben ist, versucht der Anbieter, eine Ereignis Benachrichtigung in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank zu registrieren. Wenn die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank vorhanden ist und der aufrufende Client über die erforderlichen Berechtigungen zum Erstellen einer Ereignisbenachrichtigung in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]verfügt, ist die Registrierung erfolgreich. Andernfalls wird versucht, die Ereignisbenachrichtigung auf Serverebene zu registrieren. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. In diesem Szenario werden Ereignisse jedoch so lange nicht an den Client zurückgegeben, bis die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt wurde.  
   
  Der *where_condition* kann auch als Filter fungieren, um die Abfrage zusätzlich auf eine bestimmte Datenbank, ein bestimmtes Schema oder ein bestimmtes Objekt zu beschränken. Betrachten Sie beispielsweise folgende WQL-Abfrage:  
   
@@ -106,9 +106,9 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Wird ein zusammengesetzter Ausdruck wie beispielsweise `DatabaseName='AW1'`OR`DatabaseName='AW2'` angegeben, wird versucht, statt zwei Ereignisbenachrichtigungen nur eine einzige Ereignisbenachrichtigung im Servergültigkeitsbereich zu registrieren. Die Registrierung ist erfolgreich, wenn der aufrufende Client die erforderlichen Berechtigungen hat.  
   
- Wenn `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` alle in der `WHERE`-Klausel angegeben sind, wird versucht, die Ereignis Benachrichtigung direkt auf dem Objekt `Z` in Schema `X`zu registrieren. Die Registrierung ist erfolgreich, wenn der Client die erforderlichen Berechtigungen hat. Beachten Sie, dass Ereignisse auf Objektebene derzeit nur für Warteschlangen und nur für die QUEUE_ACTIVATION *event_type*unterstützt werden.  
+ Wenn `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` alle in der `WHERE` -Klausel angegeben sind, wird versucht, die Ereignis Benachrichtigung direkt für ein Objekt `Z` im Schema `X`zu registrieren. Die Registrierung ist erfolgreich, wenn der Client die erforderlichen Berechtigungen hat. Beachten Sie, dass Ereignisse auf Objektebene derzeit nur für Warteschlangen und nur für die QUEUE_ACTIVATION *event_type*unterstützt werden.  
   
- Beachten Sie, dass nicht bei allen Ereignissen ein bestimmter Gültigkeitsbereich abgefragt werden kann. Beispielsweise können die WQL-Abfrage für ein Ablaufverfolgungsereignis wie {1}Lock_Deadlock{2} oder eine Ablaufverfolgungsereignisgruppe wie TRC_LOCKS nur auf Serverebene registriert werden. Auch das CREATE_ENDPOINT-Ereignis und das DDL_ENDPOINT_EVENTS-Ereignis können nur auf Serverebene registriert werden. Weitere Informationen zum entsprechenden Bereich für das Registrieren von Ereignissen finden Sie unter [Entwerfen von Ereignis Benachrichtigungen](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Der Versuch, eine WQL-Abfrage zu registrieren, deren *event_type* nur auf Serverebene registriert werden kann, erfolgt immer auf Serverebene. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. Andernfalls wird an den Client ein Fehler zurückgegeben. In bestimmten Fällen können Sie, abhängig von den Eigenschaften des Ereignisses, die WHERE-Klausel jedoch trotzdem als Filter für serverbasierte Ereignisse verwenden. Viele Ablauf Verfolgungs Ereignisse verfügen z. b. über eine **DatabaseName** -Eigenschaft, die in der WHERE-Klausel als Filter verwendet werden kann.  
+ Beachten Sie, dass nicht bei allen Ereignissen ein bestimmter Gültigkeitsbereich abgefragt werden kann. Beispielsweise können die WQL-Abfrage für ein Ablaufverfolgungsereignis wie Lock_Deadlock oder eine Ablaufverfolgungsereignisgruppe wie TRC_LOCKS nur auf Serverebene registriert werden. Auch das CREATE_ENDPOINT-Ereignis und das DDL_ENDPOINT_EVENTS-Ereignis können nur auf Serverebene registriert werden. Weitere Informationen zum entsprechenden Bereich für das Registrieren von Ereignissen finden Sie unter [Entwerfen von Ereignis Benachrichtigungen](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Der Versuch, eine WQL-Abfrage zu registrieren, deren *event_type* nur auf Serverebene registriert werden kann, erfolgt immer auf Serverebene. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. Andernfalls wird an den Client ein Fehler zurückgegeben. In bestimmten Fällen können Sie, abhängig von den Eigenschaften des Ereignisses, die WHERE-Klausel jedoch trotzdem als Filter für serverbasierte Ereignisse verwenden. Viele Ablauf Verfolgungs Ereignisse verfügen z. b. über eine **DatabaseName** -Eigenschaft, die in der WHERE-Klausel als Filter verwendet werden kann.  
   
  Ereignis Benachrichtigungen im Server Bereich werden in der **Master** -Datenbank erstellt und können mithilfe der [sys. server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalog Sicht für Metadaten abgefragt werden.  
   
@@ -140,8 +140,8 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konzepte des WMI-Anbieters für Server Ereignisse](https://technet.microsoft.com/library/ms180560.aspx)   
- [Ereignis Benachrichtigungen (Datenbank-Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
+ [Ereignisbenachrichtigung (Datenbank-Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
   
   
