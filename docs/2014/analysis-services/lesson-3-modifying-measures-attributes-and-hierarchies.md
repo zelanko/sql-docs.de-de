@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Ändern von Maßen, Attributen und Hierarchien | Microsoft-Dokumentation'
+title: 'Lektion 3: Ändern von Measures, Attributen und Hierarchien | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078781"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lektion 3: Ändern von Measures, Attributen und Hierarchien
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lektion 3: Ändern von Maßen, Attributen und Hierarchien
   Nach dem Definieren des Anfangscubes können Sie den Cube nun besser verwendbar und benutzerfreundlicher machen. Fügen Sie zu diesem Zweck Hierarchien hinzu, die die Navigation und Aggregation auf verschiedenen Ebenen unterstützen, wenden Sie Formate auf bestimmte Measures an und definieren Sie Berechnungen und Beziehungen.  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispiel Projekte für dieses Tutorial herunterzuladen.  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
@@ -40,8 +40,8 @@ ms.locfileid: "66078781"
  [Durchsuchen des bereitgestellten Cubes](lesson-3-5-browsing-the-deployed-cube.md)  
  In dieser Aufgabe durchsuchen Sie Cube- und Dimensionsdaten mithilfe des Browsers im Cube-Designer.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Tutorial-Szenario](analysis-services-tutorial-scenario.md)   
  [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

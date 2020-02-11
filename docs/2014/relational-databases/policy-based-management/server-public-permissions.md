@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691471"
 ---
 # <a name="server-public-permissions"></a>Serverberechtigungen für 'public'
@@ -26,7 +26,7 @@ ms.locfileid: "62691471"
  Gewähren Sie der Serverrolle public keine Serverberechtigung.  
   
 > [!IMPORTANT]  
->  Nach Abschluss des Setups die **öffentliche** Rolle verfügt über `CONNECT` -Berechtigung für alle Endpunkte außer der **dedizierte Administratorverbindung**. Dies ist normal und sollte üblicherweise nicht geändert werden. (Der Zugriff wird mit der `CONNECT SQL`-Berechtigung gesteuert, die beim Erstellen neuer Anmeldungen automatisch erteilt wird.)  
+>  Nachdem das Setup abgeschlossen **** ist, verfügt `CONNECT` die public-Rolle über die Berechtigung für alle Endpunkte außer der **dedizierten Administrator Verbindung**. Dies ist normal und sollte üblicherweise nicht geändert werden. (Der Zugriff wird mit der `CONNECT SQL`-Berechtigung gesteuert, die beim Erstellen neuer Anmeldungen automatisch erteilt wird.)  
   
 ### <a name="for-more-information"></a>Weitere Informationen finden Sie unter  
  [Sichern von SQL Server](../security/securing-sql-server.md)  

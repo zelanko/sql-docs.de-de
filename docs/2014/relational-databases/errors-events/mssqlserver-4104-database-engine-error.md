@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867997"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
 ## <a name="details"></a>Details  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62867997"
   
 -   Verwenden Sie eindeutige, klar definierte Namen für Bezeichner. Dadurch wird der Code einfacher zu lesen und zu warten, und das Risiko mehrdeutiger Verweise auf mehrere Entitäten wird minimiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [MSSQLSERVER_107](mssqlserver-107-database-engine-error.md)   
  [Datenbankbezeichner](../databases/database-identifiers.md)  
   

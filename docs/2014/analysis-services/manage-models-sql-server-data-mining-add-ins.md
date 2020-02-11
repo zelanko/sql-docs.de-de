@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Modellen (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Verwalten von Modellen (SQL Server Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -18,19 +18,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078039"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Modelle verwalten (SQL Server Data Mining-Add-Ins)
-  ![Schaltfläche "Modelle verwalten", Data Mining-Menüband](media/dmc-manage.gif "Modelle verwalten-Schaltfläche, Data Mining-Menüband")  
+  ![Modelle verwalten (Schaltfläche auf Data Mining-Menüband)](media/dmc-manage.gif "Modelle verwalten (Schaltfläche auf Data Mining-Menüband)")  
   
- Die **Modelle verwalten** Dialogfeld können Sie für die Interaktion mit vorhandenen Miningmodellen und Miningstrukturen, die in gespeichert werden die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server mit dem Sie derzeit verbunden sind. Sie können auch temporäre Strukturen und Modelle anzeigen und verwalten, die während der aktuellen Sitzung erstellt wurden. In diesem Dialogfeld werden sowohl Modelle angezeigt, die während der aktuellen Sitzung erstellt wurden, als auch Modelle, die auf dem Server gespeichert sind.  
+ Im Dialogfeld **Modelle verwalten** können Sie mit vorhandenen Mining Modellen und Mining Strukturen interagieren, die auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server gespeichert sind, mit dem Sie derzeit verbunden sind. Sie können auch temporäre Strukturen und Modelle anzeigen und verwalten, die während der aktuellen Sitzung erstellt wurden. In diesem Dialogfeld werden sowohl Modelle angezeigt, die während der aktuellen Sitzung erstellt wurden, als auch Modelle, die auf dem Server gespeichert sind.  
   
 ## <a name="using-the-manage-models-wizard"></a>Verwenden des Assistenten zum Verwalten von Modellen  
- Beim Klicken auf **Modelle verwalten**, **Verwalten von Miningstrukturen und-Modelle** Dialogfeld geöffnet wird, Zugriff auf die folgenden Funktionen für die Verwaltung von vorhandenen Datamining-Modellen und Strukturen:  
+ Wenn Sie auf **Modelle verwalten**klicken, wird das Dialogfeld **Mining Strukturen und Modelle verwalten** geöffnet, in dem der Zugriff auf die folgenden Funktionen zum Verwalten vorhandener Data Mining Modelle und Strukturen bereitgestellt wird:  
   
 -   Umbenennen eines Miningmodells oder einer Miningstruktur  
   
@@ -43,15 +43,15 @@ ms.locfileid: "66078039"
 -   Exportieren oder Importieren eines Miningmodells oder einer Miningstruktur  
   
 > [!NOTE]  
->  In diesem Dialogfeld können Sie keine Abfragen oder Modelle erstellen. Um eine neue Miningstruktur zu erstellen, verwenden Sie einen der Assistenten im Data Mining-Client für Excel, oder verwenden Sie die **Erweiterter Editor für Data Mining**.  
+>  In diesem Dialogfeld können Sie keine Abfragen oder Modelle erstellen. Verwenden Sie zum Erstellen einer neuen Mining Struktur einen der im Data Mining-Client für Excel bereitgestellten Assistenten, oder verwenden Sie die **Data Mining-Abfrage Erweiterter Editor**.  
   
-### <a name="requirements"></a>Anforderungen  
- Sie müssen zunächst eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen, um Data Mining-Modelle zu verwalten. Diese Verbindung ist auch dann erforderlich, wenn Sie mit Sitzungsmodellen arbeiten, die in einer temporären Datei gespeichert sind. Weitere Informationen zum Erstellen oder Ändern einer Verbindungs finden Sie unter [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+### <a name="requirements"></a>Requirements (Anforderungen)  
+ Sie müssen zunächst eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen, um Data Mining-Modelle zu verwalten. Diese Verbindung ist auch dann erforderlich, wenn Sie mit Sitzungsmodellen arbeiten, die in einer temporären Datei gespeichert sind. Weitere Informationen zum Erstellen oder Ändern einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
- Wenn die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], mit der Sie eine Verbindung herstellen, nicht bereits Data Mining-Strukturen oder Data Mining-Modelle enthält, können Sie mithilfe der von diesem Add-In bereitgestellten Assistenten und Tools solche Strukturen und Modelle erstellen. Sie können auch neue Modelle erstellen, mit der **erweiterten Data Mining-Modelleditor**.  
+ Wenn die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], mit der Sie eine Verbindung herstellen, nicht bereits Data Mining-Strukturen oder Data Mining-Modelle enthält, können Sie mithilfe der von diesem Add-In bereitgestellten Assistenten und Tools solche Strukturen und Modelle erstellen. Sie können auch neue Modelle erstellen, indem Sie das **Data Mining-Modell Erweiterter Editor**verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dokumentieren von Miningmodellen &#40;Data Mining-Add-ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
- [Bereitstellen und Skalieren von Miningmodellen &#40;Data Mining-Add-ins für Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dokumentieren von Mining Modellen &#40;Data Mining-Add-Ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
+ [Bereitstellen und Skalieren von Mining Modellen &#40;Data Mining-Add-Ins für Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
 
   

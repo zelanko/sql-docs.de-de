@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897359"
 ---
 # <a name="operators-ssis-expression"></a>Operatoren (SSIS-Ausdruck)
@@ -27,7 +27,7 @@ ms.locfileid: "62897359"
   
  In der folgenden Tabelle sind Themen zu Operatoren in diesem Abschnitt aufgeführt.  
   
-|Operator|Description|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[CAST &#40;SSIS-Ausdruck&#41;](cast-ssis-expression.md)|Konvertiert einen Ausdruck in einen anderen Datentyp.|  
 |[&#40;&#41; &#40;Klammern&#41; &#40;SSIS-Ausdruck&#41;](parentheses-ssis-expression.md)|Identifiziert die Auswertungsreihenfolge von Ausdrücken.|  
@@ -36,15 +36,15 @@ ms.locfileid: "62897359"
 |[- &#40;Subtrahieren&#41; &#40;SSIS-Ausdruck&#41;](subtract-ssis-expression.md)|Subtrahiert den zweiten numerischen Ausdruck vom ersten.|  
 |[- &#40;Negation&#41; &#40;SSIS-Ausdruck&#41;](negate-ssis-expression.md)|Negiert einen numerischen Ausdruck.|  
 |[&#42; &#40;Multiplizieren&#41; &#40;SSIS-Ausdruck&#41;](multiply-ssis-expression.md)|Multipliziert zwei numerische Ausdrücke.|  
-|[Division &#40;SSIS-Ausdruck&#41;](divide-ssis-expression.md)|Dividiert den ersten numerischen Ausdruck durch den zweiten numerischen Ausdruck.|  
-|[&#40;Modulo&#41; &#40;SSIS-Ausdrücke&#41;](modulo-ssis-expression.md)|Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten bereit.|  
+|[&#40;SSIS-Ausdruck Aufteilen&#41;](divide-ssis-expression.md)|Dividiert den ersten numerischen Ausdruck durch den zweiten numerischen Ausdruck.|  
+|[&#40;Modulo&#41; &#40;SSIS-Ausdruck&#41;](modulo-ssis-expression.md)|Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten bereit.|  
 |[&#124;&#124; &#40;Logisches OR&#41; &#40;SSIS-Ausdruck&#41;](logical-or-ssis-expression.md)|Führt eine logische OR-Operation aus.|  
 |[&& &#40;Logisches AND&#41; &#40;SSIS-Ausdruck&#41;](logical-and-ssis-expression.md)|Führt eine logische AND-Operation aus.|  
 |[\! &#40;Logisches NOT&#41; &#40;SSIS-Ausdruck&#41;](logical-not-ssis-expression.md)|Negiert einen booleschen Operanden.|  
 |[&#124; &#40;Bitweises inklusives OR&#41; &#40;SSIS-Ausdruck&#41;](bitwise-inclusive-or-ssis-expression.md)|Führt eine bitweise OR-Operation mit zwei ganzzahligen Werten aus.|  
 |[^ &#40;Bitweises exklusives OR&#41; &#40;SSIS-Ausdruck&#41;](bitwise-exclusive-or-ssis-expression.md)|Führt eine bitweise exklusive OR-Operation mit zwei ganzzahligen Werten aus.|  
 |[& &#40;Bitweises AND&#41; &#40;SSIS-Ausdruck&#41;](bitwise-and-ssis-expression.md)|Führt eine bitweise AND-Operation mit zwei ganzzahligen Werten aus.|  
-|[~ &#40;Bitweises Not&#41; &#40;SSIS-Ausdruck&#41;](bitwise-not-ssis-expression.md)|Führt eine bitweise Negation einer ganzen Zahl aus.|  
+|[~ &#40;bitweises NOT&#41; &#40;SSIS-Ausdruck&#41;](bitwise-not-ssis-expression.md)|Führt eine bitweise Negation einer ganzen Zahl aus.|  
 |[== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](equal-ssis-expression.md)|Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke gleich sind.|  
 |[\!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)|Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke ungleich sind.|  
 |[&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)|Führt einen Vergleich aus, um zu ermitteln, ob der erste Ausdruck größer ist als der zweite.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62897359"
   
  Informationen zum Platzieren der Operatoren in der Rangfolgenhierarchie finden Sie unter [Operator Precedence and Associativity](operator-precedence-and-associativity.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)   
  [Beispiele für erweiterte SQL Server Integration Services-Ausdrücke](examples-of-advanced-integration-services-expressions.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)  

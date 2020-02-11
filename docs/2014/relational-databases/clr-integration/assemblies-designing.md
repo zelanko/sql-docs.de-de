@@ -1,5 +1,5 @@
 ---
-title: Entwerfen von Assemblys | Microsoft-Dokumentation
+title: Entwerfen von Assemblys Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,39 +14,39 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874928"
 ---
 # <a name="designing-assemblies"></a>Entwerfen von Assemblys
   In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
   
--   Verpacken von Assemblys  
+-   Assemblys Verpacken  
   
--   Verwalten der Assemblysicherheit  
+-   Verwalten der Assembly-Sicherheit  
   
--   Einschränkungen bei Assemblys  
+-   Einschränkungen für Assemblys  
   
 ## <a name="packaging-assemblies"></a>Verpacken von Assemblys  
  Eine Assembly kann Funktionen für mehrere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Routinen oder -Typen in ihren Klassen und Methoden enthalten. In den meisten Fällen ist es sinnvoll, die Funktionen von Routinen, die verwandte Funktionen ausführen, in der gleichen Assembly zu verpacken, insbesondere, wenn diese Routinen Klassen gemeinsam verwenden, deren Methoden sich gegenseitig aufrufen. Klassen, die Dateneingabe-Verwaltungstasks für CLR-Trigger (Common Language Runtime) und CLR-gespeicherte Prozeduren ausführen, können z. B. in der gleichen Assembly verpackt werden. Dies hängt damit zusammen, dass sich die Methoden für diese Klassen mit größerer Wahrscheinlichkeit gegenseitig aufrufen als die Methoden anderer, weniger verwandter Tasks.  
   
  Sie sollten Folgendes beachten, wenn Sie Code in einer Assembly verpacken:  
   
--   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [Implementieren von Assemblys](assemblies-implementing.md) und [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
+-   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [implementieren](assemblies-implementing.md) von Assemblys und [Alter Assembly &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
 -   Wenn verwalteter Code höhere Berechtigungen verlangt, ist es besser, diesen Code in einer anderen Assembly als den Code zu speichern, für den die höheren Berechtigungen nicht erforderlich sind.  
   
 ## <a name="managing-assembly-security"></a>Verwalten der Assemblysicherheit  
- Sie können steuern, im welchem Umfang eine Assembly auf Ressourcen zugreifen kann, die durch .NET Code Access Security geschützt ist, wenn diese verwalteten Code ausführt. Dazu müssen Sie einen von drei Berechtigungssätzen angeben, wenn Sie beim Erstellen oder Ändern einer Assembly: SAFE, EXTERNAL_ACCESS oder UNSAFE.  
+ Sie können steuern, im welchem Umfang eine Assembly auf Ressourcen zugreifen kann, die durch .NET Code Access Security geschützt ist, wenn diese verwalteten Code ausführt. Sie geben zu diesem Zweck einen von drei Berechtigungssätzen an, wenn Sie eine Assembly erstellen oder ändern: SAFE, EXTERNAL_ACCESS oder UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE ist der Standardberechtigungssatz und die restriktivste Einstellung. Code, der von einer Assembly mit SAFE-Berechtigungen ausgeführt wird, kann nicht auf externe Systemressourcen wie z. B. Dateien, das Netzwerk, Umgebungsvariablen oder die Registrierung zugreifen. SAFE-Code kann auf Daten aus den lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken zugreifen oder Berechnungen und Geschäftslogik ausführen, für die kein Zugriff auf Ressourcen außerhalb der lokalen Datenbanken erforderlich ist.  
   
  Die meisten Assemblys führen Berechnungs- und Datenverwaltungsaufgaben aus, ohne dass ein Zugriff auf Ressourcen außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erforderlich ist. Aus diesem Grund wird empfohlen, SAFE als Berechtigungssatz für die Assembly zu verwenden.  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS ermöglicht Assemblys den Zugriff auf bestimmte externe Systemressourcen wie z. B. Dateien, Netzwerke, Webdienste, Umgebungsvariablen und die Registrierung. Nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldenamen mit EXTERNAL ACCESS-Berechtigungen können EXTERNAL_ACCESS-Assemblys erstellen.  
   
  SAFE- und EXTERNAL_ACCESS-Assemblys können nur Code enthalten, der überprüfbar typsicher ist. Dies bedeutet, dass diese Assemblys auf Klassen nur über definierte Einstiegspunkte zugreifen können, die für die Typdefinition gültig sind. Daher können sie nicht beliebig auf Speicherpuffer zugreifen, die sich nicht im Besitz des Codes befinden. Außerdem können sie keine Vorgänge durchführen, die nachteilige Auswirkungen auf die Robustheit des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozess besitzen könnten.  
@@ -54,10 +54,11 @@ ms.locfileid: "62874928"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Code, der aus einer UNSAFE-Assembly ausgeführt wird, kann nicht verwalteten Code aufrufen.  
   
- Wenn Sie UNSAFE angeben, kann der Code in der Assembly außerdem Vorgänge ausführen, die von der CLR-Überprüfung als typunsicher betrachtet werden. Diese Vorgänge können potenziell auf unkontrollierte Weise auf Speicherpuffer im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozessraum zugreifen. UNSAFE-Assemblys können außerdem potenziell das Sicherheitssystem von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder der CLR unterlaufen. UNSAFE-Berechtigungen sollten nur hochgradig vertrauenswürdigen Assemblys durch erfahrene Entwickler oder Administratoren erteilt werden. Nur Mitglieder der **Sysadmin** -Serverrolle kann UNSAFE-Assemblys erstellen.  
+ Wenn Sie UNSAFE angeben, kann der Code in der Assembly außerdem Vorgänge ausführen, die von der CLR-Überprüfung als typunsicher betrachtet werden. Diese Vorgänge können potenziell auf unkontrollierte Weise auf Speicherpuffer im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozessraum zugreifen. UNSAFE-Assemblys können außerdem potenziell das Sicherheitssystem von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder der CLR unterlaufen. UNSAFE-Berechtigungen sollten nur hochgradig vertrauenswürdigen Assemblys durch erfahrene Entwickler oder Administratoren erteilt werden. Nur Mitglieder der festen Server Rolle **sysadmin** können unsichere Assemblys erstellen.  
   
 ## <a name="restrictions-on-assemblies"></a>Einschränkungen für Assemblys  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
   
 ### <a name="disallowed-custom-attributes"></a>Unzulässige benutzerdefinierte Attribute  
  Assemblys dürfen nicht mit den folgenden benutzerdefinierten Attributen mit Anmerkungen versehen werden:  
@@ -83,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>Unzulässige .NET Framework-APIs  
- Alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -API, die mit einem der unzulässigen kommentiert wird **HostProtectionAttributes** kann nicht aus Safe- und EXTERNAL_ACCESS-Assemblys aufgerufen werden.  
+ Jede [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API, die mit einem der unzulässigen **Hostschutzattribute** kommentiert wird, kann nicht von sicheren und EXTERNAL_ACCESS Assemblys aufgerufen werden.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -116,7 +117,7 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Assemblys &#40;Datenbank-Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Sicherheit der CLR-Integration](security/clr-integration-security.md)  
   

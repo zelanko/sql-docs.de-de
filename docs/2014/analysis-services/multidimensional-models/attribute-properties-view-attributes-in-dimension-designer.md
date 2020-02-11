@@ -15,32 +15,32 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec86d5e7a910b7fb17397b1601fcc912b46c4d7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077130"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Anzeigen von Attributen im Dimensions-Designer
   Attribute werden für Dimensionsobjekte erstellt. Sie können Attribute mithilfe des Dimensions-Designers in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]anzeigen und konfigurieren. Die in einer Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute** angezeigt. Verwenden Sie diesen Bereich, um Attribute hinzuzufügen, zu entfernen oder zu konfigurieren. Sie können außerdem Attribute auswählen, um sie als Ebene in einer neuen Hierarchie zu verwenden oder einer vorhandenen Hierarchie als Ebene hinzuzufügen.  
   
- Um die Attribute in einer Dimension anzuzeigen, öffnen Sie den Dimensions-Designer für die Dimension. Die in der Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute**  angezeigt. Sie können zwischen einer Listen-, Struktur- oder Raster durch Zeigen auf wechseln **Attribute anzeigen in** auf die **Dimension** im Menü [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , und klicken Sie dann auf einen der Befehle in der folgenden Tabelle gezeigt.  
+ Um die Attribute in einer Dimension anzuzeigen, öffnen Sie den Dimensions-Designer für die Dimension. Die in der Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute**  angezeigt. Sie können zwischen einer Listen-, Struktur-oder Rasteransicht wechseln. zeigen Sie dazu im Menü **Dimension** von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] auf **Attribute anzeigen in** , und klicken Sie dann auf einen der in der folgenden Tabelle aufgeführten Befehle.  
   
-|Attribute anzeigen in|Beschreibung|  
+|Attribute anzeigen in|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|**Liste**|Zeigt die Attribute im Listenformat an.<br /><br /> Klicken Sie mit der rechten Maustaste auf ein Attribut, um es aus der Liste zu löschen, umzubenennen oder die Verwendung des Attributs zu ändern.<br /><br /> Verwenden Sie diese Ansicht zum Erstellen von Hierarchien. Attributinformationen und Elementeigenschaften werden nicht angezeigt.|  
-|**Struktur**|Zeigen Sie die Attribute im Strukturformat an, wobei die Dimension als Knoten der obersten Ebene in der Struktur dargestellt wird. Verwenden Sie diese Ansicht zum Anzeigen und Erstellen von Elementeigenschaften. Mithilfe dieser Ansicht können Sie auch Hierarchien erstellen. Erweitern Sie ein Attribut, um seine Attributbeziehungen anzuzeigen oder um eine neue Attributbeziehung zu erstellen. Führen Sie hierzu folgende Aktionen aus:<br /><br /> Klicken Sie auf die Dimension, ein Attribut oder eine Elementeigenschaft, um die zugehörigen Eigenschaften im Fenster **Eigenschaften** anzuzeigen.<br /><br /> Klicken Sie mit der rechten Maustaste auf ein Attribut oder eine Elementeigenschaft, um das Attribut oder die Elementeigenschaft aus der Liste zu löschen, umzubenennen oder die Verwendung zu ändern.|  
-|**Raster**|Zeigt die Attribute im Rasterformat an. Klicken Sie auf eine Zeile im Raster, um Eigenschaften für dieses Attribut anzuzeigen.  Verwenden Sie diese Ansicht zum Erstellen und Konfigurieren von Attributen. Das Raster zeigt die folgenden Spalten an:<br /><br /> **Namen**: Zeigt den Wert des der **Namen** Eigenschaft. Geben Sie einen anderen Namen ein, um die Einstellung zu ändern.<br /><br /> **Nutzung**: Gibt an, ob dies ein regulärer, Schlüssel, Elternteil oder AccountType-Attribut ist. Klicken Sie auf einen Wert in dieser Spalte, um eine andere Einstellung auszuwählen.<br /><br /> **Typ**: Gibt an, die Business Intelligence-Kategorie für das Attribut. Klicken Sie auf diese Zelle, um eine andere Einstellung auszuwählen.<br /><br /> **Schlüsselspalte**: Zeigt die OLE DB-Datentyp für die **KeyColumn** -Eigenschaft des Attributs. Diese Spalte kann nicht geändert werden.<br /><br /> **Benennen Sie Spalte**: Gibt an, ob der **NameColumn** -eigenschaftseinstellung für das Attribut ist die gleiche Spalte wie die Einstellung für die **KeyColumn** Eigenschaft. Diese Spalte kann nicht geändert werden.|  
+|**List**|Zeigt die Attribute im Listenformat an.<br /><br /> Klicken Sie mit der rechten Maustaste auf ein Attribut, um es aus der Liste zu löschen, umzubenennen oder die Verwendung des Attributs zu ändern.<br /><br /> Verwenden Sie diese Ansicht zum Erstellen von Hierarchien. Attributinformationen und Elementeigenschaften werden nicht angezeigt.|  
+|**Linde**|Zeigen Sie die Attribute im Strukturformat an, wobei die Dimension als Knoten der obersten Ebene in der Struktur dargestellt wird. Verwenden Sie diese Ansicht zum Anzeigen und Erstellen von Elementeigenschaften. Mithilfe dieser Ansicht können Sie auch Hierarchien erstellen. Erweitern Sie ein Attribut, um seine Attributbeziehungen anzuzeigen oder um eine neue Attributbeziehung zu erstellen. Führen Sie hierzu folgende Aktionen aus:<br /><br /> Klicken Sie auf die Dimension, ein Attribut oder eine Elementeigenschaft, um die zugehörigen Eigenschaften im Fenster **Eigenschaften** anzuzeigen.<br /><br /> Klicken Sie mit der rechten Maustaste auf ein Attribut oder eine Elementeigenschaft, um das Attribut oder die Elementeigenschaft aus der Liste zu löschen, umzubenennen oder die Verwendung zu ändern.|  
+|**Netz**|Zeigt die Attribute im Rasterformat an. Klicken Sie auf eine Zeile im Raster, um Eigenschaften für dieses Attribut anzuzeigen.  Verwenden Sie diese Ansicht zum Erstellen und Konfigurieren von Attributen. Das Raster zeigt die folgenden Spalten an:<br /><br /> **Name**: zeigt den Wert der **Name** -Eigenschaft an. Geben Sie einen anderen Namen ein, um die Einstellung zu ändern.<br /><br /> Syntax **: gibt**an, ob es sich um ein reguläres, Schlüssel-, übergeordnetes oder AccountType-Attribut handelt. Klicken Sie auf einen Wert in dieser Spalte, um eine andere Einstellung auszuwählen.<br /><br /> **Type**: gibt die Business Intelligence Kategorie für das Attribut an. Klicken Sie auf diese Zelle, um eine andere Einstellung auszuwählen.<br /><br /> **Key Column**: zeigt den OLE DB Datentyp für die **KeyColumn** -Eigenschaft des Attributs an. Diese Spalte kann nicht geändert werden.<br /><br /> **Name Column**: gibt an, ob die **namecolenn** -Eigenschafts Einstellung für das Attribut dieselbe Spalte wie die Einstellung für die **KeyColumn** -Eigenschaft ist. Diese Spalte kann nicht geändert werden.|  
   
  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]kennzeichnen die in der folgenden Tabelle dargestellten Symbole Attribute gemäß ihrer Verwendung.  
   
 |Symbol|Attributverwendung|  
 |----------|---------------------|  
-|![Symbol "Kontoattribut"](../media/as-icon-attribute.gif "Attribut (Symbol)")|Regular oder AccountType|  
-|![Schlüsselattribut (Symbol)](../media/as-icon-key-attribute.gif "schlüsselattributsymbol")|Key|  
-|![Übergeordnetes Attribut (Symbol)](../media/as-icon-parent-attribute.gif "übergeordnetes Attribut (Symbol)")|Parent|  
+|![Attribut (Symbol)](../media/as-icon-attribute.gif "Attribut (Symbol)")|Regular oder AccountType|  
+|![Schlüsselattribut (Symbol)](../media/as-icon-key-attribute.gif "Schlüsselattribut (Symbol)")|Key|  
+|![Übergeordnetes Attribut (Symbol)](../media/as-icon-parent-attribute.gif "Übergeordnetes Attribut (Symbol)")|Parent|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
   
   

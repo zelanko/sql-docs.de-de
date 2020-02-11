@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Eigenschaften (Dialogfeld) (SSAS) | Microsoft-Dokumentation
+title: Tabellen Eigenschaften bearbeiten (Dialog Feld) (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081436"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Tabelleneigenschaften bearbeiten (Dialogfeld) (SSAS)
@@ -32,7 +32,7 @@ ms.locfileid: "66081436"
 > [!NOTE]  
 >  Der Name kann hier nicht bearbeitet werden. Sie können den Namen der Tabelle jedoch ändern, indem Sie im unteren Bereich des Modell-Designers mit der rechten Maustaste auf die Tabellenregisterkarte klicken.  
   
- **Verbindungsname**  
+ **Verbindungs Name**  
  Zeigt den Namen der aktuell verwendeten Verbindung an.  
   
  **Quellname**  
@@ -46,25 +46,25 @@ ms.locfileid: "66081436"
  **Spaltennamen aus**  
  |||  
 |-|-|  
-|**Quelle**|Aktivieren Sie diese Option, um die aktuellen Spaltennamen durch die Spaltennamen aus der ausgewählten Quelltabelle zu ersetzen.|  
-|**Model**|Aktivieren Sie diese Option, um die aktuellen Spaltennamen zu verwenden, wie sie im Modell vorhanden sind.|  
+|**`Source`**|Aktivieren Sie diese Option, um die aktuellen Spaltennamen durch die Spaltennamen aus der ausgewählten Quelltabelle zu ersetzen.|  
+|**Modells**|Aktivieren Sie diese Option, um die aktuellen Spaltennamen zu verwenden, wie sie im Modell vorhanden sind.|  
   
  **Vorschau aktualisieren**  
  Klicken Sie auf diese Option, um die Spalten der Daten in der momentan ausgewählten Quelltabelle anzuzeigen.  
   
- **Wechseln Sie zu**  
+ **Wechseln zu**  
  |||  
 |-|-|  
 |**Tabellenvorschau**|Wählen Sie diese Option aus, um die ausgewählte Tabelle und eine beschränkte Anzahl von Datenzeilen in der Vorschau anzuzeigen.|  
-|**Abfrage-editor**|Wählen Sie diese Option aus, um die Abfrage für die ausgewählte Datenquelle anzuzeigen. Diese Option ist nicht für alle Datenquellen verfügbar.|  
+|**Abfrage-Editor**|Wählen Sie diese Option aus, um die Abfrage für die ausgewählte Datenquelle anzuzeigen. Diese Option ist nicht für alle Datenquellen verfügbar.|  
   
- **Kontrollkästchen im Spaltenheader**  
+ **Kontrollkästchen in der Spaltenüberschrift**  
  Aktivieren Sie das Kontrollkästchen, um die Spalte in den Datenimport einzuschließen. Deaktivieren Sie das Kontrollkästchen, um die Spalte aus dem Datenimport zu entfernen.  
   
- **Nach-unten Schaltfläche in der Kopfzeile der Spalte**  
+ **Schaltfläche mit Abwärtspfeil in der Spaltenüberschrift**  
  Filtern Sie Daten in der Spalte.  
   
- **Zeilenfilter löschen**  
+ **Zeilen Filter löschen**  
  Klicken Sie auf diese Option, um alle angewendeten Filter zu entfernen.  
   
  **OK**  
@@ -77,14 +77,14 @@ ms.locfileid: "66081436"
 > [!NOTE]  
 >  Sie können den Namen hier nicht bearbeiten. Sie können den Namen der Tabelle jedoch ändern, indem Sie im unteren Bereich des Designers mit der rechten Maustaste auf die Tabellenregisterkarte klicken.  
   
- **Verbindungsname**  
+ **Verbindungs Name**  
  Zeigt den Namen der aktuell verwendeten Verbindung an.  
   
- **Wechseln Sie zu**  
+ **Wechseln zu**  
  |||  
 |-|-|  
 |**Tabellenvorschau**|Wählen Sie diese Option Liste aus, um die ausgewählte Tabelle und einige Zeilen der Daten in der Vorschau anzuzeigen.|  
-|**Abfrage-editor**|Aktivieren Sie diese Option, um die Abfrage anzuzeigen, die für die ausgewählte Datenquelle ausgegeben wird.|  
+|**Abfrage-Editor**|Aktivieren Sie diese Option, um die Abfrage anzuzeigen, die für die ausgewählte Datenquelle ausgegeben wird.|  
   
  **SQL-Anweisung**  
  Zeigt die SQL-Anweisung an, die für die aktuelle Datenquelle ausgegeben wird, um Zeilen abzurufen. Standardmäßig werden alle Zeilen abgerufen. Sie können jedoch auch eine Teilmenge der Zeilen abrufen, indem Sie entweder einen Filter entwerfen oder die SQL-Anweisung manuell bearbeiten.  
@@ -92,13 +92,13 @@ ms.locfileid: "66081436"
  **Überprüfen**  
  Klicken Sie auf diese Option, um sicherzustellen, dass die Anweisung für die ausgewählte Datenquelle und den Anbieter syntaktisch korrekt ist.  
   
- **Entwerfen**  
+ **Entwurf**  
  Klicken Sie auf diese Option, um einen visuellen Abfrage-Designer zu öffnen und eine Abfrageanweisung zu erstellen. Drücken Sie im Designer die F1-TASTE, um Informationen zum Verwenden des Designers zu erhalten.  
   
  **OK**  
  Klicken Sie auf diese Option, um alle vorgenommenen Änderungen zu übernehmen, auch das Ersetzen der Spalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellen und Spalten &#40;SSAS – tabellarisch&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellen und Spalten &#40;tabellarischen SSAS-&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

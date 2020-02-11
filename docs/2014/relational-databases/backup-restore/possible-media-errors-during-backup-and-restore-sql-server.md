@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876111"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62876111"
   
  Wenn ein BACKUP-Vorgang nach dem Finden von Fehler fortgesetzt wird, werden vom Vorgang die folgenden Schritte ausgeführt:  
   
-1.  Der Sicherungssatz auf dem Sicherungsmedium wird als fehlerhaft markiert, und die Seite wird in der **suspect_pages**-Tabelle in der **msdb**-Datenbank nachverfolgt. Weitere Informationen finden Sie unter [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
+1.  Der Sicherungssatz auf dem Sicherungsmedium wird als fehlerhaft markiert, und die Seite wird in der **suspect_pages** -Tabelle in der **msdb** -Datenbank nachverfolgt. Weitere Informationen finden Sie unter [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
   
 2.  Der Fehler wird im SQL Server-Fehlerprotokoll protokolliert.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62876111"
   
 -   [Angeben, ob ein Sicherungs- oder Wiederherstellungsvorgang fortgesetzt wird, nachdem ein Fehler festgestellt wurde &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   

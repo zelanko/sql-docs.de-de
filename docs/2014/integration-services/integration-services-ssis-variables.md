@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892278"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
-  Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
+  Variablen speichern Werte, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] von einem Paket und dessen Containern, Tasks und Ereignis Handlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
   
- Variablen in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen können für folgende Zwecke verwendet werden:  
+ Variablen in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paketen können für folgende Zwecke verwendet werden:  
   
 -   Aktualisieren der Eigenschaften von Paketelementen zur Laufzeit. Beispielsweise können Sie die von einem Foreach-Schleifencontainer zulässige Anzahl von gleichzeitig ausführbaren Dateien dynamisch festlegen.  
   
@@ -43,16 +43,17 @@ ms.locfileid: "62892278"
 -   Erstellen von Ausdrücken, die Variablenwerte einschließen. Beispielsweise kann die Transformation für abgeleitete Spalten eine Spalte mit dem Ergebnis aus dem Multiplizieren eines Variablenwerts mit einem Spaltenwert auffüllen.  
   
 ## <a name="system-and-user-defined-variables"></a>Systemvariablen und benutzerdefinierte Variablen  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt zwei Arten von Variablen: Benutzerdefinierte Variablen und Systemvariablen. Benutzerdefinierte Variablen werden von Paketentwicklern definiert, und Systemvariablen werden von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]definiert. Sie können so viele benutzerdefinierte Variablen erstellen, wie für das Paket erforderlich sind. Zusätzliche Systemvariablen können jedoch nicht erstellt werden.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt zwei Arten von Variablen: Benutzerdefinierte Variablen und Systemvariablen. Benutzerdefinierte Variablen werden von Paketentwicklern definiert, und Systemvariablen werden von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]definiert. Sie können so viele benutzerdefinierte Variablen erstellen, wie für das Paket erforderlich sind. Zusätzliche Systemvariablen können jedoch nicht erstellt werden.  
   
  Alle Variablen, seien es Systemvariablen oder benutzerdefinierte Variablen, können in den Parameterbindungen verwendet werden, die der Task „SQL ausführen“ zum Zuordnen von Variablen zu Parametern in SQL-Anweisungen verwendet. Weitere Informationen finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  Bei den Namen von benutzerdefinierten und Systemvariablen wird nach Groß-/Kleinschreibung unterschieden.  
   
- Sie können benutzerdefinierte Variablen für alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Containertypen erstellen: Pakete, Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer, Tasks und Ereignishandler. Bei benutzerdefinierten Variablen handelt es sich um Elemente der Variables-Auflistung des Containers.  
+ Sie können benutzerdefinierte Variablen für alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Containertypen erstellen: Pakete, Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer, Tasks und Ereignishandler. Bei benutzerdefinierten Variablen handelt es sich um Elemente der Variables-Auflistung des Containers.  
   
- Wenn Sie das Paket mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer erstellen, können Sie die Elemente der **Variables** -Auflistung im Ordner Variablen auf der Registerkarte **Paket-Explorer** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers anzeigen. Die Ordner listen benutzerdefinierte Variablen und Systemvariablen auf.  
+ Wenn Sie das Paket mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer erstellen, können Sie die Elemente der **Variables**-Auflistung im Ordner Variablen auf der Registerkarte **Paket-Explorer** des [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designers anzeigen. Die Ordner listen benutzerdefinierte Variablen und Systemvariablen auf.  
   
  Es gibt folgende Möglichkeiten, um benutzerdefinierte Variablen zu konfigurieren:  
   
@@ -82,20 +83,20 @@ ms.locfileid: "62892278"
 > [!NOTE]  
 >  Die einzige konfigurierbare Option für Systemvariablen ist das Angeben, ob sie ein Ereignis auslösen, wenn sich der Wert ändert.  
   
- Description  
+ BESCHREIBUNG  
  Gibt die Beschreibung der Variablen an.  
   
  EvaluateAsExpression  
- Wenn die Eigenschaft auf festgelegt ist `True`, wird der bereitgestellte Ausdruck zum Festlegen des Variablenwerts verwendet.  
+ Wenn die-Eigenschaft auf `True`festgelegt ist, wird der angegebene Ausdruck zum Festlegen des Variablen Werts verwendet.  
   
- expression  
+ Ausdruck  
  Gibt den der Variablen zugeordneten Ausdruck an.  
   
  Name  
- Gibt den Variablennamen an.  
+ Gibt den Namen der Variablen an.  
   
  Namespace  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt zwei Namespaces bereit: **User** und **System**. Standardmäßig gehören benutzerdefinierte Variablen zum Namespace **User** und Systemvariablen zum Namespace **System** . Sie können zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User**-Namespaces ändern. Es ist jedoch nicht möglich, den Namen des **System**-Namespaces zu ändern, dem **System**-Namespace Variablen hinzuzufügen oder Systemvariablen einem anderen Namespace zuzuweisen.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]stellt zwei Namespaces bereit: **User** und **System**. Standardmäßig gehören benutzerdefinierte Variablen zum Namespace **User** und Systemvariablen zum Namespace **System**. Sie können zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User** -Namespaces ändern. Es ist jedoch nicht möglich, den Namen des **System** -Namespaces zu ändern, dem **System** -Namespace Variablen hinzuzufügen oder Systemvariablen einem anderen Namespace zuzuweisen.  
   
  RaiseChangedEvent  
  Wenn die Eigenschaft auf `True` festgelegt wird, wird das `OnVariableValueChanged`-Ereignis bei einer Änderung des Variablenwerts ausgelöst.  
@@ -103,7 +104,7 @@ ms.locfileid: "62892278"
  ReadOnly  
  Wenn die Eigenschaft auf `False` festgelegt wird, ist die Variable read\write.  
   
- Bereich  
+ `Scope`  
  > [!NOTE]  
 >  Sie können diese Eigenschafteneinstellung nur ändern, indem Sie im Fenster **Variablen** auf **Variable verschieben** klicken.  
   
@@ -114,22 +115,22 @@ ms.locfileid: "62892278"
  IncludeInDebugDump  
  Geben Sie an, ob der Variablenwert in den Debugdumpdateien enthalten ist.  
   
- Für benutzerdefinierte Variablen und Systemvariablen, der Standardwert für die **InclueInDebugDump** Option `true`.  
+ Für benutzerdefinierte Variablen und Systemvariablen lautet `true`der Standardwert für die **InclueInDebugDump** -Option.  
   
- Für benutzerdefinierte Variablen setzt das System jedoch die **IncludeInDebugDump** option `false` Wenn folgenden Bedingungen erfüllt sind:  
+ Für benutzerdefinierte Variablen setzt das System die **IncludeInDebugDump** -Option jedoch auf `false` zurück, wenn die folgenden Bedingungen erfüllt sind:  
   
--   Wenn die **EvaluateAsExpression** Variable als Eigenschaft auf festgelegt ist `true`, setzt das System die **IncludeInDebugDump** option `false`.  
+-   Wenn die **EvaluateAsExpression** -Variablen Eigenschaft auf `true`festgelegt ist, setzt das System die **IncludeInDebugDump** - `false`Option auf zurück.  
   
-     Um den Text des Ausdrucks als Variablenwert in die debugdumpdatei einzuschließen, setzen die **IncludeInDebugDump** option `true`.  
+     Wenn Sie den Text des Ausdrucks als Variablen Wert in die Debugdumpdateien einschließen möchten, legen Sie die **IncludeInDebugDump** -Option auf `true`fest.  
   
--   Wenn der Datentyp der Variablen in eine Zeichenfolge geändert wird, setzt das System die **IncludeInDebugDump** option `false`.  
+-   Wenn der Datentyp der Variablen in eine Zeichenfolge geändert wird, setzt das System die **IncludeInDebugDump** - `false`Option auf zurück.  
   
- Wenn setzt das System die **IncludeInDebugDump** option `false`, den vom Benutzer ausgewählten Wert möglicherweise überschrieben.  
+ Wenn das System die **IncludeInDebugDump** -Option auf zurück `false`setzt, wird möglicherweise der vom Benutzer gewählte Wert überschrieben.  
   
- Wert  
+ value  
  Der Wert einer benutzerdefinierten Variable kann ein Literal oder ein Ausdruck sein. Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datentyps des Werts. Die beiden Eigenschaften müssen kompatibel sein. Beispielsweise ist das Verwenden eines string-Werts zusammen mit einem integer-Datentyp ungültig.  
   
- Falls die Variable so konfiguriert ist, dass sie als Ausdruck ausgewertet wird, müssen Sie einen Ausdruck angeben. Zur Laufzeit wird der Ausdruck ausgewertet, und die Variable wird auf das Auswertungsergebnis festgelegt. Wenn z. B. eine Variable den Ausdruck `DATEPART("month", GETDATE())` verwendet, entspricht der Wert der Variablen der Zahl des Monats im aktuellen Datum. Der Ausdruck muss ein gültiger Ausdruck sein, der die [!INCLUDE[ssIS](../includes/ssis-md.md)] -Ausdrucksgrammatiksyntax verwendet. Wenn ein Ausdruck mit Variablen verwendet wird, kann der Ausdruck Literale sowie die Operatoren und Funktionen der Ausdrucksgrammatik verwenden. Der Ausdruck kann jedoch nicht auf die Spalten in einem Datenfluss des Pakets verweisen. Die maximale Länge eines Ausdrucks beträgt 4000 Zeichen. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
+ Falls die Variable so konfiguriert ist, dass sie als Ausdruck ausgewertet wird, müssen Sie einen Ausdruck angeben. Zur Laufzeit wird der Ausdruck ausgewertet, und die Variable wird auf das Auswertungsergebnis festgelegt. Wenn z. B. eine Variable den Ausdruck `DATEPART("month", GETDATE())` verwendet, entspricht der Wert der Variablen der Zahl des Monats im aktuellen Datum. Der Ausdruck muss ein gültiger Ausdruck sein, der die [!INCLUDE[ssIS](../includes/ssis-md.md)]-Ausdrucksgrammatiksyntax verwendet. Wenn ein Ausdruck mit Variablen verwendet wird, kann der Ausdruck Literale sowie die Operatoren und Funktionen der Ausdrucksgrammatik verwenden. Der Ausdruck kann jedoch nicht auf die Spalten in einem Datenfluss des Pakets verweisen. Die maximale Länge eines Ausdrucks beträgt 4000 Zeichen. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
  ValueType  
  > [!NOTE]  
@@ -140,7 +141,7 @@ ms.locfileid: "62892278"
 ## <a name="configuring-variables"></a>Konfigurieren von Variablen  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Fenster „Variablen“](../../2014/integration-services/variables-window.md).  
+ Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer festlegen können, finden Sie unter [Fenster „Variablen“](../../2014/integration-services/variables-window.md).  
   
  Weitere Informationen zu Variableneigenschaften und zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   

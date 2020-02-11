@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078900"
 ---
 # <a name="modifying-measures"></a>Ändern von Measures
-  Sie können die **FormatString**-Eigenschaft verwenden, um Formatierungseinstellungen zu definieren, die die Darstellung von Measures steuern. In dieser Aufgabe geben Sie Formatierungseigenschaften für die Währungs- und Prozentsatzmeasures im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube an.  
+  Sie können die **FormatString** -Eigenschaft verwenden, um Formatierungseinstellungen zu definieren, die die Darstellung von Measures steuern. In dieser Aufgabe geben Sie Formatierungseigenschaften für die Währungs- und Prozentsatzmeasures im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube an.  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>So ändern Sie die Measures des Cubes  
   
@@ -36,39 +36,39 @@ ms.locfileid: "66078900"
   
 5.  Wählen Sie eine der folgenden Measures aus. Um mehrere Measures auszuwählen, halten Sie beim Klicken die STRG-TASTE gedrückt:  
   
-    -   **Unit Price**  
+    -   **Einzelpreis**  
   
-    -   **Extended Amount**  
+    -   **Erweiterter Betrag**  
   
-    -   **Discount Amount**  
+    -   **Rabatt Betrag**  
   
-    -   **Product Standard Cost**  
+    -   **Produkt Standard Kosten**  
   
-    -   **Total Product Cost**  
+    -   **Gesamtproduktkosten**  
   
-    -   **Sales Amount**  
+    -   **Umsatz Betrag**  
   
-    -   **Tax Amt**  
+    -   **Steuern Amt**  
   
-    -   **Freight**  
+    -   **Freight (Fracht)**  
   
 6.  Wählen Sie im Eigenschaftenfenster in der **FormatString** -Liste **Currency**aus.  
   
 7.  Wählen Sie im Dropdown-Listenfeld oben im Eigenschaftenfenster (rechts unterhalb der Titelleiste) das Measure **Unit Price Discount Pct**und anschließend in der Liste **FormatString** die Option **Percent** aus.  
   
-8.  Ändern Sie im Fenster Eigenschaften die **Namen** -Eigenschaft für die **Unit Price Discount Pct** measure `Unit Price Discount Percentage`.  
+8.  Ändern Sie `Unit Price Discount Percentage`im Eigenschaftenfenster die **Name** -Eigenschaft für das **Unit Price discount PCT** -Measure in.  
   
-9. In der **Measures** Bereich, klicken Sie auf **Tax Amt** und ändern Sie den Namen dieses Measures in `Tax Amount`.  
+9. Klicken Sie im Bereich Measures auf **Tax Amt** , und ändern Sie den Namen dieses `Tax Amount` **Measures** in.  
   
 10. Klicken Sie im Eigenschaftenfenster auf das Symbol **Automatisch im Hintergrund** , um das Eigenschaftenfenster auszublenden, und anschließend auf der Symbolleiste der Registerkarte **Cubestruktur** auf **Measuresstruktur anzeigen** .  
   
 11. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Ändern der Customer-Dimension](lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Definieren von Datenbankdimensionen](multidimensional-models/define-database-dimensions.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Definieren von Daten Bank Dimensionen](multidimensional-models/define-database-dimensions.md)   
  [Konfigurieren von Measureeigenschaften](multidimensional-models/configure-measure-properties.md)  
   
   

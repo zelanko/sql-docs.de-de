@@ -1,5 +1,5 @@
 ---
-title: Datamining-Algorithmen (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Data Mining-Algorithmen (SQL Server Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086508"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Data Mining-Algorithmen (SQL Server Data Mining-Add-Ins)
@@ -53,12 +53,12 @@ ms.locfileid: "66086508"
   
  Modelle können mithilfe dieser erweiterten Optionen auf zwei Weisen angepasst werden:  
   
--   Verwenden der **Data Mining-Abfragen** Assistenten, um Ihr Modell zu erstellen.  
+-   Verwenden Sie den Assistenten für **Data Mining-Abfragen** , um das Modell zu erstellen.  
   
--   In der **Data Mining-Client**nach dem Starten des Assistenten klicken Sie auf **Parameter**.  
+-   Klicken Sie im **Data Mining-Client**auf **Parameter**, nachdem Sie den Assistenten gestartet haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfrage &#40;SQL Server Data Mining-Add-ins&#41;](query-sql-server-data-mining-add-ins.md)   
- [Erweiterte Modellierung &#40;Data Mining-Add-ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+ [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

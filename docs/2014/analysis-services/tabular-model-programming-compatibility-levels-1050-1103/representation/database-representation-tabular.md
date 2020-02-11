@@ -1,5 +1,5 @@
 ---
-title: Datenbankdarstellung | Microsoft-Dokumentation
+title: Daten Bank Darstellung (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757811"
 ---
 # <a name="database-representationtabular"></a>Datenbankdarstellung (tabellarisch)
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>Datenbank in AMO  
  Wenn Sie AMO verwenden, um ein Datenbankobjekt zu verwalten, beginnen Sie mit einem <xref:Microsoft.AnalysisServices.Server>-Objekt. Suchen Sie dann Ihre Datenbank in der Datenbankauflistung, oder erstellen Sie eine neue Datenbank, indem Sie sie der Auflistung hinzufügen.  
   
- Der folgende Codeausschnitt zeigt die Schritte zum Verbinden mit einem Server und eine leere Datenbank erstellen, nach der Überprüfung die Datenbank ist nicht vorhanden:  
+ Der folgende Code Ausschnitt zeigt die Schritte zum Herstellen einer Verbindung mit einem Server und zum Erstellen einer leeren Datenbank nach der Überprüfung, dass die Datenbank nicht vorhanden ist:  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Ein praktisches Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von datenbankdarstellungen, dazu finden Sie Quellcode im Tabular AMO 2012-Beispiel. Prüfen Sie insbesondere die Quelldatei: Database.cs. Beispielcode wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden.  
+ Um ein praktisches Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von Datenbankdarstellungen zu gewinnen, können Sie den Quellcode im Tabular AMO 2012-Beispiel einsehen. Prüfen Sie insbesondere die Quelldatei: Database.cs. Beispielcode wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden.  
   
   

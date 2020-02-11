@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor für Zeichen | Microsoft-Dokumentation
+title: Transformations-Editor für Zeichen Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060983"
 ---
 # <a name="character-map-transformation-editor"></a>Transformations-Editor für Zeichenzuordnung
@@ -26,7 +26,7 @@ ms.locfileid: "66060983"
   
  Weitere Informationen zur Transformation zum Zuordnen der Zeichen finden Sie unter [Character Map Transformation](data-flow/transformations/character-map-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Spalten aus, die mithilfe von Zeichenfolgenfunktionen transformiert werden sollen. Die getroffene Auswahl wird in der nachfolgenden Tabelle angezeigt.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66060983"
  **Ziel**  
  Geben Sie an, ob Sie die Ergebnisse der Zeichenfolgenfunktionen direkt in der vorhandenen Spalte speichern möchten, oder ob Sie die geänderten Daten in einer neuen Spalte speichern möchten.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Neue Spalte|Speichern Sie die Daten in einer neuen Spalte. Weisen Sie der Spalte unter **Ausgabealias**einen Namen zu.|  
 |Direkte Änderung|Speichern Sie die geänderten Daten in der vorhandenen Spalte.|  
@@ -44,10 +44,10 @@ ms.locfileid: "66060983"
  **Vorgang**  
  Wählen Sie in der Liste die Zeichenfolgenfunktionen aus, die auf Spaltendaten angewendet werden sollen.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Kleinschreibung|In Kleinschreibung konvertieren.|  
-|Großschreibung|In Großschreibung konvertieren.|  
+|Kleinbuchstaben|In Kleinschreibung konvertieren.|  
+|Großbuchstaben|In Großschreibung konvertieren.|  
 |Byteumkehrung|In umgekehrte Bytereihenfolge konvertieren.|  
 |Hiragana|Japanische Katakana-Zeichen in Hiragana-Zeichen konvertieren.|  
 |Katakana|Japanische Hiragana-Zeichen in Katakana-Zeichen konvertieren.|  
@@ -63,7 +63,7 @@ ms.locfileid: "66060983"
  **Konfigurieren der Fehlerausgabe**  
  Im Dialogfeld [Fehlerausgabe konfigurieren](../../2014/integration-services/configure-error-output.md) können Sie für die Transformation verfügbare Optionen zur Fehlerbehandlung angeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Data Mining-Abfragen, Tasks und Anweisungen für | Microsoft-Dokumentation
+title: Data Mining-Abfrage Tasks und Vorgehensweisen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084949"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Data Mining-Abfragetasks und Anweisungen
@@ -25,15 +25,15 @@ ms.locfileid: "66084949"
 ## <a name="creating-queries-with-prediction-query-builder"></a>Erstellen von Abfragen mit dem Generator für Vorhersageabfragen  
  Der Generator für Vorhersageabfragen steht sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als Methode der grafischen Erstellung von Abfragen für Data Mining-Modelle zur Verfügung. In den folgenden Themen wird erläutert, wie Sie ein Modell auswählen, eine Datenquelle angeben, die Vorhersagen anpassen und die Ausgabe speichern können.  
   
--   [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](create-a-singleton-query-in-the-data-mining-designer.md)  
   
--   [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage](view-and-save-the-results-of-a-prediction-query.md)  
   
--   [Manuelles Bearbeiten einer Vorhersageabfrage](manually-edit-a-prediction-query.md)  
+-   [Manuelles Bearbeiten eine Vorhersageabfrage](manually-edit-a-prediction-query.md)  
   
 -   [Anwenden von Vorhersagefunktionen auf ein Modell](apply-prediction-functions-to-a-model.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66084949"
 ## <a name="using-other-data-mining-query-tools"></a>Verwenden von Tools für Data Mining-Abfragen  
  Neben der Verwendung des Generators für Vorhersagenabfragen besteht außerdem die Möglichkeit, eine Abfrage mit DMX oder XMLA direkt in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einzugeben. Sie können auch programmgesteuert Vorhersageabfragen erstellen und sie an einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server senden. Die folgenden Themen enthalten weitere Informationen zur Erstellung und Verwendung von Vorhersageabfragen außerhalb des Vorhersageabfragen-Generators.  
   
- [Erstellen Sie eine Singleton-Abfrage aus einer Vorlage](create-a-singleton-prediction-query-from-a-template.md)  
+ [Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage](create-a-singleton-prediction-query-from-a-template.md)  
  Beschreibt, wie mit den Tools in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Vorhersageabfrage erstellt und ausgeführt wird.  
   
  [Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage](create-a-singleton-prediction-query-from-a-template.md)  
@@ -57,8 +57,8 @@ ms.locfileid: "66084949"
  [Erstellen einer Data Mining-Abfrage mit XMLA](create-a-data-mining-query-by-using-xmla.md)  
  Beschreibt, wie eine Abfrage für einen Miningmodellinhalt mit den XMLA-Vorlagen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragen- und Ausdruckssprachreferenz &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Abfrage-und Ausdrucks Sprachreferenz &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Data Mining-gespeicherte Prozeduren &#40;Analysis Services Data Mining-&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

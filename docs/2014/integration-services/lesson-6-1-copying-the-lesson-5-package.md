@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890756"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 5
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 5 erstellten Pakets Lesson 5.dtsx. Wahlweise können Sie dem Projekt auch das im Lernprogramm enthaltene abgeschlossene Paket aus Lektion 5 hinzufügen und dann von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>So kopieren Sie das Lektion 5-Paket aus  
@@ -38,7 +38,7 @@ ms.locfileid: "62890756"
   
 7.  Aktualisieren Sie im Eigenschaftenfenster die Name-Eigenschaft in Lesson 6.  
   
-8.  Klicken Sie auf das Kontrollkästchen für die ID-Eigenschaft, und klicken Sie auf den Dropdownpfeil, und klicken Sie dann auf \<neue ID generieren >.  
+8.  Aktivieren Sie das Kontrollkästchen für die ID-Eigenschaft, klicken Sie auf den Dropdown Pfeil \<, und klicken Sie dann auf neue ID generieren>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>So fügen Sie das abgeschlossene Lektion 5-Paket hinzu  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62890756"
   
      Wenn die Projektmappe nach dem Kopieren des Lektion 5-Pakets noch Pakete aus vorherigen Lektionen enthält, klicken Sie mit der rechten Maustaste auf die einzelnen Pakete aus Lektion 1 bis 5 und klicken dann auf Aus Projekt ausschließen. Anschließend sollte nur noch Lesson 6.dtsx in der Projektmappe enthalten sein.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Schritt 2: Das Projekt konvertieren in das Projektbereitstellungsmodell](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Schritt 2: Converting the Project to the Project Deployment Model (Konvertieren des Projekts in das Projektbereitstellungsmodell)](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

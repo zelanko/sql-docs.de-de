@@ -1,5 +1,5 @@
 ---
-title: Tests und Überprüfung (Datamining) | Microsoft-Dokumentation
+title: Tests und Überprüfung (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -29,16 +29,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082802"
 ---
 # <a name="testing-and-validation-data-mining"></a>Tests und Überprüfung (Data Mining)
   Die Überprüfung ist der Prozess des Bewertens, welche Leistung die Miningmodelle mit echten Daten erzielen. Es ist wichtig, dass Sie Ihre Miningmodelle überprüfen, indem Sie ihre Qualität und Merkmale studieren, bevor Sie sie in einer Produktionsumgebung bereitstellen.  
   
- In diesem Abschnitt werden einige grundlegende Konzepte im Zusammenhang mit der Modellqualität und die Strategien zur Modellvalidierung vorgestellt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zur Verfügung stehen. Eine Übersicht dazu, wie Modellüberprüfungen in den größeren Data Mining-Prozess eingebunden werden können, finden Sie unter [Data Mining-Projektmappen](data-mining-solutions.md).  
+ In diesem Abschnitt werden einige grundlegende Konzepte im Zusammenhang mit der Modellqualität vorgestellt und die Strategien zur Modell Validierung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]beschrieben, die in bereitgestellt werden. Eine Übersicht dazu, wie Modellüberprüfungen in den größeren Data Mining-Prozess eingebunden werden können, finden Sie unter [Data Mining-Projektmappen](data-mining-solutions.md).  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Methoden zum Testen und Überprüfen von Data Mining-Modellen  
  Es gibt viele Ansätze zum Bewerten der Qualität und der Eigenschaften eines Data Mining-Modells.  
@@ -54,14 +54,15 @@ ms.locfileid: "66082802"
 ## <a name="definition-of-criteria-for-validating-data-mining-models"></a>Definition von Kriterien zum Überprüfen von Data Mining-Modellen  
  Data Mining-Measures lassen sich im Allgemeinen den Kategorien Genauigkeit, Zuverlässigkeit und Nützlichkeit zuteilen.  
   
- Die*Genauigkeit* ist ein Maß, das besagt, wie gut ein Ergebnis vom Modell mit den Attributen der bereitgestellten Daten korreliert wird. Es gibt verschiedenen Measures für die Genauigkeit, die jedoch alle von den verwendeten Daten abhängig sind. In der Praxis können Werte fehlen oder ungenau sein, oder die Daten können durch mehrere Prozesse verändert worden sein. Insbesondere in der Untersuchungs- und Entwicklungsphase kann es sein, dass eine bestimmte Menge an Fehlern in den Daten akzeptiert wird, insbesondere wenn Daten mit relativ einheitlichen Merkmalen vorliegen. Beispielsweise kann ein Modell, mit dem der Umsatz einer bestimmten Niederlassung anhand der vergangenen Umsätze vorhergesagt wird, auch dann stark korreliert und sehr genau sein, wenn die betreffende Niederlassung durchgängig eine falsche Buchhaltungsmethode verwendet hat. Deshalb müssen Genauigkeitsmaße durch Bewertungen der Zuverlässigkeit ausgeglichen werden.  
+ Die *Genauigkeit* ist ein Maß dafür, wie gut das Modell ein Ergebnis mit den Attributen in den Daten korreliert, die bereitgestellt wurden. Es gibt verschiedenen Measures für die Genauigkeit, die jedoch alle von den verwendeten Daten abhängig sind. In der Praxis können Werte fehlen oder ungenau sein, oder die Daten können durch mehrere Prozesse verändert worden sein. Insbesondere in der Untersuchungs- und Entwicklungsphase kann es sein, dass eine bestimmte Menge an Fehlern in den Daten akzeptiert wird, insbesondere wenn Daten mit relativ einheitlichen Merkmalen vorliegen. Beispielsweise kann ein Modell, mit dem der Umsatz einer bestimmten Niederlassung anhand der vergangenen Umsätze vorhergesagt wird, auch dann stark korreliert und sehr genau sein, wenn die betreffende Niederlassung durchgängig eine falsche Buchhaltungsmethode verwendet hat. Deshalb müssen Genauigkeitsmaße durch Bewertungen der Zuverlässigkeit ausgeglichen werden.  
   
- Durch die*Zuverlässigkeit* wird bewertet, wie sich ein Data Mining-Modell bei Anwendung auf unterschiedliche Datasets verhält. Ein Data Mining-Modell ist zuverlässig, wenn es unabhängig von den bereitgestellten Testdaten die gleichen Typen von Vorhersagen erzeugt oder die gleichen Arten von Mustern sucht. Beispielsweise würde sich das Modell, das für die Niederlassung erzeugt wurde, in der die falsche Buchhaltungsmethode verwendet wurde, nicht gut auf andere Niederlassungen verallgemeinern lassen, und daher wäre es nicht zuverlässig.  
+ Durch die *Zuverlässigkeit* wird bewertet, wie ein Data Mining Modell für unterschiedliche DataSets ausführt. Ein Data Mining-Modell ist zuverlässig, wenn es unabhängig von den bereitgestellten Testdaten die gleichen Typen von Vorhersagen erzeugt oder die gleichen Arten von Mustern sucht. Beispielsweise würde sich das Modell, das für die Niederlassung erzeugt wurde, in der die falsche Buchhaltungsmethode verwendet wurde, nicht gut auf andere Niederlassungen verallgemeinern lassen, und daher wäre es nicht zuverlässig.  
   
- Die*Nützlichkeit* schließt verschiedene Metriken ein, aus denen hervorgeht, ob das Modell nützliche Informationen liefert. Beispielsweise kann ein Data Mining-Modell, das den Standort einer Niederlassung mit dem Umsatz korreliert, sowohl genau als auch zuverlässig, aber nicht nützlich sein, weil sich dieses Ergebnis nicht dadurch verallgemeinern lässt, dass dem gleichen Standort weitere Niederlassungen hinzugefügt werden. Darüber hinaus beantwortet es die grundlegende Geschäftsfrage nicht, warum an bestimmten Standorten höhere Umsätze erzielt werden. Es kann sich auch herausstellen, dass ein anscheinend erfolgreiches Modell in Wirklichkeit bedeutungslos ist, weil es auf Kreuzkorrelationen der Daten basiert.  
+ Die *Nützlichkeit* umfasst verschiedene Metriken, die Aufschluss darüber geben, ob das Modell nützliche Informationen liefert. Beispielsweise kann ein Data Mining-Modell, das den Standort einer Niederlassung mit dem Umsatz korreliert, sowohl genau als auch zuverlässig, aber nicht nützlich sein, weil sich dieses Ergebnis nicht dadurch verallgemeinern lässt, dass dem gleichen Standort weitere Niederlassungen hinzugefügt werden. Darüber hinaus beantwortet es die grundlegende Geschäftsfrage nicht, warum an bestimmten Standorten höhere Umsätze erzielt werden. Es kann sich auch herausstellen, dass ein anscheinend erfolgreiches Modell in Wirklichkeit bedeutungslos ist, weil es auf Kreuzkorrelationen der Daten basiert.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>Tools zum Testen und Überprüfen von Miningmodellen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt mehrere Ansätze zur Überprüfung von Data Mining-Lösungen, die alle Phasen der Data Mining-Testmethoden unterstützen.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt mehrere Ansätze zur Überprüfung von Data Mining-Lösungen, die alle Phasen der Data Mining-Testmethoden unterstützen.  
   
 -   Partitionieren der Daten in Test- und Trainingssätze  
   
@@ -83,16 +84,16 @@ ms.locfileid: "66082802"
   
 ### <a name="related-topics"></a>Verwandte Themen  
   
-|Thema|Links|  
+|Themen|Links|  
 |------------|-----------|  
 |Erfahren Sie mehr darüber, wie Sie ein Testdataset mithilfe eines Assistenten oder mit DMX-Befehlen einrichten können.|[Trainings- und Testdatasets](training-and-testing-data-sets.md)|  
-|Erfahren Sie mehr darüber, wie Sie die Verteilung und die Repräsentativität der Daten in einer Miningstruktur testen können.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Erfahren Sie mehr über die Typen von Genauigkeitsdiagrammen in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Erfahren Sie mehr darüber, wie Sie eine Klassifikationsmatrix, auch bekannt unter dem Namen Verwirrungsmatrix, erstellen, um die Anzahl von als wahr positiv, falsch positiv, wahr negativ und falsch negativ klassifizierten Ergebnissen zu ermitteln.|[Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr darüber, wie Sie die Verteilung und die Repräsentativität der Daten in einer Miningstruktur testen können.|[Übergreifende Überprüfung &#40;Analysis Services Data Mining-&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr über die Typen von Genauigkeitsdiagrammen in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Lift Chart &#40;Analysis Services-Data Mining-&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinn Diagramm &#40;Analysis Services-Data Mining-&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punkt Diagramm &#40;Analysis Services-Data Mining-&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr darüber, wie Sie eine Klassifikationsmatrix, auch bekannt unter dem Namen Verwirrungsmatrix, erstellen, um die Anzahl von als wahr positiv, falsch positiv, wahr negativ und falsch negativ klassifizierten Ergebnissen zu ermitteln.|[Klassifizierungs Matrix &#40;Analysis Services Data Mining-&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Tools](data-mining-tools.md)   
- [Data Mining-Projektmappen](data-mining-solutions.md)   
- [Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Data Mining-Lösungen](data-mining-solutions.md)   
+ [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

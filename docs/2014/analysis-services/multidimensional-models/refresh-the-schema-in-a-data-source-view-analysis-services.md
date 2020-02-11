@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
+title: Aktualisieren des Schemas in einer Datenquellen Sicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32c9db875afff68125fcc14ef1587c7c4f80302e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073253"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66073253"
   
  Um die Datenquellensicht zu aktualisieren, sodass sie mit der externen Datenquelle übereinstimmt, können Sie die Datenquellensicht in Business Intelligence Development Studio (BIDS) aktualisieren. Beim Aktualisieren der Datenquellensicht werden Änderungen an den externen Datenquellen erkannt, auf denen die Datenquellensicht basiert, sowie eine Änderungsliste erstellt, in der Hinzufügungen oder Löschungen in Bezug auf die externe Datenquelle aufgeführt sind. Anschießend können Sie den Satz von Änderungen auf die Datenquellensicht anwenden, die eine erneute Ausrichtung mit der zugrunde liegenden Datenbank vornimmt. Beachten Sie, dass die Aktualisierung der Cubes und Dimensionen im Projekt, von denen die Datenquellensicht verwendet wird, häufig mit zusätzlicher Arbeit verbunden ist.  
   
- Dieses Thema enthält folgende Abschnitte:  
+ Dieses Thema enthält die folgenden Abschnitte:  
   
- [Von der Aktualisierung unterstützte Änderungen](#bkmk_changlist)  
+ [Bei der Aktualisierung unterstützte Änderungen](#bkmk_changlist)  
   
- [Aktualisieren einer Datenquellensicht in SQL Server Data Tools](#bkmk_DSVrefresh)  
+ [Aktualisieren einer DSV in SQL Server Data Tools](#bkmk_DSVrefresh)  
   
-##  <a name="bkmk_changlist"></a> Von der Aktualisierung unterstützte Änderungen  
+##  <a name="bkmk_changlist"></a>Bei der Aktualisierung unterstützte Änderungen  
  Die Aktualisierung der Datenquellensicht kann folgende Aktionen umfassen:  
   
 -   Löschen von Tabellen, Spalten und Beziehungen  
@@ -43,23 +43,23 @@ ms.locfileid: "66073253"
   
  Bei der Aktualisierung werden einer Datenquellensicht nie neue Tabellen hinzugefügt. Wenn Sie eine neue Tabelle hinzufügen möchten, muss dieser Schritt manuell erfolgen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)aus.  
   
-##  <a name="bkmk_DSVrefresh"></a> Aktualisieren einer Datenquellensicht in SQL Server Data Tools  
+##  <a name="bkmk_DSVrefresh"></a>Aktualisieren einer DSV in SQL Server Data Tools  
  Doppelklicken Sie zum Aktualisieren einer Datenquellensicht im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf die Datenquellensicht, und klicken Sie anschließend auf die Schaltfläche „Datenquellensicht aktualisieren“, oder wählen Sie im Menü „Datenquellensicht“ die Option **Aktualisieren** aus.  
   
  Während einer Aktualisierung fragt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] alle zugrunde liegenden relationalen Datenquellen ab, um zu ermitteln, ob Änderungen in Tabellen/Sichten vorliegen, die in der Datenquellensicht enthalten sind. Falls mit den zugrunde liegenden Datenquellen keine Verbindungen hergestellt werden können und Änderungen vorgenommen wurden, können diese im Dialogfenster **Datenquellensicht aktualisieren** angezeigt werden.  
   
- ![Aktualisieren der Datenquellensicht (Dialogfeld)](../media/ssas-olapdsv-refresh.gif "Dialogfeld für die Datenquellensicht aktualisieren")  
+ ![Datenquellen Sicht aktualisieren (Dialogfeld)](../media/ssas-olapdsv-refresh.gif "Datenquellensicht aktualisieren (Dialogfeld)")  
   
  Im Dialogfeld sind Tabellen, Spalten, Einschränkungen und Beziehungen aufgelistet, die in der Datenquellensicht gelöscht oder hinzugefügt werden. Darüber hinaus werden in diesem Bericht alle benannten Abfragen oder Berechnungen aufgeführt, die nicht erfolgreich vorbereitet werden können. Die betroffenen Objekte werden in einer Strukturansicht aufgelistet. Dabei werden Spalten und Beziehungen unterhalb der Tabellen geschachtelt dargestellt, und die Art der Änderung (Löschung oder Hinzufügung) wird für jedes Objekt angezeigt. Die Objektsymbole der Standard-Datenquellensicht zeigen an, welcher Objekttyp betroffen ist.  
   
- Das Aktualisieren basiert vollständig auf den Namen der zugrunde liegenden Objekte. Wenn ein zugrunde liegendes Objekt in der Datenquelle umbenannt wird, behandelt Datenquellensicht-Designer deshalb das umbenannte Objekt als zwei separate Vorgänge-eine Löschung und eine Hinzufügung. In diesem Fall müssen Sie die umbenannten Objekte bei Bedarf manuell wieder in die Datenquellensicht einfügen. Möglicherweise müssen auch Beziehungen oder logische Primärschlüssel neu erstellt werden.  
+ Das Aktualisieren basiert vollständig auf den Namen der zugrunde liegenden Objekte. Wenn ein zugrunde liegendes Objekt in der Datenquelle umbenannt wird, behandelt der Datenquellen Sicht-Designer deshalb das umbenannte Objekt als zwei separate Vorgänge: einen Löschvorgang und eine Addition. In diesem Fall müssen Sie die umbenannten Objekte bei Bedarf manuell wieder in die Datenquellensicht einfügen. Möglicherweise müssen auch Beziehungen oder logische Primärschlüssel neu erstellt werden.  
   
 > [!IMPORTANT]  
 >  Wenn Sie wissen, dass eine Tabelle in einer Datenquelle umbenannt wurde, können Sie den Befehl **Tabelle ersetzen** verwenden, um die Tabelle durch die umbenannte Tabelle zu ersetzen, bevor Sie die Datenquellensicht aktualisieren. Weitere Informationen finden Sie unter [Ersetzen einer Tabelle oder einer benannten Abfrage in einer Datenquellensicht &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  
   
  Nachdem Sie den Bericht geprüft haben, können Sie die Änderungen entweder annehmen oder das Update abbrechen und alle Änderungen ablehnen. Alle Änderungen müssen zusammen akzeptiert oder abgelehnt werden. Einzelne Elemente können nicht aus der Liste ausgewählt werden. Sie können die Änderungen auch in einem Bericht speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellensichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

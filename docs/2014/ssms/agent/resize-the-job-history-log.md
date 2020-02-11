@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650887"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-  In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsverlaufsprotokolle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen.  
+  In diesem Thema wird beschrieben, wie Sie Größen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Beschränkungen für-Agent- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Auftragsverlaufs Protokolle in mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]von festlegen.  
   
 -   **Vorbereitungen:**  
   
      [Sicherheit](#Security)  
   
--   **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
+-   **So legen Sie Größenbeschränkungen für Auftragsverlaufs Protokolle fest mit:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62650887"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Basisgröße  
   
@@ -56,12 +56,12 @@ ms.locfileid: "62650887"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Zeit  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]von her, und erweitern Sie dann diese Instanz.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
   
 3.  Wählen Sie die Seite **Verlauf** aus, und klicken Sie dann auf **Agentverlauf automatisch entfernen**.  
   
-4.  Wählen Sie die entsprechende Anzahl für **Tag(e)** , **Woche(n)** oder **Monat(e)** aus.  
+4.  Wählen Sie die entsprechende Anzahl für **Tag(e)**, **Woche(n)** oder **Monat(e)** aus.  
   
   

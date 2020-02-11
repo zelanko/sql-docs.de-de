@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914512"
 ---
-# <a name="mssqlserver33128"></a>MSSQLSERVER_33128
+# <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
     
 ## <a name="details"></a>Details  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62914512"
 > [!NOTE]  
 >  Der Ringpuffer ist eine interne Komponente, die nicht vollständig dokumentiert ist und nicht für die Verwendung durch Kunden bestimmt ist. Meldungen aus dem Ringpuffer sind bei der Kontaktaufnahme mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Kundensupport hilfreich. Zum Anzeigen des Ringpuffers fragen Sie die dynamische Verwaltungssicht sys.dm_os_ring_buffers ab.  
   
-|Status|Description|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |1|Ein RC4-Schlüssel wird in der integrierten encryptbykey()-Funktion verwendet. Die integrierte Funktion gibt NULL zurück. Diese Meldung wird nur im Ringpuffer angezeigt.|  
 |2|Ein RC4-Schlüssel wird in von der integrierten decryptbykey()-Funktion verwendet. Diese Meldung wird nur im Ringpuffer angezeigt.|  

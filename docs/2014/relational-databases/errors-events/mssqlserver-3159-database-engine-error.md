@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868881"
 ---
-# <a name="mssqlserver3159"></a>MSSQLSERVER_3159
+# <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
     
 ## <a name="details"></a>Details  
   
@@ -47,10 +47,10 @@ ms.locfileid: "62868881"
   
  Wenn Sie das Protokollfragment nicht sichern können, verwenden Sie in Ihren RESTORE-Anweisungen WITH STOPAT oder WITH REPLACE.  
   
-## <a name="see-also"></a>Siehe auch  
- [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Sichern des Transaktionsprotokolls bei beschädigter Datenbank &#40;SQLServer&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
- [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Wiederherstellen einer SQL Server Datenbank zu einem bestimmten Zeitpunkt &#40;vollständigen Wiederherstellungs Modell&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Sichern Sie das Transaktionsprotokoll, wenn die Datenbank &#40;SQL Server beschädigt ist&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
+ [Sichern eines Transaktions Protokolls &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sicherungen des Protokollfragments &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  
   
   

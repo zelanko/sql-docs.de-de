@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie ein Prognosegütediagramm, Gewinndiagrammen oder Klassifikationsmatrizen | Microsoft-Dokumentation
+title: Erstellen eines Lift Diagramms, eines Gewinn Diagramms oder einer Klassifikations Matrix | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085405"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen
@@ -69,33 +69,33 @@ ms.locfileid: "66085405"
   
     -   Wählen Sie die Option **Miningstrukturtestfälle verwenden**aus, um den vollständigen Satz der Testfälle zu verwenden, die als Teil des zurückgehaltenen Datasets der Miningstrukturen definiert wurden.  
   
-    -   Aktivieren Sie die Option **Anderes Dataset verwenden**, wenn Sie externe Daten verwenden möchten.  Das Dataset muss als Datenquellensicht verfügbar sein.   Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) Schaltfläche, um die Datentabellen auszuwählen, für das Genauigkeitsdiagramm verwenden möchten. Weitere Informationen finden Sie unter [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Aktivieren Sie die Option **Anderes Dataset verwenden**, wenn Sie externe Daten verwenden möchten.  Das Dataset muss als Datenquellensicht verfügbar sein.   Klicken Sie auf die Schaltfläche zum Durchsuchen (**..**.), um die Datentabellen für das Genauigkeits Diagramm auszuwählen. Weitere Informationen finden Sie unter [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          Wenn Sie ein externes Dataset verwenden, können Sie das Eingabedataset optional filtern. Weitere Informationen finden Sie unter [Anwenden von Filtern zum Modellieren von Testdaten](apply-filters-to-model-testing-data.md).  
   
 > [!NOTE]  
->  Mithilfe der Registerkarte **Eingabeauswahl** können Sie keinen Filter für die Testfälle für das Miningmodell oder die Miningstruktur erstellen. Um einen Filter für das Miningmodell zu erstellen, ändern Sie die Filtereigenschaft des Modells. Weitere Informationen finden Sie unter [Anwenden eines Filters auf ein Miningmodell](apply-a-filter-to-a-mining-model.md).  
+>  Auf der Registerkarte **Eingabeauswahl** können Sie keinen Filter für die Testfälle des Modells oder der Mining Struktur erstellen. Um einen Filter für das Mining Modell zu erstellen, ändern Sie die Filter-Eigenschaft des Modells. Weitere Informationen finden Sie unter [Anwenden eines Filters auf ein Miningmodell](apply-a-filter-to-a-mining-model.md).  
   
 ### <a name="configure-chart-settings-and-generate-the-chart"></a>Konfigurieren von Diagrammeinstellungen und Generieren des Diagramms  
   
 1.  Klicken Sie in der Registerkarte **Mininggenauigkeitsdiagramm** auf die Registerkarte für das Diagramm, das Sie erstellen möchten.  
   
-2.  Klicken Sie für ein **Prognosegütediagramm**auf die Registerkarte **Prognosegütediagramm** . Das Diagramm wird automatisch auf Grundlage des Modells, der vorhersagbaren Attribute und der Eingabedaten generiert, die Sie soeben ausgewählt haben.  
+2.  Klicken Sie für ein **Lift Diagramm**auf die Registerkarte **Lift Chart** . Das Diagramm wird automatisch auf Grundlage des Modells, der vorhersagbaren Attribute und der Eingabedaten generiert, die Sie soeben ausgewählt haben.  
   
-3.  Klicken Sie für eine **Klassifikationsmatrix**auf die Registerkarte **Klassifikationsmatrix** . Es werden keine weiteren Einstellungen benötigt. Das Diagramm wird automatisch auf Grundlage der Eingabedaten und des Modells generiert, das Sie ausgewählt haben.  
+3.  Klicken Sie für eine **Klassifikations Matrix**auf die Registerkarte **Klassifikations Matrix** . Es sind keine weiteren Einstellungen erforderlich. das Diagramm wird automatisch auf Grundlage der von Ihnen ausgewählten Eingabedaten und des Modells generiert.  
   
-4.  Klicken Sie für ein **Gewinndiagramm**auf die Registerkarte **Prognosegütediagramm** . Wählen Sie anschließend in der Dropdownliste **Diagrammtyp** die Option **Gewinndiagramm**aus.  
+4.  Klicken Sie für ein **Gewinn Diagramm**zuerst auf die Registerkarte **Lift Chart** . Wählen Sie dann in der Dropdown Liste **Diagrammtyp** die Option **Gewinn Diagramm**aus.  
   
      Geben Sie die folgenden Einstellungen im Dialogfeld **Gewinndiagrammeinstellungen** ein.  
   
-     **Auffüllung**  
+     **Bevölkerungs**  
      Die Anzahl von Fällen im Dataset, die Sie beim Erstellen des Prognosegütediagramms verwenden möchten.  
   
      Das Modell wählt die Fälle immer nach sinkender Wahrscheinlichkeit aus. Wenn Sie also potenzielle Kunden bewerten und eine Anzahl auswählen, die der Hälfte der in der Kundendatenbank vorhandenen Kunden entspricht, misst das Modell die Genauigkeit für die Teilmenge der Fälle, die am besten für Ihr Modell geeignet sind.  
   
      Die Ursache hierfür liegt darin, dass Sie beim Erstellen eines Mailings oder einer Kampagne mit dem Modell die Vorhersagewahrscheinlich für jeden Fall nutzen, um nur die Kunden anzusprechen, die mit höchster Wahrscheinlichkeit einen Kauf tätigen werden.  
   
-     **Feste Kosten**  
+     **Festes Kosten**  
      Die festen Kosten, die mit dem Geschäftsproblem verbunden sind.  
   
      Bei einer Targeted Mailing-Lösung könnten die festen Kosten beispielsweise die Kosten zum Einrichten eines Druckers umfassen, die die anfänglichen Kosten für die Vorbereitung des Mailings abdecken.  
@@ -107,11 +107,11 @@ ms.locfileid: "66085405"
   
      Diese Kosten müssen für die gesamte Zielpopulation die gleichen sein. Jeder Wert wird mit der Anzahl der angesprochenen Fälle multipliziert.  
   
-     **Einzelumsatz**  
+     **Umsatz pro Einzelperson**  
      Die Höhe des mit einem erfolgreichen Verkauf verbundenen Umsatzes.  
   
-## <a name="see-also"></a>Siehe auch  
- [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](lift-chart-analysis-services-data-mining.md)   
- [Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Lift Chart &#40;Analysis Services-Data Mining-&#41;](lift-chart-analysis-services-data-mining.md)   
+ [Klassifizierungs Matrix &#40;Analysis Services Data Mining-&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

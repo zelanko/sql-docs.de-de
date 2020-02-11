@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering-Cluster-Übergang (Registerkarte) (Miningmodell-Viewer) | Microsoft-Dokumentation
+title: Registerkarte "Sequenz Cluster/Cluster Übergang" (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069080"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterübergang" (Miningmodell-Viewer)
@@ -24,13 +24,13 @@ ms.locfileid: "66069080"
   
  Mit dieser Sicht eines Sequenzclustermodells können Sie Muster anzeigen. In diesem Diagramm stellt ein Link die Wahrscheinlichkeit eines Übergangs dar und ein Knoten den Sequenzstatus.  
   
- **Weitere Informationen finden Sie unter** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
  **Viewer**  
@@ -51,7 +51,7 @@ ms.locfileid: "66069080"
  **Cluster**  
  Wählen Sie den Cluster aus, der im Viewer angezeigt werden soll. Standardmäßig ist **Auffüllung (Alle)** ausgewählt, d.h., dass das Diagramm Status und Übergänge aus dem gesamten Modell enthält. Wenn Sie einen bestimmten Cluster auswählen, werden nur die Status und Übergänge in diesem Cluster angezeigt.  
   
- **Tipp:** Sie können die Cluster umbenennen, indem Sie mit der **Clusterdiagramm** Registerkarte. Wählen Sie einfach einen Cluster aus, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Umbenennen**aus. Wenn Sie Cluster mit einer aussagekräftigeren Bezeichnung umbenennen, können Sie sie leichter auf der Registerkarte **Statusübergänge** vergleichen.  
+ **Tipp:** Sie können Cluster mithilfe der Registerkarte **Cluster Diagramm** umbenennen. Wählen Sie einfach einen Cluster aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Umbenennen** Wenn Sie Cluster mit einer aussagekräftigeren Bezeichnung umbenennen, können Sie sie leichter auf der Registerkarte **Statusübergänge** vergleichen.  
   
  **Kantenbeschriftungen anzeigen**  
  Wählen Sie diese Option aus, um an allen Rändern im Diagramm Zahlen anzuzeigen, die die Wahrscheinlichkeit des Übergangs angeben.  
@@ -59,9 +59,9 @@ ms.locfileid: "66069080"
  **Links**  
  Steuern Sie mithilfe des Schiebereglers die Anzahl von Status und Übergängen, die im Diagramm angezeigt werden. Wenn Sie den Schieberegler nach unten ziehen, werden nur die Status und Übergänge mit der höchsten Wahrscheinlichkeit angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

@@ -23,17 +23,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874447"
 ---
 # <a name="defining-udt-tables-and-columns"></a>Definieren von UDT-Tabellen und -Spalten
-  Sobald die Assembly, die den benutzerdefinierten Typ (UDT) enthält die Definition in registriert hat eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann in einer Spaltendefinition verwendet werden.  
+  Nachdem die Assembly, die die UDT-Definition (User-Defined Type, benutzerdefinierter Typ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) enthält, in einer-Datenbank registriert wurde, kann Sie in einer Spaltendefinition verwendet werden.  
   
 ## <a name="creating-tables-with-udts"></a>Erstellen von Tabellen mit UDTs  
- Es gibt keine spezielle Syntax für das Erstellen einer UDT-Spalte in einer Tabelle. Sie können den Namen des UDT in einer Spaltendefinition verwenden, als wäre er einer der systeminternen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen. Die folgende CREATE TABLE- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung erstellt eine Tabelle mit dem Namen **Punkte**, mit einer Spalte namens **-ID,** diese wird als definiert eine `int` Identity-Spalte und \ den Primärschlüssel für die Tabelle. Die zweite Spalte den Namen **PointValue**, mit dem Datentyp **Punkt**. In diesem Beispiel verwendete Schemaname ist **Dbo**. Beachten Sie, dass Sie über die erforderlichen Berechtigungen verfügen müssen, um einen Schemanamen anzugeben. Wenn Sie den Schemanamen nicht angeben, wird das Standardschema für den Datenbankbenutzer verwendet.  
+ Es gibt keine spezielle Syntax für das Erstellen einer UDT-Spalte in einer Tabelle. Sie können den Namen des UDT in einer Spaltendefinition verwenden, als wäre er einer der systeminternen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen. Die folgende CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung erstellt eine Tabelle mit dem Namen " **Points**" mit einer Spalte mit dem Namen " `int` ID" **,** die als Identitäts Spalte und \ den Primärschlüssel für die Tabelle definiert ist. Die zweite Spalte hat den Namen **PointValue**und den Datentyp **Point**. Der in diesem Beispiel verwendete Schema Name lautet **dbo**. Beachten Sie, dass Sie über die erforderlichen Berechtigungen verfügen müssen, um einen Schemanamen anzugeben. Wenn Sie den Schemanamen nicht angeben, wird das Standardschema für den Datenbankbenutzer verwendet.  
   
 ```  
 CREATE TABLE dbo.Points   
@@ -47,9 +47,9 @@ CREATE TABLE dbo.Points
   
 -   Indizieren Sie UDT-Ausdrücke. Sie können Indizes auf persistenten berechneten Spalten über UDT-Ausdrücken erstellen. Der UDT-Ausdruck kann ein Feld, eine Methode oder eine Eigenschaft eines UDT sein. Der Ausdruck muss deterministisch sein und darf keinen Datenzugriff ausführen.  
   
- Weitere Informationen finden Sie unter [CLR-benutzerdefinierten Typen](clr-user-defined-types.md) und [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
+ Weitere Informationen finden Sie unter [benutzerdefinierte CLR-Typen](clr-user-defined-types.md) und [Create Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit benutzerdefinierten Typen in SQL Server](working-with-user-defined-types-in-sql-server.md)  
   
   

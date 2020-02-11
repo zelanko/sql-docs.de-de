@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077583"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Mehrdimensionale Modellierung (Adventure Works-Lernprogramm)
@@ -36,7 +36,7 @@ ms.locfileid: "66077583"
   
  Dieses Lernprogramm wird mit einer Szenariobeschreibung bereitgestellt, damit Sie den Kontext dieser Lektionen besser verstehen können. Weitere Informationen finden Sie unter [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Sie benötigen Beispieldaten, Beispielprojektdateien und Software, um alle Lektionen in diesem Lernprogramm abzuschließen. Anweisungen zum Suchen und Installieren der erforderlichen Komponenten für dieses Lernprogramm finden Sie unter [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md).  
   
  Darüber hinaus müssen die folgenden Berechtigungen vorhanden sein, um das Lernprogramm erfolgreich abzuschließen:  
@@ -48,15 +48,15 @@ ms.locfileid: "66077583"
 ## <a name="lessons"></a>Lektionen  
  Dieses Lernprogramm umfasst die folgenden Lektionen:  
   
-|Lektion|Für den Abschluss voraussichtlich benötigte Zeit|  
+|Lektion|Geschätzter Zeitaufwand|  
 |------------|--------------------------------|  
 |[Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 Minuten|  
-|[Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)|30 Minuten|  
+|[Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)|30 Minuten|  
 |[Lektion 3: Ändern von Maßen, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 Minuten|  
 |[Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 Minuten|  
-|[Lesson 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 Minuten|  
+|[Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 Minuten|  
 |[Lektion 6: Definieren von Berechnungen](lesson-6-defining-calculations.md)|45 Minuten|  
-|[Lektion 7: Definieren Key Performance Indicators &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 Minuten|  
+|[Lektion 7: Definieren von wichtigsten Leistungsindikatoren &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 Minuten|  
 |[Lektion 8: Definieren von Aktionen](lesson-8-defining-actions.md)|30 Minuten|  
 |[Lektion 9: Definieren von Perspektiven und Übersetzungen](lesson-9-defining-perspectives-and-translations.md)|30 Minuten|  
 |[Lektion 10: Definieren von Administratorrollen](lesson-10-defining-administrative-roles.md)|15 Minuten|  
@@ -65,6 +65,6 @@ ms.locfileid: "66077583"
 >  Die in diesem Lernprogramm erstellte Cubedatenbank ist eine vereinfachte Version des mehrdimensionalen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modellprojekts, das Teil der Adventure Works-Beispieldatenbanken ist, die auf der Codeplex-Website zum Download verfügbar sind. Die Lernprogrammversion der mehrdimensionalen Adventure Works-Datenbank ist vereinfacht, um den Fokus auf die Fähigkeiten zu richten, die Sie vorrangig erwerben möchten. Nachdem Sie das Lernprogramm abgeschlossen haben, können Sie das mehrdimensionale Modellprojekt selbst untersuchen, um Ihr Verständnis der mehrdimensionalen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modellierung zu vertiefen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- Um das Lernprogramm zu starten, gehen Sie zur ersten Lektion: [Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+ Um das Lernprogramm zu starten, gehen Sie zur ersten Lektion über: [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

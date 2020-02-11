@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62878060"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Grundlegendes zu synchronen und asynchronen Transformationen
@@ -30,7 +30,7 @@ ms.locfileid: "62878060"
   
  Ein Beispiel für eine synchrone Transformation ist die Transformation für Datenkonvertierung. Für jede eingehende Zeile wird der Wert in der angegebenen Spalte konvertiert und dann die Zeile weitergesendet. Jeder einzelne Konvertierungsvorgang ist von allen anderen Zeilen im Dataset unabhängig.  
   
- In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Skripterstellung und Programmierung geben Sie eine synchrone Transformation, indem Sie die ID der Eingabe einer Komponente suchen und zuweisen, damit die `SynchronousInputID` -Eigenschaft der Ausgaben der Komponente. Dadurch wird die Datenfluss-Engine angewiesen, jede Zeile aus der Eingabe zu verarbeiten und jede Zeile automatisch an angegebene Ausgaben zu senden. Wenn Sie möchten, dass jede Zeile an jede Ausgabe gesendet wird, brauchen Sie keinen zusätzlichen Code für die Ausgabe der Daten zu schreiben. Wenn Sie mit der `ExclusionGroup`-Eigenschaft angeben, dass Zeilen nur an bestimmte Ausgabegruppen gesendet werden sollen, wie bei der Transformation für bedingtes Teilen, müssen Sie die `DirectRow`-Methode aufrufen, um das jeweilige Ziel für die einzelnen Zeilen auszuwählen. Bei einer Fehlerausgabe müssen Sie `DirectErrorRow` aufrufen, um Zeilen mit Problemen an die Fehlerausgabe, und nicht an die Standardausgabe zu senden.  
+ Bei [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] der Skripterstellung und Programmierung geben Sie eine synchrone Transformation an, indem Sie die ID der Eingabe einer Komponente suchen und Sie `SynchronousInputID` der-Eigenschaft der Ausgaben der Komponente zuweisen. Dadurch wird die Datenfluss-Engine angewiesen, jede Zeile aus der Eingabe zu verarbeiten und jede Zeile automatisch an angegebene Ausgaben zu senden. Wenn Sie möchten, dass jede Zeile an jede Ausgabe gesendet wird, brauchen Sie keinen zusätzlichen Code für die Ausgabe der Daten zu schreiben. Wenn Sie mit der `ExclusionGroup`-Eigenschaft angeben, dass Zeilen nur an bestimmte Ausgabegruppen gesendet werden sollen, wie bei der Transformation für bedingtes Teilen, müssen Sie die `DirectRow`-Methode aufrufen, um das jeweilige Ziel für die einzelnen Zeilen auszuwählen. Bei einer Fehlerausgabe müssen Sie `DirectErrorRow` aufrufen, um Zeilen mit Problemen an die Fehlerausgabe, und nicht an die Standardausgabe zu senden.  
   
 ## <a name="asynchronous-transformations"></a>Asynchrone Transformationen  
  Möglicherweise erfordert Ihr Design eine asynchrone Transformation, wenn die Verarbeitung der einzelnen Zeilen unabhängig von allen anderen Zeilen nicht möglich ist. Anders ausgedrückt, können Sie nicht jede Zeile bei der Verarbeitung an den Datenfluss weitergeben, sondern müssen Daten asynchron bzw. zu einer anderen Zeit als die Eingabe ausgeben. Zum Beispiel erfordern die folgenden Szenarios eine asynchrone Transformation:  
@@ -41,16 +41,16 @@ ms.locfileid: "62878060"
   
 -   Es gibt keine 1:1-Entsprechung zwischen Eingabezeilen und Ausgabezeilen. Ein Beispiel ist die Transformation für das Aggregieren, bei der die Komponente eine Zeile zur Ausgabe hinzufügen muss, um die berechneten Aggregatwerte aufzunehmen.  
   
- Bei der Skripterstellung und Programmierung in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] geben Sie eine asynchrone Transformation an, indem Sie den Wert 0 zur `SynchronousInputID`-Eigenschaft der Ausgaben der Komponente zuweisen. . Dadurch wird die Datenfluss-Engine angewiesen, nicht jede Zeile automatisch an die Ausgaben zu senden. Anschließend müssen Sie den Code schreiben, um jede Zeile explizit an die jeweilige Ausgabe zu senden, indem sie dem neuen Ausgabepuffer hinzugefügt wird, der für die Ausgabe einer asynchronen Transformation erstellt wird.  
+ Bei der Skripterstellung und Programmierung in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] geben Sie eine asynchrone Transformation an, indem Sie den Wert 0 zur `SynchronousInputID`-Eigenschaft der Ausgaben der Komponente zuweisen. erforderlich. Dadurch wird die Datenfluss-Engine angewiesen, nicht jede Zeile automatisch an die Ausgaben zu senden. Anschließend müssen Sie den Code schreiben, um jede Zeile explizit an die jeweilige Ausgabe zu senden, indem sie dem neuen Ausgabepuffer hinzugefügt wird, der für die Ausgabe einer asynchronen Transformation erstellt wird.  
   
 > [!NOTE]  
 >  Da eine Quellkomponente auch jede Zeile, die aus der Datenquelle gelesen wird, explizit ihren Ausgabepuffern hinzufügen muss, ähnelt eine Quelle einer Transformation mit asynchronen Ausgaben.  
   
  Es wäre auch mögliche, eine asynchrone Transformation zu erstellen, die eine synchrone Transformation emuliert, indem man jede Eingabezeile explizit in die Ausgabe kopiert. Mit diesem Ansatz könnten Sie Spalten umbenennen oder Datentypen oder -formate konvertieren. Dieser Ansatz beeinträchtigt jedoch die Leistung. Sie können die gleichen Ergebnisse bei besserer Leistung erreichen, indem Sie eingebaute Integration Services-Komponenten verwenden, wie zum Beispiel Kopieren von Spalten oder Datenkonvertierung.  
   
-![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer synchronen Transformation mit der Skriptkomponente](data-flow/transformations/script-component.md)   
  [Erstellen einer asynchronen Transformation mit der Skriptkomponente](extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben](extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

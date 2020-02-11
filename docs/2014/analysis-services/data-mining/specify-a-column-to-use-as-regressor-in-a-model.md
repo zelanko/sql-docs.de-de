@@ -1,5 +1,5 @@
 ---
-title: Geben Sie eine zu verwendenden Spalte in einem Modell als Regressor | Microsoft-Dokumentation
+title: Angeben einer Spalte, die in einem Modell als Regressor verwendet werden soll | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082912"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte
@@ -44,7 +44,7 @@ ms.locfileid: "66082912"
   
      AverageTimePerIssue**Input**  
   
-6.  Wählen Sie im Menü **Miningmodell** die Option zum Festlegen der **Modellparameter** aus.  
+6.  Wählen Sie im Menü **Miningmodell** die Option zum Festlegen der Modellparameter **** aus.  
   
 7.  Geben Sie für den FORCE_REGRESSOR-Parameter in der Spalte **Wert** die Spaltennamen in Klammern und durch Kommas getrennt wie folgt ein:  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66082912"
   
      Im Viewer wird das Modell als einzelner Knoten dargestellt, der die Regressionsformel enthält. Sie können die Formel in der **Mininglegende**anzeigen oder die Koeffizienten für die Formel mithilfe von Abfragen extrahieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
- [Data Mining-Abfrage](data-mining-queries.md)   
+ [Data Mining-Abfragen](data-mining-queries.md)   
  [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Mining Modell Inhalt von linearen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

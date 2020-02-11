@@ -11,39 +11,39 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725384"
 ---
 # <a name="data-types-in-analysis-services"></a>Datentypen in Analysis Services
-  Für alle <xref:Microsoft.AnalysisServices.DataItem> Objekte [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt die folgende Teilmenge von `System.Data.OleDb.OleDbType`. Verwenden Sie zum Festlegen, oder lesen den Datentyp, [DataItem-Datentyp &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
+  Bei allen <xref:Microsoft.AnalysisServices.DataItem> -Objekten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt die folgende Teilmenge `System.Data.OleDb.OleDbType`von. Um den Datentyp festzulegen oder zu lesen, verwenden Sie den [DataItem-Datentyp &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## <a name="supported-data-types"></a>Unterstützte Datentypen  
   
 |||  
 |-|-|  
-|BigInt|Ein 64-Bit-Integer mit Vorzeichen Die *BigInt* -Werttyp stellt Ganzzahlen dar, mit Werten zwischen-9.223.372.036.854.775.808 und + 9.223.372.036.854.775.807 liegen.|  
-|Binär|Ein Stream binärer Daten der **Byte** Typ. **Byte** ist ein Werttyp, der Ganzzahlen ohne Vorzeichen darstellt, die zwischen 0 und 255 liegen.|  
+|BigInt|Ein 64-Bit-Integer mit Vorzeichen Der *bigint* -Werttyp stellt ganze Zahlen dar, deren Werte zwischen negativer 9.223.372.036.854.775.808 und positiv 9.223.372.036.854.775.807 liegen.|  
+|Binär|Ein Datenstrom von Binärdaten des **bytetyps** . **Byte** ist ein Werttyp, der ganze Zahlen ohne Vorzeichen mit Werten zwischen 0 und 255 darstellt.|  
 |Boolean|Instanzen dieses Typs weisen den Wert `true` oder `false` auf.|  
-|Währung|Ein *Währung* Wert im Bereich zwischen-922.337.203.685.477,5808 bis + 922.337.203.685.477,5807 mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit (vier Dezimalstellen).|  
-|date|Datum und Uhrzeitdaten, die als double-Wert gespeichert werden. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages oder die Tageszeit ist.|  
+|Currency|Ein *Währungs* Wert im Bereich von-922.337.203.685.477,5808 bis + 922.337.203.685.477,5807 mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit (vier Dezimalstellen).|  
+|Date|Datum und Uhrzeitdaten, die als double-Wert gespeichert werden. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages oder die Tageszeit ist.|  
 |Double|Eine Gleitkommazahl im Bereich von -1,79769313486232E +308 bis 1,79769313486232E +308. Ein double-Wert speichert Informationen zur Zahl mit einer Genauigkeit von bis zu 15 Dezimalstellen.|  
 |Integer|Eine 32-Bit-Ganzzahl mit Vorzeichen, die ganze Zahlen mit Vorzeichen darstellt, die zwischen -2.147.483.648 und +2.147.483.647 liegen.|  
 |Single|Eine Gleitkommazahl im Bereich von -3,4028235E +38 bis 3,4028235E +38. Ein single-Wert speichert Informationen zur Zahl mit einer Genauigkeit von bis zu 7 Dezimalstellen.|  
-|Smallint|Eine 16-Bit-Ganzzahl mit Vorzeichen. Die *Smallint* Werttyp stellt Ganzzahlen mit Vorzeichen dar, mit Werten zwischen-32768 und + 32767 liegen.|  
+|Smallint|Eine 16-Bit-Ganzzahl mit Vorzeichen. Der *smallint* -Werttyp stellt ganze Zahlen mit Vorzeichen dar, deren Werte zwischen negativer 32768 und positiv 32767 liegen.|  
 |Tinyint|Eine 8-Bit-Ganzzahl mit Vorzeichen. Der Tinyint-Werttyp stellt Ganzzahlen dar, die zwischen -128 und +127 liegen.|  
-|UnsignedBigInt|Eine 64-Bit-Ganzzahl ohne Vorzeichen. Die *UnsignedBigInt* Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten, die im Bereich von 0 bis 18.446.744.073.709.551.615.|  
-|UnsignedInt|Eine 32-Bit-Ganzzahl ohne Vorzeichen. Die *UnsignedInt* Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten, die im Bereich von 0 bis 4.294.967.295.|  
-|UnsignedSmallInt|Eine 16-Bit-Ganzzahl ohne Vorzeichen. Die *UnsignedSmallInt* Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 65535 liegen.|  
-|UnsignedTinyInt|Eine 8-Bit-Ganzzahl ohne Vorzeichen. Die *UnsignedTinyInt* Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten, die zwischen 0 und 255 liegen|  
-|WChar|Ein mit NULL endender Datenstrom von Unicode-Zeichen. Ein *WChar* ist eine sequenzielle Auflistung von Unicode-Zeichen, die zur Darstellung von Text verwendet wird.|  
+|UnsignedBigInt|Eine 64-Bit-Ganzzahl ohne Vorzeichen. Der *UnsignedBigInt* -Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 18446744073709551615 dar.|  
+|UnsignedInt|Eine 32-Bit-Ganzzahl ohne Vorzeichen. Der *unsignetdint* -Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 4.294.967.295 dar.|  
+|UnsignedSmallInt|Eine 16-Bit-Ganzzahl ohne Vorzeichen. Der *UnsignedSmallInt* -Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 65535 dar.|  
+|UnsignedTinyInt|Eine 8-Bit-Ganzzahl ohne Vorzeichen. Der *UnsignedTinyInt* -Werttyp stellt Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 255 dar.|  
+|WChar|Ein mit NULL endender Datenstrom von Unicode-Zeichen. Ein *WCHAR* ist eine sequenzielle Sammlung von Unicode-Zeichen, die zum Darstellen von Text verwendet wird.|  
   
 ## <a name="amo-validations-on-data-types"></a>AMO-Überprüfungen von Datentypen  
  In der folgenden Tabelle sind die zusätzlichen Überprüfungen aufgelistet, die AMO (Analysis Management Objects) für bestimmte Bindungen ausführt:  
   
-|Objekt|Bindung|Zulässige Datentypen|  
+|Object|Bindung|Zulässige Datentypen|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Alle bis auf Binary|  
 ||NameColumn|Nur WChar|  
@@ -57,6 +57,6 @@ ms.locfileid: "62725384"
 ||NameColumn|Nur WChar|  
 |TableMiningStructureColumn|ForeignKeyColumns|Alle bis auf Binary|  
 |MeasureGroupAttribute|KeyColumns|Alle bis auf Binary|  
-|Distinct Count Measure|Source|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
+|Distinct Count Measure|`Source`|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
   
   

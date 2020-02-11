@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873101"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
@@ -98,7 +98,7 @@ ms.locfileid: "62873101"
 ## <a name="backup-package-bacpac"></a>Sicherungspaket (BACPAC)  
  Ein BACPAC ist ein Artefakt, das das Datenbankschema sowie die in der Datenbank gespeicherten Daten kapselt. Das BACPAC ist eine Windows-Datei mit einer Erweiterung BACPAC. Das BACPAC-Dateiformat ist ein offenes Dateiformat (vergleichbar mit DACPAC). Die Schemainhalte von BACPAC sind mit DACPAC identisch. Die Daten werden im JSON-Format gespeichert.  
   
- DACPAC und BACPAC sind ähnlich, aber sie zielen auf andere Szenarien ab. Ein DACPAC dient zum Erfassen und Bereitstellen von Schemas, einschließlich der Aktualisierung einer vorhandenen Datenbank. Der primäre Anwendungsfall für eine DACPAC-Datei ist zum Bereitstellen eines streng definierten Schemas zu Entwicklungs-, Test-, und klicken Sie dann produktionsumgebungen, und das Gegenteil: Erfassen des produktionsschemas und deren Anwendung auf erneut in Test- und entwicklungsumgebungen.  
+ DACPAC und BACPAC sind ähnlich, aber sie zielen auf andere Szenarien ab. Ein DACPAC dient zum Erfassen und Bereitstellen von Schemas, einschließlich der Aktualisierung einer vorhandenen Datenbank. Der primäre Anwendungsfall für eine dacpac-Datei ist das Bereitstellen eines streng definierten Schemas für Entwicklungs-, Test-und anschließend Produktionsumgebungen und umgekehrt: das Erfassen des Produktions Schemas und das Anwenden auf die Test-und Entwicklungsumgebungen.  
   
  Ein BACPAC dient andererseits der Erfassung von Schemas und Daten. Ein BACPAC ist die logische Entsprechung einer Datenbanksicherung und kann nicht verwendet werden, um vorhandene Datenbanken zu aktualisieren. Der Hauptzweck eines BACPACs besteht darin, eine Datenbank von einem Server auf einen anderen zu verschieben – oder von einem lokalen Server in die Cloud – und eine vorhandene Datenbank in einem offenen Format zu archivieren.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62873101"
   
 -   **IMPORT**: Der Benutzer kann das Schema und die Daten in eine neue Datenbank auf dem Hostserver importieren.  
   
- Diese Funktionen werden beide von den folgenden Datenbankverwaltungstools unterstützt: Server Management Studio, das Verwaltungsportal für SQL Azure und die DACFx-API.  
+ Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: Server Management Studio, das Verwaltungsportal für SQL Azure und die DACFx-API.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Sie müssen ein Mitglied der `dbmanager`-Rolle sein, oder Sie müssen der `CREATE DATABASE`-Berechtigung zugeordnet sein, um eine Datenbank zu erstellen, einschließlich dem Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Sie müssen ein Mitglied der `dbmanager`-Rolle sein, oder Sie müssen der `DROP DATABASE`-Berechtigung zugeordnet sein, um eine Datenbank löschen zu können.  
@@ -124,12 +124,12 @@ ms.locfileid: "62873101"
 |Beschreibt, wie eine BACPAC-Datei erstellt wird, die ein Archiv der Daten und Metadaten einer DAC enthält.|[Exportieren einer Datenebenenanwendung](export-a-data-tier-application.md)|  
 |Beschreibt, wie mit einer DAC-Archivdatei (.bacpac) entweder eine logische Wiederherstellung einer DAC ausgeführt wird oder die DAC auf einer anderen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] migriert wird.|[Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Beschreibt, wie eine BACPAC-Datei importiert wird, um eine neue Benutzerdatenbank innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erstellen.|[Extrahieren einer DAC aus einer Datenbank](extract-a-dac-from-a-database.md)|  
-|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als DAC](register-a-database-as-a-dac.md)|  
+|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als eine DAC](register-a-database-as-a-dac.md)|  
 |Beschreibt, wie vor der Verwendung eines DAC-Pakets in einem Produktionssystem sein Inhalt und die Aktionen überprüft werden, die bei einem DAC-Upgrade ausgeführt werden.|[Überprüfen eines DAC-Pakets](validate-a-dac-package.md)|  
 |Beschreibt, wie der Inhalt eines DAC-Pakets in einem Ordner abgelegt wird, in dem ein Datenbankadministrator vor der Bereitstellung auf einem Produktionsserver überprüfen kann, was die DAC bewirkt.|[Entpacken eines DAC-Pakets](unpack-a-dac-package.md)|  
 |Beschreibt die Verwendung eines Assistenten, um eine vorhandene Datenbank bereitzustellen. Der Assistent führt die Bereitstellung mithilfe von DACs aus.|[Bereitstellen einer Datenbank mit DAC](deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DAC-Unterstützung für SQL Server-Objekte und -Versionen](dac-support-for-sql-server-objects-and-versions.md)  
   
   

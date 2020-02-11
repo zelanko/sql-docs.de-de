@@ -1,5 +1,5 @@
 ---
-title: Unzulässige Typen und Member in "mscorlib.dll" | Microsoft-Dokumentation
+title: Unzulässige Typen und Member in "mscorlib. dll" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874352"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Unzulässige Typen und Elemente in "mscorlib.dll"
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programmierung der Common Language-Integration (CLR) lässt die Verwendung von einem Typ oder Member, die eine `HostProtectionAttribute` , der angibt eine `System.Security.Permissions.HostProtectionResource` Enumeration mit einem Wert von `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, oder `UI`. In der folgenden Tabelle sind die Elemente und Typen der mscorlib.dll-Assembly aufgeführt, deren Hostschutzattribut-Werte nicht zulässig sind.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die CLR- `HostProtectionAttribute` Programmierung (Common Language Integration) lässt die Verwendung eines Typs oder Members mit einem nicht zu, das `System.Security.Permissions.HostProtectionResource` eine-Enumeration mit dem `ExternalProcessMgmt`Wert `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`,, **SharedState**, `Synchronization`oder `UI`angibt. In der folgenden Tabelle sind die Elemente und Typen der mscorlib.dll-Assembly aufgeführt, deren Hostschutzattribut-Werte nicht zulässig sind.  
   
 > [!NOTE]  
->  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](../clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 |Typ oder Element|Hostschutzattribut-Wert(e)|  
 |--------------------|--------------------|  
@@ -35,22 +35,22 @@ ms.locfileid: "62874352"
 |System.Collections.Queue.Synchronized()|Synchronization|  
 |System.Collections.SortedList.Synchronized()|Synchronization|  
 |System.Collections.Stack.Synchronized()|Synchronization|  
-|System.Console.Beep()|UI|  
-|System.Console.get_Error()|UI|  
-|System.Console.get_In()|UI|  
-|System.Console.get_KeyAvailable()|UI|  
-|System.Console.get_Out()|UI|  
-|System.Console.OpenStandardError()|UI|  
-|System.Console.OpenStandardInput()|UI|  
-|System.Console.OpenStandardOutput()|UI|  
-|System.Console.Read()|UI|  
-|System.Console.ReadKey()|UI|  
-|System.Console.ReadLine()|UI|  
-|System.Console.SetError()|UI|  
-|System.Console.SetIn()|UI|  
-|System.Console.SetOut()|UI|  
-|System.Console.Write()|UI|  
-|System.Console.WriteLine()|UI|  
+|System.Console.Beep()|Benutzeroberfläche|  
+|System.Console.get_Error()|Benutzeroberfläche|  
+|System.Console.get_In()|Benutzeroberfläche|  
+|System.Console.get_KeyAvailable()|Benutzeroberfläche|  
+|System.Console.get_Out()|Benutzeroberfläche|  
+|System.Console.OpenStandardError()|Benutzeroberfläche|  
+|System.Console.OpenStandardInput()|Benutzeroberfläche|  
+|System.Console.OpenStandardOutput()|Benutzeroberfläche|  
+|System.Console.Read()|Benutzeroberfläche|  
+|System.Console.ReadKey()|Benutzeroberfläche|  
+|System.Console.ReadLine()|Benutzeroberfläche|  
+|System.Console.SetError()|Benutzeroberfläche|  
+|System.Console.SetIn()|Benutzeroberfläche|  
+|System.Console.SetOut()|Benutzeroberfläche|  
+|System.Console.Write()|Benutzeroberfläche|  
+|System.Console.WriteLine()|Benutzeroberfläche|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
@@ -98,11 +98,11 @@ ms.locfileid: "62874352"
 |System.Threading.Timer|ExternalThreading, Synchronization|  
 |System.Threading.TimerBase|ExternalThreading, Synchronization|  
   
-## <a name="see-also"></a>Siehe auch  
- [Hostschutzattribute und Programmierung der CLR-Integration](host-protection-attributes-and-clr-integration-programming.md)   
- [Unzulässige Typen und Elemente in "Microsoft.VisualBasic.dll"](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Unzulässige Typen und Elemente in "System.dll"](disallowed-types-and-members-in-system-dll.md)   
- [Unzulässige Typen und Elemente in "System.Data.dll"](disallowed-types-and-members-in-system-data-dll.md)   
- [Unzulässige Typen und Elemente in „System.Core.dll“](disallowed-types-and-members-in-system-core-dll.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Host Schutz Attribute und Programmierung der CLR-Integration](host-protection-attributes-and-clr-integration-programming.md)   
+ [Unzulässige Typen und Member in "Microsoft. VisualBasic. dll"](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Unzulässige Typen und Member in "System. dll"](disallowed-types-and-members-in-system-dll.md)   
+ [Unzulässige Typen und Member in "System. Data. dll"](disallowed-types-and-members-in-system-data-dll.md)   
+ [Unzulässige Typen und Elemente in 'System.Core.dll'](disallowed-types-and-members-in-system-core-dll.md)  
   
   

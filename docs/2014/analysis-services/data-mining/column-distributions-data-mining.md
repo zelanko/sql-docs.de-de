@@ -1,5 +1,5 @@
 ---
-title: Spaltenverteilungen [Datamining] | Microsoft-Dokumentation
+title: Spalten Verteilungen (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,39 +18,39 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db71b5a94285f8ae63afeb65bec3f9807f8da27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085706"
 ---
 # <a name="column-distributions-data-mining"></a>Spaltenverteilungen [Data Mining]
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie Spaltenverteilungen in einer Miningstruktur definieren, um zu beeinflussen, wie Algorithmen die Daten in diesen Spalten verarbeiten, wenn Sie Miningmodelle erstellen. Für einige Algorithmen ist es hilfreich, vor dem Verarbeiten des Modells für jede kontinuierliche Spalte die Verteilung zu definieren, wenn für die Spalten bekannt ist, dass sie normal verteilte Werte enthalten. Wenn Sie die Verteilungen nicht definieren, liefern die sich ergebenden Miningmodelle möglicherweise ungenauere Vorhersagen, da die Algorithmen weniger Informationen zum Interpretieren der Daten haben.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie Spalten Verteilungen in einer Mining Struktur definieren, um zu beeinflussen, wie Algorithmen die Daten in diesen Spalten verarbeiten, wenn Sie Mining Modelle erstellen. Für einige Algorithmen ist es hilfreich, vor dem Verarbeiten des Modells für jede kontinuierliche Spalte die Verteilung zu definieren, wenn für die Spalten bekannt ist, dass sie normal verteilte Werte enthalten. Wenn Sie die Verteilungen nicht definieren, liefern die sich ergebenden Miningmodelle möglicherweise ungenauere Vorhersagen, da die Algorithmen weniger Informationen zum Interpretieren der Daten haben.  
   
  Die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügbaren Algorithmen unterstützen folgende Verteilungstypen:  
   
  `Normal`  
  Die Werte für die kontinuierliche Spalte bilden ein Histogramm, das einer Normalverteilung folgt.  
   
- ![Histogramm mit normalverteilung](../media/normal-distribution.gif "Histogramm mit normalverteilung")  
+ ![Histogramm mit Normalverteilung](../media/normal-distribution.gif "Histogramm mit Normalverteilung")  
   
  `Log Normal`  
  Die Werte für die kontinuierliche Spalte bilden ein Histogramm, in dem die Kurve am oberen Ende einen gedehnten Verlauf und am unteren Ende  einen Schrägverlauf aufweist.  
   
- ![Histogramm mit protokollnormalverteilung](../media/log-normal-distribution.gif "Histogramm mit protokollnormalverteilung")  
+ ![Histogramm mit Protokollnormalverteilung](../media/log-normal-distribution.gif "Histogramm mit Protokollnormalverteilung")  
   
  `Uniform`  
  Die Werte für die kontinuierliche Spalte bilden eine flache Kurve, in der alle Werte gleich wahrscheinlich sind.  
   
- ![Histogramm mit gleichverteilung](../media/uniform-distribution.gif "Histogramm mit gleichverteilung")  
+ ![Histogramm mit Gleichverteilung](../media/uniform-distribution.gif "Histogramm mit Gleichverteilung")  
   
  Weitere Informationen zu den von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Diskretisierungsmethoden &#40;Data Mining&#41;](discretization-methods-data-mining.md)   
- [Verteilungen &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Inhaltstypen &#40;Data Mining-&#41;](content-types-data-mining.md)   
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Diskretisierungsmethoden &#40;Data Mining-&#41;](discretization-methods-data-mining.md)   
+ [Verteilungen &#40;DMX-&#41;](/sql/dmx/distributions-dmx)   
  [Miningstrukturspalten](mining-structure-columns.md)  
   
   

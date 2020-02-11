@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57a63d884dabb1ad2e0e5d8b13dea4190dfa65de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868914"
 ---
-# <a name="mssqlserver3169"></a>MSSQLSERVER_3169
+# <a name="mssqlserver_3169"></a>MSSQLSERVER_3169
     
 ## <a name="details"></a>Details  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62868914"
 |Ereignis-ID|3169|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
-|Symbolischer Name|NA|  
+|Symbolischer Name|Nicht verfügbar|  
 |Meldungstext|Die Datenbank wurde auf einem Server der Version %ls gesichert. Diese Version ist mit diesem Server inkompatibel, da auf ihm die Version %ls ausgeführt wird. Stellen Sie die Datenbank auf einem Server wieder her, der die Sicherung unterstützt, oder verwenden Sie eine mit diesem Server kompatible Sicherung.|  
   
 ## <a name="explanation"></a>Erklärung  
@@ -40,6 +40,6 @@ ms.locfileid: "62868914"
  Dieser Fehler kann beispielsweise verursacht werden, wenn das Vardecimal-Speicherformat in einer höheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird und dann versucht wird, die Datenbankdateien in einer niedrigeren Version als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 wiederherzustellen.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- Ermitteln Sie die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem ursprünglichen Server ausgeführt wird. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], entweder mit der rechten Maustaste in des Servers, und klicken Sie dann auf **Eigenschaften** oder `SELECT @@VERSION` in einem Abfragefenster. Öffnen Sie die Datenbank mithilfe der ursprünglichen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ermitteln Sie die funktionen, die für die ursprüngliche Datenbank in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert sind. Ändern Sie diese Einstellungen, um mit der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu arbeiten, in der die Datenbank wiederhergestellt wird.  
+ Ermitteln Sie die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem ursprünglichen Server ausgeführt wird. Klicken [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in entweder mit der rechten Maustaste auf den Server, und klicken `SELECT @@VERSION` Sie dann auf **Eigenschaften** , oder geben Sie ein Abfragefenster ein. Öffnen Sie die Datenbank mithilfe der ursprünglichen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ermitteln Sie die funktionen, die für die ursprüngliche Datenbank in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert sind. Ändern Sie diese Einstellungen, um mit der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu arbeiten, in der die Datenbank wiederhergestellt wird.  
   
   

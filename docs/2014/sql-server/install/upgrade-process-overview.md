@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091523"
 ---
 # <a name="upgrade-process-overview"></a>Übersicht über den Upgradeprozess
@@ -28,7 +28,7 @@ ms.locfileid: "66091523"
 ## <a name="upgrade-process"></a>Upgradeprozess  
  Server, auf denen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ausgeführt wird, können auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden. Manche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten können direkt aktualisiert werden, während andere migriert und wieder andere durch neue Komponenten ersetzt werden müssen. Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) werden z. B. die Data Transformation Services (DTS) abgelöst, und DTS wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht mehr unterstützt. Beim Erstellen Ihres Upgradeplans kann es erforderlich sein, die Aktualisierung Ihrer aktuellen DTS-Pakete auf [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Pakete zu planen.  
   
- Mit dem Upgrade Advisor können Sie aktuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen, -Komponenten und zugehörige Dateien auswerten, um bekannte Probleme zu identifizieren, die sowohl während als auch nach dem Upgrade auf oder der Migration zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Probleme verursachen. Nur einige dieser bekannten Probleme blockieren den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren. Im Bericht des Upgrade Advisors werden diese Probleme als Upgrade Blocker identifiziert. Wenn Sie die Upgrade Blocker vor dem Ausführen von Setup nicht beseitigen, wird [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Setup beendet. Außerdem wird die Ausführung des Upgrade Advisors empfohlen, um die spezifischen Probleme zu identifizieren, die das Upgrade blockieren.  
+ Mit dem Upgrade Advisor können Sie aktuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen, -Komponenten und zugehörige Dateien auswerten, um bekannte Probleme zu identifizieren, die sowohl während als auch nach dem Upgrade auf oder der Migration zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Probleme verursachen. Einige dieser bekannten Probleme blockieren das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade. Im Bericht des Upgrade Advisors werden diese Probleme als Upgrade Blocker identifiziert. Wenn Sie die Upgrade Blocker vor dem Ausführen von Setup nicht beseitigen, wird [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Setup beendet. Außerdem wird die Ausführung des Upgrade Advisors empfohlen, um die spezifischen Probleme zu identifizieren, die das Upgrade blockieren.  
   
  Als bewährte Methode vor dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] empfiehlt es sich, eine Sicherungskopie der Daten und Systemeinstellungen zu erstellen und die strategischen Schritte auszuführen, die in den für Ihr Unternehmen definierten Betriebsrichtlinien beschrieben sind. Führen Sie die folgenden Schritte aus, um das Upgrade auszuführen:  
   
@@ -52,8 +52,8 @@ ms.locfileid: "66091523"
   
 9. Beheben Sie alle Probleme nach dem Upgrade sowie alle Migrationsprobleme.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Upgrade Advisor &#40;-Benutzeroberfläche&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen des Upgrade Advisors &#40;Benutzeroberfläche&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Verwenden von Berichten](../../../2014/sql-server/install/using-reports.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

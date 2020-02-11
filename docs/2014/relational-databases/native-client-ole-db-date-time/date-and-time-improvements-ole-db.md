@@ -1,5 +1,5 @@
 ---
-title: Datums- / Uhrzeitverbesserungen (OLE DB) | Microsoft-Dokumentation
+title: Datums-und Uhrzeit Verbesserungen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,28 +14,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62866832"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Verbesserungen bei Datum und Uhrzeit (OLE DB)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] führt neue Datums- und Uhrzeitdatentypen ein. In diesem Abschnitt wird beschrieben, wie diese neuen Typen als Erweiterungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verfügbar gemacht werden. Eine Übersicht über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützten neuen Datums- und Uhrzeitdatentypen finden Sie unter [Datums- / Uhrzeitverbesserungen](../native-client/features/date-and-time-improvements.md). Ein Beispiel finden Sie unter [verwenden erweiterte Datums- und Uhrzeitfunktionen &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
- Weitere allgemeine Informationen zu Datum und Uhrzeit-Datentypen finden Sie unter ["DateTime" &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] führt neue Datums- und Uhrzeitdatentypen ein. In diesem Abschnitt wird beschrieben, wie diese neuen Typen als Erweiterungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verfügbar gemacht werden. Eine Übersicht über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Unterstützung für die neuen Datums-und Uhrzeit Datentypen finden Sie unter [Verbesserungen bei Datum und Uhrzeit](../native-client/features/date-and-time-improvements.md). Ein Beispiel finden Sie unter [Verwenden erweiterter Datums-und Uhrzeit Funktionen &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  
+ Weitere allgemeine Informationen zu Datums-und Uhrzeit Datentypen finden Sie unter [DateTime &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datentypunterstützung für OLE DB-Datum- und Uhrzeit-Verbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Enthält Informationen zu OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client), unterstützen Datentypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datums- und Uhrzeitdatentypen.  
+ [Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
+ Enthält Informationen über OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client)-Typen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Datums-und Uhrzeit Datentypen unterstützen.  
   
- [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- Enthält Informationen über die DBBINDING-Struktur, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset`, und ich`ColumnsInfo::GetColumnInfo`. Stellt auch Informationen über Updates auf OLE DB-Schemarowsets bereit.  
+ [Metadaten &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ Enthält Informationen über die DBBINDING-Struktur `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo` `IColumnsRowset::GetColumnsRowset`,, und I`ColumnsInfo::GetColumnInfo`. Bietet auch Informationen zu Updates für OLE DB Schemarowsets.  
   
  [Bindungen und Konvertierungen &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  Beschreibt die Regeln für die Konvertierung sowohl vorhandener als auch neuer Datumstypen zwischen Server und Client.  
   
- [Massenimport der Kopie Änderungen für verbesserte Datums- und Uhrzeittypen &#40;OLE DB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
+ [Massen Kopier Änderungen für verbesserte Datums-und Uhrzeittypen &#40;OLE DB und ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  Beschreibt Datums-/Uhrzeitverbesserungen zur Unterstützung von Massenkopiervorgängen.  
   
  [OLE DB-API-Unterstützung für Datums- und Uhrzeit-Erweiterungen](ole-db-api-support-for-date-and-time-enhancements.md)  
@@ -44,10 +45,10 @@ ms.locfileid: "62866832"
  [Vergleichbarkeit für 'IRowsetFind'](../../relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind.md)  
  Beschreibt Datums-/Uhrzeittypen und `IRowsetFind`.  
   
- [Neue Datums- und Uhrzeitfunktionen bei früheren Versionen von SQL Server &#40;OLE-DB&#41;](new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
+ [Neue Datums-und Uhrzeit Funktionen mit früheren SQL Server Versionen &#40;OLE DB&#41;](new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
  Beschreibt das erwartete Verhalten, wenn eine Clientanwendung, die verbesserte Datums- und Uhrzeitfunktionen verwendet, mit einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kommuniziert und wenn ein Client, der mit einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client kompiliert wurde, Befehle an einen Server sendet, der verbesserte Datums- und Uhrzeitfunktionen unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

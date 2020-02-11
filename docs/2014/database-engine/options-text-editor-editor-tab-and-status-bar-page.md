@@ -1,5 +1,5 @@
 ---
-title: "Optionen (Text-Editor: Registerkarte ' Editor ' und Statusleiste) | Microsoft-Dokumentation"
+title: 'Optionen (Text-Editor: Registerkarte "Editor" und Status Leiste) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089241"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Optionen (Text-Editor: Seite zu Registerkarte „Editor“ und Statusleiste)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Optionen (Text-Editor: Registerkarte "Editor" und Statusleiste)
   Auf der Seite **Registerkarte "Editor" und Statusleiste** können Sie die von den [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Abfrage-Editoren angezeigten Informationen anpassen. Sie können die Ebene der Informationen angeben, die auf der Registerkarte und der Statusleiste des Abfrage-Editor-Fensters angezeigt werden, sowie festlegen, ob die Statusleiste im Editor-Fenster oben oder unten angezeigt wird.  
   
 ## <a name="option-settings-by-editor"></a>Optionseinstellungen nach Editor  
@@ -37,10 +37,10 @@ ms.locfileid: "66089241"
  **Keine**  
  Die Statusleiste zeigt keine Zeitinformationen an.  
   
- **End**  
+ **Ende**  
  Auf der Statusleiste wird während der Skriptausführung die aktuelle Uhrzeit angezeigt. Bei Abschluss des Skripts wird die Uhrzeit angezeigt, zu der das Skript abgeschlossen wurde.  
   
- **Verstrichen**  
+ **Verstrichene**  
  Auf der Statusleiste wird die Zeit angezeigt, die das Skript bereits ausgeführt wurde. Bei Abschluss des Skripts wird die Zeit angezeigt, die zum Ausführen des Skripts benötigt wurde.  
   
  **Datenbanknamen einschließen**  
@@ -61,16 +61,16 @@ ms.locfileid: "66089241"
  **Verbindungen gruppieren**  
  Gibt die Farbe der Statusleiste an, wenn der Abfrage-Editor mehr als eine Verbindung aufweist.  
   
- **Einzelne serververbindungen**  
+ **Einzelne Serververbindungen**  
  Gibt die Farbe der Statusleiste an, wenn der Abfrage-Editor eine einzelne Verbindung aufweist.  
   
  **Speicherort der Statusleiste**  
  Gibt die Position der Statusleiste an. Die Einstellungen lauten wie folgt:  
   
- **Top**  
+ **Nach oben**  
  Die Statusleiste wird am oberen Rand des Abfrage-Editor-Fensters angezeigt.  
   
- **Bottom**  
+ **Unten**  
  Die Statusleiste wird am unteren Rand des Abfrage-Editor-Fensters angezeigt.  
   
 ## <a name="tab-text"></a>Registerkartentext  
@@ -91,8 +91,8 @@ ms.locfileid: "66089241"
  **Servernamen einschließen**  
  Schließt den Servernamen ein. Bei lokalen Verbindungen ist dies der Instanzname. Bei Remoteverbindungen ist dies der Remotecomputername und Instanzname.  
   
-## <a name="see-also"></a>Siehe auch  
- [Optionen &#40;Umgebung: Schriftarten und Farben-Seite&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Optionen &#40;Umgebung: Seite "Schriftarten und Farben"&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Farbcodierung im Abfrage-Editor](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

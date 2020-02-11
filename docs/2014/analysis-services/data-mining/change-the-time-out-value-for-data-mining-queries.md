@@ -1,5 +1,5 @@
 ---
-title: Ändern des Timeoutwerts für Datamining-Abfragen | Microsoft-Dokumentation
+title: Ändern des Timeout Werts für Data Mining-Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 640d07115e2a071bb5d57e87955c11670f4c38b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085892"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Ändern des Timeoutwerts für Data Mining-Abfragen
@@ -30,12 +30,12 @@ ms.locfileid: "66085892"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Menü **Extras** auf **Optionen**.  
   
-2.  Erweitern Sie im Bereich **Optionen** **Business Intelligence-Designer**.  
+2.  Erweitern Sie im Bereich **Optionen****Business Intelligence-Designer**.  
   
 3.  Klicken Sie auf das Textfeld **Abfragetimeout** , und geben Sie einen Wert für die Anzahl der Sekunden ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Abfragetasks und Anweisungen](data-mining-query-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Abfrage Tasks und Anleitungen](data-mining-query-tasks-and-how-tos.md)   
  [Data Mining-Abfragen](data-mining-queries.md)  
   
   

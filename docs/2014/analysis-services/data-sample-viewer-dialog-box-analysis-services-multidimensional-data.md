@@ -1,5 +1,5 @@
 ---
-title: Datenstichproben-Viewer (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Dialog Feld ' Daten Stichproben-Viewer ' (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082621"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datenstichproben-Viewer' (Analysis Services – Mehrdimensionale Daten)
@@ -26,12 +26,12 @@ ms.locfileid: "66082621"
   
  Um das Dialogfeld **Datenstichproben-Viewer** zu öffnen, klicken Sie mit der rechten Maustaste auf ein Measure, das im **Cube-Assistenten** auf der Seite **Measures auswählen** im Raster **Verfügbare Measures**aufgeführt ist, und klicken Sie anschließend auf **Beispieldaten anzeigen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Tabellenraster  
  Zeigt die Zeilen und Spalten für die ersten 1000 Zeilen der Faktentabelle an, die die ausgewählte Zielspalte enthält.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Wählen Sie Measures &#40;Cube-Assistenten&#41;](select-measures-cube-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Wählen Sie Measures &#40;Cube-Assistent aus&#41;](select-measures-cube-wizard.md)  
   
   

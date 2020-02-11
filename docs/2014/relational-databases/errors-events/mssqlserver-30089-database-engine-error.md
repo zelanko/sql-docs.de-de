@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f452da206afd91c2db49d32600c34397ef7b2609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868775"
 ---
-# <a name="mssqlserver30089"></a>MSSQLSERVER_30089
+# <a name="mssqlserver_30089"></a>MSSQLSERVER_30089
     
 ## <a name="details"></a>Details  
   
@@ -42,9 +42,9 @@ ms.locfileid: "62868775"
   
 2.  Suchen Sie im Durchforstungsprotokoll nach neuen Dokumenten, bei deren Volltextindizierung ein Fehler aufgetreten ist, und entfernen Sie diese Dokumente.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
- [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_help_fulltext_system_components &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [Konfigurieren und Verwalten von Wörter Trennungen und Wort Stamm Erkennungen für die Suche](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../search/configure-and-manage-filters-for-search.md)  
   
   

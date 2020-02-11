@@ -1,5 +1,5 @@
 ---
-title: Measures (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Measures (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077920"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Measures (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Measures** können Sie die im Cube-Designer auf der Registerkarte **Cubestruktur** enthaltenen Measuregruppen und Elemente bearbeiten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Measures  
  Zeigt in Abhängigkeit von der ausgewählten Sicht die im Cube enthaltenen Measures und Measuregruppen an:  
   
- trEE  
+ Struktur  
  Zeigt eine Strukturansicht der Measuregruppen an, deren untergeordnete Knoten Measures sind.  
   
  Erweitern Sie die Measuregruppen, um die Measures anzuzeigen. Klicken Sie auf ein markiertes Measure oder eine markierte Measuregruppe, um diese umzubenennen.  
@@ -36,7 +36,7 @@ ms.locfileid: "66077920"
   
  Das Raster enthält die folgenden Spalten:  
   
- Measure  
+ "Measure"  
  Geben Sie den Namen des Measures ein.  
   
  Measuregruppe  
@@ -57,15 +57,15 @@ ms.locfileid: "66077920"
  **Neue Measuregruppe**  
  Wählen Sie diese Option aus, um das Dialogfeld **Neue Measuregruppe** anzuzeigen und dem Bereich **Measures** eine neue Measuregruppe hinzuzufügen.  
   
- **Zeigen Sie Measures In an**  
+ **Measures anzeigen in**  
  Wählen Sie diese Option aus, um die folgenden Optionen der Reihe nach anzuzeigen oder eine der folgenden Optionen auszuwählen, um die Sicht des Bereichs **Measures** zu ändern:  
   
 |Option|Definition|  
 |------------|----------------|  
-|**Struktur**|Zeigt die Measuregruppen und Measures in einer Strukturansicht an.|  
-|**Raster**|Zeigt die Measuregruppen und Measures in einem Raster an.|  
+|**Linde**|Zeigt die Measuregruppen und Measures in einer Strukturansicht an.|  
+|**Netz**|Zeigt die Measuregruppen und Measures in einem Raster an.|  
   
- **Umbenennen**  
+ **Benen**  
  Wählen Sie diese Option aus, um die ausgewählte Measuregruppe oder das ausgewählte Measure umzubenennen.  
   
  **Löschen**  
@@ -89,8 +89,8 @@ ms.locfileid: "66077920"
  **Eigenschaften**  
  Wählen Sie diese Option aus, um das Fenster **Eigenschaften** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die ausgewählte Measuregruppe oder das ausgewählte Measure anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Measureeigenschaften](multidimensional-models/configure-measure-properties.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren von Measure-Eigenschaften](multidimensional-models/configure-measure-properties.md)   
  [Measures und Measuregruppen](multidimensional-models/measures-and-measure-groups.md)  
   
   

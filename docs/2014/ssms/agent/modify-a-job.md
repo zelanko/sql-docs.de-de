@@ -15,24 +15,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 614c35992be2f85ef15afd0645140746041d083d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62656379"
 ---
 # <a name="modify-a-job"></a>Ändern eines Auftrags
-  In diesem Thema wird beschrieben, wie Sie die Eigenschaften der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Auftragskategorien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects ändern können.  
+  In diesem Thema wird beschrieben, wie die Eigenschaften [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von-Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Aufträgen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in [!INCLUDE[tsql](../../includes/tsql-md.md)]mithilfe von, oder SQL Server Management Objects geändert werden.  
   
  **In diesem Thema**  
   
--   **Vorbereitungen:**  
+-   Vorbereitungen **:** ,  
   
      [Einschränkungen](#Restrictions)  
   
      [Sicherheit](#Security)  
   
--   **So ändern Sie einen Auftrag mit**  
+-   **So ändern Sie einen Auftrag mit:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62656379"
 ###  <a name="Security"></a> Sicherheit  
  Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** . Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-job"></a>So ändern Sie einen Auftrag  
   
@@ -64,27 +64,27 @@ ms.locfileid: "62656379"
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von Database Engine (Datenbankmodul) her, und erweitern Sie dann diese Instanz.  
   
-2.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
+2.  Klicken Sie in der Symbolleiste auf **Neue Abfrage**.  
   
 3.  Verwenden Sie im Abfragefenster die folgenden gespeicherten Systemprozeduren, um einen Auftrag zu ändern.  
   
-    -   Führen Sie [Sp_update_job &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) so ändern Sie die Attribute eines Auftrags.  
+    -   Führen Sie [sp_update_job &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) aus, um die Attribute eines Auftrags zu ändern.  
   
-    -   Führen Sie [Sp_update_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql) zum Ändern der Zeitplandetails für eine Auftragsdefinition.  
+    -   Führen Sie [sp_update_schedule &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql) aus, um die Zeit Plan Details für eine Auftrags Definition zu ändern.  
   
-    -   Führen Sie [Sp_add_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) um neue Auftragsschritte hinzuzufügen.  
+    -   Führen Sie [sp_add_jobstep &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) aus, um neue Auftrags Schritte hinzuzufügen.  
   
-    -   Führen Sie [Sp_update_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) um vorhandene Auftragsschritte zu ändern.  
+    -   Führen Sie [sp_update_jobstep &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) aus, um bereits vorhandene Auftrags Schritte zu ändern.  
   
-    -   Führen Sie [Sp_delete_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql) um einen Auftragsschritt aus einem Auftrag zu entfernen.  
+    -   Führen Sie [sp_delete_jobstep &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql) aus, um einen Auftrags Schritt aus einem Auftrag zu entfernen.  
   
     -   Weitere gespeicherte Prozeduren zum Ändern von SQL Server-Agent-Masteraufträgen:  
   
-        -   Führen Sie [Sp_delete_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql) einen mit einem Auftrag momentan verknüpften Server zu löschen.  
+        -   Führen Sie [sp_delete_jobserver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql) aus, um einen Server zu löschen, der derzeit einem Auftrag zugeordnet ist.  
   
-        -   Führen Sie [Sp_add_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) um einen Server mit dem aktuellen Auftrag zu verknüpfen.  
+        -   Führen Sie [sp_add_jobserver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) aus, um einen Server mit dem aktuellen Auftrag zu verknüpfen.  
   
-##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
+##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So ändern Sie einen Auftrag**  
   
  Verwenden Sie die `Job`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

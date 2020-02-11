@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6c9f133af7b8054414f6867f41cee3022d68925
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091681"
 ---
 # <a name="upgrade-advisor-errors"></a>Fehler des Upgrade Advisors
@@ -24,7 +24,7 @@ ms.locfileid: "66091681"
   
  Sie können im Berichts-Viewer aufgelistete Probleme ignorieren, die Links zu diesem Thema enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

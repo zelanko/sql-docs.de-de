@@ -1,5 +1,5 @@
 ---
-title: Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent | Microsoft-Dokumentation
+title: Planen von administrativen SSAS-Tasks mit SQL Server-Agent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079675"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent
@@ -24,19 +24,19 @@ ms.locfileid: "66079675"
   
  Dieses Thema ist eine exemplarische Vorgehensweise, in der zwei Methoden erläutert werden, wie Sie XMLA-Skript mithilfe des SQL Server-Agents ausführen. Im ersten Beispiel wird veranschaulicht, wie die Verarbeitung einer einzelnen Dimension geplant wird. Im zweiten Beispiel wird gezeigt, wie Verarbeitungstasks in ein einzelnes Skript kombiniert werden, das nach einem Zeitplan ausgeführt wird. Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Der SQL Server-Agent-Dienst muss installiert sein.  
   
- Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], das Standardkonto für den SQL Server-Agent ist NT Service\SQLAgent$\<Instanzname >. Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]lautet das Standardkonto für SQL Server-Agent NT service\sqlagent $\<instanceName>. Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von Server Administrator Berechtigungen &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Sie sollten außerdem eine Testdatenbank haben, um damit zu arbeiten. Sie können die mehrdimensionale AdventureWorks-Beispieldatenbank oder ein Projekt aus dem mehrdimensionalen Analysis Services-Lernprogramm bereitstellen, um es in dieser exemplarischen Vorgehensweise zu verwenden. Weitere Informationen finden Sie unter [Installieren von Beispieldaten und -projekten für das Analysis Services-Tutorial zur mehrdimensionalen Modellierung](../install-sample-data-and-projects.md).  
+ Sie sollten außerdem eine Testdatenbank haben, um damit zu arbeiten. Sie können die mehrdimensionale AdventureWorks-Beispieldatenbank oder ein Projekt aus dem mehrdimensionalen Analysis Services-Lernprogramm bereitstellen, um es in dieser exemplarischen Vorgehensweise zu verwenden. Weitere Informationen finden Sie unter [Installieren von Beispiel Daten und-Projekten für das Analysis Services Tutorial zur mehrdimensionalen Modellierung](../install-sample-data-and-projects.md).  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Beispiel 1: Verarbeiten einer Dimension in einen geplanten task  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Beispiel 1: Verarbeiten einer Dimension in einem geplanten Task  
  In diesem Beispiel wird veranschaulicht, wie Sie einen Auftrag erstellen und planen, um eine Dimension zu verarbeiten.  
   
  Ein geplanter [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task ist ein in einem SQL Server-Agent-Auftrag eingebettetes XMLA-Skript. Dieser Auftrag ist geplant, d. h. er wird zu den festgelegten Zeiten und mit der festgelegten Häufigkeit ausgeführt. SQL Server-Agent ist Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], daher benötigen Sie zum Erstellen und Planen von administrativen Tasks sowohl die Datenbank-Engine als auch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-###  <a name="bkmk_CreateScript"></a> Erstellen eines Skripts zum Verarbeiten einer Dimension in einem SQL Server-Agent-Auftrag  
+###  <a name="bkmk_CreateScript"></a>Erstellen eines Skripts zum Verarbeiten einer Dimension in einem SQL Server-Agent Auftrag  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her. Öffnen Sie einen Datenbankordner, und suchen Sie eine Dimension. Klicken Sie mit der rechten Maustaste auf die Dimension, und wählen Sie **Verarbeiten**aus.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079675"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a> Erstellen und Planen des Dimensionsverarbeitungsauftrags  
+###  <a name="bkmk_ProcessJob"></a>Erstellen und Planen des Dimensions Verarbeitungs Auftrags  
   
 1.  Stellen Sie eine Verbindung mit einer Instanz der Datenbank-Engine her, und öffnen Sie dann den Objekt-Explorer.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "66079675"
   
 6.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen ein.  
   
-7.  Geben Sie in **Server** **localhost** für eine Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und **localhost\\** \<*Instanzname*> für eine benannte Instanz ein.  
+7.  Geben Sie in **Server****localhost** für eine Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und **localhost\\**\<*Instanzname*> für eine benannte Instanz ein.  
   
-     Wenn Sie den Auftrag von einem Remotecomputer ausführen, verwenden Sie den Namen des Servers und der Instanz, wo der Auftrag ausgeführt wird. Verwenden Sie das Format \< *Servernamen*> für eine Standardinstanz und \< *Servernamen*>\\<*Instanz Namen*> für eine benannte Instanz.  
+     Wenn Sie den Auftrag von einem Remotecomputer ausführen, verwenden Sie den Namen des Servers und der Instanz, wo der Auftrag ausgeführt wird. Verwenden Sie das Format \< *Servername*> für eine Standard Instanz und \<den *Servernamen*>\\<-*Instanznamen* für eine benannte Instanz>.  
   
 8.  Wählen Sie unter **Typ**die Option **SQL Server Analysis Services-Befehl**aus.  
   
@@ -105,10 +105,10 @@ ms.locfileid: "66079675"
   
 15. Klicken Sie nach Abschluss des Auftrags auf **Schließen**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Beispiel 2: Batchverarbeitung einer Dimension und einer Partition in einem geplanten task  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Beispiel 2: Batchverarbeitung einer Dimension und einer Partition in einem geplanten Task  
  Die Prozeduren in diesem Beispiel veranschaulichen, wie Sie einen Auftrag erstellen und planen, der eine Batchverarbeitung für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankdimension ausführt und zur gleichen Zeit eine Cubepartition verarbeitet, deren Aggregation von der Dimension abhängt. Weitere Informationen zur Batchverarbeitung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekten finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a> Erstellen eines Skripts zur Batchverarbeitung einer Dimension und einer Partition in einem SQL Server-Agent-Auftrag  
+###  <a name="bkmk_BatchProcess"></a>Erstellen eines Skripts für die Batch Verarbeitung einer Dimension und einer Partition in einem SQL Server-Agent Auftrag  
   
 1.  Erweitern Sie unter Verwendung der gleichen Datenbank den Eintrag **Dimensionen**, klicken Sie mit der rechten Maustaste auf die **Customer** -Dimension, und wählen Sie **Verarbeiten**aus.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079675"
   
 12. Dieser Schritt kopiert das XMLA-Skript in die Windows-Zwischenablage. Sie können das XMLA-Skript in der Zwischenablage lassen, in einer Datei speichern oder es in Editor oder einen anderen Text-Editor einfügen.  
   
-###  <a name="bkmk_Scheduling"></a> Erstellen und Planen des Batchverarbeitungsauftrags  
+###  <a name="bkmk_Scheduling"></a>Erstellen und Planen des Batch Verarbeitungs Auftrags  
   
 1.  Stellen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]her, und öffnen Sie den Objekt-Explorer.  
   
@@ -221,8 +221,8 @@ ms.locfileid: "66079675"
   
 16. Klicken Sie nach Abschluss des Auftrags auf **Schließen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Skriptverwaltungsaufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Skripterstellung für administrative Aufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

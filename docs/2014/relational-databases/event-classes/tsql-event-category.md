@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746084"
 ---
 # <a name="tsql-event-category"></a>TSQL-Ereigniskategorie
@@ -28,7 +28,7 @@ ms.locfileid: "62746084"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Exec Prepared SQL (Ereignisklasse)](exec-prepared-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine vorbereitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausgeführt wurde.|  
 |[Prepare SQL-Ereignisklasse](prepare-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung zum Verwenden vorbereitet wurde.|  
@@ -40,7 +40,7 @@ ms.locfileid: "62746084"
 |[Unprepare SQL-Ereignisklasse](unprepare-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine vorbereitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung gelöscht wurde.|  
 |[XQuery Static Type (Ereignisklasse)](xquery-static-type-event-class.md)|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen XQuery-Ausdruck ausführt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference)  
   
   

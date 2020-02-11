@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c59f74a3e0584ec70eea4832936d7dc08cc74087
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868960"
 ---
-# <a name="mssqlserver21898"></a>MSSQLSERVER_21898
+# <a name="mssqlserver_21898"></a>MSSQLSERVER_21898
     
 ## <a name="details"></a>Details  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62868960"
 |Meldungstext|Der Verleger '%s' verwendet Verteilungsdatenbank '%s' und nicht '%s', die erforderlich ist, um die Veröffentlichungsdatenbank '%s' zu hosten. Führen Sie `sp_changedistpublisher` auf dem Verteiler '%s' aus, um die vom Verleger verwendete Verteilungsdatenbank in '%s' zu ändern.|  
   
 ## <a name="explanation"></a>Erklärung  
- `sp_validate_redirected_publisher` fragt "msdb.dbo.msdistpublisher" auf dem lokalen Verteiler, um sicherzustellen, dass die vom neuen Verleger verwendete Verteilungsdatenbank vom ursprünglichen Verleger verwendeten Verteilungsdatenbank identisch ist. Dieser Fehler wird zurückgegeben, wenn diese Datenbanken verschieden sind und sich der Verleger deswegen nicht mehr als Host für die Verlegerdatenbank eignet.  
+ `sp_validate_redirected_publisher` fragt msdb.dbo.MSdistpublishers beim lokalen Verteiler ab, um zu überprüfen, ob die vom neuen Verleger verwendete Verteilungsdatenbank mit der vom ursprünglichen Verleger verwendeten Verteilungsdatenbank identisch ist. Dieser Fehler wird zurückgegeben, wenn diese Datenbanken verschieden sind und sich der Verleger deswegen nicht mehr als Host für die Verlegerdatenbank eignet.  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Führen Sie gespeicherte Prozedur `sp_changedistpublisher` aus, um die Verteilungsdatenbank für den neuen Verleger in die vom ursprünglichen Verleger verwendete Verteilungsdatenbank zu ändern.  

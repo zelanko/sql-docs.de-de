@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen der Bike Buyer-Miningstruktur | Microsoft-Dokumentation'
+title: 'Lektion 1: Erstellen der Bike Buyer-Mining Struktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678503"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lektion 1: Erstellen der Bike Buyer-Miningstruktur
-  In dieser Lektion erstellen Sie eine Miningstruktur, mit der sich vorhersagen lässt, ob ein potenzieller Kunde von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ein Fahrrad kaufen wird. Wenn Sie nicht mit Miningstrukturen und ihre Rolle beim Datamining vertraut sind, finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
+  In dieser Lektion erstellen Sie eine Miningstruktur, mit der sich vorhersagen lässt, ob ein potenzieller Kunde von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ein Fahrrad kaufen wird. Wenn Sie mit Mining Strukturen und deren Rolle in Data Mining nicht vertraut sind, finden Sie weitere Informationen unter [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- Die Bike Buyer-Miningstruktur, die Sie in dieser Lektion erstellen unterstützt das Hinzufügen von Miningmodellen, die basierend auf den [Microsoft Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). In späteren Lektionen untersuchen Sie mithilfe der Clustering-Miningmodelle verschiedene Möglichkeiten zum Gruppieren von Kunden und verwenden Entscheidungsstruktur-Miningmodelle, um vorherzusagen, ob ein potenzieller Kunde ein Fahrrad kaufen wird oder nicht.  
+ Die Bike Buyer-Mining Struktur, die Sie in dieser Lektion erstellen, unterstützt das Hinzufügen von Mining Modellen, die [auf dem Microsoft](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)-Algorithmus basieren. In späteren Lektionen untersuchen Sie mithilfe der Clustering-Miningmodelle verschiedene Möglichkeiten zum Gruppieren von Kunden und verwenden Entscheidungsstruktur-Miningmodelle, um vorherzusagen, ob ein potenzieller Kunde ein Fahrrad kaufen wird oder nicht.  
   
 ## <a name="create-mining-structure-statement"></a>CREATE MINING STRUCTURE-Anweisung  
- Um eine Miningstruktur zu erstellen, verwenden Sie die [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
+ Zum Erstellen einer Mining Struktur verwenden Sie die Anweisung [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx) . Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
--   Benennen die Struktur.  
+-   Benennen der-Struktur.  
   
--   Definieren der Schlüsselspalte.  
+-   Definieren der Schlüssel Spalte.  
   
 -   Definieren der Miningspalten  
   
@@ -50,7 +50,7 @@ WITH HOLDOUT (<holdout specifier>)
 CREATE MINING STRUCTURE [<mining structure name>]  
 ```  
   
- Informationen zum Benennen eines Objekts in Data Mining Extensions (DMX) finden Sie unter [Bezeichner &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Weitere Informationen zum Benennen eines Objekts in Data Mining-Erweiterungen (DMX) finden Sie unter Bezeichner [&#40;DMX-&#41;](/sql/dmx/identifiers-dmx).  
   
  Die nächste Codezeile definiert die Schlüsselspalte für die Miningstruktur, die eine Entität in den Quelldaten eindeutig identifiziert:  
   
@@ -66,11 +66,11 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <mining structure columns>  
 ```  
   
- Können Sie die DISCRETIZE-Funktion in \<Miningstrukturspalten > kontinuierliche Spalten Diskretisieren, mithilfe der folgenden Syntax:  
+ Mithilfe der diskretisieren-Funktion können Sie \<in Mining Struktur Spalten> kontinuierliche Spalten mithilfe der folgenden Syntax diskretisieren:  
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
- Weitere Informationen zur Diskretisierung von Spalten finden Sie unter [Diskretisierungsmethoden &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Weitere Informationen zu den Arten von Miningstrukturspalten, die Sie definieren können, finden Sie unter [Miningstrukturspalten](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
+ Weitere Informationen zum Diskretisieren von Spalten finden Sie unter [Diskretisierungsmethoden &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Weitere Informationen zu den Typen von Mining Struktur Spalten, die Sie definieren können, finden Sie unter [Mining Struktur Spalten](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
  In der letzten Codezeile wird eine optionale Partition in der Miningstruktur definiert:  
   
@@ -83,11 +83,11 @@ WITH HOLDOUT (<holdout specifier>)
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgenden Aufgaben aus:  
   
--   Erstellen einer neuen leeren Abfrage.  
+-   Erstellen Sie eine neue leere Abfrage.  
   
--   Ändern Sie die Abfrage zum Erstellen der Miningstruktur an.  
+-   Ändern Sie die Abfrage, um die Mining Struktur zu erstellen.  
   
--   Führen Sie die Abfrage an.  
+-   Führen Sie die Abfrage aus.  
   
 ## <a name="creating-the-query"></a>Erstellen einer Abfrage  
  Im ersten Schritt stellen Sie eine Verbindung zu einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] her und erstellen eine neue DMX-Abfrage in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -96,9 +96,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In der **Herstellen einer Verbindung mit Server** im Dialogfeld für **Servertyp**Option **Analysis Services**. In **Servernamen**, Typ `LocalHost`, oder geben Sie den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die Sie für diese Lektion herstellen möchten. Klicken Sie auf **Verbinden**.  
+2.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** unter **Servertyp**die Option **Analysis Services**aus. Geben `LocalHost`Sie unter **Server Name**den Namen ein, oder geben Sie den Namen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] der Instanz von ein, mit der Sie für diese Lektion eine Verbindung herstellen möchten. Klicken Sie auf **Verbinden**.  
   
-3.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** zum Öffnen der **Abfrage-Editor**und eine neue, leere Abfrage.  
+3.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** , um den **Abfrage-Editor** und eine neue, leere Abfrage zu öffnen.  
   
 ## <a name="altering-the-query"></a>Ändern der Abfrage  
  Im nächsten Schritt ändern Sie die oben beschriebene CREATE MINING STRUCTURE-Anweisung und erstellen die Bike Buyer-Miningstruktur.  
@@ -191,29 +191,29 @@ WITH HOLDOUT (<holdout specifier>)
   
     ```  
   
-6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+6.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Bike Buyer Structure.dmx`.  
+7.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `Bike Buyer Structure.dmx`.  
   
 ## <a name="executing-the-query"></a>Ausführen der Abfrage  
  Im letzten Schritt führen Sie die Abfrage aus. Nachdem eine Abfrage erstellt und gespeichert wurde, muss sie ausgeführt werden. Das bedeutet, die Anweisung muss ausgeführt werden, um auf dem Server eine Miningstruktur zu erstellen. Weitere Informationen zum Ausführen von Abfragen im Abfrage-Editor finden Sie unter [Datenbank-Engine-Abfrage-Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>So führen Sie die Abfrage aus  
   
-1.  Klicken Sie im Abfrage-Editor auf der Symbolleiste **Execute**.  
+1.  Klicken Sie im Abfrage-Editor auf der Symbolleiste auf **Ausführen**.  
   
-     Der Status der Abfrage wird angezeigt, der **Nachrichten** Registerkarte am unteren Rand des Abfrage-Editors nach Abschluss der Ausführung die Anweisung. Die Meldung sollte Folgendes anzeigen:  
+     Der Status der Abfrage wird auf der Registerkarte **Nachrichten** unten im Abfrage-Editor angezeigt, nachdem die Ausführung der Anweisung abgeschlossen wurde. Die Meldung sollte Folgendes anzeigen:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Eine neue Struktur mit dem Namen **Bike Buyer** jetzt auf dem Server vorhanden ist.  
+     Eine neue Struktur mit dem Namen **Bike Buyer** ist jetzt auf dem Server vorhanden.  
   
  In der nächsten Lektion fügen Sie der soeben erstellten Struktur Miningmodelle hinzu.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

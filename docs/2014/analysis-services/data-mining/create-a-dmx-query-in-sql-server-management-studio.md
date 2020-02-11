@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine DMX-Abfrage in SQL Server Management Studio | Microsoft-Dokumentation
+title: Erstellen einer DMX-Abfrage in SQL Server Management Studio | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085471"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Erstellen einer DMX-Abfrage in SQL Server Management Studio
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von Funktionen bereit, um Sie bei der Erstellung von Vorhersage-, Inhalts- und Datendefinitionsabfragen gegen Miningmodelle und Miningstrukturen zu unterstützen.  
   
 -   Der grafische Generator für Vorhersageabfragen ist sowohl über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar, um den Prozess des Schreibens von Vorhersageabfragen und des Zuordnens von Datasets zu Modellen zu vereinfachen.  
@@ -36,27 +37,28 @@ ms.locfileid: "66085471"
   
  In diesem Thema wird beschrieben, wie eine DMX-Abfrage erstellt wird, indem der Metadaten-Explorer und der DMX-Abfrage-Editor verwendet werden.  
   
-##  <a name="BKMK_Templates"></a> DMX-Abfragevorlagen  
+##  <a name="BKMK_Templates"></a>DMX-Abfrage Vorlagen  
  Zum Erstellen von grundlegenden DMX-Abfragen stehen Vorlagen im Vorlagen-Explorer zur Verfügung. Der **DMX** -Ordner enthält Data Mining-Vorlagen, die in die folgenden Kategorien unterteilt sind:  
   
--   **Modellinhalt**  
+-   **Modell Inhalt**  
   
 -   **Modellverwaltung**  
   
 -   **Vorhersageabfragen**  
   
--   **Strukturieren von Inhalt**  
+-   **Struktur Inhalt**  
   
  Sie können auch benutzerdefinierte Vorlagen für jene Abfragen oder Befehle erstellen, die Sie häufig ausführen.  
   
 ## <a name="xmla-query-templates"></a>XMLA-Abfragevorlagen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt auch Vorlagen für XMLA-Abfragen bereit.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt auch Vorlagen für XMLA-Abfragen bereit.  
   
  Zwischen den Typen der Abfragen, die Sie mit XMLA oder DMX ausführen können, tritt ein gewisses Maß an Überschneidung auf. Sie können z. B. einige Modellinhaltsabfragen erstellen, indem Sie entweder DMX oder die Data Mining-Schemarowsets verwenden. Die Schemarowsets enthalten allerdings gelegentlich Informationen, die in DMX-Inhaltsabfragen nicht verfügbar gemacht werden.  
   
  Außerdem gibt es einige wesentliche Unterschiede bezüglich der Art, wie Vorgänge in DMX oder in XMLA verarbeitet werden. Sie können XMLA z.B. verwenden, um Administratorvorgänge wie etwa die Sicherung einer gesamten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank auszuführen. Wenn Sie jedoch ein einzelnes Miningmodell sichern möchten, stellt DMX einen einfachen Befehl bereit ([EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)), der zu diesem Zweck besser geeignet ist.  
   
-##  <a name="BKMK_Building_Queries"></a> Erstellen und Ausführen einer DMX-Abfrage  
+##  <a name="BKMK_Building_Queries"></a>Erstellen und Ausführen einer DMX-Abfrage  
   
 #### <a name="open-a-new-dmx-query-window"></a>Öffnen eines neuen DMX-Abfragefensters  
   
@@ -80,12 +82,12 @@ ms.locfileid: "66085471"
   
  Beispiele hinsichtlich des Erstellens spezieller Typen von Abfragen aus Vorlagen finden Sie unter den folgenden Themen:  
   
- [Erstellen Sie eine Singleton-Abfrage aus einer Vorlage](create-a-singleton-prediction-query-from-a-template.md)  
+ [Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage](create-a-singleton-prediction-query-from-a-template.md)  
   
  [Erstellen einer Miningmodell-Inhaltsabfrage](create-a-content-query-on-a-mining-model.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining Abfrageschnittstellen](data-mining-query-tools.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Schnittstellen für Data Mining-Abfragen](data-mining-query-tools.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

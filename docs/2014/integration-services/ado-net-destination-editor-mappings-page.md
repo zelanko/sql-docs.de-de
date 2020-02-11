@@ -1,5 +1,5 @@
 ---
-title: ADO.NET-Ziel-Editor (Seite Zuordnungen) | Microsoft-Dokumentation
+title: ADO.NET-Ziel-Editor (Seite ' Zuordnungen ') | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061747"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO.NET-Ziel-Editor (Seite 'Zuordnungen')
@@ -32,7 +32,7 @@ ms.locfileid: "66061747"
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Zuordnungen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -45,8 +45,8 @@ ms.locfileid: "66061747"
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, ganz gleich, ob sie zugeordnet sind oder nicht.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ziel-Editor für ADO.NET &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für ADO.NET &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Der ADO.NET-Ziel-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Der ADO.NET-Ziel-Editor &#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

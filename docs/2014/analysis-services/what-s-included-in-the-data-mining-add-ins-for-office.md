@@ -1,5 +1,5 @@
 ---
-title: Was&#39;eingeschlossen, die in den Data Mining-Add-Ins für Office | Microsoft-Dokumentation
+title: Was&#39;s in den Data Mining-Add-Ins für Office enthalten ist | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065327"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;eingeschlossen, die in den Data Mining-Add-Ins für Office
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;s in den Data Mining-Add-Ins für Office enthalten ist
   Wenn Sie beim Installieren der Data Mining-Add-Ins für Office 2013 sämtliche Installationsoptionen auswählen, werden die folgenden Symbolleisten und Vorlagen hinzugefügt:  
   
 -   [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  
@@ -28,9 +28,9 @@ ms.locfileid: "66065327"
   
      Wenn Sie noch keine Erfahrung im Data Mining haben, beginnen Sie hier.  
   
--   [Datamining-Client für Excel &#40;SQL Server Data Mining-Add-ins&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+-   [Data Mining-Client für Excel &#40;SQL Server Data Mining-Add-ins&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     Dieses Add-In stellt Tools bereit, für fast jede Datamining-Aufgaben, die möglicherweise vom bereinigen und Stichproben der Daten bis zum Erstellen von Modellen ausführen, Testen der modellgenauigkeit und Ausführen der kreuzvalidierung -. Sie können Modelle auch verwalten und dokumentieren und DMX-Abfragen aus Vorlagen erstellen.  
+     Dieses Add-in enthält Tools für fast alle Data Mining Aufgaben, die Sie ggf. benötigen, von der Bereinigung und Stichprobenentnahme von Daten bis hin zur Ausführung von Modellen, zum Testen der Modell Genauigkeit und zum Durchführen der Kreuz Validierung. Sie können Modelle auch verwalten und dokumentieren und DMX-Abfragen aus Vorlagen erstellen.  
   
      Erfahrene Data Mining-Benutzer können alle in SQL Server Data Mining verfügbaren Tools nutzen, einschließlich Modellimport und -export, Vorhersageabfragen und Inhaltsabfragen.  
   
@@ -38,15 +38,15 @@ ms.locfileid: "66065327"
   
      Ziehen Sie einfach diese Shapes auf eine Visio-Seite, um Diagramme erstellen, die mit Ihren Miningmodellen verknüpft sind, jedoch mit Visio angepasst werden können, um ansprechendere Präsentationen mit höherer Interaktivität zu erstellen.  
   
--   [Serverkonfigurations-Hilfsprogramm &#40;Data Mining-Add-ins für Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [Server Konfigurations Hilfsprogramm &#40;Data Mining-Add-Ins für Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     Zum Erstellen von Modellen muss eine Verbindung mit einem Data Mining-Server vorhanden sein. Wenn Sie beim Einrichten Hilfe benötigen, klicken Sie einfach auf **Hilfe** und befolgen Sie die Anweisungen auf den einzelnen Seiten des Konfigurations-Assistenten. Sie können Probleme entweder selbst beheben oder die vom Assistenten bereitgestellten Informationen an Ihren Systemadministrator senden, um Unterstützung für die Konfiguration zu erhalten.  
+     Zum Erstellen von Modellen muss eine Verbindung mit einem Data Mining-Server vorhanden sein. Wenn Sie Hilfe beim Einrichten benötigen, klicken Sie einfach auf **Hilfe** , und befolgen Sie die Anweisungen auf den einzelnen Seiten des Konfigurations-Assistenten. Sie können Probleme entweder selbst beheben oder die vom Assistenten bereitgestellten Informationen an Ihren Systemadministrator senden, um Unterstützung für die Konfiguration zu erhalten.  
   
--   [Auswählen von Daten und unter Verwendung der Beispieldaten](choosing-data-for-data-mining.md)  
+-   [Auswählen von Daten und Verwenden der Beispieldaten](choosing-data-for-data-mining.md)  
   
      Für eine erfolgreiche Datenanalyse sollten Sie wissen, welche Daten zu verwenden sind und wie sie vorbereitet werden. Dieses Thema bietet Tipps dazu, wie Sie Ihre Daten vorbereiten, um optimale Modelle zu erhalten.  
   
-     Wenn Sie mit Datamining sind und nur die Tools ausprobieren möchten, empfehlen wir, dass Sie die Arbeitsmappe mit Beispieldaten verwenden, die zusammen mit den Add-Ins installiert wird. Anhand dieser Daten Sie sehen auch Beispiele zum Vorbereiten von Daten für Zeitreihen- oder zuordnungsmodelle.  
+     Wenn Sie noch nicht mit Data Mining vertraut sind und nur mit den Tools experimentieren möchten, wird empfohlen, dass Sie die Arbeitsmappe von Beispiel Daten verwenden, die mit den Add-Ins installiert werden. Wenn Sie sich diese Daten ansehen, sehen Sie auch Beispiele für die Vorbereitung von Daten für Zeitreihen Modelle oder Zuordnungs Modelle.  
   
      **Beispieldaten**  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66065327"
   
      Der Standardspeicherort für die Beispielarbeitsmappe hängt davon ab, welche Version Sie installiert haben:  
   
-    -   \<Laufwerk >: \Programme\Microsoft SQL Server 2014 DM-add-ins  
+    -   \<Laufwerk>: \Programme\Microsoft SQL Server 2014 DM Add-ins  
   
-    -   \<Laufwerk >: \Programme (x86) \Microsoft SQL Server 2014 DM-add-ins  
+    -   \<Laufwerk>: \Programme (x86) \Microsoft SQL Server 2014 DM-Add-ins  
   
-## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit Datamining &#40;Data Mining-Add-ins für Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Informationen zu den ersten Schritten mit Data Mining-&#40;Data Mining-Add-Ins für Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

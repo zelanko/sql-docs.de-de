@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Hinzufügen von Fehlerflussumleitungen | Microsoft-Dokumentation'
+title: 'Schritt 3: Hinzufügen von Fehlerflussumleitungen | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891402"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen der Fehlerflussumleitung
+# <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen von Fehlerflussumleitungen
   Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
   
  Anstatt ein Fehlschlagen der Transformation zuzulassen, können Sie die Komponente so konfigurieren, dass die fehlerverursachende Zeile mithilfe der Fehlerausgabe in einen anderen Verarbeitungspfad umgeleitet wird. Die Verwendung eines separaten Fehlerverarbeitungspfades gibt Ihnen die Möglichkeit, mehrere Vorgänge auszuführen. Sie können beispielsweise die Daten säubern und dann die fehlerhafte Zeile erneut verarbeiten. Oder Sie speichern die fehlerhafte Zeile zusammen mit zusätzlichen Fehlerinformationen zum späteren Überprüfen und erneutem Verarbeiten.  
   
  In dieser Aufgabe konfigurieren Sie die Lookup Currency Key-Transformation so, dass alle fehlerverursachenden Zeilen in die Fehlerausgabe umgeleitet werden. In der Fehlerverzweigung des Datenflusses werden diese Zeilen in eine Datei geschrieben.  
   
- Standardmäßig enthalten die beiden zusätzlichen Spalten in einer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlerausgabe **ErrorCode** und **ErrorColumn**nur numerische Codes, die eine Fehlernummer darstellen, und die ID der Spalte, in der der Fehler auftrat. Diese numerischen Werte sind ohne die entsprechende Fehlerbeschreibung nur von begrenztem Nutzen.  
+ Standardmäßig enthalten die beiden zusätzlichen Spalten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] einer Fehlerausgabe ( **errorCode** und **ErrorColumn**) nur numerische Codes, die eine Fehlernummer darstellen, und die ID der Spalte, in der der Fehler aufgetreten ist. Diese numerischen Werte sind ohne die entsprechende Fehlerbeschreibung nur von begrenztem Nutzen.  
   
  Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer Skriptkomponente auf die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -API zugreifen und eine Beschreibung des Fehlers abrufen, bevor das Paket die fehlerverursachenden Zeilen in die Datei schreibt.  
   
 ### <a name="to-configure-an-error-output"></a>So konfigurieren Sie eine Fehlerausgabe  
   
-1.  Erweitern Sie in der **SSIS-Toolbox**die Option **Allgemein**, und ziehen Sie anschließend **Skriptkomponente** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Legen Sie **Skript** rechts von der **Lookup Currency Key** -Transformation ab.  
+1.  Erweitern Sie in der **SSIS-Toolbox**die Option **Allgemein**, und ziehen Sie dann **Skript Komponente** auf die Entwurfs Oberfläche der Registerkarte **Datenfluss** . Platzieren Sie das **Skript** rechts von der **Lookup Currency Key** -Transformation.  
   
 2.  Klicken Sie im Dialogfeld **Skriptkomponententyp auswählen** auf **Transformation**und anschließend auf **OK**.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62891402"
   
 8.  Erweitern Sie auf der Seite **Eingaben und Ausgaben** das Element **Ausgabe 0**, klicken Sie auf **Ausgabespalten**und anschließend auf **Spalte hinzufügen**.  
   
-9. In der `Name` Eigenschaft **ErrorDescription** und legen Sie die `DataType` Eigenschaft **Unicode-Zeichenfolge [DT_WSTR]** .  
+9. Geben Sie `Name` in der-Eigenschaft **ErrorDescription** ein, `DataType` und legen Sie die-Eigenschaft auf **Unicode-Zeichenfolge [DT_WSTR]** fest.  
   
-10. Auf der **Skript** Seite, überprüfen Sie, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten.**  
+10. Überprüfen Sie auf der Seite **Skript** , `LocaleID` ob die-Eigenschaft auf **Englisch (USA** festgelegt ist.  
   
 11. Klicken Sie auf **Skript bearbeiten** , um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen. Geben Sie den folgenden Code in die `Input0_ProcessInputRow`-Methode ein, oder fügen Sie ihn mit Kopieren und Einfügen ein.  
   
@@ -96,6 +96,6 @@ ms.locfileid: "62891402"
 13. Klicken Sie auf **OK** , um das Dialogfeld **Transformations-Editor für Skripterstellung** zu schließen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Schritt 4: Hinzufügen eines Flatfileziels an] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Schritt 4: Hinzufügen eines Flatfileziels] (Lesson-4-4-Adding-a-Flat-File-Destination.MD  
   
   

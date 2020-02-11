@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727646"
 ---
 # <a name="cube-properties"></a>Cubeeigenschaften
@@ -44,9 +44,9 @@ ms.locfileid: "62727646"
 > [!NOTE]  
 >  Manche Eigenschaften werden beim Erstellen des Cubes automatisch festgelegt und können nicht geändert werden.  
   
- Weitere Informationen über das Festlegen von Cubeeigenschaften finden Sie unter [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
+ Weitere Informationen zum Festlegen von Cube-Eigenschaften finden Sie unter [Cube Designer &#40;Analysis Services-Multidimensional Data&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Gibt das für Aggregationsnamen verwendete gemeinsame Präfix an.|  
 |`Collation`|Gibt den Gebietsschemabezeichner (LCID) und das Vergleichsflag, durch einen Unterstrich voneinander getrennt, an, wie z. B. Latin1_General_C1_AS.|  
@@ -58,19 +58,19 @@ ms.locfileid: "62727646"
 |`Language`|Gibt den Standardsprachbezeichner für den Cube an.|  
 |`Name`|Gibt den benutzerfreundlichen Namen des Attributs an.|  
 |`ProactiveCaching`|Definiert die Einstellungen für den Cube für die proaktive Zwischenspeicherung.|  
-|`ProcessingMode`|Gibt an, ob während oder nach der Verarbeitung indiziert und aggregiert werden soll. Optionen sind **regulären** oder `lazy`.|  
+|`ProcessingMode`|Gibt an, ob während oder nach der Verarbeitung indiziert und aggregiert werden soll. Optionen sind **reguläre** oder `lazy`.|  
 |`ProcessingPriority`|Legt die Verarbeitungspriorität des Cubes bei Hintergrundvorgängen wie z. B. verzögerte Aggregationen und Indizierungen fest. Der Standardwert ist **0**.|  
-|`ScriptCacheProcessingMode`|Gibt an, ob der Skriptcache während oder nach der Verarbeitung erstellt werden soll. Optionen sind **regulären** und `lazy`.|  
-|`ScriptErrorHandlingMode`|Bestimmt die Fehlerbehandlung. Optionen sind `IgnoreNone` oder `IgnoreAll`|  
+|`ScriptCacheProcessingMode`|Gibt an, ob der Skriptcache während oder nach der Verarbeitung erstellt werden soll. Optionen sind **reguläre** und `lazy`.|  
+|`ScriptErrorHandlingMode`|Bestimmt die Fehlerbehandlung. Optionen sind `IgnoreNone` oder.`IgnoreAll`|  
 |`Source`|Zeigt die für den Cube verwendete Datenquellensicht.|  
 |`StorageLocation`|Gibt den Speicherort des Dateisystems für den Cube an. Wenn kein Speicherort angegeben ist, wird er von der Datenbank geerbt, die das Cubeobjekt enthält.|  
-|`StorageMode`|Gibt den Speichermodus für den Cube an. Werte sind `MOLAP`, `ROLAP`, oder `HOLAP``.`|  
+|`StorageMode`|Gibt den Speichermodus für den Cube an. Werte sind `MOLAP`, `ROLAP`oder.`HOLAP``.`|  
 |`Visible`|Bestimmt die Sichtbarkeit des Cubes.|  
   
 > [!NOTE]  
->  Weitere Informationen zum Festlegen von Werten für die ErrorConfiguration-Eigenschaft, bei der Arbeit mit null-Werte und andere Probleme mit der Datenintegrität finden Sie unter [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Weitere Informationen zum Festlegen von Werten für die ErrorConfiguration-Eigenschaft beim Arbeiten mit NULL-Werten und anderen Problemen mit der Datenintegrität finden Sie unter [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Proaktives Zwischenspeichern &#40;Partitionen&#41;](partitions-proactive-caching.md)  
   
   

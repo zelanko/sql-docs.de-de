@@ -1,5 +1,5 @@
 ---
-title: Drillthrough (Dialogfeld) (Miningmodell-Viewer) | Microsoft-Dokumentation
+title: Drillthrough (Dialog Feld) (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081484"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Dialogfeld "Drillthrough" (Miningmodell &ndash; Viewer)
@@ -27,26 +27,26 @@ ms.locfileid: "66081484"
   
  Informationen über das Zugreifen auf Falldaten über die verschiedenen Miningmodell-Viewer, die Drillthrough unterstützen, **finden Sie unter** [Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](data-mining/drill-through-to-case-data-from-a-mining-model.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Klassifizierte Fälle für**  
  Zeigt die Definition der Regeln Itemset und Cluster an, die im ausgewählten Knoten enthalten sind.  
   
  **Spaltenliste**  
  Zeigt die Spalten im Modell an, gefolgt von den Strukturspalten.  
   
- **Hinweis** Strukturspalten werden nur angezeigt, wenn Drillthrough auf der Miningstruktur aktiviert ist und wenn Sie die Option **Model- und Strukturspalten**gewählt haben. Um die Spalten anzuzeigen, müssen Drillthroughberechtigungen außerdem sowohl im Miningmodell als auch in der Miningstruktur aktiviert sein.  
+ **Hinweis** Struktur Spalten werden nur angezeigt, wenn Drillthrough für die Mining Struktur aktiviert ist, und wenn Sie die Option **Modell-und Struktur Spalten**ausgewählt haben. Um die Spalten anzuzeigen, müssen Drillthroughberechtigungen außerdem sowohl im Miningmodell als auch in der Miningstruktur aktiviert sein.  
   
- Strukturspalten, die nicht im Modell enthalten sind, werden als **Struktur.\< Spaltenname >** .  
+ Struktur Spalten, die nicht im Modell enthalten sind, werden als **Struktur\< angezeigt. der Spaltenname>**.  
   
 > [!NOTE]  
 >  Sie können an einer beliebigen Stelle im Spaltenraster mit der rechten Maustaste klicken und **Alle kopieren** auswählen, um die Drillthroughdaten in tabulatorgetrenntem Format in die Zwischenablage zu kopieren. Die kopierten Daten enthalten nur die Falldaten, nicht die Knotendefinition.  
   
- **Wiedergeben**  
+ **Theater**  
  Klicken Sie auf die Schaltfläche mit dem grünen Pfeil, um die Daten zu aktualisieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Tasks und Anweisungen für den Miningmodell-Viewer](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Drillthrough-Abfragen &#40;Data Mining-&#41;](data-mining/drillthrough-queries-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

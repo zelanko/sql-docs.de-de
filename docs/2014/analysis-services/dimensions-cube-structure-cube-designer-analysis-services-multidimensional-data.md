@@ -1,5 +1,5 @@
 ---
-title: Dimensionen (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Dimensionen (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081699"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensionen (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Dimensionen** können Sie auf der Registerkarte **Cubestruktur** im Cube-Designer Cubedimensionen anzeigen und bearbeiten, einschließlich Hierarchien und Attribute.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Hierarchien**  
  Klicken Sie auf diese Option, um die verfügbaren Cubedimensionen und die entsprechenden Cubehierarchien anzuzeigen.  
   
- Erweitern Sie eine Cubedimension, und wählen Sie **bearbeiten \<Dimension >** Dimensions-Designer anzuzeigen und die Datenbankdimension, auf der die Cubedimension basiert. Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Erweitern Sie eine Cubedimension, und wählen Sie **Dimensions>bearbeiten \<** , um den Dimensions-Designer anzuzeigen und die Daten Bank Dimension zu bearbeiten, auf der die Cubedimension basiert Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Attribute**  
  Klicken Sie auf diese Option, um die verfügbaren Cubedimensionen und die entsprechenden Cubeattribute anzuzeigen.  
   
- Erweitern Sie eine Cubedimension, und wählen Sie **bearbeiten \<Dimension >** Dimensions-Designer anzuzeigen und die Datenbankdimension, auf der die Cubedimension basiert. Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Erweitern Sie eine Cubedimension, und wählen Sie **Dimensions>bearbeiten \<** , um den Dimensions-Designer anzuzeigen und die Daten Bank Dimension zu bearbeiten, auf der die Cubedimension basiert Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Kontextmenü  
  Wenn Sie mit der rechten Maustaste in den Bereich **Dimensionen** klicken, wird ein Kontextmenü mit den folgenden Optionen angezeigt:  
@@ -45,7 +45,7 @@ ms.locfileid: "66081699"
  **Dimension bearbeiten**  
  Klicken Sie auf diese Option, um den Dimensions-Designer anzuzeigen und die Datenbankdimension anzuzeigen, auf der die Cubedimension basiert. Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Umbenennen**  
+ **Benen**  
  Klicken Sie auf diese Option, um die ausgewählte Cubedimension für den Cube umzubenennen.  
   
 > [!NOTE]  
@@ -84,10 +84,10 @@ ms.locfileid: "66081699"
  **Eigenschaften**  
  Klicken Sie auf diese Option, um das Fenster **Eigenschaften** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die ausgewählte Cubedimension, die Cubehierarchie oder das Cubeattribut anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Symbolleiste &#40;Registerkarte Cubestruktur, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Measures &#40;Registerkarte Cubestruktur, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Datenquellensicht &#40;Registerkarte Cubestruktur, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
- [Cubestruktur &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Symbolleiste &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Measures &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Datenquellen Sicht &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cubestruktur &#40;Cube-Designer-&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

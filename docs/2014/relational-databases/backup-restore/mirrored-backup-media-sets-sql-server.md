@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ad183871e58f5dc64cf763c540e1629a09b4f320
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876092"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Gespiegelte Sicherungsmediensätze (SQL Server)
@@ -39,11 +39,11 @@ ms.locfileid: "62876092"
   
 -   [Übersicht über gespiegelte Mediensätze](#OverviewofMirroredMediaSets)  
   
--   [Hardwareanforderungen für Sicherungsspiegel](#HardwareReqs)  
+-   [Hardware Anforderungen für Sicherungs Spiegel](#HardwareReqs)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a> Übersicht über gespiegelte Mediensätze  
+##  <a name="OverviewofMirroredMediaSets"></a>Übersicht über gespiegelte Mediensätze  
  Die Medienspiegelung ist eine Eigenschaft des Mediensatzes. Ein *gespiegelter Mediensatz* setzt sich aus mehreren Kopien (*Spiegeln*) des Mediensatzes zusammen. Ein Mediensatz enthält eine oder mehrere Medienfamilien, die jeweils einem Sicherungsmedium entsprechen. Wenn beispielsweise in der TO-Klausel einer BACKUP DATABASE-Anweisung drei Medien aufgelistet sind, werden die Daten mit BACKUP auf drei Medienfamilien aufgeteilt – eine pro Medium. Die Anzahl der Medienfamilien und Spiegel wird definiert, wenn der Mediensatz erstellt wird (durch eine BACKUP DATABASE-Anweisung, mit der WITH FORMAT angegeben wird).  
   
  Ein gespiegelter Mediensatz besitzt zwischen zwei und vier Spiegel. Jeder Spiegel enthält alle Medienfamilien im Mediensatz. Für die Spiegel ist die gleiche Anzahl von Medien erforderlich – eines pro Medienfamilie. Für jeden Spiegel ist ein separates Sicherungsmedium pro Medienfamilie erforderlich. Beispielsweise sind für einen gespiegelten Mediensatz, der aus vier Medienfamilien mit drei Spiegeln besteht, zwölf Sicherungsmedien erforderlich. All diese Medien müssen äquivalent sein. Beispielsweise Bandlaufwerke mit der gleichen Modellnummer vom selben Hersteller.  
@@ -61,7 +61,7 @@ ms.locfileid: "62876092"
   
  Im Hinblick auf die Vollständigkeit der Spiegel gelten bei den verschiedenen Sicherungs- und Wiederherstellungsvorgängen unterschiedliche Anforderungen. Wenn im Rahmen eines Sicherungsvorgangs ein gespiegelter Mediensatz geschrieben (d. h. erstellt oder erweitert) werden soll, müssen alle Spiegel vorhanden sein. Beim Wiederherstellen einer Sicherung von einem gespiegelten Mediensatz können Sie jedoch nur einen Spiegel für jede Medienfamilie angeben. Sie können beim Wiederherstellen weniger Geräte als Familien verwenden, die einzelnen Medienfamilien können jedoch nur ein Mal verarbeitet werden. Falls Fehler auftreten, kann das Vorhandensein der anderen Spiegel jedoch dazu beitragen, dass einige Wiederherstellungsprobleme schneller gelöst werden können. Sie können ein beschädigtes Medienvolume durch das entsprechende Volume eines anderen Spiegels ersetzen. Der Grund dafür ist, dass RESTORE und RESTORE VERIFYONLY das Ersetzen beschädigter Medien durch das entsprechende Sicherungsmedienvolume eines anderen Spiegels unterstützen.  
   
-##  <a name="HardwareReqs"></a> Hardwareanforderungen für Sicherungsspiegel  
+##  <a name="HardwareReqs"></a>Hardware Anforderungen für Sicherungs Spiegel  
  Spiegelungen werden auf Datenträger und auf Band angewendet (auf Datenträgern werden keine Anschlussbänder unterstützt). Alle Sicherungsmedien für einen einzelnen Sicherungs- oder Wiederherstellungsvorgang müssen den gleichen Typ, den gleiche Datenträger bzw. das gleiche Band aufweisen.  
   
  In diesen weit gefassten Kategorien müssen wiederum ähnliche Geräte mit übereinstimmenden Eigenschaften verwendet werden. Wenn die Geräte zu unterschiedlich sind, wird eine Fehlermeldung (3212) generiert. Wenn Sie die Gefahr einer Nichtübereinstimmung der Geräte ausschließen möchten, verwenden Sie Geräte, die äquivalent sind, beispielsweise nur Laufwerke mit der gleichen Modellnummer vom selben Hersteller.  
@@ -69,9 +69,9 @@ ms.locfileid: "62876092"
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So sichern Sie Daten auf gespiegelten Sicherungsmedien**  
   
--   [Sichern auf einem gespiegelten Mediensatz &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
+-   [Sichern auf einen gespiegelten Medien Satz &#40;Transact-SQL-&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)   

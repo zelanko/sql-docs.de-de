@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890942"
 ---
-# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Schritt 4: Testen des Tutorialpakets aus Lektion 5
+# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Schritt 4: Testen des Lektion 5-Lernprogrammpakets
   Zur Laufzeit erhält Ihr Paket den Wert für die `Directory`-Eigenschaft von einer zur Laufzeit aktualisierten Variable. Es wird also nicht der ursprüngliche Verzeichnisname verwendet, den Sie beim Erstellen des Pakets angegeben haben. Der Wert der Variablen wird durch die Datei SSISTutorial.dtsConfig aufgefüllt.  
   
  Um zu überprüfen, ob vom Paket die Directory-Eigenschaft während der Laufzeit auf den neuen Wert aktualisiert wird, führen Sie das Paket einfach aus. Weil nur drei Beispieldatendateien in das neue Verzeichnis kopiert werden, wird der Datenfluss nur drei Mal ausgeführt, statt durch 14 Dateien im ursprünglichen Ordner zu iterieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "62890942"
   
 1.  Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
   
-2.  Klicken Sie nach dem Ausführen des Pakets im Menü **Debuggen** auf **Debuggen beenden**.  
+2.  Nachdem die Ausführung des Pakets abgeschlossen ist, klicken Sie im Menü **Debuggen** auf **Debuggen Debuggen**.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 6: Verwenden von Parametern mit dem Projektbereitstellungsmodell](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

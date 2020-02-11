@@ -1,5 +1,5 @@
 ---
-title: Miningstrukturen (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Mining Strukturen (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,24 +22,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083378"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Miningstrukturen (Analysis Services - Data Mining)
   In der Miningstruktur werden die Daten definiert, aus denen Miningmodelle erstellt werden. Es werden die Quelldatensicht, die Anzahl und der Typ von Spalten sowie eine optionale Partitionierung in Trainings- und Testsätze angegeben. Eine einzelne Miningstruktur kann mehrere Miningmodelle unterstützen, die die gleiche Domäne verwenden. In der folgenden Abbildung ist die Beziehung der Data Mining-Struktur zur Datenquelle und zu den dazugehörigen Data Mining-Modellen dargestellt.  
   
- ![Datenverarbeitung: Quelle Struktur Modell](../media/dmcon-modelarch.gif "Datenverarbeitung: Quelle auf Struktur zum Modell")  
+ ![Datenverarbeitung: Quelle-zu-Struktur-zu-Modell](../media/dmcon-modelarch.gif "Datenverarbeitung: Quelle-zu-Struktur-zu-Modell")  
   
  Die Miningstruktur in der Abbildung basiert auf einer Datenquelle, die mehrere Tabellen oder Sichten enthält, die über das Feld CustomerID verknüpft sind. Eine Tabelle enthält Informationen zu Kunden, wie geografische Region, Alter, Einkommen und Geschlecht, während die dazugehörige geschachtelte Tabelle mehrere Zeilen mit Zusatzinformationen zu den einzelnen Kunden enthält, z. B. vom Kunden gekaufte Produkte. Die Abbildung zeigt, dass mehrere Modelle für eine Miningstruktur erstellt werden können und dass die Modelle unterschiedliche Spalten der Struktur verwenden können.  
   
- **Modell 1** Verwendet CustomerID, Einkommen, Alter, Region und filtert die Daten nach der Region.  
+ **Modell 1** Verwendet CustomerID, Einkommen, Alter, Region und filtert die Daten in der Region.  
   
  **Modell 2** Verwendet CustomerID, Einkommen, Alter, Region und filtert die Daten nach dem Alter.  
   
- **Model 3** Verwendet CustomerID, Alter, Geschlecht und die geschachtelte Tabelle ohne Filter.  
+ **Modell 3** Verwendet CustomerID, Alter, Geschlecht und die-Tabelle ohne Filter.  
   
  Da die Modelle unterschiedliche Spalten als Eingabe verwenden und zwei Modelle die im Modell verwendeten Daten mithilfe von Filtern zusätzlich beschränken, können die Modelle stark unterschiedliche Ergebnisse aufweisen, obwohl sie auf denselben Daten basieren. Beachten Sie, dass die Spalte CustomerID in allen Modellen erforderlich ist, da es sich um die einzige Spalte handelt, die als Fallschlüssel verwendet werden kann.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "66083378"
   
 -   Definieren Sie einen Schlüssel für die Struktur, einschließlich des Schlüssels für die geschachtelte Tabelle (sofern vorhanden).  
   
--   Geben Sie an, ob die Quelldaten in einen Trainings- und einen Testsatz unterteilt werden sollen. Dies ist ein optionaler Schritt.  
+-   Geben Sie an, ob die Quelldaten in einen Trainings- und einen Testsatz unterteilt werden sollen. Dieser Schritt ist optional.  
   
 -   Verarbeiten Sie die Struktur.  
   
- Diese Schritte werden in den folgenden Abschnitten ausführlicher beschrieben.  
+ Diese Schritte werden in den folgenden Abschnitten genauer beschrieben.  
   
 ### <a name="data-sources-for-mining-structures"></a>Datenquellen für Miningstrukturen  
  Beim Definieren einer Miningstruktur können Sie Spalten verwenden, die in einer vorhandenen Datenquellensicht verfügbar sind. Eine Datenquellensicht ist ein freigegebenes Objekt, mit dem Sie mehrere Datenquellen kombinieren und als einzelne Quelle verwenden können. Die ursprünglichen Datenquellen sind für Clientanwendungen nicht sichtbar, und Sie können die Eigenschaften der Datenquellensicht verwenden, um Datentypen zu ändern und um Aggregationen oder Aliase für Spalten zu erstellen.  
@@ -112,7 +112,7 @@ ms.locfileid: "66083378"
 ## <a name="related-tasks"></a>Related Tasks  
  Verwenden Sie die im Folgenden angegebenen Links, um weitere Informationen zum Definieren, Verwalten und Verwenden von Miningstrukturen zu erhalten.  
   
-|Richtlinienübersicht|Links|  
+|Aufgaben|Links|  
 |-----------|-----------|  
 |Arbeiten mit relationalen Miningstrukturen|[Erstellen einer neuen relationalen Miningstruktur](create-a-new-relational-mining-structure.md)<br /><br /> [Hinzufügen einer geschachtelten Tabelle zu einer Miningstruktur](add-a-nested-table-to-a-mining-structure.md)|  
 |Arbeiten mit Miningstrukturen, die auf Cubes basieren|[Erstellen einer neuen OLAP-Miningstruktur](create-a-new-olap-mining-structure.md)<br /><br /> [Filtern des Quellcubes für eine Miningstruktur](../filter-the-source-cube-for-a-mining-structure.md)|  
@@ -120,8 +120,8 @@ ms.locfileid: "66083378"
 |Ändern oder Abfragen von Eigenschaften und Daten einer Miningstruktur|[Ändern der Eigenschaften einer Miningstruktur](change-the-properties-of-a-mining-structure.md)|  
 |Arbeiten mit den zugrunde liegenden Datenquellen und Aktualisieren von Quelldaten|[Bearbeiten der für eine Miningstruktur verwendeten Datenquellensicht](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Verarbeiten einer Miningstruktur](process-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbankobjekte &#40;Analysis Services Mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)  
   
   

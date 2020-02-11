@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie erweiterte Ereignisse (XEvents) von SQLServer zum Überwachen von Analysis Services | Microsoft-Dokumentation
+title: Verwenden von SQL Server erweiterten Ereignissen (xevents) zum Überwachen von Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079737"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Verwenden von erweiterten Ereignissen von SQL Server (XEvents) zum Überwachen von Analysis Services
-  Analysis Services bietet Ablaufverfolgungsfunktionen durch die Verwendung von [Extended Events](../../relational-databases/extended-events/extended-events.md).  
+  Analysis Services bietet Ablauf Verfolgungs Funktionen durch die Verwendung von [erweiterten Ereignissen](../../relational-databases/extended-events/extended-events.md).  
   
  Erweiterte Ereignisse ist eine Ereignisinfrastruktur, die für Serversysteme stark skalierbar und konfigurierbar ist. Erweiterte Ereignisse ist ein Lightweight-Leistungsüberwachungssystem, das sehr wenige Leistungsressourcen verwendet.  
   
- Alle Analysis Services-Ereignisse aufgezeichnet werden können und auf bestimmte Consumer, gemäß Definition in ausgerichtet [Extended Events](../../relational-databases/extended-events/extended-events.md), durch XEvents.  
+ Alle Analysis Services Ereignisse können aufgezeichnet und für bestimmte Consumer, die in [erweiterten Ereignissen](../../relational-databases/extended-events/extended-events.md)definiert sind, mithilfe von xevents als Ziel festgelegt werden.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Initiieren von Erweiterte Ereignisse in Analysis Services  
  Die Erweiterte Ereignis-Ablaufverfolgung wird mit einem ähnlichen XMLA-Skriptbefehl zum Erstellen eines Objekts wie unten dargestellt aktiviert:  
@@ -98,7 +98,7 @@ ms.locfileid: "66079737"
  *trace_id*  
  Definiert den eindeutigen Bezeichner für die zu löschende Ablaufverfolgung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   

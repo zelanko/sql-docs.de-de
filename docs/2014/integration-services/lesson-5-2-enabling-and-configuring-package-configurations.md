@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891056"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen
@@ -26,24 +26,24 @@ ms.locfileid: "62891056"
   
 2.  Wählen Sie im Menü [!INCLUDE[ssIS](../includes/ssis-md.md)] den Befehl **Variablen**aus.  
   
-3.  Klicken Sie im Fenster **Variablen** auf das Symbol „Variable hinzufügen“.  
+3.  Klicken Sie im Fenster **Variablen** auf das Symbol Variable hinzufügen .  
   
 4.  Geben Sie im Feld **Name** den Namen **varFolderName**ein.  
   
     > [!IMPORTANT]  
     >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
-5.  Überprüfen Sie, ob im Feld **Bereich** der Name des Pakets (Lesson 5) angezeigt wird.  
+5.  Vergewissern Sie sich, dass im Feld **Bereich** der Name des Pakets, Lektion 5, angezeigt wird.  
   
 6.  Legen Sie den Wert des Felds **Datentyp** der `varFolderName` -Variable auf **String**fest.  
   
 7.  Kehren Sie zur Registerkarte **Ablaufsteuerung** zurück, und doppelklicken Sie auf den **Foreach File in Folder** -Container.  
   
-8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
+8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
-9. In der **Eigenschaftsausdrucks-Editor**, klicken Sie in der **Eigenschaft** aus, und wählen Sie `Directory`.  
+9. Klicken Sie im **Eigenschafts Ausdrucks-Editor**in die Liste **Eigenschaft** , und `Directory`wählen Sie aus.  
   
-10. In der **Ausdruck** klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
+10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungs Punkten **(...)**.  
   
 11. Erweitern Sie im **Ausdrucks-Generator**den Ordner Variablen, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck** .  
   
@@ -55,11 +55,11 @@ ms.locfileid: "62891056"
   
 ### <a name="to-enable-package-configurations"></a>So aktivieren Sie Paketkonfigurationen  
   
-1.  Klicken Sie im **Menü 'Projekt'** auf **In Paketbereitstellungsmodell konvertieren**.  
+1.  Klicken Sie im **Menü Projekt**auf **in Paket Bereitstellungs Modell konvertieren**.  
   
 2.  Klicken Sie in der Warnungs-Eingabeaufforderung auf **OK** , nachdem die Konvertierung abgeschlossen ist, und klicken Sie im Dialogfeld **In Paketbereitstellungsmodell konvertieren** auf **OK** .  
   
-3.  Klicken Sie in den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer.  
+3.  Klicken Sie in den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer.  
   
 4.  Klicken Sie im Menü **SSIS** auf **Paketkonfigurationen**.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "62891056"
   
 9. Standardmäßig wird das Dialogfeld **Speicherort der Konfigurationsdatei auswählen** mit dem Projektordner geöffnet.  
   
-10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen** **SSISTutorial**ein, und klicken Sie auf **Speichern**.  
+10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen****SSISTutorial**ein, und klicken Sie auf **Speichern**.  
   
-11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter**.  
+11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter.**  
   
-12. Erweitern Sie **Variablen** auf der Seite **Eigenschaften für den Exportvorgang auswählen** im Bereich **Objekte**, erweitern Sie **varFolderName**und **Eigenschaften**, und wählen Sie anschließend **Wert**aus.  
+12. Erweitern Sie auf der Seite **Eigenschaften für den Export auswählen** im Bereich **Objekte** den Knoten **Variablen**, erweitern Sie **varFolderName**, erweitern Sie **Eigenschaften**, und wählen Sie dann **Wert**aus.  
   
 13. Klicken Sie auf der Seite **Eigenschaften für den Exportvorgang auswählen** auf **Weiter**.  
   
@@ -87,24 +87,24 @@ ms.locfileid: "62891056"
   
 16. Klicken Sie auf **Schließen**.  
   
-17. Der Assistent erstellt eine Konfigurationsdatei mit dem Namen SSISTutorial.dtsConfig, die enthält Konfigurationseinstellungen für die `value` der Variablen, die wiederum die `Directory` -Eigenschaft des Enumerators.  
+17. Der Assistent erstellt eine Konfigurationsdatei mit dem Namen SSISTutorial. dzconfig, die Konfigurationseinstellungen für den `value` der Variablen enthält, die wiederum die `Directory` -Eigenschaft des Enumerators festlegt.  
   
     > [!NOTE]  
     >  Eine Konfigurationsdatei enthält typischerweise komplexe Informationen zu den Paketeigenschaften. In diesem Lernprogramm sollte die einzige Konfigurationsinformation allerdings Folgende sein:  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
-    >  \<ConfiguredValue>\</ConfiguredValue>  
-    > \</ Configuration >.  
+    > Path = "\Package.variables [User:: varFolderName]. Properties [value] "ValueType =" String "\>  
+    >  \<>\</ConfiguredValue konfiguri>  
+    > \</Konfiguration->.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>So erstellen und füllen Sie einen neuen Beispieldatenordner  
   
-1.  Im Windows-Explorer auf der Stammebene des Laufwerks (z. B. "c:"\\), erstellen Sie einen neuen Ordner namens `New Sample Data`.  
+1.  Erstellen Sie in Windows-Explorer auf der Stamm Ebene Ihres Laufwerks (z. b\\. C:) einen neuen Ordner `New Sample Data`mit dem Namen.  
   
 2.  Suchen Sie die Beispieldateien auf dem Computer, und kopieren Sie drei der Dateien aus dem Ordner.  
   
-3.  In der `New Sample Data` Ordner die kopierten Dateien einfügen.  
+3.  Fügen Sie `New Sample Data` die kopierten Dateien in den Ordner ein.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

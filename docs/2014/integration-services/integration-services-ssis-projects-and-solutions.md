@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Projekte (SSIS) | Microsoft-Dokumentation
+title: Integration Services (SSIS)-Projekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892490"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services-Projekte (SSIS)
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  
   
- Wenn Sie Pakete auf einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank oder im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Paketspeicher bereitstellen, verwenden Sie den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst, um die Pakete zu verwalten. Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst steht nur in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]zur Verfügung. Weitere Informationen über den Dienst finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md). Weitere Informationen zur paketbereitstellung finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ Wenn Sie Pakete in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank oder im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket Speicher bereitstellen, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwenden Sie den-Dienst, um die Pakete zu verwalten. Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst steht nur in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]zur Verfügung. Weitere Informationen über den Dienst finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md). Weitere Informationen zur Paket Bereitstellung finden Sie unter [Paket Bereitstellung &#40;SSIS-&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Wenn Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitstellen, verwenden Sie Transact-SQL-Sichten und gespeicherte Prozeduren in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um die Projekte zu verwalten. Weitere Informationen zur Projektbereitstellung finden Sie unter [Bereitstellung von Projekten und Paketen](packages/deploy-integration-services-ssis-projects-and-packages.md). Weitere Informationen über den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -37,22 +38,22 @@ ms.locfileid: "62892490"
   
  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]werden in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekten die mit dem Paket verknüpften Dateien gespeichert und gruppiert. Beispielsweise enthält ein Projekt die zum Erstellen einer bestimmten ETL-Projektmappe (Extract, Transfer, And Load) erforderlichen Dateien.  
   
- Vor dem Erstellen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts sollten Sie sich mit den grundlegenden Inhalten dieser Art von Projekten vertraut machen. Wenn Sie die Inhalte eines Projekts verstanden haben, können Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt erstellen und verwenden.  
+ Vor dem Erstellen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts sollten Sie sich mit den grundlegenden Inhalten dieser Art von Projekten vertraut machen. Wenn Sie die Inhalte eines Projekts verstanden haben, können Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt erstellen und verwenden.  
   
 ### <a name="folders-in-integration-services-projects"></a>Ordner in SQL Server Integration Services-Projekten  
  Im folgenden Diagramm werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]veranschaulicht.  
   
- ![Ordner in einem Integration Services-Projekt](media/solutionexplorer.gif "Folders in an Integration Services project")  
+ ![Ordner in einem Integration Services-Projekt](media/solutionexplorer.gif "Ordner in einem Integration Services-Projekt")  
   
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.  
   
-|Ordner|Beschreibung|  
+|Ordner|BESCHREIBUNG|  
 |------------|-----------------|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|  
-|Sonstiges|Enthält Dateien, die sich von Paketdateien unterscheiden.|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)]Spar|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|  
+|Verschiedenes|Enthält Dateien, die sich von Paketdateien unterscheiden.|  
   
 ### <a name="files-in-integration-services-projects"></a>Dateien in SQL Server Integration Services-Projekten  
- Wenn Sie einer Projektmappe ein neues oder vorhandenes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt hinzufügen, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Projektdateien mit den Erweiterungen DTPROJ, DTPROJ.USER und DATABASE.  
+ Wenn Sie einer Projektmappe ein neues oder vorhandenes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Projektdateien mit den Erweiterungen DTPROJ, DTPROJ.USER und DATABASE.  
   
 -   Die DTPROJ-Datei enthält Informationen zu Projektkonfigurationen und Elementen wie Pakete.  
   
@@ -74,12 +75,12 @@ ms.locfileid: "62892490"
  Zwar wird von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] beim Erstellen eines neuen Projekts automatisch eine Projektmappe erstellt, jedoch können Sie auch eine leere Projektmappe erstellen und später Projekte hinzufügen.  
   
 > [!NOTE]  
->  Wenn Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektexplorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen**aus.  
+>  Wenn Sie in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ein neues [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektexplorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen**aus.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Hinzufügen oder Entfernen eines Integration Services-Projekts in einer Projektmappe](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
- [Erstellen eines neuen SQL Server Integration Services-Projekts](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Erstellen eines neuen Integration Services Projekts](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
  [Hinzufügen eines Elements zu einem Integration Services-Projekt](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   

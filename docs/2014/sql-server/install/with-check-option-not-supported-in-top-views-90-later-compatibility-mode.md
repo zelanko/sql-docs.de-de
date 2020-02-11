@@ -1,5 +1,5 @@
 ---
-title: WITH CHECK OPTION wird in Sichten, enthalten oben im Kompatibilitätsmodus 90 oder höher, nicht unterstützt | Microsoft-Dokumentation
+title: WITH Check Option wird in Sichten, die Top in 90 oder höheren Kompatibilitäts Modi enthalten, nicht unterstützt. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 254969e6201795e2f4ae512e03be26419b71d866
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091001"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>WITH CHECK OPTION wird nicht in Sichten unterstützt, die die TOP-Klausel im Kompatibilitätsmodus 90 oder höher enthalten
@@ -27,10 +27,10 @@ ms.locfileid: "66091001"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
- Beim Upgrade behalten die Benutzerdatenbanken ihren Kompatibilitätsmodus bei. Bevor Sie den Datenbank-Kompatibilitätsmodus in 100 oder höher ändern, ändern Sie Sichten, die sowohl die WITH CHECK OPTION als auch die TOP-Klausel verwenden, wenn die Datenänderung über die Sicht erforderlich ist. Weitere Informationen finden Sie unter [Sp_dbcmptlevel &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql).  
+ Beim Upgrade behalten die Benutzerdatenbanken ihren Kompatibilitätsmodus bei. Bevor Sie den Datenbank-Kompatibilitätsmodus in 100 oder höher ändern, ändern Sie Sichten, die sowohl die WITH CHECK OPTION als auch die TOP-Klausel verwenden, wenn die Datenänderung über die Sicht erforderlich ist. Weitere Informationen finden Sie unter [sp_dbcmptlevel &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

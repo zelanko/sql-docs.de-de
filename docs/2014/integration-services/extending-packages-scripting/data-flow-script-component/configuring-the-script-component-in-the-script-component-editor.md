@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894814"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
@@ -49,7 +49,7 @@ ms.locfileid: "62894814"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>Seite 'Eingabespalten' des Transformations-Editors für Skripterstellung  
  Die Seite **Eingabespalten** im **Transformations-Editor für Skripterstellung** wird für Transformationen und Ziele, nicht jedoch für Quellen angezeigt. Auf dieser Seite wählen Sie die Eingabespalten aus, die Sie für das benutzerdefinierte Skript verfügbar machen möchten, und legen Lese- oder Lese-/Schreibzugriff darauf fest.  
   
- Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Eingabe eine Klasse, die wiederum typisierte Accessoreigenschaften für jede ausgewählte Eingabespalte beinhaltet. Wenn Sie eine ganze Zahl auswählen, z. B. **"CustomerID"** Spalte und eine Zeichenfolge **CustomerName** Spalte aus einer Eingabe namens `CustomerInput`, enthält das Projektelement BufferWrapper eine `CustomerInput` Klasse die von abgeleitet ist <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, und die `CustomerInput` Klasse macht eine Ganzzahleigenschaft, die mit dem Namen **"CustomerID"** und eine Zeichenfolgeneigenschaft, die mit dem Namen **CustomerName**. Diese Konvention macht es möglich, Code mit einer Typprüfung wie im folgenden Beispiel zu schreiben:  
+ Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Eingabe eine Klasse, die wiederum typisierte Accessoreigenschaften für jede ausgewählte Eingabespalte beinhaltet. Wenn Sie z. b. eine ganzzahlige **CustomerID-** Spalte und eine **CustomerName** -Zeichen folgen `CustomerInput`Spalte aus einer Eingabe namens auswählen, enthält das `CustomerInput` BufferWrapper-Projekt <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>Element eine Klasse `CustomerInput` , die von abgeleitet ist, und die-Klasse macht eine ganzzahlige Eigenschaft mit dem Namen **CustomerID** und eine Zeichen folgen Eigenschaft namens **CustomerName**verfügbar Diese Konvention macht es möglich, Code mit einer Typprüfung wie im folgenden Beispiel zu schreiben:  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -67,7 +67,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   Wenn die Skriptkomponente als Ziel verwendet wird, unterstützt sie eine Eingabe, hat jedoch keine Ausgaben.  
   
- Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Ein- und Ausgabe eine Klasse. Angenommen, Sie erstellen Sie eine Ausgabe namens `CustomerOutput`, enthält das Projektelement BufferWrapper eine `CustomerOutput` abgeleitete Klasse <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, und die `CustomerOutput` -Klasse beinhaltet typisierte Accessoreigenschaften für jede erstellte Ausgabespalte.  
+ Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Ein- und Ausgabe eine Klasse. Wenn Sie z. b. eine Ausgabe mit `CustomerOutput`dem Namen erstellen, enthält das BufferWrapper- `CustomerOutput` Projekt Element eine Klasse <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, die von `CustomerOutput` abgeleitet wird, und die-Klasse enthält typisierte Accessoreigenschaften für jede erstellte Ausgabe Spalte.  
   
  Sie können Ausgabespalten nur auf der Seite **Eingaben und Ausgaben** konfigurieren. Eingabespalten für Transformationen und Ziele können Sie auf der Seite **Eingabespalten** auswählen. Für Ausgabespalten weisen die im Projektelement BufferWrapper erstellten typisierten Accessoreigenschaften nur Schreibzugriff auf. Die Accessoreigenschaften für Eingabespalten haben dagegen Lese- oder Lese-/Schreibzugriff, je nachdem, welche Nutzungsart Sie auf der Seite **Eingabespalten** für die jeweilige Spalte festgelegt haben.  
   
@@ -82,11 +82,11 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Die `SynchronousInputID`-Eigenschaft verfügt nur in Transformationen mit synchronen Ausgaben über einen Wert ungleich null. Wenn der Wert dieser Eigenschaft null ist, bedeutet dies, dass die Ausgabe asynchron ist. Für eine synchrone Ausgabe, bei der Zeilen an die gewählten Ausgaben übergeben werden, ohne neue Zeilen hinzuzufügen, sollte die Eigenschaft die `ID` der Komponenteneingabe enthalten.  
   
 > [!NOTE]  
->  Wenn die **Transformations-Editor** die erste Ausgabe generiert, legt die `SynchronousInputID` -Eigenschaft der Ausgabe, die `ID` der komponenteneingabe. Bei der Erstellung weiterer Ausgaben legt der Editor die `SynchronousInputID`-Eigenschaften dieser Ausgaben auf null fest.  
+>  Wenn der **Transformations-Editor für Skript** Erstellung die erste Ausgabe erstellt, legt `SynchronousInputID` der Editor die-Eigenschaft der `ID` Ausgabe auf die der Komponenten Eingabe fest. Bei der Erstellung weiterer Ausgaben legt der Editor die `SynchronousInputID`-Eigenschaften dieser Ausgaben auf null fest.  
 >   
->  Wenn Sie eine Komponente mit synchronen Ausgaben erstellen, kann jede Ausgabe benötigen die `SynchronousInputID` -Eigenschaftensatz auf die `ID` der komponenteneingabe. Daher muss für jede Ausgabe, die der Editor nach der ersten generiert, der `SynchronousInputID`-Wert von null in die `ID` der Komponenteneingabe geändert werden.  
+>  Wenn Sie eine Komponente mit synchronen Ausgaben erstellen, muss die-Eigenschaft für `SynchronousInputID` jede Ausgabe auf die `ID` der Komponenten Eingabe festgelegt sein. Daher muss für jede Ausgabe, die der Editor nach der ersten generiert, der `SynchronousInputID`-Wert von null in die `ID` der Komponenteneingabe geändert werden.  
 >   
->  Wenn Sie eine Komponente mit asynchronen Ausgaben erstellen, muss die `SynchronousInputID`-Eigenschaft für jede Ausgabe auf null gesetzt sein. Aus diesem Grund müssen die erste Ausgabe dessen `SynchronousInputID` Wert geändert wird, aus der `ID` der komponenteneingabe 0 (null).  
+>  Wenn Sie eine Komponente mit asynchronen Ausgaben erstellen, muss die `SynchronousInputID`-Eigenschaft für jede Ausgabe auf null gesetzt sein. Daher muss der `SynchronousInputID` Wert der ersten Ausgabe von der `ID` der Komponenten Eingabe in NULL geändert werden.  
   
  Ein Beispiel für das Weiterleiten von Zeilen an eine von zwei synchronen Ausgaben in der Skriptkomponente finden Sie unter [Creating a Synchronous Transformation with the Script Component (Erstellen einer synchronen Transformation mit der Skriptkomponente)](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
@@ -117,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>Seite 'Verbindungs-Manager' des Transformations-Editors für Skripterstellung  
  Auf der Seite **Verbindungs-Manager** im **Transformations-Editor für Skripterstellung** können Sie Verbindungs-Manager hinzufügen und entfernen, die im benutzerdefinierten Skript verwendet werden sollen. Normalerweise müssen Sie Verbindungs-Manager mit Verweisen versehen, wenn Sie eine Quell- oder Zielkomponente erstellen.  
   
- Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement `ComponentWrapper` eine `Connections`-Auflistungsklasse, die für jeden ausgewählten Verbindungs-Manager eine typisierte Accessoreigenschaft aufweist. Jede typisierte Accessoreigenschaft trägt denselben Namen wie der jeweilige Verbindungs-Manager und gibt einen Verweis auf den Verbindungs-Manager als Instanz von <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> zurück. Wenn Sie beispielsweise auf der Seite **Verbindungs-Manager** des Editors den Verbindungs-Manager `MyADONETConnection` hinzugefügt haben, können Sie mit dem folgenden Code einen Verweis auf diesen Verbindungs-Manager im Skript erhalten:  
+ Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement `ComponentWrapper` eine `Connections`-Auflistungsklasse, die für jeden ausgewählten Verbindungs-Manager eine typisierte Accessoreigenschaft aufweist. Jede typisierte Accessoreigenschaft trägt denselben Namen wie der jeweilige Verbindungs-Manager und gibt einen Verweis auf den Verbindungs-Manager als Instanz von <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> zurück. Wenn Sie beispielsweise auf der Seite `MyADONETConnection`Verbindungs-Manager** des Editors den Verbindungs-Manager ** hinzugefügt haben, können Sie mit dem folgenden Code einen Verweis auf diesen Verbindungs-Manager im Skript erhalten:  
   
 ```vb  
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _  
@@ -126,9 +126,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Weitere Informationen finden Sie unter [Connecting to Data Sources in the Script Component (Herstellen einer Verbindung mit Datenquellen in der Skriptkomponente)](connecting-to-data-sources-in-the-script-component.md).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Codieren und Debuggen der Skriptkomponente](coding-and-debugging-the-script-component.md)  
   
   

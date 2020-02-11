@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Modellen (Data Mining-Add-ins für Office) | Microsoft-Dokumentation
+title: Anzeigen von Modellen (Data Mining-Add-Ins für Office) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065528"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Anzeigen von Modellen (Data Mining-Add-Ins für Office)
@@ -31,13 +31,13 @@ ms.locfileid: "66065528"
   
 -   Verwenden Sie die Data Mining-Shapes in Visio, um eine interaktive Präsentation zu erstellen.  
   
-     [Anzeigen von Datamining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+     [Anzeigen von Data Mining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
--   Verwenden der **Dokumentmodell** -Assistent eine Zusammenfassung der Metadaten des Modells und des Modellinhalts zu generieren.  
+-   Mit dem **Dokument Modell** -Assistenten können Sie eine Zusammenfassung der Metadaten des Modells und des Modell Inhalts generieren.  
   
-     [Dokumentieren von Miningmodellen &#40;Data Mining-Add-ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
+     [Dokumentieren von Mining Modellen &#40;Data Mining-Add-Ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfrage &#40;SQL Server Data Mining-Add-ins&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

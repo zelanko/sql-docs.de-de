@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889633"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines Remotepakets
@@ -36,7 +36,7 @@ ms.locfileid: "62889633"
   
 -   [Verwenden eines Webdiensts oder einer Remotekomponente zum programmgesteuerten Auszuführen eines Remotepakets](#service)  
   
- Nahezu alle in diesem Thema erläuterten Methoden zum Laden und Speichern von Paketen erfordern einen Verweis auf die `Microsoft.SqlServer.ManagedDTS`-Assembly. Die Ausnahme ist die ADO.NET-Ansatz in diesem Thema für die Ausführung der **Sp_start_job** gespeicherte Prozedur erfordert lediglich einen Verweis auf `System.Data`. Nachdem Sie den Verweis in einem neuen Projekt zur `Microsoft.SqlServer.ManagedDTS`-Assembly hinzugefügt haben, importieren Sie den <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace mit der Anweisung `using` oder `Imports`.  
+ Nahezu alle in diesem Thema erläuterten Methoden zum Laden und Speichern von Paketen erfordern einen Verweis auf die `Microsoft.SqlServer.ManagedDTS`-Assembly. Die Ausnahme ist der ADO.net-Ansatz, der in diesem Thema veranschaulicht wird, um die gespeicherte Prozedur **sp_start_job** auszuführen, bei `System.Data`der nur ein Verweis auf erforderlich ist. Nachdem Sie den Verweis in einem neuen Projekt zur `Microsoft.SqlServer.ManagedDTS`-Assembly hinzugefügt haben, importieren Sie den <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace mit der Anweisung `using` oder `Imports`.  
   
 ###  <a name="agent"></a> Verwenden von SQL Server-Agent zum programmgesteuerten Ausführen eines Remotepakets auf dem Server  
  Im folgenden Beispielcode wird die programmgesteuerte Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum Ausführen eines Remotepakets auf dem Server veranschaulicht. Im Codebeispiel wird die gespeicherte Systemprozedur **sp_start_job** aufgerufen, die einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag startet. Der Auftrag, den die Prozedur startet, hat den Namen `RunSSISPackage` und befindet sich auf dem Remotecomputer. Der `RunSSISPackage`-Auftrag führt das Paket auf dem Remotecomputer aus.  
@@ -158,17 +158,17 @@ namespace LaunchSSISPackageAgent_CS
  In den folgenden Codebeispielen wird gezeigt, wie der Webdienst erstellt und getestet wird.  
   
 #### <a name="creating-the-web-service"></a>Erstellen des Webdiensts  
- Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann direkt aus einer Datei, direkt aus SQL Server oder aus dem SSIS-Paketspeicher geladen werden, der die Paketspeicherung sowohl in SQL Server-Ordnern als auch in speziellen Dateisystemordnern verwaltet. Dieses Beispiel unterstützt alle verfügbaren Optionen mithilfe eines `Select Case`- oder eines `switch`-Konstrukts, damit die geeignete Syntax zum Starten des Pakets ausgewählt wird und die Eingabeargumente entsprechend verkettet werden können. Die LaunchPackage<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Webdienstmethode gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Wert, sodass Clientcomputers keinen Verweis auf -Assemblys benötigen.  
+ Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann direkt aus einer Datei, direkt aus SQL Server oder aus dem SSIS-Paketspeicher geladen werden, der die Paketspeicherung sowohl in SQL Server-Ordnern als auch in speziellen Dateisystemordnern verwaltet. Dieses Beispiel unterstützt alle verfügbaren Optionen mithilfe eines `Select Case`- oder eines `switch`-Konstrukts, damit die geeignete Syntax zum Starten des Pakets ausgewählt wird und die Eingabeargumente entsprechend verkettet werden können. Die <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>LaunchPackage[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Webdienstmethode gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als {3}-Wert, sodass Clientcomputers keinen Verweis auf {4}-Assemblys benötigen.  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>So erstellen Sie einen Webdienst zum programmgesteuerten Ausführen von Paketen auf dem Server  
   
 1.  Öffnen Sie Visual Studio, und erstellen Sie in der gewünchsten Programmiersprache ein Webdienstprojekt. Im Beispielcode wird der Name "LaunchSSISPackageService" für das Projekt verwendet.  
   
-2.  Hinzufügen eines Verweises auf `Microsoft.SqlServer.ManagedDTS` und Hinzufügen einer `Imports` oder `using` Anweisung, um die Codedatei für die **Microsoft.SqlServer.Dts.Runtime** Namespace.  
+2.  Fügen Sie einen Verweis `Microsoft.SqlServer.ManagedDTS` auf hinzu, `Imports` und `using` fügen Sie der Codedatei für den **Microsoft. SqlServer. DTS. Runtime** -Namespace eine-oder-Anweisung hinzu.  
   
 3.  Fügen Sie den Beispielcode für die LaunchPackage-Webdienstmethode in die Klasse ein. (Im Beispiel ist der gesamte Inhalt des Codefensters dargestellt.)  
   
-4.  Erstellen und testen Sie den Webdienst. Stellen Sie hierzu eine Reihe gültiger Werte für die Eingabeargumente der LaunchPackage-Methode bereit, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn package1.dtsx auf dem Server im Verzeichnis C:\My Packages gespeichert ist, übergeben Sie "file" als Wert von sourceType, "C:\My Packages" als Wert von sourceLocation und "package1" (ohne Erweiterung) als Wert von packageName.  
+4.  Erstellen und testen Sie den Webdienst. Stellen Sie hierzu eine Reihe gültiger Werte für die Eingabeargumente der LaunchPackage-Methode bereit, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn {1}package1.dtsx{2} auf dem Server im Verzeichnis {3}C:\My Packages{4} gespeichert ist, übergeben Sie "file" als Wert von {5}sourceType{6}, "C:\My Packages" als Wert von {7}sourceLocation{8} und "package1" (ohne Erweiterung) als Wert von {9}packageName{10}.  
   
 ```vb  
 Imports System.Web  
@@ -420,11 +420,11 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Video, [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx) auf technet.microsoft.com  
+-   Video [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx) auf technet.microsoft.com  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Programmgesteuertes Laden und Ausführen eines lokalen Pakets](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Laden der Ausgabe eines lokalen Pakets](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

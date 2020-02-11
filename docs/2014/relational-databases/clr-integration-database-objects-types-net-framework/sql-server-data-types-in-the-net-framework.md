@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Datentypen in .NET Framework | Microsoft-Dokumentation
+title: SQL Server Datentypen im .NET Framework | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874538"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>SQL Server-Datentypen in .NET Framework
@@ -37,7 +37,7 @@ ms.locfileid: "62874538"
  [Sortierung und Datentypen für die CLR-Integration](collation-and-clr-integration-data-types.md)  
  Beschreibt, wie Sortierungen bei der CLR-Integration behandelt werden.  
   
- [Behandlung großen Objekte &#40;LOB&#41; Parameter in der CLR](handling-large-object-lob-parameters-in-the-clr.md)  
+ [Behandeln von Large Object &#40;Lob-&#41;-Parametern in der CLR](handling-large-object-lob-parameters-in-the-clr.md)  
  Beschreibt, wie LOB-Typen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und CLR übergeben werden.  
   
  [Zuordnen von CLR-Parameterdaten](mapping-clr-parameter-data.md)  

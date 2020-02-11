@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten von Hierarchien (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Erstellen und Verwalten von Hierarchien (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067496"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Erstellen und Verwalten von Hierarchien (SSAS – tabellarisch)
@@ -28,7 +28,7 @@ ms.locfileid: "66067496"
   
 -   [Löschen einer Hierarchie](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a> Erstellen einer Hierarchie  
+##  <a name="bkmk_create"></a>Erstellen einer Hierarchie  
  Sie können eine Hierarchie mithilfe der Kontextmenüs für Spalten und Tabellen erstellen. Wenn Sie eine Hierarchie erstellen, wird eine neue übergeordnete Ebene mit den ausgewählten Spalten als untergeordnete Ebenen angezeigt.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>So erstellen Sie eine Hierarchie über das Kontextmenü  
@@ -41,12 +41,12 @@ ms.locfileid: "66067496"
   
 2.  Geben Sie einen Namen für die Hierarchie ein.  
   
- Sie können zusätzliche Spalten in der Hierarchie übergeordneten Ebene ziehen, die wodurch die Spalten kopiert. Legen Sie die untergeordnete Ebene an der Stelle ab, an der sie in der Hierarchie angezeigt werden soll.  
+ Sie können zusätzliche Spalten in die übergeordnete Ebene der Hierarchie ziehen, wodurch die Spalten kopiert werden. Legen Sie die untergeordnete Ebene an der Stelle ab, an der sie in der Hierarchie angezeigt werden soll.  
   
 > [!NOTE]  
 >  Wenn Sie ein Measure zusammen mit mindestens einer Spalte auswählen oder Spalten aus mehreren Tabellen auswählen, ist der Befehl Hierarchie erstellen im Kontextmenü deaktiviert.  
   
-##  <a name="bkmk_edit"></a> Bearbeiten einer Hierarchie  
+##  <a name="bkmk_edit"></a>Bearbeiten einer Hierarchie  
  Sie können eine Hierarchie und eine untergeordnete Ebene umbenennen, die Reihenfolge der untergeordneten Ebenen ändern, zusätzliche Spalten als untergeordnete Ebenen hinzufügen, eine untergeordnete Ebene aus einer Hierarchie entfernen, den Quellnamen einer untergeordneten Ebene (Spaltennamen) anzeigen und eine untergeordnete Ebene ausblenden, wenn sie über den gleichen Namen verfügt wie die übergeordnete Hierarchieebene.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>So ändern Sie den Namen einer Hierarchie oder untergeordneten Ebene  
@@ -85,7 +85,7 @@ ms.locfileid: "66067496"
   
 -   Klicken Sie mit der rechten Maustaste auf eine untergeordnete Ebene in der Hierarchie, und klicken Sie dann auf **Quellspaltennamen**einblenden. Der Name der Spalte, von der die Spalte kopiert wurde, wird angezeigt.  
   
-##  <a name="bkmk_delete"></a> Löschen einer Hierarchie  
+##  <a name="bkmk_delete"></a>Löschen einer Hierarchie  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>So löschen Sie eine Hierarchie und entfernen deren untergeordnete Ebenen  
   
@@ -93,9 +93,9 @@ ms.locfileid: "66067496"
   
 -   Klicken Sie auf die übergeordnete Hierarchieebene, und drücken Sie dann ENTF. Dadurch werden auch alle untergeordneten Ebenen entfernt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Designer für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md)   
- [Measures &#40;SSAS – tabellarisch&#41;](measures-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellen Modell-Designer &#40;tabellarischen SSAS-&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [Hierarchien &#40;tabellarischen SSAS-&#41;](hierarchies-ssas-tabular.md)   
+ [Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 2: Hinzufügen und konfigurieren ein Flat File Connection Manager | Microsoft-Dokumentation'
+title: 'Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891789"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
@@ -24,11 +24,11 @@ ms.locfileid: "62891789"
   
  Für dieses Lernprogramm konfigurieren Sie die folgenden Eigenschaften in Ihrem Verbindungs-Manager für Flatfiles:  
   
--   **Spaltennamen:** Weil die Flatfile keine Spaltennamen, erstellt die Verbindungs-Manager für Flatfiles Standardspaltennamen. Diese Standardnamen sind nicht sinnvoll, wenn der Zweck jeder Spalte identifiziert werden soll. Damit diese Standardnamen nützlicher werden, müssen Sie die Standardnamen so ändern, dass sie mit der Faktentabelle übereinstimmen, in die die Flatfiledaten geladen werden.  
+-   **Spaltennamen:** Da die Flatfile keine Spaltennamen hat, erstellt der Verbindungs-Manager für Flatfiles Standard Spaltennamen. Diese Standardnamen sind nicht sinnvoll, wenn der Zweck jeder Spalte identifiziert werden soll. Damit diese Standardnamen nützlicher werden, müssen Sie die Standardnamen so ändern, dass sie mit der Faktentabelle übereinstimmen, in die die Flatfiledaten geladen werden.  
   
--   **Datenzuordnungen:** Die datentypzuordnungen, die Sie, für die Flatfile-Verbindungs-Manager angeben werden von allen Flatfile-datenquellenkomponenten verwendet, die auf den Verbindungs-Manager zu verweisen. Sie können diese Datentypen entweder mithilfe des Verbindungs-Managers für Flatfiles manuell zuordnen oder das Dialogfeld **Spaltentypen vorschlagen** verwenden. In diesem Tutorial werden die vorgeschlagenen Zuordnungen im Dialogfeld **Spaltentypen vorschlagen** angezeigt. Sie nehmen dann manuell die erforderlichen Zuordnungen im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** vor.  
+-   **Daten** Zuordnungen: Die Datentyp Zuordnungen, die Sie für den Verbindungs-Manager für Flatfiles angeben, werden von allen Flatfile-Datenquellen Komponenten verwendet, die auf den Verbindungs-Manager verweisen. Sie können diese Datentypen entweder mithilfe des Verbindungs-Managers für Flatfiles manuell zuordnen oder das Dialogfeld **Spaltentypen vorschlagen** verwenden. In diesem Tutorial werden die vorgeschlagenen Zuordnungen im Dialogfeld **Spaltentypen vorschlagen** angezeigt. Sie nehmen dann manuell die erforderlichen Zuordnungen im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** vor.  
   
- Der Verbindungs-Manager für Flatfiles stellt Gebietsschemainformationen zur Datendatei bereit. Wenn Ihr Computer nicht zur Verwendung der regionalen Einstellung Englisch (USA) konfiguriert ist, müssen Sie zusätzliche Eigenschaften im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** festlegen.  
+ Der Verbindungs-Manager für Flatfiles stellt Gebietsschemainformationen zur Datendatei bereit. Wenn Ihr Computer nicht für die Verwendung der regionalen Option Englisch (USA) konfiguriert ist, müssen Sie zusätzliche Eigenschaften im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** festlegen.  
   
 ### <a name="to-add-a-flat-file-connection-manager-to-the-ssis-package"></a>So fügen Sie einen Flatfile-Verbindungs-Manager zum SSIS-Paket hinzu  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62891789"
   
 1.  Klicken Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** auf **Allgemein**.  
   
-2.  Legen Sie **Gebietsschema** auf Englisch (USA) und **Codepage** auf 1252 fest.  
+2.  Legen **Sie** Gebiets Schema auf Englisch (USA) und **Codepage** auf 1252 fest.  
   
 ### <a name="to-rename-columns-in-the-flat-file-connection-manager"></a>So benennen Sie Spalten im Verbindungs-Manager für Flatfiles um  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62891789"
   
 2.  Nehmen Sie im Eigenschaftenbereich die folgenden Änderungen vor:  
   
-    -   Ändern der **Spalte 0** -Nameneigenschaft in `AverageRate`.  
+    -   Ändern Sie die Name-Eigenschaft der `AverageRate` **Spalte 0** in.  
   
-    -   Ändern der **Spalte1** -Nameneigenschaft in `CurrencyID`.  
+    -   Ändern Sie die Eigenschaft **Column 1** Name `CurrencyID`in.  
   
-    -   Ändern der **Column 2** -Nameneigenschaft in `CurrencyDate`.  
+    -   Ändern Sie die Name-Eigenschaft der `CurrencyDate` **Spalte 2** in.  
   
-    -   Ändern der **Column 3** -Nameneigenschaft in `EndOfDayRate`.  
+    -   Ändern Sie die Name-Eigenschaft der `EndOfDayRate` **Column 3** in.  
   
     > [!NOTE]  
     >  Standardmäßig sind alle vier Spalten auf einen Zeichenfolgendatentyp [DT_STR] mit einer `OutputColumnWidth` von 50 festgelegt.  
@@ -77,7 +77,8 @@ ms.locfileid: "62891789"
   
 1.  Klicken Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** auf **Typen vorschlagen**.  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schlägt automatisch die am besten geeigneten Datentypen auf Basis der ersten 200 Datenzeilen vor. Sie können diese Vorschlagsoptionen auch ändern, um mehr oder weniger Daten auszuwerten, den Standarddatentyp für ganzzahlige oder boolesche Daten anzugeben oder Leerstellen zum Auffüllen von Zeichenfolgenspalten hinzuzufügen.  
+     
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schlägt automatisch die am besten geeigneten Datentypen auf Basis der ersten 200 Datenzeilen vor. Sie können diese Vorschlagsoptionen auch ändern, um mehr oder weniger Daten auszuwerten, den Standarddatentyp für ganzzahlige oder boolesche Daten anzugeben oder Leerstellen zum Auffüllen von Zeichenfolgenspalten hinzuzufügen.  
   
      Nehmen Sie vorerst keine Änderungen an den Optionen im Dialogfeld **Spaltentypen vorschlagen** vor und klicken Sie auf **OK** , damit von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Datentypen für Spalten vorgeschlagen werden. Anschließend kehren Sie zum Bereich **Erweitert** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** zurück, in dem Sie die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]vorgeschlagenen Spaltendatentypen anzeigen können. (Wenn Sie auf **Abbrechen**klicken, werden keine Vorschläge zu Spaltenmetadaten gemacht und wird der Standardtyp für Zeichenfolgendaten (DT_STR) verwendet.)  
   
@@ -85,24 +86,24 @@ ms.locfileid: "62891789"
   
     |Flatfilespalte|Vorgeschlagener Typ|Zielspalte|Zieltyp|  
     |----------------------|--------------------|------------------------|----------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
   
-     Vorgeschlagene Datentyp für die `CurrencyID` Spalte ist nicht kompatibel mit dem Datentyp des Felds in der Zieltabelle. Da der Datentyp des `DimCurrency.CurrencyAlternateKey` Datentyp Nchar (3), `CurrencyID` muss von String [DT_STR] in String [DT_WSTR] geändert werden. Zusätzlich ist das Feld `DimDate.FullDateAlternateKey` ist definiert als Date-Datentyp; aus diesem Grund `CurrencyDate` von Date [DT_Date] in Database Date [DT_DBDATE] geändert werden muss.  
+     Der für die `CurrencyID` Spalte vorgeschlagene Datentyp ist nicht mit dem Datentyp des Felds in der Ziel Tabelle kompatibel. Da der Datentyp von `DimCurrency.CurrencyAlternateKey` NCHAR (3) ist, `CurrencyID` muss von String [DT_STR] in String [DT_WSTR] geändert werden. Außerdem ist das Feld `DimDate.FullDateAlternateKey` als Datums Datentyp definiert. daher `CurrencyDate` muss von Date [DT_DATE] in Database Date [DT_DBDATE] geändert werden.  
   
-2.  Klicken Sie in der Liste die CurrencyID-Spalte wählen, und ändern Sie im Eigenschaftenbereich den Datentyp der Spalte `CurrencyID` von String [DT_STR] in Unicode string [DT_WSTR].  
+2.  Wählen Sie in der Liste die Spalte "accesscyid" aus, und ändern Sie im Eigenschaften Bereich den Datentyp der Spalte `CurrencyID` von "String [DT_STR]" in "Unicode String [DT_WSTR]".  
   
-3.  Ändern Sie im Eigenschaftenbereich den Datentyp der Spalte `CurrencyDate` von Date [DT_DATE] in Database Date [DT_DBDATE].  
+3.  Ändern Sie im Eigenschaften Bereich den Datentyp der Spalte `CurrencyDate` von "Date [DT_DATE]" in "Database Date [DT_DBDATE]".  
   
 4.  Klicken Sie auf **OK**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Schritt 3: Hinzufügen und konfigurieren einen OLE DB-Verbindungs-Manager](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Flatfile-Verbindungs-Managers](connection-manager/file-connection-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verbindungs-Manager für Flatfiles](connection-manager/file-connection-manager.md)   
  [SQL Server Integration Services-Datentypen](data-flow/integration-services-data-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definieren von benutzerdefinierten Elementformeln | Microsoft-Dokumentation
+title: Definieren von benutzerdefinierten Element Formeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077279"
 ---
 # <a name="define-custom-member-formulas"></a>Definieren von benutzerdefinierten Elementformeln
@@ -29,7 +29,7 @@ ms.locfileid: "66077279"
   
  Die `CustomRollupColumn`-Eigenschaft für ein Attribut gibt die Spalte an, in der die benutzerdefinierten Elementformeln für Elemente des Attributs enthalten sind. Ist eine Zeile in der Spalte leer, wird der Zellwert für das Element normal zurückgegeben. Ist die Formel in der Spalte nicht gültig, gibt es einen Laufzeitfehler, sobald ein Zellwert abgerufen wird, der das Element verwendet.  
   
- Vor dem Angeben benutzerdefinierter Elementformeln für ein Attribut sollten Sie sicherstellen, dass die Dimensionstabelle, die das Attribut enthält, bzw. eine direkt verknüpfte Tabelle über eine Zeichenfolgenspalte zum Speichern der benutzerdefinierten Elementformeln verfügt. Wenn dies der Fall ist, können Sie entweder die `CustomRollupColumn` -Eigenschaft für ein Attribut manuell, oder verwenden Sie den Festlegen benutzerdefinierter Elementformeln des Business Intelligence-Assistenten, um eine benutzerdefinierte Elementformel für ein Attribut zu aktivieren. Weitere Informationen zum Verwenden dieser Erweiterung finden Sie unter [Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
+ Vor dem Angeben benutzerdefinierter Elementformeln für ein Attribut sollten Sie sicherstellen, dass die Dimensionstabelle, die das Attribut enthält, bzw. eine direkt verknüpfte Tabelle über eine Zeichenfolgenspalte zum Speichern der benutzerdefinierten Elementformeln verfügt. Wenn dies der Fall ist, können Sie entweder die `CustomRollupColumn` -Eigenschaft für ein Attribut manuell festlegen oder die Erweiterung benutzerdefinierte Element Formel festlegen des Business Intelligence-Assistenten verwenden, um eine benutzerdefinierte Element Formel für ein Attribut zu aktivieren. Weitere Informationen zum Verwenden dieser Erweiterung finden Sie unter [Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## <a name="evaluating-custom-member-formulas"></a>Auswerten von benutzerdefinierten Elementformeln  
  Benutzerdefinierte Elementformeln unterscheiden sich von berechneten Elementen. Benutzerdefinierte Elementformeln gelten für Elemente in Dimensionstabellen und stellen lediglich den Wert des Elements bereit. Berechnete Elemente hingegen werden nicht in Dimensionstabellen gespeichert, und berechnete Elementausdrücke definieren sowohl Daten als auch Metadaten für zusätzliche Elemente in einer Dimension oder Hierarchie.  
@@ -44,7 +44,7 @@ ms.locfileid: "66077279"
   
     -   Quartal 3: 100  
   
-    -   4\. Quartal: 800  
+    -   Quartal 4: 800  
   
 -   2004: 1500  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66077279"
   
     -   Quartal 3: 300  
   
-    -   4\. Quartal: 400  
+    -   Quartal 4: 400  
   
  Bei einer benutzerdefinierten Elementformel wird der Wert des Elements stattdessen von der benutzerdefinierten Rollupformel bereitgestellt. Die folgende benutzerdefinierte Elementformel kann z. B. verwendet werden, um den Wert 450 für das untergeordnete Quarter 4-Element des 2004-Elements in der Time-Dimension anzugeben.  
   
@@ -71,8 +71,8 @@ Time.[Quarter 3] * 1.5
   
  Wenn Sie berechnete Elemente und benutzerdefinierte Rollupformeln für Mitglieder eines Attributs verwenden, sollten Sie die Reihenfolge der Auswertung berücksichtigen. Berechnete Elemente werden vor benutzerdefinierten Rollupformeln aufgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [Attribute und Attributhierarchien](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Attribute und Attribut Hierarchien](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

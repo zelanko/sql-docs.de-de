@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869595"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>Details  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62869595"
 |Meldungstext|Fehler bei der Anmeldung für den Benutzer '%.*ls'.%.\*ls|  
   
 ## <a name="explanation"></a>Erklärung  
- Wenn ein Verbindungsversuch aufgrund eines Authentifizierungsfehlers, die einem falschen Kennwort oder Benutzernamen enthält abgelehnt wird, wird eine Meldung ähnlich der folgenden an den Client zurückgegeben:  "Fehler bei der Anmeldung für den Benutzer <Benutzername>" (Microsoft SQL Server, Fehler: 18456)".  
+ Wird ein Verbindungsversuch aufgrund eines Authentifizierungsfehlers im Zusammenhang mit einem falschen Kennwort oder Benutzernamen zurückgewiesen, wird eine Meldung vergleichbar mit der folgenden an den Client zurückgegeben:  "Fehler bei der Anmeldung für den Benutzer <Benutzername>" (Microsoft SQL Server, Fehler: 18456)".  
   
  Zusätzlich enthalten die an den Client zurückgegebenen Informationen Folgendes:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62869595"
 ## <a name="additional-error-information"></a>Zusätzliche Fehlerinformationen  
  Zur Verbesserung der Sicherheit bleibt die Art des Authentifizierungsfehlers in der an den Client zurückgegebenen Fehlermeldung absichtlich verborgen. Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll hingegen enthält ein entsprechender Fehler einen Fehlerzustand, der einem Authentifizierungsfehler zugeordnet werden kann. Vergleichen Sie den Fehlerzustand mit der folgenden Liste, um den Grund für den Anmeldefehler zu bestimmen.  
   
-|Status|Description|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |1|Es sind keine Fehlerinformationen verfügbar. Dieser Status bedeutet normalerweise, dass Sie keine Berechtigung haben, die Fehlerdetails zu empfangen. Weitere Informationen erhalten Sie beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Administrator.|  
 |2|Die Benutzer-ID ist nicht gültig.|  
@@ -75,9 +75,9 @@ ms.locfileid: "62869595"
   
  Andere Fehlerzustände liegen vor und weisen auf einen unerwarteten internen Verarbeitungsfehler hin.  
   
- **Weitere ungewöhnliche mögliche Ursache**  
+ **Eine zusätzliche ungewöhnliche mögliche Ursache**  
   
- In folgenden Situationen kann folgender Fehler gemeldet werden: **Fehler bei der Anmeldung mit der SQL-Authentifizierung. Der Server ist nur für die Windows-Authentifizierung konfiguriert.** kann in den folgenden Situationen zurückgegeben werden.  
+ Fehler beim **Anmeldeversuch mithilfe der SQL-Authentifizierung. Der Server ist nur für die Windows-Authentifizierung konfiguriert.** kann in den folgenden Situationen zurückgegeben werden.  
   
 -   Der Server ist für die Authentifizierung im gemischten Modus konfiguriert, für eine ODBC-Verbindung wird das TCP-Protokoll verwendet, und für die Verbindung wurde nicht explizit angegeben, dass eine vertrauenswürdige Verbindung verwendet werden soll.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "62869595"
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel ist der Fehlerzustand des Authentifizierungsfehlers 8. Dies zeigt an, dass das Kennwort falsch ist.  
   
-|date|Source|MessageBox|  
+|Date|`Source`|`Message`|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Anmeldung|Fehler: 18456, Schweregrad: 14, Status: 8.|  
-|2007-12-05 20:12:56.34|Anmeldung|Fehler bei der Anmeldung für den Benutzer <Benutzername>. [CLIENT: \<IP-Adresse >]|  
+|2007-12-05 20:12:56.34|Anmeldung|Fehler bei der Anmeldung für den Benutzer <Benutzername>. [Client: \<IP-Adresse>]|  
   
 > [!NOTE]  
->  Wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Windows-Authentifizierungsmodus installiert und später in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und den Windows-Authentifizierungsmodus geändert, wird der Anmeldename **sa** zunächst deaktiviert. Dies bewirkt, dass der Fehler Status 7 ausgelöst: "Fehler bei der Anmeldung für Benutzer'sa'." Informationen zum Aktivieren der **sa**-Anmeldung finden Sie unter [Ändern des Serverauthentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Windows-Authentifizierungsmodus installiert und später in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und den Windows-Authentifizierungsmodus geändert, wird der Anmeldename **sa** zunächst deaktiviert. Dies verursacht den Fehler "Status 7": "Fehler bei der Anmeldung für den Benutzer ' sa '". Informationen zum Aktivieren des **sa** -Anmelde namens finden Sie unter [Ändern des Server Authentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Wenn Sie versuchen, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung herzustellen, überprüfen Sie, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gemischten Authentifizierungsmodus konfiguriert ist.  
@@ -109,6 +109,6 @@ ms.locfileid: "62869595"
   
  Wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] eigenständige Datenbanken unterstützt, vergewissern Sie sich, dass die Anmeldung nach der Migration zu einem Benutzer einer eigenständigen Datenbank nicht gelöscht wurde.  
   
- Wenn Sie lokal eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen, müssen Dienste, die unter **NT AUTHORITY\NETWORK SERVICE** ausgeführt werden, mithilfe des vollqualifizierten Domänennamens des Computers authentifiziert werden. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Ermitteln, Verwenden des Netzwerkdienstkontos den Zugriff auf Ressourcen in ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
+ Wenn Sie lokal eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen, müssen Dienste, die unter **NT AUTHORITY\NETWORK SERVICE** ausgeführt werden, mithilfe des vollqualifizierten Domänennamens des Computers authentifiziert werden. Weitere Informationen finden Sie unter [How To: Use the Network Service Account to Access Resources in ASP.NET (Vorgehensweise: Verwenden des Netzwerkdienstkontos für den Zugriff auf Ressourcen in ASP.NET)](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

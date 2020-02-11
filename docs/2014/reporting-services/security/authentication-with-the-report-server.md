@@ -17,29 +17,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102190"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentifizierung mit dem Berichtsserver
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) bietet mehrere konfigurierbare Optionen zum Authentifizieren von Benutzern und Clientanwendungen am Berichtsserver. Standardmäßig verwendet der Berichtsserver die integrierte Windows-Authentifizierung und geht von vertrauenswürdigen Beziehungen aus, wenn sich Client- und Netzwerkressourcen in der gleichen Domäne oder einer vertrauenswürdigen Domäne befinden. Abhängig von der Netzwerktopologie und den Anforderungen der Organisation können Sie das für die integrierte Windows-Authentifizierung verwendete Authentifizierungsprotokoll anpassen, die Standardauthentifizierung verwenden oder eine selbst bereitgestellte und auf einem benutzerdefinierten Formular basierende Authentifizierungserweiterung nutzen. Jeder dieser Authentifizierungstypen kann individuell aktiviert oder deaktiviert werden. Sie können mehrere Authentifizierungstypen aktivieren, wenn der Berichtsserver mehrere Arten von Anforderungen akzeptieren soll.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) bietet mehrere konfigurierbare Optionen zum Authentifizieren von Benutzern und Client Anwendungen auf dem Berichts Server. Standardmäßig verwendet der Berichtsserver die integrierte Windows-Authentifizierung und geht von vertrauenswürdigen Beziehungen aus, wenn sich Client- und Netzwerkressourcen in der gleichen Domäne oder einer vertrauenswürdigen Domäne befinden. Abhängig von der Netzwerktopologie und den Anforderungen der Organisation können Sie das für die integrierte Windows-Authentifizierung verwendete Authentifizierungsprotokoll anpassen, die Standardauthentifizierung verwenden oder eine selbst bereitgestellte und auf einem benutzerdefinierten Formular basierende Authentifizierungserweiterung nutzen. Jeder dieser Authentifizierungstypen kann individuell aktiviert oder deaktiviert werden. Sie können mehrere Authentifizierungstypen aktivieren, wenn der Berichtsserver mehrere Arten von Anforderungen akzeptieren soll.  
   
 > [!NOTE]  
->  In vorherigen Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wurde die gesamte Authentifizierungsunterstützung von IIS bereitgestellt. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird IIS nicht mehr verwendet. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verarbeitet alle Authentifizierungsanfragen intern.  
+>  In vorherigen Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wurde die gesamte Authentifizierungsunterstützung von IIS bereitgestellt. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird IIS nicht mehr verwendet. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verarbeitet alle Authentifizierungsanfragen intern.  
   
  Alle Benutzer oder Anwendungen, die Zugriff auf Berichtsserverinhalte oder -vorgänge anfordern, müssen vor Gewähren des Zugriffs authentifiziert werden.  
   
 ## <a name="authentication-types"></a>Authentifizierungstypen  
  Alle Benutzer oder Anwendungen, die Zugriff auf Berichtsserverinhalte oder -vorgänge anfordern, müssen vor Gewähren des Zugriffs mit dem Authentifizierungstyp authentifiziert werden, der auf dem Berichtsserver konfiguriert ist. In der folgenden Tabelle werden die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützten Authentifizierungstypen beschrieben.  
   
-|Name Authentifizierungstyp|Wert HTTP-Authentifizierungsebene|Standardmäßig verwendet|Description|  
+|Name Authentifizierungstyp|Wert HTTP-Authentifizierungsebene|Standardmäßig verwendet|BESCHREIBUNG|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Aushandeln|Ja|Versucht für die integrierte Windows-Authentifizierung zunächst eine Kerberos-Authentifizierung zu verwenden, greift jedoch auf NTLM zurück, wenn Active Directory kein Ticket für die Client-Anforderung auf den Berichtsserver gewähren kann. Negotiate greift nur auf NTLM zurück, wenn das Ticket nicht verfügbar ist. Wenn der erste Versuch zu einem Fehler (außer einem nicht verfügbaren Ticket) führt, unternimmt der Berichtsserver keinen zweiten Versuch.|  
 |RSWindowsNTLM|NTLM|Ja|Verwendet für die integrierte Windows-Authentifizierung NTLM.<br /><br /> Die Anmeldeinformationen werden nicht delegiert oder durch einen Identitätswechsel für andere Anforderungen verwendet. Nachfolgende Anforderungen befolgen eine neue Abfrage-/Rückmeldungs-Sequenz. Je nach den Einstellungen für die Netzwerksicherheit können Benutzer aufgefordert werden, Anmeldeinformationen einzugeben, oder die Authentifizierungsanforderung wird transparent verarbeitet.|  
 |RSWindowsKerberos|Kerberos|Nein|Verwendet für die integrierte Windows-Authentifizierung Kerberos. Sie müssen Kerberos konfigurieren, indem Sie Dienstprinzipalnamen (Service Principle Names, SPNs) für die Dienstkonten einrichten, die Domänenadministratorberechtigungen erfordern. Wenn Sie für Kerberos die Identitätsdelegierung aktivieren, kann das Token des den Bericht anfordernden Benutzers auch für eine zusätzliche Verbindung zu den externen Datenquellen verwendet werden, die Daten für Berichte liefern.<br /><br /> Bevor Sie RSWindowsKerberos angeben, stellen Sie sicher, dass der von Ihnen verwendete Browsertyp diesen Authentifizierungstyp unterstützt. Wenn Sie Internet Explorer verwenden, wird die Kerberos-Authentifizierung nur über Negotiate unterstützt. Internet Explorer formuliert keine Authentifizierungsanforderung, die Kerberos direkt angibt.|  
-|RSWindowsBasic|Standard|Nein|Die Standardauthentifizierung wird im HTTP-Protokoll definiert und kann nur verwendet werden, um HTTP-Anforderungen an den Berichtsserver zu authentifizieren.<br /><br /> Anmeldeinformationen werden mithilfe der Base64-Codierung an die HTTP-Anforderung übergeben. Bei der Standardauthentifizierung können Sie SSL (Secure Sockets Layer) zum Verschlüsseln der Benutzerkontoinformationen verwenden, bevor diese über das Netzwerk gesendet werden. SSL bietet einen verschlüsselten Kanal zum Senden einer Verbindungsanforderung vom Client an den Berichtsserver über eine HTTP TCP/IP-Verbindung. Weitere Informationen finden Sie auf der [TechNet-Website unter](https://go.microsoft.com/fwlink/?LinkId=71123) Using SSL to Encrypt Confidential Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
+|RSWindowsBasic|Basic|Nein|Die Standardauthentifizierung wird im HTTP-Protokoll definiert und kann nur verwendet werden, um HTTP-Anforderungen an den Berichtsserver zu authentifizieren.<br /><br /> Anmeldeinformationen werden mithilfe der Base64-Codierung an die HTTP-Anforderung übergeben. Bei der Standardauthentifizierung können Sie SSL (Secure Sockets Layer) zum Verschlüsseln der Benutzerkontoinformationen verwenden, bevor diese über das Netzwerk gesendet werden. SSL bietet einen verschlüsselten Kanal zum Senden einer Verbindungsanforderung vom Client an den Berichtsserver über eine HTTP TCP/IP-Verbindung. Weitere Informationen finden Sie auf der [TechNet-Website unter](https://go.microsoft.com/fwlink/?LinkId=71123) Using SSL to Encrypt Confidential Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |Benutzerdefiniert|(Anonym)|Nein|Die anonyme Authentifizierung weist den Berichtsserver an, den Authentifizierungsheader in einer HTTP-Anforderung zu ignorieren. Der Berichtsserver akzeptiert alle Anforderungen. Führen Sie den Aufruf jedoch mit einer benutzerdefinierten [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Formularauthentifizierung aus, die Sie zur Authentifizierung des Benutzers bereitstellen.<br /><br /> Geben Sie `Custom` nur an, wenn Sie ein benutzerdefiniertes Authentifizierungsmodul bereitstellen, das alle Authentifizierungsanforderungen auf dem Berichtsserver verarbeitet. Sie können den benutzerdefinierten Authentifizierungstyp nicht mit der Standardauthentifizierungserweiterung von Windows verwenden.|  
   
 ## <a name="unsupported-authentication-methods"></a>Nicht unterstützte Authentifizierungsmethoden  
@@ -53,7 +54,7 @@ ms.locfileid: "66102190"
 |Digest|Wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht unterstützt.|  
   
 ## <a name="configuration-of-authentication-settings"></a>Konfigurieren von Authentifizierungseinstellungen  
- Authentifizierungseinstellungen werden für die Standardsicherheit konfiguriert, wenn die Berichtsserver-URL reserviert ist. Wenn Sie diese Einstellungen inkorrekt bearbeiten, gibt der Berichtsserver für Anforderungen, die nicht authentifiziert werden können, die Fehler ' HTTP 401 Access Denied' zurück. Beim Auswählen eines Authentifizierungstyps müssen Sie bereits wissen, wie die Windows-Authentifizierung in Ihrem Netzwerk unterstützt wird. Sie müssen mindestens einen Authentifizierungstyp angeben. Für RSWindows können mehrere Authentifizierungstypen angegeben werden. RSWindows-Authentifizierungstypen (d.h. `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, und **RSWindowsNegotiate**) mit benutzerdefinierten gegenseitig.  
+ Authentifizierungseinstellungen werden für die Standardsicherheit konfiguriert, wenn die Berichtsserver-URL reserviert ist. Wenn Sie diese Einstellungen inkorrekt bearbeiten, gibt der Berichtsserver für Anforderungen, die nicht authentifiziert werden können, die Fehler ' HTTP 401 Access Denied' zurück. Beim Auswählen eines Authentifizierungstyps müssen Sie bereits wissen, wie die Windows-Authentifizierung in Ihrem Netzwerk unterstützt wird. Sie müssen mindestens einen Authentifizierungstyp angeben. Für RSWindows können mehrere Authentifizierungstypen angegeben werden. `RSWindowsBasic`RSWindows-Authentifizierungs Typen (d. h `RSWindowsNTLM`. `RSWindowsKerberos`,, und **rswindowsaushandlungen**) schließen sich gegenseitig aus.  
   
 > [!IMPORTANT]  
 >  Reporting Services überprüft nicht, ob die von Ihnen angegebenen Einstellungen für die Computerumgebung korrekt sind. Es ist möglich, dass die Standardsicherheit für Ihre Installation nicht geeignet ist oder die von Ihnen angegebenen Konfigurationseinstellungen für Ihre Sicherheitsinfrastruktur nicht geeignet sind. Aus diesem Grund sollten Sie Ihre Berichtsserverbereitstellung in einer kontrollierten Testumgebung sorgfältig prüfen, bevor Sie sie Ihrer Organisation zur Verfügung stellen.  
@@ -68,25 +69,25 @@ ms.locfileid: "66102190"
   
 -   [Configure Basic Authentication on the Report Server (Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver)](configure-basic-authentication-on-the-report-server.md)  
   
--   [Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Configure Custom or Forms Authentication on the Report Server (Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver)](configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibungen|Links|  
 |-----------------------|-----------|  
-|Konfigurieren Sie den integrierte Windows-Authentifizierungstyp.|[Configure Windows Authentication on the Report Server (Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver)](configure-windows-authentication-on-the-report-server.md)|  
-|Konfigurieren Sie den Standardauthentifizierungstyp.|[Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](configure-basic-authentication-on-the-report-server.md)|  
+|Konfigurieren Sie den integrierte Windows-Authentifizierungstyp.|[Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver](configure-windows-authentication-on-the-report-server.md)|  
+|Konfigurieren Sie den Standardauthentifizierungstyp.|[Configure Basic Authentication on the Report Server (Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver)](configure-basic-authentication-on-the-report-server.md)|  
 |Konfigurieren Sie die formularbasierte Authentifizierung oder andernfalls ein benutzerdefinierten Authentifizierungstyp.|[Configure Custom or Forms Authentication on the Report Server (Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver)](configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |Ermöglichen Sie die Verarbeitung des benutzerdefinierte Authentifizierungsszenarios im Berichts-Manager.|[Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
- (create-and-manage-role-assignments.md)   
+ (Create-and-manage-role-assignments.MD)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
- [Implementieren von Sicherheitserweiterungen](../extensions/security-extension/implementing-a-security-extension.md)   
- [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](configure-ssl-connections-on-a-native-mode-report-server.md)   
- [Konfigurieren des Berichts-Generator-Zugriffs](../report-server/configure-report-builder-access.md)   
+ [Implementieren einer Sicherheits Erweiterung](../extensions/security-extension/implementing-a-security-extension.md)   
+ [Konfigurieren von SSL-Verbindungen auf einem Berichts Server im einheitlichen Modus](configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [Konfigurieren des Berichts-Generator Zugriffs](../report-server/configure-report-builder-access.md)   
  [Übersicht über Sicherheitserweiterungen](../extensions/security-extension/security-extensions-overview.md)   
  [Authentifizierung in Reporting Services](../extensions/security-extension/authentication-in-reporting-services.md)   
  [Autorisierung in Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)  

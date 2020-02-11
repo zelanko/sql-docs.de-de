@@ -1,5 +1,5 @@
 ---
-title: Optionen (Abfrageergebnisse – SQL Server-Multi-Abfrageserver) | Microsoft-Dokumentation
+title: Optionen (Abfrageergebnisse-SQL Server-Multiserver) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089967"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Optionen (Abfrageergebnisse > SQL Server > Multiserver)
@@ -35,8 +35,8 @@ ms.locfileid: "66089967"
  **Anmeldename zu den Ergebnissen hinzufügen**  
  Aktivieren Sie dieses Kontrollkästchen, um eine zusätzliche Spalte einzuschließen, die den Benutzernamen enthält, der verwendet wurde, um die Verbindung zu dem Server herzustellen, der jede Zeile bereitgestellt hat.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie einen zentralen Verwaltungsservers und einer Servergruppe &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines zentralen Verwaltungs Servers und einer Server Gruppe &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [Gleichzeitiges Ausführen von Anweisungen für mehrere Server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

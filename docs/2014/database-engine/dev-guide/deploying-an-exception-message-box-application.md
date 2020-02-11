@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen einer Ausnahmemeldungsfeld-Anwendung | Microsoft-Dokumentation
+title: Bereitstellen einer Ausnahme Meldungs Feld Anwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 162c878c5d39356f08f01c4eb51a0f88e3ed2d45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753257"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Bereitstellen einer Ausnahmemeldungsfeld-Anwendung
-  Das Ausnahmemeldungsfeld wird installiert, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird für die Verwendung in Ihren benutzerdefinierten Windows-Anwendungen zur besseren Ausnahmebehandlung unterstützt. Da das Ausnahmemeldungsfeld von allen Editionen von installiert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] außer [!INCLUDE[ssEW](../../includes/ssew-md.md)], können Sie sie ohne zusätzliche Konfiguration auf jedem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clientkomponenten einschließlich des SDK installiert wurde.  
+  Das Ausnahme Meldungs Feld wird von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert und wird für die Verwendung in Ihren benutzerdefinierten Windows-Anwendungen zur Verbesserung der Ausnahmebehandlung unterstützt. Da das Ausnahme Meldungs Feld von allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Ausnahme [!INCLUDE[ssEW](../../includes/ssew-md.md)]von installiert wird, können Sie es ohne zusätzliche Konfiguration auf jedem Computer verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf dem Client Komponenten, einschließlich des SDK, installiert sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Programm Ausnahmemeldungsfeld](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Programm Ausnahme Meldungs Feld](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
  [Referenz zum Ausnahmemeldungsfeld](../../../2014/database-engine/dev-guide/exception-message-box-reference.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077496"
 ---
 # <a name="actions-in-multidimensional-models"></a>Aktionen in mehrdimensionalen Modellen
@@ -30,7 +30,7 @@ ms.locfileid: "66077496"
  **Name**  
  Wählen Sie einen Namen für die Aktion aus.  
   
- **Aktionsziel**  
+ **Aktions Ziel**  
  Wählen Sie das Objekt aus, dem die Aktion angefügt wird. In Clientanwendungen wird die Aktion grundsätzlich angezeigt, wenn der Endbenutzer das Zielobjekt ausgewählt hat; jedoch bestimmt die Clientanwendung, welcher Endbenutzervorgang Aktionen anzeigt. Wählen Sie für **Zieltyp**aus den folgenden Objekten aus:  
   
 -   Attributelemente  
@@ -51,31 +51,31 @@ ms.locfileid: "66077496"
   
  Nachdem Sie den Zielobjekttyp ausgewählt haben, wählen Sie unter **Zielobjekt**das Cubeobjekt vom entsprechenden Typ aus.  
   
- **Bedingung (Optional)**  
+ **Bedingung (optional)**  
  Geben Sie einen optionalen MDX-Ausdruck (Multidimensional Expressions) an, der zu einem Booleschen Wert aufgelöst wird. Beim Wert `True` wird die Aktion für das angegebene Ziel durchgeführt. Beim Wert `False` wird die Aktion nicht durchgeführt.  
   
- **Aktionsinhalt**  
+ **Aktions Inhalt**  
  Wählen Sie den Typ der Aktion aus. In der folgenden Tabelle werden die verfügbaren Aktionstypen zusammengefasst.  
   
-|Typ|Description|  
+|type|BESCHREIBUNG|  
 |----------|-----------------|  
 |Dataset|Ruft ein Dataset ab.|  
 |Proprietär|Führt einen Vorgang über eine Schnittstelle aus, die nicht in dieser Tabelle aufgelistet ist.|  
 |Rowset|Ruft ein Rowset ab.|  
-|Statement|Gibt einen OLE DB-Befehl zurück.|  
+|-Anweisung.|Gibt einen OLE DB-Befehl zurück.|  
 |URL|Zeigt eine veränderliche Seite in einem Internetbrowser an.|  
   
  Geben Sie für **Aktionsausdruck**die Parameter an, die beim Ausführen der Aktion übergeben werden. Die Syntax muss zu einer Zeichenfolge ausgewertet werden, und Sie müssen einen in MDX geschriebenen Ausdruck einschließen. Der MDX-Ausdruck kann z. B. einen Teil des Cubes anzeigen, der in die Syntax eingeschlossen ist. MDX-Ausdrücke werden ausgewertet, bevor die Parameter übergeben werden. Darüber hinaus steht Ihnen der MDX-Generator zur Verfügung, der Sie bei der Erstellung von MDX-Ausdrücken unterstützt.  
   
- **Weitere Eigenschaften**  
+ **Zusätzliche Eigenschaften**  
  Wählen Sie die Eigenschaft aus. In der folgenden Tabelle werden die verfügbaren Eigenschaften zusammengefasst.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|**Aufruf**|Gibt an, wie die Aktion ausgeführt wird. Die Standardeinstellung Interaktiv gibt an, dass die Aktion ausgeführt wird, wenn ein Benutzer auf ein Objekt zugreift. Die möglichen Einstellungen sind:<br /><br /> Batch<br /><br /> Interaktiv<br /><br /> Beim Öffnen|  
-|**Application**|Beschreibt die Anwendung der Aktion.|  
+|**Aufruf**|Gibt an, wie die Aktion ausgeführt wird. Die Standardeinstellung Interaktiv gibt an, dass die Aktion ausgeführt wird, wenn ein Benutzer auf ein Objekt zugreift. Die möglichen Einstellungen sind:<br /><br /> Batch<br /><br /> Interactive<br /><br /> Beim Öffnen|  
+|**Anwendung**|Beschreibt die Anwendung der Aktion.|  
 |**Beschreibung**|Beschreibt die Aktion.|  
-|**Beschriftung**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Wenn die Beschriftung MDX entspricht, geben Sie `True` für **Beschriftung ist MDX**.|  
+|**Caption**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Wenn es sich bei der Beschriftung um MDX handelt, geben `True` Sie für **Beschriftung ist MDX**an.|  
 |**Beschriftung ist MDX**|Geben Sie `True` an, wenn es sich bei der Beschriftung um MDX handelt; andernfalls geben Sie `False` an.|  
   
 > [!NOTE]  
@@ -87,13 +87,13 @@ ms.locfileid: "66077496"
  **Berichtsserver**  
  Die in der folgenden Tabelle beschriebenen Eigenschaften sind spezifisch für den Berichtsserver.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**Servername**|Name des Computers, auf dem der Berichtsserver ausgeführt wird.|  
-|**Serverpfad**|Der vom Berichtsserver verfügbar gemachte Pfad.|  
+|**Server Pfad**|Der vom Berichtsserver verfügbar gemachte Pfad.|  
 |**Berichtsformat**|HTML5, HTML3, Excel oder PDF.|  
   
- **Parameter (Optional)**  
+ **Parameter (optional)**  
  Die Parameter werden als Bestandteil der URL-Zeichenfolge an den Server gesendet, wenn die Aktion erstellt wird. Dazu gehören **Parametername** und **Parameterwert**, wobei es sich um einen MDX-Ausdruck handelt.  
   
  Die Berichtsserver-URL setzt sich wie folgt zusammen:  
@@ -111,7 +111,7 @@ parametervalue1
 & ...  
 ```  
   
- Zum Beispiel:  
+ Beispiel:  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
@@ -120,10 +120,10 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
 ## <a name="creating-a-drillthrough-action"></a>Erstellen einer Drillthroughaktion  
  Eine Drillthroughaktion wird durch eine Rowsetaktion definiert, die als Drillthroughanweisung an die Clientanwendung zurückgegeben wird. Das Aktionsziel ist ein Mitglied einer Measuregruppe. Klicken Sie zum Erstellen einer neuen Drillthroughaktion im Menü **Cube** auf **Neue Drillthroughaktion**. Eine Drillthroughaktion zeichnet sich durch die folgenden spezifischen Optionen aus:  
   
- **Drillthroughspalten**  
+ **Drillthrough-Spalten**  
  Wählen Sie eine oder mehrere Dimensionen aus und für jede Dimension die durch die Aktion an die Clientanwendung zurückgegebenen Drillthroughspalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cubes in mehrdimensionalen Modellen](cubes-in-multidimensional-models.md)  
   
   

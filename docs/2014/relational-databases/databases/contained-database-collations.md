@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872054"
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
   Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u. a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md).  
   
- Sortierungen gelten nicht nur für in Benutzertabellen gespeicherte Daten, sondern für jeden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behandelten Text, einschließlich Metadaten, temporäre Objekte, Variablennamen usw. Deren Behandlung variiert in eigenständigen und abhängigen Datenbanken Diese Änderung wirkt sich nicht auf viele Benutzer aus. Stattdessen trägt sie zu Unabhängigkeit von Instanzen und Einheitlichkeit bei. Dies verursacht jedoch möglicherweise auch etwas Verwirrung sowie Probleme bei Sitzungen, in denen sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
+ Sortierungen gelten nicht nur für in Benutzertabellen gespeicherte Daten, sondern für jeden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelten Text, einschließlich Metadaten, temporäre Objekte, Variablennamen usw. Deren Behandlung variiert in eigenständigen und abhängigen Datenbanken Diese Änderung wirkt sich nicht auf viele Benutzer aus. Stattdessen trägt sie zu Unabhängigkeit von Instanzen und Einheitlichkeit bei. Dies verursacht jedoch möglicherweise auch etwas Verwirrung sowie Probleme bei Sitzungen, in denen sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
  In diesem Thema wird das Wesen der Änderung erläutert. Zudem werden einige Bereiche beschrieben, in denen sie möglicherweise Probleme verursacht.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62872054"
  Alle Datenbanken weisen eine Standardsortierung auf, die beim Erstellen oder Ändern einer Datenbank festgelegt werden kann. Diese Sortierung wird für sämtliche Metadaten in der Datenbank sowie als Standard für alle Zeichenfolgenspalten in der Datenbank verwendet. Benutzer können mit der `COLLATE`-Klausel für jede einzelne Spalte eine andere Sortierung auswählen.  
   
 ### <a name="example-1"></a>Beispiel 1  
- Wenn Sie z. B. in Beijing (Peking) arbeiten, kann eine chinesische Sortierung verwendet werden:  
+ Wenn Sie z. B. in Peking arbeiten, kann eine chinesische Sortierung verwendet werden:  
   
 ```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
@@ -58,7 +58,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte der Datenbank abhängt, in dem die Tabelle erstellt wird, treten Probleme mit der Verwendung von temporären Tabellen und im rowsetcache `tempdb`. Die Sortierung der `tempdb` entspricht normalerweise der Sortierung für die Instanz, die nicht unbedingt die datenbanksortierung entsprechen.  
+ Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte von der Datenbank abhängt, in der die Tabelle erstellt wird, treten Probleme mit der Verwendung temporärer Tabellen auf, die in `tempdb`gespeichert werden. Die Sortierung von `tempdb` entspricht in der Regel der Sortierung für die-Instanz, die nicht mit der Daten Bank Sortierung übereinstimmen muss.  
   
 ### <a name="example-2"></a>Beispiel 2  
  Betrachten Sie beispielsweise die obige (chinesische) Datenbank, wenn diese in einer Instanz mit der Sortierung **Latin1_General** verwendet wird:  
@@ -85,7 +85,8 @@ JOIN #T2
   
  Ein Sortierungskonflikt zwischen "Latin1_General_100_CI_AS_KS_WS_SC" und "Chinese_Simplified_Pinyin_100_CI_AS" im Equal To-Vorgang kann nicht aufgelöst werden.  
   
- Dies kann durch das explizite Sortieren der temporären Tabelle korrigiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erleichtert diesen Vorgang etwas, indem das `DATABASE_DEFAULT`-Schlüsselwort für die `COLLATE`-Klausel bereitgestellt wird.  
+ Dies kann durch das explizite Sortieren der temporären Tabelle korrigiert werden. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erleichtert diesen Vorgang etwas, indem das `DATABASE_DEFAULT`-Schlüsselwort für die `COLLATE`-Klausel bereitgestellt wird.  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -111,14 +112,14 @@ AS BEGIN
 END;  
 ```  
   
- Dies ist eine relativ spezielle Funktion. In einem Groß-und Kleinschreibung unterschieden die @i in der return-Klausel kann nicht gebunden werden, entweder @I oder @??. Bei der Sortierung „Latin1_General“ ohne Berücksichtigung der Groß-/Kleinschreibung wird @i an @I gebunden, und die Funktion gibt 1 zurück. Aber in einer Groß-/Kleinschreibung Türkisch Sortierung @i bindet an @??, und die Funktion gibt 2 zurück. Dies kann erhebliche Beschädigungen in einer Datenbank verursachen, bei der zwischen Instanzen mit unterschiedlichen Sortierungen gewechselt wird.  
+ Dies ist eine relativ spezielle Funktion. Bei einer Sortierung mit Unterscheidung nach Groß- @i /Kleinschreibung kann die in der Return @I -Klausel weder an noch an @ binden??. Bei der Sortierung „Latin1_General“ ohne Berücksichtigung der Groß-/Kleinschreibung wird @i an @I gebunden, und die Funktion gibt 1 zurück. Bei der türkischen Sortierung ohne Beachtung der Groß-/Kleinschreibung wird jedoch an @??, gebunden, @i und die Funktion gibt 2 zurück. Dies kann erhebliche Beschädigungen in einer Datenbank verursachen, bei der zwischen Instanzen mit unterschiedlichen Sortierungen gewechselt wird.  
   
 ## <a name="contained-databases"></a>Eigenständige Datenbanken  
  Da eines der Entwurfsziele bei eigenständigen Datenbanken darin besteht, diese in sich abgeschlossen einzurichten, muss die Abhängigkeit von Instanzen und `tempdb`-Sortierungen abgetrennt werden. Hierzu wurde für eigenständige Datenbanken das Konzept der Katalogsortierung eingeführt. Die Katalogsortierung wird für Systemmetadaten und vorübergehende Objekte verwendet. Einzelheiten hierzu finden Sie weiter unten.  
   
  In einer eigenständigen Datenbank ist die Katalogsortierung **Latin1_General_100_CI_AS_WS_KS_SC**. Diese Sortierung ist für alle eigenständigen Datenbanken in allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identisch und kann nicht geändert werden.  
   
- Die Datenbanksortierung wird beibehalten, sie wird jedoch nur für Benutzerdaten als Standardsortierung verwendet. In der Standardeinstellung die Sortierung der Datenbank entspricht der Sortierung der Model-Datenbank, kann jedoch geändert werden vom Benutzer über eine `CREATE` oder `ALTER DATABASE` -Befehl genauso wie mit einer nicht enthaltenen Datenbanken.  
+ Die Datenbanksortierung wird beibehalten, sie wird jedoch nur für Benutzerdaten als Standardsortierung verwendet. Standardmäßig entspricht die Daten Bank Sortierung der Modelldaten Bank Sortierung, kann jedoch vom Benutzer wie bei nicht enthaltenen Datenbanken durch einen `CREATE` - `ALTER DATABASE` Befehl oder einen-Befehl geändert werden.  
   
  Das neue Schlüsselwort `CATALOG_DEFAULT` ist in der `COLLATE`-Klausel verfügbar. Diese wird als Verknüpfung zur aktuellen Sortierung der Metadaten in enthaltenen und nicht enthaltenen Datenbanken verwendet. Das heißt, in einer nicht enthaltenen Datenbank gibt `CATALOG_DEFAULT` die aktuelle Datenbanksortierung zurück, da Metadaten in der Datenbanksortierung sortiert werden. In einer enthaltenen Datenbank können sich diese zwei Werte unterscheiden, da der Benutzer die Datenbanksortierung ändern kann, sodass sie von der Katalogsortierung abweicht.  
   
@@ -131,7 +132,7 @@ END;
 |Temp-Daten (Standard)|TempDB-Sortierung|DATABASE_DEFAULT|  
 |Metadaten|DATABASE_DEFAULT/CATALOG_DEFAULT|CATALOG_DEFAULT|  
 |Temporäre Metadaten|TempDB-Sortierung|CATALOG_DEFAULT|  
-|Variablen|Instanzsortierung|CATALOG_DEFAULT|  
+|Variables|Instanzsortierung|CATALOG_DEFAULT|  
 |Goto-Bezeichnungen|Instanzsortierung|CATALOG_DEFAULT|  
 |Cursornamen|Instanzsortierung|CATALOG_DEFAULT|  
   
@@ -235,7 +236,7 @@ GO
  Ungültiger Objektname '#A'.  
   
 ### <a name="example-3"></a>Beispiel 3  
- Im folgenden Beispiel wird der Fall veranschaulicht, wo durch den Verweis mehrere Übereinstimmungen gefunden werden, die sich ursprünglich voneinander unterschieden haben. Zunächst beginnen wir im `tempdb` (diese hat der gleichen Groß-/Kleinschreibung Sortierung wie die gegebene Instanz), und führen Sie die folgenden Anweisungen.  
+ Im folgenden Beispiel wird der Fall veranschaulicht, wo durch den Verweis mehrere Übereinstimmungen gefunden werden, die sich ursprünglich voneinander unterschieden haben. Zunächst beginnen wir mit ( `tempdb` mit der gleichen Sortierung wie unsere-Instanz) und führen die folgenden Anweisungen aus.  
   
 ```  
 USE tempdb;  
@@ -275,10 +276,10 @@ GO
   
  Der Verweis auf den Namen '#a' der temporären Tabelle ist mehrdeutig und kann nicht aufgelöst werden. Verwenden Sie entweder '#a' oder '#A'.  
   
-## <a name="conclusion"></a>Schlussbemerkung  
+## <a name="conclusion"></a>Zusammenfassung  
  Das Sortierungsverhalten enthaltener Datenbanken unterscheidet sich leicht von dem nicht enthaltener Datenbanken. Dieses Verhalten ist im Allgemeinen vorteilhaft und trägt zu Unabhängigkeit von Instanzen sowie Einfachheit bei. Für einige Benutzer können Probleme auftreten, insbesondere dann, wenn in einer Sitzung sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Eigenständige Datenbanken](contained-databases.md)  
   
   

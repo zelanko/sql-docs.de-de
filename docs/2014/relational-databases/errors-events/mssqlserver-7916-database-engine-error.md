@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0eda0980b3b8ffbc748f15933ea397ae3d0b71e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913414"
 ---
-# <a name="mssqlserver7916"></a>MSSQLSERVER_7916
+# <a name="mssqlserver_7916"></a>MSSQLSERVER_7916
     
 ## <a name="details"></a>Details  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62913414"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_REPAIR_RECORD_DELETED|  
-|Meldungstext|Reparaturvorgang: Gelöschten Datensatz für Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Type-Typ) auf der Seite P_ID, Slot S_ID. Die Indizes werden neu erstellt.|  
+|Meldungstext|Reparaturvorgang: Der Datensatz für Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) auf der Seite P_ID, Slot S_ID wurde gelöscht. Die Indizes werden neu erstellt.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dies ist eine Informationsmeldung von REPAIR, die angibt, dass der angegebene Datensatz aus der Seite gelöscht wurde.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- None  
+ Keine  
   
   

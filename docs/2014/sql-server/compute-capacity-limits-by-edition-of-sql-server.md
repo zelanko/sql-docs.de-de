@@ -15,26 +15,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714762"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   In diesem Thema wird erläutert, wie Sie Kapazitätsgrenzen für verschiedene Editionen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] berechnen und wie sie sich in physischen und virtualisierten Umgebungen mit Hyperthreaded-Prozessoren unterscheiden.  
   
- ![Zuordnungen zu Rechenkapazitätsgrenzen](../../2014/getting-started/media/compute-capacity-limits.gif "Mappings to compute capacity limits")  
+ ![Zuordnungen zu Rechenkapazitätsgrenzen](../../2014/getting-started/media/compute-capacity-limits.gif "Zuordnungen zu Rechenkapazitätsgrenzen")  
   
  In der folgenden Tabelle werden die Schreibweisen, die im oben angegebenen Diagramm verwendet werden, beschrieben:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0..1|Null oder Eins|  
 |1|Genau eins|  
 |1..*|Ein oder mehr|  
 |0..*|0 oder mehr|  
-|1..2|Einer oder zwei|  
+|1..2|Eine oder zwei|  
   
 > [!IMPORTANT]
 >  Weitere Details:  
@@ -64,7 +64,7 @@ ms.locfileid: "62714762"
   
 -   Ein physischer Prozessor kann aus einem oder mehreren Kernen bestehen. Ein physischer Prozessor ist das Gleiche wie ein Prozessorpaket oder ein Socket.  
   
- Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Sie einen Computer, der zwei Quad-Core-Prozessoren mit aktiviertem Hyperthreading und zwei Threads pro Kern aufweist verfügen, müssen Sie z. B. 16 logische Prozessoren: 2 Prozessoren X 4 Kerne pro Prozessor X 2 Threads pro Kern. Beachten Sie dabei Folgendes:  
+ Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Sie z. B. einen Computer haben, der zwei Quad-Core-Prozessoren hat, mit aktiviertem Hyperthreading und zwei Threads pro Kern, haben Sie 16 logische Prozessoren: 2 Prozessoren x 4 Kerne pro Prozessor x 2 Threads pro Kern. Beachten Sie dabei Folgendes:  
   
 -   Die Rechenkapazität eines logischen Prozessors von einem einzelnen Thread eines Hyperthread-Kerns ist geringer als die Rechenkapazität eines logischen Prozessors von diesem gleichen Kern mit deaktiviertem Hyperthreading.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "62714762"
   
  Die folgende Tabelle gibt die Rechenkapazitätsgrenzen für eine einzelne Instanz jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]an:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edition|Maximale von einer einzelnen Instanz verwendete Rechenkapazität ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale von einer einzelnen Instanz verwendete Rechenkapazität (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AntiVir|Maximale von einer einzelnen Instanz verwendete Rechenkapazität ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale von einer einzelnen Instanz verwendete Rechenkapazität (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: Kernbasierte Lizenzierung<sup>1</sup>|Maximum des Betriebssystems|Maximum des Betriebssystems|  
+|Enterprise Edition: Core-basierte Lizenzierung<sup>1</sup>|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Entwickler|Maximum des Betriebssystems|Maximum des Betriebssystems|  
-|Evaluation|Maximum des Betriebssystems|Maximum des Betriebssystems|  
+|Auswertung|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Business Intelligence|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Maximum des Betriebssystems|  
 |Standard|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|  
 |Web|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|  
@@ -92,15 +92,15 @@ ms.locfileid: "62714762"
 |Express mit Tools|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
 |Express mit Advanced Services|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
   
- <sup>1</sup> Enterprise Edition mit Server + Clientzugriffslizenz (CAL) basierte Lizenzierung (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro beschränkt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen.  
+ <sup>1</sup> die Enterprise Edition mit einer Lizenzierung auf Grundlage von Server + Client Zugriffslizenz (CAL) (für neue Verträge nicht verfügbar) ist auf maximal 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Kerne pro-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen.  
   
- In einer virtualisierten Umgebung basiert die Rechenkapazitätsgrenze auf der Anzahl der logischen Prozessoren und nicht der Kerne, da die Prozessorarchitektur für die Gastanwendungen nicht sichtbar ist.  Ein Server mit vier Sockets beispielsweise, bestückt mit Quad-Core-Prozessoren und der Fähigkeit, zwei Hyperthreads pro Kern zu aktivieren, enthält mit aktiviertem Hyperthreading 32 logische Prozessoren, bei deaktiviertem Hyperthreading jedoch nur 16 logische Prozessoren. Diese logischen Prozessoren können virtuellen Computern auf dem Server mit rechenlast der virtuellen Computer, auf diesem logischen Prozessor in einem Thread der Ausführung auf dem physischen Prozessor im Hostserver zugeordnet zugeordnet werden.  
+ In einer virtualisierten Umgebung basiert die Rechenkapazitätsgrenze auf der Anzahl der logischen Prozessoren und nicht der Kerne, da die Prozessorarchitektur für die Gastanwendungen nicht sichtbar ist.  Ein Server mit vier Sockets beispielsweise, bestückt mit Quad-Core-Prozessoren und der Fähigkeit, zwei Hyperthreads pro Kern zu aktivieren, enthält mit aktiviertem Hyperthreading 32 logische Prozessoren, bei deaktiviertem Hyperthreading jedoch nur 16 logische Prozessoren. Diese logischen Prozessoren können virtuellen Computern auf dem Server zugeordnet werden, wobei die computeauslastung der virtuellen Computer auf diesem logischen Prozessor einem Ausführungs Thread auf dem physischen Prozessor im Host Server zugeordnet wird.  
   
  Sie können das Hyperthreading deaktivieren, wenn die Leistung pro virtueller Prozessor wichtig ist. Sie können das Hyperthreading anhand einer BIOS-Einstellung für den Prozessor während des BIOS-Setups deaktivieren, aber es ist in der Regel ein Vorgang im Serverbereich, der sich auf alle Arbeitsauslastungen auswirkt, die auf dem Server ausgeführt werden. Dies weist darauf hin, Arbeitsauslastungen, die in virtualisierten Umgebungen ausgeführt werden, von denen zu trennen, die in einer physischen Betriebssystemumgebung von der Hyperthreading-Leistungssteigerung profitieren würden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Editionen und Komponenten von SQLServer 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Von den Editionen von SQLServer 2014 unterstützte Funktionen](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Editionen und Komponenten von SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
+ [Von den-Editionen unterstützte Funktionen SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Spezifikationen der maximalen Kapazität für SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Schnellstart-Installation von SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   

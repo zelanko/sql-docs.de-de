@@ -15,26 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7b82b3450727d36a36186453e366625ebecbde2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721393"
 ---
 # <a name="define-filters"></a>Filter definieren
   Im Dialogfeld **Filter definieren** können Sie Filter definieren, die Sie anschließend bei Datenkonflikten anwenden, um eine Untermenge der Konflikte im Raster anzuzeigen. Um einen Filter zu definieren, wählen Sie im Dropdownlistenfeld **Operator** einen Operator aus, und geben Sie dann einen Wert ein. Um beispielsweise nur die Konflikte anzuzeigen, in welchen Server **ReplTest1**der Konfliktverlierer ist, wählen Sie im Dropdown-Listenfeld **Operator** die Option **Gleich** aus, und geben Sie in die erste **Value** -Spalte den Wert **ReplTest1** ein.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Operator**  
  Wählen Sie für den Filter einen Operator wie **Kleiner als oder gleich**aus.  
   
- **ReplTest1**  
+ **Wert**  
  Geben Sie einen Wert für den Filter ein. Für die meisten Operatoren muss nur in der ersten **Value** -Spalte ein Wert eingegeben werden. Für die Operatoren **Zwischen** und **Nicht zwischen** muss jedoch in beide **Value** -Spalten ein Wert eingegeben werden.  
   
- **Löschen**  
+ **Clear**  
  Klicken Sie auf diese Schaltfläche, um alle zuvor definierten Filter zu löschen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikationskonflikt-Viewer von Microsoft &#40;Mergereplikation&#41;](microsoft-replication-conflict-viewer-merge-replication.md)   
  [Replikationskonflikt-Viewer von Microsoft &#40;Transaktionsreplikation&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   

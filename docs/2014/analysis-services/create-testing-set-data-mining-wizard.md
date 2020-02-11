@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Testsatzes (Datamining-Assistent) | Microsoft-Dokumentation
+title: Testsatz erstellen (Data Mining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086792"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Erstellen eines Testsatzes (Data Mining-Assistent)
@@ -26,17 +26,17 @@ ms.locfileid: "66086792"
   
  Standardmäßig generiert [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] einen numerischen Ausgangswert, der zum Starten der Partitionierung verwendet wird. Dieser Ausgangswert basiert auf dem Namen der Miningstruktur. Wenn Sie sicherstellen möchten, dass die Partition unverändert bleibt, auch wenn der Name der Miningstruktur geändert wird, können Sie einen Wert für den Ausgangswert angeben, indem Sie die HoldoutSeed-Eigenschaft der Miningstruktur festlegen. Wenn Sie den Zurückhaltungsausgangswert ändern, müssen Sie die Struktur erneut verarbeiten.  
   
- Wenn Sie später die Menge der Test- oder Trainingsdaten ändern möchten, können Sie ändern die `HoldoutMaxCases` und `HoldoutMaxPercent` Eigenschaften für Datamining-Struktur mithilfe der **Eigenschaften** Fenster. Wenn Sie die Änderung vorgenommen haben, müssen Sie die Miningstruktur und alle zugeordneten Miningmodelle jedoch erneut verarbeiten. Außerdem gelten die folgenden Einschränkungen:  
+ Wenn Sie die Menge der Test-oder Trainingsdaten später ändern möchten, können Sie die `HoldoutMaxCases` -Eigenschaft `HoldoutMaxPercent` und die-Eigenschaft für die Data Mining Struktur ändern, indem Sie das **Eigenschaften** Fenster verwenden. Wenn Sie die Änderung vorgenommen haben, müssen Sie die Miningstruktur und alle zugeordneten Miningmodelle jedoch erneut verarbeiten. Außerdem gelten die folgenden Einschränkungen:  
   
--   Die Partitionierung einer Data Mining-Struktur wird nur unterstützt, wenn die Data Mining-Struktur in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]gespeichert ist. Frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen das Zwischenspeichern von Partitionsinformationen für Miningstrukturen nicht.  
+-   Die Partitionierung einer Data Mining-Struktur wird nur unterstützt, wenn die Data Mining-Struktur in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]gespeichert ist. Frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen das Zwischenspeichern von Partitionsinformationen für Mining Strukturen nicht.  
   
 -   Sie können eine Miningstruktur nicht partitionieren, wenn die Miningstruktur die Spalte Key Time enthält, die für Zeitreihenminingmodelle erforderlich ist.  
   
 -   Sie können Daten nicht partitionieren, wenn Sie versuchen, einen Wert vorherzusagen, der in einer geschachtelten Tabelle gespeichert ist.  
   
- **Weitere Informationen finden Sie unter** [Tests und Überprüfung &#40;Datamining-&#41;](data-mining/testing-and-validation-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md), [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Weitere Informationen finden** Sie unter [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md), [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Prozentsatz der Testdaten**  
  Klicken Sie auf die Nach-oben- und Nach-unten-Pfeile, um den Prozentsatz der Daten, die als Trainingssatz verwendet werden sollen, herauf- oder herabzusetzen, oder geben Sie einen Wert zwischen 0 und 100 in das Textfeld ein.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "66086792"
   
  Die Standardeinstellung ist NULL. Dies bedeutet, dass es keine Beschränkung gibt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Verbundene Spalten vorschlagen &#40;Datamining-Assistent&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Tabellentypen angeben &#40;Datamining-Assistent&#41;](specify-table-types-data-mining-wizard.md)   
- [Geben Sie Inhalt und Datentyp der Spaltenwerts &#40;Datamining-Assistent&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Assistent (F1-Hilfe &#40;Analysis Services-Data Mining-&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Verwandte Spalten &#40;Data Mining-Assistenten vorschlagen&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Geben Sie die Tabellentypen &#40;Data Mining-Assistenten an&#41;](specify-table-types-data-mining-wizard.md)   
+ [Geben Sie den Inhalt und den Datentyp der Spalte &#40;Data Mining-Assistenten an&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

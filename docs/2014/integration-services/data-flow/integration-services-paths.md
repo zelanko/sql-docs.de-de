@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901794"
 ---
 # <a name="integration-services-paths"></a>SQL Server Integration Services-Pfade
@@ -41,11 +41,11 @@ ms.locfileid: "62901794"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Datenflusspfad-Editor** festlegen können:  
   
--   [Datenflusspfad-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Datenfluss Pfad-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Datenflusspfad-Editor &#40;Metadatenseite&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Datenfluss Pfad-Editor &#40;Seite "Metadaten"&#41;](../data-flow-path-editor-metadata-page.md)  
   
--   [Datenflusspfad-Editor &#40;Datenseite-Viewer&#41;](../data-flow-path-editor-data-viewers-page.md)  
+-   [Datenfluss Pfad-Editor &#40;Seite "Daten-Viewer"&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
  Weitere Informationen zu den Eigenschaften, die Sie programmgesteuert festlegen können, finden Sie unter [Path Properties](../path-properties.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62901794"
   
 -   [Verbinden von Komponenten in einem Datenfluss](connect-components-in-a-data-flow.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](data-flow.md)  
   
   

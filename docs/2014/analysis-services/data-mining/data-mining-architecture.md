@@ -1,5 +1,5 @@
 ---
-title: Datamining-Architektur | Microsoft-Dokumentation
+title: Data Mining-Architektur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085081"
 ---
 # <a name="data-mining-architecture"></a>Data Mining-Architektur
@@ -28,23 +28,23 @@ ms.locfileid: "66085081"
   
  [Datenbankspeicherort](../multidimensional-models/database-storage-location.md)  
   
- [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Wechseln einer Analysis Services Datenbank zwischen Schreib geschütztem Modus und Lese-/Schreibmodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Weitere Informationen darüber, wie Sie Data Mining in Ihrer Business Intelligence-Lösung implementieren, finden Sie im Abschnitt zu Lösungshandbüchern der MSDN-Bibliothek.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Logische Architektur &#40;Analysis Services – Data Mining&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Logische Architektur &#40;Analysis Services Data Mining-&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [Physische Architektur &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Physische Architektur &#40;Analysis Services Data Mining-&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [Data Mining-Dienste und Datenquellen](data-mining-services-and-data-sources.md)  
   
  [Verwaltung von Data Mining-Lösungen und -Objekten](management-of-data-mining-solutions-and-objects.md)  
   
- [Sicherheitsübersicht &#40;Data Mining&#41;](security-overview-data-mining.md)  
+ [Sicherheitsübersicht &#40;Data Mining-&#41;](security-overview-data-mining.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionale Modellprogrammierung](../multidimensional-models/multidimensional-model-programming.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mehrdimensionale Modell Programmierung](../multidimensional-models/multidimensional-model-programming.md)   
  [Data Mining-Programmierung](../dev-guide/data-mining-programming.md)  
   
   

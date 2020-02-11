@@ -1,5 +1,5 @@
 ---
-title: Gruppieren von Attributelementen (Diskretisierung) | Microsoft-Dokumentation
+title: Gruppieren von Attribut Elementen (Diskretisierung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077265"
 ---
 # <a name="group-attribute-members-discretization"></a>Gruppieren von Attributelementen (Diskretisierung)
-  Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können die Elemente eines Attributs in eine Anzahl von Elementgruppen mithilfe des so genannten Diskretisierungsprozesses gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
+  Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Member eines Attributs durch einen Prozess namens Diskretisierung in eine Anzahl von Elementgruppen gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
   
  Die `DiscretizationMethod`-Eigenschaft eines Attributs steuert die Gruppierung der Elemente.  
   
-|`DiscretizationMethod`-Einstellung|Description|  
+|`DiscretizationMethod`Man|BESCHREIBUNG|  
 |--------------------------------------|-----------------|  
 |`None`|Zeigt die Elemente an.|  
 |`Automatic`|Wählt die Methode aus, welche die Daten besser darstellt: entweder die `EqualAreas`- oder `Clusters`-Methode.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66077265"
   
  Der `<Bucket name>` -Parameter ist ein Zeichenfolgenausdruck, in dem Variablen zum Darstellen von Element- oder Elementgruppeninformationen als Teil des Elementgruppennamens enthalten sein können:  
   
-|Variable|Beschreibung|  
+|Variable|BESCHREIBUNG|  
 |--------------|-----------------|  
 |%{First bucket member}|Der Elementname des ersten, in der aktuellen Elementgruppe einzuschließenden Elements.|  
 |%{Last bucket member}|Der Elementname des letzten, in der aktuellen Elementgruppe einzuschließenden Elements.|  
@@ -109,7 +109,7 @@ ms.locfileid: "66077265"
   
 -   Wenn die Dimensionstabelle einer Dimension, die Elementgruppen enthält, aktualisiert wird, und die Dimension wird anschließend vollständig verarbeitet, wird eine neue Elementgruppenmenge generiert. Die Namen und untergeordneten Komponenten der neuen Elementgruppen können sich von alten Elementgruppen unterscheiden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Attribute und Attributhierarchien](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

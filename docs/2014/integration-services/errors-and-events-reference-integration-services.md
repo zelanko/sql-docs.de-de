@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899448"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Fehler- und Ereignisreferenz (Integration Services)
@@ -32,7 +32,7 @@ ms.locfileid: "62899448"
   
 ## <a name="error-messages"></a>Fehlermeldungen  
   
-|Symbolischer Name des Fehlers|Description|  
+|Symbolischer Name des Fehlers|BESCHREIBUNG|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Gibt an, dass das Paket nicht ausgeführt werden kann, da von einer Transformation für Cachetransformation versucht wird, Daten in den Cache im Arbeitsspeicher zu schreiben. Ein Cacheverbindungs-Manager hat jedoch bereits eine Cachedatei in den Cache im Arbeitsspeicher geladen.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Gibt an, dass das Paket nicht ausgeführt werden kann, da bei einer angegebenen Verbindung ein Fehler aufgetreten ist.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62899448"
 |DTS_E_CONNECTIONNOTFOUND|Gibt an, dass das Paket nicht ausgeführt werden kann, da der angegebene Verbindungs-Manager nicht gefunden werden kann.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Zeigt an, dass [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer eine Verbindung mit einer Datenquelle herstellen muss, um neue oder aktualisierte Metadaten für eine Quelle oder ein Ziel anzurufen, und dass diese Verbindung nicht hergestellt werden kann.|  
 |DTS_E_MULTIPLECACHEWRITES|Gibt an, dass das Paket nicht ausgeführt werden kann, da von einer Transformation für Cachetransformation versucht wird, Daten in den Cache im Arbeitsspeicher zu schreiben. Eine andere Transformation für Cachetransformation hat jedoch bereits in den Cache im Arbeitsspeicher geschrieben.|  
-|DTS_E_PRODUCTLEVELTOLOW|Zeigt an, dass das Paket nicht ausgeführt werden kann, weil die geeignete Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nicht installiert ist.|  
+|DTS_E_PRODUCTLEVELTOLOW|Gibt an, dass das Paket nicht ausgeführt werden kann, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] da die entsprechende Version von nicht installiert ist.|  
 |DTS_E_READNOTFILLEDCACHE|Gibt an, dass eine Transformation für Suche versucht, Daten aus dem Cache im Arbeitsspeicher zu lesen, während gleichzeitig eine Transformation für Cachetransformation Daten in den Cache schreibt.|  
 |DTS_E_UNPROTECTXMLFAILED|Gibt an, dass das System einen geschützten XML-Knoten nicht entschlüsselt hat.|  
 |DTS_E_WRITEWHILECACHEINUSE|Gibt an, dass eine Transformation für Cachetransformation versucht, Daten in den Cache im Arbeitsspeicher zu schreiben, während gleichzeitig eine Transformation für Suche Daten aus dem Cache im Arbeitsspeicher liest.|  
@@ -51,7 +51,7 @@ ms.locfileid: "62899448"
 ## <a name="events-sqlispackage"></a>Ereignisse (SQLISPackage)  
  Weitere Informationen finden Sie unter [Von einem Integration Services-Paket protokollierte Ereignisse](performance/events-logged-by-an-integration-services-package.md).  
   
-|Ereignis|Description|  
+|Ereignis|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Gibt an, dass ein Paket gestartet wurde.|  
 |SQLISPackage_12289|Gibt an, dass ein Paket erfolgreich zu Ende ausgeführt wurde.|  
@@ -65,7 +65,7 @@ ms.locfileid: "62899448"
 ## <a name="events-sqlisservice"></a>Ereignisse (SQLISService)  
  Weitere Informationen finden Sie unter [Vom Integration Services-Dienst protokollierte Ereignisse](service/events-logged-by-the-integration-services-service.md).  
   
-|Ereignis|Beschreibung|  
+|Ereignis|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SQLISService_256|Gibt an, dass der Dienst umgehend gestartet wird.|  
 |SQLISService_257|Gibt an, dass der Dienst gestartet wurde.|  
@@ -76,7 +76,7 @@ ms.locfileid: "62899448"
 |SQLISService_273|Gibt an, dass die Konfigurationsdatei nicht gelesen werden konnte oder nicht gültig ist.|  
 |SQLISService_274|Gibt an, dass der Registrierungseintrag, der den Speicherort der Konfigurationsdatei enthält, nicht vorhanden oder leer ist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

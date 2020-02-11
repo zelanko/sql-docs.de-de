@@ -1,5 +1,5 @@
 ---
-title: Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes des SQL-Ablaufverfolgung (SQL Server Management Studio) | Microsoft-Dokumentation
+title: Verwenden von SQL Server Profiler zum Erstellen eines Sammlungs Satzes für die SQL-Ablauf Verfolgung (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873320"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung (SQL Server Management Studio)
@@ -38,7 +38,7 @@ ms.locfileid: "62873320"
   
 2.  Klicken Sie im Dialogfeld **Verbindung mit Server herstellen** auf **Abbrechen**.  
   
-3.  Vergewissern Sie sich bei diesem Szenario, dass die Werte der Dauer für die Anzeige in Millisekunden (Standard) konfiguriert sind. Führen Sie hierzu folgende Schritte aus:  
+3.  Vergewissern Sie sich bei diesem Szenario, dass die Werte der Dauer für die Anzeige in Millisekunden (Standard) konfiguriert sind. Gehen Sie dazu folgendermaßen vor:  
   
     1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873320"
   
     1.  Klicken Sie in der Filterliste auf **Dauer**.  
   
-    2.  Erweitern Sie im Fenster booleschen Operator den **größer als oder gleich** Knoten, Typ `80` als Wert ein, und klicken Sie dann auf **OK**.  
+    2.  Erweitern Sie im Fenster boolescher Operator den Knoten **größer als oder gleich** , geben `80` Sie als Wert ein, und klicken Sie dann auf **OK**.  
   
 9. Klicken Sie auf **Ausführen** , um die Ablaufverfolgung zu starten.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "62873320"
   
 4.  Klicken Sie auf **Ausführen** , um die Abfrage auszuführen und den Sammlungssatz zu erstellen.  
   
-5.  Überprüfen Sie im Objekt-Explorer, ob der Sammlungssatz erstellt wurde. Führen Sie hierzu folgende Schritte aus:  
+5.  Überprüfen Sie im Objekt-Explorer, ob der Sammlungssatz erstellt wurde. Gehen Sie dazu folgendermaßen vor:  
   
     1.  Klicken Sie mit der rechten Maustaste auf **Verwaltung**, und klicken Sie dann auf **Aktualisieren**.  
   
     2.  Erweitern Sie **Verwaltung**und anschließend **Datensammlung**.  
   
-     Die `SPROC_CollectionSet` Sammlungssatz wird angezeigt, auf der gleichen Ebene wie die **Systemdaten-Sammlungssätze** Knoten. Der Sammlungssatz ist in der Standardeinstellung deaktiviert.  
+     Der `SPROC_CollectionSet` Sammlungs Satz wird auf der gleichen Ebene wie der Knoten **System Daten-Sammlungs Sätze** angezeigt. Der Sammlungssatz ist in der Standardeinstellung deaktiviert.  
   
 6.  Bearbeiten Sie im Objekt-Explorer die Eigenschaften von SPROC_CollectionSet, wie Sammlungsmodus und Uploadzeitplan. Folgen Sie den gleichen Schritten, die Sie auch für die Systemdaten-Sammlungssätze ausführen würden, die mit dem Datensammler bereitgestellt werden.  
   

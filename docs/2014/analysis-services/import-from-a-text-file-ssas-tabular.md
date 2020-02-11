@@ -1,5 +1,5 @@
 ---
-title: Importieren aus einer Textdatei (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Aus einer Textdatei importieren (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080537"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Importieren aus einer Textdatei (SSAS – tabellarisch)
@@ -30,8 +30,8 @@ ms.locfileid: "66080537"
   
 3.  Führen Sie die Schritte im Tabellenimport-Assistenten aus. Auf nachfolgenden Seiten können Sie über die Seite **Tabellen und Sichten auswählen** bestimmte Tabellen auswählen und Filter anwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](import-data-ssas-tabular.md)   
- [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Importieren von Daten &#40;tabellarischen SSAS-&#41;](import-data-ssas-tabular.md)   
+ [Unterstützte Datenquellen &#40;tabellarischen SSAS-&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

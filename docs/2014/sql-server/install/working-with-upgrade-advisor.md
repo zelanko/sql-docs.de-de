@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit dem Upgrade Advisor | Microsoft-Dokumentation
+title: Arbeiten mit Upgrade Advisor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090957"
 ---
 # <a name="working-with-upgrade-advisor"></a>Arbeiten mit dem Upgrade Advisor
@@ -31,22 +31,22 @@ ms.locfileid: "66090957"
     > [!IMPORTANT]  
     >  Sie können keine Remoteinstanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analysieren.  
   
--   Anzeigen der Ergebnisse der Analyse.  
+-   Zeigen Sie die Ergebnisse der Analyse an.  
   
- Der Upgrade Advisor umfasst einen Analyzer und einen Viewer. Der Analyse-Assistent des Upgrade Advisors analysiert die Komponenten, die Sie auswählen. Der Analyzer generiert dann benutzerdefinierte Berichte über Probleme, die Sie beheben müssen, bevor Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren können. Mit dem Berichts-Viewer des Upgrade Advisors zeigen Sie die benutzerdefinierten Berichte an. Weitere Informationen dazu, welche Analyse des Upgrade Advisors erkennt, finden Sie unter [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
+ Der Upgrade Advisor umfasst einen Analyzer und einen Viewer. Der Analyse-Assistent des Upgrade Advisors analysiert die Komponenten, die Sie auswählen. Der Analyzer generiert dann benutzerdefinierte Berichte über Probleme, die Sie beheben müssen, bevor Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren können. Mit dem Berichts-Viewer des Upgrade Advisors zeigen Sie die benutzerdefinierten Berichte an. Weitere Informationen zu den von der Analyse des Upgrade Advisors erkannten Informationen finden Sie unter [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
   
- Die Themen in diesem Abschnitt bieten einen Überblick über die Upgrade Advisor-Funktionalität sowie Informationen zur Verwendung von Upgrade Advisor und Upgrade Advisor-Berichte.  
+ Die Themen in diesem Abschnitt bieten eine Übersicht über die Funktionen des Upgrade Advisors und Informationen zur Verwendung von Upgrade Advisor-und Upgrade Advisor-Berichten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Übersicht über den Upgrade Advisor](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Liefert eine Überblick über den Upgradeprozess, den Analyse-Assistenten und den Berichts-Viewer des Upgrade Advisors.|  
-|[Artikel zur Vorgehensweise für den Upgrade Advisor](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Enthält Anweisungen zur Durchführung allgemeiner Upgrade Advisor-Prozeduren.|  
-|[Upgrade Advisor Referenz zur Benutzeroberfläche](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Enthält Themen, die angezeigt werden, wenn Sie die Taste F1 drücken oder auf **Hilfe** auf den Seiten für die Analyse-Assistenten.|  
+|[Themen zur Vorgehensweise für den Upgrade Advisor](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Enthält Anweisungen zur Durchführung allgemeiner Upgrade Advisor-Prozeduren.|  
+|[Benutzeroberflächenreferenz des Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Enthält Themen, die angezeigt werden, wenn Sie die F1-Taste drücken oder auf den Seiten des Analyse-Assistenten des Upgrade Advisors auf **Hilfe** klicken.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren des Upgrade Advisors](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Installieren von Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

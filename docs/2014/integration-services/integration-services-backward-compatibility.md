@@ -18,23 +18,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892296"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services – Abwärtskompatibilität
-  In diesem Abschnitt werden die Änderungen zwischen den Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  
+  In diesem Abschnitt werden die Änderungen zwischen verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Als veraltet markierte Features in SQL Server 2014 Integration Services](../../2014/integration-services/deprecated-integration-services-features-in-sql-server-2014.md)  
+-   [Als veraltet markierte Funktionen in SQL Server 2014 Integration Services](../../2014/integration-services/deprecated-integration-services-features-in-sql-server-2014.md)  
   
 -   [Nicht mehr unterstützte Integration Services-Funktionalität in SQL Server 2014](../../2014/integration-services/discontinued-integration-services-functionality-in-sql-server-2014.md)  
   
--   [Breaking Changes von Integration Services-Features in SQL Server 2014](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
+-   [Aktuelle Änderungen an Integration Services-Funktionen in SQL Server 2014](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
   
--   [Behavior Changes von Integration Services-Features in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)  
+-   [Verhaltensänderungen von Integration Services-Features in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)  
   
   

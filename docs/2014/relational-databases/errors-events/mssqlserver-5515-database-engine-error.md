@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867594"
 ---
-# <a name="mssqlserver5515"></a>MSSQLSERVER_5515
+# <a name="mssqlserver_5515"></a>MSSQLSERVER_5515
     
 ## <a name="details"></a>Details  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62867594"
  Das angegebene Containerverzeichnis der FILESTREAM-Datei kann nicht geöffnet werden.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- Die Ursache des Fehlers finden Sie im angegebenen Windows-Statuscode. Weitere Informationen finden Sie unter den [Events and Errors Message Support Center](https://support.microsoft.com/search?query=events%20and%20errors).  
+ Die Ursache des Fehlers finden Sie im angegebenen Windows-Statuscode. Weitere Informationen finden Sie im [Support Center für Ereignisse und Fehlermeldungen](https://support.microsoft.com/search?query=events%20and%20errors).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ändern der Eigenschaften eines Miningmodells | Microsoft-Dokumentation
+title: Ändern der Eigenschaften eines Mining Modells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085881"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Ändern der Eigenschaften eines Miningmodells
@@ -25,9 +25,9 @@ ms.locfileid: "66085881"
   
  Die folgenden Modelleigenschaften besitzen erweiterte Editor-Programme, mit denen Ausdrücke erstellt oder komplexe Modelleigenschaften konfiguriert werden können. Funktionen der folgenden Eigenschaften:  
   
--   `Filter` Eigenschaft: Öffnet die [Datasetfilter oder im Dialogfeld "Filter" Modell](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter`Property: öffnet das [Dialog Feld Datasetfilter oder Modell Filter](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` Eigenschaft: Öffnet die [Algorithmus Parameter (Dialogfeld) &#40;Miningmodelle-Sicht&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters`Property: öffnet das [Dialog Feld Algorithmusparameter, &#40;Mining Modell Ansicht&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Informationen zum Festlegen der Eigenschaften eines Miningmodells finden Sie unter [Miningmodellspalten](mining-model-columns.md).  
   
@@ -46,11 +46,11 @@ ms.locfileid: "66085881"
 2.  Wählen Sie im Fenster **Eigenschaften** auf der rechten Seite des Bildschirms den Wert aus, der der Eigenschaft entspricht, die Sie ändern möchten, und geben Sie dann den neuen Wert ein.  
   
     > [!NOTE]  
-    >  Wenn die Spaltenverwendung, um festgelegt ist `Ignore`, **Eigenschaften** Fenster für die Spalte ist leer.  
+    >  Wenn die Spalten Verwendung auf `Ignore`festgelegt ist, ist das Fenster **Eigenschaften** für die Spalte leer.  
   
      Der neue Wert wird wirksam, wenn Sie ein anderes Element im Designer auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und -anweisungen](mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)  
   
   

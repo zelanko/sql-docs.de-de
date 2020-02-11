@@ -1,5 +1,5 @@
 ---
-title: Mining-Modell-Viewer-Tasks und Anweisungen für | Microsoft-Dokumentation
+title: Tasks und Anleitungen für Mining Modell-Viewer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083480"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tasks und Anweisungen für Miningmodell-Viewer
@@ -41,12 +41,12 @@ ms.locfileid: "66083480"
   
 -   [Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Anzeigen der Formel für ein Zeitreihenmodell &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Anzeigen der Formel für ein Zeitreihen Modell &#40;Data Mining-&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Ändern der im Data Mining-Viewer verwendeten Farben](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernprogramm zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tutorial zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

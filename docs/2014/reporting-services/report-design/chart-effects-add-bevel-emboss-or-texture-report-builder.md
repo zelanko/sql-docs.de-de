@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b25d12646a2662cb5c6ab8f2a9b510aa02d7c49b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106283"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106283"
 > [!NOTE]  
 >  Sie können 3D nicht mit Abschrägungen oder Prägungen im selben Diagramm verwenden. Wenn Sie für das Diagramm 3D aktiviert haben, wird die PieDrawingStyle-Eigenschaft nicht angezeigt.  
   
- ![Kreisdiagramm mit konkaver Zeichnungsart](../media/rs-piedrawingeffects-concave.gif "Pie chart with concave drawing style")  
+ ![Kreisdiagramm mit konkaver Zeichnungsart](../media/rs-piedrawingeffects-concave.gif "Kreisdiagramm mit konkaver Zeichnungsart")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>So fügen Sie einem Balken- oder Säulendiagramm Strukturarten hinzu  
   
@@ -57,9 +57,9 @@ ms.locfileid: "66106283"
 > [!NOTE]  
 >  Sie können 3D nicht mit Abschrägungen oder Prägungen im selben Diagramm verwenden. Wenn Sie für das Diagramm 3D aktiviert haben, wird die PieDrawingStyle-Eigenschaft nicht angezeigt.  
   
- ![Balkendiagramm mit LightToDark-Zeichnungseffekt](../media/rs-bardrawingeffects-lighttodark.gif "Bar chart with LightToDark drawing effect")  
+ ![Balkendiagramm mit LightToDark-Zeichnungseffekt](../media/rs-bardrawingeffects-lighttodark.gif "Balkendiagramm mit LightToDark-Zeichnungseffekt")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Säulendiagramme (Berichts-Generator und SSRS)](column-charts-report-builder-and-ssrs.md)   
  [Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   

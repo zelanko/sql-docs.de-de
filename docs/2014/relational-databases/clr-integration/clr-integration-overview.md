@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die Clrintegration | Microsoft-Dokumentation
+title: Übersicht über die CLR-Integration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874982"
 ---
 # <a name="overview-of-clr-integration"></a>Übersicht über die CLR-Integration
@@ -30,17 +30,19 @@ ms.locfileid: "62874982"
   
  Mit der von Microsoft SQL Server gehosteten CLR ("CLR-Integration" genannt) können Sie gespeicherte Prozeduren, Trigger, benutzerdefinierte Funktionen, benutzerdefinierte Typen (UDT) und benutzerdefinierte Aggregate in verwaltetem Code erstellen. Da verwalteter Code vor der Ausführung in systemeigenen Code kompiliert wird, können Sie in manchen Fällen einen erheblichen Leistungsanstieg erreichen.  
   
- In verwaltetem Code wird Codezugriffssicherheit (Code Access Sicherheit, CAS) verwendet, um zu verhindern, dass Assemblys bestimmte Vorgänge ausführen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet CAS, um die Absicherung von verwaltetem Code zu unterstützen und eine Gefährdung des Betriebssystems oder des Datenbankservers zu verhindern.  
+ In verwaltetem Code wird Codezugriffssicherheit (Code Access Sicherheit, CAS) verwendet, um zu verhindern, dass Assemblys bestimmte Vorgänge ausführen. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet CAS, um die Absicherung von verwaltetem Code zu unterstützen und eine Gefährdung des Betriebssystems oder des Datenbankservers zu verhindern.  
   
 ## <a name="advantages-of-clr-integration"></a>Vorteile der CLR-Integration  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] ist ausdrücklich für direkten Datenzugriff und die direkte Datenbearbeitung in der Datenbank vorgesehen. Während [!INCLUDE[tsql](../../../includes/tsql-md.md)] für den Datenzugriff und die Datenverwaltung ideal geeignet ist, handelt es sich dabei nicht um eine vollständige Programmiersprache. Beispielsweise unterstützt [!INCLUDE[tsql](../../../includes/tsql-md.md)] keine Arrays, Auflistungen, For-Each-Schleifen, Bit-Verschiebungen oder Klassen. Bestimmte dieser Konstrukte können in [!INCLUDE[tsql](../../../includes/tsql-md.md)]simuliert werden; verwalteter Code verfügt über eine integrierte Unterstützung dieser Konstrukte. Je nach Szenario können diese Funktionen einen zwingenden Grund darstellen, bestimmte Datenbankfunktionalitäten in verwaltetem Code zu implementieren.  
+ 
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ist ausdrücklich für direkten Datenzugriff und die direkte Datenbearbeitung in der Datenbank vorgesehen. Während [!INCLUDE[tsql](../../../includes/tsql-md.md)] für den Datenzugriff und die Datenverwaltung ideal geeignet ist, handelt es sich dabei nicht um eine vollständige Programmiersprache. Beispielsweise unterstützt [!INCLUDE[tsql](../../../includes/tsql-md.md)] keine Arrays, Auflistungen, For-Each-Schleifen, Bit-Verschiebungen oder Klassen. Bestimmte dieser Konstrukte können in [!INCLUDE[tsql](../../../includes/tsql-md.md)]simuliert werden; verwalteter Code verfügt über eine integrierte Unterstützung dieser Konstrukte. Je nach Szenario können diese Funktionen einen zwingenden Grund darstellen, bestimmte Datenbankfunktionalitäten in verwaltetem Code zu implementieren.  
   
  Microsoft Visual Basic .NET und Microsoft Visual C# bieten objektorientierte Funktionen wie z. B. Kapselung, Vererbung und Polymorphie. Damit verbundener Code kann jetzt leicht in Klassen und Namespaces organisiert werden. Wenn Sie mit großen Datenmengen an Servercode arbeiten, können Sie auf diese Weise Ihren Code leichter organisieren und instand halten.  
   
  Verwalteter Code eignet sich besser als [!INCLUDE[tsql](../../../includes/tsql-md.md)] für Berechnungen und komplizierte Ausführungslogik und bietet weitreichende Unterstützung für zahlreiche komplexe Tasks wie Zeichenfolgenbehandlung und reguläre Ausdrücke. Mit der Funktionalität, die in der .NET Framework -Bibliothek zur Verfügung steht, haben Sie Zugriff auf Tausende von vorgefertigten Klassen und Routinen. Auf diese Klassen und Routinen können Sie von jeder gespeicherten Prozedur, jedem Trigger und jeder benutzerdefinierten Funktion aus zugreifen. Die Basisklassenbibliothek (Base Class Library, BCL) enthält u. a. Klassen mit Funktionen zur Zeichenfolgenbearbeitung, für erweiterte mathematische Vorgänge, den Dateizugriff, die Kryptografie.  
   
 > [!NOTE]  
->  Viele dieser Klassen können ausgehend vom CLR-Code in SQL Server verwendet werden. Klassen, die nicht für eine serverseitige Verwendung geeignet sind (beispielsweise Window-Klassen) sind auf diese Weise nicht verfügbar. Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](database-objects/supported-net-framework-libraries.md).  
+>  Viele dieser Klassen können ausgehend vom CLR-Code in SQL Server verwendet werden. Klassen, die nicht für eine serverseitige Verwendung geeignet sind (beispielsweise Window-Klassen) sind auf diese Weise nicht verfügbar. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](database-objects/supported-net-framework-libraries.md).  
   
  Einer der Vorteile von verwaltetem Code besteht in der Typsicherheit, d. h. die Gewissheit, dass der Code nur in einer genau definierten und zulässigen Weise auf Typen zugreift. Bevor verwalteter Code ausgeführt wird, überprüft die CLR, dass der Code sicher ist. Beispielsweise wird der Code dahingehend überprüft, dass kein Speicher gelesen wird, der nicht zuvor geschrieben wurde. Die CLR kann auch dazu beitragen, sicherzustellen, dass der Code nicht verwalteten Speicher bearbeitet.  
   
@@ -55,8 +57,8 @@ ms.locfileid: "62874982"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Erweiterte gespeicherte Prozeduren oder verwalteter Code?  
  Erweiterte gespeicherte Prozeduren werden erstellt, um Funktionen auszuführen, die mit gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren nicht möglich sind. Erweiterte gespeicherte Prozeduren können jedoch die Integrität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozesses beeinträchtigen, während verwalteter Code auf Typsicherheit überprüft wird und daher keine Gefährdung darstellt. Darüber hinaus sind Speicherverwaltungsfunktionen, Planung von Threads und Fibers und Synchronisierungsdienste des verwalteten Codes der CLR und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]besser integriert. Die CLR-Integration bietet mehr Sicherheit als erweiterte gespeicherte Prozeduren beim Erstellen der gespeicherten Prozeduren, die Sie benötigen, um Tasks auszuführen, die in [!INCLUDE[tsql](../../../includes/tsql-md.md)]nicht möglich sind. Weitere Informationen zu CLR-Integration und erweiterte gespeicherte Prozeduren finden Sie unter [Performance of CLR Integration](clr-integration-architecture-performance.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren von .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Installieren des .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architektur der CLR-Integration](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [Datenzugriff von CLR-Datenbankobjekten](data-access/data-access-from-clr-database-objects.md)   
  [Erste Schritte mit der CLR-Integration](database-objects/getting-started-with-clr-integration.md)  

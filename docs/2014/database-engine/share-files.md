@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843556"
 ---
 # <a name="share-files"></a>Freigeben von Dateien
@@ -34,13 +34,13 @@ ms.locfileid: "62843556"
   
 1.  Wählen Sie im Projektmappen-Explorer den Ordner oder das Projekt aus, in dem die freigegebenen Dateien platziert werden sollen.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **Freigabe**.  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **Freigeben**.  
   
-3.  In der **freigeben** Dialogfeld Durchsuchen die Verzeichnisliste für das Element, das Sie freigeben möchten, und klicken Sie auf das Element.  
+3.  Navigieren Sie im Dialogfeld **Freigeben mit** in der Verzeichnisliste für das Element, das Sie freigeben möchten, und klicken Sie auf dieses Element.  
   
 4.  Klicken Sie auf **Freigabe**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlagen zur Quellcodeverwaltung](../../2014/database-engine/source-control-basics.md)  
   
   

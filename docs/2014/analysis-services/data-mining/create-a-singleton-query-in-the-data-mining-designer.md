@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Singleton-Abfrage im Datamining-Designer | Microsoft-Dokumentation
+title: Erstellen einer SINGLETON-Abfrage im Data Mining-Designer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085310"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Erstellen einer SINGLETON-Abfrage im Data Mining-Designer
@@ -57,9 +57,9 @@ AS [t]
   
 4.  Wählen Sie in der **SINGLETON-Abfrageeingabe** -Tabelle in der **Wert** -Spalte Werte aus, mit denen der Fall beschrieben wird, für den Sie eine Vorhersage erstellen möchten.  
   
-     Wählen Sie z. B. **2** für **Number Children At Home**, und geben Sie dann `45` für **Alter**.  
+     Wählen Sie beispielsweise für **Number Children at Home**den Wert **2** aus, `45` und geben Sie dann für **Age**ein.  
   
-5.  Ziehen Sie eine vorhersagbare Spalte aus der **Miningmodell** -Tabelle in die **Quelle** -Spalte unten auf der Registerkarte. Optional können Sie einen Alias für die Spalte eingeben.  
+5.  Ziehen Sie eine vorhersagbare Spalte aus der **Mining Modell** Tabelle in die **Quell** Spalte unten auf der Registerkarte. Optional können Sie einen Alias für die Spalte eingeben.  
   
      Ziehen Sie beispielsweise **Bike Buyer** in die Spalte **Quelle** .  
   
@@ -69,17 +69,17 @@ AS [t]
   
 7.  Klicken Sie in der Zeile **PredictProbability** auf **Kriterium/Argument** , und geben Sie den Namen der vorherzusagenden Spalte ein und optional einen bestimmten vorherzusagenden Wert.  
   
-     Beispiel: `[Bike Buyer], 1`.  
+     Geben Sie beispielsweise `[Bike Buyer], 1` ein.  
   
 8.  Klicken Sie in der Zeile **PredictProbability** auf das Feld **Alias** , und geben Sie einen Verweisnamen für die neue Spalte ein.  
   
-     Beispiel: `ProbableBuyer`.  
+     Geben Sie beispielsweise `ProbableBuyer` ein.  
   
 9. Klicken Sie auf der Symbolleiste der Registerkarte **Miningmodellvorhersage** auf **Zur Abfragergebnissicht wechseln** .  
   
      Ein neuer Bildschirm wird geöffnet, der das Ergebnis der Abfrage anzeigt. Um die DMX-Anweisung anzuzeigen, die Sie gerade erstellt haben, klicken Sie auf **SQL**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorhersageabfragen &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorhersage Abfragen &#40;Data Mining-&#41;](prediction-queries-data-mining.md)  
   
   

@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876190"
 ---
 # <a name="differential-backups-sql-server"></a>Differenzielle Sicherungen (SQL Server)
   Dieses Thema zu Sicherung und Wiederherstellung ist für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant.  
   
- Eine differenzielle Sicherung basiert auf der aktuellsten, zuvor ausgeführten vollständigen Datensicherung. Mit einer differenziellen Sicherung werden nur die Daten erfasst, die sich seit dieser vollständigen Sicherung geändert haben. Die vollständige Sicherung, auf der eine differenzielle Sicherung basiert wird, wird als *Basis* der differenziellen Sicherung bezeichnet. Vollständige Sicherungen, mit Ausnahme von Kopiesicherungen, können als Basis für eine Reihe differenzieller Sicherungen dienen, einschließlich Datenbanksicherungen, Teilsicherungen und Dateisicherungen. Die Basissicherung für eine differenzielle Dateisicherung kann in einer vollständigen Sicherung, einer Dateisicherung oder einer Teilsicherung enthalten sein.  
+ Diese Sicherung basiert auf der letzten vollständigen Datensicherung. Mit einer differenziellen Sicherung werden nur die Daten erfasst, die sich seit dieser vollständigen Sicherung geändert haben. Die vollständige Sicherung, auf der eine differenzielle Sicherung basiert wird, wird als *Basis* der differenziellen Sicherung bezeichnet. Vollständige Sicherungen, mit Ausnahme von Kopiesicherungen, können als Basis für eine Reihe differenzieller Sicherungen dienen, einschließlich Datenbanksicherungen, Teilsicherungen und Dateisicherungen. Die Basissicherung für eine differenzielle Dateisicherung kann in einer vollständigen Sicherung, einer Dateisicherung oder einer Teilsicherung enthalten sein.  
   
   
 ##  <a name="Benefits"></a> Vorteile  
@@ -34,12 +34,12 @@ ms.locfileid: "62876190"
   
 -   Bei Verwendung des vollständigen Wiederherstellungsmodells kann mithilfe differenzieller Sicherungen die Anzahl der Protokollsicherungen reduziert werden, die wiederhergestellt werden müssen.  
   
-##  <a name="Overview"></a> Übersicht über differenzielle Sicherungen  
+##  <a name="Overview"></a>Übersicht über differenzielle Sicherungen  
  Bei einer differenziellen Sicherung wird der Status aller *Blöcke* (Sammlungen von acht physisch zusammenhängenden Seiten) erfasst, die sich zwischen dem Erstellungszeitpunkt der differenziellen Datenbank und dem Erstellungszeitpunkt der differenziellen Sicherung geändert hat. Das bedeutet, dass die Größe einer bestimmten differenziellen Sicherung von der Menge an Daten abhängt, die seit der Basissicherung geändert wurden. Grundsätzlich gilt: Je älter die Basis, desto größer die neue differenzielle Sicherung. In einer Reihe differenzieller Sicherungen enthält ein häufig aktualisierter Block möglicherweise bei jeder differenziellen Sicherung unterschiedliche Daten.  
   
  In der folgenden Abbildung wird die Funktionsweise einer differenziellen Sicherung veranschaulicht. Die Abbildung zeigt 24 Datenblöcke, von denen sechs geändert wurden. Die differenzielle Sicherung enthält nur diese sechs Datenblöcke. Der differenzielle Sicherungsvorgang basiert auf einer Bitmapseite, die für jeden Block ein Bit enthält. Für jeden seit der Basissicherung aktualisierten Block wird das Bit in der Bitmap auf 1 festgelegt.  
   
- ![Differenzielle Bitmuster werden geänderte Blöcke identifiziert](../../database-engine/media/bnr-how-diff-backups-work.gif "Differential bitmap identifies changed extents")  
+ ![Vom differenziellen Bitmuster werden geänderte Blöcke identifiziert](../../database-engine/media/bnr-how-diff-backups-work.gif "Vom differenziellen Bitmuster werden geänderte Blöcke identifiziert")  
   
 > [!NOTE]  
 >  Durch eine Kopiesicherung erfolgt keine Aktualisierung des differenziellen Bitmusters. Daher hat eine Kopiesicherung keine Auswirkungen auf die nachfolgenden differenziellen Sicherungen.  
@@ -53,7 +53,7 @@ ms.locfileid: "62876190"
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Differenzielle Sicherungen von Datenbanken mit speicheroptimierten Tabellen  
  Weitere Informationen zu differenziellen Sicherungen und Datenbanken mit speicheroptimierten Tabellen finden Sie unter [Sichern einer Datenbank mit speicheroptimierten Tabellen](../in-memory-oltp/memory-optimized-tables.md).  
   
-##  <a name="ReadOnlyDbs"></a> Differenzielle Sicherungen schreibgeschützter Datenbanken  
+##  <a name="ReadOnlyDbs"></a>Differenzielle Sicherungen Schreib geschützter Datenbanken  
  Für schreibgeschützte Datenbanken sind separate vollständige Sicherungen einfacher zu verwalten als wenn sie zusammen mit differenziellen Sicherungen verwendet werden. Wenn eine Datenbank schreibgeschützt ist, können mit Sicherungen und sonstigen Vorgängen die Metadaten in der Datei nicht geändert werden. Deshalb werden die für eine differenzielle Sicherung erforderlichen Metadaten, z.B. die Protokollfolgenummer (Log Sequence Number, LSN), mit der die differenzielle Sicherung beginnt (die Basis-LSN für eine differenzielle Sicherung), in der **master** -Datenbank gespeichert. Wenn die differenzielle Basis erstellt wird, während die Datenbank schreibgeschützt ist, zeigt das differenzielle Bitmuster mehr Änderungen an als tatsächlich seit der Basissicherung erfolgt sind. Die zusätzlichen Daten werden durch die Sicherung gelesen, jedoch nicht in die Sicherung geschrieben, da die in der **backupset** -Systemtabelle gespeicherte [differential_base_lsn](/sql/relational-databases/system-tables/backupset-transact-sql) verwendet wird, um zu ermitteln, ob die Daten seit der Basissicherung tatsächlich geändert wurden.  
   
  Wenn eine schreibgeschützte Datenbank neu erstellt, wiederhergestellt oder getrennt und dann angefügt wird, gehen die Informationen zur differenziellen Basis verloren. Dies passiert, da die **master** -Datenbank nicht mit der Benutzerdatenbank synchronisiert wird. Mit [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann dieses Problem nicht erkannt oder verhindert werden. Spätere differenzielle Sicherungen basieren nicht auf der letzten vollständigen Sicherung und können zu unerwarteten Ergebnissen führen. Zum Einrichten einer neuen differenziellen Basis wird empfohlen, eine vollständige Datenbanksicherung zu erstellen.  
@@ -72,7 +72,7 @@ ms.locfileid: "62876190"
 -   [Wiederherstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](complete-database-restores-full-recovery-model.md)   

@@ -1,5 +1,5 @@
 ---
-title: Modellieren Sie die Registerkarte "(Miningmodell-Viewer) | Microsoft-Dokumentation
+title: Registerkarte "Modell" (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077618"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Registerkarte "Modell" (Miningmodell-Viewer)
@@ -24,13 +24,13 @@ ms.locfileid: "66077618"
   
  Mit dieser Sicht eines Zeitreihenmodells können Sie nützliche Informationen zur Zeitreihenanalyse extrahieren, u. a. die Gleichung für den Graph, die ARIMA-Terme und die Koeffizienten.  
   
- **Weitere Informationen finden Sie unter** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md)  
+ **Weitere Informationen finden Sie unter:** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein Miningmodell zur Ansicht aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
  **Viewer**  
@@ -51,7 +51,7 @@ ms.locfileid: "66077618"
  **Diagramm an Fenstergröße anpassen**  
  Verkleinert das Diagramm so weit, dass das gesamte Diagramm auf den Bildschirm passt.  
   
- **Struktur**  
+ **Linde**  
  Wählen Sie eine Struktur aus der Dropdownliste aus, die im Viewer angezeigt werden soll.  
   
  Wenn das Zeitreihenmodell mehrere Reihen umfasst, wird jede Reihe als separate Struktur dargestellt. Wenn Sie z. B. für [Menge] und [Umsatz] Vorhersagen über einen Zeitraum erstellt haben, wird eine separate Reihe für jedes vorhersagbare Attribut erstellt.  
@@ -69,9 +69,9 @@ ms.locfileid: "66077618"
  **Ebene anzeigen**  
  Damit ändern Sie die Anzahl der Ebenen, die in der Struktur angezeigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

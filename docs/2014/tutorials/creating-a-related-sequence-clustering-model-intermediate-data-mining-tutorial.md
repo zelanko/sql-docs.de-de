@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein Clustering-Modells (mittleres Datamining-Lernprogramm) für verwandte Sequenzen | Microsoft-Dokumentation
+title: Erstellen eines zugehörigen Sequence Clustering-Modells (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855876"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen eines Clustermodells für verwandte Sequenzen (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -30,15 +30,15 @@ ms.locfileid: "62855876"
   
 2.  Klicken Sie mit der rechten Maustaste auf das Modell, das Sie kopieren möchten, und wählen Sie **Neues Miningmodell**aus.  
   
-3.  In der **Neues Miningmodell** Dialogfeld Geben Sie einen Modellnamen ein, und wählen Sie die Microsoft `Sequence Clustering`.  
+3.  Geben Sie im Dialogfeld **Neues Mining Modell** einen Modellnamen ein, und wählen Sie `Sequence Clustering`Microsoft aus.  
   
-     Geben Sie für dieses Tutorial den Namen `Sequence Clustering`.  
+     Geben Sie für dieses Tutorial den Namen `Sequence Clustering`ein.  
   
 4.  Klicken Sie auf **OK**.  
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>So entfernen Sie Spalten aus dem Miningmodell  
   
-1.  In der **Miningmodell** Registerkarte in der Spalte für das neue Modell mit dem Namen Sequence Clustering, klicken Sie auf die Zeile für die **Einkommensgruppe** Attribut, und wählen Sie **ignorieren**.  
+1.  Klicken Sie auf der Registerkarte **Mining Modell** in der Spalte für das neue Modell Sequence Clustering auf die Zeile für das **Income Group** -Attribut, und wählen Sie **ignorieren**aus.  
   
 2.  Wiederholen Sie diesen Schritt für das Attribut **Region**.  
   
@@ -46,15 +46,15 @@ ms.locfileid: "62855876"
   
      Das neue Modell sollte nur aus folgenden Spalten bestehen:  
   
-     **Reihenfolge NumberKey**  
+     **Bestellnummern Schlüssel**  
   
-     **Anzahl ein Schlüssel für direktverbindungen**  
+     **Zeilennummern Schlüssel**  
   
-     **Modell Vorhersagen**  
+     **Modellvorhersage**  
   
 ### <a name="to-process-the-new-sequence-clustering-model"></a>So verarbeiten Sie das neue Sequenzclustermodell  
   
-1.  In der **Miningmodell** Registerkarte der rechten Maustaste auf das neue Modell `Sequence Clustering`, und wählen Sie **Prozessmodell**.  
+1.  Klicken Sie auf der Registerkarte **Mining Modell** mit der rechten Maustaste auf `Sequence Clustering`das neue Modell, und wählen Sie **Modell verarbeiten**aus.  
   
      Da das neue vereinfachte Miningmodell auf einer Struktur basiert, die bereits verarbeitet wurde, muss diese nicht erneut verarbeitet werden. Eine Verarbeitung des neuen Miningmodells ist ausreichend.  
   
@@ -64,10 +64,10 @@ ms.locfileid: "62855876"
   
 4.  Klicken Sie auf **Schließen** , um das Dialogfeld **Verarbeitungsstatus** zu schließen, und klicken Sie im Dialogfeld **Miningmodell verarbeiten** erneut auf **Schließen** .  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Erstellen von Vorhersagen für ein Sequenzclustermodell &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Erstellen von Vorhersagen für ein Sequenz Cluster Modell &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verarbeitungsanforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

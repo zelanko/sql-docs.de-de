@@ -16,20 +16,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896186"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Erstellen eines ODBC-Ziels mit der Skriptkomponente
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden Daten in der Regel mithilfe eines [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Ziels und des [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieters für ODBC in einem ODBC-Ziel gespeichert. Sie können jedoch auch ein Ad-hoc-ODBC-Ziel für die Verwendung in einem einzelnen Paket erstellen. Zur Erstellung dieses Ad-hoc-ODBC-Ziels verwenden Sie die Skriptkomponente, wie in dem folgenden Beispiel dargestellt.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]speichern Sie Daten in der Regel in einem ODBC-Ziel mithilfe [!INCLUDE[vstecado](../../includes/vstecado-md.md)] eines-Ziels [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und der-Datenanbieter für ODBC. Sie können jedoch auch ein Ad-hoc-ODBC-Ziel für die Verwendung in einem einzelnen Paket erstellen. Zur Erstellung dieses Ad-hoc-ODBC-Ziels verwenden Sie die Skriptkomponente, wie in dem folgenden Beispiel dargestellt.  
   
 > [!NOTE]  
 >  Wenn Sie eine Komponente erstellen möchten, die Sie einfacher in mehreren Datenflusstasks und Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skriptkomponentenbeispiel als Ausgangspunkt für eine benutzerdefinierte Datenflusskomponente zu verwenden. Weitere Informationen finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie eine Zielkomponente erstellt wird, die einen vorhandenen ODBC-Verbindungs-Manager zum Speichern von Daten aus dem Datenfluss in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle verwendet.  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Zielkomponente erstellt wird, die einen vorhandenen ODBC-Verbindungs-Manager verwendet, um Daten aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Datenfluss in einer-Tabelle zu speichern.  
   
  Dieses Beispiel ist eine modifizierte Version des benutzerdefinierten [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Ziels, das im Thema [Erstellen eines Ziels mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) veranschaulicht wurde. In diesem Beispiel wurde das benutzerdefinierte [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Ziel jedoch so geändert, dass es mit einem ODBC-Verbindungs-Manager funktioniert und Daten in einem ODBC-Ziel speichert. Die Modifizierungen umfassen die folgenden Änderungen:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62896186"
   
 3.  Fügen Sie der Oberfläche des Datenfluss-Designers eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Ziel.  
   
-4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Um sicherzustellen, dass dieses Beispiel funktioniert, muss die Ausgabe der Upstreamkomponente zumindest die Spalten **AddressID** und **City** aus der **Person.Address**-Tabelle der **AdventureWorks**-Beispieldatenbank enthalten.  
+4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Um sicherzustellen, dass dieses Beispiel funktioniert, muss die Ausgabe der Upstreamkomponente mindestens die Spalten **adressssid** und **City** aus der **Person. Address** -Tabelle der **AdventureWorks** -Beispieldatenbank enthalten.  
   
 5.  Öffnen Sie den **Transformations-Editor für Skripterstellung**. Wählen Sie auf der Seite **Eingabespalten** die Spalten **AddressID** und **City** aus.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62896186"
   
 7.  Fügen Sie auf der Seite **Verbindungs-Manager** den ODBC-Verbindungs-Manager hinzu, oder erstellen Sie diesen, und geben Sie ihm einen aussagekräftigen Namen, z.B. **MyODBCConnectionManager**.  
   
-8.  Auf der **Skript** auf **Bearbeitungsskript**, und geben Sie dann das folgende Skript in die `ScriptMain` Klasse.  
+8.  Klicken Sie auf der Seite **Skript** auf **Skript bearbeiten**, und geben Sie dann das unten gezeigte Skript `ScriptMain` in der-Klasse ein.  
   
 9. Schließen Sie anschließend die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**, und führen Sie das Beispiel aus.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "62896186"
     }  
     ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Ziels mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen oder Anpassen eine Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft-Dokumentation
+title: Erstellen oder Anpassen einer datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31e69ddc36079c993e66a7e9253bfdd178057302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071560"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Erstellen oder Anpassen einer Datenfeedbibliothek (PowerPivot für SharePoint)
@@ -27,24 +27,25 @@ ms.locfileid: "66071560"
   
 -   Freigeben und Verwalten von Datendienstdokumenten an einem zentralen Speicherort.  
   
--   Visuelles Kennzeichnen von Datendienstdokumenten durch ein Symbol, damit Dienstdokumente leicht von anderen in der gleichen Bibliothek gespeicherten Dokumenten unterschieden werden können: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Visuelle Identifizierung von Datendienst Dokumenten durch ein Symbol, damit Dienst Dokumente leicht von anderen in derselben Bibliothek gespeicherten Dokumenten unterschieden werden können: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Eine Datenfeedbibliothek enthält immer Datendienstdokumente (ATOMSVC-Dateien) und nie den Datenfeed selbst. Im Gegensatz zu einem Datenfeed, der aus statischen XML-Daten besteht, gibt das Datendienstdokument eine URL zu einem Dienst oder einer Anwendung an, der bzw. die auf Anforderung einen Feed generiert, und stellt wiederverwendbare Verbindungsinformationen für wiederholbare Importvorgänge bereit.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Erforderliche Komponenten](#prereq)  
+ [Voraussetzungen](#prereq)  
   
- [Erstellen einer neuen Datenfeedbibliothek](#createlib)  
+ [Erstellen einer neuen datenfeedbibliothek](#createlib)  
   
  [Hinzufügen des Inhaltstyps für Datenfeeds zu einer Bibliothek](#addtolib)  
   
-##  <a name="prereq"></a> Erforderliche Komponenten  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktion muss für die Websites aktiviert werden, für die Sie die Datenfeedbibliothek erstellen. Wenn der Vorlagentyp für Datenfeedbibliotheken nicht verfügbar ist, liegt dies höchstwahrscheinlich daran, dass diese Voraussetzung nicht erfüllt wurde. Weitere Informationen finden Sie unter [PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration aktivieren](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+##  <a name="prereq"></a> Voraussetzungen  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktion muss für die Websites aktiviert werden, für die Sie die Datenfeedbibliothek erstellen. Wenn der Vorlagentyp für Datenfeedbibliotheken nicht verfügbar ist, liegt dies höchstwahrscheinlich daran, dass diese Voraussetzung nicht erfüllt wurde. Weitere Informationen finden Sie unter [Aktivieren der Power Pivot-Funktions Integration für Website Sammlungen in der zentral Administration](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Sie müssen Websitebesitzer sein, um die Bibliothek erstellen zu können.  
   
-##  <a name="createlib"></a> Erstellen einer neuen Datenfeedbibliothek  
+##  <a name="createlib"></a>Erstellen einer neuen datenfeedbibliothek  
  Das Erstellen einer Datenfeedbibliothek ist der erste Schritt zur Aktivierung von Datenfeeds für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappen. Da eine Datenfeedbibliothek Anwendungs- und Verwaltungsseiten für Datendienstdokumente bereitstellt, muss diese Bibliothek vorhanden sein, bevor Sie ein neues Dokument erstellen können.  
   
  Eine Datenfeedbibliothek basiert auf einer integrierten Vorlage und einem vorkonfigurierten *Inhaltstyp für Datendienstdokumente* , der Eigenschaften und Verhaltensweisen für ein Datendienstdokument definiert.  
@@ -61,9 +62,9 @@ ms.locfileid: "66071560"
   
  Im Schnellstart-Navigationsbereich für die aktuelle Website wird ein Link zur Datenfeedbibliothek angezeigt.  
   
- Nachdem Sie eine Bibliothek erstellt haben, können Sie mit ihrer Hilfe Datendienstdokumente erstellen. Weitere Informationen finden Sie unter [Verwenden von Datenfeeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Nachdem Sie eine Bibliothek erstellt haben, können Sie mit ihrer Hilfe Datendienstdokumente erstellen. Weitere Informationen finden Sie unter [Verwenden von Daten Feeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
-##  <a name="addtolib"></a> Hinzufügen des Inhaltstyps für Datenfeeds zu einer Bibliothek  
+##  <a name="addtolib"></a>Hinzufügen des Inhaltstyps für Datenfeeds zu einer Bibliothek  
  Wenn Sie keine dedizierte Datenfeedbibliothek erstellen, aber trotzdem Datendienstdokumente von einer SharePoint-Website erstellen und verwalten möchten, können Sie den Inhaltstyp für Datendienstdokumente für eine beliebige Bibliothek manuell hinzufügen und konfigurieren, die Sie zum Freigeben von Datendienstdokumenten (ATOMSVC-Dateien) verwenden möchten.  
   
  Sie müssen mindestens über die Listenverwaltungsberechtigung verfügen, um einen Inhaltstyp hinzuzufügen und zu konfigurieren. Diese Berechtigung ist in die Berechtigungsebene "Entwerfen" und höher integriert.  
@@ -86,7 +87,7 @@ ms.locfileid: "66071560"
   
 7.  Klicken Sie auf **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Schritt 2: Fügen Sie die Dateninhaltstyp für Datendienstdokumente hinzu  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Schritt 2: Fügen Sie einen Inhaltstyp für Datendienstdokumente hinzu  
   
 1.  Klicken Sie im Abschnitt Inhaltstypen auf **Aus vorhandenen Websiteinhaltstypen hinzufügen**. Falls diese Seite nicht angezeigt wird, wechseln Sie zurück zur Website und klicken unter Bibliothekstools auf **Bibliothek** und dann auf **Bibliothekseinstellungen**.  
   
@@ -98,7 +99,7 @@ ms.locfileid: "66071560"
   
 5.  Klicken Sie auf **OK**.  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>Schritt 3: Überprüfen der Datendienstdokumentkonfiguration  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Schritt 3: Überprüfen der Datendienstdokumentkonfiguration  
   
 1.  Öffnen Sie die Homepage der Website.  
   
@@ -108,10 +109,10 @@ ms.locfileid: "66071560"
   
 4.  Klicken Sie auf den Pfeil nach unten in Neues Dokument, und wählen Sie **Datendienstdokument**aus. Die Seite Neues Datendienstdokument sollte angezeigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Datenfeeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
- [Löschen einer PowerPivot-Datenfeedbibliothek](delete-a-power-pivot-data-feed-library.md)   
- [PowerPivot-Serververwaltung und-Konfiguration in der Zentraladministration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden von Daten Feeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
+ [Löschen einer Power Pivot-datenfeedbibliothek](delete-a-power-pivot-data-feed-library.md)   
+ [Power Pivot-Server Verwaltung und-Konfiguration in der zentral Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [PowerPivot-Datenfeeds](power-pivot-data-feeds.md)  
   
   

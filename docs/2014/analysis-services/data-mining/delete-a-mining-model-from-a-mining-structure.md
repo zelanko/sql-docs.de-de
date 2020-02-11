@@ -1,5 +1,5 @@
 ---
-title: Löschen eines Miningmodells aus einer Miningstruktur | Microsoft-Dokumentation
+title: Löschen eines Mining Modells aus einer Mining Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084781"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>Löschen eines Miningmodells aus einer Miningstruktur
@@ -47,9 +47,9 @@ ms.locfileid: "66084781"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>Löschen eines Miningmodells mit DMX  
   
--   [DROP MINING MODEL &#40;DMX&#41;](/sql/dmx/drop-mining-model-dmx)  
+-   [Löschen eines Mining Modells &#40;DMX-&#41;](/sql/dmx/drop-mining-model-dmx)  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und -anweisungen](mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856515"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Anzeigen der Definition einer gespeicherten Prozedur
@@ -28,7 +28,7 @@ ms.locfileid: "62856515"
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **Anzeigen die Definition einer Prozedur mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Anzeigen der Definition einer Prozedur mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -51,16 +51,16 @@ ms.locfileid: "62856515"
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie die Definition einer Prozedur im Objekt-Explorer an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **Datenbanken**, erweitern Sie die Datenbank, zu der die Prozedur gehört, und erweitern Sie dann **Programmierbarkeit**.  
   
-3.  Erweitern Sie **gespeicherte Prozeduren**mit der rechten Maustaste auf die Prozedur, und klicken Sie dann auf **Skript für gespeicherte Prozeduren als**, und klicken Sie dann auf einen der folgenden: **Erstellen Sie zu**, **Alter in**, oder **löschen und erstellen in**.  
+3.  Erweitern Sie **Gespeicherte Prozeduren**, klicken Sie mit der rechten Maustaste auf die Prozedur und anschließend auf **Skript für gespeicherte Prozedur als**, und klicken Sie dann auf eine der folgenden Optionen: **Erstellen in**, **Ändern in** oder **Löschen und erstellen in**.  
   
-4.  Wählen Sie **Neues Abfrage-Editor-Fenster**aus. Daraufhin wird die Prozedurdefinition angezeigt.  
+4.  Wählen Sie **Neues Abfrage-Editor-Fenster** aus. Daraufhin wird die Prozedurdefinition angezeigt.  
   
 ###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Definition einer Prozedur im Abfrage-Editor an**  
@@ -106,7 +106,7 @@ ms.locfileid: "62856515"
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer gespeicherten Prozedur](create-a-stored-procedure.md)   
  [Ändern einer gespeicherten Prozedur](modify-a-stored-procedure.md)   
  [Löschen einer gespeicherten Prozedur](delete-a-stored-procedure.md)   

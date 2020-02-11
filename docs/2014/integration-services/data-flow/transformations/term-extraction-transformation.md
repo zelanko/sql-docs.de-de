@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899933"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
@@ -44,7 +44,7 @@ ms.locfileid: "62899933"
   
  Die Transformation für Ausdrucksextrahierung generiert für jeden extrahierten Ausdruck ein Ergebnis. Das Ergebnis kann ein TFIDF-Wert oder die Häufigkeit sein, mit der der normalisierte Ausdruck in der Ausgabe auftritt. In beiden Fällen wird das Ergebnis durch eine reelle Zahl dargestellt, die größer als 0 ist. Beispielsweise könnte das TFIDF-Ergebnis den Wert 0,5 und die Häufigkeit den Wert 1,0 oder 2,0 aufweisen.  
   
- Die Ausgabe der Transformation für Ausdrucksextrahierung umfasst nur zwei Spalten. Eine Spalte enthält die extrahierten Ausdrücke, und die andere Spalte enthält das Ergebnis. Die Standardnamen der Spalten sind **Begriff** und `Score`. Da die Textspalte in der Eingabe mehrere Ausdrücke enthalten kann, weist die Ausgabe der Transformation für Ausdrucksextrahierung in der Regel mehr Zeilen als die Eingabe auf.  
+ Die Ausgabe der Transformation für Ausdrucksextrahierung umfasst nur zwei Spalten. Eine Spalte enthält die extrahierten Ausdrücke, und die andere Spalte enthält das Ergebnis. Die Standardnamen der Spalten lauten **Term** und `Score`. Da die Textspalte in der Eingabe mehrere Ausdrücke enthalten kann, weist die Ausgabe der Transformation für Ausdrucksextrahierung in der Regel mehr Zeilen als die Eingabe auf.  
   
  Wenn die extrahierten Ausdrücke in eine Tabelle geschrieben werden, können sie von anderen Suchtransformationen wie z. B. Transformationen für Ausdruckssuche, Transformationen für Fuzzysuche und Transformationen für Suche, verwendet werden.  
   
@@ -173,18 +173,18 @@ ms.locfileid: "62899933"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Ausdrucksextrahierung** festlegen können:  
   
--   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausdrucksextrahierung“&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarten&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausschluss“&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;&#41;Register](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Erweitert“&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;&#41;Register](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
- Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
   

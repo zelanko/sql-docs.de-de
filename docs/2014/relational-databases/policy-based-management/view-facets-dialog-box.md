@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676849"
 ---
 # <a name="view-facets-dialog-box"></a>Dialogfeld 'Facets anzeigen'
   Mithilfe dieses Dialogfelds können Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung anzeigen. Die Eigenschaften eines Facets werden bei der Erstellung des Facets definiert und können mithilfe dieses Dialogfelds nicht geändert werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Facet**  
  Der Name des derzeit ausgewählten Facets.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62676849"
  **Aktuellen Status als Richtlinie exportieren**  
  Klicken Sie, um den beschriebenen Status der Facet-Eigenschaften als neue Richtlinie in eine XML-Datei zu exportieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  
   
   

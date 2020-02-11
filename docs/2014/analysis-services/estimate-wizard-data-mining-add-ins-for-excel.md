@@ -1,5 +1,5 @@
 ---
-title: Schätzen der Assistent (Data Mining-Add-ins für Excel) | Microsoft-Dokumentation
+title: Assistent zum Schätzen von Daten (Data Mining-Add-Ins für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -14,62 +14,62 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081246"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistent zum Schätzen von Daten (Data Mining-Add-Ins für Excel)
-  ![Assistenten zum Schätzen von Data Mining-Menüband](media/dmc-estimate.gif "Assistenten zum Schätzen von Data Mining-Menüband")  
+  ![Assistent zum Schätzen von Daten (Data Mining-Menüband)](media/dmc-estimate.gif "Assistent zum Schätzen von Daten (Data Mining-Menüband)")  
   
- Die **Schätzung** Assistenten können Sie ein schätzmodell zu erstellen. Ein Schätzmodell extrahiert Datenmuster und verwendet diese Muster, um die Faktoren vorherzusagen, die sich auf Ergebnisse auswirken.  
+ Der Assistent für die **Schätzung** unterstützt Sie beim Erstellen eines Schätz Modells. Ein Schätzmodell extrahiert Datenmuster und verwendet diese Muster, um die Faktoren vorherzusagen, die sich auf Ergebnisse auswirken.  
   
- Die Schätzung wird für die Vorhersage von numerischen Ergebnissen verwendet. Beispielsweise wenn Ihre Zielspalte schulabschlussquoten, mit schulabschlussquoten in Form von prozentualen Werten enthält. Sie können analysieren Faktoren, die potenziell erhöht oder gesenkt schulabschlussquoten wie z. B. die Anzahl der Schüler pro Schule, die Schüler-Lehrer-Verhältnis und die Anzahl der Lehrer.  
+ Die Schätzung wird für die Vorhersage von numerischen Ergebnissen verwendet. Wenn die Ziel Spalte z. b. die Abschluss Raten für Schulen enthält und die Abschluss Sätze als Prozentsätze ausgedrückt werden, können Sie Faktoren analysieren, die die Abschluss Raten potenziell erhöhen oder verringern, wie z. b. die Anzahl der Schüler/Studenten pro Schule, das Quote für Schüler und Studenten und die Anzahl der Lehrkräfte.  
   
 ## <a name="using-the-estimate-data-wizard"></a>Verwenden des Assistenten zum Schätzen von Daten  
   
-1.  Auf der **Data Mining** des Menübands, klicken Sie auf **Schätzung**.  
+1.  Klicken Sie im Menüband **Data Mining** auf **Schätzung**.  
   
-2.  In der **Quelldaten auswählen** Dialogfeld wählen die Datenquelle, die zu verwendenden Daten. Können Sie Daten in einem Excel **Tabelle**, eine Excel **Datenbereich**, oder von einem **externe Datenquelle**.  
+2.  Wählen Sie im Dialogfeld **Quelldaten auswählen** die Quelldaten aus, die verwendet werden sollen. Sie können Daten in einer Excel- **Tabelle**, einem Excel- **Datenbereich**oder einer **externen Datenquelle**verwenden.  
   
      Wenn Sie eine externe Datenquelle verwenden, können Sie benutzerdefinierte Sichten oder Abfragen erstellen und als [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquelle speichern.  
   
-3.  In der **Schätzung** wählen Sie im Dialogfeld die **zu analysierende Spalte**.  
+3.  Wählen Sie im Dialogfeld **Schätzung** die **zu analysierende Spalte**aus.  
   
      Die Zielspalte muss kontinuierliche numerische Daten enthalten.  
   
-4.  Wählen Sie Spalten als Eingabe verwendet, indem Sie überprüfen die **Eingabespalten** Kontrollkästchen.  
+4.  Wählen Sie die zu verwendenden Spalten aus, indem Sie das Kontrollkästchen **Eingabe Spalten** aktivieren.  
   
      Diese Spalten werden zum Erstellen der Muster verwendet. Es empfiehlt sich, alle Spalten aus der Analyse auszuschließen, die voraussichtlich nicht hilfreich bei einer Analyse sind (z. B. ID-Nummern) oder irrelevante Daten enthalten.  
   
-5.  Die **Schätzung** Assistent wählt den optimalen Algorithmus für das DataSet. Sie können jedoch klicken **Parameter** zu öffnen der **Algorithmusparameter** Dialogfeld und erweiterte Optionen festzulegen.  
+5.  Der Assistent zum **schätzen** wählt den optimalen Algorithmus für das DataSet aus. Sie können jedoch auf **Parameter** klicken, um das Dialogfeld **Algorithmusparameter** zu öffnen und erweiterte Optionen festzulegen.  
   
-6.  Wenn Ihre Daten numerische sind und Sie können den Microsoft Linear Regression-Methode verwenden, sehen Sie sich die **Regressor** Kontrollkästchen für alle numerischen Spalten, die Sie kennen (oder höchster Wahrscheinlichkeit) mit dem vorhersagbaren Wert korreliert werden.  
+6.  Wenn die Daten numerisch sind und Sie die lineare Regressions Methode von Microsoft verwenden können, können Sie das Feld **Regressor** für alle numerischen Spalten aktivieren, die Sie kennen (oder stark vermuten), die mit dem vorhersagbaren Wert korreliert werden sollen.  
   
-     Der Algorithmus testet dann die Werte in der betreffenden Spalte, um zu ermitteln, ob sie sich auf die Ergebnisse auswirken. Wenn Sie unsicher sind, klicken Sie auf **vorschlagen** und der Algorithmus testet dann alle Spalten und erkennt automatisch die besten Werte als regressor verwendet wird.  
+     Der Algorithmus testet dann die Werte in der betreffenden Spalte, um zu ermitteln, ob sie sich auf die Ergebnisse auswirken. Wenn Sie sich nicht sicher sind, klicken Sie auf **vorschlagen** , und der Algorithmus testet alle Spalten und erkennt automatisch die besten Werte, die als Regressoren verwendet werden sollen.  
   
     > [!NOTE]  
     >  Ein Regressor ist erforderlich, um eine Schätzung zu erstellen. Der Assistent empfiehlt auf Grundlage eines ersten Datendurchlaufs immer den besten Regressor. Wenn Sie nicht sicher sind, ist es deshalb am besten, die empfohlene Auswahl zu akzeptieren.  
   
-7.  Auf der **Daten in Trainings- und Testsätze aufteilen** an, ob Sie eine kleine Teilmenge der Daten für Tests erstellen möchten.  
+7.  Geben Sie auf der Seite **Daten in Trainings-und Testsätze aufteilen** an, ob Sie eine kleine Teilmenge der Daten für Tests erstellen möchten.  
   
-8.  Auf der **Fertig stellen** Seite, geben Sie Namen für die neue Miningstruktur und das Miningmodell aus, oder übernehmen Sie die Standardnamen, die bereitgestellt werden.  
+8.  Geben Sie auf der Seite **Fertig** stellen Namen für die neue Mining Struktur und den Mining Modus an, oder übernehmen Sie die bereitgestellten Standardnamen.  
   
 9. Legen Sie die Optionen zum Verwenden des Modells fest.  
   
-    -   Wählen Sie **Durchsuchen** um das Modell sofort in einem Viewer zu öffnen.  
+    -   Wählen Sie **Durchsuchen** aus, um das Modell direkt in einem Viewer zu öffnen.  
   
          Dieser grafische Viewer zeigt ein Abhängigkeitsnetzwerkdiagramm und die vom Algorithmus generierte Entscheidungsstruktur an. Untersuchen Sie diese Informationen, um sich ein Bild von den Faktoren zu machen, die die geschätzten Werte beeinflussen.  
   
-    -   Wählen Sie **Drillthrough aktivieren** können Benutzer von die Analyse die zugrunde liegenden Daten anzuzeigen.  
+    -   Wählen Sie **Drillthrough aktivieren** aus, damit Benutzer Ihrer Analyse die zugrunde liegenden Daten anzeigen können.  
   
          Diese Option ist nur verfügbar, wenn Sie den Decision Trees-Algorithmus oder den Linear Regression-Algorithmus verwenden.  
   
-    -   **Temporäres Modell**. Wenn Sie diese Option auswählen, wird das Modell nicht auf dem Server gespeichert. Temporäre Modelle werden beim Schließen von Excel gelöscht.  
+    -   **Temporäres Modell verwenden**. Wenn Sie diese Option auswählen, wird das Modell nicht auf dem Server gespeichert. Temporäre Modelle werden beim Schließen von Excel gelöscht.  
   
 ## <a name="more-about-estimation-models"></a>Weitere Informationen zu Schätzmodellen  
- Die **Schätzung** -Assistent unterstützt die Verwendung von einem der folgenden Algorithmen:  
+ Der Assistent für die **Schätzung** unterstützt die Verwendung der folgenden Algorithmen:  
   
 -   Microsoft Decision Tree-Algorithmus  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66081246"
   
 -   Microsoft Neural Network-Algorithmus  
   
- In der **Algorithmusparameter** im Dialogfeld können Sie zusätzliche erweiterte Optionen, abhängig vom Algorithmus ausgewählten festlegen. Weitere Informationen zu den Optionen für die einzelnen Algorithmen finden Sie in der SQL Server-Onlinedokumentation in folgenden Themen:  
+ Im Dialogfeld **Algorithmusparameter** können Sie je nach ausgewähltem Algorithmus zusätzliche erweiterte Optionen festlegen. Weitere Informationen zu den Optionen für die einzelnen Algorithmen finden Sie in der SQL Server-Onlinedokumentation in folgenden Themen:  
   
  [Technische Referenz für den Microsoft Decision Trees-Algorithmus](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)  
   
@@ -89,15 +89,15 @@ ms.locfileid: "66081246"
   
  [Technische Referenz für den Microsoft Neural Network-Algorithmus](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Zum Verwenden des Assistenten zum Schätzen von Daten muss eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank bestehen.  
   
- Informationen dazu, wie Sie eine Verbindung zu erstellen, finden Sie unter [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Weitere Informationen zum Erstellen einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Um den Schätzalgorithmus zu verwenden, muss das Ergebnis, das vorhergesagt werden soll, als numerischer Wert ausgedrückt werden, z. B. als Währung, Umsatz, Datum oder Uhrzeit.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Datamining-Modells](creating-a-data-mining-model.md)   
- [Exemplarische Vorgehensweise für das Decision &#40;Data Mining-Add-ins&#41;](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md)   
+ [Entscheidungsstruktur Diagramm Exemplarische Vorgehensweise &#40;Data Mining-Add-ins&#41;](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
   

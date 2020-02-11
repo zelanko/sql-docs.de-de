@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer berechneten Spalte (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Erstellen einer berechneten Spalte (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066523"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Erstellen einer berechneten Spalte (SSAS – tabellarisch)
-  Mithilfe berechneter Spalten können Sie dem Modell neue Daten hinzufügen. Anstatt einzufügen, oder Importieren von Werten in der Spalte, erstellen Sie eine DAX-Formel, die zeilenebenenwerte der Spalte definiert. Die Werte in den einzelnen Zeilen einer berechneten Spalte werden berechnet und aufgefüllt, wenn Sie eine gültige Formel erstellen und die EINGABETASTE drücken. Die berechnete Spalte kann anschließend wie jeder andere Datenspalte einer Berichterstellungs- oder Analyseanwendung hinzugefügt werden. In diesem Thema wird beschrieben, wie eine neue berechnete Spalte mithilfe der DAX-Bearbeitungsleiste im Modell-Designer erstellt wird.  
+  Mithilfe berechneter Spalten können Sie dem Modell neue Daten hinzufügen. Anstatt Werte in die Spalte einfügen oder importieren zu müssen, erstellen Sie eine DAX-Formel, die die Zeilen Ebenen Werte der Spalte definiert. Die Werte in den einzelnen Zeilen einer berechneten Spalte werden berechnet und aufgefüllt, wenn Sie eine gültige Formel erstellen und die EINGABETASTE drücken. Die berechnete Spalte kann anschließend wie jeder andere Datenspalte einer Berichterstellungs- oder Analyseanwendung hinzugefügt werden. In diesem Thema wird beschrieben, wie eine neue berechnete Spalte mithilfe der DAX-Bearbeitungsleiste im Modell-Designer erstellt wird.  
   
 #### <a name="to-create-a-new-calculated-column"></a>So erstellen Sie eine neue berechnete Spalte  
   
 1.  Wählen Sie im Modell-Designer in der Datensicht die Tabelle aus, der Sie eine berechnete Spalte hinzufügen möchten, und klicken Sie dann auf das Menü **Spalte** und auf **Spalte hinzufügen**.  
   
-     In der leeren Spalte am äußersten rechten Rand wird**Spalte hinzufügen** hervorgehoben, und der Cursor wird in die Bearbeitungsleiste verschoben.  
+     " **Spalte hinzufügen** " wird über der leeren Spalte ganz rechts hervorgehoben, und der Cursor wird in die Bearbeitungs Leiste verschoben.  
   
      Klicken Sie mit der rechten Maustaste auf eine vorhandene Spalte, und klicken Sie dann auf **Spalte einfügen**, um zwischen zwei vorhandenen Spalten eine neue Spalte zu erstellen.  
   
@@ -45,8 +45,8 @@ ms.locfileid: "66066523"
 > [!TIP]  
 >  Sie können AutoVervollständigen für DAX-Formeln auch mitten in einer vorhandenen Formel mit geschachtelten Funktionen verwenden. Ausgehend vom Text unmittelbar vor der Einfügemarke werden Werte in der Dropdownliste angezeigt. Der Text nach der Einfügemarke bleibt unverändert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](ssas-calculated-columns.md)   
- [Measures &#40;SSAS – tabellarisch&#41;](measures-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Berechnete Spalten &#40;tabellarischen SSAS-&#41;](ssas-calculated-columns.md)   
+ [Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)  
   
   
