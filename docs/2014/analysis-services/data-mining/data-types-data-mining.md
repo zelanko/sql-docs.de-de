@@ -1,5 +1,5 @@
 ---
-title: Datentypen (Datamining) | Microsoft-Dokumentation
+title: Datentypen (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084801"
 ---
 # <a name="data-types-data-mining"></a>Datentypen (Data Mining)
-  Beim Erstellen eines Miningmodells oder einer Miningstruktur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen Sie die Datentypen für die einzelnen Spalten in der Miningstruktur definieren. Anhand des Datentyps erkennt die Data Mining-Engine, ob es sich bei den Daten in der Datenquelle um numerische Daten oder um Text handelt und wie die Daten verarbeitet werden sollen. Wenn die Datenquelle beispielsweise numerische Daten enthält, können Sie angeben, ob die Zahlen als ganze Zahlen oder durch Verwendung von Dezimalstellen verarbeitet werden sollen.  
+  Wenn Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ein Mining Modell oder eine Mining Struktur erstellen, müssen Sie die Datentypen für die einzelnen Spalten in der Mining Struktur definieren. Anhand des Datentyps erkennt die Data Mining-Engine, ob es sich bei den Daten in der Datenquelle um numerische Daten oder um Text handelt und wie die Daten verarbeitet werden sollen. Wenn die Datenquelle beispielsweise numerische Daten enthält, können Sie angeben, ob die Zahlen als ganze Zahlen oder durch Verwendung von Dezimalstellen verarbeitet werden sollen.  
   
  Jeder Datentyp unterstützt einen oder mehrere Inhaltstypen. Durch Festlegen des Inhaltstyps können Sie die Methode anpassen, mit der Daten in den Spalten im Miningmodell verarbeitet oder berechnet werden.  
   
  Wenn beispielsweise numerische Daten in einer Spalte enthalten sind, können Sie entscheiden, diese als numerischen Datentyp oder als Textdatentyp zu behandeln. Wenn Sie den numerischen Datentyp wählen, können Sie mehrere Inhaltstypen festlegen: Sie können die Zahlen diskretisieren oder als kontinuierliche Werte behandeln. Eine Liste aller Inhaltstypen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die folgenden Datentypen für Miningstrukturspalten:  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die folgenden Datentypen für Miningstrukturspalten:  
   
 |Datentyp|Unterstützte Inhaltstypen|  
 |---------------|-----------------------------|  
@@ -47,13 +48,13 @@ ms.locfileid: "66084801"
 ## <a name="changing-a-data-type"></a>Ändern eines Datentyps  
  Wenn Sie den Datentyp einer Spalte ändern, müssen die Miningstruktur und alle auf dieser Struktur basierenden Miningmodelle neu verarbeitet werden. Beim Ändern des Datentyps kann es vorkommen, dass die jeweilige Spalte nicht mehr in einem bestimmten Modell verwendet werden kann. In diesem Fall gibt Analysis Services beim erneuten Verarbeiten entweder einen Fehler aus, oder das Modell wird unter Auslassung der Spalte verarbeitet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)   
- [Inhaltstypen &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Datentypen &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
- [Miningmodellspalten](mining-model-columns.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Inhaltstypen &#40;Data Mining-&#41;](content-types-data-mining.md)   
+ [Inhaltstypen &#40;DMX-&#41;](/sql/dmx/content-types-dmx)   
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Datentypen &#40;DMX-&#41;](/sql/dmx/data-types-dmx)   
+ [Mining Modell Spalten](mining-model-columns.md)   
  [Miningstrukturspalten](mining-structure-columns.md)  
   
   

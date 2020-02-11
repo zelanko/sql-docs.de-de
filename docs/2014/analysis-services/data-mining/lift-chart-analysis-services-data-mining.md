@@ -1,5 +1,5 @@
 ---
-title: Prognosegütediagramm (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Lift Chart (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,29 +18,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084313"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
-  Ein **Prognosegütediagramm** grafisch Verbesserung mit einem Miningmodell im Vergleich gegenüber einer zufallsvorhersage darstellt, und die Änderung in Form einer *lift* Bewertung. Vergleichen der prognosegüteergebnisse für verschiedene Teile des Datasets und unterschiedliche Modelle, können Sie bestimmen, welches Modell am besten geeignet ist, und der Prozentsatz der Fälle im DataSet aus der Anwendung der modellvorhersagen profitieren würden.  
+  Ein **Lift Diagramm** stellt grafisch die Verbesserung dar, die ein Mining Modell beim Vergleich mit einer zufälligen Schätzung bietet, und misst die Änderung in Bezug auf eine *Lift* Bewertung. Indem Sie die Lift Ergebnisse für verschiedene Teile des Datasets und für verschiedene Modelle vergleichen, können Sie bestimmen, welches Modell am besten geeignet ist und welcher Prozentsatz der Fälle im DataSet von der Anwendung der Vorhersagen des Modells profitieren würde.  
   
  Mit einem Prognosegütediagramm können Sie die Genauigkeit der Vorhersagen für mehrere Modelle vergleichen, die über das gleiche vorhersagbare Attribut verfügen. Sie können auch die Genauigkeit einer Vorhersage entweder für ein einzelnes Ergebnis (ein einzelner Wert des vorhersagbaren Attributs) oder für alle Ergebnisse (alle Werte des angegebenen Attributs) bewerten.  
   
  Ein Gewinndiagramm ist ein verwandter Diagrammtyp, der die gleichen Informationen enthält wie ein Prognosegütediagramm, jedoch außerdem die projizierte Gewinnsteigerung anzeigt, die mit einem Modell verbunden ist.  
   
-##  <a name="bkmk_Top"></a> Grundlegendes zu Prognosegütediagrammen  
+##  <a name="bkmk_Top"></a>Grundlegendes zum Lift Chart  
  In der Theorie ist ein Prognosegütediagramm schwer vorstellbar. Daher wird zur Veranschaulichung der Tools für Prognosegütediagramme und der im Diagramm enthaltenen Informationen in diesem Abschnitt ein Szenario mit einem Prognosegütediagramm verwendet, mit dessen Hilfe die Reaktion auf eine Targeted Mailing-Kampagne geschätzt wird.  
   
  Der Marketingabteilung in diesem Szenario ist bekannt, dass bei Mailing-Kampagnen typischerweise mit einer Antwortquote von 10 Prozent zu rechnen ist. Eine Liste mit 10.000 potenziellen Kunden ist in einer Tabelle in der Datenbank gespeichert. Ausgehend von der typischen Antwortquote ist normalerweise zu erwarten, dass nur ca. 1.000 potenzielle Kunden antworten. Jedoch reicht das für das Projekt angesetzte Budget nicht aus, um alle 10.000 in der Datenbank gespeicherten Kunden anzuschreiben. Zusätzlich soll die Antwortquote verbessert werden. In diesem Szenario wird angenommen, dass das Budget nur für Werbeschreiben an 5.000 Kunden ausreicht. Der Marketingabteilung bieten sich zwei Möglichkeiten:  
   
--   5\.000 Kunden nach dem Zufallsprinzip als Empfänger auswählen  
+-   5.000 Kunden nach dem Zufallsprinzip als Empfänger auswählen  
   
 -   Mithilfe eines Miningmodells die 5.000 Kunden auswählen, bei denen die Wahrscheinlichkeit einer Antwort am höchsten ist  
   
- Mit einem Prognosegütediagramm können die erwarteten Ergebnisse beider Optionen verglichen werden. Bei einer willkürlichen Auswahl von 5.000 Kunden kann das Unternehmen basierend auf der typischen Antwortquote beispielsweise nur mit 500 Antworten rechnen. Dieses Szenario wird von der *Zufallslinie* im Prognosegütediagramm dargestellt. Wenn die Marketingabteilung jedoch die Zielgruppe ihres Mailings mithilfe eines Miningmodells auswählt, ist eine bessere Antwortquote zu erwarten, da durch das Modell gezielt die Kunden identifiziert werden, bei denen am wahrscheinlichsten mit einer Antwort zu rechnen ist. Wäre das Modell perfekt, würde es Vorhersagen generieren, die nie falsch liegen, und das Unternehmen könnte davon ausgehen, dass sich 1.000 Antworten durch das Anschreiben der nur 1.000 potenziellen Kunden erreichen ließen, die vom Modell empfohlen werden. Dieses Szenario wird von der *Ideallinie* im Prognosegütediagramm dargestellt.  
+ Mit einem Prognosegütediagramm können die erwarteten Ergebnisse beider Optionen verglichen werden. Bei einer willkürlichen Auswahl von 5.000 Kunden kann das Unternehmen basierend auf der typischen Antwortquote beispielsweise nur mit 500 Antworten rechnen. In diesem Szenario stellt die *Zufalls* Linie im Lift-Diagramm dar. Wenn die Marketingabteilung jedoch die Zielgruppe ihres Mailings mithilfe eines Miningmodells auswählt, ist eine bessere Antwortquote zu erwarten, da durch das Modell gezielt die Kunden identifiziert werden, bei denen am wahrscheinlichsten mit einer Antwort zu rechnen ist. Wäre das Modell perfekt, würde es Vorhersagen generieren, die nie falsch liegen, und das Unternehmen könnte davon ausgehen, dass sich 1.000 Antworten durch das Anschreiben der nur 1.000 potenziellen Kunden erreichen ließen, die vom Modell empfohlen werden. Dieses Szenario wird von der *Ideallinie* im Prognosegütediagramm dargestellt.  
   
  In der Wirklichkeit liegt das Miningmodell sehr wahrscheinlich irgendwo zwischen diesen beiden Extremen einer Zufallsvorhersage und einer idealen oder perfekten Vorhersage. Jede Verbesserung der Antwortquote gegenüber der Zufallsvorhersage wird als Lift betrachtet.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66084313"
   
  Das Diagramm enthält mehrere Modelle, die auf den gleichen Daten basieren. Eines dieser Modelle wurde an bestimmte Zielkunden angepasst. Sie können ein Modell anpassen, indem Sie Filter für die Daten hinzufügen, mit denen der Modus trainiert wurde. Dieser Filter schränkt die Fälle ein, die sowohl für das Training als auch die Evaluierung für Kunden unter 30 Jahre verwendet werden. Ein Effekt der Filterung besteht darin, dass das grundlegende und das gefilterte Modell unterschiedliche Datasets verwenden. Daher unterscheidet sich auch die Anzahl der Fälle, die im Prognosegütediagramm zur Auswertung verwendet wurden. Dieser Punkt muss bei der Interpretation der Vorhersageergebnisse und anderer statistischer Daten berücksichtigt werden.  
   
- ![Lift Diagramm mit zwei Modellen](../media/newliftchart-tm30-30.gif "per Lift & Diagramm mit zwei Modellen")  
+ ![Prognosegütediagramm mit zwei Modellen](../media/newliftchart-tm30-30.gif "Prognosegütediagramm mit zwei Modellen")  
   
  Die X-Achse des Diagramms stellt den Prozentsatz des Testdatasets dar, das zum Vergleichen der Vorhersagen verwendet wird. Die Y-Achse des Diagramms stellt den Prozentsatz vorhergesagter Werte dar.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66084313"
   
  Die **Mininglegende** enthält auch Ergebnisse und statistische Daten, mit deren Hilfe Sie das Diagramm interpretieren können. Diese Ergebnisse stellen die Genauigkeit des Modells an der grauen Linie dar, die in diesem Szenario so positioniert ist, dass sie 30 Prozent der gesamten Testfälle umfasst.  
   
-|Reihe und Modell|Ergebnis|Zielauffüllung|Wahrscheinlichkeitsvorhersage|  
+|Reihe und Modell|Punkte|Zielauffüllung|Wahrscheinlichkeitsvorhersage|  
 |-----------------------|-----------|-----------------------|-------------------------|  
 |Targeted Mailing alle|0.71|47.40%|61.38%|  
 |Targeted Mailing unter 30|0.85|51.81%|46.62%|  
@@ -91,11 +91,11 @@ ms.locfileid: "66084313"
   
  Die X-Achse ist die gleiche wie im Diagramm, bei dem die vorhersagbare Spalte angegeben wurde, doch die Y-Achse stellt nun den Prozentsatz der richtigen Vorhersagen dar. Daher ist die Ideallinie die diagonale Linie, die zeigt, dass das Modell bei 50 Prozent der Daten 50 Prozent der Fälle richtig vorhersagt, was das erwartbare Maximum darstellt.  
   
- ![Diagramm mit richtigen Vorhersagen Lift](../media/lift1.gif "prognosegütediagramm mit richtigen Vorhersagen")  
+ ![Prognosegütediagramm mit richtigen Vorhersagen](../media/lift1.gif "Prognosegütediagramm mit richtigen Vorhersagen")  
   
  Sie können in das Diagramm klicken, um den vertikalen, grauen Balken zu verschieben. Die **Mininglegende** zeigt den Prozentsatz der Fälle insgesamt an sowie den Prozentsatz der Fälle, die richtig vorhergesagt wurden. Wenn Sie den grauen Schieberegler beispielsweise auf die 50-Prozent-Marke ziehen, zeigt die **Mininglegende** die folgenden Genauigkeitsergebnisse an. Diese Abbildungen basieren auf dem TM_Decision Tree-Modell, das im Data Mining-Grundlagen-Lernprogramm erstellt wird.  
   
-|Reihen, Modell|Ergebnis|Zielauffüllung|Wahrscheinlichkeitsvorhersage|  
+|Reihen, Modell|Punkte|Zielauffüllung|Wahrscheinlichkeitsvorhersage|  
 |-------------------|-----------|-----------------------|-------------------------|  
 |TM_Decision Tree|0.77|40.50%|72.91%|  
 |Idealmodell||50.00%||  
@@ -116,7 +116,7 @@ ms.locfileid: "66084313"
 ### <a name="related-content"></a>Verwandte Inhalte  
  [Zurück zum Anfang](#bkmk_Top)  
   
-## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
   
   

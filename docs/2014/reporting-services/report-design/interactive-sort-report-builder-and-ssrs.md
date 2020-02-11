@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105621"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Interaktive Sortierung (Berichts-Generator und SSRS)
@@ -27,13 +27,13 @@ ms.locfileid: "66105621"
   
  Beim Hinzufügen einer interaktiven Sortierung müssen folgende Elemente angegeben werden:  
   
--   **Sortierungselement:** Zeilen oder Spalten?  
+-   **Sortierungselement:** z. B. Zeilen oder Spalten.  
   
--   **Sortierungskriterium:** Ein Feld, das in einer Tabellenspalte angezeigt wird. ein Feld, das nicht angezeigt wird.  
+-   **Sortierungskriterium:** z. B. ein Feld, das in einer Tabellenspalte angezeigt wird. ein Feld, das nicht angezeigt wird.  
   
 -   **Sortierungskontext:** Sie können z. B. nach Zeilen sortieren, die Zeilengruppen zugeordnet sind, oder nach Spalten, die Spaltengruppen zugeordnet sind. Ebenso können Sie nach Detailzeilen oder nach untergeordneten Gruppen in einer übergeordneten Gruppe sortieren sowie nach über- und untergeordneten Gruppen.  
   
--   **Textfeld, dem die Sortierungsschaltfläche hinzugefügt werden soll:** In der Spaltenkopfzeile oder in der Gruppenkopfzeile?  
+-   **Textfeld für die Sortierungsschaltfläche:** z. B. Spaltenkopf oder Gruppenzeilenkopf.  
   
 -   **Synchronisierung der Sortierung mehrerer Datenbereiche:** Sie können einen Bericht so gestalten, dass beim Umschalten der Sortierreihenfolge andere Datenbereiche mit dem gleichen Vorgänger ebenfalls neu sortiert werden.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66105621"
   
  In der folgenden Tabelle werden die Funktionen von interaktiven Sortierschaltflächen zusammengefasst.  
   
-|Aktion|Sortierungselement|Positionierung der Sortierschaltfläche|Sortierungskriterium|Sortierungsbereich|  
+|Action|Sortierungselement|Positionierung der Sortierschaltfläche|Sortierungskriterium|Sortierungsbereich|  
 |------------|------------------|----------------------------------|---------------------|----------------|  
 |Sortierung von Detailzeilen für eine Tabelle ohne Gruppen|Details|Spaltenkopfzeile|Datasetfeld, das an diese Spalte gebunden ist|Datenbereich|  
 |Sortieren von Gruppeninstanzen der obersten Ebene für eine Matrix|Gruppen|Spaltenkopfzeile|Gruppierungsausdruck für übergeordnete Gruppe|Datenbereich|  
@@ -56,7 +56,7 @@ ms.locfileid: "66105621"
   
  Hierzu müssen Sie die Tabelle umgestalten, um nach einem Ausdruck zu gruppieren, der mehrere Felder kombiniert. Wenn die Werte in der ursprünglichen Tabelle für ein Dataset mit Lagerbeständen beispielsweise erst nach der Größe und anschließend nach der Farbe sortiert werden, können Sie die beiden Kriterien mithilfe eines Gruppierungsausdrucks in einer Gruppe zusammenfassen. Weitere Informationen finden Sie unter [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: Massenkopieren von Daten aus Programmvariablen (ODBC) | Microsoft-Dokumentation
+title: Massen Daten kopieren aus Programmvariablen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753642"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Massenkopieren von Daten aus Programmvariablen (ODBC)
@@ -43,7 +43,7 @@ ms.locfileid: "62753642"
   
     -   Name einer Datendatei, in die Fehlermeldungen zum Massenkopiervorgang ausgegeben werden sollen (geben Sie NULL an, wenn keine Meldungsdatei erstellt werden soll)  
   
-    -   Die Richtung der Kopie: DB_IN von der Anwendung an die Sicht oder Tabelle bzw. DB_OUT an die Anwendung aus der Tabelle oder Sicht.  
+    -   Die Kopierrichtung: DB_IN von der Anwendung in die Sicht oder Tabelle bzw. DB_OUT von der Tabelle oder Sicht in die Anwendung  
   
 5.  Rufen Sie [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte im Massenkopiervorgang auf, um die Spalte an eine Programmvariable zu binden.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "62753642"
   
 8.  Nachdem alle Zeilen gesendet wurden, rufen Sie [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) auf, um den Vorgang abzuschließen.  
   
- Position und Länge der Programmvariablen können während eines Massenkopiervorgangs durch Aufrufe von [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)abgeändert werden. Verwenden Sie [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) zum Festlegen verschiedener Massenkopieroptionen. Verwendung [Bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) zum Senden von `text`, `ntext`, und `image` Daten in Segmenten an den Server.  
+ Position und Länge der Programmvariablen können während eines Massenkopiervorgangs durch Aufrufe von [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)abgeändert werden. Verwenden Sie [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) zum Festlegen verschiedener Massenkopieroptionen. Verwenden [Sie bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) , `text`um `ntext`-, `image` -und-Daten in Segmenten an den Server zu senden.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Startseite [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treiber Name ist "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
@@ -300,8 +300,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Massen kopieren mit dem SQL Server ODBC-Treiber &#40;ODBC-&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Massenkopieren aus Programmvariablen](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

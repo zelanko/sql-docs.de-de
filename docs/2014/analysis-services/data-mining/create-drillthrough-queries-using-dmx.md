@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Drillthroughabfragen mit DMX | Microsoft-Dokumentation
+title: Erstellen von Drillthrough-Abfragen mit DMX | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085240"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Erstellen von Drillthroughabfragen mit DMX
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  In diesem Beispiel wird ein Alias verwendet, um die Strukturspalte umzubenennen. Wenn Sie der Strukturspalte keinen Alias zuordnen, wird die Spalte mit dem Namen "Expression" zurückgegeben. Dies ist das Standardverhalten für alle unbenannten Spalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen &#40;Data Mining&#41;](drillthrough-queries-data-mining.md)   
- [Drillthrough für Miningstrukturen](drillthrough-on-mining-structures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Drillthrough-Abfragen &#40;Data Mining-&#41;](drillthrough-queries-data-mining.md)   
+ [Drillthrough in Miningstrukturen](drillthrough-on-mining-structures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk | Microsoft-Dokumentation
+title: Suchen eines bestimmten Knotens in einem Abhängigkeits Netzwerk | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084375"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk
-  Ein Abhängigkeitsnetzwerk in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Miningmodell kann zahlreiche Knoten enthalten, wodurch das Auffinden der gewünschten Daten erschwert wird. Um dieses Problem zu lösen, können Sie bestimmte Knoten im Dialogfeld **Knoten suchen** auf der Registerkarte **Abhängigkeitsnetzwerk** des Data Mining-Designers suchen.  
+  Ein Abhängigkeits Netzwerk in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einem Mining Modell kann viele Knoten enthalten, sodass das Auffinden der gewünschten Daten erschwert wird. Um dieses Problem zu lösen, können Sie bestimmte Knoten im Dialogfeld **Knoten suchen** auf der Registerkarte **Abhängigkeitsnetzwerk** des Data Mining-Designers suchen.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>So suchen Sie einen bestimmten Knoten in einem Abhängigkeitsnetzwerk  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66084375"
   
 3.  Wählen Sie aus der Liste den richtigen Knoten aus, und klicken Sie dann auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tasks und Anweisungen für den Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)  
   
   

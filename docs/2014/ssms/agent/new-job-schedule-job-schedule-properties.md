@@ -1,5 +1,5 @@
 ---
-title: 'Neuer Auftragszeitplan: Eigenschaften des Auftragszeitplans | Microsoft-Dokumentation'
+title: 'Neuer Auftrags Zeitplan: Eigenschaften des Auftrags Zeitplans | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,63 +14,63 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704625"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Neuer Auftragszeitplan: Eigenschaften des Auftragszeitplans
   Mithilfe dieser Seite können Sie die Eigenschaften des Zeitplans anzeigen und ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen neuen Namen für den Zeitplan ein.  
   
  **Aufträge im Zeitplan**  
  Zeigt die Aufträge an, die diesen Zeitplan verwenden.  
   
- **Zeitplantyp**  
+ **Zeit Plantyp**  
  Wählen Sie den Zeitplantyp aus.  
   
- **Enabled**  
+ **Aktiviert**  
  Klicken Sie zum Aktivieren oder Deaktivieren des Zeitplans auf das Kontrollkästchen.  
   
 ## <a name="recurring-schedule-types-options"></a>Zeitplantypoptionen für wiederkehrende Aufträge  
- **Tritt auf**  
+ **Vorkommen**  
  Wählen Sie das Intervall aus, nach dem der Zeitplan wiederholt wird.  
   
  **Wiederholen alle**  
  Wählen Sie die Anzahl der Tage oder Wochen aus, die zwischen der wiederholten Ausführung des Zeitplans liegen. Bei monatlich wiederholten Zeitplänen ist diese Option nicht verfügbar.  
   
- **Montag**  
+ **Pfingst**  
  Legt fest, dass der Auftrag an einem Montag ausgeführt wird. Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Dienstag**  
+ **Mitteilte**  
  Legt fest, dass der Auftrag an einem Dienstag ausgeführt wird. Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
  **Mittwoch**  
  Legt fest, dass der Auftrag an einem Mittwoch ausgeführt wird. Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Donnerstag**  
+ **Thursday**  
  Legt fest, dass der Auftrag an einem Donnerstag ausgeführt wird Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Freitag**  
+ **Am**  
  Legt fest, dass der Auftrag an einem Freitag ausgeführt wird Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
  **Samstag**  
  Legt fest, dass der Auftrag an einem Samstag ausgeführt wird Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Sonntag**  
+ **Sunday**  
  Legt fest, dass der Auftrag an einem Sonntag ausgeführt wird Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Day**  
+ **Ertag**  
  Wählen Sie den Tag des Monats aus, an dem der Zeitplan ausgeführt werden soll. Nur bei monatlich wiederholten Zeitplänen verfügbar.  
   
- **alle**  
+ **Alle**  
  Wählen Sie die Anzahl der Monate aus, die zwischen wiederholten Ausführungen des Zeitplans liegen sollen. Nur bei monatlich wiederholten Zeitplänen verfügbar.  
   
- **Am**  
+ **Die**  
  Geben Sie einen Zeitplan für den Wochentag einer bestimmten Woche des Monats an. Nur bei monatlich wiederholten Zeitplänen verfügbar.  
   
  **Einmalig um**  
@@ -89,14 +89,14 @@ ms.locfileid: "62704625"
  Geben Sie an, dass der Zeitplan für unbestimmte Zeit gültig bleibt.  
   
 ## <a name="one-time-schedule-types-options"></a>Zeitplantypoptionen für einmalige Aufträge  
- **Datum**  
+ **Date**  
  Wählen Sie das Datum aus, an dem der Auftrag ausgeführt wird.  
   
- **Zeit**  
+ **Time**  
  Wählen Sie die Uhrzeit aus, zu der der Auftrag ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Zuweisen von Zeitplänen zu Aufträgen](create-and-attach-schedules-to-jobs.md)   
- [Planen eines Auftrags](schedule-a-job.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen und Anfügen von Zeitplänen an Aufträge](create-and-attach-schedules-to-jobs.md)   
+ [Schedule a Job](schedule-a-job.md)  
   
   

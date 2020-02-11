@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Measures (Cube-Assistent) | Microsoft-Dokumentation
+title: Measures auswählen (Cube-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069449"
 ---
 # <a name="select-measures-cube-wizard"></a>Measures auswählen (Cube-Assistent)
   Auf der Seite **Measures auswählen** können Sie die Measuregruppen und Measures auswählen, die erstellt werden sollen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Measures**  
  Zeigt die verfügbaren Measuregruppen und ihre Measures an.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "66069449"
   
  Wenn Sie den Namen einer Measuregruppe oder eines Measure ändern möchten, klicken Sie auf dessen Namen, und geben Sie einen neuen Namen ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Cube-Assistent F1-Hilfe](cube-wizard-f1-help.md)   
- [Cubeobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Cube-Assistent, F1-Hilfe](cube-wizard-f1-help.md)   
+ [Cubeobjekte &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Definieren des Beziehungstyps einer attributbeziehung | Microsoft-Dokumentation
+title: Hiermit wird der Beziehungstyp einer Attribut Beziehung definiert. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077078"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>Definieren des Beziehungstyps einer Attributbeziehung
@@ -33,11 +33,11 @@ ms.locfileid: "66077078"
 2.  Klicken Sie im Diagramm oder im Bereich **Attributbeziehungen** mit der rechten Maustaste auf die Attributbeziehung, klicken Sie auf **Beziehungstyp**, und wählen Sie dann **Flexibel** oder **Fest**aus.  
   
     > [!NOTE]  
-    >  Um den Bereich **Attributbeziehungen** anzuzeigen, klicken Sie auf der Symbolleiste auf **Listenansichten anzeigen** .  
+    >  Klicken Sie auf der Symbolleiste auf **Listenansichten anzeigen** , um den Bereich **Attributbeziehungen** anzuzeigen.  
   
      In einer flexiblen Beziehung ändern sich die Beziehungen zwischen Elementen. In einer festen Beziehung ändern sich die Beziehungen zwischen Elementen nicht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Definieren von Attributbeziehungen](attribute-relationships-define.md)  
   
   

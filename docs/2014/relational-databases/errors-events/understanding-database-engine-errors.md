@@ -16,21 +16,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761688"
 ---
 # <a name="understanding-database-engine-errors"></a>Grundlegendes zu Datenbank-Engine-Fehlern
-  Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ausgelöste Fehler weisen die in der folgenden Tabelle beschriebenen Attribute auf.  
+  Fehler, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ausgelöst werden, verfügen über die in der folgenden Tabelle beschriebenen Attribute.  
   
-|Attribut|Description|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Fehlernummer|Jede Fehlermeldung besitzt eine eindeutige Fehlernummer.|  
 |Fehlermeldungs-Zeichenfolge|Die Fehlermeldung enthält Diagnoseinformationen über die Ursache des Fehlers. Zahlreiche Fehlermeldungen haben Ersetzungsvariablen, in die Informationen, wie z. B. der Name des Objekts, das den Fehler generiert, eingefügt werden.|  
-|Schweregrad|Der Schweregrad zeigt an, wie schwerwiegend der Fehler ist. Fehler mit einem niedrigen Schweregrad, wie z. B. 1 oder 2, sind Informationsmeldungen oder Warnungen auf niedriger Ebene. Fehler mit einem hohen Schweregrad deuten auf Probleme hin, die so bald wie möglich behoben werden sollten. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehlern](database-engine-error-severities.md).|  
-|Status|Einige Fehlermeldungen können für mehrere Elemente im Code für [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgelöst werden. So kann z. B. der Fehler 1105 aufgrund verschiedener Bedingungen ausgelöst werden. Jeder Bedingung, die einen Fehler auslöst, wird ein eindeutiger Statuscode zugewiesen.<br /><br /> Beim Anzeigen von Datenbanken von bekannten Problemen, wie z. B. der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, können Sie mithilfe der Statusnummer bestimmen, ob das aufgezeichnete Problem mit dem aufgetretenen Fehler übereinstimmt. Wenn z. B. ein Knowledge Base-Artikel den Fehler 1105 mit dem Status 2 erläutert und die von Ihnen empfangene Fehlermeldung 1105 den Status 3 aufwies, ist der Fehler möglicherweise auf eine andere als die im Artikel gemeldete Ursache zurückzuführen.<br /><br /> Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Software Service kann auch den Statuscode von einem Fehler verwenden, um den Ort im Quellcode zu finden, wo der Fehler entstanden ist. Diese Informationen stellen möglicherweise zusätzliche Ideen zur Problemdiagnose bereit.|  
+|severity|Der Schweregrad zeigt an, wie schwerwiegend der Fehler ist. Fehler mit einem niedrigen Schweregrad, wie z. B. 1 oder 2, sind Informationsmeldungen oder Warnungen auf niedriger Ebene. Fehler mit einem hohen Schweregrad deuten auf Probleme hin, die so bald wie möglich behoben werden sollten. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehlern](database-engine-error-severities.md).|  
+|State|Einige Fehlermeldungen können für mehrere Elemente im Code für [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgelöst werden. So kann z. B. der Fehler 1105 aufgrund verschiedener Bedingungen ausgelöst werden. Jeder Bedingung, die einen Fehler auslöst, wird ein eindeutiger Statuscode zugewiesen.<br /><br /> Beim Anzeigen von Datenbanken von bekannten Problemen, wie z. B. der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, können Sie mithilfe der Statusnummer bestimmen, ob das aufgezeichnete Problem mit dem aufgetretenen Fehler übereinstimmt. Wenn z. B. ein Knowledge Base-Artikel den Fehler 1105 mit dem Status 2 erläutert und die von Ihnen empfangene Fehlermeldung 1105 den Status 3 aufwies, ist der Fehler möglicherweise auf eine andere als die im Artikel gemeldete Ursache zurückzuführen.<br /><br /> Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Software Service kann auch den Statuscode von einem Fehler verwenden, um den Ort im Quellcode zu finden, wo der Fehler entstanden ist. Diese Informationen stellen möglicherweise zusätzliche Ideen zur Problemdiagnose bereit.|  
 |Name der Prozedur|Ist der Name der gespeicherten Prozedur oder des Triggers, in der oder in dem der Fehler aufgetreten ist.|  
 |Zeilennummer|Zeigt an, welche Anweisung in einem Batch, einer gespeicherten Prozedur, einem Trigger oder einer Funktion den Fehler generiert hat.|  
   
@@ -56,7 +56,7 @@ SELECT
   
  Weitere Informationen finden Sie unter [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)   

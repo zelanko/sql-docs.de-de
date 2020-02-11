@@ -1,5 +1,5 @@
 ---
-title: Einfügen, aktualisieren und Löschen von Elementen (XMLA) | Microsoft-Dokumentation
+title: Einfügen, aktualisieren und Löschen von Membern (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727164"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Einfügen, Aktualisieren und Löschen von Elementen (XMLA)
-  Können Sie die [einfügen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [aktualisieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), und [löschen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) -Befehle in XML for Analysis (XMLA) bzw. einfügen, aktualisieren oder Löschen von Mitgliedern aus einer Dimension mit aktiviertem Schreibzugriff. Weitere Informationen zu Dimensionen mit aktiviertem Schreibzugriff, finden Sie unter [Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Sie können die Befehle [Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)und [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) in XML for Analysis (XMLA) verwenden, um Elemente aus einer Dimension mit aktiviertem Schreibzugriff einzufügen, zu aktualisieren oder zu löschen. Weitere Informationen zu Dimensionen mit aktiviertem Schreibzugriff finden Sie unter [Dimensionen mit aktiviertem Schreib](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)Zugriff.  
   
 ## <a name="inserting-new-members"></a>Einfügen von neuen Elementen  
  Der `Insert`-Befehl fügt festgelegten Attributen in einer Dimension mit aktiviertem Schreibzugriff neue Elemente hinzu.  
@@ -46,9 +46,9 @@ ms.locfileid: "62727164"
   
  Der `Insert`-Befehl unterstützt nur zwei Eigenschaften:  
   
--   Die [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft, die einen Objektverweis für die Dimension enthält, in dem die Elemente eingefügt werden soll. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
+-   Die- [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) Eigenschaft, die einen Objekt Verweis für die Dimension enthält, in der die Member eingefügt werden sollen. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
   
--   Die [Attribute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) Eigenschaft, die eine oder mehrere enthält [Attribut](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) Elemente die Attribute zu identifizieren, in dem Elemente eingefügt werden soll. Jedes `Attribute`-Element identifiziert ein Attribut und stellt den Namen, den Wert, Übersetzungen, den unären Operator, benutzerdefinierte Rollups, benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element bereit, das dem identifizierten Attribut hinzugefügt werden soll.  
+-   Die [Attribute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) -Eigenschaft, die ein oder mehrere [Attribut](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) Elemente enthält, um die Attribute zu identifizieren, in denen Member eingefügt werden sollen. Jedes `Attribute`-Element identifiziert ein Attribut und stellt den Namen, den Wert, Übersetzungen, den unären Operator, benutzerdefinierte Rollups, benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element bereit, das dem identifizierten Attribut hinzugefügt werden soll.  
   
     > [!NOTE]  
     >  Alle Eigenschaften für das `Attribute`-Element müssen eingefügt werden. Andernfalls tritt möglicherweise ein Fehler auf.  
@@ -75,13 +75,13 @@ ms.locfileid: "62727164"
     > [!NOTE]  
     >  Alle Eigenschaften für das `Attribute`-Element müssen eingefügt werden. Andernfalls tritt möglicherweise ein Fehler auf.  
   
--   Die [, in denen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) Eigenschaft, die eine oder mehrere enthält `Attribute` Elemente, die die Attribute zu beschränken, in dem Mitglieder sind, aktualisiert werden. Die `Where` Eigenschaft ist wichtig für die Beschränkung einer `Update` -Befehls auf bestimmte Instanzen eines Elements. Wenn die `Where` nicht angegeben wird, werden alle Instanzen eines bestimmten Elements aktualisiert. Angenommen, Sie möchten den Stadtnamen für drei Kunden von Redmond zu Bellevue ändern. Um den Stadtnamen zu ändern, müssen Sie eine `Where`-Eigenschaft bereitstellen, die die drei Elemente im Customer-Attribut identifiziert, für die die Elemente im City-Attribut geändert werden sollen. Wenn Sie diese `Where`-Eigenschaft nicht bereitstellen, würde für jeden Kunden, dessen Stadtname zurzeit Redmond lautet, der Stadtname nach der Ausführung des `Update`-Befehls Bellevue lauten.  
+-   Die [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) -Eigenschaft, die ein oder mehrere `Attribute` -Elemente enthält, die die Attribute einschränken, in denen Elemente aktualisiert werden sollen. Die `Where` -Eigenschaft ist entscheidend, um `Update` einen Befehl auf bestimmte Instanzen eines Members zu beschränken. Wenn die `Where` -Eigenschaft nicht angegeben wird, werden alle Instanzen eines bestimmten Members aktualisiert. Angenommen, Sie möchten den Stadtnamen für drei Kunden von Redmond zu Bellevue ändern. Um den Stadtnamen zu ändern, müssen Sie eine `Where`-Eigenschaft bereitstellen, die die drei Elemente im Customer-Attribut identifiziert, für die die Elemente im City-Attribut geändert werden sollen. Wenn Sie diese `Where`-Eigenschaft nicht bereitstellen, würde für jeden Kunden, dessen Stadtname zurzeit Redmond lautet, der Stadtname nach der Ausführung des `Update`-Befehls Bellevue lauten.  
   
     > [!NOTE]  
     >  Mit der Ausnahme von neuen Elementen kann der `Update`-Befehl nur Attributschlüsselwerte für Attribute aktualisieren, die nicht in der `Where`-Klausel enthalten sind. Der Stadtname kann beispielsweise nicht aktualisiert werden, wenn ein Kunde aktualisiert wird, andernfalls wird der Stadtname für alle Kunden geändert.  
   
 ### <a name="updating-members-in-parent-attributes"></a>Aktualisieren von Elementen in übergeordneten Attributen  
- Zur Unterstützung von übergeordneten Attributen, die `Update` -Befehl die optionalen [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)sollte Eigenschaften. Wenn die `MoveWithDescendants`-Eigenschaft auf „True“ festgelegt wird, wird angegeben, dass die Nachfolger des übergeordneten Elements zusammen mit dem übergeordneten Element verschoben werden sollen, wenn sich der Bezeichner dieses übergeordneten Elements ändert. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand, wenn dieses übergeordnete Element verschoben wird.  
+ Um übergeordnete Attribute zu unter `Update` stützen, führt der Befehl [die optionalen Eigenschaften](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)"" von "" "" "" ". Wenn die `MoveWithDescendants`-Eigenschaft auf „True“ festgelegt wird, wird angegeben, dass die Nachfolger des übergeordneten Elements zusammen mit dem übergeordneten Element verschoben werden sollen, wenn sich der Bezeichner dieses übergeordneten Elements ändert. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand, wenn dieses übergeordnete Element verschoben wird.  
   
  Wenn Elemente in einem übergeordneten Attribut aktualisiert werden, kann der `Update`-Befehl keine Elemente in anderen Attributen aktualisieren.  
   
@@ -104,15 +104,15 @@ ms.locfileid: "62727164"
     >  Die in einem `Attribute`-Befehl enthaltenen `Drop`-Elemente dürfen nur die `AttributeName`- und die `Keys`-Eigenschaft enthalten. Andernfalls tritt möglicherweise ein Fehler auf.  
   
 ### <a name="dropping-members-in-parent-attributes"></a>Löschen von Elementen in übergeordneten Attributen  
- Festlegen der [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) Eigenschaft gibt an, dass die Nachfolger eines übergeordneten Elements mit dem übergeordneten Element ebenfalls gelöscht werden soll. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand.  
+ Durch Festlegen der [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) -Eigenschaft wird angegeben, dass die Nachfolger eines übergeordneten Elements ebenfalls mit dem übergeordneten Element gelöscht werden sollen. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand.  
   
 > [!IMPORTANT]  
 >  Ein Benutzer muss lediglich über Löschberechtigungen für das übergeordnete Element verfügen, um sowohl das übergeordnete Element als auch die Nachfolger zu löschen. Ein Benutzer benötigt keine Löschberechtigungen für die Nachfolger.  
   
-## <a name="see-also"></a>Siehe auch  
- [Drop-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
- [INSERT-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
- [Update-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Drop Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [Element &#40;XMLA einfügen&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Element &#40;XMLA aktualisieren&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Definieren und Identifizieren von Objekten &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
  [Entwickeln mit XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

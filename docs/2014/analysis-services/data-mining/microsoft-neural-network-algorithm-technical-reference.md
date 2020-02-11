@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz zu Microsoft Neural Network-Algorithmus | Microsoft-Dokumentation
+title: Technische Referenz für den Microsoft Neural Network-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083862"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
@@ -81,20 +81,20 @@ ms.locfileid: "66083862"
   
  Der Algorithmusanbieter führt zum selben Zeitpunkt die iterative Auswertung der Gewichtung aller Eingaben im gesamten Netzwerk aus. Dabei vergleicht er den zuvor reservierten Trainingsdatensatz mit den tatsächlich bekannten Werten aller Fälle der zurückgehaltenen Daten mit der Vorhersage des Netzwerks in einem Prozess, der als *Batchlernvorgang*bezeichnet wird. Nach der Auswertung des gesamten Trainingsdatensatzes vergleicht der Algorithmus für jedes Neuron den vorhergesagten Wert mit dem Ist-Wert. Der Algorithmus berechnet bei Bedarf den Fehlergrad und passt die Gewichtungen an, die den Eingaben dieses Neurons zugeordnet sind. Dabei arbeitet der Algorithmus rückwärts von den Ausgabeneuronen ausgehend zu den Eingabeneuronen mithilfe eines Prozesses, der als *Rückpropagierung*bezeichnet wird. Der Algorithmus wiederholt dann diesen Prozess für den gesamten Trainingsdatensatz. Da der Algorithmus viele Gewichtungen und Ausgabeneuronen unterstützen kann, wird der Algorithmus der konjugierten Gradienten verwendet, um den Trainingsprozess beim Zuweisen und Auswerten der Eingabegewichtungen zu führen. Eine Erläuterung des Algorithmus der konjugierten Gradienten geht über den Rahmen dieser Dokumentation hinaus.  
   
-### <a name="feature-selection"></a>Funktionsauswahl  
+### <a name="feature-selection"></a>Featureauswahl  
  Wenn die Anzahl der Eingabeattribute größer ist als der Wert des *MAXIMUM_INPUT_ATTRIBUTES* -Parameters oder die Anzahl der vorhersagbaren Attribute größer ist als der Wert des *MAXIMUM_OUTPUT_ATTRIBUTES* -Parameters, wird für die Funktionsauswahl ein entsprechender Algorithmus verwendet, um die Komplexität der im Miningmodell eingeschlossenen Netzwerke zu reduzieren. Mit der Funktionsauswahl wird die Anzahl der Eingabe- und vorhersagbaren Attribute reduziert. Dabei werden die Attribute beibehalten, die für das Modell statistisch am wichtigsten sind.  
   
  Die Funktionsauswahl wird automatisch von allen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining-Algorithmen zur Verbesserung der Analyse und zur Reduzierung der Verarbeitungslast verwendet. Die für die Funktionsauswahl in neuronalen Netzwerkmodellen verwendete Methode hängt vom Datentyp des Attributs ab. Zu Referenzzwecken zeigt die folgende Tabelle die für neuronale Netzwerkmodelle verwendeten Funktionsauswahlmethoden. Außerdem enthält die Tabelle die für den logistischen Regressionsalgorithmus verwendeten Funktionsauswahlmethoden, die auf dem neuronalen Netzwerkalgorithmus basieren.  
   
 |Algorithmus|Analysemethode|Kommentare|  
 |---------------|------------------------|--------------|  
-|Neuronale Netzwerke|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Der Neural Networks-Algorithmus kann sowohl die Entropie- als auch die Bayes-basierte Bewertungsmethode verwenden, sofern die Daten kontinuierliche Spalten enthalten.<br /><br /> Standard.|  
+|Neuronale Netzwerke|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Der Neural Networks-Algorithmus kann sowohl die Entropie- als auch die Bayes-basierte Bewertungsmethode verwenden, sofern die Daten kontinuierliche Spalten enthalten.<br /><br /> Default.|  
 |Logistische Regression|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Weil diesem Algorithmus kein Parameter zur Steuerung des Funktionsauswahlverhaltens übergeben werden kann, werden die Standardwerte verwendet. Wenn alle Attribute diskret oder diskretisiert sind, wird als Standardmethode Bayes-Dirichlet mit uniformer A-priori-Verteilung eingesetzt.|  
   
  Die Algorithmusparameter, die die Funktionsauswahl für ein neuronales Netzwerkmodell steuern, sind MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES und MAXIMUM_STATES. Sie können auch die Anzahl von verborgenen Ebenen kontrollieren, indem Sie den HIDDEN_NODE_RATIO-Parameter festlegen.  
   
 ### <a name="scoring-methods"></a>Bewertungsmethoden  
- Bei der*Bewertung* handelt es sich um eine Form der Normalisierung, was im Trainingskontext eines neuronalen Netzwerks den Prozess bezeichnet, mit dem ein Wert, z. B. eine diskrete Textbeschriftung, in einen Wert konvertiert wird, der mit anderen Eingaben verglichen und im Netzwerk gewichtet werden kann. Wenn ein Eingabeattribut beispielsweise Gender ist und die möglichen Werte Male und Female sind, während ein anderes Eingabeattribut Income lautet mit einem variablen Wertebereich, sind die Werte für jedes Attribut nicht direkt vergleichbar und müssen auf eine gemeinsame Skalierung codiert werden, sodass die Gewichtungen berechnet werden können. Bei der Bewertung werden diese Eingaben zu numerischen Werten normalisiert, insbesondere zu einem Wahrscheinlichkeitsbereich. Die für die Normalisierung verwendeten Funktionen tragen auch zu einer gleichmäßigeren Verteilung des Eingabewerts auf einer einheitlichen Skala bei, sodass Extremwerte die Analyseergebnisse nicht beeinträchtigen.  
+ Bei der *Bewertung* handelt es sich um eine Art Normalisierung, bei der im Zusammenhang mit dem trainieren eines neuronalen Netzwerk Modells ein Wert, z. b. eine diskrete Text Bezeichnung, in einen Wert umgewandelt wird, der mit anderen Typen von Eingaben verglichen und im Netzwerk gewichtet werden kann. Wenn ein Eingabeattribut beispielsweise Gender ist und die möglichen Werte Male und Female sind, während ein anderes Eingabeattribut Income lautet mit einem variablen Wertebereich, sind die Werte für jedes Attribut nicht direkt vergleichbar und müssen auf eine gemeinsame Skalierung codiert werden, sodass die Gewichtungen berechnet werden können. Bei der Bewertung werden diese Eingaben zu numerischen Werten normalisiert, insbesondere zu einem Wahrscheinlichkeitsbereich. Die für die Normalisierung verwendeten Funktionen tragen auch zu einer gleichmäßigeren Verteilung des Eingabewerts auf einer einheitlichen Skala bei, sodass Extremwerte die Analyseergebnisse nicht beeinträchtigen.  
   
  Ausgaben des neuronalen Netzwerks werden ebenfalls codiert. Wenn es ein einzelnes Ziel für die Ausgabe (d. h. Vorhersage) gibt oder mehrere Ziele vorhanden sind, die nur für die Vorhersage und nicht für die Eingabe verwendet werden, erstellt das Modell ein einzelnes Netzwerk, und eine Normalisierung der Werte erscheint nicht erforderlich. Wenn mehrere Attribute für die Eingabe und die Vorhersage verwendet werden, muss das Modell mehrere Netzwerke erstellen. Daher müssen alle Werte normalisiert sein, und die Ausgaben müssen beim Verlassen des Netzwerks codiert werden.  
   
@@ -102,15 +102,15 @@ ms.locfileid: "66083862"
   
  **Diskrete Werte**  
   
- Μ = p - die vorherige Wahrscheinlichkeit eines Status  
+ ° = p-die vorherige Wahrscheinlichkeit eines Zustands  
   
- StdDev  = sqrt(p(1-p))  
+ STDDEV = sqrt (p (1-p))  
   
  **Kontinuierliche Werte**  
   
- Derzeitiger Wert = 1 - μ/σ  
+ Vorhandener Wert = 1-°/Wert  
   
- Kein vorhandener Wert = - μ/σ  
+ Kein vorhandener Wert =-"/"  
   
  Nachdem die Werte codiert wurden, durchlaufen die Eingaben die gewichtete Summierung, wobei die Netzwerkränder als Gewichtungen fungieren.  
   
@@ -186,13 +186,13 @@ ms.locfileid: "66083862"
  Log Normal  
  Gibt an, dass die Werte innerhalb der Spalte so behandelt werden sollen, als wären sie entlang der *Protokollnormalkurve* verteilt. Dies bedeutet, dass der Logarithmus der Werte normal verteilt ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein neuronales Netzwerkmodell muss mindestens eine Eingabespalte und eine Ausgabespalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet.  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized und Ordered|  
@@ -200,9 +200,9 @@ ms.locfileid: "66083862"
 > [!NOTE]  
 >  Zyklische und sortierte Inhaltstypen werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)   
- [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Beispiele für Abfragen von neuronalen Netzwerkmodellen](neural-network-model-query-examples.md)  
+ [Mining Modell Inhalt von neuronalen Netzwerkmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Neuronale Beispiele für Netzwerkmodellabfragen](neural-network-model-query-examples.md)  
   
   

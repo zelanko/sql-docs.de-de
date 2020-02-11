@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757751"
 ---
 # <a name="perspective-representation-tabular"></a>Perspektivische Darstellung (tabellarisch)
   Eine Perspektive ist ein Mechanismus, um das Modell zu vereinfachen oder einen kleineren Teil davon für die Clientanwendung zu fokussieren.  
   
- Finden Sie unter [perspektivische Darstellung (tabellarisch)](perspective-representation-tabular.md) eine ausführliche Erläuterung zum Erstellen und Bearbeiten der perspektivendarstellung.  
+ Eine ausführliche Erläuterung zum Erstellen und Bearbeiten der perspektivischen Darstellung finden Sie unter [perspektivische Darstellung (tabellarisch)](perspective-representation-tabular.md) .  
   
 > [!WARNING]  
 >  Perspektiven sind kein Sicherheitsmechanismus; auf Objekte außerhalb der Perspektive kann immer noch vom Benutzer über andere Schnittstellen zugegriffen werden.  
@@ -29,7 +29,7 @@ ms.locfileid: "62757751"
  Im Hinblick auf AMO-Objekte verfügt eine Perspektivendarstellung über eine 1:1-Zuordnungsbeziehung zu <xref:Microsoft.AnalysisServices.Perspective>, und es sind keine weiteren AMO-Hauptobjekte erforderlich.  
   
 ### <a name="perspective-in-amo"></a>Perspektive in AMO  
- Der folgende Codeausschnitt veranschaulicht, wie eine Perspektive in einem tabellarischen Modell erstellt wird. Das wichtigste Element in diesem Codeausschnitt ist perspectiveElements. Dieses Objekt ist eine grafische Darstellung aller Objekte im tabellarischen Modell, die für den Benutzer verfügbar gemacht werden. *PerspectiveElements* enthält 4 Spalten und für dieses Szenario nur die Spalten 1, 2 und 3 relevant sind. Spalte 1 enthält den Typ des angezeigten Elements: -elementTypeValue-. Spalte 2 enthält den vollständigen Namen des Elements, der u. U. analysiert werden muss, um das Element in die Perspektive einzufügen. Spalte 3 enthält das Kontrollkästchenelement -checkedElement-, das angibt, ob das Element Teil der Perspektive ist oder nicht.  
+ Der folgende Codeausschnitt veranschaulicht, wie eine Perspektive in einem tabellarischen Modell erstellt wird. Das wichtigste Element in diesem Codeausschnitt ist perspectiveElements. Dieses Objekt ist eine grafische Darstellung aller Objekte im tabellarischen Modell, die für den Benutzer verfügbar gemacht werden. *perspectiveelements* enthält vier Spalten. in diesem Szenario sind nur die Spalten 1, 2 und 3 relevant. Spalte 1 enthält den Typ des angezeigten Elements: -elementTypeValue-. Spalte 2 enthält den vollständigen Namen des Elements, der u. U. analysiert werden muss, um das Element in die Perspektive einzufügen. Spalte 3 enthält das Kontrollkästchenelement -checkedElement-, das angibt, ob das Element Teil der Perspektive ist oder nicht.  
   
 ```  
   

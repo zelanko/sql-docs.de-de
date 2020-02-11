@@ -1,5 +1,5 @@
 ---
-title: Benennen Sie die entsprechenden (Datenquellensicht-Assistenten) (Analysis Services) | Microsoft-Dokumentation
+title: Namens Übereinstimmung (Datenquellen Sicht-Assistent) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072397"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Namensübereinstimmung (Datenquellensicht-Assistent) (Analysis Services)
@@ -25,18 +25,18 @@ ms.locfileid: "66072397"
 > [!NOTE]  
 >  Diese Seite wird nur angezeigt, wenn Sie eine Datenquelle auswählen, die mehrere Tabellen enthält, in der aber keine Fremdschlüsselbeziehungen zwischen den Tabellen bestehen.  
   
-## <a name="options"></a>Optionen  
- **Erstellen Sie logische Beziehungen nach übereinstimmenden Spalten.**  
+## <a name="options"></a>Tastatur  
+ **Logische Beziehungen nach übereinstimmenden Spalten erstellen**  
  Legt fest, dass ein Namensübereinstimmungskriterium verwendet wird, um mögliche logische Abhängigkeiten und Beziehungen zwischen den Tabellen, die für die Datenquellensicht ausgewählt wurden, und den anderen Tabellen im Schema zu ermitteln. Wenn Sie dieses Kontrollkästchen deaktivieren, wird kein Kriterium für die Namensübereinstimmung verwendet, um logische Beziehungen zwischen den Tabellen in der Datenquelle zu identifizieren.  
   
  **Fremdschlüsselübereinstimmungen**  
  Wählen Sie das Kriterium aus, dass für das Erstellen logischer Beziehungen zwischen Tabellen und Sichten in der Datenquelle verwendet werden soll. Nicht alphanumerische Zeichen werden in übereinstimmenden Zeichenfolgen ignoriert. Die Zeichenfolgen "Customer ID", "Customer_ID" und "CustomerID" stimmen z. B. überein. Wählen Sie eine der Optionen in der folgenden Tabelle aus, um Beziehungen unter den angegebenen Bedingungen zu erstellen.  
   
-|Select|Erstellte Beziehung|  
+|Wählen Sie |Erstellte Beziehung|  
 |------------|---------------|  
 |**Gleicher Name wie Primärschlüssel**|Eine logische Beziehung zu jeder Tabelle mit einem Spaltennamen, der mit dem Namen der Primärschlüsselspalte in einer ausgewählten Tabelle übereinstimmt.|  
-|**Gleicher Name wie Zieltabelle**|Eine logische Beziehung zu jeder Tabelle mit einem Spaltennamen, der mit dem Namen der ausgewählten Tabelle übereinstimmt.|  
-|**Zieltabellenname und Primärschlüsselname**|Eine logische Beziehung zu einer beliebigen Tabelle, in der ein Spaltenname mit dem ausgewählten Tabellennamen übereinstimmt, der wiederum mit dem Namen der Primärschlüsselspalte für die ausgewählte Tabelle verkettet ist. Nicht alphanumerische Zeichen innerhalb der Verkettung werden ignoriert ("Product ID", "Product_ID" und "ProductID" stimmen z. B. überein).|  
+|**Gleicher Name wie Ziel Tabellenname**|Eine logische Beziehung zu jeder Tabelle mit einem Spaltennamen, der mit dem Namen der ausgewählten Tabelle übereinstimmt.|  
+|**Ziel Tabellenname und Primärschlüssel Name**|Eine logische Beziehung zu einer beliebigen Tabelle, in der ein Spaltenname mit dem ausgewählten Tabellennamen übereinstimmt, der wiederum mit dem Namen der Primärschlüsselspalte für die ausgewählte Tabelle verkettet ist. Nicht alphanumerische Zeichen innerhalb der Verkettung werden ignoriert ("Product ID", "Product_ID" und "ProductID" stimmen z. B. überein).|  
   
  **Beschreibung und Beispiel**  
  Zeigt eine Beschreibung und ein Beispiel des ausgewählten Kriteriums an.  

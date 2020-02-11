@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661832"
 ---
 # <a name="database-element-for-server-dta"></a>Database-Element für Server (DTA)
@@ -35,7 +35,7 @@ ms.locfileid: "62661832"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Keine.|  
 |Standardwert|Keine.|  
@@ -48,13 +48,13 @@ ms.locfileid: "62661832"
 |Übergeordnetes Element|[Server-Element &#40;DTA&#41;](server-element-dta.md)|  
 |Untergeordnete Elemente|[Name-Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Dieses Element hat den Namen **DatabaseDetailsTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Dieses `Database`-Element ist nicht mit dem identisch, dessen übergeordnetes Stammelement das `Configuration`-Element ist. Weitere Informationen finden Sie unter [Database-Element für Konfiguration &#40;DTA&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Beispiel  
- Für ein Beispiel zur Verwendung von der `Database` Element finden Sie unter [-Serverelement &#40;DTA&#41;](server-element-dta.md).  
+ Ein Verwendungs Beispiel für das `Database` -Element finden Sie unter Server- [Element &#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

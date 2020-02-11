@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwenden von Eigenschaftswerten (MDX) | Microsoft-Dokumentation
+title: Erstellen und Verwenden von Eigenschafts Werten (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086687"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Erstellen und Verwenden von Eigenschaftswerten (MDX)
-  MDX (Multidimensional Expressions) unterstützt systeminterne und benutzerdefinierte Eigenschaften für Dimensionen, Ebenen, Elemente und Zellen. Die systeminternen Eigenschaften stellen eindeutige Namen, Beschriftungen, Formatierungen und Schriftgrade für einzelne Zellen bereit. Benutzerdefinierte Eigenschaften können dagegen fast alle Arten von zusätzlichen Attributen für Elemente bereitstellen.  
+  MDX (Multidimensional Expressions) unterstützt systeminterne und benutzerdefinierte Eigenschaften für Dimensionen, Ebenen, Elemente und Zellen. Die systeminternen Eigenschaften stellen eindeutige Namen, Beschriftungen, Formatierungen und Schriftgrade für einzelne Zellen bereit. Benutzerdefinierte Eigenschaften können dagegen fast alle Arten von zusätzlichen Attributen für Elemente bereitstellen.  
   
  Systeminterne und benutzerdefinierte Eigenschaften sind auf folgenden Ebenen verfügbar:  
   
- **Elementeigenschaften**  
+ **Element Eigenschaften**  
  Elementeigenschaften enthalten die grundlegenden Informationen zu jedem Element in jedem Tupel. Zu den grundlegenden Informationen gehören der Elementname, die übergeordnete Ebene, die Anzahl der untergeordneten Elemente usw.  
   
  Weitere Informationen zu Elementeigenschaften und deren Verwendung finden Sie unter [Verwenden von Elementeigenschaften &#40;MDX&#41;](multidimensional-models/mdx/mdx-member-properties.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "66086687"
   
  Weitere Informationen zu Zelleigenschaften und ihrer Verwendung finden Sie unter [Verwenden von Zelleigenschaften &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

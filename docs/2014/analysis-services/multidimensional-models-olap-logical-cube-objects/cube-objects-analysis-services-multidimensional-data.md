@@ -1,5 +1,5 @@
 ---
-title: Cubeobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Cubeobjekte (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702637"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Cubeobjekte (Analysis Services – Mehrdimensionale Daten)
@@ -24,7 +24,7 @@ ms.locfileid: "62702637"
 ## <a name="introducing-cube-objects"></a>Einführung in Cubeobjekte  
  Ein einfaches <xref:Microsoft.AnalysisServices.Cube>-Objekt besteht aus grundlegenden Informationen, Dimensionen und Measuregruppen. Grundlegende Informationen beinhalten den Namen des Cubes, das Standardmeasure des Cubes, die Datenquelle, den Speichermodus usw.  
   
- Die Dimensionsauflistung enthält den eigentlichen Dimensionssatz, der im Cube aus der Dimensionsauflistung der Datenbank verwendet wird. Alle Dimensionen müssen in der Dimensionsauflistung der Datenbank definiert werden, bevor im Cube auf sie verwiesen wird. Private Dimensionen sind nicht verfügbar in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Die Dimensionsauflistung enthält den eigentlichen Dimensionssatz, der im Cube aus der Dimensionsauflistung der Datenbank verwendet wird. Alle Dimensionen müssen in der Dimensionsauflistung der Datenbank definiert werden, bevor im Cube auf sie verwiesen wird. Private Dimensionen sind in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]nicht verfügbar.  
   
  Measuregruppen sind Sätze von Measures im Cube. Eine Measuregruppe ist eine Auflistung von Measures, die eine gemeinsame Datenquellensicht und einen gemeinsamen Satz von Dimensionen besitzen. Eine Measuregruppe ist die Verarbeitungseinheit für Measures. Measuregruppen können einzeln verarbeitet und dann durchsucht werden.  
   
@@ -33,17 +33,17 @@ ms.locfileid: "62702637"
 |||  
 |-|-|  
 |Thema||  
-|[Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
-|[Aggregationen und Aggregationsentwürfe](aggregations-and-aggregation-designs.md)||  
+|[Aktionen &#40;Analysis Services Mehrdimensionale Daten&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)||  
 |[Berechnungen](calculations.md)||  
-|[Cube-Zellen &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
+|[Cubezellen &#40;Analysis Services-Mehrdimensionale Daten&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
 |[Cubeeigenschaften](cube-properties-multidimensional-model-programming.md)||  
-|[Cube-Speicher &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
+|[Cube-Speicher &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[Cubeübersetzungen](cube-translations.md)||  
 |[Dimensionsbeziehungen](dimension-relationships.md)||  
-|[Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[Wichtige Leistungsindikatoren &#40;KPIs&#41; in mehrdimensionalen Modellen](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[Measures und Measuregruppen](../multidimensional-models/measures-and-measure-groups.md)||  
-|[Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[Perspektiven](perspectives.md)||  
   
   

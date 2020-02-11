@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie neue Dimensionen (Cube-Assistent) | Microsoft-Dokumentation
+title: Neue Dimensionen auswählen (Cube-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069340"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>Neue Dimensionen auswählen (Cube-Assistent)
   Auf der Seite **Neue Dimensionen auswählen** können Sie die neue Dimension auswählen, die erstellt werden soll.  
   
-## <a name="options"></a>Optionen  
- **Dimensions**  
+## <a name="options"></a>Tastatur  
+ **Dimensionen**  
  Wählen Sie die Dimensionen aus, die erstellt werden sollen. Standardmäßig sind alle Dimensionen ausgewählt.  
   
  Die Stammknoten der Struktur stellen die neuen Dimensionen dar, die erstellt werden. Die verbundenen Tabellen, die zur Erstellung der Dimension verwendet werden, werden unter dem Dimensionsknoten angezeigt.  
   
  Zum Umbenennen einer Dimension klicken Sie auf den betreffenden Dimensionsnamen, und geben Sie einen neuen Namen ein. Sie können die Tabellen nicht umbenennen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

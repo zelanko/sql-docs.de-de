@@ -1,5 +1,5 @@
 ---
-title: Verarbeitung und Speicherorte (Partitions-Assistent) | Microsoft-Dokumentation
+title: Verarbeitungs-und Speicherorte (Partitions-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070651"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Speicherorte zum Verarbeiten und Speichern (Partitions-Assistent)
@@ -26,7 +26,7 @@ ms.locfileid: "66070651"
  **Aktuelle Serverinstanz**  
  Macht die aktuelle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz für die Verarbeitung der Partition verantwortlich.  
   
- **Remote-Analysis Services-Datenquelle**  
+ **Remotedatenquelle für SQL Server Analysis Services**  
  Macht eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Remoteinstanz für die Verarbeitung dieser Partition verantwortlich.  
   
  Wählen Sie aus der Dropdownliste die Datenquelle aus, die die für die Verarbeitung der Partition verantwortliche [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Remoteinstanz darstellt.  
@@ -41,15 +41,15 @@ ms.locfileid: "66070651"
  **Standardmäßiger Serverstandort**  
  Legt den Datenordner der aktuellen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz als Speicherort der Aggregations- und Indizierungsdaten für die Partition fest.  
   
- **Angegebenen Ordner**  
+ **Angegebener Ordner**  
  Gibt den Speicherort der Aggregations- und Indizierungsdaten für die Partition an.  
   
  **...**  
  Zeigt das Dialogfeld **Nach Remoteordner suchen** an, in dem Sie einen Ordner für **Angegebener Ordner**auswählen können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Partitions-Assistent F1-Hilfe &#40;Analysis Services – mehrdimensionale Daten&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Suchen Sie nach Remoteordner Dialogfeld &#40;Analysis Services – mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Partitions-Assistent (F1-Hilfe &#40;Analysis Services-mehrdimensionalen Daten&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Dialog Feld "Remote Ordner suchen" &#40;Analysis Services Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

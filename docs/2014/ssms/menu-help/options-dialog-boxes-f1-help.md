@@ -14,65 +14,65 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662081"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Optionen (Dialogfelder, F1-Hilfe)
   Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in **im Menü** Extras **auf** Optionen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken.  
   
- [Optionen &#40;Designer-Analysis Services-Designer – Allgemein&#41;](options-designers-analysis-services-designers-general.md)  
+ [Optionen &#40;Designer-Analysis Services Designer-allgemein&#41;](options-designers-analysis-services-designers-general.md)  
   
- [Optionen &#40;Wartung Designer-Seite "Wartungspläne"&#41;](options-designers-maintenance-plans-page.md)  
+ [Optionen &#40;Designer-Seite "Wartungspläne"&#41;](options-designers-maintenance-plans-page.md)  
   
- [Optionen &#40;Designer-Tabelle und die Seite "Datenbank-Designer"&#41;](options-designers-table-and-database-designers-page.md)  
+ [Optionen &#40;Designer-Seite "Tabellen-und Datenbank-Designer"&#41;](options-designers-table-and-database-designers-page.md)  
   
- [Optionen &#40;Umgebung: Schriftarten und Farben-Seite&#41;](options-environment-fonts-and-colors-page.md)  
+ [Optionen &#40;Umgebung: Seite "Schriftarten und Farben"&#41;](options-environment-fonts-and-colors-page.md)  
   
- [Optionen &#40;Umgebung – Allgemein&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+ [Optionen &#40;Umgebung: Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
- [Optionen &#40;Umgebung – Hilfe – Allgemein&#41;](options-environment-help-general-page.md)  
+ [Optionen &#40;Umgebung-Hilfe-allgemeine Seite&#41;](options-environment-help-general-page.md)  
   
- [Optionen &#40;Umgebung – Hilfe – Online-Seite&#41;](options-environment-help-online-page.md)  
+ [Optionen &#40;Umgebung-Hilfe-Online Seite&#41;](options-environment-help-online-page.md)  
   
- [Optionen &#40;Seite Umgebung – Tastatur&#41;](options-environment-keyboard-page.md)  
+ [Optionen &#40;Umgebung-Seite "Tastatur"&#41;](options-environment-keyboard-page.md)  
   
- [Optionen &#40;Abfragen Ausführung-Analysis-Server – Allgemein&#41;](../../database-engine/options-query-execution-analysis-server-general-page.md)  
+ [Optionen &#40;Abfrage Ausführung-Analysis-Server Seite "Allgemein"&#41;](../../database-engine/options-query-execution-analysis-server-general-page.md)  
   
- [Optionen &#40;Abfragen Abfrageausführung: SQL Server: Seite "Erweitert"&#41;](../../database-engine/options-query-execution-sql-server-advanced-page.md)  
+ [Optionen &#40;Abfrage Ausführung: SQL Server: Seite "erweiterte Seite"&#41;](../../database-engine/options-query-execution-sql-server-advanced-page.md)  
   
- [Optionen &#40;Abfragen Abfrageausführung – SQL Server-ANSI-Seite&#41;](../../database-engine/options-query-execution-sql-server-ansi-page.md)  
+ [Optionen &#40;Abfrage Ausführung-SQL Server-ANSI-Seite&#41;](../../database-engine/options-query-execution-sql-server-ansi-page.md)  
   
- [Optionen &#40;Abfragen Abfrageausführung – SQL Server Seite Allgemein&#41;](../../database-engine/options-query-execution-sql-server-general-page.md)  
+ [Optionen &#40;Abfrage Ausführung-SQL Server Seite "Allgemein"&#41;](../../database-engine/options-query-execution-sql-server-general-page.md)  
   
- [Optionen &#40;Abfrage Ergebnisse-Analysis-Server – Allgemein&#41;](../../database-engine/options-query-results-analysis-server-general-page.md)  
+ [Optionen &#40;Abfrageergebnisse-Analysis-Server Seite "Allgemein"&#41;](../../database-engine/options-query-results-analysis-server-general-page.md)  
   
- [Optionen &#40;Abfragen Abfrageergebnisse – SQL Server Seite Allgemein&#41;](../../database-engine/options-query-results-sql-server-general-page.md)  
+ [Optionen &#40;Abfrageergebnisse-SQL Server Seite "Allgemein"&#41;](../../database-engine/options-query-results-sql-server-general-page.md)  
   
- [Optionen &#40;Abfragen Abfrageergebnisse – SQL Server-Rasterseite Ergebnisse in&#41;](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)  
+ [Optionen &#40;Abfrageergebnisse-SQL Server-Ergebnisse auf Raster Seite&#41;](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)  
   
- [Optionen &#40;Abfragen Abfrageergebnisse – SQL Server-Textseite Ergebnisse in&#41;](../../database-engine/options-query-results-sql-server-results-to-text-page.md)  
+ [Optionen &#40;Abfrageergebnisse-SQL Server-Ergebnisse auf der Textseite&#41;](../../database-engine/options-query-results-sql-server-results-to-text-page.md)  
   
- [Optionen &#40;Abfrage Ergebnisse und "Abhängigkeitsdienste"&#41;](../../database-engine/options-query-results-and-dependency-services-page.md)  
+ [Optionen &#40;Seite "Abfrageergebnisse und Abhängigkeits Dienste"&#41;](../../database-engine/options-query-results-and-dependency-services-page.md)  
   
- [Optionen &#40;Text-Editor – alle Sprachen – Seite "Allgemein"&#41;](../../database-engine/options-text-editor-all-languages-general-page.md)  
+ [Optionen &#40;Text-Editor-alle Sprachen-Seite "Allgemein"&#41;](../../database-engine/options-text-editor-all-languages-general-page.md)  
   
- [Optionen &#40;Text-Editor – alle Sprachen – Seite "Tabstopps"&#41;](../../database-engine/options-text-editor-all-languages-tabs-page.md)  
+ [Optionen &#40;Text-Editor-alle Sprachen-Registerkarten Seite&#41;](../../database-engine/options-text-editor-all-languages-tabs-page.md)  
   
- [Optionen &#40;Text-Editor – Seite Dateierweiterung&#41;](../../database-engine/options-text-editor-file-extension-page.md)  
+ [Optionen &#40;Text-Editor-Datei Erweiterungs Seite&#41;](../../database-engine/options-text-editor-file-extension-page.md)  
   
- [Optionen &#40;Text-Editor – unverschlüsselter Text – Seite "Allgemein"&#41;](../../database-engine/options-text-editor-plain-text-general-page.md)  
+ [Optionen &#40;Text-Editor-nur-Text-Seite "Allgemein"&#41;](../../database-engine/options-text-editor-plain-text-general-page.md)  
   
- [Optionen &#40;Text-Editor – unverschlüsselter Text – Seite "Tabstopps"&#41;](../../database-engine/options-text-editor-plain-text-tabs-page.md)  
+ [Optionen &#40;Text-Editor-nur-Text-Registerkarten Seite&#41;](../../database-engine/options-text-editor-plain-text-tabs-page.md)  
   
- [Optionen &#40;Text-Editor – XML – Seite "Formatierung"&#41;](../../database-engine/options-text-editor-xml-formatting-page.md)  
+ [Optionen &#40;Text-Editor-Seite "XML-Formatierung"&#41;](../../database-engine/options-text-editor-xml-formatting-page.md)  
   
- [Optionen &#40;Text-Editor – XML – Seite "Allgemein"&#41;](../../database-engine/options-text-editor-xml-general-page.md)  
+ [Optionen &#40;Text-Editor-XML-Seite "Allgemein"&#41;](../../database-engine/options-text-editor-xml-general-page.md)  
   
- [Optionen &#40;Text-Editor – XML – Seite "Sonstige"&#41;](../../database-engine/options-text-editor-xml-miscellaneous-page.md)  
+ [Optionen &#40;Text-Editor-XML-Sonstiges Seite&#41;](../../database-engine/options-text-editor-xml-miscellaneous-page.md)  
   
- [Optionen &#40;auf der Textseite-Editor: XML:Tabs&#41;](../../database-engine/options-text-editor-xml-tabs-page.md)  
+ [Optionen &#40;Text-Editor: XML: Seite "Registerkarten"&#41;](../../database-engine/options-text-editor-xml-tabs-page.md)  
   
   

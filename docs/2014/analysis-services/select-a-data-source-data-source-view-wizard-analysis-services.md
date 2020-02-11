@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie eine Datenquelle (Datenquellensicht-Assistenten) (Analysis Services) | Microsoft-Dokumentation
+title: Wählen Sie eine Datenquelle aus (Datenquellen Sicht-Assistent) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069863"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Wählen Sie eine Datenquelle aus (Datenquellensicht-Assistent) (Analysis Services)
   Mithilfe der Seite **Wählen Sie eine Datenquelle aus** können Sie eine Datenquelle für die Datenquellensicht auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Relationale Datenquellen**  
  Wählen Sie die Datenquelle aus, für die Sie eine Datenquellensicht erstellen möchten.  
   
@@ -31,15 +31,15 @@ ms.locfileid: "66069863"
 > [!NOTE]  
 >  Obwohl OLAP-Datenquellen (Online Analytical Processing) für das Projekt aufgeführt werden können, ist es nur möglich, Datenquellensichten für relationale Datenquellen hinzuzufügen.  
   
- **Eigenschaften der Datenquelle**  
+ **Datenquellen Eigenschaften**  
  Listet die Anbieterinformationen aus der Verbindungszeichenfolge für die aktuell ausgewählte Datenquelle auf.  
   
  **Neue Datenquelle**  
  Öffnet den Datenquellen-Assistenten, in dem Sie eine neue Datenquelle erstellen können, die dem Projekt hinzugefügt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellensicht-Assistent F1-Hilfe &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
- [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Datenquellen-Assistent F1-Hilfe &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen Sicht-Assistent (F1-Hilfe &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Datenquellen Sichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Datenquellen-Assistent (F1-Hilfe &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667418"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus
@@ -46,7 +46,7 @@ ms.locfileid: "62667418"
   
 2.  Klicken Sie im Dialogfeld **Verleger hinzufügen** auf **Hinzufügen**, und klicken Sie dann auf **Oracle-Verleger hinzufügen**.  
   
-3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteilers ein, der dem Oracle-Verleger zugeordnet ist, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung**auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
+3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteilers ein, der dem Oracle-Verleger zugeordnet ist, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung**auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
   
 4.  Klicken Sie auf **Verbinden**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667418"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Verlegergruppe, und klicken Sie dann auf **Entfernen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verteilung konfigurieren](../configure-distribution.md)   
  [Überwachen der Replikation](../monitoring-replication.md)  
   

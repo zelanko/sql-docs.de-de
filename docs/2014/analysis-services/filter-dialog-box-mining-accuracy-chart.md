@@ -1,5 +1,5 @@
 ---
-title: Filtern (Dialogfeld) (Mininggenauigkeitsdiagramm) | Microsoft-Dokumentation
+title: Filtern (Dialog Feld) (Mining Genauigkeits Diagramm) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081173"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filter (Dialogfeld, Mininggenauigkeitsdiagramm)
@@ -32,21 +32,21 @@ ms.locfileid: "66081173"
   
  Wenn Sie den Filter auf das neue Dataset anwenden, werden zum Auswerten des vorhandenen Data Mining-Modells nur die Fälle in den Daten verwendet, die die Bedingungen erfüllen. Wenn Sie den Filter jedoch auf das Miningmodell anwenden, wird die Genauigkeit des Modells nur für die Fälle im Miningmodell bewertet, die diese Bedingungen erfüllen.  
   
- **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Weitere Informationen finden Sie unter:** [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Optionen  
- **Bedingungen**  
+## <a name="options"></a>Tastatur  
+ **Voraus**  
  Ein Raster mit Spalten, in denen die Bedingungen für die Spalten aus der Tabelle festgelegt werden, die im Dialogfeld **Datasetfilter** ausgewählt wurden.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Und/Oder**|Klicken Sie auf diese Option, um anzugeben, ob der AND-Operator oder der OR-Operator auf die Bedingung in dieser Zeile angewendet werden soll. Diese Werte sind nur dann verfügbar, wenn Sie eine Spalte aus der Liste **Miningstrukturspalte** ausgewählt haben.|  
+|**Und/oder**|Klicken Sie auf diese Option, um anzugeben, ob der AND-Operator oder der OR-Operator auf die Bedingung in dieser Zeile angewendet werden soll. Diese Werte sind nur dann verfügbar, wenn Sie eine Spalte aus der Liste **Miningstrukturspalte** ausgewählt haben.|  
 |**Miningstrukturspalte**|Klicken Sie auf diese Option, um eine Spalte aus der Liste mit den Spalten der Tabelle auszuwählen, die Sie aus den Datenquellen im Dialogfeld **Datasetfilter** ausgewählt haben.|  
 |**Operator**|Wählen Sie in der Liste einen Operator aus. Die verfügbaren Operatoren hängen vom Datentyp der Spalte ab.<br /><br /> Wenn die Spalte diskrete Werte enthält, sind nur folgende Operatoren verfügbar:<br /><br /> = (ist gleich), <> (ist nicht gleich), IS NOT NULL, IS NULL.<br /><br /> Wenn die Spalte kontinuierliche Werte enthält, werden auch Operatoren für größer als- und kleiner als-Vorgänge unterstützt.|  
 |**Wert**|Geben Sie einen Wert ein, der als Bedingung verwendet werden soll.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

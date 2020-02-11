@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung von Microsoft Excel-Datei (SSAS) mit | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit einer Microsoft Excel-Datei (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087322"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Mit einer Microsoft Excel-Datei verbinden (SSAS)
@@ -38,7 +38,7 @@ ms.locfileid: "66087322"
  Navigieren Sie zu einem Speicherort, an dem eine Excel-Datei verfügbar ist.  
   
  **Erweitert**  
- Stellen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** ein.  
+ Legen Sie zusätzliche Verbindungs Eigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest.  
   
  **Erste Zeile als Spaltenüberschriften verwenden**  
  Geben Sie an, ob die erste Datenzeile für die Spaltenüberschriften der Zieltabelle verwendet werden soll.  

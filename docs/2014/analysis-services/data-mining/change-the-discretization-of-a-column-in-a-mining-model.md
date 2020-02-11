@@ -1,5 +1,5 @@
 ---
-title: Ändern der Diskretisierung von Spalten in einem Miningmodell | Microsoft-Dokumentation
+title: Ändern der Diskretisierung einer Spalte in einem Mining Modell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085897"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Ändern der Diskretisierung von Spalten in Miningmodellen
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diskretisiert automatisch Werte – das heißt, es Klassen, Daten in einer numerischen Spalte in bestimmten Szenarien. Wenn die Daten zum Beispiel fortlaufende numerische Daten enthalten und Sie ein Entscheidungsstrukturmodell erstellen, wird jede Spalte mit fortlaufenden Daten abhängig von der Verteilung der Daten automatisch klassifiziert. Wenn Sie steuern möchten, wie die Daten diskretisiert werden, müssen Sie die Eigenschaften der Spalte "Miningstruktur" ändern, die steuern, wie die Daten im Modell verwendet werden.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]diskretisiert automatisch Werte, d. h., in bestimmten Szenarien werden Daten in numerischen Spalten als Container formatiert. Wenn die Daten zum Beispiel fortlaufende numerische Daten enthalten und Sie ein Entscheidungsstrukturmodell erstellen, wird jede Spalte mit fortlaufenden Daten abhängig von der Verteilung der Daten automatisch klassifiziert. Wenn Sie steuern möchten, wie die Daten diskretisiert werden, müssen Sie die Eigenschaften der Spalte "Miningstruktur" ändern, die steuern, wie die Daten im Modell verwendet werden.  
   
  Allgemeine Informationen zum Festlegen der Eigenschaften eines Miningmodells finden Sie unter [Miningmodellspalten](mining-model-columns.md).  
   
@@ -39,14 +39,14 @@ ms.locfileid: "66085897"
   
 ### <a name="to-change-the-discretization-method"></a>So ändern Sie die Diskretisierungsmethode  
   
-1.  In der **Data Mining-Eigenschaften** Fenster, auf das Textfeld neben **Content**, und wählen Sie `Discretized` aus der Dropdownliste aus.  
+1.  Klicken Sie im Fenster **Mining Eigenschaften** auf das Textfeld neben **Inhalt**, und wählen Sie `Discretized` aus der Dropdown Liste aus.  
   
      Das Fenster <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> und <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> sind nun aktiviert.  
   
-2.  In der **Eigenschaften** Fenster, auf das Textfeld neben <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> und wählen Sie eine der folgenden Werte: `Automatic`, `EqualAreas`, oder `Cluster`.  
+2.  Klicken Sie im Fenster **Eigenschaften** auf das Textfeld neben, <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> und wählen Sie einen der folgenden Werte aus `Automatic`: `EqualAreas`, oder `Cluster`.  
   
     > [!NOTE]  
-    >  Wenn die Spaltenverwendung, um festgelegt ist `Ignore`, **Eigenschaften** Fenster für die Spalte ist leer.  
+    >  Wenn die Spalten Verwendung auf `Ignore`festgelegt ist, ist das Fenster **Eigenschaften** für die Spalte leer.  
   
      Der neue Wert wird wirksam, wenn Sie ein anderes Element im Designer auswählen.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66085897"
     > [!NOTE]  
     >  Wenn Sie diese Eigenschaften ändern, muss die Struktur zusammen mit allen Modellen, in denen Sie die neue Einstellung verwenden möchten, neu verarbeitet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und -anweisungen](mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Allgemein (Dialogfeld Miningstruktur) (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Allgemein (Dialog Feld Mining Struktur) (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,28 +13,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081059"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Allgemein (Dialogfeld "Miningstruktur") (Analysis Services &ndash; Data Mining)
   Auf der Seite **Allgemein** im Dialogfeld **Miningstruktureigenschaften** können Sie in **SQL Server Management Studio** die allgemeinen Eigenschaften einer Miningstruktur in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 |Begriff|Definition|  
 |----------|----------------|  
 |**Name**|Zeigt den Namen der Miningstruktur an.|  
-|**ID**|Zeigt den Bezeichner der Miningstruktur an.|  
+|**id**|Zeigt den Bezeichner der Miningstruktur an.|  
 |**Beschreibung**|Zeigt die Beschreibung der Miningstruktur an.|  
 |**Timestamp erstellen**|Zeigt das Datum und die Uhrzeit der Erstellung der Miningstruktur an.|  
-|**Letztes Schemaupdate**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Miningstruktur an.|  
-|**Zustand**|Zeigt den Verarbeitungsstatus der Miningstruktur an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Letzte Schema Aktualisierung**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Miningstruktur an.|  
+|**State**|Zeigt den Verarbeitungsstatus der Miningstruktur an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Zuletzt verarbeitet**|Zeigt das Datum und die Uhrzeit an, zu der die Miningstruktur zuletzt verarbeitet wurde.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

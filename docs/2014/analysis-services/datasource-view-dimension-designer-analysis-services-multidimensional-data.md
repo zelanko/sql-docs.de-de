@@ -1,5 +1,5 @@
 ---
-title: Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Datenquellen Sicht (Registerkarte ' Dimensions Struktur ', Dimensions-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082347"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Datenquellensicht** können Sie Tabellen und Spalten aus der Datenquellensicht anzeigen, die der ausgewählten Dimension zugeordnet ist. Dieser Bereich wird zum Erstellen von Attributen, Elementeigenschaften, Hierarchien und Ebenen verwendet. Dazu werden Spalten aus dem Bereich **Datenquellensicht** in den Bereich **Attribute** oder **Hierarchien und Ebenen** gezogen.  
   
-## <a name="options"></a>Optionen  
- **Datenquellensicht**  
+## <a name="options"></a>Tastatur  
+ **Datenquellen Sicht**  
  Zeigt die der ausgewählten Dimension zugeordnete Datenquellensicht an.  
   
- **(Verschieben Sie Viewpoint)**  
+ **(Viewpoint verschieben)**  
  Klicken Sie auf die rechte untere Ecke des Bereichs zwischen die Bildlaufleisten, um einen Teil des Bereichs **Datenquellensicht** auszuwählen.  
   
 ## <a name="diagram-context-menu"></a>Diagramm (Kontextmenü)  
@@ -41,41 +41,41 @@ ms.locfileid: "66082347"
  **Nur verwendete Tabellen anzeigen**  
  Zeigt in dem Bereich nur die Tabellen aus der zugeordneten Datenquellensicht an, die von der Dimension verwendet werden.  
   
- **Anzeigenamen anzeigen**  
+ **Anzeigen Amen anzeigen**  
  Wählen Sie diese Option aus, um für die Objekte im Bereich die Anzeigenamen anzuzeigen.  
   
- **Alles auswählen**  
+ **Alles markieren**  
  Wählt alle Objekte im Bereich aus.  
   
  **Tabelle suchen**  
  Zeigt das Dialogfeld **Tabelle suchen** an. Weitere Informationen zum Dialogfeld **Tabelle suchen** finden Sie unter [Dialogfeld „Tabelle suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Anordnen von Tabellen**  
+ **Tabellen anordnen**  
  Ordnet die Objekte im Bereich in dem Layout an, das durch das Auswählen von **Zu diagonalem Layout wechseln** oder **Zu rechteckigem Layout wechseln**angegeben wurde.  
   
  **Zu diagonalem Layout wechseln**  
  Mit dieser Option werden die Objekte diagonal angeordnet.  
   
 > [!NOTE]  
->  Diese Option wird nur angezeigt, wenn **Zu rechteckigem Layout wechseln** ausgewählt ist.  
+>  Diese Option wird nur angezeigt **, wenn zu rechteckigem Layout wechseln** ausgewählt ist.  
   
  **Zu rechteckigem Layout wechseln**  
  Mit dieser Option werden die Objekte in einem Rechteckmuster angeordnet.  
   
 > [!NOTE]  
->  Diese Option wird nur angezeigt, wenn **Zu diagonalem Layout wechseln** ausgewählt ist.  
+>  Diese Option wird nur angezeigt **, wenn zu diagonalem Layout wechseln** ausgewählt ist.  
   
  **Datenquellensicht bearbeiten**  
  Zeigt **Datenquellensicht-Designer** für die der Dimension zugeordnete Datenquellensicht an. Weitere Informationen zum **Datenquellensicht-Designer** finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Zeigen Sie Datenquellensicht In an**  
+ **Datenquellensicht anzeigen in**  
  Wählen Sie eine der folgenden Optionen aus, um zwischen den folgenden Anzeigemodi für den Bereich **Datenquellensicht** zu wechseln:  
   
 -   Diagramm  
   
      Zeigt ein Diagramm mit den mit der aktuellen Dimension verknüpften Tabellen und Spalten an.  
   
--   trEE  
+-   Struktur  
   
      Zeigt eine Strukturansicht mit den mit der aktuellen Dimension verknüpften Tabellen und Spalten an.  
   
@@ -130,10 +130,10 @@ ms.locfileid: "66082347"
  **Eigenschaften**  
  Zeigt in **das Fenster** Eigenschaften [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die ausgewählte Beziehung an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dimensionsstruktur &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Symbolleiste &#40;Registerkarte Dimensionsstruktur, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
- [Attribute &#40;Registerkarte Dimensionsstruktur, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Hierarchien &#40;Registerkarte Dimensionsstruktur, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dimensions Struktur &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Symbolleiste &#40;Registerkarte "Dimensions Struktur", Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
+ [Attribute &#40;Registerkarte "Dimensions Struktur", Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Hierarchien &#40;Registerkarte "Dimensions Struktur", Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

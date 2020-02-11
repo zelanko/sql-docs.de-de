@@ -1,5 +1,5 @@
 ---
-title: Identitätswechsel (Dialogfeld) (Tabellenimport-Assistent) | Microsoft-Dokumentation
+title: Identitätswechsel Informationen (Dialog Feld, Tabellen Import-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080695"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Identitätswechselinformationen (Dialogfeld, Tabellenimport-Assistent)
   Verwenden Sie die Seite **Identitätswechselinformationen** , um die Anmeldeinformationen anzugeben, mit denen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine Verbindung mit der Datenquelle herstellt. Weitere Informationen zum Identitätswechsel mit Anmeldeinformationen finden Sie unter [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
-## <a name="options"></a>Optionen  
- **Bestimmten Windows-Benutzernamen und Kennwort**  
+## <a name="options"></a>Tastatur  
+ **Bestimmter Windows-Benutzername und-Kennwort**  
  Wählen Sie diese Option aus, damit vom Tabellenmodell die Sicherheitsanmeldeinformationen eines angegebenen Windows-Benutzerkontos verwendet werden.  
   
  **Benutzername**  
- Geben Sie die Domäne und den Name des zu verwendenden Benutzerkontos ein. Verwenden Sie folgendes Format:  
+ Geben Sie die Domäne und den Name des zu verwendenden Benutzerkontos ein. Verwenden Sie das folgende Format:  
   
- *\<Domänenname >* **\\**  *\<Benutzerkontonamen >*  
+ Domänen **\\** Name>* \<Benutzerkonto Name>* * \<*  
   
  Die Option ist nur verfügbar, wenn die Option **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden** ausgewählt ist.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66080695"
  **Dienstkonto**  
  Wählen Sie diese Option aus, damit die Sicherheitsanmeldeinformationen verwendet werden, die dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Dienst zugeordnet sind, der das Objekt verwaltet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Identitätswechsel &#40;SSAS – tabellarisch&#41;](tabular-models/impersonation-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Identitätswechsel &#40;tabellarischen SSAS-&#41;](tabular-models/impersonation-ssas-tabular.md)  
   
   

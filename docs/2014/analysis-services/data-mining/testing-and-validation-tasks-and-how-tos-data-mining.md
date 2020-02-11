@@ -1,5 +1,5 @@
 ---
-title: Tests und Überprüfung miningmodelltasks und Anweisungen (Datamining) | Microsoft-Dokumentation
+title: Test-und validierungsaufgaben und Vorgehensweisen (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082872"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tasks und Anweisungen für Test und Überprüfung (Data Mining)
@@ -39,7 +39,7 @@ ms.locfileid: "66082872"
   
  Die ersten drei aufgeführten Diagramme basieren auf der Registerkarte **Eingabeauswahl** , um die Daten zum Erstellen der Diagramme zu definieren.  
   
- Das Kreuzvalidierungsdiagramm wird durch Hinzufügen zusätzlicher Eingaben erstellt, die auf der Registerkarte **Kreuzvalidierung** verfügbar sind. Weitere Informationen finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  
+ Das Kreuz Validierungs Diagramm wird mithilfe zusätzlicher Eingaben erstellt, die auf der Registerkarte **Kreuz Validierung** zur Verfügung stehen. Weitere Informationen finden Sie unter [Kreuz Validierung &#40;Analysis Services-Data Mining-&#41;](cross-validation-analysis-services-data-mining.md).  
   
  Weitere Informationen zum Verwenden des Mining-Genauigkeitsdiagramms finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66082872"
   
 -   [Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
--   [Erstellen eines Kreuzvalidierungsberichts](create-a-cross-validation-report.md)  
+-   [Erstellen von Berichten für Kreuzvalidierung](create-a-cross-validation-report.md)  
   
 -   [Auswählen und Zuordnen von Modelltestdaten](choose-and-map-model-testing-data.md)  
   

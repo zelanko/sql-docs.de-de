@@ -1,5 +1,5 @@
 ---
-title: Definieren von verknüpften Dimensionen | Microsoft-Dokumentation
+title: Verknüpfte Dimensionen definieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075574"
 ---
 # <a name="define-linked-dimensions"></a>Definieren von verknüpften Dimensionen
@@ -30,8 +30,8 @@ ms.locfileid: "66075574"
 > [!NOTE]  
 >  Da keine Aktualisierungsfunktion verfügbar ist, werden Dimensionen von den meisten Analysis Services-Entwicklern kopiert und nicht verknüpft. Sie können Dimensionen zwischen Projekten innerhalb derselben Projektmappe kopieren. Weitere Informationen finden Sie unter [Aktualisieren einer verknüpften Dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
- Die Quelldatenbank, die die Dimension enthält, und die aktuelle Datenbank, von der sie verwendet wird, müssen über die gleiche Version und den gleichen Kompatibilitätsgrad verfügen. Weitere Informationen finden Sie unter [Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+## <a name="prerequisites"></a>Voraussetzungen  
+ Die Quelldatenbank, die die Dimension enthält, und die aktuelle Datenbank, von der sie verwendet wird, müssen über die gleiche Version und den gleichen Kompatibilitätsgrad verfügen. Weitere Informationen finden Sie unter [Festlegen des Kompatibilitäts Grad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  Die Quelldatenbank muss bereitgestellt und online geschaltet sein. Server, die verknüpfte Objekte veröffentlichen oder nutzen, müssen so konfiguriert werden, dass der Vorgang zulässig ist (siehe unten).  
   
@@ -55,14 +55,14 @@ ms.locfileid: "66075574"
   
 4.  Auf der Seite **Assistenten abschließen** können Sie eine Vorschau der verknüpften Objekte anzeigen. Wenn Sie einen Link zu einer Dimension herstellen, die denselben Namen wie eine bereits bestehende aufweist, wird eine Ordinalzahl (beginnend mit '1' für den ersten doppelten Namen) an den Namen angefügt. Beim Abschließen des Assistenten wird die Dimension dem Ordner **Dimensionen** hinzugefügt.  
   
-##  <a name="bkmk_CreateNew"></a> Erstellen einer neuen Datenquellenverbindung mit einer Analysis Services-Datenbank  
+##  <a name="bkmk_CreateNew"></a>Erstellen einer neuen Datenquellen Verbindung mit einer Analysis Services Datenbank  
  Verwenden Sie den Assistenten Neue Datenquelle, um dem Projekt Verbindungsinformationen zur Analysis Services-Datenbank hinzuzufügen, die die Dimension bereitstellt. Sie können den Assistenten starten, indem Sie auf der Seite Datenquelle auswählen des Assistenten für verknüpfte Objekte auf **Neue Datenquelle** klicken.  
   
 1.  Klicken Sie im Datenquellen-Assistenten auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll**auf Neu.  
   
 2.  Überprüfen Sie im Verbindungs-Manager, ob der Anbieter auf **OLE DB systemeigen\Microsoft OLE DB-Anbieter für Analysis Services 11.0**festgelegt ist.  
   
-3.  Geben Sie den Namen des Servers (verwenden Sie *Servername*\\*Instancename* für eine benannte Instanz)<sup>1</sup> oder **"localhost"** auf Verbinden Sie mit einem Analysis Services-Server, der auf dem gleichen Computer ausgeführt wird.  
+3.  Geben Sie den Namen des Servers (Server *Name*\\*instanceName* für eine benannte Instanz)<sup>1 ein</sup> , oder geben Sie **localhost** ein, um eine Verbindung mit einem Analysis Services Server herzustellen, der auf demselben Computer ausgeführt wird.  
   
 4.  Verwenden Sie die Windows-Authentifizierung für die Verbindung.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "66075574"
 7.  Klicken Sie auf der Seite **Identitätswechselinformationen**auf Dienstkonto. Klicken Sie auf **Weiter**, und beenden Sie den Assistenten. Die gerade definierte Verbindung wird im Assistenten für verknüpfte Objekte ausgewählt.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie können die Struktur einer verknüpften Dimension nicht ändern; deshalb kann sie nicht mithilfe der Registerkarte **Dimensionsstruktur** des Dimensions-Designers angezeigt werden. Nach dem Verarbeiten der verknüpften Dimension können Sie sie mithilfe der Registerkarte **Browser** anzeigen. Es ist zudem möglich, den Namen zu ändern und eine Übersetzung für den Namen zu erstellen.  
+ Sie können die Struktur einer verknüpften Dimension nicht ändern; deshalb kann sie nicht mithilfe der Registerkarte **Dimensionsstruktur** des Dimensions-Designers angezeigt werden. Nachdem Sie die verknüpfte Dimension verarbeitet haben, können Sie Sie mit der Registerkarte **Browser** anzeigen. Sie können auch den Namen ändern und eine Übersetzung für den Namen erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [Verknüpfte Measuregruppen](linked-measure-groups.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Legen Sie den Kompatibilitäts Grad einer mehrdimensionalen Datenbank &#40;Analysis Services fest&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [Verknüpfte Measure-Gruppen](linked-measure-groups.md)   
  [Dimensionsbeziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

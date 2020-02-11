@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine benutzerdefinierten Elementformel (Business Intelligence-Assistent) | Microsoft-Dokumentation
+title: Benutzerdefinierte Element Formel erstellen (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086996"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Benutzerdefinierte Elementformel erstellen (Business Intelligence-Assistent)
-  Verwenden der **benutzerdefinierte Elementformel erstellen** Seite, um Attribute in der angegebenen Dimension Spalten von benutzerdefinierten Formel Spalten-zuordnen, die Anweisungen (Multidimensional Expressions) enthalten, die Elementwerte für das Definieren Dieses Attribut.  
+  Verwenden Sie die Seite **benutzerdefinierte Element Formel erstellen** , um Attribute in der angegebenen Dimension benutzerdefinierten Element Formel Spalten zuzuordnen-Spalten, die MDX-Anweisungen (Multidimensional Expressions) enthalten, die Element Werte für dieses Attribut definieren.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Attribut**  
  Wählen Sie das Attribut aus, das einer benutzerdefinierten Elementformel zugeordnet werden soll.  
   
- **Quellspalte**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) die Schaltfläche, um die **wählen Sie eine Spalte** Dialogfeld und wählen Sie die benutzerdefinierte Formel Spalte mit dem Attribut zugeordnet werden soll.  
+ **Quell Spalte**  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen (**..**.), um das Dialogfeld **Spalte auswählen** zu öffnen, und wählen Sie die Spalte benutzerdefinierte Element Formel, die dem Attribut zugeordnet werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
- [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Business Intelligence Wizard (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
+ [Cube-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Der Dimensions-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

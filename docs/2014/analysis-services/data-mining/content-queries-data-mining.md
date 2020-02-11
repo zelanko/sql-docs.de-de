@@ -1,5 +1,5 @@
 ---
-title: Inhaltsabfragen (Datamining) | Microsoft-Dokumentation
+title: Inhalts Abfragen (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085649"
 ---
 # <a name="content-queries-data-mining"></a>Inhaltsabfragen (Data Mining)
@@ -22,21 +22,21 @@ ms.locfileid: "66085649"
   
  Dieser Abschnitt enthält allgemeine Informationen über die Art der Informationen, die Sie mit einer Inhaltsabfrage abrufen können, sowie die allgemeine DMX-Syntax für Inhaltsabfragen.  
   
- [Grundlegende Inhaltsabfragen](#bkmk_ContentQuery)  
+ [Grundlegende Inhalts Abfragen](#bkmk_ContentQuery)  
   
--   [Abfragen für Struktur- und Falldaten](#bkmk_Structure)  
+-   [Abfragen für Struktur-und Falldaten](#bkmk_Structure)  
   
--   [Abfragen für Modellmuster](#bkmk_Patterns)  
+-   [Abfragen für Modell Muster](#bkmk_Patterns)  
   
  [Beispiele](#bkmk_Examples)  
   
--   [Inhaltsabfrage für ein Zuordnungsmodell](#bkmk_Assoc)  
+-   [Inhalts Abfrage für ein Zuordnungs Modell](#bkmk_Assoc)  
   
--   [Inhaltsabfrage für ein Entscheidungsstrukturmodell](#bkmk_DecTree)  
+-   [Inhalts Abfrage für ein Entscheidungsstruktur Modell](#bkmk_DecTree)  
   
- [Arbeiten mit Abfrageergebnissen](#bkmk_Results)  
+ [Arbeiten mit den Abfrage Ergebnissen](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a> Grundlegende Inhaltsabfragen  
+##  <a name="bkmk_ContentQuery"></a>Grundlegende Inhalts Abfragen  
  Sie können Inhaltsabfragen mit dem Generator für Vorhersageabfragen erstellen, die in SQL Server Management Studio enthaltenen Vorlagen für DMX-Inhaltsabfragen verwenden oder Abfragen direkt in DMX schreiben. Anders als bei Vorhersageabfragen müssen keine externen Daten verknüpft werden, sodass Inhaltsabfragen leicht zu schreiben sind.  
   
  Dieser Abschnitt bietet eine Übersicht über die Typen von Inhaltsabfragen, die Sie erstellen können.  
@@ -45,7 +45,7 @@ ms.locfileid: "66085649"
   
 -   Abfragen des Modells können Muster, Attributlisten, Formeln usw. zurückgeben.  
   
-###  <a name="bkmk_Structure"></a> Abfragen für Struktur- und Falldaten  
+###  <a name="bkmk_Structure"></a>Abfragen für Struktur-und Falldaten  
  DMX unterstützt Abfragen für zwischengespeicherte Daten, die zum Erstellen von Miningstrukturen und -modellen verwendet werden. Dieser Cache wird standardmäßig beim Definieren der Miningstruktur erstellt und beim Verarbeiten der Struktur oder des Modells aufgefüllt.  
   
 > [!WARNING]  
@@ -53,22 +53,22 @@ ms.locfileid: "66085649"
   
  In den folgenden Beispielen werden allgemeine Schemas zum Erstellen von Abfragen für Falldaten oder Daten in der Miningstruktur erläutert:  
   
- **Abrufen aller Fälle für ein Modell**  
+ **Alle Fälle für ein Modell**  
  `SELECT FROM <model>.CASES`  
   
  Verwenden Sie diese Anweisung, um angegebene Spalten aus den zum Erstellen eines Modells verwendeten Falldaten abzurufen. Sie müssen über Drillthroughberechtigungen für das Modell verfügen, um diese Abfrage auszuführen.  
   
- **Anzeigen aller Daten, die in der Struktur enthalten sind**  
+ **Alle Daten anzeigen, die in der Struktur enthalten sind**  
  `SELECT FROM <structure>.CASES`  
   
  Verwenden Sie diese Anweisung, um alle in der Struktur enthaltenen Daten anzuzeigen, einschließlich Spalten, die nicht in einem bestimmten Miningmodell vorhanden sind. Sie müssen über Drillthroughberechtigungen für das Modell sowie für die Struktur verfügen, um Daten aus der Miningstruktur abzurufen.  
   
- **Abrufen des Wertebereichs**  
+ **Bereich von Werten erhalten**  
  `SELECT DISTINCT RangeMin(<column>), RangeMax(<column>) FROM <model>`  
   
  Verwenden Sie diese Anweisung, um den minimalen, maximalen und Mittelwert einer kontinuierlichen Spalte oder der Buckets einer DISCRETIZED-Spalte zu suchen.  
   
- **Abrufen unterschiedlicher Werte**  
+ **Eindeutige Werte erhalten**  
  `SELECT DISTINCT <column>FROM <model>`  
   
  Verwenden Sie diese Anweisung, um alle Werte einer DISCRETE-Spalte abzurufen.  Verwenden Sie diese Anweisung nicht für DISCRETIZED-Spalten. Verwenden Sie stattdessen die `RangeMin`-Funktion und die `RangeMax`-Funktion.  
@@ -83,12 +83,12 @@ ms.locfileid: "66085649"
   
  Verwenden Sie diese Anweisung, um die Daten abzurufen, die zum Testen von Miningmodellen reserviert wurden, die sich auf eine bestimmte Struktur beziehen.  
   
- **Drillthroughs von einem bestimmten Modellmuster zu zugrunde liegenden Falldaten**  
+ **Drillthrough von einem bestimmten Modell Muster zu zugrunde liegenden Falldaten**  
  `SELECT FROM <model>.CASESWHERE IsTrainingCase() AND IsInNode(<node>)`  
   
  Verwenden Sie diese Anweisung, um ausführliche Falldaten von einem trainierten Modell abzurufen. Sie müssen einen bestimmten Knoten angeben: Beispielsweise benötigen Sie die Knoten-ID des Clusters, der spezifischen Verzweigung der Entscheidungsstruktur usw. Außerdem müssen Sie über Drillthroughberechtigungen für das Modell verfügen, um diese Abfrage auszuführen.  
   
-###  <a name="bkmk_Patterns"></a> Abfragen für Modellmuster, Statistiken und Attribute  
+###  <a name="bkmk_Patterns"></a>Abfragen für Modell Muster, Statistiken und Attribute  
  Der Inhalt eines Data Mining-Modells ist für viele Zwecke nützlich. Eine Modellinhaltsabfrage bietet folgende Möglichkeiten:  
   
 -   Extrahieren von Formeln oder Wahrscheinlichkeiten, um eigene Berechnungen anzustellen.  
@@ -105,17 +105,17 @@ ms.locfileid: "66085649"
   
  In den folgenden Beispielen werden einige allgemeine Schemas zum Erstellen von Abfragen für den Modellinhalt veranschaulicht:  
   
- **Abrufen von Mustern vom Modell**  
+ **Muster aus dem Modell erhalten**  
  `SELECT FROM <model>.CONTENT`  
   
  Verwenden Sie diese Anweisung, um ausführliche Informationen zu bestimmten Knoten im Modell abzurufen. Abhängig vom Algorithmustyp kann der Knoten Regeln und Formeln, unterstützende Daten und statistische Varianzdaten usw. enthalten.  
   
- **Abrufen der in einem trainierten Modell verwendeten Attribute**  
+ **Abrufen von Attributen, die in einem trainierten Modell verwendet werden**  
  `CALL System.GetModelAttributes(<model>)`  
   
  Verwenden Sie diese gespeicherte Prozedur, um die Liste der Attribute abzurufen, die von einem Modell verwendet wurden. Diese Informationen sind beispielsweise hilfreich, um die Attribute zu bestimmen, die aufgrund der Funktionsauswahl ausgeschlossen wurden.  
   
- **Abrufen des in einer Data Mining-Dimension gespeicherten Inhalts**  
+ **Abrufen von in einer Data Mining Dimension gespeicherten Inhalt**  
  `SELECT FROM <model>.DIMENSIONCONTENT`  
   
  Verwenden Sie diese Anweisung, um die Daten aus einer Data Mining-Dimension abzurufen.  
@@ -124,17 +124,17 @@ ms.locfileid: "66085649"
   
  Wenn Sie einen eigenen Plug-In-Algorithmus entwickeln, könnten Sie diese Anweisung verwenden, um den Inhalt des Modells zu Testzwecken zu überprüfen.  
   
- **Abrufen der PMML-Darstellung eines Modells**  
+ **PMML-Darstellung eines Modells**  
  `SELECT * FROM <model>.PMML`  
   
  Ruft ein XML-Dokument ab, das das Modell im PMML-Format darstellt. Nicht alle Modelltypen werden unterstützt.  
   
-##  <a name="bkmk_Examples"></a> Beispiele  
+##  <a name="bkmk_Examples"></a>Beispiele  
  Obwohl bestimmte Modellinhalte bei allen Algorithmen standardmäßig vorhanden sind, hängt der Inhalt des Modells stark vom Algorithmus ab, mit dem das Modell erstellt wurde. Beim Erstellen einer Inhaltsabfrage müssen Sie daher wissen, welche Informationen im Modell für ein spezifisches Modell am aussagekräftigsten sind.  
   
  In diesem Abschnitt werden einige Beispiele bereitgestellt, die veranschaulichen, wie sich die Auswahl des Algorithmus auf die Art von Informationen auswirkt, die im Modell gespeichert werden. Weitere Informationen zu den Miningmodellinhalten und zu den spezifischen Inhalten der einzelnen Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a> Beispiel 1: Inhaltsabfrage für ein Zuordnungsmodell  
+###  <a name="bkmk_Assoc"></a>Beispiel 1: Inhalts Abfrage für ein Zuordnungs Modell  
  Die Anweisung `SELECT FROM <model>.CONTENT`gibt unterschiedliche Informationen zurück, je nachdem, welcher Modelltyp abgefragt wird. Bei einem Zuordnungsmodell ist eine der wichtigsten Informationen der *Knotentyp*. Knoten sind wie Container für Informationen im Modellinhalt. In einem Zuordnungsmodell haben Knoten, die Regeln repräsentieren, den NODE_TYPE-Wert 8, während Knoten, die Itemsets darstellen, den NODE_TYPE-Wert 7 aufweisen.  
   
  Die folgende Abfrage gibt daher die obersten 10 Itemsets geordnet nach Unterstützung (Standardreihenfolge) zurück.  
@@ -144,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- Die folgende Abfrage baut auf diesen Informationen auf. Die Abfrage gibt drei Spalten zurück: die ID des Knotens, die vollständige Regel und das Produkt auf der rechten Seite des Itemsets – das heißt, das Produkt, das für die Zuordnung mit einem anderen Produkt im Rahmen eines Itemsets vorhergesagt wird.  
+ Die folgende Abfrage baut auf diesen Informationen auf. Die Abfrage gibt drei Spalten zurück: die ID des Knotens, die komplette Regel und das Produkt auf der rechten Seite des Itemsets, d. h. das Produkt, das vorhergesagt wird, dass es mit einigen anderen Produkten als Teil eines Itemsets verknüpft ist.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Weitere Beispiele finden Sie unter [Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a> Beispiel 2: Inhaltsabfrage für ein Entscheidungsstrukturmodell  
+###  <a name="bkmk_DecTree"></a>Beispiel 2: Inhalts Abfrage für ein Entscheidungsstruktur Modell  
  Ein Entscheidungsstrukturmodell kann für Vorhersagen und Klassifizierungen verwendet werden.  In diesem Beispiel wird davon ausgegangen, dass Sie mithilfe des Modells ein Ergebnis vorhersagen, aber gleichzeitig ermitteln möchten, welche Faktoren oder Regeln verwendet werden können, um das Ergebnis zu klassifizieren.  
   
  In einem Entscheidungsstrukturmodell werden Knoten verwendet, um sowohl Strukturen als auch Blattknoten darzustellen. Die Beschriftung jedes Knotens enthält die Beschreibung des Pfads zum Ergebnis. Um den Pfad zu einem bestimmten Ergebnis nachzuverfolgen, müssen Sie daher den Knoten identifizieren, der das Ergebnis enthält, und die Details für diesen Knoten abrufen.  
@@ -190,13 +190,13 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Weitere Beispiele finden Sie unter [Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md).  
   
-##  <a name="bkmk_Results"></a> Arbeiten mit Abfrageergebnissen  
+##  <a name="bkmk_Results"></a>Arbeiten mit den Abfrage Ergebnissen  
  Wie in den Beispielen veranschaulicht, werden von Inhaltsabfragen am häufigsten Tabellenrowsets zurückgegeben, sie können jedoch auch Informationen aus geschachtelten Spalten enthalten. Sie können das zurückgegebene Rowset zwar vereinfachen, dadurch könnte die Bearbeitung der Ergebnisse jedoch komplexer werden. Besonders der Inhalt des NODE_DISTRIBUTION-Knotens ist geschachtelt, enthält aber viele interessante Informationen zum Modell.  
   
  Weitere Informationen zum Arbeiten mit hierarchischen Rowsets finden Sie in der OLEDB-Spezifikation von MSDN.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zur SELECT-Anweisung (DMX)](/sql/dmx/understanding-the-dmx-select-statement)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlegendes zur DMX-SELECT-Anweisung](/sql/dmx/understanding-the-dmx-select-statement)   
  [Data Mining-Abfragen](data-mining-queries.md)  
   
   

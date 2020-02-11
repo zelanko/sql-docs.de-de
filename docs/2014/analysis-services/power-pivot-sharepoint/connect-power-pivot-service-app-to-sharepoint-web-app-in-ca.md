@@ -1,5 +1,5 @@
 ---
-title: Verbinden eine PowerPivot-Dienstanwendung zu einer SharePoint-Webanwendung in der Zentraladministration | Microsoft-Dokumentation
+title: Verbinden einer Power Pivot-Dienst Anwendung mit einer SharePoint-Webanwendung in der zentral Administration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071680"
 ---
-# <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Verbinden einer PowerPivot-Dienstanwendung zu einer SharePoint-Webanwendung in der Zentraladministration
+# <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Verbinden einer Power Pivot-Dienst Anwendung mit einer SharePoint-Webanwendung in der zentral Administration
   Eine PowerPivot-Dienstanwendung kann von einer beliebigen Anzahl von SharePoint-Webanwendungen in der Farm verwendet werden. Um eine PowerPivot-Dienstanwendung zur Verfügung zu stellen, fügen Sie sie einer Dienstzuordnungsliste hinzu.  
   
 > [!IMPORTANT]  
@@ -25,11 +25,11 @@ ms.locfileid: "66071680"
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Hinzufügen von PowerPivot-Dienstanwendung zur Standardgruppe](#default)  
+ [Hinzufügen einer PowerPivot-Dienstanwendung zur Standardgruppe](#default)  
   
- [Hinzufügen einer PowerPivot-Dienstanwendung einer benutzerdefinierten Dienstzuordnungsliste](#custom)  
+ [Hinzufügen einer PowerPivot-Dienstanwendung zu einer benutzerdefinierten Dienstzuordnungsliste](#custom)  
   
-##  <a name="default"></a> Hinzufügen von PowerPivot-Dienstanwendung zur Standardgruppe  
+##  <a name="default"></a>Power Pivot-Dienst Anwendung zur Standardgruppe hinzufügen  
  Eine Dienstanwendungsliste ist eine Liste freigegebener Dienste, die Ressourcen für andere SharePoint-Webanwendungen in der Farm bereitstellen. Es gibt eine Standardgruppe von Dienstzuordnungen für die Farm.  
   
  Eine PowerPivot-Dienstanwendung kann der Liste entweder hinzugefügt werden, wenn Sie die Anwendung erstellen oder im Anschluss daran mithilfe folgender Schritte.  
@@ -42,10 +42,10 @@ ms.locfileid: "66071680"
   
 4.  Klicken Sie auf **OK**.  
   
-##  <a name="custom"></a> Hinzufügen einer PowerPivot-Dienstanwendung einer benutzerdefinierten Dienstzuordnungsliste  
+##  <a name="custom"></a>Power Pivot-Dienst Anwendung zu einer benutzerdefinierten Dienst Zuordnungs Liste hinzufügen  
  Die Standardgruppe kann durch eine benutzerdefinierte Liste ersetzt werden. Eine benutzerdefinierte Liste wird speziell für eine einzelne SharePoint-Webanwendung erstellt. Dabei wird die Standardgruppe überschrieben und durch vom Farm- oder Dienstadministrator angegebene Dienstzuordnungen ersetzt. Wenn Sie mehrere PowerPivot-Dienstanwendungen erstellt haben, müssen Sie die zu verwendende Anwendung mithilfe einer benutzerdefinierten Liste angeben. Eine benutzerdefinierte Liste kann nicht von anderen Webanwendungen wiederverwendet werden. Sie gilt nur für die Webanwendung, für die sie erstellt wurde.  
   
-1.  Klicken Sie in der Zentraladministration unter **Anwendungsverwaltung**auf **Webanwendungen verwalten**.  
+1.  Klicken Sie in der zentral Administration unter **Anwendungs Verwaltung**auf **Webanwendungen verwalten**.  
   
 2.  Wählen Sie die Anwendung (z. B. SharePoint -80) aus.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "66071680"
   
 6.  Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](create-and-configure-power-pivot-service-application-in-ca.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen und Konfigurieren einer Power Pivot-Dienst Anwendung in der zentral Administration](create-and-configure-power-pivot-service-application-in-ca.md)   
  [Anfängliche Konfiguration &#40;PowerPivot für SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
   

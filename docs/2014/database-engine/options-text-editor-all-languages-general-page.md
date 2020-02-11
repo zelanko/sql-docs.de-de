@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor – alle Sprachen – Allgemein) | Microsoft-Dokumentation
+title: Optionen (Text-Editor-alle Sprachen-Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089250"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Optionen (Text-Editor – Alle Sprachen – Seite „Allgemein“)
@@ -29,13 +29,13 @@ ms.locfileid: "66089250"
  Die auf dieser Seite angegebenen Optionen werden nicht von allen Editoren unterstützt. Wenn eine Option auf der Seite **Allgemein** des Dialogfelds **Optionen** nur für einige Programmiersprachen ausgewählt wurde, wird ein schattiertes Häkchen angezeigt.  
   
 ## <a name="statement-completion"></a>Anweisungsabschluss  
- **Member automatisch auflisten**  
+ **Elemente automatisch auflisten**  
  Popup-Listen mit verfügbaren Elementen, Eigenschaften bzw. Werten während der Eingabe in den Editor anzeigen. Wählen Sie ein Element aus der Popupliste aus, um es in Ihren Code einzufügen. Bei Aktivierung dieses Kontrollkästchens wird die Option **Erweiterte Member ausblenden** aktiviert.  
   
  **Erweiterte Member ausblenden**  
  Popuplisten für die Anweisungsvervollständigung kürzen, indem nur die am häufigsten verwendeten Member angezeigt werden. Die anderen Elemente werden aus der Liste gefiltert. Diese Option ist nicht verfügbar, wenn keine Member als erweiterte Member gekennzeichnet sind.  
   
- **Informationen zu den Parametern**  
+ **Parameter Informationen**  
  Im Editor an allen verfügbaren Parametern links von der Einfügemarke die vollständige Syntax für die aktuelle Deklaration bzw. Prozedur anzeigen. Der nächste zuweisbare Parameter ist fett hervorgehoben.  
   
 ## <a name="settings"></a>Einstellungen  
@@ -51,7 +51,7 @@ ms.locfileid: "66089250"
 > [!NOTE]  
 >  Diese Markierungspfeile werden nicht in den Code eingefügt und auch nicht gedruckt. Sie dienen lediglich als Hinweis. Diese Funktion ist nicht in allen Typen von Abfrage-Editoren verfügbar.  
   
- **Wenden Sie Befehle der Bearbeitungsschritte Ausschneiden/Kopieren auf leere Zeilen an, wenn keine Auswahl vorhanden ist**  
+ **Befehle zum Ausschneiden oder Kopieren bei fehlender Auswahl auf leere Zeilen anwenden**  
  Legt fest, wie sich der Editor verhalten soll, wenn Sie die Einfügemarke in eine Leerzeile setzen und auf **Kopieren** oder **Ausschneiden**klicken, ohne eine Auswahl zu treffen.  
   
  Bei aktiviertem Kontrollkästchen wird die Leerzeile kopiert bzw. ausgeschnitten. Wenn Sie anschließend auf **Einfügen**klicken, wird die Leerzeile eingefügt.  

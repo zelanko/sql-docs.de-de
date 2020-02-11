@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Alias für eine Modellspalte | Microsoft-Dokumentation
+title: Erstellen eines Alias für eine Modell Spalte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085317"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Erstellen eines Alias für eine Modellspalte
@@ -36,8 +36,8 @@ ms.locfileid: "66085317"
   
 2.  Klicken Sie anschließend im Fenster **Eigenschaften** auf der rechten Seite des Fensters auf die Zelle neben der Name-Eigenschaft, und löschen Sie den aktuellen Wert. Geben Sie einen neuen Namen für die Spalte ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Modell Tasks und Anleitungen](mining-model-tasks-and-how-tos.md)   
  [Miningmodelleigenschaften](mining-model-properties.md)  
   
   

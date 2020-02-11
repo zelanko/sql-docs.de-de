@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721792"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -35,7 +35,7 @@ ms.locfileid: "62721792"
  [Verteilung konfigurieren](../configure-distribution.md)  
  Die Themen in diesem Abschnitt veranschaulichen, wie RMO zum Konfigurieren von Veröffentlichung und Verteilung verwendet wird.  
   
- [Create a Publication](../publish/create-a-publication.md)  
+ [Erstellen einer Veröffentlichung](../publish/create-a-publication.md)  
  Die Themen in diesem Abschnitt demonstrieren, wie mit RMO Veröffentlichungen und Artikel erstellt, gelöscht und geändert werden.  
   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
@@ -185,7 +185,7 @@ ms.locfileid: "62721792"
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)   
  [Konzepte für die Replikationsprogrammierung](replication-programming-concepts.md)  
   

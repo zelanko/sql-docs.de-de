@@ -1,5 +1,5 @@
 ---
-title: MDX (Multidimensional Expressions) unterstützt | Microsoft-Dokumentation
+title: Unterstütztes MDX (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93baa6beffcb75e11c0ac389b7f0f5172c30d770
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073869"
 ---
 # <a name="supported-mdx-mdx"></a>Unterstütztes MDX (MDX)
@@ -25,39 +25,39 @@ ms.locfileid: "66073869"
   
  [&#40;Kommentar&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [-- &#40;Kommentar&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [--&#40;Kommentar&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [Kommentar &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [Kommentar &#40;MDX-&#41;](/sql/mdx/comment-mdx)  
   
- [ALTER CUBE-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
+ [ALTER CUBE-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
   
 > [!NOTE]  
 >  In MDX-Skripts wird nur das Ändern des Standardelements unterstützt.  
   
- [CALCULATE-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
+ [Berechnen der Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-scripting-calculate)  
   
- [CASE-Anweisung &#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
+ [Case-Anweisung &#40;MDX-&#41;](/sql/mdx/case-statement-mdx)  
   
- [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [Create Cell Berechnung-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
- [CREATE MEMBER-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+ [Create Member-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
- [CREATE SET-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
- [EXISTING-Schlüsselwort &#40;MDX&#41;](mdx-query-existing-keyword.md)  
+ [Vorhandenes Schlüsselwort &#40;MDX-&#41;](mdx-query-existing-keyword.md)  
   
- [FREEZE-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
+ [Freeze-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-scripting-freeze)  
   
- [IF-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
+ [IF-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-scripting-if)  
   
- [This &#40;MDX&#41;](/sql/mdx/this-mdx)  
+ [Diese &#40;MDX-&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX unterstützt Zuweisungen für folgende Zelleigenschaften: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` und `FONT_SIZE`. Weitere Informationen finden Sie unter [Verwenden von Zelleigenschaften &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX unterstützt außerdem Zuweisungen für die `NON_EMPTY_BEHAVIOR` Eigenschaft der [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) Anweisung.  
+>  MDX unterstützt Zuweisungen für folgende Zelleigenschaften: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` und `FONT_SIZE`. Weitere Informationen finden Sie unter [Verwenden von Zelleigenschaften &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX unterstützt auch die `NON_EMPTY_BEHAVIOR` Zuweisung zur-Eigenschaft der [Create Member](/sql/mdx/mdx-data-definition-create-member) -Anweisung.  
   
- [SCOPE-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
+ [SCOPE-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-scripting-scope)  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes MDX-Skript &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Das grundlegende MDX-Skript &#40;MDX-&#41;](the-basic-mdx-script-mdx.md)  
   
   

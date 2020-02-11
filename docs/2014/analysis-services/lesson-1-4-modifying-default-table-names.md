@@ -1,5 +1,5 @@
 ---
-title: Ändern von Standardtabellennamen | Microsoft-Dokumentation
+title: Ändern von Standard Tabellennamen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079233"
 ---
 # <a name="modifying-default-table-names"></a>Ändern von Standardtabellennamen
-  Sie können den Wert der **FriendlyName**-Eigenschaft für Objekte in der Datenquellensicht ändern, um die Benutzerfreundlichkeit und Identifizierung zu optimieren.  
+  Sie können den Wert der **FriendlyName** -Eigenschaft für Objekte in der Datenquellensicht ändern, um die Benutzerfreundlichkeit und Identifizierung zu optimieren.  
   
  In der folgenden Aufgabe ändern Sie den Anzeigenamen jeder Tabelle in der Datenquellensicht, indem Sie die Präfixe**Dim**und**Fact**aus diesen Tabellen entfernen. Dadurch lassen sich der Cube und die Dimensionsobjekte (die Sie in der nächsten Lektion definieren) einfacher identifizieren und verwenden.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "66079233"
   
      Es ist einfacher, die Eigenschaften für jede Tabelle in der Datenquellensicht zu ändern, wenn das Eigenschaftenfenster geöffnet bleibt. Wenn Sie das Fenster nicht mithilfe der Schaltfläche **Automatisch im Hintergrund** geöffnet halten, wird das Fenster geschlossen, sobald Sie auf ein anderes Objekt im Bereich **Diagramm** klicken.  
   
-3.  Ändern der **FriendlyName** -Eigenschaft für die **"factinternetsales"** -Objekt *`InternetSales`* .  
+3.  Ändern Sie die **FriendlyName** -Eigenschaft für das **FactInternetSales** -Objekt in *`InternetSales`*.  
   
      Wenn Sie außerhalb der Zelle für die **FriendlyName** -Eigenschaft klicken, wird die Änderung angewendet. In der nächsten Lektion definieren Sie eine Measuregruppe, die auf dieser Faktentabelle basiert. Der Name der Faktentabelle lautet dann InternetSales statt FactInternetSales, weil Sie in dieser Lektion Änderungen vorgenommen haben.  
   
-4.  Klicken Sie im Bereich **Tabellen** auf **DimProduct** . Ändern Sie im Fenster Eigenschaften die **FriendlyName** Eigenschaft *`Product`* .  
+4.  Klicken Sie im Bereich **Tabellen** auf **DimProduct** . Ändern Sie *`Product`* im Eigenschaftenfenster die **FriendlyName** -Eigenschaft in.  
   
 5.  Ändern Sie die **FriendlyName** -Eigenschaft jeder verbleibenden Tabelle in der Datenquellensicht in der gleichen Weise, um das Präfix "**Dim**" zu entfernen.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66079233"
 7.  Klicken Sie im Menü **Datei** oder in der Symbolleiste von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Alle speichern** , um die von Ihnen bis jetzt vorgenommenen Änderungen im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt zu speichern. Sie können das Lernprogramm hier beenden, wenn Sie möchten, und es später fortsetzen.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)  
+ [Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Ändern von Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen Sichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Ändern Sie die Eigenschaften in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Kopieren und Einfügen von Daten (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Kopieren und Einfügen von Daten (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086967"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Kopieren und Einfügen von Daten (SSAS – tabellarisch)
@@ -28,13 +28,13 @@ ms.locfileid: "66086967"
   
  Abschnitte in diesem Thema:  
   
--   [Erforderliche Komponenten](#bkmk_prerequisites)  
+-   [Voraussetzungen](#bkmk_prerequisites)  
   
 -   [Einfügen von Daten](#bkmk_paste_data)  
   
--   [Vorschau einfügen (Dialogfeld)](#bkmk_paste_preview)  
+-   [Vorschau einfügen (Dialog Feld)](#bkmk_paste_preview)  
   
-##  <a name="bkmk_prerequisites"></a> Erforderliche Komponenten  
+##  <a name="bkmk_prerequisites"></a> Voraussetzungen  
  Beim Einfügen von Daten müssen verschiedene Einschränkungen beachtet werden:  
   
 -   Eingefügte Tabellen dürfen maximal 10.000 Zeilen enthalten.  
@@ -47,7 +47,7 @@ ms.locfileid: "66086967"
   
 -   Wenn Sie **Am Ende einfügen** oder **Am Ende ersetzen**verwenden, müssen in den neuen Daten genau die gleiche Anzahl von Spalten wie in den ursprünglichen Daten enthalten sein. Idealerweise sollten die Datenspalten, die Sie einfügen oder anfügen, denselben oder einen mit den Spalten in der Zieltabelle kompatiblen Datentyp aufweisen. In einigen Fällen können Sie einen anderen Datentyp verwenden, dabei kann jedoch ein **Typenkonflikt** -Fehler angezeigt werden.  
   
-##  <a name="bkmk_paste_data"></a> Einfügen von Daten  
+##  <a name="bkmk_paste_data"></a>Einfügen von Daten  
   
 #### <a name="to-paste-data-into-the-designer"></a>So fügen Sie Daten in den Designer ein  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66086967"
   
     -   Klicken Sie auf **Am Ende ersetzen** , um die ausgewählte Tabelle durch den Inhalt der Zwischenablage zu ersetzen. Alle vorhandenen Namen von Spaltenüberschriften bleiben in der Tabelle, und Beziehungen werden beibehalten.  
   
-##  <a name="bkmk_paste_preview"></a> Vorschau einfügen (Dialogfeld)  
+##  <a name="bkmk_paste_preview"></a>Vorschau einfügen (Dialog Feld)  
  Im Dialogfeld **Vorschau einfügen** können Sie eine Vorschau der in das Designer-Fenster kopierten Daten anzeigen und sicherstellen, dass die Daten ordnungsgemäß kopiert werden. Kopieren Sie zum Öffnen des Dialogfelds tabellenbasierte Daten im HTML-Format in die Zwischenablage, und klicken Sie anschließend im Designer auf das Menü **Bearbeiten** . Klicken Sie anschließend auf **Einfügen**, **Am Ende anfügen**oder **Beim Einfügen ersetzen**. Die Optionen **Am Ende einfügen** und **Am Ende ersetzen** sind nur verfügbar, wenn Sie Daten in einer Tabelle hinzufügen oder ersetzen, die durch das Kopieren und Einfügen aus der Zwischenablage erstellt wurde. Sie können **Am Ende einfügen** oder **Am Ende ersetzen** nicht verwenden, um Daten einer Tabelle mit importierten Daten hinzuzufügen.  
   
  Die Optionen in diesem Dialogfeld unterscheiden sich abhängig davon, ob Sie Daten in eine vollkommen neue Tabelle einfügen, Daten in eine vorhandene Tabelle einfügen und die vorhandenen Daten durch die neuen Daten ersetzen oder Daten an eine vorhandene Tabelle anfügen.  
@@ -68,26 +68,26 @@ ms.locfileid: "66086967"
  **Tabellenname**  
  Geben Sie den Namen der Tabelle an, die im Designer erstellt werden soll.  
   
- **Einzufügende Daten**  
+ **Eingefügte Daten**  
  Zeigt ein Beispiel für den Inhalt der Zwischenablage an, der der Zieltabelle hinzugefügt wird.  
   
 ### <a name="paste-append"></a>Am Ende einfügen  
  **Vorhandene Daten in der Tabelle**  
  Zeigt ein Beispiel der vorhandenen Daten in der Tabelle an, damit Sie die Spalten, Datentypen usw. überprüfen können.  
   
- **Einzufügende Daten**  
+ **Eingefügte Daten**  
  Zeigt ein Beispiel für den Inhalt der Zwischenablage an. Diese Daten werden an die vorhandenen Daten angefügt.  
   
 ### <a name="paste-replace"></a>Am Ende ersetzen  
  **Vorhandene Daten in der Tabelle**  
  Zeigt ein Beispiel der vorhandenen Daten in der Tabelle an, damit Sie die Spalten, Datentypen usw. überprüfen können.  
   
- **Einzufügende Daten**  
+ **Eingefügte Daten**  
  Zeigt ein Beispiel für den Inhalt der Zwischenablage an. Die vorhandenen Daten in der Zieltabelle werden gelöscht, und die neuen Zeilen werden in die Tabelle eingefügt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](import-data-ssas-tabular.md)   
- [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Festlegen des Datentyps einer Spalte &#40;SSAS – tabellarisch&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Importieren von Daten &#40;tabellarischen SSAS-&#41;](import-data-ssas-tabular.md)   
+ [Unterstützte Datenquellen &#40;tabellarischen SSAS-&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Festlegen des Datentyps einer Spalte &#40;tabellarischen SSAS-&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

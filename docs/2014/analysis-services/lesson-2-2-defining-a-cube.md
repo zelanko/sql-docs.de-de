@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079061"
 ---
 # <a name="defining-a-cube"></a>Definieren eines Cubes
@@ -22,7 +22,7 @@ ms.locfileid: "66079061"
   
 ### <a name="to-define-a-cube-and-its-properties"></a>So definieren Sie einen Cube und seine Eigenschaften  
   
-1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und klicken Sie anschließend auf **Neuer Cube**. Der Cube-Assistent wird angezeigt.  
+1.  Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und klicken Sie dann auf **Neuer Cube**. Der Cube-Assistent wird angezeigt.  
   
 2.  Klicken Sie auf der Seite **Willkommen beim Cube-Assistenten** auf **Weiter**.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "66079061"
   
 7.  Überprüfen Sie auf der Seite **Measures auswählen** die ausgewählten Measures in der Measuregruppe **Internetverkäufe** , und deaktivieren Sie anschließend die Kontrollkästchen für die folgenden Measures:  
   
-    -   **Promotion Key**  
+    -   **Promotionschlüssel**  
   
-    -   **Currency Key**  
+    -   **Währungs Schlüssel**  
   
     -   **Sales Territory Key**  
   
-    -   **Revision Number**  
+    -   **Revisionsnummer**  
   
      Vom Assistenten werden standardmäßig als Measures alle numerischen Spalten in der Faktentabelle ausgewählt, die nicht mit Dimensionen verknüpft sind. Bei diesen vier Spalten handelt es sich allerdings nicht um tatsächliche Measures. Die ersten drei sind Schlüsselwerte, die die Faktentabelle mit Dimensionstabellen verknüpfen, die nicht in der anfänglichen Version dieses Cubes verwendet werden.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66079061"
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Auf der **Abschließen des Assistenten** Seite, ändern Sie den Namen des Cubes in `Analysis Services Tutorial`. Im Vorschaubereich können Sie die Measuregruppe **InternetSales** und ihre Measures sehen. Ihnen werden auch die Dimensionen **Date**, **Customer** und **Product** angezeigt.  
+12. Ändern Sie auf der Seite **Assistenten abschließen** den Namen des Cubes in `Analysis Services Tutorial`. Im Vorschaubereich können Sie die Measuregruppe **InternetSales** und ihre Measures sehen. Ihnen werden auch die Dimensionen **Date**, **Customer** und **Product** angezeigt.  
   
-13. Klicken Sie auf **Fertig stellen** , um den Assistenten abzuschließen.  
+13. Klicken Sie auf **Fertig stellen**, um den Assistenten abzuschließen.  
   
      Im Projektmappen-Explorer im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tutorialprojekt wird der Cube des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tutorials im Ordner **Cubes** angezeigt, und die Customer- und Product-Datenbankdimensionen werden im Ordner **Dimensionen** angezeigt. Zusätzlich wird auf der Registerkarte für die Cubestruktur in der Mitte der Entwicklungsumgebung der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube angezeigt.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66079061"
   
 15. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Hinzufügen von Attributen zu Dimensionen](lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

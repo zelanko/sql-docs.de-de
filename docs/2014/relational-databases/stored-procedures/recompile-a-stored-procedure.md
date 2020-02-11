@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721036"
 ---
 # <a name="recompile-a-stored-procedure"></a>Erneutes Kompilieren einer gespeicherten Prozedur
-  In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erneut kompilieren. Es gibt drei Möglichkeiten zur Verfügung: `WITH RECOMPILE` Option in der Definition der Prozedur, oder wenn die Prozedur aufgerufen wird, die `RECOMPILE` -Abfragehinweis in einzelnen Anweisungen oder mithilfe der `sp_recompile` gespeicherten Systemprozedur. In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  
+  In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erneut kompilieren. Hierfür gibt es drei Möglichkeiten: `WITH RECOMPILE` Option in der Prozedur Definition oder wenn die Prozedur aufgerufen wird, der `RECOMPILE` Abfrage Hinweis für einzelne Anweisungen oder die `sp_recompile` gespeicherte System Prozedur. In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  
   
  **In diesem Thema**  
   
@@ -54,15 +54,15 @@ ms.locfileid: "62721036"
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- `WITH RECOMPILE` Option  
+ `WITH RECOMPILE`Andere  
  Wenn diese Option beim Erstellen der Prozedurdefinition verwendet wird, erfordert sie die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird.  
   
  Wenn diese Option in einer EXECUTE-Anweisung verwendet wird, erfordert sie EXECUTE-Berechtigungen für die Prozedur. Berechtigungen für die EXECUTE-Anweisung selbst sind nicht erforderlich, es sind jedoch Ausführungsberechtigungen für die Prozedur erforderlich, auf die in der EXECUTE-Anweisung verwiesen sind. Weitere Informationen finden Sie unter [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
- `RECOMPILE` Abfragehinweis  
+ `RECOMPILE`Abfrage Hinweis  
  Diese Funktion wird beim Erstellen der Prozedur verwendet, und der Hinweis wird in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in der Prozedur eingeschlossen. Daher erfordert sie die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird.  
   
- `sp_recompile` Gespeicherte Systemprozedur  
+ `sp_recompile`Gespeicherte System Prozedur  
  Erfordert die ALTER-Berechtigung für die angegebene Prozedur.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>So kompilieren Sie eine gespeicherte Prozedur mithilfe von sp_recompile erneut  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>So kompilieren Sie eine gespeicherte Prozedur mithilfe von sp_recompile erneut  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../../includes/ssde-md.md)]her.  
   
@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer gespeicherten Prozedur](../stored-procedures/create-a-stored-procedure.md)   
  [Ändern einer gespeicherten Prozedur](../stored-procedures/modify-a-stored-procedure.md)   
  [Umbenennen einer gespeicherten Prozedur](rename-a-stored-procedure.md)   

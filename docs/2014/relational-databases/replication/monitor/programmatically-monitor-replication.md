@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667246"
 ---
 # <a name="programmatically-monitor-replication"></a>Programmgesteuertes Überwachen der Replikation
@@ -58,47 +58,47 @@ ms.locfileid: "62667246"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>So überwachen Sie Verleger, Veröffentlichungen und Abonnements auf dem Verteiler  
   
-1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Verlegern zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf nur einen Verleger zu beschränken, geben Sie **@publisher** aus.  
+1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Verlegern zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf einen einzelnen Verleger zu beschränken **@publisher**, geben Sie an.  
   
-2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Veröffentlichungen zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf nur einen Verleger, eine Veröffentlichung oder eine veröffentlichte Datenbank zu beschränken, geben Sie **@publisher** , **@publication** bzw. **@publisher_db** an.  
+2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Veröffentlichungen zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf einen einzelnen Verleger, eine Veröffentlichung oder eine veröffentlichte Datenbank zu **@publisher**beschränken **@publication**, geben **@publisher_db**Sie, bzw. an.  
   
-3.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Abonnements zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf Abonnements zu beschränken, die nur zu einem Verleger, einer Veröffentlichung oder einer veröffentlichten Datenbank gehören, geben Sie **@publisher** , **@publication** bzw. **@publisher_db** an.  
+3.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Abonnements zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf Abonnements zu beschränken, die zu einem einzelnen Verleger, einer Veröffentlichung oder einer **@publisher**veröffentlichten **@publication**Datenbank gehören **@publisher_db**, geben Sie, bzw. an.  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>So überwachen Sie Transaktionsbefehle, die darauf warten, auf dem Abonnenten angewendet zu werden  
   
-1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Befehlen zurückgegeben, die für alle Abonnements ausstehen, die diesen Verteiler verwenden. Um das Resultset auf Befehle zu beschränken, die für Abonnements ausstehen, die nur zu einem Verleger, einem Abonnenten, einer Veröffentlichung oder einer veröffentlichten Datenbank gehören, geben Sie **@publisher** , **@subscriber** , **@publication** bzw. **@publisher_db** an.  
+1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Befehlen zurückgegeben, die für alle Abonnements ausstehen, die diesen Verteiler verwenden. Um das Resultset auf ausstehende Befehle für Abonnements zu beschränken, die zu einem einzelnen Verleger, Abonnenten, einer Veröffentlichung oder einer **@publisher**veröffentlichten **@subscriber**Datenbank **@publication**gehören, **@publisher_db**geben Sie,, oder an.  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>So überwachen Sie Mergeänderungen, die darauf warten, hoch- oder heruntergeladen zu werden  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf Abonnenten repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die nur zu einer Veröffentlichung oder einem Artikel gehören, geben Sie **@publication** bzw. **@article** an.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf Abonnenten repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die zu einer einzelnen Veröffentlichung oder einem **@publication** Artikel **@article**gehören, geben Sie bzw. an.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf dem Verleger repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die nur zu einer Veröffentlichung oder einem Artikel gehören, geben Sie **@publication** bzw. **@article** an.  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf dem Verleger repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die zu einer einzelnen Veröffentlichung oder einem **@publication** Artikel **@article**gehören, geben Sie bzw. an.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>So überwachen Sie Merge-Agentsitzungen  
   
 1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)aus. Dadurch werden zu allen Merge-Agentsitzungen für alle Abonnements, die diesen Verteiler verwenden, Überwachungsinformationen, beispielsweise **Session_id**, zurückgegeben. Sie können **Session_id** auch ermitteln, indem Sie eine Abfrage der [MSmerge_sessions](/sql/relational-databases/system-tables/msmerge-sessions-transact-sql) -Systemtabelle ausführen.  
   
-2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id** aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
+2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id**aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
   
 3.  Wiederholen Sie Schritt 2 für jede Sitzung, die von Interesse ist.  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>So überwachen Sie Merge-Agentsitzungen für Pullabonnements auf dem Abonnenten  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)aus. Geben Sie für ein bestimmtes Abonnement **@publisher** , **@publication** und den Namen der Veröffentlichungsdatenbank für **@publisher_db** aus. Dadurch werden Überwachungsinformationen zu den letzten fünf Merge-Agentsitzungen für dieses Abonnement zurückgegeben. Beachten Sie im Resultset den Wert **Session_id** für Sitzungen, die von Interesse sind.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)aus. Geben **@publisher**Sie für ein bestimmtes Abonnement, **@publication**und den Namen der Veröffentlichungs Datenbank für **@publisher_db**an. Dadurch werden Überwachungsinformationen zu den letzten fünf Merge-Agentsitzungen für dieses Abonnement zurückgegeben. Beachten Sie im Resultset den Wert **Session_id** für Sitzungen, die von Interesse sind.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id** aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id**aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
   
 3.  Wiederholen Sie Schritt 2 für jede Sitzung, die von Interesse ist.  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>So können Sie die Schwellenwertmetriken für die Überwachung für eine Veröffentlichung anzeigen und ändern  
   
-1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)aus. Dadurch werden Überwachungsschwellenwerte zurückgegeben, die für alle Veröffentlichungen festgelegt wurden, die diesen Verteiler verwenden. Um das Resultset auf Überwachungsschwellenwerte für Veröffentlichungen festzulegen, die nur zu einem Verleger, einer veröffentlichten Datenbank oder einer Veröffentlichung gehören, geben Sie **@publisher** , **@publisher_db** bzw. **@publication** an. Beachten Sie den Wert **Metric_id** für alle Schwellenwerte, die geändert werden müssen. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)aus. Dadurch werden Überwachungsschwellenwerte zurückgegeben, die für alle Veröffentlichungen festgelegt wurden, die diesen Verteiler verwenden. Um das Resultset auf Überwachungs Schwellenwerte für Veröffentlichungen zu beschränken, die zu einem einzelnen Verleger oder einer veröffentlichten Datenbank oder zu **@publisher**einer **@publisher_db**einzelnen Veröffentlichung **@publication**gehören, geben Sie, bzw. an. Beachten Sie den Wert **Metric_id** für alle Schwellenwerte, die geändert werden müssen. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)aus. Geben Sie bei Bedarf Folgendes an:  
   
-    -   Den in Schritt 1 ermittelten **Metric_id** -Wert für **@metric_id** aus.  
+    -   Den in Schritt 1 ermittelten **Metric_id** -Wert für **@metric_id**aus.  
   
-    -   Einen neuen Wert für die Schwellenwertmetrik für die Überwachung für **@value** aus.  
+    -   Ein neuer Wert für die Monitor Schwellenwert Metrik für **@value**.  
   
     -   Einen Wert **1** für **@shouldalert** für eine Warnung, die protokolliert wird, wenn dieser Schwellenwert erreicht wird, oder einen Wert **0** , wenn keine Warnung erforderlich ist.  
   
@@ -128,15 +128,15 @@ ms.locfileid: "62667246"
   
 5.  Rufen Sie mithilfe der in Schritt 3 abgerufenen Sitzungs-ID eine der folgenden Methoden auf, um Informationen zu den Details einer bestimmten Sitzung zurückzugeben:  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -Gibt ein Array von <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> Objekte für die angegebene *SessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A>-Gibt ein Array von <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> -Objekten für die angegebene *SessionID*zurück.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Gibt ein <xref:System.Data.DataSet> -Objekt mit Informationen für den angegebenen *SessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A>-Gibt ein <xref:System.Data.DataSet> -Objekt mit Informationen für die angegebene *SessionID*zurück.  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>So überwachen Sie die Replikationseigenschaften für alle Veröffentlichungen auf einem Verteiler  
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationMonitor>-Klasse.  
   
 3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62667246"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> -Eigenschaft für den Verleger fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, ist der Verlegername falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublisherMonitor>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> -Eigenschaft für den Verleger fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, ist der Verlegername falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> -Objekts zugegriffen wird.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "62667246"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekts zugegriffen wird.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "62667246"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekts zugegriffen wird.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "62667246"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekts zugegriffen wird.  
   
@@ -266,15 +266,20 @@ ms.locfileid: "62667246"
   
     -   *metricID* - ein <xref:System.Int32> -Wert, der die Schwellenwertmetrik für die Überwachung aus der folgenden Tabelle darstellt:  
   
-        |Wert|Description|  
+        |value|BESCHREIBUNG|  
         |-----------|-----------------|  
-        |1|`expiration` - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
-        |2|`latency` - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
-        |4|`mergeexpiration` - überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
-        |5|`mergeslowrunduration` -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).|  
-        |6|`mergefastrunduration` -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN).|  
-        |7|`mergefastrunspeed` - Überwachung der Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
-        |8|`mergeslowrunspeed` - überwacht die Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
+        |1|
+  `expiration` - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
+        |2|
+  `latency` - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
+        |4|
+  `mergeexpiration` - überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
+        |5|`mergeslowrunduration`-überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DPS).|  
+        |6|`mergefastrunduration`-überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
+        |7|
+  `mergefastrunspeed` - Überwachung der Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
+        |8|
+  `mergeslowrunspeed` - überwacht die Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
   
     -   *enable* - <xref:System.Boolean> -Wert, der angibt, ob die Metrik für die Veröffentlichung aktiviert ist.  
   

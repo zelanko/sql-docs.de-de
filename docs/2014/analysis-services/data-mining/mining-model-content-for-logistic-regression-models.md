@@ -1,5 +1,5 @@
 ---
-title: Mingingmodellinhalt von logistischen Regressionsmodellen (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Mining Modell Inhalt von logistischen Regressionsmodellen (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083615"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von logistischen Regressionsmodellen (Analysis Services – Data Mining)
@@ -31,7 +31,7 @@ ms.locfileid: "66083615"
   
  Allerdings ist bei einem logistischen Regressionsmodell der Knoten, der die verborgene Ebene darstellt, leer und verfügt über keine untergeordneten Elemente. Daher enthält das Modell Knoten, die einzelne Ausgaben (NODE_TYPE = 23) und einzelne Eingaben (NODE_TYPE = 21), aber keine einzelnen, verborgenen Knoten darstellen.  
   
- ![Inhaltsstruktur für Logistisches Regressionsmodell](../media/skt-modelcontentstructure-logregc.gif "Inhaltsstruktur für Logistisches Regressionsmodell")  
+ ![Inhaltsstruktur für logistisches Regressionsmodell](../media/skt-modelcontentstructure-logregc.gif "Inhaltsstruktur für logistisches Regressionsmodell")  
   
  Standardmäßig wird ein logistisches Regressionsmodell im **Microsoft-Viewer für neuronale Netzwerke**angezeigt. Über diesen benutzerdefinierten Viewer können Sie Eingabeattribute und deren Werte filtern und Diagramme einsehen, die darstellen, welche Auswirkungen diese auf die Ausgaben haben. Die QuickInfos im Viewer zeigen Ihnen die Wahrscheinlichkeit und Prognose für jedes Paar an Eingaben und Ausgabewerten an. Weitere Informationen finden Sie unter [Modell mit dem Microsoft-Viewer für neuronale Netzwerke durchsuchen](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66083615"
  NODE_TYPE  
  Ein logistisches Regressionsmodell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|BESCHREIBUNG|  
 |------------------|-----------------|  
 |1|Modell.|  
 |17|Planerknoten für das Subnetzwerk.|  
@@ -140,7 +140,7 @@ ms.locfileid: "66083615"
  Die Wahrscheinlichkeit für das Erreichen des Knotens vom übergeordneten Knoten aus. Für logistische Regressionsmodelle immer 0.  
   
  NODE_DISTRIBUTION  
- Eine geschachtelte Tabelle, die statistische Informationen für den Knoten enthält. Detaillierte Informationen über die Inhalte dieser Tabelle für jeden Knotentyp finden Sie im Abschnitt „Grundlegendes zur NODE_DISTRIBUTION-Tabelle“ unter [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Eine geschachtelte Tabelle, die statistische Informationen für den Knoten enthält. Detaillierte Informationen über die Inhalte dieser Tabelle für jeden Knotentyp finden Sie im Abschnitt „Grundlegendes zur NODE_DISTRIBUTION-Tabelle“ unter [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  Für logistische Regressionsmodelle immer 0.  
@@ -167,7 +167,7 @@ ms.locfileid: "66083615"
  MSOLAP_NODE_SHORT_CAPTION  
  In logistischen Regressionsmodellen immer Leerzeichen.  
   
-##  <a name="bkmk_NodeIDs"></a> Verwenden von Knotennamen und IDs  
+##  <a name="bkmk_NodeIDs"></a>Verwenden von Knoten Namen und IDs  
  Die Benennung der Knoten in einem logistischen Regressionsmodell bietet zusätzliche Informationen über die Beziehungen zwischen den Knoten im Modell. In der folgenden Tabelle werden die Konventionen für die IDs dargestellt, die den Knoten in jeder Ebene zugewiesen werden.  
   
 |Knotentyp|Konvention für Knoten-ID|  
@@ -183,10 +183,10 @@ ms.locfileid: "66083615"
   
  Sie können diese IDs verwenden, um zu bestimmen, in welcher Beziehung Ausgabeattribute zu spezifischen Attributen der Eingabeebene stehen, indem Sie die Tabelle NODE_DISTRIBUTION des Ausgabeknotens einsehen. Jede Zeile in dieser Tabelle enthält eine ID, die auf einen bestimmten Eingabeattributknoten zurückzeigt. Die NODE_DISTRIBUTION-Tabelle enthält auch den Koeffizienten für dieses Eingabe-Ausgabe-Paar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)   
- [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Logistische Regressionsmodell-Abfragebeispiele](logistic-regression-model-query-examples.md)   
+ [Mining Modell Inhalt von neuronalen Netzwerkmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Logistische Regressionsmodell-Abfrage Beispiele](logistic-regression-model-query-examples.md)   
  [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

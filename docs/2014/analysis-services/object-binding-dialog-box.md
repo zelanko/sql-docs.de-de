@@ -1,5 +1,5 @@
 ---
-title: Binden das Dialogfeld Objekt | Microsoft-Dokumentation
+title: Objekt Bindung (Dialog Feld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072187"
 ---
 # <a name="object-binding-dialog-box"></a>Objektbindung (Dialogfeld)
@@ -34,8 +34,8 @@ ms.locfileid: "66072187"
   
 -   UnaryOperatorColumn  
   
-## <a name="options"></a>Optionen  
- **Typ der datenbankbindung**  
+## <a name="options"></a>Tastatur  
+ **Bindungstyp**  
  Wählen Sie die Bindung aus, die für das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden soll. Folgende Bindungstypen können verwendet werden:  
   
  Spaltenbindung  
@@ -50,13 +50,13 @@ ms.locfileid: "66072187"
  Zeilenbindung  
  Bindet das Objekt an eine Zeile in einer Faktentabelle und wird verwendet, um die Zählung von Measures anhand der Anzahl der in der Faktentabelle verarbeiteten Zeilen zu vereinfachen.  
   
- **Quelltabelle**  
+ **Quell Tabelle**  
  Zeigt eine Liste von Tabellen in der Datenquellensicht an, die dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt zugeordnet sind.  
   
- **Quellspalte**  
+ **Quell Spalte**  
  Zeigt eine Liste von Spalten in der unter **Quelltabelle**ausgewählten Tabelle an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

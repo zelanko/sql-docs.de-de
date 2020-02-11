@@ -1,5 +1,5 @@
 ---
-title: Bcp_getcolfmt | Microsoft-Dokumentation
+title: bcp_getcolfmt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689091"
 ---
-# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
+# <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Zum Suchen des Spaltenformat-Eigenschaftswerts.  
   
 ## <a name="syntax"></a>Syntax  
@@ -57,10 +57,10 @@ pcbLen
  *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
- *field*  
+ *Flächen*  
  Die Spaltenzahl, für die die Eigenschaft abgerufen wird.  
   
- *property*  
+ *Property*  
  Eine der Eigenschaftskonstanten.  
   
  *pValue*  
@@ -72,20 +72,20 @@ pcbLen
  *pcbLen*  
  Verweis auf Länge der Daten, die im Eigenschaftspuffer zurückgegeben werden.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
- Spaltenformat-Eigenschaftswerte finden Sie in der [Bcp_setcolfmt](bcp-setcolfmt.md) Thema. Die Spaltenformat-Eigenschaftswerte werden festgelegt, durch den Aufruf der **Bcp_setcolfmt** -Funktion, und die **Bcp_getcolfmt** Funktion wird verwendet, um das Spaltenformat-Eigenschaftswert suchen.  
+## <a name="remarks"></a>Bemerkungen  
+ Spalten Format-Eigenschaftswerte sind im Thema [bcp_setcolfmt](bcp-setcolfmt.md) aufgeführt. Die Spalten Format-Eigenschaftswerte werden durch Aufrufen der **bcp_setcolfmt** -Funktion festgelegt, und die **bcp_getcolfmt** -Funktion wird verwendet, um den Eigenschafts Wert des Spalten Formats zu suchen.  
   
- Verändertes Programmverhalten können beobachtet werden, beim Herstellen einer Verbindung mit einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (oder höher) Server-Computer im Vergleich zu früher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen. Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).  
+ Verhaltensänderungen werden möglicherweise beim Herstellen einer Verbindung [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] mit einem Server Computer (oder höher) im Vergleich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu früheren Versionen beobachtet. Weitere Informationen finden Sie unter [metadatenermittlung](../native-client/features/metadata-discovery.md).  
   
-## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Die Typen der Verwendung der `BCP_FMT_TYPE` -Eigenschaft für Datums-/Uhrzeittypen werden gemäß den Angaben in [Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLEDB- und ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
+ Die Typen, die mit `BCP_FMT_TYPE` der-Eigenschaft für Datums-/Uhrzeittypen verwendet werden, sind wie in [Massen Kopier Änderungen für verbesserte Datums-und Uhrzeit Typen &#40;OLE DB und ODBC-&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)angegeben.  
   
- Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopierfunktionen](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

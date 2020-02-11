@@ -1,5 +1,5 @@
 ---
-title: ASSL XML-Konventionen | Microsoft-Dokumentation
+title: ASSL-XML-Konventionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736393"
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
@@ -36,7 +36,7 @@ ms.locfileid: "62736393"
   
  Für die Darstellung der Objekthierarchie verwendet ASSL folgende XML-Konventionen:  
   
--   Alle Objekte und Eigenschaften werden als Elemente, mit Ausnahme von XML-Standardattributen wie z. B. "XML: lang" dargestellt.  
+-   Alle Objekte und Eigenschaften werden als Elemente dargestellt, mit Ausnahme von XML-Standard Attributen wie "XML: lang".  
   
 -   Sowohl Elementnamen als auch Enumerationswerte befolgen die Microsoft .NET Framework-Benennungskonvention der Schreibweise von Pascal ohne Unterstriche.  
   
@@ -135,10 +135,10 @@ ms.locfileid: "62736393"
   
 -   Interne Leerzeichen werden beibehalten.  
   
- `Name` und `ID` -Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu `Name` und `ID` -Konventionen, finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
+ `Name`die `ID` -Eigenschaft und die-Eigenschaft weisen besondere Einschränkungen in Form von Zeichen folgen Elementen auf. Weitere Informationen zu `Name` und `ID` Konventionen finden Sie unter [ASSL-Objekte und Objektmerkmale](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
- Ein `DateTime` Struktur von .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das früheste von dem `DataTime`-Datentyp unterstützte Datum ist der 1. Januar 1601, das für Programmierer als `DateTime.MinValue` zur Verfügung steht. Das früheste unterstützte Datum gibt an, dass ein `DateTime`-Wert fehlt.  
+ Eine `DateTime` -Struktur aus der .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das früheste von dem `DataTime`-Datentyp unterstützte Datum ist der 1. Januar 1601, das für Programmierer als `DateTime.MinValue` zur Verfügung steht. Das früheste unterstützte Datum gibt an, dass ein `DateTime`-Wert fehlt.  
   
  `Boolean`  
  Eine Enumeration mit nur zwei Werten wie {true, false} oder {0, 1}.  
@@ -150,8 +150,8 @@ ms.locfileid: "62736393"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (leere Zeichenfolge)|  
-|`Integer` oder `Long`|0 (Null)|  
-|`Timestamp`|12:00:00 Uhr, 1/1/0001 (entsprechend einer der .NET Framework-Versionen `System.DateTime` mit 0 Takten)|  
+|`Integer`noch`Long`|0 (Null)|  
+|`Timestamp`|12:00:00 Uhr, 1/1/0001 (entspricht einem .NET Frameworks `System.DateTime` mit 0 Ticks)|  
   
  Eine Element, das vorhanden, jedoch leer ist, wird interpretiert, als hätte es den Wert einer NULL-Zeichenfolge, nicht den Standardwert.  
   
@@ -178,6 +178,6 @@ ms.locfileid: "62736393"
   
  `</Dimension>`  
   
- Weitere Informationen zu geerbten Standards finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
+ Weitere Informationen zu geerbten Standardwerten finden Sie unter [ASSL-Objekte und Objektmerkmale](assl-objects-and-object-characteristics.md).  
   
   

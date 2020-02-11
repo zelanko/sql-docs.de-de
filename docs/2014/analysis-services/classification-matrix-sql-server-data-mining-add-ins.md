@@ -1,5 +1,5 @@
 ---
-title: Klassifikationsmatrix (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Klassifizierungs Matrix (SQL Server Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -16,31 +16,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087970"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Klassifikationsmatrix (SQL Server Data Mining-Add-Ins)
-  ![Matrix klassifizierungsschaltfläche, Data Mining-Menüband](media/dmc-cmatrix.gif "Klassifikationsmatrix-Schaltfläche, Data Mining-Menüband")  
+  ![Klassifikationsmatrix (Schaltfläche auf Data Mining-Menüband)](media/dmc-cmatrix.gif "Klassifikationsmatrix (Schaltfläche auf Data Mining-Menüband)")  
   
  Mithilfe der Klassifikationsmatrix können Sie die Genauigkeit eines Modells in Bezug auf Vorhersagen bewerten. Um eine Klassifikationsmatrix zu erstellen, führen Sie ein Testdataset für das Modell aus. Das Tool Klassifikationsmatrix vergleicht die tatsächlichen Werte aus dem Testsatz mit den vom Modell getroffenen Vorhersagen. Indem Sie die Matrix überprüfen, können Sie auf Anhieb feststellen, wie oft das Modell richtige Vorhersagen und wie oft es falsche Vorhersagen trifft.  
   
- Verwenden Sie in diesen Add-Ins, die **Klassifikationsmatrix** Assistenten wählen Sie ein Modell, die Testdaten anzugeben, und klicken Sie anschließend eine Ergebnismatrix zu generieren.  
+ Verwenden Sie in diesen Add-Ins den **Klassifikations Matrix** -Assistenten, um ein Modell auszuwählen, die Testdaten anzugeben und dann eine Ergebnis Matrix zu generieren.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Interpretieren einer Klassifikationsmatrix  
- Nehmen wir an, Sie möchten zum Entwerfen eines Kunden Treueprogramms, und klicken Sie dann einen Kunden in geeignete Kategorien einteilen, zuweisen, damit Sie sie mit der entsprechenden Berechtigungsebene Bonusstufen angeben können. Sie haben drei Ebenen für das Bonusprogramm: Bronze, Silber und Gold - implementiert und erhält diese sich für Kunden in einer Erprobungsphase. Zusätzlich haben Sie ein Modell entworfen, mit dem Kunden analysiert und die richtigen Kategorien vorhergesagt werden. Jetzt ermitteln Sie anhand der Klassifikationsmatrix und der Testdaten, wie gut das Modell bei der Vorhersage des richtigen Angebots für alle Kunden abgeschnitten hat.  
+ Angenommen, Ihr Ziel ist es, ein Kunden Treueprogramm zu entwerfen und dann den entsprechenden Kategorien Kunden zuzuweisen, damit Sie Ihnen die geeignete Stufe von Incentives bereitstellen können. Sie haben drei Stufen für das Reward-Programm implementiert: Bronze, Silber und Gold und haben diese Kunden in einer Test Phase erhalten. Zusätzlich haben Sie ein Modell entworfen, mit dem Kunden analysiert und die richtigen Kategorien vorhergesagt werden. Jetzt ermitteln Sie anhand der Klassifikationsmatrix und der Testdaten, wie gut das Modell bei der Vorhersage des richtigen Angebots für alle Kunden abgeschnitten hat.  
   
  An der Tabelle der Klassifikationsmatrix können Sie ablesen, wie viele Kunden auf Grundlage des Modells den einzelnen Kategorien zugewiesen würden, und das Ergebnis mit der Anzahl der Kunden vergleichen, die sich tatsächlich für die einzelnen Bonusstufen eingetragen haben.  
   
 ||Bronze (IST-Wert)|Gold (IST-Wert)|Silber (IST-Wert)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94.45%**|15.18%|1.70%|  
-|Gold|2.72%|**84.82%**|0,00 %|  
-|Silber|1.84%|0,00 %|**93.80%**|  
-|*Richtig*|*95.45%*|*84.82%*|*98.30%*|  
-|*Falsch klassifiziert*|*4.55%*|*15.18%*|*1.70%*|  
+|Bronze|**94,45%**|15,18%|1,70%|  
+|Gold|2,72 %|**84,82%**|0,00 %|  
+|Silber|1,84%|0,00 %|**93,80%**|  
+|*Richtig*|*95,45%*|*84,82%*|*98,30%*|  
+|*Falsch klassifiziert*|*4,55%*|*15,18%*|*1,70%*|  
   
 -   In jeder Spalte werden die tatsächlichen Werte im Testdataset angezeigt.  
   
@@ -60,36 +60,36 @@ ms.locfileid: "66087970"
   
 3.  Wählen Sie die Spalte aus, deren Genauigkeit Sie überprüfen möchten. Sie können beim Erstellen einer Matrix nur eine Spalte auswählen, allerdings kann die Spalte mehrere Werte enthalten.  
   
-     Tipp: Es kann schwierig sein, die Interpretation einer Klassifikationsmatrix, wenn die vorhersagbare Spalte viele vergleichsspalten vorhanden sind.  
+     Tipp: Die Interpretation einer Klassifikationsmatrix kann schwierig werden, wenn für die vorhersagbare Spalte viele Vergleichsspalten vorhanden sind.  
   
-     In der **Spalten auswählen, um vorhersagen** Seite Sie können auch angeben, ob die Anzahl der richtige und falsche Werte angezeigt werden soll, oder als Prozentwert angezeigt werden sollen.  
+     Auf der Seite Wählen Sie die **zu vorher zusagenden Spalten** aus können Sie auch angeben, ob die Anzahl falscher und falscher Werte angezeigt werden soll oder ob ein Prozentsatz angezeigt werden soll.  
   
 4.  Geben Sie auf der Seite Quelldaten auswählen an, ob Sie externe Testdaten oder die mit dem Modell gespeicherten Testdaten verwenden.  
   
-5.  Wenn Sie externe Testdaten verwenden, müssen Sie ordnen Sie das Modell den Eingabespalten auf die **Beziehung angeben** Seite des Assistenten.  
+5.  Wenn Sie externe Testdaten verwenden, müssen Sie das Modell den Eingabe Spalten auf der Seite **Beziehung angeben** des Assistenten zuordnen.  
   
      Bei Verwendung des eingebetteten Testdatasets erfolgt die Zuordnung automatisch.  
   
-6.  Klicken Sie auf **Fertig stellen** zum Ausführen von Vorhersagen für das Modell und die Klassifikationsmatrix zu generieren.  
+6.  Klicken Sie auf **Fertig** stellen, um Vorhersagen für das Modell auszuführen und die Klassifizierungs Matrix zu generieren.  
   
      Vom Assistenten wird ein Bericht erstellt, der die Klassifikationsmatrix und andere Details der Analyse enthält. Der Bericht wird als Tabelle in Excel gespeichert. Oberhalb des Berichts befindet sich eine Zusammenfassung, die angibt, wie viele Fälle richtig vorhergesagt wurden und wie viele Vorhersagen falsch waren.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
   
 -   Zum Erstellen einer Klassifikationsmatrix benötigen Sie Zugriff auf ein vorhandenes Miningmodell, das Genauigkeitsmessungen unterstützt. Vorhersagemodelle und Zuordnungsmodelle können nicht mithilfe dieses Tools ausgewertet werden.  
   
 -   Das untersuchte Modell muss einen Wert vorhersagen, der entweder diskret ist oder bereits diskretisiert wurde.  
   
--   Wenn Sie die Option nicht um einen Testsatz zusammen mit der Struktur oder Modell speichern verwenden können, müssen Sie ein Eingabedataset zu erhalten, die im Wesentlichen die gleiche Anzahl von Spalten mit übereinstimmenden Datentypen, die im Modell verwendet wurde.  
+-   Wenn Sie die Option zum Speichern eines Test Satzes zusammen mit der Struktur oder dem Modell nicht verwendet haben, müssen Sie ein Eingabe DataSet abrufen, das im Wesentlichen die gleiche Anzahl von Spalten mit übereinstimmenden Datentypen wie die im Modell verwendeten Datentypen aufweist.  
   
 -   Sowohl das Data Mining-Modell als auch die neuen Daten, die Sie für den Test verwenden, müssen mindestens eine Spalte enthalten, die vorhergesagt werden kann, und die Spalten müssen denselben Datentyp enthalten.  
   
 ### <a name="known-issues"></a>Bekannte Probleme  
- In SQL Server 2012 und SQL Server 2014, die Möglichkeit, den interner testdatasets zum Modell zuzuordnen funktioniert nicht der **Klassifikationsmatrix** Tool. Sie können jedoch ein externes Dataset angeben und anschließend den Trainingssatz als Eingabe auswählen, um Fehler im ursprünglichen Dataset zu ermitteln.  
+ In SQL Server 2012 und SQL Server 2014 funktioniert die Möglichkeit, das interne Test Dataset dem Modell zuzuordnen, nicht im **Klassifizierungs Matrix** Tool. Sie können jedoch ein externes Dataset angeben und anschließend den Trainingssatz als Eingabe auswählen, um Fehler im ursprünglichen Dataset zu ermitteln.  
   
-## <a name="see-also"></a>Siehe auch  
- [Validieren von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Validieren von Modellen und Verwenden von Modellen für Vorhersage &#40;Data Mining-Add-Ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Durchsuchen von Daten &#40;SQL Server Data Mining-Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)   
- [Kategorien erkennen &#40;Tabellenanalysetools für Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
+ [Erkennen von Kategorien &#40;Tabellenanalyse Tools für Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   
   

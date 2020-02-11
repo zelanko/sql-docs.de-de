@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721012"
 ---
 # <a name="rename-a-stored-procedure"></a>Umbenennen einer gespeicherten Prozedur
@@ -54,9 +54,9 @@ ms.locfileid: "62721012"
  Erfordert die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .  
   
  ALTER PROCEDURE  
- Erfordert die ALTER-Berechtigung für die Prozedur oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .  
+ Erfordert die ALTER-Berechtigung für die Prozedur oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>So benennen Sie eine gespeicherte Prozedur um  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721012"
   
 2.  Erweitern Sie **Datenbanken**, erweitern Sie die Datenbank, zu der die Prozedur gehört, und erweitern Sie dann **Programmierbarkeit**.  
   
-3.  [Anzeigen der Abhängigkeiten einer gespeicherten Prozedur](view-the-dependencies-of-a-stored-procedure.md).  
+3.  [Bestimmen Sie die Abhängigkeiten der gespeicherten Prozedur](view-the-dependencies-of-a-stored-procedure.md).  
   
 4.  Erweitern Sie **Gespeicherte Prozeduren**, klicken Sie mit der rechten Maustaste auf die umzubenennende Prozedur, und klicken Sie dann auf **Umbenennen**.  
   
@@ -110,9 +110,9 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ALTER PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Erstellen einer gespeicherten Prozedur](../stored-procedures/create-a-stored-procedure.md)   
  [Ändern einer gespeicherten Prozedur](../stored-procedures/modify-a-stored-procedure.md)   
  [Löschen einer gespeicherten Prozedur](../stored-procedures/delete-a-stored-procedure.md)   

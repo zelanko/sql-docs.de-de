@@ -1,5 +1,5 @@
 ---
-title: Konnte nicht geladen werden, Datei oder Assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; | Microsoft-Dokumentation
+title: Die Datei oder Assembly konnte nicht &#39;"Microsoft. AnalysisServices. SharePoint. Integration&#39;" geladen werden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071666"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Konnte nicht geladen werden, Datei oder Assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
+# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Datei-oder Assembly&#39;"Microsoft. AnalysisServices. SharePoint. Integration" konnte nicht geladen werden&#39;
   In SharePoint 2010-Umgebungen mit PowerPivot für SharePoint tritt dieser Fehler auf, wenn die Lösung auf Anwendungsebene für PowerPivot nicht ordnungsgemäß bereitgestellt wurde.  
   
 ## <a name="details"></a>Details  
   
 |||  
 |-|-|  
-|Betrifft|PowerPivot für SharePoint|  
+|Anwendungsbereich|PowerPivot für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Die Powerpivotwebapp-Lösung wurde nicht ordnungsgemäß oder überhaupt nicht bereitgestellt.|  
 |Meldungstext|Datei oder Assembly "Microsoft.AnalysisServices.SharePoint.Integration" konnte nicht geladen werden|  
@@ -45,7 +45,7 @@ ms.locfileid: "66071666"
   
 5.  Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellen von PowerPivot-Lösungen in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

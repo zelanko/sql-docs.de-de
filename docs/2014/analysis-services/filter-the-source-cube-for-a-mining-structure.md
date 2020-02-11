@@ -1,5 +1,5 @@
 ---
-title: Filtern des Quellcubes für eine Miningstruktur | Microsoft-Dokumentation
+title: Filtern des Quellcubes für eine Mining Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,43 +16,43 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081150"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtern des Quellcubes für eine Miningstruktur
-  Wenn Sie eine Miningstruktur, die auf Daten in einem mehrdimensionalen Modell (einem OLAP-Cube) basiert erstellen, können Sie *Slice* des Cubes, der die Miningstruktur basiert. Durch die Aufteilung in Slices können Sie Teilmengen der Daten erstellen. Diese dienen als Art von Filter für die Daten, die zum Trainieren des Miningmodells verwendet werden.  
+  Wenn Sie eine Mining Struktur erstellen, die auf Daten in einem mehrdimensionalen Modell (einem OLAP-Cube) basiert, *können Sie* den Cube, auf dem die Mining Struktur basiert, segmentieren. Durch die Aufteilung in Slices können Sie Teilmengen der Daten erstellen. Diese dienen als Art von Filter für die Daten, die zum Trainieren des Miningmodells verwendet werden.  
   
 ### <a name="to-slice-a-cube"></a>So teilen Sie einen Cube in Slices auf  
   
-1.  Im Data Mining-Designer [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], wählen die **Miningstruktur** Registerkarte oder die **Miningmodelle** Registerkarte.  
+1.  Wählen Sie im Data Mining [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]-Designer in die Registerkarte **Mining Struktur** oder **Mining Modelle** aus.  
   
-2.  Auf der **Miningmodell** , wählen Sie im Menü **Mining Cubeslice**.  
+2.  Wählen Sie im Menü **Mining Modell** die Option **Mining Struktur Cube Slice definieren**aus.  
   
-     Die **Cube in Slices aufteilen** Dialogfeld wird geöffnet.  
+     Das Dialogfeld **Cube Slice** wird geöffnet.  
   
-3.  In der **Dimension** Spalte die **Cube in Slices aufteilen** Dialogfeld Feld, wählen Sie die Dimension, die Sie filtern möchten.  
+3.  Wählen Sie in der Spalte **Dimension** des Dialog Felds **Cube Slice** die Dimension aus, die Sie filtern möchten.  
   
-4.  Wählen Sie eine Ebene einer Hierarchie, die mithilfe der Liste in der **Hierarchie** Spalte.  
+4.  Wählen Sie eine Ebene einer Hierarchie aus, und verwenden Sie dabei die Liste in der Spalte **Hierarchie** .  
   
-5.  Wählen Sie einen Operator aus der Liste der **Operator** Spalte beim Erstellen der filterbedingung verwendet.  
+5.  Wählen Sie einen Operator aus der Liste in der Spalte **Operator** aus, der beim Aufbau der Filterbedingung verwendet werden soll.  
   
-6.  Klicken Sie auf das Feld in der **Filter** Spalte.  
+6.  Klicken Sie in der Spalte **Filter** auf das Feld.  
   
      Es wird ein Dialogfeld geöffnet, das alle Elemente in der angegebenen Hierarchieebene enthält.  
   
 7.  Wählen Sie das Element bzw. die Elemente aus, die Sie filtern möchten.  
   
-8.  Klicken Sie auf **OK** im Dialogfeld "Element".  
+8.  Klicken Sie im Dialogfeld Mitglied auf **OK** .  
   
-9. Klicken Sie auf **OK** in die **Cube in Slices aufteilen** Dialogfeld.  
+9. Klicken Sie im Dialogfeld **Cube Slice** auf **OK** .  
   
      Der Quellcube wird jetzt entsprechend der Cubeslice-Definition gefiltert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tasks und Anweisungen für Miningstrukturen](data-mining/mining-structure-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Struktur Tasks und-Anleitungen](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Erstellen einer neuen OLAP-Miningstruktur](data-mining/create-a-new-olap-mining-structure.md)  
   
   

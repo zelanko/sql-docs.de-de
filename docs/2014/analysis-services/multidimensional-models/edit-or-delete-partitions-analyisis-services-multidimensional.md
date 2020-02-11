@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten oder Löschen von Partitionen (Analyisis Services – mehrdimensional) | Microsoft-Dokumentation
+title: Bearbeiten oder Löschen von Partitionen (analyisis Services-Multidimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075150"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Bearbeiten oder Löschen von Partitionen (Analyisis Services – Mehrdimensional)
   Cubepartitionen werden über die Registerkarte **Partitionen** im Cube-Designer von [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]geändert. Auf der Registerkarte **Partitionen** werden die Partitionen für alle Measuregruppen in einem Cube aufgeführt. Ebenfalls werden die Rückschreibepartitionen mit aktiviertem Rückschreiben aufgeführt.  
   
- Um die Partitionen für eine beliebige Measuregruppe zu bearbeiten, erweitern Sie die Measuregruppe auf der Registerkarte **Partitionen** . Die Partitionen für eine Measuregruppe werden nach Ordnungszahl in einem Tabellenformat mit den in der folgenden Tabellen angegebenen Spalten aufgeführt.  
+ Um die Partitionen für eine beliebige Measure-Gruppe zu bearbeiten, erweitern Sie die Gruppe Measure auf der Registerkarte **Partitionen** . Partitionen für eine Measure-Gruppe werden nach Ordinalzahl in einem Tabellenformat mit den in der folgenden Tabelle aufgeführten Spalten aufgelistet.  
   
  Die Einstellungen für eine verknüpfte Measuregruppe müssen im Quellcube bearbeitet werden.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "66075150"
 >  Alternativ können Sie XMLA-Skripts verwenden, um die Erstellung, das Zusammenführen und das Löschen von Partitionen zu automatisieren. XMLA-Skripts können in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]oder in benutzerdefinierten SSIS-Paketen, die als geplanter Task ablaufen, erstellt und ausgeführt werden. Weitere Informationen finden Sie unter [Automate Analysis Services Administrative Tasks with SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="partition-source"></a>Partitionsquelle  
- Gibt die Quelltabelle oder benannte Abfrage für die Partition an. Klicken Sie auf die Zelle, und klicken Sie anschließend auf die Schaltfläche zum Durchsuchen ( **...** ), um die Quelltabelle zu ändern.  
+ Gibt die Quelltabelle oder benannte Abfrage für die Partition an. Klicken Sie auf die Zelle, und klicken Sie anschließend auf die Schaltfläche zum Durchsuchen (**...**), um die Quelltabelle zu ändern.  
   
- ![Quellspalte im Bereich "Partition"](../media/ssas-partitionsource.png "Quellspalte im Bereich \"Partition\"")  
+ ![Quellspalte im Bereich "Partition"](../media/ssas-partitionsource.png "Quellspalte im Bereich "Partition"")  
   
- Wenn die Partition auf einer Abfrage basiert, klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um die Abfrage zu bearbeiten. Dadurch wird die **Source** -Eigenschaft der Partition bearbeitet. Weitere Informationen finden Sie unter [Ändern einer Partitionsquelle für die Verwendung einer anderen Faktentabelle](change-a-partition-source-to-use-a-different-fact-table.md).  
+ Wenn die Partition auf einer Abfrage basiert, klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um die Abfrage zu bearbeiten. Dadurch wird die **Source** -Eigenschaft der Partition bearbeitet. Weitere Informationen finden Sie unter [Ändern einer Partitions Quelle für die Verwendung einer anderen Fakten Tabelle](change-a-partition-source-to-use-a-different-fact-table.md).  
   
  Sie können eine Tabelle in der Datenquellensicht angeben, die die gleiche Struktur wie die ursprüngliche Quelltabelle (in der externen Datenquelle, aus der die Daten abgerufen werden) aufweist. Bei der Quelle kann es sich um eine beliebige Datenquelle oder Datenquellensicht der Cubedatenbank handeln.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66075150"
   
  Speicher kann für jede Partition einer einzelnen Measuregruppe eines Cubes separat konfiguriert werden. Sie können auch die Standardspeichereinstellungen für einen Cube oder für eine Measuregruppe konfigurieren. Der Speicher wird im Cube-Assistenten auf der Registerkarte **Partitionen** konfiguriert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Entwerfen von Aggregationen &#40;Analysis Services – mehrdimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Zusammenführen von Partitionen in Analysis Services &#40;SSAS – mehrdimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Entwerfen von Aggregationen &#40;Analysis Services-Multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Zusammenführen von Partitionen in Analysis Services &#40;SSAS-Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

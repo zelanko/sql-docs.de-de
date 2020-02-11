@@ -1,5 +1,5 @@
 ---
-title: Data Mining Abfrageschnittstellen | Microsoft-Dokumentation
+title: Schnittstellen für Data Mining-Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084982"
 ---
 # <a name="data-mining-query-interfaces"></a>Schnittstellen für Data Mining-Abfragen
@@ -42,10 +42,11 @@ ms.locfileid: "66084982"
   
 -   [Integration Services](#bkmk_SSIS)  
   
- [Anwendungsprogrammierschnittstelle](#bkmk_API)  
+ [Anwendungs Programmierschnittstellen](#bkmk_API)  
   
-##  <a name="bkmk_Tools"></a> Datamining-Abfragetools  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die folgenden Tools bereit, mit denen Sie Vorhersageabfragen, Inhaltsabfragen und Datendefinitionsabfragen für Data Mining-Objekte erstellen können:  
+##  <a name="bkmk_Tools"></a>Data Mining-Abfrage Tools  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die folgenden Tools bereit, mit denen Sie Vorhersageabfragen, Inhaltsabfragen und Datendefinitionsabfragen für Data Mining-Objekte erstellen können:  
   
 -   Generator für Vorhersageabfragen  
   
@@ -55,16 +56,17 @@ ms.locfileid: "66084982"
   
 -   Data Mining-Komponenten von Integration Services  
   
-###  <a name="bkmk_Builder"></a> Generator für Vorhersageabfragen  
+###  <a name="bkmk_Builder"></a>Vorhersage Abfrage-Generator  
  Der Generator für Vorhersageabfragen befindet sich auf der Registerkarte **Miningmodellvorhersage** des Data Mining-Designers, der sowohl in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]als auch in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar ist.  
   
- Wenn Sie den Generator verwenden, können Sie mithilfe grafischer Tools ein Miningmodell auswählen und neue Falldaten sowie Vorhersagefunktionen hinzufügen. Der Generator für Vorhersageabfragen umfasst einen Text-Editor, die Sie verwenden können, um die Abfrage manuell ändern und ein einfaches **Ergebnisse** Bereich, um die Ergebnisse der Abfrage anzuzeigen.  
+ Wenn Sie den Generator verwenden, können Sie mithilfe grafischer Tools ein Miningmodell auswählen und neue Falldaten sowie Vorhersagefunktionen hinzufügen. Die Vorhersage Abfrage-Generator enthält einen Text-Editor, den Sie verwenden können, um die Abfrage manuell zu ändern, und einen einfachen **Ergebnis** Bereich, um die Ergebnisse der Abfrage anzuzeigen.  
   
-###  <a name="bkmk_QueryEditor"></a> Abfrage-Editor  
- Im Abfrage-Editor [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet Tools, die Sie zum Erstellen und Ausführen von DMX-Abfragen verwenden können. Sie können eine Verbindung mit einer Instanz von SQL Server Analysis Services herstellen und anschließend eine Datenbank, Miningstrukturspalten und ein Miningmodell auswählen. Der **Metadaten-Explorer** enthält eine durchsuchbare Liste mit Vorhersagefunktionen.  
+###  <a name="bkmk_QueryEditor"></a>Abfrage-Editor  
+ Der-Abfrage- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor in stellt Tools bereit, die Sie zum Erstellen und Ausführen von DMX-Abfragen verwenden können. Sie können eine Verbindung mit einer Instanz von SQL Server Analysis Services herstellen und anschließend eine Datenbank, Miningstrukturspalten und ein Miningmodell auswählen. Der **Metadaten-Explorer** enthält eine durchsuchbare Liste mit Vorhersagefunktionen.  
   
-###  <a name="bkmk_Templates"></a> DMX-Vorlagen  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt interaktive DMX-Abfragevorlagen bereit, die Sie verwenden können, um DMX-Abfragen zu erstellen. Wenn die Vorlagenliste nicht angezeigt wird, klicken auf der Symbolleiste auf **Ansicht** , und wählen Sie **Vorlagen-Explorer**aus. Klicken Sie auf das Cubesymbol, um alle Analysis-Services-Vorlagen, einschließlich der Vorlagen für DMX, MDX und XMLA, anzuzeigen.  
+###  <a name="bkmk_Templates"></a>DMX-Vorlagen  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt interaktive DMX-Abfragevorlagen bereit, die Sie verwenden können, um DMX-Abfragen zu erstellen. Wenn die Vorlagenliste nicht angezeigt wird, klicken auf der Symbolleiste auf **Ansicht** , und wählen Sie **Vorlagen-Explorer**aus. Klicken Sie auf das Cubesymbol, um alle Analysis-Services-Vorlagen, einschließlich der Vorlagen für DMX, MDX und XMLA, anzuzeigen.  
   
  Um mithilfe einer Vorlage eine Abfrage zu erstellen, können Sie die Vorlage in ein geöffnetes Abfragefenster ziehen oder auf die Vorlage doppelklicken, um eine neue Verbindung und einen neuen Abfragebereich zu öffnen.  
   
@@ -73,15 +75,15 @@ ms.locfileid: "66084982"
 > [!WARNING]  
 >  Das Data Mining Add-In für Microsoft Office Excel enthält ebenfalls eine Reihe von Vorlagen und einen interaktiven Abfrage-Generator, der Sie beim Verfassen komplexer DMX-Anweisungen unterstützt. Um die Vorlagen zu verwenden, klicken Sie im Data Mining-Client auf **Abfrage**und anschließend auf **Erweitert** .  
   
-###  <a name="bkmk_SSIS"></a> Data Mining-Komponenten von Integration Services  
- Sie können Vorhersageabfragen auch in ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket aufnehmen. Die folgenden Tasks und Transformationen in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützen die Erstellung und die Ausführung von DMX-Vorhersageabfragen und DMX-Anweisungen.  
+###  <a name="bkmk_SSIS"></a>Data Mining-Komponenten Integration Services  
+ Sie können Vorhersage Abfragen auch als Teil eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakets einschließen. Die folgenden Tasks und Transformationen in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützen die Erstellung und die Ausführung von DMX-Vorhersageabfragen und DMX-Anweisungen.  
   
-|Komponente|Beschreibung|  
+|Komponente|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Data Mining-Abfragetask|Führt DMX-Abfragen und andere DMX-Anweisungen als Teil einer Ablaufsteuerung aus.<br /><br /> Der Task-Editor stellt den Generator für Vorhersageabfragen und ein Textfeld für die manuelle Bearbeitung der DMX-Abfrage zur Verfügung. Der Task-Editor kann die Abfrage jedoch nicht gegen Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung prüfen. Daher empfiehlt es sich, eine Abfrage in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu erstellen und dann den Text der Anweisung oder Abfrage in den Task-Editor einzufügen.|  
 |Transformation für Data Mining-Abfragen|Führt unter Verwendung von Daten, die von einer Datenflussquelle bereitgestellt wurden, eine Vorhersageabfrage innerhalb eines Datenflusses aus.<br /><br /> Der Task-Editor stellt den Generator für Vorhersageabfragen und ein Textfeld für die manuelle Bearbeitung der DMX-Abfrage zur Verfügung.<br /><br /> Die Transformation kann nur zum Erstellen von Abfragen verwendet werden, die Daten im Datenfluss verwenden, d. h. Abfragen, die die PREDICTION JOIN-Syntax verwenden. Diese Komponente kann nicht zum Ausführen von Inhaltsabfragen oder anderen Arten von DMX-Anweisungen verwendet werden.|  
   
-##  <a name="bkmk_API"></a> Anwendungsprogrammierschnittstelle  
+##  <a name="bkmk_API"></a>Anwendungs Programmierschnittstellen  
  Sie können benutzerdefinierte Anwendungen, durch die Abfragen für Data Mining-Modelle ausgeführt werden, unter Verwendung verschiedener Programmiersprachen in Verbindung mit Serverprotokollen wie OLE DB oder dem ADOMD-Client von Analysis Services erstellen. Weitere Informationen finden Sie unter [Data Mining-Programmierung](../dev-guide/data-mining-programming.md).  
   
  XMLA bildet jedoch das zugrunde liegende Nachrichtenformat für alle Interaktionen mit einem Analysis Services-Server. Abfragen innerhalb einer XMLA-Nachricht werden unterschiedlich dargestellt, je nachdem, ob Sie eine Vorhersageabfrage auf Grundlage von DMX, eine Inhaltsabfrage oder eine Abfrage senden, von der Modellmetadaten mithilfe der Data Mining-Schemarowsets abgerufen werden.  
@@ -90,12 +92,12 @@ ms.locfileid: "66084982"
   
 -   Um den **Modellinhalt** und **Modellmetadaten** wie die Anzahl der Cluster, die in Entscheidungsstrukturen verwendeten Attribute, das letzte Verarbeitungsdatum des Modells und die beim Erstellen des Modells verwendeten Algorithmusparameter abzurufen, können Sie die [Discover-Methode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) verwenden und im Header des [RequestType-Elements &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) eines der Data Mining-Schemarowsets angeben. Um den Abfragebereich einzugrenzen, geben Sie innerhalb des [RestrictionList-Elements &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla) Kriterien zur Einschränkung ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Data Mining-Projektmappen](data-mining-solutions.md)   
- [Grundlegendes zur SELECT-Anweisung (DMX)](/sql/dmx/understanding-the-dmx-select-statement)   
- [Struktur und Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](create-a-prediction-query-using-the-prediction-query-builder.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Data Mining-Lösungen](data-mining-solutions.md)   
+ [Grundlegendes zur DMX-SELECT-Anweisung](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Struktur und Verwendung von DMX-Vorhersage Abfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [Erstellen einer Vorhersage Abfrage mithilfe der Vorhersage Abfrage-Generator](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Erstellen einer DMX-Abfrage in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

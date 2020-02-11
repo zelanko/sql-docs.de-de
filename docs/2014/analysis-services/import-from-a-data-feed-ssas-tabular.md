@@ -1,5 +1,5 @@
 ---
-title: Importieren aus einem Datenfeed (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Importieren aus einem Datenfeed (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080572"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importieren von Daten aus einem Datenfeed (SSAS – tabellarisch)
@@ -24,21 +24,21 @@ ms.locfileid: "66080572"
   
 -   [Grundlegendes zum Importieren aus einem Datenfeed](#prereq)  
   
--   [Importieren von Daten aus einem Azure DataMarket-Dataset](#azure)  
+-   [Importieren von Daten aus einem Azure datamarket-DataSet](#azure)  
   
--   [Importieren von Datenfeeds aus öffentlichen oder Unternehmensdatenquellen](#importdata)  
+-   [Importieren von Datenfeeds aus öffentlichen oder Unternehmensdaten Quellen](#importdata)  
   
 -   [Importieren von Datenfeeds aus SharePoint-Listen](#importlist)  
   
--   [Importieren von Datenfeeds aus Reporting Services-Berichten](#importreport)  
+-   [Importieren von Datenfeeds aus Reporting Services Berichten](#importreport)  
   
-##  <a name="prereq"></a> Grundlegendes zum Importieren aus einem Datenfeed  
+##  <a name="prereq"></a>Grundlegendes zum Importieren aus einem Datenfeed  
  Sie können Daten aus den folgenden Arten von Datenfeeds in ein tabellarisches Modell importieren:  
   
- **Reporting Services-Bericht**  
+ **Reporting Services Bericht**  
  Sie können auf einer SharePoint-Website oder einem Berichtsserver veröffentlichte Reporting Services-Berichte als Datenquelle in einem Modell verwenden. Beim Importieren von Daten aus einem Reporting Services-Bericht müssen Sie eine Berichtsdefinitionsdatei (.rdl) als Datenquelle angeben.  
   
- **Azure DataMarket-Dataset**  
+ **Azure datamarket-DataSet**  
  Azure DataMarket ist ein Dienst, der im Rahmen von Clouddiensten einen Marketplace und einen Übermittlungskanal für Informationen bereitstellt. Azure DataMarket-Datasets erfordern anstelle eines Windows-Benutzerkontos einen Kontoschlüssel.  
   
  **Atom-Feeds**  
@@ -46,7 +46,7 @@ ms.locfileid: "66080572"
   
  Daten aus einem Datenfeed werden einem Modell während des Imports einmal hinzugefügt. Um aktualisierte Daten aus dem Feed zu erhalten, können Sie entweder die Daten aus dem Modell-Designer aktualisieren oder einen Datenaktualisierungszeitplan für das Modell konfigurieren, nachdem es auf einer Produktionsinstanz von Analysis Services bereitgestellt wurde. Weitere Informationen finden Sie unter [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](process-data-ssas-tabular.md).  
   
-##  <a name="azure"></a> Importieren von Daten aus einem Azure DataMarket-Dataset  
+##  <a name="azure"></a>Importieren von Daten aus einem Azure datamarket-DataSet  
  Sie können Daten aus einem Azure DataMarket als Tabelle in Ihr Modell importieren.  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>So importieren Sie Daten aus einem Azure DataMarket-Dataset  
@@ -73,7 +73,7 @@ ms.locfileid: "66080572"
   
 11. Klicken Sie auf der Seite **Tabellen und Sichten auswählen** auf **Fertig stellen**.  
   
-##  <a name="importdata"></a> Importieren von Datenfeeds aus öffentlichen oder Unternehmensdatenquellen  
+##  <a name="importdata"></a>Importieren von Datenfeeds aus öffentlichen oder Unternehmensdaten Quellen  
  Sie können auf öffentliche Feeds zugreifen oder benutzerdefinierte Datendienste erstellen, die Atom-Feeds aus proprietären oder Legacydatenbanksystemen generieren.  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>So importieren Sie Daten aus öffentlichen oder Unternehmensdatenfeeds  
@@ -111,7 +111,7 @@ ms.locfileid: "66080572"
   
 10. Klicken Sie auf der Seite **Tabellen und Sichten auswählen** auf **Fertig stellen**.  
   
-##  <a name="importlist"></a> Importieren von Datenfeeds aus SharePoint-Listen  
+##  <a name="importlist"></a>Importieren von Datenfeeds aus SharePoint-Listen  
  Es können alle SharePoint-Listen importiert werden, für die im Menüband (SharePoint) die Schaltfläche **Als Datenfeed exportieren** angezeigt wird. Sie können auf diese Schaltfläche klicken, um die Liste als Feed zu exportieren.  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>So importieren Sie Datenfeeds aus einer SharePoint-Liste  
@@ -122,7 +122,7 @@ ms.locfileid: "66080572"
   
 3.  Geben Sie auf der Seite **Mit einem Datenfeed verbinden** einen aussagekräftigen Namen für den Feed ein, auf den Sie zugreifen. Beim Importieren mehrerer Feeds oder Datenquellen können aussagekräftige Verbindungsnamen Informationen bereitstellen, wie die Verbindung verwendet wird.  
   
-4.  Geben Sie in Datenfeed-URL eine Adresse zum listendatendienst, und Ersetzen Sie dabei \<Server-Name > durch den tatsächlichen Namen Ihres SharePoint-Servers:  
+4.  Geben Sie unter Datenfeed-URL eine Adresse für den Listen Datendienst ein \<, und ersetzen Sie dabei Servername> durch den tatsächlichen Namen Ihres SharePoint-Servers:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -143,7 +143,7 @@ ms.locfileid: "66080572"
   
 10. Klicken Sie auf der Seite **Tabellen und Sichten auswählen** auf **Fertig stellen**.  
   
-##  <a name="importreport"></a> Importieren von Datenfeeds aus Reporting Services-Berichten  
+##  <a name="importreport"></a>Importieren von Datenfeeds aus Reporting Services Berichten  
  Wenn Sie über eine [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services-Bereitstellung verfügen, können Sie einen Datenfeed mithilfe der Atom-Renderingerweiterung aus einem vorhandenen Bericht generieren.  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>So importieren Sie Berichtsdaten aus einem veröffentlichten Reporting Services-Bericht  
@@ -156,7 +156,7 @@ ms.locfileid: "66080572"
   
 4.  Klicken Sie auf **Durchsuchen** , und wählen Sie einen Berichtsserver aus.  
   
-     Wenn Sie regelmäßig Berichte auf einem Berichtsserver verwenden, wird der Server möglicherweise in der Liste **Letzte Sites und Server**aufgeführt. Geben Sie andernfalls unter Name eine Adresse zu einem Berichtsserver ein, und klicken Sie auf **Öffnen** , um die Ordner auf der Berichtsserver-Website zu durchsuchen. Eine Beispieladresse für einen Berichtsserver möglicherweise http://\<Computername > / Reportserver.  
+     Wenn Sie regelmäßig Berichte auf einem Berichtsserver verwenden, wird der Server möglicherweise in der Liste **Letzte Sites und Server**aufgeführt. Geben Sie andernfalls unter Name eine Adresse zu einem Berichtsserver ein, und klicken Sie auf **Öffnen** , um die Ordner auf der Berichtsserver-Website zu durchsuchen. Eine Beispiel Adresse für einen Berichts Server ist möglicherweise\<http://Computername>/ReportServer.  
   
 5.  Wählen Sie den Bericht aus, und klicken Sie auf **Öffnen**. Sie können auch im Textfeld **Name** einen Link einschließlich des vollständigen Pfads und Berichtsnamens zum Bericht einfügen. Der Tabellenimport-Assistent stellt eine Verbindung mit dem Bericht her und rendert ihn im Vorschaubereich.  
   
@@ -189,11 +189,11 @@ ms.locfileid: "66080572"
   
 12. Klicken Sie auf der Seite **Tabellen und Sichten auswählen** auf **Fertig stellen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [Identitätswechsel &#40;SSAS – tabellarisch&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](process-data-ssas-tabular.md)   
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](import-data-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Unterstützte Datenquellen &#40;tabellarischen SSAS-&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Unterstützte Datentypen &#40;tabellarischen SSAS-&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Identitätswechsel &#40;tabellarischen SSAS-&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [Verarbeiten von Daten &#40;tabellarischen SSAS-&#41;](process-data-ssas-tabular.md)   
+ [Importieren von Daten &#40;tabellarischen SSAS-&#41;](import-data-ssas-tabular.md)  
   
   

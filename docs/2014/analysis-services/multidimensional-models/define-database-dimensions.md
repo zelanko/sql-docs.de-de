@@ -1,5 +1,5 @@
 ---
-title: Definieren von Datenbankdimensionen | Microsoft-Dokumentation
+title: Definieren von Daten Bank Dimensionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075610"
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
-  Verwenden Sie den Dimensions-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , um eine vorhandene Datenbankdimension in einem Projekt bzw. in einer Datenbank von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu konfigurieren. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
+  Verwenden Sie den Dimensions [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Designer in, um eine vorhandene Daten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bank Dimension in einem Projekt oder einer Datenbank zu konfigurieren. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
   
 -   Konfigurieren der Eigenschaften der Dimensionsebenen.  
   
@@ -40,16 +40,16 @@ ms.locfileid: "66075610"
   
  Der Dimensions-Designer besitzt drei Registerkarten, die in der folgenden Tabelle beschrieben werden.  
   
-|Registerkarte|Beschreibung|  
+|TAB|BESCHREIBUNG|  
 |---------|-----------------|  
-|**Dimensionsstruktur**|Verwenden Sie diese Registerkarte, um das Arbeiten mit der Struktur einer Dimension zu überprüfen oder zu erstellen das Schema der Datenquellensicht angezeigt bei einer Dimension, für die Arbeit mit Attributen und Attribute in benutzerdefinierten Hierarchien zu organisieren.|  
+|**Dimensions Struktur**|Verwenden Sie diese Registerkarte, um mit der Struktur einer Dimension zu arbeiten, um das Schema der Datenquellen Sicht für eine Dimension zu überprüfen oder zu erstellen, um Attribute zu verwenden und um Attribute in benutzerdefinierten Hierarchien zu organisieren.|  
 |**Attributbeziehungen**|Verwenden Sie diese Registerkarte, um die Attributbeziehungen einer Dimension zu erstellen, zu ändern oder zu löschen.|  
-|**Übersetzungen**|Auf dieser Registerkarte können Sie Übersetzungen von Dimensionsmetadaten in unterschiedliche Sprachen hinzufügen und bearbeiten.|  
+|**Translations**|Auf dieser Registerkarte können Sie Übersetzungen von Dimensionsmetadaten in unterschiedliche Sprachen hinzufügen und bearbeiten.|  
 |**Browser**|Auf dieser Registerkarte können Sie die Elemente einer verarbeiteten Dimension sowie die Übersetzungen von Dimensionsmetadaten überprüfen.|  
   
  In den folgenden Themen werden die Aufgaben beschrieben, die Sie im Dimensions-Designer ausführen können.  
   
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren und Konfigurieren eines Dimensionsattributs.  
   
  [Erstellen von benutzerdefinierten Hierarchien](user-defined-hierarchies-create.md)  

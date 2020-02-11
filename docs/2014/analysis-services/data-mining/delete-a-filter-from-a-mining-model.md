@@ -1,5 +1,5 @@
 ---
-title: Löschen eines Filters aus einem Miningmodell | Microsoft-Dokumentation
+title: Löschen eines Filters aus einem Mining Modell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084730"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Löschen eines Filters aus einem Miningmodell
@@ -32,13 +32,13 @@ ms.locfileid: "66084730"
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     -oder-  
+     Oder  
   
      Wählen Sie das Modell aus. Wählen Sie im Menü **Miningmodell** die Option **Modellfilter festlegen**aus.  
   
 4.  Klicken Sie im Dialogfeld **Modellfilter** mit der rechten Maustaste auf die Zeile im Raster, die die Bedingung enthält, die Sie löschen möchten.  
   
-5.  Wählen Sie **Löschen**aus.  
+5.  Klicken Sie auf **Löschen**.  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>So löschen Sie den Filter in einem Miningmodell im Dialogfeld 'Filter-Editor'  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66084730"
   
 1.  Klicken Sie im Projektmappen-Explorer auf das Miningmodell, das den Filter enthält.  
   
-2.  In der **Eigenschaften** Fenster mit der rechten Maustaste des Filtertext in der `Filter` Eigenschaft, und wählen **Alles markieren**.  
+2.  Klicken Sie im **Eigenschaften** Fenster mit der rechten Maustaste auf den Filter Text `Filter` in der-Eigenschaft, und wählen Sie **Alle auswählen**aus.  
   
 3.  Drücken Sie die Rücktaste oder die Taste ENTF.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](drill-through-to-case-data-from-a-mining-model.md)   
- [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
- [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Drillthrough zu Falldaten aus einem Mining Modell](drill-through-to-case-data-from-a-mining-model.md)   
+ [Mining Modell Tasks und Anleitungen](mining-model-tasks-and-how-tos.md)   
+ [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)  
   
   

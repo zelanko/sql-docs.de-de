@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721841"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt;-Eigenschaften
   Mithilfe des Dialogfelds für die **Eigenschaften von Agentprofilen** können Sie die für jeden Agentparameter eines Profils angegebenen Werte anzeigen und die Werte für benutzerdefinierte Profile ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Der Name des Profils.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62721841"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Replikationsmerge-Agent](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62721841"
  **Nur die in diesem Profil verwendeten Parameter anzeigen**  
  Deaktivieren Sie das Kontrollkästchen, um nur die für einen bestimmten Agent gültigen Parameter anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Replikations-Agent-Profilen](agents/work-with-replication-agent-profiles.md)   
  [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)   
  [Replikations-Agent-Profile](agents/replication-agent-profiles.md)  

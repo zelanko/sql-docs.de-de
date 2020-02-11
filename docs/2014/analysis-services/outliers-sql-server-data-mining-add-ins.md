@@ -1,5 +1,5 @@
 ---
-title: Ausreißer (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Ausreißer (SQL Server Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072136"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Ausreißer (SQL Server Data Mining-Add-Ins)
-  ![Ausreißer-Assistenten im Data Mining-Menüband](media/dmc-outliers.gif "Ausreißerentfernungs-Assistenten im Data Mining-Menüband")  
+  ![Ausreißer-Assistent (Data Mining-Menüband)](media/dmc-outliers.gif "Ausreißer-Assistent (Data Mining-Menüband)")  
   
- Ein *Ausreißer* bedeutet, dass einen Datenwert, der für jede der folgenden Gründe problematisch ist:  
+ Ein *Ausreißer* bedeutet einen Datenwert, der aus einem der folgenden Gründe problematisch ist:  
   
 -   Der Wert liegt außerhalb des erwarteten Bereichs.  
   
@@ -40,19 +40,19 @@ ms.locfileid: "66072136"
  Mit dem Data Mining-Client für Excel können Sie diese Daten ermitteln und dann die Werte aktualisieren oder unterdrücken. Sie können z. B. Ausreißer durch ein arithmetisches Mittel ersetzen oder die Zeilen löschen, die potentiell falsche Werte enthalten.  
   
 ## <a name="handling-outliers"></a>Ausreißerbehandlung  
- Die **Ausreißerentfernungs** Assistent bietet mehrere Tools, um Ausreißer zu behandeln:  
+ Der **ausreißerentfernungs** -Assistent bietet mehrere Tools, mit denen Ausreißer entsprechend behandelt werden können:  
   
 -   Zunächst können Sie die Daten untersuchen, um die Verteilung von Werten und die Beziehung zwischen Ausreißern und anderen Daten besser zu verstehen.  
   
-     Beispielsweise können Sie die **Stichprobenoptionen** Task, um zu überprüfen und beheben Sie die Werte. Die **Ausreißerentfernungs** Assistenten zeigt außerdem ein Diagramm, das entweder eine Linie oder ein Balkendiagramm, hilft Ihnen die Verteilung aller Werte zu verstehen.  
+     Beispielsweise können Sie den Task " **Daten durchsuchen** " verwenden, um die Werte zu überprüfen und zu korrigieren. Der **ausreißerentfernungs** -Assistent zeigt außerdem ein Diagramm an, entweder ein Linien-oder Balkendiagramm, um Ihnen das Verständnis der Verteilung aller Werte zu erleichtern.  
   
--   Als Nächstes können Sie die **Ausreißer** Assistenten, um Ausreißer entfernt oder geändert. Die zu verwendende Methode hängt davon ab, ob die Werte diskret oder kontinuierlich sind.  
+-   Als nächstes können Sie mit dem **ausreißerausreißerassistenten** Ausreißer entfernen oder ändern. Die zu verwendende Methode hängt davon ab, ob die Werte diskret oder kontinuierlich sind.  
   
      Der Assistent stellt diskrete Werte in einem Balkendiagramm dar, wobei jeder Balken für einen bestimmten Wert und die Höhe des Balkens für die Anzahl der Fälle für jeden Wert steht. Durch Bewegen des Schwellenwert-Schiebereglers im Diagramm können Sie die Balken verkürzen, die Gruppen mit ungewöhnlichen oder potentiell schlechten Werten darstellen.  
   
 -   Der Assistent zeigt kontinuierliche Werte entweder in einem Balkendiagramm oder in einem Liniendiagramm an. Im Liniendiagramm wird der Wert auf der X-Achse und die Anzahl der Werte auf der Y-Achse dargestellt.  
   
-     Sie können steuern, ob entfernt, oder behalten Sie die Werte am unteren und oberen Ende des Diagramms durch Ändern der **mindestens** und **maximale** Werte oder die Schieberegler. Beim Ändern der Minimum- und Maximumwerte werden die unterdrückten Daten im Diagramm schattiert dargestellt.  
+     Sie können steuern, ob die Werte am unteren und am Ende des Diagramms entfernt oder beibehalten werden sollen, indem Sie die **minimalen** und **maximalen** Werte ändern oder die Balken verschieben. Beim Ändern der Minimum- und Maximumwerte werden die unterdrückten Daten im Diagramm schattiert dargestellt.  
   
  Nachdem Sie ausgewählt haben, mit welchen Ausreißern Sie arbeiten möchten, können Sie im Assistenten festlegen, wie die Ausreißer verarbeitet werden sollen. Sie können die Zeilen mit den Ausreißerwerten löschen oder einen Ersatzwert angeben, wie z. B. einen Mittelwert, eine Null oder einen anderen Wert Ihrer Wahl.  
   
@@ -60,41 +60,41 @@ ms.locfileid: "66072136"
   
 ### <a name="using-the-outlier-wizard"></a>Verwenden des Ausreißerentfernungs-Assistenten  
   
-1.  In der **Data Mining** des Menübands, klicken Sie auf **Daten bereinigen**, und wählen Sie **Ausreißer**.  
+1.  Klicken Sie im **Data Mining** -Menüband auf **Daten bereinigen**, und wählen Sie **Ausreißer**aus.  
   
-2.  In der **Quelldaten auswählen** Dialogfeld Wählen Sie eine Excel-Datentabelle oder einen Bereich von Zellen, und klicken Sie auf **Weiter**.  
+2.  Wählen Sie im Dialogfeld **Quelldaten auswählen** eine Excel-Datentabelle oder einen Zellbereich aus, und klicken Sie auf **weiter**.  
   
     > [!WARNING]  
-    >  Sie können keine der **Ausreißer** Assistenten auf externe Daten, es sei denn, Sie ihn zunächst nach Excel kopieren.  
+    >  Sie können den **Ausreißer** -Assistenten nicht für externe Daten verwenden, es sei denn, Sie kopieren ihn zuerst in Excel.  
   
-3.  In der **Spalte auswählen** wählen Sie im Dialogfeld eine **einzelne** Spalte.  
+3.  Wählen Sie im Dialogfeld **Spalte auswählen** eine **einzelne** Spalte aus.  
   
      Klicken Sie auf **Weiter**.  
   
-4.  In der **Schwellenwerte angeben** Dialogfeld überprüfen Sie die Verteilung der Daten.  
+4.  Überprüfen Sie im Dialogfeld **Schwellenwerte angeben** die Verteilung der Daten.  
   
     -   Wenn die Spalte diskrete Werte enthält, zeigt der Assistent ein Histogramm an, das die Anzahl für jeden diskreten Wert enthält.  
   
-         Vorausgesetzt, dass Ausreißer selten auftreten, filtern, indem Sie ändern die **mindestens** Wert.  
+         Wenn es sich bei Ausreißern um seltene Werte handelt, können Sie diese filtern, indem Sie den **Minimal** Wert ändern.  
   
-    -   Wenn die Spalte numerische Daten enthält, können Sie klicken die **als diskrete Werte anzeigen** Schaltfläche oder die **als numerische Werte anzeigen** Schaltfläche zum Wechseln zwischen die Werten in einem Balken- oder Liniendiagramm anzeigen.  
+    -   Wenn die Spalte numerische Daten enthält, können Sie auf die Schaltfläche **als diskret anzeigen** oder auf die Schaltfläche **als numerisch anzeigen** klicken, um zwischen dem Anzeigen der Werte in einem Balkendiagramm oder einem Liniendiagramm zu wechseln.  
   
-5.  In der **Schwellenwerte angeben** Dialogfeld Wählen Sie den Bereich der Daten, die Sie einen minimalen und maximalen Wert eingeben, oder indem Sie die Schieberegler ziehen beibehalten möchten. Klicken Sie auf **Weiter**.  
+5.  Wählen Sie im Dialogfeld **Schwellenwerte angeben** den Datenbereich aus, den Sie aufbewahren möchten, indem Sie einen minimal-und Höchstwert eingeben, oder indem Sie die Schieberegler ziehen. Klicken Sie auf **Weiter**.  
   
-6.  In der **Ausreißerbehandlung** Dialogfeld Feld angeben, ob die Werte gelöscht oder ersetzt werden sollen, und klicken Sie auf **Weiter**.  
+6.  Geben Sie im Dialogfeld **ausreißerbehandlung** an, ob die Werte gelöscht oder ersetzt werden sollen, und klicken Sie auf **weiter**.  
   
-7.  In der **Ziel auswählen** Dialogfeld geben die neuen Daten gespeichert werden sollen.  
+7.  Geben Sie im Dialogfeld **Ziel auswählen** an, wo die neuen Daten gespeichert werden sollen.  
   
 ### <a name="related-options"></a>Zugehörige Optionen  
  Der Assistent bietet folgende Optionen:  
   
-|**Options**|**Anmerkung**|  
+|**Optionen**|**Comment**|  
 |-----------------|-----------------|  
-|**Wählen Sie Spalte**|Sie können nur mit jeweils einer Spalte arbeiten.|  
-|**Umgang mit Schwellenwerten angeben**|Legen Sie einen Schwellenwert mit **mindestens** um Werte auszuschließen, die in weniger Zeilen als der Schwellenwert gefunden werden.<br /><br /> Zunächst den Wert in **minimale** ist gleich dem Wert mit den wenigsten Zeilen, und Sie können nicht als das Minimum niedriger als dieser Wert.|  
+|**Spalte auswählen**|Sie können nur mit jeweils einer Spalte arbeiten.|  
+|**Umgang mit Schwellenwerten angeben**|Legen Sie einen Schwellenwert mithilfe von **Minimal** fest, um Werte auszuschließen, die in weniger Zeilen als der Schwellenwert gefunden werden.<br /><br /> Anfänglich ist der Wert **Minimal** gleich dem Wert mit den wenigsten Zeilen, und Sie können den Minimalwert nicht unterschreiten.|  
 |**Ausreißerbehandlung**|Wenn Sie Ausreißer löschen möchten, können Sie die Daten im aktuellen Arbeitsblatt ändern oder eine Kopie der Daten in einem neuen Arbeitsblatt erstellen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Durchsuchen von Daten &#40;SQL Server Data Mining-Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
   

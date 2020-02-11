@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075539"
 ---
 # <a name="define-semiadditive-behavior"></a>Semiadditives Verhalten definieren
@@ -48,11 +48,11 @@ ms.locfileid: "66075539"
   
 -   First Nonempty Child  
   
--   None  
+-   Keine  
   
- Diese Option werden keine Measures mit einer regulären Aggregationsfunktion geändert: `Sum`, `Min`, `Max`, `Count`, oder `Distinct``Count`.  
+ Mit dieser Option werden keine Measures mit einer regulären Aggregations Funktion `Sum`geändert `Min`: `Max`, `Count`,, `Distinct``Count`oder.  
   
- **Der Assistent wurde die "Konto" Kontodimension, die semiadditive Elemente enthält. Elemente dieser Dimension gemäß dem semiadditiven Verhalten, die für den jeweiligen Kontotyp angegeben werden vom Server aggregiert.**  
+ **Die Konto Dimension "Account", die Semiadditives Elemente enthält, wurde vom Assistenten erkannt. Die Elemente dieser Dimension werden vom Server gemäß dem semiadditiven Verhalten aggregiert, das für jeden Kontotyp angegeben ist.**  
  Bewirkt, dass alle Measures aus einer Measuregruppe, die durch eine Dimension des Typs Account dimensioniert wurden, vom System auf die Aggregationsfunktion By Account festgelegt und Elemente dieser Dimension gemäß dem semiadditiven Verhalten, das für den jeweiligen Kontotyp angegeben ist, vom Server aggregiert werden.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "66075539"
   
  Für die einzelnen Measures können Sie einen der Typen der semiadditiven Funktionalität auswählen, die in der folgenden Tabelle beschrieben sind.  
   
-|Semiadditive Funktion|Description|  
+|Semiadditive Funktion|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |Average of Children|Die Aggregation eines Elements ist der Durchschnitt seiner untergeordneten Elemente.|  
 |ByAccount|Das System liest das für den Kontotyp angegebene semiadditive Verhalten.|  
@@ -78,7 +78,7 @@ ms.locfileid: "66075539"
 |LastNonEmpty|Der Elementwert wird als der Wert seines letzten untergeordneten Elements in der Zeitdimension ausgewertet, das Daten enthält.|  
 |Max|Die Standardfunktion für maximale Aggregation wird angewendet.|  
 |Min|Die Standardfunktion für minimale Aggregation wird angewendet.|  
-|None|Keine Aggregation wird angewendet.|  
+|Keine|Keine Aggregation wird angewendet.|  
 |SUM|Die Standardfunktion zur Summierung wird angewendet.|  
   
  Vorhandenes semiadditive Verhalten wird nach Abschluss des Assistenten überschrieben.  

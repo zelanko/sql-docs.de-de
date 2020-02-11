@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661757"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Eigenschaftenfenster (F1-Hilfe, Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "62661757"
   
  Im Fenster **Eigenschaften** werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Objektname**  
  Führt das aktuell ausgewählte Objekt bzw. die aktuell ausgewählten Objekte auf. Es werden nur die Objekte aus dem aktiven Editor oder Designer angezeigt.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62661757"
  **Beschreibungsbereich**  
  Der Beschreibungsbereich befindet sich unten im Fenster **Eigenschaften** und zeigt den Eigenschaftentyp und eine kurze Beschreibung der Eigenschaft an. Sie können die Beschreibung der Eigenschaft ein- und ausschalten, indem Sie den Befehl **Beschreibung** im Kontextmenü verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des Eigenschaftenfensters in Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

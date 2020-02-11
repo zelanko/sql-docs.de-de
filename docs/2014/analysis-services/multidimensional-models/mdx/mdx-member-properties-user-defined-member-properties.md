@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Elementeigenschaften (MDX) | Microsoft-Dokumentation
+title: Benutzerdefinierte Element Eigenschaften (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074261"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Benutzerdefinierte Elementeigenschaften (MDX)
@@ -30,7 +30,7 @@ ms.locfileid: "66074261"
 -   Um benutzerdefinierte Elementeigenschaften programmgesteuert hinzuzufügen, kann Ihre Anwendung entweder Analysis Management Objects (AMO) oder eine Kombination aus XMLA (XML for Analysis) und ASSL (Analysis Services Scripting Language) verwenden. Weitere Informationen finden Sie unter [Attributbeziehungen](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 ## <a name="retrieving-user-defined-member-properties"></a>Abrufen von benutzerdefinierten Elementeigenschaften  
- Sie können entweder eine benutzerdefinierte Elementeigenschaften abrufen, die `PROPERTIES` Schlüsselwort oder [Eigenschaften](/sql/mdx/properties-mdx) Funktion.  
+ Benutzerdefinierte Element Eigenschaften können mithilfe des `PROPERTIES` -Schlüssel Worts oder der [Properties](/sql/mdx/properties-mdx) -Funktion abgerufen werden.  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>Verwenden des PROPERTIES-Schlüsselworts zum Abrufen von benutzerdefinierten Elementeigenschaften  
  Die Syntax für das Abrufen von benutzerdefinierten Elementeigenschaften gleicht der Syntax, mit der systeminterne Eigenschaften von Ebenenelementen abgerufen werden. Die folgende Syntax verdeutlicht dies:  
@@ -66,8 +66,8 @@ FROM [Adventure Works]
   
  Weitere Informationen zum Erstellen berechneter Elemente finden Sie unter [Erstellen von berechneten Elementen in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Elementeigenschaften &#40;MDX&#41;](mdx-member-properties.md)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden von Element Eigenschaften &#40;MDX-&#41;](mdx-member-properties.md)   
+ [Eigenschaften &#40;MDX-&#41;](/sql/mdx/properties-mdx)  
   
   

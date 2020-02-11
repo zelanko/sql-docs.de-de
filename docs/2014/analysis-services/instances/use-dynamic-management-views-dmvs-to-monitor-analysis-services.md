@@ -1,5 +1,5 @@
 ---
-title: Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services | Microsoft-Dokumentation
+title: Verwenden dynamischer Verwaltungs Sichten (DMVs) zum Überwachen von Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079583"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
@@ -28,35 +28,39 @@ SELECT * FROM $System.<schemaRowset>
   
  DMV-Abfragen geben Informationen zum Serverstatus zurück, der während der Ausführung der Abfrage gegolten hat. Verwenden Sie stattdessen die Ablaufverfolgung, um Vorgänge in Echtzeit zu überwachen. Weitere Informationen finden Sie unter [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md).  
   
- Dieses Thema enthält folgende Abschnitte:  
+ Dieses Thema enthält die folgenden Abschnitte:  
   
  [Vorteile der Verwendung von DMV-Abfragen](#bkmk_ben)  
   
  [Beispiele und Szenarien](#bkmk_ex)  
   
- [Abfragesyntax](#bkmk_syn)  
+ [Abfrage Syntax](#bkmk_syn)  
   
  [Tools und Berechtigungen](#bkmk_tools)  
   
  [DMV-Referenz](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a> Vorteile der Verwendung von DMV-Abfragen  
+##  <a name="bkmk_ben"></a>Vorteile der Verwendung von DMV-Abfragen  
  DMV-Abfragen geben Informationen zu Vorgängen und zum Ressourcenverbrauch zurück, die nicht auf anderen Wegen verfügbar sind.  
   
  DMV-Abfragen stellen eine Alternative zur Ausführung von XML/A-Discover-Befehlen dar. Für die meisten Administratoren ist das Schreiben einer DMV-Abfrage einfacher, weil die Abfragesyntax auf SQL basiert. Außerdem wird das Resultset in einem tabellarischen Format zurückgegeben, das besser lesbar ist und aus dem besser kopiert werden kann.  
   
-##  <a name="bkmk_ex"></a> Beispiele und Szenarien  
+##  <a name="bkmk_ex"></a>Beispiele und Szenarien  
  Eine DMV-Abfrage kann Ihnen helfen, Fragen zu aktiven Sitzungen und Verbindungen sowie die Frage zu beantworten, welche Objekte zu einem bestimmten Zeitpunkt den höchsten CPU-Anteil oder den meisten Arbeitsspeicher nutzen. Dieser Abschnitt enthält Beispiele für die Szenarien, in denen DMV-Abfragen am häufigsten verwendet werden. Weitere Informationen zur Verwendung von DMV-Abfragen für die Überwachung einer Serverinstanz finden Sie auch im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) .  
   
- `Select * from $System.discover_object_activity` /** Diese Abfrage erstellt einen Bericht zu der Objektaktivität seit dem letzten Start des Diensts. Beispielabfragen auf Grundlage dieser DMV-Abfrage finden Sie unter [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
+ 
+  `Select * from $System.discover_object_activity` /** Diese Abfrage erstellt einen Bericht zu der Objektaktivität seit dem letzten Start des Diensts. Beispielabfragen auf Grundlage dieser DMV-Abfrage finden Sie unter [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
   
- `Select * from $System.discover_object_memory_usage` /** Diese Abfrage erstellt einen Bericht zum Arbeitsspeicherverbrauch nach Objekt.  
+ 
+  `Select * from $System.discover_object_memory_usage` /** Diese Abfrage erstellt einen Bericht zum Arbeitsspeicherverbrauch nach Objekt.  
   
- `Select * from $System.discover_sessions` /** Diese Abfrage erstellt einen Bericht zu aktiven Sitzungen, einschließlich Sitzungsbenutzer und -dauer.  
+ 
+  `Select * from $System.discover_sessions` /** Diese Abfrage erstellt einen Bericht zu aktiven Sitzungen, einschließlich Sitzungsbenutzer und -dauer.  
   
- `Select * from $System.discover_locks` /** Diese Abfrage gibt eine Momentaufnahme der Sperren zurück, die zu verschiedenen Zeitpunkten verwendet werden.  
+ 
+  `Select * from $System.discover_locks` /** Diese Abfrage gibt eine Momentaufnahme der Sperren zurück, die zu verschiedenen Zeitpunkten verwendet werden.  
   
-##  <a name="bkmk_syn"></a> Abfragesyntax  
+##  <a name="bkmk_syn"></a>Abfrage Syntax  
  Die Abfrage-Engine für DMVs ist der Data Mining-Parser. Die DMV-Abfragesyntax basiert auf der [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)-Anweisung.  
   
  Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
@@ -81,14 +85,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> Tools und Berechtigungen  
+##  <a name="bkmk_tools"></a>Tools und Berechtigungen  
  Sie müssen über Systemadministratorberechtigungen für die Analysis Services-Instanz verfügen, um eine DMV-Abfrage ausführen zu können.  
   
  Sie können jede beliebige Clientanwendung verwenden, die MDX- oder DMX-Abfragen unterstützt, z. B. SQL Server Management Studio, einen Reporting Services-Bericht oder ein PerformancePoint-Dashboard.  
   
  Stellen Sie zum Ausführen einer DMV-Abfrage in Management Studio eine Verbindung mit der Instanz her, die Sie abfragen möchten, und klicken Sie auf **Neue Abfrage**. Sie können eine Abfrage über ein MDX- oder DMX-Abfragefenster ausführen.  
   
-##  <a name="bkmk_ref"></a> DMV-Referenz  
+##  <a name="bkmk_ref"></a>DMV-Referenz  
  Nicht alle Schemarowsets verfügen über eine DMV-Schnittstelle. Führen Sie die folgende Abfrage aus, um eine Liste aller Schemarowsets zurückzugeben, die per DMV abgefragt werden können.  
   
 ```  
@@ -98,9 +102,9 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Wenn eine DMV für ein angegebenes Rowset nicht vorliegen, gibt der Server den folgenden Fehler zurück: "Die \<Schemarowset > wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
+>  Wenn eine DMV für ein bestimmtes Rowset nicht verfügbar ist, gibt der Server den folgenden Fehler zurück: " \<der Schemarowset> Anforderungstyp wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
   
-|Rowset|Description|  
+|Rowset|BESCHREIBUNG|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Gibt eine Liste der Analysis Services-Datenbanken für die aktuelle Verbindung zurück.|  
 |[DBSCHEMA_COLUMNS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Gibt eine Liste aller Spalten in der aktuellen Datenbank zurück. Sie können diese Liste verwenden, um eine DMV-Abfrage zu erstellen.|  
@@ -116,7 +120,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|Gibt Metadaten zu den Enumeratoren zurück, die für eine bestimmte Datenquelle unterstützt werden.|  
 |[DISCOVER_INSTANCES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|Gibt Informationen zur angegebenen Instanz zurück.<br /><br /> Erfordert die Hinzufügung von SYSTEMRESTRICTSCHEMA und weiteren Parametern.|  
 |[DISCOVER_JOBS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|Gibt Informationen zu aktuellen Aufträgen zurück.|  
-|[DISCOVER_KEYWORDS-Rowset &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|Gibt die Liste der reservierten Schlüsselwörter zurück.|  
+|[DISCOVER_KEYWORDS Rowset &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|Gibt die Liste der reservierten Schlüsselwörter zurück.|  
 |[DISCOVER_LITERALS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|Gibt die Liste der Literale zurück, einschließlich Datentypen und Werte mit XMLA-Unterstützung.|  
 |[DISCOVER_LOCKS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|Gibt eine Momentaufnahme der zu einem bestimmten Zeitpunkt verwendeten Sperren zurück.|  
 |[DISCOVER_MEMORYGRANT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|Gibt Informationen zum Arbeitsspeicher zurück, der von Analysis Services beim Start zugeordnet wird.|  
@@ -127,7 +131,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_PARTITION_STAT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-stat-rowset)|Stellt Informationen zu den Partitionen in einer Dimension, Tabelle oder Measuregruppe bereit.<br /><br /> Erfordert die Hinzufügung von SYSTEMRESTRICTSCHEMA und weiteren Parametern.|  
 |[DISCOVER_PERFORMANCE_COUNTERS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-performance-counters-rowset)|Listet die in einem Leistungsindikator verwendeten Spalten auf.<br /><br /> Erfordert die Hinzufügung von SYSTEMRESTRICTSCHEMA und weiteren Parametern.|  
 |[DISCOVER_PROPERTIES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-properties-rowset)|Gibt Informationen zu Eigenschaften mit XMLA-Unterstützung für die angegebene Datenquelle zurück.|  
-|[DISCOVER_SCHEMA_ROWSETS-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|Gibt Namen, Einschränkungen, Beschreibungen und andere Informationen für alle von XMLA unterstützten Enumerationswerte zurück.|  
+|[DISCOVER_SCHEMA_ROWSETS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|Gibt Namen, Einschränkungen, Beschreibungen und andere Informationen für alle von XMLA unterstützten Enumerationswerte zurück.|  
 |[DISCOVER_SESSIONS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-sessions-rowset)|Erstellt Berichte zu aktiven Sitzungen, einschließlich Sitzungsbenutzer und -dauer.|  
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|Stellt Informationen zu Speichertabellen auf Spalten- und Segmentebene bereit, die von einer im Tabellenmodus oder SharePoint-Modus ausgeführten Analysis Services-Datenbank verwendet werden.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|Ermöglicht dem Client die Zuweisung von Spalten zu Speichertabellen, die von einer im Tabellenmodus oder SharePoint-Modus ausgeführten Analysis Services-Datenbank verwendet wurden.|  
@@ -162,9 +166,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Gibt den vollqualifizierten Namen jeder Eigenschaft zusammen mit Eigenschaftstyp, Datentyp und anderen Metadaten zurück.|  
 |[MDSCHEMA_SETS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Gibt eine Liste mit den Sätzen zurück, die unter der aktuellen Verbindung definiert sind.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
- [Neue SYSTEMRESTRICTEDSCHEMA-Funktion für eingeschränkte Rowsets und DMVs](https://go.microsoft.com/fwlink/?LinkId=231885)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server 2008 R2 Analysis Services Betriebshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [Neue System. Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [Neue systemrestrictedschema-Funktion für eingeschränkte Rowsets und DMVs](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

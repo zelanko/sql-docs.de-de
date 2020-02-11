@@ -1,5 +1,5 @@
 ---
-title: Mining-Struktur anzeigen (Datamining-Modell-Designer) | Microsoft-Dokumentation
+title: Mining Strukturansicht (Data Mining-Modell-Designer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077667"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Miningstruktur-Sicht (Modell-Designer für Data Mining)
@@ -24,16 +24,16 @@ ms.locfileid: "66077667"
   
  Die **Miningstruktur** -Sicht weist folgende Tools und Dialogfelder auf:  
   
--   [Neues Dialogfeld Miningmodell &#40;Mining-Struktur anzeigen&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
+-   [Dialog Feld "neues Mining Modell" &#40;Mining Strukturansicht&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
--   [Wählen Sie im Dialogfeld Spalte &#40;Mining-Struktur anzeigen&#41;](select-a-column-dialog-box-mining-structure-view.md)  
+-   [Dialog Feld Spalte auswählen &#40;Mining Strukturansicht&#41;](select-a-column-dialog-box-mining-structure-view.md)  
   
--   [Wählen Sie ein Dialogfeld für geschachtelte Tabelle Schlüsselspalte &#40;Mining-Struktur anzeigen&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
+-   [Dialog Feld Schlüssel Spalte für eine Schlüssel Spalte auswählen &#40;Mining Strukturansicht&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodelle-Sicht &#40;Datamining-Modell-Designer&#41;](mining-models-view-data-mining-model-designer.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Generator für Vorhersageabfragen &#40;Datamining&#41;](prediction-query-builder-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Modell Ansicht &#40;Data Mining-Modell-Designer&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)  
   
   

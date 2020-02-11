@@ -1,5 +1,5 @@
 ---
-title: Abfragen der Data Mining-Schemarowsets (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Abfragen der Data Mining-Schemarowsets (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084909"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Abfragen der Data Mining-Schemarowsets (Analysis Services – Data Mining)
@@ -33,7 +33,7 @@ ms.locfileid: "66084909"
 ## <a name="list-of-data-mining-schema-rowsets"></a>Liste der Data Mining-Schemarowsets  
  In der folgenden Tabelle werden die Data Mining-Schemarowsets, die möglicherweise zum Abfragen und Überwachen nützlich sind, aufgelistet.  
   
-|Rowsetname|Description|  
+|Rowsetname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS-Rowset|Listet alle Miningmodelle im aktuellen Kontext auf.<br /><br /> Beinhaltet Informationen wie das Erstellungsdatum, Parameter, die zur Erstellung des Modells verwendet wurden, und die Größe des Trainingsatzes.|  
 |DMSCHEMA_MINING_COLUMNS|Listet alle in Miningmodellen verwendeten Spalten im aktuellen Kontext auf.<br /><br /> Zu den Informationen gehören das Zuordnen der Quellspalte der Miningstruktur, der Datentyp, die Genauigkeit und Vorhersagefunktionen, die mit der Spalte verwendet werden können.|  
@@ -51,7 +51,7 @@ ms.locfileid: "66084909"
 ## <a name="examples"></a>Beispiele  
  Der folgende Abschnitt enthält einige Beispiele für Abfragen gegen die Data Mining-Schemarowsets.  
   
-### <a name="example-1-list-data-mining-services"></a>Beispiel 1: Auflisten von Data Mining-Dienste  
+### <a name="example-1-list-data-mining-services"></a>Beispiel 1: Auflisten von Data Mining-Diensten  
  Die folgende Abfrage gibt eine Liste der Miningdienste zurück, die auf dem aktuellen Server zur Verfügung stehen, d. h. die aktivierten Algorithmen. Die für jeden Miningdienst bereitgestellten Spalten beinhalten die Modellierungsflags und Inhaltstypen, die von jedem Algorithmus verwendet werden können, die GUID für jeden Dienst und jegliche Vorhersagenbeschränkungen, die für jeden Dienst hinzugefügt worden sein könnten.  
   
 ```  
@@ -59,7 +59,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Beispiel 2: Liste Miningmodellparametern  
+### <a name="example-2-list-mining-model-parameters"></a>Beispiel 2: Auflisten von Miningmodellparametern  
  Das folgende Beispiel gibt die Parameter zurück, die verwendet wurden, um ein bestimmtes Miningmodell zu erstellen.  
   
 ```  
@@ -68,7 +68,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Beispiel 3: Listen Sie aller Rowsets auf  
+### <a name="example-3-list-all-rowsets"></a>Beispiel 3: Auflisten aller Rowsets  
  Im folgenden Beispiel wird eine umfassende Liste der Rowsets, die auf dem aktuellen Server verfügbar sind, zurückgegeben:  
   
 ```  
@@ -76,7 +76,7 @@ SELECT *
 FROM $system.DBSCHEMA_TABLES  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Problembehandlungskonzepte (Analysis Services – Datamining)](https://msdn.microsoft.com/library/cc645881.aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konzepte zur Problembehandlung (Analysis Services &amp;ndash; Data Mining)](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Auswählen und Zuordnen von Modelltestdaten | Microsoft-Dokumentation
+title: Auswählen und Zuordnen von Modell Test Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085761"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Auswählen und Zuordnen von Modelltestdaten
@@ -43,13 +43,13 @@ ms.locfileid: "66085761"
   
  In diesem Thema wird beschrieben, wie die Testdaten ausgewählt und zugeordnet werden:  
   
- [Auswählen von Eingabetabellen zum Testen der Genauigkeit eines Miningmodells](#bkmk_SelectInputs)  
+ [Auswählen von Eingabe Tabellen zum Testen der Genauigkeit eines Mining Modells](#bkmk_SelectInputs)  
   
- [Zuordnen von Modellspalten zu den Spalten in den Testdaten](#bkmk_MapColumns)  
+ [Zuordnen von Modell Spalten zu den Spalten in den Testdaten](#bkmk_MapColumns)  
   
- [Ändern der Methode für die Zuordnung von Spalten in den Testdaten zum Modell](#bkmk_ChangeMappings)  
+ [Ändern der Art und Weise, wie Spalten in den Testdaten dem Modell zugeordnet werden](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a> So wählen Sie Eingabetabellen zum Testen der Genauigkeit eines Miningmodells aus  
+##  <a name="bkmk_SelectInputs"></a>So wählen Sie Eingabe Tabellen zum Testen der Genauigkeit eines Mining Modells aus  
   
 1.  Doppelklicken Sie im Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf die Miningstruktur, die das Modell enthält, das Sie darstellen möchten.  
   
@@ -57,17 +57,17 @@ ms.locfileid: "66085761"
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** der Sicht **Mininggenauigkeitsdiagramm** eine der folgenden Optionen aus:  
   
-     **Testfälle für Miningmodell verwenden**  
+     **Testfälle für Mining Modell verwenden**  
   
-     **Testfälle für Miningstruktur verwenden**  
+     **Testfälle für Mining Struktur verwenden**  
   
-     **Anderes Dataset verwenden**  
+     **Anderes Dataset angeben**  
   
 4.  Wenn Sie **Anderes Dataset verwenden**auswählen, können Sie optional auf **Filter-Editor öffnen** klicken, um Filterbedingungen für das Eingabedataset zu erstellen. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  Klicken Sie auf die Registerkarte **Prognosegütediagramm** oder **Klassifikationsmatrix** , um die von Ihnen festgelegten Testdaten für die automatische Erstellung des Diagramms zu verwenden.  
   
-##  <a name="bkmk_MapColumns"></a> So ordnen Sie Modellspalten den Spalten in den Testdaten zu  
+##  <a name="bkmk_MapColumns"></a>So ordnen Sie Modell Spalten den Spalten in den Testdaten zu  
   
 1.  Doppelklicken Sie auf die Miningstruktur, die das Modell enthält, das Sie darstellen möchten. Daraufhin werden die Struktur und die Modelle im Data Mining-Designer geöffnet.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66085761"
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  ein Dialogfeld geöffnet, und die Definition des externen Datasets zu erstellen.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um ein Dialogfeld zu öffnen und die Definition des externen Datasets zu erstellen.  
   
 5.  Wählen Sie im Dialogfeld **Miningstruktur auswählen** die Miningstruktur aus, mit der Sie arbeiten wollen, und klicken Sie dann auf **OK**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085761"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a> So ändern Sie die Methode für Zuordnung von Eingabedaten zum Modell  
+##  <a name="bkmk_ChangeMappings"></a>So ändern Sie die Art der Zuordnung von Eingabedaten zum Modell  
   
 1.  Doppelklicken Sie im Data Mining-Designer auf die Struktur mit den Modellen, die Sie im Diagramm darstellen möchten.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66085761"
   
 4.  Wählen Sie unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**.  
   
-5.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  ein Dialogfeld geöffnet, und die Definition der externen Datenquelle zu erstellen.  
+5.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um ein Dialogfeld zu öffnen und die Definition der externen Datenquelle zu erstellen.  
   
 6.  Klicken Sie im Dialogfeld **Spaltenzuordnung angeben** auf **Falltabelle auswählen**.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66085761"
   
      Die neuen Spaltenzuordnungen werden im Dialogfeld **Spaltenzuordnung angeben** angezeigt. Sie können eine Zuordnung entfernen, indem Sie die Linie zwischen den Spalten auswählen und die ENTF-Taste drücken. Sie können eine neue Verbindung erstellen, indem Sie in der **Miningstruktur** -Tabelle eine Spalte auswählen und diese Spalte auf die entsprechende Spalte in der **Eingabetabelle(n) auswählen** -Tabelle ziehen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

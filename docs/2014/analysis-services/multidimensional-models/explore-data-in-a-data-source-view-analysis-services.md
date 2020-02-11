@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Daten in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
+title: Durchsuchen von Daten in einer Datenquellen Sicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075128"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Durchsuchen von Daten in einer Datenquellensicht (Analysis Services)
@@ -38,17 +38,17 @@ ms.locfileid: "66075128"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, Sicht oder benannte Abfrage, die die anzuzeigenden Daten enthält, und klicken Sie anschließend auf **Daten durchsuchen**.  
   
-     Die Datenquelle des zugrunde liegenden Tabelle, Ansicht oder benannten Abfrage in der Datenquellensicht sind Abfragen, und die Ergebnisse werden in der **Durchsuchen \<Objektname > Tabelle** Registerkarte.  
+     Die Datenquelle, die der Tabelle, Sicht oder benannten Abfrage in der Datenquellen Sicht zugrunde liegt, sind Abfragen, und die Ergebnisse werden auf der Registerkarte **Objektname> Tabelle durchsuchen \<** angezeigt.  
   
-4.  Auf der **Durchsuchen \<Objektname > Tabelle** -Symbolleiste klicken Sie auf die **Samplingoptionen** Symbol.  
+4.  Klicken Sie auf der Symbolleiste **Objektname> Tabelle durchsuchen \<** auf das Symbol **Stichproben Optionen** .  
   
      Das Dialogfeld **Optionen zum Durchsuchen von Daten** wird geöffnet. In diesem Dialogfeld können Sie die Stichprobenmethode (mehr oder weniger Datensätze als die Standardstichprobengröße von 5000 Zeilen) oder die Anzahl für die Stichprobe angeben.  
   
 5.  Klicken Sie nach Bedarf auf **OK** oder **Abbrechen** .  
   
-6.  Um die Daten erneut einlesen, klicken Sie auf **Resample Daten** auf die **Durchsuchen \<Objektname > Tabelle** Symbolleiste.  
+6.  Um die Daten neu zu durch **Suchen \<** , klicken Sie auf der Symbolleiste Objektname> Tabelle auf **Daten neu Sample** .  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellensichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

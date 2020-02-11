@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler – Filter bearbeiten | Microsoft-Dokumentation
+title: Filter für SQL Server Profiler Bearbeitung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089781"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler – Filter bearbeiten
@@ -25,11 +25,11 @@ ms.locfileid: "66089781"
 > [!NOTE]  
 >  Für Spalten mit Zeichenfolgendaten werden die Filterkriterien als Zeichenfolgenwert LIKE oder NOT LIKE angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Filtern von Ereignissen in einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [Filtern von Ereignissen anhand der Ereignisendzeit &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
- [Filtern von Ereignissen, die basierend auf der Ereignisstartzeit &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
- [Filtern einer Ablaufverfolgung](../relational-databases/sql-trace/filter-a-trace.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Ereignisse in einer Ablauf Verfolgung &#40;SQL Server Profiler Filtern&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [Ereignisse basierend auf der Ereignis Endzeit &#40;SQL Server Profiler Filtern&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
+ [Ereignisse basierend auf der Ereignis Start Zeit &#40;SQL Server Profiler Filtern&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
+ [Filtern einer Ablauf Verfolgung](../relational-databases/sql-trace/filter-a-trace.md)   
  [Filtern von Ablaufverfolgungen mit SQL Server Profiler](../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)  
   
   

@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727464"
 ---
 # <a name="canceling-commands-xmla"></a>Abbrechen von Befehlen (XMLA)
-  Abhängigkeit von den Administrationsberechtigungen des Benutzers, der den Befehl ausgibt die [Abbrechen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) -Befehl in XML for Analysis (XMLA) einen Befehl, die sich auf eine Sitzung, eine Sitzung, eine Verbindung, einem Serverprozess oder einer zugeordneten Sitzung abbrechen können oder die Verbindung.  
+  Abhängig von den administrativen Berechtigungen des Benutzers, der den Befehl ausgibt, kann der [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) -Befehl in XML for Analysis (XMLA) einen Befehl für eine Sitzung, eine Sitzung, eine Verbindung, einen Server Prozess oder eine zugeordnete Sitzung oder Verbindung abbrechen.  
   
 ## <a name="canceling-commands"></a>Abbrechen von Befehlen  
  Ein Benutzer kann den zurzeit ausgeführten Befehl innerhalb der aktuellen expliziten Sitzung abbrechen, indem er einen `Cancel`-Befehl ohne festgelegte Eigenschaften sendet.  
@@ -42,25 +42,25 @@ ms.locfileid: "62727464"
  Wenn ein Benutzer einen `Batch`-Befehl abbricht, werden alle noch nicht ausgeführten Befehle innerhalb des `Batch`-Befehls abgebrochen. Wenn es sich bei dem `Batch`-Befehl um eine Transaktionsreplikation handelt, werden alle Befehle, die vor der Ausführung des `Cancel`-Befehls ausgeführt wurden, rückgängig gemacht.  
   
 ## <a name="canceling-sessions"></a>Abbrechen von Sitzungen  
- Durch Angabe von eine Sitzungs-ID für eine explizite Sitzung in der [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) Eigenschaft der `Cancel` können Datenbankadministratoren oder Serveradministratoren kann eine Sitzung abbrechen, einschließlich des gerade ausgeführten Befehls . Ein Datenbankadministrator kann nur Sitzungen für Datenbanken abbrechen, für die er über Administratorberechtigungen verfügt.  
+ Wenn Sie in der [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) -Eigenschaft des `Cancel` Befehls eine Sitzungs-ID für eine explizite Sitzung angeben, kann ein Datenbankadministrator oder Server Administrator eine Sitzung abbrechen, einschließlich des aktuell ausgeführten Befehls. Ein Datenbankadministrator kann nur Sitzungen für Datenbanken abbrechen, für die er über Administratorberechtigungen verfügt.  
   
- Ein Datenbankadministrator kann die aktiven Sitzungen für eine festgelegte Datenbank abrufen, indem er das DISCOVER_SESSIONS-Schemarowset abruft. Zum Abrufen des DISCOVER_SESSIONS-Schemarowsets verwendet der Datenbankadministrator XMLA `Discover` Methode und gibt die entsprechende Datenbank-ID für die Einschränkungsspalte session_current_database in der [Einschränkungen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) Eigenschaft der `Discover` Methode.  
+ Ein Datenbankadministrator kann die aktiven Sitzungen für eine festgelegte Datenbank abrufen, indem er das DISCOVER_SESSIONS-Schemarowset abruft. Zum Abrufen des DISCOVER_SESSIONS Schemarowsets verwendet der Datenbankadministrator die XMLA `Discover` -Methode und gibt den entsprechenden Daten Bank Bezeichner für die SESSION_CURRENT_DATABASE Einschränkungs Spalte in der Eigenschaft [Einschränkungen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) der `Discover` Methode an.  
   
 ## <a name="canceling-connections"></a>Abbrechen von Verbindungen  
- Durch die Festlegung eines verbindungsbezeichners in der [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) Eigenschaft der `Cancel` Befehl, ein Serveradministrator kann alle zugeordneten eine angegebene Verbindung, einschließlich aller zurzeit ausgeführten Befehle, Sitzungen Abbrechen und Kündigen Sie die Verbindung ein.  
+ Durch Angeben eines Verbindungs Bezeichners in der [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) -Eigenschaft `Cancel` des Befehls kann ein Server Administrator alle Sitzungen abbrechen, die einer bestimmten Verbindung zugeordnet sind, einschließlich aller Befehle, die ausgeführt werden, und die Verbindung abbrechen.  
   
 > [!NOTE]  
->  Wenn die Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht finden und eine Verbindung zugeordneten Sitzungen Abbrechen, wie z. B. wenn die Datapump mehrere Sitzungen gleichzeitig HTTP-Verbindung geöffnet wird, die Instanz die Verbindung nicht abbrechen. Wenn dies während der Ausführung eines `Cancel`-Befehls passiert, tritt ein Fehler auf.  
+>  Wenn die Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die einer Verbindung zugeordneten Sitzungen nicht finden und Abbrechen kann, z. b. wenn die Daten Verschiebung beim Bereitstellen von http-Konnektivität mehrere Sitzungen öffnet, kann die Instanz die Verbindung nicht abbrechen. Wenn dies während der Ausführung eines `Cancel`-Befehls passiert, tritt ein Fehler auf.  
   
  Ein Serveradministrator kann die aktiven Verbindungen für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz abrufen, indem er das DISCOVER_CONNECTIONS-Schemarowset mithilfe der `Discover`-Methode von XMLA aufruft.  
   
 ## <a name="canceling-server-processes"></a>Abbrechen von Serverprozessen  
- Durch einen Serverprozessbezeichner (SPID) angeben, in der [SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) Eigenschaft der `Cancel` Befehl, ein Serveradministrator kann einer bestimmten SPID zugeordneten Befehle Abbrechen.  
+ Durch Angeben eines Server Prozess Bezeichners (SPID) in der [SPID-](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) Eigenschaft `Cancel` des Befehls kann ein Server Administrator die Befehle abbrechen, die einer bestimmten SPID zugeordnet sind.  
   
 ## <a name="canceling-associated-sessions-and-connections"></a>Abbrechen von zugeordneten Sitzungen und Verbindungen  
- Sie können festlegen, die [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) Eigenschaft auf "true", um die Verbindungen, Sitzungen und die Verbindung, Sitzung oder SPID, die im angegebenen zugeordneten Befehle Abbrechen der `Cancel` Befehl.  
+ Sie können die [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) -Eigenschaft auf true festlegen, um die Verbindungen, Sitzungen und Befehle abzubrechen, die der im `Cancel` Befehl angegebenen Verbindung, Sitzung oder SPID zugeordnet sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Discover-Methode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
  [Entwickeln mit XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

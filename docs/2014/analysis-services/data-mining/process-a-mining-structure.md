@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten einer Miningstruktur | Microsoft-Dokumentation
+title: Verarbeiten einer Mining Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083113"
 ---
 # <a name="process-a-mining-structure"></a>Verarbeiten einer Miningstruktur
@@ -38,15 +38,15 @@ ms.locfileid: "66083113"
   
      Wenn Sie Änderungen an der Struktur vorgenommen haben, werden Sie aufgefordert, die Struktur erneut bereitzustellen, bevor die Modelle verarbeitet werden. Klicken Sie auf **Ja**.  
   
-2.  Klicken Sie auf **ausführen** in die **Miningstruktur verarbeiten - \<Struktur >** Dialogfeld.  
+2.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten \<-Struktur>** auf **Ausführen** .  
   
      Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt detaillierte Informationen zur Verarbeitung des Modells an.  
   
 3.  Klicken Sie nach Abschluss der Modellverarbeitung im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-4.  Klicken Sie auf **schließen** in die **Miningstruktur verarbeiten - \<Struktur >** Dialogfeld.  
+4.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten \<-Struktur>** auf **Schließen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)  
   
   

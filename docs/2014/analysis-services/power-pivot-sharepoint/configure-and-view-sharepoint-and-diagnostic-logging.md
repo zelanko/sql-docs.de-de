@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren und Anzeigen der SharePoint-Protokolldateien und-diagnoseprotokollierung (PowerPivot für SharePoint) | Microsoft-Dokumentation
+title: Konfigurieren und Anzeigen von SharePoint-Protokolldateien und-Diagnoseprotokollierung (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,31 +11,32 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071845"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung (PowerPivot für SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server-Vorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- In diesem Thema:  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server-Vorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [Konfigurieren der Sammlung von Verwendungs Daten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
--   [Protokolldatei-Speicherort](#bkmk_filelocation)  
+ Inhalte dieses Themas:  
   
--   [Ändern diagnostischer Protokolliergrade für einzelne Ereigniskategorien](#bkmk_modifyloglevels)  
+-   [Speicherort der Protokolldatei](#bkmk_filelocation)  
   
--   [So zeigen Sie die SharePoint-Protokolldateien an](#bkmk_how2viewlogfiles)  
+-   [Ändern der Diagnose Protokollierungs Grade für einzelne Ereignis Kategorien](#bkmk_modifyloglevels)  
   
-##  <a name="bkmk_filelocation"></a> Protokolldatei-Speicherort  
+-   [Anzeigen von SharePoint-Protokolldateien](#bkmk_how2viewlogfiles)  
+  
+##  <a name="bkmk_filelocation"></a>Speicherort der Protokolldatei  
  Standardmäßig werden SharePoint-Protokolldateien am folgenden Speicherort gespeichert:  
   
  `C:\Program files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS`  
   
  Der Ordner LOGS enthält Protokolldateien (`.log`), Datendateien (`.txt`) und Verwendungsdateien (`.usage`). Die Dateinamenskonvention für ein SharePoint-Ablaufverfolgungsprotokoll ist der von einem Datum und einem Zeitstempel gefolgte Servername. SharePoint-Ablaufverfolgungsprotokolle werden in regelmäßigen Abständen erstellt, sowie immer dann, wenn ein IISRESET erfolgt. Im Allgemeinen gibt es viele Ablaufverfolgungsprotokolle innerhalb eines 24 Stundenzeitraums.  
   
-##  <a name="bkmk_modifyloglevels"></a> Ändern diagnostischer Protokolliergrade für einzelne Ereigniskategorien  
+##  <a name="bkmk_modifyloglevels"></a>Ändern der Diagnose Protokollierungs Grade für einzelne Ereignis Kategorien  
  Standardmäßig wird die ULS-Protokollierung von PowerPivot-Ereignissen auf *Medium*festgelegt. Diese Einstellung ist für SQL Server 2012 neu. Wenn Sie einen Server von der vorherigen Version aktualisieren, könnte der Protokolliergrad immer noch auf *Ausführlich*festgelegt sein, der Standardebene in SQL Server 2008 R2. Wenn Sie daran gewöhnt sind, die ULS-Protokolle für die PowerPivot-Serverauslastung anzuzeigen, werden Sie feststellen, dass aufgrund der Änderung weniger Informationen über die PowerPivot-Servervorgänge zur Verfügung stehen.  
   
  eingeordnet. Abgesehen von Ausnahmen vom Typ *Hoch*sind alle PowerPivot-Meldungen der Kategorie Ausführlich zuzuordnen. Wenn Sie Einträge für routinemäßige Servervorgänge, beispielsweise Verbindungen, Anforderungen oder Abfrageerstellung, protokollieren möchten, müssen Sie den Protokolliergrad auf Ausführlich festlegen.  
@@ -50,11 +51,11 @@ ms.locfileid: "66071845"
   
 4.  Erweitern Sie die Kategorie, und wählen Sie einzelne Kategorien aus:  
   
-     Unter**Anwendungsseitenanforderung** werden Ereignisse angegeben, die beim Suchen eines [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] s zum Laden einer PowerPivot-Datenquelle und Kommunizieren mit anderen Servern in der Farm von der Dienstanwendung ausgelöst werden.  
+     **Anwendungsseitenanforderung** gibt Ereignisse an, die von der Dienst Anwendung ausgelöst [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] werden, wenn ein zum Laden einer Power Pivot-Datenquelle und zum kommunizieren mit anderen Servern in der Farm gesucht wird.  
   
-     Unter**Anforderungsverarbeitung** werden Ereignisse angegeben, die durch Abfrageanforderungen für eine auf einem Server in der Farm geladene PowerPivot-Datenbank ausgelöst wurden.  
+     Bei der **Anforderungs Verarbeitung** werden Ereignisse angegeben, die durch Abfrage Anforderungen für eine Power Pivot-Datenbank ausgelöst werden, die auf einem Server in der Farm geladen wird.  
   
-     **Verwendung** gibt ein auf die Sammlung von PowerPivot-Verwendungsdaten bezogenes Ereignis an.  
+     **Verwendung** gibt ein Ereignis im Zusammenhang mit der Power Pivot-Verwendungs Datensammlung an.  
   
 5.  Wählen Sie unter Unwichtigstes, im Ereignisprotokoll aufzuzeichnendes Ereignis die Option **Keine** aus, um die Ereignisprotokollierung für die Kategorie zu deaktivieren, oder **Fehler** , um die Protokollierung auf Fehler zu beschränken.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "66071845"
   
 9. Klicken Sie auf **OK**.  
   
-##  <a name="bkmk_how2viewlogfiles"></a> So zeigen Sie die SharePoint-Protokolldateien an  
+##  <a name="bkmk_how2viewlogfiles"></a>Anzeigen von SharePoint-Protokolldateien  
  Protokolldateien sind Textdateien. Sie können sie in jedem Text-Editor öffnen. Sie können auch Protokoll-Viewer-Anwendungen von Drittanbietern verwenden.  
   
 #### <a name="use-a-text-editor"></a>Verwenden eines Text-Editors  
@@ -76,7 +77,7 @@ ms.locfileid: "66071845"
   
 -   Für Fehler, die eine Korrelations-ID ausgeben, kopieren Sie diese und verwenden Sie sie als Suchbegriff in der Protokolldatei.  
   
--   Suchen Sie nach dem Fehlerstatus "Hoch" oder "Ausnahme". Suchen Sie nach "PowerPivot-Dienst".  
+-   Suchen Sie nach dem Fehlerstatus "Hoch" oder "Ausnahme". Suchen Sie nach "Power Pivot-Dienst".  
   
 -   Wenn Sie wissen, wann der Fehler aufgetreten ist, verwenden Sie die Datums- und Uhrzeitinformationen, um den Bereich von Einträgen, den Sie durchsuchen müssen, einzugrenzen.  
   
@@ -116,17 +117,17 @@ ms.locfileid: "66071845"
 #### <a name="entries-for-powerpivot-services"></a>Einträge für PowerPivot-Dienste  
  Die folgende Tabelle beschreibt die Einträge für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servervorgänge, die am häufigsten in einer SharePoint-Protokolldatei gefunden werden.  
   
-|Verarbeiten|Bereich|Kategorie|Ebene|MessageBox|Details|  
+|Prozess|Bereich|Category|Ebene|`Message`|Details|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|PowerPivot-Dienst|Verwendung|Ausführlich|Es gibt keine aktuellen Anforderungsstatistiken, nichts ist zu protokollieren.|Die Serviceberichte fragen in vordefinierten Intervallen Reaktionsstatistiken als Verwendungsereignis für das Verwendungsdatensammlungssystem ab. Diese Meldung gibt an, dass es keine Abfragestatistiken für einen Bericht gibt.|  
-|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Starten auf der Suche nach einem Anwendungsserver für Datenquelle =\<*Pfad*>|Wenn das Programm eine Verbindungsanforderung empfängt, identifiziert der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst einen verfügbaren [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , um die Anforderung zu behandeln. Wenn es nur einen Server in der Farm gibt, akzeptiert der lokale Server die Anforderung in allen Fällen.|  
+|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Starten der Suche nach einem Anwendungsserver für Datenquelle\<=*Pfad*>|Wenn das Programm eine Verbindungsanforderung empfängt, identifiziert der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst einen verfügbaren [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , um die Anforderung zu behandeln. Wenn es nur einen Server in der Farm gibt, akzeptiert der lokale Server die Anforderung in allen Fällen.|  
 |w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Die Suche nach dem Anwendungsserver war erfolgreich.|Die Anfrage wurde einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Dienstanwendung zugeordnet.|  
-|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Umleiten der Anforderung für die \< *PowerPivotdata-Quelle*> auf die [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|Die Anforderung wurde an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]weitergeleitet.|  
-|w3wp.exe|PowerPivot-Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für username-\<*SharePoint-Benutzers*> in der Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
+|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Umleiten der Anforderung für \<die *powerpivotdata-Quelle*> [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]an den.|Die Anforderung wurde an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]weitergeleitet.|  
+|w3wp.exe|PowerPivot-Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für\<Benutzernamen-*SharePoint-Benutzer*> an die Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Sammlung von PowerPivot-Verwendungsdaten](power-pivot-usage-data-collection.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Sammlung von Power Pivot-Verwendungs Daten](power-pivot-usage-data-collection.md)   
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [Konfigurieren der Sammlung von Verwendungs Daten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

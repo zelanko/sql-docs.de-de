@@ -1,5 +1,5 @@
 ---
-title: Cuberaum | Microsoft-Dokumentation
+title: Cube-Bereich | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074711"
 ---
 # <a name="cube-space"></a>Cuberaum
   Der Cuberaum ist das Produkt aus den Elementen der Attributhierarchien eines Cubes und den Measures des Cubes. Daher wird der Cuberaum durch das Kombinationsprodukt aller Attributhierarchieelemente im Cube und den Measures des Cubes bestimmt und definiert die maximale Größe des Cubes. Beachten Sie, dass dieser Raum alle potenziellen Kombinationen von Attributhierarchieelementen umfasst, einschließlich Kombinationen, die in der wirklichen Welt unmöglich sind, z. B. Kombinationen aus der Stadt Paris und den Ländern England, Spanien, Japan oder Indien.  
   
 ## <a name="autoexists-and-cube-space"></a>Autoexists und Cuberaum  
- *Autoexists* schränkt den Cuberaum auf solche Zellen ein, die tatsächlich vorhanden sind. Elemente einer Attributhierarchie in einer Dimension sind möglicherweise nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden.  
+ 
+  *Autoexists* schränkt den Cuberaum auf solche Zellen ein, die tatsächlich vorhanden sind. Elemente einer Attributhierarchie in einer Dimension sind möglicherweise nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden.  
   
  Bei einem Cube z. B., der eine City-Attributhierarchie, eine Country-Attributhierarchie und eine Internet Sales Amount-Measure aufweist, schließt der Cuberaum nur solche Elemente ein, die gemeinsam vorhanden sind. Wenn beispielsweise die City-Attributhierarchie die Städte New York, London, Paris, Tokyo und Melbourne und die Country-Attributhierarchie die Länder United States, United Kingdom, France, Japan, and Australia umfasst, schließt der Cuberaum nicht den Raum (die Zelle) am Schnittpunkt von Paris und United States ein.  
   
@@ -55,7 +56,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Beachten Sie, dass 0 hier für die Spaltenachse steht (als Kurzform für axis(0)).  
   
- Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch geschrieben werden mithilfe der neuen *-Variante der der [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) Funktion.  
+ Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch mithilfe der neuen *-Variante der [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) -Funktion geschrieben werden.  
   
 ```  
 SELECT   
@@ -78,7 +79,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Die zurückgegebenen Zellenwerte sind identisch, die Metadaten im Resultset sind jedoch verschieden. Beispielsweise wurde in der vorherigen Abfrage die Country-Hierarchie auf die Slicerachse verschoben (in die WHERE-Klausel), sodass sie nicht explizit im Resultset angezeigt wird.  
   
- Alle drei vorherigen Abfragen veranschaulichen die Auswirkung des „auto-exist“-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Jede dieser drei vorherigen Abfragen veranschaulicht die Auswirkung des Auto-es-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Benutzerdefinierte Hierarchien und Cuberaum  
  In den vorherigen Beispielen in diesem Thema wurden Positionen im Cuberaum mithilfe von Attributhierarchien definiert. Es ist jedoch auch möglich, Positionen um Cuberaum mithilfe von benutzerdefinierten Hierarchien zu definieren, die basierend auf Attributhierarchien in einer Dimension definiert wurden. Eine benutzerdefinierte Hierarchie ist eine Hierarchie von Attributhierarchien, die es dem Benutzer ermöglicht, Cubedaten zu durchsuchen.  
@@ -98,7 +99,7 @@ WHERE Measures.[Internet Sales Amount]
   
  In der vorherigen Abfrage wurde die benutzerdefinierte Customer Geography-Hierarchie innerhalb der Customer-Dimension zum Definieren der Position im Cuberaum verwendet, die zuvor über eine Attributhierarchie definiert worden war. Die gleiche Position im Cuberaum kann sowohl mithilfe von Attributhierarchien als auch mithilfe von benutzerdefinierten Hierarchien definiert werden.  
   
-##  <a name="AttribRelationships"></a> Attributbeziehungen und Cuberaum  
+##  <a name="AttribRelationships"></a>Attribut Beziehungen und Cuberaum  
  Das Definieren von Attributbeziehungen zwischen verknüpften Attributen verbessert die Abfrageleistung (durch vereinfachte Erstellung von entsprechenden Aggregationen) und wirkt sich auf das Element einer verknüpften Attributhierarchie aus, das zusammen mit einem Attributhierarchie-Element auftritt. Wenn Sie beispielsweise ein Tupel definieren, das ein Element der City-Attributhierarchie einschließt, und das Tupel nicht explizit die Country-Attributelemente definiert, wäre zu erwarten, dass das Element der Country-Attributhierarchie das verknüpfte Element der Country-Attributhierarchie darstellt. Dies ist jedoch nicht der Fall, wenn eine Attributbeziehung zwischen der City-Attributhierarchie und der Country-Attributhierarchie definiert ist.  
   
  Im folgenden Beispiel wird das Element einer verknüpften Attributhierarchie zurückgegeben, die nicht explizit in der Abfrage eingeschlossen ist.  
@@ -112,7 +113,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Beachten Sie, dass die `WITH` -Schlüsselwort wird verwendet, mit der [CurrentMember (MDX)](/sql/mdx/current-mdx) und [Name (MDX)](/sql/mdx/members-string-mdx) Funktionen, um ein berechnetes Element für die Verwendung in der Abfrage zu erstellen. Weitere Informationen finden Sie unter [Die grundlegende MDX-Abfrage&#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Beachten Sie, `WITH` dass das-Schlüsselwort mit der [CurrentMember (MDX)](/sql/mdx/current-mdx) -Funktion und der [Name (MDX)](/sql/mdx/members-string-mdx) -Funktion verwendet wird, um ein berechnetes Element zur Verwendung in der Abfrage zu erstellen. Weitere Informationen finden Sie unter [Die grundlegende MDX-Abfrage&#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  In der vorherigen Abfrage wurde der Name des Elements der Country-Attributhierarchie zurückgegeben, das mit jedem Element der State-Attributhierarchie verknüpft ist. Das erwartete Country-Element wird angezeigt (weil eine Attributbeziehung zwischen City- und Country-Attributen definiert ist). Ohne Attributbeziehung zwischen Attributhierarchien der gleichen Dimension wäre das (Alle)-Element zurückgegeben worden, wie die folgende Abfrage veranschaulicht.  
   
@@ -128,13 +129,13 @@ FROM [Adventure Works]
   
 ## <a name="calculation-context"></a>Berechnungskontext  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tupel](tuples.md)   
  [Autoexists](autoexists.md)   
- [Verwenden von Elementen, Tupeln und Mengen &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte](visual-totals-and-non-visual-totals.md)   
- [MDX-Sprachreferenz &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Mehrdimensionale Ausdrücke &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Arbeiten mit Membern, Tupeln und Mengen &#40;MDX-&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Visuelle Gesamtsummen und nicht visuelle Gesamtwerte](visual-totals-and-non-visual-totals.md)   
+ [MDX-Sprachreferenz &#40;MDX-&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Mehrdimensionale Ausdrücke &#40;MDX-&#41; Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

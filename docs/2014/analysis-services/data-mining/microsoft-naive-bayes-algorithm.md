@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083879"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein klassifikationsalgorithmus, basierend auf Bayes theoremen und gebotenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Verwendung bei der vorhersagemodellierung. Die Angabe "naiv" im Namen "Naïve Bayes" rührt daher, dass der Algorithmus Bayes Techniken verwendet, aber keine Abhängigkeiten berücksichtigt, die möglicherweise vorhanden sind.  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein Klassifizierungs Algorithmus, der auf Bayes-Theorems basiert und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von zur Verwendung bei der Vorhersage Modellierung bereitgestellt wird. Die Angabe "naiv" im Namen "Naïve Bayes" rührt daher, dass der Algorithmus Bayes Techniken verwendet, aber keine Abhängigkeiten berücksichtigt, die möglicherweise vorhanden sind.  
   
  Der Rechenaufwand für diesen Algorithmus ist geringer als der der anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen und ist daher hilfreich für das schnelle Generieren von Miningmodellen, um Beziehungen zwischen Eingabespalten und vorhersagbaren Spalten zu ermitteln. Sie können diesen Algorithmus für eine erste Untersuchung der Daten verwenden. Später können Sie dann die Ergebnisse anwenden, um zusätzliche Miningmodelle mit anderen Algorithmen zu erstellen, deren Rechenaufwand größer ist und die präziser sind.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66083879"
   
  Um die Arbeitsweise besser zu verstehen, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Viewer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (siehe folgende Abbildung), um eine visuelle Darstellung der Statusverteilung durch den Algorithmus zu erhalten.  
   
- ![Naive Bayes-Verteilung von Status](../media/naive-bayes.gif "Naive Bayes-Verteilung von Status")  
+ ![Statusverteilung für naives Bayes-Verfahren](../media/naive-bayes.gif "Statusverteilung für naives Bayes-Verfahren")  
   
  Hier werden im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Viewer alle Eingabespalten im Dataset aufgelistet und die Verteilung der Status der einzelnen Spalten für jeden Status der vorhersagbaren Spalte angezeigt.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083879"
   
  Für ein Naive Bayes-Modell gelten die folgenden Anforderungen:  
   
--   **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.  
+-   **Eine einzelne Schlüssel Spalte** Jedes Modell muss eine numerische Spalte oder Text Spalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.  
   
--   **Eingabespalten** In einem Naive Bayes-Modell, alle Spalten müssen sein, entweder diskrete oder diskretisierte Spalten. Weitere Informationen zur Diskretisierung von Spalten finden Sie unter [Diskretisierungsmethoden &#40;Data Mining&#41;](discretization-methods-data-mining.md).  
+-   **Eingabe Spalten** In einem Naive Bayes-Modell müssen alle Spalten entweder diskrete oder diskretisierte Spalten sein. Informationen zum Diskretisieren von Spalten finden Sie unter [Diskretisierungsmethoden &#40;Data Mining-&#41;](discretization-methods-data-mining.md).  
   
      Bei einem Naive Bayes-Modell ist es außerdem wichtig sicherzustellen, dass die Eingabeattribute unabhängig voneinander sind. Dies ist besonders wichtig, wenn Sie das Modell für Vorhersagen verwenden.  
   
@@ -65,23 +65,23 @@ ms.locfileid: "66083879"
   
      Wenn Sie im umgekehrten Verwendungsfall ein Modell oder Dataset untersuchen, ist die Fähigkeit des Algorithmus, Korrelationen zwischen Variablen zu identifizieren, hingegen hilfreich, da hierdurch Beziehungen zwischen den Eingaben identifiziert werden können.  
   
--   **Mindestens eine vorhersagbare Spalte:** Das vorhersagbare Attribut muss diskrete oder diskretisierte Werte enthalten.  
+-   Mindestens **eine vorhersagbare Spalte** Das vorhersagbare Attribut muss diskrete oder diskretisierte Werte enthalten.  
   
      Die Werte der vorhersagbaren Spalte können als Eingaben behandelt werden. Wenn Sie ein neues Dataset untersuchen, um Beziehungen zwischen den Spalten zu ermitteln, kann dieses Vorgehen nützlich sein.  
   
 ## <a name="viewing-the-model"></a>Anzeigen des Modells  
  Zum Durchsuchen des Modells können Sie den **Microsoft-Viewer für naives Bayes-Verfahren**verwenden. Der Viewer zeigt an, wie die Eingabeattribute mit dem vorhersagbaren Attribut in Beziehung stehen. Der Viewer stellt ein detailliertes Profil für jedes Cluster, eine Liste der Attribute, um die sich die einzelnen Cluster von anderen Clustern unterscheiden, und die Eigenschaften des gesamten Trainingsdatasets bereit. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Naive Bayes-Viewer](browse-a-model-using-the-microsoft-naive-bayes-viewer.md).  
   
- Wenn Sie detailliertere Informationen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)durchsuchen. Weitere Informationen über den Typ der im Modell gespeicherten Informationen finden Sie unter [Miningmodellinhalt von Naive Bayes-Modellen & #40; Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md).  
+ Wenn Sie detailliertere Informationen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)durchsuchen. Weitere Informationen über den Typ der im Modell gespeicherten Informationen finden Sie unter [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md).  
   
 ## <a name="making-predictions"></a>Erstellen von Vorhersagen  
  Nachdem das Modell trainiert wurde, werden die Ergebnisse als Mustersatz gespeichert, den Sie durchsuchen oder zum Erstellen von Vorhersagen verwenden können.  
   
  Sie können Abfragen erstellen, um Vorhersagen dazu zurückzugeben, wie neue Daten mit dem vorhersagbaren Attribut in Beziehung stehen, oder Sie können Statistiken abrufen, die die vom Modell gefundenen Korrelationen beschreiben.  
   
- Informationen zum Erstellen von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfrage](data-mining-queries.md). Beispiele zur Verwendung von Abfragen in Verbindung mit einem Naive Bayes-Modell finden Sie unter [Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md).  
+ Informationen zum Erstellen von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md). Beispiele zur Verwendung von Abfragen in Verbindung mit einem Naive Bayes-Modell finden Sie unter [Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Unterstützt die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "66083879"
   
 -   Unterstützt die Verwendung von OLAP-Miningmodellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Funktionsauswahl &#40;Data Mining&#41;](feature-selection-data-mining.md)   
- [Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md)   
- [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Funktionsauswahl &#40;Data Mining-&#41;](feature-selection-data-mining.md)   
+ [Naive Bayes-Modell Abfrage Beispiele](naive-bayes-model-query-examples.md)   
+ [Mining Modell Inhalt von Naive Bayes-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Technische Referenz für den Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

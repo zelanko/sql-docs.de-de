@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080511"
 ---
 # <a name="importing-ssas"></a>Importieren (SSAS)
@@ -26,11 +26,11 @@ ms.locfileid: "66080511"
  **Details**  
  Zeigt die folgenden Informationen für jeden Datenimportvorgang an.  
   
-|Spalte|Description|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
-|**Arbeitselement**|Zeigt den Namen der Tabelle oder der Sicht an, die importiert wird.|  
+|**Arbeits Element**|Zeigt den Namen der Tabelle oder der Sicht an, die importiert wird.|  
 |**Status**|Zeigt an, ob die Tabelle oder die Sicht erfolgreich importiert wurde, und gibt die Anzahl der importierten Zeilen an.|  
-|**MessageBox**|Wenn der Tabellen- oder Sichtimport fehlerhaft war, wird hier ein Link zu weiteren Informationen angezeigt. Diese Informationen werden im Fenster Details angezeigt.<br /><br /> Wenn Sie die Tabelle oder die Sicht erneut importieren möchten, beenden Sie den Assistenten und führen ihn erneut aus.|  
+|**Meldung**|Wenn der Tabellen- oder Sichtimport fehlerhaft war, wird hier ein Link zu weiteren Informationen angezeigt. Diese Informationen werden im Fenster Details angezeigt.<br /><br /> Wenn Sie die Tabelle oder die Sicht erneut importieren möchten, beenden Sie den Assistenten und führen ihn erneut aus.|  
   
  **Import beenden**  
  Klicken Sie hierauf, um den Importvorgang zu beenden, bevor er abgeschlossen ist. Tabellen und Sichten, die bereits importiert wurden, werden im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] -Designer angezeigt. Tabellen und Sichten, die noch nicht importiert wurden, werden nicht importiert.  

@@ -1,5 +1,5 @@
 ---
-title: Manuelles Bearbeiten eine Vorhersageabfrage | Microsoft-Dokumentation
+title: Manuelles Bearbeiten einer Vorhersage Abfrage | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084211"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Manuelles Bearbeiten eine Vorhersageabfrage
@@ -42,9 +42,9 @@ ms.locfileid: "66084211"
     > [!NOTE]  
     >  Wenn die erstellte Abfrage ungültig ist, werden im Ergebnisfenster weder ein Fehler noch Ergebnisse angezeigt. Klicken Sie auf die Schaltfläche **Entwurf** , oder wählen Sie im Menü **Miningmodell** die Option **Entwurf** oder **Abfrage** aus, um das Problem zu beheben und die Abfrage erneut auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Abfrage](data-mining-queries.md)   
- [Generator für Vorhersageabfragen &#40;Data Mining&#41;](../prediction-query-builder-data-mining.md)   
- [Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Abfragen](data-mining-queries.md)   
+ [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](../prediction-query-builder-data-mining.md)   
+ [Lektion 6: Erstellen und arbeiten mit Vorhersagen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

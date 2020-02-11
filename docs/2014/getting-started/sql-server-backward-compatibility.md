@@ -1,5 +1,5 @@
 ---
-title: Abwärtskompatibilität der SQL Server | Microsoft-Dokumentation
+title: SQL Server Abwärtskompatibilität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088509"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server-Abwärtskompatibilität
@@ -22,14 +22,14 @@ ms.locfileid: "66088509"
   
  Zu den Funktionen, auf die in diesem Themenbereich eingegangen wird, gehören Datenprogrammierbarkeit, Oberflächen-Konfigurationstools, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Setup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienste und andere umfassendere Änderungen der Funktionalität.  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Als veraltet markierte SQL Server-Features in SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Als veraltet markierte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionen in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
-|[Nicht mehr unterstützte SQL Server-Features in SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|Nicht mehr unterstützte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionalität in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
-|[Breaking Changes von SQL Server-Features in SQL Server 2014](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|Änderungen, die notwendige Änderungen an Anwendungen nach sich ziehen können. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
-|[Behavior Changes von SQL Server-Features in SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Verhaltensänderungen an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionen in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
+|[Als veraltet markierte SQL Server-Funktionen in SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Als veraltet markierte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionen in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
+|[Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|Nicht mehr unterstützte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionalität in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
+|[Wichtige Änderungen von SQL Server-Funktionen in SQL Server 2014](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|Änderungen, die notwendige Änderungen an Anwendungen nach sich ziehen können. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
+|[Verhaltensänderungen von SQL Server-Features in SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Verhaltensänderungen an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionen in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abwärtskompatibilität](../../2014/getting-started/backward-compatibility.md)  
   
   

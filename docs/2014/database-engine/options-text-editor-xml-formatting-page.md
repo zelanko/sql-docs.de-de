@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor – XML - Formatierung Seite) | Microsoft-Dokumentation
+title: Optionen (Text-Editor-XML-Formatierungs Seite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089847"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Optionen (Text-Editor – XML – Seite „Formatierung“)
@@ -24,9 +24,9 @@ In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Edi
 > [!NOTE]  
 > Zum Anzeigen dieser Einstellungen wählen Sie zunächst den Ordner **Text-Editor** und anschließend den Ordner **XML** aus. Wählen Sie dann im Dialogfeld **Optionen** die Option **Formatierung** aus.  
   
-## <a name="attributes"></a>Attribute  
- **Manuelle attributformatierung beibehalten**  
- Nimmt keine Neuformatierung von Attributen vor. Dies ist die Standardeinstellung.  
+## <a name="attributes"></a>Attributes  
+ **Manuelle Attributformatierung beibehalten**  
+ Nimmt keine Neuformatierung von Attributen vor. Dies ist die Standardoption.  
   
 > [!NOTE]  
 >  Wenn die Attribute auf mehrere Zeilen verteilt sind, richtet der Editor jede Attributzeile am Einzug des jeweils übergeordneten Elements aus.  
@@ -42,15 +42,15 @@ In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Edi
 ```  
   
 ## <a name="auto-reformat"></a>Automatisch neu formatieren  
- **Bei einfügen aus der Zwischenablage.**  
+ **Bei Einfügen aus der Zwischenablage**  
  Formatiert den aus der Zwischenablage eingefügten XML-Text neu.  
   
- **Nach Abschluss des Endtags**  
+ **Bei Komplettierung des Endtags**  
  Formatiert das Element nach Abschluss des Endtags neu.  
   
 ## <a name="mixed-content"></a>Gemischter Inhalt  
- **Standardformat: gemischter Inhalt in der Standardeinstellung.**  
- Versucht, gemischten Inhalt neu zu formatieren. Der Inhalt von `xml:space="preserve"`-Bereichen wird dabei jedoch nicht berücksichtigt. Dies ist die Standardeinstellung.  
+ **Standardformat: gemischter Inhalt**  
+ Versucht, gemischten Inhalt neu zu formatieren. Der Inhalt von `xml:space="preserve"`-Bereichen wird dabei jedoch nicht berücksichtigt. Dies ist die Standardoption.  
   
  Wenn ein Element sowohl Text als auch Markup enthält, wird sein Inhalt wie gemischter Inhalt behandelt. Das folgende Beispiel zeigt ein Element mit gemischtem Inhalt.  
   
@@ -62,5 +62,5 @@ In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Edi
   
  \</dir>  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Editor &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Der XML-Editor &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

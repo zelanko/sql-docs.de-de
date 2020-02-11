@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Modellen in Excel (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Durchsuchen von Modellen in Excel (SQL Server Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 961b32e84d41e021fbad185189981adb90ba44b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088458"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Durchsuchen von Modellen in Excel (SQL Server Data Mining-Add-Ins)
-  ![Durchsuchen Sie die Schaltfläche "Modell" im Data Mining-Menüband](media/dmc-browse.gif "Modell Durchsuchen-Schaltfläche im Data Mining-Menüband")  
+  ![Modell durchsuchen (Schaltfläche auf Data Mining-Menüband)](media/dmc-browse.gif "Modell durchsuchen (Schaltfläche auf Data Mining-Menüband)")  
   
  Die visuelle Erforschung des Modells ist meistens der schnellste und einfachste Weg, um ein klares Verständnis der Regeln und Beziehungen zu gewinnen, die von der Analyse aufgedeckt werden. Mit dem Data Mining-Client für Excel können Sie sowohl temporäre Modelle, die während der aktuellen Excel-Sitzung erstellt wurden, als auch die in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz gespeicherten Modelle durchsuchen.  
   
@@ -30,16 +30,16 @@ ms.locfileid: "66088458"
   
 ## <a name="using-the-browse-model-wizard"></a>Verwenden des Assistenten zum Durchsuchen von Modellen  
   
-1.  Klicken Sie auf die **Data Mining** Registerkarte.  
+1.  Klicken Sie auf die Registerkarte **Data Mining** .  
   
-2.  In der **Modellverwendung** auf **Durchsuchen**.  
+2.  Klicken Sie in der Gruppe **Modell Verwendung** auf **Durchsuchen**.  
   
-3.  In der **Modell auswählen** Dialogfeld Wählen Sie ein Miningmodell aus der Liste, und klicken Sie auf **Weiter**.  
+3.  Wählen Sie im Dialogfeld **Modell auswählen** ein Mining Modell aus der Liste aus, und klicken Sie auf **weiter**.  
   
-4.  Der Assistent öffnet ein **Durchsuchen** Fenster, das für den Typ des Modells geeignet ist, die Sie ausgewählt.  
+4.  Der Assistent öffnet ein Fenster zum **Durchsuchen** , das für den von Ihnen ausgewählten Modelltyp geeignet ist.  
   
 ## <a name="list-of-data-mining-viewers"></a>Liste von Data Mining-Viewern  
- Abhängig von der Datamining-Algorithmus, den Sie verwendet werden, bei der Erstellung des Modells, das **Durchsuchen** sieht das Fenster ein wenig anders. Es kann Diagramme enthalten, die Ihnen das Verständnis der Ergebnisse erleichtern, oder Legenden mit zusätzlichen Details oder Steuerelemente für die Interaktion mit den Daten.  
+ Abhängig von dem Data Mining Algorithmus, den Sie beim Erstellen des Modells verwendet haben, sieht das Fenster **Durchsuchen** etwas anders aus. Es kann Diagramme enthalten, die Ihnen das Verständnis der Ergebnisse erleichtern, oder Legenden mit zusätzlichen Details oder Steuerelemente für die Interaktion mit den Daten.  
   
  Die folgenden Themen erhalten Anleitungen zur Verwendung der einzelnen Viewer, einschließlich Hinweise zum Interpretieren komplexer Diagramme und Anweisungen zum Ändern, Kopieren oder Verwenden der Ergebnisse.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "66088458"
   
  [Durchsuchen eines Naive Bayes-Modells](browsing-a-naive-bayes-model.md)  
   
- [Durchsuchen eines Neural Network-Modells](browsing-a-neural-network-model.md)  
+ [Durchsuchen von Neural Network-Modellen](browsing-a-neural-network-model.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Anzeigen von Datamining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Anzeigen von Data Mining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
  [Verwalten von Modellen &#40;SQL Server Data Mining-Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Diagramm der Registerkarte "(Miningmodell-Viewer) | Microsoft-Dokumentation
+title: Registerkarte "Diagramm" (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088177"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Registerkarte "Diagramm" (Miningmodell-Viewer)
   Im Bereich **Diagramm** können Sie die Vergangenheitsdaten, die beim Trainieren eines Zeitreihenmodells verwendet wurden, zusammen mit den vorhergesagten Werten anzeigen. Die vertikale Achse des Diagramms stellt die Werte der Zeitreihe dar, und die horizontale Achse stellt die Zeit dar. Zukünftige Vorhersagen werden durch eine gestrichelte Linie dargestellt.  
   
- **Weitere Informationen finden Sie unter** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Weitere Informationen:** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
  **Viewer**  
@@ -43,10 +43,10 @@ ms.locfileid: "66088177"
  **Diagramm an Fenstergröße anpassen**  
  Verkleinert das Diagramm so weit, dass das gesamte Diagramm auf den Bildschirm passt.  
   
- **Abs**  
+ **Stäbchen**  
  Schaltet zwischen zwei Diagrammsichten um: In der Standardansicht werden Zahlen relativ zur Gesamtverteilung (als Prozentsatz) grafisch dargestellt. Wenn Sie auf **Abs**klicken, werden die Zahlen als absolute Werte dargestellt.  
   
- **Die Diagramme in die Zwischenablage kopieren**  
+ **Diagramm in die Zwischenablage kopieren**  
  Kopiert das gesamte Diagramm in die Zwischenablage.  
   
  **Abweichungen anzeigen**  
@@ -58,9 +58,9 @@ ms.locfileid: "66088177"
  **Serienauswahl**  
  Öffnet ein Dialogfeld, in dem Sie alle Serien auswählen können, die im Viewer angezeigt werden sollen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definieren einer Datenquellensicht | Microsoft-Dokumentation
+title: Definieren einer Datenquellen Sicht | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079274"
 ---
 # <a name="defining-a-data-source-view"></a>Definieren einer Datenquellensicht
-  Nach dem Definieren der Datenquellen für ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekt besteht der nächste Schritt im Allgemeinen im Definieren einer Datenquellensicht für das Projekt. Eine Datenquellensicht ist eine einheitliche Sicht der Metadaten von den angegebenen Tabellen und Sichten, die von den Datenquellen im Projekt definiert werden. Das Speichern der Metadaten in der Datenquellensicht ermöglicht das Arbeiten mit den Metadaten während der Entwicklung ohne offene Verbindung mit einer zugrunde liegenden Datenquelle. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md).  
+  Nach dem Definieren der Datenquellen für ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt besteht der nächste Schritt im Allgemeinen im Definieren einer Datenquellensicht für das Projekt. Eine Datenquellensicht ist eine einheitliche Sicht der Metadaten von den angegebenen Tabellen und Sichten, die von den Datenquellen im Projekt definiert werden. Das Speichern der Metadaten in der Datenquellensicht ermöglicht das Arbeiten mit den Metadaten während der Entwicklung ohne offene Verbindung mit einer zugrunde liegenden Datenquelle. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  In der folgenden Aufgabe definieren Sie eine Datenquellensicht, die fünf Tabellen aus der Datenquelle **AdventureWorksDW2012** umfasst.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66079274"
   
     -   **FactInternetSales (dbo)**  
   
-5.  Klicken Sie auf **>** , um der Liste **Eingeschlossene Objekte** die ausgewählten Tabellen hinzuzufügen.  
+5.  Klicken **>** Sie hierauf, um die ausgewählten Tabellen der Liste **enthaltene Objekte** hinzuzufügen.  
   
-6.  Klicken Sie auf **Weiter.**  
+6.  Klicken Sie auf **Weiter**.  
   
 7.  Stellen Sie im Namensfeld sicher, dass **Adventure Works DW 2012** angezeigt wird, und klicken Sie anschließend auf **Fertig stellen**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66079274"
   
     -   Eine für den Datenquellensicht-Designer spezifische Symbolleiste.  
   
-8.  Klicken Sie auf die Schaltfläche [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , um die -Entwicklungsumgebung zu **maximieren**.  
+8.  Klicken Sie auf die Schaltfläche [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] development environment, click the **Maximize** button.  
   
 9. Zur Anzeige der Tabellen im Bereich **Diagramm** in einer 50-Prozent-Darstellung, klicken Sie auf das **Vergrößern** -Symbol in der Symbolleiste des Datenquellensicht-Designers. Dadurch werden die Spaltendetails jeder Tabelle ausgeblendet.  
   
@@ -76,10 +76,10 @@ ms.locfileid: "66079274"
   
      Sie können nun alle Tabellen und deren Beziehungen im Bereich **Diagramm** anzeigen. Beachten Sie, dass drei Beziehungen zwischen der FactInternetSales-Tabelle und der DimDate-Tabelle vorhanden sind. Jedem Verkauf sind drei Daten zugeordnet: ein Bestelldatum, ein Fälligkeitsdatum und ein Lieferdatum. Um die Details einer Beziehung anzuzeigen, doppelklicken Sie auf den Beziehungspfeil im Bereich **Diagramm** .  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Ändern von Standardtabellennamen](lesson-1-4-modifying-default-table-names.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellensichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

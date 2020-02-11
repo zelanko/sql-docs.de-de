@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076859"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>Definieren der Reihenfolge für eine Dimension
@@ -35,7 +35,7 @@ ms.locfileid: "66076859"
 ## <a name="specifying-ordering"></a>Angeben der Reihenfolge  
  Auf der zweiten Seite des Assistenten, **Attributreihenfolge angeben** ,  geben Sie an, wie die Attribute in der Dimension sortiert werden.  
   
- In der **Reihenfolgenattribut** -Spalte können Sie das Attribut für die Reihenfolge ändern. Wenn das Attribut, das Sie verwenden, um die Elemente sortiert werden sollen, nicht in der Liste ist, scrollen Sie nach unten, und wählen Sie dann  **\<neues Attribut... >** zum Öffnen der **wählen Sie eine Spalte** Sie können im Dialogfeld Wählen Sie eine Spalte in einer Dimensionstabelle. Durch Auswählen einer Spalte mithilfe des Dialogfelds **Spalte auswählen** wird ein zusätzliches Attribut erstellt, mit dem die Elemente eines Attributs sortiert werden können.  
+ In der **Reihenfolgenattribut** -Spalte können Sie das Attribut für die Reihenfolge ändern. Wenn das Attribut, das Sie zum Sortieren von Elementen verwenden möchten, nicht in der Liste aufgeführt ist, Scrollen Sie in der Liste nach unten, und wählen Sie ** \<dann neues Attribut... #b0** aus, um das Dialogfeld **Spalte auswählen** zu öffnen, in dem Sie eine Spalte in einer Dimensions Tabelle auswählen können. Durch Auswählen einer Spalte mithilfe des Dialogfelds **Spalte auswählen** wird ein zusätzliches Attribut erstellt, mit dem die Elemente eines Attributs sortiert werden können.  
   
  In der **Kriterien** -Spalte können Sie dann auswählen, ob die Elemente des Attributs entweder nach **Schlüssel** oder nach **Name**sortiert werden sollen.  
   

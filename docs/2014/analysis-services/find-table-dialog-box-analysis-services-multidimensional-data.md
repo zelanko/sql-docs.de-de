@@ -1,5 +1,5 @@
 ---
-title: Suchen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Tabelle suchen (Dialog Feld) (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081089"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle suchen' (Analysis Services – Mehrdimensionale Daten)
@@ -34,16 +34,16 @@ ms.locfileid: "66081089"
   
 -   Öffnen Sie **Data Mining-Modelldesigner** , klicken Sie auf der Seite **Miningstruktur** mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und wählen Sie **Tabelle suchen**aus.  
   
-## <a name="options"></a>Optionen  
- **Wählen Sie eine Tabelle aus der Datenquellensicht**  
+## <a name="options"></a>Tastatur  
+ **Wählen Sie eine Tabelle aus der Datenquellensicht aus:**  
  Wählen Sie im Bereich **Datenquellensicht** die Tabelle aus, nach der gesucht werden soll. Diese Option zeigt ein Raster verfügbarer Objekte und ihrer Typen an, die mit dem unter **Filter** festgelegten Filter übereinstimmen (oder aller Tabellen, wenn kein **Filter** festgelegt wurde) und noch nicht im aktuellen Diagramm angezeigt wurden.  
   
  **Filter**  
  Geben Sie den Filter ein, der zum Einschränken der aufgeführten Objekte verwendet wird, und klicken Sie auf die Schaltfläche, um die Tabellen unter **Wählen Sie eine Tabelle aus der Datenquellensicht aus**zu filtern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Im Dialogfeld "Eigenschaften" Assembly &#40;Analysis Services – mehrdimensionale Daten&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
- [Datenquellensicht &#40;Registerkarte Dimensionsstruktur, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Datenquellensicht &#40;Registerkarte Cubestruktur, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dialog Feld ' Assemblyeigenschaften ' &#40;Analysis Services Mehrdimensionale Daten&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
+ [Datenquellen Sicht &#40;Registerkarte "Dimensions Struktur", Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Datenquellen Sicht &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

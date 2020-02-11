@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663483"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded (Ereignisklasse)
@@ -29,17 +29,17 @@ ms.locfileid: "62663483"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Datenspalten der CPU Threshold Exceeded-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|`int`|CPU-Verwendung in Millisekunden|18|Ja|  
 |EventClass|`int`|214|27|Nein|  
 |EventSubClass|`int`|CPU-Grenzwertüberschreitung|21|Ja|  
 |GroupID|`int`|ID der Gruppe, in der die Überschreitung aufgetreten ist|66|Ja|  
 |OwnerID|`int`|SPID des Prozesses, der die Überschreitung verursacht hat|58|Ja|  
-|SPID|`int`|ID des Serverprozesses, von dem das Ereignis ausgelöst wird<br /><br /> Hinweis: Dieser kann von der tatsächlichen Benutzer-SPID unterscheiden, wenn Systemthread CPU-Auslastung als Hintergrundaufgabe überprüft.|12|Ja|  
+|SPID|`int`|ID des Serverprozesses, von dem das Ereignis ausgelöst wird<br /><br /> Hinweis: Diese SPID kann sich von der tatsächlichen Benutzer-SPID unterscheiden, wenn die CPU-Verwendung von einem Systemthread als Hintergrundaufgabe überprüft wird.|12|Ja|  
 |StartTime|`datetime`|Zeitpunkt, zu dem das Ereignis ausgelöst wurde|14|Ja|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

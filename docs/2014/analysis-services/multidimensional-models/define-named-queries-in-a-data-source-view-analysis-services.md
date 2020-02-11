@@ -1,5 +1,5 @@
 ---
-title: Definieren von benannten Abfragen in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
+title: Definieren von benannten Abfragen in einer Datenquellen Sicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075562"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definieren von benannten Abfragen in einer Datenquellensicht (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66075562"
   
  Tabelle und Spalten, auf die in der SQL-Abfrage verwiesen wird, sollten nicht qualifiziert oder nur durch den Tabellennamen qualifiziert sein. Wenn Sie z. B. auf die SaleAmount-Spalte in einer Tabelle verweisen möchten, ist `SaleAmount` oder `Sales.SaleAmount` gültig, aber `dbo.Sales.SaleAmount` generiert einen Fehler.  
   
- **Hinweis** Wenn eine benannte Abfrage definiert wird, mit der eine [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] - oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-Datenquelle abgefragt wird, treten für eine benannte Abfrage, die eine korrelierte Unterabfrage und eine GROUP BY-Klausel enthält, Fehler auf. Weitere Informationen finden Sie unter [Interner Fehler für SELECT-Anweisung mit korrelierter Unterabfrage und GROUP BY](https://support.microsoft.com/kb/274729) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ **Hinweis** Wenn eine benannte Abfrage definiert wird, die [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder 7,0-Datenquelle abfragt, schlägt eine benannte Abfrage, die eine korrelierte Unterabfrage und eine Group By-Klausel enthält, fehl. Weitere Informationen finden Sie unter [Interner Fehler für SELECT-Anweisung mit korrelierter Unterabfrage und GROUP BY](https://support.microsoft.com/kb/274729) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
 ## <a name="add-or-edit-a-named-query"></a>Hinzufügen oder Bearbeiten einer benannten Abfrage  
   
@@ -60,8 +60,8 @@ ms.locfileid: "66075562"
   
 5.  Klicken Sie auf **OK**. Ein Symbol mit zwei überlappenden Tabellen wird im Tabellenkopf angezeigt. Dieses Symbol bedeutet, dass die Tabelle durch eine benannte Abfrage ersetzt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen Sichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
+ [Definieren Sie benannte Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

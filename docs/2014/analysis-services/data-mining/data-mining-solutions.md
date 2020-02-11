@@ -1,5 +1,5 @@
 ---
-title: Datamining-Lösungen | Microsoft-Dokumentation
+title: Data Mining-Lösungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084890"
 ---
 # <a name="data-mining-solutions"></a>Data Mining-Projektmappen
   Eine Data Mining-Projektmappe ist eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektmappe, die ein oder mehrere Data Mining-Projekte enthält.  
   
- Die Themen in diesem Abschnitt enthalten Informationen, wie mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]eine integrierte Data Mining-Projektmappe entworfen und implementiert wird. Eine Übersicht über den Data Mining-Entwurfsprozess und verwandte Tools finden Sie unter [Data Mining Concepts](data-mining-concepts.md).  
+ Die Themen in diesem Abschnitt enthalten Informationen zum Entwerfen und Implementieren einer integrierten Data Mining Lösung mithilfe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]von. Eine Übersicht über den Data Mining-Entwurfsprozess und verwandte Tools finden Sie unter [Data Mining Concepts](data-mining-concepts.md).  
   
  Weitere Informationen zu zusätzlichen Projekttypen, die für Data Mining nützlich sind, finden Sie unter [Verwandte Projekte für Data Mining-Lösungen](data-mining-solutions.md).  
   
- [Vergleich der relationalen und Mehrdimensionale Lösungen](#bkmk_RelMD)  
+ [Relationale und mehrdimensionale Lösungen](#bkmk_RelMD)  
   
- [Bereitstellen von Data Mining-Projektmappen](#bkmk_Deploy)  
+ [Bereitstellen von Data Mining-Lösungen](#bkmk_Deploy)  
   
- [Anleitungen für Projektmappen](#bkmk_Walkthru)  
+ [Exemplarische Vorgehensweisen](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> Vergleich der relationalen und mehrdimensionalen Projektmappen  
- Datamining-Lösungen möglich basierend entweder auf mehrdimensionalen Daten-, also einem vorhandenen Cube – oder auf rein relationalen Daten, z. B. die Tabellen und Sichten in einem Datawarehouse oder Textdateien, Excel-Arbeitsmappen oder externe Daten aus anderen Quellen.  
+##  <a name="bkmk_RelMD"></a>Relationale und mehrdimensionale Lösungen  
+ Eine Data Mining Lösung kann entweder auf mehrdimensionalen Daten basieren, d. h. auf einem vorhandenen Cube, oder auf rein relationalen Daten, wie z. b. Tabellen und Sichten in einer Data Warehouse, oder auf Textdateien, Excel-Arbeitsmappen oder anderen externen Datenquellen.  
   
 -   Sie können Data Mining-Objekte innerhalb einer vorhandenen mehrdimensionalen Datenbankprojektmappe erstellen.  
   
@@ -44,16 +44,16 @@ ms.locfileid: "66084890"
   
      Dies ist die bevorzugte Methode zum Erstellen von Data Mining-Modellen, da die Verarbeitung und das Abfragen für relationale Datenquellen im Allgemeinen am schnellsten ist. Sie können sich auch Modelle zwischen Servern problemlos mit den Befehlen EXPORT und IMPORT verschieben und sichern.  
   
-##  <a name="bkmk_Deploy"></a> Bereitstellen von Data Mining-Projektmappen  
+##  <a name="bkmk_Deploy"></a>Bereitstellen von Data Mining-Lösungen  
  Die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], für dir Sie die Projektmappe bereitstellen, muss in einem Modus ausgeführt werden, der mehrdimensionale Objekte und Data Mining-Objekte unterstützt. Sie können daher Data Mining-Objekte nicht in einer Instanz bereitstellen, die tabellarische Modelle oder PowerPivot-Daten hostet.  
   
- Wenn Sie in Visual Studio eine Data Mining-Projektmappe erstellen, müssen Sie demzufolge die **Vorlage für multidimensionale Projekte bzw. Data Mining-Projekte von Analysis Services** verwenden.  
+ Wenn Sie in Visual Studio eine Data Mining-Projektmappe erstellen, müssen Sie demzufolge die Vorlage für multidimensionale Projekte bzw. Data Mining-Projekte von Analysis Services **** verwenden.  
   
  Wenn Sie die Projektmappe bereitstellen, werden die für Data Mining verwendeten Objekte in der angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz erstellt, und zwar in einer Datenbank mit dem gleichen Namen wie die Projektmappendatei.  
   
  Weitere Informationen zum Bereitstellen der relationalen und mehrdimensionalen Projektmappen finden Sie unter [Bereitstellen von Data Mining-Projektmappen](deployment-of-data-mining-solutions.md).  
   
-##  <a name="bkmk_Walkthru"></a> Anleitung für Projektmappen  
+##  <a name="bkmk_Walkthru"></a>Exemplarische Vorgehensweise  
  Bietet eine Übersicht zum Erstellen von Data Mining-Projektmappen mit dem Data Mining-Assistenten.  
   
  [Erstellen einer relationalen Miningstruktur](create-a-relational-mining-structure.md)  
@@ -76,15 +76,15 @@ ms.locfileid: "66084890"
   
  Weitere Informationen finden Sie unter den folgenden Links:  
   
-|Richtlinienübersicht|Thema|  
+|Aufgaben|Themen|  
 |-----------|------------|  
-|Testen Sie die Modelle, die Sie erstellen, überprüfen Sie die Qualität der Trainingsdaten, und erstellen Sie Diagramme, die die Genauigkeit von Data Mining-Modellen darstellen.|[Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)|  
+|Testen Sie die Modelle, die Sie erstellen, überprüfen Sie die Qualität der Trainingsdaten, und erstellen Sie Diagramme, die die Genauigkeit von Data Mining-Modellen darstellen.|[Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)|  
 |Trainieren Sie das Modell, indem Sie die Struktur und verwandte Modelle mit Daten auffüllen. Aktualisieren und erweitern Sie Modelle mit neuen Daten.|[Verarbeiten von Data Mining-Objekten](processing-data-mining-objects.md)|  
 |Passen Sie durch das Anwenden von Filtern auf die Trainingsdaten, Auswählen eines anderen Algorithmus oder Festlegen von erweiterten Algorithmusparametern ein Miningmodell an.|[Anpassen von Miningmodellen und -strukturen](customize-mining-models-and-structure.md)|  
-|Passen Sie ein Miningmodell durch Anwenden von Filtern auf die Daten an, die beim Trainieren des Modus verwendet werden.|[Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services - Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Passen Sie ein Miningmodell durch Anwenden von Filtern auf die Daten an, die beim Trainieren des Modus verwendet werden.|[Hinzufügen von Mining Modellen zu einer Struktur &#40;Analysis Services Data Mining-&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Aktualisieren und verwalten Sie Data Mining-Projektmappen.|Link TBD|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Tutorials &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

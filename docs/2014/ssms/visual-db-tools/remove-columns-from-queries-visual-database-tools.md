@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659637"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Entfernen von Spalten aus Abfragen (Visual Database Tools)
@@ -32,14 +32,14 @@ ms.locfileid: "62659637"
   
 -   Wählen Sie im **Kriterienbereich**die Rasterzeile mit der zu entfernenden Spalte aus, und drücken Sie ENTF.  
   
-     -oder-  
+     Oder  
   
 -   Entfernen Sie im [SQL-Bereich](sql-pane-visual-database-tools.md)alle Verweise auf die Spalte.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Spalten zu Abfragen &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
- [Sortieren und gruppieren Abfrageergebnisse &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Sortieren und Gruppieren von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Zusammenfassen von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

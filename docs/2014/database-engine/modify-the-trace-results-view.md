@@ -1,5 +1,5 @@
 ---
-title: Die Sicht der Ablaufverfolgungsergebnisse ändern | Microsoft-Dokumentation
+title: Ändern der Sicht der Ablauf Verfolgungs Ergebnisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089441"
 ---
 # <a name="modify-the-trace-results-view"></a>Ändern der Sicht der Ablaufverfolgungsergebnisse
@@ -22,26 +22,26 @@ ms.locfileid: "66089441"
   
 1.  [Hinzufügen oder Entfernen von Spalten](#AddRemoveColumns)  
   
-2.  [Erstellen Sie, bearbeiten Sie oder löschen Sie zusammengeführter Spalten](#ChangeColumns)  
+2.  [Erstellen, Bearbeiten oder Löschen zusammengeführter Spalten](#ChangeColumns)  
   
 3.  [Sortieren der Ergebnisse](#SortResults)  
   
-4.  [Die Ergebnisse gruppieren](#GroupResults)  
+4.  [Gruppieren der Ergebnisse](#GroupResults)  
   
 5.  [Aggregieren der Ergebnisse](#AggregateResults)  
   
-6.  [Die Ergebnisse filtern](#Filter)  
+6.  [Filtern der Ergebnisse](#Filter)  
   
-7.  [Suchen nach Text in Spalten](#Search)  
+7.  [Textsuche in Spalten](#Search)  
   
 8.  [Ändern der Anzeigeeinstellungen](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a> Hinzufügen oder Entfernen von Spalten  
+##  <a name="AddRemoveColumns"></a>Hinzufügen oder Entfernen von Spalten  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und wählen Sie dann **Spalten auswählen**aus.  
   
@@ -56,14 +56,14 @@ ms.locfileid: "66089441"
   
 5.  Klicken Sie auf **OK**.  
   
-##  <a name="ChangeColumns"></a> Erstellen Sie, bearbeiten Sie oder löschen Sie zusammengeführter Spalten  
+##  <a name="ChangeColumns"></a>Erstellen, bearbeiten oder löschen zusammen geführter Spalten  
   
 #### <a name="to-create-merged-columns"></a>So erstellen Sie zusammengeführte Spalten  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und klicken Sie dann auf **Spalten auswählen**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und klicken Sie dann auf **Spalten auswählen**.  
   
@@ -98,33 +98,33 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und klicken Sie dann auf **Spalten auswählen**.  
   
 3.  Wählen Sie im Dialogfeld **Spalten auswählen** den Namen der zusammengeführten Spalte aus, die Sie löschen möchten, und klicken Sie dann auf **Löschen**.  
   
-##  <a name="SortResults"></a> Sortieren der Ergebnisse  
+##  <a name="SortResults"></a>Sortieren der Ergebnisse  
   
 #### <a name="to-sort-the-results-in-ascending-or-descending-order"></a>So sortieren Sie die Ergebnisse in aufsteigender oder absteigender Reihenfolge  
   
 -   Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
   
 -   Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf die Spaltenüberschrift, nach der die Sortierung erfolgen soll. Klicken Sie auf **Aufsteigend sortieren** oder **Absteigend sortieren** , um die Spalte in aufsteigender bzw. absteigender Reihenfolge zu sortieren.  
   
      Bei gruppierten Spalten werden bei Sortierung der Spalte nur die Daten innerhalb der Gruppe sortiert.  
   
-##  <a name="GroupResults"></a> Gruppieren von Ergebnissen  
+##  <a name="GroupResults"></a>Gruppieren von Ergebnissen  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>So gruppieren Sie die Ergebnisse nach einer einzelnen Spalte  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste für erweiterte Ereignisse auf die Schaltfläche **Datenfeed beenden** klicken.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste erweiterte Ereignisse auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, den Sie gruppieren möchten, und klicken Sie dann auf **Nach dieser Spalte gruppieren**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
   
 2.  Klicken Sie auf der Symbolleiste für erweiterte Ereignisse auf die Schaltfläche **Gruppierung** .  
   
@@ -145,16 +145,16 @@ ms.locfileid: "66089441"
   
 4.  Klicken Sie auf **OK**.  
   
-##  <a name="AggregateResults"></a> Aggregieren der Ergebnisse  
+##  <a name="AggregateResults"></a>Aggregat Ergebnisse  
  Erweiterte Ereignisse unterstützen fünf Aggregationsfunktionen:  
   
--   Summe  
+-   SUM  
   
 -   Min  
   
 -   Max  
   
--   Mittelwert  
+-   Average  
   
 -   Count  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
   
     > [!NOTE]  
     >  Die Aggregation wird für eine Gruppe ausgeführt, deshalb müssen Sie die Ergebnisse gruppieren, bevor Sie die Aggregation ausführen können.  
@@ -184,7 +184,7 @@ ms.locfileid: "66089441"
   
 7.  Klicken Sie auf **OK**.  
   
-##  <a name="Filter"></a> Ergebnisse filtern  
+##  <a name="Filter"></a>Filter Ergebnisse  
  Sie können Filter auf Ablaufverfolgungsergebnisse anwenden, um die Ablaufverfolgungsergebnisse einzugrenzen, die im Ablaufverfolgungsfenster angezeigt werden. Der Anzeigefilter umfasst einen Zeitfilter und einen erweiterten Filter. Sie filtern mithilfe des Zeitfilters die Ablaufverfolgungsergebnisse nach Ereigniszeitstempel und erstellen mithilfe des erweiterten Filters Filterbedingungen mit Ereignisfeldern und -aktionen. Zwischen Zeit- und erweitertem Filter besteht eine logische UND-Beziehung.  
   
 #### <a name="to-create-a-filter"></a>So erstellen Sie einen Filter  
@@ -192,13 +192,13 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
   
 2.  Wählen Sie im Fenster mit den Ablaufverfolgungsergebnissen die Ergebnisse aus, die Sie filtern möchten, und klicken Sie dann auf der Symbolleiste Erweiterte Ereignisse auf die Schaltfläche **Filter** .  
   
 3.  Wählen Sie zum Festlegen des Zeitfilters im Dialogfeld **Filter** die Option **Zeitfilter festlegen** aus, und ziehen Sie die Schieberegler, um die Zeitachse festzulegen. Beachten Sie, dass beim Bewegen des Schiebereglers der Zeitwert im Zeitfeld dementsprechend angezeigt wird. Sie können die Zeit auch in den Zeitfeldern eingeben oder in der Dropdownliste auswählen. Wenn Sie die Zeit eingeben, bewegt sich der linke Zeitschieberegler entsprechend.  
   
-4.  Wenden Sie im Abschnitt **Zusätzliche Filter** die Filterkriterien an, und klicken Sie dann auf **Übernehmen**. Wenn Sie mit dem Erstellen des Filters fertig sind, klicken Sie auf **OK**.  
+4.  Wenden Sie im Abschnitt **zusätzliche Filter** die Filterkriterien an, und klicken Sie dann auf **anwenden**. Wenn Sie mit dem Erstellen des Filters fertig sind, klicken Sie auf **OK**.  
   
  Wenn ein Ereignisfeld über den gleichen Namen wie eine Aktion verfügt, liegt ein Sonderfall vor. Ein Beispiel dafür ist session_id. Es gibt mehrere Ereignisse, die ein Feld session_id enthalten, und Sie könnten auch die Aktion session_id hinzufügen. Beide Informationen werden gesammelt, im Anzeigeraster des Profilers für erweiterte Ereignisse wird jedoch folgende Logik angewendet.  
   
@@ -210,12 +210,12 @@ ms.locfileid: "66089441"
   
 -   Wenn weder eine Aktion noch ein Feld vorhanden ist, wird NULL angezeigt.  
   
-##  <a name="Search"></a> Suchen nach Text in Spalten  
+##  <a name="Search"></a>In Spalten nach Text suchen  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie auf der Symbolleiste für erweiterte Ereignisse auf die Schaltfläche **Suchen** .  
   
@@ -225,25 +225,25 @@ ms.locfileid: "66089441"
   
 4.  Wählen Sie im Feld **Suchen in** in der Dropdownliste den Speicherort aus, an dem Sie nach dem angegebenen Text suchen möchten. Verwenden Sie zum Suchen die folgenden Optionen:  
   
-    -   **Tabellenspalten**. Verwenden Sie diese Option, um alle sichtbaren Spalten im Ablaufverfolgungsfenster zu durchsuchen.  
+    -   **Tabellen Spalten**. Verwenden Sie diese Option, um alle sichtbaren Spalten im Ablaufverfolgungsfenster zu durchsuchen.  
   
-    -   **Details**. Verwenden Sie diese Option zum Durchsuchen von allen Spalten (höhergestuften und nicht höhergestuften) im Ablaufverfolgungsfenster angezeigt werden, die vor dem Öffnen ausgewählt wurden die **in erweiterten Ereignissen suchen** Dialogfeld.  
+    -   **Details**. Verwenden Sie diese Option, um alle (höher gestuften und nicht höher gestuften) Spalten im Ablauf Verfolgungs Fenster zu durchsuchen, die vor dem Öffnen des Dialog Felds **in erweiterten Ereignissen suchen** ausgewählt wurden.  
   
-    -   **\<Ereignisspaltenname >** . Verwenden Sie diese Option, um in einer bestimmten Ereignisspalte aus der Dropdownliste zu suchen.  
+    -   **Der Name der Ereignis Spalte>. \< ** Verwenden Sie diese Option, um in einer bestimmten Ereignisspalte aus der Dropdownliste zu suchen.  
   
 5.  Verwenden Sie die folgenden Optionen, um anzugeben, wie Sie die Suche definieren möchten:  
   
-    1.  **Groß-/Kleinschreibung beachten**. Verwenden Sie diese Option, um für den im Feld **Suchen nach** eingegebenen Text die Suchergebnisse anzuzeigen, die in Inhalt und Schreibweise übereinstimmen.  
+    1.  **Groß-/Kleinschreibung** Verwenden Sie diese Option, um die Suchergebnisse für den Text anzuzeigen, den Sie im Feld **Suchen** nach eingegeben haben, das sowohl nach Inhalt als auch nach Groß-/Kleinschreibung übereinstimmt.  
   
-    2.  **Nur ganzes Wort suchen**. Verwenden Sie diese Option, um nur die Suchergebnisse für den Text anzuzeigen, die mit vollständigen Wörtern übereinstimmen.  
+    2.  Entsprechung für **ganzes Wort**suchen. Verwenden Sie diese Option, um nur die Suchergebnisse für den Text anzuzeigen, die mit vollständigen Wörtern übereinstimmen.  
   
-    3.  **Suchrichtung nach oben**. Verwenden Sie diese Option, um ab der Cursorposition zum Anfang der Ergebnisse zu suchen.  
+    3.  **Suchen Sie nach oben**. Verwenden Sie diese Option, um ab der Cursorposition zum Anfang der Ergebnisse zu suchen.  
   
-    4.  **Verwendung**. Verwenden Sie diese Option, um die Sonderzeichen und die regulären Ausdrücke zu interpretieren, die Sie im Feld **Suchen nach** eingegeben haben. Sonderzeichen zählen die Platzhalterzeichen (*) und (?), mit denen Sie ein oder mehrere Zeichen darstellen. Reguläre Ausdrücke sind besondere Schreibweisen, die verwendet wurden, um Muster im Suchtext zu definieren.  
+    4.  **Verwenden**Sie. Verwenden Sie diese Option, um die Sonderzeichen und die regulären Ausdrücke zu interpretieren, die Sie im Feld **Suchen nach** eingegeben haben. Sonderzeichen zählen die Platzhalterzeichen (*) und (?), mit denen Sie ein oder mehrere Zeichen darstellen. Reguläre Ausdrücke sind besondere Schreibweisen, die verwendet wurden, um Muster im Suchtext zu definieren.  
   
 6.  Klicken Sie auf **Weitersuchen** , um nach dem nächsten Vorkommen des Texts zu suchen, den Sie im Feld **Suchen nach** eingegeben haben.  
   
-##  <a name="ChangeDisplay"></a> Ändern der Anzeigeeinstellungen  
+##  <a name="ChangeDisplay"></a>Ändern der Anzeigeeinstellungen  
  Sie können Spalteninformationen (Spaltenreihenfolge, Mergespalte und Spaltenbreite) und Filterinformationen eines Ablaufverfolgungsergebnisses in einer Anzeigeeinstellungsdatei (VIEWSETTING-Datei) für erweiterte Ereignisse speichern. Nach dem Speichern der Datei können Sie sie auf die Ablaufverfolgungsergebnisse anwenden, um die Ansicht zu ändern.  
   
 #### <a name="to-change-the-display-settings"></a>So ändern Sie die Anzeigeeinstellungen  
@@ -251,15 +251,15 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
+    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
   
 2.  Wählen Sie im Fenster mit den Ablaufverfolgungsergebnissen auf der Symbolleiste für erweiterte Ereignisse oder im Menü **Anzeigeeinstellungen**aus.  
   
 3.  Wählen Sie eine der folgenden Optionen aus der Dropdownliste aus:  
   
-    -   **Speichern unter**. Speichern Sie die Spalten- und Filterinformationen eines Ablaufverfolgungsergebnisses in einer VIEWSETTING-Datei.  
+    -   **Speichern**unter. Speichern Sie die Spalten- und Filterinformationen eines Ablaufverfolgungsergebnisses in einer VIEWSETTING-Datei.  
   
-    -   **Öffnen**. Öffnen Sie eine vorhandene VIEWSETTING-Datei.  
+    -   **Öffnen**Sie. Öffnen Sie eine vorhandene VIEWSETTING-Datei.  
   
     -   **Zuletzt verwendete öffnen**. Öffnen Sie eine vor kurzem gespeicherte VIEWSETTING-Datei.  
   

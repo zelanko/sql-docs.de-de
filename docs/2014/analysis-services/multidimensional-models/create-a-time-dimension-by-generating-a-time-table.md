@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Zeitdimension durch Generieren einer Zeittabelle | Microsoft-Dokumentation
+title: Erstellen einer Zeit Dimension durch das Erzeugen einer Zeittabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076288"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Erstellen einer Zeitdimension durch Generieren einer Zeittabelle
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Zeitdimension erstellen, auch wenn keine Zeittabelle in der Quelldatenbank vorhanden ist. Sie können dies ausführen, indem Sie eine der folgenden Optionen auf der Seite **Erstellungsmethode auswählen** auswählen:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von eine Zeit Dimension erstellen, wenn keine Zeittabelle in der Quelldatenbank verfügbar ist. Sie können dies ausführen, indem Sie eine der folgenden Optionen auf der Seite **Erstellungsmethode auswählen** auswählen:  
   
--   **Zeittabelle in der Datenquelle generieren** Wählen Sie diese Option, wenn Sie zum Erstellen von Objekten in der zugrunde liegenden Datenquelle berechtigt sind. Der Assistent generiert dann eine Zeittabelle und speichert diese Tabelle in der Datenquelle. Der Assistent erstellt anschließend die Zeitdimension basierend auf dieser Zeittabelle.  
+-   **Zeittabelle in der Datenquelle generieren** Wählen Sie diese Option aus, wenn Sie über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Der Assistent generiert dann eine Zeittabelle und speichert diese Tabelle in der Datenquelle. Der Assistent erstellt anschließend die Zeitdimension basierend auf dieser Zeittabelle.  
   
--   **Zeittabelle auf dem Server generieren** Wählen Sie diese Option, wenn Sie nicht zum Erstellen von Objekten in der zugrunde liegenden Datenquelle berechtigt sind. Der Assistent generiert dann eine Zeittabelle und speichert sie auf dem Server anstatt in der Datenquelle. (Eine auf dem Server aus einer Zeittabelle erstellte Dimension wird als *Serverzeitdimension* bezeichnet.) Der Assistent erstellt anschließend die Serverzeitdimension basierend auf dieser Tabelle.  
+-   **Zeittabelle auf dem Server generieren** Wählen Sie diese Option aus, wenn Sie nicht über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Der Assistent generiert dann eine Zeittabelle und speichert sie auf dem Server anstatt in der Datenquelle. (Eine auf dem Server aus einer Zeittabelle erstellte Dimension wird als *Serverzeitdimension*bezeichnet.) Der Assistent erstellt anschließend die Serverzeitdimension basierend auf dieser Tabelle.  
   
  Wenn Sie eine Zeitdimension erstellen, werden die Zeiträume sowie das Anfangs- und Enddatum der Dimension angegeben. Mithilfe der angegebenen Zeiträume werden im Assistenten die Zeitattribute erstellt. Beim Verarbeiten der Dimension werden in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die zur Unterstützung der angegebenen Datumsangaben und Zeiträume erforderlichen Daten generiert und gespeichert. Der Assistent verwendet die für eine Zeitdimension erstellten Attribute, um Hierarchien für die Dimension zu empfehlen. Die Hierarchien spiegeln die Beziehungen zwischen den verschiedenen Zeiträumen wider und berücksichtigen die unterschiedlichen Kalender. In der Hierarchie eines Standardkalenders wird beispielsweise die Weeks-Ebene unter der Years-Ebene, jedoch nicht unter der Month-Ebene angezeigt, da Wochen gleichmäßig in Jahre, jedoch nicht in Monate unterteilt werden. In der Hierarchie eines Produktions- oder Berichtskalenders hingegen sind die Wochen gleichmäßig in Monate unterteilt, sodass die Weeks-Ebene unter der Month-Ebene angezeigt wird.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66076288"
 ## <a name="completing-the-dimension-wizard"></a>Abschließen des Dimensions-Assistenten  
  Prüfen Sie auf der Seite **Assistenten abschließen** die vom Assistenten erstellten Attribute und Hierarchien, und benennen Sie dann die Zeitdimension. Klicken Sie auf **Fertig stellen** , um den Assistenten abzuschließen und die Dimension zu erstellen. Nachdem Sie die Dimension abgeschlossen haben, können Sie sie mithilfe des Dimensions-Designers ändern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Erstellen einer Datumstypdimension](database-dimensions-create-a-date-type-dimension.md)   
- [Eigenschaften von Datenbankdimensionen](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
- [Dimensionsbeziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Erstellen einer Dimension anhand einer vorhandenen Tabelle](create-a-dimension-by-using-an-existing-table.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen Sichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
+ [Erstellen einer Datentyp Dimension](database-dimensions-create-a-date-type-dimension.md)   
+ [Daten Bank Dimensions Eigenschaften](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [Dimensions Beziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Erstellen einer Dimension mithilfe einer vorhandenen Tabelle](create-a-dimension-by-using-an-existing-table.md)   
  [Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

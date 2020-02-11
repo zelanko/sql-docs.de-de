@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern oder Löschen einer Attributbeziehung | Microsoft-Dokumentation
+title: Erstellen, ändern oder Löschen einer Attribut Beziehung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077093"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>Erstellen, Ändern oder Löschen einer Attributbeziehung
@@ -59,7 +59,7 @@ ms.locfileid: "66077093"
   
 3.  Klicken Sie im Dialogfeld **Objekte löschen** auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Attributbeziehungen](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

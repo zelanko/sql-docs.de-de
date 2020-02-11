@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten eines Miningmodells | Microsoft-Dokumentation
+title: Verarbeiten eines Mining Modells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083099"
 ---
 # <a name="process-a-mining-model"></a>Verarbeiten eines Miningmodells
@@ -38,13 +38,13 @@ ms.locfileid: "66083099"
   
      Falls Sie Änderungen an der Miningstruktur vorgenommen haben, werden Sie aufgefordert, die Struktur erneut bereitzustellen, bevor Sie das Modell verarbeiten. Klicken Sie auf **Ja**.  
   
-3.  In der **Verarbeiten des Miningmodells - \<Modell >** Dialogfeld klicken Sie auf **ausführen**.  
+3.  Klicken Sie im Dialogfeld **Mining \<Modell Modell>verarbeiten** auf **Ausführen**.  
   
      Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt Informationen zur Verarbeitung des Modells an.  
   
 4.  Nachdem die Modellverarbeitung erfolgreich abgeschlossen ist, klicken Sie im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-5.  Klicken Sie auf **schließen** in die **Verarbeiten des Miningmodells - \<Modell >** Dialogfeld.  
+5.  Klicken Sie im Dialogfeld **Mining Modell \<Modell>verarbeiten** auf **Schließen** .  
   
  Es wurden lediglich die Miningstruktur und das ausgewählte Miningmodell verarbeitet.  
   
@@ -54,17 +54,17 @@ ms.locfileid: "66083099"
   
 2.  Falls Sie Änderungen an der Miningstruktur vorgenommen haben, werden Sie aufgefordert, die Struktur erneut bereitzustellen, bevor Sie die Modelle verarbeiten. Klicken Sie auf **Ja**.  
   
-3.  In der **Miningstruktur verarbeiten - \<Struktur >** Dialogfeld klicken Sie auf **ausführen**.  
+3.  Klicken Sie im Dialogfeld **Mining \<Struktur verarbeiten->Struktur** auf **Ausführen**.  
   
 4.  Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt Informationen zur Verarbeitung des Modells an.  
   
 5.  Nachdem die Modellverarbeitung erfolgreich abgeschlossen ist, klicken Sie im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-6.  Klicken Sie auf **schließen** in die **Verarbeitung \<Modell >** Dialogfeld.  
+6.  Klicken Sie im Dialog **Feld \<Verarbeitungsmodell>** auf **Schließen** .  
   
  Die Miningstruktur und alle zugeordneten Miningmodelle wurden verarbeitet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und -anweisungen](mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)  
   
   

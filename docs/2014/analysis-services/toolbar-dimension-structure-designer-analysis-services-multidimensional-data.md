@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Symbolleiste (Registerkarte ' Dimensions Struktur ', Dimensions-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066052"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Dimensionsstruktur', Dimensions-Designer) (Analysis Services - Mehrdimensionale Daten)
   Verwenden Sie die Symbolleiste, um Vorgänge auszuführen, die auf der Seite **Dimensionsstruktur** von **Dimensions-Designer**häufig verwendet werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Business Intelligence hinzufügen**  
  Zeigt den **Business Intelligence-Assistent** an, mit dem Business Intelligence-Funktionen hinzugefügt werden können.  
   
- **Verarbeiten**  
+ **Prozess**  
  Zeigt das Dialogfeld **Verarbeiten** an, in dem das Objekt verarbeitet wird.  
   
  **Attribute anzeigen als**  
  Klicken Sie auf diese Schaltfläche, um den Bereich **Attribute** einem der folgenden Modi anzuzeigen:  
   
--   Liste  
+-   List  
   
-     Zeigt eine Liste der Attribute für die aktuelle Dimension an. Dies ist die Standardeinstellung.  
+     Zeigt eine Liste der Attribute für die aktuelle Dimension an. Dies ist die Standardoption.  
   
--   trEE  
+-   Struktur  
   
      Zeigt in der Strukturansicht die Attribute für die aktuelle Dimension einschließlich der Elementeigenschaften eines bestimmten Attributs an, die als untergeordneter Knoten des betreffenden Attributs angezeigt werden.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66066052"
  **Anzeigen**  
  Klicken Sie auf diese Schaltfläche, um zwischen den folgenden Anzeigemodi für den Bereich **Datenquellensicht** zu wechseln:  
   
--   Diagrammsicht  
+-   Diagrammansicht  
   
      Zeigt ein Diagramm mit den mit der aktuellen Dimension verknüpften Tabellen und Spalten an.  
   

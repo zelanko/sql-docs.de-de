@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e48a38ba97feaf03a9ed14f3668ac4b98095a92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679121"
 ---
 # <a name="about-sql-server-management-studio"></a>Informationen zu SQL Server Management Studio
   Verwenden Sie dieses Dialogfeld, um Informationen zur Installation von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzuzeigen oder zu kopieren. In Evaluation Editions wird die Anzahl der Tage bis zum Ablaufen des Produkts angegeben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Komponentenname**  
  Zeigt ein Raster mit den Namen der installierten Komponenten von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem Betriebssystem auf:  
   

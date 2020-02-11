@@ -1,5 +1,5 @@
 ---
-title: OLE DB für Datamining | Microsoft-Dokumentation
+title: OLE DB für Data Mining | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62732035"
 ---
 # <a name="ole-db-for-data-mining"></a>OLE DB für Data Mining
-  Die Datamining-Funktionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] entsprechen den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB für Data Mining 1.0-Spezifikation, die im Juni 2000 veröffentlicht wurde.  
+  Die Data Mining Funktionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] entsprechen den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB für Data Mining 1,0-Spezifikation, die im Juni 2000 veröffentlicht wurde.  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wurde die Spezifikation durch Hinzufügung folgender Elemente erweitert: neue Schemarowsets, Spalten zu bestehenden Schemarowsets, Syntax zur Data Mining Extensions (DMX)-Sprache zum Erstellen und Verwalten von Miningstrukturen.  
   
- **Weitere Informationen finden Sie unter** [Data Mining-Schemarowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [MININGSTRUKTUR erstellen &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx), [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx), [DROP MINING-Struktur &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
+ **Weitere Informationen finden** Sie unter [Data Mining-Schemarowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx), [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx), [Drop Mining Structure &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Debuggen ein Geschäftslogikhandlers | Microsoft-Dokumentation
+title: Debuggen eines Geschäftslogik Handlers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721500"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)
@@ -33,7 +33,7 @@ ms.locfileid: "62721500"
   
 1.  Konfigurieren Sie die Veröffentlichung und Verteilung, erstellen Sie eine Veröffentlichung, und erstellen Sie ein Abonnement für die Veröffentlichung. Weitere Informationen finden Sie unter [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md) und [Create a Publication (Erstellen einer Veröffentlichung)](publish/create-a-publication.md).  
   
-2.  Erstellen und registrieren Sie einen Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Erstellen und registrieren Sie einen Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogik Handlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Erstellen Sie ein RMO-Projekt (Replication Management Objects, Replikationsverwaltungsobjekte) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, das den Merge-Agent programmgesteuert synchron startet. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721500"
   
 1.  Konfigurieren Sie die Veröffentlichung und Verteilung, erstellen Sie eine Veröffentlichung, und erstellen Sie ein Pullabonnement für die Veröffentlichung. Die Veröffentlichung muss die Websynchronisierung oder Abonnenten von [!INCLUDE[ssEW](../../includes/ssew-md.md)] unterstützen.  
   
-2.  Erstellen und registrieren Sie einen Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Erstellen und registrieren Sie einen Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogik Handlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Legen Sie, entweder in der zu debuggenden Methode oder im Klassenkonstruktor, einen Breakpoint im Code des Geschäftslogikhandlers fest. Weitere Informationen zu den Methoden, die in einem Geschäftslogikhandler implementiert werden können, finden Sie in den Themen zu den <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> -Methoden.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62721500"
   
 11. Die Ausführung stoppt, wenn sie den Breakpoint im Geschäftslogikhandler erreicht, falls keine anderen Breakpoints festgelegt und die richtigen Befehle repliziert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer | Microsoft-Dokumentation
+title: Durchsuchen eines Modells mit dem Microsoft Tree Viewer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,28 +24,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085940"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Struktur-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Entscheidungsbäume an, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus erstellt werden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Entscheidungsstrukturalgorithmus, der sowohl Klassifizierung als auch Regression unterstützt. Deshalb können Sie auch diesen Viewer verwenden, um Modelle auf Grundlage des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus anzuzeigen. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus wird für vorhersagende Modellierung sowohl diskreter als auch fortlaufender Attribute verwendet. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Struktur-Viewer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in zeigt Entscheidungsbäume an, die mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] dem Decision Trees-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Entscheidungsstrukturalgorithmus, der sowohl Klassifizierung als auch Regression unterstützt. Deshalb können Sie auch diesen Viewer verwenden, um Modelle auf Grundlage des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus anzuzeigen. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus wird für vorhersagende Modellierung sowohl diskreter als auch fortlaufender Attribute verwendet. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
 >  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a> Viewer-Registerkarten  
+##  <a name="BKMK_TabsPanes"></a>Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Struktur-Viewer umfasst die folgenden Registerkarten und Bereiche:  
   
 -   [Entscheidungsstruktur](#BKMK_DecisionTree)  
   
--   [Abhängigkeitsnetzwerk](#BKMK_DependencyNetwork)  
+-   [Abhängigkeits Netzwerk](#BKMK_DependencyNetwork)  
   
--   [Mininglegende](#BKMK_MiningLegend)  
+-   [Mining Legende](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a> Entscheidungsstruktur  
+###  <a name="BKMK_DecisionTree"></a>Entscheidungsstruktur  
  Wenn Sie ein Entscheidungsbaummodell erstellen, erstellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine separate Struktur für jedes vorhersagbare Attribut. Sie können eine individuelle Struktur anzeigen, indem Sie sie im Viewer auf der Registerkarte **Entscheidungsstruktur** in der Liste **Struktur** auswählen.  
   
  Eine Entscheidungsstruktur setzt sich aus einer Reihe von Teilungen zusammen, wobei sich die vom Algorithmus als am wichtigsten bestimmte Teilung links vom Viewer im Knoten **Alle** befindet. Weitere Unterteilungen befinden sich rechts davon. Die Aufteilung im Knoten **Alle** ist außerordentlich wichtig, da sie die stärkste Bedingung für die Teilungsursache im Datensatz darstellt und daher die erste Teilung verursacht hat.  
@@ -75,7 +75,7 @@ ms.locfileid: "66085940"
   
  [Zurück zum Anfang](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a> Abhängigkeitsnetzwerk  
+###  <a name="BKMK_DependencyNetwork"></a>Abhängigkeits Netzwerk  
  Das **Abhängigkeitsnetzwerk** zeigt die Abhängigkeiten zwischen den Eingabeattributen und den vorhersagbaren Attributen im Modell an. Der Schieberegler auf der linken Seite des Viewers fungiert als Filter, der an die Stärken der Abhängigkeiten gebunden ist. Wenn Sie den Schieberegler nach unten verschieben, werden nur die stärksten Links im Viewer angezeigt.  
   
  Wenn Sie einen Knoten auswählen, hebt der Viewer die Abhängigkeiten hervor, die knotenspezifisch sind. Wenn Sie beispielsweise einen vorhersagbaren Knoten auswählen, wird vom Viewer auch jeder Knoten hervorgehoben, der beim Vorhersagen des vorhersagbaren Knotens hilft.  
@@ -86,7 +86,7 @@ ms.locfileid: "66085940"
   
  [Zurück zum Anfang](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a> Mininglegende  
+###  <a name="BKMK_MiningLegend"></a>Mining Legende  
  In der **Mininglegende** werden folgende Informationen angezeigt, wenn Sie einen Knoten im Entscheidungsstrukturmodell auswählen:  
   
 -   Die Zahl der Fälle im Knoten, unterteilt nach den Status der vorhersagbaren Attribute.  
@@ -103,10 +103,10 @@ ms.locfileid: "66085940"
   
  [Zurück zum Anfang](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [Tasks und Anleitungen des Mining Modell-Viewers](mining-model-viewer-tasks-and-how-tos.md)   
  [Data Mining-Tools](data-mining-tools.md)   
  [Data Mining-Modell-Viewer](data-mining-model-viewers.md)  
   

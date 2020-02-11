@@ -13,24 +13,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679970"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Das &lt;xsd:redefine&gt;-Element
-  Das W3C XSD **redefine** -Element stellt Unterstützung zum Neudefinieren von Schemakomponenten zur Verfügung. Unterstützung für diese Richtlinie ist die Leistung beeinträchtigen und außerdem, dass erfordert jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erneut überprüfen alle Instanzen der `xml` mit dem neu definierten Schema verknüpft sind. Deshalb unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die das **\<xsd:redefine>** -Element enthalten, werden vom Server zurückgewiesen.  
+  Das W3C XSD **redefine** -Element stellt Unterstützung zum Neudefinieren von Schemakomponenten zur Verfügung. Die Unterstützung dieser Direktive kann jedoch die Leistung beeinträchtigen und erfordert außerdem, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dass alle Instanzen des `xml` Datentyps erneut überprüft werden, die mit dem neu definierten Schema verknüpft sind. Deshalb unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die das **\<xsd:redefine>** -Element enthalten, werden vom Server zurückgewiesen.  
   
  Gehen Sie zum Aktualisieren des Schemas oder seiner Komponenten stattdessen folgendermaßen vor:  
   
 1.  Erstellen Sie eine neue XML-Schemaauflistung mit den geänderten Schemakomponenten.  
   
-2.  Ändern Sie alle `xml` Datentypen (XML DT), die XML-schemaauflistung verwenden, neu definiert werden, um die neue XML-schemaauflistung verwenden. Hierzu verwenden Sie die ALTER COLUMN-Option des ALTER TABLE-Befehls, um den Spaltentyp zu ändern, oder Sie ändern die für Variablen oder Parameter geltenden Einschränkungen der XML-Schemaauflistung.  
+2.  Geben Sie alle `xml` Datentypen (XML DT) erneut ein, die die XML-Schema Auflistung verwenden, um die neue XML-Schema Auflistung zu verwenden. Hierzu verwenden Sie die ALTER COLUMN-Option des ALTER TABLE-Befehls, um den Spaltentyp zu ändern, oder Sie ändern die für Variablen oder Parameter geltenden Einschränkungen der XML-Schemaauflistung.  
   
 3.  Löschen Sie die alte Version der XML-Schemaauflistung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

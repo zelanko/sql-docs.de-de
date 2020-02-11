@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Verarbeiten der Bike Buyer-Miningstruktur | Microsoft-Dokumentation'
+title: 'Lektion 3: Verarbeiten der Bike Buyer-Mining Struktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655801"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lektion 3: Verarbeiten der Bike Buyer-Miningstruktur
-  In dieser Lektion verwenden Sie die INSERT INTO-Anweisung und die vTargetMail-Sicht aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank zum Verarbeiten von Miningstrukturen und Miningmodelle, die Sie in erstellt [Lektion 1: Erstellen der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) und [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  In dieser Lektion verwenden Sie die INSERT INTO-Anweisung und die vTargetMail-Sicht aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Beispieldatenbank, um die Mining Strukturen und Mining Modelle zu verarbeiten, die Sie in [Lektion 1: Erstellen der Bike Buyer-Mining Struktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) und [Lektion 2: Hinzufügen von Mining Modellen zur Bike Buyer-Mining Struktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)erstellt haben.  
   
- Wenn Sie eine Miningstruktur verarbeiten, liest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Quelldaten und erstellt die Strukturen, die Miningmodelle unterstützen. Wenn Sie ein Miningmodell verarbeiten, werden die von der Miningstruktur definierten Daten über den von Ihnen ausgewählten Data Mining-Algorithmus übergeben. Der Algorithmus sucht nach Trends und Mustern und speichert diese Informationen dann im Miningmodell. Aus diesem Grund enthält das Miningmodell nicht die tatsächlichen Quelldaten, sondern die vom Algorithmus ermittelten Informationen. Weitere Informationen zum Verarbeiten von Miningmodellen finden Sie unter [Verarbeitung von Anforderungen und Überlegungen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Wenn Sie eine Miningstruktur verarbeiten, liest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Quelldaten und erstellt die Strukturen, die Miningmodelle unterstützen. Wenn Sie ein Miningmodell verarbeiten, werden die von der Miningstruktur definierten Daten über den von Ihnen ausgewählten Data Mining-Algorithmus übergeben. Der Algorithmus sucht nach Trends und Mustern und speichert diese Informationen dann im Miningmodell. Aus diesem Grund enthält das Miningmodell nicht die tatsächlichen Quelldaten, sondern die vom Algorithmus ermittelten Informationen. Weitere Informationen zum Verarbeiten von Mining Modellen finden Sie unter [Verarbeiten von Anforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Sie müssen eine Miningstruktur nur dann erneut verarbeiten, wenn Sie eine Strukturspalte oder die Quelldaten ändern. Wenn Sie einer Miningstruktur, die bereits verarbeitet wurde, ein Miningmodell hinzufügen, können Sie das neue Miningmodell mithilfe der INSERT INTO MINING MODEL-Anweisung trainieren.  
   
 ## <a name="train-structure-template"></a>Trainieren der Strukturvorlage  
- Verwenden Sie zum Trainieren der Miningstruktur und ihre zugeordneten Mining-Modelle die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
+ Um die Mining Struktur und die zugehörigen Mining Modelle zu trainieren, verwenden Sie die [INSERT INTO-Anweisung &#40;DMX-&#41;](/sql/dmx/insert-into-dmx) . Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
 -   Identifizieren der Miningstruktur  
   
@@ -63,7 +63,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- In dieser Lektion verwenden Sie `OPENQUERY` zum Definieren der Quelldaten. Weitere Informationen zu anderen Methoden definieren, die Quellabfrage finden Sie unter [ &#60;quelldatenabfrage&#62;](/sql/dmx/source-data-query).  
+ In dieser Lektion verwenden Sie `OPENQUERY` zum Definieren der Quelldaten. Weitere Informationen zu anderen Methoden zum Definieren der Quell Abfrage finden Sie unter [&#60;Quelldaten Abfrage&#62;](/sql/dmx/source-data-query).  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgende Aufgabe aus:  
@@ -74,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>So verarbeiten Sie die Miningstruktur mithilfe von INSERT INTO  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -168,15 +168,15 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+6.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Process Bike Buyer Structure.dmx`.  
+7.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `Process Bike Buyer Structure.dmx`.  
   
-8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+8.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
  In der nächsten Lektion untersuchen Sie Miningmodellinhalte, die Sie der Miningstruktur in dieser Lektion hinzugefügt haben.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 4: Durchsuchen der Bike Buyer-Miningmodells](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lektion 4: Durchsuchen des Bike Buyer-Miningmodells](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

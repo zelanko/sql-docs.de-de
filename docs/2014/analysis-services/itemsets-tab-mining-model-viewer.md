@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Itemsets" (Miningmodell-Viewer) | Microsoft-Dokumentation
+title: Registerkarte "Itemsets" (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,28 +13,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079560"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Registerkarte "Itemsets" (Miningmodell-Viewer)
   Im Bereich **Itemsets** werden die häufig in einem Miningmodell für Zuordnungsregeln enthaltenen Itemsets angezeigt. Da ein Zuordnungsmodell viele Itemsets enthalten kann, werden im Viewer Steuerelemente bereitgestellt, mit denen Sie die im Viewer angezeigten Itemsets filtern können.  
   
- **Weitere Informationen finden Sie unter** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Weitere Informationen finden Sie unter:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
  **Viewer**  
  Wählen Sie einen Viewer aus, mit dem das ausgewählte Miningmodell angezeigt werden soll. Sie können entweder den benutzerdefinierten Viewer für Zuordnungsmodelle oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Tree Viewer verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
- **Minimaler Unterstützungswert**  
+ **Minimale Unterstützung**  
  Ändern Sie diesen Wert, um den Unterstützungswert festzulegen, den ein Itemset enthalten muss, um im Viewer angezeigt zu werden. Der Standardwert, der beim ersten Öffnen des Modells angezeigt wird, wird vom Modell berechnet, Sie können ihn jedoch ändern, um mehr oder weniger Itemsets anzuzeigen.  
   
  **Mindestgröße des Itemsets**  
@@ -65,10 +65,10 @@ ms.locfileid: "66079560"
  **Langen Namen anzeigen**  
  Wählen Sie diese Option aus, um den vollständigen Namen des Itemsets anzuzeigen, wie er im Miningmodellinhalt angezeigt wird.  
   
- **Maximale Zeilenanzahl**  
+ **Maximale Anzahl von Zeilen**  
  Beschränkt die Anzahl der Itemsets, die im Viewer angezeigt werden. Standardmäßig werden Itemsets in absteigender Reihenfolge nach Unterstützung sortiert, durch Verringern dieses Werts wird die Liste daher auf die häufigsten Itemsets eingeschränkt.  
   
- **Support**  
+ **Förder**  
  Zeigt den Unterstützungswert der einzelnen Itemsets an.  
   
  **Größe**  
@@ -77,9 +77,9 @@ ms.locfileid: "66079560"
  **Itemset**  
  Zeigt die Beschreibung für jedes Itemset an. Standardmäßig werden Itemsets als durch Trennzeichen getrennte Liste von Attributen und ihren Werten dargestellt. Mit der Option **Anzeigen** können Sie ändern, wie sie angezeigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727586"
 ---
 # <a name="managing-caches-xmla"></a>Verwalten von Caches (XMLA)
-  Sie können die [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) -Befehl in XML for Analysis (XMLA) zum Löschen des Caches von einer angegebenen Dimension oder Partition. Das Löschen des Cache zwingt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den Cache für dieses Objekt neu erstellen.  
+  Sie können den [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) -Befehl in XML for Analysis (XMLA) verwenden, um den Cache einer angegebenen Dimension oder Partition zu löschen. Das Löschen des Caches [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zwingt, den Cache für dieses Objekt neu zu erstellen.  
   
 ## <a name="specifying-objects"></a>Angeben von Objekten  
- Die [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) Eigenschaft der `ClearCache` Befehl kann einen Objektverweis nur für eine der folgenden Objekte enthalten. Bei einem Objektverweis, der sich nicht auf eines der folgenden Objekte bezieht, tritt ein Fehler auf:  
+ Die [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft des `ClearCache` -Befehls kann nur einen Objekt Verweis für eines der folgenden Objekte enthalten. Bei einem Objektverweis, der sich nicht auf eines der folgenden Objekte bezieht, tritt ein Fehler auf:  
   
  Datenbank  
  Löscht den Cache für alle Dimensionen und Partitionen, die in der Datenbank enthalten sind.  
@@ -43,7 +43,7 @@ ms.locfileid: "62727586"
  Partition  
  Löscht den Cache für die angegebene Partition.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln mit XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

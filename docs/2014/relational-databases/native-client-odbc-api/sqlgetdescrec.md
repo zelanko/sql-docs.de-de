@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescRec | Microsoft-Dokumentation
+title: Sqlgetdebug | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,53 +13,54 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657713"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-  SQLGetDescRec-Funktion, die spezifisch für ist in diesem Thema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  In diesem Thema werden die SQLGetDescRec-Funktionalität erläutert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die für Native Client spezifisch ist.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec und Tabellenwertparameter  
- SQLGetDescRec kann verwendet werden, um Werte für Attribute von Tabellenwertparametern und Tabellenwertparameter-Spalten zu erhalten. Die *RecNumber* Parameter des SQLGetDescRec entspricht der *ParameterNumber* -Parameter von SQLBindParameter.  
+ SQLGetDescRec kann verwendet werden, um Werte für Attribute von Tabellenwert Parametern und Tabellenwert Parameter-Spalten zu erhalten. Der *RecNumber* -Parameter von sqlgetdebug entspricht dem *ParameterNumber* -Parameter von SQLBindParameter.  
   
- Tabellenwertparameter-Spalten sind nur verfügbar, wenn das Deskriptorheaderfeld SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Datensatzes festgelegt ist, für den SQL_DESC_TYPE auf SQL_SS_TABLE eingestellt ist. Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS zu finden Sie unter [SQLSetStmtAttr](sqlsetstmtattr.md).  
+ Tabellenwertparameter-Spalten sind nur verfügbar, wenn das Deskriptorheaderfeld SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Datensatzes festgelegt ist, für den SQL_DESC_TYPE auf SQL_SS_TABLE eingestellt ist. Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS von finden Sie unter [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
- SQLGetDescRec gibt die folgenden Daten zurück:  
+ Sqlgetdebug gibt die folgenden Daten zurück:  
   
 |Parameter|Tabellenwertparameter|Tabellenwertparameter-Spalten und andere Parameter|  
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*Name*|Der formale Parametername für einen Aufruf einer gespeicherten Prozedur; andernfalls eine Zeichenfolge mit der Länge 0.|Der Tabellenwertparameter-Spaltenname.|  
-|*TypePtr*|SQL_DESC_TYPE. Bei Tabellenwertparametern ist dies SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*SubTypePtr*|Nicht definiert|SQL_DESC_DATETIME_INTERVAL_CODE (für Datensätze vom Typ SQL_DATETIME oder SQL_INTERVAL)|  
-|*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
-|*PrecisionPtr*|0|SQL_DESC_PRECISION|  
-|*ScalePtr*|0|SQL_DESC_SCALE|  
-|*NullablePtr*|1|SQL_DESC_NULLABLE|  
+|*Typeptr*|SQL_DESC_TYPE. Bei Tabellenwertparametern ist dies SQL_SS_TABLE.|SQL_DESC_TYPE|  
+|*Subtypeptr*|Undefined|SQL_DESC_DATETIME_INTERVAL_CODE (für Datensätze vom Typ SQL_DATETIME oder SQL_INTERVAL)|  
+|*Verlängert*|0|SQL_DESC_OCTET_LENGTH|  
+|*"Precisionptr"*|0|SQL_DESC_PRECISION|  
+|*Scaleptr*|0|SQL_DESC_SCALE|  
+|*Nullableptr*|1|SQL_DESC_NULLABLE|  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>SQLGetDescRec-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zurückgegebenen Werte lauten wie folgt:  
   
-||*TypePtr*|*SubTypePtr*|*LengthPtr*|*PrecisionPtr*|*ScalePtr*|  
+||*Typeptr*|*Subtypeptr*|*Verlängert*|*"Precisionptr"*|*Scaleptr*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
-|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>SQLGetDescRec-Unterstützung für große CLR-UDTs  
- `SQLGetDescRec` unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLGetDescRec` unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
- [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erkennen von Kategorien (Tabellenanalysetools für Excel) | Microsoft-Dokumentation
+title: Kategorien erkennen (Tabellenanalyse Tools für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06c466eb5e3275818a710a9f9d90c705ed93c957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081858"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Kategorien erkennen (Tabellenanalysetool für Excel)
-  ![Kategorien-Schaltfläche im Menüband erkennen](media/tat-detectcat.gif "Kategorien erkennen-Schaltfläche im Menüband")  
+  ![Kategorien erkennen (Schaltfläche auf Menüband)](media/tat-detectcat.gif "Kategorien erkennen (Schaltfläche auf Menüband)")  
   
- Die **Kategorien erkennen** Tool sucht automatisch Zeilen in einer Tabelle, die ähnliche Merkmale aufweisen.  
+ Das Tool **Kategorien erkennen** ermittelt automatisch Zeilen in einer Tabelle, die ähnliche Merkmale aufweisen.  
   
  Bei Abschluss des Tools wird ein Bericht erstellt, in dem die gefundenen Kategorien zusammen mit ihren charakteristischen Merkmalen aufgeführt werden. Standardmäßig wird der Datentabelle, die die vorgeschlagene Kategorie enthält, für jede Zeile Ihrer Daten eine neue Spalte hinzugefügt. Sie können die Kategorien dann überprüfen und umbenennen.  
   
@@ -43,50 +43,50 @@ ms.locfileid: "66081858"
   
 6.  Es wird ein neues Arbeitsblatt mit dem Namen Kategoriebericht vom Tool erstellt, in dem die Kategorien und deren Merkmale aufgelistet sind.  
   
- Weitere Informationen zur Vorgehensweise beim Angeben von Optionen für das Tool finden Sie unter [erkennt das Dialogfeld Kategorien (Tabellenanalysetools für Excel)](detect-categories-table-analysis-tools-for-excel.md).  
+ Weitere Informationen zum Angeben von Optionen für das Tool finden Sie unter [Dialog Feld "Kategorien erkennen" (Tabellenanalyse Tools für Excel)](detect-categories-table-analysis-tools-for-excel.md).  
   
 ## <a name="understanding-the-categories-report"></a>Grundlegendes zum Kategoriebericht  
- Die **Kategoriebericht** enthält die beiden Tabellen **Kategorieliste** und **Kategoriemerkmale**, und ein **Kategorieprofile** Diagramm.  
+ Der **Kategoriebericht** enthält zwei Tabellen: **Kategorie** -und **Kategoriemerkmale**und ein Diagramm für **Kategorieprofile** .  
   
 ### <a name="category-list"></a>Kategorieliste  
- In der ersten Tabelle sind die Kategorien aufgeführt, die gefunden wurden. Die **Zeilenanzahl** Spalte gibt an, wie viele Datenzeilen jeder Kategorie zugewiesen wurden.  
+ In der ersten Tabelle sind die Kategorien aufgeführt, die gefunden wurden. Die Spalte **Zeilen Anzahl** gibt an, wie viele Daten Zeilen jeder Kategorie zugewiesen wurden.  
   
- Im Modell werden temporäre Namen für jede Kategorie erstellt, die Kategorien können aber nach Bedarf umbenannt werden. Z. B. im folgenden Beispiel ist die erste Kategorie wurde umbenannt **Low Income**, denn dies war, dass das oberste Attribut des Clusters.  
+ Im Modell werden temporäre Namen für jede Kategorie erstellt, die Kategorien können aber nach Bedarf umbenannt werden. Im folgenden Beispiel wurde die erste Kategorie als **niedriges Einkommen**umbenannt, da dies das oberste Attribut des Clusters war.  
   
- ![vom Tool Kategorien erkennen erstellten Bericht](media/dm13-tat-detectcat-report1.gif "vom Tool Kategorien erkennen erstellten Bericht")  
+ ![Mit dem Tool "Kategorien erkennen" erstellter Bericht](media/dm13-tat-detectcat-report1.gif "Mit dem Tool "Kategorien erkennen" erstellter Bericht")  
   
  Sobald Sie die neue Bezeichnung eingeben, wird die Änderung an alle anderen Diagramme sowie an die Kategorieliste weitergegeben, die im Quelldatenarbeitsblatt hinzugefügt wird.  
   
 ### <a name="category-characteristics"></a>Kategoriemerkmale  
- Der zweiten Tabelle **Kategoriemerkmale**, zeigt die Details über die Zusammensetzung jeder Kategorie. Klicken Sie auf die **Filter** Schaltfläche am oberen Rand der **Kategorie** Spalte, um den Fokus auf einer oder wenigen Kategorien angezeigt.  
+ In der zweiten Tabelle, **Kategorieeigenschaften**, werden Details über die Zusammensetzung der einzelnen Kategorien angezeigt. Klicken Sie oben in der Spalte **Kategorie** auf die Schaltfläche **Filter** , um den Fokus auf ein oder nur einige Kategorien zu überprüfen.  
   
- ![vom Tool Kategorien erkennen erstellten Bericht](media/dm13-tat-detectcat-report2.gif "vom Tool Kategorien erkennen erstellten Bericht")  
+ ![Mit dem Tool "Kategorien erkennen" erstellter Bericht](media/dm13-tat-detectcat-report2.gif "Mit dem Tool "Kategorien erkennen" erstellter Bericht")  
   
- Die Schattierung in der Spalte **Relative Wichtigkeit**, gibt an, wie wichtig eine Kombination aus Attribut und Wert als Unterscheidungsmerkmal ist. Je länger der Balken, desto wahrscheinlicher ist es, dass das Attribut für seine Kategorie stark repräsentativ ist.  
+ Die Schattierung in der Spalte, **relative Wichtigkeit**, gibt an, wie wichtig diese Kombination von Attribut und Wert ist. Je länger der Balken, desto wahrscheinlicher ist es, dass das Attribut für seine Kategorie stark repräsentativ ist.  
   
 ### <a name="categories-profile-chart"></a>Kategorieprofildiagramm  
- Das endgültige Diagramm in die **Kategoriebericht** Arbeitsblatt **Kategorieprofile**, ist ein interaktives **PivotChart** , Sie verwenden können, neu anordnen und Ausblenden von Feldern, nach Werten zu filtern , und die Darstellung des Diagramms anpassen.  
+ Das abschließende Diagramm im Arbeits **** Blatt " **kategorieberichte", "Kategorieprofile**", ist ein interaktives **PivotChart** , das Sie verwenden können, um Felder neu anzuordnen und auszublenden, nach Werten zu filtern und die Diagramm Darstellung anzupassen.  
   
- Excel 2013 bietet jetzt **Diagrammformate** und **Diagrammelemente** Steuerelemente in der Entwurfsoberfläche, die zur Verbesserung des diagrammentwurfs zu erleichtern.  
+ Excel 2013 bietet jetzt **Diagramm Stile** und **Diagramm Elemente** -Steuerelemente direkt in der Entwurfs Oberfläche, die das verbessern des Diagramm Entwurfs erleichtern.  
   
- ![vom Tool Kategorien erkennen erstellten Bericht](media/dm13-tat-detectcat-report3.gif "vom Tool Kategorien erkennen erstellten Bericht")  
+ ![Mit dem Tool "Kategorien erkennen" erstellter Bericht](media/dm13-tat-detectcat-report3.gif "Mit dem Tool "Kategorien erkennen" erstellter Bericht")  
   
-## <a name="requirements"></a>Anforderungen  
- Die **Kategorien erkennen** Tool verfügt über keine Anforderungen hinsichtlich der Menge oder den Typ der Daten.  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ Das Tool **Kategorien erkennen** hat keine Anforderungen hinsichtlich der Menge oder des Datentyps.  
   
 > [!NOTE]  
->  Bei Verwendung der **Kategorien erkennen** -Tool, erstellt er eine neue Spalte namens Kategorie, in der ursprünglichen Datentabelle. Wenn Sie diese Spalte in der Datentabelle belassen, beeinflusst sie möglicherweise die Ergebnisse von anschließend durchgeführten Data Mining-Vorgängen. Erstellen Sie daher eine Kopie der Datentabelle ohne die Spalte Kategorie, um sicherzustellen, dass diese Spalte sich nicht auf andere Vorgänge auswirkt, bevor Sie andere Data Mining-Tools verwenden.  
+>  Wenn Sie das Tool **Kategorien erkennen** verwenden, wird in der ursprünglichen Datentabelle eine neue Spalte (Kategorie) erstellt. Wenn Sie diese Spalte in der Datentabelle belassen, beeinflusst sie möglicherweise die Ergebnisse von anschließend durchgeführten Data Mining-Vorgängen. Erstellen Sie daher eine Kopie der Datentabelle ohne die Spalte Kategorie, um sicherzustellen, dass diese Spalte sich nicht auf andere Vorgänge auswirkt, bevor Sie andere Data Mining-Tools verwenden.  
   
 ## <a name="related-tools"></a>Verwandte Tools  
- Wenn die **Kategorien erkennen** Tool analysiert die Daten, die es erstellt ein Datamining-Struktur und die Datamining-Modell mithilfe der [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus.  
+ Wenn das Tool **Kategorien erkennen** Ihre Daten analysiert, erstellt es mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus eine Data Mining Struktur und Data Mining Modell.  
   
- Nach der Erstellung von Datamining-Modells mithilfe der **wichtige Einflussfaktoren analysieren** -Tool können Sie Data Mining-Client für Excel das Modell durchsuchen und Beziehungen ausführlicher untersuchen. Der Data Mining-Client für Excel stellt ein separates Add-In mit erweiterter Data Mining-Funktionalität dar. Weitere Informationen finden Sie unter [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
+ Nachdem Sie mit dem Tool **wichtige Einflussfaktoren analysieren** ein Data Mining Modell erstellt haben, können Sie den Data Mining-Client für Excel verwenden, um das Modell zu durchsuchen und die Beziehungen ausführlicher zu untersuchen. Der Data Mining-Client für Excel stellt ein separates Add-In mit erweiterter Data Mining-Funktionalität dar. Weitere Informationen finden Sie unter durch [Suchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
- Weitere Informationen zum Verwenden der datenmodellierungsfunktionen im Data Mining-Client für Excel finden Sie unter [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md).  
+ Weitere Informationen zur Verwendung der Daten Modellierungsfunktionen im Data Mining-Client für Excel finden Sie unter [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md).  
   
- Weitere Informationen zu den vom verwendeten Algorithmus die **Kategorien erkennen** finden Sie unter dem Thema "Microsoft Clustering-Algorithmus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ Weitere Informationen zum Algorithmus, der vom Tool **Kategorien erkennen** verwendet wird, finden Sie im Thema "Microsoft Clustering-Algorithmus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] " in der-Online Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  
   
   

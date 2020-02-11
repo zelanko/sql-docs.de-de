@@ -1,5 +1,5 @@
 ---
-title: Abfragen der Parameter verwendet, um ein Miningmodell erstellen | Microsoft-Dokumentation
+title: Abfragen der Parameter, mit denen ein Mining Modell erstellt wurde | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083039"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Abfragen der Parameter, mit denen ein Miningmodell erstellt wird
@@ -66,8 +66,8 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10, CLUSTER_SEED=0, CLUSTERING_METHOD=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, MINIMUM_SUPPORT=1, MODELLING_CARDINALITY=10, SAMPLE_SIZE=50000, STOPPING_TOLERANCE=10  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Abfragetasks und Anweisungen](data-mining-query-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Abfrage Tasks und Anleitungen](data-mining-query-tasks-and-how-tos.md)   
  [Data Mining-Abfragen](data-mining-queries.md)  
   
   

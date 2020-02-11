@@ -1,5 +1,5 @@
 ---
-title: Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration | Microsoft-Dokumentation
+title: Aktivieren der Power Pivot-Funktions Integration für Website Sammlungen in der zentral Administration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072010"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration
@@ -24,28 +24,28 @@ ms.locfileid: "66072010"
   
  Sie müssen die PowerPivot-Integration für jede Websitesammlung aktivieren, die die PowerPivot-Abfrageverarbeitung unterstützt.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Sie müssen Administrator einer Websitesammlung sein.  
   
-## <a name="activate-powerpivot-features"></a>Aktivieren der PowerPivot-Funktionen  
+## <a name="activate-powerpivot-features"></a>Power Pivot-Funktionen aktivieren  
   
 1.  Klicken Sie auf einer SharePoint-Website auf **Websiteaktionen**.  
   
-     Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig eine SharePoint-Website zugreifen können, durch Eingabe von http://\<Computername > um die Stammwebsitesammlung zu öffnen.  
+     Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig auf eine SharePoint-Website zugreifen können\<, indem Sie http://Computername> eingeben, um die Stammweb Site Sammlung zu öffnen.  
   
 2.  Klicken Sie auf **Siteeinstellungen**.  
   
 3.  Klicken Sie unter Websitesammlungsverwaltung auf **Websitesammlungsfeatures**.  
   
-4.  Führen Sie einen Bildlauf nach unten bis Sie finden **PowerPivot-Integration für Webseitensammlungen**.  
+4.  Scrollen Sie auf der Seite nach unten, bis Sie die **Funktion zur Power Pivot-Integration-Website Sammlung**  
   
 5.  Klicken Sie auf **Aktivieren**.  
   
-6.  Wiederholen Sie den Schritt für zusätzliche Websitesammlungen, indem Sie jede Website öffnen und auf **Websiteaktionen**klicken.  
+6.  Wiederholen Sie diesen Schritt für zusätzliche Website Sammlungen, indem Sie jede Website öffnen und auf **Website Aktionen**klicken  
   
-## <a name="see-also"></a>Siehe auch  
- [PowerPivot-Serververwaltung und-Konfiguration in der Zentraladministration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Power Pivot-Server Verwaltung und-Konfiguration in der zentral Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Anfängliche Konfiguration &#40;PowerPivot für SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
- [PowerPivot für SharePoint 2010-Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   
