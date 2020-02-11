@@ -13,30 +13,31 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211209"
 ---
 # <a name="creating-a-login"></a>Erstellen einer Anmeldung
-  Benutzer benötigen eine Anmeldung, damit sie auf [!INCLUDE[ssDE](../includes/ssde-md.md)] zugreifen können. Die Anmeldung kann die Identität des Benutzers als Windows-Konto oder als Mitglied einer Windows-Gruppe darstellen, oder es kann sich dabei um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldung handeln, die nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]vorhanden ist. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
+  Benutzer benötigen eine Anmeldung, damit sie auf [!INCLUDE[ssDE](../includes/ssde-md.md)]zugreifen können. Die Anmeldung kann die Identität des Benutzers als Windows-Konto oder als Mitglied einer Windows-Gruppe darstellen, oder es kann sich dabei um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldung handeln, die nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]vorhanden ist. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
  Standardmäßig haben Administratoren auf Ihrem Computer vollständigen Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In dieser Lektion benötigen wir einen Benutzer mit geringeren Privilegien. Aus diesem Grund erstellen Sie ein neues lokales Windows-Authentifizierungskonto auf Ihrem Computer. Dazu müssen Sie über Administratorrechte auf dem Computer verfügen. Anschließend erteilen Sie diesem neuen Benutzer Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### <a name="to-create-a-new-windows-account"></a>So erstellen Sie ein neues Windows-Konto  
   
-1.  Klicken Sie auf **starten**, klicken Sie auf **ausführen**in die **öffnen** geben `%SystemRoot%\system32\compmgmt.msc /s`, und klicken Sie dann auf **OK** um das Programm Computerverwaltung zu öffnen.  
+1.  Klicken Sie im **Startmenü**auf **Ausführen**, **** geben `%SystemRoot%\system32\compmgmt.msc /s`Sie im Feld Öffnen ein, und klicken Sie dann auf **OK** , um das Programm Computer Verwaltung zu öffnen.  
   
 2.  Erweitern Sie unter **Systemprogramme**den Eintrag **Lokale Benutzer und Gruppen**, klicken Sie mit der rechten Maustaste auf **Benutzer**und anschließend auf **Neuer Benutzer**.  
   
-3.  Geben Sie in das Feld **Benutzername** **Mary**ein.  
+3.  Geben Sie in das Feld **Benutzername****Mary**ein.  
   
 4.  Geben Sie in das Feld **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort ein. Klicken Sie anschließend auf **Erstellen** , um einen neuen lokalen Windows-Benutzer zu erstellen.  
   
 ### <a name="to-create-a-login"></a>So erstellen Sie eine Anmeldung  
   
-1.  Geben Sie in einem Abfrage-Editor-Fenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]folgenden Code ein, und führen Sie ihn aus. Ersetzen Sie dabei `computer_name` durch den Namen Ihres Computers. `FROM WINDOWS` gibt an, dass Windows den Benutzer authentifiziert. Mit dem optionalen `DEFAULT_DATABASE` -Argument wird `Mary` mit der `TestData` -Datenbank verbunden, sofern nicht ihre Verbindungszeichenfolge eine andere Datenbank angibt. Diese Anweisung führt das Semikolon als optionale Beendigung für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung ein.  
+1.  Geben Sie in einem Abfrage-Editor-Fenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]folgenden Code ein, und führen Sie ihn aus. Ersetzen Sie dabei `computer_name` durch den Namen Ihres Computers. 
+  `FROM WINDOWS` gibt an, dass Windows den Benutzer authentifiziert. Mit dem optionalen `DEFAULT_DATABASE` -Argument wird `Mary` mit der `TestData` -Datenbank verbunden, sofern nicht ihre Verbindungszeichenfolge eine andere Datenbank angibt. Diese Anweisung führt das Semikolon als optionale Beendigung für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung ein.  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  
@@ -50,11 +51,11 @@ ms.locfileid: "68211209"
     > [!NOTE]  
     >  Weil `Mary` kein Domänenkonto ist, kann dieser Benutzername nur auf diesem Computer authentifiziert werden.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Gewähren von Zugriff auf eine Datenbank](lesson-2-2-granting-access-to-a-database.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen der Anmeldung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [Auswählen eines Authentifizierungsmodus](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von ADO für Internet Publishing | Microsoft-Dokumentation
+title: Verwenden von ADO für die Internet Veröffentlichung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,43 +16,43 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923617"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Verwenden von ADO für die Veröffentlichung im Internet
-[Der OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) zeigt ein Beispiel für den Zugriff auf heterogene Daten mit ADO. Obwohl in die Beispielen in diesem Abschnitt werden über die Verwendung der Internet-Publishing-Anbieter ist, sollte der dargestellten Prinzipien ähneln bei Verwendung von ADO mit anderen Anbietern für heterogene Daten, z. B. ein Provider in einen Speicher-e-Mail.  
+[Der OLE DB Anbieter für die Internet Veröffentlichung](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) zeigt ein bestimmtes Beispiel für den Zugriff auf heterogene Daten mit ADO. Obwohl die Beispiele in diesem Abschnitt speziell für die Verwendung des Internet Publishing Anbieters gelten, sollten die gezeigten Prinzipien ähnlich sein, wenn Sie ADO mit anderen Anbietern für heterogene Daten verwenden, z. b. ein Anbieter in einem e-Mail-Speicher.  
   
 ## <a name="urls"></a>URLs  
- Uniform Resource Locator (URLs) können als Alternative zu Verbindungszeichenfolgen und Befehlstext an Datenquellen und den Speicherort der Dateien und Verzeichnissen verwendet werden. Sie können URLs verwenden, mit dem vorhandenen [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) und **Recordset** Objekte und mit der **Datensatz** und **Stream** Objekte.  
+ URL (Uniform Resource Locators) können als Alternative zu Verbindungs Zeichenfolgen und Befehls Text verwendet werden, um Datenquellen und den Speicherort von Dateien und Verzeichnissen anzugeben. Sie können URLs mit den vorhandenen [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) -und **Recordset** -Objekten sowie mit den **Datensatz** -und **Stream** -Objekten verwenden.  
   
- Weitere Informationen zur Verwendung von URLs finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Weitere Informationen zur Verwendung von URLs finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
-## <a name="record-fields"></a>Notieren Sie die Felder  
- Der entscheidende Unterschied zwischen heterogenen Daten und homogene Daten ist, die für die ehemalige, jede Zeile der Daten oder **Datensatz**, haben Sie einen anderen Satz von Spalten oder **Felder**. Für homogene Daten weist jede Zeile den gleichen Satz von Spalten. Weitere Informationen zu den Feldern, die spezifisch für den Internet-Publishing-Anbieter finden Sie unter [Datensätze und vom Anbieter bereitgestellte zusätzliche Felder](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+## <a name="record-fields"></a>Daten Satz Felder  
+ Der Unterschied zwischen heterogenen Daten und homogenen Daten besteht darin, dass für die erste, jede Daten Zeile oder jeden **Datensatz**eine andere Gruppe von Spalten oder **Feldern**vorhanden sein kann. Bei homogenen Daten hat jede Zeile denselben Satz von Spalten. Weitere Informationen zu den Feldern, die für den Internet Publishing Provider spezifisch sind, finden Sie unter [Datensätze und vom Anbieter bereitgestellte zusätzliche Felder](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
-### <a name="appending-new-fields"></a>Anfügen von neuen Felder  
- Mehrere ADO-Objekte wurden verbessert, damit arbeiten zusammen mit **Datensatz** und **Stream** Objekte.  
+### <a name="appending-new-fields"></a>Anhängen neuer Felder  
+ Mehrere ADO-Objekte wurden verbessert, um zusammen mit **Datensatz** -und **Streamobjekten** zusammenzuarbeiten.  
   
--   Die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode, die erstellt und fügt eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt der Auflistung, die den Wert des können auch angeben der **Feld**.  
+-   Die [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung, mit der der Auflistung ein [Feld](../../../ado/reference/ado-api/field-object.md) Objekt erstellt und hinzugefügt wird, kann auch den Wert des **Felds**angeben.  
   
--   Die [Update](../../../ado/reference/ado-api/update-method.md) Methode schließt ab, das Hinzufügen oder Löschen von Feldern in der Auflistung.  
+-   Die [Update](../../../ado/reference/ado-api/update-method.md) -Methode schließt das Hinzufügen oder Löschen von Feldern zur Auflistung ab.  
   
--   Als Alternative zur Verknüpfung und der **Anfügen** -Methode, Sie können Felder durch Zuweisen eines Werts in ein Feld nicht definiert oder zuvor gelöschten erstellen.  
+-   Als Verknüpfung und Alternative zur **Append** -Methode können Sie Felder erstellen, indem Sie einem nicht definierten oder zuvor gelöschten Feld einen Wert zuweisen.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Der OLE DB-Anbieter für Internet-Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
+-   [Der OLE DB-Anbieter für die Veröffentlichung im Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
--   [Internet Publishing Scenario (Internet-Publishing-Szenario)](../../../ado/guide/data/internet-publishing-scenario.md)  
+-   [Szenario: Veröffentlichung im Internet](../../../ado/guide/data/internet-publishing-scenario.md)  
   
 -   [Absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md)  
   
--   [Records and Provider-Supplied Fields (Datensätze und von Anbietern bereitgestellte Felder)](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
+-   [Datensätze und von Anbietern bereitgestellte Felder](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)

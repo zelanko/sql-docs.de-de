@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493906"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Sortieren von Attributelementen basierend auf einem sekundären Attribut
@@ -38,7 +38,7 @@ ms.locfileid: "69493906"
   
 3.  Wechseln Sie zur Registerkarte **Dimensionsstruktur** für die Date-Dimension, klicken Sie mit der rechten Maustaste auf **MonthNumberOfYear** im Bereich **Datenquellensicht** und anschließend auf **Neues Attribut aus Spalte**.  
   
-4.  Wählen Sie im Bereich **Attribute** **Month Number Of Year**aus, und legen Sie anschließend im Eigenschaftenfenster die Eigenschaft **AttributeHierarchyEnabled** auf **False** , die Eigenschaft **AttributeHierarchyOptimizedState** auf **NotOptimized**und die Eigenschaft **AttributeHierarchyOrdered** auf **False**fest.  
+4.  Wählen Sie im Bereich **Attribute****Month Number Of Year**aus, und legen Sie anschließend im Eigenschaftenfenster die Eigenschaft **AttributeHierarchyEnabled** auf **False** , die Eigenschaft **AttributeHierarchyOptimizedState** auf **NotOptimized**und die Eigenschaft **AttributeHierarchyOrdered** auf **False**fest.  
   
      Diese Einstellungen blenden das Attribut Benutzern gegenüber aus und verbessern die Verarbeitungszeit. Dieses Attribut wird nicht zum Durchsuchen verwendet. Es wird nur zum Sortieren der Elemente eines anderen Attributs verwendet.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69493906"
   
 6.  Klicken Sie im Diagramm mit der rechten Maustaste auf das Attribut **Month Name** und wählen Sie **Neue Attributbeziehung**aus.  
   
-7.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut** **Month Name**. Legen Sie die Option **Verknüpftes Attribut** auf **Month Number Of Year**fest.  
+7.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut****Month Name**. Legen Sie die Option **Verknüpftes Attribut** auf **Month Number Of Year**fest.  
   
 8.  Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69493906"
   
 10. Klicken Sie auf die Registerkarte **Dimensionsstruktur** .  
   
-11. Wählen Sie im Bereich **Attribute** **Month Name** aus, und ändern Sie den Wert der **OrderBy** -Eigenschaft im Eigenschaftenfenster zu **AttributeKey** , und den Wert der **OrderByAttribute** -Eigenschaft zu **Month Number Of Year**.  
+11. Wählen Sie im Bereich **Attribute****Month Name** aus, und ändern Sie den Wert der **OrderBy** -Eigenschaft im Eigenschaftenfenster zu **AttributeKey** , und den Wert der **OrderByAttribute** -Eigenschaft zu **Month Number Of Year**.  
   
 12. Klicken Sie im Menü **Erstellen** auf **Analysis Services Tutorial bereitstellen**.  
   
@@ -69,21 +69,21 @@ ms.locfileid: "69493906"
   
      Beachten Sie, dass die Monate jetzt in chronologischer Ordnung sortiert sind, wie im folgenden Bild zu sehen.  
   
-     ![Geänderte Benutzer Hierarchie in chronologischer Reihenfolge](../../2014/tutorials/media/l4-memberproperties-3.gif "Geänderte Benutzer Hierarchie in chronologischer Reihenfolge")  
+     ![Geänderte Benutzerhierarchie in chronologischer Reihenfolge](../../2014/tutorials/media/l4-memberproperties-3.gif "Geänderte Benutzerhierarchie in chronologischer Reihenfolge")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definieren von Attributbeziehungen und der Sortierreihenfolge in der Customer-Dimension  
   
 1.  Wechseln Sie im Dimensions-Designer für die Customer-Dimension zur Registerkarte **Browser** , und durchsuchen Sie anschließend die Elemente der **Commute Distance** -Attributhierarchie.  
   
-     Beachten Sie, dass die Elemente dieser Attributhierarchie nach den ASCII-Werten des Elementschlüssels sortiert sind. In diesem Fall werden die Pendlerentfernungen durch das Sortieren nach Attributname oder Schlüssel nicht von der geringsten zur höchsten Entfernung sortiert. In dieser Aufgabe sortieren Sie die Elemente der Attributhierarchie basierend auf der benannten Berechnung **CommuteDistanceSort** , die die entsprechende Sortiernummer jedem eindeutigen Wert in der Spalte zuschreibt. Um Zeit zu sparen, wurde diese benannte Berechnung bereits zur **Customer** -Tabelle in der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW-Datenquellensicht hinzugefügt. Sie können zu dieser Datenquellensicht wechseln, um das in dieser benannten Berechnung verwendete SQL-Skript anzuzeigen. Weitere Informationen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+     Beachten Sie, dass die Elemente dieser Attributhierarchie nach den ASCII-Werten des Elementschlüssels sortiert sind. In diesem Fall werden die Pendlerentfernungen durch das Sortieren nach Attributname oder Schlüssel nicht von der geringsten zur höchsten Entfernung sortiert. In dieser Aufgabe sortieren Sie die Elemente der Attributhierarchie basierend auf der benannten Berechnung **CommuteDistanceSort** , die die entsprechende Sortiernummer jedem eindeutigen Wert in der Spalte zuschreibt. Um Zeit zu sparen, wurde diese benannte Berechnung bereits zur **Customer** -Tabelle in der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW-Datenquellensicht hinzugefügt. Sie können zu dieser Datenquellensicht wechseln, um das in dieser benannten Berechnung verwendete SQL-Skript anzuzeigen. Weitere Informationen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
      Die folgende Abbildung zeigt die Elemente der **Commute Distance** -Attributhierarchie sortiert nach den ASCII-Werten des Elementschlüssels.  
   
-     ![Attribut Hierarchie der arbeitsentfernungs](../../2014/tutorials/media/l4-memberproperties-4.gif "Attribut Hierarchie der arbeitsentfernungs")  
+     ![Commute Distance-Attributhierarchie](../../2014/tutorials/media/l4-memberproperties-4.gif "Commute Distance-Attributhierarchie")  
   
 2.  Wechseln Sie zur Registerkarte **Dimensionsstruktur** im Dimensions-Designer für die Customer-Dimension, klicken Sie mit der rechten Maustaste auf **CommuteDistanceSort** in der **Customer** -Tabelle im Bereich **Datenquellensicht** und anschließend auf **Neues Attribut aus Spalte**.  
   
-3.  Wählen Sie im Bereich **Attribute** **Commute Distance Sort**aus, und legen Sie im Eigenschaftenfenster die Eigenschaft **AttributeHierarchyEnabled** für dieses Attribut auf **False** fest. Legen Sie zusätzlich die Eigenschaft **AttributeHierarchyOptimizedState** auf **NotOptimized**und die Eigenschaft **AttributeHierarchyOrdered** auf **False**fest.  
+3.  Wählen Sie im Bereich **Attribute****Commute Distance Sort**aus, und legen Sie im Eigenschaftenfenster die Eigenschaft **AttributeHierarchyEnabled** für dieses Attribut auf **False** fest. Legen Sie zusätzlich die Eigenschaft **AttributeHierarchyOptimizedState** auf **NotOptimized**und die Eigenschaft **AttributeHierarchyOrdered** auf **False**fest.  
   
      Diese Einstellungen blenden das Attribut Benutzern gegenüber aus und verbessern die Verarbeitungszeit. Dieses Attribut wird nicht zum Durchsuchen verwendet. Es wird nur zum Sortieren der Elemente eines anderen Attributs verwendet.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "69493906"
   
 6.  Klicken Sie in der Attributliste mit der rechten Maustaste auf das **Commute Distance** -Attribut, und wählen Sie anschließend **Neue Attributbeziehung**.  
   
-7.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut** **Commute Distance**. Legen Sie die Option **Verknüpftes Attribut** auf **Commute Distance Sort**fest.  
+7.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut****Commute Distance**. Legen Sie die Option **Verknüpftes Attribut** auf **Commute Distance Sort**fest.  
   
 8.  Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493906"
   
 10. Klicken Sie auf die Registerkarte **Dimensionsstruktur** .  
   
-11. Wählen Sie im Bereich **Attribute** **Commute Distance**aus, und ändern Sie anschließend im Eigenschaftenfenster den Wert der Eigenschaft **OrderBy** zu **AttributeKey**und den Wert der Eigenschaft **OrderByAttribute** zu **Commute Distance Sort**.  
+11. Wählen Sie im Bereich **Attribute****Commute Distance**aus, und ändern Sie anschließend im Eigenschaftenfenster den Wert der Eigenschaft **OrderBy** zu **AttributeKey**und den Wert der Eigenschaft **OrderByAttribute** zu **Commute Distance Sort**.  
   
 12. Klicken Sie im Menü **Erstellen** auf **Analysis Services Tutorial bereitstellen**.  
   
@@ -115,9 +115,9 @@ ms.locfileid: "69493906"
   
      Beachten Sie, dass die Hierarchieelemente jetzt in einer logischen Reihenfolge basierend auf zunehmender Entfernung sortiert sind, wie im folgenden Bild zu sehen.  
   
-     ![Neu sortierte arbeitsentfernungs-Attribut Hierarchie](../../2014/tutorials/media/l4-memberproperties-5.gif "Neu sortierte arbeitsentfernungs-Attribut Hierarchie")  
+     ![Neu sortierte Commute Distance-Attributhierarchie](../../2014/tutorials/media/l4-memberproperties-5.gif "Neu sortierte Commute Distance-Attributhierarchie")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   

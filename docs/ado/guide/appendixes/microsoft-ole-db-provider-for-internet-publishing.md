@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB-Anbieter für Internet Publishing | Microsoft-Dokumentation
+title: Microsoft OLE DB-Anbieter für die Internet Veröffentlichung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,53 +15,53 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926752"
 ---
-# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB-Anbieter für Internet Publishing (Übersicht)
-Microsoft OLE DB-Anbieter für Internet Publishing ermöglicht ADO, um den Zugriff auf Ressourcen von Microsoft FrontPage oder Microsoft Internet Information Server bedient. Ressourcen umfassen Quelle Webdateien z. B. HTML-Dateien oder Ordner von Windows 2000 Web.
+# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Internet Publishing
+Der Microsoft OLE DB-Anbieter für die Internet Veröffentlichung ermöglicht ADO den Zugriff auf Ressourcen, die von Microsoft FrontPage oder Microsoft Internet Information Server bereitgestellt werden. Zu den Ressourcen gehören webquell Dateien, z. b. HTML-Dateien oder Windows 2000-Webordner.
 
-## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
- Legen Sie zum Verbinden mit diesem Anbieter die *Anbieter* Argument der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft:
+## <a name="connection-string-parameters"></a>Verbindungs Zeichen folgen Parameter
+ Legen Sie das *Provider* -Argument der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf fest, um eine Verbindung mit diesem Anbieter herzustellen:
 
 ```vb
 MSDAIPP.DSO
 ```
 
- Dieser Wert kann auch festlegen oder Lesen Sie mithilfe der [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft.
+ Dieser Wert kann auch mit der [Provider](../../../ado/reference/ado-api/provider-property-ado.md) -Eigenschaft festgelegt oder gelesen werden.
 
-## <a name="typical-connection-string"></a>Typische Verbindungszeichenfolge
- Eine typische Verbindungszeichenfolge für diesen Anbieter ist:
+## <a name="typical-connection-string"></a>Typische Verbindungs Zeichenfolge
+ Eine typische Verbindungs Zeichenfolge für diesen Anbieter lautet:
 
 ```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- -oder-
+ Oder
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- Die Zeichenfolge, die dieser Schlüsselwörter besteht aus:
+ Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|Description|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
-|**Anbieter**|Gibt an, die OLE DB-Anbieter für Internet Publishing.|
-|**Datenquelle** – oder – **URL**|Gibt die URL einer Datei oder Verzeichnis in einen Webordner veröffentlicht.|
+|**Anbieter**|Gibt den OLE DB Anbieter für die Internet Veröffentlichung an.|
+|**Datenquelle** -oder- **URL**|Gibt die URL einer Datei oder eines Verzeichnisses an, die in einem Webordner veröffentlicht wird.|
 |**Benutzer-ID**|Gibt den Benutzernamen an.|
-|**Kennwort**|Gibt das Kennwort des Benutzers an.|
+|**Kennwort**|Gibt das Benutzer Kennwort an.|
 
 > [!NOTE]
->  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge.
+>  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.
 
- Setzen Sie die *ResourceURL* Wert aus der "URL =" in der Verbindungszeichenfolge auf einen ungültigen Wert wird standardmäßig ein Dialogfeld mit der Aufforderung einen gültigen Wert der Internet-Publishing-Anbieter löst. Dies ist unerwünschtes Verhalten für eine Komponente in der mittleren Ebene einer Anwendung, da es hält die Ausführung des Programms, bis das Dialogfeld deaktiviert ist, und der Client wird angezeigt, so fixieren, weil keine Antwort von der Komponente empfangen wurde.
+ Wenn Sie den *resourceurl* -Wert von "URL =" in der Verbindungs Zeichenfolge auf einen ungültigen Wert festlegen, löst der Internet Publishing Provider standardmäßig ein Dialogfeld aus, in dem Sie zur Eingabe eines gültigen Werts aufgefordert werden. Dies ist ein unerwünschtes Verhalten für eine Komponente in der mittleren Ebene einer Anwendung, da die Programmausführung angehalten wird, bis das Dialogfeld gelöscht wird und der Client so fixiert wird, dass er nicht mehr eine Antwort von der Komponente empfangen hat.
 
 > [!NOTE]
->  Wenn MSDAIPP. DSO wird explizit angegeben, als Wert für den Anbieter, entweder mit der *Anbieter* -Schlüsselwort der Verbindungszeichenfolge oder die **Anbieter** -Eigenschaft, können keine "URL =" in der Verbindungszeichenfolge. Wenn Sie dies tun, tritt ein Fehler auf. Geben Sie stattdessen einfach die URL wie im Thema dargestellt [mithilfe von ADO mit dem OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md).
+>  Wenn msdaipp. DSO wird explizit als Wert des Anbieters angegeben. entweder mit dem Schlüsselwort für die Verbindungs Zeichenfolge des *Anbieters* oder mit der Eigenschaft " **Provider** " können Sie "URL =" nicht in der Verbindungs Zeichenfolge verwenden. Wenn Sie dies tun, tritt ein Fehler auf. Stattdessen geben Sie einfach die URL an, wie im Thema [Verwenden von ADO mit dem OLE DB Anbieter für die Internet Veröffentlichung](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)gezeigt.
 
-## <a name="see-also"></a>Siehe auch
- [Internet Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md) [OLE DB-Anbieter für Internet-Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+## <a name="see-also"></a>Weitere Informationen
+ [Internet Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md) [der OLE DB Anbieter für die Internetveröffentlichung](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

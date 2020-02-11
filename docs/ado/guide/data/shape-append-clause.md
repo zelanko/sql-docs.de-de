@@ -1,5 +1,5 @@
 ---
-title: Shape APPEND-Klausel | Microsoft-Dokumentation
+title: Shape-APPEND-Klausel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924183"
 ---
 # <a name="shape-append-clause"></a>SHAPE APPEND-Klausel
-Die APPEND-Klausel in Shape-Befehl fügt eine oder mehrere Spalten zu einer **Recordset**. Diese Spalten sind in vielen Fällen Kapitelspalten, die auf ein untergeordnetes Element verweisen **Recordset**.  
+Die Form Befehl-Append-Klausel fügt eine Spalte oder Spalten an ein **Recordset**an. Häufig handelt es sich bei diesen Spalten um Kapitel Spalten, die auf ein untergeordnetes **Recordset**verweisen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,31 +30,31 @@ Die APPEND-Klausel in Shape-Befehl fügt eine oder mehrere Spalten zu einer **Re
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Beschreibung  
- Die Teile des diese Klausel lauten wie folgt aus:  
+## <a name="description"></a>BESCHREIBUNG  
+ Diese Klausel enthält folgende Teile:  
   
- *parent-command*  
- 0 (null) oder eines der folgenden (können Sie weglassen der *übergeordnete Befehl* vollständig):  
+ *Parent-Command*  
+ NULL oder eine der folgenden (Sie können den über *geordneten Befehl* vollständig weglassen):  
   
--   Ein Anbieterbefehl, der in geschweifte Klammern eingeschlossen ("{}") zurückgibt, die eine **Recordset** Objekt. Die Ausgabe des Befehls wird an den zugrunde liegenden Datenanbieter und die Syntax hängt von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
+-   Ein Anbieter Befehl, der in geschweiften{}Klammern ("") eingeschlossen ist und ein **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
   
--   Ein anderes Shape-Befehl, eingebettet in Klammern angegeben.  
+-   Ein anderer Shape-Befehl, der in Klammern eingebettet ist.  
   
--   Das TABLE-Schlüsselwort, gefolgt vom Namen einer Tabelle in der Datenanbieter.  
+-   Das Tabellen Schlüsselwort, gefolgt vom Namen einer Tabelle im Datenanbieter.  
   
- *parent-alias*  
- Ein optionaler Alias, der auf das übergeordnete Element verweist **Recordset**.  
+ *übergeordneter Alias*  
+ Ein optionaler Alias, der auf das übergeordnete **Recordset**verweist.  
   
- *column-list*  
+ *Spaltenliste*  
  Eine oder mehrere der folgenden:  
   
--   Die aggregierte Spalte.  
+-   Eine Aggregat Spalte.  
   
 -   Eine berechnete Spalte.  
   
--   Eine neue Spalte, die mithilfe der neuen-Klausel erstellt wird.  
+-   Eine neue Spalte, die mithilfe der New-Klausel erstellt wurde.  
   
--   Eine Kapitelspalte. Die Definition einer Kapitel-Spalte wird in Klammern ("()") eingeschlossen. Finden Sie die folgende Syntax.  
+-   Eine Kapitel Spalte. Eine Kapitel Spaltendefinition ist in Klammern ("()") eingeschlossen. Siehe folgende Syntax.  
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
@@ -64,63 +64,63 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- *child-recordset*  
- -   Ein Anbieterbefehl, der in geschweifte Klammern eingeschlossen ("{}") zurückgibt, die eine **Recordset** Objekt. Die Ausgabe des Befehls wird an den zugrunde liegenden Datenanbieter und die Syntax hängt von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
+## <a name="remarks"></a>Bemerkungen  
+ *untergeordnetes Recordset*  
+ -   Ein Anbieter Befehl, der in geschweiften{}Klammern ("") eingeschlossen ist und ein **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
   
--   Ein anderes Shape-Befehl, eingebettet in Klammern angegeben.  
+-   Ein anderer Shape-Befehl, der in Klammern eingebettet ist.  
   
--   Der Name eines vorhandenen strukturiert **Recordset**.  
+-   Der Name eines vorhandenen geformten **Recordsets**.  
   
--   Das TABLE-Schlüsselwort, gefolgt vom Namen einer Tabelle in der Datenanbieter.  
+-   Das Tabellen Schlüsselwort, gefolgt vom Namen einer Tabelle im Datenanbieter.  
   
- *child-alias*  
- Ein Alias, der auf das untergeordnete Element verweist **Recordset**.  
+ *untergeordneter Alias*  
+ Ein Alias, der auf das untergeordnete **Recordset**verweist.  
   
- *parent-column*  
- Eine Spalte in der **Recordset** zurückgegebenes der *übergeordneter-Befehl.*  
+ *übergeordnete Spalte*  
+ Eine Spalte in dem **Recordset** , das vom über *geordneten-Befehl* zurückgegeben wird.  
   
- *child-column*  
- Eine Spalte in der **Recordset** zurückgegebenes der *untergeordneten Befehl*.  
+ *untergeordnete Spalte*  
+ Eine Spalte in dem **Recordset** , das vom untergeordneten *Befehl*zurückgegeben wird.  
   
- *param-number*  
- Finden Sie unter [von parametrisierten Befehlen](../../../ado/guide/data/operation-of-parameterized-commands.md).  
+ *param-Nummer*  
+ Siehe [Vorgang von parametrisierten Befehlen](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *chapter-alias*  
- Ein Alias, der auf die Kapitelspalte angefügt, das dem übergeordneten verweist.  
-  
-> [!NOTE]
->  Die *"übergeordnete Spalte* für *untergeordnete Spalte"* -Klausel ist tatsächlich eine Liste, jede Beziehung definiert ist, in dem durch ein Komma getrennt.  
+ *Kapitel-Alias*  
+ Ein Alias, der auf die Kapitel Spalte verweist, die an das übergeordnete Element angehängt ist.  
   
 > [!NOTE]
->  Die Klausel nach dem ANFÜGEN-Schlüsselwort ist tatsächlich eine Liste, in dem jede Klausel, die durch ein Komma getrennt ist und eine weitere Spalte definiert, das dem übergeordneten angefügt werden soll.  
+>  Die *"Parent-Column* to *child-column"-* Klausel ist tatsächlich eine Liste, in der jede definierte Beziehung durch ein Komma getrennt ist.  
   
-## <a name="remarks"></a>Hinweise  
- Erstellen der Anbieterbefehlen aus Benutzereingaben als Teil einer SHAPE-Befehl Form ein Befehls als nicht transparente Zeichenfolge behandelt den vom Benutzer bereitgestellten und Übergabe an dem Anbieter enthalten. Beispielsweise in der folgenden SHAPE-Befehl  
+> [!NOTE]
+>  Die Klausel nach dem Append-Schlüsselwort ist tatsächlich eine Liste, wobei jede Klausel durch ein Komma getrennt wird und eine andere Spalte definiert, die an das übergeordnete Element angefügt werden soll.  
+  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn Sie Anbieter Befehle aus Benutzereingaben als Teil eines Shape-Befehls erstellen, behandelt Shape den vom Benutzer bereitgestellten Anbieter Befehl als nicht transparente Zeichenfolge und übergibt sie an den Anbieter. Beispielsweise wird im folgenden Shape-Befehl  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- Form "führt zwei Befehle: `select * from t1` und (`select * from t2 RELATE k1 TO k2)`. Wenn der Benutzer einen zusammengesetzten Befehl bereitstellt, der mehrere Anbieterbefehle, die durch Semikolons getrennte besteht, ist die Form nicht den Unterschied zu unterscheiden. Also in den folgenden Befehl für die Form "  
+ Shape führt zwei Befehle aus: `select * from t1` und (`select * from t2 RELATE k1 TO k2)`. Wenn der Benutzer einen Verbund Befehl bereitstellt, der aus mehreren durch Semikolons getrennten Anbieter Befehlen besteht, kann die Form den Unterschied nicht unterscheiden. Im folgenden Shape-Befehl:  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- Form führt `select * from t1; drop table t1` und (`select * from t2 RELATE k1 TO k2),` nicht bemerken, die `drop table t1` ist eine Separate und in diesem Fall, birgt Risiken, Anbieter-Befehl. Anwendungen müssen immer die Benutzereingabe auf solche potenziellen Hackerangriffe verhindern überprüfen.  
+ Shape führt `select * from t1; drop table t1` und aus`select * from t2 RELATE k1 TO k2),` (es wird `drop table t1` nicht erkannt, dass es sich um einen separaten und in diesem Fall um einen gefährlichen Anbieter Befehl handelt. Anwendungen müssen immer die Benutzereingaben validieren, um zu verhindern, dass potenzielle Hackerangriffe auftreten.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Operation of Non-Parameterized Commands (Verarbeitung nicht-parametrisierter Befehle)](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
+-   [Verarbeitung nicht-parametrisierter Befehle](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
   
--   [Operation of Parameterized Commands (Verarbeitung parametrisierter Befehle)](../../../ado/guide/data/operation-of-parameterized-commands.md)  
+-   [Verarbeitung parametrisierter Befehle](../../../ado/guide/data/operation-of-parameterized-commands.md)  
   
 -   [Hybridbefehle](../../../ado/guide/data/hybrid-commands.md)  
   
--   [Intervening Shape COMPUTE Clauses (Zwischenschalten von SHAPE COMPUTE-Klauseln)](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
+-   [Zwischenschalten von SHAPE COMPUTE-Klauseln](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für die datenstrukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
+ [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)

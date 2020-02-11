@@ -1,5 +1,5 @@
 ---
-title: XQueries Involving Order | Microsoft-Dokumentation
+title: XQueries mit Reihenfolge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946111"
 ---
 # <a name="xqueries-involving-order"></a>XQuery-Abfragen, die die Reihenfolge berücksichtigen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In relationalen Datenbanken spielt die Reihenfolge keine Rolle. Sie können z. B. keine Anforderung wie etwa "Ersten Kunden aus der Datenbank abrufen" erstellen. Jedoch kann ein XML-Dokument Abfragen und Abrufen der ersten \<Customer > Element. In diesem Fall wird immer der gleiche Kunde abgerufen.  
+  In relationalen Datenbanken spielt die Reihenfolge keine Rolle. Sie können z. B. keine Anforderung wie etwa "Ersten Kunden aus der Datenbank abrufen" erstellen. Sie können jedoch ein XML-Dokument Abfragen und das erste \<Customer-> Element abrufen. In diesem Fall wird immer der gleiche Kunde abgerufen.  
   
  Dieses Thema stellt Abfragen vor, die auf der Reihenfolge basieren, in der Knoten im Dokument vorhanden sind.  
   
@@ -61,11 +61,11 @@ WHERE ProductModelID=7
   
 -   Die Ausdrücke in den geschweiften Klammern werden durch das Ergebnis der Auswertung ersetzt. Weitere Informationen finden Sie unter [XML-Konstruktion &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
   
--   **@\*** Ruft alle Attribute des zweiten arbeitsplatzstandort ab.  
+-   **@\*** Ruft alle Attribute des zweiten Arbeitsplatz Standorts ab.  
   
--   Die FLWOR-Iteration (für... RÜCKGABE) Ruft alle ab, der <`step`> untergeordnete-Elemente am zweiten arbeitsplatzstandort.  
+-   Die FLWOR-Iterationen (für... Return) Ruft alle <`step`> untergeordneten Elementen des zweiten Arbeitszentrums Standorts ab.  
   
--   Die [SQL:Column()-Funktion (XQuery)](../xquery/xquery-extension-functions-sql-column.md) enthält den relationalen Wert in der XML, das erstellt wird.  
+-   Die [SQL: column ()-Funktion (XQuery)](../xquery/xquery-extension-functions-sql-column.md) enthält den relationalen Wert in dem XML-Code, der erstellt wird.  
   
  Dies ist das Ergebnis:  
   
@@ -81,7 +81,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- Die vorherige Abfrage ruft nur die Textknoten ab. Wenn Sie möchten, dass die gesamte <`step`> Entfernen Sie das Element stattdessen zurückgegeben, die **string()** Funktion aus der Abfrage:  
+ Die vorherige Abfrage ruft nur die Textknoten ab. Wenn Sie möchten, dass das `step` gesamte <>-Element zurückgegeben wird, entfernen Sie die **String ()** -Funktion aus der Abfrage:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Suchen aller Materialen und Werkzeuge, die am zweiten Arbeitsplatzstandort zur Fertigung eines Produkts verwendet werden  
  Die folgende Abfrage ruft die Materialien und Werkzeuge für ein bestimmtes Produktmodell an einem zweiten Arbeitsplatzstandort in der Abfolge von Arbeitsplatzstandorten im Fertigungsprozess ab.  
@@ -115,7 +115,7 @@ where ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die Abfrage konstruiert das < Loca`tion`>-Element und ruft seine aus der Datenbank Attributwerte.  
+-   Die Abfrage erstellt das <Loca`tion` -> Element und ruft seine Attributwerte aus der Datenbank ab.  
   
 -   Sie verwendet zwei FLWOR (for...return)-Iterationen: eine Iteration zum Abrufen der Werkzeuge und eine zweite Iteration zum Abrufen der verwendeten Materialien.  
   
@@ -137,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Abrufen der ersten beiden Produktfunktionsbeschreibungen aus dem Produktkatalog  
- Für ein bestimmtes Produktmodell, die Abfrage ruft die ersten beiden funktionsbeschreibungen aus der <`Features`>-Element im produktmodellkatalog.  
+ Bei einem bestimmten Produktmodell Ruft die Abfrage die ersten beiden Merkmals Beschreibungen aus dem <`Features`>-Element im Product Model-Katalog ab.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,9 +157,9 @@ where ProductModelID=19
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
- Der Abfragetext erstellt XML mit der <`ProductModel`> Element, das das ProductModelID und ProductModelName-Attribut verfügt.  
+ Der Abfragetext erstellt XML, das das <`ProductModel`>-Element enthält, das die Attribute ProductModelID und ProductModelName aufweist.  
   
--   Die Abfrage verwendet eine FOR... RETURN Sie-Schleife zum Abrufen der Produktmodell-funktionsbeschreibungen. Die **position()** Funktion dient zum Abrufen der ersten beiden Funktionen.  
+-   Die Abfrage verwendet eine for... Rückgabe Schleife zum Abrufen der Featurebeschreibungen von Produkt Modellen. Die **Position ()** -Funktion wird zum Abrufen der ersten beiden Funktionen verwendet.  
   
  Dies ist das Ergebnis:  
   
@@ -180,8 +180,8 @@ where ProductModelID=19
 </ProductModel>   
 ```  
   
-### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Suchen der ersten beiden Werkzeuge, die am ersten Arbeitsplatzstandort zur Herstellung des Produkts verwendet werden  
- Die folgende Abfrage gibt die ersten beiden Werkzeuge für ein Produktmodell zurück, die am ersten Arbeitsplatzstandort in der Abfolge von Arbeitsplatzstandorten im Fertigungsprozess verwendet werden. Die Abfrage wird angegeben, für die produktionsanweisungen, gespeichert der **Anweisungen** Spalte die **Production.ProductModel** Tabelle.  
+### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D: Suchen der ersten beiden Werkzeuge, die am ersten Arbeitsplatzstandort zur Herstellung des Produkts verwendet werden  
+ Die folgende Abfrage gibt die ersten beiden Werkzeuge für ein Produktmodell zurück, die am ersten Arbeitsplatzstandort in der Abfolge von Arbeitsplatzstandorten im Fertigungsprozess verwendet werden. Die Abfrage wird für die Fertigungsanweisungen angegeben, die in der **instructions** -Spalte der **Production. ProductModel** -Tabelle gespeichert sind.  
   
 ```sql
 SELECT Instructions.query('  
@@ -217,7 +217,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. Suchen der letzten zwei Herstellungsschritte am ersten Arbeitsplatzstandort zur Fertigung eines bestimmten Produkts  
- Die Abfrage verwendet die **last()** Funktion zum Abrufen der letzten beiden Fertigungsschritte.  
+ Die Abfrage verwendet die **Last ()** -Funktion, um die letzten beiden Fertigungsschritte abzurufen.  
   
 ```sql
 SELECT Instructions.query('   
@@ -245,9 +245,9 @@ where ProductModelID=7
 </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [XML-Konstruktion &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [XML-Konstruktion &#40;XQuery-&#41;](../xquery/xml-construction-xquery.md)  
   
   

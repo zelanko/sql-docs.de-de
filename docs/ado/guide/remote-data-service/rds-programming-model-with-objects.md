@@ -14,38 +14,38 @@ ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922466"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten
-Das Ziel von RDS ist zum Zugreifen auf und Aktualisieren von Datenquellen über einen Vermittler, z. B. IIS. Das Programmiermodell gibt an, die Abfolge von Aktivitäten erforderlich, dieses Ziel zu erreichen. Das Objektmodell gibt an, die Objekte, deren Methoden und Eigenschaften das Programmiermodell beeinflussen.  
+Das Ziel von RDS besteht darin, über einen Vermittler wie IIS auf Datenquellen zuzugreifen und diese zu aktualisieren. Das-Programmiermodell gibt die Abfolge der Aktivitäten an, die zum Erreichen dieses Ziels erforderlich sind. Das Objektmodell gibt die Objekte an, deren Methoden und Eigenschaften sich auf das Programmiermodell auswirken.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- RDS bietet die Möglichkeit, die folgende Sequenz von Aktionen ausführen:  
+ RDS bietet die Möglichkeit, die folgende Aktions Sequenz auszuführen:  
   
--   Geben Sie das Programm auf dem Server aufgerufen werden, und rufen Sie eine Möglichkeit (Proxy) vom Client darauf verweisen ([RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)).  
+-   Geben Sie das Programm an, das auf dem Server aufgerufen werden soll, und rufen Sie eine Methode (Proxy) ab, mit der vom Client (RDS) darauf verwiesen wird[. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)).  
   
--   Serverprogramm aufrufen. Übergeben von Parametern an die Server-Anwendung, die die Datenquelle und den Befehl, um das Problem identifiziert (Proxy oder [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
+-   Rufen Sie das Serverprogramm auf. Übergeben Sie Parameter an das Serverprogramm, das die Datenquelle identifiziert, und den auszugebenden Befehl (Proxy oder [RDS). DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
   
--   Das Serverprogramm erhält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus der Datenquelle, in der Regel mithilfe von ADO. Optional können die **Recordset** Objekt wird auf dem Server verarbeitet ([RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)).  
+-   Das Serverprogramm Ruft ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aus der Datenquelle ab, in der Regel mithilfe von ADO. Optional wird das **Recordset** -Objekt auf dem Server ([RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)) verarbeitet.  
   
--   Serverprogramm gibt zurück, die endgültige **Recordset** Objekt an die Clientanwendung (Proxy).  
+-   Das Serverprogramm gibt das endgültige **Recordset** -Objekt an die Client Anwendung (Proxy) zurück.  
   
--   Auf dem Client die **Recordset** Objekt abgelegt eines Formulars, das leicht von visuellen Steuerelementen verwendet werden kann (visuelles Steuerelement und **RDS. DataControl**).  
+-   Auf dem Client wird das **Recordset** -Objekt in ein Formular eingefügt, das leicht von visuellen Steuerelementen (visuelles Steuerelement und RDS) verwendet werden kann **. DataControl**).  
   
--   Änderungen an der **Recordset** Objekt wieder an den Server gesendet und zum Aktualisieren der Datenquelle verwendet werden (**RDS. DataControl** oder **RDSServer.DataFactory**).  
+-   Änderungen am **Recordset** -Objekt werden zurück an den Server gesendet und zum Aktualisieren der Datenquelle (RDS) verwendet **. DataControl** oder **RDSServer. DataFactory**).  
   
-## <a name="see-also"></a>Siehe auch  
- [RDS-Modell: Zusammenfassung](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Zusammenfassung des RDS-Objektmodells](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

@@ -1,5 +1,5 @@
 ---
-title: Sp_help_operator (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085298"
 ---
-# <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
+# <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den für den Server definierten Operatoren zurück.  
   
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,27 +42,27 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @operator_name = ] 'operator_name'` Der Name des Operators. *Operatorname* ist **Sysname**. Wenn *Operatorname* ist nicht angegeben ist, werden Informationen zu allen Operatoren zurückgegeben.  
+`[ @operator_name = ] 'operator_name'`Der Name des Operators. *operator_name* ist vom **Datentyp vom Datentyp sysname**. Wenn *operator_name* nicht angegeben wird, werden Informationen zu allen Operatoren zurückgegeben.  
   
-`[ @operator_id = ] operator_id` Die ID des Operators für die Informationen angefordert werden. *Operator_id*ist **Int**, hat den Standardwert NULL.  
+`[ @operator_id = ] operator_id`Die ID des Operators, für den Informationen angefordert werden. *operator_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Operator_id* oder *Operatorname* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+>  Es muss entweder *operator_id* oder *operator_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Operator-ID.|  
-|**name**|**sysname**|Name des Operators.|  
-|**aktiviert**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
-|**email_address**|**nvarchar(100)**|E-Mail-Adresse des Operators.|  
+|**Name**|**int**|ID des Operators.|  
+|**name**|**sysname**|Der Operator Name.|  
+|**wodurch**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
+|**email_address**|**nvarchar (100)**|E-Mail-Adresse des Operators.|  
 |**last_email_date**|**int**|Datum, an dem der Operator zuletzt per E-Mail benachrichtigt wurde.|  
 |**last_email_time**|**int**|Uhrzeit, zu der der Operator zuletzt per E-Mail benachrichtigt wurde.|  
-|**pager_address**|**nvarchar(100)**|Pageradresse des Operators.|  
+|**pager_address**|**nvarchar (100)**|Pageradresse des Operators.|  
 |**last_pager_date**|**int**|Datum, an dem der Operator zuletzt per Pager benachrichtigt wurde.|  
 |**last_pager_time**|**int**|Uhrzeit, zu der der Operator zuletzt per Pager benachrichtigt wurde.|  
 |**weekday_pager_start_time**|**int**|Der Beginn des Zeitraums, während dessen der Operator an Arbeitstagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
@@ -71,17 +71,17 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|Das Ende des Zeitraums, während dessen der Operator an Samstagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
 |**sunday_pager_start_time**|**int**|Der Beginn des Zeitraums, während dessen der Operator an Sonntagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
 |**sunday_pager_end_time**|**int**|Das Ende des Zeitraums, während dessen der Operator an Sonntagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
-|**pager_days**|**tinyint**|Eine Bitmaske (**1** = Sonntag, **64** = Samstag) Tage der Woche, der angibt, wenn der Operator Pagerbenachrichtigungen empfangen kann.|  
-|**netsend_address**|**nvarchar(100)**|Operatoradresse für Benachrichtigungen per Netzwerk-Popupnachricht.|  
+|**pager_days**|**tinyint**|Eine Bitmaske (**1** = Sonntag, **64** = Samstag) der Wochentage, die anzeigt, wann der Operator verfügbar ist, um Pager-Benachrichtigungen zu empfangen.|  
+|**netsend_address**|**nvarchar (100)**|Operatoradresse für Benachrichtigungen per Netzwerk-Popupnachricht.|  
 |**last_netsend_date**|**int**|Datum, an dem der Operator zuletzt per Netzwerk-Popupnachricht benachrichtigt wurde.|  
 |**last_netsend_time**|**int**|Uhrzeit, zu der der Operator zuletzt per Netzwerk-Popupnachricht benachrichtigt wurde.|  
 |**category_name**|**sysname**|Name der Operatorkategorie, zu der dieser Operator gehört.|  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_help_operator** muss ausgeführt werden, aus der **Msdb** Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_help_operator** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -103,10 +103,10 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028635"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster-Task
@@ -38,9 +38,9 @@ Die folgende Tabelle enthält eine Beschreibung für die Felder in diesem Dialog
 |AzureStorageConnection|Wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure Storage-Konto verweist, um ihn mit dem HDInsight-Cluster zu verknüpfen.|
 |SubscriptionId|Geben Sie die ID des Abonnements an, in dem der HDInsight-Cluster erstellt wird.|
 |ResourceGroup|Geben Sie die Azure-Ressourcengruppe an, wo der HDInsight-Cluster erstellt wird.|
-|Speicherort|Geben Sie den Speicherort des HDInsight-Clusters an. Der Cluster muss am selben Speicherort erstellt werden, wo sich das Azure-Speicherkonto befindet.|  
+|Location|Geben Sie den Speicherort des HDInsight-Clusters an. Der Cluster muss am selben Speicherort erstellt werden, wo sich das Azure-Speicherkonto befindet.|  
 |ClusterName|Geben Sie einen Namen für den zu erstellenden HDInsight-Cluster an.|  
-|ClusterSize|Geben Sie die Anzahl der Knoten an, die im Cluster erstellt werden sollen.|  
+|clusterSize|Geben Sie die Anzahl der Knoten an, die im Cluster erstellt werden sollen.|  
 |BlobContainer|Geben Sie den Namen des standardmäßigen Speichercontainers an, der mit dem HDInsight-Cluster verbunden sein soll.|  
 |UserName|Geben Sie den Benutzernamen zum Herstellen einer Verbindung mit dem HDInsight-Cluster an.|  
 |Kennwort|Geben Sie das Kennwort zum Herstellen einer Verbindung mit dem HDInsight-Cluster an.|

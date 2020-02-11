@@ -16,27 +16,27 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931245"
 ---
 # <a name="resyncenum"></a>ResyncEnum
-Gibt an, ob die zugrunde liegende Werte überschrieben werden, durch einen Aufruf von [Resync](../../../ado/reference/ado-api/resync-method.md).  
+Gibt an, ob zugrunde liegende Werte durch einen Rückruf von [Resync](../../../ado/reference/ado-api/resync-method.md)überschrieben werden.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adResyncAllValues**|2|Standard. Daten werden überschrieben, und ausstehende Updates werden abgebrochen.|  
-|**adResyncUnderlyingValues**|1|Daten nicht überschrieben, und ausstehende Updates nicht abgebrochen werden.|  
+|**adResyncAllValues**|2|Default. Überschreibt Daten, und ausstehende Updates werden abgebrochen.|  
+|**adresyncunderlyingvalues**|1|Daten werden nicht überschrieben, und ausstehende Updates werden nicht abgebrochen.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Dauerhaft|  
 |--------------|  
-|AdoEnums.Resync.ALLVALUES|  
-|AdoEnums.Resync.UNDERLYINGVALUES|  
+|Adoenumerations. Resync. AllValues|  
+|Adoenumerations. Resync. underlyingvalues|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)

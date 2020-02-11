@@ -1,5 +1,5 @@
 ---
-title: Sp_fkeys (Transact-SQL) | Microsoft-Dokumentation
+title: sp_fkeys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124404"
 ---
-# <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
+# <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt logische Fremdschlüsselinformationen für die aktuelle Umgebung zurück. Diese Prozedur zeigt Fremdschlüsselbeziehungen an, wobei auch deaktivierte Fremdschlüssel berücksichtigt werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,34 +44,34 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @pktable_name=] '*Pktable_name*"  
- Der Name der Tabelle mit dem Primärschlüssel, mit der Kataloginformationen zurückgegeben werden. *Pktable_name* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Dieser Parameter oder die *Fktable_name* Parameter oder für beide müssen angegeben werden.  
+ [ @pktable_name=] "*pktable_name*"  
+ Der Name der Tabelle mit dem Primärschlüssel, mit der Kataloginformationen zurückgegeben werden. *pktable_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Dieser Parameter oder der *fktable_name* Parameter muss angegeben werden.  
   
- [ @pktable_owner=] '*Pktable_owner*"  
- Ist der Name des Besitzers der Tabelle (mit dem Primärschlüssel) verwendet, um Kataloginformationen zurückzugeben. *Pktable_owner* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Pktable_owner* nicht angegeben ist, gelten die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS.  
+ [ @pktable_owner=] "*pktable_owner*"  
+ Der Name des Besitzers der Tabelle (mit dem Primärschlüssel), die verwendet wird, um Katalog Informationen zurückzugeben. *pktable_owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *pktable_owner* nicht angegeben ist, werden die Standardregeln für die Tabellen Sichtbarkeit des zugrunde liegenden DBMS angewendet.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bedeutet dies: Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *Pktable_owner* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Pktable_name*, sieht Sie die Prozedur für eine Tabelle mit dem angegebenen *Pktable_name* gehören dem Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bedeutet dies: Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *pktable_owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *pktable_name*besitzt, sucht die Prozedur nach einer Tabelle mit der angegebenen *pktable_name* , die im Besitz des Daten Bank Besitzers ist. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
- [ @pktable_qualifier =] '*Pktable_qualifier*"  
- Ist der Name des Qualifizierers der Tabelle (mit dem Primärschlüssel). *Pktable_qualifier* ist vom Datentyp Sysname und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*qualifier.owner.name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt der Qualifizierer den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ [ @pktable_qualifier =] "*pktable_qualifier*"  
+ Der Name des Qualifizierers der Tabelle (mit dem Primärschlüssel). *pktable_qualifier* ist vom Datentyp sysname und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt der Qualifizierer den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
- [ @fktable_name=] '*Fktable_name*"  
- Der Name der Tabelle (mit einem Fremdschlüssel), mit der Kataloginformationen zurückgegeben werden. *Fktable_name* ist vom Datentyp Sysname und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Dieser Parameter oder die *Pktable_name* Parameter oder für beide müssen angegeben werden.  
+ [ @fktable_name=] "*fktable_name*"  
+ Der Name der Tabelle (mit einem Fremdschlüssel), mit der Kataloginformationen zurückgegeben werden. *fktable_name* ist vom Datentyp sysname und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Dieser Parameter oder der *pktable_name* Parameter muss angegeben werden.  
   
- [ @fktable_owner =] '*Fktable_owner*"  
- Der Name des Besitzers der Tabelle (mit einem Fremdschlüssel), mit der Kataloginformationen zurückgegeben werden. *Fktable_owner* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Fktable_owner* nicht angegeben ist, gelten die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS.  
+ [ @fktable_owner =] "*fktable_owner*"  
+ Der Name des Besitzers der Tabelle (mit einem Fremdschlüssel), mit der Kataloginformationen zurückgegeben werden. *fktable_owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *fktable_owner* nicht angegeben ist, werden die Standardregeln für die Tabellen Sichtbarkeit des zugrunde liegenden DBMS angewendet.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bedeutet dies: Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *Fktable_owner* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Fktable_name*, sieht Sie die Prozedur für eine Tabelle mit dem angegebenen *Fktable_name* gehören dem Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bedeutet dies: Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *fktable_owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *fktable_name*besitzt, sucht die Prozedur nach einer Tabelle mit der angegebenen *fktable_name* , die im Besitz des Daten Bank Besitzers ist. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
- [ @fktable_qualifier=] '*Fktable_qualifier*"  
- Ist der Name des Qualifizierers der Tabelle (mit einem Fremdschlüssel). *FKTABLE_QUALIFIER* ist **Sysname**, hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt der Qualifizierer den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ [ @fktable_qualifier= ] "*FKTABLE_QUALIFIER*"  
+ Der Name des Qualifizierers der Tabelle (mit einem Fremdschlüssel). *FKTABLE_QUALIFIER* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt der Qualifizierer den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|Der Name des Qualifizierers der Tabelle (mit dem Primärschlüssel). Dieses Feld kann den Wert NULL annehmen.|  
 |PKTABLE_OWNER|**sysname**|Der Name des Besitzers der Tabelle (mit dem Primärschlüssel). Dieses Feld gibt immer einen Wert zurück.|  
@@ -82,14 +82,16 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |FKTABLE_NAME|**sysname**|Der Name der Tabelle (mit einem Fremdschlüssel). Dieses Feld gibt immer einen Wert zurück.|  
 |FKCOLUMN_NAME|**sysname**|Der Name der Fremdschlüsselspalten für jede Spalte des zurückgegebenen TABLE_NAME-Werts. Dieses Feld gibt immer einen Wert zurück.|  
 |KEY_SEQ|**smallint**|Die Sequenznummer der Spalte in einem mehrspaltigen Primärschlüssel. Dieses Feld gibt immer einen Wert zurück.|  
-|UPDATE_RULE|**smallint**|Die Aktion, die für den Fremdschlüssel ausgeführt wird, wenn es sich bei dem SQL-Vorgang um ein Update handelt.  Mögliche Werte:<br /> 0=CASCADE; kaskadierende Änderungen am Fremdschlüssel.<br /> 1=NO ACTION; keine Änderungen, wenn der Fremdschlüssel vorhanden ist.<br />   2 = Null festlegen <br /> 3 = Standard festlegen |  
-|DELETE_RULE|**smallint**|Die Aktion, die für den Fremdschlüssel ausgeführt wird, wenn es sich bei dem SQL-Vorgang um eine Löschung handelt. Mögliche Werte:<br /> 0=CASCADE; kaskadierende Änderungen am Fremdschlüssel.<br /> 1=NO ACTION; keine Änderungen, wenn der Fremdschlüssel vorhanden ist.<br />   2 = Null festlegen <br /> 3 = Standard festlegen |  
-|FK_NAME|**sysname**|Der Fremdschlüsselbezeichner. Ist NULL, wenn er auf die Datenquelle nicht anwendbar ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Namen der FOREIGN KEY-Einschränkung zurück.|  
-|PK_NAME|**sysname**|Der Primärschlüsselbezeichner. Ist NULL, wenn er auf die Datenquelle nicht anwendbar ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Namen der PRIMARY KEY-Einschränkung zurück.|  
+|UPDATE_RULE|**smallint**|Die Aktion, die für den Fremdschlüssel ausgeführt wird, wenn es sich bei dem SQL-Vorgang um ein Update handelt.  Mögliche Werte:<br /> 0=CASCADE; kaskadierende Änderungen am Fremdschlüssel.<br /> 1=NO ACTION; keine Änderungen, wenn der Fremdschlüssel vorhanden ist.<br />   2 = NULL festlegen <br /> 3 = Standard festlegen |  
+|DELETE_RULE|**smallint**|Die Aktion, die für den Fremdschlüssel ausgeführt wird, wenn es sich bei dem SQL-Vorgang um eine Löschung handelt. Mögliche Werte:<br /> 0=CASCADE; kaskadierende Änderungen am Fremdschlüssel.<br /> 1=NO ACTION; keine Änderungen, wenn der Fremdschlüssel vorhanden ist.<br />   2 = NULL festlegen <br /> 3 = Standard festlegen |  
+|FK_NAME|**sysname**|Der Fremdschlüsselbezeichner. Ist NULL, wenn er auf die Datenquelle nicht anwendbar ist. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Namen der FOREIGN KEY-Einschränkung zurück.|  
+|PK_NAME|**sysname**|Der Primärschlüsselbezeichner. Ist NULL, wenn er auf die Datenquelle nicht anwendbar ist. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Namen der PRIMARY KEY-Einschränkung zurück.|  
   
- Die zurückgegebenen Ergebnisse sind nach FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME und KEY_SEQ sortiert.  
+ Die zurückgegebenen Informationen werden nach folgenden Spalten sortiert: FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME und KEY_SEQ.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eine Anwendungscodierung, die Tabellen mit deaktivierten Fremdschlüsseln enthält, kann folgendermaßen implementiert werden:  
   
 -   Deaktivieren Sie bei Verwendung der Tabellen vorübergehend die Überprüfung von Einschränkungen (ALTER TABLE NOCHECK oder CREATE TABLE NOT FOR REPLICATION), und aktivieren Sie sie später wieder.  
@@ -98,10 +100,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 Wenn für die Primärschlüsseltabelle ein Name, für die Fremdschlüsseltabelle jedoch NULL angegeben wurde, gibt sp_fkeys alle Tabellen mit einem Fremdschlüssel für die angegebene Tabelle zurück. Im umgekehrten Fall, d. h., wenn für die Fremdschlüsseltabelle ein Name, für die Primärschlüsseltabelle jedoch NULL angegeben wird, gibt sp_fkeys alle Tabellen zurück, die einen mit der Fremdschlüsseltabelle in Beziehung stehenden Primärschlüssel besitzen.  
   
-Die gespeicherte Prozedur Sp_fkeys entspricht SQLForeignKeys in ODBC.  
+Die gespeicherte Prozedur sp_fkeys entspricht SQLForeignKeys in ODBC.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert `SELECT` Berechtigung für das Schema.  
+ Erfordert `SELECT` die-Berechtigung für das Schema.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Liste der Fremdschlüssel für die `HumanResources.Department`-Tabelle in der `AdventureWorks2012`-Datenbank abgerufen.  
@@ -113,17 +115,17 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- Im folgenden Beispiel wird eine Liste der Fremdschlüssel für die `DimDate`-Tabelle in der `AdventureWorksPDW2012`-Datenbank abgerufen. Es werden keine Zeilen zurückgegeben, da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] Fremdschlüssel nicht unterstützt.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Im folgenden Beispiel wird eine Liste der Fremdschlüssel für die `DimDate`-Tabelle in der `AdventureWorksPDW2012`-Datenbank abgerufen. Es werden keine Zeilen zurück [!INCLUDE[ssDW](../../includes/ssdw-md.md)] gegeben, da keine Fremdschlüssel unterstützt.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Prozeduren für Kataloginformationen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Katalog Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Sp_pkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
+ [sp_pkeys &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   
 

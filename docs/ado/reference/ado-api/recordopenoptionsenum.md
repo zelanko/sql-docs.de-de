@@ -1,5 +1,5 @@
 ---
-title: RecordOpenOptionsEnum | Microsoft-Dokumentation
+title: Recordopenoptionsenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931428"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-Gibt Optionen zum Öffnen einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md). Diese Werte können kombiniert werden, mithilfe von oder.  
+Gibt Optionen für das Öffnen eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)an. Diese Werte können mit oder kombiniert werden.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adDelayFetchFields**|0x8000|Gibt an, an den Anbieter, die mit die Feldern verknüpft die **Datensatz** zunächst nicht abgerufen werden müssen, aber beim ersten Versuch Zugriff auf das Feld abgerufen werden können. Das Standardverhalten, das durch das Fehlen des dieses Flag angegeben wird, um alle abzurufen der **Datensatz** Objekt Felder.|  
-|**adDelayFetchStream**|0x4000|Gibt an, an den Anbieter, die der Standarddatenstrom mit verknüpft die **Datensatz** zunächst nicht abgerufen werden müssen. Das Standardverhalten, das durch das Fehlen des dieses Flag angegeben ist, zum Abrufen von des Standard-Streams, der für die **Datensatz** Objekt.|  
-|**adOpenAsync**|0x1000|Gibt an, dass die **Datensatz** Objekt im asynchronen Modus geöffnet wird.|  
-|**adOpenExecuteCommand**|0x10000|Gibt an, dass die Quellzeichenfolge-Befehlstext enthält, die ausgeführt werden soll. Dieser Wert entspricht der **AdCmdText** option **Recordset.Open**.|  
-|**adOpenRecordUnspecified**|-1|Standard. Gibt an, dass keine Optionen angegeben sind.|  
-|**adOpenOutput**|0x800000|Gibt an, dass, wenn die Quelle zu einem Knoten verweist, der ein ausführbares Skript enthält (z. B. ein. ASP-Seite), klicken Sie dann auf die geöffnete **Datensatz** enthält die Ergebnisse der ausgeführten Skripts. Dieser Wert ist nur gültig mit nicht-Auflistungstyp Datensätze.|  
+|**addelta-fetchfields**|0x8000|Gibt dem Anbieter an, dass die dem **Datensatz** zugeordneten Felder anfänglich nicht abgerufen werden müssen, sondern beim ersten Versuch, auf das Feld zuzugreifen, abgerufen werden können. Das Standardverhalten, das durch das Fehlen dieses Flags angegeben wird, besteht darin, alle **Daten Satz** Objekt Felder abzurufen.|  
+|**addelta-fetchstream**|0x4000|Gibt dem Anbieter an, dass der dem Datensatz zugeordnete Standard **Daten** Strom anfänglich nicht abgerufen werden muss. Das Standardverhalten, das durch das Fehlen dieses Flags angegeben ist, besteht darin, den dem **Datensatz** -Objekt zugeordneten Standardstream abzurufen.|  
+|**adopendasync**|0x1000|Gibt an, dass das **Datensatz** -Objekt im asynchronen Modus geöffnet wird.|  
+|**adopteexecutecommand**|0x10000|Gibt an, dass die Quell Zeichenfolge Befehls Text enthält, der ausgeführt werden soll. Dieser Wert entspricht der Option **adCmdText** für **Recordset. Open**.|  
+|**adopendrecordunspezifiziert**|-1|Default. Gibt an, dass keine Optionen angegeben werden.|  
+|**adopendoutput**|0x800000|Gibt an, dass die Quelle auf einen Knoten verweist, der ein ausführbares Skript enthält (z. b.). ASP-Seite), dann enthält der geöffnete **Datensatz** die Ergebnisse des ausgeführten Skripts. Dieser Wert gilt nur für Datensätze, die keine Sammlung sind.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Diese Konstanten keine ADO/WFC-Entsprechungen.  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Diese Konstanten haben keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Open-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)

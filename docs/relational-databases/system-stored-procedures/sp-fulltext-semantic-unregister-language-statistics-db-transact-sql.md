@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909138"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72909138"
   
  Diese Anweisung trennt die Datenbank nicht und entfernt die physische Datenbankdatei nicht aus dem Dateisystem. Nachdem Sie die Registrierung der Datenbank aufgehoben haben, können Sie sie trennen und die physische Datenbankdatei löschen.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="Arguments"></a> Argumente  
+##  <a name="Arguments"></a>Argumente  
  Diese Prozedur erfordert keine Argumente. Da eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur über eine semantische Sprachstatistikdatenbank verfügt, ist es nicht notwendig, die Datenbank zu identifizieren.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -60,8 +60,8 @@ GO
 
  Weitere Informationen finden Sie unter [Installieren und Konfigurieren der semantischen Suche](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
-## <a name="metadata"></a>Browser  
- Informationen über die Semantic Language Statistics Datenbank, die auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert ist, erhalten Sie, indem Sie die Katalog Sicht [sys. fulltext_semantic_language_statistics_database &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)Abfragen.  
+## <a name="metadata"></a>Metadaten  
+ Informationen über die Semantic Language Statistics Datenbank, die auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert ist, erhalten Sie, indem Sie die Katalog Sicht [sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)Abfragen.  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -76,7 +76,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren und Konfigurieren der semantischen Suche](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

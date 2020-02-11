@@ -1,5 +1,5 @@
 ---
-title: Sp_changeqreader_agent (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changeqreader_agent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68099139"
 ---
-# <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
+# <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert die Sicherheitseigenschaften eines Warteschlangenlese-Agents. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank oder auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,27 +39,27 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_login = ] 'job_login'` Der Anmeldename für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)** , hat den Standardwert NULL.  
+`[ @job_login = ] 'job_login'`Der Anmelde Name für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird. *job_login* ist vom Datentyp **nvarchar (257)** und hat den Standardwert NULL.  
   
-`[ @job_password = ] 'job_password'` Ist das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_password = ] 'job_password'`Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @frompublisher = ] frompublisher` Ist, wenn die Prozedur auf dem Verleger ausgeführt wird. *Frompublisher* bit und hat den Standardwert des **0**. Der Wert **1** bedeutet, dass die Prozedur auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt wird.  
+`[ @frompublisher = ] frompublisher`Gibt an, ob die Prozedur auf dem Verleger ausgeführt wird. *frompublisher* ist vom Typ Bit und hat den Standardwert **0**. Der Wert **1** bedeutet, dass die Prozedur auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_changeqreader_agent** wird in Transaktionsreplikationen verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_changeqreader_agent** wird bei der Transaktions Replikation verwendet.  
   
- **Sp_changeqreader_agent** wird verwendet, um das Windows-Konto zu ändern, unter dem ein Warteschlangenlese-Agent ausgeführt wird. Sie können das Kennwort für einen vorhandenen Windows-Anmeldenamen ändern oder einen neuen Windows-Anmeldenamen und ein neues Kennwort angeben.  
+ **sp_changeqreader_agent** wird verwendet, um das Windows-Konto zu ändern, unter dem ein Warteschlangen Lese-Agent ausgeführt wird. Sie können das Kennwort für einen vorhandenen Windows-Anmeldenamen ändern oder einen neuen Windows-Anmeldenamen und ein neues Kennwort angeben.  
   
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changeqreader_agent**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changeqreader_agent**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
+ [sp_addqreader_agent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
   

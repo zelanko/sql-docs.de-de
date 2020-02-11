@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211406"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
-  In diesem Thema wird beschrieben, wie Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]bearbeiten können.  
+  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie eine- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Warnung [!INCLUDE[tsql](../../includes/tsql-md.md)]in mithilfe von oder bearbeiten können.  
   
  **In diesem Thema**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68211406"
   
      [Sicherheit](#Security)  
   
--   **So bearbeiten Sie eine Warnung mit**  
+-   **So bearbeiten Sie eine Warnung mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68211406"
 ####  <a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Information in einer Warnung bearbeiten. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-edit-an-alert"></a>So bearbeiten Sie eine Warnung  
   
@@ -80,6 +80,6 @@ ms.locfileid: "68211406"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_update_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_update_alert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql).  
   
   

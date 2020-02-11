@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796724"
 ---
 # <a name="implementing-full-text-search"></a>Einbinden einer Volltextsuche
@@ -27,7 +27,7 @@ ms.locfileid: "72796724"
  Erstellen Sie zunächst einen Volltextkatalog auf der Datenbank, indem Sie den <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>-Konstruktor aufrufen und einen Katalognamen angeben. Erstellen Sie dann den Volltextindex, indem Sie den Konstruktor aufrufen und die Tabelle angeben, in der dieser erstellt werden soll. Daraufhin können Sie Indexspalten für die Volltextsuche hinzufügen, indem Sie das <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn>-Objekt verwenden und den Namen der Spalte in der Tabelle angeben. Legen Sie dann die <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A>-Eigenschaft auf den Katalog fest, den Sie erstellt haben. Rufen Sie zum Schluss die <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A>-Methode auf, und erstellen Sie den Volltextindex auf der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual&#35; C SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Erstellen eines Volltextsuchdiensts in Visual Basic  
  In diesem Codebeispiel wird ein Volltextsuchkatalog für die `ProductCategory` -Tabelle in der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] erstellt. Anschließend wird für die Name-Spalte in der `ProductCategory` -Tabelle ein Index für die Volltextsuche erstellt. Der Index für die Volltextsuche erfordert, dass bereits ein eindeutiger Index für die Spalte definiert ist.  
