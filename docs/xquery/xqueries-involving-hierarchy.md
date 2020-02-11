@@ -1,5 +1,5 @@
 ---
-title: XQueries Einbeziehung von Hierarchien | Microsoft-Dokumentation
+title: XQueries mit Hierarchie | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946104"
 ---
 # <a name="xqueries-involving-hierarchy"></a>XQuery-Abfragen unter Einbeziehung von Hierarchien
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die meisten **Xml** -Typspalten in der **AdventureWorks** -Datenbank sind halbstrukturierte Dokumente. Deshalb können die in jeder Zeile gespeicherten Dokumente unterschiedlich aussehen. Die in diesem Thema gezeigten Abfragebeispiele veranschaulichen, wie Informationen aus diesen unterschiedlichen Dokumenten extrahiert werden können.  
+  Die meisten Spalten vom Typ **XML** in der **AdventureWorks** -Datenbank sind halbstrukturierte Dokumente. Deshalb können die in jeder Zeile gespeicherten Dokumente unterschiedlich aussehen. Die in diesem Thema gezeigten Abfragebeispiele veranschaulichen, wie Informationen aus diesen unterschiedlichen Dokumenten extrahiert werden können.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Abrufen von Arbeitsplatzstandorten mit dem zugehörigen ersten Fertigungsschritt aus Dokumenten mit Produktionsanweisungen  
- Für Produktmodell 7, die Abfrage erstellt XML mit der <`ManuInstr`>-Element mit **ProductModelID** und **ProductModelName** Attribute, und einen oder mehrere <`Location`> untergeordnete Elemente.  
+ Für das Produktmodell 7 konstruiert die Abfrage XML, das das <`ManuInstr`>-Element mit den Attributen **ProductModelID** und **ProductModelName** und mindestens ein <`Location`> untergeordneten Elementen enthält.  
   
- Jedes <`Location`>-Element verfügt über einen eigenen Satz von Attributen sowie ein <`step`> untergeordnete Element. Diese <`step`> untergeordnete Element ist der erste Fertigungsschritt am arbeitsplatzstandort.  
+ Jedes <`Location`> Element verfügt über einen eigenen Satz von Attributen und ein `step` <> untergeordnetes Element. Diese <`step`> untergeordnete Element ist der erste Fertigungsschritt am Arbeitsplatz Standort.  
   
 ```sql
 SELECT Instructions.query('  
@@ -55,17 +55,17 @@ WHERE ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **Namespace** -Schlüsselwort in der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespacepräfix. Dieses Präfix wirt später im Body-Teil der Abfrage verwendet.  
+-   Das **Namespace** -Schlüsselwort im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespace Präfix. Dieses Präfix wirt später im Body-Teil der Abfrage verwendet.  
   
 -   Die Tokens zum Kontextwechsel, {) und (}, bewirken das Wechseln der Abfrage von der XML-Konstruktion zur Abfrageauswertung.  
   
--   Die **'sql:Column()'** wird verwendet, um einen relationalen Wert in der XML einzuschließen, das erstellt wird.  
+-   **SQL: column ()** wird verwendet, um einen relationalen Wert in den XML-Code einzufügen, der erstellt wird.  
   
--   Beim Erstellen der <`Location`>-Element alle Arbeit Center Speicherort Attribute von $wc/@* abgerufen.  
+-   Beim Erstellen des <`Location`> Elements ruft $WC/@ * alle Attribute für den Arbeitsplatz Speicherort ab.  
   
--   Die **string()** Funktion gibt den Zeichenfolgenwert von der <`step`> Element.  
+-   Die **String ()** -Funktion gibt den Zeichen folgen Wert aus `step` dem <>-Element zurück.  
   
- Dies ist ein Teilergebnis gezeigt:  
+ Dies ist ein Teilergebnis:  
   
 ```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Suchen aller Telefonnummern in der AdditionalContactInfo-Spalte  
- Die folgende Abfrage Ruft zusätzliche Telefonnummern für einen bestimmten Kundenkontakt durch suchen die gesamte Hierarchie für die <`telephoneNumber`> Element. Da die <`telephoneNumber`>-Elements können an beliebiger Stelle in der Hierarchie, die Abfrage verwendet den descendant- und den Self-Operator (/ /) in der Suche.  
+ Die folgende Abfrage ruft zusätzliche Telefonnummern für einen bestimmten Kundenkontakt ab, indem die gesamte Hierarchie nach dem `telephoneNumber` <>-Element durchsucht wird. Da das <`telephoneNumber`>-Element an beliebiger Stelle in der Hierarchie angezeigt werden kann, verwendet die Abfrage den Nachfolger-und Self-Operator (//) in der Suche.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,13 +111,13 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Insbesondere abzurufenden nur Telefonnummern der obersten Ebene, die <`telephoneNumber`> untergeordnete Elemente des <`AdditionalContactInfo`>, wird nun der FOR-Ausdruck in der Abfrage  
+ Um nur die Telefonnummern der obersten Ebene abzurufen, insbesondere die <`telephoneNumber`> untergeordneten Elementen <`AdditionalContactInfo`>, ändert sich der for-Ausdruck in der Abfrage in.  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`. installiert haben.  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XQuery-Grundlagen](../xquery/xquery-basics.md)   
- [XML-Konstruktion &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
+ [XML-Konstruktion &#40;XQuery-&#41;](../xquery/xml-construction-xquery.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   

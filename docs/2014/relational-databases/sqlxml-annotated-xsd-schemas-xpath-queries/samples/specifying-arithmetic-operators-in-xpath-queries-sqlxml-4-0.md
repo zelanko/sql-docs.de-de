@@ -1,5 +1,5 @@
 ---
-title: Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
+title: Angeben arithmetischer Operatoren in XPath-Abfragen (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,32 +16,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012467"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0)
-  Im folgenden Beispiel wird gezeigt, wie arithmetische Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Im folgenden Beispiel wird gezeigt, wie arithmetische Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Angeben des arithmetischen *-Operators  
- Diese XPath-Abfrage gibt  **\<OrderDetail >** Elemente, die angegebene Prädikat erfüllen:  
+ Diese XPath-Abfrage gibt ** \<OrderDetail->** Elemente zurück, die das angegebene Prädikat erfüllen:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knotentest (TRUE, wenn **OrderDetail** ist ein  **\<Elementknoten >** , da die  **\< Element >** Knoten ist der primäre Knoten für die `child` Achse). Für alle der  **\<OrderDetail >** Elementknoten, der Test im Prädikat angewendet wird, und nur die Knoten, die die Bedingung erfüllen, werden zurückgegeben.  
+ In `child` der Abfrage ist die Achse und `OrderDetail` ist der Knoten Test (true, wenn **Order Detail** ein ** \<Elementknoten>** ist, da das ** \<Element>** Knoten der primäre Knoten für die `child` Achse ist). Für alle ** \<OrderDetail->** Elementknoten wird der Test im Prädikat angewendet, und es werden nur die Knoten zurückgegeben, die die Bedingung erfüllen.  
   
 > [!NOTE]  
 >  Die in XPath verwendeten Zahlen sind Gleitkommazahlen mit doppelter Genauigkeit, durch Vergleich der Gleitkommazahlen wie im Beispiel werden die Werte gerundet.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   
-1.  Kopieren der [Schema Beispielcode](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) und fügen Sie ihn in eine Textdatei. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
+1.  Kopieren Sie den [Beispiel Schema Code](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) , und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen SampleSchema1.xml.  
   
 2.  Erstellen Sie die folgende Vorlage (ArithmeticOperatorA.xml), und speichern Sie sie in dem Verzeichnis, in dem SampleSchema1.xml gespeichert ist.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66012467"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    
