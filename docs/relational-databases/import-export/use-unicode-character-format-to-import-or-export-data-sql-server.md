@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056312"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
@@ -43,7 +43,7 @@ Beim Verwenden des Unicode-Zeichenformats sollten Sie Folgendes berücksichtigen
 
 * Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) trennt standardmäßig die Zeichendatenfelder mit dem Tabstoppzeichen und schließt die Datensätze mit einem Neue-Zeile-Zeichen ab.  Weitere Informationen zum Angeben alternativer Abschlusszeichen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-* Die [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Daten, die in einer Datendatei im Unicode-Zeichenformat gespeichert sind, verhalten sich wie Daten in einer Datendatei im Zeichenformat, außer dass die Daten als [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)-Daten und nicht als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)-Daten gespeichert sind. Weitere Informationen zum Zeichenformat finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
+* Die [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten, die in einer Datendatei im Unicode-Zeichenformat gespeichert sind, verhalten sich wie Daten in einer Datendatei im Zeichenformat, außer dass die Daten als [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) -Daten und nicht als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Daten gespeichert sind. Weitere Informationen zum Zeichenformat finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
 
 ## Besondere Überlegungen zur Verwendung des Unicode-Zeichenformats, bcp und einer Formatdatei<a name="special_considerations"></a>
 Datendateien im Unicode-Zeichenformat folgen den Konventionen für Unicode-Dateien.  Die ersten zwei Bytes der Datei sind Hexadezimalzahlen (0xFFFE).  Diese Bytes dienen als Markierungen für die Bytereihenfolge (byte-order marks; BOM), in der angegeben wird, ob das höherwertige Byte in der Datei zuerst oder zuletzt gespeichert wird.  Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) kann die BOM falsch interpretieren, was dazu führt, dass der Importvorgang teilweise fehlschlägt. Sie erhalten dann möglicherweise eine ähnliche Fehlermeldung wie die folgende:
@@ -82,7 +82,7 @@ Sie können Daten im Unicode-Zeichenformat in eine Tabelle importieren, indem Si
   
 Das Unicode-Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|und Beschreibung|  
+|Get-Help|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Verwendet das Unicode-Zeichenformat|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Verwendet das Unicode-Zeichenformat beim Massenimport von Daten|  
@@ -238,10 +238,10 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
 -   [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

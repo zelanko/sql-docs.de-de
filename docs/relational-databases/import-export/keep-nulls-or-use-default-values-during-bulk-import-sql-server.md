@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055959"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Standardwerten während des Massenimports (SQL Server)
@@ -42,7 +42,7 @@ Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen 
 ## Beibehalten von NULL-Werten<a name="keep_nulls"></a>  
 Die folgenden Qualifizierer geben an, dass ein leeres Feld in der Datendatei seinen NULL-Wert während des Massenimportvorgangs beibehält, statt (ggf.) einen Standardwert für die Tabellenspalten zu übernehmen.  Standardmäßig werden für [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), Spalten, die nicht im Massenladevorgang angegeben sind, auf NULL festgelegt.
   
-|Befehl|Qualifizierer|Qualifizierertyp|  
+|Get-Help|Qualifizierer|Qualifizierertyp|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Schalter|  
 |BULK INSERT|KEEPNULLS\*|Argument|  
@@ -330,7 +330,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
  **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
   
--   [Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   

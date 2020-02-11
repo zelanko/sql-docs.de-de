@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056359"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Massenimport von Daten mithilfe einer Formatdatei (SQL Server)
@@ -36,7 +36,7 @@ In diesem Thema wird die Verwendung einer Formatdatei bei Massenimportvorgängen
   * SQLCHAR or SQLVARYCHAR (die Daten werden in der Clientcodepage gesendet bzw. in der durch die Sortierung implizierten Codeseite)
   * SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet)
   * SQLBINARY or SQLVARYBIN (die Daten werden ohne Konvertierung gesendet)
-* Azure SQL-Datenbank und Azure SQL Data Warehouse unterstützen nur das Hilfsprogramm [bcp](../../tools/bcp-utility.md).  Weitere Informationen finden Sie unter:
+* Azure SQL-Datenbank und Azure SQL Data Warehouse unterstützen nur das Hilfsprogramm [bcp](../../tools/bcp-utility.md).  Weitere Informationen finden Sie hier:
   * [Laden von Daten in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
   * [Laden von Daten aus SQL Server in Azure SQL Data Warehouse (Flatfiles)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [Migrieren von Daten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
@@ -259,7 +259,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
  [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

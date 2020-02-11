@@ -13,15 +13,15 @@ ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52015cb202f46c50c16dcab408bed7761f0925db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67951803"
 ---
 # <a name="using-data-sources"></a>Verwenden von Datenquellen
-Datenquellen werden in der Regel vom Benutzer erstellt oder ein Techniker mit einem Programm Namens der *ODBC-Administrator*. Der ODBC-Administrator fordert den Benutzer für den Treiber verwenden und ruft dann diesen Treiber. Der Treiber zeigt ein Dialogfeld, das die Informationen anfordert, wird, die es eine Verbindung mit der Datenquelle herstellen muss. Nachdem der Benutzer die Informationen eingegeben hat, werden Sie von der Treiber auf dem System gespeichert.  
+Datenquellen werden in der Regel vom Endbenutzer oder von einem Techniker mit einem Programm namens *ODBC-Administrator*erstellt. Der ODBC-Administrator fordert den Benutzer zur Verwendung des Treibers auf und ruft dann den Treiber auf. Der Treiber zeigt ein Dialogfeld an, in dem die Informationen angefordert werden, die zum Herstellen einer Verbindung mit der Datenquelle erforderlich sind. Nachdem der Benutzer die Informationen eingegeben hat, speichert der Treiber ihn auf dem System.  
   
- Später wird die Anwendung ruft der Treiber-Manager, und übergibt sie den Namen einer Datenquelle für den Computer oder den Pfad einer Datei mit einer Datenquelle. Wenn Computername der Datenquelle zu übergeben, sucht der Treiber-Manager das System, um die Suche nach dem Treiber, die von der Datenquelle verwendet. Anschließend wird der Treiber geladen und der Name der Datenquelle übergeben. Der Treiber verwendet den Datenquellennamen, um die gesuchten Informationen mit mit der Datenquelle hergestellt werden muss. Zum Schluss verbindet ihn mit der Datenquelle, die in der Regel den Benutzer aufzufordern, Benutzer-ID und das Kennwort, die in der Regel nicht gespeichert werden.  
+ Die Anwendung ruft den Treiber-Manager später auf und übergibt den Namen einer Computer Datenquelle oder den Pfad einer Datei, die eine Datei Datenquelle enthält. Wenn ein Computer Datenquellen Name übermittelt wird, durchsucht der Treiber-Manager das System, um den von der Datenquelle verwendeten Treiber zu finden. Anschließend wird der Treiber geladen und der Datenquellen Name an ihn weitergeleitet. Der Treiber verwendet den Datenquellen Namen, um die Informationen zu finden, die zum Herstellen einer Verbindung mit der Datenquelle benötigt werden. Schließlich wird eine Verbindung mit der Datenquelle hergestellt, und der Benutzer wird in der Regel zur Eingabe einer Benutzer-ID und eines Kennworts aufgefordert.  
   
- Wenn eine Datenquelle übergeben wird, wird der Treiber-Manager öffnet die Datei und lädt den angegebenen Treiber. Wenn die Datei auch eine Verbindungszeichenfolge enthält, übergibt er diese an den Treiber. Mit den Informationen in der Verbindungszeichenfolge verbindet der Treiber mit der Datenquelle. Wenn keine Verbindungszeichenfolge übergeben wurde, fordert der Treiber in der Regel der Benutzer die erforderlichen Informationen.
+ Wenn eine Datei Datenquelle übermittelt wird, wird die Datei vom Treiber-Manager geöffnet, und der angegebene Treiber wird geladen. Wenn die Datei auch eine Verbindungs Zeichenfolge enthält, wird diese an den Treiber weitergeleitet. Mithilfe der Informationen in der Verbindungs Zeichenfolge stellt der Treiber eine Verbindung mit der Datenquelle her. Wenn keine Verbindungs Zeichenfolge übermittelt wurde, fordert der Treiber den Benutzer in der Regel zur Eingabe der erforderlichen Informationen auf.

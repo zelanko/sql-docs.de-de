@@ -1,5 +1,5 @@
 ---
-title: Sp_helprotect (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helprotect (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,23 +18,23 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997475"
 ---
-# <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
+# <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt einen Bericht mit Informationen zu den Benutzerberechtigungen für ein Objekt oder zu Anweisungsberechtigungen in der aktuellen Datenbank zurück.  
   
 > [!IMPORTANT]  
->  **Sp_helprotect** gibt keine Informationen zu sicherungsfähigen Elementen, die in eingeführt wurden zurück [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Verwendung [Sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) und [Fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) stattdessen.  
+>  **sp_helprotect** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden. Verwenden Sie stattdessen [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) und [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Berechtigungen, die immer festen Serverrollen oder Datenbankrollen zugewiesen sind, werden nicht aufgeführt. Anmeldenamen oder Benutzer, die Berechtigungen auf Grundlage ihrer Rollenmitgliedschaft erhalten, sind nicht enthalten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,32 +47,32 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'object_statement'` Ist der Name des Objekts in der aktuellen Datenbank oder einer Anweisung mit den Berechtigungen zum Bericht. *Object_statement* ist **nvarchar(776)** , hat den Standardwert NULL, womit alle Objekt- und Anweisungsberechtigungen Berechtigungen. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen besitzerqualifizierer im Format _Besitzer_ **.** _Objekt_.  
+`[ @name = ] 'object_statement'`Der Name des Objekts in der aktuellen Datenbank oder eine-Anweisung, die über die Berechtigungen zum Melden verfügt. *object_statement* ist vom Datentyp **nvarchar (776)** und hat den Standardwert NULL, womit alle Objekt-und Anweisungs Berechtigungen zurückgegeben werden. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen Besitzer Qualifizierer im Formular _Besitzer_enthalten **.** - _Objekt_.  
   
- Wenn *Object_statement* ist eine Anweisung, es kann eine CREATE-Anweisung sein.  
+ Wenn *object_statement* eine-Anweisung ist, kann es sich um eine CREATE-Anweisung handeln.  
   
-`[ @username = ] 'security_account'` Ist der Name des Prinzipals für die Berechtigungen zurückgegeben werden. *Security_account* ist **Sysname**, hat den Standardwert NULL, womit alle Prinzipale in der aktuellen Datenbank zurückgegeben. *Security_account* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @username = ] 'security_account'`Der Name des Prinzipals, für den Berechtigungen zurückgegeben werden. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, womit alle Prinzipale in der aktuellen Datenbank zurückgegeben werden. *security_account* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @grantorname = ] 'grantor'` Ist der Name des Prinzipals, dem Berechtigungen gewährt. *GRANTOR* ist **Sysname**, hat den Standardwert NULL, womit alle Informationen zu Berechtigungen, die von einem Prinzipal in der Datenbank erteilt.  
+`[ @grantorname = ] 'grantor'`Der Name des Prinzipals, der Berechtigungen erteilt hat. der *GRANTOR* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, der alle Informationen zu Berechtigungen zurückgibt, die von einem Prinzipal in der Datenbank gewährt werden.  
   
-`[ @permissionarea = ] 'type'` Eine Zeichenfolge, der angibt, ob Berechtigungen für Systemobjekte angezeigt (Zeichenfolge **o**), Anweisungsberechtigungen (Zeichenfolge **s**), oder beides (**os**). *Typ* ist **varchar(10)** , hat den Standardwert **os**. *Typ* kann eine beliebige Kombination von sein **o** und **s**mit oder ohne Kommas bzw. Leerzeichen zwischen **o** und **s**.  
+`[ @permissionarea = ] 'type'`Eine Zeichenfolge, die angibt, ob Objekt Berechtigungen (Zeichenfolge **o**), Anweisungs Berechtigungen (Zeichenfolge **s**) oder beides (**OS**) angezeigt werden sollen. *Type ist vom Datentyp* **varchar (10)** und hat den Standardwert **OS**. *Type* kann eine beliebige Kombination aus **o** und **s**sein, mit oder ohne Kommas oder Leerzeichen zwischen **o** und **s**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**Besitzer**|**sysname**|Name des Objektbesitzers.|  
-|**Objekt**|**sysname**|Name des Objekts.|  
+|**Object**|**sysname**|Name des Objekts.|  
 |**Empfänger**|**sysname**|Name des Prinzipals, dem Berechtigungen erteilt wurden.|  
 |**Grantor**|**sysname**|Name des Prinzipals, der dem angegebenen Empfänger (Grantee) Berechtigungen erteilt hat.|  
-|**ProtectType**|**nvarchar(10)**|Name des Schutztyps:<br /><br /> GRANT REVOKE|  
-|**Aktion**|**nvarchar(60)**|Der Name des Berechtigungssatzes. Gültige Berechtigungsanweisungen richten sich nach dem Objekttyp.|  
+|**Protecttype**|**nvarchar (10)**|Name des Schutztyps:<br /><br /> GRANT REVOKE|  
+|**Aktion**|**nvarchar (60)**|Der Name der Berechtigung. Gültige Berechtigungsanweisungen richten sich nach dem Objekttyp.|  
 |**Spalte**|**sysname**|Berechtigungstyp:<br /><br /> All = Berechtigung gilt für alle aktuellen Spalten des Objekts.<br /><br /> New = Berechtigung gilt für alle neuen Spalten, die später (mithilfe der ALTER-Anweisung) für das Objekt geändert werden.<br /><br /> All+New = Kombination aus All und New.<br /><br /> Gibt einen Punkt zurück, wenn der Berechtigungstyp nicht für Spalten gilt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Alle Parameter in der folgenden Prozedur sind optional. Wenn Sie `sp_helprotect` ohne Parameter ausführen, werden alle Berechtigungen angezeigt, die in der aktuellen Datenbank erteilt oder verweigert wurden.  
   
  Wenn einige, aber nicht alle Parameter angegeben werden, verwenden Sie benannte Parameter zum Identifizieren des entsprechenden Parameters oder aber `NULL` als Platzhalter. Führen Sie z. B. folgende Zeile aus, um alle Berechtigungen für den Datenbankbesitzer (`dbo`) auszugeben, der der Berechtigende (GRANTOR) ist:  
@@ -117,7 +117,7 @@ EXEC sp_helprotect NULL, 'Judy';
 EXEC sp_helprotect NULL, NULL, 'Judy';  
 ```  
   
-### <a name="d-listing-the-statement-permissions-only"></a>D. Ausschließliches Auflisten der Anweisungsberechtigungen  
+### <a name="d-listing-the-statement-permissions-only"></a>D: Ausschließliches Auflisten der Anweisungsberechtigungen  
  Im folgenden Beispiel werden alle Anweisungsberechtigungen in der aktuellen Datenbank aufgelistet. Dabei wird `NULL` als Platzhalter für die fehlenden Parameter verwendet.  
   
 ```  
@@ -131,8 +131,8 @@ EXEC sp_helprotect NULL, NULL, NULL, 's';
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

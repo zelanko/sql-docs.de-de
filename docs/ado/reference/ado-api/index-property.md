@@ -1,5 +1,5 @@
 ---
-title: Index-Eigenschaft | Microsoft-Dokumentation
+title: Index Eigenschaft | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,43 +16,43 @@ ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932434"
 ---
 # <a name="index-property"></a>Index-Eigenschaft
-Gibt den Namen des Indexes derzeit für eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
+Gibt den Namen des Indexes an, der aktuell für ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt wirksam ist.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Zeichenfolge** Wert, der den Namen des Indexes angibt.  
+ Legt einen **Zeichen** folgen Wert fest, der den Namen des Indexes angibt, oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Der Index, der mit dem Namen, indem die **Index** Eigenschaft muss zuvor deklariert worden sein, für den zugrunde liegenden Basistabelle die **Recordset** Objekt. D. h. der Index muss deklariert programmgesteuert entweder als eine ADOX [Index](../../../ado/reference/adox-api/index-object-adox.md) -Objekt, oder wenn die Basistabelle erstellt wurde.  
+## <a name="remarks"></a>Bemerkungen  
+ Der durch die **Index** -Eigenschaft benannte Index muss bereits in der Basistabelle deklariert worden sein, die dem **Recordset** -Objekt zugrunde liegt. Das heißt, der Index muss Programm gesteuert als ADOX- [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekt oder beim Erstellen der Basistabelle deklariert werden.  
   
- Ein Laufzeitfehler treten auf, wenn der Index kann nicht festgelegt werden. Die **Index** Eigenschaft kann nicht unter den folgenden Bedingungen festgelegt werden:  
+ Ein Laufzeitfehler tritt auf, wenn der Index nicht festgelegt werden kann. Die **Index** -Eigenschaft kann unter den folgenden Bedingungen nicht festgelegt werden:  
   
--   Innerhalb einer [WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) oder **RecordsetChangeComplete** -Ereignishandler.  
+-   Innerhalb eines [WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) -oder **RecordsetChangeComplete** -Ereignis Handlers.  
   
--   Wenn die **Recordset** noch ausgeführt wird, einen Vorgang (das kann bestimmt werden, indem die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft).  
+-   , Wenn das **Recordset** weiterhin einen Vorgang ausführt (der von der [State](../../../ado/reference/ado-api/state-property-ado.md) -Eigenschaft bestimmt werden kann).  
   
--   Wenn ein Filter festgelegt wurde auf die **Recordset** mit der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft.  
+-   Wenn ein Filter für das **Recordset** mit der [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft festgelegt wurde.  
   
- Die **Index** Eigenschaft kann immer erfolgreich festgelegt werden, wenn die **Recordset** geschlossen ist, aber die **Recordset** nicht erfolgreich geöffnet, oder der Index wird nicht verwendet werden kann, wenn der zugrunde liegende Anbieter unterstützt keine Indizes.  
+ Die **Index** -Eigenschaft kann immer erfolgreich festgelegt werden, wenn das **Recordset** geschlossen ist, das **Recordset** jedoch nicht erfolgreich geöffnet wird oder der Index nicht verwendbar ist, wenn der zugrunde liegende Anbieter keine Indizes unterstützt.  
   
- Wenn der Index festgelegt werden kann, kann die aktuelle Zeilenposition ändern. Dies bewirkt, dass ein Update für die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) -Eigenschaft, und löst die **WillChangeRecordset**, **RecordsetChangeComplete**, [WillMove ](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), und [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) Ereignisse.  
+ Wenn der Index festgelegt werden kann, kann sich die aktuelle Zeilen Position ändern. Dies führt zu einem Update der [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) -Eigenschaft und löst die Ereignisse " **WillChangeRecordset**", " **RecordsetChangeComplete**", " [WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)" und " [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) " aus.  
   
- Wenn der Index festgelegt werden kann und die [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaft **AdLockPessimistic** oder **AdLockOptimistic**, klicken Sie dann eine implizite [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Vorgang wird ausgeführt. Damit werden die aktuellen und dem betroffenen Gruppen. Alle vorhandener Filter wird freigegeben, und die aktuelle Zeilenposition wird geändert, auf die erste Zeile der neu angeordneten **Recordset**.  
+ Wenn der Index festgelegt werden kann und die [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) -Eigenschaft auf **adlockpessimioder** **adlockoptimistisch**festgelegt ist, wird ein impliziter [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Vorgang ausgeführt. Dadurch werden die aktuellen und die betroffenen Gruppen freigegeben. Es wird ein beliebiger vorhandener Filter freigegeben, und die aktuelle Zeilen Position wird in die erste Zeile des neu geordneten **Recordsets**geändert.  
   
- Die **Index** Eigenschaft wird verwendet, in Verbindung mit der [Seek](../../../ado/reference/ado-api/seek-method.md) Methode. Wenn der zugrunde liegenden Anbieter nicht unterstützt die **Index** -Eigenschaft, und somit die **Seek** -Methode in Betracht der [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode stattdessen. Bestimmt, ob die **Recordset** Objekt unterstützt die Indizes mit der [unterstützt](../../../ado/reference/ado-api/supports-method.md) **(AdIndex)** Methode.  
+ Die **Index** -Eigenschaft wird in Verbindung mit der [Seek](../../../ado/reference/ado-api/seek-method.md) -Methode verwendet. Wenn der zugrunde liegende Anbieter die **Index** -Eigenschaft und somit die **Seek** -Methode nicht unterstützt, sollten Sie stattdessen die [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode verwenden. Bestimmen Sie, ob das **Recordset** -Objekt Indizes mit der [unterstützten](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** -Methode unterstützt.  
   
- Die integrierte **Index** Eigenschaft bezieht sich nicht an den dynamischen [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) -Eigenschaft, obwohl beide Indizes verarbeiten.  
+ Die integrierte **Index** Eigenschaft ist nicht mit der Eigenschaft "dynamische [Optimierung](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) " verknüpft, obwohl beide Indizes behandelt werden.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Seek-Methode und Index-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für die Seek-Methode und Index-Eigenschaft (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)
