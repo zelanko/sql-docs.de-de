@@ -13,20 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781821"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
   Benutzerdefinierte Tabellen stellen Tabelleninformationen dar. Sie werden als Parameter verwendet, wenn Sie Tabellendaten in gespeicherte Prozeduren oder benutzerdefinierte Funktionen übergeben. Benutzerdefinierte Tabellen können nicht verwendet werden, um Spalten in einer Datenbanktabelle darzustellen.  
   
- Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jedes <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> Objekt in dieser Auflistung verfügt über eine **Columns** -Eigenschaft, die auf eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.Column> Objekten verweist, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
+ Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jedes <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> -Objekt in dieser Auflistung verfügt über eine **Columns** -Eigenschaft, die auf <xref:Microsoft.SqlServer.Management.Smo.Column> eine Auflistung von-Objekten verweist, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
   
  Wenn Sie eine neue benutzerdefinierte Tabelle mithilfe des <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>-Objekts definieren, müssen Sie Spalten und einen Primärschlüssel basierend auf einer der Spalten bereitstellen.  
   
- Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
+ Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.DataType>-Klasse wird verwendet, um den Datentyp anzugeben, der Spalten und Parametern zugeordnet wird. Verwenden Sie diesen Typ, um den benutzerdefinierten Tabellentyp als Parameter für benutzerdefinierte Funktionen und gespeicherte Prozeduren festzulegen.  
   
@@ -240,6 +241,6 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Datenbankdateien und Dateigruppen](../../databases/database-files-and-filegroups.md)  

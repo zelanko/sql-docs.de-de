@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630725"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen
@@ -28,11 +28,11 @@ ms.locfileid: "62630725"
 > [!IMPORTANT]  
 >  Alle Zertifikate müssen mit einem gültigen Start- und Ablaufdatum erstellt werden.  
   
- **Schritt 1: Herstellen einer TCP-Port Nummer und einen Zieldienstnamen ein.**  
+ **Schritt 1: Richten Sie eine TCP-Portnummer und einen Zieldienstnamen ein.**  
   
  Richten Sie den TCP-Port ein, auf dem sowohl der Quellserver als auch der Zielserver Nachrichten empfangen. Sie müssen auch den Namen des Zielservers bestimmen.  
   
- **Schritt 2: Konfigurieren Sie die Verschlüsselung und Freigabe von Zertifikaten für die Authentifizierung auf Aufrufebene-Datenbank.**  
+ **Schritt 2: Konfigurieren Sie die Verschlüsselung und die Freigabe von Zertifikaten für die Authentifizierung auf Datenbankebene.**  
   
  Führen Sie die folgenden Aktionen sowohl auf dem Quell- als auch auf dem Zielserver aus.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62630725"
 |[Sichern Sie das Zertifikat](/sql/t-sql/statements/backup-certificate-transact-sql) in einer Datei, auf die der Zielserver zugreifen kann.|Sichern Sie das Zertifikat in einer Datei, auf die der Quellserver zugreifen kann.|  
 |[Erstellen Sie einen Benutzer](/sql/t-sql/statements/create-user-transact-sql), indem Sie den Benutzer der Zieldatenbank sowie WITHOUT LOGIN angeben. Dieser Benutzer ist später der Besitzer des Zieldatenbankzertifikats, das aus der Sicherungsdatei erstellt wird. Eine Zuordnung des Benutzers zu einem Anmeldenamen ist nicht erforderlich, da dieser Benutzer nur das in Schritt 3 erstellte Zieldatenbankzertifikat besitzen soll.|Erstellen Sie einen Benutzer, indem Sie den Benutzer der Quelldatenbank sowie WITHOUT LOGIN angeben. Dieser Benutzer ist später der Besitzer des Quelldatenbankzertifikats, das aus der Sicherungsdatei erstellt wird. Eine Zuordnung des Benutzers zu einem Anmeldenamen ist nicht erforderlich, da dieser Benutzer nur das in Schritt 3 erstellte Quelldatenbankzertifikat besitzen soll.|  
   
- **Schritt 3: Freigeben von Zertifikaten aus, und gewähren von Berechtigungen für die Datenbankebene-Authentifizierung.**  
+ **Schritt 3: Geben Sie die Zertifikate frei, und erteilen Sie Berechtigungen für die Authentifizierung auf Datenbankebene.**  
   
  Führen Sie die folgenden Aktionen sowohl auf dem Quell- als auch auf dem Zielserver aus.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62630725"
 ||[Erteilen Sie dem Quelldatenbankbenutzer die SEND-Berechtigung](/sql/t-sql/statements/grant-transact-sql) für den Zieldienst.|  
 |Stellen Sie dem Zielserver den Service Broker-Bezeichner der Quelldatenbank zur Verfügung. Dieser Bezeichner kann durch Abfragen der **service_broker_guid** -Spalte der [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) -Katalogsicht abgerufen werden. Verwenden Sie für eine Ereignisbenachrichtigung auf Serverebene den Service Broker-Bezeichner von **msdb**.|Stellen Sie dem Quellserver den Service Broker-Bezeichner der Zieldatenbank zur Verfügung.|  
   
- **Schritt 4: Erstellen von Routen und Serverebene Authentifizierung eingerichtet haben.**  
+ **Schritt 4: Erstellen Sie Routen, und richten Sie die Authentifizierung auf Serverebene ein.**  
   
  Führen Sie die folgenden Aktionen sowohl auf dem Quell- als auch auf dem Zielserver aus.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62630725"
 |[Erteilen Sie dem Zielauthentifikator-Anmeldenamen die CONNECT-Berechtigung](/sql/t-sql/statements/grant-transact-sql) für den Endpunkt.|Erteilen Sie dem Quellauthentifikator-Anmeldenamen die CONNECT-Berechtigung für den Endpunkt.|  
 |[Erstellen Sie einen Benutzer](/sql/t-sql/statements/create-user-transact-sql), und geben Sie den Zielauthentifikator-Anmeldenamen an.|Erstellen Sie einen Benutzer, und geben Sie den Quellauthentifikator-Anmeldenamen an.|  
   
- **Schritt 5: Freigeben von Zertifikaten für die Authentifizierung für auf Serverebene und die ereignisbenachrichtigung erstellen.**  
+ **Schritt 5: Geben Sie die Zertifikate für die Authentifizierung auf Serverebene frei, und erstellen Sie die Ereignisbenachrichtigung.**  
   
  Führen Sie die folgenden Aktionen sowohl auf dem Quell- als auch auf dem Zielserver aus.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62630725"
 |Wechseln Sie zu der Quelldatenbank, auf der die Ereignisbenachrichtigung erstellt werden soll. Wenn Sie als Quelldatenbankbenutzer noch keine Verbindung mit der Datenbank hergestellt haben, stellen Sie nun die Verbindung her.|Wechseln Sie zur Zieldatenbank, um Ereignisbenachrichtigungen zu empfangen.|  
 |[Erstellen Sie die Ereignisbenachrichtigung](/sql/t-sql/statements/create-event-notification-transact-sql), und geben Sie den Broker-Dienst und den Bezeichner der Zieldatenbank an.||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

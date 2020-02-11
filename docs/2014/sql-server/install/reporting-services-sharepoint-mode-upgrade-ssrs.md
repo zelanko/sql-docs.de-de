@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 726c9c77f3f18ededa586f399d3fc3710cc6c006
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952430"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Upgrade des SharePoint-Modus von Reporting Services (SSRS)
@@ -26,9 +26,9 @@ ms.locfileid: "71952430"
 ## <a name="options"></a>Tastatur  
  Die Schaltfläche **Weiter** ist nur verfügbar, wenn das Kontrollkästchen **Upgrade fortsetzen** aktiviert ist. Wenn Sie das Kontrollkästchen nicht aktivieren, können Sie das Upgrade nicht fortsetzen.  
   
- Weitere Informationen finden Sie unter [aktualisieren und Migrieren Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
+ Weitere Informationen finden Sie unter [aktualisieren und Migrieren](https://go.microsoft.com/fwlink/?LinkID=245628) vonhttps://go.microsoft.com/fwlink/?LinkID=245628)Reporting Services ().  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
  [Installieren des SharePoint-Modus und einheitlichen Modus von Reporting Services über die Eingabeaufforderung](https://go.microsoft.com/fwlink/?LinkId=217620)  
   

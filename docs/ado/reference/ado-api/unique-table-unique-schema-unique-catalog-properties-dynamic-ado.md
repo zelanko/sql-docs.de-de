@@ -1,5 +1,5 @@
 ---
-title: Steuerelement geändert wird, auf die Basistabelle von Recordsets (ADO) | Microsoft-Dokumentation
+title: Steuern von Änderungen an der Recordset-Basistabelle (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,39 +16,39 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911684"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Eindeutige Tabelle, eindeutiges Schema, eindeutige Katalog Sie dynamische Eigenschaften (ADO)
-Ermöglicht es Ihnen zu eng Steuerelement Änderungen an einer bestimmten Basistabelle in eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , die durch eine JOIN-Operation auf mehrere Basistabellen gebildet wurde.  
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
+Ermöglicht es Ihnen, Änderungen an einer bestimmten Basistabelle in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , das durch eine Joinoperation in mehreren Basistabellen gebildet wurde, genau zu steuern.  
   
--   **Eindeutige Tabelle** gibt den Namen der Basistabelle, auf denen Updates, einfügungen und löschungen zulässig sind.  
+-   **Unique Table** gibt den Namen der Basistabelle an, auf der Updates, Einfügungen und Löschungen zulässig sind.  
   
--   **Eindeutiges Schema** gibt an, die *Schema*, oder der Name des Besitzers der Tabelle.  
+-   Eindeutiges **Schema** gibt das *Schema*oder den Namen des Besitzers der Tabelle an.  
   
--   **Eindeutige Katalogressource** gibt an, die *Katalog*, oder der Name der Datenbank mit der Tabelle.  
+-   Der **eindeutige Katalog** gibt den *Katalog*oder den Namen der Datenbank an, in der die Tabelle enthalten ist.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Zeichenfolge** Wert, der den Namen der Tabellen, Schema oder Katalog ist.  
+ Legt einen **Zeichen** folgen Wert fest, der den Namen einer Tabelle, eines Schemas oder eines Katalogs angibt, oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Die gewünschte Basistabelle wird durch seine Katalog, Schema und Tabellennamen eindeutig identifiziert. Wenn die **eindeutige Tabelle** Eigenschaft festgelegt ist, werden die Werte der der **eindeutiges Schema** oder **Unique Catalog** Eigenschaften werden verwendet, um die Basistabelle zu suchen. Es ist vorgesehen, aber nicht erforderlich, eine oder beide der **eindeutiges Schema** und **Unique Catalog** Eigenschaften festgelegt werden, bevor die **eindeutige Tabelle** festgelegt wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Die gewünschte Basistabelle wird durch die Katalog-, Schema-und Tabellennamen eindeutig identifiziert. Wenn die **Unique Table** -Eigenschaft festgelegt ist, werden die Werte der Eigenschaften des **eindeutigen Schemas** oder des **eindeutigen Katalogs** verwendet, um nach der Basistabelle zu suchen. Es ist beabsichtigt, aber nicht erforderlich, dass entweder oder sowohl die **eindeutigen Schema** -als auch die **eindeutigen Katalog** Eigenschaften festgelegt werden, bevor die **Unique Table** -Eigenschaft festgelegt wird.  
   
- Den primären Schlüssel für die **eindeutige Tabelle** behandelt, als den primären Schlüssel für die gesamte **Recordset**. Dies ist der Schlüssel, der für jede Methode erfordert einen Primärschlüssel verwendet wird.  
+ Der Primärschlüssel der **eindeutigen Tabelle** wird als Primärschlüssel des gesamten **Recordsets**behandelt. Dies ist der Schlüssel, der für jede Methode verwendet wird, die einen Primärschlüssel erfordert.  
   
- Während **eindeutige Tabelle** festgelegt ist, wird die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) Methode wirkt sich nur auf die benannte Tabelle. Die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [Update](../../../ado/reference/ado-api/update-method.md), und [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methoden wirken sich auf alle entsprechenden zugrunde liegenden Basistabellen der **Recordset**.  
+ Obwohl **Unique Table** festgelegt ist, wirkt sich die [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode nur auf die benannte Tabelle aus. Die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)-, [Resync](../../../ado/reference/ado-api/resync-method.md)-, [Update](../../../ado/reference/ado-api/update-method.md)-und [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methoden wirken sich auf alle entsprechenden zugrunde liegenden Basistabellen des **Recordsets**aus.  
   
- **Eindeutige Tabelle** muss angegeben werden, bevor alle benutzerdefinierten neusynchronisierungen durchführen. Wenn **eindeutige Tabelle** wurde nicht angegeben, die [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) Eigenschaft hat keine Auswirkungen.  
+ Vor der Durchführung benutzerdefinierter Neusynchronisierung muss eine **eindeutige Tabelle** angegeben werden. Wenn keine **eindeutige Tabelle** angegeben wurde, hat die [Resync-Befehls](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) Eigenschaft keine Auswirkung.  
   
- Ein Laufzeitfehler ausgegeben, wenn es sich bei eine eindeutige Basistabelle nicht gefunden werden kann.  
+ Ein Laufzeitfehler tritt auf, wenn eine eindeutige Basistabelle nicht gefunden werden kann.  
   
- Diese dynamischen Eigenschaften werden alle angehängt der **Recordset** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf  **AdUseClient**.  
+ Diese dynamischen Eigenschaften werden alle an die Auflistung der **Recordset** -Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) angehängt, wenn die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

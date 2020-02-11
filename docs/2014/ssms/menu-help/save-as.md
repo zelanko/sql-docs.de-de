@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510319"
 ---
 # <a name="save-as"></a>Speichern unter
-  Mithilfe dieses Dialogfelds können Sie eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat speichern. Klicken Sie zum Anzeigen dieses Dialogfelds **speichern**  *\<Datei >* **als** auf die **Datei** Menü (, in denen  *\<Datei >* ist der Name des aktuellen Elements), oder drücken Sie ALT + F, A im Code-Editor.  
+  Mithilfe dieses Dialogfelds können Sie eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat speichern. Um dieses Dialogfeld anzuzeigen, klicken **Sie im Menü** **Datei** auf * \<Datei>* **Speichern** unter (wobei * \<Datei>* der Name des aktuellen Elements ist), oder drücken Sie ALT + F, A im Code-Editor.  
   
 ## <a name="central-panel"></a>Zentraler Bereich  
  **Speichern in**  
@@ -50,7 +50,7 @@ ms.locfileid: "62510319"
  **Arbeitsplatz**  
  Zeigt das Verzeichnis **Arbeitsplatz** auf Ihrem Computer an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Speicheroptionen](advanced-save-options.md)   
  [Verwalten von Dateien mit Codierung](../solution/manage-files-with-encoding.md)  
   

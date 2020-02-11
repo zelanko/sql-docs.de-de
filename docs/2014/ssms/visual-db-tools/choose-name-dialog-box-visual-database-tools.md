@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62509962"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Namen auswählen (Dialogfeld) (Visual Database Tools)
-  Dieses Dialogfeld wird angezeigt, bei der Auswahl **speichern \<TableName**>, **speichern \<DiagramName >** , oder **speichern \<ViewName >** aus der **Datei** Menü.  
+  Dieses Dialogfeld wird angezeigt, wenn **Sie \<TableName> speichern** , ** \<DiagramName>speichern **oder **viewName>\<** aus dem Menü **Datei** speichern.  
   
  **Geben Sie einen Namen für die Tabelle, das Diagramm oder die Sicht ein.**  
  Stellt ein Textfeld bereit, in dem Sie einen Namen für die Tabelle, das Diagramm oder die Sicht eingeben können.  

@@ -1,5 +1,5 @@
 ---
-title: Vorwärtscursor | Microsoft-Dokumentation
+title: Vorwärts Cursor | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +14,22 @@ ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925308"
 ---
 # <a name="forward-only-cursors"></a>Vorwärtscursor
-Die typische Standardcursortyp, bezeichnet einen Cursor vorwärts-(oder nicht bildlauffähige), kann über das Resultset nur vorwärts bewegen. Ein Vorwärtscursor unterstützt nicht das Durchführen eines Bildlaufs (die Möglichkeit zum Verschieben von vorwärts und rückwärts im Resultset); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Mit einigen Vorwärtscursor (z. B. mit der SQL Server-Cursor Library), werden alle INSERT-, Update- und Delete-Anweisungen wird hergestellt, indem der aktuelle Benutzer (oder anderer Benutzer ausgeführt werden), dass die Auswirkungen von Zeilen im Resultset angezeigt werden, wie die Zeilen abgerufen werden. Da mit dem Cursor nicht zurück gescrollt werden kann, sind Änderungen, die an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde, über den Cursor nicht sichtbar.  
+Der typische Standardcursortyp, der als Vorwärts Cursor (oder nicht Bild lauffähigen Cursor) bezeichnet wird, kann nur durch das Resultset vorwärts verschoben werden. Ein Vorwärts Cursor unterstützt keinen Bildlauf (die Möglichkeit, vorwärts und rückwärts im Resultset zu bewegen); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Bei einigen Vorwärts Cursor (z. b. mit der SQL Server Cursor Bibliothek) werden alle INSERT-, Update-und DELETE-Anweisungen, die vom aktuellen Benutzer ausgeführt werden (oder von anderen Benutzern zugesichert wurden), die sich auf Zeilen im Resultset auswirken, beim Abrufen der Zeilen angezeigt. Da mit dem Cursor nicht zurück gescrollt werden kann, sind Änderungen, die an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde, über den Cursor nicht sichtbar.  
   
- Nachdem die Daten für die aktuelle Zeile verarbeitet wurde, gibt die Vorwärtscursor die Ressourcen, die verwendet wurden, zum Speichern dieser Daten frei. Vorwärtscursor sind standardmäßig dynamisch, d. h. dass alle Änderungen ermittelt werden, während die aktuelle Zeile verarbeitet wird. Damit kann der Cursor schneller gestartet werden, und Updates an den zugrunde liegenden Tabellen können im Resultset angezeigt werden.  
+ Nachdem die Daten für die aktuelle Zeile verarbeitet wurden, gibt der Vorwärts Cursor die Ressourcen frei, die zum Speichern der Daten verwendet wurden. Vorwärtscursor sind standardmäßig dynamisch, d. h. dass alle Änderungen ermittelt werden, während die aktuelle Zeile verarbeitet wird. Damit kann der Cursor schneller gestartet werden, und Updates an den zugrunde liegenden Tabellen können im Resultset angezeigt werden.  
   
- Während Vorwärtscursor rückwärts-scrollen nicht unterstützen, kann Ihre Anwendung auf den Anfang des Resultsets durch Schließen und erneuten Öffnen des Cursors zurück. Dies ist ein effektives Verfahren zum Arbeiten mit kleinen Datenmengen. Als Alternative können kann Ihre Anwendung das Resultset auf einmal lesen, Daten lokal zwischengespeichert und navigieren Sie dann auf den lokalen Datencache.  
+ Vorwärts Cursor werden von vorwärts Cursorn nicht unterstützt, indem der Cursor geschlossen und wieder geöffnet wird. Dies ist eine effektive Möglichkeit, mit kleinen Datenmengen zu arbeiten. Als Alternative könnte Ihre Anwendung das Resultset einmal lesen, die Daten lokal zwischenspeichern und dann den lokalen Daten Cache durchsuchen.  
   
- Wenn Ihre Anwendung einen Bildlauf durch die Ergebnisse nicht erforderlich ist, ist der Vorwärtscursor die beste Möglichkeit zum Abrufen von Daten schnell mit minimalem Aufwand. Verwenden Sie die **AdOpenForwardOnly CursorTypeEnum** um anzugeben, dass Sie einen Vorwärtscursor in ADO verwenden möchten.  
+ Wenn die Anwendung keinen Bildlauf durch das Resultset erfordert, ist der Vorwärts Cursor die beste Methode zum schnellen Abrufen von Daten mit dem geringsten Aufwand. Verwenden Sie die **cursortypeerum-Klasse von adOpenForwardOnly** , um anzugeben, dass Sie einen Vorwärts Cursor in ADO verwenden möchten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
- [KEYSET-Cursor](../../../ado/guide/data/keyset-cursors.md)   
+ [Keysetcursor](../../../ado/guide/data/keyset-cursors.md)   
  [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)

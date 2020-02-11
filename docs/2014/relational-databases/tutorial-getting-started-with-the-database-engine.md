@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524331"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
@@ -34,17 +34,17 @@ ms.locfileid: "62524331"
  [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)  
  In dieser Lektion erfahren Sie, wie Sie eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herstellen und anderen Personen das Herstellen einer Verbindung ermöglichen.  
   
- [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
+ [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
  In dieser Lektion erfahren Sie, wie Sie von einem zweiten Computer eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herstellen, einschließlich Aktivieren von Protokollen sowie Konfigurieren von Ports und Firewalleinstellungen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Für dieses Lernprogramm sind keine Vorkenntnisse erforderlich.  
   
  Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]installiert haben. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] kann installiert werden, indem Sie das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Setup ausführen oder das Paket vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)herunterladen und installieren.  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]). [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]kann installiert werden, indem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Sie das-Setup ausführen oder aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)herunterladen und installieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

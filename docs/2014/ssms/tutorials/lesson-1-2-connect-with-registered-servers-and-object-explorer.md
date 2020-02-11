@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62636424"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer
@@ -37,7 +37,7 @@ ms.locfileid: "62636424"
   
 5.  Geben Sie im Feld **Name des registrierten Servers** den Namen [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]ein.  
   
-6.  Auf der **Verbindungseigenschaften** Registerkarte die **Herstellen einer Verbindung mit Datenbank** Liste  **\<Server Durchsuchen… >** .  
+6.  Wählen Sie **** **** auf der Registerkarte Verbindungs Eigenschaften in der Liste Verbindung mit Datenbank herstellen die Option **Server durchsuchen... >aus. \< **  
   
 7.  Klicken Sie im Dialogfeld **Nach Datenbanken suchen** auf **Ja**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62636424"
   
      Beachten Sie, dass [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] die Systemdatenbanken in einem separaten Ordner präsentiert.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Ändern des Umgebungslayouts](lesson-1-3-change-the-environment-layout.md)  
   
   

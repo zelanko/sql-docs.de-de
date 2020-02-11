@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629735"
 ---
 # <a name="join-filters"></a>Verknüpfungsfilter
@@ -43,7 +43,7 @@ ms.locfileid: "62629735"
 LoginID = SUSER_SNAME()  
 ```  
   
- Dieser Filter stellt sicher, dass das Abonnement des jeweiligen Mitarbeiters nur die Daten aus der **HumanResources.Employee** -Tabelle enthält, die für ihn relevant sind (in diesem Fall also nur eine einzelne Zeile). Weitere Informationen finden Sie unter [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+ Dieser Filter stellt sicher, dass das Abonnement des jeweiligen Mitarbeiters nur die Daten aus der **HumanResources.Employee** -Tabelle enthält, die für ihn relevant sind (in diesem Fall also nur eine einzelne Zeile). Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](parameterized-filters-parameterized-row-filters.md).  
   
  Als Nächstes wird dieser Filter auf jede einzelne der zugehörigen Tabellen erweitert. Die dazu verwendete Syntax ähnelt derjenigen, mit der Sie einen Join zwischen zwei Tabellen angeben können. Die erste Joinfilterklausel lautet:  
   
@@ -86,8 +86,8 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      Es wird dringend empfohlen, eine solche Logik statt in einer Unterabfrage in einem Joinfilter auszudrücken. Wenn Ihre Anwendung für die Verwendung einer Unterabfrage einen Zeilenfilter benötigt, stellen Sie sicher, dass die Unterabfrage ausschließlich Daten in der Nachschlagetabelle referenziert, die sich nicht ändern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Filtern veröffentlichter Daten für die Mergereplikation](filter-published-data-for-merge-replication.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Filtern von veröffentlichten Daten für die Mergereplikation](filter-published-data-for-merge-replication.md)   
  [Parametrisierte Zeilenfilter](parameterized-filters-parameterized-row-filters.md)  
   
   

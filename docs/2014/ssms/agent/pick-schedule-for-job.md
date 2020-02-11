@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472930"
 ---
 # <a name="pick-schedule-for-job"></a>Zeitplan für Auftrag auswählen
-  Wählen Sie in diesem Dialogfeld einen vorhandenen Zeitplan für den Auftrag des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents aus.  
+  Verwenden Sie dieses Dialogfeld, um einen vorhandenen Zeitplan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Agentauftrag auszuwählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Zeitpläne**  
  Führt die verfügbaren Zeitpläne für diesen Auftrag auf. Weil ein Auftrag und ein Zeitplan denselben Besitzer haben müssen, enthält diese Liste nur Zeitpläne, die dem Besitzer des Auftrags gehören.  
   
  **Name**  
  Zeigt den Namen des Zeitplans an.  
   
- **Enabled**  
+ **Aktiviert**  
  Ausgewählt, wenn der Zeitplan aktiviert ist.  
   
  **Beschreibung**  
@@ -43,7 +43,7 @@ ms.locfileid: "62472930"
  **Eigenschaften**  
  Öffnet das Dialogfeld **Eigenschaften des Auftragszeitplans** , in dem Sie Informationen zum Zeitplan anzeigen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](create-and-attach-schedules-to-jobs.md)  
   
   

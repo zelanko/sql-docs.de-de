@@ -17,21 +17,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520377"
 ---
 # <a name="creating-the-web-service-proxy"></a>Erstellen des Webdienstproxys
   Ein Client und ein Webdienst können über SOAP-Nachrichten kommunizieren, die die Eingabe- und Ausgabeparameter als XML-Datei einkapseln. Eine Proxyklasse ordnet XML-Elementen Parameter zu und sendet dann die SOAP-Nachrichten über ein Netzwerk. So sorgt die Proxyklasse dafür, dass Sie nicht auf der SOAP-Ebene mit dem Webdienst kommunizieren müssen. Außerdem können Sie die Webdienstmethoden in jeder Entwicklungsumgebung aufrufen, die SOAP- und Webdienstproxys unterstützt.  
   
- Es gibt zwei Möglichkeiten, mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] eine Proxyklasse zu Ihrem Entwicklungsprojekt hinzuzufügen: über das WSDL-Tool in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] und durch Hinzufügen eines Webverweises in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. In den folgenden Abschnitten wird dieser Betreff detaillierter erläutert.  
+ Es gibt zwei Möglichkeiten, dem Entwicklungs [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Projekt mithilfe von eine Proxy Klasse hinzuzufügen: mit dem WSDL-Tool in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]und durch Hinzufügen eines Webverweises [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]in. In den folgenden Abschnitten wird dieser Betreff detaillierter erläutert.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Hinzufügen des Proxys über das WSDL-Tool  
- Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-SDK enthält das WSDL-Tool (Web Services Description Language, Wsdl.exe), mit dem Sie einen Webdienstproxy für die Verwendung in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Entwicklungsumgebung generieren können. Die gängigste Methode, einen Clientproxy in Sprachen zu erstellen, die Webdienste unterstützen (derzeit C# und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ist die Verwendung des WSDL-Tools.  
+ Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-SDK enthält das WSDL-Tool (Web Services Description Language, Wsdl.exe), mit dem Sie einen Webdienstproxy für die Verwendung in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Entwicklungsumgebung generieren können. Die gängigste Art, einen Client Proxy in Sprachen zu erstellen, die Webdienste unterstützen (derzeit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]c# und), ist die Verwendung des WSDL-Tools.  
   
- **Hinzufügen einer Proxyklasse zu Ihrem Projekt mithilfe von „Wsdl.exe“**  
+ **So fügen Sie dem Projekt mithilfe von WSDL. exe eine Proxy Klasse hinzu**  
   
 1.  Verwenden Sie Wsdl.exe über eine Eingabeaufforderung, um eine Proxyklasse zu erstellen, und geben Sie (mindestens) die URL zum Berichtsserver-Webdienst an  
   
@@ -66,9 +66,10 @@ ReportingService2010 service = new ReportingService2010();
  Weitere Informationen zum Tool Wsdl.exe, einschließlich der kompletten Syntax, finden Sie unter "Web Services Description Language Tool" in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK-Dokumentation. Eine vollständige Erläuterung zu Webdienstproxys finden Sie unter "Erstellen eines XML-Webdienstproxys" in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK-Dokumentation.  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Hinzufügen eines Proxys mit einem Webverweis in Visual Studio  
- Über einen Webverweis kann ein Projekt einen oder mehrere Webdienste verwenden. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bietet Benutzern die Möglichkeit, Webdienstverweise mit einigen einfachen Schritten zu Projekten hinzuzufügen.  
+ Über einen Webverweis kann ein Projekt einen oder mehrere Webdienste verwenden. 
+  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bietet Benutzern die Möglichkeit, Webdienstverweise mit einigen einfachen Schritten zu Projekten hinzuzufügen.  
   
- **Hinzufügen eines Webverweises zu einem Projekt**  
+ **So fügen Sie einem Projekt einen Webverweis hinzu**  
   
 1.  Wählen Sie im **Projektmappen-Explorer** das Projekt aus, das den Webdienst beansprucht.  
   
@@ -118,7 +119,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- Sie können dem Berichtsserver-Webdienstverweis auch eine **using**-Anweisung (in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] eine **Import**-Anweisung) hinzufügen. Wenn Sie diese Direktive verwenden, müssen die Typen im Namespace nicht vollqualifiziert sein. Hierfür fügen Sie dieser Datei den folgenden Code hinzu:  
+ Sie können dem Berichtsserver-Webdienstverweis auch eine **using**-Anweisung (in ** eine **Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Anweisung) hinzufügen. Wenn Sie diese Direktive verwenden, müssen die Typen im Namespace nicht vollqualifiziert sein. Hierfür fügen Sie dieser Datei den folgenden Code hinzu:  
   
 ```vb  
 Import myNamespace.myReferenceName  
@@ -128,7 +129,7 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver-Webdienst](../report-server-web-service.md)   
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Technische Referenz (SSRS)](../../technical-reference-ssrs.md)  

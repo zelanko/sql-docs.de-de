@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638318"
 ---
 # <a name="stored-procedures"></a>Gespeicherte Prozeduren
-  Eine gespeicherte Prozedur ([gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../stored-procedures/stored-procedures-database-engine.md)) ist ein in einer Datenbank gespeichertes, ausführbares Objekt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
+  Eine gespeicherte Prozedur ([gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../stored-procedures/stored-procedures-database-engine.md)) ist ein ausführbares Objekt, das in einer Datenbank gespeichert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stützten  
   
 -   Gespeicherte Prozeduren  
   
@@ -36,9 +36,9 @@ ms.locfileid: "62638318"
   
 -   [Ausführen gespeicherter Prozeduren &#40;OLE DB&#41;](stored-procedures-running.md)  
   
--   [Aufrufen einer gespeicherter Prozedur &#40;OLE DB&#41;](stored-procedures-calling.md)  
+-   [Aufrufen einer gespeicherten Prozedur &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
   
   

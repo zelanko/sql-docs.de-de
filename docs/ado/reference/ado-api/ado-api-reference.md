@@ -13,16 +13,16 @@ ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921222"
 ---
 # <a name="ado-api-reference"></a>ADO – API-Referenz
-In diesem Abschnitt der ADO-Dokumentation enthält Themen, die für jedes ADO-Objekt, Sammlung, Eigenschaft, dynamische Eigenschaft, Methode, Ereignis und -Enumeration. Darüber hinaus enthält es sich um eine Liste von ADO – Syntaxindizes mit Microsoft Visual C++ und Windows Foundation Classes (WFC) verwendet werden.  
+Dieser Abschnitt der ADO-Dokumentation enthält Themen für jedes ADO-Objekt, jede Auflistung, jede Eigenschaft, jede dynamische Eigenschaft, jede Methode, jedes Ereignis und jede Enumeration. Außerdem enthält Sie eine Liste von ADO-Syntax Indizes, die mit Microsoft Visual C++ und Windows Foundation Classes (WFC) verwendet werden.  
   
- Weitere Informationen suchen Sie nach einem bestimmten Thema im Index, oder finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie untersuchen eines bestimmten Themas im Index oder in den folgenden Themen:  
   
 -   [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)  
   
@@ -44,9 +44,9 @@ In diesem Abschnitt der ADO-Dokumentation enthält Themen, die für jedes ADO-Ob
   
 -   [ADO-Codebeispiele](../../../ado/reference/ado-api/ado-code-examples.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)

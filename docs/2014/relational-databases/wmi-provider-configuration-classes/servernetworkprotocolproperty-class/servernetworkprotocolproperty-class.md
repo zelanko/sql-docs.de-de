@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642909"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty-Klasse
-  [ServerNetworkProtocolProperty-Klasse] Servernetworkprotocolproperty-class.md) stellt die Eigenschaften eines Server-Netzwerkprotokolls dar.  
+  Die [ServerNetworkProtocolProperty-Klasse] ServerNetworkProtocolProperty-Class.MD) stellt die Eigenschaften eines Server-Netzwerk Protokolls dar.  
   
- Mit dem [ServerNetworkProtocolProperty-Klasse] Servernetworkprotocolproperty-class.md) können Sie die folgenden Aufgaben ausführen:  
+ Mit der [ServerNetworkProtocolProperty-Klasse] ServerNetworkProtocolProperty-Class.MD) können Sie die folgenden Aufgaben ausführen:  
   
 -   Überprüfen des Protokolls, zu der die aktuelle Eigenschaft gehört.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62642909"
   
 -   Festlegen von Flags für die aktuelle Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

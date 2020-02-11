@@ -1,5 +1,5 @@
 ---
-title: ReadyState-Eigenschaft – Beispiel (VBScript) | Microsoft-Dokumentation
+title: "\"Read ystate\"-Eigenschaft (Beispiel) (VBScript) | Microsoft-Dokumentation"
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,19 +15,19 @@ ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963606"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState-Eigenschaft – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Das folgende Beispiel zeigt, wie Sie lesen die [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) Eigenschaft der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt zur Laufzeit in VBScript-Code. **ReadyState** ist eine schreibgeschützte Eigenschaft.  
+ Im folgenden Beispiel wird gezeigt, wie die Eigenschaft "read- [State](../../../ado/reference/rds-api/readystate-property-rds.md) " der RDS-Datei gelesen wird [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt zur Laufzeit im VBScript-Code. "Read- **State** " ist eine schreibgeschützte Eigenschaft.  
   
- Klicken Sie zum Testen dieses Beispiels, schneiden, und fügen Sie diesen Code zwischen den \<Text > und \</Body > Tags in ein normales HTML-Dokument, und nennen Sie sie **RDSReadySt.asp**. Verwenden Sie **finden** suchen Sie die Datei Adovbs.inc, und fügen ihn in das Verzeichnis, das Sie verwenden möchten. ASP-Skript wird auf den Server identifiziert.  
+ Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Text>- \<und/Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein, und nennen Sie ihn **rdsinfoyst. ASP** Verwenden Sie **Suchen** , um die Datei adovsb. Inc zu suchen, und platzieren Sie Sie in dem Verzeichnis, das Sie verwenden möchten. Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginReadyStateVBS -->  
@@ -109,7 +109,7 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ReadyState-Eigenschaft (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
 

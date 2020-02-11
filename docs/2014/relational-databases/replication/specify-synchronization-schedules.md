@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630805"
 ---
 # <a name="specify-synchronization-schedules"></a>Angeben von Synchronisierungszeitplänen
@@ -29,7 +29,7 @@ ms.locfileid: "62630805"
   
  **In diesem Thema**  
   
--   **So geben Sie Synchronisierungszeitpläne an mit:**  
+-   **So geben Sie Synchronisierungs Zeitpläne an mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62630805"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Geben Sie Synchronisierungszeitpläne im Assistenten für neue Abonnements auf der Seite **Synchronisierungszeitplan** an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Create a Push Subscription](create-a-push-subscription.md) und [Create a Pull Subscription](create-a-pull-subscription.md).  
   
  Ändern Sie die Synchronisierungszeitpläne im Dialogfeld **Eigenschaften des Auftragszeitplans** . Dieses Dialogfeld ist in **über den Ordner** Aufträge [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und im Detailfenster des Agents im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md).  
@@ -48,13 +48,13 @@ ms.locfileid: "62630805"
 |-----------|--------------|  
 |Merge-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<Ganzzahl>**|  
 |Merge-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|  
-|Verteilungs-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Integer>** <sup>1</sup>|  
-|Verteilungs-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<GUID>** <sup>2</sup>|  
+|Verteilungs-Agent für Pushabonnements|**\<\<\<Verleger>-publicationdatabase>-Publication>-Subscriber>-\<Integer>1 \<** <sup></sup>|  
+|Verteilungs-Agent für Pullabonnements|**\<\<\<\<Verleger>-\<publicationdatabase>-Publication>-Subscriber>-Abonnement Datenbank>-GUID>2 \<** <sup></sup>|  
 |Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|  
   
- <sup>1</sup> Bei Pushabonnements für Oracle-Veröffentlichungen heißt es **\<Verleger>-\<Verleger**> anstatt **\<Verleger>-\<Veröffentlichungsdatenbank>** .  
+ <sup>1</sup> bei Pushabonnements für Oracle-Veröffentlichungen ist ** \<es Verleger>-\<Verleger**> anstelle von ** \<Verleger>-\<publicationdatabase>**  
   
- <sup>2</sup> Bei Pullabonnements für Oracle-Veröffentlichungen heißt es **\<Verleger>-\<Verteilungsdatenbank**> anstatt **\<Verleger>-\<Veröffentlichungsdatenbank>** .  
+ <sup>2</sup> für Pullabonnements für Oracle-Veröffentlichungen ist ** \<es\<Publisher>-DistributionDatabase**> anstelle von ** \<Publisher>-\<publicationdatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>So geben Sie Synchronisierungszeitpläne an  
   
@@ -62,11 +62,11 @@ ms.locfileid: "62630805"
   
     -   **Fortlaufend ausführen**  
   
-    -   **Nur bedarfsgesteuert ausführen**  
+    -   **Nur Bedarfs gesteuert ausführen**  
   
-    -   **\<Zeitplan definieren…>**  
+    -   **\<Zeitplan definieren... >**  
   
-2.  Geben Sie bei der Auswahl von **\<Zeitplan definieren…>** im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Zeitplan an, und klicken Sie dann auf **OK**.  
+2.  Wenn Sie ** \<Zeitplan definieren... #b0 **auswählen, geben Sie im Dialogfeld **Eigenschaften des Auftrags Zeitplans** einen Zeitplan an, und klicken Sie dann auf **OK**.  
   
 3.  Schließen Sie den Assistenten ab.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "62630805"
   
 3.  Klicken Sie mit der rechten Maustaste auf ein Abonnement, und klicken Sie dann auf **Details anzeigen**.  
   
-4.  In der **Abonnement \< SubscriptionName >** Fenster, klicken Sie auf **Aktion**, und klicken Sie dann auf  **\<AgentName > Auftragseigenschaften**.  
+4.  Klicken Sie im Fenster **Abonnement Abonnement \< Name>** auf **Aktion**, und klicken Sie dann auf ** \<Agentname> Auftrags Eigenschaften**.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften - **JobName>** auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
   
 6.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62630805"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - **JobName>** auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62630805"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - **JobName>** auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -143,49 +143,49 @@ ms.locfileid: "62630805"
   
  Ein Zeitplan wird durch die folgenden Zeitplanungsparameter definiert, deren Verhalten von [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) geerbt wird:  
   
--   **@frequency_type** &ndash; der Typ der Frequenz, der bei der Planung des Agents verwendet wird.  
+-   **@frequency_type**: der Typ der Häufigkeit, die beim Planen des Agents verwendet wird.  
   
--   **@frequency_interval** &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+-   **@frequency_interval**-der Wochentag, an dem ein Agent ausgeführt wird.  
   
--   **@frequency_relative_interval** &ndash; die Woche eines gegebenen Monats, in der der Agent einmal monatlich ausgeführt wird.  
+-   **@frequency_relative_interval**-die Woche eines bestimmten Monats, an der der Agent monatlich ausgeführt werden soll.  
   
--   **@frequency_recurrence_factor** &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+-   **@frequency_recurrence_factor**: die Anzahl der Einheiten für den Häufigkeits Wert, die zwischen den Synchronisierungs Einheiten auftreten.  
   
--   **@frequency_subday** &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+-   **@frequency_subday**-die Häufigkeits Einheit, wenn der Agent mehrmals täglich ausgeführt wird.  
   
--   **@frequency_subday_interval** &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+-   **@frequency_subday_interval**: die Anzahl der Einheiten für die Häufigkeit zwischen den Ausführungen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
--   **@active_start_time_of_day** &ndash; die früheste Uhrzeit an einem gegebenen Tag, zu der eine Agent-Ausführung gestartet wird.  
+-   **@active_start_time_of_day**: die früheste Uhrzeit an einem bestimmten Tag, zu der eine agenttestlauf gestartet wird.  
   
--   **@active_end_time_of_day** &ndash; die späteste Uhrzeit an einem gegebenen Tag, zu der eine Agent-Ausführung gestartet wird.  
+-   **@active_end_time_of_day**: die letzte Uhrzeit an einem bestimmten Tag, zu der eine agenttestlauf gestartet wird.  
   
--   **@active_start_date** &ndash; der erste Tag, an dem der Agentzeitplan gültig ist.  
+-   **@active_start_date**-der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
--   **@active_end_date** &ndash; der letzte Tag, an dem der Agentzeitplan gültig ist.  
+-   **@active_end_date**-der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pullabonnement für eine Transaktionsveröffentlichung  
   
 1.  Erstellen Sie ein neues Pullabonnement für eine Transaktionsveröffentlichung. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) aus. Geben Sie **@publisher** , **@publisher_db** , **@publication** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Abonnenten ausgeführt wird, für **@job_name** und **@password** . Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) aus. Geben **@publisher**Sie **@publisher_db**, **@publication**, und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen an, unter denen die Verteilungs-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pushabonnement für eine Transaktionsveröffentlichung  
   
 1.  Erstellen Sie ein neues Pushabonnement für eine Transaktionsveröffentlichung. Weitere Informationen finden Sie unter [Create a Push Subscription](create-a-push-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) aus. Geben Sie **@subscriber** , **@subscriber_db** , **@publication** und die Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Abonnenten ausgeführt wird, für **@job_name** und **@password** . Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**, und die Windows-Anmelde Informationen an, unter denen die Verteilungs-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pullabonnement für eine Mergeveröffentlichung  
   
 1.  Erstellen Sie ein neues Pullabonnement für eine Mergeveröffentlichung. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben Sie **@publisher** , **@publisher_db** , **@publication** und die Windows-Anmeldeinformationen, unter denen der Merge-Agent auf dem Abonnenten ausgeführt wird, für **@job_name** und **@password** . Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben **@publisher**Sie **@publisher_db**, **@publication**, und die Windows-Anmelde Informationen an, unter denen die Merge-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pushabonnement für eine Mergeveröffentlichung  
   
 1.  Erstellen Sie ein neues Pushabonnement für eine Mergeveröffentlichung. Weitere Informationen finden Sie unter [Create a Push Subscription](create-a-push-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)aus. Geben Sie **@subscriber** , **@subscriber_db** , **@publication** und die Windows-Anmeldeinformationen, unter denen der Merge-Agent auf dem Abonnenten ausgeführt wird, für **@job_name** und **@password** . Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**, und die Windows-Anmelde Informationen an, unter denen die Merge-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die Replikation verwendet den SQL Server-Agent, um Aufträge für regelmäßig auftretende Aktivitäten wie die Momentaufnahmegenerierung und die Abonnementsynchronisierung zu planen. Sie können Replikationsverwaltungsobjekte (RMO) programmgesteuert verwenden, um Zeitpläne für Replikations-Agentaufträge anzugeben.  
@@ -199,25 +199,31 @@ ms.locfileid: "62630805"
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines gegebenen Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A>-die Woche eines bestimmten Monats, an der der Agent monatlich ausgeführt werden soll.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>: die Anzahl der Einheiten für den Häufigkeits Wert, die zwischen den Synchronisierungs Einheiten auftreten.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-die Häufigkeits Einheit, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>: die Anzahl der Einheiten für die Häufigkeit zwischen den Ausführungen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
@@ -230,25 +236,32 @@ ms.locfileid: "62630805"
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>: die Anzahl der Einheiten für den Häufigkeits Wert, die zwischen den Synchronisierungs Einheiten auftreten.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-die Häufigkeits Einheit, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>: die Anzahl der Einheiten für die Häufigkeit zwischen den Ausführungen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
@@ -261,25 +274,32 @@ ms.locfileid: "62630805"
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>: die Anzahl der Einheiten für den Häufigkeits Wert, die zwischen den Synchronisierungs Einheiten auftreten.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-die Häufigkeits Einheit, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>: die Anzahl der Einheiten für die Häufigkeit zwischen den Ausführungen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
@@ -292,39 +312,46 @@ ms.locfileid: "62630805"
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>: die Anzahl der Einheiten für den Häufigkeits Wert, die zwischen den Synchronisierungs Einheiten auftreten.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-die Häufigkeits Einheit, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>: die Anzahl der Einheiten für die Häufigkeit zwischen den Ausführungen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> -Methode auf, um das Abonnement zu erstellen.  
   
-###  <a name="PShellExample"></a> Beispiel (RMO)  
+###  <a name="PShellExample"></a>Beispiel (RMO)  
  In diesem Beispiel werden ein Pushabonnement für eine Mergeveröffentlichung erstellt und der Zeitplan angegeben, mit dem das Abonnement synchronisiert wird.  
   
  [!code-csharp[HowTo#rmo_CreateMergePushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepushsub)]  
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
  [Synchronisieren eines Pushabonnements](synchronize-a-push-subscription.md)   

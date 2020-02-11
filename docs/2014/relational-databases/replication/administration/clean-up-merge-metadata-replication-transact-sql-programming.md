@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629171"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>Cleanup von Mergemetadaten (Replikationsprogrammierung mit Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "62629171"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql)aus.  
   
-2.  (Optional) Beachten Sie die Anzahl von Zeilen, die in Schritt 1aus den Systemtabellen [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)und [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) entfernt und jeweils in den Ausgabeparametern **@num_genhistory_rows** , **@num_contents_rows** und **@num_tombstone_rows** zurückgegeben werden.  
+2.  Optionale Beachten Sie die Anzahl der Zeilen, die in Schritt 1 aus den Systemtabellen [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)und [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) entfernt bzw. in **@num_genhistory_rows**den **@num_contents_rows**Ausgabeparametern **@num_tombstone_rows** , und zurückgegeben werden.  
   
 3.  Wiederholen Sie die Schritte 1 und 2 auf dem Abonnenten, um einen Cleanup der Metadaten für die Abonnementdatenbank auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abonnementablauf und -deaktivierung](../subscription-expiration-and-deactivation.md)  
   
   

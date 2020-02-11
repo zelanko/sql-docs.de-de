@@ -1,5 +1,5 @@
 ---
-title: Fn_syscollector_get_execution_stats (Transact-SQL) | Microsoft-Dokumentation
+title: fn_syscollector_get_execution_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042743"
 ---
-# <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
+# <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt ausführliche Statistiken zum Sammlungssatz oder Paket zurück, einschließlich der vom Datenflusstask eines Pakets protokollierten Anzahl der Fehlerzeilen. Bei einem Datenflusstask handelt es sich um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente, die Daten verarbeitet. Diese Daten befinden sich in relationalem Format, wodurch sie über ein Eingabe- und ein Ausgabedataset verfügen, die aus Zeilen bestehen.  
   
  Die Statistik wird auf Grundlage von Einträgen in der syscollector_execution_stats-Sicht berechnet.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="arguments"></a>Argumente  
  *log_id*  
- Der lokale eindeutige Bezeichner für das Ausführungsprotokoll. *log_id* ist **int**  
+ Der lokale eindeutige Bezeichner für das Ausführungsprotokoll. *log_id* ist vom Datentyp **int**.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|Durchschnittliche Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.<br /><br /> Hinweis: Bei einem Datenflusstask handelt es sich um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente, die Daten verarbeitet. Diese Daten befinden sich in relationalem Format, wodurch sie über ein Eingabedataset verfügen, das aus Zeilen besteht. Anzahl der Zeilen, die in den Task eingetreten sind. Nachdem die Daten umgewandelt wurden, werden sie als ein Resultset ausgegeben, das aus Zeilen besteht. Der Datenflusstask wandelt die Daten um und gibt ein Resultset aus, das aus Zeilen besteht. Diese Ausgabe entspricht der Anzahl der Zeilen, die den Task verlassen haben.|  
+|avg_row_count_in|**int**|Durchschnittliche Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.<br /><br /> Hinweis: ein Datenfluss Task ist eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Komponente, die Daten verarbeitet. Diese Daten befinden sich in relationalem Format, wodurch sie über ein Eingabedataset verfügen, das aus Zeilen besteht. Anzahl der Zeilen, die in den Task eingetreten sind. Nachdem die Daten umgewandelt wurden, werden sie als ein Resultset ausgegeben, das aus Zeilen besteht. Der Datenflusstask wandelt die Daten um und gibt ein Resultset aus, das aus Zeilen besteht. Diese Ausgabe entspricht der Anzahl der Zeilen, die den Task verlassen haben.|  
 |min_row_count_in|**int**|Minimale Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.|  
 |max_row_count_in|**int**|Maximale Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.|  
 |avg_row_count_out|**int**|Durchschnittliche Anzahl von Zeilen, die die Datenflusstasks des Pakets verlassen haben.|  
@@ -61,8 +61,8 @@ fn_syscollector_get_execution_stats ( log_id )
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT für **dc_operator**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Syscollector_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [syscollector_execution_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   
   

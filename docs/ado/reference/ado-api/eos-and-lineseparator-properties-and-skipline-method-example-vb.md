@@ -1,5 +1,5 @@
 ---
-title: EOS- und LineSeparator-Eigenschaft und SkipLine-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Eigenschaften von EOS und lineseparser und SkipLine-Methode (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933061"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS- und LineSeparator-Eigenschaft und SkipLine-Methode – Beispiel (VB)
-Dieses Beispiel zeigt, wie Sie eine Textzeile für Streams gleichzeitig zu bearbeiten. Die Auswirkungen der Änderung des Zeilentrennzeichen in der Standardeinstellung Wagenrücklauf/Zeilenvorschub (**AdCRLF**), einfach Zeilenvorschub (**AdLF**) oder Carriage return, Wagenrücklauf (**AdCR**) wird angezeigt.  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Eigenschaften von EOS und lineseparser und SkipLine-Methode (VB)
+In diesem Beispiel wird veranschaulicht, wie Text Ströme zeilenweise bearbeitet werden. Die Auswirkung der Änderung des Zeilen Trennzeichens aus dem Standard-Wagen Rücklauf/Zeilenvorschub (**adCRLF**) in einfach Zeilenvorschub (**adlf**) oder Wagen Rücklauf (**adcr**) wird angezeigt.  
   
 ```  
 'BeginSkipLineVB  
@@ -112,7 +112,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [EOS-Eigenschaft](../../../ado/reference/ado-api/eos-property.md)   
- [LineSeparator-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
+ [Lineseparser-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine-Methode](../../../ado/reference/ado-api/skipline-method.md)

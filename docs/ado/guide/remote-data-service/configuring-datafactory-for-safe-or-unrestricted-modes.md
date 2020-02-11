@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von DataFactory für den sicheren bzw. uneingeschränkten Modus | Microsoft-Dokumentation
+title: Konfigurieren von datafactory für den sicheren oder uneingeschränkten Modus | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,31 +13,31 @@ ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92e3b029d2b18065faf50dcd0343f64b7b01654e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922942"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Konfigurieren von DataFactory für den sicheren oder den uneingeschränkten Modus
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Standardmäßig wird die ADO mit einer "sicheren" installiert [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Konfiguration. Im Abgesicherter Modus für RDS-Server-Komponenten bedeutet, dass Folgendes zutrifft:  
+ ADO wird standardmäßig mit einer "sicheren" [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Konfiguration installiert. Der abgesicherte Modus für RDS-Server Komponenten bedeutet, dass Folgendes zutrifft:  
   
-1.  Handler, die mit der RDSServer.DataFactory (Dies wird durch eine registrierungsschlüsseleinstellung vorgeschrieben) erforderlich ist.  
+1.  Der Handler ist mit dem RDSServer. DataFactory erforderlich (Dies wird durch eine Registrierungsschlüssel Einstellung vorgeschrieben).  
   
-2.  Der Standardhandler, msdfmap.handler, wird registriert, als Standardhandler markiert und in der Liste sicherer Handler vorhanden.  
+2.  Der Standard Handler, msdfmap. Handler, ist registriert, in der Liste der Safe-Handler vorhanden und als Standard Handler gekennzeichnet.  
   
-3.  Datei "Msdfmap.ini" wird im Windows-Verzeichnis installiert. Bevor Sie RDS in 3-Tier-Modus verwenden, müssen Sie diese Datei gemäß Ihren Anforderungen entspricht, konfigurieren.  
+3.  Die Datei "msdfmap. ini" ist im Verzeichnis "Windows" installiert. Sie müssen diese Datei gemäß Ihren Anforderungen konfigurieren, bevor Sie RDS im Modus mit drei Ebenen verwenden.  
   
- Optional können Sie einem uneingeschränkten konfigurieren **DataFactory** Installation. **DataFactory** direkt ohne benutzerdefinierten Handlers verwendet werden kann. Benutzer können einen benutzerdefinierten Handler weiterhin verwenden, indem Sie die Verbindungszeichenfolgen ändern, aber es ist nicht erforderlich. Weitere Informationen zu den Auswirkungen der Verwendung der **RDSServer.DataFactory** Objekt, finden Sie unter [Sichern von RDS-Anwendungen](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
+ Optional können Sie eine unbeschränkte **DataFactory** -Installation konfigurieren. **DataFactory** kann direkt ohne den benutzerdefinierten Handler verwendet werden. Benutzer können weiterhin einen benutzerdefinierten Handler verwenden, indem Sie die Verbindungs Zeichenfolgen ändern, dies ist jedoch nicht erforderlich. Weitere Informationen zu den Auswirkungen der Verwendung des **RDSServer. DataFactory** -Objekts finden Sie unter [Sichern von RDS-Anwendungen](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
   
- Die Registrierung Datei handsafe.reg wurde bereitgestellt, um die Handler-Registrierungseinträge für eine sichere Konfiguration einzurichten. Führen Sie zum Ausführen im abgesicherten Modus handsafe.reg.  
+ Die Registrierungsdatei handsafe. reg wurde bereitgestellt, um die Handler-Registrierungseinträge für eine sichere Konfiguration einzurichten. Wenn Sie im abgesicherten Modus ausführen möchten, führen Sie handsafe. reg aus.  
   
- Nach der Ausführung handsafe.reg, müssen Sie beenden und starten Sie den WWW-Publishingdienst auf dem Webserver neu, indem Sie die folgenden Befehle in einem Eingabeaufforderungsfenster eingeben: "NET STOP W3SVC" und "NET START W3SVC".  
+ Nach dem Ausführen von handsafe. reg müssen Sie den World Wide Web Publishing Dienst auf dem Webserver abbrechen und neu starten, indem Sie die folgenden Befehle in einem Eingabe Aufforderungs Fenster eingeben: "NET-W3SVC" und "net start W3SVC".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

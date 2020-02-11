@@ -1,5 +1,5 @@
 ---
-title: Clone – Methodenbeispiel (VBScript) | Microsoft-Dokumentation
+title: Klon Methode (Beispiel) (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920009"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone-Methode – Beispiel (VBScript)
-Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und dann kann der Benutzer, die unabhängig voneinander positionieren Sie den Datensatzzeiger der einzelnen Kopien.  
+In diesem Beispiel wird die [Clone](../../../ado/reference/ado-api/clone-method-ado.md) -Methode verwendet, um Kopien eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) zu erstellen. Anschließend kann der Benutzer den Daten Satz Zeiger jeder Kopie unabhängig positionieren.  
   
- Verwenden Sie das folgende Beispiel in einer Active Server Page (ASP). Dieses Beispiel verwendet die **Northwind** Datenbank, die mit Microsoft Access verteilt. Schneiden Sie aus und fügen Sie des folgenden Codes in den Editor oder einem anderen Texteditor ein, und speichern Sie ihn als CloneVBS.asp. Sie können das Ergebnis in einem beliebigen Clientbrowser anzeigen.  
+ Verwenden Sie das folgende Beispiel in einer Active Server Seite (ASP). In diesem Beispiel wird die **Northwind** -Datenbank verwendet, die mit Microsoft Access verteilt ist. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als clonevsb. ASP. Sie können das Ergebnis in einem beliebigen Client Browser anzeigen.  
   
- Um das Beispiel ausführen zu können, ändern Sie die Zeile `RsCustomerList.Source = "Customers"` zu `RsCustomerList.Source = "Products"` zum zählen der größeren der Tabelle.  
+ Um das Beispiel zu testen, ändern Sie `RsCustomerList.Source = "Customers"` die `RsCustomerList.Source = "Products"` Zeile in, um eine größere Tabelle zu zählen.  
   
 ```  
 <!-- BeginCloneVBS -->  
@@ -117,6 +117,6 @@ Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

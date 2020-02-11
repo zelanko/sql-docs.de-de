@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523623"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
-  In diesem Thema wird beschrieben, wie Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen können.  
+  In diesem Thema wird beschrieben, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie Sie- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Warnungen [!INCLUDE[tsql](../../includes/tsql-md.md)]in mithilfe von oder löschen können.  
   
  **In diesem Thema**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62523623"
   
      [Sicherheit](#Security)  
   
--   **So löschen Sie eine Warnung mit**  
+-   **So löschen Sie eine Warnung mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62523623"
 ####  <a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Warnungen löschen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-delete-an-alert"></a>So löschen Sie eine Warnung  
   
@@ -86,6 +86,6 @@ ms.locfileid: "62523623"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter s[Sp_delete_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql).  
+ Weitere Informationen finden Sie unter s[sp_delete_alert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql).  
   
   

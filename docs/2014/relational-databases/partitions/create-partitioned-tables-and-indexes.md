@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519163"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
@@ -81,7 +81,7 @@ ms.locfileid: "62519163"
   
 -   CONTROL SERVER- oder ALTER ANY DATABASE-Berechtigung für den Server der Datenbank, in der die Partitionsfunktion und das Partitionsschema erstellt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Führen Sie die Schritte in dieser Prozedur aus, um mindestens eine Dateigruppe, entsprechende Dateien und eine Tabelle zu erstellen. Sie versehen diese Objekte in der nächsten Prozedur mit Verweisen, wenn Sie die partitionierte Tabelle erstellen.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>So erstellen Sie neue Dateigruppen für eine partitionierte Tabelle  
@@ -109,7 +109,7 @@ ms.locfileid: "62519163"
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...** .  
+1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...**.  
   
 2.  Klicken Sie im **Assistent zum Erstellen von Partitionen**auf der Seite **Willkommen beim Assistenten zum Erstellen von Partitionen** auf **Weiter**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62519163"
      **Diese Tabelle der ausgewählten partitionierten Tabelle zuordnen**  
      Ermöglicht das Auswählen einer partitionierten Tabelle mit verwandten Daten, die über die Partitionierungsspalte mit einer anderen Tabelle verknüpft werden soll. Tabellen mit Partitionen, die über die Partitionierungsspalten verknüpft sind, können i. d. R. effizienter abgefragt werden.  
   
-     **Nicht eindeutige Indizes und eindeutige Indizes mit indizierter Partitionsspalte am Speicher ausrichten**  
+     **Nicht eindeutige Indizes und eindeutige Indizes mit indizierter partitions Spalte im Speicher ausrichten**  
      Richtet alle Indizes der Tabelle, die mit dem gleichen Partitionsschema partitioniert sind, aneinander aus. Wenn eine Tabelle und ihre Indizes aneinander ausgerichtet sind, können Sie Partitionen effektiver in und aus partitionierten Tabellen verschieben, da die Daten mit dem gleichen Algorithmus partitioniert sind.  
   
      Nach der Auswahl der Partitionierungsspalte und beliebiger anderer Optionen klicken Sie auf **Weiter**.  
@@ -141,10 +141,10 @@ ms.locfileid: "62519163"
   
      Die folgenden zusätzlichen Optionen sind auf dieser Seite verfügbar:  
   
-     **Begrenzungen festlegen...**  
-     Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungsspalte ausgewählt haben, die einen der folgenden Datentypen enthält: `date`, `datetime`, `smalldatetime`, `datetime2`, oder `datetimeoffset`.  
+     **Grenzen festlegen...**  
+     Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungs Spalte ausgewählt haben, die einen der folgenden Datentypen `date`enthält `datetime`: `smalldatetime`, `datetime2`,, `datetimeoffset`oder.  
   
-     **Schätzungsspeicher**  
+     **Schätzen des Speichers**  
      Schätzt die Zeilenanzahl sowie den zum Speichern erforderlichen und verfügbaren Speicherplatz für jede für die Partitionen angegebene Dateigruppe. Diese Werte werden im Raster als schreibgeschützte Werte angezeigt.  
   
      Das Dialogfeld **Begrenzungswerte festlegen** berücksichtigt die folgenden zusätzlichen Optionen:  
@@ -201,7 +201,7 @@ ms.locfileid: "62519163"
   
                 -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
   
-                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **ersten**, **zweiten**, **dritten**oder **vierten**sowie bestimmte Wochentage z. B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
+                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
   
         2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
@@ -236,10 +236,10 @@ ms.locfileid: "62519163"
      **Status**  
      Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
   
-     **MessageBox**  
+     **Meldung**  
      Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
   
-     **Bericht**  
+     **Report**  
      Erstellt einen Bericht mit den Ergebnissen des Assistenten zum Erstellen von Partitionen. Die Optionen sind **Bericht anzeigen**, **Bericht in Datei speichern**, **Bericht in Zwischenablage kopieren**und **Bericht als E-Mail senden**.  
   
      **Bericht anzeigen**  
@@ -262,7 +262,7 @@ ms.locfileid: "62519163"
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -382,7 +382,7 @@ ms.locfileid: "62519163"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>So definieren Sie die Partitionsspalte für eine partitionierte Tabelle  
   
-1.  Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. `PartitionTable`eine partitionierte Tabelle oder einen Index erstellen.  
+1.  Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. `PartitionTable`.  
   
     ```  
     SELECT   
@@ -407,13 +407,13 @@ ms.locfileid: "62519163"
     GO  
     ```  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter  
   
--   [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
+-   [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
--   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
+-   [Erstellen einer Partitions Funktion &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
   
--   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
+-   [Erstellen eines Partitions Schemas &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
   
 -   [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   

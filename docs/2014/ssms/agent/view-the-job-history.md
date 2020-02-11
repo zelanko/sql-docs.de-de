@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783392"
 ---
 # <a name="view-the-job-history"></a>View the Job History
-  In diesem Thema wird beschrieben, wie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsverlaufprotokoll in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], oder SQL Server Management Objects angezeigt werden kann.  
+  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie das Auftragsverlaufs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Protokoll des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]- [!INCLUDE[tsql](../../includes/tsql-md.md)]Agents in mithilfe von, oder SQL Server Management Objects anzeigen.  
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
--   **So zeigen Sie das Auftragsverlaufsprotokoll an, und zwar mit**  
+-   **Anzeigen des Auftragsverlaufs Protokolls mit:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -38,9 +38,9 @@ ms.locfileid: "72783392"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
@@ -77,7 +77,7 @@ ms.locfileid: "72783392"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_help_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_help_jobhistory &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So zeigen Sie das Auftragsverlaufsprotokoll an**  

@@ -1,5 +1,5 @@
 ---
-title: LineSeparator-Eigenschaft (ADO) | Microsoft-Dokumentation
+title: Lineseparser-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918285"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator-Eigenschaft (ADO)
-Gibt das binäre Zeichen als das Zeilentrennzeichen in Text zu verwendende [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte.  
+Gibt das binäre Zeichen an, das als Zeilen Trennzeichen in [textstreamobjekten](../../../ado/reference/ado-api/stream-object-ado.md) verwendet werden soll.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen [LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md) hodnota ukazuje, das Zeilentrennzeichen in verwendet die **Stream**. Der Standardwert ist **AdCRLF**.  
+ Legt einen [lineseparameatorsenum](../../../ado/reference/ado-api/lineseparatorsenum.md) -Wert fest, der das im **Stream**verwendete Zeilen Trennzeichen angibt, oder gibt diesen zurück. Der Standardwert ist **adCRLF**.  
   
-## <a name="remarks"></a>Hinweise  
- **LineSeparator** wird verwendet, um Zeilen zu interpretieren, wenn Sie den Inhalt einer Textdatei lesen **Stream**. Zeilen übersprungen werden können, mit der [SkipLine](../../../ado/reference/ado-api/skipline-method.md) Methode.  
+## <a name="remarks"></a>Bemerkungen  
+ Mit **lineseparser** werden Zeilen beim Lesen des Inhalts eines **Textstreams**interpretiert. Zeilen können mit der [SkipLine](../../../ado/reference/ado-api/skipline-method.md) -Methode übersprungen werden.  
   
- **LineSeparator** wird verwendet, nur mit Text **Stream** Objekte ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**). Diese Eigenschaft wird ignoriert, wenn **Typ** ist **AdTypeBinary**.  
+ **Lineseparser** wird nur mit **textstreamobjekten** ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) : **adtypetext**) verwendet. Diese Eigenschaft wird ignoriert, wenn der **Typ** **adTypeBinary**ist.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

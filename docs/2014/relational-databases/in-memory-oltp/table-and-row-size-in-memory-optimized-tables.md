@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688901"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
@@ -34,7 +34,7 @@ ms.locfileid: "72688901"
   
  Die folgende Abbildung zeigt eine Tabelle mit Indizes und Zeilen, die wiederum Zeilenüberschriften und Text enthalten:  
   
- ![Speicheroptimierte Tabelle.](../../database-engine/media/hekaton-guide-1.gif "Speicher optimierte Tabelle.")  
+ ![Speicher optimierte Tabelle.](../../database-engine/media/hekaton-guide-1.gif "Speicheroptimierte Tabelle.")  
 Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.  
   
  Die Größe einer Tabelle im Arbeitsspeicher in Bytes wird wie folgt berechnet:  
@@ -56,7 +56,7 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
 [row header size] = 24 + 8 * [number of indices]  
 ```  
   
- **Zeilentextgröße**  
+ **Zeilen Text Größe**  
   
  Die Berechnung von [row body size] wird in der folgenden Tabelle erläutert.  
   
@@ -70,19 +70,19 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  In der folgenden Tabelle wird die Berechnung der Zeilentextgröße beschrieben, die wie folgt angegeben wird: [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
   
-|Abschnitt|Schriftgrad|Kommentare|  
+|`Section`|Size|Kommentare|  
 |-------------|----------|--------------|  
-|Spalten flacher Typen|SUM([size of shallow types])<br /><br /> **Die Größe der einzelnen Typen lautet wie folgt:**<br /><br /> Bit: 1<br /><br /> Tinyint: 1<br /><br /> Smallint: 2<br /><br /> Int: 4<br /><br /> Real: 4<br /><br /> Smalldatetime: 4<br /><br /> Smallmoney: 4<br /><br /> Bigint: 8<br /><br /> Datetime: 8<br /><br /> Datetime2: 8<br /><br /> Float: 8<br /><br /> Money: 8<br /><br /> Numeric (Precision < = 18) &#124; 8<br /><br /> Time: 8<br /><br /> Numeric (Precision > 18) &#124; 16<br /><br /> Uniqueidentifier: 16||  
-|Auffüllung flacher Spalten|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Offsetarray für Spalten tiefer Typen|Folgende Werte sind möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Spalten flacher Typen|SUM([size of shallow types])<br /><br /> **Die Größe der einzelnen Typen lautet wie folgt:**<br /><br /> Bit: 1<br /><br /> Tinyint: 1<br /><br /> Smallint: 2<br /><br /> Int: 4<br /><br /> Real: 4<br /><br /> Smalldatetime: 4<br /><br /> Smallmoney: 4<br /><br /> Bigint: 8<br /><br /> Datetime: 8<br /><br /> Datetime2: 8<br /><br /> Float: 8<br /><br /> Money: 8<br /><br /> Numeric (Precision <= 18) &#124; 8<br /><br /> Time: 8<br /><br /> Numeric (Precision>18) &#124; 16<br /><br /> Uniqueidentifier: 16||  
+|Auffüllung flacher Spalten|Die folgenden Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Offsetarray für Spalten tiefer Typen|Die folgenden Werte sind möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |NULL-Array|[number of nullable columns] / 8, aufgerundet auf vollständige Bytes.|Das Array verfügt über ein Bit pro Spalte, die NULL zulässt. Dies wird auf vollständige Bytes aufgerundet.|  
-|NULL-Arrayauffüllung|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Auffüllung|Wenn keine Spalten tiefer Typen vorhanden sind: 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|NULL-Arrayauffüllung|Die folgenden Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Auffüllen|Wenn keine Spalten tiefer Typen vorhanden sind: 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |Spalten tiefer Typen mit fester Länge|SUM([size of fixed length deep type columns])<br /><br /> Die Größe jeder Spalte lautet wie folgt:<br /><br /> i für char(i) und binary(i).<br /><br /> 2 * i für nchar(i)|Spalten tiefer Typen mit fester Länge sind Spalten des Typs char(i), nchar(i) oder binary(i).|  
 |Spalten tiefer Typen mit variabler Länge [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Die berechnete Größe jeder Spalte lautet wie folgt:<br /><br /> i für varchar(i) und varbinary(i)<br /><br /> 2 * i für nvarchar(i)|Diese Zeile wird nur auf [computed row body size] angewendet.<br /><br /> Spalten tiefer Typen mit variabler Länge sind Spalten des Typs varchar(i), nvarchar(i) oder varbinary(i). Die berechnete Größe wird durch die maximale Länge (i) der Spalte bestimmt.|  
 |Spalten tiefer Typen mit variabler Länge [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> Die tatsächliche Größe jeder Spalte lautet wie folgt:<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für varchar(i).<br /><br /> 2 * n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für nvarchar(i).<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Bytes ist; für varbinary(i).|Diese Zeile wird nur auf [actual row body size] angewendet.<br /><br /> Die tatsächliche Größe wird durch die Daten bestimmt, die in den Spalten der Zeile gespeichert werden.|  
   
-##  <a name="bkmk_RowStructure"></a> Zeilenstruktur  
+##  <a name="bkmk_RowStructure"></a>Zeilen Struktur  
  Die Zeilen in einer speicheroptimierten Tabelle verfügen über folgende Komponenten:  
   
 -   Die Zeilenüberschrift enthält den Zeitstempel, der erforderlich ist, um Zeilenversionsverwaltung zu implementieren. Die Zeilenüberschrift enthält auch den Indexzeiger, um die Zeilenverkettung in den Hashbuckets zu implementieren (oben beschrieben).  
@@ -91,7 +91,7 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Die folgende Abbildung veranschaulicht die Zeilenstruktur für eine Tabelle mit zwei Indizes:  
   
- ![Zeilen Struktur für eine Tabelle, die über zwei Indizes verfügt.](../../database-engine/media/hekaton-tables-4.gif "Zeilen Struktur für eine Tabelle, die über zwei Indizes verfügt.")  
+ ![Zeilenstruktur für eine Tabelle, die zwei Indizes umfasst.](../../database-engine/media/hekaton-tables-4.gif "Zeilenstruktur für eine Tabelle, die zwei Indizes umfasst.")  
   
  Die Zeitstempel für Beginn und Ende geben den Zeitraum an, in dem eine bestimmte Zeilenversion gültig ist. Für Transaktionen, die in diesem Intervall beginnen, ist diese Zeilenversion sichtbar. Weitere Informationen finden Sie unter [Transaktionen in speicheroptimierten Tabellen](memory-optimized-tables.md).  
   
@@ -117,20 +117,20 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Eine Zeit, die größer als 200 ist, enthält die Tabelle die folgenden Zeilen:  
   
-|Name|Ort|  
+|Name|City|  
 |----------|----------|  
-|John|Beijing (Peking)|  
+|John|Peking (Beijing)|  
 |Jane|Prag|  
   
  Allerdings wird jeder aktiven Transaktion mit Anfangszeit 100 die folgende Version der Tabelle angezeigt:  
   
-|Name|Ort|  
+|Name|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prag|  
 |Susan|Bogota|  
   
-##  <a name="bkmk_ExampleComputation"></a> Beispiel: Tabellen- und Zeilengrößenberechnung  
+##  <a name="bkmk_ExampleComputation"></a>Beispiel: Berechnung der Tabellen-und Zeilengröße  
  Für Hashindizes wird die tatsächliche Bucketanzahl auf die nächste Zweierpotenz aufgerundet. Wenn der angegebene bucket_count-Wert beispielsweise 100000 ist, beträgt die tatsächliche Bucketanzahl für den Index 131072.  
   
  Betrachten Sie eine Orders-Tabelle mit folgender Definition:  
@@ -188,7 +188,7 @@ GO
   
 -   NULL-Arrayauffüllung = 1, da die NULL-Arraygröße ungerade ist und eine Spalte tiefen Typs vorhanden ist.  
   
--   Auffüllung  
+-   Auffüllen  
   
     -   8 ist die größte Ausrichtungsanforderung.  
   
@@ -222,7 +222,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
   
   

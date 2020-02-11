@@ -1,5 +1,5 @@
 ---
-title: -Eigenschaft – Beispiel (VB) vorbereitet | Microsoft-Dokumentation
+title: Beispiel für eine vorbereitete Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931597"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt die [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft öffnen Sie zwei [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte - vorbereitet und nicht vorbereitet.  
+Dieses Beispiel veranschaulicht die [vorbereitete](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft, indem zwei [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekte geöffnet werden: eine vorbereitete und eine nicht vorbereitete.  
   
 ```  
 'BeginPreparedVB  
@@ -114,6 +114,6 @@ End Sub
 'EndPreparedVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared-Eigenschaft (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

@@ -14,37 +14,37 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510344"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio-Hilfemenü
-  Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in der Menüleiste von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verfügbar sind.  
+  Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Menüleiste in verfügbar sind.  
   
  [Informationen zu SQL Server Management Studio](about-sql-server-management-studio.md)  
   
  [Erweiterte Speicheroptionen](advanced-save-options.md)  
   
- [Suchordner auswählen &#40;Dialogfeld in Visual Studio&#41;](choose-search-folders-dialog-box-visual-studio.md)  
+ [Suchordner auswählen (Dialog Feld) &#40;Visual Studio&#41;](choose-search-folders-dialog-box-visual-studio.md)  
   
- [Auswählen von Toolboxelementen &#40;Seite „Wartungstasks“&#41;](choose-toolbox-items-maintenance-tasks-page.md)  
+ [Toolbox Elemente &#40;Seite "Wartungs Tasks" auswählen&#41;](choose-toolbox-items-maintenance-tasks-page.md)  
   
- [Anpassen &#40;Seite „Befehle“&#41;](customize-commands-page.md)  
+ [Seite "&#40;Befehle anpassen"&#41;](customize-commands-page.md)  
   
- [Anpassen &#40;Seite „Symbolleisten“&#41;](customize-toolbars-page.md)  
+ [Anpassen &#40;Seite "Symbolleisten"&#41;](customize-toolbars-page.md)  
   
  [Externe Tools](external-tools.md)  
   
- [Öffnen mit &#40;Neue Datei&#41;](open-with-new-file.md)  
+ [Öffnen Sie mit &#40;neuen Datei&#41;](open-with-new-file.md)  
   
  [Optionen (Dialogfelder, F1-Hilfe)](options-dialog-boxes-f1-help.md)  
   
  [Speichern unter](save-as.md)  
   
- [Änderungen speichern](save-changes.md)  
+ [Save Changes](save-changes.md)  
   
- [Dialogfeld Fenster &#40;Hilfe von Microsoft Document Explorer&#41;](windows-dialog-box-microsoft-document-explorer-help.md)  
+ [Windows-Dialog Feld &#40;Hilfe zu Microsoft Document Explorer&#41;](windows-dialog-box-microsoft-document-explorer-help.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467244"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Wiederherstellen von speicheroptimierten Tabellen
@@ -40,7 +40,7 @@ ms.locfileid: "62467244"
   
 -   Streaming der Datendateien.  Sobald der Änderungszuordnungsfilter erstellt wurde, werden Datendateien mit so vielen Threads gelesen wie logische CPUs vorhanden sind. Jeder Thread, der die Datendatei liest, liest die Datenzeilen, überprüft die zugeordnete Änderungszuordnung und fügt die Zeile nur dann in der Tabelle ein, wenn diese Zeile nicht als gelöscht markiert wurde. Dieser Teil der Wiederherstellung kann in einigen Fällen CPU-gebunden sein, wie unten aufgeführt.  
   
- ![Speicheroptimierte Tabellen.](../../database-engine/media/memory-optimized-tables.gif "Memory-optimized tables.")  
+ ![Speicher optimierte Tabellen.](../../database-engine/media/memory-optimized-tables.gif "Speicheroptimierte Tabellen")  
   
  Speicheroptimierte Tabellen können generell mit der Geschwindigkeit des E/A-Vorgangs in den Arbeitsspeicher geladen werden, in einigen Situationen dauert das Laden von Datenzeilen in den Arbeitsspeicher jedoch länger. Dies ist insbesondere in folgenden Situationen der Fall:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62467244"
   
  An diesem Punkt können Sie die Datenbank an den Ressourcenpool binden und dann RESTORE WITH RECOVERY verwenden, um die wiederhergestellte Datenbank online zu schalten.  Da die Bindung vorhanden ist, bevor die Datenbank online geschaltet wird, wird der betreffende In-Memory OLTP-Speicherverbrauch ordnungsgemäß berücksichtigt. Dies erfordert nur eine einmalige Wiederherstellung der Datenbank. Der erste RESTORE-Befehl ist ein Informationsbefehl, der lediglich den Sicherungsheader liest, und der letzte Befehl löst einfach die Wiederherstellung aus, ohne tatsächlich Bits wiederherzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen speicheroptimierter Tabellen](memory-optimized-tables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Version-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für eine Versions Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,24 +15,24 @@ ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938744"
 ---
 # <a name="version-property-example-vb"></a>Version-Eigenschaft – Beispiel (VB)
-Dieses Beispiel verwendet die [Version](../../../ado/reference/ado-api/version-property-ado.md) Eigenschaft eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, um die aktuelle Version von ADO anzuzeigen. Er verwendet auch verschiedene Eigenschaften angezeigt:  
+In diesem Beispiel wird die [Version](../../../ado/reference/ado-api/version-property-ado.md) -Eigenschaft eines [Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts verwendet, um die aktuelle ADO-Version anzuzeigen. Außerdem werden verschiedene dynamische Eigenschaften verwendet, um Folgendes anzuzeigen:  
   
--   aktuelle DBMS-Name und Version.  
+-   der aktuelle DBMS-Name und die aktuelle Version.  
   
--   OLE DB-Version.  
+-   OLE DB Version.  
   
--   Name des Anbieters und die Version.  
+-   Anbieter Name und-Version.  
   
 -   ODBC-Version.  
   
--   ODBC-Treiber-Name und Version.  
+-   Der Name und die Version des ODBC-Treibers.  
   
 ```  
 'BeginVersionVB  
@@ -77,6 +77,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version-Eigenschaft (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

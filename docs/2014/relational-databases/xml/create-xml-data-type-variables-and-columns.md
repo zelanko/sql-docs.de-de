@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637993"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
-  Die `xml` Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie z. B. `int` und `varchar`. Wie andere integrierte Typen können Sie die `xml` -Datentyp als Spaltentyp, bei der Erstellung einer Tabelle, als Variablentyp, als Parametertyp, eine funktionsrückgabestyp oder in [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Der `xml` -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt in gewisser Weise `int` anderen integrierten Typen wie und. `varchar` Wie andere integrierte Typen können Sie den `xml` -Datentyp als Spaltentyp verwenden, wenn Sie eine Tabelle als Variablentyp, als Parametertyp, als Funktions Rückgabetyp oder in [Cast und Convert](/sql/t-sql/functions/cast-and-convert-transact-sql)erstellen.  
   
 ## <a name="creating-columns-and-variables"></a>Erstellen von Variablen und Spalten  
  Verwenden Sie zur Erstellung einer Spalte des `xml` -Typs als Teil einer Tabelle eine `CREATE TABLE` -Anweisung, wie im folgenden Beispiel gezeigt:  
@@ -66,7 +66,8 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch NULL- und NOT NULL-Einschränkungen für Spalten vom Typ `xml`. Zum Beispiel:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch NULL- und NOT NULL-Einschränkungen für Spalten vom Typ `xml`. Beispiel:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -127,9 +128,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Gleiche oder unterschiedliche Tabelle  
- Ein `xml` -Datentypspalte kann erstellt werden, in einer Tabelle, die andere relationalen Spalten enthält, oder in einer separaten Tabelle mit einer fremdschlüsselbeziehung zu einer Haupttabelle.  
+ Eine `xml` -Datentyp Spalte kann in einer Tabelle erstellt werden, die andere relationale Spalten enthält, oder in einer separaten Tabelle mit einer Fremdschlüssel Beziehung zu einer Haupttabelle.  
   
- Erstellen Sie eine `xml` -Datentypspalte in derselben Tabelle, wenn eine der folgenden Bedingungen zutrifft:  
+ Erstellen Sie `xml` eine-Datentyp Spalte in derselben Tabelle, wenn eine der folgenden Bedingungen zutrifft:  
   
 -   Ihre Anwendung führt einen Datenabruf für die XML-Spalte durch und benötigt keinen XML-Index für die XML-Spalte.  
   

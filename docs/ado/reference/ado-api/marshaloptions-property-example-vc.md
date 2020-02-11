@@ -1,5 +1,5 @@
 ---
-title: MarshalOptions-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für die MarshalOptions-Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932271"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel verwendet die [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) Eigenschaft, um anzugeben, welche Zeilen an den Server - alle Zeilen oder nur geänderte Zeilen gesendet werden.  
+In diesem Beispiel wird die [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) -Eigenschaft verwendet, um anzugeben, welche Zeilen an den Server zurückgesendet werden, und zwar alle Zeilen oder nur geänderte Zeilen.  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -244,5 +244,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [MarshalOptions-Eigenschaft (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

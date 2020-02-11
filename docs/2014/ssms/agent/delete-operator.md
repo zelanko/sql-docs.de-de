@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666601"
 ---
 # <a name="delete-operator"></a>Operator löschen
   Auf dieser Seite können Sie Operatoren löschen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Zu löschendes Objekt**  
  Zeigt den zu löschenden Operator an.  
   
- **Neu zuweisen an**  
+ **Erneut zuweisen an**  
  Weist Benachrichtigungen für den zu löschenden Operator neu zu.  
   
  **Eigenschaften**  
  Zeigt Eigenschaften des Operators an, dem Benachrichtigungen neu zugewiesen werden sollen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatoren](operators.md)  
   
   

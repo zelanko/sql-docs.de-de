@@ -20,25 +20,25 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966447"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize-Eigenschaft (ADOX)
-Gibt die festgelegte maximale Größe der Spalte an.  
+Gibt die angegebene maximale Größe der Spalte an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest, und gibt eine **lange** Wert, der die maximale Länge in Zeichen der Datenwerte ist.  
+ Legt einen **Long** -Wert fest, der die maximale Länge in Zeichen von Datenwerten ist, und gibt diesen zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Standardwert ist 0 (null).  
   
- Diese Eigenschaft ist nur Lesezugriff für [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte, die bereits an eine Auflistung angefügt.  
+ Diese Eigenschaft ist für [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekte, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für DefinedSize-Eigenschaft (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [DefinedSize-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)

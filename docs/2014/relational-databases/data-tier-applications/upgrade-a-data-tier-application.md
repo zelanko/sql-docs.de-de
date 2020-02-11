@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797977"
 ---
-# <a name="upgrade-a-data-tier-application"></a>Upgrade einer Datenebenenanwendung
+# <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Verwenden Sie entweder den Assistenten zum Aktualisieren von Datenebenenanwendungen oder ein Windows PowerShell-Skript, um das Schema und die Eigenschaften einer derzeit bereitgestellten Datenebenenanwendung (DAC) so zu ändern, dass sie mit dem Schema und den Eigenschaften übereinstimmt, die in einer neuen Version der DAC definiert sind.  
   
--   **Vorbereitungen:**  [Auswählen von DAC-Aktualisierungsoptionen](#ChoseDACUpgOptions), [Einschränkungen](#LimitationsRestrictions), [Voraussetzungen](#Prerequisites), [Sicherheit](#Security), [Berechtigungen](#Permissions)  
+-   **Vorbereitungen:**  [Auswählen von DAC-Upgradeoptionen](#ChoseDACUpgOptions), [Einschränkungen](#LimitationsRestrictions), [Voraussetzungen](#Prerequisites), [Sicherheit](#Security), [Berechtigungen](#Permissions)  
   
--   **Aktualisieren einer DAC mit:**  [Assistent zum Aktualisieren von Datenebenenanwendungen](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **So aktualisieren Sie eine DAC:**  [dem Assistenten zum Aktualisieren von Datenebenenanwendungen](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Eine DAC-Aktualisierung ist ein direkter Prozess, mit dem das Schema der vorhandenen Datenbank so geändert wird, dass es dem in einer neuen Version der DAC definierten Schema entspricht. Die neue Version der DAC wird in einer DAC-Paketdatei bereitgestellt. Weitere Informationen zum Erstellen eines DAC-Pakets finden Sie unter [Datenebenenanwendungen](data-tier-applications.md).  
@@ -48,14 +48,14 @@ ms.locfileid: "72797977"
   
 -   **Bei Änderungen blockieren** : Wenn `True`, wird das Upgrade beendet, wenn sich das Datenbankschema von dem in der vorherigen DAC definierten Schema unterscheidet. Wenn auf `False` festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn Änderungen erkannt werden. Die Standardeinstellung ist `False`.  
   
--   **Rollback bei Fehler** : Wenn `True`, wird das Upgrade in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf `False` festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung ist `False`.  
+-   **Rollback bei** Fehler: Wenn `True`, wird das Upgrade in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf `False` festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung ist `False`.  
   
--   **Richtlinien** Überprüfung überspringen: Wenn `True`, wird die Richtlinie zur DAC-Server Auswahl nicht ausgewertet. Wenn auf `False` festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung ist `False`.  
+-   **Richtlinien** Überprüfung überspringen: `True`gibt an, dass die DAC-Server Auswahl Richtlinie nicht ausgewertet wird. Wenn auf `False` festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung ist `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
  DAC-Aktualisierungen können nur in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ab Service Pack 4 (SP4) durchgeführt werden.  
   
-###  <a name="Prerequisites"></a>Voraussetzungen  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Vor dem Beginn der Aktualisierung muss eine vollständige Datenbanksicherung durchgeführt werden. Wenn bei einer Aktualisierung ein Fehler auftritt und kein Rollback für alle Aktualisierungen ausgeführt werden kann, müssen Sie möglicherweise die Sicherung wiederherstellen.  
   
  Vor dem Starten der Aktualisierung gibt es mehrere Aktionen, die Sie durchführen sollten, um das DAC-Paket und die Aktualisierungsaktionen zu validieren. Weitere Informationen zum Ausführen dieser Tests finden Sie unter [Validate a DAC Package](validate-a-dac-package.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "72797977"
   
  Stellen Sie sicher, dass im Transaktionsprotokoll ausreichend Speicherplatz verfügbar ist, um alle Änderungen zu protokollieren.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Zur Erhöhung der Sicherheit werden die Anmeldenamen für die SQL Server-Authentifizierung ohne Kennwort in einem DAC-Paket gespeichert. Sobald das Paket bereitgestellt oder aktualisiert wird, wird der Anmeldename als deaktivierter Anmeldename mit einem generierten Kennwort erstellt. Um die Anmeldenamen zu aktivieren, melden Sie sich unter einem Anmeldenamen an, der über die ALTER ANY LOGIN-Berechtigung verfügt, und verwenden ALTER LOGIN, um den Anmeldenamen zu aktivieren und ein neues Kennwort zuzuweisen, das dem Benutzer mitgeteilt werden kann. Dies ist für Anmeldenamen der Windows-Authentifizierung nicht erforderlich, da die zugehörigen Kennwörter nicht von SQL Server verwaltet werden.  
   
 ####  <a name="Permissions"></a> Berechtigungen  
@@ -108,7 +108,7 @@ ms.locfileid: "72797977"
   
  **Weiter >** : Geht zur Seite **Paket auswählen** über.  
   
- **Abbrechen**: Beendet den Assistenten, ohne die DAC zu aktualisieren.  
+ **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
 ##  <a name="Select_dac_package"></a> Seite "Paket auswählen"  
  Verwenden Sie diese Seite, um das DAC-Paket anzugeben, das die neue Version der Datenebenenanwendung enthält. Die Seite durchläuft zwei Statusübergänge.  
@@ -122,20 +122,20 @@ ms.locfileid: "72797977"
   
  **Version** : Ein schreibgeschütztes Feld mit der Version, die beim Erstellen oder Extrahieren der DAC aus einer Datenbank zugewiesen wurde.  
   
- **Beschreibung** : Ein schreibgeschütztes Feld mit der Beschreibung, die beim Erstellen oder Extrahieren der DAC aus einer Datenbank erstellt wurde.  
+ **Beschreibung**: Ein schreibgeschütztes Feld mit der Beschreibung, die beim Erstellen oder Extrahieren der DAC aus einer Datenbank erstellt wurde.  
   
- **\< Zurück** – Kehrt zur Seite **Einführung** über.  
+ Previous: kehrt zur **Einführungs** Seite zurück. ** \< **  
   
  **Weiter >** : Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
   
- **Abbrechen**: Beendet den Assistenten, ohne die DAC zu aktualisieren.  
+ **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
 ### <a name="validating-the-dac-package"></a>Überprüfen des DAC-Pakets  
  Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt. Wenn das DAC-Paket überprüft wird, geht der Assistent zur Seite **Richtlinie überprüfen** über. Wenn die Datei kein gültiges DAC-Paket ist, verbleibt der Assistent auf der Seite **DAC-Paket auswählen** . Wählen Sie entweder ein anderes gültiges DAC-Paket aus, oder brechen Sie den Assistenten ab, und generieren Sie ein neues DAC-Paket.  
   
- **Der DAC-Inhalt wird überprüft** : Die Statusanzeige, die den aktuellen Status des Überprüfungsprozesses angibt.  
+ **Der DAC-Inhalt wird überprüft**: Die Statusanzeige, die den aktuellen Status des Überprüfungsprozesses angibt.  
   
- **\< Previous** : kehrt zum Ausgangszustand der Seite **Paket auswählen** zurück.  
+ Previous: kehrt zum Ausgangszustand der Seite **Paket auswählen** zurück. ** \< **  
   
  **Weiter >** : Geht zur abschließenden Version der Seite **Paket auswählen** über.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "72797977"
   
  **Richtlinienverletzungen ignorieren** : Verwenden Sie dieses Kontrollkästchen, um mit dem Upgrade fortzufahren, wenn eine oder mehrere Richtlinienbedingungen nicht erfüllt wurden. Aktivieren Sie diese Option nur, wenn Sie sicher sind, dass keine der fehlgeschlagenen Bedingungen die erfolgreiche Ausführung der DAC verhindert.  
   
- **\<** zurück: kehrt zur Seite **Paket auswählen** zurück.  
+ Zurück: kehrt zur Seite **Paket auswählen** zurück. ** \< **  
   
  **Weiter >** : Geht zur Seite **Änderung erkennen** über.  
   
- **Abbrechen**: Beendet den Assistenten, ohne die DAC zu aktualisieren.  
+ **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
 ##  <a name="Detect_change"></a> Seite "Änderung erkennen"  
  Auf dieser Seite werden die Ergebnisse angezeigt, die die Assistenten bei der Suche nach Datenbankänderungen gefunden haben und die auf eine Abweichung zwischen dem Datenbankschema und der in der **msdb**-Datenbank in den DAC-Metadaten gespeicherten Schemadefinition hindeuten. Beispielsweise wurden die Anweisungen CREATE, ALTER oder DROP verwendet, um Objekte nach der ursprünglichen Bereitstellung der DAC zur Datenbank hinzuzufügen, Objekte zu ändern oder zu entfernen. Auf der Seite werden zuerst eine Statusanzeige und dann die Analyseergebnisse angezeigt.  
@@ -169,7 +169,7 @@ ms.locfileid: "72797977"
   
  **Bericht speichern** : Klicken Sie auf die Schaltfläche, um einen Bericht der Änderungen zu speichern, die der Assistent zwischen den Objekten in der Datenbank und ihren Äquivalenten in der DAC-Definition festgestellt hat. Sie können dann den Bericht überprüfen, um zu bestimmen, ob Sie nach dem Upgrade Maßnahmen ergreifen müssen, um einige oder alle im Bericht aufgeführten Objekte in die neue Datenbank zu integrieren.  
   
- **\<** zurück: kehrt zur Seite **DAC-Paket auswählen** zurück.  
+ Zurück: kehrt zur Seite **DAC-Paket auswählen** zurück. ** \< **  
   
  **Weiter >** : Geht zur Seite **Optionen** über.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "72797977"
   
  **Rollback bei Fehler**: Wählen Sie diese Option aus, um das Upgrade in eine Transaktion einzuschließen. Der Assistent kann beim Auftreten von Fehlern dann versuchen, ein Rollback durchzuführen. Weitere Informationen zu dieser Option finden Sie unter [Auswählen von DAC-Aktualisierungsoptionen](#ChoseDACUpgOptions).  
   
- **Standardwerte wiederherstellen** : Setzt die Option auf die Standardeinstellung „false“ zurück.  
+ **Standardwerte wiederherstellen**: Setzt die Option auf die Standardeinstellung „false“ zurück.  
   
- **\< Previous** : kehrt zur Seite " **Änderung erkennen** " zurück.  
+ Previous: kehrt zur Seite " **Änderung erkennen** " zurück. ** \< **  
   
  **Weiter >** : Geht zur Seite **Upgradeplan überprüfen** über.  
   
@@ -201,11 +201,11 @@ ms.locfileid: "72797977"
   
  **Skripts speichern**: Speichert die für das Upgrade verwendeten Transact-SQL-Anweisungen in einer Textdatei.  
   
- **Standardwerte wiederherstellen** : Setzt die Option auf die Standardeinstellung „false“ zurück.  
+ **Standardwerte wiederherstellen**: Setzt die Option auf die Standardeinstellung „false“ zurück.  
   
- **\< Previous** : kehrt zur Seite " **Änderung erkennen** " zurück.  
+ Previous: kehrt zur Seite " **Änderung erkennen** " zurück. ** \< **  
   
- **Weiter >** – Geht zur Seite **Zusammenfassung** über.  
+ **Weiter >** : Geht zur Seite **Zusammenfassung** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "72797977"
   
  **Die folgenden Einstellungen werden zum Aktualisieren der DAC verwendet.** – Überprüfen Sie die angezeigten Informationen darauf, ob die ergriffenen Maßnahmen richtig sind. Das Fenster zeigt die zur Aktualisierung ausgewählte DAC und das DAC-Paket an, das die neue Version der DAC enthält. Im Fenster wird außerdem angezeigt, ob die aktuelle Version der Datenbank der aktuellen DAC-Definition entspricht oder ob die Datenbank geändert wurde.  
   
- **\<** zurück: kehren Sie zur Seite **Upgradeplan überprüfen** zurück.  
+ Zurück: kehren Sie zur Seite **Upgradeplan überprüfen** zurück. ** \< **  
   
  **Weiter >** : Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC aktualisieren** an.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "72797977"
   
  **Bericht speichern** : Klicken Sie auf diese Schaltfläche, um den Aktualisierungsbericht in einer HTML-Datei zu speichern. In der Datei ist der Status der einzelnen Aktionen aufgeführt, einschließlich aller durch die Aktionen generierten Fehler. Der Standardordner ist ein Ordner "SQL Server Management Studio\DAC Packages" im Ordner "Dokumente" unter Ihrem Windows-Konto.  
   
- **Fertig stellen**: Beendet den Assistenten.  
+ **Fertig stellen** – Beendet den Assistenten.  
   
 ##  <a name="UpgradeDACPowerShell"></a> PowerShell  
  **Aktualisieren einer DAC mithilfe der IncrementalUpgrade()-Methode in einem PowerShell-Skript**  
@@ -284,6 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](data-tier-applications.md)   
  [SQL Server-PowerShell](../../powershell/sql-server-powershell.md)  

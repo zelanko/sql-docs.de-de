@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757643"
 ---
 # <a name="tabular-model-programming"></a>Programmierung von tabellarischen Modellen
@@ -25,7 +25,7 @@ ms.locfileid: "62757643"
  Dieser Abschnitt enthält weitere Informationen darüber, wie Sie programmgesteuert die Entitäten tabellarischer Modelle und ihre Eigenschaften verwenden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Grundlegendes zum tabellarischen Objektmodell](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
@@ -33,8 +33,8 @@ ms.locfileid: "62757643"
   
  [IMDEmbedded-Schnittstelle](imdembeddeddata-interface.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellarische Modellierung &#40;SSAS – tabellarisch&#41;](../tabular-models/tabular-models-ssas.md)   
- [Designer für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](../tabular-model-designer-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellarische Modellierung &#40;tabellarischen SSAS-&#41;](../tabular-models/tabular-models-ssas.md)   
+ [Tabellen Modell-Designer &#40;tabellarischen SSAS-&#41;](../tabular-model-designer-ssas-tabular.md)  
   
   

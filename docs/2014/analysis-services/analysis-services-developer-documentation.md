@@ -1,5 +1,5 @@
 ---
-title: Entwickler&#39;Benutzerhandbuch (Analysis Services) | Microsoft-Dokumentation
+title: Entwickler&#39;s Guide (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638778"
 ---
-# <a name="developer39s-guide-analysis-services"></a>Entwickler&#39;Benutzerhandbuch (Analysis Services)
+# <a name="developer39s-guide-analysis-services"></a>Entwickler&#39;s Guide (Analysis Services)
     
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Programmierung von tabellarischen Modellen](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
@@ -32,13 +32,13 @@ ms.locfileid: "62638778"
  [Mehrdimensionale Modellprogrammierung](multidimensional-models/multidimensional-model-programming.md)  
  Beschreibt die Entwicklungsaufgaben und Herangehensweisen zum Integrieren mehrdimensionaler Modellobjekte in eine benutzerdefinierte Projektmappe.  
   
- [Analysis Services-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
+ [Analysis Services Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Beschreibt die Schemarowsets, die Informationen zu Serverstatus, Servervorgängen und Datenbankobjekten liefern.  
   
- [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+ [Analysis Services Skriptsprache &#40;ASSL&#41; Referenz](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Beschreibt die ASSL-Erweiterungen für XMLA. ASSL stellt eine Datendefinitions- und Datenbearbeitungssprache für mehrdimensionale Analysis Services-Modelle bereit und ist eine Ergänzung der XMLA-Spezifikation.  
   
- [XML for Analysis-Referenz &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [XML for Analysis &#40;XMLA&#41; Verweis](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Beschreibt XMLA-Begriffe, die Hinweise dazu liefern, wie XMLA zu Ihrer benutzerdefinierten Projektmappe beitragen kann. Darüber hinaus wird der Grad der Kompatibilität mit der XMLA 1.1-Spezifikation beschrieben.  
   
   

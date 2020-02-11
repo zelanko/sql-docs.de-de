@@ -1,5 +1,5 @@
 ---
-title: ADO-Glossar | Microsoft-Dokumentation
+title: Begriffe zu ADO-Glossar | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,205 +12,205 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927176"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76940437"
 ---
-# <a name="ado-glossary-terms"></a>ADO-Glossar
-In diesem Thema werden die Begriffe, die relevant für ADO definiert.
+# <a name="ado-glossary-terms"></a>ADO-Glossar Begriffe
+In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
-## <a name="a"></a>A
- absolute URL eine vollqualifizierte URL, der angibt, den Speicherort einer Ressource, die befindet sich im Internet oder Intranet. Siehe auch *URL* und *relativen URL*.
+## <a name="a"></a>Ein
+ absolute URL eine voll qualifizierte URL, die den Speicherort einer Ressource angibt, die sich im Internet oder in einem Intranet befindet. Siehe auch *URL* und *relative URL*.
 
- ActiveX-Steuerelement selbst registrieren, die in-Process-COM-Komponente, die häufig ein visuelles Element entweder zur Entwurfszeit oder zur Laufzeit. ActiveX-Steuerelemente können auch für die Kommunikation mit Active Document-Container, z. B. Microsoft Internet Explorer.
+ ActiveX-Steuerelement Selbstregistrierung, Prozess interne COM-Komponente, die häufig über ein visuelles Element verfügt, entweder zur Entwurfs-und zur Laufzeit. ActiveX-Steuerelemente können auch mit einem aktiven Dokument Container (z. b. Microsoft Internet Explorer) kommunizieren.
 
- ADISAPI (erweiterter Data Internet Server Application Programming Interface) ein ISAPI-DLL für Analyse, Automation-Steuerelement, Recordset Marshalling und MIME-Paket. Die ADISAPI-Komponente wird über die API von IIS (Internetinformationsdienste) bereitgestellt. Siehe auch *ISAPI*.
+ ADISAPI (Advanced Data Internet Server Application Programming Interface) eine ISAPI-DLL, die Analyse, Automatisierungssteuerung, Recordsetmarshalling und MIME-Verpackung bereitstellt. Die ADISAPI-Komponente funktioniert über die von Internetinformationsdienste (IIS) bereitgestellte API. Siehe auch *ISAPI*.
 
- Aggregate-Funktion In einer Abfrage, einer Funktion wie COUNT, AVG und STDEV, die einen Wert mit der alle Zeilen in einer Spalte einer Tabelle berechnet. Schreiben von Ausdrücken und beim Programmieren können Sie SQL-Aggregatfunktionen (einschließlich der drei oben aufgeführten) und Domain-Aggregatfunktionen, um verschiedene Statistiken zu ermitteln können.
+ Aggregatfunktion in einer Abfrage, eine Funktion wie count, AVG oder StDev, die einen Wert mit allen Zeilen in einer Spalte einer Tabelle berechnet. Beim Schreiben von Ausdrücken und in der Programmierung können Sie SQL-Aggregatfunktionen (einschließlich der drei oben aufgeführten) und Domänen Aggregatfunktionen verwenden, um verschiedene Statistiken zu bestimmen.
 
- Alias eine alternative-Name, den Sie eine Spalte oder einen Ausdruck in einer SQL-SELECT-Anweisung, häufig kürzere oder aussagekräftigere gewähren. ///BobSales ist z. B. den Alias in der folgenden SELECT-Anweisung: "Wählen Sie als ///BobSales aus" SalesDB "Wr-Sales". Ein Alias kann verwendet werden, um dynamische Zuweisung von Spalten zu Bindungen für das DataControl-Objekt.
+ Alias ein alternativer Name, den Sie an eine Spalte oder einen Ausdruck in einer SQL-SELECT-Anweisung übergeben, oft kürzer oder sinnvoller. Beispielsweise ist "bobsales" der Alias in der folgenden SELECT-Anweisung: "Select WR-Sales as bobsales from salesdb". Ein Alias kann verwendet werden, um dynamisch Spalten zum Steuern von Bindungen im DataControl-Objekt zuzuweisen.
 
- Apartmentthreading ein COM-Threadingmodell, in dem alle Aufrufe an ein Objekt in einem einzelnen Thread ausgeführt. Apartmentthreading COM synchronisiert und marshallt Aufrufe. Siehe auch *COMmddefcom*.
+ Apartment Threading ein COM-Threading Modell, in dem alle Aufrufe an ein Objekt in einem Thread erfolgen. In Apartment Threading synchronisiert und Marshalls com Aufrufe. Siehe auch *commddefcom*.
 
- asynchrone Vorgang eine Operation, die ohne warten auf Abschluss des Vorgangs die Steuerung an das aufrufende Programm zurückgibt. Bevor der Vorgang abgeschlossen ist, wird die codeausführung fortgesetzt. Siehe auch *synchronen Vorgang*.
+ asynchroner Vorgang ein Vorgang, der die Steuerung an das aufrufende Programm zurückgibt, ohne auf den Abschluss des Vorgangs zu warten. Bevor der Vorgang beendet ist, wird die Codeausführung fortgesetzt. Siehe auch *synchronen Vorgang*.
 
 ## <a name="b"></a>B
- Binden Eintrag eine Zuordnung zwischen einem Feld in einer Tabelle und eine Variable ein. In den Visual C++ für ADO-Erweiterungen **Recordset** Felder C/C++-Variablen zugeordnet werden.
+ Bindungs Eintrag eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den ADO-Visual C++ Erweiterungen werden **Recordsetfelder** C/C++-Variablen zugeordnet.
 
- Bitmaske ein numerischer Wert, die für ein Bit für Bit Wertvergleich mit anderen numerischen Werten, in der Regel für die Optionen eines Kennzeichens im Parameter oder Rückgabewerte vorgesehen werden. Dieser Vergleich erfolgt normalerweise für bitweise logische Operatoren wie z. B. **und** und **oder** in Visual Basic **&** und **&#124;** in C++.
+ Bitmaske ein numerischer Wert, der für einen bitweisen Wert Vergleich mit anderen numerischen Werten gedacht ist, in der Regel Optionen in Parameter-oder Rückgabe Werten. In der Regel erfolgt dieser Vergleich mit bitweisen logischen Operatoren, wie z. b. **and** und **&** **or** in Visual Basic und **&#124;** in C++.
 
- Zum Beispiel das ADO- **FieldAttributeEnum** Werte können als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen Sie, Sie möchten, um festzustellen, ob ein Feld aktualisiert wurde. Sie können mit dem folgenden Ausdruck in Visual Basic für diesen testen:`Field.Attributes AND adFldUpdatable`
+ Beispielsweise können die ADO **FieldAttributeEnum** -Werte als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen, Sie möchten ermitteln, ob ein Feld aktualisierbar ist. Dies können Sie mit dem folgenden Ausdruck in Visual Basic testen:`Field.Attributes AND adFldUpdatable`
 
- Wenn das Ergebnis "true", und klicken Sie dann das Feld aktualisierbar ist.
+ Wenn das Ergebnis true ist, ist das Feld aktualisierbar.
 
- versehen Sie einen Marker, der eine Zeile in einer Gruppe von Zeilen eindeutig identifiziert wird, sodass Benutzer schnell dorthin navigieren kann einem Lesezeichen.
+ Lesezeichen eines Markers, mit dem eine Zeile innerhalb einer Gruppe von Zeilen eindeutig identifiziert wird, damit ein Benutzer schnell dorthin navigieren kann.
 
- Geschäftsobjekt, das ein Objekt, das einen definierten Satz von Vorgängen, z. B. datenüberprüfung oder Geschäftslogik für die Regel ausgeführt. Geschäftsobjekte befinden sich normalerweise auf der mittleren Ebene.
+ Geschäftsobjekt ein Objekt, das einen definierten Satz von Vorgängen ausführt, z. b. Datenvalidierung oder Geschäftsregel Logik. Geschäftsobjekte befinden sich normalerweise auf der mittleren Ebene.
 
- Die Geschäftsregel die Kombination von Validierung Bearbeitungen, Anmeldung zur Überprüfung, DatenbankSuchen, Richtlinien und algorithmische Transformationen, die Möglichkeit, eines Unternehmens Geschäftsaktivitäten zu bilden. Auch bekannt als *Geschäftslogik*.
+ Geschäftsregel: die Kombination von Validierungs bearbeitvorgängen, Anmelde Überprüfungen, Daten Bank Suchvorgängen, Richtlinien und algorithmischen Transformationen, die die Geschäftstätigkeit eines Unternehmens darstellen. Wird auch als *Geschäftslogik*bezeichnet.
 
-## <a name="c"></a>c
- berechnete Ausdruck einen Ausdruck, der nicht konstant ist, aber, dessen Wert hängt von anderen Werten. Um ausgewertet werden, muss ein berechneter Ausdruck zu erhalten und berechnet Werte aus anderen Quellen, in der Regel in anderen Feldern oder Zeilen.
+## <a name="c"></a>C
+ Berechneter Ausdruck ein Ausdruck, der nicht konstant ist, aber dessen Wert von anderen Werten abhängt. Um ausgewertet zu werden, muss ein berechneter Ausdruck Werte aus anderen Quellen abrufen und berechnen, normalerweise in anderen Feldern oder Zeilen.
 
- Kapitel ein Verweis auf einen Bereich von Zeilen aus einer Datenquelle. In ADO ist ein Kapitel in der Regel ein Verweis auf einen anderen **Recordset**.
+ Kapitel ein Verweis auf einen Bereich von Zeilen aus einer Datenquelle. In ADO ist ein Kapitel in der Regel ein Verweis auf ein anderes **Recordset**.
 
- Kapitelspalten ermöglichen das Definieren einer *über-und untergeordneten* Beziehung, in denen die *übergeordneten* ist die **Recordset** mit der Kapitelspalte im und die  *untergeordnete* ist die **Recordset** durch das Kapitel dargestellt wird.
+ Mit Kapitel Spalten können Sie eine Beziehung zwischen über *geordneten* und untergeordneten Elementen definieren, wobei das übergeordnete Element das **Recordset** ist, das die Kapitel-Spalte enthält, *und das unter* *geordnete* Element das **Recordset** , das durch das Kapitel
 
- Kapitel-Alias ein Alias, der auf die Spalte verweist, die an das übergeordnete Element angefügt wird.
+ Chapter-Alias ein Alias, der auf die Spalte verweist, die an das übergeordnete Element angehängt ist.
 
- Eine Zuordnung von Zeichen im Zeichensatz zu ihren numerischen Werten. Unicode ist z. B. eine 16-Bit-Zeichensatz kann alle bekannten Zeichen codiert und als einen weltweiten Standard für zeichencodierung verwendet.
+ Zeichensatz: eine Zuordnung eines Satzes von Zeichen zu den numerischen Werten. Beispielsweise ist Unicode ein 16-Bit-Zeichensatz, der alle bekannten Zeichen codieren und als weltweiten Zeichen Codierungsstandard verwendet werden kann.
 
- untergeordnetes Element der abhängigen Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, die einem anderen übergeordneten Knoten (näher am Stamm). Siehe auch *untergeordnete-Alias*, *über-/ unterordnungsbeziehung*, *übergeordneten*.
+ untergeordnetes Element der abhängigen Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, der über einen anderen übergeordneten Knoten verfügt (näher an der Wurzel). Siehe auch untergeordneter *Alias*, über-/Unterordnungsbeziehung, über *geordnetes*Element. **
 
- untergeordnete-Alias einen Alias, der auf das untergeordnete Element verweist. Siehe auch *Alias*, *untergeordneten*.
+ untergeordneter Alias ein Alias, der auf das untergeordnete Element verweist. Siehe auch *Alias*, *unter*geordnet.
 
- CLSID (Klassen-ID) ein universally unique Identifier (UUID), eine COM-Komponente kennzeichnet. Jede COM-Komponente hat seines CLSID in der Windows-Registrierung, sodass sie von anderen Anwendungen geladen werden können. Siehe auch *ProgID*, *COM*.
+ CLSID (Klassen Bezeichner) ein universell eindeutiger Bezeichner (UUID), der eine COM-Komponente identifiziert. Jede COM-Komponente verfügt über Ihre CLSID in der Windows-Registrierung, sodass Sie von anderen Anwendungen geladen werden kann. Siehe auch *ProgID*, *com*.
 
- Client eine logische Ebene eines verteilten Systems, der in der Regel zu Daten und Prozesse, die Eingabe des Benutzers, enthält auch bezeichnet als die *Front-End*. In der Regel die Clientebene fordert Daten von einem Server, auf Grundlage von Eingaben, formatiert und das Ergebnis wird angezeigt. Siehe auch *mittleren Ebene*, *Daten Quellebene*, *verteilte Anwendung*.
+ Client Ebene eine logische Ebene eines verteilten Systems, das in der Regel Daten für den Benutzer darstellt und verarbeitet, manchmal auch als Front- *End*bezeichnet. In der Regel fordert die Client Ebene Daten von einem Server basierend auf der Eingabe an und formatiert und zeigt dann das Ergebnis an. Siehe auch *mittlere Ebene*, *Datenquellen Ebene*, *verteilte Anwendung*.
 
- COM (Component Object Model) ein binäres Standard, Objekte ermöglicht für die Zusammenarbeit in einer vernetzten Umgebung unabhängig von der Sprache, in der sie entwickelt wurden, oder auf welche Computer sie sich befinden. COM-basierte Technologien zählen ActiveX-Steuerelemente, Automatisierung und Objekt verlinken und einbetten (OLE). COM ermöglicht ein Objekt, dessen Funktionalität mit anderen Komponenten und hostanwendungen verfügbar zu machen. Sie definiert sowohl wie das Objekt selbst verfügbar macht und wie dieses Offenlegen über Prozesse und über Netzwerke hinweg funktioniert. COM definiert auch die Lebensdauer des Objekts.
+ COM (Component Object Model) ein binärer Standard, der es Objekten ermöglicht, in einer vernetzten Umgebung unabhängig von der Sprache, in der Sie entwickelt wurden, oder auf den Computern, in denen Sie sich befinden, zusammenzuarbeiten. Zu den COM-basierten Technologien zählen ActiveX-Steuerelemente, Automation und Object Linking and Embedding (OLE). COM ermöglicht einem Objekt, seine Funktionalität für andere Komponenten und für das Hosten von Anwendungen verfügbar zu machen. Es definiert sowohl, wie das Objekt sich selbst verfügbar macht, als auch, wie diese Offenlegung zwischen Prozessen und Netzwerk übergreifend funktioniert. COM definiert auch den Lebenszyklus des Objekts.
 
- COM-Komponente Binärdatei – wie .dll, .ocx und einige .exe-Dateien – unterstützt, die mit den COM-Standard für die Bereitstellung von Objekten. Eine solche Datei enthält Code für eine oder mehrere Klassenfactorys, COM-Klassen, Mechanismen für Registrierungseinträge, Code zum Laden und So weiter.
+ Binärdatei für COM-Komponenten, z. b. dll-Dateien, OCX-Dateien und einige exe-Dateien, die den com-Standard für die Bereitstellung von Objekten unterstützt. Eine solche Datei enthält Code für eine oder mehrere Klassenfactorys, com-Klassen, Registrierungs Eintrags Mechanismen, das Laden von Code usw.
 
- Vergleichsoperator ein Operator, der vergleicht zwei Ausdrücke und gibt einen booleschen Wert zurück.
+ Vergleichs Operator ein Operator, der zwei Ausdrücke vergleicht und einen booleschen Wert zurückgibt.
 
- Ein Kriterienparameter, der als ausgedrückt werden kann ">" (größer als), "\<" (kleiner als), "=" (gleich), "> =" (größer als oder gleich), "< =" (kleiner als oder gleich), "<>" (ungleich), oder "like" (Mustervergleich).
+ Ein Kriterienparameter, der als ">" (größer als), "\<" (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) ausgedrückt werden kann.
 
- Komponente, ein Objekt, das kapselt sowohl Code als auch Daten und eine wohldefinierte öffentlich zugängliche Dienste bereitstellt.
+ Komponente ein Objekt, das Daten und Code kapselt und einen gut angegebenen Satz öffentlich verfügbarer Dienste bereitstellt.
 
- Eine Implementierung der COM-Verbunddatei strukturiertem Speicher für Dateien. Eine Verbunddatei speichert separate Objekte in einer einzelnen, strukturierte-Datei, die aus zwei Hauptelementen: Storage-Objekte und Streamobjekten. Zusammen können sie wie ein Dateisystem in einer Datei.
+ Verbund Datei eine Implementierung von com-strukturiertem Speicher für Dateien. In einer Verbund Datei werden separate Objekte in einer einzelnen, strukturierten Datei gespeichert, die aus zwei Hauptelementen besteht: Speicher Objekte und Streamobjekte. In der gleichen Weise funktionieren Sie wie ein Dateisystem in einer Datei.
 
- Eine Anzahl von einzelnen Dateien, die zusammen in einer physischen Datei gebunden. Jede einzelne Datei in einer Verbunddatei kann zugegriffen werden, als handele es sich um eine einzelne physische Datei.
+ Eine Reihe von einzelnen Dateien, die in einer physischen Datei miteinander verbunden sind. Auf jede einzelne Datei in einer Verbund Datei kann genauso zugegriffen werden, als ob es sich um eine einzelne physische Datei handelt.
 
- Konstante ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) dienen in Ihrem Code anstelle von tatsächlichen Werten, z. B. **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const AdUseClient = 3). Siehe auch *Enumeration*.
+ Konstante ein numerischer Wert oder ein Zeichen folgen Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können in Ihrem Code anstelle von tatsächlichen Werten verwendet werden. **adUseClient** ist z. b. eine Konstante, deren Wert 3 ist. (Konstant adUseClient = 3). Siehe auch *Enumeration*.
 
- Cursor für eine Datenbankelement, das Datensatznavigation, aktualisierbarkeit der Daten und die Sichtbarkeit der Änderungen, die von anderen Benutzern in der Datenbank steuert.
+ Cursor ein Daten Bank Element, das die Daten Satz Navigation, die Aktualisierbarkeit von Daten und die Sichtbarkeit von Änderungen, die von anderen Benutzern an der Datenbank vorgenommen wurden, steuert.
 
 ## <a name="d"></a>D
- Datenbindung verknüpft die Objekte oder Steuerelemente von einer Anwendung mit einer Datenquelle. Ein Steuerelement einer Datenquelle zugeordnet wird aufgerufen, eine *vom datengebundenen Steuerelement*.
+ Datenbindung der Prozess der Zuordnung der Objekte oder Steuerelemente einer Anwendung zu einer Datenquelle. Ein Steuerelement, das einer Datenquelle zugeordnet ist, wird als *Daten gebundenes Steuer*Element bezeichnet.
 
- Der Inhalt eines datengebundenen Steuerelements werden Werte aus einer Datenbank zugeordnet. Z. B. ein Rastersteuerelement gebunden ist, die eine **Recordset** Objekt kann es sich aktualisiert, wenn die Zeilen in der **Recordset** werden aktualisiert. Neue Werte werden bei abgerufen, indem die **Recordset**, neue Werte werden im Raster angezeigt.
+ Der Inhalt eines Daten gebundenen Steuer Elements ist den Werten aus einer Datenbank zugeordnet. Beispielsweise kann ein Raster Steuerelement, das an ein **Recordset** -Objekt gebunden ist, aktualisiert werden, wenn die Zeilen im **Recordset** aktualisiert werden. Wenn neue Werte durch das **Recordset**abgerufen werden, werden im Raster neue Werte angezeigt.
 
- der Datenanbieter Software, die Daten in eine ADO-Anwendung verfügbar macht entweder direkt oder über einen Dienstanbieter. Siehe auch "Dienstanbieter".
+ Datenanbieter Software, die Daten entweder direkt oder über einen Dienstanbieter für eine ADO-Anwendung verfügbar macht. Siehe auch Dienstanbieter.
 
- Eine Technik, die für die datenstrukturierung eine formalisierte Syntax verwenden (aufgerufen **Form Sprache**) ein spezielles definieren **Recordset** Objekt (Namens eine *Recordset strukturiert*), enthält nicht nur Daten, aber auch Verweise auf andere **Recordset** Objekten und/oder berechnete Werte basierend auf den anderen **Recordset** Objekte.
+ Daten, die eine Technik verwenden, die eine formalisierte Syntax (sogenannte **Shape-Sprache**) verwendet, um ein spezielles **Recordset** -Objekt (als *geformtes Recordset*bezeichnet) zu definieren, das nicht nur Daten enthält, sondern auch Verweise auf andere **Recordsetobjekte** und/oder berechnete Werte basierend auf diesen anderen **Recordset** -Objekten.
 
- die Datenquelle eine logische Ebene eines verteilten Systems, das einen Computer mit einem DBMS, wie z. B. eine SQL Server-Datenbank darstellt. Siehe auch *Clientebene*, *mittleren Ebene*, *verteilte Anwendung*.
+ Datenquellen Ebene eine logische Ebene eines verteilten Systems, die einen Computer darstellt, auf dem ein DBMS ausgeführt wird, z. b. eine SQL Server Datenbank. Siehe auch *Client Ebene*, *mittlere Ebene*, *verteilte Anwendung*.
 
- DCOM-A Wire-Protokoll, mit dem COM-Komponenten in einem Netzwerk direkt miteinander kommunizieren kann. Siehe auch *COM*, *Komponente*.
+ DCOM ein Wire-Protokoll, das COM-Komponenten die direkte Kommunikation über ein Netzwerk ermöglicht. Siehe auch *com*, *Komponente*.
 
- DDL (Data Definition Language) diese Anweisungen in SQL, die nicht an, um zu bearbeiten, müssen Daten zu definieren,. Das Schema einer Datenbank erstellt oder geändert werden, mit der DDL. Z. B. **CREATE TABLE**, **CREATE INDEX**, **GRANT**, und **widerrufen** SQL-DDL-Anweisungen sind.
+ DDL (Data Definition Language, Datendefinitionssprache) diese Anweisungen in SQL, die im Gegensatz zur Bearbeitung von Daten definieren. Das Schema einer Datenbank wird mit DDL erstellt oder geändert. **CREATE TABLE**, **Create Index**, **Grant**und **revosind z** . b. SQL-DDL-Anweisungen.
 
- Standardmäßig stream einen Text- oder Binärdaten-Datenstrom (dargestellt durch eine **Stream** Objekt) zugeordnete **Datensatz** oder **Recordset** Objekte mit bestimmten OLE DB-Anbieter z. B. der Microsoft OLE DB-Anbieter für Internet Publishing. Der Standarddatenstrom enthält normalerweise den Inhalt einer Datei wie z. B. der HTML-Code für das Stammverzeichnis der Website.
+ Standardmäßig streamen Sie einen Text-oder Binärdaten Strom (dargestellt durch ein **Streamobjekt** ), der **Daten Satz** -oder recordsetobjekten zugeordnet ist, wenn bestimmte OLE DB Anbieter verwendet werden, z. b. der Microsoft OLE DB-Anbieter für die Internet **** Der Standarddaten Strom enthält normalerweise den Inhalt einer Datei, z. b. den HTML-Code für den Stamm einer Website.
 
- verteilte Anwendung A-Programm geschrieben, sodass die Verarbeitung auf mehreren Computern über ein Netzwerk geteilt werden kann. In der Regel eine verteilte Anwendung wird in unterteilt Präsentation, Geschäftslogik und Daten Store Ebenen oder *Ebenen*. Siehe auch Client-Ebene, die mittlere Ebene und die Datenebene für die Quelle.
+ verteilte Anwendung: ein Programm, das so geschrieben ist, dass die Verarbeitung über ein Netzwerk auf mehrere Computer aufgeteilt werden kann. Eine verteilte Anwendung ist in der Regel in Präsentations-, Geschäftslogik-und Daten *Speicherebenen unterteilt.* Siehe auch Client Ebene, mittlere Ebene, Datenquellen Ebene.
 
- Recordset A getrennt **Recordset** Objekt im Cache des Clients, die über eine liveverbindung mit dem Server nicht mehr verfügt. Wenn die ursprüngliche Datenquelle für einige Grund – z. B. Aktualisieren von Daten, zugegriffen werden muss muss die Verbindung erneut hergestellt werden. Allerdings die Auflistungen, Eigenschaften und Methoden von einem nicht verbundenen **Recordset** kann weiterhin zugegriffen werden.
+ getrennte Recordsets ein **Recordset** -Objekt in einem Client Cache, das keine Live Verbindung mit dem Server mehr aufweist. Wenn die ursprüngliche Datenquelle aus irgendeinem Grund erneut aufgerufen werden muss, z. b. beim Aktualisieren von Daten, muss die Verbindung wieder hergestellt werden. Auf die Auflistungen, Eigenschaften und Methoden eines getrennten **Recordsets** kann jedoch weiterhin zugegriffen werden.
 
- DML (Data Manipulation Language) diese Anweisungen in SQL, die nicht an, um zu definieren, Daten zu bearbeiten. Die Werte in einer Datenbank ausgewählt und mit DML geändert. Z. B. **einfügen**, **UPDATE**, **löschen**, und **wählen** SQL-DML-Anweisungen sind.
+ DML (Daten Bearbeitungs Sprache) diese Anweisungen in SQL, die im Gegensatz zum Definieren von Daten bearbeitet werden. Die Werte in einer Datenbank werden mit DML ausgewählt und geändert. **Insert**, **Update**, **Delete**und **Select** sind z. b. SQL DML-Anweisungen.
 
- Ein Anbieter eine besondere Klasse von Anbietern, die Ordner und Dokumente zu verwalten. Wenn ein Dokument durch dargestellt wird ein **Datensatz** Objekt oder einen Ordner von Dokumenten wird dargestellt, durch eine **Recordset** Objekts, die ein Anbieter füllt diese Objekte mit einem eindeutigen Satz von Feldern, die Beschreiben Sie die Eigenschaften des Dokuments, anstatt das Dokument selbst. Siehe auch-Ressourceneintrag.
+ Dokument Quellen Anbieter eine spezielle Klasse von Anbietern, die Ordner und Dokumente verwalten. Wenn ein Dokument durch ein **Datensatz** -Objekt dargestellt wird oder ein Ordner mit Dokumenten durch ein **Recordset** -Objekt dargestellt wird, füllt der Dokument Quellen Anbieter diese Objekte mit einem eindeutigen Satz von Feldern auf, die die Merkmale des Dokuments beschreiben, anstelle des eigentlichen Dokuments. Siehe auch Ressourcen Daten Satz.
 
- DSN (Data Source Name) die Auflistung der Informationen verwendet, um Ihre Anwendung mit einer bestimmten ODBC-Datenbank verbinden. Der ODBC-Treiber-Manager verwendet diese Informationen, um eine Verbindung mit der Datenbank zu erstellen. Ein DSN kann in einer Datei (Datei-DSN) oder in der Windows-Registrierung (Computer-DSN) gespeichert werden.
+ DSN (Datenquellen Name) die Sammlung von Informationen, die zum Verbinden Ihrer Anwendung mit einer bestimmten ODBC-Datenbank verwendet werden. Der ODBC-Treiber-Manager verwendet diese Informationen, um eine Verbindung mit der-Datenbank herzustellen. Ein DSN kann in einer Datei (einem Datei-DSN) oder in der Windows-Registrierung (einem Computer-DSN) gespeichert werden.
 
- dynamische Eigenschaft eine Eigenschaft für einen Datenanbieter oder die Cursor-Dienst spezifisch. Die **Eigenschaften** Auflistung eines Objekts wird automatisch mit diesen aufgefüllt ("dynamisch"). Ein Objekt hat keine dynamischen Eigenschaften, bis er mit einer Datenquelle über einen bestimmten Datenanbieter verbunden ist. Siehe auch Daten-Anbieter, den Cursor.
+ dynamische Eigenschaft eine Eigenschaft, die für einen Datenanbieter oder den Cursor Dienst spezifisch ist. Die **Properties** -Auflistung eines Objekts wird automatisch (dynamisch) aufgefüllt. Ein-Objekt besitzt keine dynamischen Eigenschaften, bis es über einen bestimmten Datenanbieter mit einer Datenquelle verbunden ist. Siehe auch Datenanbieter, Cursor.
 
 ## <a name="e"></a>E
- Die Liste der änderungsbereiche ein benannter Konstanten. Aufgezählte Werte müssen nicht eindeutig sein. Jedoch muss der Name der einzelnen Werte innerhalb des Bereichs eindeutig sein, in dem die Enumeration definiert ist. In ADO Enumerationen werden verwendet, für numerische Parameter und Rückgabewerte, zum Hinzufügen von Bedeutungen zu ADO-Code und den Entwickler die numerischen Werte (die sich von Version zu Version ändern kann) zu schützen. Um beispielsweise eine statische öffnen **Recordset**, verwenden die **"adOpenStatic"** Enumerationswert: `Recordset.Open ,,adOpenStatic`
+ Enumeration eine Liste benannter Konstanten. Enumerationswerte müssen nicht eindeutig sein. Allerdings muss der Name jedes Werts innerhalb des Bereichs, in dem die Enumeration definiert ist, eindeutig sein. In ADO werden Enumerationen für numerische Parameter und Rückgabewerte verwendet, um die Bedeutung von ADO-Code hinzuzufügen und um den Entwickler vor den numerischen Werten zu schützen (die sich von Version zu Version ändern können). Verwenden Sie z. b. den Enumerationswert " **adOpenStatic** ", um ein statisches **Recordset**zu öffnen:`Recordset.Open ,,adOpenStatic`
 
- Auch bezeichnet als *Enumerationskonstante*. Siehe auch *Konstanten*.
+ Wird auch als *Enumerationskonstante*bezeichnet. Siehe auch *Konstante*.
 
- das Ereignis eine Aktion, die von einem Objekt, für die Sie Code aus, um Antworten schreiben können erkannt. Ereignisse können durch Ausführung des Befehls, Transaktionsabschlusses, Recordsetnavigation und Daten aktualisiert werden, unter anderem generiert werden. Siehe auch *Ereignishandler*.
+ Ereignis eine Aktion, die von einem-Objekt erkannt wird, für das Sie Code schreiben können, der antwortet. Ereignisse können unter anderem durch Befehlsausführung, Transaktions Vervollständigung, Recordsetnavigation und Datenaktualisierungen generiert werden. Siehe auch *Ereignishandler*.
 
- -Ereignishandler ist ein Ereignishandler im Code, der ausgeführt wird, wenn ein Ereignis auftritt. Siehe auch: Ereignis.
+ Ereignishandler ein Ereignishandler ist der Code, der ausgeführt wird, wenn ein Ereignis auftritt. Siehe auch Ereignis.
 
 ## <a name="h"></a>H
- für eine Handlerroutine, die eine häufige und relativ einfache Bedingung oder ein Vorgang wie die fehlerverwaltung Wiederherstellungs- oder verwaltet.
+ Handler eine Routine, die eine gängige und relativ einfache Bedingung oder Operation verwaltet, z. b. Fehlerwiederherstellung oder Datenverwaltung.
 
- hierarchische Recordsets A **Recordset** , enthält eine andere **Recordset**. Siehe auch Daten strukturieren, Kapitel.
+ Hierarchisches Recordset ein **Recordset** , das ein anderes **Recordset**enthält. Weitere Informationen finden Sie unter Daten Strukturierung (Kapitel).
 
- Weitere Informationen finden Sie unter [den Zugriff auf Zeilen in einem hierarchischen Recordset](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ Weitere Informationen finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
- Hierarchie im Allgemeinen ist eine Hierarchie ist eine geordneten Struktur mit einer oberen Ebene und untergeordneten Ebenen. In ADO hierarchische **Recordsets** werden verwendet, um die über-/ unterordnungsbeziehung zwischen einem Datensatz und ein Kapitel darstellen. Auch in ADO **Datensatz** und **Stream** Objekte können verwendet werden, z. B. einen Ordner und Dokumente der hierarchischen Struktur auf. ADO MD enthält auch **Hierarchie** -Objekten zur Darstellung einer Beziehung zwischen den Ebenen einer Dimension in einem OLAP-Cube. Siehe auch hierarchische Recordsets, die über-/ unterordnungsbeziehung, die im Kapitel, die Struktur.
+ Hierarchie im Allgemeinen ist eine Hierarchie eine Rangstruktur mit einer obersten Ebene und untergeordneten Ebenen. In ADO werden hierarchische **Recordsets** verwendet, um die über-/Unterordnungsbeziehung zwischen einem Datensatz und einem Kapitel darzustellen. In ADO können auch **Datensatz** -und **Stream** -Objekte verwendet werden, um auf hierarchische Struktur Strukturen wie z. b. einen Ordner und Dokumente zuzugreifen. ADO MD umfasst auch **Hierarchy** -Objekte, die eine Beziehung zwischen den Ebenen einer Dimension in einem OLAP-Cube darstellen. Siehe auch hierarchische Recordsets, über-/Unterordnungsbeziehung, Chapter, Tree.
 
 ## <a name="i-l"></a>I-L
- ISAPI (Internet Server Application Programming Interface) eine Reihe von Funktionen für Internetserver, z. B. eine Windows NT® Server/Windows 2000 Server, die Microsoft® Internet Information Services (IIS) ausgeführt.
+ ISAPI (Internet Server Application Programming Interface) eine Reihe von Funktionen für Internet Server, z. b. ein Windows NT® Server/Windows 2000-Server, auf dem Microsoft® Internetinformationsdienste (IIS) ausgeführt wird.
 
- Taste eine oder mehrere Spalten in einer Tabelle, die eine Zeile eindeutig identifizieren, häufig verwendet, um eine Tabelle zu indizieren.
+ Schlüssel eine Spalte oder Spalten in einer Tabelle, die eine Zeile eindeutig identifizieren; wird häufig verwendet, um eine Tabelle zu indizieren.
 
 ## <a name="m"></a>M
- Marshalling das Verpacken, senden und Entpackens Schnittstelle Methodenparameter Prozess oder Thread hinweg.
+ Marshalling des Prozesses zum Verpacken, senden und entpacken von Schnittstellen Methoden Parametern über Thread-oder Prozess Grenzen hinweg.
 
- mittlere Ebene die logische Ebene in einem verteilten System zwischen einer Benutzeroberfläche "oder" Webclient "und" der Datenbank. Dies ist in der Regel an, an dem Geschäftsobjekte instanziiert werden. Die mittlere Ebene ist eine Sammlung von Geschäftsregeln und Funktionen, die beim Abrufen von Daten ausgeführt werden. Sie erreichen dies anhand von Geschäftsregeln, die sich häufig ändern können und werden daher gekapselt, die in Komponenten, die von der Anwendungslogik selbst physisch getrennt sind. Auch bekannt als *Anwendungsserverebene*. Siehe auch verteilte Anwendung, die Clientebene, datenebenenanwendungs-Quelle.
+ mittlere Ebene die logische Ebene in einem verteilten System zwischen einer Benutzeroberfläche oder einem Webclient und der Datenbank. In der Regel werden Geschäftsobjekte instanziiert. Die mittlere Ebene ist eine Auflistung von Geschäftsregeln und-Funktionen, die nach dem Empfang von Informationen generieren und verarbeiten. Dies erreichen Sie mithilfe von Geschäftsregeln, die sich häufig ändern können und daher in Komponenten gekapselt werden, die physisch von der Anwendungslogik getrennt sind. Wird auch als *Anwendungsserver Ebene*bezeichnet. Siehe auch verteilte Anwendung, Client Ebene, Datenquellen Ebene.
 
- Ein Internetprotokoll MIME (Multi-Purpose Internet Mail Extension) entwickelt sich ursprünglich auf um Exchange von e-Mail-Nachrichten mit umfassenden Inhalten über heterogene Netzwerk-, Computer- und e-Mail-Umgebungen zu erlauben. In der Praxis wurde MIME auch übernommen und erweitert, indem nicht-e-Mail-Anwendungen.
+ MIME (Mehrzweck-Internet Mail Erweiterung) ein Internetprotokoll, das ursprünglich für den Austausch von elektronischen e-Mail-Nachrichten mit umfangreichen Inhalten in heterogenen Netzwerk-, Computer-und e-Mail-Umgebungen entwickelt In der Praxis wurde MIME auch von nicht-e-Mail-Anwendungen übernommen und erweitert.
 
- MIME ist ein Standard, der binäre Daten zu veröffentlichen und Lesen Sie auf das Internet ermöglicht. Der Header einer Datei mit Binärdaten enthält den MIME-Typ der Daten. Dieser informiert Clientprogramme (-Web-Browser und e-Mail-Pakete, z. B.), müssen sie die Daten auf andere Weise zu behandeln, als einfachen Text. Beispielsweise enthält der Header eines Webdokuments eine JPEG-Grafik mit den MIME-Typ für das JPEG-Datei-Format. Dies ermöglicht einen Browser zum Anzeigen der Datei mit der JPEG-Viewer, wenn ein solcher vorhanden ist.
+ MIME ist ein Standard, der das Veröffentlichen und Lesen von Binärdaten im Internet ermöglicht. Der Header einer Datei mit Binärdaten enthält den MIME-Typ der Daten. Dadurch werden Client Programme (z.b. Webbrowser und e-Mail-Pakete) darüber informiert, dass Sie die Daten auf eine andere Weise verarbeiten müssen, als Sie gerade Text verarbeiten. Beispielsweise enthält der-Header eines Webdokuments, das eine JPEG-Grafik enthält, den MIME-Typ, der für das JPEG-Dateiformat spezifisch ist. Dadurch kann ein Browser die Datei mit dem zugehörigen JPEG-Viewer anzeigen, sofern vorhanden.
 
 ## <a name="n-o"></a>N-O
- Knoten ein Element in einer hierarchischen Baumstruktur. Ein Knoten kann der Stamm oder das untergeordnete Element eines anderen Knotens sein. Ein Knoten kann auch das übergeordnete Element des mehrere untergeordnete Elemente sein. Siehe auch "Hierarchie", "Struktur", "Root", "untergeordneten", "übergeordneten".
+ Knoten ein Element in einer hierarchischen Baumstruktur. Ein Knoten kann der Stamm oder das untergeordnete Element eines anderen Knotens sein. Ein Knoten kann auch das übergeordnete Element mehrerer untergeordneter Elemente sein. Siehe auch Hierarchy, Tree, root, Child, Parent.
 
- Objekt die Variable A-Variable, die einen Verweis auf ein Objekt enthält. Z. B. `objCustomObject` ist eine Variable, die auf ein Objekt des Typs Benutzerobjekt verweist:`Set objCustomObject = CreateObject(adodb.Recordset)`
+ Objekt Variable eine Variable, die einen Verweis auf ein Objekt enthält. Beispielsweise `objCustomObject` ist eine Variable, die auf ein Objekt vom Typ customobject zeigt:`Set objCustomObject = CreateObject(adodb.Recordset)`
 
- ODBC (Open Database Connectivity) verwendet eine standardmäßige programming Language-Schnittstelle, eine Verbindung mit einer Vielzahl von Datenquellen herstellen. Dies wird in der Regel über die Systemsteuerung, zugegriffen, in dem-Datenquellennamen (DSNs) zugewiesen werden kann, zu bestimmten ODBC-Treiber verwenden.
+ ODBC (Open Database Connectivity) eine Schnittstelle für die Programmiersprache Standard, die zum Herstellen einer Verbindung mit einer Vielzahl von Datenquellen verwendet wird. Dies erfolgt in der Regel über die Systemsteuerung, in der Datenquellen Namen (DSNs) zugewiesen werden können, um bestimmte ODBC-Treiber zu verwenden.
 
- OLE DB ein Satz von Schnittstellen, die Daten aus einer Vielzahl von Quellen mithilfe von COM verfügbar zu machen OLE DB-Schnittstellen bieten Anwendungen mit einheitlichen Zugriff auf Daten in verschiedenen Datenquellen. Diese Schnittstellen unterstützen die Menge der DBMS-Funktionen, die für die Datenquelle, sodass die Daten gemeinsam nutzen. Siehe auch COM.
+ OLE DB einen Satz von Schnittstellen, die Daten aus einer Vielzahl von Quellen mithilfe von com verfügbar machen. OLE DB-Schnittstellen bieten Anwendungen einheitlichen Zugriff auf Daten, die in verschiedenen Informationsquellen gespeichert sind. Diese Schnittstellen unterstützen die Menge der DBMS-Funktionalität, die für die Datenquelle geeignet ist, sodass Sie Ihre Daten gemeinsam nutzen können. Siehe auch com.
 
- optimistische Sperre eine Art von Sperre in dem die Datenseite mit einem oder mehreren Datensätzen, inklusive dem Datensatz, der bearbeitet wird, ist nicht verfügbar ist, anderen Benutzern nur bei den Datensatz aktualisiert wird durch die **Update** -Methode ist jedoch verfügbar vor und nach dem Aufruf von **Update**.
+ vollständiges Sperren eines Sperrtyps, bei dem die Datenseite mit einem oder mehreren Datensätzen, einschließlich des zu bearbeitenden Datensatzes, für andere Benutzer nicht verfügbar ist, während der Datensatz von der **Update** -Methode aktualisiert wird, aber vor und nach dem **Update Update**verfügbar ist.
 
- Optimistische Sperre verwendet wird bei der **Recordset** Objekt wird geöffnet, mit der **LockType** Parameter oder die Eigenschaft auf festgelegt **AdLockOptimistic** oder  **AdLockBatchOptimistic**. Siehe auch pessimistische Sperren.
+ Die optimistische Sperre wird verwendet, wenn das **Recordset** -Objekt geöffnet wird, wobei der **LockType** -Parameter oder die-Eigenschaft auf **adlockoptimioder** **adlockbatchoptimifest**gelegt ist. Siehe auch Pessimistisches Sperren.
 
- Ordinalwert die numerische Position eines Elements innerhalb einer Bestellung. In einer ADO-Sammlung ist der Ordinalwert des ersten Elements 0 (null). Das nächste Element ist eins (1), und So weiter.
+ Ordinalwert die numerische Position eines Elements in einer Bestellung. In einer ADO-Auflistung ist der Ordinalwert des ersten Elements NULL (0). Das nächste Element ist eins (1) usw.
 
 ## <a name="p"></a>P
- parametrisierten Befehl A-Abfrage oder einen Befehl, mit dem Sie Parameterwerte festlegen, bevor der Befehl ausgeführt wird. Z. B. eine SQL-Zeichenfolge durch Einbetten von parametermarkierungen in der SQL-Zeichenfolge parametrisiert werden kann (festgelegt durch die "?" Zeichen). Die Anwendung dann gibt Werte für jeden Parameter und führt den Befehl.
+ parametrisierter Befehl: eine Abfrage oder ein Befehl, mit dem Sie Parameterwerte festlegen können, bevor der Befehl ausgeführt wird. Beispielsweise kann eine SQL-Zeichenfolge parametrisiert werden, indem Parameter Markierungen in der SQL-Zeichenfolge eingebettet werden (durch das Zeichen "?" gekennzeichnet). Die Anwendung gibt dann Werte für jeden Parameter an und führt den Befehl aus.
 
- übergeordnete Element der steuernde Seite einer hierarchischen Beziehung. In einer hierarchischen Struktur hat ein übergeordnetes Element ein oder mehrere untergeordnete Knoten direkt darunter liegenden in der Hierarchie. Siehe auch Alias des übergeordneten Elements, die über-/ unterordnungsbeziehung, die untergeordnete.
+ übergeordnetes Element der Steuerungs Seite einer hierarchischen Beziehung. In einer hierarchischen Struktur hat ein übergeordnetes Element mindestens einen untergeordneten Knoten in der Hierarchie direkt darunter. Siehe auch übergeordnete-Alias-, über-/Unterordnungsbeziehung, untergeordnet.
 
- übergeordnete-Alias einen Alias, der auf das übergeordnete Element verweist. Siehe auch alias übergeordneten.
+ Parent-Alias ein Alias, der auf das übergeordnete Element verweist. Siehe auch Alias, übergeordnetes Element.
 
- über-und untergeordnete Beziehung eine Beziehung in einer hierarchischen Struktur, in der das übergeordnete Element eine Ebene höher und direkt mit einem oder mehreren untergeordneten verknüpft ist. Ein untergeordnetes Element ist eine Ebene unter, und es muss ein übergeordnetes Element aufweisen. Siehe auch übergeordnete, untergeordnete.
+ über-/Unterordnungsbeziehung eine Beziehung in einer hierarchischen Struktur, in der das übergeordnete Element eine Ebene höher und direkt mit einem oder mehreren untergeordneten Elementen verknüpft ist. Ein untergeordnetes Element ist eine Ebene niedriger und muss über ein übergeordnetes Element verfügen. Siehe auch übergeordnete, untergeordnete Elemente.
 
- eingeschränktes Sperren eine Art von Sperre in der ist der Seite enthält ein oder mehrere Datensätze, einschließlich des Datensatzes, der bearbeitet wird, nicht verfügbar, anderen Benutzern, um sicherzustellen, dass eine Aktualisierung vorgenommen werden. Pessimistische Sperren Verhalten wird vom OLE DB-Anbieter definiert. In der Regel Datensätze werden nach dem Bearbeiten gesperrt, und bleiben nicht verfügbar, bis die **Update** -Methode abgeschlossen wurde.
+ Pessimistisches Sperren eines Sperrtyps, bei dem die Seite, die einen oder mehrere Datensätze enthält, einschließlich des Datensatzes, der bearbeitet wird, für andere Benutzer nicht verfügbar ist, um sicherzustellen, dass ein Update durchgeführt wird. Das pessimistische Sperr Verhalten wird vom OLE DB-Anbieter definiert. In der Regel werden Datensätze bei der Bearbeitung gesperrt und bleiben solange nicht verfügbar, bis die **Update** -Methode abgeschlossen ist.
 
- Pessimistische Sperrung ist aktiviert. wenn die **Recordset** Objekt wird geöffnet, mit der **LockType** Parameter oder die Eigenschaft auf festgelegt **AdLockPessimistic**. Finden Sie ebenfalls optimistische Sperren.
+ Die pessimistische Sperrung wird aktiviert, wenn das **Recordset** -Objekt geöffnet wird, wenn der **LockType** -Parameter oder die Eigenschaft auf **adlockpessimifest**gelegt ist. Siehe auch optimistische Sperren.
 
- Pooling von zur Optimierung der Leistung basierend auf Sammlungen von vorab zugeordneten Ressourcen, z. B. Objekte oder Datenbankverbindungen verwenden. Es ist sehr viel effizienter, eine vorhandene Ressource aus dem Pool als zum Erstellen einer neuen Ressource zu zeichnen.
+ Pooling einer Leistungsoptimierung basierend auf der Verwendung von Sammlungen vorab zugeordneter Ressourcen, z. b. von Objekten oder Datenbankverbindungen. Es ist effizienter, eine vorhandene Ressource aus dem Pool zu zeichnen, als eine neue Ressource zu erstellen.
 
- ProgID (Programmbezeichner) ein eindeutiger Name der Windows-Registrierung einer COM-Anwendung zugeordnet. Die ProgID für eine ADO-Verbindung ist "ADODB. Verbindung". Siehe auch CLSID, COM.
+ ProgID (programmgesteuerte Kennung) ein eindeutiger Name, der der Windows-Registrierung durch eine COM-Anwendung zugeordnet ist. Die ProgID für eine ADO-Verbindung ist "ADODB. Verbindung ". Siehe auch CLSID, com.
 
- Proxy ein Schnittstellenspezifische-Objekt, das Parameter-Marshalling bereitstellt, und Kommunikation, die ein Client benötigt, ein Anwendungsobjekt aufrufen, die in einer anderen ausführungsumgebung, z. B. in einem anderen Thread oder in einem anderen Prozess ausgeführt wird. Der Proxy befindet, mit dem Client und kommuniziert mit einem entsprechenden Stub, der sich auf das Anwendungsobjekt ist, die aufgerufen wird. Siehe auch Stub.
+ Proxy ein Schnittstellen spezifisches Objekt, das den Parametermarshalling und die Kommunikation bereitstellt, die ein Client zum Aufrufen eines Anwendungs Objekts benötigt, das in einer anderen Ausführungsumgebung ausgeführt wird, z. b. in einem anderen Thread oder in einem anderen Prozess. Der Proxy befindet sich beim Client und kommuniziert mit einem entsprechenden Stub, der sich mit dem aufgerufenen Anwendungs Objekt befindet. Siehe auch Stub.
 
 ## <a name="r"></a>R
- relative URL eine qualifizierte teilweise URL, der angibt, eine Ressource im Internet oder ein Intranet, deren Speicherort relativ zum Ausgangspunkt durch einen absoluten URL oder einen gleichwertigen Objekte von ADO-Verbindung angegeben ist. Gültig, die verketteten absolute und relative URLs bilden eine vollständige URL ein. Siehe auch URL und die absolute URL.
+ relative URL eine teilweise qualifizierte URL, die eine Ressource im Internet oder ein Intranet angibt, dessen Standort relativ zu einem Startpunkt ist, der durch ein absolute URL oder ein entsprechendes ADO-Verbindungs Objekt angegeben wird. In der Tat werden die verketteten absoluten und relativen URLs eine komplette URL. Siehe auch URL und absolute URL.
 
- die Remotedatenquelle einer Datenquelle, die vorhanden ist, auf einen anderen Computer, und nicht auf dem lokalen System (, in dem die Clientanwendung ausgeführt wird).
+ Remote Datenquelle: eine Datenquelle, die auf einem anderen Computer vorhanden ist, und nicht auf dem lokalen System (auf dem die Client Anwendung ausgeführt wird).
 
- Datensatz A-Ressourceneintrag aus ein Anbieter, der Felder für die Definition und die Beschreibung eines Ordners oder Dokuments enthält. Das Dokument selbst befindet sich nicht im Ressourcendatensatz jedoch in der Regel von der Standard-Stream oder ein Feld in den Ressourceneintrag, die mit einer URL zugegriffen werden kann. Siehe auch Quellanbieter "Dokument", "Standard-Stream, URL.
+ Ressource zeichnet einen Datensatz von einem Dokument Quellen Anbieter auf, der Felder für die Definition und Beschreibung eines Ordners oder Dokuments enthält. Das Dokument selbst ist nicht im Ressourcen Daten Satz enthalten, aber in der Regel kann der Standarddaten Strom oder ein Feld im Ressourcen Daten Satz mit einer URL darauf zugreifen. Siehe auch Dokument Quellen Anbieter, Standardstream, URL.
 
- Rowset ein Satz von Zeilen aus einer Datenquelle, alle das gleiche Feldschema. Ein Rowset kann alle oder einige Felder aus einer Tabelle darstellen. Ein Rowset kann auch eine virtuelle Tabelle, die von einer Abfrage oder einen von zwei oder mehr Tabellen Join erstellt darstellen. In ADO Rowsets dargestellt werden, indem **Recordset** Objekte.
+ Rowset eine Reihe von Zeilen aus einer Datenquelle, die alle über das gleiche Feld Schema verfügen. Ein Rowset kann alle oder einige Felder aus einer Tabelle darstellen. Ein Rowset kann auch eine virtuelle Tabelle darstellen, die durch eine Abfrage oder einen Join von mindestens zwei Tabellen erstellt wird. In ADO werden Rowsets durch **Recordset** -Objekte dargestellt.
 
-## <a name="s"></a>S
- Beschränken Sie den Bereich der Referenz für ein Objekt oder eine Variable oder eine Reihe von Datensätzen in einer Sicht oder Tabelle. Lokale Variablen können beispielsweise nur innerhalb der Prozedur verwiesen werden in denen sie definiert wurden. Öffentliche Variablen, die von überall in der Anwendung zugegriffen werden. Objekte, z. B. der aktuellen Datenbank befinden sich im Gültigkeitsbereich, wenn sie in den Suchpfad für definiert sind. Datensatzbereiche können mit einer Bereichsklausel, in vielen Befehlen angegeben werden.
+## <a name="s"></a>E
+ Bereich der Verweis Bereich für ein Objekt oder eine Variable oder einen Bereich von Datensätzen in einer Sicht oder Tabelle. Beispielsweise kann auf lokale Variablen nur innerhalb der Prozedur verwiesen werden, in der Sie definiert wurden. Auf öffentliche Variablen kann von überall in der Anwendung aus zugegriffen werden. -Objekte, z. b. die aktuelle Datenbank, befinden sich im Gültigkeitsbereich, wenn Sie sich im definierten Suchpfad befinden. Daten Satz Bereiche können in vielen Befehlen mit einer Scope-Klausel angegeben werden.
 
- Dienstanbieter-Software, die einen Dienst kapselt, durch das erzeugen und Nutzen von Daten, Erweitern von Funktionen in den ADO-Anwendungen. Es ist ein Anbieter, der nicht direkt Daten verfügbar macht, anstatt einen Dienst, z. B. die abfrageverarbeitung bietet. Der Dienstanbieter kann von einem Datenanbieter bereitgestellte Daten verarbeiten. Siehe auch "Datenanbieter".
+ Dienstanbieter Software, die einen Dienst kapselt, indem Daten erstellt und genutzt werden, wodurch Features in Ihren ADO-Anwendungen erweitert werden. Es ist ein Anbieter, der keine Daten direkt verfügbar macht, sondern einen Dienst bereitstellt, z. b. die Verarbeitung von Abfragen. Der Dienstanbieter kann Daten verarbeiten, die von einem Datenanbieter bereitgestellt werden. Siehe auch Datenanbieter.
 
- Recordset A strukturiert **Recordset** , deren Spalten wurden speziell enthalten nicht nur Daten, sondern auch Verweise (Kapitel bezeichnet) auf andere definiert **Recordset** Objekten und/oder berechnete Werte basierend auf andere **Recordset** Objekte.
+ geformtes Recordset: ein **Recordset** , dessen Spalten speziell so definiert wurden, dass es nicht nur Daten enthält, sondern auch auf andere **Recordsetobjekte** und/oder berechnete Werte basierend auf anderen **Recordset** -Objekten verweist.
 
- gleichgeordnetes Element alle zwei oder mehr Knoten in einer hierarchischen Struktur, die auf der gleichen Ebene in der Hierarchie sind. Der Stammknoten in einer Hierarchie werden keine Elemente verfügt.
+ gleich geordnetes Element mit zwei oder mehr Knoten in einer hierarchischen Struktur, die sich auf derselben Ebene in der Hierarchie befinden. Der Stamm Knoten in einer Hierarchie hat keine gleich geordneten Elemente.
 
- gespeicherte Prozedur eine vorkompilierte Auflistung von Code, z. B. SQL-Anweisungen und optionalen Control-of-Flow-Anweisungen, die unter einem Namen gespeichert und als Einheit verarbeitet. Gespeicherte Prozeduren werden in einer Datenbank gespeichert. Sie können mit einem Aufruf in eine Anwendung ausgeführt werden, und es ermöglichen, User-deklarierten Variablen, bedingte Ausführung und andere leistungsstarke Features für die Programmierung.
+ gespeicherte Prozedur eine vorkompilierte Auflistung von Code, wie z. b. SQL-Anweisungen und optionale Ablauf Steuerungs Anweisungen, die unter einem Namen gespeichert und als Einheit verarbeitet werden. Gespeicherte Prozeduren werden in einer Datenbank gespeichert. Sie können mit einem-Befehl von einer Anwendung ausgeführt werden und Benutzer deklarierte Variablen, bedingte Ausführung und andere leistungsstarke Programmierfunktionen zulassen.
 
- Stub-ein Schnittstellenspezifische-Objekt, das Parameter-Marshalling bereitstellt, und die Kommunikation, die erforderlich sind, für ein Anwendungsobjekt, die Aufrufe von einem Client zu empfangen, die in einer anderen ausführungsumgebung, z. B. in einem anderen Thread oder in einem anderen Prozess ausgeführt wird. Der Stub befindet wie das Anwendungsobjekt und kommuniziert mit einem entsprechenden Proxy aus, der mit dem Client befindet, die ihn aufruft. Siehe auch "Proxy".
+ Stub ein Schnittstellen spezifisches Objekt, das den Parameter Marshalling und die Kommunikation bereitstellt, die für ein Anwendungs Objekt erforderlich sind, um Aufrufe von einem Client zu empfangen, der in einer anderen Ausführungsumgebung ausgeführt wird, z. b. in einem anderen Thread oder in einem anderen Prozess. Der Stub befindet sich mit dem Anwendungs Objekt und kommuniziert mit einem entsprechenden Proxy, der sich auf dem Client befindet, der ihn aufruft. Siehe auch Proxy.
 
- untergeordnete Element finden Sie unter der Unterknoten.
+ untergeordneter Knoten siehe Child.
 
- synchron einen Vorgang initiiert von Code, der vor dem nächsten Vorgang abgeschlossen ist, kann beginnen. Siehe auch: asynchronen Vorgang.
+ synchroner Vorgang ein Vorgang, der von Code initiiert wird, der vor dem nächsten Vorgang abgeschlossen wird. Siehe auch asynchroner Vorgang.
 
 ## <a name="t-z"></a>T-Z
- Eine Struktur, die eine hierarchische Beziehung zwischen Elementen (Knoten) darstellt. Es ist ein Knoten auf der obersten Ebene einer Struktur (Stamm). Unter dem Stamm kann mehrere untergeordnete Elemente vorhanden sein. Jedes untergeordnete Element kann wiederum das übergeordnete Element des anderen untergeordneten Knoten, Verzweigen wie eine Struktur sein. Ein Ordner mit Dokumenten und weiteren Ordner ist ein typisches Beispiel einer Baumstruktur an. Siehe auch "Hierarchie", "Knoten", "Stamm", "untergeordneten", "übergeordneten".
+ Struktur eine Struktur, die eine hierarchische Beziehung zwischen Elementen (Knoten) darstellt. Es ist ein Knoten auf der obersten Ebene einer Struktur (der Stamm) vorhanden. Unterhalb des Stamms können mehrere untergeordnete Elemente vorhanden sein. Jedes untergeordnete Element kann wiederum das übergeordnete Element anderer untergeordneter Elemente sein und somit wie eine Struktur verzweigen. Ein Ordner, der Dokumente und andere Ordner enthält, ist ein typisches Beispiel für eine Baumstruktur. Siehe auch Hierarchie, Knoten, root, Child, Parent.
 
- Webserver ein Computer, die Webdienste und Seiten für Intranet- und Internet-Benutzer bietet.
+ Webserver: ein Computer, der Webdienste und Seiten für Intranet-und Internet Benutzer bereitstellt.

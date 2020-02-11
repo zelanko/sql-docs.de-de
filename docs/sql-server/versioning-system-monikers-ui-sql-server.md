@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049908"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Versionierungssystem für die SQL-Dokumentation
@@ -60,7 +60,7 @@ Der _Monikercode_ in der `https`-Adresse stimmt immer mit dem _Monikernamen_ üb
 
 In den 1990er-Jahren und in den 2000er-Jahren bot Microsoft SQL Server nur ein einziges Produkt an. Es gab verschiedene _Editionen_ jeder Version von SQL Server, wie z. B. die Editionen _Developer_ und _Enterprise_ von SQL Server 2008. Die Editionen standen jeweils für einen geringfügig unterschiedlichen Funktionsumfang, aber das Kernprodukt an sich war identisch. Auch neue SQL Server-Versionen sind ggf. in mehreren Editionen erhältlich.
 
-### <a name="products"></a>Products
+### <a name="products"></a>Produkte
 
 In Folge der zunehmenden Beliebtheit von Cloud Computing und Microsoft Azure veröffentlichte Microsoft das Produkt Azure SQL-Datenbank. Obwohl es viel gemeinsamen Code gibt, der sowohl vom traditionellen SQL Server-Produkt, das lokal eingesetzt wird, als auch von Azure SQL-Datenbank genutzt wird, handelt es sich hierbei um zwei wirklich getrennte Produkte.
 
@@ -168,7 +168,7 @@ Das Versionierungssystem ist ab SQL Server-Version 2016 vollständig implementie
 - _2016 und höher:_ &nbsp; Das Versionierungssystem ist für SQL Server 2016 und höhere Versionen vollständig implementiert.
     - [Willkommen bei der Dokumentation für SQL Server 2016 and höhere Versionen](/sql/sql-server/?view=sql-server-2016)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Vorherige Versionen von SQL Server, 2014-2005](../toc/previous-versions-sql-server.md)  
 [Navigationsleitfaden zur SQL Server-Dokumentation](sql-docs-navigation-guide.md)  

@@ -14,24 +14,24 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab74dc982416e3c18f2a0ad649e52de23770c5a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176045"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76923042"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
   In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
   
-|Tabulator|Kurze Beschreibung|  
+|TAB|Kurzbeschreibung|  
 |---------|-----------------------|  
-|[Replikate](#ReplicasTab)|Geben Sie mit dieser Registerkarte jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die ein sekundäres Replikat hosten wird oder derzeit hostet. Beachten Sie, dass die Serverinstanz, mit der Sie gerade verbunden sind, das primäre Replikat hosten muss.<br /><br /> Tipp: Bevor Sie zu den anderen Registerkarten übergehen, sollten Sie alle Replikate auf der Registerkarte **Replikate** angegeben haben.|  
+|[Mungen](#ReplicasTab)|Geben Sie mit dieser Registerkarte jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die ein sekundäres Replikat hosten wird oder derzeit hostet. Beachten Sie, dass die Serverinstanz, mit der Sie gerade verbunden sind, das primäre Replikat hosten muss.<br /><br /> Tipp: Bevor Sie zu den anderen Registerkarten übergehen, sollten Sie alle Replikate auf der Registerkarte **Replikate** angegeben haben.|  
 |[Endpunkte](#EndpointsTab)|Auf dieser Registerkarte können Sie vorhandene Endpunkte für die Datenbankspiegelung überprüfen und automatisch einen Endpunkt erstellen, falls er auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung nutzen.|  
-|[Sicherungseinstellungen](#BackupPreferencesTab)|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
-|[Listener](#Listener)|Verwenden Sie diese Registerkarte (falls verfügbar), um einen Verfügbarkeitsgruppenlistener zu erstellen. Standardmäßig wird kein Listener erstellt.<br /><br /> Hinweis: Diese Registerkarte ist nur verfügbar, wenn Sie den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ausführen.|  
+|[Sicherungs Einstellungen](#BackupPreferencesTab)|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
+|[Empfunden](#Listener)|Verwenden Sie diese Registerkarte (falls verfügbar), um einen Verfügbarkeitsgruppenlistener zu erstellen. Standardmäßig wird kein Listener erstellt.<br /><br /> Hinweis: Diese Registerkarte ist nur verfügbar, wenn Sie den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ausführen.|  
   
-##  <a name="ReplicasTab"></a> Registerkarte "Replikate"  
+##  <a name="ReplicasTab"></a>Replikate  
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, die als Host für das Verfügbarkeitsreplikat fungiert.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "70176045"
  **Anfangsrolle**  
  Gibt die Rolle an, die das neue Replikat anfangs aufweist: **Primär** oder **Sekundär**.  
   
- **Automatisches Failover (bis zu 2)**  
+ **Automatisches Failover (max. 2)**  
  Aktivieren Sie dieses Kontrollkästchen nur, wenn dieses Verfügbarkeitsreplikat ein automatischer Failoverpartner sein soll. Sie müssen zum Konfigurieren eines automatischen Failovers diese Option für das ursprüngliche primäre Replikat und ein sekundäres Replikat auswählen. Beide Replikate verwenden den Verfügbarkeitsmodus für synchrone Commits. Nur zwei Replikate können automatisches Failover unterstützen.  
   
  Weitere Informationen zum Verfügbarkeits Modus mit synchronem Commit finden Sie unter [Verfügbarkeits Modi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das automatische Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
- **Synchroner Commit (max. 3)**  
+ **Synchroner Commit (bis zu 3)**  
  Wenn Sie **Automatisches Failover (max. 2)** für das Replikat ausgewählt haben, wird auch **Synchroner Commit (max. 3)** aktiviert. Ist das Kontrollkästchen deaktiviert, aktivieren Sie es nur, wenn von diesem Replikat der Modus für synchrone Commits nur mit geplantem manuellem Failover verwendet werden soll. Nur drei Replikate können den Modus für synchrone Commits verwenden.  
   
  Wenn von diesem Replikat der Verfügbarkeitsmodus für asynchrone Commits verwendet werden soll, lassen Sie dieses Kontrollkästchen deaktiviert. Das Replikat unterstützt nur erzwungenes manuelles Failover (mit möglichem Datenverlust). Weitere Informationen zum Verfügbarkeits Modus mit asynchronem Commit finden Sie unter [Verfügbarkeits Modi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das geplante manuelle Failover und das erzwungene manuelle Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
@@ -62,19 +62,19 @@ ms.locfileid: "70176045"
  **Ja**  
  Alle Verbindungen zu sekundären Datenbanken dieses Replikats sind zugelassen, aber nur für Lesezugriff. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
- **Replikat hinzufügen**  
+ **Replica hinzufügen**  
  Klicken Sie, um ein sekundäres Replikat zur Verfügbarkeitsgruppe hinzuzufügen.  
   
- **Azure-Replikat hinzufügen**  
- Klicken Sie auf diese Option, um einen virtuellen Azure-Computer zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ **Azure Replica hinzufügen**  
+ Klicken Sie auf diese Option, um einen virtuellen Azure-Computer zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Replikat entfernen**  
  Klicken Sie, um das ausgewählte sekundäre Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
   
-##  <a name="EndpointsTab"></a> Registerkarte "Endpunkte"  
+##  <a name="EndpointsTab"></a>Registerkarte Endpunkte  
  Für jede Serverinstanz, die ein Verfügbarkeitsreplikat hostet, zeigt die Registerkarte **Endpunkte** ggf. tatsächliche Werte des vorhandenen Datenbankspiegelungs-Endpunkts an bzw. empfohlene Werte für einen potenziellen neuen Endpunkt, der die Windows-Authentifizierung verwenden würde. Sowohl für vorhandene als auch für potenzielle Endpunkte enthält das Raster für die Endpunktwerte die folgenden Informationen:  
   
- **Servername**  
+ **Server Name**  
  Zeigt den Namen einer Serverinstanz an, die als Host für ein Verfügbarkeitsreplikat fungiert.  
   
  **Endpunkt-URL**  
@@ -83,13 +83,13 @@ ms.locfileid: "70176045"
  **Portnummer**  
  Zeigt die tatsächliche oder vorgeschlagene Portnummer des Endpunkts an. Für einen vorgeschlagenen neuen Endpunkt können Sie diesen Wert ändern.  
   
- **Endpunktname**  
+ **Endpunkt Name**  
  Zeigt den tatsächlichen oder vorgeschlagenen Namen des Endpunkts an. Für einen vorgeschlagenen neuen Endpunkt können Sie diesen Wert ändern.  
   
- **Daten verschlüsseln**  
+ **Verschlüsseln von Daten**  
  Gibt an, ob über diesen Endpunkt gesendete Daten verschlüsselt werden. Für einen vorgeschlagenen neuen Endpunkt können Sie diese Einstellung ändern.  
   
- **SQL Server-Dienstkonto**  
+ **SQL Server Dienst Konto**  
  Benutzername des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontos.  
   
  Damit eine Serverinstanz einen Endpunkt verwendet, der die Windows-Authentifizierung verwendet, muss dessen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto ein Domänenkonto sein.  
@@ -100,22 +100,22 @@ ms.locfileid: "70176045"
   
 -   Wenn eine Serverinstanz unter einem Nicht-Domänendienstkonto ausgeführt wird, müssen Sie eine manuelle Änderung an der Serverinstanz vornehmen, bevor Sie den Assistenten fortsetzen können. Wenn Sie in diesem Fall auf **weiter** klicken, wird ein Warn Dialogfeld angezeigt. Sie sollten auf **Nein**klicken, sodass Sie zur Registerkarte**Endpunkte** zurückkehren. Wenn Sie den Assistenten auf der Seite **Replikate angeben** belassen, nehmen Sie eine der folgenden Änderungen an jeder Serverinstanz vor, für die in der Spalte **SQL Server Dienst Konto** ein nicht-Domänen Dienst Konto angezeigt wird:  
   
-    -   Verwenden Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Manager zum Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontos in ein Domänenkonto. Weitere Informationen finden Sie unter [Ändern des Dienststartkontos für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md).  
+    -   Verwenden Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager zum Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontos in ein Domänenkonto. Weitere Informationen finden Sie unter [Ändern des Dienststartkontos für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md).  
   
     -   Verwenden Sie [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell, um manuell einen Datenbankspiegelungs-Endpunkt zu erstellen, der ein Zertifikat verwendet. Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql) oder [Erstellen eines Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md).  
   
      Wenn Sie die Seite **Verfügbarkeitsreplikate angeben** geöffnet lassen, während Sie Endpunkte konfigurieren, kehren Sie zur Registerkarte **Endpunkte** zurück, und klicken Sie auf **Aktualisieren** , um das Raster **Endpunktwerte** zu aktualisieren.  
   
-##  <a name="BackupPreferencesTab"></a> Registerkarte "Sicherungseinstellungen"  
+##  <a name="BackupPreferencesTab"></a>Registerkarte Sicherungs Einstellungen  
  Wählen Sie eine der folgenden Optionen aus, um anzugeben, wo Sicherungen erfolgen sollen:  
   
  **Sekundär bevorzugen**  
- Gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen müssen, außer wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt. In diesem Fall muss die Sicherung auf dem primären Replikat erfolgen. Diese Option ist die Standardeinstellung.  
+ Gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen müssen, außer wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt. In diesem Fall muss die Sicherung auf dem primären Replikat erfolgen. Dies ist die Standardoption.  
   
  **Nur sekundär**  
  Gibt an, dass Sicherungen nie auf dem primären Replikat ausgeführt werden dürfen. Wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt, darf keine Sicherung erfolgen.  
   
- **Primär**  
+ **Primärer Server/verwaltete Instanz**  
  Gibt an, dass die Sicherungen immer auf dem primären Replikat erfolgen müssen. Diese Option ist hilfreich, wenn Sie Sicherungsfunktionen benötigen, z. B. das Erstellen differenzieller Sicherungen, die nicht unterstützt werden, wenn die Sicherung auf einem sekundären Replikat ausgeführt wird.  
   
  **Beliebiges Replikat**  
@@ -131,22 +131,22 @@ ms.locfileid: "70176045"
  Zeigt den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, auf der das Verfügbarkeitsreplikat gehostet wird.  
   
  **Sicherungspriorität (niedrigste = 1, höchste = 100)**  
- Weisen Sie die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe zu. Der Standardwert lautet "50". Sie können im Bereich von 0 bis 100 eine beliebige andere ganze Zahl auswählen. 1 gibt die niedrigste Priorität und 100 die höchste Priorität an. Wenn Sie **Sicherungspriorität** auf 1 festlegen, wird das Verfügbarkeitsreplikat für die Ausführung von Sicherungen nur ausgewählt, wenn derzeit kein Verfügbarkeitsreplikat mit höherer Priorität verfügbar ist.  
+ Weisen Sie die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe zu. Der Standardwert lautet "50". Sie können im Bereich von 0 bis 100 eine beliebige andere ganze Zahl auswählen. 1 gibt die niedrigste Priorität und 100 die höchste Priorität an. Wenn Sie die **Sicherungs Priorität** auf 1 festlegen, wird das Verfügbarkeits Replikat nur zum Ausführen von Sicherungen ausgewählt, wenn derzeit kein Verfügbarkeits Replikat mit höherer Priorität verfügbar ist.  
   
  **Replikat ausschließen**  
  Mit dieser Option wird verhindert, dass dieses Verfügbarkeitsreplikat je zum Ausführen von Sicherungen ausgewählt wird. Dies ist zum Beispiel für ein Remoteverfügbarkeitsreplikat hilfreich, für das keine Failover bei Sicherungen auftreten sollen.  
   
-##  <a name="Listener"></a> Registerkarte "Listener"  
+##  <a name="Listener"></a>Listenerregister Karte  
  Geben Sie die Einstellung für einen[Verfügbarkeitsgruppenlistener](../../listeners-client-connectivity-application-failover.md)an, der einen Clientverbindungspunkt bereitstellt. Folgende Werte sind möglich:  
   
- **Jetzt keinen Verfügbarkeitsgruppenlistener erstellen**  
- Überspringen Sie diesen Schritt. Sie können später einen Listener erstellen. Weitere Informationen finden Sie unter [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+ **Erstellen Sie jetzt keinen verfügbarkeitsgruppenlistener.**  
+ Überspringen Sie diesen Schritt. Sie können später einen Listener erstellen. Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)besitzen.  
   
- **Verfügbarkeitsgruppenlistener erstellen**  
+ **Erstellen Sie einen verfügbarkeitsgruppenlistener.**  
  Geben Sie folgendermaßen die Listenereinstellungen für diese Verfügbarkeitsgruppe an:  
   
  **DNS-Name des Listeners**  
- Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und kann nur alphanumerische Zeichen, Bindestriche ( **-** ) und Unterstriche ( **_** ) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
+ Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und darf nur alphanumerische Zeichen, Bindestriche (**-**) und Bindestriche (**_**) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen ungültigen DNS-Listenernamen (oder eine ungültige Portnummer) auf der Registerkarte **Listener** eingeben, wird die Schaltfläche **Weiter** auf der Seite **Replikate angeben** deaktiviert.  
@@ -165,13 +165,13 @@ ms.locfileid: "70176045"
   
  Wenn **Statische IP** als Netzwerkmodus ausgewählt wird (Standardauswahl), werden in einem Raster die Spalten **Subnetz** und **IP-Adresse** sowie die zugehörigen Schaltflächen **Hinzufügen** und **Entfernen** angezeigt. Beachten Sie, dass das Raster leer ist, bis Sie das erste Subnetz hinzufügen.  
   
- Spalte**Subnetz**  
+ **Subnetzspalte**  
  Zeigt die Subnetzadresse an, die Sie für alle Subnetze ausgewählt haben, die Sie für den Listener hinzugefügt haben.  
   
- Spalte**IP-Adresse**  
+ **IP-Adress** Spalte  
  Zeigt die IPv4- oder IPv6-Adresse an, die Sie für ein bestimmtes Subnetz angegeben haben.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie hier, um diesem Listener ein Subnetz hinzuzufügen. Das Dialogfeld **IP-Adresse hinzufügen** wird geöffnet. Weitere Informationen finden Sie im Hilfethema [Dialogfeld IP-Adresse hinzufügen&#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md).  
   
  **Remove**  
@@ -185,7 +185,7 @@ ms.locfileid: "70176045"
   
  Wenn **DHCP** ausgewählt ist, wird das Feld **Subnetz** angezeigt.  
   
- **Subnetz**  
+ **Subnet**  
  Wenn Sie **DHCP** als Netzwerkmodus ausgewählt haben, verwenden Sie die Dropdownliste **Subnetz** , um eine Adresse für das Subnetz auszuwählen, das die Verfügbarkeitsreplikate der Verfügbarkeitsgruppe hostet.  
   
 > [!IMPORTANT]
@@ -206,10 +206,10 @@ ms.locfileid: "70176045"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Erstellen eines Datenbankspiegelungs- &#40;Endpunkts für AlwaysOn-Verfügbarkeitsgruppen SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Erstellen Sie einen Datenbankspiegelungs-Endpunkt für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

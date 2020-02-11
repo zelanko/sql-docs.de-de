@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626047"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
-  Richtlinie der richtlinienbasierten Verwaltung können Sie bewährte Methoden für die Überwachung der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stellt einer Reihe von Richtliniendateien bereit, importieren Sie als best Practice-Richtlinien, und Auswertung der Richtlinien für einen Zielsatz, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
+  Mit der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Richtlinien basierten Verwaltung können Sie bewährte Methoden für überwachen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt eine Reihe von Richtlinien Dateien bereit, die Sie als Richtlinien für Best Practices importieren und dann die Richtlinien für einen Zielsatz auswerten können, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Richtlinie und Regeln für Datenbank-Engine  
- Die folgende Tabelle enthält die Richtlinien, die mit der Installation von enthaltenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und enthält Informationen über die Regeln zu bewährten Methoden, die einzelnen Richtlinien ausgewertet. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](import-a-policy-based-management-policy.md).  
+ In der folgenden Tabelle werden die Richtlinien aufgeführt, die in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation von enthalten sind. Sie enthalten Informationen zu den bewährten Methoden, die von den einzelnen Richtlinien ausgewertet werden. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](import-a-policy-based-management-policy.md).  
   
 |Richtlinienname|Regel für Best Practice|  
 |-----------------|------------------------|  
@@ -38,8 +38,8 @@ ms.locfileid: "62626047"
 |Gastberechtigungen|[Gastberechtigungen für Benutzerdatenbanken](guest-permissions-on-user-databases.md)|  
 |Datum der letzten erfolgreichen Sicherung|[Obsolete Sicherung](outdated-backup.md)|  
 |Öffentlich – Keine Serverberechtigungen|[Serverberechtigungen für 'public'](server-public-permissions.md)|  
-|Überlappung der SQL Server-32-Bit-Affinitätsmaske|[Richtige Affinity Mask und Affinity Input-Output Überlappung](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|Überlappung der SQL Server-64-Bit-Affinitätsmaske|[Richtige Affinity Mask und Affinity Input-Output Überlappung](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Überlappung der SQL Server-32-Bit-Affinitätsmaske|[Korrekte Überlappung der Affinitäts Maske und der Eingabe Ausgabe Maske der Affinität](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Überlappung der SQL Server-64-Bit-Affinitätsmaske|[Korrekte Überlappung der Affinitäts Maske und der Eingabe Ausgabe Maske der Affinität](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server-Affinitätsmaske|[Beibehalten des Standardwerts für die Affinitätsmaske](keep-the-affinity-mask-default-value.md)|  
 |Schwellenwert für blockierte SQL Server-Prozesse|[Erhöhen oder Deaktivieren des Schwellenwerts für blockierte Prozesse](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server-Standardablaufverfolgung|[Protokolldateien für Standardablaufverfolgung deaktiviert](default-trace-log-files-disabled.md)|  
@@ -60,14 +60,14 @@ ms.locfileid: "62626047"
 |Fehler aufgrund einer Beschädigung einer Cluster-Datenträgerressource im Windows-Ereignisprotokoll|[Erkennen von SCSI-Hostadapterproblemen](detect-scsi-host-adapter-issues.md)|  
 |Gerätetreiber-Steuerungsfehler im Windows-Ereignisprotokoll|[Gerätetreiber-Steuerungsfehler](device-driver-control-error.md)|  
 |Fehler "Gerät nicht bereit" im Windows-Ereignisprotokoll|[Fehler 'Gerät nicht bereit'](device-not-ready-error.md)|  
-|Fehler aufgrund fehlerhafter E/A-Anforderung im Windows-Ereignisprotokoll|[Fehlerhafte Eingabe Ausgabeanforderung erkennen](detect-failed-input-and-output-requests.md)|  
+|Fehler aufgrund fehlerhafter E/A-Anforderung im Windows-Ereignisprotokoll|[Fehlerhafte Eingabe Ausgabeanforderung ermitteln](detect-failed-input-and-output-requests.md)|  
 |E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers](input-and-output-error-during-hard-page-fault.md)|  
 |Fehler beim erneuten Leseversuch im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf Lesewiederholungsprobleme](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |E/A-Timeoutfehler des Speichersystems im Windows-Ereignisprotokoll|[Speichersystem – E/A-Timeout](storage-system-input-output-time-out.md)|  
 |Fehler aufgrund eines Systemfehlers im Windows-Ereignisprotokoll|[Unerwartete Systemfehler](unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Facets der richtlinienbasierten Verwaltung](working-with-policy-based-management-facets.md)  
   
   

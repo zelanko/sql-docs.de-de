@@ -1,5 +1,5 @@
 ---
-title: SetPermissions-Methode (ADOX) | Microsoft-Dokumentation
+title: Setberechtigungs-Methode (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965229"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions-Methode (ADOX)
-Gibt an, die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) oder [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) für ein Objekt.  
+Gibt die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) oder einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) für ein Objekt an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,28 +37,28 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
   
 #### <a name="parameters"></a>Parameter  
  *Name*  
- Ein **Zeichenfolge** -Wert, der den Namen des Objekts, für das zum Festlegen von Berechtigungen angibt.  
+ Ein **Zeichen** folgen Wert, der den Namen des Objekts angibt, für das Berechtigungen festgelegt werden sollen.  
   
  *ObjectType*  
- Ein **lange** Wert möglich von der [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) Konstanten, der angibt, den Typ des Objekts, für das Berechtigungen zu erhalten.  
+ Ein **Long** -Wert, bei dem es sich um eine der [objecttypeer](../../../ado/reference/adox-api/objecttypeenum.md) -Konstanten handeln kann, die den Typ des Objekts angibt, für das Berechtigungen abzurufen sind.  
   
  *Aktion*  
- Ein **lange** Wert möglich von der [ActionEnum](../../../ado/reference/adox-api/actionenum.md) Konstanten, die den Typ der Aktion, die ausgeführt wird, beim Festlegen von Berechtigungen angibt.  
+ Ein **Long** -Wert, der eine der [Action](../../../ado/reference/adox-api/actionenum.md) Enumerationskonstanten sein kann, die den Typ der Aktion angibt, die beim Festlegen von Berechtigungen ausgeführt werden soll.  
   
  *Rechte*  
- Ein **lange** Wert, der eine Bitmaske sein kann von einem oder mehreren der der [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) Konstanten, die die festzulegenden Rechte angibt.  
+ Ein **Long** -Wert, der eine Bitmaske einer oder mehrerer [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) -Konstanten sein kann, die die festzulegenden Rechte angibt.  
   
- *Erben*  
- Optional. Ein **lange** Wert möglich von der [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten, der angibt, wie Objekte erben diese Berechtigungen. Der Standardwert ist **AdInheritNone**.  
+ *Ver*  
+ Optional. Ein **Long** -Wert, bei dem es sich [um eine der Vererbungs](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten handelt, die angibt, wie Objekte diese Berechtigungen erben. Der Standardwert ist " **adgeerbt None**".  
   
  *ObjectTypeId*  
- Optional. Ein **Variant** Wert, der die GUID für einen Anbieter-Objekttyp angibt, die nicht vom OLE DB-Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
+ Optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Anbieter das Festlegen von Zugriffsrechten für Gruppen oder Benutzer nicht unterstützt wird, tritt ein Fehler auf.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der Anbieter das Festlegen von Zugriffsrechten für Gruppen oder Benutzer nicht unterstützt, tritt ein Fehler auf.  
   
 > [!NOTE]
->  Beim Aufrufen von **SetPermissions**, Festlegen von Aktionen auf **AdAccessRevoke** überschreibt alle Einstellungen von der *Rechte* Parameter. Legen Sie nicht *Aktionen* zu **AdAccessRevoke** sollten Sie die Rechte, die im angegebenen die *Rechte* Parameter wirksam wird.  
+>  Wenn Sie **setberechtigungen**aufrufen, überschreibt das Festlegen von Aktionen auf **adaccessrevoalle** Einstellungen des *Rights* -Parameters. Legen Sie *Aktionen* nicht auf **adaccessrevofest** , wenn Sie möchten, dass die im *Rights* -Parameter angegebenen Rechte wirksam werden.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -66,7 +66,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 |-|-|  
 |[Group-Objekt (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [GetPermissions und SetPermissions-Methoden – Beispiel (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [GetPermissions-Methode (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Getberechtigungs-und setberechtigungs-Methoden Beispiel (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Getberechtigungs-Methode (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637704"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Aktualisieren auf SQL Server 2014
@@ -41,23 +41,23 @@ ms.locfileid: "73637704"
   
 -   [Aktualisieren von Master Data Services](upgrade-master-data-services.md)  
   
--   [Upgraden von PowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md)  
+-   [Aktualisieren von PowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md)  
   
 -   [Aktualisieren von replizierten Datenbanken](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
--   [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+-   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 -   [Aktualisieren der SQL Server-Verwaltungstools](upgrade-sql-server-management-tools.md)  
   
--   [Artikel zur Vorgehensweise beim Upgrade](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
+-   [Themen zur Vorgehensweise für das Upgrade](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktualisieren der Datenbank-Engine](upgrade-database-engine.md)   
- [Aktualisieren von Analysis Services](upgrade-analysis-services.md)   
- [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Upgrade von Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
- [Aktualisieren von replizierten Datenbanken](../../database-engine/install-windows/upgrade-replicated-databases.md)   
- [Aktualisieren von Master Data Services](upgrade-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [UpgradeDatenbank-Engine](upgrade-database-engine.md)   
+ [UpgradeAnalysis Services](upgrade-analysis-services.md)   
+ [Aktualisieren und Migrieren Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [UpgradeIntegration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
+ [Aktualisieren replizierter Datenbanken](../../database-engine/install-windows/upgrade-replicated-databases.md)   
+ [UpgradeMaster Data Services](upgrade-master-data-services.md)   
  [SQL Server 2005 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=23864)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15289)   
  [Abwärtskompatibilität](../../../2014/getting-started/backward-compatibility.md)  
