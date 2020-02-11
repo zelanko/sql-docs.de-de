@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f5aeb8a5eda8e4e49e478cbc53cd0ad90e3cc890
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095477"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB-Header und Versionsinformationen
@@ -26,7 +26,7 @@ ms.locfileid: "74095477"
 ## <a name="localdb-versioning"></a>LocalDB-Versionsverwaltung  
  Die LocalDB-Installation verwendet pro Haupt-SQL Server-Version einen einzelnen Satz Binärdateien. Diese LocalDB-Versionen werden gewartet und unabhängig gepatcht. Das bedeutet, dass der Benutzer angeben muss, welche LocalDB-Baselineversion (also Haupt-SQL Server-Version) er verwendet. Die Version wird im Standard Versions Format angegeben, das von der .NET Framework **System. Version** -Klasse definiert wird:  
   
- *major.minor[.build[.revision]]*  
+ *Hauptversion. neben Version [. Build [. Revision]]*  
   
  Die ersten beiden Zahlen in der Versions Zeichenfolge (*Haupt* -und *neben*Version) sind obligatorisch. Die letzten zwei Zahlen in der Versions Zeichenfolge (*Build* und *Revision*) sind optional und werden standardmäßig auf 0 (null) gesetzt, wenn der Benutzer Sie verlässt. Dies bedeutet Folgendes: Wenn der Benutzer nur "12,2" als localdb-Versionsnummer angibt, wird er so behandelt, als ob der Benutzer "12.2.0.0" angegeben hätte.  
   
@@ -45,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Unter diesem Schlüssel befindet sich eine Liste Schlüssel, einer für jede Version der auf dem Computer installierten LocalDB. Jeder dieser Schlüssel wird mit der localdb-Versionsnummer im Format *\<> für die Hauptversion*benannt. *\<neben Versions >* (z. b. der Schlüssel für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] den Namen 13,0). Unter jedem Versionsschlüssel dort ist ein `InstanceAPIPath`-Name-Wert-Paar, das den vollständigen Pfad zur mit dieser Version installierten SQLUserInstance.dll-Datei definiert. Das folgende Beispiel zeigt die Registrierungseinträge für einen Computer, auf dem localdb-Versionen 11,0 und 13,0 installiert sind:  
+ Unter diesem Schlüssel befindet sich eine Liste Schlüssel, einer für jede Version der auf dem Computer installierten LocalDB. Jeder dieser Schlüssel wird mit der localdb-Versionsnummer im Format * \<Haupt Versions>* benannt. Neben Versions>(z. b. lautet der Schlüssel [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] für den Namen 13,0). * \<* Unter jedem Versionsschlüssel dort ist ein `InstanceAPIPath`-Name-Wert-Paar, das den vollständigen Pfad zur mit dieser Version installierten SQLUserInstance.dll-Datei definiert. Das folgende Beispiel zeigt die Registrierungseinträge für einen Computer, auf dem localdb-Versionen 11,0 und 13,0 installiert sind:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -67,7 +67,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
 ```  
   
- 64-Bit-Programme, die den `Installed Versions` Schlüssel lesen, sehen Werte, die auf 64-Bit-Versionen der **sqluserinstance** -dll verweisen, während 32-Bit-Programme (die auf 64-Bit-Windows im WOW64-Modus ausgeführt werden) automatisch an einen `Installed Versions` Schlüssel weitergeleitet werden, der sich unter dem `Wow6432Node` Hive befindet. Dieser Schlüssel enthält Werte, die auf 32-Bit-Versionen der **sqluserinstance** -dll verweisen.  
+ 64-Bit-Programme, `Installed Versions` die den Schlüssel lesen, sehen Werte, die auf 64-Bit-Versionen der **sqluserinstance** -dll verweisen, während 32-Bit-Programme (die auf 64-Bit-Fenstern im WOW64 `Installed Versions` -Modus ausgeführt werden `Wow6432Node` ) automatisch an einen Schlüssel in der Hive umgeleitet werden. Dieser Schlüssel enthält Werte, die auf 32-Bit-Versionen der **sqluserinstance** -dll verweisen.  
   
 ## <a name="using-localdb_define_proxy_functions"></a>Verwenden von LOCALDB_DEFINE_PROXY_FUNCTIONS  
  Die API der localdb-Instanz definiert eine Konstante mit dem Namen LOCALDB_DEFINE_PROXY_FUNCTIONS, die das erkennen und Laden der **sqluserinstance** -dll automatisiert.  

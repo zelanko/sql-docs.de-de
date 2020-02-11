@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105529"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)
@@ -62,7 +62,7 @@ ms.locfileid: "66105529"
 |&TotalPages|Ja|Nein|  
 |Aggregate-Funktion|Ja. Beispiel:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Ja. Beispiel:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Feldauflistung für Elemente auf der Seite|Indirekt. Beispiel:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Ja. Beispiel:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|Datengebundenes Bild|Indirekt. Beispiel: `=ReportItems!TXT_Photo.Value`|Ja. Beispiel:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|Datengebundenes Bild|Indirekt. Zum Beispiel, `=ReportItems!TXT_Photo.Value`|Ja. Beispiel:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  Die folgenden Abschnitte dieses Themas zeigen sofort verwendbare Ausdrücke, die in Kopf- und Fußzeilen üblicherweise verwendete Variablendaten abrufen. Außerdem ist ein Abschnitt vorhanden, in dem erklärt wird, wie die Excel-Renderingerweiterung Kopf- und Fußzeilen verarbeitet. Weitere Informationen zu Ausdrücken finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66105529"
   
  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   

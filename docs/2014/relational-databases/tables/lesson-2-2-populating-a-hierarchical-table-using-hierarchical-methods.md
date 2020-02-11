@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110061"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Auffüllen einer hierarchischen Tabelle mit hierarchischen Methoden
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] hat 8 Mitarbeiter, die in der Marketingabteilung arbeiten. Die Angestelltenhierarchie sieht ungefähr wie folgt aus:  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]hat 8 Mitarbeiter, die in der Marketing Abteilung arbeiten. Die Angestelltenhierarchie sieht ungefähr wie folgt aus:  
   
- **David**, **EmployeeID** 6, ist der Marketing-Manager. Drei Marketingspezialisten berichten **David**:  
+ **David**, Mitarbeiter- **ID 6,** ist der Marketing-Manager. Drei Marketingspezialisten berichten **David**:  
   
--   **Sariya**, **EmployeeID** 46  
+-   **Sariya**, **Mitarbeiter** -ID 46  
   
--   **John**, **EmployeeID** 271  
+-   **John**, **Mitarbeiter** -ID 271  
   
--   **Jill**, **EmployeeID** 119  
+-   **Jill**, **Mitarbeiter** -ID 119  
   
  Marketingassistent **Wanida** (**EmployeeID** 269) berichtet **Sariya**, und Marketingassistent **Mary** (**EmployeeID** 272) berichtet **John**.  
   
@@ -64,7 +64,8 @@ ms.locfileid: "66110061"
   
 ### <a name="to-insert-a-subordinate-employee"></a>So fügen Sie einen unterstellten Mitarbeiter ein  
   
-1.  **Sariya** berichtet **David**. Einzufügende **Sariyas** Knoten müssen Sie erstellen eine entsprechende **OrgNode** Wert des Datentyps `hierarchyid`. Das folgende Beispiel erstellt eine Variable des Datentyps `hierarchyid` und füllt sie mit dem OrgNode-Stammwert der Tabelle. Diese Variable wird zusammen mit der Methode [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) verwendet, um eine Zeile einzufügen, die den untergeordneten Knoten darstellt. `GetDescendant` übernimmt zwei Argumente. Für die Argumentwerte gelten die folgenden Optionen:  
+1.  **Sariya** berichtet **David**. Zum Einfügen des Knotens **Sariya** müssen Sie einen entsprechenden **OrgNode** -Wert vom Datentyp `hierarchyid`erstellen. Das folgende Beispiel erstellt eine Variable des Datentyps `hierarchyid` und füllt sie mit dem OrgNode-Stammwert der Tabelle. Diese Variable wird zusammen mit der Methode [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) verwendet, um eine Zeile einzufügen, die den untergeordneten Knoten darstellt. 
+  `GetDescendant` übernimmt zwei Argumente. Für die Argumentwerte gelten die folgenden Optionen:  
   
     -   Ist parent NULL, gibt `GetDescendant` NULL zurück.  
   
@@ -164,7 +165,7 @@ ms.locfileid: "66110061"
   
  Die Tabelle ist jetzt vollständig mit den Daten der Marketingabteilung aufgefüllt.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Abfragen einer hierarchischen Tabelle mit hierarchischen Methoden](lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md)  
   
   

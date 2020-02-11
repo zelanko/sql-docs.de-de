@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688900"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategien zum Sichern und Wiederherstellen einer Mergereplikation
@@ -30,7 +30,7 @@ ms.locfileid: "62688900"
 -   Abonnementdatenbank auf den einzelnen Abonnenten    
 -   Die Systemdatenbanken **master** und **msdb** auf dem Verleger, Verteiler und allen Abonnenten. Diese Datenbanken sollten zur selben Zeit wie alle anderen Datenbanken und die entsprechende Replikationsdatenbank gesichert werden. Sichern Sie also z. B. die **master** - und **msdb** -Datenbanken auf dem Verleger immer dann, wenn Sie auch die Veröffentlichungsdatenbank sichern. Beim Wiederherstellen der Veröffentlichungsdatenbank müssen Sie sicherstellen, dass die **master** - und **msdb** -Datenbanken hinsichtlich der Replikationskonfiguration und der Replikationseinstellungen mit der Veröffentlichungsdatenbank übereinstimmen.  
   
- Wenn Sie regelmäßige Protokollsicherungen ausführen, sollten in den Protokollsicherungen auch alle replikationsrelevanten Änderungen erfasst werden. Wenn Sie keine Protokollsicherungen ausführen, sollte immer dann eine Sicherung erfolgen, wenn eine replikationsrelevante Änderung vorgenommen wurde. Weitere Informationen finden Sie unter [Häufige Aktionen, die eine aktualisierte Sicherung erfordern](common-actions-requiring-an-updated-backup.md).  
+ Wenn Sie regelmäßige Protokollsicherungen ausführen, sollten in den Protokollsicherungen auch alle replikationsrelevanten Änderungen erfasst werden. Wenn Sie keine Protokollsicherungen ausführen, sollte immer dann eine Sicherung erfolgen, wenn eine replikationsrelevante Änderung vorgenommen wurde. Weitere Informationen finden Sie unter [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  
   
  Entscheiden Sie sich zum Sichern und Wiederherstellen der Veröffentlichungsdatenbank für eine der unten genannten Herangehensweisen, und befolgen Sie dann die entsprechenden Empfehlungen für die Verteilungsdatenbank und die Abonnementdatenbanken.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "62688900"
   
 -   Wird die Veröffentlichung gar nicht gefiltert, sollten Sie die Veröffentlichungsdatenbank durch Synchronisieren mit einem aktuellen Abonnenten auf den neuesten Stand bringen.  
   
--   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Angenommen, eine Tabelle ist so partitioniert, dass jedes Abonnement nur die Kundendaten für eine der folgenden Regionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden.  
+-   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Nehmen wir einmal an, es gibt eine Tabelle, die so partitioniert ist, dass jedes Abonnement nur die Kundendaten für eine der folgenden Verkaufsregionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden.  
   
 > [!IMPORTANT]  
 >  Wenn eine Veröffentlichungsdatenbank mit einer Abonnementdatenbank synchronisiert wird, kann es passieren, dass veröffentlichte Tabellen nach dem Wiederherstellen aus der Sicherung einen neueren Stand aufweisen als nicht veröffentlichte Tabellen.  
   
- Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet).  
+ Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet).  
   
  Informationen zum Synchronisieren eines Abonnements finden Sie unter [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) und [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -83,12 +83,12 @@ ms.locfileid: "62688900"
   
  Weitere Informationen zum Festlegen der Beibehaltungsdauer der Veröffentlichung finden Sie unter [Festlegen des Ablaufdatums für Abonnements](../publish/set-the-expiration-period-for-subscriptions.md).  
   
- Informationen zum Synchronisieren eines Abonnements finden Sie unter [Synchronisieren eines Pushabonnements](../synchronize-a-push-subscription.md) und [Synchronisieren eines Pullabonnements](../synchronize-a-pull-subscription.md).  
+ Informationen zum Synchronisieren eines Abonnements finden Sie unter [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) und [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Sichern und Wiederherstellen einer Wiederveröffentlichungs-Datenbank  
  Wenn eine Datenbank Daten von einem Verleger abonniert und dieselben Daten selbst auf anderen Abonnementdatenbanken veröffentlicht, wird sie als Wiederveröffentlichungs-Datenbank bezeichnet. Befolgen Sie beim Wiederherstellen einer Wiederveröffentlichungs-Datenbank die in diesem Thema in den Abschnitten zum Sichern und Wiederherstellen einer Veröffentlichungsdatenbank sowie zum Sichern und Wiederherstellen einer Abonnementdatenbank beschriebenen Richtlinien.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](back-up-and-restore-replicated-databases.md)  
   

@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276963"
 ---
 # <a name="add-objects"></a>Objekte hinzufügen
   Begrenzt die Dialogfelder zur Objektauswahl auf die für Sie relevanten Objektarten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Bestimmte Objekte**  
  Öffnet das Dialogfeld **Objekte auswählen** , sodass Sie die Suche nach bestimmten Objekten noch besser definieren können.  
   
- **Alle Objekte des Typs**  
+ **Alle Objekte der Typen**  
  Öffnet das Dialogfeld **Objekttypen auswählen** , sodass Sie angeben können, welche Objekttypen in die zugrunde liegende Liste eingeschlossen werden sollen.  
   
- **Der Server** _\<Servername >_  
+ **Der Servername des Servers**  _\<>_  
  Fügt auf dem angegebenen Server alle entsprechenden Objekte hinzu. Wird nur angezeigt, wenn die Option über ein Dialogfeld mit Serverbereich, z. B. **Anmeldung – Neu** , geöffnet wird.  
   
  **Alle Objekte, die dem Schema angehören**  

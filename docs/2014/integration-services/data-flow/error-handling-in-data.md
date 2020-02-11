@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827145"
 ---
 # <a name="error-handling-in-data"></a>Fehlerbehandlung in Daten
@@ -59,7 +59,7 @@ ms.locfileid: "62827145"
   
  Sie können konfigurieren, wie Quellen, Transformationen und Ziele Fehler und das Abschneiden von Daten behandeln. In der folgenden Tabelle werden diese Optionen beschrieben.  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Fehler bei Komponente|Bei einem Fehler oder beim Abschneiden von Daten wird der Datenflusstask nicht ausgeführt. Dies ist die Standardoption für einen Fehler und das Abschneiden von Daten.|  
 |Fehler ignorieren|Der Fehler oder das Abschneiden von Daten wird ignoriert, und die Datenzeile wird an die Ausgabe der Transformation oder Quelle weitergeleitet.|  
@@ -68,13 +68,13 @@ ms.locfileid: "62827145"
 ## <a name="adding-the-error-description"></a>Hinzufügen der Fehlerbeschreibung  
  Eine Fehlerausgabe stellt standardmäßig den numerischen Fehlercode bereit und enthält in der Regel den Bezeichner der Spalte, in dem der Fehler aufgetreten ist. Sie können die Skriptkomponente verwenden, um die Fehlerbeschreibung in einer zusätzlichen Spalte einzuschließen, indem Sie für den Aufruf der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle eine einzelne Zeile des Skripts verwenden.  
   
- Die Skriptkomponente kann dem Fehlersegment des Datenflusses hinzugefügt werden, und zwar an eine beliebige Stelle unterhalb der Datenflusskomponenten, deren Fehler Sie erfassen möchten. In der Regel wird die Skriptkomponente jedoch eingefügt, kurz bevor die Fehlerzeilen in ein Ziel geschrieben werden. Auf diese Weise sucht das Skript nur nach Beschreibungen für geschriebene Fehlerzeilen. Beispielsweise korrigiert das Fehlersegment des Datenflusses u. U. einige Fehler und schreibt diese Zeilen nicht in ein Fehlerziel. Weitere Informationen finden Sie unter [Erweitern einer Fehlerausgabe mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+ Die Skriptkomponente kann dem Fehlersegment des Datenflusses hinzugefügt werden, und zwar an eine beliebige Stelle unterhalb der Datenflusskomponenten, deren Fehler Sie erfassen möchten. In der Regel wird die Skriptkomponente jedoch eingefügt, kurz bevor die Fehlerzeilen in ein Ziel geschrieben werden. Auf diese Weise sucht das Skript nur nach Beschreibungen für geschriebene Fehlerzeilen. Beispielsweise korrigiert das Fehlersegment des Datenflusses u. U. einige Fehler und schreibt diese Zeilen nicht in ein Fehlerziel. Weitere Informationen finden Sie unter [Erweitern einer Fehlerausgabe mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 ### <a name="to-configure-an-error-output"></a>So konfigurieren Sie eine Fehlerausgabe  
   
 -   [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](data-flow.md)   
  [Transformieren von Daten mit Transformationen](transformations/transform-data-with-transformations.md)   
  [Verbinden von Komponenten mit Pfaden](../connect-components-with-paths.md)   

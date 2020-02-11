@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250406"
 ---
 # <a name="republish-data"></a>Erneutes Veröffentlichen von Daten
@@ -43,9 +43,9 @@ ms.locfileid: "63250406"
   
  In der folgenden Abbildung fungieren sowohl der Verleger als auch der Neuverleger als ihre eigenen lokalen Verteiler. Falls beide zum Verwenden eines Remoteverteilers eingerichtet würden, müssten sich alle Verteiler auf derselben Seite der langsamen oder teuren Kommunikationsverbindung wie ihr Verleger befinden. Verleger müssen mit Remoteverteilern über zuverlässige, sehr schnelle Kommunikationsverbindungen verbunden sein.  
   
- ![Republishing data](media/repl-06a.gif "Republishing data")  
+ ![Wiederveröffentlichen von Daten](media/repl-06a.gif "Wiederveröffentlichen von Daten")  
   
- Jeder Server kann als Verleger und als Abonnent fungieren. Betrachten Sie beispielsweise das folgende Diagramm, in dem eine Veröffentlichung aus einer Tabelle in London vorhanden ist und an vier verschiedene Städte in den USA verteilt werden muss: Chicago, New York, San Diego und Seattle. Der Server in New York wird ausgewählt, die aus London stammende veröffentlichte Tabelle zu abonnieren, da der Standort in New York die folgenden Bedingungen erfüllt:  
+ Jeder Server kann als Verleger und als Abonnent fungieren. Nehmen Sie das folgende Diagramm als Beispiel. Es enthält die Veröffentlichung einer Tabelle in London, die an vier verschiedene Städte in den USA verteilt werden muss: Chicago, New York, San Diego und Seattle. Der Server in New York wird ausgewählt, die aus London stammende veröffentlichte Tabelle zu abonnieren, da der Standort in New York die folgenden Bedingungen erfüllt:  
   
 -   Die Netzwerkverbindung zurück nach London ist relativ zuverlässig.  
   
@@ -57,16 +57,16 @@ ms.locfileid: "63250406"
   
  Die Replikation unterstützt die in der folgenden Tabelle aufgeführten Wiederveröffentlichungsszenarios.  
   
-|Verleger|Veröffentlichungsabonnent|Abonnent|  
+|Herausgeber|Veröffentlichungsabonnent|Subscriber|  
 |---------------|---------------------------|----------------|  
 |Transaktionsveröffentlichung|Transaktionsabonnement/Transaktionsveröffentlichung|Transaktionsabonnement|  
-|Transaktionsveröffentlichung|Transaktionsabonnement/Mergeveröffentlichung Veröffentlichung<sup>1</sup>|Mergeabonnement|  
+|Transaktionsveröffentlichung|Transaktions Abonnement/Mergeveröffentlichung<sup>1</sup>|Mergeabonnement|  
 |Mergeveröffentlichung|Mergeabonnement/Mergeveröffentlichung|Mergeabonnement|  
 |Mergeveröffentlichung|Mergeabonnement/Transaktionsveröffentlichung|Transaktionsabonnement|  
   
- <sup>1</sup>legen Sie die `@published_in_tran_pub` Eigenschaft für die Mergeveröffentlichung. Standardmäßig wird bei der Transaktionsreplikation erwartet, dass Tabellen auf dem Abonnenten als schreibgeschützt behandelt werden. Wenn bei der Mergereplikation Datenänderungen an einer Tabelle in einem Transaktionsabonnement vorgenommen werden, kann eine Nichtkonvergenz von Daten auftreten. Es empfiehlt sich, solche Tabellen in der Mergeveröffentlichung nur als herunterladbar anzugeben, um dieses Risiko zu vermeiden. Dadurch wird verhindert, dass ein Mergeabonnent Datenänderungen in die Tabelle hochlädt. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ <sup>1</sup> Sie sollten die `@published_in_tran_pub` -Eigenschaft für die Mergeveröffentlichung festlegen. Standardmäßig wird bei der Transaktionsreplikation erwartet, dass Tabellen auf dem Abonnenten als schreibgeschützt behandelt werden. Wenn bei der Mergereplikation Datenänderungen an einer Tabelle in einem Transaktionsabonnement vorgenommen werden, kann eine Nichtkonvergenz von Daten auftreten. Es empfiehlt sich, solche Tabellen in der Mergeveröffentlichung nur als herunterladbar anzugeben, um dieses Risiko zu vermeiden. Dadurch wird verhindert, dass ein Mergeabonnent Datenänderungen in die Tabelle hochlädt. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verteilung konfigurieren](configure-distribution.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish/publish-data-and-database-objects.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
