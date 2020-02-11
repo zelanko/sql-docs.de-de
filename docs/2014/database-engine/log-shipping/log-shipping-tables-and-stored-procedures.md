@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774497"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "62774497"
   
 ## <a name="primary-server-tables"></a>Tabellen des primären Servers  
   
-|Tabelle|Description|  
+|Tabelle|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|Speichert die Warnungsauftrags-ID. Diese Tabelle wird auf dem primären Server nur dann verwendet, wenn kein Remoteüberwachungsserver konfiguriert wurde.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|Speichert Fehlerdetails für Protokollversandaufträge, die dem primären Server zugeordnet sind.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62774497"
   
 ## <a name="primary-server-stored-procedures"></a>Gespeicherte Prozeduren des primären Servers  
   
-|Gespeicherte Prozedur|Beschreibung|  
+|Gespeicherte Prozedur|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql)|Richtet die primäre Datenbank, einschließlich des Sicherungsauftrags sowie des lokalen und Remoteüberwachungseintrags, für eine Protokollversandkonfiguration ein.|  
 |[sp_add_log_shipping_primary_secondary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql)|Fügt zu einer vorhandenen primären Datenbank den Namen einer sekundären Datenbank hinzu.|  
@@ -53,7 +53,7 @@ ms.locfileid: "62774497"
   
 ## <a name="secondary-server-tables"></a>Tabellen des sekundären Servers  
   
-|Tabelle|Description|  
+|Tabelle|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|Speichert die Warnungsauftrags-ID. Diese Tabelle wird auf dem sekundären Server nur dann verwendet, wenn kein Remoteüberwachungsserver konfiguriert wurde.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|Speichert Fehlerdetails für Protokollversandaufträge, die dem sekundären Server zugeordnet sind.|  
@@ -67,7 +67,7 @@ ms.locfileid: "62774497"
   
 ## <a name="secondary-server-stored-procedures"></a>Gespeicherte Prozeduren des sekundären Servers  
   
-|Gespeicherte Prozedur|Description|  
+|Gespeicherte Prozedur|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql)|Richtet eine sekundäre Datenbank für den Protokollversand ein.|  
 |[sp_add_log_shipping_secondary_primary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql)|Richtet die primären Informationen ein, fügt Links zur lokalen und Remoteüberwachung hinzu und erstellt auf dem sekundären Server Kopier- und Wiederherstellungsaufträge für die angegebene primäre Datenbank.|  
@@ -82,7 +82,7 @@ ms.locfileid: "62774497"
   
 ## <a name="monitor-server-tables"></a>Tabellen des Überwachungsservers  
   
-|Tabelle|Description|  
+|Tabelle|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|Speichert die Warnungsauftrags-ID.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|Speichert Fehlerdetails für Protokollversandaufträge.|  
@@ -92,7 +92,7 @@ ms.locfileid: "62774497"
   
 ## <a name="monitor-server-stored-procedures"></a>Gespeicherte Prozeduren des Überwachungsservers  
   
-|Gespeicherte Prozedur|Beschreibung|  
+|Gespeicherte Prozedur|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql)|Erstellt einen Warnungsauftrag des Protokollversands, falls dieser noch nicht erstellt wurde.|  
 |[sp_delete_log_shipping_alert_job](/sql/relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql)|Entfernt den Warnungsauftrag des Protokollversands, falls keine zugeordneten primären Datenbanken vorhanden sind.|  

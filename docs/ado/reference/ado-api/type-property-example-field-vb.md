@@ -1,5 +1,5 @@
 ---
-title: Geben Sie die Eigenschaft – Beispiel (Field) (VB) | Microsoft-Dokumentation
+title: Beispiel für eine Typeigenschaft (Feld) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936678"
 ---
 # <a name="type-property-example-field-vb"></a>Type-Eigenschaft – Beispiel (Field) (VB)
-In diesem Beispiel wird veranschaulicht, die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Anzeigen des Namens der Konstante, die entspricht dem Wert der Eigenschaft der [Typ](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft aller der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Mitarbeiter*** Tabelle. Die Feldtyp-Funktion ist zum Ausführen dieser Prozedur erforderlich.  
+In diesem Beispiel wird die [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft veranschaulicht, indem der Name der Konstante angezeigt wird, die dem Wert der [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft aller [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Employees*** -Tabelle entspricht. Die FieldType-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ```  
 'BeginTypeFieldVB  
@@ -105,6 +105,6 @@ End Sub
 Attribute VB_Name = "TypeField"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

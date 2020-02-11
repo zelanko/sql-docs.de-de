@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 9: Testen des Lektion 1-Tutorialpakets | Microsoft-Dokumentation'
+title: 'Schritt 9: Testen des Tutorialpakets aus Lektion 1 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767607"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Tutorialpakets aus Lektion 1
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Lektion 1-Lernprogrammpakets
   In dieser Lektion haben Sie die folgenden Aufgaben ausgeführt:  
   
 -   Ein neues [!INCLUDE[ssIS](../includes/ssis-md.md)] -Projekt erstellt.  
@@ -48,9 +48,9 @@ ms.locfileid: "62767607"
 2.  Klicken Sie nach Ausführen des Pakets im Menü **Debuggen** auf **Debuggen beenden**.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Schleifen](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Lektion 2: Hinzufügen von Schleifen](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführung von Projekten und Paketen](packages/run-integration-services-ssis-packages.md)  
   
   

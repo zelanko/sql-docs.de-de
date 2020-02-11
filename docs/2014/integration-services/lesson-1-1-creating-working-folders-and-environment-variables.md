@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767652"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen
@@ -36,7 +36,7 @@ ms.locfileid: "62767652"
   
 3.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie anschließend auf **Ordner**.  
   
-4.  Benennen Sie neuen Ordner in `DeploymentTutorial`.  
+4.  Benennen Sie den neuen `DeploymentTutorial`Ordner in um.  
   
 ### <a name="to-create-local-environment-variables"></a>So erstellen Sie lokale Umgebungsvariablen  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62767652"
   
 4.  Klicken Sie im Dialogfeld **Umgebungsvariablen** im Bereich **Systemvariablen** auf **Neu**.  
   
-5.  In der **neue Systemvariable** (Dialogfeld), geben `DataTransfer` in die **Variablenname** Feld und `C:\DeploymentTutorial\datatransferconfig.dtsconfig` in die **Variablenwert** Feld.  
+5.  Geben `DataTransfer` Sie im Dialogfeld **neue System Variable** in das Feld **Variablenname** und `C:\DeploymentTutorial\datatransferconfig.dtsconfig` im Feld **Variablen Wert** ein.  
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Klicken Sie auf **neu** erneut, und geben `LoadXMLData` in die **Variablenname** Feld und `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` in die **Variablenwert** Feld.  
+7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **** Sie im Feld Variablenname `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
   
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Umgebungsvariablen** zu beenden.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "62767652"
   
 4.  Klicken Sie im Dialogfeld **Umgebungsvariablen** unter **Systemvariablen** auf **Neu**.  
   
-5.  In der **neue Systemvariablen** (Dialogfeld), geben `DataTransfer` in die **Variablenname** Feld und `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` in die **Variablenwert** Feld.  
+5.  Geben `DataTransfer` Sie im Dialogfeld **neue System Variablen** in das Feld **Variablenname** und `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` im Feld **Variablen Wert** ein.  
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Klicken Sie auf **neu** erneut, und geben `LoadXMLData` in die **Variablenname** Feld und `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` in die **Variablenwert** Feld.  
+7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **** Sie im Feld Variablenname `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
   
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Umgebungsvariablen** zu beenden.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "62767652"
   
 10. Führen Sie optional einen Neustart des Computers aus.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 2: Erstellen des Bereitstellungsprojekts](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
   

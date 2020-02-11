@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809343"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Servereigenschaften (Seite Allgemein) - SQL Server Management Studio
-  Auf dieser Seite können Sie schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation anzeigen.  
+  Verwenden Sie diese Seite, um schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation anzuzeigen.  
   
 ## <a name="property-grid"></a>Eigenschaftsraster  
  Zeigt die Eigenschaften des ausgewählten Servers an, z. B. Servername, Betriebssystem des Servers oder Anzahl der Prozessoren.  
@@ -30,13 +30,13 @@ ms.locfileid: "62809343"
  **Name**  
  Zeigt den Namen der Serverinstanz an.  
   
- **Product**  
+ **Produkt**  
  Zeigt die aktuell ausgeführte Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
   
  **Betriebssystem**  
  Zeigt das aktuell ausgeführte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem an.  
   
- **Platform**  
+ **Plattform**  
  Beschreibt das Betriebssystem und die Hardware für die Ausführung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Version**  
@@ -45,7 +45,7 @@ ms.locfileid: "62809343"
  **Sprache**  
  Zeigt die Sprache an, die von der ausgeführten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt wird.  
   
- **Speicher**  
+ **Memory**  
  Zeigt den Umfang des RAM auf dem Server an.  
   
  **Prozessoren**  
@@ -66,7 +66,7 @@ ms.locfileid: "62809343"
 ## <a name="description-field"></a>Beschreibungsfeld  
  Zeigt zusätzliche Informationen zu den Servereigenschaften an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809349"
 ---
 # <a name="server-properties-connections-page"></a>Servereigenschaften (Seite Verbindungen)
@@ -33,7 +33,7 @@ ms.locfileid: "62809349"
  **Default connection options**  
  Gibt die Standardverbindungsoptionen an, die in der folgenden Tabelle beschrieben werden.  
   
-|Konfigurationsoption|Description|  
+|Konfigurationsoption|Beschreibung|  
 |--------------------------|-----------------|  
 |**Verzögerte Einschränkungsüberprüfung deaktivieren**|Steuert die zwischenzeitliche oder verzögerte Einschränkungsüberprüfung.|  
 |**Implizite Transaktionen**|Steuert den impliziten Start einer Transaktion, wenn eine Anweisung ausgeführt wird.|  
@@ -70,8 +70,8 @@ ms.locfileid: "62809349"
  **Ausgeführte Werte**  
  Zeigt die gegenwärtig ausgeführten Werte für die Optionen in diesem Bereich an. Diese Werte sind schreibgeschützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Optionen &#40;Abfragen Abfrageausführung: SQL Server: Seite "Erweitert"&#41;](../options-query-execution-sql-server-advanced-page.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Optionen &#40;Abfrage Ausführung: SQL Server: Seite "erweiterte Seite"&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

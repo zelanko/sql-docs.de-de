@@ -1,5 +1,5 @@
 ---
-title: Upgrade auf eine andere Edition von SQLServer 2014 (Setup) | Microsoft-Dokumentation
+title: Upgrade auf eine andere Edition von SQL Server 2014 (Setup) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774574"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Aktualisieren auf eine andere Edition von SQL Server 2014 (Setup)
@@ -29,15 +29,15 @@ ms.locfileid: "62774574"
 -   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Clusterumgebung nutzen:** Ausführung eines editionsupgrades auf einem Knoten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clusters reicht. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
+>  **in einer Cluster Umgebung: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** Das Ausführen eines Editions Upgrades auf einem der Knoten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des Clusters ist ausreichend. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie auf der Remotefreigabe ein Domänenkonto mit Leseberechtigungen verwenden.  
   
 > [!IMPORTANT]  
 >  Damit die Änderung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition wirksam wird, müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste neu starten. Dies führt zu einem Ausfall der Anwendung, während die Dienste offline sind.  
   
-## <a name="procedure"></a>Prozedur  
+## <a name="procedure"></a>Verfahren  
   
 #### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>So führen Sie ein Upgrade auf eine andere Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durch  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62774574"
   
 4.  Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**.  
   
-5.  Klicken Sie auf der Seite Product Key auf ein Optionsfeld, um anzugeben, ob Sie auf eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren oder über einen PID-Schlüssel für eine Produktionsversion des Produkts verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md).  
+5.  Klicken Sie auf der Seite Product Key auf ein Optionsfeld, um anzugeben, ob Sie auf eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren oder über einen PID-Schlüssel für eine Produktionsversion des Produkts verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [unterstützte Versions-und Editions Upgrades](supported-version-and-edition-upgrades.md).  
   
 6.  Lesen Sie auf der Seite mit den Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um die Lizenzbestimmungen zu akzeptieren. Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen. Klicken Sie auf **Abbrechen**, wenn Sie den Setupvorgang beenden möchten.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62774574"
   
 11. Auf der Seite Abgeschlossen finden Sie einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise.  
   
-12. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen über Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](view-and-read-sql-server-setup-log-files.md).  
+12. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
 13. Wenn Sie ein Upgrade von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]durchgeführt haben, müssen Sie zusätzliche Schritte ausführen, bevor Sie die aktualisierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden können:  
   
@@ -73,14 +73,14 @@ ms.locfileid: "62774574"
   
  Wenn Sie von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]aktualisiert haben, müssen Sie zusätzlich zu den oben beschriebenen Schritten möglicherweise die folgenden Schritte ausführen:  
   
--   Benutzer, die in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] bereitgestellt wurden, stehen auch nach dem Upgrade zur Verfügung. Dies gilt insbesondere für die Gruppe BUILTIN\Users. Deaktivieren oder entfernen Sie diese Konten nach Bedarf, oder stellen Sie sie erneut bereit. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Benutzer, die in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] bereitgestellt wurden, stehen auch nach dem Upgrade zur Verfügung. Dies gilt insbesondere für die Gruppe BUILTIN\Users. Deaktivieren oder entfernen Sie diese Konten nach Bedarf, oder stellen Sie sie erneut bereit. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
 -   Die Größe und der Wiederherstellungsmodus für tempdb und Systemdatenbanken bleiben nach dem Upgrade unverändert. Konfigurieren Sie diese Einstellungen bei Bedarf neu. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   Vorlagendatenbanken verbleiben nach dem Upgrade auf dem Computer.  
   
-## <a name="see-also"></a>Siehe auch  
- [Upgrade auf SQLServer 2014](upgrade-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Upgrade auf SQL Server 2014](upgrade-sql-server.md)   
  [Abwärtskompatibilität](../../getting-started/backward-compatibility.md)  
   
   

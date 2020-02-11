@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771516"
 ---
 # <a name="advanced-connection-properties"></a>Erweiterte Verbindungseigenschaften
@@ -31,7 +31,7 @@ ms.locfileid: "62771516"
 > [!IMPORTANT]  
 >  Schließen Sie keine Anmeldeinformationen in das Dialogfeld **Erweiterte Verbindungseigenschaften** ein. Sie werden nicht verschlüsselt, wenn sie über das Netzwerk übergeben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf die CDC Designer Console](access-the-cdc-designer-console.md)   
  [SQL Server-Verbindung für die Instanzerstellung](sql-server-connection-for-instance-creation.md)  
   

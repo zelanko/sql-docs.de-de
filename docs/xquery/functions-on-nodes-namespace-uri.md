@@ -1,5 +1,5 @@
 ---
-title: Namespace-Uri-Funktion (XQuery) | Microsoft-Dokumentation
+title: Namespace-URI-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929942"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funktionen für Knoten – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den Namespace-URI des QName in angegebenen *$arg* als xs: String.  
+  Gibt den Namespace-URI des in *$arg* angegebenen QName als xs: String zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Knotenname, dessen Namespace-URI-Teil abgerufen wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Wird das Argument nicht angegeben, wird standardmäßig der Kontextknoten verwendet.  
   
--   In SQL Server **Fn:Namespace-URI()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden kann. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden.  
+-   In SQL Server kann **FN: Namespace-URI ()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden.  
   
--   Wenn *$arg* ist die leere Sequenz ist, wird die Zeichenfolge der Länge 0 (null) zurückgegeben.  
+-   Wenn *$arg* die leere Sequenz ist, wird die Zeichenfolge der Länge 0 (null) zurückgegeben.  
   
--   Wenn *$arg* ein Element- oder Attributknoten, dessen expanded-QName nicht in einem Namespace, der die Funktion ist, gibt die Zeichenfolge der Länge 0 (null) zurück.  
+-   Wenn *$arg* ein Element-oder Attribut Knoten ist, dessen erweiterter QName sich nicht in einem Namespace befindet, gibt die Funktion die Zeichenfolge mit der Länge 0 (null) zurück.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Abrufen eines Namespace-URI eines bestimmten Knotens  
  Die folgende Abfrage wird für eine nicht typisierte XML-Instanz angegeben. Der Abfrageausdruck `namespace-uri(/ROOT[1])` ruft den Namespace-URI-Teil des angegebenen Knotens ab.  
@@ -61,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Da der angegebene QName nicht über den URI-Teil des Namespace verfügt, sondern lediglich über den lokalen Teil des Namens, ist das Ergebnis eine leere Zeichenfolge.  
   
- Die folgende Abfrage wird angegeben, für die typisierte Instructions **Xml** Spalte. Der Ausdruck `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, gibt die Namespace-URI des ersten <`Location`> des untergeordneten Elements die <`root`> Element.  
+ Die folgende Abfrage wird für die Anweisungen typisierte **XML** -Spalte angegeben. Der Ausdruck gibt `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`den Namespace-URI des ersten <`Location`>-Elements zurück, das dem <`root`> Element untergeordnet ist.  
   
 ```  
 SELECT Instructions.query('  
@@ -78,7 +78,7 @@ https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManu
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Verwenden von namespace-uri() ohne Argument in einem Prädikat  
- Die folgende Abfrage wird für die CatalogDescription-Spalte vom Typ XML angegeben. Der Ausdruck gibt alle Elementknoten zurück, deren Namespace-URI `https://www.adventure-works.com/schemas/OtherFeatures` ist. Der Namespace -**uri()** -Funktion ohne Argument angegeben wird, und verwendet den Kontextknoten.  
+ Die folgende Abfrage wird für die CatalogDescription-Spalte vom Typ XML angegeben. Der Ausdruck gibt alle Elementknoten zurück, deren Namespace-URI `https://www.adventure-works.com/schemas/OtherFeatures` ist. Die Namespace-**URI ()** -Funktion wird ohne Argument angegeben und verwendet den Kontext Knoten.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -89,7 +89,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Dies ist die Teilergebnis:  
+ Dies ist ein Teilergebnis:  
   
 ```  
 <p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
@@ -98,15 +98,15 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Sie können den Namespace-URI in der vorherigen Abfrage zu `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` ändern. Sie erhalten dann alle untergeordneten-Elemente Knoten von der <`ProductDescription`> Element, dessen Namespace-URI-Teil des expanded-QName `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Sie können den Namespace-URI in der vorherigen Abfrage zu `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` ändern. Sie erhalten dann alle untergeordneten Elementknoten des <`ProductDescription`>-Elements, dessen Namespace-URI-Teil des erweiterten QName `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`ist.  
   
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   Die **namespace-uri()** -Funktion gibt Instanzen vom Typ xs: String anstelle von xs: anyURI zurück.  
+-   Die **Namespace-URI ()-** Funktion gibt Instanzen vom Typ xs: String anstelle von xs: anyURI zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [Funktionen für Knoten](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [Local-Name-Funktion &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Funktionen auf Knoten](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [local-name-Funktion &#40;XQuery-&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

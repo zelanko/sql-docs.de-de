@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918576"
 ---
 # <a name="set-or-change-the-server-collation"></a>Festlegen oder Ändern der Serversortierung
@@ -32,7 +32,7 @@ ms.locfileid: "62918576"
   
 -   Löschen aller Benutzerdatenbanken.  
   
--   Neuerstellen der Masterdatenbank unter Angabe der neuen Sortierung in der SQLCOLLATION-Eigenschaft des **setup** -Befehls. Zum Beispiel:  
+-   Neuerstellen der Masterdatenbank unter Angabe der neuen Sortierung in der SQLCOLLATION-Eigenschaft des **setup** -Befehls. Beispiel:  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
@@ -49,8 +49,8 @@ ms.locfileid: "62918576"
 > [!NOTE]  
 >  Anstatt die Standardsortierung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu ändern, können Sie eine Standardsortierung für alle neu zu erstellenden Datenbanken angeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Sortierung und Unicode-Unterstützung](collation-and-unicode-support.md)   
  [Festlegen oder Ändern der Datenbanksortierung](set-or-change-the-database-collation.md)   
  [Festlegen oder Ändern der Spaltensortierung](set-or-change-the-column-collation.md)   
  [Neuerstellen von Systemdatenbanken](../databases/system-databases.md)  

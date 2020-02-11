@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813377"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen (SQL Server Management Studio)
@@ -31,9 +31,9 @@ ms.locfileid: "62813377"
 
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
- Wenn Sie noch nie zu einer verfügbarkeitsgruppe ein verfügbarkeitsreplikat hinzugefügt haben, finden Sie unter der "Serverinstanzen" und "Verfügbarkeitsgruppen und Replikate" Abschnitte in [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Wenn Sie einer Verfügbarkeits Gruppe noch nie ein Verfügbarkeits Replikat hinzugefügt haben, lesen Sie die Abschnitte "Server Instanzen" und "Verfügbarkeits Gruppen und-Replikate" unter [Voraussetzungen, Einschränkungen und Empfehlungen für die AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der das aktuelle primäre Replikat gehostet wird.  
   
@@ -75,30 +75,30 @@ ms.locfileid: "62813377"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, der Sie ein sekundäres Replikat hinzufügen, und wählen Sie den Befehl **Replikat hinzufügen** aus. Dies startet den Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen.  
   
-4.  Verbinden Sie sich auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** mit sämtlichen sekundären Replikaten in der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit vorhandenen sekundären Replikaten Seite &#40;Assistent zum Hinzufügen von Replikaten und Assistenten zum Hinzufügen von Datenbanken&#41;](connect-to-existing-secondary-replicas-page.md).  
+4.  Verbinden Sie sich auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** mit sämtlichen sekundären Replikaten in der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit vorhandenen sekundären Replikaten, &#40;&#41;Assistenten zum Hinzufügen von Replikaten und hinzufügen ](connect-to-existing-secondary-replicas-page.md)von  
   
 5.  Auf der Seite **Replikate angeben** können Sie ein oder mehrere neue sekundäre Replikate für die Verfügbarkeitsgruppe angeben und konfigurieren. Diese Seite enthält drei Registerkarten. In der folgenden Tabelle werden diese Registerkarten eingeführt. Weitere Informationen finden Sie unter [Seite „Replikate angeben“ &#40;Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
-    |Registerkarte|Kurze Beschreibung|  
+    |Registerkarte|Kurzbeschreibung|  
     |---------|-----------------------|  
     |**Replikate**|Geben Sie mit dieser Registerkarte jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die ein neues sekundäres Replikat hostet.|  
-    |**Endpunkte**|Verwenden Sie diese Registerkarte, um den vorhandenen Datenbankspiegelungs-Endpunkt ggf. für jedes neue sekundäre Replikat zu überprüfen. Falls dieser Endpunkt auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung verwenden, wird vom Assistenten versucht, den Endpunkt automatisch zu erstellen. **Hinweis**:  Wenn eine Serverinstanz unter einem nicht-Domänenbenutzerkonto ausgeführt wird, müssen Sie vornehmen, eine manuelle Änderung an der Serverinstanz, bevor Sie den Assistenten fortsetzen können. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).|  
+    |**Endpunkte**|Verwenden Sie diese Registerkarte, um den vorhandenen Datenbankspiegelungs-Endpunkt ggf. für jedes neue sekundäre Replikat zu überprüfen. Falls dieser Endpunkt auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung verwenden, wird vom Assistenten versucht, den Endpunkt automatisch zu erstellen. **Hinweis:**  Wenn eine Serverinstanz unter einem nicht-Domänen Benutzerkonto ausgeführt wird, müssen Sie eine manuelle Änderung an der Serverinstanz vornehmen, bevor Sie den Assistenten fortsetzen können. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).|  
     |**Sicherungseinstellungen**|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes, wenn Sie die aktuelle Einstellung ändern möchten, und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
   
-6.  Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** aus, wie die neuen sekundären Datenbanken erstellt und mit der Verfügbarkeitsgruppe verknüpft werden sollen. Wählen Sie eine der folgenden Optionen aus:  
+6.  Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** aus, wie die neuen sekundären Datenbanken erstellt und mit der Verfügbarkeitsgruppe verknüpft werden sollen. Wählen Sie eine der folgenden Optionen:  
   
-    -   **Full**  
+    -   **Vollständig**  
   
-         Aktivieren Sie diese Option, wenn Ihre Umgebung die Anforderungen zum automatischen Starten der anfänglichen Datensynchronisierung erfüllt. Weitere Informationen finden Sie weiter oben in diesen Thema unter [Voraussetzungen, Einschränkungen und Empfehlungen](#Prerequisites).  
+         Aktivieren Sie diese Option, wenn Ihre Umgebung die Anforderungen zum automatischen Starten der anfänglichen Datensynchronisierung erfüllt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen, Einschränkungen und Empfehlungen](#Prerequisites).  
   
          Wenn Sie **Vollständig**auswählen, werden vom Assistenten nach der Erstellung der Verfügbarkeitsgruppe alle primären Datenbanken und ihre Transaktionsprotokolle auf einer Netzwerkfreigabe gesichert und die Sicherungen auf allen Serverinstanzen wiederhergestellt, die ein neues sekundäres Replikat hosten. Der Assistent verknüpft anschließend alle neuen sekundären Datenbanken mit der Verfügbarkeitsgruppe.  
   
-         Legen Sie im **Feld zum Angeben eines freigegebenen Netzwerkspeicherorts, auf den von allen Replikaten zugegriffen werden kann** , eine Sicherungsfreigabe fest, für die alle Serverinstanzen, die Replikate hosten, Lese-/Schreibzugriff besitzen. Die Protokollsicherungen sind Teil der Protokollsicherungskette. Speichern Sie die Protokollsicherungsdateien ordnungsgemäß.  
+         Legen Sie im Feld zum **Angeben eines freigegebenen Netzwerkspeicherorts, auf den von allen Replikaten zugegriffen werden kann** , eine Sicherungsfreigabe fest, für die alle Serverinstanzen, die Replikate hosten, Lese-/Schreibzugriff besitzen. Die Protokollsicherungen sind Teil der Protokollsicherungskette. Speichern Sie die Protokollsicherungsdateien ordnungsgemäß.  
   
         > [!IMPORTANT]  
         >  Informationen zu den erforderlichen Dateisystemberechtigungen finden Sie weiter oben in diesem Thema unter [Erforderliche Komponenten](#Prerequisites).  
   
-    -   **Nur verknüpfen**  
+    -   **Nur beitreten**  
   
          Wenn Sie sekundäre Datenbanken auf den Serverinstanzen, die die neuen sekundären Replikate hosten, manuell vorbereitet haben, können Sie diese Option aktivieren. Der Assistent verknüpft die neuen sekundären Datenbanken mit der Verfügbarkeitsgruppe.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62813377"
      Klicken Sie nach Abschluss des Assistenten auf **Schließen** , um den Assistenten zu beenden.  
   
 > [!IMPORTANT]  
->  Lesen Sie nach dem Hinzufügen eines Replikats den Abschnitt „Nächster Schritt: Nach dem Hinzufügen eines sekundären Replikats“ unter [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  Lesen Sie nach dem Hinzufügen eines Replikats den Abschnitt „Nachverfolgung: Nach dem Hinzufügen eines Replikats“ unter [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 
   
@@ -129,9 +129,9 @@ ms.locfileid: "62813377"
   
 
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

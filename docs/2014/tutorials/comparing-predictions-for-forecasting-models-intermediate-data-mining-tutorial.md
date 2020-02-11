@@ -1,5 +1,5 @@
 ---
-title: Vergleichen von Vorhersagen für Forecasting-Modellen (mittleres Datamining Tutorial) | Microsoft-Dokumentation
+title: Vergleichen von Vorhersagen für Prognosemodelle (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066334"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Vergleichen von Vorhersagen für Modelle zur Planungserstellung (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -34,8 +34,8 @@ ms.locfileid: "63066334"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a> Vergleichen die ursprünglichen Ergebnisse und Ergebnissen nach dem Hinzufügen von Daten  
- Sehen wir uns auf die Daten für die M200-Produktlinie nur in der Region Pazifik zu sehen, wie sich die Aktualisierung des Modells mit neuen Daten auf die Ergebnisse auswirkt. Erinnern Sie sich, dass die ursprüngliche Datenreihe im Juni 2004 endete und wir neue Daten für Juli, August und September abgerufen haben.  
+##  <a name="bkmk_EXTEND"></a>Vergleichen der ursprünglichen Ergebnisse mit Ergebnissen nach dem Hinzufügen von Daten  
+ Sehen wir uns nur die Daten für die M200-Produktlinie in der Pazifikregion an, um zu erfahren, wie sich das Aktualisieren des Modells mit neuen Daten auf die Ergebnisse auswirkt. Erinnern Sie sich, dass die ursprüngliche Datenreihe im Juni 2004 endete und wir neue Daten für Juli, August und September abgerufen haben.  
   
 -   Die erste Spalte zeigt die neu hinzugefügten Daten an.  
   
@@ -56,8 +56,8 @@ ms.locfileid: "63066334"
   
  Im Allgemeinen gewichtet der Algorithmus die Änderungen in den neuen Daten stärker als Daten vom Anfang der Modelldaten. In diesem Fall geben die neuen Umsatzzahlen im Vergleich zum vorherigen Zeitraum jedoch nur eine Zunahme von 20-30 Prozent an. Die prognostizierten Umsätze verzeichneten also nur einen leichten Anstieg; anschließend gehen die Verkaufsprognosen erneut abwärts und entsprechen eher dem Trend in den Monaten vor den neuen Daten.  
   
-##  <a name="bkmk_REPLACE"></a> Vergleichen der ursprünglichen und Kreuzvorhersage-Ergebnisse  
- Sie werden sich erinnern, dass das ursprüngliche Miningmodell einen großen Unterschied zwischen bestimmten Regionen und Modellreihen herausarbeitete. So waren die Verkäufe für das M200-Modell beispielsweise sehr stark, während sie für das T1000-Modell in allen Regionen ziemlich niedrig waren. Einige Reihen haben nicht darüber hinaus viele Daten. Manche Reihen waren unregelmäßig, was bedeutet, dass sie nicht denselben Ausgangspunkt hatten.  
+##  <a name="bkmk_REPLACE"></a>Vergleichen der ursprünglichen und Kreuz Vorhersage Ergebnisse  
+ Sie werden sich erinnern, dass das ursprüngliche Miningmodell einen großen Unterschied zwischen bestimmten Regionen und Modellreihen herausarbeitete. So waren die Verkäufe für das M200-Modell beispielsweise sehr stark, während sie für das T1000-Modell in allen Regionen ziemlich niedrig waren. Darüber hinaus haben einige Reihen keine großen Daten. Die Reihen waren unregelmäßig, was bedeutet, dass Sie nicht denselben Ausgangspunkt hatten.  
   
  ![Reihenvorhersagen für Mengen M200 und T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "Reihenvorhersagen für Mengen M200 und T1000")  
   
@@ -65,19 +65,19 @@ ms.locfileid: "63066334"
   
  Das folgende Diagramm basiert auf nur einer Produktlinie, dem M200. Das Diagramm vergleicht die Vorhersagen, die jeweils mit dem ursprünglichen Miningmodell und dem aggregierte Miningmodell ermittelt wurden.  
   
- ![Excel-Diagramm Vergleichen von Vorhersagen](../../2014/tutorials/media/m200-predictions-compared.gif "Excel-Diagramm Vergleichen von Vorhersagen")  
+ ![Excel-Diagramm zum Vergleich von Vorhersagen](../../2014/tutorials/media/m200-predictions-compared.gif "Excel-Diagramm zum Vergleich von Vorhersagen")  
   
  In diesem Diagramm können Sie erkennen, dass das aggregierte Miningmodell den allgemeinen Wertebereich und -trend beibehält, gleichzeitig jedoch die Schwankungen in den einzelnen Datenreihen minimiert.  
   
-## <a name="conclusion"></a>Schlussbemerkung  
+## <a name="conclusion"></a>Zusammenfassung  
  Sie haben gelernt, ein Zeitreihenmodell zu erstellen und anzupassen, das zur Prognoseerstellung verwendet werden kann.  
   
  Sie haben gelernt, Zeitreihenmodelle ohne erneute Verarbeitung zu aktualisieren, indem Sie neue Daten hinzufügen und Vorhersagen mit dem Parameter EXTEND_MODEL_CASES erstellen.  
   
  Sie können nun Modelle erstellen, die für Kreuzvorhersagen geeignet sind, indem Sie den Parameter REPLACE_MODEL_CASES verwenden und das Modell auf eine andere Datenreihe anwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Lernprogramm für fortgeschrittene &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Beispiele für Abfragen von Zeitreihenmodellen](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Lernprogramm für fortgeschrittene &#40;Analysis Services-Data Mining-&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Abfragebeispiel Zeitreihenmodell](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

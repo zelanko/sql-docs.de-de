@@ -1,5 +1,5 @@
 ---
-title: Aggregieren von Funktionen, die CALC-Funktion und das neue Schlüsselwort | Microsoft-Dokumentation
+title: Aggregatfunktionen, die Calc-Funktion und das New-Schlüsselwort | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,38 +16,38 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926009"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
-Strukturieren von Daten unterstützt die folgenden Funktionen. Zugewiesene finden Sie im Kapitel mit der Spalte verwendet werden. Name ist der *Kapitel-Alias*.  
+Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der dem Kapitel mit der zu verwendenden Spalte zugewiesen ist, ist das *Kapitel-Alias*.  
   
- Ein Kapitel-Alias kann vollqualifiziert sein bestehend aus den einzelnen Spaltennamen im Kapitel zum Kapitel mit führenden der *Spaltenname,* durch Punkte getrennt. Angenommen, wenn das übergeordnete Kapitel Kap1, untergeordnete Kapitel chap2, enthält, die eine Mengenspalte "Amt" hat und dann der qualifizierte Name wäre chap1.chap2.amt.  
+ Ein Kapitel-Alias kann voll qualifiziert sein, bestehend aus jedem Kapitel Spaltennamen, der zu dem Kapitel mit dem *Spaltennamen führt,* der alle durch Zeiträume getrennt ist. Wenn das übergeordnete Kapitel chap1 beispielsweise ein untergeordnetes Kapitel chap2 enthält, das eine Spalte Amount (Amt) aufweist, lautet der qualifizierte Name chap1. chap2. Amt.  
   
-|Aggregatfunktionen|Beschreibung|  
+|Aggregatfunktionen|BESCHREIBUNG|  
 |-------------------------|-----------------|  
-|SUM (*Kapitel-Alias*. *Spaltenname*)|Berechnet die Summe aller Werte in der angegebenen Spalte.|  
-|AVG (*Kapitel-Alias*. *Spaltenname*)|Berechnet den Durchschnitt aller Werte in der angegebenen Spalte.|  
-|MAX (*Kapitel-Alias*. *Spaltenname*)|Berechnet den maximalen Wert in der angegebenen Spalte.|  
-|MIN (*Kapitel-Alias*. *Spaltenname*)|Berechnet den Mindestwert in der angegebenen Spalte an.|  
-|COUNT (*Kapitel-Alias*[. *Spaltenname*])|Zählt die Anzahl der Zeilen in den angegebenen Alias. Wenn eine Spalte angegeben wird, sind nur Zeilen, die für die diese Spalte ungleich Null ist in der Zählung enthalten.|  
-|STDEV (*Kapitel-Alias*. *Spaltenname*)|Berechnet die Standardabweichung in der angegebenen Spalte an.|  
-|Alle (*Kapitel-Alias*. *Spaltenname*)|Ein Wert der angegebenen Spalte. Alle hat einen vorhersagbaren Wert nur, wenn der Wert der Spalte für alle Zeilen im Kapitel identisch ist.<br /><br /> **Beachten Sie** Wenn die Spalte nicht den gleichen Wert für alle Zeilen in das Kapitel enthält, gibt die SHAPE-Befehl nach dem Zufallsprinzip einen der Werte auf den Wert der ANY-Funktion.|  
+|Sum (*Chapter-Alias*.* Spaltenname*)|Berechnet die Summe aller Werte in der angegebenen Spalte.|  
+|AVG (*Chapter-Alias*.* Spaltenname*)|Berechnet den Durchschnitt aller Werte in der angegebenen Spalte.|  
+|Max (*Chapter-Alias*.* Spaltenname*)|Berechnet den maximalen Wert in der angegebenen Spalte.|  
+|MIN (*Kapitel-Alias*).* Spaltenname*)|Berechnet den minimalen Wert in der angegebenen Spalte.|  
+|COUNT (*Chapter-Alias*[.* Spaltenname*])|Zählt die Anzahl der Zeilen im angegebenen Alias. Wenn eine Spalte angegeben wird, werden nur Zeilen, für die diese Spalte nicht NULL ist, in die Anzahl eingeschlossen.|  
+|StDev (*Chapter-Alias*.* Spaltenname*)|Berechnet die Standardabweichung in der angegebenen Spalte.|  
+|Any (*Chapter-Alias*.* Spaltenname*)|Ein Wert der angegebenen Spalte. ANY hat nur dann einen vorhersagbaren Wert, wenn der Wert der-Spalte für alle Zeilen im Kapitel gleich ist.<br /><br /> **Hinweis** Wenn die Spalte nicht denselben Wert für alle Zeilen im Kapitel enthält, gibt der Shape-Befehl willkürlich einen der-Werte als Wert der any-Funktion zurück.|  
   
-|berechneter Ausdruck|Beschreibung|  
+|Berechneter Ausdruck|BESCHREIBUNG|  
 |---------------------------|-----------------|  
-|CALC (*Ausdruck*)|Berechnet einen beliebigen Ausdruck, jedoch nur in der Zeile mit der **Recordset** , die die CALC-Funktion enthält. Ein Ausdruck, der mit diesen [Visual Basic für Applikationen (VBA) Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md) ist zulässig.|  
+|Calc (*Ausdruck*)|Berechnet einen beliebigen Ausdruck, aber nur in der Zeile des **Recordsets** , das die Calc-Funktion enthält. Jeder Ausdruck, der diese [Visual Basic for Applications Funktionen (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) verwendet, ist zulässig.|  
   
-|NEW-Schlüsselwort|Beschreibung|  
+|New-Schlüsselwort|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|NEUE *Feldtyp* [(*Breite* &#124; *Skalierung* &#124; *Genauigkeit* &#124; *Fehler*[, *Skalierung* &#124; *Fehler*])]|Fügt eine leere Spalte des angegebenen Typs, der **Recordset**.|  
+|Neuer *Feldtyp* [(*Breite* &#124; *Skala* &#124; *Genauigkeit* &#124; *Fehler* [, *skalieren* &#124; *Fehler*])]|Fügt dem **Recordset**eine leere Spalte vom angegebenen Typ hinzu.|  
   
- Die *Feldtyp* mit dem neuen Schlüsselwort übergeben werden können, eine der folgenden Datentypen.  
+ Der *Feldtyp* , der mit dem New-Schlüsselwort übermittelt wird, kann einen der folgenden Datentypen aufweisen.  
   
-|OLE DB-Datentypen|ADO-Datentyp equivalent(s)|  
+|Datentypen OLE DB|ADO-Datentyp Äquivalent (s)|  
 |-----------------------|-----------------------------------|  
 |DBTYPE_BSTR|adBSTR|  
 |DBTYPE_BOOL|adBoolean|  
@@ -59,20 +59,20 @@ Strukturieren von Daten unterstützt die folgenden Funktionen. Zugewiesene finde
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|AdBinary, AdVarBinary, adLongVarBinary|  
-|DBTYPE_STR|adChar, adVarChar, adLongVarChar|  
-|DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
-|DBTYPE_NUMERIC|Type|  
+|DBTYPE_BYTES|adbinary, adVarBinary, adLongVarBinary|  
+|DBTYPE_STR|adchar, adVarChar, adLongVarChar|  
+|DBTYPE_WSTR|adwchar, adVarWchar, adLongVarWChar|  
+|DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  
-|DBTYPE_DBTIMESTAMP|adDBTimeStamp|  
-|DBTYPE_VARNUMERIC|adVarNumeric|  
-|DBTYPE_FILETIME|adFileTime|  
+|DBTYPE_DBTIMESTAMP|adDBTimestamp|  
+|DBTYPE_VARNUMERIC|advarnumeric|  
+|DBTYPE_FILETIME|adfiletime|  
 |DBTYPE_ERROR|adError|  
   
- Wenn das neue Feld vom Typ Decimal (in OLE DB DBTYPE_DECIMAL, oder in ADO AdDecimal) ist, müssen Sie die Genauigkeit und Dezimalstellenanzahl Werte angeben.  
+ Wenn das neue Feld den Typ Decimal hat (in OLE DB, DBTYPE_DECIMAL oder in ADO, addecimal), müssen Sie die Werte für Genauigkeit und Dezimalstelle angeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für die datenstrukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
+ [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)

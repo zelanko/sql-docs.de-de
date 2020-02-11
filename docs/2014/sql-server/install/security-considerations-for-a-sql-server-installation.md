@@ -27,10 +27,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127889"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Überlegungen zur Sicherheit bei SQL Server-Installationen
@@ -122,7 +122,7 @@ ms.locfileid: "63127889"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden nicht unterstützt, wenn es sich bei den Clusterknoten um Domänencontroller handelt.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann beim Setup keine Sicherheitsgruppen erstellen oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten für einen schreibgeschützten Domänencontroller bereitstellen. In diesem Szenario tritt ein Setupfehler auf.  
+-   Beim Setup von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können keine Sicherheitsgruppen erstellt oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten für einen schreibgeschützten Domänencontroller bereitgestellt werden. In diesem Szenario tritt ein Setupfehler auf.  
   
 ## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Während oder nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nach der Installation können Sie die Sicherheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation mit diesen bewährten Methoden bezüglich Konten und Authentifizierungsmodi verbessern:  
@@ -152,8 +152,8 @@ ms.locfileid: "63127889"
 > [!IMPORTANT]  
 >  Während des Setups von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] wird eine Anmeldung für die Gruppe BUILTIN\Users hinzugefügt. Dies ermöglicht allen authentifizierten Benutzern des Computers den Zugriff auf die Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] als Element der öffentlichen Rolle. Die BUILTIN\Users-Anmeldung kann sicher entfernt werden, um den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Zugriff auf Computerbenutzer zu beschränken, die eigene Logins besitzen oder Mitglieder anderer Windows-Gruppen mit Logins sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hardware- und Softwareanforderungen zum Installieren von SQLServer 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Hardware-und Software Anforderungen für die Installation von SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
  [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

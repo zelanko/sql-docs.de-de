@@ -1,5 +1,5 @@
 ---
-title: Member-Beispiel (VBScript) | Microsoft-Dokumentation
+title: Members-Beispiel (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8f3fc746660b1382d8c06f5ffc343fd52ecf024
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949416"
 ---
 # <a name="members-example-vbscript"></a>Member-Beispiel (VBScript)
-Dieses Beispiel verwendet eine Zeichenfolge der MDX-Abfrage zum Abrufen von OLAP-Daten und schreibt den resultierenden Cellset auf eine Spalte umfassende Funktionen für mehrere Dimension Cellsets mit HTML-Tabellenstruktur.  
+Dieses Beispiel verwendet eine MDX-Abfrage Zeichenfolge zum Abrufen von OLAP-Daten und schreibt das resultierende Cellset mithilfe von Spalten umteilungs Funktionen für Cellsets mit mehreren Dimensionen in eine HTML-Tabellenstruktur.  
   
 ```  
 <%@ Language=VBScript %>  

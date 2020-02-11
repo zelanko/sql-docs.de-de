@@ -16,73 +16,73 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917359"
 ---
 # <a name="record-object-ado"></a>Record-Objekt (ADO)
-Stellt eine Zeile aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder der Datenanbieter oder ein Objekt, das von einem Anbieter von teilweise strukturierten Daten, z. B. einer Datei oder eines Verzeichnisses zurückgegeben.  
+Stellt eine Zeile aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder dem Datenanbieter oder ein Objekt dar, das von einem semistrukturierten Datenanbieter zurückgegeben wird, z. b. eine Datei oder ein Verzeichnis.  
   
-## <a name="remarks"></a>Hinweise  
- Ein **Datensatz** -Objekt stellt eine Zeile mit Daten und verfügt über einige grundlegenden ähnlichkeiten mit einer einzeilige **Recordset**. Abhängig von den Funktionen des Anbieters **Datensatz** Objekte können direkt von Ihrem Anbieter, anstatt eine einzelne Zeilen zurückgegeben werden **Recordset**, beispielsweise wenn eine SQL-Abfrage, die nur eine Zeile auswählt. ausgeführt. Oder, eine **Datensatz** -Objekt abgerufen werden kann, direkt aus einer **Recordset** Objekt. Oder, eine **Datensatz** direkt von einem Anbieter zurückgegeben werden kann, um teilweise strukturierte Daten, z. B. Microsoft Exchange-OLE DB-Anbieters.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein **Datensatz** -Objekt stellt eine Daten Zeile dar und weist einige konzeptionelle Ähnlichkeiten mit einem einzeiligen **Recordset**auf. Abhängig von den Funktionen Ihres Anbieters können **Daten Satz** Objekte direkt von Ihrem Anbieter zurückgegeben werden, statt eines einzeiligen **Recordsets**, z. b. Wenn eine SQL-Abfrage ausgeführt wird, die nur eine Zeile auswählt. Oder ein **Datensatz** -Objekt kann direkt von einem **Recordset** -Objekt abgerufen werden. Oder Sie können einen **Datensatz** direkt von einem Anbieter an teilweise strukturierte Daten (z. b. den Microsoft Exchange OLE DB-Anbieter) zurückgeben.  
   
- Sie können die zugeordneten Felder anzeigen der **Datensatz** Objekt mit der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung auf die **Datensatz** Objekt. ADO ermöglicht, einschließlich Spalten mit Objektwerten **Recordset**, **SafeArray**, und Skalare Werte in der **Felder** Auflistung von **Datensatz** -Objekte.  
+ Sie können die Felder, die dem **Daten Satz** Objekt zugeordnet sind, mithilfe der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung für das **Datensatz** -Objekt anzeigen. ADO ermöglicht Objektwert Spalten einschließlich **Recordset**, **SAFEARRAY**und skalare Werte in der **Fields** -Auflistung von **Datensatz** -Objekten.  
   
- Wenn die **Datensatz** Objekt repräsentiert eine Zeile in einer **Recordset**, es ist möglich, auf das ursprüngliche zurückgeben **Recordset** mit der [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md) Diese Eigenschaft.  
+ Wenn das **Datensatz** -Objekt eine Zeile in einem **Recordset**darstellt, ist es möglich, mit der [Source](../../../ado/reference/ado-api/source-property-ado-record.md) -Eigenschaft zu diesem ursprünglichen **Recordset** zurückzukehren.  
   
- Die **Datensatz** Objekt kann auch verwendet werden von Anbietern für teilweise strukturierte Daten wie z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), um strukturierten Namespaces zu modellieren. Jeder Knoten in der Struktur ist eine **Datensatz** Objekt mit zugeordneten Spalten. Die Spalten können es sich um die Attribute dieses Knotens sowie weitere relevante Informationen darstellen. Die **Datensatz** Objekt kann sowohl einen Blattknoten als auch eine nicht-Blattknoten in der Struktur darstellen. Innerer Knoten als ihre Inhalte umfassen, aber Endknoten keine solche Inhalt. Blattknoten in der Regel enthalten binäre Datenströme und innerer Knoten möglicherweise auch einen binären Standarddatenstrom zugeordnet werden. Eigenschaften für die **Datensatz** Objekt identifiziert den Typ des Knotens.  
+ Das **Datensatz** -Objekt kann auch von semistrukturierten Datenanbietern wie dem [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)verwendet werden, um Struktur strukturierte Namespaces zu modellieren. Jeder Knoten in der Struktur ist ein **Datensatz** -Objekt mit zugeordneten Spalten. Die Spalten können die Attribute dieses Knotens und andere relevante Informationen darstellen. Das **Datensatz** -Objekt kann sowohl einen Endknoten als auch einen nicht-Blattknoten in der Baumstruktur darstellen. Nicht Blattknoten haben andere Knoten als ihren Inhalt, aber Blattknoten haben keinen solchen Inhalt. Blattknoten enthalten in der Regel binäre Datenströme, und auch nicht Blattknoten können über einen standardmäßigen binären Stream verfügen. Eigenschaften für das **Datensatz** -Objekt identifizieren den Knotentyp.  
   
- Die **Datensatz** Objekt stellt auch eine alternative Möglichkeit für die Daten navigieren hierarchisch organisiert werden. Ein **Datensatz** Objekt ist möglicherweise für das Stammverzeichnis des eine bestimmte Unterstruktur in einer großen Struktur darstellen erstellt wurden und neue **Datensatz** Objekte können zur Darstellung von untergeordneten Knoten geöffnet werden.  
+ Das **Datensatz** -Objekt stellt außerdem eine alternative Möglichkeit zum Navigieren hierarchisch organisiert Daten dar. Ein **Datensatz** -Objekt kann erstellt werden, um den Stamm einer bestimmten Unterstruktur in einer großen Struktur darzustellen, und neue **Daten Satz** Objekte können geöffnet werden, um untergeordnete Knoten darzustellen.  
   
- Eine Ressource (z. B. eine Datei oder Verzeichnis) kann durch eine absolute URL eindeutig identifiziert werden. Ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt implizit erstellt und legen Sie auf die **Datensatz** Objekt bei der **Datensatz** mithilfe einer absoluten URLs geöffnet wird. Ein **Verbindung** Objekt kann explizit festgelegt werden, um die **Datensatz** -Objekt über die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft. Die Dateien und Verzeichnisse, die mithilfe von zugegriffen werden können die **Verbindung** Objekt definieren die *Kontext* in der **Datensatz** Vorgänge auftreten.  
+ Eine Ressource (z. b. eine Datei oder ein Verzeichnis) kann durch eine absolute URL eindeutig identifiziert werden. Ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt wird implizit erstellt und auf das **Daten** Satz Objekt festgelegt, wenn der **Datensatz** mithilfe einer absolute URL geöffnet wird. Ein **Verbindungs** Objekt kann explizit auf das **Datensatz** -Objekt über die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft festgelegt werden. Die Dateien und Verzeichnisse, auf die über das **Verbindungs** Objekt zugegriffen werden kann, definieren den *Kontext* , in dem **Daten Satz** Vorgänge auftreten können.  
   
- Daten ändern und Navigation-Methoden für die **Datensatz** -Objekt akzeptieren auch eine relative URL, die sucht eine Ressource mit der eine absolute URL oder die **Verbindung** Objektkontext als Ausgangspunkt.  
+ Daten Änderungs-und Navigationsmethoden für das **Datensatz** -Objekt akzeptieren außerdem eine relative URL, die eine Ressource mit einem absolute URL oder dem **Verbindungs** Objekt Kontext als Ausgangspunkt verwendet.  
   
 > [!NOTE]
->  URLs, die mit der HTTP-Schema werden automatisch aufgerufen, die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
- Ein **Verbindung** Objekt ist für jeden **Datensatz** Objekt. Aus diesem Grund **Datensatz** Objektvorgänge können Teil einer Transaktion sein, durch den Aufruf **Verbindung** Transaktionsmethoden Objekt.  
+ Jedem **Datensatz** -Objekt ist ein **Verbindungs** Objekt zugeordnet. Daher können **Daten Satz** Objekt Vorgänge Teil einer Transaktion sein, indem Verbindungsmethoden für **Verbindungs** Objekte aufgerufen werden.  
   
- Die **Datensatz** Objekt ADO-Ereignisse wird nicht unterstützt und daher nicht auf Benachrichtigungen reagiert wird.  
+ Das **Datensatz** -Objekt unterstützt keine ADO-Ereignisse und antwortet daher nicht auf Benachrichtigungen.  
   
- Mit den Methoden und Eigenschaften einer **Datensatz** -Objekts können Sie folgende Möglichkeiten:  
+ Mit den Methoden und Eigenschaften eines **Datensatz** -Objekts können Sie folgende Aufgaben ausführen:  
   
--   Festlegen oder Zurückgeben des zugeordneten **Verbindung** Objekt mit der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft.  
+-   Legen Sie das zugeordnete **Verbindungs** Objekt mit der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft fest oder geben Sie es zurück  
   
--   Angeben von Berechtigungen mit den [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft.  
+-   Geben Sie Zugriffsberechtigungen mit der [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft an.  
   
--   Die URL des Verzeichnisses zurück, sofern vorhanden, mit der Ressource durch dargestellt die **Datensatz** mit der [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) Eigenschaft.  
+-   Gibt ggf. die URL des Verzeichnisses zurück, das die durch den **Datensatz** dargestellte Ressource mit der Eigenschaft " [Parser-URL](../../../ado/reference/ado-api/parenturl-property-ado.md) " enthält.  
   
--   Geben Sie die absolute URL, die relative URL oder **Recordset** aus dem der **Datensatz** abgeleitet ist, mit der [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md) Eigenschaft.  
+-   Gibt die absolute URL, relative URL oder **Recordsets** an, aus denen der **Datensatz** mit der [Source](../../../ado/reference/ado-api/source-property-ado-record.md) -Eigenschaft abgeleitet wird.  
   
--   Geben Sie den aktuellen Status der **Datensatz** mit der [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft.  
+-   Gibt den aktuellen Status des **Datensatzes** mit der [State](../../../ado/reference/ado-api/state-property-ado.md) -Eigenschaft an.  
   
--   Geben Sie den Typ der **Datensatz** - *einfache*, *Auflistung*, oder *strukturiertes Dokument* – mit der [ "RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md)Eigenschaft.  
+-   Geben Sie den Typ des **Datensatzes** - *einfach* *, Auflistung*oder *strukturiertes Dokument* mit der [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)-Eigenschaft an.  
   
--   Beendet einen asynchronen Vorgang mit der [Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md) Methode.  
+-   Beenden Sie die Ausführung eines asynchronen Vorgangs mit der [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) -Methode.  
   
--   Aufheben der Zuordnung der **Datensatz** aus einer Datenquelle mit dem [schließen](../../../ado/reference/ado-api/close-method-ado.md) Methode.  
+-   Trennen Sie den **Datensatz** aus einer Datenquelle mit der [Close](../../../ado/reference/ado-api/close-method-ado.md) -Methode.  
   
--   Kopieren Sie die Datei oder Verzeichnis dargestellt durch eine **Datensatz** an einen anderen Speicherort mit der [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) Methode.  
+-   Kopieren Sie die durch einen **Datensatz** dargestellte Datei oder das Verzeichnis mithilfe der [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) -Methode an einen anderen Speicherort.  
   
--   Löschen Sie die Datei oder das Verzeichnis und die Unterverzeichnisse, dargestellt durch eine **Datensatz** mit der [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md) Methode.  
+-   Löschen Sie die Datei bzw. das Verzeichnis und die Unterverzeichnisse, die durch einen **Datensatz** mit der [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md) -Methode dargestellt werden.  
   
--   Öffnen einer **Recordset** , enthält Zeilen, die darstellen, die Unterverzeichnisse und Dateien, der die Entität, dargestellt durch die **Datensatz** mit der [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md) Methode.  
+-   Öffnen Sie ein **Recordset** , das die Zeilen enthält, die die Unterverzeichnisse und Dateien der Entität darstellen, die durch den **Datensatz** mit der [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md) -Methode dargestellt wird.  
   
--   Verschieben (Umbenennen) der Datei oder Verzeichnis und Unterverzeichnissen, dargestellt durch eine **Datensatz** an einen anderen Speicherort mit der [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) Methode.  
+-   Verschieben Sie die Datei bzw. das Verzeichnis und die Unterverzeichnisse, die durch einen **Datensatz** dargestellt werden, mit der [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) -Methode in einen anderen Speicherort.  
   
--   Ordnen Sie die **Datensatz** mit einer vorhandenen Daten-Datenquelle aus, oder erstellen Sie eine neue Datei oder ein Verzeichnis mit der [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode.  
+-   Ordnen Sie den **Datensatz** einer vorhandenen Datenquelle zu, oder erstellen Sie eine neue Datei oder ein Verzeichnis mit der [Open](../../../ado/reference/ado-api/open-method-ado-record.md) -Methode.  
   
- Die **Datensatz** Objekt für die Skripterstellung sicher ist.  
+ Das **Daten Satz** Objekt ist für die Skripterstellung sicher.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Record-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Datensätze und Datenströme](../../../ado/guide/data/records-and-streams.md)   
+ [Datensätze und Streams](../../../ado/guide/data/records-and-streams.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

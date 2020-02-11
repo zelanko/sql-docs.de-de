@@ -13,39 +13,39 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922958"
 ---
 # <a name="basic-rds-programming-model"></a>Grundlegendes RDS-Programmiermodell
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- RDS werden Anwendungen, die in der folgenden Umgebung vorhanden sind: Eine Clientanwendung gibt ein Programm, das auf einem Server und die Parameter erforderlich, um die gewünschten Informationen zurückzugeben ausgeführt wird. Das Programm aufgerufen wird, auf dem Server verschafft sich Zugriff auf die angegebene Datenquelle, ruft die Informationen ab, optional verarbeitet die Daten, und klicken Sie dann die resultierende Informationen an die Clientanwendung in ein Formular, das einfach zu verwendenden zurückgegeben. RDS bietet das bedeutet, dass Sie die folgende Sequenz von Aktionen ausführen:  
+ RDS adressiert Anwendungen, die in der folgenden Umgebung vorhanden sind: eine Client Anwendung gibt ein Programm an, das auf einem Server ausgeführt wird, und die Parameter, die zum Zurückgeben der gewünschten Informationen erforderlich sind. Das auf dem Server aufgerufene Programm erhält Zugriff auf die angegebene Datenquelle, ruft die Informationen ab, verarbeitet optional die Daten und gibt die resultierenden Informationen an die Client Anwendung in einem Formular zurück, das leicht verwendet werden kann. RDS bietet Ihnen die Möglichkeit, die folgende Aktions Sequenz auszuführen:  
   
--   Geben Sie das Programm auf dem Server aufgerufen werden, und rufen Sie eine Möglichkeit, die vom Client darauf verweisen. (Dieser Verweis bezeichnet ein *Proxy*. Es stellt das Programm Remoteservers dar. Die Clientanwendung wird "den Proxy aufrufen" als ob es ein lokales Programm wurden, aber tatsächlich er das Programm Remoteservers ruft.)  
+-   Geben Sie das Programm an, das auf dem Server aufgerufen werden soll, und erhalten Sie eine Möglichkeit, vom Client darauf zu verweisen. (Dieser Verweis wird manchmal als *Proxy*bezeichnet. Es stellt das Remote Serverprogramm dar. Die Client Anwendung wird den Proxy so aufrufen, als ob es sich um ein lokales Programm handelt, aber tatsächlich das Remote Serverprogramm aufruft.)  
   
--   Serverprogramm aufrufen. Übergeben Sie Parameter, um die Server-Anwendung, die die Datenquelle und den Befehl, um das Problem zu identifizieren. (Die Server-Anwendung verwendet ADO für den Zugriff auf die Datenquelle. ADO stellt eine Verbindung mit einer der angegebenen Parameter und gibt dann den Befehl in den anderen Parameter angegeben.)  
+-   Rufen Sie das Serverprogramm auf. Übergeben Sie Parameter an das Serverprogramm, mit dem die Datenquelle und der auszugebende Befehl identifiziert werden. (Das Serverprogramm verwendet ADO, um Zugriff auf die Datenquelle zu erhalten. ADO stellt eine Verbindung mit einem der angegebenen Parameter her und gibt dann den im anderen Parameter angegebenen Befehl aus.)  
   
--   Das Serverprogramm erhält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus der Datenquelle. Optional können die **Recordset** Objekt wird auf dem Server verarbeitet.  
+-   Das Serverprogramm Ruft ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aus der Datenquelle ab. Optional wird das **Recordset** -Objekt auf dem Server verarbeitet.  
   
--   Serverprogramm gibt zurück, die endgültige **Recordset** Objekt an die Clientanwendung.  
+-   Das Serverprogramm gibt das endgültige **Recordset** -Objekt an die Client Anwendung zurück.  
   
--   Auf dem Client die **Recordset** Objekt abgelegt eines Formulars, das leicht von visuellen Steuerelementen verwendet werden kann.  
+-   Auf dem Client wird das **Recordset** -Objekt in ein Formular eingefügt, das leicht von visuellen Steuerelementen verwendet werden kann.  
   
--   Änderungen an der **Recordset** Objekt gesendet werden, an die Server-Anwendung, die sie zum Aktualisieren der Datenquelle verwendet.  
+-   Alle Änderungen am **Recordset** -Objekt werden zurück an das Serverprogramm gesendet, das Sie zum Aktualisieren der Datenquelle verwendet.  
   
- Dieses Programmiermodell enthält bestimmte praktischen Features. Wenn ein komplexer Server-Programm den Zugriff auf die Datenquelle ist nicht erforderlich, und wenn Sie die erforderliche Verbindung und Befehlsparameter angeben, automatisch RDS wird werden rufen Sie die angegebenen Daten mit einer einfachen, Standardserverprogramm ab.  
+ Dieses Programmiermodell enthält bestimmte praktische Features. Wenn Sie kein komplexes Serverprogramm für den Zugriff auf die Datenquelle benötigen und die erforderlichen Verbindungs-und Befehlsparameter bereitstellen, ruft RDS die angegebenen Daten automatisch mit einem einfachen Standard Serverprogramm ab.  
   
- Wenn Sie eine komplexere Verarbeitung benötigen, können Sie Ihre eigenen benutzerdefinierten Serverprogramm angeben. Z. B. Da benutzerdefinierte Serverprogramm das volle Potenzial von ADO, bei denen hat, konnte eine Verbindung mit unterschiedlichen Datenquellen herstellen, ihre Daten auf komplexe Weise kombinieren und dann ein einfaches, verarbeitete Ergebnis zurück, an die Clientanwendung.  
+ Wenn Sie eine komplexere Verarbeitung benötigen, können Sie Ihr eigenes benutzerdefiniertes Serverprogramm angeben. Da ein benutzerdefiniertes Serverprogramm z. b. die volle Leistungsfähigkeit von ADO hat, könnte es eine Verbindung mit mehreren verschiedenen Datenquellen herstellen, die Daten auf komplexe Weise kombinieren und dann ein einfaches, verarbeitetes Ergebnis an die Client Anwendung zurückgeben.  
   
- Schließlich, wenn Ihre Anforderungen irgendwo dazwischen befinden, unterstützt ADO jetzt Anpassen des Verhaltens des das Standardprogramm für den Server.  
+ Wenn Ihre Bedürfnisse zwischen den Anforderungen liegen, unterstützt ADO nun das Anpassen des Verhaltens des standardmäßigen Server Programms.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RDS-Programmiermodell im Detail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

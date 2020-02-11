@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015701"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Hinzufügen von Spalten zu Abfragen (Visual Database Tools)
@@ -34,13 +34,13 @@ ms.locfileid: "63015701"
   
 -   Aktivieren Sie im **Diagrammbereich**das Kontrollkästchen neben der einzufügenden Spalte.  
   
-     -oder-  
+     Oder  
   
 -   Gehen Sie im **Kriterienbereich**zur ersten leeren Zeile des Datenblatts, klicken Sie in das Feld in der Spalte mit dem Namen **Spalte** , und wählen Sie in der Dropdownliste einen Spaltennamen aus.  
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>So fügen Sie alle Spalten einer Tabelle oder eines Tabellenwertobjekts hinzu  
   
--   In der **Diagrammbereich**, aktivieren Sie das Kontrollkästchen neben  **\*(alle Spalten)** .  
+-   Aktivieren Sie im **Diagramm**Bereich das Kontrollkästchen neben ** \*(alle Spalten)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>So fügen Sie alle Spalten sämtlicher Tabellen und Objekte mit Tabellenstruktur hinzu  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63015701"
   
 3.  Klicken Sie im Eigenschaftenfenster auf **Alle Spalten ausgeben** , und wählen Sie in der Dropdownliste die Option **Ja** oder **Nein** .  
   
-## <a name="see-also"></a>Siehe auch  
- [Entfernen Sie Spalten aus Abfrageergebnissen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Entfernen von Spalten aus Abfrage Ergebnissen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Entfernen von Spalten aus Abfragen &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
  [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Zusammenfassen von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

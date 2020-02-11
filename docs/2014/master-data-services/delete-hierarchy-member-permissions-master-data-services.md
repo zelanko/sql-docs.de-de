@@ -15,21 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 853bc9ce4b2f0432f74e3876f9a6234042fe5b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479515"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Löschen von Hierarchieelementberechtigungen (Master Data Services)
   Löschen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Modellobjektberechtigungen, um erfolgte Zuweisungen zu entfernen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Benutzer- und Gruppenberechtigungen** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-hierarchy-member-permissions"></a>So löschen Sie Hierarchieelementberechtigungen  
   
@@ -45,15 +45,15 @@ ms.locfileid: "65479515"
   
 6.  Wählen Sie aus der Liste **Version** eine Version aus.  
   
-7.  In der **Zusammenfassung der Hierarchieelementberechtigungen** Bereich, wählen Sie die Zeile für die Berechtigung, die Sie löschen möchten.  
+7.  Wählen Sie im Bereich **Zusammenfassung der Hierarchie Element Berechtigungen** die Zeile für die Berechtigung aus, die Sie löschen möchten.  
   
-8.  Klicken Sie auf **ausgewählte Berechtigung löschen**.  
+8.  Klicken Sie auf **ausgewählte Berechtigung Löschen**.  
   
     > [!NOTE]  
     >  Sie können keine Berechtigung von einem Benutzer entfernen, wenn die Berechtigung von einer Gruppe geerbt wird. Sie müssen stattdessen die Berechtigung von der Gruppe entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Hierarchie Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Hierarchie Element Berechtigungen &#40;Master Data Services zuweisen&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

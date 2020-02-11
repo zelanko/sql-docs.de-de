@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d99a357c754add722fb6d5b5d880d1c472a5989
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827940"
 ---
 # <a name="create-infosource-for-transaction-data"></a>InfoSource für Transaktionsdaten erstellen
@@ -41,7 +41,7 @@ ms.locfileid: "62827940"
  **InfoSource-Name**  
  Geben Sie einen Namen für die neue InfoSource ein.  
   
- **Kurze Beschreibung**  
+ **Kurzbeschreibung**  
  Geben Sie eine kurze Beschreibung für die neue InfoSource ein.  
   
  **Lange Beschreibung**  
@@ -81,18 +81,18 @@ ms.locfileid: "62827940"
  **Typ**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
-|UNI|Einheiten|  
+|UNI|Units|  
 |KYF|Kennzahlen|  
 |TIM|Zeitmerkmale|  
   
  **Einheitenfeld**  
  Geben Sie die Einheiten an, die vom InfoObject verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [InfoSource erstellen](create-infosource.md)   
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

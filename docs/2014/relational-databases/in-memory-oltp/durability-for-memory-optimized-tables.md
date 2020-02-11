@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072753"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] bietet vollständige Dauerhaftigkeit für speicheroptimierte Tabellen. Wenn für eine Transaktion, durch die eine speicheroptimierte Tabelle geändert wurde, ein Commit ausgeführt wird, gewährleistet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (genauso wie bei datenträgerbasierten Tabellen), dass die Änderungen dauerhaft sind (bei einem Neustart der Datenbank erhalten bleiben), vorausgesetzt der zugrunde liegende Speicher ist verfügbar. Die Dauerhaftigkeit basiert auf zwei Hauptmechanismen: der Transaktionsprotokollierung und der dauerhaften Speicherung von Datenänderungen auf einem Datenträger.  
   
 ## <a name="transaction-log"></a>Transaktionsprotokoll  
@@ -43,7 +44,7 @@ ms.locfileid: "63072753"
 ## <a name="populating-data-and-delta-files"></a>Auffüllen von Daten- und Änderungsdateien  
  Daten- und Änderungsdateien werden von einem Hintergrundthread aufgefüllt, der Offline-Prüfpunkt genannt wird. Dieser Thread liest die Datensätze des Transaktionsprotokolls, die von Transaktionen für speicheroptimierte Tabellen generiert wurden, für die ein Commit ausgeführt wurde. Die Informationen über die eingefügten und gelöschten Zeilen werden an die entsprechenden Daten- und Änderungsdateien angehängt. Im Gegensatz zu datenträgerbasierte Tabellen, bei denen Daten-/Indexseiten in zufälligen E/A-Vorgängen nach einem Prüfpunkt geleert werden, wird die Persistenz von speicheroptimierten Tabellen in einem kontinuierlichen Hintergrundvorgang erreicht. Es wird auf mehrere Änderungsdateien zugegriffen, da alle Zeilen, die durch beliebige vorherige Transaktionen eingefügt wurden, durch eine Transaktion gelöscht oder aktualisiert werden können. Löschinformationen werden immer am Ende der Änderungsdatei angefügt. Eine Transaktion mit einem Commitzeitstempel von 600 fügt eine neue Zeile ein und löscht Zeilen, die durch Transaktionen mit einem Commitzeitstempel von 150, 250 und 450 eingefügt wurden, wie in der Abbildung unten dargestellt. Alle vier Datei-E/A-Vorgänge (drei für gelöschte Zeilen und einer für neu eingefügte Zeilen) sind reine Anfügungen an die entsprechenden Änderungs- und Datendateien.  
   
- ![Lesen Sie die Protokolldatensätze für speicheroptimierte Tabellen.](../../database-engine/media/read-logs-hekaton.gif "Read log records for memory-optimized tables.")  
+ ![Lesen Sie die Protokolldatensätze für speicheroptimierte Tabellen.](../../database-engine/media/read-logs-hekaton.gif "Lesen Sie die Protokolldatensätze für speicheroptimierte Tabellen.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Zugreifen auf Daten- und Änderungsdateien  
  Auf Daten-/Änderungsdateipaare wird in den folgenden Fällen zugegriffen:  
@@ -83,12 +84,13 @@ ms.locfileid: "63072753"
   
  Im Beispiel unten sind für die speicheroptimierte Tabellendateigruppe vier Daten-/Änderungsdateipaare mit Daten aus vorhergehenden Transaktionen bei Zeitstempel 500 vorhanden. Beispielsweise entsprechen die ersten Zeilen in der Datendatei Transaktionen mit einem Zeitstempel, der größer als 100 und kleiner oder gleich 200 ist, alternativ ausgedrückt als (100, 200). Die zweite und dritte Datendatei werden nach Berücksichtigung der als gelöscht gekennzeichneten Zeilen zu weniger als 50 % gefüllt angezeigt. Der Zusammenführungsvorgang kombiniert diese beiden CFPs und erstellt ein neues CFP mit Transaktionen, deren Zeitstempel größer als 200 und kleiner oder gleich 400 ist. Dies entspricht dem kombinierten Bereich dieser beiden CFPs. Es wird ein weiteres CFP mit dem Bereich (500, 600) angezeigt, und eine nicht leere Änderungsdatei für den Transaktionsbereich (200, 400) gibt an, dass der Zusammenführungsvorgang parallel zur Transaktionsaktivität erfolgen kann, einschließlich des Löschens mehrerer Zeilen aus den Quell-CFPs.  
   
- ![Diagramm zeigt eine speicheroptimierte Tabellendateigruppe an](../../database-engine/media/storagediagram-hekaton.png "Diagram shows memory optimized table file group")  
+ ![Diagramm zeigt eine speicheroptimierte Tabellendateigruppe an](../../database-engine/media/storagediagram-hekaton.png "Diagramm zeigt eine speicheroptimierte Tabellendateigruppe an")  
   
  In einem Hintergrundthread werden alle geschlossenen CFPs mithilfe einer Zusammenführungsrichtlinie ausgewertet und dann eine oder mehrere Zusammenführungsanforderungen für die qualifizierenden CFPs initiiert. Diese Zusammenführungsanforderungen werden vom Offline-Prüfpunktthread verarbeitet. Die Auswertung der Zusammenführungsrichtlinie erfolgt in regelmäßigen Abständen sowie beim Schließen eines Prüfpunkts.  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] -Zusammenführungsrichtlinie  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementiert die folgende Zusammenführungsrichtlinie:  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Merge-Richtlinie  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementiert die folgende Zusammenführungsrichtlinie:  
   
 -   Eine Zusammenführung wird geplant, wenn mindestens zwei aufeinanderfolgende CFPs konsolidiert werden können, nachdem gelöschte Zeilen berücksichtigt wurden, sodass die resultierenden Zeilen in einem CFP idealer Größe Platz finden. Die ideale CFP-Größe wird wie folgt bestimmt:  
   
@@ -108,16 +110,16 @@ ms.locfileid: "63072753"
   
  Nicht alle CFPs mit verfügbarem Speicherplatz kommen für die Zusammenführung infrage. Wenn beispielsweise zwei aufeinanderfolgende CFPs zu 60 % gefüllt sind, kommen sie für eine Zusammenführung nicht infrage, und jedes dieser CFPs weist 40 % nicht genutzten Speicherplatz auf. Im ungünstigsten Fall sind alle CFPs zu 50 % gefüllt, was einer Speicherauslastung von nur 50 % entspricht. Auch wenn die gelöschten Zeilen möglicherweise im Speicher vorhanden sind, da die CFPs für eine Zusammenführung nicht infrage kommen, wurden die gelöschten Zeilen möglicherweise bereits von der In-Memory-Garbage Collection aus dem Arbeitsspeicher entfernt. Die Verwaltung des Speichers und des Arbeitsspeichers erfolgt unabhängig von der Garbage Collection. Der Speicher, der von aktiven CFPs belegt wird (nicht alle CFPs werden aktualisiert), kann doppelt so groß wie bei dauerhaften Tabellen im Arbeitsspeicher ausfallen.  
   
- Bei Bedarf eine manuelle Zusammenführung explizit erfolgen kann durch Aufrufen von [sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
+ Bei Bedarf kann eine manuelle Zusammenführung explizit durch Aufrufen von [sys. sp_xtp_merge_checkpoint_files &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)ausgeführt werden.  
   
 ### <a name="life-cycle-of-a-cfp"></a>Lebenszyklus eines CFP  
- CPFs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. Die CFPs befinden sich auf einem beliebigen Zeitpunkt in einem der folgenden Phasen: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE und TOMBSTONE. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ CPFs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. CFPs können sich jeweils in einer der folgenden Phasen befinden: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE und TOMBSTONE. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Nach Berücksichtigung des von CFPs mit den verschiedenen Statusphasen belegten Speichers kann der insgesamt von dauerhaften speicheroptimierten Tabellen belegte Speicher deutlich mehr als das Doppelte der Größe der Tabellen im Arbeitsspeicher betragen. Die DMV [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) abgefragt werden kann, um alle CFPs in einer speicheroptimierten Dateigruppe sowie deren Phase aufzulisten. Der Übergang von CFPs vom MERGE SOURCE-Status zum TOMBSTONE-Status und die abschließende Garbage Collection können bis zu fünf Prüfpunkte beanspruchen, wobei auf jeden Prüfpunkt eine Transaktionsprotokollsicherung folgt, wenn die Datenbank für das vollständige oder massenprotokollierte Wiederherstellungsmodell konfiguriert ist.  
+ Nach Berücksichtigung des von CFPs mit den verschiedenen Statusphasen belegten Speichers kann der insgesamt von dauerhaften speicheroptimierten Tabellen belegte Speicher deutlich mehr als das Doppelte der Größe der Tabellen im Arbeitsspeicher betragen. Die DMV [sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) kann abgefragt werden, um alle Cfps in der Speicher optimierten Datei Gruppe einschließlich ihrer Phase aufzulisten. Der Übergang von CFPs vom MERGE SOURCE-Status zum TOMBSTONE-Status und die abschließende Garbage Collection können bis zu fünf Prüfpunkte beanspruchen, wobei auf jeden Prüfpunkt eine Transaktionsprotokollsicherung folgt, wenn die Datenbank für das vollständige oder massenprotokollierte Wiederherstellungsmodell konfiguriert ist.  
   
  Sie können den Prüfpunkt gefolgt von einer Protokollsicherung manuell erzwingen, um die Garbage Collection zu beschleunigen. Dadurch werden jedoch 5 leere CFPs hinzugefügt (5 Daten-/Änderungsdateipaare mit einer jeweils 128 MB großen Datendatei). In Produktionsszenarien durchlaufen CFPs aufgrund der automatischen Prüfpunkte und Protokollsicherungen, die im Rahmen der Sicherungsstrategie ausgeführt werden, diese Phasen nahtlos, ohne dass ein manueller Eingriff erforderlich ist. Als Folge des Garbage Collection-Vorgangs weisen Datenbanken mit speicheroptimierten Tabellen gegenüber ihrer Größe im Arbeitsspeicher möglicherweise eine höhere Größe im Speicher auf. Es ist nicht ungewöhnlich, dass CFPs bis zu viermal so groß werden können wie die dauerhaften speicheroptimierten Tabellen im Arbeitsspeicher.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Microsoft-Dokumentation'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62826842"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
@@ -34,12 +34,12 @@ HRESULT BCPWriteFmt(
 const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Durch Aufrufe der Methoden [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) und [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) wird das Format der Datendatei definiert. Die Methode **BCPWriteFmt** speichert diese Definition in der im Argument pwszFormatFile angegebenen Datei.  
   
- Die **BCPWriteFmt** -Methode kann die Formatdateien in XML- oder Textformat speichern. Dies muss mithilfe der BCP_OPTION_XML-Steueroption und der [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) -Methode angegeben werden.  
+ Die **BCPWriteFmt** -Methode kann die Formatdateien in XML- oder Textformat speichern. Dies muss mithilfe der BCP_OPTION_XML-Steuerungsoption und der [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md)-Methode angegeben werden.  
   
- Um eine gespeicherte Formatdatei zu laden, verwenden Sie die [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) -Methode.  
+ Verwenden Sie die [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md)-Methode, um eine gespeicherte Formatdatei zu laden.  
   
 ## <a name="arguments"></a>Argumente  
  *pwszFormatFile*[in]  
@@ -58,7 +58,7 @@ const wchar_t *pwszFormatFile);
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../native-client/features/performing-bulk-copy-operations.md)  
   

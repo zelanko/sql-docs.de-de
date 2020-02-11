@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27c46e8e186f0e8424e679e9c023854e7887e232
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780549"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>SQL Server Native Client (ODBC) – Referenz
@@ -27,15 +27,15 @@ ms.locfileid: "62780549"
   
  In der Referenz zum ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sind nicht sämtliche ODBC-Funktionsaufrufe dokumentiert. Es werden nur diejenigen Funktionen besprochen, die über treiberspezifische Parameter verfügen oder ein treiberspezifisches Verhalten zeigen, wenn sie mit dem ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet werden.  
   
- Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Eine umfassende Referenz zu ODBC 3.51 benötigen, laden Sie das Microsoft Data Access Components SDK vom die [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), oder zeigen Sie die [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Um eine umfassende Referenz zu ODBC 3,51 zu erhalten, laden Sie das Microsoft Data Access Components SDK aus dem [Developer Center für Datenzugriff und-Speicherung](https://go.microsoft.com/fwlink?linkid=4173)herunter, oder zeigen Sie die [ODBC-Programmier Referenz](https://go.microsoft.com/fwlink/?LinkId=45250) Online an.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [SQL Server-Treibererweiterungen](../../../2014/database-engine/dev-guide/sql-server-driver-extensions.md)  
   
--   [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+-   [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

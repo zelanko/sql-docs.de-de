@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827081"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed (Ereignisklasse)
@@ -26,7 +26,7 @@ ms.locfileid: "62827081"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Datenspalten der PreConnect:Completed-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|216|27|Nein|  
 |SPID|`int`|Die ID des Serverprozesses, von dem das Ereignis ausgelöst wird.|12|Ja|  
@@ -36,17 +36,17 @@ ms.locfileid: "62827081"
 |Duration|`bigint`|Die von der Klassifizierungsfunktion benötigte Zeit (in Mikrosekunden)|13|Ja|  
 |ObjectID|`int`|Die ID des benutzerdefinierten Klassifizierungsobjekts.|22|Ja|  
 |CPU|`int`|CPU-Verwendung in Millisekunden|18|Ja|  
-|Reads|`int`|Die Anzahl der logischen Lesevorgänge|16|Ja|  
-|Writes|`int`|Die Anzahl der logischen Schreibvorgänge|17|Ja|  
+|Lesevorgänge|`int`|Die Anzahl der logischen Lesevorgänge|16|Ja|  
+|Schreibvorgänge|`int`|Die Anzahl der logischen Schreibvorgänge|17|Ja|  
 |GroupID|`int`|Die ID der klassifizierten Arbeitsauslastungsgruppe|66|Ja|  
 |Fehler|`int`|Die letzte Fehlernummer, falls die benutzerdefinierte Klassifizierungsfunktion nicht ausgeführt wird|31|Ja|  
-|Status|`int`|Der Status des letzten Fehlers|30|Ja|  
-|TargetUserName|`sysname`|Der Rückgabewert (Name der Arbeitsauslastungsgruppe) für die benutzerdefinierte Klassifizierungsfunktion, falls das System keine entsprechende aktive Gruppe finden kann. Andernfalls wird diese Spalte auf NULL gesetzt.|39|Ja|  
+|State|`int`|Der Status des letzten Fehlers|30|Ja|  
+|TargetUserName|`sysname`|Der Rückgabewert (Name der Arbeitsauslastungsgruppe) für die benutzerdefinierte Klassifizierungsfunktion, falls das System keine entsprechende aktive Gruppe finden kann. Andernfalls wird diese Spalte auf NULL gesetzt.|11,9|Ja|  
 |ObjectName|`nvarchar(256)`|Der zweiteilige Name der benutzerdefinierten Klassifizierungsfunktion. Beispiel: dbo.classifier.|34|Ja|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)   
- [PreConnect:Starting-Ereignisklasse](preconnect-starting-event-class.md)   
+ [PreConnect: Starting (Ereignisklasse)](preconnect-starting-event-class.md)   
  [Ressourcenkontrolle](../resource-governor/resource-governor.md)  
   
   

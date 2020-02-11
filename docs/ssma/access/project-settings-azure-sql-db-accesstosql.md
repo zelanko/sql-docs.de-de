@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Azure SQL-Datenbank) (AccessToSQL) | Microsoft-Dokumentation
+title: Projekteinstellungen (Azure SQL-Datenbank) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,35 +13,35 @@ ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 60140559f94cdeebea935b423fbbeef24bce7a08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929469"
 ---
-# <a name="project-settings-azure-sql-db-accesstosql"></a>Project Settings (Azure SQL-Datenbank) (AccessToSQL)
-Die SQL Azure-projekteinstellungen können Sie konfigurieren das SQL Azure-Datenbank-Suffix in das Dialogfeld "Verbindung" hinzugefügt werden und auch erlauben taktmechanismus in Verbindung mit SQL Azure implementieren.  
+# <a name="project-settings-azure-sql-db-accesstosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (accesstosql)
+Mit den SQL Azure-Projekteinstellungen können Sie das SQL Azure Daten Bank Suffix konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und außerdem die Implementierung des Takt Mechanismus in SQL Azure Verbindung ermöglichen.  
   
-Im Bereich SQL Azure finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Der SQL Azure Bereich ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Verwenden Sie das Dialogfeld "Projekteinstellungen", um das Festlegen von Konfigurationsoptionen für das aktuelle Projekt. Die SQL Azure-Einstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann **SQL Azure**.  
+-   Verwenden Sie das Dialogfeld Projekteinstellungen, um Konfigurationsoptionen für das aktuelle Projekt festzulegen. Um auf die SQL Azure Einstellungen zuzugreifen, wählen Sie **im Menü Extras die Option** **Projekteinstellungen**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **SQL Azure**aus.  
   
--   Verwenden Sie das Dialogfeld Projekt-Standardeinstellungen, um das Festlegen von Konfigurationsoptionen für alle Projekte. Die SQL Azure-Einstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **DefaultProject Einstellungen**, wählen Sie den Projekttyp als "SQL Azure" **Migration Zielversion** Kombinationsfeld Zugriff auf die Einstellungen in SQL Azure-Bereich, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann **SQL Azure**.  
+-   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die SQL Azure Einstellungen zuzugreifen, wählen **Sie im Menü Extras die Option** **defaultproject Settings**aus, wählen Sie den Projekttyp im Kombinations Feld **Migrations Ziel Version** als "SQL Azure" aus, um auf die Einstellungen im SQL Azure Bereich zuzugreifen, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **SQL Azure**aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
-## <a name="connectivity"></a>Connectivity  
+## <a name="connectivity"></a>Konnektivität  
 **Taktintervall**  
   
-Gibt ein Zeitintervall für taktmechanismus verwendet werden, um die SQL Azure-Verbindung in aufrechtzuerhalten "Minuten: Sekunden Format.  
+Gibt ein Zeitintervall an, das für den Takt Mechanismus verwendet wird, um die SQL Azure Verbindung im Format "Minutes: seconds" beizubehalten.  
   
-**Standardwert**: "4:45 '  
+**Standardwert**: "4:45"  
   
-Der Wert muss angegeben werden in bin: ss'-Format (z. B. "4:45 ' oder ' 0:50 ').  
+Der Wert muss im Format "m:SS" angegeben werden (z. b. "4:45" oder "0:50").  
   
-**Suffix für SQL Azure-Server**  
+**SQL Azure Server Suffix**  
   
-Gibt das Suffix der SQL Azure-server  
+Gibt das SQL Azure Server-Suffix an.  
   
-**Standardwert**: "database.windows.net".  
+**Standardwert**: "Database.Windows.net".  
   

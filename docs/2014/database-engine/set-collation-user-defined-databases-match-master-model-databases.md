@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Sortierung benutzerdefinierter Datenbanken übereinstimmend zu jener der Master- und model-Datenbanken | Microsoft-Dokumentation
+title: Legen Sie die Sortierung benutzerdefinierter Datenbanken so fest, dass Sie mit denen der Master-und Model-Datenbanken identisch sind. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773311"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Festlegen der Sortierung benutzerdefinierter Datenbanken übereinstimmend zu jener der master- und model-Datenbanken
@@ -29,7 +29,7 @@ ms.locfileid: "62773311"
   
 -   Exportieren Sie die Daten aus der Benutzerdatenbank, und importieren Sie sie in neue Tabellen, die dieselbe Sortierung aufweisen wie die master- und model-Datenbanken.  
   
--   Erstellen Sie die Systemdatenbanken so neu, dass sie eine Sortierung verwenden, die mit der Sortierung der Benutzerdatenbank übereinstimmt. Weitere Informationen zum Neuerstellen der Systemdatenbanken finden Sie unter [Neuerstellen von Systemdatenbanken](../relational-databases/databases/system-databases.md).  
+-   Erstellen Sie die Systemdatenbanken so neu, dass sie eine Sortierung verwenden, die mit der Sortierung der Benutzerdatenbank übereinstimmt. Weitere Informationen zum Neuerstellen der System Datenbanken finden Sie unter [Neuerstellen von System Datenbanken](../relational-databases/databases/system-databases.md).  
   
 -   Ändern Sie alle gespeicherten Prozeduren, die Benutzertabellen mit Tabellen in der tempdb-Datenbank verknüpfen so, dass die Tabellen in der tempdb-Datenbank unter Verwendung der Sortierung der Benutzerdatenbank erstellt werden. Fügen Sie zu diesem Zweck den Spaltendefinitionen der temporären Tabelle die Klausel `COLLATE database_default` hinzu, wie im folgenden Beispiel gezeigt:  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62773311"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft Knowledge Base-Artikel 325335 befolgen](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Microsoft Knowledge Base-Artikel 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Vorgehensweise: Installieren von SQLServer 2008 über die Eingabeaufforderung](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Vorgehensweise: Installieren von SQL Server 2008 von der Eingabeaufforderung](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

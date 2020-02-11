@@ -1,5 +1,5 @@
 ---
-title: ParentSameAsPrev-Eigenschaft (ADO MD) | Microsoft-Dokumentation
+title: Parametrisameasprev-Eigenschaft (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,23 +17,23 @@ ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 330b7cab24460bb050cc6d51b10cc6144532534b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949295"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev-Eigenschaft (ADO MD)
-Gibt an, ob das übergeordnete Element dieses Standpunkts [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) ist das übergeordnete Element des unmittelbar vorangehenden Elements entspricht.  
+Gibt an, ob das übergeordnete Element [dieses Positions Elements](../../../ado/reference/ado-md-api/member-object-ado-md.md) dem übergeordneten Element des unmittelbar vorangehenden Elements entspricht.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **booleschen** Wert und ist schreibgeschützt.  
+ Gibt einen **booleschen** Wert zurück und ist schreibgeschützt.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Eigenschaft wird nur unter unterstützt [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekte für eine [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt. Ein Fehler auftritt, wenn diese Eigenschaft, von verwiesen wird **Member** Objekte für eine [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekt.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Eigenschaft wird nur für [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) -Objekte unterstützt, die zu einem [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt gehören. Ein Fehler tritt auf, wenn von **Element Objekten,** die zu einem [Ebenenobjekt](../../../ado/reference/ado-md-api/level-object-ado-md.md) gehören, auf diese Eigenschaft verwiesen wird.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DrilledDown-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)

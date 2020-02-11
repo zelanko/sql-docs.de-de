@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830011"
 ---
 # <a name="transfer-logins-task"></a>Task "Anmeldungen übertragen"
@@ -27,7 +27,7 @@ ms.locfileid: "62830011"
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>Übertragen von Anmeldungen zwischen den Instanzen von SQL Server  
  Der Task "Anmeldungen übertragen" unterstützt eine Quelle und ein Ziel in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Die Task löst ein Informationsereignis aus, das die Anzahl der übertragenen Anmeldungen meldet, sowie ein Warnungsereignis, wenn eine Anmeldung überschrieben wird.  
   
  Die Task "Anmeldungen übertragen" meldet keinen schrittweisen Fortschritt der Anmeldeübertragung; sie meldet nur 0 % und 100 % der Ausführung.  
@@ -70,7 +70,7 @@ ms.locfileid: "62830011"
   
 -   [Editor für den Task Anmeldungen übertragen &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task Anmeldungen übertragen &#40;Seite Anmeldungen&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [Editor für den Task „Anmeldungen übertragen“ &#40;Seite „Anmeldungen“&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Mit ' LinkMember ' (MDX) | Microsoft-Dokumentation
+title: LinkMember (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905601"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
@@ -34,11 +34,11 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  *Hierarchy_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Hierarchie zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **mit ' LinkMember '** Funktion gibt das Element zurück, der angegebenen Hierarchie, die die Schlüsselwerte auf jeder Ebene des angegebenen Elements in einer zugehörigen Hierarchie entspricht. Die Attribute auf jeder Ebene müssen die gleiche Schlüsselkardinalität und den gleichen Datentyp aufweisen. Wenn es bei unnatürlichen Hierarchien mehr als eine Entsprechung für den Schlüsselwert eines Attributs gibt, ist das Resultat ein Fehler oder unbestimmt.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **LinkMember** -Funktion gibt das Element aus der angegebenen Hierarchie zurück, das den Schlüsselwerten auf jeder Ebene des angegebenen Elements in einer zugehörigen Hierarchie entspricht. Die Attribute auf jeder Ebene müssen die gleiche Schlüsselkardinalität und den gleichen Datentyp aufweisen. Wenn es bei unnatürlichen Hierarchien mehr als eine Entsprechung für den Schlüsselwert eines Attributs gibt, ist das Resultat ein Fehler oder unbestimmt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die **mit ' LinkMember '** Funktion, um das Standardmeasure im Adventure Works-Cube für die Vorgänger des July 1, 2002-Elements der Date.Date-Attributhierarchie in der Calendar-Hierarchie zurückzugeben.  
+ Im folgenden Beispiel wird die **LinkMember** -Funktion verwendet, um das Standardmeasure im Adventure Works-Cube für die Vorgänger des 1. Juli 2002-Members der Date. Date-Attribut Hierarchie in der Calendar-Hierarchie zurückzugeben.  
   
 ```  
 SELECT  Hierarchize  
@@ -51,9 +51,9 @@ SELECT  Hierarchize
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [ASCENDANTS &#40;MDX&#41;](../mdx/ascendants-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Hierarchize &#40;MDX-&#41;](../mdx/hierarchize-mdx.md)   
+ [Vorgänger &#40;MDX-&#41;](../mdx/ascendants-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

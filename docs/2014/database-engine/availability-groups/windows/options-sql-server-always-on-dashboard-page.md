@@ -1,5 +1,5 @@
 ---
-title: Optionen (SQL Server AlwaysOn, Dashboardseite) | Microsoft-Dokumentation
+title: Optionen (SQL Server AlwaysOn, Seite "Dashboard") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789246"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Optionen (SQL Server AlwaysOn, Dashboardseite)
@@ -28,7 +28,7 @@ ms.locfileid: "62789246"
   
 ## <a name="on-this-page"></a>Auf dieser Seite  
  **Automatische Aktualisierung aktivieren**  
- Klicken Sie, um die automatische Aktualisierung zu aktivieren. Folgende Optionen sind verfügbar:  
+ Klicken Sie, um die automatische Aktualisierung zu aktivieren. Die Optionen sind:  
   
 -   Das Feld **Aktualisierungsintervall (in Sekunden)** zeigt die Anzahl der Sekunden an, bei der das Dashboard aktualisiert wird. Der Standardwert ist 30. Wenn die automatische Aktualisierung aktiviert ist, können Sie dieses Feld bearbeiten, um das Aktualisierungsintervall zu ändern.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62789246"
  **Aktivieren Sie die benutzerdefinierte AlwaysOn-Richtlinie.**  
  Wenn Sie eine eigene AlwaysOn-Richtlinie definiert haben, klicken Sie auf diese Option, um die Richtlinie zu aktivieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

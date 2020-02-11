@@ -1,5 +1,5 @@
 ---
-title: Funktion (XQuery) von SQL:Variable() | Microsoft-Dokumentation
+title: 'SQL: Variable ()-Funktion (XQuery) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56a8c53a22fefec7fbda4c2ac7476ae46d664199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946006"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery-Erweiterungsfunktionen – sql:variable()
@@ -34,27 +34,27 @@ ms.locfileid: "67946006"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Siehe das Thema [einbinden relationaler Daten in XML-Daten](../t-sql/xml/binding-relational-data-inside-xml-data.md), Sie können diese Funktion verwenden, bei der Verwendung [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md) zum Verfügbarmachen eines relationalen Werts in XQuery.  
+## <a name="remarks"></a>Bemerkungen  
+ Wie im Thema [binden relationaler Daten in XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)beschrieben, können Sie diese Funktion verwenden, wenn Sie [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md) zum verfügbar machen eines relationalen Werts in XQuery verwenden.  
   
- Z. B. die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um eine Abfrage für eine XML-Instanz angeben, die in gespeichert ist ein **Xml** -Datentypvariable oder-Spalte. Manchmal sollen in einer Abfrage auch Werte aus einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Variablen oder einem -Parameter verwendet werden, um relationale und XML-Daten zu verbinden. Zu diesem Zweck verwenden Sie die **SQL: Variable** Funktion.  
+ Beispielsweise wird die [Query ()-Methode](../t-sql/xml/query-method-xml-data-type.md) verwendet, um eine Abfrage für eine XML-Instanz anzugeben, die in einer Variablen oder Spalte des **XML** -Datentyps gespeichert ist. Manchmal sollen in einer Abfrage auch Werte aus einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Variablen oder einem -Parameter verwendet werden, um relationale und XML-Daten zu verbinden. Zu diesem Zweck verwenden Sie die **SQL: Variable** -Funktion.  
   
- Der SQL-Wert wird in einen entsprechenden XQuery-Wert zugeordnet, und sein Typ wird eine XQuery-Basistyp, der in den entsprechenden SQL-Typ entspricht.  
+ Der SQL-Wert wird einem entsprechenden XQuery-Wert zugeordnet, und sein Typ ist ein XQuery-Basistyp, der dem entsprechenden SQL-Typ entspricht.  
   
- Sie verweisen nur auf eine **Xml** Instanz im Zusammenhang mit dem quellenausdruck einer XML-DML-insert-Anweisung; andernfalls Sie nicht auf Werte vom Typ verweisen **Xml** oder eine common Language Runtime (CLR) einen benutzerdefinierten Typ.  
+ Sie können nur im Kontext des Quell Ausdrucks einer XML-DML-INSERT-Anweisung auf eine **XML** -Instanz verweisen. Andernfalls können Sie nicht auf Werte vom Typ **XML** oder einen Common Language Runtime (CLR)-benutzerdefinierten Typ verweisen.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. Einfügen einer Transact-SQL-Variablen in XML mit der sql:variable()-Funktion  
  Im folgenden Beispiel wird eine XML-Instanz erstellt, die aus Folgendem besteht:  
   
--   Einem Wert (`ProductID`) aus einer Nicht-XML-Spalte. Die [SQL:Column()-Funktion](../xquery/xquery-extension-functions-sql-column.md) wird verwendet, um diesen Wert in der XML-Code binden.  
+-   Einem Wert (`ProductID`) aus einer Nicht-XML-Spalte. Die [SQL: column ()-Funktion](../xquery/xquery-extension-functions-sql-column.md) wird verwendet, um diesen Wert in der XML-Datei zu binden.  
   
 -   Einem Wert (`ListPrice`) aus einer Nicht-XML-Spalte aus einer anderen Tabelle. Die `sql:column()`-Funktion wird auch hier zum Binden dieses Werts im XML-Code verwendet.  
   
 -   Einem Wert (`DiscountPrice`) aus einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Variablen. Zum Binden dieses Werts im XML-Code wird die `sql:variable()`-Methode verwendet.  
   
--   Ein Wert (`ProductModelName`) aus einer **Xml** Typspalte, um die Abfrage interessanter zu gestalten.  
+-   Ein Wert (`ProductModelName`) aus einer Spalte vom Typ **XML** , um die Abfrage interessanter zu gestalten.  
   
  Im Folgenden wird die Abfrage aufgeführt:  
   
@@ -82,7 +82,7 @@ WHERE ProductID=771
   
 -   Der XML-Code wird durch die XQuery-Abfrage in der `query()`-Methode erstellt.  
   
--   Die `namespace` Schlüsselwort wird verwendet, um ein Namespacepräfix im Definieren der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md). Dies geschieht, weil der `ProductModelName`-Attributwert aus der Spalte des `CatalogDescription xml`-Typs abgerufen wird, der ein Schema zugeordnet ist.  
+-   Das `namespace` -Schlüsselwort wird verwendet, um ein Namespace Präfix im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md)zu definieren. Dies geschieht, weil der `ProductModelName`-Attributwert aus der Spalte des `CatalogDescription xml`-Typs abgerufen wird, der ein Schema zugeordnet ist.  
   
  Dies ist das Ergebnis:  
   
@@ -92,8 +92,8 @@ WHERE ProductID=771
          ListPrice="3399.99" DiscountPrice="2500" />  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery-Erweiterung für SQL Server-Funktionen](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server XQuery-Erweiterungsfunktionen](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   

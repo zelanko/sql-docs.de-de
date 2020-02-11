@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770316"
 ---
 # <a name="term-lookup-transformation"></a>Transformation für Ausdruckssuche
@@ -56,11 +56,11 @@ ms.locfileid: "62770316"
   
  Wenn ein Suchelement Ausdrücke enthält, die sich im Verweissatz überlappen (d.h. ein Unterausdruck ist in mehreren Verweisdatensätzen zu finden), gibt die Transformation für Ausdruckssuche nur ein Suchergebnis zurück. Das folgende Beispiel zeigt das Ergebnis für den Fall, dass ein Suchelement einen sich überlappenden Unterausdruck enthält. In diesem Fall ist *Windows*der überlappende Unterausdruck, der sich in zwei Verweisausdrücken findet. Die Transformation gibt jedoch keine zwei Ergebnisse, sondern nur einen Verweisausdruck zurück: *Windows*. Der zweite Verweisausdruck, *Windows 7 Professional*, wird nicht zurückgegeben.  
   
-|Element|Wert|  
+|Element|value|  
 |----------|-----------|  
 |Eingabeausdruck|Windows 7 Professional|  
 |Verweisausdrücke|Windows, Windows 7 Professional|  
-|Ausgabe|Windows|  
+|Output|Windows|  
   
  Die Transformation für Ausdruckssuche kann Nomen und nominale Ausdrücke vergleichen, die Sonderzeichen enthalten, und die Daten in der Verweistabelle können diese Zeichen enthalten. Folgende Sonderzeichen sind zulässig: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " und '.  
   
@@ -78,7 +78,8 @@ ms.locfileid: "62770316"
   
  Transformations-Ausgabespalten, deren InputColumnType-Eigenschaft auf 0 oder 2 festgelegt ist, umfassen die CustomLineageID-Eigenschaft für eine Spalte, die den Herkunftsbezeichner enthält, der einer Spalte durch einen Upstreamdatenfluss-Komponenten zugewiesen wird.  
   
- Die Transformation für Ausdruckssuche fügt der Transformationsausgabe zwei Spalten hinzu, die standardmäßig `Term` und `Frequency` heißen. `Term` enthält einen Ausdruck aus der Nachschlagetabelle, und `Frequency` enthält die Angabe, wie häufig der Ausdruck in der Verweistabelle im Eingabedataset vorkommt. Diese Spalten beinhalten keine CustomLineageID-Eigenschaft.  
+ Die Transformation für Ausdruckssuche fügt der Transformationsausgabe zwei Spalten hinzu, die standardmäßig `Term` und `Frequency` heißen. 
+  `Term` enthält einen Ausdruck aus der Nachschlagetabelle, und `Frequency` enthält die Angabe, wie häufig der Ausdruck in der Verweistabelle im Eingabedataset vorkommt. Diese Spalten beinhalten keine CustomLineageID-Eigenschaft.  
   
  Die Nachschlagetabelle muss eine Tabelle in einer der Datenbanken von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer Access-Datenbank sein. Wenn die Ausgabe der Transformation für Ausdrucksextrahierung in einer Tabelle gespeichert wird, kann diese Tabelle als Verweistabelle verwendet werden, andere Tabellen können allerdings ebenfalls verwendet werden. Text in Flatfiles, Excel-Arbeitsmappen oder sonstige Quellen müssen in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank oder eine Access-Datenbank importiert werden, bevor die Transformation für Ausdruckssuche verwendet werden kann.  
   
@@ -94,18 +95,18 @@ ms.locfileid: "62770316"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Ausdruckssuche** festlegen können:  
   
--   [Transformations-Editor für Ausdruckssuche &#40;Registerkarte „Verweistabelle“&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Transformations-Editor für die Begriffs Suche &#40;Registerkarte "Verweis Tabelle"&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Transformations-Editor für Ausdruckssuche &#40;Registerkarte Ausdruckssuche&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Transformations-Editor für Ausdruckssuche &#40;Registerkarte Erweitert&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für die Begriffs Suche &#40;Registerkarte "Erweitert"&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
- Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CursorLocationEnum | Microsoft-Dokumentation
+title: Cursor locationumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919293"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
-Gibt den Speicherort des Cursordiensts.  
+Gibt den Speicherort des Cursor Dienstanbieter an.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adUseClient**|3|Verwendet die clientseitigen Cursorn, die von einer lokalen Cursor-Bibliothek bereitgestellt. Lokale Cursor Services ermöglichen häufig viele Funktionen, die Cursor nicht der Fall, können daher mit dieser Einstellung einen Vorteil in Bezug auf Features können, die konfiguriert werden. Um Abwärtskompatibilität zu gewährleisten, das Synonym **AdUseClientBatch** wird ebenfalls unterstützt.|  
-|**adUseNone**|1|Cursor-Dienste wird nicht verwendet werden. (Diese Konstante ist veraltet und wird nur aus Gründen der Abwärtskompatibilität angezeigt.)|  
-|**adUseServer**|2|Standard. Wird verwendet, Cursor, die von den Datenanbieter oder Treiber bereitgestellt. Diese Cursor sind manchmal sehr flexibel und ermöglichen zusätzliche Sensitivität gegenüber Änderungen, die andere an der Datenquelle vornehmen. Jedoch einige Features von der [The Microsoft Cursor Service für OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md), z. B. aufgehoben<br /><br /> [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte kann nicht mit serverseitiger Cursor simuliert werden, und diese Features werden mit dieser Einstellung nicht verfügbar sein.|  
+|**adUseClient**|3|Verwendet Client seitige Cursor, die von einer lokalen Cursor Bibliothek bereitgestellt werden. Lokale Cursor Dienste ermöglichen häufig viele Features, die vom Treiber bereitgestellten Cursorn möglicherweise nicht. Daher kann die Verwendung dieser Einstellung in Bezug auf Funktionen, die aktiviert werden, einen Vorteil bieten. Aus Gründen der Abwärtskompatibilität wird auch das Synonym **aduseclientbatch** unterstützt.|  
+|**adusenone**|1|Cursor Dienste werden von nicht verwendet. (Diese Konstante ist veraltet und wird nur aus Gründen der Abwärtskompatibilität angezeigt.)|  
+|**AD-eServer**|2|Default. Verwendet Cursor, die vom Datenanbieter oder Treiber bereitgestellt werden. Diese Cursor sind manchmal sehr flexibel und ermöglichen eine zusätzliche Sensitivität bei Änderungen, die andere an der Datenquelle vornehmen. Einige Features des [Microsoft-Cursor Dienstanbieter für OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md), z. b. die Zuordnung<br /><br /> [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte können nicht mit serverseitigen Cursorn simuliert werden, und diese Features sind mit dieser Einstellung nicht verfügbar.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Dauerhaft|  
 |--------------|  
-|AdoEnums.CursorLocation.CLIENT|  
-|AdoEnums.CursorLocation.NONE|  
-|AdoEnums.CursorLocation.SERVER|  
+|Adoteums. Cursor Location. Client|  
+|Adoumums. Cursor Location. None|  
+|Adoumums. Cursor Location. Server|  
   
 ## <a name="applies-to"></a>Gilt für  
  [CursorLocation-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)

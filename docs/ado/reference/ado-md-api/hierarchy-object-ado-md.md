@@ -16,51 +16,51 @@ ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949695"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy-Objekt (ADO MD)
-Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) aggregiert werden können oder die "wird durchgeführt." Eine Dimension kann entlang einer oder mehreren Hierarchien aggregiert werden.  
+Stellt eine Methode dar, mit der die [Elemente einer Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) aggregiert oder "ein Rollup ausgeführt werden können". Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.  
   
-## <a name="remarks"></a>Hinweise  
- Mit dem Auflistungen und Eigenschaften einer **Hierarchie** -Objekts können Sie folgende Möglichkeiten:  
+## <a name="remarks"></a>Bemerkungen  
+ Mit den Auflistungen und Eigenschaften eines **Hierarchy** -Objekts können Sie folgende Aufgaben ausführen:  
   
--   Identifizieren der **Hierarchie** mit der [Namen](../../../ado/reference/ado-md-api/name-property-ado-md.md) und [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) Eigenschaften.  
+-   Identifizieren Sie die **Hierarchie** mit den Eigenschaften " [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) " und " [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) ".  
   
--   Zurückgeben einer sinnvollen Zeichenfolge, die beschreibt, die **Hierarchie** mit der [Beschreibung](../../../ado/reference/ado-md-api/description-property-ado-md.md) Eigenschaft.  
+-   Gibt eine sinnvolle Zeichenfolge zurück, die die **Hierarchie** mit der [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) -Eigenschaft beschreibt.  
   
--   Zurückgeben der [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekte, aus denen die **Hierarchie** mit der [Ebenen](../../../ado/reference/ado-md-api/levels-collection-ado-md.md) Auflistung.  
+-   Gibt die [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) -Objekte zurück, die die **Hierarchie** mit der [Ebenen](../../../ado/reference/ado-md-api/levels-collection-ado-md.md) -Auflistung bilden.  
   
--   Verwenden Sie das standard-ADO [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um weitere Informationen zum Abrufen der **Hierarchie** Objekt.  
+-   Verwenden Sie die standardmäßige ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen zum **Hierarchy** -Objekt zu erhalten.  
   
- Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
+ Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
-|AllMember|Das Element auf der höchsten Ebene des Rollups in der Hierarchie.|  
+|AllMember|Der Member auf der höchsten Rollup-Ebene in der Hierarchie.|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|DefaultMember|Der eindeutige Name des Standardelements für diese Hierarchie.|  
-|Beschreibung|Eine aussagekräftige Beschreibung der Hierarchie.|  
-|DimensionType|Der Typ der Dimension, zu dem diese Hierarchie gehört.|  
-|DimensionUniqueName|Der eindeutige Name der Dimension.|  
-|HierarchyCaption|Eine Bezeichnung oder Beschriftung, die der Hierarchie zugeordnet ist.|  
-|HierarchyCardinality|Die Anzahl der Member in der Hierarchie.|  
-|HierarchyGUID|Die GUID der Hierarchie.|  
+|DefaultMember|Der eindeutige Name des Standard Members für diese Hierarchie.|  
+|BESCHREIBUNG|Eine aussagekräftige Beschreibung der Hierarchie.|  
+|DimensionType|Der Typ der Dimension, zu der diese Hierarchie gehört.|  
+|Dimensionuniquename|Der eindeutige Name der Dimension.|  
+|Hierarchycaption|Eine Bezeichnung oder Beschriftung, die der Hierarchie zugeordnet ist.|  
+|Hierarchycardinality|Die Anzahl der Member in der Hierarchie.|  
+|Hierarchyguid|Die GUID der Hierarchie.|  
 |HierarchyName|Der Name der Hierarchie.|  
-|HierarchyUniqueName|Der eindeutige Name der Hierarchie.|  
+|Hierarchyuniquename|Der eindeutige Name der Hierarchie.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CubeDef-Beispiel (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Dimension-Objekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
- [Hierarchies-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
+ [Dimensions Objekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
+ [Hierarchien-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Levels-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

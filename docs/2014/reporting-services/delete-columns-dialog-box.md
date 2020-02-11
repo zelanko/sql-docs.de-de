@@ -1,5 +1,5 @@
 ---
-title: Löschen (Dialogfeld) | Microsoft-Dokumentation
+title: Spalten löschen (Dialog Feld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,24 +16,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 211d5020c85c5295f195389904385981db46d315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109343"
 ---
 # <a name="delete-columns-dialog-box"></a>Spalten löschen (Dialogfeld)
   Im Dialogfeld **Spalten löschen** können Sie Spalten aus einem Tabellen-, Matrix- oder Listendatenbereich löschen. Bei Spalten, die Gruppen zugeordnet sind, können Sie auch die Gruppendefinition löschen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Spalten und verwandte Gruppe löschen**  
  Wählen Sie diese Option aus, um Spalten und die zugeordnete Gruppendefinition zu löschen.  
   
  **Nur Spalten löschen**  
  Wählen Sie diese Option aus, um nur die ausgewählten Spalten zu löschen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichts-Designer (F1-Hilfe)](tools/report-designer-f1-help.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Designer F1-Hilfe](tools/report-designer-f1-help.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

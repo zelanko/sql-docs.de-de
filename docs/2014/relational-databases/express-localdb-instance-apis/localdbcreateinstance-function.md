@@ -1,5 +1,5 @@
 ---
-title: LocalDBCreateInstance-Funktion | Microsoft-Dokumentation
+title: Localdbkreateinzustance-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128798"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance-Funktion
   Erstellt eine neue SQL Server Express LocalDB-Instanz.  
   
- **Headerdatei:** sqlncli.h  
+ **Header Datei:** sqlncli. h  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +39,16 @@ HRESULT LocalDBCreateInstance(
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *wszVersion*  
+ *wszversion*  
  [Eingabe] Die LocalDB-Version, z. B. 11.0 oder 11.0.1094.2.  
   
- *pInstanceName*  
+ *pinstancename*  
  [Eingabe] Der Name für die zu erstellende LocalDB-Instanz.  
   
  *dwFlags*  
  [Eingabe] Zur künftigen Verwendung reserviert. Muss derzeit auf 0 festgelegt sein.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -97,14 +97,14 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine vollständig funktionierende LocalDB-Instanz mit dem angegebenen Namen bereits vorhanden ist und ihre Version der angeforderten entspricht oder höher ist, ist das Ergebnis S_OK.  
   
  Wenn eine vorhandene Instanz beschädigt wird, schlagen nachfolgende Aufrufe der `LocalDBCreateInstance` API-Methode fehl. Beschädigte Instanzen müssen manuell korrigiert oder explizit gelöscht werden, bevor sie wieder verwendet werden können.  
   
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Express LocalDB-Header und -Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Express LocalDB-Header und Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  
   
   

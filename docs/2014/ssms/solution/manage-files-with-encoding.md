@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823797"
 ---
 # <a name="manage-files-with-encoding"></a>Verwalten von Dateien mit Codierung
@@ -42,7 +42,7 @@ ms.locfileid: "62823797"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>So speichern Sie eine Datei mit einer anderen Codierung oder einem anderen Zeilenendentyp  
   
-1.  Auf der **Datei** Menü klicken Sie auf **speichern \<Filename > als**.  
+1.  Klicken Sie im Menü **Datei** auf **Datei \<Namen speichern> als**.  
   
 2.  Erweitern Sie im Dialogfeld **Datei speichern unter** die Schaltfläche **Speichern** , und klicken Sie dann auf **Mit Codierung speichern**.  
   
@@ -61,8 +61,8 @@ ms.locfileid: "62823797"
   
 -   UTF8-Dateien funktionieren nicht sicher mit Visual SourceSafe, da Änderungen, die für Editoren von UTF8-Dateien Probleme verursachen, beim Einchecken, Auschecken, Überprüfen von Unterschieden und Zusammenführen vorgenommen werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dateien, die Projektmappen und Projekte verwalten](files-that-manage-solutions-and-projects.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dateien zum Verwalten von Projektmappen und Projekten](files-that-manage-solutions-and-projects.md)   
  [Zuordnen von Dateierweiterungen zu einem Code-Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

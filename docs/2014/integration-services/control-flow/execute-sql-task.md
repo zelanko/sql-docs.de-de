@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831768"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
@@ -54,7 +54,7 @@ ms.locfileid: "62831768"
 ## <a name="creating-sql-statements"></a>Erstellen von SQL-Anweisungen  
  Die Quelle für die SQL-Anweisungen, die von diesem Task verwendet werden, kann eine Taskeigenschaft mit einer Anweisung, eine Verbindung mit einer Datei mit mindestens einer Anweisung oder der Name einer Variablen sein, die eine Anweisung enthält. Die SQL-Anweisungen müssen in dem Dialekt des Quelldatenbank-Managementsystems (DBMS, Database Management System) erstellt werden. Weitere Informationen finden Sie unter [Integration Services-Abfragen &#40;SSIS&#41;](../integration-services-ssis-queries.md).  
   
- Wenn die SQL-Anweisungen in einer Datei gespeichert sind, stellt der Task mithilfe eines Verbindungs-Managers eine Verbindung mit der Datei her. Weitere Informationen finden Sie unter [File Connection Manager](../connection-manager/file-connection-manager.md).  
+ Wenn die SQL-Anweisungen in einer Datei gespeichert sind, stellt der Task mithilfe eines Verbindungs-Managers eine Verbindung mit der Datei her. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](../connection-manager/file-connection-manager.md).  
   
  Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer können Sie zum Eingeben von SQL-Anweisungen das Dialogfeld **Editor für den Task SQL ausführen** oder den **Abfrage-Generator**verwenden. Dabei handelt es sich um eine grafische Benutzeroberfläche zum Erstellen von SQL-Abfragen. Weitere Informationen finden Sie unter [Editor für den Task „SQL ausführen“ &#40;Seite „Allgemein“&#41;](../execute-sql-task-editor-general-page.md) und [Abfrage-Generator](../query-builder.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62831768"
  Informationen über das Abrufen von Resultsets aus SQL-Befehlen im Task „SQL ausführen“ finden Sie unter [Resultsets im Task „SQL ausführen“](../result-sets-in-the-execute-sql-task.md).  
   
 ## <a name="troubleshooting-the-execute-sql-task"></a>Problembehandlung des Tasks SQL ausführen  
- Sie können die vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei SQL-Befehlen behandeln, die vom Task SQL ausführen ausgeführt werden. Aktivieren Sie zum Protokollieren der vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Sie können die vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei SQL-Befehlen behandeln, die vom Task SQL ausführen ausgeführt werden. Aktivieren Sie zum Protokollieren der vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
  Gelegentlich gibt ein SQL-Befehl oder eine gespeicherte Prozedur mehrere Resultsets zurück. Zu diesen Resultsets gehören nicht nur Rowsets, die das Ergebnis von `SELECT`-Abfragen sind, sondern auch einzelne Werte als Ergebnis von Fehlern in der `RAISERROR`-Anweisung oder `PRINT`-Anweisung. Ob der Task Fehler in Resultsets nach dem ersten Resultset ignoriert, hängt vom verwendeten Typ des Verbindungs-Managers ab:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62831768"
 ### <a name="custom-log-entries"></a>Benutzerdefinierte Protokolleinträge  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task <legacyBold>SQL ausführen</legacyBold> beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|  
   
@@ -127,11 +127,11 @@ ms.locfileid: "62831768"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task SQL ausführen &#40;Seite "Allgemein"&#41;](../execute-sql-task-editor-general-page.md)  
+-   [Editor für den Task ' SQL ausführen ' &#40;Seite Allgemein&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [Editor für den Task SQL ausführen &#40;Seite Parameterzuordnung&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [Editor für den Task ' SQL ausführen ' &#40;Seite Parameter Zuordnung&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [Editor für den Task SQL ausführen &#40;Seite Resultset&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [Editor für den Task "SQL ausführen" &#40;resultsetseite&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -146,13 +146,13 @@ ms.locfileid: "62831768"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Zuordnen von Abfrageparametern zu Variablen in einem „SQL ausführen“-Task ](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
--   [Zuordnen von Resultsets zu Variablen in einem „SQL ausführen“-Task ](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
+-   [Zuordnen von Resultsets zu Variablen in einem Task „SQL ausführen“](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Parameter und Rückgabecodes im Task „SQL ausführen“](execute-sql-task.md)  
+-   [Parameter und Rückgabecodes im Task 'SQL ausführen'](execute-sql-task.md)  
   
 -   [Resultsets im Task „SQL ausführen“](../result-sets-in-the-execute-sql-task.md)  
   

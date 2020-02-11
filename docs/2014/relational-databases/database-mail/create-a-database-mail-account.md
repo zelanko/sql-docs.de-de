@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917727"
 ---
 # <a name="create-a-database-mail-account"></a>Erstellen eines Kontos für Datenbank-E-Mail
@@ -25,13 +25,13 @@ ms.locfileid: "62917727"
   
 -   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
   
--   **So erstellen Sie eine Datenbank-Mail-Kontos mit:**  [Assistent zum Konfigurieren von Datenbank-E-Mails](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Folgendes können Sie zum Erstellen eines Datenbank-E-Mail-Kontos verwenden:**  [Assistent zum Konfigurieren von Datenbank-E-Mails](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nächste Schritte zum Konfigurieren der Datenbank-e-Mails](#FollowUp)  
+-   **Nachverfolgung:**  [Nächste Schritte zum Konfigurieren von Datenbank-E-Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Bestimmen Sie den Servernamen und die Portnummer für den SMTP-Server (Simple Mail Transfer Protocol), den Sie zum Senden von E-Mail verwenden. Falls der SMTP-Server eine Authentifizierung erfordert, bestimmen Sie den Benutzernamen und das Kennwort für den SMTP-Server.  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nächste Schritte zum Konfigurieren der Datenbank-e-Mails  
+##  <a name="FollowUp"></a>Nächster Schritt: Nächste Schritte zum Konfigurieren von Datenbank-E-Mail  
   
 -   [Erstellen eines Profils für Datenbank-E-Mail](create-a-database-mail-profile.md)  
   

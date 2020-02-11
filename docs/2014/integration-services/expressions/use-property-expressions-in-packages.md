@@ -20,16 +20,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768851"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
   
- Ein Ausdruck kann einem Paket, einem Task, einer Foreach-Schleife, einer For-Schleife, einer Sequenz, einem Foreach-Enumerator, einem Ereignishandler, einer Paket- oder Projektebene, einem Verbindungs-Manager oder einem Protokollanbieter hinzugefügt werden. Jede beliebige Eigenschaft dieser Objekte vom Typ Lesen/Schreiben kann einen Eigenschaftsausdruck implementieren. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] unterstützt auch die Verwendung von Eigenschaftsausdrücken in einigen benutzerdefinierten Eigenschaften von Datenflusskomponenten. Variablen und Rangfolgeneinschränkungen unterstützen keine Eigenschaftsausdrücke. Sie enthalten jedoch spezielle Eigenschaften, in denen Sie Ausdrücke verwenden können.  
+ Ein Ausdruck kann einem Paket, einem Task, einer Foreach-Schleife, einer For-Schleife, einer Sequenz, einem Foreach-Enumerator, einem Ereignishandler, einer Paket- oder Projektebene, einem Verbindungs-Manager oder einem Protokollanbieter hinzugefügt werden. Jede beliebige Eigenschaft dieser Objekte vom Typ Lesen/Schreiben kann einen Eigenschaftsausdruck implementieren. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] unterstützt auch die Verwendung von Eigenschaftsausdrücken in einigen benutzerdefinierten Eigenschaften von Datenflusskomponenten. Variablen und Rangfolgeneinschränkungen unterstützen keine Eigenschaftsausdrücke. Sie enthalten jedoch spezielle Eigenschaften, in denen Sie Ausdrücke verwenden können.  
   
  Eigenschaftsausdrücke können auf verschiedene Weise aktualisiert werden:  
   
@@ -55,7 +56,8 @@ ms.locfileid: "62768851"
  Einige Eigenschaften werden mithilfe von Enumeratorwerten festgelegt. Wenn Sie in einem Eigenschaftsausdruck auf das Enumeratorelement verweisen, müssen Sie den numerischen Wert verwenden, der dem Anzeigenamen des Enumeratorelements entspricht. Wenn beispielsweise ein Eigenschaftsausdruck die `LoggingMode`-Eigenschaft festlegt, die einen Wert der `DTSLoggingMode`-Enumeration verwendet, muss der Eigenschaftsausdruck anstelle der Anzeigenamen `Enabled`, `Disabled` oder `UseParentSetting` gleich 0, 1 oder 2 sein. Weitere Informationen finden Sie unter [Aufgezählte Konstanten in Eigenschaftsausdrücken](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Benutzeroberfläche von Eigenschaftsausdrücken  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt eine Reihe von Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken bereit.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt eine Reihe von Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken bereit.  
   
 -   Die **Ausdrücke** -Seite, die sich in den benutzerdefinierten Editoren für Tasks befindet, den For-Schleifen-Container und die Foreach-Container. Mit der **Ausdrücke** -Seite können Sie Ausdrücke bearbeiten und eine Liste der Eigenschaftsausdrücke anzeigen, die ein Task, eine Foreach-Schleife oder eine For-Schleife verwendet.  
   
@@ -67,9 +69,9 @@ ms.locfileid: "62768851"
   
  Im folgenden Diagramm werden die Benutzeroberflächen angezeigt, die Sie verwenden, um Eigenschaftsausdrücke hinzuzufügen, zu ändern oder zu entfernen.  
   
- ![Benutzeroberfläche für Eigenschaftsausdrücke](../media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
+ ![Die Benutzeroberfläche für Eigenschaftsausdrücke](../media/ssis-propertyexpressionui.gif "Die Benutzeroberfläche für Eigenschaftsausdrücke")  
   
- Klicken Sie im Fenster **Eigenschaften** und auf der Seite **Ausdrücke** auf der Sammlungsebene **Ausdrücke** auf die Schaltfläche zum Durchsuchen **(…)** , um das Dialogfeld **Eigenschaftsausdruck-Editor** zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließenden Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)** , um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
+ Klicken Sie im Fenster **Eigenschaften** und auf der Seite **Ausdrücke** auf der Sammlungsebene **Ausdrücke** auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Eigenschaftsausdruck-Editor** zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließenden Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
   
  Sie können das **Ausdrucks-Generator** -Dialogfeld auch aus dem **Eigenschaftsausdrucks-Editor** -Dialogfeld heraus öffnen.  
   
@@ -92,7 +94,7 @@ ms.locfileid: "62768851"
  Eigenschaftsausdrücke werden nach dem Laden der Paketkonfigurationen geladen. Beispielsweise werden Variablen zuerst durch ihre Konfigurationen aktualisiert, und anschließend werden die Eigenschaftsausdrücke, die die Variablen verwenden, ausgewertet und geladen. Das bedeutet, dass die Eigenschaftsausdrücke immer die Werte der Variablen verwenden, die durch Konfigurationen festgelegt wurden.  
   
 > [!NOTE]  
->  Können keine der `Set` Möglichkeit, die **Dtexec** Hilfsprogramm, um einen Eigenschaftsausdruck aufzufüllen.  
+>  Sie können die `Set` -Option des Hilfsprogramms **dtexec** nicht verwenden, um einen Eigenschafts Ausdruck aufzufüllen.  
   
  In der folgenden Tabelle finden Sie eine Auflistung von Situationen, in denen Eigenschaftsausdrücke von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ausgewertet und geladen werden.  
   
@@ -114,7 +116,7 @@ ms.locfileid: "62768851"
  Die folgenden Beispielausdrücke veranschaulichen das Verwenden von Systemvariablen, Operatoren, Funktionen und Zeichenfolgenliteralen in Eigenschaftsausdrücken.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Eigenschaftsausdruck für die LoggingMode-Eigenschaft eines Pakets  
- Der folgende Eigenschaftsausdruck kann verwendet werden, um die LoggingMode-Eigenschaft eines Pakets festzulegen. Der Ausdruck verwendet die DAY- und GETDATE-Funktionen, um eine Ganzzahl abzurufen, die den datepart-Wert für den Tag eines Datums darstellt. Handelt es sich dabei um den 1. oder 15. Tag des Monats, ist die Protokollierung aktiviert. Andernfalls ist die Protokollierung deaktiviert. Der Wert 1 ist die ganze Zahl der LoggingMode enumeratorelements entspricht `Enabled`, und der Wert 2 ist die ganze Zahl des Elements entspricht `Disabled`. Sie müssen im Ausdruck den numerischen Wert anstelle des Enumeratorelementnamens verwenden.  
+ Der folgende Eigenschaftsausdruck kann verwendet werden, um die LoggingMode-Eigenschaft eines Pakets festzulegen. Der Ausdruck verwendet die DAY- und GETDATE-Funktionen, um eine Ganzzahl abzurufen, die den datepart-Wert für den Tag eines Datums darstellt. Handelt es sich dabei um den 1. oder 15. Tag des Monats, ist die Protokollierung aktiviert. Andernfalls ist die Protokollierung deaktiviert. Der Wert 1 ist die Ganzzahl, die dem LoggingMode-enumeratormember `Enabled`entspricht, und der Wert 2 ist die ganzzahlige Entsprechung des-Elements. `Disabled` Sie müssen im Ausdruck den numerischen Wert anstelle des Enumeratorelementnamens verwenden.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -167,11 +169,11 @@ ms.locfileid: "62768851"
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   [Ausdrucks- und Konfigurationshervorhebung (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Ausdruck und Konfiguration highheller (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
 -   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Variablen in Paketen](../use-variables-in-packages.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770887"
 ---
 # <a name="request-log"></a>Anforderungsprotokoll
@@ -41,26 +41,26 @@ ms.locfileid: "62770887"
     > [!NOTE]  
     >  Wenn Sie auf **Vorschau** klicken, wird auch das Dialogfeld **Vorschau** geöffnet. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Preview](preview.md).  
   
-## <a name="options"></a>Optionen  
- **Uhrzeit**  
+## <a name="options"></a>Tastatur  
+ **Time**  
  Zeigt die Uhrzeit an, zu der das Ereignis protokolliert wurde.  
   
  **Typ**  
  Zeigt den Typ des protokollierten Ereignisses an. In der folgenden Tabelle sind die möglichen Ereignistypen aufgelistet.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|S|Eine Erfolgsmeldung.|  
+|E|Eine Erfolgsmeldung.|  
 |E|Fehlermeldung|  
 |W|Warnmeldung.|  
 |I|Informationsmeldung.|  
-|A|Der Vorgang wurde abgebrochen.|  
+|Ein|Der Vorgang wurde abgebrochen.|  
   
- **MessageBox**  
+ **Meldung**  
  Zeigt den Meldungstext an, der dem protokollierten Ereignis zugeordnet ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

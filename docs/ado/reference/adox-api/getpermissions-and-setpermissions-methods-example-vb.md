@@ -1,5 +1,5 @@
 ---
-title: GetPermissions und SetPermissions-Methoden – Beispiel (VB) | Microsoft-Dokumentation
+title: Getberechtigungs-und setberechtigungs-Methoden Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966244"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions- und SetPermissions-Methoden – Beispiel (VB)
-Dieses Beispiel zeigt die [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) Methoden. Der folgende Code bietet vollständigen Zugriff für die Tabelle Orders für den Admin-Benutzer.  
+In diesem Beispiel werden die Methoden [getberechtigungs](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [setberechtigungen](../../../ado/reference/adox-api/setpermissions-method-adox.md) veranschaulicht. Der folgende Code gewährt dem Administrator Benutzer uneingeschränkten Zugriff auf die Orders-Tabelle.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -94,9 +94,9 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions-Methode (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions-Methode (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Getberechtigungs-Methode (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+ [Setberechtigungs-Methode (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
  [User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Users-Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

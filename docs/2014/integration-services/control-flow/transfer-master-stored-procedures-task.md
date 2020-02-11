@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829482"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>In master gespeicherte Prozeduren übertragen (Task)
@@ -39,7 +39,7 @@ ms.locfileid: "62829482"
 ## <a name="transferring-stored-procedures-between-instances-of-sql-server"></a>Übertragen von gespeicherten Prozeduren zwischen den Instanzen von SQL Server  
  Der Task "In 'master' gespeicherte Prozeduren übertragen" unterstützt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quelle und ein -Ziel.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Der Task löst ein Informationsereignis aus, das die Anzahl der übertragenen gespeicherten Prozeduren meldet, sowie ein Warnungsereignis, wenn eine gespeicherte Prozedur überschrieben wird.  
   
  Der Task "In 'master' gespeicherte Prozeduren übertragen" meldet keinen schrittweisen Fortschritt der Anmeldeübertragung; er meldet nur 0 % und 100 % der Ausführung.  
@@ -64,7 +64,7 @@ ms.locfileid: "62829482"
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „In 'master' gespeicherte Prozeduren übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task "Master gespeicherte Prozeduren übertragen" &#40;&#41;Seite](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor für den Task „In master gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -81,8 +81,8 @@ ms.locfileid: "62829482"
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Objekte kopieren (Task)](transfer-sql-server-objects-task.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Objekte übertragen (Task)](transfer-sql-server-objects-task.md)   
  [Integration Services-Tasks](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827918"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Verbinden von Komponenten in einem Datenfluss
@@ -40,9 +40,9 @@ ms.locfileid: "62827918"
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen oder Löschen einer Komponente im Datenfluss](data-flow.md)   
- [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../configure-an-error-output-in-a-data-flow-component.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Hinzufügen oder Löschen einer Komponente in einem Datenfluss](data-flow.md)   
+ [Konfigurieren einer Fehlerausgabe in einer Datenfluss Komponente](../configure-an-error-output-in-a-data-flow-component.md)   
  [Datenfluss](data-flow.md)  
   
   

@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479936"
 ---
 # <a name="create-a-model-master-data-services"></a>Erstellen eines Modells (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Modell, das Modellobjekte enthalten soll.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -34,26 +34,26 @@ ms.locfileid: "65479936"
   
 2.  Zeigen Sie auf der Seite **Modellansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **Modelle**.  
   
-3.  Auf der **Modellverwaltung** auf **Modell hinzufügen**.  
+3.  Klicken Sie auf der Seite **Modell Wartung** auf **Modell hinzufügen**.  
   
-4.  In der **Modellname** geben den Namen des Modells.  
+4.  Geben Sie im Feld **Modellname** den Namen des Modells ein.  
   
 5.  Optional können Sie **Entität mit demselben Namen wie das Modell erstellen** auswählen, um eine Entität mit dem gleichen Namen wie das Modell zu erstellen.  
   
-6.  Wählen Sie optional **explizite Hierarchie mit gleichem Namen wie Modell erstellen** eine explizite Hierarchie mit dem gleichen Namen wie das Modell zu erstellen. Diese Option aktiviert auch die Entität für Auflistungen.  
+6.  Wählen Sie optional **explizite Hierarchie mit gleichem Namen wie Modell erstellen** aus, um eine explizite Hierarchie mit demselben Namen wie das Modell zu erstellen. Diese Option aktiviert auch die Entität für Auflistungen.  
   
-7.  Wählen Sie optional **erforderliche Hierarchie (alle Blattelemente werden eingeschlossen** die explizite Hierarchie als verbindliche Hierarchie zu erstellen.  
+7.  Wählen Sie optional erforderliche **Hierarchie aus (alle Blatt Elemente werden eingeschlossen** , um die explizite Hierarchie als erforderliche Hierarchie zu erstellen.  
   
 8.  Klicken Sie auf **Modell speichern**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Erstellen einer Entität &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
+-   [Erstellen Sie eine Entität &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
  [Entitäten &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
- [Löschen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
- [Ändern eines Modellnamens &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
+ [&#40;Master Data Services eines Modells löschen&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
+ [Ändern eines Modell namens &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
   
   

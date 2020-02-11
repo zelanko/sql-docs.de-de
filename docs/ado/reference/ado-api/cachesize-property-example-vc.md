@@ -1,5 +1,5 @@
 ---
-title: CacheSize-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für CacheSize-Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920255"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel verwendet die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) -Eigenschaft auf den Unterschied in Bezug auf Leistung für einen Vorgang ausgeführt wird, mit und ohne einen 30-Record-Cache.  
+In diesem Beispiel wird die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) -Eigenschaft verwendet, um den Unterschied in der Leistung für einen Vorgang anzuzeigen, der mit und ohne 30-Datensatz-Cache ausgeführt wird.  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -160,6 +160,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CacheSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

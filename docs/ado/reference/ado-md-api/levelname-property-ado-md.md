@@ -17,24 +17,24 @@ ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949587"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName-Eigenschaft (ADO MD)
-Gibt den Namen der Ebene von einem [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Gibt den Namen der [Ebene eines Elements an.](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **Zeichenfolge** und ist schreibgeschützt.  
+ Gibt eine **Zeichenfolge** zurück und ist schreibgeschützt.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **LevelName** Eigenschaft, um den Namen der Ebene abzurufen, zu der ein Element gehört. Dies entspricht der [Namen](../../../ado/reference/ado-md-api/name-property-ado-md.md) Eigenschaft eine [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekt.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **Levelname** -Eigenschaft, um den Namen der Ebene abzurufen, zu der ein Member gehört. Dies entspricht der [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) -Eigenschaft eines [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) -Objekts.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Name-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

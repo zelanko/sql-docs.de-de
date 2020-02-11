@@ -1,5 +1,5 @@
 ---
-title: Collections (ADO für Visual C++-Syntax) | Microsoft-Dokumentation
+title: Auflistungen (ADO für Visual C++-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,10 +18,10 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919910"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (ADO für Visual C++-Syntax)
@@ -39,7 +39,7 @@ Refresh(void);
   
 -   [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Delete-Methode (Parameters-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete-Methode (ADO-Parameters-Collection)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
 -   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -70,7 +70,7 @@ Refresh(void);
   
 -   [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Delete-Methode (Parameters-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete-Methode (ADO-Parameters-Collection)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
 -   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -87,7 +87,7 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
 -   [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="errors"></a>Fehler  
+## <a name="errors"></a>Errors  
   
 ### <a name="methods"></a>Methoden  
   
@@ -140,8 +140,8 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Fehlersammlung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

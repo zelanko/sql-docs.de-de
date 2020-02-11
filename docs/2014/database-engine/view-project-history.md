@@ -1,5 +1,5 @@
 ---
-title: Anzeigen der Projektversionsgeschichte | Microsoft-Dokumentation
+title: Anzeigen des Projektverlaufs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773496"
 ---
 # <a name="view-project-history"></a>Anzeigen der Projektversionsgeschichte
@@ -34,9 +34,9 @@ ms.locfileid: "62773496"
   
 1.  Wählen Sie im Projektmappen-Explorer das Projekt aus.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung** , und klicken Sie auf **Verlauf anzeigen**.  
+2.  Zeigen Sie im Menü **Datei** auf **Quell** Code Verwaltung, und klicken Sie auf **Verlauf anzeigen**.  
   
-3.  In der **Verlauf** \<Projekt > Dialogfeld führen die folgenden Aktionen:  
+3.  Führen Sie **** \<im Dialogfeld Projekt> Verlauf eine der folgenden Aktionen aus:  
   
     -   Zeigen Sie für eine ausgewählte Datei die Kopie des Quellcodeverwaltungssystems an.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "62773496"
   
     -   Exportieren Sie den Versionsgeschichtebericht an einen Drucker, in eine Datei oder in die Zwischenablage.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen und Abrufen von Versionsinformationen](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Anzeigen des Dateistatus](../../2014/database-engine/view-file-status.md)   
- [Abrufen von Dateien](../../2014/database-engine/retrieve-files.md)   
+ [Datei Status anzeigen](../../2014/database-engine/view-file-status.md)   
+ [Dateien abrufen](../../2014/database-engine/retrieve-files.md)   
  [Vergleichen von Dateien](../../2014/database-engine/compare-files.md)  
   
   

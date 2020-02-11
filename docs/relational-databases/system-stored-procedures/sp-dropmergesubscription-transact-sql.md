@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergesubscription (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dropmergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933870"
 ---
-# <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
+# <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Löscht ein Abonnement für eine Mergeveröffentlichung und den zugehörigen Merge-Agent. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Löscht ein Abonnement für eine Mergeveröffentlichung und den zugehörigen Merge-Agent. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,43 +42,43 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Veröffentlichungsname. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden ist und den Regeln für Bezeichner entsprechen.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden sein und den Regeln für Bezeichner entsprechen.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *subscription_database eingestellt wird*ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscription_database*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)** , und kann einen der folgenden Werte sein.  
+`[ @subscription_type = ] 'subscription_type'`Der Abonnementtyp. *subscription_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Alle**|Push-, Pull- und anonyme Abonnements.|  
-|**Anonyme**|Anonymes Abonnement.|  
-|**Pushbenachrichtigungen**|Pushabonnement.|  
-|**Pull**|Pullabonnement.|  
-|**both** (Standard)|Sowohl Push- als auch Pullabonnements.|  
+|**allen**|Push-, Pull- und anonyme Abonnements.|  
+|**Anonymous**|Anonymes Abonnement.|  
+|**Push**|Pushabonnement.|  
+|**auszu**|Pullabonnement.|  
+|**beides** (Standard)|Sowohl Push- als auch Pullabonnements.|  
   
-`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Mit diesem Parameter kann ein Abonnement gelöscht werden, ohne Cleanuptasks auf dem Verteiler auszuführen. Er erweist sich auch bei einer etwaigen Neuinstallation des Verteilers als hilfreich.  
+`[ @ignore_distributor = ] ignore_distributor`Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**. Mit diesem Parameter kann ein Abonnement gelöscht werden, ohne Cleanuptasks auf dem Verteiler auszuführen. Er erweist sich auch bei einer etwaigen Neuinstallation des Verteilers als hilfreich.  
   
-`[ @reserved = ] reserved` ist für die zukünftige Verwendung reserviert. *reservierte* ist **Bit**, hat den Standardwert **0**.  
+`[ @reserved = ] reserved`Ist für die zukünftige Verwendung reserviert. *reserved* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_dropmergesubscription** wird bei der Mergereplikation verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_dropmergesubscription** wird bei der Mergereplikation verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergesubscription**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_dropmergesubscription**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Löschen eines Pushabonnements](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Löschen eines Pullabonnements](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Globale Einstellungen (Editor) (OracleToSQL) | Microsoft-Dokumentation
+title: Globale Einstellungen (Editor) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,20 +11,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 6fcb9915f6945e2dc8413a4c28003428a4ad3e07
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264422"
 ---
 # <a name="global-settings-editor-oracletosql"></a>Globale Einstellungen (Editor) (OracleToSQL)
-Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld die Einstellungen für Code-Editor-Fenster.  
+Verwenden Sie die Seite Editor des Dialog Felds **globale Einstellungen** , um Einstellungen für Code-Editor-Fenster anzugeben.  
   
-Die Editor-Einstellungen, für den Zugriff auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **Editor**.  
+Um **auf die Editor** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Editor**aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Zeilennummern anzeigen**  
-Wählen Sie zum Anzeigen von Zeilennummern im Code-Editor-Fenster **"true"** .  
+Wählen Sie **true**aus, um die Zeilennummern in den Code-Editor-Fenstern anzuzeigen.  
   
-Wenn ein Code-Editor-Fenster aktiviert ist, wenn Sie diese Einstellung ändern, müssen Sie möglicherweise erneut auswählen, das aktuelle Objekt, um die Anzeige zu aktualisieren.  
+Wenn ein Code-Editor-Fenster ausgewählt wird, wenn Sie diese Einstellung ändern, müssen Sie möglicherweise das aktuelle Objekt erneut auswählen, um die Anzeige zu aktualisieren.  
   

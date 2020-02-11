@@ -1,5 +1,5 @@
 ---
-title: Seite "Überprüfung" (AlwaysOn-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation
+title: Validierungs Seite (AlwaysOn-Verfügbarkeits Gruppen-Assistenten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812984"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>Seite 'Überprüfung' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
   In diesem Hilfethema werden die Optionen der Seite **Überprüfung** beschrieben. Dieses Thema gilt für [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]und [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie diese Seite, um zu überprüfen, ob die Umgebung alle auf vorherigen Seiten des Assistenten festgelegte Konfigurationsoptionen unterstützt.  
   
-##  <a name="PageOptions"></a> Optionen auf der Seite "Überprüfung"  
- **Ergebnisse der Verfügbarkeitsgruppenüberprüfung.**  
+##  <a name="PageOptions"></a>Optionen für die Validierungs Seite  
+ **Ergebnisse der Überprüfung der Verfügbarkeits Gruppe.**  
  Dieses Raster zeigt die Ergebnisse jedes ausgeführten Überprüfungsschritts an. Es gibt folgende Rasterspalten:  
   
  **Name**  
@@ -36,12 +36,12 @@ ms.locfileid: "62812984"
  **Ergebnis**  
  Zeigt einen der folgenden Linktexte an. Klicken Sie auf den Link, um weitere Informationen zum Ergebnis eines bestimmten Überprüfungsschritts anzuzeigen.  
   
-|Ergebnis|Description|  
+|Ergebnis|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
-|**Ausgelassen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  
-|**Success**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
-|**Warnung**|Zeigt ein potenzielles Problem mit der Verfügbarkeitsgruppenkonfiguration an.  Klicken Sie auf den Link, um die Warnmeldung anzuzeigen.|  
+|**Übersprungen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  
+|**Erfolgreich**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
+|**Warning**|Zeigt ein potenzielles Problem mit der Verfügbarkeitsgruppenkonfiguration an.  Klicken Sie auf den Link, um die Warnmeldung anzuzeigen.|  
   
  **Überprüfung erneut ausführen**  
  Klicken Sie, um die Überprüfungsschritte zu wiederholen, wenn Sie außerhalb des Assistenten als Reaktion auf einen Überprüfungsfehler eine Änderung vornehmen.  
@@ -58,7 +58,7 @@ ms.locfileid: "62812984"
   
  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

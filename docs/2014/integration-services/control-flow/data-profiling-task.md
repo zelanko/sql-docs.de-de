@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831883"
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
@@ -49,7 +49,7 @@ ms.locfileid: "62831883"
   
  Die folgenden fünf Profile analysieren einzelne Spalten.  
   
-|Profile, die einzelne Spalten analysieren|Description|  
+|Profile, die einzelne Spalten analysieren|BESCHREIBUNG|  
 |----------------------------------------------|-----------------|  
 |Verteilungsprofil für Spaltenlänge|Meldet alle eindeutigen Längen der Zeichenfolgenwerte in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge repräsentiert.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sein sollen, und entdecken Werte, die länger als zwei Zeichen sind.|  
 |Profil für Spalten-NULL-Verhältnis|Meldet den Prozentsatz der NULL-Werte in der ausgewählten Spalte.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ein unerwartet hohes Verhältnis der NULL-Werte in einer Spalte. Beispiel: Sie erstellen ein Profil der Spalte für die Postleitzahl und entdecken einen unerwartet hohen Prozentsatz an fehlenden Codes.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62831883"
   
  Die folgenden drei Profile analysieren einzelne Spalten oder Beziehungen zwischen Spalten und Tabellen.  
   
-|Profile, die mehrere Spalten analysieren|Description|  
+|Profile, die mehrere Spalten analysieren|BESCHREIBUNG|  
 |--------------------------------------------|-----------------|  
 |Kandidatenschlüsselprofil|Meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.|  
 |Funktionales Abhängigkeitsprofil|Meldet, in welchem Maß die Werte in einer Spalte (die abhängige Spalte) von den Werten in einer Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängig sind.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die US-amerikanische Zip Codes enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. Die gleiche Postleitzahl sollte immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen dieses Abhängigkeitsverhältnis.|  
@@ -74,7 +74,7 @@ ms.locfileid: "62831883"
 |Profil|Gültige Datentypen*|  
 |-------------|------------------------|  
 |Spaltenstatistikprofil|Die Spalten müssen einen numerischen Typ aufweisen oder vom `datetime`-Typ sein (nicht vom `mean`- Typ und vom `stddev`-Typ für die `datetime`-Spalte).|  
-|Profil für Spalten-NULL-Verhältnis|Alle Spalten\*\*|  
+|Profil für Spalten-NULL-Verhältnis|Alle Spalten**|  
 |Verteilungsprofil für Spaltenwerte|Die Spalten müssen vom `integer`-Typ, vom `char`-Typ und vom `datetime`-Typ sein.|  
 |Verteilungsprofil für Spaltenlänge|Die Spalten müssen vom `char`-Typ sein.|  
 |Spaltenmusterprofil|Die Spalten müssen vom `char`-Typ sein.|  
@@ -82,17 +82,17 @@ ms.locfileid: "62831883"
 |Funktionales Abhängigkeitsprofil|Die Spalten müssen vom `integer`-Typ, vom `char`-Typ und vom `datetime`-Typ sein.|  
 |Inklusionsprofil|Die Spalten müssen vom `integer`-Typ, vom `char`-Typ und vom `datetime`-Typ sein.|  
   
- \* In der vorherigen Tabelle gültiger Datentypen die `integer`, `char`, `datetime`, und `numeric` Typen umfassen die folgenden spezifischen Datentypen:  
+ \*In der `integer`vorherigen Tabelle gültiger Datentypen umfassen die Typen, `char`, `datetime`und `numeric` die folgenden spezifischen Datentypen:  
   
- Ganzzahltypen umfassen `bit`, `tinyint`, `smallint`, `int`, und `bigint`.  
+ Ganzzahlige `bit`Typen `tinyint`umfassen `smallint`, `int`,, `bigint`und.  
   
- Typen mit Zeichen umfassen `char`, `nchar`, `varchar`, und `nvarchar,` aber nicht für `varchar(max)` und `nvarchar(max)`.  
+ Zu den Zeichen `char`Typen `nchar`zählen `varchar`,, `nvarchar,` und, aber nicht `varchar(max)` und `nvarchar(max)`.  
   
- Datums- und Zeittypen schließen `datetime`, `smalldatetime`, und `timestamp`.  
+ Zu den Datums-und `datetime`Uhrzeit `smalldatetime`Typen zählen `timestamp`, und.  
   
  Die numerischen Typen umfassen die `integer`-Typen (mit Ausnahme des `bit`-Typs), den `money`-Typ, den `smallmoney`-Typ, den `decimal`-Typ, den `float`-Typ, den `real`-Typ und den `numeric`-Typ.  
   
- \*\* `image`, `text`, `XML`, `udt`, und `variant` Typen werden nicht unterstützt, für andere Profile als das Profil der Spalte Null-Verhältnis.  
+ \*\*`image`die `text`Typen `XML`, `udt`,, `variant` und werden nicht für andere Profile als das Profil für das NULL-Verhältnis der Spalte unterstützt.  
   
 ### <a name="valid-tables-and-columns"></a>Gültige Tabellen und Spalten  
  Wenn die Tabelle oder die Spalte leer ist, führt die Datenprofilerstellung die folgenden Aktionen aus:  
@@ -104,19 +104,19 @@ ms.locfileid: "62831883"
 ## <a name="features-of-the-data-profiling-task"></a>Funktion des Datenprofilerstellungs-Tasks  
  Der Datenprofilerstellungs-Task verfügt über die folgenden zweckmäßigen Konfigurationsoptionen:  
   
--   **Platzhalterspalten** Beim Konfigurieren einer Profilanforderung akzeptiert der Task das Platzhalterzeichen **(\*)** für einen Spaltennamen. Dies vereinfacht die Konfiguration und macht es leichter, die Eigenschaften unbekannter Daten zu ermitteln. Wenn der Task ausgeführt wird, erstellt er für jede Spalte, die über einen entsprechenden Datentyp verfügt, ein Profil.  
+-   Platzhalter **Spalten** Beim Konfigurieren einer Profil Anforderung akzeptiert der Task das Platzhalter Zeichen **(\*)** anstelle eines Spaltennamens. Dies vereinfacht die Konfiguration und macht es leichter, die Eigenschaften unbekannter Daten zu ermitteln. Wenn der Task ausgeführt wird, erstellt er für jede Spalte, die über einen entsprechenden Datentyp verfügt, ein Profil.  
   
--   **Schnellprofil** You can select Schnellprofil to configure the task quickly. Ein Schnellprofil erstellt ein Profil einer Tabelle oder einer Sicht mit allen Standardprofilen und Standardeinstellungen.  
+-   **Schnell Profil** Sie können schnelles Profil auswählen, um den Task schnell zu konfigurieren. Ein Schnellprofil erstellt ein Profil einer Tabelle oder einer Sicht mit allen Standardprofilen und Standardeinstellungen.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Verfügbare benutzerdefinierte Meldungen für den Datenprofilerstellungs-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Datenprofilerstellungs-Task aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
-|**DataProfilingTaskTrace**|Stellt beschreibende Informationen zum Taskstatus zur Verfügung. Nachrichten beinhalten folgende Informationen:<br /><br /> Start der Anforderungsverarbeitung<br /><br /> Abfragestart<br /><br /> Abfrageende<br /><br /> Beenden der Anforderungsverarbeitung|  
+|**Dataprofilingtasktrace**|Stellt beschreibende Informationen zum Taskstatus zur Verfügung. Nachrichten beinhalten folgende Informationen:<br /><br /> Start der Anforderungsverarbeitung<br /><br /> Abfragestart<br /><br /> Query End<br /><br /> Beenden der Anforderungsverarbeitung|  
   
 ## <a name="output-and-its-schema"></a>Ausgabe und zugehöriges Schema  
- Der Datenprofilerstellungs-Task gibt die ausgewählten Profile im XML-Format aus, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Sie können angeben, ob diese XML-Ausgabe in einer Datei oder einer Paketvariablen gespeichert wird. Sie können dieses Schema online anzeigen unter [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Auf der Webseite können Sie eine lokale Kopie des Schemas speichern. Anschließend können Sie die lokale Kopie des Schemas in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder einem anderen Schema-Editor, in einem XML-Editor oder einem Texteditor wie Notepad anzeigen.  
+ Der Datenprofilerstellungs-Task gibt die ausgewählten Profile im XML-Format aus, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Sie können angeben, ob diese XML-Ausgabe in einer Datei oder einer Paketvariablen gespeichert wird. Sie können dieses Schema online unter [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)anzeigen. Auf der Webseite können Sie eine lokale Kopie des Schemas speichern. Anschließend können Sie die lokale Kopie des Schemas in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder einem anderen Schema-Editor, in einem XML-Editor oder einem Texteditor wie Notepad anzeigen.  
   
  Dieses Schema für Datenqualitätsinformationen kann für Folgendes nützlich sein:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62831883"
   
 -   Erstellen von benutzerdefinierten Tools, die mit Datenqualitätsinformationen arbeiten.  
   
- Der Zielnamespace wird im Schema als [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) identifiziert.  
+ Der Ziel Namespace wird im Schema als [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)identifiziert.  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Ausgabe im bedingten Workflow eines Pakets  
  Die Komponenten der Datenprofilerstellung umfassen keine integrierten Funktionen zur Implementierung bedingter Logik im Workflow des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets basierend auf der Ausgabe des Datenprofilerstellungs-Tasks. Sie können diese Logik, mit minimalem Programmieraufwand, problemlos in einem Skripttask hinzufügen. Mit diesem Code wird eine Xpath-Abfrage der XML-Ausgabe durchgeführt und das Ergebnis in einer Paketvariablen gespeichert. Die Rangfolgeneinschränkungen, mit denen der Skripttask mit nachfolgenden Tasks verbunden wird, können einen Ausdruck verwenden, um den Workflow zu bestimmen. Der Skripttask stellt beispielsweise fest, dass der Prozentsatz der NULL-Werte in einer Spalte einen bestimmten Schwellenwert überschreitet. Wenn diese Bedingung wahr ist, sollten Sie das Paket unterbrechen und das Problem beheben, bevor Sie fortfahren.  
@@ -135,23 +135,23 @@ ms.locfileid: "62831883"
  [Seite Allgemein](../general-page-of-integration-services-designers-options.md)  
  Auf der Seite **Allgemein** geben Sie die Ausgabedatei oder die Variable an. Sie können auch **Schnellprofil** auswählen, um den Task schnell zu konfigurieren und Profile mit den Standardeinstellungen zu berechnen. Weitere Informationen finden Sie unter [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](data-profiling-task.md).  
   
- [Seite Profilanforderungen](data-profiling-task-editor-profile-requests-page.md)  
+ [Seite "Profil Anforderungen"](data-profiling-task-editor-profile-requests-page.md)  
  Auf der Seite **Profilanforderungen** geben Sie die Datenquelle an und wählen und konfigurieren die Datenprofile, die Sie berechnen möchten. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den verschiedenen Profilen zu erhalten, die Sie konfigurieren können:  
   
--   [Optionen für die Anforderung für Kandidatenschlüsselprofil &#40;Datenprofilerstellungs-Task&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Anforderungs Optionen für Kandidaten Schlüssel profile &#40;Datenprofilerstellungs-Task&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Verteilungsprofil für Spaltenlänge &#40;Datenprofilerstellungs-Task&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Anforderungs Optionen für Verteilungs Profile für Spaltenlänge &#40;Datenprofilerstellungs-Task&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte &#40;Datenprofilerstellungs-Task&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Anforderungs Optionen für das NULL-Verhältnis der Spalte &#40;Datenprofilerstellungs-&#41;Task](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für Spaltenmusterprofil &#40;Datenprofilerstellungs-Task&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Spaltenmusterprofil Anforderungs Optionen &#40;Datenprofilerstellungs-Task&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für Spaltenstatistikprofil &#40;Datenprofilerstellungs-Task&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Spalten Statistik Profil-Anforderungs Optionen &#40;Datenprofilerstellungs-Task&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Verteilungsprofil für Spaltenwert &#40;Datenprofilerstellungs-Task&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Anforderungs Optionen für Verteilungs Profil für Spaltenwert &#40;Datenprofilerstellungs-Task&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für funktionales Abhängigkeitsprofil &#40;Datenprofilerstellungs-Task&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Funktionale Abhängigkeits Profil-Anforderungs Optionen &#40;Datenprofilerstellungs-Task&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Wert Inklusions Profil Anforderung &#40;Datenprofilerstellungs-&#41;Task](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

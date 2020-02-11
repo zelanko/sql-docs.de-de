@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905777"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
@@ -31,19 +31,19 @@ Member_Expression.Lag(Index)
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
- *Index*  
+ *Sin*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Elementpositionen angibt, die vor dem Element liegen sollen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Elementpositionen auf einer Ebene werden über die natürliche Reihenfolge der Attributhierarchie bestimmt. Die Nummerierung der Positionen basiert auf Null.  
   
- Wenn der angegebene Abstand 0 (null), ist die **Lag** Funktion gibt das angegebene Element selbst zurück.  
+ Wenn die angegebene Verzögerung 0 (null) ist, gibt die **lag** -Funktion den angegebenen Member selbst zurück.  
   
- Wenn der angegebene Abstand negativ ist, ist die **Lag** -Funktion ein nachfolgendes Element zurück.  
+ Wenn die angegebene Verzögerung negativ ist, gibt die **lag** -Funktion einen nachfolgenden Member zurück.  
   
- `Lag(1)` entspricht der [PrevMember](../mdx/prevmember-mdx.md) Funktion. `Lag(-1)` entspricht der [NextMember](../mdx/nextmember-mdx.md) Funktion.  
+ `Lag(1)`entspricht der [PrevMember](../mdx/prevmember-mdx.md) -Funktion. `Lag(-1)`entspricht der [NextMember](../mdx/nextmember-mdx.md) -Funktion.  
   
- Die **Lag** Funktion ist vergleichbar mit der [führen](../mdx/lead-mdx.md) ordnungsgemäß verwendet werden, außer dass die **führen** -Funktion sucht, in die entgegengesetzte Richtung auf die **Lag** -Funktion. Somit ist `Lag(n)` äquivalent zu `Lead(-n)`.  
+ Die **lag** -Funktion ähnelt der [Lead](../mdx/lead-mdx.md) -Funktion, mit der Ausnahme, dass die **Lead** -Funktion in umgekehrter Richtung zur **lag** -Funktion sucht. Somit ist `Lag(n)` äquivalent zu `Lead(-n)`.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Wert December 2001 zurückgegeben:  
@@ -62,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

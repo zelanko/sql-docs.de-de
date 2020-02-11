@@ -1,5 +1,5 @@
 ---
-title: dm_exec_xml_handles (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_xml_handles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936787"
 ---
-# <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
+# <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Gibt Informationen zu aktiven Handles zurück, die von **sp_xml_preparedocument**geöffnet wurden.  
@@ -40,29 +40,29 @@ dm_exec_xml_handles (session_id | 0 )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *session_id* | 0,  
+ *session_id* | 1,0  
  ID der Sitzung. Wenn *session_id* angegeben wird, gibt die Funktion Informationen zu XML-Handles in der angegebenen Sitzung zurück.  
   
  Wenn 0 angegeben wird, gibt die Funktion Informationen zu allen XML-Handles für alle Sitzungen zurück.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Sitzungs-ID der Sitzung, die dieses XML-Dokumenthandle verwaltet.|  
 |**document_id**|**int**|Von **sp_xml_preparedocument**zurückgegebene ID eines XML-Dokumenthandles.|  
 |**namespace_document_id**|**int**|Interne Handle-ID für das zugeordnete Namespacedokument, das als dritter Parameter an **sp_xml_preparedocument**übergeben wurde. NULL, wenn kein Namespacedokument vorhanden ist.|  
-|**sql_handle**|**varbinary(64)**|Handle für den Text des SQL-Codes, in dem das Handle definiert wurde.|  
-|**statement_start_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann zusammen mit **sql_handle**, **statement_end_offset**und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
+|**sql_handle**|**varbinary (64)**|Handle für den Text des SQL-Codes, in dem das Handle definiert wurde.|  
+|**statement_start_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann in Verbindung mit dem **sql_handle**, dem **statement_end_offset**und der dynamischen Verwaltungsfunktion **sys. dm_exec_sql_text** verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen.|  
 |**statement_end_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann zusammen mit **sql_handle**, **statement_start_offset**und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
 |**creation_time**|**datetime**|Timestamp des Aufrufs von **sp_xml_preparedocument** .|  
-|**original_document_size_bytes**|**bigint**|Größe des nicht analysierten XML-Dokuments in Bytes.|  
-|**original_namespace_document_size_bytes**|**bigint**|Größe des nicht analysierten XML-Namespacedokuments in Bytes. NULL, wenn kein Namespacedokument vorhanden ist.|  
-|**num_openxml_calls**|**bigint**|Die Anzahl von OPENXML-Aufrufen mit diesem Dokumenthandle.|  
-|**row_count**|**bigint**|Die Anzahl von Zeilen, die von allen vorherigen OPENXML-Aufrufen für dieses Dokumenthandle zurückgegeben wurden.|  
-|**dormant_duration_ms**|**bigint**|Millisekunden seit dem letzten OPENXML-Aufruf. Falls OPENXML nicht aufgerufen wurde, werden die Millisekunden seit dem Aufruf von **sp_xml_preparedocument**zurückgegeben.|  
+|**original_document_size_bytes**|**BIGINT**|Größe des nicht analysierten XML-Dokuments in Bytes.|  
+|**original_namespace_document_size_bytes**|**BIGINT**|Größe des nicht analysierten XML-Namespacedokuments in Bytes. NULL, wenn kein Namespacedokument vorhanden ist.|  
+|**num_openxml_calls**|**BIGINT**|Die Anzahl von OPENXML-Aufrufen mit diesem Dokumenthandle.|  
+|**row_count**|**BIGINT**|Die Anzahl von Zeilen, die von allen vorherigen OPENXML-Aufrufen für dieses Dokumenthandle zurückgegeben wurden.|  
+|**dormant_duration_ms**|**BIGINT**|Millisekunden seit dem letzten OPENXML-Aufruf. Falls OPENXML nicht aufgerufen wurde, werden die Millisekunden seit dem Aufruf von **sp_xml_preparedocument**zurückgegeben.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Lebensdauer von **sql_handle** -Werten, mit denen der SQL-Text abgerufen wird, in dem ein Aufruf von **sp_xml_preparedocument** ausgeführt wird, überdauert den zwischengespeicherten Plan, nach dem die Abfrage ausgeführt wird. Ist der Abfragetext nicht im Cache verfügbar, können die Daten nicht mithilfe der Informationen im Funktionsergebnis abgerufen werden. Dies kann eintreten, wenn Sie viele umfangreiche Batches ausführen.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -75,11 +75,11 @@ dm_exec_xml_handles (session_id | 0 )
 SELECT * FROM sys.dm_exec_xml_handles(0);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <br>[Dynamische Verwaltungssichten und-Funktionen (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
- <br>[Ausführung bezogene dynamische Verwaltungssichten und-Funktionen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
- <br>[Sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
- <br>["sp_xml_removedocument" (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+## <a name="see-also"></a>Weitere Informationen  
+ <br>[Dynamische Verwaltungs Sichten und-Funktionen (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+ <br>[Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+ <br>[sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
 
 
  

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770636"
 ---
 # <a name="aggregate-transformation"></a>Transformation für das Aggregieren
@@ -30,17 +30,17 @@ ms.locfileid: "62770636"
 ## <a name="operations"></a>Operationen (Operations)  
  Die Transformation für das Aggregieren unterstützt die folgenden Vorgänge.  
   
-|Vorgang|Description|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Group By|Unterteilt Datasets in Gruppen. Spalten eines beliebigen Datentyps können für das Gruppieren verwendet werden. Weitere Informationen finden Sie unter [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
-|Summe|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
-|Mittelwert|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
-|Count|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
+|Gruppieren nach|Unterteilt Datasets in Gruppen. Spalten eines beliebigen Datentyps können für das Gruppieren verwendet werden. Weitere Informationen finden Sie unter [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
+|SUM|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
+|Average|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
+|Anzahl|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Count distinct|Gibt die Anzahl eindeutiger Werte ungleich null in einer Gruppe zurück.|  
 |Minimum|Gibt den kleinsten Wert in einer Gruppe zurück. Weitere Informationen finden Sie unter [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). Im Gegensatz zur MIN-Funktion von Transact-SQL kann dieser Vorgang nur mit numerischen, Datums- und Zeitdatentypen verwendet werden.|  
 |Maximum|Gibt den größten Wert in einer Gruppe zurück. Weitere Informationen finden Sie unter [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). Im Gegensatz zur MAX-Funktion von Transact-SQL kann dieser Vorgang nur mit numerischen, Datums- und Zeitdatentypen verwendet werden.|  
   
- Die Transformation für das Aggregieren behandelt NULL-Werte auf die gleiche Weise wie die relationale Datenbank-Engine von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dieses Verhalten ist im SQL-92-Standard definiert. Dabei gelten die folgenden Regeln:  
+ Die Transformation für das Aggregieren behandelt NULL-Werte auf die gleiche Weise wie die relationale Datenbank-Engine von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dieses Verhalten ist im SQL-92-Standard definiert. Es gelten die folgenden Regeln:  
   
 -   In einer GROUP BY-Klausel werden NULL-Werte wie andere Spaltenwerte behandelt. Enthält die Gruppierungsspalte mehrere NULL-Werte, werden diese in einer Gruppe zusammengefasst.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62770636"
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Die Transformation für das Aggregieren enthält Eigenschaften, die Sie festlegen können, um die Leistung der Transformation zu optimieren.  
   
--   Wenn Sie einen **GROUP BY** -Vorgang ausführen, legen Sie die Keys-Eigenschaft oder die KeysScale-Eigenschaft für die Komponente und die Komponentenausgaben fest. Mithilfe von Keys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation behandelt werden sollen. (In diesem Kontext bezeichnet Keys die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY**-Vorgangs erwartet werden.) Mit KeysScale können Sie eine ungefähre Anzahl von Schlüsseln angeben. Wenn Sie einen entsprechenden Wert für Keys oder KeyScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
+-   Wenn Sie einen **GROUP BY** -Vorgang ausführen, legen Sie die Keys-Eigenschaft oder die KeysScale-Eigenschaft für die Komponente und die Komponentenausgaben fest. Mithilfe von Keys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation behandelt werden sollen. (In diesem Kontext bezeichnet Keys die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden.) Mit KeysScale können Sie eine ungefähre Anzahl von Schlüsseln angeben. Wenn Sie einen entsprechenden Wert für Keys oder KeyScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
   
--   Legen Sie beim Durchführen eines **DISTINCT COUNT** -Vorgangs die CountDistinctKeys-Eigenschaft oder die CountDistinctScale-Eigenschaft der Komponente fest. Mithilfe von CountDistinctKeys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation für einen COUNT DISTINCT-Vorgang behandelt werden sollen. (In diesem Kontext bezeichnet CountDistinctKeys die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT**-Vorgangs erwartet werden.) Mithilfe von CountDistinctScale können Sie eine ungefähre Anzahl von Schlüsseln für einen COUNT DISTINCT-Vorgang festlegen. Wenn Sie einen entsprechenden Wert für CountDistinctKeys oder CountDistinctScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
+-   Legen Sie beim Durchführen eines **DISTINCT COUNT** -Vorgangs die CountDistinctKeys-Eigenschaft oder die CountDistinctScale-Eigenschaft der Komponente fest. Mithilfe von CountDistinctKeys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation für einen COUNT DISTINCT-Vorgang behandelt werden sollen. (In diesem Kontext bezeichnet CountDistinctKeys die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.) Mithilfe von CountDistinctScale können Sie eine ungefähre Anzahl von Schlüsseln für einen COUNT DISTINCT-Vorgang festlegen. Wenn Sie einen entsprechenden Wert für CountDistinctKeys oder CountDistinctScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
   
 ## <a name="aggregate-transformation-configuration"></a>Konfiguration der Transformation für das Aggregieren  
  Die Transformation für das Aggregieren konfigurieren Sie auf der Transformations-, Ausgabe- und Spaltenebene.  
@@ -100,7 +100,7 @@ ms.locfileid: "62770636"
   
  Die Transformation für das Aggregieren ist asynchron. Das heißt, sie verwendet und veröffentlicht Daten nicht zeilenweise. Vielmehr verwendet sie das gesamte Rowset, führt Gruppierungen und Aggregationen aus und veröffentlicht dann die Ergebnisse.  
   
- Diese Transformation übergibt keine Spalten, sondern erstellt im Datenfluss für die veröffentlichten Daten neue Spalten. Nur die Eingabespalten, für die Aggregatfunktionen gelten, oder die Eingabespalten, die die Transformation zum Gruppieren verwendet, werden in die Transformationsausgabe kopiert. Angenommen, eine Transformation für das Aggregieren weist drei Spalten auf: **CountryRegion**, **City** und **Population**. Die Transformation gruppiert nach der **CountryRegion** -Spalte und wendet die SUM-Funktion auf die **Population** -Spalte an. Deshalb ist in der Ausgabe die **City** -Spalte nicht enthalten.  
+ Diese Transformation übergibt keine Spalten, sondern erstellt im Datenfluss für die veröffentlichten Daten neue Spalten. Nur die Eingabespalten, für die Aggregatfunktionen gelten, oder die Eingabespalten, die die Transformation zum Gruppieren verwendet, werden in die Transformationsausgabe kopiert. Angenommen, eine Transformation für das Aggregieren weist drei Spalten auf: **CountryRegion**, **City**und **Population**. Die Transformation gruppiert nach der **CountryRegion** -Spalte und wendet die SUM-Funktion auf die **Population** -Spalte an. Deshalb ist in der Ausgabe die **City** -Spalte nicht enthalten.  
   
  Sie können der Transformation für das Aggregieren auch mehrere Ausgaben hinzufügen und jede Aggregation an eine andere Ausgabe weiterleiten. Wendet beispielsweise die Transformation für das Aggregieren die Funktionen Sum und Average an, kann jede Aggregation an eine andere Ausgabe geleitet werden.  
   
@@ -112,13 +112,13 @@ ms.locfileid: "62770636"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Aggregieren** festlegen können:  
   
--   [Transformations-Editor für Aggregieren &#40;Registerkarte Aggregationen&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Transformations-Editor aggregieren &#40;Registerkarte Aggregationen&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
 -   [Transformations-Editor für Aggregieren &#40;Registerkarte Erweitert&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62770636"
 ## <a name="related-tasks"></a>Related Tasks  
  [Aggregieren von Werten in einem Dataset mithilfe der Transformation für das Aggregieren](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../data-flow.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   
