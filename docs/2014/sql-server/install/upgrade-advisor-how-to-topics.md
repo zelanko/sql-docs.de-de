@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren Sie die Vorgehensweisen zum Datenbankoptimierungsratgeber | Microsoft-Dokumentation
+title: Gewusst-wie-Themen zum Upgrade Advisor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe326421861cfd3c38dbf0fb0a6042d05945d022
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091609"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>Themen zur Vorgehensweise für den Upgrade Advisor
@@ -28,15 +28,15 @@ ms.locfileid: "66091609"
   
  [Vorgehensweise: Starten des Upgrade Advisors](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)  
   
- [Vorgehensweise: Führen Sie den Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
+ [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
   
- [Vorgehensweise: Zeigen Sie einen der Upgrade Advisor-Bericht](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+ [Vorgehensweise: Anzeigen eines Berichts des Upgrade Advisors](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
- [Vorgehensweise: Filterberichte](../../../2014/sql-server/install/how-to-filter-reports.md)  
+ [Vorgehensweise: Filtern von Berichten](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
  [Vorgehensweise: Exportieren von Berichten](../../../2014/sql-server/install/how-to-export-reports.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

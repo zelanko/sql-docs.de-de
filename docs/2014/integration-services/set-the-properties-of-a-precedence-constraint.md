@@ -1,5 +1,5 @@
 ---
-title: Legen Sie die Eigenschaften von Rangfolgeneinschränkungen | Microsoft-Dokumentation
+title: Festlegen der Eigenschaften einer Rang folgen Einschränkung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055741"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Festlegen der Eigenschaften von Rangfolgeneinschränkungen
@@ -43,14 +43,14 @@ ms.locfileid: "66055741"
   
 5.  Wählen Sie in der Dropdownliste **Auswertungsvorgang** einen Auswertungsvorgang aus.  
   
-6.  In der `Value` Dropdown-Liste, wählen Sie das Ausführungsergebnis der ausführbaren Datei der Rangfolge.  
+6.  Wählen Sie `Value` in der Dropdown Liste das Ausführungs Ergebnis der ausführbaren Datei der Rangfolge aus.  
   
-7.  Wenn der Auswertungsvorgang einen Ausdruck verwendet die `Expression` Feld Geben Sie einen Ausdruck, und klicken Sie auf **Test** zum Auswerten des Ausdrucks.  
+7.  Wenn der Auswertungs Vorgang einen Ausdruck verwendet, geben `Expression` Sie im Feld einen Ausdruck ein, und klicken Sie auf **Testen** , um den Ausdruck auszuwerten.  
   
     > [!NOTE]  
     >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
-8.  Wenn mehrere Tasks oder Container mit der eingeschränkten ausführbaren Datei verbunden sind, wählen Sie **logische und** um anzugeben, dass die Ausführungsergebnisse aller vorherigen ausführbaren Dateien ergeben müssen `true`. Wählen Sie **logisches oder** um anzugeben, dass nur ein Ausführungsergebnis ergeben muss `true`.  
+8.  Wenn mehrere Tasks oder Container mit der eingeschränkten ausführbaren Datei verbunden sind, wählen Sie **logisch und** aus, um anzugeben, dass die Ausführungs Ergebnisse aller vorherigen Ausführ `true`baren Dateien als ausgewertet werden müssen. Wählen Sie **logisches OR** aus, um anzugeben, dass nur ein Ausführungs `true`Ergebnis als ausgewertet werden muss.  
   
 9. Klicken Sie auf **OK** , um das Dialogfeld **Rangfolgeneinschränkungs-Editor**zu schließen.  
   
@@ -62,28 +62,28 @@ ms.locfileid: "66055741"
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** . Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf Rangfolgeneinschränkung, und klicken Sie auf **Eigenschaften**. Ändern Sie im Fenster Eigenschaften die Eigenschaftswerte.  
+3.  Klicken Sie auf die Registerkarte **Ablauf Steuerung** . Klicken Sie in der Entwurfs Oberfläche der Registerkarte **Ablauf Steuerung** mit der rechten Maustaste auf die Rang folgen Einschränkung, und klicken Sie dann auf **Eigenschaften**. Ändern Sie im Fenster Eigenschaften die Eigenschaftswerte.  
   
 4.  Legen Sie im Fenster **Eigenschaften** die folgenden Lese-/Schreibeigenschaften der Rangfolgeneinschränkung fest:  
   
     |Lese/Schreibeigenschaft|Konfigurationsaktion|  
     |--------------------------|--------------------------|  
-    |Description|Bereitstellen einer Beschreibung.|  
-    |EvalOp|Auswählen eines Auswertungsvorgangs. Wenn die `Expression`, **ExpressionAndConstant**, oder **ExpressionOrConstant** ausgewählt sind, können Sie einen Ausdruck angeben.|  
-    |expression|Wenn der Auswertungsvorgang einen Ausdruck einschließt, wird ein Ausdruck bereitgestellt. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden. Weitere Informationen zur Ausdruckssprache finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
-    |LogicalAnd|Legen Sie `LogicalAnd` angeben, ob die rangfolgeneinschränkung zusammen mit anderen rangfolgeneinschränkungen ausgewertet wird, wenn mehrere ausführbare Dateien vorausgehen und mit der eingeschränkten ausführbaren Datei verknüpft sind|  
+    |BESCHREIBUNG|Bereitstellen einer Beschreibung.|  
+    |EvalOp|Auswählen eines Auswertungsvorgangs. Wenn die `Expression`Vorgänge, **ExpressionAndConstant**oder **ExpressionOrConstant** ausgewählt sind, können Sie einen Ausdruck angeben.|  
+    |Ausdruck|Wenn der Auswertungsvorgang einen Ausdruck einschließt, wird ein Ausdruck bereitgestellt. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden. Weitere Informationen zur Ausdruckssprache finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
+    |LogicalAnd|Legen `LogicalAnd` Sie fest, um anzugeben, ob die Rang folgen Einschränkung zusammen mit anderen Rang folgen Einschränkungen ausgewertet wird, wenn mehrere ausführbare Dateien vorausgehen und mit der eingeschränkten ausführbaren Datei verknüpft sind.|  
     |Name|Aktualisieren des Namens der Rangfolgeneinschränkung.|  
     |ShowAnnotation|Geben Sie den Typ der zu verwendenden Anmerkung ein. Wählen Sie **Never** aus, um Anmerkungen zu deaktivieren, **AsNeeded** , um Anmerkungen bei Bedarf zu aktivieren, **ConstraintName** , um automatisch den Wert mithilfe der Name-Eigenschaft anzumerken, **ConstraintDescription** , um automatisch den Wert mithilfe der Description-Eigenschaft anzumerken, und **ConstraintOptions** , um automatisch den Wert mithilfe der Eigenschaften Value und Expression anzumerken.|  
-    |Wert|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
+    |value|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
   
 5.  Schließen Sie das Fenster Eigenschaften.  
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Rang folgen Einschränkungen](control-flow/precedence-constraints.md)   
  [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgen-Einschränkung](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Legen Sie den Wert einer rangfolgeneinschränkung mithilfe der Kontextmenüs](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Festlegen des Werts einer Rang folgen Einschränkung mithilfe des Kontextmenüs](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Verwenden eines Ausdrucks in einer Rangfolgeneinschränkung](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

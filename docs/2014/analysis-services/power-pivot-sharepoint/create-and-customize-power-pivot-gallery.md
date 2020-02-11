@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229295"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Erstellen und Anpassen von PowerPivot-Katalogen
@@ -24,7 +24,7 @@ ms.locfileid: "75229295"
   
 -   [Voraussetzungen](#prereq)  
   
--   [Übersicht über](#overview)  
+-   [Übersicht](#overview)  
   
 -   [Erstellen des PowerPivot-Katalogs](#createlib)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75229295"
   
 -   [Wechseln zur Theater Ansicht oder Galerieansicht](#switch)  
   
-##  <a name="prereq"></a>Voraussetzung  
+##  <a name="prereq"></a> Voraussetzungen  
   
 -   Sie müssen über Silverlight verfügen. Silverlight kann heruntergeladen und über Microsoft Update installiert werden. Wenn Sie eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogbibliothek mithilfe eines Browsers anzeigen, der nicht über Silverlight verfügt, klicken Sie auf den Link auf der Seite, um die Anwendung zu installieren. Nach der Installation müssen Sie den Browser schließen und erneut öffnen.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "75229295"
   
  In der folgenden Tabelle werden die verschiedenen Layouts zum Darstellen von Miniaturansichtsskizzen jeder in der Vorschau angezeigten Seite beschrieben:  
   
-|Sicht|Beschreibung|  
+|Sicht|BESCHREIBUNG|  
 |----------|-----------------|  
 |Katalogsicht (Standard)|Die Katalogsicht ist die Standardsicht für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog. Die Vorschau wird links angezeigt. Daneben werden kleinere Miniaturansichten der einzelnen Arbeitsblätter in sequenzieller Reihenfolge von links nach rechts angezeigt.|  
 |Alle Dokumente|Dies ist das Standardlayout für Dokumentbibliotheken. Sie können diese Sicht auswählen, um einzelne Dokumente zu verwalten oder Bibliotheksinhalte in einem Listenformat anzuzeigen.<br /><br /> Verwenden Sie diese Sicht, um Eigenschaften zu bearbeiten und einzelne Dokumente zu löschen oder zu verschieben.<br /><br /> Wenn Sie die Versionsverwaltung aktiviert haben, müssen Sie Dokumente unter Verwendung dieser Sicht in der Bibliothek einchecken oder auschecken.|  

@@ -1,5 +1,5 @@
 ---
-title: Für Treiberspezifikationen | Microsoft-Dokumentation
+title: Unterschlüssel für Treiber Spezifikation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,45 +16,45 @@ ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094167"
 ---
 # <a name="driver-specification-subkeys"></a>Unterschlüssel für Treiberspezifikationen
-Jeder Treiber aufgeführt, die in den Unterschlüssel für ODBC-Treiber hat einen Unterschlüssel eigene. Dieser Unterschlüssel hat den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel für ODBC-Treiber. Die Werte unter diesem Unterschlüssel auflisten, die vollständigen Pfade der Treiber und Treiber-Setup-DLLs, die Werte der vom Treiber Schlüsselwörter **SQLDrivers**, und die Anzahl der Nutzung. Die Formate der-Werte sind wie in der folgenden Tabelle gezeigt.  
+Jeder im Unterschlüssel für ODBC-Treiber aufgelistete Treiber hat seinen eigenen Unterschlüssel. Dieser Unterschlüssel hat denselben Namen wie der entsprechende Wert unter dem Unterschlüssel für ODBC-Treiber. Die Werte unter diesem Unterschlüssel Listen die vollständigen Pfade der Treiber-und Treiber-Setup-DLLs, die Werte der von **SQLDrivers**zurückgegebenen Treiber Schlüsselwörter und die Verwendungs Anzahl auf. Die Formate der Werte sind wie in der folgenden Tabelle dargestellt.  
   
-|Name|Datentyp|Daten|  
+|Name|Datentyp|Data|  
 |----------|---------------|----------|  
-|APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
-|CreateDSN|REG_SZ|*Treiber-Beschreibung*|  
-|Treiber|REG_SZ|*driver-DLL-path*|  
-|DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *Datei-extension1*[ **,\*.** *Datei-extension2*]...|  
-|FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|Setup|REG_SZ|*setup-DLL-path*|  
-|SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|UsageCount|REG_DWORD|*count*|  
+|Apilevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
+|Connectfunctions|REG_SZ|{**Y**&#124;**n**} {**y**&#124;**N**} {**y**&#124;**n**}|  
+|"Kreatedsn"|REG_SZ|*Treiber Beschreibung*|  
+|Treiber|REG_SZ|*Treiber-DLL-Pfad*|  
+|DriverODBCVer|REG_SZ|*NN. NN*|  
+|Fileextns|REG_SZ|**\*.** *File-extension1*[**,\*.** *File-extension2*] ...|  
+|Fileusage|REG_SZ|**0** &#124; **1** &#124; **2**|  
+|Setup|REG_SZ|*Setup-DLL-Pfad*|  
+|Sqllevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
+|Usagecount|REG_DWORD|*count*|  
   
- Die Verwendung von jedes Schlüsselwort wird in der folgenden Tabelle angezeigt.  
+ Die Verwendung der einzelnen Schlüsselwörter ist in der folgenden Tabelle dargestellt.  
   
 |Schlüsselwort|Verwendung|  
 |-------------|-----------|  
-|**APILevel**|Eine Zahl, der angibt, der ODBC Schnittstellen-Konformitätsgrad, die vom Treiber unterstützt werden:<br /><br /> 0 = Keine<br /><br /> 1 = Ebene-1 unterstützt<br /><br /> 2 = Ebene-2 unterstützt<br /><br /> Dies muss identisch mit der für die SQL_ODBC_INTERFACE_CONFORMANCE-Option in der zurückgegebene Wert **SQLGetInfo**.|  
-|**CreateDSN**|Der Name des einen oder mehrere Datenquellen erstellt werden, wenn der Treiber installiert ist. Die Systeminformationen muss eine Data Source-Spezifikation Abschnitt enthalten für jede Datenquelle aufgeführt, mit der **CreateDSN** Schlüsselwort. Diese Abschnitte sollten nicht enthalten. die **Treiber** -Schlüsselwort, da dies im Abschnitt Spezifikation Treiber angegeben ist, jedoch muss ausreichende Informationen für die **ConfigDSN** -Funktion in der Treiber Setup-DLL für die Angabe einer Datenquelle zu erstellen, ohne dass Sie alle Dialogfelder angezeigt. Das Format eines Abschnitts Data Source-Spezifikation finden Sie unter [Datenquellenspezifikationen](../../../odbc/reference/install/data-source-specification-subkeys.md).|  
-|**ConnectFunctions**|Eine drei Zeichen bestehende Zeichenfolge, die angibt, ob der Treiber unterstützt **SQLConnect**, **SQLDriverConnect**, und **SQLBrowseConnect**. Wenn der Treiber unterstützt **SQLConnect**, das erste Zeichen ist "J"; andernfalls wird "N". Wenn der Treiber unterstützt **SQLDriverConnect**, das zweite Zeichen ist "J"; andernfalls wird "N". Wenn der Treiber unterstützt **SQLBrowseConnect**, das dritte Zeichen ist "J"; andernfalls wird "N". Wenn ein Treiber unterstützt z. B. **SQLConnect** und **SQLDriverConnect** , nicht jedoch **SQLBrowseConnect**, die drei Zeichen bestehende Zeichenfolge ist "YYN".|  
-|**DriverODBCVer**|Eine Zeichenfolge mit der Version von ODBC, die der Treiber unterstützt. Die Version des Formulars wird *nn.nn*, wobei die ersten beiden Ziffern die Hauptversionsnummer sind und die nächsten beiden Ziffern die Nebenversion sind. Die Version von ODBC, die in diesem Handbuch beschriebenen muss der Treiber "03.00" zurück.<br /><br /> Dies muss identisch mit der für die SQL_DRIVER_ODBC_VER-Option in der zurückgegebene Wert **SQLGetInfo**.|  
-|**FileExtns**|Dateibasierte Treiber kann eine durch Trennzeichen getrennte Liste von Erweiterungen der Dateien auf den Treiber verwenden. DBASE-Treiber kann angeben, z. B. \*DBF und eine formatierte Textdatei-Treiber geben möglicherweise \*txt,\*CSV. Ein Beispiel dafür, wie eine Anwendung diese Informationen verwenden kann, finden Sie die **FileUsage** Schlüsselwort.|  
-|**FileUsage**|Eine Zahl, der angibt, wie einem dateibasierten Treibers Dateien in einer Datenquelle direkt behandelt.<br /><br /> 0 = der Treiber ist nicht mit einem dateibasierten Treibers. Beispielsweise ist ein ORACLE-Treiber eine DBMS-basierten Treibers.<br /><br /> 1 = eine dateibasierte Treiber behandelt Dateien in einer Datenquelle als Tabellen. Ein Xbase-Treiber werden z. B. jede Xbase-Datei als Tabelle behandelt.<br /><br /> 2 = einen dateibasierten Treibers behandelt Dateien in einer Datenquelle als Katalog. Ein Microsoft® Access-Treiber werden z. B. jeder Microsoft Access-Datei als eine vollständige Datenbank behandelt.<br /><br /> Eine Anwendung kann diese verwenden, um zu bestimmen, wie Benutzer Daten auswählen. Angenommen, Benutzer Xbase und Paradox häufig von Daten in Dateien gespeichert werden, während ORACLE und Microsoft Access-Benutzer im Allgemeinen von Daten vorstellen, wie Sie in Tabellen gespeichert.<br /><br /> Wenn ein Benutzer auswählt **-Datendatei öffnen** aus der **Datei** Menü, eine Anwendung könnte Anzeigen der **Windows-Datei öffnen** Standarddialogfeld. Die Liste der Dateitypen verwenden die Dateierweiterungen, die mit angegebenen der **FileExtns** -Schlüsselwort für Treiber, die angeben, eine **FileUsage** Wert 1 und "Y", als das zweite Zeichen des Werts der  **ConnectFunctions** Schlüsselwort. Nachdem der Benutzer eine Datei auswählt, würde die Anwendung aufrufen **SQLDriverConnect** mit der **Treiber** Schlüsselwort und führen Sie dann eine **wählen \* FROM *Tabellenname***   Anweisung.<br /><br /> Wenn der Benutzer auswählt **Importieren von Daten** aus der **Datei** Menü zeigt eine Anwendung kann eine Liste der Beschreibungen für Treiber, die angeben, ein **FileUsage** Wert von 0 oder 2 und "Y" als das zweite Zeichen des Werts der **ConnectFunctions** Schlüsselwort. Nachdem der Benutzer einen Treiber ausgewählt hat, würde die Anwendung aufrufen **SQLDriverConnect** mit der **Treiber** -Schlüsselwort, und klicken Sie dann anzeigen, eine benutzerdefinierte **Tabelle auswählen** Dialogfeld.|  
-|**SQLLevel**|Eine Zahl, der angibt, der SQL-92-Grammatik, die vom Treiber unterstützt werden:<br /><br /> 0 = SQL-92-Eintrag<br /><br /> 1 = Transitional FIPS127-2<br /><br /> 2 = SQL-92-Zwischenspeicher<br /><br /> 3 = SQL-92-vollständig<br /><br /> Dies muss identisch mit der für die SQL_SQL_CONFORMANCE-Option in der zurückgegebene Wert **SQLGetInfo**.|  
+|**Apilevel**|Eine Zahl, die den vom Treiber unterstützten ODBC-Schnittstellen Konformitäts Grad angibt:<br /><br /> 0 = Keine<br /><br /> 1 = Ebene 1 wird unterstützt.<br /><br /> 2 = Ebene 2 wird unterstützt<br /><br /> Dieser Wert muss mit dem Wert identisch sein, der für die SQL_ODBC_INTERFACE_CONFORMANCE-Option in **SQLGetInfo**zurückgegeben wurde.|  
+|**"Kreatedsn"**|Der Name einer oder mehrerer Datenquellen, die erstellt werden sollen, wenn der Treiber installiert wird. Die Systeminformationen müssen für jede Datenquelle, die mit dem Schlüsselwort " **fiatedsn** " aufgelistet ist, einen Datenquellen Spezifikations Abschnitt enthalten. Diese Abschnitte sollten das **Driver** -Schlüsselwort nicht enthalten, da dies im Abschnitt "Treiber Spezifikation" angegeben ist, aber genügend Informationen enthalten muss, damit die **ConfigDSN** -Funktion in der Treiber-Setup-DLL eine Datenquellen Spezifikation erstellt, ohne dass Dialogfelder angezeigt werden. Das Format eines Datenquellen Spezifikations Abschnitts finden Sie [Unterschlüssel der Datenquellen Spezifikation](../../../odbc/reference/install/data-source-specification-subkeys.md).|  
+|**Connectfunctions**|Eine Zeichenfolge mit drei Zeichen, die angibt, ob der Treiber **SQLCONNECT**, **SQLDriverConnect**und **sqlbrowseconnetct**unterstützt. Wenn der Treiber **SQLCONNECT**unterstützt, ist das erste Zeichen "Y". Andernfalls ist der Wert "N". Wenn der Treiber **SQLDriverConnect**unterstützt, ist das zweite Zeichen "Y". Andernfalls ist der Wert "N". Wenn der Treiber **sqlbrowseconnetct**unterstützt, ist das dritte Zeichen "Y". Andernfalls ist der Wert "N". Wenn ein Treiber z. b. **SQLCONNECT** und **SQLDriverConnect** , aber nicht **sqlbrowseconnetct**unterstützt, ist die Zeichenfolge mit drei Zeichen "yyn".|  
+|**DriverODBCVer**|Eine Zeichenfolge mit der Version von ODBC, die der Treiber unterstützt. Die Version hat die Form *NN. NN*, wobei die ersten beiden Ziffern die Hauptversion und die nächsten zwei Ziffern die neben Version sind. Für die in diesem Handbuch beschriebene Version von ODBC muss der Treiber "03,00" zurückgeben.<br /><br /> Dieser Wert muss mit dem Wert identisch sein, der für die SQL_DRIVER_ODBC_VER-Option in **SQLGetInfo**zurückgegeben wurde.|  
+|**Fileextns**|Bei dateibasierten Treibern eine durch Trennzeichen getrennte Liste mit Erweiterungen der Dateien, die der Treiber verwenden kann. Ein dBase-Treiber könnte z \*. b.. DBF und einen formatierten Text Datei Treiber \*angeben. txt\*,. CSV. Ein Beispiel dafür, wie eine Anwendung diese Informationen verwenden kann, finden Sie im **fileusage** -Schlüsselwort.|  
+|**Fileusage**|Eine Zahl, die angibt, wie ein Datei basierter Treiberdateien in einer Datenquelle direkt behandelt.<br /><br /> 0 = der Treiber ist kein Datei basierter Treiber. Beispielsweise handelt es sich bei einem Oracle-Treiber um einen DBMS-basierten Treiber.<br /><br /> 1 = ein Datei basierter Treiber behandelt Dateien in einer Datenquelle als Tabellen. Ein xbase-Treiber behandelt z. b. die einzelnen xbase-Dateien als Tabelle.<br /><br /> 2 = von einem dateibasierten Treiber werden Dateien in einer Datenquelle als Katalog behandelt. Beispielsweise behandelt ein Microsoft® Access-Treiber jede Microsoft Access-Datei als eine komplette Datenbank.<br /><br /> Diese kann von einer Anwendung verwendet werden, um zu bestimmen, wie Benutzerdaten auswählen. Beispielsweise betrachten xbase-und Paradox-Benutzer häufig Daten, die in Dateien gespeichert sind, während Oracle-und Microsoft Access-Benutzer in der Regel Daten als in Tabellen gespeicherten Daten betrachten.<br /><br /> Wenn ein Benutzer im Menü **Datei** die Option **Datendatei öffnen** auswählt, kann eine Anwendung das Dialogfeld " **Windows-Datei öffnen** (allgemein)" anzeigen. In der Liste der Dateitypen werden die Dateierweiterungen verwendet, die mit dem Schlüsselwort **fileextns** für Treiber angegeben werden, die den **fileusage** -Wert 1 und "Y" als zweites Zeichen des Werts des **connectfunctions** -Schlüssel Worts angeben. Nachdem der Benutzer eine Datei ausgewählt hat, ruft die Anwendung **SQLDriverConnect** mit dem **Treiber** Schlüsselwort auf und führt dann eine ** \* SELECT FROM *Table-Name-* Anweisung aus** .<br /><br /> Wenn der Benutzer aus dem Menü **Datei** die Option **Daten importieren** auswählt, kann eine Anwendung eine Liste von Beschreibungen für Treiber anzeigen, die einen **fileusage** -Wert von 0 oder 2 angeben, und "Y" als zweites Zeichen des Werts des **connectfunctions** -Schlüssel Worts. Nachdem der Benutzer einen Treiber ausgewählt hat, ruft die Anwendung **SQLDriverConnect** mit dem **Treiber** Schlüsselwort auf und zeigt dann ein benutzerdefiniertes Dialogfeld **Tabelle auswählen** an.|  
+|**Sqllevel**|Eine Zahl, die die vom Treiber unterstützte SQL-92-Grammatik angibt:<br /><br /> 0 = SQL-92-Eintrag<br /><br /> 1 = FIPS127-2 Übergangs<br /><br /> 2 = SQL-92 Intermediate<br /><br /> 3 = SQL-92 voll<br /><br /> Dieser Wert muss mit dem Wert identisch sein, der für die SQL_SQL_CONFORMANCE-Option in **SQLGetInfo**zurückgegeben wurde.|  
   
- Informationen über die Verwendungszähler, finden Sie unter [zählen der Verwendung](../../../odbc/reference/install/usage-counting.md) weiter oben in diesem Abschnitt.  
+ Weitere Informationen zu Verwendungs Anzahlen finden Sie unter [Nutzungs Zählung](../../../odbc/reference/install/usage-counting.md) weiter oben in diesem Abschnitt.  
   
- Anwendungen sollten nicht die Verwendungsanzahl der festlegen. ODBC wird dieser Zähler zu verwalten.  
+ Anwendungen sollten die Verwendungs Anzahl nicht festlegen. Diese Anzahl wird von ODBC beibehalten.  
   
- Beispielsweise angenommen, ein Treiber für formatierten Text-Dateien einen Treiber-DLL mit dem Namen Text.dll enthält, eine separate Treiber Setup DLL mit dem Namen Txtsetup.dll und drei Mal installiert wurde. Wenn der Treiber die API-Ebene-1-Konformitätsgrad unterstützt, die minimale SQL-Grammatik-Konformitätsgrad unterstützt, Dateien als Tabellen behandelt und mit den Erweiterungen ".txt" und CSV-Dateien verwenden, können die Werte unter dem Unterschlüssel Text wie folgt lauten:  
+ Nehmen wir beispielsweise an, dass ein Treiber für formatierte Textdateien über eine Treiber-DLL namens "Text. dll" verfügt, eine separate Treiber-Setup-DLL mit dem Namen "Txtsetup. dll" und drei Mal installiert wurde. Wenn der Treiber die API-Konformitäts Ebene der Ebene 1 unterstützt, den minimalen SQL-Grammatik-Konformitäts Grad unterstützt, Dateien als Tabellen behandelt und Dateien mit den Erweiterungen ". txt" und ". csv" verwenden kann, können die Werte unter dem Text Unterschlüssel wie folgt lauten:  
   
 ```  
 APILevel : REG_SZ : 1  

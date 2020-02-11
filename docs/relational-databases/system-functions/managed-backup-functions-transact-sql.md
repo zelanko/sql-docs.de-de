@@ -1,5 +1,5 @@
 ---
-title: Verwaltete Sicherung Funktionen (Transact-SQL) | Microsoft-Dokumentation
+title: Managed Backup-Funktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,33 +16,33 @@ ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1b9b16e426143e1eca7dc39d7d050988faa0222a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140623"
 ---
-# <a name="managed-backup-functions-transact-sql"></a>Verwaltete Sicherung Funktionen (Transact-SQL)
+# <a name="managed-backup-functions-transact-sql"></a>Managed Backup-Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die folgenden Funktionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt die folgenden Funktionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [managed_backup.fn_backup_db_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  
+ [managed_backup. fn_backup_db_config &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  
   
- [managed_backup.fn_is_master_switch_on &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql.md)  
+ [managed_backup. fn_is_master_switch_on &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql.md)  
   
- [managed_backup.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql.md)  
+ [managed_backup. fn_get_current_xevent_settings &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql.md)  
   
- [managed_backup.fn_get_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql.md)  
+ [managed_backup. fn_get_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql.md)  
   
- [managed_backup.fn_available_backups &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md)  
+ [managed_backup. fn_available_backups &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md)  
   
- [managed_backup.fn_get_health_status &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md)  
+ [managed_backup. fn_get_health_status &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md)  
   
- [managed_backup.fn_backup_instance_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
+ [managed_backup. fn_backup_instance_config &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

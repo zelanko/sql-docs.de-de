@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798017"
 ---
 # <a name="create-the-ssis-catalog"></a>Erstellen des SSIS-Katalogs
@@ -40,7 +40,7 @@ ms.locfileid: "72798017"
   
 6.  Geben Sie ein Kennwort ein, und klicken Sie dann auf **OK**.  
   
-     Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Sichern eines Datenbank-Hauptschlüssels](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+     Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>So erstellen Sie den SSISDB-Katalog programmgesteuert  
   
@@ -69,6 +69,6 @@ ms.locfileid: "72798017"
   
      Weitere Beispiele zum Verwenden von Windows PowerShell und des <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespaces finden Sie auf blogs.msdn.com im Blogeintrag [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (SSIS und PowerShell in SQL Server 2012). Eine Übersicht über den Namespace und Codebeispiele finden Sie im Blogeintrag [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267)(Übersicht über das SSIS-Katalogmodell verwalteter Objekte) auf „blogs.msdn.com“.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SSIS-Katalog](catalog/ssis-catalog.md)   
  [Sichern, Wiederherstellen und Verschieben des SSIS-Katalogs](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

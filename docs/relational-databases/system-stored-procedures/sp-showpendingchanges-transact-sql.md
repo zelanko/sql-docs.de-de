@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632744"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73632744"
 
   Gibt ein Resultset zurück, das die Änderungen anzeigt, die noch repliziert werden müssen. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank und auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  Diese Prozedur liefert einen geschätzten Wert für die Anzahl der Änderungen und die an diesen Änderungen beteiligten Zeilen. Beispielsweise ruft die Prozedur Informationen entweder vom Verleger oder vom Abonnenten ab, jedoch nicht beides gleichzeitig. Informationen, die im anderen Knoten gespeichert sind, ergeben möglicherweise einen kleineren Änderungssatz für die Synchronisierung als von der Prozedur geschätzt.  
@@ -43,17 +43,17 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @destination_server = ] 'destination_server'` ist der Name des Servers, auf dem die replizierten Änderungen angewendet werden. *destination_server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @destination_server = ] 'destination_server'`Der Name des Servers, auf den die replizierten Änderungen angewendet werden. *destination_server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @publication = ] 'publication'` ist der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn die *Veröffentlichung* angegeben wird, werden die Ergebnisse nur auf die angegebene Veröffentlichung beschränkt.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn die *Veröffentlichung* angegeben wird, werden die Ergebnisse nur auf die angegebene Veröffentlichung beschränkt.  
   
-`[ @article = ] 'article'` ist der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Artikel* angegeben wird, sind die Ergebnisse nur auf den angegebenen Artikel beschränkt.  
+`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Artikel* angegeben wird, sind die Ergebnisse nur auf den angegebenen Artikel beschränkt.  
   
-`[ @show_rows = ] 'show_rows'` gibt an, ob das Resultset spezifischere Informationen zu ausstehenden Änderungen enthält. der Standardwert ist **0**. Wenn ein Wert von **1** angegeben wird, enthält das Resultset die Spalten is_delete und ROWGUID.  
+`[ @show_rows = ] 'show_rows'`Gibt an, ob das Resultset spezifischere Informationen zu ausstehenden Änderungen enthält. der Standardwert ist **0**. Wenn ein Wert von **1** angegeben wird, enthält das Resultset die Spalten is_delete und ROWGUID.  
   
 ## <a name="result-set"></a>Resultset  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|Name des Servers, auf den die Änderungen repliziert werden|  
 |pub_name|**sysname**|Der Name der Veröffentlichung.|  
@@ -62,13 +62,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|Der Name des Artikels für die Tabelle, aus der die Änderungen stammen.|  
 |pending_deletes|**int**|Die Anzahl von Löschvorgängen, die auf die Replikation warten.|  
 |pending_ins_and_upd|**int**|Die Anzahl von Einfügungen und Updates, die auf die Replikation warten.|  
-|is_delete|**bit**|Gibt an, ob die anstehende Änderung ein Löschvorgang ist. Der Wert **1** gibt an, dass die Änderung ein Löschvorgang ist. Erfordert für @show_rowsden Wert **1** .|  
-|rowguid|**uniqueidentifier**|Die GUID, die die geänderte Zeile identifiziert. Erfordert für @show_rowsden Wert **1** .|  
+|is_delete|**bit**|Gibt an, ob die anstehende Änderung ein Löschvorgang ist. Der Wert **1** gibt an, dass die Änderung ein Löschvorgang ist. Erfordert den Wert **1** für @show_rows.|  
+|rowguid|**uniqueidentifier**|Die GUID, die die geänderte Zeile identifiziert. Erfordert den Wert **1** für @show_rows.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_showpendingchanges wird für die Mergereplikation verwendet.  
   
  sp_showpendingchanges wird für die Problembehandlung der Mergereplikation verwendet.  
@@ -80,7 +80,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle sysadmin oder der festen Datenbankrolle db_owner können sp_showpendingchanges ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

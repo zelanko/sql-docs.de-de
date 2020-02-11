@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 340a3a0f44201c81eafe8717962b2894709eb65d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779534"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Verwenden von Anweisungsparametern: Binden von Parametern
@@ -49,19 +49,20 @@ ms.locfileid: "73779534"
   
      Die zeilenweise Bindung wird angegeben, indem **SQLSetStmtAttr** aufgerufen wird, wobei *Attribute* auf SQL_ATTR_PARAM_BIND_TYPE festgelegt ist und *ValuePtr* auf die Größe der Struktur festgelegt ist, die die Programmvariablen enthält.  
   
- Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber Zeichen-oder Binär Zeichenfolgen-Parameter an den Server sendet, werden die Werte in die im **SQLBindParameter** *ColumnSize* -Parameter angegebene Länge aufgefüllt. Wenn eine ODBC 2. x-Anwendung 0 für *ColumnSize*angibt, füllt der Treiber den Parameterwert auf die Genauigkeit des Datentyps auf. Die Genauigkeit beträgt bei einer Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 8000, bei einer Verbindung zu älteren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 255. *ColumnSize* ist für Variant-Spalten in Bytes.  
+ Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber Zeichen-oder Binär Zeichenfolgen-Parameter an den Server sendet, werden die Werte in die im **SQLBindParameter** *ColumnSize* -Parameter angegebene Länge aufgefüllt. Wenn eine ODBC 2. x-Anwendung 0 für *ColumnSize*angibt, füllt der Treiber den Parameterwert auf die Genauigkeit des Datentyps auf. Die Genauigkeit beträgt bei einer Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 8000, bei einer Verbindung zu älteren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 255. *ColumnSize* ist für Variant-Spalten in Bytes.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt definierende Namen für gespeicherte Prozedurparameter. ODBC 3.5 hat ebenfalls Unterstützung für benannte Parameter eingeführt, die verwendet werden, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozeduren aufgerufen werden. Diese Unterstützung kann für Folgendes verwendet werden:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt definierende Namen für gespeicherte Prozedurparameter. ODBC 3.5 hat ebenfalls Unterstützung für benannte Parameter eingeführt, die verwendet werden, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozeduren aufgerufen werden. Diese Unterstützung kann für Folgendes verwendet werden:  
   
 -   Zum Aufrufen einer gespeicherten Prozedur und Eingeben von Werten für eine Teilmenge der für die gespeicherte Prozedur definierten Parameter  
   
 -   Zum Angeben der Parameter in einer anderen Reihenfolge in der Anwendung als in der Reihenfolge, in der sie bei der Erstellung der gespeicherten Prozedur angegeben wurden  
   
- Benannte Parameter werden nur unterstützt, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] **Execute** -Anweisung oder die ODBC-Rückruf-Escapesequenz zum Ausführen einer gespeicherten Prozedur verwendet wird.  
+ Benannte Parameter werden nur unterstützt, wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] die **Execute** -Anweisung oder die ODBC-Rückruf-Escapesequenz zum Ausführen einer gespeicherten Prozedur verwendet wird.  
   
- Wenn **SQL_DESC_NAME** für einen Parameter für eine gespeicherte Prozedur festgelegt ist, sollten alle Parameter für gespeicherte Prozeduren in der Abfrage ebenfalls **SQL_DESC_NAME**festlegen.  Wenn Literale in Aufrufen gespeicherter Prozeduren verwendet werden, bei denen Parameter **SQL_DESC_NAME** festgelegt sind, sollten die Literale das Format *' Name*=*Wert*' verwenden, wobei *Name* der Parameter Name der gespeicherten Prozedur ist (z. b. @p1). Weitere Informationen finden Sie unter [Binden von Parametern anhand des Namens (benannte Parameter)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Wenn **SQL_DESC_NAME** für einen Parameter für eine gespeicherte Prozedur festgelegt ist, sollten alle Parameter für gespeicherte Prozeduren in der Abfrage ebenfalls **SQL_DESC_NAME**festlegen.  Wenn Literale in Aufrufen gespeicherter Prozeduren verwendet werden, bei denen Parameter **SQL_DESC_NAME** festgelegt sind, sollten die Literale das Format *' Name*=*value*' verwenden, wobei *Name* der Parameter Name der gespeicherten @p1Prozedur (z. b.) ist. Weitere Informationen finden Sie unter [Binden von Parametern anhand des Namens (benannte Parameter)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Anweisungsparametern](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

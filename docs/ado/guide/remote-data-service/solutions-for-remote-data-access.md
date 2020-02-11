@@ -1,5 +1,5 @@
 ---
-title: Lösungen für Remotedatenzugriff | Microsoft-Dokumentation
+title: Lösungen für den Remote Datenzugriff | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,38 +13,38 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922175"
 ---
 # <a name="solutions-for-remote-data-access"></a>Lösungen für den Remotedatenzugriff
 ## <a name="the-issue"></a>Das Problem  
- ADO kann es sich um die Anwendung direkt erhalten Zugriff auf und Ändern von Datenquellen (manchmal auch als ein System mit zwei Ebenen bezeichnet). Z. B. wenn die Verbindung mit der Datenquelle ist, die Ihre Daten enthält, ist, die eine direkte Verbindung in einem System mit zwei Ebenen.  
+ ADO ermöglicht Ihrer Anwendung den direkten Zugriff auf und das Ändern von Datenquellen (manchmal auch als System mit zwei Ebenen bezeichnet). Wenn beispielsweise die Verbindung mit der Datenquelle hergestellt wird, in der die Daten enthalten sind, handelt es sich um eine direkte Verbindung in einem System mit zwei Ebenen.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Möglicherweise möchten jedoch indirekt über eine Zwischenstufe wie z. B. Microsoft® Internet Information Services (IIS) den Zugriff auf Datenquellen. Diese Anordnung ist ein System mit drei Ebenen bezeichnet. IIS ist ein Client/Server-System, das eine effiziente Möglichkeit für eine lokale oder -Clients Anwendung zum Aufrufen einer Remote oder Server-Programms über das Internet oder Intranet bereitstellt. Die Server-Anwendung erhält Zugriff auf die Datenquelle und optional die erfassten Daten verarbeitet.  
+ Möglicherweise möchten Sie jedoch indirekt über einen Vermittler wie Microsoft® Internetinformationsdienste (IIS) auf Datenquellen zugreifen. Diese Anordnung wird manchmal als System mit drei Ebenen bezeichnet. Bei IIS handelt es sich um ein Client/Server-System, das eine effiziente Möglichkeit bietet, eine lokale oder Client Anwendung einen Remote Server oder-Server im Internet oder in einem Intranet aufzurufen. Das Serverprogramm erhält Zugriff auf die Datenquelle und verarbeitet optional die gesammelten Daten.  
   
- Ihre Intranet-Webseite enthält beispielsweise eine Anwendung, die in Microsoft® Visual Basic Scripting Edition (VBScript), das für die Verbindung zu IIS geschrieben wurde. IIS wiederum eine Verbindung mit der tatsächlichen Datenquelle her, die Daten abruft, verarbeitet diese in irgendeiner Form und klicken Sie dann die verarbeitete Informationen an die Anwendung zurückgegeben.  
+ Die Intranetwebseite enthält z. b. eine Anwendung, die in Microsoft® Visual Basic Scripting Edition (VBScript) geschrieben ist, die eine Verbindung mit IIS herstellt. IIS stellt wiederum eine Verbindung mit der tatsächlichen Datenquelle her, ruft die Daten ab, verarbeitet Sie auf irgendeine Weise und gibt dann die verarbeiteten Informationen an die Anwendung zurück.  
   
- In diesem Beispiel verbunden die Anwendung nie direkt mit der Datenquelle; IIS wurde. Und IIS Zugriff auf die Daten mithilfe von ADO.  
+ In diesem Beispiel ist die Anwendung niemals direkt mit der Datenquelle verbunden. IIS hat. Und IIS haben mithilfe von ADO auf die Daten zugegriffen.  
   
 > [!NOTE]
->  Die Client/Server-Anwendung muss nicht auf das Internet oder Intranet basieren (d. h. webbasierte)-Es könnte darin bestehen, ausschließlich der kompilierte Programme auf einem lokalen Netzwerk. Allerdings ist der Normalfall eine webbasierte Anwendung.  
+>  Die Client/Server-Anwendung muss nicht auf dem Internet oder einem Intranet (d. h. webbasiert) basieren. Sie kann nur aus kompilierten Programmen in einem lokalen Netzwerk bestehen. Der typische Fall ist jedoch eine webbasierte Anwendung.  
   
- Da einige visual Kontrolle, z. B. ein Raster, Kontrollkästchen oder Liste, die zurückgegebene Informationen verwenden kann, muss die zurückgegebene Informationen einfach durch ein visuelles Steuerelement verwendet werden.  
+ Da einige visuelle Steuerelemente, z. b. ein Raster, ein Kontrollkästchen oder eine Liste, die zurückgegebenen Informationen verwenden können, müssen die zurückgegebenen Informationen problemlos von einem visuellen Steuerelement verwendet werden.  
   
- Sie möchten eine einfache und effiziente Anwendungsprogrammierschnittstelle, die Systemen mit drei Ebenen unterstützt und gibt Informationen zurück wie ganz einfach, als ob es abgerufen wurden auf einem System mit zwei Ebenen. Remote Data Service (RDS) ist diese Schnittstelle.  
+ Sie wünschen eine einfache und effiziente Anwendungsprogrammierschnittstelle, die Systeme mit drei Ebenen unterstützt und Informationen so einfach wie möglich zurückgibt, wenn Sie auf einem System mit zwei Ebenen abgerufen wurden. Remote Data Service (RDS) ist diese Schnittstelle.  
   
 ## <a name="the-solution"></a>Die Lösung  
- RDS definiert ein Programmiermodell zur Verfügung: die Abfolge von Aktivitäten, die zum Zugriff auf und Aktualisieren einer Datenquelle – für den Zugriff auf Daten über einen Vermittler, z. B. Internet Information Services (IIS) erforderlich sind. Das Programmiermodell zusammengefasst, die gesamte Funktionalität von RDS.  
+ RDS definiert ein Programmiermodell: die Abfolge von Aktivitäten, die für den Zugriff auf und die Aktualisierung einer Datenquelle erforderlich sind, um Zugriff auf Daten über einen Vermittler zu erhalten, z. b. Internetinformationsdienste (IIS). Das Programmiermodell fasst die gesamte Funktionalität von RDS zusammen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes RDS-Programmiermodell](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 

@@ -13,19 +13,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79285523ec83d3f10ad6f23010a7f9a6398e5980
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890108"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
-  Wenn SQLParamData den einem Tabellenwert Parameter zugeordneten *ValuePtrPtr* -Wert zurückgibt, sollte die Anwendung SQLPutData mit *StrLen_Or_Ind*aufrufen. Wenn *StrLen_Or_Ind* einen Wert größer als 0 (null) aufweist, bedeutet dies, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendung bereit ist, dass der Native Client Parameterdaten für die nächste Tabellenwert Parameter-Zeile sammelt. Wenn *StrLen_Or_Ind* den Wert 0 hat, bedeutet dies, dass es keine weiteren Daten Zeilen für den Tabellenwert Parameter gibt. Weitere Informationen finden Sie unter [binden und Datenübertragung von Tabellenwert Parametern und Spaltenwerten](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+  Wenn SQLParamData den einem Tabellenwert Parameter zugeordneten *ValuePtrPtr* -Wert zurückgibt, sollte die Anwendung SQLPutData mit *StrLen_Or_Ind*aufrufen. Wenn *StrLen_Or_Ind* einen Wert größer als 0 (null) aufweist, bedeutet dies, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendung bereit ist, dass der Native Client Parameterdaten für die nächste Tabellenwert Parameter-Zeile sammelt. Wenn *StrLen_Or_Ind* den Wert 0 aufweist, bedeutet dies, dass es keine weiteren Daten Zeilen für den Tabellenwert Parameter gibt. Weitere Informationen finden Sie unter [binden und Datenübertragung von Tabellenwert Parametern und Spaltenwerten](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLParamData](/sql/odbc/reference/syntax/sqlparamdata-function)   
- [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_update_category (Transact-SQL) | Microsoft-Dokumentation
+title: sp_update_category (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084925"
 ---
-# <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
+# <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert den Namen einer Kategorie.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,26 +42,26 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @class = ] 'class'` Die Klasse des zu aktualisierenden Kategorie. *Klasse*ist **varchar(8)** und hat keinen Standardwert und kann einen der folgenden Werte sein.  
+`[ @class = ] 'class'`Die Klasse der zu aktualisierenden Kategorie. die *Klasse*ist vom Datentyp **varchar (8)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**WARNUNG**|Aktualisiert eine Warnungskategorie.|  
-|**JOB**|Aktualisiert eine Auftragskategorie.|  
-|**OPERATOR**|Aktualisiert eine Operatorkategorie.|  
+|**Warnung**|Aktualisiert eine Warnungskategorie.|  
+|**Auftrag**|Aktualisiert eine Auftragskategorie.|  
+|**KOM**|Aktualisiert eine Operatorkategorie.|  
   
-`[ @name = ] 'old_name'` Der aktuelle Name der Kategorie. *Old_name*ist **Sysname**, hat keinen Standardwert.  
+`[ @name = ] 'old_name'`Der aktuelle Name der Kategorie. *old_name*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @new_name = ] 'new_name'` Der neue Name für die Kategorie. *New_name*ist **Sysname**, hat keinen Standardwert.  
+`[ @new_name = ] 'new_name'`Der neue Name für die Kategorie. *new_name*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_update_category** muss ausgeführt werden, aus der **Msdb** Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_update_category** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer gewährt werden die **Sysadmin** -Serverrolle sein.  
+ Zum Ausführen dieser gespeicherten Prozedur muss den Benutzern die festen Server Rolle **sysadmin** erteilt werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Auftragskategorie von `AdminJobs` in `Administrative Jobs` umbenannt.  
@@ -77,10 +77,10 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

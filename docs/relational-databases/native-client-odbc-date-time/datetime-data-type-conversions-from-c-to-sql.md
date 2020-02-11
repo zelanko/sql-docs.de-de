@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07a53f979e721463c0f2cf95df1b79487e471579
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783951"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime-Datentypkonvertierungen von C in SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Thema werden Probleme aufgeführt, die beim Konvertieren von C-Typen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datums-/Uhrzeittypen zu beachten sind.  
+  In diesem Thema werden Probleme aufgeführt, die beim Konvertieren von C- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typen in Datums-/Uhrzeittypen berücksichtigt werden müssen  
   
- Die in der folgenden Tabelle beschriebenen Konvertierungen gelten für auf dem Client ausgeführte Konvertierungen. In Fällen, in denen der Client eine Sekundenbruchteile Genauigkeit für einen Parameter angibt, der von der auf dem Server definierten abweicht, kann die Client Konvertierung erfolgreich ausgeführt werden, der Server gibt jedoch einen Fehler zurück, wenn **SQLExecute** oder **SQLExecuteDirect** aufgerufen wird. Insbesondere behandelt ODBC das Abschneiden von Sekundenbruchteilen als Fehler, während das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verhalten zum Runden gehört. beispielsweise erfolgt die Rundung bei der Umstellung von **datetime2 (6)** auf **datetime2 (2)** . Werte der Datetime-Spalte werden auf 1/300 einer Sekunde gerundet, und für smalldatetime -Spalten werden Sekunden vom Server auf null festgelegt.  
+ Die in der folgenden Tabelle beschriebenen Konvertierungen gelten für auf dem Client ausgeführte Konvertierungen. In Fällen, in denen der Client eine Sekundenbruchteile Genauigkeit für einen Parameter angibt, der von der auf dem Server definierten abweicht, kann die Client Konvertierung erfolgreich ausgeführt werden, der Server gibt jedoch einen Fehler zurück, wenn **SQLExecute** oder **SQLExecuteDirect** aufgerufen wird. Insbesondere behandelt ODBC das Abschneiden von Sekundenbruchteilen als Fehler, während das Verhalten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rundung gilt. beispielsweise erfolgt die Rundung bei der Umstellung von **datetime2 (6)** auf **datetime2 (2)**. Werte der Datetime-Spalte werden auf 1/300 einer Sekunde gerundet, und für smalldatetime -Spalten werden Sekunden vom Server auf null festgelegt.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -47,7 +47,7 @@ ms.locfileid: "73783951"
   
 ## <a name="key-to-symbols"></a>Aufschlüsselung der Symbole  
   
--   **-** : Es wird keine Konvertierung unterstützt. Es wird ein Diagnosedatensatz mit SQLSTATE 07006 und der Meldung "Attributverletzung beschränkter Datentypen" generiert.  
+-   **-**: Es wird keine Konvertierung unterstützt. Es wird ein Diagnosedatensatz mit SQLSTATE 07006 und der Meldung "Attributverletzung beschränkter Datentypen" generiert.  
   
 -   **1**: Wenn die bereitgestellten Daten nicht gültig sind, wird ein Diagnosedaten Satz mit SQLSTATE 22007 und der Meldung "Ungültiges datetime-Format" generiert.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73783951"
   
 -   **9**: die Zeichenfolge wird analysiert und in einen Date-, DateTime-, DateTimeOffset-oder Time-Wert konvertiert, je nach dem ersten Satzzeichen und dem vorhanden sein von verbleibenden Komponenten. Die Zeichenfolge wird dann in den Zieltyp konvertiert. Dabei wird nach den Regeln in der vorangehenden Tabelle für den Quelltyp vorgegangen, der von diesem Prozess ermittelt wird. Wenn bei der Analyse der Daten ein Fehler ermittelt wird, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Ungültiger Zeichenwert für Konvertierungsangabe" generiert. Wenn die Jahresangabe außerhalb des vom datetime- und smalldatetime-Parameter unterstützten Bereichs liegt, wird ein Diagnosedatensatz mit SQLSTATE 22007 und der Meldung "Ungültiges datetime-Format" generiert.  
   
-     Der Wert für datetimeoffset muss nach der Konvertierung in das UTC-Format innerhalb des gültigen Bereichs liegen und zwar selbst dann, wenn keine Konvertierung in UTC angefordert wird. Der Grund dafür ist, dass der TDS und der Server das Datum stets in {1}datetimeoffset{2}-Werte für UTC normalisieren, weshalb der Client prüfen muss, ob die Zeitkomponenten innerhalb des nach Konvertierung in UTC unterstützten Bereichs liegen. Wenn der Wert nicht innerhalb des unterstützten UTC-Bereichs liegt, wird ein Diagnosedatensatz mit SQLSTATE 22007 und der Meldung "Ungültiges datetime-Format" generiert.  
+     Der Wert für datetimeoffset muss nach der Konvertierung in das UTC-Format innerhalb des gültigen Bereichs liegen und zwar selbst dann, wenn keine Konvertierung in UTC angefordert wird. Der Grund dafür ist, dass der TDS und der Server das Datum stets in datetimeoffset-Werte für UTC normalisieren, weshalb der Client prüfen muss, ob die Zeitkomponenten innerhalb des nach Konvertierung in UTC unterstützten Bereichs liegen. Wenn der Wert nicht innerhalb des unterstützten UTC-Bereichs liegt, wird ein Diagnosedatensatz mit SQLSTATE 22007 und der Meldung "Ungültiges datetime-Format" generiert.  
   
 -   **10**: Wenn eine Kürzung mit Datenverlust auftritt, wird ein Diagnosedaten Satz mit SQLSTATE 22008 und der Meldung "Ungültiges Zeitformat" generiert. Dieser Fehler tritt auch dann auf, wenn der Wert außerhalb des Bereichs liegt, der vom UTC-Bereich, den der Server verwendet, dargestellt werden kann.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73783951"
   
     ||||  
     |-|-|-|  
-    |Typ|Implizierte Dezimalstellen<br /><br /> 0|Implizierte Dezimalstellen<br /><br /> 1.. 9|  
+    |type|Implizierte Dezimalstellen<br /><br /> 0|Implizierte Dezimalstellen<br /><br /> 1.. 9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      Wenn die Sekundenbruchteile für SQL_C_TYPE_TIMESTAMP mit drei Ziffern ohne Datenverlust dargestellt werden können und die Spaltengröße 23 oder größer ist, werden genau drei Dezimalstellen für Sekundenbruchteile generiert. Dieses Verhalten stellt die Abwärtskompatibilität für Anwendungen sicher, die mit älteren ODBC-Treibern entwickelt wurden.  
@@ -90,9 +90,9 @@ ms.locfileid: "73783951"
   
      Eine Spaltengröße von 0 (null) impliziert unendliche Größe für Zeichentypen mit variabler Länge in ODBC (9 Ziffern, sofern die 3-Ziffern-Regel für SQL_C_TYPE_TIMESTAMP nicht gilt). Die Angabe einer Spaltengröße von 0 (null) mit einem Zeichentyp fester Länge ist ein Fehler.  
   
--   **N/v**: vorhandenes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und früheres Verhalten werden beibehalten.  
+-   **N/v**: vorhandenes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und früheres Verhalten wird beibehalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verbesserungen &#40;bei Datum und Uhrzeit in ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

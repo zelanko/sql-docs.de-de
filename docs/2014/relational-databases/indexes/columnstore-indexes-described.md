@@ -17,19 +17,19 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811038"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *columnstore--Index im Arbeitsspeicher* speichert und verwaltet Daten mithilfe von Spalten basiertem Datenspeicher und Spalten basierter Abfrage Verarbeitung. Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.  
+  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *in-Memory-columnstore--Index* speichert und verwaltet Daten mithilfe von Spalten basiertem Datenspeicher und Spalten basierter Abfrage Verarbeitung. Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.  
   
 > [!NOTE]  
 >  Wir sehen den gruppierten Columnstore-Index als Standard für das Speichern von großen Data Warehousing-Faktentabellen an und erwarten, dass er in den meisten Data Warehousing-Szenarien verwendet wird. Da der gruppierte Columnstore-Index aktualisierbar ist, kann die Arbeitsauslastung eine große Anzahl von Einfüge-, Update- und Löschvorgängen ausführen.  
   
-## <a name="contents"></a>Inhalt  
+## <a name="contents"></a>Contents  
   
 -   [Grundlagen](#basics)  
   
@@ -40,7 +40,8 @@ ms.locfileid: "68811038"
 -   [Verwandte Aufgaben und Themen](#related)  
   
 ##  <a name="basics"></a> Grundlagen  
- Ein *columnstore index* ist eine Technologie zum Speichern, Abrufen und Verwalten von Daten mithilfe eines spaltenbasierten Datenformats, das als Columnstore bezeichnet wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt gruppierte und nicht gruppierte Columnstore-Indizes. Beide verwenden die gleiche In-Memory-Columnstore-Technologie, sie unterscheiden sich jedoch hinsichtlich ihres Verwendungszwecks und Funktionsumfangs.  
+ Ein *columnstore--Index* ist eine Technologie zum Speichern, abrufen und Verwalten von Daten mithilfe eines Spalten basierten Datenformats, das als columnstore-bezeichnet wird. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt gruppierte und nicht gruppierte Columnstore-Indizes. Beide verwenden die gleiche In-Memory-Columnstore-Technologie, sie unterscheiden sich jedoch hinsichtlich ihres Verwendungszwecks und Funktionsumfangs.  
   
 ###  <a name="benefits"></a> Vorteile  
  Columnstore-Indizes sind für die meisten schreibgeschützten Abfragen geeignet, die Analysen für große Datasets ausführen. Dabei handelt es sich häufig um Abfragen für Data Warehousing-Arbeitsauslastungen. Columnstore-Indizes bieten bei Abfragen, die vollständige Tabellenscans verwenden, große Leistungsvorteile und sind nicht für Abfragen geeignet, die Suchvorgänge in Daten ausführen, um einen bestimmten Wert suchen.  
@@ -102,7 +103,8 @@ ms.locfileid: "68811038"
  Die folgenden Hauptbegriffe und -konzepte werden im Zusammenhang mit Columnstore-Indizes verwendet.  
   
  columnstore index  
- Ein *columnstore index* ist eine Technologie zum Speichern, Abrufen und Verwalten von Daten mithilfe eines spaltenbasierten Datenformats, das als Columnstore bezeichnet wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt gruppierte und nicht gruppierte Columnstore-Indizes. Beide verwenden die gleiche In-Memory-Columnstore-Technologie, sie unterscheiden sich jedoch hinsichtlich ihres Verwendungszwecks und Funktionsumfangs.  
+ Ein *columnstore--Index* ist eine Technologie zum Speichern, abrufen und Verwalten von Daten mithilfe eines Spalten basierten Datenformats, das als columnstore-bezeichnet wird. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt gruppierte und nicht gruppierte Columnstore-Indizes. Beide verwenden die gleiche In-Memory-Columnstore-Technologie, sie unterscheiden sich jedoch hinsichtlich ihres Verwendungszwecks und Funktionsumfangs.  
   
  columnstore  
  Ein *Columnstore* enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und physisch in einem Spaltendatenformat gespeichert sind.  
@@ -114,10 +116,10 @@ ms.locfileid: "68811038"
  Um eine hohe Leistung und hohe Komprimierungsraten zu erzielen, unterteilt der Columnstore-Index die Tabelle in Gruppen von Zeilen, die als Zeilengruppen bezeichnet werden, und komprimiert dann jede Zeilengruppe nach Spalten. Die Anzahl der Zeilen in der Zeilengruppe muss groß genug sein, um die Komprimierungsraten zu verbessern, und klein genug, um von In-Memory-Vorgängen profitieren zu können.  
   
  Zeilengruppe  
- Eine *Zeilengruppe* ist eine Gruppe von Zeilen, die gleichzeitig im Columnstore-Format komprimiert werden.  
+ Eine Zeilen *Gruppe* ist eine Gruppe von Zeilen, die gleichzeitig in das columnstore--Format komprimiert werden.  
   
  Spaltensegment  
- Ein *Spaltensegment* ist eine Spalte mit Daten aus der Zeilengruppe.  
+ Ein *Spalten Segment* ist eine Spalte mit Daten aus der Zeilen Gruppe.  
   
 -   Eine Zeilengruppe enthält normalerweise die maximale Anzahl von Zeilen pro Zeilengruppe, die 1.048.576 Zeilen beträgt.  
   
@@ -137,7 +139,7 @@ ms.locfileid: "68811038"
  Gruppierter Columnstore-Index  
  Ein *clustered columnstore index* ist der physische Speicher für die gesamte Tabelle und der einzige Index für die Tabelle. Der gruppierte Index kann aktualisiert werden. Sie können Einfüge-, Lösch- und Updatevorgänge für den Index ausführen und per Massenladen Daten in den Index laden.  
   
- ![Gruppierter columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Gruppierter Columnstore-Index")  
+ ![Gruppierter Columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Gruppierter Columnstore-Index")  
   
  Um die Fragmentierung der Spaltensegmente zu verringern und die Leistung zu verbessern, können einige Daten im Columnstore-Index vorübergehend in einer Zeilenspeichertabelle, die als Deltastore bezeichnet wird, sowie eine B-Struktur der IDs für gelöschte Zeilen gespeichert werden. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore.  
   
@@ -151,16 +153,16 @@ ms.locfileid: "68811038"
 ##  <a name="dataload"></a>Laden von Daten  
   
 ###  <a name="dataload_nci"></a>Laden von Daten in einen nicht gruppierten columnstore-Index  
- Zum Laden von Daten in einen nicht gruppierten columnstore--Index laden Sie zuerst Daten in eine herkömmliche rowstore-Tabelle, die als Heap oder gruppierter Index gespeichert ist, und erstellen Sie dann den nicht gruppierten columnstore--Index mit [Create columnstore-Index &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) . .  
+ Zum Laden von Daten in einen nicht gruppierten columnstore--Index laden Sie zuerst Daten in eine herkömmliche rowstore-Tabelle, die als Heap oder gruppierter Index gespeichert ist, und erstellen Sie dann den nicht gruppierten columnstore--Index mit [Create columnstore-Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
- ![Laden von Daten in einen columnstore--Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Laden von Daten in einen columnstore--Index")  
+ ![Laden von Daten in einen columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Laden von Daten in einen columnstore-Index")  
   
  Eine Tabelle mit einem nicht gruppierten Columnstore-Index ist so lange schreibgeschützt, bis der Index gelöscht oder deaktiviert wird. Um die Tabelle und den nicht gruppierten columnstore--Index zu aktualisieren, können Sie Partitionen ein-und ausschalten. Sie können den Index auch deaktivieren, die Tabelle aktualisieren und den Index dann neu erstellen.  
   
  Weitere Informationen finden Sie unter [Using Nonclustered Columnstore Indexes](indexes.md).  
   
 ###  <a name="dataload_cci"></a>Laden von Daten in einen gruppierten columnstore-Index  
- ![Laden in einen gruppierten columnstore--Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Laden in einen gruppierten columnstore--Index")  
+ ![Laden in einen gruppierten columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Laden in einen gruppierten columnstore-Index")  
   
  Wie das Diagramm nahe legt, führt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zum Laden von Daten in einen gruppierten Columnstore-Index Folgendes aus:  
   
@@ -198,18 +200,18 @@ ms.locfileid: "68811038"
 ### <a name="nonclustered-columnstore-indexes"></a>Nicht gruppierte Columnstore-Indizes  
  Informationen für häufige Aufgaben finden Sie unter [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
   
--   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [Erstellen eines columnstore-Indexes &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [Alter Index &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) mit Rebuild.  
+-   [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql) mit Rebuild.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>Gruppierte Columnstore-Indizes  
  Informationen für häufige Aufgaben finden Sie unter [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
--   [Erstellen eines gruppierten columnstore &#40;-Indexes mit Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [Erstellen eines gruppierten columnstore-Indexes &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [Alter Index &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) mit Rebuild oder reorganisieren.  
+-   [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql) mit neu erstellen oder neu organisieren.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
@@ -219,19 +221,19 @@ ms.locfileid: "68811038"
   
 -   [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>Browser  
+### <a name="metadata"></a>Metadaten  
  Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschlossene Spalten gespeichert. Der Columnstore-Index weist keine Schlüsselspalten auf.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   
 -   [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)  
   
--   [sys.partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)  
+-   [sys. Partitions &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)  
   
--   [sys.column_store_segments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)  
+-   [sys. column_store_segments &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)  
   
--   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)  
+-   [sys. column_store_dictionaries &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)  
   
--   [sys.column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)  
+-   [sys. column_store_row_groups &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)  
   
   

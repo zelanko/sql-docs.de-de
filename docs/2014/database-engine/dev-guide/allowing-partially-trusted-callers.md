@@ -1,5 +1,5 @@
 ---
-title: Zulassen von teilweise vertrauenswürdigen Aufrufern | Microsoft-Dokumentation
+title: Zulassen teilweise vertrauenswürdiger Aufrufer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754198"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Zulassen von teilweise vertrauenswürdigen Aufrufern
   Die gemeinsame Nutzung von Codebibliotheken ist bei der CLR-Integration gängige Praxis. Hierbei greift eine Assembly oder Anwendung häufig auf eine andere Assembly zu, die einen benutzerdefinierten Typ, eine gespeicherte Prozedur, eine benutzerdefinierte Funktion, ein benutzerdefiniertes Aggregat, einen Trigger oder eine Hilfsprogrammklasse enthält. Codebibliotheken, die von mehreren Anwendungen genutzt werden sollen, müssen mit einem starken Namen signiert werden.  
   
- Nur Anwendungen, die vom Sicherheitssystem für den Laufzeitcodezugriff als voll vertrauenswürdig angesehen werden, erhalten Zugriff auf eine freigegebene Assembly mit verwaltetem Code, die nicht explizit mit dem `System.Security.AllowPartiallyTrustedCallers`-Attribut markiert ist. Wenn eine teilweise vertrauenswürdige Assembly (eine Assembly, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der Berechtigung `SAFE` oder `EXTERNAL_ACCESS` registriert ist) versucht, auf eine mit einem starken Namen signierte Assembly ohne dieses Attribut zuzugreifen, dann wird eine Ausnahme des Typs `System.Security.SecurityException` ausgelöst. Die Fehlermeldung, die Sie sehen, ist ähnlich der folgenden:  
+ Nur Anwendungen, die vom Sicherheitssystem für den Laufzeitcodezugriff als voll vertrauenswürdig angesehen werden, erhalten Zugriff auf eine freigegebene Assembly mit verwaltetem Code, die nicht explizit mit dem `System.Security.AllowPartiallyTrustedCallers`-Attribut markiert ist. Wenn eine teilweise vertrauenswürdige Assembly (eine Assembly, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der Berechtigung `SAFE` oder `EXTERNAL_ACCESS` registriert ist) versucht, auf eine mit einem starken Namen signierte Assembly ohne dieses Attribut zuzugreifen, dann wird eine Ausnahme des Typs `System.Security.SecurityException` ausgelöst. Die Fehlermeldung, die angezeigt wird, ähnelt der folgenden:  
   
 ```  
 Msg 6522, Level 16, State 1, Procedure usp_RSTest, Line 0  
@@ -39,13 +39,13 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- Es wird empfohlen, alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrierten Assemblys, mit Ausnahme der Assemblys, die dem globalen Assemblycache hinzugefügt werden, mit dem At`AllowPartiallyTrustedCallers`-Attribut zu markieren, sodass die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladenen Assemblys aufeinander zugreifen können. Assemblys, die dem globalen Assemblycache hinzugefügt werden, sollten aus Sicherheitsgründen gründlich überprüft werden, bevor das `AllowPartiallyTrustedCallers`-Attribut hinzugefügt wird, da die Assembly dann für teilweise vertrauenswürdige Aufrufer aus unerwarteten Kontexten verfügbar ist. Eine Assembly sollte nicht als voll vertrauenswürdig gekennzeichnet (in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der `UNSAFE`-Berechtigung registriert) werden.  
+ Es wird empfohlen, alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrierten Assemblys, mit Ausnahme der Assemblys, die dem globalen Assemblycache hinzugefügt werden, mit dem At`AllowPartiallyTrustedCallers`-Attribut zu markieren, sodass die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladenen Assemblys aufeinander zugreifen können. Assemblys, die dem globalen Assemblycache hinzugefügt werden, sollten aus Sicherheitsgründen gründlich überprüft werden, bevor das `AllowPartiallyTrustedCallers`-Attribut hinzugefügt wird, da die Assembly dann für teilweise vertrauenswürdige Aufrufer aus unerwarteten Kontexten verfügbar ist. Eine Assembly sollte nicht als voll vertrauenswürdig gekennzeichnet (in `UNSAFE` mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigung registriert) werden.  
   
  Weitere Informationen finden Sie im Abschnitt "Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code" im .NET Framework Software Development Kit.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Angenommen, es gibt eine Hilfsprogrammklasse, die für viele serverseitige CLR-Integrationsanwendungen nützlich wäre. Zum Beispiel könnte es eine Klasse sein, die die Ergebnisse einer Abfrage darstellt. Um die gemeinsame Nutzung dieser Komponente zu ermöglichen, wird diese Hilfsprogrammmklasse in eine separate Assembly eingefügt. Dann wird von verschiedenen anderen Assemblys, die CLR-Integrationsobjekte enthalten, auf diese Assembly verwiesen. Da diese Hilfsprogrammmklasse in vielen verschiedenen Serveranwendungen verwendet wird, wird sie sorgfältig überprüft. Alle eventuell vorhandenen Sicherheitsrisiken werden beseitigt. Dann wird das `AllowPartiallyTrustedCallers`-Attribut der Assembly, die die Hilfsprogrammklasse enthält, zugeordnet, sodass die in den mit den Berechtigungssätzen `SAFE` oder `EXTERNAL_ACCESS` markierten Assemblys enthaltenen CLR-Integrationsobjekte die Hilfsprogrammklasse und deren Methoden nutzen können, obwohl sie sich in einer getrennten Assembly befinden.  
   
  Manchmal kann es nützlich sein, Befehle beim Durchsehen der Ergebnisse einer Abfrage ausführen zu können, ohne eine neue Verbindung öffnen und ohne alle Ergebnisse in den Speicher laden zu müssen. Dies kann mit der Technologie der MARS-Funktion (Multiple Active Result Set) in ADO.NET 2.0 verwirklicht werden. Derzeit ist MARS nicht für den Anbieter im Prozess, der für die serverseitige Programmierung verwendet wird, implementiert. Diese Einschränkung können Sie mithilfe eines serverseitigen Cursors umgehen. Dieses Beispiel zeigt, wie Sie serverseitige Cursor verwenden, um die fehlende MARS-Unterstützung für die serverseitige Progammierung zu umgehen.  
@@ -60,7 +60,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  In diesem Beispiel wird veranschaulicht, wie mithilfe des Attributs "Allow partially trusted callers" angegeben wird, dass es sich bei der Resultset-Assembly um eine Bibliothek handelt, die von anderen Assemblys auf sichere Weise aufgerufen werden kann. Diese Vorgehensweise ist etwas komplexer, jedoch sicherer als das Registrieren der aufrufenden Assembly mithilfe der UNSAFE-Berechtigung. Sie ist sicherer, weil durch das Registrieren der aufrufenden Assembly als SAFE die aufrufende Assembly lediglich auf für den Server externe Ressourcen zugreift und Beschädigungen der Integrität des Servers verhindert werden.  
   
- In den Erstellungsanweisungen für dieses Beispiel wird davon ausgegangen, dass die Quellcodedateien in einem Verzeichnis mit dem Namen c:\samples enthalten sind.  Wenn Sie ein anderes Verzeichnis verwenden, müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts ändern. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erfordern außerdem die AdventureWorks-Datenbank. Sie können die AdventureWorks-Beispieldatenbank von der [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) auf der Startseite.  
+ In den Erstellungsanweisungen für dieses Beispiel wird davon ausgegangen, dass die Quellcodedateien in einem Verzeichnis mit dem Namen c:\samples enthalten sind.  Wenn Sie ein anderes Verzeichnis verwenden, müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts ändern. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts erfordern auch die AdventureWorks-Datenbank. Sie können die AdventureWorks-Beispieldatenbank von der [Microsoft SQL Server Samples and Community Projects-](https://go.microsoft.com/fwlink/?LinkID=85384) Startseite herunterladen.  
   
  Um das Beispiel zu erstellen und auszuführen, fügen Sie das erste Codelisting in eine Datei mit dem Namen ResultSet.cs ein, und kompilieren Sie mit csc /target:library ResultSet.cs.  
   
@@ -1098,7 +1098,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheit der CLR-Integration](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

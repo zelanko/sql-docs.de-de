@@ -1,5 +1,5 @@
 ---
-title: Find Databases Wizard suchen (Option Speicherorte) (AccessToSQL) | Microsoft-Dokumentation
+title: Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,52 +12,52 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024753"
 ---
-# <a name="find-databases-wizard-select-locations-accesstosql"></a>Find Databases Wizard suchen (Option Speicherorte) (AccessToSQL)
-Geben Sie auf der Seite Standorte auswählen des Assistenten für Datenbanken finden Sie die Suchparameter für die Suche nach den Zugriff auf Datenbanken fest.  
+# <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql)
+Geben Sie auf der Seite Speicherorte auswählen des Assistenten zum Suchen von Datenbanken die Suchparameter für die Suche nach Access-Datenbanken ein.  
   
-So öffnen Sie im Assistenten finden Sie Datenbanken auf der **Datei** Menü klicken Sie auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
+Um den Assistenten zum Suchen von Datenbanken zu öffnen, klicken Sie im Menü **Datei** auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialog Felds finden Sie unter [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md) .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Durchsuchen**  
-Klicken Sie auf diese Option, um den Computer oder im Netzwerk zu suchen. Wählen Sie den Ordner oder den Speicherort zu suchen, und klicken Sie dann auf **OK**. Klicken Sie auf **hinzufügen** an diesem Speicherort zur Liste hinzuzufügen.  
+Klicken Sie, um den Computer oder das Netzwerk zu durchsuchen Wählen Sie den zu durchsuchenden Ordner oder Speicherort aus, und klicken Sie dann auf **OK**. Klicken Sie auf **Hinzufügen** , um diesen Speicherort der Liste hinzuzufügen.  
   
-**Pfad-Feld**  
-Zeigt den Pfad, um die Speicherorte hinzuzufügen. Geben Sie ein, oder navigieren Sie zu dem Pfad zu scannen, und klicken Sie dann auf die **hinzufügen** Schaltfläche.  
+**Feld "Pfad"**  
+Zeigt den Pfad an, der dem Feld Speicherorte hinzugefügt werden soll. Geben Sie den Pfad ein, den Sie scannen möchten, und klicken Sie auf die Schaltfläche **Hinzufügen** .  
   
-**Feld Speicherorte**  
-Listet die Speicherorte, die SSMA überprüft werden. Beim Klicken auf die **hinzufügen** Schaltfläche, der angegebene Pfad ist dieses Kontrollkästchen hinzugefügt.  
+**Feld "Standorte"**  
+Listet die Standorte auf, die von SSMA überprüft werden. Wenn Sie auf die Schaltfläche **Hinzufügen** klicken, wird diesem Feld der angegebene Pfad hinzugefügt.  
   
-**Hinzufügen**  
-Fügt den Speicherort in das Textfeld für den Pfad zur Liste der Standorte hinzu.  
+**Add (Hinzufügen)**  
+Fügt die Position im Textfeld Pfad der Liste der Speicherorte hinzu.  
   
-**Ersetzen**  
-Wenn ein Element in der Liste der Standorte ausgewählt ist, ersetzt das Element in das Textfeld für den Pfad des ausgewählten Elements an.  
+**Stelle**  
+Wenn ein Element in der Liste der Speicherorte ausgewählt ist, ersetzt das Element im Textfeld Pfad das ausgewählte Element.  
   
-**Entfernen**  
+**Remove**  
 Entfernt das ausgewählte Element aus der Liste der zu durchsuchenden Speicherorte.  
   
-**Alle oder einen Teil des Dateinamens**  
-Um Datenbanken zu suchen, deren Namen, die eine bestimmte Zeichenfolge enthalten, geben Sie in der Zeichenfolge. Verwenden Sie keine Platzhalterzeichen enthalten.  
+**Ganz oder teilweise der Dateiname**  
+Wenn Sie Datenbanken suchen möchten, die eine bestimmte Zeichenfolge enthalten, geben Sie die Zeichenfolge ein. Verwenden Sie keine Platzhalter Zeichen.  
   
 **Erstellungsdatum**  
-Um Datenbanken zu suchen, die innerhalb eines bestimmten Zeitraums erstellt wurden, geben Sie auf das Startdatum im der **aus** Feld und dem End-Datum in der **zu** Feld.  
+Um Datenbanken zu suchen, die in einem bestimmten Datumsbereich erstellt wurden, geben Sie das Startdatum im Feld **von** und das Enddatum im Feld **an** ein.  
   
 **Datum der letzten Aktualisierung**  
-Um Datenbanken zu suchen, die innerhalb eines bestimmten Zeitraums zuletzt aktualisiert wurden, geben Sie auf das Startdatum im der **aus** Feld und dem End-Datum in der **zu** Feld.  
+Um Datenbanken zu suchen, die in einem bestimmten Datumsbereich zuletzt aktualisiert wurden, geben Sie das Startdatum im Feld **von** und das Enddatum im Feld **an** ein.  
   
 **Größe**  
-Um Datenbanken zu suchen, die eine Größenkriterien entsprechen, wählen Sie einen Vergleich Zeichen im ersten Feld, geben Sie eine Zahl für die Größe, und wählen Sie dann aus dem dritten Feld Bytes, Kilobytes und Megabytes.  
+Wenn Sie Datenbanken suchen möchten, die mit einem Größen Kriterium übereinstimmen, wählen Sie im ersten Feld ein Vergleichs Zeichen aus, geben Sie eine Zahl für die Größe ein, und wählen Sie dann bytes, Kilobytes oder Megabyte aus dem dritten Feld aus.  
   
 **Besitzer**  
-Geben Sie die vollständige Windows-Benutzername des Besitzers. Dadurch werden möglicherweise als formatiert *Domäne*\\*Benutzer*.  
+Geben Sie den vollständigen Windows-Benutzernamen des Besitzers ein. Dies kann als *Domänen*\\*Benutzer*formatiert sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
-[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

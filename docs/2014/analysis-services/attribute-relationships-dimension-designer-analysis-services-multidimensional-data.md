@@ -1,5 +1,5 @@
 ---
-title: Attributbeziehungen (Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Attribut Beziehungen (Dimensions-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063186"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Attributbeziehungen (Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -31,17 +31,17 @@ ms.locfileid: "66063186"
  [Attributbeziehungsdiagramm](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
  Sie verwenden das Attributbeziehungsdiagramm, um das Attributbeziehungsdiagramm anzuzeigen und um Attributbeziehungen zu erstellen, zu ändern und zu löschen.  
   
- [Attributliste](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Liste der Attribute](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Sie verwenden diese Liste, um ein bestimmtes Attribut im Attributbeziehungsdiagramm zu finden und um eine neue Attributbeziehungen zu definieren.  
   
  [Attributbeziehungen-Liste](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Sie verwenden diese Liste, um eine bestimmte Attributbeziehung im Attributbeziehungsdiagramm zu finden und diese Beziehung zu verwalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dimensionsstruktur &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dimensions Struktur &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

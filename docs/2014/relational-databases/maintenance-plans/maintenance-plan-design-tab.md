@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184560"
 ---
 # <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
-  Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)** , um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
+  Verwenden Sie den **Wartungsplan (Registerkarte Entwurf)** , um die Eigenschaften eines Wartungsplans und seiner unter Pläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Unterplan hinzufügen**  
  Mit dieser Option fügen Sie einen Unterplan hinzu, den Sie konfigurieren können.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "63184560"
  **Ausgewählten Unterplan löschen**  
  Hiermit löschen Sie den ausgewählten Unterplan.  
   
- **Zeitplan des Unterplans**  
+ **Zeitplan des unter Plans**  
  Hiermit zeigen Sie das Dialogfeld **Eigenschaften des Auftragszeitplans** an. Wählen Sie einen Unterplan im Raster aus, und klicken Sie auf dieses Symbol, um einen Zeitplan für den Unterplan zu konfigurieren.  
   
  **Zeitplan entfernen**  
  Mit dieser Option entfernen Sie einen Zeitplan aus dem ausgewählten Unterplan.  
   
- **Verbindungen verwalten**  
+ **Verwalten von Verbindungen**  
  Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzverbindungen hinzuzufügen. Jeder Wartungstask im Unterplan-Editor kann beliebige dieser Verbindungen nutzen. Bei der Ausführung stellt der Wartungsplan eine Verbindung vom Wartungsplanserver zu den angegebenen Servern mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, wobei die Anmeldeinformationen der Verbindungen verwendet werden.  
   
  **Berichterstellung und Protokollierung**  
@@ -55,7 +55,7 @@ ms.locfileid: "63184560"
  **Beschreibung**  
  Hier können Sie eine Beschreibung für den Wartungsplan anzeigen oder festlegen. Die maximale Länge für eine Beschreibung beträgt 512 Zeichen.  
   
- **Designeroberfläche**  
+ **Designer Oberfläche**  
  Hiermit können Sie Wartungspläne entwerfen und verwalten. Verwenden Sie die Designeroberfläche, um einem Plan Wartungspläne hinzuzufügen, Tasks aus einem Plan zu entfernen, Rangfolgenlinks zwischen den Tasks anzugeben oder Taskverzweigungen und -parallelausführungen anzuzeigen.  
   
  Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler**oder **Beendigung**. Die Oberfläche des Wartungsplan-Designers basiert auf der Oberfläche des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "63184560"
  **Bearbeiten**  
  Öffnet das Eigenschaftendialogfeld für den Task.  
   
- **Deaktivieren**  
+ **Disable**  
  Sorgt dafür, dass der Task vorübergehend nicht verfügbar ist.  
   
  **Aktivieren**  
@@ -98,22 +98,22 @@ ms.locfileid: "63184560"
  **Gruppe**  
  Erstellt eine Gruppe, die einen oder mehrere Tasks enthält.  
   
- **Gruppierung aufheben**  
+ **Gruppierung**  
  Entfernt Tasks aus einer Gruppe.  
   
- **Automatisch anpassen**  
+ **AutoSize**  
  Legt die Größe aller Tasks auf das jeweilige Optimum fest.  
   
- **Reduzieren**  
+ **Zerfall**  
  Blendet Tasks innerhalb einer Gruppe aus.  
   
- **Erweitern**  
+ **Ausgebaut**  
  Zeigt die Tasks in einer Gruppe an, die zuvor mithilfe der Option **Reduzieren**ausgeblendet wurden.  
   
  **Zoom**  
  Ändert die Größe der Tasks auf der Entwurfsoberfläche.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Wartungspläne](maintenance-plans.md)   
  [Erstellen eines Wartungsplans](create-a-maintenance-plan.md)  
   

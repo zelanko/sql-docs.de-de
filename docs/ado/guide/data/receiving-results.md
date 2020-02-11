@@ -1,5 +1,5 @@
 ---
-title: Empfangen von Ergebnissen | Microsoft-Dokumentation
+title: Empfangene Ergebnisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,29 +14,29 @@ ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b861553e9a71ce56377f8d87bba0f9e26e929c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924523"
 ---
 # <a name="receiving-results"></a>Empfangen von Ergebnissen
-Führen in ADO die meisten Befehle in einige Informationen, die an den Aufrufer zurückgegeben. Für Befehle Rowset zurückgeben, werden die Ergebnisse im Empfangen einer **Recordset** Objekt, das wahrscheinlich die am häufigsten verwendeten ADO-Objekt ist.  
+In ADO werden die meisten Befehle zum Aufrufer zurückgegeben. Für Befehle, die das Rowset zurückgeben, werden die Ergebnisse in einem **Recordset** -Objekt empfangen, das wahrscheinlich die am häufigsten verwendeten ADO-Objekte ist.  
   
- Es gibt mehrere Möglichkeiten zum Empfangen von Daten in einem **Recordset** Objekt aus einer Datenquelle, einschließlich des Aufrufens Folgendes:  
+ Es gibt mehrere Möglichkeiten, Daten in einem **Recordset** -Objekt aus einer Datenquelle zu empfangen, einschließlich des folgenden:  
   
--   [Connection.Execute-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Connection. Execute-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Methode Command.Execute](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Command. Execute-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Recordset.Open-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Recordset. Open-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Connection.NamedCommand](../../../ado/guide/data/named-commands.md)  
+-   [Connection. namedcommand](../../../ado/guide/data/named-commands.md)  
   
--   [Connection.StoredProcedure](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
+-   ["Connection. StoredProcedure"](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
- Empfangen von Daten in eine **Recordset** Objekt schließt den Prozess der Daten, und klicken Sie mit der Beteiligung von einer **Verbindung** Objekt und ein **Befehl** Objekt implizit oder explizit. In einem typischen Client/Server-System-Anwendung muss der gesamte Prozess des Abrufens von Daten einen Roundtrip über das Netzwerk für die einzelnen gefüllt **Recordset**.  
+ Beim Empfangen von Daten in einem **Recordset** -Objekt wird der Prozess zum Empfangen von Daten mit der Teilnahme an einem **Verbindungs** Objekt und einem **Befehls** Objekt (implizit oder explizit) beendet. In einem typischen Client/Server-Anwendungssystem erfordert der gesamte Prozess des abfüllungs von Daten einen Roundtrip über das Netzwerk für jedes gefüllte **Recordset**.  
   
- Mehrere Resultsets empfangen bedeutet, müssen Sie mehrere, Roundtrips über das Netzwerk, eine für jedes Dataset gekapselt, die einem **Recordset** Objekt. Für Netzwerke zu langsam oder überlastet können die Anzahl der Roundtrips reduziert eventuell von der Anwendung verbessern. Aus diesem Grund bieten einige Anbieter-Support, um mehrere Empfangsports **Recordset**s in einem einzelnen Roundtrip. Dies wird im folgenden Thema erläutert:  
+ Um mehr als ein Resultset zu erhalten, müssen Sie mehrere Roundtrips über das Netzwerk durchführen, eine für jedes Dataset, das in einem **Recordset** -Objekt gekapselt ist. Bei langsamen oder überlasteten Netzwerken kann das Reduzieren der Anzahl von Roundtrips dazu beitragen, die Leistung der Anwendung zu verbessern. Aus diesem Grund bieten einige Anbieter Unterstützung für den Empfang mehrerer **Recordsets**in einem einzelnen Roundtrip. Dies wird im folgenden Thema erläutert:  
   
--   [Mehrere Recordsets empfangen](../../../ado/guide/data/receiving-multiple-recordsets.md)
+-   [Empfangen von mehreren Recordsets](../../../ado/guide/data/receiving-multiple-recordsets.md)

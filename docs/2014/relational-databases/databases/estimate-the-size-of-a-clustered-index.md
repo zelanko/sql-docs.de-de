@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054126"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
@@ -115,7 +115,7 @@ ms.locfileid: "66054126"
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen verwendet wird  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen verwendet wird  
  Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern der oberen Ebenen des Indexes erforderlich ist:  
   
 1.  Geben Sie die Anzahl der Spalten mit fester und mit variabler Länge im Indexschlüssel an, und berechnen Sie den Speicherplatz, der für deren Speicherung erforderlich ist:  
@@ -174,27 +174,27 @@ ms.locfileid: "66054126"
   
 7.  Berechnen Sie die Anzahl der Ebenen im Index:  
   
-     ***Non-Leaf_Levels*** = 1 + Index_Rows_Per_Page protokollieren (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Nicht-leaf_Levels*** = 1 + Protokoll Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Runden Sie diese Zahl auf die nächste ganze Zahl auf. Dieser Wert schließt die Blattebene des gruppierten Index nicht mit ein.  
   
 8.  Berechnen Sie die Anzahl der inneren Knotenseiten im Index:  
   
-     ***Num_Index_Pages =*** ∑Ebene ***(Num_Leaf_Pages / (Index_Rows_Per_Page***<sup>Ebene</sup>***))***  
+     ***Num_Index_Pages =*** ∑ Ebene ***(Num_Leaf_Pages/(Index_Rows_Per_Page***<sup>Ebene</sup>***))***  
   
      wobei 1 <= Level <= ***Non-leaf_Levels***  
   
      Runden Sie jeden Summanden auf die nächste ganze Zahl auf. Stellen Sie sich als einfaches Beispiel einen Index vor, bei dem ***Num_Leaf_Pages*** = 1000 und ***Index_Rows_Per_Page*** = 25. gilt. Die erste Indexebene über der Blattebene speichert 1.000 Indexzeilen, dies bedeutet eine Indexzeile pro Blattseite. Dabei passen 25 Indexzeilen auf eine Seite. Dies bedeutet, dass 40 Seiten zum Speichern dieser 1.000 Indexzeilen erforderlich sind. Die nächste Ebene des Indexes muss 40 Zeilen speichern. Dies bedeutet, dass 2 Seiten erforderlich sind. Die letzte Ebene des Indexes muss zwei Zeilen speichern. Dies bedeutet, dass eine Seite erforderlich ist. Daraus ergeben sich 43 innere Knotenseiten im Index. Wenn Sie diese Werte in den oben genannten Formeln verwenden, ergibt sich Folgendes:  
   
-     ***Non-Leaf_Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***Nicht-leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, der die Anzahl der im Beispiel beschriebenen Seiten.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43, dies ist die Anzahl der im Beispiel beschriebenen Seiten.  
   
 9. Berechnen Sie die Größe des Indexes (insgesamt 8.192 Byte pro Seite):  
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## <a name="step-3-total-the-calculated-values"></a>Schritt 3: Addieren der berechneten Werte  
+## <a name="step-3-total-the-calculated-values"></a>Schritt 3: Addieren der berechneten Werte  
  Addieren Sie die Werte, die in den beiden vorherigen Schritten erzielt wurden:  
   
  Größe des gruppierten Indexes (in Bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -221,7 +221,7 @@ ms.locfileid: "66054126"
   
      Informationen zu den Speicherplatzanforderungen von Sparsespalten finden Sie unter [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Schätzen der Größe einer Tabelle](estimate-the-size-of-a-table.md)   
  [Erstellen gruppierter Indizes](../indexes/create-clustered-indexes.md)   

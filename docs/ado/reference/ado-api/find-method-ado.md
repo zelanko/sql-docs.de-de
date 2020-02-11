@@ -17,14 +17,14 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918620"
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
-Sucht eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Zeile, die die angegebenen Kriterien erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilenposition auf den gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, oder zum Ende (Start) von der **Recordset**.  
+Durchsucht ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) nach der Zeile, die die angegebenen Kriterien erfüllt. Optional können die Suchrichtung, die Anfangs Zeile und der Offset der Anfangs Zeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilen Position für den gefundenen Datensatz festgelegt. Andernfalls wird die Position auf das Ende (oder den Anfang) des **Recordsets**festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,39 +35,39 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
 #### <a name="parameters"></a>Parameter  
  *Kriterien*  
- Ein **Zeichenfolge** -Wert, der eine Anweisung, die der Name der Spalte, einen Vergleichsoperator und einen Wert mit angeben, in die Suche enthält.  
+ Ein **Zeichen** folgen Wert, der eine-Anweisung enthält, die den Spaltennamen, den Vergleichs Operator und den Wert angibt, der in der Suche verwendet werden soll.  
   
- *SkipRows*  
- Dies ist optional. Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, den Zeilenoffset aus der aktuellen Zeile oder *starten* Lesezeichen aus, um die Suche zu starten. Standardmäßig beginnt die Suche in der aktuellen Zeile.  
+ *Skiprows*  
+ Optional. Ein **Long** -Wert, dessen Standardwert 0 (null) ist, der den Zeilen Offset aus der aktuellen Zeile oder dem *Start* Lesezeichen angibt, um die Suche zu starten. Standardmäßig wird die Suche in der aktuellen Zeile gestartet.  
   
- *SearchDirection*  
- Optional. Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf die aktuelle Zeile oder die nächste verfügbare Zeile in die Richtung für die Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** lautet der Wert **AdSearchForward**. Bei einer nicht erfolgreiche Suche wird am Anfang der **Recordset** lautet der Wert **AdSearchBackward**.  
+ *Suchrichtung*  
+ Optional. Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) -Wert, der angibt, ob die Suche mit der aktuellen Zeile oder der nächsten verfügbaren Zeile in der Suchrichtung beginnen soll. Eine fehlgeschlagene Suche wird am Ende des **Recordsets** angehalten, wenn der Wert **adsearchforward**lautet. Eine nicht erfolgreiche Suche wird am Anfang des **Recordsets** angehalten, wenn der Wert **adsearchrückwärts**lautet.  
   
- *Start*  
- Optional. Ein **Variant** Lesezeichen, das als Anfangsposition für die Suche funktioniert.  
+ *Starten*  
+ Optional. Ein **Variant** -Lesezeichen, das als Startposition für die Suche fungiert.  
   
-## <a name="remarks"></a>Hinweise  
- Kann nur ein einzelner Spaltennamen angegeben werden, *Kriterien*. Diese Methode unterstützt keine Suche nach mehreren Spalten.  
+## <a name="remarks"></a>Bemerkungen  
+ In den *Kriterien*kann nur ein einspaltige Name angegeben werden. Diese Methode unterstützt keine Suchvorgänge mit mehreren Spalten.  
   
- Der Vergleichsoperator im *Kriterien* möglicherweise " **>** "(größer als)," **\<** " (kleiner als), "=" (gleich), "> =" (größer als oder gleich) "< =" (kleiner als oder gleich), "<>" (ungleich), oder "like" (Mustervergleich).  
+ Der Vergleichs Operator in den *Kriterien* kann "**>**" (größer als), "**\<**" (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) sein.  
   
- Der Wert in *Kriterien* kann eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte werden in einfache Anführungszeichen oder "#" (Nummernzeichen) ein (z. B. "State ="WA"" oder "Status = #WA #"). Date-Werte als "#" (Nummernzeichen) ein Trennzeichen (z. B. "Start_date > #7/22/97 #"). Diese Werte können Stunden, Minuten und Sekunden an, dass Zeitstempel enthalten, sollten keine Millisekunden oder kommt es zu Fehlern.  
+ Der Wert in den *Kriterien* kann eine Zeichenfolge, eine Gleit Komma Zahl oder ein Datum sein. Zeichen folgen Werte werden durch einfache Anführungszeichen oder #-Zeichen (Nummern Zeichen) getrennt (z. b. "State = ' WA '" oder "State = #WA #"). Datumswerte werden durch die Zeichen "#" (Nummern Zeichen) getrennt (z. b. "start_date > #7/22/97 #"). Diese Werte können Stunden, Minuten und Sekunden enthalten, um Zeitstempel anzugeben, Sie sollten jedoch keine Millisekunden enthalten, oder es werden Fehler auftreten.  
   
- Wenn der Vergleichsoperator "like" ist, darf der Zeichenfolgenwert ein Sternchen (*), um die einem oder mehreren Vorkommen eines beliebigen Zeichens oder einer Teilzeichenfolge suchen. Z. B. "werde Zustand wie\*'" Maine und Massachusetts. Sie können auch führende und nachfolgende Sternchen, eine Teilzeichenfolge innerhalb der Werte finden. Z. B. "State wie"\*als\*"" übereinstimmt, Alaska Arkansas und Massachusetts.  
+ Wenn der Vergleichs Operator "like" ist, kann der Zeichen folgen Wert ein Sternchen (*) enthalten, um eine oder mehrere Vorkommen eines beliebigen Zeichens oder einer Teil Zeichenfolge zu suchen. Beispiel: "State like\*es" entspricht "Maine and Massachusetts". Sie können auch führende und nachfolgende Sternchen verwenden, um eine Teil Zeichenfolge zu finden, die in den Werten enthalten ist. Beispielsweise entspricht "State like"\*as\*"" Alaska, Arkansas und Massachusetts.  
   
- Sternchen können nur am Ende einer Zeichenfolge für die Kriterien oder am Anfang und Ende einer Kriterienzeichenfolge verwendet werden, wie oben gezeigt. Sie können nicht das Sternchen als führender Platzhalter verwenden ("* str'), oder als eine eingebettete Platzhalter ('s\*R"). Dadurch wird einen Fehler.  
-  
-> [!NOTE]
->  Wenn eine aktuelle Zeilenposition vor dem Aufruf nicht festgelegt ist, wird ein Fehler auftreten **finden**. Jede Methode, die Position der Zeile, z. B. legt [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), aufgerufen werden soll, bevor **finden**.  
+ Sternchen können nur am Ende einer Kriterienzeichenfolge oder am Anfang und am Ende einer Kriterienzeichenfolge verwendet werden, wie oben gezeigt. Sie können das Sternchen nicht als führenden Platzhalter ("* str") oder als eingebetteten Platzhalter ("\*r") verwenden. Dies führt zu einem Fehler.  
   
 > [!NOTE]
->  Aufrufen der **finden** Methode für ein Recordset, und die aktuelle Position im Recordset auf dem letzten Datensatz oder ein Dateiende (EOF) ist, wird dort nicht alles. Aufrufen, müssen Sie die **MoveFirst** Methode, um die aktuelle Position/Cursor auf den Anfang des Recordset-Objekts festzulegen.  
+>  Wenn eine aktuelle Zeilen Position vor dem Aufrufen von **Find**nicht festgelegt ist, tritt ein Fehler auf. Jede Methode, die die Zeilen Position festlegt, [wie z](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). b. "", sollte vor dem Aufrufen von " **Find**" aufgerufen werden.  
+  
+> [!NOTE]
+>  Wenn Sie die **Find** -Methode für ein Recordset aufzurufen und die aktuelle Position im Recordset den letzten Datensatz oder das Ende der Datei (EOF) enthält, werden Sie nichts finden. Sie müssen die Methode " **muvefirst** " aufzurufen, um die aktuelle Position/den Cursor auf den Anfang des Recordsets festzulegen.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Suchen Sie die Methode – Beispiel (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Find Method-Beispiel (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)   
- [Optimieren Sie die dynamische Eigenschaft (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
+ [Optimieren von Eigenschaften-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)

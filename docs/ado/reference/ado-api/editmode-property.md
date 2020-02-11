@@ -16,35 +16,35 @@ ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918984"
 ---
 # <a name="editmode-property"></a>EditMode-Eigenschaft
 Gibt den Bearbeitungsstatus des aktuellen Datensatzes an.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt eine [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) Wert.  
+ Gibt einen [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) -Wert zurück.  
   
-## <a name="remarks"></a>Hinweise  
- ADO verwaltet einen Bearbeitung Puffer mit den aktuellen Datensatz verknüpft ist. Diese Eigenschaft gibt an, ob Änderungen an diesen Puffer vorgenommen wurden, oder gibt an, ob ein neuer Datensatz erstellt wurde. Verwenden der **EditMode** Eigenschaft, um den Bearbeitungsstatus des aktuellen Datensatzes zu bestimmen. Sie können für ausstehende Änderungen testen, wenn ein Bearbeitungsprozess unterbrochen wurde und zu bestimmen, ob Sie benötigen die [Update](../../../ado/reference/ado-api/update-method.md) oder [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  
+## <a name="remarks"></a>Bemerkungen  
+ ADO verwaltet einen Bearbeitungs Puffer, der dem aktuellen Datensatz zugeordnet ist. Diese Eigenschaft gibt an, ob an diesem Puffer Änderungen vorgenommen wurden oder ob ein neuer Datensatz erstellt wurde. Verwenden Sie die **EditMode** -Eigenschaft, um den Bearbeitungsstatus des aktuellen Datensatzes zu bestimmen. Sie können auf ausstehende Änderungen testen, wenn ein Bearbeitungsvorgang unterbrochen wurde, und feststellen, ob Sie die [Update](../../../ado/reference/ado-api/update-method.md) -oder [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode verwenden müssen.  
   
- In *sofortupdatemodus* der **EditMode** Eigenschaft wird auf zurückgesetzt **AdEditNone** nach einem erfolgreichen Aufruf der **aktualisieren** Methode wird aufgerufen . Wenn ein Aufruf von [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) erfolgreich löscht keine Datensätze in der Datenquelle (z. B. aufgrund von Verletzungen der referenziellen Integrität), die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) bleibt im Bearbeitungsmodus befindet (**EditMode** = **AdEditInProgress**). Aus diesem Grund **CancelUpdate** muss aufgerufen werden, bevor Sie den aktuellen Datensatz (z. B. mit [verschieben](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), oder [schließen](../../../ado/reference/ado-api/close-method-ado.md) ).  
+ Im *sofort Update Modus* wird die **EditMode** -Eigenschaft auf " **adEditNone** " zurückgesetzt, nachdem ein erfolgreicher Aufruf der **Update** -Methode aufgerufen wurde. Wenn durch einen [Delete-DELETE](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Vorgang der Datensatz oder die Datensätze in der Datenquelle (z. b. aufgrund von Verletzungen der referenziellen Integrität) nicht erfolgreich gelöscht werden, verbleibt das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Bearbeitungsmodus (**EditMode** = **adEditInProgress**). Daher muss **CancelUpdate** aufgerufen werden, bevor der aktuelle Datensatz (z. b. [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)oder [Close](../../../ado/reference/ado-api/close-method-ado.md) ) verschoben wird.  
   
- In *Update Batchmodus* (in dem der Anbieter speichert mehrere Änderungen, und sie in der zugrunde liegenden Datenquelle schreibt, nur bei Aufruf der [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode), den Wert des der **EditMode**  -Eigenschaft geändert wird, wenn der erste Vorgang ausgeführt wird, und es nicht, durch einen Aufruf zurückgesetzt wird der **Update** Methode. Nachfolgende Vorgänge ändern den Wert der nicht der **EditMode** -Eigenschaft, auch wenn andere Vorgänge ausgeführt werden. Z. B. wenn der erste Vorgang um einen neuen Datensatz hinzuzufügen, und der zweiten werden die Änderungen zu einem vorhandenen aufzeichnen, die Eigenschaft des **EditMode** weiterhin **AdEditAdd**. Die **EditMode** Eigenschaft wird nicht zurückgesetzt, um **AdEditNone** erst nach dem Aufruf von **UpdateBatch**. Um zu bestimmen, welche Vorgänge ausgeführt wurden, legen Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft [AdFilterPending](../../../ado/reference/ado-api/filtergroupenum.md) so, dass nur Datensätze mit ausstehenden Änderungen angezeigt werden werden, und überprüfen Sie die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft jedes Datensatzes zu bestimmen, welche Änderungen an den Daten vorgenommen wurden.  
+ Im *Batch Update Modus* (in dem der Anbieter mehrere Änderungen zwischenspeichert und Sie nur dann in die zugrunde liegende Datenquelle schreibt, wenn Sie die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode aufrufen), wird der Wert der **EditMode** -Eigenschaft geändert, wenn der erste Vorgang ausgeführt wird, und er wird nicht durch einen Aufrufen der **Update** -Methode zurückgesetzt. Nachfolgende Vorgänge ändern den Wert der **EditMode** -Eigenschaft nicht, auch wenn verschiedene Vorgänge ausgeführt werden. Wenn beispielsweise der erste Vorgang ist, einen neuen Datensatz hinzuzufügen, und der zweite Vorgang Änderungen an einem vorhandenen Datensatz vornimmt, ist die Eigenschaft von **EditMode** weiterhin **adEditAdd**. Die **EditMode** -Eigenschaft wird erst nach dem Aufrufen von **UpdateBatch**auf ' **adEditNone** ' zurückgesetzt. Um zu ermitteln, welche Vorgänge ausgeführt wurden, legen Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft auf [adfilterpending](../../../ado/reference/ado-api/filtergroupenum.md) fest, sodass nur Datensätze mit ausstehenden Änderungen sichtbar sind, und untersuchen Sie die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft jedes Datensatzes, um zu bestimmen, welche Änderungen an den Daten vorgenommen wurden.  
   
 > [!NOTE]
->  **EditMode** kann einen gültigen Wert zurückgeben, nur dann, wenn ein aktueller Datensatz vorhanden ist. **EditMode** gibt einen Fehler zurück, wenn [BOF oder EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ist "true", oder wenn der aktuelle Datensatz gelöscht wurde.  
+>  **EditMode** kann nur dann einen gültigen Wert zurückgeben, wenn ein aktueller Datensatz vorhanden ist. **EditMode** gibt einen Fehler zurück, wenn [BOF oder EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) true ist oder wenn der aktuelle Datensatz gelöscht wurde.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [CursorType, LockType und EditMode Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [CursorType, LockType und EditMode Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Cursor Type, LockType und EditMode Properties (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
+ [Beispiel für Cursor Type, LockType und EditMode Properties (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [AddNew-Methode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Delete-Methode (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)

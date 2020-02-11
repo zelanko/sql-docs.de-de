@@ -1,5 +1,5 @@
 ---
-title: Parameter (Eigenschaftenseite) (Berichts-Manager) | Microsoft-Dokumentation
+title: Parameter (Eigenschaften Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108120"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parameter (Eigenschaftenseite) (Berichts-Manager)
@@ -35,8 +35,8 @@ ms.locfileid: "66108120"
   
 4.  Wählen Sie die Registerkarte **Parameter** aus. Wenn die Registerkarte **Parameter** nicht angezeigt wird, enthält der Bericht keine Parameter.  
   
-## <a name="options"></a>Optionen  
- **Parametername**  
+## <a name="options"></a>Tastatur  
+ **Parameter Name**  
  Gibt den Namen des Parameters an.  
   
  **Datentyp**  
@@ -55,7 +55,7 @@ ms.locfileid: "66108120"
  **NULL**  
  Aktivieren Sie dieses Kontrollkästchen, um NULL als Standardwert anzugeben. Ein NULL-Wert bedeutet, dass der Bericht ausgeführt werden kann, auch wenn der Benutzer keinen Parameterwert bereitstellt. Falls in dieser Spalte kein Kontrollkästchen angezeigt wird, akzeptiert der Parameter keine NULL-Werte.  
   
- **Hide**  
+ **Hide (Ausblenden)**  
  Aktivieren Sie dieses Kontrollkästchen, um den Parameter im Parameterbereich auszublenden, der oben im Bericht angezeigt wird. Der Parameter wird weiterhin in den Abonnementsdefinitionsseiten angezeigt und kann ebenso noch in einer Berichts-URL angegeben werden. Das Ausblenden des Parameters ist hilfreich, wenn Sie den Bericht immer mit dem von Ihnen angegebenen Standardwert ausführen möchten.  
   
  Deaktivieren Sie dieses Kontrollkästchen, wenn Sie möchten, dass der Parameter im Bericht sichtbar ist.  
@@ -65,11 +65,11 @@ ms.locfileid: "66108120"
   
  Deaktivieren Sie dieses Kontrollkästchen, wenn Sie den Bericht im unbeaufsichtigten Modus ausführen möchten (z. B., um Momentaufnahmen vom Berichtsverlauf oder der Berichtsausführung zu generieren), wenn Sie denselben Parameterwert für alle Benutzer verwenden möchten oder wenn keine Benutzereingabe für den Wert erforderlich ist.  
   
- **Anzeigetext**  
+ **Anzeige Text**  
  Stellen Sie eine Textzeichenfolge bereit, die neben dem Parametertextfeld angezeigt wird. Diese Zeichenfolge enthält eine Bezeichnung oder beschreibenden Text. Die Länge der Zeichenfolge ist nicht begrenzt. Längere Textzeichenfolgen werden innerhalb des vorhandenen Platzes umbrochen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Allgemeine Eigenschaften (Seite), Berichte &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

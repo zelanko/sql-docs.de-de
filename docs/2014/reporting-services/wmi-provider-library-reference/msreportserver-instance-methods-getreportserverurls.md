@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097186"
 ---
-# <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls-Methode (WMI: MSReportServer_Instance)
+# <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>GetReportServerUrls-Methode (WMI: MSReportServer_Instance)
   Gibt eine Liste von URLs zurück, über die Benutzer auf den Berichtsserver und den Berichts-Manager zugreifen können  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,10 +35,10 @@ public void GetReportServerUrls(out string[] applicationName,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *ApplicationName[]*  
+ *ApplicationName []*  
  Ein Array, das die installierten Anwendungen enthält. Werte sind entweder `ReportServerWebService` oder `ReportManager`.  
   
- *URLs[]*  
+ *URLs []*  
  Ein Array, das die erfolgreich registrierten URLs enthält  
   
  *Länge*  
@@ -49,13 +49,13 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Rückgabewerte  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Von WMI-Verwaltungsobjekten verfügbar gemachte Methoden werden durch die InvokeMethod-Funktion aufgerufen. Weitere Informationen finden Sie in "Ausführen von Methoden für Verwaltungsobjekte" in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI-Dokumentation.  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
   
   

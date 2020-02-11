@@ -1,5 +1,5 @@
 ---
-title: Sp_help_targetserver (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_targetserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085068"
 ---
-# <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
+# <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Listet alle Zielserver auf.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,26 +40,26 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @server_name = ] 'server_name'` Der Name des Servers, für den Informationen zurückgegeben werden sollen. *Server_name* ist **nvarchar(30)** , hat den Standardwert NULL.  
+`[ @server_name = ] 'server_name'`Der Name des Servers, für den Informationen zurückgegeben werden sollen. *server_name* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn *Server_name* nicht angegeben ist, **Sp_help_targetserver** gibt dieses Resultset zurück.  
+ Wenn *server_name* nicht angegeben ist, gibt **sp_help_targetserver** dieses Resultset zurück.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|Server-ID.|  
-|**server_name**|**nvarchar(30)**|Servername.|  
-|**location**|**nvarchar(200)**|Standort des angegebenen Servers.|  
+|**server_id**|**int**|Die Server-ID.|  
+|**server_name**|**nvarchar (30)**|Servername.|  
+|**Hotels**|**nvarchar(200)**|Standort des angegebenen Servers.|  
 |**time_zone_adjustment**|**int**|Zeitzonenanpassung ausgehend von der GMT (Greenwich Mean Time) in Stunden.|  
 |**enlist_date**|**datetime**|Datum der Eintragung des angegebenen Servers.|  
 |**last_poll_date**|**datetime**|Datum, an dem der Server zuletzt nach Aufträgen abgefragt wurde.|  
-|**status**|**int**|Status des angegebenen Servers.|  
+|**Stands**|**int**|Status des angegebenen Servers.|  
 |**unread_instructions**|**int**|Gibt an, ob auf dem Server ungelesene Anweisungen vorhanden sind. Wenn alle Zeilen heruntergeladen wurden, ist diese Spalte **0**.|  
 |**local_time**|**datetime**|Lokales Datum und lokale Uhrzeit auf dem Zielserver. Diese basieren auf der lokalen Zeit des Zielservers zum Zeitpunkt des letzten Abrufs des Masterservers.|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|Microsoft Windows-Benutzer, der den Zielserver eingetragen hat.|  
+|**enlisted_by_nt_user**|**nvarchar (100)**|Microsoft Windows-Benutzer, der den Zielserver eingetragen hat.|  
 |**poll_interval**|**int**|Häufigkeit in Sekunden, mit der der Zielserver den Master-SQLServerAgent-Dienst abruft, um Aufträge herunterzuladen und den Auftragsstatus hochzuladen.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -89,12 +89,12 @@ EXEC dbo.sp_help_targetserver N'SEATTLE2' ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_targetservergroup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [dbo. sysdownloadlist &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

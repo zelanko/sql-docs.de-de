@@ -1,5 +1,5 @@
 ---
-title: BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VC++) | Microsoft-Dokumentation
+title: BOF-, EOF-und Bookmark-Eigenschaften Beispiel (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920366"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VC++)
-Die erste Funktion in diesem Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften, die eine Meldung angezeigt, wenn ein Benutzer versucht, überspringen den ersten oder letzten Datensatz einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Er verwendet die [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md) Eigenschaft ermöglichen den Benutzer einen Datensatz im flag einer **Recordset** und später auf ihn.  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF-, EOF-und Bookmark-Eigenschaften Beispiel (VC + +)
+Die erste Funktion in diesem Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -Eigenschaften, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  
   
- Die zweite Funktion verwendet die Lesezeicheneigenschaft platziert die **Lesezeichen** von jedem anderen Datensatz aus einer **Recordset** in ein Array, und klicken Sie dann unter Verwendung des Recordset-Filter.  
+ Die zweite Funktion verwendet die Bookmark-Eigenschaft, um das **Lesezeichen** jedes anderen Datensatzes aus einem **Recordset** in ein Array zu platzieren, und filtert dann das Recordset mit dem Array.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -205,7 +205,7 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BOF-und EOF-Eigenschaft (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [BOF, EOF-Eigenschaften (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark-Eigenschaft (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

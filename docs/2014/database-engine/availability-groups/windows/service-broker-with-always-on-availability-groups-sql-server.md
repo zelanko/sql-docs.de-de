@@ -1,5 +1,5 @@
 ---
-title: Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft-Dokumentation
+title: Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788530"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -25,17 +25,17 @@ ms.locfileid: "62788530"
   
  **In diesem Thema:**  
   
--   [Anforderungen, damit ein Dienst in einer Verfügbarkeitsgruppe Remotenachrichten empfangen kann](#ReceiveRemoteMessages)  
+-   [Anforderungen an einen Dienst in einer Verfügbarkeits Gruppe, um Remote Nachrichten zu empfangen](#ReceiveRemoteMessages)  
   
--   [Anforderungen zum Senden von Nachrichten an einen Remotedienst in einer Verfügbarkeitsgruppe](#SendRemoteMessages)  
+-   [Anforderungen zum Senden von Nachrichten an einen Remote Dienst in einer Verfügbarkeits Gruppe](#SendRemoteMessages)  
   
-##  <a name="ReceiveRemoteMessages"></a> Anforderungen, damit ein Dienst in einer Verfügbarkeitsgruppe Remotenachrichten empfangen kann  
+##  <a name="ReceiveRemoteMessages"></a>Anforderungen an einen Dienst in einer Verfügbarkeits Gruppe, um Remote Nachrichten zu empfangen  
   
-1.  **Stellen Sie sicher, dass die Verfügbarkeitsgruppe über einen Listener verfügt.**  
+1.  **Stellen Sie sicher, dass die Verfügbarkeits Gruppe über einen Listener verfügt.**  
   
-     Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
+     Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)besitzen.  
   
-2.  **Stellen Sie sicher, dass der Service Broker-Endpunkt vorhanden ist und ordnungsgemäß konfiguriert wird.**  
+2.  **Stellen Sie sicher, dass der Service Broker-Endpunkt vorhanden und ordnungsgemäß konfiguriert ist.**  
   
      Konfigurieren Sie für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, von der ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe gehostet wird, den Service Broker-Endpunkt wie folgt:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62788530"
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)konfigurieren.  
+     Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
 3.  **Erteilen Sie die CONNECT-Berechtigung für den Endpunkt.**  
   
@@ -69,16 +69,16 @@ ms.locfileid: "62788530"
   
      Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)konfigurieren.  
   
-4.  **Stellen Sie sicher, dass in „msdb“ entweder eine AutoCreatedLocal-Route oder eine Route zum angegebenen Dienst enthalten ist.**  
+4.  **Stellen Sie sicher, dass msdb entweder eine autokreatedlocal-Route oder eine Route zum jeweiligen Dienst enthält.**  
   
     > [!NOTE]  
-    >  Standardmäßig enthält jede Benutzerdatenbank einschließlich **msdb**die Route **AutoCreatedLocal**. Diese Route stimmt mit beliebigen Dienstnamen und Brokerinstanzen überein und gibt an, dass die Nachricht innerhalb der aktuellen Instanz übermittelt werden muss. **AutoCreatedLocal** hat eine niedrigere Priorität als Routen, in denen explizit ein bestimmter Dienst angegeben ist, der mit einer Remoteinstanz kommuniziert.  
+    >  Standardmäßig enthält jede Benutzerdatenbank einschließlich **msdb**die Route **AutoCreatedLocal**. Diese Route stimmt mit beliebigen Dienstnamen und Brokerinstanzen überein und gibt an, dass die Nachricht innerhalb der aktuellen Instanz übermittelt werden muss. **Autokreatedlocal** hat eine niedrigere Priorität als Routen, die explizit einen bestimmten Dienst angeben, der mit einer Remote Instanz kommuniziert.  
   
      Weitere Informationen zum Erstellen von Routen finden Sie unter [Service Broker-Routingbeispiele](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in der [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] -Version der Onlinedokumentation) und [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)konfigurieren.  
   
-##  <a name="SendRemoteMessages"></a> Anforderungen zum Senden von Nachrichten an einen Remotedienst in einer Verfügbarkeitsgruppe  
+##  <a name="SendRemoteMessages"></a>Anforderungen zum Senden von Nachrichten an einen Remote Dienst in einer Verfügbarkeits Gruppe  
   
-1.  **Erstellen Sie eine Route zum Zieldienst.**  
+1.  **Erstellen Sie eine Route zum Ziel Dienst.**  
   
      Konfigurieren Sie die Route wie folgt:  
   
@@ -97,24 +97,24 @@ ms.locfileid: "62788530"
   
      Weitere Informationen finden Sie unter [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)konfigurieren.  
   
-2.  **Stellen Sie sicher, dass in „msdb“ entweder eine AutoCreatedLocal-Route oder eine Route zum angegebenen Dienst enthalten ist.** (Weitere Informationen finden Sie unter [Anforderungen, damit ein Dienst in einer Verfügbarkeitsgruppe Remotenachrichten empfangen kann](#ReceiveRemoteMessages)weiter oben in diesem Thema.)  
+2.  **Stellen Sie sicher, dass msdb entweder eine autokreatedlocal-Route oder eine Route zum jeweiligen Dienst enthält.** (Weitere Informationen finden Sie unter [Anforderungen, damit ein Dienst in einer Verfügbarkeitsgruppe Remotenachrichten empfangen kann](#ReceiveRemoteMessages)weiter oben in diesem Thema.)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)  
+-   [Erstellen einer Route &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-route-transact-sql)  
   
 -   [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
--   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Erstellen oder konfigurieren Sie einen verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
 -   [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Einrichten von Anmeldekonten für die Datenbankspiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
+-   [Einrichten von Anmeldekonten für die Daten Bank Spiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
   

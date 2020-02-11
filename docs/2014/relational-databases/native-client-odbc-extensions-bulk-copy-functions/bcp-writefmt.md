@@ -1,5 +1,5 @@
 ---
-title: Bcp_writefmt | Microsoft-Dokumentation
+title: bcp_writefmt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689406"
 ---
-# <a name="bcpwritefmt"></a>bcp_writefmt
+# <a name="bcp_writefmt"></a>bcp_writefmt
   Erstellt eine Formatdatei, die eine Beschreibung des Formats der aktuellen Datendatei für das Massenkopieren enthält.  
   
 ## <a name="syntax"></a>Syntax  
@@ -49,13 +49,13 @@ szFormatFile
  *szFormatFile*  
  Pfad und Dateiname der Benutzerdatei zum Abrufen der Formatwerte für die Datendatei.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Durch Aufrufen von [bcp_columns](bcp-columns.md) und [bcp_colfmt](bcp-colfmt.md) wird das Format der Datendatei definiert. **bcp_writefmt** speichert diese Definition in der Datei, auf die von *szFormatFile*verwiesen wird. Weitere Informationen finden Sie unter [bcp_init](bcp-init.md).  
   
- Weitere Informationen zur Struktur von **Bcp** -datenformatdateien finden Sie unter [importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms Bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Weitere Informationen zur Struktur von **bcp** -Datenformat Dateien finden Sie unter [importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Verwenden Sie [bcp_readfmt](bcp-readfmt.md), um eine gespeicherte Formatdatei zu laden.  
   
@@ -117,7 +117,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopierfunktionen](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

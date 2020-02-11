@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d9d3dd9955f8b7f5cf6b02934f34af0d420dae8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780644"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>Ausführen gespeicherter Prozeduren: Aufrufen gespeicherter Prozeduren
@@ -27,7 +27,7 @@ ms.locfileid: "73780644"
   
   Wenn eine SQL-Anweisung eine gespeicherte Prozedur mit der ODBC CALL-Escape-Klausel aufruft, sendet der Microsoft® SQL Server™-Treiber die Prozedur mit dem RPC (Remote Stored Procedure Call)-Mechanismus an SQL Server. RPC-Anforderungen umgehen größtenteils das Analysieren der Anwendungen und die Parameterverarbeitung in SQL Server und sind schneller als die Transact-SQL EXECUTE-Anweisung.  
   
- Eine Beispielanwendung, die diese Funktion veranschaulicht, finden Sie unter [Verarbeiten von Rückgabe Codes &#40;und Ausgabe&#41;Parametern (ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)).  
+ Eine Beispielanwendung, die diese Funktion veranschaulicht, finden Sie unter [Verarbeiten von Rückgabe Codes und Ausgabeparametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>So führen Sie eine Prozedur als RPC aus  
   
@@ -44,10 +44,10 @@ ms.locfileid: "73780644"
 > [!NOTE]  
 >  Wenn eine Anwendung eine Prozedur mit der Transact-SQL EXECUTE-Syntax (statt mit der ODBC CALL-Escapesequenz) übermittelt, gibt der SQL Server ODBC-Treiber den Prozeduraufruf an SQL Server als SQL-Anweisung statt als RPC weiter. Darüber hinaus werden Ausgabeparameter nicht zurückgegeben, wenn die Transact SQL EXECUTE-Anweisung verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch  
-  [Batch Verarbeitung von Aufrufen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
- [Ausführen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
+## <a name="see-also"></a>Weitere Informationen  
+  [Batch Verarbeitung von gespeicherten Prozedur aufrufen](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Gespeicherte Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Aufrufen einer gespeicherten Prozedur](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [Vorgehensweisen](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+ [Prozeduren](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
   

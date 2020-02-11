@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit SQL Server (Eigenschaftenseite Verbindung) Integration Services | Microsoft-Dokumentation
+title: Verbindung mit Server herstellen (Seite ' Verbindungs Eigenschaften ') Integration Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,38 +14,38 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755242"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Verbinden mit SQL Server Integration Services (Eigenschaftenseite Verbindung)
-  Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen oder [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registrierte Server** registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssIS](../includes/ssis-md.md)]in diesem Dialogfeld angezeigt.  
+  Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen oder [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registrierte Server**registrieren. Beim Herstellen einer Verbindung werden die Optionen **verbinden** und **Optionen** nur in diesem Dialogfeld angezeigt. Beim Registrieren **** [!INCLUDE[ssIS](../includes/ssis-md.md)]wird nur **Test** und speichern in diesem Dialogfeld angezeigt.  
   
-## <a name="options"></a>Optionen  
- **Portnummer**  
+## <a name="options"></a>Tastatur  
+ **Port Nummer**  
  Geben Sie die Nummer des von [!INCLUDE[ssIS](../includes/ssis-md.md)]verwendeten Ports ein.  
   
- **Verbindungstimeout**  
- Geben Sie an, wie lange (in Sekunden) versucht werden soll, eine Verbindung herzustellen, bevor ein Timeout eintritt. Der Standardwert beträgt 15 Sekunden.  
+ **Verbindungs Timeout**  
+ Geben Sie die Anzahl der Sekunden ein, die auf das Herstellen einer Verbindung gewartet werden soll, bevor ein Timeout eintritt. Der Standardwert ist 15 Sekunden.  
   
- **Ausführungstimeout**  
+ **Ausführungs Timeout**  
  Geben Sie an, wie lange (in Sekunden) auf den Abschluss eines Tasks auf dem Server gewartet werden soll. Der Standardwert beträgt null Sekunden, d. h. es wird kein Timeout verwendet.  
   
- **Alles zurücksetzen**  
+ **Alle zurücksetzen**  
  Ersetzt alle manuell eingegebenen Verbindungseigenschaftswerte durch die Standardwerte.  
   
- **Verbinden**  
+ **Herstellen einer Verbindung**  
  Versucht, mithilfe der aufgelisteten Werte eine Verbindung herzustellen.  
   
  **Optionen**  
  Klicken Sie hier, um die Anzeige des Dialogfelds zu ändern und die zusätzlichen Serververbindungsoptionen, z. B. Speichern des Kennworts, auszublenden.  
   
- **Testenen**  
+ **Test**  
  Klicken Sie hier, um beim Registrieren von [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registrierte Server**die Verbindung zu testen.  
   
- **Speichern**  
+ **Sicher**  
  Speichert die Einstellungen in **Registrierte Server**.  
   
   

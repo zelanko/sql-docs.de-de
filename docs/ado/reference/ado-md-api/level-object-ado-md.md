@@ -16,44 +16,44 @@ ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949601"
 ---
 # <a name="level-object-ado-md"></a>Level-Objekt (ADO MD)
-Enthält eine Menge von Elementen, von die jede den gleichen Rang innerhalb einer Hierarchie hat.  
+Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer Hierarchie aufweist.  
   
-## <a name="remarks"></a>Hinweise  
- Mit dem Auflistungen und Eigenschaften einer **Ebene** -Objekts können Sie folgende Möglichkeiten:  
+## <a name="remarks"></a>Bemerkungen  
+ Mit den Auflistungen und Eigenschaften eines **Level** -Objekts können Sie folgende Aufgaben ausführen:  
   
--   Identifizieren der **Ebene** mit der [Namen](../../../ado/reference/ado-md-api/name-property-ado-md.md) und [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) Eigenschaften.  
+-   Identifizieren Sie die **Ebene** mit den Eigenschaften " [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) " und " [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) ".  
   
--   Zurückgeben einer Zeichenfolge beim Anzeigen von der **Ebene** mit der [Beschriftung](../../../ado/reference/ado-md-api/caption-property-ado-md.md) Eigenschaft.  
+-   Gibt eine Zeichenfolge zurück, die beim Anzeigen der **Ebene** mit der [Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md) -Eigenschaft verwendet werden soll.  
   
--   Zurückgeben einer sinnvollen Zeichenfolge, die beschreibt, die **Ebene** mit der [Beschreibung](../../../ado/reference/ado-md-api/description-property-ado-md.md) Eigenschaft.  
+-   Gibt eine sinnvolle Zeichenfolge zurück, die die **Ebene** mit der [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) -Eigenschaft beschreibt.  
   
--   Zurückgeben der [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekte, aus denen die **Ebene** mit der [Mitglieder](../../../ado/reference/ado-md-api/members-collection-ado-md.md) Auflistung.  
+-   Gibt die [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) -Objekte zurück, die die **Ebene** mit der [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) -Auflistung bilden.  
   
--   Die Anzahl der Ebenen zurück, aus dem Stammverzeichnis der **Ebene** mit der [Tiefe](../../../ado/reference/ado-md-api/depth-property-ado-md.md) Eigenschaft.  
+-   Gibt die Anzahl der Ebenen aus dem Stamm der **Ebene** mit der Eigenschaft " [Tiefe](../../../ado/reference/ado-md-api/depth-property-ado-md.md) " zurück.  
   
--   Verwenden Sie das standard-ADO [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um weitere Informationen zum Abrufen der **Ebene** Objekt.  
+-   Verwenden Sie die standardmäßige ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen über das **Level** -Objekt zu erhalten.  
   
- Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
+ Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|Beschreibung|Eine aussagekräftige Beschreibung der Ebene.|  
-|DimensionUniqueName|Der eindeutige Name des der [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
-|HierarchyUniqueName|Der eindeutige Name der Hierarchie.|  
-|LevelCaption|Eine Bezeichnung oder Beschriftung, die der Ebene zugeordnet werden soll.|  
+|BESCHREIBUNG|Eine aussagekräftige Beschreibung der Ebene.|  
+|Dimensionuniquename|Der eindeutige Name der [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
+|Hierarchyuniquename|Der eindeutige Name der Hierarchie.|  
+|LevelCaption|Eine Bezeichnung oder Beschriftung, die der Ebene zugeordnet ist.|  
 |LevelCardinality|Die Anzahl der Elemente in der Ebene.|  
-|LevelGUID|Die GUID der Ebene.|  
+|Levelguid|Die GUID der Ebene.|  
 |LevelName|Der Name der Ebene.|  
-|LevelNumber|Der Abstand zwischen der Ebene und der Stamm der Hierarchie.|  
+|LevelNumber|Der Abstand zwischen der Ebene und dem Stamm der Hierarchie.|  
 |LevelType|Der Typ der Ebene.|  
 |LevelUniqueName|Der eindeutige Name der Ebene.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
@@ -62,7 +62,7 @@ Enthält eine Menge von Elementen, von die jede den gleichen Rang innerhalb eine
   
 -   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CubeDef-Beispiel (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Levels-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   

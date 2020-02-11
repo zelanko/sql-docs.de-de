@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835742"
 ---
 # <a name="manage-a-cdc-service"></a>Verwalten eines CDC Service
@@ -42,9 +42,9 @@ ms.locfileid: "62835742"
   
  Klicken Sie auf **Stop All Instances** , um den Change Data Capture-Vorgang für alle Instanzen im Dienst zu beenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](how-to-create-the-sql-server-change-database-instance.md)   
  [Verwalten eines CDC Service über die CDC Designer Console](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
+ [Verwenden des Assistenten für neue Instanzen](use-the-new-instance-wizard.md)  
   
   

@@ -27,16 +27,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232229"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
   Importieren Sie eine Datei einer Datenebenenanwendung (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Importvorgang wird in zwei Phasen eine neue DAC erstellt.  
   
 1.  Beim Import wird mithilfe der in der Exportdatei gespeicherten DAC-Definition eine neue DAC und eine zugeordnete Datenbank erstellt. Dieser Vorgang entspricht dem Erstellen einer neuen DAC aus der Definition in einer DAC-Paketdatei bei einer DAC-Bereitstellung.  
@@ -45,7 +45,7 @@ ms.locfileid: "75232229"
   
  
 ## <a name="sql-server-utility"></a>SQL Server-Hilfsprogramm  
- Beim Importieren einer DAC in eine verwaltete Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenebenenanwendungen** details page.  
+ Beim Importieren einer DAC in eine verwaltete Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
   
 ## <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Standardmäßig verfügt die während des Imports erstellte Datenbank über alle Standardeinstellungen aus der CREATE DATABASE-Anweisung, mit der Ausnahme, dass die Datenbanksortierung und der Kompatibilitätsgrad auf die in der DAC-Exportdatei festgelegten Werte gesetzt sind. Eine DAC-Exportdatei verwendet die Werte aus der ursprünglichen Datenbank.  
@@ -65,7 +65,7 @@ ms.locfileid: "75232229"
  Eine DAC kann nur von Mitgliedern der festen Serverrollen **sysadmin** oder **serveradmin** importiert werden bzw. unter Verwendung von Anmeldenamen aus der festen Serverrolle **dbcreator** , die über ALTER ANY LOGIN-Berechtigungen verfügen. Außerdem kann das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto mit der Bezeichnung **sa** zum Importieren einer DAC verwendet werden. Um eine DAC mit Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] importieren zu können, müssen Sie Mitglied der Rollen "loginmanager" oder "serveradmin" sein. Um eine DAC ohne Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] importieren zu können, müssen Sie Mitglied der Rolle "dbmanager" oder "serveradmin" sein.  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>Verwenden des Assistenten zum Importieren von Datenebenenanwendungen  
- **Führen Sie die folgenden Schritte aus, um den Assistenten zu starten:**  
+ **Gehen Sie folgendermaßen vor, um den Assistenten zu starten:**  
   
 1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Verbindung zu einer Instanz von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]her.  
   
@@ -75,31 +75,31 @@ ms.locfileid: "75232229"
   
     -   [Seite "Einführung"](#Introduction)  
   
-    -   [Seite "Einstellungen importieren"](#Import_settings)  
+    -   [Importeinstellungen (Seite)](#Import_settings)  
   
-    -   [Daten Bank Einstellungsseite](#Database_settings)  
+    -   [Datenbankeinstellungen (Seite)](#Database_settings)  
   
-    -   [Zusammenfassungs Seite](#Summary)  
+    -   [Seite "Zusammenfassung"](#Summary)  
   
-    -   [Seite "Status"](#Progress)  
+    -   [Status (Seite)](#Progress)  
   
-    -   [Seite "Ergebnisse"](#Results)  
+    -   [Ergebnisse (Seite)](#Results)  
   
-###  <a name="Introduction"></a>Seite "Einführung"  
+###  <a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte für den Assistenten zum Importieren von Datenebenenanwendungen beschrieben.  
   
  **Optionen**  
   
 -   **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
--   **Weiter** : geht zur Seite **Import Einstellungen** über.  
+-   Durch **Weiter** gelangen Sie zur Seite **Importeinstellungen**.  
   
--   **Abbrechen** : bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen**: Bricht den Vorgang ab und schließt den Assistenten.  
   
-###  <a name="Import_settings"></a>Seite "Einstellungen importieren"  
+###  <a name="Import_settings"></a> Importeinstellungen (Seite)  
  Verwenden Sie diese Seite, um den Speicherort der zu importierenden BACPAC-Datei anzugeben.  
   
--   **Aus lokalem** Datenträger importieren: Klicken Sie auf **Durchsuchen** , um den lokalen Computer zu navigieren, oder geben Sie den Pfad im angegebenen Bereich an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
+-   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
   
 -   **Importieren aus Azure** : importiert eine BacPac-Datei aus einem Azure-Container. Sie müssen eine Verbindung mit einem Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
   
@@ -107,22 +107,22 @@ ms.locfileid: "75232229"
   
      Um fortzufahren, geben Sie die zu importierende BACPAC-Datei an, und klicken Sie dann auf **Öffnen**.  
   
-###  <a name="Database_settings"></a>Daten Bank Einstellungsseite  
+###  <a name="Database_settings"></a> Datenbankeinstellungen (Seite)  
  Auf dieser Seite können Sie Einzelheiten zu der Datenbank angeben, die erstellt wird.  
   
  **Für eine lokale Instanz von SQL Server:**  
   
--   **Neuer Datenbankname** : Geben Sie einen Namen für die importierte Datenbank an.  
+-   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Datendatei Pfad** : Geben Sie ein lokales Verzeichnis für Datendateien an. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
+-   **Datendateipfad**: Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
--   **Protokolldatei Pfad** : Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
+-   **Protokolldateipfad**: Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
  **Für eine SQL-Datenbank:**  
   
--   **Neuer Datenbankname** : Geben Sie einen Namen für die importierte Datenbank an.  
+-   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
 -   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** : geben [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Sie Business [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder Web an. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](https://www.windowsazure.com/home/tour/database/) .  
   
@@ -135,18 +135,18 @@ ms.locfileid: "75232229"
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-###  <a name="Summary"></a>Zusammenfassungs Seite  
+###  <a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Importvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Importvorgang abzubrechen und den Assistenten zu beenden.  
   
-###  <a name="Progress"></a>Seite "Status"  
+###  <a name="Progress"></a> Status (Seite)  
  Auf dieser Seite wird eine Statusanzeige angezeigt, die den Status des Vorgangs anzeigt. Klicken Sie auf die Option **Details anzeigen** , um ausführliche Informationen anzuzeigen.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-###  <a name="Results"></a>Seite "Ergebnisse"  
+###  <a name="Results"></a> Ergebnisse (Seite)  
  Auf dieser Seite wird angegeben, ob die Vorgänge zum Importieren und Erstellen der Datenbank erfolgreich waren oder ob Fehler bei den einzelnen Aktionen auftraten. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
- Klicken Sie auf **Schließen**, um den Assistenten zu schließen.  
+ Klicken Sie auf **Schließen** , um den Assistenten zu schließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](data-tier-applications.md)   

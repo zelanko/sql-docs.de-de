@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876692"
 ---
 # <a name="backup-device-media-contents-page"></a>Sicherungsmedium (Seite Medieninhalt)
@@ -28,7 +28,7 @@ ms.locfileid: "62876692"
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Zeigt Informationen zu den einzelnen Medien, zum Mediensatz und zu den Sicherungssätzen an.  
   
  **Medien**  
@@ -58,12 +58,12 @@ ms.locfileid: "62876692"
 |Header|Werte|  
 |------------|------------|  
 |**Name**|Name des Sicherungssatzes.|  
-|**Typ**|Das gesicherte Objekt: Datenbank, Datei oder  *\<leer >* (bei Transaktionsprotokollen).|  
+|**Typ**|Das gesicherte Objekt: Datenbank, Datei oder *\<eer>* (bei Transaktionsprotokollen).|  
 |**Komponente**|Der Typ der ausgeführten Sicherung: Vollständig, Differenziell oder Transaktionsprotokoll.|  
 |**Server**|Name der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , durch die der Sicherungsvorgang ausgeführt wurde.|  
 |**Datenbank**|Name der Datenbank, die gesichert wurde.|  
 |**Position**|Position des Sicherungssatzes auf dem Volume.|  
-|**Datum**|Datum und Uhrzeit des Endes des Sicherungsvorgangs, entsprechend den Ländereinstellungen des Clients.|  
+|**Date**|Datum und Uhrzeit des Endes des Sicherungsvorgangs, entsprechend den Ländereinstellungen des Clients.|  
 |**Größe**|Größe des Sicherungssatzes in Byte.|  
 |**Benutzername**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
 |**Ablauf**|Datum und Uhrzeit des Zeitpunkts, an dem der Sicherungssatz verfällt.|  
@@ -88,7 +88,7 @@ ms.locfileid: "62876692"
   
 -   [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   

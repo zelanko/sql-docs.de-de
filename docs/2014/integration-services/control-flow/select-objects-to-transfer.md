@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830404"
 ---
 # <a name="select-objects-to-transfer"></a>Objekte auswählen (Übertragungsdialogfeld)
@@ -26,12 +26,12 @@ ms.locfileid: "62830404"
   
  Um nur bestimmte Objekte für die Übertragung auszuwählen, aktivieren Sie jeweils das Kontrollkästchen in der ersten Spalte der Zeile, in der das zu übertragende Objekt aufgeführt ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md)   
  [Editor für den Task „Aufträge übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)   
  [Editor für den Task „Anmeldungen übertragen“ &#40;Seite „Anmeldungen“&#41;](../transfer-logins-task-editor-logins-page.md)   
  [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Objekte“&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)   
- [Editor für den Task „In ,master‘ gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Meldungen“&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+ [Editor für den Task „In master gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+ [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Nachrichten“&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
   

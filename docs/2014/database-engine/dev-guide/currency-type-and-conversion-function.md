@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637647"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency-Typ und Konvertierungsfunktion
@@ -23,10 +23,12 @@ ms.locfileid: "73637647"
 > [!CAUTION]  
 >  Die in diesem Beispiel verwendeten Wechselkurse sind frei erfunden und sollten nicht für tatsächliche finanzielle Transaktionen verwendet werden.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73637647"
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz sind, die Sie verwenden, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
+-   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete-Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -79,7 +81,7 @@ ms.locfileid: "73637647"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
+8.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
   
 9. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   
@@ -494,7 +496,7 @@ DROP PROCEDURE [dbo].[usp_LookupConversionRate]
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwendungsszenarios und Beispiele für Common Language Runtime-Integration &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwendungs Szenarien und Beispiele für die CLR-&#41; Integration von Common Language Runtime &#40;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

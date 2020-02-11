@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2242511b34c2fc5e588318362b504358b330a30
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245138"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Aktivieren, Deaktivieren und Löschen von Breakpoints
@@ -26,7 +26,7 @@ ms.locfileid: "75245138"
  Durch das Deaktivieren von Breakpoints wird verhindert, dass der Breakpoint die Ausführung anhält, wobei die Definition jedoch beibehalten wird, falls Sie den Breakpoint später aktivieren möchten. Durch das Löschen von Breakpoints werden sie endgültig gelöscht. Sie müssen einen neuen Breakpoint umschalten, um die Ausführung für die Anweisung anzuhalten.  
   
 ## <a name="to-open-the-breakpoints-window"></a>So öffnen Sie das Fenster "Breakpoints"  
- **So öffnen Sie das Fenster "Breakpoints"**  
+ **To open the Breakpoints window**  
   
  Zum Öffnen des Fensters **Breakpoints** haben Sie folgende Möglichkeiten:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75245138"
 -   Drücken Sie STRG+ALT+B.  
   
 ## <a name="to-disable-a-single-breakpoint"></a>So deaktivieren Sie einen einzelnen Breakpoint  
- **So deaktivieren Sie einen einzelnen Breakpoint**  
+ **To disable a single breakpoint**  
   
  Sie können einen einzelnen Breakpoint folgendermaßen deaktivieren:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75245138"
 -   Deaktivieren Sie im Fenster "Breakpoints" das Kontrollkästchen links neben dem Breakpoint.  
   
 ## <a name="to-disable-all-breakpoints"></a>So deaktivieren Sie alle Breakpoints  
- **So deaktivieren Sie alle Breakpoints**  
+ **To disable all breakpoints**  
   
  Sie können alle Breakpoints folgendermaßen deaktivieren:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75245138"
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints deaktivieren** .  
   
 ## <a name="to-enable-a-single-breakpoint"></a>So aktivieren Sie einen einzelnen Breakpoint  
- **So aktivieren Sie einen einzelnen Breakpoint**  
+ **To enable a single breakpoint**  
   
  Sie können einen einzelnen Breakpoint folgendermaßen aktivieren:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75245138"
 -   Aktivieren Sie im Fenster "Breakpoints" das Kontrollkästchen links neben dem Breakpoint.  
   
 ## <a name="to-enable-all-breakpoints"></a>So aktivieren Sie alle Breakpoints  
- **So aktivieren Sie alle Breakpoints**  
+ **To enable all breakpoints**  
   
  Sie können alle Breakpoints folgendermaßen aktivieren:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75245138"
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints aktivieren** .  
   
 ## <a name="to-delete-a-single-breakpoint"></a>So löschen Sie einen einzelnen Breakpoint  
- **So löschen Sie einen einzelnen Breakpoint**  
+ **To delete a single breakpoint**  
   
  Sie können einen einzelnen Breakpoint folgendermaßen löschen:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75245138"
 -   Wählen Sie im Fenster "Breakpoints" den Breakpoint aus, und drücken Sie dann ENTF.  
   
 ## <a name="to-delete-all-breakpoints"></a>So löschen Sie alle Breakpoints  
- **So löschen Sie alle Breakpoints**  
+ **To delete all breakpoints**  
   
  Sie können alle Breakpoints folgendermaßen löschen:  
   
@@ -93,6 +93,6 @@ ms.locfileid: "75245138"
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints löschen** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Umschalten eines Breakpoints](../spatial/point.md)  
+ [Ein- und Ausschalten eines Breakpoints](../spatial/point.md)  
   
   

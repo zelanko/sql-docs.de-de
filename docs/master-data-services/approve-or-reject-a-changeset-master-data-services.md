@@ -11,10 +11,10 @@ ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 401983aa2e5094560f7bcc852c839986ffe4234d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728775"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Genehmigen oder Ablehnen eines Changesets (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73728775"
 
   Ein Changeset ist eine Auflistung der ausstehenden Änderungen an den Masterdaten. Wenn die Entitätsänderungen die Genehmigung durch den Administrator erfordern und ein Changeset zur Genehmigung übermittelt wird, können Sie das Changeset überprüfen und dann genehmigen oder ablehnen.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
   
--   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie benötigen Administratorberechtigungen für die Entität.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73728775"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>So können Sie ein Changeset genehmigen oder ablehnen  
   
-1.  Wählen Sie auf der Startseite von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] das Modell und die Version aus, und klicken Sie anschließend auf **Explorer**.  
+1.  Wählen Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] auf der Startseite das Modell und die Version aus, und klicken Sie dann auf **Explorer**.  
   
 2.  Klicken Sie im Menü **Entitäten** auf eine Entität.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "73728775"
   
 6.  Klicken Sie auf **Genehmigen** , um das Changeset zu genehmigen. Für das Changeset wird automatisch ein Commit ausgeführt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Changesets &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen Sie ein Changeset-&#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [Anwenden und Aktualisieren eines Changesets &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
- [Ein Changeset bestätigen oder übermitteln &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+ [Ein Changeset &#40;Master Data Services Commit oder übermitteln&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
   

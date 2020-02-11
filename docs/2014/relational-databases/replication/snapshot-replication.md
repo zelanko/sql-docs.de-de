@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffc03bf3f50c629dc53913959dc01b0a6443edef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270180"
 ---
 # <a name="snapshot-replication"></a>Momentaufnahmereplikation
@@ -42,13 +42,13 @@ ms.locfileid: "63270180"
   
  **In diesem Thema**  
   
- [Funktionsweise der Momentaufnahmereplikation](#HowWorks)  
+ [Funktionsweise der Momentaufnahme Replikation](#HowWorks)  
   
  [Momentaufnahme-Agent](#SnapshotAgent)  
   
- [Verteilungs-Agent und Merge-Agent](#DistAgent)  
+ [Verteilungs-und Merge-Agents](#DistAgent)  
   
-##  <a name="HowWorks"></a> Funktionsweise der Momentaufnahmereplikation  
+##  <a name="HowWorks"></a>Funktionsweise der Momentaufnahme Replikation  
  Standardmäßig verwenden alle drei Replikationstypen eine Momentaufnahme zum Initialisieren von Abonnenten. Die Momentaufnahmedateien werden stets vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Momentaufnahme-Agent generiert. Welcher Agent die Dateien jedoch übermittelt, hängt vom verwendeten Replikationstyp ab. Bei der Momentaufnahme- und der Transaktionsreplikation werden die Dateien vom Verteilungs-Agent übermittelt, wohingegen die Dateien bei der Mergereplikation vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Merge-Agent übermittelt werden. Der Momentaufnahme-Agent wird auf dem Verteiler ausgeführt. Der Verteilungs-Agent oder der Merge-Agent werden auf dem Verteiler für Pushabonnements oder auf dem Abonnenten für Pullabonnements ausgeführt.  
   
  Momentaufnahmen können entweder sofort nach dem Erstellen des Abonnements generiert und angewendet werden oder nach einem Zeitplan, der zum Zeitpunkt der Erstellung der Veröffentlichung festgelegt wurde. Der Momentaufnahme-Agent bereitet Momentaufnahmedateien vor, die das Schema und die Daten von veröffentlichten Tabellen und Datenbankobjekten enthalten, speichert die Dateien im Momentaufnahmeordner und zeichnet Nachverfolgungsinformationen in der Verteilungsdatenbank auf dem Verteiler auf. Beim Konfigurieren eines Verteilers geben Sie einen StandardMomentaufnahmeordner an, Sie können jedoch stattdessen oder zusätzlich einen alternativen Speicherort für eine Veröffentlichung angeben.  
@@ -57,9 +57,9 @@ ms.locfileid: "63270180"
   
  Die folgende Abbildung zeigt die wichtigsten Komponenten der Momentaufnahmereplikation.  
   
- ![Komponenten und Datenfluss der Momentaufnahmereplikation](media/snapshot.gif "Snapshot replication components and data flow")  
+ ![Komponenten und Datenfluss für Momentaufnahmereplikation](media/snapshot.gif "Komponenten und Datenfluss für Momentaufnahmereplikation")  
   
-##  <a name="SnapshotAgent"></a> Momentaufnahme-Agent  
+##  <a name="SnapshotAgent"></a>Momentaufnahmen-Agent  
  Bei der Mergereplikation wird jedes Mal eine Momentaufnahme generiert, wenn der Momentaufnahme-Agent ausgeführt wird. Bei der Transaktionsreplikation hängt die Momentaufnahmegenerierung von der Einstellung der **immediate_sync**-Veröffentlichungseigenschaft ab. Ist die Eigenschaft auf TRUE festgelegt (die Standardeinstellung bei der Verwendung des Assistenten für neue Veröffentlichung), wird bei jedem Ausführen des Momentaufnahme-Agents eine Momentaufnahme generiert, der jederzeit auf einen Abonnenten angewendet werden kann. Ist die Eigenschaft auf FALSE festgelegt (die Standardeinstellung bei der Verwendung von **sp_addpublication**), wird die Momentaufnahme nur dann generiert, wenn seit dem letzten Ausführen des Momentaufnahme-Agents ein neues Abonnement hinzugefügt wurde. Abonnenten können erst synchronisiert werden, nachdem der Momentaufnahme-Agent abgeschlossen ist.  
   
  Der Momentaufnahme-Agent führt die folgenden Schritte aus:  
@@ -84,7 +84,7 @@ ms.locfileid: "63270180"
   
  Während der Momentaufnahmegenerierung können Sie keine Schemaänderungen an den veröffentlichten Tabellen vornehmen. Nach dem Generieren der Momentaufnahmedateien können Sie sie mithilfe von Windows-Explorer im Momentaufnahmeordner anzeigen.  
   
-##  <a name="DistAgent"></a> Verteilungs-Agent und Merge-Agent  
+##  <a name="DistAgent"></a>Verteilungs-Agent und Merge-Agent  
  Bei Momentaufnahmeveröffentlichungen wird jedes Mal, wenn der Verteilungs-Agent für die Veröffentlichung ausgeführt wird, eine neue Momentaufnahmen auf jeden Abonnenten verschoben, der noch nicht synchronisiert wurde, der für eine erneute Initialisierung markiert ist oder der neue Artikel enthält.  
   
  Bei der Momentaufnahme- und der Transaktionsreplikation führt der Verteilungs-Agent die folgenden Schritte aus:  

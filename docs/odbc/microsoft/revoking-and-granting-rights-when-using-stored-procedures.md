@@ -1,5 +1,5 @@
 ---
-title: Entziehen und Erteilen von Berechtigungen, bei Verwendung von gespeicherten Prozeduren | Microsoft-Dokumentation
+title: Aufheben und erteilen von Rechten bei der Verwendung gespeicherter Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 24070039-03ab-4623-a681-6308802eb399
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91fcf722554fe1840465329e707c792a6bbab6db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987956"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>Widerrufen und Erteilen von Berechtigungen beim Verwenden gespeicherter Prozeduren
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Der Microsoft ODBC-Treiber für Oracle wird die folgende Fehlermeldung zurück, wenn Benutzerrechte gewährt und Sie dann für eine Tabelle, die von einer gespeicherten Prozedur zugegriffen widerrufen werden:  
+ Der Microsoft ODBC Driver for Oracle gibt die folgende Fehlermeldung zurück, wenn Benutzerrechte erteilt und dann für eine Tabelle aufgehoben werden, auf die von einer gespeicherten Prozedur zugegriffen wird:  
   
- SQL_ERROR=-1  
+ SQL_ERROR =-1  
   
- von SQLDiagRec() = "Falsche Anzahl von Parametern [Microsoft] [ODBC-Treiber für Oracle]"  
+ szErrorMsg = "[Microsoft] [ODBC Driver for Oracle] falsche Anzahl von Parametern"  
   
- von SQLDiagRec() = "[Microsoft] [ODBC-Treiber für Oracle]-Syntaxfehler oder zugriffsverletzung"  
+ szErrorMsg = "[Microsoft] [ODBC Driver for Oracle] Syntax Fehler oder Zugriffsverletzung"  
   
- Der Aufruf an die Oracle OCI-Funktion Odessp() in diesem Szenario schlägt fehl, jedoch ist erforderlich, um die Standardparameter zu implementieren. Nachdem die zugrunde liegende Tabellenberechtigungen geändert werden, muss die gespeicherte Prozedur neu kompiliert werden, bevor Sie ihn erneut ausführen.
+ Der aufrufsvorgang der Oracle OCI-Funktion odessp () schlägt in diesem Szenario fehl, ist jedoch erforderlich, um Standardparameter zu implementieren. Nachdem die zugrunde liegenden Tabellen Berechtigungen geändert wurden, muss die gespeicherte Prozedur vor der erneuten Ausführung erneut kompiliert werden.

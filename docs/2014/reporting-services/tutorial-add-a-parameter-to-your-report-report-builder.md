@@ -11,57 +11,57 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099092"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
   Fügen Sie dem Bericht einen Parameter hinzu, um Benutzern das Filtern von Berichtsdaten aus der Datenquelle oder im Bericht zu ermöglichen. Berichtsparameter werden automatisch für jeden Abfrageparameter erstellt, den Sie in eine Datasetabfrage einschließen. Der Parameterdatentyp bestimmt, wie der Parameter auf der Symbolleiste der Berichtsansicht angezeigt wird.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
-##  <a name="BackToTop"></a> Lernziele  
+##  <a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen eines Matrixberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten](#Setup)  
   
-2.  [Organisieren von Daten, Auswählen des Layouts und Formats mit dem Tabellen- oder Matrixassistenten](#CompleteWizard)  
+2.  [Organisieren von Daten und Auswählen des Layouts und Formats mit dem Tabellen- oder Matrix-Assistenten](#CompleteWizard)  
   
 3.  [Hinzufügen eines Abfrageparameters zum Erstellen eines Berichtsparameters](#Query)  
   
 4.  [Ändern des Standarddatentyps und anderer Eigenschaften für einen Berichtsparameter](#ChangeDefaultProperties)  
   
-    1.  [Fügen Sie ein Dataset aus, um verfügbare Werte bereitzustellen und die Anzeigenamen](#AddDataset)  
+    1.  [Hinzufügen eines Datasets, um verfügbare Werte und Anzeigenamen anzuzeigen](#AddDataset)  
   
-    2.  [Geben Sie verfügbarer Werte zum Erstellen einer Dropdownliste von Werten an](#AvailableValues)  
+    2.  [Angeben verfügbarer Werte zum Erstellen einer Dropdownliste von Werten](#AvailableValues)  
   
-    3.  [Angeben von Standardwerten, damit der Bericht automatisch ausgeführt wird.](#DefaultValues)  
+    3.  [Angeben von Standardwerten zur automatischen Ausführung des Berichts](#DefaultValues)  
   
-    4.  [Suchen Sie nach Werten aus einem Dataset, das Name/Wert-Paare verfügt.](#NameValue)  
+    4.  [Suchen nach Werten in einem Dataset mit Name-Wert-Paaren](#NameValue)  
   
 5.  [Anzeigen des ausgewählten Parameterwerts im Bericht](#Expression)  
   
 6.  [Verwenden des Berichtsparameters in einem Filter](#Filter)  
   
-7.  [Ändern des Berichtsparameters-Parameter, um mehrere Werte zu akzeptieren.](#Multivalued)  
+7.  [Ändern des Berichtsparameters in einen mehrwertigen Parameter](#Multivalued)  
   
 8.  [Hinzufügen eines booleschen Parameters für bedingte Sichtbarkeit](#Boolean)  
   
-9. [Hinzufügen eines Berichtstitels](#Title)  
+9. [Hinzufügen eines Berichts Titels](#Title)  
   
 10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Ungefähre Dauer dieses Lernprogramms: 25 Minuten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a> 1. Erstellen eines Matrixberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
+##  <a name="Setup"></a>1. Erstellen eines Matrix Berichts und eines Datasets mit dem Tabellen-oder Matrix-Assistenten  
  Erstellen Sie einen Matrixbericht, eine Datenquelle und ein Dataset.  
   
 > [!NOTE]  
@@ -69,14 +69,14 @@ ms.locfileid: "66099092"
   
 #### <a name="to-create-a-new-matrix-report"></a>So erstellen Sie einen neuen Matrixbericht  
   
-1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
+1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-     Das Dialogfeld **Erste Schritte** wird angezeigt.  
+     Das Dialogfeld " **Getting Started** " wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
+    >  Wenn das Dialogfeld " **Getting Started** " nicht angezeigt wird, klicken Sie auf der Schaltfläche " **Berichts-Generator** " auf **neu**.  
   
-2.  Überprüfen Sie im linken Bereich, ob **Bericht** ausgewählt ist.  
+2.  Vergewissern Sie sich im linken Bereich, dass der **Bericht** ausgewählt ist.  
   
 3.  Klicken Sie im rechten Bereich auf **Tabellen- oder Matrix-Assistent**.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "66099092"
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine Datenquelle vom Typ **SQL Server** aus. Wählen Sie in der Liste eine Datenquelle aus, oder navigieren Sie zum Berichtsserver, um eine Datenquelle auszuwählen.  
+7.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine Datenquelle vom Typ **SQL Server**aus. Wählen Sie in der Liste eine Datenquelle aus, oder navigieren Sie zum Berichtsserver, um eine Datenquelle auszuwählen.  
   
 8.  Klicken Sie auf **Weiter**.  
   
-9. Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
+9. Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
   
 10. Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -118,11 +118,11 @@ ms.locfileid: "66099092"
   
      Diese Abfrage enthält keine Abfrageparameter. Abfrageparameter werden später in diesem Lernprogramm hinzugefügt.  
   
-11. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset enthält 11 Datenzeilen, die die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt, und enthält die folgenden Spalten: StoreID, Unterkategorie und Menge.  
+11. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset enthält 11 Datenzeilen, in denen die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt wird, und die folgenden Spalten: "StoreID", "Subcategory" und "Quantity".  
   
 12. Klicken Sie auf **Weiter**.  
   
-##  <a name="CompleteWizard"></a> 2. Organisieren von Daten, Auswählen des Layouts und Formats mit dem Tabellen- oder Matrixassistenten  
+##  <a name="CompleteWizard"></a>2. Organisieren von Daten, auswählen von Layout und Stil im Tabellen-oder Matrix-Assistenten  
  Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Daten bereit. Im Vorschaufenster des Assistenten können Sie das Ergebnis der Datengruppierung visualisieren, bevor Sie den Tabellen- oder Matrixentwurf abschließen.  
   
 #### <a name="to-organize-data-into-groups"></a>So gruppieren Sie Daten  
@@ -137,13 +137,13 @@ ms.locfileid: "66099092"
   
 4.  Klicken Sie auf **Weiter**.  
   
-5.  Auf der **wählen ein Layout** Seite **Optionen**, überprüfen Sie, ob **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+5.  Vergewissern Sie sich, dass auf der Seite **Layout auswählen** unter **Optionen die Option** **Teil-und Gesamtsummen anzeigen** ausgewählt ist.  
   
      Wenn Sie den Bericht ausführen, werden in der letzten Spalte die Gesamtmenge jeder Unterkategorie für alle Geschäfte und in der letzten Zeile die Gesamtmenge für alle Unterkategorien für jedes Geschäft angezeigt.  
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich "Formate", eine Art.  
+7.  Wählen Sie auf der Seite Format **auswählen** im Bereich Stile einen Stil aus.  
   
 8.  Klicken Sie auf **Fertig stellen**.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66099092"
   
  In diesem Szenario wird in den Spaltenüberschriften die Geschäfts-ID, aber nicht der Geschäftsnamen angezeigt. Später fügen Sie einen Ausdruck hinzu, um in einem Dataset, das Geschäfts-ID/Geschäftsname-Paare enthält, nach dem Geschäftsnamen suchen.  
   
-##  <a name="Query"></a> 3. Hinzufügen eines Abfrageparameters zum Erstellen eines Berichtsparameters  
+##  <a name="Query"></a>3. Hinzufügen eines Abfrage Parameters zum Erstellen eines Berichts Parameters  
  Wenn Sie einer Abfrage einen Abfrageparameter hinzufügen, erstellt der Berichts-Generator automatisch einen eindeutigen Berichtsparameter mit Standardeigenschaften für Name, Eingabe und Datentyp.  
   
 #### <a name="to-add-a-query-parameter"></a>So fügen Sie einen Abfrageparameter hinzu  
@@ -166,15 +166,15 @@ ms.locfileid: "66099092"
   
 2.  Erweitern Sie im Berichtsdatenbereich den Ordner **Datasets** , klicken Sie mit der rechten Maustaste auf **DataSet1**, und klicken Sie anschließend auf **Abfrage**.  
   
-3.  Fügen Sie dem folgenden [!INCLUDE[tsql](../includes/tsql-md.md)] die `WHERE`-Klausel als letzte Zeile in der Abfrage hinzu:  
+3.  Fügen Sie die [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` folgende Klausel als letzte Zeile in der Abfrage hinzu:  
   
     ```  
     WHERE StoreID = (@StoreID)  
     ```  
   
-     Die `WHERE` -Klausel beschränkt die abgerufenen Daten auf die Geschäfts-ID, die vom Abfrageparameter angegeben wird *@StoreID* .  
+     Die `WHERE` -Klausel schränkt die abgerufenen Daten auf die Geschäfts-ID ein, die durch *@StoreID*den-Abfrage Parameter angegeben wird.  
   
-4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Dialogfeld **Abfrageparameter definieren** wird geöffnet, und Sie werden aufgefordert, einen Wert für den Abfrageparameter *@StoreID* .  
+4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Dialogfeld **Abfrageparameter definieren** wird geöffnet, und Sie werden aufgefordert, einen Wert für den Abfrageparameter *@StoreID*.  
   
 5.  Geben Sie im Feld **Parameterwert**die Zahl **200**ein.  
   
@@ -186,16 +186,16 @@ ms.locfileid: "66099092"
   
 8.  Erweitern Sie im Berichtsdatenbereich den Ordner **Parameter** .  
   
- Beachten Sie, dass es nun ein Berichtsparameter namens *@StoreID* . Standardmäßig weist der Parameter den Datentyp **Text**. Da es sich bei der Geschäfts-ID um eine ganze Zahl handelt, ändern Sie den Datentyp im nächsten Verfahren in "Integer".  
+ Beachten Sie, dass nun ein Berichts Parameter mit *@StoreID*dem Namen vorhanden ist. Standardmäßig weist der-Parameter den Datentyp **Text**auf. Da es sich bei der Geschäfts-ID um eine ganze Zahl handelt, ändern Sie den Datentyp im nächsten Verfahren in "Integer".  
   
-##  <a name="ChangeDefaultProperties"></a> 4. Ändern des Standarddatentyps und anderer Eigenschaften für einen Berichtsparameter  
+##  <a name="ChangeDefaultProperties"></a>4. Ändern des Standard Datentyps und anderer Eigenschaften für einen Berichts Parameter  
  Nachdem Sie einen Berichtsparameter erstellt haben, können Sie die Standardwerte für Eigenschaften anpassen.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>So ändern Sie den Standarddatentyp für einen Berichtsparameter  
   
-1.  Im berichtsdatenbereich unter dem **Parameter** Knoten mit der rechten Maustaste *@StoreID* , und klicken Sie dann auf **Parametereigenschaften**.  
+1.  Klicken Sie im Berichtsdaten Bereich unter dem Knoten **Parameter** mit der rechten *@StoreID*Maustaste auf, und klicken Sie dann auf **Parameter Eigenschaften**.  
   
-2.  Geben Sie in der Eingabeaufforderung **Store Identifier?** Dieser Text wird auf der Berichts-Viewer-Symbolleiste angezeigt, wenn Sie den Bericht ausführen.  
+2.  Geben Sie in der Eingabeaufforderung **Store Identifier ein?** Dieser Text wird auf der Berichts-Viewer-Symbolleiste angezeigt, wenn Sie den Bericht ausführen.  
   
 3.  Wählen Sie in der Dropdownliste **Datentyp**die Option **Ganze Zahl**aus.  
   
@@ -203,11 +203,11 @@ ms.locfileid: "66099092"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Zeigen Sie eine Vorschau des Berichts an. Der Berichts-Viewer zeigt die Eingabeaufforderung für *@StoreID* .  
+6.  Zeigen Sie eine Vorschau des Berichts an. Der Berichts-Viewer zeigt die Eingabe *@StoreID*Aufforderung für an.  
   
 7.  Geben Sie auf der Berichts-Viewer-Symbolleiste neben Geschäfts-ID die Zahl **200**ein, und klicken anschließend auf **Bericht anzeigen**.  
   
-##  <a name="AddDataset"></a> 4a. Hinzufügen eines Datasets, um verfügbare Werte und Anzeigenamen anzuzeigen  
+##  <a name="AddDataset"></a>4a. Hinzufügen eines Datasets, um verfügbare Werte und Anzeigenamen anzuzeigen  
  Um sicherzustellen dass ein Benutzer nur gültige Werte für einen Parameter eingeben kann, können Sie eine Dropdownliste von Werten erstellen. Die Werte können aus einem Dataset oder einer von Ihnen angegebenen Liste stammen. Verfügbare Werte müssen aus einem Dataset stammen, dessen Abfrage keinen Verweis auf den Parameter enthält.  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>So erstellen Sie ein Dataset für gültige Werte für einen Parameter  
@@ -218,9 +218,9 @@ ms.locfileid: "66099092"
   
 3.  Geben Sie im Feld **Name**den Namen **Geschäfte**ein.  
   
-4.  Wählen Sie die **ein in den eigenen Bericht eingebettetes Dataset verwenden** Option.  
+4.  Wählen Sie die Option **in meinen Bericht eingebettetes DataSet verwenden aus** .  
   
-5.  In **Datenquelle**, aus der Dropdown-Liste, wählen Sie die Datenquelle, die Sie im ersten Verfahren erstellt haben.  
+5.  Wählen Sie unter **Datenquelle**in der Dropdown Liste die Datenquelle aus, die Sie im ersten Verfahren erstellt haben.  
   
 6.  Vergewissern Sie sich, dass unter **Abfragetyp**die Option **Text** ausgewählt ist.  
   
@@ -237,12 +237,12 @@ ms.locfileid: "66099092"
   
      Im Berichtsdatenbereich werden die Felder „StoreID“ und „StoreName“ unter dem Datasetknoten **Geschäfte** angezeigt.  
   
-##  <a name="AvailableValues"></a> 4b. Angeben verfügbarer Werte zum Erstellen einer Dropdownliste von Werten  
+##  <a name="AvailableValues"></a>4B. Angeben verfügbarer Werte zum Erstellen einer Dropdownliste von Werten  
  Nachdem Sie ein Dataset erstellt haben, um verfügbare Werte bereitzustellen, müssen Sie die Berichtseigenschaften ändern, um das Dataset und das Feld anzugeben, aus denen die Dropdownliste gültiger Werte auf der Berichts-Viewer-Symbolleiste aufgefüllt wird.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>So stellen Sie verfügbare Werte für einen Parameter aus einem Dataset bereit  
   
-1.  Der berichtsdatenbereich mit der Maustaste Parameters *@StoreID* , und klicken Sie dann auf **Parametereigenschaften**.  
+1.  Klicken Sie im Berichtsdaten Bereich mit der rechten Maustaste auf *@StoreID*den Parameter, und klicken Sie dann auf **Parameter Eigenschaften**.  
   
 2.  Klicken Sie auf **Verfügbare Werte**und anschließend auf **Werte aus Abfrage abrufen**.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "66099092"
   
 6.  Klicken Sie auf **Allgemein**.  
   
-7.  Geben Sie in der Eingabeaufforderung **Store Name?**  
+7.  Geben Sie in der Eingabeaufforderung den **Namen Store Name ein?**  
   
      Dem Benutzer steht jetzt anstelle einer Liste von Geschäfts-IDs eine Liste von Geschäftsnamen zur Verfügung, um seine Auswahl zu treffen. Beachten Sie, dass der Parameterdatentyp weiterhin **Integer** lautet, da der Parameter nicht auf dem Geschäftsnamen, sondern auf der Geschäfts-ID basiert.  
   
@@ -262,22 +262,22 @@ ms.locfileid: "66099092"
   
 9. Zeigen Sie eine Vorschau des Berichts an.  
   
-     In der Berichts-Viewer-Symbolleiste ist das Parametertextfeld jetzt als Dropdownliste angezeigt, enthält  **\<wählen Sie einen Wert >** .  
+     Auf der Berichts-Viewer-Symbolleiste ist das Parameter Textfeld jetzt eine Dropdown Liste, in der die Option ** \<Wert>auswählen **angezeigt wird.  
   
-10. Die Dropdownliste, wählen Sie Contoso Catalog Store, und klicken Sie dann auf **View-Bericht**.  
+10. Wählen Sie in der Dropdown Liste die Option "Configuration Catalog Store" aus, und klicken Sie dann auf " **Bericht anzeigen**".  
   
  Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
   
-##  <a name="DefaultValues"></a> 4c. Angeben von Standardwerten zur automatischen Ausführung des Berichts  
+##  <a name="DefaultValues"></a>4C. Angeben von Standardwerten zur automatischen Ausführung des Berichts  
  Sie können einen Standardwert für jeden Berichtsparameter angeben, damit der Bericht automatisch ausgeführt wird.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>So geben Sie einen Standardwert aus einem Dataset an  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdaten Bereich mit der rechten *@StoreID*Maustaste auf, und klicken Sie dann auf **Parameter Eigenschaften**.  
   
-3.  Klicken Sie auf **Standardwerte**, und klicken Sie dann auf **Werte aus Abfrage abrufen**.  
+3.  Klicken Sie auf **Standardwerte**und dann auf **Werte aus Abfrage erhalten**.  
   
 4.  Klicken Sie unter **Dataset**in der Dropdownliste auf den Eintrag **Stores**.  
   
@@ -287,15 +287,15 @@ ms.locfileid: "66099092"
   
 7.  Zeigen Sie eine Vorschau des Berichts an.  
   
- Für *@StoreID* , im Berichts-Viewer zeigt den Wert "Contoso North America Online Store". Dies ist der erste Wert aus dem Resultset für das Dataset **speichert**. Im Bericht wird die verkaufte Menge von Digitalkameras für die Geschäfts-ID **199**angezeigt.  
+ Für *@StoreID*zeigt der Berichts-Viewer den Wert "Configuration Manager-Nordamerika Online Store" an. Dies ist der erste Wert aus dem Resultset für das DataSet **Stores**. Im Bericht wird die verkaufte Menge von Digitalkameras für die Geschäfts-ID **199**angezeigt.  
   
 #### <a name="to-specify-a-custom-default-value"></a>So geben Sie einen benutzerdefinierten Standardwert an  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdaten Bereich mit der rechten *@StoreID*Maustaste auf, und klicken Sie dann auf **Parameter Eigenschaften**.  
   
-3.  Klicken Sie auf **Standardwerte**, und klicken Sie auf **Geben Sie Werte**, und klicken Sie dann auf **hinzufügen**. Eine neue Wertzeile wird hinzugefügt.  
+3.  Klicken Sie auf **Standardwerte**, und klicken Sie auf **Werte angeben**und dann auf **Hinzufügen**. Eine neue Wertzeile wird hinzugefügt.  
   
 4.  Geben Sie im Feld **Wert**die Zeichenfolge **200**ein.  
   
@@ -303,9 +303,9 @@ ms.locfileid: "66099092"
   
 6.  Zeigen Sie eine Vorschau des Berichts an.  
   
- Für *@StoreID* , im Berichts-Viewer zeigt den Wert "Contoso Catalog Store". Dies ist der Anzeigename für Geschäfts-ID **200**. Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
+ Für *@StoreID*zeigt der Berichts-Viewer den Wert "Configuration Manager-Katalog Speicher" an. Dies ist der Anzeige Name für die Geschäfts-ID **200**. Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
   
-##  <a name="NameValue"></a> 4d. Suchen nach Werten in einem Dataset mit Name-Wert-Paaren  
+##  <a name="NameValue"></a>4D. Suchen nach Werten in einem Dataset mit Name-Wert-Paaren  
  Ein Dataset kann sowohl den Bezeichner als auch das entsprechende Namensfeld enthalten. Wenn Sie nur einen Bezeichner haben, können Sie in einem von Ihnen erstellten Dataset, das Name-Wert-Paare enthält, nach dem entsprechenden Namen suchen.  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>So suchen Sie nach einem Wert in einem Dataset  
@@ -326,26 +326,26 @@ ms.locfileid: "66099092"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Der Spaltenheader für das Geschäft enthält den Anzeigetext für einen komplexen Ausdruck: **<\<Expr>>** .  
+     Der Spaltenheader für das Geschäft enthält den Anzeige Text für einen komplexen Ausdruck: ** < \<expr->>**.  
   
 8.  Zeigen Sie eine Vorschau des Berichts an.  
   
  Im Textfeld oben auf jeder Seite wird anstelle der Geschäfts-ID der Geschäftsname angezeigt.  
   
-##  <a name="Expression"></a> 5. Anzeigen des ausgewählten Parameterwerts im Bericht  
+##  <a name="Expression"></a>5. Anzeigen des ausgewählten Parameter Werts im Bericht  
  Wenn ein Benutzer Fragen zu einem Bericht hat, ist es hilfreich, die ausgewählten Parameterwerte zu kennen. Die vom Benutzer ausgewählten Werte können für jeden Parameter im Bericht beibehalten werden. Sie können die Parameter z. B. in einem Textfeld im Seitenfuß anzeigen.  
   
 #### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>So zeigen Sie den ausgewählten Parameterwert und die Bezeichnung in einem Seitenfuß an  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Mit der rechten Maustaste des Seitenfußes, zeigen Sie auf **einfügen**, und klicken Sie dann auf **Textfeld**. Ziehen Sie das Textfeld neben das Textfeld mit dem Zeitstempel. Vergrößern Sie die Breite des Textfelds mit dem seitlichen Ziehpunkt.  
+2.  Klicken Sie mit der rechten Maustaste auf den Seitenfuß, zeigen Sie auf **Einfügen**, und klicken Sie dann auf **Textfeld**. Ziehen Sie das Textfeld neben das Textfeld mit dem Zeitstempel. Vergrößern Sie die Breite des Textfelds mit dem seitlichen Ziehpunkt.  
   
-3.  Ziehen Sie im Berichtsdatenbereich den Parameter *@StoreID* in das Textfeld. Im Textfeld wird `[@StoreID]`angezeigt.  
+3.  Ziehen Sie den Parameter *@StoreID* im Berichtsdaten Bereich in das Textfeld. Im Textfeld wird `[@StoreID]`angezeigt.  
   
 4.  Um die Parameterbezeichnung anzuzeigen, klicken Sie auf das Textfeld, bis der Einfügecursor nach dem vorhandenen Ausdruck angezeigt wird, geben Sie ein Leerzeichen ein, und ziehen Sie dann eine andere Kopie des Parameters im Berichtsdatenbereich in das Textfeld. Im Textfeld wird `[@StoreID] [@StoreID]`angezeigt.  
   
-5.  Mit der rechten Maustaste in des ersten Ausdrucks ein, und klicken Sie auf **Ausdruck**. Das Dialogfeld **Ausdruck** wird geöffnet. Ersetzen Sie den Text `Value` durch `Label`.  
+5.  Klicken Sie mit der rechten Maustaste auf den ersten Ausdruck und dann auf **Ausdruck**. Das Dialogfeld **Ausdruck** wird geöffnet. Ersetzen Sie den Text `Value` durch `Label`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -353,7 +353,7 @@ ms.locfileid: "66099092"
   
 7.  Zeigen Sie eine Vorschau des Berichts an.  
   
-##  <a name="Filter"></a> 6. Verwenden des Berichtsparameters in einem Filter  
+##  <a name="Filter"></a>6. Verwenden des Berichts Parameters in einem Filter  
  Mithilfe von Filtern können die in einem Bericht zu verwendenden Daten gesteuert werden, nachdem sie aus einer externen Datenquelle abgerufen wurden. Schließen Sie den Berichtsparameter in einen Filter für die Matrix ein, um Benutzern das Steuern der angezeigten Daten zu ermöglichen.  
   
 #### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>So geben Sie einen Parameter in einem Matrixfilter an  
@@ -366,9 +366,10 @@ ms.locfileid: "66099092"
   
 4.  Wählen Sie im Feld **Ausdruck**aus der Dropdownliste das Datasetfeld StoreID aus. Der Datentyp zeigt **Ganze Zahl**an. Wenn der Ausdruckswert ein Datasetfeld ist, wird der Datentyp automatisch festgelegt.  
   
-5.  In **Operator**, überprüfen Sie, ob `equals` (=) ausgewählt ist.  
+5.  Über **** prüfen Sie unter Operator `equals` , ob (=) ausgewählt ist.  
   
-6.  Geben Sie im Feld **Wert**die Zeichenfolge `[@StoreID]`ein. `[@StoreID]` ist die einfache Ausdruckssyntax, die `=Parameters!StoreID.Value`darstellt.  
+6.  Geben Sie in **Wert** Folgendes ein: `[@StoreID]`. 
+  `[@StoreID]` ist die einfache Ausdruckssyntax, die `=Parameters!StoreID.Value`darstellt.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -380,14 +381,14 @@ ms.locfileid: "66099092"
   
  In der Matrix werden Daten für das ausgewählte Geschäft angezeigt.  
   
-##  <a name="Multivalued"></a> 7. Ändern des Berichtsparameters in einen mehrwertigen Parameter  
+##  <a name="Multivalued"></a>7. Ändern des Berichts Parameters zur Annahme mehrerer Werte  
  Wenn Sie einen einwertigen Parameter in einen mehrwertigen Parameter ändern möchten, müssen Sie die Abfrage und alle Ausdrücke, die einen Verweis auf den Parameter enthalten (einschließlich Filter) ändern. Ein mehrwertiger Parameter ist ein Wertarray. In einer Datasetabfrage muss die Abfragesyntax überprüfen, ob ein Wert in einem Satz von Werten enthalten ist. In einem Berichtsausdruck greift die Ausdruckssyntax nicht auf einzelnen Wert, sondern auf ein Wertarray zu.  
   
 #### <a name="to-change-a-parameter-from-single-to-multivalued"></a>So ändern Sie einen einwertigen Parameter in einen mehrwertigen Parameter  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdaten Bereich mit der rechten *@StoreID*Maustaste auf, und klicken Sie dann auf **Parameter Eigenschaften**.  
   
 3.  Aktivieren Sie **Mehrere Werte zulassen**.  
   
@@ -395,7 +396,7 @@ ms.locfileid: "66099092"
   
 5.  Erweitern Sie im Berichtsdatenbereich den Ordner **Datasets** , klicken Sie mit der rechten Maustaste auf **DataSet1**, und klicken Sie anschließend auf **Abfrage**.  
   
-6.  Änderung `equals` (=) zum `IN` in die [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` -Klausel in der letzten Zeile in der Abfrage:  
+6.  Ändern `equals` Sie `IN` (=) in der [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` -Klausel in der letzten Zeile in der Abfrage:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -421,7 +422,7 @@ ms.locfileid: "66099092"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. Klicken Sie vor dem soeben erstellten Ausdruck in das Textfeld, und geben Sie dann Folgendes ein: Ausgewählte Parameterwerte:.  
+15. Klicken Sie vor dem soeben erstellten Ausdruck in das Textfeld, und geben Sie dann Folgendes ein: "Ausgewählte Parameterwerte:".  
   
 16. Zeigen Sie eine Vorschau des Berichts an.  
   
@@ -435,7 +436,7 @@ ms.locfileid: "66099092"
   
 19. Klicken Sie in der Dropdownliste auf **Alles auswählen** , um die Liste zu löschen, klicken Sie auf „Contoso Catalog Store“ und „Contoso Asia Online Store“ und anschließend auf **Bericht anzeigen**.  
   
-##  <a name="Boolean"></a> 8. Hinzufügen eines booleschen Parameters für bedingte Sichtbarkeit  
+##  <a name="Boolean"></a>8. Hinzufügen eines booleschen Parameters für bedingte Sichtbarkeit  
   
 #### <a name="to-add-a-boolean-parameter"></a>So fügen Sie einen booleschen Parameter hinzu  
   
@@ -445,7 +446,7 @@ ms.locfileid: "66099092"
   
 3.  Geben Sie im Feld **Eingabeaufforderung**„Auswahl anzeigen?“ ein.  
   
-4.  In **Datentyp**, aus der Dropdown-Liste, klicken Sie auf **booleschen**.  
+4.  Klicken Sie unter **Datentyp**in der Dropdown Liste auf **Boolean**.  
   
 5.  Klicken Sie auf **Standardwerte**.  
   
@@ -459,7 +460,7 @@ ms.locfileid: "66099092"
   
 1.  Klicken Sie auf der Entwurfsoberfläche mit der rechten Maustaste auf das Textfeld im Seitenfuß, in dem die Parameterwerte angezeigt werden, und klicken Sie anschließend auf **Textfeldeigenschaften**.  
   
-2.  Klicken Sie auf **Sichtbarkeit**.  
+2.  Klicken Sie auf **Transparenz**.  
   
 3.  Aktivieren Sie die Option **Je nach Ausdruck einblenden/ausblenden**, und klicken Sie anschließend auf die Ausdrucksschaltfläche **Fx**.  
   
@@ -475,13 +476,13 @@ ms.locfileid: "66099092"
   
      Das Textfeld mit der Parameterauswahl wird nicht angezeigt.  
   
-8.  Der Berichts-Viewer-Symbolleiste neben **Auswahl anzeigen**, klicken Sie auf `True`.  
+8.  Klicken Sie `True`auf der Berichts-Viewer-Symbolleiste neben **Auswahl anzeigen**auf.  
   
 9. Zeigen Sie eine Vorschau des Berichts an.  
   
  Im Textfeld im Seitenfuß werden alle Geschäftsnamen angezeigt, die Sie ausgewählt haben.  
   
-##  <a name="Title"></a> 9. Hinzufügen eines Berichtstitels  
+##  <a name="Title"></a>9. Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -489,17 +490,17 @@ ms.locfileid: "66099092"
   
 2.  Geben Sie "Parametrisierte Produktumsätze" ein, und klicken Sie dann außerhalb des Textfelds.  
   
-##  <a name="Save"></a> 10. Speichern des Berichts  
+##  <a name="Save"></a>10. Speichern des Berichts  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
+1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
   
 2.  Klicken Sie auf **Letzte Sites und Server**.  
   
 3.  Wählen Sie den Namen des Berichtsservers aus, auf dem Sie zum Speichern von Berichten berechtigt sind, oder geben Sie ihn ein.  
   
-     Die Meldung **Verbindung mit Berichtsserver wird hergestellt**wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
+     Die Meldung **Verbindung mit Berichts Server**wird hergestellt wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
 4.  Ersetzen Sie im Feld **Name**den Standardnamen durch „Parametrisierter Umsatzbericht“.  
   
@@ -510,7 +511,7 @@ ms.locfileid: "66099092"
 ## <a name="next-steps"></a>Nächste Schritte  
  Damit ist die exemplarische Vorgehensweise zum Hinzufügen eines Parameters zum Bericht abgeschlossen. Weitere Informationen zu Parametern finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

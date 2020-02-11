@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875763"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Wiederherstellen zu einer Protokollfolgenummer (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875763"
   
  Jeder Datensatz im Transaktionsprotokoll wird eindeutig durch eine Protokollfolgenummer (Log Sequence Number, LSN) identifiziert. LSNs halten sich an eine bestimmte Reihenfolge. Wenn LSN2 größer als LSN1 ist, erfolgte die durch den Protokolldatensatz von LSN2 beschriebene Änderung nach der durch den Protokolldatensatz von LSN1 beschriebenen Änderung.  
   
- Die LSN eines Protokolldatensatzes, bei dem ein wichtiges Ereignis aufgetreten ist, kann zum Erstellen richtiger Wiederherstellungssequenzen hilfreich sein. Da LSNs eine bestimmte Reihenfolge aufweisen, kann verglichen werden, ob sie gleich oder ungleich sind (d.h. **\<** , **>** , **=** , **\<=** , **>=** ). Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
+ Die LSN eines Protokolldatensatzes, bei dem ein wichtiges Ereignis aufgetreten ist, kann zum Erstellen richtiger Wiederherstellungssequenzen hilfreich sein. Da LSNs geordnet sind, können Sie auf Gleichheit und Ungleichheit **\<**( **>** **=** ** \< **d. h.,,,, **>=**) verglichen werden. Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
   
 > [!NOTE]  
 >  LSNs sind Werte vom Datentyp `numeric`(25,0). Arithmetische Operationen (z. B. Addition oder Subtraktion) sind ohne Bedeutung und dürfen für LSNs nicht verwendet.  
@@ -52,7 +52,7 @@ ms.locfileid: "62875763"
   
 -   [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+-   [sys. database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys. master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
 -   [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62875763"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Transact-SQL-Syntax für die Wiederherstellung bis zu einer LSN  
  Mithilfe einer [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) -Anweisung können Sie an oder direkt vor der LSN stoppen, wie im Folgenden gezeigt:  
   
--   Verwenden Sie die WITH STOPATMARK **='** lsn: _<LSN-Nummer>_ **'** -Klausel, wobei lsn: *\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPATMARK **= '** LSN:_<lsn_number>_ **'** -Klausel, wobei LSN:*\<lsnnumber>* eine Zeichenfolge ist, die angibt, dass der Protokolldaten Satz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPATMARK wird ein Rollforward zur LSN ausgeführt und dieser Protokolldatensatz im Rollforward eingeschlossen.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK **= '** lsn: _<LSN-Nummer>_ **'** -Klausel, wobei lsn: *\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz direkt vor dem Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die with STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **"** -Klausel, wobei LSN:*\<lsnnumber>* eine Zeichenfolge ist, die angibt, dass der Protokolldaten Satz direkt vor dem Protokolldaten Satz, der die angegebene LSN-Nummer enthält, der Wiederherstellungspunkt ist.  
   
      Von STOPBEFOREMARK wird ein Rollforward bis zur LSN ausgeführt und dieser Protokolldatensatz aus dem Rollforward ausgeschlossen.  
   
@@ -97,7 +97,7 @@ GO
   
 -   [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  

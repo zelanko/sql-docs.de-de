@@ -1,5 +1,5 @@
 ---
-title: GetRows-Methode – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für GetRows-Methode (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932497"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows-Methode – Beispiel (VC++)
-Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen einer angegebenen Anzahl von Zeilen aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den sich ergebenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen kleiner als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde, oder wenn **GetRows** beim Versuch, einen Datensatz abzurufen, die von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall auftritt. Die GetRowsOK-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
+In diesem Beispiel wird die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) -Methode verwendet, um eine angegebene Anzahl von Zeilen aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abzurufen und ein Array mit den resultierenden Daten auszufüllen. Die **GetRows** -Methode gibt weniger als die gewünschte Anzahl von Zeilen in zwei Fällen zurück: entweder wenn [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder **GetRows** versucht hat, einen Datensatz abzurufen, der von einem anderen Benutzer gelöscht wurde. Die Funktion gibt nur dann **false** zurück, wenn der zweite Fall auftritt. Die getrowsok-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -243,7 +243,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BOF-und EOF-Eigenschaft (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [BOF, EOF-Eigenschaften (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,10 +15,10 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164911"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Klassen und Eigenschaften für den WMI-Anbieter für Serverereignisse
@@ -27,22 +27,22 @@ ms.locfileid: "74164911"
   
  Um zu ermitteln, welche Eigenschaften aus einem Ereignis oder einer Ereignisgruppe abgefragt werden können, konsultieren Sie das Ereignisschema. Standardmäßig wird das Ereignisschema im folgenden Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
   
- Alternativ dazu können Sie auch auf das Ereignis Schema verweisen, das unter [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)veröffentlicht wurde.  
+ Alternativ dazu können Sie auch auf das Ereignis Schema verweisen, [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)das unter veröffentlicht wurde.  
   
  Wenn Sie z. b. auf das ALTER_DATABASE-Ereignis verweisen **, werden Sie feststellen,** dass das übergeordnete Ereignis DDL_SERVER_LEVEL_EVENTS und seine Eigenschaften den Namen "" und " **DatabaseName**" aufweisen. Das Ereignis erbt auch die Eigenschaften **SQLInstance**, **PostTime**, **Computername**, **SPID**und **LoginName**. Das Ereignis verfügt über keinen untergeordneten Ereignisse.  
   
 > [!NOTE]  
 >  Gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können auch Ereignisbenachrichtigungen auslösen. Testen Sie die Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Beispielsweise lösen die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** eine Ereignis Benachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird. Weitere Informationen finden Sie unter [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md).  
   
- **Ereignisse und Ereignis Gruppen der Datendefinitionssprache**  
+ **Ereignisse und Ereignisgruppen der Datendefinitionssprache (DDL)**  
   
- ![Ereignis Struktur für WMI-Anbieter für Server Ereignisse](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Ereignis Struktur für WMI-Anbieter für Server Ereignisse")  
+ ![WMI-Anbieter für Serverereignisse-Ereignisstruktur](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "WMI-Anbieter für Serverereignisse-Ereignisstruktur")  
   
- **Ablauf Verfolgungs Ereignisse und Ereignis Gruppen**  
+ **Ablaufverfolgungsereignisse und Ereignisgruppen**  
   
- ![Ablauf Verfolgungs Ereignisse und Ereignis Gruppen](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Ablauf Verfolgungs Ereignisse und Ereignis Gruppen")  
+ ![Ablauf Verfolgungs Ereignisse und Ereignis Gruppen](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Ablaufverfolgungsereignisse und -Ereignisgruppen")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konzepte des WMI-Anbieters für Server Ereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

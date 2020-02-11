@@ -1,5 +1,5 @@
 ---
-title: Achse-Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Achsen Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,27 +14,27 @@ ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e4fcd8137344f3902df25e27b011c36872f26790
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930509"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Axis-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [DimensionCount-Eigenschaft](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
+ [DimensionCount (Eigenschaft)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
   
  [Name-Eigenschaft](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
- [Positionen-Auflistung](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [Positions Auflistung](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
   
- [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

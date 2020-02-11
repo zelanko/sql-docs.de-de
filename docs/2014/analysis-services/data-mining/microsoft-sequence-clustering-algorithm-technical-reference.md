@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sequence Clustering Algorithm Technical Reference | Microsoft-Dokumentation
+title: Technische Referenz für den Microsoft Sequence Clustering-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083835"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Sequence Clustering-Algorithmus
@@ -48,7 +48,7 @@ ms.locfileid: "66083835"
   
 |Modelltyp|Funktionseauswahlmethode|Kommentare|  
 |----------------|------------------------------|--------------|  
-|Sequenzclustering|Wird nicht verwendet|Die Funktionsauswahl wird nicht aufgerufen, allerdings lässt sich das Verhalten des Algorithmus durch Festlegen der Parameter MINIMUM_SUPPORT und MINIMUM_PROBABILIITY steuern.|  
+|Sequenzclustering|Nicht verwendet|Die Funktionsauswahl wird nicht aufgerufen, allerdings lässt sich das Verhalten des Algorithmus durch Festlegen der Parameter MINIMUM_SUPPORT und MINIMUM_PROBABILIITY steuern.|  
 |Clustering|Interessantheitsgrad|Obwohl der Clusteringalgorithmus diskrete oder diskretisierte Attribute verwenden kann, wird die Bewertung jedes Attributs als Distanz berechnet und ist daher kontinuierlich. Daher wird der Interessantheitsgrad verwendet.|  
   
  Weitere Informationen finden Sie unter [Feature Selection](../../sql-server/install/feature-selection.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "66083835"
  CLUSTER_COUNT  
  Gibt die ungefähre Anzahl der vom Algorithmus zu erstellenden Cluster an. Falls die ungefähre Anzahl von Clustern nicht aus den Daten erstellt werden kann, erstellt der Algorithmus so viele Cluster wie möglich. Durch Festlegen des CLUSTER_COUNT-Parameters auf 0 wird der Algorithmus zum Verwenden heuristischer Methoden veranlasst, um die Anzahl von zu erstellenden Clustern so gut wie möglich zu bestimmen.  
   
- Der Standardwert ist 10.  
+ (Standardwert: 10.)  
   
 > [!NOTE]  
 >  Eine festgelegte Zahl ungleich null dient als Hinweis für den Algorithmus, der daraufhin mit dem Ziel fortfährt, die angegebene Zahl zu finden, am Ende jedoch eine höhere oder niedrigere Zahl finden kann.  
@@ -89,7 +89,7 @@ ms.locfileid: "66083835"
  MINIMUM_SUPPORT  
  Gibt die Mindestzahl an Fällen an, die als Unterstützung eines Attributs zum Erstellen eines Clusters erforderlich ist.  
   
- Der Standardwert ist 10.  
+ (Standardwert: 10.)  
   
  MAXIMUM_SEQUENCE_STATES  
  Gibt die maximale Anzahl von Status an, die eine Sequenz annehmen kann.  
@@ -99,7 +99,7 @@ ms.locfileid: "66083835"
  Der Standardwert ist 64.  
   
  MAXIMUM_STATES  
- Gibt die maximale Anzahl vom Algorithmus unterstützter Status für ein nicht sequenzielles Attribut an. Wenn die Anzahl der Status für ein nicht sequenzielles Attribut größer als die maximale Anzahl von Status ist, wird der Algorithmus verwendet das Attribut die gebräuchlichsten Status und behandelt die restlichen Status als `Missing`.  
+ Gibt die maximale Anzahl vom Algorithmus unterstützter Status für ein nicht sequenzielles Attribut an. Wenn die Anzahl der Zustände für ein nicht-Sequenz Attribut größer als die maximale Anzahl von Zuständen ist, verwendet der Algorithmus die beliebtesten Zustände des Attributs und behandelt die restlichen Zustände als `Missing`.  
   
  Der Standardwert ist 100.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66083835"
   
  Weitere Informationen zur Verwendung fehlender Werte in Miningmodellen und zu den Auswirkungen fehlender Werte auf die Wahrscheinlichkeitsergebnisse finden Sie unter [ Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Die Falltabelle muss eine case ID-Spalte aufweisen. Optional kann die Falltabelle andere Spalten enthalten, die Attribute über den Fall speichern.  
   
  Der Microsoft Sequence Clustering-Algorithmus erfordert als geschachtelte Tabelle gespeicherte Sequenzinformationen. Die geschachtelte Tabelle muss eine einzelne Key Sequence-Spalte enthalten. Eine `Key Sequence`-Spalte kann jeden Datentyp enthalten, der sortiert werden kann, einschließlich Zeichenfolgen-Datentypen. Die Spalte muss jedoch eindeutige Werte für jeden Fall enthalten. Darüber hinaus müssen Sie vor dem Verarbeiten des Modells sicherstellen, dass sowohl die Falltabelle als auch die geschachtelte Tabelle in aufsteigender Reihenfolge nach dem Schlüssel, der die Tabellen verknüpft, sortiert wird.  
@@ -129,22 +129,22 @@ ms.locfileid: "66083835"
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Table und Ordered|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
--   Verwenden Sie die [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)-Funktion, um Voraussagen über Sequenzen zu treffen. Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Sequenzvorhersage unterstützen, finden Sie unter [von den SQL Server 2012-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Verwenden Sie die [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)-Funktion, um Voraussagen über Sequenzen zu treffen. Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Sequenz Vorhersage unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
   
 -   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   
 -   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus unterstützt Drillthrough, die Verwendung von OLAP-Miningmodellen und die Verwendung von Data Mining-Dimensionen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Sequenzclusteringmodellabfragebeispiele](clustering-model-query-examples.md)   
- [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering-Modell Abfrage Beispiele](clustering-model-query-examples.md)   
+ [Mining Modell Inhalt von Sequence Clustering-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

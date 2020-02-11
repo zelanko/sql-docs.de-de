@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor – unverschlüsselter Text – Allgemein) | Microsoft-Dokumentation
+title: Optionen (Text-Editor-nur-Text-Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089280"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Allgemein“)
@@ -24,13 +24,13 @@ ms.locfileid: "66089280"
  Optionen für den Nur-Text-Editor können auch im Dialogfeld **Alle Sprachen/Allgemein** festgelegt werden. Wenn Sie die Dialogfelder **Alle Sprachen** verwenden, um unterschiedliche Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren, z. B. den DMX- oder den MDX-Editor, festzulegen, müssen Sie die Optionen des Nur-Text-Editors mithilfe dieses Dialogfelds zurücksetzen.  
   
 ## <a name="statement-completion"></a>Anweisungsabschluss  
- **Member automatisch auflisten**  
+ **Elemente automatisch auflisten**  
  Im Nur-Text-Editor wird diese Funktion nicht unterstützt.  
   
  **Erweiterte Member ausblenden**  
  Im Nur-Text-Editor wird diese Funktion nicht unterstützt.  
   
- **Informationen zu den Parametern**  
+ **Parameter Informationen**  
  Im Nur-Text-Editor wird diese Funktion nicht unterstützt.  
   
 ## <a name="settings"></a>Einstellungen  
@@ -46,7 +46,7 @@ ms.locfileid: "66089280"
 > [!NOTE]  
 >  Diese Markierungspfeile werden nicht in den Code eingefügt und auch nicht gedruckt. Sie dienen lediglich als Hinweis.  
   
- **Wenden Sie Befehle der Bearbeitungsschritte Ausschneiden/Kopieren auf leere Zeilen an, wenn keine Auswahl vorhanden ist**  
+ **Befehle zum Ausschneiden oder Kopieren bei fehlender Auswahl auf leere Zeilen anwenden**  
  Legt fest, wie sich der Editor verhalten soll, wenn Sie die Einfügemarke in eine Leerzeile setzen und auf **Kopieren** oder **Ausschneiden**klicken, ohne eine Auswahl zu treffen.  
   
  Bei aktiviertem Kontrollkästchen wird die Leerzeile kopiert bzw. ausgeschnitten. Wenn Sie anschließend auf **Einfügen**klicken, wird die Leerzeile eingefügt.  

@@ -1,5 +1,5 @@
 ---
-title: Weitere Upgradeprobleme für die Datenbank-Engine | Microsoft-Dokumentation
+title: Andere Datenbank-Engine Upgradeprobleme | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093698"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Weitere Probleme beim Upgrade der Datenbank-Engine
@@ -54,16 +54,16 @@ ms.locfileid: "66093698"
 ## <a name="new-data-types"></a>Neue Datentypen  
  Die folgenden Systemtypen sind reserviert. Benennen Sie vorhandene, miteinander in Konflikt stehende benutzerdefinierte Typen vor oder nach dem Upgrade um.  
   
--   Geography  
+-   Gebiet  
   
--   Geometry  
+-   Geometrie  
   
 -   Datetime2  
   
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>Die Zieltabelle der OUTPUT INTO-Klausel kann keine definierten Trigger enthalten  
- Ausgabe in eine Zieltabelle, wenn die Tabelle über aktivierte Trigger verfügt wird nicht unterstützt.  
+ Ausgabe in eine Ziel Tabelle, wenn die Tabelle über aktivierte Trigger verfügt, wird nicht unterstützt.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Kompilieren von Zeitfehlern für UDFs, wenn das Ziel einer OUTPUT INTO-Klausel eine Tabelle ist  
  Mit benutzerdefinierten Funktionen (UDFs) können keine Aktionen ausgeführt werden, die den Status einer Datenbank ändern. Beispielsweise kann ein UDF keine DDL-Aktionen (CREATE/ALTER/DROP) oder DML-Aktionen (INSERT/UPDATE/DELETE) für Objekte ausführen, ausgenommen für Tabellenvariablen.  
@@ -72,9 +72,9 @@ ms.locfileid: "66093698"
  MERGE ist jetzt ein vollständig reserviertes Schlüsselwort. Anwendungen dürfen nicht länger Objekte (Tabellen, Spalten usw.) mit dem Namen MERGE enthalten.  
   
 ## <a name="rename-cdc-schema"></a>Umbenennen des CDC-Schemas  
- Es ist ein Schemaname mit dem Namen CDC vorhanden. Dieser Schemaname kann nicht in verwendet werden, wenn sein **Change Data Capture** für die Datenbank aktiviert ist.  
+ Es ist ein Schemaname mit dem Namen CDC vorhanden. Dieser Schema Name kann nicht verwendet werden, wenn **Change Data Capture** für die Datenbank aktiviert ist.  
   
- Sie müssen das CDC-Schema löschen, bevor Sie die aktivieren **Change Data Capture** für die Datenbank. Dieser Schritt kann vor oder nach dem Upgrade ausgeführt werden. Gehen Sie folgendermaßen vor, um das Schema zu löschen:  
+ Sie müssen das CDC-Schema löschen, bevor Sie **Change Data Capture** für die Datenbank aktivieren. Dieser Schritt kann vor oder nach dem Upgrade ausgeführt werden. Gehen Sie folgendermaßen vor, um das Schema zu löschen:  
   
 1.  Übertragen Sie die Objekte mit ALTER SCHEMA vom CDC-Schema auf einen neuen Schemanamen.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66093698"
   
 4.  Löschen Sie das CDC-Schema mit DROP SCHEMA.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Probleme beim Upgrade der Datenbank-Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

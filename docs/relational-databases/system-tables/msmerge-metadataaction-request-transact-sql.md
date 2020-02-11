@@ -18,28 +18,28 @@ ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106371"
 ---
-# <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
+# <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_metadataaction_request** -Tabelle speichert eine Zeile für jede kompensierende Aktion, die erforderlich ist. Mithilfe der websynchronisierung, wenn ein Fehler auftritt und die Synchronisierung wiederholt werden muss, wird ein Eintrag in erstellt **MSmerge_metadataaction_request**. Während der Uploadphase der nachfolgenden Zusammenführung werden Anforderungen zum Synchronisieren aller zur Veröffentlichung gehörenden Artikel von dieser Tabelle abgerufen und hochgeladen. Wenn die Synchronisierung erfolgreich abgeschlossen wird, die entsprechende Zeile in der **MSmerge_metadataaction_request** Tabelle gelöscht wird. Diese Tabelle wird auf dem Verleger in der Veröffentlichungsdatenbank und auf dem Abonnenten in der Abonnementdatenbank gespeichert.  
+  Die **MSmerge_metadataaction_request** Tabelle speichert eine Zeile für jede erforderliche kompensierende Aktion. Wenn bei der Websynchronisierung ein Fehler auftritt und die Synchronisierung erneut versucht werden muss, wird ein Eintrag in **MSmerge_metadataaction_request**erstellt. Während der Uploadphase der nachfolgenden Zusammenführung werden Anforderungen zum Synchronisieren aller zur Veröffentlichung gehörenden Artikel von dieser Tabelle abgerufen und hochgeladen. Wenn die Synchronisierung erfolgreich abgeschlossen wurde, wird die entsprechende Zeile in der **MSmerge_metadataaction_request** Tabelle gelöscht. Diese Tabelle wird auf dem Verleger in der Veröffentlichungsdatenbank und auf dem Abonnenten in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Der Spitzname der veröffentlichten Tabelle.|  
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
-|**action**|**tinyint**|Bezeichnet die erforderliche kompensierende Aktion.|  
-|**generation**|**bigint**|Der Wert der Generierung, für die die kompensierende Aktion benötigt wird.|  
-|**geändert**|**int**|Intern-nur zur Verwendung.|  
+|**Hinspiel**|**tinyint**|Bezeichnet die erforderliche kompensierende Aktion.|  
+|**Stro**|**BIGINT**|Der Wert der Generierung, für die die kompensierende Aktion benötigt wird.|  
+|**tes**|**int**|Nur intern verwendet.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Websynchronisierung für die Mergereplikation](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

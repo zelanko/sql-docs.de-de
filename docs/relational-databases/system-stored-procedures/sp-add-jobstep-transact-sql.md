@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412846"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "74412846"
 
   Fügt einem SQL-Agentauftrag einen Schritt (Vorgang) hinzu.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
   > Auf [verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)werden die meisten, aber nicht alle SQL Server-Agent Auftrags Typen unterstützt. Weitere Informationen finden Sie [unter verwaltete Azure SQL-Datenbank-Instanz T-SQL-Unterschiede von SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
@@ -61,7 +61,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
          | [ @proxy_name = ] 'proxy_name' } ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumente  
 `[ @job_id = ] job_id`Die ID des Auftrags, dem der Schritt hinzugefügt werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
 `[ @job_name = ] 'job_name'`Der Name des Auftrags, dem der Schritt hinzugefügt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'`Das vom- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst zum Ausführen des *Befehls*verwendete Subsystem. *Subsystem* ist vom Datentyp **nvarchar (40)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |"**ActiveScripting**"|Active Script<br /><br /> ** \* Wichtig \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CmdExec**'|Betriebssystembefehl oder ausführbares Programm|  
@@ -110,23 +110,23 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_success_action = ] success_action`Die Aktion, die ausgeführt werden soll, wenn der Schritt erfolgreich ist. *success_action* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung (Aktion)|  
+|value|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1** (Standard)|Beenden mit Erfolg|  
-|**2,2**|Beenden mit Fehler|  
+|**2**|Beenden mit Fehler|  
 |**€**|Zum nächsten Schritt wechseln|  
-|**0:**|Gehen Sie zu Schritt *on_success_step_id*|  
+|**4**|Gehen Sie zu Schritt *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt erfolgreich ist und *success_action* **4**ist. *success_step_id* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
 `[ @on_fail_action = ] fail_action`Die Aktion, die ausgeführt werden soll, wenn der Schritt fehlschlägt. *fail_action* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung (Aktion)|  
+|value|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1**|Beenden mit Erfolg|  
 |**2** (Standard)|Beenden mit Fehler|  
 |**€**|Zum nächsten Schritt wechseln|  
-|**0:**|Gehen Sie zu Schritt *on_fail_step_id*|  
+|**4**|Gehen Sie zu Schritt *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt fehlschlägt und *fail_action* **4**ist. *fail_step_id* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
@@ -146,11 +146,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags`Ist eine Option, die das Verhalten steuert. *Flags* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0** (Standard)|Ausgabedatei überschreiben|  
-|**2,2**|An Ausgabedatei anfügen|  
-|**0:**|Ausgabe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritts in Schrittverlauf schreiben|  
+|**2**|An Ausgabedatei anfügen|  
+|**4**|Ausgabe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritts in Schrittverlauf schreiben|  
 |**88**|Protokoll in Tabelle schreiben (vorhandenen Verlauf überschreiben)|  
 |**Uhr**|Protokoll in Tabelle schreiben (an vorhandenen Verlauf anfügen)|  
 |**32**|Schreiben der gesamten Ausgabe in den Auftragsverlauf|  
@@ -166,7 +166,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_add_jobstep** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  SQL Server Management Studio bietet eine einfache grafische Möglichkeit zum Verwalten von Aufträgen. Es handelt sich hierbei um die empfohlene Art und Weise zum Erstellen und Verwalten der Auftragsinfrastruktur.  
@@ -215,6 +215,6 @@ GO
  [sp_help_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

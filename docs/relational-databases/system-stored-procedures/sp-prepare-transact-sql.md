@@ -1,5 +1,5 @@
 ---
-title: Sp_prepare (Transact-SQL) | Microsoft-Dokumentation
+title: sp_prepare (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085799"
 ---
-# <a name="spprepare-transact-sql"></a>sp_prepare (Transact-SQL)
+# <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-Bereitet eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung und gibt eine Anweisung *behandeln* für die Ausführung.  `sp_prepare` wird aufgerufen, indem ID = 11 in einem tabular Data Stream (TDS)-Paket.  
+Bereitet eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung vor und gibt ein Anweisungs *handle* zur Ausführung zurück.  `sp_prepare`wird aufgerufen, indem ID = 11 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
- ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,19 +39,19 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Handle*  
- Ein SQL Server generierter *vorbereitete Handle* Bezeichner. *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
+ *bewältigen*  
+ Ist ein SQL Server generierter Bezeichner für den *handle* . *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
   
  *params*  
- Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
+ Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. " *para* meters" ist ein erforderlicher Parameter, der den Eingabe Wert " **ntext**", " **NCHAR**" oder " **nvarchar** " aufruft. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
   
  *stmt*  
- Definiert das Resultset des Cursors. Die *Stmt* -Parameter ist erforderlich und erfordert eine **Ntext**, **Nchar**, oder **Nvarchar** Eingabewert.  
+ Definiert das Resultset des Cursors. Der *stmt* -Parameter ist erforderlich und erfordert einen Eingabe Wert vom Typ **ntext**, **NCHAR**oder **nvarchar** .  
   
- *options*  
- Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* erfordert den folgenden Eingabedaten Int-Wert:  
+ *Optionen*  
+ Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. die *Optionen* erfordern den folgenden int-Eingabe Wert:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-B. Im folgende Beispiel bereitet eine Anweisung in der AdventureWorks2016-Datenbank vor, und es später noch Mal mit dem Handle ausgeführt.
+B. Im folgenden Beispiel wird eine-Anweisung in der AdventureWorks2016-Datenbank vorbereitet und später mit dem Handle ausgeführt.
 
 ```sql
 -- Prepare query
@@ -93,7 +93,7 @@ GO
 (1 row affected)
 ```
 
-Die Anwendung führt dann die Abfrage zweimal unter Verwendung den Handlewert 1, vor dem Verwerfen des vorbereiteten Plans.
+Die Anwendung führt die Abfrage dann zweimal mit dem Handle-Wert 1 aus, bevor der vorbereitete Plan verworfen wird.
 
 ```sql
 EXEC sp_execute 1, 49879;  
@@ -106,7 +106,7 @@ EXEC sp_unprepare 1;
 GO
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

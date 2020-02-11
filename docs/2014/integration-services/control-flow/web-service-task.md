@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829404"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
@@ -48,12 +48,12 @@ ms.locfileid: "62829404"
   
  Viele Webdienstmethoden verwenden keine Eingabeparameter. Beispielsweise ist für eine Webdienstmethode, die die Namen der im aktuellen Monat geborenen Präsidenten abruft, kein Eingabeparameter notwendig, weil der Webdienst den aktuellen Monat lokal bestimmen kann.  
   
- Die Ergebnisse der Webdienstmethode können in eine Variable oder eine Datei geschrieben werden. Mit dem Dateiverbindungs-Manager geben Sie entweder die Datei an oder stellen den Namen der Variablen bereit, in die die Ergebnisse geschrieben werden sollen. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](../connection-manager/file-connection-manager.md) und [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
+ Die Ergebnisse der Webdienstmethode können in eine Variable oder eine Datei geschrieben werden. Mit dem Dateiverbindungs-Manager geben Sie entweder die Datei an oder stellen den Namen der Variablen bereit, in die die Ergebnisse geschrieben werden sollen. Weitere Informationen finden Sie unter [File Connection Manager](../connection-manager/file-connection-manager.md) und [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Webdienst'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge aufgelistet, die für den Task 'Webdienst' aktiviert werden können. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`WSTaskBegin`|Der Zugriff auf einen Webdienst wurde begonnen.|  
 |`WSTaskEnd`|Eine Webdienstmethode wurde beendet.|  
@@ -64,11 +64,11 @@ ms.locfileid: "62829404"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „Webdienst“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task ' Webdienst ' &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task „Webdienst“ &#40;Seite „Eingabe“&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor für den Task ' Webdienst ' &#40;Eingabe Seite&#41;](../web-service-task-editor-input-page.md)  
   
--   [Editor für den Task „Webdienst“ &#40;Seite „Ausgabe“&#41;](../web-service-task-editor-output-page.md)  
+-   [Editor für den Task ' Webdienst ' &#40;Ausgabe Seite&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -82,8 +82,8 @@ ms.locfileid: "62829404"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video, [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task „Webdienst“ (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642) auf technet.microsoft.com.  
+ Video [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task 'Webdienst' (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642)auf technet.microsoft.com.  
   
- [Wie Sie SSIS-Paket-Webdiensts](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
+ Verwenden des [Webdiensts über das SSIS-Paket](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

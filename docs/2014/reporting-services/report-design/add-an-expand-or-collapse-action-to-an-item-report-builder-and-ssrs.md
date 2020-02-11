@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106746"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS)
@@ -31,45 +31,45 @@ ms.locfileid: "66106746"
   
 1.  Klicken Sie in der Berichtsentwurfsansicht auf die Tabelle oder Matrix, um sie auszuwählen. Im Gruppierungsbereich werden die Zeilen- und Spaltengruppen angezeigt.  
   
-     ![Gruppierungsbereich](../media/groupingpane.png "Grouping Pane")  
+     ![Gruppierungsbereich](../media/groupingpane.png "Gruppierungsbereich")  
   
      Wenn der Gruppierungsbereich nicht erscheint, klicken Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Gruppierung**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle der Titelleiste des Bereichs Gruppierung, und klicken Sie anschließend auf **Erweitert**. Der Modus des Bereichs Gruppierung wird gewechselt, sodass nun die zugrunde liegende Anzeigestruktur für Zeilen und Spalten in der Entwurfsoberfläche angezeigt wird.  
   
-     ![Gruppierungsbereich mit Menü für erweiterten Modus](../media/groupingpane-advancedmode.png "Grouping Pane with Advanced Mode menu")  
+     ![Gruppierungsbereich mit Menü für erweiterten Modus](../media/groupingpane-advancedmode.png "Gruppierungsbereich mit Menü für erweiterten Modus")  
   
 3.  Klicken Sie im entsprechenden Gruppenbereich auf die Zeilengruppe oder Spaltengruppe, deren zugeordnete Zeilen oder Spalten ausgeblendet werden sollen. Die Gruppe wird ausgewählt, und im Bereich Eigenschaften werden die Eigenschaften für **Tablix-Element** angezeigt.  
   
     > [!NOTE]  
     >  Zum Anzeigen des Bereichs „Eigenschaften“ klicken Sie auf **Ansicht** auf dem Menüband, und klicken Sie anschließend auf **Eigenschaften**.  
   
-4.  In `Hidden`, wählen Sie eine der folgenden Optionen, um die Sichtbarkeit dieses Berichtselements legen Sie beim ersten Ausführen des Berichts:  
+4.  Wählen `Hidden`Sie in eine der folgenden Optionen aus, um die Sichtbarkeit dieses Berichts Elements beim erstmaligen Ausführen eines Berichts festzulegen:  
   
-    -   Wählen Sie `False` auf das Berichtselement angezeigt werden soll.  
+    -   Wählen `False` Sie diese Option aus, um das Berichts Element anzuzeigen.  
   
-    -   Wählen Sie `True` auf das Berichtselement auszublenden.  
+    -   Aktivieren `True` Sie diese Option, um das Berichts Element auszublenden.  
   
-    -   Klicken Sie auf **\<Ausdruck>** , um das Dialogfeld **Ausdruck** zu öffnen, in dem Sie einen Ausdruck erstellen können, der zur Laufzeit zum Bestimmen der Sichtbarkeit ausgewertet wird.  
+    -   Wählen Sie ** \<Ausdrucks>** aus, um das Dialogfeld **Ausdruck** zu öffnen und einen Ausdruck zu erstellen, der zur Laufzeit ausgewertet wird, um die Sichtbarkeit zu ermitteln.  
   
 5.  Wählen Sie unter **ToggleItem**im Dropdownfeld den Namen eines Textfelds aus, dem das Umschaltbild hinzugefügt werden soll.  
   
      In der folgenden Grafik ist die Zeilengruppenfarbe so konfiguriert, dass Benutzer zugehörige Zeilen erweitern und reduzieren können.  
   
-     ![Konfigurieren einer zu erweiternden Zeilengruppe](../media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configuring a row group to be expanded")  
+     ![Konfigurieren einer zu erweiternden Zeilengruppe](../media/expandcollapse-confighiddentoggleitemwithnumbers.png "Konfigurieren einer zu erweiternden Zeilengruppe")  
   
     > [!NOTE]  
     >  Bei dem Textfeld mit dem Umschaltbild kann es sich nicht um die Zeilen- oder Spaltengruppe handeln, deren Zeilen oder Spalten ausgeblendet werden sollen. Es muss sich entweder in derselben Gruppe wie das ausgeblendete Element oder in einer Vorgängergruppe befinden. Beispiel: Wenn Sie die Sichtbarkeit von Zeilen umschalten möchten, die mit einer untergeordneten Gruppe verknüpft sind, wählen Sie ein Textfeld in einer Zeile, die mit der übergeordneten Gruppe verknüpft ist.  
   
 6.  Führen Sie den Bericht aus, und klicken Sie auf das Textfeld mit dem Umschaltbild, um die Umschaltfunktion zu testen. Die Berichtsanzeige wird aktualisiert, sodass Zeilengruppen und Spaltengruppen nun mit ihrer umgeschalteten Sichtbarkeit angezeigt werden.  
   
-     ![Ausführen des Berichts mit einer erweiterbaren Zeilengruppe](../media/expandcollapse-runreport-rowgroup.png "Running report with expandable row group")  
+     ![Ausführen des Berichts mit einer erweiternden Zeilengruppe](../media/expandcollapse-runreport-rowgroup.png "Ausführen des Berichts mit einer erweiternden Zeilengruppe")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>So fügen Sie einem Berichtselement eine Erweiterungs- und Reduzieraktion hinzu  
   
-1.  Klicken Sie in der Berichtsentwurfsansicht mit der rechten Maustaste auf das Berichtselement, das ein- bzw. ausgeblendet werden soll, und klicken Sie anschließend auf *\<Berichtselement>* **Eigenschaften**. Das Dialogfeld *\<Berichtselement>* **Eigenschaften** für das betreffende Berichtselement wird geöffnet.  
+1.  Klicken Sie in der Berichtsentwurfs Ansicht mit der rechten Maustaste auf das Berichts Element, das angezeigt oder ausgeblendet werden soll, und klicken Sie **** * \<dann auf Berichts Element>* Eigenschaften. Das * \<Dialogfeld Berichts Element>* **Eigenschaften** für das Berichts Element wird geöffnet.  
   
-2.  Klicken Sie auf **Sichtbarkeit**.  
+2.  Klicken Sie auf **Transparenz**.  
   
 3.  Wählen Sie in **Bei erstmaliger Ausführung des Berichts**eine der folgenden Optionen aus, um die Sichtbarkeit dieses Berichtselements bei der erstmaligen Ausführung des Berichts festzulegen:  
   
@@ -86,17 +86,17 @@ ms.locfileid: "66106746"
   
      In der folgenden Grafik ist die Tabelle so konfiguriert, dass Benutzer sie erweitern und reduzieren können. Die Tabellenanzeige kann mithilfe des Textfelds „Produkttabelle“ ein- bzw. ausgeblendet werden.  
   
-     ![Konfigurieren einer zu erweiternden Berichtstabelle](../media/expandcollapse-reporttable.png "Configure a report table to be expanded")  
+     ![Konfigurieren einer zu erweiternden Berichts Tabelle](../media/expandcollapse-reporttable.png "Konfigurieren einer zu erweiternden Berichtstabelle")  
   
     > [!NOTE]  
     >  Das ausgewählte Textfeld muss im aktuellen oder enthaltenden Bereich für dieses Berichtselement enthalten sein (bis einschließlich des Berichtshauptteils). Wählen Sie zum Umschalten der Sichtbarkeit eines Diagramms z. B. ein Textfeld aus, das sich in demselben enthaltenden Bereich befindet wie das Diagramm, z. B. der Berichtshauptteil oder ein Rechteck. Das Textfeld muss sich in der gleichen Containerhierarchie oder auf einer höheren Ebene befinden.  
   
 5.  Führen Sie den Bericht aus, und klicken Sie auf das Textfeld mit dem Umschaltbild, um die Umschaltfunktion zu testen. Die Berichtsanzeige wird aktualisiert, sodass Berichtselemente nun mit ihrer umgeschalteten Sichtbarkeit angezeigt werden.  
   
-     ![Ausführen eines Berichts mit einer erweiternden Tabelle](../media/expandcollapse-runreport-reporttable.png "Running report with an expanding table")  
+     ![Ausführen eines Berichts mit einer erweiternden Tabelle](../media/expandcollapse-runreport-reporttable.png "Ausführen eines Berichts mit einer erweiternden Tabelle")  
   
-## <a name="see-also"></a>Siehe auch  
- [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
- [Ausblenden eines Elements &#40;Berichts-Generator und SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Drilldown-Aktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Ein Element &#40;Berichts-Generator und SSRS ausblenden&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 567888d7dae14108e595c76f45f0ab7b95619cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283449"
 ---
 # <a name="report-parameters-methods"></a>Melden von Parametermethoden
   Mit diesen Methoden können Sie Parameter für Berichte festlegen und abrufen.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GetItemParameters%2A>|Gibt Parametereigenschaften für ein angegebenes Element zurück. Diese Methode kann auch verwendet werden, um Parameterwerte anhand von Parametern für ein angegebenes Element zu überprüfen.|  
 |<xref:ReportService2010.ReportingService2010.ListParameterStates%2A>|Gibt eine Liste unterstützter Parameterzustände zurück.|  
 |<xref:ReportService2010.ReportingService2010.ListParameterTypes%2A>|Gibt eine Liste unterstützter Parametertypen zurück.|  
 |<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|Legt Parametereigenschaften für ein angegebenes Element fest.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](report-server-web-service-methods.md)   

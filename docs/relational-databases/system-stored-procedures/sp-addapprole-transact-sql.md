@@ -1,5 +1,5 @@
 ---
-title: Sp_addapprole (Transact-SQL) | Microsoft-Dokumentation
+title: sp_addapprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032979"
 ---
-# <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
+# <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fügt der aktuellen Datenbank eine Anwendungsrolle hinzu.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Create Application Role](../../t-sql/statements/create-application-role-transact-sql.md) .  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,45 +42,45 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'` Ist der Name der neuen Anwendungsrolle. *Rolle* ist **Sysname**, hat keinen Standardwert. *Rolle* muss ein gültiger Bezeichner sein und kann nicht in der aktuellen Datenbank bereits vorhanden.  
+`[ @rolename = ] 'role'`Der Name der neuen Anwendungs Rolle. *Role* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die *Rolle* muss ein gültiger Bezeichner sein und darf nicht bereits in der aktuellen Datenbank vorhanden sein.  
   
- Namen von Anwendungsrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Rollennamen können nicht keinen umgekehrten Schrägstrich enthalten (\\) noch NULL oder eine leere Zeichenfolge (").  
+ Namen von Anwendungsrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Rollennamen dürfen keinen umgekehrten Schrägstrich (\\) und keinen NULL-Wert oder eine leere Zeichenfolge (' ') enthalten.  
   
-`[ @password = ] 'password'` Wird zum Aktivieren der Anwendungsrolle erforderliche Kennwort. *Kennwort* ist **Sysname**, hat keinen Standardwert. *Kennwort* darf nicht NULL sein.  
+`[ @password = ] 'password'`Das Kennwort, das zum Aktivieren der Anwendungs Rolle erforderlich ist. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Das *Kennwort* darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden sich Benutzer (und Rollen) nicht vollständig von Schemas. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheiden sich Schemas und Rollen vollständig. Diese neue Architektur spiegelt sich im Verhalten von CREATE APPLICATION ROLE wider. Diese Anweisung hat Vorrang vor **Sp_addapprole**.  
+## <a name="remarks"></a>Bemerkungen  
+ In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden sich Benutzer (und Rollen) nicht vollständig von Schemas. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheiden sich Schemas und Rollen vollständig. Diese neue Architektur spiegelt sich im Verhalten von CREATE APPLICATION ROLE wider. Diese Anweisung ersetzt **sp_addapprole**.  
   
- Um Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Sp_addapprole** gehen Sie folgendermaßen vor:  
+ Um die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu gewährleisten, werden **sp_addapprole** folgende Aktionen ausführen:  
   
 -   Wenn nicht bereits ein Schema mit dem gleichen Namen wie die Anwendungsrolle vorhanden ist, wird ein solches Schema erstellt. Das neue Schema ist im Besitz der Anwendungsrolle und wird als Standardschema der Anwendungsrolle verwendet.  
   
 -   Wenn bereits ein Schema mit dem gleichen Namen wie die Anwendungsrolle vorhanden ist, erzeugt die Prozedur einen Fehler.  
   
--   Kennwortkomplexität wird nicht überprüft, indem **Sp_addapprole**. Von CREATE APPLICATION ROLE hingegen wird die Kennwortkomplexität überprüft.  
+-   Die Kenn Wort Komplexität wird nicht von **sp_addapprole**geprüft. Von CREATE APPLICATION ROLE hingegen wird die Kennwortkomplexität überprüft.  
   
- Der Parameter *Kennwort* wird als unidirektionaler Hash gespeichert.  
+ Das Parameter *Kennwort* wird als unidirektionaler Hash gespeichert.  
   
- Die **Sp_addapprole** gespeicherte Prozedur kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
+ Die gespeicherte Prozedur **sp_addapprole** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
 > [!IMPORTANT]  
->  Microsoft ODBC **verschlüsseln** Option wird nicht unterstützt, indem **SqlClient**. Sofern möglich, sollten Benutzer zur Eingabe der Anmeldeinformationen für Anwendungsrollen zur Laufzeit aufgefordert werden. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Anmeldeinformationen persistent gespeichert werden müssen, sollten Sie sie mithilfe der CryptoAPI-Funktionen verschlüsseln.  
+>  Die Microsoft ODBC- **Verschlüsselungs** Option wird von **SqlClient**nicht unterstützt. Sofern möglich, sollten Benutzer zur Eingabe der Anmeldeinformationen für Anwendungsrollen zur Laufzeit aufgefordert werden. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Anmeldeinformationen persistent gespeichert werden müssen, sollten Sie sie mithilfe der CryptoAPI-Funktionen verschlüsseln.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY APPLICATION ROLE-Berechtigung in der Datenbank. Ist nicht bereits ein Schema mit dem gleichen Namen und Besitzer wie die neue Rolle vorhanden, ist auch die CREATE SCHEMA-Berechtigung für die Datenbank erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die neue Anwendungsrolle `SalesApp` mit dem Kennwort `x97898jLJfcooFUYLKm387gf3` auf die aktuelle Datenbank.  
+ Im folgenden Beispiel wird der aktuellen Datenbank die `SalesApp` neue Anwendungs Rolle `x97898jLJfcooFUYLKm387gf3` mit dem Kennwort hinzugefügt.  
   
 ```  
 EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

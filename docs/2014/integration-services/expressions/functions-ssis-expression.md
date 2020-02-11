@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769126"
 ---
 # <a name="functions-ssis-expression"></a>Funktionen (SSIS-Ausdruck)
@@ -38,7 +38,7 @@ ms.locfileid: "62769126"
   
  Die Ausdruckssprache stellt die folgenden mathematischen Funktionen bereit.  
   
-|Funktion|Description|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS-Ausdruck&#41;](abs-ssis-expression.md)|Gibt den absoluten, positiven Wert eines numerischen Ausdrucks zurück.|  
 |[EXP &#40;SSIS-Ausdruck&#41;](exp-ssis-expression.md)|Gibt den Exponenten für die Basis e des angegebenen Ausdrucks zurück.|  
@@ -47,14 +47,14 @@ ms.locfileid: "62769126"
 |[LN &#40;SSIS-Ausdruck&#41;](ln-ssis-expression.md)|Gibt den natürlichen Logarithmus eines numerischen Ausdrucks zurück.|  
 |[LOG &#40;SSIS-Ausdruck&#41;](log-ssis-expression.md)|Gibt den Logarithmus eines numerischen Ausdrucks zur Basis 10 zurück.|  
 |[POWER &#40;SSIS-Ausdruck&#41;](power-ssis-expression.md)|Gibt das Ergebnis eines in eine Potenz erhobenen numerischen Ausdrucks zurück.|  
-|[ROUND &#40;SSIS-Ausdruck&#41;](round-ssis-expression.md)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. .|  
+|[ROUND &#40;SSIS-Ausdruck&#41;](round-ssis-expression.md)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. erforderlich.|  
 |[SIGN &#40;SSIS-Ausdruck&#41;](sign-ssis-expression.md)|Gibt das positive (+) oder negative (-) Vorzeichen oder Null (0) für einen numerischen Ausdruck zurück.|  
 |[SQUARE &#40;SSIS-Ausdruck&#41;](square-ssis-expression.md)|Gibt das Quadrat eines numerischen Ausdrucks zurück.|  
 |[SQRT &#40;SSIS-Ausdruck&#41;](sqrt-ssis-expression.md)|Gibt die Quadratwurzel eines numerischen Ausdrucks zurück.|  
   
  Die Ausdrucksauswertung stellt die folgenden Zeichenfolgenfunktionen bereit.  
   
-|Funktion|Description|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS-Ausdruck&#41;](codepoint-ssis-expression.md)|Gibt den Unicode-Codewert des äußeren linken Zeichens eines Zeichenausdrucks zurück.|  
 |[FINDSTRING &#40;SSIS-Ausdruck&#41;](findstring-ssis-expression.md)|Gibt den einsbasierten Index für das angegebene Auftreten einer Zeichenfolge innerhalb eines Ausdrucks zurück.|  
@@ -74,7 +74,7 @@ ms.locfileid: "62769126"
   
  Die Ausdrucksauswertung stellt die folgenden Datums- und Zeitfunktionen bereit.  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS-Ausdruck&#41;](dateadd-ssis-expression.md)|Gibt einen neuen DT_DBTIMESTAMP-Wert zurück, indem ein Datums- oder Zeitintervall einem angegebenen Datum hinzugefügt wird.|  
 |[DATEDIFF &#40;SSIS-Ausdruck&#41;](datediff-ssis-expression.md)|Gibt die Anzahl von Datums- und Zeiteinheiten zurück, die zwischen zwei angegebenen Daten überschritten wurden.|  
@@ -87,14 +87,14 @@ ms.locfileid: "62769126"
   
  Die Ausdrucksauswertung stellt die folgenden NULL-Funktionen bereit.  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS-Ausdruck&#41;](null-ssis-expression.md)|Gibt abhängig davon, ob ein Ausdruck NULL ist, ein boolesches Ergebnis zurück.|  
 |[NULL &#40;SSIS-Ausdruck&#41;](null-ssis-expression.md)|Gibt einen NULL-Wert eines angeforderten Datentyps zurück.|  
   
  Ausdrucksnamen werden in Großbuchstaben dargestellt, aber bei Ausdrucksnamen wird nicht nach Groß-/Kleinschreibung unterschieden. Beispielsweise spielt es keine Rolle, ob Sie "null" oder "NULL" verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md)   
  [Beispiele für erweiterte SQL Server Integration Services-Ausdrücke](examples-of-advanced-integration-services-expressions.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)  

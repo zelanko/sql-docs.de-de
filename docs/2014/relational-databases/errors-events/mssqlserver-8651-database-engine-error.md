@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762373"
 ---
-# <a name="mssqlserver8651"></a>MSSQLSERVER_8651
+# <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
     
 ## <a name="details"></a>Details  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62762373"
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Starten der Erfassung von Leistungsindikatoren für **SQL Server: Buffer Manager**, **SQL Server: Speicher-Manager**.  
+2.  Sammeln Sie Leistungsindikatoren für **SQL Server: Puffer-Manager** und **SQL Server: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherkonfigurationsparameter:  
   
@@ -72,10 +72,10 @@ ms.locfileid: "62762373"
   
  Wenn das Problem weiterhin besteht, müssen Sie weitere Untersuchungen ausführen und möglicherweise die Arbeitsauslastung reduzieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
- [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
- [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [DBCC FREESYSTEMCACHE &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
+ [DBCC freesessioncache &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
+ [DBCC freproccache &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SQL Server, Puffer-Manager-Objekt](../performance-monitor/sql-server-buffer-manager-object.md)   
  [SQL Server, Speicher-Manager-Objekt](../performance-monitor/sql-server-memory-manager-object.md)  

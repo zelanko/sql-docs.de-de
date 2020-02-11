@@ -1,5 +1,5 @@
 ---
-title: Sysmergeschemaarticles (Transact-SQL) | Microsoft-Dokumentation
+title: sysmergeschemaarticles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029812"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
@@ -29,23 +29,23 @@ ms.locfileid: "68029812"
 
   Verfolgt Artikel vom Typ schema only für die Mergereplikation nach. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des Artikels vom Typ schema only in der Mergeveröffentlichung.|  
-|**type**|**tinyint**|Zeigt den Typ des Artikels vom Typ schema only an, der einen der folgenden Werte annehmen kann:<br /><br /> **0 x 20** = gespeicherte Prozedur Schema only-Artikel.<br /><br /> **0 x 40** = View Schema only-Artikel oder Artikel mit indizierter Sicht Schema only.|  
+|**type**|**tinyint**|Zeigt den Typ des Artikels vom Typ schema only an, der einen der folgenden Werte annehmen kann:<br /><br /> **0x20** = Schema Only-Artikel für gespeicherte Prozeduren.<br /><br /> **0x40** = nur Schema-oder indizierte Sicht Artikel anzeigen.|  
 |**objid**|**int**|Der Objektbezeichner des Basisobjekts des Artikels. Kann der Objektbezeichner einer Prozedur, einer Sicht, einer indizierten Sicht oder einer benutzerdefinierten Funktion sein.|  
 |**artid**|**uniqueidentifier**|Die Artikel-ID.|  
-|**description**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
-|**pre_creation_command**|**tinyint**|Standardaktion, die ausgeführt wird, wenn der Artikel in der Abonnementdatenbank erstellt wird:<br /><br /> **0 =** keine - Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist keine Aktion ausgeführt.<br /><br /> **1** = Drop - Tabelle gelöscht, bevor Sie neu zu erstellen.<br /><br /> **2** = löschen: ein Löschvorgang wird basierend auf der WHERE-Klausel im Teilmengenfilter ausgegeben.<br /><br /> **3** = Abschneiden-identisch mit **2**, jedoch werden Seiten statt Zeilen gelöscht. Eine WHERE-Klausel wird jedoch nicht verwendet.|  
+|**Beschreibung**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
+|**pre_creation_command**|**tinyint**|Standardaktion, die ausgeführt wird, wenn der Artikel in der Abonnementdatenbank erstellt wird:<br /><br /> **0 =** Keine: Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.<br /><br /> **1** = Drop-löscht die Tabelle, bevor Sie neu erstellt wird.<br /><br /> **2** = DELETE: gibt einen Löschvorgang basierend auf der WHERE-Klausel im Teilmengen Filter aus.<br /><br /> **3** = Abschneiden-identisch mit **2**, löscht jedoch Seiten anstelle von Zeilen. Eine WHERE-Klausel wird jedoch nicht verwendet.|  
 |**pubid**|**uniqueidentifier**|Der eindeutige Bezeichner der Veröffentlichung.|  
-|**status**|**tinyint**|Gibt den Status des Artikels vom Typ schema only an, der einen der folgenden Werte annehmen kann:<br /><br /> **1** = unsynchronisiert - das Anfangsverarbeitungsskript der Tabelle ausgeführt, das nächste Mal Veröffentlichen der Momentaufnahme-Agent ausgeführt wird.<br /><br /> **2** = aktiv - das Anfangsverarbeitungsskript zum Veröffentlichen der Tabelle ausgeführt wurde.<br /><br /> **5** = New_inactive - hinzugefügt werden.<br /><br /> **6** = New_active - hinzugefügt werden.|  
+|**Stands**|**tinyint**|Gibt den Status des Artikels vom Typ schema only an, der einen der folgenden Werte annehmen kann:<br /><br /> **1** = nicht synchronisiert-das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wird ausgeführt, wenn die Momentaufnahmen-Agent das nächste Mal ausgeführt wird.<br /><br /> **2** = aktiv: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wurde ausgeführt.<br /><br /> **5** = New_inactive hinzuzufügen.<br /><br /> **6** = New_active hinzuzufügen.|  
 |**creation_script**|**nvarchar(255)**|Der Pfad und Name eines optionalen Artikel-Schemavorabskripts, mit dem die Zieltabelle erstellt wird.|  
-|**schema_option**|**binary(8)**|Das Bitmuster der Option zur Schemaerstellung für den angegebenen Artikel vom Typ schema only, das das bitweise logische OR-Ergebnis von mindestens einer dieser Werte sein kann:<br /><br /> **0 x 00** = deaktiviert die Skripterstellung durch den Momentaufnahme-Agent und verwendet das bereitgestellte Skript CreationScript.<br /><br /> **0 x 01** = generiert die objekterstellung (CREATE TABLE, CREATE PROCEDURE usw.).<br /><br /> **0 x 10** = generiert einen entsprechenden gruppierten Index.<br /><br /> **0 x 20** = konvertiert benutzerdefinierte Datentypen, um Datentypen in Basisdatentypen.<br /><br /> **0 x 40** = generiert entsprechende(n) nicht gruppierte(n) Index bzw. Indizes.<br /><br /> **0 x 80** = enthält die deklarierte referenziellen Integrität für die Primärschlüssel.<br /><br /> **0 x 100** = repliziert Benutzertrigger für einen Tabellenartikel, falls definiert.<br /><br /> **0 x 200** = repliziert foreign Key-Einschränkungen. Wenn die Tabelle, auf die verwiesen wird, nicht Teil einer Veröffentlichung ist, werden keine Fremdschlüsseleinschränkungen für eine veröffentlichte Tabelle repliziert.<br /><br /> **0 x 400** = repliziert Check-Einschränkungen.<br /><br /> **0 x 800** = repliziert Standardwerte.<br /><br /> **0 x 1000** = replizieren spaltensortierung.<br /><br /> **0 x 2000** = repliziert erweiterte Eigenschaften, die das Quellobjekt des veröffentlichten Artikels zugeordnet.<br /><br /> **0 x 4000** = repliziert eindeutige Schlüssel, wenn für einen Tabellenartikel definiert.<br /><br /> **0 x 8000** = repliziert einen Primärschlüssel und eindeutige Schlüssel für eine Tabelle Artikel als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.<br /><br /> Weitere Informationen zu den möglichen Werten für **Schema_option**, finden Sie unter [Sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**Binär (8)**|Das Bitmuster der Option zur Schemaerstellung für den angegebenen Artikel vom Typ schema only, das das bitweise logische OR-Ergebnis von mindestens einer dieser Werte sein kann:<br /><br /> **0x00** = Skripterstellung durch die Momentaufnahmen-Agent deaktivieren und das bereitgestellte Skript für die Erstellung von Skripts verwenden.<br /><br /> **0x01** = generiert die Objekt Erstellung (CREATE TABLE, CREATE PROCEDURE usw.).<br /><br /> **0x10** = generiert einen entsprechenden gruppierten Index.<br /><br /> **0x20** = konvertieren Sie benutzerdefinierte Datentypen in Basis Datentypen.<br /><br /> **0x40** = generieren Sie den entsprechenden nicht gruppierten Index oder die Indizes.<br /><br /> **0x80** = deklarierte referenzielle Integrität für die Primärschlüssel einschließen.<br /><br /> **0x100** = repliziert Benutzer Trigger für einen Tabellen Artikel, falls definiert.<br /><br /> **0x200** = Replizieren von Foreign Key-Einschränkungen. Wenn die Tabelle, auf die verwiesen wird, nicht Teil einer Veröffentlichung ist, werden keine Fremdschlüsseleinschränkungen für eine veröffentlichte Tabelle repliziert.<br /><br /> **0x400** = replizieren Sie Check-Einschränkungen.<br /><br /> **0x800** = replizieren Sie die Standardwerte.<br /><br /> **0x1000** = replizieren Sie die Sortierung auf Spaltenebene.<br /><br /> **0x2000** = replizieren Sie erweiterte Eigenschaften, die dem veröffentlichten Artikel Quell Objekt zugeordnet sind.<br /><br /> **0x4000** = repliziert eindeutige Schlüssel, wenn Sie für einen Tabellen Artikel definiert sind.<br /><br /> **0X8000** = repliziert einen Primärschlüssel und eindeutige Schlüssel für einen Tabellen Artikel als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.<br /><br /> Weitere Informationen zu möglichen Werten für **schema_option**finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Der Name des Zielobjekts in der Abonnementdatenbank. Dieser Wert gilt nur für Artikel vom Typ schema only, wie z. B. gespeicherte Prozeduren, Sichten und UDFs.|  
-|**destination_owner**|**sysname**|Der Besitzer des Objekts in der Abonnementdatenbank, wenn er nicht ist **Dbo**.|  
+|**destination_owner**|**sysname**|Der Besitzer des Objekts in der Abonnement Datenbank, wenn es sich nicht um **dbo**handelt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

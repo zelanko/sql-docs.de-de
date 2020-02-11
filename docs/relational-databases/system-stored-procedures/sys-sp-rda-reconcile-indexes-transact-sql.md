@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_rda_reconcile_indexes (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_rda_reconcile_indexes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905047"
 ---
-# <a name="syssprdareconcileindexes-transact-sql"></a>Sys.sp_rda_reconcile_indexes (Transact-SQL)
+# <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys. sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Fügt eine Schemaaufgabe an, wenn Sie Indizes in der Remotetabelle abstimmen möchten. Nachdem diese Aufgabe erfolgreich abgeschlossen wurde, hat die Remotetabelle die gleichen Indizes, die auf der lokalen Stretch-aktivierte Tabelle vorhanden sind.  
+  Fügt eine Schema Aufgabe in die Warteschlange ein, um Indizes für die Remote Tabelle abzustimmen. Nachdem diese Aufgabe erfolgreich abgeschlossen wurde, verfügt die Remote Tabelle über dieselben Indizes, die in der lokalen Stretch-aktivierten Tabelle vorhanden sind.  
   
- Liegt eine andere Aufgabe in der Warteschlange Indizes ausgleichen, wenn Sie Sie aufrufen **Sp_rda_reconcile_indexes**, diese gespeicherte Prozedur nicht in die Warteschlange eines doppelten Vorgangs.  
+ Wenn eine andere Aufgabe in eine Warteschlange eingereiht ist, um Indizes beim Abrufen von **sp_rda_reconcile_indexes**abzugleichen, fügt diese gespeicherte Prozedur keinen doppelten Task in die Warteschlange ein.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@objname =] *"Objname"*  
- Ist der qualifizierte oder nicht qualifizierte Name der Stretch-aktivierte Tabelle für die Indizes abgestimmt werden sollen. Anführungszeichen sind erforderlich, nur dann, wenn Sie ein qualifiziertes Objekt angeben.  
+ [@objname = ] *"objname"*  
+ Der qualifizierte oder nicht qualifizierte Name der Stretch-aktivierten Tabelle, für die Indizes abgeglichen werden sollen. Anführungszeichen sind nur erforderlich, wenn Sie ein qualifiziertes Objekt angeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder > 0 (Fehler)  
+ 0 (Erfolg) oder >0 (Fehler)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

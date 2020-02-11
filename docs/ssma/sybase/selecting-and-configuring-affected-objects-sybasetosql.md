@@ -1,5 +1,5 @@
 ---
-title: Auswählen und Konfigurieren von betroffenen Objekten (SybaseToSQL) | Microsoft-Dokumentation
+title: Auswählen und konfigurieren betroffener Objekte (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,112 +12,112 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020990"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (SybaseToSQL)
-Auf dieser Seite können Sie Tabellen auswählen und die foreign key, Änderungen in der verglichen werden soll, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die im vorherigen Schritt ausgewählt ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
+Auf dieser Seite können Sie Tabellen und Fremdschlüssel auswählen, Änderungen, die verglichen werden sollen, wenn SSMA die Ausführungs Ergebnisse für die im vorherigen Schritt ausgewählten Objekte überprüft. Außerdem können Sie die Überprüfungs Parameter anpassen.  
   
-## <a name="selection-of-affected-objects"></a>Auswahl von betroffenen Objekten  
-In der Sybase-Objektstruktur befindet sich auf der linken Seite des Fensters, überprüfen Sie die Tabellen und Fremdschlüssel, Änderungen in der für das gleiche verglichen werden soll.  
+## <a name="selection-of-affected-objects"></a>Auswahl betroffener Objekte  
+Überprüfen Sie in der Sybase-Objektstruktur, die sich auf der linken Seite des Fensters befindet, die Tabellen und Fremdschlüssel, Änderungen, die als identisch verglichen werden sollen.  
   
-Wenn der SSMA-Tester keines dieser Objekte überprüfen können, sehen Sie den Link, mit der Bezeichnung **einige ausgewählte Objekte enthalten Fehler** unter der Objektstruktur. Klicken Sie auf diesen Link an die Gründe, warum diese Objekte nicht verglichen werden können, und um die Auswahl der falschen Objekte zu löschen.  
+Wenn SSMA Tester keines dieser Objekte überprüfen kann, sehen Sie, dass der Link mit der Bezeichnung **einige ausgewählte Objekte** unter der Struktur Objekte Fehler enthält. Klicken Sie auf diesen Link, um die Gründe anzuzeigen, warum diese Objekte nicht verglichen werden können, und um die Auswahl falscher Objekte zu löschen.  
   
 ## <a name="table"></a>Tabelle  
-Die Registerkarte der Tabelle enthält die Rasteransicht der ausgewählten Tabelle an. Das Raster enthält die folgende Informationen über die ausgewählte Tabelle an:  
+Die Registerkarte Tabelle enthält die Rasteransicht der ausgewählten Tabelle. Das Raster enthält die folgenden Informationen zur ausgewählten Tabelle:  
   
 -   Spaltenname  
   
 -   Datentyp  
   
--   Genauigkeit  
+-   Precision  
   
--   Dezimalstellen  
+-   Skalieren  
   
 -   Regel  
   
--   Default  
+-   Standard  
   
--   Identität  
+-   Identity  
   
--   NULL zulassen  
+-   Nullable  
   
 ## <a name="sql"></a>Sql  
-Registerkarte "SQL" enthält die Tabelle"erstellen" SQL der ausgewählten Tabelle.  
+Die Registerkarte "SQL" enthält die SQL-Tabelle "CREATE TABLE" der ausgewählten Tabelle.  
   
-## <a name="data"></a>Daten  
-Registerkarte "Daten" zeigt Daten in die ausgewählte Tabelle an.  
+## <a name="data"></a>Data  
+Registerkarte Daten zeigt Daten an, die in der ausgewählten Tabelle enthalten sind.  
   
 ## <a name="properties"></a>Eigenschaften  
-Registerkarte "Eigenschaften" zeigt die Eigenschaften der ausgewählten Tabelle an. Die folgenden Felder befinden sich unter der Registerkarte "Eigenschaften":  
+Registerkarte "Eigenschaften" zeigt die Eigenschaften der ausgewählten Tabelle an. Die folgenden Felder sind auf der Registerkarte Eigenschaften vorhanden:  
   
 -   Erstellt oder zuletzt geändert  
   
--   Objektnamen  
+-   Objektname  
   
-## <a name="table-comparison-settings"></a>Einstellungen für Datentabellen Vergleich  
-Einrichten der Vergleichsregeln für die Tabelle auf **Tabellenvergleiche** Seite. Sie können die folgenden Einstellungen vornehmen.  
+## <a name="table-comparison-settings"></a>Tabellen Vergleichs Einstellungen  
+Legen Sie die Vergleichs Regeln für die Tabelle auf der Seite **Vergleiche** fest. Sie können die folgenden Einstellungen vornehmen.  
   
-### <a name="comparison-mode"></a>Vergleichsmodus  
-Definiert den Tabelleninhalt auf die werden den Vergleich ausgeführt.  
+### <a name="comparison-mode"></a>Vergleichs Modus  
+Definiert den Tabelleninhalt, für den der Vergleich durchgeführt wird.  
   
--   Bei Auswahl von **nur geänderte**, vollständigen Vergleich der Tabellenzeilen wird ausgeführt.  
+-   Wenn Sie **nur Änderungen**auswählen, wird ein vollständiger Vergleich der Tabellenzeilen ausgeführt.  
   
--   Bei Auswahl von **vollständige**, erfolgt der Vergleich für nur die Zeilen, die geändert wurden.  
+-   Wenn Sie **vollständig**auswählen, wird der Vergleich nur für die geänderten Zeilen ausgeführt.  
   
-## <a name="column-comparison-settings"></a>Vergleich von Spalteneinstellungen  
-Die Vergleichsregeln für Tabellenspalten herzustellen, auf **Spalte Vergleiche** Seite. Sie können die folgenden Einstellungen vornehmen.  
+## <a name="column-comparison-settings"></a>Spalten Vergleichs Einstellungen  
+Legen Sie die Vergleichs Regeln für Tabellen Spalten auf der Seite **Spalten Vergleiche** fest. Sie können die folgenden Einstellungen vornehmen.  
   
-### <a name="use-during-test-comparisons"></a>Verwendung während der Testvergleiche  
-Bestimmt, ob diese Spalte in der Ergebnisse testüberprüfung einbezogen werden.  
+### <a name="use-during-test-comparisons"></a>Verwendung während der Test Vergleiche  
+Bestimmen Sie, ob diese Spalte an der Überprüfung der Testergebnisse beteiligt ist.  
   
--   Auf Wunsch **"true"** , SSMA wird der Inhalt dieses Artikels vergleichen, nach dem Ausführen des Tests auf Sybase mit dem Inhalt der Spalte in SQL Server.
+-   Wenn Sie **true**auswählen, vergleicht SSMA den Inhalt dieser Spalte nach dem Ausführen des Tests auf Sybase mit dem Inhalt der Spalte in SQL Server.
   
--   Auf Wunsch **"false"** , von der Überprüfung der Ergebnisse die Spalte ausgeschlossen werden.  
+-   Wenn Sie **false**auswählen, wird die Spalte von der Ergebnis Überprüfung ausgeschlossen.  
   
-### <a name="use-custom-scale"></a>Verwenden Sie benutzerdefinierte Skalierung  
-Für Spalten vom numerischen Datentyp aufweisen können Sie festlegen, dass eine benutzerdefinierte Skalierung für den Vergleich.  
+### <a name="use-custom-scale"></a>Benutzerdefinierte Skalierung verwenden  
+Für Spalten mit einem numerischen Datentyp können Sie eine benutzerdefinierte Skala für den Vergleich festlegen.  
   
--   Auf Wunsch **"true"** , numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
+-   Wenn Sie **true**auswählen, werden numerische Werte entsprechend dem **Vergleichs Skalierungs** Wert gerundet, bevor Sie verglichen werden.  
   
--   Auf Wunsch **"false"** , exakten numerischen Vergleichs werden.  
+-   Wenn Sie **false**auswählen, ist der numerische Vergleich genau.  
   
-### <a name="comparing-scale"></a>Vergleichen von Skala  
+### <a name="comparing-scale"></a>Vergleichen der Skala  
   
--   Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"** . Dies ist die Genauigkeit für einen numerischen Vergleich.  
+-   Nur verfügbar, wenn die Option **benutzerdefinierte Skalierung verwenden** auf **true**festgelegt ist. Dies ist die Genauigkeit für den numerischen Vergleich.  
   
-### <a name="date-time-comparing"></a>Datum Uhrzeit vergleichen  
-Definiert, wie die Datum/Uhrzeit-Werte verglichen.  
+### <a name="date-time-comparing"></a>Vergleichen von Datum und Uhrzeit  
+Definiert, wie Datums-/Uhrzeitwerte verglichen werden.  
   
--   Bei Auswahl von **gesamte Datum vergleichen**, vollständigen Vergleich von Werten aus beiden Plattformen ausgeführt werden.  
+-   Wenn Sie die Option **gesamtes Datum vergleichen**auswählen, wird ein vollständiger Vergleich der Werte beider Plattformen ausgeführt.  
   
--   Bei Auswahl von **nur Date vergleichen**, wird die Uhrzeit, die Teil ignoriert werden.  
+-   Wenn Sie **Datum nur vergleichen**auswählen, wird der Uhrzeit Teil ignoriert.  
   
--   Bei Auswahl von **vergleichen nur Zeit**, das Datum Teil ignoriert werden.  
+-   Wenn Sie **nur die Zeit vergleichen**auswählen, wird der Datums Teil ignoriert.  
   
--   Bei Auswahl von **ignorieren Millisekunden**, bis zu Sekunden werden die Ergebnisse verglichen werden.  
+-   Wenn Sie die Option **Millisekunden ignorieren**auswählen, werden die Ergebnisse bis zu Sekunden verglichen.  
   
--   Bei Auswahl von **ignorieren von Datum und die Millisekunden**, das Ergebnis wird im Vergleich nur vom Time-Teil und wird ignoriert. Bruchteile einer Sekunde sein.  
+-   Wenn Sie **Datum und Millisekunden ignorieren**auswählen, wird das Ergebnis nur nach Zeit Teil verglichen, und die Sekundenbruchteile werden ignoriert.  
   
-### <a name="ignore-strings-case"></a>Zeichenfolgen Groß-/Kleinschreibung ignorieren  
-Steuert den Vergleich die Groß-/Kleinschreibung beachtet.  
+### <a name="ignore-strings-case"></a>Zeichen folgen ignorieren  
+Steuert die Groß-/Kleinschreibung des Vergleichs.  
   
--   Auf Wunsch **"true"** , der Vergleich wird Groß-/Kleinschreibung sein.  
+-   Wenn Sie **true**auswählen, wird beim Vergleich die Groß-/Kleinschreibung nicht beachtet.  
   
--   Auf Wunsch **"false"** , der Vergleich wird Groß-/Kleinschreibung berücksichtigt.  
+-   Wenn Sie **false**auswählen, wird beim Vergleich der Buchstabe Groß-/Kleinschreibung berücksichtigt.  
   
-## <a name="comparing-sql"></a>Vergleich von SQL  
-Sehen Sie die SELECT-Anweisungen generiert von SSMA-Tester auf die **SQL vergleichen** Seite. Der Tester werden die Resultsets dieser Anweisungen pro Zeile für Zeile verglichen. Jede nächste Zeile eines Resultsets Sybase übereinstimmen sollten auf die nächste Zeile des Resultsets in erstellten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="comparing-sql"></a>Vergleichen von SQL  
+Sie können die von SSMA Tester generierten SELECT-Anweisungen auf der Seite **SQL vergleichen** anzeigen. Der Tester vergleicht die Resultsets dieser Anweisungen zeilenweise. Jede nächste Zeile eines Sybase-Resultsets sollte gleich der nächsten Zeile des Resultsets sein, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in erstellt wurde.  
   
-Sie können die SELECT-Anweisungen für die benutzerdefinierte Überprüfung bearbeiten. Zum Speichern der Änderungen in Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisungen können mithilfe der **übernehmen** Schaltflächen unter der Quell- und Ziel-SQL, entsprechend angepasst.  
+Sie können diese SELECT-Anweisungen bearbeiten, um eine benutzerdefinierte Überprüfung bereitzustellen Um die Änderungen in Sybase-und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisungen zu speichern, verwenden Sie die **Apply** -Schaltflächen unter dem Quell-und Ziel-SQL entsprechend.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Customizing Calls Order anpassen &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[Anpassen von Aufruf Reihenfolge &#40;sybasedesql&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Ausführen von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testen von migrierten Datenbankobjekten &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Ausführen von Test Fällen &#40;sybaseto SQL-&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Testen von migrierten Datenbankobjekten &#40;sybaseto SQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

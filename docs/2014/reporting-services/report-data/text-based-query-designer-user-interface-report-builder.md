@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891877"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)
@@ -31,22 +31,22 @@ ms.locfileid: "68891877"
   
 -   **Abfrage** Zeigt den Abfragetext, den Tabellennamen oder den Namen der gespeicherten Prozedur an, je nach Abfragetyp. Nicht alle Abfragetypen können für alle Datenquellentypen verwendet werden. Beispiel: Tabellenname wird nur vom Datenquellentyp OLE DB unterstützt.  
   
--   **Ergebnis** Zeigt die Ergebnisse einer Ausführung der Abfrage zur Entwurfszeit an.  
+-   **Ergebnis** Zeigt die Ergebnisse der Ausführung der Abfrage zur Entwurfszeit an.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Symbolleiste für den textbasierten Abfrage-Designer  
  Der textbasierte Abfrage-Designer stellt eine einzige Symbolleiste für alle Befehlstypen bereit. In der folgenden Tabelle werden jede Schaltfläche auf der Symbolleiste und ihre Funktion aufgelistet.  
   
-|Schaltfläche|Beschreibung|  
+|Schaltfläche|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer. Nicht alle Datenquellentypen unterstützen grafische Abfrage-Designer.|  
-|**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt.|  
-|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Führen Sie die Abfrage aus, und zeigen Sie das Resultset im Ergebnisbereich an.|  
+|**Importieren**|Importieren einer vorhandenen Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt.|  
+|![Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Führen Sie die Abfrage aus, und zeigen Sie das Resultset im Ergebnisbereich an.|  
 |**Befehlstyp**|Wählen Sie **Text**, **StoredProcedure**oder **TableDirect**. Weist eine gespeicherte Prozedur Parameter auf, wird das Dialogfeld **Abfrageparameter definieren** angezeigt, wenn Sie auf der Symbolleiste auf **Ausführen** klicken. Sie können nach Bedarf Werte eingeben.<br /><br /> Hinweis: Wenn eine gespeicherte Prozedur mehr als ein Resultset zurückgibt, wird nur das erste Resultset verwendet, um das Dataset zu füllen.|  
   
 ### <a name="command-type-text"></a>Befehlstyp "Text"  
  Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dataset erstellen, wird vom Berichts-Designer standardmäßig der relationale Abfrage-Designer geöffnet. Wenn Sie zum textbasierten Abfrage-Designer wechseln möchten, klicken Sie auf der Symbolleiste auf die Umschaltfläche **Als Text bearbeiten** . Der textbasierte Abfrage-Designer hat zwei Bereiche: den Abfragebereich und den Ergebnisbereich. In der folgenden Abbildung werden die einzelnen Bereiche bezeichnet.  
   
- ![Generischer Abfrage-Designer für relationale Datenabfragen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
+ ![Generischer Abfrage-Designer für relationale Datenabfragen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generischer Abfrage-Designer für relationale Datenabfragen")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68891877"
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|  
   
 #### <a name="example"></a>Beispiel  
- Die folgende Abfrage gibt die Liste der Nachnamen [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]aus der **2008** -Daten `ContactType` Bank Tabelle für `Person` das Schema zurück.  
+ Die folgende Abfrage gibt die Liste der Nachnamen aus der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** -Daten `ContactType` Bank Tabelle für `Person` das Schema zurück.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -69,7 +69,7 @@ SELECT Name FROM Person.ContactType
   
  Die folgende Abbildung zeigt die Bereiche Abfrage und Ergebnis an, wenn Sie eine gespeicherte Prozedur ausführen. In diesem Fall sind die Eingabeparameter Konstanten.  
   
- ![Gespeicherte Prozeduren im textbasierten Abfrage-Designer](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Stored procedure in text-based query designer")  
+ ![Gespeicherte Prozedur im textbasierten Abfrage-Designer](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Gespeicherte Prozedur im textbasierten Abfrage-Designer")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   
@@ -85,7 +85,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Klicken Sie auf die Schaltfläche **Ausführen** ( **!** ). Wenn Sie nach den Abfrageparametern gefragt werden, geben Sie die Werte mithilfe der folgenden Tabelle ein.  
+ Klicken Sie auf die Schaltfläche **Ausführen** (**!**). Wenn Sie nach den Abfrageparametern gefragt werden, geben Sie die Werte mithilfe der folgenden Tabelle ein.  
   
 |||  
 |-|-|  
@@ -104,7 +104,7 @@ uspGetWhereUsedProductID
   
  Die Eingabe des Tabellennamens Person.ContactType entspricht der Erstellung der [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung `SELECT * FROM Person.ContactType`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzeroberfläche des relationalen Abfrage-Designers &#40;Berichts-Generator&#41;](relational-query-designer-user-interface-report-builder.md)   
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../query-designers-report-builder.md)  
   

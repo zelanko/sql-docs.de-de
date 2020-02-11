@@ -20,25 +20,25 @@ ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039574"
 ---
 # <a name="sqlsetstmtoption-function"></a>SQLSetStmtOption-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: Als veraltet markiert  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: deprecated  
   
  **Zusammenfassung**  
- In ODBC 3. *.x*, die ODBC 2.0-Funktion **SQLSetStmtOption** wurde ersetzt durch **SQLSetStmtAttr**. Weitere Informationen finden Sie unter [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ In ODBC 3 *. x*wurde die ODBC 2,0-Funktion **SQLSetStmtOption** durch **SQLSetStmtAttr**ersetzt. Weitere Informationen finden Sie unter [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]
->  Weitere Informationen dazu, was der Treiber-Manager diese Funktion auf, wenn einer ODBC 2. zuordnet *.x* Anwendung arbeitet mit einer ODBC 3. *.x* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+>  Weitere Informationen dazu, was der Treiber-Manager diese Funktion zuordnet, wenn eine ODBC 2 *. x* -Anwendung mit einem ODBC 3 *. x* -Treiber arbeitet, finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
   
-## <a name="remarks"></a>Hinweise  
- Finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Weitere Informationen finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung unter einem 64-Bit-Betriebssystem ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

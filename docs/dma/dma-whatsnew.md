@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632880"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
@@ -31,7 +31,7 @@ Das Release v 5.0 des Datenmigrations-Assistent bietet Unterstützung für:
 - SQL Server 2019 für Windows und SQL Server 2019 für Linux als Ziele für Bewertung und Upgrade.
 - Speichern und Laden von Bewertungen, einschließlich der Unterstützung für das Speichern und Laden von Bewertungen, die in früheren Versionen der Datenmigrations-Assistent erstellt wurden.
 - Bewerten von SQL Server Integration Services (SSIS)-Projekten, die in ssisdb und SSIS-Paketen gehostet werden, die im Paket Speicher gehostet werden Daten Bank Migration Assistant erkennt nicht unterstützte, teilweise unterstützte oder veraltete Features und Kompatibilitätsprobleme, die in Quellpaketen verwendet werden, und bietet Empfehlungen, die Ihnen helfen, diese Probleme zu beheben.
-- Bewerten von SQL-Abfragen aus externer Anwendung, z. b C# . SQL-Abfragen im Quellcode. Benutzer können mit dem Data Access Migration Toolkit einen vollständigen JSON-Bericht für die SQL-Abfragen generieren C# , die im Quellcode verwendet werden, und dann den Bericht in Datenmigrations-Assistent hochladen.
+- Bewerten von SQL-Abfragen aus externer Anwendung, z. b. SQL-Abfragen in c#-Quellcode. Benutzer können mit dem Data Access Migration Toolkit einen vollständigen JSON-Bericht für die SQL-Abfragen generieren, die in c#-Quellcode verwendet werden, und dann den Bericht in Datenmigrations-Assistent hochladen.
 
 Außerdem bietet diese Version von Datenmigrations-Assistent zusätzliche Verbesserungen und Fehlerbehebungen, und das Tool wurde auf .NET 4.7.2 aktualisiert.
 
@@ -175,15 +175,15 @@ Die v 2.0-Version von Datenmigrations-Assistent umfasst verbesserte Features fü
 Die Version 1.0 von Datenmigrations-Assistent ist die erste Version und bietet Folgendes:
 
 - Ermittlung von Problemen, die ein Upgrade auf eine lokale Version von SQL Server beeinflussen können. Alle Ergebnisse werden als Kompatibilitätsprobleme beschrieben und in den folgenden Bereichen kategorisiert:
-  - Wichtige Änderungen
-  - Verhaltensänderungen
+  - Aktuelle Änderungen
+  -  Behavior Changes
   - Veraltete Features
 - Ermittlung neuer Features auf der Ziel SQL Server Plattform, von der die Datenbank nach einem Upgrade profitieren kann. Alle Ergebnisse werden als Funktions Empfehlungen beschrieben und in den folgenden Bereichen kategorisiert:
   - Leistung
   - Sicherheit
-  - Speicherung
+  - Storage
 - Moderne Benutzer Funktionen zum Durchführen von Bewertungen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Übersicht über Datenmigrations-Assistent](../dma/dma-overview.md)

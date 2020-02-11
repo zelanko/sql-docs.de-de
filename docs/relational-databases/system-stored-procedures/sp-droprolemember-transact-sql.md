@@ -1,5 +1,5 @@
 ---
-title: Sp_droprolemember (Transact-SQL) | Microsoft-Dokumentation
+title: sp_droprolemember (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,33 +19,33 @@ ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124848"
 ---
-# <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
+# <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Entfernt ein Sicherheitskonto aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rolle in der aktuellen Datenbank.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Alter Role](../../t-sql/statements/alter-role-transact-sql.md) .  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
 
-### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Syntax für SQLServer und Azure SQL-Datenbank
+### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Syntax für SQL Server und Azure SQL-Datenbank
 
 ```  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
 
-### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Syntax für Azure SQL Datawarehouse und Parallel Datawarehouse
+### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Syntax für Azure SQL Data Warehouse und parallele Data Warehouse
 
 ```  
 sp_droprolemember 'role' ,  
@@ -53,19 +53,19 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'` Ist der Name der Rolle aus der das Element entfernt wird. *Rolle* ist **Sysname**, hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @rolename = ] 'role'`Der Name der Rolle, aus der das Mitglied entfernt wird. *Role* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die *Rolle* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @membername = ] 'security_account'` Ist der Name des Sicherheitskontos, das aus der Rolle entfernt wird. *Security_account* ist **Sysname**, hat keinen Standardwert. *Security_account* kann ein Datenbankbenutzer, eine andere Datenbankrolle, ein Windows-Anmeldename oder eine Windows-Gruppe sein. *Security_account* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @membername = ] 'security_account'`Der Name des Sicherheits Kontos, das aus der Rolle entfernt wird. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *security_account* kann ein Datenbankbenutzer, eine andere Daten Bank Rolle, ein Windows-Anmelde Name oder eine Windows-Gruppe sein. *security_account* muss in der aktuellen Datenbank vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- Sp_droprolemember entfernt ein Mitglied aus einer Datenbankrolle, durch das Löschen einer Zeile aus der Sysmembers-Tabelle. Wenn ein Mitglied aus einer Rolle entfernt wird, verliert das Mitglied alle Berechtigungen, die es aufgrund seiner Mitgliedschaft in dieser Rolle hat.  
+## <a name="remarks"></a>Bemerkungen  
+ sp_droprolemember entfernt ein Mitglied aus einer Datenbankrolle, indem eine Zeile aus der sysmembers-Tabelle gelöscht wird. Wenn ein Mitglied aus einer Rolle entfernt wird, verliert das Mitglied alle Berechtigungen, die es aufgrund seiner Mitgliedschaft in dieser Rolle hat.  
   
- Um einen Benutzer aus einer festen Serverrolle zu entfernen, verwenden Sie Sp_dropsrvrolemember. Benutzer können nicht entfernt werden, von der öffentlichen Rolle und kann nicht Dbo aus keiner Rolle entfernt werden.  
+ Mithilfe von sp_dropsrvrolemember entfernen Sie einen Benutzer aus einer festen Serverrolle. Es ist nicht möglich, Benutzer aus der public-Rolle zu entfernen, und dbo kann aus keiner Rolle entfernt werden.  
   
- Verwenden Sie Sp_helpuser, um die Mitglieder einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rolle, und verwenden Sie ALTER ROLE, ein Mitglied einer Rolle hinzufügen.  
+ Verwenden Sie sp_helpuser, um die Mitglieder einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rolle anzuzeigen, und verwenden Sie Alter Role, um einer Rolle ein Mitglied hinzuzufügen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Rolle.  
@@ -77,19 +77,19 @@ sp_droprolemember 'role' ,
 EXEC sp_droprolemember 'Sales', 'Jonb';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird der Benutzer `JonB` aus der `Sales`-Rolle entfernt.  
   
 ```sql
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_droprole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

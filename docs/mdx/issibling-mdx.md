@@ -1,5 +1,5 @@
 ---
-title: IsSibling (MDX) | Microsoft-Dokumentation
+title: Issident (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105350"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
@@ -28,14 +28,14 @@ IsSibling(Member_Expression1, Member_Expression2)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Element_Ausdruck1*  
+ *Member_Expression1*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
- *Element_Ausdruck2*  
+ *Member_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **IsSibling** -Funktion zurückgegeben **"true"** , wenn die erste angegebene Element ein gleichgeordnetes Element eines zweiten angegebenen Elements. Die Funktion hingegen gibt **"false"** .  
+## <a name="remarks"></a>Bemerkungen  
+ Die **issident** -Funktion gibt **true** zurück, wenn der erste angegebene Member ein gleich geordnetes Element des zweiten angegebenen Elements ist. Andernfalls gibt die Funktion **false**zurück.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird TRUE zurückgegeben, wenn das aktuelle Element auf der Fiscal-Hierarchie der Date-Dimension ein gleichgeordnetes Element aus dem Juli 2002 ist:  
@@ -50,7 +50,7 @@ IsSibling(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

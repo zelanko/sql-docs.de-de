@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107087"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Festlegen einer Meldung über fehlende Daten für einen Datenbereich (Berichts-Generator und SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107087"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Tabelle, die Matrix, den Listendatenbereich oder auf den Unterbericht auf der Entwurfsoberfläche, um ihn auszuwählen. Die Eigenschaften für das ausgewählte Element werden im Eigenschaftenbereich angezeigt.  
   
-2.  Geben Sie im Eigenschaftenbereich den Text, der als Meldung angezeigt werden soll `NoRowsMessage` Eigenschaftenfeld.  
+2.  Geben Sie im Eigenschaften Bereich den Text ein, der als Meldung im `NoRowsMessage` Eigenschaften Feld angezeigt werden soll.  
   
      Sie können auch in der Dropdownliste auf **Ausdruck** klicken, um das Dialogfeld **Ausdruck** zu öffnen und einen Ausdruck zu erstellen.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66107087"
   
 2.  Erweitern Sie im Bereich Eigenschaften den Knoten für `NoDataMessage`.  
   
-3.  In **Beschriftung**, geben Sie den Text, der als Meldung angezeigt werden soll `NoDataMessage` Eigenschaftenfeld.  
+3.  Geben Sie in **Beschriftung**den Text ein, der als Meldung im `NoDataMessage` Eigenschaften Feld angezeigt werden soll.  
   
      Sie können auch in der Dropdownliste auf **Ausdruck** klicken, um das Dialogfeld **Ausdruck** zu öffnen und einen Ausdruck zu erstellen.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107087"
   
 1.  Klicken Sie in der Entwurfsansicht auf den Unterbericht auf der Entwurfsoberfläche, um diesen auszuwählen. Die Eigenschaften für das ausgewählte Element werden im Eigenschaftenbereich angezeigt.  
   
-2.  Geben Sie im Eigenschaftenbereich den Text, der als Meldung angezeigt werden soll `NoRowsMessage` Eigenschaftenfeld.  
+2.  Geben Sie im Eigenschaften Bereich den Text ein, der als Meldung im `NoRowsMessage` Eigenschaften Feld angezeigt werden soll.  
   
      Sie können auch in der Dropdownliste auf **Ausdruck** klicken, um das Dialogfeld **Ausdruck** zu öffnen und einen Ausdruck zu erstellen.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66107087"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Farbskala auf der Karte, um sie auszuwählen. Die Eigenschaften für das ausgewählte Element werden im Eigenschaftenbereich angezeigt.  
   
-2.  Klicken Sie im Bereich "Eigenschaften" in `NoDataText`, geben Sie den Text, der als Bezeichnung für Farben ohne Datenwert angezeigt werden soll.  
+2.  Geben Sie im Eigenschaften Bereich in `NoDataText`den Text ein, der als Bezeichnung für Farben ohne Datenwert angezeigt werden soll.  
   
      Sie können auch in der Dropdownliste auf **Ausdruck** klicken, um das Dialogfeld **Ausdruck** zu öffnen und einen Ausdruck zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterberichte &#40;Berichts-Generator und SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103051"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Berichts-Viewer-Webpart auf einer SharePoint-Website
-  Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart, das vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Mit diesem Webpart können Sie Berichte auf einem Berichtsserver, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, anzeigen, drucken, exportieren und in diesen navigieren. Das Berichts-Viewer-Webpart ist Berichtsdefinitionsdateien (RDL-Dateien) zugeordnet, die von einem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver verarbeitet werden. Für andere Berichtsdokumente, die Sie mit anderen Softwareprodukten erstellen, kann es nicht verwendet werden.  
+  Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart, das vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Mit diesem Webpart können Sie Berichte auf einem Berichtsserver, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, anzeigen, drucken, exportieren und in diesen navigieren. Das Berichts-Viewer-Webpart ist Berichts Definitions Dateien (RDL-Dateien) zugeordnet, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] einem Berichts Server verarbeitet werden. Für andere Berichtsdokumente, die Sie mit anderen Softwareprodukten erstellen, kann es nicht verwendet werden.  
   
  Zum Installieren des Webparts müssen Sie das Setup für das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In ausführen. Sie sollten das Webpart nicht unabhängig installieren oder deinstallieren. Es bildet einen Teil des Add-Ins und kann nur über das Add-In-Setuppaket installiert werden. Der Berichts-Viewer-Webpart-Dateiname ist ReportViewer.dwp. Die Datei befindet sich im Ordner Programme\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver und darf nicht in andere Ordner verschoben werden.  
   
@@ -40,19 +40,19 @@ ms.locfileid: "66103051"
 ## <a name="web-part-components"></a>Webpartkomponenten  
  Im Ansichtsbereich wird ein Bericht als HTML angezeigt. Abhängig von der Konfiguration des Webparts kann der Ansichtsbereich maximiert werden, sodass der Bericht im Ganzseitenmodus angezeigt wird, oder der verfügbare Platz mit angrenzenden Bereichen und der Symbolleiste geteilt werden.  
   
- Die Symbolleiste stellt Funktionen für die Seitennavigation, Suche, Zoom und Export bereit, sodass Sie einen Bericht in einem anderen Anwendungsformat anzeigen können. Darüber hinaus wird optional eine Druckfunktionalität bereitgestellt, die eine paginierte Druckausgabe für HTML-Berichte sowie die Möglichkeit zum Ändern des Seitenlayouts und der Randeinstellungen bietet. **Mit dem Berichts-Generator öffnen, Abonnieren**, **Exportieren**und **Drucken** werden im Menü **Aktionen** auf der Symbolleiste bereitgestellt. Die Steuerelemente für Seitennavigation und Zoom befinden sich direkt auf der Symbolleiste.  
+ Die Symbolleiste stellt Funktionen für die Seitennavigation, Suche, Zoom und Export bereit, sodass Sie einen Bericht in einem anderen Anwendungsformat anzeigen können. Darüber hinaus wird optional eine Druckfunktionalität bereitgestellt, die eine paginierte Druckausgabe für HTML-Berichte sowie die Möglichkeit zum Ändern des Seitenlayouts und der Randeinstellungen bietet. **Öffnen Sie mit Berichts-Generator, abonnieren**, **exportieren**und **Drucken** , die im Menü **Aktionen** auf der Symbolleiste bereitgestellt werden. Die Steuerelemente für Seitennavigation und Zoom befinden sich direkt auf der Symbolleiste.  
   
 > [!NOTE]  
 >  Die Symbolleiste kann nur angepasst werden, wenn Sie eigens Code für diesen Zweck schreiben, Sie können jedoch Eigenschaften festlegen, um alle oder einige Steuerelemente auszublenden.  
   
 ### <a name="export-action-on-the-report-toolbar"></a>Aktion Exportieren auf der Berichtssymbolleiste  
- Mit dem Befehl**Exportieren** im Menü **Aktionen** werden Anwendungsformate angezeigt, die den auf einem Berichtsserver bereitgestellten Renderingerweiterungen zugeordnet sind. Um die Verfügbarkeit eines bestimmten Formats zu bestimmen, können Sie eine Renderingerweiterung auf dem Berichtsserver hinzufügen oder entfernen oder Konfigurationseinstellungen ändern, um ein bestimmtes Exportformat aus der Liste zu entfernen. Sie können auch Konfigurationseinstellungen auf dem Berichtsserver angeben, um die verfügbaren Formate zu steuern. Sie können das Standardverhalten eines bestimmten Formats ändern, indem Sie Konfigurationseinstellungen für diese Renderingerweiterung hinzufügen und ändern.  
+ Mit **exportieren** im Menü **Aktionen** werden Anwendungs Formate angezeigt, die Renderingerweiterungen zugeordnet sind, die auf einem Berichts Server bereitgestellt werden. Um die Verfügbarkeit eines bestimmten Formats zu bestimmen, können Sie eine Renderingerweiterung auf dem Berichtsserver hinzufügen oder entfernen oder Konfigurationseinstellungen ändern, um ein bestimmtes Exportformat aus der Liste zu entfernen. Sie können auch Konfigurationseinstellungen auf dem Berichtsserver angeben, um die verfügbaren Formate zu steuern. Sie können das Standardverhalten eines bestimmten Formats ändern, indem Sie Konfigurationseinstellungen für diese Renderingerweiterung hinzufügen und ändern.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Aktion Drucken auf der Berichtssymbolleiste  
- Der Befehl**Drucken** im Menü **Aktionen** stellt eine benutzerdefinierte Druckfunktionalität dar, die über [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]bereitgestellt wird. Wenn Sie auf **Drucken**klicken, wird ein clientseitiges ActiveX-Drucksteuerelement auf den Clientcomputer heruntergeladen. In den meisten Fällen muss der Benutzer, der auf **Drucken** klickt, über Administratorberechtigungen auf dem lokalen Computer verfügen. Üblicherweise ist der Download von ActiveX-Steuerelementen auf Benutzer mit Administratorberechtigungen beschränkt. Sie können SharePoint-Zentraladministration verwenden, aktivieren oder deaktivieren das Herunterladen von des clientseitigen Drucksteuerelements.  
+ **Drucken** im Menü **Aktionen** ist eine benutzerdefinierte Druck Funktionalität, die über [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]bereitgestellt wird. Wenn Sie auf **Drucken**klicken, wird ein clientseitiges ActiveX-Drucksteuerelement auf den Clientcomputer heruntergeladen. In den meisten Fällen muss der Benutzer, der auf **Drucken** klickt, über Administratorberechtigungen auf dem lokalen Computer verfügen. Üblicherweise ist der Download von ActiveX-Steuerelementen auf Benutzer mit Administratorberechtigungen beschränkt. Sie können die SharePoint-zentral Administration verwenden, um den Download der Client seitigen Drucksteuerung zu aktivieren oder zu deaktivieren.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Aktion Suchen auf der Berichtssymbolleiste  
- Der Befehl**Suchen** im Menü **Aktionen** bietet eine Möglichkeit, zu einer Zielposition im Bericht zu navigieren. Sie können nach Inhalten in einem Bericht suchen, indem Sie ein zu suchendes Wort oder eine zu suchende Wortgruppe eingeben. Der maximale Wert für einen Suchbegriff beträgt 256 Zeichen. Wenn die Suche zu einem übereinstimmenden Wert im Bericht führt, wird der Fokus auf den Teil des Berichts verschoben, der diesen Wert enthält.  
+ **Suchen** im Menü **Aktionen** bietet eine Möglichkeit, zu einer Zielposition im Bericht zu wechseln. Sie können nach Inhalten in einem Bericht suchen, indem Sie ein zu suchendes Wort oder eine zu suchende Wortgruppe eingeben. Der maximale Wert für einen Suchbegriff beträgt 256 Zeichen. Wenn die Suche zu einem übereinstimmenden Wert im Bericht führt, wird der Fokus auf den Teil des Berichts verschoben, der diesen Wert enthält.  
   
  Wenn Sie einen Wert für die Suche eingeben, geben Sie den Wert so ein, wie er vermutlich im Bericht angezeigt wird. Stellen Sie keine Frage (z. B. "wie hoch ist der durchschnittliche Gewinn für diesen Monat"), es sei denn, Sie gehen davon aus, dass jedes Wort des Satzes im Bericht vorkommt.  
   
@@ -61,15 +61,15 @@ ms.locfileid: "66103051"
  Für Suchvorgänge gelten Datenbank- und Modellsicherheitseinstellungen, mit denen der Zugriff auf Berichtsdaten eingeschränkt wird. Wenn Sie in einem Bericht mit Durchklicken nach einem Wert suchen, für den ein Modell als Datenquelle verwendet wird, und wenn Sie auf einen Teil des Modells keinen Zugriff haben, werden die Daten, die von diesem Teil des Modells dargestellt werden, von der Suche ausgeschlossen.  
   
 ### <a name="panes-for-specifying-credentials-and-parameters"></a>Bereiche für die Angabe von Anmeldeinformationen und Parametern  
- Die Bereiche**Anmeldeinformationen** und **Parameter** werden neben dem Ansichtsbereich angezeigt. **Anmeldeinformationen** wird angezeigt, wenn die Datenquellenverbindung für den Bericht so konfiguriert ist, dass vom Benutzer ein Konto und ein Kennwort mit den Berechtigungen zum Zugriff auf die Datenquelle angefordert werden. **Parameter** wird angezeigt, wenn der Bericht Benutzereingaben für im Bericht definierte Parameter annimmt.  
+ **Anmelde** Informationen und **Parameter** sind Bereiche, die neben dem Ansichts Bereich angezeigt werden. **Anmelde** Informationen werden angezeigt, wenn die Datenquellen Verbindung für den Bericht so konfiguriert ist, dass der Benutzer aufgefordert wird, ein Konto und ein Kennwort mit Zugriffsrechten auf die Datenquelle einzugeben. **Parameter** werden angezeigt, wenn der Bericht Benutzereingaben für im Bericht definierte Parameter annimmt.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Festlegen benutzerdefinierter Eigenschaften für das Berichts-Viewer-Webpart  
  Zu den Eigenschaften des Webparts zählen benutzerdefinierte Eigenschaften, die nur für den Berichts-Viewer verwendet werden können, sowie allgemeine Eigenschaften, die Sie für jedes Webpart festlegen können. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Viewer-Webparts](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
   
  Berichte werden standardmäßig im Ganzseitenmodus geöffnet. Im Ganzseitenmodus wird die Symbolleiste angezeigt, von der die Seitennavigation, die Suche und weitere Funktionalität bereitgestellt werden. Sie können das Webpart bezüglich der Darstellung oder des standardmäßigen Verhaltens anpassen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren oder Deinstallieren des Reporting Services Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

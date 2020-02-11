@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109909"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Zwischenspeichern (Seite), Freigegebene Datasets (Berichts-Manager)
@@ -36,8 +36,8 @@ ms.locfileid: "66109909"
   
 4.  Klicken Sie auf die Registerkarte **Zwischenspeichern** .  
   
-## <a name="options"></a>Optionen  
- **Freigegebenes Dataset Zwischenspeichern**  
+## <a name="options"></a>Tastatur  
+ **Freigegebenes Dataset zwischenspeichern**  
  Speichert eine temporäre Kopie der Daten in einem Cache, sobald ein Benutzer erstmalig einen Bericht öffnet, der das freigegebene Dataset verwendet. Nachfolgende Benutzer, die den Bericht innerhalb des Zeitraums der Zwischenspeicherung ausführen, erhalten die zwischengespeicherte Kopie der Daten. Die Zwischenspeicherung erhöht in der Regel die Leistung, da die Daten aus dem Cache zurückgegeben werden und die Datasetabfrage nicht erneut ausgeführt werden muss.  
   
  **Cacheablauf nach dieser Anzahl von Minuten**  
@@ -49,16 +49,16 @@ ms.locfileid: "66109909"
  **Datasetspezifischer Zeitplan**  
  Geben Sie einen Zeitplan an, der nur von diesem Dataset verwendet wird.  
   
- **Freigegebenen Zeitplan**  
+ **Frei gegebener Zeitplan**  
  Geben Sie einen Zeitplan an, der für Berichte, Abonnements und andere freigegebene Datasets gemeinsam verwendet wird.  
   
  **Anwenden**  
  Speichern Sie die Änderungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Zwischenspeichern von freigegebenen Datasets (SSRS)](report-server/cache-shared-datasets-ssrs.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Zwischenspeichern von freigegebenen Datasets &#40;SSRS-&#41;](report-server/cache-shared-datasets-ssrs.md)   
  [Zeitpläne](subscriptions/schedules.md)  
   
   

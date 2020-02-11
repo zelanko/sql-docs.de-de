@@ -17,28 +17,28 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918034"
 ---
 # <a name="name-property-ado"></a>Name-Eigenschaft (ADO)
-Gibt den Namen eines Objekts.  
+Gibt den Namen eines Objekts an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Zeichenfolge** Wert, der den Namen eines Objekts angibt.  
+ Legt einen **Zeichen** folgen Wert fest, der den Namen eines Objekts angibt, oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **Namen** Eigenschaft, um einen Namen zuweisen, oder rufen Sie den Namen des eine **Befehl**, **Eigenschaft**, **Feld**, oder **Parameter**  Objekt.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **Name** -Eigenschaft, um einen Namen zu zuweisen oder den Namen eines **Befehls**, einer **Eigenschaft**, eines **Felds**oder eines **Parameter** Objekts abzurufen.  
   
- Der Wert ist Lese-/Schreibzugriff auf eine **Befehl** Objekt und Read-only auf eine **Eigenschaft** Objekt.  
+ Der Wert ist Lese-/Schreibzugriff auf ein **Befehls** Objekt und schreibgeschützt für ein **Eigenschafts** Objekt.  
   
- Für eine **Feld** Objekt **Namen** normalerweise schreibgeschützt ist. Jedoch für den neuen **Feld** Objekte, die angefügt wurden die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), **Namen** Lese-/Schreibzugriff wird erst nach die [Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für die **Feld** angegeben wurde und der neue der Datenanbieter wurde erfolgreich hinzugefügt **Feld** durch Aufrufen der [ Update](../../../ado/reference/ado-api/update-method.md) Methode der **Felder** Auflistung.  
+ Für ein **Feld** Objekt ist **Name** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)angefügt wurden, ist der **Name** jedoch nur dann Lese-/Schreibzugriff, nachdem die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** durch Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) -Methode der **Fields** -Auflistung erfolgreich hinzugefügt hat.  
   
- Für **Parameter** Objekte noch nicht angefügt werden, um die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) -Auflistung, die **Namen** Eigenschaft schreibgeschützt ist. Für angefügt **Parameter** Objekte und alle anderen Objekte, die **Namen** Eigenschaft ist schreibgeschützt. Namen müssen nicht in einer Auflistung eindeutig sein.  
+ Für **Parameter** Objekte, die noch nicht an die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung angefügt wurden, ist die **Name** -Eigenschaft Lese-/Schreibzugriff. Für angefügte **Parameter** Objekte und alle anderen Objekte ist die **Name** -Eigenschaft schreibgeschützt. Namen müssen innerhalb einer Sammlung nicht eindeutig sein.  
   
- Sie können abrufen, die **Namen** Eigenschaft eines Objekts durch einen Ordnungszahlverweis, nach dem sehen Sie sich das Objekt direkt anhand Ihres Namens. Z. B. wenn `rstMain.Properties(20).Name` ergibt `Updatability`, anschließend sehen Sie sich diese Eigenschaft als `rstMain.Properties("Updatability")`.  
+ Sie können die **Name** -Eigenschaft eines Objekts durch einen Ordinalverweis abrufen, nach dem Sie direkt auf das Objekt über den Namen verweisen können. Wenn `rstMain.Properties(20).Name` z. b. `Updatability`ergibt, können Sie anschließend auf diese Eigenschaft als `rstMain.Properties("Updatability")`verweisen.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -47,6 +47,6 @@ Gibt den Namen eines Objekts.
 |[Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|  
 |[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|[Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Attribute und Name Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attribute und Name Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Attribute und namens Eigenschaften (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [Beispiel für Attribute und namens Eigenschaften (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

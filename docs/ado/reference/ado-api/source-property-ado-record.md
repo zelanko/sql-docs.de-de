@@ -1,5 +1,5 @@
 ---
-title: Source-Eigenschaft (ADO Record) | Microsoft-Dokumentation
+title: Source-Eigenschaft (ADO-Datensatz) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,35 +21,35 @@ ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930936"
 ---
 # <a name="source-property-ado-record"></a>Source-Eigenschaft (ADO-Datensatz)
-Gibt an, die Datenquelle oder das Objekt dargestellt wird, durch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md).  
+Gibt die Datenquelle oder das Objekt an, das durch den [Datensatz](../../../ado/reference/ado-api/record-object-ado.md)dargestellt wird.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt eine **Variant** hodnota ukazuje, die Entität, dargestellt durch die **Datensatz**.  
+ Legt einen **Variant** -Wert fest, der die vom **Datensatz**dargestellte Entität angibt, oder gibt diesen zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Quelle** -Eigenschaft gibt die *Quelle* Argument der **Datensatz** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Sie können eine absolute oder relative URL-Zeichenfolge enthalten. Eine absolute URL ohne Einstellung verwendet werden kann die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft direkt öffnen die **Datensatz** Objekt. Ein impliziter **Verbindung** Objekt wird in diesem Fall erstellt.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Source** -Eigenschaft gibt das *Quell* Argument der [Open](../../../ado/reference/ado-api/open-method-ado-record.md) -Methode des **Datensatz** -Objekts zurück. Sie kann eine absolute oder relative URL Zeichenfolge enthalten. Eine absolute URL kann ohne Festlegen der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft verwendet werden, um das **Datensatz** -Objekt direkt zu öffnen. In diesem Fall wird ein implizites **Verbindungs** Objekt erstellt.  
   
- Die **Quelle** Eigenschaft kann auch einen Verweis auf ein bereits geöffnetes enthalten **Recordset**, daraufhin eine **Datensatz** Objekt, das in die aktuelle Zeile darstellt. die  **Recordset**.  
+ Die **Source** -Eigenschaft kann auch einen Verweis auf ein bereits geöffnetes **Recordset**enthalten, das ein **Daten Satz** Objekt öffnet, das die aktuelle Zeile im **Recordset**darstellt.  
   
- Die **Quelle** Eigenschaft kann auch enthalten einen Verweis auf eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt, das eine einzelne Zeile mit Daten vom Anbieter zurückgegeben.  
+ Die **Source** -Eigenschaft könnte auch einen Verweis auf ein [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt enthalten, das eine einzelne Daten Zeile vom Anbieter zurückgibt.  
   
- Wenn die **ActiveConnection** Eigenschaft auch festgelegt ist, und klicken Sie dann die **Quelle** -Eigenschaft muss auf ein Objekt, das innerhalb des Bereichs dieser Verbindung vorhanden ist, verweisen. Z. B. in einem strukturierten Namespaces Wenn die **Quelle** Eigenschaft eine absolute URL enthält, muss es zeigen Sie auf einen Knoten, der innerhalb des Bereichs des Knotens identifiziert werden, indem Sie die URL in der Verbindungszeichenfolge vorhanden ist. Wenn die **Quelle** Eigenschaft enthält eine relative URL, und klicken Sie dann im Kontext festlegen, indem überprüft wird die **ActiveConnection** Eigenschaft.  
+ Wenn die **ActiveConnection** -Eigenschaft ebenfalls festgelegt ist, muss die **Source** -Eigenschaft auf ein Objekt verweisen, das im Gültigkeitsbereich dieser Verbindung vorhanden ist. Wenn z. b. in Struktur strukturierten Namespaces die **Quell** Eigenschaft eine absolute URL enthält, muss Sie auf einen Knoten zeigen, der im Bereich des Knotens vorhanden ist, der durch die URL in der Verbindungs Zeichenfolge identifiziert wird. Wenn die **Source** -Eigenschaft eine relative URL enthält, wird Sie innerhalb des durch die **ActiveConnection** -Eigenschaft festgelegten Kontexts überprüft.  
   
- Die **Quelle** -Eigenschaft ist Lese-/Schreibzugriff, während die **Datensatz** -Objekt geschlossen ist, und ist schreibgeschützt, während die **Datensatz** -Objekts geöffnet ist.  
+ Die **Source** -Eigenschaft ist Lese-/Schreibzugriff, während das **Datensatz** -Objekt geschlossen wird. Sie ist schreibgeschützt, während das **Datensatz** -Objekt geöffnet ist.  
   
 > [!NOTE]
->  URLs, die mit der HTTP-Schema werden automatisch aufgerufen, die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Source-Eigenschaft (ADO-Fehler)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Source-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Source-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

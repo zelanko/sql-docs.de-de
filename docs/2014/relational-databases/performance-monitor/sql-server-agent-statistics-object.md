@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250850"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server-Agent, Statistik-Objekt
@@ -25,11 +25,11 @@ ms.locfileid: "63250850"
   
  Die folgende Tabelle listet die **SQLAgent:Statistik** -Indikatoren auf.  
   
-|Name|Description|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |**SQL Server-Neustarts**|Die Anzahl der erfolgreichen Neustarts von Microsoft SQL Server durch den SQL Server-Agent seit dem letzten Start des SQL Server-Agents.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)  
   

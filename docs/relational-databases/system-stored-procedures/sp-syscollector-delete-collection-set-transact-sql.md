@@ -1,5 +1,5 @@
 ---
-title: Sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft-Dokumentation
+title: sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68000875"
 ---
-# <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
+# <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Löscht einen benutzerdefinierten Auflistsatz und all seine Sammlungselemente.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,18 +42,18 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
 ## <a name="arguments"></a>Argumente  
  [ @collection_set_id = ] *collection_set_id*  
- Der eindeutige Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
+ Der eindeutige Bezeichner für den Sammlungssatz. *collection_set_id* ist vom *Datentyp* **int** und muss über einen Wert verfügen, wenn Name NULL ist.  
   
- [ @name =] '*Namen*"  
- Ist der Name des Sammlungssatzes. *Namen* ist **Sysname** und muss einen Wert aufweisen, wenn *Collection_set_id* ist NULL.  
+ [ @name = ] "*Name*"  
+ Der Name des Sammlungs Satzes. *Name ist vom Datentyp* **vom Datentyp sysname** und muss über einen Wert verfügen, wenn *collection_set_id* NULL ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- Sp_syscollector_delete_collection_set muss im Kontext der Msdb-Systemdatenbank ausgeführt werden.  
+## <a name="remarks"></a>Bemerkungen  
+ sp_syscollector_delete_collection_set müssen im Kontext der msdb-Systemdatenbank ausgeführt werden.  
   
- Entweder *Collection_set_id* oder *Namen* muss über einen Wert verfügen, können nicht beide NULL sein. Um diese Werte zu erhalten, Fragen Sie die Syscollector_collection_set-Systemsicht.  
+ Entweder *collection_set_id* oder *Name* muss einen Wert aufweisen, beide dürfen nicht NULL sein. Um diese Werte zu erhalten, Fragen Sie die syscollector_collection_set Systemsicht ab.  
   
  Vom System definierte Sammlungssätze können nicht gelöscht werden.  
   
@@ -61,7 +61,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  Damit diese Prozedur ausgeführt werden kann, ist die Mitgliedschaft in der festen Datenbankrolle dc_admin (mit EXECUTE-Berechtigung) erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel löscht einen benutzerdefinierten Sammlungssatz angeben der *Collection_set_id*.  
+ Im folgenden Beispiel wird ein benutzerdefinierter Sammlungs Satz gelöscht, der die *collection_set_id*angibt.  
   
 ```  
 USE msdb;  
@@ -70,9 +70,9 @@ EXEC dbo.sp_syscollector_delete_collection_set
     @collection_set_id = 4;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

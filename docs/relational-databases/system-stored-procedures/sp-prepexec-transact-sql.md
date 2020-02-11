@@ -18,10 +18,10 @@ ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794715"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68794715"
 
   Bereitet eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung vor und führt sie aus. sp_prepexec kombiniert die Funktionen von sp_prepare und sp_execute. Diese Aktion wird von ID = 13 in einem Tabular Data Stream-Paket (TDS) aufgerufen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,13 +44,13 @@ sp_prepexec handle OUTPUT, params , stmt
  Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]generierte *Handlebezeichner* . *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
   
  *params*  
- Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
+ Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. " *para* meters" ist ein erforderlicher Parameter, der den Eingabe Wert " **ntext**", " **NCHAR**" oder " **nvarchar** " aufruft. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
   
  *stmt*  
  Definiert das Resultset des Cursors. Der *stmt* -Parameter ist erforderlich und erfordert einen Eingabe Wert vom Typ **ntext**, **NCHAR**oder **nvarchar** .  
   
  *bound_param*  
- Gibt die optionale Verwendung zusätzlicher Parameter an. *bound_param* erfordert einen Eingabewert eines beliebigen Datentyps, um die zusätzlichen verwendeten Parameter festzulegen.  
+ Gibt die optionale Verwendung zusätzlicher Parameter an. *bound_param* einen Eingabe Wert eines beliebigen Datentyps aufrufen, um die zusätzlichen verwendeten Parameter festzulegen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine einfache-Anweisung vorbereitet und ausgeführt:  
@@ -66,8 +66,8 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
- [sp_execute &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_prepare &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [sp_execute &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

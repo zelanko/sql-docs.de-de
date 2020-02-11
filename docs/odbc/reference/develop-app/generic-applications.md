@@ -1,5 +1,5 @@
 ---
-title: Allgemeiner Anwendungen | Microsoft-Dokumentation
+title: Generische Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139300"
 ---
 # <a name="generic-applications"></a>Allgemeine Anwendungen
-Allgemeine Anwendungen manchmal eine hartcodierte Aufgabe ausführen, z. B. als Kalkulationstabelle, die Abrufen von Daten aus einer Datenbank. Sie können auch eine Vielzahl von benutzerdefinierten Aufgaben, z. B. eine Standardabfrage-Anwendung, die der Benutzer zum eingeben und Ausführen einer SQL-Anweisung ausführen. Was allgemeine Anwendungen gemeinsam haben, ist, dass sie mit einer Vielzahl von verschiedenen DBMS-Systeme funktionieren müssen und der Entwickler nicht im Voraus weiß, welche diese DBMS werden.  
+Generische Anwendungen führen manchmal eine hart codierte Aufgabe aus, z. b. eine Kalkulations Tabelle, die Daten aus einer Datenbank abruft. Sie können auch eine Vielzahl von benutzerdefinierten Aufgaben ausführen, wie z. b. eine generische Abfrageanwendung, die es dem Benutzer ermöglicht, eine SQL-Anweisung einzugeben und auszuführen. Welche generischen Anwendungen gemeinsam verwendet werden, besteht darin, dass Sie mit einer Vielzahl von unterschiedlichen DBMSs arbeiten müssen und dass der Entwickler im Voraus nicht weiß, was diese DBMSs-Daten sind.  
   
- Aus diesem Grund müssen allgemeine Anwendungen hochgradig interoperabel sein. Der Entwickler muss stellen viele Optionen, trading aus Interoperabilität für Funktionen, und muss Code schreiben, der erwartet, Treiber dass, um eine Vielzahl von Funktionen zu unterstützen. Während allgemeine Anwendungen optimiert werden können, um mit beliebten DBMS zu arbeiten, enthalten sie selten treiberspezifische oder DBMS-spezifischen Code.
+ Daher müssen generische Anwendungen hochgradig interoperabel sein. Der Entwickler muss viele Möglichkeiten treffen, Interoperabilität für Features zu beenden und Code schreiben, der die Treiber für eine Vielzahl von Funktionen erwartet. Obwohl generische Anwendungen möglicherweise für gängige DBMSs optimiert werden, enthalten Sie nur selten treiberspezifischen oder DBMS-spezifischen Code.

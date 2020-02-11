@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074786"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
   In früheren Releases waren berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes nicht zulässig. Ab SQL Server 2008 sind diese jedoch zulässig und werden durch eine Verbindungseigenschaft bereitgestellt. Darüber hinaus wurde in SQL Server 2008 R ein neues Verhalten für berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes eingeführt.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes  
- Die `SubQueries` Verbindungszeichenfolgen-Eigenschaft unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder `DBPROPMSMDSUBQUERIES` -Eigenschaft in [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) definiert das Verhalten oder die Zulässigkeit von berechneten Elementen oder berechneten Legt fest, in Unterauswahlen oder Teilcubes. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  
+ Die `SubQueries` Verbindungs Zeichenfolgen <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> -Eigenschaft `DBPROPMSMDSUBQUERIES` in oder die-Eigenschaft in [unterstützten XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) das Verhalten oder die Gewährung berechneter Elemente oder berechneter Sätze in untergeordneten SELECT-Ausdrücken oder Teilcubes definiert. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  
   
  Die SubQueries-Eigenschaft lässt die folgenden Werte zu.  
   
 |||  
 |-|-|  
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |0|Berechnete Elemente sind in untergeordneten SELECT-Ausdrücken oder Teilcubes nicht zulässig.<br /><br /> Beim Auswerten des untergeordneten SELECT-Ausdrucks oder des Teilcubes wird ein Fehler ausgelöst, wenn auf ein berechnetes Element verwiesen wird.|  
 |1|Berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes sind zulässig, in den zurückgebenden Teilbereich werden jedoch keine Vorgänger der Elemente eingeführt.|  
 |2|Berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes sind zulässig und in den zurückgebenden Teilbereich werden Vorgänger der Elemente eingeführt. Zudem ist eine gemischte Granularität in der Auswahl berechneter Elemente zulässig.|  
@@ -81,7 +81,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|KJ 2001|KJ 2002|KJ 2003|KJ 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
-|United States|(null)|(null)|(null)|(null)|(null)|  
+|USA|(null)|(null)|(null)|(null)|(null)|  
 |Washington|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2.383.545,69|$291.248,93|$763.557,02|$915.832,36|$412.907,37|  
   
@@ -107,7 +107,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|KJ 2001|KJ 2002|KJ 2003|KJ 2004|  
 |All Geographies|$235.171,62|$419,46|$4.996,25|$131.788,82|$97.967,09|  
-|United States|$235.171,62|$419,46|$4.996,25|$131.788,82|$97.967,09|  
+|USA|$235.171,62|$419,46|$4.996,25|$131.788,82|$97.967,09|  
 |Oregon|$30.968,25|$419,46|$4.996,25|$17.442,97|$8.109,56|  
 |Portland|$30.968,25|$419,46|$4.996,25|$17.442,97|$8.109,56|  
 |97205|$30.968,25|$419,46|$4.996,25|$17.442,97|$8.109,56|  
@@ -118,12 +118,12 @@ Where [Measures].[Reseller Sales Amount]
   
  In den obigen Ergebnissen werden die aggregierten Werte für [All Geographies], [United States], [Oregon] und [Washington] durch Aggregation der Nachfolger von &[Portland]&[OR] und &[Spokane]&[WA] erzeugt. Aus dem berechneten Element werden keine Werte abgerufen.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Bemerkungen  
  In untergeordneten SELECT-Ausdrücken und Teilcubes sind nur globale oder in der Sitzung berechnete Elemente zulässig. Wenn der MDX-Ausdruck in einer Abfrage berechnete Elemente enthält, wird bei der Auswertung des untergeordneten SELECT-Ausdrucks oder Teilcubes ein Fehler ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Unterauswahlen in Abfragen](subselects-in-queries.md)   
+ [Untergeordnete SELECT-Ausdrücke in Abfragen](subselects-in-queries.md)   
  [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

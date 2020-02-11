@@ -1,5 +1,5 @@
 ---
-title: Data-Abschnitt | Microsoft-Dokumentation
+title: Daten Abschnitt | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,36 +13,36 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925642"
 ---
 # <a name="data-section"></a>Datenabschnitt
-Data-Abschnitt definiert die Daten des Rowsets zusammen mit allen ausstehenden Updates, einfügungen und löschungen. Data-Abschnitt kann NULL oder mehr Zeilen enthalten. Es kann nur Daten aus einem Rowset enthalten, in die Zeile durch das Schema definiert ist. Darüber hinaus können wie bereits erwähnt, Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder Unterelement im Data-Abschnitt verwendet wird, und dieses Konstrukt nicht im Schema-Abschnitt definiert wurde, wird es ignoriert.  
+Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Updates, Einfügungen oder Löschungen. Der Daten Abschnitt kann NULL oder mehr Zeilen enthalten. Es können nur Daten aus einem Rowset enthalten sein, in dem die Zeile durch das Schema definiert ist. Auch, wie bereits erwähnt, können Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Daten Abschnitt verwendet wird und dieses Konstrukt nicht im Schema Abschnitt definiert wurde, wird es automatisch ignoriert.  
   
-## <a name="string"></a>Zeichenfolge  
- Reservierte XML-Zeichen im Text-Daten müssen durch entsprechende Zeichenentitäten ersetzt werden. Beispielsweise muss in den Firmennamen "Joes Garage", das einfache Anführungszeichen durch eine Entität ersetzt werden. Die tatsächliche Zeile würde folgendermaßen aussehen:  
+## <a name="string"></a>String  
+ Reservierte XML-Zeichen in Textdaten müssen durch entsprechende Zeichen Entitäten ersetzt werden. Beispielsweise muss das einfache Anführungszeichen im Firmennamen "Joe es Garage" durch eine Entität ersetzt werden. Die tatsächliche Zeile ähnelt der folgenden:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Die folgenden Zeichen sind in XML reserviert und muss durch Zeichenentitäten ersetzt werden: {",", &,\<, >}.  
+ Die folgenden Zeichen sind in XML reserviert und müssen durch Zeichen Entitäten ersetzt werden: {",", &\<,, >}.  
   
 ## <a name="binary"></a>Binär  
- Binärdaten sind bin.hex codiert (d. h. ein Byte-Zuordnungen, die zwei Zeichen, ein Zeichen pro Halbbyte).  
+ Binäre Daten sind bin. Hex-codiert (d. h. ein Byte ist zwei Zeichen zugeordnet, ein Zeichen pro Nibble).  
   
-## <a name="datetime"></a>DateTime  
- Die Variante VT_DATE-Format wird nicht direkt von XML-Data-Datentypen unterstützt. Das richtige Format für Datumsangaben mit-Komponente in ein Datum und die Uhrzeit lautet jjjj-mm-TTThh.  
+## <a name="datetime"></a>Datetime  
+ Das Variant VT_DATE-Format wird von XML-Daten Datentypen nicht direkt unterstützt. Das richtige Format für Datumsangaben mit einer Daten-und Zeitkomponente lautet yyyy-mm-ddThh: mm: SS.  
   
- Weitere Informationen zu XML angegebenen Datums-und Uhrzeitformate, finden Sie unter den [W3C XML-Data-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Weitere Informationen zu den von XML angegebenen Datumsformaten finden Sie in der [W3C-Spezifikation für XML-Daten](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
- Wenn die XML-Data-Spezifikation definiert zwei äquivalente Datentypen (z. B. i4 == Int), ADO schreibt den angezeigten Namen jedoch in beide gelesen wird.  
+ Wenn in der XML-Data-Spezifikation zwei äquivalente Datentypen (z. b. I4 = = int) definiert sind, schreibt ADO den anzeigen Amen, aber beide werden gelesen.  
   
 ## <a name="managing-pending-changes"></a>Verwalten von ausstehenden Änderungen  
- Ein Recordset in sofort geöffnet werden kann oder Update-Modus "Batch". Wenn sie im Modus "Batch-Update" mit clientseitigen Cursorn geöffnet werden, sind alle Änderungen, die auf das Recordset im Status "Ausstehend", bis die UpdateBatch-Methode aufgerufen wird. Ausstehende Änderungen werden auch beibehalten, wenn das Recordset gespeichert wird. In XML, werden sie durch die Verwendung der "Update"-Elemente, die im Urn: Schemas definierten dargestellt – Microsoft-Com:rowset. Darüber hinaus, wenn ein Rowset aktualisiert werden kann, die aktualisierbare-Eigenschaft muss festgelegt werden in der Definition der Zeile "true". Definieren Sie, dass die Shippers-Tabelle, die ausstehenden Änderungen enthält, würde die Zeilendefinition ähneln aussehen z. B. folgende.  
+ Ein Recordset kann direkt oder im Batch Aktualisierungs Modus geöffnet werden. Wenn Sie mit Client seitigen Cursorn im Batch Aktualisierungs Modus geöffnet werden, sind alle am Recordset vorgenommenen Änderungen in einem ausstehenden Zustand, bis die UpdateBatch-Methode aufgerufen wird. Ausstehende Änderungen werden auch beibehalten, wenn das Recordset gespeichert wird. In XML werden Sie durch die Verwendung der "Update"-Elemente dargestellt, die in urn: Schemas-Microsoft-com: Rowset definiert sind. Wenn ein Rowset aktualisiert werden kann, muss die aktualisierbare Eigenschaft in der Definition der Zeile auf true festgelegt werden. Um z. b. zu definieren, dass die Tabelle "Spediteure" ausstehende Änderungen enthält, sieht die Zeilen Definition wie folgt aus.  
   
 ```  
 <s:ElementType name="row" content="eltOnly" updatable="true">  
@@ -53,9 +53,9 @@ Data-Abschnitt definiert die Daten des Rowsets zusammen mit allen ausstehenden U
 </s:ElementType>  
 ```  
   
- Dies weist den Persistenz-Provider zu Surface-Daten, damit ADO ein aktualisierbares Recordset-Objekt erstellen kann.  
+ Dadurch wird dem Dauerhaftigkeits Anbieter mitgeteilt, dass Daten angezeigt werden, damit ADO ein Aktualisier bares Recordset-Objekt erstellen kann.  
   
- Die folgenden Beispieldaten zeigt eine Vorschau von einfügungen, löschungen und Änderungen in die persistente Datei.  
+ Die folgenden Beispiel Daten zeigen, wie insertions, Änderungen und Löschungen in der persistenten Datei aussehen.  
   
 ```  
 <rs:data>  
@@ -82,7 +82,7 @@ Data-Abschnitt definiert die Daten des Rowsets zusammen mit allen ausstehenden U
 </rs:data>  
 ```  
   
- Ein Update enthält immer die gesamte Zeile Originaldaten gefolgt von Daten aus der geänderten Zeile. Alle Spalten oder nur die Spalten, die tatsächlich geändert wurden, kann die geänderte Zeile enthalten. Im vorherigen Beispiel die Zeile für den Spediteur 2 wird nicht geändert, und nur in die Spalte Phone Spediteur 3 Werte geändert wurde und daher die einzige Spalte in der geänderten Zeile enthalten ist. Die eingefügten Zeilen für Shippers 12, 13 und 14 werden im Batchmodus zusammen unter einem Rs: Insert-Tag. Beachten Sie, dass es sich bei gelöschte Zeilen auch zusammen als Batch verarbeitet werden können, auch wenn dies im vorherigen Beispiel nicht angezeigt wird.  
+ Ein Update enthält immer die gesamten ursprünglichen Zeilendaten, gefolgt von den geänderten Zeilendaten. Die geänderte Zeile enthält möglicherweise alle Spalten oder nur die Spalten, die tatsächlich geändert wurden. Im vorherigen Beispiel wird die Zeile für den shipper2 nicht geändert, und nur die Spalte "Phone" hat Werte für den shipperwert 3 geändert und ist daher die einzige Spalte, die in der geänderten Zeile enthalten ist. Die eingefügten Zeilen für die Lader 12, 13 und 14 werden zusammen mit einem RS: Insert-Tag zusammengefasst. Beachten Sie, dass gelöschte Zeilen auch in einem Batch zusammengefasst werden können, obwohl dies im vorherigen Beispiel nicht gezeigt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

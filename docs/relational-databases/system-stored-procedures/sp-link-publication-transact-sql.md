@@ -1,5 +1,5 @@
 ---
-title: Sp_link_publication (Transact-SQL) | Microsoft-Dokumentation
+title: sp_link_publication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,24 +16,24 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139899"
 ---
-# <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
+# <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Legt die Konfigurations- und Sicherheitsinformationen fest, die von den Synchronisierungstriggern der Abonnements mit sofortigem Update bei der Herstellung einer Verbindung mit dem Verleger verwendet werden. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
+  Legt die Konfigurations- und Sicherheitsinformationen fest, die von den Synchronisierungstriggern der Abonnements mit sofortigem Update bei der Herstellung einer Verbindung mit dem Verleger verwendet werden. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
 > [!IMPORTANT]
->  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
->  Diese gespeicherte Prozedur kann unter bestimmten Umständen fehlschlagen, wenn es sich bei dem Abonnenten ausgeführt wird, ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Servicepack 1 oder höher, und dem Verleger eine frühere Version ausgeführt wird. Falls in diesem Szenario ein Fehler bei der gespeicherten Prozdur auftritt, sollten Sie den Verleger auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 oder höher aktualisieren.  
+>  Unter bestimmten Bedingungen kann bei dieser gespeicherten Prozedur ein Fehler auftreten, wenn auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] dem Abonnenten Service Pack 1 oder höher ausgeführt wird und auf dem Verleger eine frühere Version ausgeführt wird. Falls in diesem Szenario ein Fehler bei der gespeicherten Prozdur auftritt, sollten Sie den Verleger auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 oder höher aktualisieren.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,48 +49,48 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers, zu verknüpfen. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers, mit dem eine Verknüpfung hergestellt werden soll. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank zu verknüpfen. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank, mit der eine Verknüpfung hergestellt werden soll. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, zu verknüpfen. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung, mit der eine Verknüpfung hergestellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @security_mode = ] security_mode` Der Sicherheitsmodus wird des Abonnenten für sofortige Updates eine Verbindung mit einem Remoteverleger verwendet werden. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode`Der Sicherheitsmodus, der vom Abonnenten verwendet wird, um eine Verbindung mit einem Remote Verleger für das sofortige Aktualisieren herzustellen. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich: [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung mit der Anmeldung, die in dieser gespeicherten Prozedur als angegebenen *Anmeldung* und *Kennwort*.<br /><br /> Hinweis: In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Option wurde verwendet, um ein dynamischer Remoteprozeduraufruf (RPC) angeben.|  
-|**1**|Verwendet den Sicherheitskontext ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung oder Windows-Authentifizierung) des Benutzers, der die Änderung auf dem Abonnenten ausführt.<br /><br /> Hinweis: Dieses Konto muss auch auf dem Verleger mit ausreichenden Berechtigungen vorhanden sein. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.|  
-|**2**|Verwendet eine vorhandene, benutzerdefinierte verbindungsserveranmeldung mit erstellt **Sp_link_publication**.|  
+|**0**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung mit der in dieser gespeicherten Prozedur angegebenen Anmeldung als *Login* und *Password*.<br /><br /> Hinweis: in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wurde diese Option zum Angeben eines dynamischen Remote Prozedur Aufrufs (RPC) verwendet.|  
+|**1**|Verwendet den Sicherheitskontext ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung oder Windows-Authentifizierung) des Benutzers, der die Änderung auf dem Abonnenten ausführt.<br /><br /> Hinweis: dieses Konto muss auch auf dem Verleger mit ausreichenden Berechtigungen vorhanden sein. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.|  
+|**2**|Verwendet einen vorhandenen benutzerdefinierten Anmelde Namen für den verknüpften Server, der mit **sp_link_publication**erstellt wurde.|  
   
-`[ @login = ] 'login'` Ist die Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben, wenn *Security_mode* ist **0**.  
+`[ @login = ] 'login'`Der Anmelde Name. *Login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, ** wenn security_mode **0**ist.  
   
-`[ @password = ] 'password'` Ist das Kennwort. *Kennwort* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter muss angegeben, wenn *Security_mode* ist **0**.  
+`[ @password = ] 'password'`Das Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, ** wenn security_mode **0**ist.  
   
-`[ @distributor = ] 'distributor'` Ist der Name des Verteilers. *Verteiler* ist **Sysname**, hat den Standardwert NULL.  
+`[ @distributor = ] 'distributor'`Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_link_publication** wird von Abonnements mit sofortigem Update bei der Transaktionsreplikation verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_link_publication** wird von Abonnements mit sofortigem Update bei der Transaktions Replikation verwendet.  
   
- **Sp_link_publication** für sowohl Push-und Pullabonnements verwendet werden kann. Der Aufruf ist vor oder nach dem Erstellen des Abonnements möglich. Ein Eintrag eingefügt oder aktualisiert die [MSsubscription_properties &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) -Systemtabelle.  
+ **sp_link_publication** können für Pushabonnements und Pullabonnements verwendet werden. Der Aufruf ist vor oder nach dem Erstellen des Abonnements möglich. Ein Eintrag wird in der [MSsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Systemtabelle eingefügt oder aktualisiert.  
   
- Bei Pushabonnements wird der Eintrag gelöscht werden durch [Sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Bei Pullabonnements müssen Sie der Eintrag gelöscht werden durch [Sp_droppullsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) oder [Sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Sie können auch aufrufen **Sp_link_publication** mit einem NULL-Kennwort löschen Sie den Eintrag in der [MSsubscription_properties &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Systemtabelle änderungskonfigurationen auf Sicherheitsrisiken.  
+ Bei Pushabonnements kann der Eintrag durch [sp_subscription_cleanup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)bereinigt werden. Für Pullabonnements kann der Eintrag durch [sp_droppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) oder [sp_subscription_cleanup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)bereinigt werden. Sie können auch **sp_link_publication** mit einem NULL-Kennwort anrufen, um den Eintrag in der [MSsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Systemtabelle zu löschen.  
   
- Der Standardmodus, der von einem Abonnenten mit sofortigem Update verwendet wird, wenn eine Verbindung zum Verleger hergestellt wird, ermöglicht nicht die Verwendung einer Verbindung mit der Windows-Authentifizierung. Wenn Sie eine Verbindung mit der Windows-Authentifizierung herstellen möchten, muss ein Verbindungsserver für den Verleger eingerichtet werden. Der Abonnent mit sofortigem Update sollte diese Verbindung dann für das Update des Abonnenten verwenden. Dies erfordert die **Sp_link_publication** für die Ausführung mit *Security_mode* = **2**. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.  
+ Der Standardmodus, der von einem Abonnenten mit sofortigem Update verwendet wird, wenn eine Verbindung zum Verleger hergestellt wird, ermöglicht nicht die Verwendung einer Verbindung mit der Windows-Authentifizierung. Wenn Sie eine Verbindung mit der Windows-Authentifizierung herstellen möchten, muss ein Verbindungsserver für den Verleger eingerichtet werden. Der Abonnent mit sofortigem Update sollte diese Verbindung dann für das Update des Abonnenten verwenden. Dies erfordert, dass die **sp_link_publication** mit *security_mode* = **2**ausgeführt werden. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_link_publication**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_link_publication**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_droppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_subscription_cleanup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

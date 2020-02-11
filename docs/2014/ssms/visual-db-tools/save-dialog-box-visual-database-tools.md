@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241154"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Speichern (Dialogfeld) (Visual Database Tools)
@@ -26,14 +26,14 @@ ms.locfileid: "63241154"
 > [!NOTE]  
 >  Für die im Tabellen-Designer gemachten Änderungen an einer Tabelle wird erst dann ein Commit an die Datenbank ausgeführt, wenn Sie die Tabelle speichern. Nach dem Speichern der Tabelle können keine Änderungen rückgängig gemacht werden. Um alle nicht gespeicherten Änderungen zu verwerfen, schließen Sie alle offenen Tabellen, ohne sie zu speichern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Warnung bei betroffenen Tabellen**  
  Geben Sie an, ob dieses Dialogfeld beim nächsten Speichern ausgewählter Tabellen angezeigt wird. Dieses Kontrollkästchen ist standardmäßig aktiviert. Wenn Sie diese Option deaktivieren, können Sie sie im Dialogfeld **Optionen** erneut aktivieren.  
   
  **Textdatei speichern**  
  Zeigen Sie das Dialogfeld **Speichern unter** mit der Aufforderung an, einen Speicherort für die Textdatei anzugeben, in der die Tabellen aufgeführt werden. In dieser Datei ist die Liste der Tabellen enthalten, die von den vorgenommenen Änderungen betroffen sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entwerfen von Tabellen &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

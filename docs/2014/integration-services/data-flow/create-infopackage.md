@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827972"
 ---
 # <a name="create-infopackage"></a>InfoPackage erstellen
@@ -35,11 +35,11 @@ ms.locfileid: "62827972"
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoPackage**aus, und klicken Sie dann auf **Erstellen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **InfoSource**  
  Geben Sie den Namen der InfoSource ein, auf der das neue InfoPackage basieren soll.  
   
- **Kurze Beschreibung**  
+ **Kurzbeschreibung**  
  Geben Sie eine Beschreibung für das neue InfoPackage ein.  
   
  **Quellsystem**  
@@ -51,13 +51,13 @@ ms.locfileid: "62827972"
  **Texte**  
  Gibt an, dass vom InfoPackage Textdaten geladen werden.  
   
- **Transaction**  
+ **Transaktion**  
  Gibt an, dass vom InfoPackage Transaktionsdaten geladen werden.  
   
  **Speichern und aktivieren**  
  Speichern und aktivieren Sie das neue InfoPackage.  
   
-## <a name="see-also"></a>Siehe auch  
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898858"
 ---
 # <a name="identifiers-ssis"></a>Bezeichner (SSIS)
@@ -101,7 +101,7 @@ ms.locfileid: "62898858"
 ## <a name="unique-variable-names"></a>Eindeutige Variablennamen  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt benutzerdefinierte Variablen und stellt eine Reihe von Systemvariablen bereit. Standardmäßig gehören benutzerdefinierte Variablen zum Namespace **User** und Systemvariablen zum Namespace **System** . Sie können zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und die Namespacenamen entsprechend den Anforderungen Ihrer Anwendung aktualisieren. Im Ausdrucks-Generator werden bereichsinterne Variablen in allen Namespaces aufgeführt.  
   
- Alle Variablen weisen einen Bereich auf und gehören zu einem Namespace. Eine Variable weist einen Paketbereich oder den Bereich eines Containers oder Tasks im Paket auf. Im Ausdrucks-Generator des [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designers werden nur die bereichsinternen Variablen aufgeführt. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
+ Alle Variablen weisen einen Bereich auf und gehören zu einem Namespace. Eine Variable weist einen Paketbereich oder den Bereich eines Containers oder Tasks im Paket auf. Im Ausdrucks-Generator des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers werden nur die bereichsinternen Variablen aufgeführt. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
   
  Für Variablen, die in Ausdrücken verwendet werden, sind eindeutige Namen erforderlich, damit die Ausdrucksauswertung den Ausdruck ordnungsgemäß auswertet. Falls ein Paket mehrere gleichnamige Variablen verwendet, müssen deren Namespaces unterschiedlich sein. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt einen Namespace-Auflösungsoperator bereit, bestehend aus zwei Doppelpunkten (::), um eine Variable mit ihrem Namespace zu qualifizieren. Beispielsweise verwenden die folgenden Ausdrücke zwei Variablen mit dem Namen **Count**. Eine Variable gehört zum Namespace **User** und die andere zum Namespace **MyNamespace** .  
   
@@ -112,9 +112,9 @@ ms.locfileid: "62898858"
 > [!IMPORTANT]  
 >  Sie müssen die Kombination aus Namespace und qualifiziertem Variablennamen in eckige Klammern einschließen, damit die Ausdrucksauswertung die Variable erkennt.  
   
- Wenn der Wert des **Anzahl** in die **Benutzer** Namespace gleich 10 und der Wert des **Anzahl** in **MyNamespace** 2 ist, ergibt der Ausdruck `true` , da die ausdrucksauswertung zwei unterschiedliche Variablen erkennt.  
+ Wenn der Wert von **count** im **User** -Namespace 10 und der Wert von **count** in **MyNamespace** 2 ist, wird der Ausdruck als `true` ausgewertet, da die Ausdrucks Auswertung zwei unterschiedliche Variablen erkennt.  
   
- Wenn Variablennamen nicht eindeutig sind, wird kein Fehler gemeldet. Die Ausdrucksauswertung verwendet stattdessen nur eine Instanz der Variablen zum Auswerten des Ausdrucks und gibt ein falsches Ergebnis zurück. Der folgende Ausdruck sollte z. B. zum Vergleichen der Werte (10 und 2) zweier separater **Anzahl** Variablen, aber der Ausdruck ausgewertet wird, um `false` , da die ausdrucksauswertung dieselbe Instanz von der verwendet **Anzahl** -Variablen zweimal.  
+ Wenn Variablennamen nicht eindeutig sind, wird kein Fehler gemeldet. Die Ausdrucksauswertung verwendet stattdessen nur eine Instanz der Variablen zum Auswerten des Ausdrucks und gibt ein falsches Ergebnis zurück. Beispielsweise war der folgende Ausdruck zum Vergleichen der Werte (10 und 2) für zwei separate **count** -Variablen vorgesehen. der Ausdruck wird jedoch `false` zu ausgewertet, da die Ausdrucks Auswertung dieselbe Instanz der **count** -Variablen zweimal verwendet.  
   
 ```  
 @Count > @Count  

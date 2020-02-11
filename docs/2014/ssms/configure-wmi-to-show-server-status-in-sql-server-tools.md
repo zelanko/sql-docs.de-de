@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245666"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
-  In diesem Thema wird beschrieben, wie WMI konfiguriert wird, um den Serverstatus in SQL Server-Tools in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] anzuzeigen. Bei der Verbindungsherstellung mit Servern wird von den Komponenten Registrierte Server und Objekt-Explorer von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]sowie auch vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager Windows Management Instrumentation (WMI) zum Abrufen des Status der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienste (MSSQLSERVER) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienste (MSSQLSERVER) verwendet. Zum Anzeigen des Dienststatus muss der Benutzer über Remotezugriffsrechte für das WMI-Objekt verfügen. Zum Konfigurieren dieser Berechtigung muss auf dem Server WMI installiert sein.  
+  In diesem Thema wird beschrieben, wie WMI konfiguriert wird, um den Serverstatus in SQL Server-Tools in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]anzuzeigen. Bei der Verbindungsherstellung mit Servern wird von den Komponenten Registrierte Server und Objekt-Explorer von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]sowie auch vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager Windows Management Instrumentation (WMI) zum Abrufen des Status der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienste (MSSQLSERVER) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienste (MSSQLSERVER) verwendet. Zum Anzeigen des Dienststatus muss der Benutzer über Remotezugriffsrechte für das WMI-Objekt verfügen. Zum Konfigurieren dieser Berechtigung muss auf dem Server WMI installiert sein.  
   
-##  <a name="SSMSProcedure"></a> So konfigurieren Sie die WMI-Berechtigungen  
+##  <a name="SSMSProcedure"></a>So konfigurieren Sie die WMI-Berechtigung  
   
 1.  Klicken Sie auf dem Remoteserver im Menü **Start** auf **Ausführen**.  
   
-2.  In der **öffnen** geben `wmimgmt.msc`, und klicken Sie dann auf **OK**.  
+2.  Geben `wmimgmt.msc`Sie im Feld **Öffnen** ein, und klicken Sie dann auf **OK**.  
   
 3.  Klicken Sie im Programm **Windows-Verwaltungsinfrastruktur** mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** , und klicken Sie dann auf **Eigenschaften**.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "63245666"
   
 6.  Fügen Sie zum Feld **Gruppen- oder Benutzernamen** eine Gruppe oder einen Benutzer hinzu, und markieren Sie die Gruppe bzw. den Benutzer.  
   
-7.  In der **Berechtigungen für** _\<Gruppen- oder Benutzername >_ wählen Sie im der **zulassen** Spalte, für die **Remoteaktivierung** Berechtigung , für Benutzer, die Sie Remote möchten der Dienststatus erkannt.  
+7.  Wählen Sie im Feld **Berechtigungen für**_\<Gruppe oder Benutzer>_ die Spalte **zulassen** für die Berechtigung **Remote Aktivierung** für Benutzer aus, für die der Dienststatus Remote erkannt werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
- [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

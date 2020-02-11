@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277433"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Verbinden mit einer Instanz mit dem Objekt-Explorer
@@ -28,21 +28,21 @@ ms.locfileid: "63277433"
   
  Zum Angeben optionaler Verbindungseinstellungen führen Sie die folgenden Schritte aus:  
   
-1.  Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden** , und klicken Sie auf den Servertyp, mit dem eine Verbindung hergestellt werden soll. Das Dialogfeld **Verbindung mit Server herstellen** wird angezeigt.  
+1.  Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden** , und klicken Sie auf den Servertyp, mit dem eine Verbindung hergestellt werden soll. Das Dialogfeld **Mit Server verbinden** wird angezeigt.  
   
 2.  Geben Sie in das Feld **Servername** den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ein.  
   
-3.  Klicken Sie auf **Optionen**. Im Dialogfeld **Verbindung mit Server herstellen** werden weitere Optionen angezeigt.  
+3.  Klicken Sie auf **Options**. Im Dialogfeld **Verbindung mit Server herstellen** werden weitere Optionen angezeigt.  
   
 4.  Klicken Sie auf die Registerkarte **Verbindungseigenschaften** , um die weiteren Einstellungen zu konfigurieren. Die verfügbaren Einstellungen variieren abhängig vom Servertyp. Die folgenden Einstellungen sind für [!INCLUDE[ssDE](../../includes/ssde-md.md)]verfügbar.  
   
-    |Einstellung|Beschreibung|  
+    |Einstellung|BESCHREIBUNG|  
     |-------------|-----------------|  
-    |**Verbindung mit Datenbank herstellen**|Treffen Sie eine Auswahl aus den verfügbaren Datenbanken auf dem Server. In dieser Liste werden nur Datenbanken angezeigt, für die Sie die Berechtigung zum Anzeigen haben.|  
+    |**Herstellen einer Verbindung mit der Datenbank**|Treffen Sie eine Auswahl aus den verfügbaren Datenbanken auf dem Server. In dieser Liste werden nur Datenbanken angezeigt, für die Sie die Berechtigung zum Anzeigen haben.|  
     |**Netzwerkprotokoll**|Treffen Sie eine Auswahl aus Shared Memory, TCP/IP oder Named Pipes.|  
-    |**Netzwerkpaketgröße**|Konfigurieren Sie in Byte. Die Standardeinstellung ist 4096 Byte.|  
-    |**Verbindungstimeout**|Konfigurieren Sie in Sekunden. Die Standardeinstellung ist 15 Sekunden.|  
-    |**Ausführungstimeout**|Konfigurieren Sie in Sekunden. Die Standardeinstellung (0) weist darauf hin, dass es für die Ausführung kein Timeout gibt.|  
+    |**Netzwerk Paketgröße**|Konfigurieren Sie in Byte. Die Standardeinstellung ist 4096 Byte.|  
+    |**Verbindungs Timeout**|Konfigurieren Sie in Sekunden. Die Standardeinstellung ist 15 Sekunden.|  
+    |**Ausführungs Timeout**|Konfigurieren Sie in Sekunden. Die Standardeinstellung (0) weist darauf hin, dass es für die Ausführung kein Timeout gibt.|  
     |**Verschlüsseln der Verbindung**|Erzwingt die Verschlüsselung.|  
   
 5.  Um den angegebenen Server zur Liste der registrierten Server hinzuzufügen, klicken Sie auf die Registerkarte **Registrierter Server** , klicken Sie auf den Speicherort für den neuen Server, und schließen Sie die Verbindung ab.  

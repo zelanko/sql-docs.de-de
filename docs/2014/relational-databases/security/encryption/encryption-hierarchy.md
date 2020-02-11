@@ -17,14 +17,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957212"
 ---
-# <a name="encryption-hierarchy"></a>Encryption Hierarchy
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verschlüsselt Daten mit einer hierarchischen Verschlüsselungs-und Schlüssel Verwaltungsinfrastruktur. Jede Ebene verschlüsselt die Ebene darunter, indem eine Kombination aus Zertifikaten, asymmetrischen und symmetrischen Schlüsseln verwendet wird. Asymmetrische Schlüssel und symmetrische Schlüssel können außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem EKM-Modul (erweiterbare Schlüsselverwaltung) gespeichert werden.  
+# <a name="encryption-hierarchy"></a>Verschlüsselungshierarchie
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Daten anhand einer hierarchischen Verschlüsselungs- und Schlüsselverwaltungsinfrastruktur verschlüsselt. Jede Ebene verschlüsselt die Ebene darunter, indem eine Kombination aus Zertifikaten, asymmetrischen und symmetrischen Schlüsseln verwendet wird. Asymmetrische Schlüssel und symmetrische Schlüssel können außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem EKM-Modul (erweiterbare Schlüsselverwaltung) gespeichert werden.  
   
  In der folgenden Abbildung wird dargestellt, wie jede Ebene der Verschlüsselungshierarchie die Ebene darunter verschlüsselt und die häufigsten Verschlüsselungskonfigurationen anzeigt. Der Zugriff auf den Anfang der Hierarchie wird normalerweise durch ein Kennwort geschützt.  
   
@@ -55,10 +55,9 @@ ms.locfileid: "74957212"
 -   Symmetrische und asymmetrische Schlüssel im EKM können den Zugriff auf die symmetrischen und asymmetrischen Schlüssel schützen, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeichert sind. Die gepunktete Linie, die dem EKM zugeordnet ist, gibt an, dass Schlüssel im EKM die symmetrischen und asymmetrischen Schlüssel ersetzen könnten, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeichert sind.  
   
 ## <a name="encryption-mechanisms"></a>Verschlüsselungsmechanismen  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet die folgenden Verschlüsselungsmechanismen:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet die folgenden Verschlüsselungsmechanismen:  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)]Funktionen  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Funktionen  
   
 -   Asymmetrische Schlüssel  
   
@@ -66,7 +65,7 @@ ms.locfileid: "74957212"
   
 -   Zertifikate  
   
--   Transparent Data Encryption  
+-   Transparente Datenverschlüsselung  
   
 ### <a name="transact-sql-functions"></a>Transact-SQL-Funktionen  
  Einzelne Elemente können beim Einfügen oder Aktualisieren mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Funktionen verschlüsselt werden. Weitere Informationen finden Sie unter [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql) und [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql).  
@@ -102,16 +101,16 @@ ms.locfileid: "74957212"
 ### <a name="symmetric-keys"></a>Symmetrische Schlüssel  
  Ein symmetrischer Schlüssel ist ein Schlüssel, der sowohl für die Verschlüsselung als auch die Entschlüsselung verwendet wird. Die Verschlüsselung und Entschlüsselung mithilfe eines symmetrischen Schlüssels ist schnell und für einen routinemäßigen Einsatz mit sensiblen Daten in der Datenbank geeignet.  
   
-### <a name="transparent-data-encryption"></a>Transparent Data Encryption  
+### <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung  
  Transparente Datenverschlüsselung (Transparent Data Encryption, TDE) ist ein spezieller Fall der Verschlüsselung mithilfe eines symmetrischen Schlüssels. TDE verschlüsselt eine ganze Datenbank mithilfe dieses symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. Der Verschlüsselungsschlüssel für die Datenbank wird mit anderen Schlüsseln oder Zertifikaten geschützt, die entweder mit dem Datenbankhauptschlüssel oder mit einem asymmetrischen, in einem EKM-Modul gespeicherten Schlüssel geschützt werden. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Sichern SQL Server](../securing-sql-server.md)  
+ [Sichern von SQL Server](../securing-sql-server.md)  
   
- [Sicherheitsfunktionen &#40;Transact-SQL-&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
+ [Sicherheitsfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenbank-Engine der Berechtigungs Hierarchie &#40;&#41;](../permissions-hierarchy-database-engine.md)   
- [Sicherungs fähige Elemente](../securables.md)  
+ [Berechtigungshierarchie &#40;Datenbank-Engine &#41;](../permissions-hierarchy-database-engine.md)   
+ [Sicherungsfähige Elemente](../securables.md)  
   
   

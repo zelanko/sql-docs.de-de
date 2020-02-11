@@ -1,5 +1,5 @@
 ---
-title: dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,24 +23,24 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078563"
 ---
-# <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
+# <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Gibt Informationen über den Inhalt auf Dokumentebene von einem Volltextindex zurück, der der angegebenen Tabelle zugeordnet ist.  
   
  sys.dm_fts_index_keywords_by_document ist eine dynamische Verwaltungsfunktion.  
   
- **Auf höherer Ebene Volltextindex-Informationen anzeigen**  
+ **So zeigen Sie Informationen zu einem Volltextindex auf höherer Ebene an**  
   
 -   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
- **Inhaltsinformationen auf Eigenschaftenebene an, der sich auf eine Dokumenteigenschaft beziehen**  
+ **So zeigen Sie Informationen zu Inhalten auf Eigenschaftenebene an, die sich auf eine Dokumenteigenschaft beziehen**  
   
 -   [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
   
@@ -55,23 +55,23 @@ sys.dm_fts_index_keywords_by_document
 ```  
   
 ## <a name="arguments"></a>Argumente  
- db_id('*database_name*')  
- Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID zurück, die von sys.dm_fts_index_keywords_by_document für die Suche nach der angegebenen Datenbank verwendet wird. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
+ DB_ID ('*database_name*')  
+ Ein Aufrufder [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) -Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID zurück, die von sys.dm_fts_index_keywords_by_document für die Suche nach der angegebenen Datenbank verwendet wird. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
   
- object_id('*table_name*')  
- Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
+ object_id ('*table_name*')  
+ Ein Aufrufder [object_id ()](../../t-sql/functions/object-id-transact-sql.md) -Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spalte|Datentyp|Beschreibung|  
+|Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
-|Schlüsselwort (keyword)|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
-|display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
+|Schlüsselwort (keyword)|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
+|display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
 |column_id|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
 |document_id|**int**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
-|occurrence_count|**int**|Anzahl der Vorkommen des aktuellen Schlüsselworts in das Dokument oder die Zeile, auf die angegebenen **Document_id**. Wenn "*Search_property_name*" angegeben ist, Occurrence_count zeigt nur die Anzahl der Vorkommen des aktuellen Schlüsselworts in der angegebenen Sucheigenschaft Dokuments oder der Zeile.|  
+|occurrence_count|**int**|Anzahl der Vorkommen des aktuellen Schlüssel Worts in dem Dokument oder der Zeile, das durch **document_id**angegeben wird. Wenn "*search_property_name*" angegeben wird, zeigt occurrence_count nur die Anzahl der Vorkommen des aktuellen Schlüssel Worts in der angegebenen Such Eigenschaft innerhalb des Dokuments oder der Zeile an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die von sys.dm_fts_index_keywords_by_document zurückgegebenen Informationen dienen u. a. zum Abrufen der folgenden Ergebnisse:  
   
 -   Die Gesamtzahl der Schlüsselwörter in einem Volltextindex  
@@ -80,7 +80,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Wie oft ein Schlüsselwort im gesamten Volltextindex vorkommt, d. h.:  
   
-     ([Summe](../../t-sql/functions/sum-transact-sql.md)(**Occurrence_count**), in denen **Schlüsselwort**=*Keyword_value* )  
+     ([Sum](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE- **Schlüsselwort**=*keyword_value* )  
   
 -   Wie oft ein Schlüsselwort in einem bestimmten Dokument bzw. in einer Zeile vorkommt  
   
@@ -90,7 +90,7 @@ sys.dm_fts_index_keywords_by_document
   
  Wenn die Volltextschlüsselspalte wie empfohlen mit dem integer-Datentyp definiert ist, kann die document_id direkt dem Volltextschlüsselwert in der Basistabelle zugeordnet werden.  
   
- Wenn als Datentyp für die Volltextschlüsselspalte jedoch ein anderer Typ als Integer festgelegt ist, stellt document_id nicht den Volltextschlüsselwert in der Basistabelle dar. In diesem Fall um die Zeile in der Basistabelle zu identifizieren, die von Dm_fts_index_keywords_by_document zurückgegeben wird, Sie müssen in dieser Ansicht mit den von zurückgegebenen Ergebnissen verknüpfen [Sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Speichern Sie jedoch zuvor die Ausgabe der gespeicherten Prozedur in eine temporäre Tabelle. Anschließend können Sie die Spalte document_id von dm_fts_index_keywords_by_document mit der von der gespeicherten Prozedur zurückgegebenen Spalte DOCID verknüpfen. Beachten Sie, dass eine **Zeitstempel** Spalte kann nicht empfangen, Werte zum Zeitpunkt des Einfügens, da von automatisch generierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aus diesem Grund die **Zeitstempel** Spalte konvertiert werden muss, um **varbinary(8)** Spalten. Das folgende Beispiel zeigt die erforderlichen Schritte: In diesem Beispiel *Table_id* ist die ID der Tabelle, *Database_name* ist der Name der Datenbank und *Table_name* ist der Name der Tabelle.  
+ Wenn als Datentyp für die Volltextschlüsselspalte jedoch ein anderer Typ als Integer festgelegt ist, stellt document_id nicht den Volltextschlüsselwert in der Basistabelle dar. Um in diesem Fall die Zeile in der Basistabelle zu identifizieren, die von dm_fts_index_keywords_by_document zurückgegeben wird, müssen Sie diese Ansicht mit den von [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)zurückgegebenen Ergebnissen verknüpfen. Speichern Sie jedoch zuvor die Ausgabe der gespeicherten Prozedur in eine temporäre Tabelle. Anschließend können Sie die Spalte document_id von dm_fts_index_keywords_by_document mit der von der gespeicherten Prozedur zurückgegebenen Spalte DOCID verknüpfen. Beachten Sie, dass eine **Zeitstempel** -Spalte keine Werte zum Zeitpunkt des Einfügens empfangen kann, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da Sie von automatisch generiert werden. Daher muss die **Zeitstempel** -Spalte in **varbinary (8)** -Spalten konvertiert werden. Das folgende Beispiel zeigt die erforderlichen Schritte: In diesem Beispiel ist *table_id* die ID der Tabelle, *database_name* der Name der Datenbank und *table_name* der Name der Tabelle ist.  
   
 ```  
 USE database_name;  
@@ -119,7 +119,7 @@ GO
  Im folgenden Beispiel wird der Inhalt des Volltextindexes auf Dokumentebene in der `HumanResources.JobCandidate`-Tabelle der `AdventureWorks2012`-Beispieldatenbank angezeigt.  
   
 > [!NOTE]  
->  Sie können diesen Index erstellen, durch Ausführen der im Beispiel für die `HumanResources.JobCandidate` -Tabelle [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Sie können diesen Index erstellen, indem Sie das Beispiel ausführen, `HumanResources.JobCandidate` das für die-Tabelle in [CREATE FULLTEXT Index &#40;Transact-SQL-&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)bereitgestellt wird.  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   
@@ -127,12 +127,12 @@ object_id('HumanResources.JobCandidate'));
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Volltextsuche und semantische Suche, dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Volltextsuche](../../relational-databases/search/full-text-search.md)   
- [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Voll Text Suche](../../relational-databases/search/full-text-search.md)   
+ [sys. dm_fts_index_keywords &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
- [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [Verbessern der Leistung von Volltextindizes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   
   

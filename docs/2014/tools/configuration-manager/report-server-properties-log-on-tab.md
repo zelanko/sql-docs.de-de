@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f56d5ea637adc2ce8fc5490c44408bdd1de7f3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999530"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Anmelden)
   Verwenden Sie im Dialogfeld **Berichtsservereigenschaften** die Registerkarte **Anmelden** , um das vom Berichtsserverdienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Lokales System**  
  Geben Sie ein lokales Systemkonto an, das kein Kennwort erfordert. Das lokale Systemkonto kann sich allerdings einschränkend auf die Zusammenarbeit mit anderen Servern auswirken. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62999530"
  **Kennwort bestätigen**  
  Geben Sie das Kennwort des Kontos erneut ein.  
   
- **Start**  
+ **Starten**  
  Starten Sie den Dienst.  
   
  **Beenden**  

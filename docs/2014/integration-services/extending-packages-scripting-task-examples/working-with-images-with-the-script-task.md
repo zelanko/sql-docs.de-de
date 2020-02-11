@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768446"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
@@ -40,14 +40,14 @@ ms.locfileid: "62768446"
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Beschreibung von Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
+##  <a name="example1"></a> Beschreibung zu Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet und mithilfe eines Encoders als komprimierte JPEG-Datei gespeichert. Der Code zum Abrufen der Encoderinformationen wird in einer privaten Funktion gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  
   
 1.  Erstellen Sie eine Zeichenfolgenvariable namens `CurrentImageFile`, und legen Sie ihren Wert auf den Pfad und Dateinamen einer bestehenden Bilddatei fest.  
   
-2.  Auf der **Skript** auf der Seite die **Skripttask-Editor**, Hinzufügen der `CurrentImageFile` -Variable auf die `ReadOnlyVariables` Eigenschaft.  
+2.  Fügen Sie der `ReadOnlyVariables` -Eigenschaft auf der Seite **Skript** im **Skript Task-Editor**die `CurrentImageFile` -Variable hinzu.  
   
 3.  Legen Sie im Skriptprojekt einen Verweis auf den `System.Drawing`-Namespace fest.  
   
@@ -149,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Beschreibung von Beispiel 2: Erstellen und Speichern von Miniaturbildern  
+##  <a name="example2"></a> Beschreibung zu Beispiel 2: Erstellen und Speichern von Miniaturbildern  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet, ein Miniaturbild dieses Bilds mit gleichem Seitenverhältnis erstellt und das Miniaturbild mit geändertem Dateinamen gespeichert. Der Code, der Höhe und Breite des Miniaturbilds berechnet und dabei das Seitenverhältnis beibehält, wird in einer privaten Unterroutine gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  
@@ -158,7 +158,7 @@ End Function
   
 2.  Erstellen Sie zudem die ganzzahlige Variable `MaxThumbSize`, und weisen Sie ihr einen Pixelwert, z. B. 100, zu.  
   
-3.  Auf der **Skript** auf der Seite die **Skripttask-Editor**, fügen Sie beide Variablen der `ReadOnlyVariables` Eigenschaft.  
+3.  Fügen Sie der- `ReadOnlyVariables` Eigenschaft auf der Seite **Skript** des **Skript Task-Editors**beide Variablen hinzu.  
   
 4.  Legen Sie im Skriptprojekt einen Verweis auf den `System.Drawing`-Namespace fest.  
   
@@ -289,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
   

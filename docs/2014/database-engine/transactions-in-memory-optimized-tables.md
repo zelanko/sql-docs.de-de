@@ -1,5 +1,5 @@
 ---
-title: Transaktionen in speicheroptimierten Tabellen | Microsoft-Dokumentation
+title: Transaktionen in Speicher optimierten Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843100"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transaktionen in speicheroptimierten Tabellen
@@ -50,7 +50,8 @@ ms.locfileid: "62843100"
  Wenn darüber hinaus von einer Transaktion (TxA) Zeilen gelesen werden, die von einer anderen Transaktion (TxB) eingefügt oder bearbeitet wurden und für die gerade ein Commit ausgeführt wird, wartet die Transaktion nicht auf den Commit, sondern geht optimistisch davon aus, dass die andere Transaktion einen Commit ausführen wird. In diesem Fall übernimmt Transaktion TxA eine Abhängigkeit vom Commit der Transaktion TxB.  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>Konflikterkennung, Überprüfung und Commitabhängigkeitsüberprüfungen  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt Konflikte zwischen gleichzeitigen Transaktionen sowie Verletzungen der Isolationsstufe und verwirft eine der in Konflikt stehenden Transaktionen. Diese Transaktion muss erneut ausgeführt werden. (Weitere Informationen finden Sie unter [Richtlinien zur Wiederholungslogik für Transaktionen in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt Konflikte zwischen gleichzeitigen Transaktionen sowie Verletzungen der Isolationsstufe und verwirft eine der in Konflikt stehenden Transaktionen. Diese Transaktion muss erneut ausgeführt werden. (Weitere Informationen finden Sie unter [Richtlinien für Wiederholungs Logik für Transaktionen in Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)  
   
  Das System nimmt optimistisch an, dass keine Konflikte und keine Verstöße gegen die Transaktionsisolation vorliegen. Falls Konflikte auftreten, die Inkonsistenzen in der Datenbank verursachen oder die Transaktionsisolation verletzen könnten, werden diese Konflikte ermittelt und die Transaktion beendet.  
   
@@ -70,7 +71,7 @@ ms.locfileid: "62843100"
 ### <a name="transaction-lifetime"></a>Lebensdauer von Transaktionen  
  Die in der vorherigen Tabelle beschriebenen Fehler können zu unterschiedlichen Zeitpunkten während einer Transaktion auftreten. In der folgenden Abbildung werden die Phasen einer Transaktion dargestellt, die auf speicheroptimierte Tabellen zugreift.  
   
- ![Lebensdauer einer Transaktion. ](../../2014/database-engine/media/hekaton-transactions.gif "Lebensdauer einer Transaktion.")  
+ ![Lebensdauer einer Transaktion.](../../2014/database-engine/media/hekaton-transactions.gif "Lebensdauer einer Transaktion.")  
 Lebensdauer einer Transaktion, die auf speicheroptimierte Tabellen zugreift.  
   
 #### <a name="regular-processing"></a>Reguläre Verarbeitung  
@@ -82,7 +83,7 @@ Lebensdauer einer Transaktion, die auf speicheroptimierte Tabellen zugreift.
   
  Dieser Fehler führt zu einem Transaktionsabbruch (selbst wenn XACT_ABORT auf OFF festgelegt ist). Dies bedeutet, dass bei Beendigung der Benutzersitzung ein Rollback für die Transaktion ausgeführt wird. Für fehlgeschlagene Transaktionen kann kein Commit ausgeführt werden, und sie unterstützen nur Lesevorgänge, durch die nicht in das Protokoll geschrieben und auf speicheroptimierte Tabellen zugegriffen wird.  
   
-#####  <a name="cd"></a> Commit-Abhängigkeiten  
+#####  <a name="cd"></a>Commit-Abhängigkeiten  
  Während der regulären Verarbeitung kann eine Transaktion Zeilen von anderen Transaktionen lesen, die sich in der Überprüfungs- oder Commitphase befinden, deren Commit jedoch noch nicht abgeschlossen ist. Die Zeilen sind sichtbar, da der logische Endzeitpunkt der Transaktionen beim Start der Überprüfungsphase zugewiesen wurde.  
   
  Wenn Zeilen, für die kein Commit ausgeführt wurde, von einer Transaktion gelesen werden, übernimmt sie eine Commitabhängigkeit von dieser Transaktion. Dies hat zwei wesentliche Auswirkungen:  
@@ -99,7 +100,7 @@ Lebensdauer einer Transaktion, die auf speicheroptimierte Tabellen zugreift.
  Zu Beginn der Überprüfungsphase wird der Transaktion ein logischer Endzeitpunkt zugewiesen. Die in die Datenbank geschriebenen Zeilenversionen werden für andere Transaktionen zum logischen Endzeitpunkt sichtbar. Weitere Informationen finden Sie unter [Commit-Abhängigkeiten](#cd).  
   
 ##### <a name="repeatable-read-validation"></a>REPEATABLE READ-Überprüfung  
- Wenn die Isolationsstufe der Transaktion REPEATABLE READ- oder SERIALIZABLE ist, oder Tabellen mit REPEATABLE READ- oder SERIALIZABLE-Isolation zugegriffen werden (Weitere Informationen finden Sie im Abschnitt für die Isolierung einzelner Vorgänge in [Transaktion Isolationsstufen](../../2014/database-engine/transaction-isolation-levels.md)), das System überprüft, dass die Lesevorgänge wiederholt werden. Das System überprüft also, ob die von der Transaktion gelesenen Zeilenversionen beim logischen Endzeitpunkt der Transaktion weiterhin gültig sind.  
+ Wenn die Isolationsstufe der Transaktion REPEATABLE READ oder serialisierbar ist oder wenn auf Tabellen mit REPEATABLE READ-oder serialisierbaren Isolation zugegriffen wird (Weitere Informationen finden Sie im Abschnitt zur Isolierung einzelner Vorgänge in [Transaktions Isolations Stufen](../../2014/database-engine/transaction-isolation-levels.md)), überprüft das System, ob die Lesevorgänge wiederholbar sind. Das System überprüft also, ob die von der Transaktion gelesenen Zeilenversionen beim logischen Endzeitpunkt der Transaktion weiterhin gültig sind.  
   
  Wenn eine Zeile aktualisiert oder geändert wurde, schlägt das Transaktionscommit mit Fehler 41305 fehl ("Fehler beim Ausführen eines Commits für die aktuelle Transaktion aufgrund eines REPEATABLE READ-Überprüfungsfehlers").  
   
@@ -129,9 +130,9 @@ Lebensdauer einer Transaktion, die auf speicheroptimierte Tabellen zugreift.
   
 -   Verteilte Transaktionen werden in Verbindung mit speicheroptimierten Tabellen nicht unterstützt. Mit BEGIN DISTRIBUTED TRANSACTION gestartete verteilte Transaktionen können nicht auf speicheroptimierte Tabellen zugreifen.  
   
--   Speicheroptimierte Tabellen unterstützen keine Sperren. Explizite Sperren nach Sperrhinweisen (wie TABLOCK, XLOCK, ROWLOCK) werden in Verbindung mit speicheroptimierten Tabellen nicht unterstützt.  
+-   Speicher optimierte Tabellen unterstützen keine Sperren. Explizite Sperren nach Sperrhinweisen (wie TABLOCK, XLOCK, ROWLOCK) werden in Verbindung mit speicheroptimierten Tabellen nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu Transaktionen in speicheroptimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

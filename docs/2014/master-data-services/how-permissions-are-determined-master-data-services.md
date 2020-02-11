@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f92a270bb599c84f5d0b2bd85e713c3f406f81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479518"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Vorgehensweise: Festlegen von Berechtigungen (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65479518"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Schritt 1: Geltende Attributberechtigungen werden bestimmt.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Schritt 1: Effektive Attributberechtigungen werden festgelegt.  
  Die folgende Liste beschreibt, wie effektive Attributberechtigungen festgelegt werden:  
   
 -   Modellobjekten zugewiesene Berechtigungen legen fest, auf welche Attribute ein Benutzer zugreifen kann.  
@@ -44,13 +44,13 @@ ms.locfileid: "65479518"
   
 -   Objekte auf derselben Ebene wie die Entität werden implizit verweigert.  
   
--   Objekten auf einer höheren Ebene wird Navigationszugriff gewährt. Weitere Informationen zum Navigationszugriff finden Sie unter [Navigationszugriff &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
+-   Objekten auf einer höheren Ebene wird Navigationszugriff gewährt. Weitere Informationen zu navigationaccess finden Sie unter [Navigations Zugriff &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- In diesem Beispiel **schreibgeschützte** Berechtigung zu einer Entität zugewiesen wird, und diese Berechtigung wird von dessen Attribut, das auf einer niedrigeren Ebene in der Modellstruktur geerbt. Das Modell bietet Navigationszugriff auf diese Entität und ihr Attribut. Der anderen Entität im Modell wurde keine explizite Berechtigung zugewiesen, und von ihr werden keine Berechtigungen geerbt. Sie wird daher implizit verweigert.  
+ In diesem Beispiel wird einer Entität **die Berechtigung "** schreibgeschützt" zugewiesen, und diese Berechtigung wird von Ihrem Attribut geerbt, das sich auf einer niedrigeren Ebene in der Modellstruktur befindet. Das Modell bietet Navigationszugriff auf diese Entität und ihr Attribut. Der anderen Entität im Modell wurde keine explizite Berechtigung zugewiesen, und von ihr werden keine Berechtigungen geerbt. Sie wird daher implizit verweigert.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Schritt 2: Wenn Hierarchieelementberechtigungen zugewiesen werden, werden geltende Elementberechtigungen bestimmt.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Schritt 2: Wenn Hierarchieelementberechtigungen zugewiesen werden, werden effektive Elementberechtigungen festgelegt.  
  Die folgende Liste beschreibt, wie effektive Hierarchieelementberechtigungen festgelegt werden:  
   
 -   Hierarchieknoten zugewiesene Berechtigungen legen fest, auf welche Elemente ein Benutzer zugreifen kann.  
@@ -61,12 +61,12 @@ ms.locfileid: "65479518"
   
 -   Alle Knoten auf höheren Ebenen, denen keine Berechtigungen zugewiesen wurden, werden implizit verweigert.  
   
- In diesem Beispiel **schreibgeschützte** Berechtigung einem Knoten der Hierarchie zugewiesen wird, und diese Berechtigung wird von einem Knoten auf einer niedrigeren Ebene in der Hierarchiestruktur geerbt. Dem Stamm wurde keine Berechtigung zugewiesen, er wird daher implizit verweigert. Dem anderen Knoten in der Hierarchiestruktur wurde keine explizite Berechtigung zugewiesen, und von ihm werden keine Berechtigungen geerbt. Er wird daher implizit verweigert.  
+ In diesem Beispiel wird einem Knoten der Hierarchie **die Berechtigung schreibgeschützt zugewiesen, und** diese Berechtigung wird von einem Knoten auf einer niedrigeren Ebene in der Hierarchiestruktur geerbt. Dem Stamm wurde keine Berechtigung zugewiesen, er wird daher implizit verweigert. Dem anderen Knoten in der Hierarchiestruktur wurde keine explizite Berechtigung zugewiesen, und von ihm werden keine Berechtigungen geerbt. Er wird daher implizit verweigert.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Schritt 3: Die Überschneidung von Attribut- und Elementberechtigungen wird bestimmt.  
- Wenn sich die effektiven Attributberechtigungen von den effektiven Elementberechtigungen unterscheiden, müssen Berechtigungen für jeden einzelnen Attributwert festgelegt werden. Weitere Informationen finden Sie unter [Überlappende Benutzer- und Gruppenberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Schritt 3: Die Schnittmenge von Attribut- und Elementberechtigungen wird bestimmt.  
+ Wenn sich die effektiven Attributberechtigungen von den effektiven Elementberechtigungen unterscheiden, müssen Berechtigungen für jeden einzelnen Attributwert festgelegt werden. Weitere Informationen finden Sie unter [Überlappende Modell- und Elementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Mehreren Gruppen zugewiesene Berechtigungen  
  Wenn ein Benutzer einer oder mehreren Gruppen angehört und Berechtigungen dem Benutzer und den Gruppen zugewiesen werden, wird der Workflow komplexer.  
@@ -75,8 +75,8 @@ ms.locfileid: "65479518"
   
  In diesem Fall müssen überlappende Benutzer- und Gruppenberechtigungen aufgelöst werden, bevor Modellobjekt- und Hierarchieelementberechtigungen verglichen werden können. Weitere Informationen finden Sie unter [Überlappende Benutzer- und Gruppenberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Überlappende Benutzer- und Gruppenberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [Überlappende Modell- und Elementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Überlappende Benutzer-und Gruppenberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Überlappende Modell-und Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

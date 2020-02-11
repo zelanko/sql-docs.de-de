@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401467"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Checklisten für die Gerätekonfiguration für Analytics Platform System
@@ -49,7 +49,7 @@ Der SQL Server PDW**Configuration Manager** (pdwcm) ist ein Tool zum Verwalten v
   
 Verwenden Sie **Configuration Manager** , um die folgenden Konfigurationsaufgaben auszuführen.  
   
-|Konfigurationstask|Beschreibung|  
+|Konfigurationstask|BESCHREIBUNG|  
 |----------------------|---------------|  
 |Machen Sie sich mit den Namen der physischen Komponenten vertraut.|[PDW und Appliance Fabric physische Komponenten &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |Starten Sie SQL Server PDW Configuration Manager|[Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)|  
@@ -67,7 +67,7 @@ Verwenden Sie **Configuration Manager** , um die folgenden Konfigurationsaufgabe
 ## <a name="AddTasks"></a>Ausführen zusätzlicher Konfigurationsaufgaben  
 Nachdem Sie die **Configuration Manager** Aufgaben ausgeführt haben, führen Sie die folgende Liste mit zusätzlichen Konfigurationsaufgaben aus. Einige dieser Aufgaben sind optional.  
   
-|Konfigurationstask|Beschreibung|  
+|Konfigurationstask|BESCHREIBUNG|  
 |----------------------|---------------|  
 |Antivirussoftware von Drittanbietern kann auf der SQL Server PDW Appliance für extern ausgerichtete Knoten installiert und konfiguriert werden.<br /><br />(Optional)|Weitere Informationen finden Sie unter [Antivirus Software &#40;Analytics Platform System&#41;](antivirus-software.md).|  
 |Das Kennwort für DSRM kann geändert werden.<br /><br />(Optional)|Weitere Informationen finden Sie unter [Festlegen des Administrator Kennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienst-Wiederherstellungs Modus &#40;DSRM&#41; &#40;Analytics-Platt Form System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  

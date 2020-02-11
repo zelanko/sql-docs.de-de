@@ -1,5 +1,5 @@
 ---
-title: Anfügen und Trennen von Analysis Services-Datenbanken | Microsoft-Dokumentation
+title: Anfügen und trennen von Analysis Services Datenbanken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077488"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anfügen und Trennen von Analysis Services-Datenbanken
@@ -46,9 +46,9 @@ ms.locfileid: "66077488"
   
 |Trennen einer Datenbank mit Lese-/Schreibzugriff|Trennen einer schreibgeschützten Datenbank|  
 |--------------------------------------|-------------------------------------|  
-|1) Der Server gibt eine Anforderung für eine CommitExclusive-Sperre für die Datenbank aus.<br />2) Der Server wartet, bis für alle laufenden Transaktionen ein Commit oder ein Rollback ausgeführt wird.<br />3) Der Server erstellt alle Metadaten, die zum Trennen der Datenbank erforderlich sind.<br />4) Die Datenbank wird als gelöscht markiert.<br />5) Der Server führt einen Commit für die Transaktion aus.|1) Die Datenbank wird als gelöscht markiert.<br />2) Der Server führt einen Commit für die Transaktion aus.<br /><br /> <br /><br /> Hinweis: Das Trennen von Kennwort kann nicht für eine schreibgeschützte Datenbank geändert werden. Wenn der Kennwortparameter für eine angefügte Datenbank, die bereits ein Kennwort enthält, angegeben wird, wird ein Fehler ausgegeben.|  
+|1) Der Server gibt eine Anforderung für eine CommitExclusive-Sperre für die Datenbank aus.<br />2) Der Server wartet, bis für alle laufenden Transaktionen ein Commit oder ein Rollback ausgeführt wird.<br />3) Der Server erstellt alle Metadaten, die zum Trennen der Datenbank erforderlich sind.<br />4) Die Datenbank wird als gelöscht markiert.<br />5) Der Server führt einen Commit für die Transaktion aus.|1) Die Datenbank wird als gelöscht markiert.<br />2) Der Server führt einen Commit für die Transaktion aus.<br /><br /> <br /><br /> Hinweis: Das Kennwort für die Trennung kann für eine schreibgeschützte Datenbank nicht geändert werden. Wenn der Kennwortparameter für eine angefügte Datenbank, die bereits ein Kennwort enthält, angegeben wird, wird ein Fehler ausgegeben.|  
   
- Die Befehle `Attach` und `Detach` müssen als einzelne Vorgänge ausgeführt werden. Sie können nicht in der gleichen Transaktion mit anderen Vorgängen kombiniert werden. Darüber hinaus die `Attach` und `Detach` Befehle sind unteilbare Transaktionsbefehle. Dies bedeutet, dass der Vorgang entweder erfolgreich ist oder fehlschlägt. Keine Datenbank wird in einem unvollendeten Status belassen.  
+ Die Befehle `Attach` und `Detach` müssen als einzelne Vorgänge ausgeführt werden. Sie können nicht in der gleichen Transaktion mit anderen Vorgängen kombiniert werden. Außerdem handelt es `Attach` sich `Detach` bei den Befehlen und um atomarische transaktionale Befehle. Dies bedeutet, dass der Vorgang entweder erfolgreich ist oder fehlschlägt. Keine Datenbank wird in einem unvollendeten Status belassen.  
   
 > [!IMPORTANT]  
 >  Zum Ausführen des `Detach`-Befehls sind Server- oder Datenbankadministratorberechtigungen erforderlich.  
@@ -56,12 +56,12 @@ ms.locfileid: "66077488"
 > [!IMPORTANT]  
 >  Zum Ausführen des `Attach`-Befehls sind Serveradministratorberechtigungen erforderlich.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Verschieben einer Analysis Services Datenbank](move-an-analysis-services-database.md)   
- [Datenbank-ReadWriteModes](database-readwritemodes.md)   
- [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Datenbanklesemodusmodi](database-readwritemodes.md)   
+ [Wechseln einer Analysis Services Datenbank zwischen Schreib geschütztem Modus und Lese-/Schreibmodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [Detach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Attach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831702"
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
@@ -29,7 +29,7 @@ ms.locfileid: "62831702"
   
  Eine Rangfolgeneinschränkung verlinkt zwei ausführbare Dateien: die ausführbare Datei der Rangfolge und die eingeschränkte ausführbare Datei. Die ausführbare Datei der Rangfolge wird vor der eingeschränkten ausführbaren Datei ausgeführt, und das Ausführungsergebnis der ausführbaren Datei der Rangfolge kann bestimmen, ob die eingeschränkte ausführbare Datei ausgeführt wird. Im folgenden Diagramm werden zwei ausführbare Dateien dargestellt, die durch eine Rangfolgeneinschränkung verlinkt sind.  
   
- ![Ausführbare Dateien, die durch eine Rangfolgeneinschränkung verlinkt sind](../media/ssis-pcsimple.gif "Ausführbare Dateien, die durch eine Rangfolgeneinschränkung verlinkt sind")  
+ ![Durch eine Rangfolgeneinschränkung verbundene ausführbare Dateien](../media/ssis-pcsimple.gif "Durch eine Rangfolgeneinschränkung verbundene ausführbare Dateien")  
   
  Bei einer linearen Ablaufsteuerung, also einer Ablaufsteuerung ohne Verzweigungen, bestimmen Rangfolgeneinschränkungen alleine die Reihenfolge, in der Tasks ausgeführt werden. Falls sich eine Ablaufsteuerung verzweigt, bestimmt die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Runtime-Engine die Ausführungsreihenfolge für die Tasks und Container, die unmittelbar auf die Verzweigung folgen. Die Runtime-Engine bestimmt außerdem die Ausführungsreihenfolge für nicht verbundene Workflows in einer Ablaufsteuerung.  
   
@@ -50,7 +50,8 @@ ms.locfileid: "62831702"
 -   Geben Sie an, ob die Rangfolgeneinschränkung einzeln oder zusammen mit anderen Einschränkungen, die auf die eingeschränkte ausführbare Datei zutreffen, ausgewertet wird.  
   
 ## <a name="evaluation-operations"></a>Auswertungsvorgänge  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt die folgenden Auswertungsvorgänge bereit:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt die folgenden Auswertungsvorgänge bereit:  
   
 -   Eine Einschränkung, die nur mithilfe des Ausführungsergebnisses der ausführbaren Datei der Rangfolge bestimmt, ob die eingeschränkte ausführbare Datei ausgeführt wird. Das Ausführungsergebnis der ausführbaren Datei der Rangfolge kann Beendigung, Erfolg oder Fehler sein. Dies ist der Standardvorgang.  
   
@@ -60,7 +61,8 @@ ms.locfileid: "62831702"
   
 -   Einen Ausdruck oder eine Einschränkung, der bzw. die die Ausführungsergebnisse der ausführbaren Datei der Rangfolge oder die zurückgegebenen Ergebnisse aus der Auswertung des Ausdrucks verwendet.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer identifiziert mithilfe einer Farbcodierung den Typ der Rangfolgeneinschränkung. Die Success-Einschränkung ist grün, die Failure-Einschränkung ist rot und die Completion-Einschränkung ist blau. Zum Anzeigen von Beschriftungen im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer, die den Typ der Einschränkung anzeigen, müssen Sie die Barrierefreiheitsfunktionen des [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designers konfigurieren.  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer identifiziert mithilfe einer Farbcodierung den Typ der Rangfolgeneinschränkung. Die Success-Einschränkung ist grün, die Failure-Einschränkung ist rot und die Completion-Einschränkung ist blau. Zum Anzeigen von Beschriftungen im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer, die den Typ der Einschränkung anzeigen, müssen Sie die Barrierefreiheitsfunktionen des [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designers konfigurieren.  
   
  Der Ausdruck muss ein gültiger [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Ausdruck sein, der Funktionen, Operatoren sowie Systemvariablen und benutzerdefinierte Variablen einschließen kann. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) und [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -97,8 +99,8 @@ ms.locfileid: "62831702"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](../add-expressions-to-precedence-constraints.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Hinzufügen von Ausdrücken zu Rang folgen Einschränkungen](../add-expressions-to-precedence-constraints.md)   
  [Mehrere Rangfolgeneinschränkungen](../multiple-precedence-constraints.md)  
   
   

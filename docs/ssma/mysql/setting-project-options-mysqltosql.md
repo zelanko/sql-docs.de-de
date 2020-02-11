@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Projektoptionen (MySQLToSQL)) | Microsoft-Dokumentation
+title: Festlegen von Projektoptionen (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,19 +12,19 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944680"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Festlegen von Projektoptionen (MySqlToSql)
-Für jedes Projekt SSMA können Sie Projekt auf Dokumentebene-Optionen festlegen. Diese Optionen angeben, wie Objekte konvertiert werden, wie Daten migriert werden und Zuordnung von Datentypen für die Quelle, Ziel-Datentypen.  Vor dem Konvertieren von Objekten in SQL Server oder SQL Azure oder Daten zu SQL Server oder SQL Azure migrieren, stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
+Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben an, wie Objekte konvertiert werden, wie Daten migriert werden und wie Quell Datentypen den Ziel Datentypen zugeordnet werden.  Überprüfen Sie vor dem Konvertieren von Objekten in SQL Server oder SQL Azure oder Migrieren von Daten in SQL Server oder SQL Azure, ob die Konfigurationsoptionen für das Projekt geeignet sind.  
   
-SSMA können Sie die Standardoptionen für alle Projekte zu konfigurieren. Diese Optionen werden auf jedem neuen Projekt angewendet, die Sie erstellen. Sie können dann die Optionen für jedes Projekt anpassen.  
+SSMA ermöglicht Ihnen das Konfigurieren der Standardoptionen für alle Projekte. Diese Optionen werden auf jedes neue Projekt angewendet, das Sie erstellen. Anschließend können Sie die Optionen für jedes Projekt anpassen.  
   
-## <a name="configuration-options-and-modes"></a>Optionen für die Konfiguration und -Modi  
-SSMA verfügt über fünf verschiedene projekteinstellungen:  
+## <a name="configuration-options-and-modes"></a>Konfigurationsoptionen und-Modi  
+SSMA verfügt über fünf Sätze von Projekteinstellungen:  
   
 -   Projektinformationen  
   
@@ -36,9 +36,9 @@ SSMA verfügt über fünf verschiedene projekteinstellungen:
   
 -   Typzuordnung  
   
-Die projekteinstellungen können auf vier Arten konfiguriert werden:  
+Die Projekteinstellungen können auf vier Arten konfiguriert werden:  
   
--   Default  
+-   Standard  
   
 -   Optimistisch  
   
@@ -46,60 +46,60 @@ Die projekteinstellungen können auf vier Arten konfiguriert werden:
   
 -   Benutzerdefiniert  
   
-Der Standardmodus ist für die meisten Benutzer empfohlen. Der vollständige Modus mehrere der Syntax für die aktuelle MySQL speichert, und ist einfacher zu lesen. Allerdings bleiben die Syntax für aktuelle genau möglicherweise nicht. Wenn die MySQL-Syntax entspricht SQL Server- oder SQL Azure-Syntax konvertiert werden muss, wird von der vollständige Modus für die umfassendste Konvertierung durchgeführt. Der resultierende Code, möglicherweise jedoch schwieriger zu lesen. In den benutzerdefinierten Modus ist können Sie die Optionen festlegen.  
+Der Standardmodus wird für die meisten Benutzer empfohlen. Der optimistische Modus behält mehr die aktuelle MySQL-Syntax bei und ist leichter lesbar. Das Beibehalten der aktuellen Syntax ist jedoch möglicherweise nicht korrekt. Wenn die MySQL-Syntax in eine äquivalente SQL Server oder SQL Azure Syntax konvertiert werden muss, führt der vollständige Modus die vollständigste Konvertierung durch. Der resultierende Code kann jedoch schwieriger zu lesen sein. Im benutzerdefinierten Modus können Sie die Optionen festlegen.  
   
-Weitere Informationen über die Einstellungen und wie die Einstellungen in den einzelnen Modi angewendet werden finden Sie unter den folgenden Themen:  
+Weitere Informationen zu den Einstellungen und zum Anwenden der Einstellungen in den einzelnen Modi finden Sie in den folgenden Themen:  
   
--   [Projekteinstellungen &#40;Konvertierung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [Projekteinstellungen &#40;Konvertierung&#41; &#40;mysqltoisql-&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
--   [Projekteinstellungen &#40;Migration&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
+-   [Projekteinstellungen &#40;Migration&#41; &#40;mysqldesql-&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [Project Settings (GUI) (SSMA Allgemein)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Projekteinstellungen (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Projekteinstellungen &#40;Typzuordnung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
+-   [Projekteinstellungen &#40;Typzuordnung&#41; &#40;mysqldesql-&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
--   [Projekteinstellungen &#40;Synchronisierung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+-   [Projekteinstellungen &#40;Synchronisierung&#41; &#40;mysqldesql&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Projekteinstellungen &#40;Azure SQL-Datenbank&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Projekteinstellungen &#40;Azure SQL-Datenbank&#41; &#40;mysqldesql&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>Festlegen von Projektoptionen  
-In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind in der SSMA-Konfigurationsdatei gespeichert und angewendet werden, um neue Projekte, die Sie erstellen.  
+In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen werden in der SSMA-Konfigurationsdatei gespeichert und auf jedes neue Projekt angewendet, das Sie erstellen.  
   
-**Projektoptionen festlegen**  
+**So legen Sie Standard Projektoptionen fest**  
   
-1.  Auf der **Tools** Menü klicken Sie auf **Projekt Standardeinstellungen**.  
+1.  Klicken Sie **im Menü Extras** auf **Standard Projekteinstellungen**.  
   
-2.  In der **Projekt Standardeinstellungen** (Dialogfeld), verwenden Sie eine der folgenden Verfahren:  
+2.  Verwenden Sie im Dialogfeld **Standard Projekteinstellungen** eines der folgenden Prozeduren:  
   
-    1.  Wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden, **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen **Konvertierung oder Migration oder SQL Azure** Option.  
+    1.  Wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt/geändert werden müssen, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Konvertierung oder Migration oder SQL Azure** Option aus.  
   
-    2.  Wählen Sie zum Auswählen eines vordefinierten Modus **Standard**, **Optimistic**, oder **vollständige** aus der **Modus** Dropdown-Listenfeld.  
+    2.  Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig** aus.  
   
-    3.  Um benutzerdefinierte Einstellungen festzulegen, wählen Sie aus, oder geben Sie den neuen Einstellungen oder Werten.  
+    3.  Zum Angeben benutzerdefinierter Einstellungen wählen Sie die neuen Einstellungen oder Werte aus, oder geben Sie Sie ein.  
   
-3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
+3.  Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   
-Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Die Einstellungen auf der aktuellen Projektdatei gespeichert.  
+Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Die Einstellungen werden in der aktuellen Projektdatei gespeichert.  
   
-**Anpassen der Einstellungen für das aktuelle Projekt**  
+**So passen Sie die Einstellungen für das aktuelle Projekt an**  
   
-1.  Auf der **Tools** Menü klicken Sie auf **ProjectSettings**.  
+1.  Klicken Sie **im Menü Extras** auf **ProjectSettings**.  
   
-2.  In der **ProjectSettings** (Dialogfeld), verwenden Sie eine der folgenden Verfahren:  
+2.  Verwenden Sie im Dialogfeld **ProjectSettings** eines der folgenden Prozeduren:  
   
-    1.  Wählen Sie zum Auswählen eines vordefinierten Modus **Standard**, **Optimistic**, oder **vollständige** aus der **Modus** Dropdown-Listenfeld.  
+    1.  Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig** aus.  
   
-    2.  Wählen Sie zum Angeben eines benutzerdefinierten Modus **benutzerdefinierte** aus der **Modus** Dropdown-Listenfeld. Und wählen Sie dann die geeignete projekteinstellungen.  
+    2.  Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Dropdown Feld **Modus** die Option **Benutzer** definiert aus. Und wählen Sie dann die entsprechenden Projekteinstellungen aus.  
   
-3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
+3.  Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt bei der Migration hängt von den Anforderungen Ihrer Projekte:  
+Der nächste Schritt der Migration hängt von Ihren Projektanforderungen ab:  
   
--   Wenn die Zuordnung von Datentypen für Quell- und zieleinstellungen anpassen möchten, finden Sie unter [Mapping MySQL und SQL Server-Datentypen &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Informationen zum Anpassen der Zuordnung von Quell-und Ziel Datentypen finden Sie unter [Mapping MySQL and SQL Server Data Types &#40;mysqltosql&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   Andernfalls können Sie die Objektdefinitionen für MySQL-Datenbank in SQL Server oder SQL Azure-Objektdefinitionen konvertieren. Weitere Informationen finden Sie unter [MySQL-Datenbanken konvertieren &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Andernfalls können Sie die MySQL-Datenbankobjekt Definitionen in SQL Server oder SQL Azure Objekt Definitionen konvertieren. Weitere Informationen finden Sie unter [umstellen von MySQL-Datenbanken &#40;mysqlto SQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Zuordnen von MySQL und SQL Server-Datentypen &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Zuordnung von MySQL-und SQL Server Datentypen &#40;mysqltosql&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

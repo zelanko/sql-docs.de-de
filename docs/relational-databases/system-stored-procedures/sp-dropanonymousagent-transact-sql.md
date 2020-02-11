@@ -1,5 +1,5 @@
 ---
-title: Sp_dropanonymousagent (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dropanonymousagent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911956"
 ---
-# <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
+# <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Löscht einen anonymen Agent für die Replikationsüberwachung auf dem Verteiler vom Verleger. Diese gespeicherte Prozedur wird auf dem Verleger für jede Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +37,22 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @subid = ] sub_id` Ist der globale Bezeichner für ein anonymes Abonnement. *Sub_id* ist **Uniqueidentifier**, hat keinen Standardwert. Dieser Bezeichner kann abgerufen werden, auf dem Abonnenten mit **Sp_helppullsubscription**. Der Wert in der **Subid** Feld des zurückgegebenen Resultsets stellt diesen globalen Bezeichner.  
+`[ @subid = ] sub_id`Der globale Bezeichner für ein anonymes Abonnement. *sub_id* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert. Dieser Bezeichner kann mit **sp_helppullsubscription**auf dem Abonnenten abgerufen werden. Der Wert im **subid** -Feld des zurückgegebenen Resultsets ist dieser globale Bezeichner.  
   
-`[ @type = ] type` Ist der Typ des Abonnements. *Typ* ist **Int**, hat keinen Standardwert. Gültige Werte sind **1** oder **2**. Geben Sie **1**, wenn die momentaufnahmereplikation oder Transaktionsreplikation mit der Verteilungs-Agent eine Momentaufnahme. Geben Sie **2**, wenn der Merge-Agent mithilfe der Mergereplikation.  
+`[ @type = ] type`Der Abonnementtyp. *Type ist vom Datentyp* **int**und hat keinen Standardwert. Gültige Werte sind **1** oder **2**. Geben Sie **1**an, wenn die Momentaufnahme-oder Transaktions Replikation mit dem Verteilungs-Agent. Geben Sie **2**an, wenn die Mergereplikation die Merge-Agent verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_dropanonymousagent** wird in allen Replikationstypen verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_dropanonymousagent** wird bei allen Replikations Typen verwendet.  
   
  Diese gespeicherte Prozedur wird nur verwendet, um anonyme Abonnement-Agents zu löschen, und kann nicht verwendet werden, um bekannte Abonnements zu löschen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Db_owner** -Datenbankrolle in der Verteilungsdatenbank kann ausführen **Sp_dropanonymousagent**.  
+ Nur Mitglieder der **db_owner** Fixed-Daten Bank Rolle in der Verteilungs Datenbank können **sp_dropanonymousagent**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

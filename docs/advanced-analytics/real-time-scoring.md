@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 746a9cadfca28aae3bd2781a3daf71aabb8d6e5b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727323"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Echtzeitbewertung mit sp_rxPredict in SQL Server-Machine Learning
@@ -161,7 +161,7 @@ Sie müssen diese Funktion für jede Datenbank aktivieren, die Sie für die Bewe
 > 
 > In SQL Server 2017 sind zusätzliche Sicherheitsmaßnahmen vorhanden, um Probleme bei der CLR-Integration zu vermeiden. Diese Maßnahmen bewirken zusätzliche Einschränkungen bei der Verwendung dieser gespeicherten Prozedur. 
 
-### <a name="step-2-prepare-and-save-the-model"></a>Schritt 2: Vorbereiten und Speichern des Modells
+### <a name="step-2-prepare-and-save-the-model"></a>Schritt 2: Vorbereiten und Speichern des Modells
 
 Das für sp\_rxPredict erforderliche Binärformat entspricht dem Format, das für die Verwendung der PREDICT-Funktion erforderlich ist. Fügen Sie daher in Ihrem R-Code einen Aufruf von [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) ein, und stellen Sie sicher, dass `realtimeScoringOnly = TRUE` wie im folgenden Beispiel angegeben ist:
 
@@ -169,7 +169,7 @@ Das für sp\_rxPredict erforderliche Binärformat entspricht dem Format, das fü
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sp_rxpredict"></a>Schritt 3: Aufrufen von sp_rxPredict
+### <a name="step-3-call-sp_rxpredict"></a>Schritt 3: Aufrufen von sp_rxPredict
 
 Sie rufen sp\_rxPredict wie jede andere gespeicherte Prozedur auf. In der aktuellen Version benötigt die gespeicherte Prozedur nur zwei Parameter: _\@model_ für das Modell im Binärformat und _\@inputData_ für die bei der Bewertung zu verwendenden Daten, die als gültige SQL-Abfrage definiert sind.
 

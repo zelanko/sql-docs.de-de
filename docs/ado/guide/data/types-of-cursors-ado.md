@@ -1,5 +1,5 @@
 ---
-title: Cursortypen (ADO) | Microsoft-Dokumentation
+title: Cursor Typen (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,28 +13,28 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923856"
 ---
 # <a name="types-of-cursors-ado"></a>Cursortypen (ADO)
-Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden, der den Zugriff erforderlichen Daten bereitstellt. Jedes Merkmal zusätzliche Cursor über die Grundlagen (Vorwärtscursor, schreibgeschützte, statische, scrollen, ungepufferte) hat es sich um einen Preis – in den Clientspeicher, Netzwerkauslastung oder Leistung. In vielen Fällen generiert die Standardcursoroptionen einen komplexeren Cursor als die Anwendung tatsächlich benötigt.  
+Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden, der den erforderlichen Datenzugriff bereitstellt. Jedes zusätzliche Cursor Merkmal, das über die Grundlagen hinausgeht (vorwärts, schreibgeschützt, statisch, scrollen, nicht gepuffert), verfügt über einen Preis in Client Arbeitsspeicher, Netzwerk Auslastung oder Leistung. In vielen Fällen generieren die Standard Cursor Optionen einen komplexeren Cursor als die Anwendung tatsächlich benötigt.  
   
- Ihrer Wahl des Cursortyps hängt wie das Resultset von der Anwendung verwendet und auch auf mehrere entwurfsüberlegungen, einschließlich der Größe der das Resultset auf, der Prozentsatz der Daten wahrscheinlich verwendet werden, die Sensitivität gegenüber datenänderungen und Leistung der Anwendung ab. Anforderungen an.  
+ Die Auswahl des Cursortyps hängt davon ab, wie die Anwendung das Resultset verwendet, und auch nach verschiedenen Entwurfs Überlegungen, einschließlich der Größe des Resultsets, dem Prozentsatz der Daten, die wahrscheinlich verwendet werden, der Vertraulichkeit von Datenänderungen und der Anwendungsleistung. Bedingungen.  
   
- Cursorauswahl hängt in seiner einfachsten gibt an, ob Sie ändern oder einfach nur die Daten anzeigen möchten:  
+ Am grundlegendsten hängt die Cursor Auswahl davon ab, ob Sie die Daten ändern oder einfach anzeigen müssen:  
   
--   Wenn Sie nur einen Bildlauf durch einen Satz von Ergebnissen, jedoch keine Änderungsdaten müssen, verwenden Sie eine [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md) oder [statische](../../../ado/guide/data/static-cursors.md) Cursor.  
+-   Wenn Sie nur einen Bildlauf durch einen Resultset ausführen, aber keine Daten ändern müssen, verwenden Sie einen [Vorwärts](../../../ado/guide/data/forward-only-cursors.md) Cursor oder einen [statischen](../../../ado/guide/data/static-cursors.md) Cursor.  
   
--   Wenn Sie ein großes Resultset und müssen nur wenige Zeilen ausgewählt haben, verwenden Sie eine [Keyset](../../../ado/guide/data/keyset-cursors.md) Cursor.  
+-   Wenn Sie ein großes Resultset haben und nur einige Zeilen auswählen müssen, verwenden Sie einen [Keysetcursor](../../../ado/guide/data/keyset-cursors.md) .  
   
--   Wenn Sie synchronisieren möchten ein Resultset mit aktuellen hinzufügt, ändert und löscht alle gleichzeitigen Benutzer, verwenden Sie eine [dynamische](../../../ado/guide/data/dynamic-cursors.md) Cursor.  
+-   Wenn Sie ein Resultset mit den aktuellen Ergänzungen, Änderungen und Löschungen von allen gleichzeitigen Benutzern synchronisieren möchten, verwenden Sie einen [dynamischen](../../../ado/guide/data/dynamic-cursors.md) Cursor.  
   
- Obwohl alle Cursortypen unterscheiden, sollten Sie bedenken, dass diese Cursortypen nicht so viel verschiedenen Varianten wie einfach das Ergebnis von überlappenden und Optionen sind.  
+ Obwohl jeder Cursortyp eindeutig zu sein scheint, sollten Sie Bedenken, dass diese Cursor Typen nicht so viele verschiedene Variationen sind wie das Ergebnis von überlappenden Merkmalen und Optionen.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md)  
   
@@ -44,8 +44,8 @@ Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden, der
   
 -   [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorwärts Cursor](../../../ado/guide/data/forward-only-cursors.md)   
  [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
- [KEYSET-Cursor](../../../ado/guide/data/keyset-cursors.md)   
+ [Keysetcursor](../../../ado/guide/data/keyset-cursors.md)   
  [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)

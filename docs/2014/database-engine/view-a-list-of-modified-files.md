@@ -17,35 +17,35 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773428"
 ---
 # <a name="view-a-list-of-modified-files"></a>Anzeigen einer Liste geänderter Dateien
-  Sie können die **Anstehende Eincheckvorgänge** Fenster anzeigen Zeitpunkt eine Liste der ausgecheckten Dateien in der aktuellen Projektmappe, und zum Einchecken dieser Dateien mit einer einzelnen Schaltfläche auf.  
+  Sie können das Fenster **anstehende Eincheck** Vorgänge verwenden, um jederzeit eine Liste der ausgecheckten Dateien in der aktuellen Projekt Mappe anzuzeigen und diese Dateien mit einem Klick auf die Schaltfläche einzuchecken.  
   
 ### <a name="to-view-a-list-of-modified-files"></a>So zeigen Sie eine Liste geänderter Dateien an  
   
-1.  Auf der **Ansicht** Menü klicken Sie auf **Anstehende Eincheckvorgänge**.  
+1.  Klicken Sie im Menü **Ansicht** auf **anstehende Eincheck**Vorgänge.  
   
-2.  Um die ausgewählten Dateien einzuchecken, klicken Sie auf **Einchecken**. Sie können alternativ Andocken der **Anstehende Eincheckvorgänge** -Fenster auf der rechten Seite des der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Umgebung, damit Sie in den Dateien überprüfen können, wenn Sie fertig sind arbeiten.  
+2.  Klicken Sie auf **Einchecken**, um die ausgewählten Dateien einzuchecken. Alternativ können Sie das Fenster **anstehende Eincheck** Vorgänge auf der rechten Seite der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Umgebung andocken, damit Sie die Dateien einchecken können, wenn die Arbeit abgeschlossen ist.  
   
      **Ankunft**  
      Checkt die Projektmappe ein.  
   
-     **Kommentare**  
+     **Iny**  
      Ordnet dem ausstehenden Eincheckvorgang einen Nur-Text-Kommentar zu. Für jede Version eines Projekts wird ein Kommentar erstellt und zugeordnet und in der Datenbank für die Quellcodeverwaltung gespeichert.  
   
-     **Options**  
-     Gibt an, die Aktionen, die quellcodeverwaltung ausgeführt werden soll, wenn Sie auf die **Einchecken** Schaltfläche.  
+     **Optionen**  
+     Gibt die Aktionen an, die die Quell Code Verwaltung durchführen soll, wenn Sie auf die Schaltfläche **Einchecken** klicken.  
   
     -   **Alle ausgecheckt lassen**  
   
          Gibt an, dass Ihre Änderungen in den Quellcodeverwaltungsanbieter geschrieben werden, die Dateien aber weiterhin ausgecheckt bleiben sollen.  
   
-     **Sort**  
+     **Sortieren**  
      Gibt die Sortierreihenfolge für die Spalten an, die in der Elementliste angezeigt werden.  
   
      **Spalten**  
@@ -55,19 +55,19 @@ ms.locfileid: "62773428"
      Zeigt die Ordner- und Dateihierarchie für die Projektmappe bzw. das Projekt an, dass Sie einchecken.  
   
      **Flache Ansicht**  
-     Zeigt die Dateien, die Sie Einchecken als flache Listen unter der die Verbindung mit der quellcodeverwaltung an.  
+     Zeigt die Dateien, die Sie einchecken, als flache Listen unter ihrer Quell Code Verwaltungs Verbindung an.  
   
      **Versionsvergleich**  
-     Öffnet die Visual SourceSafe **Dateiunterschiede** Dialogfeld vergleicht eine ausgewählte Datei in der Entwicklungsumgebung Ihres Projekts auf alle anderen ausgewählten Dateien und werden die Unterschiede, sofern vorhanden.  
+     Öffnet das Dialogfeld mit den **unterschiedlichen Optionen** für Visual SourceSafe, das eine ausgewählte Datei im Entwicklungs Umgebungs Projekt mit einer beliebigen anderen ausgewählten Datei vergleicht und ggf. die Unterschiede anzeigt.  
   
-     **Rückgängig: Auschecken**  
-     Kehrt das Auschecken aller Elemente, die im ausgewählten der **Anstehende Eincheckvorgänge** Fenster.  
+     **Rückgängig machen**  
+     Kehrt das Auschecken aller im Fenster **ausstehende Eincheck** Vorgänge ausgewählten Elemente um.  
   
      **Name**  
      Zeigt eine Liste der für den Eincheckvorgang verfügbaren Elemente an. Das Kontrollkästchen neben den Elementen ist aktiviert. Wenn Sie ein bestimmtes Element nicht einchecken möchten, deaktivieren Sie das Kontrollkästchen daneben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von Eincheckvorgängen](../../2014/database-engine/manage-checkins.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Check-Ins verwalten](../../2014/database-engine/manage-checkins.md)   
  [Verwalten von Auscheckvorgängen](../../2014/database-engine/manage-checkouts.md)  
   
   

@@ -13,16 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952035"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Wiederherstellen von Verschlüsselungsschlüsseln (einheitlicher SSRS-Modus)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet einen Verschlüsselungsschlüssel, um sensible Daten zu sichern, die in der Berichtsserver-Datenbank gespeichert werden. Um einen ununterbrochenen Zugriff auf verschlüsselte Daten sicherzustellen, ist es wichtig, eine Sicherung des Verschlüsselungsschlüssels vorzunehmen für den Fall, dass Sie diesen später aufgrund von Änderungen im Dienstkonto oder im Rahmen einer geplanten Migration wiederherstellen müssen. Dieses Thema bietet eine Übersicht darüber, wie mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Managers Schlüssel wiederhergestellt werden können.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
   
  Zum Wiederherstellen des Schlüssels müssen Sie zuvor eine Sicherungskopie des Schlüssels in eine kennwortgeschützte Datei gespeichert haben. Während der Wiederherstellung des Schlüssels ersetzt der Berichtsserver einen vorhandenen Schlüssel durch den Schlüssel in der kennwortgeschützten Datei. Der in dieser Datei gespeicherte Schlüssel muss mit dem Schlüssel identisch sein, der zum Entschlüsseln und Verschlüsseln von Daten verwendet wird.  
   
@@ -31,23 +32,24 @@ ms.locfileid: "71952035"
  Wenn Sie einen ungültigen Schlüssel wiederherstellen, der sich von dem Schlüssel zum Verschlüsseln von Daten unterscheidet, können momentan in der Berichtsserver-Datenbank gespeicherte Daten nicht entschlüsselt werden. Falls Sie einen ungültigen Schlüssel wiederherstellen, sollten Sie unverzüglich eine Sicherungskopie des richtigen Schlüssels wiederherstellen, sofern verfügbar. Wenn Sie keine Sicherungskopie des Schlüssels, mit dem die Daten verschlüsselt wurden, vorliegen haben, müssen Sie alle verschlüsselten Daten löschen. Klicken Sie auf der Seite **Verschlüsselungsschlüssel** auf die Schaltfläche [Löschen](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) , um diesen Schritt auszuführen. Nach dem Löschen des verschlüsselten Inhalts müssen Sie alle Abonnements manuell aktualisieren und alle gespeicherten Anmeldeinformationen, die für Berichte und datengesteuerte Abonnements auf dem Berichtsserver definiert wurden, erneut festlegen.  
   
 ## <a name="restore-encryption-key-dialog"></a>Verschlüsselungsschlüssel wiederherstellen (Dialogfeld)  
- Informationen dazu, wo Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager finden, finden Sie unter [ &#40;Konfigurations-Manager für Reporting Services&#41;einheitlicher Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Informationen dazu, wo Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager finden, finden Sie unter [Konfigurations-Manager für Reporting Services &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Klicken Sie im Navigationsbereich des **-Konfigurations-Managers auf** Verschlüsselungsschlüssel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und anschließend auf **Wiederherstellen**, um das Dialogfeld Verschlüsselungsschlüssel wiederherstellen zu öffnen. Dieses Dialogfeld wird auch angezeigt, wenn Sie das Dienstkonto auf der Dienstkontoseite im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager aktualisieren. Weitere Informationen zu  
   
 ## <a name="options"></a>Tastatur  
- **Dateispeicherort**  
+ **Datei Speicherort**  
  Wählen Sie die kennwortgeschützte Datei aus, die eine Kopie des symmetrischen Schlüssels enthält. Standardmäßig wird die Dateinamenerweiterung SNK verwendet.  
   
  **Kennwort**  
- Geben Sie das Kennwort zum Entsperren der Datei ein. Nur für Benutzer, die wissen, dass das Kennwort den Schlüssel wiederherstellen kann. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine Richtlinie für sichere Kennwörter. Kennwörter müssen aus mindestens 8 Zeichen bestehen und eine Kombination aus Buchstaben (in Groß- und Kleinschreibung) sowie Zahlen und mindestens ein Symbol enthalten.  
+ Geben Sie das Kennwort zum Entsperren der Datei ein. Nur für Benutzer, die wissen, dass das Kennwort den Schlüssel wiederherstellen kann. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine Richtlinie für sichere Kennwörter. Kennwörter müssen aus mindestens 8 Zeichen bestehen und eine Kombination aus Buchstaben (in Groß- und Kleinschreibung) sowie Zahlen und mindestens ein Symbol enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41; einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurations-Manager für Reporting Services F1-Hilfe Themen &#40;SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Verschlüsselungsschlüssel &#40;SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
+ [Initialisieren eines Berichts Servers &#40;SSRS-Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Verschlüsselungsschlüssel &#40;einheitlicher SSRS-Modus&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

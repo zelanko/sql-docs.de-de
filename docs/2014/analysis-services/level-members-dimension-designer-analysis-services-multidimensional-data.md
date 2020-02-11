@@ -1,5 +1,5 @@
 ---
-title: Ebenen und Elemente (Registerkarte ' Browser ', Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Ebene und Elemente (Registerkarte ' Browser ', Dimensions-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078111"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Ebenen und Elemente (Registerkarte 'Browser', Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -27,7 +27,7 @@ ms.locfileid: "66078111"
   
  Sie können entweder die Option **Rückschreiben** aus dem Bereich **Symbolleiste** auswählen oder mit der rechten Maustaste auf den Bereich **Ebene und Elemente** klicken und aus dem Kontextmenü die Option **Rückschreiben** auswählen, um den Rückschreibemodus zu aktivieren.  
   
- Wenn der Rückschreibemodus aktiviert ist, können Sie die folgenden zusätzlichen Aktionen im Bereich  für **Ebene und Elemente** ausführen:  
+ Wenn der Rückschreibemodus aktiviert ist, können Sie die folgenden zusätzlichen Aktionen im Bereich **** für Ebene und Elemente ausführen:  
   
 |Aufgabe|Funktion|  
 |-----------|-------------|  
@@ -36,11 +36,11 @@ ms.locfileid: "66078111"
 |Umbenennen eines ausgewählten Elements|Klicken Sie entweder mit der rechten Maustaste auf das ausgewählte Element, und wählen Sie die Option **Umbenennen**aus, oder klicken Sie auf ein bereits ausgewähltes Element.|  
 |Bearbeiten der Werte von Elementeigenschaften|Doppelklicken Sie auf den Wert in der ausgewählten Elementeigenschaft für das ausgewählte Element, um den Wert zu bearbeiten.|  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Aktuelle Ebene**  
  Zeigt die Ebene an, zu der das aktuell ausgewählte Element unter **Struktur** gehört.  
   
- **Struktur**  
+ **Linde**  
  Zeigt die Elemente der aktuell ausgewählten Hierarchie und Sprache an.  
   
  Wenn Elementeigenschaften aus der Option **Elementeigenschaften** des Symbolleistenbereichs ausgewählt werden, wird jede Elementeigenschaft als eine Spalte angezeigt.  
@@ -92,7 +92,7 @@ ms.locfileid: "66078111"
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn der Rückschreibemodus aktiviert ist.  
   
- **Umbenennen**  
+ **Benen**  
  Wählen Sie diese Option aus, um den Namen des ausgewählten Elements zu bearbeiten.  
   
 > [!NOTE]  
@@ -119,11 +119,11 @@ ms.locfileid: "66078111"
  **Element reduzieren**  
  Reduziert das ausgewählte Element unter **Struktur**.  
   
- **Writeback**  
+ **Rück schreibe**  
  Wählen Sie diese Option aus, um den Rückschreibemodus zu aktivieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Symbolleiste &#40;Registerkarte ' Browser ', Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Symbolleiste &#40;Registerkarte "Browser", Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Übersetzung DLL – Funktionszusammenfassung | Microsoft-Dokumentation
+title: Zusammenfassung der Translation DLL-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039362"
 ---
 # <a name="translation-dll-function-summary"></a>Übersetzungs-DLL – Funktionsübersicht
-Die folgende Tabelle beschreibt die Übersetzung von DLL-Funktionen. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Übersetzung DLL-Funktionsreferenz](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
+In der folgenden Tabelle werden Übersetzungs-DLL-Funktionen beschrieben. Weitere Informationen zur Syntax und Semantik für jede Funktion finden Sie unter [Translation dll Function Reference](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
   
 |Aufgabe|Funktionsname|Zweck|  
 |----------|-------------------|-------------|  
-|Übersetzen von Daten|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Übersetzt alle Datenflüsse, die aus der Datenquelle an den Treiber an.|  
-||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Übersetzt alle Datenflüsse, die vom Treiber mit der Datenquelle an.|
+|Übersetzen von Daten|[Sqldatasourceto Driver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Übersetzt den gesamten Datenfluss aus der Datenquelle in den Treiber.|  
+||[Sqldriverflidatasource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Übersetzt den gesamten Datenfluss vom Treiber in die Datenquelle.|

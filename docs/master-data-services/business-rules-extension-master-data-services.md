@@ -11,10 +11,10 @@ ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728676"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Geschäftsregelerweiterung (Master Data Services)
@@ -65,12 +65,12 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**Schema**|**Berechtigungen**|  
+|**Chaos**|**Berechtigungen**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen.  
@@ -89,13 +89,13 @@ CREATE PROCEDURE [usr].[YourAction]
   
 4.  Wählen Sie in der Dropdownliste **Entität** eine Entität aus.  
   
-5.  Wählen Sie aus der Dropdownliste **Elementtyp** einen Typ des Elements aus, auf das die Geschäftsregel angewendet werden soll.  
+5.  Wählen Sie in der Dropdownliste **Member Types** (Elementtypen) einen Typ des Elements aus, auf das die Geschäftsregel angewendet werden soll.  
   
 6.  Klicken Sie auf **Hinzufügen**.  
   
 7.  Gehen Sie wie folgt vor, um ein benutzerdefiniertes Skript als Bedingung zu erstellen.  
   
-    1.  Klicken Sie unter dem **IF** -Abschnitt auf die Schaltfläche **Hinzufügen** . Ein Panel wird angezeigt.  
+    1.  Klicken Sie unter dem **IF** -Abschnitt auf die Schaltfläche **Hinzufügen** . Ein Bereich wird angezeigt.  
   
     2.  Wählen Sie in der Dropdownliste **Operator** unter **Benutzerdefiniertes Skript** die benutzerdefinierte Funktion aus.  
   
@@ -107,15 +107,15 @@ CREATE PROCEDURE [usr].[YourAction]
   
 8.  Gehen Sie wie folgt vor, um ein benutzerdefiniertes Skript als Aktion zu verwenden.  
   
-    1.  Klicken Sie unter dem **THEN** -Abschnitt auf die Schaltfläche **Hinzufügen** . Ein Panel wird angezeigt.  
+    1.  Klicken Sie unter dem **THEN** -Abschnitt auf die Schaltfläche **Hinzufügen** . Ein Bereich wird angezeigt.  
   
     2.  Wählen Sie in der Dropdownliste **Operator** unter **Benutzerdefiniertes Skript** eine benutzerdefinierte Funktion aus.  
   
     3.  Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Geschäftsregelbedingungen &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Geschäftsregelaktionen &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Master Data Services von Geschäftsregeln &#40;&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Geschäftsregel Bedingungen &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Geschäftsregel Aktionen &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460004"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Tools im Abfrage- und Sicht-Designer (Visual Database Tools)
   Beim Erstellen von Abfragen, Sichten, Inlinefunktionen oder gespeicherten Prozeduren mit einer einzelnen Anweisung stehen Ihnen im Designer vier Bereiche zur Verfügung: der Diagrammbereich, der Kriterienbereich, der SQL-Bereich und der Ergebnisbereich.  
   
- ![Abfragedesigner](../../database-engine/media//vs-queryviewdsgpanes.gif "Abfragedesigner")  
+ ![Abfrage-Designer](../../database-engine/media//vs-queryviewdsgpanes.gif "Abfrage-Designer")  
   
 -   Der Diagrammbereich zeigt die Tabellen sowie weitere Tabellenwertobjekte an, für die eine Abfrage ausgeführt wird. Jedes Rechteck stellt eine Tabelle oder ein Tabellenwertobjekt dar und gibt die verfügbaren Datenspalten an. Joins werden durch Linien zwischen den Rechtecken angezeigt. Weitere Informationen finden Sie unter [Diagrammbereich &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
@@ -47,9 +47,9 @@ ms.locfileid: "63460004"
 ## <a name="displaying-and-hiding-panes"></a>Anzeigen und Ausblenden von Bereichen  
  Klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche, zeigen Sie auf **Bereich**, und klicken Sie dann auf den Namen des Bereichs, um einen Bereich auszublenden oder einen nicht sichtbaren Bereich anzuzeigen. Wenn der Abfrage- und Sicht-Designer im Abfrage-Designermodus geöffnet wird, ist der Bereich **Ergebnisse** nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwerfen von Abfragen und Ansichten: Themen zur Vorgehensweise &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Öffnen des Abfrage- und Sicht-Designer &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Themen zur Vorgehensweise beim Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Öffnen Sie den Abfrage-und Sicht-Designer &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [SQL-Editor &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

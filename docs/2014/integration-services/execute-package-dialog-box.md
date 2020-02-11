@@ -1,5 +1,5 @@
 ---
-title: Führen Sie im Dialogfeld Paket | Microsoft-Dokumentation
+title: Dialog Feld "Paket ausführen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059186"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
@@ -27,7 +27,7 @@ ms.locfileid: "66059186"
   
  Was möchten Sie tun?  
   
--   [Öffnen des Dialogfelds "Paket ausführen"](#open_dialog)  
+-   [Öffnen des Dialog Felds "Paket ausführen"](#open_dialog)  
   
 -   [Festlegen der Optionen auf der Seite "Allgemein"](#general)  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66059186"
   
 -   [Festlegen der Optionen auf der Registerkarte "Erweitert"](#advanced)  
   
--   [Erstellen der Optionen im Dialogfeld Paket ausführen](#script)  
+-   [Skripterstellung für die Optionen im Dialog Feld "Paket ausführen"](#script)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Paket ausführen"  
+##  <a name="open_dialog"></a>Öffnen des Dialog Felds "Paket ausführen"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -53,16 +53,16 @@ ms.locfileid: "66059186"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Paket, und klicken Sie dann auf **Ausführen**.  
   
-##  <a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
+##  <a name="general"></a>Festlegen der Optionen auf der Seite "Allgemein"  
  Wählen Sie **Umgebung** aus, um die Umgebung anzugeben, die für das ausgeführte Paket angewendet wird.  
   
-##  <a name="parameters"></a> Festlegen der Optionen auf der Registerkarte "Parameter"  
+##  <a name="parameters"></a>Festlegen der Optionen auf der Registerkarte "Parameter"  
  Verwenden Sie die Registerkarte **Parameter** , um die Parameterwerte zu ändern, die bei der Ausführung des Pakets verwendet werden.  
   
-##  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
+##  <a name="connection"></a>Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
  Verwenden Sie die Registerkarte "Verbindungs-Manager", um die Eigenschaften des jeweiligen Paketverbindungs-Managers festzulegen.  
   
-##  <a name="advanced"></a> Festlegen der Optionen auf der Registerkarte "Erweitert"  
+##  <a name="advanced"></a>Festlegen der Optionen auf der Registerkarte "Erweitert"  
  Verwenden Sie die Registerkarte "Erweitert", um Eigenschaften und andere Paketeinstellungen zu verwalten.  
   
  **Hinzufügen**, **Bearbeiten**, **Entfernen**  
@@ -71,13 +71,13 @@ ms.locfileid: "66059186"
  **Protokolliergrad**  
  Wählen Sie den Protokolliergrad für die Paketausführung aus. Weitere Informationen finden Sie unter [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database).  
   
- **Speichern bei Fehlern**  
- Geben Sie an, ob eine Dumpdatei erstellt wird, wenn Fehler während der Paketausführung auftreten. Weitere Informationen finden Sie unter [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
+ **Bei Fehlern sichern**  
+ Geben Sie an, ob eine Dumpdatei erstellt wird, wenn Fehler während der Paketausführung auftreten. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](troubleshooting/generating-dump-files-for-package-execution.md).  
   
  **32-Bit-Laufzeit**  
  Geben Sie an, dass das Paket auf einem 32-Bit-System ausgeführt wird.  
   
-##  <a name="script"></a> Erstellen der Optionen im Dialogfeld Paket ausführen  
+##  <a name="script"></a>Skripterstellung für die Optionen im Dialog Feld "Paket ausführen"  
  Im Dialogfeld **Paket ausführen** können Sie auch die Schaltfläche **Skript** verwenden, um Code für [!INCLUDE[tsql](../includes/tsql-md.md)] zu erstellen. Mit dem generierten Skript werden die gespeicherten Prozeduren für [catalog.start_execution &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) mit den gleichen Optionen ausgeführt, die im Dialogfeld **Paket ausführen** ausgewählt wurden. Das Skript wird in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]in einem neuen Skriptfenster angezeigt.  
   
   

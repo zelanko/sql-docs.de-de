@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Meldungsergebnisse | Microsoft-Dokumentation
+title: Ergebnisse der SQL Server Meldung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff604f4c5d66a5742868e25ba05ca6b4528ddb1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206707"
 ---
 # <a name="sql-server-message-results"></a>SQL Server-Meldungsergebnisse
-  Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen generieren keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters erlauben oder die Anzahl der betroffenen Zeilen zurück, wenn ausgeführt:  
+  Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen generieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Native Client OLE DB-anbietedatasets oder die Anzahl betroffener Zeilen, wenn Sie ausgeführt werden:  
   
 -   PRINT  
   
@@ -34,13 +34,13 @@ ms.locfileid: "68206707"
   
 -   SET STATISTICS  
   
- Diese Anweisungen geben entweder eine oder mehrere Informationsmeldungen zurück oder veranlassen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Informationsmeldungen anstelle von Rowset- oder Anzahlergebnissen zurückgibt. Bei einer erfolgreichen Ausführung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt S_OK zurück, und die Nachrichten stehen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Consumer.  
+ Diese Anweisungen geben entweder eine oder mehrere Informationsmeldungen zurück oder veranlassen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Informationsmeldungen anstelle von Rowset- oder Anzahlergebnissen zurückgibt. Bei erfolgreicher Ausführung gibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter S_OK zurück, und die Nachrichten sind für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Consumer des Native Client-OLE DB Anbieters verfügbar.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt S_OK zurück, und verfügt über eine oder mehrere informationsmeldungen nach der Ausführung von vielen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen oder Ausführung der Consumer eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Element -Funktion.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt S_OK zurück und verfügt über eine oder mehrere Informationsmeldungen, die nach [!INCLUDE[tsql](../../includes/tsql-md.md)] der Ausführung vieler-Anweisungen oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumer-Ausführung einer Native Client OLE DB Provider-Member-Funktion verfügbar sind.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Consumer ermöglicht die dynamische Angabe von Abfragetext sollte fehlerschnittstellen überprüfen Sie nach jeder Ausführung der Elementfunktion unabhängig vom Wert von den Rückgabecode, das Vorhandensein oder fehlen einer zurückgegebenen **IRowset** oder **IMultipleResults** -Schnittstellenverweises oder die Anzahl der betroffenen Zeilen.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumer des Native Client OLE DB-Anbieters, der die dynamische Angabe von Abfragetext zulässt, sollte Fehler Schnittstellen nach jeder Ausführung der Element Funktion unabhängig vom Wert des Rückgabecodes, dem vorhanden sein oder Fehlen eines zurückgegebenen **IRowset** -oder **IMultipleResults** -Schnittstellen Verweises oder der Anzahl betroffener Zeilen überprüfen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Fehler](errors.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Errors](errors.md)  
   
   

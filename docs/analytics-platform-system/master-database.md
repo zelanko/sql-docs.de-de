@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400986"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master Datenbank-parallele Data Warehouse
@@ -42,7 +42,7 @@ Folgendes ist *nicht möglich:*
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Aufgabe|Beschreibung|  
+|Aufgabe|BESCHREIBUNG|  
 |--------|---------------|  
 |Erstellen Sie eine vollständige Sicherung der Master-Datei.|Beispiel:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
 |Wiederherstellen der Masterdatenbank|Verwenden Sie zum Wiederherstellen der Master-Datenbank im Configuration Manager Tool die Seite [Master Datenbank wiederherstellen](restore-the-master-database.md) .|  

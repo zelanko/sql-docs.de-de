@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155387"
 ---
 # <a name="create-filtered-indexes"></a>Erstellen gefilterter Indizes
@@ -95,7 +95,7 @@ ms.locfileid: "63155387"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein. Verwenden Sie CREATE INDEX WITH DROP_EXISTING, um den gefilterten Indexausdruck zu ändern.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>So erstellen Sie einen gefilterten Index  
   
@@ -111,7 +111,7 @@ ms.locfileid: "63155387"
   
 6.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…** .  
   
-7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
+7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das Kontrollkästchen bzw. die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "63155387"
   
 #### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>So stellen Sie sicher, dass ein gefilterter Index in einer SQL-Abfrage verwendet wird  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -180,6 +180,6 @@ ms.locfileid: "63155387"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [CCREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
+ Weitere Informationen finden Sie unter [Create Index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
   

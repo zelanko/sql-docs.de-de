@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306024"
 ---
 # <a name="modify-queries-visual-database-tools"></a>Ändern von Abfragen (Visual Database Tools)
@@ -33,9 +33,9 @@ ms.locfileid: "63306024"
   
  Der Abfrage-Designer ist jetzt geöffnet, und Sie können Änderungen vornehmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen von Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Arbeiten mit Daten in den Bereich "Ergebnisse" &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [Arbeiten mit Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

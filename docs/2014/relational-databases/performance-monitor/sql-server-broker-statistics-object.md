@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f500429659f7f2960140286e102fbf252e86a448
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206555"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker-Statistik-Objekt
   Das SQLServer:Broker-Leistungsobjekt enthält Leistungsindikatoren mit allgemeinen Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In der folgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet:  
   
-|Broker-Statistik-Leistungsindikatoren in SQL Server|Beschreibung|  
+|Broker-Statistik-Leistungsindikatoren in SQL Server|BESCHREIBUNG|  
 |-------------------------------------------|-----------------|  
 |**Aktivierungsfehler gesamt**|Die Häufigkeit, mit der eine gespeicherte [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Aktivierungsprozedur mit einem Fehler beendet wurde.|  
 |**Broker-Transaktionsrollbacks**|Die Anzahl von Transaktionen, die auf [!INCLUDE[ssSB](../../includes/sssb-md.md)]bezogene DML-Anweisungen enthalten, für die ein Rollback ausgeführt wurde, z. B. SEND und RECEIVE.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68206555"
 |**SQL SEND-Befehle gesamt**|Die Gesamtzahl der ausgeführten [!INCLUDE[tsql](../../includes/tsql-md.md)] -SEND-Anweisungen.|  
 |**SQL SEND-Befehle/Sekunde**|Die Anzahl der pro Sekunde ausgeführten [!INCLUDE[tsql](../../includes/tsql-md.md)] -SEND-Anweisungen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)  
   

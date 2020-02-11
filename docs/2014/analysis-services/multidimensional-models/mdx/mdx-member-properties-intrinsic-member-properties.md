@@ -1,5 +1,5 @@
 ---
-title: Integrierte Elementeigenschaften (MDX) | Microsoft-Dokumentation
+title: Systeminterne Element Eigenschaften (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074204"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Integrierte Elementeigenschaften (MDX)
+  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente verfügbar, die Sie in eine Abfrage einschließen können, um zusätzliche Daten oder Metadaten für eine benutzerdefinierte Anwendung zurückzugeben, oder um die Überprüfung oder Erstellung des Modells zu unterstützen. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
   
  Systeminterne Eigenschaften sind `ID`, `KEY`, `KEYx` und `NAME` und werden von jedem Element auf beliebigen Ebenen verfügbar gemacht. Sie können u. a. auch Positionsinformationen wie `LEVEL_NUMBER` oder `PARENT_UNIQUE_NAME` zurückgeben.  
@@ -29,12 +30,12 @@ ms.locfileid: "66074204"
  Eine Einführung dazu, wie Sie Dimensionselementeigenschaften verwenden und anzeigen, finden Sie unter [Anzeigen von SSAS-Elementeigenschaften innerhalb eines MDX-Abfragefensters in SSMS](https://go.microsoft.com/fwlink/?LinkId=317362).  
   
 > [!NOTE]  
->  Als Anbieter, der Kompatibilität mit dem OLAP-Abschnitt der OLE DB-Spezifikation vom März 1999 (2.6) gewährleistet, unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die systeminternen Elementeigenschaften, die in diesem Thema aufgeführt sind.  
+>  Als Anbieter, der mit dem OLAP-Abschnitt der OLE DB Spezifikation vom März 1999 (2,6) kompatibel ist, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt die systeminternen Element Eigenschaften, die in diesem Thema aufgeführt sind.  
 >   
 >  Andere Anbieter als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützen möglicherweise weitere systeminterne Elementeigenschaften. Weitere Informationen zu den systeminternen Elementeigenschaften, die von anderen Anbietern unterstützt werden, finden Sie in der Dokumentation des jeweiligen Anbieters.  
   
 ## <a name="types-of-member-properties"></a>Arten von Elementeigenschaften  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von systeminternen Elementeigenschaften:  
+ Die systeminternen Element Eigenschaften, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die von unterstützt werden, haben zwei Typen:  
   
  Kontextabhängige Elementeigenschaften  
  Diese Elementeigenschaften müssen im Kontext einer bestimmten Hierarchie oder Ebene verwendet werden und stellen Werte für jedes Element der angegebenen Dimension oder Ebene bereit.  
@@ -54,16 +55,16 @@ ms.locfileid: "66074204"
   
 -   Zum Abfragen der Eigenschaften verwenden Sie das `PROPERTIES`-Schlüsselwort.  
   
- Die folgenden Abschnitte beschreiben sowohl die verschiedenen kontextabhängigen und nicht kontextabhängigen systeminternen Elementeigenschaften in verfügbar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], und wie Sie mit der `PROPERTIES` -Schlüsselwort mit jeder Art von Eigenschaft.  
+ In den folgenden Abschnitten werden die verschiedenen kontextabhängigen und nicht kontextabhängigen systeminternen Element Eigenschaften beschrieben, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]die in verfügbar sind, und `PROPERTIES` es wird beschrieben, wie Sie das-Schlüsselwort mit den einzelnen Eigenschaftentyp verwenden  
   
 ## <a name="context-sensitive-member-properties"></a>Kontextabhängige Elementeigenschaften  
  Alle Dimensionselemente und Ebenenelemente unterstützen eine Reihe von systeminternen Elementeigenschaften, die kontextabhängig sind. In der folgenden Tabelle sind diese kontextabhängigen Eigenschaften aufgelistet.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`ID`|Die intern verwaltete ID für das Element.|  
 |`Key`|Der Wert des Elementschlüssels im ursprünglichen Datentyp. MEMBER_KEY wird für Abwärtskompatibilität verwendet.  MEMBER_KEY hat für nicht zusammengesetzte Schlüssel denselben Wert wie KEY0, und die MEMBER_KEY-Eigenschaft ist für zusammengesetzte Schlüssel NULL.|  
-|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar, wird jedoch hauptsächlich für zusammengesetzte Schlüssel verwendet.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Die einzelnen Schlüssel können in einer Abfrage unabhängig voneinander verwendet werden, um den betreffenden Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich `Key`.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [ein einfacher MDX-Trick: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
+|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar, wird jedoch hauptsächlich für zusammengesetzte Schlüssel verwendet.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Die einzelnen Schlüssel können in einer Abfrage unabhängig voneinander verwendet werden, um den betreffenden Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich `Key`.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
 |`Name`|Der Name des Elements.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>PROPERTIES-Syntax für kontextabhängige Eigenschaften  
@@ -84,12 +85,12 @@ ms.locfileid: "66074204"
 ## <a name="non-context-sensitive-member-properties"></a>Nicht kontextabhängige Elementeigenschaften  
  Alle Elemente unterstützen eine Reihe von systeminternen Elementeigenschaften, die unabhängig vom Kontext gleich sind. Diese Eigenschaften stellen zusätzliche Informationen bereit, die in Anwendungen dazu verwendet werden können, die Benutzerfreundlichkeit zu verbessern.  
   
- In der folgenden Tabelle sind die nicht kontextabhängigen systeminternen Eigenschaften aufgelistet, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]unterstützt werden.  
+ In der folgenden Tabelle sind die nicht kontextabhängigen systeminternen Eigenschaften aufgelistet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], die von unterstützt werden.  
   
 > [!NOTE]  
->  Die Spalten im MEMBERS-Schemarowset unterstützen die systeminternen Elementeigenschaften, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zu den `MEMBERS` -Schemarowset finden Sie unter [MDSCHEMA_MEMBERS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
+>  Die Spalten im MEMBERS-Schemarowset unterstützen die systeminternen Elementeigenschaften, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zum `MEMBERS` Schemarowset finden Sie unter [MDSCHEMA_MEMBERS-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`CATALOG_NAME`|Der Name des Cubes, zu dem dieses Element gehört.|  
 |`CHILDREN_CARDINALITY`|Die Anzahl der untergeordneten Elemente des Elements. Dies kann eine Schätzung sein, daher sollten Sie sich nicht darauf verlassen, dass es sich um die exakte Anzahl handelt. Anbieter sollten die bestmögliche Schätzung zurückgeben.|  
@@ -100,7 +101,7 @@ ms.locfileid: "66074204"
 |`HIERARCHY_UNIQUE_NAME`|Der eindeutige Name der Hierarchie. Wenn das Element zu mehreren Hierarchien gehört, gibt es eine Zeile für jede Hierarchie, zu der das Element gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
 |`IS_DATAMEMBER`|Ein boolescher Wert, der angibt, ob das Element ein Datenelement ist.|  
 |`IS_PLACEHOLDERMEMBER`|Ein boolescher Wert, der angibt, ob das Element ein Platzhalter ist.|  
-|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich `Key`.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Sie können auf jeden einzelnen Schlüssel in einer Abfrage verweisen, um diesen Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [ein einfacher MDX-Trick: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
+|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich `Key`.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Sie können auf jeden einzelnen Schlüssel in einer Abfrage verweisen, um diesen Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
 |`LCID` *x*|Die Übersetzung der Elementbeschriftung in den hexadezimalen Wert der Gebietsschema-ID, wobei *x* der dezimale Wert der Gebietsschema-ID ist (z.B. LCID1009 als Englisch-Kanada). Dies ist nur verfügbar, wenn die Beschriftungsspalte der Übersetzung an die Datenquelle gebunden ist.|  
 |`LEVEL_NUMBER`|Der Abstand des Elements vom Stamm der Hierarchie. Die Stammebene entspricht null.|  
 |`LEVEL_UNIQUE_NAME`|Der eindeutige Name der Ebene, zu der das Element gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
@@ -128,12 +129,12 @@ ms.locfileid: "66074204"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- Diese Anweisung gibt die Beschreibung für jedes Element in der Achsendimension zurück. Würden Sie versuchen, die Eigenschaft mit einer Dimension oder einer Ebene zu qualifizieren (wie in *Dimension*`.DESCRIPTION` oder *Level*`.DESCRIPTION`), wäre die Anweisung ungültig.  
+ Diese Anweisung gibt die Beschreibung für jedes Element in der Achsendimension zurück. Wenn Sie versucht haben, die Eigenschaft mit einer Dimension oder einer Ebene zu qualifizieren (wie in *Dimension* `.DESCRIPTION` oder *Ebene*`.DESCRIPTION`), wird die Anweisung nicht überprüft.  
   
 ### <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen MDX-Abfragen, die systeminterne Eigenschaften zurückgeben.  
   
- **Beispiel 1: Verwenden Sie kontextabhängiger systeminterner Eigenschaften in der Abfrage**  
+ **Beispiel 1: verwenden Kontext abhängiger System interner Eigenschaften in Abfragen**  
   
  Im folgenden Beispiel werden die übergeordnete ID, der Schlüssel und der Name jeder Produktkategorie zurückgegeben. Beachten Sie, dass die Eigenschaften als Measures verfügbar gemacht werden. Auf diese Weise können Sie die Eigenschaften bei Ausführen der Abfrage in einem Cellset anzeigen, anstatt das Dialogfeld Elementeigenschaften in SSMS zu öffnen. Sie können eine mit der folgenden Abfrage vergleichbare Abfrage ausführen, um Elementmetadaten aus einem bereits bereitgestellten Cube abzurufen.  
   
@@ -151,7 +152,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Beispiel 2: Nicht kontextabhängige, systeminterne Eigenschaften**  
+ **Beispiel 2: nicht kontextabhängige, systeminterne Eigenschaften**  
   
  Das folgende Beispiel enthält eine vollständige Liste der nicht kontextabhängigen, systeminternen Eigenschaften. Nachdem Sie die Abfrage in SSMS ausgeführt haben, klicken Sie auf die einzelnen Elemente, um die Eigenschaften im Dialogfeld Elementeigenschaften anzuzeigen.  
   
@@ -189,7 +190,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **Beispiel 3: Zurückgeben von Elementeigenschaften als Daten in einem Resultset**  
+ **Beispiel 3: Zurückgeben von Element Eigenschaften als Daten in einem Resultset**  
   
  Im folgenden Beispiel wird die übersetzte Beschriftung für das Product Category-Element in der Product-Dimension im Adventure Works-Cube für bestimmte Gebietsschemas zurückgegeben.  
   
@@ -205,17 +206,17 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [Children &#40;MDX&#41;](/sql/mdx/children-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [Verwenden von Elementeigenschaften &#40;MDX&#41;](mdx-member-properties.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [PeriodsToDate-&#40;MDX-&#41;](/sql/mdx/periodstodate-mdx)   
+ [Untergeordnete &#40;MDX-&#41;](/sql/mdx/children-mdx)   
+ [Hierarchize &#40;MDX-&#41;](/sql/mdx/hierarchize-mdx)   
+ [Anzahl &#40;fest geleg&#41; &#40;MDX-&#41;](/sql/mdx/count-set-mdx)   
+ [&#40;MDX-&#41;Filtern](/sql/mdx/filter-mdx)   
+ [AddCalculatedMembers &#40;MDX-&#41;](/sql/mdx/addcalculatedmembers-mdx)   
+ [DrilldownLevel-&#40;MDX-&#41;](/sql/mdx/drilldownlevel-mdx)   
+ [Eigenschaften &#40;MDX-&#41;](/sql/mdx/properties-mdx)   
+ [PrevMember &#40;MDX-&#41;](/sql/mdx/prevmember-mdx)   
+ [Verwenden von Element Eigenschaften &#40;MDX-&#41;](mdx-member-properties.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

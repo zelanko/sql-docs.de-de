@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787869"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
@@ -76,7 +76,7 @@ ms.locfileid: "73787869"
   
 -   [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)  
   
--   [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)  
+-   ['SQLFreeStmt'](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)  
   
 -   [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "73787869"
   
 -   [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   
--   [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)  
+-   ['SQLGetStmtAttr'](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)  
   
 -   [SQLGetTypeInfo](../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "73787869"
   
 -   [SQLProcedureColumns](../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)  
   
--   [SQLProcedures](../../relational-databases/native-client-odbc-api/sqlprocedures.md)  
+-   ['SQLProcedures'](../../relational-databases/native-client-odbc-api/sqlprocedures.md)  
   
 -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)  
   
@@ -126,16 +126,16 @@ ms.locfileid: "73787869"
   
 -   [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
--   [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)  
+-   ['SQLSpecialColumns'](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)  
   
--   [SQLStatistics](../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
+-   ['SQLStatistics'](../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
   
 -   [SQLTablePrivileges](../../relational-databases/native-client-odbc-api/sqltableprivileges.md)  
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41; -Referenz](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41; Referenz](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [Erstellen von Anwendungen mit SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

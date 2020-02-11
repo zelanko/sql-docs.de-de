@@ -1,5 +1,5 @@
 ---
-title: Änderungen am Verhalten von ' syslockinfo ' und ' sp_lock ' | Microsoft-Dokumentation
+title: Änderungen am Verhalten in syslockinfo und sp_lock | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,30 +14,30 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096644"
 ---
-# <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>Änderungen am Verhalten von 'syslockinfo' und 'sp_lock'
-  **Syslockinfo** und **Sp_lock** möglicherweise unerwartete Werte zurück. Sie können auch zusätzliche Zeilen zurückgeben, während vorherige Versionen von **Syslockinfo** und **Sp_lock** maximal zwei Zeilen je Lock-Ressource zurückgegeben.  
+# <a name="changes-to-behavior-in-syslockinfo-and-sp_lock"></a>Änderungen am Verhalten von 'syslockinfo' und 'sp_lock'
+  **syslockinfo** und **sp_lock** können unerwartete Werte zurückgeben. Sie können auch zusätzliche Zeilen zurückgeben, während vorherige Versionen von **syslockinfo** und **sp_lock** maximal zwei Zeilen pro Sperr Ressource zurückgegeben haben.  
   
- Um den Zugriff auf Informationen von **Syslockinfo** oder führen Sie **Sp_lock** erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
+ Um auf Informationen von **syslockinfo** zuzugreifen oder **sp_lock** auszuführen, ist die View Server State-Berechtigung auf dem Server erforderlich.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
- In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **Rsc_objid** und **Rsc_indid** Spalten in **Syslockinfo** und **Objid** und **Indid**  Spalten in **Sp_lock** konsistent zurückgeben die Objekt-ID und index-ID In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann der Wert 0 (null) zurückgegeben werden.  
+## <a name="description"></a>BESCHREIBUNG  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]werden die Spalten **rsc_objid** und **rsc_indid** in **syslockinfo** und die Spalten **objID** und **indid** in **sp_lock** die Objekt-ID und die Index-ID konsistent zurückgeben. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann der Wert 0 (null) zurückgegeben werden.  
   
- In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **Syslockinfo** und **Sp_lock** maximal zwei Zeilen für eine bestimmte Lock-Ressource in einer einzelnen Transaktion zurückgeben. Wenn die Sperrenpartitionierung aktiviert ist, werden ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] möglicherweise mehrere Zeilen für dieselbe Ressource zurückgegeben, die unter einer Transaktion ausgeführt wird. Gibt es möglicherweise bis zu N + 1 Zeilen zurückgegeben, wobei N die Anzahl der CPUs ist. Außerdem können die GRANTED-Anforderung und die WAITING-Anforderung jetzt für dieselbe Ressource angezeigt werden, was in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] nicht möglich war.  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]geben **syslockinfo** und **sp_lock** in einer einzelnen Transaktion maximal zwei Zeilen für eine bestimmte Sperr Ressource zurück. Wenn die Sperrenpartitionierung aktiviert ist, werden ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] möglicherweise mehrere Zeilen für dieselbe Ressource zurückgegeben, die unter einer Transaktion ausgeführt wird. Möglicherweise werden bis zu n + 1 Zeilen zurückgegeben, wobei N die Anzahl der CPUs ist. Außerdem können die GRANTED-Anforderung und die WAITING-Anforderung jetzt für dieselbe Ressource angezeigt werden, was in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] nicht möglich war.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

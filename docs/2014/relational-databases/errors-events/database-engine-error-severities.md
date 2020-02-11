@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870958"
 ---
 # <a name="database-engine-error-severities"></a>Schweregrade von Datenbank-Engine-Fehlern
@@ -29,7 +29,7 @@ ms.locfileid: "62870958"
 ## <a name="levels-of-severity"></a>Schweregrade  
  In der folgenden Tabelle sind die Schweregrade der Fehler aufgeführt und beschrieben, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ausgelöst werden.  
   
-|Schweregrad|Beschreibung|  
+|Schweregrad|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |0-9|Informationsmeldungen, die Statusinformationen zurückgeben oder Fehler melden, die nicht schwerwiegend sind. [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst keine Systemfehler mit Schweregraden zwischen 0 und 9 aus.|  
 |10|Informationsmeldungen, die Statusinformationen zurückgeben oder Fehler melden, die nicht schwerwiegend sind. Aus Kompatibilitätsgründen konvertiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Schweregrad 10 in Schweregrad 0, bevor die Fehlerinformationen an die aufrufende Anwendung zurückgegeben werden.|  
@@ -54,7 +54,7 @@ ms.locfileid: "62870958"
 ## <a name="user-defined-error-message-severity"></a>Schweregrad von benutzerdefinierten Fehlermeldungen  
  Mithilfe von**sp_addmessage** können benutzerdefinierte Fehlermeldungen mit Schweregraden zwischen 1 und 25 der **sys.messages** -Katalogsicht hinzugefügt werden. Diese benutzerdefinierten Fehlermeldungen können von RAISERROR verwendet werden. Weitere Informationen finden Sie unter [sp_addmessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql).  
   
- Mithilfe von RAISERROR können benutzerdefinierte Fehlermeldungen mit Schweregraden zwischen 1 und 25 generiert werden. RAISERROR kann auf eine benutzerdefinierte, in der **sys.messages** -Katalogsicht gespeicherte Fehlermeldung verweisen oder eine Meldung dynamisch erstellen. Wird beim Generieren eines Fehlers die benutzerdefinierte Fehlermeldung in **sys.messages** verwendet, überschreibt der von RAISERROR angegebene Schweregrad den in **sys.messages** angegebenen Schweregrad. Weitere Informationen finden Sie unter [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql).  
+ Mithilfe von RAISERROR können benutzerdefinierte Fehlermeldungen mit Schweregraden zwischen 1 und 25 generiert werden. RAISERROR kann auf eine benutzerdefinierte, in der **sys.messages** -Katalogsicht gespeicherte Fehlermeldung verweisen oder eine Meldung dynamisch erstellen. Wird beim Generieren eines Fehlers die benutzerdefinierte Fehlermeldung in **sys.messages** verwendet, überschreibt der von RAISERROR angegebene Schweregrad den in **sys.messages**angegebenen Schweregrad. Weitere Informationen finden Sie unter [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql).  
   
 ## <a name="error-severity-and-trycatch"></a>Schweregrad von Fehlern und TRY…CATCH  
  Ein TRY…CATCH-Konstrukt findet alle Ausführungsfehler, deren Schweregrad größer als 10 ist und die die Datenbankverbindung nicht beenden.  
@@ -63,12 +63,12 @@ ms.locfileid: "62870958"
   
  Fehler, die die Datenbankverbindung beenden, normalerweise mit einem Schweregrad zwischen 20 und 25, werden nicht von dem CATCH-Block behandelt, da die Ausführung beim Beenden der Verbindung abgebrochen wird.  
   
- Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)aufgetreten ist.  
+ Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   
 ## <a name="retrieving-error-severity"></a>Abrufen des Schweregrads eines Fehlers  
  Mithilfe der Systemfunktion ERROR_SEVERITY kann der Schweregrad des Fehlers abgerufen werden, der bewirkt hat, dass der CATCH-Block eines TRY…CATCH-Konstrukts ausgeführt wurde. ERROR_SEVERITY gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird. Weitere Informationen finden Sie unter [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu Datenbank-Engine-Fehlern](../native-client-ole-db-errors/errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [Systemfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-functions-transact-sql)   

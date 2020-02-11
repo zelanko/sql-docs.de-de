@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106946"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML-Abfragesyntax für XML-Berichtsdaten (SSRS)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Datasets für XML-Datenquellen erstellen. Wenn Sie eine Datenquelle definiert haben, erstellen Sie eine Abfrage für das Dataset. Je nach Typ der XML-Daten, auf die die Datenquelle zeigt, können Sie die Datasetabfrage erstellen, indem Sie eine XML-`Query` oder einen Elementpfad einfügen. XML `Query` beginnt mit einem  **\<Abfrage >** -Tag und enthält Namespaces und XML-Elemente, die je nach Datenquelle variieren. Ein Elementpfad ist von Namespaces unabhängig und gibt die Knoten und Knotenattribute in den zugrunde liegenden XML-Daten an, die mit der XPath-ähnlichen Syntax verwendet werden sollen. Weitere Informationen zu Elementpfaden finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten (SSRS)](report-data-ssrs.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Datasets für XML-Datenquellen erstellen. Wenn Sie eine Datenquelle definiert haben, erstellen Sie eine Abfrage für das Dataset. Je nach Typ der XML-Daten, auf die die Datenquelle zeigt, können Sie die Datasetabfrage erstellen, indem Sie eine XML-`Query` oder einen Elementpfad einfügen. Ein XML `Query` -Code beginnt mit einer ** \<Abfrage>** -Tag und enthält Namespaces und XML-Elemente, die je nach Datenquelle variieren. Ein Elementpfad ist von Namespaces unabhängig und gibt die Knoten und Knotenattribute in den zugrunde liegenden XML-Daten an, die mit der XPath-ähnlichen Syntax verwendet werden sollen. Weitere Informationen zu Elementpfaden finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten (SSRS)](report-data-ssrs.md).  
   
  Sie können eine XML-Datenquelle für die folgenden Typen von XML-Daten erstellen:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106946"
   
 |XML-Datenquelle|Abfragebeispiel|  
 |---------------------|-------------------|  
-|XML-Webdienstdaten ListChildren-Methode.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Webdienst-XML-Daten aus der ListChildren -Methode|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |Webdienst-XML-Daten von SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |XML-Dokument oder eingebettete XML-Daten, die Namespaces verwenden.<br /><br /> Abfrageelement, das Namespaces für einen Elementpfad angibt.|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Eingebettetes XML-Dokument.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
@@ -88,7 +88,7 @@ ms.locfileid: "66106946"
 |XML-Abfrageelement|Resultierende Felder im Dataset|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|Wert A: https://schemas.microsoft.com/...<br /><br /> Wert B: https://schemas.microsoft.com/...<br /><br /> Wert C: https://schemas.microsoft.com/...|  
-|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<xmldp: Abfrage xmlns: xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: NS = "https://schemas.microsoft.com/..." ><br /><br /> \<xmldp: ElementPath>root {}/NS: Element2/Node\</xmldp: ElementPath><br /><br /> \</xmldp: Abfrage>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML-Dokument: DPNamespace.xml  
  Sie können dieses XML-Dokument kopieren und unter einer URL speichern, auf den der Berichts-Designer zugreifen kann, um es als XML-Datenquelle zu verwenden: z. B. http://localhost/DPNamespace.xml.  
@@ -108,7 +108,7 @@ ms.locfileid: "66106946"
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Verbindungstyp &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   

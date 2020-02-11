@@ -13,23 +13,23 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014207"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Ein `MultiLineString` ist eine Sammlung von NULL oder mehr `geometry` oder **GeographyLineString** Instanzen.  
+  Eine `MultiLineString` ist eine Auflistung von NULL oder mehr `geometry` -oder **geographylinestring** -Instanzen.  
   
 ## <a name="multilinestring-instances"></a>MultiLineString-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für `MultiLineString`-Instanzen.  
   
- ![Beispiele für MultiLineString-Geometrieinstanzen](../../database-engine/media/multilinestring.gif "Examples of geometry MultiLineString instances")  
+ ![Beispiele für MultiLineString-Geometrieinstanzen](../../database-engine/media/multilinestring.gif "Beispiele für MultiLineString-Geometrieinstanzen")  
   
  Folgendes wird dargestellt:  
   
--   Abbildung 1 zeigt eine einfache `MultiLineString` Instanz, deren Begrenzung aus den vier Endpunkten ihrer beiden `LineString` Elemente.  
+-   Abbildung 1 zeigt eine einfache `MultiLineString` -Instanz, deren Grenze die vier Endpunkte der beiden `LineString` Elemente ist.  
   
 -   Abbildung 2 zeigt eine einfache `MultiLineString`-Instanz, da sich nur die Endpunkte der `LineString`-Elemente überschneiden. Die Begrenzung besteht aus den zwei nicht überlappenden Endpunkten.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "66014207"
   
 -   Abbildung 4 zeigt eine nicht einfache, nicht geschlossene `MultiLineString`-Instanz.  
   
--   Abbildung 5 zeigt eine einfache, nicht geschlossene `MultiLineString`-Instanz. Es ist nicht geschlossen, da die `LineStrings` -Elemente nicht geschlossen sind. Sie ist einfach, da keiner der Innenbereiche der `LineStrings`-Instanzen sich mit anderen überschneidet.  
+-   Abbildung 5 zeigt eine einfache, nicht geschlossene `MultiLineString`-Instanz. Er ist nicht geschlossen, da `LineStrings` seine Elemente nicht geschlossen sind. Sie ist einfach, da keiner der Innenbereiche der `LineStrings`-Instanzen sich mit anderen überschneidet.  
   
 -   Abbildung 6 zeigt eine einfache, geschlossene `MultiLineString`-Instanz. Sie ist geschlossen, weil alle ihre Elemente geschlossen sind. Sie ist einfach, weil keines ihrer Elemente sich im Innenbereich mit anderen überschneidet.  
   
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
- Damit eine `MultiLineString`-Instanz akzeptiert wird, muss sie entweder leer sein, oder sie darf nur aus `LineString` bestehen, die akzeptiert werden. Weitere Informationen über akzeptierte `LineString` -Instanzen finden Sie unter [LineString](../spatial/linestring.md). In den folgenden Beispielen werden akzeptierte `MultiLineString`-Instanzen veranschaulicht.  
+ Damit eine `MultiLineString`-Instanz akzeptiert wird, muss sie entweder leer sein, oder sie darf nur aus `LineString` bestehen, die akzeptiert werden. Weitere Informationen zu akzeptierten `LineString` Instanzen finden Sie unter [LineString](../spatial/linestring.md). In den folgenden Beispielen werden akzeptierte `MultiLineString`-Instanzen veranschaulicht.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -74,7 +74,8 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` ist nicht gültig, da die zweite `LineString`-Instanz die erste `LineString`-Instanz in einem Intervall überlappt. Sie berühren sich mit einer unendlichen Anzahl von Punkten.  
+ 
+  `@g4` ist nicht gültig, da die zweite `LineString`-Instanz die erste `LineString`-Instanz in einem Intervall überlappt. Sie berühren sich mit einer unendlichen Anzahl von Punkten.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine einfache `geometry``MultiLineString` -Instanz erstellt, die zwei `LineString` -Elemente mit der SRID 0 enthält.  
@@ -92,7 +93,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [STLength &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STIsClosed &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
  [LineString](../spatial/linestring.md)   

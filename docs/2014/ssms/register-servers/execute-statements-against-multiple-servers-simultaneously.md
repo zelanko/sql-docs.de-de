@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 55b77ddf4284dc4f06e8036d0ae1b0c86b3544f7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244642"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Gleichzeitiges Ausführen von Anweisungen für mehrere Server (SQL Server Management Studio)
@@ -29,22 +29,22 @@ ms.locfileid: "75244642"
   
  **In diesem Thema**  
   
--   **Bevor Sie beginnen:**  
+-   **Vorbereitungen:**  
   
-     [Sicherung](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Ausführen von Anweisungen für mehrere Server mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Da die durch einen zentralen Verwaltungsserver verwalteten Verbindungen im Kontext des Benutzers unter Verwendung der Windows-Authentifizierung ausgeführt werden, können die gültigen Berechtigungen auf den registrierten Servern variieren. Der Benutzer kann beispielsweise für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz A ein Mitglied der festen Serverrolle sysadmin sein, für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz B jedoch über eingeschränkte Berechtigungen verfügen.  
   
-##  <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-execute-statements-against-multiple-configuration-targets-simultaneously"></a>So führen Sie Anweisungen gleichzeitig für mehrere Konfigurationsziele aus  
   
@@ -72,6 +72,6 @@ ms.locfileid: "75244642"
 3.  Geben Sie auf der Seite **Multiserverergebnisse** die gewünschten Optionseinstellungen an, und klicken Sie dann auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten mehrerer Server mithilfe von zentralen Verwaltungs Servern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+ [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

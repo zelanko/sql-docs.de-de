@@ -1,5 +1,5 @@
 ---
-title: Zwischenspeichern von Vorlagen, XSL und Schemas (SQLXML 4.0) | Microsoft-Dokumentation
+title: Zwischenspeichern von Vorlagen, XSL und Schemas (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82b943a170c42010b650033841f6612338d99119
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013251"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>Zwischenspeichern von Vorlagen, XSL und Schemas (SQLXML 4.0)
@@ -29,13 +29,13 @@ ms.locfileid: "66013251"
  Die Themen in diesem Abschnitt liefern weitere Informationen über das Zwischenspeichern:  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Zwischenspeichern von Vorlagen &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)  
+ [Zwischenspeichern von Vorlagen &#40;SQLXML 4,0&#41;](template-caching-sqlxml-4-0.md)  
  Beschreibt einen Registrierungsschlüssel zum Zwischenspeichern von Vorlagen und stellt ihn bereit.  
   
- [XSL-zwischenspeichern &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [XSL-Caching &#40;SQLXML 4,0&#41;](xsl-caching-sqlxml-4-0.md)  
  Beschreibt einen Registrierungsschlüssel zum Zwischenspeichern von XSL und stellt ihn bereit.  
   
- [Das Zwischenspeichern von Schemas &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+ [Schema Caching &#40;SQLXML 4,0&#41;](schema-caching-sqlxml-4-0.md)  
  Erläutert Probleme der parallelen Installation in SQLXML, die beim Zwischenspeichern von Schemas auftreten können, und stellt Registrierungsschlüssel für das Zwischenspeichern von Schemas bereit.  
   
   

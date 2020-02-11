@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782922"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Fortsetzen einer Verfügbarkeitsdatenbank (SQL Server)
@@ -34,9 +34,9 @@ ms.locfileid: "72782922"
   
      [Einschränkungen](#Restrictions)  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So setzen Sie eine sekundäre Datenbank fort mit:**  
   
@@ -48,12 +48,12 @@ ms.locfileid: "72782922"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Ein RESUME-Befehl gibt einen Wert zurück, sobald es vom Replikat akzeptiert wurde, das die Zieldatenbank hostet. Das Fortsetzen der Datenbank ist jedoch dadurch asynchron.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der die fortzusetzende Datenbank gehostet wird.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72782922"
   
 -   Die primäre Datenbank muss online und verfügbar sein.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
@@ -91,7 +91,7 @@ ms.locfileid: "72782922"
   
 2.  Setzen Sie die sekundäre Datenbank mithilfe der folgenden [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)-Anweisung fort:  
   
-     ALTER DATABASE *database_name* SET HADR RESUME  
+     ALTER DATABASE *database_name* Set HADR resume  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
 
@@ -118,5 +118,5 @@ ms.locfileid: "72782922"
   
 -   [Anhalten einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

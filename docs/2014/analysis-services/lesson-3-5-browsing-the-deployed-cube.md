@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493987"
 ---
 # <a name="browsing-the-deployed-cube"></a>Durchsuchen des bereitgestellten Cubes
@@ -22,7 +22,7 @@ ms.locfileid: "69493987"
   
 ### <a name="to-browse-the-deployed-cube"></a>So durchsuchen Sie den bereitgestellten Cube  
   
-1.  Doppelklicken Sie auf den Cube [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]-Tutorial **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , der sich im Ordner** Cubes **des Projektmappen-Explorers befindet, um zum Cube-Designer in** zu wechseln.  
+1.  Um zum Cube-Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]zu wechseln, doppelklicken Sie im Ordner **Cubes** der Projektmappen-Explorer auf den ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** -Cube.  
   
 2.  Öffnen Sie die Registerkarte **Browser** , und klicken Sie dann auf der Symbolleiste des Designers auf die Schaltfläche **Verbindung wiederherstellen** .  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69493987"
   
      Internetverkäufe nach Region und Produktgruppe für den Monat Februar 2006 werden wie im folgenden Bild angezeigt.  
   
-     ![Internet Verkäufe nach Region und Produktlinie](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet Verkäufe nach Region und Produktlinie")  
+     ![Internet Sales nach Land/Region und Produktlinie](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet Sales nach Land/Region und Produktlinie")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 4: Definieren von erweiterten Attributen und Dimensions Eigenschaften](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

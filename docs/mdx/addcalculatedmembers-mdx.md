@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017185"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
@@ -31,8 +31,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Standardmäßig schließt MDX berechnete Elemente beim Auflösen von Mengenfunktionen aus. Die **AddCalculatedMembers** Funktion untersucht den Mengenausdruck *Set_Expression,* und schließt berechnete Elemente, die gleichgeordnete Elemente der Elemente im Bereich dieser Menge enthalten sind. -Ausdruck.  
+## <a name="remarks"></a>Bemerkungen  
+ Standardmäßig schließt MDX berechnete Elemente beim Auflösen von Mengenfunktionen aus. Die **AddCalculatedMembers** -Funktion untersucht den in *set_expression* angegebenen Mengen Ausdruck und schließt berechnete Elemente ein, die gleich geordnete Elemente der Elemente sind, die im Gültigkeitsbereich dieses Mengen Ausdrucks enthalten sind.  
   
 > [!NOTE]  
 >  Die Funktion kann nur mit eindimensionalen Mengenausdrücken verwendet werden.  
@@ -50,7 +50,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- Das folgende Beispiel gibt die `Measures.[Unit Price]` -Element zusätzlich zu allen berechneten Elementen in der **Measures** -Dimension, aus der **Adventure Works** Cube.  
+ Im folgenden Beispiel wird der `Measures.[Unit Price]` -Member sowie alle berechneten Elemente in der **Measures** -Dimension aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 SELECT  
@@ -59,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

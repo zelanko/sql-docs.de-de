@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017150"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
@@ -38,17 +38,18 @@ Level_Expression.AllMembers
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **AllMembers** -Funktion eine Menge, die alle Elemente enthält und die berechneten Elemente, in der angegebenen Hierarchie oder Ebene enthält, zurück. Die **AllMembers** Funktion gibt die berechneten Elemente zurück, auch wenn die angegebene Hierarchie oder Ebene keine sichtbaren Elemente enthält.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **AllMembers** -Funktion gibt eine Menge zurück, die alle Elemente enthält, die berechnete Elemente in der angegebenen Hierarchie oder Ebene enthalten. Die **AllMembers** -Funktion gibt die berechneten Elemente zurück, auch wenn die angegebene Hierarchie oder Ebene keine sichtbaren Elemente enthält.  
   
 > [!IMPORTANT]  
->  Wenn eine Dimension nur eine einzige sichtbare Hierarchie enthält, kann auf die Hierarchie entweder mit dem Dimensionsnamen oder mit dem Hierarchienamen verwiesen werden, weil der Dimensionsname in diesem Fall in seine einzige sichtbare Hierarchie aufgelöst wird. `Measures.AllMembers` ist z. B. ein gültiger MDX-Ausdruck, weil er in die einzige vorhandene Hierarchie in der Measures-Dimension aufgelöst wird.  
+>  Wenn eine Dimension nur eine einzige sichtbare Hierarchie enthält, kann auf die Hierarchie entweder mit dem Dimensionsnamen oder mit dem Hierarchienamen verwiesen werden, weil der Dimensionsname in diesem Fall in seine einzige sichtbare Hierarchie aufgelöst wird. 
+  `Measures.AllMembers` ist z. B. ein gültiger MDX-Ausdruck, weil er in die einzige vorhandene Hierarchie in der Measures-Dimension aufgelöst wird.  
   
 > [!NOTE]  
->  Die **AllMembers** -Funktion ähnelt semantisch der [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) Funktion.  
+>  Die **AllMembers** -Funktion ähnelt semantisch der [AddCalculatedMembers-Funktion (MDX)](../mdx/addcalculatedmembers-mdx.md) .  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt alle Elemente in der [`Date].[Calendar Year]` -Attributhierarchie auf der Spaltenachse Dies schließt berechnete Elemente, sowie die Menge aller untergeordneten Elemente des der `[Product].[Model Name]` -Attributhierarchie auf der Zeilenachse der **Adventure Works** Cube.  
+ Im folgenden Beispiel werden alle Elemente in der [`Date].[Calendar Year]` Attribut Hierarchie auf der Spalten Achse, einschließlich berechneter Elemente, sowie die Menge aller untergeordneten Elemente `[Product].[Model Name]` der Attribut Hierarchie auf der Zeilen Achse des **Adventure Works** -Cubes zurückgegeben.  
   
 ```  
 SELECT  
@@ -58,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
- Das folgende Beispiel gibt alle Elemente in der **Measures** Dimension auf der Spaltenachse, dazu gehören alle berechneten Elemente, sowie die Menge aller untergeordneten Elemente des der `[Product].[Model Name]` -Attributhierarchie auf der Zeilenachse aus der **Adventure Works** Cube.  
+ Im folgenden Beispiel werden alle Elemente der **Measures** -Dimension auf der Spalten Achse zurückgegeben, einschließlich aller berechneten Elemente und der Menge aller untergeordneten Elemente der `[Product].[Model Name]` Attribut Hierarchie auf der Zeilen Achse aus dem **Adventure Works** -Cube.  
   
 ```  
 SELECT  
@@ -68,9 +69,9 @@ FROM
     [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [AddCalculatedMembers &#40;MDX-&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [Untergeordnete &#40;MDX-&#41;](../mdx/children-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Projekte zur Quellcodeverwaltung hinzufügen | Microsoft-Dokumentation
+title: Hinzufügen von Projekten zur Quell Code Verwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791777"
 ---
 # <a name="add-projects-to-source-control"></a>Hinzufügen von Projekten zur Quellcodeverwaltung
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Projektmappen können mehrere Skriptprojekte hosten. Wie Sie ein Projekt zur Quellcodeverwaltung hinzufügen, hängt davon ab, ob die entsprechende Projektmappe der Quellcodeverwaltung unterliegt. Wenn die Projektmappe der Quellcodeverwaltung unterliegt, wird beim Einchecken der Projektmappe das Projekt automatisch der Quellcodeverwaltung hinzugefügt. Weitere Informationen zum Einchecken von Projektmappen finden Sie unter [Dateien einchecken](../../2014/database-engine/check-in-files.md).  
   
- Wenn die Projektmappe für dieses Projekt nicht der Quellcodeverwaltung unterliegt, können Sie der Quellcodeverwaltung die Projektmappe hinzufügen. Die Quellcodeverwaltung fügt dann automatisch die Projekte der Projektmappe hinzu. Weitere Informationen zum Hinzufügen von Projektmappen zur quellcodeverwaltung finden Sie unter [Projektmappen zur Quellcodeverwaltung hinzufügen](../../2014/database-engine/add-solutions-to-source-control.md).  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Projektmappen können mehrere Skriptprojekte hosten. Wie Sie ein Projekt zur Quellcodeverwaltung hinzufügen, hängt davon ab, ob die entsprechende Projektmappe der Quellcodeverwaltung unterliegt. Wenn die Projektmappe der Quellcodeverwaltung unterliegt, wird beim Einchecken der Projektmappe das Projekt automatisch der Quellcodeverwaltung hinzugefügt. Weitere Informationen zum Einchecken von Projektmappen finden [Sie unter Einchecken von Dateien](../../2014/database-engine/check-in-files.md).  
   
- Wenn Sie nicht die Projektmappe zur quellcodeverwaltung hinzufügen möchten, können Sie mithilfe der **Auswahl zur Quellcodeverwaltung hinzufügen** Befehl aus, um das Projekt manuell hinzufügen.  
+ Wenn die Projektmappe für dieses Projekt nicht der Quellcodeverwaltung unterliegt, können Sie der Quellcodeverwaltung die Projektmappe hinzufügen. Die Quellcodeverwaltung fügt dann automatisch die Projekte der Projektmappe hinzu. Weitere Informationen zum Hinzufügen von Lösungen zur Quell Code Verwaltung finden [Sie unter Hinzufügen von Lösungen zur Quell](../../2014/database-engine/add-solutions-to-source-control.md)Code Verwaltung.  
+  
+ Wenn Sie die Projekt Mappe nicht der Quell Code Verwaltung hinzufügen möchten, können Sie das Projekt mit dem Befehl **Auswahl zur Quell Code Verwaltung hinzufügen** manuell hinzufügen.  
   
  Datenbankobjekte werden nicht direkt vom Quellcodeverwaltungsanbieter geschützt. Sie können jedoch Skripts von Datenbankobjekten erstellen und die Skripts unter der Quellcodeverwaltung speichern.  
   
@@ -33,18 +34,18 @@ ms.locfileid: "62791777"
   
 1.  Wählen Sie im Projektmappen-Explorer ein Projekt aus.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **ausgewählte Projekte zur Quellcodeverwaltung hinzufügen**.  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **Ausgewählte Projekte zur Quell Code Verwaltung hinzufügen**.  
   
     > [!NOTE]  
-    >  Bei Verwendung der **ausgewählte Projekte zur Quellcodeverwaltung hinzufügen** -Befehl, um ein Projekt hinzufügen, die zu einer Projektmappe unter quellcodeverwaltung gehört, werden Sie aufgefordert, ob Sie das Projekt als Unterordner der Projektmappe der quellcodeverwaltung unterliegende hinzuzufügen oder hinzufügen möchten. das Projekt als einen separaten Ordner.  
+    >  Wenn Sie den Befehl **Ausgewählte Projekte zur Quell Code Verwaltung hinzufügen** verwenden, um ein Projekt hinzuzufügen, das zu einer Projekt Mappe mit Quell Code Verwaltung gehört, werden Sie gefragt, ob Sie das Projekt als Unterordner der Lösung für die Quell Code Verwaltung hinzufügen oder das Projekt als separaten Ordner hinzufügen möchten.  
   
 3.  Melden Sie sich beim Quellcodeverwaltungsanbieter an, wenn Sie dazu aufgefordert werden.  
   
-4.  Die **zu SourceSafe hinzufügen** Dialogfeld wird angezeigt. Der Name des Projekts wird in der **Projekt** Feld.  
+4.  Das Dialogfeld **zu SourceSafe-Projekt hinzufügen** wird angezeigt. Der Name des Projekts wird im Feld **Projekt** angezeigt.  
   
-5.  In der **Ordner** auflisten, öffnen Sie den Ordner, in dem Sie das Projekt platzieren möchten. Alternativ können Sie klicken **erstellen** zum Erstellen eines Ordners mit dem Namen angezeigt, der **Projekt** Feld.  
+5.  Öffnen Sie in der Liste **Ordner** den Ordner, in dem Sie das Projekt platzieren möchten. Alternativ können Sie auf **Erstellen** klicken, um einen Ordner mit dem Namen zu erstellen, der im Feld **Projekt** angezeigt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Projektmappen und Projekten zur Quellcodeverwaltung](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

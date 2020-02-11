@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Spalte zum Testen eines Miningmodells zu verwendenden | Microsoft-Dokumentation
+title: Wählen Sie die Spalte aus, die zum Testen eines Mining Modells verwendet werden soll. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085733"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Auswählen der zum Testen eines Miningmodells zu verwendenden Spalte
@@ -26,13 +26,13 @@ ms.locfileid: "66085733"
   
  In der folgenden Liste werden einige weitere Überlegungen zum Auswählen des vorhersagbaren Attributs, das in Tests verwendet werden soll, beschrieben:  
   
--   Einige Typen von Datamining-Modelle können mehrere Attribute wie z. B. neuronale Netzwerke Vorhersagen, die die Beziehungen zwischen vielen Attributen untersuchen können.  
+-   Einige Typen von Data Mining Modellen können mehrere Attribute vorhersagen, wie z. b. neuronale Netzwerke, die die Beziehungen zwischen vielen Attributen untersuchen können.  
   
--   Andere Arten von Mining-Modellen wie z. B. clustering-Modelle – führen Sie verfügen nicht unbedingt ein vorhersagbares Attribut. Clustermodelle können nicht getestet werden, außer wenn sie über ein vorhersagbares Attribut verfügen.  
+-   Andere Typen von Mining Modellen, z. b. Clustering-Modelle, verfügen nicht unbedingt über ein vorhersagbares Attribut. Clustermodelle können nicht getestet werden, außer wenn sie über ein vorhersagbares Attribut verfügen.  
   
 -   Sie müssen als Ergebnis ein kontinuierliches vorhersagbares Attribut auswählen, um ein Punktdiagramm zu erstellen oder die Genauigkeit eines Regressionsmodells zu messen. In diesem Fall können Sie keinen Zielwert angeben. Wenn Sie etwas anderes als ein Punktdiagramm erstellen, muss die zugrunde liegende Miningstrukturspalte auch einen Inhaltstyp von **Diskret** oder **Diskretisiert**haben.  
   
--   Wenn Sie ein diskretes Attribut als vorhersagbares Ergebnis auswählen, können Sie auch einen Zielwert angeben, oder Sie können das Feld **Wert vorhersagen** leer lassen. Wenn Sie enthalten eine **Wert Vorhersagen**, vom Diagramm nur die Effektivität des Modells zur Vorhersage des Zielwerts gemessen. Wenn Sie kein Zielergebnis angeben, wird das Modell in Bezug auf seine Genauigkeit gemessen, alle Ergebnisse vorherzusagen.  
+-   Wenn Sie ein diskretes Attribut als vorhersagbares Ergebnis auswählen, können Sie auch einen Zielwert angeben, oder Sie können das Feld **Wert vorhersagen** leer lassen. Wenn Sie einen **Vorhersagewert**einschließen, misst das Diagramm nur die Effektivität des Modells bei der Vorhersage des Zielwerts. Wenn Sie kein Zielergebnis angeben, wird das Modell in Bezug auf seine Genauigkeit gemessen, alle Ergebnisse vorherzusagen.  
   
 -   Wenn Sie mehrere Modelle einschließen und sie in einem einzelnen Genauigkeitsdiagramm vergleichen möchten, müssen alle Modelle die gleiche vorhersagbare Spalte verwenden.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "66085733"
   
 5.  Wenn Sie den Liftwert für ein Modell bestimmen möchten, müssen Sie einen bestimmten zu messenden Ergebniswert auswählen, indem Sie ihn aus der Liste **Wert vorhersagen** auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Auswählen und Zuordnen von Modelltestdaten](choose-and-map-model-testing-data.md)   
- [Auswählen eines Genauigkeitsdiagrammtyps und Festlegen von Diagrammoptionen](choose-an-accuracy-chart-type-and-set-chart-options.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Auswählen und Zuordnen von Modell Test Daten](choose-and-map-model-testing-data.md)   
+ [Auswählen eines Genauigkeitsdiagrammtyps Festlegen von Diagrammoptionen](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

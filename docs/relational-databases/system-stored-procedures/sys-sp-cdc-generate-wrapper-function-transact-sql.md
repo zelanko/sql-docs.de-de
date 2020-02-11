@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083753"
 ---
-# <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
+# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Generiert Skripts zur Erstellung von Wrapperfunktionen für die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Change Data Capture-Abfragefunktionen. Die in den generierten Wrappern unterstützte API ermöglicht die Angabe des Abfrageintervalls als datetime-Intervall. Aus diesem Grund eignet sich die Funktion ideal in vielen Warehousinganwendungen, einschließlich der Anwendungen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketdesignern entwickelt werden, die Change Data Capture-Technologie zur Bestimmung inkrementeller Ladevorgänge verwenden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,29 +50,29 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @capture_instance=] '*Capture_instance*"  
- Die Aufzeichnungsinstanz, für die Skripts generiert werden sollen. *Capture_instance* ist **Sysname** und hat den Standardwert NULL. Wenn ein Wert weggelassen oder explizit auf NULL gesetzt wird, werden Wrapperskripts für alle Aufzeichnungsinstanzen generiert.  
+ [ @capture_instance= ] "*capture_instance*"  
+ Die Aufzeichnungsinstanz, für die Skripts generiert werden sollen. *capture_instance* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn ein Wert weggelassen oder explizit auf NULL gesetzt wird, werden Wrapperskripts für alle Aufzeichnungsinstanzen generiert.  
   
- [ @closed_high_end_point=] *High_end_pt_flag*  
- Das Flagbit, das angibt, ob Änderungen, deren Commitzeit gleich dem oberen Endpunkt ist, von der generierten Prozedur innerhalb des Extrahierungsintervalls eingeschlossen werden sollen. *High_end_pt_flag* ist **Bit** und hat den Standardwert von 1, was bedeutet, dass der Endpunkt eingeschlossen werden soll. Ein Wert von 0 gibt an, dass alle Commitzeiten unter dem oberen Endpunkt liegen müssen.  
+ [ @closed_high_end_point= ] *high_end_pt_flag*  
+ Das Flagbit, das angibt, ob Änderungen, deren Commitzeit gleich dem oberen Endpunkt ist, von der generierten Prozedur innerhalb des Extrahierungsintervalls eingeschlossen werden sollen. *high_end_pt_flag* ist vom Typ **Bit** und hat den Standardwert 1. Dies bedeutet, dass der Endpunkt eingeschlossen werden muss. Ein Wert von 0 gibt an, dass alle Commitzeiten unter dem oberen Endpunkt liegen müssen.  
   
- [ @column_list=] '*Column_list*"  
- Eine Liste erfasster Spalten, die in das Resultset eingeschlossen werden sollen, das von der Wrapperfunktion zurückgegeben wird. *Column_list* ist **nvarchar(max)** und hat den Standardwert NULL. Bei Angabe von NULL werden alle aufgezeichneten Spalten eingeschlossen.  
+ [ @column_list= ] "*column_list*"  
+ Eine Liste erfasster Spalten, die in das Resultset eingeschlossen werden sollen, das von der Wrapperfunktion zurückgegeben wird. *column_list* ist vom Datentyp **nvarchar (max)** und hat den Standardwert NULL. Bei Angabe von NULL werden alle aufgezeichneten Spalten eingeschlossen.  
   
- [ @update_flag_list=] '*Update_flag_list*"  
- Eine Liste enthaltener Spalten, für die das von der Wrapperfunktion zurückgegebene Resultset ein Updateflag enthält. *Update_flag_list* ist **nvarchar(max)** und hat den Standardwert NULL. Bei Angabe von NULL werden keine Updateflags eingeschlossen.  
+ [ @update_flag_list= ] "*update_flag_list*"  
+ Eine Liste enthaltener Spalten, für die das von der Wrapperfunktion zurückgegebene Resultset ein Updateflag enthält. *update_flag_list* ist vom Datentyp **nvarchar (max)** und hat den Standardwert NULL. Bei Angabe von NULL werden keine Updateflags eingeschlossen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Spaltentyp|Beschreibung|  
+|Spaltenname|Spaltentyp|BESCHREIBUNG|  
 |-----------------|-----------------|-----------------|  
-|**function_name**|**nvarchar(145)**|Name der generierten Funktion.|  
+|**function_name**|**nvarchar (145)**|Name der generierten Funktion.|  
 |**create_script**|**nvarchar(max)**|Das Skript, mit dem die Wrapperfunktion der Aufzeichnungsinstanz erstellt wird.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Skript zur Erstellung der Wrapperfunktion für eine Abfrage aller Änderungen für eine Aufzeichnungsinstanz wird immer generiert. Wenn die Aufzeichnungsinstanz Abfragen für Nettoänderungen unterstützt, wird auch das Skript zur Generierung einer Wrapperfunktion für diese Abfrage generiert1.  
   
 ## <a name="examples"></a>Beispiele  
@@ -103,8 +103,8 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [Change Data Capture &#40;SSIS-&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

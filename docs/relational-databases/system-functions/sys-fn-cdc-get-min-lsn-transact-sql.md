@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_cdc_get_min_lsn (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fn_cdc_get_min_lsn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046400"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den Spaltenwert Start_lsn für die angegebene Aufzeichnungsinstanz aus der [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) -Systemtabelle. Dieser Wert stellt den unteren Endpunkt des Gültigkeitsintervalls für die Aufzeichnungsinstanz dar.  
+  Gibt den start_lsn Spaltenwert für die angegebene Aufzeichnungs Instanz aus der [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) -Systemtabelle zurück. Dieser Wert stellt den unteren Endpunkt des Gültigkeitsintervalls für die Aufzeichnungsinstanz dar.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,16 +42,16 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *Capture_instance_name* **"**  
- Der Name der Aufzeichnungsinstanz. *Capture_instance_name* ist **Sysname**.  
+ **"** *capture_instance_name* **"**  
+ Der Name der Aufzeichnungsinstanz. *capture_instance_name* ist vom **Datentyp vom Datentyp sysname**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **binary(10)**  
+ **Binär (10)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Gibt 0x00000000000000000000 zurück, wenn die Aufzeichnungsinstanz nicht vorhanden oder der Aufrufer nicht berechtigt ist, auf die Änderungsdaten zuzugreifen, die der Aufzeichnungsinstanz zugeordnet sind.  
   
- Diese Funktion dient gewöhnlich zum Identifizieren des unteren Endpunkts der Change Data Capture-Zeitachse, die einer Aufzeichnungsinstanz zugeordnet ist. Außerdem können Sie mit dieser Funktion vor der Anforderung von Änderungsdaten überprüfen, ob die Endpunkte eines Abfragebereichs innerhalb der Zeitachse der Aufzeichnungsinstanz liegen. Es ist wichtig, diese Prüfungen durchzuführen, da der untere Endpunkt einer Aufzeichnungsinstanz ändert sich, wenn auf die Änderungstabellen Bereinigung durchgeführt wird. Falls ein längerer Zeitraum zwischen den Anforderungen von Änderungsdaten vergeht, könnte sogar ein niedriger Endpunkt, der auf den oberen Endpunkt der vorherigen Anforderung von Änderungsdaten festgelegt wurde, außerhalb der aktuellen Zeitachse liegen.  
+ Diese Funktion dient gewöhnlich zum Identifizieren des unteren Endpunkts der Change Data Capture-Zeitachse, die einer Aufzeichnungsinstanz zugeordnet ist. Außerdem können Sie mit dieser Funktion vor der Anforderung von Änderungsdaten überprüfen, ob die Endpunkte eines Abfragebereichs innerhalb der Zeitachse der Aufzeichnungsinstanz liegen. Es ist wichtig, solche Überprüfungen durchzuführen, da sich der niedrige Endpunkt einer Aufzeichnungs Instanz ändert, wenn ein Bereinigung für die Änderungs Tabellen ausgeführt wird. Falls ein längerer Zeitraum zwischen den Anforderungen von Änderungsdaten vergeht, könnte sogar ein niedriger Endpunkt, der auf den oberen Endpunkt der vorherigen Anforderung von Änderungsdaten festgelegt wurde, außerhalb der aktuellen Zeitachse liegen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich.  
@@ -94,8 +94,8 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. fn_cdc_get_max_lsn &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73240769"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "73240769"
 
 Enthält eine Zeile pro Konfiguration. 
 
-|Spaltenname|Datentyp|Description|
+|Spaltenname|Datentyp|BESCHREIBUNG|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|ID der Konfigurationsoption.|
-|**name**|**nvarchar(60)**|Der Name der Konfigurationsoption. Informationen zu den möglichen Konfigurationen finden Sie unter [ALTER DATABASE scoped Configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|**value**|**sqlvariant**|Der Wert, der für diese Konfigurationsoption für das primäre Replikat festgelegt wird.|
+|**name**|**nvarchar (60)**|Der Name der Konfigurationsoption. Informationen zu den möglichen Konfigurationen finden Sie unter [ALTER DATABASE scoped Configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+|**Wert**|**sqlvariant**|Der Wert, der für diese Konfigurationsoption für das primäre Replikat festgelegt wird.|
 |**value_for_secondary**|**sqlvariant**|Der für diese Konfigurationsoption für die sekundären Replikate festgelegte Wert.|
 |**is_value_default**|**bit** |Gibt an, ob der festgelegte Wert der Standardwert ist.|
 
@@ -49,6 +49,6 @@ Wenn NULL als Wert für **value_for_secondary**zurückgegeben wird, bedeutet die
  
 Die datenbankweit gültigen Konfigurationseinstellungen werden mit der Datenbank übertragen. Dies bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

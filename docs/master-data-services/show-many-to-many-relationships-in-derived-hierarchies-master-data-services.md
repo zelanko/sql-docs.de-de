@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728951"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
@@ -42,11 +42,11 @@ ms.locfileid: "73728951"
   
  Beachten Sie im obigen Screenshot, dass die Entität **Employee** unter **Aktuelle Ebenen** in der Mitte als einzige Ebene angezeigt wird. Die abgeleitete Hierarchie **Preview** auf der rechten Seite zeigt einfach eine Liste aller Elemente der Entität **Employee** an. Der Abschnitt **Verfügbare Ebenen** auf der linken Seite zeigt an, welche Ebenen oberhalb der aktuell obersten Ebene hinzugefügt werden können (**Employee**). Bei den meisten handelt es sich um domänenbasierte Attribute (DBAs) für die Entität **Employee** . Hierzu zählt auch das domänenbasierte Attribut **Department** .  
   
- Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z.B. **Class (zugeordnet über „ClassRegistration.Student“)** . Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
+ Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z.B. **Class (zugeordnet über „ClassRegistration.Student“)**. Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- In der Vorschau werden jetzt die nach Schulungskurs gruppierten Mitarbeiter angezeigt, für die diese registriert sind. Da dies eine m:n-Beziehung ist, kann jedes untergeordnete Element über mehrere übergeordnete Elemente verfügen. Im obigen Beispiel ist der Mitarbeiter **6 {Hillman, Reinout N}** als Teilnehmer für zwei Kurse registriert, **1 {Master Data Services 101}** und **4 {Career-Limiting Moves}** (nicht karriereförderliches Handeln).  
+ In der Vorschau werden jetzt die nach Schulungskurs gruppierten Mitarbeiter angezeigt, für die diese registriert sind. Da dies eine m:n-Beziehung ist, kann jedes untergeordnete Element über mehrere übergeordnete Elemente verfügen. Im obigen Beispiel ist der Mitarbeiter **6 {Hillman, Reinout N}** als Teilnehmer für zwei Kurse registriert, **1 {Master Data Services 101}** und **4 {Career-Limiting Moves}**(nicht karriereförderliches Handeln).  
   
  Diese Zuordnungsbeziehung kann auch umgekehrt angezeigt werden, wobei die Kurse nach Teilnehmern gruppiert werden:  
   
@@ -72,10 +72,11 @@ ms.locfileid: "73728951"
   
  m:n-Ebenen können genau wie andere abgeleitete Hierarchieebenen ausgeblendet werden.  
    
-### <a name="M2MSample"></a> Eine m:n-Beziehung in einem Beispielmodell  
+### <a name="M2MSample"></a>M2M-Beziehung im Beispielmodell  
 Eine Vorführung einer m:n-Beziehung finden Sie in der abgeleiteten Hierarchie „Region Climate“ (regionales Klima) im Beispielmodell „Customer“, das in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthalten ist.   
   
-Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehung modelliert, ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)** (Klima (über RegionClimate.Region zugeordnet)). ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** (Vorschau) zeigt die Regionen gruppiert nach den Klimatypen, denen sie zugeordnet sind. Hierbei handelt es sich um eine m:n-Beziehung, weil einige Regionen (untergeordnete Elemente) mehreren Klimata (übergeordneten Elementen) zugeordnet sind. So ist ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** (Asien/Pazifik) z.B. ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** (Tropisch) und ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** (Trocken) zugeordnet.  
+Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehung modelliert, ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**(Klima (über RegionClimate.Region zugeordnet)). 
+  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** (Vorschau) zeigt die Regionen gruppiert nach den Klimatypen, denen sie zugeordnet sind. Hierbei handelt es sich um eine m:n-Beziehung, weil einige Regionen (untergeordnete Elemente) mehreren Klimata (übergeordneten Elementen) zugeordnet sind. So ist ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** (Asien/Pazifik) z.B. ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** (Tropisch) und ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**(Trocken) zugeordnet.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -90,7 +91,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a> Elementsicherheit  
+##  <a name="bkmk_member_security"></a>Element Sicherheit  
  Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Beispiel:  
   
 -   Eine rekursive abgeleitete Hierarchie, die keine Null-Rekursionen verankert (jedes Element der rekursiven Ebene wird sowohl unter ROOT als auch unter seinem rekursiven übergeordneten Element angezeigt).  
@@ -102,7 +103,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
 ## <a name="collections"></a>Auflistungen  
  Sammlungen und explizite Hierarchien sind veraltet. Die gespeicherte Konvertierungsprozedur (udpConvertCollectionAndConsolidatedMembersToLeaf) konvertiert Sammlungselemente in Blattelemente und erstellt abgeleitete m:n-Hierarchien, um die Informationen zur Sammlungsmitgliedschaft zu erfassen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

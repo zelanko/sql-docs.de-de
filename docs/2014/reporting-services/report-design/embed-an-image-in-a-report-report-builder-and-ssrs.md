@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 53aa9c9131edce40c62fbfab6899ef7531ffca01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105963"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Einbetten eines Bilds in einen Bericht (Berichts-Generator und SSRS)
@@ -62,9 +62,9 @@ ms.locfileid: "66105963"
   
 3.  Klicken Sie auf das Textfeld neben der **MIMEType** -Eigenschaft, und wählen Sie in der Dropdownliste einen neuen MIME-Typ aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Bilder &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Hinzufügen eines datengebundenen Bilds &#40;Berichts-Generator und SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
- [Bildeigenschaften &#40;Dialogfeld, Allgemein, Berichts-Generator und SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
+ [Hinzufügen eines datengebundenen Bilds (Berichts-Generator und SSRS)](add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [Bildeigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

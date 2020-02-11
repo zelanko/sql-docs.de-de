@@ -20,21 +20,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754494"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
-  Im Kontext einer Datenbank-Spiegelungssitzung können die Prinzipal- und Spiegelrollen normalerweise im Rahmen des so genannten *Rollenwechsels*ausgetauscht werden. Beim Rollenwechsel dient der Spiegelserver als *Failoverpartner* für den Prinzipalserver. Er übernimmt die Prinzipalrolle, stellt dessen Kopie der Datenbank wieder her und schaltet sie als neue Prinzipaldatenbank online. Der ehemalige Prinzipalserver übernimmt, soweit verfügbar, die Spiegelrolle, und die zugehörige Datenbank wird zur neuen Spiegeldatenbank. Potenziell können die Rollen hin- und hergewechselt werden, entweder als Antwort auf auftretende Fehler oder zu Verwaltungszwecken.  
+  Innerhalb des Kontexts einer Datenbank-Spiegelungs Sitzung sind die Prinzipal-und Spiegel Rollen in der Regel in einem Prozess austauschbar, der als *Rollenwechsel*bezeichnet wird. Beim Rollenwechsel dient der Spiegelserver als *Failoverpartner* für den Prinzipalserver. Er übernimmt die Prinzipalrolle, stellt dessen Kopie der Datenbank wieder her und schaltet sie als neue Prinzipaldatenbank online. Der ehemalige Prinzipalserver übernimmt, soweit verfügbar, die Spiegelrolle, und die zugehörige Datenbank wird zur neuen Spiegeldatenbank. Potenziell können die Rollen hin- und hergewechselt werden, entweder als Antwort auf auftretende Fehler oder zu Verwaltungszwecken.  
   
 > [!NOTE]  
 >  Dieses Thema setzt voraus, dass Sie mit den Betriebsmodi der Datenbankspiegelung vertraut sind. Weitere Informationen finden Sie unter [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
  Die folgende Abbildung zeigt die Spiegelungspartner **Partner_A** und **Partner_B**, die die Prinzipal- und Spiegelrollen bei einer Reihe automatischer oder manueller Failover wechseln.  
   
- ![Partner, die zweimal zwischen Rollen wechseln](../media/dbm-roleswitching.gif "Partners switching twice between roles")  
+ ![Zweifacher Rollenwechsel von Partnern](../media/dbm-roleswitching.gif "Zweifacher Rollenwechsel von Partnern")  
   
 > [!IMPORTANT]  
 >  Nach einem Rollenwechsel müssen Aufträge, die für die ehemalige Prinzipaldatenbank ausgeführt wurden, auf dem neuen Prinzipalserver erneut erstellt werden, damit sie dort ausgeführt werden können. Weitere Informationen finden Sie unter [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
@@ -68,31 +68,31 @@ ms.locfileid: "62754494"
 ||Hohe Leistung|Modus für hohe Sicherheit ohne einen Zeugen|Modus für hohe Sicherheit mit einem Zeugen|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |Automatisches Failover|Nein|Nein|Ja|  
-|Manuelles Failover|Nein|Ja|Ja|  
+|Manuelles Failover|Nein |Ja|Ja|  
 |Erzwungener Dienst|Ja|Ja|Nein|  
   
  Nach einem Rollenwechsel müssen bestimmte Metadaten auf beiden Partnern vorhanden sein, um sicherzustellen, dass alle Datenbankbenutzer auf die neue Prinzipaldatenbank zugreifen können. Darüber hinaus müssen Sicherungsaufträge auf dem neuen Prinzipalserver erstellt werden, damit die Datenbank weiterhin in regelmäßigen Abständen gesichert wird. Weitere Informationen finden Sie unter [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  Wie lange die Datenbankspiegelung während eines Rollenwechsels nicht durchgeführt werden kann, hängt vom Typ des Rollenwechsels und von der Ursache ab. Weitere Informationen finden Sie unter [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)ausgetauscht werden.  
   
-##  <a name="ManualFailover"></a> Manual Failover  
+##  <a name="ManualFailover"></a>Manuelles Failover  
  Durch das manuelle Failover werden die Clients von der Datenbank getrennt und die Rollen der Partner umgekehrt. Nur der Modus mit hoher Sicherheit unterstützt ein manuelles Failover.  
   
   
-###  <a name="AvailabilityDuringUpgrades"></a> Aufrechterhalten der Verfügbarkeit während Upgrades  
+###  <a name="AvailabilityDuringUpgrades"></a>Aufrechterhalten der Verfügbarkeit während Upgrades  
  Vom Datenbankadministrator kann das manuelle Failover zum Aktualisieren der Hardware oder Software ohne Einbußen bei der Verfügbarkeit verwendet werden. Um die Datenbankspiegelung für Softwareupgrades zu verwenden, müssen die Upgrades bereits auf dem Spiegelserver und/oder dem System vorhanden sein.  
   
 > [!NOTE]  
->  Die Datenbankspiegelung sollte in der Lage sein, ein paralleles Upgrade auszuführen. Dies wird jedoch nicht garantiert, da zukünftige Änderungen unbekannt sind. Weitere Informationen finden Sie unter [Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md).  
+>  Die Datenbankspiegelung sollte in der Lage sein, ein paralleles Upgrade auszuführen. Dies wird jedoch nicht garantiert, da zukünftige Änderungen unbekannt sind. Weitere Informationen finden Sie unter [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
  Die folgende Abbildung veranschaulicht ein manuelles Failover, bei dem während des Upgrades einer Datenbankserverinstanz die Datenbank verfügbar bleibt. Nach dem Abschluss des Upgrades kann vom Administrator optional ein Failover zurück zur Originalserverinstanz durchgeführt werden. Dies ist nützlich, wenn der Administrator die Spiegelungssitzung beenden und den Spiegelserver anderweitig verwenden möchte. Auf diese Weise kann eine einzelne Serverinstanz wiederholt beim Aktualisieren einer Reihe von Datenbankserverinstanzen verwendet werden.  
   
- ![Geplantes manuelles Failover](../media/dbm-failovmanuplanned.gif "Planned manual failover")  
+ ![Geplantes manuelles Failover](../media/dbm-failovmanuplanned.gif "Geplantes manuelles Failover")  
   
-###  <a name="ConditionsForManualFo"></a> Für ein manuelles Failover erforderliche Bedingungen  
+###  <a name="ConditionsForManualFo"></a>Für ein manuelles Failover erforderliche Bedingungen  
  Für das manuelle Failover ist die Transaktionssicherheitseinstellung FULL erforderlich (d. h., der Modus für hohe Sicherheit). Wenn die Partner verbunden sind und die Datenbank bereits synchronisiert ist, wird das manuelle Failover unterstützt.  
   
-###  <a name="HowManualFoWorks"></a> So funktioniert ein manuelles Failover  
+###  <a name="HowManualFoWorks"></a>Funktionsweise des manuellen Failovers  
  Durch ein manuelles Failover wird die folgende Aktionskette ausgelöst:  
   
 1.  Vom Prinzipalserver werden Clients von der Prinzipaldatenbank getrennt. Das Ende des Protokolls wird an den Spiegelserver gesendet, und in Vorbereitung auf den Wechsel der Spiegelrolle wird der Status der Prinzipaldatenbank auf SYNCHRONIZING festgelegt.  
@@ -116,15 +116,15 @@ ms.locfileid: "62754494"
     > [!NOTE]  
     >  Sobald der neue Spiegelserver die Datenbanken synchronisiert hat, ist ein Failover wieder möglich, jedoch in umgekehrter Richtung.  
   
- Nach dem Failover müssen die Clients erneut eine Verbindung zur aktuellen Prinzipaldatenbank herstellen. Weitere Informationen finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)ausgetauscht werden.  
+ Nach dem Failover müssen die Clients erneut eine Verbindung zur aktuellen Prinzipaldatenbank herstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
  **So initiieren Sie ein manuelles Failover**  
   
 -   [Manueller Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
--   [Manuelles Failover für eine Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+-   [Manuelles Failover für eine Datenbank-Spiegelungs Sitzung &#40;Transact-SQL-&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
+##  <a name="AutomaticFailover"></a>Automatisches Failover  
  Automatisches Failover wird nur in Datenbank-Spiegelungssitzungen unterstützt, die mit einem Zeugen im Modus für hohe Sicherheit ausgeführt werden (*Modus für hohe Sicherheit mit automatischem Failover*). Im Modus für hohe Sicherheit mit automatischem Failover wird nach dem Synchronisieren der Datenbank ein automatisches Failover ausgeführt, wenn die Prinzipaldatenbank ausfällt. Bei einem automatischen Failover übernimmt der Spiegelserver die Rolle des Prinzipalservers und schaltet die eigene Datenbankkopie als Prinzipaldatenbank online. Aufgrund der Voraussetzung, dass die Datenbank synchronisiert sein muss, werden Datenverluste während des Failovers verhindert, da für jede Transaktion, für die auf der Prinizipaldatenbank ein Commit ausgeführt wird, auch ein Commit auf der Spiegeldatenbank ausgeführt wird.  
   
 > [!IMPORTANT]  
@@ -132,7 +132,7 @@ ms.locfileid: "62754494"
   
   
   
-###  <a name="ConditionsForAutoFo"></a> Für ein automatisches Failover erforderliche Bedingungen  
+###  <a name="ConditionsForAutoFo"></a>Für ein automatisches Failover erforderliche Bedingungen  
  Für automatisches Failover müssen folgende Bedingungen erfüllt sein:  
   
 -   Die Datenbank-Spiegelungssitzung muss im Modus für hohe Sicherheit ausgeführt werden und einen Zeugen besitzen. Weitere Informationen finden Sie unter [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
@@ -148,7 +148,7 @@ ms.locfileid: "62754494"
   
      Wie der Spiegelserver einen Ausfall des Prinzipalservers erkennt, hängt davon ab, ob es sich um einen Hardware- oder Softwarefehler handelt. Weitere Informationen finden Sie unter [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md).  
   
-###  <a name="HowAutoFoWorks"></a> So funktioniert ein automatisches Failover  
+###  <a name="HowAutoFoWorks"></a>Funktionsweise des automatischen Failovers  
  Unter den oben genannten Bedingungen wird beim automatischen Failover die folgende Aktionsfolge initiiert:  
   
 1.  Wird der Prinzipalserver noch immer ausgeführt, ändert er den Status der Prinzipaldatenbank in DISCONNECTED und trennt alle Clientverbindungen zur Prinzipaldatenbank.  
@@ -168,14 +168,14 @@ ms.locfileid: "62754494"
   
  ![Automatisches Failover](../media/dbm-failovauto1round.gif "Automatisches Failover")  
   
- Anfänglich besitzen alle drei Server eine Verbindung (die Sitzung verfügt über ein vollständiges Quorum). **Partner_A** ist der Prinzipalserver und **Partner_B** ist der Spiegelserver. **Partner_A** (oder die Prinzipaldatenbank auf **Partner_A**) steht nicht länger zur Verfügung. Der Zeuge und **Partner_B** erkennen, dass der Prinzipalserver nicht mehr verfügbar ist, die Sitzung behält jedoch das Quorum. **Partner_B** wird zum Prinzipalserver und macht seine Kopie der Datenbank als neue Prinzipaldatenbank verfügbar. Schließlich stellt **Partner_A** wieder eine Verbindung mit der Sitzung her und erkennt, dass **Partner_B** jetzt die Prinzipalrolle besitzt. **Partner_A** übernimmt dann die Spiegelrolle.  
+ Anfänglich besitzen alle drei Server eine Verbindung (die Sitzung verfügt über ein vollständiges Quorum). **Partner_A** ist der Prinzipal Server, und **Partner_B** ist der Spiegel Server. **Partner_A** (oder die Prinzipal Datenbank auf **Partner_A**) steht nicht mehr zur Verfügung. Der Zeuge und **Partner_B** erkennen, dass der Prinzipalserver nicht mehr verfügbar ist, die Sitzung behält jedoch das Quorum. **Partner_B** wird zum Prinzipal Server und macht seine Kopie der Datenbank als neue Prinzipal Datenbank verfügbar. Schließlich stellt **Partner_A** wieder eine Verbindung mit der Sitzung her und erkennt, dass **Partner_B** jetzt die Prinzipalrolle besitzt. **Partner_A** dann die Spiegel Rolle übernimmt.  
   
- Nach dem Failover müssen die Clients erneut eine Verbindung zur aktuellen Prinzipaldatenbank herstellen. Weitere Informationen finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)ausgetauscht werden.  
+ Nach dem Failover müssen die Clients erneut eine Verbindung zur aktuellen Prinzipaldatenbank herstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
 >  Transaktionen, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator vorbereitet wurden, für die beim Auftreten eines Failovers jedoch noch kein Commit ausgeführt wurde, werden nach dem Failover der Datenbank als abgebrochen betrachtet.  
   
-###  <a name="DisableAutoSSMS"></a> So deaktivieren Sie das automatische Failover (SQL Server Management Studio)  
+###  <a name="DisableAutoSSMS"></a>So deaktivieren Sie das automatische Failover (SQL Server Management Studio)  
  Öffnen Sie die Seite **Datenbankeigenschaften – Spiegelung** , und ändern Sie den Betriebsmodus durch Auswählen einer der folgenden Optionen:  
   
 -   **Hohe Sicherheit ohne automatisches Failover (synchron)**  
@@ -196,7 +196,7 @@ ms.locfileid: "62754494"
     > [!NOTE]  
     >  Wenn der Zeuge deaktiviert wird, während die Transaktionssicherheitsstufe FULL beibehalten wird, wird die Sitzung in den Modus für hohe Sicherheit mit automatischem Failover versetzt.  
   
-##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
+##  <a name="ForcedService"></a>Erzwungener Dienst (mit möglichem Datenverlust)  
  Im Rahmen der Datenbankspiegelung wird das Erzwingen des Dienstes (bei möglichem Datenverlust) als eine Methode der Notfallwiederherstellung bereitgestellt, bei der Ihnen die Verwendung eines Spiegelservers als betriebsbereiter Standbyserver ermöglicht wird. Das Erzwingen des Dienstes ist nur möglich, wenn keine Verbindung in einer Spiegelungssitzung zwischen Prinzipalserver und Spiegelserver besteht. Da es beim Erzwingen des Dienstes zu Datenverlusten kommen kann, sollte diese Methode unter Vorbehalt und selten angewendet werden.  
   
  Die Unterstützung des erzwungenen Dienstes hängt wie folgt vom Betriebsmodus und dem Status der Sitzung ab:  
@@ -214,19 +214,19 @@ ms.locfileid: "62754494"
   
   
   
-###  <a name="TypicalCaseFS"></a> Typischer Fall eines erzwungenen Dienstes  
+###  <a name="TypicalCaseFS"></a>Typischer Fall eines erzwungenen Dienstanbieter  
  Die folgende Abbildung veranschaulicht einen typischen Fall eines erzwungenen Dienstes (mit möglichem Datenverlust).  
   
- ![Erzwingen des Diensts mit potenziellem Datenverlust](../media/dbm-forced-service.gif "Forcing service with possible data loss")  
+ ![Diensterzwingung mit möglichem Datenverlust](../media/dbm-forced-service.gif "Diensterzwingung mit möglichem Datenverlust")  
   
- In der Abbildung fällt der ursprüngliche Prinzipalserver ( **Partner_A**) aus und steht dem Spiegelserver ( **Partner_B**) nicht mehr zur Verfügung, wodurch die Spiegeldatenbank getrennt wird. Nachdem sichergestellt wurde, dass **Partner_A** Clients nicht zur Verfügung steht, erzwingt der Datenbankadministrator den Dienst, mit möglichem Datenverlust, auf **Partner_B**. **Partner_B** wird zum Prinzipalserver, und die Datenbank wird *ungeschützt* (d.h. ungespiegelt) ausgeführt. An diesem Punkt können Clients die Verbindung mit **Partner_B**wieder herstellen.  
+ In der Abbildung fällt der ursprüngliche Prinzipalserver ( **Partner_A**) aus und steht dem Spiegelserver ( **Partner_B**) nicht mehr zur Verfügung, wodurch die Spiegeldatenbank getrennt wird. Nachdem sichergestellt wurde, dass **Partner_A** Clients nicht zur Verfügung steht, erzwingt der Datenbankadministrator den Dienst, mit möglichem Datenverlust, auf **Partner_B**. **Partner_B** wird zum Prinzipal Server und wird ausgeführt, wenn *die Datenbank verfügbar* gemacht wird (das heißt, Sie wird nicht gespiegelt). An diesem Punkt können Clients die Verbindung mit **Partner_B**wieder herstellen.  
   
- Wenn **Partner_A** wieder zur Verfügung steht, stellt er die Verbindung mit dem neuen Prinzipalserver her, tritt der Sitzung wieder bei und übernimmt die Rolle des Spiegelservers. Die Spiegelungssitzung wird sofort angehalten, ohne dass die neue Spiegeldatenbank synchronisiert wird. Durch das Anhalten der Sitzung kann der Datenbankadministrator entscheiden, ob die Sitzung fortgesetzt, oder in Extremfällen, die Spiegelung entfernt und der Versuch unternommen werden soll, Daten aus der früheren Prinzipaldatenbank zu retten. In diesem Fall entscheidet sich der Datenbankadministrator für das Fortsetzen der Spiegelung. An dieser Stelle übernimmt **Partner_A** die Rolle des Spiegelservers und führt einen Rollback der früheren Prinzipaldatenbank auf den Zeitpunkt der letzten erfolgreich synchronisierten Transaktion aus. Wenn Transaktionen, für die ein Commit ausgeführt wurde, vor dem Erzwingen des Diensts nicht auf den Datenträger des Spiegelservers geschrieben wurden, gehen sie verloren. **Partner_A** führt dann einen Rollforward der neuen Spiegeldatenbank aus, indem alle Änderungen angewendet werden, die an der neuen Prinzipaldatenbank vorgenommen wurden, seit der vorherige Spiegelserver die Rolle des neuen Prinzipalservers übernommen hat.  
+ Wenn **Partner_A** wieder zur Verfügung steht, stellt er die Verbindung mit dem neuen Prinzipalserver her, tritt der Sitzung wieder bei und übernimmt die Rolle des Spiegelservers. Die Spiegelungssitzung wird sofort angehalten, ohne dass die neue Spiegeldatenbank synchronisiert wird. Durch das Anhalten der Sitzung kann der Datenbankadministrator entscheiden, ob die Sitzung fortgesetzt, oder in Extremfällen, die Spiegelung entfernt und der Versuch unternommen werden soll, Daten aus der früheren Prinzipaldatenbank zu retten. In diesem Fall entscheidet sich der Datenbankadministrator für das Fortsetzen der Spiegelung. An dieser Stelle übernimmt **Partner_A** die Rolle des Spiegelservers und führt einen Rollback der früheren Prinzipaldatenbank auf den Zeitpunkt der letzten erfolgreich synchronisierten Transaktion aus. Wenn Transaktionen, für die ein Commit ausgeführt wurde, vor dem Erzwingen des Diensts nicht auf den Datenträger des Spiegelservers geschrieben wurden, gehen sie verloren. **Partner_A** führt dann ein Roll Forward der neuen Spiegel Datenbank durch, indem alle Änderungen vorgenommen werden, die an der neuen Prinzipal Datenbank vorgenommen wurden, da der frühere Spiegel Server zum neuen Prinzipal Server wurde  
   
 > [!NOTE]  
 >  Wurde im Modus für hohe Leistung ein Zeuge konfiguriert (dies ist nicht notwendig), ist das Erzwingen des Dienstes nur möglich, wenn der Zeuge derzeit mit dem Spiegelserver verbunden ist.  
   
-###  <a name="FSrisks"></a> Risiken beim Erzwingen des Dienstes  
+###  <a name="FSrisks"></a>Risiken beim Erzwingen des Dienstanbieter  
  Sie sollten unbedingt bedenken, dass durch das Erzwingen des Dienstes Daten verloren gehen können. Zu einem Datenverlust kann es kommen, weil der Spiegelserver nicht mit dem Prinzipalserver kommunizieren und somit nicht sicherstellen kann, dass beide Datenbanken synchronisiert sind. Durch das Erzwingen des Dienstes wird ein neuer Wiederherstellungs-Verzweigungspunkt gestartet. Da sich die ursprüngliche Prinzipaldatenbank und die Spiegeldatenbank auf verschiedenen Wiederherstellungsverzweigungen befinden, enthält jede Datenbank nun Daten, die in der jeweils anderen Datenbank nicht vorhanden sind: Die ursprüngliche Prinzipaldatenbank enthält die Änderungen, die noch nicht aus der Sendewarteschlange an die frühere Spiegeldatenbank gesendet wurden (die nicht gesendeten Protokolle). Die frühere Spiegeldatenbank enthält die Änderungen, die nach dem Erzwingen des Dienstes vorgenommen wurden.  
   
  Wird der Dienst aufgrund eines Fehlers des Prinzipalservers erzwungen, hängt der potenzielle Datenverlust davon ab, ob Transaktionsprotokolle vorhanden sind, die vor dem Fehler nicht an den Spiegelserver gesendet wurden. Im Modus für hohe Sicherheit ist dies nur bis zum Synchronisieren der Spiegeldatenbank möglich. Im Modus für hohe Leistung besteht immer die Möglichkeit, dass sich nicht gesendete Protokolle ansammeln.  
@@ -239,7 +239,7 @@ ms.locfileid: "62754494"
   
  Weitere Informationen finden Sie weiter unten in diesem Thema unter [Umgang mit potenziellem Datenverlust](#ManageDataLoss).  
   
-###  <a name="ManageDataLoss"></a> Umgang mit potenziellem Datenverlust  
+###  <a name="ManageDataLoss"></a>Verwalten des potenziellen Daten Verlusts  
  Sobald der frühere Prinzipalserver verfügbar ist, können Sie nach dem Erzwingen des Dienstes versuchen, den potenziellen Datenverlust zu verwalten, vorausgesetzt die Datenbank ist unbeschädigt. Der jeweilige Ansatz für die Verwaltung des potenziellen Datenverlusts hängt davon ab, ob der ursprüngliche Prinzipalserver die Verbindung zu seinem Partner wiederhergestellt hat und wieder an der Spiegelungssitzung teilnimmt. Vorausgesetzt, dass der ursprüngliche Prinzipalserver auf die neue Prinzipalinstanz zugreifen kann, wird die Verbindung automatisch und transparent wiederhergestellt.  
   
 #### <a name="the-original-principal-server-has-reconnected"></a>Der ursprüngliche Prinzipalserver hat die Verbindung wiederhergestellt  
@@ -268,30 +268,30 @@ ms.locfileid: "62754494"
   
      Wenn Sie die Spiegelung mit der aktualisierten Datenbank als erste Prinzipaldatenbank wieder aufnehmen möchten, verwenden Sie diese Sicherung (und mindestens eine nachfolgende Protokollsicherung), um eine neue Spiegeldatenbank zu erstellen. Jede Protokollsicherung, die nach dem Entfernen der Spiegelung erstellt wurde, muss angewendet werden. Deshalb wird empfohlen, zusätzliche Protokollsicherungen der Prinzipaldatenbank bis zum Starten der neuen Spiegelungssitzung hinauszuzögern.  
   
-###  <a name="RelatedTasksForFS"></a> Verwandte Aufgaben zum Verwalten eines erzwungenen Failovers  
- **So erzwingen Sie einen Dienst**  
+###  <a name="RelatedTasksForFS"></a>Verwandte Aufgaben zum Verwalten eines erzwungenen Failovers  
+ **So erzwingen Sie den Dienst**  
   
--   [Erzwingen des Diensts in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md).  
+-   [Erzwingen Sie den Dienst in einer Datenbank-Spiegelungs Sitzung &#40;Transact-SQL-&#41;](force-service-in-a-database-mirroring-session-transact-sql.md).  
   
- **So setzen Sie die Datenbankspiegelung fort**  
+ **Fortsetzen der Daten Bank Spiegelung**  
   
--   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
+-   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
- **So erstellen Sie eine neue Spiegeldatenbank**  
+ **So erstellen Sie eine neue Spiegel Datenbank**  
   
  [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
- **So starten Sie die Datenbankspiegelung**  
+ **So starten Sie die Daten Bank Spiegelung**  
   
 -   [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)   
- [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)   
- [Datenbank-Spiegelungszeuge](database-mirroring-witness.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Schätzen der Dienst Unterbrechung während des Rollenwechsels &#40;Daten Bank Spiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
+ [Mögliche Fehler während der Daten Bank Spiegelung](possible-failures-during-database-mirroring.md)   
+ [Verbinden von Clients mit einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [Datenbank-Spiegelungs Zeuge](database-mirroring-witness.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
  [Spiegelungsstatus &#40;SQL Server&#41;](mirroring-states-sql-server.md)  

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b90f6641724ed526a9f7b496b792bb6cf786105f
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70000793"
 ---
 # <a name="sysquery_store_query_text-transact-sql"></a>sys. query_store_query_text (Transact-SQL)
@@ -33,28 +33,28 @@ ms.locfileid: "70000793"
 
   Enthält den [!INCLUDE[tsql](../../includes/tsql-md.md)] Text und das SQL-Handle der Abfrage.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**query_text_id**|**bigint**|Der Primärschlüssel.|  
+|**query_text_id**|**BIGINT**|Primärschlüssel|  
 |**query_sql_text**|**nvarchar(max)**|Der SQL-Text der Abfrage, wie er vom Benutzer bereitgestellt wird. Schließt Leerzeichen, Hinweise und Kommentare ein. Kommentare und Leerzeichen vor und nach dem Abfragetext werden ignoriert. Kommentare und Leerzeichen im Text werden nicht ignoriert.|  
 |**statement_sql_handle**|**vabor (64)**|SQL-Handle der einzelnen Abfrage.|  
-|**is_part_of_encrypted_module**|**bit**|Der Abfragetext ist Teil eines verschlüsselten Moduls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**has_restricted_text**|**bit**|Der Abfragetext enthält ein Kennwort oder andere nicht unter sprechenswerte Wörter.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**is_part_of_encrypted_module**|**bit**|Der Abfragetext ist Teil eines verschlüsselten Moduls.<br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**has_restricted_text**|**bit**|Der Abfragetext enthält ein Kennwort oder andere nicht unter sprechenswerte Wörter.<br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die **View Database State** -Berechtigung.  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. database_query_store_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. query_context_settings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys. query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_runtime_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys. query_store_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

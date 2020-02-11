@@ -1,5 +1,5 @@
 ---
-title: Typ der imagevorbereitung | Microsoft-Dokumentation
+title: Image-Typ vorbereiten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2070ff33a17aaf690c3154a2aa16343e55405f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093480"
 ---
 # <a name="prepare-image-type"></a>Typ der Imagevorbereitung
   Auf der Seite **Typ der Imagevorbereitung** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten können Sie angeben, ob Sie eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren oder einer vorhandenen Instanz Funktionen hinzufügen möchten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Aktivieren Sie das Optionsfeld für Ihre Auswahl:  
   
 -   Eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorbereiten  

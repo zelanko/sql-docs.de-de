@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 4: Exportieren Sie die Ergebnisse der Abgleichsaktivität in eine Excel-Datei | Microsoft-Dokumentation'
+title: 'Aufgabe 4: Exportieren der Ergebnisse aus der abgleichsaktivität in eine Excel-Datei | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74164c6f6178acbcfe4784dac855c7c0485fc3b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489444"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Aufgabe 4: Exportieren der Ergebnisse der Abgleichaktivität in eine Excel-Datei
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Aufgabe 4: Exportieren der Ergebnisse der Abgleichsaktivität in eine Excel-Datei
   In dieser Aufgabe exportieren Sie die Ergebnisse aus der Abgleichsaktivität in eine Excel-Datei.  
   
-1.  In der **exportieren** Seite **Excel-Datei** für die **Zieltyp**.  
+1.  Wählen Sie auf der Seite **exportieren** für den **Zieltyp**die Option **Excel-Datei** aus.  
   
-2.  Wählen Sie **Survivorship-Ergebnisse** Option. Im Survivorship-Prozess legt DQS einen Survivor-Datensatz für jeden Cluster basierend auf den **Survivorship-Regel** Sie ausgewählt haben.  
+2.  Wählen Sie die Option **Survivorship results** aus. Im Survivorship-Prozess bestimmt DQS basierend auf der ausgewählten **Survivorship-Regel** einen Survivor-Datensatz für jeden Cluster.  
   
 3.  Klicken Sie auf **Durchsuchen** , und navigieren Sie zu dem Ordner, in dem Sie die Ausgabedatei speichern möchten.  
   
-4.  Typ **Cleansed and Matched Suppliers.xls** ein, und klicken Sie auf **öffnen**.  
+4.  Geben Sie für den Namen **bereinigt und den entsprechenden Lieferanten. xls** ein, und klicken Sie auf **Öffnen**.  
   
-5.  Überprüfen Sie, ob **Pivotdatensatz** ausgewählt ist, für die **Survivorship-Regel**. Wenn Sie diese Option wählen, wird der Pivotdatensatz für jeden Cluster für die Ausgabe aus einem Cluster ausgewählt. Die anderen Optionen für die Survivorship-Regel sind:  
+5.  Vergewissern Sie sich, dass **Pivot-Datensatz** für die **Survivorship-Regel**ausgewählt ist. Wenn Sie diese Option wählen, wird der Pivotdatensatz für jeden Cluster für die Ausgabe aus einem Cluster ausgewählt. Die anderen Optionen für die Survivorship-Regel sind:  
   
-    1.  **Vollständigster Datensatz:** Der Survivor-Datensatz ist der mit der größten Anzahl ausgefüllter Felder.  
+    1.  **Vollständiger Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl ausgefüllten Felder.  
   
-    2.  **Längster Datensatz:** Der Survivor-Datensatz ist der mit der größten Anzahl von Begriffen in Quellfeldern.  
+    2.  **Längster Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl von Begriffen in den Quell Feldern.  
   
-    3.  **Vollständigster und Längster Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl ausgefüllter Felder und verfügt über die größte Anzahl von Begriffen in jedem Feld.  
+    3.  **Vollständigster und Längster Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl von ausgefüllten Feldern, und er verfügt über die größte Anzahl von Begriffen in jedem Feld.  
   
-     ![Exportieren von Ergebnissen aus der Seite "übereinstimmend"](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "Exportieren von Ergebnissen aus der Seite \"übereinstimmend\"")  
+     ![Exportieren von Ergebnissen von der Seite "Übereinstimmend"](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "Exportieren von Ergebnissen von der Seite "Übereinstimmend"")  
   
-6.  Klicken Sie auf **exportieren** die Ergebnisse in einer Excel-Datei exportieren.  
+6.  Klicken Sie auf **exportieren** , um die Ergebnisse in eine Excel-Datei zu exportieren.  
   
-7.  Klicken Sie auf **schließen** schließen die **Export wird abgeglichen** Dialogfeld.  
+7.  Klicken Sie auf **Schließen** , um das Dialogfeld **übereinstimmende Exporte** zu schließen  
   
-8.  Klicken Sie auf **Fertig stellen** um die abgleichsaktivität fertigzustellen.  
+8.  Klicken Sie zum Abschließen der abgleichsaktivität auf **Fertig** stellen  
   
-9. Öffnen der **Cleansed and Matched Suppliers.xlsx** Datei, und bestätigen Sie, dass keine Duplikate (SupplierID) angezeigt wird.  
+9. Öffnen Sie die **gebereinigt und übereinstimmende Datei Suppliers. xlsx** , und vergewissern Sie sich, dass keine Duplikate (SupplierID) angezeigt werden.  
   
  Nun verfügen Sie über Lieferantendaten, die bereinigt und abgeglichen wurden, um Duplikate zu entfernen.  
   

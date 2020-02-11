@@ -14,52 +14,52 @@ ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088196"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treibern
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Verwenden Sie stattdessen die 32-Bit oder 64-Bit-Treiber-Manager.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Verwenden Sie stattdessen den 32-Bit-oder 64-Bit-Treiber-Manager.  
   
- Sie können 16-Bit-Anwendungen mit 32-Bit-Treibern auf Ihrem Windows-basierten System ausführen, solange die 32-Bit-Treiber nicht explizit Win32-API-Funktionen aufruft, die Threads zu erstellen. Die Windows on Windows (WOW)-Subsystem die Anwendungen in 16-Bit-Modus ausgeführt und löst 16-Bit-Aufrufe des Betriebssystems. ODBC thunking DLLs Resolve-16-Bit-Aufrufe aus der Anwendung auf 32-Bit-Treiber. Die 16-Bit-Anwendungen verwenden die Windows-API und 32-Bit-Treiber verwendet die Win32-API.  
+ Sie können 16-Bit-Anwendungen mit 32-Bit-Treibern auf Ihrem Windows-basierten System ausführen, sofern der 32-Bit-Treiber nicht explizit Win32-API-Funktionen aufruft, die Threads erstellen. Das WOW-Subsystem (Windows on Windows) führt die Anwendungen im 16-Bit-Modus aus und löst 16-Bit-Aufrufe des Betriebssystems auf. ODBC-Thunking-DLLs lösen 16-Bit-Aufrufe von der Anwendung in 32-Bit-Treiber aus. Die 16-Bit-Anwendungen verwenden die Windows-API, und 32-Bit-Treiber verwenden die Win32-API.  
   
-## <a name="architecture"></a>Architektur  
- Die folgende Abbildung zeigt, wie die 16-Bit-Anwendungen mit 32-Bit-Treiber kommunizieren. Sind zwischen den 16-Bit-Treiber-Manager und die 32-Bit-Treiber generische thunking DLLs, die 16-Bit-ODBC-Aufrufe in 32-Bit-ODBC-Aufrufe konvertieren.  
+## <a name="architecture"></a>Aufbau  
+ Die folgende Abbildung zeigt, wie 16-Bit-Anwendungen mit 32-Bit-Treibern kommunizieren. Zwischen dem 16-Bit-Treiber-Manager und den 32-Bit-Treibern handelt es sich um generische thunkende DLLs, die 16-Bit-ODBC-Aufrufe in 32-Bit-ODBC-Aufrufe konvertieren.  
   
- ![Wie 16&#45;Kommunikation Bit-Anwendungen mit 32&#45;bit-Treiber](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![Kommunikation von 16&#45;Bit-apps mit 32-&#45;Bit-Treibern](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
->  Jedes Mal, wenn eine 16-Bit-Anwendung mit einem 32-Bit-Treiber interagiert, gibt der 32-Bit-Treiber-Manager immer "2.0" als ODBC-Version vom Treiber unterstützt werden.  
+>  Wenn eine 16-Bit-Anwendung mit einem 32-Bit-Treiber interagiert, gibt der 32-Bit-Treiber-Manager immer "2,0" als Version von ODBC zurück, die vom Treiber unterstützt wird.  
   
 ## <a name="administration"></a>Verwaltung  
- Sie können Datenquellen für 32-Bit-Treibern mithilfe von ODBC-Datenquellen-Administrator verwalten. Um den ODBC-Administrator auf Computern unter Microsoft® Windows® 2000 öffnen, öffnen Sie die Windows-Systemsteuerung, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie dann auf **Datenquellen (ODBC)** . Auf Computern unter früheren Versionen von Microsoft Windows heißt das Symbol **32-Bit-ODBC-** oder einfach **ODBC**.  
+ Mit dem ODBC-Datenquellen-Administrator können Sie Datenquellen für 32-Bit-Treiber verwalten. Öffnen Sie die Windows-Systemsteuerung, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie dann auf **Datenquellen (ODBC)**, um den ODBC-Administrator auf Computern zu öffnen, auf denen Microsoft® Windows® 2000 ausgeführt wird. Auf Computern, auf denen frühere Versionen von Microsoft Windows ausgeführt werden, hat das Symbol den Namen **32-Bit-ODBC** oder einfach **ODBC**.  
   
- Die folgende Abbildung zeigt, wie eine 16-Bit-Anwendung eine Setup-DLL für 32-Bit-Treiber aufruft. Zwischen den 16-Bit-Installationsprogramm-DLL und die 32-Bit-Treiber ist die Setup-DLL für einen generischen thunking-DLL, die 16-Bit-Installer-DLL-Aufrufe auf 32-Bit-Installer-DLL-Aufrufe konvertiert.  
+ In der folgenden Abbildung wird gezeigt, wie eine 16-Bit-Anwendung eine 32-Bit-Treiber-Setup-DLL aufruft. Zwischen der 16-Bit-Installationsprogramm-dll und der 32-Bit-Treiber-Setup-DLL handelt es sich um eine generische Thunking-DLL, die 16-Bit-Installationsprogramm-DLL-Aufrufe in 32-Bit-Installer  
   
- ![Wie eine 16&#45;Bit-app Ruft eine 32&#45;-bit-Setup-DLL für Treiber](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![Aufrufen einer 32-&#45;Bit-Treiber-Setup-DLL durch eine 16&#45;Bit-App](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
- In Windows auf Windows (16-Bit zu 32-Bit-thunking) eine zusätzliche thunking-DLL, die mit dem Namen Ds32gt.dll konvertiert, die 16-Bit-Argument-Werte über eine 32-Bit-Setup übergeben DLL zurück an 16-Bit.  
+ In Windows on Windows (16-Bit-zu-32-Bit-Thunking) konvertiert eine zusätzliche Thunking-DLL mit dem Namen "Ds32gt. dll" 16-Bit-Argument Werte, die über eine 32-Bit-Setup-DLL an 16 Bit übermittelt werden.  
   
 ## <a name="components"></a>Komponenten  
- Die ODBC-Komponente von MDAC 2.8 SP1 SDK enthält die folgenden Dateien für die Ausführung von 16-Bit-Anwendungen mit 32-Bit-Treiber. Diese Komponenten sind im Verzeichnis \Redist.  
+ Die ODBC-Komponente des MDAC 2,8 SP1 SDK umfasst die folgenden Dateien für die Ausführung von 16-Bit-Anwendungen mit 32-Bit-Treibern. Diese Komponenten befinden sich im Verzeichnis "\Redist".  
   
-|Dateiname|Beschreibung|  
+|Dateiname|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Odbc16gt.dll|16-Bit-ODBC-generische thunking-DLL|  
-|Odbc32gt.dll|32-Bit-ODBC-generische thunking-DLL|  
-|Odbccp32.dll|32-Bit-Installationsprogramm-DLL|  
-|Odbcad32.exe|32-Bit-Programm|  
-|Odbcinst.hlp|Installer-Hilfedatei|  
-|Ds16gt.dll|generische thunking DLL 16-Bit-Treiber-setup|  
-|CTL3D32.dll|dreidimensionale Fenster 32-Bit-Bibliothek|  
+|Odbc16gt. dll|16-Bit-ODBC-DLL für generischen Thunking|  
+|Odbc32gt. dll|32-Bit-ODBC-DLL für generischen Thunking|  
+|Datei odbccp32. dll|32-Bit-Installationsprogramm-dll|  
+|Odbcad32. exe|32-Bit-Administrator Programm|  
+|Odbcinst. hlp|Hilfedatei des Installationsprogramms|  
+|Ds16gt. dll|Setup für die generische Thunking-DLL von 16-Bit-Treibern|  
+|Ctl3d32. dll|32-Bit-dreidimensionale Fenster Stil Bibliothek|  
   
- Darüber hinaus die folgenden Dateien zusammen mit der 16-Bit-2.10-ODBC-Treiber-Manager, die nicht Teil von ODBC 3.51 sind, sind erforderlich und sollte mit der 16-Bit-Anwendung installiert werden.  
+ Außerdem sind die folgenden Dateien zusammen mit dem 16-Bit-ODBC 2,10-Treiber-Manager, die nicht Teil von ODBC 3,51 sind, für erforderlich und sollten mit der 16-Bit-Anwendung installiert werden.  
   
-|Dateiname|Beschreibung|  
+|Dateiname|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Odbc.dll|16-Bit-Treiber-Manager|  
-|Odbcinst.dll|16-Bit-Installationsprogramm-DLL|  
-|Odbcadm.exe|16-Bit-ODBC-Administratorprogramm|
+|ODBC. dll|16-Bit-Treiber-Manager|  
+|Odbcinst. dll|16-Bit-Installationsprogramm-dll|  
+|Odbcadm. exe|16-Bit-ODBC-Administrator Programm|

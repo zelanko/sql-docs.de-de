@@ -1,5 +1,5 @@
 ---
-title: XMLA-Abfrage-Editor (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: XMLA-Abfrage-Editor (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065312"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA-Abfrage-Editor (Analysis Services – Mehrdimensionale Daten)
@@ -42,12 +42,12 @@ ms.locfileid: "66065312"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**Verbinden**|Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.|  
-|**Trennen**|Trennt die Verbindung zwischen dem XMLA-Abfrage-Editor und einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Herstellen einer Verbindung**|Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.|  
+|**Verschluss**|Trennt die Verbindung zwischen dem XMLA-Abfrage-Editor und einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Verbindung ändern**|Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer anderen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.|  
 |**Neue Abfrage mit aktueller Verbindung**|Öffnet ein neues XMLA-Abfrage-Editorfenster mithilfe der Verbindungsinformationen des aktuellen XMLA-Abfrage-Editorfensters.|  
 |**Verfügbare Datenbanken**|Ändert die Verbindung zu einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank innerhalb derselben Instanz.|  
-|**Ausführen**|Führt den ausgewählten Code aus. Wenn kein Code ausgewählt ist, wird mit dieser Option der gesamte Code im XMLA-Abfrage-Editor ausgeführt.|  
+|**Auszuführen**|Führt den ausgewählten Code aus. Wenn kein Code ausgewählt ist, wird mit dieser Option der gesamte Code im XMLA-Abfrage-Editor ausgeführt.|  
 |**Analysieren**|Überprüft die Syntax des ausgewählten Codes. Wenn kein Code ausgewählt ist, wird mit dieser Option die Syntax des gesamten XMLA-Abfrage-Editorfensters geprüft.|  
 |**Ausführung der Abfrage abbrechen**|Sendet eine Abbruchsanforderung an den Server. Einige Abfragen können nicht sofort abgebrochen werden, sondern müssen auf angemessene Bedingungen für einen Abbruch warten. Beim Abbruch von Abfragen können Verzögerungen auftreten, während für die Transaktionen ein Rollback ausgeführt wird.|  
   
@@ -56,14 +56,14 @@ ms.locfileid: "66065312"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**Abfrage-Editor-Fenster**|Hier können Sie XMLA-Anweisungen und -Skripts eingeben, die vom XMLA-Abfrage-Editor ausgeführt werden sollen.<br /><br /> Das Kontextmenü des Abfrage-Editorfensters enthält die folgenden Optionen:<br /><br /> **Ausschneiden:** Kopiert die aktuelle Auswahl in die Zwischenablage und entfernt sie dabei aus dem Abfrage-Editorfenster.<br />**Kopieren:** Kopiert die aktuelle Auswahl in die Zwischenablage.<br />**Einfügen:** Fügt den Inhalt der Zwischenablage in die aktuelle Auswahl ein.<br />**Verbinden:** Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.<br />**Trennen:** Trennt die Verbindung zwischen dem aktuellen Abfrage-Editor und einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Alle Abfragen trennen:** Trennt die Verbindung aller geöffneten Abfrage-Editoren.<br />**Verbindung ändern:** Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer anderen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.<br />**Server in Objekt-Explorer öffnen:** Öffnet die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz, mit der der aktuelle Abfrage-Editor in **Objekt-Explorer**verbunden ist.<br />**Ausführen:** Führt den ausgewählten Code aus. Wenn kein Code ausgewählt ist, wird der gesamte Code im aktuellen Abfrage-Editor ausgeführt.<br />**Eigenschaftenfenster:** Zeigt in **das Fenster** Eigenschaften [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] für das aktuelle Abfragefenster an.<br />**Abfrageoptionen:** Zeigt das Dialogfeld **Abfrageoptionen** an.|  
-|**Fenster "Ergebnisse"**|Zeigt die Ergebnisse einer XMLA-Anweisung bzw. eines MDX-Skripts als Text an.|  
+|**Abfrage-Editorfenster**|Hier können Sie XMLA-Anweisungen und -Skripts eingeben, die vom XMLA-Abfrage-Editor ausgeführt werden sollen.<br /><br /> Das Kontextmenü des Abfrage-Editorfensters enthält die folgenden Optionen:<br /><br /> **Ausschneiden**: kopiert die aktuelle Auswahl in die Zwischenablage und entfernt die Auswahl aus dem Abfrage-Editor-Fenster.<br />**Kopieren**: kopiert die aktuelle Auswahl in die Zwischenablage.<br />**Einfügen**: Fügt den Inhalt der Zwischenablage in die aktuelle Auswahl ein.<br />**Verbinden**: öffnet das Dialogfeld **Verbindung mit Server herstellen** , um eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz herzustellen.<br />**Trennen**: trennt die Verbindung zwischen dem aktuellen Abfrage- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Editor und einer Instanz von.<br />**Alle Abfragen trennen**: trennt alle geöffneten Abfrage-Editoren.<br />**Verbindung ändern**: öffnet das Dialogfeld Verbindung **mit Server herstellen** , um eine Verbindung mit einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz herzustellen.<br />**Server in Objekt-Explorer öffnen**: öffnet die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz, mit der der aktuelle Abfrage-Editor in **Objekt-Explorer**verbunden ist.<br />**Execute**: führt den ausgewählten Code aus. Wenn kein Code ausgewählt ist, wird der gesamte Code im aktuellen Abfrage-Editor ausgeführt.<br />**Eigenschaften Fenster**: zeigt das Fenster **Eigenschaften** für [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] das aktuelle Abfragefenster an.<br />**Abfrage Optionen**: zeigt das Dialogfeld **Abfrage Optionen** an.|  
+|**Ergebnisfenster**|Zeigt die Ergebnisse einer XMLA-Anweisung bzw. eines MDX-Skripts als Text an.|  
 |**Meldungsfenster**|Zeigt Informationen zum Ausführen einer XMLA-Anweisung bzw. eines MDX-Skripts an. In diesem Fenster werden beispielsweise während der Ausführung alle auftretenden Fehler bzw. wird nach der Ausführung die Anzahl der abgerufenen Zellen angezeigt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Abfrage-Editor &#40;Analysis Services – mehrdimensionale Daten&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
- [DMX-Abfrage-Editor &#40;Analysis Services – Datamining&#41;](dmx-query-editor-analysis-services-data-mining.md)   
- [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Abfrage-Editor &#40;Analysis Services Mehrdimensionale Daten&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
+ [DMX-Abfrage-Editor &#40;Analysis Services Data Mining-&#41;](dmx-query-editor-analysis-services-data-mining.md)   
+ [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [Tastenkombinationen für SQL Server Management Studio](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

@@ -13,26 +13,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199941"
 ---
 # <a name="web-server-information"></a>Webserverinformationen
   Webserverinformationen sind erforderlich, um die Websynchronisierungsoption für die Mergereplikation zu verwenden. Informationen zur Konfiguration der Websynchronisierung finden Sie unter [Konfigurieren der Websynchronisierung](configure-web-synchronization.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Webserveradresse**  
  Wenn Sie auf der Seite **FTP-Momentaufnahme und Internet** des Dialogfelds **Veröffentlichungseigenschaften** eine Webserveradresse angegeben haben, wird diese in diesem Feld als Standardwert angezeigt. Übernehmen Sie entweder den Standardwert, oder geben Sie eine vollqualifizierte Webserveradresse für den Server für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internetinformationsdienste (IIS, Internet Information Services) an, der diese Abonnements synchronisiert.  
   
  **Wie stellt der Abonnent eine Verbindung mit dem Webserver her?**  
  Geben Sie den für das Herstellen einer Verbindung mit dem Webserver verwendeten Authentifizierungstyp an. Sie sollten für SSL-Verbindungen (Secure Sockets Layer) mit dem IIS-Server die Standardauthentifizierung verwenden. Geben Sie bei Auswahl der Standardauthentifizierung den Anmeldenamen und das Kennwort ein, die beim Herstellen der Verbindung vom Abonnenten zum IIS-Server verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Pullabonnements](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md)   
- [Nicht-SQL Server-Abonnenten](non-sql/non-sql-server-subscribers.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
  [Websynchronisierung für die Mergereplikation](web-synchronization-for-merge-replication.md)  
   

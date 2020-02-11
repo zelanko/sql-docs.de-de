@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705742"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
@@ -31,16 +31,16 @@ ms.locfileid: "62705742"
 ## <a name="session-states"></a>Sitzungsstatus  
  Im Folgenden werden die verschiedenen Status einer Sitzung für erweiterte Ereignisse veranschaulicht.  
   
- ![Sitzung für erweiterte Ereignisse - Status](../../database-engine/media/xesessionstate.gif "Extended event session state")  
+ ![Sitzung für erweiterte Ereignisse – Status](../../database-engine/media/xesessionstate.gif "Sitzung für erweiterte Ereignisse – Status")  
   
  In Bezug auf die vorangehende Abbildung müssen Sie beachten, dass sich der Sitzungsstatus ändert, wenn die verschiedenen DDL-Befehle für eine Ereignissitzung ausgegeben werden. Eine Beschreibung dieser Statusänderungen finden Sie in der folgenden Tabelle.  
   
-|Bezeichnung in der Abbildung|DDL-Anweisung|Description|  
+|Bezeichnung in der Abbildung|DDL-Anweisung|BESCHREIBUNG|  
 |------------------------|-------------------|-----------------|  
 |Erstellen|CREATE EVENT SESSION|Der Hostprozess erstellt ein Sitzungsobjekt, das die durch CREATE EVENT SESSION bereitgestellten Metadaten enthält. Der Hostprozess überprüft die Sitzungsdefinition und die Benutzerberechtigungsebene und speichert die Metadaten in der master-Datenbank. Zu diesem Zeitpunkt ist die Sitzung nicht aktiv.|  
-|Alter|ALTER EVENT SESSION, STATE=START|Der Hostprozess startet die Sitzung. Der Hostprozess liest die gespeicherten Metadaten, überprüft die Sitzungsdefinition und die Benutzerberechtigungsebene und erstellt die Sitzung. Sitzungsobjekte wie Ereignisse und Ziele werden geladen, und die Ereignisbehandlung ist aktiv.|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|Der Hostprozess beendet die aktive Sitzung, behält jedoch die Metadaten.|  
-|Drop|DROP EVENT SESSION|Abhängig davon, ob die Sitzung aktiv oder nicht aktiv ist, löscht Drop (DROP SESSION) die Metadaten und schließt die aktive Sitzung, oder die Sitzungsmetadaten werden gelöscht.|  
+|Ändern|ALTER EVENT SESSION, STATE=START|Der Hostprozess startet die Sitzung. Der Hostprozess liest die gespeicherten Metadaten, überprüft die Sitzungsdefinition und die Benutzerberechtigungsebene und erstellt die Sitzung. Sitzungsobjekte wie Ereignisse und Ziele werden geladen, und die Ereignisbehandlung ist aktiv.|  
+|Ändern|ALTER EVENT SESSION, STATE=STOP|Der Hostprozess beendet die aktive Sitzung, behält jedoch die Metadaten.|  
+|Verwerfen|DROP EVENT SESSION|Abhängig davon, ob die Sitzung aktiv oder nicht aktiv ist, löscht Drop (DROP SESSION) die Metadaten und schließt die aktive Sitzung, oder die Sitzungsmetadaten werden gelöscht.|  
   
 > [!NOTE]  
 >  Sowohl ALTER EVENT SESSION als auch DROP EVENT SESSION können auf die Metadaten oder auf eine aktive Sitzung und die Metadaten angewendet werden.  
@@ -50,7 +50,7 @@ ms.locfileid: "62705742"
   
  In der folgenden Abbildung werden der Sitzungsinhalt und die Beziehung zwischen Paketen und Sitzungen veranschaulicht.  
   
- ![Objektkoexistenz und -freigabe in Sitzungen. ](../../database-engine/media/xesessions.gif "Object co-existance and sharing in sessions.")  
+ ![Objektkoexistenz und -freigabe in Sitzungen](../../database-engine/media/xesessions.gif "Objektkoexistenz und -freigabe in Sitzungen")  
   
  Beachten Sie in Bezug auf die vorangegangene Abbildung Folgendes:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62705742"
   
  Die Architektur für erweiterte Ereignisse stellt ein flexibles System bereit, in dem eine Vielzahl von Objekten zusammen verwendet werden kann, um bestimmte Probleme zu beheben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](extended-events.md)  
   
   

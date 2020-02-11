@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721672"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
@@ -26,13 +26,13 @@ ms.locfileid: "62721672"
   
  **In diesem Thema**  
   
--   **So erstellen Sie ein Abonnement für einen Nicht-SQL Server-Abonnenten mit:**  
+-   **So erstellen Sie ein Abonnement für einen nicht-SQL Server Abonnenten mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  So erstellen Sie ein Abonnement für einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten  
   
 1.  Nehmen Sie die Installation und Konfiguration der entsprechenden Clientsoftware und OLE DB-Anbieter auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verteiler vor. Weitere Informationen finden Sie unter [Oracle Subscribers](non-sql/oracle-subscribers.md) und [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "62721672"
   
          Die Erstellung der Momentaufnahme erfolgt nach der Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten, um sicherzustellen, dass der Momentaufnahme-Agent eine Momentaufnahme und Initialisierungsskripts generiert, die für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten geeignet sind.  
   
-3.  Verwenden Sie zur Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichungsname>** . Weitere Informationen zu diesem Schritt finden Sie unter [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
+3.  Verwenden Sie zur Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichungsname>**. Weitere Informationen zu diesem Schritt finden Sie unter [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
   
 4.  Erstellen Sie mithilfe des Assistenten für neue Abonnements ein Abonnement. In diesem Thema sind weitere Informationen zu diesem Schritt enthalten.  
   
@@ -68,7 +68,8 @@ ms.locfileid: "62721672"
     > [!NOTE]  
     >  Durch die Auswahl von **Wahr** wird der Wert der Artikeleigenschaft **pre_creation_cmd** auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie aufheben möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) . Geben Sie für **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`den Wert 'none' an.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Sie werden zur Erstellung einer neuen Momentaufnahme für die Veröffentlichung aufgefordert. Wenn Sie diesen Vorgang lieber zu einem späteren Vorgang ausführen möchten, verwenden Sie hierzu die nachfolgend aufgeführten schrittweisen Anweisungen.  
+5.  
+  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Sie werden zur Erstellung einer neuen Momentaufnahme für die Veröffentlichung aufgefordert. Wenn Sie diesen Vorgang lieber zu einem späteren Vorgang ausführen möchten, verwenden Sie hierzu die nachfolgend aufgeführten schrittweisen Anweisungen.  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>So erstellen Sie ein Abonnement für einen Nicht-SQL Server-Abonnenten  
   
@@ -90,13 +91,13 @@ ms.locfileid: "62721672"
   
      Der in diesem Schritt eingegebene Datenquellenname und die in Schritt 9 angegebenen Anmeldeinformationen werden von diesem Assistenten nicht überprüft. Sie werden von der Replikation nicht verwendet, bis der Verteilungs-Agent für das Abonnement ausgeführt wird. Vergewissern Sie sich, dass sämtliche Werte getestet wurden, und zwar durch die Verbindungsherstellung mit dem Abonnenten über ein Clienttool (für Oracle z. B. **sqlplus** ). Weitere Informationen finden Sie unter [Oracle Subscribers](non-sql/oracle-subscribers.md) und [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Nun wird auf der Seite **Abonnenten** des Assistenten der Abonnent in der **Abonnent** -Spalte angezeigt; hierbei ist ein schreibgeschütztes **(Standardziel)** in der **Abonnementdatenbank** -Spalte enthalten:  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]Auf der Seite **Abonnenten** des Assistenten wird der Abonnent nun in der Spalte **Abonnent** mit einem schreibgeschützten **(Standardziel)** in der Spalte **Abonnement Datenbank** angezeigt:  
   
     -   Bei Oracle weist ein Server höchstens eine Datenbank auf, deshalb ist die Angabe der Datenbank nicht erforderlich.  
   
     -   Bei IBM DB2 wird die Datenbank in der **Initial Catalog** -Eigenschaft der DB2-Verbindungszeichenfolge angegeben, die in dem nachfolgend erwähnten Feld **Zusätzliche Verbindungsoptionen** eingegeben werden kann.  
   
-8.  Klicken Sie auf der Seite **Sicherheit für den Verteilungs-Agent** neben dem Abonnenten auf die Schaltfläche für die Eigenschaften ( **...** ), um auf das Dialogfeld **Sicherheit für den Verteilungs-Agent** zuzugreifen.  
+8.  Klicken Sie auf der Seite **Sicherheit für den Verteilungs-Agent** neben dem Abonnenten auf die Schaltfläche für die Eigenschaften (**...**), um auf das Dialogfeld **Sicherheit für den Verteilungs-Agent** zuzugreifen.  
   
 9. Führen Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** folgende Schritte aus:  
   
@@ -155,37 +156,37 @@ ms.locfileid: "62721672"
   
     -   Der Wert 1 für `enabled_for_het_sub` bedeutet, dass Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten unterstützt werden.  
   
-    -   Wenn der Wert des `enabled_for_het_sub` 0 ist, führen Sie [Sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)unter Angabe `enabled_for_het_sub` für **@property** und `true` für  **@value** .  
+    -   Wenn der Wert von `enabled_for_het_sub` 0 ist, führen [Sie sp_changepublication &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)-&#41;`enabled_for_het_sub` aus **@property** , `true` und **@value**geben Sie für und für an.  
   
         > [!NOTE]  
         >  Bevor Sie `enabled_for_het_sub` zu `true` ändern, müssen Sie alle vorhandenen Abonnements für die Veröffentlichung löschen. Sie können `enabled_for_het_sub` nicht auf `true` festlegen, wenn die Veröffentlichung auch Abonnements mit Update unterstützt. Die Änderung von `enabled_for_het_sub` beeinflusst andere Veröffentlichungseigenschaften. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus. Geben Sie **@publication** , **@subscriber** , den Wert **(Standardziel)** für **@destination_db** , den Wert **push** für **@subscription_type** und den Wert 3 für **@subscriber_type** (den OLE DB-Anbieter) an.  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus. Geben **@publication**Sie **@subscriber**,, den Wert **(Standardziel)** für **@destination_db**, den Wert **Push** für **@subscription_type**und den Wert 3 für **@subscriber_type** (gibt einen OLE DB-Anbieter an).  
   
 4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) aus. Geben Sie Folgendes an:  
   
-    -   Die Parameter **@subscriber** und **@publication** .  
+    -   Die **@subscriber**- **@publication** und-Parameter.  
   
-    -   Den Wert **(Standardziel)** für **@subscriber_db** ,  
+    -   Der Wert **(Standardziel)** für **@subscriber_db**,  
   
-    -   Die Eigenschaften der Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle für **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** und **@subscriber_catalog** erstellt wird.  
+    -   Die Eigenschaften der nicht--[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle für **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**und **@subscriber_catalog**.  
   
-    -   Die Parameter [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Verteiler für **@job_login** und **@job_password** erstellt wird.  
+    -   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen, unter denen die Verteilungs-Agent auf dem **@job_login** Verteiler **@job_password**für und ausgeführt wird.  
   
         > [!NOTE]  
-        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password** erstellt wird. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
+        >  Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, **@job_login** werden **@job_password**immer die Windows-Anmelde Informationen verwendet, Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
   
-    -   Den Wert **0** für **@subscriber_security_mode** und die Anmeldeinformationen des OLE DB-Anbieters für **@subscriber_login** und **@subscriber_password** erstellt wird.  
+    -   Der Wert **0** für **@subscriber_security_mode** und die OLE DB Anbieter-Anmelde Informationen für **@subscriber_login** und **@subscriber_password**.  
   
-    -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Beim Erstellen eines Pushabonnements auf einem Verleger mit einem Remoteverteiler werden die angegebenen Werte für alle Parameter, einschließlich *job_login* und *job_password*, an den Verteiler als Nur-Text gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Erstellen eines Pushabonnements auf einem Verleger mit einem Remoteverteiler werden die angegebenen Werte für alle Parameter, einschließlich *job_login* und *job_password*, an den Verteiler als Nur-Text gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
- [Oracle Subscribers](non-sql/oracle-subscribers.md)   
- [Andere Nicht-SQL Server-Abonnenten](non-sql/other-non-sql-server-subscribers.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [IBM DB2-Abonnenten](non-sql/ibm-db2-subscribers.md)   
+ [Oracle-Abonnenten](non-sql/oracle-subscribers.md)   
+ [Andere nicht-SQL Server-Abonnenten](non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  
   

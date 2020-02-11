@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Analysis Services-Skripts in Management Studio | Microsoft-Dokumentation
+title: Erstellen von Analysis Services Skripts in Management Studio | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080113"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Erstellen von Analysis Services-Skripts in Management Studio
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] schließt Skriptgenerierungsfunktionen, Vorlagen und Editoren ein, mit denen Sie Analysis Services-Objekte und Tasks schreiben können.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Script Analysis Services-Tasks in Management Studio  
@@ -35,7 +36,7 @@ ms.locfileid: "66080113"
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Datenbank, und klicken Sie auf **Sichern**. Daraufhin wird das Dialogfeld Datenbank sichern geöffnet. Geben Sie einen Sicherungsdateinamen an, und wählen Sie die gewünschten Optionen für diese Sicherung aus.  
   
-3.  Klicken Sie auf **Skript** am oberen Rand des Dialogfelds. Die Funktion Skript ist ein Teil aller taskbasierten Dialogfelder in Management Studio. Es enthält die folgenden Optionen: **Skript für Aktion in neuem Abfragefenster** um den Abfrage-Editorfenster zu öffnen **Skript für Aktion in Datei** um das XMLA-Skript in eine Datei zu speichern oder **Skript für Aktion in Zwischenablage** der XMLA-Skript zum Speichern der Die Zwischenablage.  
+3.  Klicken Sie auf **Skript** am oberen Rand des Dialogfelds. Die Funktion Skript ist ein Teil aller taskbasierten Dialogfelder in Management Studio. Es hat die folgenden Optionen: **Skript für Aktion in Fenster 'Neue Abfrage' schreiben** , um das Abfrage-Editor-Fenster zu öffnen, **Skript für Aktion in Datei schreiben** , um das XMLA-Skript in einer Datei zu speichern, oder **Skript für Aktion in Zwischenablage schreiben** , um das XMLA-Skript in der Zwischenablage zu speichern.  
   
      Beachten Sie, dass die Option **Skript für Aktion in Auftrag schreiben** , die in Management Studio als Skriptoption aufgelistet wird, für Analysis Services-Skripts nicht unterstützt wird.  
   
@@ -59,13 +60,13 @@ ms.locfileid: "66080113"
   
 2.  Suchen Sie das Objekt, für das Sie ein Skript zum Erstellen, Ändern oder Löschen von Objekten erstellen möchten.  
   
-3.  Mit der rechten Maustaste in des Objekts, zeigen Sie auf **Skript für Cube als**, zeigen Sie auf **CREATE in**, **ALTER in**, oder **Delete in**, und klicken Sie dann auf eines der folgende Optionen: **Neues Abfrage-Editor-Fenster** zu den Abfrage-Editorfenster öffnen **Datei** um das XMLA-Skript in eine Datei zu speichern oder **Zwischenablage** um das XMLA-Skript in die Zwischenablage zu speichern.  
+3.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für Cube als**, zeigen Sie auf **CREATE in**, **ALTER in**oder **DELETE in**, und klicken Sie anschließend auf eine der folgenden Optionen: **Neues Abfrage-Editorfenster** zum Öffnen des Abfrage-Editorfensters, **Datei** zum Speichern des XMLA-Skripts in einer Datei oder **Zwischenablage** zum Speichern des XMLA-Skripts in der Zwischenablage.  
   
     > [!NOTE]  
     >  Normalerweise würden Sie **Datei** auswählen, wenn Sie mehrere verschiedene Versionen der Datei erstellen möchten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Skriptverwaltungsaufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Skripterstellung für administrative Aufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Der XMLA-Abfrage-Editor &#40;Analysis Services Mehrdimensionale Daten&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

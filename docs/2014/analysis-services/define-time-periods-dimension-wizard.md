@@ -1,5 +1,5 @@
 ---
-title: Definieren Sie die Zeiträume (Dimensions-Assistent) | Microsoft-Dokumentation
+title: Zeiträume definieren (Dimensions-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081978"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Zeiträume definieren (Dimensions-Assistent)
@@ -28,7 +28,7 @@ ms.locfileid: "66081978"
 > [!IMPORTANT]  
 >  Auf dieser Seite können Sie das Kalenderjahr für eine Zeitdimension definieren. Auf der Seite **Kalender auswählen** können Sie für die Zeitdimension ein Geschäfts-, Produktions-, Berichts- oder ISO 8601-Jahr definieren.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Erster Kalendertag**  
  Geben Sie den ersten Tag des aktuellen Jahres ein, oder wählen Sie den Tag aus.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "66081978"
  **Sprache für die Namen der Zeitelemente**  
  Wählen Sie die Sprache für die Elemente der Zeitdimension aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dimensions-Assistent F1-Hilfe](dimension-wizard-f1-help.md)   
- [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Kalender auswählen &#40;Dimensions-Assistent&#41;](select-calendars-dimension-wizard.md)  
+ [Kalender &#40;Dimensions-Assistenten auswählen&#41;](select-calendars-dimension-wizard.md)  
   
   

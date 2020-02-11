@@ -17,17 +17,17 @@ ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a571e93a070c3ce07fbaf40a86b762c749042ec1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964404"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl-Objekt (RDS)
-Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an einen oder mehrere Steuerelemente (z. B. ein Textfeld, ein Grid-Steuerelement oder ein Kombinationsfeld) zum Anzeigen der **Recordset** Daten auf einer Webseite.  
+Bindet ein Datenabfrage- [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an ein oder mehrere Steuerelemente (z. b. ein Textfeld, ein Raster Steuerelement oder ein Kombinations Feld), um die **Recordsetdaten** auf einer Webseite anzuzeigen.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,38 +40,38 @@ Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-ob
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die Klassen-ID für die **RDS. DataControl** Objekt ist BD96C556 65A3 - 11-d 0-983A-00C04FC29E33.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Klassen-ID für das **RDS. Das DataControl** -Objekt ist BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
->  Wenn Sie eine Fehlermeldung, die erhalten eine [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oder **RDS. DataControl** Objekt nicht geladen werden, stellen Sie sicher, dass Sie die richtige Klasse-ID verwenden Die Klasse haben-IDs für diese Objekte von Version 1.0 und 1.1 geändert. Achten Sie zudem auch auf NULL festlegbare Spalten müssen festgelegt sein, bei der Verwendung der **RDS DataControl** Objekt.  
+>  Wenn Sie eine Fehlermeldung erhalten, die ein RDS-ist [. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oder **RDS. Das DataControl** -Objekt wird nicht geladen. Stellen Sie sicher, dass Sie die richtige Klassen-ID verwenden. Die Klassen-IDs für diese Objekte haben sich von Version 1,0 und 1,1 geändert. Beachten Sie auch, dass auch Spalten, die NULL-Werte zulassen, festgelegt werden müssen, wenn Sie das **RDS-DataControl** -Objekt verwenden.  
   
- Bei grundlegenden Szenario müssen Sie nur Festlegen der **SQL**, **Connect**, und **Server** Eigenschaften der **RDS. DataControl** -Objekt, das das Geschäftsobjekt, das standardmäßig automatisch aufruft, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md).  
+ Für ein einfaches Szenario müssen Sie nur die **SQL**-, **Connect**-und **Server** -Eigenschaften des RDS festlegen **. DataControl** -Objekt, das automatisch das Standard Geschäftsobjekt [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)aufruft.  
   
- Alle Eigenschaften in der **RDS. DataControl** sind optional, da benutzerdefinierte Geschäftsobjekte ihre Funktionalität ersetzen können.  
+ Alle Eigenschaften im **RDS. DataControl** ist optional, da benutzerdefinierte Geschäftsobjekte ihre Funktionalität ersetzen können.  
   
 > [!NOTE]
->  Bei für mehrere Ergebnisse Abfragen, nur die ersten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben wird. Wenn mehrere Resultsets benötigt werden, weisen Sie jedes Element eine eigene **DataControl**. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte folgendermaßen aussehen: `"Select * from Authors, Select * from Topics"`  
+>  Wenn Sie mehrere Ergebnisse Abfragen, wird nur das erste [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben. Wenn mehrere Resultsets benötigt werden, weisen Sie jede der eigenen **DataControl**zu. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte wie folgt lauten:`"Select * from Authors, Select * from Topics"`  
   
- Hinzufügen von "DFMode = 20;" zur Verbindungszeichenfolge bei Verwendung der **RDS. DataControl** Objekt kann die Leistung Ihres Servers verbessern, wenn es sich bei Daten zu aktualisieren. Mit dieser Einstellung die **RDSServer.DataFactory** Objekt auf dem Server einen weniger ressourcenintensiv-Modus verwendet. Die folgenden Funktionen sind jedoch nicht in dieser Konfiguration verfügbar:  
+ Hinzufügen von "DFMode = 20;" zu ihrer Verbindungs Zeichenfolge, wenn Sie das **RDS verwenden. Das DataControl** -Objekt kann die Leistung des Servers beim Aktualisieren von Daten verbessern. Mit dieser Einstellung verwendet das **RDSServer. DataFactory** -Objekt auf dem Server einen weniger ressourcenintensiven Modus. Die folgenden Funktionen sind in dieser Konfiguration jedoch nicht verfügbar:  
   
 -   Verwenden von parametrisierten Abfragen.  
   
--   Abrufen von Informationen von Parameter oder eine Spalte vor dem Aufruf der **Execute** Methode.  
+-   Abrufen von Parameter-oder Spalten Informationen vor dem Aufrufen der **Execute** -Methode.  
   
--   Festlegen von **Transact Updates** zu **"true"** .  
+-   Die **Transact-Updates** werden auf **true**festgelegt.  
   
--   Abrufen des Zeilenstatus.  
+-   Zeilen Status wird erhalten.  
   
--   Aufrufen der [Resync](../../../ado/reference/ado-api/resync-method.md) Methode.  
+-   Aufrufen der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode.  
   
--   Aktualisieren (explizit oder automatisch) über die [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) Eigenschaft.  
+-   Aktualisieren (explizit oder automatisch) über die Eigenschaft " [Resync aktualisieren](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) ".  
   
--   Festlegen von **Befehl** oder [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) Eigenschaften.  
+-   Festlegen der Eigenschaften von **Befehlen** oder [Recordsets](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) .  
   
--   Mithilfe von **AdCmdTableDirect**.  
+-   Verwenden von **adCmdTableDirect**.  
   
- Die **RDS. DataControl** Objekt standardmäßig im asynchronen Modus ausgeführt wird. Wenn Sie die synchrone Ausführung für Ihre Anwendung benötigen, legen Sie die [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) Parameter gleich **AdcExecSync** und [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) Parameter gleich **AdcFetchUpFront**, wie im folgenden Beispiel gezeigt.  
+ Das **RDS. Das DataControl** -Objekt wird standardmäßig im asynchronen Modus ausgeführt. Wenn Sie für Ihre Anwendung eine synchrone Ausführung benötigen, legen Sie den [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) -Parameter auf **adcExecSync** und den [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) -Parameter auf **adcFetchUpFront**fest, wie im folgenden Beispiel gezeigt.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -83,32 +83,32 @@ Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-ob
 </OBJECT>  
 ```  
   
- Verwenden Sie eine **RDS. DataControl** Objekt, das die Ergebnisse einer einzelnen Abfrage mit einem oder mehreren visuellen Steuerelementen verknüpft. Nehmen wir beispielsweise an Ihr Code eine Kundendaten Abfragen wie z. B. Name, Wohnort, Geburtsort, Alter und Prioritätsstatus der Kunden. Sie können ein einzelnes **RDS. DataControl** Objekt, um Name, Alter und Region eines Kunden in drei separaten Textfelder anzuzeigen Status für die Priorität-Kunden in einem Kontrollkästchen; und alle Daten in einem Datenraster-Steuerelement.  
+ Verwenden Sie ein **RDS. DataControl** -Objekt, um die Ergebnisse einer einzelnen Abfrage mit einem oder mehreren visuellen Steuerelementen zu verknüpfen. Nehmen Sie beispielsweise an, Sie codieren eine Abfrage, die Kundendaten anfordert, z. b. Name, Residenz, Geburts Ort, Alter und Prioritäts Kunden Status. Sie können ein einzelnes **RDS verwenden. DataControl** -Objekt, um den Namen, das Alter und die Region eines Kunden in drei separaten Textfeldern anzuzeigen. Prioritäts Status von Kunden in einem Kontrollkästchen und alle Daten in einem Raster Steuerelement.  
   
- Andere **RDS. DataControl** Objekte, um die Ergebnisse von mehreren Abfragen mit verschiedenen visuellen Steuerelementen zu verknüpfen. Nehmen wir beispielsweise an, dass Sie mithilfe einer Abfrage zum Abrufen von Informationen zu einem Kunden und eine zweite Abfrage zum Abrufen von Informationen über waren, die der Kunde gekauft hat. Möchten die Ergebnisse der ersten Abfrage in drei Textfelder und ein Kontrollkästchen und die Ergebnisse der zweiten Abfrage in einem Datenraster-Steuerelement anzuzeigen. Wenn Sie das Geschäftsobjekt, das standardmäßig verwenden (**RDSServer.DataFactory**), müssen Sie Folgendes tun:  
+ Verwenden Sie unterschiedliche **RDS. DataControl** -Objekte, mit denen die Ergebnisse mehrerer Abfragen mit verschiedenen visuellen Steuerelementen verknüpft werden können. Nehmen Sie beispielsweise an, Sie verwenden eine Abfrage, um Informationen zu einem Kunden abzurufen, und eine zweite Abfrage, um Informationen zu den vom Kunden erworbenen Waren zu erhalten. Sie möchten die Ergebnisse der ersten Abfrage in drei Textfeldern und einem Kontrollkästchen sowie die Ergebnisse der zweiten Abfrage in einem Raster Steuerelement anzeigen. Wenn Sie das Standard Geschäftsobjekt (**RDSServer. DataFactory**) verwenden, müssen Sie die folgenden Schritte ausführen:  
   
--   Hinzufügen von zwei **RDS. DataControl** Objekte auf Ihrer Webseite.  
+-   Fügen Sie zwei **RDS hinzu. DataControl** -Objekte auf Ihrer Webseite.  
   
--   Schreiben Sie zwei Abfragen, eine für jede **SQL** Eigenschaft der beiden **RDS. DataControl** Objekte. Eine **RDS. DataControl** Objekt eine SQL-Abfrage, die Kundeninformationen enthält; das zweite enthält eine Abfrage, die eine Modellliste waren, die der Kunde gekauft hat.  
+-   Schreiben Sie zwei Abfragen, eine für jede **SQL** -Eigenschaft der beiden **RDS. DataControl** -Objekte. Ein **RDS. Das DataControl** -Objekt enthält eine SQL-Abfrage, die Kundeninformationen anfordert. die zweite enthält eine Abfrage, die eine Liste der vom Kunden erworbenen Waren anfordert.  
   
--   Geben Sie in den Objekt-Tags der einzelnen gebundene Steuerelemente den DATAFLD-Wert, um die Werte für die Daten festlegen, die in den einzelnen visuellen Steuerelementen angezeigt werden soll.  
+-   Geben Sie in den Objekt Tags der einzelnen gebundenen Steuerelemente den Datafld-Wert an, um die Werte für die Daten festzulegen, die Sie in jedem visuellen Steuerelement anzeigen möchten.  
   
- Es gibt keine Beschränkung für die Anzahl der **RDS. DataControl** Objekten, die Sie mithilfe von Objekt-Tags auf eine einzelne Webseite einbetten können.  
+ Es gibt keine Anzahl Beschränkung für die Anzahl von **RDS. DataControl** -Objekte, die Sie mithilfe von Objekt Tags auf einer einzelnen Webseite einbetten können.  
   
- Beim Definieren der **RDS. DataControl** Objekt auf einer Webseite, die ungleich null verwenden **Höhe** und **Breite** Werte wie z. B. 1 sein (um die Einbeziehung zusätzlicher Speicherplatz zu vermeiden).  
+ Wenn Sie das **RDS definieren. DataControl** -Objekt auf einer Webseite verwenden Sie **Höhen** -und **breiten** Werte ungleich 0 (null), wie z. b. 1 (um die Aufnahme zusätzlicher Leerzeichen zu vermeiden).  
   
- Remote Data Service-Clientkomponenten sind bereits als Bestandteil von Internet Explorer 4.0. aus diesem Grund, Sie müssen nicht in einen CODEBASIS-Parameter enthalten Ihre **RDS. DataControl** object-Tag.  
+ Remote Data Service-Client Komponenten sind bereits als Teil von Internet Explorer 4,0 enthalten. Daher müssen Sie keinen CodeBase-Parameter in Ihren **RDS einschließen. DataControl** -Objekttag.  
   
- Mit Internet Explorer 4.0 oder höher, können Sie binden an Daten mithilfe von HTML-Steuerelemente und ActiveX® Steuerelemente nur dann, wenn sie als Apartment-Modell-Steuerelemente gekennzeichnet sind.  
+ Mit Internet Explorer 4,0 oder höher können Sie Daten mithilfe von HTML-Steuerelementen und ActiveX-® Steuerelementen nur dann binden, wenn Sie als Apartment Modell-Steuerelemente markiert sind.  
   
 > [!NOTE]
->  **Microsoft Visual Basic-Benutzer** der **RDS. DataControl** ist sicher für Skripting und wird nur in einer webbasierten Anwendung verwendet. Eine Visual Basic-Client-Anwendung ist nicht erforderlich.  
+>  **Microsoft Visual Basic-Benutzer** Das **RDS. DataControl** ist für die Skripterstellung sicher und wird nur in webbasierten Anwendungen verwendet. Eine Visual Basic Client Anwendung ist nicht erforderlich.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [DataControl-Objekt (RDS) – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DataControl-Objekt – Beispiel (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

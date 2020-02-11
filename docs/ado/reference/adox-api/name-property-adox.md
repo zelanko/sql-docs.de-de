@@ -42,37 +42,37 @@ ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52808cf9e90c6779efb9f95e385f8df501bae870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965756"
 ---
 # <a name="name-property-adox"></a>Name-Eigenschaft (ADOX)
-Gibt den Namen des Objekts.  
+Gibt den Namen des Objekts an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Zeichenfolge** Wert.  
+ Legt einen **Zeichen** folgen Wert fest oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Namen müssen nicht in einer Auflistung eindeutig sein.  
+## <a name="remarks"></a>Bemerkungen  
+ Namen müssen innerhalb einer Sammlung nicht eindeutig sein.  
   
- Die **Namen** Eigenschaft ist Lese-/Schreibzugriff in [Spalte](../../../ado/reference/adox-api/column-object-adox.md), [Gruppe](../../../ado/reference/adox-api/group-object-adox.md), [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md), [Index](../../../ado/reference/adox-api/index-object-adox.md), [ Tabelle](../../../ado/reference/adox-api/table-object-adox.md), und [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) Objekte. Die **Namen** Eigenschaft ist schreibgeschützt und auf [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md), [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md), und [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) Objekte.  
+ Die **Name** -Eigenschaft ist Lese- [/Schreibzugriff](../../../ado/reference/adox-api/table-object-adox.md)auf [Spalten](../../../ado/reference/adox-api/column-object-adox.md)-, [Gruppen](../../../ado/reference/adox-api/group-object-adox.md)-, [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md)-, [Index](../../../ado/reference/adox-api/index-object-adox.md)-, Tabellen-und [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) Objekte. Die **Name** -Eigenschaft ist für [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)-, [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md)-und [Ansichts](../../../ado/reference/adox-api/view-object-adox.md) Objekte schreibgeschützt.  
   
- Für Lese-/Schreibzugriff-Objekte (**Spalte**, **Gruppe**, **Schlüssel**, **Index**, **Tabelle** und  **Benutzer** Objekte), der Standardwert ist eine leere Zeichenfolge ("").  
+ Für Objekte mit Lese- **/Schreibzugriff** (**Spalten**-, **Gruppen**-, **Schlüssel**-, **Index**-, Tabellen-und **Benutzer** Objekte) ist der Standardwert eine leere Zeichenfolge ("").  
   
 > [!NOTE]
->  Für Schlüssel, diese Eigenschaft ist schreibgeschützt und auf **Schlüssel** Objekte, die bereits an eine Auflistung angefügt. Bei Tabellen wird diese Eigenschaft ist nur Lesezugriff für **Tabelle** Objekte, die bereits an eine Auflistung angefügt.  
+>  Bei Schlüsseln ist diese Eigenschaft bei **Schlüssel** Objekten, die bereits an eine Auflistung angehängt wurden, schreibgeschützt. Bei Tabellen ist diese Eigenschaft für **Tabellen** Objekte, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
   
 ||||  
 |-|-|-|  
 |[Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Group-Objekt (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)|[Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
 |[Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Spalten und Tabellen Append-Methode, Name-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Methoden und Tabellen Append-Methoden, Name Property example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

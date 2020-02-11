@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_index_mappings (Transact-SQL) | Microsoft-Dokumentation
+title: sys. pdw_index_mappings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 298a24276ff9c1d73a7b15ddc977d0623af70af3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127484"
 ---
-# <a name="syspdwindexmappings-transact-sql"></a>sys.pdw_index_mappings (Transact-SQL)
+# <a name="syspdw_index_mappings-transact-sql"></a>sys. pdw_index_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Ordnet die logische Indizes auf dem physischen Namen auf Compute-Knoten verwendet wird, wie durch eine eindeutige Kombination aus dargestellt **Object_id** von der Tabelle mit dem Index und die **Index_id** von einem bestimmten Index innerhalb der Tabelle.  
+  Ordnet die logischen Indizes dem physischen Namen zu, der auf Computeknoten verwendet wird. Dies wird durch eine eindeutige Kombination aus **object_id** der Tabelle, die den Index enthält, und der **index_id** eines bestimmten Indexes in dieser Tabelle dargestellt.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|Die Objekt-ID für die logische Tabelle, die auf der dieser Index vorhanden ist. Finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **Physical_name** und **Object_id** bilden den Schlüssel für diese Sicht.||  
-|index_id|**nvarchar(32)**|Die ID für den Index. Finden Sie unter [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  
-|physical_name|**nvarchar(36)**|Der Name des Index in die Datenbanken auf den Computeknoten.<br /><br /> **Physical_name** und **Object_id** bilden den Schlüssel für diese Sicht.||  
+|object_id|**int**|Die Objekt-ID für die logische Tabelle, für die dieser Index vorhanden ist. Weitere Informationen finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** und **object_id** den Schlüssel für diese Ansicht bilden.||  
+|index_id|**nvarchar (32)**|Die ID für den Index. Weitere Informationen finden Sie unter [sys. Indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  
+|physical_name|**nvarchar (36)**|Der Name des Indexes in den Datenbanken auf den Computeknoten.<br /><br /> **physical_name** und **object_id** den Schlüssel für diese Ansicht bilden.||  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [sys. pdw_table_mappings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
+ [sys. pdw_database_mappings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   

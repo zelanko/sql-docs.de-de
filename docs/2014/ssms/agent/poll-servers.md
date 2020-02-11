@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062206"
 ---
 # <a name="poll-servers"></a>Abfragen von Servern
@@ -51,13 +51,13 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   Gespeicherte Auftragsprozeduren, die weder Auftragszeitpläne noch Auftragsschritte ändern.  
   
- **So erzwingen Sie, dass ein Zielserver den Masterserver abruft**  
+ **So erzwingen Sie, dass ein Zielserver den Master Server abruft**  
   
 -   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Ereignissen](manage-events.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung einer Datenquelle (SSAS) mit | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit einer Datenquelle (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087342"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Mit einer Datenquelle verbinden (SSAS)
@@ -24,7 +24,8 @@ ms.locfileid: "66087342"
   
  Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen. Außerdem muss der entsprechende Anbieter auf dem Arbeitsbereichsdatenbankserver installiert sein. Für 32-Bit (x86)-Server müssen 32-Bit-Anbieter installiert sein. Für 64-Bit (x64)-Server müssen 64-Bit-Anbieter installiert sein.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] wird unabhängig von der Architektur immer in einem 32-Bit-Prozess ausgeführt. Wenn [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] auf einem 64-Bit-Computer ausgeführt wird, sollten Sie beim Installieren von Datenanbietern Folgendes beachten:  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] wird unabhängig von der Architektur immer in einem 32-Bit-Prozess ausgeführt. Wenn [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] auf einem 64-Bit-Computer ausgeführt wird, sollten Sie beim Installieren von Datenanbietern Folgendes beachten:  
   
 -   Für Anbieter, die die parallele Installation von 32-Bit- und 64-Bit-Anbietern unterstützen, sollten Sie beide Anbieter installieren.  
   

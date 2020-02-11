@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie einen Kreuzvalidierungsbericht | Microsoft-Dokumentation
+title: Erstellen eines Kreuz Validierungs Berichts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085528"
 ---
 # <a name="create-a-cross-validation-report"></a>Erstellen von Berichten für Kreuzvalidierung
   In diesem Thema wird die Erstellung eines Kreuzvalidierungsberichts auf der Registerkarte "Genauigkeitsdiagramm" im Data Mining-Designer erläutert. Allgemeine Informationen zum Aussehen eines Kreuzvalidierungsberichts und zu den statistischen Measures, die er enthält, finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  
   
- Ein Kreuzvalidierungsbericht unterscheidet sich grundlegend von einem Genauigkeitsdiagramm, z. B. ein Prognosegütediagramm oder eine Klassifikationsmatrix.  
+ Ein Kreuzvalidierungsbericht unterscheidet sich grundlegend von einem Genauigkeitsdiagramm, z. B. ein Prognosegütediagramm oder eine Klassifikationsmatrix.  
   
 -   Bei der Kreuzvalidierung wird die Gesamtverteilung von Daten bewertet, die in einem Modell oder einer Struktur verwendet werden. Daher wird auch kein Testdataset angegeben. Bei der Kreuzvalidierung werden immer nur die ursprünglichen Daten verwendet, mit denen das Modell oder die Miningstruktur trainiert wurde.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66085528"
   
 ### <a name="set-cross-validation-options"></a>Festlegen von Kreuzvalidierungsoptionen  
   
-1.  Klicken Sie auf der Registerkarte **Kreuzvalidierung** für **Foldanzahl**auf den Pfeil nach unten, um eine Zahl zwischen 1 und 10 auszuwählen. Der Standardwert lautet 10.  
+1.  Klicken Sie auf der Registerkarte **Kreuzvalidierung** für **Foldanzahl**auf den Pfeil nach unten, um eine Zahl zwischen 1 und 10 auszuwählen. Der Standardwert ist 10.  
   
      Die **Foldanzahl** stellt die Anzahl von Partitionen dar, die innerhalb des ursprünglichen Datasets erstellt werden. Wenn Sie die Foldanzahl auf 1 festgelegt haben, wird der Trainingssatz ohne Partitionierung verwendet.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66085528"
   
 4.  Fügen Sie die Auswahl in eine geöffnete Excel-Arbeitsmappe ein. Wenn Sie die Option **Einfügen** verwenden, wird der Bericht als HTML in Excel eingefügt. Auf diese Weise werden Zeilen- und Spaltenformatierung beibehalten. Wenn Sie den Bericht mit den Optionen für **Inhalte einfügen** für Text oder Unicode-Text einfügen, wird der Bericht im nach Zeilen getrennten Format eingefügt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Measures im Kreuzvalidierungsbericht](measures-in-the-cross-validation-report.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Datenquellen-Eigenschaftenseite (Berichts-Manager) | Microsoft-Dokumentation
+title: Datenquellen (Eigenschaften Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109421"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Datenquellen (Eigenschaftenseite) (Berichts-Manager)
@@ -35,20 +35,20 @@ ms.locfileid: "66109421"
   
 4.  Wählen Sie die Registerkarte **Datenquellen** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eine freigegebene Datenquelle**  
  Geben Sie eine freigegebene Datenquelle zur Verwendung im Bericht an. Weitere Informationen zum Erstellen einer neuen Datenquelle finden Sie unter [erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
   
  **Durchsuchen**  
- Klicken Sie auf **Durchsuchen** , um die Seite zum Auswählen der Datenquelle zu öffnen, mit deren Hilfe Sie eine freigegebene Datenquelle auswählen können. Weitere Informationen finden Sie unter [Seite zur Datenquellenauswahl &#40;Berichts-Manager&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md).  
+ Klicken Sie auf **Durchsuchen** , um die Seite zum Auswählen der Datenquelle zu öffnen, mit deren Hilfe Sie eine freigegebene Datenquelle auswählen können. Weitere Informationen finden Sie auf der [Seite Datenquellen Auswahl &#40;Berichts-Manager&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md).  
   
  **Eine benutzerdefinierte Datenquelle**  
  Geben Sie die Art des Verbindungsaufbaus zur Datenquelle an.  
   
  Die folgenden Optionen können beim Angeben einer benutzerdefinierten Datenquellenverbindung verwendet werden.  
   
- **Datenquellentyp**  
- Geben Sie die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird. Die Liste der integrierten datenerweiterungen finden Sie [von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Weitere Datenverarbeitungserweiterungen können von Drittanbietern zur Verfügung stehen.  
+ **Daten Quellentyp**  
+ Geben Sie die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird. Eine Liste der integrierten Daten Erweiterungen finden Sie [unter von Reporting Services &#40;SSRS&#41;unterstützte Datenquellen ](create-deploy-and-manage-mobile-and-paginated-reports.md). Weitere Datenverarbeitungserweiterungen können von Drittanbietern zur Verfügung stehen.  
   
  **Verbindungszeichenfolge**  
  Geben Sie die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung mit der Datenquelle verwendet wird. Der Verbindungstyp bestimmt die Syntax, die Sie verwenden sollten. So ist z.B. eine Verbindungszeichenfolge für die XML-Datenverarbeitungserweiterung eine URL zu einem XML-Dokument. In den meisten Fällen gibt eine typische Verbindungszeichenfolge den Datenbankserver und die Datendatei an. Im folgenden Beispiel wird eine Verbindungszeichenfolge erläutert, die für die Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank mit dem Namen "MyData" verwendet wird:  
@@ -57,26 +57,26 @@ ms.locfileid: "66109421"
   
  Eine Verbindungszeichenfolge kann als ein Ausdruck konfiguriert werden, sodass Sie die Datenquelle zur Laufzeit angeben können. Datenquellenausdrücke für den Bericht werden im Berichts-Designer definiert. Datenquellenausdrücke können im Berichts-Manager nicht definiert, angezeigt oder geändert werden. Sie können einen Datenquellenausdruck jedoch ersetzen, indem Sie auf **Standardwert überschreiben** klicken, um eine statische Verbindungszeichenfolge einzugeben. Wenn Sie zurück zum Ausdruck wechseln möchten, klicken Sie auf **Standardwert wiederherstellen**. Der Berichtsserver speichert die ursprüngliche Verbindungszeichenfolge für den Fall, dass Sie sie wiederherstellen müssen. Um Datenquellenausdrücke verwenden zu können, müssen Sie die ursprünglich im Bericht veröffentlichten Informationen zur Datenquellenverbindung verwenden. Freigegebene Datenquellen unterstützen die Verwendung von Ausdrücken in der Verbindungszeichenfolge nicht.  
   
- **Herstellen einer Verbindung mit**  
+ **Verbindung herstellen über**  
  Gibt Optionen an, die bestimmen, wie Anmeldeinformationen abgerufen werden.  
   
 > [!IMPORTANT]  
 >  Falls die Verbindungszeichenfolge Anmeldeinformationen enthält, werden die in diesem Abschnitt festgelegten Optionen und Werte ignoriert. Beachten Sie, dass bei Angabe der Anmeldeinformationen in der Verbindungszeichenfolge die Werte für alle Benutzer, die diese Seite anzeigen, in Klartext angezeigt werden.  
   
- **Anmeldeinformationen der Benutzer den Bericht ausführen**  
+ **Bereitgestellte Anmeldeinformationen vom Benutzer, der den Bericht ausführt**  
  Jeder Benutzer muss einen Benutzernamen und ein Kennwort für den Zugriff auf die Datenquelle eingeben. Sie können den Text der Eingabeaufforderung definieren, in der die Benutzeranmeldeinformationen angefordert werden. Die Standardtextzeichenfolge lautet: "Geben Sie einen Benutzernamen und ein Kennwort für den Zugriff auf die Datenquelle ein".  
   
  Aktivieren Sie das Kontrollkästchen **Als Windows-Anmeldeinformationen verwenden, wenn eine Verbindung mit der Datenquelle hergestellt wird** , wenn es sich bei den durch den Benutzer bereitgestellten Informationen um Anmeldeinformationen der Windows-Authentifizierung handelt. Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie Datenbankauthentifizierung (z. B. eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung) verwenden.  
   
- **Anmeldeinformationen sind sicher auf dem Berichtsserver gespeichert.**  
- Speichern Sie einen verschlüsselten Benutzernamen und ein Kennwort in der Berichtsserver-Datenbank. Wählen Sie diese Option aus, um einen Bericht unbeaufsichtigt auszuführen (z. B. Berichte, die durch Zeitpläne initiiert werden oder durch Ereignisse anstelle einer Benutzeraktion). Wenn Sie die Standardsicherheitseinstellungen verwenden, muss der Benutzername ein Windows-Domänenkonto sein. Geben Sie das Konto im folgenden Format: \<Domäne >\\< Benutzername\>. Das von Ihnen angegebene Konto muss über lokale Systemadministratorberechtigungen auf dem Computer verfügen, der die von dem Bericht verwendete Datenquelle hostet.  
+ **Anmeldeinformationen, die sicher auf dem Berichtsserver gespeichert sind**  
+ Speichern Sie einen verschlüsselten Benutzernamen und ein Kennwort in der Berichtsserver-Datenbank. Wählen Sie diese Option aus, um einen Bericht unbeaufsichtigt auszuführen (z.B. Berichte, die durch Zeitpläne oder durch Ereignisse anstelle einer Benutzeraktion initiiert werden). Wenn Sie die Standardsicherheitseinstellungen verwenden, muss der Benutzername ein Windows-Domänenkonto sein. Geben Sie das Konto im folgenden Format \<an: \\ Domäne>\><Benutzername. Das von Ihnen angegebene Konto muss über lokale Systemadministratorberechtigungen auf dem Computer verfügen, der die von dem Bericht verwendete Datenquelle hostet.  
   
  Aktivieren Sie das Kontrollkästchen **Als Windows-Anmeldeinformationen verwenden, wenn eine Verbindung mit der Datenquelle hergestellt wird** , wenn es sich bei den Informationen um Anmeldeinformationen der Windows-Authentifizierung handelt. Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie Datenbankauthentifizierung (z. B. eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung) verwenden.  
   
  Wählen Sie die Option **Nach dem Herstellen einer Verbindung mit der Datenquelle die Identität des authentifizierten Benutzers annehmen** aus, um die Delegierung von Anmeldeinformationen zuzulassen. Dies ist jedoch nur möglich, wenn eine Datenquelle den Identitätswechsel unterstützt. Bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbanken kann mit dieser Option die SETUSER-Funktion festgelegt werden.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt nur Windows-Anmeldeinformationen ein. Wählen Sie daher sowohl die Option "Als Windows-Anmeldeinformationen verwenden, wenn eine Verbindung zur Datenquelle hergestellt wird" als auch die Option "Die Identität des authentifizierten Benutzers annehmen, nachdem eine Verbindung zur Datenquelle hergestellt wurde" für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquelle aus.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt nur Anmeldeinformationen für Windows-Konten. Wählen Sie daher sowohl die Option "Als Windows-Anmeldeinformationen verwenden, wenn eine Verbindung zur Datenquelle hergestellt wird" als auch die Option "Die Identität des authentifizierten Benutzers annehmen, nachdem eine Verbindung zur Datenquelle hergestellt wurde" für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquelle aus.  
   
  **Integrierte Sicherheit von Windows**  
  Verwenden Sie die Windows-Anmeldeinformationen des aktuellen Benutzers für den Zugriff auf die Datenquelle. Wählen Sie diese Option aus, wenn die für den Zugriff auf die Datenquelle verwendeten Anmeldeinformationen mit denen übereinstimmen, die zum Anmelden an der Netzwerkdomäne verwendet werden. Diese Option kann am besten verwendet werden, wenn die Kerberos-Authentifizierung für die Domäne aktiviert ist oder wenn sich die Datenquelle auf demselben Computer wie der Berichtsserver befindet. Wenn Kerberos nicht aktiviert ist, können die Windows-Anmeldeinformationen an einen anderen Computer weitergegeben werden. Falls weitere Computerverbindungen erforderlich sind, wird eine Fehlermeldung statt der erwarteten Daten zurückgegeben.  
@@ -88,14 +88,14 @@ ms.locfileid: "66109421"
  **Anmeldeinformationen sind nicht erforderlich**  
  Geben Sie an, dass keine Anmeldeinformationen für den Zugriff auf die Datenquelle erforderlich sind. Beachten Sie, dass diese Option keine Auswirkungen hat, wenn für die Datenquelle eine Benutzeranmeldung erforderlich ist. Sie sollten diese Option nur auswählen, wenn für die Datenquellenverbindung keine Benutzeranmeldeinformationen erforderlich sind.  
   
- Um diese Option verwenden zu können, müssen Sie vorher das unbeaufsichtigte Ausführungskonto für die Bereitstellung des Berichtsservers konfiguriert haben. Das unbeaufsichtigte Ausführungskonto wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn keine anderen Quellen für Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet.  Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Um diese Option verwenden zu können, müssen Sie vorher das unbeaufsichtigte Ausführungskonto für die Bereitstellung des Berichtsservers konfiguriert haben. Das unbeaufsichtigte Ausführungskonto wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn keine anderen Quellen für Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet.  Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Berichtsdatenquellen](report-data/manage-report-data-sources.md)   
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

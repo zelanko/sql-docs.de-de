@@ -18,10 +18,10 @@ ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f2e47e881236819de972d427f902fa5854f0b8b5
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660219"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable-Methode (ClientNetworkProtocol-Klasse)
@@ -36,15 +36,15 @@ object.SetDisable()
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *object*  
- A [ClientNetworkProtocol-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
+ *Objekt*  
+ Ein [ClientNetworkProtocol-Klassen](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) Objekt, das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client verwendete Netzwerkprotokoll darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
+ Ein **UInt32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird, und jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Client Netzwerkprotokollen und Netzwerk Bibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

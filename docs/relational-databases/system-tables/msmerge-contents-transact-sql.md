@@ -18,32 +18,32 @@ ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68089944"
 ---
-# <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
+# <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_contents** -Tabelle enthält eine Zeile für jede Zeile in der aktuellen Datenbank geändert, seit diese veröffentlicht wurde. Diese Tabelle wird vom Mergeprozess verwendet, um die geänderten Zeilen zu ermitteln. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
+  Die **MSmerge_contents** Tabelle enthält eine Zeile für jede Zeile, die seit der Veröffentlichung in der aktuellen Datenbank geändert wurde. Diese Tabelle wird vom Mergeprozess verwendet, um die geänderten Zeilen zu ermitteln. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Der Spitzname der veröffentlichten Tabelle.|  
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
-|**generation**|**bigint**|Die Generierung der Zeile durch identifiziert die **Tablenick** und **Rowguid**.|  
-|**partchangegen**|**bigint**|Die Generierung, die der letzten Datenänderung zugeordnet ist, bei der die Zugehörigkeit der Zeile zu einer gefilterten Veröffentlichung geändert worden sein könnte|  
-|**Datenherkunft**|**varbinary(501)**|Die Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Änderungen an dieser Zeile verwendet werden.|  
-|**colvl**|**varbinary(7489)**|Die Versionsinformationen für die Spalte.|  
+|**Stro**|**BIGINT**|Die Generierung der Zeile, die durch **tablenick** und **ROWGUID**identifiziert wird.|  
+|**partchangegen**|**BIGINT**|Die Generierung, die der letzten Datenänderung zugeordnet ist, bei der die Zugehörigkeit der Zeile zu einer gefilterten Veröffentlichung geändert worden sein könnte|  
+|**Leitung**|**varbinary (501)**|Die Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Änderungen an dieser Zeile verwendet werden.|  
+|**colvl**|**varbinary (7489)**|Die Versionsinformationen für die Spalte.|  
 |**Marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**logical_record_parent_rowguid**|**uniqueidentifier**|Gibt die obersten übergeordneten Zeile im **MSmerge_contents** (von **Rowguid**) für jede entsprechende untergeordnete Zeile in einem logischen Datensatz.|  
-|**logical_record_lineage**|**varbinary(501)**|Die Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Änderungen an der übergeordneten Zeile der obersten Ebene in einem logischen Datensatz verwendet werden. Für alle untergeordneten Zeilen in einem logischen Datensatz lautet dieser Wert NULL.|  
-|**logical_relation_change_gen**|**bigint**|Der Generierungswert, der mit der letzten Änderung verbunden ist, die zur Neuausrichtung des logischen Datensatzes führte. Die Neuausrichtung wurde erforderlich, da eine vorhandene Zeile in den logischen Datensatz hinein oder aus diesem heraus verschoben wurde.|  
+|**logical_record_parent_rowguid**|**uniqueidentifier**|Identifiziert die übergeordnete Zeile der obersten Ebene in **MSmerge_contents** (von **ROWGUID**) für jede zugehörige untergeordnete Zeile in einem logischen Datensatz.|  
+|**logical_record_lineage**|**varbinary (501)**|Die Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Änderungen an der übergeordneten Zeile der obersten Ebene in einem logischen Datensatz verwendet werden. Für alle untergeordneten Zeilen in einem logischen Datensatz lautet dieser Wert NULL.|  
+|**logical_relation_change_gen**|**BIGINT**|Der Generierungswert, der mit der letzten Änderung verbunden ist, die zur Neuausrichtung des logischen Datensatzes führte. Die Neuausrichtung wurde erforderlich, da eine vorhandene Zeile in den logischen Datensatz hinein oder aus diesem heraus verschoben wurde.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

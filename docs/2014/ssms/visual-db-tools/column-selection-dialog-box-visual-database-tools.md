@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224644"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Spaltenauswahl (Dialogfeld) (Visual Database Tools)
@@ -25,7 +25,7 @@ ms.locfileid: "63224644"
   
  Dieses Dialogfeld wird angezeigt, wenn Sie mit der rechten Maustaste auf eine Tabelle klicken und anschließend im Kontextmenü die Option **Benutzerdefinierte Sicht ändern** auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Spalten**  
  Führt alle in der ausgewählten Datenbanktabelle vorhandenen Spalten auf. Die hier aufgeführten Spalten sind von den Eigenschaften der Datenbanktabelle und dem Datenbanktyp abhängig. Markieren Sie die gewünschte Spalte, und verschieben Sie diese mithilfe der Pfeilschaltflächen in das Feld **Ausgewählte Spalten** .  
   
@@ -48,8 +48,8 @@ ms.locfileid: "63224644"
  **Abbrechen**  
  Bricht die Änderung der benutzerdefinierten Sicht ab.  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Datenbankdiagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Arbeiten mit Daten Bank Diagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Anpassen des Umfangs der in Diagrammen angezeigten Informationen &#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
   

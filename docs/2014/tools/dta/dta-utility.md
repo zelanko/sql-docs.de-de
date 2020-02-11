@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670692"
 ---
 # <a name="dta-utility"></a>dta
-  Das **dta** -Hilfsprogramm ist die Eingabeaufforderungsversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
+  Das **DTA** -Hilfsprogramm ist die Eingabe Aufforderungs Version Datenbankoptimierungsratgeber. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
   
  Wie der Datenbankoptimierungsratgeber dient auch das **dta** -Hilfsprogramm dazu, eine Arbeitsauslastung zu analysieren und Empfehlungen zu den physischen Entwurfsstrukturen auszugeben, um die Serverleistung für diese Arbeitsauslastung zu verbessern. Bei der Arbeitsauslastung kann es sich um einen Plancache, eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsdatei oder -tabelle oder ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript handeln. Zu den physischen Entwurfsstrukturen zählen Indizes, indizierte Sichten und die Partitionierung. Nach der Analyse einer Arbeitsauslastung erstellt das **dta** -Hilfsprogramm eine Empfehlung für den physischen Datenbankentwurf und kann das notwendige Skript zum Implementieren der Empfehlung generieren. Arbeitsauslastungen können über die Eingabeaufforderung mithilfe der Argumente **-if** oder **-it** angegeben werden. Mithilfe von **-ix** können Sie zudem eine XML-Eingabedatei über die Eingabeaufforderung angeben. In diesem Fall wird die Arbeitsauslastung in der XML-Eingabedatei angegeben.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "62670692"
   
 ## <a name="arguments"></a>Argumente  
  **-?**  
- Zeigt Informationen zur Verwendung an.  
+ Zeigt Informationen zur Nutzung an.  
   
  **-A** _time_for_tuning_in_minutes_  
- Gibt das Zeitlimit für die Optimierung in Minuten an. Das**dta** -Hilfsprogramm verwendet die angegebene Zeitspanne, um die Arbeitsauslastung zu optimieren und ein Skript mit den empfohlenen Änderungen des physischen Entwurfs zu generieren. Standardmäßig geht **dta** von einer Optimierungszeit von 8 Stunden aus. Durch den Wert 0 wird eine unbegrenzte Optimierungszeit festgelegt. Das**dta** -Hilfsprogramm beendet die Optimierung der gesamten Arbeitsauslastung möglicherweise bereits vor Ablauf des Zeitlimits. Wenn sichergestellt werden soll, dass die gesamte Arbeitsauslastung optimiert wird, empfiehlt es sich jedoch, eine unbegrenzte Optimierungszeit anzugeben (-A 0).  
+ Gibt das Zeitlimit für die Optimierung in Minuten an. **DTA** verwendet die angegebene Zeitspanne, um die Arbeitsauslastung zu optimieren und ein Skript mit den empfohlenen Änderungen des physischen Entwurfs zu generieren. Standardmäßig geht **dta** von einer Optimierungszeit von 8 Stunden aus. Durch den Wert 0 wird eine unbegrenzte Optimierungszeit festgelegt. **DTA** kann die Optimierung der gesamten Arbeitsauslastung abschließen, bevor das Zeitlimit abläuft. Wenn sichergestellt werden soll, dass die gesamte Arbeitsauslastung optimiert wird, empfiehlt es sich jedoch, eine unbegrenzte Optimierungszeit anzugeben (-A 0).  
   
  **-a**  
  Optimiert die Arbeitsauslastung und wendet die Empfehlung an, ohne Sie zur Bestätigung aufzufordern.  
@@ -96,9 +96,9 @@ ms.locfileid: "62670692"
  Gibt die maximale Anzahl von Spalten in Indizes an, die von **dta** vorgeschlagen werden. Der Maximalwert ist 1024. Standardmäßig ist dieses Argument auf 16 festgelegt.  
   
  **-c** _max_key_columns_in_index_  
- Gibt die maximale Anzahl von Schlüsselspalten in Indizes an, die von **dta** vorgeschlagen werden. Der Standardwert ist 16, was dem maximal zulässigen Wert entspricht. Das**dta** -Hilfsprogramm berücksichtigt auch die Erstellung von Indizes mit integrierten Spalten. Bei Indizes, für die eingeschlossene Spalten empfohlen werden, kann die in diesem Argument angegebene Anzahl von Spalten überschritten werden.  
+ Gibt die maximale Anzahl von Schlüsselspalten in Indizes an, die von **dta** vorgeschlagen werden. Der Standardwert ist 16, was dem maximal zulässigen Wert entspricht. **DTA** berücksichtigt auch das Erstellen von Indizes mit eingebundenen Spalten. Bei Indizes, für die eingeschlossene Spalten empfohlen werden, kann die in diesem Argument angegebene Anzahl von Spalten überschritten werden.  
   
- **-D** _Datenbankname_  
+ **-D** _database_name_  
  Gibt den Namen jeder zu optimierenden Datenbank an. Die erste Datenbank ist die Standarddatenbank. Sie können mehrere Datenbanken angeben, indem Sie Kommas als Trennzeichen zwischen den Datenbanknamen verwenden. Beispiel:  
   
 ```  
@@ -126,7 +126,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** _database_name_  
- Gibt die erste Datenbank an, mit der **dta** eine Verbindung herstellt, wenn eine Arbeitsauslastung optimiert wird. Für dieses Argument kann nur eine einzige Datenbank angegeben werden. Zum Beispiel:  
+ Gibt die erste Datenbank an, mit der **dta** eine Verbindung herstellt, wenn eine Arbeitsauslastung optimiert wird. Für dieses Argument kann nur eine einzige Datenbank angegeben werden. Beispiel:  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -134,7 +134,7 @@ dta -d AdventureWorks2012 ...
   
  Wenn mehrere Datenbanknamen angegeben werden, gibt **dta** einen Fehler zurück. Das Argument **-d** ist optional.  
   
- Wenn Sie eine XML-Eingabedatei verwenden, können Sie angeben, dass die erste Datenbank an die **Dta** eine Verbindung herstellt, mithilfe der `DatabaseToConnect` -Element, das sich befindet, die `TuningOptions` Element. Weitere Informationen finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Wenn Sie eine XML-Eingabedatei verwenden, können Sie die erste Datenbank, mit der **DTA** eine Verbindung herstellt, `DatabaseToConnect` mithilfe des-Elements angeben, `TuningOptions` das sich unter dem-Element befindet. Weitere Informationen finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Wenn Sie nur eine einzige Datenbank optimieren, wird mit dem Argument **-d** eine Funktionalität bereitgestellt, die der des Arguments **-d** im Hilfsprogramm **sqlcmd** ähnlich ist. Die USE *database_name* -Anweisung wird jedoch nicht ausgeführt. Weitere Informationen finden Sie unter [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -148,9 +148,9 @@ dta -d AdventureWorks2012 ...
   
 |Parameter|Standardwert|  
 |---------------|-------------------|  
-|*database_name*|Der mit der Option *-D* angegebene Wert für **database_name** .|  
-|*owner_name*|**dbo**<br /><br /> Hinweis: *Owner_name* muss **Dbo**. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler ausgegeben.|  
-|*table_name*|None|  
+|*database_name*|mit der Option " **-D** " angegebene *database_name*|  
+|*owner_name*|**dbo**<br /><br /> Hinweis: *owner_name* muss **dbo**sein. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler ausgegeben.|  
+|*table_name*|Keine|  
   
  Wenn eine Datei verwendet wird, geben Sie als Dateierweiterung .xml an. Beispiel: TuningLog.xml.  
   
@@ -160,10 +160,10 @@ dta -d AdventureWorks2012 ...
  **-F**  
  Ermöglicht **dta** das Überschreiben einer vorhandenen Ausgabedatei. Wenn bereits eine Ausgabedatei mit demselben Namen vorhanden ist und **-F** nicht angegeben wird, gibt **dta**einen Fehler zurück. Sie können **-F** mit **-of**, **-or**oder **-ox**verwenden.  
   
- **-fa** _physical_design_structures_to_add_  
- Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben wird, **Dta** verwendet die standardmäßige **-Fa**`IDX`.  
+ **-FA-** _physical_design_structures_to_add_  
+ Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben ist, verwendet **DTA** den Standard **-FA**`IDX`.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |IDX_IV|Indizes und indizierte Sichten.|  
 |IDX|Nur Indizes.|  
@@ -173,10 +173,10 @@ dta -d AdventureWorks2012 ...
  **-fi**  
  Gibt an, dass gefilterte Indizes für neue Empfehlungen berücksichtigt werden. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- **-fk** _keep_existing_option_  
+ **-FK** _keep_existing_option_  
  Gibt an, welche vorhandenen physischen Entwurfsstrukturen **dta** beim Generieren der Empfehlung beibehalten muss. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Keine|Keine vorhandenen Strukturen|  
 |ALL|Alle vorhandenen Strukturen|  
@@ -184,47 +184,47 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|Alle gruppierten Indizes für Tabellen|  
 |IDX|Alle gruppierten und nicht gruppierten Indizes für Tabellen|  
   
- **-fp** _partitioning_strategy_  
+ **-FP** _partitioning_strategy_  
  Gibt an, ob neue physische Entwurfsstrukturen (Indizes und indizierte Sichten), die von **dta** vorgeschlagen werden, partitioniert werden sollen und wie diese Partitionierung ggf. erfolgen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Keine|Keine Partitionierung|  
 |FULL|Vollständige Partitionierung (zur Verbesserung der Leistung)|  
 |ALIGNED|Nur ausgerichtete Partitionierung (zur Verbesserung der Verwaltbarkeit)|  
   
- ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Der Standardwert ist **' - fp '** `NONE`.  
+ ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Der Standardwert ist **-FP**`NONE`.  
   
- **-fx** _drop_only_mode_  
+ **-FX** _drop_only_mode_  
  Gibt an, dass **dta** nur das Löschen vorhandener physischer Entwurfsstrukturen in Erwägung zieht. Das Erstellen neuer physischer Entwurfsstrukturen wird nicht in Erwägung gezogen. Wenn diese Option angegeben wird, bewertet **dta** die Zweckmäßigkeit vorhandener physischer Entwurfsstrukturen und empfiehlt das Löschen selten verwendeter Strukturen. Für dieses Argument werden keinen Werte angegeben. Es kann nicht mit den Argumenten **-fa**, **-fp**oder **-fk ALL** verwendet werden.  
   
  **-ID** _session_ID_  
  Gibt einen numerischen Bezeichner für die Optimierungssitzung an. Wird dieses Argument nicht angegeben, generiert **dta** eine ID-Nummer. Sie können diesen Bezeichner zum Anzeigen von Informationen zu vorhandenen Optimierungssitzungen verwenden. Wenn Sie keinen Wert für **-ID**angeben, muss mit **-s**ein Sitzungsname angegeben werden.  
   
- **-ip**  
+ **-IP**  
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
  **-ipf**  
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für alle Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
- **-if** _workload_file_  
+ **-Wenn** _workload_file_  
  Gibt den Pfad und den Namen der Arbeitsauslastungsdatei an, die als Eingabe für die Optimierung verwendet werden soll. Die Datei muss eines der folgenden Formate aufweisen: TRC (SQL Server Profiler-Ablaufverfolgungsdatei), SQL (SQL-Datei) oder LOG ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ablaufverfolgungsdatei). Es muss entweder eine Arbeitsauslastungsdatei oder eine Arbeitsauslastungstabelle angegeben werden.  
   
- **-it** _workload_trace_table_name_  
- Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im folgenden Format angegeben: [*database_name*] **.** [*owner_name*] **.** _table_name_.  
+ **-IT-** _workload_trace_table_name_  
+ Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im folgenden Format angegeben: [*database_name*]**.** [*owner_name*] **.** _table_name_.  
   
  In der folgenden Tabelle ist für jeden Parameter der zugehörige Standardwert aufgeführt:  
   
 |Parameter|Standardwert|  
 |---------------|-------------------|  
-|*database_name*|Der mit der Option *-D* angegebene Wert für **database_name**.|  
-|*owner_name*|**dbo**|  
+|*database_name*|*database_name* mit der Option **-D** angegeben.|  
+|*owner_name*|**dbo**.|  
 |*table_name*|Keine.|  
   
 > [!NOTE]  
->  *owner_name* muss **dbo** lauten. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler zurückgegeben. Beachten Sie zudem, dass entweder eine Arbeitsauslastungstabelle oder eine Arbeitsauslastungsdatei angegeben werden muss.  
+>  *owner_name* muss **dbo**sein. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler zurückgegeben. Beachten Sie zudem, dass entweder eine Arbeitsauslastungstabelle oder eine Arbeitsauslastungsdatei angegeben werden muss.  
   
- **-ix** _input_XML_file_name_  
+ **-IX** _input_XML_file_name_  
  Gibt den Namen der XML-Datei an, die die Eingabeinformationen für **dta** enthält. Dieser muss einem gültigen XML-Dokument entsprechen, das mit "DTASchema.xsd" übereinstimmt. Widersprüchliche Argumente, die an der Eingabeaufforderung für Optimierungsoptionen angegeben werden, überschreiben den entsprechenden Wert in dieser XML-Datei. Die einzige Ausnahme hiervon sind benutzerdefinierte Konfigurationen, die im Auswertungsmodus in der XML-Eingabedatei eingegeben werden. Wenn beispielsweise eine Konfiguration im **Configuration** -Element der XML-Eingabedatei eingegeben wird und das **EvaluateConfiguration** -Element ebenfalls als Optimierungsoption angegeben wird, überschreibt die in der XML-Eingabedatei angegebene Optimierungsoption die an der Eingabeaufforderung eingegebene Option.  
   
  **-m** _minimum_improvement_  
@@ -233,10 +233,10 @@ dta -d AdventureWorks2012 ...
  **-N** _online_option_  
  Gibt an, ob physische Entwurfsstrukturen online erstellt werden. In der folgenden Tabelle sind die Werte, die Sie für dieses Argument angeben können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |OFF|Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.|  
-|ON|Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.|  
+|EIN|Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.|  
 |MIXED|Der Datenbankoptimierungsratgeber versucht, sofern möglich physische Entwurfsstrukturen zu empfehlen, die online erstellt werden können.|  
   
  Wenn Indizes online erstellt werden, wird ONLINE = ON an die Objektdefinition angefügt.  
@@ -250,31 +250,31 @@ dta -n number_of_events -A 0
   
  In diesem Fall ist es wichtig, eine unbegrenzte Optimierungszeit anzugeben (`-A 0`). Andernfalls geht der Datenbankoptimierungsratgeber standardmäßig von einer achtstündigen Optimierungsdauer aus.  
   
- **-of** _output_script_file_name_  
+ **-von** _output_script_file_name_  
  Gibt an, dass **dta** die Empfehlung in Form eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts in die Datei mit dem angegebenen Dateinamen im angegebenen Zielverzeichnis schreibt.  
   
  Sie können **-F** mit dieser Option verwenden. Stellen Sie sicher, dass der Dateiname eindeutig ist, insbesondere wenn Sie außerdem **-or** und **-ox**verwenden.  
   
- **-or** _output_xml_report_file_name_  
+ **-oder-** _output_xml_report_file_name_  
  Gibt an, dass **dta** die Empfehlung in einen Ausgabebericht im XML-Format schreibt. Wenn ein Dateiname angegeben wird, werden die Empfehlungen in diese Datei im angegebenen Zielverzeichnis geschrieben. Andernfalls verwendet **dta** den Sitzungsnamen, um den Dateinamen zu generieren, und schreibt diese Datei in das aktuelle Verzeichnis.  
   
  Sie können **-F** mit dieser Option verwenden. Stellen Sie sicher, dass der Dateiname eindeutig ist, insbesondere wenn Sie außerdem **-of** und **-ox**verwenden.  
   
- **-ox** _output_XML_file_name_  
+ **-Ox** _output_XML_file_name_  
  Gibt an, dass **dta** die Empfehlung in Form einer XML-Datei mit dem angegebenen Dateinamen im angegebenen Zielverzeichnis schreibt. Stellen Sie sicher, dass der Datenbankoptimierungsratgeber über die Berechtigungen zum Schreiben in das Zielverzeichnis verfügt.  
   
  Sie können **-F** mit dieser Option verwenden. Stellen Sie sicher, dass der Dateiname eindeutig ist, insbesondere wenn Sie außerdem **-of** und **-or**verwenden.  
   
- **-P** _password_  
+ **-P** _Kennwort_  
  Gibt das Kennwort für die Anmelde-ID an. Wenn diese Option nicht verwendet wird, fordert **dta** zur Eingabe eines Kennworts auf.  
   
  **-q**  
  Legt den stillen Modus fest. Es werden keine Informationen an der Konsole ausgegeben. Das gilt auch für Status- und Headerinformationen.  
   
- **-rl** _analysis_report_list_  
+ **-RL** _analysis_report_list_  
  Gibt die Liste der zu generierenden Analyseberichte an. In der folgenden Tabelle sind die Werte aufgeführt, die für dieses Argument angegeben werden können:  
   
-|Wert|Bericht|  
+|value|Bericht|  
 |-----------|------------|  
 |ALL|Alle Analyseberichte|  
 |STMT_COST|Anweisungskostenbericht|  
@@ -310,20 +310,20 @@ dta -n number_of_events -A 0
   
  Eine für *table_list_file*angegebene Datei muss folgendes Format aufweisen:  
   
- *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
+ *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
   
- *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
+ *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
   
- *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
+ *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
   
- Die Verwendung dieses Arguments ist eine Alternative zur Eingabe einer Tabellenliste an der Eingabeaufforderung ( **-Tl**). Verwenden Sie keine Tabellenlistendatei ( **-Tf**), wenn Sie **-Tl**verwenden. Wenn beide Argumente verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
+ Die Verwendung dieses Arguments ist eine Alternative zur Eingabe einer Tabellenliste an der Eingabeaufforderung (**-Tl**). Verwenden Sie keine Tabellenlistendatei (**-Tf**), wenn Sie **-Tl**verwenden. Wenn beide Argumente verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
   
  Wenn die Argumente **-Tf** und **-Tl** nicht angegeben werden, werden alle Benutzertabellen in den angegebenen Datenbanken bei der Optimierung berücksichtigt.  
   
- **-Tl** _table_list_  
+ **-TL** _table_list_  
  Gibt eine Liste mit zu optimierenden Tabellen an der Eingabeaufforderung an. Geben Sie zwischen Tabellennamen ein Komma als Trennzeichen ein. Wenn nur eine Datenbank mit dem Argument **-D** angegeben wird, müssen die Tabellennamen nicht mit einem Datenbanknamen qualifiziert werden. Andernfalls ist für jede Tabelle ihr vollqualifizierter Name im Format *database_name.schema_name.table_name* erforderlich.  
   
- Die Verwendung dieses Arguments ist eine Alternative zum Verwenden einer Tabellenlistendatei ( **-Tf**). Wenn sowohl **-Tl** als auch **-Tf** verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
+ Die Verwendung dieses Arguments ist eine Alternative zum Verwenden einer Tabellenlistendatei (**-Tf**). Wenn sowohl **-Tl** als auch **-Tf** verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
   
  **-U** _login_id_  
  Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird.  
@@ -334,13 +334,13 @@ dta -n number_of_events -A 0
  **-x**  
  Startet eine Optimierungssitzung und beendet das Hilfsprogramm.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Drücken Sie einmal STRG+C, um die Optimierungssitzung zu beenden und Empfehlungen basierend auf der Analyse zu generieren, die **dta** bis zu diesem Zeitpunkt abgeschlossen hat. Daraufhin werden Sie aufgefordert zu entscheiden, ob Sie Empfehlungen generieren möchten. Drücken Sie erneut STRG+C, um die Optimierungssitzung zu beenden, ohne Empfehlungen zu generieren.  
   
 ## <a name="examples"></a>Beispiele  
  **A. Optimieren einer Arbeitsauslastung mit einer Empfehlung, die Indizes und indizierte Sichten einschließt**  
   
- In diesem Beispiel wird eine sichere Verbindung (`-E`) verwendet, um eine Verbindung mit der **tpcd1G** -Datenbank auf dem Server „MyServer“ herzustellen und dann eine Arbeitsauslastung zu analysieren und Empfehlungen zu erstellen. Die Ausgabe wird in die Skriptdatei "script.sql" geschrieben. Wenn „script.sql“ bereits vorhanden ist, wird die Datei von **dta** überschrieben, da das Argument `-F` angegeben wurde. Die Dauer der Optimierungssitzung wird nicht begrenzt, um sicherzustellen, dass die Arbeitsauslastung vollständig analysiert wird (`-A 0`). Die Empfehlung muss eine Verbesserung von mindestens 5 % (`-m 5`) ergeben. In der endgültigen Empfehlung von**dta** sollten Indizes und indizierte Sichten enthalten sein (`-fa IDX_IV`).  
+ In diesem Beispiel wird eine sichere Verbindung (`-E`) verwendet, um eine Verbindung mit der **tpcd1G** -Datenbank auf dem Server „MyServer“ herzustellen und dann eine Arbeitsauslastung zu analysieren und Empfehlungen zu erstellen. Die Ausgabe wird in die Skriptdatei "script.sql" geschrieben. Wenn „script.sql“ bereits vorhanden ist, wird die Datei von **dta** überschrieben, da das Argument `-F` angegeben wurde. Die Dauer der Optimierungssitzung wird nicht begrenzt, um sicherzustellen, dass die Arbeitsauslastung vollständig analysiert wird (`-A 0`). Die Empfehlung muss eine Verbesserung von mindestens 5 % (`-m 5`) ergeben. **DTA** sollte Indizes und indizierte Sichten in der endgültigen Empfehlung (`-fa IDX_IV`) enthalten.  
   
 ```  
 dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
@@ -356,7 +356,7 @@ dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60
   
  **C. Begrenzen der Anzahl optimierter Abfragen**  
   
- In diesem Beispiel wird die Optimierung beendet, sobald die Anzahl der Abfragen, die aus der Datei orders_wkld.sql gelesen werden, den Wert 10 erreicht hat (`-n 10`) oder die Optimierung für eine Dauer von 15 Minuten ausgeführt wurde (`-A 15`), je nachdem, welches Ereignis zuerst eintritt. Wenn Sie die Optimierung aller 10 Abfragen sicherstellen möchten, geben Sie mithilfe von `-A 0` eine unbegrenzte Optimierungszeit an. Wenn die Zeit ein wichtiger Faktor ist, geben Sie ein geeignetes Zeitlimit an, indem Sie wie im folgenden Beispiel gezeigt mit dem Argument `-A` die Anzahl der Minuten angeben, die für die Optimierung zur Verfügung stehen.  
+ In diesem Beispiel wird die Optimierung beendet, sobald die Anzahl der Abfragen, die aus der Datei orders_wkld.sql gelesen werden, den Wert 10 erreicht hat (`-n 10`) oder die Optimierung für eine Dauer von 15 Minuten ausgeführt wurde (`-A 15`), je nachdem, welches Ereignis zuerst eintritt. Wenn Sie die Optimierung aller 10 Abfragen sicherstellen möchten, geben Sie mithilfe von `-A 0`eine unbegrenzte Optimierungszeit an. Wenn die Zeit ein wichtiger Faktor ist, geben Sie ein geeignetes Zeitlimit an, indem Sie wie im folgenden Beispiel gezeigt mit dem Argument `-A` die Anzahl der Minuten angeben, die für die Optimierung zur Verfügung stehen.  
   
 ```  
 dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
@@ -388,8 +388,8 @@ AdventureWorks2012.Production.Product  2000000
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [&#40;Datenbank-Engine des Befehlszeilen-Hilfsprogramms&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

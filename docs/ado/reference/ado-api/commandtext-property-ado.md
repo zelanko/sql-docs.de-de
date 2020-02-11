@@ -16,35 +16,35 @@ ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919728"
 ---
 # <a name="commandtext-property-ado"></a>CommandText-Eigenschaft (ADO)
-Gibt den Text eines Befehls für einen Anbieter ausgestellt werden.  
+Gibt den Text eines Befehls an, der für einen Anbieter ausgegeben werden soll.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Ruft ab oder legt einen **Zeichenfolge** -Wert, der ein Anbieterbefehl, z. B. eine SQL-Anweisung, einen Tabellennamen an, eine relative URL oder Aufruf einer gespeicherten Prozedur enthält. Der Standardwert ist eine leere Zeichenfolge ("").  
+ Ruft einen **Zeichen** folgen Wert ab, der einen Anbieter Befehl enthält, z. b. eine SQL-Anweisung, einen Tabellennamen, einen relative URL oder einen gespeicherten Prozedur Aufruf, oder legt diesen fest. Der Standardwert ist die leere Zeichenfolge ("").  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **CommandText** -Eigenschaft festlegen oder Zurückgeben des Texts eines Befehls, dargestellt durch eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt. In der Regel wird eine SQL-Anweisung werden dies kann auch jede andere Art von Command-Anweisung, die vom Anbieter, z. B. der Aufruf einer gespeicherten Prozedur erkannt werden. Eine SQL-Anweisung muss der bestimmten Dialekt oder Version des Anbieters Abfrageprozessor unterstützt.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **CommandText** -Eigenschaft, um den Text eines Befehls festzulegen oder zurückzugeben, der von einem [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt dargestellt wird. In der Regel handelt es sich hierbei um eine SQL-Anweisung, aber es kann sich auch um eine beliebige andere Art von Befehls Anweisung handeln, die vom Anbieter erkannt wird Eine SQL-Anweisung muss einen bestimmten Dialekt oder eine bestimmte Version aufweisen, die vom Abfrage Prozessor des Anbieters unterstützt wird.  
   
- Wenn die [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft der **Befehl** Objekt nastaven NA hodnotu **"true"** und **Befehl** Objekt an eine offene Verbindung gebunden ist, wenn Sie festlegen die **CommandText** Eigenschaft ADO bereitet die Abfrage (d. h. eine kompilierte Form der Abfrage, die vom Anbieter gespeichert ist) beim Aufrufen der [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) oder [Öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md)Methoden.  
+ Wenn die [vorbereitete](../../../ado/reference/ado-api/prepared-property-ado.md) -Eigenschaft des **Command** -Objekts auf **true** festgelegt ist und das **Command** -Objekt beim Festlegen der **CommandText** -Eigenschaft an eine geöffnete Verbindung gebunden ist, bereitet ADO die Abfrage (d. h. eine kompilierte Form der Abfrage, die vom Anbieter gespeichert wird) vor, wenn Sie die [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) -oder [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode aufzurufen.  
   
- Je die [Befehlstyp (CommandType)](../../../ado/reference/ado-api/commandtype-property-ado.md) eigenschafteneinstellung ADO kann alter der **CommandText** Eigenschaft. Erhalten Sie die **CommandText** Eigenschaft zu einem beliebigen Zeitpunkt aus, um den eigentlichen Befehlstext anzuzeigen, ADO wird während der Ausführung verwenden.  
+ Abhängig von der [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) -Eigenschafts Einstellung kann ADO die **CommandText** -Eigenschaft ändern. Sie können die **CommandText** -Eigenschaft jederzeit lesen, um den eigentlichen Befehls Text anzuzeigen, der von ADO während der Ausführung verwendet wird.  
   
- Verwenden der **CommandText** Eigenschaft so festlegen oder zurückgeben eine relative URL, die eine Ressource, z. B. eine Datei oder ein Verzeichnis angibt. Die Ressource ist relativ zu einem Speicherort, die explizit angegeben werden, indem Sie eine absolute URL oder implizit eine offene [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  
+ Verwenden Sie die **CommandText** -Eigenschaft, um eine relative URL festzulegen oder zurückzugeben, die eine Ressource angibt, z. b. eine Datei oder ein Verzeichnis. Die Ressource ist relativ zu einem Speicherort, der explizit von einem absolute URL oder implizit durch ein geöffnetes [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt angegeben wird.  
   
 > [!NOTE]
->  URLs, die mit der HTTP-Schema werden automatisch aufgerufen, die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)   
- [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)

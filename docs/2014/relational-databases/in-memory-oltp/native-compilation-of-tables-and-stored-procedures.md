@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63075194"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren
@@ -115,12 +115,12 @@ go
  Die systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren verwendet den In-Memory OLTP-Compiler. Dieser Compiler erzeugt Dateien, die auf den Datenträger geschrieben und in den Arbeitsspeicher geladen werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die folgenden Mechanismen, um den Zugriff auf diese Dateien einzuschränken.  
   
 ### <a name="native-compiler"></a>Systemeigener Compiler  
- Die ausführbare Compilerdatei sowie die Binärdateien und Headerdateien, die für die systeminterne Kompilierung erforderlich sind, werden als Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz unter dem Ordner MSSQL\Binn\Xtp installiert. Also, wenn die Standardinstanz unter C:\Program Files installiert wird, die sind Compilerdateien in C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ Die ausführbare Compilerdatei sowie die Binärdateien und Headerdateien, die für die systeminterne Kompilierung erforderlich sind, werden als Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz unter dem Ordner MSSQL\Binn\Xtp installiert. Wenn die Standard Instanz unter "c:\Programme" installiert wird, werden die Compilerdateien in "c:\Programme\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12." installiert. Mssqlserver\mssql\binn\xtp.  
   
  Um den Zugriff auf den Compiler einzuschränken, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zugriffssteuerungslisten (ACLs), um den Zugriff auf die Binärdateien einzuschränken. Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Binärdateien sind vor Änderungen oder Manipulation durch ACLs geschützt. Die ACLs des systemeigenen Compilers schränken auch das Verwenden des Compilers ein; nur das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto und Systemadministratoren haben Lese- und Ausführungsberechtigungen für systemeigene Compilerdateien.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>Durch eine systeminterne Kompilierung generierte Dateien  
- Die Dateien, die erzeugt werden, wenn eine Tabelle oder eine gespeicherte Prozedur kompiliert wird, umfassen die DLL und Zwischendateien, einschließlich Dateien mit den folgenden Erweiterungen: .c, .obj, .xml und .pdb. Die generierten Dateien werden in einem Unterordner des standardmäßigen Datenordners gespeichert. Der Unterordner wird Xtp genannt. Wenn die Standardinstanz mit dem standardmäßigen Datenordner installieren, werden die generierten Dateien in C:\Program Files platziert\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
+ Die Dateien, die erzeugt werden, wenn eine Tabelle oder eine gespeicherte Prozedur kompiliert wird, umfassen die DLL und Zwischendateien, einschließlich Dateien mit den folgenden Erweiterungen: .c, .obj, .xml und .pdb. Die generierten Dateien werden in einem Unterordner des standardmäßigen Datenordners gespeichert. Der Unterordner wird Xtp genannt. Wenn Sie die Standard Instanz mit dem standardmäßigen Datenordner installieren, werden die generierten Dateien in "c:\Programme\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12." platziert. Mssqlserver\mssql\data\xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindert eine Manipulation der generierten DLLs auf drei Arten:  
   
@@ -132,8 +132,8 @@ go
   
  Zum Verwalten dieser Dateien ist keine Benutzerinteraktion erforderlich. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und entfernt die Dateien nach Bedarf.  
   
-## <a name="see-also"></a>Siehe auch  
- [Speicheroptimierte Tabellen](memory-optimized-tables.md)   
- [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Speicher optimierte Tabellen](memory-optimized-tables.md)   
+ [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
   
   

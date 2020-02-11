@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400542"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Verarbeitungs-und Speicherkapazität in Analytics Platform System
@@ -38,13 +38,13 @@ Uplift ist der prozentuale Kapazitäts Gewinn, indem die datenskalierungsdatenei
 |2|4|64|1.024|100 %|  
 |3|6|96|1536|50%|  
 |4|8|128|2048|33 %|  
-|5|10|160|2.560|25%|  
+|5|10|160|2.560|25 %|  
 |6|12|192|3072|20 %|  
 |8|16|256|4096|33 %|  
-|10|20|320|5120|25%|  
+|10|20|320|5120|25 %|  
 |12|24|384|6.144|20 %|  
 |16|32|512|8192|33 %|  
-|20|40|640|10.240|25%|  
+|20|40|640|10.240|25 %|  
 |24|48|768|12288|20 %|  
 |28|56|896|14336|17 %|  
   
@@ -69,13 +69,13 @@ Uplift ist der prozentuale Kapazitäts Gewinn, indem die datenskalierungsdatenei
 |2|6|96|1536|100 %|  
 |3|9|144|2.304|50%|  
 |4|12|192|3.072|33 %|  
-|5|15|240|3.840|25%|  
+|5|15|240|3.840|25 %|  
 |6|18|288|4.608|20 %|  
 |7|21|336|5.376|17 %|  
 |8|24|384|6.144|14|  
 |9|27|432|6.912|13 %|  
 |12|36|576|9.216|33 %|  
-|15|45|720|11.520|25%|  
+|15|45|720|11.520|25 %|  
 |18|54|864|13.824|20 %|  
   
 ## <a name="section2"></a>Planen der Speicherkapazität  

@@ -11,10 +11,10 @@ ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728116"
 ---
 # <a name="create-a-master-data-services-database"></a>Erstellen einer Master Data Services-Datenbank
@@ -23,7 +23,7 @@ ms.locfileid: "73728116"
 
   Erstellen Sie eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank, wenn Sie zur Unterstützung der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung und des [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Webdiensts eine neuen Datenbank benötigen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 -   Weitere Informationen zu den Anforderungen für den Computer, auf dem die Datenbank gehostet wird, finden Sie unter [Datenbankanforderungen &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73728116"
   
 -   Konfigurieren Sie einen Wartungsplan, um die Datenbank und Transaktionsprotokolle zu sichern. Weitere Informationen finden Sie unter [Datenbankanforderungen &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

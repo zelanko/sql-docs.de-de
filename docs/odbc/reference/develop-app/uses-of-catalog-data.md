@@ -15,21 +15,21 @@ ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc8999c0a7189772145f553646b45eb1f1fbd695
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091612"
 ---
 # <a name="uses-of-catalog-data"></a>Verwendung von Katalogdaten
-Anwendungen verwenden die Daten im Katalog in einer Vielzahl von Möglichkeiten. Hier sind einige häufige Verwendungsmöglichkeiten:  
+Anwendungen verwenden Katalogdaten auf verschiedene Weise. Hier sind einige gängige Verwendungsmöglichkeiten:  
   
--   **Erstellen von SQL-Anweisungen zur Laufzeit.** Vertikale Anwendungen, z. B. auftragserfassungsanwendung, enthalten hartcodierte SQL-Anweisungen. Die Tabellen und Spalten, die von der Anwendung verwendet werden sind vorab festgelegt, ebenso wie die Anweisungen, die Zugriff auf diese Tabellen. Auftragserfassungsanwendung enthält z. B. in der Regel eine einzelne parametrisierte **einfügen** -Anweisung für das System neue Bestellungen hinzufügt.  
+-   **Erstellen von SQL-Anweisungen zur Laufzeit.** Vertikale Anwendungen, wie z. b. eine Order Entry-Anwendung, enthalten hart codierte SQL-Anweisungen. Die von der Anwendung verwendeten Tabellen und Spalten werden im Vorfeld korrigiert, ebenso wie die-Anweisungen, die auf diese Tabellen zugreifen. Beispielsweise enthält eine Order Entry-Anwendung in der Regel eine einzelne, parametrisierte **Insert** -Anweisung zum Hinzufügen neuer Aufträge zum System.  
   
-     Allgemeine Anwendungen, z. B. ein Tabellenkalkulationsprogramm, die ODBC verwendet wird, zum Abrufen von Daten, erstellen häufig SQL-Anweisungen zur Laufzeit basierend auf Benutzereingaben. Eine solche Anwendung könnte erfordern, dass der Benutzer zur Eingabe der Namen der Tabellen und Spalten verwendet. Allerdings wäre es einfacher für den Benutzer die Anwendung angezeigt, Listen, Tabellen und Spalten, die von denen der Benutzer eine Auswahl treffen kann. Um diese Listen zu erstellen, die Anwendung aufrufen, würden die **SQLTables** und **SQLColumns** Katalogfunktionen.  
+     Generische Anwendungen, wie z. b. ein Tabellen Kalkulations Programm, das ODBC zum Abrufen von Daten verwendet, erstellen häufig SQL-Anweisungen zur Laufzeit basierend auf der Eingabe des Benutzers. Eine solche Anwendung kann verlangen, dass der Benutzer die Namen der zu verwendenden Tabellen und Spalten eingeben muss. Der Benutzer wäre jedoch einfacher, wenn die Anwendung Listen von Tabellen und Spalten zeigt, aus denen der Benutzer eine Auswahl treffen kann. Um diese Listen zu erstellen, ruft die Anwendung die **SQLTables** -und **SQLColumns** -Katalog Funktionen auf.  
   
--   **Erstellen von SQL-Anweisungen während der Entwicklung.** Anwendungsentwicklungsumgebungen ermöglichen in der Regel dem Programmierer Datenbankabfragen zu erstellen, während der Entwicklung eines Programms. Die Abfragen werden dann in der zu erstellenden Anwendung hartcodiert.  
+-   **Erstellen von SQL-Anweisungen während der Entwicklung.** Anwendungsentwicklungsumgebungen ermöglichen es dem Programmierer in der Regel, beim Entwickeln eines Programms Datenbankabfragen zu erstellen. Die Abfragen werden dann in der erstellten Anwendung hart codiert.  
   
-     Umgebungen können auch **SQLTables** und **SQLColumns** zum Erstellen von Listen aus dem kann der Programmierer Auswahl vornehmen. Diese Umgebungen können auch **SQLPrimaryKeys** und **SQLForeignKeys** automatisch ermitteln und Anzeigen von Beziehungen zwischen ausgewählten Tabellen und verwenden **SQLStatistics** zu bestimmen, und markieren indizierte Felder aus, damit der Programmierer effiziente Abfragen erstellen kann.  
+     In solchen Umgebungen können auch **SQLTables** und **SQLColumns** verwendet werden, um Listen zu erstellen, aus denen der Programmierer eine Auswahl treffen könnte. Diese Umgebungen können auch **SQLPrimaryKeys** und **sqlfremd nkeys** verwenden, um die Beziehungen zwischen ausgewählten Tabellen automatisch zu bestimmen und anzuzeigen. mit **SQLStatistics** können Sie indizierte Felder ermitteln und hervorheben, damit der Programmierer effiziente Abfragen erstellen kann.  
   
--   **Erstellen Cursor.** Eine Anwendung, Treiber oder Middleware, die eine bildlauffähigen Cursor-Engine bietet können **SQLSpecialColumns** um zu bestimmen, welche Spalte oder Spalten eine Zeile eindeutig identifizieren. Erstellen Sie das Programm konnte eine *Keyset* , die die Werte dieser Spalten für jede Zeile, die abgerufen wurde. Wenn die Anwendung wieder in die Zeile einen Bildlauf durchführt, würden sie diese Werte dann verwenden, zum Abrufen der neuesten Daten für die Zeile. Weitere Informationen zu scrollbare Cursor und Keysets, finden Sie unter [scrollfähige Cursor](../../../odbc/reference/develop-app/scrollable-cursors.md).
+-   **Erstellen von Cursorn** Eine Anwendung, ein Treiber oder eine Middleware, die eine Bild lauffähige Cursor-Engine bereitstellt, kann mithilfe von **SQLSpecialColumns** ermitteln, welche Spalten oder Spalten eine Zeile eindeutig identifizieren. Das Programm kann ein *Keyset* erstellen, das die Werte dieser Spalten für jede abgerufene Zeile enthält. Wenn die Anwendung zurück zur Zeile führt, werden diese Werte verwendet, um die aktuellsten Daten für die Zeile abzurufen. Weitere Informationen zu scrollfähigen Cursorn und Keysets finden Sie unter [scrollfähige Cursor](../../../odbc/reference/develop-app/scrollable-cursors.md).

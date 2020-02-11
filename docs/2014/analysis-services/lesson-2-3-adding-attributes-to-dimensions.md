@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079033"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Hinzufügen von Attributen zu Dimensionen
@@ -36,31 +36,31 @@ ms.locfileid: "66079033"
   
     -   **BirthDate**  
   
-    -   **MaritalStatus**  
+    -   **Marital Status**  
   
-    -   **Geschlecht**  
+    -   **Geschlechter**  
   
     -   **EmailAddress**  
   
     -   **YearlyIncome**  
   
-    -   **TotalChildren**  
+    -   **Totalchildren**  
   
     -   **NumberChildrenAtHome**  
   
-    -   **EnglishEducation**  
+    -   **Englischschulen**  
   
-    -   **EnglishOccupation**  
+    -   **Englischen shoccupations**  
   
-    -   **HouseOwnerFlag**  
+    -   **Housebesitzflag**  
   
-    -   **NumberCarsOwned**  
+    -   **Nummerierte nummerierte**  
   
-    -   **Phone**  
+    -   **Smartphone**  
   
-    -   **DateFirstPurchase**  
+    -   **Spalte datefirstpurchase**  
   
-    -   **CommuteDistance**  
+    -   **Pendel Entfernung**  
   
 5.  Ziehen Sie die folgenden Spalten von der **Geography** -Tabelle im Bereich **Datenquellensicht** in den Bereich **Attribute** :  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079033"
   
     -   **StandardCost**  
   
-    -   **Farbe**  
+    -   **Color**  
   
     -   **SafetyStockLevel**  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66079033"
   
     -   **Größe**  
   
-    -   **SizeRange**  
+    -   **Sizerange**  
   
-    -   **Weight**  
+    -   **Gewicht**  
   
     -   **DaysToManufacture**  
   
@@ -108,9 +108,9 @@ ms.locfileid: "66079033"
   
     -   **DealerPrice**  
   
-    -   **Class**  
+    -   **Klassi**  
   
-    -   **Style**  
+    -   **style**  
   
     -   **ModelName**  
   
@@ -122,10 +122,10 @@ ms.locfileid: "66079033"
   
 5.  Klicken Sie im Menü Datei auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Überprüfen von Cube- und Dimensionseigenschaften](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

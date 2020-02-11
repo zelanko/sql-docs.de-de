@@ -1,5 +1,5 @@
 ---
-title: Abrufen (Dialogfeld) (Quellcodeverwaltung) | Microsoft-Dokumentation
+title: Dialog Feld "Get" (Quell Code Verwaltung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779007"
 ---
 # <a name="get-dialog-box-source-control"></a>Abrufen (Dialogfeld der Quellcodeverwaltung)
   Ruft eine schreibgeschützte Kopie des ausgewählten Elements aus der Quellcode-Verwaltungsdatenbank in den aktuell verwendeten oder einen anderen angegebenen Ordner ab.  
   
 ## <a name="dialog-box-access"></a>Zugriff auf das Dialogfeld  
- Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ein Element im Projektmappen-Explorer aus. Auf der **Datei** Menü klicken Sie auf **Quellcodeverwaltung** klicken Sie dann auf **erhalten**.  
+ Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ein Element im Projektmappen-Explorer aus. Klicken Sie im Menü **Datei** auf **Quell Code Verwaltung, und** klicken Sie dann auf **Get**.  
   
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Aktion**  
  Gibt die Aktion an, die für die abzurufenden Elemente ausgeführt wird.  
   
@@ -46,17 +46,17 @@ ms.locfileid: "62779007"
  **Name**  
  Zeigt die Namen der abzurufenden Elemente an. Die Elemente werden mit einem aktivierten Kontrollkästchen neben dem Namen angezeigt. Wenn ein Element nicht abgerufen werden soll, deaktivieren Sie das entsprechende Kontrollkästchen.  
   
- **Options**  
+ **Optionen**  
  Zeigt die für das Quellcodeverwaltungs-Plug-In spezifischen Abrufoptionen an, wenn Sie auf den Pfeil rechts neben der Schaltfläche klicken.  
   
- **Sort**  
+ **Sortieren**  
  Sortiert die Reihenfolge der angezeigten Spalten.  
   
  **Strukturansicht**  
  Zeigt die Ordner- und Dateihierarchie für die abgerufenen Elemente an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abrufen von Dateien](../../2014/database-engine/retrieve-files.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dateien abrufen](../../2014/database-engine/retrieve-files.md)   
  [Quellcodeverwaltung des Projektmappen-Explorers](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

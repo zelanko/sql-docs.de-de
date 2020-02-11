@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098483"
 ---
-# <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting)
+# <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert ein SQL-Skript, das verwendet werden kann, um einem Benutzer Berechtigungen für die Berichtsserver-Datenbank sowie für andere Datenbanken zu gewähren, die für das Ausführen eines Berichtsservers erforderlich sind. Es wird erwartet, dass der Aufrufer eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankserver herstellt und das Skript ausführt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,7 +43,7 @@ out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *UserName*  
+ *User*  
  Der Benutzername oder die Windows-Sicherheits-ID (SID) des Benutzers, dem durch das Skript Berechtigungen erteilt werden.  
   
  *DatabaseName*  
@@ -64,25 +64,31 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *DatabaseName* leer ist, wird *IsRemote* ignoriert und der Wert aus der Konfigurationsdatei des Berichtsservers als Datenbankname verwendet.  
   
- Wenn *IsWindowsUser* nastaven NA hodnotu `true`, *Benutzername* muss im Format \<Domäne >\\< Benutzername\>.  
+ Wenn *IsWindowsUser* auf `true`festgelegt ist, muss der *Benutzername* im \<Format Domäne \\><\>Benutzername sein.  
   
- Wenn *IsWindowsUser* nastaven NA hodnotu `true`, das generierte Skript gewährt Anmelderechte für den Benutzer für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Festlegen der Berichtsserver-Datenbank als Standarddatenbank und gewährt der **RSExec** -Rolle auf der Berichtsserver-Datenbank, die temporäre Berichtsserver-Datenbank, die master-Datenbank und die MSDB-Systemdatenbank.  
+ Wenn *IsWindowsUser* auf `true`festgelegt ist, werden dem Benutzer durch das generierte Skript Anmelde Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erteilt, wobei die Berichts Server-Datenbank als Standarddatenbank festgelegt und die **RSExec** -Rolle für die Berichts Server-Datenbank, die temporäre Berichts Server-Datenbank, die Master-Datenbank und die msdb-Systemdatenbank erteilt wird.  
   
- Wenn *IsWindowsUser* nastaven NA hodnotu `true`, die Methode akzeptiert die standardmäßige Windows-SIDs als Eingabe. Wird eine standardmäßige Windows-SID oder ein Dienstkontoname bereitgestellt, wird diese bzw. dieser in eine Benutzernamen-Zeichenfolge übersetzt. Falls es sich bei der Datenbank um eine lokale Datenbank handelt, wird das Konto in die richtige lokalisierte Darstellung des Kontos übersetzt. Bei einer Remotedatenbank wird das Konto als das Konto des Computers dargestellt.  
+ Wenn *IsWindowsUser* auf `true`festgelegt ist, akzeptiert die Methode standardmäßige Windows-SIDs als Eingabe. Wird eine standardmäßige Windows-SID oder ein Dienstkontoname bereitgestellt, wird diese bzw. dieser in eine Benutzernamen-Zeichenfolge übersetzt. Falls es sich bei der Datenbank um eine lokale Datenbank handelt, wird das Konto in die richtige lokalisierte Darstellung des Kontos übersetzt. Bei einer Remotedatenbank wird das Konto als das Konto des Computers dargestellt.  
   
  In der folgenden Tabelle sind Konten, die übersetzt werden, und ihre Remotedarstellung aufgeführt.  
   
 |Konto/SID, das bzw. die übersetzt wird|Allgemeiner Name|Remotename|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Lokales System|\<Domäne>\\<Computername\>$|  
-|.\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
-|ComputerName\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
-|LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
-|(S-1-5-20)|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
-|NT AUTHORITY\NetworkService|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
+|(S-1-5-18)|Lokales System|
+  \<Domäne>\\<Computername\>$|  
+|.\LocalSystem|Lokales System|
+  \<Domäne>\\<Computername\>$|  
+|ComputerName\LocalSystem|Lokales System|
+  \<Domäne>\\<Computername\>$|  
+|LocalSystem|Lokales System|
+  \<Domäne>\\<Computername\>$|  
+|(S-1-5-20)|Netzwerkdienst|
+  \<Domäne>\\<Computername\>$|  
+|NT AUTHORITY\NetworkService|Netzwerkdienst|
+  \<Domäne>\\<Computername\>$|  
 |(S-1-5-19)|Lokaler Dienst|Fehler – siehe unten.|  
 |NT AUTHORITY\LocalService|Lokaler Dienst|Fehler – siehe unten.|  
   
@@ -90,7 +96,7 @@ out Int32 HRESULT);
   
  Falls das integrierte `LocalService`-Konto angegeben wird und es sich bei der Berichtsserver-Datenbank um eine Remotedatenbank handelt, wird ein Fehler zurückgegeben.  
   
- Wenn *IsWindowsUser* auf true festgelegt ist und der in *UserName* bereitgestellte Wert übersetzt werden muss, bestimmt der WMI-Anbieter, ob sich die Berichtsserver-Datenbank auf demselben Computer oder auf einem Remotecomputer befindet. Um zu bestimmen, ob es sich um eine lokale Installation handelt, wertet der WMI-Anbieter die DatabaseServerName-Eigenschaft anhand der folgenden Werteliste aus. Wenn eine Übereinstimmung gefunden wird, handelt es sich um eine lokale Datenbank. Andernfalls ist es eine Remotedatenbank. Beim Vergleich wird die Groß- und Kleinschreibung nicht berücksichtigt.  
+ Wenn *IsWindowsUser* auf true festgelegt ist und der in *UserName* bereitgestellte Wert übersetzt werden muss, bestimmt der WMI-Anbieter, ob sich die Berichtsserver-Datenbank auf demselben Computer oder auf einem Remotecomputer befindet. Um zu bestimmen, ob es sich um eine lokale Installation handelt, wertet der WMI-Anbieter die DatabaseServerName-Eigenschaft anhand der folgenden Werteliste aus. Wenn eine Übereinstimmung gefunden wird, handelt es sich um eine lokale Datenbank. Andernfalls ist es eine Remotedatenbank. Bei dem Vergleich wird Groß- und Kleinschreibung nicht unterschieden.  
   
 |Wert von "DatabaseServerName"|Beispiel|  
 |---------------------------------|-------------|  
@@ -98,24 +104,25 @@ out Int32 HRESULT);
 |„(local)“||  
 |„LOCAL“||  
 |localhost||  
-|\<Computername>|testlab14|  
-|\<ComputerFQDN>|example.redmond.microsoft.com|  
-|\<IP-Adresse>|180.012.345,678|  
+|\<MachineName->|testlab14|  
+|
+  \<ComputerFQDN>|example.redmond.microsoft.com|  
+|\<IPAddress->|180.012.345,678|  
   
- Wenn *IsWindowsUser* nastaven NA hodnotu `true`, der WMI-Anbieter ruft LookupAccountName auf, um die SID für das Konto abzurufen und anschließend ruft er LookupAccountSID zum Abrufen des Namens für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Skript. Hierdurch wird sichergestellt, dass der verwendete Kontoname die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überprüfung erfolgreich durchläuft.  
+ Wenn *IsWindowsUser* auf `true`festgelegt ist, ruft der WMI-Anbieter LookupAccountName auf, um die sid für das Konto zu erhalten, und ruft dann LookupAccountSid auf, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um den Namen zu erhalten, der in das Skript eingefügt werden soll. Hierdurch wird sichergestellt, dass der verwendete Kontoname die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überprüfung erfolgreich durchläuft.  
   
- Beim *IsWindowsUser* nastaven NA hodnotu `false`, wird das generierte Skript gewährt die **RSExec** -Rolle auf der Berichtsserver-Datenbank, die temporäre Berichtsserver-Datenbank und die MSDB-Datenbank.  
+ Wenn *IsWindowsUser* auf `false`festgelegt ist, gewährt das generierte Skript die **RSExec** -Rolle für die Berichts Server-Datenbank, die temporäre Berichts Server-Datenbank und die msdb-Datenbank.  
   
- Wenn *IsWindowsUser* nastaven NA hodnotu `false`, der SQL Server-Benutzer muss bereits vorhanden sein, auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für das Skript erfolgreich ausgeführt.  
+ Wenn *IsWindowsUser* auf `false`festgelegt ist, muss der SQL Server Benutzer bereits im vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sein, damit das Skript erfolgreich ausgeführt werden kann.  
   
  Wenn für den Berichtsserver keine Berichtsserver-Datenbank angegeben ist, wird bei einem Aufruf von GrantRightsToDatabaseUser ein Fehler zurückgegeben.  
   
  Das generierte Skript unterstützt [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
   
   

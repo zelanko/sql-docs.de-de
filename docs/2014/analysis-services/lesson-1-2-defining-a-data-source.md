@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079337"
 ---
 # <a name="defining-a-data-source"></a>Definieren einer Datenquelle
-  Nach dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekts beginnen Sie im Allgemeinen die Arbeit an dem Projekt, indem Sie mindestens eine Datenquelle definieren, die vom Projekt verwendet wird. Wenn Sie eine Datenquelle definieren, definieren Sie die Verbindungszeichenfolgeinformationen, die zum Verbinden der Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+  Nach dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts beginnen Sie im Allgemeinen die Arbeit an dem Projekt, indem Sie mindestens eine Datenquelle definieren, die vom Projekt verwendet wird. Wenn Sie eine Datenquelle definieren, definieren Sie die Verbindungszeichenfolgeinformationen, die zum Verbinden der Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  In der folgenden Aufgabe definieren Sie die AdventureWorksDWSQLServer2012-Beispieldatenbank als Datenquelle für das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt. Während sich diese Datenbank für die Zwecke dieses Lernprogramms auf Ihrem lokalen Computer befindet, werden Quelldatenbanken häufig auf mindestens einem Remotecomputer gehostet.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "66079337"
   
 4.  Im Dialogfeld **Verbindungs-Manager** definieren Sie Verbindungseigenschaften für die Datenquelle. Überprüfen Sie im Listenfeld **Anbieter** , ob **Native OLE DB\SQL Server Native Client 11.0** ausgewählt ist.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt auch andere Anbieter, die in der **Anbieter** -Liste angezeigt werden.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt auch andere Anbieter, die in der **Anbieter** Liste angezeigt werden.  
   
-5.  In der **Servernamen** Textfeld `localhost`.  
+5.  Geben `localhost`Sie im Textfeld **Server Name den Namen** ein.  
   
-     Geben Sie zum Verbinden mit einer benannten Instanz auf dem lokalen Computer **"localhost"\\< Instanzname\>** . Geben Sie den Computernamen oder die IP-Adresse ein, um eine Verbindung zu einem spezifischen Computer statt zum lokalen Computer herzustellen.  
+     Um eine Verbindung mit einer benannten Instanz auf Ihrem lokalen Computer herzustellen, geben Sie **\\ localhost\><Instanzname**ein. Geben Sie den Computernamen oder die IP-Adresse ein, um eine Verbindung zu einem spezifischen Computer statt zum lokalen Computer herzustellen.  
   
 6.  Überprüfen Sie, ob **Windows-Authentifizierung verwenden** ausgewählt ist. Wählen Sie im Listenfeld **Datenbanknamen eingeben oder auswählen** den Eintrag **AdventureWorksDW2012**aus.  
   
@@ -44,17 +44,18 @@ ms.locfileid: "66079337"
   
 8.  Klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
-9. Auf der Seite **Identitätswechselinformationen** des Assistenten definieren Sie die Sicherheitsinformationen für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zur Verbindungsherstellung mit der Datenquelle. Der Identitätswechsel wirkt sich auf das Windows-Konto aus, das zum Herstellen der Verbindung mit der Datenquelle verwendet wird, wenn die Windows-Authentifizierung ausgewählt ist. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt keinen Identitätswechsel für die Verarbeitung von OLAP-Objekten. Wählen Sie **Dienstkonto verwenden**aus, und klicken Sie anschließend auf **Weiter**.  
+9. Auf der Seite **Identitätswechselinformationen** des Assistenten definieren Sie die Sicherheitsinformationen für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zur Verbindungsherstellung mit der Datenquelle. Der Identitätswechsel wirkt sich auf das Windows-Konto aus, das zum Herstellen der Verbindung mit der Datenquelle verwendet wird, wenn die Windows-Authentifizierung ausgewählt ist. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt keinen Identitätswechsel für die Verarbeitung von OLAP-Objekten. Wählen Sie **Dienstkonto verwenden**aus, und klicken Sie anschließend auf **Weiter**.  
   
 10. Bestätigen Sie auf der Seite **Assistenten abschließen** den Standardnamen **Adventure Works DW 2012**, und klicken Sie anschließend auf **Fertig stellen** , um die neue Datenquelle zu erstellen.  
   
 > [!NOTE]  
 >  Wenn Sie die Eigenschaften einer Datenquelle nach dem Erstellen ändern möchten, doppelklicken Sie im Ordner **Datenquellen** auf die Datenquelle, um die Eigenschaften der Datenquelle im **Datenquellen-Designer**anzuzeigen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Definieren einer Datenquellensicht](lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Datenquelle (SSAS: mehrdimensional)](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
