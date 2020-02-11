@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211297"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
-  In diesem Thema wird beschrieben, wie Sie Infodermationen in Bezug auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
+  In diesem Thema wird beschrieben, wie Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Informationen zu- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Warnungen [!INCLUDE[tsql](../../includes/tsql-md.md)]in mithilfe von oder anzeigen können.  
   
  **In diesem Thema**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68211297"
   
      [Sicherheit](#Security)  
   
--   **So zeigen Sie Informationen zu einer Warnung an mit**  
+-   **So zeigen Sie Informationen zu einer Warnung an mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68211297"
 ####  <a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Information über eine Warnung anzeigen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>So zeigen Sie Informationen zu einer Warnung an  
   
@@ -57,15 +57,15 @@ ms.locfileid: "68211297"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Warnung mit den von Ihnen gewünschten Informationen, die Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-     Weitere Informationen zu den im Dialogfeld _Eigenschaften von Warnung_**Warnungsname** enthaltenen verfügbaren Optionen finden Sie unter:  
+     Weitere Informationen zu den verfügbaren Optionen im Dialogfeld Eigenschaften von _alert_name_**Warnung** finden Sie unter:  
   
-    -   [Warnung-Eigenschaften – neue Warnung &#40;Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Warnungs Eigenschaften-neue Warnung &#40;Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Warnung-Eigenschaften – neue Warnung &#40;Seite "Antwort"&#41;](alert-properties-new-alert-response-page.md)  
+    -   [Warnungs Eigenschaften-Seite "neue Warnung &#40;Antwort"&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [Eigenschaften von Warnung: Neue Warnung &#40;Seite "Optionen"&#41;](alert-properties-new-alert-options-page.md)  
+    -   [Warnungs Eigenschaften: Seite "neue Warnung &#40;Optionen"&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Warnungseigenschaften &#40;Seite „Verlauf“&#41;](alert-properties-history-page.md)  
+    -   [Warnungs Eigenschaften &#40;Seite "Verlauf"&#41;](alert-properties-history-page.md)  
   
 5.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "68211297"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_help_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_help_alert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
   
   

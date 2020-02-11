@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055562"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP-Verbindungs-Manager-Editor
@@ -26,7 +26,7 @@ ms.locfileid: "66055562"
   
  Weitere Informationen zum SMTP-Verbindungs-Manager finden Sie unter [SMTP Connection Manager](connection-manager/smtp-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager an.  
   
@@ -43,12 +43,12 @@ ms.locfileid: "66055562"
 >  Der SMTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Windows-Authentifizierung. Er unterstützt keine Standardauthentifizierung.  
   
 > [!NOTE]  
->  Wenn Microsoft Exchange als SMTP-Server verwendet wird, müssen Sie möglicherweise festlegen **Windows-Authentifizierung verwenden** zu `True`. Exchange-Server können so konfiguriert sein, dass keine nicht authentifizierten SMTP-Verbindungen zugelassen sind.  
+>  Wenn Sie Microsoft Exchange als SMTP-Server verwenden, müssen Sie möglicherweise die **Windows-Authentifizierung verwenden** auf `True`festlegen. Exchange-Server können so konfiguriert sein, dass keine nicht authentifizierten SMTP-Verbindungen zugelassen sind.  
   
- **Secure Sockets Layer (SSL) aktivieren**  
+ **Aktivieren von Secure Sockets Layer (SSL)**  
  Wählen Sie diese Option aus, um beim Senden von E-Mail-Nachrichten die Kommunikation mit SSL (Secure Sockets Layer) zu verschlüsseln.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

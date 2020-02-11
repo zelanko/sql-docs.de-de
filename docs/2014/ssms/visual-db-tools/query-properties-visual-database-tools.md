@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011478"
 ---
 # <a name="query-properties-visual-database-tools"></a>Abfrageeigenschaften (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63011478"
 > [!NOTE]  
 >  Die Eigenschaften in diesem Thema sind nicht alphabetisch, sondern nach Kategorie sortiert.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Kategorie Identität**  
  Erweitern Sie das Element, um die **Name** -Eigenschaft anzuzeigen.  
   
@@ -82,8 +82,8 @@ ms.locfileid: "63011478"
  **WITH TIES**  
  Geben Sie an, dass die Sicht eine WITH TIES-Klausel enthält. Diese Klausel ist hilfreich, wenn eine Sicht sowohl eine ORDER BY-Klausel als auch eine TOP-Klausel mit Prozentangabe enthält. Wenn diese Option festgelegt ist und der Prozentbereich in der Mitte einer Zeilenfolge mit identischen Werten in der ORDER BY-Klausel endet, wird die Sicht bis ans Ende der betreffenden Zeilenfolge erweitert. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 oder höher.)  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfrage mit Parametern &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Abfragen mit Parametern &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

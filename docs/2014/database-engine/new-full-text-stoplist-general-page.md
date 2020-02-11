@@ -1,5 +1,5 @@
 ---
-title: Neue Volltext-Stoppliste (Seite Allgemein) | Microsoft-Dokumentation
+title: Neue Volltext-Stopp Liste (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774212"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Neue Volltext-Stoppliste (Seite 'Allgemein')
   In diesem Dialogfeld können Sie eine neue Volltext-Stoppliste erstellen. Eine *Stoppliste* ist eine Sammlung häufig verwendeter Wörter, die als *Stoppwörter*bezeichnet werden. Diese werden bei der Volltextindizierung für Tabellen, denen die Stoppliste zugewiesen wurde, weggelassen. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md).  
   
- **Erstellen Sie eine Stoppliste mit SQL Server Management Studio**  
+ **So erstellen Sie eine Stoppliste mit SQL Server Management Studio**  
   
 -   [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name der Volltext-Stoppliste**  
  Geben Sie hier den Namen für die Volltext-Stoppliste ein.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774212"
   
  Wenn eine in den Stoppwörtern der Quellstoppliste angegebene Sprache in der aktuellen Datenbank nicht registriert ist, wird CREATE FULLTEXT STOPLIST erfolgreich ausgeführt. Allerdings werden Warnungen zurückgegeben, und die entsprechenden Stoppwörter werden nicht hinzugefügt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   

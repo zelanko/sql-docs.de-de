@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232282"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
@@ -112,8 +112,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR-Datentyp (SQL Server)**|**SQL Server-Datentyp**|  
-|`Decimal`|smallmoney|  
-|`SqlMoney`|smallmoney|  
+|`Decimal`|SMALLMONEY|  
+|`SqlMoney`|SMALLMONEY|  
 |`Decimal`|money|  
 |`DateTime`|smalldatetime|  
 |`SQLDateTime`|smalldatetime|  
@@ -125,6 +125,6 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |Die `SqlGeography`-, `SqlGeometry`- und `SqlHierarchyId`-Typen wurden der Zuordnungstabelle hinzugefügt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Datentypen im .NET Framework](sql-server-data-types-in-the-net-framework.md)  
+ [SQL Server-Datentypen in .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

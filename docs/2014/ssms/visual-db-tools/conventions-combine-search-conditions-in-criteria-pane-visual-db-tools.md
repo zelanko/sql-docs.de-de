@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140385"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich (Visual Database Tools)
@@ -166,7 +166,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  Wenn Sie die Abfrage ändern (z. B. durch Ändern eines der Werte im Kriterienbereich), erstellt der Abfrage- und Sicht-Designer die SQL-Anweisung im SQL-Bereich neu. Die neu erstellte SQL-Anweisung stimmt eher mit der Anzeige im Kriterienbereich als mit der ursprünglichen Anweisung überein. Wenn der Kriterienbereich z. B. verteilte AND-Klauseln enthält, wird die Anweisung im SQL-Bereich mit eindeutig verteilten AND-Klauseln erstellt. Ausführliche Informationen finden Sie weiter oben unter "Verwenden von AND mit mehreren OR-Klauseln".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

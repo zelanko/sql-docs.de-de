@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48e5aeab043fcfd0e65150ea3a1008d726cb0ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869258"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62869258"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Meldungstext|Tabellenfehler: Page P_ID ist leer in Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Typ TYPE). Dies ist auf der LEVEL-Ebene der B-Struktur unzulässig.|  
+|Meldungstext|Tabellenfehler: Die Seite P_ID ist in der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) leer. Dies ist auf der LEVEL-Ebene der B-Struktur unzulässig.|  
   
 ## <a name="explanation"></a>Erklärung  
  Eine Seite der B-Struktur über der Blattebene des angegebenen Indexes ist leer, hat also keine Zeilen. Dieses Verhalten ist möglich für Seiten auf der Blattebene in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], war jedoch niemals möglich in Strukturebenen.  

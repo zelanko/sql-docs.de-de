@@ -1,5 +1,5 @@
 ---
-title: Benutzer-Auswahldialogfeld (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Benutzer Auswahl (Dialog Feld) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065490"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Benutzerauswahl' (Analysis Services – Mehrdimensionale Daten)
@@ -24,12 +24,12 @@ ms.locfileid: "66065490"
   
  Klicken Sie zum Öffnen des Dialogfelds **Benutzerauswahl** im Assistenten für verwendungsbasierte Optimierung auf der Seite **Abfragekriterien angeben** für die Option **Benutzer** auf die Schaltfläche mit den drei Punkten (...).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Benutzer auswählen**  
  Wählen Sie die Benutzer aus, nach denen Abfragen aus dem Abfrageprotokoll gefiltert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Abfragekriterien angeben &#40;Verwendungsbasierte Optimierung-Assistent&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Geben Sie die Abfrage Kriterien &#40;Assistenten für Verwendungs basierte Optimierung an&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

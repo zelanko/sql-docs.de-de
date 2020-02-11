@@ -1,5 +1,5 @@
 ---
-title: Sp_unbindefault (Transact-SQL) | Microsoft-Dokumentation
+title: sp_unbindefault (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095884"
 ---
-# <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
+# <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Hebt die Bindung eines Standardwerts an eine Spalte oder einen Aliasdatentyp in der aktuellen Datenbank auf.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Es wird empfohlen, dass Sie Default-Definitionen erstellen, mit dem DEFAULT-Schlüsselwort in der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) Anweisungen stattdessen.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Es wird empfohlen, stattdessen mithilfe des Default-Schlüssel Worts in den [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) -Anweisungen Standarddefinitionen zu erstellen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,20 +43,21 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object_name'` Ist der Name der Tabelle und Spalte oder der Aliasdatentyp, von dem der Standardwert ist, entfernt werden soll. *Object_name* ist **nvarchar(776)** , hat keinen Standardwert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
+`[ @objname = ] 'object_name'`Der Name der Tabelle und Spalte oder der Alias Datentyp, von dem aus der Standardwert für die Bindung aufgehoben wird. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
   
  Beim Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp wird auch die Bindung für alle Spalten dieses Datentyps, die denselben Standardwert aufweisen, aufgehoben. Spalten dieses Datentyps mit Standardwerten, die direkt an diese gebunden sind, sind nicht betroffen.  
   
 > [!NOTE]  
->  *Object_name* können Klammern enthalten **[]** als begrenzungsbezeichnerzeichen. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
+>  *object_name* können eckige Klammern **[]** als Begrenzungs Bezeichner enthalten. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)** , hat den Standardwert NULL. Wenn *Futureonly_flag* ist **Futureonly**, verlieren vorhandene Spalten des Datentyps nicht der angegebene Standardwert.  
+`[ @futureonly = ] 'futureonly_flag'`Wird nur beim Aufheben der Bindung eines standardmäßigen von einem Alias Datentyp verwendet. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn *futureonly_flag* **futureonly**ist, verlieren vorhandene Spalten des-Datentyps nicht den angegebenen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- Führen Sie zum Anzeigen der Text des Standards **Sp_helptext** mit dem Namen des Standardwerts als Parameter.  
+## <a name="remarks"></a>Bemerkungen  
+ Um den Text eines Standard-anzuzeigen, führen Sie **sp_helptext** mit dem Namen des Standardwerts als Parameter aus.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Aufheben der Bindung eines Standardwerts an eine Tabellenspalte ist die ALTER-Berechtigung für die Tabelle erforderlich. Zum Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp ist für den Datentyp die CONTROL-Berechtigung bzw. für das Schema, zu dem der Datentyp gehört, die ALTER-Berechtigung erforderlich.  
@@ -77,15 +78,15 @@ EXEC sp_unbindefault 'employees.hiredate';
 EXEC sp_unbindefault 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>C. Verwenden von futureonly_flag  
+### <a name="c-using-the-futureonly_flag"></a>C. Verwenden des futureonly_flag  
  Im folgenden Beispiel wird die Bindung zukünftiger Verwendungen des Aliasdatentyps `ssn` aufgehoben, ohne dass vorhandene `ssn`-Spalten davon betroffen sind.  
   
 ```  
 EXEC sp_unbindefault 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. Verwendung von begrenzungsbezeichnern  
- Das folgende Beispiel zeigt die Verwendung von begrenzungsbezeichnern im *Object_name* Parameter.  
+### <a name="d-using-delimited-identifiers"></a>D: Verwenden von Begrenzungs Bezeichnerzeichen  
+ Das folgende Beispiel zeigt die Verwendung von Begrenzungs bezeichnerbezeichern in *object_name* Parameter.  
   
 ```  
 CREATE TABLE [t.3] (c1 int); -- Notice the period as part of the table   
@@ -99,12 +100,12 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [Drop default &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

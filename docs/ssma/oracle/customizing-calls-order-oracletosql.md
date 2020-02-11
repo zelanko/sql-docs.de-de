@@ -1,5 +1,5 @@
 ---
-title: Customizing Calls Order anpassen (OracleToSQL) | Microsoft-Dokumentation
+title: Anpassen von Aufruf Reihenfolge (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,21 +13,21 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266099"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>Anpassen der Reihenfolge der Aufrufe (OracleToSQL)
-In diesem Schritt wählen Sie die Reihenfolge, in der die Objekte zum Testen aufgerufen werden.  
+In diesem Schritt wählen Sie die Reihenfolge aus, in der die zu testenden Objekte aufgerufen werden.  
   
 ## <a name="customizing-order"></a>Anpassen der Reihenfolge  
-Verwenden Sie die Schaltflächen eingefügt oben im Raster mit Liste von Objekten, die Objekte in der richtigen Reihenfolge zu platzieren. Alternativ können Sie Schaltflächen angezeigt, auf der richtigen Zeitpunkt die Zeile ausgewählt wird.  
+Verwenden Sie die Schaltflächen oben im Raster mit einer Liste von Objekten, um die Objekte in der richtigen Reihenfolge zu platzieren. Alternativ können Sie Schaltflächen verwenden, die auf der rechten Seite angezeigt werden, wenn die Zeile ausgewählt wird.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Finishing Test Case Preparation beenden &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Fertigstellung der Test Fall Vorbereitung &#40;oracleto SQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

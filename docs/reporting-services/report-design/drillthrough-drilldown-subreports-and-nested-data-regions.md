@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578776"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche
@@ -26,7 +26,7 @@ ms.locfileid: "65578776"
   
  C. Geschachtelte Datenbereiche  
   
- D. Drilldownaktion  
+ D: Drilldownaktion  
   
  All diese Optionen haben Gemeinsamkeiten, dienen aber unterschiedlichen Zwecken und bieten unterschiedliche Funktionen. Zwei dieser Optionen, Drillthroughberichte und Unterberichte, sind eigentlich separate Berichte. Die Schachtelung ist eine Methode, mit der ein Datenbereich in einen anderen Datenbereich eingefügt wird. Ein Drilldown ist eine Aktion, die für jedes Berichtselement verwendet werden kann, um andere Berichtselemente auszublenden und anzuzeigen. Bei all diesen Optionen handelt es sich um Methoden zum Organisieren und Anzeigen von Daten, die Benutzern das Verständnis des Berichts erleichtern.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "65578776"
 ##  <a name="SummaryCharacteristics"></a> Zusammenfassung der Merkmale  
  In der folgenden Tabelle werden die unterschiedlichen Merkmale zusammengefasst. Details werden in separaten Abschnitten an späterer Stelle dieses Thema erläutert. Die Drilldownaktion ist nicht in diesen Vergleichen enthalten, da diese Ein- und Ausblendeaktion auf alle Berichtselemente angewendet werden kann.  
   
-|Merkmal|Unterbericht|Drillthroughberichte|geschachtelt|  
+|Merkmal|Unterbericht|Drillthrough ausführen|geschachtelt|  
 |-----------|---------------|------------------|------------|  
-|Verwendung eines Datasets des Hauptberichts|Gleich oder unterschiedlich|Gleich oder unterschiedlich|Gleich|  
+|Verwendung eines Datasets des Hauptberichts|Gleich oder unterschiedlich|Gleich oder unterschiedlich|identisch|  
 |Abruf von Daten|Daten werden zur gleichen Zeit abgerufen wie der Hauptbericht.|Daten werden für jeweils einen Drillthroughbericht abgerufen.|Alle Daten werden zur gleichen Zeit abgerufen wie der Hauptbericht.|  
 |Verarbeitung und Rendern|Mit dem Hauptbericht|Beim Klicken auf den Link|Mit dem Hauptbericht|  
 |Leistung|Langsamer (ruft aber alle Daten mit dem Hauptbericht ab)|Schneller (ruft aber nicht alle Daten mit dem Hauptbericht ab)|Schneller (und ruft alle Daten mit dem Hauptbericht ab)|  

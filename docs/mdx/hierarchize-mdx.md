@@ -1,5 +1,5 @@
 ---
-title: HIERARCHIZE (MDX) | Microsoft-Dokumentation
+title: Hierarchize (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105436"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
@@ -31,15 +31,15 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Hierarchize** -Funktion ordnet die Elemente der angegebenen Menge in hierarchischer Reihenfolge. Die Funktion behält Duplikate immer bei.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Hierarchize** -Funktion organisiert die Elemente der angegebenen Menge in hierarchischer Reihenfolge. Die Funktion behält Duplikate immer bei.  
   
--   Wenn **POST** nicht angegeben wird, sortiert die Funktion die Elemente in einer Ebene in ihrer natürlichen Reihenfolge. Die natürliche Reihenfolge stellt die Standardsortierung der Elemente in der Hierarchie dar, wenn keine anderen Sortierbedingungen angegeben werden. Untergeordnete Elemente werden unmittelbar nach ihren übergeordneten Elementen angeordnet.  
+-   Wenn **Post** nicht angegeben wird, sortiert die Funktion Elemente in der natürlichen Reihenfolge in einer Ebene. Die natürliche Reihenfolge stellt die Standardsortierung der Elemente in der Hierarchie dar, wenn keine anderen Sortierbedingungen angegeben werden. Untergeordnete Elemente werden unmittelbar nach ihren übergeordneten Elementen angeordnet.  
   
--   Wenn **POST** angegeben wird, die **Hierarchize** -Funktion sortiert die Elemente einer Ebene in der Postorder-Reihenfolge. Untergeordnete Elemente gehen also den ihnen übergeordneten Elementen voran.  
+-   Wenn **Post** angegeben wird, sortiert die **Hierarchize** -Funktion die Elemente in einer Ebene in der Post-Natural-Reihenfolge. Untergeordnete Elemente gehen also den ihnen übergeordneten Elementen voran.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Drillup für das Canada-Element durchgeführt. Die **Hierarchize** Funktion wird verwendet, um die angegebenen Elemente der Menge in hierarchischer Reihenfolge zu organisieren, die erforderlich ist der **DrillUpMember** Funktion.  
+ Im folgenden Beispiel wird ein Drillup für das Canada-Element durchgeführt. Die **Hierarchize** -Funktion wird verwendet, um die angegebenen Satz Elemente in hierarchischer Reihenfolge zu organisieren, die für die **DrillupMember** -Funktion erforderlich ist.  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +58,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten neun Monate von 2003 in die `Date` -Dimension, aus der **Adventure Works** Cube. Die **PeriodsToDate** -Funktion definiert die Tupel in der Gruppe, in dem die Aggregatfunktion ausgeführt wird. Die **Hierarchize** -Funktion ordnet die Elemente der angegebenen Menge von Elementen aus der Product-Dimension in hierarchischer Reihenfolge.  
+ Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten neun Monate 2003 in der `Date` -Dimension, aus dem **Adventure Works** -Cube zurückgegeben. Die **PeriodsToDate** -Funktion definiert die Tupel in der Menge, über die die Aggregatfunktion ausgeführt wird. Die **Hierarchize** -Funktion organisiert die Member der angegebenen Menge von Elementen aus der Product-Dimension in hierarchischer Reihenfolge.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -85,7 +85,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

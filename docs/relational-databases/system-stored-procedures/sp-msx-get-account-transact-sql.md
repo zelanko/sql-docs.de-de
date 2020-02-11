@@ -1,5 +1,5 @@
 ---
-title: Sp_msx_get_account (Transact-SQL) | Microsoft-Dokumentation
+title: sp_msx_get_account (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108043"
 ---
-# <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
+# <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Listet Informationen zu den Anmeldeinformationen auf, die der Zielserver für die Anmeldung am Masterserver verwendet.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,19 +39,19 @@ sp_msx_get_account
 ```  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
  Gibt das folgende Resultset zurück:  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|Nummer der Masterserververbindung|  
 |msx_credential_id|**int**|ID der Anmeldeinformationen, die für diese Masterserververbindung verwendet werden.|  
 |msx_credential_name|**sysname**|Name der Anmeldeinformationen, die für diese Masterserververbindung verwendet werden.|  
 |msx_login_name|**nvarchar(4000)**|Domänenname und Benutzername des Windows-Benutzers für die Anmeldeinformationen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Gibt ein leeres Resultset zurück, wenn für diesen Zielserver keine Anmeldeinformationen angegeben wurden. Verwenden Sie sp_msx_set_account zum Festlegen der Anmeldeinformationen.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -76,9 +76,9 @@ GO
   
  `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_msx_set_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
+ [sp_msx_set_account &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
   
   

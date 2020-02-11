@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273431"
 ---
 # <a name="server-element-dta"></a>Server-Element (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63273431"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -49,8 +49,8 @@ ms.locfileid: "63273431"
 |**Übergeordnetes Element**|[DTAInput-Element &#40;DTA&#41;](dtainput-element-dta.md)|  
 |**Untergeordnete Elemente**|[Name-Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Database-Element für Server &#40;DTA&#41;](database-element-for-server-dta.md)|  
   
-## <a name="remarks"></a>Hinweise  
- Geben Sie nur einen `Server` -Element für die `DTAInput` Element. Dieses Element hat im DTA-XML-Schema den Namen **ServerDetailsTypecomplexType** . Dieses `Server`-Element ist nicht mit dem untergeordneten Element für das `Configuration`-Element identisch. Weitere Informationen finden Sie unter [Server-Element für Konfiguration &#40;DTA&#41;](server-element-for-configuration-dta.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können nur ein `Server` -Element für das `DTAInput` -Element angeben. Dieses Element hat im DTA-XML-Schema den Namen **ServerDetailsTypecomplexType** . Dieses `Server`-Element ist nicht mit dem untergeordneten Element für das `Configuration`-Element identisch. Weitere Informationen finden Sie unter [Server-Element für Konfiguration &#40;DTA&#41;](server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die **Sales.SalesPerson** -Tabelle in der **AdventureWorks** -Datenbank auf SERVER001 angegeben wird:  
@@ -70,7 +70,7 @@ ms.locfileid: "63273431"
 </Server  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sysopentapes (Transact-SQL) | Microsoft-Dokumentation
+title: sysopentapes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,29 +19,29 @@ ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 813592ffa5b67a4926dff611c2ba0e0faf36d273
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029798"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jedes aktuell geöffnete Bandmedium. Diese Ansicht befindet sich in der **master** Datenbank.  
+  Enthält eine Zeile für jedes aktuell geöffnete Bandmedium. Diese Sicht wird in der **Master** -Datenbank gespeichert.  
   
 > [!IMPORTANT]  
->  Diese Systemtabelle wird aus Gründen der Abwärtskompatibilität als Sicht bereitgestellt. Verwenden Sie stattdessen die [Sys. dm_io_backup_tapes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) dynamische verwaltungssicht.  
+>  Diese Systemtabelle wird aus Gründen der Abwärtskompatibilität als Sicht bereitgestellt. Verwenden Sie stattdessen die dynamische Verwaltungs Sicht [sys. dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) .  
   
 > [!NOTE]  
->  Sie können nicht gelöscht werden die **Sysopentapes** anzeigen.  
+>  Die **sysopentapes** -Sicht kann nicht gelöscht werden.  
 
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**openTape**|**Nvarchar(64)**|Physischer Dateiname des geöffneten Bandmediums. Weitere Informationen zum Öffnen und Freigeben von Bandmedien finden Sie unter [Sicherung &#40;Transact-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md) und [wiederherstellen &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
+|**openTape**|**nvarchar (64)**|Physischer Dateiname des geöffneten Bandmediums. Weitere Informationen zum Öffnen und Freigeben von Band Geräten finden Sie unter [Backup &#40;Transact-SQL-&#41;](../../t-sql/statements/backup-transact-sql.md) und [Restore &#40;Transact-SQL-&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Der Benutzer benötigt die VIEW SERVER STATE-Berechtigung auf dem Server.  
+ Der Benutzer benötigt die View Server State-Berechtigung auf dem Server.  
   
   

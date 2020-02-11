@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760039"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Große benutzerdefinierte CLR-Typen (OLE DB)
@@ -25,16 +25,17 @@ ms.locfileid: "73760039"
 
   In diesem Abschnitt werden Änderungen an OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
   
- Weitere Informationen zur Unterstützung großer CLR-UDTs in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter [große CLR-benutzerdefinierte Typen](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Ein Beispiel finden Sie unter [Verwenden von großen CLR- &#40;UDTs OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Weitere Informationen zur Unterstützung großer CLR-UDTs in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter [große CLR-benutzerdefinierte Typen](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Ein Beispiel finden Sie unter [Verwenden von großen CLR-UDTs &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Datenformat  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet ~0 zur Darstellung der Länge von Werten, die für große Objekttypen (Large Object Types, LOB) keine Größenbeschränkung aufweisen. ~0 stellt auch die Größe von CLR-UDTs dar, die größer als 8.000 Byte sind.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet ~0 zur Darstellung der Länge von Werten, die für große Objekttypen (Large Object Types, LOB) keine Größenbeschränkung aufweisen. ~0 stellt auch die Größe von CLR-UDTs dar, die größer als 8.000 Byte sind.  
   
  In der folgenden Tabelle wird die Datentypzuordnung in Parametern und Rowsets dargestellt:  
   
-|SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|Wert|  
+|SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|value|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR-UDT|DBTYPE_UDT|BYTE[](Bytearray)\)|132 (oledb.h)|  
+|CLR-UDT|DBTYPE_UDT|BYTE[]\(Bytearray)\)|132 (oledb.h)|  
   
  UDT-Werte werden als Bytearrays dargestellt. Konvertierungen zu und von hexadezimalen Zeichenfolgen werden unterstützt. Literalwerte werden mit dem Präfix 0x als hexadezimale Zeichenfolgen dargestellt. Eine Hexadezimalzeichenfolge ist die Textdarstellung der Binärdaten zur Basis 16. Ein Beispiel dafür ist eine Konvertierung vom Servertyp **varbinary(10)** in DBTYPE_STR, die zu einer hexadezimalen Darstellung von 20 Zeichen führt, wobei jedes Zeichenpaar ein einzelnes Byte repräsentiert.  
   
@@ -54,15 +55,15 @@ ms.locfileid: "73760039"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Die folgenden Informationen werden in der DBPARAMINFO-Struktur durch **prgParamInfo** zurückgegeben:  
   
-|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bscale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
-|DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|"DBTYPE_UDT"|*n*|nicht definiert|nicht definiert|Löschen|  
-|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|"DBTYPE_UDT"|~0|nicht definiert|nicht definiert|Menge|  
+|DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|"DBTYPE_UDT"|*n*|nicht definiert|nicht definiert|clear|  
+|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|"DBTYPE_UDT"|~0|nicht definiert|nicht definiert|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Die in der DBPARAMBINDINFO-Struktur bereitgestellten Informationen müssen Folgendem entsprechen:  
   
-|Parametertyp|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|Parametertyp|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bscale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|DBTYPE_UDT|*n*|wird ignoriert.|wird ignoriert.|Muss festgelegt werden, wenn der Parameter mit DBTYPE_IUNKNOWN übergeben werden soll.|  
 |DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|~0|wird ignoriert.|wird ignoriert.|wird ignoriert.|  
@@ -76,11 +77,11 @@ ms.locfileid: "73760039"
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|DBTYPE_UDT|*n*|NULL|NULL|Löschen|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|~0|NULL|NULL|Legen Sie|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|~0|NULL|NULL|Set|DB_ALL_EXCEPT_LIKE|0|  
   
  Die folgenden Spalten werden ebenfalls für UDTs definiert:  
   
-|Spalten-ID|Typ|Beschreibung|  
+|Spalten-ID|type|BESCHREIBUNG|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Katalogs, in dem der UDT definiert ist.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Schemas, in dem der UDT definiert ist.|  
@@ -90,10 +91,10 @@ ms.locfileid: "73760039"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  Die in der DBCOLUMNINFO-Struktur zurückgegebenen Informationen lauten wie folgt:  
   
-|Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
+|Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bscale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|DBTYPE_UDT|*n*|~0|~0|Löschen|  
-|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|~0|~0|~0|Legen Sie|  
+|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|~0|~0|~0|Set|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS-Rowset (Schemarowsets)  
  Die folgenden Spaltenwerte werden für UDT-Typen zurückgegeben:  
@@ -101,11 +102,11 @@ ms.locfileid: "73760039"
 |Spaltentyp|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|DBTYPE_UDT|Löschen|*n*|  
-|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|Legen Sie|0|  
+|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|Set|0|  
   
  Die folgenden zusätzlichen Spalten werden für UDTs definiert:  
   
-|Spaltenbezeichner|Typ|Beschreibung|  
+|Spaltenbezeichner|type|BESCHREIBUNG|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Katalogs, in dem der UDT definiert ist.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Schemas, in dem der UDT definiert ist.|  
@@ -172,7 +173,7 @@ ms.locfileid: "73760039"
   
  Wenn **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) auf „80“ festgelegt ist, werden UDT-Typen für Clients ebenso angezeigt wie für Downlevelclients.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Große benutzerdefinierte CLR-Typen](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

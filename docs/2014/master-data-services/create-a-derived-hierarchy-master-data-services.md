@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479963"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Erstellen einer abgeleiteten Hierarchie (Master Data Services)
@@ -26,22 +26,22 @@ ms.locfileid: "65479963"
 > [!NOTE]  
 >  Wenn ein domänenbasierter Attributwert für ein Element nicht vorhanden ist, ist das Element nicht in der abgeleiteten Hierarchie enthalten. Gehen Sie auf die Seite [Erfordern von Attributwerten &#40;Master Data Services&#41;](require-attribute-values-master-data-services.md), um einen domänenbasierten Attributwert für alle Mitglieder anzufordern.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-derived-hierarchy"></a>So erstellen Sie eine abgeleitete Hierarchie  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
-2.  Auf der **Modellansicht** Seite zeigen Sie auf der Menüleiste **verwalten** , und klicken Sie auf **abgeleitete Hierarchien**.  
+2.  Zeigen Sie auf der Seite **Modell Ansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **abgeleitete Hierarchien**.  
   
 3.  Wählen Sie auf der Seite **Verwaltung abgeleiteter Hierarchien** aus der Liste **Modell** ein Modell aus.  
   
-4.  Klicken Sie auf **abgeleitete Hierarchie hinzufügen**.  
+4.  Klicken auf **abgeleitete Hierarchie hinzufügen**  
   
 5.  Geben Sie auf der Seite **Abgeleitete Hierarchie hinzufügen** im Feld **Name der abgeleiteten Hierarchie** einen Namen für die Hierarchie ein.  
   
@@ -50,15 +50,15 @@ ms.locfileid: "65479963"
   
 6.  Klicken Sie auf **Abgeleitete Hierarchie speichern**.  
   
-7.  Auf der **abgeleitete Hierarchie bearbeiten** auf der Seite die **verfügbare Entitäten und Hierarchien** Bereich, klicken Sie auf eine Entität oder eine Hierarchie, und ziehen Sie dann auf die **aktuelle Ebenen** Bereich.  
+7.  Klicken Sie auf der Seite **abgeleitete Hierarchie bearbeiten** im Bereich **Verfügbare Entitäten und Hierarchien** auf eine Entität oder Hierarchie, und ziehen Sie Sie in den Bereich **aktuelle Ebenen** .  
   
 8.  Ziehen Sie Entitäten oder Hierarchien in diesen Bereich, bis die Hierarchie vollständig ist.  
   
 9. Klicken Sie auf **Zurück**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
- [Abgeleitete Hierarchien mit expliziten Abschlüssen &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Domänenbasierte Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+ [Abgeleitete Hierarchien mit expliziten Caps &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [Domänen basierte Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
   

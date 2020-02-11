@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrageverarbeitung (PowerPivot für SharePoint) | Microsoft-Dokumentation
+title: Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrage Verarbeitung (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087511"
 ---
-# <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrageverarbeitung (PowerPivot für SharePoint)
+# <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrage Verarbeitung (PowerPivot für SharePoint)
   Im integrierten SharePoint-Modus kann eine Analysis Services-Serverinstanz für die Unterstützung bestimmter Verarbeitungsanforderungen wie der Datenaktualisierung oder reinen Abfrageverarbeitung konfiguriert werden. Standardmäßig sind beide Typen von Ladeanforderungen aktiviert. Sie können einen der beiden Typen deaktivieren, um eine dedizierte Abfrage-Engine oder einen Datenaktualisierungsserver zu erstellen.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
 > [!NOTE]  
 >  In dieser Version gibt es keine Konfigurationseinstellungen zur Begrenzung der Speicherauslastung oder CPU-Nutzung für Datenaktualisierungsaufträge oder bedarfsgesteuerte Abfragen. Eine [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)]-Instanz verwendet alle verfügbaren Ressourcen zur Ausführung der von ihr verwalteten Abfragen und Datenaktualisierungsaufträge.  
@@ -29,11 +29,11 @@ ms.locfileid: "66087511"
   
  [Konfigurieren eines Verarbeitungsmodus](#config)  
   
- [Ändern Sie die Anzahl von datenaktualisierungsaufträgen, die parallel ausgeführt werden können](#change)  
+ [Ändern der Anzahl von Datenaktualisierungsaufträgen, die gleichzeitig ausgeführt werden können](#change)  
   
-##  <a name="config"></a> Konfigurieren eines Verarbeitungsmodus  
+##  <a name="config"></a>Konfigurieren eines Verarbeitungsmodus  
   
-1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Dienste auf dem Server verwalten**.  
+1.  Klicken Sie in der zentral Administration unter System Einstellungen auf **Dienste auf dem Server verwalten**.  
   
 2.  Klicken Sie oben auf der Seite unter Server auf den Pfeil nach unten und dann auf **Server ändern**.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "66087511"
   
 5.  Führen Sie unter Verwendung von Dienstinstanzen folgende Schritte aus:  
   
-    1.  Deaktivieren Sie das Kontrollkästchen **Laden von schreibgeschützten Datenbanken aktivieren** um die bedarfsgesteuerte abfrageverarbeitung zu deaktivieren, das auftritt, wenn ein Benutzer eine Arbeitsmappe öffnet, die PowerPivot-Daten enthält.  
+    1.  Deaktivieren Sie das Kontrollkästchen **Laden von schreibgeschützten Datenbanken aktivieren** , um die Bedarfs gesteuerte Abfrage Verarbeitung zu deaktivieren, die auftritt, wenn ein Benutzer eine Arbeitsmappe öffnet, die Power Pivot-Daten enthält.  
   
-    2.  Deaktivieren Sie das Kontrollkästchen **Laden von Datenbanken für die Aktualisierung aktivieren** planmäßige datenaktualisierung deaktivieren.  
+    2.  Deaktivieren Sie das Kontrollkästchen **Laden von Datenbanken für die Aktualisierung aktivieren** , um die geplante Datenaktualisierung zu deaktivieren.  
   
     > [!NOTE]  
     >  Durch das Deaktivieren der Datenaktualisierung werden keine Datenaktualisierungsoptionen aus SharePoint-Websites entfernt. Besitzer von PowerPivot-Arbeitsmappen können weiterhin Zeitpläne für Datenaktualisierungen erstellen, die Datenaktualisierung wird jedoch auf diesem Server nicht ausgeführt.  
@@ -54,15 +54,15 @@ ms.locfileid: "66087511"
   
 7.  Speichern Sie die Änderungen. Der Server überprüft Ihre Eingaben erst nach Auftreten eines Verarbeitungsereignisses. Wenn Sie für die gleichzeitigen Aufträge einen ungültigen Wert eingeben, wird der Fehler erkannt und bei der Verarbeitung der nächsten Anforderung protokolliert.  
   
-##  <a name="change"></a> Ändern Sie die Anzahl von datenaktualisierungsaufträgen, die parallel ausgeführt werden können  
+##  <a name="change"></a>Ändern der Anzahl der Daten Aktualisierungs Aufträge, die parallel ausgeführt werden können  
  Ein Datenaktualisierungsauftrag ist ein geplanter Task, der einer von einer PowerPivot-Dienstanwendung verwalteten und überwachten Verarbeitungswarteschlange hinzugefügt wird. Ein Auftrag besteht aus Zeitplaninformationen für eine oder mehrere Datenquellen in einer PowerPivot-Arbeitsmappe. Für jeden definierten Zeitplan wird ein separater Auftrag erstellt. Wenn ein Arbeitsmappenbesitzer einen Zeitplan für alle Datenquellen definiert, wird nur ein Auftrag für den gesamten Datenaktualisierungsvorgang erstellt. Wenn ein Arbeitsmappenbesitzer individuelle Zeitpläne für externe Datenquellen erstellt, werden mehrere Aufträge erstellt und ausgeführt, um eine vollständige Datenaktualisierung für diese Arbeitsmappe durchzuführen.  
   
  Sie können die Anzahl gleichzeitig ausführbarer Datenaktualisierungsaufträge erhöhen, sofern die zusätzliche Last vom System unterstützt wird.  
   
-|Einstellung|Gültige Werte|Description|  
+|Einstellung|Gültige Werte|BESCHREIBUNG|  
 |-------------|------------------|-----------------|  
-|Standardwert|Berechnet auf Grundlage des RAMs.|Der Standardwert basiert auf dem verfügbaren Arbeitsspeicher geteilt durch 4 GB. Da der Standardwert durch eine Formel berechnet wird, können die Einstellungen abhängig von der Systemkapazität angepasst werden.<br /><br /> Hinweis: Divisor von 4 GB wurde auf Grundlage der RAM-Verwendung für eine umfangreiche Stichprobe realer PowerPivot-Datenquellen ausgewählt. Er basiert nicht auf einer physischen oder logischen PowerPivot-Architektur.|  
-|Höchstwert|Berechnet anhand der CPU-Anzahl.|Die maximale Anzahl gleichzeitiger Aufträge, die Sie angeben können, basiert auf der Anzahl von Prozessoren im Computer. Auf einem 4 Socket-Quad-Core-Computer können beispielsweise maximal 16 Aufträge gleichzeitig ausgeführt werden.|  
+|Standardwert|Berechnet auf Grundlage des RAMs.|Der Standardwert basiert auf dem verfügbaren Arbeitsspeicher geteilt durch 4 GB. Da der Standardwert durch eine Formel berechnet wird, können die Einstellungen abhängig von der Systemkapazität angepasst werden.<br /><br /> Hinweis: der Unterteilung (4 Gigabyte) wurde basierend auf der RAM-Auslastung für eine große Stichprobe der tatsächlichen Power Pivot-Datenquellen ausgewählt. Er basiert nicht auf einer physischen oder logischen PowerPivot-Architektur.|  
+|Maximalwert|Berechnet anhand der CPU-Anzahl.|Die maximale Anzahl gleichzeitiger Aufträge, die Sie angeben können, basiert auf der Anzahl von Prozessoren im Computer. Auf einem 4 Socket-Quad-Core-Computer können beispielsweise maximal 16 Aufträge gleichzeitig ausgeführt werden.|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>Heraufsetzen des Standardwerts auf einen höheren Wert  
  Das folgende Diagramm zeigt verschiedene Kombinationen von Arbeitsspeicher (RAM) und CPU. Die resultierenden Standard- und Maximalwerte werden basierend auf den Systemmerkmalen berechnet. Beachten Sie außerdem, dass der berechnete Standardwert für die Anzahl von Datenaktualisierungsaufträgen, die gleichzeitig ausgeführt werden können, auf dem Systemspeicher basiert, während der berechnete maximale Wert auf CPUs basiert. Die letzte Spalte gibt an, ob Sie die maximale Anzahl gleichzeitiger Datenaktualisierungsaufträge heraufsetzen können.  
@@ -82,7 +82,7 @@ ms.locfileid: "66087511"
   
  Jeder Datenaktualisierungsauftrag weist andere Auslastungsmerkmale auf, die von der Anzahl und der Größe der aktualisierten Datenquellen abhängig sind. Arbeitsmappen mit einer einzelnen Datenquelle und wenigen Zeilen verursachen eine wesentlich geringere Verarbeitungslast als eine Arbeitsmappe, die zahlreiche Datenquellen und sehr umfangreiche Rowsets aufweist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [PowerPivot-Datenaktualisierung mit SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

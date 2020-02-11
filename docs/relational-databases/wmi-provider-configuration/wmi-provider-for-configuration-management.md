@@ -16,15 +16,15 @@ ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1058f1491dbf3b52a30f0bcc9720aab3fb056318
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659263"
 ---
 # <a name="wmi-provider-for-configuration-management"></a>WMI-Anbieter für die Konfigurationsverwaltung
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Der WMI-Anbieter ist eine veröffentlichte Ebene, die mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager-Snap-in für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) und dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager verwendet wird. Sie bietet eine vereinheitlichte Schnittstellenfunktion zu API-Aufrufen, mit denen die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager angeforderten Registrierungsvorgänge verwaltet werden, und ermöglicht eine verbesserte Steuerung und Bearbeitung der ausgewählten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste.  
+  Der WMI-Anbieter ist eine veröffentlichte Ebene, die mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager-Snap-in [!INCLUDE[msCoName](../../includes/msconame-md.md)] für die Management Console (MMC) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Configuration Manager verwendet wird. Sie bietet eine vereinheitlichte Schnittstellenfunktion zu API-Aufrufen, mit denen die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager angeforderten Registrierungsvorgänge verwaltet werden, und ermöglicht eine verbesserte Steuerung und Bearbeitung der ausgewählten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-WMI-Anbieter besteht aus einer DLL- und einer MOF-Datei, die automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup kompiliert werden.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "73659263"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager kann ebenfalls zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensten, Client- und Serverprotokollen sowie Serveraliasen verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- Grundlegendes [zum  des WMI-Anbieters für die Konfigurations Verwaltung](../../relational-databases/wmi-provider-configuration/understanding-the-wmi-provider-for-configuration-management.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlegendes zum WMI-Anbieter für die Konfigurations Verwaltung](../../relational-databases/wmi-provider-configuration/understanding-the-wmi-provider-for-configuration-management.md)   
  [Arbeiten mit dem WMI-Anbieter für die Konfigurations Verwaltung](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
  [Verwenden von WQL und Skriptsprachen mit dem WMI-Anbieter für die Konfigurationsverwaltung](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   

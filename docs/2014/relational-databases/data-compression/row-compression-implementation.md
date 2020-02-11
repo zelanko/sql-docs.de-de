@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873011"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
@@ -37,7 +37,7 @@ ms.locfileid: "62873011"
 ## <a name="how-row-compression-affects-storage"></a>Wie Zeilenkomprimierung den Speicherplatz beeinflusst  
  Die folgende Tabelle beschreibt, wie Zeilenkomprimierung die vorhandenen Typen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beeinflusst. Die Tabelle schließt nicht die Speicherplatzersparnis ein, die mit Seitenkomprimierung erreicht werden kann.  
   
-|Datentyp|Wird der Speicherplatz beeinflusst?|Beschreibung|  
+|Datentyp|Wird der Speicherplatz beeinflusst?|BESCHREIBUNG|  
 |---------------|--------------------------|-----------------|  
 |`tinyint`|Nein|1 Byte ist der minimal benötigte Speicherplatz.|  
 |`smallint`|Ja|Wenn 1 Byte für den Wert ausreicht, wird nur 1 Byte verwendet.|  
@@ -57,24 +57,24 @@ ms.locfileid: "62873011"
 |`datetime2`|Ja|Verwendet die Datendarstellung mit ganzen Zahlen mit 6 bis 9 Bytes. Die ersten 4 Bytes stellen das Datum dar. Die Anzahl der von der Zeit in Anspruch genommenen Bytes hängt von der Genauigkeit der Zeit ab, die angegeben wird.<br /><br /> Der ganzzahlige Wert stellt die Anzahl von Tagen ab dem 1.1.0001 mit der Obergrenze 31.12.9999 dar. Die Komprimierung nimmt 3 Bytes ein, um ein Datum im Jahr 2005 darzustellen.<br /><br /> Bei der Zeit gibt es keine Speicherplatzersparnis, da hier 2 bis 4 Bytes für verschiedene Zeitgenauigkeiten zulässig sind. Deshalb verwendet die Komprimierung für eine Zeitgenauigkeit von einer Sekunde 2 Bytes für die Zeit, wobei das zweite Byte nach 255 Sekunden genommen wird.|  
 |`datetimeoffset`|Ja|Ähnelt `datetime2` mit Ausnahme der vorhandenen 2 Bytes für die Zeitzone mit dem Format (HH:MM).<br /><br /> Wie bei `datetime2` können mit der Komprimierung 2 Bytes gespart werden.<br /><br /> Für Zeitzonenwerte ist der MM-Wert in den meisten Fällen möglicherweise 0. Deshalb kann mit der Komprimierung möglicherweise 1 Byte gespart werden.<br /><br /> Bei der Zeilenkomprimierung ändert sich der Speicherplatz nicht.|  
 |`char`|Ja|Nachfolgende Auffüllungszeichen werden entfernt. Beachten Sie, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] unabhängig von der verwendeten Sortierung immer dasselbe Auffüllungszeichen einfügt.|  
-|`varchar`|Nein|Keine Auswirkung.|  
-|`text`|Nein|Keine Auswirkung.|  
+|`varchar`|Nein|Keine Auswirkungen.|  
+|`text`|Nein|Keine Auswirkungen.|  
 |`nchar`|Ja|Nachfolgende Auffüllungszeichen werden entfernt. Beachten Sie, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] unabhängig von der verwendeten Sortierung immer dasselbe Auffüllungszeichen einfügt.|  
-|`nvarchar`|Nein|Keine Auswirkung.|  
-|`ntext`|Nein|Keine Auswirkung.|  
+|`nvarchar`|Nein|Keine Auswirkungen.|  
+|`ntext`|Nein|Keine Auswirkungen.|  
 |`binary`|Ja|Nachfolgende Nullen werden entfernt.|  
-|`varbinary`|Nein|Keine Auswirkung.|  
-|`image`|Nein|Keine Auswirkung.|  
+|`varbinary`|Nein|Keine Auswirkungen.|  
+|`image`|Nein|Keine Auswirkungen.|  
 |`cursor`|Nein|Keine Auswirkung.|  
 |`timestamp` / `rowversion`|Ja|Verwendet die Datendarstellung mit ganzen Zahlen mit 8 Byte. Es gibt für jede Datenbank einen Zeitstempelzähler, dessen Wert bei 0 beginnt. Dieser Wert kann wie jeder andere ganzzahlige Wert komprimiert werden.|  
-|`sql_variant`|Nein|Keine Auswirkung.|  
-|`uniqueidentifier`|Nein|Keine Auswirkung.|  
+|`sql_variant`|Nein|Keine Auswirkungen.|  
+|`uniqueidentifier`|Nein|Keine Auswirkungen.|  
 |`table`|Nein|Keine Auswirkung.|  
-|`xml`|Nein|Keine Auswirkung.|  
+|`xml`|Nein|Keine Auswirkungen.|  
 |Benutzerdefinierte Typen|Nein|Dies wird intern als `varbinary` dargestellt.|  
 |FILESTREAM|Nein|Dies wird intern als `varbinary` dargestellt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenkomprimierung](data-compression.md)   
  [Implementierung von Seitenkomprimierung](page-compression-implementation.md)  
   

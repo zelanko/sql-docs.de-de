@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729678"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Ändern eines Attributnamens und Datentyps (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729678"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie den Namen eines Attributs ändern.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-name-and-type"></a>So ändern Sie einen Attributnamen und -typ  
   
@@ -59,8 +59,8 @@ ms.locfileid: "73729678"
   
 9. Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Textattributs &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen Sie ein Text Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Löschen eines Attributs &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   

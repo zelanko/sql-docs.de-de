@@ -20,17 +20,18 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064146"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Ändert Daten von einem Datentyp in einen anderen.  
   
@@ -66,7 +67,7 @@ destlen
  *srvproc*  
  Ein Zeiger auf die SRV_PROC-Struktur, die das Handle für eine bestimmte Clientverbindung ist. Die Struktur enthält alle Kontrollinformationen, mit der die API für erweiterte gespeicherte Prozeduren Kommunikationen und Daten zwischen der Anwendung und dem Client verwaltet. Wenn das *srvproc*-Handle zur Verfügung gestellt wird, wird es an die Fehlerhandlerfunktion der API für erweiterte gespeicherte Prozeduren übergeben, sobald ein Fehler auftritt.  
   
- *srctype*  
+ *srcType*  
  Gibt den Datentyp der zu konvertierenden Daten an. Dieser Parameter kann ein beliebiger Datentyp der API für erweiterte gespeicherte Prozeduren sein.  
   
  *src*  
@@ -75,7 +76,7 @@ destlen
  *srclen*  
  Gibt die Länge der zu konvertierenden Daten in Byte an. Wenn *srclen* 0 ist, fügt **srv_convert** einen NULL-Wert in die Zielvariable ein. Wenn nicht 0, wird dieser Parameter für Datentypen fester Länge ignoriert. In diesem Fall wird für die Quelldaten der Wert NULL angenommen. Für Daten des SRVCHAR-Datentyps gibt eine Länge von -1 an, dass die Zeichenfolge NULL-terminiert ist.  
   
- *desttype*  
+ *destType*  
  Gibt den Datentyp an, in den die Quelle konvertiert werden soll. Dieser Parameter kann ein beliebiger Datentyp der API für erweiterte gespeicherte Prozeduren sein.  
   
  *dest*  
@@ -86,7 +87,7 @@ destlen
  *destlen*  
  Gibt die Länge der Zielvariable in Byte an. Dieser Parameter wird für Datentypen fester Länge ignoriert. Für eine Zielvariable des Typs SRVCHAR muss der Wert von *destlen* der Gesamtlänge des Zielpufferspeichers entsprechen. Eine Länge von -1 für eine Zielvariable des Typs SRVCHAR oder SRVBINARY gibt an, dass genügend Speicher verfügbar ist. Für eine Zielvariable des Typs *srvchar* führt eine Länge von –1 zur NULL-Terminierung der Zeichenfolge.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  Die Länge der konvertierten Daten (in Byte) bei erfolgreicher Konvertierung des Datentyps. Wenn **srv_convert** eine Konvertierungsanforderung erhält, die nicht unterstützt wird, wird – sofern vorhanden – der vom Entwickler bereitgestellte Fehlerhandler aufgerufen, eine globale Fehlernummer festgelegt und der Wert –1 zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -114,7 +115,7 @@ destlen
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [srv_setutype (API für erweiterte gespeicherte Prozeduren)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert (API für erweiterte gespeicherte Prozeduren)](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_setutype &#40;API für erweiterte gespeicherte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
+ [srv_willconvert &#40;API für erweiterte gespeicherte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
   

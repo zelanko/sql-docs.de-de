@@ -1,5 +1,5 @@
 ---
-title: Migrieren von Abfrageplänen | Microsoft-Dokumentation
+title: Migrieren von Abfrage Plänen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779112"
 ---
 # <a name="migrate-query-plans"></a>Migrieren von Abfrageplänen
@@ -26,7 +26,7 @@ ms.locfileid: "62779112"
   
  Führen Sie die folgenden Schritte durch, um vor der Aktualisierung Planhinweislisten zu erstellen:  
   
-1.  Notieren Sie den aktuellen Plan für jede unternehmenswichtige Abfrage mithilfe der [Sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) gespeicherte Prozedur und der Abfrageplan im USE PLAN-Abfragehinweis angeben.  
+1.  Zeichnen Sie den aktuellen Plan für jede unternehmenskritische Abfrage auf, indem Sie die gespeicherte Prozedur [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) verwenden und den Abfrageplan im Use Plan-Abfrage Hinweis angeben.  
   
 2.  Vergewissern Sie sich, dass die Planhinweisliste auf die Abfrage angewendet wird.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "62779112"
 ### <a name="step-1-collect-the-plan"></a>Schritt 1: Abrufen des Plans  
  Der in der Planhinweisliste aufgezeichnete Abfrageplan muss im XML-Format vorliegen. Abfragepläne im XML-Format können auf folgende Weise erstellt werden:  
   
--   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
+-   [Mit SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Abfragen der Spalte Query_plan, der die [Sys. dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) dynamische Verwaltungsfunktion.  
+-   Abfragen der query_plan Spalte der dynamischen Verwaltungsfunktion [sys. dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) .  
   
--   Die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), und [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) -Ereignisklassen.  
+-   Die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Ereignis Klassen [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)und [Showplan XML for Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) .  
   
  Im folgenden Beispiel wird der Abfrageplan für die Anweisung `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` abgerufen, indem dynamische Verwaltungssichten abgefragt werden.  
   
@@ -88,11 +88,11 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Schritt 3: Stellen Sie sicher, dass die Planhinweisliste auf die Abfrage angewendet wird  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Schritt 3: Überprüfen, ob die Planhinweisliste auf die Abfrage angewendet wird  
  Führen Sie die Abfrage noch einmal aus, und überprüfen Sie den erzeugten Abfrageplan. Dieser Plan sollte mit dem in der Planhinweisliste angegebenen Plan übereinstimmen.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_create_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Abfragehinweise (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
  [Planhinweislisten](../../relational-databases/performance/plan-guides.md)  
   

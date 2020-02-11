@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc42ea107ac08c22e98ccc3ac15b55c5604a3784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938530"
 ---
-# <a name="mssqleng020598"></a>MSSQL_ENG020598
+# <a name="mssql_eng020598"></a>MSSQL_ENG020598
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62938530"
   
 4.  (Optional) Entfernen Sie den Parameter **-SkipErrors** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)  
   
   

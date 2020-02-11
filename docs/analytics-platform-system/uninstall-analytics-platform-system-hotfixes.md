@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399765"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Deinstallieren von Analytics Platform System-Hotfixes 
 In den folgenden Schritten wird beschrieben, wie ein zuvor installierter-Hotfix für das Analytics Platform System deinstalliert wird  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
   
 ### <a name="prerequisites"></a>Voraussetzungen  
 Um diese Schritte ausführen zu können, benötigen Sie Folgendes:  

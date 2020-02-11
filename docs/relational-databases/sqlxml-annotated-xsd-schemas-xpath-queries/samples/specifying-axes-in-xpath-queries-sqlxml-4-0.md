@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252600"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Angeben von Achsen in XPath-Abfragen (SQLXML 4.0)
@@ -85,7 +85,7 @@ ms.locfileid: "75252600"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B: Abrufen von untergeordneten Elementen zweiter Ordnung des Kontextknotens  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Abrufen von untergeordneten Elementen zweiter Ordnung des Kontextknotens  
  Die folgende XPath-Abfrage wählt alle unter ** \<** ** \<geordneten Elemente der Reihenfolge>** der untergeordneten Elemente des Customer->Elements des Kontext Knotens aus:  
   
 ```  
@@ -163,7 +163,7 @@ ms.locfileid: "75252600"
   
  Wenn die XPath-Abfrage als `Customer/Order/OrderDetail`angegeben wird, navigiert die Abfrage von allen Knoten, die mit Customer überein ** \<Stimmen>** die ** \<Reihenfolge>** Elementen. Und für jeden Knoten, der mit ** \<Order>** übereinstimmt, fügt die Abfrage dem Ergebnis die ** \<Order Detail** -Knoten>hinzu. Im Resultset wird nur ** \<die OrderDetail->** zurückgegeben.  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>c. Verwenden Sie.. Angeben der übergeordneten Achse  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. Verwenden Sie.. Angeben der übergeordneten Achse  
  Die folgende Abfrage ruft alle ** \<Order>** -Elemente mit einem übergeordneten ** \<Customer->** -Element mit einem **CustomerID-** Attribut Wert von 1 ab. Die Abfrage verwendet die **untergeordnete Achse im** Prädikat, um das übergeordnete Element des ** \<Order>** -Elements zu finden.  
   
 ```  
@@ -247,7 +247,7 @@ ms.locfileid: "75252600"
 </ROOT>  
 ```  
   
-### <a name="d-specify-the-attribute-axis"></a>D. Angeben der Attributachse  
+### <a name="d-specify-the-attribute-axis"></a>D: Angeben der Attributachse  
  Die folgende XPath-Abfrage wählt alle ** \<** untergeordneten Elemente des Kunden>des Kontext Knotens mit dem **CustomerID-** Attribut Wert 1 aus:  
   
 ```  

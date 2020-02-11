@@ -2,8 +2,7 @@
 title: Durchführen einer SQL Server Migrations Bewertung
 titleSuffix: Data Migration Assistant
 description: Erfahren Sie, wie Sie Datenmigrations-Assistent zur Bewertung eines lokalen SQL Server vor der Migration zu einem anderen SQL Server oder zu Azure SQL-Datenbank verwenden.
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001905"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037168"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Durchführen einer SQL Server-Migrationsbewertung mit dem Datenmigrations-Assistenten
 
-Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertung der Migration zu lokalen SQL Server, SQL Server, die auf einer Azure-VM oder Azure SQL-Datenbank ausgeführt wird, mithilfe von Datenmigrations-Assistent.
+Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertung der Migration zu lokalen SQL Server, SQL Server, die auf einer Azure-VM ausgeführt werden, oder Azure SQL-Datenbank mithilfe von Datenmigrations-Assistent.
 
    > [!NOTE]
    > Datenmigrations-Assistent v 5.0 führt die Unterstützung für die Analyse von Datenbankverbindungen und eingebetteten SQL-Abfragen im Anwendungscode ein. Weitere Informationen finden Sie im Blogbeitrag [using Datenmigrations-Assistent, um die Datenzugriffs Ebene einer Anwendung zu bewerten](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
@@ -114,6 +114,9 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertu
 
     ![Quellen hinzufügen und Bewertung starten](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> Sie können mehrere Bewertungen gleichzeitig durchführen und den Status der Bewertungen anzeigen, indem Sie die Seite **Alle Bewertungen** öffnen.
+
 ## <a name="view-results"></a>Anzeigen der Ergebnisse
 
 Die Dauer der Bewertung hängt von der Anzahl der hinzugefügten Datenbanken und der Schema Größe der einzelnen Datenbanken ab. Die Ergebnisse werden für jede Datenbank angezeigt, sobald Sie verfügbar sind.
@@ -156,4 +159,6 @@ Ausführliche Schritt-für-Schritt-Anleitungen für die Ziel Bereitschafts Bewer
 
 Nachdem alle Datenbanken die Bewertung abgeschlossen haben, klicken Sie auf **Bericht exportieren** , um die Ergebnisse entweder in eine JSON-Datei oder in eine CSV-Datei zu exportieren. Anschließend können Sie die Daten in ihrer eigenen Weise analysieren.
 
-Sie können mehrere Bewertungen gleichzeitig durchführen und den Status der Bewertungen anzeigen, indem Sie die Seite **Alle Bewertungen** öffnen.
+## <a name="save-and-load-assessments"></a>Speichern und Laden von Bewertungen
+
+Zusätzlich zum Exportieren der Ergebnisse einer Bewertung können Sie Bewertungs Details in einer Datei speichern und eine Bewertungs Datei zur späteren Überprüfung laden.  Weitere Informationen finden Sie im Artikel [Speichern und Laden von Bewertungen mit Datenmigrations-Assistent](../dma/dma-save-load-assessments.md).

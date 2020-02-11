@@ -1,5 +1,5 @@
 ---
-title: Upper-Case-Funktion (XQuery) | Microsoft-Dokumentation
+title: Upper-case-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004615"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funktionen für Zeichenfolgenwerte – upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Diese Funktion konvertiert jedes Zeichen in *$arg* auf entsprechende großgeschriebene Variante. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Großbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard für die Zuordnung von Codepunkten.  
+  Diese Funktion konvertiert jedes Zeichen in *$arg* in den entsprechenden Großbuchstaben. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Großbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard für die Zuordnung von Codepunkten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Begriff|Definition|  
 |*$arg*|Der Zeichenfolgenwert, der in Großbuchstaben konvertiert werden soll.|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Wert des *$arg* ist leer, wird eine leere Zeichenfolge zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der Wert *$arg* leer ist, wird eine Zeichenfolge der Länge 0 (null) zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Ändern einer Zeichenfolge in Großbuchstaben  
- Im folgenden Beispiel wird die Eingabezeichenfolge ' AbcDEF! @4"in Großbuchstaben.  
+ Im folgenden Beispiel wird die Eingabe Zeichenfolge ' abcdef! @4in Großbuchstaben.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

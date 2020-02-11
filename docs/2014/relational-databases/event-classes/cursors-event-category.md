@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663205"
 ---
 # <a name="cursors-event-category"></a>Cursor-Ereigniskategorie
@@ -28,7 +28,7 @@ ms.locfileid: "62663205"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[CursorClose-Ereignisklasse](cursorclose-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) das Schließen des Cursors bewirken.|  
 |[CursorExecute (Ereignisklasse)](cursorexecute-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn das Ausführen des Cursors bewirken.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62663205"
 |[CursorRecompile (Ereignisklasse)](cursorrecompile-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn das erneute Kompilieren des Cursors bewirken.|  
 |[CursorUnprepare-Ereignisklasse](cursorunprepare-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn die Aufhebung der Cursorvorbereitung bewirken.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)  
   
   

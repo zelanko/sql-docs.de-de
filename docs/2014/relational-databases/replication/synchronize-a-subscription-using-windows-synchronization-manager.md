@@ -1,5 +1,5 @@
 ---
-title: Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Windows Synchronization Manager) | Microsoft-Dokumentation
+title: Synchronisieren eines Abonnements mit der Synchronisierungs Verwaltung von Windows (Synchronisierungs Verwaltung von Windows) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745759"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Synchronisierungsverwaltung von Windows)
-  Die Synchronisierungsverwaltung von Windows[!INCLUDE[msCoName](../../includes/msconame-md.md)] kann nur zum Synchronisieren von Abonnements für Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen verwendet werden, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ausgeführt wird wie die Synchronisierungsverwaltung. (Die Synchronisierungsverwaltung kann auch zum Synchronisieren von Offlinedateien und Webseiten verwendet werden.) So verwenden Sie die Synchronisierungsverwaltung:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Die Synchronisierungs Verwaltung von Windows kann nur zum Synchronisieren von Abonnements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen verwendet werden, wenn auf dem gleichen Computer wie der Synchronisierungs-Manager ausgeführt wird (es kann auch zum Synchronisieren von Offline Dateien und Webseiten verwendet werden). So verwenden Sie die Synchronisierungsverwaltung:  
   
-1.  Aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md).  
+1.  Aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md).  
   
 2.  Greifen Sie über das Menü **Start** von Windows auf die Synchronisierungsverwaltung zu.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745759"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>So aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung von Windows  
   
-1.  Wählen Sie auf der Seite **Allgemein** im Dialogfeld **Abonnenteigenschaften – \<Abonnent>: \<Abonnementdatenbank>** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
+1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – **Subscriber>: **SubscriptionDatabase>\< auf der Seite \<Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62745759"
   
     -   Klicken Sie auf **Start**, zeigen Sie auf **Programme** oder **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie dann auf **Synchronisieren**.  
   
-    -   Klicken Sie auf **Start**und anschließend auf **Ausführen** In der **ausführen** (Dialogfeld), Typ `mobsync.exe` in die **öffnen** ein, und klicken Sie dann auf **OK**.  
+    -   Klicken Sie auf **Start**und dann auf **ausführen.** Geben `mobsync.exe` Sie im Dialogfeld **Ausführen** das Feld **Öffnen** ein, und klicken Sie dann auf **OK**.  
   
 2.  Wählen Sie im Dialogfeld **Zu synchronisierende Objekte** die Abonnements aus, die Sie synchronisieren möchten. Die Abonnements werden unter den auf dem Computer installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen aufgeführt.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "62745759"
   
 2.  Sie können Eigenschaften auf den folgenden Registerkarten anzeigen und ändern:  
   
-    -   **Identifikation**  
+    -   **Identifi**  
   
-    -   **Abonnentenanmeldung**, **Verteileranmeldung**und **Verlegeranmeldung** (nur für die Mergereplikation)  
+    -   **Abonnenten Anmeldung**, **Verteiler Anmeldung**und **Verleger Anmeldung** (nur für die Mergereplikation)  
   
-    -   **Webserverinformationen** (für Mergeabonnements auf Abonnenten, auf denen SQL Server 2005 oder höher ausgeführt wird)  
+    -   **Webserver Informationen** (für Mergeabonnements auf Abonnenten, auf denen SQL Server 2005 oder höher ausgeführt wird)  
   
     -   **Andere**  
   
@@ -103,19 +103,19 @@ ms.locfileid: "62745759"
   
 3.  Sie können die im interaktiven Konfliktlöser angezeigten Spalten auch beliebig bearbeiten und dann auf eine der folgenden Schaltflächen klicken, um den Konflikt zu lösen:  
   
-    -   **Vorschläge akzeptieren**  
+    -   **Vorgeschlagene Annahme**  
   
     -   **Verleger akzeptieren**  
   
-    -   **Abonnenten akzeptieren**  
+    -   **Abonnent akzeptieren**  
   
-    -   **Alle automatisch lösen** (alle aktuellen Konflikte werden ohne weitere Eingaben gelöst)  
+    -   **Alle automatisch auflösen** (alle aktuellen Konflikte werden ohne weitere Eingaben aufgelöst)  
   
      Die ausgewählte Zeile wird dann auf den Verleger und/oder Abonnenten angewendet. Bei folgenden Synchronisierungen wird die Zeile an andere Knoten der Topologie weitergegeben.  
   
 > [!NOTE]  
 >  Bearbeitungen werden nur dann angewendet, wenn sie zur Zeile gehören, die für die Lösung ausgewählt wurde. Wenn Sie z. B. Bearbeitungen unter **Verleger**vornehmen und dann auf **Abonnenten akzeptieren**klicken, werden die Bearbeitungen verworfen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Interaktive Konfliktlösung](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

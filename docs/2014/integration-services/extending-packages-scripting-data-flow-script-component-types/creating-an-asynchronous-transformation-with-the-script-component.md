@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1940405c6bde86364024e10694f9aaf1da24b06d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768616"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
@@ -65,28 +65,28 @@ ms.locfileid: "62768616"
   
 -   Sie können weitere Spalten hinzufügen, um zusätzliche Informationen aufzunehmen. Sie müssen einen eigenen Code schreiben, um die zusätzlichen Spalten mit Daten aufzufüllen. Weitere Informationen über das Reproduzieren des Verhaltens einer Standardfehlerausgabe finden Sie unter [Simulating an Error Output for the Script Component (Simulieren einer Fehlerausgabe für die Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
- Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).  
+ Weitere Informationen über die Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
- Wenn Sie die Werte von vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie diese in den Eigenschaftenfeldern „ReadOnlyVariables“ und „ReadWriteVariables“ auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** hinzufügen.  
+ Wenn Sie die Werte von vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie diese in den Eigenschaftsfeldern ReadOnlyVariables und ReadWriteVariables auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** hinzufügen.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte ( **...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Dialogfeld.  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` Eigenschaften Feldern und `ReadWriteVariables` klicken und dann die Variablen im Dialogfeld **Variablen auswählen** auswählen.  
   
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
  Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Script Page) (Transformations-Editor für Skripterstellung (Seite „Skript“))](../script-transformation-editor-script-page.md).  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>Skripterstellung für eine asynchrone Transformationskomponente im Codeentwurfsmodus  
- Nachdem Sie alle Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite **Skript** [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.  
+ Nachdem Sie alle Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite [!INCLUDE[msCoName](../../includes/msconame-md.md)]Skript[!INCLUDE[msCoName](../../includes/msconame-md.md)]** Visual Basic oder ** Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.  
   
  Wichtige Informationen, die alle Arten von Komponenten betreffen, die mithilfe der Skriptkomponente erstellt wurden, finden Sie unter [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code  
- Wenn Sie die VSTA IDE öffnen, nach dem Erstellen und die Konfiguration einer Transformationskomponente die bearbeitbare `ScriptMain` Klasse wird im Code-Editor mit Stubs für die "processinputrow" und die CreateNewOutputRows-Methoden angezeigt. Sie schreiben Ihren benutzerdefinierten Code in der ScriptMain-Klasse. „ProcessInputRow“ ist die wichtigste Methode in einer Transformationskomponente. Die `CreateNewOutputRows`-Methode wird eher in einer Quellkomponente verwendet, die insofern wie eine asynchrone Transformation funktioniert, dass beide Komponenten eigene Ausgabezeilen erstellen müssen.  
+ Wenn Sie nach der Erstellung und Konfiguration einer Transformations Komponente die VSTA-IDE öffnen, wird `ScriptMain` die bearbeitbare Klasse im Code-Editor mit stufstufstubweise für die Methoden ProcessInputRow und die Methode kreatenewoutputrows angezeigt. Sie schreiben Ihren benutzerdefinierten Code in der ScriptMain-Klasse. „ProcessInputRow“ ist die wichtigste Methode in einer Transformationskomponente. Die `CreateNewOutputRows`-Methode wird eher in einer Quellkomponente verwendet, die insofern wie eine asynchrone Transformation funktioniert, dass beide Komponenten eigene Ausgabezeilen erstellen müssen.  
   
- Wenn Sie das VSTA-Fenster **Projektexplorer** Fenster können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die ScriptMain-Klasse erbt von der UserComponent-Klasse in der `ComponentWrapper` Projektelement.  
+ Wenn Sie das Fenster VSTA **** `BufferWrapper` -Projekt-Explorer öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `ComponentWrapper` und-Projekt Elemente generiert hat. Die ScriptMain-Klasse erbt von der UserComponent-Klasse `ComponentWrapper` im-Projekt Element.  
   
- Zur Laufzeit ruft die Datenfluss-Engine die PrimeOutput-Methode in der `UserComponent` Klasse, welche Außerkraftsetzungen der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> übergeordnete Klasse. Die PrimeOutput-Methode ruft wiederum die CreateNewOutputRows-Methode auf.  
+ Zur Laufzeit ruft die Datenfluss-Engine die PrimeOutput-Methode in der `UserComponent` -Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> -Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> übergeordneten-Klasse überschreibt. Die PrimeOutput-Methode ruft wiederum die CreateNewOutputRows-Methode auf.  
   
  Danach ruft die Datenfluss-Engine die ProcessInput-Methode in der UserComponent-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die ProcessInput-Methode durchläuft die Zeilen im Eingabepuffer der Reihe nach und ruft für jede Zeile einmal die ProcessInputRow-Methode auf.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62768616"
   
  Bei einer asynchronen Transformation können Sie mit der AddRow-Methode der Ausgabe bei Bedarf Zeilen aus der Methode „ProcessInputRow“ oder „ProcessInput“ heraus hinzufügen. Sie müssen nicht die CreateNewOutputRows-Methode verwenden. Wenn Sie eine einzelne Ergebniszeile, z.B. Aggregationsergebnisse, in eine bestimmte Ausgabe schreiben, können Sie die Ausgabezeile vorher mithilfe der CreateNewOutputRows-Methode erstellen und ihre Werte später nach Verarbeitung aller Eingabezeilen auffüllen. Es ist jedoch nicht sinnvoll, in der CreateNewOutputRows-Methode mehrere Zeilen zu erstellen, weil mit der Skriptkomponente nur die aktuelle Zeile in einer Eingabe oder Ausgabe verwendet werden kann. Die CreateNewOutputRows-Methode ist bei einer Quellkomponente wichtiger, bei der keine Eingabezeilen zu verarbeiten sind.  
   
- Sie können auch die ProcessInput-Methode überschreiben, damit Sie zusätzliche vorbereitende oder abschließende Verarbeitungsvorgänge ausführen können, bevor oder nachdem Sie den Eingabepuffer durchlaufen und ProcessInputRow für jede Zeile aufrufen. Eines der Codebeispiele in diesem Thema überschreibt beispielsweise ProcessInput, um die Anzahl der Adressen in einer bestimmten Stadt als "processinputrow" Zeilen durchläuft zählen`.` im Beispiel wird der Zusammenfassungswert in die zweite Ausgabe geschrieben, nachdem alle Zeilen wurden verarbeitet. In diesem Beispiel wird die Ausgabe in ProcessInput abgeschlossen, weil die Ausgabepuffer nicht mehr verfügbar sind, wenn PostExecute aufgerufen wird.  
+ Sie können auch die ProcessInput-Methode überschreiben, damit Sie zusätzliche vorbereitende oder abschließende Verarbeitungsvorgänge ausführen können, bevor oder nachdem Sie den Eingabepuffer durchlaufen und ProcessInputRow für jede Zeile aufrufen. Eines der Codebeispiele in diesem Thema überschreibt z. b. ProcessInput, um die Anzahl der Adressen in einer bestimmten Stadt zu zählen, während ProcessInputRow`.` durch Zeilen durchläuft. im Beispiel wird der Zusammenfassungs Wert in die zweite Ausgabe geschrieben, nachdem alle Zeilen verarbeitet wurden. In diesem Beispiel wird die Ausgabe in ProcessInput abgeschlossen, weil die Ausgabepuffer nicht mehr verfügbar sind, wenn PostExecute aufgerufen wird.  
   
  Je nach Anforderung können Sie auch Skript in den Methoden „PreExecute“ und „PostExecute“ schreiben, die in der ScriptMain-Klasse verfügbar sind, um vorbereitende oder abschließende Verarbeitungsvorgänge auszuführen.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62768616"
  In diesem Beispiel wird der benutzerdefinierte Code veranschaulicht, der in der ScriptMain-Klasse zur Erstellung einer asynchronen Transformationskomponente erforderlich ist.  
   
 > [!NOTE]  
->  In diesen Beispielen werden die erste und die vierte Spalte der Tabelle **Person.Address** in der Beispieldatenbank **AdventureWorks** verwendet, und die Spalten **intAddressID** und **nvarchar(30)City** werden durch den Datenfluss weitergeleitet. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
+>  In diesen Beispielen wird die Tabelle **Person. Address** in der **AdventureWorks** -Beispieldatenbank verwendet, und die erste und vierte Spalte, die Spalten **intadressid** und **nvarchar (30) City** , werden über den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
   
  Dieses Beispiel zeigt eine asynchrone Transformationskomponente mit zwei Ausgaben. Bei dieser Transformation werden die Spalten **AddressID** und **City** an eine Ausgabe übergeben. Gleichzeitig wird die Anzahl von Adressen in einer bestimmten Stadt (Redmond, Washington, USA) gezählt, und der resultierende Wert wird an einer zweite Ausgabe ausgegeben.  
   
@@ -229,9 +229,9 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu synchronen und asynchronen Transformationen](../understanding-synchronous-and-asynchronous-transformations.md)   
  [Erstellen einer synchronen Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
  [Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  

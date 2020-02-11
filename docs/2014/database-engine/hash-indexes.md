@@ -1,5 +1,5 @@
 ---
-title: Hashindizes | Microsoft-Dokumentation
+title: Hash Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779486"
 ---
 # <a name="hash-indexes"></a>Hashindizes
@@ -22,11 +22,12 @@ ms.locfileid: "62779486"
   
  Ein Hashindex besteht aus einer Sammlung von Buckets, die in einem Array organisiert sind. Eine Hashfunktion ordnet Indexschlüssel den entsprechenden Buckets im Hashindex zu. Die folgende Abbildung zeigt drei Indexschlüssel, die drei verschiedenen Buckets im Hashindex zugeordnet sind. Zur Veranschaulichung lautet der Hashfunktionsname f(x).  
   
- ![Der Indexschlüssel, die verschiedenen Buckets zugeordnet. ](../../2014/database-engine/media/hekaton-tables-2.gif "Indexschlüssel, die verschiedenen Buckets zugeordnet.")  
+ ![Indexschlüssel, die unterschiedlichen Buckets zugeordnet sind.](../../2014/database-engine/media/hekaton-tables-2.gif "Indexschlüssel, die unterschiedlichen Buckets zugeordnet sind.")  
   
  Die Hashfunktion, die für Hashindizes verwendet wird, weist die folgenden Merkmale auf:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hat eine Hashfunktion, die für alle Hashindizes verwendet wird.  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hat eine Hashfunktion, die für alle Hashindizes verwendet wird.  
   
 -   Die Hashfunktion ist deterministisch. Der gleiche Indexschlüssel wird immer dem gleichen Bucket im Hashindex zugeordnet.  
   
@@ -40,13 +41,13 @@ ms.locfileid: "62779486"
   
  Die Hashindexstruktur im Arbeitsspeicher besteht aus einem Array von Speicherzeigern. Jedes Bucket ist einem Offset in diesem Array zugeordnet. Jeder Bucket im Array zeigt auf die erste Zeile in diesem Hashbucket. Jede Zeile im Bucket zeigt auf die nächste Zeile, was eine Kette von Zeilen für jeden Hashbucket ergibt, wie in der folgenden Abbildung veranschaulicht.  
   
- ![Die Struktur des in-Memory-Hash-Index. ](../../2014/database-engine/media/hekaton-tables-3.gif "Die hashindexstruktur im Arbeitsspeicher.")  
+ ![Die Hashindexstruktur im Arbeitsspeicher.](../../2014/database-engine/media/hekaton-tables-3.gif "Die Hashindexstruktur im Arbeitsspeicher.")  
   
  Die Abbildung weist drei Buckets mit Zeilen auf. Der zweite Bucket von oben enthält die drei roten Zeilen. Der vierte Bucket enthält die einzelne blaue Zeile. Der untere Bucket enthält die zwei grünen Zeilen. Diese können unterschiedliche Versionen derselben Zeile sein.  
   
- Weitere Informationen zu Indizes für Speicheroptimierte Tabellen finden Sie unter [Richtlinien zum Verwenden von Indizes für Speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Weitere Informationen zu Indizes für speicheroptimierte Tabellen finden Sie unter [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Indizes für speicheroptimierte Tabellen](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

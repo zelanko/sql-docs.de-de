@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705521"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
@@ -36,7 +36,7 @@ ms.locfileid: "62705521"
  Weitere Informationen zum Erstellen einer Sitzung für erweiterte Ereignisse finden Sie unter [Erstellen einer Sitzung für erweiterte Ereignisse](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Starten oder Beenden einer Sitzung für erweiterte Ereignisse  
- Starten oder Beenden einer Sitzung für erweiterte Ereignisse über die **Abfrage-Editor** mit der `ALTER EVENT SESSION` -Anweisung, oder mithilfe der **Extended Events** Knoten **Objekt-Explorer**.  
+ Sie können eine Sitzung für erweiterte Ereignisse mithilfe des Abfrage- **Editors** starten oder Beenden `ALTER EVENT SESSION` , indem Sie die-Anweisung oder den Knoten **Erweiterte Ereignisse** von **Objekt-Explorer**verwenden.  
   
  Wenn Sie eine Ereignissitzung beenden, wird die Sitzung in der dynamischen Verwaltungssicht (dynamic management view; DMV) von „sys.dm_xe_sessions“ nicht mehr als aktive Sitzung aufgeführt. Die Sitzungsdefinition bleibt jedoch intakt, und Sie können die Sitzung neu starten. Um eine Sitzungsdefinition vollständig zu entfernen, müssen Sie die Sitzung löschen.  
   
@@ -128,7 +128,7 @@ STATE = STOP
  Wenn Sie eine Ereignissitzung löschen, werden alle Konfigurationsinformationen entfernt, und die Sitzungsdefinition wird nicht mehr in der „sys.server_event_sessions“-Katalogsicht angezeigt.  
   
 > [!NOTE]  
->  System_health und AlwaysOn_health sind im Lieferumfang [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; nicht gelöscht. system_health ist standardmäßig aktiviert (weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md)). AlwaysOn_health ist standardmäßig deaktiviert. Diese Sitzungen erfassen Daten, die für das Diagnostizieren von Leistungsproblemen hilfreich sein können.  
+>  system_health und AlwaysOn_health sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten. Löschen Sie diese nicht. system_health ist standardmäßig aktiviert (weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md)). AlwaysOn_health ist standardmäßig deaktiviert. Diese Sitzungen erfassen Daten, die für das Diagnostizieren von Leistungsproblemen hilfreich sein können.  
   
  Zum Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   

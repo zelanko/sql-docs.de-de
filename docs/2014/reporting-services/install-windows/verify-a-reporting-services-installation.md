@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108569"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Überprüfen einer Installation von Reporting Services
@@ -30,11 +30,11 @@ ms.locfileid: "66108569"
   
  Dieses Thema enthält folgende Informationen:  
   
--   [Überprüfen der Installation von SharePoint-Modus](#bkmk_sharepointmode)  
+-   [Installation im SharePoint-Modus überprüfen](#bkmk_sharepointmode)  
   
 -   [Überprüfen einer Installation im einheitlichen Modus](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a> Überprüfen der SharePoint-Modus-Installation  
+##  <a name="bkmk_sharepointmode"></a>Installation im SharePoint-Modus überprüfen  
   
 #### <a name="to-verify-the-reporting-services-service"></a>So überprüfen Sie Reporting Services  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66108569"
   
 2.  Überprüfen Sie, ob der **SQL Server Reporting Services-Dienst** installiert ist und den Status **Wird ausgeführt** aufweist.  
   
-     Wird der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst nicht in der Liste aufgeführt, überprüfen Sie, ob der Dienst installiert ist. Weitere Informationen finden Sie im Abschnitt "Installieren und Starten der Reporting Services SharePoint Service" des [installieren Sie Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+     Wird der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst nicht in der Liste aufgeführt, überprüfen Sie, ob der Dienst installiert ist. Weitere Informationen finden Sie im Abschnitt "installieren und Starten des Reporting Services SharePoint-Dienstanbieter" unter [install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 #### <a name="to-verify-the-service-application"></a>So überprüfen Sie die Dienstanwendung  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66108569"
   
 #### <a name="to-verify-reporting-server-content-types"></a>So überprüfen Sie Berichtsserverinhaltstypen  
   
-1.  Zur Überprüfung oder Hinzufügung [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver-Inhaltstypen, finden Sie unter [Hinzufügen von Report Server-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  Informationen zum Überprüfen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder Hinzufügen von Berichts Server-Inhaltstypen finden [Sie unter Hinzufügen von Berichts Server-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-&#41;Modus ](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>So überprüfen Sie, dass Sie der Berichts-Generator gestartet werden kann  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108569"
   
 2.  Laden Sie die Adventure Works-Beispieldatenbank und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Beispielberichte von CodePlex herunter. Weitere Informationen finden Sie unter [AdventureWorks-Beispielberichte](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a> Überprüfen einer Installation im einheitlichen Modus  
+##  <a name="bkmk_nativemode"></a>Überprüfen einer Installation im einheitlichen Modus  
  Wenn Sie einen Berichtsserver im einheitlichen Modus anhand der Standardkonfiguration installieren, wird der Server durch das Setup installiert und bereitgestellt. Um festzustellen, ob der Berichtsserver durch das Setup bereitgestellt wurde, führen Sie einige wenige einfache Tests aus. Um diese Schritte ausführen zu können, müssen Sie ein lokaler Administrator sein. Um weitere Benutzer für das Ausführen der Tests zu aktivieren, konfigurieren Sie für diese Benutzer den Berichtsserverzugriff.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>So überprüfen Sie, ob der Berichtsserver installiert ist und ausgeführt wird  
@@ -91,7 +91,7 @@ ms.locfileid: "66108569"
   
 2.  Öffnen Sie Konsolenanwendungen für die Dienste, und überprüfen Sie, ob der Berichtsserver-Dienst ausgeführt wird. Um den Status des Berichtsserver-Diensts anzuzeigen, klicken Sie auf **Start**, zeigen Sie auf **Systemsteuerung**, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie anschließend auf **Dienste**. Führen Sie in der Liste mit den Diensten einen Bildlauf zu **Berichtsserver (MSSQLSERVER)** durch. Der Status sollte **Gestartet**lauten.  
   
-3.  Öffnen Sie einen Browser, und geben Sie die Berichtsserver-URL in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie bei beim Setup für den Berichtsserver angegeben haben. Standardmäßig lautet das virtuelle Verzeichnis des Berichtsservers **ReportServer**. Mit der folgenden URL können Sie die Berichtsserverinstallation überprüfen: http:// *\<Computername>* /ReportServer *\<_Instanzname>* . Wenn der Berichtsserver als eine benannte Instanz installiert wurde, lautet die URL anders. Weitere Informationen zum URL-Format finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](configure-report-server-urls-ssrs-configuration-manager.md). Informationen für lokale Administratoren unter Windows Vista oder Windows Server 2008 finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Öffnen Sie einen Browser, und geben Sie die Berichtsserver-URL in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie bei beim Setup für den Berichtsserver angegeben haben. Standardmäßig lautet das virtuelle Verzeichnis des Berichtsservers **ReportServer**. Mit der folgenden URL können Sie die Berichts Server Installation überprüfen: http://*\<Computername>*/ReportServer*\<_instance Name>*. Wenn der Berichtsserver als eine benannte Instanz installiert wurde, lautet die URL anders. Weitere Informationen zum URL-Format finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](configure-report-server-urls-ssrs-configuration-manager.md). Informationen für lokale Administratoren unter Windows Vista oder Windows Server 2008 finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Führen Sie Berichte aus, um die Berichtsservervorgänge zu testen. Für diesen Schritt können Sie einen Beispielbericht aus einem Lernprogramm erstellen. Weitere Informationen finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../create-a-basic-table-report-ssrs-tutorial.md).  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108569"
   
 1.  Öffnen Sie einen Browser, und geben Sie die URL des Berichts-Managers in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie beim Setup für den Berichts-Manager oder im Konfigurations-Manager für Reporting Services auf der Seite Berichts-Manager-URL angegeben haben. Standardmäßig lautet das virtuelle Verzeichnis des Berichts-Managers **Reports**. Mit der folgenden URL können Sie die Berichts-Manager-Installation überprüfen:  
   
-     http:// *\<Computername>* /Reports *\<_Instanzname>* .  
+     http://*\<Computername>*/Reports*\<_instance Namen>*.  
   
 2.  Verwenden Sie den Berichts-Manager, um einen neuen Ordner zu erstellen, oder laden Sie eine Datei hoch, um zu testen, ob Definitionen an die Berichtsserver-Datenbank zurückgegeben werden. Falls diese Vorgänge erfolgreich sind, ist die Verbindung einsatzbereit.  
   
@@ -111,8 +111,8 @@ ms.locfileid: "66108569"
   
 2.  Wenn Sie Berichtsbeispiele installiert haben, öffnen Sie die Beispielberichts-Projektdateien, und veröffentlichen Sie die Berichte auf einem Berichtsserver.  
   
-## <a name="see-also"></a>Siehe auch  
- [Problembehandlung für eine Reporting Services-Installation](troubleshoot-a-reporting-services-installation.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Behandeln von Problemen bei einer Reporting Services Installation](troubleshoot-a-reporting-services-installation.md)   
  [Ursachen und Lösungen für Reporting Services-Fehler](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

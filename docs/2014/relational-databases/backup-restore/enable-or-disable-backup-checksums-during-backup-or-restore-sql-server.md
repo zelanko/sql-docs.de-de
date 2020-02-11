@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922111"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Aktivieren oder deaktivieren von Sicherungsprüfsummen während der Sicherung oder Wiederherstellung (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "62922111"
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-enable-or-disable-checksums-during-a-backup-operation"></a>So aktivieren oder deaktivieren Sie Prüfsummen bei einem Sicherungsvorgang  
   
@@ -94,14 +94,14 @@ GO
 > [!WARNING]  
 >  Wenn Sie ausdrücklich CHECKSUM für einen Wiederherstellungsvorgang anfordern und die Sicherung Sicherungsprüfsummen enthält, werden sowohl die Sicherungsprüfsummen als auch die Seitenprüfsummen wie beim Standardfall überprüft. Wenn allerdings im Sicherungssatz keine Sicherungsprüfsummen vorhanden sind, wird vom Wiederherstellungsvorgang eine entsprechende Fehlermeldung ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)   
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Angeben, ob ein Sicherungs- oder Wiederherstellungsvorgang fortgesetzt wird, nachdem ein Fehler festgestellt wurde &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
